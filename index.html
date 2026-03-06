@@ -1,664 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Friends Trivia Viewer</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Trivia Gauntlet</title>
+
   <style>
-    * { box-sizing: border-box; }
+    :root {
+      --ad-h: 72px;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      overflow: hidden;
+    }
 
     body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #1f2937 0, #020617 60%);
-      color: #e5e7eb;
-      min-height: 100vh;
-      /* tighter padding so card can get closer to edges */
-      padding: 8px 8px 8px;
+      padding-bottom: calc(var(--ad-h) + env(safe-area-inset-bottom));
+      box-sizing: border-box;
     }
 
-    /* ⬇ Make the app fill almost the whole viewport */
-    .app {
+    .app-frame {
+      display: block;
       width: 100%;
-      max-width: 480px;
-      margin: 0 auto;
-      min-height: calc(100vh - 16px); /* full height minus body padding */
-      display: flex;
-      align-items: stretch;
-    }
-
-    /* ⬇ Make the card stretch vertically and become a flex column */
-    .card {
-      position: relative;
-      background: rgba(15, 23, 42, 0.96);
-      border-radius: 18px;
-      padding: 16px 16px 140px;
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
-      border: 1px solid #1f2937;
-      overflow: hidden;
-
-      min-height: 100%;        /* fill the .app height */
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* Top title */
-    .hook {
-      font-size: 1.2rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #fde68a;
-      text-align: left;
-      margin-bottom: 4px;
-    }
-
-    .progress-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.75rem;
-      margin-bottom: 8px;
-    }
-
-    /* Hide the "Question 1 / N" text but keep for JS */
-    #progressLabel {
-      display: none;
-    }
-
-    .progress-bar-wrap {
-      flex: 1;
-      height: 4px;
-      background: #020617;
-      border-radius: 999px;
-      overflow: hidden;
-    }
-
-    .progress-bar {
       height: 100%;
-      background: linear-gradient(90deg, #4f46e5, #22c55e);
-      width: 0%;
-      transition: width 0.25s ease;
+      border: 0;
+      background: #fff;
     }
 
-    .question-container {
-      margin-top: 10px;
-      margin-bottom: 10px;
-      min-height: 60px;
-    }
+    .adbar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: calc(var(--ad-h) + env(safe-area-inset-bottom));
+      padding-bottom: env(safe-area-inset-bottom);
+      background: #111;
+      z-index: 9999;
 
-    .question-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 6px;
-    }
-
-    .q-number {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-top: 2px;
-      flex-shrink: 0;
-    }
-
-    .question-text {
-      font-size: 1.3rem;
-      line-height: 1.35;
-      font-weight: 600;
-      text-align: left;
-      padding: 0;
-      opacity: 0;
-      transform: translateY(6px) scale(0.98);
-      transition: opacity 0.18s ease, transform 0.18s ease;
-    }
-    .question-text.visible {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
-
-    /* Blank area for overlaying an image in TikTok */
-    .image-slot {
-      height: 110px;
-      margin-bottom: 10px;
-      flex-shrink: 0;
-    }
-
-    .options {
-      margin-top: 4px;
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
-      /* let options stretch a bit if there's space */
-      flex-shrink: 0;
-    }
-
-    .option {
-      position: relative;
-      border-radius: 999px;
-      padding: 9px 16px 9px 14px;
-      font-size: 1.1rem;
-      background: #020617;
-      border: 1px solid #374151;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      transform: scale(0.98);
-      transition:
-        transform 0.08s ease,
-        box-shadow 0.08s ease,
-        border-color 0.12s ease,
-        background 0.12s ease,
-        color 0.12s ease,
-        opacity 0.2s ease;
-    }
-
-    .option-label {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      max-width: 100%;
-    }
-
-    .option-key {
-      font-size: 0.9rem;
-      opacity: 0.7;
-    }
-
-    .option-dot {
-      width: 9px;
-      height: 9px;
-      border-radius: 999px;
-      border: 1px solid #4b5563;
-      background: #020617;
-    }
-
-    .option-text {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    /* space on the right for the ✅ */
-    .option::after {
-      content: "";
-      position: absolute;
-      right: 12px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 1rem;
-    }
-
-    .option:hover {
-      transform: scale(1.0);
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6);
-      border-color: #4b5563;
-    }
-
-    .option.selected {
-      border-color: #6366f1;
-      box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.6);
-      background: radial-gradient(circle at top left, rgba(99,102,241,0.35), #020617 55%);
-    }
-
-    .option.correct {
-      border-color: #22c55e;
-      background: radial-gradient(circle at top left, rgba(34,197,94,0.35), #020617 65%);
-      color: #bbf7d0;
-      box-shadow:
-        0 0 0 1px rgba(34,197,94,0.8),
-        0 0 18px rgba(34,197,94,0.7);
-    }
-
-    .option.correct::after {
-      content: "✅";
-    }
-
-    .option.incorrect {
-      opacity: 0.45;
-    }
-
-    .controls-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 14px;
-      gap: 8px;
-      flex-wrap: wrap;
-
-      /* ⬇ push this row to the bottom of the card */
-      margin-top: auto;
-    }
-
-    .score-label {
-      font-size: 0.82rem;
-      opacity: 0.95;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 6px;
-      flex-wrap: nowrap;
-    }
-
-    .btn {
-      border: none;
-      border-radius: 999px;
-      padding: 7px 13px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      background: linear-gradient(135deg, #4f46e5, #6366f1);
-      color: white;
-      box-shadow: 0 8px 18px rgba(79, 70, 229, 0.5);
-      transition:
-        transform 0.1s ease,
-        box-shadow 0.1s ease,
-        opacity 0.2s ease;
-      white-space: nowrap;
-    }
-
-    .btn.secondary {
-      background: #020617;
-      border: 1px solid #4b5563;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-    }
-
-    .btn:disabled {
-      opacity: 0.4;
-      cursor: not-allowed;
-      box-shadow: none;
-      transform: none;
-    }
-
-    .btn:hover:not(:disabled) {
-      box-shadow: 0 10px 20px rgba(79, 70, 229, 0.7);
-    }
-
-    /* tap animation state */
-    .btn.tapped {
-      transform: scale(0.94) translateY(1px);
-      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.9);
-    }
-
-    .countdown-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(15, 23, 42, 0.96);
-      backdrop-filter: blur(2px);
       display: flex;
       align-items: center;
       justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.15s ease;
-      z-index: 10;
-    }
-    .countdown-overlay.visible {
-      opacity: 1;
-      pointer-events: auto;
-    }
-    .countdown-number {
-      font-size: 3rem;
-      font-weight: 800;
-      color: #fef3c7;
-      text-shadow: 0 0 18px rgba(250, 204, 21, 0.7);
-      transform: scale(1);
-      animation: countdown-pop 1s ease-in-out infinite;
-    }
-    @keyframes countdown-pop {
-      0% { transform: scale(0.8); opacity: 0.4; }
-      30% { transform: scale(1.1); opacity: 1; }
-      100% { transform: scale(0.9); opacity: 0.7; }
+
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.25);
     }
 
-    .confetti-piece {
-      position: fixed;
-      width: 6px;
-      height: 12px;
-      border-radius: 2px;
-      background: #facc15;
-      top: 15%;
-      left: 50%;
-      opacity: 0.9;
-      pointer-events: none;
-      z-index: 999;
-      animation: confetti-fall 650ms ease-out forwards;
-    }
-
-    @keyframes confetti-fall {
-      0% {
-        transform: translate(0, 0) rotate(0deg);
-        opacity: 0.95;
+    @media (max-width: 420px) {
+      :root {
+        --ad-h: 60px;
       }
-      100% {
-        transform: translate(var(--dx), var(--dy)) rotate(var(--rot));
-        opacity: 0;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .app { max-width: 440px; }
-      .question-text { font-size: 1.35rem; }
     }
   </style>
 </head>
 <body>
-  <div class="app">
-    <div class="card">
-      <!-- Top title -->
-      <div id="hook" class="hook">
-        FRIENDS TRIVIA
-      </div>
 
-      <div class="progress-row">
-        <div id="progressLabel">Loading…</div>
-        <div class="progress-bar-wrap">
-          <div id="progressBar" class="progress-bar"></div>
-        </div>
-      </div>
+  <iframe
+    class="app-frame"
+    src="https://trivia-5pja.onrender.com/"
+    title="Trivia Gauntlet"
+    loading="eager"
+    referrerpolicy="no-referrer-when-downgrade"
+    allow="fullscreen"
+  ></iframe>
 
-      <!-- Question line: Q1. + text -->
-      <div class="question-container">
-        <div class="question-row">
-          <span id="qNumber" class="q-number">Q1.</span>
-          <span id="questionText" class="question-text">Loading questions…</span>
-        </div>
-      </div>
-
-      <!-- Blank slot to overlay an image in edit later -->
-      <div class="image-slot"></div>
-
-      <div id="optionsContainer" class="options">
-        <!-- options injected here -->
-      </div>
-
-      <div class="controls-row">
-        <div class="score-label" id="scoreText">Score: 0</div>
-        <div class="buttons">
-          <button id="revealBtn" class="btn" disabled>
-            Reveal answer
-          </button>
-          <button id="nextBtn" class="btn secondary" disabled>
-            Next question
-          </button>
-        </div>
-      </div>
-
-      <!-- Countdown overlay -->
-      <div id="countdownOverlay" class="countdown-overlay">
-        <div id="countdownNumber" class="countdown-number">3</div>
-      </div>
-    </div>
+  <div class="adbar">
+    <!-- Replace this with your AdSense code -->
+    <div style="color:#aaa;font:14px Arial;">Sticky ad goes here</div>
   </div>
 
-  <script>
-    let questions = [];
-
-    const state = {
-      index: 0,
-      revealed: false,
-      selectedOptionIndex: null,
-      mode: "loading",
-      countdownRemaining: 0,
-      score: 0
-    };
-
-    const questionTextEl = document.getElementById("questionText");
-    const qNumberEl = document.getElementById("qNumber");
-    const optionsContainerEl = document.getElementById("optionsContainer");
-    const progressLabelEl = document.getElementById("progressLabel");
-    const progressBarEl = document.getElementById("progressBar");
-    const scoreTextEl = document.getElementById("scoreText");
-
-    const revealBtn = document.getElementById("revealBtn");
-    const nextBtn = document.getElementById("nextBtn");
-
-    const countdownOverlayEl = document.getElementById("countdownOverlay");
-    const countdownNumberEl = document.getElementById("countdownNumber");
-
-    let countdownInterval = null;
-
-    function shuffle(arr) {
-      for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-      }
-    }
-
-    async function loadQuestions() {
-      try {
-        const res = await fetch("questions.json");
-        const data = await res.json();
-        if (!Array.isArray(data) || !data.length) {
-          throw new Error("questions.json is empty or not an array");
-        }
-        questions = data;
-        shuffle(questions);
-        state.index = 0;
-        state.mode = "question";
-        renderQuestion();
-      } catch (err) {
-        console.error("Error loading questions:", err);
-        questionTextEl.textContent = "Error loading questions.";
-        progressLabelEl.textContent = "Error";
-        revealBtn.disabled = true;
-        nextBtn.disabled = true;
-      }
-    }
-
-    function updateProgress() {
-      const total = questions.length;
-      if (!total) {
-        progressBarEl.style.width = "0%";
-        return;
-      }
-      const idx = state.index + 1;
-      const pct = (idx / total) * 100;
-      progressBarEl.style.width = pct + "%";
-    }
-
-    function updateScore() {
-      scoreTextEl.textContent = `Score: ${state.score}`;
-    }
-
-    function renderQuestion() {
-      if (!questions.length) return;
-      const q = questions[state.index];
-      state.revealed = false;
-      state.selectedOptionIndex = null;
-      state.mode = "question";
-
-      if (countdownInterval) {
-        clearInterval(countdownInterval);
-        countdownInterval = null;
-      }
-      countdownOverlayEl.classList.remove("visible");
-
-      qNumberEl.textContent = `Q${state.index + 1}.`;
-
-      questionTextEl.classList.remove("visible");
-      void questionTextEl.offsetWidth;
-      questionTextEl.textContent = q.question;
-      setTimeout(() => {
-        questionTextEl.classList.add("visible");
-      }, 10);
-
-      optionsContainerEl.innerHTML = "";
-      const keys = ["A", "B", "C", "D", "E", "F"];
-      q.options.forEach((opt, i) => {
-        const optEl = document.createElement("div");
-        optEl.className = "option";
-        optEl.dataset.index = i;
-
-        const labelEl = document.createElement("div");
-        labelEl.className = "option-label";
-
-        const keyEl = document.createElement("span");
-        keyEl.className = "option-key";
-        keyEl.textContent = keys[i] || "";
-
-        const dotEl = document.createElement("span");
-        dotEl.className = "option-dot";
-
-        const textEl = document.createElement("span");
-        textEl.className = "option-text";
-        textEl.textContent = opt;
-
-        labelEl.appendChild(keyEl);
-        labelEl.appendChild(dotEl);
-        labelEl.appendChild(textEl);
-        optEl.appendChild(labelEl);
-
-        optEl.addEventListener("click", () => handleOptionClick(i));
-
-        optionsContainerEl.appendChild(optEl);
-
-        optEl.style.transform = "scale(0.95)";
-        optEl.style.opacity = "0";
-        setTimeout(() => {
-          optEl.style.transform = "scale(0.98)";
-          optEl.style.opacity = "1";
-        }, 30 + i * 40);
-      });
-
-      updateProgress();
-      updateScore();
-      revealBtn.disabled = false;
-      nextBtn.disabled = false;
-    }
-
-    function handleOptionClick(index) {
-      if (state.mode !== "question") return;
-      state.selectedOptionIndex = index;
-      const optionEls = optionsContainerEl.querySelectorAll(".option");
-      optionEls.forEach((el) => el.classList.remove("selected"));
-      const chosenEl = optionEls[index];
-      if (chosenEl) chosenEl.classList.add("selected");
-    }
-
-    function animateButtonTap(btn) {
-      if (!btn) return;
-      btn.classList.add("tapped");
-      setTimeout(() => btn.classList.remove("tapped"), 120);
-    }
-
-    function startCountdownAndReveal() {
-      if (state.mode !== "question") return;
-
-      state.mode = "timer";
-      state.countdownRemaining = 3;
-      countdownNumberEl.textContent = state.countdownRemaining;
-      countdownOverlayEl.classList.add("visible");
-      revealBtn.disabled = true;
-      nextBtn.disabled = true;
-
-      if (countdownInterval) clearInterval(countdownInterval);
-
-      countdownInterval = setInterval(() => {
-        state.countdownRemaining -= 1;
-        if (state.countdownRemaining > 0) {
-          countdownNumberEl.textContent = state.countdownRemaining;
-        } else {
-          clearInterval(countdownInterval);
-          countdownInterval = null;
-          countdownOverlayEl.classList.remove("visible");
-          doRevealAnswer();
-        }
-      }, 1000);
-    }
-
-    function doRevealAnswer() {
-      if (!questions.length) return;
-      state.mode = "answer";
-      state.revealed = true;
-
-      const q = questions[state.index];
-      const optionEls = optionsContainerEl.querySelectorAll(".option");
-      const correctIndex = q.options.findIndex((opt) => opt === q.answer);
-
-      if (correctIndex === -1) {
-        console.warn("Answer not in options:", q);
-      }
-
-      optionEls.forEach((el, idx) => {
-        el.classList.remove("selected");
-        if (idx === correctIndex) {
-          el.classList.add("correct");
-          el.style.transform = "scale(1.03)";
-          setTimeout(() => {
-            el.style.transform = "scale(1.0)";
-          }, 120);
-        } else {
-          el.classList.add("incorrect");
-        }
-      });
-
-      // +1 if correct, 0 otherwise
-      if (correctIndex !== -1 && state.selectedOptionIndex === correctIndex) {
-        state.score += 1;
-        updateScore();
-      }
-
-      launchConfetti();
-      nextBtn.disabled = false;
-    }
-
-    function nextQuestion() {
-      if (!questions.length) return;
-      if (countdownInterval) {
-        clearInterval(countdownInterval);
-        countdownInterval = null;
-      }
-      countdownOverlayEl.classList.remove("visible");
-      state.mode = "question";
-
-      state.index += 1;
-      if (state.index >= questions.length) {
-        shuffle(questions);
-        state.index = 0;
-      }
-      renderQuestion();
-    }
-
-    function launchConfetti() {
-      const colors = ["#facc15", "#f97316", "#22c55e", "#38bdf8", "#a855f7"];
-      const pieces = 30;
-
-      for (let i = 0; i < pieces; i++) {
-        const piece = document.createElement("div");
-        piece.className = "confetti-piece";
-        const angle = (Math.random() - 0.5) * 200;
-        const distance = 80 + Math.random() * 80;
-        const dx = distance * Math.cos((angle * Math.PI) / 180);
-        const dy = distance * Math.sin((angle * Math.PI) / 180) + 50;
-
-        piece.style.setProperty("--dx", dx + "px");
-        piece.style.setProperty("--dy", dy + "px");
-        piece.style.setProperty("--rot", (Math.random() * 360) + "deg");
-        piece.style.backgroundColor = colors[i % colors.length];
-        piece.style.left = 50 + (Math.random() * 40 - 20) + "%";
-
-        document.body.appendChild(piece);
-        setTimeout(() => piece.remove(), 700);
-      }
-    }
-
-    // wire up buttons with tap animation + logic
-    revealBtn.addEventListener("click", () => {
-      animateButtonTap(revealBtn);
-      startCountdownAndReveal();
-    });
-
-    nextBtn.addEventListener("click", () => {
-      animateButtonTap(nextBtn);
-      nextQuestion();
-    });
-
-    loadQuestions();
-  </script>
 </body>
 </html>
