@@ -38,33 +38,35 @@ async function renderHomePage() {
     if (featuredList) featuredList.innerHTML = "";
     categoryList.innerHTML = "";
 
-  if (featuredList) {
-    filteredThemes.forEach(theme => {
-      const card = document.createElement("a");
-      card.className = "card";
-      card.href = `quiz.html?theme=${theme.slug}`;
-      card.innerHTML = `
-        <h3>${theme.title}</h3>
-        <p>${theme.description}</p>
-        <span class="badge">${theme.category}</span>
-      `;
-      featuredList.appendChild(card);
-    });
-  }
+    if (featuredList) {
+      filteredThemes.forEach(theme => {
+        const card = document.createElement("a");
+        card.className = "card";
+        card.href = `quiz.html?theme=${theme.slug}`;
+        card.innerHTML = `
+          <h3>${theme.title}</h3>
+          <p>${theme.description}</p>
+          <span class="badge">${theme.category}</span>
+        `;
+        featuredList.appendChild(card);
+      });
+    }
 
     const grouped = groupByCategory(filteredThemes);
-    const categoryOrder = [
-    "TV/Series",
-    "Games",
-    "General",
-    "Sports",
-    "Education",
-    "Books",
-    "Countries"
-  ];
 
-categoryOrder.forEach(category => {
-  if (!grouped[category]) return;
+    const categoryOrder = [
+      "TV/Series",
+      "Games",
+      "Sports",
+      "General",
+      "Education",
+      "Books",
+      "Countries"
+    ];
+
+    categoryOrder.forEach(category => {
+      if (!grouped[category]) return;
+
       const card = document.createElement("a");
       card.className = "card";
       card.href = `category.html?category=${encodeURIComponent(category)}`;
@@ -76,18 +78,16 @@ categoryOrder.forEach(category => {
     });
   }
 
-  render(themes);
-
   function renderSearchResults(items) {
     if (!searchResults) return;
-  
+
     if (!items.length) {
       searchResults.innerHTML = `<div class="search-item">No results found</div>`;
       return;
     }
-  
+
     searchResults.innerHTML = "";
-  
+
     items.forEach(theme => {
       const item = document.createElement("a");
       item.className = "search-item";
@@ -96,29 +96,36 @@ categoryOrder.forEach(category => {
       searchResults.appendChild(item);
     });
   }
-  
+
+  render(themes);
+
   searchInput?.addEventListener("focus", () => {
     renderSearchResults(themes);
     searchResults.style.display = "block";
   });
-  
+
   searchInput?.addEventListener("input", e => {
     const value = e.target.value.trim().toLowerCase();
-  
+
     const filtered = themes.filter(theme =>
       theme.title.toLowerCase().includes(value)
     );
-  
+
     renderSearchResults(filtered);
     searchResults.style.display = "block";
   });
-  
+
   document.addEventListener("click", e => {
-    if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+    if (
+      searchInput &&
+      searchResults &&
+      !searchInput.contains(e.target) &&
+      !searchResults.contains(e.target)
+    ) {
       searchResults.style.display = "none";
     }
   });
-
+}
 /* ---------------- CATEGORY PAGE ---------------- */
 async function renderCategoryPage() {
   const categoryName = getParam("category");
