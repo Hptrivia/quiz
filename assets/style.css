@@ -138,7 +138,7 @@ a {
 
 .search-results {
   display: none;
-  position: absolute;
+  position: static;
   top: calc(100% + 6px);
   left: 0;
   right: 0;
@@ -170,14 +170,17 @@ a {
 
 @media (max-width: 768px) {
   .search-results {
+    position: static;
     max-height: 220px;
     font-size: 14px;
+    margin-top: 8px;
   }
 
   .search-item {
     padding: 10px 12px;
   }
 }
+
 .site-footer {
   margin-top: 40px;
   padding: 24px 0;
