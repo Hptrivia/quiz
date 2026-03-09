@@ -53,7 +53,7 @@ async function renderHomePage() {
 
     const grouped = groupByCategory(filteredThemes);
     const categoryOrder = [
-    "TV Series",
+    "TV/Series",
     "Games",
     "General",
     "Sports",
