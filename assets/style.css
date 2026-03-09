@@ -130,3 +130,37 @@ a {
 .feedback.wrong {
   color: #ff8b8b;
 }
+
+.search-wrap {
+  position: relative;
+  margin-top: 16px;
+}
+
+.search-results {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  max-height: 320px;
+  overflow-y: auto;
+  background: #1b1b1b;
+  border: 1px solid #333;
+  border-radius: 12px;
+  z-index: 20;
+}
+
+.search-item {
+  display: block;
+  padding: 12px 14px;
+  border-bottom: 1px solid #2a2a2a;
+  color: white;
+}
+
+.search-item:last-child {
+  border-bottom: none;
+}
+
+.search-item:hover {
+  background: #2a2a2a;
+}
