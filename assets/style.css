@@ -131,6 +131,10 @@ a {
   color: #ff8b8b;
 }
 
+#scoreText {
+  margin-top: 14px;
+}
+
 .search-wrap {
   position: relative;
   margin-top: 16px;
