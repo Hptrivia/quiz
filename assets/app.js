@@ -111,7 +111,6 @@ async function renderCategoryPage() {
     card.href = `quiz.html?theme=${theme.slug}`;
     card.innerHTML = `
       <h3>${theme.title}</h3>
-      <p>${theme.description}</p>
     `;
     themeList.appendChild(card);
   });
