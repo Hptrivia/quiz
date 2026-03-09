@@ -55,7 +55,7 @@ a {
 }
 
 .card:hover {
-  border-color: #555;
+  border-color: #3b82f6;
 }
 
 .badge {
@@ -70,7 +70,7 @@ a {
 .back-link {
   display: inline-block;
   margin-bottom: 18px;
-  color: #bbb;
+  color: #93c5fd;
 }
 
 .cta-row {
@@ -91,13 +91,21 @@ a {
 }
 
 .primary-btn {
-  background: white;
-  color: black;
+  background: #3b82f6;
+  color: white;
+}
+
+.primary-btn:hover {
+  background: #2563eb;
 }
 
 .secondary-btn {
-  background: #2b2b2b;
+  background: #1f2937;
   color: white;
+}
+
+.secondary-btn:hover {
+  background: #374151;
 }
 
 .options {
@@ -115,7 +123,8 @@ a {
 }
 
 .option-btn.selected {
-  border-color: white;
+  border-color: #3b82f6;
+  background: #1e293b;
 }
 
 .feedback {
@@ -203,5 +212,5 @@ a {
 }
 
 .footer-links a:hover {
-  color: white;
+  color: #93c5fd;
 }
