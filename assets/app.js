@@ -164,6 +164,7 @@ async function renderQuizPage() {
   const title = document.getElementById("quizTitle");
   const desc = document.getElementById("quizDescription");
   const playBtn = document.getElementById("playButton");
+  const wordleBtn = document.getElementById("wordleButton");
 
   if (!theme) {
     title.textContent = "Theme not found";
@@ -176,6 +177,7 @@ async function renderQuizPage() {
   title.textContent = theme.title;
   desc.textContent = theme.description;
   playBtn.href = `play.html?theme=${theme.slug}`;
+  wordleBtn.href = `wordle.html?theme=${theme.slug}`;
 }
 
 /* ---------------- PLAY PAGE / SPEED MODE ---------------- */
