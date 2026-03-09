@@ -6,8 +6,6 @@ async function renderWordlePage() {
   const titleEl = document.getElementById("wordleTitle");
   const progressEl = document.getElementById("wordleProgress");
   const boardEl = document.getElementById("wordleBoard");
-  const inputEl = document.getElementById("wordleGuessInput");
-  const submitBtn = document.getElementById("wordleSubmitBtn");
   const feedbackEl = document.getElementById("wordleFeedback");
   const keyboardEl = document.getElementById("wordleKeyboard");
   const prevBtn = document.getElementById("prevWordBtn");
@@ -34,13 +32,14 @@ async function renderWordlePage() {
 
   let targetWord = "";
   let guesses = [];
+  let currentGuess = "";
   let gameOver = false;
   let keyStates = {};
 
   const keyboardRows = [
-    "QWERTYUIOP",
-    "ASDFGHJKL",
-    "ZXCVBNM"
+    ["Q","W","E","R","T","Y","U","I","O","P"],
+    ["A","S","D","F","G","H","J","K","L"],
+    ["ENTER","Z","X","C","V","B","N","M","⌫"]
   ];
 
   function getLetterState(guess, answer) {
@@ -78,50 +77,28 @@ async function renderWordlePage() {
     });
   }
 
-  function renderKeyboard() {
-    keyboardEl.innerHTML = "";
-
-    keyboardRows.forEach(row => {
-      const rowEl = document.createElement("div");
-      rowEl.className = "wordle-keyboard-row";
-
-      row.split("").forEach(letter => {
-        const key = document.createElement("button");
-        key.type = "button";
-        key.className = "wordle-key";
-        if (keyStates[letter]) key.classList.add(keyStates[letter]);
-        key.textContent = letter;
-
-        key.addEventListener("click", () => {
-          if (gameOver) return;
-          if (inputEl.value.length < targetWord.length) {
-            inputEl.value += letter;
-          }
-        });
-
-        rowEl.appendChild(key);
-      });
-
-      keyboardEl.appendChild(rowEl);
-    });
-  }
-
   function renderBoard() {
     boardEl.innerHTML = "";
 
     for (let row = 0; row < 6; row++) {
       const rowEl = document.createElement("div");
       rowEl.className = "wordle-row";
+      rowEl.style.gridTemplateColumns = `repeat(${targetWord.length}, 1fr)`;
 
-      const guess = guesses[row] ? guesses[row].word : "";
-      const states = guesses[row] ? guesses[row].states : [];
+      const submittedGuess = guesses[row] ? guesses[row].word : "";
+      const submittedStates = guesses[row] ? guesses[row].states : [];
 
       for (let col = 0; col < targetWord.length; col++) {
         const tile = document.createElement("div");
         tile.className = "wordle-tile";
-        tile.textContent = guess[col] || "";
 
-        if (states[col]) tile.classList.add(states[col]);
+        if (submittedGuess) {
+          tile.textContent = submittedGuess[col] || "";
+          if (submittedStates[col]) tile.classList.add(submittedStates[col]);
+        } else if (row === guesses.length) {
+          tile.textContent = currentGuess[col] || "";
+          if (currentGuess[col]) tile.classList.add("filled");
+        }
 
         rowEl.appendChild(tile);
       }
@@ -130,81 +107,138 @@ async function renderWordlePage() {
     }
   }
 
-  function loadWord(index) {
-    currentWordIndex = index;
-    localStorage.setItem(storageKey, String(currentWordIndex));
+  function renderKeyboard() {
+    keyboardEl.innerHTML = "";
 
-    targetWord = words[currentWordIndex].toUpperCase();
-    guesses = [];
-    gameOver = false;
-    keyStates = {};
+    keyboardRows.forEach(row => {
+      const rowEl = document.createElement("div");
+      rowEl.className = "wordle-keyboard-row";
 
-    progressEl.textContent = `Word ${currentWordIndex + 1} of ${words.length}`;
-    inputEl.value = "";
-    inputEl.maxLength = targetWord.length;
-    inputEl.placeholder = `Enter ${targetWord.length}-letter guess`;
-    feedbackEl.textContent = "";
+      row.forEach(letter => {
+        const key = document.createElement("button");
+        key.type = "button";
+        key.className = "wordle-key";
+        key.textContent = letter;
+
+        if (letter === "ENTER" || letter === "⌫") {
+          key.classList.add("wide");
+        }
+
+        if (keyStates[letter]) {
+          key.classList.add(keyStates[letter]);
+        }
+
+        key.addEventListener("click", () => handleKey(letter));
+        rowEl.appendChild(key);
+      });
+
+      keyboardEl.appendChild(rowEl);
+    });
+  }
+
+  function setFeedback(text, type = "") {
+    feedbackEl.textContent = text;
     feedbackEl.className = "feedback";
-
-    renderBoard();
-    renderKeyboard();
+    if (type) feedbackEl.classList.add(type);
   }
 
   function submitGuess() {
     if (gameOver) return;
 
-    const guess = inputEl.value.trim().toUpperCase();
-
-    if (guess.length !== targetWord.length) {
-      feedbackEl.textContent = `Guess must be ${targetWord.length} letters.`;
-      feedbackEl.className = "feedback wrong";
+    if (currentGuess.length !== targetWord.length) {
+      setFeedback(`Guess must be ${targetWord.length} letters.`, "wrong");
       return;
     }
 
-    if (guesses.length >= 6) return;
-
+    const guess = currentGuess.toUpperCase();
     const states = getLetterState(guess, targetWord);
+
     guesses.push({ word: guess, states });
     updateKeyboard(guess, states);
+    currentGuess = "";
 
     renderBoard();
     renderKeyboard();
-    inputEl.value = "";
 
     if (guess === targetWord) {
-      feedbackEl.textContent = "Correct";
-      feedbackEl.className = "feedback correct";
+      setFeedback("Correct", "correct");
       gameOver = true;
       return;
     }
 
     if (guesses.length === 6) {
-      feedbackEl.textContent = `Wrong. The word was ${targetWord}.`;
-      feedbackEl.className = "feedback wrong";
+      setFeedback(`Wrong. The word was ${targetWord}.`, "wrong");
       gameOver = true;
       return;
     }
 
-    feedbackEl.textContent = `${6 - guesses.length} guess(es) left.`;
-    feedbackEl.className = "feedback";
+    setFeedback(`${6 - guesses.length} guess(es) left.`);
   }
 
-  submitBtn.addEventListener("click", submitGuess);
+  function handleKey(key) {
+    if (gameOver) return;
 
-  inputEl.addEventListener("keydown", e => {
-    if (e.key === "Enter") submitGuess();
+    if (key === "ENTER") {
+      submitGuess();
+      return;
+    }
+
+    if (key === "⌫") {
+      currentGuess = currentGuess.slice(0, -1);
+      renderBoard();
+      return;
+    }
+
+    if (/^[A-Z]$/.test(key) && currentGuess.length < targetWord.length) {
+      currentGuess += key;
+      renderBoard();
+    }
+  }
+
+  function loadWord(index) {
+    currentWordIndex = index;
+    localStorage.setItem(storageKey, String(currentWordIndex));
+
+    targetWord = String(words[currentWordIndex]).toUpperCase();
+    guesses = [];
+    currentGuess = "";
+    gameOver = false;
+    keyStates = {};
+
+    progressEl.textContent = `Word ${currentWordIndex + 1} of ${words.length}`;
+    setFeedback("");
+
+    renderBoard();
+    renderKeyboard();
+  }
+
+  document.addEventListener("keydown", e => {
+    if (document.body.dataset.page !== "wordle") return;
+
+    if (e.key === "Enter") {
+      e.preventDefault();
+      handleKey("ENTER");
+      return;
+    }
+
+    if (e.key === "Backspace") {
+      e.preventDefault();
+      handleKey("⌫");
+      return;
+    }
+
+    const letter = e.key.toUpperCase();
+    if (/^[A-Z]$/.test(letter)) {
+      handleKey(letter);
+    }
   });
 
   prevBtn.addEventListener("click", () => {
-    if (currentWordIndex > 0) {
-      loadWord(currentWordIndex - 1);
-    }
+    if (currentWordIndex > 0) loadWord(currentWordIndex - 1);
   });
 
   nextBtn.addEventListener("click", () => {
-    if (currentWordIndex < words.length - 1) {
-      loadWord(currentWordIndex + 1);
-    }
+    if (currentWordIndex < words.length - 1) loadWord(currentWordIndex + 1);
   });
 
   loadWord(currentWordIndex);
