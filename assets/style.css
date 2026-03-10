@@ -349,4 +349,33 @@ a {
   margin-top: 16px;
   color: #bbb;
 }
+.mode-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 20px;
+  align-items: stretch;
+}
 
+.mode-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+}
+
+.mode-card h3 {
+  margin: 0 0 10px;
+}
+
+.mode-card p {
+  margin: 0 0 16px;
+  color: #cfcfcf;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+.mode-card .secondary-btn {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: auto;
+}
