@@ -3,7 +3,6 @@ async function renderSurvivalPage() {
   const themes = await loadThemes();
   const theme = themes.find(t => t.slug === slug);
 
-  const titleEl = document.getElementById("survivalTitle");
   const difficultyBox = document.getElementById("difficultyBox");
   const gameBox = document.getElementById("survivalGameBox");
   const resultBox = document.getElementById("survivalResultBox");
@@ -19,12 +18,7 @@ async function renderSurvivalPage() {
   const fiftyBtn = document.getElementById("fiftyBtn");
   const friendBtn = document.getElementById("friendBtn");
 
-  if (!theme) {
-    titleEl.textContent = "Theme not found";
-    return;
-  }
-
-  titleEl.textContent = `${theme.title} Survival`;
+  if (!theme) return;
 
   const difficultyMap = {
     easy: ["easy", "medium"],
@@ -48,9 +42,10 @@ async function renderSurvivalPage() {
     gameOver: false,
     fiftyAvailable: true,
     friendAvailable: true,
-    bothSpent: false,
-    recoveryStage: 0, // 0 none, 1 first regained, 2 both regained
+    recoveryStage: 0,
     recoveryPoints: 0,
+    recoveryStarted: false,
+    pendingRecoveryStart: false,
     answerLocked: false
   };
 
@@ -66,68 +61,48 @@ async function renderSurvivalPage() {
     return state.questions[state.currentIndex];
   }
 
-  function updateTopbar() {
-    scoreEl.textContent = `Score: ${state.score}`;
-    streakEl.textContent = `Recovery Streak: ${state.recoveryPoints}`;
-  
-    fiftyBtn.disabled = !state.fiftyAvailable || state.answerLocked || state.gameOver;
-    friendBtn.disabled = !state.friendAvailable || state.answerLocked || state.gameOver;
-  
-    fiftyBtn.textContent = state.fiftyAvailable ? "50-50" : "50-50 Used";
-    friendBtn.textContent = state.friendAvailable ? "Call a Friend" : "Friend Used";
-  }
-
   function setFeedback(text, type = "") {
     feedbackEl.textContent = text;
     feedbackEl.className = "feedback";
     if (type) feedbackEl.classList.add(type);
   }
 
-  function markOptionSelected(buttonEl) {
-    document.querySelectorAll("#survivalOptionsList .option-btn").forEach(btn => {
-      btn.classList.remove("selected");
-    });
-    buttonEl.classList.add("selected");
+  function updateTopbar() {
+    scoreEl.textContent = `Score: ${state.score}`;
+
+    if (state.recoveryStarted || state.pendingRecoveryStart) {
+      streakEl.textContent = `Recovery Streak: Started (${state.recoveryPoints})`;
+    } else {
+      streakEl.textContent = "Recovery Streak: Not started";
+    }
+
+    fiftyBtn.disabled = !state.fiftyAvailable || state.answerLocked || state.gameOver;
+    friendBtn.disabled = !state.friendAvailable || state.answerLocked || state.gameOver;
+
+    fiftyBtn.textContent = state.fiftyAvailable ? "50-50" : "50-50 Used";
+    friendBtn.textContent = state.friendAvailable ? "Call a Friend" : "Friend Used";
+
+    fiftyBtn.classList.toggle("used-lifeline", !state.fiftyAvailable);
+    friendBtn.classList.toggle("used-lifeline", !state.friendAvailable);
   }
 
-  function renderQuestion() {
-    const q = getCurrentQuestion();
-    if (!q) {
-      renderResult();
-      return;
-    }
-  
-    state.selectedAnswer = null;
-    state.answerLocked = false;
-    optionsEl.innerHTML = "";
-    setFeedback("");
-    submitBtn.disabled = false;
-    nextBtn.style.display = "none";
-  
-    questionEl.textContent = q.question;
-  
-    q.options.forEach(option => {
-      const btn = document.createElement("button");
-      btn.className = "option-btn";
-      btn.textContent = option;
-  
-      btn.addEventListener("click", () => {
-        if (state.answerLocked || state.gameOver) return;
-        state.selectedAnswer = option;
-        document.querySelectorAll("#survivalOptionsList .option-btn").forEach(b => {
-          b.classList.remove("selected");
-        });
-        btn.classList.add("selected");
-      });
-  
-      optionsEl.appendChild(btn);
-    });
-  
-    updateTopbar();
+  function renderResult() {
+    gameBox.style.display = "none";
+    resultBox.style.display = "block";
+    resultBox.innerHTML = `
+      <h2>Survival Over</h2>
+      <p>Your score: ${state.score}</p>
+      <div class="cta-row">
+        <a class="primary-btn" href="survival.html?theme=${theme.slug}">Play Again</a>
+        <a class="secondary-btn" href="quiz.html?theme=${theme.slug}">Back to Theme</a>
+      </div>
+      <p class="survival-coming-soon">Leaderboard submission can be added later here.</p>
+    `;
   }
+
   function maybeStartRecovery() {
-    if (!state.bothSpent && !state.fiftyAvailable && !state.friendAvailable) {
-      state.bothSpent = true;
+    if (!state.fiftyAvailable && !state.friendAvailable && !state.recoveryStarted && !state.pendingRecoveryStart) {
+      state.pendingRecoveryStart = true;
       state.recoveryStage = 0;
       state.recoveryPoints = 0;
     }
@@ -136,57 +111,66 @@ async function renderSurvivalPage() {
   function handleRecoveryOnCorrect(questionDifficulty) {
     const points = pointsMap[questionDifficulty] || 1;
 
-    if (!state.bothSpent) return;
+    if (!state.recoveryStarted) return null;
 
     state.recoveryPoints += points;
 
     if (state.recoveryStage === 0 && state.recoveryPoints >= 25) {
       state.fiftyAvailable = true;
       state.recoveryStage = 1;
-      setFeedback("Correct. You regained 50-50.", "correct");
-      return;
+      return "50-50 regained.";
     }
 
     if (state.recoveryStage === 1 && state.recoveryPoints >= 50) {
       state.friendAvailable = true;
       state.recoveryStage = 2;
-      setFeedback("Correct. You regained Call a Friend.", "correct");
+      return "Call a Friend regained.";
     }
+
+    return null;
   }
 
-  function useFiftyFifty() {
-    if (!state.fiftyAvailable || state.answerLocked || state.gameOver) return;
-
+  function renderQuestion() {
     const q = getCurrentQuestion();
-    const buttons = [...optionsEl.querySelectorAll(".option-btn")];
+    if (!q) {
+      renderResult();
+      return;
+    }
 
-    const wrongButtons = buttons.filter(btn => btn.textContent !== q.answer);
-    const toHide = shuffle(wrongButtons).slice(0, 2);
+    state.selectedAnswer = null;
+    state.answerLocked = false;
+    optionsEl.innerHTML = "";
+    submitBtn.disabled = false;
+    nextBtn.style.display = "none";
 
-    toHide.forEach(btn => {
-      btn.disabled = true;
-      btn.classList.add("disabled-option");
+    questionEl.textContent = q.question;
+
+    q.options.forEach(option => {
+      const btn = document.createElement("button");
+      btn.className = "option-btn";
+      btn.textContent = option;
+
+      btn.addEventListener("click", () => {
+        if (state.answerLocked || state.gameOver) return;
+        state.selectedAnswer = option;
+        document.querySelectorAll("#survivalOptionsList .option-btn").forEach(b => {
+          b.classList.remove("selected");
+        });
+        btn.classList.add("selected");
+      });
+
+      optionsEl.appendChild(btn);
     });
 
-    state.fiftyAvailable = false;
-
-    if (state.bothSpent && state.recoveryStage === 1) {
+    if (state.pendingRecoveryStart) {
+      state.pendingRecoveryStart = false;
+      state.recoveryStarted = true;
       state.recoveryPoints = 0;
-      state.recoveryStage = 0;
+      setFeedback("Recovery streak started (0).");
+    } else {
+      setFeedback("");
     }
 
-    maybeStartRecovery();
-    updateTopbar();
-  }
-
-  function useCallFriend() {
-    if (!state.friendAvailable || state.answerLocked || state.gameOver) return;
-
-    const q = getCurrentQuestion();
-    state.friendAvailable = false;
-    setFeedback(`Call a Friend: ${q.answer}`, "correct");
-
-    maybeStartRecovery();
     updateTopbar();
   }
 
@@ -209,23 +193,52 @@ async function renderSurvivalPage() {
     submitBtn.disabled = true;
     nextBtn.style.display = "inline-block";
 
-    setFeedback(`Correct. +${points} point(s).`, "correct");
-    handleRecoveryOnCorrect(difficulty);
+    const recoveryMessage = handleRecoveryOnCorrect(difficulty);
+
+    if (recoveryMessage) {
+      setFeedback(`Correct. +${points} point(s). ${recoveryMessage}`, "correct");
+    } else {
+      setFeedback(`Correct. +${points} point(s).`, "correct");
+    }
+
     updateTopbar();
   }
 
-  function renderResult() {
-    gameBox.style.display = "none";
-    resultBox.style.display = "block";
-    resultBox.innerHTML = `
-      <h2>Survival Over</h2>
-      <p>Your score: ${state.score}</p>
-      <div class="cta-row">
-        <a class="primary-btn" href="survival.html?theme=${theme.slug}">Play Again</a>
-        <a class="secondary-btn" href="quiz.html?theme=${theme.slug}">Back to Theme</a>
-      </div>
-      <p class="survival-coming-soon">Leaderboard submission can be added later here.</p>
-    `;
+  function useFiftyFifty() {
+    if (!state.fiftyAvailable || state.answerLocked || state.gameOver) return;
+
+    const q = getCurrentQuestion();
+    const buttons = [...optionsEl.querySelectorAll(".option-btn")];
+    const wrongButtons = buttons.filter(btn => btn.textContent !== q.answer && btn.style.display !== "none");
+    const toRemove = shuffle(wrongButtons).slice(0, 2);
+
+    toRemove.forEach(btn => {
+      btn.style.display = "none";
+    });
+
+    state.fiftyAvailable = false;
+
+    if (state.recoveryStarted && state.recoveryStage === 1) {
+      state.recoveryStarted = false;
+      state.recoveryPoints = 0;
+      state.recoveryStage = 0;
+      state.pendingRecoveryStart = true;
+      setFeedback("Recovery streak broken. It will restart on the next question.", "wrong");
+    }
+
+    maybeStartRecovery();
+    updateTopbar();
+  }
+
+  function useCallFriend() {
+    if (!state.friendAvailable || state.answerLocked || state.gameOver) return;
+
+    const q = getCurrentQuestion();
+    state.friendAvailable = false;
+    setFeedback(`Call a Friend: ${q.answer}`, "correct");
+
+    maybeStartRecovery();
+    updateTopbar();
   }
 
   submitBtn.addEventListener("click", () => {
@@ -278,9 +291,10 @@ async function renderSurvivalPage() {
       state.gameOver = false;
       state.fiftyAvailable = true;
       state.friendAvailable = true;
-      state.bothSpent = false;
       state.recoveryStage = 0;
       state.recoveryPoints = 0;
+      state.recoveryStarted = false;
+      state.pendingRecoveryStart = false;
       state.answerLocked = false;
 
       difficultyBox.style.display = "none";
