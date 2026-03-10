@@ -368,3 +368,6 @@ a {
   margin-top: 16px;
   color: #bbb;
 }
+.grid .card h3 {
+  margin: 0;
+}
