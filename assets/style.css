@@ -350,26 +350,3 @@ a {
   color: #bbb;
 }
 
-.mode-grid {
-  display: grid;
-  gap: 16px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  margin-top: 20px;
-}
-
-.mode-card {
-  background: #1b1b1b;
-  border: 1px solid #2d2d2d;
-  border-radius: 14px;
-  padding: 18px;
-}
-
-.mode-card h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-.mode-card p {
-  margin-bottom: 16px;
-  color: #cfcfcf;
-}
