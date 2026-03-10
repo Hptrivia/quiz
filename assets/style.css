@@ -322,4 +322,30 @@ a {
   .wordle-key.wide {
     min-width: 56px;
   }
+.survival-topbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.survival-topbar p {
+  margin: 0;
+}
+
+.survival-lifelines {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 14px 0 18px;
+}
+
+.hidden-option {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.survival-coming-soon {
+  margin-top: 16px;
+  color: #bbb;
 }
