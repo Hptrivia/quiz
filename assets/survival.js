@@ -96,34 +96,35 @@ async function renderSurvivalPage() {
       renderResult();
       return;
     }
-
+  
     state.selectedAnswer = null;
     state.answerLocked = false;
     optionsEl.innerHTML = "";
     setFeedback("");
     submitBtn.disabled = false;
     nextBtn.style.display = "none";
-
-    progressEl.textContent = `Question ${state.currentIndex + 1} of ${state.questions.length}`;
+  
     questionEl.textContent = q.question;
-
+  
     q.options.forEach(option => {
       const btn = document.createElement("button");
       btn.className = "option-btn";
       btn.textContent = option;
-
+  
       btn.addEventListener("click", () => {
         if (state.answerLocked || state.gameOver) return;
         state.selectedAnswer = option;
-        markOptionSelected(btn);
+        document.querySelectorAll("#survivalOptionsList .option-btn").forEach(b => {
+          b.classList.remove("selected");
+        });
+        btn.classList.add("selected");
       });
-
+  
       optionsEl.appendChild(btn);
     });
-
+  
     updateTopbar();
   }
-
   function maybeStartRecovery() {
     if (!state.bothSpent && !state.fiftyAvailable && !state.friendAvailable) {
       state.bothSpent = true;
