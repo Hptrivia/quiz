@@ -40,6 +40,14 @@ a {
   color: white;
 }
 
+.site-header h1 {
+  margin: 0 0 12px;
+}
+
+.site-header p {
+  margin: 0 0 12px;
+}
+
 .grid {
   display: grid;
   gap: 16px;
