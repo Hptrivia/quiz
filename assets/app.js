@@ -164,6 +164,7 @@ async function renderQuizPage() {
   const title = document.getElementById("quizTitle");
   const desc = document.getElementById("quizDescription");
   const playBtn = document.getElementById("playButton");
+  const survivalBtn = document.getElementById("survivalButton");
   const wordleBtn = document.getElementById("wordleButton");
 
   if (!theme) {
@@ -177,6 +178,7 @@ async function renderQuizPage() {
   title.textContent = theme.title;
   desc.textContent = theme.description;
   playBtn.href = `play.html?theme=${theme.slug}`;
+  survivalBtn.href = `survival.html?theme=${theme.slug}`;
   wordleBtn.href = `wordle.html?theme=${theme.slug}`;
 }
 
