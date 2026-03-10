@@ -3,7 +3,6 @@ async function renderWordlePage() {
   const themes = await loadThemes();
   const theme = themes.find(t => t.slug === slug);
 
-  const titleEl = document.getElementById("wordleTitle");
   const progressEl = document.getElementById("wordleProgress");
   const boardEl = document.getElementById("wordleBoard");
   const feedbackEl = document.getElementById("wordleFeedback");
@@ -15,8 +14,6 @@ async function renderWordlePage() {
     titleEl.textContent = "Theme not found";
     return;
   }
-
-  titleEl.textContent = `${theme.title} Wordle`;
 
   const allWordleData = await fetchJSON("data/wordle_words.txt");
   const words = allWordleData[theme.title];
