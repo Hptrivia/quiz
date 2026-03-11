@@ -29,6 +29,10 @@ async function renderEpisodePage() {
   let score = 0;
   let answered = false;
 
+  function cleanText(text) {
+    return String(text || "").replace(/\*\*/g, "").trim();
+  }
+
   function setFeedback(text, type = "") {
     feedbackEl.textContent = text;
     feedbackEl.className = "feedback";
@@ -57,11 +61,11 @@ async function renderEpisodePage() {
 
     answered = false;
     optionsEl.innerHTML = "";
-    descriptionEl.textContent = "";
+    descriptionEl.innerHTML = "";
     setFeedback("");
     nextBtn.style.display = "none";
 
-    contextEl.textContent = q.context || "";
+    contextEl.textContent = cleanText(q.context);
     questionEl.textContent = q.question || "";
     scoreEl.textContent = `Score: ${score}`;
 
@@ -88,7 +92,13 @@ async function renderEpisodePage() {
           setFeedback(`Wrong. Correct answer: ${q.answer}`, "wrong");
         }
 
-        descriptionEl.textContent = q.description || "";
+        descriptionEl.innerHTML = `
+          <div class="episode-description-box">
+            <p class="episode-description-label">Explanation</p>
+            <p>${cleanText(q.description)}</p>
+          </div>
+        `;
+
         scoreEl.textContent = `Score: ${score}`;
         nextBtn.style.display = "inline-block";
       });
