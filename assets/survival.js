@@ -67,6 +67,17 @@ async function renderSurvivalPage() {
     if (type) feedbackEl.classList.add(type);
   }
 
+  function shuffleArray(array) {
+  return [...array].sort(() => Math.random() - 0.5);
+}
+
+function shuffleQuestionOptions(question) {
+  return {
+    ...question,
+    options: shuffleArray(question.options)
+  };
+}
+
   function updateTopbar() {
     scoreEl.textContent = `Score: ${state.score}`;
 
@@ -131,7 +142,7 @@ async function renderSurvivalPage() {
   }
 
   function renderQuestion() {
-    const q = getCurrentQuestion();
+    const q = shuffleQuestionOptions(getCurrentQuestion());
     if (!q) {
       renderResult();
       return;
