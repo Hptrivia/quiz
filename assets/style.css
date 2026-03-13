@@ -430,3 +430,29 @@ a {
 .episode-description-box p:last-child {
   margin-bottom: 0;
 }
+
+
+.footer-highlight {
+  font-weight: 700;
+  color: #93c5fd !important;
+  text-decoration: underline !important;
+}
+
+.benefits-list {
+  margin: 16px 0 20px;
+  padding-left: 20px;
+}
+
+.benefits-list li {
+  margin-bottom: 8px;
+}
+
+.remove-ads-how {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #2b2b2b;
+}
+
+.remove-ads-how h3 {
+  margin-top: 0;
+}
