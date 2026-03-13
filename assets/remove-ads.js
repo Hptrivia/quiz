@@ -19,17 +19,34 @@ async function renderRemoveAdsPage() {
         selectedThemeTitle = theme.title;
       }
     }
+  } catch (e) {
+    selectedThemeTitle = "";
+  }
 
-    const [normalLinks, episodeLinks] = await Promise.all([
-      fetchJSON("data/normal_pack_links.json"),
-      fetchJSON("data/episode_pack_links.json")
-    ]);
-
+  try {
     if (selectedThemeTitle) {
-      if (mode === "episode" && episodeLinks[selectedThemeTitle]) {
-        selectedUrl = episodeLinks[selectedThemeTitle];
-      } else if (normalLinks[selectedThemeTitle]) {
-        selectedUrl = normalLinks[selectedThemeTitle];
+      if (mode === "episode") {
+        try {
+          const episodeLinks = await fetchJSON("data/episode_pack_links.json");
+          if (episodeLinks[selectedThemeTitle]) {
+            selectedUrl = episodeLinks[selectedThemeTitle];
+          } else {
+            const normalLinks = await fetchJSON("data/normal_pack_links.json");
+            if (normalLinks[selectedThemeTitle]) {
+              selectedUrl = normalLinks[selectedThemeTitle];
+            }
+          }
+        } catch (e) {
+          const normalLinks = await fetchJSON("data/normal_pack_links.json");
+          if (normalLinks[selectedThemeTitle]) {
+            selectedUrl = normalLinks[selectedThemeTitle];
+          }
+        }
+      } else {
+        const normalLinks = await fetchJSON("data/normal_pack_links.json");
+        if (normalLinks[selectedThemeTitle]) {
+          selectedUrl = normalLinks[selectedThemeTitle];
+        }
       }
     }
   } catch (e) {
