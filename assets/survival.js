@@ -19,6 +19,10 @@ async function renderSurvivalPage() {
   const friendBtn = document.getElementById("friendBtn");
 
   if (!theme) return;
+  
+  if (typeof updateRemoveAdsFooter === "function") {
+  updateRemoveAdsFooter(theme.slug, "normal");
+}
 
   const difficultyMap = {
     easy: ["easy", "medium"],
