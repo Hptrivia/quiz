@@ -14,6 +14,9 @@ async function renderWordlePage() {
     titleEl.textContent = "Theme not found";
     return;
   }
+  if (typeof updateRemoveAdsFooter === "function") {
+  updateRemoveAdsFooter(theme.slug, "normal");
+}
 
   const allWordleData = await fetchJSON("data/wordle_words.txt");
   const words = allWordleData[theme.title];
