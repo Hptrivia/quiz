@@ -489,6 +489,23 @@ color: white;
   border: 1px solid #2d2d2d;
   border-radius: 12px;
 }
+#challengeRoundText {
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+.challenge-share-text {
+  margin-top: 12px;
+}
+
+.challenge-link-box {
+  margin: 10px 0 18px;
+  padding: 12px;
+  border: 1px solid #2d2d2d;
+  border-radius: 10px;
+  background: #161616;
+  word-break: break-all;
+}
 
 .install-card-content p {
   margin: 0 0 12px;
