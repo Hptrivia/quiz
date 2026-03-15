@@ -335,6 +335,8 @@ a {
   .wordle-key.wide {
     min-width: 56px;
   }
+}
+
 .survival-topbar {
   display: flex;
   flex-wrap: wrap;
@@ -455,4 +457,46 @@ a {
 
 .remove-ads-how h3 {
   margin-top: 0;
+}
+
+.play-progress-row {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 12px;
+margin-bottom: 10px;
+}
+
+.play-progress-row p {
+margin: 0;
+}
+
+.skip-link {
+color: #93c5fd;
+text-decoration: underline;
+font-size: 14px;
+font-weight: 500;
+}
+
+.skip-link:hover {
+color: white;
+}
+
+.install-card {
+  margin-top: 18px;
+  padding: 14px;
+  background: #161616;
+  border: 1px solid #2d2d2d;
+  border-radius: 12px;
+}
+
+.install-card-content p {
+  margin: 0 0 12px;
+  color: #d6d6d6;
+}
+
+.install-card-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }

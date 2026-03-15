@@ -27,7 +27,7 @@ p.parentNode.insertBefore(m,p)
 </head>
 <body data-page="survival">
   <main class="container narrow">
-    <a href="index.html" class="back-link">← Back to Home</a>
+    <a href="index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
 
     <section class="panel">
 
@@ -65,6 +65,15 @@ p.parentNode.insertBefore(m,p)
       <p id="survivalFeedbackText" class="feedback"></p>
 
       <div id="survivalResultBox" style="display:none;"></div>
+            <div id="installCard" class="install-card" style="display:none;">
+  <div class="install-card-content">
+    <p id="installText"></p>
+    <div class="install-card-actions">
+      <button id="installButton" class="primary-btn" type="button">Install App</button>
+      <button id="installDismiss" class="secondary-btn" type="button">Dismiss</button>
+    </div>
+  </div>
+</div>
     </section>
   </main>
 
@@ -83,5 +92,6 @@ p.parentNode.insertBefore(m,p)
 
   <script src="assets/app.js"></script>
   <script src="assets/survival.js"></script>
+  <script src="assets/install.js"></script>
 </body>
 </html>

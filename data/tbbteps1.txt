@@ -1,5 +1,1553 @@
 [
   {
+    "id": "bbt-s1e1-easy-0001",
+    "context": "**EPISODE 1**: SCENE — High IQ Sperm Bank lobby: Sheldon riffs on the double-slit experiment; Leonard helps the receptionist with her crossword.",
+    "question": "In the sperm bank lobby, which capital does Leonard fill in from the clue “Papa Doc’s capital idea”?",
+    "options": ["Port-au-Prince", "Santo Domingo", "Havana", "Kingston"],
+    "answer": "Port-au-Prince",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Leonard reads off several answers and lands on “Port-au-Prince. Haiti.”"
+  },
+  {
+    "id": "bbt-s1e1-medium-0002",
+    "context": "Same scene: Leonard asks if it’s the High IQ sperm bank; Sheldon and Leonard are handed forms.",
+    "question": "What sarcastic reply does the receptionist give when Leonard asks if it’s the High IQ sperm bank?",
+    "options": [
+      "“If you have to ask, maybe you shouldn’t be here.”",
+      "“Depends—can you spell ‘spermatozoa’?”",
+      "“Only on weekdays.”",
+      "“What do you think the sign says?”"
+    ],
+    "answer": "“If you have to ask, maybe you shouldn’t be here.”",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "She dryly suggests that asking the question disqualifies him."
+  },
+  {
+    "id": "bbt-s1e1-hard-0003",
+    "context": "Filling out forms: Sheldon gets cold feet about ‘genetic fraud.’",
+    "question": "Which of these is NOT mentioned by Sheldon as part of his ‘genetic fraud’ worry?",
+    "options": [
+      "A sister with the same DNA mix who hostesses at Fuddruckers",
+      "A toddler unsure whether to use an integral or differential",
+      "Fear their offspring won’t inherit perfect pitch",
+      "A poor woman pinning her hopes on his sperm"
+    ],
+    "answer": "Fear their offspring won’t inherit perfect pitch",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "Sheldon mentions his sister, the hypothetical toddler, and a woman’s hopes—but never perfect pitch."
+  },
+  {
+    "id": "bbt-s1e1-medium-0004",
+    "context": "Leaving the sperm bank: Leonard reminds Sheldon this was for faster internet.",
+    "question": "What specific upgrade motivated Sheldon’s idea to visit the sperm bank?",
+    "options": ["Fractional T1 bandwidth", "A fiber-to-the-home line", "Cable DOCSIS 3.0", "Satellite uplink"],
+    "answer": "Fractional T1 bandwidth",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Leonard says “A little extra money to get fractional T1 bandwidth in the apartment.”"
+  },
+  {
+    "id": "bbt-s1e1-truefalse-0005",
+    "context": "Apartment stairwell: Sheldon shares a ‘fun fact’ about steps.",
+    "question": "True or False: Sheldon claims a two-millimetre error in step height causes most people to trip.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "He says even a 2 mm difference makes most people trip—citing his own experiments."
+  },
+  {
+    "id": "bbt-s1e1-hard-0006",
+    "context": "Apartment stairwell — Sheldon tells Leonard about his childhood stair-height experiments and mentions the injury that resulted.",
+    "question": "During Sheldon’s stair-height experiment as a kid, what did his father break?",
+    "options": ["Clavicle", "Humerus", "Radius", "Femur"],
+    "answer": "Clavicle",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "Sheldon says he ran step-height tests at age twelve and his father ‘broke his clavicle.’"
+  },
+  {
+    "id": "bbt-s1e1-medium-0006b",
+    "context": "Apartment stairwell: after Sheldon mentions step-height experiments, Leonard asks if that’s why he was sent to boarding school.",
+    "question": "According to Sheldon, what experiment led to him being sent to boarding school?",
+    "options": [
+      "Lasers",
+      "Stair-height experiments",
+      "A chemistry explosion",
+      "A rocket-fuel mishap"
+    ],
+    "answer": "Lasers",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Sheldon corrects Leonard: the boarding-school consequence was from his work with lasers, not the stair tests."
+  },
+  {
+    "id": "bbt-s1e1-medium-0007",
+    "context": "Hallway meet-cute with Penny: Leonard and Sheldon clock their new neighbor; Sheldon contrasts her with the previous tenant.",
+    "question": "How does Sheldon describe their old neighbor that Penny replaced?",
+    "options": [
+      "Two hundred pound transvestite with a skin condition",
+      "An amateur taxidermist with twelve cats",
+      "A retired mime who practiced at night",
+      "A biker who smoked on the landing"
+    ],
+    "answer": "Two hundred pound transvestite with a skin condition",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Sheldon bluntly says, “Two hundred pound transvestite with a skin condition, yes she is.”"
+  },
+  {
+    "id": "bbt-s1e1-medium-0007b",
+    "context": "Hallway meet-cute: Leonard and Sheldon meet their new neighbor.",
+    "question": "What awkward clarification does Leonard make when introducing himself and Sheldon to Penny?",
+    "options": [
+      "They live together but in separate, heterosexual bedrooms",
+      "They live together strictly for financial reasons",
+      "They are just roommates and not partners",
+      "They are just friends subletting temporarily"
+    ],
+    "answer": "They live together but in separate, heterosexual bedrooms",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Leonard over-explains their living arrangement to Penny."
+  },
+  {
+    "id": "bbt-s1e1-medium-0008",
+    "context": "Debating inviting Penny: what to do for lunch vs. plans.",
+    "question": "What does Sheldon say they’re about to watch instead of inviting Penny for lunch?",
+    "options": [
+      "Season Two of Battlestar Galactica (with commentary)",
+      "Star Wars (director’s cut)",
+      "A Star Trek: TNG marathon (with commentary)",
+      "Doctor Who"
+    ],
+    "answer": "Season Two of Battlestar Galactica (with commentary)",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Leonard notes they already watched S2; Sheldon replies ‘Not with commentary.’"
+  },
+  {
+    "id": "bbt-s1e1-medium-0008b",
+    "context": "Debating inviting Penny: Leonard argues they should ‘widen their circle’; Sheldon notes they never invited the previous neighbor over.",
+    "question": "What was the name of their previous neighbor that Sheldon says they never invited over?",
+    "options": ["Louis/Louise", "Jordan/Jordana", "Alex/Alexa", "Chris/Christine"],
+    "answer": "Louis/Louise",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Sheldon says, “We never invited Louis-slash-Louise over,” highlighting their past social habits."
+  },
+  {
+    "id": "bbt-s1e1-easy-0008c",
+    "context": "Hallway outside Penny’s apartment: Leonard wants to ‘widen our circle’; Sheldon counters by citing his extensive online network.",
+    "question": "How many friends does Sheldon claim he has on MySpace?",
+    "options": ["212", "112", "221", "200"],
+    "answer": "212",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Sheldon says, “I have a very wide circle. I have 212 friends on MySpace.”"
+  },
+  {
+    "id": "bbt-s1e1-hard-0010",
+    "context": "Penny asks what they do for fun.",
+    "question": "How does Sheldon describe their earlier day’s activity to Penny?",
+    "options": [
+      "“Today we tried masturbating for money.”",
+      "“Today we attempted cold fusion.”",
+      "“We solved P vs NP over lunch.”",
+      "“We ran a double-slit experiment at home.”"
+    ],
+    "answer": "“Today we tried masturbating for money.”",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "A blunt callback to the sperm bank visit."
+  },
+  {
+    "id": "bbt-s1e1-medium-0011",
+    "context": "In the apartment: Penny notices their whiteboards.",
+    "question": "Which theory pairing does Sheldon say is on his board?",
+    "options": [
+      "Quantum mechanics with string theory ‘doodling’",
+      "General relativity with loop quantum gravity notes",
+      "Game theory with Nash equilibria",
+      "Chaos theory with strange attractors"
+    ],
+    "answer": "Quantum mechanics with string theory ‘doodling’",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "He even jokes about a Bourne–Oppenheimer approximation spoof."
+  },
+  {
+    "id": "bbt-s1e1-hard-0012",
+    "context": "Penny sits in Sheldon’s spot. The lecture starts:",
+    "question": "Which factor is NOT part of Sheldon’s justification for his exact seat?",
+    "options": [
+      "Optimal winter warmth from the radiator without perspiration",
+      "Summer cross-breeze between two windows",
+      "Ideal TV angle to discourage conversation",
+      "Direct line-of-sight to the whiteboard"
+    ],
+    "answer": "Direct line-of-sight to the whiteboard",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "He cites radiator, cross-breeze, and TV angle—not whiteboard visibility."
+  },
+  {
+    "id": "bbt-s1e1-medium-0013",
+    "context": "Leonard claims they rarely have company; Sheldon objects and cites their social calendar: Raj and Howard are over constantly...",
+    "question": "Which late-night activity does Sheldon cite as proof they have company?",
+    "options": [
+      "Klingon Boggle until 1 a.m.",
+      "D&D games until midnight",
+      "LAN parties with Counter-Strike",
+      "Magic: The Gathering drafts"
+    ],
+    "answer": "Klingon Boggle until 1 a.m.",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "He mentions playing with Koothrappali and Wolowitz."
+  },
+  {
+    "id": "bbt-s1e1-medium-0014",
+    "context": "Getting to know Penny: quick-fire personal facts.",
+    "question": "Which self-description does Penny give that Sheldon immediately skewers?",
+    "options": [
+      "Sagittarius",
+      "Capricorn",
+      "Only child",
+      "Night owl"
+    ],
+    "answer": "Sagittarius",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Sheldon calls astrology a ‘mass cultural delusion.’"
+  },
+  {
+    "id": "bbt-s1e1-who-0016",
+    "context": "Penny laments a four-year relationship; the guys respond.",
+    "question": "WHO SAID THIS? “No, it’s not crazy, it’s a paradox… think about light… double slit… particles too.”",
+    "options": ["Leonard", "Sheldon", "Howard", "Raj"],
+    "answer": "Leonard",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "Leonard tries to console her with a wave–particle analogy."
+  },
+  {
+    "id": "bbt-s1e1-medium-0017b",
+    "context": "Apartment 4A living room, just after Penny heads to the shower; the roommates recall a prior holiday incident where a guest undressed and then debate Leonard’s intentions.",
+    "question": "Who was the last guest who took their clothes off in the apartment before this scene?",
+    "options": [
+      "Leonard's grandmother",
+      "Leonard´s aunt",
+      "Sheldon's grandmother",
+      "Leonard's mother"
+    ],
+    "answer": "Leonard's grandmother",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Sheldon reminds Leonard of a Thanksgiving episode involving his grandmother taking her clothes off."
+  },
+  {
+    "id": "bbt-s1e1-who-0018",
+    "context": "Hallway encounter: A just-toweled Penny is introduced to the rest of the gang.",
+    "question": "WHO SAID THIS? “Enchante, Mademoiselle… Cal-Tech Department of Applied Physics… my work is orbiting Jupiter’s largest moon.”",
+    "options": ["Howard", "Raj", "Sheldon", "Leonard"],
+    "answer": "Howard",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Wolowitz lays it on thick with his credentials and French."
+  },
+  {
+    "id": "bbt-s1e1-medium-0018b",
+    "context": "Apartment 4A hallway and doorway: Howard introduces himself and sprinkles in foreign phrases to impress Penny.",
+    "question": "Which language does Howard NOT use in this first encounter with Penny?",
+    "options": ["Spanish", "French", "Russian", "Mandarin"],
+    "answer": "Spanish",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Howard drops French (“bon douche”) and boasts multi-language prowess; Spanish is never used or mentioned here."
+  },
+  {
+    "id": "bbt-s1e1-medium-0019",
+    "context": "Bathroom doorway: Sheldon asks Leornard what Penny would think about his bathroom product choices",
+    "question": "Which hair product correction does Leonard make?",
+    "options": [
+      "“It’s Darth Vader shampoo—Luke Skywalker’s the conditioner.”",
+      "“It’s Han Solo shampoo—Chewbacca’s the conditioner.”",
+      "“It’s Spock shampoo—Kirk’s the conditioner.”",
+      "“It’s Neo shampoo—Morpheus’s the conditioner.”"
+    ],
+    "answer": "“It’s Darth Vader shampoo—Luke Skywalker’s the conditioner.”",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Do you think the possibility of coitus will be helped or hindered when she discovers your Luke Skywalker no-more-tears shampoo. Leonard corrects him"
+  },
+  {
+    "id": "bbt-s1e1-easy-0019b",
+    "context": "Apartment 4A, near the bathroom doorway: Penny asks for a favor—she’d rather the roommates pick up an item from her ex to avoid an ugly scene.",
+    "question": "What does Penny ask Sheldon to retrieve from her ex-boyfriend?",
+    "options": ["TV", "Laptop", "Stereo", "Microwave"],
+    "answer": "TV",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "She asks them to go across town and get her television from the ex-boyfriend."
+  },
+  {
+    "id": "bbt-s1e1-hard-0020",
+    "context": "Car ride to fetch Penny’s TV: Sheldon interrogates motives.",
+    "question": "Which past ‘relationship’ does Sheldon cite to claim Leonard doesn’t understand break-ups?",
+    "options": [
+      "Joyce Kim defecting to North Korea",
+      "A summer fling with Leslie Winkle",
+      "An online romance with a WoW guildmate",
+      "A TA he dated in grad school"
+    ],
+    "answer": "Joyce Kim defecting to North Korea",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "Sheldon says Leonard didn’t break up with her—she defected."
+  },
+  {
+    "id": "bbt-s1e1-medium-0020b",
+    "context": "Outside Penny’s ex-boyfriend’s apartment building after being denied at the intercom; Leonard insists they should be smart enough to get in.",
+    "question": "What combined IQ do Leonard and Sheldon claim to have?",
+    "options": ["320", "340", "360", "400"],
+    "answer": "360",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Leonard declares, “we have a combined IQ of 360,” before they follow the Girl Scouts inside."
+  },
+  {
+    "id": "bbt-s1e1-medium-0021",
+    "context": "Outside the building: denied entry at the intercom.",
+    "question": "How do Leonard and Sheldon ultimately get into Penny’s ex’s building?",
+    "options": [
+      "Following Girl Scouts who buzz every unit",
+      "Picking the lock with a paperclip",
+      "Piggybacking on a delivery driver",
+      "Convincing the super to let them in"
+    ],
+    "answer": "Following Girl Scouts who buzz every unit",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "A Girl Scout runs her hand down the panel; doors buzz open."
+  },
+  {
+    "id": "bbt-s1e1-medium-0022",
+    "context": "Outside Penny’s ex-boyfriend’s door: after a tense knock-and-question exchange, the man demands to know how they managed to get inside the building.",
+    "question": "When Penny’s ex asks how they got into the building, what do Leonard and Sheldon say?",
+    "options": ["We’re scientists", "We have a combined IQ of 360", "We followed a delivery guy", "We are geniuses"],
+    "answer": "We’re scientists",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "At the door, after introductions, the man asks how they got in; Leonard answers, “We’re scientists,” and Sheldon adds, “Tell him about our IQ.”"
+  },
+  {
+    "id": "bbt-s1e1-who-0024",
+    "context": "Stairwell debrief. Leonard vows to move on and win a Nobel Prize;",
+    "question": "WHO SAID THIS? “You’re not going to die alone… and you’re certainly not going to win a Nobel Prize.”",
+    "options": ["Sheldon", "Leonard", "Howard", "Raj"],
+    "answer": "Sheldon",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "A classic Sheldon two-step: comfort, then undercut."
+  },
+  {
+    "id": "bbt-s1e1-medium-0025",
+    "context": "Back at the apartment: Howard pitches online gaming to Penny.",
+    "question": "What is the name of Howard’s pet tiger in his game, and what level did he get it?",
+    "options": [
+      "Buttons, level ten",
+      "Stripes, level fifteen",
+      "Stripes, level ten",
+      "Buttons, level fifteen"
+    ],
+    "answer": "Buttons, level ten",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "He brags about his ‘cool tiger… had him since level ten. His name is Buttons.’"
+  },
+  {
+    "id": "bbt-s1e1-medium-0026",
+    "context": "Penny thanks them and offers to get them dinner; Leonard dreams aloud; Sheldon replies.",
+    "question": "How does Sheldon respond when Leonard says, “Our babies will be smart and beautiful”?",
+    "options": [
+      "“Not to mention imaginary.”",
+      "“Not to mention mythological.”",
+      "“That violates Mendelian inheritance.”",
+      "“Beauty is not heritable.”"
+    ],
+    "answer": "“Not to mention imaginary.”",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Sheldon deadpans the unlikelihood of Leonard’s fantasy."
+  },
+  {
+    "id": "bbt-s1e1-hard-0027",
+    "context": "All five in the car: dinner debate.",
+    "question": "Why does Sheldon veto Thai food after Penny agrees to it?",
+    "options": [
+      "They already had Indian for lunch and both cuisines are curry-based",
+      "Thai violates his Tuesday food schedule",
+      "He’s allergic to lemongrass",
+      "They had Chinese for lunch"
+    ],
+    "answer": "They already had Indian for lunch and both cuisines are curry-based",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "He calls them ‘gastronomically redundant.’"
+  },
+  {
+    "id": "bbt-s1e1-easy-0028",
+    "context": "In the car after dinner plans are discussed, Howard suggests a sushi spot with karaoke and immediately starts singing a 70s soft-rock chorus to impress Penny.",
+    "question": "What song does Howard sing?",
+    "options": [
+      "Baby, Don't Get Hooked on Me",
+      "Can't Take My Eyes Off You",
+      "Mandy",
+      "Copacabana"
+    ],
+    "answer": "Baby, Don't Get Hooked on Me",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Howard croons the chorus line, starting with “Baby, baby, don’t get hooked on me…” while pitching the karaoke idea."
+  },
+  {
+    "id": "bbt-s1e1-double-0029",
+    "context": "Car ride punchline: Sheldon compares dating odds to the ‘population of this car.’",
+    "question": "Fill the pair: According to Sheldon, as far as the population of the car goes, Howard is a veritable ____ ____.",
+    "options": [
+      "Mack Daddy",
+      "Romeo Montague",
+      "Casanova Classic",
+      "Love Guru"
+    ],
+    "answer": "Mack Daddy",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Sheldon concludes Howard’s odds look great within that tiny sample."
+  },
+  {
+    "id": "TBBT102-01",
+    "type": "mcq",
+    "difficulty": "easy",
+    "context": "**EPISODE 2**: Dinner at the guys’ place opens the episode. Leonard hands out takeout and double-checks one friend’s allergy while Sheldon offers a backup medical plan.",
+    "question": "What dish does Leonard hand Howard, noting the allergy accommodation?",
+    "options": ["General Tso’s Chicken", "Pad Thai", "Green Curry with Tofu", "Beef Lo Mein"],
+    "answer": "Pad Thai",
+    "description": "Leonard says, “There you go, Pad Thai, no peanuts.”"
+  },
+  {
+    "id": "TBBT102-02",
+    "type": "mcq",
+    "difficulty": "easy",
+    "context": "Utensil debate breaks out over how to eat the cuisine.",
+    "question": "According to Sheldon, how is Thai food typically eaten?",
+    "options": ["With chopsticks only", "With a fork used to load a spoon", "With hands for most dishes", "With knife and fork"],
+    "answer": "With a fork used to load a spoon",
+    "description": "He explains the fork pushes food onto the spoon, and the spoon goes in the mouth."
+  },
+  {
+    "id": "TBBT102-03",
+    "type": "mcq",
+    "difficulty": "medium",
+    "context": "Penny appears after work; Leonard invites her to join the evening plan.",
+    "question": "What marathon does Leonard invite Penny to?",
+    "options": ["Star Trek", "Superman", "Star Wars", "Batman"],
+    "answer": "Superman",
+    "description": "Leonard: “Thai food and a Superman movie marathon.”"
+  },
+{
+"id": "TBBT2-Q-CARB",
+"show": "The Big Bang Theory",
+"episode": "S01E02",
+"context": "Penny sums up her Cheesecake Factory routine—people order desserts, she brings them out. Leonard boils it down to a snarky one-liner about her ‘role.’",
+"question": "When Penny describes her Cheesecake Factory job, what snarky term does Leonard use to characterize her role?",
+"options": [
+"carbohydrate delivery system",
+"protein courier",
+"calorie shuttle",
+"dessert logistics specialist"
+],
+"answer": "carbohydrate delivery system",
+"difficulty": "easy",
+"description": "Leonard quips, So, you sort of act as a carbohydrate delivery system."
+},
+  {
+    "id": "TBBT102-04",
+    "type": "mcq",
+    "difficulty": "easy",
+    "context": "Howard tries a suave opener Penny doesn’t recognize.",
+    "question": "In which language does Howard first compliment Penny?",
+    "options": ["Italian", "French", "Russian", "Hebrew"],
+    "answer": "Russian",
+    "description": "He delivers a line in “flawless Russian.”"
+  },
+  {
+    "id": "TBBT102-06",
+    "type": "mcq",
+    "difficulty": "medium",
+    "context": "While recalling a classic Superman rescue scene, Sheldon tears into the physics, prompting Leonard to offer a counter about technique.",
+    "question": "What fix does Leonard propose so Lois isn’t harmed?",
+    "options": ["Air cushion", "Deceleration", "Cape sling", "Heat-vision braking"],
+    "answer": "Deceleration",
+    "description": "Leonard: “Unless Superman matches her speed and decelerates.”"
+  },
+  {
+    "id": "TBBT102-07",
+    "type": "mcq",
+    "difficulty": "medium",
+    "context": "The argument shifts to whether Superman’s flight is strength-based and how it works at night.",
+    "question": "What specific text claim does Leonard challenge Sheldon to find?",
+    "options": [
+      "Kryptonian skin cells store gamma energy",
+      "Kryptonian skin cells store solar energy",
+      "Kryptonian lungs recycle oxygen indefinitely",
+      "Kryptonian hearts beat at two rates"
+    ],
+    "answer": "Kryptonian skin cells store solar energy",
+    "description": "Leonard: “Find a single reference to Kryptonian skin cells.”"
+  },
+{
+"id": "TBBT2-Q-COMICS",
+"episode": "S01E02",
+"context": "In the hallway debate about Superman’s physics, Leonard boasts about his collection while challenging Sheldon to find a reference inside the locked apartment.",
+"question": "How many comic books does Leonard say he has in the apartment?",
+"options": [
+"2600",
+"1600",
+"2400",
+"3600"
+],
+"answer": "2600",
+"difficulty": "easy",
+"description": "Leonard says, “I have 26 hundred comic books in there.”"
+},
+  {
+    "id": "TBBT102-09",
+    "type": "mcq",
+    "difficulty": "easy",
+    "context": "The delivery arrives for Penny; the elevator’s broken, so the guys decide to haul it upstairs.",
+    "question": "What physics idea does Leonard cite to justify the easier push?",
+    "options": ["Lever and fulcrum", "Inclined plane", "Pulley system", "Hydraulic lift"],
+    "answer": "Inclined plane",
+    "description": "He calls the stair angle “about half” the lift; Sheldon says “exactly half.”"
+  },
+{
+"id": "TBBT2-Q-ARCHIMEDES",
+"episode": "S01E02",
+"context": "Downstairs with Penny’s delivery, Leonard pumps himself up about physics solving the lifting problem, talking levers and fulcrums as they try to haul the crate up the stairs.",
+"question": "Which physicist does Leonard invoke while explaining how they could move the heavy package?",
+"options": [
+"Archimedes",
+"Isaac Newton",
+"Albert Einstein",
+"Galileo Galilei"
+],
+"answer": "Archimedes",
+"difficulty": "easy",
+"description": "Leonard says, “We are the intellectual descendants of Archimedes” After he fails to lift it, Sheldon quips, “Archimedes would be so proud.”"
+},
+  {
+    "id": "TBBT102-10",
+    "type": "mcq",
+    "difficulty": "medium",
+    "context": "They turn the staircase into an “inclined plane,” doing math to reduce the lifting force. The box slides after a failed corner turn.",
+    "question": "What does Sheldon exclaim when it slips back?",
+    "options": [
+      "“Friction fights back!”",
+      "“Entropy never sleeps!”",
+      "“Gravity, thou art a heartless bitch.”",
+      "“Newton prevails!”"
+    ],
+    "answer": "“Gravity, thou art a heartless bitch.”",
+    "description": "His theatrical lament after the slide."
+  },
+  {
+    "id": "TBBT102-11",
+    "type": "mcq",
+    "difficulty": "medium",
+    "context": "Inside Penny’s place, Sheldon can’t ignore the disorder.",
+    "question": "How does Sheldon characterize the state of Penny’s apartment?",
+    "options": ["A landfill in a hurricane", "A swirling vortex of entropy", "A chaos-theory showpiece", "An unsolved NP-complete mess"],
+    "answer": "A swirling vortex of entropy",
+    "description": "His exact phrase: “a swirling vortex of entropy.”"
+  },
+  {
+    "id": "TBBT102-12",
+    "type": "mcq",
+    "difficulty": "easy",
+    "context": "Sheldon reminisces about the neat prior tenant.",
+    "question": "What past tenant detail does Sheldon cite to praise tidiness?",
+    "options": [
+      "Color-sorted bookshelves",
+      "Alphabetized pantry",
+      "Immaculate closet with gowns/dresses/uniforms",
+      "Labelled shoe wall by heel height"
+    ],
+    "answer": "Immaculate closet with gowns/dresses/uniforms",
+    "description": "He lists evening gowns, cocktail dresses, then police uniforms."
+  },
+  {
+    "id": "TBBT102-13",
+    "type": "mcq",
+    "difficulty": "easy",
+    "context": "Night falls; Leonard wakes to a time that suggests trouble.",
+    "question": "What time is it when Leonard wakes and notices the open door?",
+    "options": ["1:34 AM", "2:16 AM", "3:05 AM", "4:02 AM"],
+    "answer": "2:16 AM",
+    "description": "The clock reads 2:16; he grabs a lightsaber and investigates."
+  },
+  {
+    "id": "TBBT102-14",
+    "type": "mcq",
+    "difficulty": "easy",
+    "context": "Leonard finds Sheldon cleaning a sleeping neighbor’s place.",
+    "question": "What speaking tip does Sheldon give to avoid waking Penny?",
+    "options": ["Whisper without sibilants", "Speak in a lower register", "Avoid plosives", "Speak in a higher register"],
+    "answer": "Speak in a lower register",
+    "description": "He claims women are more sensitive to high pitches during sleep."
+  },
+{
+"id": "TBBT2-Q-CEREAL-SWITCH",
+"show": "The Big Bang Theory",
+"episode": "S01E02",
+"context": "The morning after, Sheldon strides into the kitchen in a great mood, reaches for a low-fiber cereal, then after Penny’s angry shout from across the hall, he abruptly pivots to something far more fibrous.",
+"question": "Which cereal does Sheldon initially choose, and which does he switch to after hearing Penny yell?",
+"options": [
+"Honey Puffs / Big Bran",
+"Honey Puffs / All-Bran",
+"All Bran / Honey Puffs",
+"Big Bran / Honey Puffs"
+],
+"answer": "Honey Puffs / Big Bran",
+"difficulty": "easy",
+"description": "Sheldon cheerfully says, “Hello, Honey Puffs,” but after Penny shouts, he backtracks: “Goodbye, Honey Puffs, hello Big Bran.”"
+},
+  {
+    "id": "TBBT102-15",
+    "type": "mcq",
+    "difficulty": "easy",
+    "context": "Morning erupts with shouting from across the hall.",
+    "question": "What item does Sheldon admit leaving that outs them?",
+    "options": [
+      "A checklist on the fridge",
+      "An organizational schematic for the closet",
+      "A signed note by the sink",
+      "An organizational schematic for the kitchen cabinet"
+    ],
+    "answer": "An organizational schematic for the closet",
+    "description": "He confesses to leaving a suggested schematic for her bedroom closet."
+  },
+{
+"id": "TBBT2-Q-DOCTOR-SNORING",
+"show": "The Big Bang Theory",
+"episode": "S01E02",
+"context": "Right after Penny furiously confronts them for cleaning her apartment while she slept, Sheldon notes she was snoring and coolly recommends a specialist, even clarifying the type of doctor.",
+"question": "Which specialist does Sheldon suggest Penny see for her snoring?",
+"options": [
+"Otolaryngologist",
+"Pulmonologist",
+"Neurologist",
+"Proctologist"
+],
+"answer": "Otolaryngologist",
+"difficulty": "easy",
+"description": "Sheldon tells her, “it could be sleep apnoea, you might want to see an otolaryngologist. It’s a throat doctor.”"
+},
+  {
+    "id": "TBBT102-17",
+    "type": "mcq",
+    "difficulty": "medium",
+    "context": "Sheldon attempts an apology at Penny’s door but adds an overshare.",
+    "question": "What awkward bonus comment does Sheldon make about Leonard?",
+    "options": [
+      "He’s a great dancer",
+      "He’s a gentle and thorough lover",
+      "He writes poetry about you",
+      "He meditates daily"
+    ],
+    "answer": "He’s a gentle and thorough lover",
+    "description": "She shuts the door immediately afterward."
+  },
+  {
+    "id": "TBBT102-18",
+    "type": "mcq",
+    "difficulty": "easy",
+    "context": "Stairwell chat: Penny vents to a member of the group",
+    "question": "Who receives Penny’s rant and a hug without saying a word?",
+    "options": ["Sheldon", "Howard", "Raj", "Leonard"],
+    "answer": "Raj",
+    "description": "She hugs Raj after he silently listens."
+  },
+  {
+    "id": "TBBT102-19",
+    "type": "mcq",
+    "difficulty": "medium",
+    "context": "Leonard crafts a brainy written apology that name-drops scientists.",
+    "question": "Which scientist’s remorse does Leonard cite?",
+    "options": ["Einstein", "Oppenheimer", "Newton", "Bohr"],
+    "answer": "Oppenheimer",
+    "description": "“Just as Oppenheimer came to regret his contributions to the first atomic bomb…”"
+  },
+  {
+    "id": "TBBT102-21",
+    "type": "mcq",
+    "difficulty": "easy",
+    "context": "Penny´s apartment. Furniture build begins; Sheldon knocks the instruction style.",
+    "question": "Which country’s space program does Howard mock while griping about the manual?",
+    "options": ["Finland", "Sweden", "Denmark", "Norway"],
+    "answer": "Sweden",
+    "description": "Howard: “This right here is why Sweden has no space program.”"
+  },
+  {
+    "id": "TBBT102-22",
+    "type": "mcq",
+    "difficulty": "easy",
+    "context": "Penny touts her competence with tools from growing up out of town.",
+    "question": "What machine does Penny say she rebuilt at around age twelve?",
+    "options": ["Pickup transmission", "Tractor engine", "Hay baler drive", "ATV carburetor"],
+    "answer": "Tractor engine",
+    "description": "She says she rebuilt a tractor engine when she was like twelve."
+  },
+  {
+    "id": "TBBT102-23",
+    "type": "mcq",
+    "difficulty": "medium",
+    "context": "The guys overengineer her media center with cooling schemes.",
+    "question": "Which cooling approaches do they toss around before escalating?",
+    "options": [
+      "Liquid coolant with PVC and radiator",
+      "Dry ice bricks only",
+      "Peltier tiles only",
+      "Liquid nitrogen loop"
+    ],
+    "answer": "Liquid coolant with PVC and radiator",
+    "description": "Howard suggests an aquarium pump, PVC, and corrugated sheet as a radiator."
+  },
+  {
+    "id": "TBBT102-24",
+    "type": "mcq",
+    "difficulty": "medium",
+    "context": "Leonard tops the brainstorm with a structural material swap.",
+    "question": "What material does Leonard propose to replace several panels and a crossbar?",
+    "options": ["Carbon fiber", "Tempered glass", "Aircraft-grade aluminum", "Titanium sheet"],
+    "answer": "Aircraft-grade aluminum",
+    "description": "He suggests replacing panels A, B, F, and crossbar H with aircraft-grade aluminum."
+  },
+  {
+    "id": "TBBT102-25",
+    "type": "mcq",
+    "difficulty": "easy",
+    "context": "Sheldon completes Leonard’s proposal with a thermal punchline.",
+    "question": "What benefit does Sheldon cite if they swap to that material?",
+    "options": [
+      "Weight reduction only",
+      "RF shielding",
+      "It becomes one big heat sink",
+      "Structural damping"
+    ],
+    "answer": "It becomes one big heat sink",
+    "description": "Sheldon: “Right, then the entire thing’s one big heat sink.”"
+  },
+  {
+    "id": "TBBT102-26",
+    "type": "mcq",
+    "difficulty": "easy",
+    "context": "They all rush off on their overbuilt plan; Penny’s left with a quiet aside.",
+    "question": "What does Penny say to herself after the guys leave to fetch parts and tools?",
+    "options": [
+      "“I’ve made a huge mistake.”",
+      "“Okay, this place does look pretty good.”",
+      "“I should’ve called the super.”",
+      "“I’m doing this myself.”"
+    ],
+    "answer": "“Okay, this place does look pretty good.”",
+    "description": "Her closing line acknowledges the cleanup."
+  },
+  {
+    "id": "bbt-s1e3-medium-0001",
+    "context": "**EPISODE 3**: In Sheldon and Leonard’s apartment, the four guys sit at their laptops, fully geared up in headsets as they advance through a co-op fantasy game.",
+    "question": "What ominous place does Howard announce they’ve reached in the game?",
+    "options": ["The Gates of Azeroth", "The Gates of Elzebub", "The Fortress of Mordax", "The Temple of Azeroth"],
+    "answer": "The Gates of Elzebub",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Guiding the team, Howard moves them forward and declares that they’ve arrived at “the Gates of Elzebub,” where armed creatures are guarding a powerful weapon."
+  },
+  {
+    "id": "bbt-s1e3-medium-0039",
+    "context": "In Sheldon and Leonard’s apartment, the four of them sit at their laptops with headsets on, in the middle of a marathon co-op gaming session.",
+    "question": "Roughly how many hours does Leonard say they’ve been working toward this in the game?",
+    "options": ["47 hours", "72 hours", "97 hours", "120 hours"],
+    "answer": "97 hours",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "As they arrive at a crucial moment, Leonard tells the others not to panic because “this is what the last 97 hours have been about,” "
+  },
+  {
+    "id": "bbt-s1e3-medium-0040",
+    "context": "Just outside a major gate in the game, Howard warns the others about what lies beyond as they prepare for a dangerous push forward.",
+    "question": "According to Howard, what creatures are waiting on the other side of the gate guarding their objective?",
+    "options": ["Trolls", "Orcs", "Goblins", "Dragons"],
+    "answer": "Goblins",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Howard cautions them to stay frosty because there’s “a horde of armed goblins on the other side of that gate”"
+  },
+  {
+    "id": "bbt-s1e3-medium-0041",
+    "context": "As the party lines up before the gate in the fantasy game, they talk about what they’ve been grinding toward during this long session.",
+    "question": "What specific item are they trying to obtain in the game during this raid?",
+    "options": ["The Sword of Destiny", "The Sword of Elzebub", "The Sword of Azeroth", "The Orb of Eternity"],
+    "answer": "The Sword of Azeroth",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Both Howard and Sheldon talk about their target: Howard says the goblins are guarding the Sword of Azeroth."
+  },
+  {
+    "id": "bbt-s1e3-medium-0003",
+    "context": "Raj is instructed to blow open the game’s massive gate while everyone braces for the incoming enemies.",
+    "question": "Which key combination does Raj shout as he triggers the explosion on the gate?",
+    "options": ["Alt + F4", "Ctrl + Shift + B", "Ctrl + Alt + B", "Shift + Enter"],
+    "answer": "Ctrl + Shift + B",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "When Howard tells him to blow the gate, Raj yells out the command “Control, shift, B!” as he detonates the entrance and unleashes a swarm of goblins."
+  },
+  {
+    "id": "bbt-s1e3-medium-0005",
+    "context": "Raj has been taken down in the raid, and Leonard and Howard are frustrated by Sheldon’s priorities.",
+    "question": "What grandiose title does Sheldon give himself after obtaining the Sword of Azeroth?",
+    "options": ["The Goblin Slayer", "The Swordmaster", "The Dark Paladin", "The Rogue Warlord"],
+    "answer": "The Swordmaster",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Sheldon refuses to answer to his own name and declares, “There is no more Sheldon, I am the Swordmaster,” reveling in his new virtual status."
+  },
+  {
+    "id": "bbt-s1e3-medium-0007",
+    "context": "The raid is over, the party has wiped, and Raj discovers what Sheldon is doing with the loot.",
+    "question": "What does Raj reveal Sheldon is doing with the Sword of Azeroth after the raid?",
+    "options": ["Trading it to another guild", "Setting it as his Facebook picture", "Seling it on Amazon", "Selling it on eBay"],
+    "answer": "Selling it on eBay",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Raj checks online and exclaims that Sheldon is selling the Sword of Azeroth on eBay, causing Leonard to accuse him of betraying them for money."
+  },
+{
+  "id": "bbt-s1e3-medium-0043",
+  "context": "After Sheldon abandons the group in the middle of the raid, Leonard accuses him of betraying them for money when they discover he’s selling the loot online.",
+  "question": "How does Sheldon describe his character in the game when defending his actions?",
+  "options": ["A hobbit thief", "A dwarf warrior", "A rogue knight elf", "An rogue orc"],
+  "answer": "A rogue knight elf",
+  "difficulty": "medium",
+  "episode": 3,
+  "description": "When Leonard asks who would betray them for money, Sheldon replies, “I’m a rogue knight elf, don’t you people read character descriptions?”"
+},
+  {
+    "id": "bbt-s1e3-medium-0009",
+    "context": "After the credits, the guys are still in the apartment, unwinding from the gaming session.",
+    "question": "What online world does Sheldon suggest they log into so they can go swimming?",
+    "options": ["Second Life", "Sims", "EverQuest", "Habbo Hotel"],
+    "answer": "Second Life",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Sweaty from the game, Sheldon proposes logging onto Second Life so they can go swimming in a virtual pool he has just built there."
+  },
+  {
+    "id": "bbt-s1e3-medium-0011",
+    "context": "Leonard steps into the hallway holding something he took earlier as an excuse to talk to Penny.",
+    "question": "What does Sheldon remind Leonard not to forget when he goes out to see Penny?",
+    "options": ["Her borrowed DVD", "Her mail", "Her keys", "Her package from downstairs"],
+    "answer": "Her mail",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Sheldon tells him not to forget the mail he took “accidentally on purpose,” giving Leonard a pretext to knock on Penny’s door."
+  },
+{
+  "id": "bbt-s1e3-medium-0042",
+  "context": "Leonard goes out into the hallway with Penny’s misdelivered mail and finds her at the door in the middle of a kiss with a hunky guy.",
+  "question": "What is the name of the muscular guy Penny is kissing when Leonard brings her mail?",
+  "options": ["Doug", "Pete", "Mark", "Chad"],
+  "answer": "Doug",
+  "difficulty": "medium",
+  "episode": 3,
+  "description": "When Leonard apologises for interrupting, Penny introduces them: “this is Doug, Doug, this is my neighbour Leonard”."
+},
+  {
+    "id": "bbt-s1e3-medium-0015",
+    "context": "Determined to be more realistic, Leonard considers going after someone he thinks is more his speed.",
+    "question": "Whom does Leonard first mention as a more \"realistic\" romantic option?",
+    "options": ["Lesley Winkle", "Olivia Geiger", "Mara Barber", "Joyce Kim"],
+    "answer": "Olivia Geiger",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Leonard says he’ll be more realistic and suggests going after Olivia Geiger."
+  },
+{
+  "id": "bbt-s1e3-medium-0045",
+  "context": "After seeing Penny with Doug, Leonard says he’ll be more realistic about dating and mentions going after Olivia Geiger instead.",
+  "question": "What is Olivia Geiger’s job, as identified when Leonard brings her up as a more realistic option?",
+  "options": [
+    "Waitress at the cafetaria",
+    "Lab technician",
+    "Dietician at the cafeteria",
+    "Physics grad student"
+  ],
+  "answer": "Dietician at the cafeteria",
+  "difficulty": "medium",
+  "episode": 3,
+  "description": "When Leonard suggests Olivia Geiger, Sheldon clarifies who she is by calling her “the dietician at the cafeteria with the limp and the lazy eye,” identifying her job."
+},
+  {
+    "id": "bbt-s1e3-medium-0016",
+    "context": "Sheldon rejects Olivia as an option and instead suggests someone they both know from work, based on a detail he’s observed.",
+    "question": "What change in Lesley Winkle does Sheldon interpret as \"signalling sexual availability\"?",
+    "options": ["New lipstick", "Shaving her arms", "Shaving her legs", "Wearing high heels"],
+    "answer": "Shaving her legs",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Sheldon notes that Lesley Winkle recently started shaving her legs and reasons that, since winter is coming, it must be a signal of sexual availability."
+  },
+  {
+    "id": "bbt-s1e3-medium-0017",
+    "context": "Howard warns Leonard about workplace romances and hints at his own dubious expertise.",
+    "question": "According to Howard, in what area is he \"a bit of a self-taught expert\"?",
+    "options": ["Dating scientists", "Human resources procedures", "Sexual harassment law", "Conflict resolution"],
+    "answer": "Sexual harassment law",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Howard claims there are pitfalls when coworkers date and boasts that, when it comes to sexual harassment law, he’s “a bit of a self-taught expert.”"
+  },
+  {
+    "id": "bbt-s1e3-medium-0018",
+    "context": "In the lab, Lesley is busy with a powerful laser when Leonard approaches her about an experiment.",
+    "question": "What everyday item is Lesley trying to heat with a five hundred kilowatt oxygen iodine laser?",
+    "options": ["Her coffee", "Cup o’ noodles", "A frozen burrito", "Instant oatmeal"],
+    "answer": "Cup o’ noodles",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "When Leonard begins his proposal, Lesley pauses to see how long it takes a five hundred kilowatt oxygen iodine laser to heat up her cup o’ noodles."
+  },
+{
+  "id": "bbt-s1e3-medium-0046",
+  "context": "In the lab, Leonard awkwardly tries to turn his interaction with Lesley into something more than just professional, dressing it up in scientific language.",
+  "question": "What phrase does Leonard use to describe his idea, prompting Lesley to ask, \"Wait, are you asking me out?\"",
+  "options": [
+    "A controlled bio-social field study with a physiological overlay",
+    "A longitudinal biological trial",
+    "A bio-social exploration with a neuro-chemical overlay",
+    "A peer-reviewed compatibility experiment"
+  ],
+  "answer": "A bio-social exploration with a neuro-chemical overlay",
+  "difficulty": "medium",
+  "episode": 3,
+  "description": "After talking about lasers and noodles, Leonard says he was thinking more of “a bio-social exploration with a neuro-chemical overlay,” which makes Lesley stop and ask if he’s asking her out."
+},
+  {
+    "id": "bbt-s1e3-medium-0020",
+    "context": "Lesley proposes skipping straight to the key variable used to judge the experiment’s success.",
+    "question": "According to Lesley, what is the primary way they would evaluate the success or failure of the date?",
+    "options": ["The quality of conversation", "The goodnight kiss", "How much they laugh", "Whether they plan a second date immediately"],
+    "answer": "The goodnight kiss",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Lesley reframes the experiment so that they focus on the bio-chemical reaction during the goodnight kiss—things like heart rate and pheromones—to judge success."
+  },
+  {
+    "id": "bbt-s1e3-medium-0021",
+    "context": "Right before they test the \"key variable\" of their experiment, Lesley sets some terms.",
+    "question": "How does Lesley specify the parameters of the kiss she wants to test with Leonard?",
+    "options": ["Open mouth and passionate", "Closed mouth but romantic", "Closed mouth but passionate", "Multiple short kisses"],
+    "answer": "Closed mouth but romantic",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "She tells Leonard the kiss should be “closed mouth but romantic,” then offers him a mint before they proceed."
+  },
+  {
+    "id": "bbt-s1e3-medium-0022",
+    "context": "After the kiss, Leonard lets Lesley deliver the experimental results first.",
+    "question": "What is Lesley’s main criticism of the kiss after acknowledging Leonard’s reasonable technique?",
+    "options": ["Too much spittle", "Bad timing", "No arousal", "Awkward head movement"],
+    "answer": "No arousal",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "She reports that it was a good kiss with reasonable technique and no extraneous spittle, but concludes there was no arousal on her side."
+  },
+{
+  "id": "bbt-s1e3-medium-0047",
+  "context": "In Sheldon and Leonard’s apartment, the guys are playing Jenga and joking about whether Sheldon might secretly be a robot.",
+  "question": "When Sheldon wonders what rules he’d be bound by if he were a robot, whose famous laws of robotics are mentioned?",
+  "options": [
+    "Newton’s",
+    "Asimov’s",
+    "Clarke’s",
+    "Turing’s"
+  ],
+  "answer": "Asimov’s",
+  "difficulty": "medium",
+  "episode": 3,
+  "description": "As Howard and Raj tease him about being mechanical, Sheldon asks if he’d be bound by Asimov’s three laws of robotics, directly referencing Isaac Asimov’s fictional rules."
+},
+  {
+    "id": "bbt-s1e3-medium-0024",
+    "context": "Still around the Jenga tower, Howard teases Sheldon about Asimov’s laws and then shifts to offering Leonard a solution to his romantic woes.",
+    "question": "Where does Howard say there are plenty of eligible women for Leonard to choose from?",
+    "options": ["A yoga class", "The comic book store", "A salsa class", "A cooking workshop"],
+    "answer": "A salsa class",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Howard confidently claims he knows a place full of eligible women, leading directly to the next scene where the guys attend a salsa class."
+  },
+{
+  "id": "bbt-s1e3-medium-0048",
+  "context": "At a salsa class, the guys dance opposite a group of middle-aged women while the instructor calls out steps and Howard makes comments to Leonard.",
+  "question": "What is the name of the woman at the salsa class that Howard says has her eye on Leonard?",
+  "options": ["Mrs Tishman", "Mrs Kaplan", "Mrs Rosen", "Mrs Goldberg"],
+  "answer": "Mrs Tishman",
+  "difficulty": "medium",
+  "episode": 3,
+  "description": "While Leonard awkwardly follows the salsa steps, Howard leans over and says, “I think Mrs Tishman’s got her eye on you. I’ve been there, you’re in for a treat,” naming her as Mrs Tishman."
+},
+  {
+    "id": "bbt-s1e3-medium-0026",
+    "context": "Later, Leonard returns home in full emo mode, singing sadly to himself as he carries supplies.",
+    "question": "What type of pet is Leonard planning to get to cope with his feelings about Penny?",
+    "options": ["A genetically altered dog", "A genetically altered cat", "A genetically altered parrot", "A genetically altered hamster"],
+    "answer": "A genetically altered cat",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Leonard unloads a scratching post and explains that a feline geneticist in San Diego has developed hypo-allergenic calico cats he’s thinking of adopting."
+  },
+  {
+    "id": "bbt-s1e3-medium-0027",
+    "context": "Leonard justifies the cat plan while Sheldon questions whether a pet can replace a relationship.",
+    "question": "Which of these is NOT one of the names Leonard considers for his hypothetical cat?",
+    "options": ["Einstein", "Newton", "Sergeant Fuzzyboots", "Schrödinger"],
+    "answer": "Schrödinger",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Leonard debates between calling the cat Einstein, Newton, or Sergeant Fuzzyboots; Schrödinger never makes his list, despite being an on-brand physics reference."
+  },
+{
+  "id": "bbt-s1e3-medium-0050",
+  "context": "Leonard is having a panic attack before his dinner with Penny and begs Sheldon to call her and cancel with a believable excuse.",
+  "question": "What \"illness\" does Sheldon propose telling Penny Leonard has, as a reason to cancel the date?",
+  "options": [
+    "An impromptu Prostate Exam",
+    "Food poisoning from bad Thai",
+    "Routine Colonoscopy",
+    "A sudden outbreak of chicken pox"
+  ],
+  "answer": "Routine Colonoscopy",
+  "difficulty": "medium",
+  "episode": 3,
+  "description": "When Leonard asks Sheldon to cancel for him and to avoid anything venereal, Sheldon cheerfully suggests telling Penny that Leonard had a routine colonoscopy and “hasn’t quite bounced back.”"
+},
+  {
+    "id": "bbt-s1e3-medium-0033",
+    "context": "During dinner, Penny opens up about her dating patterns and a recent breakup while Leonard tries to steer the conversation.",
+    "question": "According to Penny, how long does her typical rebound \"weekend\" pattern with a cute guy usually last?",
+    "options": ["About 12 hours", "About 24 hours", "About 36 hours", "About 48 hours"],
+    "answer": "About 36 hours",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Penny admits that after a breakup she tends to find some cute guy and then it’s about thirty-six hours of rebound sex over a weekend, which leaves her feeling awful."
+  },
+  {
+    "id": "bbt-s1e3-medium-0032",
+    "context": "At the restaurant, Penny and Leonard sit across from each other making small talk about work and life.",
+    "question": "Which dessert item does Penny mention as \"moving pretty well\" at the Cheesecake Factory?",
+    "options": ["Strawberry cheesecake", "Chocolate key lime", "Red velvet cake", "Peanut butter fudge"],
+    "answer": "Chocolate key lime",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "When Leonard asks what’s new at the Cheesecake Factory, Penny says not much, but mentions that a chocolate key lime dessert is selling well."
+  },
+  {
+    "id": "bbt-s1e3-medium-0034",
+    "context": "Leonard tries to impress Penny with a physics trick involving an olive and a glass.",
+    "question": "What physics term does Penny initially use when she sees the olive spinning, which Leonard then corrects?",
+    "options": ["Centripetal force", "Centrifugal force", "Momentum", "Gravity"],
+    "answer": "Centrifugal force",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "When the olive spins inside the glass, Penny calls it centrifugal force, and Leonard corrects her by explaining it’s actually centripetal force from the glass acting on the olive."
+  },
+{
+  "id": "bbt-s1e3-medium-0051",
+  "context": "During their dinner at the restaurant, Leonard tries to impress Penny with a physics trick using an olive and a glass, explaining centripetal force.",
+  "question": "What abruptly cuts their date short at the restaurant?",
+  "options": [
+    "The glass shatters during the trick and Leonard gets hurt",
+    "Leonard throws up when a piece of glass cuts him",
+    "Leonard hits Penny in the face while during te olive trick",
+    "Leonard bangs his head under the table while doing the olive trick and gets hurt"
+  ],
+  "answer": "Leonard bangs his head under the table while doing the olive trick and gets hurt",
+  "difficulty": "medium",
+  "episode": 3,
+  "description": "While demonstrating how centripetal force works by spinning an olive in a glass, Leonard ducks under the table to keep explaining and smacks his head on the underside, later admitting, \"I'm not okay,\" which ends the dinner."
+},
+  {
+    "id": "bbt-s1e3-medium-0054",
+    "context": "At the end of the night, outside their apartments, Penny checks what the evening meant while Leonard tries to downplay it.",
+    "question": "When Penny asks if this was supposed to be a date, how does Leonard later say a girl knows she’s been on a date with him?",
+    "options": [
+      "He always pays for everything",
+      "She never ever forgets it",
+      "It’s \"dated\" with a capital D, bold face and underlined",
+      "He kisses her at the end"
+    ],
+    "answer": "It’s \"dated\" with a capital D, bold face and underlined",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "After denying that this was a date, Leonard claims, “When I take a girl out on a date, and I do, she knows she’s been dated. Capital D. Bold face, underline, like Day-ted.”"
+  },
+  {
+    "id": "bbt-s1e3-medium-0038",
+    "context": "Back in the apartment after everything, Leonard returns from the hallway where he left Penny.",
+    "question": "When Sheldon asks Leonard how his date was, how does Leonard describe it in a single word?",
+    "options": ["\"Terrible\"", "\"Weird\"", "\"Awesome\"", "\"Fine\""],
+    "answer": "\"Awesome\"",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Despite the head injury, vomiting, and confusion over whether it was even a date, Leonard walks in and answers Sheldon’s question with a satisfied “Awesome!”"
+  },
+  {
+    "id": "bbt-s1e4-medium-0001",
+    "context": "**EPISODE 4**: In the apartment, Sheldon and Leonard sit together as Sheldon launches into one of his big theoretical obsessions.",
+    "question": "What topic does Sheldon say he’s been thinking about again at the very start of the episode?",
+    "options": ["Teleportation", "Time travel", "Invisibility", "String theory"],
+    "answer": "Time travel",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Sheldon opens by telling Leonard, “I’ve been thinking about time travel again,” before Leonard jokes about him hitting a roadblock with invisibility."
+  },
+  {
+    "id": "bbt-s1e4-medium-0002",
+    "context": "Sheldon explains his latest time travel thought experiment, trying to take the pressure off himself as an inventor.",
+    "question": "What does Sheldon say he would do if he perfected a time machine, to avoid having to invent it?",
+    "options": [
+      "Destroy it to preserve the timeline",
+      "Hide it from the government",
+      "Go into the past and give it to himself",
+      "Sell it to the highest bidder"
+    ],
+    "answer": "Go into the past and give it to himself",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "He says that if he ever perfected a time machine, he’d just go into the past and give it to himself, thus eliminating the need to invent it in the first place."
+  },
+  {
+    "id": "bbt-s1e4-medium-0003",
+    "context": "Leonard sarcastically congratulates Sheldon on his \"breakthrough\" while heading out to a department party.",
+    "question": "When Leonard says “congratulations are in order” about Sheldon’s time travel idea, how does Sheldon pedantically correct the tense?",
+    "options": [
+      "\"Congratulations were in order.\"",
+      "\"Congratulations will be in order.\"",
+      "\"Congratulations will have been in order.\"",
+      "\"Congratulations had been in order.\""
+    ],
+    "answer": "\"Congratulations will have been in order.\"",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Reminding Leonard of the time travel angle, Sheldon insists, “No, congratulations will have been in order,” correcting him with future perfect tense."
+  },
+  {
+    "id": "bbt-s1e4-medium-0004",
+    "context": "The two discuss the upcoming department party and Sheldon’s past experiences with colleagues.",
+    "question": "At the last department party, what topic did Dr. Finkleday corner Sheldon to talk about for 45 minutes?",
+    "options": ["Quantum tunneling", "Spelunking", "Chess openings", "Bird watching"],
+    "answer": "Spelunking",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Sheldon complains that Dr. Finkleday trapped him for “45 minutes” talking about spelunking, which he later says has nothing interesting about it."
+  },
+  {
+    "id": "bbt-s1e4-medium-0005",
+    "context": "Sheldon vents about caves to Leonard while dreading another boring interaction.",
+    "question": "When Sheldon asks Leonard if he knows what’s interesting about caves, how does he answer his own question?",
+    "options": [
+      "They have unique ecosystems",
+      "They’re acoustically fascinating",
+      "Nothing",
+      "Everything"
+    ],
+    "answer": "Nothing",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "After setting Leonard up with “You know what’s interesting about caves, Leonard?” Sheldon answers himself flatly: “Nothing.”"
+  },
+  {
+    "id": "bbt-s1e4-medium-0063",
+    "context": "At the department party and later at the university, the guys deal with their new department head, who fires and then rehires Sheldon.",
+    "question": "What is the name of Sheldon and Leonard’s boss at the university in this episode?",
+    "options": [
+      "Dr Eric Gablehouser",
+      "Dr Peter Gableman",
+      "President Siebert",
+      "Dr Lawrence Gablehouser"
+    ],
+    "answer": "Dr Eric Gablehouser",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "At the party he introduces himself as “Eric Gablehouser,” and later in his office Mrs Cooper addresses him as Dr Gablehouser while helping Sheldon get his job back."
+  },
+  {
+    "id": "bbt-s1e4-medium-0006",
+    "context": "Before the party, Leonard coaches Sheldon on how to meet the new department head and keep things brief.",
+    "question": "Which insult does Sheldon include in his practice greeting to Dr. Gablehouser about the kind of books he writes?",
+    "options": [
+      "They’re only fit for children",
+      "They’re plagiarised from real scientists",
+      "They reduce great concepts to dumbed down anecdotes",
+      "They are full of basic mathematical errors"
+    ],
+    "answer": "They reduce great concepts to dumbed down anecdotes",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Sheldon rehearses: Gablehouser’s books reduce great science concepts “to a series of anecdotes, each one dumbed down to accommodate the duration of an average bowel movement.”"
+  },
+  {
+    "id": "bbt-s1e4-medium-0007",
+    "context": "At the department party buffet table, Raj reacts enthusiastically to the spread of food.",
+    "question": "Why does Raj say he loves America when he sees the buffet?",
+    "options": [
+      "Because of the free drinks",
+      "Because there are so many desserts",
+      "Because it’s not just Indian food",
+      "Because everything is organic"
+    ],
+    "answer": "Because it’s not just Indian food",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Raj says he loves America when he sees the buffet and explains that in India you can’t find a bagel in Mumbai to save your life."
+  },
+  {
+    "id": "bbt-s1e4-medium-0008",
+    "context": "Howard walks into the party with a tall blonde woman on his arm, surprising the others.",
+    "question": "Before they learn who she is, what more plausible explanation does Sheldon offer for Howard arriving with a statuesque blonde?",
+    "options": [
+      "Howard must have won the lottery",
+      "She’s a visiting scientist",
+      "His work in robotics",
+      "It’s a prostitute"
+    ],
+    "answer": "His work in robotics",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Seeing Howard with a date, Sheldon suggests it’s more plausible that “his work in robotics has made an amazing leap forward.”"
+  },
+  {
+    "id": "bbt-s1e4-medium-0009",
+    "context": "Howard introduces his companion at the party with his usual swagger.",
+    "question": "What does Howard’s “special lady friend” Summer say to him when he puts his arm around her?",
+    "options": [
+      "\"Watch the hair.\"",
+      "\"Don’t touch me in public.\"",
+      "\"I already told you, touching’s extra.\"",
+      "\"Hands off the merchandise.\""
+    ],
+    "answer": "\"I already told you, touching’s extra.\"",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "After Howard brags and puts his arm around her, Summer reminds him, “I already told you, touching’s extra,” forcing him to pull back."
+  },
+  {
+    "id": "bbt-s1e4-medium-0011",
+    "context": "Later, Sheldon carries a box of his belongings up the apartment stairwell with Leonard beside him.",
+    "question": "According to Leonard, what insult did Sheldon use when talking to Gablehouser that got him fired?",
+    "options": [
+      "Called him a failed mathematician",
+      "Called him a glorified high-school science teacher",
+      "Accused him of faking his PhD",
+      "Said he didn’t understand basic physics"
+    ],
+    "answer": "Called him a glorified high-school science teacher",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Leonard reminds him that he called Gablehouser “a glorified high-school science teacher whose last successful experiment was lighting his own farts.”"
+  },
+  {
+    "id": "bbt-s1e4-medium-0013",
+    "context": "The next morning in the kitchen, Sheldon is busy at the stove when Leonard walks in.",
+    "question": "What does Sheldon say he is actually doing when Leonard assumes he’s just making eggs for breakfast?",
+    "options": [
+      "Testing a new protein-rich diet",
+      "Measuring yolk-to-white ratios",
+      "Testing a hypothesis about water molecules",
+      "Practicing for a cooking competition"
+    ],
+    "answer": "Testing a hypothesis about water molecules",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Sheldon clarifies that it’s not breakfast but an experiment on “the separation of the water molecules from the egg proteins, and its impact vis-a-vis taste.”"
+  },
+  {
+    "id": "bbt-s1e4-medium-0014",
+    "context": "Penny pops her head into the apartment to say she’s going to the market and offers to pick things up.",
+    "question": "How many eggs does Sheldon ask Penny to buy for his experiment?",
+    "options": ["One dozen", "Two dozen", "Three dozen", "Four dozen"],
+    "answer": "Four dozen",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "When Penny asks if they need anything, Sheldon replies, “I need eggs. Four dozen should suffice,” before specifying different types."
+  },
+  {
+    "id": "bbt-s1e4-medium-0015",
+    "context": "In the car, Penny asks why Sheldon didn’t go to work, and he explains his situation.",
+    "question": "When Penny says, \"when one door closes, another one opens,\" how does Sheldon initially respond?",
+    "options": [
+      "He says it’s a nice metaphor",
+      "He says that only happens with relays or motion sensors",
+      "He quotes a physicist who said the same thing",
+      "He says is axiomatically incorrect"
+    ],
+    "answer": "He says that only happens with relays or motion sensors",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Penny uses the cliché about doors closing and opening, and Sheldon replies that it doesn’t happen unless doors are “connected by relays, or there are motion sensors involved.”"
+  },
+  {
+    "id": "bbt-s1e4-medium-0017",
+    "context": "Sheldon continues his panicked physics monologue about their speed and braking distance.",
+    "question": "While worrying about them crashing into the car ahead at 51 miles per hour, what random roadside feature does Sheldon suddenly notice?",
+    "options": [
+      "A new movie theatre",
+      "A new comic book store",
+      "A new put-put golf course",
+      "A new physics museum"],
+    "answer": "A new put-put golf course",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "As he predicts “death, mutilation and…,” he abruptly interrupts himself with, “oh look, they built a new put-put course.”"
+  },
+  {
+    "id": "bbt-s1e4-medium-0018",
+    "context": "At the supermarket, Sheldon marvels at being among \"ordinary\" people while Penny tries to keep them on task.",
+    "question": "What does Sheldon say is interesting about tomatoes when he points them out to Penny?",
+    "options": [
+      "They have more genes than humans",
+      "They are technically a fruit but shelved with vegetables",
+      "They grow underground like potatoes",
+      "They can conduct small electrical currents"
+    ],
+    "answer": "They are technically a fruit but shelved with vegetables",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Sheldon starts to lecture her that tomatoes are shelved with vegetables even though they’re technically a fruit, and asks if she finds it interesting."
+  },
+  {
+    "id": "bbt-s1e4-medium-0020",
+    "context": "While Penny picks up vitamins, Sheldon can’t resist critiquing her choices.",
+    "question": "According to Sheldon, what is Penny really buying when she loads up on multivitamins?",
+    "options": [
+      "Overpriced candy",
+      "The ingredients for very expensive bowel movements",
+      "The ingredients for very expensive urine",
+      "Unnecessary antioxidants"
+    ],
+    "answer": "The ingredients for very expensive urine",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "He tells her the body can only absorb so much, so what she’s buying is “the ingredients for very expensive urine.”"
+  },
+  {
+    "id": "bbt-s1e4-medium-0021",
+    "context": "Penny sarcastically says maybe expensive urine is exactly what she wants, and Sheldon dives deeper.",
+    "question": "When Penny jokes that maybe expensive urine is what she’s going for, what extra mineral does Sheldon say she should add?",
+    "options": [
+      "Zinc",
+      "Manganese",
+      "Copper",
+      "Molybdenum"
+    ],
+    "answer": "Manganese",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Sheldon replies, “Well then you’ll want some manganese,” as if he were offering helpful shopping advice."
+  },
+  {
+    "id": "bbt-s1e4-medium-0023",
+    "context": "On the stairs, Sheldon starts analysing Penny’s shopping habits in uncomfortable detail.",
+    "question": "What personal product does Sheldon point out that Penny buys one month at a time, suggesting she should stock up?",
+    "options": [
+      "Shampoo",
+      "Sanitary pads",
+      "Tampons",
+      "Laundry detergent"
+    ],
+    "answer": "Tampons",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "He notes that she purchases her tampons one month’s supply at a time and suggests she buy many years’ worth since they don’t spoil."
+  },
+  {
+    "id": "bbt-s1e4-medium-0027",
+    "context": "Sheldon excitedly expands on his entrepreneurial plans while Leonard worries about his focus.",
+    "question": "Beyond luminous fish, what other business idea does Sheldon mention while talking to Leonard?",
+    "options": [
+      "A subscription physics newsletter",
+      "A social network for scientists",
+      "Glow-in-the-dark tampons",
+      "A line of ergonomic gaming chairs"
+    ],
+    "answer": "Glow-in-the-dark tampons",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "He says luminous fish are just the beginning and talks about “a bulk mail-order feminine hygiene company… oh, glow in the dark tampons! Leonard, we’re going to be rich.”"
+  },
+  {
+    "id": "bbt-s1e4-medium-0061",
+    "context": "When Leonard shows Mrs Cooper Sheldon’s loom project, Sheldon pedantically corrects how it should be described.",
+    "question": "According to Sheldon, what is the difference between a poncho and a sarape?",
+    "options": [
+      "A poncho has sleeves and a sarape does not",
+      "A poncho is closed at the sides, a sarape is open at the sides",
+      "A poncho is made of wool, a sarape is made of cotton",
+      "A sarape is closed at the sides, a poncho is open at the sides"
+    ],
+    "answer": "A poncho is closed at the sides, a sarape is open at the sides",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "When Leonard calls it a sarape, Sheldon snaps, “This is not a sarape. This is a poncho. A sarape is open at the sides, a poncho is closed, this is a poncho.”"
+  },
+  {
+    "id": "bbt-s1e4-medium-0057",
+    "context": "Later at dinner, everyone praises a dessert that was always Sheldon’s favourite, and his mother reveals what makes it so good.",
+    "question": "What dish does Sheldon’s mother serve, and what does she say is its secret ingredient?",
+    "options": [
+      "Cobbler with lard",
+      "Cobbler with love",
+      "Chili with lard",
+      "Chili with love"
+    ],
+    "answer": "Cobbler with lard",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Penny gushes, “this is the best cobbler I’ve ever had.” Mrs Cooper says it was always Sheldon’s favourite and asks if Penny knows the secret ingredient. After Penny guesses “Love?”, she corrects her: “Lard.”"
+  },
+  {
+    "id": "bbt-s1e4-medium-0058",
+    "context": "Around the dinner table, Sheldon’s mother tells the group a story from his teenage years about one of his more ambitious projects.",
+    "question": "How old was Sheldon when he tried to build a small nuclear reactor in the shed?",
+    "options": ["10", "11", "13", "15"],
+    "answer": "13",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Mrs Cooper recalls, “I remember one summer when he was thirteen, he built a small nuclear reactor in the shed and told everybody he was going to provide free electricity for the whole town.”"
+  },
+  {
+    "id": "bbt-s1e4-medium-0059",
+    "context": "During dinner, Sheldon’s mother refers to an Indian member of her church while chatting with Raj and Howard.",
+    "question": "What is the name of the Indian man at Mrs Cooper’s church who offers a discount on LASIK?",
+    "options": [
+      "Dr Singh",
+      "Dr Patel",
+      "Dr Gupta",
+      "Dr Sharma"
+    ],
+    "answer": "Dr Patel",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Mrs Cooper says there’s “an Indian gentleman at our church, a Dr Patel,” and tells how the Lord moved him to give everyone 20% off on LASIK."
+  },
+  {
+    "id": "bbt-s1e4-medium-0060",
+    "context": "As everyone discusses Sheldon’s long history of being \"difficult,\" his mother mentions the circumstances of his birth.",
+    "question": "Where does Sheldon’s mother say he \"fell out of\" her, hinting at where he was born?",
+    "options": [
+      "In a hospital delivery room",
+      "In the back of a pickup truck",
+      "At the K-Mart",
+      "On the church steps"
+    ],
+    "answer": "At the K-Mart",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "She says she loves him but he’s been difficult “since he fell out of me at the K-Mart,” jokingly framing the store as the scene of his birth."
+  },
+  {
+    "id": "bbt-s1e4-medium-0028",
+    "context": "Over dinner, Sheldon’s mother shares stories about his childhood \"projects\" with the others.",
+    "question": "As a teenager, what illegal material did Sheldon try to obtain online for his homemade nuclear reactor in the shed?",
+    "options": [
+      "Plutonium",
+      "Heavy water",
+      "Yellowcake uranium",
+      "Weapons-grade uranium rods"
+    ],
+    "answer": "Yellowcake uranium",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Mrs. Cooper explains that when he went on the internet to get “yellow cake uranium,” a man from the government had to come and tell him it was against the law."
+  },
+  {
+    "id": "bbt-s1e4-medium-0029",
+    "context": "After the nuclear reactor plan failed, Sheldon’s mom describes his next dramatic invention.",
+    "question": "What device did Sheldon build in his room after being told he couldn’t have uranium for his reactor?",
+    "options": [
+      "A rail gun",
+      "A sonic death ray",
+      "A laser cannon",
+      "A particle accelerator"
+    ],
+    "answer": "A sonic death ray",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "She says he locked himself in his room and built “a sonic death ray,” though it “didn’t even slow down the neighbour kids” and just annoyed their dog."
+  },
+{
+  "id": "bbt-s1e4-medium-0055",
+  "context": "Across the episode, Sheldon throws himself into a string of non-university \"projects\" at home while on his self-declared sabbatical.",
+  "question": "Which of these is NOT one of the experiments or projects we actually see Sheldon working on in this episode?",
+  "options": [
+    "Testing how separating water molecules from egg proteins affects the taste of scrambled eggs",
+    "Trying to create luminous fish \"nightlights\" inspired by jellyfish DNA research",
+    "Weaving on a loom to make ponchos and placemats",
+    "Building a model of what DNA might look like in a silicon-based life form",
+    "Developing glow-in-the-dark tampons as a product"
+  ],
+  "answer": "Developing glow-in-the-dark tampons as a product",
+  "difficulty": "medium",
+  "episode": 4,
+  "description": "On screen we see Sheldon running a scrambled egg taste experiment, keeping bowls of luminous-fish test subjects, weaving on his loom, and assembling a silicon-based DNA model. Glow-in-the-dark tampons are only mentioned as a business idea, never shown as an actual experiment."
+},
+  {
+    "id": "bbt-s1e4-medium-0056",
+    "context": "In Sheldon’s bedroom, his mother lays down the law about his behaviour and reminds him of one of his father’s colourful sayings.",
+    "question": "According to Sheldon’s father, you can only fish for so long before you have to do what?",
+    "options": [
+      "Use a shotgun",
+      "Switch to a different lake",
+      "Throw a stick of dynamite in the water",
+      "Throw a bomb in the lake"
+    ],
+    "answer": "Throw a stick of dynamite in the water",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Mrs Cooper tells Sheldon, “You know how your daddy used to say that you can only fish for so long before you got to throw a stick of dynamite in the water?” as she pushes him to apologise to Dr Gablehouser."
+  },
+  {
+    "id": "bbt-s1e4-medium-0030",
+    "context": "At the very end of the episode, Sheldon is in bed and his mom is tucking him in after his apology to Gablehouser.",
+    "question": "What does Sheldon ask his mother about Dr. Gablehouser as she tucks him in?",
+    "options": [
+      "\"Is Dr. Gablehouser going to fire me?\"",
+      "\"Is Dr. Gablehouser going to be my father?\"",
+      "\"Is Dr. Gablehouser going to be my new daddy?\"",
+      "\"Are you going to be marry Dr. Gablehouser?\""
+    ],
+    "answer": "\"Is Dr. Gablehouser going to be my new daddy?\"",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "After she says she’s proud of him, Sheldon asks, “Is Dr Gablehouser going to be my new daddy?” and she answers, “We’ll see. Sleep tight,” as his luminous fish glows nearby."
+  },
+  {
     "id": "bbt-s1e5-medium-0001",
     "context": "**EPISODE 5**: At the Cheesecake Factory, the guys are at a table playing a homemade strategy game that mixes real historical battles with pop-culture characters.",
     "question": "What historic battle does Sheldon say the North wins again thanks to his move?",
@@ -449,6 +1997,1471 @@
     "difficulty": "medium",
     "episode": 5,
     "description": "He explains he might drop Soup Plantation from his rotation, saying “the name always confused me anyway, Soup Plantation. You can’t grow soup.”"
+  },
+  {
+    "id": "bbt-s1e6-medium-0001",
+    "context": "**EPISODE 6**: In the apartment lobby after a messy day out, the guys arrive in full combat gear.",
+    "question": "What activity have Leonard, Sheldon, Howard, and Raj just come back from when the episode opens?",
+    "options": [
+      "Laser tag",
+      "Paintball",
+      "Airsoft",
+      "Nerf war"
+    ],
+    "answer": "Paintball",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Raj complains, 'We really suck at paintball,' and Sheldon makes it clear they’ve just lost a paintball match."
+  },
+  {
+    "id": "bbt-s1e6-medium-0002",
+    "context": "Still in the lobby, Howard zeroes in on just how humiliating their defeat was.",
+    "question": "According to Howard, whose team did they lose to in their humiliating paintball match?",
+    "options": [
+      "A middle-school softball team",
+      "A group of cosplay Stormtroopers",
+      "Kyle Bernstein’s Bar-Mitzvah party",
+      "Physics team-building group"
+    ],
+    "answer": "Kyle Bernstein’s Bar-Mitzvah party",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Howard groans that it was bad enough losing, but they didn’t have to lose to 'Kyle Bernstein’s Bar-Mitzvah party. Leonard says.. I think we have to acknowledge, those were some fairly savage pre-adolescent Jews'"
+  },
+  {
+    "id": "bbt-s1e6-medium-0003",
+    "context": "As they argue about what went wrong, Sheldon presents his own analysis of the defeat.",
+    "question": "How does Sheldon describe the main reason they were 'annihilated' in paintball?",
+    "options": [
+      "Bad weather and faulty gear",
+      "Overconfidence in their strategy",
+      "Inferior weapons and poor visibility",
+      "Failure to follow the chain of command"
+    ],
+    "answer": "Failure to follow the chain of command",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Sheldon says they were 'annihilated by our own incompetence and the inability of some people to follow the chain of command,' clearly blaming the team."
+  },
+  {
+    "id": "bbt-s1e6-medium-0033",
+    "context": "In the lobby after the disastrous paintball game, Sheldon blames their defeat on poor discipline within the team.",
+    "question": "When Sheldon complains, what does he say happened to him during the match?",
+    "options": [
+      "Howard shot him in the back",
+      "Leonard shot him in the back",
+      "Raj shot him in the leg",
+      "The team abandoned him in the middle of the battle"
+    ],
+    "answer": "Howard shot him in the back",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Sheldon tells Penny it’s hard to call paintball fun when you’re 'being fragged by your own troops,' and angrily points out that Wolowitz shot him in the back."
+  },
+  {
+    "id": "bbt-s1e6-medium-0004",
+    "context": "Leonard reminds Sheldon how he 'led' during the game, pointing out what he was doing behind cover.",
+    "question": "According to Leonard, what was Sheldon yelling from behind a tree during the paintball match?",
+    "options": [
+      "'Cover me, I’m going in!'",
+      "'Please Dont hurt me!'",
+      "'Get the kid in the yarmulkah!'",
+      "'Fall back, fall back!'"
+    ],
+    "answer": "'Get the kid in the yarmulkah!'",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Leonard says Sheldon hid behind a tree yelling, 'get the kid in the yarmulkah, get the kid in the yarmulkah,' undercutting Sheldon’s claim of clear, concise leadership."
+  },
+  {
+    "id": "bbt-s1e6-medium-0005",
+    "context": "Penny runs into the guys in the lobby while they’re still covered in paint and invites them to an upcoming event.",
+    "question": "What kind of party does Penny say she’s having on Saturday?",
+    "options": [
+      "A Thanksgiving party",
+      "A Halloween party",
+      "A birthday party",
+      "A New Year’s Eve party"
+    ],
+    "answer": "A Halloween party",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "When they hesitate about dancing, Penny adds, 'Come on, it’s Halloween,' confirming that it’s a Halloween party with costumes."
+  },
+  {
+    "id": "bbt-s1e6-medium-0006",
+    "context": "Once Penny mentions costumes, Sheldon immediately starts interrogating her about acceptable themes and genres.",
+    "question": "Which of these costume categories does Sheldon NOT explicitly rattle off as he checks what’s allowed?",
+    "options": [
+      "Science-fiction and fantasy",
+      "Comic-books and anime",
+      "Greek, Roman, and Norse gods",
+      "Real-world historical leaders only"
+    ],
+    "answer": "Real-world historical leaders only",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Sheldon rapid-fires 'science-fiction, fantasy,' 'comic-books,' 'anime,' 'TV, film, D&D, Manga, Greek Gods, Roman Gods, Norse Gods…' but never suggests real-world historical leaders as a constraint."
+  },
+  {
+    "id": "bbt-s1e6-medium-0007",
+    "context": "Later, on the night of the party, the guys start arriving at the apartment in costume.",
+    "question": "What superhero do all four guys coincidentally dress as before they realise they’ve duplicated each other?",
+    "options": [
+      "Batman",
+      "Spider-Man",
+      "The Flash",
+      "Green Lantern"
+    ],
+    "answer": "The Flash",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Leonard opens the door in a Flash costume and finds Howard, then Sheldon, then Raj all entering dressed exactly the same as The Flash."
+  },
+  {
+    "id": "bbt-s1e6-medium-0008",
+    "context": "After the awkward reveal that they’re all The Flash, the group looks for a way to salvage the situation.",
+    "question": "What solution does Raj propose so they can all stay dressed as The Flash?",
+    "options": [
+      "They split into different coloured Flash variants",
+      "They pretend to be a Flash fan club",
+      "They walk single file so it looks like one person going really fast",
+      "They claim to be from different Earths in the multiverse"
+    ],
+    "answer": "They walk single file so it looks like one person going really fast",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Raj suggests they 'walk right behind each other all night and look like one person going really fast,' keeping the Flash theme without changing."
+  },
+  {
+    "id": "bbt-s1e6-medium-0010",
+    "context": "They agree to abandon the Flash plan and pick different outfits instead.",
+    "question": "After deciding nobody gets to be The Flash, which character does Leonard immediately claim for himself?",
+    "options": [
+      "Aragorn",
+      "Frodo",
+      "Gandalf",
+      "Spock"
+    ],
+    "answer": "Frodo",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Once everyone agrees to change, Leonard quickly shouts, 'I call Frodo!' prompting the others to groan, 'Damn!'"
+  },
+  {
+    "id": "bbt-s1e6-medium-0011",
+    "context": "When the costumes are finalized, Raj arrives in full armour with a notable accessory problem.",
+    "question": "What character does Raj end up going to the party as?",
+    "options": [
+      "Zeus",
+      "Odin",
+      "Thor",
+      "Loki"
+    ],
+    "answer": "Thor",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Raj apologises for being late, blaming the bus door, and Leonard comments, 'You went with Thor?' when he walks in carrying a hammer and wearing a Thor outfit."
+  },
+  {
+    "id": "bbt-s1e6-medium-0013",
+    "context": "Raj later misidentifies Howard’s costume, which he refuses to take lying down.",
+    "question": "What does Raj initially think Howard is dressed as, and what does he insist he actually is?",
+    "options": [
+      "He says Peter Pan; Howard insists he’s Robin Hood",
+      "He says Robin Hood; Howard insists he’s Peter Pan",
+      "He says Legolas; Howard insists he’s Peter Pan",
+      "He says an elf; Howard insists he’s Legolas"
+    ],
+    "answer": "He says Peter Pan; Howard insists he’s Robin Hood",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Raj says, 'oh, Peter Pan.' Howard snaps back later, 'I’m not Peter Pan, I’m Robin Hood,' even though Raj says he looks like Cathy Rigby."
+  },
+  {
+    "id": "bbt-s1e6-medium-0014",
+    "context": "Among the costumes, Sheldon’s stands out as the nerdiest and least obvious to normal people.",
+    "question": "What scientific concept is Sheldon dressed as for Penny’s Halloween party?",
+    "options": [
+      "Schrödinger’s Cat",
+      "The Uncertainty Principle",
+      "The Doppler Effect",
+      "The Cobbler Effect"
+    ],
+    "answer": "The Doppler Effect",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "In a bodysuit with black and white lines, Sheldon explains to Penny, 'It’s the apparent change in the frequency of a wave caused by relative motion between the source of the wave and the observer.'"
+  },
+  {
+    "id": "bbt-s1e6-medium-0015",
+    "context": "Before heading out, Leonard warns Sheldon not to share certain personal information at the party.",
+    "question": "What is Leonard’s middle name that he specifically asks Sheldon not to mention?",
+    "options": [
+      "Newton",
+      "Leakey",
+      "Einstein",
+      "Drippey"
+    ],
+    "answer": "Leakey",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Leonard says, 'For example, tonight no-one needs to know that my middle name is Leakey,' and Sheldon immediately ties it to his father’s work with Lewis Leakey, not his bed wetting"
+  },
+  {
+    "id": "bbt-s1e6-medium-0035",
+    "context": "Just after the guys arrive at Penny’s apartment early, Sheldon starts asking about contests and prizes for costumes.",
+    "question": "How does Sheldon react when Penny tells him there won’t be any judges or prizes for costumes at her party?",
+    "options": [
+      "He says the party is a waste of time",
+      "He grumbles that this party is just going to suck",
+      "He asks whats the point pf having a party without rules",
+      "He asks Leonard if they can go back home"
+    ],
+    "answer": "He grumbles that this party is just going to suck",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "After Penny confirms there will be no parades, judges, or prizes, Sheldon flatly declares, 'This party is just going to suck.'"
+  },
+  {
+    "id": "bbt-s1e6-medium-0022",
+    "context": "Howard spots a girl in a sexy nurse outfit and announces his plan of attack to the group.",
+    "question": "What \"technique\" does Howard say he’s going to use to try to impress the sexy nurse?",
+    "options": [
+      "The anchoring technique",
+      "The mirror technique",
+      "The confidence loop",
+      "The slow blink method"
+    ],
+    "answer": "The mirror technique",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "He tells the guys he’ll use 'the mirror technique'—copying her gestures like brushing hair and shrugging so she subconsciously thinks they’re in sync and belong together."
+  },
+  {
+    "id": "bbt-s1e6-medium-0023",
+    "context": "As Howard prepares to make his move, Raj laments his own social struggles.",
+    "question": "Beyond women, who else does Raj say he sometimes has trouble speaking around?",
+    "options": [
+      "Authority figures",
+      "Very tall men",
+      "Effeminate men",
+      "Strangers in general"
+    ],
+    "answer": "Effeminate men",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "He complains, 'I have such difficulty speaking to women. Or around women. Or at times, even effeminate men.'"
+  },
+  {
+    "id": "bbt-s1e6-medium-0037",
+    "context": "Howard tries to flirt with the sexy nurse using his 'mirror technique' and even brings up his medical history.",
+    "question": "What medical condition does Howard claim to have when he talks to the girl in the nurse costume?",
+    "options": [
+      "Mild asthma",
+      "Transient idiopathic arrhythmia",
+      "Chronic vertigo",
+      "Exercise-induced tachycardia"
+    ],
+    "answer": "Transient idiopathic arrhythmia",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "After she declines to check his heartbeat, Howard insists, 'No, seriously, you can, I have transient idiopathic arrhythmia.'"
+  },
+  {
+    "id": "bbt-s1e6-medium-0024",
+    "context": "Leonard wants to mingle with Penny’s friends, so Sheldon explains the social pattern he’s observed.",
+    "question": "According to Sheldon’s \"Jane Goodall\" analysis of the party, what greeting does a newcomer use to approach a group?",
+    "options": [
+      "'What’s up, guys?'",
+      "'How wasted am I?'",
+      "'Who’s ready to party?'",
+      "'I am so wasted right now?'"
+    ],
+    "answer": "'How wasted am I?'",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Sheldon explains that the newcomer says, 'How wasted am I?' which is then greeted by an approving chorus of 'Dude.'"
+  },
+  {
+    "id": "bbt-s1e6-medium-0036",
+    "context": "When the Halloween party fills up, Penny moves through the room in her halloween costume.",
+    "question": "What does Penny actually dress up as for her Halloween party?",
+    "options": [
+      "A generic cat",
+      "Catwoman",
+      "A sexy nurse",
+      "A witch"
+    ],
+    "answer": "A generic cat",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Raj complains she’s wearing the worst Catwoman costume he’s ever seen; Leonard corrects him that she isn’t a specific character, she’s just a generic cat."
+  },
+  {
+    "id": "bbt-s1e6-medium-0025",
+    "context": "Sheldon repeatedly tries to get people to guess his costume by making a specific sound.",
+    "question": "What does the girl in the hippie costume guess Sheldon is when he demonstrates his costume with a 'Neeeeoooowww' noise?",
+    "options": [
+      "A sports car",
+      "A spaceship",
+      "A choo-choo train",
+      "A speeding bullet"
+    ],
+    "answer": "A choo-choo train",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "After he goes 'Neeeeoooowww,' she guesses, 'Uh, a choo-choo train?' and later upgrades that to 'a brain damaged choo-choo train.'"
+  },
+  {
+    "id": "bbt-s1e6-medium-0026",
+    "context": "Later, another girl still fails to understand Sheldon’s Doppler Effect costume.",
+    "question": "When Sheldon insists he’s the Doppler Effect, how does the princess-costumed girl react?",
+    "options": [
+      "She says it’s too obscure to be funny",
+      "She thinks it’s a kind of superhero",
+      "She assumes it’s a learning disability and calls it insensitive",
+      "She pretends to get it but clearly doesn’t"
+    ],
+    "answer": "She assumes it’s a learning disability and calls it insensitive",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "After he explains, she says, 'If that is some sort of learning disability, I think it’s very insensitive,' totally missing the point of his physics pun."
+  },
+  {
+    "id": "bbt-s1e6-medium-0034",
+    "context": "During Penny’s Halloween party, a huge, muscular guy arrives and quickly becomes the focus of Leonard’s jealousy.",
+    "question": "What is the name of Penny’s ex-boyfriend who shows up at the Halloween party?",
+    "options": [
+      "Kurt",
+      "Doug",
+      "Kyle",
+      "Mark"
+    ],
+    "answer": "Kurt",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Leonard spots him and says, 'That’s Penny’s ex-boyfriend,' and Penny later yells 'Kurt!' when trying to stop him from bullying Leonard."
+  },
+  {
+    "id": "bbt-s1e6-medium-0027",
+    "context": "When Penny’s ex shows up, Kurt mocks the guys’ costumes without really knowing what they are.",
+    "question": "What does Kurt mistakenly call Leonard’s costume before Leonard explains the difference?",
+    "options": [
+      "A dwarf",
+      "An elf",
+      "A leprechaun",
+      "A goblin"
+    ],
+    "answer": "An elf",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Kurt asks, 'What are you supposed to be, an Elf?' and Leonard corrects him that he’s a Hobbit."
+  },
+  {
+    "id": "bbt-s1e6-medium-0038",
+    "context": "Kurt mocks Leonard’s costume at the party, confusing his Middle-earth character with another fantasy race.",
+    "question": "How does Leonard explain the difference between a Hobbit and an Elf when Kurt mixes them up?",
+    "options": [
+      "A Hobbit is a mortal Halfling inhabitant of Middle Earth, whereas an Elf is an immortal tall warrior",
+      "A Hobbit is a forest dweller, whereas an Elf is a mountain dweller",
+      "A Hobbit uses magic, whereas an Elf never does",
+      "An Elf is a mortal Halfling inhabitant of Middle Earth, whereas a hobbit is an immortal tall warrior"
+    ],
+    "answer": "A Hobbit is a mortal Halfling inhabitant of Middle Earth, whereas an Elf is an immortal tall warrior",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "When Kurt asks why he’d want to be an Elf, Leonard corrects him: a Hobbit is 'a mortal Halfling inhabitant of Middle Earth, whereas an Elf is an immortal tall warrior.'"
+  },
+  {
+    "id": "bbt-s1e6-medium-0028",
+    "context": "Leonard tries to out-intellectualise Kurt during their confrontation, using evolutionary digs.",
+    "question": "What line does Leonard use to trick Kurt into saying 'What?' during their argument?",
+    "options": [
+      "'A Neanderthal discovering fire says what?'",
+      "'A homo-habilis discovering his opposable thumbs says what?'",
+      "'An Australopithecus learning to walk upright says what?'",
+      "'A caveman discovering language says what?'"
+    ],
+    "answer": "'A homo-habilis discovering his opposable thumbs says what?'",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Leonard asks, 'A homo-habilus discovering his opposable thumbs says what?' Kurt obligingly replies 'What?' and Leonard smugly says he’s made his point."
+  },
+  {
+    "id": "bbt-s1e6-medium-0029",
+    "context": "As the confrontation escalates, Kurt literally lifts Leonard off the ground to make his point.",
+    "question": "While holding Leonard in the air, what word does Kurt spell out to mock him?",
+    "options": [
+      "Confidence",
+      "Consternation",
+      "Confrontation",
+      "Communication"
+    ],
+    "answer": "Confrontation",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "He hoists Leonard up and says, 'C – O – N… frontation!' turning Leonard’s vocabulary into a physical threat."
+  },
+{
+  "id": "bbt-s1e6-medium-0031",
+  "context": "After Penny drunkenly kisses him and leaves, Leonard makes a small, defiant declaration to someone watching.",
+  "question": "What does Leonard say to Kurt after Penny’s final kiss, just before he quickly locks the door?",
+  "options": [
+    "“Hobbits rule, bitch.”",
+    "“That’s the power of a Hobbit.”",
+    "“That’s how we roll in The Shire.”",
+    "“Welcome to life in Middle-earth.”"
+  ],
+  "answer": "“That’s how we roll in The Shire.”",
+  "difficulty": "medium",
+  "episode": 6,
+  "description": "Seeing Kurt watching from the hallway, Leonard says, 'That’s right, you saw what you saw. That’s how we roll in The Shire,' before quickly locking the door."
+},
+  {
+    "id": "bbt-s1e6-medium-0039",
+    "context": "While the guys stress about their own love lives, Raj quietly disappears from the main party.",
+    "question": "At the end of the night, what costume is the girl wearing who Raj ends up in bed with?",
+    "options": [
+      "Butterfly",
+      "Princess",
+      "Sexy nurse",
+      "Hippie"
+    ],
+    "answer": "Butterfly",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "The closing scene shows the girl in the butterfly costume climbing off Raj and praising him for being gentle, passionate, and such a good listener."
+  },
+  {
+    "id": "bbt-s1e7-medium-0045",
+    "context": "**EPISODE 7**: Before Halo night, Howard is trying to voice-dial Leonard, but his phone keeps mishearing the command and offering random names instead.",
+    "question": "Which of these names is NOT one of the mistaken names Howard’s PHONE suggests when he tries to call Leonard?",
+    "options": [
+      "Helen Boxleitner",
+      "Temple Beth Sader",
+      "McFlono McFloonyloo",
+      "Rajesh Koothrapali"
+    ],
+    "answer": "McFlono McFloonyloo",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "The phone mishears Howard with suggestions like “Helen Boxleitner” and “Temple Beth Sader” before Leonard jokingly says Call McFlono McFloonyloo."
+  },
+  {
+    "id": "bbt-s1e7-medium-0001",
+    "context": "In the living room before Halo night, Howard is showing off his phone’s voice-dial feature to the others.",
+    "question": "When Leonard jokes, “Call McFlono McFloonyloo,” whose phone does the voice-dial system actually call?",
+    "options": [
+      "Leonard Hofstadter",
+      "Sheldon Cooper",
+      "Rajesh Koothrappali",
+      "Howard Wolowitz"
+    ],
+    "answer": "Rajesh Koothrappali",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "After mishearing Howard twice, the phone responds to Leonard’s nonsense name with “Calling Rajesh Koothrappali,” and Raj’s phone immediately starts ringing."
+  },
+  {
+    "id": "bbt-s1e7-easy-0046",
+    "context": "Sheldon keeps checking the time, insisting they’re late as the guys get ready for their regular gaming session in the living room.",
+    "question": "What game were the guys supposed to be starting when Sheldon complains it’s already 8:06?",
+    "options": [
+      "Halo",
+      "World of Warcraft",
+      "Call of Duty",
+      "Gears of War"
+    ],
+    "answer": "Halo",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "Sheldon repeatedly refers to it as “Halo night,” arguing about lost minutes and whether they come out of game time, bathroom time, or the pizza break."
+  },
+  {
+    "id": "bbt-s1e7-medium-0047",
+    "context": "Penny walks into the apartment while the guys are getting ready for Halo night, and Howard can’t resist a cheesy greeting.",
+    "question": "What line does Howard use to greet Penny when she arrives during Halo night?",
+    "options": [
+      "“See a Penny, pick her up, and all the day you’ll have good luck.”",
+      "“And walks in quiet beauty like the night.”",
+      "“There she is, the future Mrs. Wolowitz.”",
+      "“Careful, guys, a goddess just entered the room.”"
+    ],
+    "answer": "“See a Penny, pick her up, and all the day you’ll have good luck.”",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "As Penny comes in, Howard sings, “See a Penny, pick her up, and all the day you’ll have good luck,” earning another brush-off instead of the luck he’s hoping for."
+  },
+  {
+    "id": "bbt-s1e7-medium-0005",
+    "context": "Penny comes in looking frazzled and asks to hide out, explaining why someone from her past is staying with her.",
+    "question": "What is the name of the girl from Nebraska who comes to stay with Penny?",
+    "options": [
+      "Christie",
+      "Katie",
+      "Mandy",
+      "Brooke"
+    ],
+    "answer": "Christie",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Penny explains that “this girl I know from back in Nebraska, Christie” called to ask about California and then invited herself to stay."
+  },
+  {
+    "id": "bbt-s1e7-medium-0006",
+    "context": "While venting about her unwanted houseguest, Penny explains why she feels obligated to let her stay.",
+    "question": "How does Penny justify that Christie is 'kind of family' despite not liking her?",
+    "options": [
+      "She was engaged to Penny’s uncle while sleeping with Penny’s cousin",
+      "She was engaged to Penny’s cousin while sleeping with Penny’s brother",
+      "She was adopted by Penny’s aunt and uncle",
+      "She was engaged to Penny’s brother while sleeping with Penny’s cousin"
+    ],
+    "answer": "She was engaged to Penny’s cousin while sleeping with Penny’s brother",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Penny says Christie “was engaged to my cousin while she was sleeping with my brother, so she’s kind of family,” highlighting just how messy the connection is."
+  },
+  {
+    "id": "bbt-s1e7-medium-0007",
+    "context": "Penny lists the things Christie has been doing in her apartment that are driving her crazy.",
+    "question": "What specific thing does Penny say Christie has been washing in her bathroom sink?",
+    "options": [
+      "Her makeup brushes",
+      "Her socks and tights",
+      "Slutty Underwear",
+      "Hand-wash only dresses"
+    ],
+    "answer": "Slutty Underwear",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Penny complains that Christie has been “washing the sluttiest collection of underwear you have ever seen in my bathroom sink,”. Howard says: Well, is she doing it one thong at a time, or does she just throw it all in, like some sort of erotic bouillabaisse."
+  },
+  {
+    "id": "bbt-s1e7-medium-0008",
+    "context": "After hearing Penny’s story about Christie and her love life back in Omaha, Sheldon can’t resist a cutting summary.",
+    "question": "How does Sheldon sarcastically refer to Penny’s story about Christie from Nebraska?",
+    "options": [
+      "The gospel of the Cornhusker Jezebel",
+      "The delightfully folksy tale of the whore of Omaha",
+      "The epic saga of Nebraska’s fallen angel",
+      "The ballad of the Midwest temptress"
+    ],
+    "answer": "The delightfully folksy tale of the whore of Omaha",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Sheldon apologises for his earlier outburst and says who needs Halo when they can be “regaled with the delightfully folksy tale of the whore of Omaha.”"
+  },
+  {
+    "id": "bbt-s1e7-medium-0048",
+    "context": "During Halo night, Penny takes to the game instantly and repeatedly humiliates Sheldon kills.",
+    "question": "What does Penny end up doing to Sheldon’s character in the game that makes him accuse her of cheating?",
+    "options": [
+      "She keeps stealing his vehicles",
+      "She snipes him from across the map",
+      "She sets him on fire",
+      "She keeps melee-killing him from behind"
+    ],
+    "answer": "She sets him on fire",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "After Leonard says she’s on fire, Penny jokes that so is Sheldon, until he snaps, “Okay, that’s it, I don’t know how, but she is cheating. No-one can be that attractive and be this skilled at a video game.”"
+  },
+  {
+    "id": "bbt-s1e7-medium-0014",
+    "context": "As Sheldon tries to storm off mid-game, Penny calls him back, pretending he’s forgotten something important.",
+    "question": "What weapon does Penny tag Sheldon with when she calls him back and says he forgot something?",
+    "options": [
+      "A sniper rifle",
+      "A plasma grenade",
+      "A rocket launcher",
+      "An energy sword"
+    ],
+    "answer": "A plasma grenade",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "She says, “Wait, wait, Sheldon, come back, you forgot something,” then adds, “This plasma grenade,” and an explosion follows as she laughs, “Look, it’s raining you!”"
+  },
+  {
+    "id": "bbt-s1e7-medium-0015",
+    "context": "After the gaming session, Leonard tries to extend this new bonding moment with Penny into more shared geek activities.",
+    "question": "What does Leonard suggest he and Penny could do together after seeing how well they play Halo as a team?",
+    "options": [
+      "Start a regular Halo night",
+      "Enter a couple of Halo tournaments sometime",
+      "Stream their games online",
+      "Join a local gaming league"
+    ],
+    "answer": "Enter a couple of Halo tournaments sometime",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Impressed, Leonard says they make such a good team that “maybe we could enter a couple of Halo tournaments sometime,” to which Penny says the could just have a life instead."
+  },
+  {
+    "id": "bbt-s1e7-medium-0018",
+    "context": "Penny rushes back in after discovering what’s happening in her apartment between Christie and Howard.",
+    "question": "What two possibilities does Penny give for the noises she heard from her bedroom involving Howard and Christie?",
+    "options": [
+      "They’re either having sex or watching a loud movie",
+      "They’re either having sex or wrestling over the remote",
+      "They’re either having sex or Howard’s caught in a milking machine",
+      "They’re either having sex or Christie is having a baby"
+    ],
+    "answer": "They’re either having sex or Howard’s caught in a milking machine",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Penny says she grew up on a farm and from what she heard they’re “either having sex or Howard’s caught in a milking machine.”"
+  },
+  {
+    "id": "bbt-s1e7-medium-0049",
+    "context": "Later that night, Penny asks to sleep on their couch because Howard and Christie have taken over her bedroom, and Sheldon immediately objects.",
+    "question": "What is the first reason Sheldon gives for not wanting Penny to spend the night in their apartment?",
+    "options": [
+      "They don’t have house guests",
+      "He thinks she´ll disrupt his sleep schedule",
+      "He’s worried she’ll touch his collectibles",
+      "He claims their lease forbids overnight guests"
+    ],
+    "answer": "They don’t have house guests",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Sheldon starts with, “First, we don’t have house guests, frankly if I could afford the rent I’d ask you to leave,” making it clear he barely tolerates Leonard, let alone extras."
+  },
+  {
+    "id": "bbt-s1e7-medium-0050",
+    "context": "Sheldon continues arguing against Penny staying by bringing up their disaster-prep planning and the dangers of adding a third person.",
+    "question": "What is Sheldon’s second major concern about letting Penny stay the night?",
+    "options": [
+      "They’ll run out of food if disaster strikes",
+      "Their emergency radio batteries won’t last for three",
+      "They only have a two-man, two-day earthquake kit",
+      "There isnt enough water for three in the earthquake kit"
+    ],
+    "answer": "They only have a two-man, two-day earthquake kit",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Sheldon points out they have “a two day, two man kit,” and warns that if an earthquake traps three of them, they could be out of food by tomorrow afternoon, leading Leonard to joke about them resorting to cannibalism."
+  },
+  {
+    "id": "bbt-s1e7-medium-0021",
+    "context": "Sheldon lays out his strict morning routine and advises Penny how to avoid conflicts in the bathroom.",
+    "question": "What specific tip does Sheldon give Penny for planning her bodily functions around his bathroom time?",
+    "options": [
+      "Avoid eating after 8pm",
+      "No liquids after 11pm",
+      "Set an alarm for midnight bathroom trips",
+      "Use the bathroom only during odd hours"
+    ],
+    "answer": "No liquids after 11pm",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "He explains he uses the bathroom from 7 to 7:20 and suggests, “I suggest no liquids after 11pm,” as if she can schedule her body that precisely."
+  },
+  {
+    "id": "bbt-s1e7-medium-0022",
+    "context": "Sheldon even wants to dictate which end of the couch Penny’s head should be on when she sleeps.",
+    "question": "According to Sheldon, why should a temporary bed like Penny’s couch always be oriented with the head away from the door?",
+    "options": [
+      "It’s better for neck support",
+      "It keeps light out of your eyes",
+      "To protect against marauders",
+      "It reduces noise from the hallway"
+    ],
+    "answer": "To protect against marauders",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "He claims that “a bed, even a temporary bed, is always oriented with the headboard away from the door,” serving the ancient imperative of protecting oneself from marauders."
+  },
+  {
+    "id": "bbt-s1e7-medium-0023",
+    "context": "Before heading to his room, Leonard gives Penny a helpful hint about bathroom supplies.",
+    "question": "Which toothbrush does Leonard identify as Sheldon’s when warning Penny not to use it?",
+    "options": [
+      "The blue one in the ceramic cup",
+      "The green one on the sink",
+      "The red one in the plexiglass case under the UV light",
+      "The electric one charging on the counter"
+    ],
+    "answer": "The red one in the plexiglass case under the UV light",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "After Sheldon threatens to jump out the window if she uses his toothbrush, Leonard says, “FYI, his toothbrush is the red one in the plexiglass case under the UV light.”"
+  },
+  {
+    "id": "bbt-s1e7-medium-0025",
+    "context": "Early the next morning, Sheldon tries to reclaim his usual routine despite Penny still being asleep on the couch.",
+    "question": "What TV show does Sheldon insist on watching every Saturday morning at 6:15 with his cereal?",
+    "options": [
+      "Star Trek",
+      "Doctor Who",
+      "Firefly",
+      "Battlestar Galactica"
+    ],
+    "answer": "Doctor Who",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "He recites his ritual: wake at 6:15, pour cereal with a quarter cup of 2% milk, sit on his spot on the couch, and watch BBC America’s Doctor Who."
+  },
+  {
+    "id": "bbt-s1e7-medium-0026",
+    "context": "Leonard suggests Sheldon adapt for once and watch TV somewhere else so Penny can sleep.",
+    "question": "Why does Sheldon say he can’t just have breakfast in bed and watch TV in his room?",
+    "options": [
+      "He doesn’t have a TV in his room",
+      "He’s worried about spilling cereal on his bedspread",
+      "He says he’s neither an invalid nor a woman celebrating Mother’s Day",
+      "He insists breakfast must be eaten at the table"
+    ],
+    "answer": "He says he’s neither an invalid nor a woman celebrating Mother’s Day",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Leonard suggests breakfast in bed, and Sheldon replies that he is “neither an invalid nor a woman celebrating Mother’s Day,” so that option is off the table."
+  },
+  {
+    "id": "bbt-s1e7-medium-0027",
+    "context": "When Howard strolls in the next morning, his wardrobe choice immediately alarms Penny.",
+    "question": "What piece of clothing does Penny realise Howard is wearing that clearly belongs to her?",
+    "options": [
+      "Her bathrobe",
+      "Her slippers",
+      "Her pajama pants",
+      "Her hoodie"
+    ],
+    "answer": "Her bathrobe",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "He cheerfully greets them, and Penny groans, “Are you wearing my robe?” After he apologises and offers to have it cleaned, she tells him to keep it."
+  },
+  {
+    "id": "bbt-s1e7-medium-0028",
+    "context": "As the conversation continues, Howard reveals just how much he and Christie have been sharing Penny’s bathroom items.",
+    "question": "What bathroom item does Howard brag that he and Christie both used, horrifying Penny?",
+    "options": [
+      "Her electric toothbrush",
+      "Her shower cap",
+      "Her loofah mitt",
+      "Her razor"
+    ],
+    "answer": "Her loofah mitt",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "He says he used her loofah mitt and clarifies, “More precisely we used your loofah. I exfoliated her brains out!” prompting Penny to tell him he can keep that too."
+  },
+  {
+    "id": "bbt-s1e7-medium-0029",
+    "context": "Penny tries to figure out Christie’s long-term plans after seeing how quickly she latched onto Howard.",
+    "question": "When Penny asks about her future arrangements, what does Christie say Howard is planning to do with her that day?",
+    "options": [
+      "Take her to a movie marathon",
+      "Take her to a Lakers game",
+      "Take her shopping in Beverley Hills",
+      "Take her to Disneyland"
+    ],
+    "answer": "Take her shopping in Beverley Hills",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Christie says, “Oh, well, Howard said he’d take me shopping in Beverley Hills,” before Penny clarifies she was actually asking about where Christie plans to live."
+  },
+  {
+    "id": "bbt-s1e7-medium-0030",
+    "context": "Howard offers Christie a more permanent place to stay and gives his home a grandiose nickname.",
+    "question": "What phrase does Howard use for his home when inviting Christie to stay with him?",
+    "options": [
+      "Castle Wolowitz",
+      "Casa Wolowitz",
+      "The Wolowitz Fortress",
+      "Wolowitz Manor"
+    ],
+    "answer": "Castle Wolowitz",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "He asks if she wants to 'repair to Castle Wolowitz,' and when she assumes it’s a Mexican deli, he explains that Wolowitz is actually his last name."
+  },
+  {
+    "id": "bbt-s1e7-medium-0032",
+    "context": "Right after Penny spells out how transactional Christie is, Howard reacts in pure Wolowitz fashion.",
+    "question": "How does Howard respond when Penny reveals Christie will sleep with anyone who keeps buying her things?",
+    "options": [
+      "He says he can change her",
+      "He says he doesnt believe her",
+      "He says Penny is just jealous",
+      "He happily celebrates"
+    ],
+    "answer": "He happily celebrates",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Instead of being put off, Howard grins, says “Yay!” and announces he has some Bar-Mitzvah bonds to cash, leaning into the arrangement."
+  },
+  {
+    "id": "bbt-s1e7-medium-0033",
+    "context": "Later at the Chinese restaurant, Sheldon insists they can’t eat without Wolowitz because their order is mathematically structured.",
+    "question": "Which of these items is NOT part of the standard four-person Chinese order Sheldon lists?",
+    "options": [
+      "Steamed dumpling appetizer",
+      "General Tso’s chicken",
+      "Beef with broccoli",
+      "Shrimp with lobster sauce",
+      "Vegetable lo mein",
+      "Sweet and sour pork"
+    ],
+    "answer": "Sweet and sour pork",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Sheldon recites their usual set: a steamed dumpling appetizer plus General Tso’s chicken, beef with broccoli, shrimp with lobster sauce, and vegetable lo mein—no sweet and sour pork."
+  },
+  {
+    "id": "bbt-s1e7-medium-0034",
+    "context": "The waiter jokes about their missing friend and gets a pointed response from Sheldon about punishment in his supposed homeland.",
+    "question": "When Sheldon claims Howard´s careless behaviour is punishable by death \"where he comes from,\" where does the waiter say he’s actually from?",
+    "options": [
+      "Ohio",
+      "Denver",
+      "Sacramento",
+      "San Francisco"
+    ],
+    "answer": "Sacramento",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "After Sheldon’s dramatic line about death penalties, the waiter calmly replies, “I come from Sacramento,” undercutting Sheldon’s theatrics."
+  },
+  {
+    "id": "bbt-s1e7-medium-0035",
+    "context": "Sheldon objects to suggestions about dividing a dumpling when they only have three people for four pieces.",
+    "question": "What does Sheldon say a dumpling becomes once you cut it into thirds?",
+    "options": [
+      "A ruined appetizer",
+      "At best a very small open-faced sandwich",
+      "A mathematically offensive portion",
+      "Just a pile of filling and dough"
+    ],
+    "answer": "At best a very small open-faced sandwich",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "When Raj suggests cutting one dumpling into thirds, Sheldon insists it’s no longer a dumpling but, “at best, a very small open-faced sandwich.”"
+  },
+  {
+    "id": "bbt-s1e7-medium-0036",
+    "context": "Raj complains about being hungry while the others argue over dumplings and entrees.",
+    "question": "What does Raj remind them about hunger while they stall on ordering at the Chinese restaurant?",
+    "options": [
+      "That children are starving in India and he’s starving right there",
+      "That they can’t waste food out of respect for his culture",
+      "That he skipped lunch to be with them",
+      "That his blood sugar is dangerously low"
+    ],
+    "answer": "That children are starving in India and he’s starving right there",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Exasperated, Raj says, “Can we please make a decision, not only are there children starving in India, there’s an Indian starving right here.”"
+  },
+  {
+    "id": "bbt-s1e7-medium-0051",
+    "context": "Later, when the guys call Howard’s phone, his voicemail greeting features both him and Penny’s visiting friend.",
+    "question": "What is Christie’s surname as heard on Howard’s voicemail greeting?",
+    "options": [
+      "Van Der Bell",
+      "Marvenly",
+      "Trenlow",
+      "Sarvellan"
+    ],
+    "answer": "Van Der Bell",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Howard’s outgoing message says, “Hi this is Howard Wolowitz,” and Christie follows with, “And this is Christie Van Der Bell,” revealing her last name."
+  },
+  {
+    "id": "bbt-s1e7-medium-0037",
+    "context": "That evening, the guys knock on Penny’s door hoping to recruit her for Halo night now that Wolowitz is busy.",
+    "question": "What does Penny say she’s doing instead of playing Halo when Leonard and Sheldon invite her?",
+    "options": [
+      "Going on a date",
+      "Working a late shift",
+      "Going out dancing with a girlfriend",
+      "Staying in to study lines"
+    ],
+    "answer": "Going out dancing with a girlfriend",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Penny tells them, “I’m going out dancing with a girlfriend,” and pushes back when Sheldon insists she can’t because “it’s Halo night.”"
+  },
+  {
+    "id": "bbt-s1e7-medium-0041",
+    "context": "Outside Howard’s house, the guys overhear a screaming match between Christie and Howard’s mother about money and inheritance.",
+    "question": "What does Howard’s mother threaten regarding her will if Christie stays around?",
+    "options": [
+      "She’ll leave everything to charity",
+      "Howard will be cut out of the will",
+      "Christie will be the main beneficiary",
+      "She’ll sell the house immediately"
+    ],
+    "answer": "Howard will be cut out of the will",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Howard’s mother yells that as long as Christie is around, “Howard is out of the will,” which helps drive Christie to storm out."
+  },
+  {
+    "id": "bbt-s1e7-medium-0042",
+    "context": "As Christie leaves in a huff, Howard’s mother gets in one last insult from inside the house.",
+    "question": "When Christie announces she’s leaving, what does Howard’s mother shout after her?",
+    "options": [
+      "“Go back to Nebraska, you tramp!”",
+      "“Good riddance, you gold digger!”",
+      "“That’s right, go back to Babylon, you whore.”",
+      "“Go back to Babylon, you tramp!”"
+    ],
+    "answer": "“That’s right, go back to Babylon, you whore.”",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Christie says she’s out of there, and Howard’s mother bellows, “That’s right, go back to Babylon, you whore,” cementing the family drama."
+  },
+  {
+    "id": "bbt-s1e7-medium-0043",
+    "context": "Back at the apartment on Halo night, the guys are deeply focused on the game when Penny and friends briefly burst in.",
+    "question": "What outrageous claim does Penny make when she enters with three friends during Halo night?",
+    "options": [
+      "They got tired of dancing and came over to watch them play",
+      "hey got tired of dancing and came over to play Halo with them",
+      "They got tired of dancing and came over to have sex with them",
+      "hey got tired of dancing and came over to makeout with them"
+    ],
+    "answer": "They got tired of dancing and came over to have sex with them",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Penny walks in with three women and announces, “My friends and I got tired of dancing, so we came over to have sex with you,” but the guys barely react and keep playing."
+  },
+  {
+    "id": "bbt-s1e8-easy-0001",
+    "context": "**EPISODE 8**: In the apartment, Sheldon is furious at an online purchase while reorganising the contents of his new wallet.",
+    "question": "Which website does Sheldon angrily blame for misleading him about his new wallet?",
+    "options": [
+      "walletnook.com",
+      "betterbillfolds.net",
+      "planetwallet.com",
+      "cardcaddy.org"
+    ],
+    "answer": "walletnook.com",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Sheldon opens the episode with, “Damn you, walletnook.com,” upset the advertised slots didn’t match what actually fits in the wallet."
+  },
+  {
+    "id": "bbt-s1e8-easy-0002",
+    "context": "While sorting his cards, Leonard questions whether Sheldon really needs every item he carries around.",
+    "question": "Which special card does Sheldon insist has been in every wallet he’s owned since he was five?",
+    "options": [
+      "His Justice League of America membership card",
+      "His childhood library card",
+      "His high-IQ society membership card",
+      "His Marvels Avengers membership card"
+    ],
+    "answer": "His Justice League of America membership card",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Sheldon refuses to remove it, explaining that his honorary Justice League of America membership card “has been in every wallet I’ve owned since I was five.”"
+  },
+  {
+    "id": "bbt-s1e8-medium-0003",
+    "context": "Sheldon explains to Leonard why he keeps a particular childhood card on him at all times.",
+    "question": "What instruction printed on Sheldon’s Justice League card does he quote as the reason he always carries it?",
+    "options": [
+      "“Present this to claim your powers”",
+      "“Keep this on your person at all times”",
+      "“Do not bend, fold, or mutilate”",
+      "“Valid only when signed”"
+    ],
+    "answer": "“Keep this on your person at all times”",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Holding up the card, Sheldon says it “says keep this on your person at all times,” and even points out the signature under it."
+  },
+  {
+    "id": "bbt-s1e8-easy-0041",
+    "context": "Sheldon shows Leonard his honorary Justice League card and quotes the printed instruction on it.",
+    "question": "On Sheldon’s Justice League of America membership card, under whose signature is the line “keep this on your person at all times” printed?",
+    "options": [
+      "Batman",
+      "Superman",
+      "The Flash",
+      "Wonder Woman"
+    ],
+    "answer": "Batman",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Defending why he always carries the card, Sheldon says the instruction “keep this on your person at all times” is printed “right here under Batman’s signature.”"
+  },
+  {
+    "id": "bbt-s1e8-medium-0004",
+    "context": "Raj introduces his parents over webcam, and they learn that Leonard and Sheldon share an apartment.",
+    "question": "Which pair do Mrs. Koothrappali compare Leonard and Sheldon to when she hears they live together?",
+    "options": [
+      "Haroun and Tanweer",
+      "Lennon and McCartney",
+      "Rahul and Rohan",
+      "Tom and Jerry"
+    ],
+    "answer": "Haroun and Tanweer",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "When told Sheldon lives with Leonard, Mrs. Koothrappali says, “Oh, that’s nice. Like Haroun and Tanweer,” referencing another pair of “sweet young men.”"
+  },
+  {
+    "id": "bbt-s1e8-medium-0005",
+    "context": "Raj’s parents proudly talk more about Haroun and Tanweer.",
+    "question": "What do Raj’s parents say Haroun and Tanweer recently did?",
+    "options": [
+      "Opened a medical clinic",
+      "Adopted a Punjabi baby",
+      "Moved to America",
+      "Adopted an American baby"
+    ],
+    "answer": "Adopted a Punjabi baby",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Mrs. Koothrappali calls them “such sweet young men” and says they “just adopted the cutest little Punjabi baby.”"
+  },
+{
+  "id": "bbt-s1e8-easy-0046",
+  "context": "On webcam from New Delhi, Raj’s parents happily announce they’ve shared his details with a young woman and talk about an approved match.",
+  "question": "What is the name of the girl Raj’s parents are trying to set him up with?",
+  "options": [
+    "Lalita Gupta",
+    "Priya Sharma",
+    "Anu Patel",
+    "Sunita Kapoor"
+  ],
+  "answer": "Lalita Gupta",
+  "difficulty": "easy",
+  "episode": 8,
+  "description": "Raj’s parents ask if he remembers “Lalita Gupta,” mentioning that her parents approve the match and they’re already talking about a possible spring wedding."
+},
+  {
+    "id": "bbt-s1e8-medium-0007",
+    "context": "Raj’s parents share \"good news\" over webcam and bring up a girl from his childhood.",
+    "question": "As a child, how does Raj describe Lalita Gupta’s behaviour toward him?",
+    "options": [
+      "She used to copy his homework and blame him",
+      "She used to kick him in the samosas",
+      "She used to steal his toys and hide them",
+      "She used to push him into the school fountain"
+    ],
+    "answer": "She used to kick him in the samosas",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Raj identifies her as “the little fat girl that used to kick me in the samosas and call me untouchable,” a memory his mother cheerfully confirms."
+  },
+  {
+    "id": "bbt-s1e8-easy-0042",
+    "context": "Raj’s parents  pressure him about settling down.",
+    "question": "How old do Raj’s parents say he is when they insist they want grandchildren?",
+    "options": [
+      "24 years old",
+      "25 years old",
+      "26 years old",
+      "27 years old"
+    ],
+    "answer": "26 years old",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Dr. Koothrappali tells him, “You’re 26 years old, Rajesh. We want grandchildren,” using his age to justify pushing the arranged match."
+  },
+  {
+    "id": "bbt-s1e8-medium-0008",
+    "context": "Raj’s parents lay out their plans for an arranged match now that Lalita has grown up.",
+    "question": "What is Lalita Gupta’s current field of study when Raj’s parents bring her up?",
+    "options": [
+      "Astrophysics at Caltech",
+      "Law at UCLA",
+      "Dentistry at USC",
+      "Engineering at MIT"
+    ],
+    "answer": "Dentistry at USC",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Mrs. Koothrappali proudly says that Lalita “is a dental student at USC,” and that they have given her Raj’s contact information."
+  },
+  {
+    "id": "bbt-s1e8-medium-0009",
+    "context": "Raj’s parents excitedly discuss wedding possibilities once they bring up Lalita.",
+    "question": "Why does Raj’s father suggest a spring wedding to Lalita’s parents?",
+    "options": [
+      "So it fits their work schedules",
+      "To avoid monsoon season",
+      "Because it’s considered lucky",
+      "Because Raj was born in spring"
+    ],
+    "answer": "To avoid monsoon season",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Dr. Koothrappali says if they decide on a spring wedding, “we can avoid monsoon season,” clearly already planning ahead."
+  },
+  {
+    "id": "bbt-s1e8-easy-0010",
+    "context": "Raj’s parents abruptly end the call when a favourite show comes on TV.",
+    "question": "Which TV show do Raj’s parents say is about to start, prompting them to end the video call?",
+    "options": [
+      "Scrubs",
+      "House",
+      "Doogie Howser",
+      "ER"
+    ],
+    "answer": "Doogie Howser",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Mrs. Koothrappali says, “Sorry darling, we have to go. Doogie Howser is on. Grandma, it’s Doogie time!” before hanging up."
+  },
+  {
+    "id": "bbt-s1e8-medium-0011",
+    "context": "After the call, the guys speculate about why Doogie Howser is so popular in India.",
+    "question": "What explanation does Sheldon offer for why a show like Doogie Howser might be so popular in India?",
+    "options": [
+      "It has colourful sets that appeal visually",
+      "It’s dubbed especially well in Hindi",
+      "It speaks to a cultural aspiration for children to enter the medical profession",
+      "It reminds viewers of traditional Indian folk tales"
+    ],
+    "answer": "It speaks to a cultural aspiration for children to enter the medical profession",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "After Leonard notes its popularity, Sheldon suggests it “might speak to a cultural aspiration to have one’s children enter the medical profession.”"
+  },
+  {
+    "id": "bbt-s1e8-medium-0013",
+    "context": "To support his point about arranged marriage, Howard brings up a famous musical.",
+    "question": "Which musical does Howard cite as having arranged marriage as its “entire premise”?",
+    "options": [
+      "West Side Story",
+      "Les Misérables",
+      "Fiddler on the Roof",
+      "The Sound of Music"
+    ],
+    "answer": "Fiddler on the Roof",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Howard chimes in, “It’s the entire premise of Fiddler on the Roof,” which he says speaks to him culturally."
+  },
+  {
+    "id": "bbt-s1e8-medium-0014",
+    "context": "Back in the apartment later, Sheldon is still pruning his wallet and making tough membership choices.",
+    "question": "Which membership does Sheldon cancel by phone because there’s \"just no room\" left in his wallet?",
+    "options": [
+      "His gym membership",
+      "His Planetarium membership",
+      "His comic-book store loyalty card",
+      "His chess club membership"
+    ],
+    "answer": "His Planetarium membership",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "On the phone he says, “I need to cancel my membership to the Planetarium… there’s just no room for you in my wallet.”"
+  },
+  {
+    "id": "bbt-s1e8-medium-0015",
+    "context": "While cancelling, Sheldon explains why another institution won out.",
+    "question": "Why does Sheldon say he chose the Museum of Natural History over the Planetarium?",
+    "options": [
+      "It’s closer to his apartment",
+      "It has better member discounts",
+      "It has dinosaurs",
+      "It stays open later"
+    ],
+    "answer": "It has dinosaurs",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Sheldon bluntly tells the Planetarium that it was between them and the Museum of Natural History and, “frankly, you don’t have dinosaurs.”"
+  },
+  {
+    "id": "bbt-s1e8-medium-0043",
+    "context": "Penny comes in saying she needs guinea pigs to practise bartending and Sheldon answers like it’s a lab request.",
+    "question": "When Penny says she needs guinea pigs to practise making drinks, what does Sheldon suggest?",
+    "options": [
+      "There’s a lab animal supply company in Reseda you could try",
+      "She should recruit volunteers from the physics department",
+      "She should post a flyer in the building lobby",
+      "There’s a classified ad site for human test subjects"
+    ],
+    "answer": "There’s a lab animal supply company in Reseda you could try",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Sheldon replies, “Okay, there’s a lab animal supply company in Reseda you could try, but if your research is going to have human applications may I suggest white mice instead, their brain chemistry is far closer to ours.”"
+  },
+  {
+    "id": "bbt-s1e8-medium-0018",
+    "context": "Penny comes by needing help with a new shift she’s just talked her way into at the restaurant.",
+    "question": "What new position at the Cheesecake Factory does Penny say she finally convinced the restaurant to give her?",
+    "options": [
+      "Manager shift",
+      "Hostess shift",
+      "Bar tending shift",
+      "Dessert station shift"
+    ],
+    "answer": "Bar tending shift",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Penny says, “I finally convinced the restaurant to give me a bar tending shift, so I need to practice making drinks.”"
+  },
+  {
+    "id": "bbt-s1e8-easy-0019",
+    "context": "Penny begins practising cocktails in her apartment, starting with Leonard.",
+    "question": "Which drink does Penny make for Leonard when she practises her bartending?",
+    "options": [
+      "Tequila sunrise",
+      "Margarita",
+      "Old fashioned",
+      "Cosmopolitan"
+    ],
+    "answer": "Tequila sunrise",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "She hands him a glass and says, “Okay, here you go, Leonard, one tequila sunrise,” which he immediately turns into a science lesson."
+  },
+  {
+    "id": "bbt-s1e8-medium-0044",
+    "context": "Penny hands Leonard a tequila sunrise, and he immediately turns it into a mini science lecture.",
+    "question": "What does Leonard say the tequila sunrise is a wonderful example of?",
+    "options": [
+      "How light refracts through different liquids",
+      "How liquids with different specific gravities interact in a cylindrical container",
+      "How temperature affects liquid density",
+      "How sugar concentration changes fluid viscosity"
+    ],
+    "answer": "How liquids with different specific gravities interact in a cylindrical container",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Accepting the drink, Leonard says, “This drink is a wonderful example of how liquids with different specific gravities interact in a cylindrical container.”"
+  },
+  {
+    "id": "bbt-s1e8-medium-0020",
+    "context": "When it’s Raj’s turn to order, Penny suggests a particular cocktail that becomes important later.",
+    "question": "Which cocktail does Penny make for Raj?",
+    "options": [
+      "Mojito",
+      "Grasshopper",
+      "Whiskey sour",
+      "White Russian"
+    ],
+    "answer": "Grasshopper",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Penny proposes, “How about a grasshopper, I make a mean grasshopper,” and later Raj calls it “a sweet green miracle” after it lets him speak."
+  },
+  {
+    "id": "bbt-s1e8-medium-0021",
+    "context": "Sheldon resists participating in the drink practice, trying to stick to his usual habits.",
+    "question": "What does Sheldon initially order from Penny instead of a cocktail?",
+    "options": [
+      "Plain water",
+      "Hot tea",
+      "A diet coke",
+      "Apple juice"
+    ],
+    "answer": "A diet coke",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "When asked what he’ll have, Sheldon says, “I’ll have a diet coke,” forcing Penny to push him into ordering a mock cocktail instead."
+  },
+  {
+    "id": "bbt-s1e8-medium-0022",
+    "context": "After being pushed, Sheldon chooses a specific mocktail, then nitpicks its presentation.",
+    "question": "Which non-alcoholic cocktail does Sheldon ask Penny for, specifying a tall glass and lime wedge?",
+    "options": [
+      "Virgin cuba libre",
+      "Shirley Temple",
+      "Virgin margarita",
+      "Arnold Palmer"
+    ],
+    "answer": "Virgin cuba libre",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Sheldon relents with, “Fine. I’ll have a virgin cuba libre,” then insists it traditionally comes “in a tall glass with a lime wedge.” Penny fires back, “Then swim to Cuba"
+  },
+  {
+    "id": "bbt-s1e8-easy-0045",
+    "context": "While Penny practises bartending, Howard tries to order something with an obvious innuendo.",
+    "question": "Which cocktail does Howard request from Penny before she immediately cuts him off?",
+    "options": [
+      "A slippery nipple",
+      "A screaming orgasm",
+      "A sex on the beach",
+      "A fuzzy navel"
+    ],
+    "answer": "A slippery nipple",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Howard leans in and says he’d like to try a “slippery nipple,” prompting Penny to respond, “Okay, you’re cut off.”"
+  },
+  {
+    "id": "bbt-s1e8-medium-0024",
+    "context": "As the grasshopper kicks in, Raj pours out his anxieties about his future and his parents’ expectations.",
+    "question": "Which political figure does Raj say he dreamed of being the equivalent of in particle astrophysics?",
+    "options": [
+      "Mahatma Gandhi",
+      "Indira Gandhi",
+      "Jawaharlal Nehru",
+      "Jawal Malhotra"
+    ],
+    "answer": "Indira Gandhi",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Raj laments that he “was going to be the Indira Gandhi of particle astro-physics,” then adds, “but with a penis, of course.”"
+  },
+  {
+    "id": "bbt-s1e8-medium-0025",
+    "context": "Raj describes how his father has always pushed him toward a very specific medical specialty.",
+    "question": "What profession does Raj say his father always wanted him to go into, like him?",
+    "options": [
+      "Cardiologist",
+      "Surgeon",
+      "Gynaecologist",
+      "Pediatrician"
+    ],
+    "answer": "Gynaecologist",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "He complains, “Ever since I was a little boy my father wanted me to be a gynaecologist like him. How can I be a gynaecologist, I can barely look a woman in the eye.”"
+  },
+  {
+    "id": "bbt-s1e8-medium-0028",
+    "context": "At the restaurant, Raj is nervously chatty and keeps repeating a childhood nickname.",
+    "question": "What nickname does Raj keep using for Lalita when they sit together at the restaurant?",
+    "options": [
+      "Little Lalita",
+      "Lovely Lalita",
+      "Fat Lalita",
+      "Chubby Lalita"
+    ],
+    "answer": "Little Lalita",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "He sits beside her marvelling, “I can’t believe I’m sitting here next to little Lalita Gupta… Little Lalita, Little Lalita, Little Lalita, you should try it.”"
+  },
+  {
+    "id": "bbt-s1e8-medium-0029",
+    "context": "Raj’s drunken honesty turns tactless as he comments on Lalita’s past appearance.",
+    "question": "How does Raj bluntly describe Lalita’s childhood weight loss?",
+    "options": [
+      "He says she used to be \"a little chubby\"",
+      "He says she used to be \"so, so fat\"",
+      "He says she used to be \"kind of heavy-set\"",
+      "He says she used to be \"bigger, in a cute way\""
+    ],
+    "answer": "He says she used to be \"so, so fat\"",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Raj tells her, “You have lost so much weight! That must have been difficult for you because you were so, so fat! Do you remember?” and adds, “Who could forget being that fat?”"
+  },
+  {
+    "id": "bbt-s1e8-medium-0030",
+    "context": "Trying to make conversation, Raj turns her dental studies into a morbid trivia topic.",
+    "question": "What grim statistic about her future profession does Raj bring up to Lalita?",
+    "options": [
+      "Dentists have an extremely high suicide rate",
+      "Dentists have the shortest life expectancy among doctors",
+      "Most dentists end up changing careers",
+      "Dentists are the most sued medical professionals"
+    ],
+    "answer": "Dentists have an extremely high suicide rate",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Raj asks if she’s aware “that dentists have an extremely high suicide rate,” noting in pure numbers they’re still “winning” over air traffic controllers."
+  },
+  {
+    "id": "bbt-s1e8-medium-0031",
+    "context": "When Sheldon arrives at the restaurant, he is stunned by Lalita’s appearance.",
+    "question": "Which fictional character does Sheldon say Lalita looks exactly like?",
+    "options": [
+      "Princess Punchali",
+      "Princess Padmavati",
+      "Princess Sita",
+      "Princess Shanti"
+    ],
+    "answer": "Princess Punchali",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Sheldon exclaims, “That’s Princess Punchali,” insisting that Lalita looks exactly like the illustrations of the princess from his childhood story."
+  },
+  {
+    "id": "bbt-s1e8-medium-0032",
+    "context": "Sheldon explains the origin of the princess character he’s reminded of.",
+    "question": "From which story does Princess Punchali, the character Sheldon references, come?",
+    "options": [
+      "The Monkey and the Princess",
+      "The Tiger and the Boy",
+      "The Snake and the Sage",
+      "The Peacock and the Moon"
+    ],
+    "answer": "The Monkey and the Princess",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "He says she’s “Princess Punchali from The Monkey and the Princess,” a children’s tale his mother would read to him when he was sick."
+  },
+  {
+    "id": "bbt-s1e8-medium-0033",
+    "context": "Sheldon flatters Lalita by quoting the poetic way the princess is described in the story.",
+    "question": "Which romantic description does Sheldon quote about Princess Punchali when he’s talking to Lalita?",
+    "options": [
+      "Her hair shines brighter than the sun",
+      "Her smile is the dawn over the mountains",
+      "The Gods fashioned her eyes out of the stars",
+      "Her voice is sweeter than the nightingale’s song"
+    ],
+    "answer": "The Gods fashioned her eyes out of the stars",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Sheldon tells Lalita that in the tale “the Gods fashioned her eyes out of the stars, and that roses were ashamed to bloom in the presence of her ruby lips.”"
+  },
+  {
+    "id": "bbt-s1e8-medium-0034",
+    "context": "As Sheldon and Lalita bond, Raj panics and tries to assert his claim based on the arrangement.",
+    "question": "What does Raj say to Sheldon when he fears his \"lady\" is being stolen?",
+    "options": [
+      "“Respect our traditions, Sheldon”",
+      "“If you don’t stop, we are no longer friends”",
+      "“If you do not stop hitting on my lady you will feel the full extent of my wrath”",
+      "“She belongs to me, Sheldon. Back off”"
+    ],
+    "answer": "“If you do not stop hitting on my lady you will feel the full extent of my wrath”",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Raj warns, “If you do not stop hitting on my lady you will feel the full extent of my wrath,” prompting Howard to point out he has no wrath."
+  },
+  {
+    "id": "bbt-s1e8-medium-0037",
+    "context": "Leonard presses Sheldon later, wanting to know if his friend actually started dating Lalita.",
+    "question": "Why does Sheldon say he has no reason to see Lalita again, despite leaving with her?",
+    "options": [
+      "He’s not interested in a relationship",
+      "He doesn’t date women his friends were set up with",
+      "He already has a dentist",
+      "She lives too far away"
+    ],
+    "answer": "He already has a dentist",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "When Leonard asks if he’ll see her again, Sheldon says there’s no need: “Why would I see her again? I already have a dentist.”"
+  },
+  {
+    "id": "bbt-s1e8-medium-0038",
+    "context": "In the closing scene at the restaurant, Sheldon is in a very different mood having been tricked into drinking alcohol by Penny.",
+    "question": "What song is Sheldon enthusiastically singing at the piano at the end of the episode?",
+    "options": [
+      "If I Were a Rich Man",
+      "Tradition",
+      "To Life",
+      "Matchmaker, Matchmaker"
+    ],
+    "answer": "To Life",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Sheldon sits at the piano belting out “To Life” from Fiddler on the Roof, tying back to the earlier conversation about arranged marriage and that musical."
   }
 ]
+
+
+
+
+
+
+
+
 

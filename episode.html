@@ -27,25 +27,32 @@ p.parentNode.insertBefore(m,p)
 </head>
 <body data-page="episode">
   <main class="container narrow">
-    <a href="index.html" class="back-link">← Back to Home</a>
+    <a href="index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
 
     <section class="panel">
-      <div id="episodeGameBox">
-        <div class="episode-topbar">
-          <p id="episodeScoreText">Score: 0</p>
-        </div>
+      
+<div id="episodeGameBox">
+  <div class="play-progress-row">
+    <p id="episodeProgressText"></p>
+    <a id="episodeNextPageLink" class="skip-link" href="#" style="display:none;">Skip to next episode</a>
+  </div>
 
-        <div id="episodeContext" class="episode-context"></div>
-        <h2 id="episodeQuestionText"></h2>
-        <div id="episodeOptionsList" class="options"></div>
+  <div class="episode-topbar">
+    <p id="episodeScoreText">Score: 0</p>
+  </div>
 
-        <p id="episodeFeedbackText" class="feedback"></p>
-        <div id="episodeDescription" class="episode-description"></div>
+  <div id="episodeContext" class="episode-context"></div>
+  <h2 id="episodeQuestionText"></h2>
+  <div id="episodeOptionsList" class="options"></div>
 
-        <div class="cta-row">
-          <button id="episodeNextButton" class="secondary-btn" style="display:none;">Next</button>
-        </div>
-      </div>
+  <p id="episodeFeedbackText" class="feedback"></p>
+  <div id="episodeDescription" class="episode-description"></div>
+
+  <div class="cta-row">
+    <button id="episodeSubmitButton" class="primary-btn">Submit</button>
+    <button id="episodeNextButton" class="secondary-btn" style="display:none;">Next</button>
+  </div>
+</div>
 
       <div id="episodeResultBox" style="display:none;"></div>
     </section>

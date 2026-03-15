@@ -233,6 +233,8 @@ async function renderPlayPage() {
   const themes = await loadThemes();
   const theme = themes.find(t => t.slug === slug);
 
+  const PAGE_SIZE = 30; // later change 10 -> 30
+
   const progress = document.getElementById("progressText");
   const questionEl = document.getElementById("questionText");
   const optionsEl = document.getElementById("optionsList");
@@ -241,23 +243,54 @@ async function renderPlayPage() {
   const nextBtn = document.getElementById("nextButton");
   const resultBox = document.getElementById("resultBox");
   const scoreEl = document.getElementById("scoreText");
+  const nextPageLink = document.getElementById("nextPageLink");
 
   if (!theme) {
     questionEl.textContent = "Theme not found";
     return;
   }
 
-  updateRemoveAdsFooter(theme.slug, "normal");
+let buyPackUrl = "https://ko-fi.com/triviaking/shop";
+ try { const normalPackLinks = await fetchJSON("data/normal_pack_links.json"); 
+  buyPackUrl = normalPackLinks[theme.title] || buyPackUrl;
+ } catch (e) { 
+  buyPackUrl = "https://ko-fi.com/triviaking/shop"; }
+
+  if (typeof updateRemoveAdsFooter === "function") {
+    updateRemoveAdsFooter(theme.slug, "normal");
+  }
+
+  const rawPage = parseInt(getParam("page") || "1", 10);
+  const currentPage = Number.isNaN(rawPage) || rawPage < 1 ? 1 : rawPage;
 
   const allQuestions = await fetchJSON(theme.questionFile);
-  quizState.questions = shuffleArray(allQuestions).slice(0, 30);
+  const totalPages = Math.ceil(allQuestions.length / PAGE_SIZE);
+  const safePage = Math.min(currentPage, totalPages);
+
+  const startIndex = (safePage - 1) * PAGE_SIZE;
+  const endIndex = Math.min(startIndex + PAGE_SIZE, allQuestions.length);
+
+  // same 10 questions for each page, but randomized order inside the page
+  quizState.questions = shuffleArray(allQuestions.slice(startIndex, endIndex));
   quizState.currentIndex = 0;
   quizState.score = 0;
   quizState.selectedAnswer = null;
 
+  if (nextPageLink) {
+    if (safePage < totalPages) {
+      nextPageLink.style.display = "inline-block";
+      nextPageLink.textContent = "Skip to next page";
+      nextPageLink.href = `play.html?theme=${theme.slug}&page=${safePage + 1}`;
+    } else {
+      nextPageLink.style.display = "none";
+    }
+  }
+
   function renderQuestion() {
     const q = shuffleQuestionOptions(quizState.questions[quizState.currentIndex]);
+
     feedbackEl.textContent = "";
+    feedbackEl.className = "feedback";
     optionsEl.innerHTML = "";
     submitBtn.disabled = false;
     nextBtn.style.display = "none";
@@ -271,11 +304,13 @@ async function renderPlayPage() {
       const btn = document.createElement("button");
       btn.className = "option-btn";
       btn.textContent = option;
+
       btn.addEventListener("click", () => {
         quizState.selectedAnswer = option;
-        document.querySelectorAll(".option-btn").forEach(b => b.classList.remove("selected"));
+        document.querySelectorAll("#optionsList .option-btn").forEach(b => b.classList.remove("selected"));
         btn.classList.add("selected");
       });
+
       optionsEl.appendChild(btn);
     });
   }
@@ -283,26 +318,37 @@ async function renderPlayPage() {
   function renderResult() {
     document.getElementById("quizBox").style.display = "none";
     resultBox.style.display = "block";
-    resultBox.innerHTML = `
-      <h2>Quiz Complete</h2>
-      <p>Your score: ${quizState.score} / ${quizState.questions.length}</p>
-      <a class="primary-btn" href="quiz.html?theme=${theme.slug}">Back to Theme</a>
-      <a class="secondary-btn" href="play.html?theme=${theme.slug}">Play Again</a>
-    `;
+
+    const hasNextPage = safePage < totalPages;
+
+  resultBox.innerHTML = `
+    <h2>Quiz Complete</h2>
+    <p>Your score: ${quizState.score} / ${quizState.questions.length}</p>
+    <div class="cta-row">
+      ${hasNextPage ? `<a class="primary-btn" href="play.html?theme=${theme.slug}&page=${safePage + 1}">More Questions</a>` : ""}
+      <a class="secondary-btn" href="${buyPackUrl}" target="_blank" rel="noopener noreferrer">Buy ${theme.title} Pack</a>
+    </div>
+  `;
+    setTimeout(() => {
+  if (typeof showInstallCard === "function") {
+    showInstallCard();
+  }
+}, 800);
   }
 
   submitBtn.addEventListener("click", () => {
     if (!quizState.selectedAnswer) return;
 
     const q = quizState.questions[quizState.currentIndex];
-  if (quizState.selectedAnswer === q.answer) {
-    quizState.score += 1;
-    feedbackEl.textContent = "Correct";
-    feedbackEl.className = "feedback correct";
-  } else {
-    feedbackEl.textContent = "Wrong";
-    feedbackEl.className = "feedback wrong";
-  }
+
+    if (quizState.selectedAnswer === q.answer) {
+      quizState.score += 1;
+      feedbackEl.textContent = "Correct";
+      feedbackEl.className = "feedback correct";
+    } else {
+      feedbackEl.textContent = "Wrong";
+      feedbackEl.className = "feedback wrong";
+    }
 
     submitBtn.disabled = true;
     nextBtn.style.display = "inline-block";

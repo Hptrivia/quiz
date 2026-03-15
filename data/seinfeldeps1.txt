@@ -1,5 +1,533 @@
 [
   {
+    "id": "seinfeld-s1e1-medium-0001",
+    "context": "**EPISODE 1**: In his opening stand-up, Jerry talks about the thrill of “going out” and how everyone in the club has left their homes behind.",
+    "question": "According to Jerry’s stand-up, once people finally get out, what do they almost immediately start thinking?",
+    "options": [
+      "“We gotta be getting back.”",
+      "“We should stay out all night.”",
+      "“We need to find another place.”",
+      "“I really dont want to be here.”"
+    ],
+    "answer": "“We gotta be getting back.”",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Jerry jokes that after all the effort to get ready and go out, people just stand around and say, “We gotta be getting back.”"
+  },
+  {
+    "id": "seinfeld-s1e1-medium-0002",
+    "context": "At Monk’s, Jerry fixates on George’s shirt and points out a very specific design flaw.",
+    "question": "Which button does Jerry call the “worst possible spot” and say it can “make or break the shirt”?",
+    "options": [
+      "The second button",
+      "The top button",
+      "The third button",
+      "The bottom button"
+    ],
+    "answer": "The second button",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Jerry insists the second button is too high, stuck in “no-man’s-land,” and makes George look like he lives with his mother."
+  },
+  {
+    "id": "seinfeld-s1e1-easy-0031",
+    "context": "At Monk’s diner, Jerry and George sit at their usual table while a familiar waitress pours their coffee and teases George about caffeine.",
+    "question": "What is the name of the waitress serving Jerry and George in the diner?",
+    "options": [
+      "Claire",
+      "Carol",
+      "Susan",
+      "Donna"
+    ],
+    "answer": "Claire",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "The waitress is named Claire— Jerry even calls her a “professional waitress”"
+  },
+  {
+    "id": "seinfeld-s1e1-medium-0003",
+    "context": "Claire pours coffee for Jerry and George, but George is suspicious.",
+    "question": "Why is George worried about the decaf coffee Claire serves him?",
+    "options": [
+      "He doesn’t see the orange decaf indicator on the pot",
+      "He thinks decaf is more expensive",
+      "He once got sick from her decaf",
+      "He believes decaf tastes exactly like regular"
+    ],
+    "answer": "He doesn’t see the orange decaf indicator on the pot",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "George asks, “Where’s the orange indicator?” and panics when Claire says it’s missing and she has to keep track in her head."
+  },
+  {
+    "id": "seinfeld-s1e1-medium-0032",
+    "context": "In the diner, Jerry tells George about a woman he met while performing on the road, describing her warmth and how easy the conversation was.",
+    "question": "What is the name of the woman Jerry met in Michigan, and what subject does she teach?",
+    "options": [
+      "Laura, she teaches political science",
+      "Laura, she teaches English literature",
+      "Lara, she teaches political science",
+      "Linda, she teaches Biology"
+    ],
+    "answer": "Laura, she teaches political science",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Jerry explains that he met Laura the night he did a show in Lansing, Michigan, and that she teaches political science."
+  },
+  {
+    "id": "seinfeld-s1e1-medium-0004",
+    "context": "Jerry describes Laura, the woman he met on the road, while George interrogates him in the diner.",
+    "question": "How does Jerry describe what it was like talking to Laura?",
+    "options": [
+      "Like talking to George, but obviously much better",
+      "Like talking to a best friend he’s known for years",
+      "Like talking to a therapist who understands everything",
+      "Like talking to George, but prettier"
+    ],
+    "answer": "Like talking to George, but obviously much better",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Jerry says the conversation felt like talking to George, “but, ya know, obviously much better,” which George oddly takes as good news."
+  },
+  {
+    "id": "seinfeld-s1e1-medium-0005",
+    "context": "George dissects Laura’s phone call where she says she “has to come in for a seminar” and “maybe” they’ll get together.",
+    "question": "What does George conclude Jerry is to Laura after analyzing her phrasing?",
+    "options": [
+      "A back-up, a second-line, a just-in-case plan",
+      "Her first choice if nothing else comes up",
+      "A close friend she trusts with everything",
+      "An old flame she’s trying to rekindle"
+    ],
+    "answer": "A back-up, a second-line, a just-in-case plan",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "George declares Jerry is a “back-up, a second-line, a just-in-case, a B-plan of contingency.”"
+  },
+  {
+    "id": "seinfeld-s1e1-medium-0033",
+    "context": "Still obsessing over Laura’s call, George decides they need a “female point of view” and pulls the waitress into their analysis.",
+    "question": "How does George bring Claire into the conversation about Laura’s phone call?",
+    "options": [
+      "He says, “Claire, Claire, you’re a woman, right?”",
+      "He says, “Claire, you date guys, don’t you?”",
+      "He says, “Claire, we need a woman’s opinion here.”",
+      "He says, “Claire, be honest, what is she thinking?”"
+    ],
+    "answer": "He says, “Claire, Claire, you’re a woman, right?”",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "George waves her over with, “Claire, Claire, you’re a woman, right?”, setting up his “hypothetical” call."
+  },
+  {
+    "id": "seinfeld-s1e1-hard-0006",
+    "context": "George brings Claire into the analysis at the diner to settle the “had to” / “maybe” debate.",
+    "question": "In Claire’s “female point of view,” why does she say the hypothetical woman called Jerry at all?",
+    "options": [
+      "To be polite",
+      "To keep her options open",
+      "To test if he’s still interested",
+      "To have a backup"
+    ],
+    "answer": "To be polite",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "Claire flatly agrees with George that the woman called “to be polite,” which George triumphantly writes down as “NO.”"
+  },
+  {
+    "id": "seinfeld-s1e1-medium-0007",
+    "context": "Later at the laundromat, George insists that Laura’s call was full of hidden messages.",
+    "question": "What key “signal” does George cite to argue that Laura doesn’t plan to see Jerry?",
+    "options": [
+      "She never told him what hotel she’s staying at",
+      "She never asked what he was doing that night",
+      "She called too early in the day",
+      "She never asked for them to hang out"
+    ],
+    "answer": "She never told him what hotel she’s staying at",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "George points out that Jerry doesn’t even know where she’s staying, meaning Jerry can’t call her—“That’s a signal, Jerry!”"
+  },
+  {
+    "id": "seinfeld-s1e1-medium-0008",
+    "context": "Jerry worries about interrupting the dryer cycle at the laundromat, while George tells him to check if his clothes are done.",
+    "question": "What everyday concept does Jerry compare to “over-drying” clothes to prove it’s impossible?",
+    "options": [
+      "Being dead—you can’t “over-die”",
+      "Being hungry—you can’t “over-hunger”",
+      "Being late—you can’t “over-late”",
+      "Being tired—you can’t “over-tired”"
+    ],
+    "answer": "Being dead—you can’t “over-die”",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "He says once something is wet, it’s wet, just like once you die, you’re dead—you can’t “over-die,” so you can’t “over-dry.”"
+  },
+  {
+    "id": "seinfeld-s1e1-hard-0034",
+    "context": "In his laundry stand-up bit, Jerry imagines the inner life of socks.",
+    "question": "According to Jerry’s stand-up, which of the following does he NOT say about socks?",
+    "options": [
+      "They are the most amazing article of clothing.",
+      "They hate their lives.",
+      "They’re stuck in shoes with stinky feet.",
+      "They’re stuck in boring drawers.",
+      "The dryer is their only chance to escape.",
+      "They’re stuck at the bottom of the hamper."
+    ],
+    "answer": "They’re stuck at the bottom of the hamper.",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "Jerry says socks are the most amazing article of clothing, they hate their lives, they’re in shoes with stinky feet and boring drawers, and the dryer is their only chance to escape—he never talks about hampers."
+  },
+  {
+    "id": "seinfeld-s1e1-hard-0009",
+    "context": "In the laundry stand-up, Jerry imagines the inner life of socks on laundry day.",
+    "question": "In Jerry’s routine, what do runaway socks supposedly end up doing after escaping from the dryer?",
+    "options": [
+      "Getting buttons sewn on and joining a puppet show",
+      "Becoming dust rags in another home",
+      "Traveling the world in strangers’ suitcases",
+      "Forming a secret community under the bed"
+    ],
+    "answer": "Getting buttons sewn on and joining a puppet show",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "Jerry says escaped socks get buttons sewn on their faces and join puppet shows after planning their escape in the hamper."
+  },
+  {
+    "id": "seinfeld-s1e1-medium-0035",
+    "context": "Late at night in Jerry’s apartment, he’s carefully avoided the Mets score so he can watch his taped game in peace—until Kramer walks in.",
+    "question": "What exact line does Kramer blurt out that ruins Jerry’s taped Mets game?",
+    "options": [
+      "“Boy, the Mets blew it tonight, huh?”",
+      "“Can you believe the Mets lost by ten?”",
+      "“Tough loss for the Mets, Jerry.”",
+      "“Mets choked again, what a disaster.”"
+    ],
+    "answer": "“Boy, the Mets blew it tonight, huh?”",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Kramer strolls in and says, “Boy, the Mets blew it tonight, huh?”, spoiling the result instantly and sending Jerry into a meltdown about his taped game."
+  },
+  {
+    "id": "seinfeld-s1e1-medium-0036",
+    "context": "In that same scene, Jerry scolds his neighbor for casually dropping spoilers and even calls him by a different name.",
+    "question": "What does Jerry call Kramer in this scene?",
+    "options": [
+      "Kessler",
+      "Cosmo",
+      "Kassler",
+      "Kressler"
+    ],
+    "answer": "Kessler",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Still using the early version of the character, Jerry calls him “Kessler” (as in, “Kessler, it’s a tape!”) instead of Kramer or Cosmo."
+  },
+  {
+    "id": "seinfeld-s1e1-medium-0037",
+    "context": "After Kramer claims he almost went to the Mets game, Jerry calls him out on his shut-in lifestyle.",
+    "question": "How many years does Jerry say Kramer hasn’t been out of the building?",
+    "options": [
+      "Ten years",
+      "Five years",
+      "Two years",
+      "Fifteen years"
+    ],
+    "answer": "Ten years",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "When Kramer boasts about almost going to the game, Jerry snaps, “You almost went to the game? You haven’t been out of the building in ten years!”"
+  },
+  {
+    "id": "seinfeld-s1e1-medium-0012",
+    "context": "Jerry gets a surprise phone call from Laura late at night while Kramer urges him to let him talk.",
+    "question": "During Laura’s late-night call, what new request does she make that shocks Jerry after he hangs up?",
+    "options": [
+      "She asks if she can stay at his apartment",
+      "She asks if he could pick her up from the airport",
+      "She asks him to drive her around while she’s in town",
+      "She asks if he could meet her at her hotel"
+    ],
+    "answer": "She asks if she can stay at his apartment",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "After scribbling her arrival time on a cereal box, Jerry hangs up and tells Kramer he can’t believe it—she wants to stay at his place."
+  },
+  {
+    "id": "seinfeld-s1e1-medium-0038",
+    "context": "On the late-night phone call where Laura asks to stay, Jerry grabs a pencil and a cereal box to scribble down her arrival time.",
+    "question": "What time does Laura say her plane gets in when she calls Jerry?",
+    "options": [
+      "10:15",
+      "9:30",
+      "11:05",
+      "10:45"
+    ],
+    "answer": "10:15",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Jerry repeats “10:15” as he writes it on the cereal box while Kramer yells about a slide in the background."
+  },
+  {
+    "id": "seinfeld-s1e1-medium-0013",
+    "context": "The next day, Jerry and George go into the apartment and argue about what Laura´s request means.",
+    "question": "What does George mock Jerry for doing in preparation for Laura’s visit?",
+    "options": [
+      "Bringing in an extra bed",
+      "Buying expensive wine and cheese for their first night",
+      "Cleaning the apartment like a hotel suite",
+      "Planning a long boat ride instead of a simple dinner"
+    ],
+    "answer": "Bringing in an extra bed",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "George can’t believe Jerry is bringing in an extra bed for a woman who clearly wants to sleep with him, joking he might as well bring in another guy too."
+  },
+  {
+    "id": "seinfeld-s1e1-hard-0014",
+    "context": "George insists that Laura’s “decent hotel room” problem is actually a neon sign.",
+    "question": "When Jerry quotes Laura saying she “couldn’t find a decent hotel room,” how does George interpret that line?",
+    "options": [
+      "As “the signal” that she wants to stay with Jerry",
+      "As proof she’s high-maintenance and fussy",
+      "As an excuse to avoid paying for a room",
+      "As evidence that she’s stranded and desperate"
+    ],
+    "answer": "As “the signal” that she wants to stay with Jerry",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "George says New York has millions of hotel rooms and calls it “the signal,” the ultimate sign she wants to stay with Jerry."
+  },
+  {
+    "id": "seinfeld-s1e1-hard-0016",
+    "context": "In his stand-up, Jerry talks about how much “equipment” women seem to need in the bathroom.",
+    "question": "What everyday item does Jerry say he’s never owned, never bought, and never needed until women bring it into his apartment?",
+    "options": [
+      "Cotton balls",
+      "Nail files",
+      "Hair spray",
+      "Makeup remover pads"
+    ],
+    "answer": "Cotton balls",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "He’s amazed by women’s giant bags of cotton balls, saying he’s never owned a single cotton ball and has no idea what they do with them."
+  },
+  {
+    "id": "seinfeld-s1e1-hard-0029",
+    "context": "In the cotton ball bit, Jerry talks about a girl leaving bathroom supplies at his place.",
+    "question": "What does Jerry say he did with the little zip-lock bag of cotton balls a girl left at his apartment?",
+    "options": [
+      "Put them on the kitchen floor like little tumbleweeds",
+      "Used them to clean his TV screen",
+      "Stuffed them into his sneakers for comfort",
+      "Kept them by the sink “just in case”"
+    ],
+    "answer": "Put them on the kitchen floor like little tumbleweeds",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "He scattered them on the kitchen floor like tumbleweeds, hoping cockroaches would see them and decide the town was dead."
+  },
+  {
+    "id": "seinfeld-s1e1-medium-0026",
+    "context": "In his stand-up, Jerry reflects on what dating actually is.",
+    "question": "How does Jerry compare a date to another real-life situation in his closing routine?",
+    "options": [
+      "A date is a job interview that lasts all night",
+      "A date is like taking an exam you didn’t study for",
+      "A date is like a performance review with no raise",
+      "A date is like a court trial with no jury"
+    ],
+    "answer": "A date is a job interview that lasts all night",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "He says the only difference is, on most job interviews there isn’t a chance you’ll end up naked at the end of it."
+  },
+  {
+    "id": "seinfeld-s1e1-medium-0017",
+    "context": "At the airport, Jerry and George discuss how much you can tell from a first greeting.",
+    "question": "According to George, what kind of greeting is considered “brutal,” even if it’s technically a hug?",
+    "options": [
+      "The hug where the shoulders touch but the hips are far apart",
+      "The hug where one person keeps their arms down",
+      "The quick tap-on-the-back hug",
+      "The hug combined with a firm handshake"
+    ],
+    "answer": "The hug where the shoulders touch but the hips are far apart",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "George and Jerry agree that the hug where shoulders are touching and hips are “eight feet apart” is brutal."
+  },
+  {
+    "id": "seinfeld-s1e1-hard-0018",
+    "context": "George breaks down possible greetings at the airport like a playbook of signals.",
+    "question": "What does George call the handshake where there’s a hand on the bottom, a hand on top, and a warm look in the eyes?",
+    "options": [
+      "A hand-sandwich",
+      "A double-grip",
+      "A comfort clasp",
+      "A two hander"
+    ],
+    "answer": "A hand-sandwich",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "Jerry calls it the two-hander; George labels it the “hand-sandwich,” and says it’s open to interpretation."
+  },
+  {
+    "id": "seinfeld-s1e1-hard-0039",
+    "context": "At the airport, George gives Jerry a full breakdown of greeting “signals” before Laura arrives and surprises him.",
+    "question": "Which of these greeting types is NOT mentioned in the airport scene when Jerry and George analyze Laura’s “signals”?",
+    "options": [
+      "Dropping the bags before greeting",
+      "A hug where the shoulders touch but the hips are far apart",
+      "A “hand-sandwich” two-handed shake",
+      "A double-cheek European-style kiss"
+    ],
+    "answer": "A double-cheek European-style kiss",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "George and Jerry talk about bag-dropping, hugs (including the brutal hips-far-apart version), shakes, the two-handed “hand-sandwich,” wet eyes, and the surprise-blindfold greeting—but never a double-cheek European kiss."
+  },
+  {
+    "id": "seinfeld-s1e1-medium-0019",
+    "context": "Laura finally arrives at the airport and greets Jerry.",
+    "question": "How does Laura physically greet Jerry when she first sees him at the airport?",
+    "options": [
+      "She covers his eyes from behind and says, “Guess who?”",
+      "She drops her bags and gives him a full hug",
+      "She waves from a distance, then shakes his hand",
+      "She kisses him on the cheek right away"
+    ],
+    "answer": "She covers his eyes from behind and says, “Guess who?”",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Laura comes up behind him, covers his eyes, and says, “Guess who?”, giving George a brand-new, unclassified “surprise-blindfold greeting.”"
+  },
+  {
+    "id": "seinfeld-s1e1-medium-0020",
+    "context": "Back at the apartment, Jerry shows Laura around while George’s “signals” spin in his head.",
+    "question": "Which of these details does Laura do almost immediately that Jerry clearly reads as a strong “signal”?",
+    "options": [
+      "She takes off her shoes and unbuttons part of her shirt on the couch",
+      "She asks if she can lie down in his bed “just to rest”",
+      "She changes into one of his T-shirts without asking",
+      "She lays down on his couch"
+    ],
+    "answer": "She takes off her shoes and unbuttons part of her shirt on the couch",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Laura makes herself at home, taking off her shoes and opening a few buttons while she sits on his couch, which only fuels Jerry’s expectations."
+  },
+  {
+    "id": "seinfeld-s1e1-medium-0021",
+    "context": "Jerry nervously offers Laura food and drink as she settles in.",
+    "question": "When Jerry offers Laura something to drink, what does she specifically ask him for?",
+    "options": [
+      "Wine",
+      "Coffee",
+      "Tea",
+      "Soda"
+    ],
+    "answer": "Wine",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "After he awkwardly offers “bread, water, salad dressing,” she asks if he has any wine, which he goes to pour."
+  },
+  {
+    "id": "seinfeld-s1e1-medium-0040",
+    "context": "Back at Jerry’s apartment, Laura settles onto the couch, loosens up, and adjusts the lighting before making another request.",
+    "question": "After Laura turns down the lamp, what does she ask Jerry about?",
+    "options": [
+      "If it would be possible for her to stay there tomorrow night too",
+      "If she can stay there her whole trip",
+      "If she can invite her friend to stay there as well",
+      "If he can drive her back to the airport in the morning"
+    ],
+    "answer": "If it would be possible for her to stay there tomorrow night too",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Once the lamp is dimmed, she asks if it would be possible—“and if it’s not, fine”—for her to stay there tomorrow night as well."
+  },
+  {
+    "id": "seinfeld-s1e1-medium-0023",
+    "context": "Laura mentions her schedule while explaining why she can stay an extra night.",
+    "question": "What touristy thing does Laura say she’d “love” to do with Jerry after her seminar?",
+    "options": [
+      "Go on a five-hour boat ride around Manhattan",
+      "Visit the Statue of Liberty and Ellis Island",
+      "Walk across the Brooklyn Bridge at sunset",
+      "Take a two-hour carriage ride through Central Park"
+    ],
+    "answer": "Go on a five-hour boat ride around Manhattan",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "She calls it touristy but says she’d love a five-hour boat ride around Manhattan, and Jerry, still hopeful, agrees."
+  },
+  {
+    "id": "seinfeld-s1e1-hard-0024",
+    "context": "Laura takes a phone call in Jerry’s apartment about her travel plans and accommodations.",
+    "question": "What blunt piece of advice does Laura give Jerry after hanging up the phone with the person on the other end?",
+    "options": [
+      "“Never get engaged.”",
+      "“Never trust long-distance.”",
+      "“Never date comics.”",
+      "“Never get married.”"
+    ],
+    "answer": "“Never get engaged.”",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "After arguing with her fiancé on the phone, Laura turns to Jerry and says, “Never get engaged,” revealing her relationship status."
+  },
+  {
+    "id": "seinfeld-s1e1-hard-0041",
+    "context": "When Jerry realizes Laura is engaged, he keeps repeating it in disbelief while she explains how it feels.",
+    "question": "Which of these lines does Laura NOT say while she’s talking about being engaged and Jerry quietly panics?",
+    "options": [
+      "“You have to start thinking in terms of ‘we.’”",
+      "“He’s a great guy.”",
+      "“You’d really like him.”",
+      "“I’m on this emotional roller coaster.”",
+      "“I don’t even know if I want to marry him.”"
+    ],
+    "answer": "“I don’t even know if I want to marry him.”",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "Laura says she has to think in terms of “we,” calls her fiancé a great guy, says Jerry would really like him, and describes it as an emotional roller coaster—she never says she doesn’t know if she wants to marry him."
+  },
+  {
+    "id": "seinfeld-s1e1-hard-0027",
+    "context": "Jerry mocks how desperate men are for attention from women in his last bit.",
+    "question": "What everyday behavior does Jerry describe as evidence that men are “out of ideas” for how to get women’s attention?",
+    "options": [
+      "Honking car horns at women walking by",
+      "Leaning out windows to whistle at passersby",
+      "Sending drinks from across the bar",
+      "Leaving anonymous love notes at work"
+    ],
+    "answer": "Honking car horns at women walking by",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "He jokes about men honking car horns as women walk past, imitating the honk and saying, “This man is out of ideas.”"
+  },
+  {
+    "id": "seinfeld-s1e1-medium-0028",
+    "context": "In the same routine, Jerry describes men as a kind of global “organization” working on the problem of meeting women.",
+    "question": "How does Jerry describe men’s presence “wherever women are” in his final stand-up?",
+    "options": [
+      "There’s always a man “working on the situation”",
+      "There’s always a man “ready to fall in love”",
+      "There’s always a man “waiting for a signal”",
+      "There’s always a man “one move from disaster”"
+    ],
+    "answer": "There’s always a man “working on the situation”",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "He says, “Wherever women are, we have a man working on the situation right now,” as if men are a worldwide organization."
+  },
+  {
     "id": "sf-s1e2-easy-0001",
     "context": "**EPISODE 2**: Jerry opens the episode on stage, talking about a particular topic",
     "question": "What everyday topic is Jerry’s opening stand-up routine about in this episode?",
@@ -353,5 +881,2363 @@
     "difficulty": "medium",
     "episode": 2,
     "description": "She confesses she did her own “stakeout” at his gym, mirroring Jerry’s plan."
+  },
+  {
+    "id": "sf-s1e3-easy-0001",
+    "context": "**EPISODE 3**: Jerry opens the episode on stage, describing an angry driver pulling up beside him on the road.",
+    "question": "What everyday gesture does Jerry focus his opening stand-up routine on in this episode?",
+    "options": ["Giving the finger", "Honking the horn", "Rolling down the window", "Throwing trash"],
+    "answer": "Giving the finger",
+    "difficulty": "easy",
+    "episode": 3,
+    "description": "He talks about a woman giving him the finger and questions what that single finger is supposed to mean."
+  },
+  {
+    "id": "sf-s1e3-easy-0002",
+    "context": "In the same stand-up bit, Jerry imagines a different, even more extreme insult while driving.",
+    "question": "Which body part does Jerry say would be even more insulting to get than the finger?",
+    "options": ["The toe", "The elbow", "The thumb", "The knee"],
+    "answer": "The toe",
+    "difficulty": "easy",
+    "episode": 3,
+    "description": "He jokes it’d be worse to get the toe, since you’d have to take off your shoe and sock while driving."
+  },
+  {
+    "id": "sf-s1e3-easy-0014",
+    "context": "Early in the episode, Jerry packs his suitcase and tells Elaine about his upcoming weekend of shows.",
+    "question": "What city is Jerry traveling to for his four weekend shows?",
+    "options": [
+      "Minneapolis",
+      "Detroit",
+      "Chicago",
+      "Boston"
+    ],
+    "answer": "Minneapolis",
+    "difficulty": "easy",
+    "episode": 3,
+    "description": "Jerry mentions he’s heading to Minneapolis for four shows that weekend."
+  },
+  {
+    "id": "sf-s1e3-easy-0004",
+    "context": "After finishing his suitcase, Jerry proudly labels his packing skill.",
+    "question": "What title does Jerry give himself after impressing Elaine with his packing?",
+    "options": ["The master packer", "The packing king", "The suitcase samurai", "The moving maestro"],
+    "answer": "The master packer",
+    "difficulty": "easy",
+    "episode": 3,
+    "description": "He declares, very seriously, “I am… the master packer.”"
+  },
+  {
+    "id": "sf-s1e3-medium-0005",
+    "context": "Jerry explains his philosophy of packing to Elaine.",
+    "question": "What does Jerry compare packing a suitcase to?",
+    "options": [
+      "Leading men into battle",
+      "Playing chess",
+      "Performing surgery",
+      "Directing a movie"
+    ],
+    "answer": "Leading men into battle",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "He says you must know every item’s strengths and weaknesses like soldiers in a platoon."
+  },
+  {
+    "id": "sf-s1e3-medium-0006",
+    "context": "Jerry gives Elaine practical instructions for staying at his apartment while he’s away.",
+    "question": "What problem does Jerry warn Elaine about with the hot water?",
+    "options": [
+      "It takes a long time to heat up",
+      "It randomly shuts off mid-shower",
+      "It only works at night",
+      "It never gets hotter than lukewarm"
+    ],
+    "answer": "It takes a long time to heat up",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "He tells her to turn it on, go do her shopping, then come back and shower."
+  },
+{
+  "id": "sf-s1e3-medium-0007",
+  "context": "Jerry walks Elaine through his strict refrigerator rules before leaving her the apartment.",
+  "question": "Which of these items does Jerry NOT explicitly ban from his fridge?",
+  "options": [
+    "Milk",
+    "Meat",
+    "Leftovers",
+    "Butter",
+    "Soft cheeses of any kind"
+  ],
+  "answer": "Milk",
+  "difficulty": "medium",
+  "episode": 3,
+  "description": "Jerry forbids meat, leftovers, butter, and any soft cheeses, but never says anything about milk."
+},
+  {
+    "id": "sf-s1e3-medium-0008",
+    "context": "Jerry sets boundaries about Elaine using his apartment while he’s gone.",
+    "question": "What rule does Jerry lay down about sexual activity in his apartment?",
+    "options": [
+      "It’s strictly prohibited",
+      "Only allowed if he’s present",
+      "Only allowed in the bedroom",
+      "Allowed but no overnight guests"
+    ],
+    "answer": "It’s strictly prohibited",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "He jokes that if she absolutely must, she should “do it in the tub.”"
+  },
+  {
+    "id": "sf-s1e3-medium-0009",
+    "context": "Elaine complains to George about why she needs a break from her roommate.",
+    "question": "What does Elaine say her roommate has just been cast in?",
+    "options": [
+      "A dinner-theater production of “A Chorus Line”",
+      "A touring company of “Cats”",
+      "An off-Broadway play",
+      "A commercial shoot"
+    ],
+    "answer": "A dinner-theater production of “A Chorus Line”",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "She calls her a waitress-actress who just got a part in “A Chorus Line.”"
+  },
+  {
+    "id": "sf-s1e3-medium-0011",
+    "context": "Elaine describes living with her singing roommate to Jerry later.",
+    "question": "Which performer does Elaine compare her roommate to, ‘without the talent’?",
+    "options": ["Ethel Merman", "Barbra Streisand", "Liza Minnelli", "Judy Garland"],
+    "answer": "Ethel Merman",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "She says she’s living with “Ethel Merman without the talent.”"
+  },
+  {
+    "id": "sf-s1e3-medium-0012",
+    "context": "George pitches a new apartment opportunity while Jerry packs for his trip.",
+    "question": "Where does George say the two-bedroom apartment is located?",
+    "options": [
+      "West 83rd, about a half block from the park",
+      "East 72nd, near Broadway",
+      "West 96th, bout a half block from the park",
+      "Midtown 57th, near Broadway"
+    ],
+    "answer": "West 83rd, about a half block from the park",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "He keeps emphasizing it’s on West 83rd, half a block from the park."
+  },
+  {
+    "id": "sf-s1e3-medium-0014",
+    "context": "George and Elaine list all the problems with Jerry’s current apartment.",
+    "question": "Which of these apartment issues do George and Elaine specifically mention?",
+    "options": [
+      "A radiator that’s been on for ten years",
+      "A broken elevator that never works",
+      "A neighbor who plays drums all night",
+      "A ceiling leak in the bedroom"
+    ],
+    "answer": "A radiator that’s been on for ten years",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "George says the steam heat has been on for a decade and “no human can turn this off.”"
+  },
+  {
+    "id": "sf-s1e3-easy-0015",
+    "context": "Jerry returns from Minneapolis expecting to relax, only to notice something missing.",
+    "question": "What does Jerry first realize is gone when he comes back to his apartment?",
+    "options": ["The TV", "His couch", "His refrigerator", "His bed"],
+    "answer": "The TV",
+    "difficulty": "easy",
+    "episode": 3,
+    "description": "He keeps pointing the remote around the room before yelling for Elaine."
+  },
+  {
+    "id": "sf-s1e3-medium-0016",
+    "context": "Elaine explains what happened during Jerry’s trip.",
+    "question": "Where does Elaine say she was when Jerry’s apartment was robbed?",
+    "options": [
+      "At Bloomingdale’s",
+      "At the movies with a friend",
+      "Out to dinner with her roommate",
+      "At her office working late"
+    ],
+    "answer": "At Bloomingdale’s",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "She admits she left while the water warmed up and came back to find everything gone."
+  },
+  {
+    "id": "sf-s1e3-medium-0017",
+    "context": "Kramer confesses his role in how the thieves got in.",
+    "question": "What soap opera does Kramer say distracted him so much he left Jerry’s door wide open?",
+    "options": [
+      "The Bold and the Beautiful",
+      "Days of Our Lives",
+      "General Hospital",
+      "The Young and the Restless"
+    ],
+    "answer": "The Bold and the Beautiful",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "He says he went to get a spatula and got sucked into watching “The Bold And The Beautiful.”"
+  },
+  {
+    "id": "sf-s1e3-hard-0018",
+    "context": "Jerry complains that he invested in security instead of insurance.",
+    "question": "What is the name of the supposedly impenetrable lock Jerry bought for his door?",
+    "options": [
+      "The Clapgo D-29",
+      "The Titan X-10",
+      "The Fortress Plus",
+      "The SecureMax 2000"
+    ],
+    "answer": "The Clapgo D-29",
+    "difficulty": "hard",
+    "episode": 3,
+    "description": "He says he spent his money on the Clapgo D-29, “the most impenetrable lock on the market today.”"
+  },
+  {
+    "id": "sf-s1e3-medium-0019",
+    "context": "Right after praising the lock, Jerry points out its fatal flaw.",
+    "question": "According to Jerry, what single design flaw does the Clapgo D-29 have?",
+    "options": [
+      "The door must actually be closed",
+      "It jams if it’s humid",
+      "It only locks from the outside",
+      "It needs a special key that breaks easily"
+    ],
+    "answer": "The door must actually be closed",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "He yells that the door “MUST BE CLOSED!” for the lock to help at all."
+  },
+{
+  "id": "sf-s1e3-medium-0013",
+  "context": "After Jerry’s apartment is robbed, a police officer stands in the living room filling out a report, listing the stolen items while Jerry and Elaine respond.",
+  "question": "Which of these items does the police officer NOT list as missing when he fills out Jerry’s theft report?",
+  "options": [
+    "A TV",
+    "A stereo",
+    "A leather jacket",
+    "A VCR",
+    "A computer",
+    "A microwave"
+  ],
+  "answer": "A microwave",
+  "difficulty": "medium",
+  "episode": 3,
+  "description": "The officer lists a TV, stereo, leather jacket, VCR, and computer as missing; a microwave is never mentioned."
+},
+  {
+    "id": "sf-s1e3-medium-0020",
+    "context": "The police officer finishes listing the stolen items in Jerry’s apartment.",
+    "question": "Which stolen item particularly bothers Jerry because of who now might be using it?",
+    "options": ["His answering machine", "His leather jacket", "His stereo", "His computer"],
+    "answer": "His answering machine",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "He hates the idea of the crook out there returning his calls on the machine."
+  },
+  {
+    "id": "sf-s1e3-medium-0022",
+    "context": "Kramer bursts in later claiming to be ‘on the case’ about the stolen items.",
+    "question": "Which neighbor does Kramer suspect of stealing Jerry’s stuff?",
+    "options": [
+      "The Englishman down the hall",
+      "The super in the basement",
+      "The Frenchman down the hall",
+      "The guy with the drums across the hall"
+    ],
+    "answer": "The Englishman down the hall",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "He says the Englishman has been acting strangely and avoids him in the elevator."
+  },
+  {
+    "id": "sf-s1e3-hard-0023",
+    "context": "Kramer explains how he ‘tested’ the English neighbor in the elevator.",
+    "question": "What casual line does Kramer say he used to test the Englishman about the stolen items?",
+    "options": [
+      "“Oh, by the way, I know about the stuff.”",
+      "“Heard anything weird around here lately?”",
+      "“Lose any electronics recently?”",
+      "“So, how’s your new TV?”"
+    ],
+    "answer": "“Oh, by the way, I know about the stuff.”",
+    "difficulty": "hard",
+    "episode": 3,
+    "description": "Kramer says he dropped “I know about the stuff” casually to bring him into his confidence."
+  },
+  {
+    "id": "sf-s1e3-medium-0024",
+    "context": "Jerry later does stand-up about calling the police after being robbed.",
+    "question": "According to Jerry’s bit, what crucial extra step would really help police solve his robbery case?",
+    "options": [
+      "Giving the crook his copy of the report",
+      "Putting the report on TV news",
+      "Posting the report in the lobby",
+      "Mailing the report to every neighbor"
+    ],
+    "answer": "Giving the crook his copy of the report",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "He jokes that unless the crook also gets a copy of the report, they’ll never crack the case."
+  },
+  {
+    "id": "sf-s1e3-medium-0025",
+    "context": "Jerry, Elaine, and George tour the West 83rd Street apartment together.",
+    "question": "What feature in the new apartment do Elaine and George get especially excited about first?",
+    "options": ["The fireplace", "The balcony", "The extra bathroom", "The built-in bookshelves"],
+    "answer": "The fireplace",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "They’re thrilled to realize it has a working fireplace, which George didn’t even know about from the listing."
+  },
+  {
+    "id": "sf-s1e3-medium-0028",
+    "context": "Back in Jerry’s place, he and Elaine haggle over his old couch.",
+    "question": "What price does Jerry first ask Elaine to pay for his couch?",
+    "options": ["$150", "$100", "$75", "$200"],
+    "answer": "$150",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "He says he wants to “start her off on the right foot” if she’s moving in, and asks for $150."
+  },
+  {
+    "id": "sf-s1e3-medium-0029",
+    "context": "Elaine negotiates hard while Jerry threatens to move the couch out.",
+    "question": "How much does Elaine finally agree to pay for Jerry’s couch?",
+    "options": ["$50", "$40", "$20", "$75"],
+    "answer": "$50",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "After bargaining down from Jerry’s price and his theatrics with the cushions, they settle at fifty dollars."
+  },
+  {
+    "id": "sf-s1e3-medium-0030",
+    "context": "George arrives with the lease, and he and Jerry get tangled in who actually wants the apartment.",
+    "question": "What method do Jerry and George first try to use to decide who gets the apartment?",
+    "options": ["A coin flip", "Drawing straws", "Rock-paper-scissors", "Odds and evens (choosing fingers)"],
+    "answer": "A coin flip",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "They agree to a serious coin flip where “winner takes all and that’s it.”"
+  },
+  {
+    "id": "sf-s1e3-medium-0032",
+    "context": "Unsatisfied with the coin flip, they switch to a kids’ game to settle it.",
+    "question": "What game do Jerry and George use to decide the apartment after the coin flip dispute?",
+    "options": ["Odds and evens (choosing fingers)", "Arm wrestling", "Paper football", "A card draw"],
+    "answer": "Odds and evens (choosing fingers)",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "They do a “straight choose, three takes it,” throwing fingers and yelling “Once, twice, three, shoot!”"
+  },
+  {
+    "id": "sf-s1e3-medium-0035",
+    "context": "George and Jerry both decide neither of them can comfortably take the new place.",
+    "question": "Who ultimately ends up renting the West 83rd Street apartment?",
+    "options": ["Carol the waitress", "George’s cousin", "Jerry’s parents", "Elaine’s roommate"],
+    "answer": "Carol the waitress",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Their waitress Carol snaps it up after overhearing them describe the apartment."
+  },
+  {
+    "id": "sf-s1e3-medium-0036",
+    "context": "At Carol’s housewarming, she proudly introduces her spouse.",
+    "question": "What is the name of Carol’s husband at the housewarming party?",
+    "options": ["Larry", "Frank", "Tom", "Bill"],
+    "answer": "Larry",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Carol tells them, “This is Larry,” and he gushes about how grateful they are for the place."
+  },
+  {
+    "id": "sf-s1e3-medium-0037",
+    "context": "Carol introduces her new next-door neighbor to Jerry, Elaine, and George.",
+    "question": "What is Diane’s occupation when Carol introduces her at the party?",
+    "options": ["She’s a masseuse", "She’s a dancer", "She’s a lawyer", "She’s a photographer"],
+    "answer": "She’s a masseuse",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Carol says Diane gave her a great backrub and explains Diane is a masseuse."
+  },
+  {
+    "id": "sf-s1e3-hard-0038",
+    "context": "Elaine laments her roommate’s career moves while sulking at Carol’s party.",
+    "question": "Which musical does Elaine say her roommate is starting rehearsal for by the end of the episode?",
+    "options": ["Carousel", "Oklahoma!", "Guys and Dolls", "South Pacific"],
+    "answer": "Carousel",
+    "difficulty": "hard",
+    "episode": 3,
+    "description": "She notes her roommate is now rehearsing “Carousel,” keeping the musical torture going."
+  },
+  {
+    "id": "sf-s1e3-medium-0039",
+    "context": "Two men at the party discuss a sudden transfer to Atlanta, and one mentions giving up his place.",
+    "question": "When the man says he has to give up his New York apartment for a job in Atlanta, what do Jerry, George, and Elaine all blurt out together?",
+    "options": [
+      "“What’s the rent?”",
+      "“Where is it?”",
+      "“Can we see it?”",
+      "“Is it near the park?”"
+    ],
+    "answer": "“What’s the rent?”",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "The three of them immediately pounce, asking “What’s the rent?” in unison as the episode ends."
+  },
+  {
+    "id": "sf-s1e4-easy-0001",
+    "context": "**EPISODE 4**: In the opening stand-up, Jerry talks about something new in this episode.",
+    "question": "What everyday topic is Jerry’s opening comedy bit about in this episode?",
+    "options": [
+      "Men working with tools and fixing things",
+      "People waiting in supermarket lines",
+      "Dating and breaking up",
+      "Flying on airplanes"
+    ],
+    "answer": "Men working with tools and fixing things",
+    "difficulty": "easy",
+    "episode": 4,
+    "description": "He describes how men are drawn like zombies to watch someone working with tools."
+  },
+  {
+    "id": "sf-s1e4-medium-0002",
+    "context": "Jerry compares certain noises to dog whistles for men during his stand-up.",
+    "question": "Which sound does Jerry say is like a “dog whistle” that draws men out to watch someone work?",
+    "options": [
+      "A power drill",
+      "A lawn mower",
+      "A hammer banging",
+      "A car alarm"
+    ],
+    "answer": "A power drill",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "He jokes that men hear a drill and rush to the window like dogs to a whistle."
+  },
+  {
+    "id": "sf-s1e4-medium-0003",
+    "context": "George recounts a disastrous moment during a play with a woman he likes .",
+    "question": "What embarrassing item falls out of George’s pocket while he’s at a play?",
+    "options": [
+      "A piece of green dental floss",
+      "A condom",
+      "A candy wrapper",
+      "Underwear"
+    ],
+    "answer": "A piece of green dental floss",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "He believes the sight of the mint green floss in his fingers ruins everything."
+  },
+  {
+    "id": "sf-s1e4-medium-0004",
+    "context": "George explains exactly where the floss incident happened.",
+    "question": "Where is George when the green floss incident occurs with the woman he likes?",
+    "options": [
+      "In the lobby during intermission",
+      "At their seats before the play starts",
+      "On the subway ride home",
+      "At dinner after the show"
+    ],
+    "answer": "In the lobby during intermission",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "He’s paying five dollars for an orange drink in the lobby when the floss appears."
+  },
+  {
+    "id": "sf-s1e4-easy-0005",
+    "context": "Jerry mocks George’s choice of accessory in the hallway.",
+    "question": "What accessory of George does Jerry mock ?",
+    "options": [
+      "His pouch/fanny pack",
+      "His oversized wallet",
+      "His shoulder bag",
+      "His suspenders"
+    ],
+    "answer": "His pouch/fanny pack",
+    "difficulty": "easy",
+    "episode": 4,
+    "description": "George is wearing a pouch that Jerry says looks like a belt digesting a small animal."
+  },
+  {
+    "id": "sf-s1e4-easy-0006",
+    "context": "Kramer hands Jerry the phone without warning when someone calls.",
+    "question": "Who is on the phone when Kramer suddenly hands it to Jerry, triggering all the trouble?",
+    "options": [
+      "Joel Horneck",
+      "James Garner",
+      "Elaine",
+      "Howie from high school"
+    ],
+    "answer": "Joel Horneck",
+    "difficulty": "easy",
+    "episode": 4,
+    "description": "Kramer hands Jerry the phone and it’s Joel, the clingy childhood friend."
+  },
+  {
+    "id": "sf-s1e4-medium-0007",
+    "context": "Jerry explains why he’s still stuck with Joel as an adult.",
+    "question": "Why does Jerry say he originally became friends with Joel Horneck as a kid?",
+    "options": [
+      "Joel had a Ping Pong table",
+      "Joel lived on the same floor",
+      "Joel shared his comic books",
+      "Joel helped him with homework"
+    ],
+    "answer": "Joel had a Ping Pong table",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Jerry jokes he’d have been friends with Stalin if he’d had a Ping Pong table."
+  },
+  {
+    "id": "sf-s1e4-medium-0008",
+    "context": "Joel brags about his psychiatrist while they eat.",
+    "question": "Which famous comedian does Joel boast that his shrink once treated?",
+    "options": [
+      "Lenny Bruce",
+      "Richard Pryor",
+      "George Carlin",
+      "Woody Allen"
+    ],
+    "answer": "Lenny Bruce",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Joel says his therapist used to see Lenny Bruce, and maybe even Geraldo."
+  },
+  {
+    "id": "sf-s1e4-medium-0009",
+    "context": "At the coffee shop, Joel interrogates the waitress about the menu.",
+    "question": "Which sandwich does Joel obsess over, asking if it’s made with real meat or processed roll?",
+    "options": [
+      "The turkey sandwich",
+      "The pastrami on rye",
+      "The roast beef sandwich",
+      "The tuna salad sandwich"
+    ],
+    "answer": "The turkey sandwich",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "He insists on knowing whether it’s real turkey or turkey roll."
+  },
+  {
+    "id": "sf-s1e4-medium-0010",
+    "context": "Jerry calmly orders while Joel badgers the waitress.",
+    "question": "What does Jerry order to eat when he’s out with Joel at the coffee shop?",
+    "options": [
+      "An egg salad sandwich on whole wheat",
+      "A tuna salad sandwich on white",
+      "A hamburger with fries",
+      "A bowl of chicken soup"
+    ],
+    "answer": "An egg salad sandwich on whole wheat",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "He simply asks for egg salad on whole wheat while Joel nitpicks the turkey."
+  },
+  {
+    "id": "sf-s1e4-medium-0011",
+    "context": "Jerry finally tries to “break up” with Joel like he would with a girlfriend.",
+    "question": "What core reason does Jerry give Joel when he says their friendship isn’t working?",
+    "options": [
+      "They don’t have anything in common",
+      "Joel never listens to him",
+      "Joel owes him money",
+      "He’s moving out of New York"
+    ],
+    "answer": "They don’t have anything in common",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Jerry tells Joel they’re just not suited to be friends and lack common ground."
+  },
+  {
+    "id": "sf-s1e4-easy-0012",
+    "context": "Joel reacts very emotionally to Jerry’s attempt to end the friendship.",
+    "question": "How does Joel react when Jerry says they shouldn’t see each other anymore?",
+    "options": [
+      "He starts crying",
+      "He storms out silently",
+      "He laughs it off",
+      "He punches the table"
+    ],
+    "answer": "He starts crying",
+    "difficulty": "easy",
+    "episode": 4,
+    "description": "Joel breaks down in tears, insisting Jerry is his best friend."
+  },
+  {
+    "id": "sf-s1e4-medium-0013",
+    "context": "To undo the damage, Jerry offers Joel something special.",
+    "question": "What does Jerry offer Joel to smooth things over and prove they’re still “friends”?",
+    "options": [
+      "A Knicks ticket behind the bench",
+      "Tickets to his comedy show",
+      "Dinner at Monk’s",
+      "A ride to the airport"
+    ],
+    "answer": "A Knicks ticket behind the bench",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "He offers great Knicks seats for next Wednesday to calm Joel down."
+  },
+{
+  "id": "sf-s1e4-medium-0031",
+  "context": "At the bank, George tells Jerry his girlfriend called saying, “We have to talk,” and Jerry calls it the four worst words in the English language.",
+  "question": "Which phrase does George say might be even worse than “We have to talk” as the four worst words in the English language?",
+  "options": [
+    "“Who’s bra is this?”",
+    "“Who’s underwear is this”",
+    "“It’s not your dault”",
+    "“Can we stay friends?”"
+  ],
+  "answer": "“Who’s bra is this?”",
+  "difficulty": "medium",
+  "episode": 4,
+  "description": "George jokes that “Who’s bra is this?” might top even “We have to talk” for worst four-word phrase."
+},
+  {
+    "id": "sf-s1e4-medium-0014",
+    "context": "Later at the bank, George vents about his own breakup over lunch.",
+    "question": "What food is George eating with his girlfriend when she breaks up with him?",
+    "options": [
+      "Egg salad",
+      "Chicken salad",
+      "Tuna salad",
+      "Grilled cheese"
+    ],
+    "answer": "Egg salad",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "He says the relationship ends but the egg salad from that place is too good not to finish."
+  },
+  {
+    "id": "sf-s1e4-medium-0015",
+    "context": "George describes his awkward breakup lunch.",
+    "question": "What does George complain about after his girlfriend ends things over lunch?",
+    "options": [
+      "He still had to pick up the check",
+      "She kept his umbrella",
+      "She insulted his job",
+      "She said it was all his fault"
+    ],
+    "answer": "He still had to pick up the check",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "He feels she should at least have paid since she ended the relationship."
+  },
+  {
+    "id": "sf-s1e4-medium-0016",
+    "context": "George shows up at the bank with a heavy container.",
+    "question": "What is George trying to convert into bills at the bank?",
+    "options": [
+      "A giant jug of pennies",
+      "A bag of quarters",
+      "A jar of nickels",
+      "A sock full of mixed coins"
+    ],
+    "answer": "A giant jug of pennies",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "He claims someone once took a vacation on change and wants to cash out his own jar."
+  },
+  {
+    "id": "sf-s1e4-medium-0018",
+    "context": "While in line at the bank, they overhear sports news.",
+    "question": "Which Knicks star’s minor injury briefly panics George before he finds out it’s only “a couple of days”?",
+    "options": [
+      "Patrick Ewing",
+      "John Starks",
+      "Charles Oakley",
+      "Mark Jackson"
+    ],
+    "answer": "Patrick Ewing",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Another customer mentions Ewing is hurt, and George immediately worries about the team."
+  },
+  {
+    "id": "sf-s1e4-medium-0019",
+    "context": "Kramer keeps pitching his new business idea.",
+    "question": "What kind of restaurant concept is Kramer obsessed with in this episode?",
+    "options": [
+      "A pizza place where customers make their own pie",
+      "A cereal-only diner",
+      "A build-your-own sandwich bar",
+      "A dessert place that only serves muffins"
+    ],
+    "answer": "A pizza place where customers make their own pie",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "He wants people to smash the dough, add sauce and cheese, then slide it into the oven themselves."
+  },
+  {
+    "id": "sf-s1e4-medium-0020",
+    "context": "George questions the practicality of Kramer’s pizza plan.",
+    "question": "What safety concern does George raise about Kramer letting customers cook their own pizza?",
+    "options": [
+      "People shoving their arms into a 600-degree oven",
+      "Health inspectors shutting them down",
+      "Kids playing with raw dough on the floor",
+      "Customers stealing toppings"
+    ],
+    "answer": "People shoving their arms into a 600-degree oven",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "He points out that amateurs reaching into a blazing hot oven is a terrible idea. Kramers says its all supervised"
+  },
+  {
+    "id": "sf-s1e4-medium-0021",
+    "context": "Jerry shows Elaine a pad of notes by the phone.",
+    "question": "What does Jerry keep on the pad next to his phone?",
+    "options": [
+      "A list of excuses for why he can’t hang out",
+      "A list of fake phone numbers",
+      "Jokes he wants to test",
+      "Ideas for new stand-up bits"
+    ],
+    "answer": "A list of excuses for why he can’t hang out",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "He has pre-written excuses so he can avoid Joel without thinking on the spot."
+  },
+  {
+    "id": "sf-s1e4-medium-0022",
+    "context": "Elaine reads the excuse pad out loud.",
+    "question": "Which of these is NOT one of the excuses already written on Jerry’s list for avoiding Joel?",
+    "options": [
+      "Walking the neighbor’s dog",
+      "Picking someone up at the airport",
+      "Jury duty",
+      "Waiting for the cable guy"
+    ],
+    "answer": "Walking the neighbor’s dog",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "The pad mentions the airport, jury duty, and waiting for the cable guy—but no dog-walking."
+  },
+  {
+    "id": "sf-s1e4-medium-0023",
+    "context": "Elaine decides to “help” Jerry by adding excuses.",
+    "question": "Which excuse does Elaine add?",
+    "options": [
+      "He ran out of underwear and can’t leave the house",
+      "His laundry shrank and nothing fits",
+      "His dryer exploded and ruined everything",
+      "He’s allergic to his detergent and has a rash"
+    ],
+    "answer": "He ran out of underwear and can’t leave the house",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "She suggests he claim he’s stuck at home because he has no clean underwear."
+  },
+  {
+    "id": "sf-s1e4-medium-0024",
+    "context": "Elaine pitches an even weirder excuse.",
+    "question": "Which bizarre excuse does Elaine suggest.?",
+    "options": [
+      "He’s been diagnosed as a multiple personality",
+      "He’s in witness protection under a new name",
+      "He’s pretending to be his own twin brother",
+      "He was hypnotized and thinks he’s someone else"
+    ],
+    "answer": "He’s been diagnosed as a multiple personality",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "She jokes that he can claim he’s not Jerry—he’s Dan."
+  },
+  {
+    "id": "sf-s1e4-medium-0027",
+    "context": "Jerry and Elaine scramble for excuses when Joel invites them to more games.",
+    "question": "What fake activity do Jerry and Elaine claim they have on Tuesday night to avoid going to a Knicks game with Joel?",
+    "options": [
+      "Choir practice",
+      "A pottery class that can’t be rescheduled",
+      "A charity fun run in the park",
+      "A book club meeting at Monk’s"
+    ],
+    "answer": "Choir practice",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Elaine says they’re in a choir doing an evening of Eastern European national anthems."
+  },
+  {
+    "id": "sf-s1e4-medium-0029",
+    "context": "In his final stand-up, Jerry talks about unavoidable friends.",
+    "question": "What mental trick does Jerry say he uses to survive conversations with people he has nothing in common with?",
+    "options": [
+      "He pretends he’s hosting a talk show and interviewing them",
+      "He imagines they’re a heckler at a club",
+      "He silently writes jokes about them in his head",
+      "He counts how many times they say certain words"
+    ],
+    "answer": "He pretends he’s hosting a talk show and interviewing them",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "He imagines a little desk and chair and treats them like a guest on his own show."
+  },
+  {
+    "id": "sf-s1e5-easy-0001",
+    "context": "**EPISODE 5**: Jerry opens the episode with stand-up bit.",
+    "question": "What is Jerry’s opening stand-up bit in this episode about?",
+    "options": [
+      "Restaurant checks before and after a meal",
+      "Tipping waiters and waitresses",
+      "Bank lines and service fees",
+      "Dry cleaners ruining clothes"
+    ],
+    "answer": "Restaurant checks before and after a meal",
+    "difficulty": "easy",
+    "episode": 5,
+    "description": "He jokes that money feels worthless when you’re hungry, but the check shocks you once you’re full and bloated."
+  },
+  {
+    "id": "sf-s1e5-easy-0002",
+    "context": "In the coffee shop, Jerry and George debate a superhero’s personality.",
+    "question": "Which superhero are Jerry and George arguing about having (or not having) a sense of humor?",
+    "options": [
+      "Superman",
+      "Batman",
+      "Spider-Man",
+      "The Flash"
+    ],
+    "answer": "Superman",
+    "difficulty": "easy",
+    "episode": 5,
+    "description": "George insists Superman isn’t funny even under Earth’s yellow sun."
+  },
+  {
+    "id": "sf-s1e5-easy-0003",
+    "context": "Elaine shows up late to the coffee shop and tries to explain why.",
+    "question": "Why does Elaine say she was late meeting Jerry and George at the coffee shop?",
+    "options": [
+      "She dropped a grape and couldn’t find it",
+      "Her subway train broke down",
+      "She lost her keys in her bag",
+      "She overslept from an allergy pill"
+    ],
+    "answer": "She dropped a grape and couldn’t find it",
+    "difficulty": "easy",
+    "episode": 5,
+    "description": "She says she was literally on her knees for ten minutes searching for the missing grape."
+  },
+  {
+    "id": "sf-s1e5-easy-0004",
+    "context": "Elaine explains why she’s having problems with the new guy she’s dating.",
+    "question": "What is the name of Elaine’s boyfriend and what pets does he have?",
+    "options": [
+      "Robert and his cats",
+      "Robert and his dogs",
+      "Alan and his rabbits",
+      "Alan and his parrots"
+    ],
+    "answer": "Robert and his cats",
+    "difficulty": "easy",
+    "episode": 5,
+    "description": "Elaine likes Robert but can’t handle being in his apartment because of his cats."
+  },
+  {
+    "id": "sf-s1e5-medium-0005",
+    "context": "Elaine suggests a romantic escape spot when Jerry considers a trip with Vanessa.",
+    "question": "Where does Elaine suggest Jerry take Vanessa for a romantic weekend getaway?",
+    "options": [
+      "A charming place in Vermont",
+      "A cabin in the Catskills",
+      "A beach house in the Hamptons",
+      "A bed-and-breakfast in Maine"
+    ],
+    "answer": "A charming place in Vermont",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "She sells it as a charming Vermont spot with separate hot and cold faucets."
+  },
+  {
+    "id": "sf-s1e5-medium-0007",
+    "context": "George warns Jerry about spending an entire long weekend with Vanessa.",
+    "question": "What does George call Jerry’s plan to spend seventy-two hours away with Vanessa?",
+    "options": [
+      "A dating decathlon",
+      "A relationship marathon",
+      "A weekend death march",
+      "A romantic boot camp"
+    ],
+    "answer": "A dating decathlon",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "George thinks three straight days together is an extreme test of any new relationship."
+  },
+  {
+    "id": "sf-s1e5-easy-0008",
+    "context": "George excitedly talks about a hot stock tip from a friend of a friend.",
+    "question": "What is the name of the company stock George convinces Jerry to invest in?",
+    "options": [
+      "Sendrax",
+      "Petramco",
+      "Petric Industries",
+      "Pendant Publishing"
+    ],
+    "answer": "Sendrax",
+    "difficulty": "easy",
+    "episode": 5,
+    "description": "George is sure Sendrax is going to skyrocket because of an inside tip."
+  },
+  {
+    "id": "sf-s1e5-medium-0009",
+    "context": "George explains what Sendrax supposedly does.",
+    "question": "According to George, what kind of business is Sendrax in?",
+    "options": [
+      "A new way of televising opera",
+      "Cable sports broadcasting",
+      "Home video recorders",
+      "Long-distance phone technology"
+    ],
+    "answer": "A new way of televising opera",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "He describes it as some electronic technique for putting opera on TV."
+  },
+  {
+    "id": "sf-s1e5-medium-0010",
+    "context": "George name-drops the supposed market genius behind his tip.",
+    "question": "Who is the supposed market wizard tied to George’s stock tip, the man watching Sendrax and meant to signal when to sell?",
+    "options": [
+      "Wilkinson",
+      "Simons",
+      "Peterman",
+      "Robert"
+    ],
+    "answer": "Wilkinson",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "George says Simons’ rich friend Wilkinson will tell them the exact right minute to sell."
+  },
+  {
+    "id": "sf-s1e5-easy-0011",
+    "context": "Jerry hesitates but finally agrees to invest alongside George.",
+    "question": "How much money does Jerry agree to invest in Sendrax?",
+    "options": [
+      "$2,500",
+      "$1,000",
+      "$5,000",
+      "$10,000"
+    ],
+    "answer": "$2,500",
+    "difficulty": "easy",
+    "episode": 5,
+    "description": "George pushes him until Jerry finally agrees to put in twenty-five hundred."
+  },
+  {
+    "id": "sf-s1e5-medium-0012",
+    "context": "When ordering lunch, Jerry’s first sandwich choice gets shot down by Elaine.",
+    "question": "Which sandwich does Jerry originally try to order before Elaine guilts him?",
+    "options": [
+      "Tuna sandwich",
+      "Turkey sandwich",
+      "BLT",
+      "Egg salad sandwich"
+    ],
+    "answer": "Tuna sandwich",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Elaine points out an intersting fact about his order prompting Jerry to change it."
+  },
+  {
+    "id": "sf-s1e5-medium-0013",
+    "context": "Elaine objects to Jerry’s initial lunch order for environmental reasons.",
+    "question": "Why does Elaine pressure Jerry not to order tuna?",
+    "options": [
+      "Dolphins are dying in the nets",
+      "The tuna is full of mercury",
+      "The tuna at that diner is terrible",
+      "She’s allergic to fish"
+    ],
+    "answer": "Dolphins are dying in the nets",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "She says the dolphins are dying in the nets and asks him to make one unselfish choice."
+  },
+  {
+    "id": "sf-s1e5-easy-0014",
+    "context": "After Elaine’s dolphin guilt trip, Jerry changes his lunch order.",
+    "question": "What does Jerry end up ordering instead of tuna?",
+    "options": [
+      "Chicken salad",
+      "Egg salad",
+      "Turkey club",
+      "Grilled cheese"
+    ],
+    "answer": "Chicken salad",
+    "difficulty": "easy",
+    "episode": 5,
+    "description": "He caves and switches to a chicken salad sandwich."
+  },
+  {
+    "id": "sf-s1e5-easy-0015",
+    "context": "Elaine and Jerry glare at George when he places his own order.",
+    "question": "What does George order after Jerry switches away from tuna?",
+    "options": [
+      "Tuna",
+      "Pastrami on rye",
+      "Turkey on toast",
+      "Chef salad"
+    ],
+    "answer": "Tuna",
+    "difficulty": "easy",
+    "episode": 5,
+    "description": "He casually orders the tuna anyway, ignoring Elaine’s dolphin concern."
+  },
+  {
+    "id": "sf-s1e5-medium-0017",
+    "context": "Jerry explains how he tried to deal with noisy people in the movie theater.",
+    "question": "What two escalating ‘moves’ does Jerry say he used on the talkers in the movie theater?",
+    "options": [
+      "First the half-turn, then the full-turn with the eye-roll",
+      "First a throat-clear, then a loud ‘shhh’",
+      "First a tap on the seat, then a direct confrontation",
+      "First changing seats, then calling the usher"
+    ],
+    "answer": "First the half-turn, then the full-turn with the eye-roll",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "He claims anything beyond that risks getting punched in the mouth."
+  },
+  {
+    "id": "sf-s1e5-medium-0019",
+    "context": "Kramer reads the latest market news to Jerry in his apartment.",
+    "question": "After three days, how far has Sendrax dropped, leaving Jerry down almost half his money?",
+    "options": [
+      "4.5 points",
+      "2 points",
+      "5 points",
+      "1.5 points"
+    ],
+    "answer": "4.5 points",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Kramer says it’s down another two and a half that day, four and a half over three days."
+  },
+  {
+    "id": "sf-s1e5-medium-0020",
+    "context": "Kramer brags about an invention he thinks Jerry should have invested in instead of Sendrax.",
+    "question": "What alternative invention does Kramer pitch, claiming Jerry should’ve backed it instead of Sendrax?",
+    "options": [
+      "A roll-out tie dispenser",
+      "A make-your-own-pizza restaurant",
+      "A self-heating coffee mug",
+      "A retractable belt buckle"
+    ],
+    "answer": "A roll-out tie dispenser",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "In his idea you rip off a stained tie and roll out a fresh one underneath."
+  },
+  {
+    "id": "sf-s1e5-medium-0021",
+    "context": "Kramer asks to use Jerry’s place when Jerry plans to be out of town.",
+    "question": "What kind of people does Kramer say want to use Jerry’s bed while he’s away in Vermont?",
+    "options": [
+      "Anarchists he met at a rock concert",
+      "Tourists from Germany",
+      "His cousins from Queens",
+      "A band staying in town"
+    ],
+    "answer": "Anarchists he met at a rock concert",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "He insists they’re ‘really good people’ and ‘huge’ anarchists."
+  },
+  {
+    "id": "sf-s1e5-medium-0023",
+    "context": "Jerry argues with the dry cleaner over a ruined shirt.",
+    "question": "What is Jerry’s complaint about the shirt he brings back to the dry cleaner?",
+    "options": [
+      "It shrank so badly he can’t wear it",
+      "They used too much starch and it’s stiff",
+      "It came back a different color",
+      "They lost one of the sleeves"
+    ],
+    "answer": "It shrank so badly he can’t wear it",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "He waves the tiny shirt and calls it a hand puppet."
+  },
+  {
+    "id": "sf-s1e5-medium-0025",
+    "context": "At the Vermont inn, Jerry is desperate to make conversation with Vanessa.",
+    "question": "Which small-talk question does Jerry use on Vanessa in Vermont when things get painfully awkward?",
+    "options": [
+      "He asks if she has to wind her watch",
+      "He asks about her favorite movie",
+      "He asks what perfume she’s wearing",
+      "He asks where she went to college"
+    ],
+    "answer": "He asks if she has to wind her watch",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "He reaches for anything and ends up asking whether her watch needs winding."
+  },
+  {
+    "id": "sf-s1e5-medium-0027",
+    "context": "Vanessa imagines what they might do outdoors on the trip.",
+    "question": "What activity does Vanessa specifically say she wants to do on the Vermont trip?",
+    "options": [
+      "Go fishing",
+      "Go skiing",
+      "Go hiking",
+      "Go horseback riding"
+    ],
+    "answer": "Go fishing",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "She asks if they can go fishing up there, even joking about marlin."
+  },
+  {
+    "id": "sf-s1e5-medium-0028",
+    "context": "Jerry finally checks the business section again while stuck at the inn.",
+    "question": "When Jerry looks at the business section in Vermont, how many points is Sendrax up from when he sold?",
+    "options": [
+      "6 points",
+      "2 points",
+      "10 points",
+      "1 point"
+    ],
+    "answer": "6 points",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "He’s furious to see the stock is now up six points after he bailed."
+  },
+  {
+    "id": "sf-s1e5-medium-0029",
+    "context": "Vanessa hints that Jerry’s financial loss affected their accommodations.",
+    "question": "According to Vanessa, why does she think they’re stuck in that dreary Vermont inn?",
+    "options": [
+      "Because Jerry lost money on the stock",
+      "Because Jerry booked too late",
+      "Because of a snowstorm blocking the roads",
+      "Because her car broke down nearby"
+    ],
+    "answer": "Because Jerry lost money on the stock",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "She suggests his Sendrax loss is why they’re staying where they are."
+  },
+  {
+    "id": "sf-s1e5-medium-0030",
+    "context": "Back at the coffee shop, George is celebrating his big win.",
+    "question": "Roughly how much does George say he cleared in profit from the Sendrax stock?",
+    "options": [
+      "$8,000",
+      "$2,000",
+      "$4,500",
+      "$10,000"
+    ],
+    "answer": "$8,000",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "He brags it’s enough for ‘a Hyundai’ and says Simons and Wilkinson cleaned up too."
+  },
+  {
+    "id": "sf-s1e5-medium-0031",
+    "context": "Elaine explains how things ended with Robert and his pets.",
+    "question": "What happens when Elaine gives Robert an ultimatum over her allergies and his pets?",
+    "options": [
+      "He chooses the cats over Elaine",
+      "He gives the cats away to keep her",
+      "He moves to a new apartment without pets",
+      "He secretly starts allergy shots"
+    ],
+    "answer": "He chooses the cats over Elaine",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Elaine says he picked the cats, calling them very clean animals."
+  },
+  {
+    "id": "sf-s1e5-medium-0032",
+    "context": "George closes the episode by teasing another tip from Wilkinson.",
+    "question": "At the end of the episode, which new company does George say Wilkinson has a bite on, supposedly about to introduce a ‘robot butcher’?",
+    "options": [
+      "Petramco Corporation",
+      "Sendrax International",
+      "Pendant Technologies",
+      "Vandelay Imports"
+    ],
+    "answer": "Petramco Corporation",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "George pitches Petramco from Springfield as the next sure thing thanks to a robot butcher."
+  },
+  {
+    "id": "sf-s1e6b-easy-0001",
+    "context": "EPISODE 6**: Jerry opens the episode with stand-up bit.",
+    "question": "What is Jerry’s opening stand-up bit in this episode about?",
+    "options": [
+      "Being stuck in traffic and constant lane-changing",
+      "Airline food and tiny snack portions",
+      "Dry cleaners ruining clothes",
+      "Restaurant checks before and after a meal"
+    ],
+    "answer": "Being stuck in traffic and constant lane-changing",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "He mocks people who keep switching lanes and jokes that future traffic could be so bad it moves backwards."
+  },
+  {
+    "id": "sf-s1e6b-easy-0031",
+    "context": "In Jerry’s car, George panics about ending things with his current girlfriend",
+    "question": "What is the name of the woman George is dreading breaking up with in this episode?",
+    "options": [
+      "Marlene",
+      "Nancy",
+      "Susan",
+      "Amy"
+    ],
+    "answer": "Marlene",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "George spends the episode obsessing over ending his relationship with Marlene."
+  },
+  {
+    "id": "sf-s1e6b-easy-0002",
+    "context": "In Jerry’s car, George panics about ending things with his girlfriend Marlene.",
+    "question": "At the start of the car ride, what is George nervously asking Jerry about breaking up with Marlene?",
+    "options": [
+      "“She can’t kill me, right?”",
+      "“She can’t attack me, right?”",
+      "“She won’t stalk me, right?”",
+      "“She won’t tell my parents, right?”"
+    ],
+    "answer": "“She can’t kill me, right?”",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "He repeatedly reassures himself that people break up all the time and she can’t kill him."
+  },
+  {
+    "id": "sf-s1e6b-medium-0003",
+    "context": "George explains how he ended up saying ‘I love you’ to Marlene.",
+    "question": "Why does George say he finally told Marlene that he loved her?",
+    "options": [
+      "She squeezed it out of him",
+      "He blurted it out by accident on the phone",
+      "He said it to stop an argument",
+      "He said it after she introduced him to her parents"
+    ],
+    "answer": "She squeezed it out of him",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "He says she’d say she loved him and he could only dodge with awkward responses for so long before finally giving in."
+  },
+  {
+    "id": "sf-s1e6b-easy-0005",
+    "context": "Elaine arrives at Jerry’s car and objects to the seating arrangement.",
+    "question": "Why does Elaine insist she won’t sit in the back seat of Jerry’s car?",
+    "options": [
+      "She says she’ll be left out of the conversation",
+      "She gets carsick in the back",
+      "She can’t wear a seatbelt in the back",
+      "She needs more legroom"
+    ],
+    "answer": "She says she’ll be left out of the conversation",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "She jokes that she’d have to stick her chin on top of the seat just to be involved."
+  },
+  {
+    "id": "sf-s1e6b-medium-0006",
+    "context": "Elaine tells the story of a neighbor whose greetings gradually disappeared.",
+    "question": "In Elaine’s story about the man in her building, what is the final stage their ‘relationship’ reaches before it turns into open animosity?",
+    "options": [
+      "Polite nodding that then suddenly stops",
+      "Friendly chats in the lobby every day",
+      "Verbal hellos that get shorter and shorter",
+      "Long conversations that taper off to silence"
+    ],
+    "answer": "Polite nodding that then suddenly stops",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "They go from chatting, to verbal hellos, to nods, and then he stops acknowledging her at all."
+  },
+  {
+    "id": "sf-s1e6b-medium-0007",
+    "context": "Jerry philosophizes about Elaine’s ‘nods to nothing’ conflict.",
+    "question": "How does Jerry describe Elaine’s fading hallway relationship with the man in her building?",
+    "options": [
+      "He says a relationship is an organism",
+      "He says it’s like a sitcom that gets cancelled mid-season",
+      "He calls it a ‘social recession’",
+      "He likens it to an expired warranty"
+    ],
+    "answer": "He says a relationship is an organism",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Jerry compares it to The Blob turning on people after being ‘starved.’"
+  },
+  {
+    "id": "sf-s1e6b-medium-0008",
+    "context": "George offers Elaine blunt advice about her nodding neighbor.",
+    "question": "What does George say Elaine ‘absolutely’ has to do about the man who stopped saying hello?",
+    "options": [
+      "Confront him directly",
+      "Ignore him completely",
+      "Leave an anonymous note",
+      "Complain to the building manager"
+    ],
+    "answer": "Confront him directly",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "He insists she must confront him—though he admits he’d only do that if he were a different person."
+  },
+  {
+    "id": "sf-s1e6b-easy-0032",
+    "context": "Kramer raves about an amazing bargain fruit he bought.",
+    "question": "What fruit does Kramer proudly talk about buying cheap?",
+    "options": [
+      "Cantaloupe",
+      "Watermelon",
+      "Honeydew",
+      "Pineapple"
+    ],
+    "answer": "Cantaloupe",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "Kramer says it’s the best cantaloupe he’s ever had."
+  },
+  {
+    "id": "sf-s1e6b-medium-0009",
+    "context": "Kramer bursts into Jerry’s apartment with fruit news.",
+    "question": "Where does Kramer say he bought the amazing cantaloupe, and what bargain price does he boast about?",
+    "options": [
+      "Joe’s, for forty-nine cents a pound",
+      "Sam’s, for ninety-nine cents a pound",
+      "Ray’s, buy one get one free",
+      "Al’s, half off on Tuesdays"
+    ],
+    "answer": "Joe’s, for forty-nine cents a pound",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "He brags it’s practically half what Jerry pays at the supermarket, from Joe’s produce place."
+  },
+  {
+    "id": "sf-s1e6b-medium-0010",
+    "context": "Jerry and Kramer argue about grocery habits.",
+    "question": "What is Jerry’s stance on bad fruit like cantaloupe?",
+    "options": [
+      "Fruit is a gamble, and he never returns it",
+      "He always takes fruit back if it’s bad",
+      "He only returns fruit if it’s rotten on the outside",
+      "He makes the store credit him instead of refunding"
+    ],
+    "answer": "Fruit is a gamble, and he never returns it",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Jerry says he knows fruit is a gamble going in and refuses to return it."
+  },
+  {
+    "id": "sf-s1e6b-medium-0011",
+    "context": "George triumphantly recounts his breakup with Marlene.",
+    "question": "According to George, what key word does he start with when he finally breaks up with Marlene in her kitchen?",
+    "options": [
+      "“Listen, Marlene…”",
+      "“We need to talk…”",
+      "“I’m sorry, but…”",
+      "“This isn’t working…”"
+    ],
+    "answer": "“Listen, Marlene…”",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "He says he opened with ‘Listen Marlene’ and then suddenly found himself in the middle of the breakup speech."
+  },
+  {
+    "id": "sf-s1e6b-medium-0012",
+    "context": "George compares ending the relationship to a metaphor.",
+    "question": "What extended metaphor does George use to describe getting through the breakup with Marlene?",
+    "options": [
+      "Making a prison break under guard-tower fire",
+      "Escaping quicksand one branch at a time",
+      "Defusing a ticking time bomb",
+      "Crossing a minefield blindfolded"
+    ],
+    "answer": "Making a prison break under guard-tower fire",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "He talks about running for the wall, dodging ‘shots’ of crying and cursing, and leaping out the ‘front door’ like a prison wall."
+  },
+  {
+    "id": "sf-s1e6b-easy-0013",
+    "context": "Right after George celebrates being free, he remembers a complication.",
+    "question": "What ‘one small problem’ does George realize after he breaks up with Marlene?",
+    "options": [
+      "He left some books in her apartment",
+      "She still has his house keys",
+      "He left some clothes at her apartment",
+      "He’s still on a shared phone plan"
+    ],
+    "answer": "He left some books in her apartment",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "He worries that going back to retrieve them will pull him right back in."
+  },
+  {
+    "id": "sf-s1e6b-medium-0014",
+    "context": "Jerry questions George’s attachment to the books.",
+    "question": "What point does Jerry make about George’s obsession with retrieving his books from Marlene?",
+    "options": [
+      "He says people treat books like trophies once they’ve read them",
+      "He says books are easily replaceable at the library",
+      "He says George never actually reads them twice",
+      "He says Marlene probably threw them away already"
+    ],
+    "answer": "He says people treat books like trophies once they’ve read them",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Jerry asks why he needs them back if he’s already read them and mocks people who display books like trophies."
+  },
+  {
+    "id": "sf-s1e6b-medium-0015",
+    "context": "Jerry meets Marlene in the coffee shop to pick up George’s books.",
+    "question": "What does Marlene propose to Jerry after she and George have broken up but she’s returning the books?",
+    "options": [
+      "That she and Jerry stay friends",
+      "That Jerry help her get back with George",
+      "That Jerry do a show at her work party",
+      "That they never see each other again"
+    ],
+    "answer": "That she and Jerry stay friends",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "She says there’s no reason they shouldn’t remain friends just because she and George ended things."
+  },
+  {
+    "id": "sf-s1e6b-medium-0017",
+    "context": "Jerry does stand-up about medical offices.",
+    "question": "Jerry’s mid-episode stand-up compares doctor visits to what frustrating experience?",
+    "options": [
+      "Being shuffled from one waiting room to a smaller waiting room",
+      "Being stuck in an endless bank line",
+      "Going through airport security checkpoints",
+      "Trying on clothes in cramped fitting rooms"
+    ],
+    "answer": "Being shuffled from one waiting room to a smaller waiting room",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "He jokes that you think you’re seeing the doctor but you’re really just going to the next, smaller waiting room."
+  },
+  {
+    "id": "sf-s1e6b-medium-0018",
+    "context": "George complains about his first chiropractor visit.",
+    "question": "How long does George say the chiropractor actually saw him, and how much was he charged?",
+    "options": [
+      "Two minutes for seventy-five dollars",
+      "Five minutes for one hundred dollars",
+      "Ten minutes for fifty dollars",
+      "Fifteen minutes for sixty dollars"
+    ],
+    "answer": "Two minutes for seventy-five dollars",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "He mocks the visit as ‘touch this, feel that, seventy-five bucks’ and vows to pay only half."
+  },
+  {
+    "id": "sf-s1e6b-medium-0020",
+    "context": "Marlene leaves a sultry message on Jerry’s answering machine.",
+    "question": "In her answering machine message, what odd question does Marlene ask Jerry while hinting at seduction?",
+    "options": [
+      "If he’s ever taken a bath in the dark",
+      "If he wants to run away to Mexico",
+      "If he prefers champagne or wine",
+      "If he likes being woken up by phone calls"
+    ],
+    "answer": "If he’s ever taken a bath in the dark",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "She wonders if she’s talking into the soap and invites him to call back."
+  },
+  {
+    "id": "sf-s1e6b-medium-0021",
+    "context": "Jerry confesses to Kramer how strongly Marlene affects him.",
+    "question": "How does Jerry describe the effect Marlene has on him, even though he knows he shouldn’t keep seeing her?",
+    "options": [
+      "He says she has a ‘psycho-sexual hold’ on him, like a drug",
+      "He says she’s like a ‘bad investment’ he can’t sell",
+      "He calls her an ‘emotional black hole’",
+      "He says she’s like ‘junk food’ he can’t stop eating"
+    ],
+    "answer": "He says she has a ‘psycho-sexual hold’ on him, like a drug",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "He admits he can’t breathe and can’t stop wanting her, even as he feels guilty."
+  },
+  {
+    "id": "sf-s1e6b-medium-0022",
+    "context": "Elaine finally acts on George’s earlier advice and confronts her hallway nemesis.",
+    "question": "What cutting phrase does Elaine use when she confronts the man who stopped saying hello to her?",
+    "options": [
+      "She calls him a “little phony”",
+      "She calls him a “spineless weasel”",
+      "She calls him a “rude idiot”",
+      "She calls him a “two-faced neighbor”"
+    ],
+    "answer": "She calls him a “little phony”",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "She taps him on the shoulder and tells him he knows exactly who she is, calling him a ‘little phony.’"
+  },
+  {
+    "id": "sf-s1e6b-medium-0024",
+    "context": "Jerry calls George to confess he’s been seeing Marlene.",
+    "question": "How does George surprisingly react when Jerry admits he’s involved with Marlene?",
+    "options": [
+      "He says he doesn’t care and is almost happy to hear it",
+      "He explodes in anger and storms out",
+      "He demands Jerry stop seeing her immediately",
+      "He insists Jerry pay him for ‘stealing’ his ex"
+    ],
+    "answer": "He says he doesn’t care and is almost happy to hear it",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "George calls Jerry a fine person, says he’s happy, and that Marlene is too crazy for him."
+  },
+  {
+    "id": "sf-s1e6b-medium-0025",
+    "context": "Jerry tries to soften the situation.",
+    "question": "What does Jerry forgive to show goodwill after confessing about Marlene?",
+    "options": [
+      "He says George doesn’t have to pay back for the chiropractor",
+      "He cancels George’s share of the Knicks tickets",
+      "He offers to cover George’s rent for a month",
+      "He forgives George for not paying for dinner"
+    ],
+    "answer": "He says George doesn’t have to pay back for the chiropractor",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "George then rants that Jerry paid that ‘crook,’ insisting the chiropractor did nothing."
+  },
+  {
+    "id": "sf-s1e6b-medium-0026",
+    "context": "At the end, Marlene turns the tables and dumps Jerry.",
+    "question": "What specific event does Marlene say changed her feelings and made her decide she couldn’t be with Jerry?",
+    "options": [
+      "Seeing his stand-up act",
+      "Finding out he told George about them",
+      "Hearing him complain about her on the phone",
+      "Catching him lie about seeing other women"
+    ],
+    "answer": "Seeing his stand-up act",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "She says she saw his act on Tuesday night and thought it was just ‘so much fluff.’"
+  },
+  {
+    "id": "sf-s1e6b-medium-0027",
+    "context": "Marlene explains her breakup logic in Jerry’s car.",
+    "question": "What reason does Marlene give for not being able to stay with Jerry after seeing his act?",
+    "options": [
+      "She can’t be with someone if she doesn’t respect what they do",
+      "She doesn’t want to date comedians at all",
+      "She wants to get back together with George",
+      "She wants to focus on her career"
+    ],
+    "answer": "She can’t be with someone if she doesn’t respect what they do",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "She says his comedy isn’t her kind of humor and she needs to respect her partner’s work."
+  },
+  {
+    "id": "sf-s1e6b-easy-0028",
+    "context": "Jerry lashes out when Marlene criticizes his job.",
+    "question": "What does Jerry snap back at Marlene when she says she can’t respect what he does for a living?",
+    "options": [
+      "“You’re a cashier!”",
+      "“You sell shoes!”",
+      "“You’re a temp!”",
+      "“You’re a waitress!”"
+    ],
+    "answer": "“You’re a cashier!”",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "He points out her own job is hardly glamorous after she trashes his act."
+  },
+  {
+    "id": "sf-s1e6b-medium-0030",
+    "context": "In the closing stand-up, Jerry riffs on how men and women treat job titles differently.",
+    "question": "In Jerry’s closing bit, how does he say men often talk about their jobs to impress women?",
+    "options": [
+      "They invent phony, impressive-sounding titles",
+      "They pretend to work on Wall Street",
+      "They claim to be artists or musicians",
+      "They exaggerate their salaries by double"
+    ],
+    "answer": "They invent phony, impressive-sounding titles",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "He jokes about guys calling themselves things like ‘regional management supervisor’ or ‘in development, research, consulting’ to make their jobs sound bigger."
+  },
+  {
+    "id": "sf-s1e7-easy-0001",
+    "context": "**EPISODE 7**: Jerry opens the episode with stand-up bit.",
+    "question": "What is Jerry’s opening stand-up comedy bit in this episode about?",
+    "options": [
+      "Parents being forced to move to Florida and boring family gatherings",
+      "Getting stuck in traffic and choosing the right lane",
+      "The mystery of dry cleaning and ruined clothes",
+      "Going to the bank and waiting in long lines"
+    ],
+    "answer": "Parents being forced to move to Florida and boring family gatherings",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "Jerry jokes that people in their sixties are legally required to move to Florida and fantasizes about jumping out a window during dull family conversations."
+  },
+  {
+    "id": "sf-s1e7-easy-0002",
+    "context": "After Jerry returns from his softball game in full gear, he tells his parents how he played.",
+    "question": "What does Jerry proudly describe as the single greatest moment of his life at the start of the episode?",
+    "options": [
+      "Throwing a runner out at home from left field on a fly",
+      "Hitting a game-winning home run",
+      "Catching a diving line drive in center field",
+      "Turning an unassisted double play at second base"
+    ],
+    "answer": "Throwing a runner out at home from left field on a fly",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "Jerry brags that his tag-up throw from left field to home on the fly will send his team to the championship game."
+  },
+  {
+    "id": "sf-s1e7-medium-0032",
+    "context": "Jerry brags that throwing a runner out from left field was the greatest moment of his life, then immediately walks it back.",
+    "question": "Which girl from Jerry’s past does he name as the real ‘greatest moment’ of his life, instead of the softball play?",
+    "options": [
+      "Sharon Besser",
+      "Kelly Harmon",
+      "Paula Ricks",
+      "Nina Feldman"
+    ],
+    "answer": "Sharon Besser",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "After calling the game his greatest moment, Jerry quickly corrects himself and says, “Well, no. Sharon Besser, of course.”"
+  },
+  {
+    "id": "sf-s1e7-medium-0015",
+    "context": "Morty recalls his own ‘greatest moment’ when Jerry brags about his softball play.",
+    "question": "For which company does Morty say he worked?",
+    "options": [
+      "Harry Flemming",
+      "Ralph Lauren",
+      "Drexler & Sons",
+      "West End Clothiers"
+    ],
+    "answer": "Harry Flemming",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Morty proudly brags about working for Harry Flemming and his proudest achievement while working there."
+  },
+  {
+    "id": "sf-s1e7-medium-0003",
+    "context": "Morty reminisces about his working life and his proudest achievement.",
+    "question": "What work achievement does Morty call the greatest moment of his life?",
+    "options": [
+      "Coming up with the idea for the beltless trenchcoat in 1946",
+      "Becoming regional manager for Harry Flemming in 1946",
+      "Selling a record number of raincoats in a single year in 1956",
+      "Opening his own clothing store in Florida in 1956"
+    ],
+    "answer": "Coming up with the idea for the beltless trenchcoat in 1946",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Morty proudly says that working for Harry Flemming and inventing the beltless trenchcoat in 1946 was his greatest moment."
+  },
+  {
+    "id": "sf-s1e7-easy-0004",
+    "context": "Kramer bursts in to tell Jerry and Morty about his big new apartment idea.",
+    "question": "What radical change does Kramer plan to make to his apartment?",
+    "options": [
+      "Get rid of all furniture and build carpeted levels with pillows",
+      "Convert the whole place into a mini putting green",
+      "Paint every wall black and install neon lights",
+      "Turn his bedroom into a soundproof recording studio"
+    ],
+    "answer": "Get rid of all furniture and build carpeted levels with pillows",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "Kramer describes his ‘levels’ concept: no furniture, just different carpeted tiers and lots of pillows, “like ancient Egypt.”"
+  },
+  {
+    "id": "sf-s1e7-easy-0031",
+    "context": "Jerry’s parents are visiting New York and keep urging him to attend a big family milestone party.",
+    "question": "Whose anniversary celebration are Jerry and his parents supposed to attend?",
+    "options": [
+      "Manya and Isaac’s",
+      "Ruth and Bernard’s",
+      "Lila and Howard’s",
+      "Agnes and Victor’s"
+    ],
+    "answer": "Manya and Isaac’s",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "Helen keeps reminding Jerry that they were invited to Manya and Isaac’s 50th anniversary party."
+  },
+  {
+    "id": "sf-s1e7-easy-0013",
+    "context": "At Manya and Isaac’s table, Elaine is stuck in an awkward seat while everyone else sits at the main table.",
+    "question": "Where is Elaine seated during Manya and Isaac’s anniversary dinner?",
+    "options": [
+      "At the lower kiddie table next to the main table",
+      "At the head of the main table",
+      "Alone on the couch in the living room",
+      "On a stool by the kitchen door"
+    ],
+    "answer": "At the lower kiddie table next to the main table",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "Elaine spends the dinner down at the kiddie-height side table while everyone else sits at the regular dining table."
+  },
+  {
+    "id": "sf-s1e7-easy-0014",
+    "context": "At the dinner, Jerry’s parents argue about Morty’s outfit.",
+    "question": "What piece of clothing does Helen relentlessly criticize Morty for wearing to the anniversary party?",
+    "options": [
+      "His sport jacket",
+      "His sandals with socks",
+      "His short-sleeved dress shirt",
+      "His white pants"
+    ],
+    "answer": "His sport jacket",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "Helen thinks Morty’s sport jacket looks ridiculous and keeps saying he has so many nicer jackets he could have worn."
+  },
+  {
+    "id": "sf-s1e7-easy-0006",
+    "context": "At Manya and Isaac’s anniversary dinner, Jerry and Elaine start joking about possessions.",
+    "question": "What does Jerry say he hated, right before discovering Manya had one?",
+    "options": [
+      "Anyone who ever had a pony when they were growing up",
+      "Kids who owned their own go-karts",
+      "Anyone who collected Hummel figurines",
+      "Anyone who bragged about their summer house"
+    ],
+    "answer": "Anyone who ever had a pony when they were growing up",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "Joking with Elaine, Jerry says he hated kids who had their own ponies, only to find out Manya grew up with one in Poland."
+  },
+  {
+    "id": "sf-s1e7-medium-0007",
+    "context": "After Manya explodes at Jerry over his pony remark and leaves the table, he tries to defend himself.",
+    "question": "How does Jerry justify his ignorance about Manya’s childhood pony?",
+    "options": [
+      "He says he never saw immigrants on boats sitting on ponies in old photos",
+      "He insists ponies were illegal to own in Poland back then",
+      "He claims Elaine started the conversation about ponies, not him",
+      "He says he assumed she grew up in a city apartment without animals"
+    ],
+    "answer": "He says he never saw immigrants on boats sitting on ponies in old photos",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Jerry rants that immigrant photos always show people standing on crowded ships, never riding ponies, so he never imagined an immigrant could have had one."
+  },
+  {
+    "id": "sf-s1e7-medium-0017",
+    "context": "At the dinner, Manya serves food and Elaine tries to change the subject.",
+    "question": "Which food do Jerry and Elaine loudly praise at Manya’s anniversary dinner?",
+    "options": [
+      "The peas",
+      "The potato salad",
+      "The kugel",
+      "The chicken"
+    ],
+    "answer": "The peas",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Elaine and Jerry keep raving that the peas are phenomenal and ‘bursting with country fresh flavor’ to deflect attention."
+  },
+  {
+    "id": "sf-s1e7-medium-0018",
+    "context": "Jerry tries to duck out of dessert at Manya’s party.",
+    "question": "What excuse does Jerry give for not wanting dessert at the anniversary dinner?",
+    "options": [
+      "He says sugar makes his ankles swell up",
+      "He claims he’s on antibiotics",
+      "He says he is hypoglycemic",
+      "He insists he’s training for a marathon"
+    ],
+    "answer": "He says sugar makes his ankles swell up",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Jerry jokes that dessert sugar causes his ankles to swell so he’s unable to dance, which confuses Manya."
+  },
+  {
+    "id": "sf-s1e7-medium-0016",
+    "context": "Uncle Leo corners Jerry at the dinner to talk about his son.",
+    "question": "What department does Uncle Leo’s son Jeffrey work in, according to Leo’s constant bragging?",
+    "options": [
+      "The Parks Department",
+      "The Sanitation Department",
+      "The Transit Authority",
+      "The Zoning Commission"
+    ],
+    "answer": "The Parks Department",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Leo gushes that Jeffrey works for the Parks Department, gives walking tours, and is being considered for a citation."
+  },
+  {
+    "id": "sf-s1e7-easy-0033",
+    "context": "Morty and Helen are packed and ready to head back to Florida when Jerry suddenly gets a phone call and rushes to the window to shout down to them on the street.",
+    "question": "What do Jerry’s parents find out just as they’re about to leave New York and return to Florida?",
+    "options": [
+      "They learn that Manya has died.",
+      "They learn their flight has been cancelled.",
+      "They learn that Uncle Leo had been hospitalized.",
+      "They learn tha Isaac has died."
+    ],
+    "answer": "They learn that Manya has died.",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "Jerry answers Uncle Leo’s call, then leans out the window and yells down to his parents not to get in the cab because Manya has died."
+  },
+  {
+    "id": "sf-s1e7-medium-0022",
+    "context": "Right after Jerry learns Manya has died, Morty focuses on something very practical.",
+    "question": "What travel-related problem does Morty immediately complain about after hearing Manya died?",
+    "options": [
+      "They lost their Supersaver tickets, which are non-refundable",
+      "They can’t use their frequent flier miles for the new flight",
+      "Their rental car can’t be extended",
+      "Their hotel won’t refund their remaining nights"
+    ],
+    "answer": "They lost their Supersaver tickets, which are non-refundable",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Morty grouses that the trip back to Florida will cost a fortune because their Supersaver airline tickets can’t be refunded."
+  },
+  {
+    "id": "sf-s1e7-medium-0023",
+    "context": "Jerry tries to figure out if he somehow caused Manya’s death.",
+    "question": "What specific worry does Jerry voice about his role in Manya’s passing?",
+    "options": [
+      "He wonders if his pony remark might have killed her",
+      "He thinks his loud TV volume gave her a heart attack",
+      "He fears she was upset he didn’t bring a gift",
+      "He worries she caught a cold from him at the dinner"
+    ],
+    "answer": "He wonders if his pony remark might have killed her",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Jerry anxiously asks his parents if they think his anti-pony comments could have been what killed Manya."
+  },
+  {
+    "id": "sf-s1e7-medium-0008",
+    "context": "After hearing Manya has died, Jerry wrestles with whether to attend her funeral .",
+    "question": "What scheduling conflict does Jerry face once he learns Manya’s funeral is on Wednesday?",
+    "options": [
+      "The funeral is at 2:00 PM and his softball championship game starts at 2:45 PM",
+      "The funeral is at noon and his stand-up set is at 1:00 PM",
+      "The funeral is at 3:00 PM and he has a meeting with his agent at 3:30 PM",
+      "The funeral is in Florida and his show is that same evening in New York"
+    ],
+    "answer": "The funeral is at 2:00 PM and his softball championship game starts at 2:45 PM",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Jerry complains that Manya’s 2:00 PM funeral is badly timed because his red-hot softball team plays the championship at 2:45 PM."
+  },
+  {
+    "id": "sf-s1e7-medium-0025",
+    "context": "Elaine and Jerry talk existentially about funerals and mortality.",
+    "question": "What does George say funerals always make him do?",
+    "options": [
+      "Take stock of his life and how he has wasted it",
+      "Call his parents and tell them he loves them",
+      "Vow to start exercising the next day",
+      "Swear to be a better person"
+    ],
+    "answer": "Take stock of his life and how he has wasted it",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "George says funerals make him review his whole life, conclude he’s wasted it, and plan to keep wasting it."
+  },
+  {
+    "id": "sf-s1e7-hard-0021",
+    "context": "During Manya’s eulogy, the speaker dwells on a specific detail from her childhood that horrifies Jerry.",
+    "question": "Which city does the eulogist later say Manya’s beloved pony was ‘the pride of’?",
+    "options": [
+      "Krakow",
+      "Warsaw",
+      "Gdansk",
+      "Lodz"
+    ],
+    "answer": "Krakow",
+    "difficulty": "hard",
+    "episode": 7,
+    "description": "At the funeral, the speaker says Manya’s pony was ‘the pride of Krakow,’ making Jerry cringe in his seat."
+  },
+  {
+    "id": "sf-s1e7-medium-0026",
+    "context": "Elaine questions the idea that Manya might care about Jerry’s presence from beyond.",
+    "question": "How does George mock the idea that a spirit like Manya’s would focus on a Brooklyn funeral home?",
+    "options": [
+      "He says if you can visit other dimensions, you wouldn’t hang around Drexler’s on Ocean Parkway",
+      "He jokes that ghosts prefer to haunt upscale Manhattan co-ops",
+      "He says spirits are too busy rearranging the cosmos",
+      "He claims the afterlife has strict rules about visiting funerals"
+    ],
+    "answer": "He says if you can visit other dimensions, you wouldn’t hang around Drexler’s on Ocean Parkway",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "George riffs that if you can travel the universe as a spirit, you wouldn’t choose to spend your time at Drexler’s funeral home."
+  },
+  {
+    "id": "sf-s1e7-medium-0009",
+    "context": "In the diner, Jerry tells Elaine and George about Manya and Isaac’s long marriage and Isaac’s plan to move.",
+    "question": "What unusually low rent does Jerry say Manya and Isaac pay for their long-held West End Avenue apartment?",
+    "options": [
+      "$300 a month",
+      "$450 a month",
+      "$600 a month",
+      "$750 a month"
+    ],
+    "answer": "$300 a month",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Jerry notes they’ve been in the apartment since World War II and the rent is only $300, which makes Elaine instantly interested."
+  },
+  {
+    "id": "sf-s1e7-medium-0028",
+    "context": "Elaine desperately fishes for information about Isaac’s apartment while talking about Phoenix.",
+    "question": "What does Elaine offer to do in order to angle for Isaac’s New York apartment?",
+    "options": [
+      "Watch his winter clothes by living in the apartment",
+      "Pay his rent for a few months while he settles in Phoenix",
+      "Sublet the place to ‘responsible tenants’ she knows",
+      "Redecorate and keep it ready for his visits"
+    ],
+    "answer": "Watch his winter clothes by living in the apartment",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Elaine suggests he leave his winter clothes in the apartment and let her live there to ‘watch’ them."
+  },
+  {
+    "id": "sf-s1e7-medium-0011",
+    "context": "Later at the funeral home, Elaine tries to angle for Isaac’s incredible New York apartment.",
+    "question": "Who ultimately gets Manya and Isaac’s West End Avenue apartment when Isaac moves to Phoenix?",
+    "options": [
+      "Jeffrey",
+      "Elaine",
+      "Uncle Leo",
+      "Cousin Nick"
+    ],
+    "answer": "Jeffrey",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Despite Elaine’s desperate pitch to “watch” the winter clothes and live there, Isaac casually mentions that Jeffrey is taking the apartment."
+  },
+  {
+    "id": "sf-s1e7-easy-0012",
+    "context": "After the rained-out funeral day, Jerry’s team finally plays the championship game—with disastrous results.",
+    "question": "What does Jerry describe as the single worst moment of his life from the softball championship game?",
+    "options": [
+      "Getting picked off base",
+      "Striking out looking with the bases loaded",
+      "Dropping a routine fly ball in left field",
+      "Overthrowing home plate and losing the game"
+    ],
+    "answer": "Getting picked off base",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "In the diner afterward, Jerry moans that being picked off and his other blunders in the game now outrank everything except Sharon Besser as his worst moments."
+  },
+  {
+    "id": "sf-s1e7-easy-0029",
+    "context": "At the very end in Monk’s, Elaine teases Jerry that something supernatural might have happened.",
+    "question": "What does Elaine hint Manya might have done to Jerry during the softball game?",
+    "options": [
+      "Showed up in spirit and put a hex on him",
+      "Made it rain to delay the game",
+      "Possessed the umpire to call him out",
+      "Whispered in his ear to distract him"
+    ],
+    "answer": "Showed up in spirit and put a hex on him",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "Elaine jokes that Jerry’s bizarre performance in the championship could be Manya’s revenge from beyond the grave."
+  },
+  {
+    "id": "sf-s1e8-easy-0001",
+    "context": "EPISODE 8**: On stage, Jerry riffs about something in his opening stand up bit.",
+    "question": "What is Jerry’s opening stand-up bit in this episode mainly about?",
+    "options": [
+      "Fashion and everyone wearing the same future outfit",
+      "Airline food and tiny portions",
+      "The annoyance of telemarketers",
+      "Elevators and claustrophobia"
+    ],
+    "answer": "Fashion and everyone wearing the same future outfit",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Jerry complains about picking outfits every day and jokes that the planet should just choose one standard “Earth outfit.”"
+  },
+  {
+    "id": "sf-s1e8-easy-0002",
+    "context": "**EPISODE 8**: Jerry and Elaine browse racks while a salesman keeps disappearing to “check the back”.",
+    "question": "Where are Jerry and Elaine when Jerry first discovers the suede jacket?",
+    "options": [
+      "In a clothing store",
+      "In a department store shoe section",
+      "In a dry cleaner’s shop",
+      "In a hotel lobby"
+    ],
+    "answer": "In a clothing store",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "The opening scene after the monologue shows them in a clothing store where Jerry finds the suede jacket on a rack."
+  },
+  {
+    "id": "sf-s1e8-medium-0003",
+    "context": "A salesman insists he’ll check “the back” for more options, prompting Elaine to mock the idea.",
+    "question": "According to Elaine, why is “the back” of a store pointless?",
+    "options": [
+      "If anything good were there, it would already be out front",
+      "Only damaged items are kept there",
+      "It’s just where they hide the expensive clothes",
+      "She thinks the back is only for staff meetings"
+    ],
+    "answer": "If anything good were there, it would already be out front",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Elaine jokes that stores never find anything in the back because anything worth selling would already be on display."
+  },
+  {
+    "id": "sf-s1e8-medium-0004",
+    "context": "A stranger recognizes the author of the book Elaine is holding and compliments it.",
+    "question": "What is the relationship between Elaine and the author of the book she’s carrying?",
+    "options": [
+      "He’s her father",
+      "He’s her ex-boyfriend",
+      "He’s her grand father",
+      "He’s her uncle"
+    ],
+    "answer": "He’s her father",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "The customer is stunned when Elaine casually reveals that the book’s author, is her father."
+  },
+  {
+    "id": "sf-s1e8-easy-0033",
+    "context": "Same Scene.",
+    "question": "What is the name of Elaine’s father, the author of the book she’s carrying?",
+    "options": [
+      "Alton Benes",
+      "Arthur Benning",
+      "Allen Barnes",
+      "Albert Bennis"
+    ],
+    "answer": "Alton Benes",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "The customer is impressed that the book’s author, Alton Benes, is actually Elaine’s father."
+  },
+  {
+    "id": "sf-s1e8-medium-0036",
+    "context": "Same scene.",
+    "question": "What is the title of the book written by Elaine’s father that she’s carrying in the store?",
+    "options": [
+      "Fair Game",
+      "Last Stand",
+      "Cold Season",
+      "Crossfire"
+    ],
+    "answer": "Fair Game",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "The customer says he just read the book and calls it terrific, identifying it as Alton Benes’s novel “Fair Game.” George also asks about the book in a later scene"
+  },
+  {
+    "id": "sf-s1e8-medium-0005",
+    "context": "Elaine invites Jerry (and George) to help her face an intimidating parent.",
+    "question": "Where and when is Jerry supposed to have dinner with Elaine’s father?",
+    "options": [
+      "Hotel Westbury at eight o’clock on Sunday",
+      "Monk’s Café at seven o’clock on Friday",
+      "Elaine’s apartment at six o’clock on Saturday",
+      "Trianon on Thursday night at eight"
+    ],
+    "answer": "Hotel Westbury at eight o’clock on Sunday",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Elaine begs Jerry to come to the Hotel Westbury at 8 p.m. Sunday to act as a buffer with her father."
+  },
+  {
+    "id": "sf-s1e8-medium-0006",
+    "context": "Jerry falls in love with a suede jacket but notices something odd when he opens it.",
+    "question": "What bothers Jerry about the inside of the suede jacket when he first examines it?",
+    "options": [
+      "It has a pink, candy-striped lining",
+      "It has no inner pockets",
+      "It has another man’s name stitched inside",
+      "It has a large rip under the arm"
+    ],
+    "answer": "It has a pink, candy-striped lining",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Jerry’s only hesitation about the otherwise perfect jacket is the loud pink, candy-striped lining."
+  },
+  {
+    "id": "sf-s1e8-medium-0007",
+    "context": "Jerry debates whether to make an expensive, impulsive purchase.",
+    "question": "What inner debate does Jerry describe having as he considers buying the suede jacket?",
+    "options": [
+      "A voice worrying about money argues with a voice saying, “What’s money?”",
+      "A voice telling him to dress his age argues with a voice saying, “You’re still young!”",
+      "A voice urging practicality argues with a voice saying, “You only live once!”",
+      "A voice warning him about suede argues with a voice loving fashion"
+    ],
+    "answer": "A voice worrying about money argues with a voice saying, “What’s money?”",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "He jokes that he hears dual voices: one concerned about the price, the other dismissing money as irrelevant."
+  },
+  {
+    "id": "sf-s1e8-easy-0008",
+    "context": "Back at his apartment, Jerry lounges on the couch with his new purchase over his pyjamas.",
+    "question": "How does Jerry first wear his new suede jacket at home?",
+    "options": [
+      "Over his pyjamas while admiring it in the mirror",
+      "With dress pants and a tie to “test” a full outfit",
+      "Folded neatly back in its box, afraid to touch it",
+      "Stuffed in the closet so Kramer won’t see it"
+    ],
+    "answer": "Over his pyjamas while admiring it in the mirror",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "He’s so enamored with the jacket that he wears it over his sleepwear just to look at himself."
+  },
+  {
+    "id": "sf-s1e8-easy-0011",
+    "context": "George can’t stop singing a particular song from the musical he recently saw.",
+    "question": "Which song does George keep compulsively singing?",
+    "options": [
+      "“Master of the House”",
+      "“I Dreamed a Dream”",
+      "“On My Own”",
+      "“Do You Hear the People Sing?”"
+    ],
+    "answer": "“Master of the House”",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "He’s stuck on “Master of the House,” singing it everywhere until it practically takes over his life."
+  },
+{
+  "id": "sf-s1e8-easy-0034",
+  "context": "George keeps compulsively singing “Master of the House” all episode, driving Jerry crazy.",
+  "question": "The song George can’t stop singing, “Master of the House,” is from which musical?",
+  "options": [
+    "Les Misérables",
+    "The Phantom of the Opera",
+    "Cats",
+    "Miss Saigon"
+  ],
+  "answer": "Les Misérables",
+  "difficulty": "easy",
+  "episode": 8,
+  "description": "George saw Les Misérables and got “Master of the House” stuck in his head, singing it everywhere he goes."
+},
+  {
+    "id": "sf-s1e8-medium-0012",
+    "context": "Jerry warns George that his musical earworm could have grave artistic consequences.",
+    "question": "What composer does Jerry mention went mad from hearing a single note over and over?",
+    "options": [
+      "Robert Schumann",
+      "Ludwig van Beethoven",
+      "Johannes Brahms",
+      "Franz Schubert"
+    ],
+    "answer": "Robert Schumann",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Jerry cites Schumann, joking that he went insane from hearing a single repeated note, to spook George about his song obsession."
+  },
+  {
+    "id": "sf-s1e8-medium-0013",
+    "context": "Jerry shows off the jacket to George and tries to explain its impact on him.",
+    "question": "How does Jerry say the suede jacket makes him feel when he wears it?",
+    "options": [
+      "Composed and able to meet any social challenge",
+      "Younger and more carefree than he actually is",
+      "Like a wealthy movie star on the red carpet",
+      "Invisible and able to slip away unnoticed"
+    ],
+    "answer": "Composed and able to meet any social challenge",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Jerry claims that inside this jacket he feels composed, grounded, and socially invincible."
+  },
+  {
+    "id": "sf-s1e8-medium-0014",
+    "context": "George presses Jerry about the cost of the jacket, trying to guess the amount.",
+    "question": "What is George’s reaction as he keeps guessing higher prices for Jerry’s jacket?",
+    "options": [
+      "He grows increasingly horrified that Jerry might have paid over a thousand dollars",
+      "He gets excited, thinking the jacket is an investment piece",
+      "He becomes proud of Jerry for finally splurging on himself",
+      "He gets bored and stops caring about the price"
+    ],
+    "answer": "He grows increasingly horrified that Jerry might have paid over a thousand dollars",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "George ratchets up his guesses from hundreds into four figures, panicking when Jerry refuses to deny it."
+  },
+  {
+    "id": "sf-s1e8-medium-0015",
+    "context": "Kramer drops by with a strange favor to ask just as Jerry and George are heading out.",
+    "question": "Why does Kramer ask someone to sit in his double-parked car for “two minutes”?",
+    "options": [
+      "He has to pick up a magician friend’s doves",
+      "He needs to run back upstairs for his wallet",
+      "He is checking on laundry in the basement",
+      "He wants to grab food from a street vendor"
+    ],
+    "answer": "He has to pick up a magician friend’s doves",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Kramer claims he just needs a quick “solid” while he collects a cage of doves for a magician friend."
+  },
+  {
+    "id": "sf-s1e8-medium-0016",
+    "context": "Jerry and George meet Elaine’s father in the Hotel Westbury lobby and are promptly unnerved.",
+    "question": "What drink does Alton Benes order for himself when he first meets Jerry and George?",
+    "options": [
+      "A Scotch with plenty of ice",
+      "A bourbon neat",
+      "A martini with an olive",
+      "A beer and a chaser"
+    ],
+    "answer": "A Scotch with plenty of ice",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "While Jerry orders cranberry juice and George a club soda, Alton curtly asks for another Scotch loaded with ice."
+  },
+  {
+    "id": "sf-s1e8-medium-0017",
+    "context": "Alton questions which of the two men is supposed to be the comic and then recalls his war experience.",
+    "question": "Which war does Alton mention when he talks about a “funny guy” who was a tailgunner?",
+    "options": [
+      "The Korean War",
+      "World War II",
+      "Vietnam",
+      "The Gulf War"
+    ],
+    "answer": "The Korean War",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "He grimly recalls a tailgunner from Korea who had his brains blown out, declaring there’s nothing funny about that."
+  },
+  {
+    "id": "sf-s1e8-medium-0018",
+    "context": "Elaine finally arrives and unloads a chaotic story about why she’s late.",
+    "question": "Which of these is NOT part of Elaine’s explanation for why she arrived so late to meet her father?",
+    "options": [
+      "She got stuck in traffic on the Queensboro Bridge",
+      "Kramer made her sit in his car while he picked up doves",
+      "A city marshal had Kramer’s car towed for unpaid tickets",
+      "Two doves escaped and she had to chase them, nearly getting hit by a bus"
+    ],
+    "answer": "She got stuck in traffic on the Queensboro Bridge",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Her delay involves Kramer’s birds, a tow, and a near-miss with a bus, but nothing about bridge traffic."
+  },
+  {
+    "id": "sf-s1e8-medium-0019",
+    "context": "Alton decides where the group will eat once Elaine finally shows up.",
+    "question": "Where does Alton choose for dinner after meeting everyone at the hotel?",
+    "options": [
+      "A Pakistani restaurant on 46th Street",
+      "An Italian place in Little Italy",
+      "A French bistro across the street",
+      "An Indian restaurant on 56th Street"
+    ],
+    "answer": "A Pakistani restaurant on 46th Street",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "He brusquely announces they’re going to a Pakistani restaurant on 46th, then checks they’re not afraid of spice."
+  },
+  {
+    "id": "sf-s1e8-medium-0020",
+    "context": "As they are about to leave the lobby, Elaine admires the weather while Jerry suddenly panics.",
+    "question": "What change in the weather makes Jerry suddenly worry about his new jacket?",
+    "options": [
+      "It starts snowing",
+      "It starts hailing",
+      "It starts raining",
+      "The wind kicks up dust"
+    ],
+    "answer": "It starts snowing",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Elaine calls the falling snow beautiful, but Jerry immediately wonders what snow will do to suede."
+  },
+  {
+    "id": "sf-s1e8-medium-0021",
+    "context": "Trying to save the suede, Jerry alters his appearance just before they head out into the weather.",
+    "question": "What does Jerry do to his jacket in an attempt to protect it from the snow?",
+    "options": [
+      "He turns it inside out to keep the suede dry",
+      "He wraps it in a plastic garment bag",
+      "He leaves it at the hotel and borrows George’s coat",
+      "He covers it with a napkin from the bar"
+    ],
+    "answer": "He turns it inside out to keep the suede dry",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Jerry flips the jacket to expose the pink lining, hoping to shield the suede from the falling snow."
+  },
+  {
+    "id": "sf-s1e8-medium-0023",
+    "context": "Later, Kramer barges in while Jerry is about to head out again and announces his bird-related errand.",
+    "question": "What snack does Kramer specifically ask Jerry for to feed the birds?",
+    "options": [
+      "Mini Ritz crackers",
+      "Saltines",
+      "Breadcrumbs from old toast",
+      "Popcorn kernels"
+    ],
+    "answer": "Mini Ritz crackers",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Kramer asks if Jerry has any of those “mini Ritzes,” which Jerry improbably does have on top of the fridge."
+  },
+  {
+    "id": "sf-s1e8-medium-0026",
+    "context": "Elaine relays some feedback from her father after the disastrous evening.",
+    "question": "What does Elaine say her father thinks about Jerry and George after the dinner?",
+    "options": [
+      "He liked Jerry but thinks George is gay",
+      "He hated both of them equally",
+      "He thought George was a genius and Jerry was immature",
+      "He liked George but thinks Jerry is gay"
+    ],
+    "answer": "He liked Jerry but thinks George is gay",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Elaine explains that her father actually liked Jerry, saying he reminded him of someone from Korea, but assumed George was gay."
+  },
+  {
+    "id": "sf-s1e8-medium-0029",
+    "context": "Jerry closes the episode with another stand-up routine tying back to his ruined outerwear.",
+    "question": "In his closing stand-up, what absurd question does Jerry raise about leather and moisture?",
+    "options": [
+      "How can moisture ruin leather when cows are outside in the rain all the time?",
+      "Why do leather jackets need dry cleaning if cows never get cleaned?",
+      "Whether leather could survive being worn underwater",
+      "Why people wear leather in the summer if it makes them sweat"
+    ],
+    "answer": "How can moisture ruin leather when cows are outside in the rain all the time?",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "He jokes that cows live outdoors, so it makes no sense that rain supposedly destroys leather jackets."
   }
 ]

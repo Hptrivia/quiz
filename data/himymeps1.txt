@@ -1,5 +1,1181 @@
 [
   {
+    "id": "himym-s1e1-easy-0001",
+    "context": "**EPISODE 1**: Opening narration to the kids sets the timeframe for Ted’s story before flashing back to his mid-20s in New York.",
+    "question": "In what year does Ted say this story begins?",
+    "options": ["2005", "2003", "2007", "1999"],
+    "answer": "2005",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Ted frames the flashback as starting in 2005."
+  },
+  {
+    "id": "himym-s1e1-easy-0002",
+    "context": "Ted introduces who he was back then before roommates, careers, and relationships are laid out.",
+    "question": "How old does Ted say he was at the start of the story?",
+    "options": ["27", "25", "29", "30"],
+    "answer": "27",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "He says he was 27."
+  },
+  {
+    "id": "himym-s1e1-easy-0003",
+    "context": "Ted explains what he was beginning to build professionally when the flashback starts.",
+    "question": "What field was Ted just starting to make it in?",
+    "options": ["Architecture", "Law", "Journalism", "Teaching"],
+    "answer": "Architecture",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "He says he was just starting to make it as an architect."
+  },
+  {
+    "id": "himym-s1e1-medium-0004",
+    "context": "Ted sets his living situation in New York and mentions the roommate who’s about to make a big move.",
+    "question": "Who was Ted living with at the time?",
+    "options": ["Marshall", "Barney", "Ranjit", "Carl"],
+    "answer": "Marshall",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "He lived with Marshall, his best friend from college."
+  },
+  {
+    "id": "himym-s1e1-medium-0005",
+    "context": "In the apartment, plans for a life-changing moment are rehearsed and celebrated with a playful house rule.",
+    "question": "What does Ted warn the couple not to do after the engagement celebration?",
+    "options": ["Have sex on the kitchen floor", "Have sex on the couch", "Open the champagne on the couch", "Have sex while he is there"],
+    "answer": "Have sex on the kitchen floor",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Ted quips, “Don’t have sex on our kitchen floor.”"
+  },
+  {
+    "id": "himym-s1e1-who-0006",
+    "context": "A bunk-bed memory comes up while recalling ‘big moments’ in the relationship.",
+    "question": "WHO SAID THIS? “It’s physics… If the bottom bunk moves, the top bunk moves, too.”",
+    "options": ["Ted", "Marshall", "Barney", "Lily"],
+    "answer": "Ted",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Ted explains why he knew what was happening in the bunk above."
+  },
+  {
+    "id": "himym-s1e1-medium-0006b",
+    "context": "At the bar pre-meetup, Ted calls Barney to hang out; Barney riffs about his current ‘type’ before telling Ted to suit up.",
+    "question": "According to Barney, what are ‘the new half-Asians’?",
+    "options": ["Lebanese girls", "Iranian girls", "Bahranian girls", "Greek girls"],
+    "answer": "Lebanese girls",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "On the phone, Barney declares, “Lebanese girls are the new half-Asians,” then tells Ted to meet him and suit up."
+  },
+  {
+    "id": "himym-s1e1-easy-0007",
+    "context": "At the bar, Barney insists on a trademark instruction before any night out.",
+    "question": "What does Barney tell Ted to do before meeting up?",
+    "options": ["Suit up", "Wingman up", "Loosen up", "Man up"],
+    "answer": "Suit up",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Barney’s recurring command is “Suit up!”"
+  },
+  {
+    "id": "himym-s1e1-medium-0008",
+    "context": "While revisiting their origin story, Barney lists early ‘lessons’ from the first time they crossed paths.",
+    "question": "Where does Barney say he and Ted first met?",
+    "options": ["At the urinal", "At the bar", "On the subway", "At a rooftop party"],
+    "answer": "At the urinal",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Barney reminds Ted they met at the urinal."
+  },
+  {
+    "id": "himym-s1e1-medium-0030",
+    "context": "At the bar, Barney recounts the night he and Ted first met and rattles off his initial ‘life lessons’ in order.",
+    "question": "According to Barney, what are lesson one and lesson two he gives Ted that night?",
+    "options": [
+      "Lose the goatee / Get a suit",
+      "Get a suit / Lose the goatee",
+      "Lose the goatee / Dont get Married",
+      "Dont get married / Get a suit"
+    ],
+    "answer": "Lose the goatee / Get a suit",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Barney’s first two lessons to Ted are to lose the goatee and to get a suit."
+  },
+  {
+    "id": "himym-s1e1-medium-0009",
+    "context": "Barney rattles off life rules, including a specific age-related milestone for relationships.",
+    "question": "According to Barney’s Lesson 3’ you shouldn’t even think about getting married until what age?",
+    "options": ["30", "25", "28", "35"],
+    "answer": "30",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Barney’s lesson three: don’t think about marriage until 30."
+  },
+  {
+    "id": "himym-s1e1-medium-0010",
+    "context": "Barney kicks off his favorite icebreaker game by introducing Ted to someone at the bar.",
+    "question": "What is the name of the first woman Ted is introduced to at the bar?",
+    "options": ["Yasmine", "Robin", "Martha", "Tracy"],
+    "answer": "Yasmine",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Barney says the line and Ted meets Yasmine."
+  },
+  {
+    "id": "himym-s1e1-medium-0011",
+    "context": "In the apartment kitchen, a surprise-loving law student tries to keep the evening lively.",
+    "question": "What word does Marshall jump out and say to try to surprise Lily?",
+    "options": ["Boogedyboo!", "Gotcha!", "Boo-yah!", "Aha!"],
+    "answer": "Boogedyboo!",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "He pops out with “Boogedyboo!”"
+  },
+  {
+    "id": "himym-s1e1-hard-0012",
+    "context": "At the bar, Ted imagines details of a future ceremony, listing preferences rapid-fire.",
+    "question": "Which of these is NOT among Ted’s imagined wedding preferences?",
+    "options": ["DJ instead of a band", "A fall day", "Possibly in Central Park", "Writing their own vows"],
+    "answer": "DJ instead of a band",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "Ted actually says band, not DJ; the others match what he describes."
+  },
+  {
+    "id": "himym-s1e1-medium-0013",
+    "context": "At the bar, a key obstacle appears when Ted shoots his shot with a new acquaintance.",
+    "question": "What is the bartender’s name who is revealed to be her boyfriend?",
+    "options": ["Carl", "Mac", "Tom", "Adam"],
+    "answer": "Carl",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "She says, “I’m sorry, Carl’s my boyfriend.”"
+  },
+  {
+    "id": "himym-s1e1-medium-0013b",
+    "context": "At the bar: Ted spots a woman across the bar and declares he’ll marry her someday; before he can execute a plan, Barney jumps in with his signature icebreaker to introduce them.",
+    "question": "What five-word line does Barney use to introduce Ted to her?",
+    "options": ["Have you met Ted?", "Suit up and say hi", "Legend—wait for it—ary intro", "Meet my friend Ted Mosby"],
+    "answer": "Have you met Ted?",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Barney cuts off Ted’s overthinking and uses his catchphrase to introduce him to Robin."
+  },
+  {
+    "id": "himym-s1e1-medium-0014",
+    "context": "During small talk, she explains her current on-air role and the kinds of segments she gets.",
+    "question": "What outlet does she say she works for?",
+    "options": ["Metro News One", "Channel 8 Local", "NYC 24", "CityBeat"],
+    "answer": "Metro News One",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Robin describes herself as a reporter for Metro News One."
+  },
+  {
+    "id": "himym-s1e1-medium-0015",
+    "context": "She mentions travel plans tied to a quirky assignment coming up that weekend when Ted asks her on a date.",
+    "question": "Where is she flying on Friday for a story?",
+    "options": ["Orlando", "Chicago", "Los Angeles", "Boston"],
+    "answer": "Orlando",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "She’s covering a record attempt in Orlando."
+  },
+  {
+    "id": "himym-s1e1-medium-0016",
+    "context": "Ted finally gets her to go on a date the next night, On their first outing, something hanging on the restaurant wall catches Ted’s eye.",
+    "question": "What instrument does Ted fixate on during the date?",
+    "options": ["French horn", "Saxophone", "Clarinet", "Trumpet"],
+    "answer": "French horn",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "He keeps talking about the horn on the wall."
+  },
+  {
+    "id": "himym-s1e1-medium-0016b",
+    "context": "Small Brooklyn bistro during Ted and Robin’s first date; Ted fixates on a blue French horn mounted on the wall and cracks a comparison.",
+    "question": "What does Ted say the blue French horn looks like?",
+    "options": ["A Smurf penis", "Gonzo penis", "A tiny tuba", "A cartoon seashell"],
+    "answer": "A Smurf penis",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "On their first date, Ted jokes that the blue French horn resembles ‘a Smurf penis.’"
+  },
+  {
+    "id": "himym-s1e1-hard-0017b",
+    "context": "Ted returns from his first date and excitedly tells Marshall and Lily he’s found his ‘future Mrs. Ted Mosby,’ listing traits of his ideal match.",
+    "question": "Which of these is NOT one of the traits Ted describes for his perfect match in that scene?",
+    "options": ["Plays bass guitar", "Likes dogs", "Hates olives", "Drinks scotch", "Can quote obscure lines from Ghostbusters"],
+    "answer": "Plays bass guitar",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "Ted lists liking dogs, loving scotch, and quoting Ghostbusters; playing bass guitar is never mentioned."
+  },
+  {
+    "id": "himym-s1e1-hard-0017",
+    "context": "They trade lines from a classic movie while comparing tastes.",
+    "question": "Complete the quote they reference: “When someone asks you if you’re a ____ , you say ‘Yes!’”",
+    "options": ["god", "hero", "genius", "legend"],
+    "answer": "god",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "They quote the line from Ghostbusters."
+  },
+  {
+    "id": "himym-s1e1-medium-0018",
+    "context": "Quick-fire ‘perfect match’ facts include pets, drinks, and pop culture.",
+    "question": "How many dogs does she say she has?",
+    "options": ["Five", "Two", "Three", "One"],
+    "answer": "Five",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "She says, “I’ve got five dogs.”"
+  },
+  {
+    "id": "himym-s1e1-medium-0019",
+    "context": "They bond over preferred drinks, with a joke about age and ordering.",
+    "question": "WHO SAYS: I love a scotch ‘old enough to order its own scotch.’?",
+    "options": ["Ted", "Robin"],
+    "answer": "Robin",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Robin loves a scotch ‘old enough to order its own scotch.’"
+  },
+  {
+    "id": "himym-s1e1-medium-0020b",
+    "context": "Barney protests about a previously scheduled activity before joining the gang at the bar.",
+    "question": "What activity was on the calendar before the late-night detour?",
+    "options": ["Laser tag", "Bowling", "Karaoke", "Paintball"],
+    "answer": "Laser tag",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Barney complains they were supposed to play laser tag."
+  },
+  {
+    "id": "himym-s1e1-medium-0020c",
+    "context": "MacLaren’s Pub after Ted’s first date: the group debates whether there’s such a thing as a ‘signal’ and whether Ted should’ve acted anyway.",
+    "question": "What does Barney do to make his point that Ted should’ve kissed Robin even without a ‘signal’?",
+    "options": [
+      "He kisses Marshall",
+      "He kisses Ted",
+      "He kisses Lily",
+      "He kisses a random girl"
+    ],
+    "answer": "He kisses Marshall",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Barney kisses Marshall and asks: Did Marshall give me a signal?"
+  },
+  {
+    "id": "himym-s1e1-medium-0021",
+    "context": "Later that night, the group watches her on TV covering a situation on a bridge.",
+    "question": "What kind of story is she reporting when the guys see her on TV?",
+    "options": ["A man on a ledge coming down safely", "A record-breaking pancake attempt", "A transit strike update", "A parade feature"],
+    "answer": "A man on a ledge coming down safely",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "She reports the man came down off the bridge, giving the story a happy ending."
+  },
+  {
+    "id": "himym-s1e1-medium-0022",
+    "context": "A cabbie ferries them on a late-night mission back to Robins place; small talk turns to his background.",
+    "question": "Which country does the cab driver say he’s from and what was his name?",
+    "options": ["Bangladesh/Ranjit", "Pakistan/Ranjit", "India/Rajesh", "Lebanon/Rajesh"],
+    "answer": "Bangladesh/Ranjit",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Ranjit says he’s from Bangladesh."
+  },
+  {
+    "id": "himym-s1e1-hard-0024",
+    "context": "In a cab ride confession, a long-held ‘balance’ story gets corrected by the person it’s based on.",
+    "question": "What does Marshall admit about his true feelings toward olives?",
+    "options": ["He actually likes them", "He’s allergic to them", "He’s never tried them", "He can only eat them on pizza"],
+    "answer": "He actually likes them",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "Marshall admits he does like olives and lied on their first date."
+  },
+  {
+    "id": "himym-s1e1-medium-0035",
+    "context": "Robin’s apartment, late at night: Ted shows up in a suit to ‘finish the moment,’ but nerves get the best of him and he blurts an ill-timed line.",
+    "question": "What does Ted blurt out at Robin’s apartment that torpedoes the moment?",
+    "options": ["I think I’m in love with you", "I love you", "Will you marry me?", "I think I want to marry you"],
+    "answer": "I think I’m in love with you",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Ted says, “I think I’m in love with you,” and immediately realizes it’s way too early."
+  },
+  {
+    "id": "himym-s1e1-medium-0026",
+    "context": "At her doorstep, after a stumble of words, she still offers him something she’d promised earlier.",
+    "question": "What does she hand Ted before he leaves?",
+    "options": ["Olives", "THE French horn", "Her number", "Scotch bottle"],
+    "answer": "Olives",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "She gives him the olives she’d promised."
+  },
+  {
+    "id": "himym-s1e1-medium-0027b",
+    "context": "Outside her building near the end of the night, a debated social cue becomes the topic for the group.",
+    "question": "What gesture becomes the ‘signal’ everyone argues Ted should have acted on?",
+    "options": ["A long handshake", "Giving him the olives", "The long laugh at a bad joke", "A long hug"],
+    "answer": "A long handshake",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "They debate that the lingering handshake was the signal to kiss."
+  },
+  {
+    "id": "himym-s1e1-medium-0028",
+    "context": "Ted wraps up the tale, revealing who the story was really about before promising more to come.",
+    "question": "By the end, Ted says the story he just told is how he met which person?",
+    "options": ["Aunt Robin", "Your mother", "Lily", "Victoria"],
+    "answer": "Aunt Robin",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Ted tells the kids it’s the true story of how he met their Aunt Robin."
+  },
+  {
+    "id": "himym-s1e2-easy-0001",
+    "context": "**EPISODE 2**: COLD OPEN — 2030: The future narrator resumes telling his kids the story and flashes back to 2005.",
+    "question": "What sparks Ted to start seriously thinking about marriage in 2005?",
+    "options": ["His best friends get engaged", "He gets a big promotion", "He moves apartments", "His parents pressure him"],
+    "answer": "His best friends get engaged",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Marshall proposes to Lily, pushing Ted to imagine settling down."
+  },
+  {
+    "id": "himym-s1e2-medium-0003",
+    "context": "BAR — After their first outing, Ted blurts something intense and later decides not to call.",
+    "question": "What impulsive line does Ted say to Robin after their first date?",
+    "options": ["\"I think I'm in love with you.\"", "\"We should get married.\"", "\"I love you.\"", "\"You're my soulmate.\""],
+    "answer": "\"I think I'm in love with you.\"",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "The confession makes him back off for a week."
+  },
+  {
+    "id": "himym-s1e2-easy-0004",
+    "context": "BAR — Lily shares Robin’s vibe about relationships after a quick chat.",
+    "question": "What kind of relationship does Robin say she can handle right now?",
+    "options": ["Something casual", "An exclusive relationship", "Open relationship", "Friends"],
+    "answer": "Something casual",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "She likes Ted but isn’t seeking anything serious."
+  },
+  {
+    "id": "himym-s1e2-medium-0005",
+    "context": "APARTMENT — Ted decides to play it cool and casual.",
+    "question": "How does Ted plan to see Robin again without 'asking her out'?",
+    "options": ["Invite her to a party", "Send flowers anonymously", "Accidentally leave a note", "Ask for an interview"],
+    "answer": "Invite her to a party",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "He frames it as casual and social."
+  },
+{
+  "id": "himym-s1e2-easy-0021",
+  "context": "APARTMENT — Marshall complains about a looming assignment while the Lily´s flirting keep derailing his study time.",
+  "question": "How many pages was Marshall's paper on unconstitutional law?",
+  "options": ["15 pages", "20 pages", "25 pages", "30 pages"],
+  "answer": "25 pages",
+  "difficulty": "easy",
+  "episode": 2,
+  "description": "He says he has a twenty-five-page paper due on Monday."
+},
+  {
+    "id": "himym-s1e2-hard-0006",
+    "context": "TV NEWS — Ted catches Robin’s live segment and bolts to her location.",
+    "question": "At which intersection is Robin reporting when Ted 'runs into' her?",
+    "options": ["75th & Columbus", "42nd & Lexington", "23rd & Broadway", "14th & 7th"],
+    "answer": "75th & Columbus",
+    "difficulty": "hard",
+    "episode": 2,
+    "description": "He hears it on air and sprints to the Razzle Dazzle Supermarket."
+  },
+{
+  "id": "himym-s1e2-medium-0022",
+  "context": "GROCERY STORE — During a live segment, Robin reports on a four-year-old stuck inside a prize crane machine.",
+  "question": "What is the name of the child Robin is reporting on?",
+  "options": ["Leroy Ellensburg", "Logan Ellsworth", "Leo Eberhardt", "Landon Ellison"],
+  "answer": "Leroy Ellensburg",
+  "difficulty": "medium",
+  "episode": 2,
+  "description": "Robin identifies the boy by full name during the Razzle Dazzle Supermarket report."
+},
+  {
+    "id": "himym-s1e2-medium-0007",
+    "context": "GROCERY STORE — The kid is stuck in a prize crane during Robin’s segment.",
+    "question": "Which toy is the kid obsessed with in the crane machine story?",
+    "options": ["A purple giraffe", "A red dragon", "A blue teddy bear", "A green dinosaur"],
+    "answer": "A purple giraffe",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "It becomes the episode’s running gag."
+  },
+{
+  "id": "himym-s1e2-easy-0023",
+  "context": "GROCERY STORE — After Robin’s live segment wraps at the supermarket, Ted 'casually' bumps into her and pretends he’s there to pick something up.",
+  "question": "When Robin spots Ted at the store, what does he claim he’s shopping for?",
+  "options": ["Dip", "Milk", "Bread", "Cereal"],
+  "answer": "Dip",
+  "difficulty": "easy",
+  "episode": 2,
+  "description": "He blurts out that he’s shopping for dip to sell the 'casual' encounter."
+},
+  {
+    "id": "himym-s1e2-truefalse-0008",
+    "context": "APARTMENT — The first get-together party comes and goes while Ted waits. Barney hooks up with a stranger who says she was invited to the party by their coworker",
+    "question": "True or False: Robin attends Ted’s first party.",
+    "options": ["False", "True"],
+    "answer": "False",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "She gets stuck at work covering the crane story."
+  },
+  {
+    "id": "himym-s1e2-easy-0009",
+    "context": "PHONE CALL — Robin calls to apologize, wishes the timing had been different and Ted pivots.",
+    "question": "How does Ted respond when Robin says she wishes the party were that night?",
+    "options": ["It’s a two-day party", "He cancels future plans", "The party continues tonight", "It´s a three day party"],
+    "answer": "It’s a two-day party",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "He schedules Party #2 on the spot."
+  },
+  {
+    "id": "himym-s1e2-medium-0011",
+    "context": "KITCHEN — Marshall tries to juggle schoolwork with the ongoing festivities.",
+    "question": "How many whole cans of dip does Marshall brag about eating after the first party?",
+    "options": ["Four", "Two", "Three", "Five"],
+    "answer": "Four",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "It’s his way of saying the night was a success."
+  },
+  {
+    "id": "himym-s1e2-truefalse-0012",
+    "context": "APARTMENT — Robin calls again and apologizes for missing the party; Ted improvises again.",
+    "question": "True or False: Ted extends the concept to a four-day party to accommodate Robin’s schedule.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Robin shows up on the third party."
+  },
+  {
+    "id": "himym-s1e2-medium-0013",
+    "context": "APARTMENT (PARTY #3) — A familiar stranger resurfaces, still invoking an unknown coworker.",
+    "question": "Which name keeps coming up from the Barney´s stranger hookup as her party connection?",
+    "options": ["Carlos", "Alan", "Steve", "Diego"],
+    "answer": "Carlos",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Neither Ted nor Barney knows him—until he appears."
+  },
+{
+  "id": "himym-s1e2-hard-0025",
+  "context": "APARTMENT (PARTY #3) — Amid the chaos, Marshall frantically searches for a specific law book he needs for his paper.",
+  "question": "Which exact book is Marshall looking for?",
+  "options": [
+    "An introduction to contract work institution statutes (1865–1923)",
+    "Federal Evidence Handbook (Second Edition)",
+    "A Treatise on Torts (1901–1950)",
+    "Property Law: Estates and Future Interests"
+  ],
+  "answer": "An introduction to contract work institution statutes (1865–1923)",
+  "difficulty": "hard",
+  "episode": 2,
+  "description": "He shouts the long title while hunting for it—before discovering it was used as a coaster."
+},
+  {
+    "id": "himym-s1e2-hard-0014",
+    "context": "APARTMENT (PARTY #3) — School pressure peaks as a key study item goes missing.",
+    "question": "What happens to Marshall’s massive law book during the third party?",
+    "options": ["Used as a coaster and soaked", "Used as a cushion", "Ripped in half", "Found in the garbage"],
+    "answer": "Used as a coaster and soaked",
+    "difficulty": "hard",
+    "episode": 2,
+    "description": "His 'big-ass book' is water-damaged by drinks."
+  },
+  {
+    "id": "himym-s1e2-medium-0030",
+    "context": "ROOFTOP — Robin finally arrives at the party. After debating feelings and the imaginary 'off switch,' the conversation reaches a turning point.",
+    "question": "True or False: Ted and Robin finally kiss but ultimately decide to remain friends.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Their back-and-forth ends with a long kiss before they agree to keep things friendly."
+  },
+  {
+    "id": "himym-s1e2-hard-0033",
+    "context": "BAR — Marshall pumps himself up about finishing his monster paper with a goofy third-person pep talk.",
+    "question": "What rhyming sign-off does Marshall use during his self-pep talk?",
+    "options": [
+      "“My name is Rufus, and that’s the Trufus.”",
+      "“Call me M, I’ll ace this gem.”",
+      "“Big Fudge won’t budge.”",
+      "“Marshall’s the marshal of A’s.”"
+    ],
+    "answer": "“My name is Rufus, and that’s the Trufus.”",
+    "difficulty": "hard",
+    "episode": 2,
+    "description": "The narrator later reveals he did not get the A he boasts about."
+  },
+  {
+    "id": "himym-s1e2-medium-0019",
+    "context": "BAR — Marshall hypes himself up about school in third person.",
+    "question": "What grade does Marshall actually receive on the 25-page paper he vows to ace?",
+    "options": ["B-", "A", "B+", "C"],
+    "answer": "B-",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "The narrator confirms the final mark despite his pep talk."
+  },
+  {
+    "id": "himym-s1e2-medium-0032",
+    "context": "BAR — The final montage reveals the fate of two recurring characters.",
+    "question": "Which unexpected pair is seen making out near the end?",
+    "options": ["Carlos and Tatiana", "Barney and Tatiana", "Ted and the 'Have you met Ted?' girl"],
+    "answer": "Carlos and Tatiana",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Their hookup undercuts the earlier 'Who is Carlos?' running joke."
+  },
+  {
+    "id": "himym-s1e2-easy-0031",
+    "context": "BAR — In the closing beats, a smug barb lands when Barney questions what Carlos has that he doesn’t.",
+    "question": "When Barney asks what Carlos has that he doesn’t, what does Robin quip back?",
+    "options": ["A date tonight", "Better game.", "Nicer hair.", "Pickup moves."],
+    "answer": "A date tonight",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Robin’s one-liner triggers a group “Ohh!” and punctuates the gag."
+  },
+{
+  "id": "himym-s1e2-easy-0034",
+  "context": "BAR — In the final scene, the group winds down as one friend uses a familiar icebreaker to nudge a new introduction.",
+  "question": "How does the episode end?",
+  "options": [
+    "Robin playing Have you met Ted?",
+    "Barney playing Have you met Ted?",
+    "Ted playing Have you met Robin?",
+    "Barney playing Have you met Robin?"
+  ],
+  "answer": "Robin playing Have you met Ted?",
+  "difficulty": "easy",
+  "episode": 2,
+  "description": "Robin taps a woman at the bar and delivers the line to set Ted up."
+},
+  {
+    "id": "himym-s1e3-easy-0001",
+    "context": "**EPISODE 3**: Future Ted is setting the scene for his kids, showing photos of the gang and how they spent their nights back then.",
+    "question": "What does Future Ted say he really wanted to do that night?",
+    "options": ["Go to the bar", "Go to a concert", "Stay in and watch a movie", "Go on a date"],
+    "answer": "Go to the bar",
+    "difficulty": "easy",
+    "episode": 3,
+    "description": "He opens with that it was one night “before I met your mother” when he “really wanted to go to the bar. His son says..The bar? Big surprise"
+  },
+  {
+    "id": "himym-s1e3-easy-0002",
+    "context": "Future Ted introduces where the group used to hang out and names the place.",
+    "question": "What is the name of the bar they always hung out at?",
+    "options": ["MacLaren's", "Puzzles", "The Drunken Clam", "McGee's"],
+    "answer": "MacLaren's",
+    "difficulty": "easy",
+    "episode": 3,
+    "description": "He says they used to hang out at one bar called “MacLaren’s.”"
+  },
+  {
+    "id": "himym-s1e3-easy-0006",
+    "context": "Barney pulls up in the cab beside Ted and Marshall, and Marshall tries to politely bow out.",
+    "question": "What does Barney say is the reason Marshall can say no?",
+    "options": ["Because he’s getting laid", "Because he has to study", "Because he hates bars", "Because he’s engaged"],
+    "answer": "Because he’s getting laid",
+    "difficulty": "easy",
+    "episode": 3,
+    "description": "When Ted asks why Marshall can refuse, Barney answers: “because he’s getting laid,” and Marshall adds “Consistently.”"
+  },
+  {
+    "id": "himym-s1e3-medium-0007",
+    "context": "Barney argues that Ted’s stuck repeating the same habits and tries to brand himself as the solution.",
+    "question": "What does Barney call himself while telling Ted he’s in a rut?",
+    "options": ["A rut buster", "A  rut wingman", "A rutstyle coach", "A rut guide"],
+    "answer": "A rut buster",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "He says Ted’s “in a rut” and declares, “I am a rut buster. I’m going to bust your rut.”"
+  },
+  {
+    "id": "himym-s1e3-easy-0008",
+    "context": "Ted finally gets in the cab and asks what the “legendary” plan actually is.",
+    "question": "What is the first thing Barney says they have to do?",
+    "options": ["Pick someone up at the airport", "Go to MacLaren’s", "Crash a wedding", "Hit a club in Manhattan"],
+    "answer": "Pick someone up at the airport",
+    "difficulty": "easy",
+    "episode": 3,
+    "description": "Barney’s plan starts with: “First we got to pick someone up at the airport.”"
+  },
+  {
+    "id": "himym-s1e3-medium-0009",
+    "context": "At the airport, Barney is carrying luggage and keeping the details vague while Ted tries to understand what’s going on.",
+    "question": "What are Ted and Barney pretending to be in their made-up scenario?",
+    "options": [
+      "International businessmen back from Japan",
+      "Rock stars on tour",
+      "Actors in town for auditions",
+      "Professional athletes coming from a game"
+    ],
+    "answer": "International businessmen back from Japan",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Barney pitches “two handsome international business men just back from a lucrative trip to Japan.”"
+  },
+  {
+    "id": "himym-s1e3-medium-0012",
+    "context": "Marshall is alone in the apartment, trying to power through work while everyone else is out.",
+    "question": "What is Marshall studying for?",
+    "options": ["Law", "Medicine", "Architecture", "Business school"],
+    "answer": "Law",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "He sings to himself, “Studyin’ law… Bein’ a lawyer had better be awesome.”"
+  },
+  {
+    "id": "himym-s1e3-easy-0013",
+    "context": "At the bar, Robin complains about dating and compares men to something that always keeps coming.",
+    "question": "Robin says guys are like what?",
+    "options": ["A subway", "A bus", "A taxi", "A train schedule"],
+    "answer": "A subway",
+    "difficulty": "easy",
+    "episode": 3,
+    "description": "Robin jokes, “Guys are like a subway. You miss one, another one comes along in five minutes.”"
+  },
+{
+  "id": "himym-s1e3-easy-0043",
+  "context": "At MacLaren’s, Lily and Robin are talking about where they’re from while guys keep interrupting their conversation.",
+  "question": "Where does Lily say she grew up?",
+  "options": ["Park Slope", "Queens", "Long Island", "The Upper West Side"],
+  "answer": "Park Slope",
+  "difficulty": "easy",
+  "episode": 3,
+  "description": "While they’re chatting, Lily casually says, “So I grew up in Park Slope,” before the conversation gets interrupted."
+},
+  {
+    "id": "himym-s1e3-medium-0015",
+    "context": "At the airport, Ted awkwardly tries a pickup approach on a woman waiting nearby.",
+    "question": "Ted says the woman flew in from which city?",
+    "options": ["Detroit", "Buffalo", "Cleveland", "Boston"],
+    "answer": "Detroit",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Ted tries, “did you just get in from Detroit?” while pointing to himself and saying “Japan.”"
+  },
+  {
+    "id": "himym-s1e3-hard-0016",
+    "context": "Barney decides they need to switch strategy and starts “dropping knowledge” at the airport.",
+    "question": "Barney claims cute girls are not from which place?",
+    "options": ["Buffalo", "Albany", "Newark", "Yonkers"],
+    "answer": "Buffalo",
+    "difficulty": "hard",
+    "episode": 3,
+    "description": "He declares, “Cute girls are not from Buffalo,” then calls “Time-out. Ten o’clock.”"
+  },
+  {
+    "id": "himym-s1e3-easy-0018",
+    "context": "The women are in a hurry and explain they’re leaving immediately, which surprises Ted.",
+    "question": "Where are Laura and Tatiana headed?",
+    "options": ["Philadelphia", "Boston", "Chicago", "Miami"],
+    "answer": "Philadelphia",
+    "difficulty": "easy",
+    "episode": 3,
+    "description": "Laura says they have to “hit and run” because they’ve got a plane to catch—to “Philadelphia.”"
+  },
+  {
+    "id": "himym-s1e3-medium-0023",
+    "context": "Ted and Barney chat with Laura and Tatiana mid-flight and learn why they’re traveling.",
+    "question": "Why are Laura and Tatiana going to Philly?",
+    "options": [
+      "To visit their boyfriends",
+      "For a work conference",
+      "To see family",
+      "For a concert weekend"
+    ],
+    "answer": "To visit their boyfriends",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Laura explains, “We’re visiting our boyfriends,” and Tatiana adds that Chris might propose."
+  },
+  {
+    "id": "himym-s1e3-hard-0024",
+    "context": "Ted and Barney realize they misread the situation when the women share details about the guys they’re seeing.",
+    "question": "What do they find out about the women’s boyfriends?",
+    "options": [
+      "They’re both linebackers for the Eagles",
+      "They’re both pilots",
+      "They’re both lawyers",
+      "They’re both quarterbacks for the Dolphins"
+    ],
+    "answer": "They’re both linebackers for the Eagles",
+    "difficulty": "hard",
+    "episode": 3,
+    "description": "The women show photos and Ted blurts “Both?” after learning “they’re both linebackers for the Eagles.”"
+  },
+  {
+    "id": "himym-s1e3-medium-0025",
+    "context": "Lily vents to Marshall by phone while she’s out with Robin, and he explains why she’s being ignored.",
+    "question": "According to Marshall, what makes guys stop paying attention to Lily in the bar?",
+    "options": ["Her engagement ring", "Her haircut", "Robin standing next to her", "Her clothes"],
+    "answer": "Her engagement ring",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Marshall says guys see the ring and it’s like “Cha-Chung! Marshall parking only,” meaning they back off because she’s engaged."
+  },
+  {
+    "id": "himym-s1e3-hard-0028",
+    "context": "In the security office, the officer explains exactly what looked suspicious about their actions.",
+    "question": "Which of these is NOT part of the officer’s suspicion list?",
+    "options": [
+      "They placed bags on a JFK carousel and abandoned them",
+      "They bought a last-minute flight with cash",
+      "They tried to enter the cockpit",
+      "They couldn’t explain the luggage"
+    ],
+    "answer": "They tried to enter the cockpit",
+    "difficulty": "hard",
+    "episode": 3,
+    "description": "Officer McNeil says they were seen putting bags on “JFK carousel three,” abandoning them, and buying a flight “with cash” — nothing about a cockpit."
+  },
+  {
+    "id": "himym-s1e3-medium-0029",
+    "context": "The bomb squad checks the luggage while Ted and Barney wait for the verdict back in the office.",
+    "question": "What does the bomb squad say is inside the bags?",
+    "options": [
+      "A whole bunch of condoms and a power bar",
+      "A brick of cash and a passport",
+      "A costume and a camera",
+      "Nothing at all"
+    ],
+    "answer": "A whole bunch of condoms and a power bar",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "The bomb squad reports they’re clean—just “a whole bunch of condom… and a power bar.”"
+  },
+  {
+    "id": "himym-s1e3-medium-0030",
+    "context": "After they’re released, Barney immediately pitches another plan instead of going home.",
+    "question": "Barney invites them to whose place for drinks in Philly?",
+    "options": ["Sascha", "Dana", "Laura", "Tatiana"],
+    "answer": "Sascha",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Barney points out a security woman and says, “Sascha… She’s having friends over for drinks at her house.”"
+  },
+  {
+    "id": "himym-s1e3-easy-0033",
+    "context": "At Sascha’s place, everyone’s trying to keep things quiet because someone is asleep upstairs.",
+    "question": "Who does Sascha say they might wake up if they’re too loud?",
+    "options": ["Her grandpa", "Her roommate", "Her baby", "Her landlord"],
+    "answer": "Her grandpa",
+    "difficulty": "easy",
+    "episode": 3,
+    "description": "Sascha tells them to “keep the volume down” because they’ll “wake my grandpa.”"
+  },
+  {
+    "id": "himym-s1e3-medium-0034",
+    "context": "At the party, Sascha offers everyone a drink while Ted looks miserable on the couch.",
+    "question": "What drink does Sascha offer the group?",
+    "options": ["Hard lemonade", "Whiskey sours", "Beer", "Orange juice"],
+    "answer": "Hard lemonade",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Sascha comes down with drinks and asks, “Who wants hard lemonade?”"
+  },
+  {
+    "id": "himym-s1e3-hard-0035",
+    "context": "Barney chats with Sascha’s friend Dana and starts interrogating her about her job like it’s the greatest thing ever.",
+    "question": "Dana says she works security at which landmark?",
+    "options": ["The Liberty Bell", "Independence Hall", "The Rocky statue", "City Hall"],
+    "answer": "The Liberty Bell",
+    "difficulty": "hard",
+    "episode": 3,
+    "description": "Dana mentions she works security at the Liberty Bell, and Barney gets obsessed with the rope and touching it."
+  },
+  {
+    "id": "himym-s1e3-hard-0040",
+    "context": "In the cab, Barney launches into a dramatic speech about living boldly while Ted argues he just wanted a normal night.",
+    "question": "What does Barney say they should do to the liberty Bell?",
+    "options": [
+      "Lick it",
+      "Put their head in it",
+      "Touch it",
+      "Take a picture with it"
+    ],
+    "answer": "Lick it",
+    "difficulty": "hard",
+    "episode": 3,
+    "description": "Barney goes full motivational: “No one in the history of the world can every say they have licked the liberty bell!”"
+  },
+  {
+    "id": "himym-s1e3-medium-0041",
+    "context": "After the Liberty Bell stunt, Ted ends up telling the story at the bar to a woman who can’t believe it happened.",
+    "question": "Ted first says the Liberty Bell tasted like what, before correcting himself?",
+    "options": ["Freedom", "Beer", "Victory", "Cigarettes"],
+    "answer": "Freedom",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Ted tells her “Freedom…” then immediately admits the truth: “No actually it tasted like pennies.”"
+  },
+  {
+    "id": "himym-s1e4-easy-0001",
+    "context": "**EPISODE 4**: Future Ted sets up a story for his kids and insists they follow along from the very start.",
+    "question": "Future Ted says this story starts with what?",
+    "options": ["A shirt", "A ring", "A drink", "A phone call"],
+    "answer": "A shirt",
+    "difficulty": "easy",
+    "episode": 4,
+    "description": "He tells them, “This is one of those stories, and it starts... with a shirt.”"
+  },
+  {
+    "id": "himym-s1e4-medium-0002",
+    "context": "In 2005, Ted is getting dressed and reacts like he’s rediscovering something in his closet.",
+    "question": "How long does Ted say he’s had the shirt?",
+    "options": ["Six years", "Two years", "Ten years", "One year"],
+    "answer": "Six years",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "He says, “I’ve had this shirt for, like, six years... Until this morning I wasn’t into it at all.”"
+  },
+  {
+    "id": "himym-s1e4-medium-0003",
+    "context": "At MacLaren’s, the gang reacts to Ted’s outfit as soon as he walks in.",
+    "question": "Which color combo does Lily specifically call out about Ted’s shirt?",
+    "options": ["Green and brown", "Blue and orange", "Red and yellow", "Black and purple"],
+    "answer": "Green and brown",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Lily hypes it up: “Look at those colors! Green and brown together at last!”"
+  },
+  {
+    "id": "himym-s1e4-easy-0005",
+    "context": "At the booth, Barney is running a little scheme with Robin about her live news job.",
+    "question": "What word is Barney trying to get Robin to say on a live news report first?",
+    "options": ["Booger", "Nipple", "Pickle", "Moist"],
+    "answer": "Booger",
+    "difficulty": "easy",
+    "episode": 4,
+    "description": "Robin explains Barney’s bet: he’s offering her money to say “Booger” on a live news report."
+  },
+  {
+    "id": "himym-s1e4-medium-0006",
+    "context": "Robin refuses the first dare and argues about professionalism and her job.",
+    "question": "How much money does Barney offer Robin to say “Booger”?",
+    "options": ["Fifty bucks", "Twenty bucks", "One hundred bucks", "Two hundred bucks"],
+    "answer": "Fifty bucks",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Robin says Barney is “offering me fifty bucks” to say the word on-air."
+  },
+  {
+    "id": "himym-s1e4-medium-0007",
+    "context": "Barney immediately escalates the dare when Robin won’t go for the first one.",
+    "question": "What word does Barney switch the dare to for a hundred dollars?",
+    "options": ["Nipple", "Sex", "Butt", "Thong"],
+    "answer": "Nipple",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Barney counters: “Of course not, because now you’re saying ‘Nipple’ and it’s a hundred!”"
+  },
+  {
+    "id": "himym-s1e4-medium-0009",
+    "context": "Robin mentions a possible promotion and gets excited about a more serious assignment.",
+    "question": "What beat does Robin say her boss is about to bump her up to?",
+    "options": ["The City Hall beat", "The sports beat", "The weather desk", "The City Library beat"],
+    "answer": "The City Hall beat",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Robin says her boss is about to bump her up to “the City Hall beat.”"
+  },
+  {
+    "id": "himym-s1e4-medium-0010",
+    "context": "Ted is sipping a drink that was already sitting at their table and realizing his tastes might be changing.",
+    "question": "What drink does Ted say he suddenly likes now?",
+    "options": ["Bourbon", "Gin", "Scotch", "Tequila"],
+    "answer": "Bourbon",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Ted asks, “Whose bourbon is this?” then says, “Point is… I seem to like bourbon now.”"
+  },
+  {
+    "id": "himym-s1e4-hard-0013",
+    "context": "The gang starts running through Ted’s dating history and brings up a particularly wild one.",
+    "question": "How many adult films does Ted´s ex Stefanie say she made?",
+    "options": ["175", "75", "25", "17"],
+    "answer": "175",
+    "difficulty": "hard",
+    "episode": 4,
+    "description": "In the flashback, Stefanie says she spent a month making adult films and made “A-hundred-and-seventy-five.”"
+  },
+  {
+    "id": "himym-s1e4-hard-0014",
+    "context": "They bring up another ex and the flashback gets dark fast when she shares a story from her past.",
+    "question": "What does Jackie admit she did when she was sixteen?",
+    "options": [
+      "Hit a hitchhiker and kept driving",
+      "Stole a car and crashed it",
+      "Got arrested at a concert",
+      "Set a house on fire"
+    ],
+    "answer": "Hit a hitchhiker and kept driving",
+    "difficulty": "hard",
+    "episode": 4,
+    "description": "Jackie laughs and says she was driving at sixteen and “I hit this hitchhiker… just kept drivin’!”"
+  },
+  {
+    "id": "himym-s1e4-medium-0014b",
+    "context": "At the bar, the gang starts scrolling through Ted’s dating history and one name instantly hits a nerve for him.",
+    "question": "What’s the name of the girl Ted gets especially nostalgic about?",
+    "options": ["Natalie", "Mara", "Maycee", "Victoria"],
+    "answer": "Natalie",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "When Lily and Marshall bring her up, Ted lights up and starts listing all his fond memories of Natalie."
+  },
+  {
+    "id": "himym-s1e4-hard-0015b",
+    "context": "Ted explains to Robin why Natalie matters to him, listing little details that stuck with him years later.",
+    "question": "Which of these does Ted NOT mention as one of his fond memories of Natalie?",
+    "options": [
+      "The tea candles on her dresser",
+      "The sock monkey collection on her bed",
+      "That one Belle and Sebastian song she always listened to",
+      "Her smile",
+      "How she smelled like jasmine"
+  ],
+  "answer": "How she smelled like jasmine",
+  "difficulty": "medium",
+  "episode": 4,
+  "description": "Ted talks about her smile, the song she listened to, sock puppets and tea candles but never mentioned jasmine."
+},
+  {
+    "id": "himym-s1e4-medium-0017",
+    "context": "Back in the apartment, Ted tries to explain why Natalie might hate him, and Lily starts pulling the truth out of him.",
+    "question": "What timing mistake does Lily realize Ted made when he originally ended things with Natalie?",
+    "options": [
+      "He broke up with her on her birthday",
+      "He broke up with her on New Year’s Eve",
+      "He broke up with her on Valentine’s Day",
+      "He broke up with her right after moving in"
+    ],
+    "answer": "He broke up with her on her birthday",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Lily drills him until it clicks, then goes off: “Never… break… up… with… a… girl… on… her… birthday!”"
+  },
+  {
+    "id": "himym-s1e4-medium-0018",
+    "context": "They recreate what Ted actually did back then, and it gets worse the more details come out.",
+    "question": "How did Ted deliver the breakup message to Natalie the first time?",
+    "options": [
+      "On her answering machine",
+      "In person at dinner",
+      "By email",
+      "By letter in the mail"
+    ],
+    "answer": "On her answering machine",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Lily is horrified: “On… her… answering… machine!? And… on… her… birthday?!”"
+  },
+  {
+    "id": "himym-s1e4-hard-0014c",
+    "context": "At MacLaren’s, Ted floats the idea of revisiting an old relationship, and Barney immediately reduces it to something shallow.",
+    "question": "According to Barney, what are the only two reasons to date a girl you’ve already dated?",
+    "options": ["Breast implants", "Butt implants", "True love", "Plastic surgery"],
+    "answer": "Breast implants",
+    "difficulty": "hard",
+    "episode": 4,
+    "description": "Barney cuts in with: “Hold up, there are only two reasons to date a girl you’ve already dated. Breast, Implants.”"
+  },
+  {
+    "id": "himym-s1e4-hard-0031",
+    "context": "Barney contributes his own brutal “efficient” line while the group debates what Ted should say.",
+    "question": "Which line does Barney suggest as a breakup option?",
+    "options": [
+      "You look fat in those jeans",
+      "Are you gaining some weight",
+      "I’m moving to another country",
+      "We should see other people"
+    ],
+    "answer": "You look fat in those jeans",
+    "difficulty": "hard",
+    "episode": 4,
+    "description": "Barney counts it out like it’s poetry: “You… look… fat… in… those… jeans…, you’re free to go.”"
+  },
+{
+  "id": "himym-s1e4-medium-0042b",
+  "context": "Across the episode, Robin’s on-air segments spiral as Barney keeps daring her into more and more embarrassing moments.",
+  "question": "In this episode, which of these does Robin NOT do on TV?",
+  "options": [
+    "Honking her own boobs",
+    "Saying \"Nipple\" on-air",
+    "Slapping her ass while saying \"I'm a dirty, dirty girl\"",
+    "Doing the Macarena on-air"
+  ],
+  "answer": "Doing the Macarena on-air",
+  "difficulty": "medium",
+  "episode": 4,
+  "description": "Robin says \"Nipple\" during the City Hall hotdog bit, later admits she ended a live newscast by honking her own boobs, and in the twins segment she slaps her butt while saying \"I'm a dirty, dirty girl\"—but she never does the Macarena."
+},
+  {
+    "id": "himym-s1e4-medium-0024",
+    "context": "Ted decides he’s going to face Natalie in person and tries to show he’s changed from who he used to be.",
+    "question": "What gift does Ted bring to Natalie’s door to try to get her to talk?",
+    "options": ["A giant sock monkey", "A bouquet of roses", "A box of chocolates", "A Belle and Sebastian mixtape"],
+    "answer": "A giant sock monkey",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Natalie looks through the peephole and sees “a giant sock monkey,” and Ted tries to use it to break the ice."
+  },
+  {
+    "id": "himym-s1e4-easy-0027",
+    "context": "After Ted and Natalie reconnect, he brings her around the gang and starts bragging about her new hobby.",
+    "question": "What class does Natalie say she has in half an hour?",
+    "options": ["Krav Maga", "Pilates", "Spin class", "Karate"],
+    "answer": "Krav Maga",
+    "difficulty": "easy",
+    "episode": 4,
+    "description": "Natalie says she has her “Krav Maga class in half an hour,” and Ted acts impressed."
+  },
+  {
+    "id": "himym-s1e4-medium-0032",
+    "context": "Robin walks into the bar and admits her live-report antics have escalated in a pretty humiliating way.",
+    "question": "Robin says she just wrapped up a live newscast by doing what?",
+    "options": [
+      "Honking her own boobs",
+      "Singing a jingle",
+      "Dancing in the street",
+      "Crying on camera"
+    ],
+    "answer": "Honking her own boobs",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Robin announces, “I just wrapped up a live newscast by honking my own boobs.”"
+  },
+{
+  "id": "himym-s1e4-medium-0041b",
+  "context": "At Metro News One, Robin is called into her boss’s office and he gives her a new assignment.",
+  "question": "What’s the name of Robin’s boss?",
+  "options": ["Mr. Adams", "Mr. McGee", "Mr West", "Mr Rogers"],
+  "answer": "Mr. Adams",
+  "difficulty": "medium",
+  "episode": 4,
+  "description": "When Robin comes in, her boss greets her with Robin calling him “Mr. Adams.”"
+},
+  {
+    "id": "himym-s1e4-hard-0033",
+    "context": "Barney unveils a bigger challenge for Robin with a detailed script and a specific dance move.",
+    "question": "What does Barney call the dance move he wants Robin to do on the news?",
+    "options": ["The Ickey Shuffle", "The Izzy Slide", "The Ickey Slide", "The Izzy Shuffle"],
+    "answer": "The Ickey Shuffle",
+    "difficulty": "hard",
+    "episode": 4,
+    "description": "When Robin asks what it is, everyone answers: “The Ickey Shuffle.”"
+  },
+  {
+    "id": "himym-s1e4-hard-0034",
+    "context": "At dinner the next night, Ted tries to start the breakup talk, but Natalie says something first that derails him.",
+    "question": "What does Natalie say happened at work that day before dinner?",
+    "options": [
+      "She had three birthday cakes",
+      "She got promoted",
+      "She got fired",
+      "She lost her wallet"
+    ],
+    "answer": "She had three birthday cakes",
+    "difficulty": "hard",
+    "episode": 4,
+    "description": "Natalie says, “Today at work, I had not one, not two, but three birthday cakes,” and asks to skip cake."
+  },
+  {
+    "id": "himym-s1e4-medium-0035",
+    "context": "Meanwhile, the gang is watching a live TV segment and Barney is practically vibrating with anticipation.",
+    "question": "Robin is interviewing Henry as New York’s oldest what?",
+    "options": ["Handsome cab driver", "Hotdog vendor", "News anchor", "limo driver"],
+    "answer": "Handsome cab driver",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "On the segment she says, “Henry, as New York’s oldest handsome cab driver…”"
+  },
+  {
+    "id": "himym-s1e4-medium-0036b",
+    "context": "During Robin’s live segment outside with Henry, the report gets emotional and then suddenly goes sideways on camera.",
+    "question": "What happens to Robin during the live report?",
+    "options": [
+      "She falls and gets covered in horse crap",
+      "She falls and hits her head",
+      "A bird craps on her",
+      "She gets heckled"
+    ],
+    "answer": "She falls and gets covered in horse crap",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Robin trips mid-report and panics on-air: \"I'm covered in horse crap! It's in my hair!!\" while everyone watching at the bar loses it."
+  },
+  {
+    "id": "himym-s1e4-medium-0037",
+    "context": "At dinner, Ted finally says what he came to say, trying to keep it calm and direct.",
+    "question": "What does Ted tell Natalie when he breaks up with her?",
+    "options": [
+      "He doesn't think she's the one for him",
+      "They are not compatible",
+      "He wants to take a break",
+      "He met someone else"
+    ],
+    "answer": "He doesn't think she's the one for him",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Ted says, “I wanna break up. I don’t think you’re the one for me… I think the best way… is just to be honest.”"
+  },
+  {
+    "id": "himym-s1e4-medium-0039",
+    "context": "Future Ted jumps in to clarify a detail about Natalie that suddenly becomes extremely relevant.",
+    "question": "Future Ted says Krav Maga is what?",
+    "options": [
+      "A form of gorilla street fighting developed by the Israeli army",
+      "A type of yoga for flexibility",
+      "Martial arts self defense developed by the Turkish army",
+      "A form of street fighting developed by the Iranian army"
+    ],
+    "answer": "A form of gorilla street fighting developed by the Israeli army",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "He explains: “Turns out Krav Maga is not a kind of yoga. It’s a form of gorilla street fighting developed by the Israeli army.”"
+  },
+  {
+    "id": "himym-s1e4-medium-0040b",
+    "context": "At the restaurant, Ted tries to do the ‘mature’ breakup, but Natalie’s reaction is immediate and physical.",
+    "question": "What does Natalie do right after Ted breaks up with her?",
+    "options": [
+      "She roundhouse kicks him",
+      "She slaps him across the face",
+      "She throws her drink in his face",
+      "She punches him in the face"
+    ],
+    "answer": "She roundhouse kicks him",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "After Ted drops the \"you're not the one\" speech, Natalie uses her Krav Maga and nails him with a mean roundhouse kick that sends him flying."
+  },
+  {
     "id": "himym-s1e5-easy-0036",
     "context": "**EPISODE 5**: In the future framing of the episode, Ted is narrating the story to his kids and the timeline is shown on screen.",
     "question": "In what year is Future Ted for most of the narration?",
@@ -198,6 +1374,784 @@
     "difficulty": "hard",
     "episode": 5,
     "description": "The woman turns and says “Barney??” and it turns out: “That was my cousin, Leslie.”"
+  },
+  {
+    "id": "himym-s1e6-easy-0001",
+    "context": "**EPISODE 6**: In 2030, Future Ted sets up a story and points out that Robin didn’t always feel the same way about the holiday.",
+    "question": "Future Ted says Robin wasnt a big fan of what holiday?",
+    "options": ["Halloween", "New Year's Eve", "Thanksgiving", "Valentine's Day"],
+    "answer": "Halloween",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "He opens with: “You know how Aunt Robin's a big fan of Halloween, always dressing up in crazy costumes?”"
+  },
+  {
+    "id": "himym-s1e6-easy-0007",
+    "context": "Marshall asks Robin about her plan for Halloween, and Robin casually mentions someone none of them knew existed.",
+    "question": "What’s the name of the guy Robin says she’s been seeing?",
+    "options": ["Mike", "Mark", "Matt", "Mitch"],
+    "answer": "Mike",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "Robin says she’ll probably hang out with “Mike, this guy I’ve been seeing.”"
+  },
+  {
+    "id": "himym-s1e6-hard-0003",
+    "context": "Marshall checks a detail about their costumes because he clearly remembers what happened the previous year.",
+    "question": "Lily says Marshall’s costume is 100% what?",
+    "options": ["Wool", "Cotton", "Polyester", "Leather"],
+    "answer": "Wool",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "She tells him, “And yours is 100% wool so you won't get hypothermia like last year.”"
+  },
+  {
+    "id": "himym-s1e6-hard-0010",
+    "context": "Robin tries to dodge a double-date suggestion by describing what she and Mike were thinking of doing instead.",
+    "question": "Robin says she and Mike were thinking of staying home and dressing up as what?",
+    "options": ["Naked people", "Sleeping people", "Pyjamas", "Duvets"],
+    "answer": "Naked people",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "Robin says they were thinking of “staying at home and dressing up as naked people.”"
+  },
+  {
+    "id": "himym-s1e6-medium-0013",
+    "context": "The group explains Ted’s yearly tradition that he refuses to let go of.",
+    "question": "Who does Lily say Ted waits for every Halloween?",
+    "options": ["The Slutty Pumpkin", "The Pineapple Girl", "The Slutty Pineapple", "The Slutty Penguin"],
+    "answer": "The Slutty Pumpkin",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Lily says, “Every Halloween Ted waits for the Slutty Pumpkin,” and Ted confirms: “That’s right.”"
+  },
+  {
+    "id": "himym-s1e6-medium-0014",
+    "context": "Ted starts telling the origin story, describing when and where he first met the girl he keeps hoping to see again.",
+    "question": "Where does Ted say the Halloween party was when he first saw the Slutty Pumpkin?",
+    "options": ["On the roof of his building", "At MacLaren’s", "In their apartment", "On the roof of Maclaren´s"],
+    "answer": "On the roof of his building",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Ted says it was “this Halloween party up on the roof of our building.”"
+  },
+  {
+    "id": "himym-s1e6-hard-0016",
+    "context": "Ted describes the drink he saw her mixing at the bar during the rooftop party.",
+    "question": "What two ingredients does the Slutty Pumpkin mix together?",
+    "options": ["Kahlua and root beer", "Vodka and rootbeer", "Kahlua and Coke", "Tequila and orange juice"],
+    "answer": "Kahlua and root beer",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "Lily jumps in with the exact combo: “Kahlua and root beer,” and they explain it’s her invention."
+  },
+  {
+    "id": "himym-s1e6-hard-0017",
+    "context": "The gang keeps interrupting Ted’s story with details they clearly love repeating.",
+    "question": "What does the gang say she called the cocktail she invented?",
+    "options": ["The Tootsie Roll", "The Slutty Roll", "The Root Brew", "The Nightcap"],
+    "answer": "The Tootsie Roll",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "They all pile on: “And she called it the Tootsie Roll… because it tastes like an alcoholic Tootsie Roll.”"
+  },
+  {
+    "id": "himym-s1e6-medium-0018",
+    "context": "In the flashback apartment scene, Ted bursts in excited and starts listing why this girl is perfect.",
+    "question": "Which fandom does Ted say the girl loves?",
+    "options": ["Star Wars", "Star Trek", "Harry Potter", "Lord of the Rings"],
+    "answer": "Star Wars",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Ted says, “She’s funny. She’s beautiful. She loves Star Wars.”"
+  },
+  {
+    "id": "himym-s1e6-hard-0017b",
+    "context": "In the flashback to four years earlier, we see what Marshall and Lily were dressed as that year.",
+    "question": "In the flashback, what are Marshall and Lily dressed up as?",
+    "options": ["Sonny and Cher", "Batman and Robin", "Tarzan and Jane", "Han Solo and Leia"],
+    "answer": "Sonny and Cher",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "The flashback shows Lily passing out candy dressed as Sonny, and Marshall walks out dressed as Cher, prompting Ted: “Sonny, where’s Cher?”"
+  },
+  {
+    "id": "himym-s1e6-hard-0019",
+    "context": "Marshall immediately tests compatibility with a very specific Star Wars argument.",
+    "question": "Marshall asks Ted what her take is on what?",
+    "options": ["Ewoks", "Jedis", "Droids", "Wookiees"],
+    "answer": "Ewoks",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "Marshall goes, “Whoa… what’s her take on Ewoks?” and Ted says she loves them."
+  },
+  {
+    "id": "himym-s1e6-medium-0020",
+    "context": "Ted describes the girl’s job and a wild-sounding research trip that impresses Marshall.",
+    "question": "What does Ted say the girl does for a living?",
+    "options": ["Marine biologist", "Doctor", "Lawyer", "Journalist"],
+    "answer": "Marine biologist",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Ted says, “Get this, she’s a marine biologist,” and talks about her studying penguins in Antarctica."
+  },
+  {
+    "id": "himym-s1e6-hard-0021",
+    "context": "Ted explains how he lost the one thing he needed to ever find her again.",
+    "question": "Where was the Slutty Pumpkin’s phone number written?",
+    "options": ["On a Kit Kat wrapper", "On a napkin", "On a Mars Bar wrapper", "On a coaster"],
+    "answer": "On a Kit Kat wrapper",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "Ted panics: “I need that Kit Kat. She wrote her number on that wrapper.”"
+  },
+  {
+    "id": "himym-s1e6-hard-0022",
+    "context": "In the flashback, Ted realizes the wrapper is gone and immediately accuses the most likely culprit.",
+    "question": "Which costume kid does Ted chase down demanding his candy?",
+    "options": ["Dracula", "A ninja", "A pirate", "A pumpkin"],
+    "answer": "Dracula",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "Ted runs out and yells, “Hey, Dracula… give me your candy,” then dumps it out looking for the Kit Kat."
+  },
+  {
+    "id": "himym-s1e6-medium-0023",
+    "context": "Back at the bar in 2005, Ted explains why he still believes she might return this year.",
+    "question": "How many years does Ted say it’s been since he met the Slutty Pumpkin?",
+    "options": ["Four years", "Two years", "Six years", "Ten years"],
+    "answer": "Four years",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Ted says, “It was four years ago,” and later Barney repeats that it’s been four years."
+  },
+  {
+    "id": "himym-s1e6-hard-0024",
+    "context": "Barney tries to talk Ted out of waiting by listing how her life might have changed since then.",
+    "question": "Which of these does Barney NOT suggest could be true about the Slutty Pumpkin by now?",
+    "options": ["She could be engaged", "She could be married", "She could be dead", "She could be fat"],
+    "answer": "She could be dead",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "Barney says she could be “engaged or married or, God forbid, fat,” but he never mentions her being dead."
+  },
+  {
+    "id": "himym-s1e6-medium-0025",
+    "context": "At the apartment, Marshall and Lily reveal their costumes and brag about the contest like it’s guaranteed.",
+    "question": "How much does Marshall say they paid for their costumes?",
+    "options": ["$100 each", "$50 total", "$100 total", "$50 each"],
+    "answer": "$100 each",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Marshall says “$100,” Lily adds “Each,” and Ted points out the prize is only a $50 gift certificate."
+  },
+  {
+    "id": "himym-s1e6-easy-0018b",
+    "context": "In the present-day Halloween prep at the apartment, Marshall and Lily reveal the costumes they ordered and plan to wear to win the contest.",
+    "question": "What do Marshall and Lily dress up as this Halloween?",
+    "options": ["A pirate and a parrot", "A king and a queen", "A cowboy and a cowgirl", "A doctor and a nurse"],
+    "answer": "A pirate and a parrot",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "They step out in costume—Marshall as a pirate (with eye liner) and Lily as a parrot who repeats lines and squawks."
+  },
+  {
+    "id": "himym-s1e6-hard-0026",
+    "context": "Ted explains he needs to be recognizable to the girl he met years ago, so he sticks with a specific costume.",
+    "question": "What does Ted say the Slutty Pumpkin knows him as?",
+    "options": ["A hanging chad", "A pirate", "An angel", "A barnacle"],
+    "answer": "A hanging chad",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "Ted insists, “she knows me as a hanging chad,” and puts on the ballot costume with the hanging chad."
+  },
+  {
+    "id": "himym-s1e6-medium-0027b",
+    "context": "At the apartment, Ted hears loud music at the door and opens it to find Barney making a dramatic entrance to recruit him for the night.",
+    "question": "What is Barney’s first costume when he tries to pull Ted into his plan?",
+    "options": ["A pilot in a flight suit", "A devil", "A penguin", "A pirate"],
+    "answer": "A pilot in a flight suit",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Barney storms in wearing a flight suit with “Danger Zone” playing and orders Ted: “You’re going as my wingman. Flight suit up!”"
+  },
+  {
+    "id": "himym-s1e6-medium-0028b",
+    "context": "Barney tries to tempt Ted away from the roof party by claiming he has a much better plan for the night.",
+    "question": "What party does Barney say he can get them into?",
+    "options": [
+      "The Victoria's Secret Halloween party",
+      "A Playboy Mansion Halloween party",
+      "The Sin City Halloween party",
+      "A Halloween party at MacLaren's VIP room"
+    ],
+    "answer": "The Victoria's Secret Halloween party",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Barney claims: “I’m getting us into the Victoria’s Secret Halloween party,” trying to make Ted abandon the roof and the Slutty Pumpkin."
+  },
+  {
+    "id": "himym-s1e6-hard-0028",
+    "context": "Robin arrives at the apartment and then Mike shows up, revealing he took their costume idea seriously.",
+    "question": "What costume is Mike wearing when he arrives?",
+    "options": ["Hansel", "Jack Sparrow", "Rizzoli", "Romeo"],
+    "answer": "Hansel",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "Robin opens the door and Mike is dressed as Hansel, asking, “Where’s your costume, Gretel?”"
+  },
+  {
+    "id": "himym-s1e6-medium-0029",
+    "context": "On the rooftop party, a host introduces a returning group before they sing.",
+    "question": "What is the name of the a cappella group that performs on the roof?",
+    "options": ["The Shagarats", "The Shagadelics", "The Larens", "The Yale Yellers"],
+    "answer": "The Shagarats",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "The host welcomes back “the Shagarats,” and they sing “My bonnie lies over the ocean…”"
+  },
+  {
+    "id": "himym-s1e6-hard-0030",
+    "context": "At the bar, Barney stays in character and starts telling corny pirate jokes to the table.",
+    "question": "Lily answers that a pirate’s favorite kind of sweater is what?",
+    "options": ["Arr-gyle", "Arr-wool", "Arr-hoodie", "Arr-cardigan"],
+    "answer": "Arr-gyle",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "Barney asks, “What be a pirate’s favorite kind of sweater?” and Lily answers instantly: “Arr-gyle.”"
+  },
+  {
+    "id": "himym-s1e6-hard-0030b",
+    "context": "At the bar, Barney stays in pirate mode and asks Lily a corny question that she answers instantly.",
+    "question": "According to Lily, what is a pirate’s favorite fast food restaurant?",
+    "options": ["Arrr-by's", "Taco Arrr-bell", "Captain D's", "Burger Kaaarrng"],
+    "answer": "Arrr-by's",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "Barney (talking like a pirate): Would think it would be Arby's, (talking normal) but actually it's Long John Silver's."
+  },
+  {
+    "id": "himym-s1e6-medium-0036b",
+    "context": "On the rooftop party, Barney makes a move on a girl at the bar and tries a costume-based pun as his opener.",
+    "question": "What is the girl Barney hits on dressed as at the rooftop party?",
+    "options": ["A hula girl", "A nurse", "A witch", "A cat"],
+    "answer": "A hula girl",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Barney approaches the hula girl and goes, “So, what does a fella have to do to get lei’d around here?”—she shuts it down immediately."
+  },
+  {
+    "id": "himym-s1e6-medium-0037b",
+    "context": "Barney tries to lure Ted away from the rooftop party by hyping his own future success at a different event.",
+    "question": "What nickname does Barney give himself in this episode?",
+    "options": ["The Barnacle", "The Barnivore", "The Barnman", "The Barndoor"],
+    "answer": "The Barnacle",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Barney claims the Victoria’s Secret party is on a yacht and says, “And what will be sticking to that yacht? The Barnacle,” pointing at himself."
+  },
+  {
+    "id": "himym-s1e6-medium-0038b",
+    "context": "After striking out, Barney reappears later with a totally different look to reset his chances at the same party.",
+    "question": "What is Barney’s second costume at the rooftop party?",
+    "options": ["A devil", "A penguin", "A pilot", "An angel"],
+    "answer": "A devil",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Ted spots him again and says, “Barney. What, you're back? In a totally new costume,” and Barney’s dressed as a devil."
+  },
+  {
+    "id": "himym-s1e6-hard-0039b",
+    "context": "Near the end of the night, Ted thinks he’s finally seeing the sign he’s been waiting for and approaches someone making a familiar drink.",
+    "question": "What is Barney’s third costume by the end of the rooftop party?",
+    "options": ["A penguin", "A pumpkin", "A pirate", "A ninja"],
+    "answer": "A penguin",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "Ted spots a penguin mixing “kahlua” and “root beer,” thinks it might be the Slutty Pumpkin, and then the penguin head comes off—it's Barney."
+  },
+  {
+    "id": "himym-s1e6-medium-0040a",
+    "context": "Late night on the rooftop after the party thins out, Robin finds Ted still sitting there and opens up about her breakup and how she feels about love.",
+    "question": "What does Ted tell Robin is the reason she couldn’t be “Gretel” for Mike?",
+    "options": [
+      "She just hasn’t met the right Hansel yet",
+      "She doesn’t actually like Halloween",
+      "She’s too focused on her career",
+      "She’s afraid of commitment"
+    ],
+    "answer": "She just hasn’t met the right Hansel yet",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "When Robin asks, “Why can’t I be Gretel?”, Ted reassures her: “Because you just haven’t met the right Hansel yet… one day you’re gonna meet a guy who’s gonna make you want to look like a complete idiot.”"
+},
+  {
+    "id": "himym-s1e7-hard-0007",
+    "context": "**EPISODE 7**: In the flashback, Lily and Marshall come into the apartment tipsy and flirty, joking about what’s making them feel bold.",
+    "question": "Marshall says what kind of drinks make him sexy?",
+    "options": ["Margaritas", "Martinis", "Mimosas", "Manhattans"],
+    "answer": "Margaritas",
+    "difficulty": "hard",
+    "episode": 7,
+    "description": "Flashback Marshall says: “I don't know what it is, but margaritas make me sexy.”"
+  },
+  {
+    "id": "himym-s1e7-medium-0008",
+    "context": "Back at the bar, they argue about a creature they saw at their apartment and each insists on a different animal.",
+    "question": "Marshall claims the thing they saw was a what?",
+    "options": ["Mouse", "Cockroach", "Rat", "Bat"],
+    "answer": "Mouse",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Marshall insists: “It, it was a mouse… It had a whiskers.”"
+  },
+  {
+    "id": "himym-s1e7-medium-0009",
+    "context": "Lily immediately corrects Marshall and points to the features that prove he’s wrong.",
+    "question": "Lily says the thing they saw was a what?",
+    "options": ["Cockroach", "Rat", "Squirrel", "Lizard"],
+    "answer": "Cockroach",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Lily fires back: “Sweetie, that wasn't a mouse. That was a huge cockroach.”"
+  },
+  {
+    "id": "himym-s1e7-medium-0012",
+    "context": "On TV, Robin interviews a famous matchmaker whose business claims perfect results.",
+    "question": "What is the matchmaker’s name Robin is interviewing?",
+    "options": ["Ellen Pierce", "Sarah Barber", "Claire Austin", "Kate Austen"],
+    "answer": "Ellen Pierce",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Robin introduces “Ellen Pierce, New York's premiere matchmaker.”"
+  },
+  {
+    "id": "himym-s1e7-easy-0041",
+    "context": "At MacLaren’s, Robin’s TV segment introduces a matchmaking service with a bold success claim, and the gang immediately reacts to it.",
+    "question": "What is the name of the dating company Robin features on Metro News One?",
+    "options": ["Love Solutions", "Perfect Match NYC", "Soulmate Systems", "Manhattan Matchmakers"],
+    "answer": "Love Solutions",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "Robin interviews matchmaker Ellen Pierce and calls her “Love Solution’s Ellen Pierce,” and later Ted and Barney go to the Love Solutions office."
+  },
+  {
+    "id": "himym-s1e7-hard-0014",
+    "context": "Right after the segment, Barney explains exactly why he thinks they should sign up.",
+    "question": "Why does Barney want to sign up for the matchmaker?",
+    "options": [
+      "He thinks the women will be desperate and hot",
+      "He wants to find Ted a wife",
+      "He wants to prove love is math",
+      "He wants a discount on dates"
+    ],
+    "answer": "He thinks the women will be desperate and hot",
+    "difficulty": "hard",
+    "episode": 7,
+    "description": "Barney says, “These chicks are desperate and hot. That's a perfect cocktail.”"
+  },
+  {
+    "id": "himym-s1e7-medium-0015",
+    "context": "Ted pushes back on the idea because it feels like a defeat rather than dating.",
+    "question": "Ted compares going to a matchmaker to what?",
+    "options": [
+      "The man version of getting a cat",
+      "Buying love in a store",
+      "Writing yourself a love letter",
+      "Moving back home"
+    ],
+    "answer": "The man version of getting a cat",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Ted says, “That's like giving up. It's the man version of getting a cat.”"
+  },
+  {
+    "id": "himym-s1e7-medium-0016",
+    "context": "Barney shows up frantic at the apartment and uses a ridiculous emergency to get Ted moving.",
+    "question": "What does Barney claim is happening that makes him need Ted right now?",
+    "options": ["His boat is sinking", "His car got towed", "His suit got stolen", "His job is on the line"],
+    "answer": "His boat is sinking",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Barney bursts in: “Ted, hurry, you gotta help me. My boat is sinking.”"
+  },
+  {
+    "id": "himym-s1e7-medium-0020",
+    "context": "Ellen tells Ted she can work with him and points out Barney used a dumb fake name on his application.",
+    "question": "What obvious alias did Barney use on his application?",
+    "options": ["Jack Package", "Max Slick", "Jack Slick", "Max Package"],
+    "answer": "Jack Package",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Ellen says Ted didn’t use an alias “like your friend, Jack Package,” and Barney yells it’s pronounced “Pa-kojj.”"
+  },
+  {
+    "id": "himym-s1e7-hard-0021",
+    "context": "Ellen tries to crush Ted’s confidence with math, narrowing NYC down to a tiny number of possibilities.",
+    "question": "After Ellen’s math, how many women does she say are left for Ted?",
+    "options": ["8", "6", "4", "10"],
+    "answer": "8",
+    "difficulty": "hard",
+    "episode": 7,
+    "description": "Ellen finishes her breakdown and says it leaves Ted with “8 women.”"
+  },
+  {
+    "id": "himym-s1e7-medium-0022",
+    "context": "Back at the bar, Lily and Marshall return with new details after another encounter in the apartment.",
+    "question": "What do Lily and Marshall decide the creature is called?",
+    "options": ["A cockamouse", "A cockapotatomouse", "A roachrat", "A sewer gremlin"],
+    "answer": "A cockamouse",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Lily declares, “It's a cockamouse,” and Marshall insists, “It's a cockamouse.”"
+  },
+  {
+    "id": "himym-s1e7-medium-0042",
+    "context": "In Ellen’s office, Ted spots a standout compatibility score on the screen and learns the name of the woman tied to it.",
+    "question": "What is the name of the woman Ted sees as a 9.6 match on Ellen Pierce’s computer?",
+    "options": ["Sarah O'Brien", "Katie Barber", "Natalie O'Neil", "Mara Barber"],
+    "answer": "Sarah O'Brien",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Ted points out “a 9.6,” and Ellen immediately identifies her: “Yes, Sarah O'Brien… She would have been absolutely perfect for you.”"
+  },
+  {
+    "id": "himym-s1e7-hard-0029",
+    "context": "At MacLaren’s, Ted reads the printouts like a maniac and lists weirdly specific ‘match’ facts.",
+    "question": "Which guilty-pleasure song does Ted say Sarah O'Brien loves?",
+    "options": ["Summer Breeze", "Endless Love", "Careless Whisper", "Total Eclipse of the Heart"],
+    "answer": "Summer Breeze",
+    "difficulty": "hard",
+    "episode": 7,
+    "description": "Ted reads: “Her guilty pleasure song is Summer Breeze by Seals and Croft.”"
+  },
+  {
+    "id": "himym-s1e7-medium-0030",
+    "context": "Ted argues they should at least see what this “9.6” looks like in person, so he sets up a visit.",
+    "question": "What kind of doctor is Sarah O'Brien?",
+    "options": ["Dermatologist", "Cardiologist", "Pediatrician", "Neurologist"],
+    "answer": "Dermatologist",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Ted notes from the file: “She's a dermatologist,” and later she introduces herself as “Dr. O'Brien.”"
+  },
+  {
+    "id": "himym-s1e7-medium-0032",
+    "context": "The small talk turns eerie when Ted and Sarah keep matching each other’s lines and preferences.",
+    "question": "What does Sarah say she’s doing on Saturday that shuts Ted down immediately?",
+    "options": [
+      "Getting married",
+      "Getting engaged",
+      "Moving apartments",
+      "Leaving New York"
+    ],
+    "answer": "Getting married",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Sarah tells him, “I'm actually getting married on Saturday,” and Ted’s whole fantasy collapses."
+  },
+  {
+    "id": "himym-s1e7-hard-0037",
+    "context": "As soon as it’s out, a new horrifying detail becomes obvious and everyone reacts at once.",
+    "question": "What shocking ability do they realize the cockamouse has?",
+    "options": ["It can fly", "It can talk", "It can swim", "It can change color"],
+    "answer": "It can fly",
+    "difficulty": "hard",
+    "episode": 7,
+    "description": "Robin blurts, “It can fly,” after they throw it out, and it immediately comes back at the window."
+  },
+  {
+    "id": "himym-s1e7-medium-0038",
+    "context": "Ted returns to Sarah’s office thinking she’s calling about feelings, not medicine.",
+    "question": "What is the actual reason Sarah calls Ted back to the office?",
+    "options": [
+      "His biopsy results show basal cell carcinoma",
+      "She called off her wedding",
+      "His biopsy results came back negative",
+      "She wants to set him up with a friend"
+    ],
+    "answer": "His biopsy results show basal cell carcinoma",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Sarah tells him: “You have a basal cell carcinoma… Your mole. The biopsy came back.”"
+  },
+  {
+    "id": "himym-s1e7-hard-0039",
+    "context": "Ted confronts Sarah about the Love Solutions score and tries to sell her on the logic of it.",
+    "question": "Sarah tells Ted what key idea about love?",
+    "options": [
+      "Love isn't a science—you can't calculate a feeling",
+      "Love is just chemistry and timing",
+      "Love isn't all about statistics",
+      "Love isn't a competition you can win"
+    ],
+    "answer": "Love isn't a science—you can't calculate a feeling",
+    "difficulty": "hard",
+    "episode": 7,
+    "description": "Sarah shuts it down: “Love isn't a science. You can't calculate a feeling.”"
+  },
+  {
+    "id": "himym-s1e7-medium-0040",
+    "context": "At Love Solutions after everything blows up, Ted finds Ellen in a dark office and tries to pull her back from the edge.",
+    "question": "How does Ted convince Ellen to keep searching?",
+    "options": [
+      "If a cockroach and a mouse can find love",
+      "Love isn't a science—you can't calculate a feeling",
+      "He reminds her about her 100% success rate",
+      "He tells her he believes in he"
+    ],
+    "answer": "If a cockroach and a mouse can find love",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Ted gives the pep talk: “if a cockroach and a mouse can find love… then, dammit, so can I… Point is, something good is going to happen to me.”"
+  },
+  {
+    "id": "himym-s1e8-easy-0001",
+    "context": "**EPISODE 8**: Future Ted sets up a montage of memories from the gang’s old place and zooms in on one specific detail in the apartment.",
+    "question": "What did Ted, Marshall, and Lily call Ted’s old coffeemaker?",
+    "options": ["Shocky", "Sparky", "Rusty", "Buzzy"],
+    "answer": "Shocky",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Ted remembers “this coffeepot… made truly terrible coffee” and says, “We called it Shocky,” right before it shocks him when he plugs it in."
+  },
+  {
+    "id": "himym-s1e8-easy-0002",
+    "context": "On a walk with Robin, Lily stops dead and insists they’re standing at the exact spot where her old place used to be.",
+    "question": "Where was Lily’s old apartment located?",
+    "options": ["In Queens", "In Brooklyn", "In Manhattan", "In The Bronx"],
+    "answer": "In Queens",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Lily tells the guys, “We were in Queens and we decided to stop by my apartment,” then points right at the spot and insists, “This is my apartment. Right here.”"
+  },
+  {
+    "id": "himym-s1e8-medium-0003",
+    "context": "On the walk to Lily’s old place, she explains why she still keeps it even though she basically lives with Marshall already.",
+    "question": "What does Lily compare her old apartment to?",
+    "options": ["Fat pants", "A rainy-day fund", "A spare key", "A security blanket"],
+    "answer": "Fat pants",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Lily says it’s “like fat pants… You hope you never have to use ’em but you’re glad to know they’re there.”"
+  },
+  {
+    "id": "himym-s1e8-easy-0004",
+    "context": "Lily and Robin arrive at the spot Lily thinks is her building—and Lily immediately realizes something is seriously off.",
+    "question": "What is now located where Lily’s apartment used to be?",
+    "options": ["A Chinese restaurant", "A Vietnemase restaurant", "A nail salon", "A bodega"],
+    "answer": "A Chinese restaurant",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "In the flashback, Robin says, “Lily, this is a Chinese restaurant,” while Lily insists it used to be her apartment."
+  },
+  {
+    "id": "himym-s1e8-medium-0005",
+    "context": "Inside the restaurant, Lily starts pointing out details that convince her she’s standing in her old home.",
+    "question": "What does Lily point to and say used to be her dresser?",
+    "options": ["A piece of furniture in the dining area", "A fish tank", "A cash register", "A kitchen counter"],
+    "answer": "A piece of furniture in the dining area",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Lily gestures around and then says, “That’s my dresser!” while mapping her old apartment layout onto the restaurant."
+  },
+  {
+    "id": "himym-s1e8-easy-0006",
+    "context": "Lily proves she knows the space by opening a door and pointing to a very specific mark she remembers making.",
+    "question": "What stain does Lily say she left in the closet?",
+    "options": ["Nail polish", "Coffee", "Wine", "Paint"],
+    "answer": "Nail polish",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Lily opens the closet and says, “And I spilled nail polish there. There’s the stain.”"
+  },
+  {
+    "id": "himym-s1e8-medium-0007",
+    "context": "A waitress recognizes Lily immediately, and Lily realizes there’s a reason for it.",
+    "question": "Why does the waitress say she recognizes Lily?",
+    "options": ["From Lily’s homecoming picture", "From Lil´s baby pictures", "From the building’s lobby board", "From Lily’s high school picture"],
+    "answer": "From Lily’s homecoming picture",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "The waitress says she knows Lily “from your homecoming picture,” then tells her she’s “much prettier in person.”"
+  },
+  {
+    "id": "himym-s1e8-hard-0010",
+    "context": "Lily tries to invoke her landlady and stops mid-sentence when reality hits.",
+    "question": "What does the waitress say happened to Lily’s landlady, Mrs. Conroy?",
+    "options": ["She got hit by a bus", "She moved to Florida", "She went into a nursing home", "She was arrested"],
+    "answer": "She got hit by a bus",
+    "difficulty": "hard",
+    "episode": 8,
+    "description": "Lily realizes it mid-thought—then the waitress confirms: “She’s dead, isn’t she?” … “Never even saw the bus.”"
+  },
+  {
+    "id": "himym-s1e8-easy-0011",
+    "context": "After Lily’s shock wears off, she panics about what she’s supposed to do next—until Ted blurts out a solution.",
+    "question": "What does Ted immediately offer Lily after she loses her apartment?",
+    "options": ["To come live with them", "A loan for a new place", "To talk to a lawyer", "To move in with Robin"],
+    "answer": "To come live with them",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Ted says, “Come live with us,” and adds it won’t really change anything because she’s basically there anyway."
+  },
+  {
+    "id": "himym-s1e8-medium-0012",
+    "context": "At the bar, Barney frames Lily moving in as a turning point and forces Ted to think about the future.",
+    "question": "According to Barney, what big issue does Lily moving in force Ted to face?",
+    "options": [
+      "Who gets the apartment when Marshall and Lily get married",
+      "Whether Ted should move to Queens",
+      "Who gets the big room",
+      "Whether Ted becomes second fiddle to Lily"
+    ],
+    "answer": "Who gets the apartment when Marshall and Lily get married",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Barney says someone’s going to move out when Marshall gets married and pushes Ted on “who gets the apartment.”"
+  },
+  {
+    "id": "himym-s1e8-medium-0016",
+    "context": "Back at the apartment, Ted tries to be upbeat about the new living arrangement—until he notices something has changed.",
+    "question": "What item does Lily replace in the kitchen?",
+    "options": ["Coffeemaker", "A French press", "A coffee grinder", "A tea kettle"],
+    "answer": "Coffeemaker",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Ted finds a different coffeemaker and asks, “What happened to Shocky?” Lily says it’s “My coffeemaker from my apartment.”"
+  },
+  {
+    "id": "himym-s1e8-easy-0019",
+    "context": "Ted recounts the moment that made him realize the apartment vibe is changing fast.",
+    "question": "What long-time wall decoration does Marshall consider taking down to make room for Lily’s painting?",
+    "options": ["The swords", "A dartboard", "A framed poster", "A shelf of trophies"],
+    "answer": "The swords",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Ted freaks out because “those swords have been up there a long time,” and Marshall is ready to take them down."
+  },
+  {
+    "id": "himym-s1e8-medium-0020",
+    "context": "At the bar, Barney tells Ted he needs to “mark his territory,” and Ted starts acting out in petty ways at home.",
+    "question": "What is one specific thing Lily says Ted does to mark his territory?",
+    "options": [
+      "He labels all his food",
+      "He changes the locks",
+      "He hides Lily’s painting supplies",
+      "He moves Marshall’s study desk"
+    ],
+    "answer": "He labels all his food",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Lily tells Marshall, “Ted’s been acting weird. He started labeling all his food,” as things quietly escalate."
+  },
+  {
+    "id": "himym-s1e8-medium-0022",
+    "context": "Marshall answers the door and receives a delivery that makes Ted’s passive-aggressive campaign impossible to ignore.",
+    "question": "What massive item gets delivered for Ted?",
+    "options": ["An English phone booth", "A jukebox", "A pinball machine", "A grand piano"],
+    "answer": "An English phone booth",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "The delivery guy announces, “Delivery for Ted Mosby,” and Marshall turns to see: “Your English phone booth arrived.”"
+  },
+  {
+    "id": "himym-s1e8-medium-0024",
+    "context": "Barney pitches a new dating rule at the bar, then instantly tries it out on a date as a proof of concept.",
+    "question": "What does Barney call his five-minute dating rule?",
+    "options": ["The lemon law", "The Orange law", "The exit clause", "The lemon policy"],
+    "answer": "The lemon law",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Barney says dating needs “a lemon law” where you get five minutes to decide and can end it with “no hard feelings.”"
+  },
+  {
+    "id": "himym-s1e8-hard-0025",
+    "context": "Barney brags about his idea working and later tells the group about a specific date where he tested it.",
+    "question": "What is the name of the girl Barney says he was on a date with when the lemon law worked on him?",
+    "options": ["Jackie", "Katie", "Karen", "Kelsey"],
+    "answer": "Jackie",
+    "difficulty": "hard",
+    "episode": 8,
+    "description": "In the waiting room Barney says, “I was on a date with this girl, Jackie,” and we flash to Jackie saying, “I’m gonna have to lemon law you.”"
+  },
+  {
+    "id": "himym-s1e8-easy-0026",
+    "context": "Barney tries to prove the lemon law in the moment by calling Robin’s bluff about giving people more time.",
+    "question": "What is the name of the guy Barney introduces Robin to as a test of her argument?",
+    "options": ["Kevin", "Carl", "Rudy", "Madsen"],
+    "answer": "Kevin",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Barney walks over and says, “Hi, have you met Robin?” and the guy introduces himself: “Kevin.”"
+  },
+  {
+    "id": "himym-s1e8-medium-0031",
+    "context": "During the duel, the guys start remembering why those swords mattered in the first place.",
+    "question": "When did Ted and Marshall first get the swords they’re fighting with?",
+    "options": ["The day they moved in", "Ted’s 30th birthday", "Marshall’s engagement night", "After a bar bet"],
+    "answer": "The day they moved in",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Marshall asks, “You remember when we first got these swords?” and Ted answers, “It was the day we moved in.”"
+  },
+  {
+    "id": "himym-s1e8-medium-0032",
+    "context": "Ted and Marshall’s argument spirals into a full-on sword fight, and the moment Lily walks in, everything goes wrong at once.",
+    "question": "What happens while Ted and Marshall are fighting with swords?",
+    "options": [
+      "Lily gets stabbed",
+      "Ted breaks the phone booth",
+      "Marshall breaks the phone booth",
+      "Robin gets stabbled"
+    ],
+    "answer": "Lily gets stabbed",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "The fight is getting intense when Lily enters—then the chaos turns real and she gets stabbed, sending everyone straight to the hospital."
+  },
+  {
+    "id": "himym-s1e8-medium-0033",
+    "context": "At the hospital, Lily tries to put a label on the two idiots who showed up guilty and sheepish.",
+    "question": "What does the doctor say Lily calls Ted and Marshall?",
+    "options": [
+      "The knights of the poorly constructed round table",
+      "The kings of bad decisions",
+      "The bros of the broken apartment",
+      "The lords of the phone booth"
+    ],
+    "answer": "The knights of the poorly constructed round table",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "The doctor says Lily wants to see “the knights of the poorly constructed round table,” and Marshall responds, “That’s us.”"
+  },
+  {
+    "id": "himym-s1e8-easy-0034",
+    "context": "In the exam room, Lily shuts down the apartment fight by admitting what she actually wants after the wedding.",
+    "question": "What does Lily say about the apartment when Marshall thinks they should keep it?",
+    "options": [
+      "She calls it a “boy apartment” and wants a new place when they’re married",
+      "She says it’s perfect and never wants to leave",
+      "She says she wants to redecorate it completely",
+      "She says she wants Ted to move out immediately"
+    ],
+    "answer": "She calls it a “boy apartment” and wants a new place when they’re married",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Lily says, “I don’t want that apartment. It’s a boy apartment… full of swords and videogames, and kinda smells like dude,” and wants to start a new life somewhere new."
+  },
+  {
+    "id": "himym-s1e8-medium-0035",
+    "context": "The gang ends the night together at a familiar restaurant that used to be Lily’s old place, and Lily makes a toast about change.",
+    "question": "In Lily’s toast, what does she say her old apartment has become?",
+    "options": ["A house of dumplings", "A palace of noodles", "A temple of rice", "A kingdom of wontons"],
+    "answer": "A house of dumplings",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Lily toasts: “Life is full of changes. One day you have an apartment, the next day it’s a house of dumplings. But the important stuff doesn’t change.”"
   }
 ]
+
+
+
 

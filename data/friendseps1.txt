@@ -1,5 +1,2098 @@
 [
   {
+    "id": "fr-s1e1-easy-0001",
+    "context": "'**EPISODE 1**: Central Perk: Monica downplays a dinner with a coworker while the gang probes.",
+    "question": "How does Monica define her ‘not a date’ with the guy from work?",
+    "options": ["Two people going out to dinner and not having sex", "A quick coffee with no talking", "A work meeting that accidentally became a date", "A blind double-date set up by friends"],
+    "answer": "Two people going out to dinner and not having sex",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Monica insists it’s just dinner and ‘not having sex,’ downplaying it as not a real date."
+  },
+  {
+    "id": "fr-s1e1-medium-0002",
+    "context": "Still at Central Perk: Chandler recounts a recurring high-school nightmare where he is totally naked.",
+    "question": "In Chandler’s recurring high-school dream, what does he discover is ‘there’ when he looks down?",
+    "options": ["A phone", "A rubber chicken", "A pager", "A toy car"],
+    "answer": "A phone",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Chandler says he’s naked in the cafeteria and realizes there’s a phone there."
+  },
+  {
+    "id": "fr-s1e1-medium-0003",
+    "context": "Chandler continues describing the dream as the gang reacts.",
+    "question": "In that dream, who ends up calling Chandler on the phone?",
+    "options": ["His mother", "Janice", "His dad", "His guidance counselor"],
+    "answer": "His mother",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "He says the phone rings and it’s his mother—‘very weird, because she never calls me.’"
+  },
+  {
+    "id": "fr-s1e1-easy-0004",
+    "context": "Ross arrives at Central Perk, devastated because something happened just that day.",
+    "question": "Who tries to ‘cleanse’ Ross’s aura when he arrives at Central Perk?",
+    "options": ["Phoebe", "Monica", "Chandler", "Rachel"],
+    "answer": "Phoebe",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Phoebe plucks at the air in front of Ross to cleanse his aura; Ross asks her to stop."
+  },
+  {
+    "id": "fr-s1e1-medium-0005",
+    "context": "The group checks in on Ross as Monica fills them in.",
+    "question": "What does Monica say happened earlier that day regarding Carol?",
+    "options": ["Carol moved her stuff out", "Carol asked for a divorce", "Carol called to apologize", "Carol came over to talk"],
+    "answer": "Carol moved her stuff out",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Monica explains to the group: ‘Carol moved her stuff out today.’"
+  },
+  {
+    "id": "fr-s1e1-truefalse-0006",
+    "context": "Ross vents about the breakup and how he feels.",
+    "question": "True or False: Ross says he wants to be single.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Ross says the opposite: ‘I don’t want to be single… I just wanna be married again!’"
+  },
+  {
+    "id": "fr-s1e1-easy-0007",
+    "context": "Joey offers his trademark ‘solution’ to heartbreak.",
+    "question": "What does Joey suggest Ross should do to cope with the breakup?",
+    "options": ["Go to a strip joint", "Join him at a bar", "Take a road trip", "Join a gym"],
+    "answer": "Go to a strip joint",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Joey’s solution is ‘Strip joint! C’mon, you’re single! Have some hormones!’"
+  },
+  {
+    "id": "fr-s1e1-truefalse-0008",
+    "context": "A shock entrance interrupts the conversation at Central Perk.",
+    "question": "True or False: Rachel enters Central Perk wearing a wet wedding dress.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Rachel bursts in ‘in a wet wedding dress,’ having fled her wedding."
+  },
+  {
+    "id": "fr-s1e1-easy-0009",
+    "context": "Rachel explains why she ran from her wedding.",
+    "question": "Which object was Rachel admiring when she realized she was more turned on by it than by Barry?",
+    "options": ["A gravy boat", "A crystal vase", "A photo album", "Candlesticks"],
+    "answer": "A gravy boat",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "She was in the gifts room, looking at a ‘really gorgeous’ gravy boat."
+  },
+  {
+    "id": "fr-s1e1-medium-0010",
+    "context": "Continuing her story, Rachel compares Barry to a toy.",
+    "question": "Rachel says Barry looks like which toy character?",
+    "options": ["Mr. Potato Head", "Barbie’s Ken", "G.I. Joe", "Stretch Armstrong"],
+    "answer": "Mr. Potato Head",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "She says Barry looks like ‘Mr. Potato Head.’"
+  },
+  {
+    "id": "fr-s1e1-medium-0011",
+    "context": "Later, the gang watches a Spanish soap together in Monica’s apartment.",
+    "question": "While watching the Spanish soap, what do the group chant about the character with the pants?",
+    "options": ["‘Push her down the stairs!’", "‘Tell him the truth!’", "‘Run away!’", "‘Open the door!’"],
+    "answer": "‘Push her down the stairs!’",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "They chant ‘Push her down the stairs!’ and cheer when it happens."
+  },
+  {
+    "id": "fr-s1e1-easy-0012a",
+    "context": "Rachel argues with her father on the phone using a metaphor about identity.",
+    "question": "In her metaphor to her dad, what does Rachel say everyone told her she was all her life?",
+    "options": ["A shoe", "A purse", "A hat", "A dress"],
+    "answer": "A shoe",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Rachel: ‘All of my life, everyone has always told me, “You’re a shoe!”’"
+  },
+  {
+    "id": "fr-s1e1-medium-0012b",
+    "context": "SCENE 2 — Monica’s apartment: Rachel is hyperventilating into a paper bag; Phoebe tries to calm her by singing.",
+    "question": "What song does Phoebe sing to soothe Rachel?",
+    "options": [
+      "Raindrops on roses and whiskers on kittens…",
+      "“Happy Birthday to You”",
+      "“Smelly Cat”",
+      "“Copacabana”"
+    ],
+    "answer": "Raindrops on roses and whiskers on kittens…",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Phoebe sings lines like “Raindrops on roses and whiskers on kittens… bluebells and sleighbells and—something with mittens,” to calm Rachel."
+  },
+  {
+    "id": "fr-s1e1-medium-0013",
+    "context": "The buzzer goes—Monica’s date arrives.",
+    "question": "Monica’s ‘not a real date’ that night is with whom?",
+    "options": ["Paul the Wine Guy", "Richard the Eye Doctor", "Alan", "Fun Bobby"],
+    "answer": "Paul the Wine Guy",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "The buzzer reveals it’s Paul; everyone greets ‘Paul! The Wine Guy!’"
+  },
+  {
+    "id": "fr-s1e1-easy-0013b",
+    "context": "SCENE 2 — Monica’s apartment: Ross chats with Rachel about her plans that night; she mentions where her honeymoon was supposed to be.",
+    "question": "Where was Rachel supposed to go for her honeymoon?",
+    "options": ["Aruba", "Barbados", "Cancun", "Bora Bora"],
+    "answer": "Aruba",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Rachel says she was supposed to be headed for Aruba on her honeymoon."
+  },
+  {
+    "id": "fr-s1e1-medium-0014",
+    "context": "Ross invites company for furniture assembly; not everyone is keen.",
+    "question": "Who declines helping with Ross’s furniture by saying, ‘I wish I could, but I don’t want to’?",
+    "options": ["Phoebe", "Rachel", "Joey", "Chandler"],
+    "answer": "Phoebe",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Pheebs deadpans the refusal when Joey invites her."
+  },
+  {
+    "id": "fr-s1e1-truefalse-0015",
+    "context": "Ross tries to make sure Rachel won’t be alone that night.",
+    "question": "True or False: Ross invites Rachel to come over while Joey and Chandler help him assemble furniture.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Ross says Joey and Chandler are helping and invites Rachel if she doesn’t want to be alone."
+  },
+  {
+    "id": "fr-s1e1-medium-0016",
+    "context": "At Ross’s place, the guys are mid-assembly and something doesn’t fit.",
+    "question": "When assembling furniture, what does Joey do with the mysterious leftover piece?",
+    "options": ["Dumps it in a plant pot", "Throws it in the trash", "Pockets it for later", "Tapes it inside the back panel"],
+    "answer": "Dumps it in a plant pot",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Joey checks Ross isn’t looking and hides the extra bit in a plant pot."
+  },
+  {
+    "id": "fr-s1e1-hard-0017",
+    "context": "Ross reminisces and fixates on small details from his marriage.",
+    "question": "According to Ross, what was Carol’s favorite drink and how did she take it?",
+    "options": ["Beer from the can", "Beer from a bottle", "Red wine in a goblet", "Diet soda with a straw"],
+    "answer": "Beer from the can",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "Ross sniffs the can and says Carol ‘always drank it out of the can.’"
+  },
+  {
+    "id": "fr-s1e1-medium-0017b",
+    "context": "SCENE 3 — Ross’s apartment: Joey lists what Carol took in the divorce while the guys assemble furniture.",
+    "question": "According to Joey’s list, which of these items is NOT mentioned as something Carol got in the divorce?",
+    "options": ["The furniture", "The stereo", "The good TV", "The microwave"],
+    "answer": "The microwave",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Joey explicitly says Carol got the furniture, the stereo, and the good TV; ‘microwave’ is never mentioned."
+  },
+  {
+    "id": "fr-s1e1-medium-0018",
+    "context": "On their dinner date, Paul shares with Monica how he ‘coped’ after his breakup.",
+    "question": "On their date, what item of his partner does Paul say he breaks  to cope with the breakup?",
+    "options": ["Her watch", "Her vase", "Her picture frame", "Her ring"],
+    "answer": "Her watch",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Paul says he ‘went for the watch’; Monica asks, ‘You actually broke her watch?’"
+  },
+  {
+    "id": "fr-s1e1-hard-0019",
+    "context": "Paul escalates with a personal ‘fifth date’ confession.",
+    "question": "What personal problem does Paul confess to Monica over dinner?",
+    "options": ["He hasn’t been able to perform sexually", "He has insomnia", "He lost his job", "He’s afraid of flying"],
+    "answer": "He hasn’t been able to perform sexually",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "He admits he hasn’t been able to ‘perform’ since his ex left."
+  },
+  {
+    "id": "fr-s1e1-medium-0020",
+    "context": "Back at Monica’s, Rachel watches TV and draws comparisons.",
+    "question": "The characters in the show are about to get married. Which show is Rachel watching?’",
+    "options": ["Joanie Loves Chachi", "The Wedding", "Joanie & Chachi", "Days of Our Lives"],
+    "answer": "Joanie Loves Chachi",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "The TV audio includes wedding vows from ‘Joanie Loves Chachi.’"
+  },
+  {
+    "id": "fr-s1e1-easy-0022",
+    "context": "Next morning at Monica’s: Rachel makes coffee for the first time.",
+    "question": "The next morning, what do Joey and Chandler do with Rachel’s first-ever coffee?",
+    "options": ["They pour it into a plant pot", "They drink it quickly", "They dump it in the sink", "They add more sugar and keep it"],
+    "answer": "They pour it into a plant pot",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "They taste it, grimace, and quietly pour it into a plant."
+  },
+  {
+    "id": "fr-s1e1-medium-0023",
+    "context": "Rachel asks about jobs; Joey mentions his acting work.",
+    "question": "Which production does Monica mention while teasing Joey about his acting work?",
+    "options": ["The Reruns’ production of Pinocchio", "An NYU Hamlet workshop", "An Off-Broadway ‘Streetcar’", "A regional ‘Death of a Salesman’"],
+    "answer": "The Reruns’ production of Pinocchio",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Monica says, ‘Unless you happened to catch the Reruns’ production of Pinocchio.’"
+  },
+  {
+    "id": "fr-s1e1-medium-0024",
+    "context": "Someone mocks the Pinocchio role as they exit singing.",
+    "question": "Who delivers the line, ‘Look, Gippetto, I’m a real live boy’?",
+    "options": ["Chandler", "Phoebe", "Ross", "Monica"],
+    "answer": "Chandler",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Chandler mocks Joey’s Pinocchio role with the line."
+  },
+  {
+    "id": "fr-s1e1-hard-0025",
+    "context": "SCENE — Iridium: Monica’s coworker returns and spills intel.",
+    "question": "At Iridium, who tells Monica that she ‘takes credit for Paul’ and his supposed turnaround?",
+    "options": ["Frannie", "Katie", "Ursula", "Mindy"],
+    "answer": "Frannie",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "Frannie returns from Florida and claims credit for Paul the Wine Guy."
+  },
+  {
+    "id": "fr-s1e1-medium-0026",
+    "context": "Frannie brags about Paul’s past performance issues.",
+    "question": "According to Frannie, how long did Paul have ‘no snap in his turtle’ before her?",
+    "options": ["Two years", "Six months", "One year", "Three years"],
+    "answer": "Two years",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Frannie boasts there was ‘no snap… for two years’ before she dated him."
+  },
+  {
+    "id": "fr-s1e1-hard-0027",
+    "context": "Back at Central Perk, Rachel returns from job hunting with a purchase.",
+    "question": "Which boots does Rachel buy on sale for fifty percent off?",
+    "options": ["John and David boots", "Manolo Blahnik boots", "Steve Madden boots", "Dr. Martens boots"],
+    "answer": "John and David boots",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "Rachel calls them her new ‘I’ve got great boots’ boots—‘John and David’ brand."
+  },
+  {
+    "id": "fr-s1e1-easy-0028",
+    "context": "The gang questions how Rachel is paying for things now.",
+    "question": "Who does Rachel say pays her credit card bill?",
+    "options": ["Her father", "Her mother", "She doesnt say", "Barry"],
+    "answer": "Her father",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Pressed by Monica, Rachel admits her dad pays for the card."
+  },
+  {
+    "id": "fr-s1e1-medium-0029",
+    "context": "At Monica’s place, after Rachel cuts up her credit cards.",
+    "question": "Who says this line to Rachel: ‘Welcome to the real world! It sucks. You’re gonna love it!’",
+    "options": ["Monica", "Chandler", "Ross", "Phoebe"],
+    "answer": "Monica",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "After Rachel cuts up her cards, Monica welcomes her to ‘the real world.’"
+  },
+  {
+    "id": "fr-s1e1-medium-0030",
+    "context": "Monica & Rachel’s apartment — around the table before cutting the credit cards: Phoebe shares a rough backstory to empathize with Rachel.",
+    "question": "How old was Phoebe when she first came to the city?",
+    "options": ["Fourteen", "Sixteen", "Twelve", "Eighteen"],
+    "answer": "Fourteen",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Phoebe says, “I was fourteen… my mom had just killed herself… my step-dad was back in prison,” recounting her early hardships."
+  },
+  {
+    "id": "fr-s1e1-medium-0030b",
+    "context": "Monica & Rachel’s apartment — end of the night after the credit-card cutting: Rachel finds something on the floor; Monica realizes it’s Paul’s.",
+    "question": "What does Monica do?",
+    "options": ["Stomps on his watch", "Throws his jacket out the window", "Throws the watch out the window", "Does nothing and goes to her room"],
+    "answer": "Stomps on his watch",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Rachel finds Paul’s watch on the floor; Monica pointedly stomps on it."
+  },
+  {
+    "id": "fr-s1e1-medium-0031",
+    "context": "CREDITS SCENE — Central Perk: After Rachel offers coffee and Phoebe mock-sings, Chandler shares a new dream.",
+    "question": "In Chandler’s closing-credits ‘new dream,’ where is he and who is he?",
+    "options": [
+      "Las Vegas / Liza Minelli",
+      "Atlantic City / Cher",
+      "Reno / Celine Dion",
+      "Monte Carlo / Lady Gaga"
+    ],
+    "answer": "Las Vegas / Liza Minelli",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Chandler says, “Kids, new dream... I’m in Las Vegas. I’m Liza Minelli—”."
+  },
+  {
+    "id": "fr-s1e02-0001",
+    "episode": 2,
+    "context": "**EPISODE 2**: Central Perk The gang debates how much a first kiss matters, with the guys comparing it to an opening act before the 'main show.'",
+    "question": "According to the women, what does that very first kiss supposedly contain?",
+    "options": ["Everything you need to know", "Signs about compatibility", "Confirmation of a potential second kiss", "A test of confidence"],
+    "answer": "Everything you need to know",
+    "difficulty": "easy",
+    "description": "Monica and Rachel insist the first kiss tells you everything."
+  },
+{
+  "id": "fr-s1e02-0001b",
+  "episode": 2,
+  "context": "Central Perk: Chandler likens kissing to the opening comedic act before the main band takes the stage.",
+  "question": "In Chandler’s analogy, kissing is like the opener before which headliner?",
+  "options": ["Pink Floyd", "The Rolling Stones", "U2", "Metallica"],
+  "answer": "Pink Floyd",
+  "difficulty": "easy",
+  "description": "Chandler jokes that kissing is the stand-up warmup before the big concert."
+},
+  {
+    "id": "fr-s1e02-0002",
+    "episode": 2,
+    "context": "Central Perk: the guys extend their 'opening act vs. headliner' metaphor while commuting home after the 'concert.'",
+    "question": "In the guys’ metaphor, after the 'concert', girls are looking for the comedic act again while guys are mostly focused on?",
+    "options": ["Fighting traffic and staying awake", "Buying band merch", "Looking for another concert", "Going home"],
+    "answer": "Fighting traffic and staying awake",
+    "difficulty": "medium",
+    "description": "Chandler jokes they're just trying to stay awake in traffic after the show."
+  },
+  {
+    "id": "fr-s1e02-0003",
+    "episode": 2,
+    "context": "Museum exhibit setup: Ross critiques a cavewoman mannequin’s expression; a colleague points out a visitor who triggers big news.",
+    "question": "What major revelation does Ross receive during setup at the museum?",
+    "options": ["His ex-wife is pregnant", "He got promoted to head curator", "The exhibit is canceled", "His ex-wife was getting married"],
+    "answer": "His ex-wife is pregnant",
+    "difficulty": "easy",
+    "description": "Carol tells Ross she’s pregnant."
+  },
+  {
+    "id": "fr-s1e02-0004",
+    "episode": 2,
+    "context": "Apartment: a domestic squabble breaks out over tidiness, pillows, and an ominous missing item before guests arrive.",
+    "question": "What item does Rachel realize is missing, sparking a frantic search?",
+    "options": ["Her engagement ring", "Her apartment keys", "Her bracelet", "Her watch"],
+    "answer": "Her engagement ring",
+    "difficulty": "easy",
+    "description": "Rachel panics about returning a certain item to Barry."
+  },
+{
+  "id": "fr-s1e02-0004b",
+  "episode": 2,
+  "context": "Apartment: Chandler peers out the window and suddenly reacts to the neighbor across the street.",
+  "question": "What does Chandler exclaim upon seeing the neighbor across the street?",
+  "options": [
+    "Ugly Naked Guy got a Thighmaster!",
+    "Ugly Naked Guy is sunbathing!",
+    "Ugly Naked Guy is doing yoga!",
+    "Ugly Naked Guy bought a treadmill!"
+  ],
+  "answer": "Ugly Naked Guy got a Thighmaster!",
+  "difficulty": "easy",
+  "description": "Chandler blurts out the line after spotting the infamous neighbor from Monica’s window."
+},
+  {
+    "id": "fr-s1e02-0005",
+    "episode": 2,
+    "context": "Apartment: the crew conducts a messy ‘forensics’ search through dinner after Rachel recalls being in the kitchen earlier.",
+    "question": "Where is the missing item ultimately discovered?",
+    "options": ["In the lasagna", "In a kitchen cabinet", "In Monica´s pie", "In the kitchen sink"],
+    "answer": "In the lasagna",
+    "difficulty": "easy",
+    "description": "Phoebe triumphantly finds the ring in the lasagna."
+  },
+  {
+    "id": "fr-s1e02-0006",
+    "episode": 2,
+    "context": "Apartment: fresh off the big news, Ross arrives to tell the group about an unexpected life development.",
+    "question": "What event does Ross say he’s been invited to attend the next day?",
+    "options": ["A sonogram appointment", "A divorce hearing", "A museum fundraiser", "A custody mediation"],
+    "answer": "A sonogram appointment",
+    "difficulty": "easy",
+    "description": "Carol and Susan want Ross there for the scan."
+  },
+  {
+    "id": "fr-s1e02-0007",
+    "episode": 2,
+    "context": "Dinner with the Gellers: Monica braces for parental scrutiny and considers redirecting the evening's 'heat.'",
+    "question": "What sensitive topic does Monica hope Ross might bring up at dinner to deflect attention from her?",
+    "options": ["Carol’s pregnancy and relationship", "Her quitting her job", "His paper getting published", "His impending divorce"],
+    "answer": "Carol’s pregnancy and relationship",
+    "difficulty": "medium",
+    "description": "Monica hopes Ross’s news will soak up parental criticism."
+  },
+{
+  "id": "fr-s1e02-0007b",
+  "episode": 2,
+  "context": "At dinner with her parents, Monica is told that an acquaintance’s daughter plans to call her about a supposed restaurant opportunity.",
+  "question": "Whose daughter did Monica’s mother say would call Monica because she ‘has a restaurant’?",
+  "options": [
+    "Martha Ludwin",
+    "Mindy Hunter",
+    "Carol Willick",
+    "Judy Blume"
+  ],
+  "answer": "Martha Ludwin",
+  "difficulty": "easy",
+  "description": "Mrs. Geller claims Martha Ludwin’s daughter will call, mistakenly implying Monica owns a restaurant."
+},
+{
+  "id": "fr-s1e02-0007c",
+  "episode": 2,
+  "context": "During dinner, Rachel’s wedding comes up as her parents’ spending is criticized in passing.",
+  "question": "How much did Rachel’s parents reportedly spend on the wedding?",
+  "options": ["$20,000", "$30,000", "$40,000", "$50,000"],
+  "answer": "$40,000",
+  "difficulty": "medium",
+  "description": "Mr. Geller remarks that forty thousand dollars is a lot of money when discussing Rachel’s called-off wedding."
+},
+  {
+    "id": "fr-s1e02-0008",
+    "episode": 2,
+    "context": "Dinner: parental 'pep talks' veer into backhanded compliments about childhood and life choices.",
+    "question": "What childhood nickname does Monica’s dad accidentally use that embarrasses her?",
+    "options": ["Harmonica", "Monny", "Chubby Mon", "Moni-bear"],
+    "answer": "Harmonica",
+    "difficulty": "hard",
+    "description": "Mr. Geller blurts out the cringey pet name."
+  },
+  {
+    "id": "fr-s1e02-0009",
+    "episode": 2,
+    "context": "Dinner: Ross finally lays everything out to his parents about the situation with his ex.",
+    "question": "Which of these is NOT part of Ross’s big reveal to his parents?",
+    "options": ["Carol wants a divorce", "Carol is pregnant", "Carol is living with Susan", "Carol and Susan intend to raise the baby together"],
+    "answer": "Carol wants a divorce",
+    "difficulty": "medium",
+    "description": "He explains the pregnancy and co-parenting plan with Susan."
+  },
+{
+  "id": "fr-s1e02-0009b",
+  "episode": 2,
+  "context": "At Monica’s apartment over dinner, Ross finally explains to his parents why his marriage ended and what’s happening now.",
+  "question": "How do Mr. and Mrs. Geller immediately react after Ross reveals his news at dinner?",
+  "options": [
+    "They tell Ross that everything will be alright",
+    "They are outraged",
+    "They turn to Monica and blame her for knowing and not saying anything",
+    "They are surprised and try to comfort Ross"
+  ],
+  "answer": "They turn to Monica and blame her for knowing and not saying anything",
+  "difficulty": "medium",
+  "description": "Mrs. Geller pivots to Monica with, “And you knew about this?!” making Monica the target."
+},
+  {
+    "id": "fr-s1e02-0010",
+    "episode": 2,
+    "context": "Central Perk: post-dinner decompression; the friends compare family war stories.",
+    "question": "Which unique situation does Phoebe mention while swapping family tales?",
+    "options": ["She’s an estranged twin", "She didnt know her father and mother", "She’s the youngest of seven", "She’s adopted"],
+    "answer": "She’s an estranged twin",
+    "difficulty": "medium",
+    "description": "Phoebe notes she and her twin don’t speak."
+  },
+{
+  "id": "fr-s1e02-0010b",
+  "episode": 2,
+  "context": "At Central Perk, after commiserating about parents, the friends swap quick personal anecdotes about their upbringings.",
+  "question": "When Chandler is asked by Monica if he has any family stories, what does he say?",
+  "options": [
+    "I did have an imaginary friend, who... my parents actually preferred.",
+    "My parents homeschooled me until high school.",
+    "I was the middle child, so nobody noticed me.",
+    "My dad made me do stand-up at family dinners."
+  ],
+  "answer": "I did have an imaginary friend, who... my parents actually preferred.",
+  "difficulty": "easy",
+  "description": "Chandler deadpans that even his imaginary friend ranked higher with his parents, a classic glimpse of his family humor."
+},
+  {
+    "id": "fr-s1e02-0011",
+    "episode": 2,
+    "context": "Central Perk closing time: Rachel worries about facing her former fiancé the next day.",
+    "question": "What word does Ross suggest Rachel avoid using when talking to her ex?",
+    "options": ["Dumped", "Cheated", "Coward", "Wedding"],
+    "answer": "Dumped",
+    "difficulty": "medium",
+    "description": "He warns Barry will be fragile."
+  },
+  {
+    "id": "fr-s1e02-0012",
+    "episode": 2,
+    "context": "Clinic waiting room: Ross meets the third person who’ll be at the appointment.",
+    "question": "What is the OB/GYN’s name during the appointment?",
+    "options": ["Oberman", "Rosen", "Kaplan", "Levin"],
+    "answer": "Oberman",
+    "difficulty": "hard",
+    "description": "Dr. Oberman conducts the scan."
+  },
+  {
+    "id": "fr-s1e02-0013",
+    "episode": 2,
+    "context": "Clinic: an awkward handling of a medical tool turns into a cringey joke with a prop.",
+    "question": "What does Ross accidentally mime the medical instrument as before being corrected?",
+    "options": ["A duck’s beak", "A pair of scissors", "A shark fin", "A flute"],
+    "answer": "A duck’s beak",
+    "difficulty": "medium",
+    "description": "Carol dryly notes the tool 'opens my cervix.'"
+  },
+  {
+    "id": "fr-s1e02-0014",
+    "episode": 2,
+    "context": "Rachel meets Barry: Rachel steps into a familiar place to return something significant.",
+    "question": "Where does Rachel meet her ex to settle unfinished business?",
+    "options": ["At his dental practice", "At Central Perk", "At the wedding venue", "At her apartment"],
+    "answer": "At his dental practice",
+    "difficulty": "easy",
+    "description": "Barry is mid-appointment with a patient."
+  },
+{
+  "id": "fr-s1e02-0014b",
+  "episode": 2,
+  "context": "At Barry’s dental office, Rachel walks in mid-appointment while he’s working on a young patient in the chair.",
+  "question": "What is the name of the kid Barry is working on when Rachel steps into his office?",
+  "options": ["Robbie", "Jason", "Ethan", "Kyle"],
+  "answer": "Robbie",
+  "difficulty": "easy",
+  "description": "Rachel interrupts Barry during an active procedure, where he identifies the patient as Robbie."
+},
+  {
+    "id": "fr-s1e02-0015",
+    "episode": 2,
+    "context": "Dental office: small talk quickly exposes rapid changes in the ex’s appearance and plans.",
+    "question": "Who does Rachel learn accompanied her ex on the would-be honeymoon trip?",
+    "options": ["Her maid of honor Mindy", "Her maid of Honor Cindy", "Her bridesmaid Cindy", "Her bridesmaid Mindy"],
+    "answer": "Her maid of honor Mindy",
+    "difficulty": "medium",
+    "description": "Mindy, Rachel’s maid of honor, is now 'a thing' with Barry."
+  },
+  {
+    "id": "fr-s1e02-0016",
+    "episode": 2,
+    "context": "Dental office: after awkward revelations, Rachel hands over the item she came to return.",
+    "question": "What does Rachel give back to her ex during the visit?",
+    "options": ["The engagement ring", "A house key", "A photo album", "A wedding deposit receipt"],
+    "answer": "The engagement ring",
+    "difficulty": "easy",
+    "description": "She finally returns the ring."
+  },
+  {
+    "id": "fr-s1e02-0017",
+    "episode": 2,
+    "context": "Clinic: discussion turns prickly over baby names; one suggestion draws an immediate pop-culture association.",
+    "question": "Which girl’s name does Ross object to because of a cartoon association?",
+    "options": ["Minnie", "Daisy", "Betty", "Velma"],
+    "answer": "Minnie",
+    "difficulty": "medium",
+    "description": "He says you hear it and think 'Mouse.'"
+  },
+  {
+    "id": "fr-s1e02-0018",
+    "episode": 2,
+    "context": "Clinic: the trio debates surname order and credit; tempers flare over whose name goes where.",
+    "question": "Which concatenated last-name order does Ross float that Susan immediately interprets as a ploy?",
+    "options": ["Geller-Willick-Bunch", "Geller-Willick-Farber", "Geller-Bunch-Barber", "Geller-Diller-Bunch"],
+    "answer": "Geller-Willick-Bunch",
+    "difficulty": "hard",
+    "description": "Susan says no one will use all names and it will default to his."
+  },
+  {
+    "id": "fr-s1e02-0019",
+    "episode": 2,
+    "context": "Clinic: the scan begins; a sound and image instantly change the mood in the room.",
+    "question": "What causes Ross to stop leaving and stand transfixed during the appointment?",
+    "options": ["Hearing the sonogram", "A contraction", "Carol´s scream"],
+    "answer": "Hearing the sonogram",
+    "difficulty": "easy",
+    "description": "The heartbeat and image pull him back."
+  },
+  {
+    "id": "fr-s1e02-0020",
+    "episode": 2,
+    "context": "Closing: the friends watch a certain black-and-white image on TV and struggle to interpret it.",
+    "question": "What does Phoebe say the sonogram looks like if you tilt your head and relax your eyes?",
+    "options": ["An old potato", "A jellybean", "A cloud", "A tiny sailboat"],
+    "answer": "An old potato",
+    "difficulty": "medium",
+    "description": "Her 'magic-eye' description makes Ross plead not to do that."
+  },
+  {
+    "id": "fr-s1e02-0022",
+    "episode": 2,
+    "context": "Phone call: after learning surprising news about two familiar people, someone makes a pointed parting shot.",
+    "question": "Which pair of features does Rachel hope Barry and Mindy´s 'future kids' inherit?",
+    "options": ["His old hairline and her old nose", "Her eyes and his hair", "His teeth and her nose", "Her hair and his height"],
+    "answer": "His old hairline and her old nose",
+    "difficulty": "medium",
+    "description": "Rachel vents to Mindy with a barbed farewell."
+  },
+  {
+    "id": "fr-s1e3-easy-0001",
+    "context": "**EPISODE 3**:Central Perk, pre-intro — the gang discusses hidden meanings in dating phrases right after Phoebe returns from a date.",
+    "question": "According to Monica, what does 'We should do this again' really mean?",
+    "options": ["You will never see me naked", "Lets never do this again", "This was a horrible date", "Let's be exclusive"],
+    "answer": "You will never see me naked",
+    "difficulty": "easy",
+    "episode": 3,
+    "description": "Monica translates it as, “You will never see me naked,” during the group’s joking ‘dating language’ breakdown."
+  },
+  {
+    "id": "fr-s1e3-medium-0002",
+    "context": "Central Perk, pre-intro — Someone adds their own example to the 'dating language' conversation.",
+    "question": "Who says: “You’re such a nice guy” means “I’m gonna be dating leather-wearing alcoholics and complaining about them to you”?",
+    "options": ["Chandler", "Joey", "Rachel", "Ross"],
+    "answer": "Chandler",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Chandler riffs on euphemisms, delivering the 'leather-wearing alcoholics' line."
+  },
+{
+  "id": "fr-s1e3-hard-0026",
+  "context": "Central Perk, pre-intro — the gang continues to riff on ‘dating language’ right after Phoebe’s so-so date recap.",
+  "question": "Which of these euphemisms is NOT used in the scene?",
+  "options": [
+    "You are such a nice guy",
+    "I think we should see other people",
+    "Dog living on the Farm",
+    "We should do this again",
+    "I need to focus on my career"
+  ],
+  "answer": "I need to focus on my career",
+  "difficulty": "hard",
+  "episode": 3,
+  "description": "Monica translates “We should do this again” as “You will never see me naked.” Chandler adds “You’re such a nice guy” (friendzone line), and Phoebe says “I think we should see other people” means “I already am.” Chandler also jokes about parents saying a dog “went off to live on some farm.” No one says “I need to focus on my career.”"
+},
+{
+  "id": "fr-s1e3-medium-0027",
+  "context": "Central Perk, pre-intro — the group riffs on ‘dating language’ before Ross recalls where his parents said the dog went.",
+  "question": "Ross says his parents actually sent Chi Chi to whose farm, and in which state?",
+  "options": [
+    "The Millners / Connecticut",
+    "The Millers / Massachusetts",
+    "The Millners / Massachusetts",
+    "The Millers / Connecticut"
+  ],
+  "answer": "The Millners / Connecticut",
+  "difficulty": "medium",
+  "episode": 3,
+  "description": "Ross insists it was “the Millners’ farm in Connecticut,” describing their great farm with horses and rabbits, before the dawning “Oh my God, Chi Chi!”"
+},
+{
+  "id": "fr-s1e3-medium-0037",
+  "context": "Chandler and Joey rehearse a prison execution scene in their apartment; Joey struggles to smoke for the role.",
+  "question": "In the script they’re rehearsing, what is the inmate’s name?",
+  "options": ["Damone", "Carbone", "Ramone", "DeMarco"],
+  "answer": "Damone",
+  "difficulty": "medium",
+  "episode": 3,
+  "description": "Chandler reads, “So. Whaddya want from me, Damone, huh?” and Joey replies with the inmate’s lines, confirming the name Damone."
+},
+  {
+    "id": "fr-s1e3-medium-0004",
+    "context": "Chandler & Joey’s apartment — Joey rehearses; Chandler helps him out with his cigarette.",
+    "question": "Why does Chandler take Joey’s cigarette during rehearsal?",
+    "options": ["To show him how to smoke naturally for the scene", "To stop Joey from burning the couch", "To light it with a match for effect", "To smoke it himself"],
+    "answer": "To show him how to smoke naturally for the scene",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Chandler says to think of it as “the thing that’s been missing from your hand,” and demonstrates, then relapses."
+  },
+  {
+    "id": "fr-s1e3-hard-0005",
+    "context": "Central Perk, early — the group tests a cheeky measurement myth before Rachel brings drinks.",
+    "question": "Which gag are the guys acting out just before Rachel returns with the tray?",
+    "options": ["Measuring from thumb to index finger", "Comparing shoe sizes", "Measuring hand spans", "Stacking coffee cups"],
+    "answer": "Measuring from thumb to index finger",
+    "difficulty": "hard",
+    "episode": 3,
+    "description": "Monica claims it equals ‘the distance from the tip of a guy’s thumb to the tip of his index finger,’ and the guys stretch their hands."
+  },
+  {
+    "id": "fr-s1e3-medium-0006",
+    "context": "Central Perk — Rachel proudly hands out drinks, then leaves.",
+    "question": "What do the gang do with the drinks after Rachel walks away?",
+    "options": ["Swap them around", "Send them back", "Add sugar to all", "Throw the tea away"],
+    "answer": "Swap them around",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "They quietly rotate the coffees after she says, “I’m getting pretty good at this!”"
+  },
+  {
+    "id": "fr-s1e3-easy-0007",
+    "context": "Central Perk — Phoebe explains a banking mistake and her dilemma.",
+    "question": "How much unexpected money does Phoebe first find in her account?",
+    "options": ["$500", "$1,000", "$7,000", "$5,000"],
+    "answer": "$500",
+    "difficulty": "easy",
+    "episode": 3,
+    "description": "She says her statement shows “five hundred extra dollars,” sparking a karma debate."
+  },
+{
+  "id": "fr-s1e3-easy-0028",
+  "context": "Central Perk — mid-conversation when Chandler is caught with a cigarette.",
+  "question": "According to Phoebe, how many years had Chandler been smoke-free before this relapse?",
+  "options": ["One year", "Two years", "Three years", "Four years"],
+  "answer": "Three years",
+  "difficulty": "easy",
+  "episode": 3,
+  "description": "Phoebe exclaims, “You’ve been so good, for three years!” after they catch Chandler smoking."
+},
+  {
+    "id": "fr-s1e3-easy-0010",
+    "context": "Monica’s apartment — Phoebe reports back from the bank mix-up.",
+    "question": "What bonus gift does the bank send Phoebe along with the extra credit?",
+    "options": ["A football phone", "Concert tickets", "A toaster", "A coffee maker"],
+    "answer": "A football phone",
+    "difficulty": "easy",
+    "episode": 3,
+    "description": "Her letter says the bank credited her and adds a “football phone as our free gift.”"
+  },
+{
+  "id": "fr-s1e3-easy-0029",
+  "context": "Central Perk — mid-scene; the group chats when someone mentions getting ready for a date.",
+  "question": "Who does Monica say she has a date with?",
+  "options": ["Alan", "Steve", "Paul", "Mark"],
+  "answer": "Alan",
+  "difficulty": "easy",
+  "episode": 3,
+  "description": "Monica says, “I’m gonna go change, I’ve got a date.” Rachel replies, “This Alan again?,” and Monica says it’s going pretty good — confirming it’s Alan."
+},
+  {
+    "id": "fr-s1e3-medium-0011",
+    "context": "Monica’s apartment — Alan arrives and meets everyone for the first time.",
+    "question": "Which of these happens when Alan first meets the gang?",
+    "options": ["He imitates their ‘schh’ sound and they crack up", "He mixes up all their names", "He brings flowers for Monica and Rachel", "He offers them softball tickets immediately"],
+    "answer": "He imitates their ‘schh’ sound and they crack up",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Alan says, “I’ve heard schho much about all you guyschh!” prompting general hysteria."
+  },
+  {
+    "id": "fr-s1e3-medium-0012",
+    "context": "Monica’s apartment, later — post-date debrief.",
+    "question": "What is the gang’s unanimous reaction when Monica asks how the y feel about Alan?",
+    "options": ["They love him", "They think he’s boring", "They’re split", "They want her to move on"],
+    "answer": "They love him",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Silence, then confessions: “We loved him.” They praise his crooked smile and more."
+  },
+  {
+    "id": "fr-s1e3-hard-0013",
+    "context": "Monica’s apartment, same debrief — a quirky comparison is made.",
+    "question": "Phoebe compares Alan’s smile to which nursery rhyme image?",
+    "options": ["The crooked man", "Humpty Dumpty", "Little Jack Horner", "Old King Cole"],
+    "answer": "The crooked man",
+    "difficulty": "hard",
+    "episode": 3,
+    "description": "She says his smile is like “the man in the shoe… There was a crooked man…”"
+  },
+{
+  "id": "fr-s1e3-medium-0030",
+  "context": "Monica’s apartment — post-date debrief as the group gushes about her new guy.",
+  "question": "Whose impression does Chandler single out while praising Monica’s date?",
+  "options": ["David Hasselhof", "Arnold Schwarzenegger", "Al Pacino", "Tom Hanks"],
+  "answer": "David Hasselhof",
+  "difficulty": "medium",
+  "episode": 3,
+  "description": "Chandler says he’d marry him just for his “David Hasselhof impression” and adds he’ll be doing it at parties."
+},
+{
+  "id": "fr-s1e3-medium-0031",
+  "context": "Monica’s apartment — post-date chat where everyone shares quick takes about the new guy.",
+  "question": "According to Ross, what does he like most about Alan?",
+  "options": [
+    "The way he makes Ross feel about himself",
+    "His sense of humor",
+    "How good he is at softball",
+    "His honesty about himself"
+  ],
+  "answer": "The way he makes Ross feel about himself",
+  "difficulty": "medium",
+  "episode": 3,
+  "description": "Ross says, “You know what I like most about him, though? … The way he makes me feel about myself.”"
+},
+  {
+    "id": "fr-s1e3-easy-0014",
+    "context": "Central Perk — the gang returns from a softball game.",
+    "question": "True or False: The gang wins their softball game.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "easy",
+    "episode": 3,
+    "description": "They burst in celebrating, crediting Alan for making them play like a team."
+  },
+  {
+    "id": "fr-s1e3-medium-0015",
+    "context": "Central Perk — debriefing the win.",
+    "question": "Which group does Chandler joke they ‘showed a thing or two about softball’?",
+    "options": ["Hassidic jewellers", "Yankee fans", "A rival coffeehouse team", "Park rangers"],
+    "answer": "Hassidic jewellers",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Chandler quips, “We sure showed those Hassidic jewellers a thing or two about softball.”"
+  },
+  {
+    "id": "fr-s1e3-easy-0034",
+    "context": "Monica’s apartment — Monica raises a concern about Alan maybe being a little too Alan.",
+    "question": "Who says, “I personally could have a gallon of Alan”?",
+    "options": ["Chandler", "Ross", "Joey", "Rachel"],
+    "answer": "Chandler",
+    "difficulty": "easy",
+    "episode": 3,
+    "description": "During the post-date debrief, Chandler delivers the deadpan line about having “a gallon of Alan.”"
+  },
+  {
+    "id": "fr-s1e3-easy-0035",
+    "context": "Monica’s apartment — same playful exchange about Monica’s date.",
+    "question": "Who says it’s Alan’s “innate Alan-ness” that they adore?",
+    "options": ["Ross", "Monica", "Chandler", "Phoebe"],
+    "answer": "Ross",
+    "difficulty": "easy",
+    "episode": 3,
+    "description": "Ross follows Monica’s worry with, “Yeah, it’s his, uh, innate Alan-ness that-that-that we adore.”"
+  },
+{
+  "id": "fr-s1e3-easy-0038",
+  "context": "On the street during a later scene, Phoebe approaches a familiar homeless woman to give away unexpected money and a novelty phone.",
+  "question": "What is the name of the street woman Phoebe gives the money and the football phone to?",
+  "options": ["Lizzie", "Mindy", "Rita", "Donna"],
+  "answer": "Lizzie",
+  "difficulty": "easy",
+  "episode": 3,
+  "description": "Phoebe greets her with “Hey, Lizzie,” and later the woman calls Phoebe “Weird Girl” as she accepts the $1,000 and the football phone."
+},
+  {
+    "id": "fr-s1e3-medium-0017",
+    "context": "Soda stand to Central Perk — Lizzie buys Phoebe a drink and she discovers something inside.",
+    "question": "What shocking object does Phoebe find floating in her soda?",
+    "options": ["A thumb", "A toe", "A cigarette butt", "A cockroach"],
+    "answer": "A thumb",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "She tells the group it was “just floating in there, like this tiny little hitch-hiker!”"
+  },
+  {
+    "id": "fr-s1e3-hard-0018",
+    "context": "Central Perk — tensions rise as Chandler lights up again.",
+    "question": "Which of these is NOT one of the flaws Chandler calls out in others while defending his smoking?",
+    "options": ["Rachel always gets orders wrong", "Joey’s constant knuckle-cracking", "Ross over-pronounces every word", "Monica snorts when she laughs"],
+    "answer": "Rachel always gets orders wrong",
+    "difficulty": "hard",
+    "episode": 3,
+    "description": "He cites Joey’s knuckles, Ross’s diction, and Monica’s snort — not Rachel’s orders here."
+  },
+  {
+    "id": "fr-s1e3-medium-0019",
+    "context": "Monica’s restaurant — Paula gives Monica advice about her relationship.",
+    "question": "What is Monica’s core problem with Alan, despite her friends’ enthusiasm?",
+    "options": ["She doesn’t ‘feel the thing’", "He wants to move too fast", "He is too nice", "He is too Alan"],
+    "answer": "She doesn’t ‘feel the thing’",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Monica admits, “They feel the thing, I don’t feel the thing,” and Paula says to dump him."
+  },
+  {
+    "id": "fr-s1e3-medium-0020",
+    "context": "Central Perk — Chandler takes a call meant to help him quit.",
+    "question": "Who talks Chandler into stubbing out his cigarette over the phone?",
+    "options": ["Alan", "Monica", "Joey", "Ross"],
+    "answer": "Alan",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Rachel hands him the phone; after a calm talk, Chandler thanks him and puts it out."
+  },
+  {
+    "id": "fr-s1e3-hard-0021",
+    "context": "Monica’s apartment — TV time before the big talk.",
+    "question": "Which children’s character are they watching when Ross swaps Chandler’s nicotine patch?",
+    "options": ["Lamb Chop", "Barney", "Elmo", "Big Bird"],
+    "answer": "Lamb Chop",
+    "difficulty": "hard",
+    "episode": 3,
+    "description": "Chandler snarks, “If I had a sock on my hand for thirty years it’d be talking too,” as Ross changes his patch."
+  },
+  {
+    "id": "fr-s1e3-medium-0022",
+    "context": "Monica’s apartment — Phoebe shares the resolution of the soda incident.",
+    "question": "How much money do the ‘soda people’ end up giving Phoebe because of the thumb?",
+    "options": ["$7,000", "$4,000", "$5,000", "$2,000"],
+    "answer": "$7,000",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Phoebe says, “Those stupid soda people gave me seven thousand dollars for the thumb.”"
+  },
+  {
+    "id": "fr-s1e3-hard-0024",
+    "context": "Restaurant — Monica breaks the news to Alan.",
+    "question": "What surprising confession does Alan make about the relationship?",
+    "options": ["He can’t stand her friends", "He thought she was too clingy", "He’s seeing someone else", "He was feeling overwhelmed"],
+    "answer": "He can’t stand her friends",
+    "difficulty": "hard",
+    "episode": 3,
+    "description": "Alan says he’s “a little relieved,” admitting, “I just can’t stand your friends.”"
+  },
+  {
+    "id": "fr-s1e3-medium-0025",
+    "context": "Closing credits — the gang mopes with ice cream after the breakup.",
+    "question": "What finally stops Chandler from going out to buy cigarettes?",
+    "options": ["Phoebe offers him $7,000", "Ross tackles him on the chair", "Rachel blocks the door", "Monica offers to call Alan"],
+    "answer": "Phoebe offers him $7,000",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "He storms out saying he’s weak, then immediately returns when Phoebe shouts the $7,000 offer."
+  },
+{
+  "id": "fr-s1e4-medium-0026",
+  "context": "**EPISODE 4**: Central Perk, pre-intro — the group plays the 'if you were omnipotent for a day' game.",
+  "question": "Which of the following does Phoebe NOT mention wanting if she were omnipotent?",
+  "options": [
+    "An end to world hunger",
+    "World peace",
+    "Good things for the rain forest",
+    "A new apartment",
+    "Bigger boobs"
+  ],
+  "answer": "A new apartment",
+  "difficulty": "medium",
+  "episode": 4,
+  "description": "She lists world peace, no more hunger, good things for the rain forest, and bigger boobs; a new apartment never comes up."
+},
+{
+  "id": "fr-s1e4-easy-0038b",
+  "context": "Central Perk, pre-intro — the gang is playing the “if you were omnipotent for a day” game.",
+  "question": "Who says, “Yeah, see… you took mine,” right after Phoebe adds “bigger boobs” to her wish list?",
+  "options": ["Ross", "Chandler", "Joey", "Monica"],
+  "answer": "Ross",
+  "difficulty": "easy",
+  "episode": 4,
+  "description": "Following Phoebe’s punchline about ‘bigger boobs,’ Ross responds with, “Yeah, see… you took mine.”"
+},
+  {
+    "id": "fr-s1e4-easy-0002",
+    "context": "Central Perk, pre-intro — still on the omnipotent day fantasy.",
+    "question": "If he were omnipotent for a day, Chandler says he’d...",
+    "options": [
+      "Make himself omnipotent forever",
+      "Go back in time",
+      "Be born in another family",
+      "Bring back dinosaurs"
+    ],
+    "answer": "Make himself omnipotent forever",
+    "difficulty": "easy",
+    "episode": 4,
+    "description": "Chandler immediately game-breaks it with the classic “I’d make myself omnipotent forever.”"
+  },
+{
+  "id": "fr-s1e4-easy-0027",
+  "context": "Central Perk, pre-intro — Joey walks in as the omnipotent question goes around.",
+  "question": "How does Joey respond when asked what he’d do if he were omnipotent?",
+  "options": [
+    "Probably kill myself",
+    "End all wars",
+    "Buy the Knicks",
+    "Date every supermodel in the world"
+  ],
+  "answer": "Probably kill myself",
+  "difficulty": "easy",
+  "episode": 4,
+  "description": "He says he’d probably kill himself, clearly confusing 'omnipotent' with 'impotent,' leading to Ross’s correction and Joey’s apology."
+},
+  {
+    "id": "fr-s1e4-medium-0004",
+    "context": "Central Perk, opening scene — Phoebe is exhausted and explains her night.",
+    "question": "Why does Phoebe say she got no sleep the previous night?",
+    "options": [
+      "Her grandmother and her boyfriend",
+      "Her neighbor’s baby cried all night",
+      "She was working a night shift",
+      "There was construction outside her window"
+    ],
+    "answer": "Her grandmother and her boyfriend",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "She describes them as insecure, deaf, and constantly shouting assurances about having a good time."
+  },
+  {
+    "id": "fr-s1e4-hard-0005",
+    "context": "Central Perk — Joey demonstrates how close their place is.",
+    "question": "Roughly how many steps does Joey count between their place and Central Perk?",
+    "options": ["Less than 100", "Exactly 100", "About 150", "Over 200"],
+    "answer": "Less than 100",
+    "difficulty": "hard",
+    "episode": 4,
+    "description": "He counts up into the nineties and boasts it’s under a hundred steps."
+  },
+{
+  "id": "fr-s1e4-medium-0028",
+  "context": "Central Perk — Ross suddenly connects the day’s date to his past with Carol.",
+  "question": "Which date alarms Ross because it’s the day he and Carol first consummated their relationship?",
+  "options": [
+    "October 20th",
+    "July 7th",
+    "September 15th",
+    "November 3rd"
+  ],
+  "answer": "October 20th",
+  "difficulty": "medium",
+  "episode": 4,
+  "description": "Ross panics, asking if it’s the twentieth, then says October 20th is when he and Carol first slept together."
+},
+  {
+    "id": "fr-s1e4-medium-0006",
+    "context": "Central Perk — Joey and Chandler present Ross with an outing.",
+    "question": "What do Joey and Chandler bring Ross as a ‘birthday’ plan?",
+    "options": [
+      "Hockey tickets to Rangers-Penguins",
+      "Knicks basketball tickets",
+      "A surprise party invite",
+      "Concert tickets"
+    ],
+    "answer": "Hockey tickets to Rangers-Penguins",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "They hype ‘Rangers-Penguins, tonight at the Garden,’ even though Ross’s birthday was months ago."
+  },
+{
+  "id": "fr-s1e4-medium-0029",
+  "context": "Central Perk — Rachel is excited about her first paycheck and the others chime in.",
+  "question": "What story does Phoebe first tell when Rachel shows her first paycheck?",
+  "options": [
+    "There was a cave-in at a mine and eight people were killed",
+    "She got mugged on the way home from work",
+    "Her boss refused to pay her for overtime",
+    "There was an explosion and her manager was kiled"
+  ],
+  "answer": "There was a cave-in at a mine and eight people were killed",
+  "difficulty": "medium",
+  "episode": 4,
+  "description": "Phoebe says she remembers her first paycheck because there was a cave-in in one of the mines and eight people died."
+},
+{
+  "id": "fr-s1e4-easy-0030",
+  "context": "Central Perk — same moment, Monica questions Phoebe’s dramatic story.",
+  "question": "Where does Phoebe say she actually worked when she got her first paycheck?",
+  "options": [
+    "A Dairy Queen",
+    "A mine",
+    "A coffeehouse",
+    "A bookstore"
+  ],
+  "answer": "A Dairy Queen",
+  "difficulty": "easy",
+  "episode": 4,
+  "description": "When Monica reacts, Phoebe clarifies she really worked at a Dairy Queen, not in a mine."
+},
+  {
+    "id": "fr-s1e4-medium-0007",
+    "context": "Central Perk — Rachel receives and opens her first paycheck.",
+    "question": "Rachel is shocked by a big deduction on her first paycheck and asks, “Who’s ___?”",
+    "options": ["FICA", "FEMA", "NRA", "IRS"],
+    "answer": "FICA",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "She complains that ‘FICA’ is taking all her money and wants to know who that is."
+  },
+{
+  "id": "fr-s1e4-easy-0031",
+  "context": "Central Perk — three of Rachel’s old friends from her former life stop by to see her at work.",
+  "question": "What are the names of Rachel’s three friends who visit her?",
+  "options": [
+    "Leslie, Kiki, Joanne",
+    "Leslie, Katie, Joanna",
+    "Lisa, Kiki, Joanne",
+    "Laura, Kelly, Jen"
+  ],
+  "answer": "Leslie, Kiki, Joanne",
+  "difficulty": "easy",
+  "episode": 4,
+  "description": "Her old crowd shows up as Leslie, Joanne, and Kiki."
+},
+{
+  "id": "fr-s1e4-medium-0032",
+  "context": "Central Perk — Rachel catches up with Leslie, Kiki, and Joanne about their current lives.",
+  "question": "Which of these is NOT something Rachel’s three friends say about themselves?",
+  "options": [
+    "One is pregnant and jokes she’s a duplex",
+    "One is being made partner in her dad’s firm",
+    "One is newly engaged",
+    "One just opened her own fashion boutique"
+  ],
+  "answer": "One just opened her own fashion boutique",
+  "difficulty": "medium",
+  "episode": 4,
+  "description": "Leslie is pregnant, Joanne’s dad is making her partner, and Kiki is engaged. None of them mentions opening a fashion boutique."
+},
+  {
+    "id": "fr-s1e4-easy-0009",
+    "context": "Monica and Rachel’s apartment — start of the slumber party vibe.",
+    "question": "Which of these does Monica mention as part of their girls’ night in?",
+    "options": [
+      "Trashy magazines, cookie dough, and Twister",
+      "A movie marathon, Twister and karaoke",
+      "Spa facials. Trashy magazines and yoga",
+      "Makeovers, Cookie dough and ice cream"
+    ],
+    "answer": "Trashy magazines, cookie dough, and Twister",
+    "difficulty": "easy",
+    "episode": 4,
+    "description": "She sells it as a slumber party: magazines, cookie dough, Twister, plus Phoebe’s Operation game."
+  },
+{
+  "id": "fr-s1e4-medium-0033",
+  "context": "Monica and Rachel’s apartment — the Visa company calls during the girls’ night.",
+  "question": "What ‘unusual activity’ do the Visa people report on Rachel’s card?",
+  "options": [
+    "She hasn’t used her card in weeks",
+    "Multiple charges in another state",
+    "A declined jewelry purchase",
+    "Someone booked flights in her name"
+  ],
+  "answer": "She hasn’t used her card in weeks",
+  "difficulty": "medium",
+  "episode": 4,
+  "description": "Monica explains that the only unusual thing is Rachel not using the card at all, which triggers the call."
+},
+  {
+    "id": "fr-s1e4-medium-0011",
+    "context": "Monica and Rachel’s apartment — Rachel describes how her life feels now.",
+    "question": "Which made-up word does Phoebe use to sum up how Rachel feels about her life?",
+    "options": ["Floopy", "Squinky", "Wobbly", "Fuzzy"],
+    "answer": "Floopy",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Phoebe supplies ‘floopy,’ and Rachel agrees it fits her situation."
+  },
+  {
+    "id": "fr-s1e4-hard-0012",
+    "context": "Hockey game — Ross keeps linking details to Carol.",
+    "question": "Which of these is NOT one of the specific triggers Ross mentions that remind him of the night with Carol?",
+    "options": [
+      "The first frost",
+      "Her boots",
+      "Nectarines or “peaches”",
+      "A specific song playing in the arena"
+    ],
+    "answer": "A specific song playing in the arena",
+    "difficulty": "hard",
+    "episode": 4,
+    "description": "He fixates on her boots, the fruit, the bus stop, and the frost — no song is mentioned."
+  },
+  {
+    "id": "fr-s1e4-medium-0013",
+    "context": "Hockey game — the guys finally get into it.",
+    "question": "What happens to Ross when the crowd shouts for a shot on goal?",
+    "options": [
+      "He gets hit in the face by the puck",
+      "He drops his beer on himself",
+      "He sighs again about Carol",
+      "Joey punches him mistakenly"
+    ],
+    "answer": "He gets hit in the face by the puck",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "The shot flies over the glass and nails Ross, sending them to the ER."
+  },
+{
+  "id": "fr-s1e4-medium-0035",
+  "context": "Monica and Rachel’s apartment — Rachel questions her choices and future during girls’ night.",
+  "question": "Phoebe compares Rachel’s situation to which character from a fairy tale?",
+  "options": [
+    "Jack from Jack and the Beanstalk",
+    "Cinderella",
+    "Goldilocks",
+    "Little Red Riding Hood"
+  ],
+  "answer": "Jack from Jack and the Beanstalk",
+  "difficulty": "medium",
+  "episode": 4,
+  "description": "Phoebe tells Rachel she’s like Jack from Jack and the Beanstalk—giving something up and getting ‘magic beans’ full of possibilities."
+},
+{
+  "id": "fr-s1e4-easy-0034",
+  "context": "Monica and Rachel’s apartment — the girls’ night in is interrupted by a misdelivered pizza.",
+  "question": "Whose pizza do they realize they’ve mistakenly received?",
+  "options": [
+    "George Stephanopoulos",
+    "Barry Farber",
+    "Fred Stefano",
+    "Mr. Heckles"
+  ],
+  "answer": "George Stephanopoulos",
+  "difficulty": "easy",
+  "episode": 4,
+  "description": "The delivery guy admits the order was meant for 'G. Stephanopoulos' across the street, and the girls excitedly keep it."
+},
+{
+  "id": "fr-s1e4-medium-0036",
+  "context": "Monica and Rachel’s apartment — during girls’ night, the pizza delivery turns out to be wrong.",
+  "question": "What kind of pizza do the girls say they originally ordered?",
+  "options": [
+    "A fat-free crust with extra cheese",
+    "Pepperoni with stuffed crust",
+    "Mushroom, green pepper and onion",
+    "Plain cheese with thin crust"
+  ],
+  "answer": "A fat-free crust with extra cheese",
+  "difficulty": "medium",
+  "episode": 4,
+  "description": "When the pizza guy brings the wrong one, Rachel complains they had ordered a fat-free crust with extra cheese."
+},
+  {
+    "id": "fr-s1e4-hard-0017",
+    "context": "Balcony stakeout — the girls spy with binoculars.",
+    "question": "Who does Phoebe mistakenly identify as ‘George Stephanopoulus’ before being corrected?",
+    "options": ["Big Bird’s friend", "A baseball player", "A senator", "A TV host"],
+    "answer": "Big Bird’s friend",
+    "difficulty": "hard",
+    "episode": 4,
+    "description": "Rachel asks who he is and Phoebe first thinks of the Sesame Street character."
+  },
+  {
+    "id": "fr-s1e4-medium-0018",
+    "context": "Hospital — Ross finally explains why the date is such a big deal.",
+    "question": "What key detail does Ross reveal about his history with Carol?",
+    "options": [
+      "She was his first time",
+      "They met in high school",
+      "They were only married a year",
+      "She proposed to him"
+    ],
+    "answer": "She was his first time",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "After Chandler and Joey push, Ross admits that his first time ever was with Carol."
+  },
+{
+  "id": "fr-s1e4-hard-0037",
+  "context": "Monica and Rachel’s balcony — the girls start confessing past secrets during their late-night talk.",
+  "question": "Which of these is NOT one of the secrets the girls confess?",
+  "options": [
+    "Monica admits her 'vegetarian' pâté actually contained goose",
+    "Phoebe admits she slept with Jason Hurley a couple of hours after he and Monica broke up",
+    "Rachel admits the Valentine from Tommy Rollerson to Monica was actually from her",
+    "Monica brings up that Rachel peed her pants in seventh grade from laughing",
+    "Rachel admits she spread fake news about Monica having surgery in high school"
+  ],
+  "answer": "Rachel admits she spread fake news about Monica having surgery in high school",
+  "difficulty": "hard",
+  "episode": 4,
+  "description": "They reveal the goose pâté, Phoebe with Jason Hurley, Rachel faking the Valentine, and Monica exposing Rachel’s pee story. No one confesses to Monica having surgery."
+},
+  {
+    "id": "fr-s1e4-medium-0022",
+    "context": "Hospital, later — Ross returns with his nose bandaged.",
+    "question": "Which movie does Chandler reference when mocking Ross’s new look?",
+    "options": [
+      "Silence of the Lambs",
+      "The Elephant Man",
+      "Rocky",
+      "Jaws"
+    ],
+    "answer": "Silence of the Lambs",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Chandler jokes Ross was great in ‘Silence of the Lambs’ because of the metal rig on his face."
+  },
+  {
+    "id": "fr-s1e4-hard-0023",
+    "context": "Hospital — Ross wants his puck back from a kid.",
+    "question": "What phrase does the kid use to refuse returning Ross’s puck?",
+    "options": [
+      "Finders keepers, losers weepers",
+      "First come, first served",
+      "You snooze, you lose",
+      "Too bad, old man"
+    ],
+    "answer": "Finders keepers, losers weepers",
+    "difficulty": "hard",
+    "episode": 4,
+    "description": "The kid asserts classic playground law before Ross escalates."
+  },
+  {
+    "id": "fr-s1e4-medium-0024",
+    "context": "Hospital — chaos at reception.",
+    "question": "True or False: Ross accidentally knocks out the receptionist with the puck while trying to get it back.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "The puck flies free during the struggle and hits the receptionist; Ross then finally admits, “Now that was fun.”"
+  },
+  {
+    "id": "fr-s1e4-easy-0025",
+    "context": "Credits scene — Twister game at Monica and Rachel’s.",
+    "question": "How does Rachel ultimately describe her situation to the Visa people at the very end?",
+    "options": [
+      "She says she’s okay because she has magic beans",
+      "She says she´s fine and no longer needs her card",
+      "She asks to cancel her card",
+      "She says everything will be ok and not to worry"
+    ],
+    "answer": "She says she’s okay because she has magic beans",
+    "difficulty": "easy",
+    "episode": 4,
+    "description": "On the phone, she brushes them off, saying she’s fine and that she’s got magic beans now."
+  },
+  {
+    "id": "fr-s1e5-easy-0001",
+    "context": "**EPISODE 5**: Monica’s place, cold open — the gang is trading goofy “men vs. women” talents while lounging around before heading out.",
+    "question": "What specific “skill” is Ross amazed by when he talks about what women can do?",
+    "options": [
+      "Unclasping a bra through a sleeve in one move",
+      "See breasts by just looking down",
+      "Apply makeup in seconds",
+      "Multiple orgasms"
+    ],
+    "answer": "Unclasping a bra through a sleeve in one move",
+    "difficulty": "easy",
+    "episode": 5,
+    "description": "Ross raves about the one maneuver that gets a bra out the sleeve and says nothing guys can do compares."
+  },
+  {
+    "id": "fr-s1e5-easy-0002",
+    "context": "Same cold open at Monica’s — the conversation keeps ping-ponging as everyone throws in a silly observation.",
+    "question": "Joey says he’s blown away that women can do what any time they want?",
+    "options": [
+      "See breasts by just looking down",
+      "Change outfits in seconds",
+      "Remember anniversaries",
+      "Cry on cue"
+    ],
+    "answer": "See breasts by just looking down",
+    "difficulty": "easy",
+    "episode": 5,
+    "description": "He marvels that women just look down and there they are, and wonders how they get any work done."
+  },
+{
+  "id": "fr-s1e5-hard-0034",
+  "context": "Monica’s apartment — cold open banter about what ‘guys’ and ‘girls’ can do.",
+  "question": "Which of the following is NOT mentioned during the boys-vs-girls discussion?",
+  "options": [
+    "Unclasping a bra through a sleeve in one move",
+    "Peeing standing up",
+    "Women can look down and see breasts any time",
+    "Guys can do mean things and not even care",
+    "Multiple orgasms",
+    "Men can open any jar on the first try"
+  ],
+  "answer": "Men can open any jar on the first try",
+  "difficulty": "hard",
+  "episode": 5,
+  "description": "They call out the sleeve-bra trick, peeing standing up, women ‘just look down’ to see breasts, that guys do mean things and don’t care, and Ross blurts “Multiple orgasms!” No one mentions men opening jars."
+},
+  {
+    "id": "fr-s1e5-medium-0004",
+    "context": "Central Perk, early evening — chatter turns to weekend plans while one of them keeps dodging an uncomfortable task.",
+    "question": "What big thing is Chandler clearly avoiding doing on Saturday night?",
+    "options": [
+      "Breaking up with Janice",
+      "Meeting Janice’s parents",
+      "Breaking up with Katie",
+      "Going on a date with Katie from the coffee shop"
+    ],
+    "answer": "Breaking up with Janice",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Ross calls out that the ‘big night’ is really Chandler’s planned breakup with Janice."
+  },
+  {
+    "id": "fr-s1e5-medium-0005",
+    "context": "Central Perk — still on the same topic, the crew starts offering ‘advice,’ some of it wildly questionable.",
+    "question": "Which breakup method does Joey proudly recommend to Chandler?",
+    "options": [
+      "“Be a man, just stop calling”",
+      "Be a man, just send her a text",
+      "Fake a family emergency",
+      "Stage a loud fight in public"
+    ],
+    "answer": "“Be a man, just stop calling”",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Joey’s advice is to ghost her: “Be a man, just stop calling.”"
+  },
+  {
+    "id": "fr-s1e5-medium-0006",
+    "context": "Central Perk — Phoebe volunteers a coordinated plan to help Chandler with his breakup.",
+    "question": "What idea does Phoebe suggest regarding breakups?",
+    "options": [
+      "She’ll break up with Tony while Chandler breaks up with Janice",
+      "She´ll do the breakup for him",
+      "Chandler should giver her the best date ever then breakup after",
+      "She’ll pretend to be Janice to test Chandler"
+    ],
+    "answer": "She’ll break up with Tony while Chandler breaks up with Janice",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Phoebe offers: Chandler breaks up with Janice, she breaks up with Tony, like a breakup buddy system."
+  },
+  {
+    "id": "fr-s1e5-medium-0035",
+    "context": "Central Perk — Saturday plans spiral into a breakup-strategy chat, and Phoebe weighs up why her relationship isn’t working.",
+    "question": "Which of these does Phoebe specifically mention as a reason she might break up with Tony?",
+    "options": ["His hunger strike", "He is way too serious", "He is way too cheerful", "He hates music"],
+    "answer": "His hunger strike",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "She says Tony is sweet but it’s not fun anymore and adds, “I don’t know if it’s me, or his hunger strike.”"
+  },
+  {
+    "id": "fr-s1e5-easy-0036",
+    "context": "Central Perk — mid-shift vent: Rachel relays a ‘too good to be true’ offer from her dad that comes with conditions.",
+    "question": "What kind of car does Rachel’s father offer her with strings attached?",
+    "options": ["Mercedes convertible", "BMW coupe", "Porsche 911", "Audi Cabriolet"],
+    "answer": "Mercedes convertible",
+    "difficulty": "easy",
+    "episode": 5,
+    "description": "She says he wants to give her a Mercedes convertible—if she moves back home."
+  },
+  {
+    "id": "fr-s1e5-easy-0007",
+    "context": "Central Perk — mid-shift, one friend vents about a parental ‘offer’ that comes with strings attached.",
+    "question": "Rachel’s dad offers her a Mercedes convertible on what condition?",
+    "options": [
+      "She moves back home",
+      "She goes back to dental school",
+      "She marries Barry",
+      "She quits her job"
+    ],
+    "answer": "She moves back home",
+    "difficulty": "easy",
+    "episode": 5,
+    "description": "She’s annoyed because the car is bait to drag her back to her old life at home."
+  },
+  {
+    "id": "fr-s1e5-hard-0008",
+    "context": "Central Perk — the rant continues as she quotes a familiar, overprotective speech she’s heard too many times.",
+    "question": "Which line does Rachel say is part of her dad’s 'extended disco version' speech?",
+    "options": [
+      "“You’ll never make it on your own”",
+      "“You’re embarrassing the family”",
+      "“You don’t understand responsibility”",
+      "“You’re throwing your future away”"
+    ],
+    "answer": "“You’ll never make it on your own”",
+    "difficulty": "hard",
+    "episode": 5,
+    "description": "She says she gets multiple choruses of “You’ll never make it on your own.”"
+  },
+  {
+    "id": "fr-s1e5-medium-0037",
+    "context": "Central Perk — same gripe session: Rachel quotes how her dad talked to her, and Chandler fires off a dry one-liner.",
+    "question": "What does Chandler say when Rachel says her father called her “young lady”?",
+    "options": [
+      "“Ooh, I hate when my father calls me that.”",
+      "“Ooh, I hate when my mother calls me that.”",
+      "“Hmm, My father used to call me that”",
+      "We all know how that feels."
+    ],
+    "answer": "“Ooh, I hate when my father calls me that.”",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Chandler quips that he hates when his own father calls him that."
+  },
+  {
+    "id": "fr-s1e5-medium-0009",
+    "context": "Central Perk — an ex strolls in dressed to turn heads, and small talk gets sharp fast.",
+    "question": "Why does Angela say she looks so good when Joey compliments her?",
+    "options": [
+      "She’s wearing a dress that accents her boobs",
+      "She got a boob job",
+      "She has a new stylist",
+      "She’s lost weight"
+    ],
+    "answer": "She’s wearing a dress that accents her boobs",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "She bluntly credits the dress “that accents my boobs.”"
+  },
+  {
+    "id": "fr-s1e5-easy-0039",
+    "context": "Central Perk — an old flame breezes in, catches up with Joey, and casually mentions her current situation.",
+    "question": "What is the name of Angela’s boyfriend?",
+    "options": ["Bob", "Paul", "Mark", "Steve"],
+    "answer": "Bob",
+    "difficulty": "easy",
+    "episode": 5,
+    "description": "Angela tells Joey, “I’m with Bob now.”"
+  },
+  {
+    "id": "fr-s1e5-easy-0038",
+    "context": "Central Perk — small talk turns into logistics as Ross angles to overlap evening plans with Rachel’s errands.",
+    "question": "What’s the name of the laundry place Rachel and Monica are going to?",
+    "options": ["Laundorama", "Wash-O-Rama", "Spin City", "Village Suds"],
+    "answer": "Laundorama",
+    "difficulty": "easy",
+    "episode": 5,
+    "description": "Rachel says her big night is “me and Monica at Laundorama.”"
+  },
+  {
+    "id": "fr-s1e5-hard-0011",
+    "context": "Central Perk — asked why he won’t use the laundry room at home, one friend offers a very colorful explanation.",
+    "question": "What bizarre reason does Ross give for avoiding his own building’s laundry room?",
+    "options": [
+      "Rats attracted to dryer sheets",
+      "The machines always eat his socks",
+      "Termites in the laundry room",
+      "His neighbors steal his clothes"
+    ],
+    "answer": "Rats attracted to dryer sheets",
+    "difficulty": "hard",
+    "episode": 5,
+    "description": "He claims there’s a rat problem: they go in fine, come out fluffy."
+  },
+  {
+    "id": "fr-s1e5-medium-0040",
+    "context": "Monica & Rachel’s apartment — window check-in on the neighbor prompts a grossed-out update from Monica.",
+    "question": "What was Ugly Naked Guy doing in this episode?",
+    "options": ["Laying kitchen tile", "Lifting weights", "Playing the trombone", "Painting the window frame"],
+    "answer": "Laying kitchen tile",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Monica groans, “Ugly Naked Guy’s laying kitchen tile. Eww!”"
+  },
+  {
+    "id": "fr-s1e5-medium-0041",
+    "context": "Ross’s apartment — pre-laundry pep talk: Chandler razzes Ross about presentation details, down to the softener.",
+    "question": "What fabric softener name does Chandler tease Ross about?",
+    "options": ["Snuggles", "Downy", "Cuddles", "Comfy"],
+    "answer": "Snuggles",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Ross defends it: “What is wrong with my Snuggles? … like a warm, fuzzy bear.”"
+  },
+  {
+    "id": "fr-s1e5-medium-0012",
+    "context": "Monica & Rachel’s — a wingman pitch is underway, complete with a dubious detail slipped in.",
+    "question": "What lie does Joey tell to convince Monica to double-date with Angela and Bob?",
+    "options": [
+      "That Bob is Angela’s brother",
+      "That Bob is his agent",
+      "That Bob is Angela’s coworker",
+      "That Bob is very rich and attractive"
+    ],
+    "answer": "That Bob is Angela’s brother",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "He repeatedly calls Bob her brother to hide the real setup."
+  },
+  {
+    "id": "fr-s1e5-medium-0016",
+    "context": "Upscale restaurant — the blind meet finally happens, and first impressions land fast.",
+    "question": "True or False: Monica is horrified when she finally sees Bob.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Expecting a disaster, she instead calls him “horribly attractive” and is immediately into him."
+  },
+  {
+    "id": "fr-s1e5-medium-0017",
+    "context": "Central Perk — the synchronized breakups kickoff, but one of the dates arrives bearing a surprise.",
+    "question": "What gift does Janice excitedly give Chandler before he can break up with her?",
+    "options": [
+      "Bullwinkle socks",
+      "A sweater",
+      "A framed photo",
+      "Rocky socks"
+    ],
+    "answer": "Bullwinkle socks",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "She got them to go with his Rocky socks so he can mix and match 'moose and squirrel.'"
+  },
+  {
+    "id": "fr-s1e5-medium-0019",
+    "context": "Neighborhood laundromat — a territorial local challenges a newcomer over machine etiquette.",
+    "question": "What 'rule' does the older woman use to justify stealing Rachel’s machine?",
+    "options": [
+      "No suds, no save",
+      "First come, first served",
+      "Ten-minute grace period",
+      "One machine per person"
+    ],
+    "answer": "No suds, no save",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "She mocks Rachel’s saved basket, saying there are no suds, so no claim."
+  },
+{
+  "id": "fr-s1e5-medium-0042",
+  "context": "Neighborhood laundromat — Ross is talking Rachel through basics and pulls out the detergent he brought along.",
+  "question": "What’s the name of the laundry detergent Ross uses?",
+  "options": ["Uberveiss", "Weisserreise", "Persil", "Spee"],
+  "answer": "Uberveiss",
+  "difficulty": "medium",
+  "episode": 5,
+  "description": "Ross brandishes the box and explains, “Uberveiss. It’s new, it’s German, it’s extra-tough.”"
+},
+{
+  "id": "fr-s1e5-medium-0043",
+  "context": "Neighborhood laundromat — mid-wash, Ross checks in as Rachel starts loading clothes without much of a plan.",
+  "question": "When Ross asks if she’s going to separate the laundry, what does Rachel say?",
+  "options": [
+    "“Am I supposed to use like one machine for shirts and another machine for pants?”",
+    "“No, I just toss everything in together.”",
+    "“Am I supposed to use different machines for different clothes.”",
+    "“Oh I thought the machine did that.”"
+  ],
+  "answer": "“Am I supposed to use like one machine for shirts and another machine for pants?”",
+  "difficulty": "medium",
+  "episode": 5,
+  "description": "When Ross asks, “Rach, are you gonna separate those?”, she panics and jokes about being a “total laundry spaz,” wondering if she needs separate machines for shirts and pants."
+},
+  {
+    "id": "fr-s1e5-hard-0021",
+    "context": "Same laundromat — a quick tutorial begins so the evening doesn’t completely derail.",
+    "question": "Which three categories does Ross say to separate laundry into?",
+    "options": [
+      "Whites, colors, delicates",
+      "Tops, bottoms, socks",
+      "Hot wash, cold wash, hand wash",
+      "Lights, darks, towels"
+    ],
+    "answer": "Whites, colors, delicates",
+    "difficulty": "hard",
+    "episode": 5,
+    "description": "He explains whites in one, colors in another, and bras/‘under-panty things’ as delicates."
+  },
+  {
+    "id": "fr-s1e5-hard-0022",
+    "context": "Laundromat — the lesson gets awkward when one item becomes a live demo prop.",
+    "question": "Rachel holds up a specific item to Ross and asks if it’s whites or delicates. What is it?",
+    "options": [
+      "White cotton panties",
+      "A white lace bra",
+      "A red lace bra",
+      "Red cotton panties"
+    ],
+    "answer": "White cotton panties",
+    "difficulty": "hard",
+    "episode": 5,
+    "description": "She waves white cotton panties at him, forcing a flustered 'judgment call' answer."
+  },
+  {
+    "id": "fr-s1e5-medium-0023",
+    "context": "Restaurant — one table runs parallel conversations: a matchmaking push and some not-so-subtle coaching.",
+    "question": "What quirky eating habit does Joey tell Bob to ‘listen for’ about Angela?",
+    "options": [
+      "A cute nibbly noise like a happy little squirrel",
+      "She hums between bites",
+      "She always chews loudly ",
+      "She constantly talks with food in her mouth"
+    ],
+    "answer": "A cute nibbly noise like a happy little squirrel",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Joey describes her ‘happy little squirrel or weasel’ noise while eating."
+  },
+  {
+    "id": "fr-s1e5-medium-0024",
+    "context": "Restaurant — in the ladies’ room, two women compare notes about the man at the table.",
+    "question": "Which does Angela say about Bob, shocking Monica?",
+    "options": [
+      "Angela says Bob is unbelievable in bed",
+      "Bob is actually married",
+      "Bob is actually gay and into Joey",
+      "Bob is terrible in bed"
+    ],
+    "answer": "Angela says Bob is unbelievable in bed",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Monica, thinking Bob is her ‘brother,’ is stunned when Angela praises him in bed."
+  },
+  {
+    "id": "fr-s1e5-medium-0027",
+    "context": "Laundromat — the first wash cycle ends, and a small oversight creates a big surprise.",
+    "question": "What laundry mistake does Rachel make?",
+    "options": [
+      "A red sock left in with the whites",
+      "Using too much detergent",
+      "Overloading the machine",
+      "Wrong water temperature"
+    ],
+    "answer": "A red sock left in with the whites",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Ross reveals she left a red sock in, dyeing everything pink."
+  },
+{
+  "id": "fr-s1e5-medium-0044",
+  "context": "Upscale restaurant — during the double date, small talk turns to where each of them grew up.",
+  "question": "Angela and Bob say they grew up where?",
+  "options": [
+    "Brooklyn Heights / Cleveland",
+    "Brooklyn Heights / Columbus",
+    "Cleveland /Brooklyn Heights ",
+    "Columbus/ Brooklyn Heights"
+  ],
+  "answer": "Brooklyn Heights / Cleveland",
+  "difficulty": "medium",
+  "episode": 5,
+  "description": "When Monica asks, Angela answers “Brooklyn Heights,” and Bob says “Cleveland.”"
+},
+{
+  "id": "fr-s1e5-medium-0045",
+  "context": "Upscale restaurant — during the double date, Monica pulls Joey aside after the table PDA gets uncomfortably intense.",
+  "question": "What vivid phrase does Monica use to describe what’s happening at Angela and Bob’s table?",
+  "options": [
+    "“Cocktails in Appalachia”",
+    "“Drinks in the Hamptons”",
+    "“A scene from Dynasty”",
+    "“A soap opera in real time”"
+  ],
+  "answer": "“Cocktails in Appalachia”",
+  "difficulty": "medium",
+  "episode": 5,
+  "description": "After Angela’s over-the-top PDA with Bob, Monica tells Joey it’s like “cocktails in Appalachia,” capturing how disturbingly intimate it feels."
+},
+  {
+    "id": "fr-s1e5-medium-0030",
+    "context": "Laundromat — round two with the same pushy regular, but this time the response is different.",
+    "question": "How does Rachel finally win the cart battle against the rude woman?",
+    "options": [
+      "She climbs into the cart and refuses to get out",
+      "She calls the manager over",
+      "Ross threatens to step in again",
+      "She throws the womans clothes out of the cart"
+    ],
+    "answer": "She climbs into the cart and refuses to get out",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Rachel declares the woman must take her with the cart; the woman backs off."
+  },
+  {
+    "id": "fr-s1e5-easy-0032",
+    "context": "Central Perk, end of night — everyone regroups; one outfit change draws a friendly comment.",
+    "question": "What does Phoebe say about Rachel’s now-matching pink clothes?",
+    "options": [
+      "She calls it a neat idea she wants to copy",
+      "She says it’s a disaster",
+      "She asks if Rachel is trying out a new style",
+      "She says you can never have too much colors"
+    ],
+    "answer": "She calls it a neat idea she wants to copy",
+    "difficulty": "easy",
+    "episode": 5,
+    "description": "Phoebe genuinely likes that all Rachel’s clothes match and says she’ll do it too."
+  },
+  {
+    "id": "fr-s1e5-easy-0033",
+    "context": "Outside Central Perk — moments after the dust settles on a long, caffeinated evening.",
+    "question": "How does Chandler react outside Central Perk after Janice is finally gone?",
+    "options": [
+      "He runs past yelling, “I’m free! I’m free!”",
+      "He cries at the counter",
+      "He immediately calls her back",
+      "He runs past yelling, “I did it! I did it!"
+    ],
+    "answer": "He runs past yelling, “I’m free! I’m free!”",
+    "difficulty": "easy",
+    "episode": 5,
+    "description": "He sprints by the window shouting his freedom while Phoebe dryly notes he needed time to grieve."
+  },
+  {
+    "id": "fr-s1e6-easy-0001",
+    "context": "**EPISODE 6**: A cramped black-box theater moments before curtain; programs rustle, seats creak, and the six huddle over the cast page looking for a familiar face.",
+    "question": "Whose picture in the program gets everyone excited before the play starts?",
+    "options": ["Joey", "Chandler", "Ross", "Monica"],
+    "answer": "Joey",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "Rachel spots Joey’s headshot and gushes, hyping the group right as they brace for his performance."
+  },
+  {
+    "id": "fr-s1e6-medium-0002",
+    "context": "Pre-show banter while the house lights hover; one friend undercuts the mood with a perfectly timed doom-and-gloom prediction.",
+    "question": "Who jokes that you can always spot someone who hasn’t seen one of Joey’s plays by their ‘no sense of impending doom’?",
+    "options": ["Chandler", "Monica", "Ross", "Phoebe"],
+    "answer": "Chandler",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Chandler’s deadpan sets expectations low, teasing the others just before the lights finally drop."
+  },
+  {
+    "id": "fr-s1e6-medium-0004",
+    "context": "Curtain up on a mock-Viennese office: fake beard, thick accent, couching a patient—then a left-turn into song.",
+    "question": "Which historical figure is Joey portraying in the play?",
+    "options": ["Freud", "Einstein", "Marx", "Kafka"],
+    "answer": "Freud",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Joey leans hard into Sigmund Freud—accent and all—before launching into a cheeky musical number."
+  },
+  {
+    "id": "fr-s1e6-medium-0003",
+    "context": "They’ve barely sat when the poster’s punctuation becomes a bit; one friend treats the exclamation mark like a warning siren.",
+    "question": "Who says the exclamation point in the play’s title is scary, as in ‘it’s not just Freud, it’s Freud!’?",
+    "options": ["Phoebe", "Rachel", "Monica", "Ross"],
+    "answer": "Phoebe",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Phoebe turns the title into a gag, insisting the punctuation makes the whole thing sound terrifying."
+  },
+  {
+    "id": "fr-s1e6-medium-0041",
+    "context": "House lights up on the play: Joey—bearded and accented—addresses a lone female patient on the couch in his first scene.",
+    "question": "On stage, what is the name of the woman Joey (as Freud) is speaking to?",
+    "options": ["Eva", "Ava", "Helga", "Irma"],
+    "answer": "Eva",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Joey opens with the line “Vell, Eva, ve’ve done some excellent vork here…,” making her name clear before the song kicks in."
+  },
+  {
+    "id": "fr-s1e6-hard-0042",
+    "context": "The play swerves into a musical bit—Joey belts out a cheeky, anatomy-obsessed verse while the gang winces in their seats.",
+    "question": "Which of these lines is NOT part of the song Joey sings?",
+    "options": [
+      "All you want is a dingle,",
+      "What you envy’s a schwang,",
+      "A thing through which you can tinkle,",
+      "Or play with, or simply let hang...",
+      "Something to twirl and jingle"
+    ],
+    "answer": "Something to twirl and jingle",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "The actual lyric run is: “All you want is a dingle / What you envy’s a schwang / A thing through which you can tinkle / Or play with, or simply let hang…” The ‘twirl and jingle’ line isn’t in the song."
+  },
+  {
+    "id": "fr-s1e6-medium-0006",
+    "context": "Applause fades into groans; everyone slumps back, trying to process what they just witnessed.",
+    "question": "Which friend says they feel ‘violated’ after the play?",
+    "options": ["Rachel", "Monica", "Phoebe", "Chandler"],
+    "answer": "Rachel",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Rachel bluntly labels the experience, capturing the row’s collective discomfort in one jab."
+  },
+  {
+    "id": "fr-s1e6-medium-0043",
+    "context": "Curtain call ends; the friends collapse into their seats and trade visceral reactions to what they just watched.",
+    "question": "Who says they wanted to ‘peel the skin off their body’ just to have something else to do?",
+    "options": ["Monica", "Rachel", "Phoebe", "Chandler"],
+    "answer": "Monica",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Monica delivers the line during the immediate post-show debrief, capturing the group’s secondhand embarrassment."
+  },
+  {
+    "id": "fr-s1e6-medium-0009",
+    "context": "Post-show mingling by the aisle; Chandler jitters through an approach, then lands a date with an elegant stranger who tweaks his name.",
+    "question": "What is the woman’s name who agrees to go out with Chandler?",
+    "options": ["Aurora", "Andrea", "Anita", "Amelia"],
+    "answer": "Aurora",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "She introduces herself as Aurora and calls him “Chand-lrr,” a mispronunciation he instantly adopts."
+  },
+  {
+    "id": "fr-s1e6-easy-0044",
+    "context": "Post-show small talk turns into a flirt; later, during the date recap, Chandler mentions the woman’s background.",
+    "question": "Aurora says she is from which country?",
+    "options": ["Italy", "France", "Israel", "Spain"],
+    "answer": "Italy",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "Chandler gushes that her name is Aurora and that she’s Italian—the accent and his ‘Chand-lrr’ nickname seal it."
+  },
+  {
+    "id": "fr-s1e6-hard-0049",
+    "context": "Right after the curtain call, Joey asks what they thought. They dodge any critique by blurting a trio of safe, upbeat lines.",
+    "question": "Which of these is NOT one of the exact lines they blurt to Joey after his play?",
+    "options": [
+      "“You’re in a play!”",
+      "“I didn’t know you could dance!”",
+      "“You had a beard!”",
+      "“You were great out there!”"
+    ],
+    "answer": "“You were great out there!”",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "They repeat, almost in unison: “You’re in a play! I didn’t know you could dance! You had a beard!” The generic praise “You were great out there!” is never said."
+  },
+  {
+    "id": "fr-s1e6-medium-0010",
+    "context": "Backstage hugs and damage control; amid the chatter, a business card surfaces with a glimmer of hope.",
+    "question": "Which agency leaves Joey a business card after the performance?",
+    "options": ["Estelle Leonard Talent Agency", "Estelle Morris Talent Agency", "Estelle Moris Scouting Agency", "Estelle Leonard Scouting Agency"],
+    "answer": "Estelle Leonard Talent Agency",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Chandler hands Joey a card from the Estelle Leonard Talent Agency—unexpected validation after a rough show."
+  },
+  {
+    "id": "fr-s1e6-medium-0011",
+    "context": "At Central Perk, Chandler recaps the date like a bedtime story—complete with wild detours from her past.",
+    "question": "Which surprising past experience of Aurora does Chandler mention?",
+    "options": ["She served in the Israeli army", "She served in the Italian Army", "She was a spy in China", "She was a spy in France"],
+    "answer": "She served in the Israeli army",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "He’s dazzled as Aurora breezes through tales of serving in the Israeli army before pivoting back to him."
+  },
+  {
+    "id": "fr-s1e6-hard-0012",
+    "context": "Flashback within the recap: one little ‘we’ drops, and Chandler’s follow-up reveals a complication.",
+    "question": "What did Aurora say was her husbands and her boyfriends´s name?",
+    "options": ["Rick/Ethan", "Ethan/Rick", "Justin/Rick", "Rick/Justin"],
+    "answer": "Rick/Ethan",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "She says Rick is her husband and he is fine with Ethan who is her boyfriend."
+  },
+  {
+    "id": "fr-s1e6-medium-0014",
+    "context": "Back with the group, Chandler spins the arrangement as a win: maximum perks, minimum strings.",
+    "question": "Chandler frames the arrangement as ‘every guy’s fantasy’ because he gets what without what?",
+    "options": [
+      "All the fun, talking, and sex without the responsibility",
+      "All the sex without athe boring stuff",
+      "All the benefits without the responsibility",
+      "All the fun without commitment"
+    ],
+    "answer": "All the fun, talking, and sex without the responsibility",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "He sells it as all upside—great conversation and sex—without the ‘boyfriend duties.’"
+  },
+  {
+    "id": "fr-s1e6-medium-0045",
+    "context": "At Central Perk, Ross begins an ‘anthropologically speaking’ lecture about monogamy before everyone fake-snores.",
+    "question": "Whose theory about monogamy does Ross try to cite before he gets drowned out?",
+    "options": ["Richard Leakey", "Desmond Morris", "Charles Darwin", "Sigmund Freud"],
+    "answer": "Richard Leakey",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Ross starts, “There’s a theory, put forth by Richard Leakey—” and the group immediately pretends to fall asleep."
+  },
+  {
+    "id": "fr-s1e6-medium-0018",
+    "context": "Back at the apartment, Rachel unveils a deep clean; one tiny furniture move detonates Monica’s inner organizer.",
+    "question": "Which item’s relocation quietly triggers Monica’s control freak tendencies?",
+    "options": ["The green ottoman", "The floor lamp", "The wall clock", "The red rug"],
+    "answer": "The green ottoman",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Rachel shifted the green ottoman; Monica ‘just to compare’ slides it back—then pretends she’s chill."
+  },
+  {
+    "id": "fr-s1e6-hard-0046",
+    "context": "Back at the apartment after Rachel’s deep clean, the friends rattle off examples that expose Monica’s need for order.",
+    "question": "Which of the following does NOT come up in that conversation about Monica’s cleanliness quirks?",
+    "options": [
+      "Fanning out the magazines ‘correctly’",
+      "Her Raggedy Ann being the only doll that wasn’t raggedy",
+      "Delaying payment of the phone bill on purpose",
+      "Buying detergent without the easy-pour spout",
+      "Leaving a cold glass on the coffee table with no coaster",
+      "Color-coding the towels by shade"
+    ],
+    "answer": "Color-coding the towels by shade",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "All the listed bits are mentioned during the scene—ottoman, magazines, Raggedy Ann, phone bill, detergent spout, and coaster/condensation—except color-coding towels, which never comes up."
+  },
+  {
+    "id": "fr-s1e6-medium-0021",
+    "context": "A phone call snaps the room into celebration; Joey’s grin gives away the name before he says it.",
+    "question": "Which iconic actor is tied to the film job Joey gets a call about?",
+    "options": ["Al Pacino", "Robert De Niro", "Tom Hanks", "Dustin Hoffman"],
+    "answer": "Al Pacino",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Joey quotes Pacino on loop, giddy that he’s finally part of a ‘real’ movie."
+  },
+  {
+    "id": "fr-s1e6-hard-0022",
+    "context": "The room leans in for the role specifics; the reveal is equal parts legit and ridiculous.",
+    "question": "What specific on-camera job does Joey land in the Pacino film?",
+    "options": ["Butt double", "Hand double", "Stunt double", "Penis double"],
+    "answer": "Butt double",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "He explains with pride and a wince: ‘He goes into the shower, and then—I’m his butt.’"
+  },
+  {
+    "id": "fr-s1e6-medium-0028",
+    "context": "Post-cuddle, schedules collide; Aurora casually drops another name and Chandler hits his limit.",
+    "question": "Which new name does Aurora drop that pushes Chandler to ask for exclusivity?",
+    "options": ["Andrew", "Justin", "Sean", "Marco"],
+    "answer": "Andrew",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "‘He’s… new,’ she says about Andrew—on top of Rick and Ethan—triggering Chandler’s ultimatum."
+  },
+  {
+    "id": "fr-s1e6-hard-0026",
+    "context": "On set, the director wants quick and clean; Joey goes a different direction.",
+    "question": "What does the director accuse Joey of doing in the shower shot?",
+    "options": ["Clenching", "Hunching", "Shivering", "Over-scrubbing"],
+    "answer": "Clenching",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "First take ends with, ‘No, that was clenching,’ killing Joey’s dramatic interpretation."
+  },
+  {
+    "id": "fr-s1e6-hard-0027",
+    "context": "Reset for another take; Joey defends his ‘choice’ with earnest actor jargon.",
+    "question": "Joey says he was going for which acting choice before the director cuts again?",
+    "options": ["Quiet desperation", "Controlled rage", "Stoic grief", "Mournful resolve"],
+    "answer": "Quiet desperation",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "He insists the butt should be angry and tell the story—specifically ‘quiet desperation’—which only speeds up his firing."
+  },
+  {
+    "id": "fr-s1e6-easy-0048",
+    "context": "Post–film set debrief: Joey admits he got fired for “acting too much with it,” and friends try to soothe him that no one will notice on screen.",
+    "question": "When his friends say no one will even realize it isn’t him, what does Joey reply?",
+    "options": [
+      "“My mom will.”",
+      "“My Granny will.”",
+      "“My sisters will.”",
+      "“You guys will.”"
+    ],
+    "answer": "“My mom will.”",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "They insist the audience won’t tell it isn’t his butt; Joey deadpans, “My mom will,” equal parts sweet and unsettling."
+  },
+  {
+    "id": "fr-s1e6-medium-0034",
+    "context": "Final beat at the apartment; Monica tests her ‘loosen up’ promise in front of witnesses.",
+    "question": "At the end, what does Monica deliberately leave ‘casually strewn’ to prove she can relax?",
+    "options": ["Her shoes", "Her scarf", "Her socks", "A jacket on the couch"],
+    "answer": "Her shoes",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "She pointedly abandons her shoes near the door, announcing she’ll grab them ‘tomorrow… or not.’"
+  },
+  {
     "id": "fr-s1e7-easy-0001",
     "context": "**EPISODE 7**: Central Perk, pre-blackout: Rachel quiets the crowd and spotlights her friend with an acoustic guitar for a cozy open-mic vibe.",
     "question": "Who is Rachel introducing to play music when the blackout hits?",
@@ -328,6 +2421,283 @@
     "difficulty": "hard",
     "episode": 7,
     "description": "He gives “Hi, I’m account number 7143457” and politely requests a copy of the tape."
+  },
+  {
+    "id": "fr-s1e8-easy-0001",
+    "context": "**EPISODE 8**: At Monica’s place, the group debriefs after Chandler’s coworker tried to set him up on a blind date.",
+    "question": "Who mistakenly tries to set Chandler up with a man because she assumes he’s gay?",
+    "options": ["Shelley", "Andrea", "Susan", "Sara"],
+    "answer": "Shelley",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Shelley from Chandler’s office enthusiastically pitches a Saturday date and only then reveals the date is a guy."
+  },
+  {
+    "id": "fr-s1e8-medium-0023",
+    "context": "At the café earlier, Rachel can’t resist flexing during an international call.",
+    "question": "From where does Paolo call Rachel that she keeps announcing to the room?",
+    "options": ["Rome", "Milan", "Naples", "Florence"],
+    "answer": "Rome",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "She beams ‘I’m talking to Rome,’ treating the long-distance call like a status badge."
+  },
+  {
+    "id": "fr-s1e8-easy-0032",
+    "context": "The friends won’t give Chandler a concrete reason for the ‘gay vibe’ and keep repeating one vague label.",
+    "question": "When Chandler presses for specifics, what single word about him do they all use as the reason?",
+    "options": ["Quality", "Appearance", "Energy", "Look"],
+    "answer": "Quality",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Monica says he has ‘a quality,’ and everyone piles on with the exact same word—driving Chandler crazy."
+  },
+  {
+    "id": "fr-s1e8-medium-0002",
+    "context": "Same hangout; Chandler asks why people read him a certain way and the friends toss out blunt theories.",
+    "question": "What do the friends jokingly say Chandler has that makes people assume he’s gay?",
+    "options": ["His hair", "His clothes", "His laugh", "His posture"],
+    "answer": "His hair",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "When Chandler begs for specifics, Phoebe deadpans that it’s his ‘homosexual hair,’ keeping the bit painfully literal."
+  },
+{
+  "id": "fr-s1e8-easy-0039",
+  "context": "At Monica’s, Chandler asks who initially thought he was gay; two friends immediately deny it.",
+  "question": "Which two friends deny it when Chandler asks if they thought he was gay when they first met?",
+  "options": ["Joey and Ross", "Monica and Joey", "Ross and Rachel", "Phoebe and Ross"],
+  "answer": "Joey and Ross",
+  "difficulty": "easy",
+  "episode": 8,
+  "description": "Joey answers first with a blunt “Not me,” and Ross follows with the same."
+},
+  {
+    "id": "fr-s1e8-medium-0031",
+    "context": "Back at Monica’s, Chandler grills the group about why people assume he’s gay; Ross recalls a college anecdote.",
+    "question": "Who does Ross say once thought Chandler was gay back in college?",
+    "options": ["Susan Sallidor", "Lara Barber", "Maycee Litman", "Nancy Brill"],
+    "answer": "Susan Sallidor",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Ross admits Susan Sallidor thought it, and he didn’t correct her because he wanted to date her—claiming Chandler was seeing Bernie Spellman."
+  },
+  {
+    "id": "fr-s1e8-medium-0003",
+    "context": "A phone call interrupts the banter and shifts the mood; it’s family news.",
+    "question": "Which relative do Ross and Monica rush to see at the hospital?",
+    "options": ["Nana", "Aunt Iris", "Great-Aunt Lillian", "Grandpa Leonard"],
+    "answer": "Nana",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Monica’s dad beeps in with the update, sending the siblings to the hospital to be with their grandmother."
+  },
+  {
+    "id": "fr-s1e8-medium-0034",
+    "context": "In Nana’s hospital room, the goodbye turns surreal and then somber again.",
+    "question": "What unusual thing happens at the hospital while visiting Nana?",
+    "options": [
+      "She seems to die, briefly ‘comes back,’ then passes again",
+      "She sits up and asks for tea, then dies",
+      "She is declared fine and sent home",
+      "She dies"
+    ],
+    "answer": "She seems to die, briefly ‘comes back,’ then passes again",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "The nurse pronounces her gone; Nana moves, startling Ross and Monica; moments later she truly passes."
+  },
+  {
+    "id": "fr-s1e8-medium-0040",
+    "context": "In Nana’s hospital room, the siblings say goodbye and mention loved ones she’d be with.",
+    "question": "Which aunt do they say Nana is with in heaven?",
+    "options": ["Aunt Phyllis", "Aunt Lillian", "Aunt Iris", "Aunt May"],
+    "answer": "Aunt Phyllis",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Ross says at least she’s with Pop-Pop and Aunt Phyllis now."
+  },
+  {
+    "id": "fr-s1e8-medium-0005",
+    "context": "After the hospital, the friends regroup at the coffee shop to process what happened.",
+    "question": "What does Phoebe claim she sometimes feels from deceased loved ones?",
+    "options": [
+      "A presence over her right shoulder",
+      "Cold air on her neck",
+      "Static in her hair",
+      "Footsteps behind her"
+    ],
+    "answer": "A presence over her right shoulder",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "She describes getting a strong ‘vibe’ over her right shoulder, even linking an item to a late friend."
+  },
+  {
+    "id": "fr-s1e8-hard-0006",
+    "context": "Still at the café, Phoebe ties small objects to memories in her trademark way.",
+    "question": "Which tiny item does Phoebe connect to her friend who was struck by lightning?",
+    "options": ["Yellow pencils", "An Umbrella", "Ticket stubs", "A subway token"],
+    "answer": "Yellow pencils",
+    "difficulty": "hard",
+    "episode": 8,
+    "description": "She says those stubby pencils spark a ‘vibe,’ prompting Rachel to gift her a freshly sharpened one."
+  },
+  {
+    "id": "fr-s1e8-easy-0035",
+    "context": "At Central Perk, Phoebe links objects and memories to people who’ve died.",
+    "question": "What is the name of Phoebe’s friend who was struck by lightning on a miniature golf course?",
+    "options": ["Debbie", "Denise", "Doreen", "Diane"],
+    "answer": "Debbie",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Phoebe says little yellow pencils give her a strong ‘Debbie vibe’ because Debbie died in that odd accident."
+  },
+  {
+    "id": "fr-s1e8-medium-0007",
+    "context": "At Nana’s home, Ross helps sort her things while his mom and aunt debate details.",
+    "question": "Which dress color do they ultimately choose for Nana?",
+    "options": ["Burgundy", "Navy", "Forest green", "Black"],
+    "answer": "Burgundy",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "After cycling through options, they settle on a burgundy dress—then spiral into ‘day shoe vs. evening shoe’ debates."
+  },
+  {
+    "id": "fr-s1e8-hard-0009",
+    "context": "Rummaging high shelves like a department store clerk, Ross uncovers a secret stash.",
+    "question": "What does Ross find hidden in Nana’s shoeboxes?",
+    "options": ["Piles of Sweet ’n Low packets", "Piles of Unmailed letters", "Casino chips", "Packs of ketchup"],
+    "answer": "Piles of Sweet ’n Low packets",
+    "difficulty": "hard",
+    "episode": 8,
+    "description": "Dozens tumble down on him, confirming the family legend that Nana ‘liberated’ sweetener from everywhere."
+  },
+  {
+    "id": "fr-s1e8-medium-0010",
+    "context": "Monica attempts pleasant small talk with her mom and gets micro-criticized, as usual.",
+    "question": "Which feature does Monica’s mom nitpick the morning of the funeral?",
+    "options": ["Her ears", "Her posture", "Her nail color", "Her skirt length"],
+    "answer": "Her ears",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "She reminds Monica not to wear her hair up because, according to Mom, Monica’s ears aren’t her ‘best feature.’"
+  },
+  {
+    "id": "fr-s1e8-medium-0042",
+    "context": "Pre-funeral outfit check at the apartment; Rachel shows off a gift from abroad.",
+    "question": "What did Paolo send Rachel from Italy that she wears to the service?",
+    "options": ["Shoes", "A scarf", "A dress", "A necklace"],
+    "answer": "Shoes",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "She proudly says the shoes were sent from Italy—later stepping in mud at the cemetery."
+  },
+  {
+    "id": "fr-s1e8-easy-0012",
+    "context": "At the cemetery, decorum clashes with hobbies in a very Joey way.",
+    "question": "What is Joey secretly watching at the funeral reception on a pocket TV?",
+    "options": ["Giants–Cowboys game", "A Knicks game", "A boxing match", "Baseball highlights"],
+    "answer": "Giants–Cowboys game",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "He starts with the pre-game at graveside and plans to watch the game at the reception; soon the dads gather around too."
+  },
+  {
+    "id": "fr-s1e8-medium-0013",
+    "context": "Cemetery paths, wet ground, and distracted walking are a dangerous combo for Ross.",
+    "question": "What slapstick mishap befalls Ross at the cemetery?",
+    "options": [
+      "He falls into an open grave",
+      "He trips over a headstone",
+      "He drops the casket flowers",
+      "He falls into a casket"
+    ],
+    "answer": "He falls into an open grave",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Admiring the weather, he steps without looking and plummets, declaring he has just lived his worst fear."
+  },
+  {
+    "id": "fr-s1e8-medium-0018",
+    "context": "Earlier at Nana’s apartment, Dad gets uncharacteristically whimsical about legacy.",
+    "question": "What unusual request does Jack Geller make for his own eventual arrangements?",
+    "options": [
+      "To be buried at sea",
+      "To have a fireworks send-off",
+      "To be turned into a tree",
+      "To have a jazz band at the wake"
+    ],
+    "answer": "To be buried at sea",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "He pitches it as a fun day out—rent a boat, pack a lunch—so people won’t call him predictable."
+  },
+  {
+    "id": "fr-s1e8-medium-0043",
+    "context": "At the wake, Joey tries to hide his pocket TV setup when confronted.",
+    "question": "When asked by Mr Geller why he’s wearing an earphone, what does Joey claim?",
+    "options": [
+      "“A hearing disability.”",
+      "“I’m on call with the caterer.”",
+      "“Learning Italian phrases.”",
+      "“On a call with his mother.”"
+    ],
+    "answer": "“A hearing disability.”",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "He deflects Mr. Geller’s curiosity with a deadpan excuse while sneaking the game."
+  },
+  {
+    "id": "fr-s1e8-hard-0044",
+    "context": "Mr. Geller quietly joins Joey to check the score on the pocket TV.",
+    "question": "What game update does Joey give when asked for the score?",
+    "options": [
+      "“17–14 Giants, three minutes to go in the third.”",
+      "“20–17 Cowboys, two minutes left in the fourth.”",
+      "“14–10 Giants at halftime.”",
+      "“21–20 Cowboys, start of the third.”"
+    ],
+    "answer": "“17–14 Giants, three minutes to go in the third.”",
+    "difficulty": "hard",
+    "episode": 8,
+    "description": "He reports the Giants up 17–14 with 3:00 remaining in the third quarter."
+  },
+  {
+    "id": "fr-s1e8-hard-0036",
+    "context": "Back at the office, Chandler and Shelley debrief the mistaken setup, name-checking two coworkers in the process.",
+    "question": "Who did Shelley think would be perfect for Chandler, and who did Chandler boast he could ‘get’?",
+    "options": [
+      "Lowell (Financial Services) / Brian (Payroll)",
+      "Brian (Payroll) / Lowell (Financial Services)",
+      "Lowell (HR) / Brian (Sales)",
+      "Brian (Sales) / Lowell (HR)"
+    ],
+    "answer": "Lowell (Financial Services) / Brian (Payroll)",
+    "difficulty": "hard",
+    "episode": 8,
+    "description": "Shelley says Chandler and Lowell would make a great couple; Chandler counters that Brian from Payroll is more his speed."
+  },
+  {
+    "id": "fr-s1e8-hard-0020",
+    "context": "An inscription on the back of a vintage photo reveals a generational echo.",
+    "question": "What hangout name is written on the back of Nana’s group photo?",
+    "options": ["Java Joe’s", "The Percolator", "Bean Scene", "Café Royale"],
+    "answer": "Java Joe’s",
+    "difficulty": "hard",
+    "episode": 8,
+    "description": "It reads ‘Me and the gang at Java Joe’s,’ mirroring the friends’ own coffeehouse dynamic decades later."
+  },
+  {
+    "id": "fr-s1e8-medium-0037",
+    "context": "Flipping through Nana’s photos, the group reads a caption that also lists a year.",
+    "question": "In what year was the ‘Me and the gang at Java Joe’s’ picture taken?",
+    "options": ["1939", "1942", "1936", "1945"],
+    "answer": "1939",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Monica calculates Nana was about 24–25 in that 1939 photo—an echo of the friends’ own coffeehouse crew."
   }
 ]
+
+
 

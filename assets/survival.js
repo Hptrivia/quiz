@@ -113,6 +113,11 @@ function shuffleQuestionOptions(question) {
       </div>
       <p class="survival-coming-soon">Leaderboard submission can be added later here.</p>
     `;
+        setTimeout(() => {
+  if (typeof showInstallCard === "function") {
+    showInstallCard();
+  }
+}, 800);
   }
 
   function maybeStartRecovery() {
@@ -187,14 +192,17 @@ function shuffleQuestionOptions(question) {
         updateTopbar();
       }
 
-  function handleWrongAnswer() {
-    state.gameOver = true;
-    state.answerLocked = true;
-    submitBtn.disabled = true;
-    nextBtn.style.display = "inline-block";
-    setFeedback("Wrong. Run over.", "wrong");
-    updateTopbar();
-  }
+function handleWrongAnswer() {
+  state.gameOver = true;
+  state.answerLocked = true;
+  submitBtn.disabled = true;
+  setFeedback("Wrong. Run over.", "wrong");
+  updateTopbar();
+
+  setTimeout(() => {
+    renderResult();
+  }, 500);
+}
 
   function handleCorrectAnswer() {
     const q = getCurrentQuestion();
@@ -248,7 +256,7 @@ function shuffleQuestionOptions(question) {
 
     const q = getCurrentQuestion();
     state.friendAvailable = false;
-    setFeedback(`Call a Friend: ${q.answer}`, "correct");
+    setFeedback(`Call a Friend: The answer is ${q.answer}`, "correct");
 
     maybeStartRecovery();
     updateTopbar();

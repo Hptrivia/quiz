@@ -27,7 +27,7 @@ p.parentNode.insertBefore(m,p)
 </head>
 <body>
   <main class="container narrow">
-    <a href="index.html" class="back-link">← Back to Home</a>
+    <a href="index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
 
     <section class="panel">
       <h1>How It Works</h1>

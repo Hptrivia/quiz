@@ -27,24 +27,38 @@ p.parentNode.insertBefore(m,p)
 </head>
 <body data-page="play">
   <main class="container narrow">
-    <a href="index.html" class="back-link">← Back to Home</a>
+    <a href="index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
 
     <section class="panel">
 
-      <div id="quizBox">
-        <p id="progressText"></p>
-        <h2 id="questionText"></h2>
-        <div id="optionsList" class="options"></div>
-        <p id="scoreText">Score: 0</p>
-        <p id="feedbackText" class="feedback"></p>
+<div id="quizBox">
+<div class="play-progress-row">
+<p id="progressText"></p>
+<a id="nextPageLink" class="skip-link" href="#" style="display:none;">Next Page</a>
+</div>
 
-        <div class="cta-row">
-          <button id="submitButton" class="primary-btn">Submit</button>
-          <button id="nextButton" class="secondary-btn" style="display:none;">Next</button>
-        </div>
-      </div>
+<h2 id="questionText"></h2>
+<div id="optionsList" class="options"></div>
+
+<p id="scoreText">Score: 0</p>
+<p id="feedbackText" class="feedback"></p>
+
+<div class="cta-row">
+<button id="submitButton" class="primary-btn">Submit</button>
+<button id="nextButton" class="secondary-btn" style="display:none;">Next</button>
+</div>
+</div>
 
       <div id="resultBox" style="display:none;"></div>
+      <div id="installCard" class="install-card" style="display:none;">
+  <div class="install-card-content">
+    <p id="installText"></p>
+    <div class="install-card-actions">
+      <button id="installButton" class="primary-btn" type="button">Install App</button>
+      <button id="installDismiss" class="secondary-btn" type="button">Dismiss</button>
+    </div>
+  </div>
+</div>
     </section>
   </main>
 
@@ -62,5 +76,6 @@ p.parentNode.insertBefore(m,p)
 </footer>
 
   <script src="assets/app.js"></script>
+  <script src="assets/install.js"></script>
 </body>
 </html>

@@ -1,5 +1,590 @@
 [
   {
+    "id": "ofc-s1e1-medium-0001",
+    "context": "**EPISODE 1**: Michael brings Jim into his office to ‘show him how it’s done’ and makes a quick sales call, boasting about a closed deal afterward.",
+    "question": "After hanging up, what mistaken assumption does Michael explain about the person he just spoke to on the phone?",
+    "options": ["He thought it was a man because of a low voice", "He thought he was talking to the CEO", "He thought it was a woman because of the low voice", "He thought it was Jan from Corporate"],
+    "answer": "He thought it was a man because of a low voice",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Michael calls the customer ‘sir,’ then says it was actually a woman and blames the low voice."
+  },
+  {
+    "id": "ofc-s1e1-easy-0001b",
+    "context": "During an early walk-and-talk and to-camera intro, Michael summarizes his tenure while showing off the office.",
+    "question": "How long does Michael say he has been at Dunder Mifflin?",
+    "options": ["12 years", "10 years", "8 years", "15 years"],
+    "answer": "12 years",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Michael states he’s been at Dunder Mifflin for 12 years, with the last four as Regional Manager."
+  },
+  {
+    "id": "ofc-s1e1-easy-0002",
+    "context": "On a walkaround, Michael introduces Pam at reception and lectures her about handling documents from Corporate.",
+    "question": "Where does Michael say the ‘special filing cabinet’ is for faxes from Corporate?",
+    "options": ["The wastepaper basket", "The top drawer", "The outbox", "The supply closet"],
+    "answer": "The wastepaper basket",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "He jokes that anything from Corporate should go in the trash."
+  },
+  {
+    "id": "ofc-s1e1-easy-0003",
+    "context": "Michael boasts about being the ‘best boss’ and shows a mug to the camera.",
+    "question": "Where does Michael say he got his ‘WORLD’S BEST BOSS’ mug?",
+    "options": ["Spencer Gifts", "Walmart", "Target", "A company award ceremony"],
+    "answer": "Spencer Gifts",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "He admits he bought the mug himself at Spencer Gifts."
+  },
+  {
+    "id": "ofc-s1e1-easy-0005",
+    "context": "Jim explains his role speaking to clients on the phone about their needs.",
+    "question": "What product does Jim say he talks to clients about?",
+    "options": ["Copier paper", "Printers", "Staplers", "Ink cartridges"],
+    "answer": "Copier paper",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "He mentions quantities and types of copier paper and whether customers can pay."
+  },
+  {
+    "id": "ofc-s1e1-easy-0006",
+    "context": "In the bullpen, Michael kicks off an old pop-culture bit; Jim plays along and remarks he still isn’t tired of it after seven years.",
+    "question": "Which of Michael’s shenanigans does Jim say he isn’t tired of after seven years?",
+    "options": ["Whassup", "That’s what she said", "Boom. Roasted", "Yada, yada, yada"],
+    "answer": "Whassup",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "They trade the catchphrase, and Jim says, “I still love that after seven years.”"
+  },
+  {
+    "id": "ofc-s1e1-medium-0006b",
+    "context": "In the bullpen, Michael notices Jan during a visit and mentions he has a nickname for her—one he says he wouldn’t use directly to her.",
+    "question": "What does Michael say he calls Jan Levinson?",
+    "options": ["Hillary Rodham Clinton", "Margaret Thatcher", "Condoleezza Rice", "Nancy Pelosi"],
+    "answer": "Hillary Rodham Clinton",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Michael tells the camera he calls her ‘Hillary Rodham Clinton,’ adding he wouldn’t say it to her face."
+  },
+  {
+    "id": "ofc-s1e1-truefalse-0007",
+    "context": "In a meeting with Corporate, the visiting executive lays out a major concern about overlapping locations.",
+    "question": "True or False: Corporate says they can’t justify keeping both the Scranton and Stamford branches.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Jan tells Michael it’s up to Scranton or Stamford to prove they can incorporate the other."
+  },
+  {
+    "id": "ofc-s1e1-medium-0008",
+    "context": "Michael takes a phone call from a traveling salesman friend known for pushing boundaries.",
+    "question": "What nickname does Michael use when he answers the call from Todd Packer?",
+    "options": ["Packman", "Packs", "T-Pack", "T-Man"],
+    "answer": "Packman",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Michael greets him with ‘Packman.’"
+  },
+  {
+    "id": "ofc-s1e1-medium-0009",
+    "context": "As rumors start to swirl, one staffer bluntly asks for clarity about what’s being discussed.",
+    "question": "Who asks, ‘So what does downsizing actually mean?’",
+    "options": ["Phyllis", "Stanley", "Oscar", "Angela"],
+    "answer": "Phyllis",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Phyllis is the one who voices the question to the group."
+  },
+  {
+    "id": "ofc-s1e1-medium-0010",
+    "context": "At reception, one coworker invites another to a themed get-together hosted by a colleague.",
+    "question": "What event does Pam ask Jim about attending?",
+    "options": ["Angela’s cat party", "Kevin’s poker night", "Phyllis’s baby shower", "Stanley’s barbecue"],
+    "answer": "Angela’s cat party",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Pam asks if Jim is going to Angela’s cat party on Sunday."
+  },
+  {
+    "id": "ofc-s1e1-easy-0011",
+    "context": "A new hire is introduced to the office by the manager with some awkward jokes.",
+    "question": "What is the name of the new temp who starts that day?",
+    "options": ["Ryan Howard", "Devon White", "Roy Anderson", "Toby Flenderson"],
+    "answer": "Ryan Howard",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "He introduces himself as Ryan Howard from the temp agency."
+  },
+  {
+    "id": "ofc-s1e1-medium-0012",
+    "context": "The manager tries out impressions in front of the newcomer.",
+    "question": "Which figure does Michael impersonate while saying he is a student of comedy?",
+    "options": ["Adolf Hitler", "Austin Powers", "Borat", "Mr. Bean"],
+    "answer": "Adolf Hitler",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Michael shouts in mock German and says, ‘I’m Hitler.’"
+  },
+  {
+    "id": "ofc-s1e1-medium-0013",
+    "context": "At reception, someone talks about creative ambitions beyond the day job.",
+    "question": "Which medium does Pam say she mostly uses for her illustrations?",
+    "options": ["Watercolor", "Acrylic", "Charcoal", "Pastel"],
+    "answer": "Watercolor",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Pam says she likes to do illustrations—mostly watercolor, with a few oil pencil."
+  },
+  {
+    "id": "ofc-s1e1-hard-0014",
+    "context": "Two deskmates bicker over the invisible boundary between their workspaces.",
+    "question": "Which term does Dwight use to justify pushing back against items crossing the desk line?",
+    "options": ["Demarcation", "Ergonomics", "Zoning", "Feng shui"],
+    "answer": "Demarcation",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "Dwight says, ‘One word, two syllables. Demarcation.’"
+  },
+  {
+    "id": "ofc-s1e1-truefalse-0015",
+    "context": "As talk of cuts spreads, one salesman makes his stance crystal clear.",
+    "question": "True or False: Dwight says he opposes downsizing and has argued against it since he started.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "He claims he’s been recommending downsizing since he first got there."
+  },
+  {
+    "id": "ofc-s1e1-medium-0016",
+    "context": "When a phone rings, the boss dashes theatrically and references a classic TV character.",
+    "question": "Which show does Michael reference while making sound effects as he ‘runs’ to the phone?",
+    "options": ["The Six Million Dollar Man", "Knight Rider", "MacGyver", "Magnum, P.I."],
+    "answer": "The Six Million Dollar Man",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "He hums the signature sound and name-checks Steve Austin."
+  },
+  {
+    "id": "ofc-s1e1-hard-0017",
+    "context": "Before a meeting, the manager lists personal heroes as if making a Mount Rushmore of influences.",
+    "question": "Which of the following is NOT on Michael’s short list of heroes?",
+    "options": ["Michael Jordan", "Bob Hope", "Abraham Lincoln", "Bono"],
+    "answer": "Michael Jordan",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "He cites Bob Hope, Abraham Lincoln, Bono—and even God—but not Michael Jordan."
+  },
+  {
+    "id": "ofc-s1e1-medium-0018",
+    "context": "In the conference room, one employee keeps trying to jump the line to hear sensitive news first.",
+    "question": "Which title does Michael insist Dwight actually holds?",
+    "options": ["Assistant to the Regional Manager", "Assistant Regional Manager", "Senior Sales Associate", "Branch Coordinator"],
+    "answer": "Assistant to the Regional Manager",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "He corrects Dwight’s self-promotion by adding ‘to the.’"
+  },
+  {
+    "id": "ofc-s1e1-medium-0019",
+    "context": "After the meeting, a salesman casually reveals a small personal detail about a coworker.",
+    "question": "What flavor does Jim say is Pam’s favorite yogurt?",
+    "options": ["Mixed berry", "Vanilla", "Peach", "Strawberry"],
+    "answer": "Mixed berry",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Jim jokes about the ‘useless information’ he carries—like Pam’s favorite yogurt flavor."
+  },
+  {
+    "id": "ofc-s1e1-hard-0020",
+    "context": "The new temp gets introduced to a veteran salesman who’s eager to brag about his ride.",
+    "question": "Which car does Dwight say he owns (including model year)?",
+    "options": ["’78 280Z", "’82 Trans Am", "’76 Camaro", "’79 Mustang"],
+    "answer": "’78 280Z",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "Dwight says he bought a ’78 280Z and fixed it up."
+  },
+  {
+    "id": "ofc-s1e1-medium-0020b",
+    "context": "Dwight brags about how much he originally bought his car and how much its now worth.",
+    "question": "How much did Dwight say he originally paid for his car, and how much is it worth now?",
+    "options": ["$1,200 / $3,000", "$1,500 / $2,500", "$2,000 / $4,000", "$900 / $2,200"],
+    "answer": "$1,200 / $3,000",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Dwight says he bought the ’78 280Z for $1,200, fixed it up, and now it’s worth three grand."
+  },
+  {
+    "id": "ofc-s1e1-easy-0021",
+    "context": "A long-running prank surfaces again when one worker finds something encased in dessert.",
+    "question": "What office item of Dwight’s is found inside the gelatin?",
+    "options": ["Stapler", "Phone", "Mouse", "Calculator"],
+    "answer": "Stapler",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Dwight says, ‘That is my stapler,’ while it jiggles in Jell-O."
+  },
+  {
+    "id": "ofc-s1e1-medium-0022",
+    "context": "After the prank is addressed, someone slips in a dessert pun while apologizing.",
+    "question": "What dessert pun does Jim use when apologizing to Dwight?",
+    "options": ["Flan", "Pie", "Trifle", "Pudding"],
+    "answer": "Flan",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Jim quips, ‘I have always been your biggest flan.’"
+  },
+  {
+    "id": "ofc-s1e1-easy-0022b",
+    "context": "In a to-camera bit after the Jell-O prank, Dwight contrasts the office’s laid-back vibe with a strict role he performs on weekends.",
+    "question": "What does Dwight say he volunteers as on the weekends?",
+    "options": ["Sheriff's Deputy", "Firefighter", "Sergeant´s Deputy", "Park Ranger"],
+    "answer": "Sheriff's Deputy",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Dwight says he’s a volunteer Sheriff’s Deputy on the weekends and ‘you cannot screw around there.’"
+  },
+  {
+    "id": "ofc-s1e1-medium-0023",
+    "context": "At reception after work, a fiancé drops by and plans change.",
+    "question": "How long does Pam say she and her fiancé have been engaged?",
+    "options": ["About three years", "About six months", "About one year", "About five years"],
+    "answer": "About three years",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Pam says, ‘We’ve been engaged about three years.’"
+  },
+  {
+    "id": "ofc-s1e1-medium-0024",
+    "context": "In the manager’s office, a ‘morale booster’ prank targets the receptionist with a bogus firing.",
+    "question": "What item does Michael accuse Pam of stealing as grounds for termination in the prank?",
+    "options": ["Post-it Notes", "Paperclips", "A stapler", "Printer toner"],
+    "answer": "Post-it Notes",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "He claims theft of cheap Post-it Notes constitutes ‘gross misconduct.’"
+  },
+  {
+    "id": "ofc-s1e1-medium-0025",
+    "context": "When the prank is revealed, the manager announces the gag with a reality-TV style catchphrase.",
+    "question": "What phrase does Michael use to reveal the joke to Pam?",
+    "options": ["“You’ve been X’d, punk!”", "“You’ve been punk’d!”", "“Hidden camera!”", "“You’re on the air!”"],
+    "answer": "“You’ve been X’d, punk!”",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "He yells, ‘You been X’d punk!’ and points to the camera."
+  },
+  {
+    "id": "ofc-s1e1-truefalse-0026",
+    "context": "In a to-camera moment, the manager waxes philosophical about what matters most in business.",
+    "question": "True or False: Michael says the most important thing for a company is the people, not cash flow or inventory.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "He says, ‘It’s the people. The people.’"
+  },
+  {
+    "id": "ofc-s1e1-medium-0027",
+    "context": "In a to-camera monologue, Michael recalls a former employee who barely spoke English and once asked him to be the godfather of his child; the story ends with Michael admitting the employee was later let go.",
+    "question": "Which country was that employee from?",
+    "options": ["Guatemala", "Mexico", "El Salvador", "Honduras"],
+    "answer": "Guatemala",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Michael says his proudest moment was when a young man from Guatemala asked him to be the godfather; he then adds they had to let him go."
+  },
+  {
+    "id": "ofc-s1e1-truefalse-0029",
+    "context": "At reception earlier, a personal admission surfaces about career aspirations.",
+    "question": "True or False: Pam says being a receptionist was her childhood dream.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "She says she doesn’t think being a receptionist is many little girls’ dream."
+  },
+  {
+    "id": "of-s1e2-easy-0001",
+    "context": "**EPISODE 2**: COLD OPEN — Michael beams about a special day he says he’s long wanted  and welcomes a facilitator into the conference room.",
+    "question": "What event is happening at the office that Michael is so excited about?",
+    "options": ["Diversity Day training", "Fire safety seminar", "Quarterly sales kickoff", "Conflict resolution workshop"],
+    "answer": "Diversity Day training",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Michael calls it 'diversity day' and claims he pushed for it, even though Corporate mandated it."
+  },
+  {
+    "id": "of-s1e2-medium-0002",
+    "context": "SALES FLOOR — Jim tries to close his biggest annual renewal while Dwight distracts him, tanking the call.",
+    "question": "What was Dwight doing that interfered with Jim’s crucial phone call?",
+    "options": ["Shredding paper", "Vacuuming", "Hammering a shelf", "Testing the fire alarm"],
+    "answer": "Shredding paper",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "The shredder’s noise makes Jim think he’s losing the client, and Dwight calls it 'retaliation.'"
+  },
+  {
+    "id": "of-s1e2-easy-0021",
+    "context": "SALES FLOOR — Jim works his annual renewal on the phone while Dwight’s shredding chaos keeps derailing the conversation.",
+    "question": "What is the name of the client Jim is speaking to on the phone?",
+    "options": ["Mr. Decker", "Mr. Becker", "Mr. Dexter", "Mr. Deckard"],
+    "answer": "Mr. Decker",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Jim repeatedly addresses the client as 'Mr. Decker' during the disrupted call."
+  },
+  {
+    "id": "of-s1e2-medium-0022",
+    "context": "SALES FLOOR — After sabotaging Jim’s call, Dwight smugly labels it payback but butchers the common phrase.",
+    "question": "Which expression does Dwight say incorrectly when justifying his 'retaliation'?",
+    "options": ["'Tit for tit'", "'Tip for tap'", "'Tic for tac'", "'Tip for tat'"],
+    "answer": "'Tit for tit'",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Dwight declares 'Retaliation. Tit for tit,' prompting Jim to note it’s not the expression."
+  },
+  {
+    "id": "of-s1e2-easy-0003",
+    "context": "RECEPTION — Pam kills time on her computer while Jim kibitzes a move and jokes about the satisfying end-of-game cascade.",
+    "question": "Which computer game is Pam playing at her desk?",
+    "options": ["Freecell", "Minesweeper", "Solitaire Klondike", "Hearts"],
+    "answer": "Freecell",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Jim spots the 'six on seven' move; Pam saves it for the card cascade."
+  },
+  {
+    "id": "of-s1e2-easy-0023",
+    "context": "CONFERENCE ROOM — A corporate facilitator runs the session while Michael keeps trying to take over the agenda.",
+    "question": "What is the name of the Diversity Day training officer?",
+    "options": ["Mr. Brown", "Mr. Black", "Mr. White", "Mr. Grey"],
+    "answer": "Mr. Brown",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "He introduces himself as Mr. Brown and repeatedly asks Michael for permission to run the session."
+  },
+  {
+    "id": "of-s1e2-hard-0005",
+    "context": "CONFERENCE ROOM — Before ceding control, Michael pitches an inappropriate icebreaker about race.",
+    "question": "What icebreaker does Michael propose before Mr. Brown takes over?",
+    "options": ["Have everyone say a race they are sexually attracted to", "Share your most embarrassing office story with another race", "Have everyone say the race they are least sexually attracted to", "Describe your cultural background in one word"],
+    "answer": "Have everyone say a race they are sexually attracted to",
+    "difficulty": "hard",
+    "episode": 2,
+    "description": "Michael insists he’ll go last; Mr. Brown shuts it down."
+  },
+{
+  "id": "of-s1e2-medium-0024",
+  "context": "CONFERENCE ROOM — During Michael’s inappropriate icebreaker about romantic preferences by race, Dwight blurts out his picks without hesitation.",
+  "question": "Which race(s) does Dwight say he is attracted to?",
+  "options": ["White and Indian", "Asian and White", "Black and Middle Eastern", "Asian and Indian"],
+  "answer": "White and Indian",
+  "difficulty": "medium",
+  "episode": 2,
+  "description": "When pressed by Michael’s icebreaker, Dwight answers with two specific races."
+},
+  {
+    "id": "of-s1e2-easy-0006",
+    "context": "CONFERENCE ROOM — They reenact the incident that prompted the training, which Michael insists he can deliver with 'the same timing.'",
+    "question": "Whose stand-up routine is at the center of the complaint that triggered the session?",
+    "options": ["Chris Rock", "Dave Chappelle", "Eddie Murphy", "Richard Pryor"],
+    "answer": "Chris Rock",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Michael claims he did the exact same routine as Chris Rock."
+  },
+  {
+    "id": "of-s1e2-medium-0007",
+    "context": "CONFERENCE ROOM — For the reenactment, Mr. Brown assigns roles while Michael tries to commandeer the performance.",
+    "question": "Who does Mr. Brown select to play the 'Chris Rock guy' in the reenactment?",
+    "options": ["Kevin", "Stanley", "Jim", "Dwight"],
+    "answer": "Kevin",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Kevin starts reciting it, and Michael interrupts to 'fix' the delivery."
+  },
+{
+  "id": "of-s1e2-easy-0007b",
+  "context": "CONFERENCE ROOM — The facilitator introduces a simple four-letter framework for respectful workplace behavior before explaining what each letter stands for.",
+  "question": "What acronym does the facilitator introduce for the workplace behavior framework?",
+  "options": ["HERO", "STAR", "CARE", "TEAM"],
+  "answer": "HERO",
+  "difficulty": "easy",
+  "episode": 2,
+  "description": "He presents a four-letter acronym as the foundation for the session’s guidance."
+},
+  {
+    "id": "of-s1e2-medium-0008",
+    "context": "CONFERENCE ROOM — Mr. Brown introduces a simple acronym for workplace behavior that Michael relentlessly undercuts.",
+    "question": "In Mr. Brown’s training, what does the acronym HERO stand for?",
+    "options": ["Honesty, Empathy, Respect, Open-mindedness", "Honor, Effort, Responsibility, Openness", "Humility, Empathy, Restraint, Optimism", "Helpfulness, Equity, Respect, Outreach"],
+    "answer": "Honesty, Empathy, Respect, Open-mindedness",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "He says it’s 'very easy to be a HERO' with those four traits."
+  },
+  {
+    "id": "of-s1e2-hard-0010",
+    "context": "MICHAEL’S OFFICE — After Micheal storms out of the meeting, Mr. Brown privately explains only Michael’s signature is required for the pledge; Michael balks and grandstands.",
+    "question": "What name does Michael write when he finally fills out the pledge form?",
+    "options": ["Daffy Duck", "Michael Scarn", "John Hancock", "Looney Tunes"],
+    "answer": "Daffy Duck",
+    "difficulty": "hard",
+    "episode": 2,
+    "description": "Michael smirks that Mr. Brown will 'lose it' when he reads it."
+  },
+  {
+    "id": "of-s1e2-medium-0011",
+    "context": "CONFERENCE ROOM — Rejecting Mr. Brown’s approach, Michael screens his own tape under the banner of an organization he made up.",
+    "question": "What is the name of Michael’s self-styled initiative featured in his video?",
+    "options": ["Diversity Tomorrow", "Inclusion Now", "Unity Today", "Respect at Work"],
+    "answer": "Diversity Tomorrow",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "He quips, 'because today is almost over,' then misquotes Abraham Lincoln."
+  },
+{
+  "id": "of-s1e2-medium-0011c",
+  "context": "CONFERENCE ROOM — In his self-made 'Diversity Tomorrow' video, Michael tries to lend authority to his presentation by citing a supposed Lincoln line.",
+  "question": "Which quote does Michael incorrectly attribute to Abraham Lincoln?",
+  "options": [
+    "If you're a racist, I will attack you with the North.",
+    "If you're a racist, I will attack you with the South.",
+    "If you're a racist, I will attack you with the West.",
+    "If you're a racist, I will attack you with the East."
+  ],
+  "answer": "If you're a racist, I will attack you with the North.",
+  "difficulty": "medium",
+  "episode": 2,
+  "description": "Michael claims Lincoln said it in his video; the line is a comedic fabrication."
+},
+  {
+    "id": "of-s1e2-hard-0012",
+    "context": "CONFERENCE ROOM — Michael boasts about being a 'virtual United Nations' and claims a fractional Native heritage.",
+    "question": "What fraction of 'Native American' does Michael claim to be?",
+    "options": ["Two fifteenths", "One sixteenth", "One eighth", "One quarter"],
+    "answer": "Two fifteenths",
+    "difficulty": "hard",
+    "episode": 2,
+    "description": "Oscar points out the fraction 'doesn’t make any sense.'"
+  },
+  {
+    "id": "of-s1e2-medium-0013",
+    "context": "CONFERENCE ROOM — Michael prods Oscar about labels while Oscar simply states his parents’ origin and his own upbringing.",
+    "question": "Where were Oscar’s parents born, according to his introduction?",
+    "options": ["Mexico", "Puerto Rico", "Cuba", "Guatemala"],
+    "answer": "Mexico",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "He says both parents were born in Mexico and moved to the U.S. a year before he was born."
+  },
+  {
+    "id": "of-s1e2-truefalse-0014",
+    "context": "CONFERENCE ROOM — Michael hands out race cards for a stereotype exercise and notes one conspicuous omission he made intentionally.",
+    "question": "True or False: Michael includes 'Arab' among the race cards in his forehead exercise.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "He says it would be 'too explosive' and 'too soon for Arabs—maybe next year.'"
+  },
+{
+  "id": "of-s1e2-easy-0011d",
+  "context": "CONFERENCE ROOM — While setting up his forehead-card exercise, Michael name-drops a personal hero to justify the activity.",
+  "question": "Whom does Michael say is his hero?",
+  "options": ["Martin Luther King Jr.", "Malcolm X", "Rosa Parks", "Frederick Douglass"],
+  "answer": "Martin Luther King Jr.",
+  "difficulty": "easy",
+  "episode": 2,
+  "description": "He references Martin Luther King Jr. as a hero while riffing before the exercise."
+},
+  {
+    "id": "of-s1e2-medium-0015",
+    "context": "RECEPTION — Jim finds Ryan watching downloads on Pam’s computer; they briefly bond over the clip.",
+    "question": "What show did Ryan download onto Pam’s computer?",
+    "options": ["Chappelle’s Show", "The Daily Show", "MADtv", "Key & Peele"],
+    "answer": "Chappelle’s Show",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Ryan says she had 'a lot of extra space'."
+  },
+{
+  "id": "of-s1e2-medium-0019b",
+  "context": "CONFERENCE ROOM — During the forehead-card exercise, Pam reluctantly offers a mild hint and Dwight pounces, guessing a nationality from a food cue.",
+  "question": "After Pam says, “I like your food,” which nationality does Dwight immediately guess for himself?",
+  "options": ["Australian", "Italian", "Japanese", "Greek"],
+  "answer": "Australian",
+  "difficulty": "medium",
+  "episode": 2,
+  "description": "Dwight connects “I like your food” to Outback Steakhouse and launches into an Australian accent."
+},
+  {
+    "id": "of-s1e2-hard-0019",
+    "context": "CONFERENCE ROOM — During the stereotype card game, Pam gives Dwight a carefully hedged clue that makes him jump to a conclusion.",
+    "question": "What stereotype-based hint does Pam give that leads Dwight to ask, 'Am I a woman?'",
+    "options": ["'You would maybe not be a very good driver.'", "'You’re always late to meetings.'", "'You haggle over every price.'", "'You love spicy food.'"],
+    "answer": "'You would maybe not be a very good driver.'",
+    "difficulty": "hard",
+    "episode": 2,
+    "description": "Pam prefaces it as 'totally untrue' before giving the driving stereotype; Dwight guesses 'woman.'"
+  },
+{
+  "id": "of-s1e2-easy-0016b",
+  "context": "CONFERENCE ROOM — Kelly walks in mid-exercise and Michael greets her with an over-the-top convenience-store bit in a fake accent.",
+  "question": "In his offensive bit toward Kelly, what repeated phrase does Michael use?",
+  "options": ["googi googi", "chai chai", "bing bong", "spicy spicy"],
+  "answer": "googi googi",
+  "difficulty": "easy",
+  "episode": 2,
+  "description": "Michael repeatedly says the made-up phrase during his crude impression, prompting Kelly’s slap."
+},
+  {
+    "id": "of-s1e2-easy-0016",
+    "context": "CONFERENCE ROOM — Kelly reacts.",
+    "question": "How does Kelly respond after Michael greets her with the offensive accent and 'googi googi' routine?",
+    "options": ["She slaps him", "She storms out", "She punches him", "She screams at him"],
+    "answer": "She slaps him",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Michael tries to frame it as a breakthrough: 'Now she knows what it’s like to be a minority.'"
+  },
+  {
+    "id": "of-s1e2-medium-0017",
+    "context": "CONFERENCE ROOM — Wrapping his DIY seminar, Michael riffs on food to 'show up' Mr. Brown, and Stanley corrects his phrasing.",
+    "question": "Which dish does Stanley correct Michael on his pronunciation?",
+    "options": ["Collard greens", "Mustard greens", "Turnip greens", "Green bean casserole"],
+    "answer": "Collard greens",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Stanley flatly says, 'It’s collard greens.' after Micheal calls it colored greens. Michael argues the wording 'doesn’t make sense.'"
+  },
+  {
+    "id": "of-s1e2-medium-0020",
+    "context": "SALES DESK — After all the chaos, Jim learns on the phone that another salesman poached his account.",
+    "question": "Why does Jim lose the sale he was counting on for a quarter of his commission?",
+    "options": ["Another salesman gave the client a discount", "He missed the client’s deadline", "The client switched industries", "Corporate reassigned the account"],
+    "answer": "Another salesman gave the client a discount",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Mr. Decker’s team cites a discount code from someone else at Dunder Mifflin."
+  },
+{
+  "id": "of-s1e2-truefalse-0018",
+  "context": "BULLPEN — After a long day, the office winds down and a quiet moment at the desks closes the episode.",
+  "question": "True or False: The scene ends with Pam lying on Jim’s shoulder.",
+  "options": ["True", "False"],
+  "answer": "True",
+  "difficulty": "easy",
+  "episode": 2,
+  "description": "In the final beat, Pam nods off against Jim’s shoulder before they head out."
+},
+  {
     "id": "of-s1e3-easy-0001",
     "context": "**EPISODE 3**: Reception — morning: Michael hovers at Pam’s desk pushing for updates as the day starts.",
     "question": "What does Michael press Pam for at the very start?",
@@ -268,7 +853,1482 @@
     "difficulty": "easy",
     "episode": 3,
     "description": "He says he learned improv from “Drew Carey and Ryan Stiles,” then riffs, “[as Robin Williams] ‘Hi. I’m Mork from Ork.’”"
+  },
+  {
+    "id": "of-s1e4-easy-0001",
+    "context": "**EPISODE 4**: Early morning near Michael’s office: Dwight corners Michael with nervous questions about looming changes.",
+    "question": "What topic does Dwight press Michael about at the start?",
+    "options": ["Downsizing rumors", "A new sales contest", "Parking assignments", "Vacation approvals"],
+    "answer": "Downsizing rumors",
+    "difficulty": "easy",
+    "episode": 4,
+    "description": "Dwight asks about being protected “as assistant regional manager,” and Michael corrects him while discussing Corporate and downsizing."
+  },
+  {
+    "id": "of-s1e4-medium-0031",
+    "context": "While riffing about looming layoffs, Michael performs a TV-style bit and contrasts himself with a well-known business TV personality.",
+    "question": "When talking about downsizing, who does Michael compare himself to?",
+    "options": ["Donald Trump", "Mark Cuban", "Gordon Ramsay", "Simon Cowell"],
+    "answer": "Donald Trump",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "In his talking head, Michael imitates “You’re fired,” then says the main difference between him and Donald Trump is that he gets no pleasure from saying it."
+  },
+  {
+    "id": "of-s1e4-medium-0032",
+    "context": "Same talking head — immediately after: Having mocked the famous firing line, Michael daydreams about what his own catchphrase would be if he had one.",
+    "question": "If Michael had a catchphrase about firing, what does he say it would be?",
+    "options": ["\"You're hired and you can work here as long as you want.\"", "\"That's what she said.\"", "\"You're hired and you can never be fired.\"", "\"Congratulations, you're unfired.\""],
+    "answer": "\"You're hired and you can work here as long as you want.\"",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "He muses, “I think if I had a catchphrase, it would be, ‘You’re hired and you can work here as long as you want.’ But that’s unrealistic.”"
+  },
+  {
+    "id": "of-s1e4-medium-0033",
+    "context": "By the water cooler, Dwight tries to harvest office intel and explains why the gossip channel doesn’t work for him.",
+    "question": "Why does water-cooler gossip put Dwight at a disadvantage?",
+    "options": ["He brings his own water to work", "His desk is far from the kitchen", "He doesnt believe in water breaks", "He’s usually out on sales calls"],
+    "answer": "He brings his own water to work",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Dwight says studies show gossip spreads more info than memos—“which puts me at a disadvantage, because… I bring my own water to work.”"
+  },
+  {
+    "id": "of-s1e4-easy-0004",
+    "context": "Reception area: Michael unveils a plan to boost spirits and asks about upcoming occasions.",
+    "question": "Whose birthday does Pam say is the next one on the calendar?",
+    "options": ["Meredith", "Angela", "Phyllis", "Stanley"],
+    "answer": "Meredith",
+    "difficulty": "easy",
+    "episode": 4,
+    "description": "Pam first says no staff birthdays are coming up, then adds, “That would be Meredith,” noting it isn’t until next month."
+  },
+  {
+    "id": "of-s1e4-medium-0005",
+    "context": "Party-planning chat: Decoration colors get debated.",
+    "question": "Which color does Angela call “kind of whore-ish”?",
+    "options": ["Green", "Red", "Blue", "Yellow"],
+    "answer": "Green",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "After Phyllis lists colors and Pam suggests one, Angela says, “I think green is kind of whore-ish.”"
+  },
+  {
+    "id": "of-s1e4-easy-0034",
+    "context": "Party-planning huddle near reception: Michael insists on a specific brand for cake as the committee debates decorations.",
+    "question": "Where does Michael say they should get the cake from?",
+    "options": ["Baskin-Robbins", "Cold Stone Creamery", "Ben & Jerry’s", "Dairy Queen"],
+    "answer": "Baskin-Robbins",
+    "difficulty": "easy",
+    "episode": 4,
+    "description": "Michael says, “Maybe one of those ice-cream cakes from Baskin-Robbins… !”"
+  },
+  {
+    "id": "of-s1e4-medium-0006",
+    "context": "Michael weighs cake options.",
+    "question": "Which cake flavor does Michael suggest for Meredith´s party?",
+    "options": ["Mint chocolate chip cake", "Red velvet cake", "Carrot cake", "Chocolate sheet cake"],
+    "answer": "Mint chocolate chip cake",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "He pushes for Baskin-Robbins and repeats, “Mint chocolate chip! Mint chocolate chip would be good!”"
+  },
+  {
+    "id": "of-s1e4-medium-0035",
+    "context": "Michael quizzes Dwight for personal details to spice up Meredith’s birthday card; Dwight rattles off her basics.",
+    "question": "How old is Meredith, based on Dwight’s personnel rundown?",
+    "options": ["45", "46", "44", "47"],
+    "answer": "45",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "During the quick bio dump—name, divorces, kids, employer—Dwight includes Meredith’s age as 45."
+  },
+  {
+    "id": "of-s1e4-easy-0037",
+    "context": "Michael quizzes Dwight for personal details to spice up Meredith’s card; Dwight rattles off her basics.",
+    "question": "What is Meredith’s last name as mentioned here?",
+    "options": ["Palmer", "Bennett", "Rogers", "Walker"],
+    "answer": "Palmer",
+    "difficulty": "easy",
+    "episode": 4,
+    "description": "Dwight recites, “Name, Meredith Palmer. Personal information…” while Michael searches for material."
+  },
+  {
+    "id": "of-s1e4-medium-0014",
+    "context": "Michael holds court in his office when a quiet visitor arrives with a request.",
+    "question": "What event does Oscar ask Michael to support?",
+    "options": ["A charity walkathon", "A food drive for Scranton", "A school paper sale", "A disaster relief fund"],
+    "answer": "A charity walkathon",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Oscar says his nephew is involved with a charity and asks if Michael would donate."
+  },
+  {
+    "id": "of-s1e4-easy-0036",
+    "context": "Oscar quietly asks for support for his nephew’s cause, handing over a pledge sheet while Michael postures generosity.",
+    "question": "What cause is the charity for that Oscar brings up about his nephew?",
+    "options": ["Cerebral palsy", "Leukemia research", "Autism research", "ALS awareness"],
+    "answer": "Cerebral palsy",
+    "difficulty": "easy",
+    "episode": 4,
+    "description": "Oscar says his nephew is involved with “a charity for cerebral palsy” and asks if Michael would donate."
+  },
+  {
+    "id": "of-s1e4-hard-0015",
+    "context": "Right after Oscar leaves: Michael peeks at others’ amounts and postures generosity.",
+    "question": "How much does Michael pledge on Oscar’s form?",
+    "options": ["$25", "$15", "$30", "$10"],
+    "answer": "$25",
+    "difficulty": "hard",
+    "episode": 4,
+    "description": "He insists on “serious buckage,” writing 25, which Oscar later clarifies is per-mile for the walkathon."
+  },
+ {
+    "id": "of-s1e4-medium-0050",
+    "context": "Post-party chat near accounting: Michael tries to clarify his pledge while Oscar references last year’s event for context.",
+    "question": "How many miles does Oscar say his nephew walked last year?",
+    "options": ["18 miles", "12 miles", "26 miles", "10 miles"],
+    "answer": "18 miles",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "When Michael asks, Oscar replies, “Last year, he walked 18 miles,” underscoring the per-mile pledge total."
+  },
+  {
+    "id": "of-s1e4-medium-0038",
+    "context": "Post-cake chatter in the bullpen: Jim compliments Michael’s generosity, then clarifies how the pledge sheet works by citing his own entry as an example of the per-mile math.",
+    "question": "How much does Jim say he pledged for the charity per mile?",
+    "options": ["$3", "$5", "$10", "$2"],
+    "answer": "$3",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Jim says, “Three dollars a mile is gonna end up being like 50 bucks,” contrasting it with Michael’s higher figure."
+  },
+  {
+    "id": "of-s1e4-medium-0017",
+    "context": "Michael seeks material for a gag and calls in his beet-loving lieutenant.",
+    "question": "What personal fact about Meredith does Dwight provide that Michael rejects as unusable for a joke?",
+    "options": ["She had a hysterectomy", "She had a mastectomy", "She has had sex with most people in the office", "She had an STD"],
+    "answer": "She had a hysterectomy",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Dwight offers, “She had a hysterectomy,” and explains it means removing the uterus; Michael groans that it’s not helpful."
+  },
+{
+  "id": "of-s1e4-easy-0051",
+  "context": "Bullpen during the downsizing chatter: Dwight pulls Jim aside with a secret strategy pitch to handle the uncertainty.",
+  "question": "Based on the downsizing talk, what does Dwight propose to Jim?",
+  "options": ["Form an alliance", "Start a sales contest", "Report to HR together", "Request transfers to Stamford"],
+  "answer": "Form an alliance",
+  "difficulty": "easy",
+  "episode": 4,
+  "description": "Dwight asks, “Do you want to form an alliance with me?” and Jim replies, “Absolutely, I do.”"
+},
+  {
+    "id": "of-s1e4-hard-0018",
+    "context": "Alliance logistics: Jim relays a supposed clandestine meet during the celebration.",
+    "question": "Where does Jim tell Dwight an alliance meeting will happen during Meredith’s birthday?",
+    "options": ["In the warehouse", "In the parking lot", "At the loading dock", "In the break room"],
+    "answer": "In the warehouse",
+    "difficulty": "hard",
+    "episode": 4,
+    "description": "Jim says one of the alliances is meeting “in the warehouse during Meredith’s birthday.”"
+  },
+  {
+    "id": "of-s1e4-medium-0019",
+    "context": "Down in storage: A hunter outlines a surveillance strategy.",
+    "question": "What concealment method does Dwight ultimately use to eavesdrop on the meeting?",
+    "options": ["Hides inside a cardboard box", "Crouches behind the pallets", "Stands behind a curtain", "Crawls into a storage locker"],
+    "answer": "Hides inside a cardboard box",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "He calls the spot “centrally located… perfect cover,” and Jim tapes the lid after poking air holes."
+  },
+  {
+    "id": "of-s1e4-medium-0021",
+    "context": "Cake table: A dietary limitation collides with the selection.",
+    "question": "Why doesn’t Meredith eat the cake?",
+    "options": ["She can’t eat dairy", "She’s gluten-free", "She hates Mint chocolate", "She’s diabetic"],
+    "answer": "She can’t eat dairy",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "When pressed to try some, she says, “I can’t eat dairy… it makes me sick.”"
+  },
+  {
+    "id": "of-s1e4-hard-0022",
+    "context": "Post-song banter: Michael’s attempt at small talk misses the mark.",
+    "question": "What harsh remark does Michael make about being allergic to dairy?",
+    "options": [
+      "He says he’d kill himself if he were allergic",
+      "He says it’s not a real allergy",
+      "He says people should just take a pill",
+      "He says HR can’t accommodate it"
+    ],
+    "answer": "He says he’d kill himself if he were allergic",
+    "difficulty": "hard",
+    "episode": 4,
+    "description": "After Meredith declines, Michael says, “If I were allergic to dairy, I think I’d kill myself,” calling the cake “way, way too good.”"
+  },
+  {
+    "id": "of-s1e4-hard-0027",
+    "context": "After tepid laughs: Michael pads with extra material he didn’t use.",
+    "question": "Which celebrity does Michael reference in a discarded joke about multiple divorces?",
+    "options": ["Liz Taylor", "Cher", "Madonna", "Demi Moore"],
+    "answer": "Liz Taylor",
+    "difficulty": "hard",
+    "episode": 4,
+    "description": "He says, “Hey, Meredith, Liz Taylor called. She wants her age back and her divorces back,” noting Meredith’s been divorced twice."
+  },
+  {
+    "id": "of-s1e4-easy-0039",
+    "context": "Annex hallway late in the day: A quick, low-key exchange reveals that a different coworker’s birthday actually falls today, though no party was planned for them.",
+    "question": "Who is revealed to actually have a birthday on that day?",
+    "options": ["Ryan", "Kelly", "Toby", "Stanley"],
+    "answer": "Ryan",
+    "difficulty": "easy",
+    "episode": 4,
+    "description": "Toby notices and says “Oh, happy birthday,” and Ryan replies “Thanks,” asking him not to make a thing of it."
+  },
+  {
+    "id": "of-s1e5-easy-0001",
+    "context": "**EPISODE 5**: Morning in the bullpen: Michael arrives with a gym bag, looping Ryan in on a lunchtime plan with the warehouse crew.",
+    "question": "What midday event does Michael set up with the warehouse?",
+    "options": ["A basketball game", "A pizza lunch", "A safety drill", "A football game"],
+    "answer": "A basketball game",
+    "difficulty": "easy",
+    "episode": 5,
+    "description": "Michael explains they’ll play the warehouse staff “at a friendly little game of basketball… My idea.”"
+  },
+  {
+    "id": "of-s1e5-medium-0003",
+    "context": "Still in the office, Michael swaps Dwight’s playing ambitions.",
+    "question": "What duty does Michael assign Dwight instead of letting him play?",
+    "options": ["Manage the weekend work calendar", "Cover reception phones", "Organize the snack budget", "Audit expense reports"],
+    "answer": "Manage the weekend work calendar",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Corporate wants someone in on Saturday, so Dwight is told to “take over the holiday and weekend work calendar.”"
+  },
+  {
+    "id": "of-s1e5-easy-0004",
+    "context": "Newly empowered, Dwight steps onto the floor and immediately singles out someone for the upcoming Saturday coverage.",
+    "question": "Whom does Dwight first pick to work Saturday?",
+    "options": ["Jim", "Pam", "Phyllis", "Kevin"],
+    "answer": "Jim",
+    "difficulty": "easy",
+    "episode": 5,
+    "description": "Dwight declares, “We need someone to work this Saturday and I think that should be… Jim.”"
+  },
+  {
+    "id": "of-s1e5-medium-0005",
+    "context": "During a warehouse walk-through, Michael introduces Ryan to the team while the foreman clarifies his actual full name.",
+    "question": "What is the name of the warehouse foreman?",
+    "options": ["Darryl Philbin", "Darryl Rogers", "Roy Anderson", "Roy Mathews"],
+    "answer": "Darryl Philbin",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "After a string of nicknames, Darryl corrects Michael: “Darryl Philbin.”"
+  },
+  {
+    "id": "of-s1e5-medium-0006",
+    "context": "As the tour continues, Michael points out personal connections downstairs, noting who from the warehouse is dating someone upstairs.",
+    "question": "Which warehouse employee does Michael say is dating Pam?",
+    "options": ["Roy", "Lonny", "Darryl", "Madge"],
+    "answer": "Roy",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Michael: “And this is Roy. Roy dates Pam. The best-looking one upstairs.”"
+  },
+  {
+    "id": "of-s1e5-medium-0035",
+    "context": "Warehouse tour: Michael introduces Ryan to the crew and turns to Roy with a crude bit of 'rapport' talk.",
+    "question": "What does Michael pointedly ask Roy during the warehouse introductions?",
+    "options": [
+      "If he’s “still getting it regular”",
+      "If he can sub in for the office",
+      "If he’ll guard Jim during the game",
+      "How Pam usually dresses outside the office"
+    ],
+    "answer": "If he’s “still getting it regular”",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Michael needles Roy with “You still getting it regular, man?” and adds he can tell Pam it’s “part of the job—rapport”"
+  },
+  {
+    "id": "of-s1e5-medium-0024",
+    "context": "Earlier at reception, small talk about a broken appliance drifts into the drawn-out engagement timeline.",
+    "question": "Which item of Pam’s broke, prompting Jim’s note about the long engagement?",
+    "options": ["Toaster oven", "Microwave", "Coffee maker", "Blender"],
+    "answer": "Toaster oven",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Jim says her toaster oven from the engagement shower broke; the wedding date still isn’t set."
+  },
+  {
+    "id": "of-s1e5-medium-0029",
+    "context": "At reception, Jim mentions a broken gift from Pam’s engagement shower and remarks on the drawn-out timeline.",
+    "question": "How long had Roy and Pam been engaged by this point?",
+    "options": ["Three years", "Two years", "One year", "Four years"],
+    "answer": "Three years",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Jim says the toaster oven was from her engagement shower “for a wedding that still has yet to be set… and that was three years ago.”"
+  },
+  {
+    "id": "of-s1e5-medium-0008",
+    "context": "Heading back upstairs, Michael jokes about loyalty with a fantasy-adventure reference, prompting Dwight’s quick correction.",
+    "question": "Which ‘Lord of the Rings’ character does Michael reference while ribbing the staff?",
+    "options": ["Gimli", "Legolas", "Aragorn", "Frodo"],
+    "answer": "Gimli",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Michael says they’d follow him “like that dwarf from Lord Of The Rings,” and Dwight identifies him as “Gimli.”"
+  },
+  {
+    "id": "of-s1e5-hard-0009",
+    "context": "Back in the bullpen, a casual assumption about a coworker’s position on the court draws immediate pushback.",
+    "question": "Which moment triggers Stanley’s pointed “Why ‘of course’?” challenge?",
+    "options": ["Michael assumes Stanley plays center", "Michael assumes Stanley loves basketball", "Michael assigns Stanley to guard Roy", "Michael calls Stanley ‘Secret weapon’"],
+    "answer": "Michael assumes Stanley plays center",
+    "difficulty": "hard",
+    "episode": 5,
+    "description": "Michael says, “Stanley, of course. What do you play, center?” and Stanley replies, “Why ‘of course’?”"
+  },
+  {
+    "id": "of-s1e5-medium-0010",
+    "context": "As volunteers speak up to play, Michael gatekeeps the roster and dismisses a couple of would-be additions.",
+    "question": "Which two coworkers does Michael explicitly reject despite their offers?",
+    "options": ["Phyllis and Kevin", "Oscar and Angela", "Creed and Kelly", "Meredith and Toby"],
+    "answer": "Phyllis and Kevin",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Kevin mentions a hoop at home and Phyllis mentions a sports bra; Michael shoots both down."
+  },
+  {
+    "id": "of-s1e5-medium-0036",
+    "context": "Oscar offers to join, and Michael redirects him away from basketball.",
+    "question": "When Oscar volunteers for the game, how does Michael say he’ll use Oscar’s talents instead?",
+    "options": [
+      "Baseball",
+      "Referee",
+      "Serving Snacks",
+      "Cheerleading"
+    ],
+    "answer": "Baseball",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Michael tells Oscar, “I will use your talents come baseball season. Or if we box."
+  },
+  {
+    "id": "of-s1e5-medium-0031",
+    "context": "After rejecting a few volunteers, Michael announces his five for the office team.",
+    "question": "Which of these was NOT part of Michael’s basketball team?",
+    "options": ["Stanley", "Jim", "Ryan", "Dwight", "Creed"],
+    "answer": "Creed",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Michael lists: “Me, Stan the man, Jim, Ryan and Dwight.” Creed is not a part of the team."
+  },
+{
+  "id": "of-s1e5-easy-0033",
+  "context": "Pre-game at reception: Michael tries to rope Pam into the event with a last-minute team request.",
+  "question": "What role does Michael ask Pam to take for the game?",
+  "options": ["Cheerleader", "Scorekeeper", "Referee", "First aid nurse"],
+  "answer": "Cheerleader",
+  "difficulty": "easy",
+  "episode": 5,
+  "description": "Michael asks, “How would you like to be our cheerleader today? You know, some pigtails, a little haltertop… something youthful,” which Pam declines because she won’t cheer against her fiancé."
+},
+  {
+    "id": "of-s1e5-medium-0026",
+    "context": "On the sideline, one coworker keeps score and handles a basic first-aid moment during a stoppage.",
+    "question": "Which coworker keeps the score for Michael’s team during the game?",
+    "options": ["Angela", "Kelly", "Phyllis", "Oscar"],
+    "answer": "Angela",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Michael asks, “Angela, what’s the score?” and she replies, “You’re ahead,” also dealing with the cold pack."
+  },
+  {
+    "id": "of-s1e5-medium-0011",
+    "context": "With the lineup set, Dwight keeps fishing for titles around the team, and Michael shuts each request down.",
+    "question": "Which role does Michael ultimately deny when Dwight asks after captain?",
+    "options": ["Team manager", "Assistant coach", "Referee", "Scorekeeper"],
+    "answer": "Team manager",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "After captain is refused, Dwight asks, “Can I be team manager?” Michael: “You’re assistant to the manager… No.”"
+  },
+  {
+    "id": "of-s1e5-hard-0012",
+    "context": "Near the break area, Darryl floats raising the stakes for the game before any whistles are blown.",
+    "question": "Which stake does Darryl initially suggest before Michael escalates?",
+    "options": ["Loser buys dinner at Farley’s", "Loser cleans the warehouse", "Loser pays for drinks", "Loser buys lunch at Greggs"],
+    "answer": "Loser buys dinner at Farley’s",
+    "difficulty": "hard",
+    "episode": 5,
+    "description": "Darryl: “Why don’t we make it more interesting? Loser buys dinner at Farley’s.”"
+  },
+  {
+    "id": "of-s1e5-medium-0013",
+    "context": "Michael escalates the bet with twist, locking in terms while both sides posture.",
+    "question": "What additional stake does Michael propose on top of dinner?",
+    "options": ["Loser works on Saturday", "Loser works on Sunday", "Loser washes all company cars", "Loser restocks the supply closet"],
+    "answer": "Loser works on Saturday",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Michael: “I’m gonna take that one step further. Loser works on Saturday.”"
+  },
+  {
+    "id": "of-s1e5-hard-0027",
+    "context": "Introductions and court action in the warehouse name several members of the downstairs crew.",
+    "question": "Which of these is NOT a member of the warehouse mentioned in this episode?",
+    "options": ["Darryl", "Lonny", "Roy", "Madge", "Pete"],
+    "answer": "Pete",
+    "difficulty": "hard",
+    "episode": 5,
+    "description": "The warehouse side includes Darryl, Lonny, Roy, and Madge; Pete is not mentioned."
+  },
+  {
+    "id": "of-s1e5-hard-0016",
+    "context": "After a made basket by the temp, Michael celebrates in a way that reads more intense than the moment.",
+    "question": "What does Michael do with Ryan after Ryan makes a basket?",
+    "options": ["Gives him a chest bump", "Lifts him off the floor", "Kisses him on the cheek", "Smacks him on the ass"],
+    "answer": "Gives him a chest bump",
+    "difficulty": "hard",
+    "episode": 5,
+    "description": "Michael yells “Nice! Come here!” and chest bumps Ryan; Ryan replies, “Can we just do one?”"
+  },
+  {
+    "id": "of-s1e5-medium-0019",
+    "context": "A transition sequence turns chaotic when one player forgets team assignments and disrupts his own side.",
+    "question": "Which blunder does Dwight commit against his own team?",
+    "options": ["Steals the ball from Ryan", "Calls a timeout", "Fouls Jim on a fast break", "Shoots at the wrong hoop"],
+    "answer": "Steals the ball from Ryan",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Ryan complains, “Same team, Dwight,” after Dwight strips him mid-play."
+  },
+  {
+    "id": "of-s1e5-hard-0020",
+    "context": "Contact in the lane leads Michael to halt play with a contentious call, freezing the run of possessions.",
+    "question": "What call does Michael make after taking an elbow, effectively ending play?",
+    "options": ["Flagrant intentional foul", "Traveling", "Double technical", "Goaltending"],
+    "answer": "Flagrant intentional foul",
+    "difficulty": "hard",
+    "episode": 5,
+    "description": "Michael insists it’s a “flagrant, intentional foul” and declares the game over."
+  },
+  {
+    "id": "of-s1e5-medium-0021",
+    "context": "With play stopped, the group haggles over how to determine a result given the abrupt ending.",
+    "question": "How does Michael decide the winner after stopping the game?",
+    "options": ["Whoever was ahead at that moment", "First to 11 points", "Coin toss", "Last basket"],
+    "answer": "Whoever was ahead at that moment",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "He says, “Let’s say whoever was ahead won,” learns it was them, and claims victory."
+  },
+  {
+    "id": "of-s1e5-easy-0032",
+    "context": "Back upstairs after the game, Roy comments on Jim’s play in front of Pam.",
+    "question": "Which basketball player does Roy compare Jim to at the end?",
+    "options": ["Larry Bird", "Michael Jordan", "Bill Rusell", "Tim Duncan"],
+    "answer": "Larry Bird",
+    "difficulty": "easy",
+    "episode": 5,
+    "description": "Roy says, “Look at Larry Bird. Larry Legend,” while talking to Pam."
+  },
+  {
+    "id": "of-s1e5-hard-0023",
+    "context": "Back upstairs, Michael pivots to a morale-saving announcement about the following day’s attendance.",
+    "question": "What final decision does Michael announce to the office about coming in the next day?",
+    "options": ["Nobody is coming in; day off", "Half-day for everyone", "Only warehouse comes in", "Volunteers only"],
+    "answer": "Nobody is coming in; day off",
+    "difficulty": "hard",
+    "episode": 5,
+    "description": "He tells them, “Screw Corporate, nobody’s coming in tomorrow. You have the day off. Like coming in an extra day is gonna prevent us from being downsized”"
+  },
+  {
+    "id": "of-s1e6-easy-0023",
+    "context": "**EPISODE 6**: Kickoff meeting in Michael’s office: corporate outlines a new sales push with a reward attached.",
+    "question": "According to Jan, what is the incentive to boost sales?",
+    "options": [
+      "Give the top seller a prize",
+      "Offer the top seller a raise",
+      "Give the top seller a paid vacation",
+      "Increase commission on sales"
+    ],
+    "answer": "Give the top seller a prize",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "Jan says the program lets them “reward your top seller with a prize.”"
+  },
+  {
+    "id": "of-s1e6-easy-0001",
+    "context": "Morning meeting in Michael’s office: corporate rolls out a sales push with a big-ticket reward.",
+    "question": "What is the maximum value of the new incentive prize?",
+    "options": ["$1,000", "$500", "$2,500", "$5,000"],
+    "answer": "$1,000",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "Corporate says the top seller can get a prize “worth up to $1,000.”"
+  },
+  {
+    "id": "of-s1e6-medium-0003",
+    "context": "Brainstorm in the bullpen: Michael asks what motivates people most; Dwight goes off-road.",
+    "question": "Which suggestion does Dwight offer after ‘sex’ is ruled out as illegal?",
+    "options": ["Torture", "Bonuses", "Extra vacation", "Company car"],
+    "answer": "Torture",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Michael nixes “sex,” and Dwight jumps to “torture,” which Michael rejects."
+  },
+  {
+    "id": "of-s1e6-easy-0024",
+    "context": "Reception to conference room: a visiting vendor sets up shop to sell to the staff.",
+    "question": "What is the name of the handbag vendor?",
+    "options": ["Katy", "Karen", "Maya", "Amy"],
+    "answer": "Katy",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "Michael meets her: “What is your name, my fair lass?” — “Katy.”"
+  },
+  {
+    "id": "of-s1e6-medium-0004",
+    "context": "Same Scene.",
+    "question": "What product is the visitor in the conference room selling?",
+    "options": ["Handbags", "Perfume", "Makeup kits", "Jewelry"],
+    "answer": "Handbags",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Pam says there’s “a person here who wants to sell handbags,” leading to Katy using the conference room."
+  },
+  {
+    "id": "of-s1e6-medium-0037",
+    "context": "Conference room introduction: Michael meets the visiting vendor.",
+    "question": "What is the first thing Michael says after being introduced to Katy?",
+    "options": [
+      "Calls her “the new and improved Pam — Pam 6.0”",
+      "Asks if she wants to work there full time",
+      "Calls her the hottest person at the office",
+      "Tells her he will buy all her bags"
+    ],
+    "answer": "Calls her “the new and improved Pam — Pam 6.0”",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "He greets her with, “Katy… wow, you are like the new and improved Pam. Pam 6.0.”"
+  },
+  {
+    "id": "of-s1e6-hard-0038",
+    "context": "Michael boasts about his reading habits while handing over the conference room.",
+    "question": "Which of these is NOT something Michael claims he reads/subscribes to?",
+    "options": [
+      "Small Businessman",
+      "USA Today",
+      "American Way (the in-flight magazine)",
+      "The Wall Street Journal"
+    ],
+    "answer": "The Wall Street Journal",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "He name-drops Small Businessman, USA Today, and American Way; he never mentions The Wall Street Journal."
+  },
+  {
+    "id": "of-s1e6-medium-0025",
+    "context": "Bullpen banter as the vendor settles in: someone needlessly pokes at Pam.",
+    "question": "Who asks Pam if she’s jealous there’s another girl around?",
+    "options": ["Kevin", "Michael", "Roy", "Dwight"],
+    "answer": "Kevin",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Kevin says, “So are you jealous because there’s another girl around? … She’s prettier than you, though.”"
+  },
+  {
+    "id": "of-s1e6-easy-0028",
+    "context": "Hallway intro sequence: HR steps into the meet-and-greet.",
+    "question": "What is the name of the person from Human Resources Michael introduces to Katy?",
+    "options": ["Toby", "Holly", "Jan", "Stanley"],
+    "answer": "Toby",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "Michael: “Here is Toby from Human Resources. Katy, Toby. Toby, Katy.”"
+  },
+  {
+    "id": "of-s1e6-medium-0007",
+    "context": "Michael escorts Katy around for introductions; he fumbles through quick profiles.",
+    "question": "Which detail does Michael blurt out while introducing Katy to Toby?",
+    "options": ["That Toby is divorced with a child", "That Toby is a waste of space", "That Toby used to be a salesman", "That Toby’s from Buffalo"],
+    "answer": "That Toby is divorced with a child",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "He overshares that Toby is divorced, has a daughter, and even slept in his car one night."
+  },
+  {
+    "id": "of-s1e6-medium-0041",
+    "context": "Hallway meet-and-greet: HR briefly chats with the vendor about backgrounds.",
+    "question": "What school does Toby ask Katy if she went to?",
+    "options": [
+      "Bishop O'Hara",
+      "Scranton Prep",
+      "View Ridge",
+      "Dunmore High"
+    ],
+    "answer": "Bishop O'Hara",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Toby asks, “Did you go to Bishop?” and she answers yes."
+  },
+  {
+    "id": "of-s1e6-easy-0040",
+    "context": "Michael introduces the vendor to accounting and can’t resist a pun.",
+    "question": "What name does Michael call Oscar during the introduction?",
+    "options": [
+      "Oscar the Grouch",
+      "Grumpy Oscar",
+      "The Numbers Guy",
+      "Mr. Ledger"
+    ],
+    "answer": "Oscar the Grouch",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "He chirps, “Oooh-ooh, Oscar the Grouch,” then insists he “made the connection.”"
+  },
+  {
+    "id": "of-s1e6-medium-0008",
+    "context": "Break area banter: Roy nudges Jim about the visitor and Jim deflects.",
+    "question": "When Jim says Katy isn’t really his type, which ‘type’ does he joke he prefers?",
+    "options": ["Moms", "Artists", "GrandMa´s", "Guys"],
+    "answer": "Moms",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "He deadpans “Moms… soccer moms, single moms, NASCAR moms,” prompting Kevin to warn him off his mom."
+  },
+  {
+    "id": "of-s1e6-medium-0032",
+    "context": "Michael unveils the prize he just bought while touting the incentive program.",
+    "question": "What does Michael buy with the prize money for the top salesperson?",
+    "options": [
+      "An espresso machine",
+      "A new printer",
+      "A handbag",
+      "A copy machine"
+    ],
+    "answer": "An espresso machine",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "He shows off “a Starbucks digital barista… the Mack Daddy of espresso makers,” bragging it cost “a thousand big ones.”"
+  },
+  {
+    "id": "of-s1e6-medium-0029",
+    "context": "Micheal continues to monologue about boundaries versus impulses.",
+    "question": "What rule does Michael say he lives by regarding workplace relationships?",
+    "options": [
+      "No office romances",
+      "Date only in other branches",
+      "HR must approve all dates",
+      "No sex in the workplace"
+    ],
+    "answer": "No office romances",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "He says, “I live by one rule. No office romances, no way.” He immediately undercuts it with, “But I live by another rule. Just do it. Nike.”"
+  },
+  {
+    "id": "of-s1e6-hard-0026",
+    "context": "Conference-room gawking: Dwight lists why the vendor is ‘perfect’ for him.",
+    "question": "Which of these is NOT one of the qualities Dwight says Katy has?",
+    "options": [
+      "Creamy skin",
+      "Straight teeth",
+      "Curly hair",
+      "Amazing breasts",
+      "Green eyes"
+    ],
+    "answer": "Green eyes",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "Dwight ticks off “creamy skin, straight teeth, curly hair, amazing breasts,” then adds it’s “for my children. The Schrutes produce very thirsty babies.”"
+  },
+  {
+    "id": "of-s1e6-medium-0042",
+    "context": "Jim coaches Dwight on conversation; Dwight brainstorms topics he thinks will land.",
+    "question": "What does Dwight say he could talk to Katy about, per Jim’s suggestion they have things in common?",
+    "options": [
+      "The origins of his last name",
+      "Wholesale purse logistics",
+      "Regional paper quotas",
+      "Stitching density per inch"
+    ],
+    "answer": "The origins of his last name",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Dwight says, “Plus I could talk to her about the origins of my last name. It’s all gold.”"
+  },
+  {
+    "id": "of-s1e6-hard-0014",
+    "context": "Desk pod: Dwight formally seeks clearance for his personal plan.",
+    "question": "What permission does Dwight ask Michael for concerning Katy?",
+    "options": ["To ask her out on a date", "To offer her a bulk purchase deal", "To comp her a purse for exposure", "To give her a tour of the warehouse"],
+    "answer": "To ask her out on a date",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "He asks to “ask out Katy.” Michael says it’s not against the rules since she’s not a permanent employee."
+  },
+  {
+    "id": "of-s1e6-easy-0043",
+    "context": "Prepping for a possible ride home, Michael polls reception on a furniture choice.",
+    "question": "What does Michael ask Pam about—“how do girls your age feel about” it?",
+    "options": [
+      "Futons",
+      "Beanbag chairs",
+      "Waterbeds",
+      "Murphy beds"
+    ],
+    "answer": "Futons",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "He asks, “How do girls your age feel about futons?” prompting eye-rolls."
+  },
+  {
+    "id": "of-s1e6-hard-0044",
+    "context": "Parking-lot supply shuffle: Michael gives Ryan exact instructions about car drinks.",
+    "question": "Which two drink names does Michael specifically mention while organizing the car?",
+    "options": [
+      "Blue Blast and Arctic Chill",
+      "Citrus Rush and Lemon Zing",
+      "Cherry Ice and Lime Freeze",
+      "Grape Surge and Orange Pop"
+    ],
+    "answer": "Blue Blast and Arctic Chill",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "He says to put “Blue Blast” in the trunk and an unopened “Arctic Chill” in the passenger cup holder."
+  },
+  {
+    "id": "of-s1e6-medium-0045",
+    "context": "Same Scene.",
+    "question": "Which knock-off of Drakkar Noir does Ryan find in Micheal´s car?",
+    "options": [
+      "Night Sweat",
+      "Night Mist",
+      "Midnight Musk",
+      "Noir Lite"
+    ],
+    "answer": "Night Sweat",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Ryan says it’s “Night Sweat… a perfect smell-alike. I’m not paying for the label.”"
+  },
+  {
+    "id": "of-s1e6-easy-0034",
+    "context": "End-of-day departures at reception: plans reshuffle and rides change.",
+    "question": "Who drives Katy home at the end of the night?",
+    "options": ["Jim", "Michael", "Ryan", "Dwight"],
+    "answer": "Jim",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "Katy tells Michael she no longer needs a ride because Jim can take her."
+  },
+  {
+    "id": "of-s1e6-easy-0035",
+    "context": "Parking lot reveal before they leave together: Jim sets expectations about his car.",
+    "question": "What kind of car does Jim drive?",
+    "options": ["Toyota Corolla", "Honda Civic", "Ford Focus", "Volkswagen Jetta"],
+    "answer": "Toyota Corolla",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "Jim says, “In case you haven’t noticed, this is a Corolla… It’s a very nice car.”"
+  },
+  {
+    "id": "of-s1e6-medium-0022",
+    "context": "Closing talking head: Michael wraps the day with a self-flattering philosophy.",
+    "question": "What contrast does Michael make about choosing between a one-night stand and his staff?",
+    "options": [
+      "He’d pick his employees every time",
+      "He’d choose the one-night stand for ‘research’",
+      "He claims he balances both equally",
+      "He says HR must approve either choice"
+    ],
+    "answer": "He’d pick his employees every time",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Michael says he’d choose his people “every time,” calling it an “every-day stand,” and boasts he remembers their names in the morning."
+  },
+  {
+    "id": "of-s1e7-easy-0001",
+    "context": "**EPISODE 7**: Opening montage at the office sets up Michael’s annual employee awards night.",
+    "question": "What event is Michael preparing for at the start?",
+    "options": ["The Dundies", "Casino Night", "The Mifflins", "The Dunders"],
+    "answer": "The Dundies",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "Michael announces, “Tonight is the Dundies, the annual employee awards night here at Dunder Mifflin,” while waving a trophy."
+  },
+  {
+    "id": "of-s1e7-medium-0002",
+    "context": "Michael justifies why he thinks the awards matter to employees.",
+    "question": "According to Michael, what grim scenario happens to a ‘neighbor’ who gets no recognition?",
+    "options": ["He hangs himself due to lack of recognition", "He quits and joins the rival paper company", "He vandalizes the office, then is arrested", "He sues the company for discrimination"],
+    "answer": "He hangs himself due to lack of recognition",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Michael spins a dark tale: the unrecognized neighbor “hanged himself due to lack of recognition,” as his way of arguing for the Dundies."
+  },
+  {
+    "id": "of-s1e7-medium-0003",
+    "context": "In the bullpen, Michael riffs through ‘past winners’ and teases his staff.",
+    "question": "What nickname does Michael use while jokingly ‘introducing’ Jim among past Dundie winners?",
+    "options": ["Fat Halpert", "Slim Jim", "Jimbo Slice", "Big Tuna"],
+    "answer": "Fat Halpert",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Michael does a Fat Albert voice: “Hey hey hey! It’s Fat Halpert… Jim Halpert.”"
+  },
+  {
+    "id": "of-s1e7-hard-0004",
+    "context": "Michael tours ‘Dundie all-stars’ and prods people to show their trophies.",
+    "question": "When asked to show his Dundies, how does Jim respond?",
+    "options": [
+      "He says he keeps them hidden so he doesn’t get cocky",
+      "At home in a display case above his bed",
+      "He says Dwight stole them",
+      "He says they’re on his desk at home"
+    ],
+    "answer": "He says he keeps them hidden so he doesn’t get cocky",
+    "difficulty": "hard",
+    "episode": 7,
+    "description": "Jim deadpans that he “keeps them hidden” to avoid getting cocky."
+  },
+  {
+    "id": "of-s1e7-easy-0038",
+    "context": "While Michael needles the crew about showing off trophies, Dwight volunteers extra info.",
+    "question": "Where does Dwight say he keeps his Dundie trophies?",
+    "options": [
+      "At home in a display case above his bed",
+      "In a locked drawer at work",
+      "In his beet cellar",
+      "On his desk next to his bobbleheads"
+    ],
+    "answer": "At home in a display case above his bed",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "Dwight says, “Mine are at home in a display case above my bed, prompting Micheal to yell TMI”"
+  },
+  {
+    "id": "of-s1e7-medium-0039",
+    "context": "Before the ceremony, Pam gives her honest take on the annual spectacle.",
+    "question": "How does Pam describe the Dundies?",
+    "options": [
+      "Like a car wreck you want to look away from but can’t",
+      "Like a kid’s birthday party where the kid has fun and you just attend",
+      "Like a boring budget meeting",
+      "Like a school talent show gone wrong"
+    ],
+    "answer": "Like a car wreck you want to look away from but can’t",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Pam says the Dundies are “like a car wreck… you want to look away, but you have to stare… because your boss is making you.”"
+  },
+  {
+    "id": "of-s1e7-medium-0040",
+    "context": "Another coworker sums up the night using a kid-friendly comparison.",
+    "question": "How does Oscar describe the Dundies?",
+    "options": [
+      "Like a kid’s birthday party where the kid has fun and you just attend",
+      "Like a company sales rally",
+      "Like open mic night at a bar",
+      "Like a boring budget meeting"
+    ],
+    "answer": "Like a kid’s birthday party where the kid has fun and you just attend",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Oscar says you go and there’s not much for you to do, “but the kid’s having a really good time.”"
+  },
+  {
+    "id": "of-s1e7-hard-0041",
+    "context": "Pam skims old tapes while Michael narrates past highlights.",
+    "question": "In the taped video Michael plays, which award does Oscar receive?",
+    "options": [
+      "“Show Me the Money”",
+      "“Accountant of the Year”",
+      "“Most Reliable”",
+      "“Numbers Ninja”"
+    ],
+    "answer": "“Show Me the Money”",
+    "difficulty": "hard",
+    "episode": 7,
+    "description": "On the video, Michael shouts, “To Oscar Martinez it’s the ‘Show Me the Money’ award!”"
+  },
+  {
+    "id": "of-s1e7-medium-0044",
+    "context": "Footage from earlier Dundies showcases a running gag aimed at the receptionist..",
+    "question": "Which award does Pam win annually in the old tapes Michael plays?",
+    "options": [
+      "“Longest Engagement”",
+      "“Best Receptionist”",
+      "“Best Couple in the Office”",
+      "“Cutest Couple”"
+    ],
+    "answer": "“Longest Engagement”",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Michael announces “Longest Engagement” for Pam; Roy accepts on her behalf in the clip."
+  },
+  {
+    "id": "of-s1e7-easy-0031",
+    "context": "Before the ceremony, Michael calls corporate to invite his boss and name-drops her formally while pleading for support.",
+    "question": "What is Jan’s full name as mentioned when Michael invites her to the Dundies?",
+    "options": ["Jan Levinson-Gould", "Jan Levinson-Bennett", "Jan Bennett-Good", "Jan Harrison-Gould"],
+    "answer": "Jan Levinson-Gould",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "On speakerphone he says, “Will her highness, Jan Levinson-Gould, be descending…,” using her hyphenated name during the invite."
+  },
+  {
+    "id": "of-s1e7-medium-0043",
+    "context": "On his call with corporate, Jan lists dubious past events to justify withholding funds.",
+    "question": "Which party does Jan cite that caused confusion because of how Michael framed it?",
+    "options": [
+      "A tsunami fund raiser",
+      "A Halloween Casino Night",
+      "A New Year’s Eve Gala",
+      "A ‘Paper Palooza’ carnival"
+    ],
+    "answer": "A tsunami fund raiser",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Jan mentions the tsunami relief fundraiser that “somehow lost money,” which Michael called a “FUN raiser.”"
+  },
+  {
+    "id": "of-s1e7-easy-0036",
+    "context": "The event relocates from the office to a casual dining chain where the group gathers for food and trophies.",
+    "question": "Where do the Dundie awards take place?",
+    "options": ["Chili’s", "Poor Richard’s", "Cooper’s Seafood", "Poor Tony’s"],
+    "answer": "Chili’s",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "The ceremony is held at Chili’s; several scenes show the staff seated in booths during Michael’s bits."
+  },
+  {
+    "id": "of-s1e7-medium-0012",
+    "context": "To boost turnout, Michael announces a new policy about attendees.",
+    "question": "What change does Michael make for this year’s Dundies to ‘make it the best ever’?",
+    "options": [
+      "He invites friends and family to attend",
+      "He moves it to the restaurant",
+      "He switches to a lunchtime ceremony",
+      "He mandates tuxedos for all employees"
+    ],
+    "answer": "He invites friends and family to attend",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Michael: “Tonight, for the first time, we are inviting all of your friends and family to attend.”"
+  },
+  {
+    "id": "of-s1e7-medium-0033",
+    "context": "At the restaurant, Michael quizzes a salesman about bringing family and gets corrected at the table.",
+    "question": "What is the name of Stanley’s wife who attends the Dundies?",
+    "options": ["Terri", "Cynthia", "Helene", "Carol"],
+    "answer": "Terri",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "When Michael says he looks forward to meeting her, Stanley replies she’s “this person whose hand I’m holding”—Terri."
+  },
+  {
+    "id": "of-s1e7-easy-0032",
+    "context": "As the show kicks off, Dwight handles emcee housekeeping and labels the edition for the crowd.",
+    "question": "Which annual Dundies ceremony is being held this year?",
+    "options": ["Eighth annual", "Seventh annual", "Tenth annual", "Fifth annual"],
+    "answer": "Eighth annual",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "Dwight opens with “Welcome to the eighth annual Dundies awards,” before launching into announcements."
+  },
+  {
+    "id": "of-s1e7-easy-0035",
+    "context": "Michael announces an award aimed at recognizing steady account wins, but the engraving is famously botched.",
+    "question": "Who receives the ‘Busiest Beaver’ award?",
+    "options": ["Phyllis", "Stanley", "Jim", "Angela"],
+    "answer": "Phyllis",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "Phyllis walks up for the plaque and points out the mistake:”"
+  },
+  {
+    "id": "of-s1e7-medium-0034",
+    "context": "An early award goes to a veteran salesperson whose last name is read aloud from the plaque.",
+    "question": "What surname for Phyllis is used during the ceremony?",
+    "options": ["Lapin", "Vance", "Howard", "Hannon"],
+    "answer": "Lapin",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Michael hands over the trophy and it’s read as “Phyllis Lapin,” which also contains the engraving error on the title."
+  },
+  {
+    "id": "of-s1e7-medium-0018",
+    "context": "The first award of the live show goes to a long-time salesperson.",
+    "question": "Which mistaken engraving appears on Phyllis’s ‘Busiest Beaver’ award?",
+    "options": ["Bushiest Beaver", "Bustiest Beaver", "Busies Beavers", "Business Beaver"],
+    "answer": "Bushiest Beaver",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Phyllis reads it: “This says ‘Bushiest Beaver.’” Michael blames the trophy shop."
+  },
+  {
+    "id": "of-s1e7-medium-0021",
+    "context": "An unexpected recipient gets an appearance-based award.",
+    "question": "Who receives the ‘Hottest in the Office’ Dundie?",
+    "options": ["Ryan", "Pam", "Angela", "Meredith"],
+    "answer": "Ryan",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Michael hands it to Ryan to the tune of “You Sexy Thing,” calling him a “sexy thang.”"
+  },
+  {
+    "id": "of-s1e7-medium-0022",
+    "context": "Another on-brand title goes to the head of the Party Planning Committee.",
+    "question": "Which award does Angela refuse to accept?",
+    "options": ["Tight Ass", "Most Organized", "Most Serious", "Best Coordinator"],
+    "answer": "Tight Ass",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Michael says it’s for being a stickler and for her “great caboose.” Angela says, “No.”"
+  },
+  {
+    "id": "of-s1e7-medium-0023",
+    "context": "Michael assigns an ethnicity-based gag award that backfires.",
+    "question": "Which award does Kelly receive that she questions on the spot?",
+    "options": ["Spicy Curry", "Customer Whisperer", "Chattiest Cathy", "Deep Cuts"],
+    "answer": "Spicy Curry",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Michael gives Kelly “Spicy Curry”; she asks, “What’s that mean?” while pointing out the bowler statuette."
+  },
+  {
+    "id": "of-s1e7-easy-0045",
+    "context": "During a live award, Michael calls a coworker to the stage by full name.",
+    "question": "What is Kelly’s surname as mentioned during the ceremony?",
+    "options": ["Kapoor", "Khan", "Malhotra", "Patel"],
+    "answer": "Kapoor",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "Michael says, “The ‘Spicy Curry’ award goes to our very own Kelly Kapoor.”"
+  },
+  {
+    "id": "of-s1e7-medium-0017",
+    "context": "Some coworkers consider bailing for another bar.",
+    "question": "Which destination do Darryl and Roy suggest as they plan to leave?",
+    "options": ["Poor Richard’s", "The Peppermill", "Cooper’s", "Poor Tony’s"],
+    "answer": "Poor Richard’s",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Darryl: “Hey let’s go to Poor Richard’s.” Roy echoes, “Yeah, let’s get out of here.”"
+  },
+  {
+    "id": "of-s1e7-medium-0026",
+    "context": "With momentum back, Michael starts handing out more plaques.",
+    "question": "Which title does Stanley receive during the revived stretch?",
+    "options": ["Fine Work", "Great Work", "Most Dependable", "Quiet Closer"],
+    "answer": "Fine Work",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Michael: “This is the Fine Work award. This goes to Stanley, for all the fine work he did this year.”"
+  },
+  {
+    "id": "of-s1e7-medium-0027",
+    "context": "Michael swerves away from a running gag and honors Pam differently.",
+    "question": "What award does Pam receive instead of the expected engagement joke?",
+    "options": ["Whitest Sneakers", "Best Reception", "Office Spirit", "Customer Favorite"],
+    "answer": "Whitest Sneakers",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Michael announces the “Whitest Sneakers” award, noting her perpetually white tennis shoes."
+  },
+  {
+    "id": "of-s1e7-medium-0029",
+    "context": "Shortly after her speech, the night takes a slapstick turn.",
+    "question": "What happens to Pam that Jim begs the crew to have captured on camera?",
+    "options": [
+      "She falls off her bar stool",
+      "She spills a tray of drinks",
+      "She trips on a mic cable",
+      "She knocks over the keyboard"
+    ],
+    "answer": "She falls off her bar stool",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Jim laughs, “You are so drunk! Did you get that? Please tell me you got that,” after Pam tumbles off the stool."
+  },
+  {
+    "id": "of-s1e7-hard-0030",
+    "context": "A manager explains the restaurant’s stance after the festivities.",
+    "question": "What consequence does the Chili’s employee say Pam faces for sneaking drinks?",
+    "options": [
+      "She is banned from the restaurant chain",
+      "She must pay a cleanup fee",
+      "She must apologize to management",
+      "She must attend a safe-service seminar"
+    ],
+    "answer": "She is banned from the restaurant chain",
+    "difficulty": "hard",
+    "episode": 7,
+    "description": "The employee says they Xeroxed her license and she’s “not welcome to this restaurant chain ever again.”"
+  },
+  {
+    "id": "of-s1e7-hard-0042",
+    "context": "A mystery insult earlier in the ladies’ room triggers Dwight’s investigation and later guilt from one attendee.",
+    "question": "Who is ultimately revealed to have written something about Michael on the ladies’ room wall?",
+    "options": ["Pam Beesley", "Phyllis Lapin", "Kelly Kapoor", "Angela Martin"],
+    "answer": "Pam Beesley",
+    "difficulty": "hard",
+    "episode": 7,
+    "description": "After the ceremony, Pam admits she feels bad about what she wrote on the bathroom wall."
+  },
+  {
+    "id": "of-s1e8-easy-0001",
+    "context": "**EPISODE 8**: Morning banter at reception: Michael fishes for laughs about inbox fodder and prods Jim to check junk mail.",
+    "question": "What headline does Jim read from his spam folder that cracks Michael up?",
+    "options": [
+      "“Fifty signs your priest might be Michael Jackson.”",
+      "“Lose 30 lbs by Friday—Doctors hate her.”",
+      "“Your bank account is compromised—click now.”",
+      "“Ten jokes HR can’t stop.”"
+    ],
+    "answer": "“Fifty signs your priest might be Michael Jackson.”",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Jim deadpans the subject line, and Michael laughs uncontrollably at the bit."
+  },
+  {
+    "id": "of-s1e8-easy-0023",
+    "context": "Early in the day, Michael brags that the office vibe is like a sitcom and assigns everyone TV counterparts.",
+    "question": "In his ‘Friends’ comparison, which characters does Michael say he is?",
+    "options": ["Chandler and Joey", "Ross and Chandler", "Joey", "Chandler"],
+    "answer": "Chandler and Joey",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Michael says, “We’re like Friends. I am Chandler and Joey,” before mapping others to different shows."
+  },
+  {
+    "id": "of-s1e8-easy-0024",
+    "context": "Continuing the TV-role bit, Michael assigns a ‘Friends’ character to the receptionist.",
+    "question": "Who does Michael compare Pam to from ‘Friends’?",
+    "options": ["Rachel", "Monica", "Phoebe", "Janice"],
+    "answer": "Rachel",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "In the same riff he adds, “Pam is Rachel,” lumping the office into his TV analogy."
+  },
+  {
+    "id": "of-s1e8-medium-0002",
+    "context": "Michael brags about the office vibe by comparing the staff to TV characters.",
+    "question": "Which crossover character does Michael assign to Dwight when comparing the office to Friends?",
+    "options": ["Kramer", "Ross", "Joey", "Barney"],
+    "answer": "Kramer",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "He says, “We’re like Friends… and Dwight is Kramer,” mixing shows while riffing."
+  },
+  {
+    "id": "of-s1e8-easy-0025",
+    "context": "A bombastic salesman storms into the bullpen, trading crude one-liners with Michael.",
+    "question": "Which character shows up as Michael’s self-proclaimed BFF?",
+    "options": ["Todd Packer", "Todd Porter", "Josh Packer", "Dave Porter"],
+    "answer": "Todd Packer",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Michael says he and Todd Packer are “total BFF,” reminiscing about their salesman days."
+  },
+  {
+    "id": "of-s1e8-easy-0003",
+    "context": "A loud entrance turns the bullpen chaotic as a notorious salesman shows up.",
+    "question": "How does Todd Packer introduce himself to Jim on arrival?",
+    "options": [
+      "“What has two thumbs and likes to bone your Mom? This guy!”",
+      "“Guess who’s back—best closer in Scranton!”",
+      "“Halpert, saddle up—we’re selling paper.”",
+      "“Where’s the party, nerds?”"
+    ],
+    "answer": "“What has two thumbs and likes to bone your Mom? This guy!”",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Packer points at himself with both thumbs and delivers the line."
+  },
+  {
+    "id": "of-s1e8-medium-0026",
+    "context": "Michael tries to impress with a wild memory from his and Packer’s salesman days.",
+    "question": "What story does Michael first share about a night out with Packer?",
+    "options": [
+      "They pretended to be brothers with a pair of twins and Packer slept with both.",
+      "They pretended to be twins to hook up with some twins at a sales convention.",
+      "They were once in a thressome with someone from Corporate.",
+      "They pretended to be brothers with a pair of twins and slept with both.."
+    ],
+    "answer": "They pretended to be brothers with a pair of twins and Packer slept with both.",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Michael says they met twins, told them they were brothers, took them to a motel, and “Packer did both of them.”"
+  },
+  {
+    "id": "of-s1e8-medium-0004",
+    "context": "Rumors swirl about corporate shakeups, and Packer piles on with crude gossip.",
+    "question": "Which CFO does Michael/Packer gossip about resigning?",
+    "options": ["Randall", "Martin", "David", "Peter"],
+    "answer": "Randall",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Michael tees up: “Randall, CFO, resigned,” and Packer launches into a story."
+  },
+  {
+    "id": "of-s1e8-easy-0027",
+    "context": "Packer asks for a chauffeur due to his latest trouble, and Michael volunteers someone.",
+    "question": "Who does Michael tap to drive Todd Packer around?",
+    "options": ["Ryan", "Jim", "Dwight", "Kevin"],
+    "answer": "Ryan",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "After Packer mentions his DUI, Michael turns to the temp: “Ryan?” and sends him along."
+  },
+  {
+    "id": "of-s1e8-easy-0006",
+    "context": "Pam previews her day and why she keeps glancing at reception’s door.",
+    "question": "Who is Pam expecting to visit the office?",
+    "options": ["Her mom", "Her sister", "Her grandmother", "Her aunt"],
+    "answer": "Her mom",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Pam says her mom is coming in and lives two hours away."
+  },
+  {
+    "id": "of-s1e8-medium-0007",
+    "context": "Michael wants to circulate a raunchy clip and seeks Dwight’s help.",
+    "question": "What video link does Michael ask Dwight to send him to forward around?",
+    "options": [
+      "A “monkey sеx” clip",
+      "A celebrity blooper reel",
+      "A prank compilation",
+      "A stand-up routine"
+    ],
+    "answer": "A “monkey sеx” clip",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "He says, “Send me that link to the monkey sеx video. I’m going to forward it like it’s hot.”"
+  },
+  {
+    "id": "of-s1e8-hard-0022",
+    "context": "In the warehouse, Michael asks the crew to supply him with a ‘killer joke.’",
+    "question": "What do Darryl and Roy relentlessly tease Michael about instead of giving him a clean joke?",
+    "options": [
+      "His “little package” and tight pants",
+      "His hairline",
+      "His shoes and little package",
+      "His car"
+    ],
+    "answer": "His “little package” and tight pants",
+    "difficulty": "hard",
+    "episode": 8,
+    "description": "They riff that his pants are tight, they can “see all your business,” and chant “little package.”"
+  },
+  {
+    "id": "of-s1e8-easy-0008",
+    "context": "HR interrupts the morning with a policy update that dampens Michael’s mood.",
+    "question": "What session does Toby announce after the CFO scandal?",
+    "options": [
+      "A sexual harassment policy review",
+      "An ethics hotline training",
+      "A cybersecurity refresher",
+      "A workplace safety drill"
+    ],
+    "answer": "A sexual harassment policy review",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Toby says Corporate asked for a five-minute review and a lawyer visit."
+  },
+  {
+    "id": "of-s1e8-medium-0028",
+    "context": "Before the HR session, Michael tries to prove what humor will be lost under stricter rules.",
+    "question": "Which joke does Michael say is ‘what’s at stake’ because of Corporate’s harassment review?",
+    "options": [
+      "Prostitute joke about getting crabs",
+      "A knock-knock bit about HR",
+      "Thats what she said jokes",
+      "A pun about paper reams"
+    ],
+    "answer": "Prostitute joke about getting crabs",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "He tells: a guy pays $5, gets crabs, complains; she says, “It was only five dollars. What did you expect? Lobster?” and adds, “This is what’s at stake.”"
+  },
+  {
+    "id": "of-s1e8-easy-0030",
+    "context": "During the harassment talk, Michael boasts he could’ve slept with a past coworker if he’d wanted.",
+    "question": "What is the name of the former employee Michael claims would have slept with him?",
+    "options": ["Catherine", "Brenda", "Donna", "Holly"],
+    "answer": "Catherine",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Michael prods Dwight to “remember her,” then insists, “She would have definitely slept with me.”"
+  },
+  {
+    "id": "of-s1e8-medium-0009",
+    "context": "Michael rallies the bullpen against new HR boundaries.",
+    "question": "What office staple does Michael fear losing most due to the policy talk?",
+    "options": [
+      "Email forwards",
+      "Casual Fridays",
+      "Birthday parties",
+      "Inside jokes"
+    ],
+    "answer": "Email forwards",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Angela names them, and Michael blows her a kiss: “Can we afford to lose email forwards?”"
+  },
+  {
+    "id": "of-s1e8-medium-0031",
+    "context": "Michael defends his inbox antics after crowning himself the ‘king of forwards.’",
+    "question": "What analogy does Michael use to justify forwarding inappropriate emails?",
+    "options": [
+      "He compares himself to a drսg courier.",
+      "He says he’s like a postal worker bound to deliver all mail.",
+      "He likens it to retweeting public information.",
+      "He claims fair use because it’s for ‘educational’ purposes."
+    ],
+    "answer": "He compares himself to a drսg courier.",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Michael: “I don’t come up with this stuff. I just forward it along. You wouldn’t arrest a guy who’s just delivering drսgs from one guy to another.”"
+  },
+{
+  "id": "of-s1e8-medium-0010",
+  "context": "Michael calls out displays around the office while lecturing the team.",
+  "question": "According to Stanley, what is the “hot” photo by his desk actually of?",
+  "options": [
+    "It’s his daughter in a Catholic school uniform.",
+    "It’s a magazine tear-out he forgot to remove.",
+    "It’s his wife at the beach.",
+    "It’s his daughter dressed up on Halloween."
+  ],
+  "answer": "It’s his daughter in a Catholic school uniform.",
+  "difficulty": "medium",
+  "episode": 8,
+  "description": "Michael points to the picture by Stanley’s desk, calling it a ‘centerfold in the Catholic schoolgirl outfit’ and even says the best part of his morning is staring at it. Stanley shuts it down."
+},
+  {
+    "id": "of-s1e8-medium-0011",
+    "context": "Policy Q&A turns to romantic disclosures and past flings.",
+    "question": "What does Toby advise regarding existing office relationships?",
+    "options": [
+      "Disclose them to HR.",
+      "Keep them secret to avoid bias.",
+      "End them immediately.",
+      "Move one partner to another branch."
+    ],
+    "answer": "Disclose them to HR.",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Toby says relationships are a bad idea but should be disclosed if they exist."
+  },
+  {
+    "id": "of-s1e8-hard-0013",
+    "context": "Dwight corners Toby after the seminar with painfully literal questions.",
+    "question": "Which anatomy term does Dwight specifically ask Toby to locate?",
+    "options": ["The clitoris", "The cervix", "The labia majora", "The urethra"],
+    "answer": "The clitoris",
+    "difficulty": "hard",
+    "episode": 8,
+    "description": "Dwight cites a website and asks where it is “at the crest of the labia.”"
+  },
+  {
+    "id": "of-s1e8-medium-0015",
+    "context": "Corporate’s legal muscle arrives as Michael bristles at constraints.",
+    "question": "What is the name of the Corporate lawyer who visits the branch?",
+    "options": ["Mr. O’Malley", "Mr. Albiny", "Mr. Porter", "Mr. Bennett"],
+    "answer": "Mr. O’Malley",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Jan says, “Mr. O’Malley is our Corporate lawyer… on retainer.”"
+  },
+  {
+    "id": "of-s1e8-hard-0016",
+    "context": "In a misguided flex, Michael unveils his own legal counsel.",
+    "question": "Whom does Michael introduce as “my lawyer,” complete with billboard boast?",
+    "options": [
+      "James P. Albiny",
+      "Saul Goodman",
+      "Robert D. California, Esq.",
+      "Hollis Partridge"
+    ],
+    "answer": "James P. Albiny",
+    "difficulty": "hard",
+    "episode": 8,
+    "description": "Michael parades “James P. Albiny,” who also does “motorcycle head injuries” and diet pill suits."
+  },
+  {
+    "id": "of-s1e8-hard-0032",
+    "context": "After Michael ‘retires from comedy,’ Jim strings together lines to bait a catchphrase slip.",
+    "question": "Which of these lines does Jim NOT say in the setup before Michael blurts the catchphrase?",
+    "options": [
+      "“That is really hard.”",
+      "“You really think you can go all day long?”",
+      "“Well, you always left me satisfied and smiling.”",
+      "“Guess you can’t keep it up forever, huh?”"
+    ],
+    "answer": "“Guess you can’t keep it up forever, huh?”",
+    "difficulty": "hard",
+    "episode": 8,
+    "description": "Jim actually says: “That is really hard,” “You really think you can go all day long?” and “Well, you always left me satisfied and smiling."
+  },
+  {
+    "id": "of-s1e8-easy-0017",
+    "context": "Michael declares a new regime after the seminar, to everyone’s disbelief.",
+    "question": "Which catchphrase does Jim bait Michael into saying despite his ‘retirement from comedy’?",
+    "options": [
+      "“That’s what she said!”",
+      "“Boom! Roasted.”",
+      "“Bears. Beets. Battlestar Galactica.”",
+      "“World’s Best Boss.”"
+    ],
+    "answer": "“That’s what she said!”",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Jim crafts, “You really think you can go all day long?” and Michael blurts it."
+  },
+  {
+    "id": "of-s1e8-hard-0020",
+    "context": "Michael tries to demonstrate he respects boundaries while still being ‘himself.’",
+    "question": "After defending Phyllis, what wildly inappropriate comment does Michael blurt about himself?",
+    "options": [
+      "He jokes he’s worried about getting a bоnеr.",
+      "He says he keeps a list rating coworkers.",
+      "He brags about past affairs with temps.",
+      "He invites Phyllis to HR to ‘clear the air’ over wine."
+    ],
+    "answer": "He jokes he’s worried about getting a bоnеr.",
+    "difficulty": "hard",
+    "episode": 8,
+    "description": "Trying to “compliment” Phyllis, he says the only thing he’s worried about is that."
+  },
+  {
+    "id": "of-s1e8-medium-0021",
+    "context": "Michael uses a family metaphor to close the day and ‘set boundaries.’",
+    "question": "What does Michael say would be inappropriate now that he’s ‘upper management’?",
+    "options": [
+      "Taking a bath with Pam",
+      "Pranking Dwight on camera",
+      "Forwarding memes after hours",
+      "Hosting parties at his condo"
+    ],
+    "answer": "Taking a bath with Pam",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "He says families grow, and “the daddy can’t take a bath with the kids anymore… it would be inappropriate for me to take a bath with Pam.”"
   }
 ]
+
+
+
+
 
 

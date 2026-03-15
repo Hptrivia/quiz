@@ -1,5 +1,954 @@
-
 [
+  {
+    "id": "mf-s1e1-easy-0001",
+    "context": "**EPISODE 1**: Morning chaos at the Dunphy house: parents yell upstairs, a teen breezes in with attitude about how to be reached.",
+    "question": "How does Haley suggest her parents contact her instead of yelling?",
+    "options": ["Text her", "Call her phone", "FaceTime her", "DM her"],
+    "answer": "Text her",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Haley walks in and says, “Just text me.”"
+  },
+  {
+    "id": "mf-s1e1-easy-0002",
+    "context": "Luke has wedged himself in the staircase again; dad jumps into problem-solver mode.",
+    "question": "What does Phil ask for to help free Luke from the banister?",
+    "options": ["Baby oil", "Butter", "Cooking spray", "Hand lotion"],
+    "answer": "Baby oil",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Phil calls out, “Where’s the baby oil?”"
+  },
+  {
+    "id": "mf-s1e1-medium-0003",
+    "context": "Phil is told where to find the item that might unstick Luke, before the moment gets awkward.",
+    "question": "Where does Claire start to say the baby oil is kept?",
+    "options": ["On their bedside table", "In the bedroom drawer", "In the bathroom", "In their bedroom"],
+    "answer": "On their bedside table",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Claire begins, “It’s on our bedside tab—” then pivots."
+  },
+  {
+    "id": "mf-s1e1-medium-0004",
+    "context": "Claire reflects on her wild youth and sets a guardrail for her parenting goals.",
+    "question": "Where does Claire say she hopes Haley never wakes up half-naked?",
+    "options": ["On a beach in Florida", "In Las Vegas", "At spring break in Cabo", "At a college frat house"],
+    "answer": "On a beach in Florida",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Her benchmark for ‘success’ is avoiding that Florida scenario."
+  },
+  {
+    "id": "mf-s1e1-medium-0005",
+    "context": "New Scene. At a youth soccer game, a distracted defender costs his team a goal.",
+    "question": "What is Manny doing just before the other team scores?",
+    "options": ["Waving at a girl on a bicycle", "Staring at a girl in the stands", "Chatting with his mother", "Fixing his shin guard"],
+    "answer": "Waving at a girl on a bicycle",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "He waves, the opponents score, and tempers flare on the sideline."
+  },
+  {
+    "id": "mf-s1e1-medium-0006b",
+    "context": "Sideline commentary at the youth soccer game: Gloria contrasts her wealthy husband’s city life with her own small Colombian village and trails off mid-claim; Jay dryly supplies the missing word.",
+    "question": "Gloria says her hometown is “the number one village in all Colombia for all the…”—how does Jay complete the sentence?",
+    "options": ["murders", "robberies", "crimes", "drug trafficking"],
+    "answer": "murders",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Gloria pauses and Jay deadpans the punchline: “murders.”"
+  },
+  {
+    "id": "mf-s1e1-medium-0006",
+    "context": "Sideline spat: a finger-wagging mom criticizes; Gloria fires back about that mom’s kid.",
+    "question": "According to Gloria, where did the other boy keep his hand for the first half of the game?",
+    "options": ["In his pants", "In his mouth"],
+    "answer": "In his pants",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Gloria’s line ends the exchange—decisively."
+  },
+  {
+    "id": "mf-s1e1-medium-0007",
+    "context": "Post-goal introductions on the touchline lead to an awkward age mix-up.",
+    "question": "When Josh(a teammate´s father) meets them, who does he assume Jay is to Gloria?",
+    "options": ["Her father", "Her brother", "Her uncle", "Her grandfather"],
+    "answer": "Her father",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Jay corrects him: he’s her husband."
+  },
+  {
+    "id": "mf-s1e1-medium-0008",
+    "context": "New Scene. On the plane with baby Lily, a pastry causes a big misunderstanding and a bigger speech.",
+    "question": "What pastry in Lily’s hands sparks the misunderstanding and Mitchell´s big speech?",
+    "options": ["Cream puffs", "Éclairs", "Donuts", "Croissants"],
+    "answer": "Cream puffs",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Mitchell mounts a defense before Cameron points out the literal cream puffs."
+  },
+  {
+    "id": "mf-s1e1-easy-0025",
+    "context": "On the plane after Mitchell’s mistaken ‘cream puffs’ speech, Cameron offers a peace gesture to the passengers.",
+    "question": "To apologize to the cabin, what does Cameron say they’d like to pay for everyone?",
+    "options": ["Headsets", "Drinks", "Movies", "Wi-Fi access"],
+    "answer": "Headsets",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Cameron diffuses the moment by announcing, “We would like to pay for everyone’s headsets.”"
+  },
+  {
+    "id": "mf-s1e1-easy-0009",
+    "context": "New Scene. After the dust settles in coach-parent land, dad frees the banister captive with a flourish.",
+    "question": "What name does Phil use to dramatize freeing Luke from the banister?",
+    "options": ["Excalibur", "Houdini", "Thor", "Rocketman"],
+    "answer": "Excalibur",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Phil declares, “Be free, Excalibur.”"
+  },
+  {
+    "id": "mf-s1e1-easy-0009b",
+    "context": "Dunphy house: Haley announces a boy (Dylan) is coming over; Claire reacts to the news and lays down some boundaries.",
+    "question": "How old is Haley in this scene?",
+    "options": ["14", "15", "16", "17"],
+    "answer": "15",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Claire explicitly says, “You’re fifteen and it’s the first time you’ve had a boy over.”"
+  },
+  {
+    "id": "mf-s1e1-medium-0010",
+    "context": "Phil pitches himself as the ‘cool dad’ and shows off his texting chops—sort of.",
+    "question": "According to Phil, what does “WTF” stand for?",
+    "options": ["Why the face", "What the f**k", "What the fun", "Wow, that’s funny"],
+    "answer": "Why the face",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "His family is… unconvinced."
+  },
+  {
+    "id": "mf-s1e1-easy-0010b",
+    "context": "Phil’s ‘cool dad’ confessional: he brags about being hip—online, texting slang, and knowing all the dances to a certain movie.",
+    "question": "Which production does Phil claim he knows all the dances to?",
+    "options": ["High School Musical", "Grease", "Hairspray", "Footloose"],
+    "answer": "High School Musical",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "In his monologue, Phil says he knows all the dances to High School Musical and even bursts into a few lines."
+  },
+  {
+    "id": "mf-s1e1-medium-0011",
+    "context": "BB-gun fallout in the living room turns into a parenting line in the sand.",
+    "question": "What consequence does Claire insist on if Luke shoots someone with the BB gun?",
+    "options": ["Phil has to shoot Luke", "Luke loses the gun for a month", "The person has to shoot Luke", "Luke is grounded for a week"],
+    "answer": "Phil has to shoot Luke",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Claire holds Phil to their agreement."
+  },
+  {
+    "id": "mf-s1e1-medium-0011b",
+    "context": "Claire and Phil schedule the BB-gun consequence; they run through the day’s conflicts before landing on a specific time.",
+    "question": "Why couldn’t Phil shoot Luke at 2:00?",
+    "options": ["He was showing a house", "Luke had a birthday party", "Luke had a soccer game", "He had a work conference call"],
+    "answer": "Luke had a soccer game",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Phil says, “I can’t shoot him at two; I’m showing a house at two.”"
+  },
+  {
+    "id": "mf-s1e1-medium-0011c",
+    "context": "Claire and Phil schedule the BB-gun consequence; they run through the day’s conflicts before landing on a specific time.",
+    "question": "Why couldn’t Phil shoot Luke at 3:00?",
+    "options": ["He was showing a house", "Luke had a birthday party", "Luke had a soccer game", "He had a work conference call"],
+    "answer": "He was showing a house",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Phil says, “ No, he’s got a soccer game at three.”"
+  },
+  {
+    "id": "mf-s1e1-medium-0012",
+    "context": "Scheduling the consequence becomes a family logistics exercise.",
+    "question": "What exact phrase and time does Claire write on the family calendar?",
+    "options": ["Shoot Luke/4:15", "Shoot Luke/5:15", "Discipline Luke/4:15", "Discipline Luke/5:15"],
+    "answer": "Shoot Luke/4:15",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "They land on 4:15 as the time to shoot Luke."
+  },
+  {
+    "id": "mf-s1e1-easy-0012b",
+    "context": "New Scene. After the soccer game, in the car and later at the mall, Manny announces he wants to confess his love to an older girl who works there.",
+    "question": "What is the name of the girl Manny wants to tell he loves?",
+    "options": ["Brenda Feldman", "Kelly Parker", "Maria Reyes", "Megan Lewis"],
+    "answer": "Brenda Feldman",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Manny prepares flowers and a poem for Brenda Feldman at the mall."
+  },
+  {
+    "id": "mf-s1e1-easy-0012c",
+    "context": "Manny vows to confess his love to Brenda; Gloria and Jay push back on the age gap.",
+    "question": "How old is Brenda Feldman?",
+    "options": ["15", "16", "17", "18"],
+    "answer": "16",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Gloria reminds Manny, “She’s sixteen,” and Jay warns him off the grand gesture."
+  },
+  {
+    "id": "mf-s1e1-medium-0013",
+    "context": "Manny continues to declare grand intentions at home, including a wardrobe choice for his bold confession.",
+    "question": "Which specific garment does Manny want before going to see Brenda at the mall?",
+    "options": ["His white silk shirt", "His blue silk shirt", "His leather jacket", "His red hoodie"],
+    "answer": "His white silk shirt",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "He calls it “the silk one.”"
+  },
+  {
+    "id": "mf-s1e1-hard-0014",
+    "context": "Gloria shares a Spanish saying to guide Jay’s approach to Manny.",
+    "question": "In Gloria’s saying, family should be the .... in his back—not the .... in his face?",
+    "options": ["Wind/Spit", "Wind/Rain", "Shield/Spit", "Shield/Rain"],
+    "answer": "Wind/Spit",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "She tells Jay to be the wind in his back and not the spit in his face"
+  },
+  {
+    "id": "mf-s1e1-medium-0015",
+    "context": "New Scene. At home, the nursery reveal: they enter Lily’s room and see the surprise Cameron commissioned while they were away.",
+    "question": "What did Cameron have a friend paint in Lily’s room?",
+    "options": [
+      "A mural of Mitchell and Cameron with wings",
+      "A moon-and-stars ceiling",
+      "A jungle safari wall",
+      "An alphabet block border"
+    ],
+    "answer": "A mural of Mitchell and Cameron with wings",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Cameron: “We’re floating above her, always there to protect her.”"
+  },
+  {
+    "id": "mf-s1e1-hard-0016",
+    "context": "In Lily’s nursery, Mitchell grumbles about their friends’ names while reacting to Cameron’s over-the-top mural; later the same evening, another friend’s name comes up during an avoidance-issues chat.",
+    "question": "Which of these names is NOT one of Mitchell and Cameron’s friends mentioned in this episode?",
+    "options": ["Pepper", "Longines", "J’Micheal", "Andre"],
+    "answer": "J’Micheal",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "Pepper and Andre are explicitly referenced, and Longines is mentioned during the avoidance-issues exchange; J’Micheal isn’t mentioned."
+  },
+  {
+    "id": "mf-s1e1-medium-0017",
+    "context": "Back at the Dunphys, a dad tries (and fails) to be intimidating to a teen visitor.",
+    "question": "How does Phil first introduce himself to Dylan in his ‘tough’ mode?",
+    "options": ["“Phil Dunphy, yo.”", "“Big Phil, yo.”", "“Mr. D.”", "“Uncle Phil.”"],
+    "answer": "“Phil Dunphy, yo.”",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Phil attempts a stare-down and slang. It… goes poorly."
+  },
+  {
+    "id": "mf-s1e1-medium-0018",
+    "context": "At the mall, Jay tries to head off Manny’s grand gesture by sweetening the alternative.",
+    "question": "How much money does Jay offer Manny not to go through with his proposal?",
+    "options": ["$50", "$20", "$100", "$10"],
+    "answer": "$50",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Jay: “I’ll give you fifty bucks not to do this.”"
+  },
+  {
+    "id": "mf-s1e1-medium-0019",
+    "context": "As they leave the scene at the mall, an employee corrects Jay’s lane etiquette.",
+    "question": "According to the employer, which group should stay to the right (as he addresses Jay)?",
+    "options": ["Mall walkers", "Senior citizens", "Store greeters", "Elderly shoppers"],
+    "answer": "Mall walkers",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "“We ask that all mall walkers stay to the right.”"
+  },
+  {
+    "id": "mf-s1e1-medium-0020",
+    "context": "Back outside at the Dunphys, Luke armors up before the BB-gun consequence; Phil inspects the layers.",
+    "question": "How many pairs of underwear is Luke wearing?",
+    "options": ["Six", "Two", "Four", "Eight"],
+    "answer": "Six",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Phil counts: “One… ugh, six.”"
+  },
+  {
+    "id": "mf-s1e1-medium-0021",
+    "context": "Inside, Alex and Claire trade darkly comic hypotheticals about covering for teen trouble.",
+    "question": "Which illness does Alex suggest faking to cover for a potential pregnancy?",
+    "options": ["Mono", "Chickenpox", "The flu", "Mumps"],
+    "answer": "Mono",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Alex cites a rumor about a senior ‘out sick’ for months."
+  },
+  {
+    "id": "mf-s1e1-hard-0022",
+    "context": "Claire peeks into Haley’s room and references an old primetime soap in her cautionary anecdote.",
+    "question": "Which TV show does Claire mention when warning Haley about how ‘just watching’ can escalate?",
+    "options": ["Falcon Crest", "Dynasty", "Dallas", "Melrose Place"],
+    "answer": "Falcon Crest",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "“One moment you’re just friends watching Falcon Crest…”"
+  },
+  {
+    "id": "mf-s1e1-hard-0023",
+    "context": "Outside, Phil balks at following through; the BB gun discharges anyway.",
+    "question": "Who gets hit first immediately after Phil decides he can’t go through with the shot?",
+    "options": ["Luke", "Phil", "Dylan", "Alex"],
+    "answer": "Luke",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "A stray BB nails Luke the moment Phil relents."
+  },
+  {
+    "id": "mf-s1e1-medium-0023b",
+    "context": "Moments later, as the commotion spreads, another unintended target yelps before Phil takes a hit himself.",
+    "question": "Who else is accidentally shot by the BB gun before Phil gets hit?",
+    "options": ["Dylan", "Claire", "Haley", "Jay"],
+    "answer": "Dylan",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Dylan yelps “Ow!” right before the gun drops and tags Phil, too."
+  },
+  {
+    "id": "mf-s1e1-medium-0024",
+    "context": "Arriving for dinner at Mitchell and Cameron’s, Jay uses his standard move to avoid walking in on anything.",
+    "question": "What does Jay do before entering their place to avoid surprises?",
+    "options": [
+      "He announces himself loudly",
+      "He calls from the car",
+      "He rings twice and waits",
+      "He texts first"
+    ],
+    "answer": "He announces himself loudly",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Jay: “We’re here! Coming in!”"
+  },
+  {
+    "id": "mf-s1e1-medium-0025",
+    "context": "The big reveal at dinner gets the full theatrical treatment.",
+    "question": "What song plays when Cameron presents Lily to the family?",
+    "options": ["Circle of Life", "Can You Feel the Love Tonight", "Hakuna Matata", "Endless Love"],
+    "answer": "Circle of Life",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Lights dim and Cameron lifts Lily like Simba."
+  },
+  {
+    "id": "mf-s1e1-medium-0026",
+    "context": "As everyone processes the reveal, they clarify the origins of the newest family member.",
+    "question": "From which country did Mitchell and Cameron adopt Lily?",
+    "options": ["Vietnam", "China", "South Korea", "Cambodia"],
+    "answer": "Vietnam",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Mitchell mentions it on the plane and at dinner."
+  },
+  {
+    "id": "mf-ep1-easy-0001",
+    "context": "**EPISODE 2**: COLD OPEN — The family debates what makes a great dad as voices chime in one by one.",
+    "question": "Which virtue does Mitchell ultimately offer as his answer to the 'great dad' question?",
+    "options": ["Patience", "Discipline", "Humor", "Honesty"],
+    "answer": "Patience",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "After Cameron riffs about letting kids be whatever they want, Mitchell cuts in with a simple answer: '…Patience.'"
+  },
+  {
+    "id": "mf-ep1-easy-0002",
+    "context": "STREET— Biking as a family, Claire introduces Phil and Luke to a new neighbor who’s just moved in, fumbling her name before the woman supplies it.",
+    "question": "What is the new neighbor’s name who just moved in down the block?",
+    "options": ["Desiree", "Denise", "Darlene", "Diane"],
+    "answer": "Desiree",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "The woman introduces herself as Desiree after Claire fumbles for the name."
+  },
+  {
+    "id": "mf-ep1-medium-0003",
+    "context": "STREET  — Phil can’t resist flexing his realtor knowledge, rattling off details about the neighbor’s house from a preview tour, which immediately creeps Claire out.",
+    "question": "What detail about Desiree’s house does Phil specifically rave about from the caravan tour?",
+    "options": ["The steam shower", "A chef’s kitchen", "A sunken living room", "A rooftop patio"],
+    "answer": "The steam shower",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Phil blurts out that she must be loving 'that steam shower,' which Claire immediately calls creepy."
+  },
+{
+  "id": "mf-ep1-easy-0004",
+  "context": "STREET — Luke rides his sister’s old bike; after Phil admits it still looks like a girl’s bike, Claire proposes a quick fix to toughen it up.",
+  "question": "What does Claire say they should do to make Luke’s bike look less like a girl’s?",
+  "options": ["Add more black tape", "Spray-paint it blue", "Swap the seat and handlebars", "Remove the basket and streamers"],
+  "answer": "Add more black tape",
+  "difficulty": "easy",
+  "episode": 2,
+  "description": "Claire’s immediate solution is to add more black tape so the bike reads less 'girly' at a glance."
+},
+{
+  "id": "mf-ep1-easy-0004b",
+  "context": "STREET/COMMENTARY — While Luke pedals his sister’s old bike, Claire explains he hasn’t earned his own yet, citing a couple of recent disasters at home.",
+  "question": "Which of the following is NOT one of Claire’s reasons for not getting Luke his own bike yet?",
+  "options": ["He spilled a soda on her computer", "He ruined the digital camera taking underwater photos of himself", "He already broke his birthday present"],
+  "answer": "He already broke his birthday present",
+  "difficulty": "easy",
+  "episode": 2,
+  "description": "Claire names the soda-on-computer and underwater-camera incidents; a birthday present isn’t mentioned."
+},
+  {
+    "id": "mf-ep1-truefalse-0005",
+    "context": "DRIVE-BY — Phil worries what bullies might think if they saw Luke riding a girls bike. Jay passes by in the car.",
+    "question": "True or False: Jay compliments Luke’s bike and driving skills.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Jay jokes 'Nice bike, Sally,' comparing Luke to Little Bo Peep."
+  },
+  {
+    "id": "mf-ep1-medium-0007",
+    "context": "PRITCHETT–TUCKER HOME — Before toddler class, Mitchell urges Cameron to tone down his outfit;",
+    "question": "Which clothing combination does Cameron mock when Mitchell asks him to tone it down?",
+    "options": ["Khakis and a polo", "Jeans and a flannel", "Sweats and a hoodie", "A blazer and loafers"],
+    "answer": "Khakis and a polo",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Cam jokes that if he changes into khakis and a polo, people will think they’re 'straight golfing buddies' who had a kid."
+  },
+{
+  "id": "mf-ep1-medium-0007b",
+  "context": "PRITCHETT HOME — Jay brags about upgrading their getaway while Gloria explains Manny’s dad has big plans with him for the same weekend.",
+  "question": "Where were Gloria and Jay planning to go, and where was Manny’s father taking him?",
+  "options": ["Napa/Disneyland", "Palm Springs/Disneyland", "Sonoma/Disneyworld", "Las Vegas/Disneyworld"],
+  "answer": "Napa/Disneyland",
+  "difficulty": "medium",
+  "episode": 2,
+  "description": "Jay secured a villa in Napa, and Manny’s father was supposed to take Manny to Disneyland."
+},
+  {
+    "id": "mf-ep1-medium-0008",
+    "context": "PRITCHETT HOME — Napa getaway plans collide with a household chore.",
+    "question": "What household task does Gloria insist Jay must do with Manny before their trip?",
+    "options": ["Install a ceiling fan", "Fix a leaky faucet", "Build a bookshelf", "Paint Manny’s room"],
+    "answer": "Install a ceiling fan",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Gloria wants Jay to teach Manny practical skills by installing the fan together."
+  },
+  {
+    "id": "mf-ep1-easy-0009",
+    "context": "BIKE SHOP — Phil frames the purchase as a test of responsibility, then lightens the moment by adding one playful 'extra rule' for Luke’s first ride.",
+    "question": "What does Phil say is the extra 'rule' for Luke after getting the new bike?",
+    "options": ["Have 'three bike-loads of fun'", "Always wear elbow pads", "Dont lose the bike", "Dont tell your mum"],
+    "answer": "Have 'three bike-loads of fun'",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Phil adds a playful rule after stressing responsibility."
+  },
+  {
+    "id": "mf-ep1-hard-0010",
+    "context": "MANNY’S ROOM — While Manny reads the manual aloud, Jay impatiently waves off safety sections, shortcutting the instructions as the install begins to wobble.",
+    "question": "Which safety section does Jay explicitly skip while Manny reads the instructions?",
+    "options": ["Electrical shock warnings", "Weight limit notice", "Balance calibration steps", "Proper ladder placement"],
+    "answer": "Electrical shock warnings",
+    "difficulty": "hard",
+    "episode": 2,
+    "description": "Manny starts 'Safety tips… to reduce risk of electrical shock—' and Jay says, 'We can skip that.'"
+  },
+  {
+    "id": "mf-ep1-medium-0011",
+    "context": "TODDLER CLASS — The teacher welcomes new families and outlines the flow of activities, kicking off with a simple icebreaker that gets everyone introduced.",
+    "question": "Which activity does the teacher say the class will start with?",
+    "options": ["The Hello Dance", "Finger painting", "Story circle", "Name game"],
+    "answer": "The Hello Dance",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "She outlines the schedule: Hello Dance, then blocks and finger painting, then Family Dance."
+  },
+{
+"id": "MF-S01E02-Q7",
+"episode": "2",
+"context": "In toddler class, the teacher introduces the ‘Hello Dance’; Cam tones it down for the Family Dance.",
+"question": "What signature move does Mitchell forbid Cameron from doing during the dance?",
+"options": [
+"Slapping his own butt",
+"Jazz hands",
+"High kicks",
+"Splits"
+],
+"answer": "Slapping his own butt",
+"difficulty": "easy",
+"description": "Mitchell warns, “No slapping your own butt,” as Cam vows to “dance like a straight guy.”"
+},
+  {
+    "id": "mf-ep1-medium-0012",
+    "context": "SIDEWALK — Phil sees Luke’s bike left unattended and hatches a plan.",
+    "question": "Why does Phil take Luke´s bike?",
+    "options": ["To return it to Luke", "To return it to the shop", "To let him think it was stolen"],
+    "answer": "To let him think it was stolen",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "In confessional, he says a dad’s job is sometimes to be the 'tough guy' and teach a lesson."
+  },
+  {
+    "id": "mf-ep1-medium-0014",
+    "context": "PALMS CYCLE — The lesson backfires; Phil misplaces the bikes and needs another.",
+    "question": "What add-on does the shop assistant successfully upsell Phil after teasing him?",
+    "options": ["Insurance", "A U-lock", "A helmet"],
+    "answer": "Insurance",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "After a 'for suckers' callback, Phil sheepishly agrees to take insurance."
+  },
+  {
+    "id": "mf-ep1-hard-0013",
+    "context": "SIDEWALK/NEIGHBOR’S HOUSE — Desiree is locked out and points to an open but unreachable window; Phil agrees to climb in and let her back inside.",
+    "question": "Where does Phil end up entering to help Desiree get back into her home?",
+    "options": ["Through a bedroom window", "Through the garage", "Via the back door", "Through a basement hatch"],
+    "answer": "Through a bedroom window",
+    "difficulty": "hard",
+    "episode": 2,
+    "description": "She says a window is open but out of reach, and Phil climbs in."
+  },
+  {
+    "id": "mf-ep1-hard-0015",
+    "context": "PRITCHETT HOME — The install goes sideways as Gloria pops in with drinks.",
+    "question": "According to Manny, how many times did Jay shock himself during the fan install?",
+    "options": ["Twice", "Once", "Three times", "Not at all"],
+    "answer": "Twice",
+    "difficulty": "hard",
+    "episode": 2,
+    "description": "Manny bluntly reports, 'Jay shocked himself twice,' despite Jay’s protests."
+  },
+{
+  "id": "mf-ep1-medium-0015b",
+  "context": "PRITCHETT HOME — During the wobbly ceiling-fan install, Gloria beams at their 'private jokes' and likens Manny and Jay to a famous Colombian slapstick duo.",
+  "question": "Which Colombian comedy duo does Gloria compare Manny and Jay to?",
+  "options": ["Salazar and El Oso", "El Chavo and del Ocho", "Betty and la Fea", "Sábados and Felices"],
+  "answer": "Salazar and El Oso",
+  "difficulty": "medium",
+  "episode": 2,
+  "description": "Gloria says they’re 'a regular Salazar and El Oso,' referencing a Colombian comedy where El Oso keeps whacking Salazar with a 'lada.'"
+},
+  {
+    "id": "mf-ep1-easy-0016",
+    "context": "DUNPHY HOME — Phil confronts Luke about the 'missing' bike.",
+    "question": "What does Luke confess happened to his new bike?",
+    "options": ["Scratched it in the driveway", "Forgot to lock it at the store", "Bent the front wheel", "Flattened the rear tire"],
+    "answer": "Scratched it in the driveway",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Luke thinks Phil is upset about the scratch, not the 'stolen' bike."
+  },
+  {
+    "id": "mf-ep1-medium-0017",
+    "context": "DRIVEWAY — Claire presses Phil on the 'stolen bike' story.",
+    "question": "Where does Claire say Phil claimed the bike was when it got stolen?",
+    "options": ["At a gas station", "At the grocery store", "Outside the bike shop", "At the park"],
+    "answer": "At a gas station",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Phil improvises a tale about going inside for a soda at the gas station."
+  },
+{
+"id": "MF-S01E02-Q13",
+"episode": "2",
+"context": "In toddler class, Cam gushes about a particular actress who could play Batman.",
+"question": "Which actress does Cameron passionately defend as ‘perfection’?",
+"options": [
+"Meryl Streep",
+"Julia Roberts",
+"Cate Blanchett",
+"Nicole Kidman"
+],
+"answer": "Meryl Streep",
+"difficulty": "easy",
+"description": "Cam gushes, “Meryl Streep could play Batman and be the right choice. She’s perfection.”"
+},
+  {
+    "id": "mf-ep1-expert-0019",
+    "context": "TODDLER CLASS — Mitchell frets about milestones and takes drastic measures.",
+    "question": "What specific thing does Mitchell do to manufacture a 'milestone' for Lily during class?",
+    "options": ["He steals another baby’s stacked blocks", "He helps LIly stack her blocks", "He swaps Lily’s name tag with another child’s"],
+    "answer": "He steals another baby’s stacked blocks",
+    "difficulty": "expert",
+    "episode": 2,
+    "description": "Mitchell moves the other child’s stack beside Lily to claim the moment.They have to leave abruptly as its revealed there is a camera watching"
+  },
+{
+  "id": "mf-ep1-medium-0018b",
+  "context": "TODDLER CLASS — Just as Mitchell, frazzled, tries to slip out, two other gay dads sweep in late and instantly change the room’s energy.",
+  "question": "What are the names of the two gay men who arrive as Mitchell and Cameron are leaving?",
+  "options": ["Anton and Scott", "Aaron and Seth", "Anthony and Sean", "Aiden and Stuart"],
+  "answer": "Anton and Scott",
+  "difficulty": "medium",
+  "episode": 2,
+  "description": "The teacher greets them with, “Look who’s here! Anton and Scott!” which also prompts Cam’s 'I would’ve killed with this crowd' reaction."
+},
+{
+  "id": "mf-ep1-medium-0018c",
+  "context": "TODDLER CLASS — As the Parents’ Dance begins, Mitchell relents on toning things down and urges Cameron to bring out his signature move.",
+  "question": "Which dance move does Mitchell encourage Cameron to do during the Parents’ Dance?",
+  "options": ["The horsey move", "The moonwalk", "The robot", "A salsa twirl"],
+  "answer": "The horsey move",
+  "difficulty": "medium",
+  "episode": 2,
+  "description": "Mitchell tells Cam, “Make that horsey move. Go ahead,” prompting Cam to trot and then yelp that he hurt himself."
+},
+  {
+    "id": "mf-ep1-medium-0020",
+    "context": "PRITCHETT HOME — A call from Javier upends Manny’s plans.",
+    "question": "What substitute plan does Jay present when Manny’s dad bails on Disneyland?",
+    "options": ["A limo ride to Disneyland", "A beach day", "A camping trip in the backyard"],
+    "answer": "A limo ride to Disneyland",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "A limo pulls up as Jay spins a kinder story about why Javier couldn’t come."
+  },
+  {
+    "id": "mf-ep1-truefalse-0021",
+    "context": "MONTAGE/VOICEOVER — Reflections on fatherhood close the day’s events.",
+    "question": "True or False: Jay concludes that 'ninety percent of being a dad is just showing up.'",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "The closing voiceover ties the episode’s dad moments together with that line."
+  },
+  {
+    "id": "mf-ep1-hard-0022",
+    "context": "SIDEWALK — Phil tries to undo his 'lesson' and gets spotted.",
+    "question": "What happens when Phil puts the random kid’s bike back where he took it?",
+    "options": ["The kid sees him and chases him", "A police officer stops him", "Claire catches him in the act", "The kids father catches him in the act"],
+    "answer": "The kid sees him and chases him",
+    "difficulty": "hard",
+    "episode": 2,
+    "description": "The kid yells, 'Hey! That’s my bike!' and runs after Phil."
+  },
+{
+  "id": "mf-ep1-whoquote-0023",
+  "context": "TAG/COMMENTARY — After toddler class, the end of the episode spirals into emotions as Cameron recalls a heartbreaking film scenario and being a parent.",
+  "question": "Which Meryl Streep movie is Cameron watching while crying at the end of the show?",
+  "options": ["Sophie’s Choice", "Mamma Mia", "The Devil Wears Prada", "Kramer vs. Kramer"],
+  "answer": "Sophie’s Choice",
+  "difficulty": "medium",
+  "episode": 2,
+  "description": "Cameron breaks down while talking about Meryl Streep in 'Sophie’s Choice and choosing between Lily and Mitchell.'"
+},
+{
+    "id": "mf-s1e1-medium-0001",
+    "context": "**EPISODE 3**: Dunphy house — front door: a teen boy waits for Haley while her parents move around the entryway.",
+    "question": "How does Phil greet Dylan when he first comes in?",
+    "options": ["With a formal handshake", "By ignoring him and watching TV", "With playful nicknames and a goofy rhyme", "With a awkward hug"],
+    "answer": "With playful nicknames and a goofy rhyme",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Phil riffs, calling him “D-money,” “Dylan the villain,” and “‘D’ to the ‘Y’ to the—,” leaning into a silly, friendly bit as Dylan arrives."
+  },
+  {
+    "id": "mf-s1e1-medium-0002",
+    "context": "Dunphy living room — TV on: Phil tries to bond over a game while Dylan waits on a text from Haley.",
+    "question": "What sport is on TV when Phil urges Dylan to sit and watch?",
+    "options": ["Basketball", "Baseball", "American football", "Soccer"],
+    "answer": "Baseball",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Dylan says he’s “not really a baseball guy,” and Phil starts explaining the situation with the runner on second."
+  },
+  {
+    "id": "mf-s1e1-medium-0003",
+    "context": "Dunphy living room — small talk: Phil discusses base running while trying to make conversation.",
+    "question": "What does Phil predict the runner will try to do ?",
+    "options": ["Bunt to advance", "Steal third", "Attempt a squeeze play", "Tag up on a fly ball"],
+    "answer": "Steal third",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Phil says the guy has been on second base forever and is “pretty sure he’s gonna try and steal third,” which Phil calls a terrible idea."
+  },
+  {
+    "id": "mf-s1e1-medium-0004",
+    "context": "Pritchett house — garage area: Jay focuses on a task while Manny lingers nearby.",
+    "question": "What activity is Jay absorbed in when Manny wants attention?",
+    "options": ["Restoring a motorcycle", "Building a ship in a bottle", "Flying model airplanes", "Polishing golf clubs"],
+    "answer": "Flying model airplanes",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Jay distinguishes his planes as “models” and mentions principles like airfoil, drag, lift, and thrust while working on a wing."
+  },
+  {
+    "id": "mf-s1e1-medium-0005",
+    "context": "Pritchett kitchen — family chatter: Gloria recalls Manny’s father’s daring pastimes.",
+    "question": "Which extreme claim does Gloria make about Manny’s father?",
+    "options": ["He free-climbed El Capitan", "He boxed with an alligator", "He swam across the Amazon", "He wrestled a bear in Alaska"],
+    "answer": "He boxed with an alligator",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Gloria lists wild hobbies and says he “even boxedd with an alligator.” Jay corrects her to “wrestle,” joking about tiny gloves."
+  },
+  {
+    "id": "mf-s1e1-medium-0006",
+    "context": "Tucker-Pritchett car — en route: Cameron and Mitchell debate a big-box errand.",
+    "question": "Where do Cameron and Mitchell go to buy diapers?",
+    "options": ["Target", "Costco", "Pharmacy corner store", "Online delivery pickup"],
+    "answer": "Costco",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Mitchell balks at stopping, but Cameron insists, saying this is where they buy diapers now; they then marvel at the store’s variety."
+  },
+{
+  "id": "mf-s1e1-medium-0026",
+  "context": "Dunphy entryway — after the teen visitor steps outside, a couple has a quick back-and-forth about their approach to relationships.",
+  "question": "According to Phil, what’s the whole point of “keeping it real”?",
+  "options": ["So you can take it to the next level", "So you never change", "So you avoid drama", "So you impress your in-laws"],
+  "answer": "So you can take it to the next level",
+  "difficulty": "medium",
+  "episode": 1,
+  "description": "Claire jokes that he’s all about “keeping it real,” and Phil answers that the whole point of keeping it real is “so you can take it to the next level,” asking if she didn’t know that."
+},
+  {
+    "id": "mf-s1e1-medium-0007",
+    "context": "Dunphy foyer — quick exchange: Claire worries about Phil´s behaviour",
+    "question": "What does Claire accuse Phil of still doing after 16 years of marriage?",
+    "options": ["Avoiding Jay", "Walking on eggshells around Jay", "Forgetting anniversaries", "Avoiding family dinners"],
+    "answer": "Walking on eggshells around Jay",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Claire tells Phil he still tiptoes around Jay, saying he hasn’t taken their relationship to the next level with her father."
+  },
+  {
+    "id": "mf-s1e1-medium-0008",
+    "context": "Dunphy living room — doorbell moment: Manny arrives to hang out with Luke.",
+    "question": "What strategy board game does Manny bring to play with Luke?",
+    "options": ["Risk", "Empire", "Conquest", "Dominion"],
+    "answer": "Empire",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Gloria says Manny brought his favorite game called “Empire,” a strategy game about expanding territories and taking over the world."
+  },
+  {
+    "id": "mf-s1e1-medium-0009",
+    "context": "Dunphy hallway — wardrobe clash: Claire pushes for a certain outfit for an upcoming event.",
+    "question": "What clothing item does Claire insist Alex wear to the wedding?",
+    "options": ["A blazer", "A skirt", "A dress", "Dress pants"],
+    "answer": "A dress",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Claire says it’s nonnegotiable and even suggests borrowing a dress of Haley’s, which Alex rejects."
+  },
+  {
+    "id": "mf-s1e1-medium-0010",
+    "context": "Cutaway interview — Phil reflects on Jay: mock-wildlife metaphor sets the tone.",
+    "question": "How does Phil characterize his dynamic with Jay in a mock nature analogy?",
+    "options": ["Two wolves sharing a territory", "A lion and a hyena", "Silverback vs Gorilla", "Eagle and fox over a nest"],
+    "answer": "Silverback vs Gorilla",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Phil says Jay is the “old silverback,” while Phil is the younger gorilla; “the ape ladies come running,” and the tension is natural."
+  },
+{
+  "id": "mf-s1e1-medium-0028",
+  "context": "Cutaway interview — Phil uses a mock wildlife analogy to explain his tense dynamic with Jay.",
+  "question": "In Phil’s ‘silverback and younger gorilla’ analogy, who does he say is the real enemy?",
+  "options": ["Poachers", "Other gorillas", "Zookeepers", "Hyenas"],
+  "answer": "Poachers",
+  "difficulty": "medium",
+  "episode": 1,
+  "description": "Phil says, “I’m not the enemy. The enemy is poachers,” while comparing Jay to an old silverback and himself to a younger gorilla."
+},
+  {
+    "id": "mf-s1e1-medium-0011",
+    "context": "Pritchett driveway — tinkering: Jay gives Phil a task while adjusting the plane.",
+    "question": "What does Jay ask Phil to hold during the plane prep?",
+    "options": ["The transmitter", "A propeller", "A battery pack", "A wing"],
+    "answer": "A wing",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Jay seats Phil nearby and tells him to hold the wing “like this” while Jay makes adjustments."
+  },
+{
+  "id": "mf-s1e1-medium-0025",
+  "context": "Costco aisles — Cameron and Mitchell reminisce about their early days together while picking up supplies.",
+  "question": "Cam says he’s a “hick from the farm” in which state?",
+  "options": ["Missouri", "Iowa", "Nebraska", "Kansas"],
+  "answer": "Missouri",
+  "difficulty": "medium",
+  "episode": 1,
+  "description": "Cameron says Mitchell first judged him because he was a “hick from the farm in Missouri,” contrasting with Mitchell as a “big city mouse.”"
+},
+{
+  "id": "mf-s1e1-medium-0029",
+  "context": "Big-box warehouse aisle — while loading up on supplies, the couple reminisces about their early days together.",
+  "question": "Where did Cam and Mitchell first meet?",
+  "options": ["Pepper's legendary game night", "A charity fundraiser", "Longinus birthday dinner", "A piano recital"],
+  "answer": "Pepper's legendary game night",
+  "difficulty": "medium",
+  "episode": 1,
+  "description": "They say they “met at one of Pepper’s legendary game nights,” recalling Mitchell kept rolling his eyes."
+},
+  {
+    "id": "mf-s1e1-medium-0012",
+    "context": "Costco aisle — nostalgia and origins: Cameron and Mitchell recall their early days.",
+    "question": "Which party game do Cam and Mitch reminisce about from when they first met?",
+    "options": ["Pictionary", "Charades", "Taboo", "Catch Phrase"],
+    "answer": "Charades",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "They recall Pepper’s game night; Cam guessed his clue instantly when Mitchell only mimed a gesture."
+  },
+{
+  "id": "mf-s1e1-medium-0030",
+  "context": "Warehouse store aisle — while shopping, the couple recalls meeting at a lively game night and a memorable charades round.",
+  "question": "At Pepper’s game night, what movie does Cam correctly guess during the charades round?",
+  "options": ["Casablanca", "Gone with the Wind", "Titanic", "Citizen Kane"],
+  "answer": "Casablanca",
+  "difficulty": "medium",
+  "episode": 1,
+  "description": "They reminisce about charades where Mitchell could only mime a gesture, and Cam, without missing a beat, says “Casablanca,” nailing the answer."
+},
+  {
+    "id": "mf-s1e1-medium-0014",
+    "context": "Costco — scaling up: practicality meets overbuying humor.",
+    "question": "What bulk-buying idea does Cameron float that Mitchell resists?",
+    "options": ["A freezer for breast milk", "A wine shed", "A dedicated diaper shed", "A second shopping cart only for wipes"],
+    "answer": "A dedicated diaper shed",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Seeing cheap diapers, Cam proposes getting enough for a year or two and jokes they sell sheds; Mitchell balks at being “those guys.”"
+  },
+  {
+    "id": "mf-s1e1-medium-0031",
+    "context": "Warehouse store aisle — the couple is distracted by a device while they were supposed to be grabbing essentials.",
+    "question": "What specific product in the store makes Mitchell light up as something he always wanted to buy?",
+    "options": ["A paper shredder", "An espresso machine", "A vacuum sealer", "A cordless drill"],
+    "answer": "A paper shredder",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Mitchell spots it and goes, “The paper shredder I wanted, huh?” clearly thrilled to find the exact model on the shelf."
+  },
+  {
+    "id": "mf-s1e1-medium-0032",
+    "context": "Same warehouse aisle — examining the device up close, he calls out the key feature set.",
+    "question": "When Mitchell inspects the shredder, which shred styles does he rattle off?",
+    "options": ["Confetti and crosscut", "Strip-cut and micro-cut", "Diamond-cut and particle-cut", "Ribbon-cut and micro-shred"],
+    "answer": "Confetti and crosscut",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Reading the box, he says, “Confetti and crosscut — yep,” confirming the shred modes on the model he wanted."
+  },
+  {
+    "id": "mf-s1e1-medium-0015",
+    "context": "Pritchett kitchen — cookies in the oven: Gloria and Alex talk like girlfriends.",
+    "question": "What candid personal question does Alex ask Gloria during their talk?",
+    "options": ["If she ever skipped school", "How many men she has slept with", "Whether she dyes her hair", "If she regrets moving"],
+    "answer": "How many men she has slept with",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Gloria invites any question; Alex bluntly asks, “How many men have you slept with?” Gloria answers.”"
+  },
+{
+  "id": "mf-s1e1-medium-0033",
+  "context": "Pritchett kitchen — cookies in the oven as Gloria encourages Alex to ask her anything.",
+  "question": "How many men does Gloria say she has slept with?",
+  "options": ["6", "7", "8", "9"],
+  "answer": "8",
+  "difficulty": "medium",
+  "episode": 1,
+  "description": "When Alex bluntly asks, “How many men have you slept with?”, Gloria answers, “Eight. Next.”"
+},
+{
+  "id": "mf-s1e1-medium-0034",
+  "context": "Pritchett kitchen — during a heart-to-heart, a remark about maturity leads to a quick correction.",
+  "question": "In that moment, how old does Manny say he is to Claire?",
+  "options": ["10", "10 and three-quarters", "11", "11 and three-quarters"],
+  "answer": "10 and three-quarters",
+  "difficulty": "medium",
+  "episode": 1,
+  "description": "Gloria says, “Sometimes it’s hard to remember you’re only 10 years old,” and the reply is, “And three-quarters.”"
+},
+  {
+    "id": "mf-s1e1-medium-0016",
+    "context": "Field — preflight excitement: Jay explains a trick from when Claire and Mitch were kids.",
+    "question": "What maneuver does Jay set up that leads to the accident?",
+    "options": ["Cuban eight", "Hammerhead", "Threading the needle", "Immelmann turn"],
+    "answer": "Threading the needle",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Jay sends Phil far across the field with a hoop to fly the plane through; moments later, the plane smacks Phil in the face."
+  },
+  {
+    "id": "mf-s1e1-medium-0017",
+    "context": "Field — aftermath: Phil reels from the hit while Jay diagnoses damage.",
+    "question": "What does Jay first assess as damaged after the collision?",
+    "options": ["Tail fin and rudder", "Wing and propeller", "Receiver and battery", "Landing gear and struts"],
+    "answer": "Wing and propeller",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Jay says, “Well, the wing is cracked, the propeller’s bent, but I can—,” before Claire redirects him back to Phil’s condition."
+  },
+{
+  "id": "mf-s1e1-medium-0027",
+  "context": "Dunphy living room — after a mishap, the family revisits an old grievance involving Jay and Phil.",
+  "question": "What does Phil say Jay once did to him?",
+  "options": ["Ran over his foot with his car", "Knocked him off a ladder", "Hit him with a golf ball", "Burned him at a barbecue"],
+  "answer": "Ran over his foot with his car",
+  "difficulty": "medium",
+  "episode": 1,
+  "description": "During the argument, they recall Jay “ran over his foot,” with Claire adding there were “tire marks on the lawn,” while Jay says it was an accident and he had just quit smoking."
+},
+{
+  "id": "mf-s1e1-medium-0036",
+  "context": "Warehouse store aisle — while shopping, the couple reminisces about what Cameron first learned about Mitchell.",
+  "question": "Which of the following did Cam NOT say he learned about Mitchell when they first met?",
+  "options": ["That he loves art", "That he plays the piano", "That he speaks French", "That he loves old movies"],
+  "answer": "That he loves old movies",
+  "difficulty": "medium",
+  "episode": 1,
+  "description": "Cameron recalls discovering that Mitchell “loves art,” “plays the piano,” and “speaks French.” There’s no mention of him loving old movies."
+},
+  {
+    "id": "mf-s1e1-medium-0018",
+    "context": "Dunphy living room — tension peaks: Claire confronts her father.",
+    "question": "What does Claire say Jay has never done in 16 years regarding Phil?",
+    "options": ["Invited him to a ball game", "Given him a birthday present", "Told him he likes him", "Apologized for past slights"],
+    "answer": "Told him he likes him",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Claire presses Jay: “In the 16 years that we’ve been married, have you one time told him that you liked him?”"
+  },
+{
+  "id": "mf-s1e1-medium-0037",
+  "context": "Dunphy living room — during a reconciliation, one character finally states specific reasons he likes another.",
+  "question": "Which of the following is NOT one of the reasons Jay gives for liking Phil?",
+  "options": ["\"You're a nice guy.\"", "\"You try real hard.\"", "\"You're a good dad.\"", "\"You're funny.\""],
+  "answer": "\"You're funny.\"",
+  "difficulty": "medium",
+  "episode": 1,
+  "description": "Pressed to elaborate, Jay tells Phil he’s a “nice guy,” that he “tries real hard,” and that he’s a “good dad.” He never calls Phil “funny.”"
+},
+  {
+    "id": "mf-s1e1-medium-0023",
+    "context": "Pritchett home — quiet coda: Gloria shares a secret about early motherhood.",
+    "question": "What does Gloria admit doing with Manny during his first year?",
+    "options": ["Teaching him French", "Dressing him like a girl", "Entering him in baby pageants", "Piercing his ears"],
+    "answer": "Dressing him like a girl",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Gloria says she always wanted a daughter and “made up Manny like a girl,” later telling him it was his twin sister who died."
+  },
   {
     "id": "mf-s1e4-medium-0031",
     "context": "**EPISODE 4**: Pritchett home, early scene — the couple crosses paths in the hallway as the day starts, trading quick lines while getting ready in separate rooms.",
@@ -264,6 +1213,1188 @@
     "difficulty": "medium",
     "episode": 4,
     "description": "Dylan actually sings lines like “The stars are falling from the sky,” “The moon is shining on your face,” and the refrain “I just want to do you.” The ‘sunrise’ line is never sung."
+  },
+  {
+    "id": "mf-s1e5-medium-0001",
+    "context": "**EPISODE 5**: Morning at the Pritchett house — coffee chatter turns into code about weekend plans as Jay floats a “girls hang out”",
+    "question": "When Jay hints Gloria can see the girls later, what is he really angling to do?",
+    "options": ["Watch a football game", "Work on his model planes", "Take a nap on the couch", "Go golfing with friends"],
+    "answer": "Watch a football game",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "He frames it as, “If you want to get together with the girls later, I could just, you know, watch the football game,” which Gloria translates: “That means he wants to watch a football game.”"
+  },
+  {
+    "id": "mf-s1e5-medium-0031",
+    "context": "Breakfast at the Pritchetts — playful sparring about coffee and culture as the morning routine hums and Jay eyes weekend plans.",
+    "question": "Where does Gloria say she’s from?",
+    "options": ["Colombia", "Peru", "Venezuela", "Ecuador"],
+    "answer": "Colombia",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "When Jay questions her coffee habit, Gloria answers, “It’s my culture. I’m Colombian,” before he jokes about her choice of food"
+  },
+  {
+    "id": "mf-s1e5-medium-0002",
+    "context": "Same kitchen beat — playful sparring about culture and breakfast foods as Gloria sips coffee and Jay notices the toaster fare on the counter.",
+    "question": "What food does Jay tease as not very ‘Colombian’ while Gloria drinks coffee?",
+    "options": ["French toaster sticks", "Bagels and lox", "Belgian waffles", "Croissants"],
+    "answer": "French toaster sticks",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "When Gloria says, “It’s my culture. I’m Colombian,” Jay shoots back, “What part of Colombia are those French toaster sticks from?”"
+  },
+  {
+    "id": "mf-s1e5-medium-0003",
+    "context": "Scheduling clash — Gloria reminds Jay the family barbecue is today while he has a college game circled.",
+    "question": "Which game is Jay focused on during the day of the family barbecue?",
+    "options": ["Ohio State game", "Notre Dame game", "USC game", "Alabama game"],
+    "answer": "Ohio State game",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Jay says, “It’s the Ohio State game,” trying to preserve focused viewing even with everyone coming over."
+  },
+  {
+    "id": "mf-s1e5-medium-0004",
+    "context": "Dunphy kitchen rush — Claire juggles kid asks and calls out flimsy excuses as teenagers angle for cash and clothes.",
+    "question": "What does Haley try to get from Claire under the guise of ‘lunch’ and ‘a book’?",
+    "options": ["$40 and a dress", "$20 and a jacket", "$50 and shoes", "$30 and makeup"],
+    "answer": "$40 and a dress",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Haley: “Can I have $40 for lunch? … I want a dress.” Claire clocks the lie: “Do you have any idea what a bad liar you are?”"
+  },
+  {
+    "id": "mf-s1e5-medium-0005",
+    "context": "Luke scramble — wardrobe chaos and parental commentary as the younger kid shuffles in half-assembled.",
+    "question": "What’s wrong with Luke’s outfit as they try to leave?",
+    "options": ["It’s inside out and backwards", "He’s wearing mismatched shoes", "His shirt is on as pants", "He’s forgotten his belt and socks"],
+    "answer": "It’s inside out and backwards",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Phil notes, “Inside out and backwards,” then adds, “At least it isn’t zipped into his— Oh. There it is.”"
+  },
+  {
+    "id": "mf-s1e5-medium-0032",
+    "context": "Pre-game at the Tucker-Pritchetts — Cameron lists eclectic interests and past accomplishments while defending why he doesn’t love watching football.",
+    "question": "Which of the following is NOT something Cam mentions about himself?",
+    "options": [
+      "I collect antique fountain pens.",
+      "I’m quite adept at Japanese flower arrangement—ikebana.",
+      "I was a starting offensive lineman at the University of Illinois.",
+      "I restore classic cars on weekends."
+    ],
+    "answer": "I restore classic cars on weekends.",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Cam actually says he collects antique fountain pens, practices ikebana, and was a starting offensive lineman at Illinois; restoring classic cars never comes up."
+  },
+  {
+    "id": "mf-s1e5-medium-0007",
+    "context": "Tucker-Pritchett bedroom — Cameron and Mitchell spar about shared interests as football season collides with personal tastes.",
+    "question": "Which activity does Cameron cite as something he pretended to enjoy for Mitchell?",
+    "options": ["Home pickle-making", "Bird watching", "Marathon training", "Stamp collecting"],
+    "answer": "Home pickle-making",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Cam: “Do you think I really loved home pickle-making?” Mitchell: “Yeah, ’cause you did.” Cam: “For a week, until we became the weird guys who gave everybody pickles.”"
+  },
+  {
+    "id": "mf-s1e5-medium-0037",
+    "context": "Game-prep montage — Mitchell studies up to meet Jay halfway, dropping player names as he warms to the afternoon’s theme.",
+    "question": "Which player does Mitchell say he’s worried about while trying to learn football?",
+    "options": ["C.J. Hightower", "Billings", "Tom Brady", "Tim Tebow"],
+    "answer": "C.J. Hightower",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Mitchell tells Cam he’s concerned about “C.J. Hightower with the bad ankle,” wondering how he’ll run his corner routes."
+  },
+  {
+    "id": "mf-s1e5-medium-0008",
+    "context": "School call — the day derails as Claire reaches Phil and they coordinate a pickup after hearing about an incident.",
+    "question": "What does Claire tell Phil the school reported about Luke?",
+    "options": ["He got in a fight", "He failed a test", "He was caught cheating", "He skipped class"],
+    "answer": "He got in a fight",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "On the phone she says, “The school just called. Luke got in a fight… they want us to come down there.”"
+  },
+  {
+    "id": "mf-s1e5-medium-0033",
+    "context": "Phone call and dash to school — the parents brace for a confrontation as they speculate about who Luke tangled with.",
+    "question": "Which kid does Phil initially think Luke fought with?",
+    "options": ["Durkas", "Manny", "Trevor", "Robbie"],
+    "answer": "Durkas",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Phil grumbles, “I bet it was that Durkas kid… kid’s a menace. He made fun of my hair once.I slept on it funny. Like that never happened to him?"
+  },
+  {
+    "id": "mf-s1e5-medium-0009",
+    "context": "Principal’s office — families converge; roles get muddled as everyone tries to explain who’s who.",
+    "question": "When the dust settles, who was Luke actually fighting with?",
+    "options": ["Manny", "Durkas", "A sixth grader", "His classmate"],
+    "answer": "Manny",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Despite Phil’s focus on the “Durkas kid,” the principal reveals it was Luke and Manny; Phil sighs Could've been worse. I was not ready to face Durkas today."
+  },
+  {
+    "id": "mf-s1e5-medium-0034",
+    "context": "In the principal’s office — family ties get sorted out as everyone explains who’s who.",
+    "question": "What is the name of Manny’s father?",
+    "options": ["Javier", "Juan", "Ricardo", "Marco"],
+    "answer": "Javier",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "When lineage gets confusing, Jay clarifies Manny’s dad is “Javier. Crazy guy. That’s where he gets his fire.”"
+  },
+  {
+    "id": "mf-s1e5-medium-0035",
+    "context": "School debrief — the adults try to pinpoint what sparked the playground scuffle before the boys are sent back to class.",
+    "question": "What specific jab does Luke say triggered the fight with Manny?",
+    "options": [
+      "Manny kept calling him his nephew",
+      "Manny mocked his haircut",
+      "They argued over their families",
+      "Manny mocked his clothes"
+    ],
+    "answer": "Manny kept calling him his nephew",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Luke objects, “He keeps calling me his nephew,” and Manny replies, “You are my nephew,” as the principal tries to calm them."
+  },
+  {
+    "id": "mf-s1e5-medium-0036",
+    "context": "Wrap-up at the school — paperwork in hand as the principal returns the boys to class.",
+    "question": "What is the teacher’s name on the note the principal gives them?",
+    "options": ["Miss Passwater", "Mrs. Patterson", "Mr. Caldwell", "Ms. Redding"],
+    "answer": "Miss Passwater",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "The principal ends the meeting with, “Here’s your note for Miss Passwater,” signaling the boys can head back. Phil chuckles at the name"
+  },
+  {
+    "id": "mf-s1e5-medium-0013",
+    "context": "Pre-barbecue strategy — the family debates whether to cancel or lean in after the boys’ scuffle.",
+    "question": "What does Jay argue will be good for everyone despite the fight?",
+    "options": ["Keeping the barbecue as planned", "Sending the boys to separate rooms", "Skipping the game entirely", "Calling both sets of parents later"],
+    "answer": "Keeping the barbecue as planned",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Jay says it’ll be good for Luke and Manny to spend time; Phil adds it might help Gloria and Claire, too."
+  },
+  {
+    "id": "mf-s1e5-medium-0019",
+    "context": "Kids’ reveal — laughter returns as Manny and Luke casually relive the insults from earlier.",
+    "question": "Which misheard phrase from Manny triggers the next blowup?",
+    "options": ["Coal digger", "Cold digger", "Goal digger", "Cole digger"],
+    "answer": "Coal digger",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Manny says he was told Claire called Gloria a “coal digger.” Claire clarifies, “It’s ‘gold digger,’” sparking fresh tension."
+  },
+  {
+    "id": "mf-s1e5-medium-0020",
+    "context": "Upstairs pep talk — Phil visits Gloria privately to lower defenses and advocate for reconciliation.",
+    "question": "What does Phil point to as evidence that it’s not about ‘things’ for Gloria?",
+    "options": ["She’d be fine without the fancy underwear", "She often turns down gifts", "She prefers homemade meals", "She hates designer labels"],
+    "answer": "She’d be fine without the fancy underwear",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "After Gloria shows off earrings, bracelet, dress—“all the colors”—Phil says, “We all know you’d be fine without underwear,” underscoring the point."
+  },
+  {
+    "id": "mf-s1e5-medium-0021",
+    "context": "Locker-room vibes — a curious Dad asks two gay sons-in-law for an uncomfortable kind of feedback.",
+    "question": "What does Jay ask Mitchell and Cameron that makes them squirm?",
+    "options": ["If they’d ‘check him out’ in a bar", "If his shirt is stylish", "If he should dye his hair", "If he needs a new look"],
+    "answer": "If they’d ‘check him out’ in a bar",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Jay wonders if they’d look twice at him with the Righteous Brothers on; Cam says Jay is “smokin’ hot… totally my type.”"
+  },
+  {
+    "id": "mf-s1e5-medium-0022",
+    "context": "Confrontation upstairs — Gloria, surrounded by scattered wardrobe, demands something performative to even the ledger.",
+    "question": "What act does Gloria demand before she’ll forgive Claire?",
+    "options": ["Jump in the pool with her clothes on", "Apologize in front of everyone again", "Bring a new dessert downstairs", "Turn off the TV during the game"],
+    "answer": "Jump in the pool with her clothes on",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Gloria says she was embarrassed and won’t forgive easily; to be ‘even,’ she insists, “Go jump in the pool.”"
+  },
+  {
+    "id": "mf-s1e5-medium-0041b",
+    "context": "Backyard climax — after Claire proves she’s sorry by jumping in fully clothed, the family crowds the pool edge and the next shove triggers the full splash chain reaction.",
+    "question": "After Claire jumps in the water, who pushes Gloria into the pool?",
+    "options": ["Jay", "Cameron", "Phil", "Mitchell"],
+    "answer": "Jay",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "With everyone gathered around, Jay gives Gloria the push that sends her into the pool, kicking off the wider dunk-fest."
+  },
+  {
+    "id": "mf-s1e5-medium-0042b",
+    "context": "Same scene — laughter and shouting rise as more people get soaked; a quick double-team sends another family member over the edge.",
+    "question": "Who pushes Jay into the pool during the chaos?",
+    "options": ["Manny and Luke together", "Luke alone", "Phil alone", "Cameron and Mitchell together"],
+    "answer": "Manny and Luke together",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "The boys team up and shove Jay into the water amid the commotion, adding to the pile-in."
+  },
+  {
+    "id": "mf-s1e5-medium-0043b",
+    "context": "Post-splash roll call — most of the family ends up soaked, but one hangs back away from the edge safely out of splash range.",
+    "question": "Who is the only person who doesn’t end up in the water?",
+    "options": ["Haley", "Manny", "Alex", "Mitchell"],
+    "answer": "Haley",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Haley stays dry while the rest get dunked or jump in, including Gloria, Jay, Claire, and Cameron."
+  },
+{
+  "id": "mf-s1e5-medium-0040",
+  "context": "Late in the day, football chat drifts from poolside back to positions and technique, with each relative bragging (or complaining) about what they used to play.",
+  "question": "Which positions do Jay and Cameron respectively say they played?",
+  "options": [
+    "Cam was a center; Jay was a quarterback",
+    "Jay was a quarterback; Cam was a wide receiver",
+    "Jay was a linebacker; Cam was a center",
+    "Jay was a center; Cam was a defensive end"
+  ],
+  "answer": "Cam was a center; Jay was a quarterback",
+  "difficulty": "medium",
+  "episode": 5,
+  "description": "Cam grumbles, “I played center, and I always got blamed for a quarterback’s clumsy hands,” while Jay says Well, I was a quarterback, and it was probably your fault."
+},
+{
+  "id": "mf-s1e5-medium-0039",
+  "context": "Backyard and living room wind down — after the pool chaos and final plays of the game, the family disperses, leaving two relatives to wrap up the day with a focused little drill.",
+  "question": "How does the episode end, featuring Jay and Cameron?",
+  "options": ["Practicing the center snap and hand placement", "Grilling late-night steaks together", "Singing karaoke in the den", "Rewatching game highlights on slow motion"],
+  "answer": "Practicing the center snap and hand placement",
+  "difficulty": "medium",
+  "episode": 5,
+  "description": "Jay positions Cameron’s hands— Cameron says Okay, get your hands up there like you're lifting me off the ground. Be one with me Jay."
+},
+  {
+    "id": "mf-s1e6-medium-0001",
+    "context": "**EPISODE 6**: Early morning at the Dunphys — first day of school scramble; a kid begs for last-minute help on a summer assignment at the kitchen counter.",
+    "question": "What single journal entry did Luke manage to write over the summer?",
+    "options": ["“Found a stick.”", "“Went to the beach.”", "“Watched fireworks.”", "“Ate ice cream.”"],
+    "answer": "“Found a stick.”",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Luke reads, “June 21st — found a stick,” and when asked for more: “June 22nd… That’s it… It was a really cool stick.”"
+  },
+  {
+    "id": "mf-s1e6-medium-0002",
+    "context": "Mockumentary cutaway — parents one-up each other about morning routines as they describe the school-day sprint.",
+    "question": "What time does Claire insist she gets up when comparing mornings?",
+    "options": ["6:00", "5:00", "6:30", "7:00"],
+    "answer": "6:00",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "Phil says 7:00, Claire counters “I get up at 6:00,” Cam follows with “I get up at 5:00,” and Claire dryly repeats, “Seriously, I get up at 6:00.”Phil replies, Thats you? I thought we had a racoon"
+  },
+  {
+    "id": "mf-s1e6-medium-0003",
+    "context": "Pritchett house foyer — Manny debuts a bold outfit for the first day, fishing for reassurance from both adults.",
+    "question": "What garment does Manny wear to show pride in his heritage?",
+    "options": ["A traditional Colombian poncho", "A guayabera shirt", "A Colombian charro jacket", "A woven ruana scarf"],
+    "answer": "A traditional Colombian poncho",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "Gloria beams, calling it a “traditional Colombian poncho,” while Jay jokes about riding a burro to school."
+  },
+  {
+    "id": "mf-s1e6-medium-0035",
+    "context": "Manny fishes for reassurance while Jay can’t resist one more quip about the silhouette of the garment.",
+    "question": "How does Jay say the poncho makes Manny look?",
+    "options": [
+      "Like his neck is wearing a dress",
+      "Like he’s hiding a lampshade",
+      "Like a walking picnic blanket",
+      "Like a magician mid-trick"
+    ],
+    "answer": "Like his neck is wearing a dress",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Jay jokes that the poncho “made me look like my neck was wearing a dress,” a line Manny later repeats back to Gloria."
+  },
+  {
+    "id": "mf-s1e6-medium-0031",
+    "context": "Jay cracks practical jokes about when such clothing actually makes sense.",
+    "question": "According to Jay, what are the only two places someone should wear a poncho?",
+    "options": [
+      "Niagara Falls and log rides",
+      "A rainy soccer sideline and leaf-blowing day",
+      "A campsite and a fisherman’s pier",
+      "A chili cook-off and a paintball course"
+    ],
+    "answer": "Niagara Falls and log rides",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Seeing Manny’s statement outfit, Jay shrugs that a poncho belongs at “Niagara Falls and log rides,” ribbing practicality more than culture."
+  },
+  {
+    "id": "mf-s1e6-medium-0004",
+    "context": "Tucker-Pritchett living room — a photoshoot setup sprawls while a parent fusses with tiny costumes for the baby.",
+    "question": "Which pop icon does Cameron NOT explicitly mention photographing Lily as?",
+    "options": ["Prince", "Olivia Newton-John", "Madonna (early years)", "Stevie Wonder"],
+    "answer": "Prince",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Cam lists Olivia Newton-John, Madonna (the early years), Stevie Wonder—and then remembers he forgot Cher."
+  },
+  {
+    "id": "mf-s1e6-medium-0006",
+    "context": "Kitchen doorway — a teen negotiates teen optics while arranging a practical lesson pickup.",
+    "question": "Who is scheduled to pick up Haley after school?",
+    "options": ["The driving instructor", "Her debate coach", "A math tutor", "Her boss from the mall"],
+    "answer": "The driving instructor",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "Haley complains, “I don’t want kids at school thinking I’m dating a 40-year-old driving instructor who’s not even cute.”"
+  },
+  {
+    "id": "mf-s1e6-medium-0007",
+    "context": "Family car — nerves spike as a new driver navigates; a parent’s rapid-fire coaching collides with a bad turn.",
+    "question": "Where does the car unexpectedly end up during Haley’s practice drive?",
+    "options": ["In a park near kids", "On a curb outside school", "Stuck in a hedge", "Across a neighbor’s lawn"],
+    "answer": "In a park near kids",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Phil barks, “Merge, merge… This navigation system’s all messed up… Oh my God, it is a park! Away from the kids! Aim for the lake!”"
+  },
+  {
+    "id": "mf-s1e6-medium-0008",
+    "context": "Tucker-Pritchett nursery — an attempt to “loosen up” with music backfires when a clumsy twirl goes wrong.",
+    "question": "What happens while Mitchell dances with Lily?",
+    "options": ["Lily bumps her head on a doorjamb", "He trips over a toy and falls", "A picture frame shatters", "They knock over a lamp"],
+    "answer": "Lily bumps her head on a doorjamb",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "After Cam urges, “Dance with her,” a thud, then Lily cries—Mitchell winces, “Yeah, that was her head.”"
+  },
+  {
+    "id": "mf-s1e6-medium-0032",
+    "context": "Tucker-Pritchett kitchen triage — after a tiny bump, they scramble for comfort while Cam sports suspicious dessert evidence.",
+    "question": "What cold comfort item does Cam pull from the freezer for Lily?",
+    "options": [
+      "Boo-boo Bear",
+      "Owie Owl",
+      "Ouchie Bunny",
+      "Chilly Cub"
+    ],
+    "answer": "Boo-boo Bear",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "Mitchell says, “I got boo-boo bear from the freezer.” Cam asks, “Why do you have chocolate on your face?” Mitchell: “It was under a pie.” Cam: “So you ate your way to it?” Mitchell: “I made a judgment call. You weren’t there! Do you think she’s all right?”"
+  },
+  {
+    "id": "mf-s1e6-medium-0010",
+    "context": "Phone consult — a sibling is called for calm, practical advice after the mishap.",
+    "question": "Which Dunphy kid does Claire cite as head-banging precedent to reassure Mitchell?",
+    "options": ["Luke", "Alex", "Haley", "None; she gives no example"],
+    "answer": "Luke",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "Claire says, “Luke used to bang his head all the time, and he’s fine,” causing Mitchell to panic even more."
+  },
+  {
+    "id": "mf-s1e6-medium-0012",
+    "context": "Dunphy living room — a spouse interprets subtext and decides to ‘help’ fill a supposedly empty nest day.",
+    "question": "What does Phil claim about ‘listening with his mind’ on the first day of school?",
+    "options": ["Women tell you what they want by saying the opposite", "Silence means they want company", "Busywork is a cry for help", "Shopping cures empty-nest blues"],
+    "answer": "Women tell you what they want by saying the opposite",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "He insists that when Claire said to move his car, what she “really” meant was he should get a sports car."
+  },
+  {
+    "id": "mf-s1e6-medium-0034",
+    "context": "School hallway recollection — Manny explains being pulled from class in his former school.",
+    "question": "What is the name of the elementary school Manny says he attended in Colombia?",
+    "options": [
+      "Pablo Escobar Elementary School",
+      "El Chapo Primary",
+      "Gabriel García Márquez School",
+      "Cartagena Central Elementary"
+    ],
+    "answer": "Pablo Escobar Elementary School",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Manny deadpans that in Colombia he went to “Pablo Escobar Elementary School."
+  },
+  {
+    "id": "mf-s1e6-medium-0028",
+    "context": "School hallway earlier — the boy’s expectations of being summoned out of class reveal dark humor from his past.",
+    "question": "Why does Manny say being pulled from class used to scare him in Colombia?",
+    "options": [
+      "It often meant identifying a body",
+      "It meant a transfer without notice",
+      "It meant a family member was arrested",
+      "It meant someone was on the run"
+    ],
+    "answer": "It often meant identifying a body",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Gloria explains his school; Manny adds, “If you were pulled out of class, it was definitely to identify a body.”"
+  },
+  {
+    "id": "mf-s1e6-medium-0015",
+    "context": "School hallway — the adults arrive to show support before the new kid fully commits to his statement outfit.",
+    "question": "What instrument is Manny carrying to play for classmates?",
+    "options": ["A pan flute", "A recorder", "Castanets", "A charango"],
+    "answer": "A pan flute",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "He says, “I’m going to play some Colombian folk music,” proudly patting the pan flute in the poncho pocket."
+  },
+  {
+    "id": "mf-s1e6-medium-0017",
+    "context": "Pediatric exam room — a calm on-call doctor evaluates the bump while fielding awkward small talk.",
+    "question": "What is the doctor’s name who checks on Lily?",
+    "options": ["Dr. Miura", "Dr. Segal", "Dr. Patel", "Dr. Kim"],
+    "answer": "Dr. Miura",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "She introduces himself, “I’m Dr. Miura,” then listens as Cam/ Mitch veer into “ghetto-fabulous afro” and ‘pho’ pronunciation chatter."
+  },
+  {
+    "id": "mf-s1e6-medium-0018",
+    "context": "Cultural aside — while the exam proceeds, a parent tries to score points about heritage-minded parenting.",
+    "question": "From which city does the doctor casually say she’s actually from?",
+    "options": ["Denver", "Seattle", "Phoenix", "San Diego"],
+    "answer": "Denver",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "After the ‘pho’ debate, she says, “I’m from Denver. We don’t have a lot of… pho there,” deadpanning the bit."
+  },
+  {
+    "id": "mf-s1e6-medium-0029",
+    "context": "Pediatric office — reassurance lands as the physician normalizes parental stumbles.",
+    "question": "What does Dr. Miura say about babies and new parents?",
+    "options": [
+      "“Babies are designed to survive new parents.”",
+      "“First bumps make stronger kids.”",
+      "“One bonk won’t change a thing.”",
+      "“They forget injuries by nap time.”"
+    ],
+    "answer": "“Babies are designed to survive new parents.”",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "After Mitchell’s reenactment, she smiles, “Babies are designed to survive new parents. So stop worrying. You guys are doing great.”"
+  },
+  {
+    "id": "mf-s1e6-medium-0020",
+    "context": "Parking lot — a small mistake snowballs......",
+    "question": "What do Cameron and Mitchell realize they’ve done after leaving the hospital?",
+    "options": ["Locked their baby in the car with the keys inside", "Forgot Lily’s diaper bag at home", "Left Lily in the hospital elevator", "Picked the wrong baby"],
+    "answer": "Locked their baby in the car with the keys inside",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "Cam gasps, “Did we just lock our baby in the car?” Mitchell: “Did you put the keys in the bag?!”"
+  },
+  {
+    "id": "mf-s1e6-medium-0021",
+    "context": "On the phone — panic meets protocol as a dispatcher talks them down and triggers a fix.",
+    "question": "What is the name of the emergency assistant on the call?",
+    "options": ["Trina", "Marcy", "Darla", "Paige"],
+    "answer": "Trina",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "“Emergency assistance. This is Trina.” She warns not to break glass, then, “We just sent the signal… Check the door.”"
+  },
+  {
+    "id": "mf-s1e6-medium-0036",
+    "context": "Parking lot panic — with Lily locked in the car and Cam yelling, the dispatcher tries to calm them down over the phone.",
+    "question": "What does the emergency operator say upon hearing Cam scream in the background?",
+    "options": [
+      "“Sir, please tell your wife to relax.”",
+      "“Ma’am, I need you to breathe.”",
+      "“Parents, I need one voice at a time.”",
+      "“Stay on the line please.”"
+    ],
+    "answer": "“Sir, please tell your wife to relax.”",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "Trina stays steady: “Sir, please tell your wife to relax. Everything is going to be okay,” prompting Mitchell to mutter, “That’s a man.”"
+  },
+{
+  "id": "mf-s1e6-medium-0038",
+  "context": "Quiet house after drop-off — Claire reaches for her book while a certain someone decides the empty morning needs a little ‘event’ to spice things up.",
+  "question": "After the kids leave and Claire tries to read, what does Phil challenge her to?",
+  "options": [
+    "A race to the Sequoia mailbox and back",
+    "A best-of-three tennis set",
+    "A 30-minute cooking face-off",
+    "A home-repair speed challenge"
+  ],
+  "answer": "A race to the Sequoia mailbox and back",
+  "difficulty": "medium",
+  "episode": 6,
+  "description": "Needling turns competitive: he proposes a head-to-head run — “race to the mailbox on Sequoia and back” — complete with his trademark pregame bravado."
+},
+  {
+    "id": "mf-s1e6-medium-0023",
+    "context": "After school — kids breeze in; parents warm up trash-talk before a neighborhood dash.",
+    "question": "What game does Phil offer to ‘school’ Luke in after the run?",
+    "options": ["Mario Kart", "FIFA", "Madden", "Smash Bros"],
+    "answer": "Mario Kart",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "Phil: “As soon as I’m done kicking a little mom butt… How about I school you in some Mario Kart?” Luke declines to work on his journal."
+  },
+  {
+    "id": "mf-s1e6-medium-0024",
+    "context": "Curbside — the starting line is set; each parent leans into their own hype before takeoff.",
+    "question": "What phrase does Phil shout as he surges ahead at the start?",
+    "options": ["“Afterburners engaged!”", "“Feet don’t fail me now!”", "“Catch me if you can!”", "“Turbo time!”"],
+    "answer": "“Afterburners engaged!”",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Phil yelps “Boo boo boop! Afterburners engaged!” then crows, “Don’t choke on my smoke!”"
+  },
+  {
+    "id": "mf-s1e6-medium-0037",
+    "context": "Neighborhood dash — the parents’ mailbox race turns into sports-announcer bravado and a messy finish line.",
+    "question": "How does the race ultimately end between Claire and Phil?",
+    "options": [
+      "Claire eases up so Phil can ‘win’",
+      "Phil clearly wins by a wide margin",
+      "Claire wins by a wide margin",
+      "They call it a tie after a stumble"
+    ],
+    "answer": "Claire eases up so Phil can ‘win’",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Claire’s closing narration implies she lets him have the moment — “Maybe I lost the race to make him feel better… We do strange things for the people we love.”"
+  },
+  {
+    "id": "mf-s1e6-medium-0026",
+    "context": "Same block — the victory lap collapses into slapstick as terrain has the last word.",
+    "question": "What happens to Phil right after he starts celebrating the win?",
+    "options": ["Haley hits him with the car", "He drops his phone", "He cramps up and stops", "He runs into a mailbox"],
+    "answer": "Haley hits him with the car",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "A thud off-screen—Claire gasps, “Oh, geez! Was that a person?!” Phil, groaning: “I’m good! I’m good!”"
+  },
+{
+  "id": "mf-s1e6-medium-0039",
+  "context": "Late-day drive lesson — sirens appear behind the car, and a rattled teen driver spirals while the parent tries to coach her through a routine stop.",
+  "question": "Why does Haley refuse to pull over for the police?",
+  "options": [
+    "She panics over an unpaid mall parking ticket",
+    "She thinks the siren is aimed at another car",
+    "She can’t find a safe shoulder and keeps looking",
+    "She doesnt know how to"
+  ],
+  "answer": "She panics over an unpaid mall parking ticket",
+  "difficulty": "medium",
+  "episode": 6,
+  "description": "Claire pleads, “You need to pull over.” Haley: “I can’t pull over. I don’t like cops… No can do. I got priors. I’m speeding up. The parking ticket from the mall — I never paid the parking ticket! Keep moving, sweeth—”"
+},
+  {
+    "id": "mf-s1e7-medium-0001",
+    "context": "**EPISODE 7**: School gym — a youth sporting meet is underway; family members watch from the bleachers as a bout finishes and applause rises.",
+    "question": "What sport is Manny competing in at the event?",
+    "options": ["Fencing", "Wrestling", "Karate", "Taekwondo"],
+    "answer": "Fencing",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "Jay cheers as buzzers sound and blades clatter; he cheers Manny after a scoring touch."
+  },
+{
+  "id": "mf-s1e7-easy-0031",
+  "context": "School gym during the youth meet — a scoring light pops, the buzzer sounds, and the family erupts as Manny lifts his mask.",
+  "question": "Jay compares Manny to which swashbuckling hero?",
+  "options": ["Zorro", "Robin Hood", "El Cid", "Don Quixote"],
+  "answer": "Zorro",
+  "difficulty": "easy",
+  "episode": 7,
+  "description": "Right after a scoring touch, he’s dubbed “our little Zorro,” by Jay."
+},
+  {
+    "id": "mf-s1e7-easy-0033",
+    "context": "Announcer at the scoring table lists brackets and finalists as the crowd shuffles out for the break.",
+    "question": "What is Manny’s surname as announced at the meet?",
+    "options": ["Delgado", "Pritchett", "Cabello", "Ramos"],
+    "answer": "Delgado",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "Over the PA: “A nice round of applause for our winner, Manny Delgado.”"
+  },
+  {
+    "id": "mf-s1e7-medium-0003",
+    "context": "Between bouts — Alex and Haley snipe at each other while facts about the sport drop into the conversation.",
+    "question": "What nerdy fact does Alex mention about the sport’s history?",
+    "options": [
+      "That fencing dates back to the 12th century",
+      "That fencing dates back to the 15th century",
+      "That sabre target includes the arms",
+      "That electric scoring was invented in 1936"
+    ],
+    "answer": "That fencing dates back to the 12th century",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Alex says, “Did you know fencing goes back to the 12th century?” Haley fires back that knowing when it began is nerdier."
+  },
+  {
+    "id": "mf-s1e7-medium-0004",
+    "context": "A few seats over — Cam films like a proud auteur while Mitch warns him about overdoing it.",
+    "question": "What over-the-top item did Cam once bring to a kid’s birthday shoot?",
+    "options": ["A wind machine", "A spotlight rig", "A smoke machine", "A drone"],
+    "answer": "A wind machine",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "Mitchell reminds him, “Your nephew’s first birthday… you brought a wind machine.” Cam protests, “To be fair, my vision was—”"
+  },
+  {
+    "id": "mf-s1e7-medium-0005",
+    "context": "Courtside — a phone dies mid-celebration and a sibling offers dubious tech advice.",
+    "question": "What bogus fix does Alex suggest for Haley’s dead phone?",
+    "options": [
+      "Rub it on your hair to recharge with static",
+      "Put it in the freezer for 10 minutes",
+      "Rub it on your pants leg for 20 minutes",
+      "Hold power and volume for 60 seconds"
+    ],
+    "answer": "Rub it on your hair to recharge with static",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Alex claims the battery “statically defracticated” and tells Haley to rub it on her hair;."
+  },
+  {
+    "id": "mf-s1e7-medium-0007",
+    "context": "Parents compare kids — praise mixes with uncomfortable honesty as they weigh specialties.",
+    "question": "What do Phil and Claire say is Haley’s standout ‘strength’ in this exchange?",
+    "options": ["Being pretty", "Running track", "Playing piano", "Street smarts"],
+    "answer": "Being pretty",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "After noting Alex excels at many things, they land on, “And Haley is… Haley is so pretty. Gorgeous.”"
+  },
+  {
+    "id": "mf-s1e7-medium-0008",
+    "context": "Announcer’s table — results posted as the crowd disperses for a break; the next bracket is revealed.",
+    "question": "Whom is Manny scheduled to face in the championship?",
+    "options": ["Caroline Markum", "Evan Soto", "Derek Lin", "Chase Monroe"],
+    "answer": "Caroline Markum",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "The PA announces, “Manny now moves on to the championship… against Caroline Markum.”"
+  },
+  {
+    "id": "mf-s1e7-medium-0006",
+    "context": "Bleacher confession — Jay reflects on childhood visits to friends’ homes filled with proof of achievement.",
+    "question": "What does Jay say his house never had when he was a kid?",
+    "options": ["A trophy", "A family piano", "A team photo", "A game room"],
+    "answer": "A trophy",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "He admits there was “never a trophy in my house. Not until this one,” gesturing toward Manny’s success."
+  },
+  {
+    "id": "mf-s1e7-medium-0009",
+    "context": "Hallway aside — the siblings clock how much this matters to their dad while an old wound stirs.",
+    "question": "What past activity between Claire and Mitchell resurfaces as a sore spot?",
+    "options": [
+      "Their figure-skating partnership",
+      "Their school choir duet",
+      "Their debate team pairing",
+      "Their junior tennis doubles"
+    ],
+    "answer": "Their figure-skating partnership",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Cam blurts their history: as kids they were competitive figure skaters;"
+  },
+  {
+    "id": "mf-s1e7-medium-0022",
+    "context": "Same scene.",
+    "question": "What team name did Mitchell and Claire use when they skated together?",
+    "options": ["Fire and Nice", "Ice and Spice", "Steel and Grace", "Spin and Win"],
+    "answer": "Fire and Nice",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "Mitchell: “I was ‘Fire,’ ’cause of the red hair; Claire was ‘Nice,’ because it was ironic and she wasn’t.”"
+  },
+  {
+    "id": "mf-s1e7-medium-0012",
+    "context": "Dunphy driveway — Phil rallies Luke with a grand plan to cultivate mastery out of thin air.",
+    "question": "How many hours does Phil quote for achieving excellence?",
+    "options": ["10,000 hours", "1,000 hours", "5,000 hours", "20,000 hours"],
+    "answer": "10,000 hours",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "Phil says, “It only takes 10,000 hours,” Luke’s mis-estimates his past season as “like, 6,000 hours,” earning Claire’s side-eye."
+  },
+  {
+    "id": "mf-s1e7-easy-0034",
+    "context": "Dunphy driveway and curb — a dad declares a new quest for excellence and starts lobbing pitches in the street.",
+    "question": "Which sport does Phil try to get Luke to pursue as his ‘thing’?",
+    "options": ["Baseball", "Basketball", "Soccer", "Tennis"],
+    "answer": "Baseball",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "Phil gears up a throwing session — “Our journey of 10,000 hours begins with a single pitch… Rest that cannon while I run this down.”"
+  },
+  {
+    "id": "mf-s1e7-medium-0015",
+    "context": "Proud-dad bit — Jay shows off a novelty shirt commemorating a prior family milestone.",
+    "question": "What kind of event did Jay once make T-shirts for?",
+    "options": [
+      "Haley’s 5K race",
+      "Luke’s science fair",
+      "Alex’s spelling bee",
+      "Claire’s marathon"
+    ],
+    "answer": "Haley’s 5K race",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "He grins about printing shirts when his granddaughter Haley ran a 5K: “It’s just fun.”"
+  },
+  {
+    "id": "mf-s1e7-medium-0016",
+    "context": "Gym corridor — the would-be champion returns with an unexpected declaration before the finals.",
+    "question": "What does Manny announce before the championship match?",
+    "options": [
+      "He’s retiring and won’t fence the final",
+      "He sprained his wrist and can’t compete",
+      "He wants to ask Caroline out",
+      "He’s nervous about the finals"
+    ],
+    "answer": "He’s retiring and won’t fence the final",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "He hands back the foil: “I am retired… It’s just not fun anymore,” which isn’t the real issue."
+  },
+  {
+    "id": "mf-s1e7-medium-0017",
+    "context": "Same hallway — the truth behind the ‘retirement’ slips out in a chivalry-tinged rationale.",
+    "question": "Why does Manny say he doesn’t want to fence Caroline?",
+    "options": [
+      "Defeating a woman would be a mark on his honor",
+      "He believes girls have an unfair advantage",
+      "He believes he has an unfair advantage",
+      "He is attracted to her"
+    ],
+    "answer": "Defeating a woman would be a mark on his honor",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "He declares, “Defeating a woman would be a mark on my honor,” prompting Gloria’s fiery rebuttal."
+  },
+  {
+    "id": "mf-s1e7-medium-0019",
+    "context": "Open house tour — Phil turns on the realtor charm with ABC’s of sales while the couple worries about safety.",
+    "question": "What is the buyers’ main concern about the listing?",
+    "options": [
+      "It may not be kid-friendly (e.g., the stairs)",
+      "It’s too far from work",
+      "The kitchen is outdated",
+      "There’s no backyard"
+    ],
+    "answer": "It may not be kid-friendly (e.g., the stairs)",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "They say with two small children “these stairs alone—” while Phil touts light and built-ins."
+  },
+  {
+    "id": "mf-s1e7-medium-0035",
+    "context": "Open-house patter — Phil flips into sales mode, riffing through a mnemonic while walking buyers through the great room.",
+    "question": "In Phil’s words, what do the ‘ABC’s of salesmanship’ stand for?",
+    "options": [
+      "Always Be Closing",
+      "Always Be Converting",
+      "Always Be Committing",
+      "Align Benefit, Close"
+    ],
+    "answer": "Always Be Closing",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "He boasts, “What does it take to make a great salesman? You just follow the ABC’s of salesmanship—Always Be Closing,” before rambling into a goofy alphabet bit."
+  },
+  {
+    "id": "mf-s1e7-medium-0020",
+    "context": "Same showing — an unexpected helper undercuts the objections with pure kid enthusiasm.",
+    "question": "What does Luke gush about that sways the mood during the showing?",
+    "options": [
+      "Backyard room for ‘like, 10 tree houses’",
+      "A secret attic door",
+      "A built-in slide",
+      "A hidden bookcase passage"
+    ],
+    "answer": "Backyard room for ‘like, 10 tree houses’",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "Luke raves about tree house space and the ceiling window; Phil dubs him the coming “rainmaker.”"
+  },
+  {
+    "id": "mf-s1e7-medium-0036",
+    "context": "Entryway hype — Phil name-drops local legends to pump up his young ‘protégé’ before the owners return.",
+    "question": "Which name does Phil NOT mention when rattling off the ‘titans of residential real estate’?",
+    "options": ["Bill Thorpe", "Sandy Brewster", "Skip Woosnum", "J.J. McCubbin"],
+    "answer": "Bill Thorpe",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Phil calls out, “That’s right, I’m talking to you, Sandy Brewster, Skip Woosnum, J.J. McCubbin…” — no ‘Bill Thorpe’ in his list."
+  },
+  {
+    "id": "mf-s1e7-medium-0023",
+    "context": "Sister talk deepens — the real reason for a long-ago decision finally surfaces.",
+    "question": "Why does Claire say she quit their skating team back then?",
+    "options": [
+      "She feared Mitch would drop her and be humiliated",
+      "She wanted to try cheerleading instead",
+      "She thought fireskating was no longer cool",
+      "A fractured ankle ended it"
+    ],
+    "answer": "She feared Mitch would drop her and be humiliated",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "She admits, “I was bigger than you… you were dropping me in practice… I didn’t want you to humiliate yourself.”"
+  },
+  {
+    "id": "mf-s1e7-medium-0037",
+    "context": "Bleachers beside Gloria — a kindly stranger shares context about Manny’s opponent before the final resumes.",
+    "question": "Which of the following is NOT mentioned about Caroline’s situation?",
+    "options": [
+      "She has asthma",
+      "She’s diabetic",
+      "Her parents passed away",
+      "Her father didn’t make it back from Afghanistan"
+    ],
+    "answer": "She has asthma",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "The woman says Caroline’s parents died, adds she’s her nurse from the children’s hospital, and later notes they can’t get ice cream because Caroline is diabetic; she also mentions the father not making it back from Afghanistan."
+  },
+  {
+    "id": "mf-s1e7-medium-0024",
+    "context": "Bleachers — a new spectator shares a backstory that tugs at heartstrings before the final starts.",
+    "question": "What does the woman beside Gloria claim about Caroline’s situation?",
+    "options": [
+      "Her parents passed away and she’s her nurse",
+      "She’s fencing to fund a medical operation",
+      "She recently moved from overseas",
+      "She’s battling cancer"
+    ],
+    "answer": "Her parents passed away and she’s her nurse",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "She says she works at the children’s hospital and that all her patients are like family; later adds Caroline is diabetic."
+  },
+  {
+    "id": "mf-s1e7-medium-0026",
+    "context": "Final begins — whistles and buzzers pop; the siblings reconcile with a symbolic gesture nearby.",
+    "question": "What do Claire and Mitchell attempt as a throwback to their old routines?",
+    "options": [
+      "A lift from their skating days",
+      "A mirrored bow",
+      "A synchronized clap",
+      "A scripted curtsy"
+    ],
+    "answer": "A lift from their skating days",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Claire says, “Don’t drop me,” as Mitch braces to hoist her; it’s awkward, nostalgic, and very them."
+  },
+  {
+    "id": "mf-s1e7-medium-0029",
+    "context": "Closing voiceover — Jay weighs the push-and-pull of parenting as the scoreboard glow lingers.",
+    "question": "What does Jay say about guilt versus hardware?",
+    "options": [
+      "Guilt fades; hardware is forever",
+      "Guilt teaches; trophies tarnish",
+      "Guilt lingers; medals mean little",
+      "Guilt heals; ribbons are fleeting"
+    ],
+    "answer": "Guilt fades; hardware is forever",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "Reflecting on pushing kids, he lands the line: “Guilt fades. Hardware is forever.”"
+  },
+  {
+    "id": "mf-s1e8-easy-0001",
+    "context": "**EPISODE 8**: Early morning in the Dunphy bedroom — it’s their anniversary, and a retro device becomes the first surprise.",
+    "question": "What throwback gadget does Phil give Claire loaded with their old photos?",
+    "options": ["A View-Master", "A Polaroid OneStep", "A Super 8 viewer", "A slide carousel"],
+    "answer": "A View-Master",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Phil says, “It’s a View-Master. Look inside.” Claire clicks through: “Oh, it’s us… oh, God, that perm.”"
+  },
+  {
+    "id": "mf-s1e8-medium-0002",
+    "context": "Same scene — a photo of jewelry pops up before the real thing appears.",
+    "question": "What gift does Phil actually get Claire to go with the View-Master clue?",
+    "options": ["A bracelet", "A necklace", "A ring", "Earrings"],
+    "answer": "A bracelet",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Claire spots a slide: “Why is there a picture of a bracelet?” Moments later: “Oh, my God… it’s beautiful.”"
+  },
+  {
+    "id": "mf-s1e8-easy-0003",
+    "context": "Still in bed — Claire hands Phil a red envelope for his ‘present.’",
+    "question": "What do Claire’s anniversary coupons offer?",
+    "options": ["Five free hugs", "Breakfasts in bed", "A car wash", "One chore-free week"],
+    "answer": "Five free hugs",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Phil reads: “Coupons for… five free hugs.” Claire insists, “This makes it official,” even though hugs are usually free."
+  },
+  {
+    "id": "mf-s1e8-medium-0004",
+    "context": "Phil’s private confessional — he rattles off a wishlist while lamenting gift skills.",
+    "question": "Which of the following does Phil NOT mention on his rapid-fire list of things he wants?",
+    "options": ["Drone quadcopter", "Robot dog", "Night-vision goggles", "Bug vacuum", "Yogurt Maker", "GPS watch"],
+    "answer": "Drone quadcopter",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "He blurts, “Robot dog, night-vision goggles, bug vacuum, GPS watch, speakers that look like rocks,” then even “yogurt maker.” No drone is named."
+  },
+  {
+    "id": "mf-s1e8-easy-0005",
+    "context": "Morning at Mitch & Cam’s — they debate diaper tech and what they really need.",
+    "question": "What do Mitch and Cam decide they actually need after discussing diapers?",
+    "options": ["A night out", "A new stroller", "A different brand of diapers", "A nanny"],
+    "answer": "A night out",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "After “LeakLock… no gapping or chapping,” Cam finishes Mitch’s thought: “Night out.” Mitch: “Yeah. Yes.”"
+  },
+  {
+    "id": "mf-s1e8-medium-0006",
+    "context": "Planning the evening — they pick the friend who guarantees chaos.",
+    "question": "Which friend do Mitch and Cam call to go out with?",
+    "options": ["Sal", "Pepper", "Longinus", "Ronaldo"],
+    "answer": "Sal",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "They squeal, “We’re calling Sal,” describing her as having “absolutely no inhibitions”…"
+  },
+  {
+    "id": "mf-s1e8-easy-0007",
+    "context": "Pritchett house — Jay sets up a family tradition night for all the kids.",
+    "question": "What does Jay call the pajama, sloppy-joe, Western-movie tradition?",
+    "options": ["Jay’s Night", "Movie Jamboree", "Pritchett Night", "Western Wednesday"],
+    "answer": "Jay’s Night",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Gloria beams: “All the grandkids are coming over for Jay’s Night.” Jay makes “famous sloppy jays.”"
+  },
+  {
+    "id": "mf-s1e8-medium-0008",
+    "context": "Dunphy kitchen — Haley negotiates, citing a nearby address.",
+    "question": "Whose party does Haley want to attend instead of staying at Jay’s?",
+    "options": ["Andrew Adler’s", "Ethan Andrews’", "Brian Adler’s", "Toby Andrews’"],
+    "answer": "Andrew Adler’s",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "She pleads: “There’s a party tonight at Andrew Adler’s… he lives a couple blocks away from Grandpa’s.”"
+  },
+  {
+    "id": "mf-s1e8-easy-0009",
+    "context": "Sibling sniping — Haley explains a reason she hates going to Jay’s.",
+    "question": "What does Haley complain Manny does when she’s at Jay’s house?",
+    "options": ["Stares at her", "Hogs the TV", "Teases her Spanish", "Eats all the snacks"],
+    "answer": "Stares at her",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Haley grumbles, “Every time I go over to Grandpa’s, Manny just stares at me the whole time.”"
+  },
+  {
+    "id": "mf-s1e8-medium-0010",
+    "context": "Back at the Dunphys — decorations escalate on the driveway surprise.",
+    "question": "What does Claire notice attached to Phil’s car along with the flowers?",
+    "options": ["Balloons", "A giant bow", "A banner", "Streamers"],
+    "answer": "Balloons",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Claire: “With the View-Master and the bracelet… and the flowers and the balloons—” then gasps when told they’re on the car."
+  },
+  {
+    "id": "mf-s1e8-hard-0011",
+    "context": "Evening reveal at the door — Claire’s booked a special guest for their song.",
+    "question": "Which band member does Claire say she hired to play a private set?",
+    "options": [
+      "Izzy LaFontaine",
+      "Tony Hadley",
+      "Gary Kemp",
+      "Martin Kemp"
+    ],
+    "answer": "Izzy LaFontaine",
+    "difficulty": "hard",
+    "episode": 8,
+    "description": "Claire announces “Izzy LaFontaine,” hyping him as guitarist/backup singer as Phil looks stunned."
+  },
+  {
+    "id": "mf-s1e8-easy-0032",
+    "context": "During Claire’s anniversary surprise at the door, she introduces a musician tied to their ‘song.’",
+    "question": "Which band is Izzy said to have played for?",
+    "options": ["Spandau Ballet", "Duran Duran", "A Flock of Seagulls", "Tears for Fears"],
+    "answer": "Spandau Ballet",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Claire announces Izzy LaFontaine from Spandau Ballet, hyping him as the guitarist/bassist and backup singer."
+  },
+  {
+    "id": "mf-s1e8-medium-0033",
+    "context": "The living-room ‘concert’ stalls while names get tossed around to prove credibility.",
+    "question": "Which of these names is NOT mentioned as a Spandau Ballet member in this scene?",
+    "options": ["Tony Hadley", "Richard Miller", "Martin Kemp", "Izzy LaFontaine"],
+    "answer": "Tony Hadley",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Claire/Izzy only name-drop “Richard Miller” and “Martin Kemp,” and Izzy himself; Tony Hadley is never mentioned in their dialogue."
+  },
+  {
+    "id": "mf-s1e8-medium-0012",
+    "context": "Bar meetup — the third musketeer arrives with signature chaos.",
+    "question": "What over-the-top change does Sal proudly show off when meeting Mitch and Cam?",
+    "options": ["New breast implants", "A face tattoo", "Lip implants", "A tongue piercing"],
+    "answer": "New breast implants",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "She chirps, “Ba-boobs!” and offers, “You wanna touch ’em?” prompting Cam to quip, “I’m gay, not dead.”"
+  },
+  {
+    "id": "mf-s1e8-easy-0031",
+    "context": "At a bar planning a big night out, their wild best friend is being described with a few infamous travel stories.",
+    "question": "Which city do they say Sal is no longer allowed in?",
+    "options": ["Amsterdam", "Las Vegas", "Cancún", "Berlin"],
+    "answer": "Amsterdam",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Mitch and Cam joke that hanging out with Sal is like an Amsterdam Saturday night every day—then add she’s not allowed back into Amsterdam."
+  },
+  {
+    "id": "mf-s1e8-medium-0013",
+    "context": "Trip Fantasies — the trio toast their old days and hatch a plan.",
+    "question": "Where does Sal insist the three of them should go for a blowout trip?",
+    "options": ["Cabo", "Vegas", "Key West", "Miami"],
+    "answer": "Cabo",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Sal slams drinks: “We’re doing it. We’re going to Cabo… Margaritas… it’s gonna be epic.”"
+  },
+  {
+    "id": "mf-s1e8-hard-0014",
+    "context": "Their table — a shocking joke lands like a threat, not a punchline.",
+    "question": "What disturbing thing does Sal say about Lily (which Mitch and Cam later confront)?",
+    "options": [
+      "“You should kill that baby.”",
+      "“Sell the baby on eBay.”",
+      "“Lose the baby at the mall.”",
+      "“Ship the baby to her grandparents.”"
+    ],
+    "answer": "“You should kill that baby.”",
+    "difficulty": "hard",
+    "episode": 8,
+    "description": "Sal blurts “You should kill that baby,” then later jokes about throwing Lily in the ocean, fueling their jealousy theory."
+  },
+  {
+    "id": "mf-s1e8-medium-0035",
+    "context": "Over drinks, they recall past antics to explain why a dark joke might not be serious.",
+    "question": "What outrageous Halloween costume did Sal once wear?",
+    "options": ["Siegfried and part of Roy", "A bloody bride with a chainsaw", "A zombie nurse shark", "A headless showgirl"],
+    "answer": "Siegfried and part of Roy",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Mitch notes Sal’s “dark sense of humor,” citing that she came as “Siegfried and part of Roy,” which was “too soon.”"
+  },
+  {
+    "id": "mf-s1e8-medium-0025",
+    "context": "Bar booth — Sal’s behavior gets analyzed like a case study.",
+    "question": "What do Mitch and Cam label Sal’s acting out as, metaphorically?",
+    "options": ["First-child syndrome", "Empty-nest syndrome", "Peter Pan syndrome", "Stockholm syndrome"],
+    "answer": "First-child syndrome",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Cam says the ‘first child’ gets jealous when the ‘second’ arrives — “we’ve practically done everything for her.”"
+  },
+  {
+    "id": "mf-s1e8-medium-0026",
+    "context": "Emotional crack — beneath the jokes, the truth spills out.",
+    "question": "What does Sal admit truly hurts since Lily arrived?",
+    "options": [
+      "They never call her anymore",
+      "They stopped going with her on trips",
+      "They never hung out anymore",
+      "They forgot her birthday"
+    ],
+    "answer": "They never call her anymore",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Sal says, “We used to be really close… now you never call me,” recalling a bad dream she wanted to share but didn’t."
+  },
+  {
+    "id": "mf-s1e8-easy-0015",
+    "context": "Jay’s front door — the cousins arrive for the tradition night.",
+    "question": "What item of clothing does Jay insist on as soon as the kids arrive?",
+    "options": ["Pajamas", "Cowboy hats", "Slippers", "Bandanas"],
+    "answer": "Pajamas",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Jay barks, “This is a pajama party. Where’s your p.j.’s?” Sending Haley to change."
+  },
+  {
+    "id": "mf-s1e8-medium-0020",
+    "context": "Living room TV — the evening’s Western draws them in.",
+    "question": "Which classic-styled movie does Dylan get sucked into with Jay?",
+    "options": ["The Gunfighter", "High Noon", "The Searchers", "Stagecoach"],
+    "answer": "The Gunfighter",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "A gunshot pops from the TV; Dylan blurts, “Oh, no way. The Gunfighter. I love this movie,” delaying the party."
+  },
+  {
+    "id": "mf-s1e8-medium-0021",
+    "context": "Kitchen pass-through — food bribes keep the suitor anchored.",
+    "question": "What dish does Jay offer that wins Dylan over before the party?",
+    "options": ["Sloppy jays", "Chili con Jay", "Western stew", "Jay’s ribs"],
+    "answer": "Sloppy jays",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Jay says, “Sloppy jays. Help yourself. There’s plenty left.” Dylan: “Right on.”"
+  },
+  {
+    "id": "mf-s1e8-medium-0023",
+    "context": "Truth time — the couple admits their actual first-kiss soundtrack.",
+    "question": "What song does Phil say is truly ‘their song’?",
+    "options": [
+      "“If You Leave” by Orchestral Manoeuvres in the Dark",
+      "“True” by Spandau Ballet",
+      "“Time After Time” by Cyndi Lauper",
+      "“Don’t Dream It’s Over” by Crowded House"
+    ],
+    "answer": "“If You Leave” by Orchestral Manoeuvres in the Dark",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Phil corrects Claire: “Our song is ‘If You Leave’… I sang it at our wedding.”"
+  },
+  {
+    "id": "mf-s1e8-easy-0024",
+    "context": "Make-good moment — the living-room performance finally lands.",
+    "question": "Which Spandau Ballet hit is ultimately performed for Claire?",
+    "options": ["“True”", "“Gold”", "“Only When You Leave”", "“Through the Barricades”"],
+    "answer": "“True”",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "He strums, “Ah-ha-ha-ha-ah… I know this much is true,” giving Claire the moment she wanted."
   }
 ]
+
+
+
+
+
+
+
 

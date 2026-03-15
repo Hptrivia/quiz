@@ -1,5 +1,551 @@
 [
   {
+    "id": "com-s1e1-medium-0001",
+    "context": "**EPISODE 1**: Orientation day on the quad: the dean stumbles through a mic mishap and riffs on student stereotypes while trying to inspire the crowd.",
+    "question": "In the dean’s welcome speech, how does he describe the older students at Greendale?",
+    "options": ["“Circling the drain of eternity”", "“Aging like fine wine”", "“Returning heroes of learning”", "“Golden auditors of academia”"],
+    "answer": "“Circling the drain of eternity”",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Dean Pelton’s dark gag about seniors during orientation."
+  },
+  {
+    "id": "com-s1e1-easy-0002",
+    "context": "Mid-speech on the quad, the dean suddenly stops and asks the audience to help with something he misplaced from his notes.",
+    "question": "True or False: During his speech, the dean asks everyone to look for a missing middle card.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "He breaks stride and asks the crowd to help find a missing card from his notes."
+  },
+  {
+    "id": "com-s1e1-easy-0003",
+    "context": "On campus walkways, a rapid-fire monologue: Abed tells Jeff about his parents and why people misread his dad’s energy.",
+    "question": "Abed says his father is which nationality?",
+    "options": ["Palestinian", "Lebanese", "Egyptian", "Jordanian"],
+    "answer": "Palestinian",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Abed explains his dad is Palestinian and a U.S. citizen."
+  },
+  {
+    "id": "com-s1e1-easy-0004",
+    "context": "Jeff points out the ‘hot girl’ from Spanish; Abed machine-guns biographical details, including her worries about the upcoming exam.",
+    "question": "According to Abed, what does Britta think about the upcoming Spanish test?",
+    "options": ["She’s going to flunk it", "She’s going to ace it", "It will be postponed", "She plans to skip it"],
+    "answer": "She’s going to flunk it",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Abed relays Britta’s worry and need to focus."
+  },
+  {
+    "id": "com-s1e1-easy-0005",
+    "context": "Abed rattles off more quick facts about Britta after Jeff asks about her.",
+    "question": "According to Abed, how old is Britta?",
+    "options": ["26", "27", "28", "29"],
+    "answer": "28",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Abed includes her age when listing details to Jeff."
+  },
+  {
+    "id": "com-s1e1-medium-0006",
+    "context": "Later in Duncan’s office, Jeff admits his degree problem; Duncan mentions the prestigious school Jeff used to claim.",
+    "question": "Duncan says he thought Jeff had a bachelor’s degree from which university?",
+    "options": ["Columbia", "Harvard", "Yale", "Brown"],
+    "answer": "Columbia",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Jeff jokes he now has to get one from “America.”"
+  },
+  {
+    "id": "com-s1e1-easy-0007",
+    "context": "Jeff summarizes why he’s at Greendale: the bar took action after discovering his bogus credentials.",
+    "question": "What penalty did the state bar impose on Jeff?",
+    "options": ["Suspended his license", "Disbarred him", "Fined him", "Revoked his license"],
+    "answer": "Suspended his license",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "It’s why he’s back in school."
+  },
+  {
+    "id": "com-s1e1-easy-0008",
+    "context": "In the cafeteria line, Jeff pitches Britta on a study meet with a specific time and place.",
+    "question": "Where and when does Jeff tell Britta the study group meets?",
+    "options": ["Library at 4", "Library at 6", "Student lounge at 4", "Student lounge at 6"],
+    "answer": "Library at 4",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "He pitches his (fake) study group time and place."
+  },
+  {
+    "id": "com-s1e1-easy-0009",
+    "context": "Britta expresses doubt that Jeff is serious about a study group; she needles him for spending the entire class glued to a mobile game.",
+    "question": "Which phone game does Britta call out Jeff for playing during Spanish class?",
+    "options": ["Bejeweled", "Tetris", "Brick Breaker", "Sudoku"],
+    "answer": "Bejeweled",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Britta mocks Jeff’s credibility by citing the game he played instead of paying attention."
+  },
+  {
+    "id": "com-s1e1-easy-0010",
+    "context": "At the cafeteria counter, after Jeff’s TV-raised slip, the lunch lady tells him to pay and snarks by referring to a popular show",
+    "question": "Which TV show does the cafeteria lady reference when telling Jeff to pay for his tacos?",
+    "options": ["Seinfeld", "Friends", "Frasier", "Cheers"],
+    "answer": "Seinfeld",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "She says, “Were you conditioned to pay for your damn tacos, SeinFIELD?” and Jeff corrects the pronunciation."
+  },
+  {
+    "id": "com-s1e1-easy-0010",
+    "context": "In the empty study room before everyone arrives, Britta lays out her ‘deal’ to Jeff.",
+    "question": "When Britta shares her ‘deal,’ what does she say she values above all?",
+    "options": ["Honesty", "Loyalty", "Kindness", "Respect"],
+    "answer": "Honesty",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "She’ll like the truth and cut off liars."
+  },
+  {
+    "id": "com-s1e1-medium-0034",
+    "context": "Britta gives Jeff a quick, candid rundown of her past",
+    "question": "Which of the following is NOT something Britta says about herself in that conversation?",
+    "options": [
+      "Joined the Peace Corps",
+      "Did foot modeling",
+      "Dropped out of high school to impress Radiohead",
+      "Got tear-gassed at a world trade rally",
+      "Backpacked across Europe making a documentary"
+    ],
+    "answer": "Backpacked across Europe making a documentary",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Checks recall of Britta’s self-summary during her first real chat with Jeff."
+  },
+  {
+    "id": "com-s1e1-easy-0011",
+    "context": "The door swings open on Jeff’s fake session; the new arrival explains why he’s there.",
+    "question": "Who actually invites Abed to the study session?",
+    "options": ["Britta", "Jeff", "Annie", "Troy"],
+    "answer": "Britta",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Abed arrives because Britta asked him."
+  },
+  {
+    "id": "com-s1e1-easy-0012",
+    "context": "As the trio settles in, Abed frames the vibe with a classic ‘80s detention movie comparison.",
+    "question": "Abed compares the gathering in the study room to which film?",
+    "options": ["The Breakfast Club", "Sixteen Candles", "Ferris Bueller’s Day Off", "Heathers"],
+    "answer": "The Breakfast Club",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "He leans into the 80s-movie vibe."
+  },
+  {
+    "id": "com-s1e1-medium-0013",
+    "context": "Still in the room, Britta asks Abed for a read on Jeff; Abed makes a quick-looking comparison.",
+    "question": "Abed tells Britta she looks like which actress?",
+    "options": ["Elizabeth Shue", "Meg Ryan", "Julia Roberts", "Winona Ryder"],
+    "answer": "Elizabeth Shue",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "It’s his blunt read on her look."
+  },
+  {
+    "id": "com-s1e1-easy-0014",
+    "context": "Inside the study room, Jeff gets a strangely abbreviated text and asks the group for five minutes while he steps out to meet the sender.",
+    "question": "Who texted Jeff to meet, prompting him to ask the group for a five-minute break?",
+    "options": ["Professor Duncan", "Dean Pelton", "Pierce Hawthorne"],
+    "answer": "Professor Duncan",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Jeff leaves after a cryptic message from Duncan summoning him outside."
+  },
+  {
+    "id": "com-s1e1-easy-0015",
+    "context": "Back in the study room with new arrivals, one older student introduces himself and ties his surname to a well-known product.",
+    "question": "When introducing himself, Pierce name-drops what product associated with his surname?",
+    "options": ["Hawthorne Wipes", "Hawthorne Paper", "Hawthorne Towelettes", "Hawthorne Fresheners"],
+    "answer": "Hawthorne Wipes",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "He mentions the award-winning moist towelette."
+  },
+  {
+    "id": "com-s1e1-easy-0015a",
+    "context": "Troy tosses a pop-culture nickname at Jeff while asking about homework.",
+    "question": "What nickname does Troy use for Jeff during that first study-room exchange?",
+    "options": ["Seacrest", "McConaughey", "Ken Doll", "Silver Fox"],
+    "answer": "Seacrest",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Troy punctuates his jab by addressing Jeff with a TV-host style nickname."
+  },
+  {
+    "id": "com-s1e1-easy-0015b",
+    "context": "Troy also flings a movie-based nickname toward Abed when leaving his homework on the table.",
+    "question": "What nickname does Troy use for Abed in that moment?",
+    "options": ["Slumdog Millionaire", "Kumar", "Short Round", "Mowgli"],
+    "answer": "Slumdog Millionaire",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Troy cracks the line while the group is settling in and trading barbs."
+  },
+  {
+    "id": "com-s1e1-medium-0016",
+    "context": "During Pierce’s awkward ‘introductions,’ he mangles a name and labels someone by ethnicity.",
+    "question": "How does Pierce misname Abed during roll call?",
+    "options": ["“Ay-bed the Arab”", "“Arab Abed”", "“A-bed the Turk”", "“Abe from Arabia”"],
+    "answer": "“Ay-bed the Arab”",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "He fumbles Abed’s name and identity in one go."
+  },
+  {
+    "id": "com-s1e1-medium-0017",
+    "context": "As tempers flare in the study room, Britta tries to steer everyone back to Spanish with a specific vocabulary suggestion.",
+    "question": "Amid the bickering, what English word does Britta suggest they learn in Spanish?",
+    "options": ["Jukebox", "Apology", "Respect", "Homework"],
+    "answer": "Jukebox",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "She tries to pivot back to studying with a specific word."
+  },
+  {
+    "id": "com-s1e1-medium-0017b",
+    "context": "During the argument, Annie and Troy trade barbs about their past, including their school days and a specific class seating detail.",
+    "question": "In their exchange, which high school do they reference and which subject does Annie say she sat behind Troy in?",
+    "options": [
+      "Riverside High / Algebra",
+      "Jefferson High / Biology",
+      "Riverside High / Biology",
+      "Jefferson High / Algebra"
+    ],
+    "answer": "Riverside High / Algebra",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Annie calls out their old school and notes she sat behind Troy in that math class."
+  },
+  {
+    "id": "com-s1e1-medium-0018",
+    "context": "Old high-school dynamics surface: Annie calls out a former athlete; he fires back with a nickname tied to her past.",
+    "question": "What mocking nickname does Troy throw at Annie when her past comes up?",
+    "options": ["Little Annie Adderall", "Prescription Annie", "Pill Popper Annie", "Tiny Annie Amp"],
+    "answer": "Little Annie Adderall",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "It’s his jab tied to her earlier struggles."
+  },
+  {
+    "id": "com-s1e1-medium-0019",
+    "context": "Arguing escalates: Annie cites a party stunt; Troy corrects her with the exact move that wrecked his shoulders.",
+    "question": "According to Troy, what exact stunt led to his shoulder injuries and lost scholarship?",
+    "options": ["A keg flip", "A keg stand", "A beer-bong contest", "A bench-press record attempt"],
+    "answer": "A keg flip",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "He corrects Annie’s “keg stand” to “keg flip.”"
+  },
+  {
+    "id": "com-s1e1-medium-0020",
+    "context": "In a tiny blue car outside, Duncan names his price for academic favors.",
+    "question": "In exchange for test answers, what does Duncan demand from Jeff?",
+    "options": ["His Lexus", "Cash", "Free legal work", "His Mercedes"],
+    "answer": "His Lexus",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "He insists on payment in advance—Jeff’s car."
+  },
+  {
+    "id": "com-s1e1-easy-0021",
+    "context": "Jeff returns and gives a rallying monologue using TV events and everyday objects to argue for empathy—then snaps a pencil named ‘Steve.’",
+    "question": "In Jeff’s big speech, what TV event does he say humans observe that no one else does?",
+    "options": ["Shark Week", "Discovery Week", "Nature Week", "Ocean Week"],
+    "answer": "Shark Week",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Part of his empathy riff with pencils and sharks."
+  },
+  {
+    "id": "com-s1e1-easy-0022",
+    "context": "During that same speech, Jeff singles out Abed with a quirky example of giving people what’s ‘better.’",
+    "question": "According to Jeff, if you ask Abed to pass the salt, what does Abed give you instead?",
+    "options": ["A bowl of soup", "A pepper grinder", "A glass of water", "A napkin"],
+    "answer": "A bowl of soup",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Jeff calls Abed a ‘shaman’ who gives you what’s better."
+  },
+  {
+    "id": "com-s1e1-easy-0023",
+    "context": "After the group repeats a forgiveness line to one another, Jeff caps the moment with a title-drop.",
+    "question": "After the group reconciles, Jeff declares, “You have become something unstoppable. I hereby pronounce you a…” what?",
+    "options": ["Community", "Team", "Family", "Study Group"],
+    "answer": "Community",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "The title drop after his pep talk."
+  },
+  {
+    "id": "com-s1e1-medium-0024",
+    "context": "Outside the library, Jeff opens the ‘answers’ packet from Duncan and discovers it’s a prank with one taunting word.",
+    "question": "When Jeff opens Duncan’s ‘answer packet,’ what single word is printed on the only non-blank page?",
+    "options": ["Booyah!", "Gotcha!", "Owned!", "Go to hell!"],
+    "answer": "Booyah!",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "A callback to Jeff’s earlier boast."
+  },
+  {
+    "id": "com-s1e1-medium-0025",
+    "context": "By the library entrance, an older classmate reflects on his history of marriages while chatting with Jeff.",
+    "question": "How many divorces does Pierce say he’s had when chatting with Jeff outside the library?",
+    "options": ["Seven", "Five", "Three", "Nine"],
+    "answer": "Seven",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "He wonders if he’s doing something wrong; Jeff quips back."
+  },
+  {
+    "id": "com-s1e1-easy-0026",
+    "context": "Troy asks Jeff for advice about being mocked for a specific piece of clothing tied to his past glory.",
+    "question": "What specific jacket are people clowning Troy for wearing around campus?",
+    "options": ["A letter jacket", "A leather jacket", "A denim jacket", "A track jacket"],
+    "answer": "A letter jacket",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "It’s tied to his high-school glory image."
+  },
+  {
+    "id": "com-s1e1-medium-0027",
+    "context": "After Jeff tells Troy not to make fashion choices ‘for them,’ Troy reacts with a memorable one-liner.",
+    "question": "After Jeff’s advice about not doing things ‘for them,’ what does Troy say in amazement?",
+    "options": ["“You just wrinkled my brain, man.”", "“Mind: blown.”", "“That’s deep, bro.”", "“Say that again, professor.”"],
+    "answer": "“You just wrinkled my brain, man.”",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Troy’s reaction to Jeff’s mini-lecture."
+  },
+  {
+    "id": "com-s1e1-easy-0028",
+    "context": "As the group invites Jeff back upstairs, one member mirrors an earlier comment.",
+    "question": "At the end, who tells Jeff, “I see your value now”?",
+    "options": ["Abed", "Britta", "Pierce", "Annie"],
+    "answer": "Abed",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "A nice inversion of Jeff’s earlier line."
+  },
+{
+  "id": "com-s1e2-easy-0001e",
+  "context": "**EPISODE 2**: COLD OPEN — The dean corrects two mislabeled subjects from the fall catalog over the campus PA.",
+  "question": "Which catalog corrections are announced by the dean?",
+  "options": [
+    "Cosmology → Cosmetology; Astrology → Astronomy",
+    "Cosmology → Cosmography; Astrology → Astronomy",
+    "Cosmology → Cosmetology; Astrology → Astrophysics",
+    "Cosmology → Cosmonautics; Astrology → Astrobiology"
+  ],
+  "answer": "Cosmology → Cosmetology; Astrology → Astronomy",
+  "difficulty": "easy",
+  "episode": 2,
+  "description": "He says 'Cosmology should be Cosmetology' and 'Astrology should be Astronomy.'"
+},
+  {
+    "id": "com-s1e2-easy-0001",
+    "context": "COLD OPEN — The dean then makes a jokey 'announcement' aimed at whoever planted something behind the gym.",
+    "question": "What prank-prize does the dean claim awaits whoever is growing a small patch of cannabis behind the gym?",
+    "options": ["A cruise", "A scholarship", "Free cafeteria meals", "Free credits"],
+    "answer": "A cruise",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "He says the grower has 'won a cruise' and should report to security."
+  },
+  {
+    "id": "com-s1e2-medium-0002",
+    "context": "STUDY ROOM — The group debates; Pierce needles, Britta counters, and Abed gets cautioned about the word choice that sets him off.",
+    "question": "What habit of Jeff’s is the group threatening to confront him about as a group?",
+    "options": ["Being late", "Skipping class", "Talking over others", "Not listening to the group"],
+    "answer": "Being late",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "They consider addressing his tardiness when he shows up."
+  },
+  {
+    "id": "com-s1e2-hard-0003",
+    "context": "STUDY ROOM — Britta pivots the conversation to global issues, citing a Central American country where speaking out has deadly consequences.",
+    "question": "Which country does Britta cite when she mentions journalists being killed?",
+    "options": ["Guatemala", "Honduras", "El Salvador", "Nicaragua"],
+    "answer": "Guatemala",
+    "difficulty": "hard",
+    "episode": 2,
+    "description": "She references murdered journalists and later a specific name to research."
+  },
+  {
+    "id": "com-s1e2-medium-0005",
+    "context": "STUDY ROOM — Jeff jokes about his empty life and asks Annie for help padding it out with class materials.",
+    "question": "What does Jeff ask Annie for to 'fill' his empty binder?",
+    "options": ["Spanish notes", "Study guide", "Flash cards", "Printouts of homework"],
+    "answer": "Spanish notes",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "He accepts double-spaced pages to make it look fuller."
+  },
+  {
+    "id": "com-s1e2-medium-0007",
+    "context": "STUDY ROOM — Annie asks Britta for guidance on activism; Britta names a journalist whose death they could highlight.",
+    "question": "Which journalist’s name does Britta mention for the group to research?",
+    "options": ["Chacata-Panecos", "Rojas-Escobar", "Luna-Peralta", "Velasco-Cruz"],
+    "answer": "Chacata-Panecos",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "She suggests Googling him as a starting point for their cause."
+  },
+{
+  "id": "com-s1e2-medium-0019",
+  "context": "SPANISH CLASS — During a rant about constant questions on his career choice, Señor Chang rattles off examples of other subjects students suggest he should teach.",
+  "question": "Which of the following is NOT one of the subjects students suggest to Señor Chang as alternatives to teaching Spanish?",
+  "options": ["Philosophy", "Math", "Photography", "Martial arts"],
+  "answer": "Philosophy",
+  "difficulty": "medium",
+  "episode": 2,
+  "description": "Chang lists math, photography, and martial arts while mocking the question; philosophy is never mentioned."
+},
+{
+  "id": "com-s1e2-medium-0018",
+  "context": "SPANISH CLASS — In a swaggering rant about his teaching prowess, Señor Chang boasts about his persona in Spanish.",
+  "question": "What nickname does Señor Chang claim for himself in Spanish?",
+  "options": ["El Tigre Chino", "El Jefe Loco", "El Dragón de Español", "El Maestro Supremo"],
+  "answer": "El Tigre Chino",
+  "difficulty": "medium",
+  "episode": 2,
+  "description": "Chang declares a Spanish-language nickname during his classroom monologue."
+},
+  {
+    "id": "com-s1e2-medium-0008",
+    "context": "SPANISH CLASS — Señor Chang sets up a partner exercise for the class.",
+    "question": "How does Señor Chang assign partners for the conversation assignment?",
+    "options": ["Matching picture cards to word cards", "Alphabetical seating", "Random draw from a hat", "By quiz scores"],
+    "answer": "Matching picture cards to word cards",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Example given: 'house' pairs with 'casa'."
+  },
+  {
+    "id": "com-s1e2-hard-0009",
+    "context": "SPANISH CLASS — Jeff and Abed negotiate over cards; Abed demands something unusual in exchange.",
+    "question": "What item does Abed insist on taking from Jeff in exchange for switching cards?",
+    "options": ["Jeff’s shirt", "Jeff’s watch", "Jeff’s pen", "Jeff’s notebook"],
+    "answer": "Jeff’s shirt",
+    "difficulty": "hard",
+    "episode": 2,
+    "description": "Abed says he’s had his eye on it since registration day and wears it out."
+  },
+  {
+    "id": "com-s1e2-medium-0010",
+    "context": "PIERCE’S OFFICE/LOUNGE — Pierce pitches an alternative to the assignment, pouring drinks and proposing an epic collaboration instead of a short dialogue.",
+    "question": "What does Pierce want to create with Jeff instead of a simple five-phrase conversation?",
+    "options": ["An elaborate story", "A rap performance", "A slideshow", "A puppet skit"],
+    "answer": "An elaborate story",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "He launches into 'what is a story?'."
+  },
+{
+  "id": "com-s1e2-medium-0020",
+  "context": "LOUNGE — While small-talking about his past and the moist towelette business, Pierce talks to Jeff about a rare personal condition and why he cant have kids.",
+  "question": "What rare condition does Pierce claim to have?",
+  "options": ["Hyper-virility", "Sterility", "Impotence", "Hyper-fertility"],
+  "answer": "Hyper-virility",
+  "difficulty": "medium",
+  "episode": 2,
+  "description": "Pierce says his sperm 'shoot through the egg like bullets,' calling it hyper-virility."
+},
+{
+  "id": "com-s1e2-medium-0021",
+  "context": "LOUNGE — While 'brainstorming' the Spanish assignment, Pierce inflates a simple dialogue into a grandiose stage piece and gives it a dramatic title.",
+  "question": "What title does Pierce give to the play he wants to perform with Jeff?",
+  "options": ["Two Conquistadors", "The Golden Spaniards", "Conquistador Chronicles", "Lost in Translation 101"],
+  "answer": "Two Conquistadors",
+  "difficulty": "medium",
+  "episode": 2,
+  "description": "Pierce dubs their overblown collaboration with a sweeping, conquest-themed title. Jeff leaves to go to the vigil"
+},
+  {
+    "id": "com-s1e2-easy-0011",
+    "context": "QUAD — Annie and Shirley organize a campus action and coach others on what to look up.",
+    "question": "What kind of event do Annie and Shirley plan to raise awareness?",
+    "options": ["A candlelight vigil", "A sit-in", "A petition drive", "A boycott"],
+    "answer": "A candlelight vigil",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "They prep candles and talk about a 'speechless protest'."
+  },
+  {
+    "id": "com-s1e2-hard-0012",
+    "context": "QUAD — The group prepares a symbolic installation referencing the journalist’s fate.",
+    "question": "What object do they hang that pointedly references the journalist they discussed?",
+    "options": ["A piñata", "A banner", "An effigy made of newspapers", "A wreath of candles"],
+    "answer": "A piñata",
+    "difficulty": "hard",
+    "episode": 2,
+    "description": "They acknowledge he was beaten to death; it’s intended as poignant."
+  },
+  {
+    "id": "com-s1e2-easy-0014",
+    "context": "VIGIL — At the protest, tensions spike when Pierce arrives and tries to reclaim Jeff’s attention.",
+    "question": "What chaotic accident happens when tempers flare at the vigil?",
+    "options": ["A small fire breaks out", "The sound system explodes", "Sprinklers drench everyone", "The stage collapses"],
+    "answer": "A small fire breaks out",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Pierce ends up in the fountain after the flames; he’s fine."
+  },
+{
+  "id": "com-s1e2-medium-0022",
+  "context": "NEXT MORNING — Riding the high from seeing their cause in the newspaper, Annie and Shirley excitedly pivot to another global issue they want to spotlight next.",
+  "question": "Which global crisis do Annie and Shirley mention as their next awareness focus?",
+  "options": ["Ethnic cleansing in Burma", "Deforestation in the Amazon", "Famine in Sudan", "Sanctions in Iran"],
+  "answer": "Ethnic cleansing in Burma",
+  "difficulty": "medium",
+  "episode": 2,
+  "description": "They say, “You know about ethnic cleansing in Burma? We need to bust out that brownie mix,” plotting their next campaign."
+},
+  {
+    "id": "com-s1e2-hard-0016",
+    "context": "MORNING — Britta reveals Pierce tried to buy his way into Jeff’s pairing the night before.",
+    "question": "How much does Britta say Pierce offered to switch partner cards so he could work with Jeff?",
+    "options": ["$100", "$20", "$50", "$200"],
+    "answer": "$100",
+    "difficulty": "hard",
+    "episode": 2,
+    "description": "She says he thought partnering with Jeff would earn him group respect."
+  },
+  {
+    "id": "com-s1e2-medium-0017",
+    "context": "SPANISH CLASS — Chang allows Pierce to present alone, but Jeff interrupts with a different take on fairness.",
+    "question": "What grade outcome does Chang initially float after hearing Pierce’s side?",
+    "options": ["Give Jeff a C and have Pierce present alone", "Give both an F and skip the presentation", "Give Pierce an A for effort", "Give Pierce a C for his solo presentation"],
+    "answer": "Give Jeff a C and have Pierce present alone",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Jeff objects, insisting the thing they created deserves to be done right."
+  },
+{
+  "id": "com-s1e2-easy-0023",
+  "context": "SPANISH CLASS — After Jeff and Pierce perform their over-the-top piece, Chang delivers his blunt verdict to the room.",
+  "question": "What grade does Señor Chang give Jeff and Pierce after their presentation?",
+  "options": ["A", "B", "C", "F"],
+  "answer": "F",
+  "difficulty": "easy",
+  "episode": 2,
+  "description": "Chang calls it one of the worst things he’s seen and hands them an F."
+},
+  {
     "id": "co-s1e3-easy-0040",
     "context": "**EPISODE 3**: In Jeff’s blow-off class, the instructor pushes stunts and keeps telling everyone to live like today is their last.",
     "question": "What is the name of the professor in this class?",
@@ -248,6 +794,1362 @@
     "difficulty": "medium",
     "episode": 3,
     "description": "Whitman approves instantly: \"'a' plus, winger. I know a life-changing kiss when I see one.\""
+  },
+  {
+    "id": "co-s1e4-medium-0001",
+    "context": "**EPISODE 4**: Spanish class — Chang wraps up and comments on the evaluation cards the students filled out.",
+    "question": "Who does Chang accuse of writing the harsh evaluation about him?",
+    "options": ["Annie", "Britta", "Shirley", "Jeff"],
+    "answer": "Annie",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Chang says he matched the handwriting and then confronts her directly with \"Who's 'erratic and unstable' now."
+  },
+  {
+    "id": "co-s1e4-medium-0002",
+    "context": "Chang reveals he investigated a particularly harsh evaluation by comparing handwriting to past exams.",
+    "question": "What detail does Chang point out about how the writer dots their i’s?",
+    "options": [
+      "Big triangles",
+      "Tiny circles",
+      "Tiny hearts",
+      "Smiley faces"
+    ],
+    "answer": "Tiny circles",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "He mocks it by “boop boop”ing the air and says the coward “dots her i’s with tiny, itty-bitty, little circles.”"
+  },
+  {
+    "id": "co-s1e4-medium-0003",
+    "context": "Chang confronts the student he believes wrote the harsh evaluation and flips the insult back at her.",
+    "question": "What does Chang call her during his confrontation?",
+    "options": ["Princess gringa", "Señorita perfect", "Senorita puta", "Miss anonymous"],
+    "answer": "Princess gringa",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Chang snaps, “Who’s ‘erratic and unstable’ now, Princess gringa?” right after calling out the handwriting."
+  },
+  {
+    "id": "co-s1e4-easy-0040",
+    "context": "Annie approaches a professor about joining a special psych lab early and tries to impress him.",
+    "question": "What is the name of the professor who runs the special psych lab?",
+    "options": ["Professor Duncan", "Professor Chang", "Professor Whitman", "Professor Kane"],
+    "answer": "Professor Duncan",
+    "difficulty": "easy",
+    "episode": 4,
+    "description": "Annie calls out \"Professor duncan!\" and he talks about his lab."
+  },
+  {
+    "id": "co-s1e4-easy-0041",
+    "context": "Annie introduces herself to Duncan while pitching her way into his lab.",
+    "question": "What surname does Annie give when she introduces herself?",
+    "options": ["Edison", "Barber", "Eddinton", "Johnson"],
+    "answer": "Edison",
+    "difficulty": "easy",
+    "episode": 4,
+    "description": "She says it clearly: \"Annie edison. I'm in your 101 lecture.\""
+  },
+  {
+    "id": "co-s1e4-medium-0010",
+    "context": "Annie tries to impress Professor Duncan and justify joining his lab early.",
+    "question": "What grade does Annie say she had at Riverside High?",
+    "options": ["4.0", "3.5", "5.0", "4.5"],
+    "answer": "4.0",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Annie tries to make her case and says, \"I had a 4.0 at riverside high,\" before explaining why she ended up at Greendale."
+  },
+  {
+    "id": "co-s1e4-medium-0011",
+    "context": "Annie explains why she ended up at Greendale while trying to sound responsible and serious.",
+    "question": "Annie says the pills made her lose what?",
+    "options": [
+      "Her scholarship and virginity",
+      "Her apartment and car",
+      "Her job and savings",
+      "Her friends and grades"
+    ],
+    "answer": "Her scholarship and virginity",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Annie says the pills were supposed to help her focus but “actually made me lose my scholarship and virginity.”"
+  },
+  {
+    "id": "co-s1e4-easy-0014",
+    "context": "Duncan lays out the conditions for Annie to join his psych lab early.",
+    "question": "How many human subjects does Duncan tell Annie to bring?",
+    "options": ["One", "Two", "Three", "Four"],
+    "answer": "Two",
+    "difficulty": "easy",
+    "episode": 4,
+    "description": "Duncan gives the requirement plainly: “You need to bring two human subjects.”"
+  },
+  {
+    "id": "co-s1e4-medium-0016",
+    "context": "Pierce shows the group a strange gadget he’s excited about using.",
+    "question": "What does Abed call his spy-like listening device?",
+    "options": ["Ear-noculars", "Sound-o-scope", "Whisper tracker", "Audio goggles"],
+    "answer": "Ear-noculars",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Pierce reveals it proudly: “My ear-noculars… It’s for spies and whatnot. It gives you sonic hearing.”"
+  },
+  {
+    "id": "co-s1e4-medium-0019",
+    "context": "The group reacts to the idea of a psych experiment with the maturity you’d expect.",
+    "question": "Troy asks if the experiment involves what?",
+    "options": ["Butt stuff", "Hypnosis", "Hallucinogens", "Electric shocks"],
+    "answer": "Butt stuff",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Troy immediately goes there: “Do they do stuff to your butt?” and even asks if you get paid more if they do."
+  },
+  {
+    "id": "co-s1e4-medium-0020",
+    "context": "Abed considers helping Annie but explains he already has a plan for the next day.",
+    "question": "What movie marathon does Abed say is happening tomorrow?",
+    "options": [
+      "All four Indiana Jones movies",
+      "All three Back to the Future movies",
+      "All six Star Wars movies",
+      "A Lord of the Rings marathon"
+    ],
+    "answer": "All four Indiana Jones movies",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Abed says, “They’re showing all four indiana joneses at the vista,” and adds he’s “really looking forward to the first three.”"
+  },
+  {
+    "id": "co-s1e4-easy-0021",
+    "context": "Abed doubles down on how serious he is about his Indiana Jones plan.",
+    "question": "What does Abed say he bought for the marathon?",
+    "options": ["A whip", "A fedora", "A leather jacket", "A treasure map"],
+    "answer": "A whip",
+    "difficulty": "easy",
+    "episode": 4,
+    "description": "Abed casually drops it like it’s normal: “I bought a whip.”"
+  },
+  {
+    "id": "co-s1e4-medium-0022",
+    "context": "Annie tries to get Abed to come as her friend, framing their relationship through TV logic.",
+    "question": "Abed says he thought they were more like which pair from Friends?",
+    "options": ["Chandler and Phoebe", "Chandler and Rachel", "Joey and Monica", "Ross and Phoebe"],
+    "answer": "Chandler and Phoebe",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Abed says, “I figured we were more like chandler and phoebe. They never really had stories together.”"
+  },
+  {
+    "id": "co-s1e4-medium-0025",
+    "context": "In the psych lab, Duncan explains the setup while watching subjects through a monitor.",
+    "question": "What does Duncan reveal is actually the experiment?",
+    "options": ["The waiting", "A memory test", "A surprise quiz", "A lie detector session"],
+    "answer": "The waiting",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Duncan says, “our subjects are waiting… but… it’s actually happening right now. You see, the waiting is the experiment.”"
+  },
+  {
+    "id": "co-s1e4-hard-0026",
+    "context": "Duncan names his concept and gives a one-sentence explanation of how it works.",
+    "question": "What does Duncan call the experiment concept?",
+    "options": ["The Duncan Principle", "The Duncan Paradox", "The Duncan Protocol", "The Duncan Test"],
+    "answer": "The Duncan Principle",
+    "difficulty": "hard",
+    "episode": 4,
+    "description": "He announces it proudly: “The duncan principle is simple,” then starts lecturing about ego, id, and tantrums."
+  },
+  {
+    "id": "co-s1e4-medium-0027",
+    "context": "In the waiting room, Annie tells the subjects they’ll be starting soon, but one subject explodes immediately.",
+    "question": "Which subject yells that when you say something starts at 9:00.....?",
+    "options": ["Chang", "Star Burns", "Magnitude", "Fat Neil"],
+    "answer": "Chang",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Chang snaps, “When you say something starts at 9:00, it starts at nueve!” and spirals from there."
+  },
+  {
+    "id": "co-s1e4-easy-0042",
+    "context": "In the waiting room during the psych experiment, one subject is furious about how long it’s taking.",
+    "question": "What event does Troy say he was missing while waiting?",
+    "options": ["The Soul Train Awards", "The Grammys", "A basketball game", "A study session"],
+    "answer": "The Soul Train Awards",
+    "difficulty": "easy",
+    "episode": 4,
+    "description": "Troy breaks down yelling that he’s wasted his day and says, \"The soul train awards were tonight.\""
+  },
+  {
+    "id": "co-s1e4-medium-0044",
+    "context": "In Duncan’s experiment, the waiting room empties out over time until only one person remains.",
+    "question": "Who is the last student still waiting in the room?",
+    "options": ["Abed", "Jeff", "Troy", "Pierce"],
+    "answer": "Abed",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "After Duncan narrates the chaos, it gets to \"And then there were two\"—and ultimately Abed is the one who just calmly stays put at the end."
+  },
+  {
+    "id": "co-s1e4-hard-0033",
+    "context": "The waiting-room experiment drags on far longer than anyone expects, and one subject becomes legendary.",
+    "question": "How long does Abed say he waited in the room?",
+    "options": ["6 hours", "12 hours", "26 hours", "48 hours"],
+    "answer": "26 hours",
+    "difficulty": "hard",
+    "episode": 4,
+    "description": "“Sorry you’ve been waiting 26 hours,” and later Abed confirms it, saying he stayed because Annie asked and said they were friends."
+  },
+  {
+    "id": "co-s1e4-medium-0045",
+    "context": "The experiment goes off the rails when Abed refuses to react the way Duncan expects.",
+    "question": "What happens when the last subject won’t leave the room?",
+    "options": [
+      "Professor Duncan breaks down and throws everyone out",
+      "Professor Duncan throws Abed out",
+      "Annie cancels the experiment and apologizes to Abed",
+      "Professor Duncan calls security"
+    ],
+    "answer": "Professor Duncan breaks down and throws everyone out",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Duncan panics that his study is ruined—\"He has warped the duncan principle\"—then spirals into yelling and kicks everyone out: \"Get out! Get out, you dorks!\""
+  },
+  {
+    "id": "co-s1e4-medium-0030",
+    "context": "Shirley and Jeff walk together and start bonding over commentary about other people.",
+    "question": "Shirley says Pierce is like what character because of his ear device?",
+    "options": ["Inspector Gadget", "Batman", "MacGyver", "RoboCop"],
+    "answer": "Inspector Gadget",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Shirley laughs, “I know a lot of grown men with radar dishes coming out of their ear… He’s like inspector gadget.”"
+  },
+  {
+    "id": "co-s1e4-medium-0043",
+    "context": "Jeff and Shirley gossip about Vaughn and start piling on weirdly specific observations.",
+    "question": "Which specific detail about Vaughn becomes the running joke that makes them laugh the most?",
+    "options": ["His tiny nipples", "His tiny nose", "His tiny feet", "His tattoos"],
+    "answer": "His tiny nipples",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Shirley keeps pushing it—\"tell me you've noticed how small his nipples are\"—and later adds, \"My kids have got hamsters with bigger nips.\""
+  },
+  {
+    "id": "co-s1e4-medium-0031",
+    "context": "The gossip shifts to Vaughn, and Shirley has an oddly specific read on his look.",
+    "question": "What does Shirley say about Vaughn’s hair?",
+    "options": [
+      "It’s perpetually moist",
+      "It’s always full of sand",
+      "It smells like cologne",
+      "It’s dyed blue"
+    ],
+    "answer": "It’s perpetually moist",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Shirley complains, “What is it with his hair? It’s perpetually moist.”"
+  },
+  {
+    "id": "co-s1e4-easy-0046",
+    "context": "Britta confides in Jeff about her situation with Vaughn and something he gave her that changes the vibe.",
+    "question": "What does Vaughn give Britta that freaks her out?",
+    "options": ["A poem", "A bracelet", "A mixtape", "A key to his apartment"],
+    "answer": "A poem",
+    "difficulty": "easy",
+    "episode": 4,
+    "description": "Britta says, \"And he gave me something.\" Jeff immediately goes, \"Herpes?\" She answers, \"No. This.\" Jeff realizes it’s \"A poem?\""
+  },
+  {
+    "id": "co-s1e4-medium-0047b",
+    "context": "After Jeff’s joke blows up in his face, he and Britta have an awkward, honest talk about what kind of friendship they can actually have.",
+    "question": "What “friend level” does Jeff suggest as the compromise between total stranger and full boyfriend-style support?",
+    "options": [
+      "The level where you sometimes have to cat-sit",
+      "The level where you sometimes have to cover for one another",
+      "The level where you sometimes have to help move",
+      "The level where you become study partners only"
+    ],
+    "answer": "The level where you sometimes have to cat-sit",
+    "difficulty": "medium",
+    "episode": 4,
+    "description": "Jeff asks if there’s a spot “between total stranger and having to hear about the guys you date,” and they land on: \"the friend level where you sometimes have to cat-sit.\""
+  },
+  {
+    "id": "co-s1e5-easy-0001",
+    "context": "**EPISODE 5**: Morning announcements — the dean tries to hype the school up with a big claim about Greendale’s legacy.",
+    "question": "Which actor does the dean call a prestigious Greendale alumnus?",
+    "options": ["Luis Guzman", "John Leguizamo", "Bruce Hornsby", "Robin Williams"],
+    "answer": "Luis Guzman",
+    "difficulty": "easy",
+    "episode": 5,
+    "description": "The dean announces that among Greendale’s “prestigious alumni” is “Mr. Luis guzman.”"
+  },
+  {
+    "id": "co-s1e5-medium-0002",
+    "context": "The announcement continues — the dean lists what’s happening later in the week to make Greendale feel ‘real.’",
+    "question": "What two things does the dean say will happen this Friday?",
+    "options": [
+      "A statue dedication and a new school song unveiling",
+      "A pep rally and a scholarship ceremony",
+      "A fundraiser and a new school song unveiling",
+      "A fundraiser and a statue dedication"
+    ],
+    "answer": "A statue dedication and a new school song unveiling",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "He says they’ll be “dedicating a statue of guzman” and “unveiling our brand-new school song.”"
+  },
+  {
+    "id": "co-s1e5-medium-0005",
+    "context": "Abed daydreams about Luis Guzman visiting campus and lists movies he wants to ask him about.",
+    "question": "Which of these movies does Abed NOT mention asking Luis Guzman about?",
+    "options": ["Carlito's Way", "The Cowboy Way", "The Hard Way", "The High Way"],
+    "answer": "The High Way",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Abed lists “carlito's way, the cowboy way, the hard way, and q&a.” He never mentions anything called “The Highway.”"
+  },
+  {
+    "id": "co-s1e5-hard-0039",
+    "context": "Troy pranks Abed throughout the episode with ridiculous lies to mess with him.",
+    "question": "Which of these does Troy NOT use while messing with Abed in this episode?",
+    "options": [
+      "I'm related to Danny Glover",
+      "I'm President Obama's nephew",
+      "I invented rap music",
+      "I invented the Ferrari",
+      "I'm related to Levar Burton"
+    ],
+    "answer": "I'm related to Levar Burton",
+    "difficulty": "hard",
+    "episode": 5,
+    "description": "The running gag includes lines like “I'm president obama's nephew,” “Starting with me inventing the ferrari,” plus later references to “Troy invited rap music” and being related to Danny Glover."
+  },
+  {
+    "id": "co-s1e5-easy-0003",
+    "context": "In the hallway, Duncan corners Jeff to ask about someone in Jeff’s class.",
+    "question": "Who does Duncan say he is interested in?",
+    "options": ["Britta", "Annie", "Shirley", "Professor Slater"],
+    "answer": "Britta",
+    "difficulty": "easy",
+    "episode": 5,
+    "description": "Duncan asks about “that young lady in your spanish class the blonde with the pouty… sexuality and the ridiculous name” and Jeff confirms it."
+  },
+{
+  "id": "co-s1e5-medium-0007",
+  "context": "Jeff tries to fix a problem caused by Britta’s fake contact info on the study group sheet.",
+  "question": "How does Jeff say he found out the phone number Britta put on the study group contact sheet was fake?",
+  "options": [
+    "After a month-long texting affair with a guy from Boulder",
+    "After calling and getting voicemail",
+    "After calling and getting a restaurant delivery service",
+    "After texting with a guy who asked for suggestive pictures"
+  ],
+  "answer": "After a month-long texting affair with a guy from Boulder",
+  "difficulty": "medium",
+  "episode": 5,
+  "description": "Jeff tells Britta he learned the number was fake “in the awkward conclusion of a month-long text message affair with a dude from Boulder,” then immediately follows with: “Just give me your real number. I'll cleanse my palate while kevin rethinks his marriage.”"
+},
+  {
+    "id": "co-s1e5-medium-0008",
+    "context": "Jeff presses Britta for her real number, and Britta sets conditions.",
+    "question": "Britta says she’ll give her number only if he promises not to use it in any context other than what?",
+    "options": ["Friendship", "Schoolwork", "Emergencies", "Study Group"],
+    "answer": "Friendship",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Britta says: “I’ll give you my number if you promise not to use it in any other context than friendship.”"
+  },
+  {
+    "id": "co-s1e5-easy-0009",
+    "context": "Spanish class — Chang calls out a student by a nickname and the student corrects him.",
+    "question": "What name does the student say instead of “Star-Burns”?",
+    "options": ["Alex", "Toby", "Pete", "Franks"],
+    "answer": "Alex",
+    "difficulty": "easy",
+    "episode": 5,
+    "description": "Chang says “Star burns,” and the student replies: “My name’s alex, dude.”"
+  },
+  {
+    "id": "co-s1e5-easy-0041",
+    "context": "When Annie needs a school song, Pierce jumps in and brags about his musical talents.",
+    "question": "How does Pierce describe himself when offering to write the school song?",
+    "options": [
+      "An accomplished pianist and songwriter",
+      "An accomplished gutarist and composer",
+      "A professional DJ",
+      "A former music teacher"
+    ],
+    "answer": "An accomplished pianist and songwriter",
+    "difficulty": "easy",
+    "episode": 5,
+    "description": "Pierce says it straight: “You've got an accomplished pianist and songwriter sitting 3 feet away from you.”"
+  },
+  {
+    "id": "co-s1e5-medium-0015",
+    "context": "Pierce tries to insert himself into Annie’s school song problem by bragging about his musical credentials.",
+    "question": "What jingle does Pierce claim he wrote?",
+    "options": [
+      "Hawthorne Wipes' moist towelettes",
+      "Hawthorne Towels theme song",
+      "A commercial for green tea",
+      "A jingle for his car dealership"
+    ],
+    "answer": "Hawthorne Wipes' moist towelettes",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Pierce says: “I wrote the jingle for hawthorne wipe's moist towelettes.”"
+  },
+  {
+    "id": "co-s1e5-medium-0017",
+    "context": "After finding a cheat sheet during a test. Chang gives the class one last chance to confess, and the countdown makes everyone freak out.",
+    "question": "Who screams and confesses to writing the crib sheet?",
+    "options": ["Britta", "Annie", "Shirley", "Star-Burns"],
+    "answer": "Britta",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "During the countdown, we hear the panic and then: “I did it.” “Britta!”"
+  },
+  {
+    "id": "co-s1e5-medium-0040",
+    "context": "After Chang’s cheating threat, the study group vents about how extreme and unfair he is being.",
+    "question": "Troy says the only difference between Señor Chang and Stalin is what?",
+    "options": [
+      "He knows who Señor Chang is",
+      "Chang doesn’t have an army",
+      "Stalin never taught Spanish",
+      "Chang is shorter"
+    ],
+    "answer": "He knows who Señor Chang is",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Troy drops the line: “The only difference between señor chang and stalin is that I know who señor chang is.”"
+  },
+  {
+    "id": "co-s1e5-medium-0019",
+    "context": "Dean Pelton shows up to handle the cheating confession like it’s a major university scandal.",
+    "question": "Where does the dean say Britta’s tribunal will be held?",
+    "options": ["Borchert Hall", "Greendale library", "The cafeteria", "Horace Auditorium"],
+    "answer": "Borchert Hall",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "The dean announces her case “will be reviewed by a disciplinary tribunal tomorrow in borchart hall.”"
+  },
+  {
+    "id": "co-s1e5-hard-0020",
+    "context": "Britta realizes the tribunal location is weird and asks a clarifying question.",
+    "question": "What does Britta say Borchert Hall is?",
+    "options": ["The pool", "The theater", "The art room", "The parking lot"],
+    "answer": "The pool",
+    "difficulty": "hard",
+    "episode": 5,
+    "description": "Britta asks: “Isn't borchart hall the pool?” and the dean confirms there’s an Olympic-sized pool there."
+  },
+{
+  "id": "co-s1e5-medium-0042",
+  "context": "At the disciplinary tribunal, the dean introduces the panel and a title argument breaks out immediately.",
+  "question": "Which of these people is NOT present at the tribunal?",
+  "options": ["Professor Duncan", "Professor Whitman", "Dean Craig Pelton", "Ben Chang"],
+  "answer": "Professor Whitman",
+  "difficulty": "medium",
+  "episode": 5,
+  "description": "The dean convenes the tribunal and names the judges as himself (Dean Craig Pelton), Ian Duncan, and Ben Chang. Professor Whitman is not part of the panel."
+},
+  {
+    "id": "co-s1e5-medium-0043",
+    "context": "Jeff argues about conflicts of interest, and the dean tries to ‘balance’ bias in a very Greendale way.",
+    "question": "What does Dean Pelton say to justify the tribunal’s ‘impartiality’?",
+    "options": [
+      "I go both ways",
+      "I play both sides",
+      "I swing both directions",
+      "I play for both teams"
+    ],
+    "answer": "I go both ways",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "The dean hears complaints about bias—“two biases, one on each side”—and blurts, “and I go both ways,” then immediately says, “Oh, let's strike that. Lashonda, can we please strike that? I am impartial.”"
+  },
+  {
+    "id": "co-s1e5-medium-0034",
+    "context": "The tribunal reaches a resolution that lets Britta stay but adds a condition.",
+    "question": "What condition is added for Britta to be fully exonerated?",
+    "options": [
+      "Weekly psychological counseling",
+      "Retaking the test",
+      "Public apology to Chang",
+      "Community service hours"
+    ],
+    "answer": "Weekly psychological counseling",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Duncan recommends she be exonerated “on the condition that she receives psychological counseling on a weekly basis.”"
+  },
+  {
+    "id": "co-s1e5-medium-0044",
+    "context": "Abed escalates his prank after trying and failing to get one over on Troy.",
+    "question": "How does Abed ultimately get back at Troy with his own prank?",
+    "options": [
+      "He makes a fake alien transmission video",
+      "He hides Troy’s backpack on the roof",
+      "He edits Troy’s test answers",
+      "He fakes a kidnapping"
+    ],
+    "answer": "He makes a fake alien transmission video",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Abed shows an “alien” message—“Greetings, commander”—with invented language, “credible alien hand movements,” and even a green screen vibe, all to mess with Troy."
+  },
+  {
+    "id": "co-s1e5-easy-0045",
+    "context": "Pierce melts down in rehearsal and admits he can’t actually write a real original school song.",
+    "question": "Pierce says he’s no more of a songwriter than who?",
+    "options": ["Billy Joel", "Bruce Hornsby", "Elton John", "Prince"],
+    "answer": "Billy Joel",
+    "difficulty": "easy",
+    "episode": 5,
+    "description": "Pierce confesses: “I'm a fraud, annie. I'm no more of a songwriter than you or billy joel.”"
+  },
+  {
+    "id": "co-s1e5-medium-0037",
+    "context": "In rehearsal, Annie tries to motivate Pierce with a harsh pep talk she claims her mother once gave her.",
+    "question": "Which of these is NOT something Annie says her mother told her when she wanted to quit cheerleading?",
+    "options": [
+      "You're not very pretty",
+      "You have no boobs",
+      "You can't do a basket toss to save your life",
+      "You have terrible rhythm"
+    ],
+    "answer": "You have terrible rhythm",
+    "difficulty": "medium",
+    "episode": 5,
+    "description": "Annie quotes her mom: \"You're not very pretty, you have no boobs, and you can't do a basket toss to save your life\"—she never says anything about “terrible rhythm.”"
+  },
+  {
+    "id": "co-s1e5-hard-0038",
+    "context": "At the statue event, Pierce performs the ‘new’ Greendale song and the group immediately recognizes the melody.",
+    "question": "What famous artist does someone name when they realize what Pierce’s song sounds like?",
+    "options": ["Bruce Hornsby", "Billy Joel", "Elton John", "Prince"],
+    "answer": "Bruce Hornsby",
+    "difficulty": "hard",
+    "episode": 5,
+    "description": "While Pierce plays, someone asks: “Is this bruce hornsby?” and the reply is “Yep.”"
+  },
+  {
+    "id": "co-s1e5-hard-0046",
+    "context": "At the statue dedication, Pierce performs the ‘new’ Greendale song and the group realizes it’s not actually original.",
+    "question": "Which song does Pierce steal the melody from?",
+    "options": [
+      "The Way It Is",
+      "Piano Man",
+      "Pride (In the Name of Love)",
+      "Don’t Stop Believin’"
+    ],
+    "answer": "The Way It Is",
+    "difficulty": "hard",
+    "episode": 5,
+    "description": "Pierce plays the tune and the group calls it out—“Is this bruce hornsby? Yep.”—because it’s basically “The Way It Is,” not an original anthem."
+  },
+  {
+    "id": "co-s1e6-easy-0001",
+    "context": "**EPISODE 6**: In Spanish study, the group is reviewing astronomy terms and using weird memory tricks to remember them.",
+    "question": "What does Troy correctly identify as “a small, fading remnant of a star”?",
+    "options": ["A white dwarf", "A red giant", "A comet", "A supernova"],
+    "answer": "A white dwarf",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "Troy answers: “A white dwarf.” Then the memory technique gets explained with “Dwarves hate being called midgets, and midgets are small.”"
+  },
+  {
+    "id": "co-s1e6-medium-0002",
+    "context": "The study session continues and they move from star remnants to what happens after a star collapses.",
+    "question": "What does a star turn into after it collapses?",
+    "options": ["A black hole", "A white dwarf", "A planet", "A nebula"],
+    "answer": "A black hole",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "After a joke answer (“A movie of the week”), the correct answer is stated: “A black hole. Right.”"
+  },
+  {
+    "id": "co-s1e6-medium-0003",
+    "context": "While they’re studying, Pierce tries to sound informed and immediately makes it disgusting.",
+    "question": "What black hole does Pierce say is the only one worth studying?",
+    "options": ["Sagittarius A", "Andromeda X", "Orion’s Eye", "Milky Way Prime"],
+    "answer": "Sagittarius A",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Pierce says: “There’s only one black hole worth studying. It’s called Sagittarius A.”"
+  },
+  {
+    "id": "co-s1e6-hard-0004",
+    "context": "Pierce keeps going with the astronomy fact and turns it into a crude flex.",
+    "question": "Pierce says Sagittarius A has the density of how many suns?",
+    "options": ["40", "4", "400", "14"],
+    "answer": "40",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "Pierce claims it has “the density of 40 suns” and then adds, “Just like my wiener.”"
+  },
+  {
+    "id": "co-s1e6-easy-0034",
+    "context": "The dean approaches Troy about joining Greendale’s team, and the group references Troy’s old fame before he came to Greendale.",
+    "question": "What sport was Troy famous for before Greendale?",
+    "options": ["Football", "Basketball", "Baseball", "Track"],
+    "answer": "Football",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "The dean recognizes Troy from Riverside High and talks about his star status from before Greendale—specifically tied to football."
+  },
+  {
+    "id": "co-s1e6-medium-0007",
+    "context": "The dean rolls into the study group’s space and can’t stop fanboying over Troy’s high school reputation.",
+    "question": "What position does the dean say Troy played?",
+    "options": ["Quarterback", "Linebacker", "Wide receiver", "Kicker"],
+    "answer": "Quarterback",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "The dean blurts out that he’s talking to “Troy Barnes” and calls him a “star quarterback from Riverside High.”"
+  },
+  {
+    "id": "co-s1e6-medium-0008",
+    "context": "The dean pitches Troy on joining Greendale’s team and tries to make it sound inspirational.",
+    "question": "What is the Greendale football team called?",
+    "options": ["The Human Beings", "The Grizzlies", "The Falcons", "The Thunderdome"],
+    "answer": "The Human Beings",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Troy repeats it in disbelief—“The team’s name is the Human Beings?”—and the dean confirms: “Yeah. My idea.”"
+  },
+  {
+    "id": "co-s1e6-hard-0009",
+    "context": "The dean explains why he changed the name from something more typical.",
+    "question": "What was the team’s old name before the dean changed it?",
+    "options": ["The Greendale Grizzlies", "The Greendale Eagles", "The Greendale Rams", "The Greendale Spartans"],
+    "answer": "The Greendale Grizzlies",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "The dean says it “was the Greendale Grizzlies” before he changed it to the Human Beings because a lot of these students have been called animals their whole lives."
+  },
+  {
+    "id": "co-s1e6-easy-0011",
+    "context": "After the dean’s pitch, Annie bluntly shuts it down and reframes Troy’s injury as a good thing.",
+    "question": "Annie says Troy’s injury happened during what?",
+    "options": ["A keg stand", "A touchdown run", "A pep rally", "A weightlifting session"],
+    "answer": "A keg stand",
+    "difficulty": "easy",
+    "episode": 6,
+    "description": "Annie says, “Getting injured in that keg stand was the best thing that ever happened to him.”"
+  },
+  {
+    "id": "co-s1e6-medium-0012",
+    "context": "Pierce jumps in to help the dean with the mascot problem and sells himself like a consultant.",
+    "question": "Which of these does Pierce NOT list as part of his experience?",
+    "options": ["Image management", "Icon development", "Y2K preparedness", "Sports medicine"],
+    "answer": "Sports medicine",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Pierce claims “image management, icon development, and Y2K preparedness,” but he never mentions anything medical."
+  },
+  {
+    "id": "co-s1e6-hard-0018",
+    "context": "Pierce and the dean review early mascot sketches that Pierce made on his own initiative.",
+    "question": "Pierce says he modeled his Human Being prototype after what famous drawing?",
+    "options": ["Da Vinci’s Vitruvian Man", "Michelangelo’s David", "The Thinker", "The Mona Lisa"],
+    "answer": "Da Vinci’s Vitruvian Man",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "Pierce says he “took the liberty” of thumbnailing it and modeled it after “Da Vinci’s Vitruvian Man.”"
+  },
+  {
+    "id": "co-s1e6-medium-0019",
+    "context": "The dean critiques Pierce’s mascot sketch and goes straight to an awkward detail.",
+    "question": "What does the dean say is “a little small” in the prototype drawing?",
+    "options": ["The penis", "The head", "The arms", "The feet"],
+    "answer": "The penis",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "The dean says, “The p*nis is a little small, I think,” while staring at the sketch."
+  },
+  {
+    "id": "co-s1e6-medium-0020",
+    "context": "Jeff discovers promotional material that makes him look like he belongs somewhere he doesn’t want to advertise.",
+    "question": "What does Jeff worry would hurt his future career if outsiders found out?",
+    "options": [
+      "That he’s a student at a community college",
+      "That he failed as a lawyer",
+      "That he´s a cheater",
+      "That he works for the dean"
+    ],
+    "answer": "That he’s a student at a community college",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Jeff says that if someone outside finds out he’s “a student at a community college,” it could have “a negative impact” on his career."
+  },
+  {
+    "id": "co-s1e6-medium-0039",
+    "context": "Jeff sees promotional material using his image and panics about the career damage, while the dean hints he can make the problem disappear.",
+    "question": "What does the dean want from Jeff in exchange for not mailing Jeff’s pictures out?",
+    "options": [
+      "Convince Troy to join the football team",
+      "Write the new school song",
+      "Join the football team himself",
+      "Take him out to dinner"
+    ],
+    "answer": "Convince Troy to join the football team",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "The dean suggests he wouldn’t need the campaign if he could announce to the press that Troy Barnes is playing football at Greendale—pressuring Jeff to make that happen."
+  },
+  {
+    "id": "co-s1e6-medium-0025",
+    "context": "Jeff tries to pull Troy aside and talk honestly about what he misses from his old identity.",
+    "question": "Which of these does Troy not say he misses from playing football?",
+    "options": ["The best at something", "I miss having a coach", "I miss being popular", "I miss knowing what to think"],
+    "answer": "The best at something",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Troy admits: “I miss being the best at something. I miss having a coach. I miss knowing what to think.”"
+  },
+  {
+    "id": "co-s1e6-hard-0026",
+    "context": "Jeff uses a dramatic pitch to convince Troy football is still his natural lane, then it spirals into awkward labels.",
+    "question": "When Jeff says football is “in your blood,” Troy responds with what?",
+    "options": ["That’s racist", "That’s inspiring", "That’s science", "That’s pathetic"],
+    "answer": "That’s racist",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "Jeff says “It’s in your blood,” and Troy shoots back: “That’s r*cist.” Jeff keeps trying: “Your soul. That’s r*cist.”"
+  },
+  {
+    "id": "co-s1e6-hard-0027",
+    "context": "Jeff continues the pitch and tries to lock Troy into a decision with a nickname he shouldn’t know.",
+    "question": "What nickname does Jeff use for Troy during the pitch?",
+    "options": ["T-Bone", "Troy Boy", "Wonder Boy", "Barnes"],
+    "answer": "T-Bone",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "Jeff says the decision has to be yes, calls him “T-Bone,” and Troy immediately asks how Jeff knew that nickname. Jeff replies..Because you're a football player and your name begins with T"
+  },
+  {
+    "id": "co-s1e6-hard-0030",
+    "context": "Jeff warns Troy outside the pep rally, but Troy reveals a secret about his original injury.",
+    "question": "Troy says he hurt himself during the keg flip for what reason?",
+    "options": [
+      "He did it on purpose because he couldn’t take the pressure",
+      "He did it on purpose because he didnt want to go college",
+      "He was pushed by a teammate",
+      "It was a mistake when trying to impress a girl"
+    ],
+    "answer": "He did it on purpose because he couldn’t take the pressure",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "Troy admits: “I hurt myself on purpose… There was a scout coming… and I couldn’t take the pressure. So I took the easy way out.”"
+  },
+  {
+    "id": "co-s1e6-hard-0035",
+    "context": "Annie confronts Jeff about pressuring Troy and calls out how manipulative the whole situation is.",
+    "question": "How old does Annie describe herself when she calls Jeff out?",
+    "options": ["18", "19", "17", "20"],
+    "answer": "18",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "Annie says, “Because I’m an 18-year-old girl and you made me cry in public,” to underline how messed up the situation feels."
+  },
+{
+  "id": "co-s1e6-medium-0037",
+  "context": "Annie threatens to expose what kind of friend Jeff really is.",
+  "question": "What does Jeff claim is the real reason Annie is so upset about Troy playing football again?",
+  "options": [
+    "She’s hopelessly in love with Troy",
+    "She is only interested in academics",
+    "She wants Troy to fail",
+    "She’s jealous of their friendship"
+  ],
+  "answer": "She’s hopelessly in love with Troy",
+  "difficulty": "medium",
+  "episode": 6,
+  "description": "Jeff flips it on Annie and says the issue isn’t his behavior—it's that she’s “hopelessly in love with him,” implying that’s what’s driving her reaction."
+},
+  {
+    "id": "co-s1e6-hard-0038",
+    "context": "When Annie confides in Britta about Troy and his old persona, she blurts out why she couldn’t speak up in high school.",
+    "question": "Why does Annie say she couldn’t talk to Troy back then, even though she liked him?",
+    "options": [
+      "Because her parents were bigots",
+      "Because she had a boyfriend",
+      "Because Troy didn’t know she existed",
+      "Because she was focused on getting into college"
+    ],
+    "answer": "Because her parents were bigots",
+    "difficulty": "hard",
+    "episode": 6,
+    "description": "Annie describes how the people who actually liked Troy weren’t allowed to say anything because “their parents are bigots,” explaining why she stayed quiet."
+  },
+  {
+    "id": "co-s1e6-medium-0031",
+    "context": "After the pep rally chaos, the group gets introduced to the ‘solution’ for the mascot problem.",
+    "question": "How does the dean describe the new Greendale Human Being mascot?",
+    "options": ["Ethnically neutral", "Aggressively intimidating", "Historically accurate", "Military-grade"],
+    "answer": "Ethnically neutral",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "The dean says: “say hello to our ethnically neutral mascot, the Greendale Human Being.”"
+  },
+  {
+    "id": "co-s1e6-medium-0033",
+    "context": "At the end, Abed and Troy hijack the campus announcement system and rattle off a few ridiculous ‘announcements.’",
+    "question": "Which of these is NOT one of the announcements they make at the end?",
+    "options": [
+      "All announcements will be cool, starting right now",
+      "Butt soup",
+      "I am not Hadji from Jonny Quest, Jeff Winger",
+      "The cafeteria will be serving free tacos all day"
+    ],
+    "answer": "The cafeteria will be serving free tacos all day",
+    "difficulty": "medium",
+    "episode": 6,
+    "description": "Their real announcements include “All announcements will be cool, starting right now,” “butt soup,” and “I am not Hadji from Jonny Quest, Jeff Winger.” No one says anything about free tacos."
+  },
+  {
+    "id": "co-s1e7-easy-0001",
+    "context": "**EPISODE 7**: In class, the instructor starts with a definition before reminding everyone what to study for the upcoming quiz.",
+    "question": "What distribution does the instructor define as counting successes in yes-no experiments?",
+    "options": ["Bernoulli distribution", "Normal distribution", "Poisson distribution", "Uniform distribution"],
+    "answer": "Bernoulli distribution",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "The instructor says, “The bernoulli distribution is the number of successes in a sequence of independent yes-no experiments.”"
+  },
+  {
+    "id": "co-s1e7-medium-0035",
+    "context": "In the statistics lecture, the professor introduces Bernoulli and gives a quick reminder about what to study for the quiz.",
+    "question": "What is the name of the professor teaching the statistics class?",
+    "options": ["Professor Whitman", "Professor Slater", "Professor Duncan", "Professor Trevor"],
+    "answer": "Professor Slater",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "The professor is revealed to be Slater later in the episode."
+  },
+  {
+    "id": "co-s1e7-medium-0003",
+    "context": "Jeff tries to impress Professor Slater by turning a nerdy moment into flirtation, but she immediately checks him.",
+    "question": "Jeff jokes Bernoulli is famous for what, leading to a correction?",
+    "options": ["A french sauce used on meat and poultry", "A type of wine", "A pastry cream", "A cheese used in salads"],
+    "answer": "A french sauce used on meat and poultry",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Jeff says he’s “famous for his french sauce used on meat and poultry,” and Slater snaps back: “That’s bearnaise.”"
+  },
+  {
+    "id": "co-s1e7-medium-0037",
+    "context": "Jeff tries to flirt with Professor Slater, and she lists the things about him that actually appeal to her before drawing the line.",
+    "question": "Which of these is NOT one of Slater’s reasons for why she’d be attracted to dating Jeff?",
+    "options": [
+      "You're tall",
+      "You dress nice",
+      "I've graded enough of your tests to know I'd never feel mentally inadequate",
+      "You’re handsome"
+    ],
+    "answer": "You’re handsome",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Slater says, “You're tall, you dress nice, and I've graded enough of your tests to know I'd never feel mentally inadequate.” She never says anything about him being handsome."
+  },
+  {
+    "id": "co-s1e7-hard-0004",
+    "context": "Slater reacts to Jeff’s approach with a blunt assessment of how he’s coming off.",
+    "question": "How does Professor Slater describe Jeff’s attempt at flirting?",
+    "options": ["Cute, but a little aggressive", "Smooth and respectful", "Awkward and timid", "Confident and subtle"],
+    "answer": "Cute, but a little aggressive",
+    "difficulty": "hard",
+    "episode": 7,
+    "description": "She says it’s “cute” and “a little aggressive,” then adds she’s attracted to men who “take charge.”"
+  },
+  {
+    "id": "co-s1e7-medium-0006",
+    "context": "Jeff resets and goes with a simpler, more direct line to Slater.",
+    "question": "What does Jeff say when he “starts over”?",
+    "options": ["Hey, you in the skirt, date me.", "I´ll pick you up at 8?", "Give me your number?", "Want to take this class somewhere private?"],
+    "answer": "Hey, you in the skirt, date me.",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Jeff blurts, “Hey, you in the skirt, date me,” and Slater plays along—."
+  },
+  {
+    "id": "co-s1e7-hard-0007",
+    "context": "Slater explains why she won’t cross a line, even though she clearly likes the attention.",
+    "question": "What is Slater’s stated reason for refusing Jeff?",
+    "options": ["She doesn’t date students", "She’s already engaged", "She doesnt date", "Student relationships are forbidden at Greendale"],
+    "answer": "She doesn’t date students",
+    "difficulty": "hard",
+    "episode": 7,
+    "description": "Slater says it plainly: “Only problem, I don’t date students.”"
+  },
+  {
+    "id": "co-s1e7-hard-0009",
+    "context": "Jeff tries to argue he’s not really a typical student by listing “adult” credentials.",
+    "question": "Which of these does Jeff NOT use as part of his “I’m barely a student” argument?",
+    "options": ["I drive a Lexus", "I saw Ghostbusters in the theater", "My gums are receding", "I worked in a law firm"],
+    "answer": "I worked in a law firm",
+    "difficulty": "hard",
+    "episode": 7,
+    "description": "Jeff stacks: “I drive a lexus… i saw ghost busters in the theater… Look, my gums are receding,” but he never claims he worked in a  law firm."
+  },
+  {
+    "id": "co-s1e7-medium-0011",
+    "context": "Duncan corners Jeff about a party he’s hosting and tries to guilt him into showing up.",
+    "question": "What party does Duncan invite Jeff to?",
+    "options": ["A Día de los Muertos party", "A faculty mixer", "A Halloween rave", "A Cinco de Mayo party"],
+    "answer": "A Día de los Muertos party",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Duncan asks, “are you coming to my dias de los muertos party?”"
+  },
+  {
+    "id": "co-s1e7-hard-0014",
+    "context": "Pierce mentions he’s taking a pill, and Jeff immediately starts telling a cautionary story.",
+    "question": "What is the pill Pierce says he is taking called?",
+    "options": ["Xenolovaden", "Xanax", "Adderall", "Ibuprofen"],
+    "answer": "Xenolovaden",
+    "difficulty": "hard",
+    "episode": 7,
+    "description": "Pierce answers: “Xenolovaden.” Jeff responds that his grandpa took it “when he was around your age.”"
+  },
+  {
+    "id": "co-s1e7-easy-0015",
+    "context": "At Duncan’s party, he tries to run a structured ‘tradition’ like he’s hosting a formal event.",
+    "question": "What personalized items does Duncan proudly say he prepared for everyone?",
+    "options": ["Cookie tombstones", "Paper flower crowns", "Name tags", "Party favors"],
+    "answer": "Cookie tombstones",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "Duncan says, “I’ve got everyone’s personalized cookie tombstones, por tradicion.”"
+  },
+  {
+    "id": "co-s1e7-easy-0038",
+    "context": "Jeff is at Duncan’s party, and someone fills him in on where Professor Slater actually is that night.",
+    "question": "Who tells Jeff that Professor Slater is at the faculty party?",
+    "options": ["Chang", "Troy", "Duncan", "Pierce"],
+    "answer": "Chang",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "When Jeff asks about Slater, Chang is the one who says she’s at the faculty party in the cafeteria."
+  },
+  {
+    "id": "co-s1e7-easy-0039",
+    "context": "At the Día de los Muertos party, Pierce shows up in a specific costume and tries to act like the character.",
+    "question": "What does Pierce dress up as?",
+    "options": ["Beastmaster", "Gladiator", "Captain America", "Thor"],
+    "answer": "Beastmaster",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "Pierce announces, “I am the beastmaster. From the movie beastmaster,” even though later he admits he never actually saw it."
+  },
+  {
+    "id": "co-s1e7-easy-0040",
+    "context": "At Duncan’s party, Annie is dressed up in a simple costume that fits the theme of the night.",
+    "question": "What costume is Annie wearing?",
+    "options": ["Skeleton", "Witch", "Cat", "Angel"],
+    "answer": "Skeleton",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "During the party scenes, Annie is costumed as a skeleton."
+  },
+  {
+    "id": "co-s1e7-easy-0041",
+    "context": "At the party, Troy shows up dressed as a specific celebrity character for Halloween.",
+    "question": "What is Troy dressed up as?",
+    "options": ["Eddie Murphy", "Eddie Griffin", "Chris Tucker", "Chris Rock"],
+    "answer": "Eddie Murphy",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "Troy is in an Eddie Murphy costume during the party sequence."
+  },
+  {
+    "id": "co-s1e7-easy-0042",
+    "context": "At Duncan’s party, Chang shows up in costume and gets labeled by others based on what he’s wearing.",
+    "question": "What costume is Chang wearing?",
+    "options": ["Matador", "Frodo", "Hobbit", "Urkel"],
+    "answer": "Matador",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "Chang is dressed as a matador—he gets called “the eavesdropping matador” during the party."
+  },
+{
+    "id": "co-s1e7-easy-0043",
+    "context": "At the party, Shirley is in a recognizable costume that prompts quick jokes from others.",
+    "question": "What costume is Shirley wearing?",
+    "options": ["Harry Potter", "Mother Teresa", "Urkel", "Nurses outfit"],
+    "answer": "Harry Potter",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "She is referred to as Urkel and corrects that she is Harry Potter."
+  },
+  {
+    "id": "co-s1e7-easy-0036",
+    "context": "At the party, Abed commits to a full character costume and sticks to the bit even when people push back.",
+    "question": "What costume does Abed wear?",
+    "options": ["Batman", "A matador", "A skeleton", "Eddie Murphy"],
+    "answer": "Batman",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "People call him “Batman” repeatedly—Pierce asks the “real Batman” a question, and Slater even says, “Abed, you’re not batman.”"
+  },
+  {
+    "id": "co-s1e7-medium-0019",
+    "context": "Troy corners Abed (in costume) with a question he’s been dying to ask the “real Batman”.",
+    "question": "What does Troy ask Abed?",
+    "options": ["Am I good looking?", "Do you fight crime for money?", "Can you teach me karate?", "Are you rich?"],
+    "answer": "Am I good looking?",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Troy asks, “Can I ask you something I always wanted to ask the real batman? … Am I good looking?”"
+  },
+  {
+    "id": "co-s1e7-hard-0020",
+    "context": "Star-Burns tries to sell drugs while people are in costume, and the whole exchange gets weirdly roleplay-heavy.",
+    "question": "Which of these is NOT one of the drug names Star-Burns lists?",
+    "options": ["'Ludes", "Dreamers", "Johnny boys", "Zoomies"],
+    "answer": "Zoomies",
+    "difficulty": "hard",
+    "episode": 7,
+    "description": "Star-Burns says he has “‘ludes… dreamers… Johnny boys,” but never says “Zoomies.”"
+  },
+  {
+    "id": "co-s1e7-medium-0021",
+    "context": "People at the party begin reacting to whatever Pierce took, describing the effects in blunt, uncomfortable terms.",
+    "question": "Which of these does Pierce complain about after taking something?",
+    "options": [
+      "He keeps grinding his teeth and wants to kiss everybody",
+      "He can’t stop talking and laughing",
+      "He keeps talking to himself",
+      "He tries to hump the mannequins"
+    ],
+    "answer": "He keeps grinding his teeth and wants to kiss everybody",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Pierce says, “I keep grinding my teeth, and I want to kiss everybody,” while others add more complaints."
+  },
+  {
+    "id": "co-s1e7-medium-0045",
+    "context": "Jeff shows up at the faculty party even though he claims he’s not really a costume guy.",
+    "question": "What costume does Jeff finally wear later in the night?",
+    "options": ["A cowboy outfit", "James Bond tux", "Ryan Gosling Costume", "A gladiator costume"],
+    "answer": "A cowboy outfit",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Slater clocks it immediately—Jeff admits it’s basically “I own a cowboy outfit,” and she jokes about how tight it is."
+  },
+  {
+    "id": "co-s1e7-medium-0047",
+    "context": "Jealousy and high-school energy takes over at the faculty party, and Shirley turns it into petty revenge.",
+    "question": "What does Shirley do to Professor Slater’s car?",
+    "options": ["Rip off the antenna", "Slash the tires", "Key the paint", "Smash the windshield"],
+    "answer": "Rip off the antenna",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Shirley goes after “professor slim calves,” and the chaos ends with Slater’s car getting its antenna ripped off."
+  },
+  {
+    "id": "co-s1e7-medium-0023",
+    "context": "At the faculty party, Britta introduces herself to Slater with a pointed contrast.",
+    "question": "What does Britta say after Slater introduces herself as “Michelle Slater, Ph.D.”?",
+    "options": ["Britta Perry, G.E.D.", "Britta Perry, G.C.E", "Britta Perry, community college", "Britta Perry, student"],
+    "answer": "Britta Perry, G.E.D.",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Slater says, “Michelle slater, ph.d.” and Britta fires back, “Britta perry, g.e.d.”"
+  },
+{
+  "id": "co-s1e7-medium-0044",
+  "context": "After both of them get rejected, Chang tells Jeff there’s one move he’s sure Jeff has never tried, and Jeff actually uses it.",
+  "question": "Which move does Chang tell Jeff to use that finally gets Slater to agree?",
+  "options": [
+    "Begging: “Please sleep with me. Please. Pretty please. I’m so lonely…”",
+    "Acting jealous and starting a fight",
+    "Being desperate and agreeing to her every request",
+    "Ignoring her until she chases you"
+  ],
+  "answer": "Begging: “Please sleep with me. Please. Pretty please. I’m so lonely…”",
+  "difficulty": "medium",
+  "episode": 7,
+  "description": "Chang suggests the desperate plea move—“Please sleep with me… Pretty please… I’m so lonely…”—and that’s the approach that finally gets Slater to cave with conditions."
+},
+  {
+    "id": "co-s1e7-easy-0046",
+    "context": "The study group storms into the faculty party to drag Jeff back, because they think he’s ditching someone important.",
+    "question": "Why do they insist Jeff has to return to Annie’s party?",
+    "options": [
+      "Because she was feeling unpopular",
+      "Because Duncan demanded it as the host",
+      "Because the dance was about to start",
+      "Because Annie was feeling abandoned"
+    ],
+    "answer": "Because she was feeling unpopular",
+    "difficulty": "easy",
+    "episode": 7,
+    "description": "They tell Jeff he has to go back because Annie’s party is falling apart and “she’s feeling unpopular.”"
+  },
+  {
+    "id": "co-s1e7-hard-0048",
+    "context": "Jeff gets pulled away to deal with Pierce’s full-blown panic, and the night spirals into a ridiculous rescue.",
+    "question": "How does the night end after Jeff tries to talk Pierce down?",
+    "options": [
+      "Pierce’s desk-fort collapses and Abed swoops in to save them",
+      "Pierce’s desk-fort collapses and Jeff saves him",
+      "Pierce passes out and they leave him in the library",
+      "Pierce gets naked and jumps in the pool"
+    ],
+    "answer": "Pierce’s desk-fort collapses and Abed swoops in to save them",
+    "difficulty": "hard",
+    "episode": 7,
+    "description": "Pierce freaks out in his desk fort, Jeff talks him down, and the whole thing ends with the fort collapsing as Abed rushes in to help during the chaos."
+  },
+  {
+    "id": "co-s1e7-medium-0034",
+    "context": "Near the end, Troy and Abed decompress with weird, oddly wholesome thoughts about snacks and existential fears.",
+    "question": "What does Troy say is one of his biggest fears?",
+    "options": ["Waking up as a donut", "Getting stuck in a desk fort", "Being Batman forever", "Losing his hair"],
+    "answer": "Waking up as a donut",
+    "difficulty": "medium",
+    "episode": 7,
+    "description": "Troy says, “If I ever, like, woke up as a donut,” and admits he’d “eat yourself” without even questioning it."
+  },
+  {
+    "id": "co-s1e8-easy-0003",
+    "context": "**EPISODE 8**: In the hallway after class, Troy tries out a goofy bit to get Annie’s attention.",
+    "question": "What does Troy pretend to be?",
+    "options": ["Annie’s backpack", "Chang’s chalkboard", "A vending machine", "Jeff’s car"],
+    "answer": "Annie’s backpack",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Troy says, “Hey. Shirley, look. I'm Annie's backpack.”"
+  },
+  {
+    "id": "co-s1e8-medium-0004",
+    "context": "Troy frames a ‘hypothetical’ about asking someone out and wants Annie’s advice on what to do.",
+    "question": "What event does Annie suggest as a date idea on campus?",
+    "options": ["Picnic with live music", "A movie screening in the cafeteria", "Dinner and drinks", "A club fair in the quad"],
+    "answer": "Picnic with live music",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Annie suggests, “Tomorrow, there's a picnic with live music on the east lawn… A Night Under the Stars.”"
+  },
+  {
+    "id": "co-s1e8-medium-0005",
+    "context": "Troy reacts to Annie’s suggestion and casually reveals the name of the person he’s thinking about asking out.",
+    "question": "Who does Troy say would love that kind of thing?",
+    "options": ["Randi", "Petra", "Diana", "Shia"],
+    "answer": "Randi",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Troy says, “Cool. I bet Randi would love that type of thing. He goes further to specify...Randi can be the name of a guy or a girl. And in this case, it is definitely a girl”"
+  },
+ {
+    "id": "co-s1e8-easy-0012",
+    "context": "Britta tries to clean up a mess from her recent breakup and approaches Vaughn.",
+    "question": "What word does Vaughn use to describe Britta when rejecting her apology?",
+    "options": ["Toxic", "Immature", "Desperate", "Clueless"],
+    "answer": "Toxic",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Vaughn shuts her down: “I can't accept your apology because you're toxic, Britta.”"
+  },
+  {
+    "id": "co-s1e8-medium-0016",
+    "context": "Shirley watches Jeff and quickly jumps to conclusions about his living situation.",
+    "question": "What does Shirley say Jeff is living?",
+    "options": ["Living in his car", "Living on the street", "Living on campus", "Living in a motel"],
+    "answer": "Living in his car",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Shirley goes, “Living in your car. Living in your car… You are living in your car, boy.”"
+  },
+  {
+    "id": "co-s1e8-medium-0037",
+    "context": "While everyone is processing Jeff’s situation, Pierce casually drops a story about a time he lived out of his car.",
+    "question": "What does Pierce say about living in his car?",
+    "options": [
+      "He lived in his car for a stretch in the ’70s",
+      "He lived in his car for a month after losing a bet",
+      "He lived in his car while touring with a band",
+      "He lived in his car to avoid paying rent"
+    ],
+    "answer": "He lived in his car for a stretch in the ’70s",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Pierce says, “I lived in my car for a stretch in the '70s… Nothing like bedding a woman on the vinyl back seat of a Skylark… [whispers] No condoms. I tell you, before AIDS, sex was like shaking hands.” Abed immediately tags it: “Hence, AIDS.”"
+  },
+  {
+    "id": "co-s1e8-easy-0039",
+    "context": "Jeff’s condo situation forces him to admit he needs somewhere to stay, and someone offers a practical option.",
+    "question": "Who offers Jeff a place to live with him?",
+    "options": ["Abed", "Troy", "Shirley", "Pierce"],
+    "answer": "Abed",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Abed offers, “You could stay with me in the dorms. My room has a bunk bed,” and later Jeff asks, “Can I live with you?”"
+  },
+  {
+    "id": "co-s1e8-medium-0021",
+    "context": "Abed uses a movie reference to explain Jeff’s personality and how losing comfort can change someone.",
+    "question": "Abed compares Jeff to which character/actor?",
+    "options": ["Goldie Hawn", "Meryl Streep", "Julia Roberts", "Diane Keaton"],
+    "answer": "Goldie Hawn",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Abed says, “You're Goldie Hawn, Jeff,” and brings up Overboard to explain the comparison."
+  },
+  {
+    "id": "co-s1e8-easy-0043",
+    "context": "Britta drops by the dorm, and Jeff and Abed introduce her to their neighbor from another country.",
+    "question": "What is the name of the roommate/neighbor from Poland?",
+    "options": ["Pavel", "Piotr", "Marek", "Lukasz"],
+    "answer": "Pavel",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Jeff introduces him: “This is Pavel. He lives next door. He's from Poland.”"
+  },
+  {
+    "id": "co-s1e8-medium-0042",
+    "context": "After a couple days of dorm life, Jeff explains what finally helped him accept losing his condo.",
+    "question": "What does Jeff say to Britta helped him come to terms with losing his condo?",
+    "options": [
+      "Using the dorm’s communal bathroom",
+      "Seeing Britta’s reaction to his new situation",
+      "Watching TV with Abed all night",
+      "Getting rid of his expensive clothes"
+    ],
+    "answer": "Using the dorm’s communal bathroom",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Jeff says, “There's a communal bathroom down the hallway. It actually helped me come to terms with losing my condo. You don't sit on a toilet like that until you've left the material world behind.”"
+  },
+  {
+    "id": "co-s1e8-hard-0022",
+    "context": "Troy and Annie prepare for the picnic, and Annie suggests one simple item that upgrades the whole plan.",
+    "question": "What does Troy call “genius” because he was going to use something much worse?",
+    "options": ["A picnic blanket", "Candles", "A cooler", "A bouquet of flowers"],
+    "answer": "A picnic blanket",
+    "difficulty": "hard",
+    "episode": 8,
+    "description": "Troy says, “A picnic blanket. Genius. I was gonna lay down newspaper.”"
+  },
+  {
+    "id": "co-s1e8-medium-0023",
+    "context": "Annie explains the sentimental value of the blanket she’s offering for the picnic.",
+    "question": "What does Annie say the blanket was used for?",
+    "options": [
+      "Her grandmother used it to court her grandfather",
+      "Her parents used it on their honeymoon",
+      "She made it herself",
+      "She was conceived on that blanket"
+    ],
+    "answer": "Her grandmother used it to court her grandfather",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Annie says, “It's the blanket my grandmother used to court my grandfather.”"
+  },
+  {
+    "id": "co-s1e8-easy-0038",
+    "context": "Pierce proudly ignores Britta’s wishes and turns her breakup mess into an opportunity for himself.",
+    "question": "What position does Pierce get in Vaughn’s band?",
+    "options": ["Keyboardist", "Drummer", "Lead singer", "Guitarist"],
+    "answer": "Keyboardist",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Pierce announces, “Good news is I'm the new keyboardist in his band.”"
+  },
+  {
+    "id": "co-s1e8-hard-0041",
+    "context": "Vaughn band plays and he performs a song aimed at Britta.",
+    "question": "Which of these is NOT a lyric from Vaughn’s song about Britta?",
+    "options": [
+      "“Saying goodbye to Britta was the hardest thing to do”",
+      "“But when someone's a b*tch and a liar, there ain't nothing left to woo”",
+      "“I'm getting rid of Britta”",
+      "“She's a no-good B”",
+      "“She's a GDB”",
+      "“She was never the one for me”"
+    ],
+    "answer": "“She was never the one for me”",
+    "difficulty": "hard",
+    "episode": 8,
+    "description": "The real song is a breakup roast—lines include “Saying goodbye to Britta was the hardest thing to do,” “when someone's a b*tch and a liar,” “She was never the one for me” line."
+  },
+  {
+    "id": "co-s1e8-medium-0029",
+    "context": "At the nurse’s office, Annie tries to create an emergency so Troy won’t go on the date without her.",
+    "question": "What does Annie claim is happening to her?",
+    "options": ["Her appendix is bursting", "She broke her ankle", "She has the flu", "She is getting dizzy"],
+    "answer": "Her appendix is bursting",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Annie blurts, “My appendix is bursting,” and commits hard with screams to sell it."
+  },
+  {
+    "id": "co-s1e8-hard-0030",
+    "context": "The nurse immediately tries to interpret the situation using his own assumptions from past cases.",
+    "question": "What does Nurse Jackie ask Troy and Annie right away?",
+    "options": [
+      "If they’re sexual partners",
+      "If they’ve eaten anything weird",
+      "If they were in Spanish class",
+      "If they live in the dorms"
+    ],
+    "answer": "If they’re sexual partners",
+    "difficulty": "hard",
+    "episode": 8,
+    "description": "Nurse Jackie says, “You guys are sexual partners, right?” and Annie panics: “Us? No… I have appendicitis.”"
+  },
+  {
+    "id": "co-s1e8-hard-0031",
+    "context": "Nurse Jackie decides Annie needs to be kept away from others and talks like this is standard procedure.",
+    "question": "Nurse Jackie says they don’t want another what “on our hands”?",
+    "options": ["Vanessa Parsons", "Piera Cooper", "Valerie Horace", "Gwen Barber"],
+    "answer": "Vanessa Parsons",
+    "difficulty": "hard",
+    "episode": 8,
+    "description": "She says, “It's policy. We don't want another Vanessa Parsons on our hands,” then jokes she was the “Typhoid Mary of herpes.”"
+  },
+  {
+    "id": "co-s1e8-medium-0032",
+    "context": "Abed privately tells Britta Jeff can’t stay in the dorms forever and needs to be pulled back to his normal life.",
+    "question": "What does Abed tell Britta to “use” to get Jeff moving?",
+    "options": ["Her lady parts", "Her connections", "Her guilt trips", "Her money"],
+    "answer": "Her lady parts",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Abed bluntly says, “Use your lady parts,” then lays out a plan to motivate Jeff."
+  },
+  {
+    "id": "co-s1e8-medium-0035",
+    "context": "By the end of the episode, Jeff acknowledges the shift and updates Abed on what he’s doing next.",
+    "question": "Where does Jeff say he checked into after leaving the dorm?",
+    "options": ["A motel", "His apartment", "Britta’s place", "A faculty office"],
+    "answer": "A motel",
+    "difficulty": "medium",
+    "episode": 8,
+    "description": "Jeff says, “I checked into a motel and I'm looking for apartments,” after realizing he couldn’t just stay forever."
+  },
+  {
+    "id": "co-s1e8-easy-0040",
+    "context": "In the dorm room, Abed reacts to something Jeff says with his signature rapid-fire reassurance.",
+    "question": "What word does Abed say three times in a row?",
+    "options": ["Cool", "Okay", "Nice", "Perfect"],
+    "answer": "Cool",
+    "difficulty": "easy",
+    "episode": 8,
+    "description": "Abed does his trademark rhythm: “Cool. Cool, cool, cool.”"
   }
 ]
+
+
+
+
+
+
+
+
 
