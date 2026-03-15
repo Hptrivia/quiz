@@ -109,11 +109,6 @@ async function renderChallengePage() {
       </div>
     `;
 
-    setTimeout(() => {
-      if (typeof showInstallCard === "function") {
-        showInstallCard();
-      }
-    }, 800);
   }
 
   submitBtn.addEventListener("click", () => {
