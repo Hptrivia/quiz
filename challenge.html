@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Challenge Mode</title>
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="apple-touch-icon" href="/assets/icons/icon-192.png" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body data-page="challenge">
+  <main class="container narrow">
+    <a href="index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+
+    <section class="panel">
+      <div id="challengeQuizBox">
+        <p id="challengeRoundText">Round 1</p>
+
+        <div class="play-progress-row">
+          <p id="challengeProgressText"></p>
+        </div>
+
+        <h2 id="challengeQuestionText"></h2>
+        <div id="challengeOptionsList" class="options"></div>
+
+        <p id="challengeScoreText">Score: 0</p>
+        <p id="challengeFeedbackText" class="feedback"></p>
+
+        <div class="cta-row">
+          <button id="challengeSubmitButton" class="primary-btn">Submit</button>
+          <button id="challengeNextButton" class="secondary-btn" style="display:none;">Next</button>
+        </div>
+      </div>
+
+      <div id="challengeResultBox" style="display:none;"></div>
+
+      <div id="installCard" class="install-card" style="display:none;">
+        <div class="install-card-content">
+          <p id="installText"></p>
+          <div class="install-card-actions">
+            <button id="installButton" class="primary-btn" type="button">Install App</button>
+            <button id="installDismiss" class="secondary-btn" type="button">Dismiss</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a id="removeAdsLink" class="footer-highlight" href="remove-ads.html">Ad-Free + Extras</a>
+        <a href="about.html">About</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+  <script src="assets/challenge.js"></script>
+  <script src="assets/install.js"></script>
+</body>
+</html>
