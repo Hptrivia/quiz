@@ -54,27 +54,36 @@ async function renderHomePage() {
   const themes = await loadThemes();
   const searchInput = document.getElementById("searchInput");
   const searchResults = document.getElementById("searchResults");
-  const featuredList = document.getElementById("featuredThemes");
   const categoryList = document.getElementById("categoryList");
-  updateRemoveAdsFooter();
+  const newlyAddedList = document.getElementById("newlyAddedList");
+
+  let newThemeSlugs = [];
+  try {
+    const data = await fetchJSON("data/new_themes.json");
+    newThemeSlugs = Array.isArray(data) ? data : [];
+  } catch (e) {
+    newThemeSlugs = [];
+  }
 
   function render(filteredThemes) {
-    if (featuredList) featuredList.innerHTML = "";
-    categoryList.innerHTML = "";
+    if (categoryList) categoryList.innerHTML = "";
+    if (newlyAddedList) newlyAddedList.innerHTML = "";
 
-    if (featuredList) {
-      filteredThemes.forEach(theme => {
-        const card = document.createElement("a");
-        card.className = "card";
-        card.href = `quiz.html?theme=${theme.slug}`;
-        card.innerHTML = `
-          <h3>${theme.title}</h3>
-          <p>${theme.description}</p>
-          <span class="badge">${theme.category}</span>
-        `;
-        featuredList.appendChild(card);
-      });
-    }
+
+if (newlyAddedList) {
+  const matchedNewThemes = newThemeSlugs
+    .map(slug => filteredThemes.find(theme => theme.slug === slug))
+    .filter(Boolean);
+
+  const card = document.createElement("a");
+  card.className = "card";
+  card.href = `category.html?category=${encodeURIComponent("Newly Added")}`;
+  card.innerHTML = `
+    <h3>Newly Added</h3>
+    <p>${matchedNewThemes.length} theme(s)</p>
+  `;
+  newlyAddedList.appendChild(card);
+}
 
     const grouped = groupByCategory(filteredThemes);
 
@@ -156,13 +165,30 @@ async function renderCategoryPage() {
   const themes = await loadThemes();
   const pageTitle = document.getElementById("categoryTitle");
   const themeList = document.getElementById("categoryThemes");
-  updateRemoveAdsFooter();
 
   pageTitle.textContent = categoryName || "Category";
+  themeList.innerHTML = "";
 
-  const filtered = themes
-    .filter(theme => theme.category.toLowerCase() === (categoryName || "").toLowerCase())
-    .sort((a, b) => a.title.localeCompare(b.title));
+  let filtered = [];
+
+  if ((categoryName || "").toLowerCase() === "newly added") {
+    try {
+      const newThemeSlugs = await fetchJSON("data/new_themes.json");
+
+      filtered = (Array.isArray(newThemeSlugs) ? newThemeSlugs : [])
+        .map(slug => themes.find(theme => theme.slug === slug))
+        .filter(Boolean);
+    } catch (e) {
+      filtered = [];
+    }
+  } else {
+    filtered = themes
+      .filter(theme => theme.category.toLowerCase() === (categoryName || "").toLowerCase())
+      .sort((a, b) => a.title.localeCompare(b.title));
+  }
+
+  themeList.className = "grid";
+  themeList.innerHTML = "";
 
   if (!filtered.length) {
     themeList.innerHTML = `<p>No themes found.</p>`;
@@ -172,9 +198,10 @@ async function renderCategoryPage() {
   filtered.forEach(theme => {
     const card = document.createElement("a");
     card.className = "card";
-    card.href = `quiz.html?theme=${theme.slug}`;
+    card.href = `themes/${theme.slug}.html`;
     card.innerHTML = `
       <h3>${theme.title}</h3>
+      
     `;
     themeList.appendChild(card);
   });

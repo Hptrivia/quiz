@@ -168,28 +168,12 @@
     "questionFile": "data/ghost.txt"
   },
   {
-    "slug": "god-of-war",
-    "title": "God of War",
-    "category": "Games",
-    "description": "An action franchise centered on brutal combat, mythological gods, and Kratos’ evolving journey as a warrior and father. It spans iconic boss fights, weapons, and emotional storytelling.",
-    "image": "",
-    "questionFile": "data/god-of-war.txt"
-  },
-  {
     "slug": "gta-v",
     "title": "GTA V",
     "category": "Games",
     "description": "An open-world crime game set in Los Santos, following three protagonists through heists, chaos, and satire. It is known for freedom, scale, and huge cultural impact.",
     "image": "",
     "questionFile": "data/gta5.txt"
-  },
-  {
-    "slug": "horizon-zero-dawn",
-    "title": "Horizon Zero Dawn",
-    "category": "Games",
-    "description": "An action RPG set in a future world where tribal societies survive among deadly machines. It combines mystery, exploration, and machine-hunting combat through Aloy’s story.",
-    "image": "",
-    "questionFile": "data/horizon-zero-dawn.txt"
   },
   {
     "slug": "lies-of-p",
@@ -704,14 +688,6 @@
     "questionFile": "data/sons.txt"
   },
   {
-    "slug": "spartacus",
-    "title": "Spartacus",
-    "category": "TV/Series",
-    "description": "A historical action drama full of rebellion, arena combat, Roman politics, and raw spectacle. It is known for violence, ambition, and larger-than-life characters.",
-    "image": "",
-    "questionFile": "data/spartacus.txt"
-  },
-  {
     "slug": "squid-game",
     "title": "Squid Game",
     "category": "TV/Series",
@@ -846,5 +822,96 @@
     "description": "A supernatural romance series centered on Bella, Edward, Jacob, and the conflicts between vampires and werewolves. It mixes romance, danger, and franchise-defining love triangles.",
     "image": "",
     "questionFile": "data/twilight.txt"
+  },
+    {
+    "title": "Chemistry",
+    "slug": "chemistry",
+    "description": "Chemistry trivia on elements, reactions, formulas, and famous discoveries.",
+    "category": "Education",
+    "questionFile": "data/chemistry.txt"
+  },
+  {
+    "title": "Physics",
+    "slug": "physics",
+    "description": "Physics trivia on motion, energy, forces, space, and scientific laws.",
+    "category": "Education",
+    "questionFile": "data/Physics.txt"
+  },
+  {
+    "title": "Food & Drink",
+    "slug": "food-drink",
+    "description": "Trivia on dishes, ingredients, cooking, drinks, and food culture.",
+    "category": "General",
+    "questionFile": "data/food.txt"
+  },
+  {
+    "title": "Australia",
+    "slug": "australia",
+    "description": "Trivia on Australian geography, culture, cities, sports, and famous people.",
+    "category": "Countries",
+    "questionFile": "data/aus.txt"
+  },
+  {
+    "title": "God of War",
+    "slug": "god-of-war",
+    "description": "Trivia on Kratos, gods, weapons, bosses, and the God of War games.",
+    "category": "Games",
+    "questionFile": "data/gow.txt"
+  },
+  {
+    "title": "Horizon Zero Dawn",
+    "slug": "horizon-zero-dawn",
+    "description": "Trivia on Aloy, machines, tribes, quests, and story beats from Horizon Zero Dawn.",
+    "category": "Games",
+    "questionFile": "data/hzd.txt"
+  },
+  {
+    "title": "Spartacus",
+    "slug": "spartacus",
+    "description": "Trivia on gladiators, houses, battles, and characters from Spartacus.",
+    "category": "TV/Series",
+    "questionFile": "data/Spartacus.txt"
+  },
+  {
+    "title": "Gossip Girl",
+    "slug": "gossip-girl",
+    "description": "Trivia on characters, scandals, relationships, and iconic moments from Gossip Girl.",
+    "category": "TV/Series",
+    "questionFile": "data/gossip.txt"
+  },
+  {
+    "title": "Gilmore Girls",
+    "slug": "gilmore-girls",
+    "description": "Trivia on Stars Hollow, relationships, family drama, and memorable scenes from Gilmore Girls.",
+    "category": "TV/Series",
+    "questionFile": "data/gilmore.txt"
+  },
+  {
+    "title": "Greys Anatomy",
+    "slug": "greys-anatomy",
+    "description": "Trivia on doctors, surgeries, relationships, and storylines from Greys Anatomy.",
+    "category": "TV/Series",
+    "questionFile": "data/grey.txt"
+  },
+  {
+    "title": "Sex and the City",
+    "slug": "sex-and-the-city",
+    "description": "Trivia on Carrie, Samantha, Charlotte, Miranda, relationships, and New York moments.",
+    "category": "TV/Series",
+    "questionFile": "data/satc.txt"
+  },
+  {
+    "title": "Desperate Housewives",
+    "slug": "desperate-housewives",
+    "description": "Trivia on Wisteria Lane, secrets, family drama, and iconic characters from Desperate Housewives.",
+    "category": "TV/Series",
+    "questionFile": "data/dhw.txt"
+  },
+  {
+    "title": "True Crime",
+    "slug": "true-crime",
+    "description": "Trivia on infamous cases, criminals, investigations, and true crime history.",
+    "category": "General",
+    "questionFile": "data/truecrime.txt"
   }
 ]
