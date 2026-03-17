@@ -136,12 +136,12 @@
     "questionFile": "data/bloodborne.txt"
   },
   {
-    "slug": "claire-obscur-expedition-33",
-    "title": "Claire Obscur Expedition 33",
+    "slug": "clair-obscur-expedition-33",
+    "title": "Clair Obscur Expedition 33",
     "category": "Games",
     "description": "A fantasy RPG with a striking art style and a story built around fate, loss, and a desperate expedition. It stands out as a fresh modern title with strong visual identity.",
     "image": "",
-    "questionFile": "data/claire-obscur-expedition-33.txt"
+    "questionFile": "data/clair-obscur-expedition-33.txt"
   },
   {
     "slug": "demon-souls",
@@ -835,7 +835,7 @@
     "slug": "physics",
     "description": "Physics trivia on motion, energy, forces, space, and scientific laws.",
     "category": "Education",
-    "questionFile": "data/Physics.txt"
+    "questionFile": "data/physics.txt"
   },
   {
     "title": "Food & Drink",
@@ -870,7 +870,7 @@
     "slug": "spartacus",
     "description": "Trivia on gladiators, houses, battles, and characters from Spartacus.",
     "category": "TV/Series",
-    "questionFile": "data/Spartacus.txt"
+    "questionFile": "data/spartacus.txt"
   },
   {
     "title": "Gossip Girl",
@@ -912,6 +912,6 @@
     "slug": "true-crime",
     "description": "Trivia on infamous cases, criminals, investigations, and true crime history.",
     "category": "General",
-    "questionFile": "data/truecrime.txt"
+    "questionFile": "data/crime.txt"
   }
 ]
