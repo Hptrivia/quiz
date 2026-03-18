@@ -22,7 +22,17 @@
 </head>
 <body>
   <main class="container narrow">
-    <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+    <div class="theme-top-links">
+      <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+      <a href="../index.html" class="back-link">⌂ Home</a>
+    </div>
+
+    <div class="theme-search-wrap">
+      <div class="search-wrap">
+        <input id="themeSearchInput" class="theme-search-input" type="text" placeholder="Search themes..." autocomplete="off" />
+        <div id="themeSearchResults" class="search-results"></div>
+      </div>
+    </div>
 
     <section class="panel">
       <h1>Bible</h1>
@@ -66,5 +76,53 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    async function setupThemePageSearch() {
+      const input = document.getElementById("themeSearchInput");
+      const results = document.getElementById("themeSearchResults");
+      if (!input || !results) return;
+
+      try {
+        const res = await fetch("../data/themes.json");
+        const themes = await res.json();
+
+        function render(items) {
+          if (!items.length) {
+            results.innerHTML = '<div class="search-item">No results found</div>';
+            return;
+          }
+
+          results.innerHTML = items.map(theme => `
+            <a class="search-item" href="../themes/${theme.slug}.html">${theme.title}</a>
+          `).join("");
+        }
+
+        input.addEventListener("focus", () => {
+          render(themes);
+          results.style.display = "block";
+        });
+
+        input.addEventListener("input", (e) => {
+          const value = e.target.value.trim().toLowerCase();
+          const filtered = themes.filter(theme =>
+            theme.title.toLowerCase().includes(value)
+          );
+          render(filtered);
+          results.style.display = "block";
+        });
+
+        document.addEventListener("click", (e) => {
+          if (!input.contains(e.target) && !results.contains(e.target)) {
+            results.style.display = "none";
+          }
+        });
+      } catch (err) {
+        console.error("Theme search failed", err);
+      }
+    }
+
+    setupThemePageSearch();
+  </script>
 </body>
 </html>

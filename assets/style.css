@@ -595,3 +595,25 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   margin-top: 20px;
 }
+
+.theme-top-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+
+.theme-search-wrap {
+  margin-bottom: 18px;
+}
+
+.theme-search-input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  background: #0f0f0f;
+  color: white;
+  font-size: 16px;
+}
