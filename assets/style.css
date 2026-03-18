@@ -230,7 +230,7 @@ a {
 
 .search-results {
   display: none;
-  position: static;
+  position: absolute;
   top: calc(100% + 6px);
   left: 0;
   right: 0;
@@ -262,7 +262,7 @@ a {
 
 @media (max-width: 768px) {
   .search-results {
-    position: static;
+    position: absolute;
     max-height: 220px;
     font-size: 14px;
     margin-top: 8px;
