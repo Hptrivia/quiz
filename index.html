@@ -27,24 +27,25 @@ p.parentNode.insertBefore(m,p)
 </head>
 <body data-page="home">
   <header class="site-header">
-    <div class="container">
-      <h1>Trivia Gauntlet</h1>
-      <p><a href="https://trivia-5pja.onrender.com" target="_blank" rel="noopener noreferrer" style="color:#93c5fd; text-decoration:underline;">Upload purchased files.</a></p>
-      <div class="search-wrap">
-      <input id="searchInput" type="text" placeholder="Search themes..." autocomplete="off" />
-      <div id="searchResults" class="search-results"></div>
-    </div>
-    </div>
-  </header>
+  <div class="container">
+    <h1>Trivia Gauntlet</h1>
+    <p><a href="https://trivia-5pja.onrender.com" target="_blank" rel="noopener noreferrer">Upload purchased files.</a></p>
+  </div>
+</header>
 
-  <main class="container">
+<main class="container">
+  <div class="search-wrap home-search-wrap">
+    <input id="searchInput" type="text" placeholder="Search themes..." />
+    <div id="searchResults" class="search-results"></div>
+  </div>
+
   <div id="newlyAddedList"></div>
 
-    <section>
-      <h2>Categories</h2>
-      <div id="categoryList" class="grid"></div>
-    </section>
-  </main>
+  <section>
+    <h2>Categories</h2>
+    <div id="categoryList" class="grid"></div>
+  </section>
+</main>
 
   <footer class="site-footer">
   <div class="container">
