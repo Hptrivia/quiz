@@ -356,6 +356,7 @@ let buyPackUrl = "https://ko-fi.com/triviaking/shop";
     <div class="cta-row">
       ${hasNextPage ? `<a class="primary-btn" href="play.html?theme=${theme.slug}&page=${safePage + 1}">More Questions</a>` : ""}
       <a class="secondary-btn" href="${buyPackUrl}" target="_blank" rel="noopener noreferrer">Buy ${theme.title} Pack</a>
+      <a class="secondary-btn" href="contact.html">Report a Question</a>
     </div>
   `;
     setTimeout(() => {
