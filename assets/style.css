@@ -645,3 +645,32 @@ a {
 .upload-link:hover {
   color: var(--link-hover);
 }
+.contact-form {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.form-label {
+  font-weight: 700;
+  margin-bottom: -4px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--text);
+  font-size: 16px;
+}
+
+.form-textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+.contact-alt {
+  margin: 12px 0 6px;
+}
