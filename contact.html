@@ -16,15 +16,51 @@
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-  <main class="container narrow">
-    <a href="index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+<main class="container narrow">
+  <a href="index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
 
-    <section class="panel">
-      <h1>Contact</h1>
-      <p>If you want to report an issue, suggest a quiz theme, or get in touch for another reason, you can contact TriviaGauntlet by email.</p>
-      <p>Email: triviaking2025@gmail.com</p>
-    </section>
-  </main>
+  <section class="panel">
+    <h1>Contact / Feedback</h1>
+    <p>
+      Found a wrong question, spotted a bug, or just want to share feedback? Send it here.
+    </p>
+
+    <p class="contact-alt">
+      Or email directly:
+      <a class="upload-link" href="mailto:triviaking2025@gmail.com?subject=Trivia%20Gauntlet%20Feedback">triviaking2025@gmail.com</a>
+    </p>
+
+    <form class="contact-form" action="https://formspree.io/f/mpqybwea" method="POST">
+      <label class="form-label" for="feedbackType">Type</label>
+      <select id="feedbackType" name="type" class="form-input">
+        <option value="general">General Feedback</option>
+        <option value="question">Wrong Question / Answer</option>
+        <option value="bug">Bug / Technical Issue</option>
+        <option value="suggestion">Suggestion</option>
+      </select>
+
+      <label class="form-label" for="message">Message</label>
+      <textarea
+        id="message"
+        name="message"
+        class="form-input form-textarea"
+        placeholder="Type your feedback here..."
+        required
+      ></textarea>
+
+      <label class="form-label" for="email">Email (optional)</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        class="form-input"
+        placeholder="you@example.com"
+      />
+
+      <button type="submit" class="primary-btn">Send Feedback</button>
+    </form>
+  </section>
+</main>
 
   <footer class="site-footer">
     <div class="container">
