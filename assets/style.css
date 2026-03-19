@@ -621,3 +621,18 @@ a {
 .home-search-wrap {
   margin: 24px 0 18px;
 }
+
+#categoryList .card,
+#newlyAddedList .card {
+  padding: 16px;
+}
+
+#categoryList .card h3,
+#newlyAddedList .card h3 {
+  margin: 0 0 10px;
+}
+
+#categoryList .card p,
+#newlyAddedList .card p {
+  margin: 0;
+}
