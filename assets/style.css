@@ -624,7 +624,7 @@ a {
 
 #categoryList .card,
 #newlyAddedList .card {
-  padding: 16px;
+  padding: 14px;
 }
 
 #categoryList .card h3,
@@ -635,4 +635,13 @@ a {
 #categoryList .card p,
 #newlyAddedList .card p {
   margin: 0;
+}
+
+.upload-link {
+  color: var(--link-accent);
+  text-decoration: underline;
+}
+
+.upload-link:hover {
+  color: var(--link-hover);
 }
