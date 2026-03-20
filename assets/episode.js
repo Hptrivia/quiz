@@ -112,6 +112,9 @@ async function renderEpisodePage() {
   function renderResult() {
     gameBox.style.display = "none";
     resultBox.style.display = "block";
+    resultBox.classList.remove("result-anim");
+    void resultBox.offsetWidth;
+    resultBox.classList.add("result-anim");
 
     resultBox.innerHTML = `
       <h2>${foundAnyEpisodeMarkers ? `Episode ${safeEpisode} Complete` : "Episode Mode Complete"}</h2>
@@ -159,16 +162,15 @@ async function renderEpisodePage() {
       btn.className = "option-btn";
       btn.textContent = option;
 
-      btn.addEventListener("click", () => {
-        if (answered) return;
-        selectedAnswer = option;
+btn.addEventListener("click", () => {
+  if (answered) return;
+  selectedAnswer = option;
 
-        document.querySelectorAll("#episodeOptionsList .option-btn").forEach(b => {
-          b.classList.remove("selected");
-        });
-        btn.classList.add("selected");
-      });
-
+  document.querySelectorAll("#episodeOptionsList .option-btn").forEach(b => {
+    b.classList.remove("selected", "correct-anim", "wrong-anim");
+  });
+  btn.classList.add("selected");
+});
       optionsEl.appendChild(btn);
     });
   }
@@ -187,12 +189,24 @@ async function renderEpisodePage() {
       }
     });
 
-    if (selectedAnswer === q.answer) {
-      score += 1;
-      setFeedback(`Correct. The answer is ${q.answer}.`, "correct");
-    } else {
-      setFeedback(`Wrong. The correct answer is ${q.answer}.`, "wrong");
+  const selectedBtn = document.querySelector("#episodeOptionsList .option-btn.selected");
+  
+  if (selectedAnswer === q.answer) {
+    score += 1;
+    setFeedback(`Correct. The answer is ${q.answer}.`, "correct");
+    if (selectedBtn) {
+      selectedBtn.classList.remove("wrong-anim");
+      void selectedBtn.offsetWidth;
+      selectedBtn.classList.add("correct-anim");
     }
+  } else {
+    setFeedback(`Wrong. The correct answer is ${q.answer}.`, "wrong");
+    if (selectedBtn) {
+      selectedBtn.classList.remove("correct-anim");
+      void selectedBtn.offsetWidth;
+      selectedBtn.classList.add("wrong-anim");
+    }
+  }
 
     descriptionEl.innerHTML = `
       <div class="episode-description-box">
