@@ -334,11 +334,13 @@ let buyPackUrl = "https://ko-fi.com/triviaking/shop";
       btn.className = "option-btn";
       btn.textContent = option;
 
-      btn.addEventListener("click", () => {
-        quizState.selectedAnswer = option;
-        document.querySelectorAll("#optionsList .option-btn").forEach(b => b.classList.remove("selected"));
-        btn.classList.add("selected");
-      });
+btn.addEventListener("click", () => {
+  quizState.selectedAnswer = option;
+  document.querySelectorAll("#optionsList .option-btn").forEach(b => {
+    b.classList.remove("selected", "correct-anim", "wrong-anim");
+  });
+  btn.classList.add("selected");
+});
 
       optionsEl.appendChild(btn);
     });
@@ -347,6 +349,9 @@ let buyPackUrl = "https://ko-fi.com/triviaking/shop";
   function renderResult() {
     document.getElementById("quizBox").style.display = "none";
     resultBox.style.display = "block";
+    resultBox.classList.remove("result-anim");
+    void resultBox.offsetWidth;
+    resultBox.classList.add("result-anim");
 
     const hasNextPage = safePage < totalPages;
 
@@ -366,23 +371,34 @@ let buyPackUrl = "https://ko-fi.com/triviaking/shop";
 }, 800);
   }
 
-  submitBtn.addEventListener("click", () => {
-    if (!quizState.selectedAnswer) return;
+submitBtn.addEventListener("click", () => {
+  if (!quizState.selectedAnswer) return;
 
-    const q = quizState.questions[quizState.currentIndex];
+  const q = quizState.questions[quizState.currentIndex];
+  const selectedBtn = document.querySelector("#optionsList .option-btn.selected");
 
-    if (quizState.selectedAnswer === q.answer) {
-      quizState.score += 1;
-      feedbackEl.textContent = "Correct";
-      feedbackEl.className = "feedback correct";
-    } else {
-      feedbackEl.textContent = "Wrong";
-      feedbackEl.className = "feedback wrong";
+  if (quizState.selectedAnswer === q.answer) {
+    quizState.score += 1;
+    feedbackEl.textContent = "Correct";
+    feedbackEl.className = "feedback correct";
+    if (selectedBtn) {
+      selectedBtn.classList.remove("wrong-anim");
+      void selectedBtn.offsetWidth;
+      selectedBtn.classList.add("correct-anim");
     }
+  } else {
+    feedbackEl.textContent = "Wrong";
+    feedbackEl.className = "feedback wrong";
+    if (selectedBtn) {
+      selectedBtn.classList.remove("correct-anim");
+      void selectedBtn.offsetWidth;
+      selectedBtn.classList.add("wrong-anim");
+    }
+  }
 
-    submitBtn.disabled = true;
-    nextBtn.style.display = "inline-block";
-  });
+  submitBtn.disabled = true;
+  nextBtn.style.display = "inline-block";
+});
 
   nextBtn.addEventListener("click", () => {
     quizState.currentIndex += 1;
