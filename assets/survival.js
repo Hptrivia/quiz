@@ -104,6 +104,9 @@ function shuffleQuestionOptions(question) {
   function renderResult() {
     gameBox.style.display = "none";
     resultBox.style.display = "block";
+    resultBox.classList.remove("result-anim");
+    void resultBox.offsetWidth;
+    resultBox.classList.add("result-anim");
     resultBox.innerHTML = `
       <h2>Survival Over</h2>
       <p>Your score: ${state.score}</p>
@@ -171,14 +174,14 @@ function shuffleQuestionOptions(question) {
       btn.className = "option-btn";
       btn.textContent = option;
 
-      btn.addEventListener("click", () => {
-        if (state.answerLocked || state.gameOver) return;
-        state.selectedAnswer = option;
-        document.querySelectorAll("#survivalOptionsList .option-btn").forEach(b => {
-          b.classList.remove("selected");
-        });
-        btn.classList.add("selected");
-      });
+btn.addEventListener("click", () => {
+  if (state.answerLocked || state.gameOver) return;
+  state.selectedAnswer = option;
+  document.querySelectorAll("#survivalOptionsList .option-btn").forEach(b => {
+    b.classList.remove("selected", "correct-anim", "wrong-anim");
+  });
+  btn.classList.add("selected");
+});
 
       optionsEl.appendChild(btn);
     });
@@ -194,9 +197,18 @@ function shuffleQuestionOptions(question) {
       }
 
 function handleWrongAnswer() {
+  const selectedBtn = document.querySelector("#survivalOptionsList .option-btn.selected");
+
   state.gameOver = true;
   state.answerLocked = true;
   submitBtn.disabled = true;
+
+  if (selectedBtn) {
+    selectedBtn.classList.remove("correct-anim");
+    void selectedBtn.offsetWidth;
+    selectedBtn.classList.add("wrong-anim");
+  }
+
   setFeedback("Wrong. Run over.", "wrong");
   updateTopbar();
 
@@ -205,26 +217,33 @@ function handleWrongAnswer() {
   }, 500);
 }
 
-  function handleCorrectAnswer() {
-    const q = getCurrentQuestion();
-    const difficulty = normalizeDifficulty(q.difficulty);
-    const points = pointsMap[difficulty] || 1;
+function handleCorrectAnswer() {
+  const q = getCurrentQuestion();
+  const difficulty = normalizeDifficulty(q.difficulty);
+  const points = pointsMap[difficulty] || 1;
+  const selectedBtn = document.querySelector("#survivalOptionsList .option-btn.selected");
 
-    state.score += points;
-    state.answerLocked = true;
-    submitBtn.disabled = true;
-    nextBtn.style.display = "inline-block";
+  state.score += points;
+  state.answerLocked = true;
+  submitBtn.disabled = true;
+  nextBtn.style.display = "inline-block";
 
-    const recoveryMessage = handleRecoveryOnCorrect(difficulty);
-
-    if (recoveryMessage) {
-      setFeedback(`Correct. +${points} point(s). ${recoveryMessage}`, "correct");
-    } else {
-      setFeedback(`Correct. +${points} point(s).`, "correct");
-    }
-
-    updateTopbar();
+  if (selectedBtn) {
+    selectedBtn.classList.remove("wrong-anim");
+    void selectedBtn.offsetWidth;
+    selectedBtn.classList.add("correct-anim");
   }
+
+  const recoveryMessage = handleRecoveryOnCorrect(difficulty);
+
+  if (recoveryMessage) {
+    setFeedback(`Correct. +${points} point(s). ${recoveryMessage}`, "correct");
+  } else {
+    setFeedback(`Correct. +${points} point(s).`, "correct");
+  }
+
+  updateTopbar();
+}
 
   function useFiftyFifty() {
     if (!state.fiftyAvailable || state.answerLocked || state.gameOver) return;
