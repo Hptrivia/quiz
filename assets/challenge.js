@@ -78,13 +78,13 @@ async function renderChallengePage() {
       btn.className = "option-btn";
       btn.textContent = option;
 
-      btn.addEventListener("click", () => {
-        state.selectedAnswer = option;
-        document.querySelectorAll("#challengeOptionsList .option-btn").forEach(b => {
-          b.classList.remove("selected");
-        });
-        btn.classList.add("selected");
-      });
+btn.addEventListener("click", () => {
+  state.selectedAnswer = option;
+  document.querySelectorAll("#challengeOptionsList .option-btn").forEach(b => {
+    b.classList.remove("selected", "correct-anim", "wrong-anim");
+  });
+  btn.classList.add("selected");
+});
 
       optionsEl.appendChild(btn);
     });
@@ -93,6 +93,9 @@ async function renderChallengePage() {
   function renderResult() {
     quizBox.style.display = "none";
     resultBox.style.display = "block";
+    resultBox.classList.remove("result-anim");
+    void resultBox.offsetWidth;
+    resultBox.classList.add("result-anim");
 
     const hasNextRound = safeRound < totalRounds;
     const roundLink = `${window.location.origin}${window.location.pathname}?theme=${encodeURIComponent(theme.slug)}&round=${safeRound}`;
@@ -111,21 +114,32 @@ async function renderChallengePage() {
 
   }
 
-  submitBtn.addEventListener("click", () => {
-    if (!state.selectedAnswer) return;
+submitBtn.addEventListener("click", () => {
+  if (!state.selectedAnswer) return;
 
-    const q = state.questions[state.currentIndex];
+  const q = state.questions[state.currentIndex];
+  const selectedBtn = document.querySelector("#challengeOptionsList .option-btn.selected");
 
-    if (state.selectedAnswer === q.answer) {
-      state.score += 1;
-      setFeedback("Correct", "correct");
-    } else {
-      setFeedback("Wrong", "wrong");
+  if (state.selectedAnswer === q.answer) {
+    state.score += 1;
+    setFeedback("Correct", "correct");
+    if (selectedBtn) {
+      selectedBtn.classList.remove("wrong-anim");
+      void selectedBtn.offsetWidth;
+      selectedBtn.classList.add("correct-anim");
     }
+  } else {
+    setFeedback("Wrong", "wrong");
+    if (selectedBtn) {
+      selectedBtn.classList.remove("correct-anim");
+      void selectedBtn.offsetWidth;
+      selectedBtn.classList.add("wrong-anim");
+    }
+  }
 
-    submitBtn.disabled = true;
-    nextBtn.style.display = "inline-block";
-  });
+  submitBtn.disabled = true;
+  nextBtn.style.display = "inline-block";
+});
 
   nextBtn.addEventListener("click", () => {
     state.currentIndex += 1;
