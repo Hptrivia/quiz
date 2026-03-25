@@ -828,7 +828,7 @@
     "slug": "chemistry",
     "description": "Chemistry trivia on elements, reactions, formulas, and famous discoveries.",
     "category": "Education",
-    "questionFile": "data/chemistry.txt"
+    "questionFile": "data/chem.txt"
   },
   {
     "title": "Physics",
@@ -919,21 +919,21 @@
     "title": "Buffy the Vampire Slayer",
     "category": "TV/Series",
     "description": "A cult supernatural series about a teenage slayer balancing school, friendships, romance, and life-or-death battles against vampires and other monsters.",
-    "questionFile": "data/buffy.tx"
+    "questionFile": "data/buffy.txt"
   },
+  {
+  "slug": "dark-souls-3",
+  "title": "Dark Souls 3",
+  "category": "Games",
+  "description": "A dark fantasy action RPG focused on brutal combat, boss battles, builds, locations, and lore in the final main entry of the Dark Souls trilogy.",
+  "questionFile": "data/ds3.txt"
+},
   {
     "slug": "marvels-spider-man",
     "title": "Marvels Spider-Man",
     "category": "Games",
     "description": "A superhero action game focused on Peter Parker’s life in New York, featuring villains, gadgets, suits, combat, and major story moments from the game.",
     "questionFile": "data/spider.txt"
-  },
-  {
-    "slug": "spartacus",
-    "title": "Spartacus",
-    "category": "TV/Series",
-    "description": "A historical action drama centered on gladiators, rebellion, betrayal, and brutal power struggles in ancient Rome.",
-    "questionFile": "data/spartacus.txt"
   },
   {
     "slug": "assassins-creed-valhalla",
