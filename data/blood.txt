@@ -1,0 +1,820 @@
+[
+  {
+    "id": "tb-easy-0001",
+    "question": "What is the name waitress at the center of True Blood?",
+    "options": ["Sookie Stackhouse", "Tara Thornton", "Jessica Stackhouse", "Arlene Fowler"],
+    "answer": "Sookie Stackhouse",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-easy-0002",
+    "question": "What small Louisiana town is True Blood set in?",
+    "options": ["Bon Temps", "Shreveport", "Baton Rouge", "New Orleans"],
+    "answer": "Bon Temps",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-easy-0003",
+    "question": "Which vampire is Sookie’s first love interest?",
+    "options": ["Bill Compton", "Eric Northman", "Bob Compton", "Richard Compton"],
+    "answer": "Bill Compton",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-easy-0004",
+    "question": "What is the name of the place Sookie works?",
+    "options": ["Merlotte’s Bar and Grill", "Fangtasia", "Bellefleur’s", "Marlott’s Bar and Grill"],
+    "answer": "Merlotte’s Bar and Grill",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-easy-0005",
+    "question": "What is Eric Northman’s vampire title at the beginning of the show?",
+    "options": ["Sheriff of Area 5", "Mayor of Area 5", "King of Area 3", "Sheriff of Area 3"],
+    "answer": "Sheriff of Area 5",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-easy-0006",
+    "question": "What drink allows vampires to live openly without feeding on humans?",
+    "options": ["Tru Blood", "Red Bliss", "Synthetic O+", "Faux Fang"],
+    "answer": "Tru Blood",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-easy-0007",
+    "question": "What is Sookie’s brother Jason Stackhouse known for?",
+    "options": ["Being a ladies’ man", "Being a vampire hunter", "Being a shapeshifter", "Being a priest"],
+    "answer": "Being a ladies’ man",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-easy-0008",
+    "question": "What supernatural creature is Sam Merlotte?",
+    "options": ["Shapeshifter", "Werewolf", "Vampire", "Fairy"],
+    "answer": "Shapeshifter",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-easy-0009",
+    "question": "What is Tara Thornton’s relationship to Sookie?",
+    "options": ["Best friend", "Cousin", "Sister", "Neighbor"],
+    "answer": "Best friend",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-easy-0010",
+    "question": "Who turns Jessica Hamby into a vampire?",
+    "options": ["Bill Compton", "Eric Northman", "Pam Ravenscroft", "Russell Edgington"],
+    "answer": "Bill Compton",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-easy-0011",
+    "question": "What is Arlene Fowler’s profession?",
+    "options": ["Waitress", "Bartender", "Nurse", "Teacher"],
+    "answer": "Waitress",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-easy-0012",
+    "question": "What supernatural creature is revealed to be Sookie’s heritage?",
+    "options": ["Fairy", "Banshee", "Djinn", "Witch"],
+    "answer": "Fairy",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-easy-0013",
+    "question": "What vampire bar do Eric and Pam run?",
+    "options": ["Fangtasia", "Merlotte’s", "Moonlight Lounge", "Silver Fang"],
+    "answer": "Fangtasia",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-easy-0016",
+    "question": "Who is Bill Compton’s maker?",
+    "options": ["Lorena", "Russell Edgington", "Katerina", "Eric Northman"],
+    "answer": "Lorena",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-easy-0017",
+    "question": "Who is Eric Northman’s loyal vampire progeny?",
+    "options": ["Pam", "Anne", "Sophie", "Carmela"],
+    "answer": "Pam",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-easy-0018",
+    "question": "What is the name of the vampire queen of Louisiana early in the series?",
+    "options": ["Sophie-Anne", "Lorena", "Salome", "Nora"],
+    "answer": "Sophie-Anne",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-easy-0019",
+    "question": "What kind of supernatural being is Alcide Herveaux?",
+    "options": ["Werewolf", "Fairy", "Witch", "Shapeshifter"],
+    "answer": "Werewolf",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-easy-0020",
+    "question": "Which actress plays Sookie Stackhouse?",
+    "options": ["Anna Paquin", "Kristin Bauer van Straten", "Rutina Wesley", "Deborah Ann Woll"],
+    "answer": "Anna Paquin",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-easy-0021",
+    "question": "Which actor plays Bill Compton?",
+    "options": ["Stephen Moyer", "Alexander Skarsgård", "Sam Trammell", "Joe Manganiello"],
+    "answer": "Stephen Moyer",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-easy-0022",
+    "question": "Which actor plays Eric Northman?",
+    "options": ["Alexander Skarsgård", "Stephen Moyer", "Ryan Kwanten", "Sam Trammell"],
+    "answer": "Alexander Skarsgård",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-easy-0023",
+    "question": "Which actor plays Jason Stackhouse?",
+    "options": ["Ryan Kwanten", "Stephen Moyer", "Sam Trammell", "Jim Parrack"],
+    "answer": "Ryan Kwanten",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tb-easy-0024",
+    "question": "Which actor plays Tara Thornton?",
+    "options": ["Rutina Wesley", "Deborah Ann Woll", "Kristin Bauer van Straten", "Anna Paquin"],
+    "answer": "Rutina Wesley",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-easy-0025",
+    "question": "Which actor plays Sam Merlotte?",
+    "options": ["Sam Trammell", "Jim Parrack", "Joe Manganiello", "Nelsan Ellis"],
+    "answer": "Sam Trammell",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-easy-0026",
+    "question": "Which actor plays Lafayette Reynolds?",
+    "options": ["Nelsan Ellis", "Sam Trammell", "Alexander Skarsgård", "Ryan Kwanten"],
+    "answer": "Nelsan Ellis",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-easy-0028",
+    "question": "Which actress plays Jessica Hamby?",
+    "options": ["Deborah Ann Woll", "Rutina Wesley", "Kristin Bauer van Straten", "Carrie Preston"],
+    "answer": "Deborah Ann Woll",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-easy-0029",
+    "question": "Who is Jason Stackhouse’s best friend in the show?",
+    "options": ["Andy", "Sam", "Hoyt", "Terry"],
+    "answer": "Hoyt",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-easy-0033",
+    "question": "What supernatural beings run Hotshot, Louisiana?",
+    "options": ["Werepanthers", "Werewolves", "Vampires", "Werejaguars"],
+    "answer": "Werepanthers",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-easy-0034",
+    "question": "Which vampire supplied Lafayette his blood in season 1?",
+    "options": ["Jesus Velasquez", "Peter Wesley", "Eddie Fournier", "Rick Flanagan"],
+    "answer": "Eddie Fournier",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-easy-0035",
+    "question": "Who is Russell Edgington?",
+    "options": ["King of Mississippi", "King of Louisiana", "Sheriff of Louisiana", "Sheriff of Mississippi"],
+    "answer": "King of Mississippi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-easy-0036",
+    "question": "What organization is opposed to vampire rights in early seasons?",
+    "options": ["Fellowship of the Sun", "The Authority", "Anti Vampire League", "The Magisterium"],
+    "answer": "Fellowship of the Sun",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-easy-0037",
+    "question": "Who leads the Fellowship of the Sun?",
+    "options": ["Steve Newlin", "Peter Wesley", "Mark Newlin", "Salome Wesley"],
+    "answer": "Steve Newlin",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-easy-0038",
+    "question": "What is the name of Steve Newlin’s wife?",
+    "options": ["Sarah", "Petra", "Martha", "Mary"],
+    "answer": "Sarah",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-easy-0039",
+    "question": "Who becomes Jessica Hamby’s eventual husband?",
+    "options": ["Hoyt Fortenberry", "Jason Stackhouse", "Eric Bellefleur", "James Kent"],
+    "answer": "Hoyt Fortenberry",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-easy-0040",
+    "question": "Which vampire becomes King of Louisiana after Sophie-Anne’s death?",
+    "options": ["Bill Compton", "Eric Northman", "Russell Edgington", "Roman Zimojic"],
+    "answer": "Bill Compton",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tb-easy-0042",
+    "question": "Who was the official American Vamoire league spokesperson?",
+    "options": ["Nan Flanagan", "Christopher Sullivan", "May Flanagan", "Sara Sullivan"],
+    "answer": "Nan Flanagan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-easy-0044",
+    "question": "Who is Tara Thornton’s mother?",
+    "options": ["Lettie Mae", "Arlene", "Lorena", "Mara"],
+    "answer": "Lettie Mae",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-easy-0045",
+    "question": "What organization is Jason Stackhouse briefly recruited into in Season 2?",
+    "options": ["Fellowship of the Sun", "The Authority", "The Magisterium", "The Pack"],
+    "answer": "Fellowship of the Sun",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-easy-0047",
+    "question": "What is the name of Lafayette’s boyfriend who was a brujo?",
+    "options": ["Jesus Velasquez", "José Rodriguez", "Francisco Hernandez", "Ángel Martinez"],
+    "answer": "Jesus Velasquez",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-easy-0050",
+    "question": "What network originally aired True Blood?",
+    "options": ["HBO", "Showtime", "AMC", "FX"],
+    "answer": "HBO",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-medium-0051",
+    "question": "What is Bill Compton’s hometown before becoming a vampire?",
+    "options": ["Bon Temps", "Shreveport", "New Orleans", "Baton Rouge"],
+    "answer": "Bon Temps",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tb-medium-0055",
+    "question": "Who kills Eggs after he is manipulated by Maryann?",
+    "options": ["Jason Stackhouse", "Andy Bellefleur", "Bill Compton", "Sam Merlotte"],
+    "answer": "Jason Stackhouse",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-medium-0056",
+    "question": "Who is Tara Thornton’s vampire maker?",
+    "options": ["Pam Ravenscroft", "Eric Northman", "Bill Compton", "Russell Edgington"],
+    "answer": "Pam Ravenscroft",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tb-easy-0344",
+    "question": "Who is the main villain in Season 1 of True Blood?",
+    "options": [
+      "Rene Lanier",
+      "Russell Edgington",
+      "Maryann Forrester",
+      "Marnie Stonebrook"
+    ],
+    "answer": "Rene Lanier",
+    "type": "season_villain",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-easy-000422",
+    "question": "Who is the main villain in Season 2 of True Blood?",
+    "options": [
+      "Maryann Forrester",
+      "Rene Lanier",
+      "Russell Edgington",
+      "Marnie Stonebrook"
+    ],
+    "answer": "Maryann Forrester",
+    "type": "season_villain",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-easy-023004",
+    "question": "What is the name of Sookie’s cousin who informs Queen Sophie-Anne about her heritage?",
+    "options": [
+      "Hadley",
+      "Claudine",
+      "Claude",
+      "Petra"
+    ],
+    "answer": "Hadley",
+    "type": "character",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-easy-11004",
+    "question": "Who is the main villain in Season 3 of True Blood?",
+    "options": [
+      "Russell Edgington",
+      "Maryann Forrester",
+      "Rene Lanier",
+      "Marnie Stonebrook"
+    ],
+    "answer": "Russell Edgington",
+    "type": "season_villain",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-easy-0014",
+    "question": "Who is the main villain in Season 4 of True Blood?",
+    "options": [
+      "Marnie Stonebrook",
+      "Russell Edgington",
+      "Maryann Forrester",
+      "Rene Lanier"
+    ],
+    "answer": "Marnie Stonebrook",
+    "type": "season_villain",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-medium-0057",
+    "question": "What kind of supernatural being is Jesus Velasquez?",
+    "options": ["Brujo", "Werewolf", "Fairy", "Shapeshifter"],
+    "answer": "Brujo",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-medium-0059",
+    "question": "Which supernatural cult leader enthralls Bon Temps with orgies and chaos in Season 2?",
+    "options": ["Maryann", "Amara", "Martha", "Marnie"],
+    "answer": "Maryann",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-medium-0060",
+    "question": "Which supernatural creature does Maryann Forrester turn out to be?",
+    "options": ["Maenad", "Witch", "Succubus", "Banshee"],
+    "answer": "Maenad",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-medium-0061",
+    "question": "Who kills Russell Edgington?",
+    "options": ["Eric Northman", "Bill Compton", "Sookie Stackhouse", "Nora Gainesborough"],
+    "answer": "Eric Northman",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-medium-0062",
+    "question": "What is the name of Sookie’s fairy godmother?",
+    "options": ["Claudine", "Nora", "Maurella", "Lettie Mae"],
+    "answer": "Claudine",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-medium-0066",
+    "question": "Who is the witch necromancer that leads the coven against vampires?",
+    "options": ["Marnie", "Maryann", "Amara", "Salome"],
+    "answer": "Marnie",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-medium-0069",
+    "question": "Who kills Talbot?",
+    "options": ["Eric Northman", "Bill Compton", "Russell Edgington", "Jason Stackhouse"],
+    "answer": "Eric Northman",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tb-medium-0070",
+    "question": "Who is the leader of the Vampire Authority when it is first introduced?",
+    "options": ["Roman Zimojic", "Salome", "Russell Edgington", "Nan Flanagan"],
+    "answer": "Roman Zimojic",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-medium-0071",
+    "question": "What ancient vampire do the Authority members worship?",
+    "options": ["Lilith", "Salome", "Akasha", "Ishtar"],
+    "answer": "Lilith",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tb-medium-0072",
+    "question": "What is Sookie’s father’s name?",
+    "options": ["Corbett Stackhouse", "Mitchell Stackhouse", "Bartlett Hale", "Truman Bellefleur"],
+    "answer": "Corbett Stackhouse",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-medium-0074",
+    "question": "Who raises Sookie and Jason after their parents die?",
+    "options": ["Adele Stackhouse", "Linda Stackhouse", "Mara Stackhouse", "Claudine Stackhouse"],
+    "answer": "Adele Stackhouse",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tb-medium-0078",
+    "question": "What is the name of the werewolf packmaster who forced the pack to use V?",
+    "options": ["Marcus Bozeman", "Cooter", "Jackson Herveaux", "JD"],
+    "answer": "JD",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-medium-0079",
+    "question": "Who becomes pregnant with Andy Bellefleur’s half-fairy children?",
+    "options": ["Maurella", "Claudine", "Claudia", "Cara"],
+    "answer": "Maurella",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-medium-0085",
+    "question": "Who is Eric’s maker?",
+    "options": ["Godric", "Lorena", "Roman", "Salome"],
+    "answer": "Godric",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tb-medium-0097",
+    "question": "Who ultimately kills Warlow?",
+    "options": ["Jason Stackhouse", "Bill Compton", "Sookie Stackhouse", "Eric Northman"],
+    "answer": "Jason Stackhouse",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-medium-0098",
+    "question": "Which vampire temporarily becomes infected with Hepatitis V but survives?",
+    "options": ["Eric Northman", "Bill Compton", "Jessica Hamby", "Pam Ravenscroft"],
+    "answer": "Eric Northman",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tb-medium-0099",
+    "question": "Which character becomes mayor of Bon Temps by the end?",
+    "options": ["Sam Merlotte", "Andy Bellefleur", "Jason Stackhouse", "Hoyt Fortenberry"],
+    "answer": "Sam Merlotte",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-medium-0100",
+    "question": "Who does Sookie Stackhouse ultimately marry?",
+    "options": ["An unnamed human man", "Bill Compton", "Eric Northman", "Alcide Herveaux"],
+    "answer": "An unnamed human man",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-hard-0103",
+    "question": "Who kidnapped Lafayette and held him in Fangtasia’s basement?",
+    "options": ["Eric Northman", "Pam Ravenscroft", "Chow", "Eddie Fournier"],
+    "answer": "Eric Northman",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-hard-0105",
+    "question": "Who kills Franklin Mott, the vampire obsessed with Tara?",
+    "options": ["Jason Stackhouse", "Bill Compton", "Hoyt Fortenberry", "Sam Merlotte"],
+    "answer": "Jason Stackhouse",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-hard-0106",
+    "question": "What is the name of the vampire that was obsessed with Tara in Season 3?",
+    "options": ["Franklin Mott", "Mike Hemming", "Marcus Vela", "Lorena"],
+    "answer": "Franklin Mott",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-hard-0108",
+    "question": "Which supernatural being curses Terry Bellefleur for his actions in Iraq?",
+    "options": ["Ifrit", "Maenad", "Witch", "Diony"],
+    "answer": "Ifrit",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-hard-0109",
+    "question": "Who was the original werewolf packmaster of Shreveport?",
+    "options": ["Alcide Herveaux", "Cooter", "Marcus Bozeman", "JD"],
+    "answer": "Marcus Bozeman",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-hard-0111",
+    "question": "What is the name of Eric Northman’s vampire sister introduced through Godric?",
+    "options": ["Nora", "Salome", "Lorena", "Judith"],
+    "answer": "Nora",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-hard-0121",
+    "question": "Which character is revealed to have killed Sookie and Jason’s parents?",
+    "options": ["Warlow", "Lorena", "Russell Edgington", "Salome"],
+    "answer": "Warlow",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-hard-0147",
+    "question": "Who inherits Merlotte’s Bar after Sam leaves Bon Temps?",
+    "options": ["Arlene Fowler", "Andy Bellefleur", "Jason Stackhouse", "Terry Bellefleur"],
+    "answer": "Arlene Fowler",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-expert-0152",
+    "question": "What year was Eric Northman turned into a vampire by Godric?",
+    "options": ["872 AD", "1022 AD", "1195 AD", "930 AD"],
+    "answer": "930 AD",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tb-expert-0177",
+    "question": "Which group was responsible for the creating the Tru Blood drink?",
+    "options": ["The Yakonomo Corporation", "The Yoruzuya Corporation", "The Sumiyoshi Group", "American Vampire League"],
+    "answer": "The Yakonomo Corporation",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tb-expert-0189",
+    "question": "What is the name of Bill Compton’s human wife before he was turned?",
+    "options": ["Caroline Compton", "Sarah Compton", "Martha Compton", "Rebecca Compton"],
+    "answer": "Caroline Compton",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tb-expert-0195",
+    "question": "What is the last scene of True Blood?",
+    "options": ["Thanksgiving dinner in Bon Temps", "Eric and Pam on a throne", "Sookie in the graveyard", "Jason with his kids"],
+    "answer": "Thanksgiving dinner in Bon Temps",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-easy-0002",
+    "question": "In what year did True Blood premiere?",
+    "options": [
+      "2008",
+      "2006",
+      "2009",
+      "2007"
+    ],
+    "answer": "2008",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-easy-0003",
+    "question": "How many seasons does True Blood have in total?",
+    "options": [
+      "6",
+      "7",
+      "5",
+      "8"
+    ],
+    "answer": "7",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-easy-0004",
+    "question": "How many total episodes aired across the series?",
+    "options": [
+      "78",
+      "80",
+      "90",
+      "70"
+    ],
+    "answer": "80",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tb-easy-0005",
+    "question": "Who created the TV series True Blood?",
+    "options": [
+      "Matthew Weiner",
+      "Charlaine Harris",
+      "Alan Ball",
+      "Aaron Korsh"
+    ],
+    "answer": "Alan Ball",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-easy-0006",
+    "question": "True Blood is based on which novel series?",
+    "options": [
+      "The Southern Vampire Mysteries",
+      "The Vampire Mysteries",
+      "The Southern Supernatural Mysteries",
+      "True Blood Stories"
+    ],
+    "answer": "The Southern Vampire Mysteries",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-easy-0007",
+    "question": "Who wrote The Southern Vampire Mysteries novels which True Blood is based?",
+    "options": [
+      "Stephen King",
+      "Charlaine Harris",
+      "Stephene Meyer",
+      "Anne Rice"
+    ],
+    "answer": "Charlaine Harris",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tb-easy-0010",
+    "question": "In which U.S. state is Bon Temps located?",
+    "options": [
+      "Texas",
+      "Louisiana",
+      "Georgia",
+      "Sasha Wynn"
+    ],
+    "answer": "Louisiana",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-001",
+    "question": "Which of these characters never worked at Merlotte’s Bar and Grill?",
+    "options": ["Tara Thornton", "Arlene Fowler", "Lafayette Reynolds", "Pam Swynford De Beaufort"],
+    "answer": "Pam Swynford De Beaufort",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-002",
+    "question": "Who kills the bull-like Maenad Maryann in Season 2?",
+    "options": ["Sam Merlotte", "Bill Compton", "Eric Northman", "Jason Stackhouse"],
+    "answer": "Sam Merlotte",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-003",
+    "question": "What is the name of Russell Edgington’s lover?",
+    "options": ["Talbot", "Adrian", "Roman", "Lorena"],
+    "answer": "Talbot",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-004",
+    "question": "What is the name of the bartender at Fangtasia whom Sookie discovers is stealing from Eric?",
+    "options": ["Longshadow", "Chow", "Stan", "Moonshadow"],
+    "answer": "Longshadow",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-005",
+    "question": "Why was Bill Compton forced to turn Jessica into a vampire?",
+    "options": [
+      "Because he killed another vampire without permission",
+      "As punishment for revealing vampire secrets",
+      "Because he broke vampire law by feeding publicly",
+      "As punishment for dating Sookie"
+    ],
+    "answer": "Because he killed another vampire without permission",
+    "difficulty": "easy"
+  },
+{
+  "id": "tb-07706",
+  "question": "Who kills Longshadow at Fangtasia?",
+  "options": [
+    "Bill Compton",
+    "Eric Northman",
+    "Sookie Stackhouse",
+    "Pam Swynford De Beaufort"
+  ],
+  "answer": "Bill Compton",
+  "type": "character",
+  "difficulty": "hard"
+},
+  {
+    "id": "tb-006",
+    "question": "What is the name of the human waitress at Fangtasia who is constantly glamoured by vampires?",
+    "options": ["Ginger", "Holly", "Dawn", "Crystal"],
+    "answer": "Ginger",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-007",
+    "question": "What accent did Rene Lenier fake in Season 1?",
+    "options": ["Cajun", "Texan", "Creole", "Brogue"],
+    "answer": "Cajun",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-008",
+    "question": "What is the name of the blood introduced in the final season to cure Hep-V?",
+    "options": ["New Blood", "Tru Cure", "V-Serum", "Real Blood"],
+    "answer": "New Blood",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tb-009",
+    "question": "Who killed Eddie Fournier?",
+    "options": ["Amy Burley", "Jason Stackhouse", "Eric Northman", "Sookie Stackhouse"],
+    "answer": "Amy Burley",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-easy-0011",
+    "question": "What is Sookie Stackhouse’s ability?",
+    "options": [
+      "Shapeshifting",
+      "Telepathy",
+      "Time travel",
+      "Telekinesis"
+    ],
+    "answer": "Telepathy",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-easy-0012",
+    "question": "What is Sookie’s job at the start of the series?",
+    "options": [
+      "Doctor",
+      "Waitress",
+      "Detective",
+      "Lawyer"
+    ],
+    "answer": "Waitress",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tb-medium-0003",
+    "question": "What is the name of Sookie’s brother?",
+    "options": [
+      "Hoyt Fortenberry",
+      "Jason Stackhouse",
+      "Steve Newlin",
+      "Sam Merlotte"
+    ],
+    "answer": "Jason Stackhouse",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tb-medium-0015",
+    "question": "Which actor plays Alcide Herveaux?",
+    "options": [
+      "Noah Kline",
+      "Tim Holloway",
+      "Joe Manganiello",
+      "Evan Mercer"
+    ],
+    "answer": "Joe Manganiello",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tb-expert-0008",
+    "question": "What is the title of the opening theme song?",
+    "options": [
+      "Greenback Boogie",
+      "A Beautiful Mine",
+      "Bad Things",
+      "Paige Hollow"
+    ],
+    "answer": "Bad Things",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tb-expert-0009",
+    "question": "Who performs the opening theme song “Bad Things”?",
+    "options": [
+      "Stephen Moyer",
+      "Jace Everett",
+      "Ima Robot",
+      "RJD2"
+    ],
+    "answer": "Jace Everett",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tb-expert-0010",
+    "question": "Who composed the score music for True Blood (as credited on series reference pages)?",
+    "options": [
+      "The Red Covenant",
+      "Heinz Kiessling",
+      "Ryan Elder",
+      "Nathan Barr"
+    ],
+    "answer": "Nathan Barr",
+    "difficulty": "expert"
+  }
+]

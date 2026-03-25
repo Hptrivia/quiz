@@ -1,0 +1,721 @@
+[
+  {
+    "id": "quran-easy-0001",
+    "question": "What is the holy book of Islam called?",
+    "options": ["Torah", "Qur'an", "Gospel", "Vedas"],
+    "answer": "Qur'an",
+    "difficulty": "easy"
+  },
+  {
+    "id": "quran-easy-0003",
+    "question": "What is a chapter of the Qur'an called?",
+    "options": ["Hadith", "Surah", "Sunnah", "Ruku"],
+    "answer": "Surah",
+    "difficulty": "easy"
+  },
+  {
+    "id": "quran-easy-0004",
+    "question": "What is a verse of the Qur'an called?",
+    "options": ["Ayah", "Fatwa", "Zakat", "Adhan"],
+    "answer": "Ayah",
+    "difficulty": "easy"
+  },
+  {
+    "id": "quran-easy-0005",
+    "question": "How many surahs are in the Qur'an?",
+    "options": ["100", "114", "120", "99"],
+    "answer": "114",
+    "difficulty": "hard"
+  },
+  {
+    "id": "quran-easy-0006",
+    "question": "Which surah is the first in the Qur'an?",
+    "options": ["Al-Baqarah", "Al-Fatihah", "Al-Ikhlas", "An-Nas"],
+    "answer": "Al-Fatihah",
+    "difficulty": "easy"
+  },
+  {
+    "id": "quran-easy-0007",
+    "question": "Which surah is the longest in the Qur'an?",
+    "options": ["Al-Baqarah", "Yasin", "Al-Kahf", "Maryam"],
+    "answer": "Al-Baqarah",
+    "difficulty": "easy"
+  },
+  {
+    "id": "quran-easy-0008",
+    "question": "Which surah is the shortest in the Qur'an?",
+    "options": ["Al-Kawthar", "Al-Falaq", "Al-Asr", "Al-Fatihah"],
+    "answer": "Al-Kawthar",
+    "difficulty": "easy"
+  },
+  {
+    "id": "quran-easy-0009",
+    "question": "Who is the final prophet in Islam mentioned throughout the Qur'an?",
+    "options": ["Musa", "Isa", "Muhammad", "Ibrahim"],
+    "answer": "Muhammad",
+    "difficulty": "easy"
+  },
+  {
+    "id": "quran-easy-0010",
+    "question": "What is the name of the angel who delivered revelation to Prophet Muhammad?",
+    "options": ["Mikail", "Jibril", "Israfil", "Azra'il"],
+    "answer": "Jibril",
+    "difficulty": "easy"
+  },
+  {
+    "id": "quran-easy-0011",
+    "question": "Which prophet is associated with the story of the flood in the Qur'an?",
+    "options": ["Nuh", "Yusuf", "Yunus", "Ayyub"],
+    "answer": "Nuh",
+    "difficulty": "easy"
+  },
+  {
+    "id": "quran-easy-0012",
+    "question": "Which prophet is known for interpreting dreams in the Qur'an?",
+    "options": ["Yusuf", "Musa", "Dawud", "Ilyas"],
+    "answer": "Yusuf",
+    "difficulty": "easy"
+  },
+  {
+    "id": "quran-easy-0014",
+    "question": "What is the Arabic word commonly used for Paradise in the Qur'an?",
+    "options": ["Jannah", "Jahannam", "Dunya", "Barzakh"],
+    "answer": "Jannah",
+    "difficulty": "easy"
+  },
+  {
+    "id": "quran-easy-0015",
+    "question": "What is the Arabic word commonly used for Hell in the Qur'an?",
+    "options": ["Jannah", "Jahannam", "Salah", "Sawm"],
+    "answer": "Jahannam",
+    "difficulty": "easy"
+  },
+  {
+    "id": "quran-easy-0016",
+    "question": "What is the first word revealed according to the beginning of Surah Al-'Alaq?",
+    "options": ["Iqra", "Salli", "Qul", "Subhan"],
+    "answer": "Iqra",
+    "difficulty": "easy",
+    "description": "The opening command in Surah 96 is commonly rendered as “Read/Recite” (Iqra)."
+  },
+  {
+    "id": "quran-easy-0017",
+    "question": "Which surah is often called the 'Heart of the Qur'an' in popular Muslim tradition?",
+    "options": ["Yasin", "Al-Baqarah", "An-Nur", "Al-Mulk"],
+    "answer": "Yasin",
+    "difficulty": "easy",
+    "description": "This is a widely known traditional title; it’s not a formal Qur'anic label."
+  },
+  {
+    "id": "quran-easy-0020",
+    "question": "What is the Qur'anic term for charity that is an obligation (one of the pillars of Islam)?",
+    "options": ["Zakat", "Sadaqah", "Hajj", "Umrah"],
+    "answer": "Zakat",
+    "difficulty": "easy"
+  },
+  {
+    "id": "quran-easy-0021",
+    "question": "What is the Qur'anic term for fasting in Ramadan?",
+    "options": ["Salah", "Sawm", "Zakat", "Tawaf"],
+    "answer": "Sawm",
+    "difficulty": "easy"
+  },
+  {
+    "id": "quran-easy-0022",
+    "question": "What is the Qur'anic term for the five daily prayers?",
+    "options": ["Salah", "Sawm", "Hajj", "Zikr"],
+    "answer": "Salah",
+    "difficulty": "easy"
+  },
+  {
+    "id": "quran-easy-0023",
+    "question": "Which prophet is known for building the Ka'bah with his son?",
+    "options": ["Ibrahim", "Musa", "Isa", "Nuh"],
+    "answer": "Ibrahim",
+    "difficulty": "easy"
+  },
+  {
+    "id": "quran-easy-0027",
+    "question": "Which surah is the last surah in the Qur'an?",
+    "options": ["An-Nas", "Al-Falaq", "Al-Ikhlas", "Al-Kawthar"],
+    "answer": "An-Nas",
+    "difficulty": "easy"
+  },
+  {
+    "id": "quran-easy-0028",
+    "question": "Which surah contains the phrase 'Qul huwa Allahu ahad'?",
+    "options": ["Al-Ikhlas", "Al-Fatihah", "Al-Baqarah", "Al-Asr"],
+    "answer": "Al-Ikhlas",
+    "difficulty": "easy"
+  },
+  {
+    "id": "quran-easy-0029",
+    "question": "What is the Islamic declaration of faith called?",
+    "options": ["Shahada", "Salah", "Zakat", "Sawm"],
+    "answer": "Shahada",
+    "difficulty": "easy"
+  },
+  {
+    "id": "quran-easy-0030",
+    "question": "What is the name of the month in which the Qur'an began to be revealed?",
+    "options": ["Ramadan", "Muharram", "Rabi' al-Awwal", "Dhu al-Hijjah"],
+    "answer": "Ramadan",
+    "difficulty": "easy"
+  },
+
+  {
+    "id": "quran-medium-0001",
+    "question": "What is the Qur'anic term for the Day of Judgment?",
+    "options": ["Yawm al-Qiyamah", "Laylat al-Qadr", "Hijrah", "Barzakh"],
+    "answer": "Yawm al-Qiyamah",
+    "difficulty": "medium"
+  },
+  {
+    "id": "quran-medium-0002",
+    "question": "What is the Qur'anic term for the unseen world/realities beyond perception?",
+    "options": ["Ghayb", "Dunya", "Shirk", "Fitnah"],
+    "answer": "Ghayb",
+    "difficulty": "hard"
+  },
+  {
+    "id": "quran-medium-0004",
+    "question": "Which prophet is explicitly named as the Messiah in the Qur'an?",
+    "options": ["Isa", "Musa", "Ibrahim", "Muhammed"],
+    "answer": "Isa",
+    "difficulty": "medium"
+  },
+  {
+    "id": "quran-medium-0011",
+    "question": "What is the Qur'anic term for associating partners with Allah?",
+    "options": ["Shirk", "Sabr", "Taqwa", "Shura"],
+    "answer": "Shirk",
+    "difficulty": "medium"
+  },
+  {
+    "id": "quran-medium-0012",
+    "question": "What is the Qur'anic term for God-consciousness/piety?",
+    "options": ["Taqwa", "Nifaq", "Riba", "Ghibah"],
+    "answer": "Taqwa",
+    "difficulty": "medium"
+  },
+  {
+    "id": "quran-medium-0013",
+    "question": "What is the Qur'anic term often translated as patience/steadfastness?",
+    "options": ["Sabr", "Shukr", "Kufr", "Sawm"],
+    "answer": "Sabr",
+    "difficulty": "medium"
+  },
+  {
+    "id": "quran-medium-0014",
+    "question": "What is the Qur'anic term for gratitude/thankfulness?",
+    "options": ["Shukr", "Shirk", "Riba", "Fitnah"],
+    "answer": "Shukr",
+    "difficulty": "medium"
+  },
+  {
+    "id": "quran-medium-0016",
+    "question": "Which prophet is associated with the story of being in the belly of a great fish?",
+    "options": ["Yunus", "Nuh", "Hud", "Salih"],
+    "answer": "Yunus",
+    "difficulty": "medium"
+  },
+  {
+    "id": "quran-medium-0025",
+    "question": "What is the Qur'anic term commonly used for the pilgrimage to Makkah?",
+    "options": ["Hajj", "Sawm", "Salah", "Wudu"],
+    "answer": "Hajj",
+    "difficulty": "medium"
+  },
+  {
+    "id": "quran-medium-0026",
+    "question": "What is the Qur'anic term for 'hypocrisy'?",
+    "options": ["Nifaq", "Taqwa", "Sabr", "Ihsan"],
+    "answer": "Nifaq",
+    "difficulty": "medium"
+  },
+  {
+    "id": "quran-medium-0027",
+    "question": "What is the Qur'anic term for usury/interest (commonly prohibited in Islamic law)?",
+    "options": ["Riba", "Zikr", "Sadaqah", "I'tikaf"],
+    "answer": "Riba",
+    "difficulty": "hard"
+  },
+  {
+    "id": "quran-medium-0030",
+    "question": "What is the Qur'anic term for remembrance of Allah (common devotional practice)?",
+    "options": ["Zikr", "Riba", "Nifaq", "Shirk"],
+    "answer": "Zikr",
+    "difficulty": "medium"
+  },
+
+  {
+    "id": "quran-hard-0001",
+    "question": "Which surah is known for Ayat al-Kursi (The Throne Verse)?",
+    "options": ["Al-Baqarah", "Al-Imran", "An-Nisa", "Al-Ma'idah"],
+    "answer": "Al-Baqarah",
+    "difficulty": "hard"
+  },
+  {
+    "id": "quran-hard-0002",
+    "question": "What is the number of Ayat al-Kursi within its surah?",
+    "options": ["2:255", "2:200", "2:340", "3:234"],
+    "answer": "2:255",
+    "difficulty": "hard"
+  },
+  {
+    "id": "quran-easy-0002",
+    "question": "In which language was the Quran revealed?",
+    "options": ["Hebrew", "Arabic", "Syriac", "Persian"],
+    "answer": "Arabic",
+    "difficulty": "easy"
+  },
+  {
+    "id": "quran-easy-0005",
+    "question": "Who received the revelation of the Quran?",
+    "options": ["Prophet Musa", "Prophet Isa", "Prophet Muhammad", "Prophet Ibrahim"],
+    "answer": "Prophet Muhammad",
+    "difficulty": "easy"
+  },
+  {
+    "id": "quran-easy-0007",
+    "question": "In which month was the Quran first revealed?",
+    "options": ["Muharram", "Ramadan", "Dhul-Hijjah", "Sha'ban"],
+    "answer": "Ramadan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "quran-easy-0008",
+    "question": "Where was the Quran first revealed to the Prophet Muhammad?",
+    "options": ["Masjid al-Haram", "Masjid al-Aqsa", "Cave Hira", " Cave Taif"],
+    "answer": "Cave Hira",
+    "difficulty": "hard"
+  },
+  {
+    "id": "quran-easy-0016",
+    "question": "Which surah is named after \"The Cow\"?",
+    "options": ["Al-An'am", "Al-Baqarah", "Al-Ma'idah", "Al-Anfal"],
+    "answer": "Al-Baqarah",
+    "difficulty": "easy"
+  },
+  {
+    "id": "quran-easy-0017",
+    "question": "Which surah is named after \"The Ant\"?",
+    "options": ["An-Naml", "Al-Ankabut", "An-Nahl", "Al-Fil"],
+    "answer": "An-Naml",
+    "difficulty": "hard"
+  },
+  {
+    "id": "quran-easy-0022",
+    "question": "According to the Quran, who was the first human being created by Allah?",
+    "options": ["Nuh", "Ibrahim", "Adam", "Yunus"],
+    "answer": "Adam",
+    "difficulty": "easy"
+  },
+  {
+    "id": "quran-easy-0023",
+    "question": "Which prophet is mentioned most frequently by name in the Quran?",
+    "options": ["Musa", "Ibrahim", "Isa", "Muhammed"],
+    "answer": "Musa",
+    "difficulty": "hard"
+  },
+  {
+    "id": "quran-medium-0026",
+    "question": "Approximately how many years did the revelation of the Quran continue?",
+    "options": ["10 years", "15 years", "23 years", "33 years"],
+    "answer": "23 years",
+    "difficulty": "hard"
+  },
+  {
+    "id": "quran-medium-0027",
+    "question": "In which two cities was most of the Quran revealed?",
+    "options": [
+      "Makkah and Madinah",
+      "Makkah and Taif",
+      "Madinah and Jerusalem",
+      "Madinah and Tabuk"
+    ],
+    "answer": "Makkah and Madinah",
+    "difficulty": "medium"
+  },
+  {
+    "id": "quran-medium-0030",
+    "question": "How many juz' (parts) is the Quran divided into for recitation?",
+    "options": ["20", "25", "30", "40"],
+    "answer": "30",
+    "difficulty": "hard"
+  },
+  {
+    "id": "quran-medium-0035",
+    "question": "Which surah mentions the miraculous birth of Prophet Isa and his speech as a baby?",
+    "options": ["Al-Imran", "Maryam", "Al-Ma'idah", "Al-An'am"],
+    "answer": "Maryam",
+    "difficulty": "medium"
+  },
+  {
+    "id": "quran-medium-0038",
+    "question": "Which surah commands believers to observe fasting in the month of Ramadan?",
+    "options": ["Al-Baqarah", "Al-Imran", "An-Nisa", "At-Tawbah"],
+    "answer": "Al-Baqarah",
+    "difficulty": "medium"
+  },
+  {
+    "id": "quran-medium-0043",
+    "question": "Which surah is often recited on Fridays and contains themes about the people of the cave and the two gardens?",
+    "options": ["Yasin", "Al-Kahf", "As-Sajdah", "Al-Jumu'ah"],
+    "answer": "Al-Kahf",
+    "difficulty": "hard"
+  },
+  {
+    "id": "quran-hard-0054",
+    "question": "Which surah includes the story of Talut (Saul) and Jalut (Goliath)?",
+    "options": ["Al-Baqarah", "Al-Imran", "Al-An'am", "Al-Anfal"],
+    "answer": "Al-Baqarah",
+    "difficulty": "hard"
+  },
+  {
+    "id": "qur-med-001",
+    "difficulty": "medium",
+    "question": "Which of these is NOT one of the Five Pillars of Islam?",
+    "options": ["Sawm", "Zakat", "Hajj", "Jihad"],
+    "answer": "Jihad"
+  },
+  {
+    "id": "qur-med-002",
+    "difficulty": "medium",
+    "question": "Which of these is NOT a chapter (surah) of the Qur'an?",
+    "options": ["Al-Fatiha", "Al-Baqarah", "Al-Ikhlas", "Al-Masih"],
+    "answer": "Al-Masih"
+  },
+  {
+    "id": "qur-med-003",
+    "difficulty": "medium",
+    "question": "Which of these is NOT a chapter (surah) of the Qur'an?",
+    "options": ["An-Nisa", "Al-Kahf", "Ya-Sin", "Al-Burujah"],
+    "answer": "Al-Burujah"
+  },
+  {
+    "id": "qur-med-004",
+    "difficulty": "medium",
+    "question": "Which of these is NOT a chapter (surah) of the Qur'an?",
+    "options": ["Al-Mulk", "Al-Asr", "Al-Falaq", "Ar-Rahib"],
+    "answer": "Ar-Rahib"
+  },
+  {
+    "id": "qur-med-005",
+    "difficulty": "medium",
+    "question": "Which of these is NOT one of the Names of Allah?",
+    "options": ["Ar-Rahman", "Al-Ghafur", "Al-'Aziz", "Al-Mutakabbirun"],
+    "answer": "Al-Mutakabbirun"
+  },
+  {
+    "id": "qur-med-006",
+    "difficulty": "medium",
+    "question": "Which of these is NOT one of the Names of Allah (Asma' ul-Husna)?",
+    "options": ["As-Sami'", "Al-Wadud", "Al-Hakim", "Ar-Razzaqan"],
+    "answer": "Ar-Razzaqan"
+  },
+  {
+    "id": "qur-med-007",
+    "difficulty": "hard",
+    "question": "Which of these is NOT one of the Names of Allah (Asma' ul-Husna)?",
+    "options": ["Al-Quddus", "Al-Jabbar", "Al-Basir", "Al-Mun'im"],
+    "answer": "Al-Mun'im"
+  },
+  {
+    "id": "qur-med-008",
+    "difficulty": "medium",
+    "question": "Which of these is NOT a month in the Islamic (Hijri) calendar?",
+    "options": ["Muharram", "Sha'ban", "Dhu al-Hijjah", "Safarun"],
+    "answer": "Safarun"
+  },
+  {
+    "id": "qur-med-009",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a month in the Islamic (Hijri) calendar?",
+    "options": ["Rabi' al-Awwal", "Jumada al-Akhirah", "Ramadan", "Rajaban"],
+    "answer": "Rajaban"
+  },
+  {
+    "id": "qur-med-010",
+    "difficulty": "medium",
+    "question": "What is the name of the night associated with the Qur'an’s revelation?",
+    "options": ["Laylat al-Qadr", "Laylat al-Mi'raj", "Laylat al-Bara'ah", "Laylat al-Fitr"],
+    "answer": "Laylat al-Qadr"
+  },
+  {
+    "id": "qur-med-011",
+    "difficulty": "medium",
+    "question": "In Islamic tradition, what is the name of Adam’s wife?",
+    "options": ["Hawwa", "Maryam", "Amina", "Asiya"],
+    "answer": "Hawwa"
+  },
+  {
+    "id": "qur-hard-008",
+    "difficulty": "hard",
+    "question": "What is the Arabic term for a person who has memorized the entire Qur’an?",
+    "options": ["Ḥāfiẓ", "Muḥaddith", "Faqīh", "Khaṭīb"],
+    "answer": "Ḥāfiẓ"
+  },
+  {
+    "id": "qur-hard-018",
+    "difficulty": "hard",
+    "question": "What is the Arabic term for the ‘opening declaration’ recited before most Qur’anic recitation: “I seek refuge in God…”?",
+    "options": ["Istiʿādhah", "Takbīr", "Tahlīl", "Tasbīḥ"],
+    "answer": "Istiʿādhah"
+  },
+  {
+    "id": "qur-hard-022",
+    "difficulty": "hard",
+    "question": "What is the name of the Qur’anic term often used for the pre-dawn meal before fasting begins?",
+    "options": ["Suḥūr", "Iftār", "ʿAqīqah", "Khuṭbah"],
+    "answer": "Suḥūr"
+  },
+  {
+    "id": "qur-hard-025",
+    "difficulty": "hard",
+    "question": "What is the term for the direction Muslims face during prayer, linked to the Kaaba?",
+    "options": ["Qiblah", "Miḥrāb", "Minbar", "Manāsik"],
+    "answer": "Qiblah"
+  },
+  {
+    "id": "qur-hard-026",
+    "difficulty": "hard",
+    "question": "What is the Arabic term for ritual purification using clean earth when water is unavailable or harmful?",
+    "options": ["Tayammum", "Wuḍū’", "Ghusl", "Istinjā’"],
+    "answer": "Tayammum"
+  },
+  {
+    "id": "qur-hard-028",
+    "difficulty": "hard",
+    "question": "What is the Arabic term for the call to prayer?",
+    "options": ["Adhān", "Iqāmah", "Duʿā’", "Khuṭbah"],
+    "answer": "Adhān"
+  },
+  {
+    "id": "qur-hard-029",
+    "difficulty": "hard",
+    "question": "What is the Arabic term for the shorter call immediately before congregational prayer begins (distinct from the adhān)?",
+    "options": ["Iqāmah", "Adhān", "Takbīr", "Salām"],
+    "answer": "Iqāmah"
+  },
+  {
+    "id": "qur-hard-030",
+    "difficulty": "hard",
+    "question": "What is the term for the obligatory charity given at the end of Ramadan before the Eid prayer, tied to purification of the fast?",
+    "options": ["Zakāt al-Fiṭr", "Zakāt al-Māl", "Ṣadaqat al-Jāriyah", "Kaffārah"],
+    "answer": "Zakāt al-Fiṭr"
+  },
+  {
+    "id": "qur-hard-031",
+    "difficulty": "hard",
+    "question": "What is the Arabic term for expiation required for certain violations (like some broken oaths), often involving fasting or feeding the poor?",
+    "options": ["Kaffārah", "Niyyah", "Rukn", "Shurūṭ"],
+    "answer": "Kaffārah"
+  },
+  {
+    "id": "qur-hard-032",
+    "difficulty": "hard",
+    "question": "In Islamic creed, what is the Arabic term for the absolute oneness of God?",
+    "options": ["Tawḥīd", "Taqlīd", "Taṣawwuf", "Tajrīd"],
+    "answer": "Tawḥīd"
+  },
+  {
+    "id": "qur-hard-033",
+    "difficulty": "hard",
+    "question": "What is the name of the event describing the Prophet’s night journey and ascension, central in Islamic tradition and referenced in discussion of revelation-era miracles?",
+    "options": ["Al-Isrā’ wal-Miʿrāj", "Hijrah", "Ḥudaybiyyah", "Badr"],
+    "answer": "Al-Isrā’ wal-Miʿrāj"
+  },
+  {
+    "id": "qur-hard-034",
+    "difficulty": "hard",
+    "question": "What is the Arabic term for the migration from Mecca to Medina that marks the start of the Islamic calendar?",
+    "options": ["Hijrah", "ʿUmrah", "Ḥajj", "Ṣulḥ"],
+    "answer": "Hijrah"
+  },
+  {
+    "id": "qur-hard-046",
+    "difficulty": "hard",
+    "question": "What is the Arabic term for repentance—turning back to God after wrongdoing?",
+    "options": ["Tawbah", "Tawakkul", "Taqwā", "Taṣdīq"],
+    "answer": "Tawbah"
+  },
+  {
+    "id": "qur-hard-047",
+    "difficulty": "hard",
+    "question": "What is the Arabic term for God-consciousness/piety—guarding oneself by awareness of God?",
+    "options": ["Taqwā", "Taḥrīf", "Tathbīt", "Tafrīṭ"],
+    "answer": "Taqwā"
+  },
+  {
+    "id": "quran-medium-0056",
+    "question": "Which prophet was known for his exceptional patience during severe illness and loss?",
+    "options": ["Prophet Ayyub", "Prophet Yaqub", "Prophet Yusuf", "Prophet Zakariya"],
+    "answer": "Prophet Ayyub",
+    "difficulty": "hard"
+  },
+{
+"id": "quran-hard-0102",
+"question": "Which prophet received a book called the Suhuf (Scrolls) from Allah?",
+"options": ["Prophet Ibrahim", "Prophet Musa", "Prophet Dawud", "Prophet Idris"],
+"answer": "Prophet Ibrahim",
+"difficulty": "hard"
+},
+  {
+    "id": "quran-medium-0057",
+    "question": "To which people was Prophet Hud sent as a messenger?",
+    "options": ["People of Thamud", "People of 'Ad", "People of Madyan", "People of Lut"],
+    "answer": "People of 'Ad",
+    "difficulty": "hard"
+  },
+  {
+    "id": "quran-medium-0058",
+    "question": "What miraculous sign did Prophet Saleh bring to his people, the Thamud?",
+    "options": ["A staff that turned into a serpent", "A she-camel", "A river from rock", "A talking bird"],
+    "answer": "A she-camel",
+    "difficulty": "hard"
+  },
+  {
+    "id": "quran-medium-0059",
+    "question": "Which prophet was thrown into a well by his brothers out of jealousy?",
+    "options": ["Prophet Yusuf", "Prophet Yaqub", "Prophet Ishaq", "Prophet Lut"],
+    "answer": "Prophet Yusuf",
+    "difficulty": "hard"
+  },
+  {
+    "id": "quran-medium-0063",
+    "question": "Which prophet was granted a kingdom with control over winds, jinn, and animals?",
+    "options": ["Prophet Dawud", "Prophet Sulayman", "Prophet Musa", "Prophet Harun"],
+    "answer": "Prophet Sulayman",
+    "difficulty": "hard"
+  },
+  {
+    "id": "quran-medium-0065",
+    "question": "Which prophet received the Torah as revelation from Allah?",
+    "options": ["Prophet Dawud", "Prophet Musa", "Prophet Isa", "Prophet Ibrahim"],
+    "answer": "Prophet Musa",
+    "difficulty": "hard"
+  },
+  {
+    "id": "quran-medium-0066",
+    "question": "Who was the brother and helper of Prophet Musa?",
+    "options": ["Prophet Harun", "Prophet Shu'ayb", "Prophet Yunus", "Prophet Zakariya"],
+    "answer": "Prophet Harun",
+    "difficulty": "hard"
+  },
+  {
+    "id": "quran-medium-0067",
+    "question": "Which prophet was granted the Gospel (Injil) by Allah?",
+    "options": ["Prophet Isa", "Prophet Yahya", "Prophet Zakariya", "Prophet Yunus"],
+    "answer": "Prophet Isa",
+    "difficulty": "hard"
+  },
+  {
+    "id": "quran-medium-0068",
+    "question": "Who was the father of Prophet Yahya?",
+    "options": ["Prophet Zakariya", "Prophet Ibrahim", "Prophet Yaqub", "Prophet Lut"],
+    "answer": "Prophet Zakariya",
+    "difficulty": "medium"
+  },
+  {
+    "id": "quran-hard-0025",
+    "question": "Which surah is named 'The Fig'?",
+    "options": ["At-Tin", "Al-Fil", "Al-Qariah", "Al-Layl"],
+    "answer": "At-Tin",
+    "difficulty": "hard"
+  },
+  {
+    "id": "quran-hard-0026",
+    "question": "Which surah is named 'The Dawn'?",
+    "options": ["Al-Fajr", "Ad-Duha", "Ash-Sharh", "At-Takathur"],
+    "answer": "Al-Fajr",
+    "difficulty": "hard"
+  },
+  {
+    "id": "quran-hard-0027",
+    "question": "Which surah is named 'The Forenoon/Morning Brightness'?",
+    "options": ["Ad-Duha", "Al-Layl", "Ash-Shams", "Al-Asr"],
+    "answer": "Ad-Duha",
+    "difficulty": "hard"
+  },
+  {
+    "id": "quran-hard-0029",
+    "question": "Which surah is named 'Time'?",
+    "options": ["Al-Asr", "Al-Qadr", "Al-Layl", "An-Nas"],
+    "answer": "Al-Asr",
+    "difficulty": "hard"
+  },
+  {
+    "id": "quran-hard-0030",
+    "question": "Which surah is named 'The Dominion'?",
+    "options": ["Al-Mulk", "Al-Ma'un", "Al-Masad", "Al-Qari'ah"],
+    "answer": "Al-Mulk",
+    "difficulty": "hard"
+  },
+  {
+    "id": "quran-expert-0005",
+    "question": "Which surah is named 'Cattle'?",
+    "options": ["Al-An'am", "Al-Anfal", "Al-A'raf", "Al-Asr"],
+    "answer": "Al-An'am",
+    "difficulty": "expert"
+  },
+  {
+    "id": "quran-expert-0006",
+    "question": "Which surah is named 'The Bee'?",
+    "options": ["An-Nahl", "An-Naml", "Al-Ankabut", "Al-Fil"],
+    "answer": "An-Nahl",
+    "difficulty": "expert"
+  },
+  {
+    "id": "quran-expert-0007",
+    "question": "Which surah is named 'The Ant'?",
+    "options": ["An-Naml", "An-Nahl", "At-Tin", "Al-Qalam"],
+    "answer": "An-Naml",
+    "difficulty": "expert"
+  },
+  {
+    "id": "quran-expert-0008",
+    "question": "Which surah is named 'The Spider'?",
+    "options": ["Al-Ankabut", "Al-Buruj", "Al-Qari'ah", "Al-Masad"],
+    "answer": "Al-Ankabut",
+    "difficulty": "expert"
+  },
+
+  {
+    "id": "quran-expert-0003",
+    "question": "Which surah is named 'The Prophets'?",
+    "options": ["Al-Anbiya", "Al-Mursalat", "As-Saffat", "Al-Qalam"],
+    "answer": "Al-Anbiya",
+    "difficulty": "expert"
+  },
+  {
+    "id": "quran-medium-0070",
+    "question": "Which wealthy man was swallowed by the earth for his arrogance and disbelief?",
+    "options": ["Fir'awn", "Qarun", "Haman", "Abu Lahab"],
+    "answer": "Qarun",
+    "difficulty": "hard"
+  },
+{
+"id": "quran-medium-0107",
+"question": "Which prophet was granted children despite his old age and his wife`s barrenness?",
+"options": ["Prophet Ibrahim", "Prophet Zakariya", "Prophet Ayyub", "Prophet Yunus"],
+"answer": "Prophet Zakariya",
+"difficulty": "medium"
+},
+{
+"id": "quran-medium-0105",
+"question": "Which prophet was given the Psalms (Zabur) by Allah?",
+"options": ["Prophet Dawud", "Prophet Harun", "Prophet Ilyas", "Prophet Zakariya"],
+"answer": "Prophet Dawud",
+"difficulty": "hard"
+},
+  {
+    "id": "quran-hard-0098",
+    "question": "Who made the golden calf for Bani Isra'il during Musa's absence?",
+    "options": ["Harun", "Samiri", "Fir'awn", "Qarun"],
+    "answer": "Samiri",
+    "difficulty": "hard"
+  }
+]
+
+

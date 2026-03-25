@@ -1,0 +1,819 @@
+[
+  {
+    "id": "lop-001",
+    "difficulty": "easy",
+    "question": "What is the name of the city where Lies of P takes place?",
+    "options": ["Krat", "Yharnam", "Londor", "Lumière"],
+    "answer": "Krat"
+  },
+  {
+    "id": "lop-002",
+    "difficulty": "easy",
+    "question": "Who created Pinocchio in Lies of P?",
+    "options": ["Geppetto", "Venigni", "Simon Manus", "Arlecchino"],
+    "answer": "Geppetto"
+  },
+  {
+    "id": "lop-003",
+    "difficulty": "easy",
+    "question": "What is the main resource used to level up in Lies of P?",
+    "options": ["Ergo", "Souls", "Runes", "Blood Echoes"],
+    "answer": "Ergo"
+  },
+  {
+    "id": "lop-004",
+    "difficulty": "easy",
+    "question": "Where do you usually return to as a main safe hub?",
+    "options": ["Hotel Krat", "Roundtable Hold", "Firelink Shrine", "Majula"],
+    "answer": "Hotel Krat"
+  },
+  {
+    "id": "lop-005",
+    "difficulty": "easy",
+    "question": "What is P’s mechanical left arm called in general?",
+    "options": ["Legion Arm", "Trick Arm", "Clockwork Arm", "Ergo Arm"],
+    "answer": "Legion Arm"
+  },
+  {
+    "id": "lop-006",
+    "difficulty": "easy",
+    "question": "What are the checkpoint/fast travel points called?",
+    "options": ["Stargazers", "Lanterns", "Bonfires", "Sites of Grace"],
+    "answer": "Stargazers"
+  },
+  {
+    "id": "lop-007",
+    "difficulty": "easy",
+    "question": "What is the name of the ability tree system you unlock and upgrade with Quartz?",
+    "options": ["P-Organ", "Skill Web", "E-Organ", "Ergo Matrix"],
+    "answer": "P-Organ"
+  },
+  {
+    "id": "lop-008",
+    "difficulty": "easy",
+    "question": "What item is commonly used to heal in Lies of P?",
+    "options": ["Pulse Cells", "Estus Flasks", "Blood Vials", "Life Gems"],
+    "answer": "Pulse Cells"
+  },
+  {
+    "id": "lop-009",
+    "difficulty": "easy",
+    "question": "What defensive timing mechanic reduces damage and helps build stagger when done perfectly?",
+    "options": ["Perfect Guard", "Dodge Roll+", "Parry Chain", "Deflect Burst"],
+    "answer": "Perfect Guard"
+  },
+  {
+    "id": "lop-010",
+    "difficulty": "easy",
+    "question": "What is the weapon move system called that consumes special bars to unleash stronger attacks?",
+    "options": ["Fable Arts", "Limit Breaks", "Weapon Skills", "Ashes"],
+    "answer": "Fable Arts"
+  },
+  {
+    "id": "lop-011",
+    "difficulty": "easy",
+    "question": "What is the blue bar resource used for Arm abilities?",
+    "options": ["Legion", "Focus", "Mana", "Ergo"],
+    "answer": "Legion"
+  },
+  {
+    "id": "lop-012",
+    "difficulty": "easy",
+    "question": "What do you collect to upgrade your healing (Pulse Cells)?",
+    "options": ["Quartz", "XP", "Sacred Tears", "Blood Shards"],
+    "answer": "Quartz"
+  },
+  {
+    "id": "lop-013",
+    "difficulty": "easy",
+    "question": "What happens if you die with unspent Ergo?",
+    "options": ["It drops and can be recovered", "It is permanently deleted", "It auto-banks at Hotel Krat", "It turns into Quartz"],
+    "answer": "It drops and can be recovered"
+  },
+  {
+    "id": "lop-014",
+    "difficulty": "easy",
+    "question": "Which stat tracks whether you tend to lie or tell the truth?",
+    "options": ["Humanity", "Karma", "Honor", "Sanity"],
+    "answer": "Humanity"
+  },
+  {
+    "id": "lop-015",
+    "difficulty": "easy",
+    "question": "Which enemy event kicks off the citywide disaster in the story?",
+    "options": ["Puppet Frenzy", "Dragon Plague", "The Fracture", "The Red Moon"],
+    "answer": "Puppet Frenzy"
+  },
+  {
+    "id": "lop-016",
+    "difficulty": "easy",
+    "question": "Who is the woman that guides P through a voice and later becomes a key ally?",
+    "options": ["Sophia", "Eugenia", "Antonia", "Alidoro"],
+    "answer": "Sophia"
+  },
+  {
+    "id": "lop-017",
+    "difficulty": "easy",
+    "question": "Which character runs a workshop and helps with gear crafting and upgrades at Hotel Krat?",
+    "options": ["Venigni", "Polendina", "Geppetto", "Giangio"],
+    "answer": "Venigni"
+  },
+  {
+    "id": "lop-018",
+    "difficulty": "hard",
+    "question": "Who is the polite butler-like puppet at Hotel Krat?",
+    "options": ["Polendina", "Romeo", "Arlecchino", "Fuoco"],
+    "answer": "Polendina"
+  },
+  {
+    "id": "lop-020",
+    "difficulty": "easy",
+    "question": "What is the name of the main puppet protagonist?",
+    "options": ["P", "G", "K", "N"],
+    "answer": "P"
+  },
+  {
+    "id": "lop-021",
+    "difficulty": "easy",
+    "question": "What do you use to sharpen your weapons?",
+    "options": ["Grinder", "Whetstone Kit", "Rune Chalk", "Blood Oil"],
+    "answer": "Grinder"
+  },
+  {
+    "id": "lop-022",
+    "difficulty": "easy",
+    "question": "What are the powerful red attacks that must be dodged or Perfect Guarded called?",
+    "options": ["Fury Attacks", "Rage Strikes", "Crimson Blows", "Boss Arts"],
+    "answer": "Fury Attacks"
+  },
+  {
+    "id": "lop-024",
+    "difficulty": "hard",
+    "question": "What is the name of the first major boss many players face at the start?",
+    "options": ["Parade Master", "Nameless Puppet", "Romeo", "Laxasia"],
+    "answer": "Parade Master"
+  },
+  {
+    "id": "lop-025",
+    "difficulty": "hard",
+    "question": "Which boss is the police-like puppet fought early?",
+    "options": ["Scrapped Watchman", "Door Guardian", "Victor", "Walker of Illusions"],
+    "answer": "Scrapped Watchman"
+  },
+  {
+    "id": "lop-026",
+    "difficulty": "hard",
+    "question": "What is the name of the cathedral area in Lies of P?",
+    "options": ["St. Frangelico Cathedral", "Cathedral Ward", "Grand Basilica Cathedral", "Cathedral of Ash "],
+    "answer": "St. Frangelico Cathedral"
+  },
+  {
+    "id": "lop-027",
+    "difficulty": "hard",
+    "question": "What is the name of the wealthy woman associated with Hotel Krat’s storylines?",
+    "options": ["Antonia", "Sophia", "Eugenie", "Giangio"],
+    "answer": "Antonia"
+  },
+  {
+    "id": "lop-028",
+    "difficulty": "hard",
+    "question": "What is the collectible material used to unlock P-Organ upgrades?",
+    "options": ["Quartz", "Embers", "Dragon Hearts", "Twin Shards"],
+    "answer": "Quartz"
+  },
+  {
+    "id": "lop-029",
+    "difficulty": "hard",
+    "question": "What is the name of the vendor/hunter figure who trades boss Ergo for special weapons/amulets?",
+    "options": ["Alidoro", "Giangio", "Polendina", "Venigni"],
+    "answer": "Alidoro"
+  },
+  {
+    "id": "lop-030",
+    "difficulty": "hard",
+    "question": "What is the name of the starting area in Lies of P?",
+    "options": ["Krat Central Station", "St. Frangelico Cathedral", "Hotel Krat", "Cathedral Ward"],
+    "answer": "Krat Central Station"
+  },
+
+  {
+    "id": "lop-031",
+    "difficulty": "hard",
+    "question": "Which organization is heavily tied to Ergo research and many late-game enemies?",
+    "options": ["The Alchemists", "The Harpers", "The Order of Dawn", "The Hunters Workshop"],
+    "answer": "The Alchemists"
+  },
+  {
+    "id": "lop-033",
+    "difficulty": "hard",
+    "question": "What is the machine you use to reset/redistribute certain upgrades?",
+    "options": ["Saintess of Mercy Statue", "Mirror of Rebirth", "Respec Altar", "Ergo Loom"],
+    "answer": "Saintess of Mercy Statue"
+  },
+  {
+    "id": "lop-035",
+    "difficulty": "hard",
+    "question": "What is the name of the masked killer puppet known for taunting the player and speaking in riddles?",
+    "options": ["Arlecchino", "Polendina", "Fuoco", "Romeo"],
+    "answer": "Arlecchino"
+  },
+  {
+    "id": "lop-036",
+    "difficulty": "hard",
+    "question": "Which group of human fighters, often masked, serves as elite adversaries and rivals?",
+    "options": ["Stalkers", "Valkyries", "Hunters", "Witchers"],
+    "answer": "Stalkers"
+  },
+  {
+    "id": "lop-037",
+    "difficulty": "medium",
+    "question": "Which duo of stalkers appear together and become recurring characters in side quests?",
+    "options": ["Red Fox and Black Cat", "Red Cat and Black Fox", "Black Cat and White fox", "White Cat and Black Fox"],
+    "answer": "Red Fox and Black Cat"
+  },
+  {
+    "id": "lop-038",
+    "difficulty": "medium",
+    "question": "What is the name of the multi-member boss group you fight in Malum District?",
+    "options": ["Black Rabbit Brotherhood", "School of Mensis", "The League", "The Crimson Court"],
+    "answer": "Black Rabbit Brotherhood"
+  },
+  {
+    "id": "lop-039",
+    "difficulty": "medium",
+    "question": "Which boss is known as the King of Puppets?",
+    "options": ["Romeo", "Arlecchino", "Fuoco", "Victor"],
+    "answer": "Romeo"
+  },
+  {
+    "id": "lop-040",
+    "difficulty": "hard",
+    "question": "Which boss is titled “King’s Flame”?",
+    "options": ["Fuoco", "Andreus", "Laxasia", "Garm"],
+    "answer": "Fuoco"
+  },
+  {
+    "id": "lop-041",
+    "difficulty": "hard",
+    "question": "What is the name of the archbishop boss fought in the cathedral storyline?",
+    "options": ["Andreus", "Manus", "Venigni", "Giangio"],
+    "answer": "Andreus"
+  },
+  {
+    "id": "lop-042",
+    "difficulty": "hard",
+    "question": "Which boss is known as the Champion of the Arena/Collapsing venue section mid-game?",
+    "options": ["Victor", "Romeo", "Fuoco", "Door Guardian"],
+    "answer": "Victor"
+  },
+  {
+    "id": "lop-046",
+    "difficulty": "hard",
+    "question": "What stat primarily affects damage for strength-like builds and weapons?",
+    "options": ["Motivity", "Technique", "Advance", "Vitality"],
+    "answer": "Motivity"
+  },
+  {
+    "id": "lop-047",
+    "difficulty": "medium",
+    "question": "Which stat increases equipment load and lets you wear heavier gear more effectively?",
+    "options": ["Capacity", "Advance", "Vigor", "Technique"],
+    "answer": "Capacity"
+  },
+  {
+    "id": "lop-048",
+    "difficulty": "medium",
+    "question": "Which stat improves resistances and elemental damage scaling for certain setups?",
+    "options": ["Advance", "Capacity", "Motivity", "Vitality"],
+    "answer": "Advance"
+  },
+  {
+    "id": "lop-050",
+    "difficulty": "medium",
+    "question": "What item is used to summon a Specter to help with certain boss fights?",
+    "options": ["Star Fragment", "Fate Token", "Summon Bell", "Hollow Shard"],
+    "answer": "Star Fragment"
+  },
+  {
+    "id": "lop-051",
+    "difficulty": "medium",
+    "question": "What are the NPC helpers you can summon for some bosses called?",
+    "options": ["Specters", "Phantoms", "Ashes", "Spirits of Nine"],
+    "answer": "Specters"
+  },
+  {
+    "id": "lop-054",
+    "difficulty": "medium",
+    "question": "Which character is most associated with running the Wishstone/Cube system at Hotel Krat?",
+    "options": ["Giangio", "Venigni", "Gionio", "Benito"],
+    "answer": "Giangio"
+  },
+  {
+    "id": "lop-056",
+    "difficulty": "hard",
+    "question": "Which late-game boss is a lightning-themed knight known for extreme aggression?",
+    "options": ["Laxasia the Complete", "The White Lady", "The Mad Donkey", "The Puppeteer"],
+    "answer": "Laxasia the Complete"
+  },
+  {
+    "id": "lop-057",
+    "difficulty": "hard",
+    "question": "Which enemy is a stalker boss known for elegant swordplay, high speed, agility and fencing?",
+    "options": ["The White Lady", "The Red Fox", "The Black Cat", "Antonia"],
+    "answer": "The White Lady"
+  },
+  {
+    "id": "lop-058",
+    "difficulty": "hard",
+    "question": "What is the item type you insert into certain Legion Arms to modify or improve them?",
+    "options": ["Legion Calibers", "Legion Quartz", "Legion Chambers", "Legion Fragments"],
+    "answer": "Legion Calibers"
+  },
+  {
+    "id": "lop-059",
+    "difficulty": "hard",
+    "question": "What is the name of the blacksmith/assistant character tied to weapon upgrades at Hotel Krat?",
+    "options": ["Eugenie", "Antonia", "Sophia", "Cecile"],
+    "answer": "Eugenie"
+  },
+  {
+    "id": "lop-061",
+    "difficulty": "hard",
+    "question": "What is the name of the endgame human antagonist who leads the Alchemists and seeks godhood-like power?",
+    "options": ["Simon Manus", "Giangio", "Venigni", "Geppetto"],
+    "answer": "Simon Manus"
+  },
+  {
+    "id": "lop-062",
+    "difficulty": "hard",
+    "question": "Which boss is often considered the final secret/true final boss?",
+    "options": ["Nameless Puppet", "Parade Master", "Scrapped Watchman", "Fuoco"],
+    "answer": "Nameless Puppet"
+  },
+  {
+    "id": "lop-066",
+    "difficulty": "hard",
+    "question": "Which zone is known for crime, gangs, and a major Brotherhood boss fight?",
+    "options": ["Malum District", "Arche Abbey", "Rosa Isabelle Street", "Grand Exhibition"],
+    "answer": "Malum District"
+  },
+  {
+    "id": "lop-067",
+    "difficulty": "hard",
+    "question": "Which major mid-game location features displays and puppet exhibits and leads toward Victor’s storyline?",
+    "options": ["Grand Exhibition", "Hotel Krat", "Krat Central Station", "Moonlight Grove"],
+    "answer": "Grand Exhibition"
+  },
+  {
+    "id": "lop-068",
+    "difficulty": "hard",
+    "question": "Which area is heavily associated with decay, poison, and the Green Monster boss?",
+    "options": ["Barren Swamp", "St. Frangelico Cathedral", "Krat Central Station", "Rosa Isabelle Street"],
+    "answer": "Barren Swamp"
+  },
+  {
+    "id": "lop-081",
+    "difficulty": "hard",
+    "question": "Which area name is strongly associated with high-society streets and late-game story progression?",
+    "options": ["Rosa Isabelle Street", "Malum District", "Elysion Boulevard", " Venigni Works"],
+    "answer": "Rosa Isabelle Street"
+  },
+  {
+    "id": "lop-098",
+    "difficulty": "expert",
+    "question": "Which Legion Arm is designed around a grappling/chain pull style utility?",
+    "options": ["Puppet String", "Falcon Eyes", "Aegis", "Flamberge"],
+    "answer": "Puppet String"
+  },
+  {
+    "id": "lop-099",
+    "difficulty": "expert",
+    "question": "Which Legion Arm focuses on flamethrower-style elemental damage?",
+    "options": ["Flamberge", "Puppet String", "Aegis", "Fulminis"],
+    "answer": "Flamberge"
+  },
+  {
+    "id": "lop-100",
+    "difficulty": "expert",
+    "question": "Which Legion Arm is a shield-style defensive option?",
+    "options": ["Aegis", "Flamberge", "Falcon Eyes", "Puppet String"],
+    "answer": "Aegis"
+  },
+  {
+    "id": "lop-101",
+    "difficulty": "expert",
+    "question": "Which Legion Arm fires ranged projectiles in a gun-like manner?",
+    "options": ["Falcon Eyes", "Aegis", "Flamberge", "Fulminis"],
+    "answer": "Falcon Eyes"
+  },
+  {
+    "id": "lop-102",
+    "difficulty": "expert",
+    "question": "Which Legion Arm is electric-themed and charges up for shocks?",
+    "options": ["Fulminis", "Flamberge", "Aegis", "Puppet String"],
+    "answer": "Fulminis"
+  },
+  {
+    "id": "lop-103",
+    "difficulty": "expert",
+    "question": "Which Legion Arm can position a motion sensing landmine?",
+    "options": ["Deus Ex Machina", "Fulminis", "Aegis", "Falcon Eyes"],
+    "answer": "Deus Ex Machina"
+  },
+  {
+    "id": "lop-107",
+    "difficulty": "expert",
+    "question": "What is the name of the factory that created many puppet?",
+    "options": ["Venigni Works", "Venigni School", "Venigni Pupperts", "Venigni Company"],
+    "answer": "Venigni Works"
+  },
+  {
+    "id": "lop-001",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a location in Lies of P?",
+    "options": ["Cerasani Alley", "Malum District", "St. Frangelico Cathedral", "Lydeside Conservatory"],
+    "answer": "Lydeside Conservatory"
+  },
+  {
+    "id": "lop-002",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a location in Lies of P?",
+    "options": ["Lorenzini Arcade", "Venigni Works", "Estella Opera House", "Ironfist Foundry"],
+    "answer": "Ironfist Foundry"
+  },
+  {
+    "id": "lop-003",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a location in Lies of P?",
+    "options": ["Grand Exhibition", "Arche Abbey", "Elysion Boulevard Entrance", "Carcano Clocktower"],
+    "answer": "Carcano Clocktower"
+  },
+
+  {
+    "id": "lop-004",
+    "difficulty": "hard",
+    "question": "Which of these is NOT an item in Lies of P?",
+    "options": ["Pulse Cell", "Star Fragment", "Quartz", "Estus Flask"],
+    "answer": "Estus Flask"
+  },
+  {
+    "id": "lop-005",
+    "difficulty": "hard",
+    "question": "Which of these is NOT an item in Lies of P?",
+    "options": ["Legion Magazine", "Throwing Cell", "Thermite", "Ember"],
+    "answer": "Ember"
+  },
+  {
+    "id": "lop-006",
+    "difficulty": "hard",
+    "question": "Which of these is NOT an item in Lies of P?",
+    "options": ["Attribute Resistance Ampoule", "Special Resistance Ampoule", "Purification Ampoule", "Vitality Ampoule"],
+    "answer": "Vitality Ampoule"
+  },
+
+  {
+    "id": "lop-007",
+    "difficulty": "hard",
+    "question": "Which studio created Lies of P?",
+    "options": ["Round8 Studio", "FromSoftware", "Bluepoint Games", "Respawn Entertainment"],
+    "answer": "Round8 Studio"
+  },
+  {
+    "id": "lop-008",
+    "difficulty": "hard",
+    "question": "What year did Lies of P release?",
+    "options": ["2021", "2022", "2023", "2024"],
+    "answer": "2023"
+  },
+
+  {
+    "id": "lop-009",
+    "difficulty": "hard",
+    "question": "What item can protect your Death Ergo so you don’t lose it on your next death?",
+    "options": ["Gemini's Iron Protection", "Gemini's Emergency Protection", "Star Fragment", "Fable Catalyst"],
+    "answer": "Gemini's Iron Protection"
+  },
+  {
+    "id": "lop-010",
+    "difficulty": "hard",
+    "question": "What item reduces the amount of Death Ergo you lose if you get hit while trying to reclaim it?",
+    "options": ["Gemini's Emergency Protection", "Gemini's Iron Protection", "Attribute Resistance Ampoule", "Legion Magazine"],
+    "answer": "Gemini's Emergency Protection"
+  },
+
+  {
+    "id": "lop-011",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a weapon in Lies of P?",
+    "options": ["Booster Glaive", "Electric Coil Stick", "Puppet Ripper", "Moonlight Greatsword"],
+    "answer": "Moonlight Greatsword"
+  },
+  {
+    "id": "lop-012",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a weapon in Lies of P?",
+    "options": ["Etiquette", "Trident of the Covenant", "Two Dragons Sword", "Blades of Chaos"],
+    "answer": "Blades of Chaos"
+  },
+  {
+    "id": "lop-013",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a weapon in Lies of P?",
+    "options": ["Holy Sword of the Ark", "Frozen Feast", "Proof of Humanity", "Ashen One's Blade"],
+    "answer": "Ashen One's Blade"
+  },
+
+  {
+    "id": "lop-014",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a main boss in Lies of P?",
+    "options": ["Scrapped Watchman", "Fallen Archbishop Andreus", "Romeo, King of Puppets", "Vordt of the Boreal Valley"],
+    "answer": "Vordt of the Boreal Valley"
+  },
+  {
+    "id": "lop-015",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a main boss in Lies of P?",
+    "options": ["Parade Master", "King's Flame, Fuoco", "Champion Victor", "Orphan of Kos"],
+    "answer": "Orphan of Kos"
+  },
+
+  {
+    "id": "lop-016",
+    "difficulty": "medium",
+    "question": "Which of these is NOT a Boss Ergo in Lies of P?",
+    "options": ["King's Flame Ergo", "Burnt-White King's Ergo", "Twisted Angel's Ergo", "Lordvessel's Ergo"],
+    "answer": "Lordvessel's Ergo"
+  },
+  {
+    "id": "lop-017",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a Boss Ergo in Lies of P?",
+    "options": ["Parade Leader's Ergo", "Broken Hero's Ergo", "Reborn Champion's Ergo", "Ashen Blood Ergo"],
+    "answer": "Ashen Blood Ergo"
+  },
+  {
+    "id": "lop-018",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a Boss Ergo in Lies of P?",
+    "options": ["Sad Zealot's Ergo", "King's Flame Ergo", "Twisted Angel's Ergo", "Great One's Ergo"],
+    "answer": "Great One's Ergo"
+  },
+
+  {
+    "id": "lop-019",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a status ailment in Lies of P?",
+    "options": ["Overheat", "Shock", "Decay", "Rust"],
+    "answer": "Rust"
+  },
+  {
+    "id": "lop-020",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a status ailment in Lies of P?",
+    "options": ["Break", "Overheat", "Decay", "Bleed"],
+    "answer": "Bleed"
+  },
+  {
+    "id": "lop-022",
+    "difficulty": "easy",
+    "question": "Where is the King of Puppets encountered?",
+    "options": ["Estella Opera House stage", "Hotel Krat lobby", "Venigni Works furnace room", "Krat Central Station platform"],
+    "answer": "Estella Opera House stage"
+  },
+  {
+    "id": "lop-024",
+    "difficulty": "hard",
+    "question": "Where is the Scrapped Watchman first found?",
+    "options": ["Courtyard of Krat City Hall", "Grand Exhibition hall", "Malum District alley", "Arche Abbey rooftop"],
+    "answer": "Courtyard of Krat City Hall"
+  },
+
+  {
+    "id": "lop-026",
+    "difficulty": "medium",
+    "question": "Which enemy type is generally weak to Electricity in Lies of P?",
+    "options": ["Puppets", "Carcasses", "Humans", "Stalkers only"],
+    "answer": "Puppets"
+  },
+  {
+    "id": "lop-027",
+    "difficulty": "medium",
+    "question": "Which of these locations is most associated with the Alchemists’ public showcase in the story?",
+    "options": ["Grand Exhibition", "Moonlight Town", "Krat Central Station", "Hotel Krat"],
+    "answer": "Grand Exhibition"
+  },
+
+  {
+    "id": "lop-030",
+    "difficulty": "medium",
+    "question": "Which Boss Ergo comes from Romeo, King of Puppets?",
+    "options": ["Burnt-White King's Ergo", "Twisted Angel's Ergo", "King's Flame Ergo", "Broken Hero's Ergo"],
+    "answer": "Burnt-White King's Ergo"
+  },
+  {
+    "id": "lop-031",
+    "difficulty": "hard",
+    "question": "Which Boss Ergo comes from Scrapped Watchman?",
+    "options": ["Broken Hero's Ergo", "Parade Leader's Ergo", "Reborn Champion's Ergo", "Sad Zealot's Ergo"],
+    "answer": "Broken Hero's Ergo"
+  },
+  {
+    "id": "lop-032",
+    "difficulty": "hard",
+    "question": "Which Boss Ergo comes from Fuoco?",
+    "options": ["King's Flame Ergo", "Twisted Angel's Ergo", "Parade Leader's Ergo", "Burnt-White King's Ergo"],
+    "answer": "King's Flame Ergo"
+  },
+
+  {
+    "id": "lop-033",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a major hub/return point in Lies of P?",
+    "options": ["Hotel Krat", "The Nexus", "Krat Central Station", "Malum District"],
+    "answer": "The Nexus"
+  },
+  {
+    "id": "lop-034",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a Lies of P boss name?",
+    "options": ["Champion Victor", "Parade Master", "Fallen Archbishop Andreus", "The Pursuer"],
+    "answer": "The Pursuer"
+  },
+  {
+    "id": "lop-gc-001",
+    "difficulty": "easy",
+    "question": "After how many minutes does the Gold Coin Tree produce 1 Gold Coin Fruit?",
+    "options": ["5 minutes", "10 minutes", "20 minutes", "30 minutes"],
+    "answer": "10 minutes"
+  },
+  {
+    "id": "lop-statue-001",
+    "difficulty": "easy",
+    "question": "Which boss must you defeat to unlock access to the Saintess of Mercy Statue?",
+    "options": ["Champion Victor", "King of Puppets", "Scrapped Watchman", "Laxasia the Complete"],
+    "answer": "Champion Victor"
+  },
+  {
+    "id": "lop-statue-002",
+    "difficulty": "easy",
+    "question": "Where is the Saintess of Mercy Statue found?",
+    "options": ["Grand Exhibition", "Hotel Krat lobby", "Malum District", "Krat Central Station"],
+    "answer": "Grand Exhibition"
+  },
+  {
+    "id": "lop-giangio-001",
+    "difficulty": "hard",
+    "question": "What disease does Giangio ask for Gold Coin Fruit to help cure (via making a cure)?",
+    "options": ["Petrification Disease", "The Ashen Plague", "Scarlet Rot", "Blood Curse"],
+    "answer": "Petrification Disease"
+  },
+
+  {
+    "id": "lop-stats-001",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a stat in Lies of P?",
+    "options": ["Motivity", "Technique", "Advance", "Faith"],
+    "answer": "Faith"
+  },
+  {
+    "id": "lop-stats-002",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a stat in Lies of P?",
+    "options": ["Vitality", "Vigor", "Capacity", "Agility"],
+    "answer": "Agility"
+  },
+
+  {
+    "id": "lop-simon-001",
+    "difficulty": "easy",
+    "question": "What is Simon Manus’s boss name/title?",
+    "options": ["Simon Manus, Awakened God", "Simon Manus, The First Hunter", "Simon Manus, Lord of Cinder", "Simon Manus, The Nameless King"],
+    "answer": "Simon Manus, Awakened God"
+  },
+
+  {
+    "id": "lop-dlc-001",
+    "difficulty": "easy",
+    "question": "What’s the name of the Lies of P DLC/prequel expansion?",
+    "options": ["Lies of P: Overture", "Lies of P: Requiem", "Lies of P: Geppetto’s Fall", "Lies of P: The Old Blood"],
+    "answer": "Lies of P: Overture"
+  },
+  {
+    "id": "lop-easy-0001",
+    "question": "What type of game is Lies of P most commonly described as?",
+    "options": ["Soulslike action RPG", "Turn-based strategy", "Puzzle platformer", "Battle royale shooter"],
+    "answer": "Soulslike action RPG",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lop-easy-0014",
+    "question": "What happens to most puppets in Krat that causes the crisis?",
+    "options": ["They go on a killing frenzy", "They all shut down", "They turn into humans", "They explode at random"],
+    "answer": "They go on a killing frenzy",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lop-easy-0015",
+    "question": "Which of these best describes the visual setting of Lies of P?",
+    "options": ["Dark Belle Époque city", "Post-apocalyptic desert", "High fantasy kingdom", "Sci-fi space station"],
+    "answer": "Dark Belle Époque city",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lop-easy-0018",
+    "question": "What is the name of the disease affecting the citizens of Krat?",
+    "options": ["Petrification Disease", "Crimson Rot", "Hollowing", "Ashen Plague"],
+    "answer": "Petrification Disease",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lop-medium-0027",
+    "question": "What are the two main parts of most weapons that can be mixed and matched?",
+    "options": ["Blade and handle", "Hilt and pommel", "Core and shell", "Head and shaft"],
+    "answer": "Blade and handle",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lop-medium-0037",
+    "question": "What is the name of the device used to upgrade the Legion Arm?",
+    "options": ["Venigni Craft Machine", "Geppetto's Chair", "Sophia's Cocoon", "Hotel Terminal"],
+    "answer": "Venigni Craft Machine",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lop-medium-0046",
+    "question": "Which item can you offer to Black Cat and Red Fox to avoid fighting them?",
+    "options": ["Gold Coin Fruit", "Rare Ergo", "Pulse Cells", "Quartz"],
+    "answer": "Gold Coin Fruit",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lop-hard-0052",
+    "question": "What is the name of the powerful relic Simon Manus seeks to activate?",
+    "options": ["Arm of God", "Heart of Krat", "Crown of Puppets", "Eye of Ergo"],
+    "answer": "Arm of God",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lop-hard-0053",
+    "question": "Which character asks P to end her suffering on the Isle of Alchemists?",
+    "options": ["Sophia", "Antonia", "Belle", "Laxasia"],
+    "answer": "Sophia",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lop-hard-0054",
+    "question": "Which two subgroups of Stalkers have their leaders exposed and killed by P?",
+    "options": ["Bastards and Sweepers", "Wardens and Bastards", "Sweepers and Watchers", "Hounds and Sweepers"],
+    "answer": "Bastards and Sweepers",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lop-hard-0055",
+    "question": "What is the name of the corrupt leader of the Bastards whom P confronts in the DLC?",
+    "options": ["Lumacchio", "Veronique", "Victor", "Antonia"],
+    "answer": "Lumacchio",
+    "difficulty": "expert"
+  },
+  {
+    "id": "lop-hard-0056",
+    "question": "Which leader of the Sweepers is led into a trap and experimented on by the Alchemists in the DLC?",
+    "options": ["Veronique", "Belle", "Antonia", "Eugenie"],
+    "answer": "Veronique",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lop-hard-0059",
+    "question": "Which optional mini-boss is encountered in a factory-like environment with a massive body?",
+    "options": ["Puppet of the Future", "Walker of Illusions", "Robber Weasel", "White Lady"],
+    "answer": "Puppet of the Future",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lop-hard-0070",
+    "question": "Which NPC is closely associated with Venigni and often appears as his puppet assistant?",
+    "options": ["Pulcinella", "Polendina", "Belle", "Red Fox"],
+    "answer": "Pulcinella",
+    "difficulty": "hard"
+  },
+ 
+
+  {
+    "id": "lop-arm-001",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a Legion Arm in Lies of P?",
+    "options": ["Fulminis", "Aegis", "Falcon Eyes", "Puppets Fury"],
+    "answer": "Puppets Fury"
+  },
+  {
+    "id": "lop-arm-002",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a Legion Arm in Lies of P?",
+    "options": ["Flamberge", "Pandemonium", "Deus Ex Machina", "Chikage"],
+    "answer": "Chikage"
+  }
+]
+
+
+

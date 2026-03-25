@@ -1,0 +1,851 @@
+[
+  {
+    "id": "capitals-easy-0001",
+    "question": "What is the capital of France?",
+    "options": ["Paris", "Lyon", "Marseille", "Nice"],
+    "answer": "Paris",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0002",
+    "question": "What is the capital of Germany?",
+    "options": ["Berlin", "Munich", "Hamburg", "Frankfurt"],
+    "answer": "Berlin",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0003",
+    "question": "What is the capital of Italy?",
+    "options": ["Rome", "Milan", "Naples", "Venice"],
+    "answer": "Rome",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0004",
+    "question": "What is the capital of Spain?",
+    "options": ["Madrid", "Barcelona", "Seville", "Valencia"],
+    "answer": "Madrid",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0005",
+    "question": "What is the capital of the United Kingdom?",
+    "options": ["London", "Manchester", "Birmingham", "Liverpool"],
+    "answer": "London",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0006",
+    "question": "What is the capital of the United States?",
+    "options": ["Washington, D.C.", "New York City", "Los Angeles", "Chicago"],
+    "answer": "Washington, D.C.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0007",
+    "question": "What is the capital of Canada?",
+    "options": ["Ottawa", "Toronto", "Vancouver", "Montreal"],
+    "answer": "Ottawa",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0008",
+    "question": "What is the capital of Japan?",
+    "options": ["Tokyo", "Osaka", "Kyoto", "Nagoya"],
+    "answer": "Tokyo",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0009",
+    "question": "What is the capital of China?",
+    "options": ["Beijing", "Shanghai", "Guangzhou", "Shenzhen"],
+    "answer": "Beijing",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0010",
+    "question": "What is the capital of Australia?",
+    "options": ["Canberra", "Sydney", "Melbourne", "Brisbane"],
+    "answer": "Canberra",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0011",
+    "question": "What is the capital of Brazil?",
+    "options": ["Brasília", "Rio de Janeiro", "São Paulo", "Salvador"],
+    "answer": "Brasília",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0012",
+    "question": "What is the capital of Mexico?",
+    "options": ["Mexico City", "Guadalajara", "Monterrey", "Cancún"],
+    "answer": "Mexico City",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0013",
+    "question": "What is the capital of Russia?",
+    "options": ["Moscow", "Saint Petersburg", "Kazan", "Novosibirsk"],
+    "answer": "Moscow",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0014",
+    "question": "What is the capital of India?",
+    "options": ["New Delhi", "Mumbai", "Bengaluru", "Kolkata"],
+    "answer": "New Delhi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0015",
+    "question": "What is the capital of South Korea?",
+    "options": ["Seoul", "Busan", "Incheon", "Daegu"],
+    "answer": "Seoul",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0016",
+    "question": "What is the capital of Argentina?",
+    "options": ["Buenos Aires", "Córdoba", "Rosario", "Mendoza"],
+    "answer": "Buenos Aires",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0017",
+    "question": "What is the capital of Egypt?",
+    "options": ["Cairo", "Alexandria", "Giza", "Luxor"],
+    "answer": "Cairo",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0018",
+    "question": "What is the capital of Turkey?",
+    "options": ["Ankara", "Istanbul", "Izmir", "Bursa"],
+    "answer": "Ankara",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0019",
+    "question": "What is the capital of Greece?",
+    "options": ["Athens", "Thessaloniki", "Patras", "Heraklion"],
+    "answer": "Athens",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0020",
+    "question": "What is the capital of Portugal?",
+    "options": ["Lisbon", "Porto", "Braga", "Coimbra"],
+    "answer": "Lisbon",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0021",
+    "question": "What is the capital of the Netherlands?",
+    "options": ["Amsterdam", "Rotterdam", "The Hague", "Utrecht"],
+    "answer": "Amsterdam",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0022",
+    "question": "What is the capital of Sweden?",
+    "options": ["Stockholm", "Gothenburg", "Malmö", "Uppsala"],
+    "answer": "Stockholm",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0023",
+    "question": "What is the capital of Norway?",
+    "options": ["Oslo", "Bergen", "Trondheim", "Stavanger"],
+    "answer": "Oslo",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0024",
+    "question": "What is the capital of Denmark?",
+    "options": ["Copenhagen", "Aarhus", "Odense", "Aalborg"],
+    "answer": "Copenhagen",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0025",
+    "question": "What is the capital of Finland?",
+    "options": ["Helsinki", "Tampere", "Turku", "Oulu"],
+    "answer": "Helsinki",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0026",
+    "question": "What is the capital of Ireland?",
+    "options": ["Dublin", "Cork", "Galway", "Limerick"],
+    "answer": "Dublin",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0027",
+    "question": "What is the capital of Switzerland?",
+    "options": ["Bern", "Zurich", "Geneva", "Basel"],
+    "answer": "Bern",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0028",
+    "question": "What is the capital of Austria?",
+    "options": ["Vienna", "Salzburg", "Graz", "Innsbruck"],
+    "answer": "Vienna",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0029",
+    "question": "What is the capital of Belgium?",
+    "options": ["Brussels", "Antwerp", "Ghent", "Bruges"],
+    "answer": "Brussels",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-easy-0030",
+    "question": "What is the capital of Poland?",
+    "options": ["Warsaw", "Kraków", "Gdańsk", "Wrocław"],
+    "answer": "Warsaw",
+    "difficulty": "easy"
+  },
+  {
+    "id": "capitals-medium-0001",
+    "question": "What is the capital of Morocco?",
+    "options": ["Rabat", "Casablanca", "Marrakesh", "Tangier"],
+    "answer": "Rabat",
+    "difficulty": "medium"
+  },
+  {
+    "id": "capitals-medium-0002",
+    "question": "What is the capital of New Zealand?",
+    "options": ["Wellington", "Auckland", "Christchurch", "Hamilton"],
+    "answer": "Wellington",
+    "difficulty": "medium"
+  },
+  {
+    "id": "capitals-medium-0003",
+    "question": "What is the capital of South Africa?",
+    "options": ["Pretoria", "Cape Town", "Johannesburg", "Durban"],
+    "answer": "Pretoria",
+    "difficulty": "medium"
+  },
+  {
+    "id": "capitals-medium-0004",
+    "question": "What is the capital of Nigeria?",
+    "options": ["Abuja", "Lagos", "Kano", "Ibadan"],
+    "answer": "Abuja",
+    "difficulty": "medium"
+  },
+  {
+    "id": "capitals-medium-0005",
+    "question": "What is the capital of Kenya?",
+    "options": ["Nairobi", "Mombasa", "Kisumu", "Nakuru"],
+    "answer": "Nairobi",
+    "difficulty": "medium"
+  },
+  {
+    "id": "capitals-medium-0006",
+    "question": "What is the capital of Ethiopia?",
+    "options": ["Addis Ababa", "Gondar", "Mekelle", "Dire Dawa"],
+    "answer": "Addis Ababa",
+    "difficulty": "medium"
+  },
+  {
+    "id": "capitals-medium-0007",
+    "question": "What is the capital of Tanzania?",
+    "options": ["Dodoma", "Dar es Salaam", "Arusha", "Zanzibar City"],
+    "answer": "Dodoma",
+    "difficulty": "medium"
+  },
+  {
+    "id": "capitals-medium-0008",
+    "question": "What is the capital of Ghana?",
+    "options": ["Accra", "Kumasi", "Tamale", "Takoradi"],
+    "answer": "Accra",
+    "difficulty": "medium"
+  },
+  {
+    "id": "capitals-medium-0009",
+    "question": "What is the capital of Senegal?",
+    "options": ["Dakar", "Saint-Louis", "Thiès", "Kaolack"],
+    "answer": "Dakar",
+    "difficulty": "medium"
+  },
+  {
+    "id": "capitals-medium-0010",
+    "question": "What is the capital of Uganda?",
+    "options": ["Kampala", "Entebbe", "Jinja", "Gulu"],
+    "answer": "Kampala",
+    "difficulty": "medium"
+  },
+  {
+    "id": "capitals-medium-0011",
+    "question": "What is the capital of Tunisia?",
+    "options": ["Tunis", "Sousse", "Sfax", "Kairouan"],
+    "answer": "Tunis",
+    "difficulty": "medium"
+  },
+  {
+    "id": "capitals-medium-0012",
+    "question": "What is the capital of Algeria?",
+    "options": ["Algiers", "Oran", "Constantine", "Annaba"],
+    "answer": "Algiers",
+    "difficulty": "medium"
+  },
+  {
+    "id": "capitals-medium-0013",
+    "question": "What is the capital of Ecuador?",
+    "options": ["Quito", "Guayaquil", "Cuenca", "Loja"],
+    "answer": "Quito",
+    "difficulty": "medium"
+  },
+  {
+    "id": "capitals-medium-0014",
+    "question": "What is the capital of Peru?",
+    "options": ["Lima", "Cusco", "Arequipa", "Trujillo"],
+    "answer": "Lima",
+    "difficulty": "medium"
+  },
+  {
+    "id": "capitals-medium-0015",
+    "question": "What is the capital of Chile?",
+    "options": ["Santiago", "Valparaíso", "Concepción", "Antofagasta"],
+    "answer": "Santiago",
+    "difficulty": "medium"
+  },
+  {
+    "id": "capitals-medium-0016",
+    "question": "What is the capital of Colombia?",
+    "options": ["Bogotá", "Medellín", "Cali", "Cartagena"],
+    "answer": "Bogotá",
+    "difficulty": "medium"
+  },
+  {
+    "id": "capitals-medium-0017",
+    "question": "What is the capital of Venezuela?",
+    "options": ["Caracas", "Maracaibo", "Valencia", "Barquisimeto"],
+    "answer": "Caracas",
+    "difficulty": "medium"
+  },
+  {
+    "id": "capitals-medium-0018",
+    "question": "What is the capital of Cuba?",
+    "options": ["Havana", "Santiago de Cuba", "Camagüey", "Holguín"],
+    "answer": "Havana",
+    "difficulty": "medium"
+  },
+  {
+    "id": "capitals-medium-0019",
+    "question": "What is the capital of the Dominican Republic?",
+    "options": ["Santo Domingo", "Punta Cana", "Santiago", "La Romana"],
+    "answer": "Santo Domingo",
+    "difficulty": "medium"
+  },
+  {
+    "id": "capitals-medium-0020",
+    "question": "What is the capital of Panama?",
+    "options": ["Panama City", "Colón", "David", "Santiago de Veraguas"],
+    "answer": "Panama City",
+    "difficulty": "medium"
+  },
+  {
+    "id": "capitals-medium-0021",
+    "question": "What is the capital of Costa Rica?",
+    "options": ["San José", "Liberia", "Cartago", "Heredia"],
+    "answer": "San José",
+    "difficulty": "medium"
+  },
+  {
+    "id": "capitals-medium-0022",
+    "question": "What is the capital of Guatemala?",
+    "options": ["Guatemala City", "Antigua Guatemala", "Quetzaltenango", "Escuintla"],
+    "answer": "Guatemala City",
+    "difficulty": "medium"
+  },
+  {
+    "id": "capitals-medium-0023",
+    "question": "What is the capital of Honduras?",
+    "options": ["Tegucigalpa", "San Pedro Sula", "La Ceiba", "Comayagua"],
+    "answer": "Tegucigalpa",
+    "difficulty": "medium"
+  },
+  {
+    "id": "capitals-medium-0024",
+    "question": "What is the capital of Bolivia?",
+    "options": ["Sucre", "La Paz", "Santa Cruz de la Sierra", "Cochabamba"],
+    "answer": "Sucre",
+    "difficulty": "medium",
+    "description": "Sucre is the constitutional capital; La Paz is the seat of government."
+  },
+  {
+    "id": "capitals-medium-0025",
+    "question": "What is the capital of Sri Lanka (official/legislative capital)?",
+    "options": ["Sri Jayawardenepura Kotte", "Colombo", "Kandy", "Galle"],
+    "answer": "Sri Jayawardenepura Kotte",
+    "difficulty": "medium",
+    "description": "Colombo is the commercial capital; Sri Jayawardenepura Kotte is the legislative/official capital."
+  },
+  {
+    "id": "capitals-medium-0026",
+    "question": "What is the capital of the United Arab Emirates?",
+    "options": ["Abu Dhabi", "Dubai", "Sharjah", "Al Ain"],
+    "answer": "Abu Dhabi",
+    "difficulty": "medium"
+  },
+  {
+    "id": "capitals-medium-0027",
+    "question": "What is the capital of Israel?",
+    "options": ["Jerusalem", "Tel Aviv", "Haifa", "Beersheba"],
+    "answer": "Jerusalem",
+    "difficulty": "medium"
+  },
+  {
+    "id": "capitals-medium-0028",
+    "question": "What is the capital of Vietnam?",
+    "options": ["Hanoi", "Ho Chi Minh City", "Da Nang", "Hue"],
+    "answer": "Hanoi",
+    "difficulty": "medium"
+  },
+  {
+    "id": "capitals-medium-0029",
+    "question": "What is the capital of Myanmar?",
+    "options": ["Naypyidaw", "Yangon", "Mandalay", "Bagan"],
+    "answer": "Naypyidaw",
+    "difficulty": "medium"
+  },
+  {
+    "id": "capitals-medium-0030",
+    "question": "What is the capital of Kazakhstan?",
+    "options": ["Astana", "Almaty", "Shymkent", "Karaganda"],
+    "answer": "Astana",
+    "difficulty": "medium"
+  },
+
+  {
+    "id": "capitals-hard-0001",
+    "question": "What is the capital of Iceland?",
+    "options": ["Reykjavík", "Akureyri", "Kópavogur", "Hafnarfjörður"],
+    "answer": "Reykjavík",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0002",
+    "question": "What is the capital of Croatia?",
+    "options": ["Zagreb", "Split", "Dubrovnik", "Rijeka"],
+    "answer": "Zagreb",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0003",
+    "question": "What is the capital of Serbia?",
+    "options": ["Belgrade", "Novi Sad", "Niš", "Kragujevac"],
+    "answer": "Belgrade",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0004",
+    "question": "What is the capital of Slovenia?",
+    "options": ["Ljubljana", "Maribor", "Koper", "Celje"],
+    "answer": "Ljubljana",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0005",
+    "question": "What is the capital of Slovakia?",
+    "options": ["Bratislava", "Košice", "Žilina", "Nitra"],
+    "answer": "Bratislava",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0006",
+    "question": "What is the capital of Bulgaria?",
+    "options": ["Sofia", "Plovdiv", "Varna", "Burgas"],
+    "answer": "Sofia",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0007",
+    "question": "What is the capital of Romania?",
+    "options": ["Bucharest", "Cluj-Napoca", "Timișoara", "Iași"],
+    "answer": "Bucharest",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0008",
+    "question": "What is the capital of Hungary?",
+    "options": ["Budapest", "Debrecen", "Szeged", "Pécs"],
+    "answer": "Budapest",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0009",
+    "question": "What is the capital of Czechia (Czech Republic)?",
+    "options": ["Prague", "Brno", "Ostrava", "Plzeň"],
+    "answer": "Prague",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0010",
+    "question": "What is the capital of Latvia?",
+    "options": ["Riga", "Daugavpils", "Liepāja", "Jelgava"],
+    "answer": "Riga",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0011",
+    "question": "What is the capital of Lithuania?",
+    "options": ["Vilnius", "Kaunas", "Klaipėda", "Šiauliai"],
+    "answer": "Vilnius",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0012",
+    "question": "What is the capital of Estonia?",
+    "options": ["Tallinn", "Tartu", "Narva", "Pärnu"],
+    "answer": "Tallinn",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0013",
+    "question": "What is the capital of Belarus?",
+    "options": ["Minsk", "Brest", "Gomel", "Vitebsk"],
+    "answer": "Minsk",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0014",
+    "question": "What is the capital of Moldova?",
+    "options": ["Chișinău", "Bălți", "Tiraspol", "Cahul"],
+    "answer": "Chișinău",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0015",
+    "question": "What is the capital of Georgia?",
+    "options": ["Tbilisi", "Batumi", "Kutaisi", "Rustavi"],
+    "answer": "Tbilisi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0016",
+    "question": "What is the capital of Armenia?",
+    "options": ["Yerevan", "Gyumri", "Vanadzor", "Vagharshapat"],
+    "answer": "Yerevan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0017",
+    "question": "What is the capital of Azerbaijan?",
+    "options": ["Baku", "Ganja", "Sumqayit", "Shaki"],
+    "answer": "Baku",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0018",
+    "question": "What is the capital of Mongolia?",
+    "options": ["Ulaanbaatar", "Erdenet", "Darkhan", "Kharkhorin"],
+    "answer": "Ulaanbaatar",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0019",
+    "question": "What is the capital of Nepal?",
+    "options": ["Kathmandu", "Pokhara", "Lalitpur", "Biratnagar"],
+    "answer": "Kathmandu",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0020",
+    "question": "What is the capital of Laos?",
+    "options": ["Vientiane", "Luang Prabang", "Pakse", "Savannakhet"],
+    "answer": "Vientiane",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0021",
+    "question": "What is the capital of Cambodia?",
+    "options": ["Phnom Penh", "Siem Reap", "Sihanoukville", "Battambang"],
+    "answer": "Phnom Penh",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0022",
+    "question": "What is the capital of Jordan?",
+    "options": ["Amman", "Aqaba", "Irbid", "Zarqa"],
+    "answer": "Amman",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0023",
+    "question": "What is the capital of Lebanon?",
+    "options": ["Beirut", "Tripoli", "Sidon", "Byblos"],
+    "answer": "Beirut",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0024",
+    "question": "What is the capital of Oman?",
+    "options": ["Muscat", "Salalah", "Sohar", "Nizwa"],
+    "answer": "Muscat",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0025",
+    "question": "What is the capital of Qatar?",
+    "options": ["Doha", "Al Wakrah", "Al Rayyan", "Umm Salal"],
+    "answer": "Doha",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0026",
+    "question": "What is the capital of Kuwait?",
+    "options": ["Kuwait City", "Al Jahra", "Salmiya", "Hawalli"],
+    "answer": "Kuwait City",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0027",
+    "question": "What is the capital of Bahrain?",
+    "options": ["Manama", "Muharraq", "Riffa", "Isa Town"],
+    "answer": "Manama",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0028",
+    "question": "What is the capital of Haiti?",
+    "options": ["Port-au-Prince", "Cap-Haïtien", "Les Cayes", "Jacmel"],
+    "answer": "Port-au-Prince",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0029",
+    "question": "What is the capital of Jamaica?",
+    "options": ["Kingston", "Montego Bay", "Spanish Town", "Ocho Rios"],
+    "answer": "Kingston",
+    "difficulty": "hard"
+  },
+  {
+    "id": "capitals-hard-0030",
+    "question": "What is the capital of Trinidad and Tobago?",
+    "options": ["Port of Spain", "San Fernando", "Arima", "Chaguanas"],
+    "answer": "Port of Spain",
+    "difficulty": "hard"
+  },
+
+  {
+    "id": "capitals-expert-0001",
+    "question": "What is the capital of Eswatini (administrative capital)?",
+    "options": ["Mbabane", "Manzini", "Lobamba", "Siteki"],
+    "answer": "Mbabane",
+    "difficulty": "expert",
+    "description": "Eswatini has two capitals: Mbabane (administrative) and Lobamba (legislative/royal)."
+  },
+  {
+    "id": "capitals-expert-0002",
+    "question": "What is the capital of Eswatini (legislative/royal capital)?",
+    "options": ["Lobamba", "Mbabane", "Manzini", "Nhlangano"],
+    "answer": "Lobamba",
+    "difficulty": "expert",
+    "description": "Lobamba is the legislative capital and royal seat; Mbabane is the administrative capital."
+  },
+  {
+    "id": "capitals-expert-0003",
+    "question": "What is the capital of Malaysia?",
+    "options": ["Kuala Lumpur", "Putrajaya", "George Town", "Johor Bahru"],
+    "answer": "Kuala Lumpur",
+    "difficulty": "expert",
+    "description": "Kuala Lumpur is the official capital; Putrajaya is the federal administrative center."
+  },
+  {
+    "id": "capitals-expert-0004",
+    "question": "What is the federal administrative center (seat of government) of Malaysia?",
+    "options": ["Putrajaya", "Kuala Lumpur", "Malacca", "Ipoh"],
+    "answer": "Putrajaya",
+    "difficulty": "expert",
+    "description": "Putrajaya is Malaysia’s federal administrative center; Kuala Lumpur remains the official capital."
+  },
+  {
+    "id": "capitals-expert-0005",
+    "question": "What is the capital of Côte d’Ivoire (Ivory Coast) (political/official capital)?",
+    "options": ["Yamoussoukro", "Abidjan", "Bouaké", "San-Pédro"],
+    "answer": "Yamoussoukro",
+    "difficulty": "expert",
+    "description": "Yamoussoukro is the official capital; Abidjan is the economic hub and hosts many government offices."
+  },
+  {
+    "id": "capitals-expert-0006",
+    "question": "What is the capital of Belize?",
+    "options": ["Belmopan", "Belize City", "San Ignacio", "Orange Walk"],
+    "answer": "Belmopan",
+    "difficulty": "expert"
+  },
+  {
+    "id": "capitals-expert-0007",
+    "question": "What is the capital of Guyana?",
+    "options": ["Georgetown", "Paramaribo", "Cayenne", "Port of Spain"],
+    "answer": "Georgetown",
+    "difficulty": "expert"
+  },
+  {
+    "id": "capitals-expert-0008",
+    "question": "What is the capital of Suriname?",
+    "options": ["Paramaribo", "Georgetown", "Cayenne", "Kingstown"],
+    "answer": "Paramaribo",
+    "difficulty": "expert"
+  },
+  {
+    "id": "capitals-expert-0009",
+    "question": "What is the capital of Fiji?",
+    "options": ["Suva", "Nadi", "Lautoka", "Labasa"],
+    "answer": "Suva",
+    "difficulty": "expert"
+  },
+  {
+    "id": "capitals-expert-0010",
+    "question": "What is the capital of Papua New Guinea?",
+    "options": ["Port Moresby", "Lae", "Madang", "Goroka"],
+    "answer": "Port Moresby",
+    "difficulty": "expert"
+  },
+  {
+    "id": "capitals-expert-0011",
+    "question": "What is the capital of Solomon Islands?",
+    "options": ["Honiara", "Auki", "Gizo", "Tulagi"],
+    "answer": "Honiara",
+    "difficulty": "expert"
+  },
+  {
+    "id": "capitals-expert-0012",
+    "question": "What is the capital of Vanuatu?",
+    "options": ["Port Vila", "Luganville", "Isangel", "Sola"],
+    "answer": "Port Vila",
+    "difficulty": "expert"
+  },
+  {
+    "id": "capitals-expert-0013",
+    "question": "What is the capital of Samoa?",
+    "options": ["Apia", "Pago Pago", "Nuku'alofa", "Suva"],
+    "answer": "Apia",
+    "difficulty": "expert"
+  },
+  {
+    "id": "capitals-expert-0014",
+    "question": "What is the capital of Tonga?",
+    "options": ["Nuku'alofa", "Apia", "Funafuti", "Tarawa"],
+    "answer": "Nuku'alofa",
+    "difficulty": "expert"
+  },
+  {
+    "id": "capitals-expert-0015",
+    "question": "What is the capital of Tuvalu?",
+    "options": ["Funafuti", "Majuro", "Tarawa", "Apia"],
+    "answer": "Funafuti",
+    "difficulty": "expert"
+  },
+  {
+    "id": "capitals-expert-0016",
+    "question": "What is the capital of Kiribati?",
+    "options": ["Tarawa", "Majuro", "Palikir", "Funafuti"],
+    "answer": "Tarawa",
+    "difficulty": "expert"
+  },
+  {
+    "id": "capitals-expert-0017",
+    "question": "What is the capital of the Marshall Islands?",
+    "options": ["Majuro", "Tarawa", "Palikir", "Honiara"],
+    "answer": "Majuro",
+    "difficulty": "expert"
+  },
+  {
+    "id": "capitals-expert-0018",
+    "question": "What is the capital of Micronesia (Federated States of Micronesia)?",
+    "options": ["Palikir", "Majuro", "Koror", "Saipan"],
+    "answer": "Palikir",
+    "difficulty": "expert"
+  },
+  {
+    "id": "capitals-expert-0019",
+    "question": "What is the capital of Palau?",
+    "options": ["Ngerulmud", "Koror", "Melekeok", "Airai"],
+    "answer": "Ngerulmud",
+    "difficulty": "expert"
+  },
+  {
+    "id": "capitals-expert-0020",
+    "question": "What is the capital of Saint Lucia?",
+    "options": ["Castries", "Kingstown", "Saint George's", "Basseterre"],
+    "answer": "Castries",
+    "difficulty": "expert"
+  },
+  {
+    "id": "capitals-expert-0021",
+    "question": "What is the capital of Saint Vincent and the Grenadines?",
+    "options": ["Kingstown", "Castries", "Bridgetown", "Roseau"],
+    "answer": "Kingstown",
+    "difficulty": "expert"
+  },
+  {
+    "id": "capitals-expert-0022",
+    "question": "What is the capital of Grenada?",
+    "options": ["Saint George's", "Kingstown", "Bridgetown", "Basseterre"],
+    "answer": "Saint George's",
+    "difficulty": "expert"
+  },
+  {
+    "id": "capitals-expert-0023",
+    "question": "What is the capital of Dominica?",
+    "options": ["Roseau", "Castries", "Kingstown", "St. John's"],
+    "answer": "Roseau",
+    "difficulty": "expert"
+  },
+  {
+    "id": "capitals-expert-0024",
+    "question": "What is the capital of Saint Kitts and Nevis?",
+    "options": ["Basseterre", "St. John's", "Bridgetown", "Nassau"],
+    "answer": "Basseterre",
+    "difficulty": "expert"
+  },
+  {
+    "id": "capitals-expert-0025",
+    "question": "What is the capital of Antigua and Barbuda?",
+    "options": ["St. John's", "Basseterre", "Castries", "Bridgetown"],
+    "answer": "St. John's",
+    "difficulty": "expert"
+  },
+  {
+    "id": "capitals-expert-0026",
+    "question": "What is the capital of Barbados?",
+    "options": ["Bridgetown", "Kingstown", "St. John's", "Roseau"],
+    "answer": "Bridgetown",
+    "difficulty": "expert"
+  },
+  {
+    "id": "capitals-expert-0027",
+    "question": "What is the capital of the Bahamas?",
+    "options": ["Nassau", "Freeport", "Marsh Harbour", "Bimini"],
+    "answer": "Nassau",
+    "difficulty": "expert"
+  },
+  {
+    "id": "capitals-expert-0028",
+    "question": "What is the capital of Cabo Verde (Cape Verde)?",
+    "options": ["Praia", "Mindelo", "Sal Rei", "Santa Maria"],
+    "answer": "Praia",
+    "difficulty": "expert"
+  },
+  {
+    "id": "capitals-expert-0029",
+    "question": "What is the capital of São Tomé and Príncipe?",
+    "options": ["São Tomé", "Praia", "Bissau", "Libreville"],
+    "answer": "São Tomé",
+    "difficulty": "expert"
+  },
+  {
+    "id": "capitals-expert-0030",
+    "question": "What is the capital of Comoros?",
+    "options": ["Moroni", "Mamoudzou", "Victoria", "Port Louis"],
+    "answer": "Moroni",
+    "difficulty": "expert"
+  }
+]

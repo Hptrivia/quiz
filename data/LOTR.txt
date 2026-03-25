@@ -1,0 +1,1052 @@
+[
+  {
+    "id": "lotr-movie-0001",
+    "question": "What is the name of Frodo's home?",
+    "options": ["Rivendell", "Bag End", "Minas Tirith", "Hobbiton"],
+    "answer": "Bag End",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lotr-movie-0002",
+    "question": "Who carries Frodo up Mount Doom after he was weakened by the Ring´s influence?",
+    "options": ["Gollum", "Aragorn", "Gandalf", "Sam"],
+    "answer": "Sam",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lotr-movie-0004",
+    "question": "Who is the king of Rohan in the beginning of the movies?",
+    "options": ["Aragorn", "Theoden", "Boromir", "Denethor"],
+    "answer": "Theoden",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lotr-movie-1004",
+    "question": "Who is the king of Rohan at the end of the movies?",
+    "options": ["Eomir", "Theoden", "Boromir", "Denethor"],
+    "answer": "Eomir",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-movie-0005",
+    "question": "Which race is Legolas from?",
+    "options": ["Dwarves", "Elves", "Men", "Hobbits"],
+    "answer": "Elves",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lotr-movie-0006",
+    "question": "What is Gollum's real name?",
+    "options": ["Deagol", "Gríma", "Smeagol", "Slinker"],
+    "answer": "Smeagol",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-movie-0007",
+    "question": "What creature does Gandalf battle in the mines of Moria?",
+    "options": ["Troll", "Orc", "Balrog", "Nazgûl"],
+    "answer": "Balrog",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-movie-0008",
+    "question": "Who gave Frodo the light of Eärendil?",
+    "options": ["Arwen", "Galadriel", "Elrond", "Gandalf"],
+    "answer": "Galadriel",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-movie-0009",
+    "question": "Where is the Ring finally destroyed?",
+    "options": ["Mount Orodruin", "Mount Doom", "Mount Gundabad", "Mount Gram"],
+    "answer": "Mount Doom",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-movie-0010",
+    "question": "Which Ent leads the march on Isengard?",
+    "options": ["Finglas", "Treebeard", "Quickbeam", "Leaflock"],
+    "answer": "Treebeard",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-movie-1010",
+    "question": "What is the name of the ancient tree-like beings who are shepherds of the trees?",
+    "options": ["Ent", "Treebeards", "Narsil", "Leaflocks"],
+    "answer": "Ent",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-movie-0011",
+    "question": "What is the name of Théoden’s sword?",
+    "options": ["Narsil", "Herugrim", "Sting", "Glamdring"],
+    "answer": "Herugrim",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-0013",
+    "question": "What is the name of the actor originally cast as Aragorn?",
+    "options": ["Karl Urban", "Sean Bean", "Stuart Townsend", "David Wenham"],
+    "answer": "Stuart Townsend",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-0014",
+    "question": "Who lights the beacons of Gondor in the movie?",
+    "options": ["Gandalf", "Pippin", "Faramir", "Boromir"],
+    "answer": "Pippin",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-0015",
+    "question": "What material is Mithril described to be lighter than in the movies?",
+    "options": ["Leather", "Wool", "Silk", "Feathers"],
+    "answer": "Feathers",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-0016",
+    "question": "What is the Elvish name for Rivendell?",
+    "options": ["Lothlórien", "Amon Hen", "Imladris", "Valinor"],
+    "answer": "Imladris",
+    "difficulty": "expert"
+  },
+  {
+    "id": "lotr-movie-0017",
+    "question": "How many meals do Hobbits typically eat?",
+    "options": ["3", "6", "5", "7"],
+    "answer": "7",
+    "difficulty": "expert"
+  },
+  {
+    "id": "lotr-movie-0018",
+    "question": "What alias does Frodo use at the Prancing Pony?",
+    "options": ["Underhill", "Brandybuck", "Took", "Greenleaf"],
+    "answer": "Underhill",
+    "difficulty": "expert"
+  },
+  {
+    "id": "lotr-movie-0021",
+    "question": "Who led the Fellowship of the Ring in the beginning of their journey?",
+    "options": ["Frodo", "Aragorn", "Gandalf", "Boromir"],
+    "answer": "Gandalf",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lotr-movie-0021",
+    "question": "Which of these characters was not a member of the Fellowship of the Ring?",
+    "options": ["Gimli", "Eomir", "Merry", "Boromir"],
+    "answer": "Eomir",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-movie-0022",
+    "question": "What creature does Legolas ride in The Return of the King during their pursuit of the Uruk-hai?",
+    "options": ["Hasufel", "Fell", "Oliphaunt", "Arod"],
+    "answer": "Arod",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-0023",
+    "question": "What does Frodo inherit from Bilbo?",
+    "options": ["Sting", "The One Ring", "Mithril", "All of the above"],
+    "answer": "All of the above",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lotr-movie-0024",
+    "question": "Which member of the Fellowship is a dwarf?",
+    "options": ["Boromir", "Aragorn", "Gimli", "Legolas"],
+    "answer": "Gimli",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lotr-movie-0025",
+    "question": "What is the name of Frodo’s sword?",
+    "options": ["Glamdring", "Sting", "Andúril", "Narsil"],
+    "answer": "Sting",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lotr-movie-0026",
+    "question": "Who rules Lothlórien along with Galadriel?",
+    "options": ["Celeborn", "Elrond", "Thranduil", "Glorfindel"],
+    "answer": "Celeborn",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-ez-0004",
+    "question": "Who becomes King of Gondor at the end of the movies?",
+    "options": ["Faramir", "Boromir", "Aragorn", "Denethor"],
+    "answer": "Aragorn",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lotr-med-new-005",
+    "question": "What material is Frodo's protective shirt made from?",
+    "options": ["Mithril", "Steel", "Iron", "Leather"],
+    "answer": "Mithril",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-med-new-006",
+    "question": "Which character breaks the Fellowship by trying to take the Ring from Frodo at Amon Hen?",
+    "options": ["Boromir", "Gollum", "Saruman", "Legolas"],
+    "answer": "Boromir",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-ez-0006",
+    "question": "Which Hobbit finds the One Ring before Frodo?",
+    "options": ["Sam", "Pippin", "Bilbo", "Merry"],
+    "answer": "Bilbo",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lotr-ez-0007",
+    "question": "Who is the elf member of the Fellowship?",
+    "options": ["Elrond", "Galadriel", "Legolas", "Arwen"],
+    "answer": "Legolas",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lotr-ez-0008",
+    "question": "What is the name of the dark lord seeking the One Ring?",
+    "options": ["Saruman", "Sauron", "Gollum", "Witch-king"],
+    "answer": "Sauron",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lotr-ez-0009",
+    "question": "What is the name of the land where Hobbits live?",
+    "options": ["Gondor", "Rohan", "The Shire", "Mirkwood"],
+    "answer": "The Shire",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lotr-ez-0010",
+    "question": "Who is the Steward of Gondor during the War of the Ring?",
+    "options": ["Faramir", "Denethor", "Boromir", "Theoden"],
+    "answer": "Denethor",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lotr-ez-0013",
+    "question": "What is the name of the sword reforged for Aragorn?",
+    "options": ["Sting", "Orcrist", "Anduril", "Glamdring"],
+    "answer": "Anduril",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-ez-0014",
+    "question": "Who is the Lady of Lothlórien?",
+    "options": ["Galadriel", "Arwen", "Eowyn", "Shelob"],
+    "answer": "Galadriel",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lotr-ez-0015",
+    "question": "Which character says, 'You shall not pass!'?",
+    "options": ["Saruman", "Gandalf", "Aragorn", "Boromir"],
+    "answer": "Gandalf",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lotr-ez-0016",
+    "question": "What is the name of the giant spider in Mordor?",
+    "options": ["Ungoliant", "Shelob", "Aragog", "Gollum"],
+    "answer": "Shelob",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lotr-ez-0019",
+    "question": "What is the name of the river that borders the Shire?",
+    "options": ["Anduin", "Brandywine", "Isen", "Baranduin"],
+    "answer": "Brandywine",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-ez-0023",
+    "question": "Who is Aragorn in love with in the movies?",
+    "options": ["Galadriel", "Arwen", "Eowyn", "Shelob"],
+    "answer": "Arwen",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lotr-ez-0024",
+    "question": "What is the name of the White city which is the capital of Gondor?",
+    "options": ["Minas Tirith", "Edoras", "Helm's Deep", "Osgiliath"],
+    "answer": "Minas Tirith",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-ez-0025",
+    "question": "Who kills the Witch-king of Angmar?",
+    "options": ["Gandalf", "Eowyn", "Aragorn", "Faramir"],
+    "answer": "Eowyn",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-md-0026",
+    "question": "What is the name of the inn in Bree where the hobbits meet Aragorn?",
+    "options": ["Green Dragon", "Prancing Pony", "Golden Perch", "Floating Log"],
+    "answer": "Prancing Pony",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-md-0029",
+    "question": "Who is the father of Boromir and Faramir?",
+    "options": ["Denethor", "Theoden", "Aragorn", "Elendil"],
+    "answer": "Denethor",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-md-0033",
+    "question": "Who is the leader of the Nazgûl?",
+    "options": ["Khamûl", "Witch-king of Angmar", "Gothmog", "Mouth of Sauron"],
+    "answer": "Witch-king of Angmar",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-md-0034",
+    "question": "What is the name of the pass Frodo and Sam use to enter Mordor?",
+    "options": ["Cirith Ungol", "Caradhras", "Redhorn Pass", "Gap of Rohan"],
+    "answer": "Cirith Ungol",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-md-0036",
+    "question": "What is the name of Gandalf’s horse?",
+    "options": ["Shadowfax", "Bill", "Hasufel", "Arod"],
+    "answer": "Shadowfax",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-md-0038",
+    "question": "What is the name of the gate at the entrance to Mordor?",
+    "options": ["Morannon", "Barad-dûr", "Minas Morgul", "Cirith Ungol"],
+    "answer": "Morannon",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-md-0039",
+    "question": "Who is the captain of Gondor who befriends Frodo and Sam?",
+    "options": ["Boromir", "Faramir", "Denethor", "Imrahil"],
+    "answer": "Faramir",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-md-0040",
+    "question": "What is the name of the city where the Steward of Gondor rules?",
+    "options": ["Osgiliath", "Minas Tirith", "Minas Morgul", "Edoras"],
+    "answer": "Minas Tirith",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-md-0041",
+    "question": "Who is the father of Legolas?",
+    "options": ["Celeborn", "Thranduil", "Elrond", "Glorfindel"],
+    "answer": "Thranduil",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-md-0042",
+    "question": "What is the name of the forest where Treebeard lives?",
+    "options": ["Fangorn", "Mirkwood", "Lothlórien", "Greenwood"],
+    "answer": "Fangorn",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-md-0043",
+    "question": "Who kills Saruman in the movie?",
+    "options": ["Grima Wormtongue", "Gandalf", "Legolas", "Aragorn"],
+    "answer": "Grima Wormtongue",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-md-0044",
+    "question": "What is the name of the inn in the Shire?",
+    "options": ["Prancing Pony", "Green Dragon", "Golden Perch", "Floating Log"],
+    "answer": "Green Dragon",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-md-0046",
+    "question": "What is the name of the river that runs through Lothlórien?",
+    "options": ["Anduin", "Silverlode", "Baranduin", "Isen"],
+    "answer": "Silverlode",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-md-0047",
+    "question": "Who is the chief of the Uruk-hai in The Two Towers?",
+    "options": ["Lurtz", "Uglúk", "Shagrat", "Grishnákh"],
+    "answer": "Uglúk",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-md-0048",
+    "question": "What is the name of the ancient sword that cut the Ring from Sauron's hand?",
+    "options": ["Anduril", "Narsil", "Sting", "Glamdring"],
+    "answer": "Narsil",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-md-0050",
+    "question": "What is the name of the fortress of Saruman?",
+    "options": ["Barad-dûr", "Orthanc", "Minas Morgul", "Helm's Deep"],
+    "answer": "Orthanc",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-hr-0055",
+    "question": "What is the name of the land between Mordor and Gondor?",
+    "options": ["Ithilien", "Rohan", "Enedwaith", "Harad"],
+    "answer": "Ithilien",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-hr-0056",
+    "question": "Who is the father of Samwise Gamgee?",
+    "options": ["Hamfast", "Holman", "Hobson", "Halfred"],
+    "answer": "Hamfast",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-hr-0061",
+    "question": "Who is the father of Gimli?",
+    "options": ["Balin", "Dwalin", "Gloin", "Oin"],
+    "answer": "Gloin",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-hr-0062",
+    "question": "What is the name of the mountain pass the Fellowship tries to cross before going to Moria?",
+    "options": ["Pass of Caradhras", "Gap of Rohan", "Cirith Ungol", "High Pass"],
+    "answer": "Pass of Caradhras",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-hr-0064",
+    "question": "Who is the Lord of Rivendell?",
+    "options": ["Elrond", "Thranduil", "Galadriel", "Celeborn"],
+    "answer": "Elrond",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-hr-0065",
+    "question": "What is the name of the elf who helps Frodo across the Ford of Bruinen in the movies?",
+    "options": ["Glorfindel", "Legolas", "Arwen", "Elrond"],
+    "answer": "Arwen",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-hr-0066",
+    "question": "Which ruined city on the Anduin River do Frodo and Sam visit after bein captured by Faramir?",
+    "options": ["Osgiliath", "Minas Tirith", "Pelargir", "Dol Amroth"],
+    "answer": "Osgiliath",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-hr-0069",
+    "question": "Who is the deformed leader of the orcs at the Battle of the Pelennor Fields?",
+    "options": ["Gothmog", "Lurtz", "Uglúk", "Shagrat"],
+    "answer": "Gothmog",
+    "difficulty": "expert"
+  },
+  {
+    "id": "lotr-hr-0072",
+    "question": "What is the name of the fortress in Rohan?",
+    "options": ["Edoras", "Helm's Deep", "Orthanc", "Minas Tirith"],
+    "answer": "Helm's Deep",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-hr-0073",
+    "question": "Who is the Lord of the Mark at the beginning of the movies?",
+    "options": ["Theoden", "Eomer", "Grima", "Aragorn"],
+    "answer": "Theoden",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-hr-0074",
+    "question": "What is the name of the great eagle who rescues Frodo and Sam?",
+    "options": ["Gwaihir", "Landroval", "Thorondor", "Meneldor"],
+    "answer": "Gwaihir",
+    "difficulty": "expert"
+  },
+  {
+    "id": "lotr-xp-0087",
+    "question": "Who is the only female member of the Fellowship in the movies?",
+    "options": ["None", "Galadriel", "Arwen", "Eowyn"],
+    "answer": "None",
+    "difficulty": "expert"
+  },
+  {
+    "id": "lotr-xp-0090",
+    "question": "What is the name of the sword carried by Gandalf?",
+    "options": ["Glamdring", "Orcrist", "Anduril", "Narsil"],
+    "answer": "Glamdring",
+    "difficulty": "expert"
+  },
+  {
+    "id": "lotr-xp-0099",
+    "question": "Who is the original master of Sauron?",
+    "options": ["Melkor", "Manwë", "Ulmo", "Aulë"],
+    "answer": "Melkor",
+    "difficulty": "expert"
+  },
+  {
+    "id": "lotr-movie-0029",
+    "question": "Where is Saruman’s stronghold located?",
+    "options": ["Minas Morgul", "Dol Guldur", "Barad-dûr", "Isengard"],
+    "answer": "Isengard",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-movie-0032",
+    "question": "Which actor had a tooth glued in to finish filming a scene?",
+    "options": ["Sean Bean", "Elijah Wood", "Viggo Mortensen", "Orlando Bloom"],
+    "answer": "Viggo Mortensen",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-0033",
+    "question": "What does the word 'Mellon' mean in Elvish?",
+    "options": ["Speak", "Friend", "Secret", "Gate"],
+    "answer": "Friend",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-0034",
+    "question": "Which character did Peter Jackson cameo as in Return of the King?",
+    "options": ["Ranger", "Orc", "Corsair of Umbar", "Soldier of Rohan"],
+    "answer": "Corsair of Umbar",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-1034",
+    "question": "Which character did Peter Jackson cameo as in The Fellowship of the Ring?",
+    "options": ["Bree Townsman", "Elf", "Corsair of Umbar", "Soldier of Rohan"],
+    "answer": "Bree Townsman",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-1134",
+    "question": "Which character did Peter Jackson cameo as in The Two Towers?",
+    "options": ["Bree Townsman", "Elf", "Corsair of Umbar", "Soldier of Rohan"],
+    "answer": "Soldier of Rohan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-0035",
+    "question": "Which actor insisted on doing his own stunts and carried his sword everywhere?",
+    "options": ["Ian McKellen", "Viggo Mortensen", "Sean Astin", "John Rhys-Davies"],
+    "answer": "Viggo Mortensen",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-0037",
+    "question": "What plant does Aragorn use to treat Frodo’s wound?",
+    "options": ["Athelas", "Gilweed", "Elanor", "Vilya"],
+    "answer": "Athelas",
+    "difficulty": "expert"
+  },
+  {
+    "id": "lotr-movie-0040",
+    "question": "Who composed the original musical score for the trilogy?",
+    "options": ["Hans Zimmer", "John Williams", "Howard Shore", "Danny Elfman"],
+    "answer": "Howard Shore",
+    "difficulty": "expert"
+  },
+  {
+    "id": "lotr-movie-0041",
+    "question": "Which Hobbit drops a skeleton down a well in Moria?",
+    "options": ["Sam", "Merry", "Pippin", "Frodo"],
+    "answer": "Pippin",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-0045",
+    "question": "What gift does Galadriel give Legolas?",
+    "options": ["A bow", "A dagger", "A cloak", "A jewel"],
+    "answer": "A bow",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lotr-trivia-001",
+    "question": "What alias is Aragorn known by when he is first introduced at the Prancing Pony in Bree?",
+    "options": ["Ranger", "Thorongil", "Strider", "Telcontar"],
+    "answer": "Strider",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-trivia-002",
+    "question": "Who created the elegant Elven longbow gifted to Legolas by Galadriel in Lothlórien?",
+    "options": ["Galadhrim", "Hithlain", "Thranduil", "Lórien"],
+    "answer": "Galadhrim",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-movie-0047",
+    "question": "Where is Aragorn first seen in The Fellowship of the Ring?",
+    "options": ["Bree", "Rivendell", "Weathertop", "Gondor"],
+    "answer": "Bree",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-0048",
+    "question": "Who wounds Frodo with a Morgul blade?",
+    "options": ["Saruman", "The Witch-king", "Gothmog", "Lurtz"],
+    "answer": "The Witch-king",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-movie-0049",
+    "question": "Which character is buried under a cairn on a Rohan hill?",
+    "options": ["Theodred", "Eomer", "Hama", "Haleth"],
+    "answer": "Theodred",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-0050",
+    "question": "What gift does Gimli receive from Galadriel?",
+    "options": ["A strand of her hair", "A kiss", "An axe", "A ring"],
+    "answer": "A strand of her hair",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-movie-0051",
+    "question": "What is the name of Aragorn’s horse who rescued him?",
+    "options": ["Shadowfax", "Hasufel", "Brego", "Snowmane"],
+    "answer": "Brego",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-0052",
+    "question": "What kind of food do Elves give the Fellowship?",
+    "options": ["Waybread", "Lembas", "Honeycake", "Cram"],
+    "answer": "Lembas",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-0053",
+    "question": "Who kills the troll in the Mines of Moria?",
+    "options": ["Boromir", "Gandalf", "Legolas", "Frodo"],
+    "answer": "Legolas",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-0056",
+    "question": "Which tower does the Eye of Sauron sit atop?",
+    "options": ["Minas Morgul", "Orthanc", "Barad-dûr", "Mount Doom"],
+    "answer": "Barad-dûr",
+    "difficulty": "expert"
+  },
+  {
+    "id": "lotr-movie-0057",
+    "question": "What does Éowyn say right before she kills the Witch-king?",
+    "options": ["I fear no man!", "I am the daughter of kings!", "You look upon death!", "I am no man!"],
+    "answer": "I am no man!",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-0063",
+    "question": "What are the giant elephant-like creatures ued by the Haradrim army called?",
+    "options": ["Trollphaunts", "Oliphaunts", "Urukhaunts", "Wargs"],
+    "answer": "Oliphaunts",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-movie-0065",
+    "question": "Which character is called 'Strider'?",
+    "options": ["Legolas", "Boromir", "Aragorn", "Faramir"],
+    "answer": "Aragorn",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lotr-movie-0068",
+    "question": "What creature does Frodo see in Galadriel’s mirror?",
+    "options": ["Himself as a wraith", "Shelob", "Sauron", "Gollum"],
+    "answer": "Himself as a wraith",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-movie-0073",
+    "question": "What does Legolas surf down during the Battle of Helm’s Deep?",
+    "options": ["A stairwell", "A shield", "A horse", "A ladder"],
+    "answer": "A shield",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-0074",
+    "question": "What do Orcs catapult at Minas Tirith?",
+    "options": ["Dead Orcs", "Wargs", "Heads of Gondorian soldiers", "Stones"],
+    "answer": "Heads of Gondorian soldiers",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-0076",
+    "question": "Which actor had a severe allergic reaction to the makeup used for his character ?",
+    "options": ["Lawrence Makoare", "Craig Parker", "John Rhys-Davies", "Karl Urban"],
+    "answer": "John Rhys-Davies",
+    "difficulty": "expert"
+  },
+  {
+    "id": "lotr-movie-0077",
+    "question": "What is the first line spoken in the entire trilogy?",
+    "options": ["The world is changed", "The Shire. A land of peace", "Long ago in the Second Age", "This tale begins"],
+    "answer": "The world is changed",
+    "difficulty": "expert"
+  },
+  {
+    "id": "lotr-movie-0079",
+    "question": "What was Gollum’s final word before falling into Mount Doom?",
+    "options": ["Precious", "No!", "Master", "Mine"],
+    "answer": "Precious",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-0082",
+    "question": "What is the name of Bilbo’s party in the first film?",
+    "options": ["Farewell to the Shire", "Bilbo’s Final Feast", "Bilbo’s Birthday Bash", "Bilbo’s Eleventy-First Birthday"],
+    "answer": "Bilbo’s Eleventy-First Birthday",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-movie-0083",
+    "question": "What creature does Gandalf whisper to for aid in The Two Towers?",
+    "options": ["Warg", "Great Eagle", "Shadowfax", "Treebeard"],
+    "answer": "Shadowfax",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lotr-movie-0088",
+    "question": "What does Gandalf break in Denethor's hall?",
+    "options": ["The horn of Gondor", "The Steward’s rod", "The palantír", "His staff"],
+    "answer": "The Steward’s rod",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-movie-0091",
+    "question": "Which actor played Faramir in the movies?",
+    "options": ["David Wenham", "Karl Urban", "Sean Bean", "Bernard Hill"],
+    "answer": "David Wenham",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-0093",
+    "question": "How many Riders of Rohan does Théoden lead to Minas Tirith?",
+    "options": ["5,000", "2,000", "6,000", "10,000"],
+    "answer": "6,000",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-0102",
+    "question": "What is Sam’s profession before the journey?",
+    "options": ["Baker", "Blacksmith", "Gardener", "Carpenter"],
+    "answer": "Gardener",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lotr-movie-0105",
+    "question": "Who sings at Denethor’s table while Faramir rides out?",
+    "options": ["Pippin", "Merry", "Frodo", "Gandalf"],
+    "answer": "Pippin",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-movie-0109",
+    "question": "Where do Frodo and Sam first encounter Gollum?",
+    "options": ["Misty Mountains", "Dead Marshes", "Minas Tirith", "Cirith Ungol"],
+    "answer": "Dead Marshes",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-movie-0111",
+    "question": "What is Treebeard’s first word to Merry and Pippin?",
+    "options": ["Ent", "Little Orcs", "Hoom", "Hmm"],
+    "answer": "Little Orcs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-0112",
+    "question": "Who stabs the Witch-king before Éowyn kills him?",
+    "options": ["Pippin", "Merry", "Faramir", "Aragorn"],
+    "answer": "Merry",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-0113",
+    "question": "Which actor played the Mouth of Sauron (Extended Edition)?",
+    "options": ["Lawrence Makoare", "Bruce Spence", "Jed Brophy", "Sala Baker"],
+    "answer": "Bruce Spence",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-0116",
+    "question": "What word does Gandalf use to open the Doors of Moria?",
+    "options": ["Estel", "Mellon", "Annon", "Daur"],
+    "answer": "Mellon",
+    "difficulty": "expert"
+  },
+  {
+    "id": "lotr-movie-0120",
+    "question": "What is the name of the song Pippin sings in Gondor?",
+    "options": ["Home is Behind", "Edge of Night", "The Road Goes Ever On", "Now and For Always"],
+    "answer": "Edge of Night",
+    "difficulty": "expert"
+  },
+  {
+    "id": "lotr-movie-0132",
+    "question": "Who leads the charge at Helm’s Deep with Gandalf?",
+    "options": ["Théoden", "Éomer", "Aragorn", "Legolas"],
+    "answer": "Éomer",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-0144",
+    "question": "What is the Elvish name for Gandalf?",
+    "options": ["Mithrandir", "Elessar", "Maia", "Curunír"],
+    "answer": "Mithrandir",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lotr-actor-0101",
+    "question": "Which actor played Frodo Baggins in the Lord of the Rings trilogy?",
+    "options": ["Elijah Wood", "Dominic Monaghan", "Billy Boyd", "Daniel Radcliffe"],
+    "answer": "Elijah Wood",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-actor-0102",
+    "question": "Which actor portrayed Aragorn in the movies?",
+    "options": ["Karl Urban", "David Wenham", "Viggo Mortensen", "Sean Bean"],
+    "answer": "Viggo Mortensen",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-actor-0103",
+    "question": "Who played the Elf Legolas from the Woodland Realm?",
+    "options": ["Lee Pace", "Hugo Weaving", "Orlando Bloom", "Marton Csokas"],
+    "answer": "Orlando Bloom",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-med-new-019",
+    "question": "Who carries the Ring into Mordor at the end of the movies?",
+    "options": ["Frodo", "Sam", "Gollum", "Aragorn"],
+    "answer": "Frodo",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-med-new-018",
+    "question": "What signal does Gondor send to summon aid from Rohan?",
+    "options": ["Lighting the beacons", "Sending ravens", "Blowing horns", "Raising flags"],
+    "answer": "Lighting the beacons",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-med-new-020",
+    "question": "What does Gandalf declare when facing the Balrog on the Bridge of Khazad-dûm?",
+    "options": ["You shall not pass!", "I am the servant of the Secret Fire", "Fly, you fools!", "The Ring must be destroyed!"],
+    "answer": "You shall not pass!",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-actor-0104",
+    "question": "Which actor portrayed the Dwarf warrior Gimli?",
+    "options": ["John Rhys-Davies", "Richard Armitage", "Bernard Hill", "Ian Holm"],
+    "answer": "John Rhys-Davies",
+    "difficulty": "expert"
+  },
+  {
+    "id": "lotr-actor-0105",
+    "question": "Who played Boromir, the son of Denethor?",
+    "options": ["David Wenham", "Sean Bean", "Karl Urban", "John Noble"],
+    "answer": "Sean Bean",
+    "difficulty": "expert"
+  },
+  {
+    "id": "lotr-actor-0106",
+    "question": "Which actress portrayed Arwen, daughter of Elrond?",
+    "options": ["Miranda Otto", "Cate Blanchett", "Liv Tyler", "Sarah McLeod"],
+    "answer": "Liv Tyler",
+    "difficulty": "expert"
+  },
+  {
+    "id": "lotr-actor-0107",
+    "question": "Who played Éomer, nephew of King Théoden?",
+    "options": ["Sean Astin", "Karl Urban", "David Wenham", "Marton Csokas"],
+    "answer": "Karl Urban",
+    "difficulty": "expert"
+  },
+  {
+    "id": "lotr-actor-0108",
+    "question": "Who portrayed Samwise Gamgee, Frodo’s loyal companion?",
+    "options": ["Sean Astin", "Billy Boyd", "Dominic Monaghan", "Elijah Wood"],
+    "answer": "Sean Astin",
+    "difficulty": "expert"
+  },
+  {
+    "id": "lotr-med-012",
+    "question": "Which actor portrays Gandalf the Grey and later Gandalf the White?",
+    "options": ["Ian McKellen", "Christopher Lee", "Orlando Bloom", "Viggo Mortensen"],
+    "answer": "Ian McKellen",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-med-013",
+    "question": "What city is the capital of Rohan?",
+    "options": ["Edoras", "Helm’s Deep", "Dunharrow", "Minas Tirith"],
+    "answer": "Edoras",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-med-009",
+    "question": "What weapon does Gimli primarily wield?",
+    "options": ["A battle axe", "A sword", "A spear", "A bow"],
+    "answer": "A battle axe",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-med-009",
+    "question": "What weapon does Legolas primarily wield?",
+    "options": ["A battle axe", "A sword", "A spear", "A bow and arrow"],
+    "answer": "A bow and arrow",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-actor-0109",
+    "question": "Which actor played Saruman the White?",
+    "options": ["Ian McKellen", "Christopher Lee", "Bernard Hill", "Brad Dourif"],
+    "answer": "Christopher Lee",
+    "difficulty": "expert"
+  },
+  {
+    "id": "lotr-actor-0110",
+    "question": "Which actor played King Théoden of Rohan?",
+    "options": ["John Noble", "Bernard Hill", "Ian Holm", "David Wenham"],
+    "answer": "Bernard Hill",
+    "difficulty": "expert"
+  },
+  {
+    "id": "lotr-movie-0147",
+    "question": "What race is Elrond?",
+    "options": ["Elf", "Half-elf", "Maia", "Man"],
+    "answer": "Half-elf",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-movie-0150",
+    "question": "What does Aragorn say at his coronation to the hobbits?",
+    "options": ["It is done", "Now begins a new age", "You bow to no one", "Let us rebuild"],
+    "answer": "You bow to no one",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-movie-0151",
+    "question": "Who says, 'Fly, you fools'?",
+    "options": ["Saruman", "Frodo", "Aragorn", "Gandalf"],
+    "answer": "Gandalf",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lotr-movie-0152",
+    "question": "What kind of weapon does Legolas prefer?",
+    "options": ["Sword", "Axe", "Bow and arrow", "Spear"],
+    "answer": "Bow and arrow",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lotr-movie-0154",
+    "question": "What creature pulls Grond, the battering ram?",
+    "options": ["Mûmakil", "Wargs", "Trolls", "Oliphaunts"],
+    "answer": "Trolls",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-movie-0157",
+    "question": "Which Hobbit gets taken by orcs at Amon Hen?",
+    "options": ["Sam and Frodo", "Merry and Pippin", "Frodo and Pippin", "Merry and Sam"],
+    "answer": "Merry and Pippin",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lotr-movie-amonhen-002",
+    "question": "At which location does the Fellowship of the Ring break apart during their journey?",
+    "options": ["Amon Hen", "Helm's Deep", "Minas Tirith", "Weathertop"],
+    "answer": "Amon Hen",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-0165",
+    "question": "What gift does Galadriel give Sam?",
+    "options": ["Horn of Gondor", "Elven rope", "Sword Scabbard", "Dagger"],
+    "answer": "Elven rope",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-2165",
+    "question": "What gift does Galadriel give Merry and Pippin?",
+    "options": ["Horn of Gondor", "Elven rope", "Sword Scabbard", "Dagger"],
+    "answer": "Dagger",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-1175",
+    "question": "What gift does Galadriel give Aragorn?",
+    "options": ["Horn of Gondor", "Elven rope", "Sword Scabbard", "Dagger"],
+    "answer": "Sword Scabbard",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-0167",
+    "question": "What rank does Faramir hold?",
+    "options": ["Captain", "General", "Commander", "Marshal"],
+    "answer": "Captain",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-movie-0168",
+    "question": "What does Pippin steal from Gandalf?",
+    "options": ["A pipe", "A book", "A palantír", "A staff"],
+    "answer": "A palantír",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-movie-0169",
+    "question": "Which character is sent to summon more forces at Dunharrow?",
+    "options": ["Aragorn", "Legolas", "Éowyn", "Éomer"],
+    "answer": "Éomer",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-hard-dunharrow-002",
+    "question": "In the movies, what is the name of the place where the Riders of Rohan assemble before riding to Helm’s Deep?",
+    "options": ["Helm's Deep", "Dunharrow", "Edoras", "Pelennor Fields"],
+    "answer": "Dunharrow",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lotr-movie-0171",
+    "question": "What time of day do the beacons of Gondor get lit?",
+    "options": ["Dawn", "Dusk", "Midday", "Night"],
+    "answer": "Dusk",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lotr-movie-0187",
+    "question": "What color is the flame around the Balrog’s whip?",
+    "options": ["Red", "Blue", "Orange", "White"],
+    "answer": "Red",
+    "difficulty": "expert"
+  }
+]
+
+
+
+
+
+
+

@@ -1,0 +1,432 @@
+[
+  {
+    "id": "gg-001",
+    "difficulty": "easy",
+    "question": "Who is the main narrator behind the blog “Gossip Girl”?",
+    "options": ["Kristen Bell", "Blake Lively", "Leighton Meester", "Penn Badgley"],
+    "answer": "Kristen Bell"
+  },
+  {
+    "id": "gg-002",
+    "difficulty": "easy",
+    "question": "What city is Gossip Girl primarily set in?",
+    "options": ["New York City", "Los Angeles", "Chicago", "Boston"],
+    "answer": "New York City"
+  },
+  {
+    "id": "gg-003",
+    "difficulty": "easy",
+    "question": "Which private school do the female main characters attend early in the series?",
+    "options": ["Constance Billard", "East Highland", "Riverdale High", "Bayside High"],
+    "answer": "Constance Billard"
+  },
+  {
+    "id": "gg-003",
+    "difficulty": "easy",
+    "question": "Which private school do the male main characters attend early in the series?",
+    "options": ["St. Jude’s", "East Highland", "Riverdale High", "Constance Billard"],
+    "answer": "St. Jude’s"
+  },
+  {
+    "id": "gg-004",
+    "difficulty": "easy",
+    "question": "Who is the ‘queen bee’ of Constance at the start of the show?",
+    "options": ["Blair Waldorf", "Serena van der Woodsen", "Jenny Humphrey", "Vanessa Abrams"],
+    "answer": "Blair Waldorf"
+  },
+  {
+    "id": "gg-005",
+    "difficulty": "easy",
+    "question": "Which character returns to New York in the pilot and shakes everything up?",
+    "options": ["Serena van der Woodsen", "Blair Waldorf", "Georgina Sparks", "Ivy Dickens"],
+    "answer": "Serena van der Woodsen"
+  },
+  {
+    "id": "gg-006",
+    "difficulty": "easy",
+    "question": "Who is Blair’s longtime on-and-off boyfriend?",
+    "options": ["Chuck Bass", "Dan Humphrey", "Nate Archibald", "Carter Baizen"],
+    "answer": "Chuck Bass"
+  },
+  {
+    "id": "gg-007",
+    "difficulty": "easy",
+    "question": "Who is Serena’s main love interest early in the series?",
+    "options": ["Dan Humphrey", "Chuck Bass", "Nate Archibald", "Jack Bass"],
+    "answer": "Dan Humphrey"
+  },
+  {
+    "id": "gg-008",
+    "difficulty": "easy",
+    "question": "What is Dan Humphrey’s nickname in the Upper East Side world?",
+    "options": ["Lonely Boy", "Golden Boy", "Prince", "The Insider"],
+    "answer": "Lonely Boy"
+  },
+  {
+    "id": "gg-009",
+    "difficulty": "easy",
+    "question": "What is the name of Dan’s younger sister?",
+    "options": ["Jenny", "Vanessa", "Ivy", "Lola"],
+    "answer": "Jenny"
+  },
+  {
+    "id": "gg-015",
+    "difficulty": "easy",
+    "question": "Where do Dan and Jenny live compared to the Upper East Siders?",
+    "options": ["Brooklyn", "Queens", "The Hamptons", "SoHo"],
+    "answer": "Brooklyn"
+  },
+  {
+    "id": "gg-016",
+    "difficulty": "easy",
+    "question": "What is Serena’s mom’s name?",
+    "options": ["Lily", "Eleanor", "Anne", "CeCe"],
+    "answer": "Lily"
+  },
+  {
+    "id": "gg-017",
+    "difficulty": "easy",
+    "question": "What is Blair’s mom’s name?",
+    "options": ["Eleanor", "Lily", "CeCe", "Anne"],
+    "answer": "Eleanor"
+  },
+  {
+    "id": "gg-020",
+    "difficulty": "easy",
+    "question": "What iconic sign-off does Gossip Girl use?",
+    "options": ["XOXO, Gossip Girl", "Spotted: You", "Love, GG", "Kisses, Manhattan"],
+    "answer": "XOXO, Gossip Girl"
+  },
+  {
+    "id": "gg-022",
+    "difficulty": "easy",
+    "question": "What is Dorota’s role in Blair’s household?",
+    "options": ["Maid/housekeeper", "Teacher", "Publicist", "Lawyer"],
+    "answer": "Maid/housekeeper"
+  },
+  {
+    "id": "gg-027",
+    "difficulty": "easy",
+    "question": "Which Ivy League school is a constant goal and drama point in the show?",
+    "options": ["Yale", "MIT", "Stanford", "UCLA"],
+    "answer": "Yale"
+  },
+  {
+    "id": "gg-037",
+    "difficulty": "medium",
+    "question": "What is the name of Dan’s first major book that causes a scandal later?",
+    "options": ["Inside", "Outsider", "The UES Diaries", "Manhattan Truth"],
+    "answer": "Inside"
+  },
+  {
+    "id": "gg-041",
+    "difficulty": "medium",
+    "question": "Which college do Dan and Vanessa attend when they leave high school?",
+    "options": ["NYU", "Columbia", "Yale", "Brown"],
+    "answer": "NYU"
+  },
+  {
+    "id": "gg-042",
+    "difficulty": "medium",
+    "question": "Which school does Blair attend in Season 4?",
+    "options": ["Columbia", "NYU", "Yale", "Princeton"],
+    "answer": "Columbia"
+  },
+  {
+    "id": "gg-047",
+    "difficulty": "medium",
+    "question": "What is the name of Chuck’s main hotel project early on?",
+    "options": ["The Empire", "The Palace", "The Plaza", "The Astor"],
+    "answer": "The Empire"
+  },
+  {
+    "id": "gg-easy-0002",
+    "question": "On which New York area do most Gossip Girl characters live?",
+    "options": ["Upper East Side", "SoHo", "Brooklyn Heights", "Harlem"],
+    "answer": "Upper East Side",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gg-easy-0003",
+    "question": "What kind of platform is Gossip Girl within the show?",
+    "options": ["An anonymous blog", "A TV show", "A podcast", "A newspaper column"],
+    "answer": "An anonymous blog",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gg-easy-0004",
+    "question": "Which TV network originally aired Gossip Girl in the U.S.?",
+    "options": ["The CW", "FOX", "NBC", "ABC"],
+    "answer": "The CW",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gg-easy-0005",
+    "question": "How many seasons did the original Gossip Girl series have?",
+    "options": ["Six", "Four", "Five", "Seven"],
+    "answer": "Six",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gg-easy-0022",
+    "question": "Gossip Girl is based on a series of novels by which author?",
+    "options": ["Cecily von Ziegesar", "Stephanie Meyer", "Meg Cabot", "Sarah Dessen"],
+    "answer": "Cecily von Ziegesar",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gg-med-0026",
+    "question": "In what year did Gossip Girl first premiere on television?",
+    "options": ["2007", "2005", "2008", "2010"],
+    "answer": "2007",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gg-med-0027",
+    "question": "How many total episodes does the original Gossip Girl series have?",
+    "options": ["121", "100", "110", "90"],
+    "answer": "121",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gg-129",
+    "difficulty": "easy",
+    "question": "Which Upper East Side family is known for its hotel empire?",
+    "options": ["The Bass family", "The Humphrey family", "The Abrams family", "The Rhodes family"],
+    "answer": "The Bass family"
+  },
+  {
+    "id": "gg-127",
+    "difficulty": "easy",
+    "question": "What is Blair Waldorf’s favorite fashion accessory?",
+    "options": ["Headbands", "Sunglasses", "Pearl gloves", "Anklets"],
+    "answer": "Headbands"
+  },
+  {
+    "id": "gg-115",
+    "difficulty": "hard",
+    "question": "What is the title of Dan’s later serialized insider chapters that damage nearly everyone?",
+    "options": ["Inside Out", "Upper East Exposé", "The Spectator Files", "Golden Lies"],
+    "answer": "Inside Out"
+  },
+  {
+    "id": "gg-104",
+    "difficulty": "hard",
+    "question": "What is the name of Chuck’s dog, given to him during one of his lonelier periods?",
+    "options": ["Monkey", "Prince", "Waffles", "Milo"],
+    "answer": "Monkey"
+  },
+  {
+    "id": "gg-092",
+    "difficulty": "hard",
+    "question": "Which book adaptation play does Blair star in during high school?",
+    "options": ["The Age of Innocence", "Breakfast at Tiffany’s", "Dangerous Liaisons", "Pride and Prejudice"],
+    "answer": "The Age of Innocence"
+  },
+  {
+    "id": "gg-084",
+    "difficulty": "hard",
+    "question": "Which elite secret society targets Chuck for recruitment at Yale?",
+    "options": ["Skull and Bones", "The Rose and Crown", "The Hamilton Club", "Eli Society"],
+    "answer": "Skull and Bones"
+  },
+  {
+    "id": "gg-053",
+    "difficulty": "medium",
+    "question": "Which royal title does Louis Grimaldi hold?",
+    "options": ["Prince of Monaco", "Prince of England", "Prince of Belgium", "Prince of Luxembourg"],
+    "answer": "Prince of Monaco"
+  },
+  {
+    "id": "gg-082",
+    "difficulty": "hard",
+    "question": "What is the name of the boarding school Serena attends after leaving Manhattan?",
+    "options": ["Knightley", "Waverly", "Westbridge", "Briar Hall"],
+    "answer": "Knightley"
+  },
+  {
+    "id": "gg-050",
+    "difficulty": "medium",
+    "question": "What is the name of the newspaper Nate runs?",
+    "options": ["The Spectator", "The Empire Post", "The New York Standard", "The Observer"],
+    "answer": "The Spectator"
+  },
+  {
+    "id": "gg-med-0032",
+    "question": "What is Blair Waldorf’s mother’s profession?",
+    "options": ["Fashion designer", "Journalist", "Lawyer", "Real estate developer"],
+    "answer": "Fashion designer",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sp-119",
+    "difficulty": "easy",
+    "question": "What is Blair Waldorf's favorite movie?",
+    "options": ["Breakfast at Tiffany's", "Roman Holiday", "Sabrina", "Funny Face"],
+    "answer": "Breakfast at Tiffany's"
+  },
+  {
+    "id": "sp-129",
+    "difficulty": "easy",
+    "question": "What is Rufus Humphrey's former band called?",
+    "options": ["Lincoln Hawk", "The Loft", "Brooklyn Beat", "Humphrey & Sons"],
+    "answer": "Lincoln Hawk"
+  },
+  {
+    "id": "sp-148",
+    "difficulty": "easy",
+    "question": "Who is the Queen Bee after Blair graduates?",
+    "options": ["Jenny", "Serena", "Vanessa", "Lola"],
+    "answer": "Jenny"
+  },
+  {
+    "id": "sp-149",
+    "difficulty": "easy",
+    "question": "What instrument does Rufus play?",
+    "options": ["Guitar", "Piano", "Drums", "Violin"],
+    "answer": "Guitar"
+  },
+  {
+    "id": "sp-152",
+    "difficulty": "easy",
+    "question": "Where do Blair and Chuck get married?",
+    "options": ["Central Park", "The Empire Hotel", "The Waldorf Penthouse", "Paris"],
+    "answer": "Central Park"
+  },
+  {
+    "id": "sp-155",
+    "difficulty": "easy",
+    "question": "Which Ivy League school did Blair desperately want to attend?",
+    "options": ["Yale", "Harvard", "Princeton", "Brown"],
+    "answer": "Yale"
+  },
+  {
+    "id": "sp-156",
+    "difficulty": "easy",
+    "question": "Who is revealed as Gossip Girl in the series finale?",
+    "options": ["Dan Humphrey", "Nate Archibald", "Jenny Humphrey", "Dorota Kishlovsky"],
+    "answer": "Dan Humphrey"
+  },
+  {
+    "id": "sp-158",
+    "difficulty": "medium",
+    "question": "Who was Gossip Girl’s first ever blast about?",
+    "options": ["Serena", "Blair", "Nate", "Chuck"],
+    "answer": "Serena"
+  },
+  {
+    "id": "sp-163",
+    "difficulty": "medium",
+    "question": "Which character does Hilary Duff play?",
+    "options": ["Olivia Burke", "Juliet Sharp", "Lola Rhodes", "Ivy Dickens"],
+    "answer": "Olivia Burke"
+  },
+  {
+    "id": "sp-164",
+    "difficulty": "hard",
+    "question": "Where does Serena's grandmother, CeCe, live?",
+    "options": ["Montecito", "Hamptons", "Palm Beach", "Paris"],
+    "answer": "Montecito"
+  },
+  {
+    "id": "sp-165",
+    "difficulty": "medium",
+    "question": "What did Nate's father go to prison for?",
+    "options": ["Embezzlement and fraud", "Murder", "Assault", "Drug trafficking"],
+    "answer": "Embezzlement and fraud"
+  },
+  {
+    "id": "sp-168",
+    "difficulty": "medium",
+    "question": "Who is Georgina Sparks's son?",
+    "options": ["Milo", "Henry", "Arthur", "Leo"],
+    "answer": "Milo"
+  },
+  {
+    "id": "sp-190",
+    "difficulty": "medium",
+    "question": "Who is the headmistress of Constance Billard?",
+    "options": ["Queller", "Waldorf", "Humphrey", "Bass"],
+    "answer": "Queller"
+  },
+  {
+    "id": "sp-208",
+    "difficulty": "hard",
+    "question": "What is the name of the guy Serena 'killed' at the hotel?",
+    "options": ["Pete Campbell", "David Hall", "John Smith", "Robert Miller"],
+    "answer": "Pete Campbell"
+  },
+  {
+    "id": "sp-209",
+    "difficulty": "hard",
+    "question": "How many men has Lily van der Woodsen married?",
+    "options": ["6", "4", "5", "7"],
+    "answer": "5"
+  },
+  {
+    "id": "sp-213",
+    "difficulty": "hard",
+    "question": "What is the address of the Waldorf penthouse?",
+    "options": ["1136 Fifth Avenue", "1020 Park Avenue", "740 Park Avenue", "15 Central Park West"],
+    "answer": "1136 Fifth Avenue"
+  },
+  {
+    "id": "sp-214",
+    "difficulty": "hard",
+    "question": "What is the name of the actress who plays Dorota?",
+    "options": ["Zuzanna Szadkowski", "Leighton Meester", "Jessica Szohr", "Michelle Trachtenberg"],
+    "answer": "Zuzanna Szadkowski"
+  },
+  {
+    "id": "gg-221",
+    "difficulty": "easy",
+    "question": "Which actor plays Chuck Bass in Gossip Girl?",
+    "options": ["Ed Westwick", "Penn Badgley", "Chace Crawford", "Matthew Settle"],
+    "answer": "Ed Westwick"
+  },
+  {
+    "id": "gg-222",
+    "difficulty": "easy",
+    "question": "Which actress plays Blair Waldorf in Gossip Girl?",
+    "options": ["Leighton Meester", "Blake Lively", "Taylor Momsen", "Michelle Trachtenberg"],
+    "answer": "Leighton Meester"
+  },
+  {
+    "id": "gg-223",
+    "difficulty": "easy",
+    "question": "Which actor plays Dan Humphrey in Gossip Girl?",
+    "options": ["Penn Badgley", "Chace Crawford", "Ed Westwick", "Connor Paolo"],
+    "answer": "Penn Badgley"
+  },
+  {
+    "id": "gg-224",
+    "difficulty": "easy",
+    "question": "Which actress plays Serena van der Woodsen in Gossip Girl?",
+    "options": ["Blake Lively", "Leighton Meester", "Taylor Momsen", "Jessica Szohr"],
+    "answer": "Blake Lively"
+  },
+  {
+    "id": "gg-225",
+    "difficulty": "easy",
+    "question": "Which actor plays Nate Archibald in Gossip Girl?",
+    "options": ["Chace Crawford", "Penn Badgley", "Ed Westwick", "Sebastian Stan"],
+    "answer": "Chace Crawford"
+  },
+{
+    "id": "sp-222",
+    "difficulty": "hard",
+    "question": "What is the name of the burlesque club Blaire wanted Chuck to invest in?",
+    "options": ["Victrola", "The Palace", "The Empire", "Butter"],
+    "answer": "Victrola"
+  },
+  {
+    "id": "gg-hard-0052",
+    "question": "Which two showrunners developed the Gossip Girl TV adaptation?",
+    "options": ["Josh Schwartz and Stephanie Savage", "Josh Schwartz and Shonda Rhimes", "J.J. Abrams and Stephanie Savage", "Chuck Lorre and Josh Schwartz"],
+    "answer": "Josh Schwartz and Stephanie Savage",
+    "difficulty": "hard"
+  }
+]
+
+
+

@@ -1,0 +1,722 @@
+[
+  {
+    "id": "hotd-001",
+    "difficulty": "easy",
+    "question": "What is the name of the ruling Targaryen king at the start of House of the Dragon?",
+    "options": ["Viserys I", "Aegon I", "Maegor I", "Aerys II"],
+    "answer": "Viserys I"
+  },
+  {
+    "id": "hotd-002",
+    "difficulty": "easy",
+    "question": "What is the name of Viserys’s chosen heir early in the story?",
+    "options": ["Rhaenyra", "Rhaenys", "Alicent", "Helaena"],
+    "answer": "Rhaenyra"
+  },
+  {
+    "id": "hotd-003",
+    "difficulty": "easy",
+    "question": "Which house is Alicent originally from?",
+    "options": ["House Hightower", "House Baratheon", "House Arryn", "House Tully"],
+    "answer": "House Hightower"
+  },
+  {
+    "id": "hotd-004",
+    "difficulty": "easy",
+    "question": "What is the Targaryen stronghold and seat of power where much of the series begins?",
+    "options": ["King’s Landing", "Dragonstone", "Storm’s End", "Oldtown"],
+    "answer": "Dragonstone"
+  },
+  {
+    "id": "hotd-005",
+    "difficulty": "easy",
+    "question": "What is the name of Viserys’s first wife, the mother of Rhaenyra?",
+    "options": ["Aemma", "Alicent", "Laena", "Rhea"],
+    "answer": "Aemma"
+  },
+  {
+    "id": "hotd-006",
+    "difficulty": "easy",
+    "question": "Who is Viserys’s Hand of the King at the start of the series?",
+    "options": ["Otto Hightower", "Corlys Velaryon", "Lyonel Strong", "Harwin Strong"],
+    "answer": "Otto Hightower"
+  },
+  {
+    "id": "hotd-007",
+    "difficulty": "easy",
+    "question": "What is the name of the powerful Velaryon lord known as the “Sea Snake”?",
+    "options": ["Corlys Velaryon", "Vaemond Velaryon", "Qarl Velaryon", "Larys Strong"],
+    "answer": "Corlys Velaryon"
+  },
+  {
+    "id": "hotd-008",
+    "difficulty": "easy",
+    "question": "Who is Rhaenyra’s uncle and a key rival power within House Targaryen?",
+    "options": ["Daemon Targaryen", "Aegon Targaryen", "Criston Cole", "Harwin Strong"],
+    "answer": "Daemon Targaryen"
+  },
+  {
+    "id": "hotd-009",
+    "difficulty": "easy",
+    "question": "Which city is the ancestral seat of House Velaryon?",
+    "options": ["Driftmark", "Winterfell", "Highgarden", "Casterly Rock"],
+    "answer": "Driftmark"
+  },
+  {
+    "id": "hotd-010",
+    "difficulty": "easy",
+    "question": "What organization of elite guards serves as the king’s sworn protectors in King’s Landing?",
+    "options": ["Kingsguard", "Night’s Watch", "Gold Cloaks", "Silent Sisters"],
+    "answer": "Kingsguard"
+  },
+  {
+    "id": "hotd-011",
+    "difficulty": "easy",
+    "question": "What is the name of the city that is the capital of the Seven Kingdoms?",
+    "options": ["King’s Landing", "Oldtown", "Lannisport", "Gulltown"],
+    "answer": "King’s Landing"
+  },
+  {
+    "id": "hotd-012",
+    "difficulty": "easy",
+    "question": "What is the name of Daemon’s dragon early in the series?",
+    "options": ["Caraxes", "Syrax", "Vhagar", "Meleys"],
+    "answer": "Caraxes"
+  },
+  {
+    "id": "hotd-013",
+    "difficulty": "easy",
+    "question": "What is the name of Rhaenyra’s dragon?",
+    "options": ["Syrax", "Caraxes", "Sunfyre", "Vermithor"],
+    "answer": "Syrax"
+  },
+  {
+    "id": "hotd-014",
+    "difficulty": "easy",
+    "question": "Which knight becomes closely tied to Rhaenyra early on after winning prominence in a tourney?",
+    "options": ["Criston Cole", "Gwayne Hightower", "Joffrey Lonmouth", "Rickard Thorne"],
+    "answer": "Criston Cole"
+  },
+  {
+    "id": "hotd-015",
+    "difficulty": "easy",
+    "question": "Who is Alicent’s father?",
+    "options": ["Otto Hightower", "Corlys Velaryon", "Lyonel Strong", "Borros Baratheon"],
+    "answer": "Otto Hightower"
+  },
+  {
+    "id": "hotd-016",
+    "difficulty": "easy",
+    "question": "Which house’s seat is Storm’s End?",
+    "options": ["House Baratheon", "House Stark", "House Tyrell", "House Martell"],
+    "answer": "House Baratheon"
+  },
+  {
+    "id": "hotd-018",
+    "difficulty": "easy",
+    "question": "What is the name of the Queen Who Never Was?",
+    "options": ["Rhaenys Targaryen", "Rhaenyra Targaryen", "Aemma Arryn", "Helaena Targaryen"],
+    "answer": "Rhaenys Targaryen"
+  },
+  {
+    "id": "hotd-019",
+    "difficulty": "easy",
+    "question": "Which island fortress becomes a major base for Rhaenyra’s claim?",
+    "options": ["Dragonstone", "Pyke", "Bear Island", "Tarth"],
+    "answer": "Dragonstone"
+  },
+  {
+    "id": "hotd-020",
+    "difficulty": "easy",
+    "question": "Which house is known for its strong ties to the sea and silver-haired lineage alongside the Targaryens?",
+    "options": ["House Velaryon", "House Frey", "House Bolton", "House Mormont"],
+    "answer": "House Velaryon"
+  },
+  {
+    "id": "hotd-021",
+    "difficulty": "easy",
+    "question": "What is the name of Alicent and Viserys’s eldest son?",
+    "options": ["Aegon", "Jacaerys", "Lucerys", "Daeron"],
+    "answer": "Aegon"
+  },
+  {
+    "id": "hotd-022",
+    "difficulty": "easy",
+    "question": "Which dragon is famously one of the largest living dragons during the era?",
+    "options": ["Vhagar", "Syrax", "Vermax", "Moondancer"],
+    "answer": "Vhagar"
+  },
+  {
+    "id": "hotd-023",
+    "difficulty": "easy",
+    "question": "Who is the Lord Commander of the Kingsguard early in the series?",
+    "options": ["Harrold Westerling", "Criston Cole", "Rickard Thorne", "Steffon Darklyn"],
+    "answer": "Harrold Westerling"
+  },
+  {
+    "id": "hotd-024",
+    "difficulty": "easy",
+    "question": "Which house rules the Vale from the Eyrie?",
+    "options": ["House Arryn", "House Greyjoy", "House Reed", "House Dayne"],
+    "answer": "House Arryn"
+  },
+  {
+    "id": "hotd-025",
+    "difficulty": "easy",
+    "question": "What is the name of the royal council room where major decisions are made?",
+    "options": ["Small Council", "Great Council", "High Council", "King’s Moot"],
+    "answer": "Small Council"
+  },
+  {
+    "id": "hotd-026",
+    "difficulty": "easy",
+    "question": "What is the name of Corlys Velaryon’s wife?",
+    "options": ["Rhaenys", "Alicent", "Rhea", "Mysaria"],
+    "answer": "Rhaenys"
+  },
+  {
+    "id": "hotd-027",
+    "difficulty": "easy",
+    "question": "Which dragon is ridden by Rhaenys?",
+    "options": ["Meleys", "Dreamfyre", "Tessarion", "Seasmoke"],
+    "answer": "Meleys"
+  },
+  {
+    "id": "hotd-028",
+    "difficulty": "easy",
+    "question": "What is the name of Daemon’s partner who is connected to the streets and networks of King’s Landing?",
+    "options": ["Mysaria", "Laena", "Helaena", "Elinda"],
+    "answer": "Mysaria"
+  },
+  {
+    "id": "hotd-029",
+    "difficulty": "easy",
+    "question": "What title is used for the king’s chief advisor and head of the small council?",
+    "options": ["Hand of the King", "Master of Laws", "Warden of the East", "Lord Paramount"],
+    "answer": "Hand of the King"
+  },
+  {
+    "id": "hotd-030",
+    "difficulty": "easy",
+    "question": "Which institution is responsible for training maesters, scholars and healers?",
+    "options": ["The Order of Westeros", "The Citadel", "The Faith Militant", "The Faceless Men"],
+    "answer": "The Citadel"
+  },
+
+  {
+    "id": "hotd-031",
+    "difficulty": "medium",
+    "question": "What is the name of Rhaenyra’s husband chosen for political reasons from House Velaryon?",
+    "options": ["Laenor", "Harwin", "Criston", "Gwayne"],
+    "answer": "Laenor"
+  },
+  {
+    "id": "hotd-032",
+    "difficulty": "medium",
+    "question": "Which dragon is bonded to Laenor Velaryon?",
+    "options": ["Seasmoke", "Sunfyre", "Arrax", "Meleys"],
+    "answer": "Seasmoke"
+  },
+  {
+    "id": "hotd-033",
+    "difficulty": "medium",
+    "question": "Who becomes Viserys’s Hand after Otto Hightower is dismissed?",
+    "options": ["Lyonel Strong", "Corlys Velaryon", "Daemon Targaryen", "Jasper Wylde"],
+    "answer": "Lyonel Strong"
+  },
+  {
+    "id": "hotd-034",
+    "difficulty": "medium",
+    "question": "Which Strong is widely rumored to be the father of Rhaenyra’s first three sons?",
+    "options": ["Harwin Strong", "Larys Strong", "Lyonel Strong", "Simon Strong"],
+    "answer": "Harwin Strong"
+  },
+  {
+    "id": "hotd-035",
+    "difficulty": "medium",
+    "question": "What is the name of Rhaenyra’s firstborn son?",
+    "options": ["Jacaerys", "Aemond", "Aegon", "Daeron"],
+    "answer": "Jacaerys"
+  },
+  {
+    "id": "hotd-036",
+    "difficulty": "medium",
+    "question": "What is the name of Rhaenyra’s second son?",
+    "options": ["Lucerys", "Jaehaerys", "Aemond", "Baelon"],
+    "answer": "Lucerys"
+  },
+  {
+    "id": "hotd-037",
+    "difficulty": "medium",
+    "question": "Which one-eyed prince claims Vhagar?",
+    "options": ["Aemond", "Aegon", "Daeron", "Jacaerys"],
+    "answer": "Aemond"
+  },
+  {
+    "id": "hotd-038",
+    "difficulty": "medium",
+    "question": "What is the name of Alicent’s daughter who is known for prophetic dreams?",
+    "options": ["Helaena", "Rhaena", "Baela", "Rhaenys"],
+    "answer": "Helaena"
+  },
+  {
+    "id": "hotd-039",
+    "difficulty": "hard",
+    "question": "Which dragon is closely associated with Aegon II?",
+    "options": ["Sunfyre", "Vhagar", "Caraxes", "Seasmoke"],
+    "answer": "Sunfyre"
+  },
+  {
+    "id": "hotd-040",
+    "difficulty": "hard",
+    "question": "Which dragon is associated with Helaena?",
+    "options": ["Dreamfyre", "Syrax", "Moondancer", "Arrax"],
+    "answer": "Dreamfyre"
+  },
+  {
+    "id": "hotd-041",
+    "difficulty": "hard",
+    "question": "What is the name of Daemon’s second wife from House Velaryon?",
+    "options": ["Laena", "Aemma", "Alicent", "Rhea"],
+    "answer": "Laena"
+  },
+  {
+    "id": "hotd-042",
+    "difficulty": "hard",
+    "question": "Which dragon is bonded to Laena Velaryon?",
+    "options": ["Vhagar", "Syrax", "Vermax", "Tessarion"],
+    "answer": "Vhagar"
+  },
+  {
+    "id": "hotd-043",
+    "difficulty": "medium",
+    "question": "What is the name of Daemon’s first wife from the Vale?",
+    "options": ["Rhea", "Rhaenys", "Laena", "Elinda"],
+    "answer": "Rhea"
+  },
+  {
+    "id": "hotd-045",
+    "difficulty": "medium",
+    "question": "Which Strong serves as Lord of Harrenhal and Hand of the King?",
+    "options": ["Lyonel Strong", "Harwin Strong", "Larys Strong", "Simon Strong"],
+    "answer": "Lyonel Strong"
+  },
+  {
+    "id": "hotd-046",
+    "difficulty": "medium",
+    "question": "What is the seat of House Strong?",
+    "options": ["Harrenhal", "Riverrun", "The Twins", "Horn Hill"],
+    "answer": "Harrenhal"
+  },
+  {
+    "id": "hotd-049",
+    "difficulty": "medium",
+    "question": "Which Black-aligned prince rides the dragon Vermax?",
+    "options": ["Jacaerys", "Lucerys", "Aemond", "Aegon II"],
+    "answer": "Jacaerys"
+  },
+  {
+    "id": "hotd-050",
+    "difficulty": "medium",
+    "question": "Which Black-aligned prince rides the dragon Arrax?",
+    "options": ["Lucerys", "Jacaerys", "Aegon (the Younger)", "Daemon"],
+    "answer": "Lucerys"
+  },
+  {
+    "id": "hotd-051",
+    "difficulty": "medium",
+    "question": "Which dragon is bonded to Daemon’s daughter Baela?",
+    "options": ["Moondancer", "Dreamfyre", "Syrax", "Tessarion"],
+    "answer": "Moondancer"
+  },
+  {
+    "id": "hotd-054",
+    "difficulty": "hard",
+    "question": "Which weapon is the Valyrian steel sword traditionally carried by Daemon?",
+    "options": ["Dark Sister", "Blackfyre", "Ice", "Needle"],
+    "answer": "Dark Sister"
+  },
+  {
+    "id": "hotd-055",
+    "difficulty": "medium",
+    "question": "Which weapon is the Valyrian steel sword associated with Targaryen kings and used symbolically in the succession?",
+    "options": ["Blackfyre", "Dark Sister", "Heartsbane", "Oathkeeper"],
+    "answer": "Blackfyre"
+  },
+  {
+    "id": "hotd-056",
+    "difficulty": "medium",
+    "question": "What is the name of the faction supporting Rhaenyra’s claim?",
+    "options": ["The Blacks", "The Greens", "The Strongs", "The Kingswood"],
+    "answer": "The Blacks"
+  },
+  {
+    "id": "hotd-057",
+    "difficulty": "medium",
+    "question": "What is the name of the faction supporting Aegon II’s claim?",
+    "options": ["The Greens", "The Blacks", "The Strongs", "The Kingswood"],
+    "answer": "The Greens"
+  },
+  {
+    "id": "hotd-060",
+    "difficulty": "hard",
+    "question": "In Season 2, what major strategic location do the Blacks quickly secure early in the war?",
+    "options": ["Harrenhal", "Casterly Rock", "The Eyrie", "The Twins"],
+    "answer": "Harrenhal"
+  },
+
+  {
+    "id": "hotd-061",
+    "difficulty": "hard",
+    "question": "Which Great Council is repeatedly referenced as a precedent for succession before the Dance?",
+    "options": ["The Great Council of 101 AC", "The Great Council of 281 AC", "The Great Council of 196 AC", "The Great Council of 9 AC"],
+    "answer": "The Great Council of 101 AC"
+  },
+ {
+    "id": "hotd-062-a",
+    "difficulty": "hard",
+    "question": "In his campaign with Corlys Velaryon, what is the name of the island chain Daemon seeks to liberate from the Triarchy?",
+    "options": ["The Stepstones", "The Iron Islands", "The Basilisk Isles", "The Shield Islands"],
+    "answer": "The Stepstones"
+  },
+  {
+    "id": "hotd-062-b",
+    "difficulty": "hard",
+    "question": "Which Free City offers Daemon and Laena permanent residence in exchange for dragon protection against the Triarchy?",
+    "options": ["Braavos", "Volantis", "Pentos", "Lys"],
+    "answer": "Pentos"
+  },
+  {
+    "id": "hotd-062-c",
+    "difficulty": "hard",
+    "question": "The 'Triarchy' that Daemon and Corlys fight in the Stepstones is an alliance of which three Free Cities?",
+    "options": ["Lys, Myr, and Tyrosh", "Pentos, Norvos, and Qohor", "Braavos, Lorath, and Volantis", "Tyrosh, Braavos, and Pentos"],
+    "answer": "Lys, Myr, and Tyrosh"
+  },
+  {
+    "id": "hotd-064",
+    "difficulty": "hard",
+    "question": "What is the name of the Triarchy leader who opposes Daemon and Corlys?",
+    "options": ["Craghas Drahar", "Qarl Correy", "Dalton Greyjoy", "Ormund Hightower"],
+    "answer": "Craghas Drahar"
+  },
+  {
+    "id": "hotd-066",
+    "difficulty": "hard",
+    "question": "What is the name of the Green-aligned Kingsguard twin whose loyalty contrasts with his brother?",
+    "options": ["Arryk Cargyll", "Steffon Darklyn", "Harrold Westerling", "Rickard Thorne"],
+    "answer": "Arryk Cargyll"
+  },
+  {
+    "id": "hotd-068",
+    "difficulty": "hard",
+    "question": "Which Lannister twin becomes Master of Coin?",
+    "options": ["Tyland Lannister", "Jason Lannister", "Kevan Lannister", "Stafford Lannister"],
+    "answer": "Tyland Lannister"
+  },
+  {
+    "id": "hotd-069",
+    "difficulty": "hard",
+    "question": "What is the name of the castle where Rhaenyra gives birth under extreme stress after hearing of the coup?",
+    "options": ["Dragonstone", "Harrenhal", "Storm’s End", "High Tide"],
+    "answer": "Dragonstone"
+  },
+  {
+    "id": "hotd-070",
+    "difficulty": "hard",
+    "question": "Which Baratheon lord controls Storm’s End during the early war?",
+    "options": ["Borros Baratheon", "Stannis Baratheon", "Renly Baratheon", "Orys Baratheon"],
+    "answer": "Borros Baratheon"
+  },
+  {
+    "id": "hotd-071",
+    "difficulty": "hard",
+    "question": "Which event becomes the immediate blood-soaked escalation that turns political tension into open war between dragons?",
+    "options": ["The death of Lucerys", "The fall of Oldtown", "The burning of Lannisport", "The sack of Winterfell"],
+    "answer": "The death of Lucerys"
+  },
+  {
+    "id": "hotd-072",
+    "difficulty": "hard",
+    "question": "Which dragon kills Arrax in the stormy confrontation over Shipbreaker Bay?",
+    "options": ["Vhagar", "Sunfyre", "Meleys", "Caraxes"],
+    "answer": "Vhagar"
+  },
+{
+"id": "hotd-072",
+"difficulty": "hard",
+"question": "Where does Vhagar kill Lucerys Velaryon, marking the start of the dragon war?",
+"options": ["Blackwater Bay", "Shipbreaker Bay", "The Bite", "Slaver's Bay"],
+"answer": "Shipbreaker Bay"
+},
+  {
+    "id": "hotd-075",
+    "difficulty": "hard",
+    "question": "What is the name of the White Worm, the spymaster figure with shifting loyalties in King’s Landing?",
+    "options": ["Mysaria", "Selyse", "Elinda", "Alys"],
+    "answer": "Mysaria"
+  },
+  {
+    "id": "hotd-079",
+    "difficulty": "hard",
+    "question": "Which dragon is bonded to Rhaenyra’s son Joffrey?",
+    "options": ["Tyraxes", "Vermax", "Arrax", "Stormcloud"],
+    "answer": "Tyraxes"
+  },
+  {
+    "id": "hotd-easy-0001",
+    "question": "House of the Dragon is a prequel to which TV series?",
+    "options": ["Game of Thrones", "The Witcher", "Vikings", "The Last Kingdom"],
+    "answer": "Game of Thrones",
+    "difficulty": "easy"
+  },
+  {
+    "id": "hotd-hard-0051",
+    "question": "How many episodes are in House of the Dragon Season 1?",
+    "options": ["Ten", "Six", "Eight", "Twelve"],
+    "answer": "Ten",
+    "difficulty": "hard"
+  },
+  {
+    "id": "hotd-easy-0025",
+    "question": "House of the Dragon premiered in which year?",
+    "options": ["2022", "2019", "2020", "2024"],
+    "answer": "2022",
+    "difficulty": "hard"
+  },
+  {
+    "id": "hotd-easy-0018",
+    "question": "What is the title of the ruler who sits on the Iron Throne?",
+    "options": ["King of the Andals and the First Men", "Lord of Winterfell", "Prince of Dragonstone", "Warden of the West"],
+    "answer": "King of the Andals and the First Men",
+    "difficulty": "easy"
+  },
+  {
+    "id": "hotd-easy-0004",
+    "question": "What color dress does Alicent wear to signal House Hightower's call to arms?",
+    "options": ["Black", "Red", "Green", "Blue"],
+    "answer": "Green",
+    "difficulty": "hard"
+  },
+  {
+    "id": "hotd-med-0076",
+    "question": "What title does Corlys Velaryon hold in Rhaenyra's council?",
+    "options": ["Hand of the Queen", "Lord Admiral", "Master of Ships", "Warden of the Sea"],
+    "answer": "Hand of the Queen",
+    "difficulty": "hard"
+  },
+  {
+    "id": "hotd-med-0062",
+    "question": "Who claims the dragon Silverwing in Season 2?",
+    "options": ["Ulf White", "Hugh Hammer", "Addam of Hull", "Alyn of Hull"],
+    "answer": "Ulf White",
+    "difficulty": "hard"
+  },
+  {
+    "id": "hotd-med-0056",
+    "question": "What is the relationship between Rhaenyra and Daemon Targaryen?",
+    "options": ["Cousins", "Uncle and Niece", "Siblings", "Brother and Sister-in-law"],
+    "answer": "Uncle and Niece",
+    "difficulty": "medium"
+  },
+  {
+    "id": "hotd-med-0054",
+    "question": "What is the name of the Dragonseed who claims Vermithor?",
+    "options": ["Addam of Hull", "Hugh Hammer", "Ulf White", "Nettles"],
+    "answer": "Hugh Hammer",
+    "difficulty": "medium"
+  },
+  {
+    "id": "hotd-easy-0045",
+    "question": "Who is the 'Heir for a Day'?",
+    "options": ["Aegon", "Baelon", "Viserys", "Aemond"],
+    "answer": "Baelon",
+    "difficulty": "easy"
+  },
+  {
+    "id": "hotd-easy-0041",
+    "question": "Which dragon is known as the 'Bronze Fury'?",
+    "options": ["Vermithor", "Sunfyre", "Vhagar", "Dreamfyre"],
+    "answer": "Vermithor",
+    "difficulty": "hard"
+  },
+  {
+    "id": "hotd-easy-0026",
+    "question": "What is the name of the dragonriders who are commoners with Targaryen blood?",
+    "options": ["Dragonborn", "Dragonseeds", "Fire-eaters", "Scale-seekers"],
+    "answer": "Dragonseeds",
+    "difficulty": "easy"
+  },
+  {
+    "id": "hotd-easy-0024",
+    "question": "What is the motto of House Targaryen?",
+    "options": ["Winter is Coming", "Hear Me Roar", "Fire and Blood", "Ours is the Fury"],
+    "answer": "Fire and Blood",
+    "difficulty": "easy"
+  },
+  {
+    "id": "hotd-easy-0016",
+    "question": "What is the sigil of House Targaryen?",
+    "options": ["Three‑headed dragon", "Lion", "Direwolf", "Kraken"],
+    "answer": "Three‑headed dragon",
+    "difficulty": "easy"
+  },
+  {
+    "id": "hotd-easy-0009",
+    "question": "What metal is the Iron Throne made from?",
+    "options": ["Swords", "Gold", "Dragonglass", "Bronze"],
+    "answer": "Swords",
+    "difficulty": "easy"
+  },
+  {
+    "id": "hotd-expert-0071",
+    "question": "House of the Dragon begins exactly how many years before the birth of Daenerys Targaryen, according to the opening text?",
+    "options": ["172 years", "200 years", "150 years", "100 years"],
+    "answer": "172 years",
+    "difficulty": "expert"
+  },
+  {
+    "id": "hotd-easy-0005",
+    "question": "Which network broadcasts House of the Dragon in the US?",
+    "options": ["HBO", "Netflix", "Amazon Prime Video", "Hulu"],
+    "answer": "HBO",
+    "difficulty": "easy"
+  },
+  {
+    "id": "hotd-easy-0002",
+    "question": "Which author’s book Fire & Blood is House of the Dragon based on?",
+    "options": ["George R. R. Martin", "J. R. R. Tolkien", "Robert Jordan", "Brandon Sanderson"],
+    "answer": "George R. R. Martin",
+    "difficulty": "expert"
+  },
+  {
+    "id": "hotd-080",
+    "difficulty": "hard",
+    "question": "What is the name of the Greens’ main seat of power inside King’s Landing?",
+    "options": ["The Red Keep", "The Dragonpit", "The Great Sept", "Maegor’s Holdfast"],
+    "answer": "The Red Keep"
+  },
+  {
+    "id": "hotd-083",
+    "difficulty": "hard",
+    "question": "Which location is the ancestral Hightower city that anchors Otto’s political influence?",
+    "options": ["Oldtown", "White Harbor", "Sunspear", "Duskendale"],
+    "answer": "Oldtown"
+  },
+  {
+    "id": "hotd-088",
+    "difficulty": "hard",
+    "question": "Which location becomes the target of a major dragon battle that draws multiple high-profile riders in Season 2?",
+    "options": ["Rook’s Rest", "Winterfell", "The Eyrie", "Sunspear"],
+    "answer": "Rook’s Rest"
+  },
+  {
+    "id": "hod-001",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a dragon mentioned in House of the Dragon?",
+    "options": ["Syrax", "Caraxes", "Vhagar", "Rhaegal"],
+    "answer": "Rhaegal"
+  },
+  {
+    "id": "hod-002",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a dragon mentioned in House of the Dragon?",
+    "options": ["Meleys", "Sunfyre", "Seasmoke", "Viserion"],
+    "answer": "Viserion"
+  },
+  {
+    "id": "hod-004",
+    "difficulty": "hard",
+    "question": "Which city is NOT one of the Triarchy’s three cities?",
+    "options": ["Lys", "Myr", "Tyrosh", "Pentos"],
+    "answer": "Pentos"
+  },
+  {
+    "id": "hod-005",
+    "difficulty": "hard",
+    "question": "What’s the nickname of Craghas Drahar?",
+    "options": ["The Crabfeeder", "The Sea Snake", "The Blood Wyrm", "The Clubfoot"],
+    "answer": "The Crabfeeder"
+  },
+
+  {
+    "id": "hod-007",
+    "difficulty": "hard",
+    "question": "What nickname is Larys Strong known by?",
+    "options": ["Clubfoot", "Sea Snake", "Crabfeeder", "Kingsblood"],
+    "answer": "Clubfoot"
+  },
+  {
+    "id": "hod-009",
+    "difficulty": "hard",
+    "question": "What is Caraxes’s nickname?",
+    "options": ["Blood Wyrm", "Red Queen", "Black Dread", "Grey Ghost"],
+    "answer": "Blood Wyrm"
+  },
+  {
+    "id": "hod-010",
+    "difficulty": "hard",
+    "question": "What is Meleys’s nickname?",
+    "options": ["Red Queen", "Blood Wyrm", "Cannibal", "Sheepstealer"],
+    "answer": "Red Queen"
+  },
+
+  {
+    "id": "hod-011",
+    "difficulty": "easy",
+    "question": "As of March 2026, how many seasons of House of the Dragon have aired?",
+    "options": ["1", "2", "3", "4"],
+    "answer": "2"
+  },
+
+  {
+    "id": "hod-012",
+    "difficulty": "hard",
+    "question": "Who plays adult Rhaenyra Targaryen?",
+    "options": ["Emma D'Arcy", "Olivia Cooke", "Eve Best", "Jodie Comer"],
+    "answer": "Emma D'Arcy"
+  },
+  {
+    "id": "hod-013",
+    "difficulty": "hard",
+    "question": "Who plays Daemon Targaryen?",
+    "options": ["Matt Smith", "Rhys Ifans", "Tom Glynn-Carney", "Richard Madden"],
+    "answer": "Matt Smith"
+  },
+  {
+    "id": "hod-014",
+    "difficulty": "hard",
+    "question": "Who plays adult Alicent Hightower?",
+    "options": ["Olivia Cooke", "Emma D'Arcy", "Sonoya Mizuno", "Natalie Dormer"],
+    "answer": "Olivia Cooke"
+  },
+  {
+    "id": "hod-015",
+    "difficulty": "hard",
+    "question": "Who plays King Viserys I Targaryen?",
+    "options": ["Paddy Considine", "Mark Rylance", "Charles Dance", "Iain Glen"],
+    "answer": "Paddy Considine"
+  },
+  {
+    "id": "hod-016",
+    "difficulty": "hard",
+    "question": "Who plays adult Aemond Targaryen?",
+    "options": ["Ewan Mitchell", "Harry Collett", "Freddie Fox", "Ben Barnes"],
+    "answer": "Ewan Mitchell"
+  },
+  {
+    "id": "hod-017",
+    "difficulty": "hard",
+    "question": "Who plays Corlys Velaryon?",
+    "options": ["Steve Toussaint", "Rhys Ifans", "Fabien Frankel", "David Oyelowo"],
+    "answer": "Steve Toussaint"
+  },
+
+  {
+    "id": "hod-018",
+    "difficulty": "hard",
+    "question": "Who created House of the Dragon for HBO?",
+    "options": ["George R. R. Martin & Ryan Condal", "George R. R. Martin & D. B. Weiss", "George R. R. Martin & Damon Lindelof", "Peter Jackson & Fran Walsh"],
+    "answer": "George R. R. Martin & Ryan Condal"
+  }
+]

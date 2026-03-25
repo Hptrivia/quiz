@@ -1,0 +1,787 @@
+[
+  {
+    "id": "aus-easy-001",
+    "question": "What is the capital city of Australia?",
+    "options": ["Sydney", "Melbourne", "Canberra", "Perth"],
+    "answer": "Canberra",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-easy-002",
+    "question": "What is the largest city in Australia by population?",
+    "options": ["Melbourne", "Brisbane", "Sydney", "Perth"],
+    "answer": "Sydney",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-easy-003",
+    "question": "What is the official language of Australia?",
+    "options": ["English", "French", "Dutch", "German"],
+    "answer": "English",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-easy-004",
+    "question": "Which of these animals appears on Australia's coat of arms?",
+    "options": ["Koala and Kangaroo", "Emu and Kangaroo", "Wombat and Emu", "Dingo and Kangaroo"],
+    "answer": "Emu and Kangaroo",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-easy-006",
+    "question": "What is the currency of Australia?",
+    "options": ["Australian pound", "Australian dollar", "Australian euro", "Australian crown"],
+    "answer": "Australian dollar",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-easy-007",
+    "question": "Which city is famous for the Opera House?",
+    "options": ["Melbourne", "Canberra", "Sydney", "Adelaide"],
+    "answer": "Sydney",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-easy-008",
+    "question": "What large reef system lies off the coast of Queensland?",
+    "options": ["Coral Crown", "Great Barrier Reef", "Pacific Reef", "Southern Reef"],
+    "answer": "Great Barrier Reef",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-easy-009",
+    "question": "What is the name of Australia's famous red rock formation?",
+    "options": ["Uluru", "Kata Reef", "Outback Rock", "Red Summit"],
+    "answer": "Uluru",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-easy-010",
+    "question": "Which Australian animal is known for carrying its baby in a pouch?",
+    "options": ["Kangaroo", "Echidna", "Kookaburra", "Emu"],
+    "answer": "Kangaroo",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-easy-011",
+    "question": "Which animal is famous for laughing sounds in Australia?",
+    "options": ["Cockatoo", "Kookaburra", "Dingo", "Koala"],
+    "answer": "Kookaburra",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-easy-012",
+    "question": "Which Australian animal is famous for sleeping a lot and eating eucalyptus leaves?",
+    "options": ["Koala", "Wombat", "Possum", "Dingo"],
+    "answer": "Koala",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-easy-013",
+    "question": "What is the name of Australia's wild dog?",
+    "options": ["Dingo", "Jackal", "Coyote", "Fox"],
+    "answer": "Dingo",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-easy-014",
+    "question": "What do Australians often call the remote interior of the country?",
+    "options": ["Bushland", "Outback", "Heartland", "Drylands"],
+    "answer": "Outback",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-easy-015",
+    "question": "Which sport is strongly associated with Australia and features the Ashes?",
+    "options": ["Rugby", "Cricket", "Tennis", "Golf"],
+    "answer": "Cricket",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-easy-016",
+    "question": "What Australian city hosts a major Grand Slam tennis tournament each year?",
+    "options": ["Sydney", "Melbourne", "Perth", "Brisbane"],
+    "answer": "Melbourne",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-easy-017",
+    "question": "What is the name of the Grand Slam tournament?",
+    "options": ["Sydney Open", "Australian Open", "Melbourne Masters", "Southern Slam"],
+    "answer": "Australian Open",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-easy-018",
+    "question": "Which ocean lies to the east of Australia?",
+    "options": ["Indian Ocean", "Atlantic Ocean", "Pacific Ocean", "Arctic Ocean"],
+    "answer": "Pacific Ocean",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-easy-019",
+    "question": "Which ocean lies to the west of Australia?",
+    "options": ["Indian Ocean", "Pacific Ocean", "Atlantic Ocean", "Southern Ocean"],
+    "answer": "Indian Ocean",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-easy-020",
+    "question": "What is the name of the island state south of mainland Australia?",
+    "options": ["Tasmania", "Victoria", "Norfolk", "Arnhem"],
+    "answer": "Tasmania",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-easy-021",
+    "question": "Which Australian city is in Western Australia?",
+    "options": ["Brisbane", "Perth", "Canberra", "Hobart"],
+    "answer": "Perth",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-easy-022",
+    "question": "Which Australian city is the capital of Queensland?",
+    "options": ["Darwin", "Adelaide", "Brisbane", "Perth"],
+    "answer": "Brisbane",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-easy-023",
+    "question": "Which Australian city is the capital of South Australia?",
+    "options": ["Adelaide", "Melbourne", "Hobart", "Sydney"],
+    "answer": "Adelaide",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-easy-024",
+    "question": "Which Australian city is the capital of Tasmania?",
+    "options": ["Darwin", "Hobart", "Canberra", "Geelong"],
+    "answer": "Hobart",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-easy-025",
+    "question": "Which Australian city is the capital of the Northern Territory?",
+    "options": ["Cairns", "Darwin", "Townsville", "Alice Springs"],
+    "answer": "Darwin",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-easy-026",
+    "question": "Which Australian city is known for Bondi Beach?",
+    "options": ["Sydney", "Melbourne", "Perth", "Adelaide"],
+    "answer": "Sydney",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-easy-029",
+    "question": "What is Vegemite mainly used as?",
+    "options": ["A drink", "A sandwich spread", "A dessert topping", "A soup base"],
+    "answer": "A sandwich spread",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-easy-031",
+    "question": "What is the name of Australia's indigenous peoples collectively?",
+    "options": ["Maori", "Aboriginal", "Inuit peoples", "Celtic peoples"],
+    "answer": "Aboriginal",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-easy-032",
+    "question": "Which bird is the largest native bird in Australia?",
+    "options": ["Cockatoo", "Emu", "Kookaburra", "Pelican"],
+    "answer": "Emu",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-easy-033",
+    "question": "Which Australian animal lays eggs despite being a mammal?",
+    "options": ["Koala", "Platypus", "Kangaroo", "Wombat"],
+    "answer": "Platypus",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-easy-034",
+    "question": "What is the national cricket rivalry between Australia and England called?",
+    "options": ["The Bails", "The Ashes", "The Stumps", "The Test Cup"],
+    "answer": "The Ashes",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-easy-035",
+    "question": "Which Australian city is often considered the country's sports capital?",
+    "options": ["Canberra", "Melbourne", "Hobart", "Darwin"],
+    "answer": "Melbourne",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-easy-036",
+    "question": "What season is Christmas in Australia?",
+    "options": ["Winter", "Spring", "Summer", "Autumn"],
+    "answer": "Summer",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-easy-037",
+    "question": "Which side of the road do people drive on in Australia?",
+    "options": ["Right", "Left", "Either side", "Center"],
+    "answer": "Left",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-easy-038",
+    "question": "What is the common abbreviation for Australia?",
+    "options": ["AUS", "AST", "AZL", "AUL"],
+    "answer": "AUS",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-easy-041",
+    "question": "Which city is home to the Australian parliament?",
+    "options": ["Sydney", "Melbourne", "Canberra", "Adelaide"],
+    "answer": "Canberra",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-easy-046",
+    "question": "Which Australian state has Melbourne as its capital?",
+    "options": ["Queensland", "Victoria", "Tasmania", "Western Australia"],
+    "answer": "Victoria",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-easy-047",
+    "question": "Which Australian state has Sydney as its capital?",
+    "options": ["Victoria", "New South Wales", "Queensland", "Tasmania"],
+    "answer": "New South Wales",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-easy-048",
+    "question": "What is the nickname often used for the Australian national rugby league team?",
+    "options": ["Wallabies", "Socceroos", "Kangaroos", "Boomers"],
+    "answer": "Kangaroos",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-easy-049",
+    "question": "What is the nickname of the Australian men's national football team?",
+    "options": ["Wallabies", "Boomers", "Socceroos", "Baggy Greens"],
+    "answer": "Socceroos",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-easy-050",
+    "question": "What is the nickname of the Australian men's national basketball team?",
+    "options": ["Boomers", "Wallabies", "Socceroos", "Kangaroos"],
+    "answer": "Boomers",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-medium-001",
+    "question": "How many states does Australia have?",
+    "options": ["4", "5", "6", "7"],
+    "answer": "6",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aus-medium-002",
+    "question": "How many major mainland territories does Australia have?",
+    "options": ["1", "2", "3", "4"],
+    "answer": "2",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aus-medium-003",
+    "question": "Which city briefly served as Australia's capital before Canberra?",
+    "options": ["Sydney", "Perth", "Melbourne", "Adelaide"],
+    "answer": "Melbourne",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aus-medium-004",
+    "question": "What is the largest state in Australia by area?",
+    "options": ["Queensland", "Western Australia", "New South Wales", "South Australia"],
+    "answer": "Western Australia",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-medium-005",
+    "question": "Which state is the smallest mainland state of Australia?",
+    "options": ["Victoria", "New South Wales", "South Australia", "Queensland"],
+    "answer": "Victoria",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-medium-009",
+    "question": "What is the name of Australia's longest river system?",
+    "options": ["Darling-Murray system", "Cooper system", "Finke system", "Swan system"],
+    "answer": "Darling-Murray system",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-medium-012",
+    "question": "Which Australian city is often called the 'Harbour City'?",
+    "options": ["Perth", "Sydney", "Brisbane", "Hobart"],
+    "answer": "Sydney",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aus-medium-014",
+    "question": "What is the nickname of the Australian men's national rugby union team?",
+    "options": ["Kangaroos", "Wallabies", "Boomers", "Socceroos"],
+    "answer": "Wallabies",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aus-medium-017",
+    "question": "Which city hosts the Australian Grand Prix?",
+    "options": ["Sydney", "Melbourne", "Perth", "Adelaide"],
+    "answer": "Melbourne",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aus-medium-019",
+    "question": "Which famous Australian actor played Wolverine?",
+    "options": ["Chris Hemsworth", "Hugh Jackman", "Russell Crowe", "Sam Worthington"],
+    "answer": "Hugh Jackman",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aus-medium-020",
+    "question": "Which Australian actress won an Oscar for 'The Hours'?",
+    "options": ["Cate Blanchett", "Nicole Kidman", "Naomi Watts", "Toni Collette"],
+    "answer": "Nicole Kidman",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aus-medium-021",
+    "question": "Which Australian actress played Galadriel in 'The Lord of the Rings' films?",
+    "options": ["Nicole Kidman", "Cate Blanchett", "Rose Byrne", "Mia Wasikowska"],
+    "answer": "Cate Blanchett",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aus-medium-022",
+    "question": "Which Australian actor is known for playing Thor?",
+    "options": ["Liam Hemsworth", "Chris Hemsworth", "Joel Edgerton", "Heath Ledger"],
+    "answer": "Chris Hemsworth",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aus-medium-023",
+    "question": "Which late Australian actor famously played the Joker in 'The Dark Knight'?",
+    "options": ["Heath Ledger", "Guy Pearce", "Eric Bana", "Simon Baker"],
+    "answer": "Heath Ledger",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aus-medium-024",
+    "question": "Which Australian singer released 'Can't Get You Out of My Head'?",
+    "options": ["Delta Goodrem", "Kylie Minogue", "Natalie Imbruglia", "Sia"],
+    "answer": "Kylie Minogue",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-medium-025",
+    "question": "Which Australian singer is known for 'Chandelier'?",
+    "options": ["Sia", "Kylie Minogue", "Jessica Mauboy", "Delta Goodrem"],
+    "answer": "Sia",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-medium-026",
+    "question": "Which Australian band released 'Down Under'?",
+    "options": ["INXS", "Crowded House", "Men at Work", "Midnight Oil"],
+    "answer": "Men at Work",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-medium-027",
+    "question": "Which Australian rock band was fronted by Michael Hutchence?",
+    "options": ["INXS", "Jet", "Silverchair", "Powderfinger"],
+    "answer": "INXS",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-medium-041",
+    "question": "Which Australian city hosted the 2000 Summer Olympics?",
+    "options": ["Melbourne", "Sydney", "Brisbane", "Canberra"],
+    "answer": "Sydney",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aus-medium-043",
+    "question": "What is the national airline of Australia?",
+    "options": ["Jetstar", "Virgin Australia", "Qantas", "Rex"],
+    "answer": "Qantas",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aus-medium-046",
+    "question": "What is the common nickname for Australian soldiers in World War I and II history?",
+    "options": ["Diggers", "Bushmen", "Rangers", "Drovers"],
+    "answer": "Diggers",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aus-medium-048",
+    "question": "Which month is ANZAC Day observed in Australia?",
+    "options": ["January", "April", "July", "November"],
+    "answer": "April",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aus-medium-049",
+    "question": "What is the common Australian slang word for a barbecue gathering?",
+    "options": ["Cookup", "Barbie", "Grillfest", "Roaster"],
+    "answer": "Barbie",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aus-hard-001",
+    "question": "Which year did Australia federate as a nation?",
+    "options": ["1788", "1851", "1901", "1914"],
+    "answer": "1901",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-hard-002",
+    "question": "Which date is celebrated as Australia Day?",
+    "options": ["1 January", "26 January", "25 April", "6 June"],
+    "answer": "26 January",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-hard-003",
+    "question": "What was the name of the first British colony established in Australia in 1788?",
+    "options": ["Van Diemen's Land", "New South Wales", "Queensland", "Victoria"],
+    "answer": "New South Wales",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-hard-005",
+    "question": "Which Dutch navigator is often credited with the first recorded European landing on Australia?",
+    "options": ["Abel Tasman", "Willem Janszoon", "James Cook", "Dirk Hartog"],
+    "answer": "Willem Janszoon",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-hard-006",
+    "question": "Which explorer charted Australia's east coast for Britain in 1770?",
+    "options": ["Abel Tasman", "James Cook", "Matthew Flinders", "William Dampier"],
+    "answer": "James Cook",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-hard-007",
+    "question": "Which explorer is credited with popularizing the name 'Australia'?",
+    "options": ["Matthew Flinders", "James Cook", "Abel Tasman", "Lachlan Macquarie"],
+    "answer": "Matthew Flinders",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-hard-008",
+    "question": "Which mountain is the highest on the Australian mainland?",
+    "options": ["Mount Kosciuszko", "Mount Ossa", "Cradle Peak", "Mount Bogong"],
+    "answer": "Mount Kosciuszko",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-hard-020",
+    "question": "Which small smiling marsupial is strongly associated with Rottnest Island?",
+    "options": ["Bilby", "Wallaby", "Quokka", "Possum"],
+    "answer": "Quokka",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-hard-022",
+    "question": "Which monotreme besides the platypus is native to Australia?",
+    "options": ["Echidna", "Koala", "Wombat", "Bilby"],
+    "answer": "Echidna",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-hard-023",
+    "question": "What is a billy in older Australian slang?",
+    "options": ["A saddle", "A camp kettle", "A horse whip", "A mining cart"],
+    "answer": "A camp kettle",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-hard-040",
+    "question": "What is the top professional league in Australian rules football called?",
+    "options": ["NRL", "A-League", "AFL", "NBL"],
+    "answer": "AFL",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-hard-044",
+    "question": "What does MCG stand for?",
+    "options": ["Melbourne Cricket Ground", "Metropolitan Cricket Gardens", "Melbourne Central Ground", "Main Cricket Grounds"],
+    "answer": "Melbourne Cricket Ground",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-hard-045",
+    "question": "Which legendary Australian cricketer was nicknamed 'Warnie'?",
+    "options": ["Ricky Ponting", "Shane Warne", "Adam Gilchrist", "Glenn McGrath"],
+    "answer": "Shane Warne",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-hard-046",
+    "question": "Which Australian fast bowler was nicknamed 'Pigeon'?",
+    "options": ["Brett Lee", "Mitchell Starc", "Glenn McGrath", "Jason Gillespie"],
+    "answer": "Glenn McGrath",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-stars-010",
+    "question": "Which Australian tennis player won Wimbledon in 2022?",
+    "options": ["Ashleigh Barty", "Samantha Stosur", "Ajla Tomljanovic", "Daria Saville"],
+    "answer": "Ashleigh Barty",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-stars-011",
+    "question": "Which Australian actress starred in Moulin Rouge! and Big Little Lies?",
+    "options": ["Nicole Kidman", "Cate Blanchett", "Isla Fisher", "Toni Collette"],
+    "answer": "Nicole Kidman",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-stars-012",
+    "question": "Which Australian actor played Elvis in the 2022 biopic Elvis?",
+    "options": ["Jacob Elordi", "Austin Butler", "Luke Bracey", "Brenton Thwaites"],
+    "answer": "Austin Butler",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-stars-013",
+    "question": "Which Australian singer first became famous with the song Torn?",
+    "options": ["Natalie Imbruglia", "Delta Goodrem", "Sia", "Kylie Minogue"],
+    "answer": "Natalie Imbruglia",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-stars-014",
+    "question": "Which Australian actor played Jake Sully in Avatar?",
+    "options": ["Sam Worthington", "Joel Edgerton", "Hugo Weaving", "Guy Pearce"],
+    "answer": "Sam Worthington",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-stars-015",
+    "question": "Which Australian singer won Eurovision for Australia with Zero Gravity?",
+    "options": ["Jessica Mauboy", "Dami Im", "Kate Miller-Heidke", "Guy Sebastian"],
+    "answer": "Kate Miller-Heidke",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-stars-018",
+    "question": "Which Australian Formula 1 driver won the 1980, 1981 and 1983 world titles?",
+    "options": ["Mark Webber", "Daniel Ricciardo", "Alan Jones", "Oscar Piastri"],
+    "answer": "Alan Jones",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aus-stars-019",
+    "question": "Which Australian Formula 1 driver is known for his big smile and time with Red Bull and McLaren?",
+    "options": ["Oscar Piastri", "Mark Webber", "Daniel Ricciardo", "Jack Doohan"],
+    "answer": "Daniel Ricciardo",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-stars-020",
+    "question": "Which Australian Formula 1 driver won multiple Grands Prix with Red Bull before moving into management?",
+    "options": ["Mark Webber", "Daniel Ricciardo", "Oscar Piastri", "Alan Jones"],
+    "answer": "Mark Webber",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-stars-021",
+    "question": "Which Australian actress starred in Muriel's Wedding and Hereditary?",
+    "options": ["Toni Collette", "Naomi Watts", "Cate Blanchett", "Rachel Griffiths"],
+    "answer": "Toni Collette",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-stars-024",
+    "question": "Which Australian actress starred in The Wolf of Wall Street and Barbie?",
+    "options": ["Margot Robbie", "Samara Weaving", "Rose Byrne", "Yvonne Strahovski"],
+    "answer": "Margot Robbie",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-stars-026",
+    "question": "Which Australian singer was the first Australian winner of Australian Idol and later had hits like Innocent Eyes?",
+    "options": ["Delta Goodrem", "Guy Sebastian", "Jessica Mauboy", "Dami Im"],
+    "answer": "Guy Sebastian",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aus-stars-027",
+    "question": "Which Australian singer released the album Innocent Eyes?",
+    "options": ["Delta Goodrem", "Natalie Imbruglia", "Jessica Mauboy", "Missy Higgins"],
+    "answer": "Delta Goodrem",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-pol-002",
+    "question": "Who is Australia's head of government?",
+    "options": ["President", "Prime Minister", "Governor-General", "Premier"],
+    "answer": "Prime Minister",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-pol-003",
+    "question": "Who is the Prime Minister of Australia?",
+    "options": ["Anthony Albanese", "Angus Taylor", "Richard Marles", "Sam Mostyn"],
+    "answer": "Anthony Albanese",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-pol-004",
+    "question": "Who is the Governor-General of Australia?",
+    "options": ["Penny Wong", "Sam Mostyn", "Susan Kiefel", "Katy Gallagher"],
+    "answer": "Sam Mostyn",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-pol-005",
+    "question": "What is the name of Australia's lower house?",
+    "options": ["Senate", "House of Commons", "House of Representatives", "National Assembly"],
+    "answer": "House of Representatives",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-pol-006",
+    "question": "What is the name of Australia's upper house?",
+    "options": ["Senate", "Council of States", "House of Lords", "Legislative Chamber"],
+    "answer": "Senate",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-pol-007",
+    "question": "What city is home to Australia's federal Parliament?",
+    "options": ["Sydney", "Melbourne", "Canberra", "Brisbane"],
+    "answer": "Canberra",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-pol-008",
+    "question": "What is the name of Australia's federal parliament building?",
+    "options": ["Government House", "Parliament House", "Commonwealth Hall", "National House"],
+    "answer": "Parliament House",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-pol-009",
+    "question": "What is the name of the major center-left party in Australia?",
+    "options": ["Liberal Party", "Labor Party", "National Party", "Greens"],
+    "answer": "Labor Party",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-pol-010",
+    "question": "What is the name of the major conservative party in Australia?",
+    "options": ["Labor Party", "Liberal Party", "Greens", "Democrats"],
+    "answer": "Liberal Party",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-pol-011",
+    "question": "Which party does Anthony Albanese belong to?",
+    "options": ["Liberal Party", "National Party", "Labor Party", "Greens"],
+    "answer": "Labor Party",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-pol-012",
+    "question": "Who is Australia's Deputy Prime Minister?",
+    "options": ["Richard Marles", "Angus Taylor", "Chris Bowen", "Tony Burke"],
+    "answer": "Richard Marles",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aus-pol-013",
+    "question": "Who is the Leader of the Opposition in Australia?",
+    "options": ["Richard Marles", "Peter Dutton", "Angus Taylor", "Matt Canavan"],
+    "answer": "Angus Taylor",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aus-pol-014",
+    "question": "What year did Australia federate?",
+    "options": ["1788", "1851", "1901", "1945"],
+    "answer": "1901",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aus-pol-015",
+    "question": "How often are Australian federal elections held at most?",
+    "options": ["Every 2 years", "Every 3 years", "Every 4 years", "Every 5 years"],
+    "answer": "Every 3 years",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aus-pol-016",
+    "question": "What are state leaders called in Australia?",
+    "options": ["Governors", "Premiers", "Presidents", "Chancellors"],
+    "answer": "Premiers",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aus-pol-017",
+    "question": "What are territory leaders called in Australia?",
+    "options": ["Chief Ministers", "Premiers", "Mayors", "Governors"],
+    "answer": "Chief Ministers",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aus-pol-018",
+    "question": "Which chamber uses electorates/divisions to elect members?",
+    "options": ["Senate", "House of Representatives", "Both equally", "Neither"],
+    "answer": "House of Representatives",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-pol-019",
+    "question": "Which chamber gives equal state representation regardless of population?",
+    "options": ["House of Representatives", "Senate", "Cabinet", "Executive Council"],
+    "answer": "Senate",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-pol-020",
+    "question": "What voting system is used for Australia's House of Representatives?",
+    "options": ["First past the post", "Preferential voting", "Open primary", "Electoral college"],
+    "answer": "Preferential voting",
+    "difficulty": "hard"
+  },
+ 
+  {
+    "id": "aus-stars-037",
+    "question": "Which Australian tennis player won the US Open in 2011?",
+    "options": ["Ashleigh Barty", "Samantha Stosur", "Lleyton Hewitt", "Pat Rafter"],
+    "answer": "Samantha Stosur",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-stars-050",
+    "question": "Which of these is not an Australian UFC champion?",
+    "options": ["Robert Whittaker", "Alexander Volkanovski", "Tai Tuivasa", "Jack Della Madelena"],
+    "answer": "Tai Tuivasa",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aus-stars-050",
+    "question": "Which Australian UFC featherweight champion is nicknamed The Great?",
+    "options": ["Robert Whittaker", "Alexander Volkanovski", "Tai Tuivasa", "Dan Hooker"],
+    "answer": "Alexander Volkanovski",
+    "difficulty": "medium"
+  }
+]

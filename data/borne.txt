@@ -1,0 +1,817 @@
+[
+  {
+    "id": "bb-001",
+    "difficulty": "easy",
+    "question": "What is the name of the city where Bloodborne primarily takes place?",
+    "options": ["Yharnam", "Lordran", "Lothric", "Boletaria"],
+    "answer": "Yharnam"
+  },
+  {
+    "id": "bb-002",
+    "difficulty": "easy",
+    "question": "What is the player character commonly called in Bloodborne?",
+    "options": ["The Hunter", "The Tarnished", "The Ashen One", "The Chosen Undead"],
+    "answer": "The Hunter"
+  },
+  {
+    "id": "bb-003",
+    "difficulty": "easy",
+    "question": "What is the safe hub area called?",
+    "options": ["Hunter’s Dream", "Firelink Shrine", "Hunter’s Nightmare", "Roundtable Hold"],
+    "answer": "Hunter’s Dream"
+  },
+  {
+    "id": "bb-004",
+    "difficulty": "easy",
+    "question": "Which resource is used as both currency and experience in Bloodborne?",
+    "options": ["Blood Echoes", "Souls", "Runes", "Blood Shards"],
+    "answer": "Blood Echoes"
+  },
+  {
+    "id": "bb-005",
+    "difficulty": "easy",
+    "question": "What item is commonly used to regain HP quickly?",
+    "options": ["Blood Vials", "Estus Flask", "Life Gems", "Crimson Tears"],
+    "answer": "Blood Vials"
+  },
+  {
+    "id": "bb-006",
+    "difficulty": "easy",
+    "question": "Which stat increases the power of firearm damage scaling and visceral attacks?",
+    "options": ["Bloodtinge", "Strength", "Arcane", "Endurance"],
+    "answer": "Bloodtinge"
+  },
+  {
+    "id": "bb-007",
+    "difficulty": "easy",
+    "question": "Which stat increases the power of elemental/hunter tools and arcane scaling?",
+    "options": ["Arcane", "Skill", "Vitality", "Bloodtinge"],
+    "answer": "Arcane"
+  },
+  {
+    "id": "bb-008",
+    "difficulty": "easy",
+    "question": "What is the name of the character who helps you level up?",
+    "options": ["The Doll", "Emerald Herald", "Fire Keeper", "Melina"],
+    "answer": "The Doll"
+  },
+  {
+    "id": "bb-009",
+    "difficulty": "easy",
+    "question": "What is the name of the workshop caretaker in Hunter’s Dream?",
+    "options": ["Gehrman", "Laurentius", "Andre", "Hewg"],
+    "answer": "Gehrman"
+  },
+  {
+    "id": "bb-010",
+    "difficulty": "easy",
+    "question": "What weapon type is iconic to Bloodborne, shifting between two forms?",
+    "options": ["Trick weapons", "Katanas", "Whips", "Dual blades"],
+    "answer": "Trick weapons"
+  },
+  {
+    "id": "bb-014",
+    "difficulty": "easy",
+    "question": "What is the name of the main church faction tied to blood healing?",
+    "options": ["Healing Church", "Way of White", "Blue Sentinels", "Covenant of Artorias"],
+    "answer": "Healing Church"
+  },
+  {
+    "id": "bb-015",
+    "difficulty": "easy",
+    "question": "What is the name of the “werewolf-like” affliction haunting Yharnam?",
+    "options": ["Scourge of the Beast", "Hollowing", "The Frenzy", "The Rot"],
+    "answer": "Scourge of the Beast"
+  },
+  {
+    "id": "bb-016",
+    "difficulty": "easy",
+    "question": "Which status effect rapidly builds up and can cause massive damage when it triggers?",
+    "options": ["Frenzy", "Poise break", "Bleed", "Sleep"],
+    "answer": "Frenzy"
+  },
+  {
+    "id": "bb-017",
+    "difficulty": "easy",
+    "question": "Which area is the first major zone most players explore?",
+    "options": ["Central Yharnam", "Cathedral Ward", "Byrgenwerth", "Nightmare Frontier"],
+    "answer": "Central Yharnam"
+  },
+  {
+    "id": "bb-018",
+    "difficulty": "easy",
+    "question": "What are the game’s checkpoints/respawn points?",
+    "options": ["Lanterns", "Bonfires", "Sites of Grace", "Idols"],
+    "answer": "Lanterns"
+  },
+  {
+    "id": "bb-020",
+    "difficulty": "easy",
+    "question": "What is the name of the main world hub where you gather survivors?",
+    "options": ["Oedon Chapel", "Firelink Shrine", "Majula", "Roundtable Hold"],
+    "answer": "Oedon Chapel"
+  },
+  {
+    "id": "bb-021",
+    "difficulty": "easy",
+    "question": "Which attribute helps determine your maximum HP?",
+    "options": ["Vitality", "Arcane", "Bloodtinge", "Insight"],
+    "answer": "Vitality"
+  },
+  {
+    "id": "bb-022",
+    "difficulty": "easy",
+    "question": "Which attribute helps determine your stamina?",
+    "options": ["Endurance", "Vitality", "Skill", "Insight"],
+    "answer": "Endurance"
+  },
+  {
+    "id": "bb-023",
+    "difficulty": "easy",
+    "question": "Which attribute commonly scales with quicker, dexterity-like weapons?",
+    "options": ["Skill", "Strength", "Arcane", "Bloodtinge"],
+    "answer": "Skill"
+  },
+  {
+    "id": "bb-024",
+    "difficulty": "easy",
+    "question": "Which attribute commonly scales with heavier, brute-force weapons?",
+    "options": ["Strength", "Skill", "Arcane", "Insight"],
+    "answer": "Strength"
+  },
+  {
+    "id": "bb-025",
+    "difficulty": "easy",
+    "question": "What is the name of the DLC expansion for Bloodborne?",
+    "options": ["The Old Hunters", "Artorias of the Abyss", "Crown of the Ivory King", "Ashes of Ariandel"],
+    "answer": "The Old Hunters"
+  },
+  {
+    "id": "bb-easy-0019",
+    "question": "Which resource represents your awareness of cosmic truths and affects what you see?",
+    "options": ["Insight", "Focus Points", "Faith", "Humanity"],
+    "answer": "Insight",
+    "difficulty": "easy"
+  },
+  {
+    "id": "bb-e018",
+    "difficulty": "easy",
+    "question": "Which weapon type is more effective against 'Beast' enemies?",
+    "options": ["Blunt", "Serrated", "Thrust", "Righteous"],
+    "answer": "Serrated"
+  },
+  {
+    "id": "bb-e020",
+    "difficulty": "hard",
+    "question": "Which item allows you to summon other players to your world for co-op as a host?",
+    "options": ["Beckoning Bell", "Sinister Resonant Bell", "Small Resonant Bell", "Silencing Blank"],
+    "answer": "Beckoning Bell"
+  },
+  {
+    "id": "bb-m075",
+    "difficulty": "medium",
+    "question": "What weapon does Djura use on top of the tower?",
+    "options": ["Saw Cleaver", "Stake Driver", "Gatling Gun", "Hunter Blunderbuss"],
+    "answer": "Gatling Gun"
+  },
+  {
+    "id": "bb-001",
+    "difficulty": "hard",
+    "question": "Which of these is NOT one of Bloodborne’s endings?",
+    "options": ["Yharnam Sunrise", "Honoring Wishes", "Childhood’s Beginning", "Age of Fire"],
+    "answer": "Age of Fire"
+  },
+  {
+    "id": "bb-002",
+    "difficulty": "easy",
+    "question": "How much Insight do you need to awaken the Doll?",
+    "options": ["1", "3", "5", "10"],
+    "answer": "1"
+  },
+  {
+    "id": "bb-003",
+    "difficulty": "easy",
+    "question": "Which two firearms are offered at the start of the game?",
+    "options": ["Hunter Pistol + Hunter Blunderbuss", "Repeating Pistol + Hunter Blunderbuss", "Piercing Rifle + Hunter Pistol", "Ludwig’s Rifle + Hunter Pistol"],
+    "answer": "Hunter Pistol + Hunter Blunderbuss"
+  },
+  {
+    "id": "bb-004",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a serrated weapon?",
+    "options": ["Saw Cleaver", "Saw Spear", "Whirligig Saw", "Ludwig’s Holy Blade"],
+    "answer": "Ludwig’s Holy Blade"
+  },
+  {
+    "id": "bb-005",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a weapon in Bloodborne?",
+    "options": ["Kirkhammer", "Chikage", "Tonitrus", "Sunlit Halberd"],
+    "answer": "Sunlit Halberd"
+  },
+  {
+    "id": "bb-071",
+    "difficulty": "hard",
+    "question": "Which faction is rival to the Vilebloods of Cainhurst?",
+    "options": ["The Executioners", "The Choir", "The Powder Kegs", "The League"],
+    "answer": "The Executioners"
+  },
+  {
+    "id": "bb-099",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a Caryll Rune in Bloodborne?",
+    "options": ["Chloranthy", "Clockwise Metamorphosis", "Oedon Writhe", "Formless Oedon"],
+    "answer": "Chloranthy"
+  },
+  {
+    "id": "bb-100",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a Caryll Rune in Bloodborne?",
+    "options": ["Calamity", "Great Deep Sea", "Stunning Visceral", "Radiance"],
+    "answer": "Calamity"
+  },
+  {
+    "id": "bb-097",
+    "difficulty": "hard",
+    "question": "Which Caryll Rune increases your maximum HP?",
+    "options": ["Clockwise Metamorphosis", "Anti-Clockwise Metamorphosis", "Communion", "Lake"],
+    "answer": "Clockwise Metamorphosis"
+  },
+  {
+    "id": "bb-094",
+    "difficulty": "hard",
+    "question": "Which weapon has the fastest attack speed in the game?",
+    "options": ["Blade of Mercy", "Saw Cleaver", "Threaded Cane", "Rakuyo"],
+    "answer": "Blade of Mercy"
+  },
+  {
+    "id": "bb-093",
+    "difficulty": "medium",
+    "question": "What is the name of the 'Vermin' hunting covenant?",
+    "options": ["The League", "The Executioners", "The Vilebloods", "The Hunters of Hunters"],
+    "answer": "The League"
+  },
+  {
+    "id": "bb-091",
+    "difficulty": "hard",
+    "question": "What is the 'Bloodtinge' requirement to equip the Evelyn pistol?",
+    "options": ["18", "20", "22", "25"],
+    "answer": "18"
+  },
+  {
+    "id": "bb-081",
+    "difficulty": "expert",
+    "question": "Which item allows you to transform into a beast-like state permanently while equipped?",
+    "options": ["Beast's Embrace Rune", "Milkweed Rune", "Beast Blood Pellet", "Beast Claw"],
+    "answer": "Beast's Embrace Rune"
+  },
+  {
+    "id": "bb-076",
+    "difficulty": "hard",
+    "question": "Which Caryll Rune increases the amount of Blood Echoes gained from fallen enemies?",
+    "options": ["Moon", "Eye", "Heir", "Oedon Writhe"],
+    "answer": "Moon"
+  },
+  {
+    "id": "bb-072",
+    "difficulty": "hard",
+    "question": "What is the effect of the 'Beast Blood Pellet'?",
+    "options": ["Increases damage but decreases defense", "Heals the player over time", "Increases defense but decreases damage", "Increases stamina recovery"],
+    "answer": "Increases damage but decreases defense"
+  },
+  {
+    "id": "bb-040",
+    "difficulty": "hard",
+    "question": "What is the primary elemental damage type of the Tonitrus?",
+    "options": ["Fire", "Bolt", "Arcane", "Blood"],
+    "answer": "Bolt"
+  },
+  {
+    "id": "bb-069",
+    "difficulty": "medium",
+    "question": "What is the name of the lake where Rom, the Vacuous Spider, resides?",
+    "options": ["Moonside Lake", "Lake of Mud", "Cosmic Lake", "Byrgen Lake"],
+    "answer": "Moonside Lake"
+  },
+  {
+    "id": "bb-068",
+    "difficulty": "medium",
+    "question": "Which hunter set has the highest Frenzy resistance in the game?",
+    "options": ["Ashen Hunter Set", "Harrowed Set", "Graveyard Set", "Crowfeather Set"],
+    "answer": "Ashen Hunter Set"
+  },
+  {
+    "id": "bb-064",
+    "difficulty": "medium",
+    "question": "What item must the player consume three of to achieve the 'Childhood's Beginning' ending?",
+    "options": ["One Third of Umbilical Cord", "Madman's Knowledge", "One Third of Blood Dregs", "Vermin"],
+    "answer": "One Third of Umbilical Cord"
+  },
+  {
+    "id": "bb-063",
+    "difficulty": "hard",
+    "question": "Which NPC is found in the Forbidden Woods and turns into an Abhorrent Beast if attacked?",
+    "options": ["Suspicious Beggar", "Skeptical Man", "Gilbert", "Adella"],
+    "answer": "Suspicious Beggar"
+  },
+  {
+    "id": "bb-061",
+    "difficulty": "medium",
+    "question": "Which boss drops the 'Pthumeru Chalice', allowing access to the first dungeon?",
+    "options": ["Cleric Beast", "Blood-starved Beast", "Vicar Amelia", "Father Gascoigne"],
+    "answer": "Blood-starved Beast"
+  },
+  {
+    "id": "bb-021",
+    "difficulty": "hard",
+    "question": "What is the name of the female doctor who runs the clinic?",
+    "options": ["Iosefka", "Adeline", "Annalise", "Arianna"],
+    "answer": "Iosefka"
+  },
+  {
+    "id": "bb-037",
+    "difficulty": "hard",
+    "question": "Who is the leader of the 'League' faction?",
+    "options": ["Valtr", "Djura", "Alfred", "Simon"],
+    "answer": "Valtr"
+  },
+  {
+    "id": "bb-027",
+    "difficulty": "hard",
+    "question": "Which weapon does Gehrman use?",
+    "options": ["Holy Moonlight Sword", "Burial Blade", "Rakuyo", "Blade of Mercy"],
+    "answer": "Burial Blade"
+  },
+  {
+    "id": "bb-023",
+    "difficulty": "easy",
+    "question": "What color are the lamps that act as checkpoints?",
+    "options": ["Blue", "Red", "Purple", "Pink"],
+    "answer": "Purple"
+  },
+  {
+    "id": "bb-006",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a location in Bloodborne?",
+    "options": ["Cathedral Ward", "Forbidden Woods", "Byrgenwerth", "Irithyll Valley"],
+    "answer": "Irithyll Valley"
+  },
+  {
+    "id": "bb-002",
+    "difficulty": "easy",
+    "question": "Which NPC provides the player with their first trick weapon and firearm?",
+    "options": ["The Doll", "Gehrman", "The Messengers", "Eileen the Crow"],
+    "answer": "The Messengers"
+  },
+  {
+    "id": "bb-007",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a location in Bloodborne?",
+    "options": ["Yahar’gul, Unseen Village", "Hemwick Charnel Lane", "Cainhurst Castle", "Stormveil Keep"],
+    "answer": "Stormveil Keep"
+  },
+  {
+    "id": "bb-008",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a boss in Bloodborne?",
+    "options": ["Father Gascoigne", "Vicar Amelia", "Micolash, Host of the Nightmare", "The Nameless King"],
+    "answer": "The Nameless King"
+  },
+  {
+    "id": "bb-009",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a boss in Bloodborne?",
+    "options": ["Cleric Beast", "Blood-starved Beast", "Mergo’s Wet Nurse", "Pontiff Sulyvahn"],
+    "answer": "Pontiff Sulyvahn"
+  },
+  {
+    "id": "bb-010",
+    "difficulty": "hard",
+    "question": "Which of these is NOT an attribute in Bloodborne?",
+    "options": ["Vitality", "Endurance", "Bloodtinge", "Luck"],
+    "answer": "Luck"
+  },
+  {
+    "id": "bb-011",
+    "difficulty": "hard",
+    "question": "When was Bloodborne released (PS4)?",
+    "options": ["2013", "2014", "2015", "2016"],
+    "answer": "2015"
+  },
+  {
+    "id": "bb-012",
+    "difficulty": "easy",
+    "question": "When was The Bloodborne DLC released?",
+    "options": ["2015", "2016", "2013", "2014"],
+    "answer": "2015"
+  },
+  {
+    "id": "bb-m093",
+    "difficulty": "medium",
+    "question": "What does the 'Old Hunter Bone' do?",
+    "options": ["Increases stamina regen", "Quickens rolling/dodging", "Summons a skeleton", "Revives you once"],
+    "answer": "Quickens rolling/dodging"
+  },
+
+  {
+    "id": "bb-m090",
+    "difficulty": "medium",
+    "question": "How many variations of the 'Ending' are there?",
+    "options": ["1", "2", "3", "4"],
+    "answer": "3"
+  },
+  {
+    "id": "bb-e023",
+    "difficulty": "hard",
+    "question": "What item is used to return to the last lamp visited while keeping all blood echoes?",
+    "options": ["Bold Hunter's Mark", "Hunter's Mark", "Blood Mark", "Tear Stone"],
+    "answer": "Bold Hunter's Mark"
+  },
+  {
+    "id": "bb-m066",
+    "difficulty": "medium",
+    "question": "Which faction does Alfred belong to?",
+    "options": ["The Vilebloods", "The Executioners", "The Powder Kegs", "The Choir"],
+    "answer": "The Executioners"
+  },
+  {
+    "id": "bb-m065",
+    "difficulty": "medium",
+    "question": "What is the name of the NPC who pushes you off a cliff?",
+    "options": ["Patches the Spider", "Lapp", "Trusty Patches", "Rom"],
+    "answer": "Patches the Spider"
+  },
+  {
+    "id": "bb-m055",
+    "difficulty": "hard",
+    "question": "What weapon does Lady Maria use in her boss fight?",
+    "options": ["Chikage", "Rakuyo", "Burial Blade", "Bloodletter"],
+    "answer": "Rakuyo"
+  },
+  {
+    "id": "bb-e042",
+    "difficulty": "easy",
+    "question": "What does the 'Rally' mechanic do?",
+    "options": ["Restores health on hit", "Increases attack speed", "Boosts defense", "Summons help"],
+    "answer": "Restores health on hit"
+  },
+  {
+    "id": "bb-e050",
+    "difficulty": "hard",
+    "question": "What material is required for the final weapon upgrade (+10)?",
+    "options": ["Blood Stone Shard", "Twin Blood Stone Shards", "Blood Stone Chunk", "Blood Rock"],
+    "answer": "Blood Rock"
+  },
+  {
+    "id": "bb-e049",
+    "difficulty": "hard",
+    "question": "What is the maximum upgrade level for a weapon?",
+    "options": ["+5", "+10", "+15", "+20"],
+    "answer": "+10"
+  },
+  {
+    "id": "bb-e043",
+    "difficulty": "hard",
+    "question": "Which item increases the damage of your next firearm shot?",
+    "options": ["Fire Paper", "Bolt Paper", "Bone Marrow Ash", "Lead Elixir"],
+    "answer": "Bone Marrow Ash"
+  },
+  {
+    "id": "bb-e035",
+    "difficulty": "easy",
+    "question": "What is the maximum number of Blood Vials you can carry by default?",
+    "options": ["10", "15", "20", "25"],
+    "answer": "20"
+  },
+  {
+    "id": "bb-e034",
+    "difficulty": "easy",
+    "question": "What item allows you to equip Runes?",
+    "options": ["Rune Workshop Tool", "Blood Gem Workshop Tool", "Tonsil Stone", "Wooden Shield"],
+    "answer": "Rune Workshop Tool"
+  },
+  {
+    "id": "bb-e031",
+    "difficulty": "easy",
+    "question": "Which item can distract certain beast enemies?",
+    "options": ["Pungent Blood Cocktail", "Oil Vase", "Molotov Cocktail", "Bone Marrow Ash"],
+    "answer": "Pungent Blood Cocktail"
+  },
+
+  {
+    "id": "bb-e023",
+    "difficulty": "hard",
+    "question": "What item is used to return to the last lamp visited while losing all blood echoes?",
+    "options": ["Bold Hunter's Mark", "Hunter's Mark", "Blood Mark", "Tear Stone"],
+    "answer": "Hunter's Mark"
+  },
+  {
+    "id": "bb-e021",
+    "difficulty": "hard",
+    "question": "Which item allows you to enter other players' worlds as a hostile guest invader?",
+    "options": ["Beckoning Bell", "Sinister Resonant Bell", "Small Resonant Bell", "Silencing Blank"],
+    "answer": "Sinister Resonant Bell"
+  },
+  {
+    "id": "bb-e017",
+    "difficulty": "easy",
+    "question": "What happens when you have 0 Insight?",
+    "options": ["The Doll becomes inanimate", "You cannot level up", "You deal double damage", "Enemies disappear"],
+    "answer": "The Doll becomes inanimate"
+  },
+  {
+    "id": "bb-e016",
+    "difficulty": "easy",
+    "question": "Which stat is primarily used for 'magic-like' Hunter Tools?",
+    "options": ["Bloodtinge", "Strength", "Arcane", "Endurance"],
+    "answer": "Arcane"
+  },
+  {
+    "id": "bb-easy-0021",
+    "question": "Which Great Old One appears in the Hunter’s Dream as the final secret foe?",
+    "options": ["Moon Presence", "Rom", "Mergo", "Amygdala"],
+    "answer": "Moon Presence",
+    "difficulty": "easy"
+  },
+  {
+    "id": "bb-e012",
+    "difficulty": "hard",
+    "question": "What is the name of the mechanical weapon that acts like a buzzsaw?",
+    "options": ["Whirligig Saw", "Saw Spear", "Boom Hammer", "Stake Driver"],
+    "answer": "Whirligig Saw"
+  },
+  {
+    "id": "bb-e009",
+    "difficulty": "easy",
+    "question": "What stat increases the damage of most firearms?",
+    "options": ["Strength", "Bloodlust", "Bloodtinge", "Arcane"],
+    "answer": "Bloodtinge"
+  },
+  {
+    "id": "bb-e002",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a starting trick weapon?",
+    "options": ["Saw Cleaver", "Threaded Cane", "Hunter Axe", "Kirkhammer"],
+    "answer": "Kirkhammer"
+  },
+  {
+    "id": "bb-easy-0025",
+    "question": "Which item do you use at altars to access randomized underground dungeons?",
+    "options": ["Chalices", "Keys", "Souvenirs", "Runestones"],
+    "answer": "Chalices",
+    "difficulty": "easy"
+  },
+  {
+    "id": "bb-medium-0026",
+    "question": "Which institution discovered the Great Ones and Old Blood beneath Yharnam?",
+    "options": ["Byrgenwerth College", "Healing Church", "School of Mensis", "Choir of the Church"],
+    "answer": "Byrgenwerth College",
+    "difficulty": "medium"
+  },
+
+  {
+    "id": "bb-031",
+    "difficulty": "medium",
+    "question": "Which boss is typically considered the first mandatory boss in many playthroughs?",
+    "options": ["Father Gascoigne", "Vicar Amelia", "Rom, the Vacuous Spider", "Mergo’s Wet Nurse"],
+    "answer": "Father Gascoigne"
+  },
+  {
+    "id": "bb-032",
+    "difficulty": "medium",
+    "question": "Which boss is a gigantic cleric beast fought on the Great Bridge area early on?",
+    "options": ["Cleric Beast", "Blood-starved Beast", "The One Reborn", "Amygdala"],
+    "answer": "Cleric Beast"
+  },
+  {
+    "id": "bb-033",
+    "difficulty": "medium",
+    "question": "What is Father Gascoigne’s profession before becoming a beast?",
+    "options": ["Hunter", "Blacksmith", "Knight", "Scholar"],
+    "answer": "Hunter"
+  },
+  {
+    "id": "bb-034",
+    "difficulty": "medium",
+    "question": "Which item is strongly tied to calming Father Gascoigne during his fight?",
+    "options": ["Tiny Music Box", "Old Hunter’s Bell", "Cainhurst Summons", "Shining Coin"],
+    "answer": "Tiny Music Box"
+  },
+  {
+    "id": "bb-035",
+    "difficulty": "medium",
+    "question": "Which area is associated with the grand cathedral and the Healing Church’s power?",
+    "options": ["Cathedral Ward", "Hemwick Charnel Lane", "Old Yharnam", "Forbidden Woods"],
+    "answer": "Cathedral Ward"
+  },
+  {
+    "id": "bb-036",
+    "difficulty": "medium",
+    "question": "Which boss is the Healing Church vicar fought in the Grand Cathedral?",
+    "options": ["Vicar Amelia", "Lady Maria", "Gehrman", "Ebrietas"],
+    "answer": "Vicar Amelia"
+  },
+  {
+    "id": "bb-037",
+    "difficulty": "medium",
+    "question": "What item does the player obtain after defeating Vicar Amelia?",
+    "options": ["Gold Pendant", "Tonsil Stone", "Eye of a Blood-drunk Hunter", "Old Workshop Key"],
+    "answer": "Gold Pendant"
+  },
+  {
+    "id": "bb-038",
+    "difficulty": "medium",
+    "question": "Which area is a burning, quarantined district filled with ash and beasts?",
+    "options": ["Old Yharnam", "Byrgenwerth", "Cainhurst Castle", "Yahar'gul"],
+    "answer": "Old Yharnam"
+  },
+  {
+    "id": "bb-039",
+    "difficulty": "hard",
+    "question": "Which NPC hunter uses a gatling gun from a tower in Old Yharnam?",
+    "options": ["Djura", "Eileen", "Alfred", "Valtr"],
+    "answer": "Djura"
+  },
+  {
+    "id": "bb-040",
+    "difficulty": "medium",
+    "question": "Which boss is a poisonous beast fought in Old Yharnam’s lower areas?",
+    "options": ["Blood-starved Beast", "Darkbeast Paarl", "Rom", "Celestial Emissary"],
+    "answer": "Blood-starved Beast"
+  },
+  {
+    "id": "bb-041",
+    "difficulty": "medium",
+    "question": "Which area is a forest maze that hides the route toward Byrgenwerth?",
+    "options": ["Forbidden Woods", "Nightmare of Mensis", "Lecture Building", "Upper Cathedral Ward"],
+    "answer": "Forbidden Woods"
+  },
+  {
+    "id": "bb-042",
+    "difficulty": "medium",
+    "question": "Which boss is fought at Byrgenwerth’s lake?",
+    "options": ["Rom, the Vacuous Spider", "Amygdala", "Mergo’s Wet Nurse", "Micolash"],
+    "answer": "Rom, the Vacuous Spider"
+  },
+  {
+    "id": "bb-043",
+    "difficulty": "medium",
+    "question": "Defeating Rom causes which major change to the world state?",
+    "options": ["The blood moon is revealed", "The Doll is replaced by a Great One", "The workshop becomes inaccessible", "Insight resets to zero"],
+    "answer": "The blood moon is revealed"
+  },
+  {
+    "id": "bb-044",
+    "difficulty": "hard",
+    "question": "Which hidden creatures become much more visible and prominent with higher Insight?",
+    "options": ["Amygdalae", "Dragons", "Golems", "Hollows"],
+    "answer": "Amygdalae"
+  },
+  {
+    "id": "bb-045",
+    "difficulty": "hard",
+    "question": "Which faction is tied to blood rituals and a royal bloodline in a gothic castle?",
+    "options": ["Cainhurst", "Workshop Hunters", "School of Mensis", "Powder Kegs"],
+    "answer": "Cainhurst"
+  },
+  {
+    "id": "bb-046",
+    "difficulty": "medium",
+    "question": "Which boss is the queenly vampire-like figure fought at Cainhurst Castle?",
+    "options": ["Martyr Logarius", "Mergo’s Wet Nurse", "The One Reborn", "Living Failures"],
+    "answer": "Martyr Logarius"
+  },
+  {
+    "id": "bb-047",
+    "difficulty": "medium",
+    "question": "What is the name of the scholar group tied to occult research and a nightmare ritual?",
+    "options": ["School of Mensis", "Blue Sentinels", "Way of White", "Scholars of Vinheim"],
+    "answer": "School of Mensis"
+  },
+  {
+    "id": "bb-049",
+    "difficulty": "medium",
+    "question": "Which boss is a horrific stitched-together mass encountered in Yahar'gul?",
+    "options": ["The One Reborn", "Witch of Hemwick", "Shadow of Yharnam", "Celestial Emissary"],
+    "answer": "The One Reborn"
+  },
+  {
+    "id": "bb-050",
+    "difficulty": "medium",
+    "question": "Which boss trio is fought deep in Forbidden Woods?",
+    "options": ["Shadow of Yharnam", "Three Watchers", "Twin Princes", "Bell Sisters"],
+    "answer": "Shadow of Yharnam"
+  },
+  {
+    "id": "bb-051",
+    "difficulty": "medium",
+    "question": "Which area is strongly tied to witches and rune tools, and leads to a boss fight with two witches?",
+    "options": ["Hemwick Charnel Lane", "Byrgenwerth", "Old Yharnam", "Lecture Building"],
+    "answer": "Hemwick Charnel Lane"
+  },
+  {
+    "id": "bb-052",
+    "difficulty": "medium",
+    "question": "Which boss is fought at the end of Hemwick Charnel Lane?",
+    "options": ["Witch of Hemwick", "Darkbeast Paarl", "Amygdala", "Logarius"],
+    "answer": "Witch of Hemwick"
+  },
+  {
+    "id": "bb-053",
+    "difficulty": "medium",
+    "question": "What is the name of the crow-themed hunter who targets other hunters?",
+    "options": ["Eileen the Crow", "Alfred the Crow", "Djura the Crow", "Valtr the Crow"],
+    "answer": "Eileen the Crow"
+  },
+  {
+    "id": "bb-055",
+    "difficulty": "medium",
+    "question": "Which weapon is a famous early trick weapon choice among the starter set?",
+    "options": ["Saw Cleaver", "Moonlight Greatsword", "Dragonslayer Axe", "Threaded Cane"],
+    "answer": "Saw Cleaver"
+  },
+  {
+    "id": "bb-056",
+    "difficulty": "medium",
+    "question": "Which weapon is another starter trick weapon option known for reach and Skill scaling?",
+    "options": ["Threaded Cane", "Saw Cleaver", "Threaded Cane", "Moonlight Greatsword"],
+    "answer": "Threaded Cane"
+  },
+  {
+    "id": "bb-057",
+    "difficulty": "medium",
+    "question": "Which weapon is a starter option known for Strength and a heavy transformation?",
+    "options": ["Hunter Axe", "Saw Cleaver", "Threaded Cane", "Moonlight Greatsword"],
+    "answer": "Hunter Axe"
+  },
+  {
+    "id": "bb-061",
+    "difficulty": "hard",
+    "question": "Which Great One is found deep in Upper Cathedral Ward after defeating a celestial boss?",
+    "options": ["Ebrietas", "Amygdala", "Oedon", "Mergo"],
+    "answer": "Ebrietas"
+  },
+  {
+    "id": "bb-062",
+    "difficulty": "hard",
+    "question": "Which boss is fought just before Ebrietas in Upper Cathedral Ward?",
+    "options": ["Celestial Emissary", "Micolash", "Darkbeast Paarl", "Bloodletting Beast"],
+    "answer": "Celestial Emissary"
+  },
+  {
+    "id": "bb-063",
+    "difficulty": "hard",
+    "question": "Which boss is the host of the Nightmare of Mensis, fought in a maze-like chase?",
+    "options": ["Micolash", "Gehrman, the First Hunter", "Martyr Logarius", "Lady Maria"],
+    "answer": "Micolash"
+  },
+  {
+    "id": "bb-064",
+    "difficulty": "hard",
+    "question": "Which boss is the final boss of the Nightmare of Mensis area?",
+    "options": ["Mergo’s Wet Nurse", "The One Reborn", "Rom", "Amygdala"],
+    "answer": "Mergo’s Wet Nurse"
+  },
+  {
+    "id": "bb-072",
+    "difficulty": "hard",
+    "question": "Which small scholarly location is central to Willem’s research and the Rom encounter?",
+    "options": ["Byrgenwerth", "Lecture Building", "Mensis Chapel", "Cathedral Workshop"],
+    "answer": "Byrgenwerth"
+  },
+  {
+    "id": "bb-074",
+    "difficulty": "hard",
+    "question": "Which early Healing Church figure is strongly associated with founding the church and the 'old blood'?",
+    "options": ["Laurence", "Alfred", "Djura", "Valtr"],
+    "answer": "Laurence"
+  },
+  {
+    "id": "bb-easy-0002",
+    "question": "Which company developed Bloodborne?",
+    "options": ["FromSoftware", "Capcom", "Square Enix", "CD Projekt Red"],
+    "answer": "FromSoftware",
+    "difficulty": "easy"
+  },
+  {
+    "id": "bb-easy-0003",
+    "question": "Bloodborne was originally released as an exclusive for which console?",
+    "options": ["PlayStation 4", "Xbox One", "PlayStation 3", "PC"],
+    "answer": "PlayStation 4",
+    "difficulty": "easy"
+  },
+  {
+    "id": "bb-084",
+    "difficulty": "hard",
+    "question": "What is the name of Cainhurst’s queen?",
+    "options": ["Queen Annalise", "Queen Yharnam", "Queen Arianna", "Queen Amelia"],
+    "answer": "Queen Annalise"
+  },
+  {
+    "id": "bb-091",
+    "difficulty": "expert",
+    "question": "Which boss is the final boss of The Old Hunters DLC?",
+    "options": ["Orphan of Kos", "Lady Maria", "Laurence", "Gehrman"],
+    "answer": "Orphan of Kos"
+  }
+]

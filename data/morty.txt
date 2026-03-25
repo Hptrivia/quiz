@@ -1,0 +1,962 @@
+[
+  {
+    "id": "rm-easy-0001",
+    "question": "What is the name of the genius scientist in Rick and Morty?",
+    "options": ["Rick Sanchez", "Rick Smith", "Morty Smith", "Morty Sanchez"],
+    "answer": "Rick Sanchez",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-easy-0002",
+    "question": "What is the name of Rick's anxious grandson?",
+    "options": ["Morty", "Jerry", "Summer", "Beth"],
+    "answer": "Morty",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-easy-0003",
+    "question": "Which member of the Smith family is Rick's daughter?",
+    "options": ["Beth", "Summer", "Jessica", "Tammy"],
+    "answer": "Beth",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-easy-0004",
+    "question": "What is the name of Morty's older sister?",
+    "options": ["Summer", "Jessica", "Tricia", "Annie"],
+    "answer": "Summer",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-easy-0005",
+    "question": "What is Rick's main mode of interdimensional travel?",
+    "options": ["Portal gun", "Time machine", "Spaceship only", "Teleport watch"],
+    "answer": "Portal gun",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-easy-0006",
+    "question": "On which network did Rick and Morty originally air in the US?",
+    "options": ["Adult Swim", "HBO", "Netflix", "Fox"],
+    "answer": "Adult Swim",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-easy-0007",
+    "question": "What color is the liquid Rick usually burps up around his mouth?",
+    "options": ["Green", "Blue", "Red", "Purple"],
+    "answer": "Green",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-easy-0008",
+    "question": "Which character is Beth married to?",
+    "options": ["Jerry", "Tom", "Frank", "Bart"],
+    "answer": "Jerry",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-easy-0009",
+    "question": "What kind of pet does the Smith family have in the first season?",
+    "options": ["Dog", "Cat", "Bird", "Hamster"],
+    "answer": "Dog",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-easy-0010",
+    "question": "What is Morty's last name?",
+    "options": ["Smith", "Sanchez", "Johnson", "Jones"],
+    "answer": "Smith",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-easy-0011",
+    "question": "Which character often says the phrase \"Oh jeez\"?",
+    "options": ["Morty", "Rick", "Jerry", "Summer"],
+    "answer": "Morty",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-easy-0012",
+    "question": "What is the name of the theme park inside a human body in Season 1?",
+    "options": ["Anatomy Park", "Body Land", "Organ World", "Micro Park"],
+    "answer": "Anatomy Park",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-easy-0013",
+    "question": "What is the name of the blue creatures that only exist to help with tasks in one episode?",
+    "options": ["Mr. Meeseeks", "Gazorpazorp", "Gromflomites", "Plutonians"],
+    "answer": "Mr. Meeseeks",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-easy-0014",
+    "question": "What phrase does Rick sing while performing a song for an alien god?",
+    "options": ["Get Schwifty", "Wubba Lubba Dub Dub", "Get Rickty", "Get Swifty"],
+    "answer": "Get Schwifty",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-easy-0015",
+    "question": "What is Rick's catchphrase?",
+    "options": ["Wubba Lubba Dub Dub", "Get Schwifty", "Aw geez", "I'm Pickle Rick"],
+    "answer": "Wubba Lubba Dub Dub",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-easy-0017",
+    "question": "What is the name of the governing body made up of different versions of Rick?",
+    "options": ["Council of Ricks", "League of Ricks", "Company of Ricks", "Rick Senate"],
+    "answer": "Council of Ricks",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-easy-0017",
+    "question": "What is the name of transdimensional city state inhabited entirely by Ricks and Mortys from infinite dimensions?",
+    "options": ["The Council", "League of Ricks", "The Citadel", "Rick Senate"],
+    "answer": "The Citadel",
+    "difficulty": "medium"
+  },
+  {
+    "id": "rm-easy-0018",
+    "question": "Which member of the family is most insecure about his intelligence and masculinity?",
+    "options": ["Jerry", "Morty", "Rick", "Summer"],
+    "answer": "Jerry",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-easy-0019",
+    "question": "What is the name of Morty's crush in school?",
+    "options": ["Jessica", "Tricia", "Annie", "Tammy"],
+    "answer": "Jessica",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-easy-0020",
+    "question": "What is the name of Rick's home dimension commonly referenced in the show?",
+    "options": ["C-137", "C-127", "C-147", "C-157"],
+    "answer": "C-137",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-easy-0022",
+    "question": "What subject does Rick often pull Morty out of at school?",
+    "options": ["Math", "Science", "History", "English"],
+    "answer": "Math",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-medium-0026",
+    "question": "In the episode \"Meeseeks and Destroy\", what skill does Jerry ask Mr. Meeseeks to help him improve?",
+    "options": ["His golf game", "His singing", "His cooking", "His tennis game"],
+    "answer": "His golf game",
+    "difficulty": "medium"
+  },
+  {
+    "id": "rm-medium-0028",
+    "question": "What is the name of the evil dream-invading character who resembles Freddy Krueger?",
+    "options": ["Scary Terry", "Nightmare Larry", "Frightful Fred", "Dreamy Dan"],
+    "answer": "Scary Terry",
+    "difficulty": "medium"
+  },
+  {
+    "id": "rm-medium-0029",
+    "question": "In \"Total Rickall\", what do the parasites do to spread in the household?",
+    "options": ["Create false memories", "Infect through touch", "Clone the family", "Control electronics"],
+    "answer": "Create false memories",
+    "difficulty": "medium"
+  },
+  {
+    "id": "rm-medium-0031",
+    "question": "What type of TV does Rick and Morty watch?",
+    "options": ["Interdimensional cable", "Galactic satellite TV", "Time-travel TV", "Virtual reality TV"],
+    "answer": "Interdimensional cable",
+    "difficulty": "medium"
+  },
+  {
+    "id": "rm-medium-0032",
+    "question": "What is the name of the hive-mind entity Rick used to date?",
+    "options": ["Unity", "Collective", "Hivemindia", "Harmony"],
+    "answer": "Unity",
+    "difficulty": "medium"
+  },
+  {
+    "id": "rm-medium-0033",
+    "question": "In \"Get Schwifty\", what giant heads appear in the sky demanding a performance?",
+    "options": ["Cromulons", "Gromflomites", "Plutonians", "Numenorians"],
+    "answer": "Cromulons",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-medium-0034",
+    "question": "What is the name of Birdperson's partner who betrays him?",
+    "options": ["Tammy", "Jessica", "Annie", "Tricia"],
+    "answer": "Tammy",
+    "difficulty": "medium"
+  },
+  {
+    "id": "rm-medium-0035",
+    "question": "What is Morty's full name as occasionally referenced in the show?",
+    "options": ["Mortimer", "Mority", "Mordecai", "Mortimius"],
+    "answer": "Mortimer",
+    "difficulty": "medium"
+  },
+  {
+    "id": "rm-medium-0036",
+    "question": "In \"The Wedding Squanchers\", whose wedding do Rick and the family attend?",
+    "options": ["Birdperson's", "Squanchy's", "Beth's friend", "Gearhead's"],
+    "answer": "Birdperson's",
+    "difficulty": "medium"
+  },
+  {
+    "id": "rm-medium-0037",
+    "question": "What is the name of the superhero team featured in The Return of Worldender\"?",
+    "options": ["Vindicators", "Defenders", "Guardians", "Protectors"],
+    "answer": "Vindicators",
+    "difficulty": "medium"
+  },
+  {
+    "id": "rm-medium-0038",
+    "question": "In \"Pickle Rick\", what household appointment is Rick avoiding by turning himself into a pickle?",
+    "options": ["Family therapy", "Parent-teacher conference", "Dentist appointment", "Beth's work event"],
+    "answer": "Family therapy",
+    "difficulty": "medium"
+  },
+  {
+    "id": "rm-medium-0039",
+    "question": "What device does Rick sometimes use to store Morty's traumatic memories?",
+    "options": ["Mind blowers", "Memory cubes", "Brain vials", "Thought crystals"],
+    "answer": "Mind blowers",
+    "difficulty": "medium"
+  },
+  {
+    "id": "rm-medium-0040",
+    "question": "Which episode first reveals that \"Wubba Lubba Dub Dub\" means Rick is in great pain?",
+    "options": ["Ricksy Business", "Total Rickall", "Get Schwifty", "Close Rick-counters of the Rick Kind"],
+    "answer": "Ricksy Business",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-medium-0041",
+    "question": "What planet is home to the feminist warrior society that Morty´s son is from?",
+    "options": ["Gazorpazorp", "Pluto", "Gaia", "Gromflom Prime"],
+    "answer": "Gazorpazorp",
+    "difficulty": "medium"
+  },
+  {
+    "id": "rm-medium-0044",
+    "question": "Which character becomes obsessed with a talking cat whose origin is never explained?",
+    "options": ["Jerry", "Rick", "Morty", "Summer"],
+    "answer": "Jerry",
+    "difficulty": "medium"
+  },
+  {
+    "id": "rm-medium-0046",
+    "question": "In \"Rick Potion No. 9\", which causes Morty´s love potion to go wrong?",
+    "options": ["Flu", "Cold", "Summer", "Jerry"],
+    "answer": "Flu",
+    "difficulty": "medium"
+  },
+  {
+    "id": "rm-medium-0047",
+    "question": "What is the title of the first episode of Rick and Morty?",
+    "options": ["Pilot", "Lawnmower Dog", "Anatomy Park", "Meeseeks and Destroy"],
+    "answer": "Pilot",
+    "difficulty": "medium"
+  },
+  {
+    "id": "rm-medium-0048",
+    "question": "In \"A Rickle in Time\", what causes time to split into multiple timelines?",
+    "options": ["Uncertainty", "A broken time crystal", "A failed experiment", "Interference from the Galactic Federation"],
+    "answer": "Uncertainty",
+    "difficulty": "medium"
+  },
+  {
+    "id": "rm-medium-0050",
+    "question": "What condiment becomes an obsession for Rick when talking about his past in the brain link simularion?",
+    "options": ["Szechuan sauce", "Gochu sauce", "Hoisin sauce", "BBQ sauce"],
+    "answer": "Szechuan sauce",
+    "difficulty": "medium"
+  },
+  {
+    "id": "rm-hard-0052",
+    "question": "What is the name of the hired gun providing security in \"Anatomy Park\"?",
+    "options": ["Reuben", "Poncho", "Roger", "Alexander"],
+    "answer": "Poncho",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-hard-0053",
+    "question": "In \"The Ricks Must Be Crazy\", what is the name of the scientist Rick encounters who creates his own micro planet?",
+    "options": ["Zeep Xanflorp", "Fart Grundle", "Kyle Slerp", "Xenon Bloom"],
+    "answer": "Zeep Xanflorp",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-hard-0055",
+    "question": "What is the name of the gas-based being that Morty befriends in \"Mortynight Run\"?",
+    "options": ["Fart", "Gas-O", "Nimbus", "Vapor"],
+    "answer": "Fart",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-hard-0056",
+    "question": "What song does the gaseous entity sing as it leaves in \"Mortynight Run\"?",
+    "options": ["Goodbye Moonmen", "Farewell Stars", "See You Planets", "Beyond the Cosmos"],
+    "answer": "Goodbye Moonmen",
+    "difficulty": "expert"
+  },
+  {
+    "id": "rm-hard-0057",
+    "question": "In \"The ABC's of Beth\", what is the name of the fantasy world Rick created for young Beth?",
+    "options": ["Froopyland", "Dreamland", "Sparkleworld", "Rainbowland"],
+    "answer": "Froopyland",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-hard-0058",
+    "question": "Which alien race leads the Galactic Federation that pursues Rick?",
+    "options": ["Gromflomites", "Cromulons", "Gazorpians", "Plutonians"],
+    "answer": "Gromflomites",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-hard-0059",
+    "question": "What is the name of Rick's best friend?",
+    "options": ["Birdperson", "Squanchy", "Gearhead", "Noob-Noob"],
+    "answer": "Birdperson",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-hard-0060",
+    "question": "In \"The Ricklantis Mixup\", what is the alternate name given to the episode's main setting?",
+    "options": ["Tales from the Citadel", "Citadel Stories", "Ricks of the Citadel", "Life on the Citadel"],
+    "answer": "Tales from the Citadel",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-hard-0061",
+    "question": "What job does Evil Morty initially appear to have in \"The Ricklantis Mixup\"?",
+    "options": ["Campaign manager", "Security chief", "Election Candidate", "School principal"],
+    "answer": "Election Candidate",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-hard-0065",
+    "question": "In \"Big Trouble in Little Sanchez\", what form does Rick take to help Summer at school?",
+    "options": ["Tiny Rick", "Teen Rick", "Kid Rick", "Little Sanchez"],
+    "answer": "Tiny Rick",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-hard-0067",
+    "question": "In \"Interdimensional Cable 2: Tempting Fate\", what is Jery asked to donate for galactic peace?",
+    "options": ["His penis", "His kidney", "His liver", "His scrotum"],
+    "answer": "His penis",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-expert-0071",
+    "question": "In \"Lawnmower Dog\", what is the original simple request that leads Rick to enhance the family dog's intelligence?",
+    "options": ["To make the dog smarter", "To teach the dog to talk", "To stop the dog from peeing inside", "To make the dog protect the house better"],
+    "answer": "To stop the dog from peeing inside",
+    "difficulty": "expert"
+  },
+  {
+    "id": "rm-expert-0072",
+    "question": "What is the name of the Smith family dog in the episode \"Lawnmower Dog\"?",
+    "options": ["Snuffles", "Snowball", "Scruffles", "Spot"],
+    "answer": "Snuffles",
+    "difficulty": "expert"
+  },
+  {
+    "id": "rm-expert-00772",
+    "question": "What is the name the Smith family dog renames himself after gaining intelligence in the episode \"Lawnmower Dog\"?",
+    "options": ["Snuffles", "Snowball", "Scruffles", "Spot"],
+    "answer": "Snowball",
+    "difficulty": "expert"
+  },
+{
+"id": "rm-expert-0075",
+"question": "In Meeseeks and Destroy, what is Beth's request to her Mr. Meeseeks?",
+"options": ["To become a more complete woman", "To be more confident at work", "To improve her surgery skills", "To be a better mother"],
+"answer": "To become a more complete woman",
+"difficulty": "expert"
+},
+  {
+    "id": "rm-expert-0077",
+    "question": "What is the numeric designation of the dimension where Summer and Morty are never born because Beth had an abortion?",
+    "options": ["C-131", "C-138", "C-500A", "C-137B"],
+    "answer": "C-500A",
+    "difficulty": "expert"
+  },
+{
+"id": "rm-expert-0078",
+"question": "In Rixty Minutes episode, what occupation does Jerry C-500A have?",
+"options": ["Successful movie actor", "Famous author", "Renowned surgeon", "Tech CEO"],
+"answer": "Successful movie actor",
+"difficulty": "expert"
+},
+  {
+    "id": "rm-expert-0081",
+    "question": "Which version of Rick is a factory worker working at a Wafer Cookie factory?",
+    "options": ["J-22", "Simple Rick", "Fly fishing Rick", "C-500A"],
+    "answer": "J-22",
+    "difficulty": "expert"
+  },
+  {
+    "id": "rm-expert-0082",
+    "question": "In \"The Rickshank Rickdemption\", which fast-food restaurant is associated with Rick's obsession over sauce?",
+    "options": ["McDonald's", "Burger King", "Wendy's", "Taco Bell"],
+    "answer": "McDonald's",
+    "difficulty": "expert"
+  },
+  {
+    "id": "rm-expert-0083",
+    "question": "In \"Vindicators 3\", what is the name of the only Vindicators member Rick seems to genuinely appreciate?",
+    "options": ["Noob-Noob", "Supernova", "Vance Maximus", "Crocubot"],
+    "answer": "Noob-Noob",
+    "difficulty": "expert"
+  },
+  {
+    "id": "rm-expert-0084",
+    "question": "In \"Morty's Mind Blowers\", what color are the tubes containing Morty's erased memories?",
+    "options": ["Different colors by category", "All green", "All blue", "All red"],
+    "answer": "Different colors by category",
+    "difficulty": "expert"
+  },
+  {
+    "id": "rm-expert-0085",
+    "question": "In \"The ABC's of Beth\", what is the name of Beth's childhood friend who was lost in Froopyland?",
+    "options": ["Tommy", "Jerry Jr.", "Billy", "Marcus"],
+    "answer": "Tommy",
+    "difficulty": "expert"
+  },
+  {
+    "id": "rm-expert-0090",
+    "question": "In \"Promortyus\", what is the name of the alien species that have the ability to control organism bodies and voices?",
+    "options": ["Glorzo", "Zigerions", "Cromulons", "Gromflomites"],
+    "answer": "Glorzo",
+    "difficulty": "expert"
+  },
+  {
+    "id": "ram-easy-0002",
+    "question": "In what year did Rick and Morty premiere?",
+    "options": [
+      "2013",
+      "2014",
+      "2011",
+      "2012"
+    ],
+    "answer": "2013",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ram-easy-0011",
+    "question": "Who voices Jerry Smith?",
+    "options": [
+      "Will Arnett",
+      "Jon Hamm",
+      "Jason Bateman",
+      "Chris Parnell"
+    ],
+    "answer": "Chris Parnell",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ram-easy-0012",
+    "question": "Who voices Summer Smith?",
+    "options": [
+      "Jenny Slate",
+      "Spencer Grammer",
+      "Kristen Schaal",
+      "Aubrey Plaza"
+    ],
+    "answer": "Spencer Grammer",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ram-easy-0013",
+    "question": "Who voices Beth Smith?",
+    "options": [
+      "Amy Poehler",
+      "Tina Fey",
+      "Alison Brie",
+      "Sarah Chalke"
+    ],
+    "answer": "Sarah Chalke",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ram-easy-0014",
+    "question": "Which two co-creators created Rick and Morty?",
+    "options": [
+      "Mike Judge & Greg Daniels",
+      "Dan Harmon & Justin Roiland",
+      "Dan Harmon & Matt Groening",
+      "Justin Roiland & Matt Stone"
+    ],
+    "answer": "Dan Harmon & Justin Roiland",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ram-easy-0017",
+    "question": "Who voices the President in Rick and Morty?",
+    "options": [
+      "Idris Elba",
+      "Keith David",
+      "Laurence Fishburne",
+      "Samuel L. Jackson"
+    ],
+    "answer": "Keith David",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ram-easy-0018",
+    "question": "Who voices Birdperson?",
+    "options": [
+      "Dan Harmon",
+      "Seth Green",
+      "Jon Benjamin",
+      "Bill Hader"
+    ],
+    "answer": "Dan Harmon",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ram-easy-0019",
+    "question": "Starting in season 7, who voices Rick Sanchez?",
+    "options": [
+      "Dan Harmon",
+      "Ian Cardoni",
+      "Chris Parnell",
+      "Justin Roiland"
+    ],
+    "answer": "Ian Cardoni",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ram-easy-0020",
+    "question": "Starting in season 7, who voices Morty Smith?",
+    "options": [
+      "Harry Belden",
+      "Spencer Grammer",
+      "Justin Roiland",
+      "Ryan Elder"
+    ],
+    "answer": "Harry Belden",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ram-medium-0001",
+    "question": "As of the end of July 2025, how many seasons of Rick and Morty had aired?",
+    "options": [
+      "7",
+      "8",
+      "6",
+      "9"
+    ],
+    "answer": "8",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ram-medium-0002",
+    "question": "As of the end of July 2025, how many total episodes had aired?",
+    "options": [
+      "73",
+      "81",
+      "91",
+      "71"
+    ],
+    "answer": "81",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ram-medium-0009",
+    "question": "Who originally voiced both Rick and Morty?",
+    "options": [
+      "Justin Roiland",
+      "Dan Harmon",
+      "Chris Parnell",
+      "Ryan Elder"
+    ],
+    "answer": "Justin Roiland",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ram-medium-0011",
+    "question": "In Birdperson’s language, what does “Wubba Lubba Dub Dub” translate to?",
+    "options": [
+      "My Life is a lie",
+      "Time to party",
+      "I am in great pain, please help me",
+      "Victory is ours"
+    ],
+    "answer": "I am in great pain, please help me",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ram-medium-0012",
+    "question": "What is Mr. Meeseeks’ famous self-introduction line?",
+    "options": [
+      "I'm Mr. Meeseeks, help me!",
+      "I'm Mr. Meeseeks, how can I help!",
+      "I'm Mr. Meeseeks, what can I do for you!",
+      "I'm Mr. Meeseeks, look at me!"
+    ],
+    "answer": "I'm Mr. Meeseeks, look at me!",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ram-medium-0013",
+    "question": "What is a Schmeckle in the show?",
+    "options": [
+      "A spaceship part",
+      "A currency",
+      "A portal fluid",
+      "A monster species"
+    ],
+    "answer": "A currency",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ram-hard-0007",
+    "question": "What is the phrase “Existence is pain” most associated with?",
+    "options": [
+      "Mr. Meeseeks",
+      "Birdperson",
+      "Gearhead",
+      "Shrimpy Pebbles"
+    ],
+    "answer": "Mr. Meeseeks",
+    "difficulty": "hard"
+  },
+{
+  "id": "rm-036",
+  "question": "Who voices Ghost Train in Rick and Morty?",
+  "options": [
+    "Dan Harmon",
+    "Lance Reddick",
+    "Nathan Fillion",
+    "Keith David"
+  ],
+  "answer": "Lance Reddick",
+  "difficulty": "hard"
+},
+  {
+    "id": "rm-028",
+    "question": "What is the name of the galactic civil rights leader Jerry is asked to donate an organ to save?",
+    "options": [
+      "Shrimply Pibbles",
+      "Krombopulos Michael",
+      "Xenon Bloom",
+      "Cornvelious Daniel"
+    ],
+    "answer": "Shrimply Pibbles",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-029",
+    "question": "Which of these is NOT a version of Rick?",
+    "options": ["Tiny Rick", "Simple Rick", "Pickle Rick", "Shadow Rick"],
+    "answer": "Shadow Rick",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-030",
+    "question": "What is Vance Maximus’s primary power as a member of the Vindicators?",
+    "options": [
+      "Super strength and durability",
+      "Time manipulation",
+      "Telepathy",
+      "Invisibility"
+    ],
+    "answer": "Super strength and durability",
+    "difficulty": "medium"
+  },
+  {
+    "id": "rm-031",
+    "question": "What ability does Crocubot have as a member of the Vindicators?",
+    "options": [
+      "Cybernetic weapon systems",
+      "Super strength and durability",
+      "Teleportation",
+      "Mind control"
+    ],
+    "answer": "Cybernetic weapon systems",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-032",
+    "question": "What is Supernova’s primary power as a member of the Vindicators?",
+    "options": [
+      "Energy projection and flight",
+      "Shapeshifting",
+      "Super speed",
+      "Illusion casting"
+    ],
+    "answer": "Energy projection and flight",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-033",
+    "question": "What is Alan Rails’ primary ability as a member of the Vindicators?",
+    "options": [
+      "Ghost-train themed spectral constructs",
+      "Energy projection and flight",
+      "Telekinesis",
+      "Super strength and durability"
+    ],
+    "answer": "Ghost-train themed spectral constructs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-034",
+    "question": "Which character is accidentally shot in the false memories episode?",
+    "options": [
+      "Mr. Poopybutthole",
+      "Birdperson",
+      "Squanchy",
+      "Gearhead"
+    ],
+    "answer": "Mr. Poopybutthole",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-035",
+    "question": "What is the name of Rick’s friend made up of spare mechanical parts?",
+    "options": [
+      "Gearhead",
+      "Mr Poopy Butthole.",
+      "Krombopulos Michael",
+      "Noob-Noob"
+    ],
+    "answer": "Gearhead",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-001",
+    "question": "How many Ricks make up the Council of Ricks?",
+    "options": ["3", "6", "9", "12"],
+    "answer": "6",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-002",
+    "question": "Which of the following is NOT a member of the Council of Ricks?",
+    "options": ["Rick Prime", "Quantum Rick", "Zeta Alpha Rick", "Delta Omega Rick"],
+    "answer": "Delta Omega Rick",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-003",
+    "question": "Which of these is NOT a member of the Council of Ricks?",
+    "options": [
+      "Ricktiminus Sancheziminius",
+      "Riq IV",
+      "Maximums Rickimus",
+      "Supreme Ricktor"
+    ],
+    "answer": "Supreme Ricktor",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-004",
+    "question": "Who served as the spokesman for the Council of Ricks?",
+    "options": ["Rick IV", "Ricktiminus Sanchez", "Evil Rick", "Rick Prime"],
+    "answer": "Rick IV",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-005",
+    "question": "Which of these is NOT one of Rick’s friends across the galaxy?",
+    "options": ["Birdperson", "Squanchy", "Gearhead", "Nimbus Jr."],
+    "answer": "Nimbus Jr.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-006",
+    "question": "Which of these is NOT one of Rick’s friends across the galaxy?",
+    "options": ["Birdperson", "Mr. Poopybutthole", "Abradolf Lincler", "Xerthon"],
+    "answer": "Xerthon",
+    "difficulty": "medium"
+  },
+  {
+    "id": "rm-007",
+    "question": "Which of these is NOT one of Rick’s friends across the galaxy?",
+    "options": ["Squanchy", "Unity", "Gearhead.", "Talnax"],
+    "answer": "Talnax",
+    "difficulty": "medium"
+  },
+  {
+    "id": "rm-008",
+    "question": "What is the name of Rick’s friend who often says a single word with many different meanings?",
+    "options": ["Squanchy", "Birdperson", "Gearhead", "Noob-Noob"],
+    "answer": "Squanchy",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-009",
+    "question": "What is the name of the principal at Morty’s school?",
+    "options": ["Gene Vagina", "Pete Vagina", "Principal Goldenfold", "Principal Labia"],
+    "answer": "Gene Vagina",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-010",
+    "question": "What is the name of Morty’s math teacher?",
+    "options": ["Mr. Goldenfold", "Mr. Needful", "Mr. Benson", "Mr. Vance"],
+    "answer": "Mr. Goldenfold",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-011",
+    "question": "What is the name of Morty’s high school?",
+    "options": [
+      "Harry Herpson High School",
+      "John Herpson Prep",
+      "John Herpson High School",
+      "Harry Herpson Prep"
+    ],
+    "answer": "Harry Herpson High School",
+    "difficulty": "medium"
+  },
+  {
+    "id": "rm-012",
+    "question": "What is the name of Scary Terry’s son?",
+    "options": ["Brandon", "Larry", "Petey", "Benny"],
+    "answer": "Brandon",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-013",
+    "question": "Which of these is NOT shown on Interdimensional Cable?",
+    "options": [
+      "Ants in My Eyes Johnson",
+      "Ball Fondlers",
+      "Two Brothers",
+      "Alien Bake-Off"
+    ],
+    "answer": "Alien Bake-Off",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-014",
+    "question": "Which of these is NOT shown on Interdimensional Cable?",
+    "options": [
+      "Gazorpazorpfield",
+      "Lil' Bits",
+      "Ball Fondlers",
+      "Cosmic Courtroom"
+    ],
+    "answer": "Cosmic Courtroom",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-015",
+    "question": "Which of these is NOT an episode of Rick and Morty?",
+    "options": [
+      "Rixty Minutes",
+      "Total Rickall",
+      "Ricksy Business",
+      "Rick and the Multiverse Maze"
+    ],
+    "answer": "Rick and the Multiverse Maze",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-016",
+    "question": "Which of these is NOT an episode of Rick and Morty?",
+    "options": [
+      "The Rick, The Mort & The Ugly",
+      "The CuRicksous Case of Bethjamin Button",
+      "Ricker than Fiction",
+      "Portal Party"
+    ],
+    "answer": "Portal Party",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-017",
+    "question": "Who first explains the meaning of Rick’s catchphrase “Wubba Lubba Dub-Dub”?",
+    "options": ["Birdperson", "Morty", "Squanchy", "Mr. Poopybutthole"],
+    "answer": "Birdperson",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rm-019",
+    "question": "What is the name of the Galactic Federation agent tasked with obtaining Rick’s formula for interdimensional travel?",
+    "options": [
+      "Cornvelious Daniel",
+      "Krombopulos Michael",
+      "Shrimpy Pebbles",
+      "Tammy Guetermann"
+    ],
+    "answer": "Cornvelious Daniel",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-020",
+    "question": "Who voices Cornvelious Daniel?",
+    "options": ["Nathan Fillion", "Justin Roiland", "Dan Harmon", "Keith David"],
+    "answer": "Nathan Fillion",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-021",
+    "question": "Which diner is Rick and his family shown sitting in during the simulated escape from space prison?",
+    "options": ["Shoney’s", "Denny’s", "IHOP", "Waffle House"],
+    "answer": "Shoney’s",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-022",
+    "question": "What is the name of the captured fighter tasked with killing Pickle Rick?",
+    "options": ["Jaguar", "Krombopulos Michael", "Cheetah", "Pebbles"],
+    "answer": "Jaguar",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-023",
+    "question": "What is the name of the co-founder of Anatomy Park?",
+    "options": ["Dr. Xenon Bloom", "Dr. Glip-Glop", "Dr. Vortex", "Dr. Hemlock"],
+    "answer": "Dr. Xenon Bloom",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-024",
+    "question": "What kind of creature is Dr. Xenon Bloom?",
+    "options": ["Amoeba", "Parasite", "Alien slug", "Microbot"],
+    "answer": "Amoeba",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-025",
+    "question": "What is the name of the old homeless man with a miniature theme park built inside his body?",
+    "options": ["Ruben", "Eli", "Harold", "Stanley"],
+    "answer": "Ruben",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-026",
+    "question": "Which of these is NOT a member of the Vindicators?",
+    "options": ["Vance Maximus", "Crocubot", "Supernova", "Star Falcon"],
+    "answer": "Star Falcon",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rm-027",
+    "question": "What is the name of the Gromflomite assassin Rick refers to as his best weapons customer?",
+    "options": [
+      "Krombopulos Michael",
+      "Jaguar",
+      "Cornvelious Daniel",
+      "Revolio Clockberg Jr."
+    ],
+    "answer": "Krombopulos Michael",
+    "difficulty": "hard"
+  }
+]
+
+

@@ -1,0 +1,798 @@
+[
+  {
+    "id": "animals-easy-0001",
+    "question": "Which animal is known as the 'King of the Jungle'?",
+    "options": ["Lion", "Tiger", "Elephant", "Gorilla"],
+    "answer": "Lion",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-0002",
+    "question": "Which animal is the largest land mammal?",
+    "options": ["Elephant", "Rhinoceros", "Hippopotamus", "Giraffe"],
+    "answer": "Elephant",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-0003",
+    "question": "Which animal is famous for black-and-white stripes?",
+    "options": ["Zebra", "Tiger", "Skunk", "Panda"],
+    "answer": "Zebra",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-0004",
+    "question": "Which animal is the fastest land animal?",
+    "options": ["Cheetah", "Lion", "Horse", "Greyhound"],
+    "answer": "Cheetah",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-0005",
+    "question": "Which animal is known for changing its color to blend in?",
+    "options": ["Chameleon", "Frog", "Snake", "Eagle"],
+    "answer": "Chameleon",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-0006",
+    "question": "Which animal is famous for carrying its baby in a pouch?",
+    "options": ["Kangaroo", "Koala", "Possum", "All of the above"],
+    "answer": "All of the above",
+    "difficulty": "easy",
+    "description": "Kangaroos, koalas, and possums are marsupials and carry young in a pouch."
+  },
+  {
+    "id": "animals-easy-0007",
+    "question": "Which animal is known for its long neck?",
+    "options": ["Giraffe", "Camel", "Ostrich", "Llama"],
+    "answer": "Giraffe",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-0008",
+    "question": "Which animal says 'moo'?",
+    "options": ["Cow", "Sheep", "Goat", "Horse"],
+    "answer": "Cow",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-0009",
+    "question": "Which animal is known for building dams?",
+    "options": ["Beaver", "Otter", "Muskrat", "Mole"],
+    "answer": "Beaver",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-0010",
+    "question": "Which animal is the largest in the ocean?",
+    "options": ["Blue whale", "Great white shark", "Giant squid", "Orca"],
+    "answer": "Blue whale",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-0011",
+    "question": "Which animal is known for having a trunk?",
+    "options": ["Elephant", "Tapir", "Anteater", "Walrus"],
+    "answer": "Elephant",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-0012",
+    "question": "Which bird is known for not being able to fly?",
+    "options": ["Penguin", "Eagle", "Sparrow", "Hawk"],
+    "answer": "Penguin",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-0013",
+    "question": "Which animal is famous for its humps?",
+    "options": ["Camel", "Bison", "Yak", "Moose"],
+    "answer": "Camel",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-0014",
+    "question": "Which animal is known for a 'mane'?",
+    "options": ["Lion", "Zebra", "Cheetah", "Leopard"],
+    "answer": "Lion",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-0015",
+    "question": "Which animal is known for slow movement and hanging from trees?",
+    "options": ["Sloth", "Koala", "Monkey", "Lemur"],
+    "answer": "Sloth",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-0016",
+    "question": "Which animal is a common household pet that purrs?",
+    "options": ["Cat", "Dog", "Rabbit", "Hamster"],
+    "answer": "Cat",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-0017",
+    "question": "Which animal lays eggs and is a bird?",
+    "options": ["Chicken", "Dolphin", "Bat", "Cat"],
+    "answer": "Chicken",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-0018",
+    "question": "Which animal is known for having a shell and moving slowly?",
+    "options": ["Turtle", "Rabbit", "Fox", "Deer"],
+    "answer": "Turtle",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-0019",
+    "question": "Which animal is known for having antlers?",
+    "options": ["Deer", "Lion", "Bear", "Wolf"],
+    "answer": "Deer",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-0020",
+    "question": "Which animal is famous for its black-and-white fur and eating bamboo?",
+    "options": ["Giant panda", "Zebra", "Skunk", "Badger"],
+    "answer": "Giant panda",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-0021",
+    "question": "Which animal is known for having eight legs?",
+    "options": ["Spider", "Ant", "Bee", "Butterfly"],
+    "answer": "Spider",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-0022",
+    "question": "Which animal is famous for hopping and has long ears?",
+    "options": ["Rabbit", "Turtle", "Pig", "Goat"],
+    "answer": "Rabbit",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-0023",
+    "question": "Which animal is known for living in a hive and making honey?",
+    "options": ["Bee", "Ant", "Wasp", "Butterfly"],
+    "answer": "Bee",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-0024",
+    "question": "Which animal is known for howling at the moon?",
+    "options": ["Wolf", "Fox", "Bear", "Deer"],
+    "answer": "Wolf",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-0025",
+    "question": "Which animal is known for its quills/spines?",
+    "options": ["Porcupine", "Otter", "Raccoon", "Squirrel"],
+    "answer": "Porcupine",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-0026",
+    "question": "Which animal is a large sea mammal with tusks?",
+    "options": ["Walrus", "Seal", "Dolphin", "Manatee"],
+    "answer": "Walrus",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-0027",
+    "question": "Which animal is famous for being able to spray a strong-smelling liquid?",
+    "options": ["Skunk", "Raccoon", "Badger", "Otter"],
+    "answer": "Skunk",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-0028",
+    "question": "Which animal is known for having a long sticky tongue to catch insects?",
+    "options": ["Anteater", "Zebra", "Moose", "Seal"],
+    "answer": "Anteater",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-0029",
+    "question": "Which animal is known for its wool?",
+    "options": ["Sheep", "Cow", "Pig", "Horse"],
+    "answer": "Sheep",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-0030",
+    "question": "Which animal is known for being a common farm bird that lays eggs?",
+    "options": ["Chicken", "Duck", "Goose", "All of the above"],
+    "answer": "All of the above",
+    "difficulty": "easy",
+    "description": "Chickens, ducks, and geese are all common egg-laying farm birds."
+  },
+
+  {
+    "id": "animals-medium-0001",
+    "question": "Which group do frogs belong to?",
+    "options": ["Amphibians", "Reptiles", "Mammals", "Birds"],
+    "answer": "Amphibians",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-0002",
+    "question": "Which animal is the largest living species of bear?",
+    "options": ["Polar bear", "Grizzly bear", "Black bear", "Panda"],
+    "answer": "Polar bear",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-0003",
+    "question": "What do you call a group of lions?",
+    "options": ["Pride", "Pack", "Herd", "Flock"],
+    "answer": "Pride",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-0004",
+    "question": "Which animal is the tallest living land animal?",
+    "options": ["Giraffe", "Elephant", "Moose", "Camel"],
+    "answer": "Giraffe",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-0005",
+    "question": "Which animal is known for echolocation?",
+    "options": ["Bat", "Eagle", "Horse", "Cheetah"],
+    "answer": "Bat",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-0006",
+    "question": "Which of these is a marsupial?",
+    "options": ["Koala", "Tiger", "Gorilla", "Seal"],
+    "answer": "Koala",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-0007",
+    "question": "Which animal is famous for 'playing dead' as a defense?",
+    "options": ["Opossum", "Otter", "Hedgehog", "Beaver"],
+    "answer": "Opossum",
+    "difficulty": "medium",
+    "description": "Opossums are well known for tonic immobility (“playing dead”)."
+  },
+  {
+    "id": "animals-medium-0008",
+    "question": "Which bird is the largest living bird by height?",
+    "options": ["Ostrich", "Eagle", "Penguin", "Albatross"],
+    "answer": "Ostrich",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-0009",
+    "question": "Which animal is the largest member of the cat family?",
+    "options": ["Tiger", "Lion", "Leopard", "Cheetah"],
+    "answer": "Tiger",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-0010",
+    "question": "Which animal has fingerprints that can resemble human fingerprints?",
+    "options": ["Koala", "Dolphin", "Eagle", "Turtle"],
+    "answer": "Koala",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-0011",
+    "question": "Which of these animals is a primate?",
+    "options": ["Chimpanzee", "Dolphin", "Kangaroo", "Penguin"],
+    "answer": "Chimpanzee",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-0012",
+    "question": "Which animal is known for its ability to regrow a lost tail?",
+    "options": ["Lizard", "Rabbit", "Crow", "Frog"],
+    "answer": "Lizard",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-0013",
+    "question": "Which animal is known for its huge antlers and lives in northern regions?",
+    "options": ["Moose", "Cheetah", "Kangaroo", "Crocodile"],
+    "answer": "Moose",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-0014",
+    "question": "What do you call a group of wolves?",
+    "options": ["Pack", "Pride", "School", "Swarm"],
+    "answer": "Pack",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-0015",
+    "question": "Which animal is the largest species of shark?",
+    "options": ["Whale shark", "Great white shark", "Hammerhead shark", "Tiger shark"],
+    "answer": "Whale shark",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-medium-0016",
+    "question": "Which animal is famous for its black facial 'mask'?",
+    "options": ["Raccoon", "Fox", "Badger", "Weasel"],
+    "answer": "Raccoon",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-0017",
+    "question": "Which animal is known for having the strongest bite force among living cats?",
+    "options": ["Jaguar", "Lion", "Tiger", "Leopard"],
+    "answer": "Jaguar",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-0018",
+    "question": "Which animal can rotate its head up to about 270 degrees?",
+    "options": ["Owl", "Eagle", "Penguin", "Swan"],
+    "answer": "Owl",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-0019",
+    "question": "Which animal is known for building large underground colonies with a queen?",
+    "options": ["Ant", "Eagle", "Whale", "Frog"],
+    "answer": "Ant",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-0020",
+    "question": "Which animal is the largest living reptile?",
+    "options": ["Saltwater crocodile", "Komodo dragon", "Green anaconda", "Alligator"],
+    "answer": "Saltwater crocodile",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-medium-0021",
+    "question": "Which animal’s babies are called 'kits'?",
+    "options": ["Fox", "Horse", "Cow", "Goat"],
+    "answer": "Fox",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-medium-0022",
+    "question": "Which animal is known as a 'ship of the desert'?",
+    "options": ["Camel", "Horse", "Elephant", "Donkey"],
+    "answer": "Camel",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-0023",
+    "question": "Which animal is famous for migrating long distances and is known for monarch migrations?",
+    "options": ["Butterfly", "Penguin", "Owl", "Koala"],
+    "answer": "Butterfly",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-0024",
+    "question": "Which animal is known for having a prehensile tail used to grip branches?",
+    "options": ["Spider monkey", "Polar bear", "Penguin", "Giraffe"],
+    "answer": "Spider monkey",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-0025",
+    "question": "Which animal is known for having a horn made of keratin (not true bone)?",
+    "options": ["Rhinoceros", "Elephant", "Deer", "Walrus"],
+    "answer": "Rhinoceros",
+    "difficulty": "hard",
+    "description": "Rhino horns are made of keratin, like hair and nails."
+  },
+  {
+    "id": "animals-medium-0026",
+    "question": "Which animal is famous for living in coral reefs and forming symbiosis with anemones?",
+    "options": ["Clownfish", "Goldfish", "Tuna", "Shark"],
+    "answer": "Clownfish",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-medium-0027",
+    "question": "Which animal is known to 'laugh' and is related to cats?",
+    "options": ["Hyena", "Wolf", "Otter", "Deer"],
+    "answer": "Hyena",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-0028",
+    "question": "Which animal is famous for storing food in cheek pouches?",
+    "options": ["Hamster", "Cat", "Turtle", "Frog"],
+    "answer": "Hamster",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-0029",
+    "question": "Which animal is known for producing silk?",
+    "options": ["Spider", "Ant", "Beetle", "Snail"],
+    "answer": "Spider",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-0030",
+    "question": "Which animal is known for being the only flying mammal?",
+    "options": ["Bat", "Eagle", "Flying squirrel", "Butterfly"],
+    "answer": "Bat",
+    "difficulty": "medium",
+    "description": "Flying squirrels glide; bats are the only mammals with true powered flight."
+  },
+
+  {
+    "id": "animals-hard-0001",
+    "question": "Which of these animals is a monotreme (egg-laying mammal)?",
+    "options": ["Platypus", "Kangaroo", "Dolphin", "Gorilla"],
+    "answer": "Platypus",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-0002",
+    "question": "Which animal has three hearts?",
+    "options": ["Octopus", "Shark", "Dolphin", "Sea turtle"],
+    "answer": "Octopus",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-0003",
+    "question": "Which bird is known for mimicking human speech most famously?",
+    "options": ["Parrot", "Ostrich", "Eagle", "Penguin"],
+    "answer": "Parrot",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-0004",
+    "question": "What is the largest species of deer?",
+    "options": ["Moose", "Reindeer", "Elk", "Roe deer"],
+    "answer": "Moose",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-0005",
+    "question": "Which animal is known to have a 'saddle' marking and can kill prey with venomous fangs?",
+    "options": ["Black mamba", "King cobra", "Rattlesnake", "Boomslang"],
+    "answer": "Black mamba",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-0006",
+    "question": "Which animal is known for having the longest gestation (pregnancy) among land mammals?",
+    "options": ["Elephant", "Horse", "Giraffe", "Hippo"],
+    "answer": "Elephant",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-0007",
+    "question": "Which animal is capable of true hibernation (deep metabolic slowdown) among these?",
+    "options": ["Groundhog", "Elephant", "Giraffe", "Dolphin"],
+    "answer": "Groundhog",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-0008",
+    "question": "Which animal uses electroreception to detect prey most famously?",
+    "options": ["Shark", "Eagle", "Horse", "Koala"],
+    "answer": "Shark",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-0009",
+    "question": "Which animal is known for having a 'fifth limb'—a tail used like a support when hopping?",
+    "options": ["Kangaroo", "Rabbit", "Deer", "Fox"],
+    "answer": "Kangaroo",
+    "difficulty": "hard",
+    "description": "Kangaroos use the tail as a support in slow movement and as a powerful balance tool."
+  },
+  {
+    "id": "animals-hard-0010",
+    "question": "Which animal is known as the largest species of penguin?",
+    "options": ["Emperor penguin", "King penguin", "Adélie penguin", "Gentoo penguin"],
+    "answer": "Emperor penguin",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-0011",
+    "question": "Which animal is famous for having blue blood due to copper-based hemocyanin?",
+    "options": ["Horseshoe crab", "Tiger", "Frog", "Ostrich"],
+    "answer": "Horseshoe crab",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-0012",
+    "question": "Which animal is the only marsupial native to North America?",
+    "options": ["Opossum", "Armadillo", "Raccoon", "Skunk"],
+    "answer": "Opossum",
+    "difficulty": "hard",
+    "description": "The Virginia opossum is the only marsupial native to North America."
+  },
+  {
+    "id": "animals-hard-0013",
+    "question": "Which animal is known for having a tongue that can be as long as its body (relative to size)?",
+    "options": ["Chameleon", "Elephant", "Horse", "Dolphin"],
+    "answer": "Chameleon",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-0014",
+    "question": "Which animal is famous for sleeping while floating on its back and holding hands to avoid drifting apart?",
+    "options": ["Sea otter", "Seal", "Dolphin", "Manatee"],
+    "answer": "Sea otter",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-0017",
+    "question": "Which animal is known for having the largest eyes of any land animal?",
+    "options": ["Ostrich", "Giraffe", "Elephant", "Horse"],
+    "answer": "Ostrich",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-0018",
+    "question": "Which animal is known for 'tool use' by cracking nuts with stones in the wild?",
+    "options": ["Chimpanzee", "Rabbit", "Moose", "Penguin"],
+    "answer": "Chimpanzee",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-0019",
+    "question": "Which animal’s baby is called a 'joey'?",
+    "options": ["Kangaroo", "Horse", "Cat", "Seal"],
+    "answer": "Kangaroo",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-0020",
+    "question": "Which animal is known for communicating with low-frequency sounds that can travel long distances?",
+    "options": ["Elephant", "Cat", "Rabbit", "Chicken"],
+    "answer": "Elephant",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-0021",
+    "question": "Which animal is known for having a specialized 'thumb' (a modified wrist bone) to grip?",
+    "options": ["Giant panda", "Koala", "Sloth", "Gorilla"],
+    "answer": "Giant panda",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-0024",
+    "question": "Which of these animals is an amphibian?",
+    "options": ["Salamander", "Lizard", "Turtle", "Snake"],
+    "answer": "Salamander",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-0026",
+    "question": "Which animal is known for a 'spout' on top of its head used for breathing at the surface?",
+    "options": ["Whale", "Shark", "Octopus", "Tuna"],
+    "answer": "Whale",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-0030",
+    "question": "Which animal can inflate itself as a defense?",
+    "options": ["Pufferfish", "Shark", "Octopus", "Dolphin"],
+    "answer": "Pufferfish",
+    "difficulty": "hard"
+  },
+
+  {
+    "id": "animals-expert-0001",
+    "question": "What is the scientific group name for animals with a backbone?",
+    "options": ["Vertebrates", "Invertebrates", "Arthropods", "Mollusks"],
+    "answer": "Vertebrates",
+    "difficulty": "expert"
+  },
+  {
+    "id": "animals-expert-0002",
+    "question": "Which structure do insects use to breathe?",
+    "options": ["Spiracles", "Lungs", "Gills", "Skin pores"],
+    "answer": "Spiracles",
+    "difficulty": "expert"
+  },
+  {
+    "id": "animals-expert-0003",
+    "question": "Which animal group includes crabs, lobsters, and shrimp?",
+    "options": ["Crustaceans", "Reptiles", "Amphibians", "Echinoderms"],
+    "answer": "Crustaceans",
+    "difficulty": "expert"
+  },
+  {
+    "id": "animals-expert-0004",
+    "question": "What is the term for animals that maintain a constant internal body temperature (warm-blooded)?",
+    "options": ["Endotherms", "Ectotherms", "Plankton", "Detritivores"],
+    "answer": "Endotherms",
+    "difficulty": "expert"
+  },
+  {
+    "id": "animals-expert-0005",
+    "question": "Which animal is known for having a 'cloaca' (a single opening for excretion and reproduction) among these?",
+    "options": ["Platypus", "Tiger", "Dolphin", "Elephant"],
+    "answer": "Platypus",
+    "difficulty": "expert"
+  },
+  {
+    "id": "animals-expert-0009",
+    "question": "What is the term for an animal that eats both plants and animals?",
+    "options": ["Omnivore", "Herbivore", "Carnivore", "Detritivore"],
+    "answer": "Omnivore",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-expert-0010",
+    "question": "Which of these birds is a raptor?",
+    "options": ["Hawk", "Sparrow", "Pigeon", "Hummingbird"],
+    "answer": "Hawk",
+    "difficulty": "expert"
+  },
+  {
+    "id": "animals-expert-0012",
+    "question": "Which term describes animals active primarily at night?",
+    "options": ["Nocturnal", "Diurnal", "Crepuscular", "Aquatic"],
+    "answer": "Nocturnal",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-expert-0013",
+    "question": "Which term describes animals active mainly at dawn and dusk?",
+    "options": ["Crepuscular", "Nocturnal", "Diurnal", "Arboreal"],
+    "answer": "Crepuscular",
+    "difficulty": "expert"
+  },
+  {
+    "id": "animals-expert-0018",
+    "question": "Which of these is a cephalopod?",
+    "options": ["Squid", "Clam", "Starfish", "Crab"],
+    "answer": "Squid",
+    "difficulty": "expert"
+  },
+  {
+    "id": "animals-expert-0019",
+    "question": "Which animal is known for a specialized stomach chamber system and chewing cud?",
+    "options": ["Cow", "Dog", "Cat", "Horse"],
+    "answer": "Cow",
+    "difficulty": "easy",
+    "description": "Cows are ruminants and chew cud using a multi-chambered stomach."
+  },
+  {
+    "id": "animals-expert-0020",
+    "question": "Which term describes animals that live in trees most of the time?",
+    "options": ["Arboreal", "Aquatic", "Fossorial", "Nocturnal"],
+    "answer": "Arboreal",
+    "difficulty": "expert"
+  },
+  {
+    "id": "animals-hard-0001",
+    "question": "What is a group of owls called?",
+    "options": ["Parliament", "Murder", "Pack", "Crash"],
+    "answer": "Parliament",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-0002",
+    "question": "What is a group of giraffes called?",
+    "options": ["Tower", "Pride", "School", "Pod"],
+    "answer": "Tower",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-0003",
+    "question": "What is a group of rhinos called?",
+    "options": ["Crash", "Herd", "Parade", "Troop"],
+    "answer": "Crash",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-0004",
+    "question": "What is a group of ferrets called?",
+    "options": ["Business", "Colony", "Skulk", "Drove"],
+    "answer": "Business",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-0005",
+    "question": "What is a group of jellyfish called?",
+    "options": ["Smack", "School", "Swarm", "Flock"],
+    "answer": "Smack",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-0006",
+    "question": "What is a group of porcupines called?",
+    "options": ["Prickle", "Herd", "Gaggle", "Mob"],
+    "answer": "Prickle",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-0009",
+    "question": "What is a baby goat called?",
+    "options": ["Kid", "Fawn", "Calf", "Colt"],
+    "answer": "Kid",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-hard-0010",
+    "question": "What is a baby hare called?",
+    "options": ["Leveret", "Kit", "Cub", "Chick"],
+    "answer": "Leveret",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-expert-0001",
+    "question": "What is a group of ravens called?",
+    "options": ["Unkindness", "Murder", "Parliament", "Mob"],
+    "answer": "Unkindness",
+    "difficulty": "expert"
+  },
+  {
+    "id": "animals-expert-0002",
+    "question": "What is a group of leopards called?",
+    "options": ["Leap", "Pride", "Clowder", "Pack"],
+    "answer": "Leap",
+    "difficulty": "expert"
+  },
+  {
+    "id": "animals-expert-0003",
+    "question": "What is a group of toads called?",
+    "options": ["Knot", "Army", "Colony", "Brood"],
+    "answer": "Knot",
+    "difficulty": "expert"
+  },
+  {
+    "id": "animals-expert-0006",
+    "question": "What is a group of hedgehogs called?",
+    "options": ["Array", "Prickle", "Drove", "Gang"],
+    "answer": "Array",
+    "difficulty": "expert"
+  },
+  {
+    "id": "animals-expert-0008",
+    "question": "What is a baby platypus called?",
+    "options": ["Puggle", "Kit", "Cub", "Calf"],
+    "answer": "Puggle",
+    "difficulty": "expert"
+  },
+  {
+    "id": "animals-expert-0009",
+    "question": "What is a baby seal called?",
+    "options": ["Pup", "Calf", "Kid", "Leveret"],
+    "answer": "Pup",
+    "difficulty": "expert"
+  },
+  {
+    "id": "animals-expert-0010",
+    "question": "What is a baby turkey called?",
+    "options": ["Poults", "Chicks", "Cygnet", "Fry"],
+    "answer": "Poults",
+    "difficulty": "expert"
+  },
+{
+"id": "an-med-0037",
+"question": "Which large African mammal is responsible for the most human deaths each year?",
+"options": ["Lion", "Hippopotamus", "Crocodile", "Buffalo"],
+"answer": "Hippopotamus",
+"difficulty": "medium"
+},
+{
+"id": "an-med-0038",
+"question": "What is the largest rodent in the world?",
+"options": ["Capybara", "Beaver", "Porcupine", "Nutria"],
+"answer": "Capybara",
+"difficulty": "medium"
+},
+{
+"id": "an-med-0034",
+"question": "Which mammal sleeps the most hours per day on average?",
+"options": ["Sloth", "Koala", "Cat", "Bat"],
+"answer": "Koala",
+"difficulty": "medium"
+}
+]
+

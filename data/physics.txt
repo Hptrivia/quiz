@@ -1,0 +1,1052 @@
+[
+  {
+    "id": "physics-easy-001",
+    "question": "What is the SI unit of force?",
+    "options": ["Joule", "Newton", "Watt", "Pascal"],
+    "answer": "Newton",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-002",
+    "question": "What is the SI unit of energy?",
+    "options": ["Watt", "Newton", "Joule", "Volt"],
+    "answer": "Joule",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-003",
+    "question": "What is the SI unit of power?",
+    "options": ["Joule", "Newton", "Watt", "Ampere"],
+    "answer": "Watt",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-004",
+    "question": "What is the SI unit of electric current?",
+    "options": ["Volt", "Ohm", "Ampere", "Coulomb"],
+    "answer": "Ampere",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-005",
+    "question": "What is the SI unit of voltage?",
+    "options": ["Volt", "Watt", "Ohm", "Tesla"],
+    "answer": "Volt",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-006",
+    "question": "What is the SI unit of resistance?",
+    "options": ["Ampere", "Ohm", "Volt", "Henry"],
+    "answer": "Ohm",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-007",
+    "question": "Which force pulls objects toward Earth?",
+    "options": ["Magnetism", "Friction", "Gravity", "Tension"],
+    "answer": "Gravity",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-008",
+    "question": "What instrument is commonly used to measure temperature?",
+    "options": ["Barometer", "Thermometer", "Voltmeter", "Ammeter"],
+    "answer": "Thermometer",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-009",
+    "question": "What instrument is used to measure current in a circuit?",
+    "options": ["Voltmeter", "Ammeter", "Thermometer", "Speedometer"],
+    "answer": "Ammeter",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-010",
+    "question": "What instrument is used to measure voltage in a circuit?",
+    "options": ["Ammeter", "Barometer", "Voltmeter", "Ohmmeter"],
+    "answer": "Voltmeter",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-011",
+    "question": "Which planet has the strongest gravitational pull in our solar system?",
+    "options": ["Earth", "Mars", "Jupiter", "Venus"],
+    "answer": "Jupiter",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-012",
+    "question": "What is the speed of light in a vacuum approximately?",
+    "options": ["3 × 10^6 m/s", "3 × 10^7 m/s", "3 × 10^8 m/s", "3 × 10^9 m/s"],
+    "answer": "3 × 10^8 m/s",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-013",
+    "question": "Which type of energy does a moving object have?",
+    "options": ["Potential energy", "Thermal energy", "Kinetic energy", "Chemical energy"],
+    "answer": "Kinetic energy",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-014",
+    "question": "Which type of energy is stored in an elevated object?",
+    "options": ["Kinetic energy", "Elastic energy", "Gravitational potential energy", "Electrical energy"],
+    "answer": "Gravitational potential energy",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-015",
+    "question": "What is the force that opposes motion between two surfaces called?",
+    "options": ["Tension", "Gravity", "Friction", "Pressure"],
+    "answer": "Friction",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-016",
+    "question": "Which simple machine is a ramp?",
+    "options": ["Lever", "Pulley", "Inclined plane", "Wheel and axle"],
+    "answer": "Inclined plane",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-017",
+    "question": "What happens to the volume of most substances when they are heated?",
+    "options": ["It decreases", "It usually increases", "It stays exactly the same", "It disappears"],
+    "answer": "It usually increases",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-018",
+    "question": "Which state of matter has a definite shape and volume?",
+    "options": ["Solid", "Liquid", "Gas", "Plasma"],
+    "answer": "Solid",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-019",
+    "question": "Which state of matter has a definite volume but no definite shape?",
+    "options": ["Solid", "Liquid", "Gas", "Plasma"],
+    "answer": "Liquid",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-020",
+    "question": "Which state of matter expands to fill its container?",
+    "options": ["Solid", "Liquid", "Gas", "Crystal"],
+    "answer": "Gas",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-021",
+    "question": "What is the unit of frequency?",
+    "options": ["Newton", "Hertz", "Joule", "Pascal"],
+    "answer": "Hertz",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-022",
+    "question": "How many poles does a magnet have?",
+    "options": ["One", "Two", "Three", "Four"],
+    "answer": "Two",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-023",
+    "question": "What are the two poles of a magnet called?",
+    "options": ["Left and right", "Top and bottom", "North and south", "Positive and negative"],
+    "answer": "North and south",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-024",
+    "question": "Like magnetic poles do what?",
+    "options": ["Attract", "Repel", "Fuse", "Disappear"],
+    "answer": "Repel",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-025",
+    "question": "Unlike magnetic poles do what?",
+    "options": ["Repel", "Attract", "Cancel", "Spin"],
+    "answer": "Attract",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-026",
+    "question": "What is the center of an atom called?",
+    "options": ["Orbit", "Nucleus", "Shell", "Core wire"],
+    "answer": "Nucleus",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-027",
+    "question": "Which subatomic particle has a negative charge?",
+    "options": ["Proton", "Neutron", "Electron", "Photon"],
+    "answer": "Electron",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-028",
+    "question": "Which subatomic particle has a positive charge?",
+    "options": ["Electron", "Neutron", "Proton", "Photon"],
+    "answer": "Proton",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-029",
+    "question": "Which subatomic particle has no charge?",
+    "options": ["Electron", "Proton", "Neutron", "Ion"],
+    "answer": "Neutron",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-030",
+    "question": "What kind of lens is thicker in the middle than at the edges?",
+    "options": ["Concave lens", "Convex lens", "Plane lens", "Cylindrical lens"],
+    "answer": "Convex lens",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-031",
+    "question": "What kind of mirror curves inward?",
+    "options": ["Plane mirror", "Convex mirror", "Concave mirror", "Glass slab"],
+    "answer": "Concave mirror",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-032",
+    "question": "Sound travels fastest through which medium?",
+    "options": ["Vacuum", "Gas", "Liquid", "Solid"],
+    "answer": "Solid",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-033",
+    "question": "Can sound travel through a vacuum?",
+    "options": ["Yes", "No", "Only weakly", "Only at night"],
+    "answer": "No",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-034",
+    "question": "What is the natural satellite of Earth?",
+    "options": ["Mars", "Moon", "Sun", "Venus"],
+    "answer": "Moon",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-035",
+    "question": "What is the force per unit area called?",
+    "options": ["Energy", "Pressure", "Power", "Density"],
+    "answer": "Pressure",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-036",
+    "question": "What is the SI unit of pressure?",
+    "options": ["Joule", "Pascal", "Newton", "Watt"],
+    "answer": "Pascal",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-037",
+    "question": "What does a speedometer measure?",
+    "options": ["Distance", "Speed", "Acceleration", "Force"],
+    "answer": "Speed",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-038",
+    "question": "What is the change in position of an object called?",
+    "options": ["Speed", "Motion", "Displacement", "Inertia"],
+    "answer": "Displacement",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-039",
+    "question": "Which energy source comes from the Sun?",
+    "options": ["Geothermal", "Nuclear", "Solar", "Tidal"],
+    "answer": "Solar",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-040",
+    "question": "What kind of circuit has more than one path for current?",
+    "options": ["Series circuit", "Parallel circuit", "Open circuit", "Closed loop battery"],
+    "answer": "Parallel circuit",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-041",
+    "question": "What kind of circuit has only one path for current?",
+    "options": ["Series circuit", "Parallel circuit", "Magnetic circuit", "Thermal circuit"],
+    "answer": "Series circuit",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-042",
+    "question": "What device converts electrical energy into light?",
+    "options": ["Motor", "Battery", "Bulb", "Resistor"],
+    "answer": "Bulb",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-043",
+    "question": "What type of energy is stored in a stretched spring?",
+    "options": ["Thermal energy", "Elastic potential energy", "Sound energy", "Magnetic energy"],
+    "answer": "Elastic potential energy",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-044",
+    "question": "What is the rate of doing work called?",
+    "options": ["Energy", "Force", "Power", "Pressure"],
+    "answer": "Power",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-045",
+    "question": "Which law states that energy cannot be created or destroyed?",
+    "options": ["Newton's first law", "Law of conservation of energy", "Ohm's law", "Hooke's law"],
+    "answer": "Law of conservation of energy",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-046",
+    "question": "What is the pull of Earth on an object called?",
+    "options": ["Mass", "Weight", "Density", "Power"],
+    "answer": "Weight",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-047",
+    "question": "What is the amount of matter in an object called?",
+    "options": ["Weight", "Force", "Mass", "Pressure"],
+    "answer": "Mass",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-048",
+    "question": "What is the SI unit of mass?",
+    "options": ["Gram", "Kilogram", "Newton", "Ton"],
+    "answer": "Kilogram",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-049",
+    "question": "What is the SI unit of distance?",
+    "options": ["Meter", "Kilogram", "Second", "Newton"],
+    "answer": "Meter",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-easy-050",
+    "question": "What is the SI unit of time?",
+    "options": ["Hour", "Minute", "Second", "Day"],
+    "answer": "Second",
+    "difficulty": "easy"
+  },
+  {
+    "id": "physics-medium-001",
+    "question": "What is speed equal to?",
+    "options": ["Distance × time", "Distance ÷ time", "Time ÷ distance", "Mass × acceleration"],
+    "answer": "Distance ÷ time",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-002",
+    "question": "What is velocity?",
+    "options": ["Speed without direction", "Speed with direction", "Distance only", "Acceleration over time"],
+    "answer": "Speed with direction",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-003",
+    "question": "What is acceleration?",
+    "options": ["Change in speed only", "Change in velocity over time", "Distance traveled per second", "Mass times force"],
+    "answer": "Change in velocity over time",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-004",
+    "question": "What is Newton's first law often called?",
+    "options": ["Law of gravitation", "Law of inertia", "Law of momentum", "Law of action"],
+    "answer": "Law of inertia",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-005",
+    "question": "Which equation represents Newton's second law?",
+    "options": ["F = ma", "P = mv", "V = IR", "W = Pt"],
+    "answer": "F = ma",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-006",
+    "question": "What does Newton's third law state?",
+    "options": ["Force equals mass times acceleration", "Energy is conserved", "For every action there is an equal and opposite reaction", "Objects in motion stay in motion unless acted on"],
+    "answer": "For every action there is an equal and opposite reaction",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-007",
+    "question": "What is momentum equal to?",
+    "options": ["Mass × velocity", "Force × distance", "Mass ÷ velocity", "Power × time"],
+    "answer": "Mass × velocity",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-008",
+    "question": "What is work equal to?",
+    "options": ["Force × distance", "Mass × acceleration", "Power × time squared", "Pressure × volume"],
+    "answer": "Force × distance",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-009",
+    "question": "What is kinetic energy equal to?",
+    "options": ["mgh", "1/2 mv^2", "Fd", "Pt"],
+    "answer": "1/2 mv^2",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-010",
+    "question": "What is gravitational potential energy near Earth's surface equal to?",
+    "options": ["1/2 mv^2", "mgh", "IR", "mc"],
+    "answer": "mgh",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-011",
+    "question": "What is density equal to?",
+    "options": ["Mass × volume", "Mass ÷ volume", "Volume ÷ mass", "Force ÷ area"],
+    "answer": "Mass ÷ volume",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-012",
+    "question": "What is pressure equal to?",
+    "options": ["Force ÷ area", "Area ÷ force", "Mass ÷ volume", "Energy ÷ time"],
+    "answer": "Force ÷ area",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-013",
+    "question": "Which quantity is a vector?",
+    "options": ["Speed", "Distance", "Velocity", "Mass"],
+    "answer": "Velocity",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-014",
+    "question": "Which quantity is a scalar?",
+    "options": ["Velocity", "Force", "Acceleration", "Speed"],
+    "answer": "Speed",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-015",
+    "question": "What is the unit of momentum?",
+    "options": ["kg m/s", "N/m", "J/s", "kg/m^3"],
+    "answer": "kg m/s",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-016",
+    "question": "What happens to the resistance of a wire if its length increases, assuming other factors stay constant?",
+    "options": ["It decreases", "It increases", "It stays the same", "It becomes zero"],
+    "answer": "It increases",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-017",
+    "question": "What happens to the resistance of a wire if its thickness increases, assuming other factors stay constant?",
+    "options": ["It increases", "It decreases", "It stays the same", "It doubles automatically"],
+    "answer": "It decreases",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-018",
+    "question": "Which equation is Ohm's law?",
+    "options": ["F = ma", "V = IR", "P = mv", "E = mc^2"],
+    "answer": "V = IR",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-019",
+    "question": "What is electric power equal to in a circuit?",
+    "options": ["V + I", "V × I", "V ÷ I", "I ÷ V"],
+    "answer": "V × I",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-020",
+    "question": "What happens to current in a series circuit?",
+    "options": ["It is different at every point", "It is the same throughout", "It becomes zero after the first bulb", "It splits equally between all branches"],
+    "answer": "It is the same throughout",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-021",
+    "question": "What happens to voltage in a series circuit?",
+    "options": ["It is shared across components", "It stays the same across every component and equals zero", "It disappears", "It only exists in the battery"],
+    "answer": "It is shared across components",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-022",
+    "question": "What happens to voltage across branches in a parallel circuit?",
+    "options": ["It is different in every branch", "It is the same across each branch", "It becomes zero", "It doubles in each branch"],
+    "answer": "It is the same across each branch",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-023",
+    "question": "What happens to current in a parallel circuit?",
+    "options": ["It is the same in all branches and never changes", "It splits between branches", "It disappears after the first branch", "It becomes equal to voltage"],
+    "answer": "It splits between branches",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-024",
+    "question": "Which color of visible light has the longest wavelength?",
+    "options": ["Violet", "Blue", "Green", "Red"],
+    "answer": "Red",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-025",
+    "question": "Which color of visible light has the shortest wavelength?",
+    "options": ["Red", "Yellow", "Blue", "Violet"],
+    "answer": "Violet",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-026",
+    "question": "What happens to light when it passes from air into glass at an angle?",
+    "options": ["It disappears", "It refracts", "It gains no change at all", "It becomes sound"],
+    "answer": "It refracts",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-027",
+    "question": "What is reflection?",
+    "options": ["Bending of light", "Bouncing of light off a surface", "Splitting white light", "Absorption of sound"],
+    "answer": "Bouncing of light off a surface",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-028",
+    "question": "What is refraction?",
+    "options": ["Bouncing of light", "Bending of light as it changes speed", "Creation of light", "Blocking of current"],
+    "answer": "Bending of light as it changes speed",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-029",
+    "question": "Which part of the electromagnetic spectrum is used for cooking in microwave ovens?",
+    "options": ["Radio waves", "Microwaves", "Infrared", "X-rays"],
+    "answer": "Microwaves",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-030",
+    "question": "Which part of the electromagnetic spectrum is commonly associated with sunburn?",
+    "options": ["Infrared", "Microwaves", "Ultraviolet", "Radio waves"],
+    "answer": "Ultraviolet",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-031",
+    "question": "Which type of wave is sound?",
+    "options": ["Electromagnetic transverse wave", "Longitudinal mechanical wave", "Vacuum wave", "Stationary light wave"],
+    "answer": "Longitudinal mechanical wave",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-032",
+    "question": "Which type of wave is light?",
+    "options": ["Mechanical longitudinal wave", "Electromagnetic transverse wave", "Matter-only wave", "Pressure-only wave"],
+    "answer": "Electromagnetic transverse wave",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-033",
+    "question": "What is frequency?",
+    "options": ["The height of a wave", "The distance between crests", "The number of waves passing a point each second", "The speed of a particle"],
+    "answer": "The number of waves passing a point each second",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-034",
+    "question": "What is amplitude?",
+    "options": ["The maximum displacement from equilibrium", "The number of waves per second", "The speed of a wave", "The wavelength"],
+    "answer": "The maximum displacement from equilibrium",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-035",
+    "question": "What is wavelength?",
+    "options": ["The height of a wave", "The distance between two identical points on consecutive waves", "The speed of light", "The number of vibrations per second"],
+    "answer": "The distance between two identical points on consecutive waves",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-036",
+    "question": "Which equation links wave speed, frequency, and wavelength?",
+    "options": ["v = fλ", "F = ma", "P = IV", "E = mc^2"],
+    "answer": "v = fλ",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-037",
+    "question": "What is the approximate gravitational field strength on Earth?",
+    "options": ["1 N/kg", "4.9 N/kg", "9.8 N/kg", "20 N/kg"],
+    "answer": "9.8 N/kg",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-038",
+    "question": "What is weight equal to?",
+    "options": ["m ÷ g", "m × g", "F ÷ a", "p ÷ v"],
+    "answer": "m × g",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-039",
+    "question": "What is the unit of gravitational field strength?",
+    "options": ["kg", "N/kg", "J/kg", "Pa"],
+    "answer": "N/kg",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-040",
+    "question": "What is inertia?",
+    "options": ["The tendency of an object to resist changes in motion", "The force that pulls downward", "The rate of doing work", "The energy of motion"],
+    "answer": "The tendency of an object to resist changes in motion",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-041",
+    "question": "What happens to the kinetic energy of an object if its speed doubles and mass stays constant?",
+    "options": ["It doubles", "It triples", "It quadruples", "It stays the same"],
+    "answer": "It quadruples",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-042",
+    "question": "Which device is used to measure air pressure?",
+    "options": ["Thermometer", "Ammeter", "Barometer", "Hydrometer"],
+    "answer": "Barometer",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-043",
+    "question": "What type of image does a plane mirror produce?",
+    "options": ["Real and inverted", "Virtual and upright", "Real and magnified", "Virtual and inverted"],
+    "answer": "Virtual and upright",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-044",
+    "question": "What happens to the boiling point of a liquid when external pressure decreases?",
+    "options": ["It increases", "It decreases", "It stays exactly the same", "It becomes zero"],
+    "answer": "It decreases",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-045",
+    "question": "What is convection?",
+    "options": ["Heat transfer through direct contact", "Heat transfer by movement of fluids", "Heat transfer by electromagnetic waves", "Heat transfer only in solids"],
+    "answer": "Heat transfer by movement of fluids",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-046",
+    "question": "What is conduction?",
+    "options": ["Heat transfer by fluid movement", "Heat transfer through direct contact of particles", "Heat transfer through empty space only", "Heat transfer by sound"],
+    "answer": "Heat transfer through direct contact of particles",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-047",
+    "question": "What is radiation in heat transfer?",
+    "options": ["Transfer by moving liquids only", "Transfer by direct contact only", "Transfer by electromagnetic waves", "Transfer by pressure changes"],
+    "answer": "Transfer by electromagnetic waves",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-048",
+    "question": "Which material is generally a good electrical conductor?",
+    "options": ["Rubber", "Plastic", "Copper", "Wood"],
+    "answer": "Copper",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-049",
+    "question": "Which material is generally an electrical insulator?",
+    "options": ["Copper", "Aluminum", "Plastic", "Iron"],
+    "answer": "Plastic",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-medium-050",
+    "question": "What is the main source of energy for Earth's climate system?",
+    "options": ["The Moon", "The Sun", "Earth's core only", "Jupiter"],
+    "answer": "The Sun",
+    "difficulty": "medium"
+  },
+  {
+    "id": "physics-hard-001",
+    "question": "A car travels 150 m in 10 s. What is its average speed?",
+    "options": ["10 m/s", "15 m/s", "20 m/s", "25 m/s"],
+    "answer": "15 m/s",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-002",
+    "question": "An object accelerates from rest at 4 m/s^2 for 5 s. What is its final velocity?",
+    "options": ["10 m/s", "15 m/s", "20 m/s", "25 m/s"],
+    "answer": "20 m/s",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-003",
+    "question": "A 2 kg object accelerates at 3 m/s^2. What force acts on it?",
+    "options": ["5 N", "6 N", "8 N", "9 N"],
+    "answer": "6 N",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-004",
+    "question": "What is the weight of a 10 kg object on Earth, using g = 9.8 N/kg?",
+    "options": ["9.8 N", "49 N", "98 N", "100 N"],
+    "answer": "98 N",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-005",
+    "question": "How much work is done when a 20 N force moves an object 5 m in the direction of the force?",
+    "options": ["25 J", "50 J", "100 J", "200 J"],
+    "answer": "100 J",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-006",
+    "question": "What is the kinetic energy of a 4 kg object moving at 3 m/s?",
+    "options": ["6 J", "12 J", "18 J", "24 J"],
+    "answer": "18 J",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-007",
+    "question": "What is the gravitational potential energy of a 2 kg object raised 5 m, using g = 9.8 N/kg?",
+    "options": ["49 J", "78.4 J", "98 J", "19.6 J"],
+    "answer": "98 J",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-008",
+    "question": "A machine does 600 J of work in 20 s. What is its power?",
+    "options": ["20 W", "30 W", "40 W", "50 W"],
+    "answer": "30 W",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-009",
+    "question": "A 12 V battery drives a current of 2 A. What is the electrical power?",
+    "options": ["6 W", "12 W", "24 W", "48 W"],
+    "answer": "24 W",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-010",
+    "question": "A resistor has a voltage of 10 V across it and a current of 2 A through it. What is its resistance?",
+    "options": ["2 Ω", "5 Ω", "10 Ω", "20 Ω"],
+    "answer": "5 Ω",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-011",
+    "question": "A wire has a resistance of 8 Ω and carries 3 A. What voltage is across it?",
+    "options": ["11 V", "21 V", "24 V", "32 V"],
+    "answer": "24 V",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-012",
+    "question": "What is the density of a 200 kg object with a volume of 0.5 m^3?",
+    "options": ["100 kg/m^3", "200 kg/m^3", "400 kg/m^3", "500 kg/m^3"],
+    "answer": "400 kg/m^3",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-013",
+    "question": "A force of 50 N acts over an area of 2 m^2. What pressure is produced?",
+    "options": ["10 Pa", "20 Pa", "25 Pa", "100 Pa"],
+    "answer": "25 Pa",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-014",
+    "question": "A wave has a frequency of 5 Hz and a wavelength of 2 m. What is its speed?",
+    "options": ["2.5 m/s", "7 m/s", "10 m/s", "12 m/s"],
+    "answer": "10 m/s",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-015",
+    "question": "A sound wave travels at 340 m/s and has a frequency of 170 Hz. What is its wavelength?",
+    "options": ["0.5 m", "1 m", "2 m", "4 m"],
+    "answer": "2 m",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-016",
+    "question": "Light takes 8 minutes to reach Earth from the Sun. About how many seconds is that?",
+    "options": ["240 s", "360 s", "480 s", "600 s"],
+    "answer": "480 s",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-017",
+    "question": "If a 60 W bulb runs for 2 hours, how much energy does it use in watt-hours?",
+    "options": ["30 Wh", "60 Wh", "120 Wh", "180 Wh"],
+    "answer": "120 Wh",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-018",
+    "question": "If a 1000 W heater runs for 3 hours, how much energy does it use in kilowatt-hours?",
+    "options": ["1 kWh", "2 kWh", "3 kWh", "4 kWh"],
+    "answer": "3 kWh",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-019",
+    "question": "What is the momentum of a 5 kg object moving at 4 m/s?",
+    "options": ["9 kg m/s", "20 kg m/s", "25 kg m/s", "40 kg m/s"],
+    "answer": "20 kg m/s",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-020",
+    "question": "A 1000 kg car moving at 20 m/s has what momentum?",
+    "options": ["2,000 kg m/s", "20,000 kg m/s", "200,000 kg m/s", "50,000 kg m/s"],
+    "answer": "20,000 kg m/s",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-021",
+    "question": "An object travels at 8 m/s for 15 s. How far does it go?",
+    "options": ["60 m", "100 m", "120 m", "140 m"],
+    "answer": "120 m",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-022",
+    "question": "A car changes velocity from 10 m/s to 25 m/s in 5 s. What is its acceleration?",
+    "options": ["2 m/s^2", "3 m/s^2", "4 m/s^2", "5 m/s^2"],
+    "answer": "3 m/s^2",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-023",
+    "question": "A force of 12 N acts on a 3 kg object. What is its acceleration?",
+    "options": ["2 m/s^2", "3 m/s^2", "4 m/s^2", "6 m/s^2"],
+    "answer": "4 m/s^2",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-024",
+    "question": "If the mass of an object doubles while its velocity stays the same, what happens to its momentum?",
+    "options": ["It halves", "It stays the same", "It doubles", "It quadruples"],
+    "answer": "It doubles",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-025",
+    "question": "If the velocity of an object doubles while its mass stays the same, what happens to its momentum?",
+    "options": ["It halves", "It doubles", "It triples", "It quadruples"],
+    "answer": "It doubles",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-026",
+    "question": "If the velocity of an object doubles while mass stays constant, what happens to its kinetic energy?",
+    "options": ["It doubles", "It triples", "It quadruples", "It stays the same"],
+    "answer": "It quadruples",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-027",
+    "question": "A 3 kg object moving at 4 m/s has what kinetic energy?",
+    "options": ["12 J", "18 J", "24 J", "30 J"],
+    "answer": "24 J",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-028",
+    "question": "What is the pressure at the bottom of a 10 m column of water due to the water alone if ρ = 1000 kg/m^3 and g = 9.8 m/s^2?",
+    "options": ["9,800 Pa", "49,000 Pa", "98,000 Pa", "980,000 Pa"],
+    "answer": "98,000 Pa",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-029",
+    "question": "A charge of 10 C flows in 5 s. What is the current?",
+    "options": ["0.5 A", "2 A", "5 A", "10 A"],
+    "answer": "2 A",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-030",
+    "question": "What is the electrical charge transferred by a current of 3 A in 4 s?",
+    "options": ["0.75 C", "7 C", "12 C", "24 C"],
+    "answer": "12 C",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-031",
+    "question": "A 24 V supply is connected to a 6 Ω resistor. What current flows?",
+    "options": ["2 A", "3 A", "4 A", "6 A"],
+    "answer": "4 A",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-032",
+    "question": "A 9 V battery is connected to a circuit drawing 0.5 A. What is the power?",
+    "options": ["2.5 W", "4.5 W", "9 W", "18 W"],
+    "answer": "4.5 W",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-033",
+    "question": "An object has a mass of 0.2 kg and a weight of 1.96 N. What gravitational field strength is acting on it?",
+    "options": ["4.9 N/kg", "9.8 N/kg", "19.6 N/kg", "0.98 N/kg"],
+    "answer": "9.8 N/kg",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-034",
+    "question": "If a spring obeys Hooke's law, what happens to extension when force is doubled within the elastic limit?",
+    "options": ["It halves", "It stays the same", "It doubles", "It quadruples"],
+    "answer": "It doubles",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-035",
+    "question": "What happens to the frequency of a wave if its period is halved?",
+    "options": ["It halves", "It doubles", "It stays the same", "It becomes zero"],
+    "answer": "It doubles",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-036",
+    "question": "What is the period of a wave with frequency 20 Hz?",
+    "options": ["0.2 s", "0.1 s", "0.05 s", "0.02 s"],
+    "answer": "0.05 s",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-037",
+    "question": "A 1500 kg car gains 30,000 J of kinetic energy. If it starts from rest, what is its final speed approximately?",
+    "options": ["4.5 m/s", "6.3 m/s", "8.9 m/s", "12.6 m/s"],
+    "answer": "6.3 m/s",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-038",
+    "question": "A 2 kg object falls 10 m. How much gravitational potential energy does it lose, using g = 9.8 N/kg?",
+    "options": ["19.6 J", "49 J", "98 J", "196 J"],
+    "answer": "196 J",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-039",
+    "question": "What average power is needed to do 900 J of work in 15 s?",
+    "options": ["45 W", "60 W", "75 W", "90 W"],
+    "answer": "60 W",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-040",
+    "question": "A current of 0.25 A flows for 8 minutes. How much charge is transferred?",
+    "options": ["30 C", "60 C", "120 C", "240 C"],
+    "answer": "120 C",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-041",
+    "question": "If a wave speed is constant, what happens to wavelength when frequency increases?",
+    "options": ["It increases", "It decreases", "It stays the same", "It becomes infinite"],
+    "answer": "It decreases",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-042",
+    "question": "Which electromagnetic waves have the highest frequency?",
+    "options": ["Radio waves", "Infrared", "Ultraviolet", "Gamma rays"],
+    "answer": "Gamma rays",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-043",
+    "question": "Which electromagnetic waves have the lowest frequency?",
+    "options": ["Gamma rays", "X-rays", "Microwaves", "Radio waves"],
+    "answer": "Radio waves",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-044",
+    "question": "What kind of image is formed by a converging lens when the object is beyond the focal length?",
+    "options": ["Virtual and upright only", "Real and inverted", "Always virtual and magnified", "No image is formed"],
+    "answer": "Real and inverted",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-045",
+    "question": "In a vacuum, which statement is true about all electromagnetic waves?",
+    "options": ["They travel at different speeds depending on color", "They all travel at the same speed", "Only visible light can travel", "They need a medium"],
+    "answer": "They all travel at the same speed",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-046",
+    "question": "A body has a mass of 500 g. What is its mass in kilograms?",
+    "options": ["0.05 kg", "0.5 kg", "5 kg", "50 kg"],
+    "answer": "0.5 kg",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-047",
+    "question": "A runner completes 400 m in 50 s. What is the runner's average speed?",
+    "options": ["6 m/s", "8 m/s", "10 m/s", "12 m/s"],
+    "answer": "8 m/s",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-048",
+    "question": "A 60 kg person climbs 3 m. How much gravitational potential energy is gained, using g = 9.8 N/kg?",
+    "options": ["588 J", "882 J", "1,764 J", "176 J"],
+    "answer": "1,764 J",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-049",
+    "question": "A force of 80 N causes an acceleration of 4 m/s^2. What is the mass of the object?",
+    "options": ["10 kg", "20 kg", "32 kg", "84 kg"],
+    "answer": "20 kg",
+    "difficulty": "hard"
+  },
+  {
+    "id": "physics-hard-050",
+    "question": "An appliance uses 2.4 kW for 30 minutes. How much energy does it use in kWh?",
+    "options": ["0.8 kWh", "1.2 kWh", "2.4 kWh", "4.8 kWh"],
+    "answer": "1.2 kWh",
+    "difficulty": "hard"
+  }
+]

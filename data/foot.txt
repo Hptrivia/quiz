@@ -1,0 +1,1458 @@
+[
+  {
+    "id": "football-easy-0001",
+    "question": "Which country won the FIFA World Cup in 2018?",
+    "options": ["Brazil", "Germany", "France", "Argentina"],
+    "answer": "France",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0002",
+    "question": "How many players are on the field for one team during a standard football match?",
+    "options": ["10", "11", "12", "9"],
+    "answer": "11",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0003",
+    "question": "Which player is nicknamed 'CR7'?",
+    "options": ["Cristiano Ronaldo", "Carlos Ruiz", "Cesc Fàbregas", "Claudio Ranieri"],
+    "answer": "Cristiano Ronaldo",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0004",
+    "question": "Which country hosted the 2014 FIFA World Cup?",
+    "options": ["South Africa", "Brazil", "Russia", "Germany"],
+    "answer": "Brazil",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0005",
+    "question": "Which team has the iconic red kits and is known as 'The Reds' in the English Premier League?",
+    "options": ["Manchester United", "Liverpool", "Arsenal", "Chelsea"],
+    "answer": "Liverpool",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0006",
+    "question": "Who won the UEFA Champions League in 2022?",
+    "options": ["FC Barcelona", "Real Madrid", "Manchester City", "Chelsea"],
+    "answer": "Real Madrid",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0007",
+    "question": "Which footballer is known as 'The Egyptian King' and played for Liverpool?",
+    "options": ["Mohamed Salah", "Mahmoud Hassan", "Essam El-Hadary", "Ahmed Elmohamady"],
+    "answer": "Mohamed Salah",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0008",
+    "question": "What color card is shown to a player who is sent off?",
+    "options": ["Yellow", "Blue", "Red", "Green"],
+    "answer": "Red",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0009",
+    "question": "Which country won the first-ever FIFA World Cup in 1930?",
+    "options": ["Brazil", "Argentina", "Uruguay", "Italy"],
+    "answer": "Uruguay",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-easy-0010",
+    "question": "What is the maximum duration, excluding stoppage time, of one half in a professional football match?",
+    "options": ["30 minutes", "45 minutes", "60 minutes", "90 minutes"],
+    "answer": "45 minutes",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0011",
+    "question": "Which competition is contested by national teams in Europe every four years?",
+    "options": ["UEFA Champions League", "UEFA Europa League", "UEFA European Championship (Euros)", "Copa America"],
+    "answer": "UEFA European Championship (Euros)",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0013",
+    "question": "Which footballer scored over 700 senior career goals and was known as 'O Rei'?",
+    "options": ["Pelé", "Maradona", "Cruyff", "Romário"],
+    "answer": "Pelé",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-easy-0014",
+    "question": "Which club is based at Old Trafford?",
+    "options": ["Manchester City", "Manchester United", "Liverpool", "Everton"],
+    "answer": "Manchester United",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0015",
+    "question": "What is the name of Barcelona’s famous training ground and youth academy?",
+    "options": ["La Masia", "La Bombonera", "Campo de Futbol", "Casa Blanca"],
+    "answer": "La Masia",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-easy-0016",
+    "question": "Which Italian club wears black and white stripes at home?",
+    "options": ["Milan", "Inter Milan", "Juventus", "Roma"],
+    "answer": "Juventus",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0017",
+    "question": "Who is known as the highest-scoring player in international football as of 2025?",
+    "options": ["Ali Daei", "Cristiano Ronaldo", "Lionel Messi", "Sunil Chhetri"],
+    "answer": "Cristiano Ronaldo",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0019",
+    "question": "Which country’s football team is known as the ‘Three Lions’?",
+    "options": ["Germany", "France", "England", "Belgium"],
+    "answer": "England",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0020",
+    "question": "Which African country won the Africa Cup of Nations in 2019?",
+    "options": ["Nigeria", "Cameroon", "Algeria", "Egypt"],
+    "answer": "Algeria",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-easy-0021",
+    "question": "Who scored a hat-trick in the 1966 World Cup final for England?",
+    "options": ["Geoff Hurst", "Bobby Charlton", "John Barnes", "Gary Lineker"],
+    "answer": "Geoff Hurst",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-easy-0022",
+    "question": "Which country finished runners-up in the 2010 FIFA World Cup?",
+    "options": ["Netherlands", "Germany", "Spain", "Argentina"],
+    "answer": "Netherlands",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0023",
+    "question": "At which venue was the 2002 FIFA World Cup final played?",
+    "options": ["Saitama Stadium", "Nissan Stadium", "International Stadium Yokohama", "Kashima Stadium"],
+    "answer": "International Stadium Yokohama",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-easy-0024",
+    "question": "Which nation did Diego Maradona famously lead to World Cup victory in 1986?",
+    "options": ["Brazil", "Argentina", "Italy", "Germany"],
+    "answer": "Argentina",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0026",
+    "question": "Which country won Euro 2016?",
+    "options": ["Portugal", "France", "Germany", "Spain"],
+    "answer": "Portugal",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0027",
+    "question": "Which player received the first-ever red card in a FIFA World Cup tournament (1970)?",
+    "options": ["Carlos Caszely", "Pele", "Socrates", "Tostao"],
+    "answer": "Carlos Caszely",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-easy-0028",
+    "question": "Which player is known as ‘El Pibe de Oro’?",
+    "options": ["Diego Maradona", "Lionel Messi", "Gabriel Batistuta", "Juan Román Riquelme"],
+    "answer": "Diego Maradona",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-easy-0029",
+    "question": "Who won the golden boot in the 2010 FIFA World Cup?",
+    "options": ["Diego Forlán", "Thomas Müller", "Wesley Sneijder", "David Villa"],
+    "answer": "Thomas Müller",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-easy-0030",
+    "question": "Which stadium is known as ‘The Theatre of Dreams’?",
+    "options": ["Anfield", "Old Trafford", "Camp Nou", "Santiago Bernabéu"],
+    "answer": "Old Trafford",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0031",
+    "question": "Which country won the men’s Olympic football gold medal at Tokyo 2020?",
+    "options": ["Brazil", "Spain", "Germany", "Argentina"],
+    "answer": "Brazil",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0032",
+    "question": "Who is Barcelona’s all-time top scorer?",
+    "options": ["Lionel Messi", "Luis Suárez", "Samuel Eto’o", "César Rodríguez"],
+    "answer": "Lionel Messi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-1032",
+    "question": "Who is Barcelona’s second all-time top scorer?",
+    "options": ["Lionel Messi", "Luis Suárez", "Samuel Eto’o", "César Rodríguez"],
+    "answer": "César Rodríguez",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-easy-0033",
+    "question": "Which club had an unbeaten 49-match run in the Premier League (2003–2004)?",
+    "options": ["Chelsea", "Liverpool", "Manchester United", "Arsenal"],
+    "answer": "Arsenal",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0035",
+    "question": "Which manager led Spain to their first World Cup victory in 2010?",
+    "options": ["Vicente del Bosque", "Luis Aragonés", "Joaquín Caparrós", "Julen Lopetegui"],
+    "answer": "Vicente del Bosque",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-easy-0036",
+    "question": "Which country is known as the ‘Seleção’?",
+    "options": ["Argentina", "Brazil", "Portugal", "Spain"],
+    "answer": "Brazil",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0037",
+    "question": "Who won the FIFA Women’s World Cup in 2019?",
+    "options": ["USA", "Germany", "Netherlands", "Sweden"],
+    "answer": "USA",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-easy-0038",
+    "question": "Which player has won the most Ballon d’Or awards (as of 2025)?",
+    "options": ["Lionel Messi", "Cristiano Ronaldo", "Michel Platini", "Johan Cruyff"],
+    "answer": "Lionel Messi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0039",
+    "question": "Which club has ‘Old Lady’ as its nickname?",
+    "options": ["Roma", "Juventus", "Lazio", "Fiorentina"],
+    "answer": "Juventus",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0040",
+    "question": "What do you call it when a player scores three goals in a single match?",
+    "options": ["Hat‑trick", "Poker", "Brace", "Double"],
+    "answer": "Hat‑trick",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0041",
+    "question": "Which Italian manager won the World Cup with Italy in 2006?",
+    "options": ["Marcello Lippi", "Carlo Ancelotti", "Giovanni Trapattoni", "Arrigo Sacchi"],
+    "answer": "Marcello Lippi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0045",
+    "question": "Which country is nicknamed ‘La Albiceleste’?",
+    "options": ["Uruguay", "Argentina", "Chile", "Paraguay"],
+    "answer": "Argentina",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-easy-0047",
+    "question": "Which national team has the nickname ‘Die Mannschaft’?",
+    "options": ["Austria", "Switzerland", "Germany", "Belgium"],
+    "answer": "Germany",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0049",
+    "question": "Which club is nicknamed ‘The Blues’ in the Premier League?",
+    "options": ["Tottenham", "Chelsea", "Everton", "West Ham"],
+    "answer": "Chelsea",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0050",
+    "question": "Who scored the infamous 'Hand of God' goal in 1986?",
+    "options": ["Lionel Messi", "Diego Maradona", "Pele", "Zinedine Zidane"],
+    "answer": "Diego Maradona",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0050",
+    "question": "Which player was sent off for a headbutt in the World Cup final against Italy?",
+    "options": ["Lionel Messi", "Diego Maradona", "Pele", "Zinedine Zidane"],
+    "answer": "Zinedine Zidane",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-medium-0051",
+    "question": "Which club has won the most UEFA Champions League titles?",
+    "options": ["Barcelona", "Real Madrid", "Bayern Munich", "AC Milan"],
+    "answer": "Real Madrid",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0053",
+    "question": "Who scored the winning goal for Spain in the UEFA Euro 2008 final?",
+    "options": ["Fernando Torres", "David Villa", "Xavi", "Andres Iniesta"],
+    "answer": "Fernando Torres",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0054",
+    "question": "Which English club won the Premier League title in the 2015–16 season against all odds?",
+    "options": ["Leicester City", "Norwich City", "West Ham United", "Crystal Palace"],
+    "answer": "Leicester City",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0055",
+    "question": "Which country won the FIFA World Cup in 2006?",
+    "options": ["Italy", "France", "Brazil", "Germany"],
+    "answer": "Italy",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0056",
+    "question": "Who became the youngest player to score in a UEFA Champions League match as of 2025?",
+    "options": ["Ansu Fati", "Raúl", "Wayne Rooney", "Lamine Yamal"],
+    "answer": "Ansu Fati",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0056",
+    "question": "Who is the second youngest player to score in a UEFA Champions League match as of 2025?",
+    "options": ["Ansu Fati", "Raúl", "Wayne Rooney", "Lamine Yamal"],
+    "answer": "Lamine Yamal",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0057",
+    "question": "Which Argentinian player won the FIFA World Cup Golden Ball in 2014?",
+    "options": ["Lionel Messi", "Di María", "Ángel Di María", "Gonzalo Higuaín"],
+    "answer": "Lionel Messi",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0058",
+    "question": "Which country has appeared in the most FIFA World Cup finals without winning the title?",
+    "options": ["Netherlands", "Croatia", "Sweden", "Hungary"],
+    "answer": "Netherlands",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0059",
+    "question": "Which manager has the most UEFA Champions League wins as a coach?",
+    "options": ["Pep Guardiola", "Carlo Ancelotti", "Zinedine Zidane", "Sir Alex Ferguson"],
+    "answer": "Carlo Ancelotti",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0060",
+    "question": "Which player captained Germany to their 2014 FIFA World Cup victory?",
+    "options": ["Philipp Lahm", "Bastian Schweinsteiger", "Manuel Neuer", "Thomas Müller"],
+    "answer": "Philipp Lahm",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0061",
+    "question": "Who scored the 'Goal of the Century' in the 1986 FIFA World Cup?",
+    "options": ["Diego Maradona", "Zico", "Garrincha", "Sócrates"],
+    "answer": "Diego Maradona",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0063",
+    "question": "Which club did Zlatan Ibrahimović rejoin in 2020?",
+    "options": ["AC Milan", "Manchester United", "LA Galaxy", "PSG"],
+    "answer": "AC Milan",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0065",
+    "question": "Which country hosted the UEFA Euro tournament in 2000 alongside the Netherlands?",
+    "options": ["Belgium", "France", "Austria", "Switzerland"],
+    "answer": "Belgium",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0066",
+    "question": "Who scored the fastest hat-trick in Premier League history (as of 2025)?",
+    "options": ["Sadio Mané", "Michael Owen", "Robbie Fowler", "Harry Kane"],
+    "answer": "Sadio Mané",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0069",
+    "question": "Which national football team is nicknamed 'La Roja'?",
+    "options": ["Chile", "Spain", "Mexico", "Costa Rica"],
+    "answer": "Spain",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0070",
+    "question": "Which goalkeeper holds the record for most clean sheets in Premier League history?",
+    "options": ["Peter Schmeichel", "David Seaman", "Petr Čech", "Edwin van der Sar"],
+    "answer": "Petr Čech",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0071",
+    "question": "Which club did Luis Suárez join after leaving Liverpool in 2014?",
+    "options": ["Barcelona", "Juventus", "Atletico Madrid", "AC Milan"],
+    "answer": "Barcelona",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0072",
+    "question": "Who scored the winning goal in the 1999 UEFA Champions League final for Manchester United?",
+    "options": ["Ole Gunnar Solskjær", "David Beckham", "Anderson", "Roy Keane"],
+    "answer": "Ole Gunnar Solskjær",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0073",
+    "question": "Which country won the inaugural UEFA Nations League in 2019?",
+    "options": ["Portugal", "France", "Netherlands", "Belgium"],
+    "answer": "Portugal",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-1073",
+    "question": "Which country won the UEFA Nations League in 2025?",
+    "options": ["Portugal", "France", "Netherlands", "Belgium"],
+    "answer": "Portugal",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0074",
+    "question": "Which player has the most assists in a single Premier League season?",
+    "options": ["Kevin De Bruyne", "Cesc Fàbregas", "Ryan Giggs", "Mesut Özil"],
+    "answer": "Kevin De Bruyne",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0075",
+    "question": "Which manager led Leicester City to the unexpected 2015–16 Premier League title?",
+    "options": ["Claudio Ranieri", "Brendan Rodgers", "Roy Hodgson", "Nigel Pearson"],
+    "answer": "Claudio Ranieri",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0076",
+    "question": "Which country reached the World Cup semifinals for the first time in 2018?",
+    "options": ["Croatia", "Belgium", "Sweden", "Colombia"],
+    "answer": "Croatia",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0078",
+    "question": "Which team won the 2013 UEFA Europa League?",
+    "options": ["Chelsea", "Atletico Madrid", "Sevilla", "Valencia"],
+    "answer": "Chelsea",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0080",
+    "question": "Which country did Diego Maradona play for in the 1990 World Cup?",
+    "options": ["Spain", "Argentina", "Mexico", "Italy"],
+    "answer": "Argentina",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-medium-0081",
+    "question": "Who won the UEFA Best Player in Europe award in 2020?",
+    "options": ["Lionel Messi", "Robert Lewandowski", "Jorginho", "Kevin De Bruyne"],
+    "answer": "Robert Lewandowski",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-medium-0081",
+    "question": "Who won the UEFA Best Player in Europe award in 2021?",
+    "options": ["Lionel Messi", "Robert Lewandowski", "Jorginho", "Kevin De Bruyne"],
+    "answer": "Jorginho",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-medium-0082",
+    "question": "Which player won the Golden Boot at UEFA Euro 2016?",
+    "options": ["Antoine Griezmann", "Cristiano Ronaldo", "Harry Kane", "Gareth Bale"],
+    "answer": "Antoine Griezmann",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-medium-0085",
+    "question": "Which player earned the nickname 'El Fenomeno'?",
+    "options": ["Ronaldo Nazário", "Romário", "Roberto Carlos", "Rivaldo"],
+    "answer": "Ronaldo Nazário",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0086",
+    "question": "Which Scottish club has won the most Scottish overall major trophies as of 2025?",
+    "options": ["Celtic", "Rangers", "Aberdeen", "Hearts"],
+    "answer": "Celtic",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0087",
+    "question": "Which country won the Africa Cup of Nations in 2013?",
+    "options": ["Egypt", "Nigeria", "Cote d'Ivoire", "Ghana"],
+    "answer": "Nigeria",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0088",
+    "question": "Who scored the fastest goal in FIFA World Cup history (as of 2025)?",
+    "options": ["Hakan Şükür", "Christian Benteke", "Lukas Podolski", "Marcelo Salas"],
+    "answer": "Hakan Şükür",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0089",
+    "question": "Which player made over 1,000 competitive appearances for Manchester United?",
+    "options": ["Ryan Giggs", "Paul Scholes", "Gary Neville", "Wayne Rooney"],
+    "answer": "Ryan Giggs",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0091",
+    "question": "Which South American club has most Copa Libertadores titles?",
+    "options": ["River Plate", "Boca Juniors", "Independiente", "Flamengo"],
+    "answer": "Independiente",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0092",
+    "question": "Which goalkeeper scored in open play in an official international match?",
+    "options": ["José Luis Chilavert", "Gianluigi Buffon", "Manuel Neuer", "Iker Casillas"],
+    "answer": "José Luis Chilavert",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0093",
+    "question": "Which country won the first FIFA Women’s World Cup in 1991?",
+    "options": ["USA", "Germany", "Norway", "China"],
+    "answer": "USA",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-medium-0095",
+    "question": "Which manager managed both Barcelona and Manchester United?",
+    "options": ["Louis van Gaal", "Pep Guardiola", "Erik ten Hag", "Jose Mourinho"],
+    "answer": "Louis van Gaal",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0096",
+    "question": "Who holds the record for most goals in a single Premier League season (as of 2025)?",
+    "options": ["Alan Shearer", "Mohamed Salah", "Erling Haaland", "Andy Cole"],
+    "answer": "Erling Haaland",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0097",
+    "question": "Which country won the Copa America in 2016 (Centenario edition)?",
+    "options": ["Chile", "Argentina", "Chile–USA", "Uruguay"],
+    "answer": "Chile",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0098",
+    "question": "Which player scored a famous solo goal for Barcelona against Getafe in 2007, reminiscent of Maradona?",
+    "options": ["Lionel Messi", "Ronaldinho", "Samuel Eto'o", "Thierry Henry"],
+    "answer": "Lionel Messi",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0099",
+    "question": "Who won the Golden Boot at the 2018 FIFA World Cup?",
+    "options": ["Harry Kane", "Antoine Griezmann", "Romelu Lukaku", "Cristiano Ronaldo"],
+    "answer": "Harry Kane",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-hard-0101",
+    "question": "Who won the first-ever Ballon d’Or in 1956?",
+    "options": ["Stanley Matthews", "Alfredo Di Stéfano", "Ferenc Puskás", "Eusébio"],
+    "answer": "Stanley Matthews",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0102",
+    "question": "Which two teams contested the first UEFA European Championship final in 1960?",
+    "options": ["USSR vs Yugoslavia", "France vs Spain", "Germany vs Italy", "England vs Portugal"],
+    "answer": "USSR vs Yugoslavia",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0103",
+    "question": "Which manager has won the most FIFA World Cups?",
+    "options": ["Helmut Schön", "Mário Zagallo", "Vittorio Pozzo", "Carlos Alberto Parreira"],
+    "answer": "Vittorio Pozzo",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0104",
+    "question": "Which country won Olympic gold in men’s football at the 1996 Olympics?",
+    "options": ["Nigeria", "Argentina", "Brazil", "Spain"],
+    "answer": "Nigeria",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0106",
+    "question": "Which African player won the Ballon d’Or in 1995?",
+    "options": ["George Weah", "Samuel Eto’o", "Abedi Pelé", "El Hadji Diouf"],
+    "answer": "George Weah",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0107",
+    "question": "Which country defeated reigning champions Brazil to win the 2001 Copa América?",
+    "options": ["Colombia", "Mexico", "Argentina", "Chile"],
+    "answer": "Argentina",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0108",
+    "question": "Which team won the inaugural UEFA Champions League in 1993 under its new format?",
+    "options": ["Marseille", "AC Milan", "Barcelona", "Ajax"],
+    "answer": "Marseille",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0109",
+    "question": "Which coach led Greece to win Euro 2004?",
+    "options": ["Otto Rehhagel", "Fernando Santos", "Jürgen Klinsmann", "Luis Aragones"],
+    "answer": "Otto Rehhagel",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0112",
+    "question": "Who scored the fastest goal in UEFA Champions League history (as of 2025)?",
+    "options": ["Roy Makaay", "Alan", "Victor Osimhen", "Alhassane Keita"],
+    "answer": "Roy Makaay",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0113",
+    "question": "Which nation was the first to win consecutive FIFA World Cups?",
+    "options": ["Italy", "Uruguay", "Brazil", "Germany"],
+    "answer": "Italy",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-1113",
+    "question": "Which club won the UEFA Champions League in 2025?",
+    "options": ["Paris FC", "Inter Milan", "Real Madrid", "Liverpool"],
+    "answer": "Paris FC",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0114",
+    "question": "Who scored the winning goal in the 1954 World Cup final, known as the 'Miracle of Bern'?",
+    "options": ["Helmut Rahn", "Ferenc Puskás", "Sandor Kocsis", "Fritz Walter"],
+    "answer": "Helmut Rahn",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0116",
+    "question": "Which country has won the Copa América the most times?",
+    "options": ["Argentina", "Uruguay", "Brazil", "Chile"],
+    "answer": "Argentina",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0118",
+    "question": "Who scored the first-ever hat-trick in UEFA European Championship history?",
+    "options": ["Michel Platini", "Gerd Müller", "Juul Ellerman", "Marco van Basten"],
+    "answer": "Juul Ellerman",
+    "difficulty": "expert"
+  },
+  {
+    "id": "football-hard-0120",
+    "question": "Which club has the nickname 'The Invincibles' for an unbeaten Premier League season?",
+    "options": ["Arsenal", "Liverpool", "Chelsea", "Manchester United"],
+    "answer": "Arsenal",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0121",
+    "question": "Which of these plaers have not won World Cups as both a player and a manager?",
+    "options": ["Franz Beckenbauer", "Mário Zagallo", "Didier Deschamps", "Johan Cruyff"],
+    "answer": "Mário Zagallo",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0126",
+    "question": "Which team defeated Bayern Munich in the 1999 Champions League final?",
+    "options": ["Manchester United", "Juventus", "Real Madrid", "Barcelona"],
+    "answer": "Manchester United",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0127",
+    "question": "Which country hosted the first FIFA Women’s World Cup in 1991?",
+    "options": ["China", "USA", "Sweden", "Norway"],
+    "answer": "China",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0129",
+    "question": "Which player has the record for most appearances in the UEFA Champions League?",
+    "options": ["Iker Casillas", "Cristiano Ronaldo", "Paolo Maldini", "Xavi"],
+    "answer": "Cristiano Ronaldo",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0136",
+    "question": "Which club has the highest number of domestic league titles in Argentina?",
+    "options": ["River Plate", "Boca Juniors", "Independiente", "Racing Club"],
+    "answer": "River Plate",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0141",
+    "question": "Which Italian club has never been relegated from Serie A?",
+    "options": ["Inter Milan", "AC Milan", "Juventus", "Napoli"],
+    "answer": "Inter Milan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0142",
+    "question": "Who scored the first own goal in a World Cup final?",
+    "options": ["Sergio Ramos", "Mario Mandžukić", "Paolo Rossi", "Paulo Maldini"],
+    "answer": "Mario Mandžukić",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0143",
+    "question": "Which club has the most consecutive league titles in Europe’s top five leagues?",
+    "options": ["Bayern Munich", "Juventus", "Paris Saint-Germain", "Celtic"],
+    "answer": "Bayern Munich",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-hard-0150",
+    "question": "Which national team won the FIFA Confederations Cup three times consecutively (1997–2001)?",
+    "options": ["France", "Brazil", "Argentina", "Mexico"],
+    "answer": "Brazil",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-expert-0151",
+    "question": "Which club did Johan Cruyff manage immediately after leaving Ajax in 1988?",
+    "options": ["Barcelona", "Netherlands national team", "AC Milan", "PSV Eindhoven"],
+    "answer": "Barcelona",
+    "difficulty": "expert"
+  },
+  {
+    "id": "football-expert-0152",
+    "question": "Who scored the winning penalty in the 1976 European Championship final shootout?",
+    "options": ["Antonín Panenka", "Gerd Müller", "Toni Schumacher", "Dragan Džajić"],
+    "answer": "Antonín Panenka",
+    "difficulty": "expert"
+  },
+  {
+    "id": "football-expert-0155",
+    "question": "Which goalkeeper saved a penalty in the final moments of the 2005 UEFA Champions League final?",
+    "options": ["Jerzy Dudek", "Gianluigi Buffon", "Dida", "Oliver Kahn"],
+    "answer": "Jerzy Dudek",
+    "difficulty": "expert"
+  },
+  {
+    "id": "football-expert-0160",
+    "question": "Which club did Lev Yashin spend his entire professional career with?",
+    "options": ["Dynamo Moscow", "Spartak Moscow", "CSKA Moscow", "Zenit Saint Petersburg"],
+    "answer": "Dynamo Moscow",
+    "difficulty": "expert"
+  },
+  {
+    "id": "football-expert-0161",
+    "question": "Which player is the only one to score in World Cup finals for two different countries?",
+    "options": ["Luis Monti", "Pelé", "Ove Ovsejevitsch", "Luis Suárez"],
+    "answer": "Luis Monti",
+    "difficulty": "expert"
+  },
+  {
+    "id": "football-expert-0163",
+    "question": "Which club won the last edition of the Inter-Cities Fairs Cup in 1971?",
+    "options": ["Leeds United", "Arsenal", "Barcelona", "Juventus"],
+    "answer": "Leeds United",
+    "difficulty": "expert"
+  },
+  {
+    "id": "football-expert-0164",
+    "question": "Which player scored in the final for AC Milan in both the 1989 and 1990 European Cups?",
+    "options": ["Marco van Basten", "Frank Rijkaard", "Daniele Massaro", "Ruud Gullit"],
+    "answer": "Frank Rijkaard",
+    "difficulty": "expert"
+  },
+  {
+    "id": "football-expert-0165",
+    "question": "Which country hosted the 1968 European Championship?",
+    "options": ["Italy", "France", "West Germany", "Spain"],
+    "answer": "Italy",
+    "difficulty": "expert"
+  },
+  {
+    "id": "football-expert-0168",
+    "question": "Which manager guided Celtic to the European Cup final in 1970?",
+    "options": ["Jock Stein", "Matt Busby", "Bill Shankly", "Brian Clough"],
+    "answer": "Jock Stein",
+    "difficulty": "expert"
+  },
+  {
+    "id": "football-expert-0169",
+    "question": "Which player won the UEFA Champions League with three different clubs?",
+    "options": ["Clarence Seedorf", "Cristiano Ronaldo", "Marco Van Basten", "Thierry Henry"],
+    "answer": "Clarence Seedorf",
+    "difficulty": "expert"
+  },
+  {
+    "id": "football-expert-0170",
+    "question": "Who scored the winning goal in the 1974 European Cup final for Bayern Munich?",
+    "options": ["Gerd Müller", "Uli Hoeneß", "Franz Roth", "Paul Breitner"],
+    "answer": "Gerd Müller",
+    "difficulty": "expert"
+  },
+  {
+    "id": "football-expert-0176",
+    "question": "Who scored the only goal in the 1970 European Cup Winners' Cup final?",
+    "options": ["Franz Roth", "Heinz Flohe", "Gerd Müller", "Hans-Georg Schwarzenbeck"],
+    "answer": "Franz Roth",
+    "difficulty": "expert"
+  },
+  {
+    "id": "football-expert-0182",
+    "question": "What was the first African country to reach the quarter-finals of the World Cup (1974)?",
+    "options": ["Zaire", "Morocco", "Cameroon", "Tunisia"],
+    "answer": "Zaire",
+    "difficulty": "expert"
+  },
+  {
+    "id": "football-expert-0183",
+    "question": "Which club did Platini play for when he won three consecutive Ballon d’Or awards (1983–85)?",
+    "options": ["Juventus", "AC Milan", "Nantes", "Real Madrid"],
+    "answer": "Juventus",
+    "difficulty": "expert"
+  },
+  {
+    "id": "football-expert-0193",
+    "question": "Which club did Ferenc Puskás play for in Spain?",
+    "options": ["Real Madrid", "Barcelona", "Atletico Madrid", "Valencia"],
+    "answer": "Real Madrid",
+    "difficulty": "expert"
+  },
+  {
+    "id": "football-easy-0051",
+    "question": "Which country won the FIFA World Cup in 2022?",
+    "options": ["Argentina", "France", "Brazil", "Germany"],
+    "answer": "Argentina",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0052",
+    "question": "What is the color of the card shown for a foul when it's a warning?",
+    "options": ["Blue", "Yellow", "Red", "Green"],
+    "answer": "Yellow",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0053",
+    "question": "Which player is known as 'La Pulga'?",
+    "options": ["Lionel Messi", "Cristiano Ronaldo", "Neymar", "Luis Suarez"],
+    "answer": "Lionel Messi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-easy-0054",
+    "question": "Which country hosted the 2006 FIFA World Cup?",
+    "options": ["Germany", "France", "Russia", "South Africa"],
+    "answer": "Germany",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0058",
+    "question": "Which football team is based at Camp Nou?",
+    "options": ["Barcelona", "Real Madrid", "Atlético Madrid", "Valencia"],
+    "answer": "Barcelona",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0059",
+    "question": "How many substitutions are allowed in most competitive matches since recent rule changes(2025)?",
+    "options": ["2", "3", "5", "7"],
+    "answer": "5",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0070",
+    "question": "Which country won back-to-back European Championships in 2008 and 2012?",
+    "options": ["Germany", "France", "Spain", "Italy"],
+    "answer": "Spain",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0074",
+    "question": "Which club plays at the Allianz Arena in Munich?",
+    "options": ["Bayern Munich", "Borussia Dortmund", "RB Leipzig", "Schalke 04"],
+    "answer": "Bayern Munich",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0078",
+    "question": "Which national team is referred to as ‘The Samurai Blue’?",
+    "options": ["Brazil", "Japan", "South Korea", "Australia"],
+    "answer": "Japan",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-easy-0079",
+    "question": "Which club’s fans famously display ‘Yellow Wall’ in their stadium?",
+    "options": ["Dortmund", "Bayern Munich", "RB Leipzig", "Schalke"],
+    "answer": "Dortmund",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0080",
+    "question": "Which continent hosts the Copa América tournament?",
+    "options": ["Europe", "South America", "Africa", "Asia"],
+    "answer": "South America",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0081",
+    "question": "Who won the Ballon d’Or six times as of 2025?",
+    "options": ["Cristiano Ronaldo", "Lionel Messi", "Michel Platini", "Zinedine Zidane"],
+    "answer": "Lionel Messi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0083",
+    "question": "Which team lifted the UEFA Europa League trophy in 2021?",
+    "options": ["Sevilla", "Villarreal", "Chelsea", "Arsenal"],
+    "answer": "Villarreal",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0084",
+    "question": "Which club did David Beckham join after Real Madrid?",
+    "options": ["LA Galaxy", "PSG", "AC Milan", "Inter Miami"],
+    "answer": "LA Galaxy",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0085",
+    "question": "Which country’s team is nicknamed ‘Les Bleus’?",
+    "options": ["France", "Belgium", "Russia", "Italy"],
+    "answer": "France",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0086",
+    "question": "Who is most popularly and first known as the ‘Flying Dutchman’ in football?",
+    "options": ["Dennis Bergkamp", "Johan Cruyff", "Ruud van Nistelrooy", "Arjen Robben"],
+    "answer": "Johan Cruyff",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0087",
+    "question": "Which legendary midfield trio played for Barcelona under Pep Guardiola?",
+    "options": ["Xavi‑Iniesta‑Busquets", "Messi‑Xavi‑Iniesta", "Ronaldinho‑Messi‑Eto’o", "Puyol‑Marquez‑Deco"],
+    "answer": "Xavi‑Iniesta‑Busquets",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0089",
+    "question": "Which country won the UEFA Nations League in 2023?",
+    "options": ["Spain", "France", "Portugal", "Netherlands"],
+    "answer": "Spain",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0090",
+    "question": "Which Italian club won the treble in 2009–2010?",
+    "options": ["Inter Milan", "Juventus", "AC Milan", "Roma"],
+    "answer": "Inter Milan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0095",
+    "question": "Which goalkeeper is the only one to win a Golden Ball as the best player in the World Cup?",
+    "options": ["Oliver Kahn", "Manuel Neuer", "Edwin Van Der Sar", "Iker Casillas "],
+    "answer": "Oliver Kahn",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-easy-0097",
+    "question": "Which manager is known for tiki-taka football at Barcelona?",
+    "options": ["Luis Enrique", "Pep Guardiola", "Johan Cruyff", "Frank Rijkaard"],
+    "answer": "Pep Guardiola",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0098",
+    "question": "Which World Cup final went to penalties in 2006?",
+    "options": ["France vs Italy", "Brazil vs France", "Argentina vs Germany", "Spain vs Netherlands"],
+    "answer": "France vs Italy",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-easy-0100",
+    "question": "Which team won the African Cup of Nations in 2021?",
+    "options": ["Senegal", "Egypt", "Algeria", "Cameroon"],
+    "answer": "Senegal",
+    "difficulty": "easy"
+  },
+  {
+    "id": "football-medium-0101",
+    "question": "Which German striker holds the record for most goals in a single World Cup tournament?",
+    "options": ["Gerd Müller", "Miroslav Klose", "Jurgen Klinsmann", "Thomas Müller"],
+    "answer": "Miroslav Klose",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0102",
+    "question": "Who won the Golden Boot at UEFA Euro 2020?",
+    "options": ["Cristiano Ronaldo", "Harry Kane", "Romelu Lukaku", "Karim Benzema"],
+    "answer": "Cristiano Ronaldo",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0103",
+    "question": "Which club is nicknamed 'The Toffees'?",
+    "options": ["Everton", "West Ham", "Aston Villa", "Newcastle"],
+    "answer": "Everton",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-medium-0104",
+    "question": "Who was the manager when Manchester City won their first Premier League title in 2012?",
+    "options": ["Roberto Mancini", "Manuel Pellegrini", "Pep Guardiola", "Mark Hughes"],
+    "answer": "Roberto Mancini",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0109",
+    "question": "Who is the only goalkeeper to win the Ballon D'OR?",
+    "options": ["Lev Yashin", "Oliver Kahn", "Mathias Sammer", "Manuel Neuer"],
+    "answer": "Lev Yashin",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-medium-0110",
+    "question": "Which French club has won the most Ligue 1 titles after PSG?",
+    "options": ["Monaco", "Marseille", "Saint-Étienne", "Lyon"],
+    "answer": "Saint-Étienne",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-medium-0111",
+    "question": "Who was top scorer in the 2006 FIFA World Cup?",
+    "options": ["Miroslav Klose", "Thierry Henry", "Luca Toni", "Zinedine Zidane"],
+    "answer": "Miroslav Klose",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0112",
+    "question": "Which stadium hosted the 2015 UEFA Champions League final?",
+    "options": ["Wembley", "Allianz Arena", "Olympiastadion Berlin", "San Siro"],
+    "answer": "Olympiastadion Berlin",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-medium-0113",
+    "question": "Which club did Ronaldo Nazário join after leaving Barcelona?",
+    "options": ["Inter Milan", "Real Madrid", "PSV", "AC Milan"],
+    "answer": "Inter Milan",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0114",
+    "question": "Which country won the first FIFA U‑17 World Cup?",
+    "options": ["Nigeria", "Brazil", "USSR", "Ghana"],
+    "answer": "Nigeria",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0115",
+    "question": "Who scored the fastest hat-trick in UEFA Champions League history as at 2025?",
+    "options": ["Cristiano Ronaldo", "Robert Lewandowski", "Bafétimbi Gomis", "Mohamed Salah"],
+    "answer": "Mohamed Salah",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0116",
+    "question": "Which club plays home matches at Estadio Wanda Metropolitano?",
+    "options": ["Barcelona", "Real Madrid", "Atlético Madrid", "Sevilla"],
+    "answer": "Atlético Madrid",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0117",
+    "question": "Which is the only Brazilian scored in three different World Cups (2002, 2006, 2010)?",
+    "options": ["Kaká", "Ronaldo", "Robinho", "Ronaldinho"],
+    "answer": "Ronaldo",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0118",
+    "question": "Which country won the 1988 UEFA European Championship?",
+    "options": ["Germany", "Netherlands", "Italy", "France"],
+    "answer": "Netherlands",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0119",
+    "question": "Who was named FIFA World Player of the Year in 2004 and 2005?",
+    "options": ["Zinedine Zidane", "Ronaldinho", "Thierry Henry", "Andriy Shevchenko"],
+    "answer": "Ronaldinho",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0120",
+    "question": "Who scored the winning goal in the 2010 World Cup final?",
+    "options": ["David Villa", "Xavi", "Andrés Iniesta", "Fernando Torres"],
+    "answer": "Andrés Iniesta",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0121",
+    "question": "Which club was banned from European competition for financial irregularities in 2020 (later overturned)?",
+    "options": ["Chelsea", "Manchester City", "PSG", "Juventus"],
+    "answer": "Manchester City",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0122",
+    "question": "Which African country hosted the 2010 FIFA World Cup?",
+    "options": ["Egypt", "South Africa", "Nigeria", "Morocco"],
+    "answer": "South Africa",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0123",
+    "question": "Which team won the Premier League in 2017 under Antonio Conte?",
+    "options": ["Chelsea", "Manchester City", "Liverpool", "Tottenham"],
+    "answer": "Chelsea",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0124",
+    "question": "Who won the UEFA Men's Player of the Year award in 2018?",
+    "options": ["Cristiano Ronaldo", "Luka Modrić", "Lionel Messi", "Mohamed Salah"],
+    "answer": "Luka Modrić",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0125",
+    "question": "Which club did Thierry Henry join after leaving Arsenal in 2007?",
+    "options": ["Barcelona", "Juventus", "Real Madrid", "New York Red Bulls"],
+    "answer": "Barcelona",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0126",
+    "question": "Which Spanish team won the UEFA Europa League three times in a row ?",
+    "options": ["Villarreal", "Sevilla", "Valencia", "Athletic Bilbao"],
+    "answer": "Sevilla",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0127",
+    "question": "Which club did Zlatan Ibrahimović play for before joining Manchester United?",
+    "options": ["PSG", "Barcelona", "AC Milan", "Juventus"],
+    "answer": "PSG",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0128",
+    "question": "Who managed the Netherlands to a World Cup final in 2010?",
+    "options": ["Louis van Gaal", "Guus Hiddink", "Bert van Marwijk", "Frank Rijkaard"],
+    "answer": "Bert van Marwijk",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-medium-0130",
+    "question": "Which club did Frank Lampard start his managerial career with?",
+    "options": ["Chelsea", "Derby County", "West Ham", "Leicester City"],
+    "answer": "Derby County",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-medium-0131",
+    "question": "Who scored the decisive penalty for Portugal in the Euro 2016 shootout vs Poland?",
+    "options": ["Cristiano Ronaldo", "Ricardo Quaresma", "Pepe", "João Moutinho"],
+    "answer": "Ricardo Quaresma",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-medium-0132",
+    "question": "Which Premier League team did Kevin De Bruyne first join?",
+    "options": ["Chelsea", "Manchester City", "Arsenal", "Liverpool"],
+    "answer": "Chelsea",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0133",
+    "question": "Who won the FIFA Club World Cup in 2019?",
+    "options": ["Real Madrid", "Liverpool", "Flamengo", "Barcelona"],
+    "answer": "Liverpool",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0134",
+    "question": "Which club did José Mourinho manage after leaving Chelsea in 2015?",
+    "options": ["Manchester United", "Real Madrid", "Tottenham", "Inter Milan"],
+    "answer": "Manchester United",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-medium-0135",
+    "question": "Which German club is known as 'Die Schwarzgelben'?",
+    "options": ["Bayern Munich", "Borussia Dortmund", "Schalke 04", "RB Leipzig"],
+    "answer": "Borussia Dortmund",
+    "difficulty": "medium"
+  },
+  {
+    "id": "football-hard-0151",
+    "question": "Which player won UEFA Player of the Year in 1992?",
+    "options": ["Marco van Basten", "Jean-Pierre Papin", "Marco van Basten", "Manuel Amoros"],
+    "answer": "Marco van Basten",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0152",
+    "question": "Which club became the first English team to win the European Cup in 1968?",
+    "options": ["Manchester United", "Liverpool", "Nottingham Forest", "Chelsea"],
+    "answer": "Manchester United",
+    "difficulty": "expert"
+  },
+  {
+    "id": "football-hard-0155",
+    "question": "Which country won the Olympic men’s football tournament in 2008?",
+    "options": ["Argentina", "Brazil", "Nigeria", "China"],
+    "answer": "Argentina",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0165",
+    "question": "Which player made over 700 competitive club appearances for one Real Madrid?",
+    "options": ["Raúl", "Iker Casillas", "Cristiano Ronaldo", "Karim Benzema"],
+    "answer": "Raúl",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0170",
+    "question": "Which team eliminated Brazil in the quarter-finals of the 2006 World Cup?",
+    "options": ["France", "Germany", "England", "Portugal"],
+    "answer": "France",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0173",
+    "question": "Which German manager won the treble with Bayern Munich in 2013?",
+    "options": ["Jupp Heynckes", "Pep Guardiola", "Ottmar Hitzfeld", "Felix Magath"],
+    "answer": "Jupp Heynckes",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0174",
+    "question": "Which player scored the winning penalty in the 2012 Champions League final?",
+    "options": ["Andriy Shevchenko", "Frank Lampard", "Didier Drogba", "John Terry"],
+    "answer": "Didier Drogba",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0175",
+    "question": "Which manager coached Porto to the Champions League in 2004?",
+    "options": ["José Mourinho", "Carlo Ancelotti", "Manuel Pellegrini", "Rafael Benítez"],
+    "answer": "José Mourinho",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0181",
+    "question": "Which country won the Confederations Cup in 2009?",
+    "options": ["Brazil", "USA", "Spain", "Italy"],
+    "answer": "Brazil",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0182",
+    "question": "Which manager led Ajax to the Champions League in 1995?",
+    "options": ["Louis van Gaal", "Erik ten Hag", "Rinus Michels", "Johan Cruyff"],
+    "answer": "Louis van Gaal",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0183",
+    "question": "Which player is the highest goal scorer for Germany?",
+    "options": ["Miroslav Klose", "Jürgen Klinsmann", "Gerd Müller", "Thomas Müller"],
+    "answer": "Miroslav Klose",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0186",
+    "question": "Which team did Bayern Munich defeat in the 2020 UEFA Champions League final?",
+    "options": ["PSG", "Liverpool", "Real Madrid", "Chelsea"],
+    "answer": "PSG",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0187",
+    "question": "Who scored the only goal of the UEFA Euro 2016 final?",
+    "options": ["Cristiano Ronaldo", "Eder", "Pepe", "Nani"],
+    "answer": "Eder",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0189",
+    "question": "Who won the Golden Boot at the 2022 FIFA World Cup?",
+    "options": ["Kylian Mbappé", "Lionel Messi", "Olivier Giroud", "Cristiano Ronaldo"],
+    "answer": "Kylian Mbappé",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0190",
+    "question": "Which country eliminated Belgium in the quarter-finals of the 2018 FIFA World Cup?",
+    "options": ["France", "Brazil", "Croatia", "England"],
+    "answer": "France",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0192",
+    "question": "Which team did Italy defeat in a penalty shootout in the Euro 2020 semi-final?",
+    "options": ["Spain", "England", "Belgium", "Germany"],
+    "answer": "Spain",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0193",
+    "question": "Who was top scorer in the 2014 FIFA World Cup?",
+    "options": ["Lionel Messi", "Neymar", "Thomas Müller", "James Rodríguez"],
+    "answer": "James Rodríguez",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0194",
+    "question": "Which manager led Portugal to their first major trophy at Euro 2016?",
+    "options": ["Fernando Santos", "Carlos Queiroz", "Paulo Bento", "José Mourinho"],
+    "answer": "Fernando Santos",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0197",
+    "question": "Who won the Golden Glove at the 2018 FIFA World Cup?",
+    "options": ["Hugo Lloris", "Thibaut Courtois", "Manuel Neuer", "Alisson Becker"],
+    "answer": "Thibaut Courtois",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0198",
+    "question": "Which player scored a stunning bicycle kick goal for Real Madrid in the 2018 Champions League final?",
+    "options": ["Karim Benzema", "Cristiano Ronaldo", "Gareth Bale", "Luka Modrić"],
+    "answer": "Gareth Bale",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0203",
+    "question": "Who managed Chelsea to their second Champions League title in 2021?",
+    "options": ["Frank Lampard", "Thomas Tuchel", "Maurizio Sarri", "Antonio Conte"],
+    "answer": "Thomas Tuchel",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0204",
+    "question": "Who was top scorer in the 2021/22 UEFA Champions League?",
+    "options": ["Robert Lewandowski", "Karim Benzema", "Kylian Mbappé", "Mohamed Salah"],
+    "answer": "Karim Benzema",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0205",
+    "question": "Which club eliminated Barcelona with an 8-2 scoreline in the 2020 Champions League quarter-final?",
+    "options": ["PSG", "Bayern Munich", "Liverpool", "Real Madrid"],
+    "answer": "Bayern Munich",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0195",
+    "question": "Who scored Bayern Munich's winning goal in the 2013 Champions League final?",
+    "options": ["Arjen Robben", "Thomas Müller", "Mario Mandzukic", "Franck Ribéry"],
+    "answer": "Arjen Robben",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0207",
+    "question": "Which African player finished third in the 2019 Ballon d'Or voting?",
+    "options": ["Sadio Mané", "Mohamed Salah", "Riyad Mahrez", "Kalidou Koulibaly"],
+    "answer": "Sadio Mané",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0208",
+    "question": "Which coach won the treble with Barcelona in 2015?",
+    "options": ["Luis Enrique", "Pep Guardiola", "Ronald Koeman", "Ernesto Valverde"],
+    "answer": "Luis Enrique",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0211",
+    "question": "Which team did Villarreal defeat in the 2021 UEFA Europa League final on penalties?",
+    "options": ["Arsenal", "Manchester United", "Sevilla", "Roma"],
+    "answer": "Manchester United",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0212",
+    "question": "Who was awarded the Best FIFA Men’s Player in 2020?",
+    "options": ["Robert Lewandowski", "Lionel Messi", "Cristiano Ronaldo", "Kevin De Bruyne"],
+    "answer": "Robert Lewandowski",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0213",
+    "question": "Which country won the UEFA Nations League in 2021?",
+    "options": ["Spain", "France", "Portugal", "Italy"],
+    "answer": "France",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0209",
+    "question": "Which country eliminated Brazil in the 2014 FIFA World Cup semi-final?",
+    "options": ["Germany", "Netherlands", "Argentina", "France"],
+    "answer": "Germany",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0184",
+    "question": "Which goalkeeper won the inaugural Yashin Award (Golden Glove) at the 2018 World Cup?",
+    "options": ["Thibaut Courtois", "Hugo Lloris", "Manuel Neuer", "David de Gea"],
+    "answer": "Thibaut Courtois",
+    "difficulty": "hard"
+  },
+  {
+    "id": "football-hard-0215",
+    "question": "Who scored the winning goal for Bayern Munich against PSG in the 2020 Champions League final?",
+    "options": ["Thomas Müller", "Kingsley Coman", "Robert Lewandowski", "Serge Gnabry"],
+    "answer": "Kingsley Coman",
+    "difficulty": "hard"
+  }
+]

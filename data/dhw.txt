@@ -1,0 +1,583 @@
+[
+  {
+    "id": "dhw-001",
+    "difficulty": "easy",
+    "question": "Desperate Housewives is primarily set in which fictional neighborhood?",
+    "options": ["Wisteria Lane", "Ridgewood Drive", "Maple Court", "Fairview Circle"],
+    "answer": "Wisteria Lane"
+  },
+  {
+    "id": "dhw-003",
+    "difficulty": "easy",
+    "question": "Who narrates the show after the opening event of Season 1?",
+    "options": ["Mary Alice Young", "Bree Van de Kamp", "Susan Mayer", "Edie Britt"],
+    "answer": "Mary Alice Young"
+  },
+  {
+    "id": "dhw-004",
+    "difficulty": "easy",
+    "question": "What major event happens to Mary Alice in the pilot that triggers the mystery?",
+    "options": ["She dies by suicide", "She moves away", "She is arrested", "She is killed"],
+    "answer": "She dies by suicide"
+  },
+  {
+    "id": "dhw-005",
+    "difficulty": "easy",
+    "question": "What is the name of the town Desperate Housewives is set in?",
+    "options": ["Fairview", "Stars Hollow", "Rosewood", "Tree Hill"],
+    "answer": "Fairview"
+  },
+  {
+    "id": "dhw-007",
+    "difficulty": "easy",
+    "question": "Which network originally aired Desperate Housewives?",
+    "options": ["ABC", "HBO", "NBC", "FX"],
+    "answer": "ABC"
+  },
+  {
+    "id": "dhw-008",
+    "difficulty": "easy",
+    "question": "How many main housewives form the core group early in the series?",
+    "options": ["4", "3", "5", "6"],
+    "answer": "4"
+  },
+  {
+    "id": "dhw-009",
+    "difficulty": "easy",
+    "question": "Which housewife is most associated with perfection, etiquette, and control?",
+    "options": ["Bree", "Susan", "Gabrielle", "Lynette"],
+    "answer": "Bree"
+  },
+  {
+    "id": "dhw-010",
+    "difficulty": "easy",
+    "question": "Which housewife is most associated with chaotic dating life and clumsiness early on?",
+    "options": ["Susan", "Bree", "Gabrielle", "Lynette"],
+    "answer": "Susan"
+  },
+  {
+    "id": "dhw-011",
+    "difficulty": "easy",
+    "question": "Which housewife is most associated with motherhood overload and survival-mode parenting?",
+    "options": ["Lynette", "Gabrielle", "Bree", "Susan"],
+    "answer": "Lynette"
+  },
+  {
+    "id": "dhw-012",
+    "difficulty": "easy",
+    "question": "Which housewife is most associated with glamour, wealth, and a complicated marriage dynamic?",
+    "options": ["Gabrielle", "Susan", "Lynette", "Bree"],
+    "answer": "Gabrielle"
+  },
+  {
+    "id": "dhw-021",
+    "difficulty": "easy",
+    "question": "What is the name of Susan’s daughter?",
+    "options": ["Julie", "Penny", "Danielle", "Celeste"],
+    "answer": "Julie"
+  },
+  {
+    "id": "dhw-022",
+    "difficulty": "easy",
+    "question": "Which couple is most associated with having a very large number of kids early on?",
+    "options": ["The Scavos", "The Solises", "The Youngs", "The Delfinos"],
+    "answer": "The Scavos"
+  },
+
+  {
+    "id": "dhw-031",
+    "difficulty": "medium",
+    "question": "What is the name of Bree’s husband in Season 1?",
+    "options": ["Rex", "Tom", "Carlos", "Mike"],
+    "answer": "Rex"
+  },
+  {
+    "id": "dhw-032",
+    "difficulty": "medium",
+    "question": "What is the name of Lynette’s husband?",
+    "options": ["Tom", "Rex", "Carlos", "Orson"],
+    "answer": "Tom"
+  },
+  {
+    "id": "dhw-033",
+    "difficulty": "medium",
+    "question": "What is the name of Gabrielle’s husband?",
+    "options": ["Carlos", "Mike", "Tom", "Rex"],
+    "answer": "Carlos"
+  },
+  {
+    "id": "dh-easy-0005",
+    "question": "Which of these is NOT one of the four main housewives?",
+    "options": ["Susan Mayer", "Edie Britt", "Gabrielle Solis", "Lynette Scavo"],
+    "answer": "Edie Britt",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dh-easy-0009",
+    "question": "Which neighbor is Susan’s main rival for Mike Delfino’s affections early on?",
+    "options": ["Edie Britt", "Gabrielle Solis", "Bree Van de Kamp", "Lynette Scavo"],
+    "answer": "Edie Britt",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dh-easy-0010",
+    "question": "What is the profession of Mike Delfino when he moves to Wisteria Lane?",
+    "options": ["Plumber", "Electrician", "Police officer", "Teacher"],
+    "answer": "Plumber",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dh-easy-0018",
+    "question": "What is the name of Gabrielle and Carlos’ older daughter introduced after the time jump?",
+    "options": ["Juanita", "Celia", "Danielle", "Penny"],
+    "answer": "Juanita",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dh-easy-0021",
+    "question": "Who created Desperate Housewives?",
+    "options": ["Marc Cherry", "Shonda Rhimes", "J.J. Abrams", "Ryan Murphy"],
+    "answer": "Marc Cherry",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dh-easy-0022",
+    "question": "In what year did Desperate Housewives premiere?",
+    "options": ["2004", "2002", "2006", "2008"],
+    "answer": "2004",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dhw-001",
+    "difficulty": "expert",
+    "question": "How many total episodes are there in Desperate Housewives?",
+    "options": ["180", "172", "164", "188"],
+    "answer": "180"
+  },
+  {
+    "id": "dhw-002",
+    "difficulty": "medium",
+    "question": "Which family moves to Wisteria Lane and becomes the central Season 2 mystery?",
+    "options": ["Applewhites", "Bolens", "Williams", "Dashwoods"],
+    "answer": "Applewhites"
+  },
+  {
+    "id": "dhw-003",
+    "difficulty": "medium",
+    "question": "What is the name of Betty Applewhite’s disabled son?",
+    "options": ["Caleb", "Matthew", "Zach", "Eddie"],
+    "answer": "Caleb"
+  },
+
+  {
+    "id": "dhw-004",
+    "difficulty": "medium",
+    "question": "Who played Susan Mayer?",
+    "options": ["Teri Hatcher", "Marcia Cross", "Eva Longoria", "Felicity Huffman"],
+    "answer": "Teri Hatcher"
+  },
+  {
+    "id": "dhw-005",
+    "difficulty": "medium",
+    "question": "Who played Bree Van de Kamp?",
+    "options": ["Marcia Cross", "Teri Hatcher", "Eva Longoria", "Felicity Huffman"],
+    "answer": "Marcia Cross"
+  },
+  {
+    "id": "dhw-006",
+    "difficulty": "medium",
+    "question": "Who played Lynette Scavo?",
+    "options": ["Felicity Huffman", "Teri Hatcher", "Marcia Cross", "Eva Longoria"],
+    "answer": "Felicity Huffman"
+  },
+  {
+    "id": "dhw-007",
+    "difficulty": "medium",
+    "question": "Who played Gabrielle Solis?",
+    "options": ["Eva Longoria", "Marcia Cross", "Felicity Huffman", "Teri Hatcher"],
+    "answer": "Eva Longoria"
+  },
+
+  {
+    "id": "dhw-008",
+    "difficulty": "medium",
+    "question": "Who played Edie Britt?",
+    "options": ["Nicollette Sheridan", "Dana Delany", "Vanessa Williams", "Alfre Woodard"],
+    "answer": "Nicollette Sheridan"
+  },
+  {
+    "id": "dhw-009",
+    "difficulty": "medium",
+    "question": "Who played Mike Delfino?",
+    "options": ["James Denton", "Doug Savant", "Mark Moses", "Kyle MacLachlan"],
+    "answer": "James Denton"
+  },
+  {
+    "id": "dhw-010",
+    "difficulty": "medium",
+    "question": "Who played Carlos Solis?",
+    "options": ["Ricardo Antonio Chavira", "Jesse Metcalfe", "Kevin Rahm", "Neal McDonough"],
+    "answer": "Ricardo Antonio Chavira"
+  },
+
+  {
+    "id": "dhw-011",
+    "difficulty": "easy",
+    "question": "What fruit is shown in the Desperate Housewives logo/opening imagery?",
+    "options": ["Apple", "Pear", "Peach", "Cherry"],
+    "answer": "Apple"
+  },
+  {
+    "id": "dh-easy-0023",
+    "question": "How many seasons did Desperate Housewives run?",
+    "options": ["Eight", "Six", "Seven", "Nine"],
+    "answer": "Eight",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dh-med-0027",
+    "question": "What was eventually revealed to be inside the toy chest Paul dug up?",
+    "options": ["Deirdre’s body", "Money", "Weapons", "Mary Alice’s diary"],
+    "answer": "Deirdre’s body",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dh-med-0028",
+    "question": "Which character did Gabrielle have an affair with in season 1?",
+    "options": ["John Rowland", "Karl Mayer", "Mike Delfino", "Tom Scavo"],
+    "answer": "John Rowland",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dh-med-0029",
+    "question": "Why is Carlos Solis sent to prison in early seasons?",
+    "options": ["He was double‑crossed by a business partner", "He assaulted John", "He evaded taxes", "He crashed his car drunk"],
+    "answer": "He was double‑crossed by a business partner",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dh-med-0030",
+    "question": "What major struggle does Lynette face when Tom becomes a stay‑at‑home dad?",
+    "options": ["Returning to her advertising career", "Starting a law degree", "Running for office", "Moving away from Wisteria Lane"],
+    "answer": "Returning to her advertising career",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dh-med-0031",
+    "question": "Which serious addiction does Bree battle during the series?",
+    "options": ["Alcoholism", "Gambling", "Painkillers", "Cocaine"],
+    "answer": "Alcoholism",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dh-med-0033",
+    "question": "Which season’s mystery involves the Applewhite family moving to Wisteria Lane?",
+    "options": ["Season 2", "Season 1", "Season 3", "Season 4"],
+    "answer": "Season 2",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dh-med-0034",
+    "question": "With which Applewhite does Bree’s daughter Danielle become romantically involved?",
+    "options": ["Matthew Applewhite", "Caleb Applewhite", "Betty’s nephew", "Dave Williams"],
+    "answer": "Matthew Applewhite",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dh-med-0035",
+    "question": "Which major health crisis does Lynette face mid‑series?",
+    "options": ["Cancer", "Heart attack", "Stroke", "Diabetes"],
+    "answer": "Cancer",
+    "difficulty": "medium"
+  },
+
+  {
+    "id": "dh-med-0043",
+    "question": "Who is revealed to have accidentally killed Deirdre when she tried to take back Dana/Zach?",
+    "options": ["Mary Alice Young", "Paul Young", "Mike Delfino", "Carlos Solis"],
+    "answer": "Mary Alice Young",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dh-hard-0056",
+    "question": "Which season prominently features a tornado hitting Wisteria Lane?",
+    "options": ["Season 4", "Season 3", "Season 5", "Season 6"],
+    "answer": "Season 4",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dh-hard-0057",
+    "question": "Which character hides a dark secret in her basement involving her son and a woman chained up?",
+    "options": ["Betty Applewhite", "Karen McCluskey", "Edie Britt", "Katherine Mayfair"],
+    "answer": "Betty Applewhite",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dhw-q-001",
+    "difficulty": "hard",
+    "question": "To keep her affair quiet, what did Gabrielle buy the girl who saw her?",
+    "options": ["A dress", "A bike", "A necklace", "A puppy"],
+    "answer": "A bike"
+  },
+  {
+    "id": "dhw-q-002",
+    "difficulty": "hard",
+    "question": "How much did Gabrielle’s mother-in-law charge on Carlos’s credit card?",
+    "options": ["$10,000", "$8,000", "$15,000", "$5,000"],
+    "answer": "$15,000"
+  },
+  {
+    "id": "dhw-q-003",
+    "difficulty": "medium",
+    "question": "Lynette fought to keep which fairy tale as the school play’s original story?",
+    "options": ["Little Red Riding Hood", "Cinderella", "Snow White", "Sleeping Beauty"],
+    "answer": "Little Red Riding Hood"
+  },
+  {
+    "id": "dhw-q-004",
+    "difficulty": "medium",
+    "question": "What kind of business did Lynette and Renee start together?",
+    "options": ["Interior design", "Catering", "Real estate", "Event planning"],
+    "answer": "Interior design"
+  },
+  {
+    "id": "dhw-q-005",
+    "difficulty": "hard",
+    "question": "In Season 7, which housewife needs a kidney transplant?",
+    "options": ["Susan", "Bree", "Lynette", "Gabrielle"],
+    "answer": "Susan"
+  },
+  {
+    "id": "dhw-q-006",
+    "difficulty": "medium",
+    "question": "What are the names of Lynette’s twin sons?",
+    "options": ["Porter and Preston", "Parker and Preston", "Porter and Parker", "Preston and Patrick"],
+    "answer": "Porter and Preston"
+  },
+  {
+    "id": "dhw-q-007",
+    "difficulty": "easy",
+    "question": "When the women meet up together, what game do they usually play?",
+    "options": ["Poker", "Bridge", "Scrabble", "Monopoly"],
+    "answer": "Poker"
+  },
+  {
+    "id": "dhw-q-008",
+    "difficulty": "hard",
+    "question": "When Lynette had cancer, what name did she use when dressing up as a cheerleader for Tom?",
+    "options": ["Candy", "Bambi", "Lola", "Roxy"],
+    "answer": "Candy"
+  },
+  {
+    "id": "dhw-q-009",
+    "difficulty": "medium",
+    "question": "What is the name of the fictional U.S. state where the series is set?",
+    "options": ["Eagle State", "Liberty State", "Fairview State", "Wisteria State"],
+    "answer": "Eagle State"
+  },
+  {
+    "id": "dhw-q-010",
+    "difficulty": "medium",
+    "question": "In the story, to which country does Alma move to live with her aunt?",
+    "options": ["Canada", "France", "Italy", "Spain"],
+    "answer": "Canada"
+  },
+  {
+    "id": "dh-easy-0004",
+    "question": "What was Gabrielle Solis's profession before moving to Wisteria Lane?",
+    "options": ["Lawyer", "Model", "Chef", "Doctor"],
+    "answer": "Model",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dh-easy-0016",
+    "question": "How many Scavo children are there at the start of the series?",
+    "options": ["Two", "Three", "Four", "Five"],
+    "answer": "Four",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dh-easy-0020",
+    "question": "What does Susan do for a living?",
+    "options": ["Author", "Illustrator", "Teacher", "Chef"],
+    "answer": "Illustrator",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dh-easy-0027",
+    "question": "What kind of business does Tom Scavo open in Season 3?",
+    "options": ["An ad agency", "A pizzeria", "A car dealership", "A hardware store"],
+    "answer": "A pizzeria",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dh-easy-0028",
+    "question": "Which housewife burns down Edie Britt’s house by accident?",
+    "options": ["Bree", "Susan", "Gabrielle", "Lynette"],
+    "answer": "Susan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dh-easy-0033",
+    "question": "In the five-year time jump, Gabrielle has two daughters. What are their names?",
+    "options": ["Penny and Paige", "Juanita and Celia", "Danielle and Celia", "Juanita and Jane"],
+    "answer": "Juanita and Celia",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dh-easy-0034",
+    "question": "What color is the 'Desperate Housewives' logo's iconic apple?",
+    "options": ["Green", "Yellow", "Red", "Purple"],
+    "answer": "Red",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dh-easy-0043",
+    "question": "Who is the 'fifth' housewife added to the main cast in Season 7?",
+    "options": ["Renee Perry", "Angie Bolen", "Katherine Mayfair", "Betty Applewhite"],
+    "answer": "Renee Perry",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dh-easy-0044",
+    "question": "What event causes many characters to be trapped in a grocery store in Season 3?",
+    "options": ["A tornado", "A hostage situation", "A fire", "An earthquake"],
+    "answer": "A hostage situation",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dh-med-0051",
+    "question": "What was Mary Alice Young's real name before she changed it and moved to Wisteria Lane?",
+    "options": ["Angela Forrest", "Martha Huber", "Felicia Tilman", "Katherine Mayfair"],
+    "answer": "Angela Forrest",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dh-med-0056",
+    "question": "How did Rex Van de Kamp die?",
+    "options": ["Heart attack", "Suicide", "Car accident", "Gunshot"],
+    "answer": "Heart attack",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dh-med-0057",
+    "question": "Who was Tom Scavo's secret daughter that appeared in Season 2?",
+    "options": ["Penny", "Kayla", "Jane", "Lily"],
+    "answer": "Kayla",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dh-med-0060",
+    "question": "Who was the 'Fairview Strangler' in Season 6?",
+    "options": ["Danny Bolen", "Eddie Orlofsky", "Nick Bolen", "Dave Williams"],
+    "answer": "Eddie Orlofsky",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dh-med-0061",
+    "question": "What was the name of Mike Delfino’s dog?",
+    "options": ["Bongo", "Buddy", "Rex", "Lucky"],
+    "answer": "Bongo",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dh-med-0067",
+    "question": "What was the name of the nurse who revealed the baby-switch secret on her deathbed?",
+    "options": ["Nurse Teresa", "Nurse Claire", "Nurse Ratch", "Nurse Brenda"],
+    "answer": "Nurse Teresa",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dh-med-0071",
+    "question": "In Season 3, what was the name of the woman who held people hostage in a supermarket?",
+    "options": ["Carolyn Bigsby", "Alma Hodge", "Gloria Hodge", "Monique Polier"],
+    "answer": "Carolyn Bigsby",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dh-med-0079",
+    "question": "What was the occupation of Katherine Mayfair’s first husband, Wayne Davis?",
+    "options": ["Doctor", "Police Officer", "Lawyer", "Firefighter"],
+    "answer": "Police Officer",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dh-med-0081",
+    "question": "How did Mike Delfino die in the final season?",
+    "options": ["Car crash", "Heart attack", "Gunshot", "Drowned"],
+    "answer": "Gunshot",
+    "difficulty": "hard"
+  },
+
+  {
+    "id": "dh-med-0085",
+    "question": "What did Susan do for extra money in Season 7 that got her into trouble?",
+    "options": ["Gambling", "House cleaning in lingerie", "Selling drugs", "Stealing from neighbors"],
+    "answer": "House cleaning in lingerie",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dh-med-0099",
+    "question": "What is the name of the company Susan Mayer works for to support her family?",
+    "options": ["Broom-Stick-Babes.com", "Va-Va-Va-Broom.com", "Wisteria-Wash.com", "Maid-to-Order.com"],
+    "answer": "Va-Va-Va-Broom.com",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dh-hard-0051",
+    "question": "What is the name of the elementary school Juanita and MJ attended?",
+    "options": ["Oak Ridge School", "Fairview Day School", "Wisteria Prep", "Greenvale School"],
+    "answer": "Oak Ridge School",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dh-hard-0018",
+    "question": "What was the name of the nightclub that was set on fire in Seson 5?",
+    "options": ["The White Horse", "The Booby Trap", "The Pink Pony", "The Gentleman's Club"],
+    "answer": "The White Horse",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dh-hard-0019",
+    "question": "Which character did the 'Fairview Strangler' kill in the coffee shop bathroom?",
+    "options": ["Emily Portsmith", "Julie Mayer", "Robin Gallagher", "Irina"],
+    "answer": "Emily Portsmith",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dh-hard-0020",
+    "question": "What was the cause of death for Gabrielle's first husband?",
+    "options": ["Impaled by a fence post", "Drowned", "Gunshot", "Car accident"],
+    "answer": "Impaled by a fence post",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dh-med-0021",
+    "question": "What is the name of the Fairview bakery and cafe where Emily Portsmith worked in Season 6?",
+    "options": ["The Daily Grind", "The Coffee Cup", "Penny's Place", "Fairview Beans"],
+    "answer": "The Coffee Cup",
+    "difficulty": "hard"
+  },
+ 
+  {
+    "id": "dh-hard-0025",
+    "question": "What was the name of the detective who investigated the death of Alejandro Perez?",
+    "options": ["Chuck Vance", "Murphy", "Ridley", "Solis"],
+    "answer": "Chuck Vance",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dh-hard-0026",
+    "question": "What was the number of the house Mike Delfino rented when he first moved to Wisteria Lane?",
+    "options": ["4356", "4352", "4350", "4354"],
+    "answer": "4356",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dh-hard-0048",
+    "question": "What was the name of the woman Carlos had an affair with while he was blind (the housekeeper)?",
+    "options": ["Xiao-Mei", "Ivana", "Maria", "Rosa"],
+    "answer": "Xiao-Mei",
+    "difficulty": "hard"
+  }
+]

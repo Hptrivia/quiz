@@ -1,0 +1,808 @@
+[
+  {
+    "id": "de-easy-0001",
+    "question": "What is the capital of Germany?",
+    "options": ["Berlin", "Munich", "Hamburg", "Frankfurt"],
+    "answer": "Berlin",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-easy-0002",
+    "question": "How many federal states (Bundesländer) does Germany have?",
+    "options": ["12", "14", "16", "18"],
+    "answer": "16",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-easy-0003",
+    "question": "What currency is used in Germany?",
+    "options": ["Euro", "Pound", "Swiss franc", "Dollar"],
+    "answer": "Euro",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-easy-0004",
+    "question": "Which colours are on the German flag (top to bottom)?",
+    "options": ["Black, red, gold", "Red, white, blue", "Green, white, red", "Black, white, red"],
+    "answer": "Black, red, gold",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-easy-0005",
+    "question": "What is Germany’s national anthem (official song) called?",
+    "options": ["Deutschlandlied", "Ode to Joy", "Die Wacht am Rhein", "99 Luftballons"],
+    "answer": "Deutschlandlied",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-easy-0006",
+    "question": "Which stanza of the Deutschlandlied is used as the national anthem today?",
+    "options": ["Only the third stanza", "Only the first stanza", "Only the second stanza", "All three stanzas"],
+    "answer": "Only the third stanza",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-easy-0007",
+    "question": "Which city is famous for the Oktoberfest?",
+    "options": ["Munich", "Berlin", "Cologne", "Hamburg"],
+    "answer": "Munich",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-easy-0008",
+    "question": "Which river runs through Cologne (Köln)?",
+    "options": ["Rhine", "Danube", "Elbe", "Main"],
+    "answer": "Rhine",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-easy-0009",
+    "question": "Which German car brand is known for its four-ring logo?",
+    "options": ["Audi", "BMW", "Mercedes-Benz", "Volkswagen"],
+    "answer": "Audi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-easy-0010",
+    "question": "Which German car brand has a blue-and-white roundel logo?",
+    "options": ["BMW", "Porsche", "Opel", "Audi"],
+    "answer": "BMW",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-easy-0011",
+    "question": "Which German city is known for the Brandenburg Gate?",
+    "options": ["Berlin", "Dresden", "Leipzig", "Stuttgart"],
+    "answer": "Berlin",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-easy-0013",
+    "question": "Which sea borders Germany to the north-west?",
+    "options": ["North Sea", "Baltic Sea", "Caspian Sea", "Adriatic Sea"],
+    "answer": "North Sea",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-easy-0014",
+    "question": "Which sea borders Germany to the north-east?",
+    "options": ["Baltic Sea", "North Sea", "Mediterranean Sea", "Red Sea"],
+    "answer": "Baltic Sea",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-easy-0015",
+    "question": "Which is the most spoken language in Germany?",
+    "options": ["German", "French", "English", "Dutch"],
+    "answer": "German",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-easy-0016",
+    "question": "What is Germany’s national day called?",
+    "options": ["German Unity Day", "Reformation Day", "May Day", "Republic Day"],
+    "answer": "German Unity Day",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-easy-0017",
+    "question": "Which German city is famous for the Cathedral (Dom)?",
+    "options": ["Cologne", "Frankfurt", "Nuremberg", "Hannover"],
+    "answer": "Cologne",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-easy-0018",
+    "question": "Which German city is known for the Elbphilharmonie concert hall?",
+    "options": ["Hamburg", "Berlin", "Munich", "Dresden"],
+    "answer": "Hamburg",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-easy-0020",
+    "question": "What is the name of Germany’s parliament?",
+    "options": ["Bundestag", "Bundesrat", "Landtag", "Reichstag"],
+    "answer": "Bundestag",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-easy-0021",
+    "question": "Germany’s men national football team won the FIFA World Cup in which year most recently?",
+    "options": ["2014", "2010", "2018", "2022"],
+    "answer": "2014",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-easy-0022",
+    "question": "Which German city is famous for the Stock Exchange area and is a major banking hub?",
+    "options": ["Frankfurt", "Hamburg", "Leipzig", "Dresden"],
+    "answer": "Frankfurt",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-easy-0023",
+    "question": "Which German state is Berlin located in?",
+    "options": ["Berlin", "Brandenburg", "Saxony", "Hesse"],
+    "answer": "Berlin",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-easy-0025",
+    "question": "Which German city is known for its annual Berlinale film festival?",
+    "options": ["Berlin", "Munich", "Hamburg", "Stuttgart"],
+    "answer": "Berlin",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-easy-0026",
+    "question": "What is the most common plug type in Germany?",
+    "options": ["Type F", "Type G", "Type A", "Type I"],
+    "answer": "Type F",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-easy-0027",
+    "question": "Which German region is famous for the Black Forest (Schwarzwald)?",
+    "options": ["Baden-Württemberg", "Saxony", "Berlin", "Bremen"],
+    "answer": "Baden-Württemberg",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-easy-0028",
+    "question": "Which German city is famous for the “Semperoper” opera house?",
+    "options": ["Dresden", "Cologne", "Frankfurt", "Stuttgart"],
+    "answer": "Dresden",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-easy-0029",
+    "question": "Which German state is known as the largest by area?",
+    "options": ["Bavaria", "Lower Saxony", "Baden-Württemberg", "Brandenburg"],
+    "answer": "Bavaria",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-easy-0030",
+    "question": "Which German city is famous for its beer culture and the Hofbräuhaus?",
+    "options": ["Munich", "Berlin", "Düsseldorf", "Leipzig"],
+    "answer": "Munich",
+    "difficulty": "easy"
+  },
+
+  {
+    "id": "de-medium-0001",
+    "question": "What is the name of Germany’s upper chamber representing the states?",
+    "options": ["Bundesrat", "Bundestag", "Bundesbank", "Bundeswehr"],
+    "answer": "Bundesrat",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-medium-0002",
+    "question": "What is Germany’s head of government called?",
+    "options": ["Chancellor (Bundeskanzler)", "President (Bundespräsident)", "Speaker", "Governor"],
+    "answer": "Chancellor (Bundeskanzler)",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-medium-0003",
+    "question": "Who is Germany’s Chancellor (as of Feb 2026)?",
+    "options": ["Friedrich Merz", "Olaf Scholz", "Angela Merkel", "Frank-Walter Steinmeier"],
+    "answer": "Friedrich Merz",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-medium-0004",
+    "question": "Who is Germany’s Federal President (as of Feb 2026)?",
+    "options": ["Frank-Walter Steinmeier", "Friedrich Merz", "Ursula von der Leyen", "Annalena Baerbock"],
+    "answer": "Frank-Walter Steinmeier",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-medium-0005",
+    "question": "Which German city was the capital of West Germany?",
+    "options": ["Bonn", "Berlin", "Frankfurt", "Munich"],
+    "answer": "Bonn",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-medium-0006",
+    "question": "In what year did German reunification take place?",
+    "options": ["1990", "1989", "1991", "1987"],
+    "answer": "1990",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-medium-0007",
+    "question": "Which structure was built in 1961 to divide East and West Berlin?",
+    "options": ["Berlin Wall", "Brandenburg Gate", "Reichstag Dome", "Checkered Fence"],
+    "answer": "Berlin Wall",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-medium-0008",
+    "question": "Which event in 1989 symbolized the opening of East Germany and the start of reunification?",
+    "options": ["Fall of the Berlin Wall", "Treaty of Versailles", "Formation of NATO", "Bonn Conference"],
+    "answer": "Fall of the Berlin Wall",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-medium-0009",
+    "question": "Which German river flows through cities like Ulm, Regensburg, and Passau?",
+    "options": ["Danube", "Rhine", "Elbe", "Weser"],
+    "answer": "Danube",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-medium-0010",
+    "question": "Which German river flows through Dresden and Hamburg?",
+    "options": ["Elbe", "Rhine", "Danube", "Main"],
+    "answer": "Elbe",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-medium-0011",
+    "question": "Which German city is famous for being the birthplace of Johann Sebastian Bach?",
+    "options": ["Eisenach", "Leipzig", "Weimar", "Bonn"],
+    "answer": "Eisenach",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-medium-0012",
+    "question": "Which German city is strongly associated with Goethe and Schiller?",
+    "options": ["Weimar", "Hamburg", "Cologne", "Dortmund"],
+    "answer": "Weimar",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-medium-0013",
+    "question": "Which German city is famous for the “documenta” contemporary art exhibition?",
+    "options": ["Kassel", "Bremen", "Stuttgart", "Aachen"],
+    "answer": "Kassel",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-medium-0014",
+    "question": "Which German city is known for the Frauenkirche?",
+    "options": ["Dresden", "Berlin", "Munich", "Frankfurt"],
+    "answer": "Dresden",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-medium-0015",
+    "question": "Which German city is known for the “Miniatur Wunderland” attraction?",
+    "options": ["Hamburg", "Berlin", "Cologne", "Nuremberg"],
+    "answer": "Hamburg",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-medium-0019",
+    "question": "Which German state capital is Stuttgart the capital of?",
+    "options": ["Baden-Württemberg", "Bavaria", "Hesse", "Saxony"],
+    "answer": "Baden-Württemberg",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-medium-0020",
+    "question": "Which German state capital is Munich the capital of?",
+    "options": ["Bavaria", "Hesse", "North Rhine-Westphalia", "Lower Saxony"],
+    "answer": "Bavaria",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-medium-0021",
+    "question": "Which German city is famous for the “Karneval” celebrations?",
+    "options": ["Cologne", "Dresden", "Augsburg", "Freiburg"],
+    "answer": "Cologne",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-medium-0022",
+    "question": "Which German city is famous for the “Reeperbahn” nightlife district?",
+    "options": ["Hamburg", "Berlin", "Munich", "Leipzig"],
+    "answer": "Hamburg",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-medium-0026",
+    "question": "What is the name of Germany’s constitution (adopted after WWII)?",
+    "options": ["Grundgesetz", "Magna Carta", "Bill of Rights", "Constitution Act"],
+    "answer": "Grundgesetz",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-medium-0027",
+    "question": "Which German holiday on May 1 is a national public holiday?",
+    "options": ["Labour Day", "German Unity Day", "Reformation Day", "Epiphany"],
+    "answer": "Labour Day",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-hard-0001",
+    "question": "Which German state is the most populous?",
+    "options": ["North Rhine-Westphalia", "Bavaria", "Baden-Württemberg", "Berlin"],
+    "answer": "North Rhine-Westphalia",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-hard-0002",
+    "question": "Which German city is the seat of the Federal Constitutional Court (Bundesverfassungsgericht)?",
+    "options": ["Karlsruhe", "Berlin", "Frankfurt", "Bonn"],
+    "answer": "Karlsruhe",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-hard-0003",
+    "question": "Which city is home to the European Central Bank (ECB) headquarters?",
+    "options": ["Frankfurt", "Berlin", "Brussels", "Munich"],
+    "answer": "Frankfurt",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-hard-0007",
+    "question": "Which German state capital is Wiesbaden the capital of?",
+    "options": ["Hesse", "Saarland", "Thuringia", "Brandenburg"],
+    "answer": "Hesse",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-hard-0008",
+    "question": "Which German state capital is Mainz the capital of?",
+    "options": ["Rhineland-Palatinate", "Hesse", "Saxony", "Bavaria"],
+    "answer": "Rhineland-Palatinate",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-hard-0009",
+    "question": "Which German state capital is Schwerin the capital of?",
+    "options": ["Mecklenburg-Vorpommern", "Brandenburg", "Saxony-Anhalt", "Thuringia"],
+    "answer": "Mecklenburg-Vorpommern",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-hard-0010",
+    "question": "Which German state capital is Magdeburg the capital of?",
+    "options": ["Saxony-Anhalt", "Saxony", "Thuringia", "Brandenburg"],
+    "answer": "Saxony-Anhalt",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-hard-0011",
+    "question": "Which German state capital is Potsdam the capital of?",
+    "options": ["Brandenburg", "Berlin", "Saxony", "Bremen"],
+    "answer": "Brandenburg",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-hard-0012",
+    "question": "Which German state capital is Erfurt the capital of?",
+    "options": ["Thuringia", "Saxony", "Hesse", "Bavaria"],
+    "answer": "Thuringia",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-hard-0013",
+    "question": "Which German state capital is Dresden the capital of?",
+    "options": ["Saxony", "Saxony-Anhalt", "Thuringia", "Hesse"],
+    "answer": "Saxony",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-hard-0014",
+    "question": "Which German state capital is Kiel the capital of?",
+    "options": ["Schleswig-Holstein", "Lower Saxony", "Hamburg", "Mecklenburg-Vorpommern"],
+    "answer": "Schleswig-Holstein",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-hard-0015",
+    "question": "Which German state capital is Hannover the capital of?",
+    "options": ["Lower Saxony", "North Rhine-Westphalia", "Hesse", "Saarland"],
+    "answer": "Lower Saxony",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-hard-0016",
+    "question": "Which German state capital is Saarbrücken the capital of?",
+    "options": ["Saarland", "Hesse", "Rhineland-Palatinate", "Bavaria"],
+    "answer": "Saarland",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-hard-0017",
+    "question": "Which German state capital is Düsseldorf the capital of?",
+    "options": ["North Rhine-Westphalia", "Hesse", "Bavaria", "Lower Saxony"],
+    "answer": "North Rhine-Westphalia",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-hard-0018",
+    "question": "Which German state capital is Stuttgart the capital of?",
+    "options": ["Baden-Württemberg", "Bavaria", "Hesse", "Saxony"],
+    "answer": "Baden-Württemberg",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-hard-0019",
+    "question": "Which German state capital is Munich the capital of?",
+    "options": ["Bavaria", "Baden-Württemberg", "Hesse", "Berlin"],
+    "answer": "Bavaria",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-hard-0020",
+    "question": "Which German state capital is Dresden the capital of?",
+    "options": ["Saxony", "Thuringia", "Saxony-Anhalt", "Brandenburg"],
+    "answer": "Saxony",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-hard-0021",
+    "question": "Which German political party is traditionally associated with the letters CDU?",
+    "options": ["Christian Democratic Union", "Christian Democratic Alliance", "Citizens Democratic Union", "Central Democratic Union"],
+    "answer": "Christian Democratic Union",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-hard-0022",
+    "question": "Which German agency is responsible for monetary policy and is part of the Eurosystem?",
+    "options": ["Bundesbank", "Bundeswehr", "Bundestag", "Bundesrat"],
+    "answer": "Bundesbank",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-hard-0023",
+    "question": "Which German composer wrote the famous “Ode to Joy” melody used as the EU anthem?",
+    "options": ["Ludwig van Beethoven", "Johann Sebastian Bach", "Richard Wagner", "Johannes Brahms"],
+    "answer": "Ludwig van Beethoven",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-hard-0024",
+    "question": "Which German city is famously linked to Beethoven’s birthplace?",
+    "options": ["Bonn", "Leipzig", "Hamburg", "Dresden"],
+    "answer": "Bonn",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-hard-0026",
+    "question": "Which major German airport is also the largest in Germany by passenger traffic?",
+    "options": ["Frankfurt Airport", "Berlin Brandenburg", "Munich Airport", "Düsseldorf Airport"],
+    "answer": "Frankfurt Airport",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-expert-0003",
+    "question": "Which German state has the lowest population?",
+    "options": ["Bremen", "Saarland", "Mecklenburg-Vorpommern", "Thuringia"],
+    "answer": "Bremen",
+    "difficulty": "expert"
+  },
+  {
+    "id": "de-expert-0009",
+    "question": "Which German city is famous for a suspension railway (Schwebebahn)?",
+    "options": ["Wuppertal", "Dresden", "Augsburg", "Potsdam"],
+    "answer": "Wuppertal",
+    "difficulty": "expert"
+  },
+  {
+    "id": "de-expert-0011",
+    "question": "Germany has multiple “Freistaat” states. Which of these is also a “Freistaat”?",
+    "options": ["Saxony", "North Rhine-Westphalia", "Schleswig-Holstein", "Brandenburg"],
+    "answer": "Saxony",
+    "difficulty": "expert"
+  },
+  {
+    "id": "de-expert-0015",
+    "question": "Which German city is often called the \"gateway to the world\" (Tor zur Welt)?",
+    "options": ["Hamburg", "Frankfurt", "Berlin", "Munich"],
+    "answer": "Hamburg",
+    "difficulty": "expert"
+  },
+  {
+    "id": "de-expert-0025",
+    "question": "Which German island is famous for long sandy beaches and is in Schleswig-Holstein?",
+    "options": ["Sylt", "Rügen", "Usedom", "Fehmarn"],
+    "answer": "Sylt",
+    "difficulty": "expert"
+  },
+  {
+    "id": "de-expert-0029",
+    "question": "Which German city is known for the “Porta Nigra” Roman gate?",
+    "options": ["Trier", "Kassel", "Erfurt", "Darmstadt"],
+    "answer": "Trier",
+    "difficulty": "expert"
+  },
+  {
+    "id": "de-expert-0030",
+    "question": "Which German city is commonly cited as Germany’s oldest city?",
+    "options": ["Trier", "Berlin", "Hamburg", "Munich"],
+    "answer": "Trier",
+    "difficulty": "expert"
+  },
+  {
+    "id": "de-med-0002",
+    "question": "Which German composer is famous for the \"Brandenburg Concertos\"?",
+    "options": ["Johann Sebastian Bach", "Ludwig van Beethoven", "Franz Schubert", "Felix Mendelssohn"],
+    "answer": "Johann Sebastian Bach",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-med-0006",
+    "question": "Which German industrial metal band is known for the song \"Du hast\"?",
+    "options": ["Rammstein", "Scorpions", "Tokio Hotel", "Oomph!"],
+    "answer": "Rammstein",
+    "difficulty": "medium"
+  }, 
+  {
+    "id": "de-med-0025",
+    "question": "Which German‑born actress played a leading role in \"Inglourious Basterds\" and \"National Treasure\"?",
+    "options": ["Diane Kruger", "Marlene Dietrich", "Nastassja Kinski", "Franka Potente"],
+    "answer": "Diane Kruger",
+    "difficulty": "medium"
+  },
+{
+"id": "de-med-0022",
+"question": "Which Austrian-German actor starred in Inglourious Basterds and won an Oscar for it?",
+"options": ["Christoph Waltz", "Daniel Brühl", "August Diehl", "Bruno Ganz"],
+"answer": "Christoph Waltz",
+"difficulty": "medium"
+},
+  {
+    "id": "de-med-0026",
+    "question": "Which classic German actress became famous in Hollywood for films like \"Morocco\" and \"The Blue Angel\"?",
+    "options": ["Marlene Dietrich", "Romy Schneider", "Hildegard Knef", "Lilli Palmer"],
+    "answer": "Marlene Dietrich",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-med-0027",
+    "question": "Which German‑Irish actor plays Magneto in the newer X‑Men films?",
+    "options": ["Michael Fassbender", "Daniel Brühl", "August Diehl", "Til Schweiger"],
+    "answer": "Michael Fassbender",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-med-0028",
+    "question": "Which German footballer is nicknamed \"Der Kaiser\"?",
+    "options": ["Franz Beckenbauer", "Gerd Müller", "Lothar Matthäus", "Oliver Kahn"],
+    "answer": "Franz Beckenbauer",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-med-0029",
+    "question": "Which German goalkeeper was famous for his fiery temperament and nickname \"Der Titan\"?",
+    "options": ["Oliver Kahn", "Manuel Neuer", "Jens Lehmann", "Sepp Maier"],
+    "answer": "Oliver Kahn",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-med-0030",
+    "question": "Which German midfielder scored the winning goal in the 2014 World Cup final?",
+    "options": ["Mario Götze", "Thomas Müller", "Mesut Özil", "Toni Kroos"],
+    "answer": "Mario Götze",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-med-0035",
+    "question": "Which mountain range runs along southern Germany and into Austria and Switzerland?",
+    "options": ["The Alps", "The Harz", "The Black Forest", "The Ore Mountains"],
+    "answer": "The Alps",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-med-0041",
+    "question": "Which large car company has its headquarters in Wolfsburg, Germany?",
+    "options": ["Volkswagen", "BMW", "Mercedes‑Benz", "Audi"],
+    "answer": "Volkswagen",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-med-0042",
+    "question": "Which German company with three stripes is famous for sportswear?",
+    "options": ["Adidas", "Puma", "Hugo Boss", "Deichmann"],
+    "answer": "Adidas",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-med-0043",
+    "question": "Which German company is known worldwide for sportswear and has a leaping cat logo?",
+    "options": ["Puma", "Adidas", "Jako", "Uhlsport"],
+    "answer": "Puma",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-med-0044",
+    "question": "Which famous German physicist developed the theory of relativity?",
+    "options": ["Albert Einstein", "Max Planck", "Werner Heisenberg", "Otto Hahn"],
+    "answer": "Albert Einstein",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-med-0045",
+    "question": "Which German physicist is known as the father of quantum theory?",
+    "options": ["Max Planck", "Albert Einstein", "Wilhelm Röntgen", "Johannes Kepler"],
+    "answer": "Max Planck",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-med-0046",
+    "question": "Which German scientist discovered X‑rays?",
+    "options": ["Wilhelm Röntgen", "Robert Koch", "Otto Hahn", "Hermann von Helmholtz"],
+    "answer": "Wilhelm Röntgen",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-med-0048",
+    "question": "Which traditional German dish consists of fried or boiled sausages in curry‑ketchup sauce?",
+    "options": ["Currywurst", "Bratwurst pur", "Weißwurst", "Leberkäse"],
+    "answer": "Currywurst",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de-trivia-0001",
+    "question": "Which of these is NOT a German footballer?",
+    "options": ["Miroslav Klose", "Bastian Schweinsteiger", "Toni Kroos", "Marcel Sabitzer"],
+    "answer": "Marcel Sabitzer",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-trivia-0002",
+    "question": "Which of these is NOT a German footballer?",
+    "options": ["Thomas Müller", "Manuel Neuer", "Lothar Matthäus", "Stefan Posch"],
+    "answer": "Stefan Posch",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-trivia-0003",
+    "question": "Which of these is NOT a German footballer?",
+    "options": ["Philipp Lahm", "Jürgen Klinsmann", "Michael Ballack", "David Alaba"],
+    "answer": "David Alaba",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-trivia-0004",
+    "question": "Which of these is NOT a German physicist?",
+    "options": ["Albert Einstein", "Max Planck", "Werner Heisenberg", "Erwin Schrödinger"],
+    "answer": "Erwin Schrödinger",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-trivia-0005",
+    "question": "Which of these is NOT a German physicist?",
+    "options": ["Lise Meitner", "Hermann von Helmholtz", "Gustav Kirchhoff", " Ernst Mach"],
+    "answer": " Ernst Mach",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-trivia-0006",
+    "question": "Which of these is NOT a German physicist?",
+    "options": ["Wilhelm Röntgen", "Johannes Kepler", "Erwin Schrödinger", "Galileo Galilei"],
+    "answer": "Galileo Galilei",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-trivia-0007",
+    "question": "Which of these is NOT a German movie star?",
+    "options": ["Diane Kruger", "Christoph Waltz", "Til Schweiger", "Arnold Schwarzenegger"],
+    "answer": "Arnold Schwarzenegger",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-trivia-0009",
+    "question": "Which of these is NOT a German composer?",
+    "options": ["Johann Sebastian Bach", "Ludwig van Beethoven", "Richard Wagner", " Franz Schubert"],
+    "answer": " Franz Schubert",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-trivia-0010",
+    "question": "Which of these is NOT a German composer?",
+    "options": ["Johannes Brahms", "Felix Mendelssohn", "Robert Schumann", "Wolfgang Amadeus Mozart"],
+    "answer": "Wolfgang Amadeus Mozart",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-trivia-0014",
+    "question": "Which German team is the most successful in Bundesliga history (most league titles overall)?",
+    "options": ["Bayern Munich", "Borussia Dortmund", "Hamburger SV", "Werder Bremen"],
+    "answer": "Bayern Munich",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de-trivia-0015",
+    "question": "Which German Formula 1 driver is a seven-time world champion?",
+    "options": ["Michael Schumacher", "Sebastian Vettel", "Nico Rosberg", "Mika Häkkinen"],
+    "answer": "Michael Schumacher",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-trivia-0016",
+    "question": "Which German Formula 1 driver won four consecutive world titles (2010–2013)?",
+    "options": ["Sebastian Vettel", "Michael Schumacher", "Nico Rosberg", "Lewis Hamilton"],
+    "answer": "Sebastian Vettel",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-trivia-0017",
+    "question": "Which German tennis player is famous for winning Wimbledon multiple times and for his powerful serve-and-volley game?",
+    "options": ["Boris Becker", "Michael Stich", "Tommy Haas", "Andy Murray"],
+    "answer": "Boris Becker",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-trivia-0018",
+    "question": "Which German tennis player won Wimbledon in 1991 (men’s singles)?",
+    "options": ["Michael Stich", "Boris Becker", "Alexander Zverev", "Novak Djokovic"],
+    "answer": "Michael Stich",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-trivia-0019",
+    "question": "Which German basketball player became an NBA champion and Finals MVP in 2011?",
+    "options": ["Dirk Nowitzki", "Dennis Schröder", "Detlef Schrempf", "Tony Parker"],
+    "answer": "Dirk Nowitzki",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-trivia-0020",
+    "question": "Which boxer fighting out of germany is famous for dominating the heavyweight division in the 2000s and holding multiple world titles?",
+    "options": ["Wladimir Klitschko", "Vitali Klitschko", "Felix Sturm", "Manuel Lowe"],
+    "answer": "Vitali Klitschko",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-facts-medium-0001",
+    "question": "In what year were the lyrics of Germany’s national anthem (the \"Deutschlandlied\") written?",
+    "options": ["1797", "1841", "1919", "1952"],
+    "answer": "1841",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-facts-medium-0002",
+    "question": "Who wrote the lyrics of the \"Deutschlandlied\" (Germany’s anthem lyrics)?",
+    "options": ["August Heinrich Hoffmann von Fallersleben", "Joseph Haydn", "Johann Sebastian Bach", "Richard Wagner"],
+    "answer": "August Heinrich Hoffmann von Fallersleben",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-facts-easy-0003",
+    "question": "When is German Unity Day (Tag der Deutschen Einheit) celebrated?",
+    "options": ["October 3", "November 9", "May 1", "December 25"],
+    "answer": "October 3",
+    "difficulty": "hard"    
+  },
+  {
+    "id": "de-facts-hard-0004",
+    "question": "Which German train station is the busiest by passenger traffic (commonly cited)?",
+    "options": ["Hamburg Hauptbahnhof", "Berlin Hauptbahnhof", "München Hauptbahnhof", "Frankfurt (Main) Hauptbahnhof"],
+    "answer": "Hamburg Hauptbahnhof",
+    "difficulty": "hard"
+  },
+  {
+    "id": "de-facts-easy-0005",
+    "question": "What is Germany’s largest and most significant port city?",
+    "options": ["Hamburg", "Bremen", "Kiel", "Rostock"],
+    "answer": "Hamburg",
+    "difficulty": "easy"
+  }
+]

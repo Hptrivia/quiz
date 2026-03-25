@@ -1,0 +1,825 @@
+[
+  {
+    "id": "iasip-easy-0001",
+    "question": "What is the name of the bar where the gang spends most of their time?",
+    "options": ["Paddy's Pub", "Molly's Bar", "Mac's Tavern", "The Rooster"],
+    "answer": "Paddy's Pub",
+    "difficulty": "easy"
+  },
+  {
+    "id": "iasip-easy-0002",
+    "question": "In which city is IASIP primarily set?",
+    "options": ["Boston", "New York City", "Philadelphia", "Chicago"],
+    "answer": "Philadelphia",
+    "difficulty": "easy"
+  },
+  {
+    "id": "iasip-easy-0006",
+    "question": "What is Mac's full last name?",
+    "options": ["McDonald", "McDonnell", "MacArthur", "McDougall"],
+    "answer": "McDonald",
+    "difficulty": "easy"
+  },
+  {
+    "id": "iasip-easy-0007",
+    "question": "Which character is played by Danny DeVito?",
+    "options": ["Frank", "Dennis", "Cricket", "The Lawyer"],
+    "answer": "Frank",
+    "difficulty": "easy"
+  },
+  {
+    "id": "iasip-easy-0008",
+    "question": "Which character is known for doing most of the cleaning and maintenance at the bar?",
+    "options": ["Frank", "Charlie", "Dee", "Mac"],
+    "answer": "Charlie",
+    "difficulty": "easy"
+  },
+  {
+    "id": "iasip-easy-0009",
+    "question": "What is the gang’s main business together?",
+    "options": ["A law firm", "A bar", "A restaurant", "A gym"],
+    "answer": "A bar",
+    "difficulty": "easy"
+  },
+  {
+    "id": "iasip-easy-0013",
+    "question": "Dennis and Dee share what family relationship?",
+    "options": ["They are cousins", "They are twins", "They are uncle and niece", "They are unrelated"],
+    "answer": "They are twins",
+    "difficulty": "easy"
+  },
+  {
+    "id": "iasip-easy-0014",
+    "question": "What is the gang’s favorite sport team to obsess over?",
+    "options": ["Philadelphia Eagles", "Philadelphia 76ers", "Philadelphia Flyers", "Philadelphia Phillies"],
+    "answer": "Philadelphia Eagles",
+    "difficulty": "easy"
+  },
+  {
+    "id": "iasip-easy-0016",
+    "question": "Who is often described as the most vain and egotistical member of the gang?",
+    "options": ["Dee", "Frank", "Dennis", "Charlie"],
+    "answer": "Dennis",
+    "difficulty": "easy"
+  },
+  {
+    "id": "iasip-easy-0019",
+    "question": "Which character used to be a priest before becoming homeless?",
+    "options": ["The Lawyer", "Cricket", "The Waiter", "Uncle Jack"],
+    "answer": "Cricket",
+    "difficulty": "easy"
+  },
+  {
+    "id": "iasip-easy-0020",
+    "question": "Which member of the gang desperately wants to be a successful actress?",
+    "options": ["Dee", "The Waitress", "Artemis", "Gail the Snail"],
+    "answer": "Dee",
+    "difficulty": "easy"
+  },
+  {
+    "id": "iasip-easy-0021",
+    "question": "What is Frank’s last name?",
+    "options": ["Kelly", "Reynolds", "McDonald", "O’Toole"],
+    "answer": "Reynolds",
+    "difficulty": "easy"
+  },
+  {
+    "id": "iasip-easy-0024",
+    "question": "Which duo in the gang are raised by Frank?",
+    "options": ["Charlie and Mac", "Dennis and Dee", "Charlie and Dee", "Mac and Dee"],
+    "answer": "Dennis and Dee",
+    "difficulty": "easy"
+  },
+  {
+    "id": "iasip-medium-0026",
+    "question": "What is the name of the musical Charlie writes?",
+    "options": ["The Dayman Cometh", "The Waitress Cometh", "The Nightman Cometh", "The Nightly Comet"],
+    "answer": "The Nightman Cometh",
+    "difficulty": "medium"
+  },
+  {
+    "id": "iasip-medium-0027",
+    "question": "What is the name of the gang’s homemade alcoholic drink involving cough syrup and beer?",
+    "options": ["Fight Milk", "Riot Juice", "Milk Steak", "Wolf Cola"],
+    "answer": "Riot Juice",
+    "difficulty": "medium"
+  },
+  {
+    "id": "iasip-medium-0028",
+    "question": "What bizarre dish does Charlie famously like to eat \"boiled over hard\"?",
+    "options": ["Milk steak", "Butter steak", "Riot steak", "Milk casserole"],
+    "answer": "Milk steak",
+    "difficulty": "medium"
+  },
+  {
+    "id": "iasip-medium-0029",
+    "question": "Which product do Mac and Charlie attempt to market as an energy drink for bodyguards?",
+    "options": ["Muscle Milk", "Fight Milk", "Muscle Juice", "Protector Punch"],
+    "answer": "Fight Milk",
+    "difficulty": "medium"
+  },
+  {
+    "id": "iasip-medium-0031",
+    "question": "What is the nickname of Dee’s high school rival who becomes a successful fashion designer?",
+    "options": ["Fatty Magoo", "Gail the Snail", "Chubby Wubby", "Jelly Belly"],
+    "answer": "Fatty Magoo",
+    "difficulty": "medium"
+  },
+  {
+    "id": "iasip-medium-0033",
+    "question": "Which recurring character is the cousin of Dennis and Dee Reynolds?",
+    "options": ["Gail the Snail", "Neil the Snail", "Trudy Judy", "Cail the Snail"],
+    "answer": "Gail the Snail",
+    "difficulty": "medium"
+  },
+  {
+    "id": "iasip-medium-0034",
+    "question": "Frank claims to own what problematic soft drink company?",
+    "options": ["Wolf Cola", "Hyena Soda", "Eagle Pop", "Paddy Fizz"],
+    "answer": "Wolf Cola",
+    "difficulty": "medium"
+  },
+  {
+    "id": "iasip-medium-0035",
+    "question": "What season features Mac’s heavily choreographed, emotional coming-out dance performance?",
+    "options": ["Season 10", "Season 11", "Season 12", "Season 13"],
+    "answer": "Season 13",
+    "difficulty": "medium"
+  },
+  {
+    "id": "iasip-medium-0037",
+    "question": "What is the name of the creepy family who constantly drinks milk and torments the gang?",
+    "options": ["The McPoyles", "The Ponderosas", "The Kellys", "The Reynolds"],
+    "answer": "The McPoyles",
+    "difficulty": "medium"
+  },
+  {
+    "id": "iasip-medium-0041",
+    "question": "Which of these is not a Lethal weapon episode title in the show?",
+    "options": ["Lethal Weapon 4", "Lethal Weapon 5", "Lethal Weapon 6", "Lethal Weapon 7"],
+    "answer": "Lethal Weapon 4",
+    "difficulty": "hard"
+  },
+  {
+    "id": "iasip-medium-0045",
+    "question": "What is Mac’s religion throughout most of the series?",
+    "options": ["Atheist", "Catholic", "Jewish", "Buddhist"],
+    "answer": "Catholic",
+    "difficulty": "medium"
+  },
+  {
+    "id": "iasip-medium-0048",
+    "question": "What is the name of the bar’s frequently seen background patron who appears in many episodes?",
+    "options": ["Ernie", "Gary", "Tony", "Lou"],
+    "answer": "Ernie",
+    "difficulty": "medium"
+  },
+  {
+    "id": "iasip-medium-0049",
+    "question": "Which foreign country does the gang travel to when Charlie seeks his real father?",
+    "options": ["Ireland", "England", "Germany", "Italy"],
+    "answer": "Ireland",
+    "difficulty": "medium"
+  },
+  {
+    "id": "iasip-hard-0052",
+    "question": "In \"The D.E.N.N.I.S. System\", what does the first \"N\" stand for?",
+    "options": ["Neglect emotionally", "Nurture dependence", "Neutralize threats", "Never apologize"],
+    "answer": "Nurture dependence",
+    "difficulty": "hard"
+  },
+  {
+    "id": "iasip-hard-0053",
+    "question": "Which McPoyle brother often wears an eye patch?",
+    "options": ["Liam", "Ryan", "Doyle", "Patrick"],
+    "answer": "Liam",
+    "difficulty": "hard"
+  },
+  {
+    "id": "iasip-hard-0055",
+    "question": "In \"The Gang Gives Back\", what community service does most of the gang end up doing?",
+    "options": ["Cleaning highways", "Coaching youth basketball", "Feeding the homeless", "Picking up trash in the park"],
+    "answer": "Coaching youth basketball",
+    "difficulty": "hard"
+  },
+  {
+    "id": "iasip-hard-0058",
+    "question": "What is the name of Dennis and Dee’s mother, who is also Frank’s ex-wife?",
+    "options": ["Barbara", "Bonnie", "Maureen", "Donna"],
+    "answer": "Barbara",
+    "difficulty": "hard"
+  },
+  {
+    "id": "iasip-hard-0059",
+    "question": "Which character is revealed to have extremely small, creepy hands that they try to hide?",
+    "options": ["Uncle Jack", "The Lawyer", "The Waiter", "Bill Ponderosa"],
+    "answer": "Uncle Jack",
+    "difficulty": "hard"
+  },
+  {
+    "id": "iasip-hard-0061",
+    "question": "What game show does the gang appear on in \"Family Fight\"?",
+    "options": ["Family Feud", "Family Fight", "Family Clash", "Feud Time"],
+    "answer": "Family Fight",
+    "difficulty": "hard"
+  },
+  {
+    "id": "iasip-hard-0065",
+    "question": "In \"The Gang Dines Out\", what restaurant do Mac and Dennis visit without inviting the rest of the gang?",
+    "options": ["P.F. Chang’s", "Shady Oaks", "Guigino's", "Outback Steakhouse"],
+    "answer": "Guigino's",
+    "difficulty": "hard"
+  },
+  {
+    "id": "iasip-hard-0066",
+    "question": "Which character’s wedding turns into a horror-movie-style massacre involving the McPoyles?",
+    "options": ["The Waitress", "Maureen Ponderosa", "Margaret McPoyle", "Gail the Snail"],
+    "answer": "Maureen Ponderosa",
+    "difficulty": "hard"
+  },
+  {
+    "id": "iasip-hard-0070",
+    "question": "In \"Reynolds vs. Reynolds\", what is Dennis eating when the fender bender occurs?",
+    "options": ["Cereal", "Pancakes", "A sandwich", "French fries"],
+    "answer": "Cereal",
+    "difficulty": "hard"
+  },
+  {
+    "id": "iasip-expert-0077",
+    "question": "In \"The Gang Goes to a Water Park\", what medical condition does Frank pretend to have to skip the line?",
+    "options": ["Cancer", "AIDS", "Leukemia", "Heart disease"],
+    "answer": "AIDS",
+    "difficulty": "expert"
+  },
+  {
+    "id": "iasip-expert-0081",
+    "question": "In \"Sweet Dee Has a Heart Attack\", what does Charlie obsessively try to understand from the mailroom chart?",
+    "options": ["The stock market", "The conspiracy of Pepe Silvia", "Frank’s finances", "Bar sales numbers"],
+    "answer": "The conspiracy of Pepe Silvia",
+    "difficulty": "expert"
+  },
+  {
+    "id": "iasip-expert-0082",
+    "question": "What is the name of the high school where the gang once attended and later returns for a reunion?",
+    "options": ["Northeast Catholic High", "St. Joseph’s High", "Archbishop Ryan High", "Lincoln High"],
+    "answer": "Northeast Catholic High",
+    "difficulty": "expert"
+  },
+  {
+    "id": "iasip-expert-0083",
+    "question": "In \"The Gang Gets Whacked\", what Italian crime family do they accidentally cross?",
+    "options": ["The Lupertazzis", "The Cugino family", "The Guigliano family", "The Scarpacci family"],
+    "answer": "The Guigliano family",
+    "difficulty": "expert"
+  },
+  {
+    "id": "iasip-expert-0084",
+    "question": "What is the name of the postapocalyptic warrior/robot film Dennis gets tickets to see?",
+    "options": ["Thunder Gun Express", "Robot Vengeance", "Dogs of War", "Lethal Weapon"],
+    "answer": "Thunder Gun Express",
+    "difficulty": "expert"
+  },
+  {
+    "id": "iasip-expert-0085",
+    "question": "In \"The Gang Hits the Road\", what item does Dennis insist everyone needs before they can leave the city?",
+    "options": ["Road sodas", "Sunglasses", "A cassette mixtape", "Snacks"],
+    "answer": "Road sodas",
+    "difficulty": "expert"
+  },
+  {
+    "id": "iasip-expert-0086",
+    "question": "What is the name of the news station where recurring weatherwoman works?",
+    "options": ["Channel 5 News", "WZRB 7", "Channel 11 News", "WHDN 6"],
+    "answer": "Channel 5 News",
+    "difficulty": "expert"
+  },
+  {
+    "id": "iasip-easy-0003",
+    "question": "Which network did It's Always Sunny in Philadelphia originally premiere on?",
+    "options": [
+      "HBO",
+      "FX",
+      "FXX",
+      "AMC"
+    ],
+    "answer": "FX",
+    "difficulty": "easy"
+  },
+  {
+    "id": "iasip-easy-0004",
+    "question": "In what year did the show premiere?",
+    "options": [
+      "2005",
+      "2004",
+      "2006",
+      "2003"
+    ],
+    "answer": "2005",
+    "difficulty": "easy"
+  },
+  {
+    "id": "iasip-easy-0005",
+    "question": "Who plays Frank Reynolds?",
+    "options": [
+      "Evan Mercer",
+      "Danny DeVito",
+      "Jason Bateman",
+      "Mira Sloan"
+    ],
+    "answer": "Danny DeVito",
+    "difficulty": "easy"
+  },
+  {
+    "id": "iasip-easy-0006",
+    "question": "Who plays Charlie Kelly?",
+    "options": [
+      "Trent Calhoun",
+      "Jonah West",
+      "Charlie Day",
+      "Evan Mercer"
+    ],
+    "answer": "Charlie Day",
+    "difficulty": "easy"
+  },
+  {
+    "id": "iasip-easy-0007",
+    "question": "Who plays Dennis Reynolds?",
+    "options": [
+      "Jonah West",
+      "Evan Mercer",
+      "Rami Cole",
+      "Glenn Howerton"
+    ],
+    "answer": "Glenn Howerton",
+    "difficulty": "hard"
+  },
+  {
+    "id": "iasip-easy-0008",
+    "question": "Who plays Dee Reynolds?",
+    "options": [
+      "Rami Cole",
+      "Mary ELizabeth Ellis",
+      "Kaitlin Olson",
+      "Mary Foster"
+    ],
+    "answer": "Kaitlin Olson",
+    "difficulty": "easy"
+  },
+  {
+    "id": "iasip-easy-0009",
+    "question": "Who plays Mac (Ronald McDonald)?",
+    "options": [
+      "Glenn Howerton",
+      "David Hornsby",
+      "Jonah West",
+      "Rob McElhenney"
+    ],
+    "answer": "Rob McElhenney",
+    "difficulty": "hard"
+  },
+  {
+    "id": "iasip-easy-0010",
+    "question": "What is the group commonly called collectively?",
+    "options": [
+      "The Gang",
+      "The Crew",
+      "The Pack",
+      "The Squad"
+    ],
+    "answer": "The Gang",
+    "difficulty": "easy"
+  },
+  {
+    "id": "iasip-easy-0016",
+    "question": "Who plays The Waitress?",
+    "options": [
+      "Dana Pierce",
+      "Kara Voss",
+      "David HornsbyTess Halden",
+      "Mary Elizabeth Ellis"
+    ],
+    "answer": "Mary Elizabeth Ellis",
+    "difficulty": "easy"
+  },
+  {
+    "id": "iasip-easy-0017",
+    "question": "Who plays Rickety Cricket?",
+    "options": [
+      "Glenn Howerton",
+      "Charlie Day",
+      "David Hornsby",
+      "Rob McElhenney"
+    ],
+    "answer": "David Hornsby",
+    "difficulty": "hard"
+  },
+  {
+    "id": "iasip-medium-0002",
+    "question": "As of season 17, how many total episodes had aired?",
+    "options": [
+      "172",
+      "169",
+      "190",
+      "178"
+    ],
+    "answer": "178",
+    "difficulty": "expert"
+  },
+  {
+    "id": "iasip-medium-0003",
+    "question": "Which network is the show currently airing on (as of its later seasons)?",
+    "options": [
+      "FXX",
+      "Netflix",
+      "AMC",
+      "FX"
+    ],
+    "answer": "FXX",
+    "difficulty": "medium"
+  },
+  {
+    "id": "iasip-medium-0004",
+    "question": "What is the show’s opening theme called?",
+    "options": [
+      "A Beautiful Mine",
+      "Temptation Sensation",
+      "Enemy",
+      "Greenback Boogie"
+    ],
+    "answer": "Temptation Sensation",
+    "difficulty": "hard"
+  },
+  {
+    "id": "iasip-medium-0005",
+    "question": "Who composed the show’s theme music?",
+    "options": [
+      "RJD2",
+      "Heinz Kiessling",
+      "Ima Robot",
+      "Ryan Elder"
+    ],
+    "answer": "Heinz Kiessling",
+    "difficulty": "expert"
+  },
+  {
+    "id": "iasip-medium-0011",
+    "question": "Charlie’s conspiracy wall is most famously tied to what name?",
+    "options": [
+      "Pepe Silvia",
+      "Penny Sayers",
+      "Pablo Silva",
+      "Pedro Soria"
+    ],
+    "answer": "Pepe Silvia",
+    "difficulty": "medium"
+  },
+  {
+    "id": "iasip-medium-0013",
+    "question": "Who plays The Lawyer?",
+    "options": [
+      "Dana Pierce",
+      "Brian Unger",
+      "Victor Hale",
+      "Nolan Reeves"
+    ],
+    "answer": "Brian Unger",
+    "difficulty": "hard"
+  },
+  {
+    "id": "iasip-hard-0005",
+    "question": "What is the date-manipulation framework in the show called?",
+    "options": [
+      "The C.H.A.R.L.I.E System",
+      "The D.E.N.N.I.S. System",
+      "The D.R.A.P.E.R. System",
+      "The M.A.C System"
+    ],
+    "answer": "The D.E.N.N.I.S. System",
+    "difficulty": "medium"
+  },
+  {
+    "id": "iasip-expert-0003",
+    "question": "As of 2025, how many seasons have aired?",
+    "options": [
+      "18",
+      "17",
+      "16",
+      "19"
+    ],
+    "answer": "17",
+    "difficulty": "medium"
+  },
+  {
+    "id": "iasip-expert-0005",
+    "question": "Who is credited as the series creator?",
+    "options": [
+      "Glenn Howerton",
+      "Rob McElhenney",
+      "Charlie Day",
+      "Danny DeVito"
+    ],
+    "answer": "Rob McElhenney",
+    "difficulty": "expert"
+  },
+  {
+    "id": "iasip-041",
+    "difficulty": "hard",
+    "question": "Which U.S. President is in town in the episode where the gang tries to see the post-apocalyptic action movie Thunder Gun Express?",
+    "options": ["Barack Obama", "George W. Bush", "Joe Biden", "Donald Trump"],
+    "answer": "Barack Obama"
+  },
+  {
+    "id": "iasip-042",
+    "difficulty": "hard",
+    "question": "What is the name of the recurring local TV weather woman in It's Always Sunny in Philadelphia?",
+    "options": ["Jackie Denardo", "Evita Sanchez", "Tracy Cormick", "Lena Barber"],
+    "answer": "Jackie Denardo"
+  },
+  {
+    "id": "iasip-043",
+    "difficulty": "hard",
+    "question": "What is the name of Maureen Ponderosa’s brother, who is known as a drug addict in the series?",
+    "options": ["Bill", "Scott", "Mark", "Peter"],
+    "answer": "Bill"
+  },
+  {
+    "id": "iasip-044",
+    "difficulty": "easy",
+    "question": "It's Always Sunny in Philadelphia is the longest-running American live-action sitcom by number of seasons.",
+    "options": ["True", "False"],
+    "answer": "True"
+  },
+  {
+    "id": "iasip-001",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a real It's Always Sunny in Philadelphia episode title?",
+    "options": ["The Gang Gets Invincible", "The Nightman Cometh", "Charlie Work", "Paddy's Pub Saves Christmas"],
+    "answer": "Paddy's Pub Saves Christmas"
+  },
+  {
+    "id": "iasip-002",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a real It's Always Sunny in Philadelphia episode title?",
+    "options": ["The DENNIS System", "The Gang Solves the Gas Crisis", "Mac and Dennis Move to the Suburbs", "The Gang Joins the Mafia"],
+    "answer": "The Gang Joins the Mafia"
+  },
+  {
+    "id": "iasip-003",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a real It's Always Sunny in Philadelphia episode title?",
+    "options": ["Sweet Dee Gets Audited", "The Gang Buys a Boat", "The Gang Recycles Their Trash", "The Gang Goes to Vegas"],
+    "answer": "The Gang Goes to Vegas"
+  },
+  {
+    "id": "iasip-004",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a real It's Always Sunny in Philadelphia episode title?",
+    "options": ["Reynolds vs. Reynolds: The Cereal Defense", "The Gang Hits the Road", "The Gang Dines Out", "The Gang Goes to Paris"],
+    "answer": "The Gang Goes to Paris"
+  },
+  {
+    "id": "iasip-005",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a real It's Always Sunny in Philadelphia episode title?",
+    "options": ["The Waitress Is Getting Married", "The Gang Gives Back", "The Gang Turns Black", "The Gang Solves Climate Change"],
+    "answer": "The Gang Solves Climate Change"
+  },
+  {
+    "id": "iasip-006",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a member of 'The Gang'?",
+    "options": ["Frank Reynolds", "Charlie Kelly", "Dee Reynolds", "Artemis"],
+    "answer": "Artemis"
+  },
+  {
+    "id": "iasip-007",
+    "difficulty": "medium",
+    "question": "Who is later revealed to be Dennis and Dee’s biological father?",
+    "options": ["Bruce Mathis", "Frank Reynolds", "Eugene Hamilton", "Mark Graveman"],
+    "answer": "Bruce Mathis"
+  },
+  {
+    "id": "iasip-008",
+    "difficulty": "medium",
+    "question": "What is the name of Charlie’s biological father?",
+    "options": ["Shelley", "Luther", "Bruce", "Jack"],
+    "answer": "Shelley"
+  },
+  {
+    "id": "iasip-009",
+    "difficulty": "hard",
+    "question": "In Charlie’s musical, who later plays the Dayman?",
+    "options": ["Dennis", "Charlie", "Mac", "Frank"],
+    "answer": "Dennis"
+  },
+  {
+    "id": "iasip-010",
+    "difficulty": "medium",
+    "question": "In Charlie’s musical, who plays the Troll?",
+    "options": ["Frank", "Mac", "Dennis", "Charlie"],
+    "answer": "Frank"
+  },
+  {
+    "id": "iasip-011",
+    "difficulty": "medium",
+    "question": "In Charlie’s musical, who later plays the Nightman?",
+    "options": ["Mac", "Dennis", "Charlie", "Frank"],
+    "answer": "Mac"
+  },
+  {
+    "id": "iasip-012",
+    "difficulty": "medium",
+    "question": "In Charlie’s musical, who plays the Princess?",
+    "options": ["Dee", "The Waitress", "Artemis", "Bonnie Kelly"],
+    "answer": "Dee"
+  },
+  {
+    "id": "iasip-013",
+    "difficulty": "medium",
+    "question": "Wolf Cola becomes the official drink of which terrorist group?",
+    "options": ["Boko Haram", "Al-Shabaab", "ISIS", "Hezbollah"],
+    "answer": "Boko Haram"
+  },
+  {
+    "id": "iasip-014",
+    "difficulty": "hard",
+    "question": "What is the name of Frank’s shell company used to distribute drinks like Wolf Cola and Fight Milk?",
+    "options": ["Frank's Fluids, LLC", "Paddy's Holdings, LLC", "ReyHam Beverages", "Atwater Drinks Group"],
+    "answer": "Frank's Fluids, LLC"
+  },
+  {
+    "id": "iasip-015",
+    "difficulty": "hard",
+    "question": "Which of these is NOT one of Frank’s business entities?",
+    "options": ["Fight Milk", "Atwater Capital", "ReyHam Properties", "Green Man Energy Drink"],
+    "answer": "Green Man Energy Drink"
+  },
+  {
+    "id": "iasip-016",
+    "difficulty": "hard",
+    "question": "What is the name of Frank’s former partner from his real estate company?",
+    "options": ["Eugene Hamilton", "Bruce Heather", "Gino", "Mark Hatcher"],
+    "answer": "Eugene Hamilton"
+  },
+  {
+    "id": "iasip-017",
+    "difficulty": "hard",
+    "question": "What was Frank’s ruthless corporate-raider persona called ?",
+    "options": ["The Warthog", "The Hammer", "The Shark", "The Buzzard"],
+    "answer": "The Warthog"
+  },
+  {
+    "id": "iasip-018",
+    "difficulty": "hard",
+    "question": "Which of these is NOT one of Frank’s past business ventures shown or referenced in the series?",
+    "options": ["Atwater Capital", "ReyHam Properties", "Frank's Fluids, LLC", "Wormhat Investments"],
+    "answer": "Wormhat Investments"
+  },
+  {
+    "id": "iasip-019",
+    "difficulty": "hard",
+    "question": "What is the name of the jazz club opened by Frank (named after its main attraction)?",
+    "options": ["Shadynasty's", "SexyGina's", "ShadyCara's", "SexyNasty's"],
+    "answer": "Shadynasty's"
+  },
+  {
+    "id": "iasip-020",
+    "difficulty": "easy",
+    "question": "What are the names of the twin brothers in the McPoyle clan?",
+    "options": ["Liam and Ryan", "Liam and Kyle", "Ryan and Kyle", "Mick and Rick"],
+    "answer": "Liam and Ryan"
+  },
+  {
+    "id": "iasip-021",
+    "difficulty": "hard",
+    "question": "What is the name of the sister in the McPoyle clan?",
+    "options": ["Margaret", "Maureen", "Megan", "Martha"],
+    "answer": "Margaret"
+  },
+  {
+    "id": "iasip-022",
+    "difficulty": "medium",
+    "question": "Which of these is NOT a member of the McPoyle family?",
+    "options": ["Liam", "Ryan", "Margaret", "Pete"],
+    "answer": "Pete"
+  },
+  {
+    "id": "iasip-023",
+    "difficulty": "medium",
+    "question": "In the D.E.N.N.I.S. System, what does the 'D' stand for?",
+    "options": ["Demonstrate Value", "Demand Attention", "Develop Trust", "Disarm Rivals"],
+    "answer": "Demonstrate Value"
+  },
+  {
+    "id": "iasip-025",
+    "difficulty": "hard",
+    "question": "In the D.E.N.N.I.S. System, what does the second 'N' stand for?",
+    "options": ["Neglect Emotionally", "Nurture Dependence", "Never Apologize", "Neutralize Doubt"],
+    "answer": "Neglect Emotionally"
+  },
+  {
+    "id": "iasip-026",
+    "difficulty": "medium",
+    "question": "In the D.E.N.N.I.S. System, what does the 'E' stand for?",
+    "options": ["Engage Physically", "Elevate Status", "Establish Control", "Encourage Distance"],
+    "answer": "Engage Physically"
+  },
+  {
+    "id": "iasip-027",
+    "difficulty": "medium",
+    "question": "In the D.E.N.N.I.S. System, what does the 'I' stand for?",
+    "options": ["Inspire Hope", "Induce Fear", "Invite Commitment", "Increase Pressure"],
+    "answer": "Inspire Hope"
+  },
+  {
+    "id": "iasip-028",
+    "difficulty": "medium",
+    "question": "In the D.E.N.N.I.S. System, what does the 'S' stand for?",
+    "options": ["Separate Entirely", "Seal the Deal", "Stay Dominant", "Secure Evidence"],
+    "answer": "Separate Entirely"
+  },
+  {
+    "id": "iasip-029",
+    "difficulty": "medium",
+    "question": "What does the M.A.C. System stand for?",
+    "options": ["Move in After Completion", "Maintain Absolute Control", "Manipulate And Conquer", "Measure And Confirm"],
+    "answer": "Move in After Completion"
+  },
+  {
+    "id": "iasip-030",
+    "difficulty": "hard",
+    "question": "What is the name of the waitress at the competing Korean bar in the North Korea episode?",
+    "options": ["Sun-Li", "Mei-Ling", "Hye-Jin", "Soo-Min"],
+    "answer": "Sun-Li"
+  },
+  {
+    "id": "iasip-031",
+    "difficulty": "hard",
+    "question": "Who owns the competing Korean bar in the North Korea episode?",
+    "options": ["Mr. Kim", "Mr. Park", "Mr. Choi", "Mr. Lee"],
+    "answer": "Mr. Kim"
+  },
+  {
+    "id": "iasip-032",
+    "difficulty": "hard",
+    "question": "Who does Maureen Ponderosa attempt to marry in Season 8 when the wedding is disrupted?",
+    "options": ["Liam", "Charlie", "Dennis", "Ryan"],
+    "answer": "Liam"
+  },
+  {
+    "id": "iasip-033",
+    "difficulty": "hard",
+    "question": "What is the name of the patriarch of the McPoyle family?",
+    "options": ["Pappy", "Mark", "Dundee", "Peter"],
+    "answer": "Pappy"
+  },
+  {
+    "id": "iasip-034",
+    "difficulty": "hard",
+    "question": "Who plays the patriarch Pappy McPoyle?",
+    "options": ["Guillermo del Toro", "Danny DeVito", "Jimmi Simpson", "Rowdy Roddy Piper"],
+    "answer": "Guillermo del Toro"
+  },
+  {
+    "id": "iasip-035",
+    "difficulty": "medium",
+    "question": "What nickname does Dee get because of her back brace in high school?",
+    "options": ["The Aluminum Monster", "Metal Bird", "Brace Face", "The Tin Woman"],
+    "answer": "The Aluminum Monster"
+  },
+  {
+    "id": "iasip-036",
+    "difficulty": "hard",
+    "question": "What medical condition did Dee have as a teenager?",
+    "options": ["Scoliosis", "Asthma", "Rickets", "Epilepsy"],
+    "answer": "Scoliosis"
+  },
+  {
+    "id": "iasip-037",
+    "difficulty": "medium",
+    "question": "Dee becomes jealous when she learns her former high school best friend achieved success in what career?",
+    "options": ["Fashion boutique owner", "TV news anchor", "Corporate lawyer", "Professional athlete"],
+    "answer": "Fashion boutique owner"
+  },
+  {
+    "id": "iasip-038",
+    "difficulty": "medium",
+    "question": "What is the name of the 'game of games' in the show?",
+    "options": ["Chardee MacDennis", "CharMac DeeDennis", "Macdee CharDennis", "DennMac Chardee"],
+    "answer": "Chardee MacDennis"
+  },
+  {
+    "id": "iasip-039",
+    "difficulty": "hard",
+    "question": "What Catholic school does Dee attend during her high school years?",
+    "options": ["Notre Dame", "St. Brigid's", "Sacred Heart", "St. Cecilia's"],
+    "answer": "Notre Dame"
+  },
+  {
+    "id": "iasip-040",
+    "difficulty": "hard",
+    "question": "What high school do most of the male members?",
+    "options": ["Saint Joseph's Preparatory School", "La Salle College High School", "Central High School", "Chestnut Hill Academy"],
+    "answer": "Saint Joseph's Preparatory School"
+  }
+]

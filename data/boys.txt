@@ -1,0 +1,954 @@
+[
+  {
+    "id": "pb-easy-0001",
+    "question": "Who is the leader of The Seven?",
+    "options": ["Homelander", "Queen Maeve", "A-Train", "Starlight"],
+    "answer": "Homelander",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0002",
+    "question": "Which corporation manages superheroes in The Boys universe?",
+    "options": ["Vought International", "Starlabs", "Oscorp", "Wayne Enterprises"],
+    "answer": "Vought International",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0003",
+    "question": "Who is the main protagonist who loses his girlfriend to A-Train’s reckless speed?",
+    "options": ["Hughie", "Butcher", "Frenchie", "Mother's Milk"],
+    "answer": "Hughie",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0004",
+    "question": "What is the name of the team trying to take down the Supes?",
+    "options": ["The Seven", "The Boys", "The Watchers", "The Syndicate"],
+    "answer": "The Boys",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0005",
+    "question": "Which member of The Seven is a speedster?",
+    "options": ["A-Train", "Homelander", "Black Noir", "The Deep"],
+    "answer": "A-Train",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0007",
+    "question": "Who is the female member of The Boys who does not speak?",
+    "options": ["Kimiko", "Starlight", "Queen Maeve", "Popclaw"],
+    "answer": "Kimiko",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0008",
+    "question": "What is the name of the substance that gives people superpowers?",
+    "options": ["Compound V", "Super Serum", "Hero Juice", "Meta-X"],
+    "answer": "Compound V",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0009",
+    "question": "Who does Hughie start dating?",
+    "options": ["Starlight", "Kimiko", "Queen Maeve", "Stormfront"],
+    "answer": "Starlight",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0010",
+    "question": "Which Supe can fly and has laser eyes?",
+    "options": ["Homelander", "A-Train", "The Deep", "Frenchie"],
+    "answer": "Homelander",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0011",
+    "question": "Who is the strong, armored silent member of The Seven?",
+    "options": ["Black Noir", "Stormfront", "The Deep", "A-Train"],
+    "answer": "Black Noir",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0012",
+    "question": "Who leads The Boys?",
+    "options": ["Billy Butcher", "Hughie", "Frenchie", "Mother's Milk"],
+    "answer": "Billy Butcher",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0013",
+    "question": "Which character works in IT at the start of the series?",
+    "options": ["Hughie", "Butcher", "Mother's Milk", "Frenchie"],
+    "answer": "Hughie",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0014",
+    "question": "Who is The Boys' main inside source at Vought?",
+    "options": ["Starlight", "Queen Maeve", "Homelander", "Ashley Barrett"],
+    "answer": "Starlight",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0015",
+    "question": "Which Supe is known for communicating with aquatic life?",
+    "options": ["The Deep", "A-Train", "Black Noir", "Stormfront"],
+    "answer": "The Deep",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0016",
+    "question": "What is the name of Billy Butcher´s wife?",
+    "options": ["Becca", "Victoria", "Ashley", "Annie"],
+    "answer": "Becca",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0017",
+    "question": "What is Queen Maeve’s main power?",
+    "options": ["Super strength", "Telepathy", "Speed", "Water control"],
+    "answer": "Super strength",
+    "difficulty": "easy"
+  },
+  {
+    "id": "boys-hard-0081",
+    "question": "Which animal did The Deep attempt to rescue from Ocean World?",
+    "options": ["Dolphin", "Octopus", "Shark", "Whale"],
+    "answer": "Dolphin",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-hard-0082",
+    "question": "What superpower does Ezekiel, the leader of Capes for Christ, possess?",
+    "options": ["Elasticity", "Telepathy", "Pyrokinesis", "Sound manipulation"],
+    "answer": "Elasticity",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-hard-0083",
+    "question": "What was Becca Butcher’s job at Vought International before she vanished?",
+    "options": ["Digital marketing", "Legal counsel", "Product engineer", "Executive assistant"],
+    "answer": "Digital marketing",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-hard-0084",
+    "question": "Who gave Compound V to a terrorist organization, hoping to justify supes in the military?",
+    "options": ["Homelander", "Stan Edgar", "Madelyn Stillwell", "Ashley Barrett"],
+    "answer": "Homelander",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-hard-0085",
+    "question": "What creature is The Deep riding when he attempts to stop The Boys’ boat escape?",
+    "options": ["A whale", "A giant squid", "A hammerhead shark", "A manta ray"],
+    "answer": "A whale",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-hard-0086",
+    "question": "Who helps Hughie sneak into Vought headquarters to free Starlight from her cell?",
+    "options": ["Lamplighter", "Frenchie", "Kimiko", "A-Train"],
+    "answer": "Lamplighter",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-hard-0087",
+    "question": "Who kills Butcher’s wife Becca?",
+    "options": ["Ryan", "Homelander", "Stormfront", "Black Noir"],
+    "answer": "Ryan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pb-easy-0018",
+    "question": "Who often refers to people as 'c*nts' in his dialogue?",
+    "options": ["Billy Butcher", "Frenchie", "Mother's Milk", "Homelander"],
+    "answer": "Billy Butcher",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0021",
+    "question": "Who is the CEO of Vought for most of the series?",
+    "options": ["Stan Edgar", "Ashley Barrett", "Homelander", "Lamplighter"],
+    "answer": "Stan Edgar",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0022",
+    "question": "Which character’s nickname is MM?",
+    "options": ["Mother's Milk", "Monkey Mike", "Mean Mark", "Major Matt"],
+    "answer": "Mother's Milk",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0024",
+    "question": "Which member of The Seven uses electricity in her powers?",
+    "options": ["Starlight", "Queen Maeve", "Stormfront", "Black Noir"],
+    "answer": "Starlight",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0026",
+    "question": "What city is The Boys primarily set in?",
+    "options": ["New York", "Los Angeles", "Chicago", "Miami"],
+    "answer": "New York",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0027",
+    "question": "Which Supe is revealed to be a Nazi from the 1940s?",
+    "options": ["Stormfront", "Homelander", "Black Noir", "The Deep"],
+    "answer": "Stormfront",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0029",
+    "question": "What does Hughie work at when the series begins?",
+    "options": ["Electronics store", "Newspaper stand", "Coffee shop", "Taxi company"],
+    "answer": "Electronics store",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0032",
+    "question": "Who becomes CEO of Vought after Stan Edgar steps down?",
+    "options": ["Ashley Barrett", "Homelander", "A-Train", "Starlight"],
+    "answer": "Ashley Barrett",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0034",
+    "question": "Who plays Billy Butcher?",
+    "options": ["Karl Urban", "Jack Quaid", "Antony Starr", "Chace Crawford"],
+    "answer": "Karl Urban",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0035",
+    "question": "Who plays Homelander?",
+    "options": ["Antony Starr", "Karl Urban", "Erin Moriarty", "Laz Alonso"],
+    "answer": "Antony Starr",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0037",
+    "question": "What does Homelander drink that’s a bit unsettling?",
+    "options": ["Breast milk", "Blood", "Vodka", "Liquid Compound V"],
+    "answer": "Breast milk",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0038",
+    "question": "What is Black Noir allergic to?",
+    "options": ["Tree nuts", "Shellfish", "Dairy", "Gluten"],
+    "answer": "Tree nuts",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pb-easy-0039",
+    "question": "Who is Frenchie deeply protective of?",
+    "options": ["Kimiko", "Starlight", "Maeve", "Hughie"],
+    "answer": "Kimiko",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0044",
+    "question": "Who severely injures Stormfront before she commits suicide?",
+    "options": ["Ryan", "Homelander", "Butcher", "Maeve"],
+    "answer": "Ryan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0045",
+    "question": "Who becomes addicted to Compound V?",
+    "options": ["A-Train", "Homelander", "Starlight", "Frenchie"],
+    "answer": "A-Train",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-easy-0048",
+    "question": "What season does Soldier Boy first appear in?",
+    "options": ["Season 3", "Season 1", "Season 2", "Season 4"],
+    "answer": "Season 3",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-medium-0051",
+    "question": "What drink does Homelander often heat up with his laser eyes?",
+    "options": ["Milk", "Coffee", "Tea", "Vodka"],
+    "answer": "Milk",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pb-medium-0052",
+    "question": "Who was the original member of The Seven replaced by Starlight?",
+    "options": ["Lamplighter", "Stormfront", "Black Noir", "Popclaw"],
+    "answer": "Lamplighter",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pb-medium-0055",
+    "question": "Where does Kimiko come from originally?",
+    "options": ["Myanmar", "Japan", "Vietnam", "North Korea"],
+    "answer": "Japan",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pb-medium-0060",
+    "question": "Who is responsible for bringing Kimiko into the US?",
+    "options": ["The Shining Light Liberation Army", "Vought", "Russian mafia", "The Boys"],
+    "answer": "The Shining Light Liberation Army",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pb-medium-0066",
+    "question": "Who is the head of the Church of the Collective?",
+    "options": ["Alastair Adana", "Edgar Stevenson", "Ezekiel Barnes", "Sean Mathews"],
+    "answer": "Alastair Adana",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pb-medium-0068",
+    "question": "Who does Queen Maeve secretly have a relationship with?",
+    "options": ["Elena", "Stormfront", "Ashley", "Cherie"],
+    "answer": "Elena",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pb-medium-0075",
+    "question": "Who killed Madelyn Stillwell?",
+    "options": ["Homelander", "Butcher", "Black Noir", "Frenchie"],
+    "answer": "Homelander",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pb-medium-0080",
+    "question": "Who kills Alastair Adana?",
+    "options": ["Victoria Neuman", "Homelander", "Black Noir", "Butcher"],
+    "answer": "Victoria Neuman",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pb-medium-0081",
+    "question": "Who figures out Victoria Neuman’s power first?",
+    "options": ["Butcher", "Hughie", "Frenchie", "Mother's Milk"],
+    "answer": "Hughie",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pb-medium-0181",
+    "question": "Who is the first character we see die on-screen in the series?",
+    "options": ["Robin", "Translucent", "Popclaw", "Stillwell"],
+    "answer": "Robin",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pb-medium-0281",
+    "question": "What is the name of Hughie´s girlfriend who is killed at the start of the show?",
+    "options": ["Robin", "Ashley", "Amy", "Katie"],
+    "answer": "Robin",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pb-medium-0093",
+    "question": "What does Frenchie call Kimiko affectionately?",
+    "options": ["Mon coeur", "Mon chéri", "Mon petit", "Ma belle"],
+    "answer": "Mon coeur",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pb-medium-0094",
+    "question": "Who was going to testify about Compound V before their head exploded?",
+    "options": ["Stan Edgar", "Jonah Vogelbaum", "Alistair Aldana", "Victoria Neumann"],
+    "answer": "Jonah Vogelbaum",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pb-medium-0099",
+    "question": "What was the name of the girl A-Train was dating who overdosed?",
+    "options": ["Popclaw", "Lamplight", "Elena", "Robin"],
+    "answer": "Popclaw",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pb-medium-0100",
+    "question": "Who plays Queen Maeve?",
+    "options": ["Dominique McElligott", "Aya Cash", "Erin Moriarty", "Colby Minifie"],
+    "answer": "Dominique McElligott",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pb-medium-01090",
+    "question": "Who plays Starlight?",
+    "options": ["Dominique McElligott", "Aya Cash", "Erin Moriarty", "Colby Minifie"],
+    "answer": "Erin Moriarty",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pb-hard-0101",
+    "question": "Who was the first Supe that The Boys successfully killed?",
+    "options": ["Translucent", "A-Train", "Stormfront", "Black Noir"],
+    "answer": "Translucent",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pb-hard-0106",
+    "question": "What is Frenchie’s first name?",
+    "options": ["Serge", "Jean-Paul", "Luc", "Marc"],
+    "answer": "Serge",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pb-hard-0108",
+    "question": "What was the name of the therapist who tried to rehabilitate The Deep?",
+    "options": ["Carol", "Dr. Park", "Alastair Adana", "Pat"],
+    "answer": "Carol",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pb-hard-0109",
+    "question": "What is the name of The Deep’s octopus companion he was forced to eat?",
+    "options": ["Timothy", "Paul", "Oscar", "Squidward"],
+    "answer": "Timothy",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pb-hard-0112",
+    "question": "What is the name of the superhero orgy that The Boys infiltrate?",
+    "options": ["Supe Orgy", "Herogasm", "The Grotto", "Vought Club"],
+    "answer": "Herogasm",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pb-hard-0115",
+    "question": "Who arranged for Soldier Boy to be captured by the Russian military originally?",
+    "options": ["Payback", "Vought", "Grace Mallory", "Stan Edgar"],
+    "answer": "Payback",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-hard-0026",
+    "question": "What electronics shop did Hughie work at when the series began?",
+    "options": ["Bryman Audio", "SoundShack", "VoltZone", "WireWorld"],
+    "answer": "Bryman Audio",
+    "difficulty": "expert"
+  },
+  {
+    "id": "boys-hard-0027",
+    "question": "Who was Hughie’s boss at Bryman Audio?",
+    "options": ["Gary", "Dennis", "Neil", "Frank"],
+    "answer": "Gary",
+    "difficulty": "expert"
+  },
+  {
+    "id": "boys-hard-0028",
+    "question": "How much hush money did Vought initially offer Hughie after Robin's death?",
+    "options": ["$45,000", "$20,000", "$60,000", "$100,000"],
+    "answer": "$45,000",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-hard-0029",
+    "question": "Which supe did Madelyn Stillwell try to push on the mayor of Baltimore for his city?",
+    "options": ["Nubian Prince", "Iron Cast", "Red Vault", "Golden Might"],
+    "answer": "Nubian Prince",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-expert-0051",
+    "question": "Who was the first person given Compound V who developed powers, as revealed in the show?",
+    "options": ["Stormfront", "Soldier Boy", "Black Noir", "Homelander"],
+    "answer": "Stormfront",
+    "difficulty": "expert"
+  },
+  {
+    "id": "boys-expert-0052",
+    "question": "What was Stormfront’s secret moniker during the 1970s?",
+    "options": ["Liberty", "Patriot Star", "White Crest", "Iron Dawn"],
+    "answer": "Liberty",
+    "difficulty": "expert"
+  },
+  {
+    "id": "boys-expert-0053",
+    "question": "Who does The Deep marry as part of his PR redemption with the Church of the Collective?",
+    "options": ["Cassandra", "Regina", "Heather", "Melinda"],
+    "answer": "Cassandra",
+    "difficulty": "expert"
+  },
+  {
+    "id": "boys-expert-0054",
+    "question": "What is the name of the illegal Vought facility experimenting on supes with psychological issues?",
+    "options": ["Sage Grove Center", "Red River House", "Vought Care", "Ascend Grove"],
+    "answer": "Sage Grove Center",
+    "difficulty": "expert"
+  },
+  {
+    "id": "boys-expert-0055",
+    "question": "What is the name of Billy Butcher’s deceased brother?",
+    "options": ["Lenny", "Frankie", "Stewart", "Eddie"],
+    "answer": "Lenny",
+    "difficulty": "expert"
+  },
+  {
+    "id": "boys-hard-112",
+    "question": "Who is kidnapped by Butcher to force production of more Compound V?",
+    "options": ["Sameer", "Salman", "Tek Knight", "Naqib"],
+    "answer": "Sameer",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-hard-102",
+    "question": "Which supe’s identity does Hughie impersonate to sneak into Tek Knight’s estate?",
+    "options": ["Webweaver", "SwingWing", "Tek Knight", "Gunpowder"],
+    "answer": "Webweaver",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-expert-0056",
+    "question": "What does Queen Maeve give Black Noir that sends him into an allergic shock?",
+    "options": ["Almond Joy", "Snickers", "Twix", "Butterfinger"],
+    "answer": "Almond Joy",
+    "difficulty": "expert"
+  },
+  {
+    "id": "boys-expert-0057",
+    "question": "Who is Hughie’s favorite musician, frequently mentioned in the show?",
+    "options": ["Billy Joel", "Bruce Springsteen", "Paul Simon", "Elton John"],
+    "answer": "Billy Joel",
+    "difficulty": "expert"
+  },
+  {
+    "id": "boys-expert-0058",
+    "question": "What is the title of The Deep’s memoir?",
+    "options": ["Deeper", "Depths Unknown", "Shallow Hero", "Under the Surface"],
+    "answer": "Deeper",
+    "difficulty": "medium"
+  },
+  {
+    "id": "boys-expert-0059",
+    "question": "What is the name of Mother’s Milk’s daughter?",
+    "options": ["Janine", "Clara", "Elise", "Tasha"],
+    "answer": "Janine",
+    "difficulty": "expert"
+  },
+  {
+    "id": "boys-expert-0060",
+    "question": "Which supe dated Starlight when they were teens and reappears in Season 3?",
+    "options": ["Supersonic", "Thunder Jam", "Pulse Strike", "Soundwave"],
+    "answer": "Supersonic",
+    "difficulty": "expert"
+  },
+  {
+    "id": "boys-expert-0061",
+    "question": "What is the name of the orphanage for superpowered children run by Vought?",
+    "options": ["Red River", "Blue Haven", "Compound Care", "Bright Fields"],
+    "answer": "Red River",
+    "difficulty": "expert"
+  },
+  {
+    "id": "boys-expert-0062",
+    "question": "Which supe was Soldier Boy’s ex-girlfriend?",
+    "options": ["Crimson Countess", "Stormfront", "Queen Maeve", "Liberty"],
+    "answer": "Crimson Countess",
+    "difficulty": "expert"
+  },
+  {
+    "id": "boys-expert-0063",
+    "question": "Who killed Mother’s Milk’s family?",
+    "options": ["Soldier Boy", "Homelander", "Black Noir", "Gunpowder"],
+    "answer": "Soldier Boy",
+    "difficulty": "medium"
+  },
+  {
+    "id": "boys-expert-0064",
+    "question": "Where was the Payback team when Soldier Boy was captured by the Russians?",
+    "options": ["Nicaragua", "Panama", "Ukraine", "Colombia"],
+    "answer": "Nicaragua",
+    "difficulty": "expert"
+  },
+  {
+    "id": "boys-expert-0065",
+    "question": "Which supe injured A-Train’s brother, leaving him paralyzed?",
+    "options": ["Blue Hawk", "Gunpowder", "Shockwave", "Mindstorm"],
+    "answer": "Blue Hawk",
+    "difficulty": "medium"
+  },
+  {
+    "id": "boys-expert-0066",
+    "question": "Who ultimately killed Blue Hawk?",
+    "options": ["A-Train", "Kimiko", "Butcher", "Frenchie"],
+    "answer": "A-Train",
+    "difficulty": "easy"
+  },
+  {
+    "id": "boys-expert-0067",
+    "question": "What power does Hughie temporarily gain after taking Compound V?",
+    "options": ["Teleportation", "Invisibility", "Laser vision", "Telekinesis"],
+    "answer": "Teleportation",
+    "difficulty": "medium"
+  },
+  {
+    "id": "boys-expert-0068",
+    "question": "Who is revealed to be Homelander’s biological father?",
+    "options": ["Soldier Boy", "Frederick Vought", "Stan Edgar", "Sean Myers"],
+    "answer": "Soldier Boy",
+    "difficulty": "medium"
+  },
+  {
+    "id": "boys-expert-0069",
+    "question": "Which of these is NOT a member of the supe team Payback?",
+    "options": ["Blue Hawk", "Mindstorm", "TNT Twins", "Gunpowder"],
+    "answer": "Blue Hawk",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-expert-0070",
+    "question": "What deadly gas is used by the Russians to sedate Soldier Boy?",
+    "options": ["Novichok", "Sarin", "VX", "Cyanogen"],
+    "answer": "Novichok",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-expert-0071",
+    "question": "Who is introduced in Season 4 as the most intelligent person in the world?",
+    "options": ["Sister Sage", "Doc Newton", "Smart Shard", "Brain Blaze"],
+    "answer": "Sister Sage",
+    "difficulty": "medium"
+  },
+  {
+    "id": "boys-expert-0072",
+    "question": "Who cameoed as A-Train’s high school coach in the movie set of Training A train?",
+    "options": ["Will Ferrell", "Paul Rudd", "Seth Rogen", "Jon Hamm"],
+    "answer": "Will Ferrell",
+    "difficulty": "expert"
+  },
+  {
+    "id": "boys-expert-0073",
+    "question": "What is the name of the fan group that rallies behind Starlight in Season 4?",
+    "options": ["Starlighters", "Light League", "Shine Squad", "Starforce"],
+    "answer": "Starlighters",
+    "difficulty": "medium"
+  },
+  {
+    "id": "boys-expert-0074",
+    "question": "Which new supe joins The Seven in Season 4, known for using social media outrage and her fight with Starlight?",
+    "options": ["Firecracker", "Pulse Core", "Flash Volt", "Torch Belle"],
+    "answer": "Firecracker",
+    "difficulty": "expert"
+  },
+  {
+    "id": "boys-expert-0075",
+    "question": "Who serves as the U.S. Secretary of Defense in Season 1 and becomes President-elect in Season 4?",
+    "options": ["Robert Singer", "Stan Edgar", "Jonah Vogelbaum", "Ezekiel Pike"],
+    "answer": "Robert Singer",
+    "difficulty": "expert"
+  },
+  {
+    "id": "boys-expert-0076",
+    "question": "What is the name of The Deep’s octopus companion in Seasons 3 and 4?",
+    "options": ["Ambrosius", "Timothy", "Inkjet", "Salacia"],
+    "answer": "Ambrosius",
+    "difficulty": "expert"
+  },
+  {
+    "id": "boys-expert-0077",
+    "question": "Where was the supe-killing virus secretly developed?",
+    "options": ["Godolkin University", "Red River", "Sage Grove", "Vought Labs HQ"],
+    "answer": "Godolkin University",
+    "difficulty": "expert"
+  },
+  {
+    "id": "boys-expert-0078",
+    "question": "Who is the anchor of the Vought News Network who was framed and later killed?",
+    "options": ["Cameron Coleman", "Greg Mallory", "Rick Tice", "Derrick Slate"],
+    "answer": "Cameron Coleman",
+    "difficulty": "expert"
+  },
+  {
+    "id": "boys-expert-0079",
+    "question": "Which character in Season 4 is later revealed to be a hallucination of Butcher’s mind?",
+    "options": ["Joe Kessler", "Max Rider", "Frank Spears", "Holt Jamison"],
+    "answer": "Joe Kessler",
+    "difficulty": "expert"
+  },
+  {
+    "id": "boys-expert-0080",
+    "question": "Who plays Joe Kessler in The Boys Season 4?",
+    "options": ["Jeffrey Dean Morgan", "Giancarlo Esposito", "Clancy Brown", "Jensen Ackles"],
+    "answer": "Jeffrey Dean Morgan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-hard-0030",
+    "question": "Who catches Hughie trying to plant a bug inside Vought Tower?",
+    "options": ["Translucent", "Silent Edge", "Veil Shade", "Silver Phase"],
+    "answer": "Translucent",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-hard-0031",
+    "question": "Who did A-Train race in Season 1 to retain the title of world's fastest man?",
+    "options": ["Shockwave", "Speedstrike", "Thrustline", "Zipshot"],
+    "answer": "Shockwave",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-hard-0032",
+    "question": "Which senator was blackmailed into supporting supes in the military?",
+    "options": ["Senator Calhoun", "Senator Brower", "Senator Mather", "Senator Quade"],
+    "answer": "Senator Calhoun",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-hard-0033",
+    "question": "Who killed the telepathic supe Mesmer after learning he betrayed them?",
+    "options": ["Butcher", "Frenchie", "MM", "Kenji"],
+    "answer": "Butcher",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-hard-0034",
+    "question": "What is the name of Mother's Milk’s ex-wife?",
+    "options": ["Monique", "Teresa", "Vanessa", "Claudia"],
+    "answer": "Monique",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-hard-0035",
+    "question": "To which small city was The Deep exiled after his scandal broke?",
+    "options": ["Sandusky", "Oakwell", "Plymouth", "Winslow"],
+    "answer": "Sandusky",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-hard-0036",
+    "question": "Who led the Christian group 'Capes for Christ'?",
+    "options": ["Ezekiel", "Preacher Hale", "Minister Reed", "Brother Grant"],
+    "answer": "Ezekiel",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-hard-0037",
+    "question": "What was the name of the Christian fundamentalist organization featured in the series?",
+    "options": ["Capes for Christ", "Salvation Suits", "Spirit Supes", "Faith in Flight"],
+    "answer": "Capes for Christ",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-hard-0038",
+    "question": "What is the name of the annual Christian event organized by Capes for Christ?",
+    "options": ["Believe Expo", "Faith Con", "Spirit Fest", "Salvation Summit"],
+    "answer": "Believe Expo",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-hard-0039",
+    "question": "Which disabled superhero did Vought propose to join The Seven wjomHomelander killed?",
+    "options": ["Blindspot", "Wheelstrike", "Echo Ear", "Legless Bolt"],
+    "answer": "Blindspot",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-hard-0040",
+    "question": "Who founded Vought and was responsible for Compound V's origin?",
+    "options": ["Frederick Vought", "Stan Edgar", "Lewis Ferner", "Walter Grimm"],
+    "answer": "Frederick Vought",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-hard-0041",
+    "question": "What year did The Boys TV series first premiere?",
+    "options": ["2019", "2017", "2020", "2018"],
+    "answer": "2019",
+    "difficulty": "medium"
+  },
+  {
+    "id": "boys-hard-0042",
+    "question": "Who directed many episodes and is credited as the showrunner for The Boys?",
+    "options": ["Eric Kripke", "Seth Rogen", "Evan Goldberg", "Adam McKay"],
+    "answer": "Eric Kripke",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-hard-0043",
+    "question": "On what streaming network does The Boys air?",
+    "options": ["Amazon Prime Video", "Netflix", "Hulu", "HBO Max"],
+    "answer": "Amazon Prime Video",
+    "difficulty": "medium"
+  },
+  {
+    "id": "boys-hard-0044",
+    "question": "What is the name of Kimiko’s brother who was kidnapped and experimented on?",
+    "options": ["Kenji", "Daichi", "Haruto", "Kazuo"],
+    "answer": "Kenji",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-hard-0045",
+    "question": "Who plays Mother’s Milk in the series?",
+    "options": ["Laz Alonso", "Chace Crawford", "Nathan Mitchell", "Tomer Capone"],
+    "answer": "Laz Alonso",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-hard-0046",
+    "question": "Who portrays Frenchie?",
+    "options": ["Tomer Capone", "Antony Starr", "Jessie T. Usher", "Karl Urban"],
+    "answer": "Tomer Capone",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-hard-0047",
+    "question": "Who plays Kimiko?",
+    "options": ["Karen Fukuhara", "Aya Cash", "Claudia Doumit", "Colby Minifie"],
+    "answer": "Karen Fukuhara",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-hard-0048",
+    "question": "Who portrays Victoria Neuman?",
+    "options": ["Claudia Doumit", "Aya Cash", "Colby Minifie", "Jordana Lajoie"],
+    "answer": "Claudia Doumit",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-hard-0049",
+    "question": "Who plays Vought CEO Stan Edgar?",
+    "options": ["Giancarlo Esposito", "Jeffrey Dean Morgan", "Anthony Starr", "Simon Pegg"],
+    "answer": "Giancarlo Esposito",
+    "difficulty": "medium"
+  },
+  {
+    "id": "boys-hard-0050",
+    "question": "Who plays Ashley Barrett, the anxious Vought publicist?",
+    "options": ["Colby Minifie", "Karen Fukuhara", "Aya Cash", "Jordana Lajoie"],
+    "answer": "Colby Minifie",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-035",
+    "question": "What is the name of the superhero parody movie franchise in the show?",
+    "options": ["Dawn of the Seven", "Justice Forever", "Super Squad", "Heroic League"],
+    "answer": "Dawn of the Seven",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pb-hard-0123",
+    "question": "Who is the supe with telekinetic power, kept in a facility alongside Lamplighter?",
+    "options": ["Cindy", "Ezekiel", "Love Sausage", "Tek Knight"],
+    "answer": "Cindy",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-068",
+    "question": "Which supe is a member of Payback and was soldier boys sidekick?",
+    "options": ["Gunpowder", "Black Noir", "Supersonic", "Termite"],
+    "answer": "Gunpowder",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-044",
+    "question": "What is the name of the supe who can read minds by touching people?",
+    "options": ["Mesmer", "Brainiac", "Kenji", "Termite"],
+    "answer": "Mesmer",
+    "difficulty": "medium"
+  },
+  {
+    "id": "boys-037",
+    "question": "What is the name of the supe who can shrink in size?",
+    "options": ["Termite", "Gecko", "Popclaw", "Mesmer"],
+    "answer": "Termite",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pb-hard-0127",
+    "question": "Which executive producer of the show makes several cameos in different seasons?",
+    "options": ["Seth Rogen", "Adam McKay", "Taika Waititi", "Edgar Wright"],
+    "answer": "Seth Rogen",
+    "difficulty": "hard"
+  },
+  {
+    "id": "boys-030",
+    "question": "Which member of The Boys is a skilled chemist and weapons expert?",
+    "options": ["Frenchie", "Mother's Milk", "Hughie", "Butcher"],
+    "answer": "Frenchie",
+    "difficulty": "medium"
+  },
+  {
+    "id": "boys-031",
+    "question": "What is the name of the supe who explodes heads in season 2?",
+    "options": ["Victoria Neuman", "Stormfront", "Kenji", "Black Noir"],
+    "answer": "Victoria Neuman",
+    "difficulty": "medium"
+  },
+  {
+    "id": "boys-029",
+    "question": "What is the real name of Mother's Milk?",
+    "options": ["Marvin", "Hugh", "Serge", "Billy"],
+    "answer": "Marvin",
+    "difficulty": "medium"
+  },
+  {
+    "id": "boys-022",
+    "question": "Who is the main antagonist introduced in season 2?",
+    "options": ["Stormfront", "Homelander", "A-Train", "Black Noir"],
+    "answer": "Stormfront",
+    "difficulty": "easy"
+  },
+  {
+    "id": "boys-021",
+    "question": "What is the name of the superhero group from WWII referenced in season 3?",
+    "options": ["Payback", "The Seven", "The G-Men", "Teenage Kix"],
+    "answer": "Payback",
+    "difficulty": "easy"
+  },
+  {
+    "id": "boys-018",
+    "question": "What is the name of Billy Butcher’s dog?",
+    "options": ["Terror", "Buddy", "Max", "Rex"],
+    "answer": "Terror",
+    "difficulty": "easy"
+  },
+  {
+    "id": "boys-016",
+    "question": "Which member of The Boys is a former Marine?",
+    "options": ["Mother's Milk", "Frenchie", "Hughie", "Kimiko"],
+    "answer": "Mother's Milk",
+    "difficulty": "easy"
+  },
+  {
+    "id": "boys-017",
+    "question": "Who is the CEO of Vought during most of the series?",
+    "options": ["Stan Edgar", "Madelyn Stillwell", "Ashley Barrett", "Homelander"],
+    "answer": "Stan Edgar",
+    "difficulty": "easy"
+  },
+  {
+    "id": "boys-015",
+    "question": "What is the name of the superhero group led by Homelander?",
+    "options": ["The Seven", "The Boys", "The G-Men", "Payback"],
+    "answer": "The Seven",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-hard-0128",
+    "question": "What does A-Train suffer from due to his overuse of Compound V?",
+    "options": ["Heart failure", "Kidney failure", "Severe arthritis", "Neuropathy"],
+    "answer": "Heart failure",
+    "difficulty": "medium"
+  },
+  {
+    "id": "boys-014",
+    "question": "Who is the original founder of The Boys?",
+    "options": ["Grace Mallory", "Billy Butcher", "Frenchie", "Hughie"],
+    "answer": "Grace Mallory",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pb-expert-0167",
+    "question": "What was Starlight’s home town?",
+    "options": ["Des Moines, Iowa", "Waukee, Iowa", "Boone, Iowa", "West Branch, Iowa"],
+    "answer": "Des Moines, Iowa",
+    "difficulty": "expert"
+  }
+]

@@ -1,0 +1,647 @@
+[
+  {
+    "id": "pandr-easy-0001",
+    "question": "In what Indiana city is the series set?",
+    "options": ["Pawnee", "Eagleton", "Bloomington", "Fort Wayne"],
+    "answer": "Pawnee",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pandr-easy-0002",
+    "question": "What department does Leslie Knope work for at the start of the show?",
+    "options": ["Parks and Recreation", "City Manager’s Office", "Sanitation", "Library"],
+    "answer": "Parks and Recreation",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pandr-easy-0003",
+    "question": "What food is Leslie Knope famously obsessed with?",
+    "options": ["Waffles", "Pizza", "Hot dogs", "Nachos"],
+    "answer": "Waffles",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pandr-easy-0004",
+    "question": "What is Ron Swanson’s secret jazz persona?",
+    "options": ["Duke Silver", "Mr. Jazzman", "Sax Daddy", "Blue Note Ron"],
+    "answer": "Duke Silver",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pandr-easy-0005",
+    "question": "What is the name of Andy Dwyer’s band?",
+    "options": ["Mouse Rat", "Rat Mouse", "Scarecrow Boat", "Angel Express"],
+    "answer": "Mouse Rat",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pandr-easy-0006",
+    "question": "What tiny horse is a Pawnee icon?",
+    "options": ["Li'l Sebastian", "Tiny Sebastian", "Tiny Tony", "Pocket Pal"],
+    "answer": "Li'l Sebastian",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pandr-easy-0007",
+    "question": "Which board game does Ben Wyatt invent?",
+    "options": ["The Cones of Dunshire", "Settlers of Hoosier Town", "Isles of Pawnee", "Parks & Plans"],
+    "answer": "The Cones of Dunshire",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pandr-easy-0008",
+    "question": "Which duo popularizes “Treat Yo’ Self”?",
+    "options": ["Tom & Donna", "Leslie & Ann", "Ben & Chris", "April & Andy"],
+    "answer": "Tom & Donna",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pandr-easy-0009",
+    "question": "Who is the Parks Department director for much of the series?",
+    "options": ["Ron Swanson", "Ben Wyatt", "Chris Traeger", "Jerry Gergich"],
+    "answer": "Ron Swanson",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pandr-easy-0010",
+    "question": "What is Ann Perkins’s profession at the start?",
+    "options": ["Nurse", "Teacher", "Journalist", "Engineer"],
+    "answer": "Nurse",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pandr-easy-0011",
+    "question": "What FBI alter ego does Andy adopt during role-play?",
+    "options": ["Burt Macklin", "Chase Rambo", "Agent Swanson", "Ben Wyatt, G-Man"],
+    "answer": "Burt Macklin",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pandr-easy-0012",
+    "question": "What is the name of April and Andy’s three-legged dog?",
+    "options": ["Champion", "Comet", "Scout", "Ranger"],
+    "answer": "Champion",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pandr-easy-0013",
+    "question": "Ben Wyatt is famously devoted to what food?",
+    "options": ["Calzones", "Burritos", "Sushi", "Fried chicken"],
+    "answer": "Calzones",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pandr-easy-0014",
+    "question": "What is Pawnee’s wealthy rival town?",
+    "options": ["Eagleton", "Springfield", "Muncie", "Spooner"],
+    "answer": "Eagleton",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pandr-easy-0015",
+    "question": "Whom does Leslie Knope marry?",
+    "options": ["Ben Wyatt", "Ron Swanson", "Mark Brendanawicz", "Chris Traeger"],
+    "answer": "Ben Wyatt",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pandr-easy-0016",
+    "question": "Councilman Jeremy Jamm’s day job is what?",
+    "options": ["Dentist", "Lawyer", "Contractor", "Teacher"],
+    "answer": "Dentist",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pandr-easy-0017",
+    "question": "Who is Leslie’s longtime best friend?",
+    "options": ["Ann Perkins", "April Ludgate", "Donna Meagle", "Marlene Knope"],
+    "answer": "Ann Perkins",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pandr-easy-0018",
+    "question": "What is the name of Pawnee’s talk-show host who often interviews Leslie?",
+    "options": ["Joan Callamezzo", "Perd Hapley", "Jessica Wicks", "Shauna Malwae-Tweep"],
+    "answer": "Joan Callamezzo",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pandr-easy-0019",
+    "question": "Which local news anchor is known for literal phrasing?",
+    "options": ["Perd Hapley", "Joan Callamezzo", "Shauna Malwae-Tweep", "Harris"],
+    "answer": "Perd Hapley",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pandr-easy-0020",
+    "question": "What’s Jerry’s real first name later used regularly?",
+    "options": ["Garry", "Larry", "Terry", "Barry"],
+    "answer": "Garry",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pandr-easy-0021",
+    "question": "What tribute song is performed for Li’l Sebastian?",
+    "options": ["“5,000 Candles in the Wind”", "“Bye Bye Pony”", "“Mini Horse Blues”", "“Sebastian’s Farewell”"],
+    "answer": "“5,000 Candles in the Wind”",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pandr-easy-0022",
+    "question": "What flashy company do Tom and Jean-Ralphio start?",
+    "options": ["Entertainment 720", "Rent-A-Swag", "Tom’s Bistro", "Snakehole Events"],
+    "answer": "Entertainment 720",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pandr-easy-0023",
+    "question": "What Pawnee-based sweets company bankrolls Bobby Newport?",
+    "options": ["Sweetums", "Sweets-R-Us", "Pawnee Candy Co.", "Hoosier Treats"],
+    "answer": "Sweetums",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pandr-easy-0024",
+    "question": "Where does Leslie love to eat waffles?",
+    "options": ["JJ’s Diner", "Paunch Burger", "The Snakehole", "Tom’s Bistro"],
+    "answer": "JJ’s Diner",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pandr-easy-0025",
+    "question": "Donna’s last name is what?",
+    "options": ["Meagle", "Eagle", "Wagle", "Seagle"],
+    "answer": "Meagle",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pandr-medium-0026",
+    "question": "What Minnesota town did Ben Wyatt bankrupt as a teen mayor?",
+    "options": ["Partridge", "Winona", "Mankato", "Stillwater"],
+    "answer": "Partridge",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0027",
+    "question": "What is the number of the infamous pit lot next to Ann’s house?",
+    "options": ["Lot 48", "Lot 12", "Lot 96", "Lot 23"],
+    "answer": "Lot 48",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0028",
+    "question": "What is April’s surname before marriage?",
+    "options": ["Ludgate", "Meagle", "Perkins", "Wicks"],
+    "answer": "Ludgate",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0029",
+    "question": "Which Eagleton staffer joins Pawnee after the merger?",
+    "options": ["Craig Middlebrooks", "Ingrid de Forest", "Trevor Nelsson", "Bobby Newport"],
+    "answer": "Craig Middlebrooks",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0030",
+    "question": "What instrument does Duke Silver play?",
+    "options": ["Saxophone", "Trumpet", "Piano", "Guitar"],
+    "answer": "Saxophone",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0031",
+    "question": "What is Leslie’s mother’s name?",
+    "options": ["Marlene", "Joan", "Linda", "Jessica"],
+    "answer": "Marlene",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0032",
+    "question": "Whom does Donna Meagle marry?",
+    "options": ["Joe", "Keegan", "Trevor", "Chris"],
+    "answer": "Joe",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0033",
+    "question": "Which department is the Parks Department’s arch-nemesis?",
+    "options": ["Library", "Sanitation", "Sewage", "Public Works"],
+    "answer": "Library",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0034",
+    "question": "To which city do Ann and Chris move?",
+    "options": ["Ann Arbor", "Detroit", "Chicago", "Madison"],
+    "answer": "Ann Arbor",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0035",
+    "question": "Which festival does Leslie revive to save the department?",
+    "options": ["Harvest Festival", "Founders Day", "Maple Days", "Unity Concert"],
+    "answer": "Harvest Festival",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0036",
+    "question": "Which lounge does Tom promote before his own ventures?",
+    "options": ["The Snakehole Lounge", "JJ’s After Dark", "E720 VIP", "The Glitter Dome Lounge"],
+    "answer": "The Snakehole Lounge",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0037",
+    "question": "What is April’s noir-ish alter ego during role-play with Andy?",
+    "options": ["Janet Snakehole", "Raven Noir", "Donna Black", "Diane S."
+    ],
+    "answer": "Janet Snakehole",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0038",
+    "question": "What kids’ TV persona does Andy create?",
+    "options": ["Johnny Karate", "Andy Amazing", "Ranger Dwyer", "Mr. Mouse Rat"],
+    "answer": "Johnny Karate",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0039",
+    "question": "Which Scotch does Ron Swanson prefer?",
+    "options": ["Lagavulin", "Glenlivet", "Macallan", "Laphroaig"],
+    "answer": "Lagavulin",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0040",
+    "question": "Who is Bobby Newport’s high-powered campaign manager?",
+    "options": ["Jennifer Barkley", "Trevor Nelsson", "Ingrid de Forest", "Shauna Malwae-Tweep"],
+    "answer": "Jennifer Barkley",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0041",
+    "question": "What was Mouse Rat formerly called when Ann first met Andy?",
+    "options": ["Scarecrow Boat", "Just the Tip", "Rat Mouse", "Menace Beach"],
+    "answer": "Scarecrow Boat",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0042",
+    "question": "What is the name of Jean-Ralphio’s sister?",
+    "options": ["Mona-Lisa", "Cassandra", "Veronica", "Lila"],
+    "answer": "Mona-Lisa",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0043",
+    "question": "What is Tom’s signature cologne brand?",
+    "options": ["Tommy Fresh", "Pawnee Nights", "Snakejuice Scent", "E720 Mist"],
+    "answer": "Tommy Fresh",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0044",
+    "question": "Who leads the Wamapoke Tribe featured in Pawnee history?",
+    "options": ["Ken Hotate", "Joe Hotate", "Eagle Two-Feathers", "Chief Wama"],
+    "answer": "Ken Hotate",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0045",
+    "question": "Which tongue-in-cheek city slogan is associated with Pawnee?",
+    "options": ["First in Friendship, Fourth in Obesity", "City of Dreams, City of Parks", "Small Town, Big Hearts", "Indiana’s Green Gem"],
+    "answer": "First in Friendship, Fourth in Obesity",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0046",
+    "question": "What micro-film project does Ben make during unemployment?",
+    "options": ["Requiem for a Tuesday", "Pawnee Nights", "Calzone Dreams", "Sax over Pawnee"],
+    "answer": "Requiem for a Tuesday",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0047",
+    "question": "Which character is famous for saying “literally” with intense enthusiasm?",
+    "options": ["Chris Traeger", "Tom Haverford", "Ben Wyatt", "Jerry Gergich"],
+    "answer": "Chris Traeger",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0048",
+    "question": "Which wealthy family owns Sweetums?",
+    "options": ["Newport", "Callamezzo", "Haverford", "Gergich"],
+    "answer": "Newport",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0049",
+    "question": "Which dentist-turned-councilman constantly obstructs Leslie?",
+    "options": ["Jeremy Jamm", "Bill Dexhart", "Fielding Milton", "Councilman Pillner"],
+    "answer": "Jeremy Jamm",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0050",
+    "question": "What restaurant does Tom eventually open?",
+    "options": ["Tom’s Bistro", "Tom’s Grill", "CalZone", "E720 Café"],
+    "answer": "Tom’s Bistro",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-hard-0051",
+    "question": "Who plays Ron’s ex-wives known as the two Tammys?",
+    "options": ["Megan Mullally & Patricia Clarkson", "Megan Mullally & Amy Poehler", "Patricia Clarkson & Rashida Jones", "Kathryn Hahn & Megan Mullally"],
+    "answer": "Megan Mullally & Patricia Clarkson",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-hard-0052",
+    "question": "What failed teen project bankrupted Ben’s town during his mayorship?",
+    "options": ["Ice Town", "Mayor World", "Winter Fest", "Snow City"],
+    "answer": "Ice Town",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-hard-0053",
+    "question": "What is the title of Leslie’s book about her hometown?",
+    "options": ["Pawnee: The Greatest Town in America", "Pawnee: A City of Parks", "Welcome to Pawnee", "The Pawnee Way"],
+    "answer": "Pawnee: The Greatest Town in America",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-hard-0054",
+    "question": "Who becomes mayor of Pawnee in the flash-forwards?",
+    "options": ["Garry Gergich", "Ron Swanson", "Ben Wyatt", "Tom Haverford"],
+    "answer": "Garry Gergich",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-hard-0055",
+    "question": "Which business rents designer clothes to teens for events?",
+    "options": ["Rent-A-Swag", "Style 720", "Tommy Threads", "Youth Couture"],
+    "answer": "Rent-A-Swag",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-hard-0056",
+    "question": "After her recall, where does Leslie take a federal job?",
+    "options": ["National Park Service in Chicago", "EPA in Indianapolis", "Interior Dept in D.C.", "USDA in Bloomington"],
+    "answer": "National Park Service in Chicago",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-hard-0057",
+    "question": "What was Andy’s first gig in City Hall before security-related aspirations?",
+    "options": ["Shoeshiner", "Mailroom clerk", "Records assistant", "Janitor"],
+    "answer": "Shoeshiner",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-hard-0058",
+    "question": "Who serves as Eagleton’s parks liaison during merger tensions?",
+    "options": ["Ingrid de Forest", "Craig Middlebrooks", "Trevor Nelsson", "Kim Terlando"],
+    "answer": "Ingrid de Forest",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-hard-0059",
+    "question": "How many children do Ben and Leslie have together in the time-jumps?",
+    "options": ["Triplets", "Twins", "One son", "Two daughters"],
+    "answer": "Triplets",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-hard-0060",
+    "question": "What is Ron’s independent construction outfit called?",
+    "options": ["Very Good Building and Development Company", "Swanson & Sons Carpentry", "Pawnee Woodworks Ltd.", "Hoosier Builders Co."],
+    "answer": "Very Good Building and Development Company",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-hard-0061",
+    "question": "Which serially scandal-plagued councilman frequently faces sex scandals?",
+    "options": ["Bill Dexhart", "Jeremy Jamm", "Fielding Milton", "Councilman Hauser"],
+    "answer": "Bill Dexhart",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-hard-0062",
+    "question": "Which event disproves the town’s fear of a curse and restores budgets?",
+    "options": ["Harvest Festival’s success", "Unity Concert", "Pawnee Commons opening", "Recall rally"],
+    "answer": "Harvest Festival’s success",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-hard-0064",
+    "question": "Which phrase does Leslie coin for the new park on Lot 48 after years of work?",
+    "options": ["Pawnee Commons", "Knope Park", "Friendship Field", "Unity Green"],
+    "answer": "Pawnee Commons",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-hard-0066",
+    "question": "What is the Unity Concert primarily organized to celebrate?",
+    "options": ["Pawnee–Eagleton merger", "City Council victory", "JJ’s reopening", "Li’l Sebastian’s birthday"],
+    "answer": "Pawnee–Eagleton merger",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-hard-0068",
+    "question": "Which city contractor often represents Eagleton interests against Pawnee?",
+    "options": ["Trevor Nelsson", "Councilman Hauser", "Fielding Milton", "Bobby Newport"],
+    "answer": "Trevor Nelsson",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-hard-0069",
+    "question": "What is the hyper-caloric burger chain lampooned in Pawnee?",
+    "options": ["Paunch Burger", "Meat Mountain", "Burger Barn", "Fatty’s"],
+    "answer": "Paunch Burger",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-hard-0074",
+    "question": "Which company becomes a tech presence in Pawnee during the time jump?",
+    "options": ["Gryzzl", "Hooli", "Byteback", "IndyTech"],
+    "answer": "Gryzzl",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-expert-0078",
+    "question": "Which product does Tom mix into a potent club drink later sold at Snakehole parties?",
+    "options": ["Snakejuice", "Calzone Cooler", "Tommy Fresh Tonic", "E720 Buzz"],
+    "answer": "Snakejuice",
+    "difficulty": "expert"
+  },
+  {
+    "id": "pandr-expert-0082",
+    "question": "Which pop star is revealed to be Donna Meagle’s cousin?",
+    "options": ["Ginuwine", "Usher", "Ne-Yo", "Akon"],
+    "answer": "Ginuwine",
+    "difficulty": "expert"
+  },
+  {
+    "id": "pandr-expert-0084",
+    "question": "Which attorney repeatedly represents Eagleton or corporate interests against Pawnee?",
+    "options": ["Trevor Nelsson", "Jennifer Barkley", "Milton Hauser", "Fielding Dexhart"],
+    "answer": "Trevor Nelsson",
+    "difficulty": "expert"
+  },
+  {
+    "id": "pandr-expert-0088",
+    "question": "Which celebrity guest appears as the heir to Sweetums and Leslie’s political rival?",
+    "options": ["Paul Rudd", "Bill Murray", "Louis C.K.", "Kristen Bell"],
+    "answer": "Paul Rudd",
+    "difficulty": "expert"
+  },
+  {
+    "id": "pandr-expert-0091",
+    "question": "Which Eagleton official is portrayed by Kristen Bell?",
+    "options": ["Ingrid de Forest", "Mona-Lisa Saperstein", "Jennifer Barkley", "Jessica Wicks"],
+    "answer": "Ingrid de Forest",
+    "difficulty": "expert"
+  },
+  {
+    "id": "pandr-expert-0094",
+    "question": "Which celebrity guest officiates a funeral that shocks the town (appearing in the finale montage)?",
+    "options": ["Bill Murray", "Jon Hamm", "Patton Oswalt", "Newt Gingrich"],
+    "answer": "Bill Murray",
+    "difficulty": "expert"
+  },
+  {
+    "id": "pandr-expert-0094",
+    "question": "Which celebrity guest officiates a funeral that shocks the town (appearing in the finale montage)?",
+    "options": ["Bill Murray", "Jon Hamm", "Patton Oswalt", "Newt Gingrich"],
+    "answer": "Bill Murray",
+    "difficulty": "expert"
+  },
+  {
+    "id": "pr-easy-0001",
+    "question": "How many seasons does Parks and Recreation have?",
+    "options": ["7", "6", "8", "5"],
+    "answer": "7",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pr-easy-0002",
+    "question": "In what year did Parks and Recreation premiere?",
+    "options": ["2009", "2008", "2010", "2011"],
+    "answer": "2009",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pr-easy-0003",
+    "question": "Which network originally aired Parks and Recreation?",
+    "options": ["NBC", "ABC", "FOX", "CBS"],
+    "answer": "NBC",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pr-easy-0004",
+    "question": "Who plays Leslie Knope?",
+    "options": ["Amy Poehler", "Tina Fey", "Rashida Jones", "Kristen Wiig"],
+    "answer": "Amy Poehler",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pr-easy-0005",
+    "question": "Who plays Ron Swanson?",
+    "options": ["Nick Offerman", "Chris Pratt", "Adam Scott", "Rob Lowe"],
+    "answer": "Nick Offerman",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pr-easy-0006",
+    "question": "Who plays Ann Perkins?",
+    "options": ["Rashida Jones", "Aubrey Plaza", "Retta", "Jenny Slate"],
+    "answer": "Rashida Jones",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pr-easy-0007",
+    "question": "Who plays Tom Haverford?",
+    "options": ["Aziz Ansari", "Ben Schwartz", "John Ralphio", "Kumail Nanjiani"],
+    "answer": "Aziz Ansari",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pr-easy-0008",
+    "question": "Who plays April Ludgate?",
+    "options": ["Aubrey Plaza", "Zooey Deschanel", "Alison Brie", "Anna Kendrick"],
+    "answer": "Aubrey Plaza",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pr-easy-0009",
+    "question": "Who plays Andy Dwyer?",
+    "options": ["Chris Pratt", "Adam Scott", "Paul Schneider", "John Krasinski"],
+    "answer": "Chris Pratt",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pr-medium-0010",
+    "question": "Who plays Ben Wyatt?",
+    "options": ["Adam Scott", "Paul Rudd", "Rob Lowe", "Jason Bateman"],
+    "answer": "Adam Scott",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pr-medium-0011",
+    "question": "Who plays Chris Traeger?",
+    "options": ["Rob Lowe", "Paul Rudd", "James Marsden", "Jon Hamm"],
+    "answer": "Rob Lowe",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pr-medium-0012",
+    "question": "Who plays Donna Meagle?",
+    "options": ["Retta", "Maya Rudolph", "Taraji P. Henson", "Regina Hall"],
+    "answer": "Retta",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pr-medium-0013",
+    "question": "Who plays Jerry/Larry/Terry Gergich?",
+    "options": ["Jim O'Heir", "Nick Offerman", "Mike O'Gorman", "Bill Fagerbakke"],
+    "answer": "Jim O'Heir",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-expert-0001",
+    "question": "What is the full name of the law firm Trevor Nelsson works for, which is composed entirely of baseball sabermetric abbreviations?",
+    "options": ["Fwar, Dips, Winshares, Gritt, Babip, Pecota, Vorp & Eckstein", "Vorp, Pecota, Babip, Slg, Ops, Whip & Maddux", "Dips, Fip, War, Babip, Uzr, Pecota & Jeter", "Gritt, Vorp, Winshares, Dips, Fwar & Rivera"],
+    "answer": "Fwar, Dips, Winshares, Gritt, Babip, Pecota, Vorp & Eckstein",
+    "difficulty": "expert"
+  },
+  {
+    "id": "pandr-expert-0002",
+    "question": "In the episode 'The Comeback Kid', what is the name of the 'B-level' local celebrity and former Indiana Pacer whom Andy tries to recruit for Leslie's campaign?",
+    "options": ["Roy Hibbert", "Detlef Schrempf", "Reggie Miller", "Rik Smits"],
+    "answer": "Detlef Schrempf",
+    "difficulty": "expert"
+  },
+  {
+    "id": "pandr-expert-0004",
+    "question": "What is the name of the 1970s Pawnee cult that believed the world would end at the hand of a giant fire god named Zorp?",
+    "options": ["The Slayers", "The Reasonabilists", "The Doomsdayers", "The Followers of the Flute"],
+    "answer": "The Reasonabilists",
+    "difficulty": "expert"
+  },
+  {
+    "id": "pandr-expert-0014",
+    "question": "What is the name of the Pawnee animal control officer who is fired and later applies for a job at Gryzzl?",
+    "options": ["Brett", "Harris", "Kyle", "Barney"],
+    "answer": "Harris",
+    "difficulty": "expert"
+  },
+  {
+    "id": "pandr-expert-0015",
+    "question": "What is the street of the house Ann Perkins lives in throughout the majority of the series?",
+    "options": ["Sullivan Street", "Jump Street", "Mockingbird Lane", "Pawnee Way"],
+    "answer": "Sullivan Street",
+    "difficulty": "expert"
+  }
+]

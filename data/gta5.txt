@@ -1,0 +1,880 @@
+[
+  {
+    "id": "gta5-001",
+    "difficulty": "easy",
+    "question": "Which city is the main setting of GTA V?",
+    "options": ["Los Santos", "Vice City", "Liberty City", "San Andreas"],
+    "answer": "Los Santos"
+  },
+  {
+    "id": "gta5-002",
+    "difficulty": "easy",
+    "question": "How many playable protagonists are in GTA V’s story mode?",
+    "options": ["3", "1", "2", "4"],
+    "answer": "3"
+  },
+  {
+    "id": "gta5-003",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a playable protagonist in GTA V?",
+    "options": ["Michael De Santa", "Franklin Clinton", "Trevor Philips", "CJ Johnson"],
+    "answer": "CJ Johnson"
+  },
+  {
+    "id": "gta5-006",
+    "difficulty": "easy",
+    "question": "Which company’s logo appears on in-game phones in GTA V?",
+    "options": ["iFruit", "iPear", "Lifeinvader", "FruitOS"],
+    "answer": "iFruit"
+  },
+  {
+    "id": "gta5-007",
+    "difficulty": "easy",
+    "question": "What is the name of the in-game parody social network in GTA V?",
+    "options": ["Lifeinvader", "Bleeter", "Snapmatic", "Eyefind"],
+    "answer": "Lifeinvader"
+  },
+  {
+    "id": "gta5-008",
+    "difficulty": "easy",
+    "question": "What’s the name of the internet browser/search portal in GTA V?",
+    "options": ["Eyefind", "Lifeinvader", "VinewoodNet", "FleecaWeb"],
+    "answer": "Eyefind"
+  },
+  {
+    "id": "gta5-011",
+    "difficulty": "easy",
+    "question": "What is the name of the entertainment industry district/culture in GTA V’s world?",
+    "options": ["Vinewood", "Starfish Island", "Harwood", "Old Venturas"],
+    "answer": "Vinewood"
+  },
+  {
+    "id": "gta5-012",
+    "difficulty": "easy",
+    "question": "What’s the name of Los Santos’ airport?",
+    "options": ["Los Santos International Airport", "Santos International Airport", "San Andreas Air Hub", "Los Santos Regional Airport"],
+    "answer": "Los Santos International Airport"
+  },
+  {
+    "id": "gta5-014",
+    "difficulty": "easy",
+    "question": "Which character is known for living in a trailer and causing chaos across Blaine County?",
+    "options": ["Trevor", "Michael", "Franklin", "Lester"],
+    "answer": "Trevor"
+  },
+  {
+    "id": "gta5-015",
+    "difficulty": "easy",
+    "question": "What’s the name of GTA V’s fictional state?",
+    "options": ["San Andreas", "Blaine", "Los Santos", "Alderney"],
+    "answer": "San Andreas"
+  },
+  {
+    "id": "gta5-016",
+    "difficulty": "easy",
+    "question": "Which in-game phone app is used to take and save photos?",
+    "options": ["Snapmatic", "Bleeter", "Lifeinvader", "Eyefind"],
+    "answer": "Snapmatic"
+  },
+  {
+    "id": "gta5-018",
+    "difficulty": "easy",
+    "question": "Which protagonist is most closely tied to street racing and car culture?",
+    "options": ["Franklin", "Michael", "Trevor", "Lamar"],
+    "answer": "Franklin"
+  },
+  {
+    "id": "gta5-019",
+    "difficulty": "easy",
+    "question": "What is the name of Michael’s wife in GTA V?",
+    "options": ["Amanda", "Denise", "Catalina", "Ashley"],
+    "answer": "Amanda"
+  },
+  {
+    "id": "gta5-020",
+    "difficulty": "easy",
+    "question": "What is the name of Franklin’s friend who often gets him into trouble?",
+    "options": ["Lamar", "Roman", "Sweet", "Ryder"],
+    "answer": "Lamar"
+  },
+  {
+    "id": "gta5-024",
+    "difficulty": "easy",
+    "question": "Which character is a skilled hacker and planner who helps set up heists?",
+    "options": ["Lester Crest", "Brucie Kibbutz", "Dwayne Forge", "Packie McReary"],
+    "answer": "Lester Crest"
+  },
+  {
+    "id": "gta5-025",
+    "difficulty": "easy",
+    "question": "Which of these areas is part of GTA V’s countryside region?",
+    "options": ["Blaine County", "Staunton Island", "Portland", "Little Havana"],
+    "answer": "Blaine County"
+  },
+  {
+    "id": "gta5-026",
+    "difficulty": "easy",
+    "question": "Which of these is a major body of water you can explore in GTA V?",
+    "options": ["The Pacific Ocean", "The Atlantic Ocean", "The Mediterranean Sea", "The Baltic Sea"],
+    "answer": "The Pacific Ocean"
+  },
+  {
+    "id": "gta5-027",
+    "difficulty": "easy",
+    "question": "What is the name of the film capital district of Los Santos?",
+    "options": ["Vinewood", "Oakwood", "Pinewood", "Cedarwood"],
+    "answer": "Vinewood"
+  },
+  {
+    "id": "gta5-028",
+    "difficulty": "easy",
+    "question": "Which of these is an in-game brand of bank in GTA V?",
+    "options": ["Fleeca", "Maze", "Union Depository", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "id": "gta5-029",
+    "difficulty": "easy",
+    "question": "Which is the maximum wanted level in GTA V?",
+    "options": ["5 stars", "6 stars", "4 stars", "10 stars"],
+    "answer": "5 stars"
+  },
+  {
+    "id": "gta5-030",
+    "difficulty": "easy",
+    "question": "Which protagonist has a special ability that slows time while driving?",
+    "options": ["Franklin", "Michael", "Trevor", "Lester"],
+    "answer": "Franklin"
+  },
+
+  {
+    "id": "gta5-031",
+    "difficulty": "medium",
+    "question": "Which protagonist’s special ability slows time during shooting?",
+    "options": ["Michael", "Franklin", "Trevor", "Lamar"],
+    "answer": "Michael"
+  },
+  {
+    "id": "gta5-032",
+    "difficulty": "medium",
+    "question": "Which protagonist’s special ability makes him deal more damage and take less?",
+    "options": ["Trevor", "Franklin", "Michael", "Jimmy"],
+    "answer": "Trevor"
+  },
+  {
+    "id": "gta5-033",
+    "difficulty": "medium",
+    "question": "What is the name of the big mountain overlooking Los Santos?",
+    "options": ["Mount Chiliad", "Mount Gordo", "Mount Josiah", "Mount Whitney"],
+    "answer": "Mount Chiliad"
+  },
+  {
+    "id": "gta5-034",
+    "difficulty": "medium",
+    "question": "What is the name of town region central to many Trevor missions?",
+    "options": ["Sandy Shores", "Ocean Beach", "Bayside", "Angel Pine"],
+    "answer": "Sandy Shores"
+  },
+  {
+    "id": "gta5-035",
+    "difficulty": "medium",
+    "question": "What is the name of the large lake in Blaine County?",
+    "options": ["Alamo Sea", "Lake Leonida", "Redwood Reservoir", "Zancudo Basin"],
+    "answer": "Alamo Sea"
+  },
+  {
+    "id": "gta5-036",
+    "difficulty": "medium",
+    "question": "Which military base is located on the western side of the map?",
+    "options": ["Fort Zancudo", "Fort Senora", "Camp Omega", "Blackwater Base"],
+    "answer": "Fort Zancudo"
+  },
+  {
+    "id": "gta5-037",
+    "difficulty": "medium",
+    "question": "Which online mode released with GTA V and became its long-running multiplayer component?",
+    "options": ["GTA Online", "San Andreas Online", "Los Santos Stories Online", "GTA V Online"],
+    "answer": "GTA Online"
+  },
+  {
+    "id": "gta5-038",
+    "difficulty": "medium",
+    "question": "What is the name of the online stock market present in GTA V?",
+    "options": ["BAWSAQ", "LCN", "LME", "BullDAQ"],
+    "answer": "BAWSAQ"
+  },
+  {
+    "id": "gta5-039",
+    "difficulty": "medium",
+    "question": "What is the name of the offline stock market present in GTA V?",
+    "options": ["LCN", "LME", "BAWSAQ", "BullDAQ"],
+    "answer": "LCN"
+  },
+  {
+    "id": "gta5-043",
+    "difficulty": "medium",
+    "question": "What is the name of the in-game federal agency parody featured heavily in the story?",
+    "options": ["FIB", "FBI", "IAA", "IFB"],
+    "answer": "FIB"
+  },
+  {
+    "id": "gta5-044",
+    "difficulty": "medium",
+    "question": "What is the name of the intelligence agency parody in GTA V?",
+    "options": ["IAA", "FIB", "NOOSE", "LSPD"],
+    "answer": "IAA"
+  },
+  {
+    "id": "gta5-045",
+    "difficulty": "medium",
+    "question": "Which police tactical unit appears when your wanted level gets very high?",
+    "options": ["NOOSE", "LSPD Traffic", "RIPE", "CHP"],
+    "answer": "NOOSE"
+  },
+  {
+    "id": "gta5-046",
+    "difficulty": "medium",
+    "question": "What is the name of the in-game private military company involved in the story?",
+    "options": ["Merryweather", "Blackwater", "Halcyon", "SecuroServ"],
+    "answer": "Merryweather"
+  },
+  {
+    "id": "gta5-047",
+    "difficulty": "medium",
+    "question": "What is the name of Michael’s son?",
+    "options": ["Jimmy", "Tracey", "Lamar", "Fabien"],
+    "answer": "Jimmy"
+  },
+  {
+    "id": "gta5-048",
+    "difficulty": "medium",
+    "question": "What is the name of Michael’s daughter?",
+    "options": ["Tracey", "Amanda", "Denise", "Molly"],
+    "answer": "Tracey"
+  },
+  {
+    "id": "gta5-049",
+    "difficulty": "medium",
+    "question": "What is the name of Franklin’s aunt who lets him live at her house early on?",
+    "options": ["Aunt Denise", "Aunt May", "Aunt Gloria", "Aunt Yolanda"],
+    "answer": "Aunt Denise"
+  },
+  {
+    "id": "gta5-050",
+    "difficulty": "medium",
+    "question": "What is the name of the radio/TV evangelist cult leader Michael can encounter?",
+    "options": ["Cris Formage", "Mark Jeffords", "Dr. Friedlander", "Solomon Richards"],
+    "answer": "Cris Formage"
+  },
+  {
+    "id": "gta5-051",
+    "difficulty": "medium",
+    "question": "What is the name of Michael’s therapist?",
+    "options": ["Dr. Friedlander", "Dr. Ray DeAngelo", "Dr. Isiah", "Dr. Kessler"],
+    "answer": "Dr. Friedlander"
+  },
+  {
+    "id": "gta5-052",
+    "difficulty": "medium",
+    "question": "What is the name of the film producer Michael works with in the story?",
+    "options": ["Solomon Richards", "Devin Weston", "Martin Madrazo", "Steve Haines"],
+    "answer": "Solomon Richards"
+  },
+  {
+    "id": "gta5-054",
+    "difficulty": "medium",
+    "question": "What is the name of the gang Franklin used to be associated with?",
+    "options": ["Families", "Ballas", "Vagos", "Lost MC"],
+    "answer": "Families"
+  },
+  {
+    "id": "gta5-055",
+    "difficulty": "medium",
+    "question": "Which rival gang commonly wears purple in GTA V?",
+    "options": ["Ballas", "Families", "Vagos", "Triads"],
+    "answer": "Ballas"
+  },
+  {
+    "id": "gta5-056",
+    "difficulty": "medium",
+    "question": "Which gang is commonly associated with yellow in GTA V?",
+    "options": ["Vagos", "Ballas", "Families", "Lost MC"],
+    "answer": "Vagos"
+  },
+  {
+    "id": "gta5-057",
+    "difficulty": "medium",
+    "question": "What is the name of the biker gang heavily featured in GTA V?",
+    "options": ["The Lost MC", "Angels of Death", "Red Snakes", "Steel Riders"],
+    "answer": "The Lost MC"
+  },
+  {
+    "id": "gta5-061",
+    "difficulty": "hard",
+    "question": "What is the name of the jewelry store robbed during The Jewel Store Job?",
+    "options": ["Vangelico", "Ponsonbys", "Persius", "Lost Santos Jewellers"],
+    "answer": "Vangelico"
+  },
+  {
+    "id": "gta5-062",
+    "difficulty": "hard",
+    "question": "What is the name of the security company targeted during the heist preparation involving armored trucks?",
+    "options": ["Gruppe Sechs", "Merryweather", "SecuroServ", "Post Op"],
+    "answer": "Gruppe Sechs"
+  },
+  {
+    "id": "gta5-064",
+    "difficulty": "hard",
+    "question": "What is the name of the pest control company disguise used in one approach to the jewelry store heist?",
+    "options": ["Bugstars", "Buggies", "Bugkings", "Bugspray"],
+    "answer": "Bugstars"
+  },
+  {
+    "id": "gta5-065",
+    "difficulty": "hard",
+    "question": "What is the name of the in-game fast food chain often seen on signs and in missions?",
+    "options": ["Cluckin' Bell", "Burger Shot", "Well Stacked Pizza", "Taco Bomb"],
+    "answer": "Cluckin' Bell"
+  },
+  {
+    "id": "gta5-066",
+    "difficulty": "hard",
+    "question": "What is the name of the low-end clothing store brand in GTA V?",
+    "options": ["Suburban", "Binco", "Didier Sachs", "Victim"],
+    "answer": "Binco"
+  },
+  {
+    "id": "gta5-0664",
+    "difficulty": "hard",
+    "question": "What is the name of the mid range clothing store brand in GTA V?",
+    "options": ["Suburban", "Binco", "Didier Sachs", "Victim"],
+    "answer": "Suburban"
+  },
+  {
+    "id": "gta5-067",
+    "difficulty": "hard",
+    "question": "What is the name of the high-end clothing store chain in GTA V?",
+    "options": ["Ponsonbys", "Suburban", "The Den", "ProLaps Outlet"],
+    "answer": "Ponsonbys"
+  },
+  {
+    "id": "gta5-068",
+    "difficulty": "hard",
+    "question": "What is the name of the gun store chain in GTA V?",
+    "options": ["Ammu-Nation", "Gun Zone", "Second Amendment", "Shooters Depot"],
+    "answer": "Ammu-Nation"
+  },
+
+  {
+    "id": "gta5-070",
+    "difficulty": "hard",
+    "question": "What is the name of the observatory landmark in Los Santos?",
+    "options": ["Galileo Observatory", "Kepler Dome", "Einstein Observatory", "Newton Point"],
+    "answer": "Galileo Observatory"
+  },
+  {
+    "id": "gta5-071",
+    "difficulty": "hard",
+    "question": "What is the name of the main prison located in the desert region?",
+    "options": ["Bolingbroke Penitentiary", "San Andreas Correctional", "Redwood State Prison", "Paleto Detention Center"],
+    "answer": "Bolingbroke Penitentiary"
+  },
+  {
+    "id": "gta5-073",
+    "difficulty": "hard",
+    "question": "What is the name of the bar Trevor can acquire in Sandy Shores?",
+    "options": ["Tequi-la-la", "Yellow Jack Inn", "Hen House", "The Hookie Lounge"],
+    "answer": "Yellow Jack Inn"
+  },
+  {
+    "id": "gta5-074",
+    "difficulty": "hard",
+    "question": "What is the name of the airport in Blaine County near Grapeseed?",
+    "options": ["McKenzie Field", "Sandy Shores Airstrip", "Paleto Air Park", "Zancudo Airbase"],
+    "answer": "McKenzie Field"
+  },
+  {
+    "id": "gta5-075",
+    "difficulty": "hard",
+    "question": "Which company manufactures many of the game’s high-end supercars (brand name)?",
+    "options": ["Pegassi", "Declasse", "Vapid", "Karin"],
+    "answer": "Pegassi"
+  },
+  {
+    "id": "gta5-076",
+    "difficulty": "hard",
+    "question": "Which in-game manufacturer is most associated with muscle cars like the Dominator?",
+    "options": ["Vapid", "Pegassi", "Dinka", "Överflöd"],
+    "answer": "Vapid"
+  },
+  {
+    "id": "gta5-077",
+    "difficulty": "hard",
+    "question": "Which in-game manufacturer is most associated with sports compacts like the Blista Compact (brand family)?",
+    "options": ["Dinka", "Pegassi", "Bravado", "HVY"],
+    "answer": "Dinka"
+  },
+  {
+    "id": "gta5-084",
+    "difficulty": "hard",
+    "question": "What is the name of the Los Santos luxury car dealership website you can use to buy cars?",
+    "options": ["Legendary Motorsport", "Southern San Andreas Super Autos", "Warstock Cache & Carry", "DockTease"],
+    "answer": "Legendary Motorsport"
+  },
+  {
+    "id": "gta5-085",
+    "difficulty": "hard",
+    "question": "Which website is primarily used to buy boats in GTA V?",
+    "options": ["DockTease", "Warstock Cache & Carry", "Elitas Travel", "Dynasty 8"],
+    "answer": "DockTease"
+  },
+  {
+    "id": "gta5-086",
+    "difficulty": "hard",
+    "question": "Which website is used to buy luxury aircraft in GTA V?",
+    "options": ["Elitas Travel", "DockTease", "Legendary Airlines", "Luxuriois"],
+    "answer": "Elitas Travel"
+  },
+  {
+    "id": "gta5-087",
+    "difficulty": "hard",
+    "question": "Which website is used to buy military vehicles and heavy weaponized gear in GTA V?",
+    "options": ["Warstock Cache & Carry", "Dynasty 8", "Elitas Travel", "Los Santos Customs"],
+    "answer": "Warstock Cache & Carry"
+  },
+  {
+    "id": "gta5-088",
+    "difficulty": "hard",
+    "question": "Which real estate website is used to purchase properties in GTA V?",
+    "options": ["Dynasty 8", "Legendary ", "Eyefind", "Lenny Avery Realty"],
+    "answer": "Dynasty 8"
+  },
+  {
+    "id": "gta5-089",
+    "difficulty": "hard",
+    "question": "What is the name of the custom car modification shop chain in GTA V?",
+    "options": ["Los Santos Customs", "Benny’s Garage", "Pay ‘n’ Spray", "TransFender"],
+    "answer": "Los Santos Customs"
+  },
+  {
+    "id": "gta5-096",
+    "difficulty": "expert",
+    "question": "Which character is a corrupt FIB agent who frequently pressures the protagonists throughout the story?",
+    "options": ["Steve Haines", "Dave Norton", "Cris Formage", "Solomon Richards"],
+    "answer": "Steve Haines"
+  },
+  {
+    "id": "gta5-097",
+    "difficulty": "expert",
+    "question": "Which character is the FIB contact tied closely to Michael’s past and the opening events?",
+    "options": ["Dave Norton", "Steve Haines", "Martin Madrazo", "Devin Weston"],
+    "answer": "Dave Norton"
+  },
+  {
+    "id": "gta5-098",
+    "difficulty": "expert",
+    "question": "What is the name of the Mexican cartel boss whose house is involved in an early story mission chain?",
+    "options": ["Martin Madrazo", "El Rubio", "Ricardo Diaz", "Armando Torres"],
+    "answer": "Martin Madrazo"
+  },
+  {
+    "id": "gta5-099",
+    "difficulty": "expert",
+    "question": "Which character is the yoga instructor who becomes entangled with Michael’s family?",
+    "options": ["Fabien", "Jimmy", "Wade", "Tracey"],
+    "answer": "Fabien"
+  },
+  {
+    "id": "gta5-105",
+    "difficulty": "expert",
+    "question": "Which blimp/advertising company is associated with an iconic airship seen around Los Santos?",
+    "options": ["Xero Gas", "Atomic", "Fleeca", "Pißwasser"],
+    "answer": "Atomic"
+  },
+  {
+    "id": "gta5-106",
+    "difficulty": "expert",
+    "question": "What is the name of the satirical news network commonly encountered via TV and web in GTA V?",
+    "options": ["Weazel News", "Republican Space Rangers Network", "San Andreas Daily", "Vice Press"],
+    "answer": "Weazel News"
+  },
+  {
+    "id": "gta5-109",
+    "difficulty": "expert",
+    "question": "What is the name of the in-game camera/film feature used for creating clips and replays in GTA V?",
+    "options": ["Rockstar Editor", "Snapmatic Studio", "Vinewood Cut", "Director Mode only"],
+    "answer": "Rockstar Editor"
+  },
+  {
+    "id": "gta5-110",
+    "difficulty": "expert",
+    "question": "Which interior business can Franklin purchase that ties into taxi services in GTA V?",
+    "options": ["Downtown Cab Co.", "Los Santos Cabs", "Pitchers", "Downtown Motors Co"],
+    "answer": "Downtown Cab Co."
+  },
+  {
+    "id": "gta5-113",
+    "difficulty": "expert",
+    "question": "What is the name of the cult Michael can join through a series of tasks and donations?",
+    "options": ["Epsilon Program", "Altruist Society", "Kifflom Order", "Children of the Mountain"],
+    "answer": "Epsilon Program"
+  },
+  {
+    "id": "gta5-114",
+    "difficulty": "expert",
+    "question": "Which word is strongly associated with the Epsilon Program and appears repeatedly in its content?",
+    "options": ["Kifflom", "Amen", "Shazam", "Excelsior"],
+    "answer": "Kifflom"
+  },
+  {
+    "id": "gta5-119",
+    "difficulty": "expert",
+    "question": "Which character is kidnapped in a story mission titled \"Fresh Meat\"?",
+    "options": ["Michael", "Franklin", "Trevor", "Lester"],
+    "answer": "Michael"
+  },
+  {
+    "id": "gta5-easy-0002",
+    "question": "Which company developed Grand Theft Auto V?",
+    "options": ["Ubisoft", "Electronic Arts", "Rockstar Games", "CD Projekt"],
+    "answer": "Rockstar Games",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gta5-easy-0004",
+    "question": "Which GTA 5 protagonist is a retired bank robber living in a Vinewood mansion?",
+    "options": ["Franklin", "Trevor", "Michael", "Lamar"],
+    "answer": "Michael",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gta5-easy-0005",
+    "question": "Which GTA 5 protagonist starts the game working as a repo man for Simeon?",
+    "options": ["Trevor", "Lamar", "Franklin", "Lester"],
+    "answer": "Franklin",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gta5-easy-0008",
+    "question": "Which in‑game city is Los Santos largely based on?",
+    "options": ["Chicago", "New York City", "Miami", "Los Angeles"],
+    "answer": "Los Angeles",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gta5-easy-00112",
+    "question": "What is the name of Franklin’s dog?",
+    "options": ["Chop", "Champ", "Rex", "Tiger"],
+    "answer": "Chop",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gta5-easy-0013",
+    "question": "What is the name of the state where GTA 5 takes place?",
+    "options": ["Liberty State", "San Andreas", "Vice State", "Carcer State"],
+    "answer": "San Andreas",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gta5-easy-0016",
+    "question": "What is Michael’s last name in GTA 5?",
+    "options": ["Philips", "Clinton", "De Santa", "Johnson"],
+    "answer": "De Santa",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gta5-easy-0019",
+    "question": "Which real‑world sport is directly playable as a mini‑game besides golf in GTA 5?",
+    "options": ["Tennis", "Basketball", "Baseball", "American football"],
+    "answer": "Tennis",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gta5-easy-0020",
+    "question": "What does GTA stand for in GTA 5?",
+    "options": ["Great Transport Authority", "Grand Traffic Accident", "Grand Theft Auto", "Global Theft Agency"],
+    "answer": "Grand Theft Auto",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gta5-easy-0021",
+    "question": "Which platform did GTA 5 originally release on?",
+    "options": ["PS4 and Xbox One", "PS3 and Xbox 360", "PS5 and Xbox Series X", "PC only"],
+    "answer": "PS3 and Xbox 360",
+    "difficulty": "easy"
+  },
+
+  {
+    "id": "gta5-medium-0027",
+    "question": "In the prologue, which snowy location does the opening bank robbery take place in?",
+    "options": ["Ludendorff", "Carcer City", "Las Venturas", "Vice City"],
+    "answer": "Ludendorff",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gta5-medium-0031",
+    "question": "Which company’s stock can you profit from by doing Lester’s hotel assassination mission?",
+    "options": ["Lifeinvader", "FlyUS", "Bilkington", "Betta Pharmaceuticals"],
+    "answer": "Betta Pharmaceuticals",
+    "difficulty": "expert"
+  },
+{
+  "id": "gta5-truefalse-001",
+  "difficulty": "easy",
+  "question": "As of January 2026, GTA V is the best-selling video game of all time.",
+  "options": ["True", "False"],
+  "answer": "False"
+},
+  {
+    "id": "gta5-expert-0080",
+    "question": "What is the name of the video game series that Michael’s son Jimmy is obsessed with?",
+    "options": ["Righteous Slaughter", "Insurgent", "Impotent Rage", "Deep Space"],
+    "answer": "Righteous Slaughter",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gta5-expert-0090",
+    "question": "What is the name of the talk show that Lazlow hosts, which you can disrupt with Michael’s family?",
+    "options": ["Fame or Shame", "The Lazlow Show", "Chattersphere", "Serious Cougar"],
+    "answer": "Fame or Shame",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gta5-001",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a location on the GTA V map?",
+    "options": ["Vespucci Beach", "Paleto Bay", "Mount Chiliad", "San Fierro"],
+    "answer": "San Fierro"
+  },
+  {
+    "id": "gta5-002",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a location on the GTA V map?",
+    "options": ["Sandy Shores", "Grapeseed", "Zancudo River", "Mount Zakaius"],
+    "answer": "Mount Zakaius"
+  },
+  {
+    "id": "gta5-003",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a location on the GTA V map?",
+    "options": ["Del Perro", "Vinewood", "Harmony", "Las Venturas"],
+    "answer": "Las Venturas"
+  },
+  {
+    "id": "gta5-004",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a location on the GTA V map?",
+    "options": ["Alamo Sea", "Fort Zancudo", "Great Chaparral", "Marius River"],
+    "answer": "Marius River"
+  },
+  {
+    "id": "gta5-005",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a location on the GTA V map?",
+    "options": ["Chumash", "La Puerta", "Banham Canyon", "Carcer City"],
+    "answer": "Carcer City"
+  },
+  {
+    "id": "gta5-006",
+    "difficulty": "medium",
+    "question": "What’s the name of Lester’s assistant?",
+    "options": ["Paige", "Karen", "Marnie", "Tracey"],
+    "answer": "Paige"
+  },
+  {
+    "id": "gta5-007",
+    "difficulty": "medium",
+    "question": "Which of these is NOT an in-game brand from GTA IV?",
+    "options": ["Sprunk", "Burger Shot", "Cluckin' Bell", "Nuka-Cola"],
+    "answer": "Nuka-Cola"
+  },
+  {
+    "id": "gta5-008",
+    "difficulty": "hard",
+    "question": "On console/PS, what button combo activates a character’s special ability in GTA V?",
+    "options": ["L3 + R3", "L1 + R1", "Square + Triangle", "D-Pad Up + D-Pad Down"],
+    "answer": "L3 + R3"
+  },
+  {
+    "id": "gta5-009",
+    "difficulty": "hard",
+    "question": "What’s the name of the desert in Blaine County?",
+    "options": ["Grand Senora Desert", "Sandy Dunes", "Alamo Desert", "Mojave Flats"],
+    "answer": "Grand Senora Desert"
+  },
+  {
+    "id": "gta5-010",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a clothing store in GTA V?",
+    "options": ["Binco", "Sub Urban", "Ponsonbys", "Discounters"],
+    "answer": "Discounters"
+  },
+  {
+    "id": "gta5-011",
+    "difficulty": "hard",
+    "question": "What is the slogan of Binco’s clothing store?",
+    "options": ["More trash for less cash", "Dress cheap. Live fast.", "Fashion for Losers", "Less Cash for More Trash"],
+    "answer": "More trash for less cash"
+  },
+  {
+    "id": "gta5-012",
+    "difficulty": "hard",
+    "question": "Which of these is NOT an in-game car manufacturer in GTA V?",
+    "options": ["Pegassi", "Bravado", "Benefactor", "Maverick"],
+    "answer": "Maverick"
+  },
+  {
+    "id": "gta5-014",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a radio station in GTA V?",
+    "options": ["Los Santos Rock Radio", "Non-Stop-Pop FM", "Radio Mirror Park", "K-DST"],
+    "answer": "K-DST"
+  },
+  {
+    "id": "gta5-015",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a website used to purchase things in GTA V?",
+    "options": ["Warstock Cache & Carry", "Elitas Travel", "Legendary Motorsport", "Modern Outfitters"],
+    "answer": "Modern Outfitters"
+  },
+  {
+    "id": "gta5-016",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a website used to purchase things in GTA V?",
+    "options": ["DockTease", "Dynasty 8", "Southern San Andreas Super Autos", "Stocktips"],
+    "answer": "Stocktips"
+  },
+  {
+    "id": "gta5-017",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a website used to purchase things in GTA V?",
+    "options": ["Dynasty 8 Executive", "Maze Bank Foreclosures", "Legendary Motorsport", "AutoTrader.com"],
+    "answer": "AutoTrader.com"
+  },
+  {
+    "id": "gta5-018",
+    "difficulty": "hard",
+    "question": "When did GTA V first release?",
+    "options": ["2013", "2011", "2010", "2012"],
+    "answer": "2013"
+  },
+  {
+    "id": "gta5-019",
+    "difficulty": "hard",
+    "question": "Who is the voice actor for Franklin Clinton?",
+    "options": ["Shawn Fonteno", "Ned Luke", "Steven Ogg", "Roger Clark"],
+    "answer": "Shawn Fonteno"
+  },
+  {
+    "id": "gta5-020",
+    "difficulty": "hard",
+    "question": "Who is the voice actor for Trevor Philips?",
+    "options": ["Steven Ogg", "Ned Luke", "Shawn Fonteno", "Yuri Lowenthal"],
+    "answer": "Steven Ogg"
+  },
+  {
+    "id": "gta5-021",
+    "difficulty": "hard",
+    "question": "Who is the voice actor for Michael De Santa?",
+    "options": ["Ned Luke", "Steven Ogg", "Shawn Fonteno", "Troy Baker"],
+    "answer": "Ned Luke"
+  },
+  {
+    "id": "gta5-022",
+    "difficulty": "hard",
+    "question": "Which of these is NOT an in-game fast food brand in GTA V/HD-era GTA?",
+    "options": ["Cluckin' Bell", "Burger Shot", "Up-n-Atom", "Big Belly Burger"],
+    "answer": "Big Belly Burger"
+  },
+  {
+    "id": "gta5-021",
+    "difficulty": "medium",
+    "question": "What is the name of Trevor's best friend and nervous companion?",
+    "options": ["Wade", "Ron", "Chef", "Floyd"],
+    "answer": "Ron"
+  },
+  {
+    "id": "gta5-040",
+    "difficulty": "hard",
+    "question": "What is the name of the submarine used in the Merryweather Heist?",
+    "options": ["Kraken", "Minisub", "Submersible", "The Leviathan"],
+    "answer": "Submersible"
+  },
+  {
+    "id": "gta5-051",
+    "difficulty": "hard",
+    "question": "What is the name of the bridge that connects the city to Paleto Bay on the west coast?",
+    "options": ["Cassidy Creek Bridge", "Great Ocean Bridge", "Raton Canyon Bridge", "Lago Zancudo Bridge"],
+    "answer": "Cassidy Creek Bridge"
+  },
+  {
+    "id": "gta5-063",
+    "difficulty": "medium",
+    "question": "Which actress is featured on the loading screens and game cover (the 'bikini girl')?",
+    "options": ["Shelby Welinder", "Lindsay Lohan", "Kate Upton", "Courtney Love"],
+    "answer": "Shelby Welinder"
+  },
+  {
+    "id": "gta5-031",
+    "difficulty": "hard",
+    "question": "What is the standard number of players allowed in a single GTA Online lobby?",
+    "options": ["16", "24", "30", "32"],
+    "answer": "30"
+  },
+  {
+    "id": "gta5-028",
+    "difficulty": "hard",
+    "question": "What does the license plate on Trevor's truck say?",
+    "options": ["BETTY 32", "BETTY 22", "BETTY 12", "BETTY 42"],
+    "answer": "BETTY 32"
+  },
+  {
+    "id": "gta5-026",
+    "difficulty": "easy",
+    "question": "Where is Michael's mansion located?",
+    "options": ["Vespucci Beach", "Rockford Hills", "Mirror Park", "Little Seoul"],
+    "answer": "Rockford Hills"
+  },
+  {
+    "id": "gta5-016",
+    "difficulty": "easy",
+    "question": "Which button/key is used to switch between characters on console?",
+    "options": ["D-Pad Down", "D-Pad Up", "R1", "Triangle"],
+    "answer": "D-Pad Down"
+  },
+  {
+    "id": "gta5-019",
+    "difficulty": "hard",
+    "question": "In the mission 'The Big Score,' what is the total value of the gold being stolen?",
+    "options": ["$100 million", "$201 million", "$316 million", "$400 million"],
+    "answer": "$201 million"
+  },
+  {
+    "id": "gta5-017",
+    "difficulty": "hard",
+    "question": "What is the name of the neighborhood where Franklin starts the game?",
+    "options": ["Alpines", "Strawberry", "Rockford Hills", "Pacific Bluffs"],
+    "answer": "Strawberry"
+  },
+  {
+    "id": "gta5-008",
+    "difficulty": "hard",
+    "question": "Which of these is NOT an actual radio station in GTA V?",
+    "options": ["Non-Stop-Pop FM", "Rebel Radio", "K-Chat", "Vinewood Boulevard Radio"],
+    "answer": "K-Chat"
+  },
+  {
+    "id": "gta5-062",
+    "difficulty": "hard",
+    "question": "What is the name of the ghost on Mount Gordo?",
+    "options": ["Jolene", "Maude", "Ursula", "Marlene"],
+    "answer": "Jolene"
+  },
+  {
+    "id": "gta5-078",
+    "difficulty": "hard",
+    "question": "Which car is the 'Trufade Adder' based on?",
+    "options": ["Bugatti Veyron", "Koenigsegg Agera", "Lamborghini Aventador", "Ferrari Enzo"],
+    "answer": "Bugatti Veyron"
+  }
+]

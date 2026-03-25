@@ -1,0 +1,904 @@
+[
+  {
+    "id": "ca-easy-0001",
+    "question": "What is the capital of Canada?",
+    "options": ["Ottawa", "Toronto", "Montreal", "Vancouver"],
+    "answer": "Ottawa",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-easy-0002",
+    "question": "What is Canada’s national anthem?",
+    "options": ["O Canada", "God Save the King", "The Maple Leaf Forever", "Canada Forever"],
+    "answer": "O Canada",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-easy-0003",
+    "question": "What currency is used in Canada?",
+    "options": ["Canadian dollar", "US dollar", "Euro", "Pound sterling"],
+    "answer": "Canadian dollar",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-easy-0004",
+    "question": "Which leaf is on the flag of Canada?",
+    "options": ["Maple leaf", "Oak leaf", "Pine leaf", "Cedar leaf"],
+    "answer": "Maple leaf",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-easy-0005",
+    "question": "How many provinces does Canada have?",
+    "options": ["10", "13", "9", "12"],
+    "answer": "10",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-easy-0006",
+    "question": "How many territories does Canada have?",
+    "options": ["2", "3", "4", "5"],
+    "answer": "3",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-easy-0007",
+    "question": "Which of these is a Canadian territory?",
+    "options": ["Nunavut", "Ontario", "Nova Scotia", "Manitoba"],
+    "answer": "Nunavut",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-easy-0008",
+    "question": "Which ocean borders Canada’s west coast?",
+    "options": ["Pacific Ocean", "Atlantic Ocean", "Indian Ocean", "Southern Ocean"],
+    "answer": "Pacific Ocean",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-easy-0009",
+    "question": "Which ocean borders Canada’s east coast?",
+    "options": ["Atlantic Ocean", "Pacific Ocean", "Indian Ocean", "Arctic Ocean"],
+    "answer": "Atlantic Ocean",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-easy-0010",
+    "question": "Which ocean borders northern Canada?",
+    "options": ["Arctic Ocean", "Atlantic Ocean", "Pacific Ocean", "Indian Ocean"],
+    "answer": "Arctic Ocean",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-easy-0011",
+    "question": "Which Canadian city is the largest by population?",
+    "options": ["Toronto", "Vancouver", "Ottawa", "Calgary"],
+    "answer": "Toronto",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-easy-0012",
+    "question": "Which Canadian province is the most populous?",
+    "options": ["Ontario", "Quebec", "British Columbia", "Alberta"],
+    "answer": "Ontario",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-easy-0013",
+    "question": "Which Canadian province is known for being largely French-speaking?",
+    "options": ["Quebec", "Alberta", "Saskatchewan", "Nova Scotia"],
+    "answer": "Quebec",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-easy-0014",
+    "question": "What are Canada’s two official languages?",
+    "options": ["English and French", "English and Spanish", "French and German", "English and Portuguese"],
+    "answer": "English and French",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-easy-0015",
+    "question": "Which animal is commonly associated with Canada as a national symbol?",
+    "options": ["Beaver", "Kangaroo", "Panda", "Elephant"],
+    "answer": "Beaver",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-easy-0016",
+    "question": "Which Canadian city is known for the CN Tower?",
+    "options": ["Toronto", "Montreal", "Ottawa", "Halifax"],
+    "answer": "Toronto",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-easy-0018",
+    "question": "Which Canadian province is on the Pacific coast?",
+    "options": ["British Columbia", "Nova Scotia", "Ontario", "Prince Edward Island"],
+    "answer": "British Columbia",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-easy-0020",
+    "question": "Which sport is most associated with Canada internationally?",
+    "options": ["Ice hockey", "Cricket", "Baseball", "Rugby"],
+    "answer": "Ice hockey",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-easy-0022",
+    "question": "Which Canadian province is known for Niagara Falls?",
+    "options": ["Ontario", "Quebec", "Manitoba", "Alberta"],
+    "answer": "Ontario",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-easy-0023",
+    "question": "Which Canadian city is famous for the annual International Jazz Festival?",
+    "options": ["Montreal", "Vancouver", "Calgary", "Ottawa"],
+    "answer": "Montreal",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-easy-0024",
+    "question": "Which Canadian province is directly east of Ontario?",
+    "options": ["Quebec", "Alberta", "British Columbia", "Manitoba"],
+    "answer": "Quebec",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-easy-0025",
+    "question": "Which Canadian province is directly west of Ontario?",
+    "options": ["Manitoba", "Saskatchewan", "Alberta", "Quebec"],
+    "answer": "Manitoba",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-easy-0026",
+    "question": "Which holiday is celebrated on July 1 in Canada?",
+    "options": ["Canada Day", "Victoria Day", "Thanksgiving", "Remembrance Day"],
+    "answer": "Canada Day",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-easy-0027",
+    "question": "Which Canadian city is the capital of British Columbia?",
+    "options": ["Victoria", "Vancouver", "Kelowna", "Nanaimo"],
+    "answer": "Victoria",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-easy-0028",
+    "question": "Which Canadian city is the capital of Alberta?",
+    "options": ["Edmonton", "Calgary", "Red Deer", "Lethbridge"],
+    "answer": "Edmonton",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-easy-0029",
+    "question": "Which Canadian city is the capital of Quebec?",
+    "options": ["Quebec City", "Montreal", "Laval", "Gatineau"],
+    "answer": "Quebec City",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-easy-0030",
+    "question": "What are the 3 Canadian territories?",
+    "options": ["Yukon, Northwest Territories, Nunavut", "Yukon, Alberta, Nunavut", "Nunavut, Ontario, Yukon", "Northwest Territories, Quebec, Yukon"],
+    "answer": "Yukon, Northwest Territories, Nunavut",
+    "difficulty": "easy"
+  },
+
+  {
+    "id": "ca-medium-0001",
+    "question": "What is the name of Canada’s lower house of Parliament?",
+    "options": ["House of Commons", "Senate", "National Assembly", "Privy Council"],
+    "answer": "House of Commons",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-medium-0002",
+    "question": "What is the name of Canada’s upper house of Parliament?",
+    "options": ["Senate", "House of Commons", "Supreme Court", "Governor’s Council"],
+    "answer": "Senate",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-medium-0003",
+    "question": "Canada is a constitutional monarchy. Who is Canada’s head of state (as of Feb 2026)?",
+    "options": ["King Charles III", "Mark Carney", "The Chief Justice", "The Speaker of the House"],
+    "answer": "King Charles III",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-medium-0004",
+    "question": "Who is Canada’s Prime Minister (as of Feb 2026)?",
+    "options": ["Mark Carney", "Justin Trudeau", "Pierre Poilievre", "Jagmeet Singh"],
+    "answer": "Mark Carney",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-medium-0006",
+    "question": "What is Canada’s national police service called?",
+    "options": ["RCMP", "FBI", "Scotland Yard", "Interpol"],
+    "answer": "RCMP",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-medium-0007",
+    "question": "What does RCMP stand for?",
+    "options": ["Royal Canadian Mounted Police", "Royal Crown Military Patrol", "Regional Canadian Metro Police", "Royal Civil Maritime Police"],
+    "answer": "Royal Canadian Mounted Police",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-medium-0009",
+    "question": "Which province has Halifax as its capital?",
+    "options": ["Nova Scotia", "New Brunswick", "Prince Edward Island", "Newfoundland and Labrador"],
+    "answer": "Nova Scotia",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-medium-0012",
+    "question": "Which province has Winnipeg as its capital?",
+    "options": ["Manitoba", "Saskatchewan", "Ontario", "Alberta"],
+    "answer": "Manitoba",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-medium-0013",
+    "question": "Which province has Regina as its capital?",
+    "options": ["Saskatchewan", "Alberta", "Manitoba", "Ontario"],
+    "answer": "Saskatchewan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-medium-0014",
+    "question": "Which province has Toronto as its capital?",
+    "options": ["Ontario", "Quebec", "British Columbia", "Alberta"],
+    "answer": "Ontario",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-medium-0015",
+    "question": "Which territory has Whitehorse as its capital?",
+    "options": ["Yukon", "Nunavut", "Northwest Territories", "Manitoba"],
+    "answer": "Yukon",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-medium-0018",
+    "question": "What is the name of the Canadian national holiday in late May tied to the monarchy?",
+    "options": ["Victoria Day", "Canada Day", "Civic Holiday", "Remembrance Day"],
+    "answer": "Victoria Day",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-medium-0019",
+    "question": "What is the name of the day Canada honors military service and the fallen on November 11?",
+    "options": ["Remembrance Day", "Canada Day", "Boxing Day", "Thanksgiving"],
+    "answer": "Remembrance Day",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-medium-0020",
+    "question": "Which Canadian province is the largest by area?",
+    "options": ["Quebec", "Ontario", "British Columbia", "Alberta"],
+    "answer": "Quebec",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-medium-0021",
+    "question": "Which Canadian territory is the largest by area?",
+    "options": ["Nunavut", "Yukon", "Northwest Territories", "None"],
+    "answer": "Nunavut",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-medium-0023",
+    "question": "Which Canadian city hosted the 2010 Winter Olympics?",
+    "options": ["Vancouver", "Calgary", "Montreal", "Ottawa"],
+    "answer": "Vancouver",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-medium-0025",
+    "question": "Which Canadian city is known for the annual \"Stampede\" festival?",
+    "options": ["Calgary", "Edmonton", "Ottawa", "Victoria"],
+    "answer": "Calgary",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-medium-0027",
+    "question": "What is the name of the long skating route in Ottawa that freezes in winter?",
+    "options": ["Rideau Canal", "St. Lawrence Seaway", "Red River", "Fraser River"],
+    "answer": "Rideau Canal",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-medium-0030",
+    "question": "What is the largest French-speaking city in Canada?",
+    "options": ["Montreal", "Quebec City", "Ottawa", "Moncton"],
+    "answer": "Montreal",
+    "difficulty": "medium"
+  },
+
+  {
+    "id": "ca-hard-0001",
+    "question": "What year did Canada become a country (Confederation year)?",
+    "options": ["1867", "1848", "1917", "1931"],
+    "answer": "1867",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-hard-0022",
+    "question": "Which is the highest mountain in Canada?",
+    "options": ["Mount Logan", "Mount Robson", "Mount Saint Elias", "Mount Columbia"],
+    "answer": "Mount Logan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-med-0001",
+    "question": "Which Canadian singer released the album \"Jagged Little Pill\"?",
+    "options": ["Alanis Morissette", "Celine Dion", "Shania Twain", "Sarah McLachlan"],
+    "answer": "Alanis Morissette",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-med-0002",
+    "question": "Which Canadian artist is known for the hit single \"Baby\"?",
+    "options": ["Justin Bieber", "Shawn Mendes", "Drake", "The Weeknd"],
+    "answer": "Justin Bieber",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-med-0003",
+    "question": "Which Canadian rapper released the album \"Take Care\"?",
+    "options": ["Drake", "Classified", "Tory Lanez", "NAV"],
+    "answer": "Drake",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-med-0005",
+    "question": "Which Canadian singer is known for the album \"The Colour of My Love\"?",
+    "options": ["Celine Dion", "Shania Twain", "Joni Mitchell", "Sarah McLachlan"],
+    "answer": "Celine Dion",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-med-0006",
+    "question": "Which Canadian country star released the album \"Come On Over\"?",
+    "options": ["Shania Twain", "Terri Clark", "k.d. lang", "Michelle Wright"],
+    "answer": "Shania Twain",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-med-0007",
+    "question": "Which Canadian singer is known for the song \"My Heart Will Go On\"?",
+    "options": ["Celine Dion", "Alanis Morissette", "Jann Arden", "Avril Lavigne"],
+    "answer": "Celine Dion",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-med-0008",
+    "question": "Which Canadian rock band released the song \"Summer of '69\"?",
+    "options": ["Bryan Adams", "Rush", "Nickelback", "The Tragically Hip"],
+    "answer": "Bryan Adams",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-med-0010",
+    "question": "Which Canadian artist released the album \"After Hours\"?",
+    "options": ["The Weeknd", "Drake", "Shawn Mendes", "Daniel Caesar"],
+    "answer": "The Weeknd",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-music-odd-0001",
+    "question": "Which of these is NOT a Canadian music star?",
+    "options": ["Drake", "The Weeknd", "Shania Twain", "Adele"],
+    "answer": "Adele",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-med-0022",
+    "question": "Which Canadian actor played Deadpool?",
+    "options": ["Ryan Reynolds", "Keanu Reeves", "Seth Rogen", "Jay Baruchel"],
+    "answer": "Ryan Reynolds",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-ufc-hard-0001",
+    "question": "Who was Canada’s first UFC champion?",
+    "options": ["Carlos Newton", "Georges St-Pierre", "Rory MacDonald", "Nico Rosberg"],
+    "answer": "Carlos Newton",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-odd-0001",
+    "question": "Which of these is NOT a Canadian movie star?",
+    "options": ["Ryan Gosling", "Rachel McAdams", "Keanu Reeves", "Brad Pitt"],
+    "answer": "Brad Pitt",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-odd-0002",
+    "question": "Which of these is NOT a Canadian movie star?",
+    "options": ["Jim Carrey", "Ryan Reynolds", "Michael J. Fox", "Tom Hanks"],
+    "answer": "Tom Hanks",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-odd-0003",
+    "question": "Which of these is NOT a Canadian UFC fighter?",
+    "options": ["Georges St-Pierre", "Rory MacDonald", "Carlos Newton", "Gregor Gillespie"],
+    "answer": "Gregor Gillespie",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-odd-0005",
+    "question": "Which of these is NOT a Canadian music star?",
+    "options": ["Bryan Adams", "Céline Dion", "Alanis Morissette", "Madonna"],
+    "answer": "Madonna",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-odd-0006",
+    "question": "Which of these is NOT a Canadian music star?",
+    "options": ["Neil Young", "Joni Mitchell", "Gord Downie", "David Bowie"],
+    "answer": "David Bowie",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-odd-0007",
+    "question": "Which of these is NOT a Canadian NHL star?",
+    "options": ["Wayne Gretzky", "Sidney Crosby", "Connor McDavid", "Jack Hughes"],
+    "answer": "Jack Hughes",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-odd-0008",
+    "question": "Which of these is NOT a Canadian NBA player?",
+    "options": ["Steve Nash", "Jamal Murray", "Shai Gilgeous-Alexander", "Jayson Tatum"],
+    "answer": "Jayson Tatum",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-odd-0009",
+    "question": "Which of these is NOT a Canadian tech company?",
+    "options": ["Shopify", "BlackBerry", "Slack", "Hootsuite"],
+    "answer": "Slack",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-odd-0010",
+    "question": "Which of these is NOT a Canadian TV series?",
+    "options": ["Schitt's Creek", "Trailer Park Boys", "Orphan Black", "Breaking Bad"],
+    "answer": "Breaking Bad",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-med-0023",
+    "question": "Which Canadian actor starred as Neo in \"The Matrix\"?",
+    "options": ["Keanu Reeves", "Ryan Gosling", "Jim Carrey", "Kiefer Sutherland"],
+    "answer": "Keanu Reeves",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-med-0024",
+    "question": "Which Canadian actor played the lead in \"La La Land\"?",
+    "options": ["Ryan Gosling", "Ryan Reynolds", "Michael Cera", "Seth Rogen"],
+    "answer": "Ryan Gosling",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-med-0025",
+    "question": "Which Canadian‑born actor is famous for playing Ace Ventura?",
+    "options": ["Jim Carrey", "Mike Myers", "Martin Short", "Dan Aykroyd"],
+    "answer": "Jim Carrey",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-med-0026",
+    "question": "Which Canadian actress stars as Captain Marvel in the MCU?",
+    "options": ["Brie Larson", "Rachel McAdams", "Evangeline Lilly", "Sandra Oh"],
+    "answer": "Brie Larson",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-med-0027",
+    "question": "Which Canadian actor plays Ted in \"How I Met Your Mother\"?",
+    "options": ["Josh Radnor", "Jason Segel", "Neil Patrick Harris", "Cobie Smulders"],
+    "answer": "Josh Radnor",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-med-0031",
+    "question": "Which Canadian comedy actor voiced Shrek?",
+    "options": ["Mike Myers", "Jim Carrey", "Seth Rogen", "Will Arnett"],
+    "answer": "Mike Myers",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-med-0046",
+    "question": "Which sport is recognized as Canada’s national summer sport?",
+    "options": ["Lacrosse", "Baseball", "Soccer", "Basketball"],
+    "answer": "Lacrosse",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-med-0047",
+    "question": "Which Canadian chain is famous for coffee and doughnuts?",
+    "options": ["Tim Hortons", "Second Cup", "Starbucks Canada", "Country Style"],
+    "answer": "Tim Hortons",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-med-0050",
+    "question": "Which two colors are on the Canadian national flag?",
+    "options": ["Red and white", "Red and blue", "Green and white", "Blue and white"],
+    "answer": "Red and white",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-ez-0005",
+    "question": "What is the nickname for the Canadian one-dollar coin?",
+    "options": ["Toonie", "Loonie", "Doubloon", "Buckie"],
+    "answer": "Loonie",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-ez-0009",
+    "question": "On what date is Canada Day celebrated?",
+    "options": ["June 1st", "July 1st", "July 4th", "August 1st"],
+    "answer": "July 1st",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-ez-0016",
+    "question": "What is the Canadian two-dollar coin called?",
+    "options": ["Loonie", "Toonie", "Two-bit", "Twonie"],
+    "answer": "Toonie",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-ez-0018",
+    "question": "What do you call a knitted hat in Canada?",
+    "options": ["Beanie", "Toque", "Beret", "Fedora"],
+    "answer": "Toque",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-ez-0021",
+    "question": "Which animal is on the Canadian nickel?",
+    "options": ["Caribou", "Beaver", "Polar Bear", "Loon"],
+    "answer": "Beaver",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-ez-0022",
+    "question": "Which of these is a popular Canadian dish made of fries, gravy, and cheese curds?",
+    "options": ["BeaverTails", "Poutine", "Nanaimo Bars", "Donair"],
+    "answer": "Poutine",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-ez-0023",
+    "question": "What is the primary syrup produced in Canada?",
+    "options": ["Corn Syrup", "Maple Syrup", "Honey", "Agave"],
+    "answer": "Maple Syrup",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-med-0026",
+    "question": "Which Canadian city is the world's second-largest French-speaking city after Paris?",
+    "options": ["Quebec City", "Ottawa", "Montreal", "Laval"],
+    "answer": "Montreal",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-med-0027",
+    "question": "How many time zones does Canada have?",
+    "options": ["4", "5", "6", "7"],
+    "answer": "6",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-med-0028",
+    "question": "Which province produces over 70% of the world's maple syrup?",
+    "options": ["Ontario", "Quebec", "New Brunswick", "Nova Scotia"],
+    "answer": "Quebec",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-med-0029",
+    "question": "What was Canada Day originally called before it was renamed in 1982?",
+    "options": ["Confederation Day", "Dominion Day", "Independence Day", "Unity Day"],
+    "answer": "Dominion Day",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-med-0030",
+    "question": "Which Canadian province is the only one that is officially bilingual?",
+    "options": ["Quebec", "Ontario", "New Brunswick", "Manitoba"],
+    "answer": "New Brunswick",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-med-0031",
+    "question": "Which Canadian inventor is credited with the creation of basketball?",
+    "options": ["James Naismith", "Alexander Graham Bell", "Sandford Fleming", "Joseph-Armand Bombardier"],
+    "answer": "James Naismith",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-med-0033",
+    "question": "In which city was the first Tim Hortons restaurant opened in 1964?",
+    "options": ["Toronto", "Hamilton", "Ottawa", "London"],
+    "answer": "Hamilton",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-med-0034",
+    "question": "Which Canadian city is known as the 'Polar Bear Capital of the World'?",
+    "options": ["Yellowknife", "Iqaluit", "Churchill", "Whitehorse"],
+    "answer": "Churchill",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-med-0035",
+    "question": "What is the name of the legendary sea monster said to live in British Columbia's Okanagan Lake?",
+    "options": ["Champ", "Ogopogo", "Memphre", "Caddy"],
+    "answer": "Ogopogo",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-med-0037",
+    "question": "What type of pizza was actually invented in Ontario?",
+    "options": ["Canadian Pizza", "Hawaiian Pizza", "Tropical Pizza", "Sweet & Sour Pizza"],
+    "answer": "Hawaiian Pizza",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-med-0038",
+    "question": "Which national park was the first to be established in Canada?",
+    "options": ["Jasper National Park", "Banff National Park", "Yoho National Park", "Glacier National Park"],
+    "answer": "Banff National Park",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-med-0039",
+    "question": "The name 'Canada' comes from the Indigenous word 'Kanata,' which means what?",
+    "options": ["Great Land", "Settlement", "Big River", "Cold Place"],
+    "answer": "Settlement",
+    "difficulty": "medium"
+  },
+
+  {
+    "id": "ca-med-0041",
+    "question": "What is the longest river in Canada?",
+    "options": ["St. Lawrence River", "Mackenzie River", "Yukon River", "Fraser River"],
+    "answer": "Mackenzie River",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-med-0043",
+    "question": "What is the national cocktail of Canada, featuring clam juice?",
+    "options": ["Bloody Mary", "Caesar", "Maple Sour", "The Great North"],
+    "answer": "Caesar",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-med-0045",
+    "question": "Which Canadian city hosted the 1976 Summer Olympics?",
+    "options": ["Toronto", "Montreal", "Vancouver", "Calgary"],
+    "answer": "Montreal",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-med-0046",
+    "question": "Which sport is recognized as Canada’s national summer sport?",
+    "options": ["Lacrosse", "Baseball", "Soccer", "Basketball"],
+    "answer": "Lacrosse",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-med-0047",
+    "question": "What is the official motto of Canada, translated as 'From sea to sea'?",
+    "options": ["A Mari Usque Ad Mare", "E Pluribus Unum", "Fortis et Liber", "Je me souviens"],
+    "answer": "A Mari Usque Ad Mare",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ca-hd-0061",
+    "question": "How many stars are depicted on the flag of the Northwest Territories?",
+    "options": ["0", "1", "2", "3"],
+    "answer": "0",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-hd-0062",
+    "question": "Who was the first woman to be elected to the Canadian House of Commons?",
+    "options": ["Kim Campbell", "Agnes Macphail", "Nellie McClung", "Therese Casgrain"],
+    "answer": "Agnes Macphail",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-hd-0063",
+    "question": "In what year did the British North America Act come into effect?",
+    "options": ["1763", "1812", "1867", "1905"],
+    "answer": "1867",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-hd-0064",
+    "question": "Which Canadian city is known as the 'Gateway to the North'?",
+    "options": ["Edmonton", "Saskatoon", "Thunder Bay", "Prince George"],
+    "answer": "Edmonton",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-hd-0068",
+    "question": "Which Canadian Prime Minister won the Nobel Peace Prize for resolving the Suez Crisis?",
+    "options": ["Lester B. Pearson", "Pierre Trudeau", "John Diefenbaker", "Louis St. Laurent"],
+    "answer": "Lester B. Pearson",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-hd-0070",
+    "question": "Which explorer disappeared while searching for the Northwest Passage in 1845?",
+    "options": ["John Franklin", "Samuel de Champlain", "Alexander Mackenzie", "Henry Hudson"],
+    "answer": "John Franklin",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-hd-0073",
+    "question": "Which of these Canadian artists was NOT a member of the 'Group of Seven'?",
+    "options": ["Lawren Harris", "A.Y. Jackson", "Tom Thomson", "Arthur Lismer"],
+    "answer": "Tom Thomson",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-hd-0074",
+    "question": "What was the name of the first newspaper published in Canada (1752)?",
+    "options": ["The Globe and Mail", "The Halifax Gazette", "The Quebec Gazette", "The Montreal Herald"],
+    "answer": "The Halifax Gazette",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-hd-0077",
+    "question": "Which Canadian architect designed the National Gallery of Canada?",
+    "options": ["Frank Gehry", "Douglas Cardinal", "Moshe Safdie", "Arthur Erickson"],
+    "answer": "Moshe Safdie",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-hd-0078",
+    "question": "What is the name of the narrow body of water separating Vancouver Island from the mainland?",
+    "options": ["Strait of Juan de Fuca", "Strait of Georgia", "Hecate Strait", "Queen Charlotte Sound"],
+    "answer": "Strait of Georgia",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-hd-0083",
+    "question": "Who was the longest-serving Prime Minister in Canadian history?",
+    "options": ["John A. Macdonald", "William Lyon Mackenzie King", "Pierre Trudeau", "Wilfrid Laurier"],
+    "answer": "William Lyon Mackenzie King",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-hd-0087",
+    "question": "In which Canadian city would you find the 'Golden Boy' statue atop the legislative building?",
+    "options": ["Edmonton", "Winnipeg", "Regina", "Victoria"],
+    "answer": "Winnipeg",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-hd-0090",
+    "question": "What is the name of the iconic clock tower in Ottawa's Parliament Buildings?",
+    "options": ["Victoria Tower", "Peace Tower", "Heritage Tower", "Confederation Tower"],
+    "answer": "Peace Tower",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-hd-0092",
+    "question": "Who was the first French-Canadian Prime Minister?",
+    "options": ["Louis St. Laurent", "Wilfrid Laurier", "Pierre Trudeau", "Paul Martin"],
+    "answer": "Wilfrid Laurier",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-hd-0096",
+    "question": "What year did Canada adopt the current red-and-white maple leaf flag?",
+    "options": ["1921", "1945", "1965", "1982"],
+    "answer": "1965",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-hd-0097",
+    "question": "Which Canadian city is home to the world's largest underground shopping complex (RÉSO)?",
+    "options": ["Toronto", "Montreal", "Vancouver", "Edmonton"],
+    "answer": "Montreal",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-hd-0098",
+    "question": "What is the name of the ship that brought the first Scottish settlers to Pictou, Nova Scotia, in 1773?",
+    "options": ["The Hector", "The Mayflower", "The Marco Polo", "The Bluenose"],
+    "answer": "The Hector",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-hd-0099",
+    "question": "Which Canadian scientist developed the worldwide system of Standard Time?",
+    "options": ["Alexander Graham Bell", "Sandford Fleming", "Wilder Penfield", "John Polanyi"],
+    "answer": "Sandford Fleming",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-odd-0001",
+    "question": "Which of these is NOT a Canadian territory?",
+    "options": ["Nunavut", "Yukon", "Northwest Territories", "Ontario"],
+    "answer": "Ontario",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-odd-0002",
+    "question": "Which of these is NOT a Canadian territory?",
+    "options": ["Yukon", "Ontario", "Northwest Territories", "Nunavut"],
+    "answer": "Ontario",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-odd-0003",
+    "question": "Which of these is NOT a Canadian territory?",
+    "options": ["Northwest Territories", "Nunavut", "Yukon", "Quebec"],
+    "answer": "Quebec",
+    "difficulty": "easy"
+  },
+
+  {
+    "id": "ca-odd-0004",
+    "question": "Which of these is NOT a Canadian province?",
+    "options": ["Ontario", "Yukon", "Northwest Territories", "Nunavut"],
+    "answer": "Yukon",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ca-odd-0005",
+    "question": "Which of these is NOT a Canadian province?",
+    "options": ["British Columbia", "Nunavut", "Yukon", "Northwest Territories"],
+    "answer": "Nunavut",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ca-odd-0006",
+    "question": "Which of these is NOT a Canadian province?",
+    "options": ["Quebec", "Northwest Territories", "Yukon", "Nunavut"],
+    "answer": "Northwest Territories",
+    "difficulty": "hard"
+  },
+{
+"id": "ca-med-0032",
+"question": "Which Canadian comic actor starred in Ghostbusters (1984)?",
+"options": ["Dan Aykroyd", "John Candy", "Martin Short", "Rick Moranis"],
+"answer": "Dan Aykroyd",
+"difficulty": "hard"
+},
+{
+"id": "ca-med-0033",
+"question": "Which Canadian actress plays Moira Rose in Schitt's Creek?",
+"options": ["Catherine O'Hara", "Annie Murphy", "Ellen Page", "Sandra Oh"],
+"answer": "Catherine O'Hara",
+"difficulty": "hard"
+},
+  {
+    "id": "ca-med-0049",
+    "question": "Who was Canada's first Prime Minister?",
+    "options": ["Alexander Mackenzie", "Wilfrid Laurier", "John A. Macdonald", "Robert Borden"],
+    "answer": "John A. Macdonald",
+    "difficulty": "hard"
+  }
+]
+
+

@@ -1,0 +1,1346 @@
+[
+  {
+    "id": "nba-easy-0001",
+    "question": "Which NBA team does LeBron James currently play for (as of the 2024-25 season)?",
+    "options": ["Los Angeles Lakers", "Miami Heat", "Cleveland Cavaliers", "Golden State Warriors"],
+    "answer": "Los Angeles Lakers",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0002",
+    "question": "Which player is known as 'The Greek Freak'?",
+    "options": ["Luka Doncic", "Giannis Antetokounmpo", "Joel Embiid", "Nikola Jokic"],
+    "answer": "Giannis Antetokounmpo",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0001",
+    "question": "Who won the 2025 NBA Championship?",
+    "options": ["Indiana Pacers", "Oklahoma City Thunder", "Boston Celtics", "Denver Nuggets"],
+    "answer": "Oklahoma City Thunder",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0002",
+    "question": "Who was named the 2025 NBA Finals MVP?",
+    "options": ["Jalen Williams", "Shai Gilgeous-Alexander", "Tyrese Haliburton", "Myles Turner"],
+    "answer": "Shai Gilgeous-Alexander",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0003",
+    "question": "How many games did the 2025 NBA Finals last?",
+    "options": ["4", "5", "6", "7"],
+    "answer": "7",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0004",
+    "question": "Which team did the Oklahoma City Thunder defeat in the 2025 NBA Finals?",
+    "options": ["Indiana Pacers", "Miami Heat", "Golden State Warriors", "Milwaukee Bucks"],
+    "answer": "Indiana Pacers",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-medium-0006",
+    "question": "Who suffered an Achilles injury in Game 7 of the 2025 NBA Finals?",
+    "options": ["Bennedict Mathurin", "Tyrese Haliburton", "Andrew Nembhard", "Buddy Hield"],
+    "answer": "Tyrese Haliburton",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0007",
+    "question": "What was the Oklahoma City Thunder’s regular season record in 2025?",
+    "options": ["58-24", "64-18", "68-14", "60-22"],
+    "answer": "68-14",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0008",
+    "question": "How many NBA titles have the Thunder franchise won in total after 2025?",
+    "options": ["1", "2", "3", "4"],
+    "answer": "2",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0009",
+    "question": "Who led the NBA in scoring during the 2024-25 season?",
+    "options": ["Luka Doncic", "Shai Gilgeous-Alexander", "Jayson Tatum", "Giannis Antetokounmpo"],
+    "answer": "Shai Gilgeous-Alexander",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0010",
+    "question": "Who coached the Oklahoma City Thunder to the 2025 title?",
+    "options": ["Mark Daigneault", "Erik Spoelstra", "Rick Carlisle", "Ime Udoka"],
+    "answer": "Mark Daigneault",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-hard-0012",
+    "question": "Who was the Pacers’ leading scorer in the 2025 NBA Finals?",
+    "options": ["Tyrese Haliburton", "Pascal Siakam", "Bennedict Mathurin", "Myles Turner"],
+    "answer": "Pascal Siakam",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0014",
+    "question": "Which team did Indiana defeat in the Eastern Conference Finals to reach the 2025 NBA Finals?",
+    "options": ["Boston Celtics", "Milwaukee Bucks", "Philadelphia 76ers", "New York Knicks"],
+    "answer": "New York Knicks",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-expert-0016",
+    "question": "How many assists did Shai Gilgeous-Alexander have in Game 7 of the 2025 Finals?",
+    "options": ["8", "10", "12", "14"],
+    "answer": "12",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0018",
+    "question": "Who did the Thunder beat in the Western Conference Finals to reach the 2025 NBA Finals?",
+    "options": ["Golden State Warriors", "Denver Nuggets", "Los Angeles Lakers", "Minnesota Timberwolves"],
+    "answer": "Denver Nuggets",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-easy-0003",
+    "question": "Which team won the 2022 NBA Championship?",
+    "options": ["Boston Celtics", "Golden State Warriors", "Phoenix Suns", "Milwaukee Bucks"],
+    "answer": "Golden State Warriors",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-easy-0004",
+    "question": "Who is widely considered the greatest basketball player of all time?",
+    "options": ["LeBron James", "Kobe Bryant", "Michael Jordan", "Shaquille O'Neal"],
+    "answer": "Michael Jordan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0005",
+    "question": "Which player won the 2023 NBA MVP award?",
+    "options": ["Giannis Antetokounmpo", "Joel Embiid", "Nikola Jokic", "Stephen Curry"],
+    "answer": "Joel Embiid",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-easy-0006",
+    "question": "What is Stephen Curry best known for?",
+    "options": ["Dunking", "Defense", "Three-point shooting", "Rebounding"],
+    "answer": "Three-point shooting",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0007",
+    "question": "Which team drafted Zion Williamson?",
+    "options": ["New Orleans Pelicans", "Charlotte Hornets", "Atlanta Hawks", "Chicago Bulls"],
+    "answer": "New Orleans Pelicans",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0008",
+    "question": "What number did Kobe Bryant wear for the final seasons of his career?",
+    "options": ["8", "23", "24", "33"],
+    "answer": "24",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-easy-0008",
+    "question": "What number did Kobe Bryant wear for the early seasons of his career?",
+    "options": ["8", "23", "24", "33"],
+    "answer": "8",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-easy-0009",
+    "question": "Who won the 2008 NBA Slam Dunk Contest with a memorable 'Superman' dunk?",
+    "options": ["LeBron James", "Dwight Howard", "Vince Carter", "Nate Robinson"],
+    "answer": "Dwight Howard",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0010",
+    "question": "Which franchise has won the most NBA Championships?",
+    "options": ["Los Angeles Lakers", "Boston Celtics", "Golden State Warriors", "Chicago Bulls"],
+    "answer": "Boston Celtics",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0011",
+    "question": "Who is Shaquille O’Neal also known as?",
+    "options": ["The Mailman", "The Big Diesel", "The Answer", "The Truth"],
+    "answer": "The Big Diesel",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-easy-0012",
+    "question": "Which team is based in Chicago?",
+    "options": ["Bulls", "Knicks", "Raptors", "Heat"],
+    "answer": "Bulls",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0013",
+    "question": "Who is known for the iconic free-throw line dunk in the 1988 Slam Dunk Contest?",
+    "options": ["Dominique Wilkins", "Michael Jordan", "Kobe Bryant", "Vince Carter"],
+    "answer": "Michael Jordan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0014",
+    "question": "What position does Chris Paul primarily play?",
+    "options": ["Shooting guard", "Point guard", "Small forward", "Center"],
+    "answer": "Point guard",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0015",
+    "question": "Who did the Warriors defeat in the 2015 NBA Finals?",
+    "options": ["San Antonio Spurs", "Miami Heat", "Cleveland Cavaliers", "Toronto Raptors"],
+    "answer": "Cleveland Cavaliers",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0016",
+    "question": "Which former MVP is nicknamed 'The Beard'?",
+    "options": ["James Harden", "Kevin Durant", "Russell Westbrook", "Stephen Curry"],
+    "answer": "James Harden",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0017",
+    "question": "Who won the 2019 NBA Championship?",
+    "options": ["Warriors", "Raptors", "Bucks", "Lakers"],
+    "answer": "Raptors",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-easy-0019",
+    "question": "Who did Kevin Durant win two NBA Finals MVPs with?",
+    "options": ["Thunder", "Warriors", "Nets", "Suns"],
+    "answer": "Warriors",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0020",
+    "question": "Which player was famous for his sky hook shot?",
+    "options": ["Shaquille O’Neal", "Bill Russell", "Kareem Abdul-Jabbar", "Wilt Chamberlain"],
+    "answer": "Kareem Abdul-Jabbar",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0021",
+    "question": "Which city do the Knicks play in?",
+    "options": ["New York", "Los Angeles", "Chicago", "Boston"],
+    "answer": "New York",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0022",
+    "question": "Who won Rookie of the Year in 2022?",
+    "options": ["Cade Cunningham", "Scottie Barnes", "Evan Mobley", "Jalen Green"],
+    "answer": "Scottie Barnes",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-easy-0023",
+    "question": "Which player was drafted number one overall in 2003?",
+    "options": ["Carmelo Anthony", "Dwyane Wade", "Chris Bosh", "LeBron James"],
+    "answer": "LeBron James",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0024",
+    "question": "What team did Tim Duncan play his entire career with?",
+    "options": ["Lakers", "Heat", "Spurs", "Celtics"],
+    "answer": "Spurs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0025",
+    "question": "Who was nicknamed 'The Answer'?",
+    "options": ["Allen Iverson", "Ray Allen", "Chris Paul", "Derrick Rose"],
+    "answer": "Allen Iverson",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0026",
+    "question": "Who led the NBA in scoring in the 2020-21 season?",
+    "options": ["Stephen Curry", "Luka Doncic", "Damian Lillard", "Kevin Durant"],
+    "answer": "Stephen Curry",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0027",
+    "question": "Which player broke the all-time NBA scoring record in 2023?",
+    "options": ["Kevin Durant", "Stephen Curry", "LeBron James", "James Harden"],
+    "answer": "LeBron James",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0028",
+    "question": "Which NBA team is from Canada?",
+    "options": ["Heat", "Bulls", "Raptors", "Knicks"],
+    "answer": "Raptors",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0029",
+    "question": "Which Laker was known for his 'Mamba Mentality'?",
+    "options": ["Magic Johnson", "Shaquille O’Neal", "Kobe Bryant", "Pau Gasol"],
+    "answer": "Kobe Bryant",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0030",
+    "question": "Who is the NBA’s all-time leader in three-pointers made?",
+    "options": ["Ray Allen", "James Harden", "Stephen Curry", "Reggie Miller"],
+    "answer": "Stephen Curry",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0031",
+    "question": "Which player was famous for wearing goggles?",
+    "options": ["Magic Johnson", "Kareem Abdul-Jabbar", "Larry Bird", "Scottie Pippen"],
+    "answer": "Kareem Abdul-Jabbar",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0032",
+    "question": "Who did the Lakers beat in the 2020 NBA Finals?",
+    "options": ["Bucks", "Celtics", "Heat", "Nuggets"],
+    "answer": "Heat",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-easy-0033",
+    "question": "Who is known for the 'Linsanity' craze?",
+    "options": ["Jeremy Lin", "Yao Ming", "Kemba Walker", "Rajon Rondo"],
+    "answer": "Jeremy Lin",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0034",
+    "question": "Who won the MVP in 2021?",
+    "options": ["Giannis Antetokounmpo", "Joel Embiid", "Nikola Jokic", "Stephen Curry"],
+    "answer": "Nikola Jokic",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-easy-0035",
+    "question": "Which team did Dirk Nowitzki play for his entire NBA career?",
+    "options": ["Spurs", "Lakers", "Mavericks", "Heat"],
+    "answer": "Mavericks",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0036",
+    "question": "Who was the #1 pick in the 2024 NBA Draft?",
+    "options": ["Zaccharie Risacher", "Alex Sarr", "Bronny James", "Scoot Henderson"],
+    "answer": "Zaccharie Risacher",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0037",
+    "question": "What country is Luka Doncic from?",
+    "options": ["Serbia", "Greece", "Spain", "Slovenia"],
+    "answer": "Slovenia",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0038",
+    "question": "Which NBA team plays at Madison Square Garden?",
+    "options": ["Knicks", "Nets", "76ers", "Celtics"],
+    "answer": "Knicks",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0040",
+    "question": "Which team drafted Stephen Curry?",
+    "options": ["Knicks", "Lakers", "Warriors", "Hornets"],
+    "answer": "Warriors",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0042",
+    "question": "Who was the #1 pick in the 2014 NBA Draft?",
+    "options": ["Andrew Wiggins", "Joel Embiid", "Jabari Parker", "Aaron Gordon"],
+    "answer": "Andrew Wiggins",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-easy-0043",
+    "question": "Which player scored 81 points in a single game?",
+    "options": ["Michael Jordan", "Kobe Bryant", "Lebron James", "James Harden"],
+    "answer": "Kobe Bryant",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0045",
+    "question": "Which team did Vince Carter jump over a 7-footer against in the Olympics?",
+    "options": ["France", "Spain", "USA", "Greece"],
+    "answer": "France",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-easy-0046",
+    "question": "Who was the youngest player to reach 30,000 points?",
+    "options": ["Kobe Bryant", "Michael Jordan", "LeBron James", "Kevin Durant"],
+    "answer": "LeBron James",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0048",
+    "question": "Which team won the NBA title in 2016, coming back from 3-1 down?",
+    "options": ["Warriors", "Cavaliers", "Thunder", "Spurs"],
+    "answer": "Cavaliers",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0049",
+    "question": "Who did the Celtics draft in 2017 that became an All-Star?",
+    "options": ["Jaylen Brown", "Jayson Tatum", "Marcus Smart", "Robert Williams III"],
+    "answer": "Jayson Tatum",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-easy-0050",
+    "question": "Which team did Chris Paul get traded to in 2023?",
+    "options": ["Warriors", "Lakers", "Heat", "Nuggets"],
+    "answer": "Warriors",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-medium-0051",
+    "question": "Who hit the famous 'The Shot' over Craig Ehlo in the 1989 playoffs?",
+    "options": ["Michael Jordan", "Larry Bird", "Magic Johnson", "Isiah Thomas"],
+    "answer": "Michael Jordan",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0053",
+    "question": "Who did the Toronto Raptors acquire in 2018 that led to their first championship?",
+    "options": ["Kawhi Leonard", "Paul George", "Jimmy Butler", "Kyrie Irving"],
+    "answer": "Kawhi Leonard",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0054",
+    "question": "Which team drafted Luka Doncic before trading him to Dallas on draft night?",
+    "options": ["Suns", "Hawks", "Kings", "Magic"],
+    "answer": "Hawks",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0055",
+    "question": "Who was the first unanimous NBA MVP?",
+    "options": ["Michael Jordan", "LeBron James", "Stephen Curry", "Shaquille O’Neal"],
+    "answer": "Stephen Curry",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0056",
+    "question": "What year did Allen Iverson win MVP?",
+    "options": ["1999", "2001", "2003", "2005"],
+    "answer": "2001",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0057",
+    "question": "Who won Defensive Player of the Year in 2020?",
+    "options": ["Giannis Antetokounmpo", "Rudy Gobert", "Anthony Davis", "Draymond Green"],
+    "answer": "Giannis Antetokounmpo",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0058",
+    "question": "Which player holds the record for most three-pointers made in a single season?",
+    "options": ["Klay Thompson", "Stephen Curry", "James Harden", "Damian Lillard"],
+    "answer": "Stephen Curry",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0059",
+    "question": "Which former Spurs player is known for his famous 'bank shot' fundamentals?",
+    "options": ["David Robinson", "Manu Ginobili", "Tony Parker", "Tim Duncan"],
+    "answer": "Tim Duncan",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0060",
+    "question": "Who did the Cavaliers beat in the Eastern Conference Finals in 2016?",
+    "options": ["Raptors", "Celtics", "Heat", "Pacers"],
+    "answer": "Raptors",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-medium-0061",
+    "question": "Who won the 2008 NBA Finals MVP?",
+    "options": ["Paul Pierce", "Kevin Garnett", "Ray Allen", "Kobe Bryant"],
+    "answer": "Paul Pierce",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0062",
+    "question": "Which player led the league in assists for three consecutive seasons from 2018 to 2021?",
+    "options": ["James Harden", "Chris Paul", "Russell Westbrook", "Trae Young"],
+    "answer": "Russell Westbrook",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0063",
+    "question": "Who was traded from the Thunder to the Clippers in a blockbuster 2019 deal?",
+    "options": ["Russell Westbrook", "Paul George", "Kevin Durant", "James Harden"],
+    "answer": "Paul George",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0064",
+    "question": "Which team did Kawhi Leonard hit the 'bouncing buzzer-beater' against in the 2019 playoffs?",
+    "options": ["76ers", "Bucks", "Warriors", "Nets"],
+    "answer": "76ers",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0065",
+    "question": "Who has the record for the most points in a playoff game for the Utah Jazz?",
+    "options": ["Karl Malone", "Donovan Mitchell", "Pete Maravich", "Adrian Dantley"],
+    "answer": "Donovan Mitchell",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0066",
+    "question": "Which coach led the Warriors to their 2022 NBA Championship?",
+    "options": ["Steve Kerr", "Mike Brown", "Mark Jackson", "Doc Rivers"],
+    "answer": "Steve Kerr",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0067",
+    "question": "Who won NBA Sixth Man of the Year in 2022?",
+    "options": ["Tyler Herro", "Jordan Clarkson", "Lou Williams", "Malik Monk"],
+    "answer": "Tyler Herro",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0068",
+    "question": "Which player was named Finals MVP when the Spurs beat the Heat in 2014?",
+    "options": ["Tim Duncan", "Kawhi Leonard", "Tony Parker", "Manu Ginobili"],
+    "answer": "Kawhi Leonard",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0069",
+    "question": "Who was the #2 pick in the 2019 NBA Draft?",
+    "options": ["Ja Morant", "RJ Barrett", "De'Andre Hunter", "Darius Garland"],
+    "answer": "Ja Morant",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0070",
+    "question": "Which team selected Kevin Durant in the draft?",
+    "options": ["Thunder", "Warriors", "Supersonics", "Nets"],
+    "answer": "Supersonics",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-medium-0071",
+    "question": "Who did the Lakers trade to acquire Anthony Davis in 2019?",
+    "options": ["Brandon Ingram", "Lonzo Ball", "Josh Hart", "All of the above"],
+    "answer": "All of the above",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0072",
+    "question": "Who was the first overall pick in the 2010 NBA Draft?",
+    "options": ["Blake Griffin", "John Wall", "Kyrie Irving", "Anthony Davis"],
+    "answer": "John Wall",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-medium-0073",
+    "question": "Which team did Steve Nash finish his playing career with?",
+    "options": ["Suns", "Mavericks", "Lakers", "Warriors"],
+    "answer": "Lakers",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0074",
+    "question": "Who famously blocked Andre Iguodala in Game 7 of the 2016 Finals?",
+    "options": ["Kevin Love", "Kyrie Irving", "J.R. Smith", "LeBron James"],
+    "answer": "LeBron James",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0075",
+    "question": "Who was the #1 overall pick in the 2021 NBA Draft?",
+    "options": ["Jalen Green", "Evan Mobley", "Cade Cunningham", "Scottie Barnes"],
+    "answer": "Cade Cunningham",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0076",
+    "question": "Which player was known as 'Grandmama' due to his Converse commercials?",
+    "options": ["Karl Malone", "Larry Johnson", "Charles Barkley", "Shawn Kemp"],
+    "answer": "Larry Johnson",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-medium-0077",
+    "question": "Who did the Mavericks defeat to win their first NBA title in 2011?",
+    "options": ["Heat", "Lakers", "Spurs", "Celtics"],
+    "answer": "Heat",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0078",
+    "question": "Which player won the 3-Point Contest during the 2023 All-Star Weekend?",
+    "options": ["Damian Lillard", "Tyrese Haliburton", "Steph Curry", "Kevin Huerter"],
+    "answer": "Damian Lillard",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0079",
+    "question": "Who was named Rookie of the Year in 2018?",
+    "options": ["Donovan Mitchell", "Jayson Tatum", "Ben Simmons", "De'Aaron Fox"],
+    "answer": "Ben Simmons",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0080",
+    "question": "Who coached the Celtics to their 2008 NBA Championship?",
+    "options": ["Brad Stevens", "Doc Rivers", "Rick Carlisle", "Tom Thibodeau"],
+    "answer": "Doc Rivers",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0081",
+    "question": "Which player hit the game-winning three-pointer against the Spurs in the 2013 Finals to force OT?",
+    "options": ["LeBron James", "Ray Allen", "Chris Bosh", "Dwyane Wade"],
+    "answer": "Ray Allen",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0082",
+    "question": "Who won Most Improved Player in 2022?",
+    "options": ["Tyrese Maxey", "Jordan Poole", "Ja Morant", "Miles Bridges"],
+    "answer": "Ja Morant",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0083",
+    "question": "What is Giannis Antetokounmpo’s jersey number?",
+    "options": ["34", "35", "43", "33"],
+    "answer": "34",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0084",
+    "question": "Who won Finals MVP in 2015?",
+    "options": ["Stephen Curry", "Andre Iguodala", "Klay Thompson", "Draymond Green"],
+    "answer": "Andre Iguodala",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0086",
+    "question": "Which player famously led an 8-point burst in 9 seconds to beat the Knicks?",
+    "options": ["Reggie Miller", "Michael Jordan", "Larry Bird", "Allen Iverson"],
+    "answer": "Reggie Miller",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-medium-0087",
+    "question": "Who holds the record for most assists in a single NBA game?",
+    "options": ["Chris Paul", "Magic Johnson", "Scott Skiles", "John Stockton"],
+    "answer": "Scott Skiles",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-medium-0088",
+    "question": "Which franchise was originally based in Vancouver?",
+    "options": ["Thunder", "Grizzlies", "Pelicans", "Hornets"],
+    "answer": "Grizzlies",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0089",
+    "question": "Who won the NBA Dunk Contest in 2016 in one of the most famous battles ever?",
+    "options": ["Aaron Gordon", "Zach LaVine", "Derrick Jones Jr.", "Obi Toppin"],
+    "answer": "Zach LaVine",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0090",
+    "question": "Who is the Nuggets' all-time leader in triple-doubles?",
+    "options": ["Fat Lever", "Nikola Jokic", "Carmelo Anthony", "Chauncey Billups"],
+    "answer": "Nikola Jokic",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0091",
+    "question": "Which team did Kevin Garnett finish his career with?",
+    "options": ["Celtics", "Timberwolves", "Nets", "Bulls"],
+    "answer": "Timberwolves",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0093",
+    "question": "Who was the NBA commissioner before Adam Silver?",
+    "options": ["Larry O'Brien", "David Stern", "Maurice Podoloff", "Jerry Colangelo"],
+    "answer": "David Stern",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0094",
+    "question": "Who was the first overall pick in the 2016 NBA Draft?",
+    "options": ["Brandon Ingram", "Jaylen Brown", "Ben Simmons", "Pascal Siakam"],
+    "answer": "Ben Simmons",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0095",
+    "question": "Which player averaged a triple-double for three straight seasons?",
+    "options": ["Nikola Jokic", "James Harden", "Russell Westbrook", "Luka Doncic"],
+    "answer": "Russell Westbrook",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0096",
+    "question": "Which player was nicknamed 'The Klaw'?",
+    "options": ["Paul George", "Kawhi Leonard", "Jimmy Butler", "Jayson Tatum"],
+    "answer": "Kawhi Leonard",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0097",
+    "question": "Who led the Miami Heat in scoring during their 2012 championship season?",
+    "options": ["LeBron James", "Dwyane Wade", "Chris Bosh", "Ray Allen"],
+    "answer": "LeBron James",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0098",
+    "question": "Who won the NBA Most Improved Player award in 2019?",
+    "options": ["Giannis Antetokounmpo", "Pascal Siakam", "Brandon Ingram", "Julius Randle"],
+    "answer": "Pascal Siakam",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0099",
+    "question": "Which player made the 'shot heard round the world' to send the Suns to the 1976 Finals?",
+    "options": ["Paul Westphal", "Alvan Adams", "Gar Heard", "Walter Davis"],
+    "answer": "Gar Heard",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-medium-0100",
+    "question": "Who won the NBA MVP award in 2017?",
+    "options": ["LeBron James", "James Harden", "Russell Westbrook", "Kawhi Leonard"],
+    "answer": "Russell Westbrook",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nba-hard-0101",
+    "question": "Who was the MVP of the 2007 NBA Finals?",
+    "options": ["LeBron James", "Tim Duncan", "Tony Parker", "Manu Ginobili"],
+    "answer": "Tony Parker",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0102",
+    "question": "Which player scored exactly 13 points in 33 seconds to defeat the Spurs in 2004?",
+    "options": ["Allen Iverson", "Kobe Bryant", "Tracy McGrady", "Ray Allen"],
+    "answer": "Tracy McGrady",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0105",
+    "question": "Who is the only player in NBA history to win MVP, Finals MVP, and All-Star MVP in the same season?",
+    "options": ["Michael Jordan", "Shaquille O’Neal", "LeBron James", "Hakeem Olajuwon"],
+    "answer": "Michael Jordan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0106",
+    "question": "Who did the Lakers defeat in the 2000 Western Conference Finals after being down 15 points in Game 7?",
+    "options": ["Trail Blazers", "Spurs", "Suns", "Kings"],
+    "answer": "Trail Blazers",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0107",
+    "question": "Which team drafted Pau Gasol before trading him to the Grizzlies?",
+    "options": ["Hawks", "Lakers", "Bulls", "Hornets"],
+    "answer": "Hawks",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0108",
+    "question": "Who was the first European player to win NBA MVP?",
+    "options": ["Dirk Nowitzki", "Pau Gasol", "Tony Parker", "Giannis Antetokounmpo"],
+    "answer": "Dirk Nowitzki",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0109",
+    "question": "Who was the only player to score over 70 points in a game between 2010 and 2020?",
+    "options": ["Kobe Bryant", "Devin Booker", "Damian Lillard", "Lebron James"],
+    "answer": "Devin Booker",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0111",
+    "question": "Who led the Pistons in scoring during the 2004 NBA Finals?",
+    "options": ["Richard Hamilton", "Chauncey Billups", "Ben Wallace", "Tayshaun Prince"],
+    "answer": "Richard Hamilton",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0112",
+    "question": "Who won NBA Most Improved Player in 2011?",
+    "options": ["Kevin Love", "Ryan Anderson", "Paul George", "Derrick Rose"],
+    "answer": "Kevin Love",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hards-0112",
+    "question": "Who won NBA Most Valuable Player in 2011?",
+    "options": ["Kevin Love", "Ryan Anderson", "Paul George", "Derrick Rose"],
+    "answer": "Derrick Rose",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0113",
+    "question": "Who is the only player in NBA history to lead his team in points, rebounds, assists, steals and blocks for an entire season?",
+    "options": ["LeBron James", "Tim Duncan", "David Robinson", "Dave Cowens"],
+    "answer": "Dave Cowens",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-hard-0114",
+    "question": "Who holds the record for most points scored in a single playoff game since 2000?",
+    "options": ["LeBron James", "Kobe Bryant", "Allen Iverson", "Donovan Mitchell"],
+    "answer": "Donovan Mitchell",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0115",
+    "question": "Who was the first NBA player to have a signature shoe with Nike?",
+    "options": ["Michael Jordan", "Charles Barkley", "Moses Malone", "Julius Erving"],
+    "answer": "Michael Jordan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nba-hard-0118",
+    "question": "Which NBA player was suspended multiple times and then permanantly banned due to violating the league’s substance abuse policy?",
+    "options": ["Chris Andersen", "Roy Tarpley", "Latrell Sprewell", "Vernon Maxwell"],
+    "answer": "Roy Tarpley",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-hard-0120",
+    "question": "Who led the league in scoring in 2018-19 with an average of 36.1 points per game?",
+    "options": ["Russell Westbrook", "Stephen Curry", "James Harden", "Giannis Antetokounmpo"],
+    "answer": "James Harden",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0122",
+    "question": "Which coach holds the record for most NBA games coached?",
+    "options": ["Don Nelson", "Lenny Wilkens", "Gregg Popovich", "Jerry Sloan"],
+    "answer": "Gregg Popovich",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0123",
+    "question": "Which player holds the record for most rebounds in a single NBA game?",
+    "options": ["Wilt Chamberlain", "Bill Russell", "Dennis Rodman", "Moses Malone"],
+    "answer": "Wilt Chamberlain",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0124",
+    "question": "Which NBA player was known as 'Plastic Man'?",
+    "options": ["Shawn Marion", "Stacey Augmon", "Scottie Pippen", "Rodney Rogers"],
+    "answer": "Stacey Augmon",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0125",
+    "question": "Who was the MVP of the 2004 NBA Finals?",
+    "options": ["Chauncey Billups", "Ben Wallace", "Rip Hamilton", "Tayshaun Prince"],
+    "answer": "Chauncey Billups",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0126",
+    "question": "Which player is the only one in NBA history with a quadruple-double that included steals?",
+    "options": ["Hakeem Olajuwon", "David Robinson", "Nate Thurmond", "Alvin Robertson"],
+    "answer": "Alvin Robertson",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-hard-0128",
+    "question": "Who was the player before Nikola Jokic to average at least 25 points, 10 rebounds, and 8 assists in a season?",
+    "options": ["Oscar Robertson", "Larry Bird", "Russell Westbrook", "LeBron James"],
+    "answer": "LeBron James",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-01281",
+    "question": "Who was the first player to average at least 25 points, 10 rebounds, and 8 assists in a season?",
+    "options": ["Oscar Robertson", "Larry Bird", "Nikola Jokic", "LeBron James"],
+    "answer": "Oscar Robertson",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0129",
+    "question": "Which team selected Scottie Pippen on draft night before trading him to the Bulls?",
+    "options": ["Supersonics", "Blazers", "Nets", "Hornets"],
+    "answer": "Supersonics",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0130",
+    "question": "Which team did the Houston Rockets defeat in the 1995 NBA Finals?",
+    "options": ["Magic", "Knicks", "Spurs", "Celtics"],
+    "answer": "Magic",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0131",
+    "question": "Who holds the record for most career technical fouls in NBA history?",
+    "options": ["Rasheed Wallace", "Karl Malone", "Charles Barkley", "Draymond Green"],
+    "answer": "Karl Malone",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-01131",
+    "question": "Who holds the record for most career technical fouls in a single season in NBA history?",
+    "options": ["Rasheed Wallace", "Karl Malone", "Charles Barkley", "Draymond Green"],
+    "answer": "Rasheed Wallace",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0132",
+    "question": "Which team drafted Dirk Nowitzki before trading his rights to Dallas?",
+    "options": ["Bucks", "Celtics", "Warriors", "Clippers"],
+    "answer": "Bucks",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0133",
+    "question": "Who won the NBA MVP award in the lockout-shortened 1999 season?",
+    "options": ["Tim Duncan", "Karl Malone", "Shaquille O’Neal", "Alonzo Mourning"],
+    "answer": "Karl Malone",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0134",
+    "question": "Who led the 2000-01 76ers in rebounds per game?",
+    "options": ["Dikembe Mutombo", "Tyrone Hill", "Theo Ratliff", "Aaron McKie"],
+    "answer": "Dikembe Mutombo",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0135",
+    "question": "Who did the Celtics trade to acquire Kevin Garnett in 2007?",
+    "options": ["Al Jefferson", "Sebastian Telfair", "Gerald Green", "All of the above"],
+    "answer": "All of the above",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0136",
+    "question": "Which player won NBA Finals MVP despite being on the losing team?",
+    "options": ["Jerry West", "Wilt Chamberlain", "Bill Russell", "Rick Barry"],
+    "answer": "Jerry West",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0137",
+    "question": "Who was the first player to win back-to-back MVPs in the NBA?",
+    "options": ["Bill Russell", "Wilt Chamberlain", "Bob Pettit", "Larry Bird"],
+    "answer": "Bill Russell",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0138",
+    "question": "Who was the player with the highest rebounding average in a single NBA season?",
+    "options": ["Dennis Rodman", "Dwight Howard", "Andre Drummond", "Wilt Chamberlain"],
+    "answer": "Wilt Chamberlain",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0139",
+    "question": "Which team did Steve Nash start his NBA career with?",
+    "options": ["Suns", "Mavericks", "Lakers", "Spurs"],
+    "answer": "Suns",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0141",
+    "question": "Who was the first player ever drafted by the Miami Heat?",
+    "options": ["Rony Seikaly", "Glen Rice", "Steve Smith", "Harold Miner"],
+    "answer": "Rony Seikaly",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-hard-0142",
+    "question": "Which team did Chauncey Billups win NBA Finals MVP with?",
+    "options": ["Pistons", "Nuggets", "Celtics", "Timberwolves"],
+    "answer": "Pistons",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0143",
+    "question": "Who was the last player before Giannis to win back-to-back MVPs?",
+    "options": ["Stephen Curry", "LeBron James", "Kevin Durant", "Steve Nash"],
+    "answer": "Stephen Curry",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0144",
+    "question": "Who was the youngest NBA player to reach 10,000 career points?",
+    "options": ["Kobe Bryant", "Kevin Durant", "LeBron James", "Carmelo Anthony"],
+    "answer": "LeBron James",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0146",
+    "question": "Who was the first overall pick in the 1997 NBA Draft?",
+    "options": ["Tim Duncan", "Keith Van Horn", "Chauncey Billups", "Tracy McGrady"],
+    "answer": "Tim Duncan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0147",
+    "question": "Who did the Spurs draft first overall in 1987?",
+    "options": ["David Robinson", "Sean Elliott", "Will Perdue", "Arvydas Sabonis"],
+    "answer": "David Robinson",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-hard-0148",
+    "question": "Which of these players did not win an NBA championship and NCAA championship in back-to-back years?",
+    "options": ["Bill Russell", "Magic Johnson", "Kareem Abdul-Jabbar", "Billy Thompson"],
+    "answer": "Kareem Abdul-Jabbar",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0149",
+    "question": "Who is the only player to win NBA MVP, Defensive Player of the Year, and Finals MVP in the same season?",
+    "options": ["Michael Jordan", "Hakeem Olajuwon", "Giannis Antetokounmpo", "Kawhi Leonard"],
+    "answer": "Hakeem Olajuwon",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-hard-0150",
+    "question": "Who won the NBA scoring title in the lockout-shortened 2012 season?",
+    "options": ["Kobe Bryant", "Kevin Durant", "LeBron James", "Carmelo Anthony"],
+    "answer": "Kevin Durant",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-expert-0151",
+    "question": "Who was the first NBA player to record back-to-back 50-point triple-doubles?",
+    "options": ["James Harden", "Russell Westbrook", "Oscar Robertson", "Luka Doncic"],
+    "answer": "Russell Westbrook",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0152",
+    "question": "Who did the Milwaukee Bucks select with the second overall pick in the 2014 NBA Draft before trading him?",
+    "options": ["Jabari Parker", "Andrew Wiggins", "Joel Embiid", "Victor Oladipo"],
+    "answer": "Jabari Parker",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0153",
+    "question": "Which player won the NBA Sportsmanship Award in 2020/2021 and again in 2024/2025 season?",
+    "options": ["Jrue Holiday", "Kemba Walker", "Harrison Barnes", "Mike Conley"],
+    "answer": "Jrue Holiday",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0154",
+    "question": "Who holds the record for most turnovers in a single NBA season?",
+    "options": ["James Harden", "Russell Westbrook", "Allen Iverson", "LeBron James"],
+    "answer": "James Harden",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0155",
+    "question": "Which NBA player was the first to have his jersey retired by three different franchises?",
+    "options": ["Wilt Chamberlain", "Shaquille O'Neal", "Kareem Abdul-Jabbar", "Charles Barkley"],
+    "answer": "Wilt Chamberlain",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-expert-0156",
+    "question": "Who won the 2001 NBA Sixth Man of the Year Award?",
+    "options": ["Antoine Walker", "Aaron McKie", "Corliss Williamson", "Rodney Rogers"],
+    "answer": "Aaron McKie",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0158",
+    "question": "Which team did the San Antonio Spurs defeat in their first NBA Finals appearance (1999)?",
+    "options": ["Knicks", "Lakers", "Trail Blazers", "Pacers"],
+    "answer": "Knicks",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0159",
+    "question": "Which player holds the highest career playoff scoring average in NBA history?",
+    "options": ["Kevin Durant", "Michael Jordan", "LeBron James", "Allen Iverson"],
+    "answer": "Michael Jordan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nba-expert-0160",
+    "question": "Who was the first overall pick in the 1989 NBA Draft?",
+    "options": ["Danny Ferry", "Pervis Ellison", "Glenn Rice", "Shawn Kemp"],
+    "answer": "Pervis Ellison",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0161",
+    "question": "Who led the NBA in steals per game in the 2019-20 season?",
+    "options": ["Ben Simmons", "Kawhi Leonard", "Jimmy Butler", "Fred VanVleet"],
+    "answer": "Ben Simmons",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0162",
+    "question": "Which player made the most free throws in a single NBA season?",
+    "options": ["Jerry West", "James Harden", "Steph Curry", "Adrian Dantley"],
+    "answer": "Jerry West",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0164",
+    "question": "Who led the NBA in assists per game during the 2022-23 season?",
+    "options": ["Tyrese Haliburton", "Trae Young", "James Harden", "Chris Paul"],
+    "answer": "James Harden",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0165",
+    "question": "Who was the first undrafted player to make an NBA All-Star team twice?",
+    "options": ["John Starks", "Ben Wallace", "Udonis Haslem", "Brad Miller"],
+    "answer": "Ben Wallace",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0166",
+    "question": "Who was the youngest player to record a triple-double in NBA history?",
+    "options": ["Lonzo Ball", "Luka Doncic", "Markelle Fultz", "Josh Giddey"],
+    "answer": "Josh Giddey",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0169",
+    "question": "Who was the first player to win the NBA Finals MVP despite not starting a single game in the regular season?",
+    "options": ["Andre Iguodala", "Cedric Maxwell", "Wes Unseld", "Jerry West"],
+    "answer": "Andre Iguodala",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0170",
+    "question": "Who holds the NBA record for most consecutive double-doubles to start a season since the merger?",
+    "options": ["Kevin Love", "Domantas Sabonis", "Bill Russell", "Giannis Antetokounmpo"],
+    "answer": "Domantas Sabonis",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0171",
+    "question": "Who was the first overall pick in the 1985 NBA Draft, the first draft lottery year?",
+    "options": ["Patrick Ewing", "Wayman Tisdale", "Chris Mullin", "Xavier McDaniel"],
+    "answer": "Patrick Ewing",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0172",
+    "question": "Who was the first and only rookie to win NBA All-Star Game MVP?",
+    "options": ["Wilt Chamberlain", "Oscar Robertson", "Elgin Baylor", "Magic Johnson"],
+    "answer": "Magic Johnson",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0173",
+    "question": "Which player was named NBA Finals MVP in 1978?",
+    "options": ["Elvin Hayes", "Wes Unseld", "Bob Dandridge", "Rick Barry"],
+    "answer": "Wes Unseld",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0174",
+    "question": "Who did the Portland Trail Blazers draft ahead of Michael Jordan in 1984?",
+    "options": ["Sam Bowie", "Hakeem Olajuwon", "Charles Barkley", "John Stockton"],
+    "answer": "Sam Bowie",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0175",
+    "question": "Who was the last player to record a quadruple-double?",
+    "options": ["David Robinson", "Hakeem Olajuwon", "Nate Thurmond", "Alvin Robertson"],
+    "answer": "David Robinson",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0176",
+    "question": "Who won NBA Executive of the Year in 2019?",
+    "options": ["Masai Ujiri", "Jon Horst", "Bob Myers", "Daryl Morey"],
+    "answer": "Jon Horst",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0177",
+    "question": "Which player holds the record for most blocks in a single NBA game?",
+    "options": ["Manute Bol", "Mark Eaton", "Elmore Smith", "Dikembe Mutombo"],
+    "answer": "Elmore Smith",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0178",
+    "question": "Who did the Detroit Pistons select with the second overall pick in the 2003 NBA Draft?",
+    "options": ["Carmelo Anthony", "Darko Milicic", "Dwyane Wade", "Chris Bosh"],
+    "answer": "Darko Milicic",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0179",
+    "question": "Who led the NBA in assists per game for four consecutive seasons from 1983 to 1986?",
+    "options": ["Isiah Thomas", "Magic Johnson", "Norm Nixon", "Johnny Moore"],
+    "answer": "Magic Johnson",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0180",
+    "question": "Who won the NBA Most Improved Player Award in 2006?",
+    "options": ["Boris Diaw", "David West", "Kevin Martin", "Monta Ellis"],
+    "answer": "Boris Diaw",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0181",
+    "question": "Who was the first player to be drafted number one overall without playing college basketball or overseas professionally?",
+    "options": ["LeBron James", "Monta Ellis", "Kevin Martin", "Yao Ming"],
+    "answer": "Yao Ming",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0182",
+    "question": "Which coach won NBA Coach of the Year in 2023?",
+    "options": ["Joe Mazzulla", "Mike Brown", "Michael Malone", "Erik Spoelstra"],
+    "answer": "Mike Brown",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0183",
+    "question": "Who was the first player in NBA history to record at least 200 steals and 100 blocks in a single season?",
+    "options": ["Hakeem Olajuwon", "Scottie Pippen", "Michael Jordan", "David Robinson"],
+    "answer": "Michael Jordan",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0184",
+    "question": "Who was the first player to record a 30-30 game (30+ points and 30+ rebounds) since 2010?",
+    "options": ["Dwight Howard", "Kevin Love", "Andre Drummond", "DeMarcus Cousins"],
+    "answer": "Kevin Love",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0185",
+    "question": "Who was the MVP of the 1983 NBA Finals?",
+    "options": ["Julius Erving", "Moses Malone", "Maurice Cheeks", "Andrew Toney"],
+    "answer": "Moses Malone",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0186",
+    "question": "Who holds the NBA record for most free throws made in a single game without a miss?",
+    "options": ["James Harden", "Dirk Nowitzki", "Dominique Wilkins", "Dirk Nowitzki"],
+    "answer": "James Harden",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-01186",
+    "question": "Who had the NBA record for most free throws made in a single game without a miss before James Harden?",
+    "options": ["Steph Curry", "Dirk Nowitzki", "Dominique Wilkins", "Dirk Nowitzki"],
+    "answer": "Dominique Wilkins",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0188",
+    "question": "Who was the #1 overall pick in the 1980 NBA Draft?",
+    "options": ["Joe Barry Carroll", "Darrell Griffith", "Kevin McHale", "Andrew Toney"],
+    "answer": "Joe Barry Carroll",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0189",
+    "question": "Who won NBA Defensive Player of the Year in 2004?",
+    "options": ["Ben Wallace", "Ron Artest", "Tim Duncan", "Kevin Garnett"],
+    "answer": "Ron Artest",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0190",
+    "question": "Who was the first player to win All-Star MVP in back-to-back years?",
+    "options": ["Michael Jordan", "Bob Pettit", "Kobe Bryant", "LeBron James"],
+    "answer": "Bob Pettit",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0191",
+    "question": "Who won the NBA scoring title in the 2004-05 season?",
+    "options": ["Allen Iverson", "Kobe Bryant", "Shaquille O'Neal", "LeBron James"],
+    "answer": "Allen Iverson",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0192",
+    "question": "Who was the first international player to win NBA Sixth Man of the Year?",
+    "options": ["Manu Ginobili", "Toni Kukoc", "Detlef Schrempf", "Peja Stojakovic"],
+    "answer": "Detlef Schrempf",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0193",
+    "question": "Who holds the NBA record for most offensive rebounds in a single season?",
+    "options": ["Moses Malone", "Dennis Rodman", "Charles Barkley", "Hakeem Olajuwon"],
+    "answer": "Moses Malone",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0194",
+    "question": "Which coach won NBA Coach of the Year in 2018?",
+    "options": ["Brad Stevens", "Dwane Casey", "Quin Snyder", "Mike D'Antoni"],
+    "answer": "Dwane Casey",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0196",
+    "question": "Who was the first player in NBA history to achieve a 50-40-90 season (FG%, 3P%, FT%)?",
+    "options": ["Larry Bird", "Steve Nash", "Mark Price", "Dirk Nowitzki"],
+    "answer": "Larry Bird",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0197",
+    "question": "Who was named NBA Executive of the Year in 2020?",
+    "options": ["Rob Pelinka", "Lawrence Frank", "Sam Presti", "Masai Ujiri"],
+    "answer": "Lawrence Frank",
+    "difficulty": "expert"
+  },
+  {
+    "id": "nba-expert-0198",
+    "question": "Who was the first non-American born player to win NBA MVP?",
+    "options": ["Dirk Nowitzki", "Hakeem Olajuwon", "Giannis Antetokounmpo", "Steve Nash"],
+    "answer": "Hakeem Olajuwon",
+    "difficulty": "expert"
+  }
+]

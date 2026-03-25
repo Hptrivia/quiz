@@ -1,0 +1,1045 @@
+[
+  {
+    "id": "chem-easy-001",
+    "question": "What is the chemical symbol for water?",
+    "options": ["H2O", "O2", "CO2", "NaCl"],
+    "answer": "H2O",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-002",
+    "question": "What is the chemical symbol for oxygen?",
+    "options": ["O", "Ox", "Og", "Om"],
+    "answer": "O",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-003",
+    "question": "What is the chemical symbol for gold?",
+    "options": ["Ag", "Au", "Gd", "Go"],
+    "answer": "Au",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-004",
+    "question": "What is the chemical symbol for sodium?",
+    "options": ["So", "S", "Na", "N"],
+    "answer": "Na",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-005",
+    "question": "What is the pH of a neutral solution at room temperature?",
+    "options": ["0", "7", "10", "14"],
+    "answer": "7",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-006",
+    "question": "Which particle has a negative charge?",
+    "options": ["Proton", "Neutron", "Electron", "Nucleus"],
+    "answer": "Electron",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-007",
+    "question": "Which particle has no electric charge?",
+    "options": ["Electron", "Proton", "Neutron", "Ion"],
+    "answer": "Neutron",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-008",
+    "question": "What is the center of an atom called?",
+    "options": ["Shell", "Nucleus", "Orbital", "Ion"],
+    "answer": "Nucleus",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-009",
+    "question": "What is the atomic number of an element equal to?",
+    "options": ["Number of neutrons", "Number of protons", "Number of isotopes", "Mass number"],
+    "answer": "Number of protons",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-010",
+    "question": "Which state of matter has a definite volume but no definite shape?",
+    "options": ["Solid", "Liquid", "Gas", "Plasma"],
+    "answer": "Liquid",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-011",
+    "question": "Which state of matter fills the entire container?",
+    "options": ["Solid", "Liquid", "Gas", "Crystal"],
+    "answer": "Gas",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-012",
+    "question": "What do we call a substance made of only one kind of atom?",
+    "options": ["Compound", "Mixture", "Element", "Solution"],
+    "answer": "Element",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-013",
+    "question": "What do we call a substance made from two or more elements chemically bonded together?",
+    "options": ["Mixture", "Compound", "Alloy", "Isotope"],
+    "answer": "Compound",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-014",
+    "question": "Which of these is a mixture?",
+    "options": ["Oxygen", "Water", "Air", "Gold"],
+    "answer": "Air",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-015",
+    "question": "What is the chemical symbol for carbon?",
+    "options": ["Ca", "Co", "C", "Cr"],
+    "answer": "C",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-016",
+    "question": "What is the chemical symbol for iron?",
+    "options": ["Ir", "In", "Fe", "Fr"],
+    "answer": "Fe",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-017",
+    "question": "Which gas do plants use in photosynthesis?",
+    "options": ["Oxygen", "Hydrogen", "Carbon dioxide", "Nitrogen"],
+    "answer": "Carbon dioxide",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-018",
+    "question": "Which gas is most abundant in Earth's atmosphere?",
+    "options": ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"],
+    "answer": "Nitrogen",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-019",
+    "question": "What is the formula for table salt?",
+    "options": ["KCl", "NaCl", "CaCO3", "HCl"],
+    "answer": "NaCl",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-020",
+    "question": "Which of these is an acid?",
+    "options": ["NaOH", "HCl", "NH3", "NaCl"],
+    "answer": "HCl",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-021",
+    "question": "Which of these is a base?",
+    "options": ["H2SO4", "HCl", "NaOH", "CO2"],
+    "answer": "NaOH",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-022",
+    "question": "What color does blue litmus paper turn in an acid?",
+    "options": ["Green", "Blue", "Red", "Yellow"],
+    "answer": "Red",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-023",
+    "question": "What color does red litmus paper turn in a base?",
+    "options": ["Blue", "Purple", "Orange", "Red"],
+    "answer": "Blue",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-024",
+    "question": "What is the process of a liquid turning into a gas called?",
+    "options": ["Condensation", "Freezing", "Evaporation", "Melting"],
+    "answer": "Evaporation",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-025",
+    "question": "What is the process of a gas turning into a liquid called?",
+    "options": ["Evaporation", "Condensation", "Sublimation", "Boiling"],
+    "answer": "Condensation",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-026",
+    "question": "Which instrument is commonly used to measure mass in a lab?",
+    "options": ["Thermometer", "Balance", "Beaker", "Pipette"],
+    "answer": "Balance",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-027",
+    "question": "Which instrument is commonly used to measure temperature?",
+    "options": ["Burette", "Thermometer", "Flask", "Watch glass"],
+    "answer": "Thermometer",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-028",
+    "question": "What is the smallest unit of an element that retains its properties?",
+    "options": ["Molecule", "Compound", "Atom", "Mixture"],
+    "answer": "Atom",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-029",
+    "question": "A substance with pH 3 is best described as what?",
+    "options": ["Neutral", "Acidic", "Basic", "Salty"],
+    "answer": "Acidic",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-030",
+    "question": "A substance with pH 11 is best described as what?",
+    "options": ["Acidic", "Neutral", "Basic", "Metallic"],
+    "answer": "Basic",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-031",
+    "question": "What is the formula for carbon dioxide?",
+    "options": ["CO", "CO2", "C2O", "CaO"],
+    "answer": "CO2",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-032",
+    "question": "What is the formula for ammonia?",
+    "options": ["NH3", "NO2", "N2H4", "NH4"],
+    "answer": "NH3",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-033",
+    "question": "Which of these is a noble gas?",
+    "options": ["Oxygen", "Hydrogen", "Helium", "Nitrogen"],
+    "answer": "Helium",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-034",
+    "question": "Which group of elements is known for being very unreactive?",
+    "options": ["Alkali metals", "Halogens", "Noble gases", "Transition metals"],
+    "answer": "Noble gases",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-035",
+    "question": "Which of these is a metal?",
+    "options": ["Oxygen", "Sulfur", "Copper", "Chlorine"],
+    "answer": "Copper",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-036",
+    "question": "Which of these is a nonmetal?",
+    "options": ["Iron", "Sodium", "Chlorine", "Calcium"],
+    "answer": "Chlorine",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-037",
+    "question": "What type of bond involves the sharing of electrons?",
+    "options": ["Ionic bond", "Covalent bond", "Metallic bond", "Hydrogen bond"],
+    "answer": "Covalent bond",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-038",
+    "question": "What type of bond usually forms between a metal and a nonmetal?",
+    "options": ["Covalent bond", "Hydrogen bond", "Ionic bond", "Polar bond"],
+    "answer": "Ionic bond",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-039",
+    "question": "What is the chemical symbol for potassium?",
+    "options": ["P", "Po", "Pt", "K"],
+    "answer": "K",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-040",
+    "question": "What is the chemical symbol for silver?",
+    "options": ["Si", "Ag", "Sv", "Sr"],
+    "answer": "Ag",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-041",
+    "question": "Which of these is an example of a physical change?",
+    "options": ["Burning paper", "Rusting iron", "Melting ice", "Cooking an egg"],
+    "answer": "Melting ice",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-042",
+    "question": "Which of these is an example of a chemical change?",
+    "options": ["Boiling water", "Breaking glass", "Rusting iron", "Cutting paper"],
+    "answer": "Rusting iron",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-043",
+    "question": "What is the main solvent in most laboratory solutions?",
+    "options": ["Oil", "Alcohol", "Water", "Mercury"],
+    "answer": "Water",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-044",
+    "question": "What is the formula for methane?",
+    "options": ["CH4", "C2H6", "CO2", "H2O"],
+    "answer": "CH4",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-045",
+    "question": "What is the formula for sulfuric acid?",
+    "options": ["HNO3", "H2SO4", "HCl", "CH3COOH"],
+    "answer": "H2SO4",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-046",
+    "question": "Which element is represented by the symbol N?",
+    "options": ["Neon", "Nickel", "Nitrogen", "Niobium"],
+    "answer": "Nitrogen",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-047",
+    "question": "Which element is represented by the symbol Ca?",
+    "options": ["Carbon", "Calcium", "Cadmium", "Chlorine"],
+    "answer": "Calcium",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-048",
+    "question": "What kind of substance speeds up a chemical reaction without being used up?",
+    "options": ["Reactant", "Catalyst", "Solvent", "Indicator"],
+    "answer": "Catalyst",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-049",
+    "question": "What do you call the horizontal rows of the periodic table?",
+    "options": ["Groups", "Series", "Periods", "Blocks"],
+    "answer": "Periods",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-easy-050",
+    "question": "What do you call the vertical columns of the periodic table?",
+    "options": ["Periods", "Rows", "Groups", "Lines"],
+    "answer": "Groups",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chem-medium-001",
+    "question": "What is the mass number of an atom equal to?",
+    "options": ["Protons only", "Neutrons only", "Protons plus neutrons", "Electrons plus protons"],
+    "answer": "Protons plus neutrons",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-002",
+    "question": "Atoms of the same element with different numbers of neutrons are called what?",
+    "options": ["Ions", "Isotopes", "Molecules", "Allotropes"],
+    "answer": "Isotopes",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-003",
+    "question": "What charge does a proton carry?",
+    "options": ["Negative", "Neutral", "Positive", "Variable"],
+    "answer": "Positive",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-004",
+    "question": "How many valence electrons does oxygen typically have?",
+    "options": ["2", "4", "6", "8"],
+    "answer": "6",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-005",
+    "question": "How many valence electrons does carbon typically have?",
+    "options": ["2", "4", "6", "8"],
+    "answer": "4",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-006",
+    "question": "Which subatomic particle determines the identity of an element?",
+    "options": ["Electron", "Neutron", "Proton", "Photon"],
+    "answer": "Proton",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-007",
+    "question": "Which element is in Group 1 of the periodic table?",
+    "options": ["Calcium", "Sodium", "Chlorine", "Neon"],
+    "answer": "Sodium",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-008",
+    "question": "Which element is in Group 17 of the periodic table?",
+    "options": ["Argon", "Chlorine", "Sodium", "Magnesium"],
+    "answer": "Chlorine",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-medium-009",
+    "question": "What type of reaction combines two or more substances into one product?",
+    "options": ["Decomposition", "Single replacement", "Synthesis", "Combustion"],
+    "answer": "Synthesis",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-010",
+    "question": "What type of reaction breaks one compound into simpler substances?",
+    "options": ["Synthesis", "Decomposition", "Neutralization", "Precipitation"],
+    "answer": "Decomposition",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-011",
+    "question": "What are the products of an acid-base neutralization reaction?",
+    "options": ["Salt and water", "Metal and water", "Gas and metal", "Acid and salt"],
+    "answer": "Salt and water",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-012",
+    "question": "Which gas is produced when an acid reacts with a carbonate?",
+    "options": ["Oxygen", "Hydrogen", "Carbon dioxide", "Nitrogen"],
+    "answer": "Carbon dioxide",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-013",
+    "question": "Which gas is commonly produced when a metal reacts with an acid?",
+    "options": ["Carbon dioxide", "Hydrogen", "Oxygen", "Chlorine"],
+    "answer": "Hydrogen",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-014",
+    "question": "What is the name of the process used to separate a dissolved solid from a liquid by heating?",
+    "options": ["Filtration", "Distillation", "Evaporation", "Chromatography"],
+    "answer": "Evaporation",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-015",
+    "question": "What method is best for separating sand from water?",
+    "options": ["Distillation", "Filtration", "Chromatography", "Electrolysis"],
+    "answer": "Filtration",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-016",
+    "question": "What method is used to separate dyes in ink?",
+    "options": ["Filtration", "Crystallization", "Chromatography", "Sedimentation"],
+    "answer": "Chromatography",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-017",
+    "question": "What process uses electricity to break down a compound?",
+    "options": ["Combustion", "Electrolysis", "Neutralization", "Polymerization"],
+    "answer": "Electrolysis",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-018",
+    "question": "What is the common name for dihydrogen monoxide?",
+    "options": ["Hydrogen peroxide", "Water", "Hydrochloric acid", "Ozone"],
+    "answer": "Water",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-019",
+    "question": "Which type of bond forms in O2?",
+    "options": ["Ionic bond", "Covalent bond", "Metallic bond", "Coordinate bond"],
+    "answer": "Covalent bond",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-020",
+    "question": "Which type of bonding is found in metals like copper?",
+    "options": ["Ionic", "Covalent", "Metallic", "Hydrogen"],
+    "answer": "Metallic",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-021",
+    "question": "What is the formula of calcium carbonate?",
+    "options": ["CaO", "CaCO3", "CaCl2", "CaSO4"],
+    "answer": "CaCO3",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-022",
+    "question": "What is the formula of nitric acid?",
+    "options": ["HNO2", "HNO3", "H2SO4", "HClO"],
+    "answer": "HNO3",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-023",
+    "question": "Which ion has a 2+ charge?",
+    "options": ["Na+", "Ca2+", "Cl-", "OH-"],
+    "answer": "Ca2+",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-024",
+    "question": "Which ion is negatively charged?",
+    "options": ["Cation", "Anion", "Atom", "Isotope"],
+    "answer": "Anion",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-025",
+    "question": "Which ion is positively charged?",
+    "options": ["Anion", "Electron", "Cation", "Radical"],
+    "answer": "Cation",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-026",
+    "question": "Which of these compounds is likely to be ionic?",
+    "options": ["CO2", "NaCl", "CH4", "H2O"],
+    "answer": "NaCl",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-027",
+    "question": "Which of these compounds is covalent?",
+    "options": ["MgO", "KBr", "H2O", "Na2O"],
+    "answer": "H2O",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-028",
+    "question": "What is the relative formula mass of H2O?",
+    "options": ["16", "17", "18", "20"],
+    "answer": "18",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-029",
+    "question": "What is the relative formula mass of CO2?",
+    "options": ["28", "32", "44", "48"],
+    "answer": "44",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-030",
+    "question": "Which element has the symbol Mg?",
+    "options": ["Manganese", "Magnesium", "Mercury", "Molybdenum"],
+    "answer": "Magnesium",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-031",
+    "question": "Which element has the symbol Al?",
+    "options": ["Argon", "Aluminum", "Actinium", "Americium"],
+    "answer": "Aluminum",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-032",
+    "question": "What happens to the rate of most reactions when temperature increases?",
+    "options": ["It decreases", "It stays the same", "It usually increases", "It stops completely"],
+    "answer": "It usually increases",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-033",
+    "question": "What effect does a catalyst have on activation energy?",
+    "options": ["Raises it", "Removes it completely", "Lowers it", "Does not affect it"],
+    "answer": "Lowers it",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-034",
+    "question": "Increasing the concentration of reactants usually has what effect on reaction rate?",
+    "options": ["Decreases it", "No effect", "Usually increases it", "Stops the reaction"],
+    "answer": "Usually increases it",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-035",
+    "question": "Which metal is liquid at room temperature?",
+    "options": ["Iron", "Mercury", "Sodium", "Aluminum"],
+    "answer": "Mercury",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-036",
+    "question": "Which of these is a strong acid commonly found in labs?",
+    "options": ["Acetic acid", "Citric acid", "Hydrochloric acid", "Carbonic acid"],
+    "answer": "Hydrochloric acid",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-037",
+    "question": "Which of these is an alkali metal?",
+    "options": ["Calcium", "Sodium", "Aluminum", "Zinc"],
+    "answer": "Sodium",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-038",
+    "question": "Which of these is a halogen?",
+    "options": ["Helium", "Fluorine", "Lithium", "Magnesium"],
+    "answer": "Fluorine",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-039",
+    "question": "What is the formula for calcium hydroxide?",
+    "options": ["CaOH", "Ca(OH)2", "Ca2OH", "CaH2O2"],
+    "answer": "Ca(OH)2",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-040",
+    "question": "What is the formula for sodium carbonate?",
+    "options": ["NaCO3", "Na2CO3", "NaHCO3", "Na2C2O3"],
+    "answer": "Na2CO3",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-041",
+    "question": "What is the formula for sodium bicarbonate?",
+    "options": ["Na2CO3", "NaOH", "NaHCO3", "NaCl"],
+    "answer": "NaHCO3",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-042",
+    "question": "Which law states that matter is neither created nor destroyed in a chemical reaction?",
+    "options": ["Boyle's law", "Charles's law", "Law of conservation of mass", "Avogadro's law"],
+    "answer": "Law of conservation of mass",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-043",
+    "question": "What is the coefficient of O2 when the equation 2H2 + O2 -> 2H2O is balanced?",
+    "options": ["1", "2", "3", "4"],
+    "answer": "1",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-044",
+    "question": "Which element is essential for the formation of organic compounds?",
+    "options": ["Iron", "Carbon", "Sodium", "Calcium"],
+    "answer": "Carbon",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-045",
+    "question": "What is the term for substances that have the same molecular formula but different structures?",
+    "options": ["Isotopes", "Ions", "Isomers", "Alloys"],
+    "answer": "Isomers",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-046",
+    "question": "What is the name of the simplest hydrocarbon?",
+    "options": ["Ethane", "Methane", "Propane", "Butane"],
+    "answer": "Methane",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-047",
+    "question": "Which of these is an indicator often used in acid-base titrations?",
+    "options": ["Copper sulfate", "Phenolphthalein", "Sand", "Glucose"],
+    "answer": "Phenolphthalein",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-048",
+    "question": "What is the name of the horizontal arrangement of elements by increasing atomic number?",
+    "options": ["Periodic table", "Electrolytic series", "Mole chart", "Orbital grid"],
+    "answer": "Periodic table",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-049",
+    "question": "Which one is a diatomic element in its natural form?",
+    "options": ["Neon", "Magnesium", "Hydrogen", "Carbon"],
+    "answer": "Hydrogen",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-medium-050",
+    "question": "Which of these formulas represents a hydrocarbon?",
+    "options": ["NaCl", "CH4", "H2SO4", "NH3"],
+    "answer": "CH4",
+    "difficulty": "medium"
+  },
+  {
+    "id": "chem-hard-001",
+    "question": "What is the molar mass of NaCl?",
+    "options": ["48.5 g/mol", "58.5 g/mol", "63.5 g/mol", "74.5 g/mol"],
+    "answer": "58.5 g/mol",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-002",
+    "question": "How many moles are in 36 g of water?",
+    "options": ["1 mol", "2 mol", "3 mol", "4 mol"],
+    "answer": "2 mol",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-003",
+    "question": "How many grams are in 0.5 moles of CO2?",
+    "options": ["11 g", "22 g", "44 g", "88 g"],
+    "answer": "22 g",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-004",
+    "question": "What is Avogadro's number closest to?",
+    "options": ["6.02 × 10^20", "6.02 × 10^21", "6.02 × 10^23", "6.02 × 10^25"],
+    "answer": "6.02 × 10^23",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-005",
+    "question": "What is the oxidation state of oxygen in most compounds?",
+    "options": ["-2", "-1", "+1", "+2"],
+    "answer": "-2",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-006",
+    "question": "What is the oxidation state of hydrogen in most compounds?",
+    "options": ["-1", "0", "+1", "+2"],
+    "answer": "+1",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-007",
+    "question": "What is the oxidation state of sulfur in H2SO4?",
+    "options": ["+4", "+5", "+6", "+7"],
+    "answer": "+6",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-008",
+    "question": "What is the oxidation state of carbon in CO2?",
+    "options": ["+2", "+3", "+4", "+6"],
+    "answer": "+4",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-009",
+    "question": "What is the oxidation state of nitrogen in NH3?",
+    "options": ["-3", "-1", "+1", "+3"],
+    "answer": "-3",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-010",
+    "question": "What is the oxidation state of chlorine in NaClO?",
+    "options": ["-1", "0", "+1", "+3"],
+    "answer": "+1",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-011",
+    "question": "What volume does 1 mole of an ideal gas occupy at STP?",
+    "options": ["11.2 L", "22.4 L", "24.0 L", "44.8 L"],
+    "answer": "22.4 L",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-012",
+    "question": "What is the empirical formula of a compound that is 40.0% carbon, 6.7% hydrogen, and 53.3% oxygen?",
+    "options": ["CH2O", "C2H4O2", "CHO", "CHO2"],
+    "answer": "CH2O",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-013",
+    "question": "Which electron shell can hold a maximum of 8 electrons?",
+    "options": ["First shell only", "Second shell", "Third shell only", "Fourth shell"],
+    "answer": "Second shell",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-014",
+    "question": "What is the electron configuration of sodium?",
+    "options": ["2,8", "2,8,1", "2,8,2", "2,7,2"],
+    "answer": "2,8,1",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-015",
+    "question": "What is the electron configuration of magnesium?",
+    "options": ["2,8,1", "2,8,2", "2,7,3", "2,6,4"],
+    "answer": "2,8,2",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-016",
+    "question": "Which statement best describes an exothermic reaction?",
+    "options": ["It absorbs heat", "It releases heat", "It has no energy change", "It stops at equilibrium"],
+    "answer": "It releases heat",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-017",
+    "question": "Which statement best describes an endothermic reaction?",
+    "options": ["It releases heat", "It absorbs heat", "It forms water only", "It always involves oxygen"],
+    "answer": "It absorbs heat",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-018",
+    "question": "What is the pH of a solution with hydrogen ion concentration 1 × 10^-4 mol/L?",
+    "options": ["2", "4", "7", "10"],
+    "answer": "4",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-019",
+    "question": "What is the pOH of a solution with pH 3?",
+    "options": ["3", "7", "10", "11"],
+    "answer": "11",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-020",
+    "question": "What is the concentration of a solution containing 2 moles of solute in 0.5 L of solution?",
+    "options": ["0.25 M", "1 M", "2 M", "4 M"],
+    "answer": "4 M",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-021",
+    "question": "How many moles of NaOH are needed to neutralize 1 mole of H2SO4 completely?",
+    "options": ["0.5 mol", "1 mol", "2 mol", "4 mol"],
+    "answer": "2 mol",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-022",
+    "question": "In the balanced equation 2Al + 3Cl2 -> 2AlCl3, how many moles of chlorine gas react with 2 moles of aluminum?",
+    "options": ["1 mole", "2 moles", "3 moles", "4 moles"],
+    "answer": "3 moles",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-023",
+    "question": "What is the percentage by mass of oxygen in H2O?",
+    "options": ["11.1%", "44.4%", "88.9%", "94.1%"],
+    "answer": "88.9%",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-024",
+    "question": "What is the percentage by mass of carbon in CO2?",
+    "options": ["12/44 ≈ 27.3%", "16/44 ≈ 36.4%", "28/44 ≈ 63.6%", "32/44 ≈ 72.7%"],
+    "answer": "12/44 ≈ 27.3%",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-025",
+    "question": "What kind of reaction is CH4 + 2O2 -> CO2 + 2H2O?",
+    "options": ["Neutralization", "Combustion", "Decomposition", "Single displacement"],
+    "answer": "Combustion",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-026",
+    "question": "Which particle is transferred during ionic bonding?",
+    "options": ["Protons", "Neutrons", "Electrons", "Nuclei"],
+    "answer": "Electrons",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-027",
+    "question": "Why do ionic compounds generally conduct electricity when molten?",
+    "options": ["Their atoms disappear", "Their ions can move freely", "They become gases", "Their protons flow"],
+    "answer": "Their ions can move freely",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-028",
+    "question": "Which intermolecular force is strongest among these?",
+    "options": ["London dispersion", "Dipole-dipole", "Hydrogen bonding", "Metallic bonding"],
+    "answer": "Hydrogen bonding",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-029",
+    "question": "Which molecule can form hydrogen bonds between its molecules?",
+    "options": ["CH4", "CO2", "NH3", "H2"],
+    "answer": "NH3",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-030",
+    "question": "What shape does a methane molecule have?",
+    "options": ["Linear", "Bent", "Trigonal planar", "Tetrahedral"],
+    "answer": "Tetrahedral",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-031",
+    "question": "What shape does a carbon dioxide molecule have?",
+    "options": ["Bent", "Linear", "Trigonal pyramidal", "Tetrahedral"],
+    "answer": "Linear",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-032",
+    "question": "What is the approximate bond angle in methane?",
+    "options": ["90°", "104.5°", "109.5°", "120°"],
+    "answer": "109.5°",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-033",
+    "question": "Which law describes the inverse relationship between pressure and volume at constant temperature?",
+    "options": ["Charles's law", "Boyle's law", "Gay-Lussac's law", "Avogadro's law"],
+    "answer": "Boyle's law",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-034",
+    "question": "Which law states that volume is directly proportional to temperature at constant pressure?",
+    "options": ["Boyle's law", "Charles's law", "Dalton's law", "Hess's law"],
+    "answer": "Charles's law",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-035",
+    "question": "What is the main ore of aluminum?",
+    "options": ["Hematite", "Bauxite", "Galena", "Malachite"],
+    "answer": "Bauxite",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-036",
+    "question": "Which process is used to extract aluminum from aluminum oxide?",
+    "options": ["Distillation", "Electrolysis", "Filtration", "Neutralization"],
+    "answer": "Electrolysis",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-037",
+    "question": "Which process is used to make ammonia industrially?",
+    "options": ["Contact process", "Haber process", "Hall-Héroult process", "Ostwald process"],
+    "answer": "Haber process",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-038",
+    "question": "Which process is used to make sulfuric acid industrially?",
+    "options": ["Haber process", "Contact process", "Fractional distillation", "Cracking"],
+    "answer": "Contact process",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-039",
+    "question": "What catalyst is commonly used in the Haber process?",
+    "options": ["Nickel", "Iron", "Platinum", "Copper"],
+    "answer": "Iron",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-040",
+    "question": "Which catalyst is used in the Contact process?",
+    "options": ["Vanadium(V) oxide", "Iron", "Copper", "Zinc oxide"],
+    "answer": "Vanadium(V) oxide",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-041",
+    "question": "What is the molecular formula of ethene?",
+    "options": ["C2H4", "C2H6", "CH4", "C3H6"],
+    "answer": "C2H4",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-042",
+    "question": "What is the molecular formula of ethanol?",
+    "options": ["CH3OH", "C2H5OH", "C3H7OH", "C2H4O2"],
+    "answer": "C2H5OH",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-043",
+    "question": "Which functional group is found in alcohols?",
+    "options": ["-COOH", "-OH", "-NH2", "-CHO"],
+    "answer": "-OH",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-044",
+    "question": "Which functional group is found in carboxylic acids?",
+    "options": ["-OH", "-COOH", "-NH2", "-C=C-"],
+    "answer": "-COOH",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-045",
+    "question": "What is the name of the reaction in which small molecules join to form a polymer?",
+    "options": ["Neutralization", "Polymerization", "Hydrolysis", "Cracking"],
+    "answer": "Polymerization",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-046",
+    "question": "What type of polymerization occurs when ethene forms poly(ethene)?",
+    "options": ["Condensation polymerization", "Addition polymerization", "Electrolysis", "Hydrogenation"],
+    "answer": "Addition polymerization",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-048",
+    "question": "According to Le Chatelier's principle, increasing pressure favors the side with what in a gaseous equilibrium?",
+    "options": ["More moles of gas", "Fewer moles of gas", "More solids", "More catalysts"],
+    "answer": "Fewer moles of gas",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-049",
+    "question": "Which substance is reduced in the reaction CuO + H2 -> Cu + H2O?",
+    "options": ["H2", "CuO", "H2O", "Cu"],
+    "answer": "CuO",
+    "difficulty": "hard"
+  },
+  {
+    "id": "chem-hard-050",
+    "question": "Which substance is oxidized in the reaction CuO + H2 -> Cu + H2O?",
+    "options": ["CuO", "Cu", "H2", "H2O"],
+    "answer": "H2",
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,856 @@
+[
+  {
+    "id": "buffy-001",
+    "question": "What is Buffy’s last name?",
+    "options": ["Summers", "Rosenberg", "Chase", "Jenkins"],
+    "answer": "Summers",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-002",
+    "question": "Which actress plays Buffy Summers?",
+    "options": ["Sarah Michelle Gellar", "Alyson Hannigan", "Charisma Carpenter", "Eliza Dushku"],
+    "answer": "Sarah Michelle Gellar",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-003",
+    "question": "What town does Buffy move to at the start of the series?",
+    "options": ["Sunnydale", "Smallville", "Stars Hollow", "Hill Valley"],
+    "answer": "Sunnydale",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-004",
+    "question": "What is Buffy chosen to be?",
+    "options": ["The Slayer", "A Watcher", "A witch", "A demon hunter priestess"],
+    "answer": "The Slayer",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-005",
+    "question": "Who is Buffy’s primary Watcher?",
+    "options": ["Rupert Giles", "Wesley Wyndam-Pryce", "Angel", "Xander Harris"],
+    "answer": "Rupert Giles",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-007",
+    "question": "Which character is Buffy’s best female friend?",
+    "options": ["Willow Rosenberg", "Cordelia Chase", "Anya Jenkins", "Faith Lehane"],
+    "answer": "Willow Rosenberg",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-010",
+    "question": "What supernatural hotspot is Sunnydale built on?",
+    "options": ["A Hellmouth", "A portal stone", "A dragon tomb", "A cursed well"],
+    "answer": "A Hellmouth",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-011",
+    "question": "What school does Buffy attend at the start of the series?",
+    "options": ["Sunnydale High", "Sunnydale Hills", "Hemery High", "Beacon Hills High"],
+    "answer": "Sunnydale High",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-011",
+    "question": "What school was Buffy expelled from?",
+    "options": ["Sunnydale High", "Sunnydale Hills", "Hemery High", "Beacon Hills High"],
+    "answer": "Hemery High",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-013",
+    "question": "Which actress plays Willow?",
+    "options": ["Alyson Hannigan", "Emma Caulfield", "Amber Benson", "Michelle Trachtenberg"],
+    "answer": "Alyson Hannigan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-014",
+    "question": "Which actor plays Xander?",
+    "options": ["Nicholas Brendon", "Seth Green", "James Marsters", "David Boreanaz"],
+    "answer": "Nicholas Brendon",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-015",
+    "question": "Which actress plays Cordelia Chase?",
+    "options": ["Charisma Carpenter", "Sarah Michelle Gellar", "Alyson Hannigan", "Amber Benson"],
+    "answer": "Charisma Carpenter",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-016",
+    "question": "What creature is Oz?",
+    "options": ["Werewolf", "Vampire", "Warlock", "Demon hybrid"],
+    "answer": "Werewolf",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-020",
+    "question": "Which actress plays Dawn Summers?",
+    "options": ["Michelle Trachtenberg", "Amber Benson", "Eliza Dushku", "Emma Caulfield"],
+    "answer": "Michelle Trachtenberg",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-026",
+    "question": "Who is Buffy’s boyfriend in Season 4?",
+    "options": ["Riley Finn", "Angel", "Spike", "Parker Abrams"],
+    "answer": "Riley Finn",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-027",
+    "question": "What military-linked group appears in Season 4?",
+    "options": ["The Initiative", "The Circle", "The Order of Aurelius", "Wolfram & Hart"],
+    "answer": "The Initiative",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-028",
+    "question": "What is Riley’s profession in Season 4?",
+    "options": ["Soldier", "Watcher", "Librarian", "Lawyer"],
+    "answer": "Soldier",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-029",
+    "question": "Who is the principal of Sunnydale High for much of the early series?",
+    "options": ["Principal Snyder", "Principal Wood", "Principal Flutie", "Principal Travers"],
+    "answer": "Principal Snyder",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-031",
+    "question": "Which school subject is Jenny Calendar associated with?",
+    "options": ["Computer science", "History", "Chemistry", "Art"],
+    "answer": "Computer science",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-033",
+    "question": "What nickname does Giles have from his younger days?",
+    "options": ["Ripper", "Crusher", "Watcher Boy", "Dark Rupert"],
+    "answer": "Ripper",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-034",
+    "question": "Which vampire couple appears early in the series as major threats?",
+    "options": ["Spike and Drusilla", "Angel and Darla", "Oz and Veruca", "Riley and Faith"],
+    "answer": "Spike and Drusilla",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-038",
+    "question": "What is the name of Buffy’s college?",
+    "options": ["UC Sunnydale", "Sunnydale State", "California Western", "Sunnydale College"],
+    "answer": "UC Sunnydale",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-039",
+    "question": "Who is Buffy’s roommate at college?",
+    "options": ["Kathy Newman", "Tara Maclay", "Anya Jenkins", "Faith Lehane"],
+    "answer": "Kathy Newman",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-040",
+    "question": "Which villain is a hell god?",
+    "options": ["Glory", "Dark Willow", "Drusilla", "Harmony"],
+    "answer": "Glory",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-041",
+    "question": "What is Glory searching for in Season 5?",
+    "options": ["The Key", "The Scythe", "The Judge", "The Gem of Amara"],
+    "answer": "The Key",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-048",
+    "question": "What is the vampire-slaying group of Buffy’s friends commonly called?",
+    "options": ["The Scooby Gang", "The Watchers", "The Initiative", "The Chosen"],
+    "answer": "The Scooby Gang",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-049",
+    "question": "Which character becomes principal of the rebuilt Sunnydale High in Season 7?",
+    "options": ["Robin", "Snyder", "Giles", "Wesley"],
+    "answer": "Robin",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-easy-0045",
+    "question": "Which creator developed Buffy the Vampire Slayer for television?",
+    "options": [
+      "Joss Whedon",
+      "Chris Carter",
+      "J. J. Abrams",
+      "Russell T Davies"
+    ],
+    "answer": "Joss Whedon",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-easy-0030",
+    "question": "Which villain is the ancient vampire that Buffy faces as the Season 1 Big Bad?",
+    "options": [
+      "The Master",
+      "Glory",
+      "The Mayor",
+      "Adam"
+    ],
+    "answer": "The Master",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-045",
+    "question": "What is the name of Xander's first real girlfriend?",
+    "options": ["Willow", "Cordelia", "Anya", "Buffy"],
+    "answer": "Cordelia",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-084",
+    "question": "What is the name of the robot Buffy that Spike commissions?",
+    "options": ["Buffybot", "Slayer-bot", "The Double", "Robot Summers"],
+    "answer": "Buffybot",
+    "difficulty": "medium"
+  },
+  {
+    "id": "buffy-085",
+    "question": "Who is the 'Watcher' that replaces Giles in Season 3?",
+    "options": ["Wesley Wyndam-Pryce", "Quentin Travers", "Gwendolyn Post", "Robson"],
+    "answer": "Wesley Wyndam-Pryce",
+    "difficulty": "medium"
+  },
+  {
+    "id": "buffy-034",
+    "question": "What is Anya's greatest fear?",
+    "options": ["Spiders", "Rabbits", "Vampires", "Clowns"],
+    "answer": "Rabbits",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-076",
+    "question": "Who was the 'Big Bad' of Season 4?",
+    "options": ["Adam", "The Mayor", "Glory", "The First"],
+    "answer": "Adam",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-095",
+    "question": "Which actor played the character Angel?",
+    "options": ["James Marsters", "David Boreanaz", "Nicholas Brendon", "Seth Green"],
+    "answer": "David Boreanaz",
+    "difficulty": "medium"
+  },
+  {
+    "id": "buffy-091",
+    "question": "What is the name of the artifact used to restore Angel's soul?",
+    "options": ["Orb of Thesulah", "Amulet of Sunulah", "Orb of Alphestus", "Dagger of Melaka Fray"],
+    "answer": "Orb of Thesulah",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-033",
+    "question": "What is the title of the famous musical episode?",
+    "options": ["Hush", "The Body", "Once More, with Feeling", "Restless"],
+    "answer": "Once More, with Feeling",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-025",
+    "question": "What is the name of the magic shop Giles owns in later seasons?",
+    "options": ["The Magic Box", "Witchcraft & More", "The Occult Shop", "Sunnydale Spells"],
+    "answer": "The Magic Box",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-027",
+    "question": "What is the name of Buffy's favorite stake?",
+    "options": ["Mr. Pointy", "Staky", "Woody", "The Spike"],
+    "answer": "Mr. Pointy",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-022",
+    "question": "What is the name of the school librarian?",
+    "options": ["Rupert Giles", "Principal Snyder", "Wesley Wyndam-Pryce", "Ethan Rayne"],
+    "answer": "Rupert Giles",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-126",
+    "question": "What is the name of the high school teacher who was a praying mantis?",
+    "options": ["Ms. French", "Ms. Calendar", "Ms. Porter", "Ms. Edith"],
+    "answer": "Ms. French",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-113",
+    "question": "What was the name of the order that created the First Slayer?",
+    "options": ["The Shadow Men", "The Watchers Council", "The Guardians", "The Old Ones"],
+    "answer": "The Shadow Men",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-110",
+    "question": "What is the name of the high school swim coach who transformed his team into monsters?",
+    "options": ["Coach Marin", "Coach Snyder", "Coach Miller", "Coach Flutie"],
+    "answer": "Coach Marin",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-108",
+    "question": "What is the name of the demon who sired the Master?",
+    "options": ["Archeus", "Maloker", "The First", "Kakistos"],
+    "answer": "Archeus",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-107",
+    "question": "What is the specific address of the Summers' house?",
+    "options": ["1630 Revello Drive", "1247 Revello Drive", "1630 Crestview Court", "1247 Sunnydale Lane"],
+    "answer": "1630 Revello Drive",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-023",
+    "question": "Which vampire is known for his bleached blonde hair and leather duster?",
+    "options": ["Angel", "The Master", "Spike", "Dalton"],
+    "answer": "Spike",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-019",
+    "question": "What is the name of the British organization that oversees Slayers?",
+    "options": ["The Slayer Squad", "The Watchers' Council", "The British Museum", "The Ministry of Slaying"],
+    "answer": "The Watchers' Council",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-021",
+    "question": "How many times does Buffy die in the show?",
+    "options": ["1", "2", "3", "4"],
+    "answer": "2",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-017",
+    "question": "What animal does Oz turn into?",
+    "options": ["Bear", "Wolf", "Tiger", "Bat"],
+    "answer": "Wolf",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-014",
+    "question": "In the series finale, where is the final battle located?",
+    "options": ["The High School Gym", "The Bronze", "The Hellmouth", "The Magic Box"],
+    "answer": "The Hellmouth",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-easy-0049",
+    "question": "How many total episodes of Buffy were produced?",
+    "options": [
+      "144",
+      "100",
+      "132",
+      "150"
+    ],
+    "answer": "144",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-013",
+    "question": "What is the name of Buffy's mother?",
+    "options": ["Sheila", "Joyce", "Martha", "Anne"],
+    "answer": "Joyce",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-medium-0097",
+    "question": "Which demon grants a wish that creates the alternate ‘Wishverse’ where Buffy never came?",
+    "options": [
+      "Anyanka",
+      "D’Hoffryn",
+      "Halfrek",
+      "Sweet"
+    ],
+    "answer": "Anyanka",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-medium-0086",
+    "question": "What is the name of the covert vampire clan led by The Master in Season 1?",
+    "options": [
+      "The Order of Aurelius",
+      "The Order of Taraka",
+      "The Gentlemen",
+      "The Bringers"
+    ],
+    "answer": "The Order of Aurelius",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-067",
+    "question": "What did Angel give Buffy for her 17th birthday?",
+    "options": ["A Claddagh locket", "A Claddagh ring", "A Claddagh cross", "A stake"],
+    "answer": "A Claddagh ring",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-063",
+    "question": "Which member of 'The Trio' killed Tara?",
+    "options": ["Warren", "Andrew", "Jonathan", "Tucker"],
+    "answer": "Warren",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-057",
+    "question": "What is the name of the vengeance demon who originally granted Anya her powers?",
+    "options": ["Halfrek", "D'Hoffryn", "Loa", "Makar"],
+    "answer": "D'Hoffryn",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-056",
+    "question": "What did Xander dress as for Halloween in Season 2?",
+    "options": ["A soldier", "A pirate", "A ghost", "A vampire"],
+    "answer": "A soldier",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-054",
+    "question": "What did Buffy score on her SATs?",
+    "options": ["1430", "1200", "1580", "1050"],
+    "answer": "1430",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-052",
+    "question": "What is Buffy's middle name?",
+    "options": ["Joyce", "Anne", "Marie", "Michelle"],
+    "answer": "Anne",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-medium-0082",
+    "question": "What is the title of the final episode of Buffy the Vampire Slayer?",
+    "options": [
+      "Chosen",
+      "The Gift",
+      "The End",
+      "Last Slayer"
+    ],
+    "answer": "Chosen",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-medium-0073",
+    "question": "Who sacrifices himself in the Hellmouth to close it for good in the finale?",
+    "options": [
+      "Spike",
+      "Angel",
+      "Giles",
+      "Xander"
+    ],
+    "answer": "Spike",
+    "difficulty": "medium"
+  },
+  {
+    "id": "buffy-medium-0062",
+    "question": "What mystical energy is Dawn revealed to be in Season 5?",
+    "options": [
+      "The Key",
+      "The Seal",
+      "The Portal",
+      "The Seed"
+    ],
+    "answer": "The Key",
+    "difficulty": "medium"
+  },
+  {
+    "id": "buffy-medium-0057",
+    "question": "What is the name of the demon that steals voices in the episode Hush?",
+    "options": [
+      "The Gentlemen",
+      "The First",
+      "The Bringers",
+      "The Trio"
+    ],
+    "answer": "The Gentlemen",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-easy-0032",
+    "question": "Who is the Season 3 Big Bad who becomes a giant demon snake at Graduation?",
+    "options": [
+      "Mayor Wilkins",
+      "Glory",
+      "The Master",
+      "The First Evil"
+    ],
+    "answer": "Mayor Wilkins",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-easy-0034",
+    "question": "What is the name of the Season 5 hell‑god Big Bad?",
+    "options": [
+      "Glory",
+      "The First Evil",
+      "Adam",
+      "Caleb"
+    ],
+    "answer": "Glory",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-050",
+    "question": "How many seasons does Buffy the Vampire Slayer have?",
+    "options": ["7", "6", "8", "5"],
+    "answer": "7",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-051",
+    "question": "Why was Buffy sent to Sunnydale in the first place?",
+    "options": ["She was expelled from her old school", "Her mother got a promotion", "She inherited a house", "Giles recruited her there"],
+    "answer": "She was expelled from her old school",
+    "difficulty": "medium"
+  },
+  {
+    "id": "buffy-052",
+    "question": "What caused Buffy’s expulsion before the series begins?",
+    "options": ["Burning down the gym", "Assaulting a teacher", "Cheating on exams", "Attacking a student"],
+    "answer": "Burning down the gym",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-053",
+    "question": "What is the name of the ancient vampire villain in Season 1?",
+    "options": ["The Master", "The Judge", "Adam", "Caleb"],
+    "answer": "The Master",
+    "difficulty": "medium"
+  },
+  {
+    "id": "buffy-056",
+    "question": "Who is the second Slayer activated after Buffy’s brief death?",
+    "options": ["Kendra", "Faith", "Nikki", "Dana"],
+    "answer": "Kendra",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-057",
+    "question": "Where is Kendra from?",
+    "options": ["Jamaica", "England", "Romania", "Ireland"],
+    "answer": "Jamaica",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-059",
+    "question": "What is Angel called after losing his soul?",
+    "options": ["Angelus", "Angelo", "Angelica", "Angelino"],
+    "answer": "Angelus",
+    "difficulty": "medium"
+  },
+  {
+    "id": "buffy-063",
+    "question": "Which villain in Season 2 can burn people by touch?",
+    "options": ["The Judge", "Adam", "Caleb", "Sunday"],
+    "answer": "The Judge",
+    "difficulty": "medium"
+  },
+  {
+    "id": "buffy-081",
+    "question": "What job does Buffy take in Season 6?",
+    "options": ["Fast-food worker", "Librarian", "Bartender", "Teacher"],
+    "answer": "Fast-food worker",
+    "difficulty": "medium"
+  },
+  {
+    "id": "buffy-082",
+    "question": "At what restaurant does Buffy work in Season 6?",
+    "options": ["Doublemeat Palace", "Burger Barn", "Sunnydale Diner", "The Bronze Grill"],
+    "answer": "Doublemeat Palace",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-083",
+    "question": "How long has Buffy been dead when she is resurrected in Season 6?",
+    "options": ["147 days", "40 days", "100 days", "365 days"],
+    "answer": "147 days",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-easy-0016",
+    "question": "Buffy originally aired on which US network for its first five seasons?",
+    "options": [
+      "The WB",
+      "UPN",
+      "Fox",
+      "ABC"
+    ],
+    "answer": "The WB",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-easy-0041",
+    "question": "What is the name of the incorporeal Season 7 Big Bad?",
+    "options": [
+      "The First Evil",
+      "The Master",
+      "Glory",
+      "The Beast"
+    ],
+    "answer": "The First Evil",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-easy-0029",
+    "question": "Which Slayer from Boston arrives as a wild, rebellious counterpart to Buffy?",
+    "options": [
+      "Faith",
+      "Kendra",
+      "Nikki",
+      "Kennedy"
+    ],
+    "answer": "Faith",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-easy-0026",
+    "question": "Which British actor plays Spike?",
+    "options": [
+      "James Marsters",
+      "David Boreanaz",
+      "Anthony Stewart Head",
+      "Alexis Denisof"
+    ],
+    "answer": "James Marsters",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-easy-0023",
+    "question": "What is the main hangout where the gang spends time outside school?",
+    "options": [
+      "The Bronze",
+      "The Bronze Age",
+      "The Magic Box",
+      "The Library"
+    ],
+    "answer": "The Bronze",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-easy-0019",
+    "question": "Who is the popular cheerleader who becomes part of the group in Season 1?",
+    "options": [
+      "Cordelia Chase",
+      "Anya Jenkins",
+      "Faith Lehane",
+      "Tara Maclay"
+    ],
+    "answer": "Cordelia Chase",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-easy-0018",
+    "question": "What type of store does Giles work at in later seasons?",
+    "options": [
+      "Magic shop",
+      "Bookstore",
+      "Record shop",
+      "Coffee shop"
+    ],
+    "answer": "Magic shop",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-easy-0017",
+    "question": "In Season 6–7, Buffy airs on which network instead of The WB?",
+    "options": [
+      "UPN",
+      "Fox",
+      "NBC",
+      "HBO"
+    ],
+    "answer": "UPN",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-easy-0015",
+    "question": "In what year did Buffy first air on TV?",
+    "options": [
+      "1997",
+      "1995",
+      "1985",
+      "1987"
+    ],
+    "answer": "1997",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-095",
+    "question": "In which city was Drusilla famously attacked by a mob?",
+    "options": ["Prague", "London", "Paris", "Rome"],
+    "answer": "Prague",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-101",
+    "question": "What is the specific name of the Romani clan that cursed Angel with a soul?",
+    "options": ["Clan Kalderash", "Clan Lovari", "Clan Ursari", "Clan Chibi"],
+    "answer": "Clan Kalderash",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-090",
+    "question": "What does Spike mix with blood for 'texture'?",
+    "options": ["Weetabix", "Crackers", "Sand", "Rice"],
+    "answer": "Weetabix",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-085",
+    "question": "What is the name of Buffy’s stuffed pig?",
+    "options": ["Mr. Gordo", "Porky", "Hamlet", "Oinkers"],
+    "answer": "Mr. Gordo",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-087",
+    "question": "What is the name of the demon the Mayor becomes?",
+    "options": ["Olvikan", "Acathla", "The Judge", "Kakistos"],
+    "answer": "Olvikan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-084",
+    "question": "What animal is Willow famously afraid of in the early seasons?",
+    "options": ["Frogs", "Spiders", "Snakes", "Rats"],
+    "answer": "Frogs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-065",
+    "question": "Which character says the final line of the series?",
+    "options": ["Dawn", "Buffy", "Giles", "Willow"],
+    "answer": "Dawn",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-064",
+    "question": "What does Oz like to read in the school newspaper?",
+    "options": ["Obituaries", "Horoscopes", "Sports", "Comic strips"],
+    "answer": "Obituaries",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-061",
+    "question": "What kind of creature was the Season 4 Big Bad?",
+    "options": ["A cyborg", "A demon", "A vampire", "A god"],
+    "answer": "A cyborg",
+    "difficulty": "medium"
+  },
+  {
+    "id": "buffy-059",
+    "question": "What did Joyce Summers die from?",
+    "options": ["Brain aneurysm", "Vampire bite", "Glory's magic", "Car accident"],
+    "answer": "Brain aneurysm",
+    "difficulty": "medium"
+  },
+  {
+    "id": "buffy-060",
+    "question": "What is the name of the law firm in Angel that often crosses over with Buffy?",
+    "options": ["Wolfram & Hart", "Nelson & Wolfram", "Dewey, Cheatem & Howe", "Sterling & Hart"],
+    "answer": "Wolfram & Hart",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-058",
+    "question": "Which of these is NOT a member of 'The Trio'?",
+    "options": ["Tucker", "Warren", "Jonathan", "Andrew"],
+    "answer": "Tucker",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-057",
+    "question": "What is the name of the demon who compelled citizens to express their secrets through dance?",
+    "options": ["Sweet", "Sour", "Jazz", "Lorne"],
+    "answer": "Sweet",
+    "difficulty": "medium"
+  },
+  {
+    "id": "buffy-054",
+    "question": "What is Anya's original human name?",
+    "options": ["Aud", "Anyanka", "Alice", "Andrea"],
+    "answer": "Aud",
+    "difficulty": "hard"
+  },
+  {
+    "id": "buffy-036",
+    "question": "What did the Mayor turn into during graduation?",
+    "options": ["A giant snake", "A dragon", "A werewolf", "A vampire"],
+    "answer": "A giant snake",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-027",
+    "question": "Who is the vampire that turned Angel?",
+    "options": ["Darla", "Drusilla", "Spike", "The Master"],
+    "answer": "Darla",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-025",
+    "question": "What is the name of the first Slayer?",
+    "options": ["Anya", "Tamara", "Kendra", "Sineya"],
+    "answer": "Sineya",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-023",
+    "question": "What is Angel’s soul cursed by?",
+    "options": ["Romani People", "The Watchers", "The Master", "A Vengeance Demon"],
+    "answer": "Romani People",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-021",
+    "question": "What is the primary weapon used by a Slayer?",
+    "options": ["Stake", "Sword", "Crossbow", "Axe"],
+    "answer": "Stake",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-easy-0011",
+    "question": "Who is Buffy’s goofy male best friend in the core trio?",
+    "options": [
+      "Xander Harris",
+      "Oz",
+      "Riley Finn",
+      "Spike"
+    ],
+    "answer": "Xander Harris",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-084",
+    "question": "Where does Buffy reveal she actually was after dying in Season 5?",
+    "options": ["Heaven", "Hell", "Hellmouth", "Purgatory"],
+    "answer": "Heaven",
+    "difficulty": "medium"
+  }
+]

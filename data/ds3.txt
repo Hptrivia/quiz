@@ -1,0 +1,807 @@
+[
+  {
+    "id": "ds3-easy-001",
+    "question": "What is the starting hub area in Dark Souls III?",
+    "options": ["Majula", "Firelink Shrine", "Roundtable Hold", "Nexus"],
+    "answer": "Firelink Shrine",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-003",
+    "question": "What is the main currency in Dark Souls III?",
+    "options": ["Runes", "Souls", "Echoes", "Blood"],
+    "answer": "Souls",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-004",
+    "question": "What is the player's title in Dark Souls III?",
+    "options": ["Chosen Undead", "Bearer of the Curse", "Ashen One", "Tarnished"],
+    "answer": "Ashen One",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-005",
+    "question": "Who levels up the player at Firelink Shrine?",
+    "options": ["Andre", "Fire Keeper", "Yuria", "Emma"],
+    "answer": "Fire Keeper",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-006",
+    "question": "Who is the blacksmith at Firelink Shrine?",
+    "options": ["Lenigrast", "Andre", "Vamos", "Orbeck"],
+    "answer": "Andre",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-007",
+    "question": "What item restores HP over time when used at a bonfire refill?",
+    "options": ["Human Effigy", "Estus Flask", "Divine Blessing", "Ashen Flask"],
+    "answer": "Estus Flask",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-008",
+    "question": "Which flask restores FP in Dark Souls III?",
+    "options": ["Ashen Estus Flask", "Lifegem Flask", "Blue Estus Flask", "Mana Flask"],
+    "answer": "Ashen Estus Flask",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-009",
+    "question": "Which boss is fought at the end of the tutorial cemetery area?",
+    "options": ["Vordt", "Iudex Gundyr", "Pontiff Sulyvahn", "Abyss Watchers"],
+    "answer": "Iudex Gundyr",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-010",
+    "question": "What is the first major area after Firelink Shrine?",
+    "options": ["High Wall of Lothric", "Irithyll", "Catacombs of Carthus", "Profaned Capital"],
+    "answer": "High Wall of Lothric",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-011",
+    "question": "Which boss is known for using a large frost hammer on all fours?",
+    "options": ["Dancer", "Vordt of the Boreal Valley", "Champion Gundyr", "Old Demon King"],
+    "answer": "Vordt of the Boreal Valley",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-012",
+    "question": "What item is placed on thrones in Firelink Shrine after defeating major Lords?",
+    "options": ["Skulls", "Cinders of a Lord", "Ashes", "Crowns"],
+    "answer": "Cinders of a Lord",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-013",
+    "question": "How many Lords of Cinder must be returned to their thrones?",
+    "options": ["3", "4", "5", "6"],
+    "answer": "4",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-014",
+    "question": "Which of these is a Lord of Cinder?",
+    "options": ["Siegward", "Aldrich", "Greirat", "Patches"],
+    "answer": "Aldrich",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-015",
+    "question": "Which of these is a Lord of Cinder?",
+    "options": ["Yhorm the Giant", "Vordt", "Oceiros", "Wolnir"],
+    "answer": "Yhorm the Giant",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-easy-018",
+    "question": "Which boss is a giant skeleton wearing bracelets?",
+    "options": ["Wolnir", "Yhorm", "Aldrich", "Midir"],
+    "answer": "Wolnir",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-easy-019",
+    "question": "Which boss is made up of many clergy members in a chapel?",
+    "options": ["Deacons of the Deep", "Abyss Watchers", "Twin Princes", "Lothric Knights"],
+    "answer": "Deacons of the Deep",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-easy-020",
+    "question": "Which boss fight takes place in Farron Keep and features legion warriors?",
+    "options": ["Abyss Watchers", "Crystal Sage", "Pontiff Sulyvahn", "Curse-rotted Greatwood"],
+    "answer": "Abyss Watchers",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-easy-021",
+    "question": "Which boss uses clones and sorcery in the Road of Sacrifices path?",
+    "options": ["Crystal Sage", "Aldrich", "Emma", "Ancient Wyvern"],
+    "answer": "Crystal Sage",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-easy-022",
+    "question": "Which boss is a giant tree with sacs on its body?",
+    "options": ["Greatwood", "Old Demon King", "Wolnir", "Yhorm"],
+    "answer": "Greatwood",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-024",
+    "question": "Which city is revisited in Dark Souls III?",
+    "options": ["Yharnam", "Boletaria", "Anor Londo", "Majula"],
+    "answer": "Anor Londo",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-026",
+    "question": "Which boss is encountered in Anor Londo and devours gods?",
+    "options": ["Aldrich", "Oceiros", "Nameless King", "Gundyr"],
+    "answer": "Aldrich",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-027",
+    "question": "Which boss is fought in the Profaned Capital?",
+    "options": ["Yhorm the Giant", "Aldrich", "Dancer", "Midir"],
+    "answer": "Yhorm the Giant",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-028",
+    "question": "Which onion-armored NPC can assist against Yhorm?",
+    "options": ["Siegward of Catarina", "Patches", "Hawkwood", "Yoel"],
+    "answer": "Siegward of Catarina",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-029",
+    "question": "What special weapon is especially effective against Yhorm?",
+    "options": ["Moonlight Greatsword", "Storm Ruler", "Farron Greatsword", "Dragonslayer Spear"],
+    "answer": "Storm Ruler",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-031",
+    "question": "Which boss dual-wields flaming and magic swords?",
+    "options": ["Pontiff Sulyvahn", "Abyss Watcher", "Twin Princes", "Gundyr"],
+    "answer": "Pontiff Sulyvahn",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-0028",
+    "question": "What status effect is inflicted by the green-colored needles of a Blowpipe hollow?",
+    "options": ["Poison", "Toxic", "Frost", "Bleed"],
+    "answer": "Poison",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-med-0016",
+    "question": "What is the name of the miracle that allows you to return to the last bonfire rested at?",
+    "options": ["Homeward", "Seek Guidance", "Sacred Oath", "Tears of Denial"],
+    "answer": "Homeward",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-med-0002",
+    "question": "Who is the leader of the Blades of the Darkmoon covenant found in Anor Londo?",
+    "options": ["Yorshka", "Gwyndolin", "Sirris", "Yuria"],
+    "answer": "Yorshka",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-easy-0047",
+    "question": "What status effect causes instant death if the meter fills up?",
+    "options": ["Poison", "Frost", "Curse", "Toxic"],
+    "answer": "Curse",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-032",
+    "question": "Which boss is found in the Consumed King's Garden?",
+    "options": ["Oceiros", "Aldrich", "Vordt", "Wolnir"],
+    "answer": "Oceiros",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-033",
+    "question": "Which boss is the Untended Graves version of Gundyr?",
+    "options": ["Champion Gundyr", "Iudex Gundyr", "Old King Gundyr", "Ashen Gundyr"],
+    "answer": "Champion Gundyr",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-034",
+    "question": "Which final base-game boss is fought at the Kiln of the First Flame?",
+    "options": ["Soul of Cinder", "Nameless King", "Pontiff Sulyvahn", "Aldrich"],
+    "answer": "Soul of Cinder",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-035",
+    "question": "Which stat primarily increases maximum HP?",
+    "options": ["Vigor", "Endurance", "Vitality", "Luck"],
+    "answer": "Vigor",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-036",
+    "question": "Which stat primarily increases stamina?",
+    "options": ["Vigor", "Endurance", "Attunement", "Dexterity"],
+    "answer": "Endurance",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-037",
+    "question": "Which stat increases equipment load?",
+    "options": ["Vitality", "Attunement", "Luck", "Faith"],
+    "answer": "Vitality",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-038",
+    "question": "Which stat increases FP?",
+    "options": ["Attunement", "Intelligence", "Faith", "Endurance"],
+    "answer": "Attunement",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-039",
+    "question": "Which covenant is associated with protecting Irithyll after Pontiff?",
+    "options": ["Blue Sentinels", "Aldrich Faithful", "Warriors of Sunlight", "Mound-makers"],
+    "answer": "Aldrich Faithful",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ds3-easy-040",
+    "question": "Which covenant uses Sunlight Medals?",
+    "options": ["Rosaria's Fingers", "Warriors of Sunlight", "Way of Blue", "Watchdogs of Farron"],
+    "answer": "Warriors of Sunlight",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-041",
+    "question": "Which covenant protects Farron Keep territory?",
+    "options": ["Watchdogs of Farron", "Way of Blue", "Mound-makers", "Darkmoon Blades"],
+    "answer": "Watchdogs of Farron",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-042",
+    "question": "Which NPC sells spells after being rescued from the Road of Sacrifices?",
+    "options": ["Orbeck of Vinheim", "Eygon", "Leonhard", "Hodrick"],
+    "answer": "Orbeck of Vinheim",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-easy-043",
+    "question": "Which NPC is a thief who goes on scavenging trips?",
+    "options": ["Greirat", "Hawkwood", "Cornyx", "Anri"],
+    "answer": "Greirat",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-easy-045",
+    "question": "Which NPC teaches pyromancies after being rescued from the Undead Settlement?",
+    "options": ["Cornyx", "Karla", "Irina", "Yuria"],
+    "answer": "Cornyx",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-easy-046",
+    "question": "Which NPC teaches miracles if guided toward faith?",
+    "options": ["Irina of Carim", "Karla", "Yuria", "Rosaria"],
+    "answer": "Irina of Carim",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-easy-047",
+    "question": "Which stat is most associated with pyromancy scaling alongside Intelligence?",
+    "options": ["Luck", "Faith", "Vitality", "Dexterity"],
+    "answer": "Faith",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-048",
+    "question": "Which DLC area is painted and snowy?",
+    "options": ["The Ringed City", "Ashes of Ariandel", "Crown of the Ivory King", "Painted World of Ariamis"],
+    "answer": "Ashes of Ariandel",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-easy-049",
+    "question": "Which DLC is the final expansion of Dark Souls III?",
+    "options": ["Ashes of Ariandel", "The Ringed City", "Artorias of the Abyss", "Old Hunters"],
+    "answer": "The Ringed City",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-easy-050",
+    "question": "Which boss in Ashes of Ariandel has three phases?",
+    "options": ["Sister Friede", "Champion's Gravetender", "Midir", "Gael"],
+    "answer": "Sister Friede",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-medium-001",
+    "question": "What item must be inserted into Firelink Shrine to enable transposition?",
+    "options": ["Soul Vessel", "Transposing Kiln", "Cinder of a Lord", "Basin of Vows"],
+    "answer": "Transposing Kiln",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ds3-medium-002",
+    "question": "Which boss drops the Transposing Kiln?",
+    "options": ["Curse-rotted Greatwood", "Crystal Sage", "Deacons of the Deep", "Vordt"],
+    "answer": "Curse-rotted Greatwood",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-medium-003",
+    "question": "Which NPC performs boss soul transposition?",
+    "options": ["Ludleth of Courland", "Andre", "Fire Keeper", "Yuria"],
+    "answer": "Ludleth of Courland",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-medium-004",
+    "question": "Which item is used to improve Estus healing amount?",
+    "options": ["Estus Shard", "Undead Bone Shard", "Large Titanite", "Blessed Gem"],
+    "answer": "Undead Bone Shard",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-medium-005",
+    "question": "Which item increases the number of Estus uses?",
+    "options": ["Estus Shard", "Undead Bone Shard", "Divine Tome", "Pale Tongue"],
+    "answer": "Estus Shard",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-medium-007",
+    "question": "Which boss is found deep below the Catacombs near the demon ruins?",
+    "options": ["Old Demon King", "Demon Prince", "Stray Demon", "Dancer"],
+    "answer": "Old Demon King",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-medium-008",
+    "question": "Which area follows the defeat of Wolnir?",
+    "options": ["Irithyll of the Boreal Valley", "Anor Londo", "Archdragon Peak", "Lothric Castle"],
+    "answer": "Irithyll of the Boreal Valley",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ds3-medium-009",
+    "question": "What item is needed to survive the bridge to Irithyll?",
+    "options": ["Small Doll", "Old Doll", "Basin of Vows", "Silver Pendant"],
+    "answer": "Small Doll",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-medium-010",
+    "question": "Which boss drops the Small Doll?",
+    "options": ["Crystal Sage", "Deacons of the Deep", "Abyss Watchers", "Vordt"],
+    "answer": "Deacons of the Deep",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-medium-011",
+    "question": "What covenant item is offered to Rosaria?",
+    "options": ["Sunlight Medal", "Pale Tongue", "Swordgrass", "Human Dregs"],
+    "answer": "Pale Tongue",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ds3-medium-012",
+    "question": "What can Rosaria let the player do besides ranking up her covenant?",
+    "options": ["Upgrade weapons", "Respec attributes", "Repair gear", "Transpose souls"],
+    "answer": "Respec attributes",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ds3-medium-112",
+    "question": "What can Rosaria let the player do besides ranking up her covenant?",
+    "options": ["Upgrade weapons", "Change appearance", "Repair gear", "Transpose souls"],
+    "answer": "Change appearance",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ds3-medium-013",
+    "question": "Which covenant uses vertebra shackles?",
+    "options": ["Mound-makers", "Aldrich Faithful", "Blue Sentinels", "Rosaria's Fingers"],
+    "answer": "Mound-makers",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-medium-014",
+    "question": "Which covenant uses Wolf's Blood Swordgrass?",
+    "options": ["Watchdogs of Farron", "Way of Blue", "Blades of the Darkmoon", "Warriors of Sunlight"],
+    "answer": "Watchdogs of Farron",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-medium-015",
+    "question": "Which covenant item is offered to Aldrich Faithful?",
+    "options": ["Proof of a Concord Kept", "Human Dregs", "Sunlight Medal", "Pale Tongue"],
+    "answer": "Human Dregs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-medium-016",
+    "question": "Which covenant item is offered to Blades of the Darkmoon?",
+    "options": ["Proof of a Concord Kept", "Pale Tongue", "Vertebra Shackle", "Swordgrass"],
+    "answer": "Proof of a Concord Kept",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-medium-017",
+    "question": "Which covenant summons protect players in Way of Blue?",
+    "options": ["Darkwraiths", "Blue Sentinels", "Watchdogs", "Sunbros"],
+    "answer": "Blue Sentinels",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-medium-019",
+    "question": "Which boss is fought in two phases atop Archdragon Peak?",
+    "options": ["Nameless King", "Ancient Wyvern", "Midir", "Dragonslayer Armour"],
+    "answer": "Nameless King",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ds3-medium-020",
+    "question": "What is the first phase mount of the Nameless King fight?",
+    "options": ["Ancient Dragon", "King of the Storm", "Stormdrake", "Wyvern Lord"],
+    "answer": "King of the Storm",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-medium-022",
+    "question": "Which area is a dark reflection of Firelink Shrine?",
+    "options": ["Untended Graves", "Irithyll Dungeon", "Consumed King's Garden", "Profaned Capital"],
+    "answer": "Untended Graves",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ds3-medium-024",
+    "question": "Which NPC begins as a crestfallen warrior in Firelink Shrine?",
+    "options": ["Hawkwood", "Greirat", "Leonhard", "Siegward"],
+    "answer": "Hawkwood",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-medium-026",
+    "question": "Which NPC gives the player free levels in exchange for drawing out true strength?",
+    "options": ["Yoel of Londor", "Yuria of Londor", "Leonhard", "Anri"],
+    "answer": "Yoel of Londor",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-medium-027",
+    "question": "How many free levels can Yoel grant before dying?",
+    "options": ["3", "4", "5", "6"],
+    "answer": "5",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-medium-028",
+    "question": "Which NPC appears after Yoel dies if his quest is advanced?",
+    "options": ["Yuria of Londor", "Karla", "Sirris", "Rosaria"],
+    "answer": "Yuria of Londor",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-medium-030",
+    "question": "What is Anri's companion called?",
+    "options": ["Horace", "Hawkwood", "Leonhard", "Eygon"],
+    "answer": "Horace",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-medium-031",
+    "question": "Which NPC invader and quest character is tied to Rosaria's Fingers?",
+    "options": ["Leonhard", "Hodrick", "Patches", "Siegward"],
+    "answer": "Leonhard",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-medium-034",
+    "question": "Which stat primarily scales many katanas and quick weapons?",
+    "options": ["Strength", "Dexterity", "Luck", "Vitality"],
+    "answer": "Dexterity",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ds3-medium-035",
+    "question": "Which infusion generally removes stat scaling and boosts base damage?",
+    "options": ["Raw", "Sharp", "Heavy", "Refined"],
+    "answer": "Raw",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ds3-medium-036",
+    "question": "Which infusion boosts Strength scaling?",
+    "options": ["Heavy", "Sharp", "Refined", "Simple"],
+    "answer": "Heavy",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ds3-medium-037",
+    "question": "Which infusion boosts Dexterity scaling?",
+    "options": ["Sharp", "Heavy", "Blessed", "Deep"],
+    "answer": "Sharp",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ds3-medium-038",
+    "question": "Which infusion adds Faith scaling and passive HP regen?",
+    "options": ["Blessed", "Chaos", "Dark", "Crystal"],
+    "answer": "Blessed",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ds3-medium-039",
+    "question": "Which infusion adds Intelligence scaling?",
+    "options": ["Crystal", "Lightning", "Blood", "Raw"],
+    "answer": "Crystal",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ds3-medium-040",
+    "question": "Which infusion adds fire and scales with both Intelligence and Faith?",
+    "options": ["Chaos", "Fire", "Lightning", "Dark"],
+    "answer": "Chaos",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ds3-medium-044",
+    "question": "Which boss resurrects during phase two by another character carrying him?",
+    "options": ["Twin Princes", "Aldrich", "Soul of Cinder", "Dancer"],
+    "answer": "Twin Princes",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ds3-medium-045",
+    "question": "What is Prince Lothric's brother called?",
+    "options": ["Lorian", "Lorenz", "Ludleth", "Leonhard"],
+    "answer": "Lorian",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ds3-medium-050",
+    "question": "Which boss in The Ringed City is fought below the city after knocking him from a bridge?",
+    "options": ["Darkeater Midir", "Slave Knight Gael", "Demon Prince", "Halflight"],
+    "answer": "Darkeater Midir",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-hard-003",
+    "question": "Which ending is associated with becoming the Lord of Hollows?",
+    "options": ["Usurpation of Fire", "End of Fire", "Link the Fire", "Ashes Ending"],
+    "answer": "Usurpation of Fire",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-hard-004",
+    "question": "What special key item is needed to access the End of Fire ending path?",
+    "options": ["Eyes of a Fire Keeper", "Basin of Vows", "Coiled Sword", "Transposing Kiln"],
+    "answer": "Eyes of a Fire Keeper",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-hard-005",
+    "question": "Where are the Eyes of a Fire Keeper found?",
+    "options": ["Untended Graves", "Anor Londo", "Irithyll Dungeon", "Smouldering Lake"],
+    "answer": "Untended Graves",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-hard-006",
+    "question": "How many Dark Sigils are required to trigger the Usurpation of Fire ending?",
+    "options": ["5", "6", "7", "8"],
+    "answer": "8",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-easy-0013",
+    "question": "What is the title given to the powerful beings you must return to their thrones?",
+    "options": ["The Four Kings", "Lords of Cinder", "The Chosen Undead", "Eldritch Gods"],
+    "answer": "Lords of Cinder",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-0004",
+    "question": "What item is consumed to increase your maximum HP and enable multiplayer?",
+    "options": ["Humanity", "Human Effigy", "Ember", "Insight"],
+    "answer": "Ember",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-0016",
+    "question": "Which area is covered in poisonous swamp and home to the Abyss Watchers?",
+    "options": ["Farron Keep", "Smouldering Lake", "Irithyll Dungeon", "Catacombs of Carthus"],
+    "answer": "Farron Keep",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-0002",
+    "question": "Which company developed Dark Souls 3?",
+    "options": ["FromSoftware", "Capcom", "CD Projekt Red", "Square Enix"],
+    "answer": "FromSoftware",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-easy-0003",
+    "question": "Dark Souls 3 is primarily set in and around which kingdom?",
+    "options": ["Lothric", "Lordran", "Drangleic", "Boletaria"],
+    "answer": "Lothric",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-hard-007",
+    "question": "What item is used to remove Dark Sigils?",
+    "options": ["Purging Stone", "Fire Keeper Soul", "Divine Blessing", "Soul Vessel"],
+    "answer": "Fire Keeper Soul",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-hard-031",
+    "question": "Which key is needed to free Karla?",
+    "options": ["Jailbreaker's Key", "Jailer's Key Ring", "Old Cell Key", "Tower Key"],
+    "answer": "Jailer's Key Ring",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-custom-001",
+    "question": "What is used for fast travel and resting in Dark Souls III?",
+    "options": ["Lanterns", "Bonfires", "Shrines", "Graces"],
+    "answer": "Bonfires",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-custom-002",
+    "question": "Who do you mainly purchase items from at Firelink Shrine?",
+    "options": ["Fire Keeper", "Shrine Handmaid", "Andre", "Ludleth"],
+    "answer": "Shrine Handmaid",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-custom-003",
+    "question": "Which of these is not a boss in Dark Souls III?",
+    "options": ["Abyss Watchers", "Pontiff Sulyvahn", "Royal Rat Authority", "Soul of Cinder"],
+    "answer": "Royal Rat Authority",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-custom-004",
+    "question": "Which of these is not a boss in Dark Souls III?",
+    "options": ["Dancer of the Boreal Valley", "Twin Princes", "Fume Knight", "Vordt of the Boreal Valley"],
+    "answer": "Fume Knight",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-custom-005",
+    "question": "Which of these is not a location in Dark Souls III?",
+    "options": ["Irithyll of the Boreal Valley", "Farron Keep", "Majula", "Lothric Castle"],
+    "answer": "Majula",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-custom-006",
+    "question": "How many Lords of Cinder are there in Dark Souls III?",
+    "options": ["3", "4", "5", "6"],
+    "answer": "5",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-custom-007",
+    "question": "What are the names of the two swords Pontiff Sulyvahn wields?",
+    "options": ["Greatsword of Judgment and Profaned Greatsword", "Profaned and Moonlight Greatsword", "Farron and Wolf Knight Greatsword", "Chaos Blade and Greatsword of Judgment"],
+    "answer": "Greatsword of Judgment and Profaned Greatsword",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-custom-008",
+    "question": "Which of these is not a Lord of Cinder?",
+    "options": ["Aldrich", "Yhorm the Giant", "Pontiff Sulyvahn", "Abyss Watchers"],
+    "answer": "Pontiff Sulyvahn",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-custom-009",
+    "question": "Which Lord of Cinder is already at Firelink Shrine when you arrive?",
+    "options": ["Aldrich", "Ludleth of Courland", "Prince Lothric", "Yhorm the Giant"],
+    "answer": "Ludleth of Courland",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-custom-010",
+    "question": "Which of these is not a stat in Dark Souls III?",
+    "options": ["Vigor", "Attunement", "Agility", "Vitality"],
+    "answer": "Agility",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-custom-011",
+    "question": "Which of these is not a sword in Dark Souls III?",
+    "options": ["Lothric Knight Sword", "Irithyll Straight Sword", "Moonveil", "Sunlight Straight Sword"],
+    "answer": "Moonveil",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-custom-012",
+    "question": "Which of these is not a sword in Dark Souls III?",
+    "options": ["Claymore", "Astora Greatsword", "Farron Greatsword", "Uchigatana of Reeds"],
+    "answer": "Uchigatana of Reeds",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-custom-013",
+    "question": "How many DLC expansions does Dark Souls III have?",
+    "options": ["1", "2", "3", "4"],
+    "answer": "2",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-custom-014",
+    "question": "What is Horace's title in Dark Souls III?",
+    "options": ["Horace the Hushed", "Horace the Fallen", "Horace the Silent Blade", "Horace the Hollowed"],
+    "answer": "Horace the Hushed",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-custom-015",
+    "question": "What is Yuria's title in Dark Souls III?",
+    "options": ["Yuria of Londor", " Yuria the Veiled", "Yuria the Black", "Yuria of Carim"],
+    "answer": "Yuria of Londor",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ds3-custom-016",
+    "question": "What is Sirris's full title in Dark Souls III?",
+    "options": ["Sirris of the Sunless Realms", "Sirris the Silent", "Sirris of Carim", "Sirris the Hollow"],
+    "answer": "Sirris of the Sunless Realms",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-custom-017",
+    "question": "Which of these is not an infusion in Dark Souls III?",
+    "options": ["Heavy", "Sharp", "Frost", "Refined"],
+    "answer": "Frost",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-custom-018",
+    "question": "Which of these bosses does not have a major multi-phase transformation?",
+    "options": ["Iudex Gundyr", "Soul of Cinder", "Twin Princes", "Ancient Wyvern"],
+    "answer": "Ancient Wyvern",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-custom-019",
+    "question": "How many endings does Dark Souls III have?",
+    "options": ["2", "3", "4", "5"],
+    "answer": "4",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds3-custom-020",
+    "question": "Which of these is not an ending in Dark Souls III?",
+    "options": ["Link the Fire", "End of Fire", "Usurpation of Fire", "Age of Stars"],
+    "answer": "Age of Stars",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds3-custom-021",
+    "question": "In what year was Dark Souls III released worldwide?",
+    "options": ["2014", "2015", "2016", "2017"],
+    "answer": "2016",
+    "difficulty": "hard"
+  }
+]

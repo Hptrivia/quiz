@@ -1,0 +1,550 @@
+[
+  {
+    "id": "aks-001",
+    "difficulty": "easy",
+    "question": "What is the name of the knight the story follows?",
+    "options": ["Ser Duncan", "Ser Barristan", "Ser Criston", "Ser Jorah"],
+    "answer": "Ser Duncan"
+  },
+  {
+    "id": "aks-002",
+    "difficulty": "easy",
+    "question": "What nickname does Ser Duncan commonly go by?",
+    "options": ["Dunk", "Dun", "Tall", "Hedge"],
+    "answer": "Dunk"
+  },
+  {
+    "id": "aks-003",
+    "difficulty": "easy",
+    "question": "What is the name of Dunk’s young squire?",
+    "options": ["Aegon", "Joffrey", "Tommen", "Robb"],
+    "answer": "Aegon"
+  },
+  {
+    "id": "aks-004",
+    "difficulty": "easy",
+    "question": "What nickname does Aegon use while traveling with Dunk?",
+    "options": ["Egg", "Ash", "Pate", "Pip"],
+    "answer": "Egg"
+  },
+  {
+    "id": "aks-005",
+    "difficulty": "easy",
+    "question": "Which royal house does Egg secretly belong to?",
+    "options": ["House Targaryen", "House Baratheon", "House Stark", "House Lannister"],
+    "answer": "House Targaryen"
+  },
+  {
+    "id": "ak-easy-0008",
+    "question": "Roughly how long before Game of Thrones is the show set?",
+    "options": ["About 100 years", "About 200 years", "About 300 years", "About 50 years"],
+    "answer": "About 100 years",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ak-easy-0009",
+    "question": "Which author co‑created the show and wrote the original novellas?",
+    "options": [
+      "George R. R. Martin",
+      "J. R. R. Tolkien",
+      "Robert Jordan",
+      "Brandon Sanderson"
+    ],
+    "answer": "George R. R. Martin",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aks-017",
+    "difficulty": "easy",
+    "question": "What neighborhood in King's Landing did Dunk grow up in?",
+    "options": ["Flea Bottom", "The Red Keep", "Visenya's Hill", "The Mud Gate"],
+    "answer": "Flea Bottom"
+  },
+  {
+    "id": "aks-008",
+    "difficulty": "hard",
+    "question": "What does Dunk sell to afford his entrance to the tourney?",
+    "options": ["Sweetfoot", "Thunder", "Chestnut", "Merry"],
+    "answer": "Sweetfoot"
+  },
+  {
+    "id": "aks-004",
+    "difficulty": "easy",
+    "question": "Where does Egg hide his true identity?",
+    "options": ["By shaving his head", "By wearing a mask", "By dying his hair", "By using a fake name"],
+    "answer": "By shaving his head"
+  },
+  {
+    "id": "ak-medium-0052",
+    "question": "Which future king is Egg destined to become in the larger lore?",
+    "options": [
+      "Aegon V Targaryen",
+      "Aegon III Targaryen",
+      "Aegon II Targaryen",
+      "Aegon IV Targaryen"
+    ],
+    "answer": "Aegon V Targaryen",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aks-e37",
+    "difficulty": "hard",
+    "question": "Who is the master of the games at Ashford?",
+    "options": ["Plummer", "Bennis", "Medgar", "Robyn"],
+    "answer": "Plummer"
+  },
+  {
+    "id": "aks-e08",
+    "difficulty": "hard",
+    "question": "What is the name of Dunk's warhorse?",
+    "options": ["Thunder", "Sweetfoot", "Chestnut", "Merry"],
+    "answer": "Thunder"
+  },
+  {
+    "id": "aks-h52",
+    "difficulty": "hard",
+    "question": "Which two Kingsguard members question Dunk's credentials at the tourney gates?",
+    "options": [
+      "Ser Roland Crakehall and Ser Donnel of Duskendale",
+      "Ser Willem Wylde and Ser Roland Crakehall",
+      "Ser Arthur and Ser Gerold Hightower",
+      "Ser Gwayne Gaunt and Ser Donnel of Duskendale"
+    ],
+    "answer": "Ser Roland Crakehall and Ser Donnel of Duskendale"
+  },
+  {
+    "id": "aks-009",
+    "difficulty": "hard",
+    "question": "What tree does Dunk use for his personal sigil on his shield?",
+    "options": ["An elm tree", "An oak tree", "A pine tree", "A chestnut tree"],
+    "answer": "An elm tree"
+  },
+  {
+    "id": "aks-e21",
+    "difficulty": "easy",
+    "question": "Which of these is NOT one of Dunk's horses?",
+    "options": ["Merry", "Thunder", "Sweetfoot", "Chestnut"],
+    "answer": "Merry"
+  },
+  {
+    "id": "aks-076",
+    "difficulty": "hard",
+    "question": "In Dunk’s flashbacks, what do he and Rafe try to buy passage to?",
+    "options": ["Essos", "Dorne", "Oldtown", "Dragonstone"],
+    "answer": "Essos"
+  },
+  {
+    "id": "aks-082",
+    "difficulty": "hard",
+    "question": "Where does Maekar invite Dunk to come if he will take Egg as his squire?",
+    "options": ["Summerhall", "Dragonstone", "Storm’s End", "King’s Landing"],
+    "answer": "Summerhall"
+  },
+  {
+    "id": "aks-060",
+    "difficulty": "hard",
+    "question": "What does Lyonel recruit Dunk and Egg to help with during the festivities?",
+    "options": ["A tug-of-war", "A drinking contest", "A hunt", "A mock duel"],
+    "answer": "A tug-of-war"
+  },
+  {
+    "id": "aks-049",
+    "difficulty": "hard",
+    "question": "Where does Egg suggest he and Dunk travel at the end of season 1?",
+    "options": ["Dorne", "Winterfell", "Braavos", "Highgarden"],
+    "answer": "Dorne"
+  },
+  {
+    "id": "aks-043",
+    "difficulty": "hard",
+    "question": "What weapon caused the fatal wound to Baelor’s head during the trial?",
+    "options": ["A mace", "A spear", "A sword", "An arrow"],
+    "answer": "A mace"
+  },
+  {
+    "id": "aks-030",
+    "difficulty": "easy",
+    "question": "Who was the first person to agree to fight for Dunk in the trial?",
+    "options": ["Steffon Fossoway", "Raymun Fossoway", "Lyonel Baratheon", "Travis Fossoway"],
+    "answer": "Steffon Fossoway"
+  },
+  {
+    "id": "aks-034",
+    "difficulty": "hard",
+    "question": "Who is Dunk’s childhood friend shown in flashbacks?",
+    "options": ["Rafe", "Red", "Rowan", "Rita"],
+    "answer": "Rafe"
+  },
+  {
+    "id": "aks-027",
+    "difficulty": "easy",
+    "question": "What kind of trial does Dunk first request while imprisoned?",
+    "options": ["Trial by combat", "Trial by council", "Trial by fire", "Trial by confession"],
+    "answer": "Trial by combat"
+  },
+  {
+    "id": "aks-016",
+    "difficulty": "easy",
+    "question": "Which prince remembers Arlan and vouches for Dunk?",
+    "options": ["Prince Baelor", "Prince Aerion", "Prince Daeron", "Prince Valarr"],
+    "answer": "Prince Baelor"
+  },
+  {
+    "id": "aks-014",
+    "difficulty": "easy",
+    "question": "What does Egg first ask Dunk to let him be?",
+    "options": ["His squire", "His stableboy", "His guard", "His servant"],
+    "answer": "His squire"
+  },
+  {
+    "id": "aks-012",
+    "difficulty": "easy",
+    "question": "Which Fossoway squire becomes one of Dunk’s friends?",
+    "options": ["Raymun Fossoway", "Steffon Fossoway", "Donnel Fossoway", "Alyn Fossoway"],
+    "answer": "Raymun Fossoway"
+  },
+  {
+    "id": "aks-013",
+    "difficulty": "easy",
+    "question": "Which knight initially refuses to vouch for Dunk to join the tourney?",
+    "options": ["Ser Manfred Dondarrion", "Ser Steffon Fossoway", "Ser Lyonel Baratheon", "Ser Robyn Rhysling"],
+    "answer": "Ser Manfred Dondarrion"
+  },
+  {
+    "id": "aks-010",
+    "difficulty": "easy",
+    "question": "What is the name of the blacksmith who makes Dunk's new armor?",
+    "options": ["Steely Pate", "Steele Luke", "Mikken", "Tobho Mott"],
+    "answer": "Steely Pate"
+  },
+  {
+    "id": "aks-004",
+    "difficulty": "easy",
+    "question": "Where does the main tournament of Season 1 take place?",
+    "options": ["Ashford Meadow", "King's Landing", "Northford Meadow", "Dragonstone"],
+    "answer": "Ashford Meadow"
+  },
+  {
+    "id": "ak-easy-0041",
+    "question": "Which house claims Riverrun in the show’s timeframe?",
+    "options": ["House Tully", "House Frey", "House Arryn", "House Greyjoy"],
+    "answer": "House Tully",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aks-002",
+    "difficulty": "easy",
+    "question": "What is the nickname given to Ser Duncan because of his height?",
+    "options": ["The Tall", "The Giant", "The Mountain", "The Wall"],
+    "answer": "The Tall"
+  },
+  {
+    "id": "aks-027",
+    "difficulty": "easy",
+    "question": "How many champions are required for the trial Dunk faces?",
+    "options": ["Seven", "Three", "One", "Twelve"],
+    "answer": "Seven"
+  },
+  {
+    "id": "ak-easy-0032",
+    "question": "Which actor plays Prince Maekar Targaryen?",
+    "options": ["Sam Spruell", "Charles Dance", "Matt Smith", "Rhys Ifans"],
+    "answer": "Sam Spruell",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ak-easy-0040",
+    "question": "What is Egg pretending to be when Dunk first meets him?",
+    "options": ["A stableboy", "A squire", "A septon", "A barkeep"],
+    "answer": "A stableboy",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ak-easy-0037",
+    "question": "Which region of Westeros is the Ashford tourney held in?",
+    "options": ["The Reach", "The North", "Dorne", "The Vale"],
+    "answer": "The Reach",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ak-easy-0033",
+    "question": "Which actor plays Ser Lyonel “The Laughing Storm” Baratheon?",
+    "options": ["Daniel Ings", "Peter Claffey", "Finn Bennett", "Bertie Carvel"],
+    "answer": "Daniel Ings",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ak-easy-0029",
+    "question": "On what date did the series premiere on HBO?",
+    "options": [
+      "January 18, 2026",
+      "February 18, 2026",
+      "December 18, 2025",
+      "March 18, 2026"
+    ],
+    "answer": "January 18, 2026",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ak-easy-0020",
+    "question": "What kind of event is the main setting for Season 1?",
+    "options": ["A tourney", "A royal wedding", "A war campaign", "A Great Council"],
+    "answer": "A tourney",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ak-easy-0018",
+    "question": "Which Baratheon knight in the show is nicknamed “The Laughing Storm”?",
+    "options": [
+      "Ser Lyonel Baratheon",
+      "Ser Gowen Baratheon",
+      "Ser Steffon Baratheon",
+      "Ser Robert Baratheon"
+    ],
+    "answer": "Ser Lyonel Baratheon",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ak-easy-0013",
+    "question": "What is Dunk doing when the series begins?",
+    "options": ["Burying his dead mentor", "Guarding the king", "Fighting in a war", "Serving as a city watchman"],
+    "answer": "Burying his dead mentor",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aks-008",
+    "difficulty": "easy",
+    "question": "What kind of knight is Dunk at the start of the story?",
+    "options": ["A hedge knight", "A Kingsguard", "A knight of the Night’s Watch", "A sellsword captain"],
+    "answer": "A hedge knight"
+  },
+  {
+    "id": "aks-009",
+    "difficulty": "easy",
+    "question": "What is the name of Dunk’s late mentor knight?",
+    "options": ["Ser Arlan", "Ser Arthur", "Ser Ryan", "Ser Serlan"],
+    "answer": "Ser Arlan"
+  },
+  {
+    "id": "aks-010",
+    "difficulty": "hard",
+    "question": "How many episodes in Season 1 of A Knight of the Seven Kingdoms?",
+    "options": ["6", "9", "7", "8"],
+    "answer": "6"
+  },
+  {
+    "id": "aks-011",
+    "difficulty": "easy",
+    "question": "What is the name of the major tourney tied to The Hedge Knight storyline?",
+    "options": ["Tourney at Ashford", "Tourney at Harrenhal", "Tourney at Bitterbridge", "Tourney at Lannisport"],
+    "answer": "Tourney at Ashford"
+  },
+  {
+    "id": "aks-012",
+    "difficulty": "easy",
+    "question": "Which prince is known by the nickname “Breakspear”?",
+    "options": ["Baelor", "Aerion", "Maekar", "Daeron"],
+    "answer": "Baelor"
+  },
+  {
+    "id": "aks-013",
+    "difficulty": "easy",
+    "question": "Which Targaryen prince is nicknamed “Brightflame”?",
+    "options": ["Aerion", "Baelor", "Maekar", "Aemon"],
+    "answer": "Aerion"
+  },
+  {
+    "id": "aks-m74",
+    "difficulty": "medium",
+    "question": "What is the relationship between Steffon and Raymun Fossoway?",
+    "options": ["Cousins", "Brothers", "Father and Son", "Uncle and Nephew"],
+    "answer": "Cousins"
+  },
+  {
+    "id": "aks-014",
+    "difficulty": "easy",
+    "question": "Which prince is Egg’s father?",
+    "options": ["Maekar", "Baelor", "Aerion", "Aerys"],
+    "answer": "Maekar"
+  },
+  {
+    "id": "aks-015",
+    "difficulty": "easy",
+    "question": "What is the name of the talented performer associated with Dunk during the Ashford events?",
+    "options": ["Tanselle", "Lyanna", "Shae", "Ros"],
+    "answer": "Tanselle"
+  },
+  {
+    "id": "aks-018",
+    "difficulty": "easy",
+    "question": "What is Egg’s real first name?",
+    "options": ["Aegon", "Aemon", "Aerys", "Aelor"],
+    "answer": "Aegon"
+  },
+  {
+    "id": "aks-022",
+    "difficulty": "easy",
+    "question": "What network does the series air on in the U.S.?",
+    "options": ["HBO", "AMC", "FX", "Netflix"],
+    "answer": "HBO"
+  },
+  {
+    "id": "aks-049",
+    "difficulty": "hard",
+    "question": "Who plays Ser Duncan in the HBO series?",
+    "options": ["Peter Claffey", "Alfie Allen", "Matt Smith", "Paddy Considine"],
+    "answer": "Peter Claffey"
+  },
+  {
+    "id": "ak-easy-0001",
+    "question": "A Knight of the Seven Kingdoms is a prequel to which TV show?",
+    "options": ["Game of Thrones", "House of the Dragon", "The Witcher", "Vikings"],
+    "answer": "Game of Thrones",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ak-easy-0004",
+    "question": "What is the full title of the show?",
+    "options": [
+      "A Knight of the Seven Kingdoms",
+      "The Hedge Knight",
+      "Dunk and Egg",
+      "Tales of Westeros"
+    ],
+    "answer": "A Knight of the Seven Kingdoms",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aks-050",
+    "difficulty": "hard",
+    "question": "Who plays Egg in the HBO series?",
+    "options": ["Dexter Sol Ansell", "Jack Gleeson", "Alfie Allen", "Isaac Hempstead Wright"],
+    "answer": "Dexter Sol Ansell"
+  },
+  {
+    "id": "aks-051",
+    "difficulty": "hard",
+    "question": "Who is the showrunner credited for the series?",
+    "options": ["Ira Parker", "David Benioff", "D.B. Weiss", "Miguel Sapochnik"],
+    "answer": "Ira Parker"
+  },
+  {
+    "id": "akotsk-001",
+    "question": "Where is Ser Arlan from?",
+    "options": ["Pennytree", "Ashford", "Duskendale", "Summerhall"],
+    "answer": "Pennytree",
+    "difficulty": "easy"
+  },
+  {
+    "id": "akotsk-003",
+    "question": "Which of these is NOT one of Dunk’s champions in the trial?",
+    "options": ["Raymun Fossoway", "Baelor Targaryen", "Lyonel Baratheon", "Steffon Fossoway"],
+    "answer": "Steffon Fossoway",
+    "difficulty": "medium"
+  },
+  {
+    "id": "akotsk-004",
+    "question": "How many lances did Baelor say Ser Arlan broke in their joust?",
+    "options": ["3", "4", "6", "7"],
+    "answer": "4",
+    "difficulty": "hard"
+  },
+  {
+    "id": "akotsk-005",
+    "question": "Which of these is NOT one of the Targaryens mentioned in the show?",
+    "options": ["Baelor Targaryen", "Aerion Targaryen", "Maekar Targaryen", "Rhaenyra Targaryen"],
+    "answer": "Rhaenyra Targaryen",
+    "difficulty": "medium"
+  },
+  {
+    "id": "akotsk-006",
+    "question": "How many kingdoms did Egg say there are at the end of the show?",
+    "options": ["7", "8", "9", "10"],
+    "answer": "9",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aks-e94",
+    "difficulty": "hard",
+    "question": "Which knight from the Kingsguard questions Dunk's legitimacy?",
+    "options": ["Ser Roland", "Ser Arthur", "Ser Travers", "Ser Donnel"],
+    "answer": "Ser Roland"
+  },
+  {
+    "id": "aks-e52",
+    "difficulty": "hard",
+    "question": "Which animal is featured on the puppet show that Dunk watches in the first episode?",
+    "options": ["A dragon", "A lion", "A wolf", "A stag"],
+    "answer": "A dragon"
+  },
+  {
+    "id": "aks-e93",
+    "difficulty": "hard",
+    "question": "What is the Fossoway home castle called?",
+    "options": ["Cider Hall", "Highgarden", "Storm's End", "Sunspear"],
+    "answer": "Cider Hall"
+  },
+  {
+    "id": "aks-e70",
+    "difficulty": "hard",
+    "question": "What is the Fossoway family's sigil?",
+    "options": ["An apple", "A rose", "A sun", "A dragon"],
+    "answer": "An apple"
+  },
+  {
+    "id": "aks-h19",
+    "difficulty": "hard",
+    "question": "In the show, who buys Sweetfoot back for Dunk?",
+    "options": ["Raymun Fossoway", "Prince Baelor", "Egg", "Steely Pate"],
+    "answer": "Raymun Fossoway"
+  },
+  {
+    "id": "aks-h51",
+    "difficulty": "hard",
+    "question": "How much does Steely Pate charge Dunk to reinforce his oaken shield with a steel rim and backing bands?",
+    "options": ["A copper penny", "Two silver stags", "Two copper pennies", "He does it for free"],
+    "answer": "A copper penny"
+  },
+  {
+    "id": "aks-h34",
+    "difficulty": "hard",
+    "question": "In the show, how many stags does Steely Pate initially ask for Dunk's armor?",
+    "options": ["600 stags", "800 stags", "500 stags", "1000 stags"],
+    "answer": "800 stags"
+  },
+  {
+    "id": "aks-h06",
+    "difficulty": "hard",
+    "question": "What is the name of the City Watchman who kills Rafe in Dunk's flashbacks?",
+    "options": ["Alester", "Janos", "Bronn", "Meryn"],
+    "answer": "Alester"
+  },
+  {
+    "id": "aks-h02",
+    "difficulty": "hard",
+    "question": "In the TV series, who are the two mistresses of Ser Manfred Dondarrion who mock Dunk in the first episode?",
+    "options": ["Red and Beony", "Lia and Beony", "Red and Hila", "Rose and Daisy"],
+    "answer": "Red and Beony"
+  },
+  {
+    "id": "akotsk-007",
+    "question": "Which of these is NOT an episode title in Season 1?",
+    "options": ["The Hedge Knight", "Hard Salt Beef", "The Squire", "The Laughing Storm"],
+    "answer": "The Laughing Storm",
+    "difficulty": "hard"
+  },
+  {
+    "id": "akotsk-008",
+    "question": "What’s the name of the woman Raymun marries?",
+    "options": ["Rowan", "Beony", "Rina", "Rhae"],
+    "answer": "Rowan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "akotsk-009",
+    "question": "What was the former profession of the woman Raymun marries?",
+    "options": ["Prostitute", "Puppeteer", "Seamstress", "Tavern singer"],
+    "answer": "Prostitute",
+    "difficulty": "medium"
+  }
+]
