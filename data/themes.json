@@ -53,7 +53,7 @@
     "category": "Countries",
     "description": "A country trivia theme covering the UK’s nations, cities, history, monarchy, culture, and notable institutions. It is broad, familiar, and easy to build into pub-style quiz rounds.",
     "image": "",
-    "questionFile": "data/united-kingdom.txt"
+    "questionFile": "data/uk.txt"
   },
   {
     "slug": "finance-and-investing",
@@ -125,7 +125,7 @@
     "category": "Games",
     "description": "A deep role-playing game based on Dungeons & Dragons, packed with choices, companions, and branching consequences. It is driven by strategy, story freedom, and character builds.",
     "image": "",
-    "questionFile": "data/baldurs-gate-3.txt"
+    "questionFile": "data/bg3.txt"
   },
   {
     "slug": "bloodborne",
@@ -133,7 +133,7 @@
     "category": "Games",
     "description": "A gothic action RPG known for aggressive combat, cosmic horror, and the nightmare city of Yharnam. It remains one of the most distinctive modern Soulslike games.",
     "image": "",
-    "questionFile": "data/bloodborne.txt"
+    "questionFile": "data/borne.txt"
   },
   {
     "slug": "clair-obscur-expedition-33",
@@ -141,7 +141,7 @@
     "category": "Games",
     "description": "A fantasy RPG with a striking art style and a story built around fate, loss, and a desperate expedition. It stands out as a fresh modern title with strong visual identity.",
     "image": "",
-    "questionFile": "data/clair-obscur-expedition-33.txt"
+    "questionFile": "data/claire.txt"
   },
   {
     "slug": "demon-souls",
@@ -149,7 +149,7 @@
     "category": "Games",
     "description": "A punishing action RPG built around difficult combat, atmospheric worlds, and foundational Souls mechanics. It is remembered for its bosses, archstones, and haunting tone.",
     "image": "",
-    "questionFile": "data/demon-souls.txt"
+    "questionFile": "data/souls.txt"
   },
   {
     "slug": "elden-ring",
@@ -181,7 +181,7 @@
     "category": "Games",
     "description": "A dark action RPG inspired by Pinocchio, blending Belle Époque style with tough combat and twisted lore. It stands out for its atmosphere, weapon system, and boss design.",
     "image": "",
-    "questionFile": "data/lies-of-p.txt"
+    "questionFile": "data/lies.txt"
   },
   {
     "slug": "minecraft",
@@ -205,7 +205,7 @@
     "category": "Games",
     "description": "A story-rich western action game about outlaws, loyalty, and survival during the end of the Wild West. It is known for its open world, emotional depth, and unforgettable characters.",
     "image": "",
-    "questionFile": "data/red-dead-redemption-2.txt"
+    "questionFile": "data/rdr2.txt"
   },
   {
     "slug": "resident-evil-4",
@@ -533,7 +533,7 @@
     "category": "TV/Series",
     "description": "A fantasy prequel set in the Targaryen era, built around succession conflict, dragon power, and family betrayal. It expands the world of Westeros through civil war and legacy.",
     "image": "",
-    "questionFile": "data/house-of-the-dragon.txt"
+    "questionFile": "data/hod.txt"
   },
   {
     "slug": "how-i-met-your-mother",
@@ -906,6 +906,55 @@
     "description": "Trivia on Wisteria Lane, secrets, family drama, and iconic characters from Desperate Housewives.",
     "category": "TV/Series",
     "questionFile": "data/dhw.txt"
+  },
+    {
+    "slug": "cyberpunk-2077",
+    "title": "Cyberpunk 2077",
+    "category": "Games",
+    "description": "A futuristic open-world RPG set in Night City, focused on mercenaries, cyberware, gangs, and branching storylines in a brutal high-tech world.",
+    "questionFile": "data/2077.txt"
+  },
+  {
+    "slug": "buffy-the-vampire-slayer",
+    "title": "Buffy the Vampire Slayer",
+    "category": "TV/Series",
+    "description": "A cult supernatural series about a teenage slayer balancing school, friendships, romance, and life-or-death battles against vampires and other monsters.",
+    "questionFile": "data/buffy.tx"
+  },
+  {
+    "slug": "marvels-spider-man",
+    "title": "Marvels Spider-Man",
+    "category": "Games",
+    "description": "A superhero action game focused on Peter Parker’s life in New York, featuring villains, gadgets, suits, combat, and major story moments from the game.",
+    "questionFile": "data/spider.txt"
+  },
+  {
+    "slug": "spartacus",
+    "title": "Spartacus",
+    "category": "TV/Series",
+    "description": "A historical action drama centered on gladiators, rebellion, betrayal, and brutal power struggles in ancient Rome.",
+    "questionFile": "data/spartacus.txt"
+  },
+  {
+    "slug": "assassins-creed-valhalla",
+    "title": "Assassins Creed Valhalla",
+    "category": "Games",
+    "description": "An open-world action RPG following Eivor through Viking raids, alliances, mythology, and conquest in ninth-century England and beyond.",
+    "questionFile": "data/valhalla.txt"
+  },
+  {
+    "slug": "suits",
+    "title": "Suits",
+    "category": "TV/Series",
+    "description": "A legal drama about high-stakes cases, corporate power plays, sharp dialogue, and the secret at the center of Mike Ross and Harvey Specter’s partnership.",
+    "questionFile": "data/suits.txt"
+  },
+  {
+    "slug": "house",
+    "title": "House",
+    "category": "TV/Series",
+    "description": "A medical drama focused on the brilliant but abrasive Dr. Gregory House as he solves unusual cases with his diagnostic team.",
+    "questionFile": "data/house.txt"
   },
   {
     "title": "True Crime",
