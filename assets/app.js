@@ -79,7 +79,7 @@ if (newlyAddedList) {
   card.className = "card";
   card.href = `category.html?category=${encodeURIComponent("Newly Added")}`;
   card.innerHTML = `
-    <h3>Coming Soon</h3>
+    <h3>Newly Added</h3>
     <p>${matchedNewThemes.length} theme(s)</p>
   `;
   newlyAddedList.appendChild(card);
