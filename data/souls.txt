@@ -1,0 +1,800 @@
+[
+  {
+    "id": "ds-001",
+    "difficulty": "easy",
+    "question": "What is the hub area called in Demon’s Souls?",
+    "options": ["The Nexus", "Firelink Shrine", "Majula", "Roundtable Hold"],
+    "answer": "The Nexus"
+  },
+  {
+    "id": "ds-002",
+    "difficulty": "easy",
+    "question": "What is the name of the kingdom where Demon’s Souls takes place?",
+    "options": ["Boletaria", "Lordran", "Lothric", "Yharnam"],
+    "answer": "Boletaria"
+  },
+  {
+    "id": "ds-003",
+    "difficulty": "easy",
+    "question": "What resource is used as both currency and experience in Demon’s Souls?",
+    "options": ["Souls", "Blood Echoes", "Runes", "Ergo"],
+    "answer": "Souls"
+  },
+  {
+    "id": "ds-004",
+    "difficulty": "easy",
+    "question": "Who helps you level up in The Nexus?",
+    "options": ["The Maiden in Black", "The Doll", "Emerald Herald", "Melina"],
+    "answer": "The Maiden in Black"
+  },
+  {
+    "id": "ds-007",
+    "difficulty": "easy",
+    "question": "What happens to you when you die in Demon’s Souls?",
+    "options": ["You return in Soul Form", "You permanently lose your character", "You respawn with full Body Form", "You restart the entire game"],
+    "answer": "You return in Soul Form"
+  },
+  {
+    "id": "ds-010",
+    "difficulty": "easy",
+    "question": "Which item is commonly used to restore Body Form?",
+    "options": ["Stone of Ephemeral Eyes", "Healing Stone", "Rune Arc", "Stone of Ember"],
+    "answer": "Stone of Ephemeral Eyes"
+  },
+  {
+    "id": "ds-014",
+    "difficulty": "easy",
+    "question": "What is the first major boss in Boletarian Palace (1-1)?",
+    "options": ["Phalanx", "Tower Knight", "Penetrator", "Flamelurker"],
+    "answer": "Phalanx"
+  },
+  {
+    "id": "ds-015",
+    "difficulty": "easy",
+    "question": "Which boss is a huge armored knight fought on a bridge-like arena in Boletaria (1-2)?",
+    "options": ["Tower Knight", "Phalanx", "Old Hero", "Adjudicator"],
+    "answer": "Tower Knight"
+  },
+  {
+    "id": "ds-016",
+    "difficulty": "easy",
+    "question": "What item type is used to heal in Demon’s Souls?",
+    "options": ["Moon Grass", "Estus Flask", "Blood Vials", "Pulse Cells"],
+    "answer": "Moon Grass"
+  },
+  {
+    "id": "ds-017",
+    "difficulty": "easy",
+    "question": "What is the 'World' structure of Demon’s Souls called?",
+    "options": ["Archstones", "Realms", "Kingdoms", "Chapters"],
+    "answer": "Archstones"
+  },
+  {
+    "id": "ds-018",
+    "difficulty": "hard",
+    "question": "Which world is the mine and tunnel area full of miners and lava?",
+    "options": ["Stonefang Tunnel", "Valley of Defilement", "Shrine of Storms", "Tower of Latria"],
+    "answer": "Stonefang Tunnel"
+  },
+  {
+    "id": "ds-019",
+    "difficulty": "hard",
+    "question": "Which world is the prison area with mind flayer-like enemies?",
+    "options": ["Tower of Latria", "Stonefang Tunnel", "Boletarian Palace", "Shrine of Storms"],
+    "answer": "Tower of Latria"
+  },
+  {
+    "id": "ds-020",
+    "difficulty": "hard",
+    "question": "Which world is the swampy, plague-ridden area?",
+    "options": ["Valley of Defilement", "Stonefang Tunnel", "Tower of Latria", "Shrine of Storms"],
+    "answer": "Valley of Defilement"
+  },
+  {
+    "id": "ds-021",
+    "difficulty": "hard",
+    "question": "Which world is the stormy coast and skeleton-filled area?",
+    "options": ["Shrine of Storms", "Tower of Latria", "Stonefang Tunnel", "Valley of Defilement"],
+    "answer": "Shrine of Storms"
+  },
+  {
+    "id": "ds-024",
+    "difficulty": "easy",
+    "question": "Which world is the starting castle area?",
+    "options": ["Boletarian Palace", "Stonefang Tunnel", "Shrine of Storms", "Tower of Latria"],
+    "answer": "Boletarian Palace"
+  },
+  {
+    "id": "ds-025",
+    "difficulty": "easy",
+    "question": "What is the name of the blacksmith in the Nexus?",
+    "options": ["Boldwin", "Andre", "Hewg", "McDuff"],
+    "answer": "Boldwin"
+  },
+  {
+    "id": "ds-026",
+    "difficulty": "easy",
+    "question": "What is the name of the more advanced blacksmith found in Stonefang Tunnel?",
+    "options": ["Ed", "Boldwin", "Rickert", "Vamos"],
+    "answer": "Ed"
+  },
+  {
+    "id": "ds-027",
+    "difficulty": "easy",
+    "question": "Which stat most increases your maximum equip burden and lets you wear heavier armor?",
+    "options": ["Endurance", "Vitality", "Intelligence", "Faith"],
+    "answer": "Endurance"
+  },
+  {
+    "id": "ds-028",
+    "difficulty": "easy",
+    "question": "What is the name of the game's online invasion mechanic enemy when another player invades you?",
+    "options": ["Black Phantom", "Hunter", "Invader of Grace", "Red Spirit"],
+    "answer": "Black Phantom"
+  },
+  {
+    "id": "ds-029",
+    "difficulty": "easy",
+    "question": "What is the name of the spellcasting school primarily tied to Intelligence?",
+    "options": ["Magic", "Miracles", "Incantations", "Hexes"],
+    "answer": "Magic"
+  },
+  {
+    "id": "ds-030",
+    "difficulty": "easy",
+    "question": "What is the spellcasting school primarily tied to Faith?",
+    "options": ["Miracles", "Sorceries", "Hexes", "Alchemy"],
+    "answer": "Miracles"
+  },
+
+  {
+    "id": "ds-031",
+    "difficulty": "hard",
+    "question": "What is the name of the boss in Boletarian Palace (1-3) who is fought in a courtyard with soldiers?",
+    "options": ["Penetrator", "Tower Knight", "Phalanx", "Old King Allant"],
+    "answer": "Penetrator"
+  },
+  {
+    "id": "ds-032",
+    "difficulty": "hard",
+    "question": "Which enemy drops the Ronin's Ring when defeated?",
+    "options": ["Scirvir", "Patches", "Old King Allant", "Ostrava"],
+    "answer": "Scirvir"
+  },
+  {
+    "id": "ds-033",
+    "difficulty": "hard",
+    "question": "How many souls is the Ring of Avarice sold for?",
+    "options": ["50,000", "10,000", "20,000", "100,000"],
+    "answer": "50,000"
+  },
+  {
+    "id": "ds-034",
+    "difficulty": "hard",
+    "question": "How many souls do you gain by consuming the Beast Demon Soul?",
+    "options": ["250,000", "100,000", "200,000", "150,000"],
+    "answer": "200,000"
+  },
+  {
+    "id": "ds-035",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a Demon Soul (boss soul) in Demon's Souls?",
+    "options": ["Hard Demon Soul", "Iron Demon Soul", "Dragon Demon Soul", "Abyss Demon Soul"],
+    "answer": "Abyss Demon Soul"
+  },
+  {
+    "id": "ds-036",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a Demon Soul (boss soul) in Demon's Souls?",
+    "options": ["Lead Demon Soul", "Grey Demon Soul", "Writhing Demon Soul", "Blood Echo Demon Soul"],
+    "answer": "Blood Echo Demon Soul"
+  },
+  {
+    "id": "ds-032",
+    "difficulty": "hard",
+    "question": "Which NPC ally can assist in the Penetrator fight if rescued earlier?",
+    "options": ["Biorr", "Ostrava", "Patches", "Satsuki"],
+    "answer": "Biorr"
+  },
+  {
+    "id": "ds-033",
+    "difficulty": "medium",
+    "question": "Who is the noble knight you can encounter repeatedly in Boletaria with a tragic questline?",
+    "options": ["Ostrava", "Biorr", "Ed", "Boldwin"],
+    "answer": "Ostrava"
+  },
+  {
+    "id": "ds-034",
+    "difficulty": "medium",
+    "question": "What is the name of the boss in Boletarian Palace (1-4)?",
+    "options": ["Old King Allant", "Penetrator", "Storm King", "Old Hero"],
+    "answer": "Old King Allant"
+  },
+  {
+    "id": "ds-035",
+    "difficulty": "hard",
+    "question": "Which boss is fought in Stonefang Tunnel (2-2) and is famous for aggression?",
+    "options": ["Flamelurker", "Armor Spider", "Dragon God", "Adjudicator"],
+    "answer": "Flamelurker"
+  },
+  {
+    "id": "ds-036",
+    "difficulty": "hard",
+    "question": "Which boss is fought in Stonefang Tunnel (2-1)?",
+    "options": ["Armor Spider", "Flamelurker", "Dragon God", "Tower Knight"],
+    "answer": "Armor Spider"
+  },
+  {
+    "id": "ds-037",
+    "difficulty": "medium",
+    "question": "Which boss is the final boss of Stonefang Tunnel (2-3) and is a giant demon?",
+    "options": ["Dragon God", "Flamelurker", "Maneater", "Fool’s Idol"],
+    "answer": "Dragon God"
+  },
+  {
+    "id": "ds-039",
+    "difficulty": "medium",
+    "question": "What is the key trick to preventing Fool’s Idol from reviving after you defeat her?",
+    "options": ["Kill the sorcerer worshipper", "Use only fire damage", "Break her crown", "Fight in Soul Form only"],
+    "answer": "Kill the sorcerer worshipper"
+  },
+  {
+    "id": "ds-040",
+    "difficulty": "medium",
+    "question": "Which boss is fought on a narrow bridge-like walkway in Tower of Latria (3-2) and is known as a two-enemy battle?",
+    "options": ["Maneater", "Old Hero", "Leechmonger", "Dirty Colossus"],
+    "answer": "Maneater"
+  },
+  {
+    "id": "ds-046",
+    "difficulty": "medium",
+    "question": "What is the name of the special sword used to defeat the Storm King efficiently?",
+    "options": ["Storm Ruler", "Soul Reaver", "Wind Cutter", "King’s Blade"],
+    "answer": "Storm Ruler"
+  },
+  {
+    "id": "ds-051",
+    "difficulty": "medium",
+    "question": "What is the name of Maiden Astraea’s devoted knight protector?",
+    "options": ["Garl Vinland", "Biorr", "Ostrava", "Satsuki"],
+    "answer": "Garl Vinland"
+  },
+  {
+    "id": "ds-053",
+    "difficulty": "medium",
+    "question": "What is the mechanic that shifts each world toward harder enemies or easier outcomes based on actions?",
+    "options": ["Tendency", "Insight", "Humanity", "Resonance"],
+    "answer": "Tendency"
+  },
+  {
+    "id": "ds-055",
+    "difficulty": "medium",
+    "question": "What happens to World Tendency when you die in Body Form within a world?",
+    "options": ["It shifts toward Black", "It shifts toward White", "It resets to Neutral", "It locks permanently"],
+    "answer": "It shifts toward Black"
+  },
+  {
+    "id": "ds-056",
+    "difficulty": "medium",
+    "question": "What happens to World Tendency after defeating a boss in a world?",
+    "options": ["It shifts toward White", "It shifts toward Black", "It becomes random", "It only changes online"],
+    "answer": "It shifts toward White"
+  },
+  {
+    "id": "ds-059",
+    "difficulty": "medium",
+    "question": "What is the name of the spell teacher rescued from the Tower of Latria who teaches sorceries?",
+    "options": ["Sage Freke", "Saint Urbain", "Yuria", "Patches"],
+    "answer": "Sage Freke"
+  },
+  {
+    "id": "ds-060",
+    "difficulty": "medium",
+    "question": "What is the name of the miracle teacher rescued from Shrine of Storms who teaches miracles?",
+    "options": ["Saint Urbain", "Sage Freke", "Yuria", "Biorr"],
+    "answer": "Saint Urbain"
+  },
+  {
+    "id": "ds-062",
+    "difficulty": "hard",
+    "question": "Which NPC is a sly trickster who can push you into pits and appears across multiple worlds?",
+    "options": ["Patches", "Ostrava", "Biorr", "Ed"],
+    "answer": "Patches"
+  },
+  {
+    "id": "ds-069",
+    "difficulty": "hard",
+    "question": "Which NPC can invade you as a Black Phantom in certain tendency conditions and is tied to a katana and honor duel theme?",
+    "options": ["Satsuki", "Ostrava", "Biorr", "Boldwin"],
+    "answer": "Satsuki"
+  },
+  {
+    "id": "ds-070",
+    "difficulty": "hard",
+    "question": "What is the name of the iconic katana associated with Satsuki’s questline?",
+    "options": ["Makoto", "Uchigatana", "Chaos Blade", "Murakumo"],
+    "answer": "Makoto"
+  },
+  {
+    "id": "ds-072",
+    "difficulty": "hard",
+    "question": "What is the item used to place your summon sign and help other players as a Blue Phantom?",
+    "options": ["Blue Eye Stone", "Black Eye Stone", "Red Eye Orb", "Cracked Eye Stone"],
+    "answer": "Blue Eye Stone"
+  },
+  {
+    "id": "ds-073",
+    "difficulty": "hard",
+    "question": "What is the item used to invade other players as a Black Phantom in Demon’s Souls?",
+    "options": ["Black Eye Stone", "Blue Eye Stone", "White Sign Soapstone", "Cracked Red Eye Orb"],
+    "answer": "Black Eye Stone"
+  },
+  {
+    "id": "ds-074",
+    "difficulty": "hard",
+    "question": "Which NPC is a witch you rescue who teaches powerful fire sorceries in the Nexus?",
+    "options": ["Yuria the Witch", "Surie the Witch", "Selen the Witch", "Saint Urbain"],
+    "answer": "Yuria the Witch"
+  },
+
+  {
+    "id": "ds-077",
+    "difficulty": "hard",
+    "question": "Which two swords combine (in concept) to form the Northern Regalia?",
+    "options": ["Demonbrandt and Soulbrandt", "Storm Ruler and Demonbrandt", "Blueblood Sword and Makoto", "Dragonbrandt and Soulbrandt"],
+    "answer": "Demonbrandt and Soulbrandt"
+  },
+  {
+    "id": "ds-078",
+    "difficulty": "hard",
+    "question": "Which weapon is the huge ultra-greatsword found in Stonefang Tunnel and is famous for its massive strength requirement?",
+    "options": ["Dragon Bone Smasher", "Storm Ruler", "Blueblood Sword", "Demonbrandt"],
+    "answer": "Dragon Bone Smasher"
+  },
+  {
+    "id": "ds-081",
+    "difficulty": "hard",
+    "question": "Which boss soul is used to create the Blueblood Sword?",
+    "options": ["Maiden Astraea’s Demon Soul", "Storm Demon’s Soul", "Dragon Demon’s Soul", "Penetrator’s Demon Soul"],
+    "answer": "Maiden Astraea’s Demon Soul"
+  },
+  {
+    "id": "ds-086",
+    "difficulty": "hard",
+    "question": "What is the name of the ring that increases max HP in Soul Form?",
+    "options": ["Cling Ring", "Ring of Favor", "Life Ring", "Tears Ring"],
+    "answer": "Cling Ring"
+  },
+  {
+    "id": "ds-087",
+    "difficulty": "hard",
+    "question": "Which ring greatly boosts magic damage but reduces magic defense?",
+    "options": ["Ring of Magical Sharpness", "Cling Ring", "Flame Resistance Ring", "Thief Ring"],
+    "answer": "Ring of Magical Sharpness"
+  },
+  {
+    "id": "ds-088",
+    "difficulty": "hard",
+    "question": "Which ring reduces enemy detection range and makes stealth approaches easier?",
+    "options": ["Thief Ring", "Cling Ring", "Ring of Great Strength", "Regenerator’s Ring"],
+    "answer": "Thief Ring"
+  },
+  {
+    "id": "ds-089",
+    "difficulty": "hard",
+    "question": "Which ring slowly regenerates HP over time?",
+    "options": ["Regenerator’s Ring", "Thief Ring", "Cling Ring", "Graverobber’s Ring"],
+    "answer": "Regenerator’s Ring"
+  },
+  {
+    "id": "ds-094",
+    "difficulty": "expert",
+    "question": "What is the name of the powerful sword found in Boletaria that scales with White Character Tendency?",
+    "options": ["Demonbrandt", "Moonbrandt", "Soulbrandt", "Stormbrandt"],
+    "answer": "Demonbrandt"
+  },
+  {
+    "id": "ds-095",
+    "difficulty": "expert",
+    "question": "What is the name of the sword that scales with Black Character Tendency?",
+    "options": ["Soulbrandt", "Stormbrandt", "Moonbrandt", "Demonbrandt"],
+    "answer": "Soulbrandt"
+  },
+  {
+    "id": "ds-096",
+    "difficulty": "expert",
+    "question": "Which weapon is formed when Demonbrandt and Soulbrandt are combined through advanced forging?",
+    "options": ["Northern Regalia", "Blueblood Regalia", "Dragon Regalia", "Storm Regalia"],
+    "answer": "Northern Regalia"
+  },
+  {
+    "id": "ds-098",
+    "difficulty": "expert",
+    "question": "Which boss soul must be given to Blacksmith Ed to unlock his ability to craft many boss weapons?",
+    "options": ["Flamelurker’s Demon Soul", "Storm Demon’s Soul", "Dragon Demon’s Soul", "Old Monk’s Demon Soul"],
+    "answer": "Flamelurker’s Demon Soul"
+  },
+  {
+    "id": "ds-100",
+    "difficulty": "expert",
+    "question": "What does the False King Allant boss famously do that permanently affects you if you’re hit?",
+    "options": ["Drains a soul level", "Breaks your weapon permanently", "Continously deals damage", "Resets your world tendency"],
+    "answer": "Drains a soul level"
+  },
+  {
+    "id": "ds-102",
+    "difficulty": "expert",
+    "question": "What does Mephistopheles ask you to do as part of her questline?",
+    "options": ["Assassinate NPCs in the Nexus", "Free the Old One", "Join the Old Monk as a boss", "Destroy all Archstones"],
+    "answer": "Assassinate NPCs in the Nexus"
+  },
+  {
+    "id": "ds-103",
+    "difficulty": "expert",
+    "question": "Which ring increases maximum equip burden dramatically, enabling heavy armor builds?",
+    "options": ["Ring of Great Strength", "Cling Ring", "Thief Ring", "Regenerator’s Ring"],
+    "answer": "Ring of Great Strength"
+  },
+  {
+    "id": "ds-104",
+    "difficulty": "expert",
+    "question": "Which spell is notorious for extremely high damage and is a signature endgame mage nuke?",
+    "options": ["Firestorm", "Soul Arrow", "Warding", "Cure"],
+    "answer": "Firestorm"
+  },
+  {
+    "id": "ds-001",
+    "difficulty": "easy",
+    "question": "What is the Phalanx boss vulnerable to?",
+    "options": ["Fire", "Poison", "Magic", "Bleed"],
+    "answer": "Fire"
+  },
+  {
+    "id": "ds-002",
+    "difficulty": "easy",
+    "question": "How many distinct realms/worlds are in Demon's Souls?",
+    "options": ["4", "5", "6", "7"],
+    "answer": "5"
+  },
+  {
+    "id": "ds-003",
+    "difficulty": "hard",
+    "question": "Which of these is NOT one of the Archstones (worlds)?",
+    "options": ["Boletarian Palace", "Stonefang Tunnel", "Tower of Latria", "Prison of Hope"],
+    "answer": "Prison of Hope"
+  },
+
+  {
+    "id": "ds-004",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a boss in Demon's Souls?",
+    "options": ["Tower Knight", "Flamelurker", "Old Hero", "Ornstein"],
+    "answer": "Ornstein"
+  },
+  {
+    "id": "ds-005",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a boss in Demon's Souls?",
+    "options": ["Penetrator", "Fool's Idol", "Adjudicator", "Lady Maria"],
+    "answer": "Lady Maria"
+  },
+  {
+    "id": "ds-006",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a boss in Demon's Souls?",
+    "options": ["Phalanx", "Armor Spider", "Maneater", "Sulyvahn"],
+    "answer": "Sulyvahn"
+  },
+  {
+    "id": "ds-006",
+    "difficulty": "hard",
+    "question": "What is the primary stat that the 'Blueblood Sword' scales with to increase its damage?",
+    "options": ["Strength", "Dexterity", "Luck", "Faith"],
+    "answer": "Luck"
+  },
+  {
+    "id": "ds-025",
+    "difficulty": "medium",
+    "question": "Which NPC sells the 'Ring of Avarice'?",
+    "options": ["Once Royal Mistress", "Patches, the Hyena", "Filthy Woman", "Graverobber Blige"],
+    "answer": "Once Royal Mistress"
+  },
+  {
+    "id": "ds-011",
+    "difficulty": "hard",
+    "question": "What miracle is learned from the soul of the Dragon God?",
+    "options": ["God's Wrath", "Firestorm", "Anti-Magic Field", "Second Chance"],
+    "answer": "God's Wrath"
+  },
+  {
+    "id": "ds-007",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a location in Demon's Souls?",
+    "options": ["The Nexus", "Shrine of Storms", "Tower of Latria", "Leyndell"],
+    "answer": "Leyndell"
+  },
+
+  {
+    "id": "ds-008",
+    "difficulty": "easy",
+    "question": "What’s the best way to defeat the Tower Knight?",
+    "options": ["Attack his ankles", "Only firebombs", "Shoot the shield until it breaks", "Attack his eyes"],
+    "answer": "Attack his ankles"
+  },
+
+  {
+    "id": "ds-009",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a type of healing grass?",
+    "options": ["Crescent Moon Grass", "Half Moon Grass", "Late Moon Grass", "Sunlight Grass"],
+    "answer": "Sunlight Grass"
+  },
+  {
+    "id": "ds-010",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a type of healing grass?",
+    "options": ["New Moon Grass", "Full Moon Grass", "Dark Moon Grass", "Grey Moon Grass"],
+    "answer": "Grey Moon Grass"
+  },
+
+  {
+    "id": "ds-011",
+    "difficulty": "hard",
+    "question": "How many HP does Crescent Moon Grass restore?",
+    "options": ["80", "120", "200", "240"],
+    "answer": "120"
+  },
+  {
+    "id": "ds-012",
+    "difficulty": "hard",
+    "question": "How many HP does Half Moon Grass restore?",
+    "options": ["120", "200", "240", "400"],
+    "answer": "240"
+  },
+  {
+    "id": "ds-013",
+    "difficulty": "hard",
+    "question": "How many HP does Late Moon Grass restore?",
+    "options": ["240", "320", "400", "600"],
+    "answer": "400"
+  },
+
+  {
+    "id": "ds-014",
+    "difficulty": "easy",
+    "question": "Which of these is NOT an NPC in Demon's Souls?",
+    "options": ["Stockpile Thomas", "Maiden in Black", "Blacksmith Ed", "Solaire of Astora"],
+    "answer": "Solaire of Astora"
+  },
+  {
+    "id": "ds-015",
+    "difficulty": "easy",
+    "question": "Who is the NPC vendor and item storage manager in the Nexus?",
+    "options": ["Stockpile Thomas", "Patches", "Stockpile Peter", "Martha"],
+    "answer": "Stockpile Thomas"
+  },
+
+  {
+    "id": "ds-016",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a weapon in Demon's Souls?",
+    "options": ["Blueblood Sword", "Demonbrandt", "Dragon Bone Smasher", "Blades of Chaos"],
+    "answer": "Blades of Chaos"
+  },
+
+  {
+    "id": "ds-017",
+    "difficulty": "hard",
+    "question": "When did the original Demon's Souls release (PS3)?",
+    "options": ["2007", "2009", "2011", "2013"],
+    "answer": "2009"
+  },
+  {
+    "id": "ds-018",
+    "difficulty": "hard",
+    "question": "When did the Demon's Souls remake release (PS5)?",
+    "options": ["2018", "2019", "2020", "2022"],
+    "answer": "2020"
+  },
+
+  {
+    "id": "ds-019",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a class in Demon's Souls?",
+    "options": ["Royalty", "Temple Knight", "Thief", "Samurai"],
+    "answer": "Samurai"
+  },
+  {
+    "id": "ds-020",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a class in Demon's Souls?",
+    "options": ["Magician", "Priest", "Hunter", "Necromancer"],
+    "answer": "Necromancer"
+  },
+  {
+    "id": "ds-021",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a class in Demon's Souls?",
+    "options": ["Knight", "Soldier", "Barbarian", "Warlock"],
+    "answer": "Warlock"
+  },
+
+  {
+    "id": "ds-022",
+    "difficulty": "medium",
+    "question": "Which of these is NOT a spell in Demon's Souls?",
+    "options": ["Soul Arrow", "Fireball", "Warding", "Crystalball"],
+    "answer": "Crystalball"
+  },
+  {
+    "id": "ds-023",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a stat in Demon's Souls?",
+    "options": ["Vitality", "Endurance", "Luck", "Charisma"],
+    "answer": "Charisma"
+  },
+
+  {
+    "id": "ds-024",
+    "difficulty": "medium",
+    "question": "When helping another player online, what is your summoned form called?",
+    "options": ["Blue Phantom", "Red Phantom", "Black Phantom", "Golden Phantom"],
+    "answer": "Blue Phantom"
+  },
+
+  {
+    "id": "ds-025",
+    "difficulty": "easy",
+    "question": "What item type do you use to cast magic spells?",
+    "options": ["Catalyst", "Talisman", "Bow", "Shield"],
+    "answer": "Catalyst"
+  },
+  {
+    "id": "ds-026",
+    "difficulty": "easy",
+    "question": "What item type do you use to cast miracles?",
+    "options": ["Talisman", "Catalyst", "Wand", "Chime"],
+    "answer": "Talisman"
+  },
+
+  {
+    "id": "ds-027",
+    "difficulty": "hard",
+    "question": "Which of these is NOT an enemy type found in Demon's Souls?",
+    "options": ["Fat Official", "Mind Flayer", "Skeleton", "Lurker"],
+    "answer": "Lurker"
+  },
+  {
+    "id": "ds-049",
+    "difficulty": "hard",
+    "question": "Which armor set is worn by Biorr of the Twin Fangs?",
+    "options": ["Fluted Armor", "Brushwood Armor", "Gloom Armor", "Dull Gold Armor"],
+    "answer": "Brushwood Armor"
+  },
+  {
+    "id": "ds-029",
+    "difficulty": "medium",
+    "question": "What happens if you kill the Maiden in Black at the end of the game?",
+    "options": ["You get the 'bad' ending", "You get the 'good' ending", "She respawns immediately", "Nothing happens"],
+    "answer": "You get the 'bad' ending"
+  },
+  {
+    "id": "ds-035",
+    "difficulty": "medium",
+    "question": "What is the maximum level a stat can reach in Demon's Souls?",
+    "options": ["50", "99", "712", "100"],
+    "answer": "99"
+  },
+  {
+    "id": "ds-033",
+    "difficulty": "hard",
+    "question": "Which soul is required to learn the 'Second Chance' miracle?",
+    "options": ["Hero Demon Soul", "Swollen Demon Soul", "Grey Demon Soul", "Hard Demon Soul"],
+    "answer": "Hero Demon Soul"
+  },
+  {
+    "id": "ds-027",
+    "difficulty": "hard",
+    "question": "Which item restores MP over time?",
+    "options": ["Fragrant Ring", "Regenerator's Ring", "Eternal Warrior's Ring", "Ring of Sincere Prayer"],
+    "answer": "Fragrant Ring"
+  },
+  {
+    "id": "ds-028",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a ring in Demon's Souls?",
+    "options": ["Cling Ring", "Thief Ring", "Ring of Great Strength", "Havel's Ring"],
+    "answer": "Havel's Ring"
+  },
+  {
+    "id": "ds-029",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a ring in Demon's Souls?",
+    "options": ["Regenerator's Ring", "Fragrant Ring", "Ring of Magical Sharpness", "Soul's Ring"],
+    "answer": "Soul's Ring"
+  },
+  {
+    "id": "ds-easy-0005",
+    "question": "What is the name of the mysterious being that threatens Boletaria?",
+    "options": ["The Old One", "The First Flame", "The Pale King", "The Great One"],
+    "answer": "The Old One",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds-easy-0006",
+    "question": "Which console did the remake of Demon's Souls release on?",
+    "options": ["PlayStation 5", "PlayStation 4", "Xbox One", "Nintendo Switch"],
+    "answer": "PlayStation 5",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds-easy-0023",
+    "question": "Demon's Souls is often credited with helping define which subgenre of games?",
+    "options": ["Soulslike", "Roguelite", "Metroidvania", "Battle royale"],
+    "answer": "Soulslike",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds-med-0044",
+    "question": "Which boss drops the Red Hot Demon's Soul, used to unlock advanced weapon upgrades?",
+    "options": ["Flamelurker", "Dragon God", "Armor Spider", "Tower Knight"],
+    "answer": "Flamelurker",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ds-med-0045",
+    "question": "Which Demon’s Soul is obtained from the Tower Knight?",
+    "options": ["Iron Demon's Soul", "Hard Demon's Soul", "Lead Demon's Soul", "Storm Demon's Soul"],
+    "answer": "Iron Demon's Soul",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ds-hard-0052",
+    "question": "Which boss grants the Lead Demon's Soul when defeated?",
+    "options": ["Phalanx", "Vanguard", "Tower Knight", "Armor Spider"],
+    "answer": "Phalanx",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds-hard-0054",
+    "question": "Which Demon’s Soul is associated with the Fool’s Idol?",
+    "options": ["Doll Demon's Soul", "Yellow Demon's Soul", "Iron Demon's Soul", "Hard Demon's Soul"],
+    "answer": "Doll Demon's Soul",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds-hard-0058",
+    "question": "Which unique NPC is a demigod locked away in Boletaria, testing the player’s worth and wielding the sword Demonbrandt?",
+    "options": ["Old King Doran", "Ostrava of Boletaria", "Biorr of the Twin Fangs", "Doran Vinland"],
+    "answer": "Old King Doran",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds-hard-0059",
+    "question": "Which key is required to access where Old King Doran is found?",
+    "options": ["Mausoleum Key", "Old Hero Key", "Royal Seal Key", "Blood-stained Key"],
+    "answer": "Mausoleum Key",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds-hard-0060",
+    "question": "Which NPC in the Shrine of Storms sells items and can be rescued from a trapped location?",
+    "options": ["Graverobber Blige", "Sparkly, the Crow", "Filthy Woman", "Patches"],
+    "answer": "Graverobber Blige",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ds-expert-0086",
+    "question": "How many areas does each non-Boletarian world typically contain, each ending in a boss fight, in the original game structure?",
+    "options": ["Three", "Four", "Two", "Five"],
+    "answer": "Three",
+    "difficulty": "expert"
+  },
+{
+  "id": "ds-030",
+  "difficulty": "easy",
+  "question": "Who developed Demon's Souls?",
+  "options": ["FromSoftware", "Bluepoint Games", "Capcom", "Bandai Namco"],
+  "answer": "FromSoftware"
+}
+]

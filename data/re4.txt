@@ -1,0 +1,703 @@
+[
+  {
+    "id": "re4-001",
+    "difficulty": "easy",
+    "question": "Who is the main playable protagonist in Resident Evil 4?",
+    "options": ["Chris Redfield", "Leon S. Kennedy", "Jill Valentine", "Claire Redfield"],
+    "answer": "Leon S. Kennedy"
+  },
+  {
+    "id": "re4-002",
+    "difficulty": "easy",
+    "question": "What is the name of the U.S. President’s daughter you are sent to rescue?",
+    "options": ["Ashley Graham", "Sherry Birkin", "Moira Burton", "Rose Winters"],
+    "answer": "Ashley Graham"
+  },
+  {
+    "id": "re4-003",
+    "difficulty": "easy",
+    "question": "Where does the early part of Resident Evil 4 take place?",
+    "options": ["A remote village in Spain", "A remote village in Portugal", "A remote village in Brazil", "A subway in London"],
+    "answer": "A remote village in Spain"
+  },
+  {
+    "id": "re4-004",
+    "difficulty": "easy",
+    "question": "What is the name of the parasite that infects many enemies in the game?",
+    "options": ["Las Plagas", "T-Virus", "G-Virus", "Uroboros"],
+    "answer": "Las Plagas"
+  },
+  {
+    "id": "re4-007",
+    "difficulty": "easy",
+    "question": "Which of these phrase does the Merchant NOT say when you interact with him?",
+    "options": ["“What’re ya buyin’?”", "“Stay awhile and listen.”", "“Stranger, stranger... now that's a weapon”", "“Not enough cash, stranger.”"],
+    "answer": "“Stay awhile and listen.”"
+  },
+  {
+    "id": "re4-008",
+    "difficulty": "easy",
+    "question": "Which item is used to restore health?",
+    "options": ["First Aid Spray", "Flashlight", "Battery", "Ink Ribbon"],
+    "answer": "First Aid Spray"
+  },
+{
+"id": "re4-med-0199",
+"question": "Which recurring hazard does Leon escape by sprinting directly toward the screen in QTEs?",
+"options": ["Rolling boulders", "Floods", "Gas clouds", "Regeneradors"],
+"answer": "Rolling boulders",
+"difficulty": "medium"
+},
+{
+"id": "re4-med-0163",
+"question": "Which category of item never takes up space in Leon’s attache case?",
+"options": ["Key items", "Herbs", "Grenades", "Ammo boxes"],
+"answer": "Key items",
+"difficulty": "medium"
+},
+  {
+    "id": "re4-009",
+    "difficulty": "hard",
+    "question": "Which of these is a common enemy type in RE4?",
+    "options": ["Ganados", "Zombies", "Lickers", "Molded"],
+    "answer": "Ganados"
+  },
+  {
+    "id": "re4-010",
+    "difficulty": "easy",
+    "question": "What does the attaché case manage in RE4?",
+    "options": ["Inventory space", "Map markers", "Skill points", "Save files"],
+    "answer": "Inventory space"
+  },
+  {
+    "id": "re4-012",
+    "difficulty": "easy",
+    "question": "What is the general purpose of a flash grenade?",
+    "options": ["Stun enemies", "Open locked doors", "Burn enemies", "Upgrade weapons"],
+    "answer": "Stun enemies"
+  },
+  {
+    "id": "re4-013",
+    "difficulty": "easy",
+    "question": "What is Leon’s job at the start of Resident Evil 4?",
+    "options": ["U.S. government agent", "Police chief", "Journalist", "Paramedic"],
+    "answer": "U.S. government agent"
+  },
+  {
+    "id": "re4-014",
+    "difficulty": "easy",
+    "question": "Which setting comes after the village section in the game’s broader progression?",
+    "options": ["Castle", "Submarine", "Desert", "Skyscraper"],
+    "answer": "Castle"
+  },
+  {
+    "id": "re4-016",
+    "difficulty": "easy",
+    "question": "What do you collect to buy items and upgrades from the Merchant?",
+    "options": ["Pesetas", "Dollar bills", "Dog tags", "Conchitas"],
+    "answer": "Pesetas"
+  },
+  {
+    "id": "re4-017",
+    "difficulty": "easy",
+    "question": "Which collectible is commonly used for trading with the Merchant?",
+    "options": ["Spinels", "Crystals", "Coins", "Medallions"],
+    "answer": "Spinels"
+  },
+  {
+    "id": "re4-023",
+    "difficulty": "easy",
+    "question": "Which herb is the standard basic healing item?",
+    "options": ["Green herb", "Yellow herb", "Black herb", "Orange herb"],
+    "answer": "Green herb"
+  },
+  {
+    "id": "re4-031",
+    "difficulty": "medium",
+    "question": "What is the name of the cult that worships Las Plagas in RE4?",
+    "options": ["Los Illuminados", "Umbrella", "The Connections", "The Family"],
+    "answer": "Los Illuminados"
+  },
+  {
+    "id": "re4-032",
+    "difficulty": "hard",
+    "question": "Who is the leader of Los Illuminados?",
+    "options": ["Osmund Saddler", "Albert Wesker", "Ramon Salazar", "William Birkin"],
+    "answer": "Osmund Saddler"
+  },
+  {
+    "id": "re4-033",
+    "difficulty": "medium",
+    "question": "Which character frequently contacts Leon via radio and provides support as a handler?",
+    "options": ["Ingrid Hunnigan", "Ada Wong", "Claire Redfield", "Rebecca Chambers"],
+    "answer": "Ingrid Hunnigan"
+  },
+  {
+    "id": "re4-034",
+    "difficulty": "medium",
+    "question": "Which character is a spy/agent figure who appears throughout RE4?",
+    "options": ["Ada Wong", "Sheva Alomar", "Helena Harper", "Mia Winters"],
+    "answer": "Ada Wong"
+  },
+  {
+    "id": "re4-035",
+    "difficulty": "medium",
+    "question": "Who is the secondary antagonist of RE4 often depicted wearing a hat and wielding a knife?",
+    "options": ["Jack Krauser", "Ramon Salazar", "Nicholai Ginovaef", "Lucas Baker"],
+    "answer": "Jack Krauser"
+  },
+  {
+    "id": "re4-036",
+    "difficulty": "medium",
+    "question": "Which major antagonist rules the castle area?",
+    "options": ["Ramon Salazar", "Nemesis", "Mr. X", "Marguerite Baker"],
+    "answer": "Ramon Salazar"
+  },
+  {
+    "id": "re4-037",
+    "difficulty": "medium",
+    "question": "Which creature can emerge from certain enemies after the parasite mutates further?",
+    "options": ["Plaga", "Chimera", "Hunter γ", "Ganados"],
+    "answer": "Plaga"
+  },
+  {
+    "id": "re4-041",
+    "difficulty": "hard",
+    "question": "Which enemy is a blind, heavily armored brute that relies on sound?",
+    "options": ["Garrador", "Chainsaw Ganado", "El Gigante", "Verdugo"],
+    "answer": "Garrador"
+  },
+  {
+    "id": "re4-042",
+    "difficulty": "medium",
+    "question": "What is the name commonly used for the giant boss encountered in the village section?",
+    "options": ["El Gigante", "U-3", "Del Lago", "Ogro Alpha"],
+    "answer": "El Gigante"
+  },
+  {
+    "id": "re4-044",
+    "difficulty": "medium",
+    "question": "Which boss is the towering village chief associated with the early story who infects villagers with Las Plagas?",
+    "options": ["Bitores Méndez", "Ramon Salazar", "Jack Krauser", "Osmund Saddler"],
+    "answer": "Bitores Méndez"
+  },
+  {
+    "id": "re4-063",
+    "difficulty": "hard",
+    "question": "Which weapon is best known for having extremely high single-shot damage but slow, deliberate use?",
+    "options": ["Magnum", "SMG", "Handgun", "Bolt pistol"],
+    "answer": "Magnum"
+  },
+  {
+    "id": "re4-070",
+    "difficulty": "hard",
+    "question": "What is the name of the giant lake monster and boss in the village section?",
+    "options": ["Del Lago", "Verdugo", "El Gigante", "Ogros"],
+    "answer": "Del Lago"
+  },
+  {
+    "id": "re4-easy-0004",
+    "question": "Ashley Graham is the daughter of which important figure?",
+    "options": ["The U.S. President", "The U.N. Secretary-General", "The British Prime Minister", "The Raccoon City Mayor"],
+    "answer": "The U.S. President",
+    "difficulty": "easy"
+  },
+  {
+    "id": "re4-easy-0008",
+    "question": "Resident Evil 4 was originally released for which home console?",
+    "options": ["Nintendo GameCube", "PlayStation 1", "PlayStation 1", "PC"],
+    "answer": "Nintendo GameCube",
+    "difficulty": "easy"
+  },
+  {
+    "id": "re4-easy-0009",
+    "question": "What type of camera perspective is used in Resident Evil 4’s gameplay?",
+    "options": ["Over‑the‑shoulder", "Fixed camera angles", "First‑person", "Top‑down"],
+    "answer": "Over‑the‑shoulder",
+    "difficulty": "easy"
+  },
+  {
+    "id": "re4-easy-0010",
+    "question": "Which of these weapons is Leon’s basic starting firearm in Resident Evil 4?",
+    "options": ["Handgun", "Shotgun", "Magnum", "Rifle"],
+    "answer": "Handgun",
+    "difficulty": "easy"
+  },
+  {
+    "id": "re4-easy-0024",
+    "question": "Which of these is a powerful pistol Leon can acquire later in Resident Evil 4?",
+    "options": ["Red9", "Silver Eagle", "Lightning Hawk", "Punisher X"],
+    "answer": "Red9",
+    "difficulty": "easy"
+  },
+  {
+    "id": "re4-easy-0025",
+    "question": "What vehicle do Leon and Ashley ultimately use to escape at the end of Resident Evil 4?",
+    "options": ["A jet ski", "A helicopter", "A car", "A boat with sails"],
+    "answer": "A jet ski",
+    "difficulty": "easy"
+  },
+  {
+    "id": "re4-med-0026",
+    "question": "At the start of Resident Evil 4, how many police officers accompany Leon to the rural village?",
+    "options": ["Two", "One", "Three", "Four"],
+    "answer": "Two",
+    "difficulty": "medium"
+  },
+  {
+    "id": "re4-med-0036",
+    "question": "What is the name of the insect‑like, cloaked enemies that can turn invisible?",
+    "options": ["Novistadors", "Lickers", "Drain Deimos", "Chimaera"],
+    "answer": "Novistadors",
+    "difficulty": "hard"
+  },
+  {
+    "id": "re4-med-0044",
+    "question": "What color herb, when combined with green, permanently increases Leon’s maximum health?",
+    "options": ["Yellow", "Blue", "Red", "Purple"],
+    "answer": "Yellow",
+    "difficulty": "medium"
+  },
+ 
+  {
+    "id": "re4-med-0047",
+    "question": "What is Luis Sera’s former occupation before the events of Resident Evil 4?",
+    "options": ["Researcher", "Police officer", "Soldier", "Journalist"],
+    "answer": "Researcher",
+    "difficulty": "hard"
+  },
+  {
+    "id": "re4-med-0048",
+    "question": "Which enemy type wears robes and chants in the castle section?",
+    "options": ["Zealots", "Ganados", "Majini", "Lickers"],
+    "answer": "Zealots",
+    "difficulty": "medium"
+  },
+  {
+    "id": "re4-med-0049",
+    "question": "Which side campaign starring Ada Wong expands on her role in Resident Evil 4?",
+    "options": ["Separate Ways", "The 4th Survivor", "Assignment Claire", "Mercenary Files"],
+    "answer": "Separate Ways",
+    "difficulty": "hard"
+  },
+  {
+    "id": "re4-hard-0053",
+    "question": "What is the name of the towering, multi‑stage boss that stalks Leon through cages and platforms on the island?",
+    "options": ["U‑3", "Verdugo", "Regenerador", "It"],
+    "answer": "U‑3",
+    "difficulty": "hard"
+  },
+  {
+    "id": "re4-hard-0054",
+    "question": "During the siege segment in the cabin, who fights alongside Leon against waves of Ganados?",
+    "options": ["Luis Sera", "Ada Wong", "Krauser", "Hunnigan"],
+    "answer": "Luis Sera",
+    "difficulty": "hard"
+  },
+  {
+    "id": "re4-hard-0056",
+    "question": "Which enemy’s weak point can be exposed by freezing it with liquid nitrogen in the original Resident Evil 4?",
+    "options": ["Verdugo", "U‑3", "Regenerador", "El Gigante"],
+    "answer": "Verdugo",
+    "difficulty": "hard"
+  },
+  {
+    "id": "re4-hard-0069",
+    "question": "Which attachment can be bought for the rifle to make fighting Regeneradors significantly easier?",
+    "options": ["Thermal scope", "High‑zoom scope", "Laser module", "Bipod"],
+    "answer": "Thermal scope",
+    "difficulty": "hard"
+  },
+{
+"id": "re4-med-0101",
+"question": "Roughly how many years after the Raccoon City incident does Resident Evil 4 take place?",
+"options": ["Six years", "Two years", "Ten years", "One year"],
+"answer": "Six years",
+"difficulty": "hard"
+},
+  {
+    "id": "re4-hard-0070",
+    "question": "What is one key gameplay difference between the original Resident Evil 4 and its remake regarding movement while shooting?",
+    "options": ["In the remake you can move while shooting", "In the original you can move while shooting", "Both allow full movement while shooting", "Neither allows turning while shooting"],
+    "answer": "In the remake you can move while shooting",
+    "difficulty": "hard"
+  },
+  {
+    "id": "re4-qa-001",
+    "difficulty": "hard",
+    "question": "As of March 2026, how many numbered mainline Resident Evil games are available?",
+    "options": ["7", "8", "9", "10"],
+    "answer": "9"
+  },
+  {
+    "id": "re4-qa-002",
+    "difficulty": "medium",
+    "question": "When was Resident Evil 4 released on PS4 (original port)?",
+    "options": ["2016", "2017", "2015", "2014"],
+    "answer": "2016"
+  },
+  {
+    "id": "re4-qa-003",
+    "difficulty": "easy",
+    "question": "When did the Resident Evil 4 remake release on PS5?",
+    "options": ["2023", "2022", "2024", "2021"],
+    "answer": "2023"
+  },
+  {
+    "id": "re4-qa-004",
+    "difficulty": "hard",
+    "question": "Where can the Red9 pistol be found in-game (RE4 Remake)?",
+    "options": ["On a wrecked boat in the middle of the lake", "In the church altar after rescuing Ashley", "Inside the first village house upstairs", "In the castle throne room chest"],
+    "answer": "On a wrecked boat in the middle of the lake"
+  },
+  {
+    "id": "re4-qa-005",
+    "difficulty": "hard",
+    "question": "Where do you get the Biosensor Scope (RE4 Remake)?",
+    "options": ["On the Island in the Incubation Lab", "In the Village Square tower", "In the Castle ballroom", "In the lake cave boat dock"],
+    "answer": "On the Island in the Incubation Lab"
+  },
+  {
+    "id": "re4-qa-006",
+    "difficulty": "hard",
+    "question": "Where can you find the W-870 shotgun (RE4 Remake)?",
+    "options": ["Upstairs in a house in the Village Square", "On the wrecked boat in the lake", "In the Castle library lock box", "In the Island freezer armory"],
+    "answer": "Upstairs in a house in the Village Square"
+  },
+  {
+    "id": "re4-qa-007",
+    "difficulty": "hard",
+    "question": "Where can the CQBR Assault Rifle be found for free (RE4 Remake)?",
+    "options": ["In the Castle library", "In the first village barn", "In the church after the cutscene", "In the Island incubator room on a desk"],
+    "answer": "In the Castle library"
+  },
+  {
+    "id": "re4-qa-008",
+    "difficulty": "hard",
+    "question": "Where is the LE 5 SMG found for free (RE4 Remake)?",
+    "options": ["In the Island Freezer", "On the boat in the middle of the lake", "In the Village Square tower", "In the Castle dungeon behind a gold key"],
+    "answer": "In the Island Freezer"
+  },
+  {
+    "id": "re4-qa-009",
+    "difficulty": "medium",
+    "question": "How do you get the Riot Gun in RE4 Remake?",
+    "options": ["Buy it from the Merchant starting Chapter 6", "Find it in the Village Square tower", "Loot it from Del Lago", "Craft it at the typewriter"],
+    "answer": "Buy it from the Merchant starting Chapter 6"
+  },
+  {
+    "id": "re4-qa-010",
+    "difficulty": "easy",
+    "question": "How is the game saved in Resident Evil 4 Remake?",
+    "options": ["Typewriters", "Bonfires", "Computers", "Campfires"],
+    "answer": "Typewriters"
+  },
+  {
+    "id": "re4-qa-005",
+    "difficulty": "easy",
+    "question": "What is the name of the mysterious person who sells weapons and items?",
+    "options": ["The Merchant", "The Duke", "The Trader", "The Smuggler"],
+    "answer": "The Merchant"
+  },
+  {
+    "id": "re4-qa-007",
+    "difficulty": "easy",
+    "question": "What is the name of Leon's handgun at the start of the game (classic RE4)?",
+    "options": ["Silver Ghost", "Samurai Edge", "Matilda", "Red9"],
+    "answer": "Silver Ghost"
+  },
+  {
+    "id": "re4-qa-019",
+    "difficulty": "easy",
+    "question": "Which melee prompt often appears after stunning an enemy?",
+    "options": ["Kick", "Reload", "Punch", "Scan"],
+    "answer": "Kick"
+  },
+  {
+    "id": "re4-qa-021",
+    "difficulty": "easy",
+    "question": "What is a common use for eggs in RE4?",
+    "options": ["Healing or selling", "Unlocking doors", "Crafting bullets only", "Summoning allies"],
+    "answer": "Healing or selling"
+  },
+  {
+    "id": "re4-qa-039",
+    "difficulty": "hard",
+    "question": "In classic RE4, what is the default maximum size of the starting Attache Case grid?",
+    "options": ["6x10", "8x12", "5x8", "10x14"],
+    "answer": "6x10"
+  },
+  {
+    "id": "re4-qa-053",
+    "difficulty": "hard",
+    "question": "In classic RE4, what do you earn for high scores in the Shooting Range?",
+    "options": ["Bottle Caps", "Ink Ribbons", "Skill Points", "Crest Pieces"],
+    "answer": "Bottle Caps"
+  },
+  {
+    "id": "re4-qa-054",
+    "difficulty": "hard",
+    "question": "Which weapon is known for its high damage per shot and uses Magnum ammo?",
+    "options": ["Broken Butterfly", "TMP", "Striker", "Punisher"],
+    "answer": "Broken Butterfly"
+  },
+  {
+    "id": "re4-qa-057",
+    "difficulty": "medium",
+    "question": "Which enemy type is famous for rapid regeneration and requires targeting internal weak points?",
+    "options": ["Regenerator", "El Gigante", "Garrador", "Dr. Salvador"],
+    "answer": "Regenerator"
+  },
+  {
+    "id": "re4-qa-059",
+    "difficulty": "hard",
+    "question": "In classic RE4, what is the name of the red-and-black handgun that is a burst-fire variant of Leon’s sidearm?",
+    "options": ["Matilda", "Red9", "Blacktail", "Punisher"],
+    "answer": "Matilda"
+  },
+  {
+    "id": "re4-qa-060",
+    "difficulty": "medium",
+    "question": "Which shotgun is notable for a very large ammo capacity after upgrades (classic RE4)?",
+    "options": ["Striker", "Riot Gun", "W-870", "M3"],
+    "answer": "Striker"
+  },
+  {
+    "id": "re4-qa-069",
+    "difficulty": "hard",
+    "question": "Which enemy variant is essentially a more dangerous version of the Regenerator with visible spikes protruding from its body (classic RE4)?",
+    "options": ["Iron Maiden", "Garrador", "Verdugo", "Novistador"],
+    "answer": "Iron Maiden"
+  },
+  {
+    "id": "re4-qa-070",
+    "difficulty": "hard",
+    "question": "Which device is crucial for reliably exposing Regenerator weak points in classic RE4?",
+    "options": ["Infrared Scope", "Thermal Goggles", "Laser Sight", "Binoculars"],
+    "answer": "Infrared Scope"
+  },
+  {
+    "id": "re4-qa-071",
+    "difficulty": "hard",
+    "question": "In classic RE4, which handgun is known for a high overall rate of fire and solid power despite a smaller physical footprint in the case?",
+    "options": ["Blacktail", "Red9", "Punisher", "Handgun (Silver Ghost)"],
+    "answer": "Blacktail"
+  },
+  {
+    "id": "re4-qa-072",
+    "difficulty": "hard",
+    "question": "Which treasure in classic RE4 can be combined with the 'Red Gem' and 'Yellow Gem' among others to significantly increase its value?",
+    "options": ["Beerstein", "Spinel", "Gold Bar", "Velvet Blue"],
+    "answer": "Beerstein"
+  },
+  {
+    "id": "re4-qa-083",
+    "difficulty": "hard",
+    "question": "In classic RE4, which enemy duo shares a name and both wield chainsaws?",
+    "options": ["Bella Sisters", "Twin Garradors", "Iron Maidens", "Plaga Sisters"],
+    "answer": "Bella Sisters"
+  },
+  {
+    "id": "re4-qa-085",
+    "difficulty": "hard",
+    "question": "What is the name of the bonus mode focused on timed combat challenges and high scores?",
+    "options": ["The Mercenaries", "Raid Mode", "Survivors", "Outbreak"],
+    "answer": "The Mercenaries"
+  },
+  {
+    "id": "re4-qa-089",
+    "difficulty": "hard",
+    "question": "In classic RE4, which treasure is best known for being a small, blue gemstone commonly found and sold frequently?",
+    "options": ["Velvet Blue", "Beerstein", "Crown Jewel", "Butterfly Lamp"],
+    "answer": "Velvet Blue"
+  },
+  {
+    "id": "re4-qa-095",
+    "difficulty": "easy",
+    "question": "In classic RE4, which combination yields the most complete herb healing mix?",
+    "options": ["Green + Red + Yellow", "Green + Blue + Red", "Purple + Red + Yellow", "Green + Yellow only"],
+    "answer": "Green + Red + Yellow"
+  },
+  {
+    "id": "re4-quiz-001",
+    "difficulty": "hard",
+    "question": "How many total chapters are in the main story of the RE4 Remake?",
+    "options": ["14", "15", "16", "17"],
+    "answer": "16"
+  },
+  {
+    "id": "re4-quiz-002",
+    "difficulty": "easy",
+    "question": "What is the first enemy Leon encounters in the game?",
+    "options": ["Ganado", "A Zombie", "A Licker", "A Molded"],
+    "answer": "Ganado"
+  },
+  {
+    "id": "re4-quiz-003",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a herb color in the game?",
+    "options": ["Green", "Red", "Yellow", "Purple"],
+    "answer": "Purple"
+  },
+  {
+    "id": "re4-quiz-004",
+    "difficulty": "easy",
+    "question": "Which of the following is NOT a grenade available in the game?",
+    "options": ["Hand Grenade", "Flash Grenade", "Heavy Grenade", "Smoke Grenade"],
+    "answer": "Smoke Grenade"
+  },
+  {
+    "id": "re4-quiz-005",
+    "difficulty": "hard",
+    "question": "Which of the following is NOT a gun available in the game?",
+    "options": ["Red9", "Broken Butterfly", "Stingray", "Needler"],
+    "answer": "Needler"
+  },
+  {
+    "id": "re4-quiz-009",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a difficulty mode in RE4 Remake?",
+    "options": ["Assisted", "Standard", "Hardcore", "Nightmare"],
+    "answer": "Nightmare"
+  },
+  {
+    "id": "re4-pack-001",
+    "difficulty": "easy",
+    "question": "Which studio developed Resident Evil 4 Remake (2023)?",
+    "options": ["Capcom", "Naughty Dog", "FromSoftware", "Bethesda"],
+    "answer": "Capcom"
+  },
+  {
+    "id": "re4-pack-002",
+    "difficulty": "hard",
+    "question": "Who voices Leon in Resident Evil 4 Remake (2023) (English)?",
+    "options": ["Nick Apostolides", "Paul Mercier", "Roger Craig Smith", "Troy Baker"],
+    "answer": "Nick Apostolides"
+  },
+  {
+    "id": "re4-pack-002",
+    "difficulty": "hard",
+    "question": "Who voices Leon in Resident Evil 4 Original (2023) (English)?",
+    "options": ["Nick Apostolides", "Paul Mercier", "Roger Craig Smith", "Troy Baker"],
+    "answer": "Paul Mercier"
+  },
+  {
+    "id": "re4-pack-003",
+    "difficulty": "hard",
+    "question": "How old is Leon in Resident Evil 4?",
+    "options": ["24", "27", "30", "33"],
+    "answer": "27"
+  },
+  {
+    "id": "re4-pack-004",
+    "difficulty": "hard",
+    "question": "About how long is a first playthrough of RE4 Remake’s main story for most players?",
+    "options": ["8 hours", "15 hours", "30 hours", "60 hours"],
+    "answer": "15 hours"
+  },
+  {
+    "id": "re4-pack-005",
+    "difficulty": "easy",
+    "question": "What was Leon’s mission at the start of Resident Evil 4?",
+    "options": ["Rescue the President’s daughter", "Stop a train hijacking", "Find the G-Virus sample", "Evacuate Raccoon City"],
+    "answer": "Rescue the President’s daughter"
+  },
+  {
+    "id": "re4-pack-006",
+    "difficulty": "easy",
+    "question": "Who is the first major boss in Resident Evil 4?",
+    "options": ["Del Lago", "Ramon Salazar", "Jack Krauser", "Osmund Saddler"],
+    "answer": "Del Lago"
+  },
+  {
+    "id": "re4-pack-007",
+    "difficulty": "hard",
+    "question": "On Standard difficulty in RE4 Remake, how much does the Rocket Launcher cost from the Merchant?",
+    "options": ["50,000 pesetas", "80,000 pesetas", "120,000 pesetas", "160,000 pesetas"],
+    "answer": "80,000 pesetas"
+  },
+  {
+    "id": "re4-pack-007",
+    "difficulty": "hard",
+    "question": "On Standard difficulty in RE4 Original, how much does the Rocket Launcher cost from the Merchant?",
+    "options": ["30,000 pesetas", "40,000 pesetas", "50,000 pesetas", "60,000 pesetas"],
+    "answer": "30,000 pesetas"
+  },
+  {
+    "id": "re4-pack-008",
+    "difficulty": "hard",
+    "question": "How many playable characters are in The Mercenaries mode in RE4 Remake (with updates)?",
+    "options": ["5", "6", "8", "10"],
+    "answer": "5"
+  },
+  {
+    "id": "re4-pack-009",
+    "difficulty": "hard",
+    "question": "What’s the name of the high-damage infinite-ammo SMG bonus weapon in RE4 Remake?",
+    "options": ["Chicago Sweeper", "TMP", "Chicago Typewriter", "Matilda"],
+    "answer": "Chicago Sweeper"
+  },
+  {
+    "id": "re4-pack-009",
+    "difficulty": "hard",
+    "question": "What’s the name of the high-damage infinite-ammo SMG bonus weapon in RE4 Original?",
+    "options": ["Chicago Sweeper", "TMP", "Chicago Typewriter", "Matilda"],
+    "answer": "Chicago Typewriter"
+  },
+  {
+    "id": "re4-pack-010",
+    "difficulty": "hard",
+    "question": "In the original RE4 (2005), how many blue medallions must you shoot to unlock the Punisher for free?",
+    "options": ["10", "12", "15", "20"],
+    "answer": "10"
+  },
+  {
+    "id": "re4-pack-011",
+    "difficulty": "hard",
+    "question": "Which character kills Luis in the RE4 Remake (2023)?",
+    "options": ["Jack Krauser", "Osmund Saddler", "Ramon Salazar", "Albert Wesker"],
+    "answer": "Jack Krauser"
+  },
+  {
+    "id": "re4-pack-012",
+    "difficulty": "hard",
+    "question": "Who kills Luis in the original RE4 (2005)?",
+    "options": ["Osmund Saddler", "Jack Krauser", "Bitores Méndez", "HUNK"],
+    "answer": "Osmund Saddler"
+  },
+  {
+    "id": "re4-pack-013",
+    "difficulty": "hard",
+    "question": "What kind of puzzle do you complete in the church to open the way forward (RE4 Remake)?",
+    "options": ["Stained-glass color dial puzzle", "Chessboard puzzle", "Sliding tile puzzle", "Music box puzzle"],
+    "answer": "Stained-glass color dial puzzle"
+  },
+  {
+    "id": "re4-pack-014",
+    "difficulty": "hard",
+    "question": "How old is Ramon Salazar said to be (as referenced from the original RE4)?",
+    "options": ["16", "20", "28", "35"],
+    "answer": "20"
+  },
+  {
+    "id": "re4-pack-015",
+    "difficulty": "medium",
+    "question": "Which of these consoles was Resident Evil 4 NOT released on?",
+    "options": ["PlayStation 2", "Nintendo Wii", "Nintendo 64", "GameCube"],
+    "answer": "Nintendo 64"
+  },
+  {
+    "id": "re4-pack-016",
+    "difficulty": "medium",
+    "question": "After the boss fight against Bitores Méndez, you collect which item?",
+    "options": ["False Eye", "Royal Insignia", "Gold Egg", "Parasite Sample"],
+    "answer": "False Eye"
+  },
+  {
+    "id": "re4-pack-017",
+    "difficulty": "easy",
+    "question": "Who is the final boss of Resident Evil 4?",
+    "options": ["Osmund Saddler", "Jack Krauser", "Ramon Salazar", "Bitores Méndez"],
+    "answer": "Osmund Saddler"
+  }
+]

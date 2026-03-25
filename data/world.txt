@@ -1,0 +1,2164 @@
+[
+  {
+    "id": "gen-eas-0001",
+    "question": "How many continents are there on Earth?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": "7",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0002",
+    "question": "Which planet is closest to the Sun?",
+    "options": [
+      "Venus",
+      "Earth",
+      "Mercury",
+      "Mars"
+    ],
+    "answer": "Mercury",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-easy-0057",
+    "question": "Which country has the most people?",
+    "options": ["India", "USA", "China", "Russia"],
+    "answer": "India",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-easy-0070",
+    "question": "Which country is shaped like a boot?",
+    "options": ["France", "Italy", "Spain", "Greece"],
+    "answer": "Italy",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-easy-0058",
+    "question": "Which country is famous for tulips and windmills?",
+    "options": ["Germany", "Netherlands", "France", "Denmark"],
+    "answer": "Netherlands",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-easy-0066",
+    "question": "In which country is the Eiffel Tower located?",
+    "options": ["Germany", "Italy", "France", "Belgium"],
+    "answer": "France",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-easy-0072",
+    "question": "Where is the Taj Mahal located?",
+    "options": ["Nepal", "Pakistan", "India", "Bangladesh"],
+    "answer": "India",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-medium-0027",
+    "question": "What is the official language of Egypt?",
+    "options": ["Arabic", "Hebrew", "Farsi", "Turkish"],
+    "answer": "Arabic",
+    "difficulty": "medium"
+  },
+ {
+    "id": "gen-medium-0037",
+    "question": "Which country is home to Mount Kilimanjaro?",
+    "options": ["Kenya", "South Africa", "Tanzania", "Ethiopia"],
+    "answer": "Tanzania",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-medium-0038",
+    "question": "Which river is sacred in Hinduism?",
+    "options": ["Yamuna", "Ganges", "Indus", "Krishna"],
+    "answer": "Ganges",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-medium-0039",
+    "question": "Which city is known as the financial capital of India?",
+    "options": ["Delhi", "Mumbai", "Bangalore", "Hyderabad"],
+    "answer": "Mumbai",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-medium-0040",
+    "question": "Which Middle Eastern country is known for its cedar trees?",
+    "options": ["Lebanon", "Jordan", "Syria", "Iraq"],
+    "answer": "Lebanon",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-medium-0047",
+    "question": "What is the currency used in South Korea?",
+    "options": ["Yuan", "Won", "Ringgit", "Baht"],
+    "answer": "Won",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-hard-0060",
+    "question": "Which country owns the Galápagos Islands?",
+    "options": ["Chile", "Peru", "Ecuador", "Colombia"],
+    "answer": "Ecuador",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-medium-0049",
+    "question": "Which country is the world's largest producer of coffee?",
+    "options": ["Vietnam", "Colombia", "Ethiopia", "Brazil"],
+    "answer": "Brazil",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-hard-0053",
+    "question": "Which African nation has Spanish as an official language?",
+    "options": ["Equatorial Guinea", "Angola", "Mozambique", "Cameroon"],
+    "answer": "Equatorial Guinea",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-medium-0050",
+    "question": "Which city has the busiest airport in the world by passenger traffic?",
+    "options": ["Dubai", "Atlanta", "London", "Beijing"],
+    "answer": "Atlanta",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-hard-0062",
+    "question": "Which sea is located between Europe and Africa?",
+    "options": ["Mediterranean", "Caribbean", "Red", "Black"],
+    "answer": "Mediterranean",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0063",
+    "question": "What is the capital of Bhutan?",
+    "options": ["Kathmandu", "Thimphu", "Paro", "Lhasa"],
+    "answer": "Thimphu",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-expert-0088",
+    "question": "Which country has a flag that features a machete and a book?",
+    "options": ["Mozambique", "Angola", "Zimbabwe", "Namibia"],
+    "answer": "Mozambique",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-hard-0064",
+    "question": "Which country is home to the city of Timbuktu?",
+    "options": ["Niger", "Mali", "Chad", "Sudan"],
+    "answer": "Mali",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-medium-0044",
+    "question": "Which U.S. state is closest to Russia?",
+    "options": ["Alaska", "Hawaii", "Washington", "Oregon"],
+    "answer": "Alaska",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-easy-0074",
+    "question": "Which city hosted the 2012 Summer Olympics?",
+    "options": ["Beijing", "London", "Rio de Janeiro", "Tokyo"],
+    "answer": "London",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-easy-0067",
+    "question": "Which city is known as the Big Apple?",
+    "options": ["Chicago", "New York", "Los Angeles", "San Francisco"],
+    "answer": "New York",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-easy-0068",
+    "question": "What is the capital of Germany?",
+    "options": ["Berlin", "Frankfurt", "Munich", "Hamburg"],
+    "answer": "Berlin",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-easy-0061",
+    "question": "What is the largest island in the world?",
+    "options": ["Greenland", "Australia", "Borneo", "New Guinea"],
+    "answer": "Greenland",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-easy-0056",
+    "question": "What is the national language of Brazil?",
+    "options": ["Spanish", "Portuguese", "French", "English"],
+    "answer": "Portuguese",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0003",
+    "question": "What is the capital of France?",
+    "options": [
+      "Paris",
+      "Madrid",
+      "Berlin",
+      "Rome"
+    ],
+    "answer": "Paris",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0004",
+    "question": "Which ocean is the largest?",
+    "options": [
+      "Atlantic",
+      "Indian",
+      "Pacific",
+      "Arctic"
+    ],
+    "answer": "Pacific",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0005",
+    "question": "How many legs does a spider have?",
+    "options": [
+      "6",
+      "8",
+      "10",
+      "12"
+    ],
+    "answer": "8",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0006",
+    "question": "What gas do plants absorb from the atmosphere?",
+    "options": [
+      "Oxygen",
+      "Nitrogen",
+      "Carbon Dioxide",
+      "Hydrogen"
+    ],
+    "answer": "Carbon Dioxide",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0007",
+    "question": "How many players are on a soccer team (on field)?",
+    "options": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "answer": "11",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0008",
+    "question": "Which country is famous for the Great Wall?",
+    "options": [
+      "India",
+      "Japan",
+      "China",
+      "Korea"
+    ],
+    "answer": "China",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0009",
+    "question": "Which planet is known as the Red Planet?",
+    "options": [
+      "Mars",
+      "Venus",
+      "Jupiter",
+      "Saturn"
+    ],
+    "answer": "Mars",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0010",
+    "question": "Which animal is popularly known as the king of the jungle?",
+    "options": [
+      "Tiger",
+      "Lion",
+      "Elephant",
+      "Leopard"
+    ],
+    "answer": "Lion",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0011",
+    "question": "What is H2O commonly known as?",
+    "options": [
+      "Salt",
+      "Water",
+      "Oxygen",
+      "Carbon"
+    ],
+    "answer": "Water",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0012",
+    "question": "Which country has a maple leaf on its flag?",
+    "options": [
+      "USA",
+      "Canada",
+      "UK",
+      "Australia"
+    ],
+    "answer": "Canada",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0013",
+    "question": "What is the freezing point of water in Celsius?",
+    "options": [
+      "0",
+      "32",
+      "100",
+      "-10"
+    ],
+    "answer": "0",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0014",
+    "question": "How many hours are in a day?",
+    "options": [
+      "12",
+      "24",
+      "48",
+      "60"
+    ],
+    "answer": "24",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0015",
+    "question": "What do bees make?",
+    "options": [
+      "Milk",
+      "Wax",
+      "Honey",
+      "Oil"
+    ],
+    "answer": "Honey",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0016",
+    "question": "Which shape has 4 equal sides?",
+    "options": [
+      "Triangle",
+      "Square",
+      "Rectangle",
+      "Hexagon"
+    ],
+    "answer": "Square",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0017",
+    "question": "Which direction does the sun generally rise from?",
+    "options": [
+      "North",
+      "East",
+      "South",
+      "West"
+    ],
+    "answer": "East",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0019",
+    "question": "What is the capital of Japan?",
+    "options": [
+      "Kyoto",
+      "Tokyo",
+      "Osaka",
+      "Hiroshima"
+    ],
+    "answer": "Tokyo",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0020",
+    "question": "What is the smallest planet in the Solar System?",
+    "options": [
+      "Earth",
+      "Mars",
+      "Saturn",
+      "Mercury"
+    ],
+    "answer": "Mercury",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0021",
+    "question": "Which object orbits the Earth?",
+    "options": [
+      "Sun",
+      "Moon",
+      "Mars",
+      "Jupiter"
+    ],
+    "answer": "Moon",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0022",
+    "question": "What is the name of our galaxy?",
+    "options": [
+      "Andromeda",
+      "Milky Way",
+      "Orion",
+      "Solar System"
+    ],
+    "answer": "Milky Way",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0023",
+    "question": "Which continent is the Sahara Desert in?",
+    "options": [
+      "Asia",
+      "Africa",
+      "Australia",
+      "South America"
+    ],
+    "answer": "Africa",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0025",
+    "question": "What is the capital of the United States?",
+    "options": [
+      "New York",
+      "Los Angeles",
+      "Washington, D.C.",
+      "Chicago"
+    ],
+    "answer": "Washington, D.C.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0026",
+    "question": "Which country is known as the Land of the Rising Sun?",
+    "options": [
+      "China",
+      "Japan",
+      "Thailand",
+      "India"
+    ],
+    "answer": "Japan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0027",
+    "question": "Which language has the most total speakers in the world?",
+    "options": [
+      "English",
+      "Mandarin",
+      "Spanish",
+      "Hindi"
+    ],
+    "answer": "English",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0028",
+    "question": "What is the largest mammal on Earth?",
+    "options": [
+      "Elephant",
+      "Blue Whale",
+      "Giraffe",
+      "Rhino"
+    ],
+    "answer": "Blue Whale",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0030",
+    "question": "What is the main ingredient in guacamole?",
+    "options": [
+      "Tomato",
+      "Avocado",
+      "Lettuce",
+      "Onion"
+    ],
+    "answer": "Avocado",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0032",
+    "question": "How many days are in a leap year?",
+    "options": [
+      "364",
+      "365",
+      "366",
+      "367"
+    ],
+    "answer": "366",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0033",
+    "question": "Which color is made by mixing red and white?",
+    "options": [
+      "Orange",
+      "Pink",
+      "Brown",
+      "Purple"
+    ],
+    "answer": "Pink",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0034",
+    "question": "Which shape has three sides?",
+    "options": [
+      "Triangle",
+      "Circle",
+      "Rectangle",
+      "Square"
+    ],
+    "answer": "Triangle",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0035",
+    "question": "What is the capital of Italy?",
+    "options": [
+      "Venice",
+      "Rome",
+      "Milan",
+      "Florence"
+    ],
+    "answer": "Rome",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0036",
+    "question": "What is the tallest animal in the world?",
+    "options": [
+      "Elephant",
+      "Giraffe",
+      "Horse",
+      "Camel"
+    ],
+    "answer": "Giraffe",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-eas-0041",
+    "question": "How many planets are in the Solar System?",
+    "options": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "answer": "8",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-med-0001",
+    "question": "Which desert is the largest in the world?",
+    "options": [
+      "Gobi",
+      "Sahara",
+      "Arctic",
+      "Antarctic"
+    ],
+    "answer": "Antarctic",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0002",
+    "question": "What is the capital city of South Korea?",
+    "options": [
+      "Seoul",
+      "Busan",
+      "Tokyo",
+      "Daegu"
+    ],
+    "answer": "Seoul",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0003",
+    "question": "What is the boiling point of water in Fahrenheit?",
+    "options": [
+      "100°F",
+      "180°F",
+      "212°F",
+      "240°F"
+    ],
+    "answer": "212°F",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0004",
+    "question": "Which planet has the most moons?",
+    "options": [
+      "Jupiter",
+      "Saturn",
+      "Uranus",
+      "Neptune"
+    ],
+    "answer": "Saturn",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0005",
+    "question": "Which European country has the most volcanoes?",
+    "options": [
+      "Italy",
+      "Iceland",
+      "Greece",
+      "France"
+    ],
+    "answer": "Iceland",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-med-0006",
+    "question": "Which country is native to the kangaroo?",
+    "options": [
+      "India",
+      "South Africa",
+      "Australia",
+      "Argentina"
+    ],
+    "answer": "Australia",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0007",
+    "question": "In which year did the Titanic sink?",
+    "options": [
+      "1905",
+      "1912",
+      "1918",
+      "1920"
+    ],
+    "answer": "1912",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-med-0008",
+    "question": "Which metal is liquid at room temperature?",
+    "options": [
+      "Lead",
+      "Mercury",
+      "Aluminum",
+      "Zinc"
+    ],
+    "answer": "Mercury",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-med-0009",
+    "question": "Which river is the longest in the world?",
+    "options": [
+      "Amazon",
+      "Nile",
+      "Yangtze",
+      "Mississippi"
+    ],
+    "answer": "Nile",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0010",
+    "question": "Which is the smallest continent by land area?",
+    "options": [
+      "Europe",
+      "Australia",
+      "South America",
+      "Antarctica"
+    ],
+    "answer": "Australia",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0011",
+    "question": "Which instrument is used to measure atmospheric pressure?",
+    "options": [
+      "Thermometer",
+      "Barometer",
+      "Altimeter",
+      "Anemometer"
+    ],
+    "answer": "Barometer",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0012",
+    "question": "Which ocean touches the west coast of the United States?",
+    "options": [
+      "Atlantic",
+      "Indian",
+      "Pacific",
+      "Arctic"
+    ],
+    "answer": "Pacific",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0013",
+    "question": "What type of animal is a Komodo dragon?",
+    "options": [
+      "Snake",
+      "Lizard",
+      "Crocodile",
+      "Alligator"
+    ],
+    "answer": "Lizard",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0014",
+    "question": "Which city hosted the 2016 Summer Olympics?",
+    "options": [
+      "Tokyo",
+      "Beijing",
+      "Rio de Janeiro",
+      "London"
+    ],
+    "answer": "Rio de Janeiro",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0015",
+    "question": "Which famous scientist developed the theory of general relativity?",
+    "options": [
+      "Newton",
+      "Einstein",
+      "Hawking",
+      "Tesla"
+    ],
+    "answer": "Einstein",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0016",
+    "question": "Which gas makes up most of the Earth's atmosphere?",
+    "options": [
+      "Oxygen",
+      "Carbon Dioxide",
+      "Hydrogen",
+      "Nitrogen"
+    ],
+    "answer": "Nitrogen",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0017",
+    "question": "What is the name of the world's highest mountain?",
+    "options": [
+      "K2",
+      "Mount Kilimanjaro",
+      "Mount Everest",
+      "Denali"
+    ],
+    "answer": "Mount Everest",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0018",
+    "question": "Which continent has the most countries?",
+    "options": [
+      "Asia",
+      "Africa",
+      "Europe",
+      "South America"
+    ],
+    "answer": "Africa",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0019",
+    "question": "How many stripes are on the U.S. flag?",
+    "options": [
+      "10",
+      "13",
+      "15",
+      "50"
+    ],
+    "answer": "13",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0020",
+    "question": "Which vitamin do we get from sunlight?",
+    "options": [
+      "Vitamin A",
+      "Vitamin C",
+      "Vitamin D",
+      "Vitamin B12"
+    ],
+    "answer": "Vitamin D",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0021",
+    "question": "Which planet has the nickname 'The Morning Star'?",
+    "options": [
+      "Mars",
+      "Venus",
+      "Mercury",
+      "Jupiter"
+    ],
+    "answer": "Venus",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-med-0023",
+    "question": "Which country is known for inventing pizza?",
+    "options": [
+      "Greece",
+      "Italy",
+      "France",
+      "Spain"
+    ],
+    "answer": "Italy",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0024",
+    "question": "What is the capital of Canada?",
+    "options": [
+      "Toronto",
+      "Vancouver",
+      "Ottawa",
+      "Montreal"
+    ],
+    "answer": "Ottawa",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0025",
+    "question": "Which ancient wonder was located in Egypt?",
+    "options": [
+      "Hanging Gardens",
+      "Colossus of Rhodes",
+      "Great Pyramid",
+      "Temple of Artemis"
+    ],
+    "answer": "Great Pyramid",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0026",
+    "question": "Which U.S. state is known as the 'Sunshine State'?",
+    "options": [
+      "Nevada",
+      "Florida",
+      "Arizona",
+      "Texas"
+    ],
+    "answer": "Florida",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0027",
+    "question": "Which African country has the largest population?",
+    "options": [
+      "South Africa",
+      "Egypt",
+      "Ethiopia",
+      "Nigeria"
+    ],
+    "answer": "Nigeria",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0028",
+    "question": "How many bones are in the adult human body?",
+    "options": [
+      "206",
+      "210",
+      "201",
+      "218"
+    ],
+    "answer": "206",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0029",
+    "question": "What natural disaster is measured with the Richter scale?",
+    "options": [
+      "Hurricane",
+      "Earthquake",
+      "Tornado",
+      "Flood"
+    ],
+    "answer": "Earthquake",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0030",
+    "question": "Which two countries share the longest international border?",
+    "options": [
+      "USA and Mexico",
+      "Russia and China",
+      "Canada and USA",
+      "Brazil and Argentina"
+    ],
+    "answer": "Canada and USA",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0031",
+    "question": "Which blood type is known as the universal donor?",
+    "options": [
+      "A",
+      "B",
+      "O negative",
+      "AB"
+    ],
+    "answer": "O negative",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0032",
+    "question": "Which mountain range separates Europe from Asia?",
+    "options": [
+      "Himalayas",
+      "Andes",
+      "Alps",
+      "Ural Mountains"
+    ],
+    "answer": "Ural Mountains",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-med-0033",
+    "question": "What is the official currency of Japan?",
+    "options": [
+      "Yen",
+      "Won",
+      "Renminbi",
+      "Ruble"
+    ],
+    "answer": "Yen",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0034",
+    "question": "Which European city has a famous landmark called the Atomium?",
+    "options": [
+      "Paris",
+      "Brussels",
+      "Amsterdam",
+      "Berlin"
+    ],
+    "answer": "Brussels",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-med-0035",
+    "question": "What is the square root of 144?",
+    "options": [
+      "10",
+      "11",
+      "12",
+      "13"
+    ],
+    "answer": "12",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0036",
+    "question": "Which scientist is known for the laws of motion?",
+    "options": [
+      "Einstein",
+      "Newton",
+      "Galileo",
+      "Tesla"
+    ],
+    "answer": "Newton",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0037",
+    "question": "Which country hosted the first FIFA World Cup?",
+    "options": [
+      "Brazil",
+      "Italy",
+      "Argentina",
+      "Uruguay"
+    ],
+    "answer": "Uruguay",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-med-0038",
+    "question": "What is the process by which plants make food?",
+    "options": [
+      "Digestion",
+      "Respiration",
+      "Photosynthesis",
+      "Fermentation"
+    ],
+    "answer": "Photosynthesis",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0039",
+    "question": "Which Asian country was formerly known as Siam?",
+    "options": [
+      "Vietnam",
+      "Thailand",
+      "Cambodia",
+      "Myanmar"
+    ],
+    "answer": "Thailand",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-med-0040",
+    "question": "Which ancient civilization built Machu Picchu?",
+    "options": [
+      "Aztecs",
+      "Mayans",
+      "Incas",
+      "Olmecs"
+    ],
+    "answer": "Incas",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0041",
+    "question": "Which gas do humans exhale?",
+    "options": [
+      "Oxygen",
+      "Carbon Dioxide",
+      "Nitrogen",
+      "Hydrogen"
+    ],
+    "answer": "Carbon Dioxide",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0042",
+    "question": "Which city is the capital of New Zealand?",
+    "options": [
+      "Auckland",
+      "Wellington",
+      "Christchurch",
+      "Dunedin"
+    ],
+    "answer": "Wellington",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0043",
+    "question": "What is the term for animals that eat both plants and meat?",
+    "options": [
+      "Herbivores",
+      "Carnivores",
+      "Omnivores",
+      "Detritivores"
+    ],
+    "answer": "Omnivores",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0044",
+    "question": "Which country has the Maple Leaf on its flag?",
+    "options": [
+      "Canada",
+      "UK",
+      "Denmark",
+      "Switzerland"
+    ],
+    "answer": "Canada",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0045",
+    "question": "How many degrees are in a right angle?",
+    "options": [
+      "45",
+      "90",
+      "180",
+      "60"
+    ],
+    "answer": "90",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0046",
+    "question": "Which organ pumps blood through the body?",
+    "options": [
+      "Lungs",
+      "Liver",
+      "Heart",
+      "Kidneys"
+    ],
+    "answer": "Heart",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0047",
+    "question": "What is the capital of Argentina?",
+    "options": [
+      "Lima",
+      "Bogotá",
+      "Buenos Aires",
+      "Santiago"
+    ],
+    "answer": "Buenos Aires",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0048",
+    "question": "Which famous wall is located in China?",
+    "options": [
+      "Berlin Wall",
+      "Hadrian's Wall",
+      "Great Wall",
+      "Western Wall"
+    ],
+    "answer": "Great Wall",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-med-0049",
+    "question": "Which month has an extra day during a leap year?",
+    "options": [
+      "February",
+      "March",
+      "April",
+      "June"
+    ],
+    "answer": "February",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-hard-0001",
+    "question": "Which country has the most natural lakes in the world?",
+    "options": [
+      "Russia",
+      "Canada",
+      "USA",
+      "Brazil"
+    ],
+    "answer": "Canada",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0002",
+    "question": "What is the chemical symbol for gold?",
+    "options": [
+      "Au",
+      "Ag",
+      "Gd",
+      "Go"
+    ],
+    "answer": "Au",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0003",
+    "question": "Which European city has a famous red-light district called De Wallen?",
+    "options": [
+      "Berlin",
+      "Prague",
+      "Amsterdam",
+      "Brussels"
+    ],
+    "answer": "Amsterdam",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0004",
+    "question": "Which is the only country to have a non-rectangular flag?",
+    "options": [
+      "Nepal",
+      "Bhutan",
+      "Vatican City",
+      "Monaco"
+    ],
+    "answer": "Nepal",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0005",
+    "question": "Which is the deepest point on Earth?",
+    "options": [
+      "Mariana Trench",
+      "Tonga Trench",
+      "Puerto Rico Trench",
+      "Java Trench"
+    ],
+    "answer": "Mariana Trench",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0006",
+    "question": "Which element has the atomic number 1?",
+    "options": [
+      "Oxygen",
+      "Hydrogen",
+      "Helium",
+      "Nitrogen"
+    ],
+    "answer": "Hydrogen",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0007",
+    "question": "What is the longest river in Europe?",
+    "options": [
+      "Danube",
+      "Volga",
+      "Rhine",
+      "Loire"
+    ],
+    "answer": "Volga",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0008",
+    "question": "Which Asian country has never been colonized by a European power?",
+    "options": [
+      "Thailand",
+      "Japan",
+      "China",
+      "Mongolia"
+    ],
+    "answer": "Thailand",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0009",
+    "question": "Which desert covers most of northern Africa?",
+    "options": [
+      "Sahara",
+      "Kalahari",
+      "Namib",
+      "Gobi"
+    ],
+    "answer": "Sahara",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0010",
+    "question": "In which country is the ancient city of Petra located?",
+    "options": [
+      "Jordan",
+      "Egypt",
+      "Iraq",
+      "Lebanon"
+    ],
+    "answer": "Jordan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0011",
+    "question": "Which African lake is the world's second-largest freshwater lake by surface area?",
+    "options": [
+      "Lake Victoria",
+      "Lake Tanganyika",
+      "Lake Malawi",
+      "Lake Chad"
+    ],
+    "answer": "Lake Victoria",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0012",
+    "question": "Which country invented paper?",
+    "options": [
+      "India",
+      "China",
+      "Egypt",
+      "Greece"
+    ],
+    "answer": "China",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0013",
+    "question": "Which organ in the human body produces insulin?",
+    "options": [
+      "Liver",
+      "Pancreas",
+      "Kidneys",
+      "Spleen"
+    ],
+    "answer": "Pancreas",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0014",
+    "question": "Which city is known as the City of Canals?",
+    "options": [
+      "Venice",
+      "Amsterdam",
+      "Bangkok",
+      "Bruges"
+    ],
+    "answer": "Venice",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0015",
+    "question": "What is the capital of Mongolia?",
+    "options": [
+      "Ulaanbaatar",
+      "Astana",
+      "Tashkent",
+      "Bishkek"
+    ],
+    "answer": "Ulaanbaatar",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0016",
+    "question": "Which structure connects Asia and Europe in Turkey?",
+    "options": [
+      "Bosphorus Bridge",
+      "Golden Horn",
+      "Galata Bridge",
+      "Fatih Sultan Bridge"
+    ],
+    "answer": "Bosphorus Bridge",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0018",
+    "question": "Which island nation is located southeast of India?",
+    "options": [
+      "Sri Lanka",
+      "Maldives",
+      "Bangladesh",
+      "Myanmar"
+    ],
+    "answer": "Sri Lanka",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0019",
+    "question": "Which U.S. state is the Grand Canyon located in?",
+    "options": [
+      "Nevada",
+      "Utah",
+      "Arizona",
+      "New Mexico"
+    ],
+    "answer": "Arizona",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0020",
+    "question": "What is the term for molten rock after it erupts from a volcano?",
+    "options": [
+      "Magma",
+      "Lava",
+      "Ash",
+      "Crust"
+    ],
+    "answer": "Lava",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0021",
+    "question": "Which river flows through Paris?",
+    "options": [
+      "Rhine",
+      "Loire",
+      "Seine",
+      "Garonne"
+    ],
+    "answer": "Seine",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0022",
+    "question": "Which U.S. state has the most active volcanoes?",
+    "options": [
+      "California",
+      "Alaska",
+      "Hawaii",
+      "Oregon"
+    ],
+    "answer": "Alaska",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0023",
+    "question": "Which mineral is commonly used in pencil lead?",
+    "options": [
+      "Graphite",
+      "Charcoal",
+      "Lead",
+      "Zinc"
+    ],
+    "answer": "Graphite",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0024",
+    "question": "Which country has the most UNESCO World Heritage sites?",
+    "options": [
+      "China",
+      "Italy",
+      "Spain",
+      "India"
+    ],
+    "answer": "Italy",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0025",
+    "question": "Which ancient empire built aqueducts for water supply?",
+    "options": [
+      "Greek",
+      "Roman",
+      "Persian",
+      "Mayan"
+    ],
+    "answer": "Roman",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0026",
+    "question": "What is the smallest country in the world by area?",
+    "options": [
+      "Monaco",
+      "San Marino",
+      "Vatican City",
+      "Liechtenstein"
+    ],
+    "answer": "Vatican City",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0027",
+    "question": "Which war ended with the Treaty of Versailles?",
+    "options": [
+      "World War I",
+      "World War II",
+      "Cold War",
+      "Vietnam War"
+    ],
+    "answer": "World War I",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0028",
+    "question": "Which U.S. president served the shortest time in office?",
+    "options": [
+      "James Garfield",
+      "William Henry Harrison",
+      "Zachary Taylor",
+      "John F. Kennedy"
+    ],
+    "answer": "William Henry Harrison",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0029",
+    "question": "What year did the Berlin Wall fall?",
+    "options": [
+      "1987",
+      "1988",
+      "1989",
+      "1990"
+    ],
+    "answer": "1989",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0030",
+    "question": "Which is the oldest known civilization?",
+    "options": [
+      "Mesopotamia",
+      "Ancient Egypt",
+      "Indus Valley",
+      "Maya"
+    ],
+    "answer": "Mesopotamia",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0031",
+    "question": "Which U.S. state was the last to join the union?",
+    "options": [
+      "Alaska",
+      "Hawaii",
+      "Arizona",
+      "New Mexico"
+    ],
+    "answer": "Hawaii",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0032",
+    "question": "Which organ of the human body is primarily responsible for detoxification?",
+    "options": [
+      "Kidney",
+      "Liver",
+      "Spleen",
+      "Pancreas"
+    ],
+    "answer": "Liver",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0033",
+    "question": "Which explorer is credited with discovering the Pacific Ocean?",
+    "options": [
+      "Magellan",
+      "Columbus",
+      "Balboa",
+      "Drake"
+    ],
+    "answer": "Balboa",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0034",
+    "question": "Which ancient structure was built as a tomb for a pharaoh?",
+    "options": [
+      "Stonehenge",
+      "Great Wall",
+      "Colosseum",
+      "Great Pyramid of Giza"
+    ],
+    "answer": "Great Pyramid of Giza",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0035",
+    "question": "Which empire had Constantinople as its capital?",
+    "options": [
+      "Mongol  Empire",
+      "Ottoman Empire",
+      "Byzantine Empire",
+      "Persian Empire"
+    ],
+    "answer": "Byzantine Empire",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0036",
+    "question": "Which island nation lies off the southeast coast of Africa?",
+    "options": [
+      "Madagascar",
+      "Mauritius",
+      "Seychelles",
+      "Comoros"
+    ],
+    "answer": "Madagascar",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0038",
+    "question": "What is the longest mountain range in the world?",
+    "options": [
+      "Rockies",
+      "Andes",
+      "Himalayas",
+      "Alps"
+    ],
+    "answer": "Andes",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0039",
+    "question": "What is the term for an organism that makes its own food?",
+    "options": [
+      "Heterotroph",
+      "Autotroph",
+      "Carnivore",
+      "Omnivore"
+    ],
+    "answer": "Autotroph",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0040",
+    "question": "Which European river flows through the most countries?",
+    "options": [
+      "Danube",
+      "Rhine",
+      "Volga",
+      "Elbe"
+    ],
+    "answer": "Danube",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0043",
+    "question": "Which layer of Earth is made up of molten rock?",
+    "options": [
+      "Core",
+      "Mantle",
+      "Crust",
+      "Lithosphere"
+    ],
+    "answer": "Mantle",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0044",
+    "question": "Which scientist proposed the laws of planetary motion?",
+    "options": [
+      "Galileo",
+      "Newton",
+      "Kepler",
+      "Copernicus"
+    ],
+    "answer": "Kepler",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0045",
+    "question": "Which one of these  U.S. state has the most bordering states?",
+    "options": [
+      "Nevada",
+      "Missouri",
+      "Texas",
+      "Colorado"
+    ],
+    "answer": "Missouri",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0046",
+    "question": "What is the term for the boundary between Earth's crust and mantle?",
+    "options": [
+      "Asthenosphere",
+      "Moho",
+      "Lithosphere",
+      "Core"
+    ],
+    "answer": "Moho",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0047",
+    "question": "What is the capital of Kazakhstan?",
+    "options": [
+      "Almaty",
+      "Tashkent",
+      "Astana",
+      "Baku"
+    ],
+    "answer": "Astana",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0048",
+    "question": "What is the scientific name for the human species?",
+    "options": [
+      "Homo sapiens",
+      "Homo erectus",
+      "Homo habilis",
+      "Homo neanderthalensis"
+    ],
+    "answer": "Homo sapiens",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0049",
+    "question": "Which U.S. landmark has the inscription 'Give me your tired, your poor...'",
+    "options": [
+      "Lincoln Memorial",
+      "Statue of Liberty",
+      "Mount Rushmore",
+      "Capitol Building"
+    ],
+    "answer": "Statue of Liberty",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-hard-0050",
+    "question": "Which branch of science deals with the study of fungi?",
+    "options": [
+      "Botany",
+      "Zoology",
+      "Mycology",
+      "Ecology"
+    ],
+    "answer": "Mycology",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gen-expert-0002",
+    "question": "What is the name of the line that separates day and night on Earth?",
+    "options": [
+      "Horizon",
+      "Prime Meridian",
+      "Terminator",
+      "Equator"
+    ],
+    "answer": "Terminator",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0003",
+    "question": "Which mathematician is known for the 'Last Theorem' proven centuries after his death?",
+    "options": [
+      "Euler",
+      "Fermat",
+      "Gauss",
+      "Descartes"
+    ],
+    "answer": "Fermat",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0004",
+    "question": "What is the rarest naturally occurring element on Earth?",
+    "options": [
+      "Francium",
+      "Astatine",
+      "Technetium",
+      "Promethium"
+    ],
+    "answer": "Astatine",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0005",
+    "question": "Which language has the most native speakers worldwide?",
+    "options": [
+      "English",
+      "Hindi",
+      "Mandarin",
+      "Spanish"
+    ],
+    "answer": "Mandarin",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0006",
+    "question": "Which early civilization developed cuneiform writing?",
+    "options": [
+      "Sumerians",
+      "Babylonians",
+      "Egyptians",
+      "Phoenicians"
+    ],
+    "answer": "Sumerians",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0007",
+    "question": "What is the name of the largest known volcano in the solar system?",
+    "options": [
+      "Mount Everest",
+      "Mauna Loa",
+      "Olympus Mons",
+      "Mount Etna"
+    ],
+    "answer": "Olympus Mons",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0008",
+    "question": "Which philosopher wrote 'Critique of Pure Reason'?",
+    "options": [
+      "Hegel",
+      "Kant",
+      "Nietzsche",
+      "Plato"
+    ],
+    "answer": "Kant",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0009",
+    "question": "What type of electromagnetic radiation has the shortest wavelength?",
+    "options": [
+      "X-rays",
+      "Gamma rays",
+      "Ultraviolet",
+      "Microwaves"
+    ],
+    "answer": "Gamma rays",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0010",
+    "question": "Which historical event began on July 28, 1914?",
+    "options": [
+      "World War I",
+      "World War II",
+      "Russian Revolution",
+      "Great Depression"
+    ],
+    "answer": "World War I",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0011",
+    "question": "Who discovered the neutron in 1932?",
+    "options": [
+      "Rutherford",
+      "Chadwick",
+      "Bohr",
+      "Curie"
+    ],
+    "answer": "Chadwick",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-easy-0063",
+    "question": "Which country is home to the Great Barrier Reef?",
+    "options": ["South Africa", "Australia", "Mexico", "Philippines"],
+    "answer": "Australia",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gen-expert-0014",
+    "question": "Which is the only continent with land in all four hemispheres?",
+    "options": [
+      "Africa",
+      "Asia",
+      "Australia",
+      "South America"
+    ],
+    "answer": "Africa",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0015",
+    "question": "Which British monarch had the longest reign before Elizabeth II?",
+    "options": [
+      "Victoria",
+      "George III",
+      "Henry VIII",
+      "Edward VII"
+    ],
+    "answer": "Victoria",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0016",
+    "question": "What is the name of the boundary between Earth's crust and core?",
+    "options": [
+      "Mantle",
+      "Moho",
+      "Gutenberg Discontinuity",
+      "Asthenosphere"
+    ],
+    "answer": "Gutenberg Discontinuity",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0017",
+    "question": "Which desert is the largest in Asia?",
+    "options": [
+      "Thar",
+      "Karakum",
+      "Gobi",
+      "Taklamakan"
+    ],
+    "answer": "Gobi",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0018",
+    "question": "What is the name for the study of flags?",
+    "options": [
+      "Heraldry",
+      "Symbology",
+      "Vexillology",
+      "Iconography"
+    ],
+    "answer": "Vexillology",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0022",
+    "question": "Which famous physicist worked at the Institute for Advanced Study in Princeton?",
+    "options": [
+      "Dirac",
+      "Einstein",
+      "Heisenberg",
+      "Feynman"
+    ],
+    "answer": "Einstein",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0023",
+    "question": "Which modern-day country was once known as Persia?",
+    "options": [
+      "Iran",
+      "Iraq",
+      "Turkey",
+      "Syria"
+    ],
+    "answer": "Iran",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0024",
+    "question": "What is the term for a word or phrase that reads the same backward and forward?",
+    "options": [
+      "Palindrome",
+      "Anagram",
+      "Oxymoron",
+      "Homonym"
+    ],
+    "answer": "Palindrome",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0025",
+    "question": "Which physicist is known for the uncertainty principle?",
+    "options": [
+      "Bohr",
+      "Planck",
+      "Heisenberg",
+      "Schrodinger"
+    ],
+    "answer": "Heisenberg",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0026",
+    "question": "Which element has the highest melting point?",
+    "options": [
+      "Iron",
+      "Tungsten",
+      "Titanium",
+      "Platinum"
+    ],
+    "answer": "Tungsten",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0027",
+    "question": "What is the name of the first artificial Earth satellite?",
+    "options": [
+      "Voyager 1",
+      "Sputnik 1",
+      "Apollo 11",
+      "Luna 2"
+    ],
+    "answer": "Sputnik 1",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0029",
+    "question": "What is the longest river in Asia?",
+    "options": [
+      "Yangtze",
+      "Mekong",
+      "Yellow",
+      "Ganges"
+    ],
+    "answer": "Yangtze",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0030",
+    "question": "Which scientist is known for the principle of buoyancy?",
+    "options": [
+      "Galileo",
+      "Archimedes",
+      "Newton",
+      "Pascal"
+    ],
+    "answer": "Archimedes",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0031",
+    "question": "In computing, what does 'HTTP' stand for?",
+    "options": [
+      "Hyperlink Transfer Protocol",
+      "Hypertext Transfer Protocol",
+      "High Text Transport Protocol",
+      "Host Terminal Text Protocol"
+    ],
+    "answer": "Hypertext Transfer Protocol",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0032",
+    "question": "What is the largest known living structure on Earth?",
+    "options": [
+      "Amazon Rainforest",
+      "Great Barrier Reef",
+      "Sahara Desert",
+      "Baikal Lake"
+    ],
+    "answer": "Great Barrier Reef",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0034",
+    "question": "What is the branch of medicine concerned with the kidneys?",
+    "options": [
+      "Urology",
+      "Hepatology",
+      "Nephrology",
+      "Cardiology"
+    ],
+    "answer": "Nephrology",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0036",
+    "question": "Which country has the most time zones?",
+    "options": [
+      "USA",
+      "China",
+      "Russia",
+      "France"
+    ],
+    "answer": "France",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0037",
+    "question": "Which Greek philosopher taught Alexander the Great?",
+    "options": [
+      "Socrates",
+      "Aristotle",
+      "Plato",
+      "Pythagoras"
+    ],
+    "answer": "Aristotle",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0039",
+    "question": "What ancient city was buried by the eruption of Mount Vesuvius?",
+    "options": [
+      "Pompeii",
+      "Athens",
+      "Rome",
+      "Troy"
+    ],
+    "answer": "Pompeii",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0040",
+    "question": "What is the chemical formula for table salt?",
+    "options": [
+      "NaCl",
+      "KCl",
+      "CaCO3",
+      "H2SO4"
+    ],
+    "answer": "NaCl",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0041",
+    "question": "What is the smallest bone in the human body?",
+    "options": [
+      "Femur",
+      "Stapes",
+      "Ulna",
+      "Radius"
+    ],
+    "answer": "Stapes",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0042",
+    "question": "What is the term for animals that eat only plants?",
+    "options": [
+      "Omnivores",
+      "Herbivores",
+      "Carnivores",
+      "Insectivores"
+    ],
+    "answer": "Herbivores",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gen-expert-0044",
+    "question": "What do you call a group of crows?",
+    "options": [
+      "Pack",
+      "Gaggle",
+      "Murder",
+      "Flock"
+    ],
+    "answer": "Murder",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0045",
+    "question": "Which African country has the most pyramids?",
+    "options": [
+      "Egypt",
+      "Sudan",
+      "Ethiopia",
+      "Libya"
+    ],
+    "answer": "Sudan",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0047",
+    "question": "What famous document begins with 'When in the course of human events'?",
+    "options": [
+      "U.S. Constitution",
+      "Bill of Rights",
+      "Declaration of Independence",
+      "Gettysburg Address"
+    ],
+    "answer": "Declaration of Independence",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0048",
+    "question": "What type of rock is formed by volcanic activity?",
+    "options": [
+      "Sedimentary",
+      "Metamorphic",
+      "Igneous",
+      "Basaltic"
+    ],
+    "answer": "Igneous",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0049",
+    "question": "Who is considered the father of modern chemistry?",
+    "options": [
+      "Dalton",
+      "Mendeleev",
+      "Lavoisier",
+      "Boyle"
+    ],
+    "answer": "Lavoisier",
+    "difficulty": "expert"
+  },
+  {
+    "id": "gen-expert-0050",
+    "question": "Which ancient Greek is known as the father of history?",
+    "options": [
+      "Socrates",
+      "Plato",
+      "Herodotus",
+      "Aristotle"
+    ],
+    "answer": "Herodotus",
+    "difficulty": "expert"
+  }
+]

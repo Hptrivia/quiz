@@ -1,0 +1,740 @@
+[
+  {
+    "id": "sp-ez-001",
+    "question": "What is the name of the protagonist who leads the slave rebellion?",
+    "options": ["Crixus", "Gannicus", "Spartacus", "Oenomaus"],
+    "answer": "Spartacus",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-ez-002",
+    "question": "In which city is the ludus of Batiatus located?",
+    "options": ["Rome", "Capua", "Neapolis", "Pompeii"],
+    "answer": "Capua",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-ez-003",
+    "question": "What is the name of Spartacus' wife?",
+    "options": ["Naevia", "Sura", "Mira", "Ilithyia"],
+    "answer": "Sura",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-ez-004",
+    "question": "Who is known as 'The Undefeated Gaul'?",
+    "options": ["Spartacus", "Gannicus", "Crixus", "Agron"],
+    "answer": "Crixus",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-ez-005",
+    "question": "What is the title given to the trainer of the gladiators?",
+    "options": ["Dominus", "Legatus", "Doctore", "Lanista"],
+    "answer": "Doctore",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-ez-006",
+    "question": "Which actor played Spartacus in Season 1?",
+    "options": ["Liam McIntyre", "Dustin Clare", "Manu Bennett", "Andy Whitfield"],
+    "answer": "Andy Whitfield",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-ez-007",
+    "question": "What is the name of the prequel mini-series?",
+    "options": ["Vengeance", "War of the Damned", "Gods of the Arena", "Blood and Sand"],
+    "answer": "Gods of the Arena",
+    "difficulty": "easy"
+  },
+{
+"id": "sp-ez-051",
+"question": "Which of these is NOT a title of a Spartacus season or miniseries?",
+"options": ["Blood and Sand", "Vengeance", "Gods of the Arena", "Rise of the Republic"],
+"answer": "Rise of the Republic",
+"difficulty": "easy"
+},
+  {
+    "id": "sp-ez-008",
+    "question": "Who is the Lanista of the House of Batiatus?",
+    "options": ["Solonius", "Quintus Batiatus", "Marcus Crassus", "Gaius Glaber"],
+    "answer": "Quintus Batiatus",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-ez-009",
+    "question": "Which gladiator is Spartacus' best friend in Season 1?",
+    "options": ["Crixus", "Varro", "Agron", "Barca"],
+    "answer": "Varro",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-ez-010",
+    "question": "What is Spartacus' country of origin?",
+    "options": ["Gaul", "Germany", "Thrace", "Greece"],
+    "answer": "Thrace",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-ez-011",
+    "question": "What is the name of Batiatus' wife?",
+    "options": ["Ilithyia", "Lucretia", "Licinia", "Sura"],
+    "answer": "Lucretia",
+    "difficulty": "easy"
+  },
+{
+  "id": "spa-ez-0026",
+  "question": "What is the title for a man who purchases, owns, and manages a troupe of gladiators?",
+  "options": ["Legatus", "Lanista", "Dominus", "Doctore"],
+  "answer": "Lanista",
+  "difficulty": "easy"
+},
+  {
+    "id": "spa-ez-0040",
+    "question": "What is the name of Crassus' eldest son?",
+    "options": ["Publius", "Tiberius", "Numerius", "Sextus"],
+    "answer": "Tiberius",
+    "difficulty": "hard"
+  },
+  {
+    "id": "spa-ez-0044",
+    "question": "What is the name of Varro's wife?",
+    "options": ["Aurelia", "Licinia", "Naevita", "Melitia"],
+    "answer": "Aurelia",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-ez-012",
+    "question": "What is the name of the champion of the House of Batiatus in the prequel?",
+    "options": ["Crixus", "Spartacus", "Gannicus", "Oenomaus"],
+    "answer": "Gannicus",
+    "difficulty": "easy"
+  },
+{
+  "id": "spa-ez-0010",
+  "question": "After Spartacus and Crixus defeat the legendary Theokoles in the arena, what title is Spartacus given by the people of Capua?",
+  "options": ["The Shadow of Death", "The Unbeaten Gaul", "The Bringer of Rain", "The Serpent of Thrace"],
+  "answer": "The Bringer of Rain",
+  "difficulty": "easy"
+},
+  {
+    "id": "sp-ez-013",
+    "question": "What Roman rank does Gaius Claudius Glaber hold in Season 1?",
+    "options": ["Senator", "Legatus", "Caesar", "Imperator"],
+    "answer": "Legatus",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-ez-014",
+    "question": "Who is the slave girl Crixus is in love with?",
+    "options": ["Mira", "Sura", "Naevia", "Saxa"],
+    "answer": "Naevia",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-ez-015",
+    "question": "What is the name of the giant gladiator known as the 'Shadow of Death'?",
+    "options": ["Theokoles", "Auctus", "Gnaeus", "Lugo"],
+    "answer": "Theokoles",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-ez-016",
+    "question": "What do the gladiators call the sand where they fight?",
+    "options": ["The Pit", "The Arena", "The Grave", "The Circle"],
+    "answer": "The Arena",
+    "difficulty": "easy"
+  },
+{
+  "id": "sp-hard-151",
+  "question": "What is the name of the gladiator Spartacus kills in the pits for assaulting Pietros?",
+  "options": ["Gnaeus", "Auctus", "Kerza", "Lugo"],
+  "answer": "Kerza",
+  "difficulty": "hard"
+},
+  {
+    "id": "sp-hard-155",
+    "question": "Which of these names is NOT a gladiator that appeared in the show?",
+    "options": ["Segovax", "Hamilcar", "Rabanus", "Cassius"],
+    "answer": "Cassius",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-hard-154",
+    "question": "Which gladiator does Spartacus throw off a cliff to avenge the suicide of Pietros?",
+    "options": ["Kerza", "Gnaeus", "Rhaskos", "Ashur"],
+    "answer": "Gnaeus",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-hard-153",
+    "question": "Which of these is NOT a gladiator featured in the show?",
+    "options": ["Pericles", "Auctus", "Gnaeus", "Rhaskos"],
+    "answer": "Pericles",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-ez-017",
+    "question": "In the series, what is the main weapon of a Murmillo gladiator?",
+    "options": ["Trident and Net", "Spear", "Sword and Shield", "Bow"],
+    "answer": "Sword and Shield",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-ez-017",
+    "question": "In the series, what is the main weapon of a Dimachaerus gladiator?",
+    "options": ["Trident and Net", "Spear", "Dual Swords", "Bow"],
+    "answer": "Dual Swords",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-ez-017",
+    "question": "In the series, what is the main weapon of a Retiarius gladiator?",
+    "options": ["Trident and Net", "Spear", "Sword and Shield", "Bow"],
+    "answer": "Trident and Net",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-ez-018",
+    "question": "Which Roman woman is Lucretia's best 'friend'?",
+    "options": ["Licinia", "Ilithyia", "Sura", "Gaia"],
+    "answer": "Ilithyia",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-ez-019",
+    "question": "What is the name of the German gladiator who becomes Spartacus' loyal general?",
+    "options": ["Donar", "Lugo", "Agron", "Duro"],
+    "answer": "Agron",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-ez-020",
+    "question": "Who kills Batiatus in the Season 1 finale?",
+    "options": ["Crixus", "Oenomaus", "Spartacus", "Agron"],
+    "answer": "Spartacus",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-ez-021",
+    "question": "What is the title of Season 2 (after the prequel)?",
+    "options": ["Blood and Sand", "Vengeance", "War of the Damned", "Rise of Rebels"],
+    "answer": "Vengeance",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-ez-022",
+    "question": "Which actor took over the role of Spartacus after Andy Whitfield passed away?",
+    "options": ["Manu Bennett", "Liam McIntyre", "Dustin Clare", "Jai Courtney"],
+    "answer": "Liam McIntyre",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-ez-023",
+    "question": "What is the name of the gladiator known as the 'Beast of Carthage'?",
+    "options": ["Barca", "Agron", "Crixus", "The Egyptian"],
+    "answer": "Barca",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-ez-024",
+    "question": "What is the name of the final season of the series?",
+    "options": ["Vengeance", "War of the Damned", "The Last Stand", "Gods of Rome"],
+    "answer": "War of the Damned",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-ez-025",
+    "question": "Who is the primary Roman antagonist in 'War of the Damned'?",
+    "options": ["Glaber", "Batiatus", "Marcus Crassus", "Solonius"],
+    "answer": "Marcus Crassus",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-ez-026",
+    "question": "What is the name of the mountain where the rebels hide in Season 2?",
+    "options": ["Olympus", "Etna", "Vesuvius", "Alps"],
+    "answer": "Vesuvius",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-ez-027",
+    "question": "Who is the young Roman who is sent by Crassus to infiltrate the rebels?",
+    "options": ["Julius Caesar", "Tiberius", "Pompey", "Metellus"],
+    "answer": "Julius Caesar",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-ez-028",
+    "question": "Which character serves as the Doctore for most of the series?",
+    "options": ["Gannicus", "Crixus", "Oenomaus", "Barca"],
+    "answer": "Oenomaus",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-ez-029",
+    "question": "What is the name of the slave woman who falls in love with Spartacus after Sura's death?",
+    "options": ["Naevia", "Saxa", "Mira", "Kore"],
+    "answer": "Mira",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-ez-030",
+    "question": "What is the name of the rival Lanista who is Batiatus' neighbor?",
+    "options": ["Crassus", "Solonius", "Glaber", "Varinius"],
+    "answer": "Solonius",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-ez-034",
+    "question": "What did the rebels call themselves?",
+    "options": ["The Free Men", "The Brothers", "The Damned", "The Liberators"],
+    "answer": "The Brothers",
+    "difficulty": "easy"
+  },
+{
+  "id": "sp-ez-156",
+  "question": "What is the name of the wooden sword presented to a gladiator when he is granted his freedom?",
+  "options": [
+    "Sica",
+    "Rudis",
+    "Gladius",
+    "Pugio"
+  ],
+  "answer": "Rudis",
+  "difficulty": "hard"
+},
+  {
+    "id": "sp-ez-036",
+    "question": "Who kills Glaber at the end of Season 2?",
+    "options": ["Crixus", "Spartacus", "Gannicus", "Agron"],
+    "answer": "Spartacus",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-ez-038",
+    "question": "What is the name of Agron's brother?",
+    "options": ["Nasir", "Duro", "Lugo", "Donar"],
+    "answer": "Duro",
+    "difficulty": "hard"
+  },
+{
+  "id": "sp-med-158",
+  "question": "In the episode 'Sacramentum,' where do Spartacus and the rebels find and rescue the new group of German slaves?",
+  "options": [
+    "A slave ship in the port of Neapolis",
+    "The gladiator pits of Pompeii",
+    "A Roman military camp near Rome",
+    "The villa of Seppius"
+  ],
+  "answer": "A slave ship in the port of Neapolis",
+  "difficulty": "hard"
+},
+  {
+    "id": "sp-ez-041",
+    "question": "Who is the German warrior woman rescued from the slave ship?",
+    "options": ["Naevia", "Saxa", "Mira", "Kore"],
+    "answer": "Saxa",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-ez-042",
+    "question": "What city do the rebels capture and live in during 'War of the Damned'?",
+    "options": ["Rome", "Capua", "Sinuessa en Valle", "Pompeii"],
+    "answer": "Sinuessa en Valle",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-ez-043",
+    "question": "What is the name of Crassus' loyal slave woman?",
+    "options": ["Naevia", "Mira", "Kore", "Saxa"],
+    "answer": "Kore",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-ez-045",
+    "question": "What is the fate of Lucretia at the end of 'Vengeance'?",
+    "options": ["She escapes", "She falls off a cliff with a baby", "She is killed by Spartacus", "She becomes a slave"],
+    "answer": "She falls off a cliff with a baby",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-ez-046",
+    "question": "In the arena, what does a 'thumbs down' usually signify?",
+    "options": ["Mercy", "Death", "A tie", "A new fight"],
+    "answer": "Death",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-ez-048",
+    "question": "What is the name of Batiatus' father?",
+    "options": ["Solonius", "Titus", "Marcus", "Julius"],
+    "answer": "Titus",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-med-051",
+    "question": "What was the name of Oenomaus' wife who served in the House of Batiatus?",
+    "options": ["Mira", "Melitta", "Sura", "Naevia"],
+    "answer": "Melitta",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sp-med-052",
+    "question": "How did Batiatus' father, Titus, die?",
+    "options": ["Killed by a gladiator", "Poisoned", "Died of old age", "In the arena"],
+    "answer": "Poisoned",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sp-med-053",
+    "question": "What is the name of the legendary giant gladiator Spartacus and Crixus team up to fight?",
+    "options": ["Theokoles", "Auctus", "Gnaeus", "The Egyptian"],
+    "answer": "Theokoles",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sp-med-055",
+    "question": "What are the names of the two German brothers who join the rebellion in Season 1?",
+    "options": ["Agron and Duro", "Lugo and Donar", "Nasir and Castus", "Rhaskos and Saxa"],
+    "answer": "Agron and Duro",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sp-med-056",
+    "question": "In 'Gods of the Arena', who is Gannicus' closest friend and fellow gladiator?",
+    "options": ["Crixus", "Oenomaus", "Auctus", "Barca"],
+    "answer": "Oenomaus",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sp-med-058",
+    "question": "What is the name of the gladiator trainer who precedes Oenomaus?",
+    "options": ["Ulpius", "Batiatus", "Solonius", "Titus"],
+    "answer": "Ulpius",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-med-059",
+    "question": "Who kills Varro in Season 1?",
+    "options": ["Romans", "Crixus", "Barca", "Spartacus"],
+    "answer": "Spartacus",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sp-med-060",
+    "question": "Which character kills Ashur in the 'Vengeance' finale?",
+    "options": ["Spartacus", "Crixus", "Naevia", "Gannicus"],
+    "answer": "Naevia",
+    "difficulty": "medium"
+  },
+  {
+    "id": "spa-ez-0050",
+    "question": "How does Gannicus die?",
+    "options": ["Killed by Crassus", "Killed by Caesar", "Crucified", "In the final charge"],
+    "answer": "Crucified",
+    "difficulty": "easy"
+  },
+  {
+    "id": "spa-med-0016",
+    "question": "Who kills Crixus in the final season?",
+    "options": ["Marcus Crassus", "Julius Caesar", "Tiberius", "Pompey"],
+    "answer": "Tiberius",
+    "difficulty": "medium"
+  },
+  {
+    "id": "spa-med-0031",
+    "question": "Which character decapitates Sedullus during a fight in the rebel camp?",
+    "options": ["Spartacus", "Crixus", "Agron", "Gannicus"],
+    "answer": "Spartacus",
+    "difficulty": "hard"
+  },
+  {
+    "id": "spa-med-0038",
+    "question": "Which gladiator was the 'Titan of Pompeii'?",
+    "options": ["Arkadios", "Pericles", "Sedullus", "Gnaeus"],
+    "answer": "Pericles",
+    "difficulty": "hard"
+  },
+ {
+    "id": "spa-med-0051",
+    "question": "At the beginning of 'Blood and Sand', which rival tribe does Spartacus and the Maedi agree to help Glaber fight in exchange for the Romans' protection of Thrace?",
+    "options": ["The Getae", "The Bessi", "The Medae", "The Odrysae"],
+    "answer": "The Getae",
+    "difficulty": "hard"
+  },
+  {
+    "id": "spa-med-0052",
+    "question": "What type of pets do Barca and his lover Pietros famously keep and care for in their cell?",
+    "options": ["Parrots", "Pigeons", "Sparrows", "Owls"],
+    "answer": "Pigeons",
+    "difficulty": "hard"
+  },
+  {
+    "id": "spa-med-0053",
+    "question": "Which of these gladiators is NOT of Gaul descent?",
+    "options": ["Auctus", "Dagan", "Segovax", "Mannus"],
+    "answer": "Dagan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "spa-med-0054",
+    "question": "Which of these rebels is NOT a member of the Germanic tribes?",
+    "options": ["Agron", "Nasir", "Lugo", "Donar"],
+    "answer": "Nasir",
+    "difficulty": "hard"
+  },
+{
+  "id": "spa-med-0056",
+  "question": "Gnaeus the gladiator is identified as being from which region?",
+  "options": ["Gaul", "Dacia", "Germany", "Numidia"],
+  "answer": "Dacia",
+  "difficulty": "hard"
+},
+  {
+    "id": "spa-med-0055",
+    "question": "Which of these rebels is NOT a member of the Germanic tribes?",
+    "options": ["Nemetes", "Duro", "Gnaeus", "Sedullus"],
+    "answer": "Gnaeus",
+    "difficulty": "hard"
+  },
+  {
+    "id": "spa-med-0025",
+    "question": "What is the name of the legendary Greek gladiator known as the 'Scourge of Athens'?",
+    "options": ["Arkadios", "Tibius", "Pericles", "Hamilcar"],
+    "answer": "Arkadios",
+    "difficulty": "hard"
+  },
+  {
+    "id": "spa-med-0013",
+    "question": "What is the name of the gladiator who Ilithyia purchases in Season 1?",
+    "options": ["Segovax", "Gnaeus", "Rhaskos", "Hamilcar"],
+    "answer": "Segovax",
+    "difficulty": "hard"
+  },
+  {
+    "id": "spa-med-0001",
+    "question": "What is the name of the Thracian tribe Spartacus belongs to?",
+    "options": ["Maedi", "Getae", "Dacian", "Bessi"],
+    "answer": "Maedi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-med-061",
+    "question": "What is the name of the Roman lady who is accidentally killed by Ilithyia?",
+    "options": ["Licinia", "Lucinia", "Gaia", "Seppia"],
+    "answer": "Licinia",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-med-062",
+    "question": "Who is the leader of the rebels' naval allies, the Cilician pirates?",
+    "options": ["Heraclio", "Castus", "Santho", "Aulus"],
+    "answer": "Heraclio",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-med-063",
+    "question": "In 'War of the Damned', who kills Crassus' son, Tiberius?",
+    "options": ["Spartacus", "Crixus", "Kore", "Caesar"],
+    "answer": "Kore",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-med-065",
+    "question": "Which gladiator style does Crixus primarily use?",
+    "options": ["Thraex", "Murmillo", "Retiarius", "Dimachaerus"],
+    "answer": "Murmillo",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sp-med-067",
+    "question": "Who is the Roman magistrate of Capua in Season 1?",
+    "options": ["Calavius", "Glaber", "Mercato", "Varinius"],
+    "answer": "Calavius",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-med-068",
+    "question": "Which character is known as the 'Bringer of Rain'?",
+    "options": ["Crixus", "Gannicus", "Spartacus", "Oenomaus"],
+    "answer": "Spartacus",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sp-med-071",
+    "question": "What is the name of Batiatus' main rival in 'Gods of the Arena'?",
+    "options": ["Solonius", "Tullius", "Vettius", "Cossutius"],
+    "answer": "Tullius",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-med-072",
+    "question": "What is the name of the place where the lowest-tier gladiators fight?",
+    "options": ["The Hole", "The Pits", "The Underworld", "The Grave"],
+    "answer": "The Pits",
+    "difficulty": "hard"
+  },
+{
+  "id": "sp-hard-159",
+  "question": "What is the nationality of the gladiator Ashur, who serves as Batiatus' primary spy?",
+  "options": [
+    "Syrian",
+    "Egyptian",
+    "Roman",
+    "Gaul"
+  ],
+  "answer": "Syrian",
+  "difficulty": "hard"
+},
+  {
+    "id": "sp-med-081",
+    "question": "What happened to the slave Barca's lover, Pietros?",
+    "options": ["He escaped", "He committed suicide", "He was killed by Gnaeus", "He was sold"],
+    "answer": "He committed suicide",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-med-085",
+    "question": "Which gladiator style does Gannicus use in the arena?",
+    "options": ["Murmillo", "Dimachaerus", "Thraex", "Hoplomachus"],
+    "answer": "Dimachaerus",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-med-089",
+    "question": "Which of these character loses an eye during the series?",
+    "options": ["Oenomaus", "Agron", "Naevia", "Ashur"],
+    "answer": "Oenomaus",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-med-093",
+    "question": "How many times does Spartacus officially fight Crixus in the arena?",
+    "options": ["Once", "Twice", "Three times", "Never"],
+    "answer": "Once",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-hard-101",
+    "question": "How many Denari did Batiatus pay to purchase Crixus from the slave traders?",
+    "options": ["10", "50", "100", "500"],
+    "answer": "50",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-hard-105",
+    "question": "In 'Gods of the Arena', what specific gladiator style does Gnaeus fight as?",
+    "options": ["Murmillo", "Thraex", "Hoplomachus", "Retiarius"],
+    "answer": "Thraex",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-hard-116",
+    "question": "In the series finale, how many spears are shown piercing Spartacus during his final stand?",
+    "options": ["Two", "Three", "One", "Five"],
+    "answer": "Three",
+    "difficulty": "hard"
+  },
+  {
+    "id": "spa-easy-0016",
+    "question": "What is the term often used for the gladiator training school?",
+    "options": ["Ludus", "Circus", "Forum", "Domus"],
+    "answer": "Ludus",
+    "difficulty": "easy"
+  },
+  {
+    "id": "spa-easy-0012",
+    "question": "Who plays Lucretia?",
+    "options": ["Lucy Lawless", "Viva Bianca", "Katrina Law", "Ellen Hollman"],
+    "answer": "Lucy Lawless",
+    "difficulty": "hard"
+  },
+  {
+    "id": "spa-easy-0010",
+    "question": "Which actor plays Batiatus?",
+    "options": ["John Hannah", "Craig Parker", "Simon Merrells", "Nick Tarabay"],
+    "answer": "John Hannah",
+    "difficulty": "hard"
+  },
+  {
+    "id": "spa-easy-0005",
+    "question": "What is the full title of the first main season?",
+    "options": ["Blood and Sand", "Vengeance", "War of the Damned", "Gods of the Arena"],
+    "answer": "Blood and Sand",
+    "difficulty": "hard"
+  },
+  {
+    "id": "spa-easy-0001",
+    "question": "Which network originally aired the Spartacus TV series?",
+    "options": ["Starz", "HBO", "Showtime", "AMC"],
+    "answer": "Starz",
+    "difficulty": "hard"
+  },
+ {
+    "id": "sp-hard-131",
+    "question": "What does the Egyptian use to kill his victims?",
+    "options": ["Dual curved daggers", "A heavy axe", "Garrote wire", "Throwing knives"],
+    "answer": "Dual curved daggers",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lat-term-0001",
+    "question": "What is the  title used to address a male head of a Roman household?",
+    "options": ["Dominus", "Servus", "Patronus", "Rex"],
+    "answer": "Dominus",
+    "difficulty": "easy"
+  },
+  {
+    "id": "spa-easy-0017",
+    "question": "What year did the Starz television series 'Spartacus' first premiere?",
+    "options": ["2008", "2010", "2012", "2015"],
+    "answer": "2010",
+    "difficulty": "hard"
+  },
+  {
+    "id": "spa-med-0020",
+    "question": "What is the question Oenomaus always asks recruits when they arrive in the ludus?",
+    "options": ["Who are you?", "What is beneath your feet?", "Why do you breathe?", "What is your name?"],
+    "answer": "What is beneath your feet?",
+    "difficulty": "hard"
+  },
+  {
+    "id": "spa-med-0021",
+    "question": "What is the specific answer every recruit must give when Doctore asks what is beneath their feet?",
+    "options": ["Sand!", "Blood!", "Sacred ground!", "Bone and Blood"],
+    "answer": "Sacred ground!",
+    "difficulty": "hard"
+  },
+  {
+    "id": "spa-easy-0028",
+    "question": "Which actor plays Gannicus?",
+    "options": ["Dustin Clare", "Manu Bennett", "Liam McIntyre", "Nick Tarabay"],
+    "answer": "Dustin Clare",
+    "difficulty": "hard"
+  },
+  {
+    "id": "spa-easy-0026",
+    "question": "Who plays Ilithyia?",
+    "options": ["Viva Bianca", "Lucy Lawless", "Cynthia Addai-Robinson", "Anna Hutchison"],
+    "answer": "Viva Bianca",
+    "difficulty": "hard"
+  },
+  {
+    "id": "spa-easy-0020",
+    "question": "Which actor plays Crixus?",
+    "options": ["Manu Bennett", "Liam McIntyre", "Andy Whitfield", "Todd Lasance"],
+    "answer": "Manu Bennett",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lat-term-0002",
+    "question": "What is the  title used to address a female head of a Roman household?",
+    "options": ["Ancilla", "Domina", "Matrona", "Puella"],
+    "answer": "Domina",
+    "difficulty": "easy"
+  }
+]
+
+ 

@@ -1,0 +1,876 @@
+[
+  {
+    "id": "tf-easy-0001",
+    "question": "True or False: Paris is the capital of France.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "easy",
+    "description": "Paris is the capital and largest city of France."
+  },
+  {
+    "id": "tf-easy-0004",
+    "question": "True or False: A triangle has four sides.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "easy",
+    "description": "A triangle has three sides by definition."
+  },
+  {
+    "id": "tf-easy-0005",
+    "question": "True or False: Water freezes at 0°C (32°F) at sea level.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "easy",
+    "description": "At standard atmospheric pressure, water freezes at 0°C / 32°F."
+  },
+  {
+    "id": "tf-easy-0006",
+    "question": "True or False: The Earth orbits the Sun.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "easy",
+    "description": "Earth revolves around the Sun once per year."
+  },
+  {
+    "id": "tf-easy-0007",
+    "question": "True or False: The Pacific Ocean is the largest ocean on Earth.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "easy",
+    "description": "The Pacific is the largest and deepest ocean."
+  },
+  {
+    "id": "tf-easy-0008",
+    "question": "True or False: Humans have three lungs.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "easy",
+    "description": "Humans have two lungs."
+  },
+  {
+    "id": "tf-easy-0009",
+    "question": "True or False: A kilometer is longer than a mile.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "easy",
+    "description": "A mile is about 1.609 kilometers, so it’s longer than a kilometer."
+  },
+  {
+    "id": "tf-easy-0010",
+    "question": "True or False: Venus is sometimes called Earth's \"sister planet\" because of its similar size.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "easy",
+    "description": "Venus is close in size and composition to Earth, though its environment is extremely different."
+  },
+  {
+    "id": "tf-easy-0011",
+    "question": "True or False: The Great Wall of China is visible from the Moon with the naked eye.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "easy",
+    "description": "This is a common myth; it’s generally not visible from the Moon unaided."
+  },
+  {
+    "id": "tf-easy-0012",
+    "question": "True or False: A leap year has 366 days.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "easy",
+    "description": "Leap years add an extra day to February to keep the calendar aligned."
+  },
+  {
+    "id": "tf-easy-0013",
+    "question": "True or False: The human body has 206 bones (in adults).",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "easy",
+    "description": "Most adults have 206 bones, though small variations can occur."
+  },
+  {
+    "id": "tf-easy-0014",
+    "question": "True or False: Lightning never strikes the same place twice.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "easy",
+    "description": "Lightning can strike the same place multiple times, especially tall structures."
+  },
+  {
+    "id": "tf-easy-0015",
+    "question": "True or False: Sharks are mammals.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "easy",
+    "description": "Sharks are fish (cartilaginous fish), not mammals."
+  },
+  {
+    "id": "tf-easy-0016",
+    "question": "True or False: The Amazon River is in Africa.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "easy",
+    "description": "The Amazon River is in South America."
+  },
+  {
+    "id": "tf-easy-0018",
+    "question": "True or False: Gold is a chemical element.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "easy",
+    "description": "Gold’s chemical symbol is Au."
+  },
+  {
+    "id": "tf-easy-0019",
+    "question": "True or False: Sound travels faster in air than in water.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "easy",
+    "description": "Sound travels faster in water than in air."
+  },
+  {
+    "id": "tf-easy-0020",
+    "question": "True or False: Penguins live naturally in the Arctic.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "easy",
+    "description": "Penguins are native to the Southern Hemisphere, especially Antarctica."
+  },
+  {
+    "id": "tf-easy-0021",
+    "question": "True or False: A rectangle is always a square.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "easy",
+    "description": "Squares are rectangles with all sides equal, but many rectangles are not squares."
+  },
+  {
+    "id": "tf-easy-0022",
+    "question": "True or False: The capital of Canada is Toronto.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "easy",
+    "description": "Ottawa is the capital of Canada; Toronto is the largest city."
+  },
+  {
+    "id": "tf-easy-0023",
+    "question": "True or False: The Sahara is the largest hot desert in the world.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "easy",
+    "description": "The Sahara is the largest hot desert, located in North Africa."
+  },
+  {
+    "id": "tf-easy-0024",
+    "question": "True or False: Humans can breathe in space without a spacesuit.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "easy",
+    "description": "Space has no breathable air and extremely low pressure, so a spacesuit is required."
+  },
+  {
+    "id": "tf-easy-0025",
+    "question": "True or False: The Atlantic Ocean is larger than the Pacific Ocean.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "easy",
+    "description": "The Pacific Ocean is larger than the Atlantic."
+  },
+  {
+    "id": "tf-easy-0026",
+    "question": "True or False: The capital of Italy is Rome.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "easy",
+    "description": "Rome is the capital of Italy and home to Vatican City within it."
+  },
+  {
+    "id": "tf-easy-0027",
+    "question": "True or False: Bats are blind.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "easy",
+    "description": "Bats can see; many also use echolocation to navigate and hunt."
+  },
+  {
+    "id": "tf-easy-0028",
+    "question": "True or False: A heptagon has seven sides.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "easy",
+    "description": "A heptagon is a 7-sided polygon."
+  },
+  {
+    "id": "tf-easy-0029",
+    "question": "True or False: Mount Everest is the tallest mountain above sea level.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "easy",
+    "description": "Everest is the highest peak above sea level, in the Himalayas."
+  },
+  {
+    "id": "tf-easy-0030",
+    "question": "True or False: The human heart has four chambers.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "easy",
+    "description": "The heart has two atria and two ventricles."
+  },
+
+  {
+    "id": "tf-medium-0001",
+    "question": "True or False: Mercury is the closest planet to the Sun.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "medium",
+    "description": "Mercury orbits closest to the Sun."
+  },
+  {
+    "id": "tf-medium-0002",
+    "question": "True or False: The capital of Bolivia is La Paz.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "medium",
+    "description": "Sucre is the constitutional capital; La Paz is the seat of government."
+  },
+  {
+    "id": "tf-medium-0003",
+    "question": "True or False: Humans share about half of their DNA with bananas.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "hard",
+    "description": "Humans and bananas share a significant portion of genetic sequences, though it doesn’t mean we’re “half banana” in any practical way."
+  },
+  {
+    "id": "tf-medium-0004",
+    "question": "True or False: The chemical symbol for potassium is K.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "medium",
+    "description": "Potassium’s symbol is K (from Latin 'kalium')."
+  },
+  {
+    "id": "tf-medium-0005",
+    "question": "True or False: An octopus has two hearts.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "medium",
+    "description": "Octopuses have three hearts—two pump blood to the gills, one to the body."
+  },
+  {
+    "id": "tf-medium-0006",
+    "question": "True or False: The Great Barrier Reef is located off the coast of Australia.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "hard",
+    "description": "It lies in the Coral Sea, off Queensland, Australia."
+  },
+  {
+    "id": "tf-medium-0007",
+    "question": "True or False: Pluto is currently classified as a planet by the International Astronomical Union (IAU).",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "medium",
+    "description": "Pluto was reclassified as a dwarf planet in 2006."
+  },
+  {
+    "id": "tf-medium-0008",
+    "question": "True or False: The human liver can regenerate after removal.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "hard",
+    "description": "The liver can regrow tissue and recover function after partial removal."
+  },
+  {
+    "id": "tf-medium-0009",
+    "question": "True or False: The longest river in South America is the Amazon River.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "hard",
+    "description": "The Amazon is the longest river in South America and one of the longest in the world."
+  },
+  {
+    "id": "tf-medium-0010",
+    "question": "True or False: The capital of South Africa is Cape Town.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "hard",
+    "description": "South Africa has three capitals: Pretoria (executive), Cape Town (legislative), and Bloemfontein (judicial)."
+  },
+  {
+    "id": "tf-medium-0011",
+    "question": "True or False: A proton has a negative electric charge.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "medium",
+    "description": "Protons have a positive charge; electrons have a negative charge."
+  },
+  {
+    "id": "tf-medium-0012",
+    "question": "True or False: The speed of light is approximately 300,000 km per second.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "hard",
+    "description": "In a vacuum, light travels about 299,792 km/s."
+  },
+  {
+    "id": "tf-medium-0013",
+    "question": "True or False: Antarctica is the driest continent on Earth.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "hard",
+    "description": "Despite being covered in ice, it receives extremely little precipitation."
+  },
+  {
+    "id": "tf-medium-0014",
+    "question": "True or False: A comet is made mostly of rock and metal, like an asteroid.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "hard",
+    "description": "Comets are rich in ice and dust—often described as “dirty snowballs.”"
+  },
+  {
+    "id": "tf-medium-0015",
+    "question": "True or False: The Mediterranean Sea is an ocean.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "medium",
+    "description": "It’s a sea connected to the Atlantic Ocean."
+  },
+  {
+    "id": "tf-medium-0016",
+    "question": "True or False: The capital of Turkey is Istanbul.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "medium",
+    "description": "Ankara is the capital; Istanbul is the largest city."
+  },
+  {
+    "id": "tf-medium-0017",
+    "question": "True or False: Diamond is a form of carbon.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "hard",
+    "description": "Diamonds are carbon atoms arranged in a crystal lattice."
+  },
+  {
+    "id": "tf-medium-0018",
+    "question": "True or False: Humans have more than five senses.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "medium",
+    "description": "In addition to the classic five, senses like balance and proprioception are recognized."
+  },
+  {
+    "id": "tf-medium-0019",
+    "question": "True or False: A crocodile is more closely related to a lizard than to a bird.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "hard",
+    "description": "Crocodilians are more closely related to birds than to lizards."
+  },
+  {
+    "id": "tf-medium-0020",
+    "question": "True or False: The Eiffel Tower is located in London.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "medium",
+    "description": "The Eiffel Tower is in Paris, France."
+  },
+  {
+    "id": "tf-medium-0021",
+    "question": "True or False: The currency of Japan is the yen.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "medium",
+    "description": "Japan’s official currency is the Japanese yen (¥)."
+  },
+  {
+    "id": "tf-medium-0022",
+    "question": "True or False: The Moon produces its own light.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "medium",
+    "description": "The Moon reflects sunlight; it doesn’t generate light like the Sun."
+  },
+  {
+    "id": "tf-medium-0023",
+    "question": "True or False: The human skeleton is fully formed at birth.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "medium",
+    "description": "Babies have more bones that later fuse as they grow."
+  },
+  {
+    "id": "tf-medium-0024",
+    "question": "True or False: The Panama Canal connects the Atlantic Ocean and the Pacific Ocean.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "hard",
+    "description": "It links the Atlantic (via the Caribbean Sea) to the Pacific."
+  },
+  {
+    "id": "tf-medium-0025",
+    "question": "True or False: Mount Kilimanjaro is located in Kenya.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "medium",
+    "description": "Kilimanjaro is in Tanzania, near the Kenya border."
+  },
+  {
+    "id": "tf-medium-0026",
+    "question": "True or False: All mammals give birth to live young.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "medium",
+    "description": "Monotremes like the platypus lay eggs."
+  },
+  {
+    "id": "tf-medium-0027",
+    "question": "True or False: The largest planet in our solar system is Jupiter.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "medium",
+    "description": "Jupiter is the biggest planet by both mass and volume."
+  },
+  {
+    "id": "tf-medium-0028",
+    "question": "True or False: A \"byte\" is always 10 bits.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "medium",
+    "description": "A byte is typically 8 bits in modern computing."
+  },
+  {
+    "id": "tf-medium-0029",
+    "question": "True or False: The capital of Morocco is Casablanca.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "hard",
+    "description": "Rabat is the capital of Morocco; Casablanca is the largest city."
+  },
+  {
+    "id": "tf-medium-0030",
+    "question": "True or False: Dolphins are fish.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "medium",
+    "description": "Dolphins are mammals—they breathe air and nurse their young."
+  },
+
+  {
+    "id": "tf-hard-0001",
+    "question": "True or False: The capital of Malaysia is Putrajaya.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "hard",
+    "description": "Kuala Lumpur is the official capital; Putrajaya is the federal administrative center."
+  },
+  {
+    "id": "tf-hard-0002",
+    "question": "True or False: The only continent without any native reptiles is Antarctica.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "hard",
+    "description": "Antarctica has no native reptiles due to the extreme cold."
+  },
+  {
+    "id": "tf-hard-0003",
+    "question": "True or False: The capital of Côte d’Ivoire is Abidjan.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "hard",
+    "description": "Yamoussoukro is the official political capital; Abidjan is the economic hub."
+  },
+  {
+    "id": "tf-hard-0004",
+    "question": "True or False: The element with chemical symbol 'Fe' is fluorine.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "hard",
+    "description": "Fe is iron; fluorine is F."
+  },
+  {
+    "id": "tf-hard-0006",
+    "question": "True or False: The Great Victoria Desert is located in South Africa.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "hard",
+    "description": "The Great Victoria Desert is in Australia."
+  },
+  {
+    "id": "tf-hard-0007",
+    "question": "True or False: The capital of Kazakhstan is Almaty.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "hard",
+    "description": "Astana is the capital; Almaty was the former capital and remains the largest city."
+  },
+  {
+    "id": "tf-hard-0008",
+    "question": "True or False: The human body has a bone called the stapes, found in the ear.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "hard",
+    "description": "The stapes is one of the tiny bones (ossicles) in the middle ear."
+  },
+  {
+    "id": "tf-hard-0009",
+    "question": "True or False: The speed of sound is faster in air than in steel.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "hard",
+    "description": "Sound travels much faster in solids (like steel) than in air."
+  },
+  {
+    "id": "tf-hard-0010",
+    "question": "True or False: An adult human typically has fewer bones than a newborn.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "hard",
+    "description": "Many bones in infants fuse as they develop, reducing the count by adulthood."
+  },
+  {
+    "id": "tf-hard-0012",
+    "question": "True or False: The currency of South Korea is the won.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "hard",
+    "description": "South Korea’s currency is the won (₩)."
+  },
+  {
+    "id": "tf-hard-0013",
+    "question": "True or False: A blue whale is a fish.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "hard",
+    "description": "Blue whales are mammals: they breathe air and nurse their young."
+  },
+  {
+    "id": "tf-hard-0014",
+    "question": "True or False: The \"Ring of Fire\" is mainly associated with earthquakes and volcanoes around the Pacific Ocean.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "hard",
+    "description": "It’s a highly active tectonic belt surrounding much of the Pacific."
+  },
+  {
+    "id": "tf-hard-0015",
+    "question": "True or False: The chemical symbol for sodium is Na.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "hard",
+    "description": "Na comes from Latin 'natrium.'"
+  },
+  {
+    "id": "tf-hard-0017",
+    "question": "True or False: The Sahara Desert is located primarily in Southern Africa.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "hard",
+    "description": "The Sahara is in North Africa."
+  },
+  {
+    "id": "tf-hard-0018",
+    "question": "True or False: A \"mole\" (unit) in chemistry refers to exactly 12 grams of any element.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "hard",
+    "description": "A mole is a count of particles (Avogadro’s number), not a fixed mass for every element."
+  },
+  {
+    "id": "tf-hard-0019",
+    "question": "True or False: The Amazon rainforest is mostly in Brazil.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "hard",
+    "description": "The Amazon rainforest spans multiple countries, but the largest portion is in Brazil."
+  },
+  {
+    "id": "tf-hard-0020",
+    "question": "True or False: The largest organ in the human body is the liver.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "hard",
+    "description": "The skin is the largest organ; the liver is the largest internal organ."
+  },
+  {
+    "id": "tf-hard-0022",
+    "question": "True or False: An anaconda is a venomous snake.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "hard",
+    "description": "Anacondas are constrictors; they kill by squeezing, not venom."
+  },
+  {
+    "id": "tf-hard-0023",
+    "question": "True or False: The capital of Nigeria is Lagos.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "hard",
+    "description": "Abuja is the capital; Lagos is the largest city."
+  },
+  {
+    "id": "tf-hard-0024",
+    "question": "True or False: The smallest bone in the human body is found in the ear.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "hard",
+    "description": "The stapes (in the middle ear) is commonly cited as the smallest bone."
+  },
+  {
+    "id": "tf-hard-0026",
+    "question": "True or False: A crocodile’s heart has four chambers.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "hard",
+    "description": "Crocodilians have a four-chambered heart, similar to birds and mammals."
+  },
+  {
+    "id": "tf-easy-0031",
+    "question": "True or False: A square has four equal sides.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "easy",
+    "description": "A square is a quadrilateral with all sides equal and all angles 90°."
+  },
+  {
+    "id": "tf-easy-0032",
+    "question": "True or False: The Sun is a star.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "easy",
+    "description": "The Sun is a star at the center of our solar system."
+  },
+  {
+    "id": "tf-easy-0033",
+    "question": "True or False: Humans need oxygen to survive.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "easy",
+    "description": "Oxygen is essential for cellular respiration in humans."
+  },
+  {
+    "id": "tf-easy-0034",
+    "question": "True or False: A bee is an insect.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "easy",
+    "description": "Bees are insects with six legs and three body segments."
+  },
+  {
+    "id": "tf-easy-0035",
+    "question": "True or False: The Pacific Ocean is smaller than the Atlantic Ocean.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "hard",
+    "description": "The Pacific Ocean is larger than the Atlantic Ocean."
+  },
+  {
+    "id": "tf-easy-0036",
+    "question": "True or False: Penguins can fly.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "easy",
+    "description": "Penguins are flightless birds adapted for swimming."
+  },
+  {
+    "id": "tf-easy-0037",
+    "question": "True or False: A dozen equals 12.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "easy",
+    "description": "“Dozen” is a common term meaning twelve."
+  },
+  {
+    "id": "tf-easy-0038",
+    "question": "True or False: Water boils at 100°C (212°F) at sea level.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "hard",
+    "description": "At standard atmospheric pressure, water boils at 100°C / 212°F."
+  },
+  {
+    "id": "tf-easy-0039",
+    "question": "True or False: A spider has six legs.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "easy",
+    "description": "Spiders are arachnids and have eight legs."
+  },
+  {
+    "id": "tf-easy-0040",
+    "question": "True or False: The Earth has one natural moon.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "hard",
+    "description": "Earth’s natural satellite is commonly called “the Moon.”"
+  },
+  {
+    "id": "tf-medium-0031",
+    "question": "True or False: The human brain uses roughly 20% of the body’s energy at rest.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "hard",
+    "description": "Despite being a small fraction of body mass, the brain is energy-hungry."
+  },
+  {
+    "id": "tf-medium-0033",
+    "question": "True or False: The chemical symbol for gold is Ag.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "medium",
+    "description": "Gold is Au; Ag is silver."
+  },
+  {
+    "id": "tf-medium-0034",
+    "question": "True or False: The Great Barrier Reef is the largest coral reef system in the world.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "hard",
+    "description": "It’s the world’s largest coral reef system, off Australia’s northeast coast."
+  },
+  {
+    "id": "tf-medium-0035",
+    "question": "True or False: A group of crows is called a murder.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "hard",
+    "description": "“Murder” is a traditional collective noun for crows."
+  },
+  {
+    "id": "tf-medium-0037",
+    "question": "True or False: Plants create oxygen through photosynthesis.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "medium",
+    "description": "Photosynthesis releases oxygen as a byproduct when converting CO₂ and water into sugars."
+  },
+  {
+    "id": "tf-medium-0039",
+    "question": "True or False: DNA stands for Deoxyribonucleic acid.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "hard",
+    "description": "DNA is the molecule that carries genetic instructions in most living things."
+  },
+  {
+    "id": "tf-medium-0040",
+    "question": "True or False: The Milky Way is the name of a galaxy.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "hard",
+    "description": "The Milky Way is the galaxy that contains our solar system."
+  },
+  {
+    "id": "tf-hard-0031",
+    "question": "True or False: Sharks are a type of bony fish.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "hard",
+    "description": "Sharks are cartilaginous fish; their skeletons are made mostly of cartilage."
+  },
+  {
+    "id": "tf-hard-0032",
+    "question": "True or False: The human body has more bacterial cells than human cells.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "hard",
+    "description": "Modern estimates suggest bacterial and human cell counts are roughly comparable, not overwhelmingly more bacteria."
+  },
+  {
+    "id": "tf-hard-0033",
+    "question": "True or False: A crocodile is more closely related to birds than to lizards.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "hard",
+    "description": "Crocodilians and birds share a closer evolutionary relationship (archosaurs)."
+  },
+  {
+    "id": "tf-hard-0034",
+    "question": "True or False: The chemical element bromine is liquid at room temperature.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "hard",
+    "description": "Bromine is one of the few elements that are liquid at room temperature."
+  },
+  {
+    "id": "tf-hard-0035",
+    "question": "True or False: The driest hot desert on Earth is the Sahara Desert.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "hard",
+    "description": "The Atacama Desert is often cited as the driest hot desert; the Sahara is the largest hot desert."
+  },
+  {
+    "id": "tf-hard-0036",
+    "question": "True or False: A year on Mars is longer than a year on Earth.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "hard",
+    "description": "Mars takes about 687 Earth days to orbit the Sun."
+  },
+  {
+    "id": "tf-hard-0038",
+    "question": "True or False: Venus rotates in the same direction as most other planets in the solar system.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "hard",
+    "description": "Venus has retrograde rotation, spinning opposite the direction of most planets."
+  },
+  {
+    "id": "tf-expert-0032",
+    "question": "True or False: The platypus is a monotreme, meaning it lays eggs.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "expert",
+    "description": "Monotremes are egg-laying mammals; the platypus is one of them."
+  },
+  {
+    "id": "tf-expert-0033",
+    "question": "True or False: Human red blood cells contain a nucleus.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "expert",
+    "description": "Mature human red blood cells lack a nucleus to maximize space for hemoglobin."
+  },
+  {
+    "id": "tf-expert-0034",
+    "question": "True or False: The mitochondrion has its own DNA separate from nuclear DNA.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "expert",
+    "description": "Mitochondria have their own small genome, inherited mostly maternally."
+  },
+  {
+    "id": "tf-expert-0035",
+    "question": "True or False: The blue whale’s heart can weigh as much as a small car.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "expert",
+    "description": "A blue whale’s heart is enormous—often cited at hundreds of kilograms."
+  },
+  {
+    "id": "tf-expert-0038",
+    "question": "True or False: The ozone layer is found primarily in the troposphere.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "difficulty": "expert",
+    "description": "Most ozone is in the stratosphere, where it helps absorb harmful UV radiation."
+  },
+  {
+    "id": "tf-expert-0039",
+    "question": "True or False: The unit \"kelvin\" measures temperature and does not use degrees (°).",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "expert",
+    "description": "Kelvin is an absolute temperature scale written as K, not °K."
+  },
+  {
+    "id": "tf-expert-0040",
+    "question": "True or False: In the periodic table, halogens are found in Group 17.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "difficulty": "expert",
+    "description": "Halogens include elements like fluorine, chlorine, bromine, and iodine in Group 17."
+  }
+]

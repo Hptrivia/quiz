@@ -1,0 +1,717 @@
+[
+  {
+    "id": "msm12-easy-001",
+    "question": "Which hero is the main playable Spider-Man for most of Marvel's Spider-Man (2018)?",
+    "options": ["Miles Morales", "Peter Parker", "Miguel O'Hara", "Ben Reilly"],
+    "answer": "Peter Parker",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-002",
+    "question": "Which second Spider-Man becomes playable in Marvel's Spider-Man 2?",
+    "options": ["Ben Reilly", "Spider-Gwen", "Miles Morales", "Peter Parker"],
+    "answer": "Miles Morales",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-003",
+    "question": "What city do the games mainly take place in?",
+    "options": ["Chicago", "New York City", "Boston", "Los Angeles"],
+    "answer": "New York City",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-004",
+    "question": "Who is Peter Parker's aunt in the games?",
+    "options": ["Aunt Anna", "Aunt May", "Aunt June", "Aunt Martha"],
+    "answer": "Aunt May",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-005",
+    "question": "What is Miles Morales's father's name?",
+    "options": ["Jefferson", "Marcus", "Martin", "Aaron"],
+    "answer": "Jefferson",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-006",
+    "question": "What is Miles Morales's mother's name?",
+    "options": ["Martha", "Rio", "Felicia", "Cara"],
+    "answer": "Rio",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-007",
+    "question": "Who is Peter Parker's former boss at the Daily Bugle?",
+    "options": ["Robbie Robertson", "J. Jonah Jameson", "Eddie Brock", "Ben Urich"],
+    "answer": "J. Jonah Jameson",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-008",
+    "question": "What is Peter Parker's girlfriend's full name?",
+    "options": ["Mary Jane Watson", "Gwen Stacy", "Felicia Hardy", "Gloria Grant"],
+    "answer": "Mary Jane Watson",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-010",
+    "question": "Which company does Otto Octavius run in the first game?",
+    "options": ["Oscorp", "Octavius Industries", "Alchemax", "Roxxon"],
+    "answer": "Octavius Industries",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-012",
+    "question": "What is Martin Li's villain name?",
+    "options": ["The Prowler", "Mister Negative", "Electro", "Mister Positive"],
+    "answer": "Mister Negative",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-013",
+    "question": "What organization does Martin Li run as a charity front?",
+    "options": ["FEAST", "FISK", "Oscorp Relief", "Empire Aid"],
+    "answer": "FEAST",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-014",
+    "question": "Who is the first major villain Peter takes down in the 2018 game?",
+    "options": ["Mister Negative", "Kingpin", "Electro", "Rhino"],
+    "answer": "Kingpin",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-015",
+    "question": "What is Kingpin's real name?",
+    "options": ["Wilson Fisk", "Adrian Toomes", "Lonnie Lincoln", "Herman Schultz"],
+    "answer": "Wilson Fisk",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-016",
+    "question": "Which villain uses electricity in the first game?",
+    "options": ["Vulture", "Electro", "Scorpion", "Hammerhead"],
+    "answer": "Electro",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-017",
+    "question": "Which villain is a giant armored bruiser in both games?",
+    "options": ["Rhino", "Shocker", "Chameleon", "Mysterio"],
+    "answer": "Rhino",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-018",
+    "question": "Which villain uses fear toxins and poison attacks in the first game?",
+    "options": ["Scorpion", "Tombstone", "Lizard", "Kraven"],
+    "answer": "Scorpion",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-021",
+    "question": "Which villain duo is the second major boss battle in the first game?",
+    "options": ["Rhino and Scorpion", "Kraven and Lizard", "Electro and Vulture", "Mysterio and Prowler"],
+    "answer": "Rhino and Scorpion",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm12-easy-022",
+    "question": "Which villain duo is the first major boss battle in the first game?",
+    "options": ["Electro and Vulture", "Kingpin and Tombstone", "Rhino and Scorpion", "Prowler and Lizard"],
+    "answer": "Electro and Vulture",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm12-easy-023",
+    "question": "What disease outbreak threatens New York in the first game?",
+    "options": ["Devil's Breath", "The Syndrome", "Symbiote Plague", "Goblin Flu"],
+    "answer": "Devil's Breath",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-024",
+    "question": "Which corporation is strongly tied to Devil's Breath?",
+    "options": ["Roxxon", "Oscorp", "Alchemax", "Octavius Industries"],
+    "answer": "Oscorp",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-025",
+    "question": "Who is the head of Oscorp in the games?",
+    "options": ["Otto Octavius", "Norman Osborn", "Harry Osborn", "Curt Connors"],
+    "answer": "Norman Osborn",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-027",
+    "question": "Who is Miles Morales's best friend?",
+    "options": ["Gavin", "Ganke Lee", "Phin", "Garry"],
+    "answer": "Ganke Lee",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-030",
+    "question": "What is Phin Mason's villain name in Marvel's Spider-Man: Miles Morales?",
+    "options": ["Silver Sable", "Tinkerer", "Wraith", "Black Cat"],
+    "answer": "Tinkerer",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm12-easy-031",
+    "question": "Which corporation is the main corporate threat in Miles Morales?",
+    "options": ["Oscorp", "Roxxon", "Fisk Industries", "EMF"],
+    "answer": "Roxxon",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-032",
+    "question": "What energy source is central to the plot of Miles Morales?",
+    "options": ["Arc Reactors", "Nuform", "Devil's Breath", "Symbiote Matter"],
+    "answer": "Nuform",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-033",
+    "question": "Who is Miles Morales's uncle?",
+    "options": ["Norman", "Aaron", "Jefferson", "Curt"],
+    "answer": "Aaron",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-034",
+    "question": "What is Aaron Davis's villain identity?",
+    "options": ["Shocker", "Prowler", "Mysterio", "Chameleon"],
+    "answer": "Prowler",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-035",
+    "question": "Which borough is a bigger focus in Miles Morales?",
+    "options": ["Queens", "Harlem", "Brooklyn", "Bronx"],
+    "answer": "Harlem",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-037",
+    "question": "Who is one of the main villains hunting super-powered targets in Spider-Man 2?",
+    "options": ["Kingpin", "Kraven", "Hammerhead", "Doctor Octopus"],
+    "answer": "Kraven",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-038",
+    "question": "What is Kraven's full villain name in Spider-Man 2?",
+    "options": ["Kraven the Hunter", "Kraven the Slayer", "Kraven the Beast", "Kraven the Tracker"],
+    "answer": "Kraven the Hunter",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-040",
+    "question": "Who becomes Venom in Spider-Man 2?",
+    "options": ["Peter Parker", "Harry Osborn", "Eddie Brock", "Norman Osborn"],
+    "answer": "Harry Osborn",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-046",
+    "question": "What is Black Cat's real name?",
+    "options": ["Felicia Hardy", "Yuri Watanabe", "MJ Watson", "Silver Sablinova"],
+    "answer": "Felicia Hardy",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-047",
+    "question": "Who becomes Wraith in the games?",
+    "options": ["MJ", "Yuri Watanabe", "Silver Sable", "Phin Mason"],
+    "answer": "Yuri Watanabe",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-048",
+    "question": "What is Yuri Watanabe's role in the games before becoming a villain?",
+    "options": ["Mayor", "Police captain", "Journalist", "Scientist"],
+    "answer": "Police captain",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-049",
+    "question": "What organization do Peter and Harry build in Spider-Man 2?",
+    "options": ["FEAST", "EMF", "Roxxon Labs", "FNSM"],
+    "answer": "EMF",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-easy-050",
+    "question": "What does EMF stand for in Spider-Man 2?",
+    "options": ["Emily-May Foundation", "Eoundation", "Emergency Metro Fund", "Enhanced Matter Facility"],
+    "answer": "Emily-May Foundation",
+    "difficulty": "easy"
+  },
+
+  {
+    "id": "msm12-medium-052",
+    "question": "Which prison is famous for holding supervillains in the first game?",
+    "options": ["Ryker's Island", "The Raft", "Blackgate", "Belle Reve"],
+    "answer": "The Raft",
+    "difficulty": "medium"
+  },
+  {
+    "id": "msm12-medium-053",
+    "question": "Which villain group forms after the Raft breakout in the first game?",
+    "options": ["The Hunters", "Sinister Six", "Fiendish 5", "Superior 6"],
+    "answer": "Sinister Six",
+    "difficulty": "medium"
+  },
+  {
+    "id": "msm12-medium-055",
+    "question": "Which villain is not part of the first game's Sinister Six lineup?",
+    "options": ["Doctor Octopus", "Electro", "Shocker", "Rhino"],
+    "answer": "Shocker",
+    "difficulty": "medium"
+  },
+  {
+    "id": "msm12-medium-055",
+    "question": "Which villain is not part of the first game's Sinister Six lineup?",
+    "options": ["Mister Negative", "Vulture", "Scorpion", "Sandman"],
+    "answer": "Sandman",
+    "difficulty": "medium"
+  },
+  {
+    "id": "msm12-medium-056",
+    "question": "Which villain gang serves Mister Negative in the first game?",
+    "options": ["Underground", "Demons", "Hunters", "Inner Demons of Fisk"],
+    "answer": "Demons",
+    "difficulty": "medium"
+  },
+  {
+    "id": "msm12-medium-058",
+    "question": "Which villain in the first game is obsessed with social media challenges?",
+    "options": ["Black Cat", "Screwball", "Silver Sable", "Prowler"],
+    "answer": "Screwball",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm12-medium-060",
+    "question": "What is Silver Sable's full name?",
+    "options": ["Silver Sablinova", "Sabina Silverman", "Sylvia Sabre", "Sara Sablin"],
+    "answer": "Silver Sablinova",
+    "difficulty": "medium"
+  },
+  {
+    "id": "msm12-medium-062",
+    "question": "What is Tombstone's real name?",
+    "options": ["Lonnie Lincoln", "Herman Schultz", "Mack Gargan", "Flint Marko"],
+    "answer": "Lonnie Lincoln",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm12-medium-064",
+    "question": "What is Shocker's real name?",
+    "options": ["Herman Schultz", "Adrian Toomes", "Quentin Beck", "Max Dillon"],
+    "answer": "Herman Schultz",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm12-medium-069",
+    "question": "What is the name of the app used to request Spider-Man's help in Miles Morales?",
+    "options": ["Spidey Signal", "FNSM App", "Spider Alert", "FNCM App"],
+    "answer": "FNSM App",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm12-medium-070",
+    "question": "What does FNSM stand for in Miles Morales?",
+    "options": ["Friendly Neighborhood Spider-Man", "Fast New Spider Mode", "Friendly New York Spider Mission", "Frontline Neighborhood Safety Monitor"],
+    "answer": "Friendly Neighborhood Spider-Man",
+    "difficulty": "medium"
+  },
+  {
+    "id": "msm12-medium-071",
+    "question": "Which enemy faction uses high-tech purple weapons in Miles Morales?",
+    "options": ["Hunters", "Underground", "Demons", "Symbiotes"],
+    "answer": "Underground",
+    "difficulty": "medium"
+  },
+  {
+    "id": "msm12-medium-075",
+    "question": "Who is the first villain fought in Spiderman 2?",
+    "options": ["Venom", "Sandman", "Lizard", "Kraven"],
+    "answer": "Sandman",
+    "difficulty": "medium"
+  },
+  {
+    "id": "msm12-medium-076",
+    "question": "What is Sandman's real name?",
+    "options": ["Flint Marko", "Cletus Kasady", "Max Dillon", "Mac Gargan"],
+    "answer": "Flint Marko",
+    "difficulty": "medium"
+  },
+  {
+    "id": "msm12-medium-083",
+    "question": "Which villain kidnaps Curt Connors in Spider-Man 2?",
+    "options": ["Martin Li", "Kraven", "Kingpin", "Black Cat"],
+    "answer": "Kraven",
+    "difficulty": "medium"
+  },
+  {
+    "id": "msm12-medium-094",
+    "question": "What traversal tool becomes a major addition in Spider-Man 2?",
+    "options": ["Hover boots", "Web Wings", "Rocket webs", "Wall drills"],
+    "answer": "Web Wings",
+    "difficulty": "medium"
+  },
+  {
+    "id": "msm12-medium-097",
+    "question": "What school is Miles connected to in the games?",
+    "options": ["Brooklyn Visions Academy", "Midtown High", "Empire State Prep", "Queens Central"],
+    "answer": "Brooklyn Visions Academy",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm12-medium-100",
+    "question": "Which podcast host often offers the more pro-Spider-Man viewpoint opposite Jameson?",
+    "options": ["Danika Hart", "Sara Hunnigan", "MJ Watson", "Mara Barber"],
+    "answer": "Danika Hart",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm-med-092",
+    "question": "What is the name of the news station MJ works for in the second game?",
+    "options": ["The Daily Bugle", "Daily Globe", "Empire News", "Front Line"],
+    "answer": "The Daily Bugle",
+    "difficulty": "medium"
+  },
+  {
+    "id": "msm-med-095",
+    "question": "What is the name of the drone used by the hunters to find Spider-Man?",
+    "options": ["Talon Drone", "Hunter Drone", "Panther Drone", "Seeker Drone"],
+    "answer": "Talon Drone",
+    "difficulty": "medium"
+  },
+  {
+    "id": "msm-med-098",
+    "question": "What character is Miles' love interest in Spider-Man 2?",
+    "options": ["Hailey", "Katie", "Mara", "Sarah"],
+    "answer": "Hailey",
+    "difficulty": "medium"
+  },
+  {
+    "id": "msm12-hard-101",
+    "question": "What is the scientific designation tied to Devil's Breath in the first game?",
+    "options": ["GR-27", "VX-11", "OZ-3", "NU-5"],
+    "answer": "GR-27",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm-med-065",
+    "question": "Who is the primary antagonist of the Spiderman 1 DLC?",
+    "options": ["Hammerhead", "Black Cat", "Silver Sable", "Tombstone"],
+    "answer": "Hammerhead",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm-med-059",
+    "question": "In Spider-Man 2, what is the name of the cult led by Cletus Kasady?",
+    "options": ["The Flame", "The Carnage", "The Hand", "The Void"],
+    "answer": "The Flame",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm-med-052",
+    "question": "What specific genetic disease is Harry Osborn suffering from?",
+    "options": ["Oshtoran Syndrome", "Huntington's", "Parkinson's", "Cystic Fibrosis"],
+    "answer": "Oshtoran Syndrome",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm-easy-041",
+    "question": "Who is the primary villain of the 'Miles Morales' standalone game?",
+    "options": ["The Tinkerer", "The Prowler", "Rhino", "Kingpin"],
+    "answer": "The Tinkerer",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm-easy-037",
+    "question": "Where do Peter and Harry go to school together in flashbacks?",
+    "options": ["Midtown High", "Empire State University", "Brooklyn Visions", "Queens Academy"],
+    "answer": "Midtown High",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm-easy-028",
+    "question": "What is the name of the amusement park in Spider-Man 2?",
+    "options": ["Coney Island", "Empire Park", "Liberty Land", "Liberty-Park"],
+    "answer": "Coney Island",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm-easy-015",
+    "question": "What does Peter collect around the city in the first game to unlock suits?",
+    "options": ["Backpacks", "Spider-Bots", "Trophies", "Photos"],
+    "answer": "Backpacks",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sm-easy-0010",
+    "question": "What is Spider-Man’s occupation at the start of Marvel’s Spider-Man (2018)?",
+    "options": ["Research assistant", "Daily Bugle photographer", "High school teacher", "Police detective"],
+    "answer": "Research assistant",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sm-medium-0063",
+    "question": "Miles has a special bio-electric ability; what is it commonly called in the games?",
+    "options": ["Venom powers", "Spider-sense", "Chaos energy", "Photon blast"],
+    "answer": "Venom powers",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sm-medium-0051",
+    "question": "In Marvel’s Spider-Man (2018), how many years has Peter been Spider-Man when the game begins?",
+    "options": ["About eight years", "About one year", "About three years", "About fifteen years"],
+    "answer": "About eight years",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sm-easy-0040",
+    "question": "Which smaller spin-off game bridges the first game and Marvel’s Spider-Man 2?",
+    "options": ["Marvel’s Spider-Man: Miles Morales", "Ultimate Spider-Man", "Edge of Time", "Shattered Dimensions"],
+    "answer": "Marvel’s Spider-Man: Miles Morales",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sm-easy-0002",
+    "question": "Which game studio developed Marvel's Spider-Man and Marvel's Spider-Man 2?",
+    "options": ["Insomniac Games", "Rocksteady Studios", "Naughty Dog", "Sucker Punch"],
+    "answer": "Insomniac Games",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm12-hard-104",
+    "question": "Which villain is ultimately most responsible for orchestrating the Sinister Six attack on Spider-Man in the first game?",
+    "options": ["Kingpin", "Doctor Octopus", "Mister Negative", "Shocker"],
+    "answer": "Doctor Octopus",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm12-hard-106",
+    "question": "What physical condition is Otto Octavius struggling with before becoming Doctor Octopus?",
+    "options": ["Cerebral Ischemia", "Degenerative neuromuscular disease", "Multiple Sclerosis", "Parkinson’s Disease"],
+    "answer": "Degenerative neuromuscular disease",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm-med-098",
+    "question": "What character is Miles' love interest in Spider-Man 2?",
+    "options": ["Hailey", "Katie", "Mara", "Sarah"],
+    "answer": "Hailey",
+    "difficulty": "medium"
+  },
+  {
+    "id": "spidey-form-001",
+    "question": "Which of these is not a villain across the Insomniac Spider-Man games?",
+    "options": ["Venom", "Kraven", "Doctor Octopus", "Green Goblin"],
+    "answer": "Green Goblin",
+    "difficulty": "hard"
+  },
+  {
+    "id": "spidey-form-002",
+    "question": "Which of these is not a villain across the Insomniac Spider-Man games?",
+    "options": ["Mister Negative", "Sandman", "Rhino", "Sonic"],
+    "answer": "Sonic",
+    "difficulty": "easy"
+  },
+  {
+    "id": "spidey-form-003",
+    "question": "What is the name of the pro-Spider-Man podcast in the games?",
+    "options": ["Danikast", "Just the Facts", "The Daily Thread", "Manikast"],
+    "answer": "Danikast",
+    "difficulty": "medium"
+  },
+  {
+    "id": "spidey-form-004",
+    "question": "When was Marvel's Spider-Man 1 released?",
+    "options": ["2016", "2017", "2018", "2019"],
+    "answer": "2018",
+    "difficulty": "easy"
+  },
+  {
+    "id": "spidey-form-005",
+    "question": "When was Marvel's Spider-Man 2 released?",
+    "options": ["2021", "2022", "2023", "2024"],
+    "answer": "2023",
+    "difficulty": "easy"
+  },
+  {
+    "id": "spidey-form-006",
+    "question": "When was Marvel's Spider-Man: Miles Morales released?",
+    "options": ["2019", "2020", "2021", "2022"],
+    "answer": "2020",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm-med-072",
+    "question": "Who is the leader of the 'Hunters' faction?",
+    "options": ["Sergei Kravinoff", "Dmitri Smerdyakov", "Vladimir Kravinoff", "Alyosha Kravinoff"],
+    "answer": "Sergei Kravinoff",
+    "difficulty": "medium"
+  },
+  {
+    "id": "msm-med-061",
+    "question": "What is the name of the secret society Peter investigates in the first game's DLC?",
+    "options": ["The Maggia", "The Hand", "The Foot Clan", "The Cabal"],
+    "answer": "The Maggia",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm-med-070",
+    "question": "How many collectible backpacks are there in total in the first game?",
+    "options": ["55", "50", "45", "60"],
+    "answer": "55",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm-med-054",
+    "question": "Which villain does Kraven kill first on-screen at the beginning of Spider-Man 2?",
+    "options": ["Vulture", "Shocker", "Scorpion", "Electro"],
+    "answer": "Scorpion",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm-easy-039",
+    "question": "Which button is usually used to swing in the games?",
+    "options": ["R2", "X", "Circle", "Triangle"],
+    "answer": "R2",
+    "difficulty": "easy"
+  },
+  {
+    "id": "msm-hard-001",
+    "question": "Who provides the voice and facial capture for Peter Parker in Marvel's Spider-Man?",
+    "options": ["Josh Keaton", "Yuri Lowenthal", "Christopher Daniel Barnes", "Nadji Jeter"],
+    "answer": "Yuri Lowenthal",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm-hard-002",
+    "question": "What reward is unlocked specifically for collecting all 55 backpacks in the first game?",
+    "options": ["The ESU Suit", "The Homemade Suit", "The Vintage Comic Book Suit", "A Secret Photo Trophy"],
+    "answer": "The Homemade Suit",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm-hard-003",
+    "question": "How many total story DLC episodes were released as part of the DLC?",
+    "options": ["Two", "Three", "Four", "Five"],
+    "answer": "Three",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm-hard-004",
+    "question": "What is the name of J. Jonah Jameson's long-suffering podcast producer?",
+    "options": ["Jared", "Eddie", "Robbie", "Phil"],
+    "answer": "Jared",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm-hard-005",
+    "question": "Which extreme difficulty level was added to the first game in a post-launch update alongside New Game Plus?",
+    "options": ["Spectacular", "Friendly Neighborhood", "Ultimate", "Superior"],
+    "answer": "Ultimate",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm-easy-025",
+    "question": "What is Miles Morales' father's job before he dies?",
+    "options": ["Police Officer", "Doctor", "Scientist", "Teacher"],
+    "answer": "Police Officer",
+    "difficulty": "easy"
+  },
+  {
+    "id": "spidey-form-007",
+    "question": "What is the name of the Marvel's Spider-Man 1 DLC?",
+    "options": ["The City That Never Sleeps", "Silver Lining", "The Heist", "Turf Wars"],
+    "answer": "The City That Never Sleeps",
+    "difficulty": "medium"
+  },
+  {
+    "id": "msm-easy-099",
+    "question": "What is the name of J. Jonah Jameson's podcast in the games?",
+    "options": ["Just the Facts", "The Bugle Blast", "Spider-Man: Menace", "Daily Truth"],
+    "answer": "Just the Facts",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm-easy-035",
+    "question": "What is the name of the Daily Bugle's editor-in-chief in the first game?",
+    "options": ["Robbie Robertson", "Ben Urich", "J. Jonah Jameson", "Betty Brant"],
+    "answer": "Robbie Robertson",
+    "difficulty": "hard"
+  },
+  {
+    "id": "spidey-form-008",
+    "question": "How old is Peter Parker in the first game?",
+    "options": ["21", "23", "25", "27"],
+    "answer": "23",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm-hard-035",
+    "question": "How many secret photo locations are there in the original PS4 Spider-Man?",
+    "options": ["50", "25", "100", "75"],
+    "answer": "50",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm-hard-051",
+    "question": "In Spider-Man 2, what is the total number of Hunter Bases (excluding Hunter Blinds) that must be cleared?",
+    "options": ["4", "6", "8", "10"],
+    "answer": "4",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm-hard-012",
+    "question": "Which fictional country is Silver Sable's mercenary group from?",
+    "options": ["Skovia", "Latveria", "Symkaria", "Wakanda"],
+    "answer": "Symkaria",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm-hard-029",
+    "question": "Which historical landmark features a statue of Stan Lee in Spider-Man 2?",
+    "options": ["Empire State Building", "Mick's Diner", "Grand Central", "Battery Park"],
+    "answer": "Mick's Diner",
+    "difficulty": "hard"
+  },
+  {
+    "id": "msm-hard-023",
+    "question": "What is the exact address of Peter's Queens home in Spider-Man 2?",
+    "options": ["15 Amfan Avenue", "20 Amfan St", "12 Forest Hill", "5 Forest Way"],
+    "answer": "15 Amfan Avenue",
+    "difficulty": "hard"
+  },
+  {
+    "id": "spidey-form-009",
+    "question": "Which of these is not a Spider-Man gadget in the Insomniac games?",
+    "options": ["Web Shooter", "Trip Mine", "Web Bomb", "Web Pods"],
+    "answer": "Web Pods",
+    "difficulty": "easy"
+  },
+  {
+    "id": "spidey-form-010",
+    "question": "Which of these is not a Spider-Man suit in the games?",
+    "options": ["Anti-Ock Suit", "Scarlet Spider Suit", "Velocity Suit", "Hellbat Suit"],
+    "answer": "Hellbat Suit",
+    "difficulty": "hard"
+  },
+  {
+    "id": "spidey-form-012",
+    "question": "Which of these is not one of Miles Morales's abilities in the games?",
+    "options": ["Venom powers", "Camouflage", "Bio-electric attacks", "Heat vision"],
+    "answer": "Heat vision",
+    "difficulty": "easy"
+  }
+]

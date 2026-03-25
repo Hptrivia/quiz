@@ -1,0 +1,1175 @@
+[
+  {
+    "id": "sw-ea-1000",
+    "question": "What species is Chewbacca?",
+    "options": ["Ewok", "Wookiee", "Rodian", "Jawa"],
+    "answer": "Wookiee",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1001",
+    "question": "Who is Princess Leia’s brother?",
+    "options": ["Han Solo", "Chewbacca", "Luke Skywalker", "Lando Calrissian"],
+    "answer": "Luke Skywalker",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1002",
+    "question": "What type of droid is R2-D2?",
+    "options": ["Protocol droid", "Astromech droid", "Battle droid", "Assassin droid"],
+    "answer": "Astromech droid",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-ea-1003",
+    "question": "What planet is Luke Skywalker from?",
+    "options": ["Tatooine", "Naboo", "Endor", "Jakku"],
+    "answer": "Tatooine",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1004",
+    "question": "What is Darth Vader’s real name?",
+    "options": ["Anakin Skywalker", "Ben Solo", "Kylo Ren", "Palpatine"],
+    "answer": "Anakin Skywalker",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1005",
+    "question": "Who is Luke Skywalker's father?",
+    "options": ["Obi-Wan Kenobi", "Anakin", "Yoda", "Mace Windu"],
+    "answer": "Anakin",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1006",
+    "question": "What color is Yoda’s lightsaber in the prequels?",
+    "options": ["Blue", "Red", "Green", "Purple"],
+    "answer": "Green",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1007",
+    "question": "Who built C-3PO?",
+    "options": ["Obi-Wan Kenobi", "Luke Skywalker", "Anakin Skywalker", "Padmé Amidala"],
+    "answer": "Anakin Skywalker",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1008",
+    "question": "What is the name of Han Solo’s ship?",
+    "options": ["Slave I", "X-Wing", "Millennium Falcon", "Star Destroyer"],
+    "answer": "Millennium Falcon",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1009",
+    "question": "Who trained Obi-Wan Kenobi as his padawan?",
+    "options": ["Yoda", "Anakin Skywalker", "Qui-Gon Jinn", "Mace Windu"],
+    "answer": "Qui-Gon Jinn",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-ea-1010",
+    "question": "Who is the protocol droid fluent in over six million forms of communication?",
+    "options": ["BB-8", "C-3PO", "R2-D2", "K-2SO"],
+    "answer": "C-3PO",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1012",
+    "question": "What color is Mace Windu’s lightsaber?",
+    "options": ["Red", "Green", "Purple", "Blue"],
+    "answer": "Purple",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1013",
+    "question": "What is the small green creature who trains Luke?",
+    "options": ["Yaddle", "Greedo", "Yoda", "Maz Kanata"],
+    "answer": "Yoda",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1014",
+    "question": "What is the weapon used by Jedi Knights?",
+    "options": ["Blaster", "Staff", "Lightsaber", "Bowcaster"],
+    "answer": "Lightsaber",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1015",
+    "question": "Which villain is Luke’s father?",
+    "options": ["Kylo Ren", "Darth Maul", "Darth Vader", "Count Dooku"],
+    "answer": "Darth Vader",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1016",
+    "question": "Who is Han Solo’s co-pilot?",
+    "options": ["Lando", "Chewbacca", "Leia", "Luke"],
+    "answer": "Chewbacca",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1017",
+    "question": "Who leads the Empire?",
+    "options": ["Yoda", "Darth Vader", "Emperor Palpatine", "Count Dooku"],
+    "answer": "Emperor Palpatine",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1018",
+    "question": "Which droid has a red arm in The Force Awakens?",
+    "options": ["BB-8", "C-3PO", "R2-D2", "K-2SO"],
+    "answer": "C-3PO",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1020",
+    "question": "Who is Rey’s mentor in The Last Jedi?",
+    "options": ["Obi-Wan", "Anakin", "Yoda", "Luke Skywalker"],
+    "answer": "Luke Skywalker",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1021",
+    "question": "What is Finn's stormtrooper designation?",
+    "options": ["FN-2187", "TK-421", "CT-7567", "RC-1262"],
+    "answer": "FN-2187",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-ea-1022",
+    "question": "What creature does Han Solo smuggle that almost kills him in The Force Awakens?",
+    "options": ["Wampa", "Rancor", "Rathtar", "Sarlacc"],
+    "answer": "Rathtar",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-ea-1023",
+    "question": "What vehicle do the Rebels use to attack the AT-ATs on Hoth?",
+    "options": ["X-Wing", "Speeder Bike", "Snowspeeder", "Y-Wing"],
+    "answer": "Snowspeeder",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1024",
+    "question": "What does the acronym AT-AT stand for?",
+    "options": ["All Terrain Armored Transport", "Armored Troop Assault Tank", "All Terrain Assault Tank", "Assault Terrain Armed Transport"],
+    "answer": "All Terrain Armored Transport",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-ea-1025",
+    "question": "Who is Kylo Ren's father?",
+    "options": ["Luke Skywalker", "Lando Calrissian", "Han Solo", "Obi-Wan Kenobi"],
+    "answer": "Han Solo",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1026",
+    "question": "Who says, 'Help me, Obi-Wan Kenobi. You're my only hope'?",
+    "options": ["Padmé Amidala", "Leia Organa", "Rey", "Ahsoka Tano"],
+    "answer": "Leia Organa",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1027",
+    "question": "What is the name of Darth Vader’s flagship?",
+    "options": ["Executor", "Devastator", "Avenger", "Chimera"],
+    "answer": "Executor",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1028",
+    "question": "Who leads the Resistance in the sequel trilogy?",
+    "options": ["Leia Organa", "Rey", "Luke Skywalker", "Maz Kanata"],
+    "answer": "Leia Organa",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1029",
+    "question": "What is BB-8?",
+    "options": ["A Sith Lord", "A ship", "A droid", "A lightsaber model"],
+    "answer": "A droid",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1030",
+    "question": "Who is known as the chosen one in the prophecy?",
+    "options": ["Yoda", "Obi-Wan Kenobi", "Anakin Skywalker", "Luke Skywalker"],
+    "answer": "Anakin Skywalker",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1031",
+    "question": "Which Jedi is the Grand Master of the Jedi Council?",
+    "options": ["Mace Windu", "Yoda", "Ki-Adi-Mundi", "Obi-Wan Kenobi"],
+    "answer": "Yoda",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1032",
+    "question": "Who trained Anakin Skywalker?",
+    "options": ["Yoda", "Mace Windu", "Qui-Gon Jinn", "Obi-Wan Kenobi"],
+    "answer": "Obi-Wan Kenobi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1033",
+    "question": "What is Rey’s weapon of choice at the start of The Force Awakens?",
+    "options": ["Lightsaber", "Quarterstaff", "Blaster", "Vibroblade"],
+    "answer": "Quarterstaff",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1036",
+    "question": "Which movie features the first appearance of Rey?",
+    "options": ["The Rise of Skywalker", "The Last Jedi", "The Force Awakens", "Rogue One"],
+    "answer": "The Force Awakens",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1037",
+    "question": "Who was frozen in carbonite?",
+    "options": ["Luke Skywalker", "Boba Fett", "Chewbacca", "Han Solo"],
+    "answer": "Han Solo",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1038",
+    "question": "What is the name of Boba Fett’s father?",
+    "options": ["Cad", "Bane", "Jango", "Bossk"],
+    "answer": "Jango",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1039",
+    "question": "What planet is the homeworld of the Ewoks?",
+    "options": ["Kashyyyk", "Dagobah", "Endor", "Yavin IV"],
+    "answer": "Endor",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1040",
+    "question": "Which Jedi was struck down by Darth Maul?",
+    "options": ["Yoda", "Mace Windu", "Qui-Gon Jinn", "Aayla Secura"],
+    "answer": "Qui-Gon Jinn",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1041",
+    "question": "What type of creature is Jabba?",
+    "options": ["Hutt", "Rodian", "Wookiee", "Gamorrean"],
+    "answer": "Hutt",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1043",
+    "question": "What organization does Poe Dameron fly for?",
+    "options": ["Empire", "Resistance", "First Order", "New Republic"],
+    "answer": "Resistance",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1044",
+    "question": "Which character is a scavenger on Jakku?",
+    "options": ["Finn", "Rey", "Kylo Ren", "Maz Kanata"],
+    "answer": "Rey",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1045",
+    "question": "Who kills Snoke?",
+    "options": ["Rey", "Luke Skywalker", "Kylo Ren", "General Hux"],
+    "answer": "Kylo Ren",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1046",
+    "question": "What droid helps Rey and Finn escape from Jakku?",
+    "options": ["BB-8", "R2-D2", "C-3PO", "K-2SO"],
+    "answer": "BB-8",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-ea-1047",
+    "question": "Who becomes Supreme Leader after Snoke?",
+    "options": ["Hux", "Kylo Ren", "Rey", "Phasma"],
+    "answer": "Kylo Ren",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-me-2000",
+    "question": "What’s the name of the Wookiee’s home planet?",
+    "options": ["Korriban", "Kashyyyk", "Endor", "Naboo"],
+    "answer": "Kashyyyk",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2001",
+    "question": "Who killed Jabba the Hutt?",
+    "options": ["Leia Organa", "Luke Skywalker", "Han Solo", "Boba Fett"],
+    "answer": "Leia Organa",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2004",
+    "question": "Which planet is destroyed by the first Death Star?",
+    "options": ["Hoth", "Alderaan", "Dagobah", "Naboo"],
+    "answer": "Alderaan",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2005",
+    "question": "Which character says, 'So this is how liberty dies… with thunderous applause'?",
+    "options": ["Padmé Amidala", "Bail Organa", "Mon Mothma", "Leia Organa"],
+    "answer": "Padmé Amidala",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2007",
+    "question": "What does Leia disguise herself as to infiltrate Jabba's palace?",
+    "options": ["Stormtrooper", "Twi'lek", "Bounty hunter", "Droid"],
+    "answer": "Bounty hunter",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2009",
+    "question": "Which character delivers the line 'It's a trap!'?",
+    "options": ["Luke Skywalker", "Han Solo", "Admiral Ackbar", "Lando Calrissian"],
+    "answer": "Admiral Ackbar",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2010",
+    "question": "Who leads the First Order military?",
+    "options": ["General Snoke", "General Hux", "Kylo Ren", "Phasma"],
+    "answer": "General Hux",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2012",
+    "question": "What is the name of the diner owner Obi-Wan visits in Attack of the Clones?",
+    "options": ["Watto", "Zam", "Dex", "Elan"],
+    "answer": "Dex",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-me-2013",
+    "question": "Which Separatist leader is present during the battle on Mustafar?",
+    "options": ["Nute Gunray", "General Grievous", "Dooku", "Wat Tambor"],
+    "answer": "Nute Gunray",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2014",
+    "question": "What is Dooku’s title before becoming a Sith?",
+    "options": ["Baron", "Count", "Senator", "General"],
+    "answer": "Count",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-me-2015",
+    "question": "Who is the first Jedi to die in Revenge of the Sith?",
+    "options": ["Agen Kolar", "Saesee Tin", "Aayla Secura", "Kit Fisto"],
+    "answer": "Agen Kolar",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-me-2016",
+    "question": "What color is Obi-Wan Kenobi’s lightsaber in Revenge of the Sith?",
+    "options": ["Blue", "Green", "Red", "Purple"],
+    "answer": "Blue",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2017",
+    "question": "Who leads the Gungan army during the battle of Naboo?",
+    "options": ["Jar Jar Binks", "Captain Tarpals", "Boss Nass", "Padmé Amidala"],
+    "answer": "Captain Tarpals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-me-2018",
+    "question": "What planet does General Grievous hide on before Obi-Wan kills him?",
+    "options": ["Mustafar", "Geonosis", "Utapau", "Mygeeto"],
+    "answer": "Utapau",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2019",
+    "question": "Who kills General Grievous?",
+    "options": ["Yoda", "Mace Windu", "Anakin Skywalker", "Obi-Wan Kenobi"],
+    "answer": "Obi-Wan Kenobi",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2020",
+    "question": "Which clone battalion is commanded by Commander Cody?",
+    "options": ["501st", "104th", "212th", "327th"],
+    "answer": "212th",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-me-2021",
+    "question": "What mineral is mined on Crait?",
+    "options": ["Kyber crystals", "Salt", "Durasteel", "Cortosis"],
+    "answer": "Salt",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2022",
+    "question": "Who delivers Rey to safety as a child?",
+    "options": ["Luke Skywalker", "Her parents", "Ochi of Bestoon", "Unkar Plutt"],
+    "answer": "Her parents",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2023",
+    "question": "What unique ability does Rey demonstrate in The Rise of Skywalker that surprises even herself?",
+    "options": ["Force healing", "Mind reading", "Time travel", "Lightsaber creation"],
+    "answer": "Force healing",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2024",
+    "question": "What creature attacks Finn and Poe’s ship in the sand caves of Pasaana?",
+    "options": ["Sarlacc", "Rathtar", "Snake", "Scorpion"],
+    "answer": "Snake",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2025",
+    "question": "Who provides the voice for Darth Vader in the original trilogy?",
+    "options": ["David Prowse", "Sebastian Shaw", "James Earl Jones", "Frank Oz"],
+    "answer": "James Earl Jones",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2027",
+    "question": "Who is the leader of the Gungans?",
+    "options": ["Boss Nass", "Captain Tarpals", "Jar Jar Binks", "Padmé Amidala"],
+    "answer": "Boss Nass",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2028",
+    "question": "Which planet is home to the Jedi Temple in the prequel trilogy?",
+    "options": ["Alderaan", "Dagobah", "Coruscant", "Naboo"],
+    "answer": "Coruscant",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2031",
+    "question": "What Jedi Master uses a curved lightsaber hilt?",
+    "options": ["Mace Windu", "Plo Koon", "Count Dooku", "Kit Fisto"],
+    "answer": "Count Dooku",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2033",
+    "question": "What planet does Padmé represent in the Senate?",
+    "options": ["Alderaan", "Naboo", "Tatooine", "Corellia"],
+    "answer": "Naboo",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2035",
+    "question": "Who cuts off Anakin’s arm in Attack of the Clones?",
+    "options": ["Count Dooku", "Obi-Wan Kenobi", "Yoda", "General Grievous"],
+    "answer": "Count Dooku",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2036",
+    "question": "What is the name of the Geonosian leader?",
+    "options": ["Wat Tambor", "Nute Gunray", "Poggle the Lesser", "Rune Haako"],
+    "answer": "Poggle the Lesser",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2038",
+    "question": "Who serves as Queen of Naboo in the movies?",
+    "options": ["Queen Sanandrassa", "Padmé Amidalla", "Apailana", "Queen Jamillia"],
+    "answer": "Padmé Amidalla",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2039",
+    "question": "Who attempts to assassinate Padmé with a poisonous worm?",
+    "options": ["Zam Wesell", "Jango Fett", "Aurra Sing", "Wat Tambor"],
+    "answer": "Zam Wesell",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2041",
+    "question": "Who is the father of Princess Leia?",
+    "options": ["Bail Organa", "Obi-Wan Kenobi", "Anakin Skywalker", "Yoda"],
+    "answer": "Anakin Skywalker",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sw-me-2042",
+    "question": "Who founded the Resistance?",
+    "options": ["Leia Organa", "Mon Mothma", "Luke Skywalker", "Bail Organa"],
+    "answer": "Leia Organa",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2043",
+    "question": "Who says, 'I love democracy. I love the Republic.'?",
+    "options": ["Palpatine", "Bail Organa", "Mace Windu", "Jar Jar Binks"],
+    "answer": "Palpatine",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2044",
+    "question": "Which Jedi general was betrayed on Felucia?",
+    "options": ["Aayla Secura", "Shaak Ti", "Luminara Unduli", "Barriss Offee"],
+    "answer": "Aayla Secura",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2047",
+    "question": "Which Resistance pilot is known for his daring flying?",
+    "options": ["Wedge Antilles", "Poe Dameron", "Biggs Darklighter", "Snap Wexley"],
+    "answer": "Poe Dameron",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2048",
+    "question": "Which actor plays General Hux?",
+    "options": ["Andy Serkis", "Richard E. Grant", "Domhnall Gleeson", "Gwendoline Christie"],
+    "answer": "Domhnall Gleeson",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-me-2049",
+    "question": "What is the name of the Sith homeworld mentioned in The Rise of Skywalker?",
+    "options": ["Exegol", "Korriban", "Mustafar", "Moraband"],
+    "answer": "Exegol",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-ha-3004",
+    "question": "What is Count Dooku’s Sith name?",
+    "options": ["Darth Tyranus", "Darth Plagueis", "Darth Bane", "Darth Sidious"],
+    "answer": "Darth Tyranus",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-ha-3006",
+    "question": "Who composed the musical score for all nine Skywalker Saga films?",
+    "options": ["Michael Giacchino", "Howard Shore", "John Williams", "Hans Zimmer"],
+    "answer": "John Williams",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-ha-3007",
+    "question": "Which actor physically portrayed Darth Maul in The Phantom Menace?",
+    "options": ["Ray Park", "Temuera Morrison", "Ian McDiarmid", "Daniel Logan"],
+    "answer": "Ray Park",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-ha-3008",
+    "question": "In which scene does Obi-Wan use the line, 'So uncivilized'?",
+    "options": ["After killing Grievous", "After fighting Anakin", "On Kamino", "In the cantina"],
+    "answer": "After killing Grievous",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-ha-3010",
+    "question": "What is the full designation of the shuttle used to land on Endor?",
+    "options": ["Tydirium", "Rogue One", "Ghost", "Sentinel-3"],
+    "answer": "Tydirium",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-ha-3013",
+    "question": "Who served as Chancellor of the Republic before Palpatine?",
+    "options": ["Valorum", "Tarkin", "Mothma", "Organa"],
+    "answer": "Valorum",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-ha-3016",
+    "question": "What is the name of General Grievous’s flagship in Revenge of the Sith?",
+    "options": ["Invisible Hand", "Finalizer", "Malevolence", "Providence"],
+    "answer": "Invisible Hand",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-ha-3017",
+    "question": "Who provides the voice of Yoda in all movies where he appears?",
+    "options": ["Tom Kane", "Frank Oz", "Jim Henson", "Dee Bradley Baker"],
+    "answer": "Frank Oz",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-ha-3019",
+    "question": "What is the call sign of the Rebel pilot who dies in the trench run after saying 'Almost there'?",
+    "options": ["Wedge Antilles", "Jek Porkins", "Gold Five", "Biggs Darklighter"],
+    "answer": "Gold Five",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-ha-3021",
+    "question": "What color is Luke's lightsaber in Return of the Jedi?",
+    "options": ["Blue", "Green", "Red", "Purple"],
+    "answer": "Green",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-ha-3022",
+    "question": "Who directed The Empire Strikes Back?",
+    "options": ["George Lucas", "Irvin Kershner", "Richard Marquand", "Lawrence Kasdan"],
+    "answer": "Irvin Kershner",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-ha-3023",
+    "question": "What is the name of the officer who Vader chokes after the falcon escapes in Empire Strikes Back?",
+    "options": ["Captain Needa", "Admiral Ozzel", "General Veers", "Moff Jerjerrod"],
+    "answer": "Captain Needa",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-ha-6023",
+    "question": "What is the name of the officer who Vader chokes via hologram in Empire Strikes Back?",
+    "options": ["Captain Needa", "Admiral Ozzel", "General Veers", "Moff Jerjerrod"],
+    "answer": "Admiral Ozzel",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-ha-3024",
+    "question": "Which planet is shown first in The Rise of Skywalker?",
+    "options": ["Exegol", "Mustafar", "Endor", "Pasaana"],
+    "answer": "Mustafar",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-ha-3025",
+    "question": "Who says the line: 'I am a Jedi, like my father before me'?",
+    "options": ["Anakin Skywalker", "Obi-Wan Kenobi", "Luke Skywalker", "Mace Windu"],
+    "answer": "Luke Skywalker",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-ha-3026",
+    "question": "Who kills Dryden Vos in Solo: A Star Wars Story?",
+    "options": ["Qi’ra", "Han Solo", "Beckett", "Lando Calrissian"],
+    "answer": "Qi’ra",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-ha-3027",
+    "question": "Which Jedi Master used a yellow lightsaber in the movies?",
+    "options": ["Aayla Secura", "Rey", "Plo Koon", "Ezra Bridger"],
+    "answer": "Rey",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-ha-3028",
+    "question": "Who is the first character shown using Force healing in the films?",
+    "options": ["Leia", "Luke", "Rey", "Ben Solo"],
+    "answer": "Rey",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-ha-3029",
+    "question": "What type of ship is the Tantive IV?",
+    "options": ["Nebulon-B Frigate", "Hammerhead Corvette", "CR90 Corvette", "MC80 Star Cruiser"],
+    "answer": "CR90 Corvette",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-ha-3030",
+    "question": "Who voiced Darth Maul in The Phantom Menace?",
+    "options": ["Sam Witwer", "Ray Park", "Peter Serafinowicz", "Matthew Wood"],
+    "answer": "Peter Serafinowicz",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-ha-3031",
+    "question": "What is the name of the city where Obi-Wan fights Jango Fett?",
+    "options": ["Coruscant", "Kamino", "Geonosis", "Tatooine"],
+    "answer": "Kamino",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-ha-3032",
+    "question": "Which character says 'Let the past die. Kill it if you have to'?",
+    "options": ["Snoke", "Kylo Ren", "Rey", "Luke Skywalker"],
+    "answer": "Kylo Ren",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-ha-3033",
+    "question": "What actor plays the young Han Solo in Solo: A Star Wars Story?",
+    "options": ["Alden Ehrenreich", "Taron Egerton", "Logan Lerman", "Tom Holland"],
+    "answer": "Alden Ehrenreich",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-ha-3034",
+    "question": "Which rebel pilot survives the attack on both Death Stars?",
+    "options": ["Wedge Antilles", "Biggs Darklighter", "Porkins", "Jek Tono Porkins"],
+    "answer": "Wedge Antilles",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-ha-3035",
+    "question": "What’s the name of the casino city in The Last Jedi?",
+    "options": ["Nar Shaddaa", "Mos Espa", "Canto Bight", "Ord Mantell"],
+    "answer": "Canto Bight",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-ha-3043",
+    "question": "What is the function of a kyber crystal in a lightsaber?",
+    "options": ["Cooling system", "Power source", "Blade focus", "Blade colorant"],
+    "answer": "Blade focus",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-ha-3044",
+    "question": "Which member of Rogue One says 'I am one with the Force, the Force is with me'?",
+    "options": ["Jyn Erso", "Cassian Andor", "Chirrut Îmwe", "Bodhi Rook"],
+    "answer": "Chirrut Îmwe",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-ha-3045",
+    "question": "What’s the name of the massive transport ship used to evacuate Hoth?",
+    "options": ["Nebulon B", "GR-75", "CR90", "MC80"],
+    "answer": "GR-75",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-ha-3046",
+    "question": "What was the purpose of Order 66?",
+    "options": ["Destroy the Jedi", "Eliminate Separatists", "Install Vader", "Protect Palpatine"],
+    "answer": "Destroy the Jedi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-ha-3048",
+    "question": "What does Luke see in the cave on Dagobah?",
+    "options": ["Himself as Yoda", "Leia", "Vader", "Himself as Vader"],
+    "answer": "Himself as Vader",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-ex-4002",
+    "question": "What is the serial number of the trash compactor in A New Hope?",
+    "options": ["3263827", "2187", "1138", "55378"],
+    "answer": "3263827",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-ex-4003",
+    "question": "Who played the body of Darth Vader in the original trilogy (not the voice)?",
+    "options": ["David Prowse", "Peter Mayhew", "Sebastian Shaw", "Jeremy Bulloch"],
+    "answer": "David Prowse",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-ex-4004",
+    "question": "What is the name of the podracer Anakin defeats in The Phantom Menace?",
+    "options": ["Mars Guo", "Sebulba", "Ben Quadinaros", "Teemto Pagalies"],
+    "answer": "Sebulba",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-ex-4005",
+    "question": "Which clone unit is known as 'Vader's Fist'?",
+    "options": ["212th", "104th", "501st", "41st"],
+    "answer": "501st",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-ex-4009",
+    "question": "What is the Sith homeworld according to canonical lore?",
+    "options": ["Moraband", "Korriban", "Exegol", "Dromund Kaas"],
+    "answer": "Exegol",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-ex-4012",
+    "question": "What is the full name of the actor who portrayed Palpatine?",
+    "options": ["Ian Holm", "Ian McDiarmid", "Ian McShane", "Ian Abercrombie"],
+    "answer": "Ian McDiarmid",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-ex-4016",
+    "question": "What system is the first to be destroyed by Starkiller Base?",
+    "options": ["Hosnian system", "Corellian system", "Alderaan system", "Ileenium system"],
+    "answer": "Hosnian system",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-ex-4018",
+    "question": "Who directed Star Wars: Episode VI – Return of the Jedi?",
+    "options": ["George Lucas", "Irvin Kershner", "Richard Marquand", "Lawrence Kasdan"],
+    "answer": "Richard Marquand",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-ex-4019",
+    "question": "Which Sith Lord trained Darth Sidious?",
+    "options": ["Darth Bane", "Darth Plagueis", "Darth Tyranus", "Darth Tenebrous"],
+    "answer": "Darth Plagueis",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-ex-4021",
+    "question": "What is the name of the First Order’s mobile superlaser platform in The Last Jedi?",
+    "options": ["MegaLaser", "Breach Cannon", "Battering Ram Cannon", "Colossus Beam"],
+    "answer": "Battering Ram Cannon",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-ex-4024",
+    "question": "What kind of power core fuels the Death Star’s superlaser?",
+    "options": ["Kyber crystals", "Plasma generator", "Hypermatter reactor", "Zero-point energy"],
+    "answer": "Kyber crystals",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-ex-4025",
+    "question": "Which actor played Wicket the Ewok in Return of the Jedi?",
+    "options": ["Kenny Baker", "Warwick Davis", "Peter Mayhew", "Anthony Daniels"],
+    "answer": "Warwick Davis",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-ex-4026",
+    "question": "What is the name of the creature Han Solo stuffs Luke inside for warmth?",
+    "options": ["Tauntaun", "Bantha", "Wampa", "Dianoga"],
+    "answer": "Tauntaun",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-ex-4027",
+    "question": "What code number was Princess Leia's detention cell on the Death Star?",
+    "options": ["2187", "327", "1138", "3263827"],
+    "answer": "2187",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-ex-4028",
+    "question": "What is the operating number of the stormtrooper Obi-Wan impersonates?",
+    "options": ["TK-421", "FN-2187", "CT-7567", "TX-427"],
+    "answer": "TK-421",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-ex-4029",
+    "question": "Which Jedi Master discovered the ability to become a Force ghost?",
+    "options": ["Yoda", "Qui-Gon Jinn", "Obi-Wan Kenobi", "Anakin Skywalker"],
+    "answer": "Qui-Gon Jinn",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-ex-4032",
+    "question": "Who composed the musical motif 'Duel of the Fates'?",
+    "options": ["Howard Shore", "Michael Giacchino", "John Williams", "Ludwig Göransson"],
+    "answer": "John Williams",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-ex-4033",
+    "question": "What is the name of the fuel that powers hyperspace travel?",
+    "options": ["Coaxium", "Bacta", "Durasteel", "Kyber"],
+    "answer": "Coaxium",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-ex-4034",
+    "question": "Which creature, ridden by a scavenger, do Rey and BB-8 encounter on Jakku?",
+    "options": ["Happabore", "Luggabeast", "Wampa", "Loth-wolf"],
+    "answer": "Luggabeast",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-ex-4034",
+    "question": "What is the name of the scavenger Rey encounters on Jakku with BB-8?",
+    "options": ["Happa", "Teedo", "Wampa", "Loth"],
+    "answer": "Teedo",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-ex-4038",
+    "question": "What does Poe Dameron call General Hux during their first exchange?",
+    "options": ["Captain Hugs", "Commander Red", "General Ginger", "Your Highness"],
+    "answer": "Captain Hugs",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-ex-4040",
+    "question": "What is Snoke’s official title?",
+    "options": ["Emperor", "Chancellor", "Supreme Leader", "Overseer"],
+    "answer": "Supreme Leader",
+    "difficulty": "easy"
+  },
+
+  {
+    "id": "sw-md-0029",
+    "question": "Who is the leader of the Separatists?",
+    "options": ["Count Dooku", "General Grievous", "Darth Maul", "Nute Gunray"],
+    "answer": "Count Dooku",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-md-0040",
+    "question": "What is the name of the planet destroyed by the Death Star in Episode IV?",
+    "options": ["Alderaan", "Naboo", "Tatooine", "Endor"],
+    "answer": "Alderaan",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-md-0047",
+    "question": "What is the name of the Sith apprentice who wields a double-bladed lightsaber?",
+    "options": ["Darth Maul", "Count Dooku", "Darth Vader", "Kylo Ren"],
+    "answer": "Darth Maul",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-md-0049",
+    "question": "What is the name of the desert planet where Rey was abandoned?",
+    "options": ["Jakku", "Tatooine", "Geonosis", "Mustafar"],
+    "answer": "Jakku",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-hard-0047",
+    "question": "Which character tries to give Rey a ration portion in exchange for BB-8?",
+    "options": ["Unkar Plutt", "Teedo", "Zuvio", "Bazine Netal"],
+    "answer": "Unkar Plutt",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-hard-0047",
+    "question": "How many ration portions was Rey offered in exchange for BB-8 on Jakku?",
+    "options": ["20", "40", "60", "80"],
+    "answer": "60",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-expert-0080",
+    "question": "What does Kylo Ren destroy after Snoke mocks him?",
+    "options": ["His helmet", "His lightsaber", "A control panel", "The door"],
+    "answer": "His helmet",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-hard-0135",
+    "question": "What is Anakin's mother's full name?",
+    "options": ["Shmi", "Shira", "Shaak Ti", "Suri Tano"],
+    "answer": "Shmi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-hard-0149",
+    "question": "What object does Jyn wear around her neck as a child?",
+    "options": ["Kyber crystal", "Pendant", "Compass", "Data chip"],
+    "answer": "Kyber crystal",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-expert-0153",
+    "question": "How many engines does a TIE Fighter have?",
+    "options": ["2", "1", "4", "3"],
+    "answer": "2",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-r1-0152",
+    "question": "What is the name of Jyn Erso´s mother?",
+    "options": ["Zam", "Ellie", "Lyra", "Aurra"],
+    "answer": "Lyra",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-r1-0151",
+    "question": "Which character gives the call sign 'Stardust' for the Death Star plans in the Imperial archive?",
+    "options": ["Cassian", "Bodhi", "Jyn", "K-2SO"],
+    "answer": "Jyn",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-hard-0106",
+    "question": "Who contacts the Senate during the Battle of Naboo to plead for help?",
+    "options": ["Queen Amidala", "Captain Panaka", "Senator Palpatine", "Jar Jar Binks"],
+    "answer": "Queen Amidala",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-hard-0101",
+    "question": "What alias does Leia use when infiltrating Jabba's Palace?",
+    "options": ["Boushh", "Maz Kanata", "Zam Wesell", "Aurra Sing"],
+    "answer": "Boushh",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-hard-0144",
+    "question": "What was the working name of the Death Star project?",
+    "options": ["Stellar Sphere", "Dark Saber", "Stardust", "Nova Hammer"],
+    "answer": "Stardust",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-hard-0081",
+    "question": "Which character fires the first shot in the Battle of Scarif?",
+    "options": ["Baze Malbus", "Cassian Andor", "Chirrut Îmwe", "Jyn Erso"],
+    "answer": "Baze Malbus",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-expert-0074",
+    "question": "Who says 'We seem to be made to suffer. It’s our lot in life.'?",
+    "options": ["C-3PO", "BB-8", "R2-D2", "Chewbacca"],
+    "answer": "C-3PO",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-hard-0085",
+    "question": "What does Obi-Wan call blasters in Revenge of the Sith?",
+    "options": ["Weak", "Uncivilized", "Unreliable", "Crude"],
+    "answer": "Uncivilized",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-expert-0029",
+    "question": "What is the name of the planet where the Rebel base is located in Rogue One?",
+    "options": ["Yavin 4", "Dantooine", "Jedha", "Scarif"],
+    "answer": "Yavin 4",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-hard-0087",
+    "question": "What does R2-D2 spray on the Super Battle Droids in Revenge of the Sith?",
+    "options": ["Oil", "Coolant", "Fuel", "Water"],
+    "answer": "Oil",
+    "difficulty": "hard"
+  },
+
+  {
+    "id": "sw-expert-0090",
+    "question": "What does Han say when Lea says, 'I love you'?",
+    "options": ["I know", "I love you too", "Don’t say it", "Come back to me"],
+    "answer": "I know",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-hard-0050",
+    "question": "What city is destroyed by the Death Star in Rogue One?",
+    "options": ["Jedha", "NiJedha", "Theed", "Scarif Outpost"],
+    "answer": "Jedha",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-expert-0054",
+    "question": "Who kills Captain Phasma?",
+    "options": ["Finn", "Rose", "Rey", "Kylo"],
+    "answer": "Finn",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-expert-0022",
+    "question": "Which Senator gives emergency powers to Palpatine in Attack of the Clones?",
+    "options": ["Ask Aak", "Orn Free Taa", "Jar Jar Binks", "Bail Organa"],
+    "answer": "Jar Jar Binks",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-hr-0053",
+    "question": "What species is Watto, Anakin’s owner on Tatooine?",
+    "options": ["Toydarian", "Twi’lek", "Hutt", "Rodian"],
+    "answer": "Toydarian",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-hard-0002",
+    "question": "What is the name of the capital city of Naboo, shown when Anakin and Padmé arrive for hiding?",
+    "options": ["Otoh Gunga", "Theed", "Deeja Peak", "Keren"],
+    "answer": "Theed",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-hard-0013",
+    "question": "What was Luke Skywalker’s call sign during the Battle of Hoth?",
+    "options": ["Rogue One", "Echo Seven", "Red Five", "Gold Leader"],
+    "answer": "Echo Seven",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-hr-0059",
+    "question": "Which planet was the site of the final battle in Rogue One?",
+    "options": ["Scarif", "Jedha", "Yavin IV", "Endor"],
+    "answer": "Scarif",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-hr-0064",
+    "question": "What is the name of the planet where Anakin and Obi-Wan duel?",
+    "options": ["Mustafar", "Geonosis", "Naboo", "Tatooine"],
+    "answer": "Mustafar",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-hr-0073",
+    "question": "Who is the commander of the Galactic Empire’s Death Star project?",
+    "options": ["Grand Moff Tarkin", "Darth Vader", "Emperor Palpatine", "Orson Krennic"],
+    "answer": "Grand Moff Tarkin",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sw-xp-0097",
+    "question": "What is the name of the planet where the Jedi Order was founded?",
+    "options": ["Ahch-To", "Coruscant", "Korriban", "Malachor"],
+    "answer": "Ahch-To",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-xp-0098",
+    "question": "Who is the Jedi Master that survived Order 66 and trained Kanan Jarrus?",
+    "options": ["Cere Junda", "Ahsoka Tano", "Quinlan Vos", "Depa Billaba"],
+    "answer": "Depa Billaba",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-ex-4043",
+    "question": "Which droid is sent to Endor to help with the shield generator?",
+    "options": ["R2-D2", "C-3PO", "K-2SO", "Chopper"],
+    "answer": "R2-D2",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sw-ex-4044",
+    "question": "What is the full name of Poe Dameron’s mother?",
+    "options": ["Shara Bey", "Kes Dameron", "Leia Organa", "Zara Fay"],
+    "answer": "Shara Bey",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-ex-4046",
+    "question": "Who played Mon Mothma in Rogue One?",
+    "options": ["Caroline Blakiston", "Genevieve O’Reilly", "Fiona Shaw", "Lena Headey"],
+    "answer": "Genevieve O’Reilly",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sw-ex-4049",
+    "question": "What year was the original Star Wars released?",
+    "options": ["1975", "1977", "1980", "1983"],
+    "answer": "1977",
+    "difficulty": "expert"
+  }
+]
+
+

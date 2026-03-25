@@ -1,0 +1,824 @@
+[
+  {
+    "id": "usa-easy-0001",
+    "question": "How many states are in the United States?",
+    "options": ["48", "49", "50", "51"],
+    "answer": "50",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-easy-0002",
+    "question": "What is the capital of the United States?",
+    "options": ["New York City", "Washington, D.C.", "Philadelphia", "Boston"],
+    "answer": "Washington, D.C.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-easy-0003",
+    "question": "Which ocean borders the U.S. East Coast?",
+    "options": ["Atlantic Ocean", "Pacific Ocean", "Indian Ocean", "Arctic Ocean"],
+    "answer": "Atlantic Ocean",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-easy-0004",
+    "question": "Which ocean borders the U.S. West Coast?",
+    "options": ["Arctic Ocean", "Indian Ocean", "Pacific Ocean", "Southern Ocean"],
+    "answer": "Pacific Ocean",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-easy-0005",
+    "question": "What is the national anthem of the United States?",
+    "options": ["America the Beautiful", "The Star-Spangled Banner", "My Country, 'Tis of Thee", "God Bless America"],
+    "answer": "The Star-Spangled Banner",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-easy-0006",
+    "question": "What is the national bird of the United States?",
+    "options": ["Bald eagle", "Golden eagle", "Falcon", "Hawk"],
+    "answer": "Bald eagle",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-easy-0007",
+    "question": "What holiday is celebrated on July 4th in the United States?",
+    "options": ["Memorial Day", "Independence Day", "Labor Day", "Veterans Day"],
+    "answer": "Independence Day",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-easy-0008",
+    "question": "What is the largest state by area?",
+    "options": ["Texas", "California", "Alaska", "Montana"],
+    "answer": "Alaska",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-easy-0009",
+    "question": "What is the most populous U.S. state?",
+    "options": ["Texas", "Florida", "New York", "California"],
+    "answer": "California",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-easy-0010",
+    "question": "Which state is known as the \"Sunshine State\"?",
+    "options": ["California", "Florida", "Arizona", "Hawaii"],
+    "answer": "Florida",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-easy-0011",
+    "question": "Which city is nicknamed \"The Big Apple\"?",
+    "options": ["Los Angeles", "New York City", "Chicago", "San Francisco"],
+    "answer": "New York City",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-easy-0012",
+    "question": "Which U.S. state is famous for Hollywood?",
+    "options": ["California", "Nevada", "New Jersey", "New York"],
+    "answer": "California",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-easy-0013",
+    "question": "Which U.S. city is known for the Statue of Liberty?",
+    "options": ["Boston", "New York City", "Philadelphia", "Washington, D.C."],
+    "answer": "New York City",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-easy-0014",
+    "question": "Which U.S. state is known for the Grand Canyon?",
+    "options": ["Utah", "Colorado", "Arizona", "New Mexico"],
+    "answer": "Arizona",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-easy-0015",
+    "question": "Which U.S. state is famous for Las Vegas?",
+    "options": ["Nevada", "California", "Arizona", "Colorado"],
+    "answer": "Nevada",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-easy-0016",
+    "question": "Which U.S. city is known as the \"Windy City\"?",
+    "options": ["Chicago", "Seattle", "Boston", "Denver"],
+    "answer": "Chicago",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-easy-0017",
+    "question": "Which U.S. state is primarily known for Yellowstone National Park?",
+    "options": ["Wyoming", "Colorado", "Idaho", "Montana"],
+    "answer": "Wyoming",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-easy-0019",
+    "question": "How many stripes are on the U.S. flag?",
+    "options": ["10", "13", "50", "15"],
+    "answer": "13",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-easy-0020",
+    "question": "How many stars are on the U.S. flag?",
+    "options": ["48", "49", "50", "52"],
+    "answer": "50",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-easy-0021",
+    "question": "Which holiday is celebrated on the fourth Thursday in November in the U.S.?",
+    "options": ["Thanksgiving", "Memorial Day", "Labor Day", "Veterans Day"],
+    "answer": "Thanksgiving",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-easy-0022",
+    "question": "Which U.S. state is an island chain in the Pacific Ocean?",
+    "options": ["Hawaii", "Alaska", "California", "Washington"],
+    "answer": "Hawaii",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-easy-0023",
+    "question": "Which U.S. state is known as the \"Lone Star State\"?",
+    "options": ["Texas", "Oklahoma", "Arizona", "New Mexico"],
+    "answer": "Texas",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-easy-0024",
+    "question": "Which U.S. state is known as the \"Peach State\"?",
+    "options": ["Georgia", "South Carolina", "Alabama", "Tennessee"],
+    "answer": "Georgia",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-easy-0025",
+    "question": "Which U.S. state is known as the \"Empire State\"?",
+    "options": ["New York", "New Jersey", "Massachusetts", "Pennsylvania"],
+    "answer": "New York",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-easy-0026",
+    "question": "Which city is famous for the Golden Gate Bridge?",
+    "options": ["Los Angeles", "San Diego", "San Francisco", "Seattle"],
+    "answer": "San Francisco",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-easy-0027",
+    "question": "Which U.S. mountain range runs along the eastern U.S.?",
+    "options": ["Andes", "Rockies", "Appalachians", "Alps"],
+    "answer": "Appalachians",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-easy-0028",
+    "question": "Which U.S. mountain range runs along much of the western U.S.?",
+    "options": ["Rockies", "Himalayas", "Appalachians", "Pyrenees"],
+    "answer": "Rockies",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-easy-0029",
+    "question": "Which is the highest-grossing U.S. sport league by popularity?",
+    "options": ["NFL", "NBA", "MLB", "NHL"],
+    "answer": "NFL",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-easy-0030",
+    "question": "What is the name of the U.S. currency?",
+    "options": ["Euro", "Dollar", "Yen", "Pound"],
+    "answer": "Dollar",
+    "difficulty": "easy"
+  },
+
+  {
+    "id": "usa-medium-0001",
+    "question": "How many U.S. Senators does each state have?",
+    "options": ["1", "2", "3", "4"],
+    "answer": "2",
+    "difficulty": "medium"
+  },
+  {
+    "id": "usa-medium-0002",
+    "question": "How many total U.S. Senators are there?",
+    "options": ["50", "100", "435", "538"],
+    "answer": "100",
+    "difficulty": "medium"
+  },
+  {
+    "id": "usa-medium-0003",
+    "question": "How many voting members are in the U.S. House of Representatives?",
+    "options": ["100", "435", "50", "270"],
+    "answer": "435",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-medium-0004",
+    "question": "How many Justices are on the U.S. Supreme Court?",
+    "options": ["7", "9", "11", "13"],
+    "answer": "9",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-medium-0005",
+    "question": "What document begins with \"We the People\"?",
+    "options": ["Declaration of Independence", "U.S. Constitution", "Bill of Rights", "Emancipation Proclamation"],
+    "answer": "U.S. Constitution",
+    "difficulty": "medium"
+  },
+  {
+    "id": "usa-medium-0006",
+    "question": "Which amendment protects freedom of speech, religion, press, assembly, and petition?",
+    "options": ["First Amendment", "Second Amendment", "Fourth Amendment", "Tenth Amendment"],
+    "answer": "First Amendment",
+    "difficulty": "medium"
+  },
+  {
+    "id": "usa-medium-0007",
+    "question": "Which amendment is associated with the right to keep and bear arms?",
+    "options": ["First Amendment", "Second Amendment", "Fifth Amendment", "Eighth Amendment"],
+    "answer": "Second Amendment",
+    "difficulty": "medium"
+  },
+  {
+    "id": "usa-medium-0008",
+    "question": "Which amendment abolished slavery in the United States?",
+    "options": ["13th", "14th", "15th", "19th"],
+    "answer": "13th",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-medium-0009",
+    "question": "Which amendment gave women the right to vote nationwide?",
+    "options": ["15th", "19th", "22nd", "26th"],
+    "answer": "19th",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-medium-0010",
+    "question": "Which amendment limited U.S. presidents to two terms?",
+    "options": ["20th", "22nd", "25th", "27th"],
+    "answer": "22nd",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-medium-0011",
+    "question": "What is the name of the U.S. national legislature?",
+    "options": ["Congress", "Parliament", "Diet", "Knesset"],
+    "answer": "Congress",
+    "difficulty": "medium"
+  },
+  {
+    "id": "usa-medium-0012",
+    "question": "Which branch of the U.S. government includes the President?",
+    "options": ["Executive", "Legislative", "Judicial", "Monarchical"],
+    "answer": "Executive",
+    "difficulty": "medium"
+  },
+  {
+    "id": "usa-medium-0013",
+    "question": "Which branch of the U.S. government interprets laws?",
+    "options": ["Executive", "Legislative", "Judicial", "Administrative"],
+    "answer": "Judicial",
+    "difficulty": "medium"
+  },
+  {
+    "id": "usa-medium-0014",
+    "question": "Which branch of the U.S. government makes laws?",
+    "options": ["Executive", "Legislative", "Judicial", "Federal Reserve"],
+    "answer": "Legislative",
+    "difficulty": "medium"
+  },
+  {
+    "id": "usa-medium-0015",
+    "question": "What is the name of the building where the U.S. Congress meets?",
+    "options": ["The Pentagon", "The Capitol", "The White House", "The Supreme Court Building"],
+    "answer": "The Capitol",
+    "difficulty": "medium"
+  },
+  {
+    "id": "usa-medium-0016",
+    "question": "Which city hosted the signing of the Declaration of Independence?",
+    "options": ["New York City", "Philadelphia", "Boston", "Charleston"],
+    "answer": "Philadelphia",
+    "difficulty": "medium"
+  },
+  {
+    "id": "usa-medium-0017",
+    "question": "In what year was the Declaration of Independence adopted?",
+    "options": ["1492", "1607", "1776", "1865"],
+    "answer": "1776",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-medium-0018",
+    "question": "How many original colonies declared independence from Britain?",
+    "options": ["10", "13", "15", "50"],
+    "answer": "13",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-medium-0019",
+    "question": "Which war was fought between the U.S. and Britain from 1775 to 1783?",
+    "options": ["Civil War", "Revolutionary War", "War of 1812", "Spanish-American War"],
+    "answer": "Revolutionary War",
+    "difficulty": "medium"
+  },
+  {
+    "id": "usa-medium-0020",
+    "question": "Which war was fought between the Union and the Confederacy?",
+    "options": ["World War I", "American Civil War", "War of 1812", "Korean War"],
+    "answer": "American Civil War",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-medium-0021",
+    "question": "What is the name of the river that forms much of the border between the U.S. and Mexico?",
+    "options": ["Rio Grande", "Missouri River", "Columbia River", "St. Lawrence River"],
+    "answer": "Rio Grande",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-medium-0022",
+    "question": "Which U.S. state is the only one made up of two separate peninsulas?",
+    "options": ["Michigan", "Florida", "Louisiana", "Washington"],
+    "answer": "Michigan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-medium-0023",
+    "question": "Which U.S. state is the only one that borders just one other state?",
+    "options": ["Hawaii", "Maine", "Alaska", "Vermont"],
+    "answer": "Maine",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-medium-0024",
+    "question": "Which U.S. state has the nickname \"The Last Frontier\"?",
+    "options": ["Alaska", "Montana", "Wyoming", "Idaho"],
+    "answer": "Alaska",
+    "difficulty": "medium"
+  },
+  {
+    "id": "usa-medium-0025",
+    "question": "Which U.S. state is known as \"The Golden State\"?",
+    "options": ["California", "Colorado", "Arizona", "Nevada"],
+    "answer": "California",
+    "difficulty": "medium"
+  },
+  {
+    "id": "usa-medium-0026",
+    "question": "Which U.S. state is known as \"The Land of 10,000 Lakes\"?",
+    "options": ["Minnesota", "Wisconsin", "Michigan", "Maine"],
+    "answer": "Minnesota",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-medium-0027",
+    "question": "Which U.S. state is known as \"The Granite State\"?",
+    "options": ["New Hampshire", "Vermont", "Maine", "Massachusetts"],
+    "answer": "New Hampshire",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-medium-0028",
+    "question": "Which U.S. state is nicknamed \"The Garden State\"?",
+    "options": ["New Jersey", "Connecticut", "Delaware", "Rhode Island"],
+    "answer": "New Jersey",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-medium-0029",
+    "question": "Which U.S. state is known as \"The Volunteer State\"?",
+    "options": ["Tennessee", "Kentucky", "Virginia", "Arkansas"],
+    "answer": "Tennessee",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-medium-0030",
+    "question": "Which U.S. state is nicknamed \"The Silver State\"?",
+    "options": ["Nevada", "Utah", "Colorado", "Idaho"],
+    "answer": "Nevada",
+    "difficulty": "hard"
+  },
+
+  {
+    "id": "usa-hard-0001",
+    "question": "What is the official motto of the United States on many coins and currency?",
+    "options": ["E Pluribus Unum", "In God We Trust", "Liberty or Death", "United We Stand"],
+    "answer": "In God We Trust",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-hard-0002",
+    "question": "Which phrase meaning “Out of many, one” appears on the Great Seal of the United States?",
+    "options": ["E Pluribus Unum", "Annuit Coeptis", "Novus Ordo Seclorum", "Veni Vidi Vici"],
+    "answer": "E Pluribus Unum",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-hard-0003",
+    "question": "How many electoral votes are there in the U.S. presidential election?",
+    "options": ["435", "500", "538", "270"],
+    "answer": "538",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-hard-0004",
+    "question": "How many electoral votes are needed to win the presidency?",
+    "options": ["269", "270", "271", "538"],
+    "answer": "270",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-hard-0005",
+    "question": "Which U.S. territory is an unincorporated territory whose residents are U.S. citizens but cannot vote for president while living there?",
+    "options": ["Puerto Rico", "Ontario", "Greenland", "Bermuda"],
+    "answer": "Puerto Rico",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-hard-0006",
+    "question": "Which mountain is the highest summit in the United States?",
+    "options": ["Denali", "Mount Whitney", "Mount Elbert", "Mount Rainier"],
+    "answer": "Denali",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-hard-0011",
+    "question": "Which U.S. state is the only one that shares a border with Canada and Mexico?",
+    "options": ["Texas", "California", "Montana", "Arizona"],
+    "answer": "Texas",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-hard-0013",
+    "question": "Which U.S. national park is famous for Old Faithful geyser?",
+    "options": ["Yellowstone", "Yosemite", "Grand Canyon", "Zion"],
+    "answer": "Yellowstone",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-hard-0014",
+    "question": "Which U.S. city is famous for Bourbon Street?",
+    "options": ["New Orleans", "Nashville", "Memphis", "Charleston"],
+    "answer": "New Orleans",
+    "difficulty": "medium"
+  },
+  {
+    "id": "usa-hard-0015",
+    "question": "Which U.S. city is famous for the Gateway Arch?",
+    "options": ["St. Louis", "Kansas City", "Cleveland", "Pittsburgh"],
+    "answer": "St. Louis",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-hard-0016",
+    "question": "Which U.S. state is home to the Everglades?",
+    "options": ["Florida", "Louisiana", "Texas", "Georgia"],
+    "answer": "Florida",
+    "difficulty": "medium"
+  },
+  {
+    "id": "usa-hard-0017",
+    "question": "Which U.S. state is home to Mount Rushmore?",
+    "options": ["South Dakota", "North Dakota", "Wyoming", "Montana"],
+    "answer": "South Dakota",
+    "difficulty": "medium"
+  },
+  {
+    "id": "usa-hard-0018",
+    "question": "Which U.S. state is home to the Alamo?",
+    "options": ["Texas", "New Mexico", "Arizona", "Louisiana"],
+    "answer": "Texas",
+    "difficulty": "medium"
+  },
+  {
+    "id": "usa-hard-0019",
+    "question": "Which U.S. state is home to the city of Anchorage?",
+    "options": ["Alaska", "Hawaii", "Washington", "Oregon"],
+    "answer": "Alaska",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-hard-0027",
+    "question": "Which U.S. state is home to the city of Salem (famous for witch trials history)?",
+    "options": ["Massachusetts", "Connecticut", "Maine", "New Hampshire"],
+    "answer": "Massachusetts",
+    "difficulty": "medium"
+  },
+  {
+    "id": "usa-expert-0001",
+    "question": "Which U.S. state was the first to ratify the U.S. Constitution?",
+    "options": ["Delaware", "Pennsylvania", "Virginia", "New Jersey"],
+    "answer": "Delaware",
+    "difficulty": "expert"
+  },
+  {
+    "id": "usa-expert-0018",
+    "question": "Which U.S. city hosted the 2002 Winter Olympics?",
+    "options": ["Salt Lake City", "Denver", "Lake Placid", "Anchorage"],
+    "answer": "Salt Lake City",
+    "difficulty": "expert"
+  },
+  {
+    "id": "usa-expert-0021",
+    "question": "Which amendment lowered the voting age to 18?",
+    "options": ["24th", "26th", "21st", "19th"],
+    "answer": "26th",
+    "difficulty": "expert"
+  },
+
+  {
+    "id": "usa-expert-0026",
+    "question": "Which U.S. president is on the $100 bill?",
+    "options": ["George Washington", "Abraham Lincoln", "Benjamin Franklin", "Thomas Jefferson"],
+    "answer": "Benjamin Franklin",
+    "difficulty": "medium"
+  },
+  {
+    "id": "usa-expert-0027",
+    "question": "Which U.S. president is on the $50 bill?",
+    "options": ["Ulysses S. Grant", "Andrew Jackson", "Alexander Hamilton", "Theodore Roosevelt"],
+    "answer": "Ulysses S. Grant",
+    "difficulty": "medium"
+  },
+  {
+    "id": "usa-expert-0028",
+    "question": "Which U.S. president is on the $20 bill (most widely circulated design)?",
+    "options": ["Andrew Jackson", "Abraham Lincoln", "Thomas Jefferson", "James Madison"],
+    "answer": "Andrew Jackson",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-expert-0029",
+    "question": "Who is on the $10 bill?",
+    "options": ["Alexander Hamilton", "John Adams", "James Monroe", "Benjamin Franklin"],
+    "answer": "Alexander Hamilton",
+    "difficulty": "expert"
+  },
+  {
+    "id": "usa-expert-0030",
+    "question": "Which U.S. president is on the $2 bill?",
+    "options": ["Thomas Jefferson", "George Washington", "Abraham Lincoln", "James Madison"],
+    "answer": "Thomas Jefferson",
+    "difficulty": "expert"
+  },
+  {
+    "id": "usa-history-easy-0001",
+    "question": "How many amendments are in the U.S. Constitution?",
+    "options": ["10", "13", "27", "33"],
+    "answer": "27",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-history-easy-0002",
+    "question": "Where does the President of the United States work?",
+    "options": ["The Capitol", "The White House", "The Pentagon", "The Supreme Court Building"],
+    "answer": "The White House",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-history-easy-0003",
+    "question": "Who is known for leading the U.S. civil rights movement and delivering the \"I Have a Dream\" speech?",
+    "options": ["Malcolm X", "Martin Luther King Jr.", "Rosa Parks", "Frederick Douglass"],
+    "answer": "Martin Luther King Jr.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-history-easy-0004",
+    "question": "Which president is famously associated with the Gettysburg Address?",
+    "options": ["George Washington", "Abraham Lincoln", "Thomas Jefferson", "Ulysses S. Grant"],
+    "answer": "Abraham Lincoln",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-history-easy-0006",
+    "question": "Which U.S. president was assassinated in 1963 in Dallas, Texas?",
+    "options": ["John F. Kennedy", "Abraham Lincoln", "James Garfield", "William McKinley"],
+    "answer": "John F. Kennedy",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-history-easy-0007",
+    "question": "Which U.S. president was assassinated at Ford’s Theatre in 1865?",
+    "options": ["Abraham Lincoln", "Theodore Roosevelt", "Franklin D. Roosevelt", "Harry S. Truman"],
+    "answer": "Abraham Lincoln",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-history-medium-0001",
+    "question": "Which U.S. president issued the Emancipation Proclamation freeing the slaves?",
+    "options": ["Abraham Lincoln", "George Washington", "Andrew Jackson", "Woodrow Wilson"],
+    "answer": "Abraham Lincoln",
+    "difficulty": "medium"
+  },
+  {
+    "id": "usa-history-medium-0002",
+    "question": "Which U.S. president served the most terms (elected four times)?",
+    "options": ["Franklin D. Roosevelt", "Theodore Roosevelt", "Ronald Reagan", "Dwight D. Eisenhower"],
+    "answer": "Franklin D. Roosevelt",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-history-medium-0003",
+    "question": "What was the name of the 1863 speech Lincoln gave during the Civil War at a Pennsylvania battlefield?",
+    "options": ["The Fourteen Points", "The Gettysburg Address", "The Farewell Address", "The Inaugural Oath"],
+    "answer": "The Gettysburg Address",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-history-medium-0004",
+    "question": "Which historical figure is often called the \"Father of the Constitution\"?",
+    "options": ["James Madison", "Thomas Jefferson", "John Adams", "Alexander Hamilton"],
+    "answer": "James Madison",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-history-medium-0006",
+    "question": "Which event on December 7, 1941 brought the U.S. into World War II?",
+    "options": ["Battle of Midway", "Attack on Pearl Harbor", "D-Day landings", "Battle of the Bulge"],
+    "answer": "Attack on Pearl Harbor",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-history-medium-0007",
+    "question": "What was the nickname of the route used by enslaved people to escape to free states and Canada?",
+    "options": ["Liberty Trail", "Underground Railroad", "Freedom Highway", "Northern Passage"],
+    "answer": "Underground Railroad",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-history-medium-0008",
+    "question": "Which abolitionist is famous for leading many people to freedom via the Underground Railroad?",
+    "options": ["Harriet Tubman", "Susan B. Anthony", "Amelia Earhart", "Jane Addams"],
+    "answer": "Harriet Tubman",
+    "difficulty": "medium"
+  },
+  {
+    "id": "usa-history-medium-0009",
+    "question": "Which event in 1773 involved American colonists protesting British tea taxes by dumping tea into a harbor?",
+    "options": ["Boston Tea Party", "Boston Massacre", "Stamp Act Congress", "Battle of Bunker Hill"],
+    "answer": "Boston Tea Party",
+    "difficulty": "medium"
+  },
+  {
+    "id": "usa-history-medium-0010",
+    "question": "Which U.S. president is known for the New Deal programs during the Great Depression?",
+    "options": ["Franklin D. Roosevelt", "Herbert Hoover", "Harry S. Truman", "Calvin Coolidge"],
+    "answer": "Franklin D. Roosevelt",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-history-hard-0003",
+    "question": "Which U.S. president was shot in 1981 and survived?",
+    "options": ["Ronald Reagan", "Gerald Ford", "Jimmy Carter", "George H. W. Bush"],
+    "answer": "Ronald Reagan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-history-hard-0009",
+    "question": "Which U.S. territory became the 49th state in 1959?",
+    "options": ["Alaska", "Hawaii", "Puerto Rico", "Guam"],
+    "answer": "Alaska",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-history-hard-0010",
+    "question": "Which U.S. territory became the 50th state in 1959?",
+    "options": ["Hawaii", "Alaska", "Arizona", "New Mexico"],
+    "answer": "Hawaii",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-history-expert-0003",
+    "question": "Which amendment protects against self-incrimination and guarantees due process?",
+    "options": ["Fifth", "Sixth", "Seventh", "Eighth"],
+    "answer": "Fifth",
+    "difficulty": "expert"
+  },
+  {
+    "id": "usa-history-expert-0006",
+    "question": "Which U.S. president resigned from office in 1974?",
+    "options": ["Richard Nixon", "Lyndon B. Johnson", "Gerald Ford", "Jimmy Carter"],
+    "answer": "Richard Nixon",
+    "difficulty": "expert"
+  },
+  {
+    "id": "usa-history-expert-0007",
+    "question": "Which scandal is most associated with President Nixon’s resignation?",
+    "options": ["Watergate", "Teapot Dome", "Iran-Contra", "Credit Mobilier"],
+    "answer": "Watergate",
+    "difficulty": "expert"
+  },
+  {
+    "id": "usa-history-hard-0011",
+    "question": "Which U.S. president is the first African American to hold the office?",
+    "options": ["Barack Obama", "Bill Clinton", "George W. Bush", "Joe Biden"],
+    "answer": "Barack Obama",
+    "difficulty": "medium"
+  },
+  {
+    "id": "usa-history-hard-0012",
+    "question": "In what year was Barack Obama first elected president?",
+    "options": ["2004", "2008", "2012", "2016"],
+    "answer": "2008",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-history-hard-0013",
+    "question": "Which major health-care law is most associated with Barack Obama’s presidency?",
+    "options": ["Affordable Care Act", "Medicare Act", "Social Security Act", "Glass-Steagall Act"],
+    "answer": "Affordable Care Act",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-history-hard-0015",
+    "question": "Which U.S. president was impeached twice?",
+    "options": ["Donald Trump", "Bill Clinton", "Richard Nixon", "Andrew Johnson"],
+    "answer": "Donald Trump",
+    "difficulty": "easy"
+  },
+  {
+    "id": "usa-history-hard-0018",
+    "question": "Which U.S. civil rights leader is strongly associated with the Montgomery Bus Boycott?",
+    "options": ["Martin Luther King Jr.", "W.E.B. Du Bois", "Thurgood Marshall", "Booker T. Washington"],
+    "answer": "Martin Luther King Jr.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-history-hard-0019",
+    "question": "Who refused to give up her bus seat in Montgomery in 1955, helping spark a major civil rights protest?",
+    "options": ["Rosa Parks", "Harriet Tubman", "Coretta Scott King", "Ida B. Wells"],
+    "answer": "Rosa Parks",
+    "difficulty": "medium"
+  },
+  {
+    "id": "usa-history-hard-0024",
+    "question": "Which U.S. president led the country through most of World War II?",
+    "options": ["Franklin D. Roosevelt", "Harry S. Truman", "Woodrow Wilson", "Dwight D. Eisenhower"],
+    "answer": "Franklin D. Roosevelt",
+    "difficulty": "hard"
+  },
+  {
+    "id": "usa-history-hard-0028",
+    "question": "Which federal holiday commemorates the end of slavery in the United States and became a federal holiday in 2021?",
+    "options": ["Juneteenth", "Memorial Day", "Labor Day", "Columbus Day"],
+    "answer": "Juneteenth",
+    "difficulty": "medium"
+  },
+  {
+    "id": "usa-history-expert-0018",
+    "question": "Which terrorist attacks occurred on September 11, 2001, and led to major changes in U.S. foreign and domestic policy?",
+    "options": ["9/11 attacks", "Pearl Harbor", "Oklahoma City bombing", "Boston Marathon bombing"],
+    "answer": "9/11 attacks",
+    "difficulty": "expert"
+  },
+  {
+    "id": "usa-history-expert-0019",
+    "question": "Which U.S. agency was created in 2002 to coordinate domestic security after 9/11?",
+    "options": ["Department of Homeland Security", "CIA", "NSA", "FBI"],
+    "answer": "Department of Homeland Security",
+    "difficulty": "medium"
+  },
+  {
+    "id": "usa-history-expert-0020",
+    "question": "Which U.S. Supreme Court case (2015) legalized same-sex marriage nationwide?",
+    "options": ["Obergefell v. Hodges", "Plessy v. Ferguson", "Dred Scott v. Sandford", "Roe v. Wade"],
+    "answer": "Obergefell v. Hodges",
+    "difficulty": "expert"
+  },
+  {
+    "id": "usa-history-expert-0021",
+    "question": "Which U.S. Supreme Court case (1973) recognized a constitutional right to abortion, later overturned in 2022?",
+    "options": ["Roe v. Wade", "Miranda v. Arizona", "Brown v. Board of Education", "Marbury v. Madison"],
+    "answer": "Roe v. Wade",
+    "difficulty": "expert"
+  },
+  {
+    "id": "usa-history-expert-0025",
+    "question": "Who was the primary author of the Declaration of Independence?",
+    "options": ["Thomas Jefferson", "James Madison", "George Washington", "Alexander Hamilton"],
+    "answer": "Thomas Jefferson",
+    "difficulty": "expert"
+  },
+  {
+    "id": "usa-history-expert-0026",
+    "question": "Which U.S. president is most associated with the decision to use atomic bombs in 1945?",
+    "options": ["Harry S. Truman", "Franklin D. Roosevelt", "Dwight D. Eisenhower", "Woodrow Wilson"],
+    "answer": "Harry S. Truman",
+    "difficulty": "expert"
+  }
+]

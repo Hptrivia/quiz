@@ -1,0 +1,923 @@
+[
+  {
+    "id": "uk-easy-0001",
+    "question": "What is the capital of the United Kingdom?",
+    "options": ["London", "Edinburgh", "Cardiff", "Belfast"],
+    "answer": "London",
+    "difficulty": "easy"
+  },
+  {
+    "id": "uk-easy-0002",
+    "question": "What is the UK’s national anthem called?",
+    "options": ["God Save the King", "Rule, Britannia!", "Land of Hope and Glory", "The King Rises"],
+    "answer": "God Save the King",
+    "difficulty": "easy"
+  },
+  {
+    "id": "uk-easy-0003",
+    "question": "What currency is used in the United Kingdom?",
+    "options": ["Pound sterling", "Euro", "Dollar", "Franc"],
+    "answer": "Pound sterling",
+    "difficulty": "easy"
+  },
+  {
+    "id": "uk-easy-0004",
+    "question": "How many countries make up the United Kingdom?",
+    "options": ["2", "3", "4", "5"],
+    "answer": "4",
+    "difficulty": "easy"
+  },
+  {
+    "id": "uk-easy-0005",
+    "question": "Which of these is NOT a country in the United Kingdom?",
+    "options": ["England", "Scotland", "Wales", "Ireland"],
+    "answer": "Ireland",
+    "difficulty": "easy"
+  },
+  {
+    "id": "uk-easy-0006",
+    "question": "Which city is the capital of Scotland?",
+    "options": ["Edinburgh", "Glasgow", "Aberdeen", "Dundee"],
+    "answer": "Edinburgh",
+    "difficulty": "easy"
+  },
+  {
+    "id": "uk-easy-0007",
+    "question": "Which city is the capital of Wales?",
+    "options": ["Cardiff", "Swansea", "Newport", "Wrexham"],
+    "answer": "Cardiff",
+    "difficulty": "easy"
+  },
+  {
+    "id": "uk-easy-0008",
+    "question": "Which city is the capital of Northern Ireland?",
+    "options": ["Belfast", "Derry/Londonderry", "Lisburn", "Newry"],
+    "answer": "Belfast",
+    "difficulty": "easy"
+  },
+  {
+    "id": "uk-easy-0009",
+    "question": "What is the emergency phone number commonly used in the UK?",
+    "options": ["999", "911", "112", "000"],
+    "answer": "999",
+    "difficulty": "easy"
+  },
+  {
+    "id": "uk-easy-0010",
+    "question": "Which famous clock tower is part of the Palace of Westminster?",
+    "options": ["Elizabeth Tower", "Clock Tower of York", "St Paul’s Tower", "The Shard"],
+    "answer": "Elizabeth Tower",
+    "difficulty": "easy"
+  },
+  {
+    "id": "uk-easy-0011",
+    "question": "Which river runs through London?",
+    "options": ["Thames", "Severn", "Trent", "Clyde"],
+    "answer": "Thames",
+    "difficulty": "easy"
+  },
+  {
+    "id": "uk-easy-0013",
+    "question": "Which UK day is celebrated on 5 November?",
+    "options": ["Bonfire Night", "Remembrance Sunday", "St George’s Day", "May Day"],
+    "answer": "Bonfire Night",
+    "difficulty": "easy"
+  },
+  {
+    "id": "uk-easy-0015",
+    "question": "Which famous UK author wrote the Harry Potter series?",
+    "options": ["J.K. Rowling", "Agatha Christie", "Jane Austen", "George Orwell"],
+    "answer": "J.K. Rowling",
+    "difficulty": "easy"
+  },
+  {
+    "id": "uk-easy-0016",
+    "question": "Which sport is strongly associated with Wimbledon?",
+    "options": ["Tennis", "Cricket", "Rugby", "Golf"],
+    "answer": "Tennis",
+    "difficulty": "easy"
+  },
+  {
+    "id": "uk-easy-0017",
+    "question": "Which UK broadcaster is known as the BBC?",
+    "options": ["British Broadcasting Corporation", "British Business Council", "Broadcast Bureau of Cornwall", "Britain Broadcasting Company"],
+    "answer": "British Broadcasting Corporation",
+    "difficulty": "easy"
+  },
+  {
+    "id": "uk-easy-0018",
+    "question": "What is the name of the UK’s main law-making parliament building area in London?",
+    "options": ["Westminster", "Greenwich", "Camden", "Canary Wharf"],
+    "answer": "Westminster",
+    "difficulty": "easy"
+  },
+  {
+    "id": "uk-easy-0019",
+    "question": "Which UK country is famous for the national symbol of a dragon?",
+    "options": ["Wales", "England", "Scotland", "Northern Ireland"],
+    "answer": "Wales",
+    "difficulty": "easy"
+  },
+  {
+    "id": "uk-easy-0020",
+    "question": "Which UK country is most associated with the national symbol of a thistle?",
+    "options": ["Scotland", "England", "Wales", "Northern Ireland"],
+    "answer": "Scotland",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-easy-0021",
+    "question": "Which UK country is most associated with the national symbol of a rose?",
+    "options": ["England", "Scotland", "Wales", "Northern Ireland"],
+    "answer": "England",
+    "difficulty": "easy"
+  },
+  {
+    "id": "uk-easy-0022",
+    "question": "Which UK country is associated with the shamrock as a symbol (commonly)?",
+    "options": ["Northern Ireland", "Wales", "England", "Scotland"],
+    "answer": "Northern Ireland",
+    "difficulty": "easy"
+  },
+  {
+    "id": "uk-easy-0024",
+    "question": "Which UK city is known for the Angel of the North nearby?",
+    "options": ["Gateshead", "Cardiff", "Oxford", "Cambridge"],
+    "answer": "Gateshead",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-easy-0025",
+    "question": "Which UK city is known for the Festival Fringe?",
+    "options": ["Edinburgh", "London", "Belfast", "Leicester"],
+    "answer": "Edinburgh",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-easy-0026",
+    "question": "Which is the highest mountain in the UK?",
+    "options": ["Ben Nevis", "Snowdon (Yr Wyddfa)", "Scafell Pike", "Ben Macdui"],
+    "answer": "Ben Nevis",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-easy-0027",
+    "question": "Which is the largest city in Scotland?",
+    "options": ["Glasgow", "Edinburgh", "Aberdeen", "Inverness"],
+    "answer": "Glasgow",
+    "difficulty": "easy"
+  },
+  {
+    "id": "uk-easy-0029",
+    "question": "What does \"UK\" stand for?",
+    "options": ["United Kingdom", "United Kent", "Union Kingdom", "United Konfederation"],
+    "answer": "United Kingdom",
+    "difficulty": "easy"
+  },
+  {
+    "id": "uk-easy-0030",
+    "question": "Which side of the road do people drive on in the UK?",
+    "options": ["Left", "Right", "Either side", "Only in the middle"],
+    "answer": "Left",
+    "difficulty": "easy"
+  },
+  {
+    "id": "uk-medium-0001",
+    "question": "What is the name of the UK’s lower house of Parliament?",
+    "options": ["House of Commons", "House of Lords", "Supreme Court", "Cabinet Office"],
+    "answer": "House of Commons",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-medium-0002",
+    "question": "What is the name of the UK’s upper house of Parliament?",
+    "options": ["House of Lords", "House of Commons", "Privy Council", "High Court"],
+    "answer": "House of Lords",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-medium-0003",
+    "question": "Who is the head of state of the United Kingdom (as of Feb 2026)?",
+    "options": ["King Charles III", "Keir Starmer", "King William III ", "King Charles II"],
+    "answer": "King Charles III",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-medium-0004",
+    "question": "Who is the head of government of the United Kingdom (as of Feb 2026)?",
+    "options": ["Keir Starmer", "King Charles III", "Sadiq Khan", "The Lord Speaker"],
+    "answer": "Keir Starmer",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-medium-0005",
+    "question": "Which of these is a devolved parliament in the UK?",
+    "options": ["Scottish Parliament", "House of Commons", "UK Supreme Court", "Cabinet"],
+    "answer": "Scottish Parliament",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-medium-0006",
+    "question": "What is the name of the Welsh parliament?",
+    "options": ["Senedd", "Dáil", "Folketing", "Bundestag"],
+    "answer": "Senedd",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-medium-0011",
+    "question": "What is the UK’s highest court called?",
+    "options": ["Supreme Court", "Crown Court", "Magistrates’ Court", "Court of the Exchequer"],
+    "answer": "Supreme Court",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-medium-0012",
+    "question": "Which UK city has the nickname \"Brum\"?",
+    "options": ["Birmingham", "Bristol", "Brighton", "Bradford"],
+    "answer": "Birmingham",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-medium-0013",
+    "question": "Which UK city is nicknamed \"The Steel City\"?",
+    "options": ["Sheffield", "Leeds", "Oxford", "Cambridge"],
+    "answer": "Sheffield",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-medium-0014",
+    "question": "Which UK city is nicknamed \"The Granite City\"?",
+    "options": ["Aberdeen", "Edinburgh", "Cardiff", "Bristol"],
+    "answer": "Aberdeen",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-medium-0015",
+    "question": "Which river is the longest in the UK?",
+    "options": ["Severn", "Thames", "Trent", "Clyde"],
+    "answer": "Severn",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-medium-0016",
+    "question": "Which UK city is famous for its Roman baths?",
+    "options": ["Bath", "York", "Canterbury", "Durham"],
+    "answer": "Bath",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-medium-0017",
+    "question": "Which ancient stone circle is located in Wiltshire, England?",
+    "options": ["Stonehenge", "Skara Brae", "Hadrian's Wall", "Giant's Causeway"],
+    "answer": "Stonehenge",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-medium-0018",
+    "question": "Which Roman defensive barrier runs across northern England?",
+    "options": ["Hadrian's Wall", "Offa's Dyke", "Antonine Wall", "The Great Wall"],
+    "answer": "Hadrian's Wall",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-medium-0019",
+    "question": "Which UK city is famous for its medieval Minster and city walls?",
+    "options": ["York", "Liverpool", "Plymouth", "Swansea"],
+    "answer": "York",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-medium-0020",
+    "question": "Which UK city is the capital of the Scottish Highlands region?",
+    "options": ["Inverness", "Aberdeen", "Stirling", "Perth"],
+    "answer": "Inverness",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-medium-0021",
+    "question": "Which major UK airport is closest to central London and is the UK's busiest airport?",
+    "options": ["Heathrow", "Gatwick", "Stansted", "Luton"],
+    "answer": "Heathrow",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-medium-0022",
+    "question": "Which year did the UK officially leave the European Union?",
+    "options": ["2016", "2019", "2020", "2021"],
+    "answer": "2020",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-medium-0023",
+    "question": "What is the name of the UK’s public healthcare system?",
+    "options": ["NHS", "HMO", "Medicare", "SUS"],
+    "answer": "NHS",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-medium-0024",
+    "question": "Which UK author wrote \"1984\" and \"Animal Farm\"?",
+    "options": ["George Orwell", "Aldous Huxley", "Charles Dickens", "J.R.R. Tolkien"],
+    "answer": "George Orwell",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-medium-0025",
+    "question": "Which UK author wrote \"Pride and Prejudice\"?",
+    "options": ["Jane Austen", "Emily Brontë", "Mary Shelley", "Virginia Woolf"],
+    "answer": "Jane Austen",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-medium-0028",
+    "question": "Which UK holiday is held on the last Monday in August in England, Wales, and Northern Ireland?",
+    "options": ["Summer Bank Holiday", "Boxing Day", "Easter Monday", "St Andrew’s Day"],
+    "answer": "Summer Bank Holiday",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-medium-0030",
+    "question": "Which of these is a UK Crown Dependency (not part of the UK)?",
+    "options": ["Isle of Man", "Gibraltar", "Bermuda", "Falkland Islands"],
+    "answer": "Isle of Man",
+    "difficulty": "hard"
+  },
+
+  {
+    "id": "uk-hard-0001",
+    "question": "Which Act is commonly associated with the 1707 union of the parliaments of England and Scotland?",
+    "options": ["Acts of Union", "Magna Carta", "Reform Act 1832", "Human Rights Act 1998"],
+    "answer": "Acts of Union",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-hard-0003",
+    "question": "Which UK city is home to the UK’s Supreme Court building?",
+    "options": ["London", "Edinburgh", "Cardiff", "Belfast"],
+    "answer": "London",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-hard-0004",
+    "question": "Which body is responsible for setting interest rates in the UK?",
+    "options": ["Bank of England", "HM Treasury", "House of Lords", "BBC"],
+    "answer": "Bank of England",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-hard-0006",
+    "question": "What is the name of the Prime Minister’s official London residence?",
+    "options": ["10 Downing Street", "11 Downing Street", "Buckingham Palace", "Clarence House"],
+    "answer": "10 Downing Street",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-hard-0007",
+    "question": "Which Downing Street number is traditionally the Chancellor of the Exchequer’s official residence?",
+    "options": ["11", "10", "12", "9"],
+    "answer": "11",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-hard-0008",
+    "question": "Which UK body is responsible for running national elections and regulating political finance (independent regulator)?",
+    "options": ["Electoral Commission", "Cabinet Office", "Crown Prosecution Service", "Ofcom"],
+    "answer": "Electoral Commission",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-hard-0009",
+    "question": "Which UK region uses its own legal system separate from England and Wales?",
+    "options": ["Scotland", "Cornwall", "Greater London", "East Anglia"],
+    "answer": "Scotland",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-hard-0010",
+    "question": "Which is the UK’s largest national park by area?",
+    "options": ["Cairngorms", "Lake District", "Snowdonia", "Peak District"],
+    "answer": "Cairngorms",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-hard-0011",
+    "question": "Which is the largest lake in Great Britain (by surface area)?",
+    "options": ["Loch Lomond", "Loch Ness", "Windermere", "Lough Neagh"],
+    "answer": "Loch Lomond",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-hard-0014",
+    "question": "Which UK regulator is responsible for communications (TV, radio, telecoms)?",
+    "options": ["Ofcom", "Ofsted", "CQC", "FCA"],
+    "answer": "Ofcom",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-hard-0015",
+    "question": "Which UK regulator inspects education and schools in England?",
+    "options": ["Ofsted", "Ofcom", "NHS England", "FCA"],
+    "answer": "Ofsted",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-hard-0016",
+    "question": "Which UK agency collects income tax and VAT?",
+    "options": ["HMRC", "BBC", "NHS", "DVLA"],
+    "answer": "HMRC",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-hard-0017",
+    "question": "Which UK agency issues driving licences in Great Britain?",
+    "options": ["DVLA", "DVSA", "HMRC", "NCA"],
+    "answer": "DVLA",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-hard-0018",
+    "question": "What is the name of the UK’s national police agency focused on serious and organised crime?",
+    "options": ["National Crime Agency", "MI5", "Met Office", "British Crime Agency"],
+    "answer": "National Crime Agency",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-hard-0019",
+    "question": "Which organisation is the UK’s domestic security service?",
+    "options": ["MI5", "MI6", "GCHQ", "NCA"],
+    "answer": "MI5",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-hard-0020",
+    "question": "Which organisation is the UK’s foreign intelligence service?",
+    "options": ["MI6", "MI5", "NHS", "Ofcom"],
+    "answer": "MI6",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-hard-0021",
+    "question": "Which organisation is the UK’s signals intelligence and cybersecurity agency?",
+    "options": ["GCHQ", "MI5", "NCA", "BBC"],
+    "answer": "GCHQ",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-hard-0022",
+    "question": "Which is the UK’s oldest university (founded earliest)?",
+    "options": ["University of Oxford", "University of Cambridge", "University of Edinburgh", "University of Glasgow"],
+    "answer": "University of Oxford",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-hard-0025",
+    "question": "Which UK city is known for Titanic’s construction at Harland and Wolff?",
+    "options": ["Belfast", "Liverpool", "Southampton", "Portsmouth"],
+    "answer": "Belfast",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-hard-0028",
+    "question": "Which London carnival is one of Europe’s largest street festivals?",
+    "options": ["Notting Hill Carnival", "Carnival of Light", "Mayfair Parade", "Thames Fest"],
+    "answer": "Notting Hill Carnival",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-hard-0029",
+    "question": "Which UK music festival is famous for being held at Worthy Farm in Somerset?",
+    "options": ["Glastonbury", "Reading", "Wireless", "TRNSMT"],
+    "answer": "Glastonbury",
+    "difficulty": "hard"
+  },
+
+  {
+    "id": "uk-expert-0001",
+    "question": "Which UK event in 1605 is commemorated on Bonfire Night (Guy Fawkes Night)?",
+    "options": ["Gunpowder Plot", "Great Fire of London", "Battle of Hastings", "Spanish Armada"],
+    "answer": "Gunpowder Plot",
+    "difficulty": "expert"
+  },
+  {
+    "id": "uk-expert-0002",
+    "question": "Which city hosted the Great Fire of 1666?",
+    "options": ["London", "York", "Bristol", "Edinburgh"],
+    "answer": "London",
+    "difficulty": "expert"
+  },
+  {
+    "id": "uk-expert-0003",
+    "question": "Which battle in 1066 led to Norman rule in England?",
+    "options": ["Battle of Hastings", "Battle of Agincourt", "Battle of Waterloo", "Battle of Bosworth Field"],
+    "answer": "Battle of Hastings",
+    "difficulty": "expert"
+  },
+  {
+    "id": "uk-expert-0004",
+    "question": "Which English king is most associated with the founding of the Church of England after breaking with Rome?",
+    "options": ["Henry VIII", "Henry V", "Richard III", "Edward I"],
+    "answer": "Henry VIII",
+    "difficulty": "expert"
+  },
+  {
+    "id": "uk-expert-0015",
+    "question": "Which UK writer created Sherlock Holmes?",
+    "options": ["Arthur Conan Doyle", "Agatha Christie", "Ian Fleming", "Charles Dickens"],
+    "answer": "Arthur Conan Doyle",
+    "difficulty": "expert"
+  },
+  {
+    "id": "uk-expert-0016",
+    "question": "Which UK author created James Bond?",
+    "options": ["Ian Fleming", "Roald Dahl", "Agatha Christie", "Terry Pratchett"],
+    "answer": "Ian Fleming",
+    "difficulty": "expert"
+  },
+  {
+    "id": "uk-expert-0017",
+    "question": "Which UK author wrote \"Dracula\"?",
+    "options": ["Bram Stoker", "Mary Shelley", "H.G. Wells", "Robert Louis Stevenson"],
+    "answer": "Bram Stoker",
+    "difficulty": "expert"
+  },
+  {
+    "id": "uk-expert-0018",
+    "question": "Which UK author wrote \"Frankenstein\"?",
+    "options": ["Mary Shelley", "Jane Austen", "Virginia Woolf", "George Eliot"],
+    "answer": "Mary Shelley",
+    "difficulty": "expert"
+  },
+  {
+    "id": "uk-expert-0019",
+    "question": "Which was the first underground railway system in the world (city-level)?",
+    "options": ["London Underground", "Glasgow Subway", "Manchester Métro", "Birmingham Subway"],
+    "answer": "London Underground",
+    "difficulty": "expert"
+  },
+  {
+    "id": "uk-expert-0020",
+    "question": "Which major London transport payment system uses a stored-value/contactless card?",
+    "options": ["Oyster", "Taps", "MetroCard", "Octopus"],
+    "answer": "Oyster",
+    "difficulty": "expert"
+  },
+  {
+    "id": "uk-expert-0021",
+    "question": "Which UK science figure is strongly associated with the law of universal gravitation?",
+    "options": ["Isaac Newton", "Charles Darwin", "Alan Turing", "Michael Faraday"],
+    "answer": "Isaac Newton",
+    "difficulty": "expert"
+  },
+  {
+    "id": "uk-expert-0022",
+    "question": "Which UK scientist is most associated with the theory of evolution by natural selection?",
+    "options": ["Charles Darwin", "Isaac Newton", "Ada Lovelace", "Tim Berners-Lee"],
+    "answer": "Charles Darwin",
+    "difficulty": "expert"
+  },
+  {
+    "id": "uk-expert-0023",
+    "question": "Which UK mathematician/computer scientist is strongly associated with WWII codebreaking at Bletchley Park?",
+    "options": ["Alan Turing", "Stephen Hawking", "Isaac Newton", "James Clerk Maxwell"],
+    "answer": "Alan Turing",
+    "difficulty": "expert"
+  },
+  {
+    "id": "uk-expert-0024",
+    "question": "Which UK location is most famously associated with WWII codebreaking?",
+    "options": ["Bletchley Park", "Stonehenge", "Hadrian’s Wall", "Glastonbury Tor"],
+    "answer": "Bletchley Park",
+    "difficulty": "expert"
+  },
+  {
+    "id": "uk-expert-0025",
+    "question": "Which UK city is often called the “UK’s second city” historically?",
+    "options": ["Birmingham", "Bristol", "Cardiff", "Edinburgh"],
+    "answer": "Birmingham",
+    "difficulty": "expert"
+  },
+  {
+    "id": "uk-med-0003",
+    "question": "Who was the lead singer of the English band Queen?",
+    "options": ["Freddie Mercury", "David Bowie", "Mick Jagger", "Elton John"],
+    "answer": "Freddie Mercury",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-med-0006",
+    "question": "Which English singer is known for the album \"Back to Black\"?",
+    "options": ["Amy Winehouse", "Adele", "Jess Glynne", "Emeli Sandé"],
+    "answer": "Amy Winehouse",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-med-0007",
+    "question": "Which English rock band featured brothers Liam and Noel Gallagher?",
+    "options": ["Oasis", "The Verve", "Radiohead", "Pulp"],
+    "answer": "Oasis",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-med-0008",
+    "question": "Which English singer is known for the hit single \"Shape of You\"?",
+    "options": ["Ed Sheeran", "Sam Smith", "George Ezra", "Rag'n'Bone Man"],
+    "answer": "Ed Sheeran",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-med-0009",
+    "question": "Which London‑born musician created the alter ego Ziggy Stardust?",
+    "options": ["David Bowie", "Elton John", "Paul McCartney", "Phil Collins"],
+    "answer": "David Bowie",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-med-0010",
+    "question": "Which English band is known for the album \"OK Computer\"?",
+    "options": ["Radiohead", "The Smiths", "Blur", "Oasis"],
+    "answer": "Radiohead",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-med-0011",
+    "question": "Which English singer‑songwriter had a huge hit with \"Someone You Loved\"?",
+    "options": ["Lewis Capaldi", "George Ezra", "Sam Smith", "Ed Sheeran"],
+    "answer": "Lewis Capaldi",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-med-0012",
+    "question": "Which English band fronted by Chris Martin released \"Yellow\"?",
+    "options": ["Coldplay", "Keane", "Snow Patrol", "Muse"],
+    "answer": "Coldplay",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-med-0013",
+    "question": "Which English singer performed the song \"Rocket Man\"?",
+    "options": ["Elton John", "Rod Stewart", "Phil Collins", "Sting"],
+    "answer": "Elton John",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-med-0014",
+    "question": "Which English band released the album \"Sgt. Pepper's Lonely Hearts Club Band\"?",
+    "options": ["The Beatles", "The Rolling Stones", "The Kinks", "The Who"],
+    "answer": "The Beatles",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-med-0015",
+    "question": "Which English singer is known for the hit \"Rolling in the Deep\"?",
+    "options": ["Adele", "Leona Lewis", "Jessie J", "Duffy"],
+    "answer": "Adele",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-med-0018",
+    "question": "Which English band did Mick Jagger front?",
+    "options": ["The Rolling Stones", "The Who", "Pink Floyd", "Led Zeppelin"],
+    "answer": "The Rolling Stones",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-med-0019",
+    "question": "Which girl group, formed in England, had the nickname \"Sporty\", \"Scary\", \"Baby\", \"Ginger\" and \"Posh\"?",
+    "options": ["Spice Girls", "All Saints", "Girls Aloud", "Sugababes"],
+    "answer": "Spice Girls",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-med-0020",
+    "question": "Which English band released the anthem \"Don't Look Back in Anger\"?",
+    "options": ["Oasis", "Blur", "The Verve", "Pulp"],
+    "answer": "Oasis",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-med-0021",
+    "question": "Which English singer is known for the album \"Divide\"?",
+    "options": ["Ed Sheeran", "Sam Smith", "George Michael", "Robbie Williams"],
+    "answer": "Ed Sheeran",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-med-0022",
+    "question": "Which English musician fronted the band The Police?",
+    "options": ["Sting", "Phil Collins", "Roger Daltrey", "Peter Gabriel"],
+    "answer": "Sting",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-med-0023",
+    "question": "Which English singer is known for the song \"Angels\"?",
+    "options": ["Robbie Williams", "Gary Barlow", "George Michael", "Seal"],
+    "answer": "Robbie Williams",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-med-0024",
+    "question": "Which English band released the single \"Bittersweet Symphony\"?",
+    "options": ["The Verve", "Blur", "Oasis", "Travis"],
+    "answer": "The Verve",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-med-0025",
+    "question": "Which English singer‑songwriter released the hit \"Stay With Me\"?",
+    "options": ["Sam Smith", "James Blunt", "Ed Sheeran", "George Ezra"],
+    "answer": "Sam Smith",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-med-0026",
+    "question": "Which English actor played Harry Potter in the film series?",
+    "options": ["Daniel Radcliffe", "Rupert Grint", "Tom Felton", "Robert Pattinson"],
+    "answer": "Daniel Radcliffe",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-med-0027",
+    "question": "Which English actress played Hermione Granger in the Harry Potter films?",
+    "options": ["Emma Watson", "Keira Knightley", "Emily Blunt", "Daisy Ridley"],
+    "answer": "Emma Watson",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-med-0028",
+    "question": "Which English actor is famous for playing Mr. Bean?",
+    "options": ["Rowan Atkinson", "Hugh Laurie", "Stephen Fry", "Ricky Gervais"],
+    "answer": "Rowan Atkinson",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-med-0029",
+    "question": "Which English actor played James Bond in \"Skyfall\"?",
+    "options": ["Daniel Craig", "Pierce Brosnan", "Sean Connery", "Roger Moore"],
+    "answer": "Daniel Craig",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-med-0030",
+    "question": "Which English actor stars as Sherlock Holmes in the BBC series \"Sherlock\"?",
+    "options": ["Benedict Cumberbatch", "Tom Hiddleston", "Matt Smith", "David Tennant"],
+    "answer": "Benedict Cumberbatch",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-med-0031",
+    "question": "Which English comedian created and starred in \"The Office\" (UK)?",
+    "options": ["Ricky Gervais", "Steve Coogan", "John Cleese", "Peter Kay"],
+    "answer": "Ricky Gervais",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-med-0032",
+    "question": "Which English naturalist is famous for presenting \"Planet Earth\"?",
+    "options": ["David Attenborough", "Brian Cox", "Chris Packham", "Stephen Hawking"],
+    "answer": "David Attenborough",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-med-0033",
+    "question": "Which English chef is known for the show \"Kitchen Nightmares\"?",
+    "options": ["Gordon Ramsay", "Jamie Oliver", "Heston Blumenthal", "Nigel Slater"],
+    "answer": "Gordon Ramsay",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-med-0034",
+    "question": "Which English TV show features the TARDIS and a time‑travelling Doctor?",
+    "options": ["Doctor Who", "Sherlock", "Broadchurch", "Downton Abbey"],
+    "answer": "Doctor Who",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-med-0036",
+    "question": "Which English playwright wrote \"Romeo and Juliet\"?",
+    "options": ["William Shakespeare", "Charles Dickens", "George Bernard Shaw", "Oscar Wilde"],
+    "answer": "William Shakespeare",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-med-0037",
+    "question": "Which English monarch was known as the \"Virgin Queen\"?",
+    "options": ["Elizabeth I", "Victoria", "Elizabeth II", "Mary I"],
+    "answer": "Elizabeth I",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-med-0038",
+    "question": "Which English city is famous for its two Premier League clubs, City and United?",
+    "options": ["Manchester", "Liverpool", "London", "Newcastle"],
+    "answer": "Manchester",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-med-0039",
+    "question": "Which English city is home to the Beatles' childhood homes?",
+    "options": ["Liverpool", "London", "Bristol", "Leeds"],
+    "answer": "Liverpool",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-med-0040",
+    "question": "In which English county is the university city of Oxford?",
+    "options": ["Oxfordshire", "Cambridgeshire", "Surrey", "Kent"],
+    "answer": "Oxfordshire",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-med-0043",
+    "question": "Which London residence is the official home of the monarch?",
+    "options": ["Buckingham Palace", "Windsor Castle", "Kensington Palace", "Balmoral"],
+    "answer": "Buckingham Palace",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-med-0046",
+    "question": "Which English football club plays home matches at Anfield?",
+    "options": ["Liverpool", "Everton", "Arsenal", "Chelsea"],
+    "answer": "Liverpool",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-med-0048",
+    "question": "Which English dish traditionally consists of sausages and mashed potatoes?",
+    "options": ["Bangers and mash", "Shepherd's pie", "Fish and chips", "Toad in the hole"],
+    "answer": "Bangers and mash",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-mcq-0002",
+    "question": "Which of these is NOT a member of the British royal family?",
+    "options": ["Prince George", "Princess Anne", "Prince Harry", "Princess Marcy"],
+    "answer": "Princess Marcy",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-mcq-0003",
+    "question": "Which of these is NOT a member of the British royal family?",
+    "options": ["Queen Camilla", "Prince Edward", "Sophie, Duchess of Edinburgh", "Prince Philip"],
+    "answer": "Prince Philip",
+    "difficulty": "hard"
+  },
+
+  {
+    "id": "uk-mcq-0004",
+    "question": "Which of these is NOT a city in England?",
+    "options": ["Bristol", "Leeds", "Gibraltar", "Sheffield"],
+    "answer": "Gibraltar",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-mcq-0005",
+    "question": "Which of these is NOT a city in England?",
+    "options": ["Manchester", "Cardiff", "Newcastle", "Nottingham"],
+    "answer": "Cardiff",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-mcq-0006",
+    "question": "Which of these is NOT a city in England?",
+    "options": ["Victoria", "Liverpool", "Birmingham", "Oxford"],
+    "answer": "Victoria",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-mcq-0007",
+    "question": "How many airports are there in London?",
+    "options": ["5", "6", "7", "4"],
+    "answer": "6",
+    "difficulty": "hard",
+  },
+  {
+    "id": "uk-mcq-0008",
+    "question": "Which of these is NOT an airport in London?",
+    "options": ["Southend", "Stanstead", "City", "Victoria"],
+    "answer": "Victoria",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-mcq-0009",
+    "question": "Which of these is NOT a university in the UK?",
+    "options": ["University of Oxford", "University of Cambridge", "University of Edinburgh", "Harvard University"],
+    "answer": "Harvard University",
+    "difficulty": "medium"
+  },
+  {
+    "id": "uk-mcq-0010",
+    "question": "Which of these is NOT a university in the UK?",
+    "options": ["Imperial College London", "University of Manchester", "University of Glasgow", "Sorbonne University"],
+    "answer": "Sorbonne University",
+    "difficulty": "hard"
+  },
+  {
+    "id": "uk-mcq-0011",
+    "question": "Which of these is NOT a university in the UK?",
+    "options": ["London School of Economics (LSE)", "University of Bristol", "King's College London", "Stanford University"],
+    "answer": "Stanford University",
+    "difficulty": "medium"
+  }
+
+]

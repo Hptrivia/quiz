@@ -1,0 +1,912 @@
+[
+  {
+    "id": "tw-ez-0001",
+    "question": "Who plays Edward Cullen in the Twilight movies?",
+    "options": ["Taylor Lautner", "Robert Pattinson", "Jackson Rathbone", "Kellan Lutz"],
+    "answer": "Robert Pattinson",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-ez-0002",
+    "question": "What is Bella Swan’s hometown?",
+    "options": ["Phoenix", "Forks", "Seattle", "Portland"],
+    "answer": "Forks",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-ez-0003",
+    "question": "Who is Bella’s werewolf friend?",
+    "options": ["Emmett", "Jacob", "Carlisle", "Jasper"],
+    "answer": "Jacob",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-ez-0004",
+    "question": "What is the name of Edward’s vampire family?",
+    "options": ["The Denalis", "The Volturi", "The Cullens", "The Swans"],
+    "answer": "The Cullens",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-ez-0005",
+    "question": "Who is Bella’s father?",
+    "options": ["Charlie", "Billy", "Carlisle", "Mike"],
+    "answer": "Charlie",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-md-0068",
+    "question": "What is the name of the guy with a romantic interest in Bella at her high school?",
+    "options": ["Phil", "Mike", "Mark", "Eric"],
+    "answer": "Mike",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-ez-0006",
+    "question": "Which actress plays Bella Swan?",
+    "options": ["Kristen Stewart", "Ashley Greene", "Anna Kendrick", "Nikki Reed"],
+    "answer": "Kristen Stewart",
+    "difficulty": "easy"
+  },
+  {
+    "id": "twilight-medium-0021",
+    "question": "Who played Angela Weber in the Twilight movies?",
+    "options": ["Christian Serratos", "Anna Kendrick", "Ashley Greene", "Nikki Reed"],
+    "answer": "Christian Serratos",
+    "difficulty": "hard"
+  },
+  {
+    "id": "twilight-medium-0022",
+    "question": "Who played Eric Yorkie in the Twilight Saga?",
+    "options": ["Justin Chon", "Michael Welch", "Kellan Lutz", "Jackson Rathbone"],
+    "answer": "Justin Chon",
+    "difficulty": "hard"
+  },
+  {
+    "id": "twilight-medium-0023",
+    "question": "Who portrayed Bella's mother, in the films?",
+    "options": ["Sarah Clarke", "Elizabeth Reaser", "Ashley Greene", "Dakota Fanning"],
+    "answer": "Sarah Clarke",
+    "difficulty": "hard"
+  },
+  {
+    "id": "twilight-easy-0025",
+    "question": "Who is Bella’s shy classmate in high school who also works on the school paper?",
+    "options": ["Angela", "Jessica", "Alice", "Irina"],
+    "answer": "Angela",
+   "difficulty": "easy"
+  },
+  {
+    "id": "twilight-easy-0026",
+    "question": "Who is Bella´s somewhat nerdy male friend in high school who is a school reporter and had a crush on her ?",
+    "options": ["Eric", "Mike", "Tyler", "Felix"],
+    "answer": "Eric",
+    "difficulty": "easy"
+  },
+  {
+    "id": "twilight-expert-68",
+    "question": "What is the name of the actor who plays Harry Clearwater?",
+    "options": ["Graham Greene", "Gil Birmingham", "Chaske Spencer", "Alex Meraz"],
+    "answer": "Graham Greene",
+    "difficulty": "expert"
+  },
+  {
+    "id": "twilight-expert-69",
+    "question": "What is the name of the actor who plays Sam Uley?",
+    "options": ["Chaske Spencer", "Alex Meraz", "BooBoo Stewart", "Gil Birmingham"],
+    "answer": "Chaske Spencer",
+    "difficulty": "expert"
+  },
+  {
+    "id": "twilight-easy-0026",
+    "question": "Which of these character isnt a part of Bella´s friend group at the high school?",
+    "options": ["Eric", "Mike", "Angela", "Felix"],
+    "answer": "Eric",
+    "difficulty": "easy"
+  },
+  {
+    "id": "twilight-expert-76",
+    "question": "What is the name of the actor who plays Jane in the Volturi?",
+    "options": ["Dakota Fanning", "Ashley Greene", "Nikki Reed", "Anna Kendrick"],
+    "answer": "Dakota Fanning",
+    "difficulty": "expert"
+  },
+  {
+    "id": "twilight-medium-0024",
+    "question": "Who played Renesmee Cullen in 'Breaking Dawn'?",
+    "options": ["Mackenzie Foy", "Mía Maestro", "Maggie Grace", "Rachelle Lefevre"],
+    "answer": "Mackenzie Foy",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-ez-0007",
+    "question": "What color is Bella’s pickup truck?",
+    "options": ["Blue", "Red", "Green", "Black"],
+    "answer": "Red",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-ez-0008",
+    "question": "Who is the leader of the Cullen family?",
+    "options": ["Emmett", "Edward", "Carlisle", "Jasper"],
+    "answer": "Carlisle",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-ez-0009",
+    "question": "What is the name of Bella and Edward’s daughter?",
+    "options": ["Rosalie", "Esme", "Renesmee", "Alice"],
+    "answer": "Renesmee",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-ez-0010",
+    "question": "Which supernatural creature is Jacob?",
+    "options": ["Vampire", "Werewolf", "Witch", "Fairy"],
+    "answer": "Werewolf",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-ez-0011",
+    "question": "How many Twilight movies are there?",
+    "options": ["3", "4", "5", "6"],
+    "answer": "5",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-ez-0012",
+    "question": "Who is Alice Cullen’s mate?",
+    "options": ["Jasper", "Emmett", "Edward", "Carlisle"],
+    "answer": "Jasper",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-ez-0013",
+    "question": "Which actor plays Jacob Black?",
+    "options": ["Kellan Lutz", "Taylor Lautner", "Peter Facinelli", "Jackson Rathbone"],
+    "answer": "Taylor Lautner",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-ez-0014",
+    "question": "What is the name of the vampire clan in Italy?",
+    "options": ["Volturi", "Cullens", "Denali", "Amazon"],
+    "answer": "Volturi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-ez-0015",
+    "question": "Who is Edward’s adoptive mother?",
+    "options": ["Esme", "Rosalie", "Alice", "Jessica"],
+    "answer": "Esme",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-ez-0016",
+    "question": "What year was the first Twilight movie released?",
+    "options": ["2007", "2008", "2009", "2010"],
+    "answer": "2008",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-ez-0017",
+    "question": "Who is the author of the Twilight series books?",
+    "options": ["J.K. Rowling", "Stephenie Meyer", "Suzanne Collins", "Veronica Roth"],
+    "answer": "Stephenie Meyer",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-ez-0018",
+    "question": "What does Edward drink instead of human blood?",
+    "options": ["Animal blood", "Wine", "Water", "Nothing"],
+    "answer": "Animal blood",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-ez-0019",
+    "question": "Who plays Jeesica in the Twilight movies?",
+    "options": ["Anna Kendrick", "Ashley Greene", "Dakota Fanning", "Nikki Reed"],
+    "answer": "Anna Kendrick",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-ez-0020",
+    "question": "Which Cullen can see the future?",
+    "options": ["Rosalie", "Alice", "Emmett", "Esme"],
+    "answer": "Alice",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-ez-0022",
+    "question": "Who is the main antagonist in the first Twilight movie?",
+    "options": ["Victoria", "James", "Laurent", "Aro"],
+    "answer": "James",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-ez-0023",
+    "question": "What power does Edward have?",
+    "options": ["See the future", "Read minds", "Control weather", "Super speed"],
+    "answer": "Read minds",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-ez-0024",
+    "question": "Who is the oldest member of the Cullen family?",
+    "options": ["Carlisle", "Edward", "Esme", "Emmett"],
+    "answer": "Carlisle",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-ez-0025",
+    "question": "What is the name of Bella’s high school?",
+    "options": ["Forks High", "Phoenix High", "Port Angeles High", "Forks Elementary"],
+    "answer": "Forks High",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-ez-0027",
+    "question": "What is the name of Jacob’s tribe?",
+    "options": ["Quileute", "Makah", "Hoh", "Chinook"],
+    "answer": "Quileute",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw-ez-0029",
+    "question": "Who is the main villain in Breaking Dawn Part 2?",
+    "options": ["Alec", "Victoria", "Aro", "Jane"],
+    "answer": "Aro",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-ez-0030",
+    "question": "Which Cullen is known for her beauty?",
+    "options": ["Alice", "Rosalie", "Esme", "Bella"],
+    "answer": "Rosalie",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-ez-0031",
+    "question": "What sport do the Cullens play during thunderstorms?",
+    "options": ["Soccer", "Baseball", "Football", "Basketball"],
+    "answer": "Baseball",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-ez-0033",
+    "question": "Who is Jacob’s father?",
+    "options": ["Max", "Billy", "Trent", "Sam"],
+    "answer": "Billy",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-ez-0034",
+    "question": "Who is the red-haired vampire in the first three films?",
+    "options": ["Alice", "Victoria", "Jane", "Esme"],
+    "answer": "Victoria",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-ez-0035",
+    "question": "Who is Bella’s mother?",
+    "options": ["Katherine", "Renée", "Jessica", "Angela"],
+    "answer": "Renée",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-ez-0036",
+    "question": "Which Cullen is the physically strongest?",
+    "options": ["Emmett", "Edward", "Jasper", "Carlisle"],
+    "answer": "Emmett",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-ez-0038",
+    "question": "What is the name of the town where the Volturi live?",
+    "options": ["Volterra", "Florence", "Rome", "Milan"],
+    "answer": "Volterra",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-md-0039",
+    "question": "Who directed the first Twilight movie?",
+    "options": ["Bill Condon", "David Slade", "Catherine Hardwicke", "Chris Weitz"],
+    "answer": "Catherine Hardwicke",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw-md-0040",
+    "question": "Which actress replaced Rachelle Lefevre as Victoria?",
+    "options": ["Bryce Dallas Howard", "Ashley Greene", "Dakota Fanning", "Nikki Reed"],
+    "answer": "Bryce Dallas Howard",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-md-0041",
+    "question": "What is the name of Bella’s high school biology teacher?",
+    "options": ["Mr. Molina", "Mr. Banner", "Mr. Varner", "Mr. Berty"],
+    "answer": "Mr. Molina",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw-md-0042",
+    "question": "Which festival is celebrated in Volterra in New Moon?",
+    "options": ["Saint Marcus Day", "Carnival", "Easter", "Harvest"],
+    "answer": "Saint Marcus Day",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw-md-0043",
+    "question": "Who is the leader of the Volturi?",
+    "options": ["Caius", "Marcus", "Aro", "Demetri"],
+    "answer": "Aro",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-md-0044",
+    "question": "What is the name of Bella’s human friend who is valedictorian in the Eclipse movie?",
+    "options": ["Angela", "Jessica", "Lauren", "Mike"],
+    "answer": "Jessica",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-md-0045",
+    "question": "Who is the first vampire to try to kill Bella?",
+    "options": ["James", "Victoria", "Laurent", "Jane"],
+    "answer": "James",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-md-0046",
+    "question": "What is the name of the restaurant where Edward and Bella have their first meal together?",
+    "options": ["The Bloated Toad", "Bella Italia", "Forks Diner", "The Lodge"],
+    "answer": "Bella Italia",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw-md-0047",
+    "question": "What is the name of the vampire who can cause pain with her mind?",
+    "options": ["Jane", "Alec", "Heidi", "Irina"],
+    "answer": "Jane",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-md-0048",
+    "question": "Which member of the Cullen family was turned during the Spanish influenza?",
+    "options": ["Jasper", "Alice", "Edward", "Emmett"],
+    "answer": "Edward",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-md-0052",
+    "question": "What is the name of the vampire who created an army of newborns in Eclipse?",
+    "options": ["James", "Victoria", "Irina", "Jane"],
+    "answer": "Victoria",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-md-0054",
+    "question": "Which actor played Carlisle Cullen?",
+    "options": ["Peter Facinelli", "Billy Burke", "Michael Sheen", "Jackson Rathbone"],
+    "answer": "Peter Facinelli",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw-md-0058",
+    "question": "Where was the majority of the Twilight series filmed?",
+    "options": ["Oregon", "Washington", "Texas", "California"],
+    "answer": "Oregon",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-md-0061",
+    "question": "Who is the vampire that threatens Bella’s life in the first book?",
+    "options": ["James", "Victoria", "Jane", "Aro"],
+    "answer": "James",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-md-0062",
+    "question": "Which member of the Quileute tribe shown in the movies could not shape shift into a wolf?",
+    "options": ["Billy", "Sam", "Paul", "Embry"],
+    "answer": "Billy",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-md-0063",
+    "question": "What is the name of Alice Cullen’s real (human) name?",
+    "options": ["Mary Alice Brandon", "Alice Hale", "Alice Cullen", "Alice Whitlock"],
+    "answer": "Mary Alice Brandon",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-md-0064",
+    "question": "What is the name of the vampire who can block other vampires’ powers?",
+    "options": ["Bella", "Jane", "Aro", "Jasper"],
+    "answer": "Bella",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-md-0067",
+    "question": "What is the name of the movie where Bella becomes a vampire?",
+    "options": ["Twilight", "New Moon", "Breaking Dawn", "Breaking Dawn 2"],
+    "answer": "Breaking Dawn 2",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-md-0068",
+    "question": "What is the name of Bella’s stepfather?",
+    "options": ["Phil", "Mike", "Mark", "Eric"],
+    "answer": "Phil",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-md-0069",
+    "question": "Which member of the Cullen family is a doctor?",
+    "options": ["Edward", "Carlisle", "Emmett", "Jasper"],
+    "answer": "Carlisle",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-md-0070",
+    "question": "Who is the first person Edward saves Bella from?",
+    "options": ["James", "Laurent", "A group of men", "Victoria"],
+    "answer": "A group of men",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-md-0071",
+    "question": "What is the name of Edward and Bella´s housekeeper on their honeymoon in Breaking Dawn?",
+    "options": ["Sue", "Zafrina", "Kaure", "Irina"],
+    "answer": "Kaure",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw-md-0271",
+    "question": "What is the name of the husband of Edward and Bella´s housekeeper on their honeymoon in Breaking Dawn?",
+    "options": ["Antonio", "Carlos", "Gustavo", "Jose"],
+    "answer": "Gustavo",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tw-md-0072",
+    "question": "Which member of the Volturi has the power of sensory deprivation?",
+    "options": ["Alec", "Jane", "Aro", "Caius"],
+    "answer": "Alec",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw-md-0073",
+    "question": "Who is the first vampire Bella meets on the Volturi Island?",
+    "options": ["Aro", "Jane", "Felix", "Demetri"],
+    "answer": "Jane",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-md-0074",
+    "question": "Who is the main antagonist in New Moon?",
+    "options": ["Victoria", "Aro", "James", "Jane"],
+    "answer": "Victoria",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-md-0075",
+    "question": "What is the name of Jacob’s sister shown in the movies?",
+    "options": ["Rachel", "Leah", "Emily", "Sue"],
+    "answer": "Rachel",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-hr-0076",
+    "question": "What is the name of Rosalie’s fiancé when she was human?",
+    "options": ["Royce King II", "Henry Frazzer II", "James Marks II", "Marcus King II"],
+    "answer": "Royce King II",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw-hr-0077",
+    "question": "Which actor was almost cast as Edward Cullen before Robert Pattinson but was deemed too old?",
+    "options": ["Henry Cavill", "Ben Barnes", "Jamie Campbell Bower", "Tom Sturridge"],
+    "answer": "Henry Cavill",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw-hr-0078",
+    "question": "What is the name of the vampire who created Jasper?",
+    "options": ["Maria", "Victoria", "Jane", "Irina"],
+    "answer": "Maria",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw-hr-0079",
+    "question": "What is the name of the scarred woman who is Sam Uley’s fiancée?",
+    "options": ["Leah", "Emily", "Sue", "Rachel"],
+    "answer": "Emily",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw-hr-0080",
+    "question": "Who is the first vampire to die in the Breaking Dawn Part 2 battle vision?",
+    "options": ["Carlisle", "Jasper", "Seth", "Aro"],
+    "answer": "Carlisle",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw-hr-0081",
+    "question": "What is the name of the Amazonian vampire with the power to create illusions?",
+    "options": ["Zafrina", "Senna", "Kebi", "Irina"],
+    "answer": "Zafrina",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw-hr-0083",
+    "question": "What is the name of the Denali coven’s leader?",
+    "options": ["Tanya", "Irina", "Kate", "Carmen"],
+    "answer": "Tanya",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw-hr-0084",
+    "question": "Which vampire was Laurent´s mate?",
+    "options": ["Irina", "Tanya", "Kate", "Carmen"],
+    "answer": "Irina",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw-hr-0085",
+    "question": "Who was the only Cullen not present at Bella and Edward’s wedding?",
+    "options": ["Rosalie", "Emmett", "Alice", "Jasper"],
+    "answer": "Rosalie",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-hr-0086",
+    "question": "Who is the Volturi’s tracker?",
+    "options": ["Demetri", "Felix", "Jane", "Alec"],
+    "answer": "Demetri",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw-hr-0089",
+    "question": "Which member of the Volturi has the power to read every thought a person has ever had?",
+    "options": ["Aro", "Jane", "Caius", "Marcus"],
+    "answer": "Aro",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw-hr-0090",
+    "question": "What is the name of the vampire who can manipulate emotions?",
+    "options": ["Jasper", "Alice", "Jane", "Aro"],
+    "answer": "Jasper",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-hr-0092",
+    "question": "Who is the first vampire created by Victoria when forming a newborn army?",
+    "options": ["Bree", "Riley", "Sean", "Justin"],
+    "answer": "Riley",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw-hr-0093",
+    "question": "What is the name of the vampire who surrenders in the Eclipse battle?",
+    "options": ["Bree", "Riley", "Victoria", "Jane"],
+    "answer": "Bree",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw-hr-0095",
+    "question": "Which vampire is known for her compassion and ability to calm others?",
+    "options": ["Esme", "Alice", "Rosalie", "Kate"],
+    "answer": "Esme",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw-hr-0096",
+    "question": "Who is the alpha of the Quileute wolf pack after Sam?",
+    "options": ["Jacob", "Paul", "Embry", "Jared"],
+    "answer": "Jacob",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-hr-0097",
+    "question": "What is the name of the Volturi’s enforcer with super strength?",
+    "options": ["Felix", "Demetri", "Aro", "Caius"],
+    "answer": "Felix",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw-hr-0101",
+    "question": "Who is the only member of the Denali coven to die in Breaking Dawn?",
+    "options": ["Irina", "Tanya", "Kate", "Carmen"],
+    "answer": "Irina",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw-hr-0102",
+    "question": "What is the name of the vampire who can produce electric shocks?",
+    "options": ["Kate", "Tanya", "Irina", "Carmen"],
+    "answer": "Kate",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw-hr-0103",
+    "question": "Who is the first Quileute wolf to imprint?",
+    "options": ["Sam", "Jacob", "Quil", "Embry"],
+    "answer": "Sam",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-hr-0106",
+    "question": "Which of these is a member of the Amazonian vampire tribe who joins the Cullens?",
+    "options": ["Zafrina and Irina", "Senna and Irina", "Kebi and Kachiri", "Zafrina and Senna"],
+    "answer": "Zafrina and Senna",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw-hr-0107",
+    "question": "What is the name of the vampire who was a Confederate major?",
+    "options": ["Jasper", "Edward", "Emmett", "Carlisle"],
+    "answer": "Jasper",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tw-hr-0109",
+    "question": "What is the name of the vampire who is a nomad and friend of the Cullens?",
+    "options": ["Garrett", "Alistair", "Benjamin", "Peter"],
+    "answer": "Garrett",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw-hr-0111",
+    "question": "What is the name of the Volturi’s secretary?",
+    "options": ["Gianna", "Heidi", "Jane", "Irina"],
+    "answer": "Gianna",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw-ex-0126",
+    "question": "Which member of the Cullen family was born in 1901?",
+    "options": ["Edward", "Emmett", "Jasper", "Alice"],
+    "answer": "Edward",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tw-ex-0130",
+    "question": "Which actor played Aro in the movies?",
+    "options": ["Michael Sheen", "Jamie Campbell Bower", "Cameron Bright", "Rami Malek"],
+    "answer": "Michael Sheen",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tw-ez-0152",
+    "question": "What is the name of the town where Bella moves from?",
+    "options": ["Phoenix", "Seattle", "Portland", "Tucson"],
+    "answer": "Phoenix",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-ez-0160",
+    "question": "What is Bella’s last name?",
+    "options": ["Cullen", "Swan", "Black", "Hale"],
+    "answer": "Swan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tw-md-0164",
+    "question": "Which actor played Laurent in the movies?",
+    "options": ["Edi Gathegi", "Cam Gigandet", "Kellan Lutz", "Jackson Rathbone"],
+    "answer": "Edi Gathegi",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tw-md-2164",
+    "question": "Which actor played James in the movies?",
+    "options": ["Edi Gathegi", "Cam Gigandet", "Kellan Lutz", "Jackson Rathbone"],
+    "answer": "Cam Gigandet",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tw-hr-0183",
+    "question": "What is the name of the vampire who surrenders in the Eclipse battle?",
+    "options": ["Bree", "Riley", "Victoria", "Jane"],
+    "answer": "Bree",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw-hr-0187",
+    "question": "What is the name of Bella’s wedding dress designer?",
+    "options": ["Carolina Herrera", "Vera Wang", "Marchesa", "Oscar de la Renta"],
+    "answer": "Carolina Herrera",
+    "difficulty": "expert"
+  },
+  {
+    "id": "twilight-easy-0001",
+    "question": "Which actor played Emmett Cullen in the Twilight movies?",
+    "options": ["Kellan Lutz", "Jackson Rathbone", "Peter Facinelli", "Cam Gigandet"],
+    "answer": "Kellan Lutz",
+    "difficulty": "medium"
+  },
+  {
+    "id": "twilight-expert-92",
+    "question": "What is the name of the actor who plays Benjamin in Breaking Dawn?",
+    "options": ["Rami Malek", "Noel Fisher", "Lee Pace", "Christian Camargo"],
+    "answer": "Rami Malek",
+    "difficulty": "expert"
+  },
+  {
+    "id": "twilight-hard-0028",
+    "question": "What is the name of the half-human, half-vampire hybrid introduced in 'Breaking Dawn – Part 2'?",
+    "options": ["Nahuel", "Benjamin", "Garrett", "Felix"],
+    "answer": "Nahuel",
+    "difficulty": "hard"
+  },
+  {
+    "id": "twilight-hard-0029",
+    "question": "Who played Nahuel in 'Breaking Dawn – Part 2'?",
+    "options": ["J.D. Pardo", "Rami Malek", "Noel Fisher", "Lee Pace"],
+    "answer": "J.D. Pardo",
+    "difficulty": "hard"
+  },
+  {
+    "id": "twilight-expert-71",
+    "question": "What is the name of the actor who plays Charlie Swan?",
+    "options": ["Billy Burke", "Peter Facinelli", "Gil Birmingham", "Matt Bushell"],
+    "answer": "Billy Burke",
+    "difficulty": "expert"
+  },
+  {
+    "id": "twilight-medium-0030",
+    "question": "What is the name of the leader of the Irish coven in the Twilight movies?",
+    "options": ["Siobhan", "Maggie", "Liam", "Tanya"],
+    "answer": "Siobhan",
+    "difficulty": "medium"
+  },
+  {
+    "id": "twilight-medium-0031",
+    "question": "Who is the Irish coven member in the movies known for her lie-detecting ability?",
+    "options": ["Maggie", "Siobhan", "Irina", "Kate"],
+    "answer": "Maggie",
+    "difficulty": "medium"
+  },
+  {
+    "id": "twilight-medium-0032",
+    "question": "Who is Siobhan's mate and a member of the Irish coven?",
+    "options": ["Liam", "Garrett", "Nahuel", "Felix"],
+    "answer": "Liam",
+    "difficulty": "medium"
+  },
+  {
+    "id": "twilight-easy-0002",
+    "question": "Which actor played Jasper Hale?",
+    "options": ["Jackson Rathbone", "Kellan Lutz", "Taylor Lautner", "Billy Burke"],
+    "answer": "Jackson Rathbone",
+    "difficulty": "hard"
+  },
+  {
+    "id": "twilight-easy-0003",
+    "question": "Who portrayed Alice Cullen in the films?",
+    "options": ["Ashley Greene", "Nikki Reed", "Elizabeth Reaser", "Dakota Fanning"],
+    "answer": "Ashley Greene",
+    "difficulty": "medium"
+  },
+  {
+    "id": "twilight-medium-0004",
+    "question": "Who played Esme Cullen in the Twilight Saga?",
+    "options": ["Elizabeth Reaser", "Ashley Greene", "Nikki Reed", "Rachelle Lefevre"],
+    "answer": "Elizabeth Reaser",
+    "difficulty": "medium"
+  },
+  {
+    "id": "twilight-hard-0005",
+    "question": "Which actress played Zafrina, a member of the Amazon coven?",
+    "options": ["Judi Shekoni", "Andrea Gabriel", "Mía Maestro", "Angela Sarafyan"],
+    "answer": "Judi Shekoni",
+    "difficulty": "expert"
+  },
+  {
+    "id": "twilight-medium-0008",
+    "question": "Who played Tanya, the leader of the Denali coven?",
+    "options": ["MyAnna Buring", "Maggie Grace", "Mía Maestro", "Rachelle Lefevre"],
+    "answer": "MyAnna Buring",
+    "difficulty": "expert"
+  },
+  {
+    "id": "twilight-medium-0009",
+    "question": "Who portrayed Irina from the Denali clan?",
+    "options": ["Maggie Grace", "Nikki Reed", "Ashley Greene", "Dakota Fanning"],
+    "answer": "Maggie Grace",
+    "difficulty": "hard"
+  },
+  {
+    "id": "twilight-medium-0010",
+    "question": "Who played Felix, one of the Volturi guards?",
+    "options": ["Daniel Cudmore", "Charlie Bewley", "Cameron Bright", "Michael Sheen"],
+    "answer": "Daniel Cudmore",
+    "difficulty": "expert"
+  },
+  {
+    "id": "twilight-expert-0014",
+    "question": "In what year was 'The Twilight Saga: New Moon' released?",
+    "options": ["2008", "2009", "2010", "2011"],
+    "answer": "2009",
+    "difficulty": "expert"
+  },
+  {
+    "id": "twilight-expert-0015",
+    "question": "In what year was 'The Twilight Saga: Eclipse' released?",
+    "options": ["2009", "2010", "2011", "2012"],
+    "answer": "2010",
+    "difficulty": "hard"
+  },
+  {
+    "id": "twilight-expert-0016",
+    "question": "In what year was 'The Twilight Saga: Breaking Dawn – Part 1' released?",
+    "options": ["2010", "2011", "2012", "2013"],
+    "answer": "2011",
+    "difficulty": "hard"
+  },
+  {
+    "id": "twilight-expert-09",
+    "question": "Who is the first named Forks resident killed by James, Victoria, and Laurent?",
+    "options": ["Waylon Forge", "Phil Dwyer", "Tyler Crowley", "Eric Yorkie"],
+    "answer": "Waylon Forge",
+    "difficulty": "expert"
+  },
+  {
+    "id": "twilight-expert-18",
+    "question": "What rank did Jasper hold during his human life?",
+    "options": ["Major", "Captain", "Colonel", "Sergeant"],
+    "answer": "Major",
+    "difficulty": "expert"
+  },
+  {
+    "id": "twilight-expert-19",
+    "question": "What university do the Cullens claim to be attending in Eclipse?",
+    "options": ["Dartmouth", "Harvard", "Stanford", "Yale"],
+    "answer": "Dartmouth",
+    "difficulty": "expert"
+  },
+  {
+    "id": "twilight-expert-25",
+    "question": "What is Edward’s middle name?",
+    "options": ["Anthony", "James", "Robert", "Charles"],
+    "answer": "Anthony",
+    "difficulty": "expert"
+  },
+  {
+    "id": "twilight-hard-0018",
+    "question": "In the 'Twilight' movie, the author of the books makes a cameo appearance. Where does she appear?",
+    "options": ["In a diner", "As a teacher", "As a nurse at the hospital", "At the Cullen wedding"],
+    "answer": "In a diner",
+    "difficulty": "hard"
+  },
+  {
+    "id": "twilight-expert-49",
+    "question": "Which vampire coven is from Alaska and allies with the Cullens?",
+    "options": ["Denali", "Volturi", "Romanian", "Amazon"],
+    "answer": "Denali",
+    "difficulty": "expert"
+  },
+  {
+    "id": "twilight-expert-57",
+    "question": "What is the name of the actor who plays Billy Black?",
+    "options": ["Gil Birmingham", "Chaske Spencer", "Alex Meraz", "BooBoo Stewart"],
+    "answer": "Gil Birmingham",
+    "difficulty": "expert"
+  },
+  {
+    "id": "twilight-expert-60",
+    "question": "What is the name of the actor who plays Mike Newton?",
+    "options": ["Michael Welch", "Jackson Rathbone", "Taylor Lautner", "Peter Facinelli"],
+    "answer": "Michael Welch",
+    "difficulty": "expert"
+  },
+  {
+    "id": "twilight-expert-0017",
+    "question": "In what year was 'The Twilight Saga: Breaking Dawn – Part 2' released?",
+    "options": ["2011", "2012", "2013", "2014"],
+    "answer": "2012",
+    "difficulty": "expert"
+  }
+]

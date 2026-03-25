@@ -1,0 +1,883 @@
+[
+  {
+    "id": "sf-easy-0001",
+    "question": "Who is the main character of the show?",
+    "options": ["Jerry Seinfeld", "George Costanza", "Cosmo Kramer", "Elaine Benes"],
+    "answer": "Jerry Seinfeld",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0003",
+    "question": "What is Kramer’s first name?",
+    "options": ["Cosmo", "Carl", "Chris", "Connor"],
+    "answer": "Cosmo",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-003303",
+    "question": "How many seasons does Seinfeld have?",
+    "options": ["9", "8", "6", "7"],
+    "answer": "9",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0004",
+    "question": "Who is Jerry’s neighbor that frequently barges into his apartment?",
+    "options": ["Kramer", "Newman", "George", "Uncle Leo"],
+    "answer": "Kramer",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0006",
+    "question": "Who is Jerry’s nemesis postal worker?",
+    "options": ["Newman", "Banya", "Puddy", "Uncle Leo"],
+    "answer": "Newman",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0007",
+    "question": "What phrase is associated with the Soup Nazi?",
+    "options": ["No soup for you!", "Soup’s out!", "Next!", "Soup is closed!"],
+    "answer": "No soup for you!",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0008",
+    "question": "What holiday does George’s father invent?",
+    "options": ["Festivus", "Wintermas", "Costanza Day", "Soup Day"],
+    "answer": "Festivus",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0009",
+    "question": "What is George’s fiancée’s name who dies from envelope glue?",
+    "options": ["Susan", "Marisa", "Carol", "Rachel"],
+    "answer": "Susan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0011",
+    "question": "What is Jerry’s profession?",
+    "options": ["Stand-up comedian", "Writer", "Actor", "Lawyer"],
+    "answer": "Stand-up comedian",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0013",
+    "question": "What is George’s favorite baseball team?",
+    "options": ["New York Yankees", "New York Mets", "Boston Red Sox", "Chicago Cubs"],
+    "answer": "New York Yankees",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0013",
+    "question": "What is Jerry’s favorite baseball team?",
+    "options": ["New York Yankees", "New York Mets", "Boston Red Sox", "Chicago Cubs"],
+    "answer": "New York Mets",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0014",
+    "question": "Which character is famous for shouting 'Serenity Now!'?",
+    "options": ["Frank Costanza", "George Costanza", "Kramer", "Newman"],
+    "answer": "Frank Costanza",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0017",
+    "question": "Who is George’s boss at the Yankees?",
+    "options": ["Mr. Steinbrenner", "Mr. Kruger", "Mr. Wilhelm", "Mr. Lippman"],
+    "answer": "Mr. Steinbrenner",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0022",
+    "question": "What character works at J. Peterman?",
+    "options": ["Elaine", "George", "Jerry", "Kramer"],
+    "answer": "Elaine",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0023",
+    "question": "What actor plays Kramer?",
+    "options": ["Michael Richards", "Jason Alexander", "Jerry Seinfeld", "Wayne Knight"],
+    "answer": "Michael Richards",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0024",
+    "question": "What actor plays George Costanza?",
+    "options": ["Jason Alexander", "Michael Richards", "Jerry Seinfeld", "Patrick Warburton"],
+    "answer": "Jason Alexander",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0025",
+    "question": "What actor plays Elaine Benes?",
+    "options": ["Julia Louis-Dreyfus", "Megan Mullally", "Courtney Cox", "Lisa Kudrow"],
+    "answer": "Julia Louis-Dreyfus",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0026",
+    "question": "What actor plays Newman?",
+    "options": ["Wayne Knight", "Michael Richards", "Jason Alexander", "Larry David"],
+    "answer": "Wayne Knight",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0027",
+    "question": "Who plays Jerry Seinfeld’s mom?",
+    "options": ["Liz Sheridan", "Estelle Harris", "Doris Roberts", "Holland Taylor"],
+    "answer": "Liz Sheridan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-easy-0028",
+    "question": "Who plays George’s mom?",
+    "options": ["Estelle Harris", "Liz Sheridan", "Doris Roberts", "Nancy Walker"],
+    "answer": "Estelle Harris",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-easy-0029",
+    "question": "Who plays George’s dad Frank?",
+    "options": ["Jerry Stiller", "Wayne Knight", "Michael Richards", "Larry David"],
+    "answer": "Jerry Stiller",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-easy-0037",
+    "question": "Which actor plays Elaine’s on-again, off-again boyfriend?",
+    "options": ["Patrick Warburton", "Wayne Knight", "Michael Richards", "Larry David"],
+    "answer": "Patrick Warburton",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0030",
+    "question": "What is the name of Jerry’s uncle?",
+    "options": ["Uncle Leo", "Uncle Frank", "Uncle Joe", "Uncle George"],
+    "answer": "Uncle Leo",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0031",
+    "question": "What is the name of Jerry’s apartment building?",
+    "options": ["129 West 81st Street", "120 East 84th Street", "129 Central Park West", "120 West End Towers"],
+    "answer": "129 West 81st Street",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0032",
+    "question": "What kind of car does George buy because Jon Voight owned it?",
+    "options": ["LeBaron", "Cadillac", "Camaro", "Pontiac"],
+    "answer": "LeBaron",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0033",
+    "question": "What candy does Kramer drop into a surgical patient?",
+    "options": ["Junior Mint", "Snickers", "M&M", "Reese’s"],
+    "answer": "Junior Mint",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0034",
+    "question": "What unusual item is George seen eating with a knife and fork?",
+    "options": ["Snickers", "Kit Kat", "Hot dog", "Twinkie"],
+    "answer": "Snickers",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0037",
+    "question": "What is the name of Elaine’s on-again, off-again boyfriend played by Patrick Warburton?",
+    "options": ["David Puddy", "Kenny Bania", "Bob Sacamano", "Tim Whatley"],
+    "answer": "David Puddy",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0039",
+    "question": "What game show parody do Kramer and Newman invent?",
+    "options": ["The Merv Griffin Show", "The Tonight Show", "Family Feud", "Wheel of Fortune"],
+    "answer": "The Merv Griffin Show",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0043",
+    "question": "What fast food chain opens a restaurant whose neon sign shines into Kramer´s apartment disturbing him?",
+    "options": ["Kenny Rogers Roasters", "McDonald’s", "Subway", "Arby’s"],
+    "answer": "Kenny Rogers Roasters",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0044",
+    "question": "What is the name of George’s alias he uses for a job interview?",
+    "options": ["Art Vandelay", "John Smith", "Gary Fogel", "Bob Sacamano"],
+    "answer": "Art Vandelay",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0048",
+    "question": "What is the name of Jerry’s dentist?",
+    "options": ["Tim Whatley", "Dr. Reston", "Dr. Tongue", "Dr. Farber"],
+    "answer": "Tim Whatley",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0050",
+    "question": "What year did Seinfeld premiere?",
+    "options": ["1989", "1990", "1991", "1992"],
+    "answer": "1989",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-3450",
+    "question": "What year did Jerry check out and never return a book from the library which leads to a fine?",
+    "options": ["1969", "1970", "1971", "1972"],
+    "answer": "1971",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-medium-0057",
+    "question": "What is Elaine’s job before she works at the J. Peterman catalog?",
+    "options": ["Copy editor", "Waitress", "Teacher", "Advertising executive"],
+    "answer": "Copy editor",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sf-medium-0058",
+    "question": "What does Kramer feed a horse that makes it sick?",
+    "options": ["Beefareeno", "Hot dogs", "Pizza", "Candy"],
+    "answer": "Beefareeno",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sf-medium-0061",
+    "question": "What retirement community does Jerry’s parents live in Florida?",
+    "options": ["Del Boca Vista", "Shady Oaks", "Shady Acres", "Del Bosque"],
+    "answer": "Del Boca Vista",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sf-medium-0068",
+    "question": "Who is Bob Sacamano?",
+    "options": ["Kramer’s eccentric friend", "George’s coworker", "Elaine’s cousin", "Jerry’s landlord"],
+    "answer": "Kramer’s eccentric friend",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sf-medium-0069",
+    "question": "What is Jerry’s apartment number from Season 3?",
+    "options": ["5A", "4B", "3C", "2D"],
+    "answer": "5A",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-medium-0091",
+    "question": "In ‘The Bubble Boy’ story, which misprint ignites an argument?",
+    "options": ["Moors vs. Moops", "Boers vs. Boors", "Huns vs. Huns?", "Saxons vs. Saxons?"],
+    "answer": "Moors vs. Moops",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sf-medium-2092",
+    "question": "Which friend’s parents are Frank and Estelle?",
+    "options": ["Jerry", "George", "Elaine", "Kramer"],
+    "answer": "George",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sf-medium-0096",
+    "question": "Which kind of pasta does Kramer famously sculpt a statue of Jerry?",
+    "options": ["Penne", "Rigatoni", "Fusilli", "Farfalle"],
+    "answer": "Fusilli",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-medium-0071",
+    "question": "What TV show within the show do Jerry and George pitch to NBC?",
+    "options": ["A show about nothing", "Life of Jerry", "The Seinfeld Show", "Stand-Up Stories"],
+    "answer": "A show about nothing",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sf-medium-22090",
+    "question": "Which dessert causes debate over ‘chocolate’ vs. ‘cinnamon’ varieties?",
+    "options": ["Babka", "Napoleon", "Cannoli", "Cheesecake"],
+    "answer": "Babka",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sf-hard-01411",
+    "question": "Which state’s bottle-deposit refund scheme do Kramer and Newman try to game?",
+    "options": ["New Jersey", "Vermont", "Michigan", "Connecticut"],
+    "answer": "Michigan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-hard-0145",
+    "question": "Which celebrity cameo plays a temperamental version of herself in a softball episode?",
+    "options": ["Bette Midler", "Madonna", "Rosie O’Donnell", "Julia Roberts"],
+    "answer": "Bette Midler",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-expert-01987",
+    "question": "Which exact day is Festivus celebrated according to the show?",
+    "options": ["December 25", "December 23", "December 21", "December 24"],
+    "answer": "December 23",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sf-expert-01998",
+    "question": "Which exterior real-world diner doubles for Monk’s Café?",
+    "options": ["Tom’s Restaurant", "JJ’s Diner", "Katz’s Deli", "Edelweiss Café"],
+    "answer": "Tom’s Restaurant",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sf-expert-01156",
+    "question": "Which actor portrays Eric the Clown, whom George berates for not knowing Bozo?",
+    "options": ["Jon Favreau", "Adam Sandler", "Ben Stiller", "Will Ferrell"],
+    "answer": "Jon Favreau",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sf-hard-01134",
+    "question": "Which actor plays the overbearing library investigator Lt. Bookman?",
+    "options": ["Philip Baker Hall", "John Polito", "M. Emmet Walsh", "Dan Hedaya"],
+    "answer": "Philip Baker Hall",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-hard-1111",
+    "question": "Which object does Kramer propose as a solution for oil tanker spills?",
+    "options": ["A sponge boom", "A rubber bladder", "Magnets", "Floating nets"],
+    "answer": "A rubber bladder",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-hard-01104",
+    "question": "Which product does Vandelay Industries supposedly specialize in?",
+    "options": ["Aluminum poles", "Latex", "Marine supplies", "Architecture blueprints"],
+    "answer": "Latex",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-hard-0221",
+    "question": "Which Yankees player does Kramer promise a sick kid will hit two home runs?",
+    "options": ["Darryl Strawberry", "Paul O’Neill", "Bernie Williams", "Derek Jeter"],
+    "answer": "Paul O’Neill",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-hard-0225",
+    "question": "Kramer accidentally becomes the voice of which phone service after a misdial?",
+    "options": ["Weatherline", "Time & Temp", "Moviefone", "Taxi Dispatch"],
+    "answer": "Moviefone",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-hard-0222",
+    "question": "Mr. Wilhelm unwittingly joins which carpet-cleaning cult?",
+    "options": ["Sunshine Carpet Cleaners", "Sunrise Carpet Co.", "Golden Carpet Guild", "Bright Day Cleaners"],
+    "answer": "Sunshine Carpet Cleaners",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-medium-0074",
+    "question": "What kind of restaurant does Jerry and friends often meet at?",
+    "options": ["Monk’s Café", "Tom’s Diner", "Big Salad Café", "Central Perk"],
+    "answer": "Monk’s Café",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sf-medium-0076",
+    "question": "What do Kramer and Newman play an extended, highly competitive game of in Jerry’s apartment?",
+    "options": ["Risk", "Chess", "Backgammon", "Scrabble"],
+    "answer": "Risk",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sf-medium-0078",
+    "question": "Who is Elaine’s boss at Pendant Publishing?",
+    "options": ["Mr. Lippman", "Mr. Wilhelm", "Mr. Kruger", "Mr. Steinbrenner"],
+    "answer": "Mr. Lippman",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sf-medium-0083",
+    "question": "What is the name of Kramer’s lawyer friend?",
+    "options": ["Jackie Chiles", "Art Vandelay", "Bob Sacamano", "Tim Whatley"],
+    "answer": "Jackie Chiles",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sf-medium-0086",
+    "question": "What baseball player dates Elaine in the show?",
+    "options": ["Keith Hernandez", "Darryl Strawberry", "Derek Jeter", "Roger Clemens"],
+    "answer": "Keith Hernandez",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sf-medium-0087",
+    "question": "What holiday decoration does Frank Costanza ban during Festivus saying its too distracting?",
+    "options": ["Christmas tree", "Lights", "Presents", "Tinsel"],
+    "answer": "Tinsel",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sf-medium-0089",
+    "question": "Who is George’s fiancé who dies from licking toxic envelopes?",
+    "options": ["Susan Ross", "Rachel Green", "Marla", "Carol"],
+    "answer": "Susan Ross",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sf-medium-0092",
+    "question": "What item does Kramer try to smuggle into the movie theater?",
+    "options": ["Café latte", "Junior Mints", "Pizza", "Hot dogs"],
+    "answer": "Café latte",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sf-medium-0093",
+    "question": "What actor voices George Steinbrenner on the show?",
+    "options": ["Larry David", "Jason Alexander", "Michael Richards", "Wayne Knight"],
+    "answer": "Larry David",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sf-medium-0094",
+    "question": "What store does Elaine try to run out of business because of bad customer service?",
+    "options": ["Maracatu", "Putumayo", "Cinco de Mayo", "Saks Fifth Avenue"],
+    "answer": "Putumayo",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sf-medium-0100",
+    "question": "What year did Seinfeld officially end?",
+    "options": ["1998", "1997", "1996", "1999"],
+    "answer": "1998",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-hard-0101",
+    "question": "What is the name of the comedian who looks up to Jerry and constantly tries to impress him?",
+    "options": ["Kenny Bania", "Bob Cobb", "Joel Rifkin", "Marty Shapiro"],
+    "answer": "Kenny Bania",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-hard-0104",
+    "question": "What was on the license plates that Kramer gets which was intended for someone else?",
+    "options": ["H.E. Pennypacker", "K-Man", "Assman", "CosmoK"],
+    "answer": "Assman",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-hard-0108",
+    "question": "What is the name of George’s childhood nemesis who his mother always compares him to?",
+    "options": ["Crazy Joe Davola", "David Puddy", "Lloyd Braun", "Tim Whatley"],
+    "answer": "Lloyd Braun",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-easy-0318",
+    "question": "Which arcade game’s high score does George try to preserve?",
+    "options": ["Pac-Man", "Donkey Kong", "Frogger", "Galaga"],
+    "answer": "Frogger",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0026",
+    "question": "Where do the gang spend an entire episode waiting for a table?",
+    "options": ["Sushi bar", "Steakhouse", "Chinese restaurant", "Coffee shop"],
+    "answer": "Chinese restaurant",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0018",
+    "question": "What was George Constanza´s fictional arcade game score in the show?",
+    "options": ["860,630", "806,360", "860,603", "806,630"],
+    "answer": "806,630",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-hard-0110",
+    "question": "What actor plays Tim Whatley, Jerry’s dentist?",
+    "options": ["Bryan Cranston", "Patrick Warburton", "Larry David", "Jon Favreau"],
+    "answer": "Bryan Cranston",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-hard-01110",
+    "question": "Who is the co-creator of the show together with Jerry Seinfeld?",
+    "options": ["Lloyd Braun", "Patrick Warburton", "Larry David", "Jon Favreau"],
+    "answer": "Larry David",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-hard-0112",
+    "question": "What food item does George eat from the trash can?",
+    "options": ["Eclair", "Donut", "Pizza slice", "Bagel"],
+    "answer": "Eclair",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-hard-0113",
+    "question": "What is the name of George’s boss at Play Now?",
+    "options": ["Mr. Kruger", "Mr. Wilhelm", "Mr. Lippman", "Mr. Thomassoulo"],
+    "answer": "Mr. Thomassoulo",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-hard-0114",
+    "question": "What unusual condiment does George use on his sandwich?",
+    "options": ["Ketchup on eggs", "Mustard on pretzels", "Chocolate sauce on pastrami", "Mayonnaise on turkey"],
+    "answer": "Chocolate sauce on pastrami",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-hard-0116",
+    "question": "What kind of machine does George’s father sell?",
+    "options": ["Raincoats", "Computers", "Pool tables", "TV guides"],
+    "answer": "Computers",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-hard-0119",
+    "question": "What is the name of the library cop who investigates Jerry?",
+    "options": ["Lieutenant Bookman", "Officer Page", "Lieutenant Mark", "Sergeant Peters"],
+    "answer": "Lieutenant Bookman",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-hard-0124",
+    "question": "What is the name of Kramer’s favorite horse?",
+    "options": ["Rusty", "Papaya", "Kram", "Swift"],
+    "answer": "Rusty",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-hard-0126",
+    "question": "What is George’s ATM password shown in Season 7?",
+    "options": ["Bosco", "Susan", "Vandelay", "Festivus"],
+    "answer": "Bosco",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-hard-0128",
+    "question": "What does Kramer adopt as a pet?",
+    "options": ["Rooster", "Pig", "Dog", "Cat"],
+    "answer": "Rooster",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-hard-0129",
+    "question": "What is the name of Jerry’s girlfriend who encouraged him to express his emotions and later broke up with him?",
+    "options": ["Patty", "Marla", "Laura", "Jeannie"],
+    "answer": "Patty",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-hard-0131",
+    "question": "What song does Elaine’s boyfriend Puddy listen to repeatedly?",
+    "options": ["Highway to Hell", "Magic Carpet Ride", "Desperado", "More Than a Feeling"],
+    "answer": "Desperado",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-hard-0133",
+    "question": "What disease does Kramer pretend to have for medical students?",
+    "options": ["Gonorrhea", "Syphilis", "Hepatitis", "Cholera"],
+    "answer": "Gonorrhea",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-hard-0137",
+    "question": "What secret club does Kramer join?",
+    "options": ["The Red Dot Society", "The Doorman’s Union", "The Sunshine Cabana", "The Polar Bear Club"],
+    "answer": "The Polar Bear Club",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-hard-0142",
+    "question": "What is George’s middle name?",
+    "options": ["Louis", "Frank", "Edward", "Michael"],
+    "answer": "Louis",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-expert-0153",
+    "question": "What is the name of Elaine’s roommate in the early seasons?",
+    "options": ["Tina", "Rachel", "Susan", "Marla"],
+    "answer": "Tina",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sf-expert-0154",
+    "question": "What is the name of George’s high school gym teacher who used to bully him?",
+    "options": ["Mr. Heyman", "Mr. Wilhelm", "Mr. Lippman", "Mr. Kruger"],
+    "answer": "Mr. Heyman",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sf-expert-0157",
+    "question": "Who is the 'low-talker' that convinces Jerry to wear the puffy shirt?",
+    "options": ["Leslie", "Lili", "Linda", "Lana"],
+    "answer": "Leslie",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sf-expert-0158",
+    "question": "What is Kramer’s mother’s name?",
+    "options": ["Barbara", "Ruthie", "Estelle", "Carol"],
+    "answer": "Barbara",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sf-expert-0159",
+    "question": "Which baseball player had to redo his cameo scene in Seinfeld during shooting?",
+    "options": ["Derek Jeter", "Bernie Williams", "Keith Hernandez", "Paul O’Neill"],
+    "answer": "Derek Jeter",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sf-expert-0160",
+    "question": "What job did Elaine´s father have?",
+    "options": ["Author", "Doctor", "Lawyer", "Engineer"],
+    "answer": "Author",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-expert-0162",
+    "question": "What actor guest stars as George’s boss Mr. Kruger?",
+    "options": ["Daniel von Bargen", "Larry David", "Wayne Knight", "Charles Kimbrough"],
+    "answer": "Daniel von Bargen",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sf-expert-0164",
+    "question": "What is the name of the man Elaine dates who shares the same name with a serial killer?",
+    "options": ["Joel Rifkin", "David Berkowitz", "John Wayne Gacy", "Ted Bundy"],
+    "answer": "Joel Rifkin",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sf-expert-0167",
+    "question": "What is the name of Kramer’s friend who calls Jerry a phony and fights with George over a parking space?",
+    "options": ["Bob Sacamano", "Mike Moffitt", "Crazy Joe Davola", "Rusty"],
+    "answer": "Mike Moffitt",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sf-expert-0169",
+    "question": "What is the name of the NBC executive who becomes obsessed with Elaine?",
+    "options": ["Russell Dalrymple", "Jack Klompus", "Mr. Wilhelm", "Matt Wilhelm"],
+    "answer": "Russell Dalrymple",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sf-expert-0171",
+    "question": "Who is Jerry’s favorite superhero often referenced in the show?",
+    "options": ["Superman", "Batman", "Spider-Man", "The Flash"],
+    "answer": "Superman",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sf-medium-044071",
+    "question": "Which professional sport event does Kramer briefly become involved with as a ball boy?",
+    "options": ["Basketball", "Baseball", "Hockey", "Tennis"],
+    "answer": "Tennis",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sf-medium-0065",
+    "question": "What alias does Jerry use when helping with ‘Vandelay Industries’ shenanigans?",
+    "options": ["Kel Varnsen", "Art Vandelay", "H.E. Pennypacker", "Dr. Van Nostrand"],
+    "answer": "Kel Varnsen",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sf-expert-0174",
+    "question": "What actor plays Elaine’s boss Mr. Lippman?",
+    "options": ["Richard Fancy", "Charles Kimbrough", "Daniel von Bargen", "Wayne Knight"],
+    "answer": "Richard Fancy",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sf-expert-0175",
+    "question": "What is the name of the man who calls out George for double dipping a chip at a funeral?",
+    "options": ["Timmy", "Jimmy", "Tony", "Tommy"],
+    "answer": "Timmy",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sf-expert-0176",
+    "question": "What is the name of the conductor called The Maestro and was interested in Elaine?",
+    "options": ["Bob Cobb", "Art Vandelay", "Russell Dalrymple", "David Puddy"],
+    "answer": "Bob Cobb",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sf-expert-0177",
+    "question": "What is the name of George’s fiancée Susan’s father?",
+    "options": ["Henry Ross", "Donald Ross", "Frank Ross", "Thomas Ross"],
+    "answer": "Henry Ross",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sf-expert-0178",
+    "question": "What item of clothing does George buy to look like he’s working outdoors?",
+    "options": ["Gore-Tex coat", "Leather jacket", "Puffy coat", "Work boots"],
+    "answer": "Gore-Tex coat",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sf-expert-0179",
+    "question": "What is the name of the judge who sentences the group in the finale?",
+    "options": ["Judge Arthur Vandelay", "Judge Seidman", "Judge Lawrence", "Judge Matthews"],
+    "answer": "Judge Arthur Vandelay",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sf-expert-0180",
+    "question": "What is the name of the pool cleaner at Jerry´s local health club who was fired?",
+    "options": ["Ramon", "Carlos", "Pedro", "Diego"],
+    "answer": "Ramon",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sf-easy-1042",
+    "question": "Who are Jerry’s parents?",
+    "options": ["Morty and Helen", "Frank and Estelle", "Al and Donna", "Leo and Sylvia"],
+    "answer": "Morty and Helen",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-medium-0059",
+    "question": "Which book triggers Jerry’s overdue library fine and Lt. Bookman’s visit?",
+    "options": ["On the Road", "Tropic of Cancer", "Catcher in the Rye", "The Sun Also Rises"],
+    "answer": "Tropic of Cancer",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sf-easy-34050",
+    "question": "Which talk show host appears when Jerry wears the puffy shirt?",
+    "options": ["Jay Leno", "Conan O’Brien", "Bryant Gumbel", "Jon Stewart"],
+    "answer": "Bryant Gumbel",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-expert-0182",
+    "question": "What is the name of Jerry’s mechanic who becomes possessive of and steals his car?",
+    "options": ["Tony", "David", "Sid", "Carl"],
+    "answer": "Tony",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sf-hard-0206",
+    "question": "Whose wedding in India do Jerry, George, and Elaine attend?",
+    "options": ["Sue Ellen Mischke", "Elena Waters", "David Puddy", "Petra Barber"],
+    "answer": "Sue Ellen Mischke",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-hard-2202",
+    "question": "In The Strike episode which bagel shop does Kramer return to after a years-long walkout?",
+    "options": ["Bruegger’s Bagels", "H&H Bagels", "Ess-a-Bagel", "Tal Bagels"],
+    "answer": "H&H Bagels",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-easy-0304",
+    "question": "What is the name of the episode from which Elaine’s notoriously awkward dance is nicknamed…",
+    "options": ["The Quickstep", "The Little Kicks", "The Shuffle", "The Big Swing"],
+    "answer": "The Little Kicks",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0307",
+    "question": "What item does Elaine put on the cover of the J. Peterman catalog?",
+    "options": ["Urban Fedora", "Urban Sombrero", "City Stetson", "Metropolitan Panama"],
+    "answer": "Urban Sombrero",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-easy-0308",
+    "question": "According to Kenny Bania, what is “not a meal”?",
+    "options": ["Salad", "Soup", "Cereal", "Cake"],
+    "answer": "Soup",
+    "difficulty": "easy"
+  },  {
+    "id": "sf-hard-0219",
+    "question": "Which organization does NBC president Russell Dalrymple join before disappearing at sea?",
+    "options": ["Sea Shepherd", "Greenpeace", "WWF", "Sierra Club"],
+    "answer": "Greenpeace",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-hard-0220",
+    "question": "What is the name of the clown George berates for not knowing Bozo?",
+    "options": ["Ricky the Clown", "Eric the Clown", "Tony the Clown", "Bobo the Clown"],
+    "answer": "Eric the Clown",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-hard-0212",
+    "question": "Sue Ellen Mischke is the heiress to which candy bar fortune?",
+    "options": ["Baby Ruth", "Oh Henry!", "Snickers", "3 Musketeers"],
+    "answer": "Oh Henry!",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-easy-0309",
+    "question": "What is the title of the TV pilot Jerry and George create for NBC?",
+    "options": ["Stand-Up", "The Jerry Show", "Jerry", "Nothing"],
+    "answer": "Jerry",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-hard-0210",
+    "question": "In The Gum episode what is the name of the old movie theater Kramer helps revive with Lloyd Braun?",
+    "options": ["The Alex", "The Paramount", "The Orpheum", "The Nova"],
+    "answer": "The Alex",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sf-easy-23046",
+    "question": "Which dessert bread causes drama with a fishing pole?",
+    "options": ["Chocolate babka", "Marble rye", "Black and white cookie", "Cinnamon babka"],
+    "answer": "Marble rye",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sf-expert-0196",
+    "question": "What actor played Jerry’s father Morty in later seasons?",
+    "options": ["Barney Martin", "Len Lesser", "Phil Bruns", "Bill Macy"],
+    "answer": "Barney Martin",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sf-expert-01196",
+    "question": "What actor played Jerry’s father Morty in Season 1?",
+    "options": ["Barney Martin", "Len Lesser", "Phil Bruns", "Bill Macy"],
+    "answer": "Phil Bruns",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sf-expert-0197",
+    "question": "Who was the Soup Nazi´s name in the show?",
+    "options": ["Yev Kassem", "Babu Bhatt", "Poppie", "Kenny Bania"],
+    "answer": "Yev Kassem",
+    "difficulty": "expert"
+  },
+  {
+    "id": "sf-expert-0199",
+    "question": "What is the name of the dog that Jerry is stuck babysitting after its owner is hospitalized?",
+    "options": ["Farfel", "Rusty", "Spot", "Barney"],
+    "answer": "Farfel",
+    "difficulty": "expert"
+  }
+]

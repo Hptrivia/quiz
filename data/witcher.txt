@@ -1,0 +1,711 @@
+[
+  {
+    "id": "w3-001",
+    "difficulty": "easy",
+    "question": "What is the name of the protagonist you play as in The Witcher 3?",
+    "options": ["Geralt of Rivia", "Vesemir", "Lambert", "Eskel"],
+    "answer": "Geralt of Rivia"
+  },
+  {
+    "id": "w3-002",
+    "difficulty": "easy",
+    "question": "What is Geralt’s profession?",
+    "options": ["Knight", "Witcher", "Mage", "Merchant"],
+    "answer": "Witcher"
+  },
+  {
+    "id": "w3-003",
+    "difficulty": "easy",
+    "question": "What is the name of Geralt’s horse by default?",
+    "options": ["Roach", "Kelpie", "Shadowfax", "Sleipnir"],
+    "answer": "Roach"
+  },
+  {
+    "id": "w3-004",
+    "difficulty": "easy",
+    "question": "Which of these is a Witcher Sign in The Witcher 3?",
+    "options": ["Quen", "Meteor", "Blizzard", "Nova"],
+    "answer": "Quen"
+  },
+  {
+    "id": "w3-005",
+    "difficulty": "easy",
+    "question": "What color is the health bar in the HUD by default?",
+    "options": ["Red", "Blue", "Green", "Yellow"],
+    "answer": "Red"
+  },
+  {
+    "id": "w3-005",
+    "difficulty": "easy",
+    "question": "What color is the stamina bar in the HUD by default?",
+    "options": ["Red", "Blue", "Green", "Yellow"],
+    "answer": "Yellow"
+  },
+  {
+    "id": "w3-006",
+    "difficulty": "easy",
+    "question": "Who famously says  the phrase “wind’s howling” in the game?",
+    "options": ["Geralt", "Dandelion", "Triss", "Zoltan"],
+    "answer": "Geralt"
+  },
+  {
+    "id": "w3-007",
+    "difficulty": "easy",
+    "question": "Which of these regions is a major open-world area in The Witcher 3?",
+    "options": ["Velen", "Morrowind", "Qullon", "Rivendell"],
+    "answer": "Velen"
+  },
+  {
+    "id": "w3-008",
+    "difficulty": "easy",
+    "question": "What is the name of the card game you can play across the world?",
+    "options": ["Gwent", "Pazaak", "Caravan", "Triple Triad"],
+    "answer": "Gwent"
+  },
+  {
+    "id": "w3-009",
+    "difficulty": "easy",
+    "question": "Which Sign creates a protective shield around Geralt?",
+    "options": ["Quen", "Igni", "Axii", "Yrden"],
+    "answer": "Quen"
+  },
+  {
+    "id": "w3-010",
+    "difficulty": "easy",
+    "question": "Which Sign casts a burst of fire?",
+    "options": ["Igni", "Aard", "Quen", "Axii"],
+    "answer": "Igni"
+  },
+  {
+    "id": "w3-011",
+    "difficulty": "easy",
+    "question": "Which Sign is a telekinetic blast that can knock enemies back?",
+    "options": ["Aard", "Yrden", "Igni", "Quen"],
+    "answer": "Aard"
+  },
+  {
+    "id": "w3-012",
+    "difficulty": "easy",
+    "question": "Which Sign can influence or calm people’s minds in dialogue and combat?",
+    "options": ["Axii", "Aard", "Igni", "Yrden"],
+    "answer": "Axii"
+  },
+  {
+    "id": "w3-013",
+    "difficulty": "easy",
+    "question": "Which Sign creates a magic trap useful against wraiths and other monsters?",
+    "options": ["Yrden", "Quen", "Aard", "Axii"],
+    "answer": "Yrden"
+  },
+  {
+    "id": "w3-014",
+    "difficulty": "easy",
+    "question": "What item does Geralt primarily use to fight monsters effectively?",
+    "options": ["Swords", "Bow", "Warhammer", "Spear"],
+    "answer": "Swords"
+  },
+  {
+    "id": "w3-015",
+    "difficulty": "easy",
+    "question": "How many swords does Geralt typically carry on his back?",
+    "options": ["Two", "One", "Three", "Four"],
+    "answer": "Two"
+  },
+  {
+    "id": "w3-016",
+    "difficulty": "easy",
+    "question": "What is the general purpose of Witcher potions?",
+    "options": ["Boost abilities and survivability", "Summon allies", "Create portals", "Enchant armor permanently"],
+    "answer": "Boost abilities and survivability"
+  },
+  {
+    "id": "w3-017",
+    "difficulty": "easy",
+    "question": "What are the fast-travel points marked as on the map in many areas?",
+    "options": ["Signposts", "Bonfires", "Waystones", "Shrines"],
+    "answer": "Signposts"
+  },
+  {
+    "id": "w3-018",
+    "difficulty": "easy",
+    "question": "Which of these is a major city in The Witcher 3?",
+    "options": ["Novigrad", "Whiterun", "Orgrimmar", "Rivend"],
+    "answer": "Novigrad"
+  },
+  {
+    "id": "w3-019",
+    "difficulty": "easy",
+    "question": "What is the name of Geralt’s adopted daughter figure he searches for?",
+    "options": ["Ciri", "Shani", "Keira", "Priscilla"],
+    "answer": "Ciri"
+  },
+  {
+    "id": "w3-020",
+    "difficulty": "easy",
+    "question": "Which region is heavily associated with ships, raids, and islands in the game?",
+    "options": ["Skellige", "Nilfgaard", "Redania", "Kaedwen"],
+    "answer": "Skellige"
+  },
+  {
+    "id": "w3-022",
+    "difficulty": "easy",
+    "question": "Which of these is a common enemy type in The Witcher 3?",
+    "options": ["Drowners", "Dragons", "Space marines", "Robots"],
+    "answer": "Drowners"
+  },
+  {
+    "id": "w3-023",
+    "difficulty": "easy",
+    "question": "What is the name of the empire that conquers much of the south?",
+    "options": ["Nilfgaard", "Temeria", "Skellige", "Sodden"],
+    "answer": "Nilfgaard"
+  },
+  {
+    "id": "w3-024",
+    "difficulty": "easy",
+    "question": "Which character is a bard and Geralt’s longtime friend?",
+    "options": ["Dandelion", "Vesemir", "Letho", "Avallac'h"],
+    "answer": "Dandelion"
+  },
+  {
+    "id": "w3-027",
+    "difficulty": "easy",
+    "question": "What do you typically apply to swords to improve damage vs specific monsters?",
+    "options": ["Oils", "Runes", "Gems", "Potions"],
+    "answer": "Oils"
+  },
+  {
+    "id": "w3-029",
+    "difficulty": "easy",
+    "question": "Which of these is one of the game’s main regions known for swamps and war-torn villages?",
+    "options": ["Velen", "Toussaint", "Kovir", "Ofier"],
+    "answer": "Velen"
+  },
+  {
+    "id": "w3-030",
+    "difficulty": "easy",
+    "question": "What is the name of the witcher school most associated with Geralt?",
+    "options": ["School of the Wolf", "School of the Witcher", "Kaer Morhen", "Witcher Wolfs Academy"],
+    "answer": "School of the Wolf"
+  },
+
+  {
+    "id": "w3-031",
+    "difficulty": "medium",
+    "question": "What is the name of the fortress where witchers of the Wolf School train?",
+    "options": ["Kaer Morhen", "Crow’s Perch", "Kaer Trolde", "Vizima Castle"],
+    "answer": "Kaer Morhen"
+  },
+  {
+    "id": "w3-032",
+    "difficulty": "medium",
+    "question": "Which sorceress is closely tied to Geralt and shown at the start of the game?",
+    "options": ["Yennefer", "Francesca Findabair", "Triss Merigold", "Philippa"],
+    "answer": "Yennefer"
+  },
+  {
+    "id": "w3-033",
+    "difficulty": "medium",
+    "question": "Who is the Nilfgaardian emperor?",
+    "options": ["Emhyr var Emreis", "Radovid V", "Sigismund Dijkstra", "Bloody Baron"],
+    "answer": "Emhyr var Emreis"
+  },
+  {
+    "id": "w3-034",
+    "difficulty": "hard",
+    "question": "What is the name of the large city-state famous for trade and crime syndicates?",
+    "options": ["Novigrad", "Oxenfurt", "Beauclair", "Ard Skellig"],
+    "answer": "Novigrad"
+  },
+  {
+    "id": "w3-035",
+    "difficulty": "medium",
+    "question": "What is the name of the Redanian king known for witch hunts and paranoia?",
+    "options": ["Radovid", "Foltest", "Emhyr var Emreis", "Eist"],
+    "answer": "Radovid"
+  },
+  {
+    "id": "w3-036",
+    "difficulty": "hard",
+    "question": "Who was the commander of the Temple guard and leader of the witch hunters in Novigrad?",
+    "options": ["Whoreson Junior", "Caleb Menge", "The Baron", "Caranthir"],
+    "answer": "Caleb Menge"
+  },
+  {
+    "id": "w3-037",
+    "difficulty": "hard",
+    "question": "What is the name of the Nilfgaard-occupied royal city where Geralt meets the emperor early on?",
+    "options": ["Vizima", "Novigrad", "Oxenfurt", "Beauclair"],
+    "answer": "Vizima"
+  },
+  {
+    "id": "w3-038",
+    "difficulty": "hard",
+    "question": "Which of these is a Skellige stronghold/seat of power?",
+    "options": ["Kaer Trolde", "Crow’s Perch", "White Orchard Inn", "Passiflora"],
+    "answer": "Kaer Trolde"
+  },
+  {
+    "id": "w3-039",
+    "difficulty": "medium",
+    "question": "What is the name of the warlord in Velen known as the Bloody Baron?",
+    "options": ["Philip Strenger", "Vernon Roche", "Thaler", "Letho"],
+    "answer": "Philip Strenger"
+  },
+  {
+    "id": "w3-041",
+    "difficulty": "medium",
+    "question": "What is the name of the secretive group hunting Ciri across worlds?",
+    "options": ["The Wild Hunt", "The Scoia'tael", "The Eternal Fire", "The Lodge"],
+    "answer": "The Wild Hunt"
+  },
+  {
+    "id": "w3-042",
+    "difficulty": "hard",
+    "question": "Which character is a spymaster and former head of Redanian intelligence?",
+    "options": ["Sigismund Dijkstra", "Lugos the Mad", "Hjalmar", "Morvran Voorhis"],
+    "answer": "Sigismund Dijkstra"
+  },
+  {
+    "id": "tw-med-001",
+    "difficulty": "hard",
+    "question": "In what year did Netflix’s The Witcher TV series premiere?",
+    "options": ["2019", "2017", "2020", "2021"],
+    "answer": "2019"
+  },
+  {
+    "id": "tw-med-002",
+    "difficulty": "medium",
+    "question": "On which streaming network does The Witcher TV series air?",
+    "options": ["Netflix", "HBO", "Amazon Prime Video", "Hulu"],
+    "answer": "Netflix"
+  },
+  {
+    "id": "tw-med-003",
+    "difficulty": "expert",
+    "question": "Who created the Netflix TV series The Witcher?",
+    "options": ["Lauren Schmidt Hissrich", "David Benioff", "Jonathan Nolan", "Mike Flanagan"],
+    "answer": "Lauren Schmidt Hissrich"
+  },
+  {
+    "id": "tw-med-004",
+    "difficulty": "hard",
+    "question": "As of February 2026, how many seasons of The Witcher have been released?",
+    "options": ["4", "3", "5", "2"],
+    "answer": "4"
+  },
+  {
+    "id": "tw-med-005",
+    "difficulty": "medium",
+    "question": "Who played Geralt of Rivia in Seasons 1–3 of the Netflix series?",
+    "options": ["Henry Cavill", "Liam Hemsworth", "Jason Momoa", "Richard Armitage"],
+    "answer": "Henry Cavill"
+  },
+  {
+    "id": "tw-med-006",
+    "difficulty": "medium",
+    "question": "Who takes over as Geralt of Rivia starting in Season 4 of the Netflix series?",
+    "options": ["Liam Hemsworth", "Henry Cavill", "Chris Hemsworth", "Sam Heughan"],
+    "answer": "Liam Hemsworth"
+  },
+  {
+    "id": "tw-med-008",
+    "difficulty": "expert",
+    "question": "Who is the author of The Witcher books?",
+    "options": ["Andrzej Sapkowski", "Brandon Sanderson", "George R. R. Martin", "Joe Abercrombie"],
+    "answer": "Andrzej Sapkowski"
+  },
+  {
+    "id": "tw-med-010",
+    "difficulty": "expert",
+    "question": "According to standard series listings, how many Witcher books are there in total (including the saga and prequel novels) as of recent publications?",
+    "options": ["9", "7", "10", "12"],
+    "answer": "9"
+  },
+  {
+    "id": "w3-043",
+    "difficulty": "hard",
+    "question": "Which character leads the Temerian resistance known as the Blue Stripes?",
+    "options": ["Vernon Roche", "Philip Strenger", "Radovid", "Gaunter O'Dimm"],
+    "answer": "Vernon Roche"
+  },
+  {
+    "id": "w3-044",
+    "difficulty": "hard",
+    "question": "What is the name of the baron’s keep in Velen?",
+    "options": ["Crow’s Perch", "Urialla Harbor", "Kaer Trolde", "Gildorf"],
+    "answer": "Crow’s Perch"
+  },
+  {
+    "id": "w3-045",
+    "difficulty": "hard",
+    "question": "Which potion is commonly used to see in dark places?",
+    "options": ["Cat", "Swallow", "Thunderbolt", "Black Blood"],
+    "answer": "Cat"
+  },
+  {
+    "id": "w3-046",
+    "difficulty": "hard",
+    "question": "Which potion is primarily associated with faster vitality regeneration in combat?",
+    "options": ["Swallow", "Cat", "Tawny Owl", "Killer Whale"],
+    "answer": "Swallow"
+  },
+  {
+    "id": "w3-047",
+    "difficulty": "hard",
+    "question": "Which bomb is designed to block some monsters’ magic and close certain portals?",
+    "options": ["Dimeritium Bomb", "Grapeshot", "Samum", "Dancing Star"],
+    "answer": "Dimeritium Bomb"
+  },
+  {
+    "id": "w3-048",
+    "difficulty": "hard",
+    "question": "Which bomb delivers fire damage and its mostly used to destroy monster´s nests?",
+    "options": ["Grapeshot", "Moon Dust", "Dimeritium Bomb", "Devil’s Puffball"],
+    "answer": "Grapeshot"
+  },
+  {
+    "id": "w3-049",
+    "difficulty": "medium",
+    "question": "Which sword is typically used against monsters?",
+    "options": ["Silver sword", "Steel sword", "Wooden sword", "Glass sword"],
+    "answer": "Silver sword"
+  },
+  {
+    "id": "w3-04449",
+    "difficulty": "easy",
+    "question": "Which sword is typically used against humans?",
+    "options": ["Silver sword", "Steel sword", "Wooden sword", "Glass sword"],
+    "answer": "Steel sword"
+  },
+  {
+    "id": "w3-051",
+    "difficulty": "hard",
+    "question": "Which enemy type is especially vulnerable to Yrden traps in combat?",
+    "options": ["Wraiths", "Bears", "Bandits", "Dwarves"],
+    "answer": "Wraiths"
+  },
+  {
+    "id": "w3-054",
+    "difficulty": "medium",
+    "question": "Which character is the Skellige jarl who is also father to Hjalmar and Cerys?",
+    "options": ["Crach an Craite", "Eist Tuirseach", "Harald an Hindar", "Birna Bran"],
+    "answer": "Crach an Craite"
+  },
+  {
+    "id": "w3-055",
+    "difficulty": "medium",
+    "question": "What is the name of Geralt´s romantic interest who is a sorceress living in Novigrad for part of the story?",
+    "options": ["Triss Merigold", "Fringilla Vigo", "Yennefer", "Sheala"],
+    "answer": "Triss Merigold"
+  },
+  {
+    "id": "w3-056",
+    "difficulty": "medium",
+    "question": "Which creature is known for disguising itself as a human.?",
+    "options": ["Doppler", "Ghoul", "Ekimmara", "Nekker"],
+    "answer": "Doppler"
+  },
+  {
+    "id": "w3-058",
+    "difficulty": "hard",
+    "question": "Which substance is commonly used to replenish alchemy items when meditating?",
+    "options": ["Alcohol", "Potions", "Oil", "Monster hearts"],
+    "answer": "Alcohol"
+  },
+  {
+    "id": "w3-063",
+    "difficulty": "hard",
+    "question": "What is the name of the spectral rider leading the Wild Hunt?",
+    "options": ["Eredin", "Imlerith", "Nithral", "Auberon"],
+    "answer": "Eredin"
+  },
+  {
+    "id": "w3-064",
+    "difficulty": "hard",
+    "question": "Which Wild Hunt general is known for wielding a massive mace and facing Geralt in the story?",
+    "options": ["Imlerith", "Caranthir", "Ge'els", "Nithral"],
+    "answer": "Imlerith"
+  },
+  {
+    "id": "w3-065",
+    "difficulty": "hard",
+    "question": "Which Wild Hunt mage is strongly associated with ice magic and tracking Ciri?",
+    "options": ["Caranthir", "Imlerith", "Eredin", "Nithral"],
+    "answer": "Caranthir"
+  },
+  {
+    "id": "w3-066",
+    "difficulty": "hard",
+    "question": "What is the name of the witch coven connected to Crookback Bog in Velen?",
+    "options": ["The Crones", "The Lodge", "The Eternal Fire", "The Blue Stripes"],
+    "answer": "The Crones"
+  },
+  {
+    "id": "w3-070",
+    "difficulty": "hard",
+    "question": "What is the name of the druid also known as Mousesack?",
+    "options": ["Ermion", "Ge'els", "Avallac'h", "Olgierd"],
+    "answer": "Ermion"
+  },
+  {
+    "id": "w3-074",
+    "difficulty": "hard",
+    "question": "Which Gwent faction often uses spies and flexible tactics, frequently associated with imperial power?",
+    "options": ["Nilfgaard", "Skellige", "Monsters", "Scoia'tael"],
+    "answer": "Nilfgaard"
+  },
+  {
+    "id": "w3-076",
+    "difficulty": "hard",
+    "question": "Which Witcher gear set is most associated with Sign intensity bonuses?",
+    "options": ["Griffin", "Cat", "Bear", "Wolf"],
+    "answer": "Griffin"
+  },
+  {
+    "id": "w3-079",
+    "difficulty": "hard",
+    "question": "Which potion is especially useful against vampires by causing bleeding damage to them?",
+    "options": ["Black Blood", "Cat", "Swallow", "Killer Whale"],
+    "answer": "Black Blood"
+  },
+  {
+    "id": "w3-088",
+    "difficulty": "hard",
+    "question": "Which bomb creates a freezing effect that can immobilize enemies?",
+    "options": ["Northern Wind", "Dancing Star", "Devil’s Puffball", "Samum"],
+    "answer": "Northern Wind"
+  },
+  {
+    "id": "w3-089",
+    "difficulty": "hard",
+    "question": "Which bomb creates a large area of poisonous gas?",
+    "options": ["Devil’s Puffball", "Grapeshot", "Samum", "Dimeritium Bomb"],
+    "answer": "Devil’s Puffball"
+  },
+  {
+    "id": "w3-100",
+    "difficulty": "expert",
+    "question": "Which Gwent card ability allows you to pull a card back from your discard pile?",
+    "options": ["Medic", "Muster", "Tight Bond", "Morale Boost"],
+    "answer": "Medic"
+  },
+  {
+    "id": "w3-101",
+    "difficulty": "expert",
+    "question": "Which Gwent ability multiplies the strength of identical unit cards when played together?",
+    "options": ["Tight Bond", "Spy", "Agile", "Scorch"],
+    "answer": "Tight Bond"
+  },
+  {
+    "id": "w3-102",
+    "difficulty": "expert",
+    "question": "Which Gwent special card destroys the strongest unit(s) on the battlefield under its rules?",
+    "options": ["Scorch", "Decoy", "Commander's Horn", "Biting Frost"],
+    "answer": "Scorch"
+  },
+  {
+    "id": "w3-108",
+    "difficulty": "expert",
+    "question": "What is the name of the potion that increases endurance regeneration?",
+    "options": ["Tawny Owl", "Thunderbolt", "Swallow", "White Raffard’s Decoction"],
+    "answer": "Tawny Owl"
+  },
+  {
+    "id": "w3-111",
+    "difficulty": "expert",
+    "question": "Which monster category do drowners primarily fall under in the bestiary?",
+    "options": ["Necrophages", "Specters", "Ogroids", "Relicts"],
+    "answer": "Necrophages"
+  },
+{
+"id": "tw3-med-0003",
+"question": "In White Orchard, what type of monster is the first contract Geralt takes on for the peasantry at the inn?",
+"options": ["Griffin", "Wyvern", "Leshen", "Basilisk"],
+"answer": "Griffin",
+"difficulty": "medium"
+},
+{
+"id": "tw3-med-0023",
+"question": "What is the default English difficulty name for the “Normal” setting in The Witcher 3?",
+"options": ["Just the Story!", "Story and Sword!", "Blood and Broken Bones!", "Death March!"],
+"answer": "Story and Sword!",
+"difficulty": "medium"
+},
+{
+"id": "tw3-med-0023",
+"question": "What is the default English difficulty name for the “Hard” setting in The Witcher 3?",
+"options": ["Just the Story!", "Story and Sword!", "Blood and Broken Bones!", "Death March!"],
+"answer": "Blood and Broken Bones!",
+"difficulty": "hard"
+},
+{
+  "id": "w3-mix-032",
+  "difficulty": "hard",
+  "question": "Who is the founder and primary leader of the Lodge of Sorceresses?",
+  "options": ["Philippa Eilhart", "Triss Merigold", "Keira Metz", "Yennefer"],
+  "answer": "Philippa Eilhart"
+},
+{
+  "id": "w3-sorc-001",
+  "difficulty": "medium",
+  "question": "Which of these is NOT a sorceress mentioned in The Witcher 3?",
+  "options": ["Philippa Eilhart", "Triss Merigold", "Keira Metz", "Ravenna"],
+  "answer": "Ravenna"
+},
+{
+  "id": "w3-mix-031",
+  "difficulty": "hard",
+  "question": "Which Novigrad crime boss does Geralt hunt down during the investigation into Dandelion’s troubles?",
+  "options": ["Whoreson Junior", "King of Beggars", "Cleaver", "Sigismund Dijkstra"],
+  "answer": "Whoreson Junior"
+},
+{
+"id": "tw3-med-0025",
+"question": "Which dwarf is Geralt’s close friend and frequent drinking companion who helps him in Novigrad?",
+"options": ["Yarpen Zigrin", "Sheldon Skaggs", "Zoltan Chivay", "Dennis Cranmer"],
+"answer": "Zoltan Chivay",
+"difficulty": "hard"
+},
+  {
+    "id": "w3-112",
+    "difficulty": "expert",
+    "question": "Which monster category do nekkers belong to?",
+    "options": ["Ogroids", "Necrophages", "Specters", "Elementa"],
+    "answer": "Ogroids"
+  },
+  {
+    "id": "w3-mix-001",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a Witcher Sign?",
+    "options": ["Igni", "Quen", "Axii", "Hadar"],
+    "answer": "Hadar"
+  },
+  {
+    "id": "w3-mix-002",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a region in The Witcher 3?",
+    "options": ["Velen", "Skellige", "Novigrad", "Morrowind"],
+    "answer": "Morrowind"
+  },
+  {
+    "id": "w3-mix-003",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a region in The Witcher 3?",
+    "options": ["White Orchard", "Toussaint", "Kaer Morhen", "Ravendell"],
+    "answer": "Ravendell"
+  },
+  {
+    "id": "w3-mix-004",
+    "difficulty": "easy",
+    "question": "Which of these is NOT an enemy type/monster you fight in The Witcher 3?",
+    "options": ["Drowner", "Nekker", "Wraith", "Clicker"],
+    "answer": "Clicker"
+  },
+  {
+    "id": "w3-mix-005",
+    "difficulty": "hard",
+    "question": "Which of these is NOT an enemy type/monster you fight in The Witcher 3?",
+    "options": ["Ghoul", "Foglet", "Leshen", "Cazador"],
+    "answer": "Cazador"
+  },
+  {
+    "id": "w3-mix-006",
+    "difficulty": "hard",
+    "question": "What kind of oil do you apply to improve damage against wraiths?",
+    "options": ["Specter Oil", "Necrophage Oil", "Cursed Oil", "Relict Oil"],
+    "answer": "Specter Oil"
+  },
+  {
+    "id": "w3-mix-007",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a witcher mentioned in The Witcher 3?",
+    "options": ["Vesemir", "Lambert", "Eskel", "Elminster"],
+    "answer": "Elminster"
+  },
+  {
+    "id": "w3-mix-008",
+    "difficulty": "easy",
+    "question": "Where is Yennefer from?",
+    "options": ["Vengerberg", "Cintra", "Novigrad", "Skellige"],
+    "answer": "Vengerberg"
+  },
+  {
+    "id": "w3-mix-009",
+    "difficulty": "easy",
+    "question": "What nickname is Geralt usually known as?",
+    "options": ["White Wolf", "Black Raven", "Silver Fox", "Red Lion"],
+    "answer": "White Wolf"
+  },
+  {
+    "id": "w3-mix-010",
+    "difficulty": "medium",
+    "question": "Geralt is sometimes known as the \"Butcher of\" which place?",
+    "options": ["Blaviken", "Vizima", "Oxenfurt", "Beauclair"],
+    "answer": "Blaviken"
+  },
+  {
+    "id": "w3-mix-011",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a potion in The Witcher 3?",
+    "options": ["Swallow", "Thunderbolt", "Tawny Owl", "Amortentia"],
+    "answer": "Amortentia"
+  },
+  {
+    "id": "w3-mix-012",
+    "difficulty": "hard",
+    "question": "According to Geralt, what does Yennefer smell like?",
+    "options": ["Lilac and gooseberries", "Lilac and honey", "Pine and gooseberries", "Mint and lavender"],
+    "answer": "Lilac and gooseberries"
+  },
+  {
+    "id": "w3-mix-013",
+    "difficulty": "hard",
+    "question": "What’s the name of the first major expansion/DLC for The Witcher 3?",
+    "options": ["Hearts of Stone", "Blood and Wine", "Wild Hunt: Reforged", "Shadows of Skellige"],
+    "answer": "Hearts of Stone"
+  },
+  {
+    "id": "w3-mix-014",
+    "difficulty": "hard",
+    "question": "What’s the name of the second major expansion/DLC for The Witcher 3?",
+    "options": ["Blood and Wine", "Hearts of Stone", "Of Swords and Kings", "The White Frost"],
+    "answer": "Blood and Wine"
+  },
+  {
+    "id": "w3-mix-015",
+    "difficulty": "hard",
+    "question": "What is the name of the mute character in Crookback Bog that Geralt helps?",
+    "options": ["Johnny", "Uma", "Dudu", "Sarah"],
+    "answer": "Johnny"
+  },
+  {
+    "id": "w3-mix-016",
+    "difficulty": "hard",
+    "question": "What kind of creature is Johnny from Crookback Bog?",
+    "options": ["Godling", "Doppler", "Botchling", "Aen Elle elf"],
+    "answer": "Godling"
+  },
+  {
+    "id": "w3-mix-027",
+    "difficulty": "easy",
+    "question": "What in-game menu contains detailed information about monsters, including weaknesses and tactics?",
+    "options": ["Bestiary", "Glossary", "Alchemy", "Meditation"],
+    "answer": "Bestiary"
+  },
+  {
+    "id": "w3-mix-028",
+    "difficulty": "hard",
+    "question": "In the Bloody Baron questline, what does the Baron’s unborn child become after the ritual?",
+    "options": ["A botchling", "A noonwraith", "A leshen", "A striga"],
+    "answer": "A botchling"
+  },
+  {
+    "id": "w3-mix-030",
+    "difficulty": "hard",
+    "question": "What is the name of the Bloody Baron’s daughter?",
+    "options": ["Tamara", "Cerys", "Kiera", "Milva"],
+    "answer": "Tamara"
+  }
+]
+

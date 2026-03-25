@@ -1,0 +1,821 @@
+[
+  {
+    "id": "tlou1-easy-0001",
+    "question": "What is the name of Joel's daughter who died?",
+    "options": ["Ellie", "Tess", "Sarah", "Maria"],
+    "answer": "Sarah",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou1-easy-0002",
+    "question": "What city does the game begin in?",
+    "options": ["Boston", "Austin", "Salt Lake City", "Pittsburgh"],
+    "answer": "Austin",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou1-easy-0003",
+    "question": "What is the name of the virus infecting people?",
+    "options": ["Cordyceps", "Bunyavirus", "Clicker Virus", "Firefly Pathogen"],
+    "answer": "Cordyceps",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou1-easy-0004",
+    "question": "What is the name of the group trying to find a cure?",
+    "options": ["Fireflies", "Raiders", "Hunters", "Scars"],
+    "answer": "Fireflies",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tlou1-easy-0005",
+    "question": "What is Joel's profession before the outbreak?",
+    "options": ["Carpenter", "Teacher", "Mechanic", "Doctor"],
+    "answer": "Carpenter",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tlou1-easy-0005",
+    "question": "What is Joel's job after the outbreak?",
+    "options": ["Carpenter", "Scout", "Smuggler", "Soldier"],
+    "answer": "Smuggler",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou1-easy-0006",
+    "question": "Who is Ellie's best friend who eventually joined the fireflies in the first game?",
+    "options": ["Riley", "Kate", "Maria", "Anna"],
+    "answer": "Riley",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tlou1-easy-0007",
+    "question": "What is the name for the blind infected with fungal growths on their heads?",
+    "options": ["Runners", "Clickers", "Stalkers", "Bloaters"],
+    "answer": "Clickers",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tlou2-medium-0201",
+    "question": "What is the name of the multiplayer mode in The Last of Us?",
+    "options": ["Factions", "Survivors", "Outbreak", "Resistance"],
+    "answer": "Factions",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tlou2-medium-0202",
+    "question": "In Factions, which two groups can players choose from?",
+    "options": ["Fireflies and Hunters", "Fireflies and WLF", "Seraphites and FEDRA", "WLF and Rattlers"],
+    "answer": "Fireflies and Hunters",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tlou1-easy-0008",
+    "question": "What is the name of Joel´s smuggling partner?",
+    "options": ["Tess", "Marlene", "Sarah", "Nora"],
+    "answer": "Tess",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tlou2-medium-0214",
+    "question": "How many weeks must your clan survive in Factions to win the meta-game?",
+    "options": ["12 weeks", "6 weeks", "8 weeks", "10 weeks"],
+    "answer": "12 weeks",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tlou2-medium-0206",
+    "question": "How many players are on a team in standard Factions multiplayer?",
+    "options": ["4", "5", "6", "3"],
+    "answer": "4",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tlou1-easy-0010",
+    "question": "Where does Joel reunite with his brother Tommy?",
+    "options": ["Jackson", "Pittsburgh", "Boston", "Denver"],
+    "answer": "Jackson",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou1-easy-0011",
+    "question": "What is the name of the teenage girl Joel escorts who is immune to the virus?",
+    "options": ["Ellie", "Tess", "Riley", "Sarah"],
+    "answer": "Ellie",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tlou1-easy-0014",
+    "question": "What is the name for the large, heavily mutated infected with thick fungal armor plating?",
+    "options": ["Clicker", "Stalker", "Bloater", "Runner"],
+    "answer": "Bloater",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tlou1-easy-0016",
+    "question": "Who is the leader of the Fireflies?",
+    "options": ["Marlene", "Tess", "Nora", "Maria"],
+    "answer": "Marlene",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tlou1-easy-0018",
+    "question": "What's the first type of infected you encounter in the game?",
+    "options": ["Runner", "Clicker", "Stalker", "Bloater"],
+    "answer": "Runner",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tlou1-easy-0023",
+    "question": "What city is the Firefly hospital located in?",
+    "options": ["Salt Lake City", "Boston", "Denver", "Jackson"],
+    "answer": "Salt Lake City",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tlou1-easy-0024",
+    "question": "Who did Joel and Ellie escape Pittsburgh with in The Last of Us 1?",
+    "options": ["Henry and Sam", "Tommy", "Henry and David", "David and Sam"],
+    "answer": "Henry and Sam",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou2-easy-0027",
+    "question": "What is the name of Ellie's girlfriend in Part 2?",
+    "options": ["Dina", "Mel", "Nora", "Abby"],
+    "answer": "Dina",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tlou1-easy-0025",
+    "question": "What crafting material is combined with Rags for creating medkits?",
+    "options": ["Alcohol", "Bandages", "Binding", "Splint"],
+    "answer": "Alcohol",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tlou2-easy-0029",
+    "question": "Who kills Joel in The Last of Us 2?",
+    "options": ["Abby", "Owen", "Isaac", "Jordan"],
+    "answer": "Abby",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tlou2-easy-0030",
+    "question": "What is the name of Joel's brother?",
+    "options": ["Tommy", "Henry", "Manny", "Jesse"],
+    "answer": "Tommy",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tlou2-easy-0031",
+    "question": "What city do Ellie and Dina travel to in search of Joel´s killers?",
+    "options": ["Seattle", "Denver", "Salt Lake City", "Santa Barbara"],
+    "answer": "Seattle",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tlou2-easy-0032",
+    "question": "What´song does Ellie play on the guitar which she learnt from Joel?",
+    "options": ["Future Days", "Blackbird", "Nothing Else Matters", "Survival"],
+    "answer": "Future Days",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tlou2-easy-0034",
+    "question": "What is the name of the main faction Abby is part of?",
+    "options": ["WLF", "Fireflies", "Scars", "FEDRA"],
+    "answer": "WLF",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tlou2-easy-0036",
+    "question": "What is the name of Ellie and Dina´s baby?",
+    "options": ["JJ", "Joel", "Jake", "Tommy"],
+    "answer": "JJ",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tlou2-easy-0037",
+    "question": "What kind of weapon is used to kill Joel?",
+    "options": ["Golf club", "Hammer", "Rifle", "Crowbar"],
+    "answer": "Golf club",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou2-easy-0039",
+    "question": "What does Ellie use to navigate Seattle?",
+    "options": ["Map", "Compass", "Watch", "Radio"],
+    "answer": "Map",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tlou2-easy-0040",
+    "question": "What is the name of Lev's sister in TLOU 2?",
+    "options": ["Yara", "Mel", "Anna", "Maycee"],
+    "answer": "Yara",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou2-easy-0041",
+    "question": "What type of infected release bursts of acidic spores and spray acid in TLOU 2?",
+    "options": ["Shambler", "Clicker", "Stalker", "Bloater"],
+    "answer": "Shambler",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou2-easy-0044",
+    "question": "Where is the final showdown between Ellie and Abby?",
+    "options": ["Santa Barbara beach", "Seattle river", "Salt Lake City hospital", "Movie Theater"],
+    "answer": "Santa Barbara beach",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tlou2-easy-0045",
+    "question": "What does Ellie lose in the final fight with Abby?",
+    "options": ["Two fingers", "Her leg", "Her hearing", "Her eye"],
+    "answer": "Two fingers",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tlou2-easy-0046",
+    "question": "Who is the WLF leader in TLOU 2?",
+    "options": ["Isaac", "Manny", "Owen", "Abby"],
+    "answer": "Isaac",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tlou2-easy-0048",
+    "question": "What was Abby searching for in Santa Barbara?",
+    "options": ["Fireflies", "Scars", "WLF base", "Ellie"],
+    "answer": "Fireflies",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tlou1-medium-0051",
+    "question": "What rare comic book series does Joel and Ellie collect during the journey?",
+    "options": ["Savage Starlight", "Star Seekers", "Void Runner", "Nova Crisis"],
+    "answer": "Savage Starlight",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou1-medium-0054",
+    "question": "What's the name of Henry's younger brother´in TLOU 1?",
+    "options": ["Sam", "Ethan", "Ben", "Danny"],
+    "answer": "Sam",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou1-medium-0061",
+    "question": "Who do Joel and Ellie meet in the city of Lincoln?",
+    "options": ["Bill", "Tommy", "David", "Marlene"],
+    "answer": "Bill",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou1-medium-0063",
+    "question": "What’s the name of the university Joel and Ellie visit?",
+    "options": ["University of Eastern Colorado", "Salt Lake Tech", "Colorado State", "Eastern Salt College"],
+    "answer": "University of Eastern Colorado",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou1-medium-0068",
+    "question": "What item does Ellie often use for silent kills?",
+    "options": ["Switchblade", "Shiv", "Bow", "Silenced pistol"],
+    "answer": "Switchblade",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou2-medium-0076",
+    "question": "What is Dina's ex-boyfriend´s name?",
+    "options": ["Jesse", "Owen", "Manny", "Jordan"],
+    "answer": "Jesse",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou2-medium-0078",
+    "question": "What location do Ellie and Dina stay in while searching Seattle?",
+    "options": ["Movie Theater", "Library", "Fire station", "Radio tower"],
+    "answer": "Movie Theater",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou2-medium-0079",
+    "question": "What is the full name of the WLF?",
+    "options": ["Washington Liberation Front", "Western Liberty Forces", "Washington Light Federation", "Warrior Liberation Front"],
+    "answer": "Washington Liberation Front",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou2-medium-0081",
+    "question": "Who ambushes Ellie and Jesse in the theater?",
+    "options": ["Abby", "Nora", "Manny", "Mel"],
+    "answer": "Abby",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou2-medium-0082",
+    "question": "How does Ellie torture Nora into revealing Abby´s whereabouts?",
+    "options": ["Beats her with a pipe", "Strangles her", "Shoots her", "Stabs her"],
+    "answer": "Beats her with a pipe",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou2-medium-0083",
+    "question": "What unique feature makes the Rat King infected dangerous?",
+    "options": ["It's a fused mass of infected", "It uses ranged attacks", "Itâ€™s invisible", "It runs at double speed"],
+    "answer": "It's a fused mass of infected",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou2-medium-0084",
+    "question": "Where is the Rat King encountered in TLOU 2?",
+    "options": ["Seattle hospital basement", "TV station Basement", "Movie Theater Basement", "Aquarium Basement"],
+    "answer": "Seattle hospital basement",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou2-medium-0085",
+    "question": "What is the name of Owen´s pregnant partner´in TLOU 2?",
+    "options": ["Mel", "Dina", "Yara", "Nora"],
+    "answer": "Mel",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou2-medium-0085",
+    "question": "Who shoots Tommy in the head in TLOU 2?",
+    "options": ["Owen", "Mel", "Abby", "Lev"],
+    "answer": "Abby",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou2-medium-0085",
+    "question": "Who shoots Tommy in the leg in TLOU 2?",
+    "options": ["Owen", "Mel", "Abby", "Lev"],
+    "answer": "Lev",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou2-medium-0086",
+    "question": "What prompts  Abby to eventually leave the WLF?",
+    "options": ["Saving Yara and Lev", "Conflict with Isaac", "Owen's death", "Ellie´s attack"],
+    "answer": "Saving Yara and Lev",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou2-medium-0087",
+    "question": "How does Tommy get permanently injured during the story?",
+    "options": ["Shot in the head", "Hit with a pipe ", "Stabbed in the chest", "Bitten by infected"],
+    "answer": "Shot in the head",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou2-medium-0090",
+    "question": "Where do Ellie and Joel go for her birthday in TLOU 1?",
+    "options": ["Museum", "Zoo", "Library", "Arcade"],
+    "answer": "Museum",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou2-medium-0095",
+    "question": "What job does Manny have in the WLF?",
+    "options": ["Soldier", "Doctor", "Cook", "Scout"],
+    "answer": "Soldier",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou2-medium-0098",
+    "question": "Who kills Jesse in TLOU 2?",
+    "options": ["Abby", "Manny", "Owen", "Isaac"],
+    "answer": "Abby",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou2-medium-0100",
+    "question": "What group captures Abby and Lev in Santa Barbara?",
+    "options": ["Rattlers", "Scars", "WLF", "Fireflies"],
+    "answer": "Rattlers",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou2-hard-0127",
+    "question": "What detail makes Ellie certain Nora was involved with Joelâ€™s death?",
+    "options": ["Nora mentions Salt Lake City", "Nora flees when Ellie names Joel", "Nora has Joel's watch", "Nora taunts Ellie about Jackson"],
+    "answer": "Nora flees when Ellie names Joel",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tlou2-hard-0128",
+    "question": "What name does Lev use before transitioning?",
+    "options": ["Lily", "Layla", "Lena", "Leah"],
+    "answer": "Lily",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tlou2-hard-0134",
+    "question": "What is  Lev's weapon of choice in TLOU 2?",
+    "options": ["Bow", "Gun", "Hatchet", "Knife"],
+    "answer": "Bow",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou2-hard-0142",
+    "question": "How does Isaac die in TLOU 2?",
+    "options": ["Shot by Yara", "Killed by Abby", "Ambushed by Scars", "Killed by Lev"],
+    "answer": "Shot by Yara",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tlou2-hard-0148",
+    "question": "What is Mel's profession in TLOU 2?",
+    "options": ["Medic", "Sniper", "Scout", "Engineer"],
+    "answer": "Medic",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tlou1-expert-0004",
+    "question": "What kind of dam was Tommy  working on in The Last of Us Part I?",
+    "options": ["Gravity Dam", "Hydro Electric Dam", "Storage Dam", "Hydro Power Dams"],
+    "answer": "Hydro Electric Dam",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tlou1-expert-0005",
+    "question": "In The Last of Us Part I, which animal do Joel and Ellie encounter in the university?",
+    "options": ["Giraffe", "Horse", "Dog", "Monkey"],
+    "answer": "Monkey",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tlou1-expert-0008",
+    "question": "What is the name of the hospital where Ellie is to be operated on in Part I?",
+    "options": ["St. Mary’s Hospital", "Salt Lake City Hospital", "Seattle Medical Center", "Jackson Clinic"],
+    "answer": "St. Mary’s Hospital",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tlou1-expert-0009",
+    "question": "What is the name of the group Abby is a member of in Part II?",
+    "options": ["WLF", "Fireflies", "Seraphites", "Hunters"],
+    "answer": "WLF",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tlou1-expert-0010",
+    "question": "What is the nickname given to the Seraphites by the WLF?",
+    "options": ["Scars", "Wolves", "Fireflies", "Rattlers"],
+    "answer": "Scars",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tlou2-expert-0014",
+    "question": "What is the name of Lev’s sister?",
+    "options": ["Yara", "Abby", "Nora", "Mel"],
+    "answer": "Yara",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tlou2-expert-0015",
+    "question": "What is the name of the patrol dog Ellie encounters in the aquarium in TLOU 2?",
+    "options": ["Alice", "Bear", "Buckley", "Callus"],
+    "answer": "Alice",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tlou2-expert-0016",
+    "question": "Which musical instrument does Ellie play?",
+    "options": ["Guitar", "Piano", "Violin", "Drums"],
+    "answer": "Guitar",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tlou2-expert-0017",
+    "question": "What is the name of the town the  Seraphites live in?",
+    "options": ["Haven", "Eureka", "Jarbridge", "St. Mary’s"],
+    "answer": "Haven",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tlou1-expert-0020",
+    "question": "What is the name of the horse Ellie rides in Part I?",
+    "options": ["Callus", "Shimmer", "Buckley", "Alice"],
+    "answer": "Callus",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tlou1-expert-0023",
+    "question": "What is the name of the leader of the Hunters in Pittsburgh?",
+    "options": ["David", "Marlene", "Henry", "Unknown"],
+    "answer": "Unknown",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tlou1-expert-0024",
+    "question": "Who is the first playable character in The Last of Us Part I?",
+    "options": ["Sarah", "Joel", "Ellie", "Tommy"],
+    "answer": "Sarah",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou1-expert-0030",
+    "question": "What is the name of the giraffe Ellie encounters?",
+    "options": ["Not named", "Daisy", "Lucky", "Hope"],
+    "answer": "Not named",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tlou1-expert-0031",
+    "question": "What is the name of Bill’s partner in TLOU 1?",
+    "options": ["Frank", "Henry", "Sam", "Not named"],
+    "answer": "Frank",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tlou1-expert-0034",
+    "question": "Who is the leader of the group that captures Ellie in the winter chapter of TLOU 1?",
+    "options": ["David", "Frank", "Hank", "Owen"],
+    "answer": "David",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tlou1-expert-3035",
+    "question": "What is the name of the hotel in Pittsburgh in TLOU 1 ?",
+    "options": ["Hotel Grand", "Hotel Lux", "Pittsburgh Inn", "Piaza Hotel"],
+    "answer": "Hotel Grand",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tlou1-expert-2035",
+    "question": "What is the name of the hotel used as an outpost for the WLF in TLOU 2 ?",
+    "options": ["Hotel Grand", "Hotel Lux", "Serevana Hotel", "Piaza Hotel"],
+    "answer": "Serevana Hotel",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tlou1-expert-1035",
+    "question": "What is the name of the headquarters and home of the WLF TLOU 2 ?",
+    "options": ["Seattle High School", "SoundView Stadium", "Serevana Stadium", "Piaza Hotel"],
+    "answer": "SoundView Stadium",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tlou1-expert-0038",
+    "question": "What is the name of the leader of the Jackson Community?",
+    "options": ["Maria", "Tommy", "Joel", "Bill"],
+    "answer": "Maria",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tlou1-expert-0038",
+    "question": "Whose face does Ellie´s slash with a switchblade in TLOU 2?",
+    "options": ["Mike", "Owen", "Isaac", "Jordan"],
+    "answer": "Jordan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tlou2-expert-0192",
+    "question": "What is the name of the dinosaur museum Ellie visits with Joel?",
+    "options": ["Wyoming Museum of Science and History", "Jackson Natural History Center", "Wyoming Dinosaur Exhibit", "Rocky Mountain Museum"],
+    "answer": "Wyoming Museum of Science and History",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tlou2-expert-0194",
+    "question": "What is the name of Ellie's mother?",
+    "options": ["Anna", "Tess", "Sarah", "Dina"],
+    "answer": "Anna",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tlou2-expert-0200",
+    "question": "What is Abby’s father’s name in TLOU 2?",
+    "options": ["Jerry", "Isaac", "Jordan", "David"],
+    "answer": "Jerry",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tlou2-expert-0204",
+    "question": "What’s the name for the infected comprising of multiple stalkers, clickers and bloaters fused together?",
+    "options": ["The Rat King", "The Beast", "The Abomination", "The King Bloat"],
+    "answer": "The Rat King",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tlou2-expert-0200",
+    "question": "What is Abby’s father’s job in TLOU 2?",
+    "options": ["Doctor", "Hunter", "Soldier", "Cook"],
+    "answer": "Doctor",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tlou2-expert-0210",
+    "question": "What rare kind of infected appears in the basement of the Pittsburgh Hotel and the sewers in TLOU I?",
+    "options": ["Creeper", "Runner", "Stalker", "Shambler"],
+    "answer": "Stalker",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tlou-meta-0201",
+    "question": "Who developed The Last of Us games?",
+    "options": ["Naughty Dog", "Santa Monica Studio", "Guerrilla Games", "Insomniac Games"],
+    "answer": "Naughty Dog",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou-meta-0213",
+    "question": "What is the title of the standalone DLC for The Last of Us?",
+    "options": ["Left Behind", "After Us", "The Lost Chapter", "One of Us"],
+    "answer": "Left Behind",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tlou2-expert-0237",
+    "question": "Where is the first time Ellie is shown to be bitten?",
+    "options": ["Mall", "School", "Subway", "Apartment block"],
+    "answer": "Mall",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tlou2-expert-0253",
+    "question": "What safe combination is hidden in the truck note in Hillcrest?",
+    "options": ["30-82-65", "08-10-83", "22-05-89", "70-12-64"],
+    "answer": "30-82-65",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tlou-meta-0202",
+    "question": "Which company published The Last of Us games?",
+    "options": ["Sony Interactive Entertainment", "EA", "Activision", "Ubisoft"],
+    "answer": "Sony Interactive Entertainment",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou2-expert-0272",
+    "question": "What insect is depicted on Ellie's fore arm tattoo?",
+    "options": ["Butterfly", "Moth", "Firefly", "Leaf"],
+    "answer": "Moth",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tlou2-medium-0146",
+    "question": "What’s the name of the bar where Dina and Ellie kiss during the dance?",
+    "options": ["Tipsy Bison", "Ruston Pub", "Silver Moon", "Brew Ridge"],
+    "answer": "Tipsy Bison",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tlou2-medium-0180",
+    "question": "What item does Ellie carry that once belonged to Sarah?",
+    "options": ["Watch", "Bracelet", "Letter", "Necklace"],
+    "answer": "Watch",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou2-medium-0156",
+    "question": "What is the name of the scientist Joel kills in Part I’s hospital?",
+    "options": ["Jerry Anderson", "Jordan Lane", "Isaac Dixon", "Unknown"],
+    "answer": "Jerry Anderson",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tlou2-medium-0197",
+    "question": "What happens to the horse, Shimmer?",
+    "options": ["Killed in an explosion", "Shot in the head", "Runs away", "Drowns"],
+    "answer": "Shot in the head",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tlou2-medium-0197",
+    "question": "Who kills the horse, Shimmer?",
+    "options": ["Abby", "Ellie", "Mike", "Jordan"],
+    "answer": "Mike",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tlou2-medium-0193",
+    "question": "How old is Ellie in The Last of Us Part I?",
+    "options": ["14", "12", "16", "15"],
+    "answer": "14",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tlou2-medium-0131",
+    "question": "What is Joel´s surname?",
+    "options": ["Miller", "Adams", "Brown", "Thomas"],
+    "answer": "Miller",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tlou2-medium-0135",
+    "question": "Which of the following is NOT a type of infected in the series?",
+    "options": ["Burster", "Bloater", "Runner", "Shambler"],
+    "answer": "Burster",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou2-medium-0132",
+    "question": "How many years after Part I does Part II take place?",
+    "options": ["Five", "Three", "Seven", "Ten"],
+    "answer": "Five",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou-meta-0203",
+    "question": "In what year was The Last of Us Part I originally released?",
+    "options": ["2013", "2014", "2012", "2011"],
+    "answer": "2013",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou2-medium-0124",
+    "question": "Which item is used to create Molotov cocktails?",
+    "options": ["Alcohol and rags", "Gunpowder and nails", "Glass and tape", "Sugar and blades"],
+    "answer": "Alcohol and rags",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tlou-meta-0207",
+    "question": "On which platform did The Last of Us first release?",
+    "options": ["PlayStation 3", "PlayStation 4", "PC", "Xbox 360"],
+    "answer": "PlayStation 3",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tlou-meta-0208",
+    "question": "What year was The Last of Us Remastered released for PS4?",
+    "options": ["2014", "2015", "2013", "2016"],
+    "answer": "2014",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou-meta-0209",
+    "question": "What year did The Last of Us Part I (remake) release on PS5?",
+    "options": ["2022", "2021", "2020", "2023"],
+    "answer": "2022",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou-meta-0210",
+    "question": "Which actor provided the voice and motion capture for Joel?",
+    "options": ["Troy Baker", "Nolan North", "Roger Clark", "Matthew Mercer"],
+    "answer": "Troy Baker",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tlou-meta-0211",
+    "question": "Which actress portrayed Ellie in voice and motion capture?",
+    "options": ["Ashley Johnson", "Laura Bailey", "Ashley Burch", "Emily Rose"],
+    "answer": "Ashley Johnson",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tlou-meta-0205",
+    "question": "Who served as the creative director for The Last of Us?",
+    "options": ["Neil Druckmann", "Bruce Straley", "Cory Barlog", "Troy Baker"],
+    "answer": "Neil Druckmann",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou-meta-0204",
+    "question": "In what year was The Last of Us Part II released?",
+    "options": ["2020", "2019", "2021", "2018"],
+    "answer": "2020",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tlou2-expert-0207",
+    "question": "Who performs the voice of Abby?",
+    "options": ["Laura Bailey", "Ashley Johnson", "Troy Baker", "Laura Haddock"],
+    "answer": "Laura Bailey",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tlou2-expert-0195",
+    "question": "What is the name of the book Riley gives to Ellie in the Left Behind DLC?",
+    "options": ["Savage Starlight", "No Pun Intended", "The Turning", "Endure and Survive"],
+    "answer": "No Pun Intended",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tlou1-expert-0048",
+    "question": "What is the name of the horse Ellie rides in Part II?",
+    "options": ["Shimmer", "Callus", "Buckley", "Alice"],
+    "answer": "Shimmer",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tlou1-expert-0049",
+    "question": "What is the name of the song Ellie plays for Dina in the music store?",
+    "options": ["Take On Me", "Future Days", "True Faith", "Hurt"],
+    "answer": "Take On Me",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tlou2-expert-0071",
+    "question": "What is the name of the group that worships a religious cult in Part II?",
+    "options": ["Seraphites", "WLF", "Fireflies", "Rattlers"],
+    "answer": "Seraphites",
+    "difficulty": "expert"
+  }
+]

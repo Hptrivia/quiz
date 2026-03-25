@@ -1,0 +1,712 @@
+[
+  {
+    "id": "satc-001",
+    "difficulty": "easy",
+    "question": "Sex and the City is primarily set in which city?",
+    "options": ["New York", "Los Angeles", "Chicago", "Miami"],
+    "answer": "New York"
+  },
+  {
+    "id": "satc-002",
+    "difficulty": "easy",
+    "question": "Carrie’s main job in the original series is best described as what?",
+    "options": ["Newspaper columnist", "TV anchor", "Lawyer", "Fashion designer"],
+    "answer": "Newspaper columnist"
+  },
+  {
+    "id": "satc-004",
+    "difficulty": "easy",
+    "question": "How many main women make up the core friend group?",
+    "options": ["4", "3", "5", "6"],
+    "answer": "4"
+  },
+  {
+    "id": "satc-006",
+    "difficulty": "easy",
+    "question": "Which network originally aired Sex and the City?",
+    "options": ["HBO", "NBC", "ABC", "FOX"],
+    "answer": "HBO"
+  },
+  {
+    "id": "satc-015",
+    "difficulty": "easy",
+    "question": "What kind of professional is Samantha?",
+    "options": ["Publicist/PR", "Surgeon", "Teacher", "Detective"],
+    "answer": "Publicist/PR"
+  },
+  {
+    "id": "satc-016",
+    "difficulty": "easy",
+    "question": "What kind of professional is Miranda?",
+    "options": ["Lawyer", "Fashion editor", "Chef", "Architect"],
+    "answer": "Lawyer"
+  },
+  {
+    "id": "satc-017",
+    "difficulty": "easy",
+    "question": "What kind of professional is Charlotte (early on)?",
+    "options": ["Art gallery worker", "Doctor", "Police officer", "Journalist"],
+    "answer": "Art gallery worker"
+  },
+  {
+    "id": "satc-018",
+    "difficulty": "easy",
+    "question": "Carrie’s on-and-off major love interest is commonly called what by the group?",
+    "options": ["Mr. Big", "Mr. Right", "The Prince", "The Boss"],
+    "answer": "Mr. Big"
+  },
+  {
+    "id": "satc-024",
+    "difficulty": "easy",
+    "question": "Which friend is most likely to say what everyone else is thinking?",
+    "options": ["Miranda", "Charlotte", "Carrie", "Samantha"],
+    "answer": "Miranda"
+  },
+  {
+    "id": "satc-025",
+    "difficulty": "easy",
+    "question": "Which friend is most likely to push the group toward sexual honesty and boldness?",
+    "options": ["Samantha", "Charlotte", "Miranda", "Carrie"],
+    "answer": "Samantha"
+  },
+  {
+    "id": "satc-026",
+    "difficulty": "easy",
+    "question": "Which friend is most likely to argue for love, marriage, and fairy-tale endings?",
+    "options": ["Charlotte", "Samantha", "Miranda", "Carrie"],
+    "answer": "Charlotte"
+  },
+  {
+    "id": "satc-029",
+    "difficulty": "easy",
+    "question": "Which of these is NOT one of the four main women?",
+    "options": ["Jennifer", "Carrie", "Miranda", "Samantha"],
+    "answer": "Jennifer"
+  },
+
+  {
+    "id": "satc-031",
+    "difficulty": "medium",
+    "question": "What is Mr. Big’s first name?",
+    "options": ["John", "James", "Jason", "Jack"],
+    "answer": "John"
+  },
+  {
+    "id": "satc-033",
+    "difficulty": "medium",
+    "question": "What kind of lawyer is Miranda primarily portrayed as?",
+    "options": ["Corporate lawyer", "Criminal defense only", "Environmental activist lawyer only", "Judge"],
+    "answer": "Corporate lawyer"
+  },
+  {
+    "id": "satc-036",
+    "difficulty": "medium",
+    "question": "What is the name of Miranda’s longtime partner (later husband)?",
+    "options": ["Steve", "Aidan", "Harry", "Smith"],
+    "answer": "Steve"
+  },
+  {
+    "id": "satc-037",
+    "difficulty": "medium",
+    "question": "What is Steve’s job when he’s introduced?",
+    "options": ["Bartender", "Banker", "Surgeon", "Chef"],
+    "answer": "Bartender"
+  },
+  {
+    "id": "satc-038",
+    "difficulty": "medium",
+    "question": "What is Charlotte’s first husband’s name?",
+    "options": ["Trey", "Harry", "Steve", "Aidan"],
+    "answer": "Trey"
+  },
+  {
+    "id": "satc-039",
+    "difficulty": "medium",
+    "question": " What is Charlotte’s second husband’s name is what?",
+    "options": ["Harry", "Trey", "Aidan", "Smith"],
+    "answer": "Harry"
+  },
+  {
+    "id": "satc-040",
+    "difficulty": "medium",
+    "question": "Samantha’s most serious long-term boyfriend is commonly known by what name?",
+    "options": ["Smith", "Trey", "Steve", "Aidan"],
+    "answer": "Smith"
+  },
+  {
+    "id": "satc-041",
+    "difficulty": "medium",
+    "question": "What is Carrie’s serious boyfriend who loves furniture and dogs named?",
+    "options": ["Aidan", "Steve", "Trey", "Harry"],
+    "answer": "Aidan"
+  },
+  {
+    "id": "satc-043",
+    "difficulty": "medium",
+    "question": "Which city does Big move in Season 2?",
+    "options": ["Paris", "London", "Tokyo", "Rome"],
+    "answer": "Paris"
+  },
+  {
+    "id": "satc-071",
+    "difficulty": "hard",
+    "question": "What is Big’s last name revealed to be in the original series?",
+    "options": ["Preston", "Harrington", "Bradshaw", "York"],
+    "answer": "Preston"
+  },
+  {
+    "id": "satc-079",
+    "difficulty": "hard",
+    "question": "What is the name of Miranda and Steve’s son?",
+    "options": ["Brady", "Henry", "Jack", "Miles"],
+    "answer": "Brady"
+  },
+  {
+    "id": "satc-easy-0004",
+    "question": "Sex and the City first premiered in which year?",
+    "options": ["1998", "1995", "2000", "2002"],
+    "answer": "1998",
+    "difficulty": "easy"
+  },
+  {
+    "id": "satc-easy-0007",
+    "question": "Which character is a romantic art dealer who believes in fairy-tale love?",
+    "options": ["Charlotte York", "Carrie Bradshaw", "Miranda Hobbes", "Samantha Jones"],
+    "answer": "Charlotte York",
+    "difficulty": "easy"
+  },
+  {
+    "id": "satc-easy-0014",
+    "question": "What is the title of Carrie’s newspaper column?",
+    "options": ["Sex and the City", "Love in the City", "Dating in Manhattan", "Single in the City"],
+    "answer": "Sex and the City",
+    "difficulty": "easy"
+  },
+  {
+    "id": "satc-easy-0015",
+    "question": "Which character is the oldest of the four friends?",
+    "options": ["Samantha Jones", "Miranda Hobbes", "Charlotte York", "Carrie Bradshaw"],
+    "answer": "Samantha Jones",
+    "difficulty": "easy"
+  },
+  {
+    "id": "satc-easy-0022",
+    "question": "How many seasons did the original Sex and the City series run?",
+    "options": ["Six", "Four", "Five", "Seven"],
+    "answer": "Six",
+    "difficulty": "easy"
+  },
+  {
+    "id": "satc-med-0027",
+    "question": "Which publication does Carrie write her Sex and the City column for during the series?",
+    "options": ["The New York Star", "The Manhattan Post", "The Daily Tribune", "The New Yorker"],
+    "answer": "The New York Star",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0028",
+    "question": "In total, how many episodes does the original Sex and the City series have?",
+    "options": ["94", "80", "100", "72"],
+    "answer": "94",
+    "difficulty": "expert"
+  },
+  {
+    "id": "satc-med-0029",
+    "question": "Where does Carrie follow Aleksandr Petrovsky to near the end of the series?",
+    "options": ["Paris", "London", "Rome", "Tokyo"],
+    "answer": "Paris",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0030",
+    "question": "What is the profession of Charlotte’s first husband, Trey MacDougal?",
+    "options": ["Doctor", "Investment banker", "Lawyer", "Architect"],
+    "answer": "Doctor",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0032",
+    "question": "Which of the four women is the first to become a mother in the series?",
+    "options": ["Miranda Hobbes", "Charlotte York", "Carrie Bradshaw", "Samantha Jones"],
+    "answer": "Miranda Hobbes",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0034",
+    "question": "What is the profession of Aidan Shaw, one of Carrie’s major boyfriends?",
+    "options": ["Furniture designer", "Chef", "Photographer", "Advertising executive"],
+    "answer": "Furniture designer",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0035",
+    "question": "Which friend briefly dates a woman while questioning her sexuality?",
+    "options": ["Samantha Jones", "Carrie Bradshaw", "Miranda Hobbes", "Charlotte York"],
+    "answer": "Samantha Jones",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0036",
+    "question": "What is the name of the hotel magnate with whom Samantha has a serious relationship?",
+    "options": ["Richard Wright", "Jack Berger", "Harry Goldenblatt", "Bill Kelley"],
+    "answer": "Richard Wright",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0038",
+    "question": "Which main character battles breast cancer in the final season?",
+    "options": ["Samantha Jones", "Miranda Hobbes", "Charlotte York", "Carrie Bradshaw"],
+    "answer": "Samantha Jones",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0043",
+    "question": "Which prestigious awards body nominated Sex and the City for over 50 Emmys?",
+    "options": ["Television Academy", "BAFTA", "Golden Globes Association", "SAG-AFTRA"],
+    "answer": "Television Academy",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-med-0044",
+    "question": "Which of these sequel projects continues the story of Carrie and friends on television decades later?",
+    "options": ["And Just Like That", "City After Dark", "Love in Manhattan", "Single in the City"],
+    "answer": "And Just Like That",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-med-0045",
+    "question": "How many feature films spun off from the original Sex and the City series?",
+    "options": ["Two", "One", "Three", "Four"],
+    "answer": "Two",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-med-0046",
+    "question": "Which actress plays Carrie Bradshaw in Sex and the City?",
+    "options": ["Sarah Jessica Parker", "Cynthia Nixon", "Kristin Davis", "Kim Cattrall"],
+    "answer": "Sarah Jessica Parker",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0047",
+    "question": "Which actress portrays Miranda Hobbes?",
+    "options": ["Cynthia Nixon", "Kristin Davis", "Kim Cattrall", "Sarah Jessica Parker"],
+    "answer": "Cynthia Nixon",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-med-0048",
+    "question": "Which actress plays Samantha Jones?",
+    "options": ["Kim Cattrall", "Sarah Jessica Parker", "Cynthia Nixon", "Kristin Davis"],
+    "answer": "Kim Cattrall",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-med-0049",
+    "question": "Which actress plays Charlotte York?",
+    "options": ["Kristin Davis", "Sarah Jessica Parker", "Cynthia Nixon", "Kim Cattrall"],
+    "answer": "Kristin Davis",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0050",
+    "question": "Sex and the City is often described as following which writer’s observations about modern sex life?",
+    "options": ["Carrie Bradshaw’s", "Samantha Jones’s", "Miranda Hobbes’s", "Charlotte York’s"],
+    "answer": "Carrie Bradshaw’s",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-hard-0051",
+    "question": "Which real‑life newspaper inspired the fictional paper where Carrie publishes her column?",
+    "options": ["New York Observer", "New York Times", "New York Post", "Village Voice"],
+    "answer": "New York Observer",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-hard-0057",
+    "question": "What is the name of Charlotte and Harry’s first adopted daughter?",
+    "options": ["Lily", "Rose", "Daisy", "Ivy"],
+    "answer": "Lily",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-hard-0057",
+    "question": "Where was Charlotte and Harry’s first daughter adopted from?",
+    "options": ["China", "Japan", "Vietnam", "Thailand"],
+    "answer": "China",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-hard-0059",
+    "question": "Which politician does Carrie briefly date who has a fetish she cannot accept?",
+    "options": ["Bill Kelley", "Bill Owens", "Mayor Collins", "Jack Callahan"],
+    "answer": "Bill Kelley",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-hard-0060",
+    "question": "What specific fetish does politician Bill Kelley ask Carrie to participate in, which she ultimately refuses?",
+    "options": ["Golden showers", "Foot worship", "Voyeurism", "Public exhibitionism"],
+    "answer": "Golden showers",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-hard-0060",
+    "question": "According to character backstory, where did Miranda attend law school?",
+    "options": ["Harvard University", "Yale University", "Columbia University", "NYU"],
+    "answer": "Harvard University",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-hard-0061",
+    "question": "Where is Miranda originally from before moving to New York?",
+    "options": ["Philadelphia", "Boston", "Chicago", "Cleveland"],
+    "answer": "Philadelphia",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-exp-0071",
+    "question": "What is the name of the socialite Big becomes engaged to after returning from Paris early in the series?",
+    "options": ["Natasha Naginsky", "Nina Katz", "Susan Sharon", "Amalita Amalfi"],
+    "answer": "Natasha Naginsky",
+    "difficulty": "expert"
+  },
+  {
+    "id": "satc-hard-0063",
+    "question": "In the first season, what is the occupation of Miranda's sensitive, 27-year-old boyfriend Skipper Johnston?",
+    "options": ["Web developer", "Advertising executive", "Jazz musician", "Freelance writer"],
+    "answer": "Web developer",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-med-0064",
+    "question": "Which specific health battle did Steve Brady face and survive during the series?",
+    "options": ["Testicular cancer", "Leukemia", "Thyroid cancer", "Skin cancer"],
+    "answer": "Testicular cancer",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-easy-0065",
+    "question": "Which religion does Charlotte York convert to in order to marry Harry Goldenblatt?",
+    "options": ["Judaism", "Catholicism", "Buddhism", "Islam"],
+    "answer": "Judaism",
+    "difficulty": "easy"
+  },
+  {
+    "id": "satc-med-0066",
+    "question": "What is Mr. Big's full legal name?",
+    "options": ["John James Preston", "John Joseph Preston", "James John Preston", "Jack Joseph Preston"],
+    "answer": "John James Preston",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0067",
+    "question": "Which world-renowned ballet dancer portrayed Carrie’s late-series partner, the artist Aleksandr Petrovsky?",
+    "options": ["Mikhail Baryshnikov", "Rudolf Nureyev", "Vaslav Nijinsky", "George Balanchine"],
+    "answer": "Mikhail Baryshnikov",
+    "difficulty": "expert"
+  },
+  {
+    "id": "satc-hard-0068",
+    "question": "Across its six-season run, how many total Primetime Emmy Award nominations did 'Sex and the City' receive?",
+    "options": ["54", "52", "62", "64"],
+    "answer": "54",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-med-0069",
+    "question": "What was the name of the dog that Charlotte adopted after her divorce from Trey?",
+    "options": ["Elizabeth Taylor", "Audrey Hepburn", "Marilyn Monroe", "Grace Kelly"],
+    "answer": "Elizabeth Taylor",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-easy-0070",
+    "question": "Which of the following male characters was NOT a romantic interest of Miranda Hobbes?",
+    "options": ["Stanford", "Skipper", "Steve", "Robert"],
+    "answer": "Stanford",
+    "difficulty": "easy"
+  },
+  {
+    "id": "satc-hard-0071",
+    "question": "Which iconic musician played a 'New Age' musician who dated Carrie in the episode 'The Boy Next Door'?",
+    "options": ["Jon Bon Jovi", "Sting", "Mick Jagger", "Billy Joel"],
+    "answer": "Jon Bon Jovi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-med-0072",
+    "question": "What was the name of Aidan Shaw's beloved dog, who frequently accompanied him and Carrie?",
+    "options": ["Pete", "Scout", "Buddy", "Max"],
+    "answer": "Pete",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0073",
+    "question": "What is the name of the no-nonsense housekeeper and nanny Miranda hires after the birth of her son?",
+    "options": ["Magda", "Maria", "Marta", "Agnes"],
+    "answer": "Magda",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-hard-0074",
+    "question": "In a famous act of judgment, what religious item did Magda use to replace the vibrator she found in Miranda's nightstand?",
+    "options": ["A statue of the Virgin Mary", "A Rosary", "A Bible", "A crucifix"],
+    "answer": "A statue of the Virgin Mary",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-hard-0075",
+    "question": "Which future 'The Hangover' star appears in Season 2?",
+    "options": ["Bradley Cooper", "Zach Galifianakis", "Ed Helms", "Justin Bartha"],
+    "answer": "Bradley Cooper",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-easy-0076",
+    "question": "The 'Sex and the City' television series is based on the semi-autobiographical book by which author?",
+    "options": ["Candace Bushnell", "Helen Fielding", "Lauren Weisberger", "Anna Quindlen"],
+    "answer": "Candace Bushnell",
+    "difficulty": "expert"
+  },
+  {
+    "id": "satc-med-0077",
+    "question": "Which high-fashion designer created the iconic wedding gown Carrie wore for her first wedding?",
+    "options": ["Vivienne Westwood", "Vera Wang", "Oscar de la Renta", "Carolina Herrera"],
+    "answer": "Vivienne Westwood",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-hard-0078",
+    "question": "What was the headline when Carrie modeled for the cover of 'New York Magazine'?",
+    "options": ["Single & Fabulous?", "The Loneliest Girl in Town", "NYC's Most Desperate", "Searching for the One"],
+    "answer": "Single & Fabulous?",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-med-0081",
+    "question": "What is the name of the bar Steve and Aidan open together?",
+    "options": ["Scout", "The Spotted Pig", "The Rabbit", "Mulberry's"],
+    "answer": "Scout",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-med-0086",
+    "question": "What is Samantha's younger boyfriend Smith Jerrod's actual first name?",
+    "options": ["Jerry", "Smith", "Jack", "Robert"],
+    "answer": "Jerry",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0130",
+    "question": "What is the name of the cat Miranda owns throughout the early seasons of the series?",
+    "options": ["Fatty", "Scout", "Butterball", "Felix"],
+    "answer": "Fatty",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0087",
+    "question": "Which iconic shoe designer is Carrie's personal favorite and frequently mentioned?",
+    "options": ["Manolo Blahnik", "Christian Louboutin", "Jimmy Choo", "Steve Madden"],
+    "answer": "Manolo Blahnik",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0088",
+    "question": "What kind of pet does Miranda get to keep her company while she is single in the early seasons?",
+    "options": ["A cat", "A dog", "A fish", "A turtle"],
+    "answer": "A cat",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0092",
+    "question": "Which character famously said, 'I love you, but I love me more'?",
+    "options": ["Samantha Jones", "Carrie Bradshaw", "Miranda Hobbes", "Charlotte York"],
+    "answer": "Samantha Jones",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-med-0094",
+    "question": "What is the name of the drink the four women are most famous for ordering?",
+    "options": ["Cosmopolitan", "Martini", "Appletini", "Manhattan"],
+    "answer": "Cosmopolitan",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0099",
+    "question": "What is the name of the Russian artist's daughter whom Carrie meets in Paris?",
+    "options": ["Chloé", "Svetlana", "Natasha", "Mila"],
+    "answer": "Chloé",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0108",
+    "question": "What is the occupation of Robert Lease, who dates Miranda after her split from Steve?",
+    "options": ["Doctor", "Lawyer", "Accountant", "Real estate agent"],
+    "answer": "Doctor",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0129",
+    "question": "Which professional sports team did Miranda’s boyfriend, Dr. Robert Lease, work for as the head of sports medicine?",
+    "options": ["New York Knicks", "New York Yankees", "New York Mets", "New York Rangers"],
+    "answer": "New York Knicks",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0111",
+    "question": "Which bakery in New York City became world-famous after being featured in the show?",
+    "options": ["Magnolia Bakery", "Levain Bakery", "Dominique Ansel", "Milk Bar"],
+    "answer": "Magnolia Bakery",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-med-0113",
+    "question": "How does Lexi Featherston die?",
+    "options": ["Falling out of a window", "Car accident", "Heart attack", "Overdose"],
+    "answer": "Falling out of a window",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-med-0114",
+    "question": "What is the name of the man who breaks up with Carrie via a Post-it note?",
+    "options": ["Jack Berger", "Aidan Shaw", "Bill Kelley", "Vaughn Wysel"],
+    "answer": "Jack Berger",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0115",
+    "question": "What is the nickname given to the man Samantha dates who is a Wall street guru with bad breath?",
+    "options": ["The Turtle", "The Badger", "The Shark", "The Dingo"],
+    "answer": "The Turtle",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0117",
+    "question": "What is the name of Carrie´s friend who and ditched her wild ways for a life in the suburbs?",
+    "options": ["Susan Sharon", "Natasha", "Nina Katz", "Laney Berlin"],
+    "answer": "Laney Berlin",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0119",
+    "question": "What is the name of the model that steps over Carrie on the runway?",
+    "options": ["Heidi Klum", "Tyra Banks", "Gisele Bündchen", "Naomi Campbell"],
+    "answer": "Heidi Klum",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0121",
+    "question": "What does Carrie lose in Paris that causes her to feel disconnected from her identity?",
+    "options": ["Her necklace", "Her passport", "Her wristwatch", "Her favorite shoes"],
+    "answer": "Her necklace",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0122",
+    "question": "What is the name of the actor who played the 'Shortcomings' writer Vaughn Wysel?",
+    "options": ["Justin Theroux", "Bradley Cooper", "Jon Bon Jovi", "David Duchovny"],
+    "answer": "Justin Theroux",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-med-0124",
+    "question": "What is the name of the 'New Age' musician who dates Carrie?",
+    "options": ["Seth", "Jake", "Sam", "Mark"],
+    "answer": "Seth",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0136",
+    "question": "Where does Charlotte first meet her second husband, Harry Goldenblatt?",
+    "options": ["At her divorce proceedings", "At an art gallery", "At a synagogue", "Through a blind date"],
+    "answer": "At her divorce proceedings",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0141",
+    "question": "What specific type of dog is Charlotte's beloved pet?",
+    "options": ["Cavalier King Charles Spaniel", "French Bulldog", "Pomeranian", "Yorkshire Terrier"],
+    "answer": "Cavalier King Charles Spaniel",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-med-0151",
+    "question": "What exactly was written on the infamous Post-it note that Jack Berger left for Carrie to end their relationship?",
+    "options": [
+      "I'm sorry. I can't. Don't hate me.",
+      "I'm sorry. I can't. I'm leaving.",
+      "It's over. I'm sorry. Don't hate me.",
+      "I'm sorry. I can't. It's not you."
+    ],
+    "answer": "I'm sorry. I can't. Don't hate me.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0144",
+    "question": "What is the name of Samantha's younger, actor boyfriend who eventually becomes a major movie star?",
+    "options": ["Smith Jerrod", "Richard Wright", "James", "Tom"],
+    "answer": "Smith Jerrod",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0152",
+    "question": "What is the name of the high-end department store where Carrie takes Charlotte to 'find a man' but ends up being 'shoe-shamed'?",
+    "options": ["Barneys New York", "Bergdorf Goodman", "Saks Fifth Avenue", "Bloomingdale's"],
+    "answer": "Barneys New York",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0155",
+    "question": "In the episode 'The Post-it Always Sticks Twice', what kind of 'illegal' substance is Carrie caught with by a police officer?",
+    "options": ["Marijuana", "Cocaine", "Ecstasy", "Mushrooms"],
+    "answer": "Marijuana",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-med-0156",
+    "question": "What is the name of the 'modelizer' who dates Carrie briefly and records their sexual encounter?",
+    "options": ["Barkley", "Derek", "Gilles", "Stefan"],
+    "answer": "Barkley",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-med-0157",
+    "question": "What is the name of the 'power lesbian' who Charlotte briefly joins a social circle with in Season 4?",
+    "options": ["Claire", "Maria", "Victoria", "Sloane"],
+    "answer": "Claire",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0158",
+    "question": "Which character famously said, 'Maybe we can be each other's soulmates'?",
+    "options": ["Charlotte York", "Carrie Bradshaw", "Miranda Hobbes", "Samantha Jones"],
+    "answer": "Charlotte York",
+    "difficulty": "medium"
+  },
+  {
+    "id": "satc-med-0171",
+    "question": "In the first movie, what city do the girls travel to for Carrie’s 'non-honeymoon'?",
+    "options": ["Mexico City", "Abu Dhabi", "Paris", "London"],
+    "answer": "Mexico City",
+    "difficulty": "medium"
+  },
+
+  {
+    "id": "satc-med-0126",
+    "question": "What is the name of the hotel in Paris where Carrie stays with Aleksandr Petrovsky?",
+    "options": ["Hôtel Plaza Athénée", "The Ritz", "Hôtel de Crillon", "Le Bristol"],
+    "answer": "Hôtel Plaza Athénée",
+    "difficulty": "hard"
+  },
+  {
+    "id": "satc-med-0127",
+    "question": "What is the name of the woman Samantha dates briefly in Season 4?",
+    "options": ["Maria", "Dawn", "Claire", "Victoria"],
+    "answer": "Maria",
+    "difficulty": "medium"
+  }
+]
+
+
+
