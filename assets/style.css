@@ -855,3 +855,17 @@ a {
   font-family: Georgia, "Times New Roman", serif;
   font-style: italic;
 }
+
+.result-tier {
+  margin-top: 8px;
+  color: var(--muted-text);
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.theme-question-count {
+  margin: 10px 0 16px;
+  color: var(--link-accent);
+  font-size: 14px;
+  font-weight: 600;
+}

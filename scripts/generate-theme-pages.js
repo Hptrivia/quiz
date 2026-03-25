@@ -65,6 +65,20 @@ function getSampleQuestions(questionFilePath) {
   }
 }
 
+function getTotalQuestions(questionFilePath) {
+  try {
+    const fullPath = path.join(rootDir, questionFilePath);
+    if (!fs.existsSync(fullPath)) return 0;
+
+    const questions = JSON.parse(fs.readFileSync(fullPath, "utf8"));
+    if (!Array.isArray(questions)) return 0;
+
+    return questions.length;
+  } catch (err) {
+    return 0;
+  }
+}
+
 function buildThemePage(theme, hasEpisodeMode, sampleQuestions = []) {
   const rawTitle = theme.title || "";
   const rawDescription = theme.description || "";
@@ -76,6 +90,10 @@ function buildThemePage(theme, hasEpisodeMode, sampleQuestions = []) {
   const slug = escapeHtml(rawSlug);
   const coverageText = escapeHtml(rawSeoIntro || getThemeCoverageText(theme));
   const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
+  const totalQuestions = getTotalQuestions(theme.questionFile);
+  const totalQuestionsText = totalQuestions > 0
+    ? `${totalQuestions} questions across multiple rounds`
+    : "";
 
   const episodeButton = hasEpisodeMode
     ? `
@@ -140,6 +158,7 @@ function buildThemePage(theme, hasEpisodeMode, sampleQuestions = []) {
       <p>${description}</p>
       <p>${coverageText}</p>
       <p>${bestModeText}</p>
+      ${totalQuestionsText ? `<p class="theme-question-count">${escapeHtml(totalQuestionsText)}</p>` : ""}
       ${sampleQuestionsHtml}
 
       <div class="grid">
