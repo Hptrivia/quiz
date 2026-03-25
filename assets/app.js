@@ -300,6 +300,21 @@ let quizState = {
   score: 0,
   selectedAnswer: null
 };
+function getMarathonTier(score, total) {
+  if (!total || total <= 0) return "";
+
+  const pct = (score / total) * 100;
+
+  if (pct >= 95) {
+    return "🏆 SUPERFAN! You basically know this show by heart.";
+  } else if (pct >= 60) {
+    return "🎬 True Fan. You know this show really well, but you are not a SUPERFAN.";
+  } else if (pct >= 40) {
+    return "📺 Casual Viewer. Not bad, but a rewatch wouldn’t hurt.";
+  } else {
+    return "👀 Rewatch time! Looks like you need another rewatch.";
+  }
+}
 
 async function renderPlayPage() {
   const slug = getParam("theme");
@@ -390,29 +405,32 @@ btn.addEventListener("click", () => {
     });
   }
 
-  function renderResult() {
-    document.getElementById("quizBox").style.display = "none";
-    resultBox.style.display = "block";
-    resultBox.classList.remove("result-anim");
-    void resultBox.offsetWidth;
-    resultBox.classList.add("result-anim");
+function renderResult() {
+  document.getElementById("quizBox").style.display = "none";
+  resultBox.style.display = "block";
+  resultBox.classList.remove("result-anim");
+  void resultBox.offsetWidth;
+  resultBox.classList.add("result-anim");
 
-    const hasNextPage = safePage < totalPages;
+  const hasNextPage = safePage < totalPages;
+  const tierText = getMarathonTier(quizState.score, quizState.questions.length);
 
   resultBox.innerHTML = `
     <h2>Quiz Complete</h2>
     <p>Your score: ${quizState.score} / ${quizState.questions.length}</p>
+    <p class="result-tier">${tierText}</p>
     <div class="cta-row">
       ${hasNextPage ? `<a class="primary-btn" href="play.html?theme=${theme.slug}&page=${safePage + 1}">More Questions</a>` : ""}
       <a class="secondary-btn" href="contact.html">Report a Question</a>
     </div>
   `;
-    setTimeout(() => {
-  if (typeof showInstallCard === "function") {
-    showInstallCard();
-  }
-}, 800);
-  }
+
+  setTimeout(() => {
+    if (typeof showInstallCard === "function") {
+      showInstallCard();
+    }
+  }, 800);
+}
 
 submitBtn.addEventListener("click", () => {
   if (!quizState.selectedAnswer) return;
