@@ -32,6 +32,15 @@ async function renderChallengePage() {
     buyPackUrl = "https://ko-fi.com/triviaking/shop";
   }
 
+  let affiliateProduct = null;
+
+try {
+  const affiliateLinks = await fetchJSON("data/affiliate_links.json");
+  affiliateProduct = affiliateLinks[theme.title] || null;
+} catch (e) {
+  affiliateProduct = null;
+}
+
   const ROUND_SIZE = 10;
   const rawRound = parseInt(getParam("round") || "1", 10);
   const currentRound = Number.isNaN(rawRound) || rawRound < 1 ? 1 : rawRound;
@@ -90,29 +99,39 @@ btn.addEventListener("click", () => {
     });
   }
 
-  function renderResult() {
-    quizBox.style.display = "none";
-    resultBox.style.display = "block";
-    resultBox.classList.remove("result-anim");
-    void resultBox.offsetWidth;
-    resultBox.classList.add("result-anim");
+ function renderResult() {
+  quizBox.style.display = "none";
+  resultBox.style.display = "block";
+  resultBox.classList.remove("result-anim");
+  void resultBox.offsetWidth;
+  resultBox.classList.add("result-anim");
 
-    const hasNextRound = safeRound < totalRounds;
-    const roundLink = `${window.location.origin}${window.location.pathname}?theme=${encodeURIComponent(theme.slug)}&round=${safeRound}`;
+  const hasNextRound = safeRound < totalRounds;
+  const roundLink = `${window.location.origin}${window.location.pathname}?theme=${encodeURIComponent(theme.slug)}&round=${safeRound}`;
 
-    resultBox.innerHTML = `
-      <h2>Round ${safeRound} Complete</h2>
-      <p>Your score: ${state.score} / ${state.questions.length}</p>
-      <p class="challenge-share-text">Send this round link to a friend to play the same 10 questions.</p>
-      <div class="challenge-link-box">${roundLink}</div>
-      <div class="cta-row">
-        ${hasNextRound ? `<a class="primary-btn" href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}">Next Round</a>` : ""}
-        <a class="secondary-btn" href="${buyPackUrl}" target="_blank" rel="noopener noreferrer">Buy ${theme.title} Pack</a>
-        <a class="secondary-btn" href="contact.html">Report a Question</a>
-      </div>
-    `;
+  const affiliateHtml = affiliateProduct ? `
+    <div class="affiliate-box">
+      <p class="affiliate-label">${affiliateProduct.label || "Recommended for Fans"}</p>
+      <a class="affiliate-card" href="${affiliateProduct.url}" target="_blank" rel="noopener noreferrer sponsored">
+        <strong>${affiliateProduct.title}</strong>
+      </a>
+      <p class="affiliate-disclaimer">
+        Affiliate link — I may earn a commission from qualifying purchases.
+      </p>
+    </div>
+  ` : "";
 
-  }
+  resultBox.innerHTML = `
+    <h2>Round ${safeRound} Complete</h2>
+    <p>Your score: ${state.score} / ${state.questions.length}</p>
+    <p class="challenge-share-text">Send this round link to a friend to play the same 10 questions.</p>
+    <div class="challenge-link-box">${roundLink}</div>
+    <div class="cta-row">
+      ${hasNextRound ? `<a class="primary-btn" href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}">Next Round</a>` : ""}
+    </div>
+    ${affiliateHtml}
+  `;
+}
 
 submitBtn.addEventListener("click", () => {
   if (!state.selectedAnswer) return;

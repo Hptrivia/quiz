@@ -112,10 +112,8 @@ function shuffleQuestionOptions(question) {
       <p>Your score: ${state.score}</p>
       <div class="cta-row">
         <a class="primary-btn" href="survival.html?theme=${theme.slug}">Play Again</a>
-        <a class="secondary-btn" href="quiz.html?theme=${theme.slug}">Back to Theme</a>
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
-      <p class="survival-coming-soon">Leaderboard submission can be added later here.</p>
     `;
         setTimeout(() => {
   if (typeof showInstallCard === "function") {

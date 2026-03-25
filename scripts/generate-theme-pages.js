@@ -6,7 +6,6 @@ const themesPath = path.join(rootDir, "data", "themes.json");
 const episodeThemesPath = path.join(rootDir, "data", "episode_themes.json");
 const outputDir = path.join(rootDir, "themes");
 const sitemapPath = path.join(rootDir, "sitemap.xml");
-
 const SITE_URL = "https://triviagauntlet.app";
 
 function escapeHtml(str = "") {
@@ -24,16 +23,77 @@ function ensureDir(dir) {
   }
 }
 
-function buildThemePage(theme, hasEpisodeMode) {
-  const title = escapeHtml(theme.title);
-  const description = escapeHtml(theme.description || "");
-  const slug = escapeHtml(theme.slug);
+function getThemeCoverageText(theme) {
+  const category = theme.category || "";
+  const title = theme.title || "this theme";
+
+  const map = {
+    "TV/Series": `This quiz is built for fans who remember both the major moments and the smaller details from ${title}, including character dynamics, memorable scenes, recurring jokes, quotes, and storylines across the series.`,
+    "Games": `This quiz is built for players who know more than just the basics of ${title}, mixing characters, story moments, bosses, gameplay details, locations, weapons, and stronger fan-level knowledge.`,
+    "Sports": `This quiz mixes well-known facts with deeper fan knowledge from ${title}, including players, teams, championships, records, rivalries, and major moments connected to the sport.`,
+    "Education": `This quiz is designed to mix quick recall with broader knowledge in ${title}, covering important ideas, facts, terms, and subject-specific details in a faster quiz format.`,
+    "General": `This quiz is designed as a broader themed round on ${title}, mixing familiar facts, harder details, and quick-recall knowledge instead of focusing on only one narrow angle.`,
+    "Books": `This quiz is aimed at readers and fans who know the world of ${title} beyond the surface, mixing characters, settings, themes, major events, and more detailed source-material knowledge.`,
+    "Countries": `This quiz works as a broader knowledge round on ${title}, mixing geography, cities, culture, history, landmarks, famous people, and national identity rather than just one narrow topic.`
+  };
+
+  return map[category] || `This quiz is designed to test a mix of straightforward trivia, fan knowledge, and harder details linked to ${title}.`;
+}
+
+function getBestModeText(hasEpisodeMode) {
+  if (hasEpisodeMode) {
+    return "Marathon Mode is best for a longer run with bigger rounds, while Challenge Mode works better for shorter 10-question sessions. Episode Mode is also available for selected themes where questions can be played episode by episode.";
+  }
+
+  return "Marathon Mode is best for a longer run with bigger rounds, while Challenge Mode works better for shorter 10-question sessions.";
+}
+
+function getSampleQuestions(questionFilePath) {
+  try {
+    const fullPath = path.join(rootDir, questionFilePath);
+    if (!fs.existsSync(fullPath)) return [];
+
+    const questions = JSON.parse(fs.readFileSync(fullPath, "utf8"));
+    if (!Array.isArray(questions)) return [];
+
+    return questions
+      .map((q) => (q && q.question ? String(q.question).trim() : ""))
+      .filter(Boolean)
+      .slice(0, 5);
+  } catch (err) {
+    return [];
+  }
+}
+
+function buildThemePage(theme, hasEpisodeMode, sampleQuestions = []) {
+  const rawTitle = theme.title || "";
+  const rawDescription = theme.description || "";
+  const rawSlug = theme.slug || "";
+  const rawSeoIntro = theme.seoIntro || "";
+
+  const title = escapeHtml(rawTitle);
+  const description = escapeHtml(rawDescription);
+  const slug = escapeHtml(rawSlug);
+  const coverageText = escapeHtml(rawSeoIntro || getThemeCoverageText(theme));
+  const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
 
   const episodeButton = hasEpisodeMode
     ? `
         <a class="card" href="../episode.html?theme=${slug}&episode=1">
           <h3>Episode Mode</h3>
+          <p>Episode-by-episode questions</p>
         </a>
+      `
+    : "";
+
+  const sampleQuestionsHtml = sampleQuestions.length
+    ? `
+        <div class="theme-sample-questions">
+          <h2>Sample Questions</h2>
+          <ul>
+            ${sampleQuestions.map((q) => `<li>${escapeHtml(q)}</li>`).join("")}
+          </ul>
+        </div>
       `
     : "";
 
@@ -66,6 +126,8 @@ function buildThemePage(theme, hasEpisodeMode) {
       <a href="../index.html" class="back-link">⌂ Home</a>
     </div>
 
+
+
     <div class="theme-search-wrap">
       <div class="search-wrap">
         <input id="themeSearchInput" class="theme-search-input" type="text" placeholder="Search themes..." autocomplete="off" />
@@ -76,29 +138,32 @@ function buildThemePage(theme, hasEpisodeMode) {
     <section class="panel">
       <h1>${title}</h1>
       <p>${description}</p>
+      <p>${coverageText}</p>
+      <p>${bestModeText}</p>
+      ${sampleQuestionsHtml}
 
       <div class="grid">
         <a class="card" href="../play.html?theme=${slug}">
           <h3>Marathon Mode</h3>
-        </a>
-
-        <a class="card" href="../survival.html?theme=${slug}">
-          <h3>Survival Mode</h3>
+          <p>30-question rounds</p>
         </a>
 
         <a class="card" href="../challenge.html?theme=${slug}&round=1">
           <h3>Challenge Mode</h3>
+          <p>10-question quick rounds</p>
+        </a>
+
+        <a class="card" href="../survival.html?theme=${slug}">
+          <h3>Survival Mode</h3>
+          <p>One mistake and the run ends</p>
         </a>
 
         ${episodeButton}
 
         <a class="card" href="../wordle.html?theme=${slug}&page=1">
           <h3>Wordle</h3>
+          <p>Guess themed words</p>
         </a>
-
-        <div class="card">
-          <h3>Leaderboard</h3>
-        </div>
       </div>
     </section>
   </main>
@@ -211,7 +276,7 @@ function main() {
   ];
 
   themes.forEach((theme) => {
-    if (!theme.slug || !theme.title) return;
+    if (!theme.slug || !theme.title || !theme.questionFile) return;
 
     if (seen.has(theme.slug)) {
       console.warn(`Duplicate slug detected: ${theme.slug} — later file will overwrite earlier one.`);
@@ -219,7 +284,8 @@ function main() {
     seen.add(theme.slug);
 
     const hasEpisodeMode = Boolean(episodeThemes[theme.slug]);
-    const html = buildThemePage(theme, hasEpisodeMode);
+    const sampleQuestions = getSampleQuestions(theme.questionFile);
+    const html = buildThemePage(theme, hasEpisodeMode, sampleQuestions);
     const outPath = path.join(outputDir, `${theme.slug}.html`);
 
     fs.writeFileSync(outPath, html, "utf8");

@@ -165,9 +165,53 @@ async function renderCategoryPage() {
   const themes = await loadThemes();
   const pageTitle = document.getElementById("categoryTitle");
   const themeList = document.getElementById("categoryThemes");
+  const introEl = document.getElementById("categoryIntro");
 
   pageTitle.textContent = categoryName || "Category";
   themeList.innerHTML = "";
+
+  const categoryIntroMap = {
+  "TV/Series": [
+    "This category includes trivia quizzes based on sitcoms, fantasy dramas, teen shows, anime, and other popular TV series. Each theme is playable in multiple ways, including Marathon Mode for longer rounds and Challenge Mode for quicker 10-question sessions.",
+    "Some TV themes also include Episode Mode, where questions are grouped by episode for a more story-based quiz experience. Use this page to browse shows by fandom and jump into the mode that fits how you want to play."
+  ],
+  "Games": [
+    "This category focuses on video game trivia across action, RPG, horror, open-world, and classic franchises. Quizzes cover characters, bosses, weapons, lore, story moments, mechanics, and other fan knowledge from major game series.",
+    "Game themes work especially well in Marathon and Challenge Mode, depending on whether you want a deeper run or a shorter score-based round. This page is built for players looking for focused game trivia by title."
+  ],
+  "Sports": [
+    "This category includes sports trivia on basketball, football, boxing, MMA, wrestling, and more. Themes cover famous players, teams, championships, records, and major moments across different sports.",
+    "If you want a quick test, Challenge Mode is the fastest way to play. If you want a longer session, Marathon Mode gives you larger rounds with more questions per page."
+  ],
+  "Education": [
+    "This category includes educational trivia on language, spelling, math, science, technology, and related topics. These quizzes are designed to mix straightforward knowledge with faster recall questions across different subjects.",
+    "Some themes suit quick challenge rounds, while others work better as longer marathon sessions. Use this category to play through broader knowledge areas in a more quiz-focused format."
+  ],
+  "General": [
+    "This category includes mixed trivia themes covering geography, history, music, movies, world facts, odd-one-out rounds, and other broad quiz topics. It is designed for players who want variety rather than one single fandom.",
+    "These themes are useful for casual quiz sessions, faster challenge rounds, and broad general knowledge play. Browse the list below to jump into a topic and test what you know."
+  ],
+  "Books": [
+    "This category includes trivia based on major books, fantasy franchises, and religious texts. Questions cover characters, stories, settings, themes, and major details from the source material.",
+    "These quizzes are built for readers and fans who want more than surface-level recall. Marathon Mode is usually the best fit if you want a fuller run through a book-based theme."
+  ],
+  "Countries": [
+    "This category focuses on country-based trivia covering geography, cities, culture, history, sport, and national identity. Each theme is built around a specific country and can be played in multiple quiz modes.",
+    "These pages are ideal for players who want broad knowledge rounds rather than one single show or game franchise. Use the themes below to jump into a country and test your score."
+  ],
+  "Newly Added": [
+    "This section highlights the latest trivia themes added to the site across TV, games, countries, sports, education, and general knowledge.",
+    "Use it to find new quizzes quickly and jump into recently added themes before browsing the full categories."
+  ]
+};
+
+if (introEl) {
+  const introParts = categoryIntroMap[categoryName] || [
+    "Browse trivia themes in this category and choose the mode that fits how you want to play."
+  ];
+
+  introEl.innerHTML = introParts.map(text => `<p>${text}</p>`).join("");
+}
 
   let filtered = [];
 
@@ -233,8 +277,8 @@ async function renderQuizPage() {
   desc.textContent = theme.description;
   updateRemoveAdsFooter(theme.slug, "normal");
   playBtn.href = `play.html?theme=${theme.slug}`;
-  survivalBtn.href = `survival.html?theme=${theme.slug}`;
   challengeBtn.href = `challenge.html?theme=${theme.slug}&round=1`;
+  survivalBtn.href = `survival.html?theme=${theme.slug}`;
   wordleBtn.href = `wordle.html?theme=${theme.slug}`;
   try {
   const episodeThemes = await fetchJSON("data/episode_themes.json");
@@ -360,7 +404,6 @@ btn.addEventListener("click", () => {
     <p>Your score: ${quizState.score} / ${quizState.questions.length}</p>
     <div class="cta-row">
       ${hasNextPage ? `<a class="primary-btn" href="play.html?theme=${theme.slug}&page=${safePage + 1}">More Questions</a>` : ""}
-      <a class="secondary-btn" href="${buyPackUrl}" target="_blank" rel="noopener noreferrer">Buy ${theme.title} Pack</a>
       <a class="secondary-btn" href="contact.html">Report a Question</a>
     </div>
   `;

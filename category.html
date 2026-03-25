@@ -19,10 +19,14 @@
   <main class="container">
     <a href="index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
 
-    <section>
-      <h1 id="categoryTitle">Category</h1>
-      <div id="categoryThemes" class="grid"></div>
-    </section>
+<section class="panel category-intro-panel">
+  <h1 id="categoryTitle">Category</h1>
+  <div id="categoryIntro" class="category-intro-text"></div>
+</section>
+
+<section>
+  <div id="categoryThemes" class="grid"></div>
+</section>
   </main>
 
   <footer class="site-footer">
