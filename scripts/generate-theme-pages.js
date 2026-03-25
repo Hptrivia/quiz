@@ -59,6 +59,7 @@ function getSampleQuestions(questionFilePath) {
     return questions
       .map((q) => (q && q.question ? String(q.question).trim() : ""))
       .filter(Boolean)
+      .sort(() => Math.random() - 0.5)
       .slice(0, 5);
   } catch (err) {
     return [];
