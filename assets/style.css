@@ -895,3 +895,11 @@ a {
 .blog-post ul {
   padding-left: 20px;
 }
+
+.blog-list .card {
+  border-top: 3px solid rgba(96, 165, 250, 0.55);
+}
+
+.blog-list .card p {
+  font-style: italic;
+}
