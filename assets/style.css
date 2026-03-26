@@ -869,3 +869,29 @@ a {
   font-size: 14px;
   font-weight: 600;
 }
+
+.blog-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.blog-post h1 {
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+.blog-post h2 {
+  margin-top: 24px;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.blog-post p,
+.blog-post li {
+  line-height: 1.6;
+}
+
+.blog-post ul {
+  padding-left: 20px;
+}
