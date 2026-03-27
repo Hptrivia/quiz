@@ -95,6 +95,9 @@ function buildThemePage(theme, hasEpisodeMode, sampleQuestions = []) {
   const totalQuestionsText = totalQuestions > 0
     ? `${totalQuestions} questions across multiple rounds`
     : "";
+  const metaDescription = totalQuestions > 0
+    ? `Play ${totalQuestions}+ ${rawTitle} trivia questions on Trivia Gauntlet. Test your knowledge in Marathon, Challenge, Survival, and more.`
+    : `Play ${rawTitle} trivia questions on Trivia Gauntlet. Test your knowledge in multiple quiz modes.`;
 
   const episodeButton = hasEpisodeMode
     ? `
@@ -121,8 +124,8 @@ function buildThemePage(theme, hasEpisodeMode, sampleQuestions = []) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>${title} Trivia Quiz | Trivia Gauntlet</title>
-  <meta name="description" content="${description}" />
+<title>${title} Trivia Questions | Trivia Gauntlet</title>
+<meta name="description" content="${escapeHtml(metaDescription)}" />
   <link rel="canonical" href="${SITE_URL}/themes/${slug}.html" />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2544021252380572"
      crossorigin="anonymous"></script>
@@ -155,11 +158,11 @@ function buildThemePage(theme, hasEpisodeMode, sampleQuestions = []) {
     </div>
 
     <section class="panel">
-      <h1>${title}</h1>
+      <h1>${title} Trivia Questions</h1>
+      ${totalQuestionsText ? `<p class="theme-question-count">${escapeHtml(totalQuestionsText)}</p>` : ""}
       <p>${description}</p>
       <p>${coverageText}</p>
-      <p>${bestModeText}</p>
-      ${totalQuestionsText ? `<p class="theme-question-count">${escapeHtml(totalQuestionsText)}</p>` : ""}
+      <p>${bestModeText}</p> 
       ${sampleQuestionsHtml}
 
       <div class="grid">
