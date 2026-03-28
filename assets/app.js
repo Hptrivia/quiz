@@ -421,6 +421,7 @@ function renderResult() {
     <p class="result-tier">${tierText}</p>
     <div class="cta-row">
       ${hasNextPage ? `<a class="primary-btn" href="play.html?theme=${theme.slug}&page=${safePage + 1}">More Questions</a>` : ""}
+      <a class="secondary-btn" href="${buyPackUrl}" target="_blank" rel="noopener noreferrer">Ad-Free Play + Extras</a>
       <a class="secondary-btn" href="contact.html">Report a Question</a>
     </div>
   `;
