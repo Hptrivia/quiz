@@ -137,7 +137,7 @@ function buildThemePage(theme, hasEpisodeMode, sampleQuestions = []) {
     gtag('config', 'G-E6BY9F2ZDT');
   </script>
   <link rel="manifest" href="/manifest.json" />
-  <link rel="apple-touch-icon" href="/assets/icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="/assets/icon-192.png" />
   <meta name="theme-color" content="#0f172a" />
   <link rel="stylesheet" href="../assets/style.css" />
 </head>
