@@ -183,6 +183,11 @@ function buildThemePage(theme, hasEpisodeMode, sampleQuestions = []) {
 
         ${episodeButton}
 
+        <a class="card" href="../remove-ads.html?theme=${slug}&mode=normal">
+          <h3>Ad-Free + Extras</h3>
+          <p>Printables, answer sheets, and bonus files</p>
+        </a>
+
         <a class="card" href="../wordle.html?theme=${slug}&page=1">
           <h3>Wordle</h3>
           <p>Guess themed words</p>
