@@ -1,0 +1,706 @@
+[
+  {
+    "id": "house-001",
+    "difficulty": "easy",
+    "question": "What is Gregory House’s medical specialty?",
+    "options": ["Neurology", "Diagnostic Medicine", "Cardiology", "Oncology"],
+    "answer": "Diagnostic Medicine"
+  },
+  {
+    "id": "house-002",
+    "difficulty": "easy",
+    "question": "What is the name of the hospital where the show takes place?",
+    "options": ["Princeton-Plainsboro Teaching Hospital", "Mayo Clinic", "Sacred Heart", "Grey Sloan Memorial"],
+    "answer": "Princeton-Plainsboro Teaching Hospital"
+  },
+  {
+    "id": "house-003",
+    "difficulty": "easy",
+    "question": "What is House’s primary addiction throughout the series?",
+    "options": ["Alcohol", "Cocaine", "Vicodin", "Morphine"],
+    "answer": "Vicodin"
+  },
+  {
+    "id": "house-004",
+    "difficulty": "easy",
+    "question": "Which musical instrument does House frequently play?",
+    "options": ["Violin", "Piano", "Drums", "Saxophone"],
+    "answer": "Piano"
+  },
+  {
+    "id": "house-005",
+    "difficulty": "easy",
+    "question": "What is the name of House's only best friend?",
+    "options": ["Eric Foreman", "Robert Chase", "James Wilson", "Chris Taub"],
+    "answer": "James Wilson"
+  },
+  {
+    "id": "house-006",
+    "difficulty": "easy",
+    "question": "What does House use to help him walk?",
+    "options": ["A crutch", "A wheelchair", "A cane", "A walker"],
+    "answer": "A cane"
+  },
+  {
+    "id": "house-008",
+    "difficulty": "easy",
+    "question": "What is James Wilson’s medical specialty?",
+    "options": ["Oncology", "Pathology", "Radiology", "Pediatrics"],
+    "answer": "Oncology"
+  },
+  {
+    "id": "house-009",
+    "difficulty": "easy",
+    "question": "Who is the Dean of Medicine for the first seven seasons?",
+    "options": ["Stacy Warner", "Lisa Cuddy", "Martha Masters", "Amber Volakis"],
+    "answer": "Lisa Cuddy"
+  },
+  {
+    "id": "house-010",
+    "difficulty": "easy",
+    "question": "What disease does House often joke that it's 'never'?",
+    "options": ["Scleroderma", "Cancer", "Lupus", "Sarcoidosis"],
+    "answer": "Lupus"
+  },
+  {
+    "id": "house-079",
+    "difficulty": "medium",
+    "question": "What was the name of the hospital's lawyer in season 1 and 2?",
+    "options": ["Stacy Warner", "Douglas Richardson", "Katie Barber", "Martha Kibler"],
+    "answer": "Stacy Warner"
+  },
+  {
+    "id": "house-099",
+    "difficulty": "hard",
+    "question": "In what season did House and Cuddy officially start dating?",
+    "options": ["Season 5", "Season 6", "Season 7", "Season 8"],
+    "answer": "Season 7"
+  },
+  {
+    "id": "house-101",
+    "difficulty": "hard",
+    "question": "In which season finale does House drive his car into Cuddy’s house?",
+    "options": ["Season 5", "Season 6", "Season 7", "Season 8"],
+    "answer": "Season 7"
+  },
+  {
+    "id": "house-150",
+    "difficulty": "hard",
+    "question": "In the series finale, which 'ghost' is the first to appear to House in the burning building?",
+    "options": ["Kutner", "Amber", "Stacy", "Cameron"],
+    "answer": "Kutner"
+  },
+  {
+    "id": "house-154",
+    "difficulty": "hard",
+    "question": "Which actor plays Dr. Darryl Nolan, House’s therapist at Mayfield Psychiatric Hospital?",
+    "options": ["Andre Braugher", "Giancarlo Esposito", "Forest Whitaker", "Laurence Fishburne"],
+    "answer": "Andre Braugher"
+  },
+  {
+    "id": "house-138",
+    "difficulty": "hard",
+    "question": "What is the name of the psychiatrist House sees after leaving Mayfield?",
+    "options": ["Dr. Nolan", "Dr. Arlene", "Dr. Simpson", "Dr. Kroger"],
+    "answer": "Dr. Nolan"
+  },
+  {
+    "id": "house-148",
+    "difficulty": "hard",
+    "question": "In 'The Social Contract', what was the patient's condition that made him lose his filter?",
+    "options": ["Frontotemporal Dementia", "Tourette's", "Doege-Potter Syndrome", "None of these"],
+    "answer": "Doege-Potter Syndrome"
+  },
+  {
+    "id": "house-122",
+    "difficulty": "hard",
+    "question": "What is the name of Wilson’s third wife?",
+    "options": ["Bonnie", "Julie", "Sarah", "Amber"],
+    "answer": "Julie"
+  },
+  {
+    "id": "house-135",
+    "difficulty": "hard",
+    "question": "What was the actual cause of the 'outbreak' in Season 2's 'Euphoria'?",
+    "options": ["Naegleria fowleri", "Smallpox", "Sappinia pedata", "Balamuthia mandrillaris"],
+    "answer": "Naegleria fowleri"
+  },
+  {
+    "id": "house-122",
+    "difficulty": "hard",
+    "question": "Which of these is not one of Wilson´s wifes?",
+    "options": ["Bonnie", "Julie", "Sam", "Amber"],
+    "answer": "Amber"
+  },
+  {
+    "id": "house-102",
+    "difficulty": "hard",
+    "question": "How long was House’s initial prison sentence for driving his car into Cuddy’s home?",
+    "options": ["Six months", "One year", "Two years", "Five years"],
+    "answer": "One year"
+  },
+  {
+    "id": "house-109",
+    "difficulty": "hard",
+    "question": "What was the name of the drug House tried to use to regrow his muscle in Season 7?",
+    "options": ["Compound CS-704 ", "K-77", "K-78", "Compound CS-804 "],
+    "answer": "Compound CS-804 "
+  },
+  {
+    "id": "house-103",
+    "difficulty": "hard",
+    "question": "How long did House actually spend in prison before being released on parole to Foreman?",
+    "options": ["One month", "Eight months", "Twelve months", "Six months"],
+    "answer": "Eight months"
+  },
+  {
+    "id": "house-092",
+    "difficulty": "hard",
+    "question": "How did Chase's father die?",
+    "options": ["Car accident", "Lung cancer", "Heart attack", "Suicide"],
+    "answer": "Lung cancer"
+  },
+  {
+    "id": "house-012",
+    "difficulty": "easy",
+    "question": "What is the nickname of Remy Hadley?",
+    "options": ["Thirteen", "Seven", "Nine", "Eleven"],
+    "answer": "Thirteen"
+  },
+  {
+    "id": "house-014",
+    "difficulty": "easy",
+    "question": "In which US state is the show set?",
+    "options": ["New York", "Pennsylvania", "New Jersey", "Connecticut"],
+    "answer": "New Jersey"
+  },
+  {
+    "id": "house-015",
+    "difficulty": "easy",
+    "question": "What is the name of the actor who plays Dr House?",
+    "options": ["Hugh Laurie", "Stephen Fry", "Benedict Cumberbatch", "Patrick Dempsey"],
+    "answer": "Hugh Laurie"
+  },
+  {
+    "id": "house-016",
+    "difficulty": "easy",
+    "question": "Why does House have a limp?",
+    "options": ["Car accident", "Muscle infarction", "Birth defect", "Sports injury"],
+    "answer": "Muscle infarction"
+  },
+  {
+    "id": "house-017",
+    "difficulty": "easy",
+    "question": "What kind of pet did House have?",
+    "options": ["A dog", "A cat", "A rat", "A lizard"],
+    "answer": "A rat"
+  },
+  {
+    "id": "house-018",
+    "difficulty": "easy",
+    "question": "How many doctors are usually on House’s primary diagnostic team?",
+    "options": ["Two", "Three", "Five", "Six"],
+    "answer": "Three"
+  },
+  {
+    "id": "house-019",
+    "difficulty": "easy",
+    "question": "What is the name of the neurologist on House’s original team?",
+    "options": ["Eric Foreman", "Robert Chase", "Allison Cameron", "Chris Taub"],
+    "answer": "Eric Foreman"
+  },
+  {
+    "id": "house-020",
+    "difficulty": "easy",
+    "question": "Which character did Allison Cameron marry?",
+    "options": ["House", "James Wilson", "Robert Chase", "Eric Foreman"],
+    "answer": "Robert Chase"
+  },
+  {
+    "id": "house-023",
+    "difficulty": "easy",
+    "question": "What is the name of the fictional soap opera House loves?",
+    "options": ["General Hospital", "Prescription Passion", "The Young and Restless", "Grey's Anatomy"],
+    "answer": "Prescription Passion"
+  },
+  {
+    "id": "house-026",
+    "difficulty": "easy",
+    "question": "What did House's father do for a living?",
+    "options": ["Doctor", "Marine Pilot", "Lawyer", "Professor"],
+    "answer": "Marine Pilot"
+  },
+  {
+    "id": "house-072",
+    "difficulty": "hard",
+    "question": "What is Wilson's middle name?",
+    "options": ["Evan", "James", "Edward", "Unknown"],
+    "answer": "Edward"
+  },
+  {
+    "id": "house-030",
+    "difficulty": "easy",
+    "question": "Which member of the team is an immunologist?",
+    "options": ["Eric Foreman", "Robert Chase", "Allison Cameron", "Chris Taub"],
+    "answer": "Allison Cameron"
+  },
+  {
+    "id": "house-032",
+    "difficulty": "hard",
+    "question": "What is the title of the show's theme song?",
+    "options": ["Teardrop", "Angel", "Protection", "Unfinished Sympathy"],
+    "answer": "Teardrop"
+  },
+  {
+    "id": "house-033",
+    "difficulty": "hard",
+    "question": "What is the name of the band that performs the theme song?",
+    "options": ["Portishead", "Massive Attack", "The xx", "Radiohead"],
+    "answer": "Massive Attack"
+  },
+  {
+    "id": "house-034",
+    "difficulty": "easy",
+    "question": "House’s character is based on which famous literary detective?",
+    "options": ["Hercule Poirot", "Sherlock Holmes", "Philip Marlowe", "Miss Marple"],
+    "answer": "Sherlock Holmes"
+  },
+  {
+    "id": "house-035",
+    "difficulty": "hard",
+    "question": "What is House apartment number?",
+    "options": ["221B", "21B", "222B", "22B"],
+    "answer": "221B"
+  },
+  {
+    "id": "house-063",
+    "difficulty": "hard",
+    "question": "What is the title of the series finale?",
+    "options": ["The End", "Everybody Dies", "Swan Song", "Last Breath"],
+    "answer": "Everybody Dies"
+  },
+  {
+    "id": "house-060",
+    "difficulty": "hard",
+    "question": "What was Dr. House’s mother’s name?",
+    "options": ["Blythe", "Martha", "Sarah", "Elizabeth"],
+    "answer": "Blythe"
+  },
+  {
+    "id": "house-073",
+    "difficulty": "hard",
+    "question": "In the Season 4 competition, how many candidates did House start with?",
+    "options": ["20", "40", "30", "50"],
+    "answer": "40"
+  },
+  {
+    "id": "house-036",
+    "difficulty": "easy",
+    "question": "Which character has Huntington’s Disease?",
+    "options": ["Allison Cameron", "Remy Hadley", "Chris Taub", "Lawrence Kutner"],
+    "answer": "Remy Hadley"
+  },
+  {
+    "id": "house-037",
+    "difficulty": "easy",
+    "question": "What is the name of the psychiatric hospital House enters at the end of Season 5?",
+    "options": ["Mayfield", "Arkham", "Shady Grove", "Briarcliff"],
+    "answer": "Mayfield"
+  },
+  {
+    "id": "house-039",
+    "difficulty": "easy",
+    "question": "How many seasons did House M.D. run for?",
+    "options": ["6", "7", "8", "9"],
+    "answer": "8"
+  },
+  {
+    "id": "house-040",
+    "difficulty": "easy",
+    "question": "Who replaces Cuddy as Dean of Medicine?",
+    "options": ["James Wilson", "Eric Foreman", "Robert Chase", "House"],
+    "answer": "Eric Foreman"
+  },
+  {
+    "id": "house-044",
+    "difficulty": "easy",
+    "question": "What is the name of Cuddy’s adopted daughter?",
+    "options": ["Rachel", "Sarah", "Emma", "Lily"],
+    "answer": "Rachel"
+  },
+  {
+    "id": "house-045",
+    "difficulty": "easy",
+    "question": "Which actor plays James Wilson?",
+    "options": ["Robert Sean Leonard", "Jesse Spencer", "Omar Epps", "Peter Jacobson"],
+    "answer": "Robert Sean Leonard"
+  },
+  {
+    "id": "house-049",
+    "difficulty": "easy",
+    "question": "Which character is an intensivist?",
+    "options": ["Robert Chase", "Eric Foreman", "Allison Cameron", "Lawrence Kutner"],
+    "answer": "Robert Chase"
+  },
+  {
+    "id": "house-050",
+    "difficulty": "hard",
+    "question": "What is the name of the very first patient in the Pilot episode?",
+    "options": ["Rebecca Adler", "John Doe", "Eve", "Sister Augustine"],
+    "answer": "Rebecca Adler"
+  },
+  {
+    "id": "house-051",
+    "difficulty": "medium",
+    "question": "What is the name of the billionaire who tried to take over the board and fire House in Season 1?",
+    "options": ["Edward Vogler", "Michael Tritter", "Christopher Pelant", "Jack McCoy"],
+    "answer": "Edward Vogler"
+  },
+  {
+    "id": "house-052",
+    "difficulty": "medium",
+    "question": "What was the name of the detective who harassed House for several episodes over his Vicodin use?",
+    "options": ["Michael Tritter", "Edward Vogler", "David Moriarty", "John Lucas"],
+    "answer": "Michael Tritter"
+  },
+  {
+    "id": "house-056",
+    "difficulty": "medium",
+    "question": "What was the cause of Amber Volakis’s death?",
+    "options": ["Heart attack", "Vicodin overdose", "Amantadine poisoning", "Lupus"],
+    "answer": "Amantadine poisoning"
+  },
+  {
+    "id": "house-060",
+    "difficulty": "medium",
+    "question": "What did Lawrence Kutner do before becoming a doctor that resulted in a Guinness World Record?",
+    "options": ["Eating hot dogs", "Crawling the longest distance", "Solving a Rubik's cube", "Longest time awake"],
+    "answer": "Crawling the longest distance"
+  },
+  {
+    "id": "house-062",
+    "difficulty": "hard",
+    "question": "What kind of cancer is Wilson diagnosed with in Season 8?",
+    "options": ["Thymoma", "Leukemia", "Lymphoma", "Prostate Cancer"],
+    "answer": "Thymoma"
+  },
+  {
+    "id": "house-063",
+    "difficulty": "medium",
+    "question": "Which medical school did House attend and was expelled from?",
+    "options": ["Johns Hopkins", "University of Michigan Medical School", "Harvard", "Princeton"],
+    "answer": "Johns Hopkins"
+  },
+  {
+    "id": "house-063",
+    "difficulty": "medium",
+    "question": "Which medical school did House get his medical degree?",
+    "options": ["Johns Hopkins", "University of Michigan Medical School", "Harvard", "Princeton"],
+    "answer": "University of Michigan Medical School"
+  },
+  {
+    "id": "house-065",
+    "difficulty": "hard",
+    "question": "In the episode 'Broken', who is House's roommate at the Psychiatric Hospital?",
+    "options": ["Juan", "Steve", "Mark", "Frank"],
+    "answer": "Juan"
+  },
+
+  {
+    "id": "house-074",
+    "difficulty": "medium",
+    "question": "What is the name of the Ukrainian woman House marries for a Green Card?",
+    "options": ["Dominika", "Svetlana", "Natasha", "Olga"],
+    "answer": "Dominika"
+  },
+  {
+    "id": "house-080",
+    "difficulty": "medium",
+    "question": "What is the name of the man who shoots House in the Season 2 finale?",
+    "options": ["Jack Moriarty", "Thomas Bell", "Michael Tritter", "Edward Vogler"],
+    "answer": "Jack Moriarty"
+  },
+  {
+    "id": "house-082",
+    "difficulty": "medium",
+    "question": "What is the name of Wilson's brother who went missing?",
+    "options": ["Danny", "Sam", "Bobby", "Joe"],
+    "answer": "Danny"
+  },
+  {
+    "id": "house-091",
+    "difficulty": "medium",
+    "question": "How many ex-wives did James Wilson have by the end of the show?",
+    "options": ["Two", "Three", "Four", "One"],
+    "answer": "Three"
+  },
+  {
+    "id": "house-easy-0012",
+    "question": "On which network did House originally air?",
+    "options": ["Fox", "NBC", "ABC", "CBS"],
+    "answer": "Fox",
+    "difficulty": "easy"
+  },
+  {
+    "id": "house-101",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a member of House’s original diagnostic team?",
+    "options": ["Eric Foreman", "Robert Chase", "Allison Cameron", "Chris Taub"],
+    "answer": "Chris Taub"
+  },
+  {
+    "id": "house-102",
+    "difficulty": "hard",
+    "question": "Which famous actor played the African dictator President Dibala in Season 6?",
+    "options": ["Morgan Freeman", "James Earl Jones", "Danny Glover", "Forest Whitaker"],
+    "answer": "James Earl Jones"
+  },
+  {
+    "id": "house-103",
+    "difficulty": "medium",
+    "question": "How many miles did Lawrence Kutner crawl to win a Guinness World Record?",
+    "options": ["5 miles", "10 miles", "20 miles", "50 miles"],
+    "answer": "20 miles"
+  },
+  {
+    "id": "house-104",
+    "difficulty": "easy",
+    "question": "What is the name of the pet House finds and adopts in Season 2?",
+    "options": ["Steve McQueen", "Paul Newman", "Charles Bronson", "Clint Eastwood"],
+    "answer": "Steve McQueen"
+  },
+  {
+    "id": "house-105",
+    "difficulty": "hard",
+    "question": "In which season was Lisa Cuddy replaced as Dean of Medicine?",
+    "options": ["Season 6", "Season 7", "Season 8", "Season 5"],
+    "answer": "Season 8"
+  },
+  {
+    "id": "house-106",
+    "difficulty": "hard",
+    "question": "What was the occupation of the very first patient, Rebecca Adler, in the pilot episode?",
+    "options": ["Lawyer", "Kindergarten Teacher", "Nurse", "Journalist"],
+    "answer": "Kindergarten Teacher"
+  },
+{
+  "id": "hse-024",
+  "difficulty": "hard",
+  "question": "What is Dr. Cuddy's medical specialty?",
+  "options": ["Endocrinology", "Radiology", "Pediatrics", "Cardiology"],
+  "answer": "Endocrinology"
+},
+{
+  "id": "hse-021",
+  "difficulty": "easy",
+  "question": "Which of these is NOT a member of House's team?",
+  "options": ["Taub", "Kutner", "Wilson", "Foreman"],
+  "answer": "Wilson"
+},
+{
+  "id": "hse-019",
+  "difficulty": "hard",
+  "question": "Dr. Robert Chase is originally from which country?",
+  "options": ["England", "USA", "Australia", "Canada"],
+  "answer": "Australia"
+},
+  {
+    "id": "hse-099",
+    "difficulty": "medium",
+    "question": "Martha Masters holds a double PhD in which two specific subjects?",
+    "options": ["Mathematics and Art History", "Physics and Philosophy", "Mathematics and Biology", "Statistics and Art History"],
+    "answer": "Mathematics and Art History"
+  },
+  {
+    "id": "hse-100",
+    "difficulty": "easy",
+    "question": "What is Dr. House’s first name?",
+    "options": ["James", "Robert", "Gregory", "Eric"],
+    "answer": "Gregory"
+  },
+  {
+    "id": "hse-101",
+    "difficulty": "hard",
+    "question": "During the Season 4 fellowship competition, which applicant was designated as Number 24?",
+    "options": ["Chris Taub", "Lawrence Kutner", "Jeffrey Cole", "Amber Volakis"],
+    "answer": "Amber Volakis"
+  },
+  {
+    "id": "hse-102",
+    "difficulty": "hard",
+    "question": "In the fellowship elimination game, which character wore the number 18?",
+    "options": ["Remy Hadley", "Chris Taub", "Jeffrey Cole", "Henry Dobson"],
+    "answer": "Jeffrey Cole"
+  },
+  {
+    "id": "hse-103",
+    "difficulty": "hard",
+    "question": "Which applicant in the Season 4 competition was assigned the number 32?",
+    "options": ["Amber Volakis", "Lawrence Kutner", "Jodi Desai", "Jeffrey Cole"],
+    "answer": "Jodi Desai"
+  },
+  {
+    "id": "hse-104",
+    "difficulty": "hard",
+    "question": "Which applicant in the Season 4 competition was assigned the number 39?",
+    "options": ["Chris Taub", "Travis Brennan", "Jeffrey Cole", "Amber Volakis"],
+    "answer": "Chris Taub"
+  },
+  {
+    "id": "hse-105",
+    "difficulty": "medium",
+    "question": "What nickname did House give to Dr. Jeffrey Cole during the competition?",
+    "options": ["Big Love", "Old Mormon", "Number 24", "The Believer"],
+    "answer": "Big Love"
+  },
+  {
+    "id": "hse-106",
+    "difficulty": "hard",
+    "question": "In Season 4 what numbers were assigned to the identical twin applicants?",
+    "options": ["7A and 7B", "15A and 15B", "10 and 11", "21 and 22"],
+    "answer": "15A and 15B"
+  },
+{
+  "id": "hse-092",
+  "difficulty": "hard",
+  "question": "What is the name of House's favorite energy drink that features prominently in Season 8?",
+  "options": ["NOS", "Red Bull", "Monster", "Gatorade"],
+  "answer": "NOS"
+},
+  {
+    "id": "house-107",
+    "difficulty": "hard",
+    "question": "How much money did billionaire Edward Vogler donate to the hospital in Season 1?",
+    "options": ["$50 million", "$100 million", "$250 million", "$500 million"],
+    "answer": "$100 million"
+  },
+{
+  "id": "hse-083",
+  "difficulty": "medium",
+  "question": "In 'The Mistake' episode, why is Chase being sued?",
+  "options": ["Malpractice", "Sexual harassment", "Theft", "Assault"],
+  "answer": "Malpractice"
+},
+{
+  "id": "hse-081",
+  "difficulty": "hard",
+  "question": "What is the name of the pianist patient in 'Half-Wit' played by Dave Matthews?",
+  "options": ["Patrick", "Nate", "John", "David"],
+  "answer": "Patrick"
+},
+  {
+    "id": "house-108",
+    "difficulty": "medium",
+    "question": "What was the very first patient in the pilot episode ultimately diagnosed with?",
+    "options": ["Lupus", "Neurocysticercosis", "Sarcoidosis", "Multiple Sclerosis"],
+    "answer": "Neurocysticercosis"
+  },
+  {
+    "id": "house-easy-0049",
+    "question": "Which creator made House?",
+    "options": ["David Shore", "Bryan Singer", "Greg Yaitanes", "Katie Jacobs"],
+    "answer": "David Shore",
+    "difficulty": "hard"
+  },
+ {
+    "id": "house-easy-0025",
+    "question": "Who plays Dr. Remy 'Thirteen' Hadley?",
+    "options": ["Olivia Wilde", "Amber Tamblyn", "Jennifer Morrison", "Lisa Edelstein"],
+    "answer": "Olivia Wilde",
+    "difficulty": "hard"
+  },
+  {
+    "id": "house-easy-0015",
+    "question": "Who plays Dr. Eric Foreman?",
+    "options": ["Omar Epps", "Jesse Spencer", "Hugh Laurie", "Kal Penn"],
+    "answer": "Omar Epps",
+    "difficulty": "easy"
+  },
+  {
+    "id": "house-easy-0013",
+    "question": "What is House's signature phrase about patients?",
+    "options": ["Everybody lies", "It's never cancer", "Pain is inevitable", "House is always right"],
+    "answer": "Everybody lies",
+    "difficulty": "easy"
+  },
+{
+  "id": "hse-052",
+  "difficulty": "hard",
+  "question": "What kind of motorcycle does House ride?",
+  "options": ["Harley Davidson", "Honda CBR1000RR", "Ducati Monster", "Kawasaki Ninja"],
+  "answer": "Honda CBR1000RR"
+},
+  {
+    "id": "house-093",
+    "difficulty": "medium",
+    "question": "What was the occupation of Stacy Warner’s husband?",
+    "options": ["Lawyer", "Counselor", "Doctor", "Teacher"],
+    "answer": "Counselor"
+  },
+{
+  "id": "hse-042",
+  "difficulty": "easy",
+  "question": "Which character has a double PhD?",
+  "options": ["Martha Masters", "Jessica Adams", "Chi Park", "Remy Hadley"],
+  "answer": "Martha Masters"
+},
+  {
+    "id": "house-easy-0010",
+    "question": "Who plays Dr. Lisa Cuddy?",
+    "options": ["Lisa Edelstein", "Jennifer Morrison", "Olivia Wilde", "Amber Tamblyn"],
+    "answer": "Lisa Edelstein",
+    "difficulty": "hard"
+  },
+{
+  "id": "hse-038",
+  "difficulty": "hard",
+  "question": "Who is House's favorite soap opera character?",
+  "options": ["Dr. Hourglass", "Dr. Travis Brennan", "Dr. Brock Sterling", "Dr. Foreman"],
+  "answer": "Dr. Brock Sterling"
+},
+ {
+    "id": "house-023",
+    "question": "Which doctor is nicknamed Cutthroat Bitch?",
+    "options": ["Amber Volakis", "Allison Cameron", "Lisa Cuddy", "Remy Hadley"],
+    "answer": "Amber Volakis",
+    "difficulty": "easy"
+  },
+  {
+    "id": "house-025",
+    "question": "What specialty is Chris Taub associated with before joining House’s team?",
+    "options": ["Plastic surgery", "Radiology", "Pathology", "Psychiatry"],
+    "answer": "Plastic surgery",
+    "difficulty": "easy"
+  },
+  {
+    "id": "house-015",
+    "difficulty": "easy",
+    "question": "In the early seasons, what does House hate doing the most?",
+    "options": ["Surgery", "Lab work", "Clinic duty", "Paperwork"],
+    "answer": "Clinic duty"
+  },
+  {
+    "id": "house-050",
+    "question": "Which season introduces the competition for new team members?",
+    "options": ["Season 4", "Season 2", "Season 6", "Season 8"],
+    "answer": "Season 4",
+    "difficulty": "hard"
+  },
+  {
+    "id": "house-116",
+    "question": "Which actor played Lawrence Kutner?",
+    "options": ["Kal Penn", "Sendhil Ramamurthy", "Aziz Ansari", "Kunal Nayyar"],
+    "answer": "Kal Penn",
+    "difficulty": "hard"
+  },
+  {
+    "id": "house-095",
+    "difficulty": "medium",
+    "question": "In 'The Tyrant', which African dictator did Chase intentionally kill?",
+    "options": ["Dibala", "Mugabe", "Amin", "Keita"],
+    "answer": "Dibala"
+  }
+]
+
+
+ 
