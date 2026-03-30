@@ -13,7 +13,8 @@ async function renderChallengePage() {
   const nextBtn = document.getElementById("challengeNextButton");
   const quizBox = document.getElementById("challengeQuizBox");
   const resultBox = document.getElementById("challengeResultBox");
-
+  const nextRoundLink = document.getElementById("challengeNextRoundLink");
+  
   if (!theme) {
     questionEl.textContent = "Theme not found";
     return;
@@ -48,7 +49,15 @@ try {
   const allQuestions = await fetchJSON(theme.questionFile);
   const totalRounds = Math.ceil(allQuestions.length / ROUND_SIZE);
   const safeRound = Math.min(currentRound, totalRounds);
-
+if (nextRoundLink) {
+  if (safeRound < totalRounds) {
+    nextRoundLink.style.display = "inline-block";
+    nextRoundLink.textContent = "Skip to next round";
+    nextRoundLink.href = `challenge.html?theme=${theme.slug}&round=${safeRound + 1}`;
+  } else {
+    nextRoundLink.style.display = "none";
+  }
+}
   const startIndex = (safeRound - 1) * ROUND_SIZE;
   const endIndex = Math.min(startIndex + ROUND_SIZE, allQuestions.length);
   const roundQuestions = shuffleArray(allQuestions.slice(startIndex, endIndex));
