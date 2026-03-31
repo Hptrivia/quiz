@@ -63,6 +63,62 @@
     "answer": "Lonely Boy"
   },
   {
+    "id": "gg-183",
+    "difficulty": "hard",
+    "question": "What is the name of the character played by Elizabeth Hurley in Season 5?",
+    "options": ["Diana Payne", "Juliet Sharp", "Raina Thorpe", "Ivy Dickens"],
+    "answer": "Diana Payne"
+  },
+  {
+    "id": "gg-102",
+    "difficulty": "hard",
+    "question": "What subject did Miss Rachel Carr teach at Constance Billard?",
+    "options": ["History", "English", "French", "Biology"],
+    "answer": "English"
+  },
+  {
+    "id": "gg-103",
+    "difficulty": "medium",
+    "question": "What country is Vanya, originally from?",
+    "options": ["Poland", "Russia", "Ukraine", "Belarus"],
+    "answer": "Belarus"
+  },
+  {
+    "id": "gg-103",
+    "difficulty": "medium",
+    "question": "What country is Dorota, originally from?",
+    "options": ["Poland", "Russia", "Ukraine", "Belarus"],
+    "answer": "Belarus"
+  },
+  {
+    "id": "gg-104",
+    "difficulty": "hard",
+    "question": "What did Agnes want to name the clothing line she wanted to create with Jenny?",
+    "options": ["Vixen Design Inc.", "J. Humphrey Designs", "Brooklyn Edge", "Little J"],
+    "answer": "Vixen Design Inc."
+  },
+  {
+    "id": "gg-105",
+    "difficulty": "hard",
+    "question": "What did Jenny want to name the clothing line she wanted to create with Agnes?",
+    "options": ["Vixen Design Inc.", "J. Humphrey Designs", "Little J", "Waldorf Designs"],
+    "answer": "J. Humphrey Designs"
+  },
+  {
+    "id": "gg-098",
+    "difficulty": "hard",
+    "question": "What is the name of the hotel company owned by Bart Bass?",
+    "options": ["Bass Industries", "The Bass Group", "Empire Hotels", "Bartholomew Inc."],
+    "answer": "Bass Industries"
+  },
+  {
+    "id": "gg-100",
+    "difficulty": "medium",
+    "question": "What was the name of the film Serena was working on during season 5 in Los Angeles?",
+    "options": ["The Beautiful and Damned", "Inside", "The Lady and the Damned", "Wild Manhattan"],
+    "answer": "The Beautiful and Damned"
+  },
+  {
     "id": "gg-009",
     "difficulty": "easy",
     "question": "What is the name of Dan’s younger sister?",
@@ -126,11 +182,60 @@
     "answer": "NYU"
   },
   {
+    "id": "gg-041",
+    "difficulty": "hard",
+    "question": "What does Chuck buy Blair for her birthday in Season 1?",
+    "options": ["A diamond necklace", "A designer handbag", "A puppy", "A trip to Paris"],
+    "answer": "A diamond necklace"
+  },
+ {
+    "id": "gg-029",
+    "difficulty": "easy",
+    "question": "What is Blair's favorite dessert?",
+    "options": ["Cupcakes", "Macarons", "Cheesecake", "Gelato"],
+    "answer": "Macarons"
+  },
+  {
     "id": "gg-042",
     "difficulty": "medium",
     "question": "Which school does Blair attend in Season 4?",
     "options": ["Columbia", "NYU", "Yale", "Princeton"],
     "answer": "Columbia"
+  },
+  {
+    "id": "gg-073",
+    "difficulty": "medium",
+    "question": "In which season do Dan and Blair officially date?",
+    "options": ["Season 3", "Season 4", "Season 5", "Season 6"],
+    "answer": "Season 5"
+  },
+  {
+    "id": "gg-076",
+    "difficulty": "hard",
+    "question": "Where does Jenny Humphrey move to after being banished by Blair from Manhattan?",
+    "options": ["London", "Hudson", "Paris", "Los Angeles"],
+    "answer": "Hudson"
+  },
+  {
+    "id": "gg-078",
+    "difficulty": "hard",
+    "question": "What was the name of the clothing line Jenny created in the time skip?",
+    "options": ["J for Waldorf", "Little J", "Humphrey Designs", "Agnes & Jenny"],
+    "answer": "Little J"
+  },
+  {
+    "id": "gg-077",
+    "difficulty": "hard",
+    "question": "Which character does Dorota marry?",
+    "options": ["Vanya", "Pavel", "Sergei", "Yuri"],
+    "answer": "Vanya"
+  },
+  {
+    "id": "gg-028",
+    "difficulty": "easy",
+    "question": "What does Serena get arrested for in Season 2?",
+    "options": ["Theft", "Possession of drugs", "Underage drinking", "Assault"],
+    "answer": "Theft"
   },
   {
     "id": "gg-047",
@@ -149,8 +254,8 @@
   {
     "id": "gg-easy-0003",
     "question": "What kind of platform is Gossip Girl within the show?",
-    "options": ["An anonymous blog", "A TV show", "A podcast", "A newspaper column"],
-    "answer": "An anonymous blog",
+    "options": ["A blog", "A TV show", "A podcast", "A newspaper column"],
+    "answer": "A blog",
     "difficulty": "easy"
   },
   {
@@ -224,6 +329,20 @@
     "answer": "The Age of Innocence"
   },
   {
+    "id": "gg-067",
+    "difficulty": "medium",
+    "question": "What is the name of the woman Chuck falls in love with in Paris who helps him heal?",
+    "options": ["Eva Coupeau", "Raina Thorpe", "Mara Winslow", "Ava Marine"],
+    "answer": "Eva Coupeau"
+  },
+  {
+    "id": "gg-062",
+    "difficulty": "medium",
+    "question": "What fake identity does Chuck use in Paris after being shot?",
+    "options": ["Henry Prince", "Charles Trout", "John Smith", "David Miller"],
+    "answer": "Henry Prince"
+  },
+  {
     "id": "gg-084",
     "difficulty": "hard",
     "question": "Which elite secret society targets Chuck for recruitment at Yale?",
@@ -234,7 +353,7 @@
     "id": "gg-053",
     "difficulty": "medium",
     "question": "Which royal title does Louis Grimaldi hold?",
-    "options": ["Prince of Monaco", "Prince of England", "Prince of Belgium", "Prince of Luxembourg"],
+    "options": ["Prince of Monaco", "Prince of Paris", "Prince of Belgium", "Prince of Luxembourg"],
     "answer": "Prince of Monaco"
   },
   {
@@ -250,6 +369,48 @@
     "question": "What is the name of the newspaper Nate runs?",
     "options": ["The Spectator", "The Empire Post", "The New York Standard", "The Observer"],
     "answer": "The Spectator"
+  },
+  {
+    "id": "gg-131",
+    "difficulty": "hard",
+    "question": "What is the exact name of the street in Brooklyn where the Humphrey family loft is located?",
+    "options": ["Washington Street", "Water Street", "Front Street", "Main Street"],
+    "answer": "Water Street"
+  },
+  {
+    "id": "gg-059",
+    "difficulty": "hard",
+    "question": "What is the name of the teacher Dan Humphrey has an affair with in Season 2?",
+    "options": ["Miss Carr", "Miss Abbott", "Miss Keller", "Miss Stevens"],
+    "answer": "Miss Carr"
+  },
+  {
+    "id": "gg-130",
+    "difficulty": "hard",
+    "question": "What are the names of Dorota and Vanya's two children?",
+    "options": ["Ana and Leo", "Maya and Leo", "Ana and Stefan", "Sophia and Boris"],
+    "answer": "Ana and Leo"
+  },
+{
+  "id": "gg-101",
+  "difficulty": "hard",
+  "question": "Which real-life fashion icon did NOT make a cameo appearance on the show?",
+  "options": ["Vera Wang", "Tory Burch", "Anna Wintour", "Rachel Zoe"],
+  "answer": "Anna Wintour"
+},
+  {
+    "id": "gg-055",
+    "difficulty": "hard",
+    "question": "Which famous real-life designer made a cameo appearance in Season 3 interviewing Serena?",
+    "options": ["Vera Wang", "Tory Burch", "Michael Kors", "Marc Jacobs"],
+    "answer": "Tory Burch"
+  },
+  {
+    "id": "gg-052",
+    "difficulty": "hard",
+    "question": "What is the name of the French Prince Blair marries?",
+    "options": ["Prince Louis", "Prince Jean-Paul", "Prince Pierre", "Prince Henri"],
+    "answer": "Prince Louis"
   },
   {
     "id": "gg-med-0032",
@@ -287,6 +448,34 @@
     "answer": "Guitar"
   },
   {
+    "id": "gg-110",
+    "difficulty": "hard",
+    "question": "In season 1, what was the title of the short story Dan Humphrey got published in 'The New Yorker'?",
+    "options": ["10-15-05", "The Outsider", "Brooklyn Boy", "Winter’s Tale"],
+    "answer": "10-15-05"
+  },
+  {
+    "id": "gg-148",
+    "difficulty": "hard",
+    "question": "What was the name of the publication where Dan and Blair interned together in Season 4?",
+    "options": ["W Magazine", "Vogue", "Vanity Fair", "N Magazine"],
+    "answer": "W Magazine"
+  },
+  {
+    "id": "gg-122",
+    "difficulty": "hard",
+    "question": "Who was the headmistress of Constance Billard during the characters' senior year?",
+    "options": ["Headmistress Queller", "Headmistress Keller", "Headmistress Carr", "Headmistress Vance"],
+    "answer": "Headmistress Queller"
+  },
+  {
+    "id": "gg-007",
+    "difficulty": "easy",
+    "question": "Who is Dan's younger sister?",
+    "options": ["Jenny", "Vanessa", "Georgina", "Lola"],
+    "answer": "Jenny"
+  },
+  {
     "id": "sp-152",
     "difficulty": "easy",
     "question": "Where do Blair and Chuck get married?",
@@ -294,11 +483,32 @@
     "answer": "Central Park"
   },
   {
+    "id": "gg-108",
+    "difficulty": "hard",
+    "question": "Which musical artist did NOT perform or make a cameo on the show?",
+    "options": ["Lady Gaga", "Robyn", "St. Vincent", "Lana Del Rey"],
+    "answer": "Lana Del Rey"
+  },
+  {
     "id": "sp-155",
     "difficulty": "easy",
     "question": "Which Ivy League school did Blair desperately want to attend?",
     "options": ["Yale", "Harvard", "Princeton", "Brown"],
     "answer": "Yale"
+  },
+  {
+    "id": "gg-107",
+    "difficulty": "hard",
+    "question": "What was the name of Dan's favorite childhood Cabbage Patch doll mentioned in Season 1?",
+    "options": ["Cedric", "Cory", "Colin", "Cecil"],
+    "answer": "Cedric"
+  },
+  {
+    "id": "gg-101",
+    "difficulty": "expert",
+    "question": "Who is the author of the original 'Gossip Girl' book series?",
+    "options": ["Sara Shepard", "Cecily von Ziegesar", "Lauren Weisberger", "Candace Bushnell"],
+    "answer": "Cecily von Ziegesar"
   },
   {
     "id": "sp-156",
@@ -371,11 +581,39 @@
     "answer": "1136 Fifth Avenue"
   },
   {
+    "id": "gg-051",
+    "difficulty": "medium",
+    "question": "In what season did Chuck Bass get shot in Prague?",
+    "options": ["Season 2", "Season 3", "Season 4", "Season 5"],
+    "answer": "Season 3"
+  },
+  {
     "id": "sp-214",
     "difficulty": "hard",
     "question": "What is the name of the actress who plays Dorota?",
     "options": ["Zuzanna Szadkowski", "Leighton Meester", "Jessica Szohr", "Michelle Trachtenberg"],
     "answer": "Zuzanna Szadkowski"
+  },
+  {
+    "id": "gg-174",
+    "difficulty": "hard",
+    "question": "What is the name of the character played by Sebastian Stan?",
+    "options": ["Carter Baizen", "Aaron Rose", "Gabriel Edwards", "Damien Dalgaard"],
+    "answer": "Carter Baizen"
+  },
+  {
+    "id": "gg-167",
+    "difficulty": "medium",
+    "question": "What was the real profession of Juliet Sharp's brother, Ben Donovan?",
+    "options": ["Teacher", "Lawyer", "Doctor", "Barista"],
+    "answer": "Teacher"
+  },
+  {
+    "id": "gg-152",
+    "difficulty": "medium",
+    "question": "What is the name of the trendy Brooklyn neighborhood where the Humphrey family loft is located?",
+    "options": ["Williamsburg", "DUMBO", "Bushwick", "Greenpoint"],
+    "answer": "DUMBO"
   },
   {
     "id": "gg-221",
@@ -412,12 +650,54 @@
     "options": ["Chace Crawford", "Penn Badgley", "Ed Westwick", "Sebastian Stan"],
     "answer": "Chace Crawford"
   },
+ {
+    "id": "gg-102",
+    "difficulty": "hard",
+    "question": "What are Nate Archibald's middle names as revealed in the series?",
+    "options": ["Fitzwilliam", "Randolph", "Bartholomew", "Cornelius"],
+    "answer": "Fitzwilliam"
+  },
+  {
+    "id": "gg-121",
+    "difficulty": "hard",
+    "question": "In which season finale did the author of the Gossip Girl books make a cameo?",
+    "options": ["Season 1", "Season 2", "Season 4", "Season 6"],
+    "answer": "Season 4"
+  },
+  {
+    "id": "gg-122",
+    "difficulty": "hard",
+    "question": "What was the name of the bulldog Harold Waldorf and Roman bought for Blair when she was applying to Yale?",
+    "options": ["Handsome Dan", "Yale Dan", "Bully Dan", "Eli Dan"],
+    "answer": "Handsome Dan"
+  },
+  {
+    "id": "gg-118",
+    "difficulty": "hard",
+    "question": "How many times did Chuck Bass vote for Blair to win Prom Queen in Season 2?",
+    "options": ["Once", "150 times", "50 times", "200 times"],
+    "answer": "150 times"
+  },
+  {
+    "id": "gg-008",
+    "difficulty": "easy",
+    "question": "What is Nate Archibald's primary sport in high school?",
+    "options": ["Basketball", "Lacrosse", "Soccer", "Tennis"],
+    "answer": "Lacrosse"
+  },
 {
     "id": "sp-222",
     "difficulty": "hard",
     "question": "What is the name of the burlesque club Blaire wanted Chuck to invest in?",
     "options": ["Victrola", "The Palace", "The Empire", "Butter"],
     "answer": "Victrola"
+  },
+  {
+    "id": "gg-141",
+    "difficulty": "hard",
+    "question": "Which actress played the role of Georgina Sparks?",
+    "options": ["Michelle Trachtenberg", "Katie Cassidy", "Jessica Szohr", "Taylor Momsen"],
+    "answer": "Michelle Trachtenberg"
   },
   {
     "id": "gg-hard-0052",
