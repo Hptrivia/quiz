@@ -14,6 +14,34 @@
     "answer": "Mary Alice Young"
   },
   {
+    "id": "dh-078",
+    "difficulty": "hard",
+    "question": "What was Lynette's maiden name?",
+    "options": ["Lindquist", "Marquez", "Bremmer", "Mason"],
+    "answer": "Lindquist"
+  },
+{
+  "id": "dh-101",
+  "difficulty": "hard",
+  "question": "What were the professions of Bob Hunter and Lee McDermott, the gay couple who moved to Wisteria Lane?",
+  "options": ["Doctor and Lawyer", "Lawyer and Real Estate Agent", "Architect and Designer", "Accountant and Teacher"],
+  "answer": "Lawyer and Real Estate Agent"
+},
+  {
+    "id": "dh-076",
+    "difficulty": "medium",
+    "question": "What was the name of the gay couple who moved to Wisteria Lane in Season 4?",
+    "options": ["Bob and Lee", "Justin and Andrew", "Bill and Ted", "Jack and Sam"],
+    "answer": "Bob and Lee"
+  },
+  {
+    "id": "dh-065",
+    "difficulty": "hard",
+    "question": "How much did Martha Huber steal from Edie Britt's purse?",
+    "options": ["$100", "$80", "$60", "$40"],
+    "answer": "$40"
+  },
+  {
     "id": "dhw-004",
     "difficulty": "easy",
     "question": "What major event happens to Mary Alice in the pilot that triggers the mystery?",
@@ -168,24 +196,30 @@
     "options": ["Caleb", "Matthew", "Zach", "Eddie"],
     "answer": "Caleb"
   },
-
   {
     "id": "dhw-004",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "question": "Who played Susan Mayer?",
     "options": ["Teri Hatcher", "Marcia Cross", "Eva Longoria", "Felicity Huffman"],
     "answer": "Teri Hatcher"
   },
   {
+    "id": "DH-054",
+    "difficulty": "hard",
+    "question": "What kind of cancer was Lynette Scavo diagnosed with in Season 3?",
+    "options": ["Breast Cancer", "Lung Cancer", "Hodgkin's Lymphoma", "Skin Cancer"],
+    "answer": "Hodgkin's Lymphoma"
+  },
+  {
     "id": "dhw-005",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "question": "Who played Bree Van de Kamp?",
     "options": ["Marcia Cross", "Teri Hatcher", "Eva Longoria", "Felicity Huffman"],
     "answer": "Marcia Cross"
   },
   {
     "id": "dhw-006",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "question": "Who played Lynette Scavo?",
     "options": ["Felicity Huffman", "Teri Hatcher", "Marcia Cross", "Eva Longoria"],
     "answer": "Felicity Huffman"
@@ -200,14 +234,14 @@
 
   {
     "id": "dhw-008",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "question": "Who played Edie Britt?",
     "options": ["Nicollette Sheridan", "Dana Delany", "Vanessa Williams", "Alfre Woodard"],
     "answer": "Nicollette Sheridan"
   },
   {
     "id": "dhw-009",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "question": "Who played Mike Delfino?",
     "options": ["James Denton", "Doug Savant", "Mark Moses", "Kyle MacLachlan"],
     "answer": "James Denton"
@@ -419,7 +453,7 @@
   },
   {
     "id": "dh-easy-0033",
-    "question": "In the five-year time jump, Gabrielle has two daughters. What are their names?",
+    "question": "In the time jump, Gabrielle has two daughters. What are their names?",
     "options": ["Penny and Paige", "Juanita and Celia", "Danielle and Celia", "Juanita and Jane"],
     "answer": "Juanita and Celia",
     "difficulty": "hard"
@@ -538,6 +572,13 @@
     "difficulty": "hard"
   },
   {
+    "id": "DH-057",
+    "difficulty": "medium",
+    "question": "How many years pass in the show's timeline between Season 4 and Season 5?",
+    "options": ["2 years", "3 years", "5 years", "10 years"],
+    "answer": "5 years"
+  },
+  {
     "id": "dh-hard-0019",
     "question": "Which character did the 'Fairview Strangler' kill in the coffee shop bathroom?",
     "options": ["Emily Portsmith", "Julie Mayer", "Robin Gallagher", "Irina"],
@@ -552,13 +593,89 @@
     "difficulty": "hard"
   },
   {
+    "id": "dh-109",
+    "difficulty": "hard",
+    "question": "What was the name of the psychiatrist Bree saw in Season 2?",
+    "options": ["Dr. Goldfine", "Dr. McLean", "Dr. Ron McCready", "Dr. Craig"],
+    "answer": "Dr. Goldfine"
+  },
+  {
+    "id": "dh-105",
+    "difficulty": "hard",
+    "question": "What was the number of the house Mary Alice Young lived in?",
+    "options": ["4350", "4352", "4354", "4356"],
+    "answer": "4352"
+  },
+  {
+    "id": "dh-106",
+    "difficulty": "hard",
+    "question": "Which family is living in 4351 Wisteria Lane (the house across from Susan) in Season 1?",
+    "options": ["The Mullins family", "The Applewhites", "The Bolens", "The Mayfairs"],
+    "answer": "The Mullins family"
+  },
+  {
     "id": "dh-med-0021",
     "question": "What is the name of the Fairview bakery and cafe where Emily Portsmith worked in Season 6?",
     "options": ["The Daily Grind", "The Coffee Cup", "Penny's Place", "Fairview Beans"],
     "answer": "The Coffee Cup",
     "difficulty": "hard"
   },
- 
+  {
+    "id": "DH-039",
+    "difficulty": "easy",
+    "question": "What is Orson Hodge’s profession?",
+    "options": ["Lawyer", "Plumber", "Dentist", "Architect"],
+    "answer": "Dentist"
+  },
+  {
+    "id": "DH-024",
+    "difficulty": "hard",
+    "question": "In the pilot, what dish does Susan bring to the wake that is described as 'inedible'?",
+    "options": ["Apple Pie", "Lasagna", "Macaroni and Cheese", "Pot Roast"],
+    "answer": "Macaroni and Cheese"
+  },
+{
+  "id": "dh-152",
+  "difficulty": "hard",
+  "question": "What was the profession of the neighbour, Edwin Mullins?",
+  "options": ["Taxidermist", "Butcher", "Librarian", "Animal Control Officer"],
+  "answer": "Taxidermist"
+},
+   {
+    "id": "dh-132",
+    "difficulty": "hard",
+    "question": "What was the name of the strip club where Karl Mayer met his girlfriend?",
+    "options": ["The Double D", "The Landing Strip", "The Pink Pony", "The Velvet Room"],
+    "answer": "The Double D"
+  },
+{
+  "id": "DH-151",
+  "difficulty": "hard",
+  "question": "In which city was the psychiatric institute located where Dave Williams was treated before moving to Wisteria Lane?",
+  "options": ["Fairview", "Boston", "Philadelphia", "Chicago"],
+  "answer": "Boston"
+},
+  {
+    "id": "DH-123",
+    "difficulty": "hard",
+    "question": "In the Season 6 plane crash, what was the name of the pilot?",
+    "options": ["Jeff", "Karl", "The Pilot", "Not Disclosed"],
+    "answer": "Jeff"
+  },
+  {
+    "id": "DH-110",
+    "difficulty": "hard",
+    "question": "What was the title of the children's book Susan was illustrating in the first season?",
+    "options": ["The Ant and the Grasshopper", "The Brave Little Toaster", "The Tree of Knowledge", "Ants in my Picnic Basket"],
+    "answer": "Ants in my Picnic Basket"
+  },
+  {
+    "id": "DH-091",
+    "difficulty": "medium",
+    "question": "Which housewife stayed on the lane the longest in the flash-forward finale?",
+    "options": ["Susan", "Lynette", "Gabrielle", "Bree"],
+    "answer": "Susan"
+  },
   {
     "id": "dh-hard-0025",
     "question": "What was the name of the detective who investigated the death of Alejandro Perez?",
@@ -574,9 +691,17 @@
     "difficulty": "hard"
   },
   {
+    "id": "DH-070",
+    "difficulty": "hard",
+    "question": "What sport did Renee Perry’s ex-husband, Doug Perry, play?",
+    "options": ["Football", "Basketball", "Baseball", "Tennis"],
+    "answer": "Baseball"
+  },
+
+  {
     "id": "dh-hard-0048",
-    "question": "What was the name of the woman Carlos had an affair with while he was blind (the housekeeper)?",
-    "options": ["Xiao-Mei", "Ivana", "Maria", "Rosa"],
+    "question": "What was the name of the woman Carlos had an affair with while he was blind?",
+    "options": ["Xiao-Mei", "Ivana", "Maria", "Lau-Ming"],
     "answer": "Xiao-Mei",
     "difficulty": "hard"
   }
