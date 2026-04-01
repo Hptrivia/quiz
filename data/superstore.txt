@@ -63,6 +63,13 @@
     "difficulty": "easy"
   },
   {
+    "id": "ss-118",
+    "difficulty": "hard",
+    "question": "What is the exact amount of Marcus’s hourly wage that he mistakenly thought he earned?",
+    "options": ["$86/hour", "$100/hour", "$62/hour", "$40/hour"],
+    "answer": "$86/hour"
+  },
+  {
     "id": "ss-easy-0010",
     "question": "Which longtime store manager is cheerful, devout, and married to Jerusha?",
     "options": ["Glenn", "Jonah", "Marcus", "Eric"],
@@ -98,11 +105,25 @@
     "difficulty": "easy"
   },
   {
+    "id": "super-easy-0025",
+    "question": "What does Jonah run for in finale flash-forward?",
+    "options": ["City Council", "Store Manager", "Union President", "Mayor"],
+    "answer": "City Council",
+    "difficulty": "hard"
+  },
+  {
     "id": "ss-easy-0016",
     "question": "What color are the standard Cloud 9 employee vests?",
     "options": ["Blue", "Red", "Green", "Purple"],
     "answer": "Blue",
     "difficulty": "easy"
+  },
+  {
+    "id": "super-easy-0014",
+    "question": "Who created Superstore?",
+    "options": ["Justin Spitzer", "Michael Schur", "Dan Moyer", "Ruben Fleischer"],
+    "answer": "Justin Spitzer",
+    "difficulty": "hard"
   },
   {
     "id": "ss-easy-0017",
@@ -176,17 +197,10 @@
   },
   {
     "id": "ss-easy-0031",
-    "question": "Which natural disaster sees employees trapped in the store in Season 4?",
-    "options": ["Tornado", "Earthquake", "Blizzard", "Wildfire"],
-    "answer": "Blizzard",
-    "difficulty": "easy"
-  },
-  {
-    "id": "ss-easy-0031",
-    "question": "Which natural disaster sees employees trapped in the store in Season 2?",
+    "question": "Which natural disaster sees employees trapped in the store?",
     "options": ["Tornado", "Earthquake", "Blizzard", "Wildfire"],
     "answer": "Tornado",
-    "difficulty": "medium"
+    "difficulty": "easy"
   },
   {
     "id": "ss-easy-0037",
@@ -386,7 +400,7 @@
   },
   {
     "id": "ss-easy-0202",
-    "question": "Which country is Mateo Liwanag originally from?",
+    "question": "Which country is Mateo originally from?",
     "options": ["Philippines", "China", "El Salvador", "Guatemala"],
     "answer": "Philippines",
     "difficulty": "easy"
@@ -420,6 +434,13 @@
     "difficulty": "hard"
   },
   {
+    "id": "ss-050",
+    "difficulty": "hard",
+    "question": "What is the final episode of the series titled?",
+    "options": ["All Sales Final", "Closing Time", "The Last Day", "Grand Finale"],
+    "answer": "All Sales Final"
+  },
+  {
     "id": "ss-easy-0207",
     "question": "Who plays Garrett McNeil?",
     "options": ["Colton Dunn", "Craig Robinson", "Lamorne Morris", "Donald Glover"],
@@ -428,7 +449,7 @@
   },
   {
     "id": "ss-easy-0208",
-    "question": "Who plays Mateo Liwanag?",
+    "question": "Who plays Mateo?",
     "options": ["Nico Santos", "Manny Jacinto", "Ken Jeong", "Jimmy O. Yang"],
     "answer": "Nico Santos",
     "difficulty": "hard"
@@ -475,6 +496,69 @@
     "answer": "Sturgis & Sons",
     "difficulty": "hard"
   },
+ {
+    "id": "ss-105",
+    "difficulty": "hard",
+    "question": "What did Cheyenne say she would buy with her cash prize from the Color Wars?",
+    "options": ["Baby designer shoes", "3D ultrasounds", "Baby designer clothes", "A fancy crib"],
+    "answer": "3D ultrasounds"
+  },
+  {
+    "id": "ss-106",
+    "difficulty": "hard",
+    "question": "How many subscribers did Adam say he had on his YouTube channel",
+    "options": ["4", "9", "25", "100"],
+    "answer": "9"
+  },
+  {
+    "id": "ss-107",
+    "difficulty": "hard",
+    "question": "In Season 1, which store was NOT mentioned as having been sent a secret shopper?",
+    "options": ["Maplewood Commons", "Richmond Heights", "Kirkwood", "Chesterfield Valley"],
+    "answer": "Chesterfield Valley"
+  },
+  {
+    "id": "ss-108",
+    "difficulty": "hard",
+    "question": "What score did Mateo brag about getting on his corporate policy test in Season 1?",
+    "options": ["88", "93", "97", "100"],
+    "answer": "93"
+  },
+  {
+    "id": "ss-101",
+    "difficulty": "medium",
+    "question": "In the 'Color Wars' episode, which two colors were the teams divided into?",
+    "options": ["Red and Gold", "Yellow and Green", "Gold and Blue", "Red and White"],
+    "answer": "Red and Gold"
+  },
+  {
+    "id": "ss-102",
+    "difficulty": "medium",
+    "question": "What was the cash prize promised to the winner of the Color Wars?",
+    "options": ["$50", "$100", "$200", "$500"],
+    "answer": "$100"
+  },
+  {
+    "id": "ss-102",
+    "difficulty": "medium",
+    "question": "What other prize apart from cash was promised to the winner of the Color Wars?",
+    "options": ["Pizza party", "Waffle party", "Ice cream", "Tacos"],
+    "answer": "Pizza party"
+  },
+  {
+    "id": "ss-103",
+    "difficulty": "easy",
+    "question": "What is Mateo’s last name?",
+    "options": ["Santos", "Liwanag", "Aquino", "Pascual"],
+    "answer": "Liwanag"
+  },
+  {
+    "id": "ss-067",
+    "difficulty": "hard",
+    "question": "What did Glenn's family business sell for generations?",
+    "options": ["Hardware", "Insurance", "Cars", "Vacuum cleaners"],
+    "answer": "Hardware"
+  },
   {
     "id": "ss-medium-0218",
     "question": "In the payroll error episode \"Salary\", how much did Marcus say he was making due to an accounting error?",
@@ -502,6 +586,13 @@
     "options": ["Ramona", "Kylie", "Zoe", "Tina"],
     "answer": "Ramona",
     "difficulty": "expert"
+  },
+ {
+    "id": "ss-151",
+    "difficulty": "hard",
+    "question": "What was the name of Dina's bird that died in Season 1?",
+    "options": ["Jeremy", "Pikachu", "FDR", "Sebastian"],
+    "answer": "Jeremy"
   },
   {
     "id": "ss-hard-0222",
@@ -602,6 +693,13 @@
     "difficulty": "hard"
   },
   {
+    "id": "ss-079",
+    "difficulty": "hard",
+    "question": "What is the name of Glenn’s pastor?",
+    "options": ["Pastor Craig", "Pastor Bob", "Pastor Dave", "Pastor John"],
+    "answer": "Pastor Craig"
+  },
+  {
     "id": "ss-hard-0236",
     "question": "In Season 2, which Cloud 9 location do they visit to get irregular produce?",
     "options": ["Chesterfield", "Maplewood", "Kirkwood", "Fenton"],
@@ -623,5 +721,4 @@
     "difficulty": "medium"
   }
 ]
-
 
