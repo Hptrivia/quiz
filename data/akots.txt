@@ -169,6 +169,55 @@
     "answer": "Steffon Fossoway"
   },
   {
+    "id": "ksk-h20",
+    "difficulty": "hard",
+    "question": "Which two knights perished during the brutal first charge of the Trial of Seven?",
+    "options": ["Ser Beesbury and Ser Otho", "Ser Beesbury and Ser Hardyng", "Ser Hardying and Ser Willem", "Ser Donnel and Ser Willem"],
+    "answer": "Ser Beesbury and Ser Hardyng"
+  },
+  {
+    "id": "ksk-h21",
+    "difficulty": "hard",
+    "question": "What is the name of the measter who Prince Baelor Targaryen said he would send to Dunc?",
+    "options": ["Maester Aemon", "Maester Yormwell", "Maester Pycelle", "Maester Mellos"],
+    "answer": "Maester Yormwell"
+  },
+  {
+    "id": "ksk-h22",
+    "difficulty": "hard",
+    "question": "During the chaotic Trial of Seven, what did Prince Baelor specifically call for to be poured on the wounds of the injured?",
+    "options": ["Boiling Oil", "Wine", "Salt Water", "Milk of the Poppy"],
+    "answer": "Wine"
+  },
+  {
+    "id": "ksk-h23",
+    "difficulty": "hard",
+    "question": "After the schism between the cousins, what color apple does Raymun Fossoway adopt for his new sigil?",
+    "options": ["Red", "Gold", "Green", "White"],
+    "answer": "Green"
+  },
+  {
+    "id": "ksk-h24",
+    "difficulty": "hard",
+    "question": "At the conclusion of the Ashford tourney, what specific family business does Raymun say he has to discuss with his father?",
+    "options": ["Horses", "Cider", "Iron", "Grain"],
+    "answer": "Cider"
+  },
+  {
+    "id": "ksk-h25",
+    "difficulty": "hard",
+    "question": "Which of his horses does Dunk allow Egg to ride as they depart at the end of the show?",
+    "options": ["Sweetfoot", "Thunder", "Chestnut", "Maiden"],
+    "answer": "Chestnut"
+  },
+  {
+    "id": "ksk-h26",
+    "difficulty": "hard",
+    "question": "When Egg lists the traditional 'Nine Kingdoms' of Westeros at the end of the show, which of these does he NOT include?",
+    "options": ["The Westerlands", "The Southerlands", "The Crownlands", "The Stormlands"],
+    "answer": "The Southerlands"
+  },
+  {
     "id": "aks-034",
     "difficulty": "hard",
     "question": "Who is Dunk’s childhood friend shown in flashbacks?",
@@ -464,15 +513,148 @@
     "difficulty": "medium"
   },
   {
-    "id": "aks-e94",
+    "id": "ksk-h01",
+    "difficulty": "medium",
+    "question": "According to the Master of Games at Ashford, what specific name is given to the punishment for men who falsely claim knighthood?",
+    "options": ["The Iron Stock", "The Ashford Chair", "The False Knight's Penance", "The Seven's Shame"],
+    "answer": "The Ashford Chair"
+  },
+  {
+    "id": "ksk-h02",
     "difficulty": "hard",
+    "question": "Dunk recalls Ser Arlan helping Lord Dondarrion’s father hunt which outlaw in the Red Mountains?",
+    "options": ["The Smiling Knight", "The Vulture King", "The Red Raven", "The Wyl of Wyl"],
+    "answer": "The Vulture King"
+  },
+  {
+    "id": "ksk-h03",
+    "difficulty": "hard",
+    "question": "At the Battle of the Redgrass Field, which House's brothers did Ser Arlan fight alongside?",
+    "options": ["House Hayford", "House Caswell", "House Florent", "House Butterwell"],
+    "answer": "House Hayford"
+  },
+  {
+    "id": "ksk-h04",
+    "difficulty": "hard",
+    "question": "Ser Arlan once served in the household guard of which House after the Lord father lost his sight?",
+    "options": ["House Hightower", "House Hayford", "House Florent", "House Oakheart"],
+    "answer": "House Florent"
+  },
+  {
+    "id": "ksk-h05",
+    "difficulty": "hard",
+    "question": "Prince Baelor Targaryen was the first-born son of which monarch?",
+    "options": ["King Aegon", "King Daeron", "King Maekar", "King Aerys"],
+    "answer": "King Daeron"
+  },
+  {
+    "id": "ksk-h06",
+    "difficulty": "hard",
+    "question": "What was the nickname given to King Daeron during his reign?",
+    "options": ["The Unworthy", "The Young Dragon", "The Good", "The Peaceful"],
+    "answer": "The Good"
+  },
+  {
+    "id": "ksk-h07",
+    "difficulty": "hard",
+    "question": "What was the name of Prince Baelor Targaryen's daughter?",
+    "options": ["Gwin", "Aelinor", "Daena", "Naerys"],
+    "answer": "Gwin"
+  },
+  {
+    "id": "ksk-h08",
+    "difficulty": "hard",
+    "question": "Before they rose to knighthood, what humble occupation did the family of Ser Donnel of Duskendale hold?",
+    "options": ["Ratcatchers", "Crabbers", "Blacksmiths", "Tanners"],
+    "answer": "Crabbers"
+  },
+  {
+    "id": "ksk-h09",
+    "difficulty": "hard",
+    "question": "What was the formidable nickname of the veteran jouster Ser Damon Lannister?",
+    "options": ["The Golden Lion", "The Grey Lion", "The Roaring Lion", "The Proud Lion"],
+    "answer": "The Grey Lion"
+  },
+  {
+    "id": "ksk-h10",
+    "difficulty": "hard",
+    "question": "Prince Baelor mentioned Ser Arlan unhorsing Ser Damon Lannister and which other Lord at a tourney in King's Landing?",
+    "options": ["Lord Tyrell", "Lord Stokeworth", "Lord Tully", "Lord Arryn"],
+    "answer": "Lord Stokeworth"
+  },
+  {
+    "id": "ksk-h11",
+    "difficulty": "hard",
+    "question": "How many lances did Dunk think Ser Arlan broke against Baelor before being corrected?",
+    "options": ["3", "4", "7", "9"],
+    "answer": "7"
+  },
+  {
+    "id": "ksk-h12",
+    "difficulty": "hard",
+    "question": "In the puppet show performed by Tanselle’s troupe, what is the name of the fool character?",
+    "options": ["Patchface", "Florian", "Butterbumps", "Lancel"],
+    "answer": "Florian"
+  },
+  {
+    "id": "ksk-h13",
+    "difficulty": "hard",
+    "question": "What mocking nickname did Tanselle mention boys used to call her because of her height?",
+    "options": ["The Giantess", "Too Tall", "The Beanpole", "Long Legs"],
+    "answer": "Too Tall"
+  },
+  {
+    "id": "ksk-h14",
+    "difficulty": "hard",
+    "question": "Which of Lord Ashford's sons is the youngest of the family?",
+    "options": ["Ser Androw", "Ser Robert", "Ser Tyrell", "Ser Guyard"],
+    "answer": "Ser Androw"
+  },
+  {
+    "id": "ksk-h15",
+    "difficulty": "hard",
+    "question": "According to Egg’s count of history, how many kings named 'Aegon' have sat upon the Iron Throne?",
+    "options": ["Three", "Four", "Five", "Six"],
+    "answer": "Four"
+  },
+  {
+    "id": "ksk-h16",
+    "difficulty": "hard",
+    "question": "According to the traditions of the Faith, which group originally invented the Trial of Seven?",
+    "options": ["The First Men", "The Valyrians", "The Andals", "The Rhoynar"],
+    "answer": "The Andals"
+  },
+  {
+    "id": "ksk-h17",
+    "difficulty": "hard",
+    "question": "How many years old does the Targaryen royalty claim the tradition of the Trial of Seven to be?",
+    "options": ["1000", "3000", "6000", "8000"],
+    "answer": "6000"
+  },
+  {
+    "id": "ksk-h18",
+    "difficulty": "hard",
+    "question": "When Ser Steffon Fossoway lists his friends who might join Dunk, which of these names is NOT a real person he mentions?",
+    "options": ["Ser Lyonel", "Lord Lannister", "Ser Otho", "Ser Gwayne"],
+    "answer": "Ser Gwayne"
+  },
+  {
+    "id": "ksk-h19",
+    "difficulty": "medium",
+    "question": "Following Dunk’s speech for champions, who notoriously stood up and farted in response?",
+    "options": ["The Brute of Bracken", "The Brightflame", "The Laughing Storm", "The Brute of Hacken"],
+    "answer": "The Brute of Bracken"
+  },
+  {
+    "id": "aks-e94",
+    "difficulty": "medium",
     "question": "Which knight from the Kingsguard questions Dunk's legitimacy?",
     "options": ["Ser Roland", "Ser Arthur", "Ser Travers", "Ser Donnel"],
     "answer": "Ser Roland"
   },
   {
     "id": "aks-e52",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "question": "Which animal is featured on the puppet show that Dunk watches in the first episode?",
     "options": ["A dragon", "A lion", "A wolf", "A stag"],
     "answer": "A dragon"
@@ -493,28 +675,28 @@
   },
   {
     "id": "aks-h19",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "question": "In the show, who buys Sweetfoot back for Dunk?",
     "options": ["Raymun Fossoway", "Prince Baelor", "Egg", "Steely Pate"],
     "answer": "Raymun Fossoway"
   },
   {
     "id": "aks-h51",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "question": "How much does Steely Pate charge Dunk to reinforce his oaken shield with a steel rim and backing bands?",
     "options": ["A copper penny", "Two silver stags", "Two copper pennies", "He does it for free"],
     "answer": "A copper penny"
   },
   {
     "id": "aks-h34",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "question": "In the show, how many stags does Steely Pate initially ask for Dunk's armor?",
     "options": ["600 stags", "800 stags", "500 stags", "1000 stags"],
     "answer": "800 stags"
   },
   {
     "id": "aks-h06",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "question": "What is the name of the City Watchman who kills Rafe in Dunk's flashbacks?",
     "options": ["Alester", "Janos", "Bronn", "Meryn"],
     "answer": "Alester"
@@ -523,8 +705,8 @@
     "id": "aks-h02",
     "difficulty": "hard",
     "question": "In the TV series, who are the two mistresses of Ser Manfred Dondarrion who mock Dunk in the first episode?",
-    "options": ["Red and Beony", "Lia and Beony", "Red and Hila", "Rose and Daisy"],
-    "answer": "Red and Beony"
+    "options": ["Rowan and Beony", "Lia and Beony", "Rowan and Hila", "Rose and Daisy"],
+    "answer": "Rowan and Beony"
   },
   {
     "id": "akotsk-007",
