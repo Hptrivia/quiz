@@ -12,6 +12,41 @@
     "options": ["Parks and Recreation", "City Manager’s Office", "Sanitation", "Library"],
     "answer": "Parks and Recreation",
     "difficulty": "easy"
+  },  
+  {
+    "id": "par-e021",
+    "difficulty": "hard",
+    "question": "What is Tom Haverford’s job in the Parks department?",
+    "options": ["Director", "Accountant", "Administrator", "City Manager"],
+    "answer": "Administrator"
+  },
+  {
+    "id": "par-e041",
+    "difficulty": "easy",
+    "question": "What is the name of the local 'cool' blog that Tom and Donna follow?",
+    "options": ["Bloosh", "Pawnee Pulse", "City Swagger", "The Trend"],
+    "answer": "Bloosh"
+  },
+  {
+    "id": "par-h009",
+    "difficulty": "hard",
+    "question": "What is the title of the erotic novel written by Joan Callamezzo?",
+    "options": ["Game of Joans", "The Pawnee Passion", "A Roman Holiday", "Journal of a Lady"],
+    "answer": "Game of Joans"
+  },
+  {
+    "id": "par-049",
+    "difficulty": "hard",
+    "question": "What is the name of the Pawnee 'adult film' star who runs for office?",
+    "options": ["Brandi Maxxxx", "Jessica Wicks", "Tynnyfer", "Shauna Malwae-Tweep"],
+    "answer": "Brandi Maxxxx"
+  },
+{
+    "id": "par-048",
+    "difficulty": "hard",
+    "question": "What is the name of the accounting firm that constantly tries to hire Ben Wyatt?",
+    "options": ["Barney and Associates", "Tilton & Radomski", "Pawnee CPA", "Varmn & Co"],
+    "answer": "Tilton & Radomski"
   },
   {
     "id": "pandr-easy-0003",
@@ -130,7 +165,7 @@
     "question": "Which local news anchor is known for literal phrasing?",
     "options": ["Perd Hapley", "Joan Callamezzo", "Shauna Malwae-Tweep", "Harris"],
     "answer": "Perd Hapley",
-    "difficulty": "easy"
+    "difficulty": "hard"
   },
   {
     "id": "pandr-easy-0020",
@@ -144,7 +179,7 @@
     "question": "What tribute song is performed for Li’l Sebastian?",
     "options": ["“5,000 Candles in the Wind”", "“Bye Bye Pony”", "“Mini Horse Blues”", "“Sebastian’s Farewell”"],
     "answer": "“5,000 Candles in the Wind”",
-    "difficulty": "easy"
+    "difficulty": "hard"
   },
   {
     "id": "pandr-easy-0022",
@@ -158,14 +193,14 @@
     "question": "What Pawnee-based sweets company bankrolls Bobby Newport?",
     "options": ["Sweetums", "Sweets-R-Us", "Pawnee Candy Co.", "Hoosier Treats"],
     "answer": "Sweetums",
-    "difficulty": "easy"
+    "difficulty": "hard"
   },
   {
     "id": "pandr-easy-0024",
     "question": "Where does Leslie love to eat waffles?",
     "options": ["JJ’s Diner", "Paunch Burger", "The Snakehole", "Tom’s Bistro"],
     "answer": "JJ’s Diner",
-    "difficulty": "easy"
+    "difficulty": "hard"
   },
   {
     "id": "pandr-easy-0025",
@@ -179,14 +214,14 @@
     "question": "What Minnesota town did Ben Wyatt bankrupt as a teen mayor?",
     "options": ["Partridge", "Winona", "Mankato", "Stillwater"],
     "answer": "Partridge",
-    "difficulty": "medium"
+    "difficulty": "hard"
   },
   {
     "id": "pandr-medium-0027",
     "question": "What is the number of the infamous pit lot next to Ann’s house?",
     "options": ["Lot 48", "Lot 12", "Lot 96", "Lot 23"],
     "answer": "Lot 48",
-    "difficulty": "medium"
+    "difficulty": "hard"
   },
   {
     "id": "pandr-medium-0028",
@@ -200,7 +235,7 @@
     "question": "Which Eagleton staffer joins Pawnee after the merger?",
     "options": ["Craig Middlebrooks", "Ingrid de Forest", "Trevor Nelsson", "Bobby Newport"],
     "answer": "Craig Middlebrooks",
-    "difficulty": "medium"
+    "difficulty": "hard"
   },
   {
     "id": "pandr-medium-0030",
@@ -214,7 +249,7 @@
     "question": "What is Leslie’s mother’s name?",
     "options": ["Marlene", "Joan", "Linda", "Jessica"],
     "answer": "Marlene",
-    "difficulty": "medium"
+    "difficulty": "hard"
   },
   {
     "id": "pandr-medium-0032",
@@ -228,7 +263,7 @@
     "question": "Which department is the Parks Department’s arch-nemesis?",
     "options": ["Library", "Sanitation", "Sewage", "Public Works"],
     "answer": "Library",
-    "difficulty": "medium"
+    "difficulty": "hard"
   },
   {
     "id": "pandr-medium-0034",
@@ -238,11 +273,18 @@
     "difficulty": "medium"
   },
   {
+    "id": "par-h043",
+    "difficulty": "hard",
+    "question": "What is the name of the Pawnee strip club?",
+    "options": ["The Glitter Factory", "The Snakehole Lounge", "The Bulge", "The Pit Stop"],
+    "answer": "The Glitter Factory"
+  },
+  {
     "id": "pandr-medium-0035",
     "question": "Which festival does Leslie revive to save the department?",
     "options": ["Harvest Festival", "Founders Day", "Maple Days", "Unity Concert"],
     "answer": "Harvest Festival",
-    "difficulty": "medium"
+    "difficulty": "hard"
   },
   {
     "id": "pandr-medium-0036",
@@ -257,21 +299,21 @@
     "options": ["Janet Snakehole", "Raven Noir", "Donna Black", "Diane S."
     ],
     "answer": "Janet Snakehole",
-    "difficulty": "medium"
+    "difficulty": "hard"
   },
   {
     "id": "pandr-medium-0038",
     "question": "What kids’ TV persona does Andy create?",
     "options": ["Johnny Karate", "Andy Amazing", "Ranger Dwyer", "Mr. Mouse Rat"],
     "answer": "Johnny Karate",
-    "difficulty": "medium"
+    "difficulty": "hard"
   },
   {
     "id": "pandr-medium-0039",
     "question": "Which Scotch does Ron Swanson prefer?",
     "options": ["Lagavulin", "Glenlivet", "Macallan", "Laphroaig"],
     "answer": "Lagavulin",
-    "difficulty": "medium"
+    "difficulty": "hard"
   },
   {
     "id": "pandr-medium-0040",
@@ -293,6 +335,13 @@
     "options": ["Mona-Lisa", "Cassandra", "Veronica", "Lila"],
     "answer": "Mona-Lisa",
     "difficulty": "medium"
+  },
+  {
+    "id": "par-013",
+    "difficulty": "medium",
+    "question": "What is the name of the local tabloid news show hosted by Joan Callamezzo?",
+    "options": ["Pawnee Today", "Pawnee Journal", "Pawnee Sun", "Pawnee Interactive"],
+    "answer": "Pawnee Today"
   },
   {
     "id": "pandr-medium-0043",
@@ -384,6 +433,13 @@
     "options": ["Rent-A-Swag", "Style 720", "Tommy Threads", "Youth Couture"],
     "answer": "Rent-A-Swag",
     "difficulty": "hard"
+  },
+  {
+    "id": "par-039",
+    "difficulty": "medium",
+    "question": "What is Ron Swanson’s middle name?",
+    "options": ["Ulysses", "B.", "Theodore", "James"],
+    "answer": "Ulysses"
   },
   {
     "id": "pandr-hard-0056",
@@ -596,11 +652,25 @@
     "difficulty": "medium"
   },
   {
+    "id": "par-029",
+    "difficulty": "medium",
+    "question": "What does Ron Swanson believe is 'lying about being milk'?",
+    "options": ["Almond milk", "Soy milk", "Skim milk", "Coconut milk"],
+    "answer": "Skim milk"
+  },
+  {
     "id": "pr-medium-0012",
     "question": "Who plays Donna Meagle?",
     "options": ["Retta", "Maya Rudolph", "Taraji P. Henson", "Regina Hall"],
     "answer": "Retta",
     "difficulty": "hard"
+  },
+  {
+    "id": "par-027",
+    "difficulty": "medium",
+    "question": "What is the name of Andy Dwyer's FBI agent persona?",
+    "options": ["Bert Macklin", "Jack Danger", "Johnny Karate", "Officer Dwyer"],
+    "answer": "Bert Macklin"
   },
   {
     "id": "pr-medium-0013",
