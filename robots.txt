@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /play.html
+Disallow: /challenge.html
+Disallow: /survival.html
+Disallow: /episode.html
+Disallow: /wordle.html
+Disallow: /remove-ads.html
+
+Sitemap: https://triviagauntlet.app/sitemap.xml
