@@ -77,7 +77,7 @@ if (newlyAddedList) {
 
   const card = document.createElement("a");
   card.className = "card";
-  card.href = `category.html?category=${encodeURIComponent("Newly Added")}`;
+  card.href = `category/newly-added.html`;
   card.innerHTML = `
     <h3>Newly Added</h3>
     <p>${matchedNewThemes.length} theme(s)</p>
@@ -102,7 +102,17 @@ if (newlyAddedList) {
 
       const card = document.createElement("a");
       card.className = "card";
-      card.href = `category.html?category=${encodeURIComponent(category)}`;
+      const categoryPageMap = {
+  "TV/Series": "tv-series",
+  "Games": "games",
+  "Sports": "sports",
+  "General": "general",
+  "Education": "education",
+  "Books": "books",
+  "Countries": "countries"
+};
+
+card.href = `categories/${categoryPageMap[category]}.html`;
       card.innerHTML = `
         <h3>${category}</h3>
         <p>${grouped[category].length} theme(s)</p>
