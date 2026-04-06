@@ -236,7 +236,7 @@ const categoryBottomMap = {
     That gives game quizzes a lot of variety. Some questions can focus on characters and lore, while others work better around gameplay systems, skills, combat, or progression. If you want a closer look at why game quizzes are so replayable, read the full article below.
   </p>
   <p>
-    <a href="why-video-game-trivia-is-so-addictive.html">Read: Why Video Game Trivia Is So Addictive</a>
+    <a href="why-video-game-trivia-works-so-well.html">Read: Why Video Game Trivia Works So Well</a>
   </p>
   `,
   "Sports": `
@@ -248,7 +248,7 @@ const categoryBottomMap = {
     It also allows for a lot of variety, from clubs and fighters to championships, nicknames, stadiums, and historic moments. If you want a closer look at why sports quizzes are so addictive, read the full article below.
   </p>
   <p>
-    <a href="why-sports-trivia-is-so-addictive.html">Read: Why Sports Trivia Is So Addictive</a>
+    <a href="why-fans-love-sport-trivia.html">Read: Why Fans Love Sport Trivia</a>
   </p>
   `,
   "General": `
@@ -260,7 +260,7 @@ const categoryBottomMap = {
     They also work well for players who want a broader challenge rather than one fandom or one narrow subject. If you want a closer look at why general quizzes are so addictive, read the full article below.
   </p>
   <p>
-    <a href="why-general-trivia-is-so-addictive.html">Read: Why General Trivia Is So Addictive</a>
+    <a href="the-good-ole-general-trivia.html">Read: The Good Ole General Trivia</a>
   </p>
   `,
   "Education": `
@@ -272,7 +272,7 @@ const categoryBottomMap = {
     These quizzes can work both as subject practice and as general challenge rounds for players who enjoy learning while they play. If you want a closer look at why educational quizzes are so effective, read the full article below.
   </p>
   <p>
-    <a href="why-education-trivia-is-so-addictive.html">Read: Why Education Trivia Is So Addictive</a>
+    <a href="testing-your-knowledge-of-your-favorite.subjects.html">Read: Testing Your Knowledge Of Your Favorite Subjects</a>
   </p>
   `,
   "Books": `
@@ -284,7 +284,7 @@ const categoryBottomMap = {
     It also becomes even richer when adaptations are involved, since some players know the original books closely while others come in through film or TV versions. If you want a closer look at why this category works so well, read the full article below.
   </p>
   <p>
-    <a href="why-book-trivia-is-so-addictive.html">Read: Why Book Trivia Is So Addictive</a>
+    <a href="remembering-details-from-books-you-have-read.html">Read: Remembering Details From Books You Have Read</a>
   </p>
   `,
   "Countries": `
@@ -296,7 +296,7 @@ const categoryBottomMap = {
     It is also one of the strongest categories for testing what people think they know versus what they can actually recall under pressure. If you want a closer look at why country quizzes are so addictive, read the full article below.
   </p>
   <p>
-    <a href="why-country-trivia-is-so-addictive.html">Read: Why Country Trivia Is So Addictive</a>
+    <a href="how-well-do-you-really-know-your-country.html">Read: How Well Do You Really Know Your Country</a>
   </p>
   `
 };
