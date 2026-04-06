@@ -6,4 +6,16 @@ Disallow: /episode.html
 Disallow: /wordle.html
 Disallow: /remove-ads.html
 
+Disallow: /themes/
+Allow: /themes/friends.html
+Allow: /themes/the-office.html
+Allow: /themes/the-big-bang-theory.html
+Allow: /themes/modern-family.html
+Allow: /themes/brooklyn-99.html
+Allow: /themes/community.html
+Allow: /themes/how-i-met-your-mother.html
+Allow: /themes/seinfeld.html
+Allow: /themes/harry-potter.html
+Allow: /themes/game-of-thrones.h
+
 Sitemap: https://triviagauntlet.app/sitemap.xml
