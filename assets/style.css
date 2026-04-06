@@ -903,3 +903,32 @@ a {
 .blog-list .card p {
   font-style: italic;
 }
+
+.category-bottom-panel {
+  margin-top: 20px;
+}
+
+.category-bottom-text p {
+  margin: 0 0 10px;
+  color: var(--muted-text);
+  line-height: 1.5;
+}
+
+.category-bottom-text p:last-child {
+  margin-bottom: 0;
+}
+
+.category-bottom-text a {
+  color: var(--link-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.category-bottom-text a:hover {
+  text-decoration: underline;
+}
+
+.category-bottom-text h2 {
+  margin: 0 0 10px;
+  font-size: 22px;
+}
