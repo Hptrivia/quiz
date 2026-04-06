@@ -1,0 +1,819 @@
+const fs = require("fs");
+const path = require("path");
+
+function isBlank(value) {
+  return typeof value !== "string" || value.trim() === "";
+}
+
+const rootDir = path.resolve(__dirname, "..");
+const themesPath = path.join(rootDir, "data", "themes.json");
+
+const contentMap = {
+  "bible": {
+    description: "A scripture trivia theme covering major books, key figures, important stories, teachings, symbols, and memorable moments from the Bible. It is designed around broad familiarity with biblical content rather than narrow theological debate.",
+    seoIntro: "Bible trivia works well because it covers a huge range of recognisable material, from Genesis and Exodus to the Gospels, parables, kings, prophets, apostles, and major miracles. It gives casual players plenty of entry points while still leaving room for harder questions on people, places, sequences, and specific events.",
+    seoDetail: "A strong Bible quiz can draw from creation, Noah, Abraham, Moses, David, Solomon, the prophets, the life of Jesus, the disciples, and the early church, alongside commandments, books of the Bible, famous verses, symbols, and locations. That range helps the theme feel fuller than a narrow religious round, because questions can shift between narrative memory, character recognition, teaching, chronology, and general knowledge that many players have picked up over time."
+  },
+
+  "harry-potter": {
+    description: "A fantasy trivia theme built around Harry Potter, Hogwarts, magical creatures, spells, rivalries, and the larger wizarding world. It covers the characters, places, objects, and story beats that made the series one of the biggest modern fantasy franchises.",
+    seoIntro: "Harry Potter trivia works because the series is packed with memorable houses, teachers, spells, villains, magical items, school traditions, and storylines that fans tend to remember years after reading the books or watching the films. Even basic rounds have depth because the world is so full of named detail.",
+    seoDetail: "A strong Harry Potter quiz can pull from Hogwarts houses, Quidditch, classes, professors, Death Eaters, Horcruxes, magical creatures, family names, friendships, duels, and key events across Harry’s years at school. It also benefits from the fact that fans often remember both broad plot points and very specific world-building details, which makes the theme richer than a simple character-and-villain round."
+  },
+
+  "quran": {
+    description: "A scripture trivia theme focused on the Quran, including its themes, figures, stories, structure, and widely known religious knowledge. It is designed to stay broad, respectful, and accessible rather than overly technical.",
+    seoIntro: "Quran trivia works best when it balances familiarity with respectful breadth, drawing from prophets, major themes, surahs, moral teachings, and core concepts that many players recognise even without specialist study. That helps the round feel meaningful instead of narrow.",
+    seoDetail: "A strong Quran quiz can include prophets mentioned in the text, notable stories, recurring themes such as mercy, guidance, judgment, and patience, along with revelations, surah knowledge, important figures, and general understanding of the Quran’s place in Islam. Because the material carries both religious and historical significance, it gives the theme more weight and variety than a simple fact list."
+  },
+
+  "canada": {
+    description: "A country trivia theme covering Canadian geography, provinces, cities, culture, politics, sport, landmarks, and notable people. It is broad enough to work for general knowledge players while still giving Canadian-focused rounds real variety.",
+    seoIntro: "Canada trivia works well because it can move easily between provinces, capitals, major cities, national symbols, history, sport, and cultural identity without feeling repetitive. It gives you more range than a narrow capitals-only or flag-only country quiz.",
+    seoDetail: "A strong Canada quiz can draw from Ottawa, Toronto, Vancouver, Montreal, the provinces and territories, the maple leaf, national parks, hockey culture, Indigenous history, famous Canadians, bilingual identity, and political institutions. That mix helps the theme feel more complete, because players are not only recalling geography but also wider cultural and historical knowledge tied to the country."
+  },
+
+  "germany": {
+    description: "A country trivia theme covering German history, cities, geography, culture, politics, sport, landmarks, and famous people. It is designed as a broad national knowledge round rather than a narrow history-only or capitals-only quiz.",
+    seoIntro: "Germany trivia works because the country gives you strong material across geography, history, science, culture, football, major cities, and national identity. It can move from Berlin and Munich to reunification, composers, inventors, and institutions without running out of recognisable ground.",
+    seoDetail: "A strong Germany quiz can include federal states, major cities, rivers, landmarks, the Berlin Wall, reunification, Oktoberfest, football, transport, industry, philosophers, composers, scientists, and political structure. That gives the theme depth beyond tourism facts, because players can be tested on both modern Germany and the wider historical and cultural legacy that makes the country so prominent in European trivia."
+  },
+
+  "usa": {
+    description: "A country trivia theme focused on American geography, history, politics, culture, landmarks, symbols, and famous people. It is broad by design and works well for fast general knowledge rounds as well as larger quiz sets.",
+    seoIntro: "U.S.A. trivia works because the subject is huge, stretching across states, capitals, presidents, national symbols, entertainment, sport, landmarks, and major historical events. That breadth makes it easy to build rounds that feel familiar at first but still have enough room for harder detail.",
+    seoDetail: "A strong U.S.A. quiz can pull from the fifty states, Washington D.C., the Constitution, presidents, wars, monuments, flags, national parks, famous cities, American sport, entertainment, and cultural symbols recognised around the world. The theme stays playable because even casual players know some of it, while stronger players can be pushed on history, geography, institutions, and lesser-known state-level facts."
+  },
+
+  "united-kingdom": {
+    description: "A country trivia theme covering the United Kingdom through its nations, cities, monarchy, politics, sport, culture, landmarks, and history. It is designed as a broad quiz round rather than a narrow royal-family-only or capitals-only theme.",
+    seoIntro: "United Kingdom trivia works well because it can draw from England, Scotland, Wales, and Northern Ireland, while also covering monarchy, parliament, literature, football, landmarks, and national traditions. That gives it far more range than a standard one-angle country quiz.",
+    seoDetail: "A strong United Kingdom quiz can include London, Edinburgh, Cardiff, Belfast, the royal family, prime ministers, famous writers, music, football clubs, national symbols, historic sites, and key political or historical moments. The theme works because it blends cultural familiarity with broader national knowledge, letting rounds move between geography, institutions, identity, and famous British figures."
+  },
+
+  "finance-and-investing": {
+    description: "A finance trivia theme covering money, markets, investing, companies, banking, and widely known economic concepts. It is built around practical knowledge and recognisable financial ideas rather than specialist professional detail.",
+    seoIntro: "Finance and investing trivia works when it focuses on the terms and concepts people actually hear in everyday life, from stocks and inflation to interest rates, savings, risk, and major financial institutions. That makes the subject more playable than a dense technical economics round.",
+    seoDetail: "A strong finance and investing quiz can include stocks, bonds, dividends, market indices, inflation, central banks, budgeting, compound interest, company value, recessions, personal finance basics, and well-known investing language. The theme is strongest when it mixes mainstream financial knowledge with practical concepts people encounter in news, banking, or day-to-day money decisions."
+  },
+
+  "health-and-medicine": {
+    description: "A health and medicine trivia theme covering the human body, common diseases, treatments, anatomy, medical terms, and major healthcare knowledge. It stays broad and familiar rather than drifting into specialist clinical detail.",
+    seoIntro: "Health and medicine trivia works because many of its core topics are widely recognised, from organs and symptoms to vaccines, nutrition, first aid, and common medical language. That makes the category educational without feeling too narrow or technical for normal quiz play.",
+    seoDetail: "A strong health and medicine quiz can include body systems, major organs, infections, famous diseases, treatment basics, medical discoveries, public health, nutrition, and healthcare vocabulary. The category stays engaging because it mixes school-level biology with everyday health knowledge that people encounter through life, media, and general awareness."
+  },
+
+  "language": {
+    description: "A language trivia theme covering words, grammar, meaning, usage, etymology, and language-related facts across a broad range of topics. It is designed around how language works rather than around one single language only.",
+    seoIntro: "Language trivia works well because it can move between word origins, grammar rules, common expressions, sentence structure, meanings, and the way people actually use language every day. That gives it more life than a dry classroom-style category.",
+    seoDetail: "A strong language quiz can include parts of speech, synonyms, antonyms, idioms, prefixes, suffixes, grammar terms, roots, punctuation, borrowed words, and famous language facts. The subject stays playable because many answers feel familiar even when players cannot explain them perfectly, which creates a good balance between instinctive recall and proper knowledge."
+  },
+
+  "marketing-and-brands": {
+    description: "A marketing and brands trivia theme covering famous companies, logos, slogans, advertising campaigns, products, and basic branding concepts. It sits between business knowledge and mainstream pop culture recognition.",
+    seoIntro: "Marketing and brands trivia works because people absorb brand knowledge constantly, even when they are not trying to. Logos, taglines, products, rebrands, famous campaigns, and company identities all make this a category with strong recognition value.",
+    seoDetail: "A strong marketing and brands quiz can include slogans, logos, packaging, flagship products, major campaigns, brand ownership, rebranding, advertising language, and high-profile corporate identities from different industries. It works especially well because players often know more than they think, which makes the category accessible while still leaving room for sharper business-oriented questions."
+  },
+
+  "mathematics": {
+    description: "A mathematics trivia theme built around numbers, arithmetic, algebra, geometry, formulas, logic, and classic maths knowledge. It is designed to feel playable and recognisable rather than like an exam paper.",
+    seoIntro: "Mathematics trivia works best when it combines familiar school-level concepts with quick recall on formulas, patterns, symbols, and number facts. That balance makes the subject challenging without turning it into a full problem-solving test.",
+    seoDetail: "A strong mathematics quiz can pull from multiplication, fractions, percentages, algebra, geometry, angles, sequences, famous constants, equations, graphs, and basic problem-solving ideas. The theme has more variety than people expect because it can shift between straightforward facts, symbol recognition, mental calculation, and broader understanding of mathematical language."
+  },
+
+  "spelling": {
+    description: "A word-focused trivia theme testing spelling, letter patterns, commonly confused words, and familiar mistakes. It is simple in concept but becomes much harder once players have to answer under pressure.",
+    seoIntro: "Spelling trivia works because it turns something people assume they know into a quick-recall challenge full of traps. Commonly misspelled words, silent letters, doubled consonants, and awkward endings make even ordinary vocabulary surprisingly difficult.",
+    seoDetail: "A strong spelling quiz can include tricky everyday words, homophones, confusing endings, repeated-letter words, borrowed spellings, and words people often pronounce correctly but write incorrectly. The category stays sharp because it rewards attention to detail rather than general topic knowledge, which makes it feel different from a normal vocabulary round."
+  },
+    "baldurs-gate-3": {
+    description: "A role-playing trivia theme built around Baldur's Gate 3, covering companions, classes, combat, locations, factions, major choices, and the branching story paths that made the game such a huge fantasy RPG hit.",
+    seoIntro: "Baldur's Gate 3 trivia works especially well because the game is full of memorable companions, dialogue choices, quests, powers, factions, and encounters that players experience in very different ways. That gives the theme a lot more depth than a basic fantasy game quiz built only on names and locations.",
+    seoDetail: "A strong Baldur's Gate 3 quiz can draw from Shadowheart, Astarion, Lae'zel, Gale, Karlach, Wyll, major areas like the Emerald Grove and Baldur's Gate itself, the Absolute storyline, Illithid powers, romance paths, classes, spells, builds, and big moral decisions. The game rewards attention to both story and systems, so the theme can move naturally between character knowledge, quest outcomes, combat mechanics, world-building, and the smaller details players remember from long playthroughs."
+  },
+
+  "bloodborne": {
+    description: "A gothic action RPG trivia theme focused on Bloodborne, including Yharnam, hunters, bosses, trick weapons, lore, nightmare areas, and the unsettling cosmic horror that defines the game.",
+    seoIntro: "Bloodborne trivia works because the game leaves behind very strong memory of bosses, weapons, locations, and atmosphere, even when some of its lore stays deliberately cryptic. Players tend to remember not only the major fights, but also the strange terminology, visual design, and systems that make the world feel so distinct.",
+    seoDetail: "A strong Bloodborne quiz can include Central Yharnam, Cathedral Ward, Cainhurst, Byrgenwerth, the Nightmare realms, the Healing Church, the Great Ones, Insight, Caryll Runes, chalice dungeons, and iconic bosses such as Father Gascoigne, Vicar Amelia, Gehrman, and Ludwig. The theme works so well because it can balance hard gameplay memory with lore-based knowledge, moving between trick weapons, enemies, hunter tools, transformations, and the deeper cosmic ideas that make Bloodborne stand out within the Soulslike space."
+  },
+
+  "clair-obscur-expedition-33": {
+    description: "A fantasy RPG trivia theme built around Clair Obscur: Expedition 33, covering its central mission, characters, world ideas, combat systems, visual style, and the story elements that make the game feel distinctive.",
+    seoIntro: "Clair Obscur: Expedition 33 works well as trivia because it combines a very recognisable artistic identity with a specific mission, named characters, unusual world concepts, and combat details that players are likely to remember. It is the kind of game where both the story premise and the presentation leave a strong impression.",
+    seoDetail: "A strong Clair Obscur: Expedition 33 quiz can draw from the expedition itself, the world shaped by the Paintress, major party members, enemy encounters, turn-based and reactive combat elements, weapons, abilities, and the visual and narrative ideas that define the setting. The theme has good range because it is not only about plot beats, but also about how the game looks, how it plays, and how its central concept shapes the mood, structure, and progression of the journey."
+  },
+
+  "demon-souls": {
+    description: "A dark fantasy action RPG trivia theme focused on Demon's Souls, including archstones, bosses, world tendencies, classes, weapons, locations, and the systems that made it such an influential foundation for the Souls formula.",
+    seoIntro: "Demon's Souls trivia works because the game is packed with named worlds, punishing bosses, memorable mechanics, and a structure that players tend to remember clearly after finishing it. Even compared with later Souls games, its systems and locations still feel very specific.",
+    seoDetail: "A strong Demon's Souls quiz can include Boletarian Palace, Stonefang Tunnel, Tower of Latria, Shrine of Storms, Valley of Defilement, the Nexus, tendency systems, classes, upgrade paths, demons, NPCs, and bosses like the Flamelurker, Old Monk, Tower Knight, and Maiden Astraea. The theme gives you more than simple boss trivia, because it can also test players on world structure, mechanics, items, atmosphere, and the design ideas that shaped an entire genre afterwards."
+  },
+
+  "elden-ring": {
+    description: "An open-world action RPG trivia theme built around Elden Ring, covering the Lands Between, major bosses, regions, factions, builds, quests, lore, and the cryptic world design that made the game so widely discussed.",
+    seoIntro: "Elden Ring trivia works especially well because the game mixes huge exploration with memorable bosses, named regions, complicated questlines, and lore fragments that players piece together over time. That gives it both mainstream recognition and deep fan-level detail.",
+    seoDetail: "A strong Elden Ring quiz can pull from Limgrave, Liurnia, Caelid, Altus Plateau, Leyndell, the Haligtree, the Tarnished, the demigods, the Greater Will, major NPC quests, endings, weapons, spells, ashes, summons, and bosses such as Margit, Radahn, Morgott, Malenia, and Maliketh. The theme works because it can shift between combat, geography, factions, item knowledge, and hidden story detail, which makes it richer than a simple list of bosses and locations."
+  },
+
+  "ghost-of-tsushima": {
+    description: "A samurai action-adventure trivia theme focused on Ghost of Tsushima, including Jin Sakai, Tsushima's regions, combat stances, clans, Mongol invasion storylines, allies, and key missions from the game.",
+    seoIntro: "Ghost of Tsushima trivia works because the game leaves players with strong memory of its island setting, duels, stances, companions, and major conflicts between honour, survival, and changing warfare. Its style and structure make many of its details easy to recall.",
+    seoDetail: "A strong Ghost of Tsushima quiz can draw from Jin Sakai, Lord Shimura, Yuna, Ryuzo, Khotun Khan, Iki-related material, Tsushima's regions, fox dens, mythic tales, armour sets, weapons, stances, duels, and Mongol-controlled locations. The theme has more range than it first appears, because it can move between story, side activities, combat systems, named allies and enemies, and the broader samurai-versus-Ghost tension that drives the game forward."
+  },
+
+  "gta-v": {
+    description: "An open-world crime trivia theme built around GTA V, covering Los Santos, the three protagonists, heists, missions, side activities, vehicles, weapons, and the satirical world that made the game a lasting cultural giant.",
+    seoIntro: "GTA V trivia works because the game is full of recognisable missions, characters, neighbourhoods, businesses, radio culture, and chaos-driven gameplay moments that players remember long after they finish the story. It has enough scale to support both casual and deeper fan questions.",
+    seoDetail: "A strong GTA V quiz can include Michael, Franklin, Trevor, Lester, major heists, the FIB, gangs, Los Santos and Blaine County locations, businesses, vehicle types, weapons, hobbies, strangers and freaks, and specific story missions or set pieces. The theme stays strong because it can move between narrative detail, map knowledge, gameplay systems, side content, and the exaggerated tone of the world, rather than relying only on a few famous scenes."
+  },
+
+  "lies-of-p": {
+    description: "A dark action RPG trivia theme focused on Lies of P, including its Belle Époque setting, weapon assembly system, major bosses, locations, characters, lies mechanic, and the twisted fairy-tale tone of the game.",
+    seoIntro: "Lies of P works well as trivia because it combines a memorable setting with named bosses, unusual systems, and a central lie-versus-truth idea that players are likely to remember. It stands out even among Soulslikes because its world and mechanics feel specific rather than interchangeable.",
+    seoDetail: "A strong Lies of P quiz can include Krat, Geppetto, Sophia, the Puppet Frenzy, the Legion Arm, P-Organ upgrades, boss fights, amulets, weapon handles and blades, status effects, factions, and the major moral choices tied to lying. The theme has good depth because it can test players on both the game's combat and progression systems and its distinctive reworking of Pinocchio-inspired characters, places, and story ideas."
+  },
+
+  "minecraft": {
+    description: "A sandbox game trivia theme covering Minecraft through crafting, mobs, biomes, structures, tools, survival systems, updates, and the building mechanics that made it one of the most influential games ever made.",
+    seoIntro: "Minecraft trivia works because the game creates very strong memory through repetition, exploration, crafting, and survival. Even players who are not experts often remember recipes, mobs, dimensions, ores, and structures, while long-time players know far more specific mechanics and update-era details.",
+    seoDetail: "A strong Minecraft quiz can include Creepers, Endermen, villagers, the Nether, the End, redstone, enchantments, biomes, crafting tables, mining resources, generated structures, farming, potions, bosses, and update-driven features. The category works so well because it can cover both broad recognition and real hands-on knowledge, moving from simple survival basics to technical systems that players only learn after spending serious time in the game."
+  },
+
+  "pokemon": {
+    description: "A monster-collecting trivia theme built around Pokémon, covering regions, starters, evolutions, types, trainers, legendary Pokémon, items, battle concepts, and the franchise-wide knowledge that spans games and anime alike.",
+    seoIntro: "Pokémon trivia works because the franchise is full of instantly recognisable creatures, type matchups, regions, gyms, evolutions, and named characters that many players have known since childhood. It is broad enough to work for casual fans but detailed enough to reward deeper franchise memory.",
+    seoDetail: "A strong Pokémon quiz can include Kanto, Johto, Hoenn, Sinnoh, starters, Gym Leaders, Elite Four members, type advantages, evolution methods, legendary and mythical Pokémon, Poké Balls, moves, held items, villain teams, and anime crossover knowledge. The theme stays rich because it can test players on both broad franchise familiarity and very specific game systems, species knowledge, and region-by-region memory."
+  },
+
+  "red-dead-redemption-2": {
+    description: "A western action-adventure trivia theme focused on Red Dead Redemption 2, including Arthur Morgan, the Van der Linde gang, frontier locations, missions, weapons, side activities, and the emotional story turns that define the game.",
+    seoIntro: "Red Dead Redemption 2 trivia works especially well because the game leaves players with strong memory of gang members, camps, towns, missions, random encounters, hunting, and the slow collapse of the outlaw life. It is one of those games where both the world and the relationships stick.",
+    seoDetail: "A strong Red Dead Redemption 2 quiz can draw from Arthur Morgan, Dutch, John Marston, Micah, Hosea, Sadie, gang camps, Saint Denis, Valentine, Rhodes, weapons, horses, honour, robberies, stranger missions, and major chapters in the story. The theme has real depth because it combines emotional character-driven memory with open-world systems, map knowledge, side content, and the smaller details players remember from spending long stretches inside its world."
+  },
+
+  "resident-evil-4": {
+    description: "A survival horror action trivia theme built around Resident Evil 4, covering Leon S. Kennedy, enemies, bosses, weapons, set pieces, locations, and the campaign moments that made the game one of horror gaming's defining classics.",
+    seoIntro: "Resident Evil 4 trivia works because the game is packed with iconic enemies, tense locations, memorable boss fights, upgrade choices, and scenes that players tend to remember years after playing. It has a stronger identity than a generic horror-game quiz.",
+    seoDetail: "A strong Resident Evil 4 quiz can include Leon, Ashley, Ada, Luis, the Ganados, Los Iluminados, Plagas, the merchant, village and castle sections, island segments, key weapons, treasures, inventory systems, and boss fights such as Del Lago, El Gigante, Salazar, Krauser, and Saddler. The theme works well because it can move between story, enemies, combat, upgrades, escort sequences, and the many famous encounters that define the game's rhythm."
+  },
+
+  "the-last-of-us": {
+    description: "A post-apocalyptic action-adventure trivia theme focused on The Last of Us, covering Joel, Ellie, factions, infected types, locations, survival mechanics, emotional story beats, and the world shaped by the Cordyceps outbreak.",
+    seoIntro: "The Last of Us works well as trivia because it combines strong emotional memory with very recognisable enemies, locations, and factions. Players tend to remember both the broad story and the smaller details of survival, relationships, and the harsh world the characters move through.",
+    seoDetail: "A strong The Last of Us quiz can include Joel, Ellie, Tess, Tommy, Marlene, the Fireflies, FEDRA, hunters, infected stages such as Clickers and Bloaters, major cities, weapons, crafting, stealth, and the key turning points of the journey. The theme has depth because it can balance story knowledge, world-building, enemy recognition, gameplay systems, and the personal decisions that make the series so memorable."
+  },
+
+  "the-witcher-3": {
+    description: "A fantasy RPG trivia theme built around The Witcher 3, covering Geralt of Rivia, contracts, monsters, regions, politics, companions, choices, quests, and the rich world-building that made the game a modern RPG landmark.",
+    seoIntro: "The Witcher 3 trivia works because the game combines monster hunting, political conflict, named regions, memorable side quests, and long-running character relationships in a way that leaves players with a lot to remember. It has both broad fantasy appeal and very deep fan-level detail.",
+    seoDetail: "A strong The Witcher 3 quiz can draw from Geralt, Ciri, Yennefer, Triss, Dandelion, the Wild Hunt, Novigrad, Velen, Skellige, Witcher contracts, signs, potions, Gwent, monsters, major choices, and expansion-related material. The category stays strong because it can move between combat systems, lore, quest outcomes, politics, and the smaller narrative details that make the game feel far denser than a standard fantasy adventure."
+  },
+
+  "animals": {
+    description: "A general trivia theme covering animals through species, habitats, behavior, diets, adaptations, classification, and surprising facts from across the natural world.",
+    seoIntro: "Animals trivia works because almost everyone has some entry point into the topic, whether through pets, wildlife documentaries, school knowledge, or simple curiosity. The category feels broad and lively because it can move between familiar animals and stranger facts from nature.",
+    seoDetail: "A strong animals quiz can include mammals, birds, reptiles, amphibians, sea life, predators, herbivores, habitats, migration, camouflage, food chains, endangered species, animal groups, and unusual biological traits. The theme works well because it combines straightforward recognition with wider knowledge about how animals live, survive, and differ from one another, which keeps the round varied instead of repetitive."
+  },
+    "bollywood": {
+    description: "A film trivia theme centered on Bollywood, covering major stars, hit films, music, directors, iconic roles, and the style and scale that made Hindi cinema one of the world’s biggest entertainment industries.",
+    seoIntro: "Bollywood trivia works well because the category is full of recognisable actors, famous songs, blockbuster films, memorable romances, family dramas, and larger-than-life screen moments. It gives players a mix of mainstream recognition and deeper fan knowledge rather than feeling like a narrow movie list.",
+    seoDetail: "A strong Bollywood quiz can draw from stars such as Shah Rukh Khan, Salman Khan, Aamir Khan, Amitabh Bachchan, Deepika Padukone, Kareena Kapoor, and other major names, while also covering classic and modern films, playback music, directors, awards, dance numbers, and famous dialogues or pairings. The theme stays strong because it can move between actors, stories, songs, cultural impact, and industry history, which gives it far more depth than a basic film-trivia round."
+  },
+
+  "fun-facts": {
+    description: "A light general trivia theme built around quirky, surprising, and entertaining facts from a wide range of topics. It is designed for quick-play variety rather than one narrow specialist subject.",
+    seoIntro: "Fun facts trivia works because it leans into the kind of information people love repeating, unusual details, weird records, surprising comparisons, and everyday facts that sound too odd to be true. That makes it easy to play casually while still giving each round plenty of variety.",
+    seoDetail: "A strong fun facts quiz can include strange animal facts, unusual geography, human-body surprises, surprising inventions, records, language oddities, food facts, historical curiosities, and bits of science or culture that are memorable because they feel unexpected. The category works best when it keeps switching angles, since the appeal comes from surprise and fast recognition rather than from building around one single knowledge area."
+  },
+
+  "geography": {
+    description: "A geography trivia theme covering countries, capitals, borders, landmarks, maps, regions, and major physical features of the world. It is built around global place knowledge rather than one specific country or continent.",
+    seoIntro: "Geography trivia works because it combines things people think they know well, capitals, continents, flags, and famous landmarks, with details that become much harder under pressure, such as borders, rivers, mountain ranges, or lesser-known locations. That gives the category both broad familiarity and real challenge.",
+    seoDetail: "A strong geography quiz can include capitals, oceans, seas, deserts, islands, rivers, mountain ranges, neighbouring countries, time zones, famous landmarks, and map-based world knowledge across different continents. The theme stays varied because it can move between physical geography and political geography, testing not only where places are, but also how they connect, what makes them distinctive, and why certain locations are globally recognisable."
+  },
+
+  "history": {
+    description: "A broad history trivia theme covering major events, leaders, wars, empires, revolutions, discoveries, and turning points from different periods of world history.",
+    seoIntro: "History trivia works well because it can jump across ancient civilisations, famous rulers, battles, inventions, political change, and modern global events without running out of material. It gives players a category that feels serious and wide-ranging rather than repetitive.",
+    seoDetail: "A strong history quiz can include ancient Egypt, Greece, and Rome, medieval kingdoms, empires, revolutions, world wars, explorers, presidents, kings and queens, independence movements, major treaties, and social or technological turning points. The theme works because it is not tied to one era, so rounds can balance very famous events with broader historical knowledge about how societies, leaders, and conflicts shaped the world over time."
+  },
+
+  "hollywood": {
+    description: "A film trivia theme covering Hollywood through famous actors, directors, major movies, awards, studios, genres, and memorable moments from mainstream cinema history.",
+    seoIntro: "Hollywood trivia works because the subject is full of globally recognised stars, major films, iconic roles, and award-season moments that many players already know from pop culture alone. That makes it accessible, but still broad enough for deeper film knowledge too.",
+    seoDetail: "A strong Hollywood quiz can draw from actors, directors, Oscar-winning films, blockbuster franchises, classic scenes, studio history, genres, famous pairings, and high-profile award moments across different decades. The theme stays lively because it can move between old Hollywood, modern cinema, celebrity culture, box-office giants, and memorable performances rather than sticking to one narrow era or style."
+  },
+
+  "music": {
+    description: "A broad music trivia theme covering hit songs, artists, albums, genres, lyrics, awards, and memorable moments from mainstream music culture.",
+    seoIntro: "Music trivia works because almost everyone has some connection to songs, artists, and genres they recognise, even if they are not serious music fans. The subject can shift easily between pop, rock, rap, classics, chart history, and cultural moments, which keeps rounds varied.",
+    seoDetail: "A strong music quiz can include famous singers and bands, major albums, chart-topping songs, music awards, genres, collaborations, iconic performances, lyrics, and industry milestones from different eras. The category stays strong because it allows for both instant-recognition questions and tougher details on release history, artist identity, song titles, and the wider cultural impact of major hits."
+  },
+
+  "nigerian-music": {
+    description: "A music trivia theme focused on Nigerian music, covering Afrobeats, major artists, hit songs, producers, collaborations, and the wider cultural impact of the country’s music scene.",
+    seoIntro: "Nigerian music trivia works especially well because the scene is full of distinctive stars, memorable songs, genre crossover, and cultural influence both inside and outside Africa. It gives the category a strong identity rather than feeling like a generic music round.",
+    seoDetail: "A strong Nigerian music quiz can include artists such as Burna Boy, Wizkid, Davido, Tiwa Savage, Olamide, Yemi Alade, and other major names, while also covering hit songs, albums, collaborations, labels, awards, producers, and the rise of Afrobeats on the global stage. The theme has depth because it can balance local industry knowledge with mainstream hits and wider cultural recognition, making it strong for both dedicated fans and broader pop-culture players."
+  },
+
+  "nollywood": {
+    description: "A film trivia theme built around Nollywood, covering actors, actresses, directors, major films, genres, and the huge cultural reach of Nigerian cinema.",
+    seoIntro: "Nollywood trivia works because the industry has produced a huge number of recognisable stars, films, and story patterns that audiences remember well, from family drama and romance to comedy and crime. That gives it a stronger identity than a vague general movie round.",
+    seoDetail: "A strong Nollywood quiz can draw from famous actors and actresses, directors, hit films, classic titles, newer productions, genre trends, industry milestones, and the wider influence of Nigerian cinema across Africa and beyond. The theme works because it can move between celebrity recognition, film knowledge, cultural context, and the evolution of one of the world’s most productive film industries."
+  },
+
+  "odd-one-out": {
+    description: "A quick-fire trivia theme where players identify the option that does not belong, using categories, patterns, and general knowledge rather than one fixed subject area.",
+    seoIntro: "Odd One Out works well as trivia because the format itself creates pressure. Players are not just recalling facts, they are comparing options, spotting patterns, and noticing what breaks the category. That makes it feel different from a normal multiple-choice round.",
+    seoDetail: "A strong Odd One Out quiz can use geography, language, pop culture, science, history, animals, sport, and everyday knowledge to create sets where three options fit and one clearly does not. The theme stays engaging because it rewards both direct knowledge and elimination skills, making it suitable for mixed-difficulty rounds that feel more interactive than a standard question-and-answer format."
+  },
+
+  "science": {
+    description: "A broad science trivia theme covering biology, chemistry, physics, space, inventions, discoveries, and major scientific ideas in an accessible quiz format.",
+    seoIntro: "Science trivia works because it can combine school-level knowledge with the bigger discoveries and ideas that most people recognise from everyday life, media, and education. That gives it a good balance between familiarity and challenge.",
+    seoDetail: "A strong science quiz can include atoms, planets, cells, forces, energy, famous scientists, elements, animal biology, the human body, inventions, experiments, and major discoveries from different fields. The theme stays broad because it can move between biology, chemistry, physics, astronomy, and general scientific understanding, which prevents the round from feeling too narrow or too technical."
+  },
+
+  "true-or-false": {
+    description: "A fast general knowledge trivia theme built around statements that players must judge as true or false. It is simple in structure but effective because every answer becomes a quick decision under pressure.",
+    seoIntro: "True or False works well because the format is instantly understandable and keeps the pace moving. It can be used across almost any topic, and the challenge comes from how believable a statement sounds rather than from long question wording.",
+    seoDetail: "A strong True or False quiz can include history, science, geography, sport, entertainment, animals, and weird facts presented as short statements that feel obvious until players have to commit to an answer. The theme stays useful because it relies on clarity, speed, and misdirection, making it ideal for quicker rounds that still test real knowledge."
+  },
+
+  "world-capitals": {
+    description: "A geography trivia theme focused specifically on capitals around the world, testing country-capital knowledge in a direct and highly recognizable quiz format.",
+    seoIntro: "World capitals trivia works because it is one of the cleanest and most familiar quiz categories there is. Nearly everyone knows some capitals, but the category quickly becomes harder once it moves beyond the most obvious countries.",
+    seoDetail: "A strong world capitals quiz can include major global capitals, lesser-known national capitals, continent-based grouping, capitals that are easily confused, and questions that reverse the format by naming the capital first. The theme stays effective because it is simple, fast, and universally recognizable, while still allowing enough difficulty variation to separate casual players from stronger geography fans."
+  },
+
+  "world-facts": {
+    description: "A general knowledge trivia theme covering interesting facts about the world, including geography, history, culture, science, landmarks, and notable global events.",
+    seoIntro: "World facts trivia works because it gives you a broad, flexible category that can jump between places, people, discoveries, records, and cultural knowledge without feeling locked into one subject. That makes it useful for varied quiz rounds.",
+    seoDetail: "A strong world facts quiz can include famous landmarks, country knowledge, historical events, strange records, scientific discoveries, global traditions, population facts, natural wonders, and widely known international trivia. The category works because it is broad enough to stay unpredictable, letting rounds mix easy recognition with harder details from different parts of the world."
+  },
+
+  "boxing": {
+    description: "A combat sports trivia theme covering boxing through champions, divisions, title fights, styles, records, rivalries, and legendary moments from different eras of the sport.",
+    seoIntro: "Boxing trivia works because the sport is built around famous fighters, major bouts, titles, knockouts, weight classes, and long-running debate over greatness. It gives the category strong identity across both modern stars and historic names.",
+    seoDetail: "A strong boxing quiz can draw from heavyweight legends, lower-weight champions, title belts, rivalries, unbeaten runs, famous venues, boxing styles, promoters, sanctioning bodies, and landmark fights that shaped different eras. The theme stays rich because it can move between fighters, results, records, divisions, and the wider history of the sport rather than relying only on a few household names."
+  },
+
+  "epl-football": {
+    description: "A football trivia theme focused on the English Premier League, covering clubs, players, managers, title races, records, rivalries, and famous seasons from one of the world’s biggest leagues.",
+    seoIntro: "Premier League trivia works especially well because the league is full of big clubs, star players, dramatic title races, derby rivalries, and constant debate around records and eras. It is one of the strongest sport categories for both casual and committed fans.",
+    seoDetail: "A strong EPL Football quiz can include Manchester United, Liverpool, Arsenal, Chelsea, Manchester City, Tottenham, famous managers, Golden Boot winners, title-winning seasons, records, iconic matches, stadiums, and club identities across the modern Premier League era. The theme has real depth because it can balance team knowledge, player history, trophies, stats, rivalry moments, and the broader story of how the league developed into a global football product."
+  },
+    "mma": {
+    description: "A combat sports trivia theme focused on mixed martial arts, covering fighters, divisions, championships, styles, finishes, promotions, and major moments from the modern MMA world.",
+    seoIntro: "MMA trivia works especially well because the sport combines star fighters, title changes, rivalries, knockouts, submissions, and style matchups in a way that fans tend to remember very clearly. It is broad enough for casual recognition but detailed enough for dedicated fight followers too.",
+    seoDetail: "A strong MMA quiz can draw from UFC champions, major contenders, weight classes, famous events, title fights, unbeaten streaks, knockouts, submissions, gyms, coaching lineages, and the contrast between striking, wrestling, jiu-jitsu, and all-round styles. The theme stays strong because it can move between fighter identity, records, finishes, division history, and big pay-per-view moments rather than relying only on a few famous names."
+  },
+
+  "nba": {
+    description: "A basketball trivia theme focused on the NBA, covering teams, superstars, championships, dynasties, records, awards, and iconic moments from across different eras of the league.",
+    seoIntro: "NBA trivia works because basketball fans tend to remember players, teams, finals runs, scoring records, MVP races, rivalries, and famous performances in a very direct way. The league has enough history and star power to support both mainstream and deeper fan-level questions.",
+    seoDetail: "A strong NBA quiz can include the Lakers, Celtics, Bulls, Warriors, Spurs, Michael Jordan, LeBron James, Kobe Bryant, Stephen Curry, Shaquille O'Neal, Wilt Chamberlain, titles, MVPs, Finals MVPs, rookie awards, draft picks, scoring explosions, and memorable playoff series. The theme stays rich because it can balance franchise history, player careers, statistics, eras, awards, and iconic game moments without becoming repetitive."
+  },
+
+  "nfl": {
+    description: "An American football trivia theme covering the NFL through teams, quarterbacks, championships, records, rivalries, Super Bowls, and major moments from league history.",
+    seoIntro: "NFL trivia works because the league is full of strong team identities, famous quarterbacks, Super Bowl memories, dynasty debates, and record-driven storytelling that fans remember year after year. It is one of the clearest examples of a sport where history and current discussion blend together well.",
+    seoDetail: "A strong NFL quiz can draw from the Patriots, Cowboys, Packers, Chiefs, Steelers, 49ers, major quarterbacks, coaches, Super Bowl winners, MVPs, playoff runs, records, stadiums, divisions, and famous postseason or regular-season moments. The theme stays effective because it can move between team history, player legacy, big games, awards, statistics, and the wider identity of the sport rather than depending only on recent headlines."
+  },
+
+  "nigerian-football": {
+    description: "A football trivia theme focused on Nigerian football, covering the national team, famous players, tournaments, clubs, and major moments from the sport's history in and around Nigeria.",
+    seoIntro: "Nigerian football trivia works because the category has strong identity through the Super Eagles, major tournaments, iconic players, youth success, and the wider connection between local football culture and international recognition. It feels more specific and grounded than a generic world-football round.",
+    seoDetail: "A strong Nigerian Football quiz can include the Super Eagles, AFCON campaigns, World Cup appearances, Olympic success, famous players such as Jay-Jay Okocha, Nwankwo Kanu, Rashidi Yekini, and newer stars, alongside domestic clubs, coaches, rivalries, and landmark matches. The theme has depth because it can cover both national-team history and broader football culture, linking well-known individuals to major tournament moments and the country's place in African football."
+  },
+
+  "world-football": {
+    description: "A broad football trivia theme covering the global game through international stars, clubs, tournaments, records, rivalries, and famous moments from different leagues and competitions.",
+    seoIntro: "World football trivia works because the sport gives you endless material across World Cups, Champions League nights, league giants, legendary players, and unforgettable goals or finals. It is broad enough to feel huge, but familiar enough that most players have a way into it.",
+    seoDetail: "A strong World Football quiz can include Pelé, Maradona, Messi, Ronaldo, Zidane, World Cup winners, European champions, famous clubs, Ballon d'Or winners, derby rivalries, tournament history, records, stadiums, and iconic goals or controversies. The category works because it can move between club and international football, balancing old legends with modern stars and giving rounds enough global variety to stay fresh."
+  },
+
+  "wwe": {
+    description: "A sports entertainment trivia theme focused on WWE, covering wrestlers, championships, factions, catchphrases, finishing moves, eras, and memorable storyline moments.",
+    seoIntro: "WWE trivia works because wrestling fans remember names, entrances, rivalries, belts, factions, promos, and signature moves in a way that very few other entertainment categories can match. The subject is built on recognisable moments and larger-than-life identities.",
+    seoDetail: "A strong WWE quiz can include WrestleMania, Royal Rumble, title reigns, legends such as The Undertaker, Stone Cold Steve Austin, The Rock, John Cena, Triple H, and newer stars, along with factions, finishing moves, catchphrases, betrayals, and famous matches or storylines. The theme stays strong because it blends sport-like records with theatrical memory, making room for era-based questions, character knowledge, and landmark moments that fans still debate years later."
+  },
+
+  "a-knight-of-the-seven-kingdoms": {
+    description: "A fantasy trivia theme based on A Knight of the Seven Kingdoms, covering Dunk, Egg, tournaments, noble houses, Westerosi politics, and the smaller-scale character-driven storytelling tied to George R.R. Martin's world.",
+    seoIntro: "A Knight of the Seven Kingdoms works well as trivia because it trades the huge sprawl of later Westeros stories for more personal stakes, clearer relationships, and specific events built around Ser Duncan the Tall and Egg. That makes the details easier to anchor while still keeping the world rich.",
+    seoDetail: "A strong A Knight of the Seven Kingdoms quiz can draw from Dunk, Egg, Ashford, tourneys, hedge-knight life, noble houses, lineage, vows, honour, and the quieter politics of Westeros before the events of Game of Thrones. The theme has a different strength from the bigger franchise entries because it can focus more tightly on named characters, local conflicts, and the social structure of the realm without needing giant war-scale plotlines."
+  },
+
+  "arcane": {
+    description: "An animated fantasy and sci-fi trivia theme focused on Arcane, covering Piltover, Zaun, Vi, Jinx, major relationships, politics, inventions, and the emotional story beats that made the series stand out.",
+    seoIntro: "Arcane trivia works especially well because the series leaves very strong visual and emotional memory through its characters, class conflict, technology, and tragic relationships. Even viewers who watched it once often remember specific scenes, designs, and turning points.",
+    seoDetail: "A strong Arcane quiz can include Vi, Jinx, Caitlyn, Jayce, Viktor, Silco, Mel, Hextech, Shimmer, Piltover, Zaun, family bonds, betrayals, and the political tension between progress and exploitation. The theme works because it can balance visual world-building, character psychology, action, and the smaller emotional details that make the story feel more personal than a standard adaptation."
+  },
+
+  "attack-on-titan": {
+    description: "A dark anime trivia theme built around Attack on Titan, covering Titans, military factions, hidden truths, battles, shifting loyalties, and the world-changing revelations that define the series.",
+    seoIntro: "Attack on Titan trivia works because the story combines instantly recognisable action with layered world-building, mystery, named Titan powers, and major reversals that viewers tend to remember clearly. It has both spectacle and detail, which makes it ideal for quiz play.",
+    seoDetail: "A strong Attack on Titan quiz can include Eren, Mikasa, Armin, Levi, the Survey Corps, Marley, Eldia, the walls, Titan shifters, named Titan forms, military ranks, major battles, and the political and historical truths uncovered across the series. The theme stays rich because it can move between character arcs, powers, factions, geography, ideology, and the constant shift in how the world is understood."
+  },
+
+  "avatar-the-last-airbender": {
+    description: "An animated fantasy trivia theme focused on Avatar: The Last Airbender, covering bending arts, the four nations, Aang's journey, major characters, humour, and the emotional moments that made the series so widely loved.",
+    seoIntro: "Avatar: The Last Airbender trivia works because the show combines elemental powers, clear world-building, memorable characters, and a lot of warmth and humour alongside its larger war story. It is one of those series where both children and older fans tend to remember specific details very well.",
+    seoDetail: "A strong Avatar quiz can include Aang, Katara, Sokka, Toph, Zuko, Iroh, Appa, Momo, the Air Nomads, Water Tribes, Earth Kingdom, Fire Nation, bending techniques, spirits, key episodes, and major emotional turning points. The theme has real range because it can test powers, geography, character development, relationships, lore, and the balance between comedy and war that gives the series its identity."
+  },
+
+  "breaking-bad": {
+    description: "A crime drama trivia theme built around Breaking Bad, covering Walter White, Jesse Pinkman, the meth empire, family tension, criminal partnerships, and the major turning points of the series.",
+    seoIntro: "Breaking Bad trivia works because the show is packed with highly memorable character shifts, tense scenes, lies, betrayals, and symbols that viewers tend to carry with them long after finishing it. It is one of the clearest examples of a series where story progression itself becomes trivia gold.",
+    seoDetail: "A strong Breaking Bad quiz can include Walter, Jesse, Skyler, Hank, Saul, Gus, Mike, the DEA, Los Pollos Hermanos, the RV, blue meth, rival dealers, cartel conflict, lab operations, and the major decisions that turn Walt from teacher to kingpin. The theme works because it can balance character psychology, criminal structure, family fallout, visual symbols, and the specific episode-by-episode details that made the series so gripping."
+  },
+
+  "bridgerton": {
+    description: "A period romance trivia theme focused on Bridgerton, covering family dynamics, courtship, scandal, society politics, major romances, and the social world that drives the series.",
+    seoIntro: "Bridgerton trivia works because the show blends high-society ritual with strong romantic storylines, family pressure, gossip, and very recognisable characters. It has enough mainstream visibility to be accessible, but enough social detail to reward attentive viewers too.",
+    seoDetail: "A strong Bridgerton quiz can include the Bridgerton siblings, the Featheringtons, Queen Charlotte, Lady Whistledown, courtship customs, titles, balls, scandals, marriage arrangements, family alliances, and the season-by-season romantic pairings at the centre of the story. The theme stays engaging because it moves between character relationships, social expectations, secrets, and the wider world of power and reputation that surrounds each romance."
+  },
+
+  "brooklyn-99": {
+    description: "A workplace comedy trivia theme centered on Brooklyn Nine-Nine, covering the precinct squad, running jokes, Halloween heists, relationships, casework, and the ensemble dynamics that made the show so rewatchable.",
+    seoIntro: "Brooklyn Nine-Nine trivia works because the series is built on a highly memorable group dynamic, with recurring jokes, rivalries, pairings, and set-piece episodes that fans can recall very easily. It has the kind of repeatable sitcom structure that suits quiz play well.",
+    seoDetail: "A strong Brooklyn 99 quiz can include Jake, Amy, Holt, Rosa, Terry, Boyle, Gina, Hitchcock and Scully, the Nine-Nine precinct, heists, catchphrases, relationships, career arcs, and the mix of workplace absurdity with more grounded police-story elements. The theme works because it can move between character quirks, episode concepts, recurring bits, and the smaller details that stand out more with every rewatch."
+  },
+
+  "community": {
+    description: "A meta sitcom trivia theme built around Community, covering the Greendale study group, genre parodies, recurring jokes, school chaos, and the inventive episode ideas that made the show feel unlike a normal comedy.",
+    seoIntro: "Community trivia works because the series has a very specific identity: strange Greendale energy, high-concept episodes, sharp callback humour, and a study group full of clashing personalities. That makes its details much easier to turn into memorable trivia than a more ordinary campus sitcom.",
+    seoDetail: "A strong Community quiz can include Jeff, Britta, Abed, Troy, Annie, Shirley, Pierce, Dean Pelton, Chang, Greendale's clubs and classes, paintball episodes, timelines, documentary spoofs, genre homages, and the relationships and running jokes that tie the whole series together. The theme stays rich because it can test not only character memory, but also the show's structure, references, and the unusual ways specific episodes are built."
+  },
+
+  "dc-movies": {
+    description: "A superhero movie trivia theme covering DC films through heroes, villains, major storylines, actors, powers, team-ups, and the different cinematic interpretations of the franchise.",
+    seoIntro: "DC Movies trivia works because the category spans some of the most recognisable comic-book characters in popular culture, from Batman and Superman to Wonder Woman, the Joker, and beyond. That gives it immediate recognition while still leaving room for deeper franchise knowledge.",
+    seoDetail: "A strong DC Movies quiz can include Batman, Superman, Wonder Woman, Aquaman, The Flash, Harley Quinn, the Joker, Justice League storylines, origin stories, villains, powers, actors, directors, reboots, and major release-era moments across the DC film slate. The theme stays strong because it can move between character identity, casting, plot beats, franchise structure, and the wider cultural pull of one of the biggest superhero brands in cinema."
+  },
+    "demon-slayer": {
+    description: "An anime trivia theme focused on Demon Slayer, covering Tanjiro, Nezuko, the Hashira, breathing styles, demons, battles, and the emotional story moments that made the series such a major hit.",
+    seoIntro: "Demon Slayer trivia works well because the series combines very recognisable characters and powers with dramatic fights, clear ranks, named techniques, and emotional backstories that viewers tend to remember easily. Its visual identity also helps specific moments stick.",
+    seoDetail: "A strong Demon Slayer quiz can include Tanjiro, Nezuko, Zenitsu, Inosuke, Muzan, the Hashira, breathing styles, demon ranks, swords, training, major arcs, and the key battles that shape the story. The theme stays strong because it can move between character identity, combat techniques, lore, tragic backstories, and the smaller details that fans pick up from both the action and the emotional side of the series."
+  },
+
+  "dexter": {
+    description: "A crime thriller trivia theme built around Dexter, covering Dexter Morgan, Miami Metro, killers, investigations, family relationships, and the dual life that drives the series.",
+    seoIntro: "Dexter trivia works because the show is built on a very clear central tension: a forensic analyst living as a serial killer under a personal code. That premise creates memorable cases, villains, relationships, and secrets that viewers tend to remember well.",
+    seoDetail: "A strong Dexter quiz can include Dexter, Debra, Harry's code, Rita, Harrison, Miami Metro, blood-spatter work, major antagonists, seasonal killers, cover stories, and the shifting consequences of Dexter's hidden life. The theme works because it can balance police-procedural detail with character psychology, family tension, and the cat-and-mouse structure that gives the series its identity."
+  },
+
+  "dragon-ball-z": {
+    description: "An anime action trivia theme focused on Dragon Ball Z, covering Saiyans, transformations, villains, attacks, training arcs, fusions, and the iconic battles that made the series a global phenomenon.",
+    seoIntro: "Dragon Ball Z trivia works because the series is packed with unforgettable fights, named transformations, signature attacks, major villains, and characters that even casual fans can recognise immediately. It is one of the clearest examples of an anime where power progression itself becomes trivia.",
+    seoDetail: "A strong Dragon Ball Z quiz can include Goku, Vegeta, Gohan, Piccolo, Frieza, Cell, Buu, the Saiyan saga, Namek, Androids, fusion, Dragon Balls, Super Saiyan forms, training sequences, and famous techniques like the Kamehameha and Spirit Bomb. The theme stays rich because it can move between characters, powers, saga structure, villains, and the specific moments that made DBZ such a defining series for action anime fans."
+  },
+
+  "friends": {
+    description: "A sitcom trivia theme centered on Friends, covering the six main characters, relationships, apartments, jobs, recurring jokes, memorable side characters, and the everyday moments that made the show endlessly rewatchable.",
+    seoIntro: "Friends trivia works especially well because the series is full of recognisable settings, long-running relationship drama, holiday episodes, catchphrases, and tiny recurring details that fans remember years later. It is one of those shows where rewatching makes even small moments stick.",
+    seoDetail: "A strong Friends quiz can include Ross, Rachel, Monica, Chandler, Joey, Phoebe, Central Perk, the apartments, jobs, weddings, breakups, Thanksgiving episodes, family members, famous guest roles, and recurring jokes or habits tied to each character. The theme works because it can balance major romantic storylines with smaller comfort-show details, which makes it stronger than a sitcom round built only on broad plot summaries."
+  },
+
+  "fullmetal-alchemist": {
+    description: "An anime fantasy trivia theme focused on Fullmetal Alchemist, covering the Elric brothers, alchemy, military conflict, homunculi, philosophy, sacrifice, and the world-building that makes the story so distinctive.",
+    seoIntro: "Fullmetal Alchemist trivia works because the series combines action, morality, political tension, and a well-defined alchemical system with memorable characters and emotional stakes. It is the kind of story where both the ideas and the details stay with viewers.",
+    seoDetail: "A strong Fullmetal Alchemist quiz can include Edward and Alphonse Elric, state alchemists, Amestris, Scar, Roy Mustang, Winry, the homunculi, Philosopher's Stones, human transmutation, military power, and the major revelations tied to the brothers' journey. The theme has depth because it can test character memory, lore, powers, symbols, and the larger moral questions that make the series more than a standard action anime."
+  },
+
+  "game-of-thrones": {
+    description: "A fantasy drama trivia theme built around Game of Thrones, covering the great houses, political betrayals, dragons, battles, shifting alliances, major deaths, and the sprawling conflicts that define the series.",
+    seoIntro: "Game of Thrones trivia works because the show is full of memorable names, sigils, rivalries, betrayals, locations, and power struggles that fans tend to remember in detail. The series gives you both headline moments everyone knows and a lot of smaller political detail underneath.",
+    seoDetail: "A strong Game of Thrones quiz can include the Starks, Lannisters, Targaryens, Baratheons, the Wall, the Night's Watch, White Walkers, King's Landing, dragons, major battles, marriages, betrayals, advisors, and the many deaths and reversals that shaped the story. The theme stays rich because it can move between family politics, geography, war, prophecy, succession, and the dense network of characters that made the series such a dominant fantasy drama."
+  },
+
+  "house-of-the-dragon": {
+    description: "A fantasy trivia theme focused on House of the Dragon, covering Targaryen succession, dragon riders, family alliances, betrayals, court politics, and the civil-war tensions at the heart of the story.",
+    seoIntro: "House of the Dragon trivia works because the series is built on one central conflict with clear bloodlines, rival claims, marriages, councils, and dragon power, which makes its details easier to anchor than a broader fantasy sprawl. The family drama and the politics reinforce each other strongly.",
+    seoDetail: "A strong House of the Dragon quiz can include Viserys, Rhaenyra, Daemon, Alicent, Aegon, the Greens and Blacks, King's Landing, Dragonstone, councils, heirs, marriages, dragon names, succession disputes, and the key moments that push the Targaryen family toward civil war. The theme works because it balances character relationships, dynastic politics, symbols of power, and the specific dragon-rider details that give the series its identity."
+  },
+
+  "how-i-met-your-mother": {
+    description: "A sitcom trivia theme centered on How I Met Your Mother, covering Ted, Barney, Robin, Marshall, Lily, long-running callbacks, relationship turns, storytelling tricks, and the group traditions that define the show.",
+    seoIntro: "How I Met Your Mother trivia works because the series is built around recurring jokes, flashbacks, running stories, relationship milestones, and a very distinctive narration structure. Fans tend to remember both the bigger romances and the smaller repeated bits.",
+    seoDetail: "A strong How I Met Your Mother quiz can include the gang's hangouts, catchphrases, the slap bet, the playbook, major relationships, weddings, jobs, future narration, timeline tricks, and the long road to meeting the mother. The theme stays strong because it can move between emotional arcs, comedy callbacks, episode structure, and the many repeated traditions that reward people who watched the show closely."
+  },
+
+  "invincible": {
+    description: "An animated superhero trivia theme focused on Invincible, covering Mark Grayson, Omni-Man, powers, brutal fights, betrayals, villains, and the family and political tensions that drive the series.",
+    seoIntro: "Invincible trivia works because the show combines superhero familiarity with shock, violence, and emotional fallout in a way that makes its major moments very hard to forget. It gives players more than just powers and costumes, because the relationships are central too.",
+    seoDetail: "A strong Invincible quiz can include Mark, Nolan, Debbie, Atom Eve, Cecil, the Guardians, Viltrumites, major villains, superhero teams, powers, city-level destruction, and the revelations that change how the whole world is viewed. The theme works because it can balance action, family drama, world politics, character growth, and the specific scenes that made the series hit much harder than viewers initially expected."
+  },
+
+  "its-always-sunny-in-philadelphia": {
+    description: "A dark comedy trivia theme focused on It's Always Sunny in Philadelphia, covering the gang, terrible schemes, recurring arguments, side characters, and the shameless chaos that defines the series.",
+    seoIntro: "It's Always Sunny in Philadelphia trivia works because the show has such a specific comic identity. The gang's selfishness, constant scheming, repeated failures, and bizarre episode ideas make even small details stand out in a way that suits trivia perfectly.",
+    seoDetail: "A strong It's Always Sunny in Philadelphia quiz can include Dennis, Dee, Charlie, Mac, Frank, Paddy's Pub, recurring scams, famous episode concepts, songs, aliases, side characters, and the constant cycle of pointless conflict and escalation. The theme stays strong because it can move between character flaws, running bits, absurd situations, and the unique tone that makes the show's world feel recognisable immediately."
+  },
+
+  "lord-of-the-rings": {
+    description: "A fantasy trivia theme built around The Lord of the Rings, covering the Fellowship, Middle-earth locations, races, rulers, battles, creatures, and the epic quest against Sauron.",
+    seoIntro: "Lord of the Rings trivia works because the world is packed with memorable places, named objects, alliances, monsters, and characters that fans often know in real detail. It is one of those fantasy settings where both the broad story and the world-building are strong enough to support rich quiz rounds.",
+    seoDetail: "A strong Lord of the Rings quiz can include Frodo, Aragorn, Gandalf, Legolas, Gimli, Sauron, the Ring, Mordor, Rivendell, Rohan, Gondor, Orcs, Ents, major battles, and the key moments of the journey across Middle-earth. The theme works because it can move between characters, geography, lore, language, war, and mythic symbolism, making it far deeper than a simple heroes-versus-villains fantasy round."
+  },
+
+  "lost": {
+    description: "A mystery drama trivia theme focused on Lost, covering the crash survivors, the island, factions, flashbacks, time shifts, secrets, and the mythology that made the show so addictive.",
+    seoIntro: "Lost trivia works because the series gives viewers a lot to remember at once: a big cast, layered backstories, strange island phenomena, shifting alliances, and major twists. It is one of those shows where both the mysteries and the character details become quiz material.",
+    seoDetail: "A strong Lost quiz can include Jack, Kate, Sawyer, Locke, Hurley, Ben, Desmond, the Dharma Initiative, the Others, hatches, numbers, flashbacks, flash-forwards, time travel, and the island's many unexplained or slowly revealed features. The theme stays rich because it can balance character history, mythology, survival, symbols, and the structural tricks that made the show such a talking point during its run."
+  },
+
+  "mad-men": {
+    description: "A drama trivia theme built around Mad Men, covering Don Draper, the ad world of the 1960s, office politics, family life, social change, and the character-driven tensions that shape the series.",
+    seoIntro: "Mad Men trivia works because the show is full of sharply drawn characters, memorable pitches, status games, marriages, affairs, and workplace shifts tied to a very specific era. Its details are quieter than action-driven shows, but they are often just as memorable.",
+    seoDetail: "A strong Mad Men quiz can include Don, Peggy, Roger, Joan, Betty, Pete, Sterling Cooper and its later forms, advertising campaigns, office hierarchy, family strain, identity questions, and the wider backdrop of 1960s American culture. The theme works because it can move between character psychology, business ambition, period detail, social change, and the smaller personal moments that give the series its depth."
+  },
+
+  "marvel-movies": {
+    description: "A superhero movie trivia theme covering Marvel films through heroes, villains, phases, team-ups, powers, actors, and the major crossover moments that shaped the franchise.",
+    seoIntro: "Marvel Movies trivia works because the franchise spans a huge number of recognisable characters, interconnected storylines, post-credit reveals, and world-changing events that viewers often remember in sequence. It is one of the strongest film categories for both casual and committed fans.",
+    seoDetail: "A strong Marvel Movies quiz can include Iron Man, Captain America, Thor, Black Widow, Hulk, Spider-Man, Doctor Strange, the Avengers, Infinity Stones, major villains, actors, phases, origin stories, battles, and crossover events across the larger cinematic universe. The theme stays strong because it can move between characters, powers, casting, release-era structure, and the smaller continuity details that fans track from film to film."
+  },
+
+  "modern-family": {
+    description: "A family sitcom trivia theme centered on Modern Family, covering the three connected households, parenting disasters, relationships, running jokes, and the character dynamics that made the show such a comfort-watch hit.",
+    seoIntro: "Modern Family trivia works because the series has a very clear ensemble structure, with each branch of the family bringing its own habits, tensions, and comic patterns. That makes both the big life events and the small recurring jokes easy for fans to remember.",
+    seoDetail: "A strong Modern Family quiz can include Jay, Gloria, Manny, Claire, Phil, Haley, Alex, Luke, Mitchell, Cameron, Lily, the family homes, jobs, holidays, school and parenting stories, and the many habits or lines associated with each character. The theme works because it can balance family relationships, household-specific humour, emotional moments, and the repeated details that make the show feel familiar and rewatchable."
+  },
+    "money-heist": {
+    description: "A crime thriller trivia theme focused on Money Heist, covering the Professor, the robbery crews, codenames, hostages, plans, betrayals, and the twists that made the series such a global hit.",
+    seoIntro: "Money Heist trivia works because the show is built around a very memorable setup: masked robbers, city-based aliases, layered plans, emotional pressure, and constant reversals. Viewers tend to remember both the broad heist structure and the personal conflicts inside it.",
+    seoDetail: "A strong Money Heist quiz can include the Professor, Tokyo, Berlin, Nairobi, Rio, Denver, Raquel, the Royal Mint, the Bank of Spain, masks, hostages, negotiations, internal betrayals, and the many plan adjustments that keep the heists alive. The theme works because it can move between strategy, character loyalty, romance, police pressure, and the smaller details that made the show feel tense far beyond a simple robbery plot."
+  },
+
+  "naruto": {
+    description: "An anime trivia theme built around Naruto, covering ninja villages, jutsu, rivalries, clans, major arcs, emotional backstories, and the long journey from outcast to hero.",
+    seoIntro: "Naruto trivia works because the series is packed with named techniques, exam stages, teams, villages, mentors, villains, and character histories that fans remember for years. It has enough scale to support deep questions, but the core names and powers are still widely recognisable.",
+    seoDetail: "A strong Naruto quiz can include Naruto, Sasuke, Sakura, Kakashi, Jiraiya, the Hokage, the Akatsuki, tailed beasts, chunin exams, clan abilities, villages, summons, jutsu types, and the many rivalries and redemption arcs that drive the story forward. The theme stays rich because it can balance combat knowledge, character development, world-building, and the very specific emotional moments that made the series such a long-running fandom favourite."
+  },
+
+  "new-girl": {
+    description: "A sitcom trivia theme centered on New Girl, covering Jess, Nick, Schmidt, Winston, Cece, the loft, relationships, running jokes, and the awkward group chemistry that defines the show.",
+    seoIntro: "New Girl trivia works because the series has a very specific group dynamic built on weird habits, recurring bits, romantic chaos, and sharply defined character personalities. Fans tend to remember both the big relationship turns and the smaller comic details from the loft.",
+    seoDetail: "A strong New Girl quiz can include Jess, Nick, Schmidt, Winston, Cece, Coach, the loft, jobs, breakups, weddings, pranks, recurring side characters, and the habits or lines closely tied to each member of the group. The theme works because it can move between romance, friendship, character quirks, and the small repeated moments that make the show feel more distinctive than a standard roommate sitcom."
+  },
+
+  "one-piece": {
+    description: "An anime adventure trivia theme focused on One Piece, covering the Straw Hat crew, Devil Fruits, islands, marines, pirates, rival crews, major arcs, and the massive world-building of the series.",
+    seoIntro: "One Piece trivia works especially well because the series has an enormous cast, a huge map of memorable locations, many powers, and long story arcs that fans often remember in remarkable detail. It offers both mainstream recognition and very deep fan-level material.",
+    seoDetail: "A strong One Piece quiz can include Luffy, Zoro, Nami, Sanji, Usopp, Chopper, Robin, the Grand Line, Devil Fruits, Haki, marines, emperors, warlords, major islands, bounties, and the huge arc-by-arc progression of the Straw Hats' journey. The theme stays strong because it can test crew knowledge, powers, factions, geography, rivalries, and the long-running plot threads that make the world feel so unusually vast."
+  },
+
+  "parks-and-recreation": {
+    description: "A workplace comedy trivia theme focused on Parks and Recreation, covering Leslie Knope, Pawnee, city politics, running jokes, friendships, romances, and the warm ensemble energy that made the show so beloved.",
+    seoIntro: "Parks and Recreation trivia works because the series combines local-government absurdity with very memorable characters, wholesome relationships, and repeated jokes tied to Pawnee itself. It is one of those sitcoms where the setting feels almost as important as the cast.",
+    seoDetail: "A strong Parks and Recreation quiz can include Leslie, Ben, Ron, April, Andy, Tom, Ann, Donna, Jerry, the Parks Department, city council drama, Harvest Festival, local businesses, campaign stories, weddings, and Pawnee-specific traditions or nonsense. The theme works because it can balance character affection, small-town absurdity, workplace stories, and the repeated details that make fans feel at home in that world."
+  },
+
+  "peaky-blinders": {
+    description: "A crime drama trivia theme built around Peaky Blinders, covering the Shelby family, gang politics, betrayals, business expansion, rivals, and the postwar Birmingham world that shapes the story.",
+    seoIntro: "Peaky Blinders trivia works because the show is full of strong visual identity, memorable characters, power plays, family conflict, and shifting alliances that fans tend to remember clearly. Its style makes even smaller details feel sharper and more distinctive.",
+    seoDetail: "A strong Peaky Blinders quiz can include Tommy, Arthur, Polly, Ada, Alfie Solomons, the Shelby Company, Birmingham, horse betting, rival gangs, political moves, family loyalties, war trauma, and the key deals and betrayals that shape each season. The theme works because it can move between criminal strategy, family dynamics, class ambition, and the recurring symbols and set pieces that give the show its unique atmosphere."
+  },
+
+  "prison-break": {
+    description: "A thriller trivia theme focused on Prison Break, covering Michael Scofield, Lincoln Burrows, prison life, escape plans, codes, conspiracies, and the twists that drove the series.",
+    seoIntro: "Prison Break trivia works because the central premise itself is memorable: a highly planned prison escape built around hidden details, shifting alliances, and escalating danger. The show gives viewers a lot of named characters, clues, and reversals to remember.",
+    seoDetail: "A strong Prison Break quiz can include Michael, Lincoln, Sara, Sucre, T-Bag, Fox River, tattoos, escape routes, The Company, later-season conspiracies, betrayals, and the many plan adjustments made under pressure. The theme stays strong because it can balance puzzle-like strategy, prison dynamics, family loyalty, and the specific reveals that made the series so easy to binge and discuss."
+  },
+
+  "rick-and-morty": {
+    description: "An animated sci-fi comedy trivia theme focused on Rick and Morty, covering alternate realities, gadgets, family chaos, recurring characters, bizarre episode concepts, and the dark humour that defines the series.",
+    seoIntro: "Rick and Morty trivia works because the show is packed with strange inventions, alternate universes, recurring species, family dysfunction, and episode concepts that are too weird to forget. Even one-off details often stick because the world is so chaotic and specific.",
+    seoDetail: "A strong Rick and Morty quiz can include Rick, Morty, Summer, Beth, Jerry, Portal Guns, alternate dimensions, the Citadel, Council storylines, major villains, recurring aliens, catchphrases, and the many reality-bending scenarios that shape the show. The theme works because it can move between sci-fi parody, emotional family fallout, weird lore, and the very specific comic details fans love remembering."
+  },
+
+  "seinfeld": {
+    description: "A sitcom trivia theme centered on Seinfeld, covering Jerry, George, Elaine, Kramer, awkward social conflicts, classic episode setups, recurring side characters, and the tiny details that made the show iconic.",
+    seoIntro: "Seinfeld trivia works because the show turns trivial everyday situations into highly memorable comedy. Fans often remember not only the most famous episodes, but also the exact social misunderstandings, habits, and minor obsessions that define the characters.",
+    seoDetail: "A strong Seinfeld quiz can include Jerry, George, Elaine, Kramer, Monk's, jobs, dating disasters, rivalries, recurring neighbours or bosses, famous episode premises, and the many minor arguments that spiral into something absurd. The theme stays rich because it can balance broad recognition with very small observational details, which is exactly what makes the series such a natural fit for trivia."
+  },
+
+  "severance": {
+    description: "A psychological sci-fi thriller trivia theme focused on Severance, covering Lumon, innies and outies, departments, corporate rituals, hidden motives, and the unsettling details that make the series so distinctive.",
+    seoIntro: "Severance trivia works because the show's central concept is so strong and its world is so tightly controlled that even small details stand out. Viewers tend to remember the eerie office culture, the language of the company, and the mystery behind what is really happening.",
+    seoDetail: "A strong Severance quiz can include Mark, Helly, Irving, Dylan, Lumon departments, severed identities, wellness sessions, company rituals, management figures, hidden floors, and the clues linking work life to life outside. The theme works because it can move between mystery, symbolism, workplace control, character behaviour, and the specific unsettling details that make the show feel unlike ordinary sci-fi."
+  },
+
+  "sons-of-anarchy": {
+    description: "A crime drama trivia theme built around Sons of Anarchy, covering the motorcycle club, family loyalty, violence, betrayals, rival gangs, and the escalating moral collapse at the centre of the story.",
+    seoIntro: "Sons of Anarchy trivia works because the show combines club structure, family conflict, criminal deals, revenge, and power struggles in a way that makes major turning points very memorable. The emotional damage and the politics of the club reinforce each other constantly.",
+    seoDetail: "A strong Sons of Anarchy quiz can include Jax, Clay, Gemma, Tara, Chibs, Tig, SAMCRO, rival groups, gun-running, club rules, betrayals, prison time, and the sequence of events that pushes the story from loyalty drama into tragedy. The theme works because it can balance biker-club identity, family manipulation, violence, and the specific relationships that define each stage of Jax's downfall."
+  },
+
+  "squid-game": {
+    description: "A survival thriller trivia theme focused on Squid Game, covering contestants, numbered players, deadly games, masked staff, symbolism, class pressure, and the moral choices that define the series.",
+    seoIntro: "Squid Game trivia works because the setup is instantly memorable: desperate contestants, childhood games turned lethal, visual symbolism, and a system built on pressure and spectacle. Viewers tend to remember both the structure of the competition and the people trapped inside it.",
+    seoDetail: "A strong Squid Game quiz can include Gi-hun, Sang-woo, Sae-byeok, Il-nam, Ali, player numbers, game order, masked guards, the Front Man, VIPs, alliances, betrayals, and the social commentary built into each stage of the contest. The theme works because it can move between character memory, game mechanics, visual imagery, and the ethical choices that make the series more than just a death-game thriller."
+  },
+
+  "star-trek": {
+    description: "A sci-fi trivia theme built around Star Trek, covering starships, crews, captains, species, exploration, diplomacy, technology, and the franchise-wide world that spans multiple series and eras.",
+    seoIntro: "Star Trek trivia works because the franchise has a long history of memorable crews, ships, alien races, missions, and ideas tied to exploration and diplomacy. It gives the category both deep fan material and a lot of widely recognised sci-fi knowledge.",
+    seoDetail: "A strong Star Trek quiz can include the Enterprise, Starfleet, the Federation, Klingons, Romulans, Vulcans, captains, famous officers, warp travel, directives, planets, and major conflicts or storylines across different series. The theme stays rich because it can balance character knowledge, futuristic concepts, political alliances, and the bigger ideals that helped make Star Trek one of science fiction's defining franchises."
+  },
+
+  "star-wars": {
+    description: "A sci-fi fantasy trivia theme focused on Star Wars, covering Jedi, Sith, the Force, rebels, empires, planets, battles, droids, and the characters and lore that made the saga world-famous.",
+    seoIntro: "Star Wars trivia works because the franchise is full of instantly recognisable characters, quotes, planets, powers, and faction conflict that people remember even if they are not deep fans. At the same time, the lore is broad enough to support much harder questions too.",
+    seoDetail: "A strong Star Wars quiz can include Luke, Leia, Han, Vader, Obi-Wan, Yoda, Palpatine, the Jedi Order, the Sith, lightsabers, droids, clones, planets, rebellions, empires, and the major battles and family revelations that define the saga. The theme works because it can move between characters, mythology, politics, technology, and the wider franchise memory that stretches across films, series, and generations of fandom."
+  },
+
+  "stranger-things": {
+    description: "A sci-fi horror trivia theme built around Stranger Things, covering Hawkins, the Upside Down, friendships, secret experiments, monsters, powers, and the nostalgic setting that shapes the series.",
+    seoIntro: "Stranger Things trivia works because the show combines a very memorable town, a tight central friend group, frightening creatures, government secrecy, and 1980s pop-culture flavour in a way that makes details easy to recall. It blends mystery, horror, and heart effectively.",
+    seoDetail: "A strong Stranger Things quiz can include Eleven, Mike, Dustin, Lucas, Will, Max, Hopper, Joyce, Hawkins Lab, the Upside Down, Demogorgons, Vecna, powers, bikes, arcades, and the major mysteries and losses that shape each season. The theme stays strong because it can balance monster lore, friendships, family bonds, pop-culture references, and the specific moments that made the series such a huge streaming phenomenon."
+  },
+    "succession": {
+    description: "A drama trivia theme focused on Succession, covering the Roy family, corporate power struggles, betrayals, media politics, boardroom manoeuvring, and the brutal personal dynamics that drive the series.",
+    seoIntro: "Succession trivia works because the show is built on sharp character conflict, shifting alliances, humiliations, negotiations, and repeated battles for control inside one deeply dysfunctional family. Viewers tend to remember both the big corporate moves and the vicious little moments between characters.",
+    seoDetail: "A strong Succession quiz can include Logan, Kendall, Shiv, Roman, Connor, Tom, Greg, Waystar Royco, board votes, acquisitions, elections, scandals, family weddings, betrayals, and the many failed or half-successful attempts to take control. The theme works because it can balance business strategy, character ego, family resentment, and the specific lines, habits, and incidents that made the series so quotable and tense."
+  },
+
+  "supernatural": {
+    description: "A fantasy horror trivia theme built around Supernatural, covering Sam and Dean Winchester, monsters, demons, angels, lore, recurring allies and enemies, and the long-running mythology of the series.",
+    seoIntro: "Supernatural trivia works because the show combines monster-of-the-week structure with a huge overarching mythology involving demons, angels, apocalypse threats, and family destiny. That gives it both easy entry points and a lot of deeper fan material.",
+    seoDetail: "A strong Supernatural quiz can include Sam, Dean, Castiel, Bobby, Crowley, Lucifer, the Impala, hunting tools, sigils, demons, angels, prophets, the Men of Letters, and the major myth arcs that shaped different seasons. The theme stays rich because it can move between creatures, religious lore, relationships, road-trip identity, and the countless named details fans picked up over such a long run."
+  },
+
+  "superstore": {
+    description: "A workplace comedy trivia theme centered on Superstore, covering Cloud 9, staff relationships, customers, running jokes, corporate absurdity, and the retail chaos that defines the show.",
+    seoIntro: "Superstore trivia works because the series turns ordinary retail work into something very memorable through repeated store disasters, staff chemistry, management failures, and customer weirdness. Fans tend to remember both the broad workplace setup and the smaller running bits.",
+    seoDetail: "A strong Superstore quiz can include Amy, Jonah, Dina, Garrett, Cheyenne, Mateo, Glenn, Sandra, Cloud 9 culture, break-room arguments, store promotions, corporate nonsense, romances, and the many strange customer situations that drive the comedy. The theme works because it can balance character quirks, workplace structure, social commentary, and the repeated details that make the store feel familiar."
+  },
+
+  "ted-lasso": {
+    description: "A comedy-drama trivia theme focused on Ted Lasso, covering AFC Richmond, coaching, football culture, friendships, rivalries, emotional growth, and the character relationships that give the show its heart.",
+    seoIntro: "Ted Lasso trivia works because the series combines football, workplace tension, optimism, personal struggle, and very memorable character arcs in a way that stands out from a normal sports show. Fans often remember both the emotional beats and the smaller jokes or rituals.",
+    seoDetail: "A strong Ted Lasso quiz can include Ted, Rebecca, Keeley, Roy, Jamie, Beard, Nate, AFC Richmond, club ownership, coaching changes, relationships, team culture, rivalries, and the moments of growth or collapse that define each major character. The theme works because it can move between football setting, emotional storytelling, workplace leadership, and the many repeated details that gave the series its distinct tone."
+  },
+
+  "the-big-bang-theory": {
+    description: "A sitcom trivia theme focused on The Big Bang Theory, covering the friend group, apartments, scientific references, relationships, geek culture, recurring jokes, and the habits that define the main cast.",
+    seoIntro: "The Big Bang Theory trivia works because the series mixes broad sitcom familiarity with specific science references, pop-culture obsessions, relationship developments, and repeated behavioural quirks. Even casual viewers often remember the group's routines and dynamics.",
+    seoDetail: "A strong The Big Bang Theory quiz can include Sheldon, Leonard, Penny, Howard, Raj, Amy, Bernadette, the apartments, work at Caltech, comic books, gaming, costumes, relationship milestones, recurring side characters, and the many habits, sayings, or rules attached to each person. The theme stays strong because it can balance nerd-culture detail, sitcom relationships, and the small repeated moments that made the show so easy to recognise."
+  },
+
+  "the-boys": {
+    description: "A dark superhero trivia theme built around The Boys, covering corrupt supes, Vought, vigilantes, powers, scandals, violence, and the political and personal power struggles that shape the series.",
+    seoIntro: "The Boys trivia works because the show flips the normal superhero formula into something cynical, brutal, and highly memorable. Viewers tend to remember its powers, shocks, corporate manipulation, and character betrayals very clearly.",
+    seoDetail: "A strong The Boys quiz can include Butcher, Hughie, Homelander, Starlight, Queen Maeve, The Deep, A-Train, Vought, Compound V, The Seven, major scandals, media control, and the violent confrontations that define each season. The theme works because it can move between superhero identity, corporate branding, politics, gore, and the many moments where public image collides with private corruption."
+  },
+
+  "the-office": {
+    description: "A workplace comedy trivia theme centered on The Office, covering Dunder Mifflin, office culture, awkward management, relationships, recurring jokes, and the everyday moments that made the series endlessly quotable.",
+    seoIntro: "The Office trivia works especially well because the show is full of recognisable characters, repeated habits, small workplace humiliations, and emotional relationship beats that fans remember after countless rewatches. Even tiny details from the office setting tend to stick.",
+    seoDetail: "A strong The Office quiz can include Michael, Dwight, Jim, Pam, Angela, Andy, Kevin, Creed, Dunder Mifflin, Scranton branch chaos, pranks, parties, romances, HR issues, and the many small routines or disasters that define office life. The theme works because it can balance broad sitcom recognition with very specific scene memory, which is exactly why the show remains such a strong rewatch and trivia subject."
+  },
+
+  "the-sopranos": {
+    description: "A crime drama trivia theme focused on The Sopranos, covering Tony Soprano, mob politics, therapy, family conflict, crew relationships, betrayals, and the everyday details that gave the series its depth.",
+    seoIntro: "The Sopranos trivia works because the series combines organised crime with psychology, family life, power struggles, and very memorable dialogue or habits. It gives viewers both big mob-story moments and a lot of smaller character detail to hold onto.",
+    seoDetail: "A strong The Sopranos quiz can include Tony, Carmela, Meadow, A.J., Dr. Melfi, Christopher, Paulie, Silvio, Uncle Junior, the Bada Bing, rival crews, therapy sessions, family fights, business fronts, and the many small incidents that reveal how personal and criminal life overlap. The theme stays rich because it can move between mob hierarchy, mental strain, domestic tension, loyalty, and the layered realism that made the show so influential."
+  },
+
+  "the-vampire-diaries": {
+    description: "A supernatural drama trivia theme built around The Vampire Diaries, covering Mystic Falls, vampires, witches, werewolves, love triangles, family legacies, and the constant twists that drive the story.",
+    seoIntro: "The Vampire Diaries trivia works because the series is packed with romance, supernatural rules, rivalries, bloodlines, and dramatic reversals that viewers tend to remember clearly. It has the kind of high-stakes relationship drama that suits trivia well.",
+    seoDetail: "A strong The Vampire Diaries quiz can include Elena, Stefan, Damon, Bonnie, Caroline, Klaus, Katherine, Mystic Falls families, doppelgängers, Originals, witches, werewolves, spells, rings, and the major relationships and betrayals that shape the series. The theme works because it can balance lore, romance, family history, supernatural conflict, and the specific turning points that kept the story moving quickly."
+  },
+
+  "the-walking-dead": {
+    description: "A post-apocalyptic horror trivia theme focused on The Walking Dead, covering survivors, walkers, communities, rival groups, losses, and the moral and practical struggle to stay alive.",
+    seoIntro: "The Walking Dead trivia works because the series combines zombie-survival imagery with changing communities, strong character losses, and repeated clashes over leadership, trust, and violence. Fans often remember both the broad arc and the smaller survival details.",
+    seoDetail: "A strong The Walking Dead quiz can include Rick, Daryl, Carol, Glenn, Maggie, Michonne, Negan, walkers, the prison, Alexandria, the Governor, the Saviors, weapons, supply runs, and the many deaths and turning points that reshape the group. The theme stays strong because it can move between survival mechanics, faction conflict, emotional fallout, and the recurring question of what kind of people the characters become."
+  },
+
+  "the-wire": {
+    description: "A crime drama trivia theme built around The Wire, covering police units, street crews, politics, institutions, Baltimore neighbourhoods, and the layered social world that makes the series so acclaimed.",
+    seoIntro: "The Wire trivia works because the show is dense with names, systems, ranks, corners, investigations, and institutions that connect in meaningful ways. It rewards close attention more than flashy moments, which gives it unusually strong depth for trivia.",
+    seoDetail: "A strong The Wire quiz can include McNulty, Bunk, Stringer Bell, Avon Barksdale, Omar, Daniels, Lester, Marlo, the docks, city hall, schools, newspapers, surveillance work, crew structures, and the different institutions each season explores. The theme works because it can balance character knowledge with social structure, asking not only who did what, but how the wider systems of Baltimore shape everyone inside them."
+  },
+
+  "true-blood": {
+    description: "A supernatural drama trivia theme focused on True Blood, covering Bon Temps, vampires, shapeshifters, witches, faeries, relationships, and the Southern Gothic world of the series.",
+    seoIntro: "True Blood trivia works because the show blends supernatural lore, romance, danger, camp, and very specific small-town atmosphere into something viewers remember clearly. Its mixture of creatures and melodrama gives it strong variety.",
+    seoDetail: "A strong True Blood quiz can include Sookie, Bill, Eric, Jason, Tara, Lafayette, vampire politics, Tru Blood itself, shapeshifters, werewolves, witches, faeries, Bon Temps locations, and the many alliances, breakups, and supernatural conflicts across the series. The theme works because it can move between creature lore, romance, power struggles, and the distinctive Southern style that makes the show's world feel specific."
+  },
+
+  "twilight": {
+    description: "A supernatural romance trivia theme built around Twilight, covering Bella, Edward, Jacob, the Cullens, werewolves, romance, danger, and the franchise-defining love triangle at its centre.",
+    seoIntro: "Twilight trivia works because the story is built around highly recognisable characters, relationships, rival supernatural groups, and emotional decisions that fans remember intensely. It has a very strong identity even for people who only know it broadly through pop culture.",
+    seoDetail: "A strong Twilight quiz can include Bella, Edward, Jacob, Alice, Carlisle, Rosalie, the Cullen family, Quileute wolves, Volturi politics, Forks, major relationship choices, supernatural traits, and the key conflicts that shape the saga. The theme stays strong because it can balance romance, creature lore, family dynamics, and the many details that fans still associate with the franchise's specific mood and mythology."
+  },
+
+  "chemistry": {
+    description: "A science trivia theme focused on chemistry, covering elements, reactions, formulas, compounds, lab concepts, atomic structure, and major ideas from the subject in a playable quiz format.",
+    seoIntro: "Chemistry trivia works best when it turns school-level science into quick recall on elements, symbols, reactions, and familiar concepts people recognise from class or everyday life. That makes it educational without feeling like a full exam.",
+    seoDetail: "A strong chemistry quiz can include the periodic table, atomic numbers, molecules, acids and bases, states of matter, chemical bonds, famous scientists, laboratory tools, reaction types, formulas, and widely known compounds or processes. The theme works because it can move between symbol recognition, factual knowledge, and basic scientific understanding, which gives it more variety than a narrow definitions-only round."
+  },
+
+  "physics": {
+    description: "A science trivia theme centered on physics, covering motion, forces, energy, space, laws, measurements, and major concepts from classical and modern physics.",
+    seoIntro: "Physics trivia works because many of its core ideas are familiar even outside the classroom, gravity, speed, electricity, planets, momentum, and the laws people encounter in everyday explanations of how the world works. That helps the category feel broad and recognizable.",
+    seoDetail: "A strong physics quiz can include Newton's laws, energy, force, motion, mass, acceleration, waves, light, electricity, magnetism, atoms, space, famous physicists, and basic formulas or units. The theme stays effective because it can balance school-level principles with wider scientific curiosity, giving players a mix of direct facts, concept recall, and recognizable real-world science."
+  },
+
+    "food-drink": {
+    description: "A general trivia theme covering food and drink through dishes, ingredients, cuisines, cooking methods, beverages, and the wider culture built around eating and drinking.",
+    seoIntro: "Food and drink trivia works because it pulls from things people encounter constantly, meals, snacks, recipes, restaurants, national dishes, alcohol, soft drinks, and familiar ingredients. That makes it easy to enter while still leaving room for tougher culinary knowledge.",
+    seoDetail: "A strong Food & Drink quiz can include famous dishes, cooking terms, herbs and spices, desserts, international cuisines, kitchen basics, coffee, tea, wine, spirits, soft drinks, and ingredient recognition across different cultures. The theme stays varied because it can move between everyday eating habits, hospitality knowledge, global food identity, and the small facts people often know without realising it."
+  },
+
+  "australia": {
+    description: "A country trivia theme covering Australia through geography, cities, wildlife, culture, sport, landmarks, politics, and the national identity that makes the country such a strong general knowledge topic.",
+    seoIntro: "Australia trivia works because the country gives you a wide range of recognisable material, from Sydney and the Outback to wildlife, sport, beaches, states, indigenous history, and global cultural stereotypes. It is broad enough to feel substantial rather than one-note.",
+    seoDetail: "A strong Australia quiz can include Canberra, Sydney, Melbourne, Queensland, Western Australia, the Great Barrier Reef, Uluru, kangaroos, cricket, rugby, famous Australians, Aboriginal history, slang, and national symbols or institutions. The theme works because it can balance geography, nature, history, and popular culture in a way that makes the country feel bigger than a basic capitals-and-flags round."
+  },
+
+  "god-of-war": {
+    description: "An action-adventure trivia theme built around God of War, covering Kratos, gods, weapons, realms, bosses, family relationships, mythology, and the major story moments from the modern games.",
+    seoIntro: "God of War trivia works because the newer games combine mythological spectacle with very personal storytelling, giving players memorable realms, named gear, dramatic boss fights, and strong family tension all at once. That makes the subject much richer than a simple mythology-themed action game.",
+    seoDetail: "A strong God of War quiz can include Kratos, Atreus, Mimir, Freya, Baldur, Thor, Odin, the Leviathan Axe, Blades of Chaos, realms such as Midgard and Asgard, major bosses, side quests, companions, and the shifting father-son dynamic that drives the story. The theme stays strong because it can move between combat systems, Norse mythology, exploration, emotional development, and the specific scenes that made the newer games stand out."
+  },
+
+  "horizon-zero-dawn": {
+    description: "A sci-fi action RPG trivia theme focused on Horizon Zero Dawn, covering Aloy, machine types, tribes, ruins of the old world, major quests, lore, and the discoveries that shape the game's world.",
+    seoIntro: "Horizon Zero Dawn trivia works because the game mixes strong visual memory, named machine creatures, tribal identities, and a mystery-driven story that changes how players understand the world. It has both easy recognition and deeper lore detail.",
+    seoDetail: "A strong Horizon Zero Dawn quiz can include Aloy, Rost, Sylens, GAIA-related lore, Nora, Carja, Oseram, Banuk, machine classes, cauldrons, focus scanning, major regions, weapons, old-world revelations, and the major missions that uncover what happened to civilisation. The theme works because it can balance combat, exploration, factions, technology, and the layered story behind the machines and the world they dominate."
+  },
+
+  "spartacus": {
+    description: "A historical drama trivia theme built around Spartacus, covering gladiators, houses, Roman politics, rebellions, rivalries, and the violent arena world that drives the series.",
+    seoIntro: "Spartacus trivia works because the show has a strong identity built on gladiator combat, betrayals, shifting loyalties, and a very memorable cast of fighters, masters, and political figures. Even small details tend to stand out because the world is so heightened.",
+    seoDetail: "A strong Spartacus quiz can include Spartacus, Crixus, Gannicus, Batiatus, Lucretia, Oenomaus, the ludus, arena combat, Roman elites, slavery, rebellions, alliances, betrayals, and the major battles or personal rivalries that shape the story. The theme stays strong because it can move between action, house politics, character ambition, and the brutal structure of the world the series builds."
+  },
+
+  "gossip-girl": {
+    description: "A teen drama trivia theme focused on Gossip Girl, covering the Upper East Side, scandals, secrets, relationships, rivalries, and the social chaos surrounding its central characters.",
+    seoIntro: "Gossip Girl trivia works because the show is built on memorable relationships, betrayals, family power, status anxiety, and a nonstop flow of reveals and public humiliation. Fans tend to remember both the big scandals and the smaller social details.",
+    seoDetail: "A strong Gossip Girl quiz can include Serena, Blair, Chuck, Nate, Dan, Jenny, Lily, Rufus, the Gossip Girl blasts, school life, family money, social events, romances, breakups, and the constant cycle of manipulation and reputation damage. The theme works because it can balance character relationships, elite social life, secrets, and the recurring settings and patterns that made the show such a strong guilty-pleasure watch."
+  },
+
+  "gilmore-girls": {
+    description: "A comedy-drama trivia theme centered on Gilmore Girls, covering Lorelai, Rory, Stars Hollow, family dynamics, relationships, town traditions, and the comfort-show details fans remember best.",
+    seoIntro: "Gilmore Girls trivia works especially well because the series is full of fast dialogue, distinctive town characters, repeated routines, and relationship turns that fans absorb over many rewatches. It is one of those shows where even background details feel familiar.",
+    seoDetail: "A strong Gilmore Girls quiz can include Lorelai, Rory, Emily, Richard, Luke, Sookie, Lane, Jess, Dean, Logan, Stars Hollow traditions, Chilton, Yale, family arguments, romances, and the many local side characters who make the town feel alive. The theme stays strong because it can move between relationships, family history, town culture, and the smaller recurring details that make the series so comforting and rewatchable."
+  },
+
+  "greys-anatomy": {
+    description: "A medical drama trivia theme focused on Grey's Anatomy, covering doctors, surgeries, relationships, hospital politics, emotional losses, and the long-running storylines that define the series.",
+    seoIntro: "Grey's Anatomy trivia works because the show combines memorable medical cases with intense romances, friendships, rivalries, and major tragedies that fans remember for years. It gives you both hospital drama and personal drama in the same category.",
+    seoDetail: "A strong Grey's Anatomy quiz can include Meredith, Derek, Cristina, Alex, Bailey, Richard, Callie, Arizona, Izzie, the hospital's name changes, big surgeries, plane crashes, weddings, breakups, mentorships, and the professional and personal choices that shape each era of the show. The theme works because it can balance medicine, relationships, character exits, and the many emotional turning points long-time viewers still remember clearly."
+  },
+
+  "sex-and-the-city": {
+    description: "A relationship and lifestyle trivia theme centered on Sex and the City, covering Carrie, Samantha, Charlotte, Miranda, New York life, friendships, dating, careers, and the iconic moments that define the series.",
+    seoIntro: "Sex and the City trivia works because the show is built on strong character voices, repeated conversations about love and sex, city life, fashion, and highly memorable relationships. Fans often remember both the broad arcs and the smaller details tied to each woman's personality.",
+    seoDetail: "A strong Sex and the City quiz can include Carrie, Samantha, Charlotte, Miranda, Big, Steve, Aidan, New York locations, careers, friendships, breakups, weddings, fashion moments, and the recurring dilemmas around love, independence, and lifestyle. The theme stays strong because it can move between character-specific habits, relationship history, city culture, and the scenes or choices that made the series so identifiable."
+  },
+
+  "desperate-housewives": {
+    description: "A suburban mystery-drama trivia theme focused on Desperate Housewives, covering Wisteria Lane, secrets, marriages, scandals, neighbour conflicts, family drama, and the darkly comic twists that define the show.",
+    seoIntro: "Desperate Housewives trivia works because the show mixes soap-style secrets with sharp humour, strong housewife identities, and constant shocks happening behind polished suburban walls. Viewers tend to remember both the mysteries and the personal chaos.",
+    seoDetail: "A strong Desperate Housewives quiz can include Susan, Lynette, Bree, Gabrielle, Edie, Mary Alice, Wisteria Lane families, affairs, cover-ups, pregnancies, crimes, house moves, family secrets, and the season-level mysteries that keep the neighbourhood unstable. The theme works because it can balance character drama, scandal, domestic conflict, and the many outrageous reveals that made the series more memorable than a typical suburban soap."
+  },
+
+  "cyberpunk-2077": {
+    description: "A futuristic RPG trivia theme focused on Cyberpunk 2077, covering Night City, V, cyberware, gangs, corporations, major storylines, companions, and the style-heavy world of the game.",
+    seoIntro: "Cyberpunk 2077 trivia works because the game is full of named districts, gangs, implants, side characters, corporate power struggles, and mission paths that stick in players' memory. Its setting is visually and conceptually strong enough to support more than surface-level questions.",
+    seoDetail: "A strong Cyberpunk 2077 quiz can include V, Johnny Silverhand, Night City districts, Arasaka, Militech, gangs such as the Valentinos and Tyger Claws, ripperdocs, cyberware, relic technology, vehicles, weapons, fixers, and the major choices that shape the story. The theme stays strong because it can balance world-building, tech concepts, faction identity, gameplay systems, and the many character-driven missions that make the city feel alive."
+  },
+
+  "buffy-the-vampire-slayer": {
+    description: "A supernatural drama trivia theme centered on Buffy the Vampire Slayer, covering Buffy, the Scooby Gang, Sunnydale, monsters, villains, romances, and the mix of horror, humour, and emotion that defines the series.",
+    seoIntro: "Buffy trivia works because the show has a very clear identity: high-school and young-adult life colliding with vampires, demons, prophecy, and apocalypse-level threats. Fans tend to remember both the emotional arcs and the monster-lore detail.",
+    seoDetail: "A strong Buffy the Vampire Slayer quiz can include Buffy, Willow, Xander, Giles, Angel, Spike, Dawn, Sunnydale High, the Hellmouth, major Big Bads, slayer lore, spells, romances, and the standout episodes that shaped the series. The theme works because it can move between creature mythology, character development, humour, heartbreak, and the many repeated details that made Buffy's world feel so specific."
+  },
+
+  "dark-souls-3": {
+    description: "A dark fantasy action RPG trivia theme focused on Dark Souls 3, covering bosses, regions, weapons, covenants, lore, builds, and the hard-earned knowledge players carry from repeated runs.",
+    seoIntro: "Dark Souls 3 trivia works because the game leaves players with strong memory of its bosses, areas, builds, NPC questlines, and cryptic lore connections. Even when the story is indirect, the named encounters and systems are very memorable.",
+    seoDetail: "A strong Dark Souls 3 quiz can include the Ashen One, Lothric, Irithyll, Farron Keep, Anor Londo, Firelink Shrine, covenants, embers, infusions, spells, NPCs, and bosses such as the Abyss Watchers, Pontiff Sulyvahn, Nameless King, and Soul of Cinder. The theme stays rich because it can balance mechanical knowledge, geography, enemy memory, item progression, and the hidden lore threads players piece together over time."
+  },
+
+  "marvels-spider-man": {
+    description: "A superhero action-game trivia theme focused on Marvel's Spider-Man, covering Peter Parker, New York, villains, suits, gadgets, combat, side characters, and the major story beats of the game.",
+    seoIntro: "Marvel's Spider-Man trivia works because the game combines instantly recognisable comic-book material with very memorable combat tools, traversal, boss fights, and character-driven story moments. Players remember both the action and the emotional side.",
+    seoDetail: "A strong Marvels Spider-Man quiz can include Peter Parker, Miles Morales, MJ, Aunt May, Otto Octavius, Mister Negative, the Sinister Six, suits, gadgets, skill trees, landmarks, side activities, combat moves, and the major missions that shape the story. The theme works because it can move between Spider-Man lore, gameplay systems, villain encounters, and the smaller story details that made the game easy for fans to invest in."
+  },
+
+  "assassins-creed-valhalla": {
+    description: "A historical action RPG trivia theme built around Assassin's Creed Valhalla, covering Eivor, Viking raids, alliances, settlements, mythology, England's regions, and the systems that shape the game.",
+    seoIntro: "Assassin's Creed Valhalla trivia works because the game combines Viking identity, conquest, mythology, open-world regions, and repeated alliance-building into a setting with a lot of named detail. It gives players material from both history and fantasy-tinged lore.",
+    seoDetail: "A strong Assassins Creed Valhalla quiz can include Eivor, Ravensthorpe, Sigurd, Basim, England's kingdoms, raids, monasteries, weapons, skills, longships, Norse gods, Asgard material, Order-related conflict, and the many regional arcs tied to conquest and alliance. The theme stays strong because it can balance combat systems, historical setting, mythological content, exploration, and the storylines that connect Eivor's personal journey to the wider world."
+  },
+
+    "suits": {
+    description: "A legal drama trivia theme focused on Suits, covering Harvey Specter, Mike Ross, Pearson Specter, high-stakes cases, corporate power plays, rivalries, and the secret that drives the series.",
+    seoIntro: "Suits trivia works because the show mixes courtroom strategy with office politics, personal loyalty, status games, and very memorable character chemistry. Fans tend to remember both the major legal conflicts and the repeated habits, lines, and rivalries that define the firm.",
+    seoDetail: "A strong Suits quiz can include Harvey, Mike, Jessica, Louis, Donna, Rachel, Pearson Specter and its later forms, mergers, rival firms, promotions, betrayals, mock trials, negotiations, and the many episodes built around Mike's hidden lack of a law degree. The theme works because it can move between legal drama, workplace hierarchy, relationships, and the specific character traits that made the show's dialogue and power struggles so recognisable."
+  },
+
+  "house": {
+    description: "A medical drama trivia theme centered on House, covering Gregory House, diagnostic medicine, unusual cases, the hospital team, personal conflict, and the abrasive brilliance that defines the series.",
+    seoIntro: "House trivia works because the show is built on a very distinctive formula: bizarre medical mysteries, House's brutal logic, team conflict, and personal dysfunction inside the hospital. That structure makes both the cases and the character dynamics easy for viewers to remember.",
+    seoDetail: "A strong House quiz can include House, Wilson, Cuddy, Foreman, Chase, Cameron, later team members, Princeton-Plainsboro, diagnostic methods, unusual symptoms, addictions, ethics clashes, and the many moments where House solves a case by spotting a detail everyone else missed. The theme stays strong because it can balance medicine, personality conflict, hospital structure, and the repeated case-solving patterns that made the series so watchable."
+  },
+
+  "true-crime": {
+    description: "A crime trivia theme focused on true crime, covering infamous cases, criminals, investigations, trials, evidence, law enforcement, and the real-world stories that have become part of public memory.",
+    seoIntro: "True crime trivia works because the category draws on cases people recognise from news, documentaries, books, and wider cultural discussion. It combines criminal acts, investigations, courtroom outcomes, and the details that made certain cases notorious.",
+    seoDetail: "A strong True Crime quiz can include serial killers, famous unsolved cases, kidnappings, frauds, police work, forensic evidence, confessions, trials, sentencing, and the media attention that turned certain investigations into major public stories. The theme works because it can move between criminals, victims, locations, investigative breakthroughs, and the wider history of how real cases were pursued, interpreted, and remembered."
+  },
+
+  "technology": {
+    description: "A broad technology trivia theme covering computers, software, internet culture, devices, digital history, and major tech concepts. It mixes practical everyday knowledge with the wider story of modern technology.",
+    seoIntro: "Technology trivia works because the subject is everywhere, from phones, apps, and social media to computing basics, famous companies, operating systems, and online culture. That gives it strong recognition while still leaving room for tougher questions on how technology actually works.",
+    seoDetail: "A strong technology quiz can draw from hardware, software, browsers, operating systems, internet terms, big tech companies, programming basics, devices, digital milestones, and well-known innovations. The theme stays varied because it can move between consumer technology, computing history, and the everyday tools people use without needing deep specialist knowledge."
+  },
+
+  "word-definitions": {
+    description: "A vocabulary trivia theme focused on word meanings, usage, recognition, and general verbal knowledge. It is more about understanding language than memorising spellings or grammar rules.",
+    seoIntro: "Word definitions trivia works because it tests a form of knowledge people use constantly without always thinking about it. Familiar words, less common meanings, shades of meaning, and context all help the category feel broader than a simple dictionary exercise.",
+    seoDetail: "A strong word definitions quiz can include synonyms, antonyms, precise meanings, multiple-use words, context clues, abstract vocabulary, and terms that sound familiar until players have to define them clearly. The theme works because it sits in the gap between recognition and precision, which makes it challenging in a different way from spelling or grammar."
+  }
+};
+
+function main() {
+  const themes = JSON.parse(fs.readFileSync(themesPath, "utf8"));
+
+  const missingInThemes = Object.keys(contentMap).filter(
+    (slug) => !themes.some((theme) => theme.slug === slug)
+  );
+
+  if (missingInThemes.length) {
+    throw new Error(
+      `These slugs exist in contentMap but not in themes.json:\n- ${missingInThemes.join("\n- ")}`
+    );
+  }
+
+  let updatedCount = 0;
+
+  const updatedThemes = themes.map((theme) => {
+    const content = contentMap[theme.slug];
+    if (!content) return theme;
+
+    updatedCount += 1;
+
+    return {
+      ...theme,
+      description: content.description,
+      seoIntro: content.seoIntro,
+      seoDetail: content.seoDetail
+    };
+  });
+
+  fs.writeFileSync(themesPath, JSON.stringify(updatedThemes, null, 2) + "\n", "utf8");
+
+  console.log(`Updated ${updatedCount} themes in themes.json`);
+  console.log(`Batch slugs: ${Object.keys(contentMap).join(", ")}`);
+
+  const missingDescription = [];
+  const missingSeoIntro = [];
+  const missingSeoDetail = [];
+  const missingAny = [];
+
+  updatedThemes.forEach((theme, index) => {
+    const slug = theme.slug || `(missing-slug-at-index-${index})`;
+
+    const noDescription = isBlank(theme.description);
+    const noSeoIntro = isBlank(theme.seoIntro);
+    const noSeoDetail = isBlank(theme.seoDetail);
+
+    if (noDescription) missingDescription.push(slug);
+    if (noSeoIntro) missingSeoIntro.push(slug);
+    if (noSeoDetail) missingSeoDetail.push(slug);
+
+    if (noDescription || noSeoIntro || noSeoDetail) {
+      missingAny.push(
+        `${slug}: ${[
+          ...(noDescription ? ["description"] : []),
+          ...(noSeoIntro ? ["seoIntro"] : []),
+          ...(noSeoDetail ? ["seoDetail"] : [])
+        ].join(", ")}`
+      );
+    }
+  });
+
+  console.log(`\nCoverage check across full themes.json:`);
+  console.log(`Missing description: ${missingDescription.length}`);
+  console.log(`Missing seoIntro: ${missingSeoIntro.length}`);
+  console.log(`Missing seoDetail: ${missingSeoDetail.length}`);
+
+  if (missingAny.length) {
+    console.log(`\nThemes still missing fields:`);
+    missingAny.forEach((line) => console.log(`- ${line}`));
+  } else {
+    console.log(`\nAll themes now have description, seoIntro, and seoDetail.`);
+  }
+}
+
+main();

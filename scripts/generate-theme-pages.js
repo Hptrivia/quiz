@@ -60,7 +60,7 @@ function getSampleQuestions(questionFilePath) {
       .map((q) => (q && q.question ? String(q.question).trim() : ""))
       .filter(Boolean)
       .sort(() => Math.random() - 0.5)
-      .slice(0, 5);
+      .slice(0, 10);
   } catch (err) {
     return [];
   }
@@ -85,12 +85,14 @@ function buildThemePage(theme, hasEpisodeMode, sampleQuestions = []) {
   const rawDescription = theme.description || "";
   const rawSlug = theme.slug || "";
   const rawSeoIntro = theme.seoIntro || "";
+  const rawSeoDetail = theme.seoDetail || "";
 
-  const title = escapeHtml(rawTitle);
-  const description = escapeHtml(rawDescription);
-  const slug = escapeHtml(rawSlug);
-  const coverageText = escapeHtml(rawSeoIntro || getThemeCoverageText(theme));
-  const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
+const title = escapeHtml(rawTitle);
+const description = escapeHtml(rawDescription);
+const slug = escapeHtml(rawSlug);
+const coverageText = escapeHtml(rawSeoIntro);
+const detailText = escapeHtml(rawSeoDetail);
+const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
   const totalQuestions = getTotalQuestions(theme.questionFile);
   const totalQuestionsText = totalQuestions > 0
     ? `${totalQuestions} questions across multiple rounds`
@@ -160,9 +162,10 @@ function buildThemePage(theme, hasEpisodeMode, sampleQuestions = []) {
     <section class="panel">
       <h1>${title} Trivia Questions</h1>
       ${totalQuestionsText ? `<p class="theme-question-count">${escapeHtml(totalQuestionsText)}</p>` : ""}
-      <p>${description}</p>
-      <p>${coverageText}</p>
-      <p>${bestModeText}</p> 
+<p>${description}</p>
+${rawSeoIntro ? `<p>${coverageText}</p>` : ""}
+${rawSeoDetail ? `<p>${detailText}</p>` : ""}
+<p>${bestModeText}</p>
       ${sampleQuestionsHtml}
 
       <div class="grid">
