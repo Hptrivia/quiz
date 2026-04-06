@@ -240,8 +240,16 @@ const categoryBottomMap = {
   </p>
   `,
   "Sports": `
-    <p>Sports quizzes on Trivia Gauntlet are built for both casual players and fans who know the deeper records, moments, and rivalries.</p>
-    <p><a href="why-people-enjoy-trivia.html">Why People Enjoy Trivia</a></p>
+  <h2>Why Sports Trivia Is So Replayable</h2>
+  <p>
+    Sports trivia works so well because it combines fandom, memory, loyalty, and competition. Fans remember title wins, rivalries, records, players, teams, and the moments that stayed with them for years. That gives sports quizzes a natural intensity that fits both quick rounds and longer challenge formats.
+  </p>
+  <p>
+    It also allows for a lot of variety, from clubs and fighters to championships, nicknames, stadiums, and historic moments. If you want a closer look at why sports quizzes are so addictive, read the full article below.
+  </p>
+  <p>
+    <a href="why-sports-trivia-is-so-addictive.html">Read: Why Sports Trivia Is So Addictive</a>
+  </p>
   `,
   "General": `
   <h2>Why General Trivia Never Really Gets Old</h2>
