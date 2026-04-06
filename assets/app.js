@@ -77,7 +77,7 @@ if (newlyAddedList) {
 
   const card = document.createElement("a");
   card.className = "card";
-  card.href = `category/newly-added.html`;
+  card.href = `categories/newly-added.html`;
   card.innerHTML = `
     <h3>Newly Added</h3>
     <p>${matchedNewThemes.length} theme(s)</p>

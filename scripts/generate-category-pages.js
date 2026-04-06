@@ -108,7 +108,7 @@ const categoryBottomMap = {
     </p>
   `,
   "General": `
-    <h2>Why General Trivia Never Really Gets Old</h2>
+    <h2>Why General Trivia Never Gets Old</h2>
     <p>
       General trivia stays popular because it rewards range rather than one single obsession. A player can move from history to science to geography to entertainment in the same round, which keeps the pace unpredictable and gives each quiz a different rhythm. That variety is a big reason general knowledge quizzes remain one of the most replayable formats.
     </p>
@@ -116,7 +116,7 @@ const categoryBottomMap = {
       They also work well for players who want a broader challenge rather than one fandom or one narrow subject. If you want a closer look at why general quizzes are so addictive, read the full article below.
     </p>
     <p>
-      <a href="../the-good-ole-general-trivia.html">Read: The Good Ole General Trivia</a>
+      <a href="../why-general-trivia-never-gets-old.html">Read: Why General Trivia Never Gets Old</a>
     </p>
   `,
   "Education": `
