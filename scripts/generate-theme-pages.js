@@ -300,6 +300,14 @@ function main() {
     `${SITE_URL}/contact.html`,
     `${SITE_URL}/privacy.html`,
     `${SITE_URL}/terms.html`,
+    `${SITE_URL}/categories/tv-series.html`,
+    `${SITE_URL}/categories/games.html`,
+    `${SITE_URL}/categories/sports.html`,
+    `${SITE_URL}/categories/general.html`,
+    `${SITE_URL}/categories/education.html`,
+    `${SITE_URL}/categories/books.html`,
+    `${SITE_URL}/categories/countries.html`,
+    `${SITE_URL}/categories/newly-added.html`,
     `${SITE_URL}/remove-ads.html`
   ];
 
