@@ -166,6 +166,7 @@ async function renderCategoryPage() {
   const pageTitle = document.getElementById("categoryTitle");
   const themeList = document.getElementById("categoryThemes");
   const introEl = document.getElementById("categoryIntro");
+  const bottomTextEl = document.getElementById("categoryBottomText");
 
   pageTitle.textContent = categoryName || "Category";
   themeList.innerHTML = "";
@@ -211,6 +212,88 @@ if (introEl) {
   ];
 
   introEl.innerHTML = introParts.map(text => `<p>${text}</p>`).join("");
+}
+
+const categoryBottomMap = {
+  "TV/Series": `
+   <h2>Why TV Trivia Works So Well</h2>
+  <p>
+    TV trivia is one of the most replayable quiz formats because fans do not just remember the basics. They remember quotes, episode moments, side characters, season finales, and the details that came from watching a show more than once. That is especially true for sitcoms, fantasy series, anime, and long-running fandoms where the audience builds a much deeper memory over time.
+  </p>
+  <p>
+    That is also why TV quizzes can work in different modes. Some are better as quick general rounds, while others work best in episode-based formats where the challenge becomes much more specific. If you want a closer look at why this category is so addictive, you can read the full article below.
+  </p>
+  <p>
+    <a href="why-tv-trivia-is-so-addictive.html">Read: Why TV Trivia Is So Addictive</a>
+  </p>
+  `,
+  "Games": `
+  <h2>Why Game Trivia Feels Different</h2>
+  <p>
+    Game trivia tends to feel stronger than a lot of people expect because games leave behind deeper memory than more passive entertainment. Players remember bosses, missions, maps, mechanics, upgrades, weapons, and story choices because they actually played through them rather than just watching them happen.
+  </p>
+  <p>
+    That gives game quizzes a lot of variety. Some questions can focus on characters and lore, while others work better around gameplay systems, skills, combat, or progression. If you want a closer look at why game quizzes are so replayable, read the full article below.
+  </p>
+  <p>
+    <a href="why-video-game-trivia-is-so-addictive.html">Read: Why Video Game Trivia Is So Addictive</a>
+  </p>
+  `,
+  "Sports": `
+    <p>Sports quizzes on Trivia Gauntlet are built for both casual players and fans who know the deeper records, moments, and rivalries.</p>
+    <p><a href="why-people-enjoy-trivia.html">Why People Enjoy Trivia</a></p>
+  `,
+  "General": `
+  <h2>Why General Trivia Never Really Gets Old</h2>
+  <p>
+    General trivia stays popular because it rewards range rather than one single obsession. A player can move from history to science to geography to entertainment in the same round, which keeps the pace unpredictable and gives each quiz a different rhythm. That variety is a big reason general knowledge quizzes remain one of the most replayable formats.
+  </p>
+  <p>
+    They also work well for players who want a broader challenge rather than one fandom or one narrow subject. If you want a closer look at why general quizzes are so addictive, read the full article below.
+  </p>
+  <p>
+    <a href="why-general-trivia-is-so-addictive.html">Read: Why General Trivia Is So Addictive</a>
+  </p>
+  `,
+  "Education": `
+  <h2>Why Education Trivia Can Be Surprisingly Fun</h2>
+  <p>
+    Education trivia works because it turns school-style subjects into a more playable format. Instead of feeling like a formal test, topics like physics, chemistry, biology, history, and math become faster, lighter, and more competitive. That shift makes knowledge-based categories feel more engaging than a lot of people expect.
+  </p>
+  <p>
+    These quizzes can work both as subject practice and as general challenge rounds for players who enjoy learning while they play. If you want a closer look at why educational quizzes are so effective, read the full article below.
+  </p>
+  <p>
+    <a href="why-education-trivia-is-so-addictive.html">Read: Why Education Trivia Is So Addictive</a>
+  </p>
+  `,
+  "Books": `
+  <h2>Why Book Trivia Rewards Closer Reading</h2>
+  <p>
+    Book trivia works especially well because reading creates a different kind of memory. Readers build the world in their heads, remember characters and settings in detail, and often hold onto smaller plot points longer than they expect. That makes book quizzes a strong category for both broad literary knowledge and detailed fandom-based questions.
+  </p>
+  <p>
+    It also becomes even richer when adaptations are involved, since some players know the original books closely while others come in through film or TV versions. If you want a closer look at why this category works so well, read the full article below.
+  </p>
+  <p>
+    <a href="why-book-trivia-is-so-addictive.html">Read: Why Book Trivia Is So Addictive</a>
+  </p>
+  `,
+  "Countries": `
+  <h2>Why Country Trivia Stays So Popular</h2>
+  <p>
+    Country trivia looks simple until the questions go beyond flags and capitals. Once quizzes bring in geography, language, culture, landmarks, borders, and history, the category becomes much more interesting. It feels educational without becoming too heavy, which is a big part of why it works so well for repeat play.
+  </p>
+  <p>
+    It is also one of the strongest categories for testing what people think they know versus what they can actually recall under pressure. If you want a closer look at why country quizzes are so addictive, read the full article below.
+  </p>
+  <p>
+    <a href="why-country-trivia-is-so-addictive.html">Read: Why Country Trivia Is So Addictive</a>
+  </p>
+  `
+};
+  if (bottomTextEl) {
+  bottomTextEl.innerHTML = categoryBottomMap[categoryName] || "";
 }
 
   let filtered = [];
