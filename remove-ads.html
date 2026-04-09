@@ -44,6 +44,7 @@
         <a id="removeAdsBuyButton" class="primary-btn" href="https://ko-fi.com/triviaking/shop" target="_blank" rel="noopener noreferrer">
           View Shop
         </a>
+        <a class="secondary-btn" href="contact.html?topic=request-pack">Request a Theme Pack</a>
         <a class="secondary-btn" href="https://trivia-5pja.onrender.com" target="_blank" rel="noopener noreferrer">
           Upload Purchased File
         </a>
@@ -76,5 +77,16 @@
 
   <script src="assets/app.js"></script>
   <script src="assets/remove-ads.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    const topic = params.get("topic");
+    const subjectSelect = document.getElementById("subject");
+
+    if (topic && subjectSelect) {
+      subjectSelect.value = topic;
+    }
+  });
+</script>
 </body>
 </html>
