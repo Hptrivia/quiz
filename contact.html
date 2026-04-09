@@ -76,5 +76,18 @@
       </div>
     </div>
   </footer>
+    <script src="assets/app.js"></script>
+  <script src="assets/remove-ads.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    const topic = params.get("topic");
+    const subjectSelect = document.getElementById("subject");
+
+    if (topic && subjectSelect) {
+      subjectSelect.value = topic;
+    }
+  });
+</script>
 </body>
 </html>
