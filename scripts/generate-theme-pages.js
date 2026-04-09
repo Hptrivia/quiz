@@ -166,8 +166,7 @@ const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
 ${rawSeoIntro ? `<p>${coverageText}</p>` : ""}
 ${rawSeoDetail ? `<p>${detailText}</p>` : ""}
 <p>${bestModeText}</p>
-      ${sampleQuestionsHtml}
-
+      
       <div class="grid">
         <a class="card" href="../play.html?theme=${slug}">
           <h3>Marathon Mode</h3>
@@ -196,6 +195,7 @@ ${rawSeoDetail ? `<p>${detailText}</p>` : ""}
           <p>Guess themed words</p>
         </a>
       </div>
+      ${sampleQuestionsHtml}
     </section>
   </main>
 
