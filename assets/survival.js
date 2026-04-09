@@ -19,6 +19,13 @@ async function renderSurvivalPage() {
   const friendBtn = document.getElementById("friendBtn");
 
   if (!theme) return;
+
+  if (typeof gtag === "function") {
+  gtag("event", "page_view", {
+    page_title: `Survival Mode - ${theme.title}`,
+    page_location: window.location.href
+  });
+}
   
   if (typeof updateRemoveAdsFooter === "function") {
   updateRemoveAdsFooter(theme.slug, "normal");
