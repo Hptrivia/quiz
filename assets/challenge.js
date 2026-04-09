@@ -144,6 +144,7 @@ btn.addEventListener("click", () => {
     <div class="challenge-link-box">${roundLink}</div>
     <div class="cta-row">
       ${hasNextRound ? `<a class="primary-btn" href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}">Next Round</a>` : ""}
+     <a class="secondary-btn" href="contact.html">Report a Question</a>
     </div>
     ${affiliateHtml}
   `;
