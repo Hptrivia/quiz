@@ -1,10 +1,6 @@
 const fs = require("fs");
 const path = require("path");
 
-function isBlank(value) {
-  return typeof value !== "string" || value.trim() === "";
-}
-
 const rootDir = path.resolve(__dirname, "..");
 const themesPath = path.join(rootDir, "data", "themes.json");
 
@@ -742,78 +738,121 @@ const contentMap = {
   }
 };
 
-function main() {
-  const themes = JSON.parse(fs.readFileSync(themesPath, "utf8"));
+function isBlank(value) {
+  return typeof value !== "string" || value.trim() === "";
+}
 
-  const missingInThemes = Object.keys(contentMap).filter(
-    (slug) => !themes.some((theme) => theme.slug === slug)
-  );
+function validateIncomingTheme(theme, slugKey) {
+  const requiredFields = [
+    "slug",
+    "title",
+    "category",
+    "image",
+    "questionFile",
+    "description",
+    "seoIntro",
+    "seoDetail"
+  ];
 
-  if (missingInThemes.length) {
+  const missing = requiredFields.filter((field) => typeof theme[field] !== "string");
+
+  if (missing.length) {
     throw new Error(
-      `These slugs exist in contentMap but not in themes.json:\n- ${missingInThemes.join("\n- ")}`
+      `Theme "${slugKey}" is missing required string fields: ${missing.join(", ")}`
     );
   }
 
+  if (theme.slug !== slugKey) {
+    throw new Error(
+      `Theme key "${slugKey}" does not match theme.slug "${theme.slug}"`
+    );
+  }
+}
+
+function main() {
+  if (!fs.existsSync(themesPath)) {
+    throw new Error(`Could not find themes file at ${themesPath}`);
+  }
+
+  const themes = JSON.parse(fs.readFileSync(themesPath, "utf8"));
+  if (!Array.isArray(themes)) {
+    throw new Error("themes.json is not a valid array");
+  }
+
+  for (const [slug, theme] of Object.entries(contentMap)) {
+    validateIncomingTheme(theme, slug);
+  }
+
+  const existingBySlug = new Map();
+  themes.forEach((theme, index) => {
+    if (!theme || typeof theme !== "object") {
+      throw new Error(`Invalid theme object at index ${index}`);
+    }
+
+    if (!theme.slug || typeof theme.slug !== "string") {
+      throw new Error(`Theme at index ${index} is missing a valid slug`);
+    }
+
+    if (existingBySlug.has(theme.slug)) {
+      console.warn(`Duplicate slug already in themes.json: ${theme.slug} — later one will overwrite earlier one in memory.`);
+    }
+
+    existingBySlug.set(theme.slug, theme);
+  });
+
+  let addedCount = 0;
   let updatedCount = 0;
 
-  const updatedThemes = themes.map((theme) => {
-    const content = contentMap[theme.slug];
-    if (!content) return theme;
+  for (const [slug, incomingTheme] of Object.entries(contentMap)) {
+    const existingTheme = existingBySlug.get(slug);
 
-    updatedCount += 1;
+    if (existingTheme) {
+      existingBySlug.set(slug, {
+        ...existingTheme,
+        ...incomingTheme
+      });
+      updatedCount += 1;
+    } else {
+      existingBySlug.set(slug, incomingTheme);
+      addedCount += 1;
+    }
+  }
 
-    return {
-      ...theme,
-      description: content.description,
-      seoIntro: content.seoIntro,
-      seoDetail: content.seoDetail
-    };
-  });
+  const originalOrder = themes.map((theme) => theme.slug);
+  const newSlugs = Object.keys(contentMap).filter((slug) => !originalOrder.includes(slug));
+
+  const updatedThemes = [
+    ...originalOrder.map((slug) => existingBySlug.get(slug)),
+    ...newSlugs.map((slug) => existingBySlug.get(slug))
+  ];
 
   fs.writeFileSync(themesPath, JSON.stringify(updatedThemes, null, 2) + "\n", "utf8");
 
-  console.log(`Updated ${updatedCount} themes in themes.json`);
-  console.log(`Batch slugs: ${Object.keys(contentMap).join(", ")}`);
+  console.log(`Updated existing themes: ${updatedCount}`);
+  console.log(`Added new themes: ${addedCount}`);
 
-  const missingDescription = [];
-  const missingSeoIntro = [];
-  const missingSeoDetail = [];
   const missingAny = [];
 
   updatedThemes.forEach((theme, index) => {
     const slug = theme.slug || `(missing-slug-at-index-${index})`;
 
-    const noDescription = isBlank(theme.description);
-    const noSeoIntro = isBlank(theme.seoIntro);
-    const noSeoDetail = isBlank(theme.seoDetail);
+    const missingFields = [];
+    if (isBlank(theme.description)) missingFields.push("description");
+    if (isBlank(theme.seoIntro)) missingFields.push("seoIntro");
+    if (isBlank(theme.seoDetail)) missingFields.push("seoDetail");
 
-    if (noDescription) missingDescription.push(slug);
-    if (noSeoIntro) missingSeoIntro.push(slug);
-    if (noSeoDetail) missingSeoDetail.push(slug);
-
-    if (noDescription || noSeoIntro || noSeoDetail) {
-      missingAny.push(
-        `${slug}: ${[
-          ...(noDescription ? ["description"] : []),
-          ...(noSeoIntro ? ["seoIntro"] : []),
-          ...(noSeoDetail ? ["seoDetail"] : [])
-        ].join(", ")}`
-      );
+    if (missingFields.length) {
+      missingAny.push(`${slug}: ${missingFields.join(", ")}`);
     }
   });
 
-  console.log(`\nCoverage check across full themes.json:`);
-  console.log(`Missing description: ${missingDescription.length}`);
-  console.log(`Missing seoIntro: ${missingSeoIntro.length}`);
-  console.log(`Missing seoDetail: ${missingSeoDetail.length}`);
+  console.log(`Total themes after sync: ${updatedThemes.length}`);
 
   if (missingAny.length) {
-    console.log(`\nThemes still missing fields:`);
+    console.log(`\nThemes still missing required SEO fields:`);
     missingAny.forEach((line) => console.log(`- ${line}`));
   } else {
     console.log(`\nAll themes now have description, seoIntro, and seoDetail.`);
   }
 }
-
 main();
