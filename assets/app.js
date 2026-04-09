@@ -439,6 +439,13 @@ async function renderPlayPage() {
     return;
   }
 
+  if (typeof gtag === "function") {
+  gtag("event", "page_view", {
+    page_title: `Play Quiz - ${theme.title}`,
+    page_location: window.location.href
+  });
+}
+
 let buyPackUrl = "https://ko-fi.com/triviaking/shop";
  try { const normalPackLinks = await fetchJSON("data/normal_pack_links.json"); 
   buyPackUrl = normalPackLinks[theme.title] || buyPackUrl;
