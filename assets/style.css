@@ -903,6 +903,14 @@ a {
 .blog-list .card p {
   font-style: italic;
 }
+.result-theme-search {
+  margin-top: 18px;
+}
+
+.result-theme-search-title {
+  margin: 0 0 10px;
+  font-weight: 600;
+}
 
 .category-bottom-panel {
   margin-top: 20px;
