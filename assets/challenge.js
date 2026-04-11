@@ -146,8 +146,51 @@ btn.addEventListener("click", () => {
       ${hasNextRound ? `<a class="primary-btn" href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}">Next Round</a>` : ""}
      <a class="secondary-btn" href="contact.html">Report a Question</a>
     </div>
+
+      <div class="result-theme-search">
+    <p class="result-theme-search-title">Try another theme</p>
+    <div class="search-wrap">
+      <input id="challengeResultThemeSearchInput" class="theme-search-input" type="text" placeholder="Search themes..." autocomplete="off" />
+      <div id="challengeResultThemeSearchResults" class="search-results"></div>
+    </div>
+  </div>
     ${affiliateHtml}
   `;
+   const resultSearchInput = document.getElementById("challengeResultThemeSearchInput");
+const resultSearchResults = document.getElementById("challengeResultThemeSearchResults");
+
+if (resultSearchInput && resultSearchResults) {
+  const renderThemeResults = (items) => {
+    if (!items.length) {
+      resultSearchResults.innerHTML = '<div class="search-item">No results found</div>';
+      return;
+    }
+
+    resultSearchResults.innerHTML = items.map(item => `
+      <a class="search-item" href="challenge.html?theme=${item.slug}&round=1">${item.title}</a>
+    `).join("");
+  };
+
+  resultSearchInput.addEventListener("focus", () => {
+    renderThemeResults(themes);
+    resultSearchResults.style.display = "block";
+  });
+
+  resultSearchInput.addEventListener("input", (e) => {
+    const value = e.target.value.trim().toLowerCase();
+    const filtered = themes.filter(item =>
+      item.title.toLowerCase().includes(value)
+    );
+    renderThemeResults(filtered);
+    resultSearchResults.style.display = "block";
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!resultSearchInput.contains(e.target) && !resultSearchResults.contains(e.target)) {
+      resultSearchResults.style.display = "none";
+    }
+  });
+}
 }
 
 submitBtn.addEventListener("click", () => {
