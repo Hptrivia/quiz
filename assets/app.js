@@ -532,7 +532,50 @@ function renderResult() {
       <a class="secondary-btn" href="${buyPackUrl}" target="_blank" rel="noopener noreferrer">Ad-Free Play + Extras</a>
       <a class="secondary-btn" href="contact.html">Report a Question</a>
     </div>
+
+      <div class="result-theme-search">
+    <p class="result-theme-search-title">Try another theme</p>
+    <div class="search-wrap">
+      <input id="resultThemeSearchInput" class="theme-search-input" type="text" placeholder="Search themes..." autocomplete="off" />
+      <div id="resultThemeSearchResults" class="search-results"></div>
+    </div>
+  </div>
   `;
+  const resultSearchInput = document.getElementById("resultThemeSearchInput");
+const resultSearchResults = document.getElementById("resultThemeSearchResults");
+
+if (resultSearchInput && resultSearchResults) {
+  const renderThemeResults = (items) => {
+    if (!items.length) {
+      resultSearchResults.innerHTML = '<div class="search-item">No results found</div>';
+      return;
+    }
+
+    resultSearchResults.innerHTML = items.map(item => `
+      <a class="search-item" href="play.html?theme=${item.slug}">${item.title}</a>
+    `).join("");
+  };
+
+  resultSearchInput.addEventListener("focus", () => {
+    renderThemeResults(themes);
+    resultSearchResults.style.display = "block";
+  });
+
+  resultSearchInput.addEventListener("input", (e) => {
+    const value = e.target.value.trim().toLowerCase();
+    const filtered = themes.filter(item =>
+      item.title.toLowerCase().includes(value)
+    );
+    renderThemeResults(filtered);
+    resultSearchResults.style.display = "block";
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!resultSearchInput.contains(e.target) && !resultSearchResults.contains(e.target)) {
+      resultSearchResults.style.display = "none";
+    }
+  });
+}
 
   setTimeout(() => {
     if (typeof showInstallCard === "function") {
