@@ -4,6 +4,12 @@ async function renderEpisodePage() {
   const theme = themes.find(t => t.slug === slug);
 
   if (!theme) return;
+  if (typeof gtag === "function") {
+  gtag("event", "page_view", {
+    page_title: `Episode Mode - ${theme.title}`,
+    page_location: window.location.href
+  });
+}
 
   if (typeof updateRemoveAdsFooter === "function") {
     updateRemoveAdsFooter(theme.slug, "episode");
