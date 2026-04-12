@@ -15,6 +15,13 @@ async function renderWordlePage() {
     return;
   }
 
+  if (typeof gtag === "function") {
+  gtag("event", "page_view", {
+    page_title: `Wordle - ${theme.title}`,
+    page_location: window.location.href
+  });
+}
+
   if (typeof updateRemoveAdsFooter === "function") {
     updateRemoveAdsFooter(theme.slug, "normal");
   }
