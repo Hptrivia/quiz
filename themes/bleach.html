@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bleach Trivia Questions | Trivia Gauntlet</title>
+<meta name="description" content="Play 109+ Bleach trivia questions on Trivia Gauntlet. Test your knowledge in Marathon, Challenge, Survival, and more." />
+  <link rel="canonical" href="https://triviagauntlet.app/themes/bleach.html" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2544021252380572"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E6BY9F2ZDT');
+  </script>
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="apple-touch-icon" href="/assets/icon-192.png" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+  <main class="container narrow">
+    <div class="theme-top-links">
+      <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+      <a href="../index.html" class="back-link">⌂ Home</a>
+    </div>
+
+
+
+    <div class="theme-search-wrap">
+      <div class="search-wrap">
+        <input id="themeSearchInput" class="theme-search-input" type="text" placeholder="Search themes..." autocomplete="off" />
+        <div id="themeSearchResults" class="search-results"></div>
+      </div>
+    </div>
+
+    <section class="panel">
+      <h1>Bleach Trivia Questions</h1>
+      <p class="theme-question-count">109 questions across multiple rounds</p>
+<p>A TV trivia theme covering Bleach, including Soul Reapers, Hollows, Espada, Zanpakuto abilities, major arcs, and the evolving power system across the series.</p>
+<p>Bleach trivia works because the series combines a large cast of characters with a structured power system built around Zanpakuto, Bankai transformations, and faction-based conflicts that evolve across long story arcs.</p>
+<p>A strong Bleach quiz can include Ichigo Kurosaki, Rukia Kuchiki, Soul Society, Hueco Mundo, Arrancar, Espada, and major captains such as Byakuya and Kenpachi. It also includes Zanpakuto abilities, Bankai forms, Hollows, Quincy lore, and key battles that define each arc. The theme works because it balances character recognition, power system knowledge, and long-running narrative progression across multiple story phases.</p>
+<p>Marathon Mode is best for a longer run with bigger rounds, while Challenge Mode works better for shorter 10-question sessions.</p>
+      
+      <div class="grid">
+        <a class="card" href="../play.html?theme=bleach">
+          <h3>Marathon Mode</h3>
+          <p>30-question rounds</p>
+        </a>
+
+        <a class="card" href="../challenge.html?theme=bleach&round=1">
+          <h3>Challenge Mode</h3>
+          <p>10-question quick rounds</p>
+        </a>
+
+        <a class="card" href="../survival.html?theme=bleach">
+          <h3>Survival Mode</h3>
+          <p>One mistake and the run ends</p>
+        </a>
+
+        
+
+        <a class="card" href="../remove-ads.html?theme=bleach&mode=normal">
+          <h3>Ad-Free + Extras</h3>
+          <p>Printables, answer sheets, and bonus files</p>
+        </a>
+
+        <a class="card" href="../wordle.html?theme=bleach&page=1">
+          <h3>Wordle</h3>
+          <p>Guess themed words</p>
+        </a>
+      </div>
+      
+        <div class="theme-sample-questions">
+          <h2>Sample Questions</h2>
+          <ul>
+            <li>What is the name of the gate that connects the human world to Soul Society?</li><li>What is the energy beam fired by Hollows called?</li><li>Who is the Captain of the 2nd Division and leader of the Stealth Force?</li><li>What animal form does Yoruichi Shihōin often take?</li><li>Who is the Japanese voice actor (Seiyū) for the protagonist Ichigo Kurosaki?</li><li>What is the name of the doll used by Jin Kariya in the Bount arc?</li><li>Who is Ichigo&#39;s main rival among the Espada?</li><li>Who is the scientist Captain of the 12th Division?</li><li>What is the name of the group of humans who can manipulate the souls of objects?</li><li>What is the name of the main protagonist of Bleach?</li>
+          </ul>
+        </div>
+      
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a id="removeAdsLink" class="footer-highlight" href="../remove-ads.html?theme=bleach&mode=normal">Ad-Free + Extras</a>
+        <a href="../about.html">About</a>
+        <a class="footer-highlight" href="../how-it-works.html">How It Works</a>
+        <a class="footer-highlight" href="../contact.html">Contact</a>
+        <a href="../privacy.html">Privacy Policy</a>
+        <a href="../terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    async function setupThemePageSearch() {
+      const input = document.getElementById("themeSearchInput");
+      const results = document.getElementById("themeSearchResults");
+      if (!input || !results) return;
+
+      try {
+        const res = await fetch("../data/themes.json");
+        const themes = await res.json();
+
+        function render(items) {
+          if (!items.length) {
+            results.innerHTML = '<div class="search-item">No results found</div>';
+            return;
+          }
+
+          results.innerHTML = items.map(theme => `
+            <a class="search-item" href="../themes/${theme.slug}.html">${theme.title}</a>
+          `).join("");
+        }
+
+        input.addEventListener("focus", () => {
+          render(themes);
+          results.style.display = "block";
+        });
+
+        input.addEventListener("input", (e) => {
+          const value = e.target.value.trim().toLowerCase();
+          const filtered = themes.filter(theme =>
+            theme.title.toLowerCase().includes(value)
+          );
+          render(filtered);
+          results.style.display = "block";
+        });
+
+        document.addEventListener("click", (e) => {
+          if (!input.contains(e.target) && !results.contains(e.target)) {
+            results.style.display = "none";
+          }
+        });
+      } catch (err) {
+        console.error("Theme search failed", err);
+      }
+    }
+
+    setupThemePageSearch();
+  </script>
+</body>
+</html>

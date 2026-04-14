@@ -17,6 +17,149 @@ const contentMap = {
     seoDetail: "A strong Harry Potter quiz can pull from Hogwarts houses, Quidditch, classes, professors, Death Eaters, Horcruxes, magical creatures, family names, friendships, duels, and key events across Harry’s years at school. It also benefits from the fact that fans often remember both broad plot points and very specific world-building details, which makes the theme richer than a simple character-and-villain round."
   },
 
+  "death-stranding": {
+  slug: "death-stranding",
+  title: "Death Stranding",
+  category: "Games",
+  image: "",
+  questionFile: "data/stranding.txt",
+  description: "A game trivia theme focused on Death Stranding, covering characters, storylines, mechanics, locations, and the unique systems that define its gameplay experience.",
+  seoIntro: "Death Stranding trivia works because the game blends narrative, world-building, and unusual gameplay systems, creating a mix of memorable characters, terminology, and story-driven moments.",
+  seoDetail: "A strong Death Stranding quiz can include Sam Porter Bridges, BB units, the Chiral Network, BTs, DOOMS, key story events, delivery mechanics, structures, and the game’s world design. The theme works well because it mixes story interpretation, gameplay systems, and unique in-game terminology that stands out compared to most other games."
+},
+
+"final-fantasy": {
+  slug: "final-fantasy",
+  title: "Final Fantasy",
+  category: "Games",
+  image: "",
+  questionFile: "data/ff.txt",
+  description: "A game trivia theme covering the Final Fantasy series, including characters, worlds, mechanics, summons, and major story elements across multiple entries.",
+  seoIntro: "Final Fantasy trivia works well because the series spans multiple games, each with its own world, characters, and systems, while still sharing recognizable elements like summons, classes, and themes.",
+  seoDetail: "A strong Final Fantasy quiz can include characters like Cloud, Sephiroth, and Tidus, summons such as Ifrit and Shiva, gameplay systems, iconic locations, story arcs, and recurring elements across the franchise. The variety across titles allows for both broad and specific questions, making it a strong long-form trivia theme."
+},
+
+"sekiro-shadows-die-twice": {
+  slug: "sekiro-shadows-die-twice",
+  title: "Sekiro: Shadows Die Twice",
+  category: "Games",
+  image: "",
+  questionFile: "data/sekiro.txt",
+  description: "A game trivia theme focused on Sekiro: Shadows Die Twice, covering bosses, combat systems, story elements, locations, and mechanics tied to its unique gameplay style.",
+  seoIntro: "Sekiro trivia stands out because the game focuses on precise combat, boss encounters, and a more direct narrative compared to other FromSoftware titles.",
+  seoDetail: "A strong Sekiro quiz can include bosses like Genichiro and Isshin, mechanics such as posture and deflection, prosthetic tools, skill trees, locations, and story elements tied to Wolf and Kuro. The theme works because it blends gameplay mastery with specific encounters and memorable progression moments."
+},
+
+"bleach": {
+  slug: "bleach",
+  title: "Bleach",
+  category: "TV/Series",
+  image: "",
+  questionFile: "data/bleach.txt",
+  description: "A TV trivia theme covering Bleach, including characters, arcs, abilities, factions, and major events across the series.",
+  seoIntro: "Bleach trivia works well because the series has a large cast, structured arcs, and clearly defined abilities and factions that fans remember.",
+  seoDetail: "A strong Bleach quiz can include Ichigo Kurosaki, Soul Reapers, Hollows, Zanpakuto abilities, Bankai forms, major arcs like Soul Society and Arrancar, and key battles. The variety of characters, powers, and storylines makes it suitable for both general and detailed trivia questions."
+},
+
+"death-note": {
+  slug: "death-note",
+  title: "Death Note",
+  category: "TV/Series",
+  image: "",
+  questionFile: "data/note.txt",
+  description: "A TV trivia theme focused on Death Note, covering characters, plot developments, rules of the Death Note, and key psychological moments.",
+  seoIntro: "Death Note trivia works because the series is built around rules, strategy, and character-driven conflict, making specific details easy to turn into strong questions.",
+  seoDetail: "A strong Death Note quiz can include Light Yagami, L, Ryuk, the rules of the Death Note, investigation strategies, major plot twists, and key confrontations. The theme works because it combines clear rules with complex character decisions and memorable turning points."
+},
+
+"shameless": {
+  slug: "shameless",
+  title: "Shameless",
+  category: "TV/Series",
+  image: "",
+  questionFile: "data/shameless.txt",
+  description: "A TV trivia theme covering Shameless, including characters, relationships, storylines, and major events across the series.",
+  seoIntro: "Shameless trivia works well because of its long-running storylines, large cast, and character-driven plots that create many memorable moments.",
+  seoDetail: "A strong Shameless quiz can include the Gallagher family, key relationships, major life events, recurring storylines, and character arcs. The theme works because it combines ongoing narrative development with distinct personalities and situations."
+},
+
+"downton-abbey": {
+  slug: "downton-abbey",
+  title: "Downton Abbey",
+  category: "TV/Series",
+  image: "",
+  questionFile: "data/abbey.txt",
+  description: "A TV trivia theme focused on Downton Abbey, covering characters, historical context, relationships, and major storylines.",
+  seoIntro: "Downton Abbey trivia works because it combines character-driven drama with historical events and social structure.",
+  seoDetail: "A strong Downton Abbey quiz can include the Crawley family, staff members, relationships, historical events, and key plot developments. The theme works because it blends personal drama with a clearly defined setting and time period."
+},
+
+"sports": {
+  slug: "sports",
+  title: "Sports",
+  category: "General",
+  image: "",
+  questionFile: "data/sport.txt",
+  description: "A general trivia theme covering sports, including teams, players, rules, records, and major events across different sports.",
+  seoIntro: "Sports trivia works well because it spans multiple disciplines, each with recognizable figures, events, and records.",
+  seoDetail: "A strong sports quiz can include football, basketball, tennis, cricket, and more, covering players, championships, rules, and records. The variety allows for both broad and sport-specific questions."
+},
+
+"tv-series": {
+  slug: "tv-series",
+  title: "TV Series",
+  category: "General",
+  image: "",
+  questionFile: "data/tv.txt",
+  description: "A general trivia theme covering TV series, including characters, plots, and major moments from a wide range of shows.",
+  seoIntro: "TV series trivia works because of the wide range of genres, characters, and storylines across different shows.",
+  seoDetail: "A strong TV series quiz can include popular shows, character names, plot details, and iconic moments. The variety allows for both casual and more detailed trivia questions."
+},
+
+"anime": {
+  slug: "anime",
+  title: "Anime",
+  category: "General",
+  image: "",
+  questionFile: "data/anime.txt",
+  description: "A general trivia theme focused on anime, covering characters, series, powers, and major story elements.",
+  seoIntro: "Anime trivia works because of the large number of series, distinct characters, and recognizable story structures.",
+  seoDetail: "A strong anime quiz can include popular series, character abilities, story arcs, and key events. The variety across shows makes it suitable for a wide range of questions."
+},
+
+"video-games": {
+  slug: "video-games",
+  title: "Video Games",
+  category: "General",
+  image: "",
+  questionFile: "data/games.txt",
+  description: "A general trivia theme covering video games, including characters, mechanics, franchises, and industry knowledge.",
+  seoIntro: "Video game trivia works because it spans multiple genres, platforms, and franchises with recognizable elements.",
+  seoDetail: "A strong video game quiz can include characters, gameplay mechanics, franchises, and industry facts. The theme works because it mixes general gaming knowledge with specific game details."
+},
+
+"cartoons": {
+  slug: "cartoons",
+  title: "Cartoons",
+  category: "General",
+  image: "",
+  questionFile: "data/cartoons.txt",
+  description: "A general trivia theme covering cartoons, including characters, shows, and memorable moments.",
+  seoIntro: "Cartoon trivia works because of its wide appeal and recognizable characters across different eras.",
+  seoDetail: "A strong cartoons quiz can include classic and modern shows, characters, and storylines. The variety makes it accessible while still allowing for deeper questions."
+},
+
+"kids": {
+  slug: "kids",
+  title: "Kids",
+  category: "General",
+  image: "",
+  questionFile: "data/kids.txt",
+  description: "A general trivia theme designed for kids, covering simple and familiar topics across different categories.",
+  seoIntro: "Kids trivia works best with simple, recognizable topics that are easy to understand and recall.",
+  seoDetail: "A strong kids quiz can include basic knowledge from cartoons, animals, simple geography, and everyday topics. The focus is on clarity and accessibility rather than difficulty."
+},
+
   "quran": {
     description: "A scripture trivia theme focused on the Quran, including its themes, figures, stories, structure, and widely known religious knowledge. It is designed to stay broad, respectful, and accessible rather than overly technical.",
     seoIntro: "Quran trivia works best when it balances familiarity with respectful breadth, drawing from prophets, major themes, surahs, moral teachings, and core concepts that many players recognise even without specialist study. That helps the round feel meaningful instead of narrow.",

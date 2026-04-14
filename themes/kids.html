@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kids Trivia Questions | Trivia Gauntlet</title>
+<meta name="description" content="Play 103+ Kids trivia questions on Trivia Gauntlet. Test your knowledge in Marathon, Challenge, Survival, and more." />
+  <link rel="canonical" href="https://triviagauntlet.app/themes/kids.html" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2544021252380572"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E6BY9F2ZDT');
+  </script>
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="apple-touch-icon" href="/assets/icon-192.png" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+  <main class="container narrow">
+    <div class="theme-top-links">
+      <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+      <a href="../index.html" class="back-link">⌂ Home</a>
+    </div>
+
+
+
+    <div class="theme-search-wrap">
+      <div class="search-wrap">
+        <input id="themeSearchInput" class="theme-search-input" type="text" placeholder="Search themes..." autocomplete="off" />
+        <div id="themeSearchResults" class="search-results"></div>
+      </div>
+    </div>
+
+    <section class="panel">
+      <h1>Kids Trivia Questions</h1>
+      <p class="theme-question-count">103 questions across multiple rounds</p>
+<p>A general trivia theme designed for younger audiences, covering simple and familiar topics such as animals, colours, school basics, and cartoons.</p>
+<p>Kids trivia works because it focuses on simple, familiar knowledge that is easy to recognise, understand, and recall quickly.</p>
+<p>A strong kids quiz can include animals, colours, numbers, shapes, basic science, simple geography, fairy tales, and popular cartoons. The category works because it prioritises clarity, repetition, and recognition, making it accessible while still allowing variety across everyday knowledge areas.</p>
+<p>Marathon Mode is best for a longer run with bigger rounds, while Challenge Mode works better for shorter 10-question sessions.</p>
+      
+      <div class="grid">
+        <a class="card" href="../play.html?theme=kids">
+          <h3>Marathon Mode</h3>
+          <p>30-question rounds</p>
+        </a>
+
+        <a class="card" href="../challenge.html?theme=kids&round=1">
+          <h3>Challenge Mode</h3>
+          <p>10-question quick rounds</p>
+        </a>
+
+        <a class="card" href="../survival.html?theme=kids">
+          <h3>Survival Mode</h3>
+          <p>One mistake and the run ends</p>
+        </a>
+
+        
+
+        <a class="card" href="../remove-ads.html?theme=kids&mode=normal">
+          <h3>Ad-Free + Extras</h3>
+          <p>Printables, answer sheets, and bonus files</p>
+        </a>
+
+        <a class="card" href="../wordle.html?theme=kids&page=1">
+          <h3>Wordle</h3>
+          <p>Guess themed words</p>
+        </a>
+      </div>
+      
+        <div class="theme-sample-questions">
+          <h2>Sample Questions</h2>
+          <ul>
+            <li>Which meal do people usually eat first in the day?</li><li>Which animal is famous for black and white fur and eating bamboo?</li><li>Which shape is perfectly round?</li><li>Which animal is known for barking?</li><li>What color are bananas when they are ripe?</li><li>Which star gives us light during the day?</li><li>What do you call frozen water?</li><li>Which animal can give us wool?</li><li>What do you call the red light at a traffic signal?</li><li>Which animal is known as the fastest land animal?</li>
+          </ul>
+        </div>
+      
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a id="removeAdsLink" class="footer-highlight" href="../remove-ads.html?theme=kids&mode=normal">Ad-Free + Extras</a>
+        <a href="../about.html">About</a>
+        <a class="footer-highlight" href="../how-it-works.html">How It Works</a>
+        <a class="footer-highlight" href="../contact.html">Contact</a>
+        <a href="../privacy.html">Privacy Policy</a>
+        <a href="../terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    async function setupThemePageSearch() {
+      const input = document.getElementById("themeSearchInput");
+      const results = document.getElementById("themeSearchResults");
+      if (!input || !results) return;
+
+      try {
+        const res = await fetch("../data/themes.json");
+        const themes = await res.json();
+
+        function render(items) {
+          if (!items.length) {
+            results.innerHTML = '<div class="search-item">No results found</div>';
+            return;
+          }
+
+          results.innerHTML = items.map(theme => `
+            <a class="search-item" href="../themes/${theme.slug}.html">${theme.title}</a>
+          `).join("");
+        }
+
+        input.addEventListener("focus", () => {
+          render(themes);
+          results.style.display = "block";
+        });
+
+        input.addEventListener("input", (e) => {
+          const value = e.target.value.trim().toLowerCase();
+          const filtered = themes.filter(theme =>
+            theme.title.toLowerCase().includes(value)
+          );
+          render(filtered);
+          results.style.display = "block";
+        });
+
+        document.addEventListener("click", (e) => {
+          if (!input.contains(e.target) && !results.contains(e.target)) {
+            results.style.display = "none";
+          }
+        });
+      } catch (err) {
+        console.error("Theme search failed", err);
+      }
+    }
+
+    setupThemePageSearch();
+  </script>
+</body>
+</html>
