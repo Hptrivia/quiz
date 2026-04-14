@@ -1,0 +1,703 @@
+[
+  {
+    "id": "da-easy-001",
+    "question": "What is the name of the estate that serves as the main setting of the show?",
+    "options": ["Highclere Castle", "Downton Abbey", "Pemberley", "Grantham House"],
+    "answer": "Downton Abbey",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-easy-002",
+    "question": "Who is the stern but loyal butler of Downton Abbey?",
+    "options": ["Thomas Barrow", "Mr. Bates", "Mr. Carson", "Mr. Molesley"],
+    "answer": "Mr. Carson",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-easy-003",
+    "question": "Which historic event's news opens the first episode of the series?",
+    "options": ["World War I", "The Sinking of the Titanic", "The Death of King George V", "The Great Depression"],
+    "answer": "The Sinking of the Titanic",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-easy-004",
+    "question": "What is the name of the eldest Crawley daughter?",
+    "options": ["Edith", "Sybil", "Mary", "Rose"],
+    "answer": "Mary",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-easy-005",
+    "question": "Who plays the Dowager Countess, Violet Crawley?",
+    "options": ["Judi Dench", "Maggie Smith", "Helen Mirren", "Imelda Staunton"],
+    "answer": "Maggie Smith",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-easy-006",
+    "question": "What is the job title of Mrs. Patmore?",
+    "options": ["Housekeeper", "Lady's Maid", "Head Cook", "Kitchen Maid"],
+    "answer": "Head Cook",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-easy-007",
+    "question": "Which Crawley sister marries the family chauffeur, Tom Branson?",
+    "options": ["Mary", "Edith", "Sybil", "Rosamund"],
+    "answer": "Sybil",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-easy-010",
+    "question": "What is the name of Lord Grantham's loyal yellow Labrador?",
+    "options": ["Pharaoh", "Isis", "Tea", "Bates"],
+    "answer": "Isis",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-easy-011",
+    "question": "Which character arrives in Season 1 as the new valet with a limp?",
+    "options": ["Thomas Barrow", "John Bates", "William Mason", "Alfred Nugent"],
+    "answer": "John Bates",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-easy-012",
+    "question": "Where is Cora Crawley originally from?",
+    "options": ["London", "Paris", "America", "Ireland"],
+    "answer": "America",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-easy-013",
+    "question": "What is the name of the heir who unexpectedly dies on the Titanic?",
+    "options": ["Matthew Crawley", "Patrick Crawley", "James Crawley", "Robert Crawley"],
+    "answer": "Patrick Crawley",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-easy-015",
+    "question": "What is the name of the local doctor often seen at the Abbey?",
+    "options": ["Dr. Clarkson", "Dr. Gregson", "Dr. Travis", "Dr. Bryant"],
+    "answer": "Dr. Clarkson",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-med-101",
+    "question": "Lord Merton was initially diagnosed with which condition?",
+    "options": ["Tuberculosis", "Pernicious anemia", "Leukemia", "Scarlet fever"],
+    "answer": "Pernicious anemia",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-med-102",
+    "question": "Which veteran actor portrayed Stowell, Lord Sinderby's highly traditional and rather rude butler?",
+    "options": ["Alun Armstrong", "James Faulkner", "Richard E. Grant", "Paul Giamatti"],
+    "answer": "Alun Armstrong",
+    "difficulty": "medium"
+  },
+  {
+    "id": "da-easy-124",
+    "question": "What is the official title of the first feature-length film released following the series finale?",
+    "options": ["Downton Abbey", "Downton Abbey: The Movie", "A New Era", "The Royal Visit"],
+    "answer": "Downton Abbey",
+    "difficulty": "easy"
+  },
+{
+  "id": "da-easy-135",
+  "question": "How many feature-length Downton Abbey films have been produced in total following the conclusion of the television series?",
+  "options": ["1", "2", "3", "4"],
+  "answer": "3",
+  "difficulty": "hard"
+},
+  {
+    "id": "da-easy-133",
+    "question": "What is the name of the second Downton Abbey movie, released in 2022?",
+    "options": ["A New Era", "The Grand Finale", "The Royal Visit", "Return to Downton"],
+    "answer": "A New Era",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-med-134",
+    "question": "Which film serves as the trilogy's conclusion, set in the 1930s?",
+    "options": ["The Grand Finale", "A New Era", "The Last Chapter", "The End of an Era"],
+    "answer": "The Grand Finale",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-med-103",
+    "question": "Which American Oscar-nominated actor played Cora’s playboy brother, Harold Levinson?",
+    "options": ["Paul Giamatti", "George Clooney", "John Lithgow", "Stanley Tucci"],
+    "answer": "Paul Giamatti",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-med-105",
+    "question": "In what year did the first 'Downton Abbey' theatrical film make its debut?",
+    "options": ["2017", "2018", "2019", "2020"],
+    "answer": "2019",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-med-106",
+    "question": "After the upheaval of the Russian Revolution, where did Princess Irina and her husband eventually settle?",
+    "options": ["Paris", "London", "New York", "Berlin"],
+    "answer": "Paris",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-med-107",
+    "question": "In which city did Lady Mary and Lord Gillingham stay during their scandalous 'sketching trip' weekend away?",
+    "options": ["London", "Liverpool", "York", "Liverpool"],
+    "answer": "Liverpool",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-easy-108",
+    "question": "What was the name of Matthew Crawley's fiancée throughout Season 2?",
+    "options": ["Lavinia", "Mabel", "Lucy", "Jane"],
+    "answer": "Lavinia",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-med-109",
+    "question": "At which establishment were Edith and Bertie Pelham reunited after Mary secretly arranged for them to dine together?",
+    "options": ["The Ritz", "Rules Restaurant", "The Savoy", "Grantham House"],
+    "answer": "The Ritz",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-med-110",
+    "question": "What was the cause of Lavinia Swire’s sudden death in Season 2?",
+    "options": ["A broken heart", "Childbirth complications", "The Spanish Flu", "A train accident"],
+    "answer": "The Spanish Flu",
+    "difficulty": "medium"
+  },
+  {
+    "id": "da-med-111",
+    "question": "In Season 5, how does Molesley attempt to impress Phyllis Baxter regarding his physical appearance?",
+    "options": ["By wearing a corset", "By dyeing his hair", "By getting new shoes", "By growing a mustache"],
+    "answer": "By dyeing his hair",
+    "difficulty": "medium"
+  },
+  {
+    "id": "da-easy-112",
+    "question": "Who are the three grandchildren of Robert and Cora Crawley by the end of the TV series?",
+    "options": ["George, Sybbie, and Marigold", "George, Mary, and Edith", "Sybbie, Marigold, and Richard", "George, Sybbie, and Victoria"],
+    "answer": "George, Sybbie, and Marigold",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-med-115",
+    "question": "Which famous actress appeared as Cora’s mother, Martha Levinson?",
+    "options": ["Shirley MacLaine", "Meryl Streep", "Diane Keaton", "Jane Fonda"],
+    "answer": "Shirley MacLaine",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-med-117",
+    "question": "Which actress portrayed the resilient and ambitious Lady Mary Crawley?",
+    "options": ["Michelle Dockery", "Laura Carmichael", "Jessica Brown Findlay", "Lily James"],
+    "answer": "Michelle Dockery",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-med-118",
+    "question": "Which actor portrayed the role of the villainous valet, Mr. Green, in a guest appearance?",
+    "options": ["Nigel Harman", "Gary Carr", "Tom Cullen", "Julian Ovenden"],
+    "answer": "Nigel Harman",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-med-119",
+    "question": "Which actress played Lady Rose MacClare?",
+    "options": ["Lily James", "Daisy Ridley", "Florence Pugh", "Emma Watson"],
+    "answer": "Lily James",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-med-120",
+    "question": "Which actor played the loyal valet John Bates throughout the entire series?",
+    "options": ["Brendan Coyle", "Kevin Doyle", "Jim Carter", "Siobhan Finneran"],
+    "answer": "Brendan Coyle",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-easy-017",
+    "question": "What is the name of Matthew Crawley's mother?",
+    "options": ["Violet", "Cora", "Isobel", "Rosamund"],
+    "answer": "Isobel",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-easy-018",
+    "question": "In what county is the fictional Downton Abbey located?",
+    "options": ["Hampshire", "Yorkshire", "Kent", "Sussex"],
+    "answer": "Yorkshire",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-easy-019",
+    "question": "Which war takes place during Season 2 of the series?",
+    "options": ["Boer War", "World War I", "World War II", "Crimean War"],
+    "answer": "World War I",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-easy-020",
+    "question": "What was Tom Branson's original job at Downton?",
+    "options": ["Footman", "Valet", "Chauffeur", "Gardener"],
+    "answer": "Chauffeur",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-easy-021",
+    "question": "Who is Mary's primary lady's maid and close confidante?",
+    "options": ["O'Brien", "Baxter", "Anna", "Gwen"],
+    "answer": "Anna",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-easy-022",
+    "question": "What was Matthew Crawley's profession before he moved to Downton?",
+    "options": ["Doctor", "Lawyer", "Soldier", "Banker"],
+    "answer": "Lawyer",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-easy-023",
+    "question": "What is the name of the house where the Dowager Countess lives?",
+    "options": ["The Dower House", "The Lodge", "Grantham House", "Crawley House"],
+    "answer": "The Dower House",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-easy-026",
+    "question": "What title does Robert Crawley hold?",
+    "options": ["Duke of York", "Earl of Grantham", "Baron of Ripon", "Viscount Downton"],
+    "answer": "Earl of Grantham",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-easy-029",
+    "question": "How many daughters do Robert and Cora Crawley have?",
+    "options": ["2", "3", "4", "5"],
+    "answer": "3",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-easy-030",
+    "question": "What is the name of the village nearest to the estate?",
+    "options": ["Downton", "Highclere", "Ripon", "Thirsk"],
+    "answer": "Downton",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-easy-034",
+    "question": "What is the name of Lady Mary's son?",
+    "options": ["George", "Sybbie", "Marigold", "Peter"],
+    "answer": "George",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-easy-035",
+    "question": "What does the Dowager Countess famously ask about a modern convenience?",
+    "options": ["What is a telephone?", "What is a weekend?", "What is a car?", "What is a radio?"],
+    "answer": "What is a weekend?",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-easy-040",
+    "question": "Who is Robert's sister who lives in London?",
+    "options": ["Violet", "Rosamund", "Cora", "Susan"],
+    "answer": "Rosamund",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-easy-041",
+    "question": "What is the name of the cousin who comes to live at Downton after Sybil's death?",
+    "options": ["Lady Rose", "Lady Susan", "Lady Mary", "Lady Edith"],
+    "answer": "Lady Rose",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-easy-044",
+    "question": "In what country did Robert Crawley serve during the Boer War?",
+    "options": ["India", "South Africa", "Egypt", "France"],
+    "answer": "South Africa",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-hard-151",
+    "question": "How many seasons does the show have?",
+    "options": ["4", "5", "6", "8"],
+    "answer": "6",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-hard-152",
+    "question": "Which of these is NOT one of the daughters of Robert and Cora Crawley?",
+    "options": ["Lady Mary", "Lady Rose", "Lady Edith", "Lady Sybil"],
+    "answer": "Lady Rose",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-hard-158",
+    "question": "Which television station was the original home of Downton Abbey in the United Kingdom?",
+    "options": ["BBC One", "ITV", "Channel 4", "Sky Atlantic"],
+    "answer": "ITV",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-hard-159",
+    "question": "In the United States, Downton Abbey aired on which public broadcasting station?",
+    "options": ["NBC", "ABC", "PBS", "CBS"],
+    "answer": "PBS",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-hard-155",
+    "question": "Which actor portrayed Matthew Crawley?",
+    "options": ["Hugh Bonneville", "Dan Stevens", "Allen Leech", "Brendan Coyle"],
+    "answer": "Dan Stevens",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-hard-156",
+    "question": "What year did the show premiere in the United Kingdom?",
+    "options": ["2008", "2010", "2011", "2012"],
+    "answer": "2010",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-hard-157",
+    "question": "Who is the creator and primary writer of Downton Abbey?",
+    "options": ["Julian Fellowes", "Gareth Neame", "Alastair Bruce", "Michael Engler"],
+    "answer": "Julian Fellowes",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-easy-047",
+    "question": "What happens to main house pf Downtown Abbey when World War I begins?",
+    "options": ["It is closed", "It becomes a convalescent home", "It is moved to London", "It is taken over by the army"],
+    "answer": "It becomes a convalescent home",
+    "difficulty": "easy"
+  },
+  {
+    "id": "da-medium-052",
+    "question": "In season 3, Lady Edith Crawley accepts a job as a what?",
+    "options": ["Dress designer", "Newspaper columnist", "Nurse", "School teacher"],
+    "answer": "Newspaper columnist",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-medium-053",
+    "question": "What is the name of the Turkish diplomat who died in Lady Mary's bed?",
+    "options": ["Hasan Demir", "Kemal Pamuk", "Hakan Sukur", "Evelyn Napier"],
+    "answer": "Kemal Pamuk",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-medium-054",
+    "question": "John Bates is accused of murdering his first wife, Vera, using what substance?",
+    "options": ["Cyanide", "Rat poison", "Arsenic", "Strychnine"],
+    "answer": "Arsenic",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-medium-059",
+    "question": "What did Daisy put into Mrs. Bird's soup to ruin it?",
+    "options": ["Soap", "Salt", "Soot", "Vinegar"],
+    "answer": "Soap",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-medium-063",
+    "question": "What is the name of the publishing company Edith inherits from Michael Gregson?",
+    "options": ["Brancaster", "The Sketch", "The Travesty", "The Downton"],
+    "answer": "The Sketch",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-medium-064",
+    "question": "Why did Robert finally agree to install a radio at Downton?",
+    "options": ["To hear the news of the war", "To listen to the King's speech", "To please Rose", "To keep up with the neighbors"],
+    "answer": "To listen to the King's speech",
+    "difficulty": "medium"
+  },
+  {
+    "id": "da-medium-066",
+    "question": "What was the occupation of Lady Mary's second husband, Henry Talbot?",
+    "options": ["Lawyer", "Race car driver", "Member of Parliament", "Soldier"],
+    "answer": "Race car driver",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-medium-067",
+    "question": "In what year did the Dowager travel to Russia for a royal wedding?",
+    "options": ["1874", "1880", "1892", "1901"],
+    "answer": "1874",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-medium-075",
+    "question": "Who was the primary historical advisor for the series?",
+    "options": ["Julian Fellowes", "Alastair Bruce", "Donal Woods", "Gareth Neame"],
+    "answer": "Alastair Bruce",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-medium-078",
+    "question": "What is Lady Rosamund’s last name?",
+    "options": ["Painswick", "Grantham", "Crawley", "Levinson"],
+    "answer": "Painswick",
+    "difficulty": "medium"
+  },
+  {
+    "id": "da-medium-079",
+    "question": "Who was the jazz singer Lady Rose fell in love with?",
+    "options": ["Jack Ross", "Jimmy Kent", "Tony Gillingham", "Henry Talbot"],
+    "answer": "Jack Ross",
+    "difficulty": "medium"
+  },
+  {
+    "id": "da-medium-080",
+    "question": "What did Alfred fail to identify during Carson's cutlery lesson?",
+    "options": ["Tea spoon", "Bouillon spoon", "Jam spoon", "Egg spoon"],
+    "answer": "Bouillon spoon",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-medium-081",
+    "question": "What was the real name of the girl Edith gave up for adoption?",
+    "options": ["Sybbie", "Marigold", "Victoria", "Rose"],
+    "answer": "Marigold",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-medium-082",
+    "question": "In which city does Michael Gregson disappear?",
+    "options": ["Paris", "Munich", "Berlin", "London"],
+    "answer": "Munich",
+    "difficulty": "medium"
+  },
+  {
+    "id": "da-medium-084",
+    "question": "What was the name of the schoolteacher who had a crush on Tom Branson?",
+    "options": ["Sarah Bunting", "Gwen Harding", "Edna Braithwaite", "Phyllis Baxter"],
+    "answer": "Sarah Bunting",
+    "difficulty": "medium"
+  },
+  {
+    "id": "da-medium-087",
+    "question": "What was the cause of Lady Sybil's death?",
+    "options": ["Spanish Flu", "Eclampsia", "Pneumonia", "Sepsis"],
+    "answer": "Eclampsia",
+    "difficulty": "medium"
+  },
+  {
+    "id": "da-medium-088",
+    "question": "Which character is revealed to be a secret advice columnist for a magazine?",
+    "options": ["Septimus Spratt", "Lady Edith", "Mr. Molesley", "Mrs. Patmore"],
+    "answer": "Septimus Spratt",
+    "difficulty": "medium"
+  },
+  {
+    "id": "da-med-083",
+    "question": "Which family members were lost in the sinking of the Titanic?",
+    "options": ["James and Patrick", "Robert and Cora", "Matthew and Isobel", "Thomas and Sybil"],
+    "answer": "James and Patrick",
+    "difficulty": "medium"
+  },
+  {
+    "id": "da-med-071",
+    "question": "What was the name of Lord Grantham's third dog?",
+    "options": ["Teia", "Isis", "Pharaoh", "Tiaa"],
+    "answer": "Tiaa",
+    "difficulty": "medium"
+  },
+  {
+    "id": "da-med-090",
+    "question": "Who was the 'Prince of Wales' in the Downton Abbey series timeline?",
+    "options": ["Edward VIII", "George VI", "George V", "Prince Albert"],
+    "answer": "Edward VIII",
+    "difficulty": "medium"
+  },
+  {
+    "id": "da-med-094",
+    "question": "In which season did the family travel to Scotland to visit Duneagle Castle?",
+    "options": ["Season 2", "Season 3", "Season 4", "Season 5"],
+    "answer": "Season 3",
+    "difficulty": "medium"
+  },
+  {
+    "id": "da-medium-089",
+    "question": "What was the name of the Russian Prince who was once in love with Violet?",
+    "options": ["Igor Kuragin", "Nicholas Romanov", "Dmitri Pavlovich", "Alexander Volkonsky"],
+    "answer": "Igor Kuragin",
+    "difficulty": "medium"
+  },
+  {
+    "id": "da-medium-090",
+    "question": "Who was the valet that replaced Thomas Barrow when he went to war?",
+    "options": ["Henry Lang", "John Bates", "Jimmy Kent", "Alfred Nugent"],
+    "answer": "Henry Lang",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-medium-095",
+    "question": "What was the title of the movie being filmed at Downton in 'A New Era'?",
+    "options": ["The Gambler", "The Silent Parade", "The House of Cards", "The Secret of the Abbey"],
+    "answer": "The Gambler",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-medium-098",
+    "question": "In what season does the 'Spanish Flu' outbreak occur?",
+    "options": ["Season 1", "Season 2", "Season 3", "Season 4"],
+    "answer": "Season 2",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-medium-099",
+    "question": "What was the name of the dog Lord Grantham had at the very beginning of the series?",
+    "options": ["Pharaoh", "Isis", "Bess", "Tiaa"],
+    "answer": "Pharaoh",
+    "difficulty": "medium"
+  },
+  {
+    "id": "da-medium-100",
+    "question": "Which daughter was the first to give birth to a grandchild?",
+    "options": ["Mary", "Edith", "Sybil", "Rose"],
+    "answer": "Sybil",
+    "difficulty": "medium"
+  },
+  {
+    "id": "da-med-055",
+    "question": "What is the name of the family estate of Bertie Pelham, Edith's husband?",
+    "options": ["Brancaster Castle", "Highclere", "Grantham House", "Harewood"],
+    "answer": "Brancaster Castle",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-hard-101",
+    "question": "Which real-life historical figure and opera singer performed at Downton in Season 4?",
+    "options": ["Dame Nellie Melba", "Maria Callas", "Jenny Lind", "Adelina Patti"],
+    "answer": "Dame Nellie Melba",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-med-064",
+    "question": "Who was Lady Rosamund's husband?",
+    "options": ["Merton", "Marmaduke", "Gillingham", "Bullock"],
+    "answer": "Marmaduke",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-hard-104",
+    "question": "What was the name of the song and dance act Mr. Carson performed in before becoming a butler?",
+    "options": ["The Singing Servants", "The Two Charlies", "Cheerful Charlie’s", "The Music Hall Men"],
+    "answer": "Cheerful Charlie’s",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-hard-105",
+    "question": "What was the specific name of the horse Sybil and Gwen took out for a drive?",
+    "options": ["Dragon", "Phantom", "Bess", "Sultan"],
+    "answer": "Dragon",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-hard-106",
+    "question": "What secret code word did Edith and Mr. Edmund use when meeting Miss Cassandra Jones?",
+    "options": ["Avocados", "Oranges", "Bananas", "Apple"],
+    "answer": "Bananas",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-hard-107",
+    "question": "What is the name of Lady Rosamund’s butler?",
+    "options": ["Spratt", "Mead", "Denker", "Painswick"],
+    "answer": "Mead",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-hard-111",
+    "question": "Before joining the household, what city did Matthew Crawley live in?",
+    "options": ["Manchester", "London", "Liverpool", "York"],
+    "answer": "Manchester",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-hard-112",
+    "question": "What misplaced modern object appeared in a Season 5 promotional photo, causing a viral error?",
+    "options": ["A Starbucks cup", "A plastic water bottle", "A digital watch", "A cell phone"],
+    "answer": "A plastic water bottle",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-hard-113",
+    "question": "What was the specific cause of death for Kemal Pamuk?",
+    "options": ["Heart attack", "Poisoning", "Suffocation", "Aneurysm"],
+    "answer": "Heart attack",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-hard-122",
+    "question": "What was the name of the estate in Scotland where the family visits the MacClares?",
+    "options": ["Duneagle Castle", "Brancaster Castle", "Haxby Park", "Gosford Park"],
+    "answer": "Duneagle Castle",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-hard-129",
+    "question": "How many Golden Labrador Retrievers did Lord Grantham own across the six seasons?",
+    "options": ["1", "2", "3", "4"],
+    "answer": "3",
+    "difficulty": "hard"
+  },
+{ 
+"id": "da-easy-0002",
+"question": "In what year does the series begin?",
+"options": ["1912", "1920", "1901", "1930"],
+"answer": "1912",
+"difficulty": "easy"
+},
+  {
+    "id": "da-hard-132",
+    "question": "What is the name of Lord Grantham’s granddaughter Sybbie’s nickname for him?",
+    "options": ["Pappy", "Donk", "Gramps", "Dabby"],
+    "answer": "Donk",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-hard-140",
+    "question": "In what year did the Spanish Flu outbreak occur at Downton?",
+    "options": ["1914", "1916", "1919", "1920"],
+    "answer": "1919",
+    "difficulty": "hard"
+  },
+  {
+    "id": "da-hard-144",
+    "question": "How many times were Anna and Mr. Bates arrested throughout the series?",
+    "options": ["1", "2", "3", "4"],
+    "answer": "3",
+    "difficulty": "hard"
+  },
+{
+  "id": "da-easy-136",
+  "question": "Which actor plays the role of Tom Branson, the chauffeur who becomes a member of the Crawley family?",
+  "options": ["Dan Stevens", "Allen Leech", "Rob James-Collier", "Matthew Goode"],
+  "answer": "Allen Leech",
+  "difficulty": "hard"
+},
+  {
+    "id": "da-hard-147",
+    "question": "What is the real-world name of the estate used as the filming location for Downton Abbey?",
+    "options": ["Highclere Castle", "Chatsworth House", "Blenheim Palace", "Alnwick Castle"],
+    "answer": "Highclere Castle",
+    "difficulty": "hard"
+  }
+]
+

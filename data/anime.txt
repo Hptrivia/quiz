@@ -1,0 +1,809 @@
+[
+  {
+    "id": 1,
+    "question": "Which anime follows a ninja named Uzumaki?",
+    "options": ["Naruto", "Bleach", "One Piece", "Dragon Ball Z"],
+    "answer": "Naruto",
+    "difficulty": "easy"
+  },
+  {
+    "id": 2,
+    "question": "Which anime features Monkey D. Luffy searching for a great treasure?",
+    "options": ["One Piece", "Fairy Tail", "Bleach", "Hunter x Hunter"],
+    "answer": "One Piece",
+    "difficulty": "easy"
+  },
+  {
+    "id": 3,
+    "question": "Which anime features Goku as its main hero?",
+    "options": ["Dragon Ball Z", "Naruto", "Bleach", "Yu Yu Hakusho"],
+    "answer": "Dragon Ball Z",
+    "difficulty": "easy"
+  },
+  {
+    "id": 4,
+    "question": "Which anime follows a boy named Ichigo Kurosaki?",
+    "options": ["Bleach", "Death Note", "Attack on Titan", "Demon Slayer"],
+    "answer": "Bleach",
+    "difficulty": "easy"
+  },
+  {
+    "id": 5,
+    "question": "Which anime is about giant man-eating Titans?",
+    "options": ["Attack on Titan", "Tokyo Ghoul", "Claymore", "Akame ga Kill!"],
+    "answer": "Attack on Titan",
+    "difficulty": "easy"
+  },
+  {
+    "id": 6,
+    "question": "Which anime follows Tanjiro Kamado fighting demons?",
+    "options": ["Demon Slayer", "Jujutsu Kaisen", "Blue Exorcist", "Bleach"],
+    "answer": "Demon Slayer",
+    "difficulty": "easy"
+  },
+  {
+    "id": 7,
+    "question": "Which anime features a notebook that can kill anyone whose name is written in it?",
+    "options": ["Death Note", "Code Geass", "Psycho-Pass", "Erased"],
+    "answer": "Death Note",
+    "difficulty": "easy"
+  },
+  {
+    "id": 8,
+    "question": "Which anime features a boy named Izuku Midoriya?",
+    "options": ["My Hero Academia", "One Punch Man", "Black Clover", "Mob Psycho 100"],
+    "answer": "My Hero Academia",
+    "difficulty": "easy"
+  },
+  {
+    "id": 9,
+    "question": "Which anime follows Yuji Itadori after he swallows a cursed object?",
+    "options": ["Jujutsu Kaisen", "Tokyo Revengers", "Chainsaw Man", "Parasyte"],
+    "answer": "Jujutsu Kaisen",
+    "difficulty": "easy"
+  },
+  {
+    "id": 10,
+    "question": "Which anime features Ash Ketchum and Pikachu?",
+    "options": ["Pokémon", "Digimon", "Yu-Gi-Oh!", "Beyblade"],
+    "answer": "Pokémon",
+    "difficulty": "easy"
+  },
+  {
+    "id": 11,
+    "question": "Which anime follows Gon Freecss searching for his father?",
+    "options": ["Hunter x Hunter", "One Piece", "Naruto", "Fairy Tail"],
+    "answer": "Hunter x Hunter",
+    "difficulty": "easy"
+  },
+  {
+    "id": 12,
+    "question": "Which anime features a hero named Saitama?",
+    "options": ["One Punch Man", "Mob Psycho 100", "My Hero Academia", "Tiger & Bunny"],
+    "answer": "One Punch Man",
+    "difficulty": "easy"
+  },
+  {
+    "id": 13,
+    "question": "Which anime follows Edward and Alphonse Elric?",
+    "options": ["Fullmetal Alchemist: Brotherhood", "Blue Exorcist", "Fairy Tail", "Soul Eater"],
+    "answer": "Fullmetal Alchemist: Brotherhood",
+    "difficulty": "easy"
+  },
+  {
+    "id": 14,
+    "question": "Which anime stars a loud wizard named Natsu Dragneel?",
+    "options": ["Fairy Tail", "Black Clover", "Magi", "Bleach"],
+    "answer": "Fairy Tail",
+    "difficulty": "easy"
+  },
+  {
+    "id": 15,
+    "question": "Which anime features Eren Yeager?",
+    "options": ["Attack on Titan", "Demon Slayer", "Vinland Saga", "Blue Lock"],
+    "answer": "Attack on Titan",
+    "difficulty": "easy"
+  },
+  {
+    "id": 16,
+    "question": "Which anime follows a soccer project designed to create Japan's best striker?",
+    "options": ["Blue Lock", "Haikyu!!", "Kuroko's Basketball", "Captain Tsubasa"],
+    "answer": "Blue Lock",
+    "difficulty": "easy"
+  },
+  {
+    "id": 17,
+    "question": "Which anime follows volleyball player Shoyo Hinata?",
+    "options": ["Haikyu!!", "Blue Lock", "Slam Dunk", "Free!"],
+    "answer": "Haikyu!!",
+    "difficulty": "easy"
+  },
+  {
+    "id": 18,
+    "question": "Which anime follows high schooler Light Yagami?",
+    "options": ["Death Note", "Code Geass", "Steins;Gate", "Erased"],
+    "answer": "Death Note",
+    "difficulty": "easy"
+  },
+  {
+    "id": 19,
+    "question": "Which anime is known for the phrase 'I am going to be King of the Pirates'?",
+    "options": ["One Piece", "Naruto", "Fairy Tail", "Black Clover"],
+    "answer": "One Piece",
+    "difficulty": "easy"
+  },
+  {
+    "id": 22,
+    "question": "Which anime follows a psychic boy nicknamed Mob?",
+    "options": ["Mob Psycho 100", "One Punch Man", "Chainsaw Man", "The Disastrous Life of Saiki K."],
+    "answer": "Mob Psycho 100",
+    "difficulty": "easy"
+  },
+  {
+    "id": 23,
+    "question": "Which anime follows Denji and his powers?",
+    "options": ["Chainsaw Man", "Jujutsu Kaisen", "Tokyo Ghoul", "Parasyte"],
+    "answer": "Chainsaw Man",
+    "difficulty": "easy"
+  },
+  {
+    "id": 25,
+    "question": "Which anime follows a boy named Asta who dreams of becoming Wizard King?",
+    "options": ["Black Clover", "Fairy Tail", "Magi", "Blue Exorcist"],
+    "answer": "Black Clover",
+    "difficulty": "easy"
+  },
+  {
+    "id": 26,
+    "question": "Which anime features a cursed finger belonging to Sukuna?",
+    "options": ["Jujutsu Kaisen", "Bleach", "Naruto", "Blue Exorcist"],
+    "answer": "Jujutsu Kaisen",
+    "difficulty": "easy"
+  },
+  {
+    "id": 27,
+    "question": "Which anime follows a young man named Kaneki after an attack?",
+    "options": ["Tokyo Ghoul", "Parasyte", "Ajin", "Dorohedoro"],
+    "answer": "Tokyo Ghoul",
+    "difficulty": "easy"
+  },
+  {
+    "id": 28,
+    "question": "Which anime stars Lelouch Lamperouge?",
+    "options": ["Code Geass", "Death Note", "Psycho-Pass", "Steins;Gate"],
+    "answer": "Code Geass",
+    "difficulty": "easy"
+  },
+  {
+    "id": 29,
+    "question": "Which anime follows Senku trying to rebuild civilization with science?",
+    "options": ["Dr. Stone", "Steins;Gate", "Erased", "Psycho-Pass"],
+    "answer": "Dr. Stone",
+    "difficulty": "easy"
+  },
+  {
+    "id": 30,
+    "question": "Which anime film features Chihiro entering a spirit world?",
+    "options": ["Spirited Away", "My Neighbor Totoro", "Princess Mononoke", "Howl's Moving Castle"],
+    "answer": "Spirited Away",
+    "difficulty": "easy"
+  },
+  {
+    "id": 33,
+    "question": "Which anime follows Emma, Norman, and Ray escaping an orphanage?",
+    "options": ["The Promised Neverland", "Erased", "Another", "Made in Abyss"],
+    "answer": "The Promised Neverland",
+    "difficulty": "easy"
+  },
+  {
+    "id": 34,
+    "question": "Which anime follows Subaru after being transported to another world?",
+    "options": ["Re:Zero", "Sword Art Online", "Overlord", "No Game No Life"],
+    "answer": "Re:Zero",
+    "difficulty": "easy"
+  },
+  {
+    "id": 35,
+    "question": "Which anime traps players inside a virtual reality game?",
+    "options": ["Sword Art Online", "Log Horizon", "Overlord", "Bofuri"],
+    "answer": "Sword Art Online",
+    "difficulty": "easy"
+  },
+  {
+    "id": 36,
+    "question": "Which anime follows a gamer brother-and-sister duo named Sora and Shiro?",
+    "options": ["No Game No Life", "Sword Art Online", "Log Horizon", "Kakegurui"],
+    "answer": "No Game No Life",
+    "difficulty": "easy"
+  },
+  {
+    "id": 37,
+    "question": "Which anime stars a yellow tentacled teacher named Koro-sensei?",
+    "options": ["Assassination Classroom", "Classroom of the Elite", "My Hero Academia", "Great Teacher Onizuka"],
+    "answer": "Assassination Classroom",
+    "difficulty": "hard"
+  },
+  {
+    "id": 38,
+    "question": "Which anime follows bounty hunters in space including Spike Spiegel?",
+    "options": ["Cowboy Bebop", "Trigun", "Outlaw Star", "Samurai Champloo"],
+    "answer": "Cowboy Bebop",
+    "difficulty": "easy"
+  },
+  {
+    "id": 44,
+    "question": "Which anime features ninja villages like the Hidden Leaf?",
+    "options": ["Naruto", "Bleach", "Dragon Ball Z", "Hunter x Hunter"],
+    "answer": "Naruto",
+    "difficulty": "easy"
+  },
+  {
+    "id": 46,
+    "question": "Which anime follows a boy trying to become a Soul Reaper substitute?",
+    "options": ["Bleach", "Yu Yu Hakusho", "Blue Exorcist", "Tokyo Ghoul"],
+    "answer": "Bleach",
+    "difficulty": "easy"
+  },
+  {
+    "id": 47,
+    "question": "Which anime follows a group of students at U.A. High School?",
+    "options": ["My Hero Academia", "Assassination Classroom", "Classroom of the Elite", "Blue Lock"],
+    "answer": "My Hero Academia",
+    "difficulty": "easy"
+  },
+  {
+    "id": 49,
+    "question": "Which anime follows Thorfinn and Viking battles?",
+    "options": ["Vinland Saga", "Berserk", "Kingdom", "Dororo"],
+    "answer": "Vinland Saga",
+    "difficulty": "easy"
+  },
+  {
+    "id": 50,
+    "question": "Which anime follows a genius surgeon named Kenzo Tenma?",
+    "options": ["Monster", "Erased", "Psycho-Pass", "Death Note"],
+    "answer": "Monster",
+    "difficulty": "hard"
+  },
+
+  {
+    "id": 51,
+    "question": "What is Naruto Uzumaki's dream job?",
+    "options": ["Hokage", "Anbu captain", "Jonin leader", "Kazekage"],
+    "answer": "Hokage",
+    "difficulty": "medium"
+  },
+  {
+    "id": 52,
+    "question": "What is the name of Luffy's pirate crew?",
+    "options": ["Straw Hat Pirates", "Red Hair Pirates", "Heart Pirates", "Blackbeard Pirates"],
+    "answer": "Straw Hat Pirates",
+    "difficulty": "medium"
+  },
+  {
+    "id": 53,
+    "question": "Who is Goku's Saiyan rival in Dragon Ball Z?",
+    "options": ["Vegeta", "Piccolo", "Gohan", "Trunks"],
+    "answer": "Vegeta",
+    "difficulty": "medium"
+  },
+  {
+    "id": 54,
+    "question": "What is Tanjiro Kamado's sister called?",
+    "options": ["Nezuko", "Mitsuri", "Shinobu", "Kanao"],
+    "answer": "Nezuko",
+    "difficulty": "medium"
+  },
+  {
+    "id": 55,
+    "question": "What is the name of the detective who opposes Light in Death Note?",
+    "options": ["L", "Near", "Mello", "Matsuda"],
+    "answer": "L",
+    "difficulty": "medium"
+  },
+  {
+    "id": 56,
+    "question": "What is the name of the titan-shifting protagonist in Attack on Titan?",
+    "options": ["Eren Yeager", "Levi Ackerman", "Armin Arlert", "Jean Kirstein"],
+    "answer": "Eren Yeager",
+    "difficulty": "medium"
+  },
+  {
+    "id": 57,
+    "question": "What is the name of Deku's idol and mentor in My Hero Academia?",
+    "options": ["All Might", "Endeavor", "Aizawa", "Best Jeanist"],
+    "answer": "All Might",
+    "difficulty": "medium"
+  },
+  {
+    "id": 58,
+    "question": "Which cursed spirit's power does Yuji host in Jujutsu Kaisen?",
+    "options": ["Sukuna", "Mahito", "Geto", "Jogo"],
+    "answer": "Sukuna",
+    "difficulty": "medium"
+  },
+  {
+    "id": 59,
+    "question": "What is Ash Ketchum's first Pokémon partner?",
+    "options": ["Pikachu", "Charmander", "Bulbasaur", "Squirtle"],
+    "answer": "Pikachu",
+    "difficulty": "medium"
+  },
+  {
+    "id": 60,
+    "question": "What is the name of Gon's silver-haired best friend in Hunter x Hunter?",
+    "options": ["Killua", "Kurapika", "Leorio", "Hisoka"],
+    "answer": "Killua",
+    "difficulty": "hard"
+  },
+  {
+    "id": 61,
+    "question": "What is Saitama's hero rank at the start of One Punch Man after joining the Hero Association?",
+    "options": ["C-Class", "S-Class", "A-Class", "B-Class"],
+    "answer": "C-Class",
+    "difficulty": "hard"
+  },
+  {
+    "id": 62,
+    "question": "What is Edward Elric's nickname in Fullmetal Alchemist: Brotherhood?",
+    "options": ["Fullmetal", "Flame Alchemist", "Steel Brother", "Golden Alchemist"],
+    "answer": "Fullmetal",
+    "difficulty": "medium"
+  },
+  {
+    "id": 63,
+    "question": "What is Natsu Dragneel's magic type in Fairy Tail?",
+    "options": ["Fire Dragon Slayer Magic", "Ice Magic", "Celestial Magic", "Dark Magic"],
+    "answer": "Fire Dragon Slayer Magic",
+    "difficulty": "hard"
+  },
+  {
+    "id": 64,
+    "question": "What is the name of Eren's childhood friend who is famous for her red scarf?",
+    "options": ["Mikasa", "Historia", "Sasha", "Annie"],
+    "answer": "Mikasa",
+    "difficulty": "hard"
+  },
+  {
+    "id": 65,
+    "question": "What sport is played in Blue Lock?",
+    "options": ["Football", "Basketball", "Volleyball", "Baseball"],
+    "answer": "Football",
+    "difficulty": "medium"
+  },
+  {
+    "id": 66,
+    "question": "What team does Hinata join in Haikyu!!?",
+    "options": ["Karasuno", "Nekoma", "Aoba Johsai", "Shiratorizawa"],
+    "answer": "Karasuno",
+    "difficulty": "hard"
+  },
+  {
+    "id": 67,
+    "question": "What is Light Yagami's killer alias?",
+    "options": ["Kira", "L", "Ryuk", "Zero"],
+    "answer": "Kira",
+    "difficulty": "medium"
+  },
+  {
+    "id": 68,
+    "question": "What is Asta's main anti-magic weapon?",
+    "options": ["A giant sword", "A magic staff", "A spear", "A bow"],
+    "answer": "A giant sword",
+    "difficulty": "medium"
+  },
+  {
+    "id": 69,
+    "question": "What is Denji's chainsaw dog called in Chainsaw Man?",
+    "options": ["Pochita", "Kon", "Nyako", "Makima"],
+    "answer": "Pochita",
+    "difficulty": "hard"
+  },
+  {
+    "id": 70,
+    "question": "What is Ichigo Kurosaki's supernatural role in Bleach?",
+    "options": ["Soul Reaper", "Ninja", "Ghoul", "Alchemist"],
+    "answer": "Soul Reaper",
+    "difficulty": "medium"
+  },
+  {
+    "id": 71,
+    "question": "What is Kaneki transformed into after his operation in Tokyo Ghoul?",
+    "options": ["Half-ghoul", "Titan", "Demon", "Soul Reaper"],
+    "answer": "Half-ghoul",
+    "difficulty": "hard"
+  },
+  {
+    "id": 72,
+    "question": "What is Lelouch's rebellion identity in Code Geass?",
+    "options": ["Zero", "L", "King", "Knightmare"],
+    "answer": "Zero",
+    "difficulty": "hard"
+  },
+  {
+    "id": 73,
+    "question": "What is Senku's main area of genius in Dr. Stone?",
+    "options": ["Science", "Swordsmanship", "Politics", "Cooking"],
+    "answer": "Science",
+    "difficulty": "medium"
+  },
+  {
+    "id": 74,
+    "question": "What is the name of the bathhouse owner in Spirited Away?",
+    "options": ["Yubaba", "Haku", "Zeniba", "Lin"],
+    "answer": "Yubaba",
+    "difficulty": "hard"
+  },
+  {
+    "id": 75,
+    "question": "What creature is Totoro?",
+    "options": ["A forest spirit", "A dragon", "A demon slayer", "A giant cat"],
+    "answer": "A forest spirit",
+    "difficulty": "medium"
+  },
+  {
+    "id": 76,
+    "question": "Who is the older Elric brother in Fullmetal Alchemist: Brotherhood?",
+    "options": ["Edward", "Alphonse", "Roy", "Winry"],
+    "answer": "Edward",
+    "difficulty": "medium"
+  },
+  {
+    "id": 77,
+    "question": "What is the name of the orphanage in The Promised Neverland?",
+    "options": ["Grace Field House", "Rose Manor", "Heaven's Gate", "White Farm"],
+    "answer": "Grace Field House",
+    "difficulty": "hard"
+  },
+  {
+    "id": 79,
+    "question": "What is the game world called in Sword Art Online's first arc?",
+    "options": ["Aincrad", "Alfheim", "GGO", "Underworld"],
+    "answer": "Aincrad",
+    "difficulty": "hard"
+  },
+  {
+    "id": 80,
+    "question": "What duo is famously known as Blank in No Game No Life?",
+    "options": ["Sora and Shiro", "Lelouch and Suzaku", "Light and L", "Gon and Killua"],
+    "answer": "Sora and Shiro",
+    "difficulty": "medium"
+  },
+  {
+    "id": 82,
+    "question": "What is Spike Spiegel's main occupation in Cowboy Bebop?",
+    "options": ["Bounty hunter", "Pirate", "Detective", "Teacher"],
+    "answer": "Bounty hunter",
+    "difficulty": "medium"
+  },
+  {
+    "id": 84,
+    "question": "What breathing style does Tanjiro mainly use first in Demon Slayer?",
+    "options": ["Water Breathing", "Flame Breathing", "Wind Breathing", "Stone Breathing"],
+    "answer": "Water Breathing",
+    "difficulty": "medium"
+  },
+  {
+    "id": 85,
+    "question": "What is the name of Luffy's swordsman crewmate?",
+    "options": ["Zoro", "Sanji", "Usopp", "Law"],
+    "answer": "Zoro",
+    "difficulty": "medium"
+  },
+  {
+    "id": 86,
+    "question": "Which hero is known as the number one pro hero for much of My Hero Academia's early story?",
+    "options": ["All Might", "Endeavor", "Hawks", "Mirko"],
+    "answer": "All Might",
+    "difficulty": "medium"
+  },
+  {
+    "id": 87,
+    "question": "What is Naruto's home village?",
+    "options": ["Hidden Leaf", "Hidden Sand", "Hidden Mist", "Hidden Stone"],
+    "answer": "Hidden Leaf",
+    "difficulty": "medium"
+  },
+  {
+    "id": 89,
+    "question": "What is the name of the strongest sorcerer with white hair in Jujutsu Kaisen?",
+    "options": ["Gojo", "Nanami", "Yuta", "Todo"],
+    "answer": "Gojo",
+    "difficulty": "medium"
+  },
+  {
+    "id": 91,
+    "question": "What is the name of Ash's rival from Pallet Town in Pokémon?",
+    "options": ["Gary", "Brock", "Tracey", "Paul"],
+    "answer": "Gary",
+    "difficulty": "medium"
+  },
+  {
+    "id": 92,
+    "question": "What color is Goku's most iconic gi?",
+    "options": ["Orange", "Blue", "Black", "Red"],
+    "answer": "Orange",
+    "difficulty": "medium"
+  },
+  {
+    "id": 93,
+    "question": "What clan does Sasuke Uchiha belong to?",
+    "options": ["Uchiha", "Hyuga", "Uzumaki", "Nara"],
+    "answer": "Uchiha",
+    "difficulty": "medium"
+  },
+  {
+    "id": 96,
+    "question": "What military branch do Eren, Mikasa, and Armin eventually join in Attack on Titan?",
+    "options": ["Survey Corps", "Military Police", "Garrison", "Marley Army"],
+    "answer": "Survey Corps",
+    "difficulty": "hard"
+  },
+  {
+    "id": 97,
+    "question": "What object do Edward and Alphonse seek to restore their bodies?",
+    "options": ["Philosopher's Stone", "Dragon Ball", "Death Note", "Sacred Jewel"],
+    "answer": "Philosopher's Stone",
+    "difficulty": "medium"
+  },
+  {
+    "id": 98,
+    "question": "What is the name of the volleyball prodigy known as the King of the Court in Haikyu!!?",
+    "options": ["Kageyama", "Hinata", "Tsukishima", "Nishinoya"],
+    "answer": "Kageyama",
+    "difficulty": "medium"
+  },
+  {
+    "id": 99,
+    "question": "What is the job of Sanji on the Straw Hat crew?",
+    "options": ["Cook", "Doctor", "Navigator", "Shipwright"],
+    "answer": "Cook",
+    "difficulty": "medium"
+  },
+  {
+    "id": 100,
+    "question": "What is the name of Light Yagami's shinigami in Death Note?",
+    "options": ["Ryuk", "Rem", "Near", "Mello"],
+    "answer": "Ryuk",
+    "difficulty": "medium"
+  },
+
+  {
+    "id": 101,
+    "question": "What is the name of the forbidden jutsu Naruto learns early in the series to graduate?",
+    "options": ["Shadow Clone Jutsu", "Rasengan", "Chidori", "Summoning Jutsu"],
+    "answer": "Shadow Clone Jutsu",
+    "difficulty": "hard"
+  },
+  {
+    "id": 102,
+    "question": "What is the name of the island where the One Piece story begins with Luffy's village nearby?",
+    "options": ["Dawn Island", "Drum Island", "Jaya", "Punk Hazard"],
+    "answer": "Dawn Island",
+    "difficulty": "hard"
+  },
+  {
+    "id": 103,
+    "question": "Which form first introduces Goku's golden-haired transformation in Dragon Ball Z?",
+    "options": ["Super Saiyan", "Super Saiyan 2", "Ultra Instinct", "Kaioken"],
+    "answer": "Super Saiyan",
+    "difficulty": "hard"
+  },
+  {
+    "id": 104,
+    "question": "What is the name of Ichigo's Zanpakuto for most of Bleach?",
+    "options": ["Zangetsu", "Senbonzakura", "Kyoka Suigetsu", "Benihime"],
+    "answer": "Zangetsu",
+    "difficulty": "hard"
+  },
+  {
+    "id": 105,
+    "question": "What is the name of the walled district destroyed at the start of Attack on Titan?",
+    "options": ["Shiganshina", "Trost", "Stohess", "Liberio"],
+    "answer": "Shiganshina",
+    "difficulty": "hard"
+  },
+  {
+    "id": 108,
+    "question": "What is All Might's real name?",
+    "options": ["Toshinori Yagi", "Shota Aizawa", "Enji Todoroki", "Mirio Togata"],
+    "answer": "Toshinori Yagi",
+    "difficulty": "hard"
+  },
+  {
+    "id": 109,
+    "question": "What is the name of Jujutsu Kaisen's Tokyo school teacher with the Six Eyes?",
+    "options": ["Satoru Gojo", "Suguru Geto", "Kento Nanami", "Yuta Okkotsu"],
+    "answer": "Satoru Gojo",
+    "difficulty": "hard"
+  },
+  {
+    "id": 110,
+    "question": "What is the first Pokémon region Ash travels through?",
+    "options": ["Kanto", "Johto", "Hoenn", "Sinnoh"],
+    "answer": "Kanto",
+    "difficulty": "hard"
+  },
+  {
+    "id": 111,
+    "question": "What is Killua Zoldyck's family famous for in Hunter x Hunter?",
+    "options": ["Assassins", "Pirates", "Alchemists", "Soul Reapers"],
+    "answer": "Assassins",
+    "difficulty": "hard"
+  },
+  {
+    "id": 112,
+    "question": "What is the name of Saitama's cyborg disciple?",
+    "options": ["Genos", "Bang", "King", "Mumen Rider"],
+    "answer": "Genos",
+    "difficulty": "hard"
+  },
+  {
+    "id": 113,
+    "question": "What taboo do the Elric brothers commit at the start of Fullmetal Alchemist: Brotherhood?",
+    "options": ["Human transmutation", "Summoning a demon", "Time travel", "Using a Death Note"],
+    "answer": "Human transmutation",
+    "difficulty": "hard"
+  },
+  {
+    "id": 116,
+    "question": "What is Isagi's main position goal in Blue Lock?",
+    "options": ["Striker", "Goalkeeper", "Defender", "Midfielder"],
+    "answer": "Striker",
+    "difficulty": "hard"
+  },
+  {
+    "id": 117,
+    "question": "What position does Nishinoya play in Haikyu!!?",
+    "options": ["Libero", "Setter", "Wing spiker", "Middle blocker"],
+    "answer": "Libero",
+    "difficulty": "hard"
+  },
+  {
+    "id": 118,
+    "question": "What is the name of the detective team headquarters agency in Death Note's second half led by Near from afar?",
+    "options": ["SPK", "FBI", "Task Force Zero", "NPA-X"],
+    "answer": "SPK",
+    "difficulty": "hard"
+  },
+  {
+    "id": 119,
+    "question": "What is the name of Asta's black-haired rival in Black Clover?",
+    "options": ["Yuno", "Noelle", "Luck", "Magna"],
+    "answer": "Yuno",
+    "difficulty": "hard"
+  },
+  {
+    "id": 121,
+    "question": "What division is Byakuya Kuchiki captain of for much of Bleach?",
+    "options": ["6th Division", "10th Division", "1st Division", "13th Division"],
+    "answer": "6th Division",
+    "difficulty": "hard"
+  },
+  {
+    "id": 126,
+    "question": "What studio is most famously associated with My Neighbor Totoro and Spirited Away?",
+    "options": ["Studio Ghibli", "Madhouse", "Bones", "MAPPA"],
+    "answer": "Studio Ghibli",
+    "difficulty": "hard"
+  },
+  {
+    "id": 128,
+    "question": "Which half-elf girl becomes central to Subaru's story in Re:Zero?",
+    "options": ["Emilia", "Rem", "Ram", "Beatrice"],
+    "answer": "Emilia",
+    "difficulty": "hard"
+  },
+  {
+    "id": 131,
+    "question": "What class is Korosensei assigned to teach in Assassination Classroom?",
+    "options": ["Class 3-E", "Class 1-A", "Class S", "Class B-2"],
+    "answer": "Class 3-E",
+    "difficulty": "hard"
+  },
+  {
+    "id": 134,
+    "question": "Which Hashira is known as the Flame Hashira in Demon Slayer's Mugen Train arc?",
+    "options": ["Rengoku", "Tengen", "Muichiro", "Sanemi"],
+    "answer": "Rengoku",
+    "difficulty": "hard"
+  },
+  {
+    "id": 135,
+    "question": "What is the name of Luffy's devil fruit as it was publicly known for most of the story?",
+    "options": ["Gum-Gum Fruit", "Flame-Flame Fruit", "Op-Op Fruit", "Dark-Dark Fruit"],
+    "answer": "Gum-Gum Fruit",
+    "difficulty": "hard"
+  },
+  {
+    "id": 136,
+    "question": "What quirk does Shoto Todoroki possess?",
+    "options": ["Half-Cold Half-Hot", "One For All", "Explosion", "Engine"],
+    "answer": "Half-Cold Half-Hot",
+    "difficulty": "hard"
+  },
+  {
+    "id": 137,
+    "question": "What is the name of Naruto's teacher who also trained Minato and wrote adult novels?",
+    "options": ["Jiraiya", "Kakashi", "Iruka", "Asuma"],
+    "answer": "Jiraiya",
+    "difficulty": "hard"
+  },
+  {
+    "id": 138,
+    "question": "What is the name of the nation across the sea revealed as the enemy power in Attack on Titan's later story?",
+    "options": ["Marley", "Eldia", "Hizuru", "Ymir"],
+    "answer": "Marley",
+    "difficulty": "hard"
+  },
+  {
+    "id": 139,
+    "question": "What is Yuji Itadori's school club at the very start of Jujutsu Kaisen?",
+    "options": ["Occult Club", "Science Club", "Track Club", "Go Club"],
+    "answer": "Occult Club",
+    "difficulty": "hard"
+  },
+  {
+    "id": 140,
+    "question": "What is the name of Chihiro's friend in Spirited Away who can transform into a dragon?",
+    "options": ["Haku", "No-Face", "Kamaji", "Boh"],
+    "answer": "Haku",
+    "difficulty": "hard"
+  },
+  {
+    "id": 141,
+    "question": "What is Ash's last name in Pokémon's English dub?",
+    "options": ["Ketchum", "Oak", "Pallet", "Stone"],
+    "answer": "Ketchum",
+    "difficulty": "hard"
+  },
+  {
+    "id": 142,
+    "question": "What is the name of the aura power system in Hunter x Hunter?",
+    "options": ["Nen", "Ki", "Reiatsu", "Mana"],
+    "answer": "Nen",
+    "difficulty": "hard"
+  },
+  {
+    "id": 143,
+    "question": "What hero is ranked number 1 in the Hero Association for much of One Punch Man?",
+    "options": ["Blast", "Tatsumaki", "Bang", "King"],
+    "answer": "Blast",
+    "difficulty": "hard"
+  },
+  {
+    "id": 144,
+    "question": "What military title does Roy Mustang hold in Fullmetal Alchemist: Brotherhood?",
+    "options": ["Colonel", "General", "Captain", "Major"],
+    "answer": "Colonel",
+    "difficulty": "hard"
+  },
+  {
+    "id": 146,
+    "question": "What is Levi's surname in Attack on Titan?",
+    "options": ["Ackerman", "Yeager", "Arlert", "Braus"],
+    "answer": "Ackerman",
+    "difficulty": "hard"
+  },
+  {
+    "id": 148,
+    "question": "What is Kageyama's role on the court in Haikyu!!?",
+    "options": ["Setter", "Libero", "Coach", "Middle blocker"],
+    "answer": "Setter",
+    "difficulty": "hard"
+  },
+  {
+    "id": 149,
+    "question": "What is the name of the shinigami woman who cares for Misa in Death Note?",
+    "options": ["Rem", "Ryuk", "Mello", "Naomi"],
+    "answer": "Rem",
+    "difficulty": "hard"
+  },
+  {
+    "id": 150,
+    "question": "What is the title given to the top ninja leader of a village like the Hidden Leaf?",
+    "options": ["Kage", "Jonin", "Chunin", "Sannin"],
+    "answer": "Kage",
+    "difficulty": "hard"
+  }
+]

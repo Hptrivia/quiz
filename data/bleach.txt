@@ -1,0 +1,765 @@
+[
+  {
+    "id": "bleach-easy-001",
+    "difficulty": "easy",
+    "question": "What is the name of the main protagonist of Bleach?",
+    "options": ["Naruto Uzumaki", "Ichigo Kurosaki", "Monkey D. Luffy", "Yusuke Urameshi"],
+    "answer": "Ichigo Kurosaki"
+  },
+  {
+    "id": "bleach-easy-002",
+    "difficulty": "easy",
+    "question": "What is the name of Ichigo's Zanpakutō?",
+    "options": ["Zabimaru", "Senbonzakura", "Zangetsu", "Hyōrinmaru"],
+    "answer": "Zangetsu"
+  },
+  {
+    "id": "bleach-easy-040",
+    "difficulty": "easy",
+    "question": "What is the spirit inside Ichigo's Zanpakuto initially called?",
+    "options": ["Old Man Zangetsu", "Shiro", "Hollow Ichigo", "Tensai"],
+    "answer": "Old Man Zangetsu"
+  },
+  {
+    "id": "bleach-easy-030",
+    "difficulty": "easy",
+    "question": "What do Soul Reapers use to perform spiritual spells?",
+    "options": ["Kidō", "Hollowfication", "Sonído", "Hierro"],
+    "answer": "Kidō"
+  },
+  {
+    "id": "bleach-easy-003",
+    "difficulty": "easy",
+    "question": "Who was the first Soul Reaper Ichigo met?",
+    "options": ["Byakuya Kuchiki", "Rukia Kuchiki", "Renji Abarai", "Kisuke Urahara"],
+    "answer": "Rukia Kuchiki"
+  },
+  {
+    "id": "bleach-easy-004",
+    "difficulty": "easy",
+    "question": "What animal form does Yoruichi Shihōin often take?",
+    "options": ["White Cat", "Black Cat", "Orange Cat", "Green Bird"],
+    "answer": "Black Cat"
+  },
+  {
+    "id": "bleach-easy-005",
+    "difficulty": "easy",
+    "question": "What is the name of the spirit realm where Soul Reapers live?",
+    "options": ["Hueco Mundo", "The World of the Living", "Soul Society", "Wandenreich"],
+    "answer": "Soul Society"
+  },
+  {
+    "id": "bleach-easy-007",
+    "difficulty": "easy",
+    "question": "What are the monstrous evil spirits that Soul Reapers hunt called?",
+    "options": ["Hollows", "Titans", "Demons", "Cursed Spirits"],
+    "answer": "Hollows"
+  },
+  {
+    "id": "bleach-easy-008",
+    "difficulty": "easy",
+    "question": "Which squad is led by Captain Kenpachi Zaraki?",
+    "options": ["Squad 1", "Squad 11", "Squad 6", "Squad 12"],
+    "answer": "Squad 11"
+  },
+  {
+    "id": "bleach-easy-009",
+    "difficulty": "easy",
+    "question": "What is the second and final upgraded form of a Zanpakutō called?",
+    "options": ["Shikai", "Bankai", "Resurrección", "Vollständig"],
+    "answer": "Bankai"
+  },
+  {
+    "id": "bleach-easy-010",
+    "difficulty": "easy",
+    "question": "What is Uryū Ishida's race?",
+    "options": ["Soul Reaper", "Fullbringer", "Quincy", "Arrancar"],
+    "answer": "Quincy"
+  },
+  {
+    "id": "bleach-easy-017",
+    "difficulty": "easy",
+    "question": "What is the first form of a Zanpakuto release called?",
+    "options": ["Bankai", "Resurrección", "Shikai", "Espada"],
+    "answer": "Shikai"
+  },
+  {
+    "id": "bleach-easy-011",
+    "difficulty": "easy",
+    "question": "Who is the Captain of the 6th Division and Rukia's brother?",
+    "options": ["Sajin", "Byakuya", "Jūshirō", "Shunsui"],
+    "answer": "Byakuya"
+  },
+  {
+    "id": "bleach-easy-012",
+    "difficulty": "easy",
+    "question": "What is the name of the candy-loving shopkeeper who helps Ichigo?",
+    "options": ["Kisuke Urahara", "Tessai Tsukabishi", "Don Kanonji", "Isshin Kurosaki"],
+    "answer": "Kisuke Urahara"
+  },
+  {
+    "id": "bleach-easy-014",
+    "difficulty": "hard",
+    "question": "Which character has the power of Santen Kesshun?",
+    "options": ["Rukia Kuchiki", "Orihime Inoue", "Rangiku Matsumoto", "Yachiru Kusajishi"],
+    "answer": "Orihime Inoue"
+  },
+  {
+    "id": "bleach-easy-015",
+    "difficulty": "easy",
+    "question": "What is the name of Ichigo's father?",
+    "options": ["Ryūken", "Isshin", "Keigo", "Mizuiro"],
+    "answer": "Isshin"
+  },
+  {
+    "id": "bleach-easy-016",
+    "difficulty": "easy",
+    "question": "What is the name of Renji Abarai's Zanpakutō?",
+    "options": ["Hōzuki-maru", "Wabisuke", "Zabimaru", "Benihime"],
+    "answer": "Zabimaru"
+  }, 
+ {
+    "id": "bleach-easy-017",
+    "difficulty": "easy",
+    "question": "What is the name of Tōshirō Hitsugaya's ice-type Zanpakutō?",
+    "options": ["Zabimaru", "Hyōrinmaru", "Senbonzakura", "Sode no Shirayuki"],
+    "answer": "Hyōrinmaru"
+  },
+  {
+    "id": "bleach-easy-018",
+    "difficulty": "hard",
+    "question": "What is the name of the stuffed lion that contains a Mod Soul?",
+    "options": ["Piedmon", "Kon", "Lirin", "Noba"],
+    "answer": "Kon"
+  },
+  {
+    "id": "bleach-easy-019",
+    "difficulty": "easy",
+    "question": "What is the main weapon of a Quincy?",
+    "options": ["Sword", "Spear", "Bow and Arrow", "Staff"],
+    "answer": "Bow and Arrow"
+  },
+  {
+    "id": "bleach-easy-020",
+    "difficulty": "easy",
+    "question": "Who is the primary antagonist of the Soul Society and Arrancar arcs?",
+    "options": ["Grimmjow", "Ulquiorra", "Sōsuke Aizen", "Ginjo"],
+    "answer": "Sōsuke Aizen"
+  },
+  {
+    "id": "bleach-easy-021",
+    "difficulty": "easy",
+    "question": "What is the name of Ichigo's signature energy attack?",
+    "options": ["Cero", "Getsuga Tenshō", "Rasengan", "Hado 90"],
+    "answer": "Getsuga Tenshō"
+  },
+  {
+    "id": "bleach-easy-022",
+    "difficulty": "easy",
+    "question": "Which character is known for his large build and 'Brazo Derecha de Gigante'?",
+    "options": ["Chad", "Ganju Shiba", "Jidanbō", "Yammy Llargo"],
+    "answer": "Chad"
+  },
+  {
+    "id": "bleach-easy-023",
+    "difficulty": "easy",
+    "question": "In what town does Ichigo live?",
+    "options": ["Tokyo", "Karakura Town", "Kyoto", "Naruki City"],
+    "answer": "Karakura Town"
+  },
+  {
+    "id": "bleach-easy-024",
+    "difficulty": "easy",
+    "question": "What is the name of the desert world where Hollows reside?",
+    "options": ["The Void", "Hueco Mundo", "The Precipice World", "Silbern"],
+    "answer": "Hueco Mundo"
+  },
+  {
+    "id": "bleach-easy-025",
+    "difficulty": "easy",
+    "question": "What is the uniform worn by Soul Reapers called?",
+    "options": ["Kimono", "Shihakushō", "Yukata", "Hakama"],
+    "answer": "Shihakushō"
+  },
+  {
+    "id": "bleach-easy-026",
+    "difficulty": "easy",
+    "question": "Who was the Head Captain at the start of the series?",
+    "options": ["Shunsui Kyōraku", "Genryūsai Yamamoto", "Byakuya Kuchiki", "Sōsuke Aizen"],
+    "answer": "Genryūsai Yamamoto"
+  },
+  {
+    "id": "bleach-easy-027",
+    "difficulty": "easy",
+    "question": "What is the name of the mask-wearing Hollow-like Soul Reapers?",
+    "options": ["Arrancars", "Visoreds", "Espada", "Bounts"],
+    "answer": "Visoreds"
+  },
+  {
+    "id": "bleach-med-006",
+    "difficulty": "hard",
+    "question": "How many members are in the Royal Guard (Squad 0)?",
+    "options": ["3", "5", "7", "10"],
+    "answer": "5"
+  },
+  {
+    "id": "bleach-easy-048",
+    "difficulty": "easy",
+    "question": "What is the name of Ichigo's high school?",
+    "options": ["Karakura High", "Seirei Academy", "Naruki High", "Soul Academy"],
+    "answer": "Karakura High"
+  },
+  {
+    "id": "bleach-easy-028",
+    "difficulty": "easy",
+    "question": "What rank do the top 10 strongest Arrancars hold?",
+    "options": ["Privaron Espada", "Fracción", "Espada", "Numeros"],
+    "answer": "Espada"
+  },
+  {
+    "id": "bleach-easy-029",
+    "difficulty": "easy",
+    "question": "What is the energy beam fired by Hollows called?",
+    "options": ["Bala", "Cero", "Gran Rey Cero", "Oscuras"],
+    "answer": "Cero"
+  },
+  {
+    "id": "bleach-easy-030",
+    "difficulty": "easy",
+    "question": "Who is the small pink-haired girl who rides on Kenpachi's shoulder?",
+    "options": ["Momo", "Yachiru", "Nemu", "Kukaku"],
+    "answer": "Yachiru"
+  },
+  {
+    "id": "bleach-easy-032",
+    "difficulty": "easy",
+    "question": "What is the name of the gate that connects the human world to Soul Society?",
+    "options": ["Garganta", "Senkaimon", "The Hell Gate", "Descorrer"],
+    "answer": "Senkaimon"
+  },
+  {
+    "id": "bleach-easy-033",
+    "difficulty": "easy",
+    "question": "How many sisters does Ichigo have?",
+    "options": ["One", "Two", "Three", "None"],
+    "answer": "Two"
+  },
+  {
+    "id": "bleach-easy-034",
+    "difficulty": "easy",
+    "question": "What is the name of the captain who always wears a visor?",
+    "options": ["Kaname Tōsen", "Gin Ichimaru", "Kenpachi Zaraki", "Mayuri Kurotsuchi"],
+    "answer": "Kaname Tōsen"
+  },
+  {
+    "id": "bleach-easy-036",
+    "difficulty": "easy",
+    "question": "What is the name of the 4th Division Captain and expert healer?",
+    "options": ["Isane Kotetsu", "Retsu Unohana", "Nanao Ise", "Rangiku Matsumoto"],
+    "answer": "Retsu Unohana"
+  },
+  {
+    "id": "bleach-easy-037",
+    "difficulty": "easy",
+    "question": "What is the high-speed movement technique used by Soul Reapers?",
+    "options": ["Sonido", "Shunpo", "Hirenkyaku", "Bring Light"],
+    "answer": "Shunpo"
+  },
+  {
+    "id": "bleach-easy-038",
+    "difficulty": "easy",
+    "question": "Who is the scientist Captain of the 12th Division?",
+    "options": ["Sajin Komamura", "Mayuri Kurotsuchi", "Kisuke Urahara", "Akon"],
+    "answer": "Mayuri Kurotsuchi"
+  },
+  {
+    "id": "bleach-easy-039",
+    "difficulty": "easy",
+    "question": "What is the name of the organization of the 13 squads?",
+    "options": ["Gotei 13", "Espada 13", "X-cution 13", "Shonei 13"],
+    "answer": "Gotei 13"
+  },
+  {
+    "id": "bleach-easy-040",
+    "difficulty": "easy",
+    "question": "What is the name of the 3rd Division Captain with a constant smile?",
+    "options": ["Izuru Kira", "Gin Ichimaru", "Shūhei Hisagi", "Rangiku Matsumoto"],
+    "answer": "Gin Ichimaru"
+  },
+  {
+    "id": "bleach-easy-041",
+    "difficulty": "hard",
+    "question": "What is the name of the first Bleach opening song?",
+    "options": ["D-tecnolife", "Asterisk", "Ichirin no Hana", "Rolling Star"],
+    "answer": "Asterisk"
+  },
+  {
+    "id": "bleach-easy-043",
+    "difficulty": "easy",
+    "question": "Who is Ichigo's main rival among the Espada?",
+    "options": ["Szayelaporro Granz", "Grimmjow Jaegerjaquez", "Aaroniero Arruruerie", "Zommari Rureaux"],
+    "answer": "Grimmjow Jaegerjaquez"
+  },
+  {
+    "id": "bleach-easy-044",
+    "difficulty": "easy",
+    "question": "Which group uses the 'Resurrección' ability?",
+    "options": ["Soul Reapers", "Arrancars", "Quincies", "Visoreds"],
+    "answer": "Arrancars"
+  },
+  {
+    "id": "bleach-easy-046",
+    "difficulty": "easy",
+    "question": "Who is the Captain of the 2nd Division and leader of the Stealth Force?",
+    "options": ["Yoruichi Shihōin", "Soi-Fon", "Marechiyo Ōmaeda", "Nanao Ise"],
+    "answer": "Soi-Fon"
+  },
+  {
+    "id": "bleach-easy-047",
+    "difficulty": "easy",
+    "question": "What item does Aizen use to create Arrancars?",
+    "options": ["The Hōgyoku", "The Soul King's Key", "Tenshintai", "Sanrei Glove"],
+    "answer": "The Hōgyoku"
+  },
+  {
+    "id": "bleach-easy-048",
+    "difficulty": "easy",
+    "question": "Which Soul Reaper is always seen with a guitar and a rock-and-roll attitude in fillers?",
+    "options": ["Shūhei Hisagi", "Sentarō Kotsubaki", "Hanatarō Yamada", "Kogane Musashi"],
+    "answer": "Shūhei Hisagi"
+  },
+  {
+    "id": "bleach-easy-050",
+    "difficulty": "hard",
+    "question": "What is the name of Rukia's ice-type Zanpakutō?",
+    "options": ["Sode no Shirayuki", "Tobiume", "Haineko", "Suzumushi"],
+    "answer": "Sode no Shirayuki"
+  },
+  {
+    "id": "bleach-med-051",
+    "difficulty": "hard",
+    "question": "What is the release command for Sosuke Aizen's Kyōka Suigetsu?",
+    "options": ["Shatter", "Collapse", "Crumble", "Cry"],
+    "answer": "Shatter"
+  },
+  {
+    "id": "bleach-med-052",
+    "difficulty": "hard",
+    "question": "Who was the previous Captain of the 12th Division before Kisuke Urahara?",
+    "options": ["Mayuri Kurotsuchi", "Kirio Hikifune", "Shinji Hirako", "Yoruichi Shihōin"],
+    "answer": "Kirio Hikifune"
+  },
+  {
+    "id": "bleach-med-053",
+    "difficulty": "hard",
+    "question": "What is the name of the prison where Aizen was sentenced to after the Winter War?",
+    "options": ["Muken", "Magician's Nest", "Central 46", "Sōkyoku Hill"],
+    "answer": "Muken"
+  },
+  {
+    "id": "bleach-med-054",
+    "difficulty": "hard",
+    "question": "Which Espada represents the aspect of death 'Emptiness'?",
+    "options": ["Grimmjow", "Ulquiorra Cifer", "Coyote Starrk", "Barragan Louisenbairn"],
+    "answer": "Ulquiorra Cifer"
+  },
+  {
+    "id": "bleach-med-055",
+    "difficulty": "hard",
+    "question": "What is the name of the Bankai used by Ikkaku Madarame?",
+    "options": ["Ryūmon Hōzukimaru", "Kokujō Tengen Myō'ō", "Daiguren Hyōrinmaru", "Tekken Tachikaze"],
+    "answer": "Ryūmon Hōzukimaru"
+  },
+  {
+    "id": "bleach-med-056",
+    "difficulty": "hard",
+    "question": "How many years was Aizen initially sentenced to in prison before it was increased?",
+    "options": ["10,800", "18,800", "20,000", "50,000"],
+    "answer": "18,800"
+  },
+  {
+    "id": "bleach-med-057",
+    "difficulty": "medium",
+    "question": "What is the true name of Yumichika Ayasegawa's Zanpakutō?",
+    "options": ["Fuji Kujaku", "Ruri'iro Kujaku", "Suzumebachi", "Ashisogi Jizō"],
+    "answer": "Ruri'iro Kujaku"
+  },
+  {
+    "id": "bleach-med-059",
+    "difficulty": "medium",
+    "question": "What is the name of Shunsui Kyōraku's Zanpakutō?",
+    "options": ["Katen Kyōkotsu", "Sōgyo no Kotowari", "Kinshara", "Kubikiri Orochi"],
+    "answer": "Katen Kyōkotsu"
+  },
+  {
+    "id": "bleach-med-060",
+    "difficulty": "hard",
+    "question": "What is the number of the Espada Coyote Starrk?",
+    "options": ["0", "1", "2", "4"],
+    "answer": "1"
+  },
+  {
+    "id": "bleach-med-061",
+    "difficulty": "hard",
+    "question": "What technique allows a Quincy to absorb spirit particles from their surroundings at a high rate?",
+    "options": ["Letzt Stil", "Sklaverei", "Ransōtengai", "Blut Vene"],
+    "answer": "Sklaverei"
+  },
+  {
+    "id": "bleach-med-062",
+    "difficulty": "hard",
+    "question": "Who is the leader of the Visoreds?",
+    "options": ["Love Aikawa", "Rōjūrō Otoribashi", "Shinji Hirako", "Kensei Muguruma"],
+    "answer": "Shinji Hirako"
+  },
+  {
+    "id": "bleach-med-063",
+    "difficulty": "hard",
+    "question": "Which of these is NOT one of the steps to achieve the 'Final Getsuga Tenshō'?",
+    "options": ["Jinzen", "Accepting the blade", "Consuming a Hōgyoku", "Battling the inner spirit"],
+    "answer": "Consuming a Hōgyoku"
+  },
+  {
+    "id": "bleach-med-064",
+    "difficulty": "hard",
+    "question": "What is the name of the sword belonging to the Soul King's Royal Guard, Oetsu Nimaiya?",
+    "options": ["Sayafushi", "Ichimonji", "Shinken Hakkyoken", "Kinshara"],
+    "answer": "Sayafushi"
+  },  
+{
+    "id": "bleach-med-065",
+    "difficulty": "hard",
+    "question": "What is the name of Gin Ichimaru's Bankai?",
+    "options": ["Senbonzakura Kageyoshi", "Kamishini no Yari", "Daiguren Hyōrinmaru", "Suzumushi Tsuishiki: Enma Kōrogishi"],
+    "answer": "Kamishini no Yari"
+  },
+  {
+    "id": "bleach-med-066",
+    "difficulty": "hard",
+    "question": "What is the name of the hollow that killed Ichigo's mother?",
+    "options": ["Grand Fisher", "Acidwire", "Shrieker", "Metastacia"],
+    "answer": "Grand Fisher"
+  },
+  {
+    "id": "bleach-med-067",
+    "difficulty": "hard",
+    "question": "Which Espada has the ability to 'Respira', which ages anything it touches?",
+    "options": ["Tier Harribel", "Barragan Louisenbairn", "Zommari Rureaux", "Aaroniero Arruruerie"],
+    "answer": "Barragan Louisenbairn"
+  },
+  {
+    "id": "bleach-med-071",
+    "difficulty": "hard",
+    "question": "In the Thousand-Year Blood War, what is the name of the Quincy's elite guard?",
+    "options": ["Schutzstaffel", "Jagdarmee", "Sternritter", "Soldat"],
+    "answer": "Schutzstaffel"
+  },
+  {
+    "id": "bleach-med-073",
+    "difficulty": "hard",
+    "question": "What is the release command for Grimmjow's Zanpakutō, Pantera?",
+    "options": ["Grind", "Creep", "Kick", "Sting"],
+    "answer": "Grind"
+  },
+  {
+    "id": "bleach-med-076",
+    "difficulty": "hard",
+    "question": "What is the name of the massive spear Bankai used by Soi Fon?",
+    "options": ["Jakuhō Raikōben", "Suzumebachi", "Tachikaze", "Haineko"],
+    "answer": "Jakuhō Raikōben"
+  },
+  {
+    "id": "bleach-med-078",
+    "difficulty": "hard",
+    "question": "Which character uses the 'Ichi no Mai, Tsukishiro' technique?",
+    "options": ["Tōshirō Hitsugaya", "Rukia Kuchiki", "Byakuya Kuchiki", "Jūshirō Ukitake"],
+    "answer": "Rukia Kuchiki"
+  },
+  {
+    "id": "bleach-med-079",
+    "difficulty": "hard",
+    "question": "What is the name of the doll used by Jin Kariya in the Bount arc?",
+    "options": ["Messer", "Fried", "Ritual", "Dalk"],
+    "answer": "Messer"
+  },
+  {
+    "id": "bleach-med-037",
+    "difficulty": "hard",
+    "question": "What is the release command for Rangiku Matsumoto's?",
+    "options": ["Growl", "Scatter", "Scream", "Dance"],
+    "answer": "Growl"
+  },
+  {
+    "id": "bleach-med-038",
+    "difficulty": "medium",
+    "question": "What is the name of the group of humans who can manipulate the souls of objects?",
+    "options": ["Fullbringers", "Quincies", "Visored", "Bounts"],
+    "answer": "Fullbringers"
+  },
+  {
+    "id": "bleach-med-014",
+    "difficulty": "medium",
+    "question": "What is the name of the spirit realm's capital city?",
+    "options": ["Seireitei", "Rukongai", "Sereitei", "Seirietei"],
+    "answer": "Seireitei"
+  },
+  {
+    "id": "bleach-med-034",
+    "difficulty": "hard",
+    "question": "What is the name of the 8th Espada?",
+    "options": ["Szayelaporro Granz", "Aaroniero Arruruerie", "Zommari Rureaux", "Grimmjow"],
+    "answer": "Szayelaporro Granz"
+  },
+  {
+    "id": "bleach-med-028",
+    "difficulty": "medium",
+    "question": "What is the release command for Kenpachi Zaraki's Zanpakuto?",
+    "options": ["Drink", "Devour", "Crush", "Strike"],
+    "answer": "Drink"
+  },
+  {
+    "id": "bleach-med-008",
+    "difficulty": "hard",
+    "question": "Who was the first Kenpachi?",
+    "options": ["Kenpachi Zaraki", "Retsu Unohana", "Kenpachi Kuruyashiki", "Kenpachi Azashiro"],
+    "answer": "Retsu Unohana"
+  },
+  {
+    "id": "bleach-med-012",
+    "difficulty": "medium",
+    "question": "What number was Nnoitra Gilga in the Espada in the current timeline?",
+    "options": ["4", "5", "8", "10"],
+    "answer": "5"
+  },
+  {
+    "id": "bleach-med-081",
+    "difficulty": "medium",
+    "question": "What is the name of the defensive Quincy ability that protects their body with spirit energy?",
+    "options": ["Blut Vene", "Blut Arterie", "Kirchenlied", "Heilig Pfeil"],
+    "answer": "Blut Vene"
+  },
+  {
+    "id": "bleach-med-083",
+    "difficulty": "hard",
+    "question": "What is the name of the bird-like Bankai used by Rose?",
+    "options": ["Kinshara Butōdan", "Tekken Tachikaze", "Sanjin No Ken", "Kokujō Tengen Myō'ō"],
+    "answer": "Kinshara Butōdan"
+  },
+  {
+    "id": "bleach-med-089",
+    "difficulty": "medium",
+    "question": "What is the name of the technique used by Mayuri to turn himself into a liquid state?",
+    "options": ["Hairei", "Nikushibuki", "Hirenkyaku", "Konjiki Ashisogi Jizō"],
+    "answer": "Nikushibuki"
+  },
+  {
+    "id": "bleach-hard-051",
+    "difficulty": "hard",
+    "question": "What is the name of the first Kenpachi's Bankai, which liquefies her blade into a dark, blood-like substance?",
+    "options": ["Minazuki", "Nozarashi", "Jikantei", "Gagaku Kairo"],
+    "answer": "Minazuki"
+  },
+  {
+    "id": "bleach-hard-054",
+    "difficulty": "hard",
+    "question": "What is the name of the sword-forging pool used by Tenjirō Kirinji to replace blood and reiatsu?",
+    "options": ["Blood Hell Pond", "White Bone Pond", "Spirit Spout", "Chika no Ike"],
+    "answer": "Blood Hell Pond"
+  },
+  {
+    "id": "bleach-hard-056",
+    "difficulty": "hard",
+    "question": "What is the name of the ritual performed to send a deceased Captain's spirit to Hell?",
+    "options": ["Konso", "Konso Reisai", "Reishi Release", "Hell's Gate Rite"],
+    "answer": "Konso Reisai"
+  },
+  {
+    "id": "bleach-hard-057",
+    "difficulty": "hard",
+    "question": "Which Sternritter holds Schrift 'P' - The Power?",
+    "options": ["Meninas McAllon", "Giselle Gewelle", "Candice Catnipp", "Liltotto Lamperd"],
+    "answer": "Meninas McAllon"
+  },
+  {
+    "id": "bleach-hard-059",
+    "difficulty": "hard",
+    "question": "What is the name of the ultimate Quincy offensive and defensive spell?",
+    "options": ["Kirchenlied: Sankt Zwinger", "Sklaverei", "Gritz", "Sprenger"],
+    "answer": "Kirchenlied: Sankt Zwinger"
+  },
+  {
+    "id": "bleach-hard-060",
+    "difficulty": "hard",
+    "question": "Which of these is the name of Oetsu Nimaiya's failed, too-sharp Zanpakutō?",
+    "options": ["Sayafushi", "Ichimonji", "Shinken Hakkyoken", "Kinshara"],
+    "answer": "Sayafushi"
+  },
+  {
+    "id": "bleach-hard-061",
+    "difficulty": "hard",
+    "question": "What is the real name of the Soul King?",
+    "options": ["Adnyeus", "Yhwach", "Reio", "Mimihagi"],
+    "answer": "Adnyeus"
+  },
+  {
+    "id": "bleach-hard-062",
+    "difficulty": "hard",
+    "question": "How long ago did Yamamoto destroy the Quincy Lichtreich?",
+    "options": ["500 years", "1,000 years", "2,000 years", "10,000 years"],
+    "answer": "1,000 years"
+  },
+  {
+    "id": "bleach-hard-063",
+    "difficulty": "hard",
+    "question": "Who was the first Sternritter to ever receive a Schrift from Yhwach?",
+    "options": ["Lille Barro", "Haschwalth", "Gerard Valkyrie", "Bazz-B"],
+    "answer": "Lille Barro"
+  },
+  {
+    "id": "bleach-hard-064",
+    "difficulty": "hard",
+    "question": "What is the name of the special arrow that can temporarily halt Yhwach's 'Almighty'?",
+    "options": ["Silver Arrow", "Still Silver", "Heilig Pfeil", "Sprenger Arrow"],
+    "answer": "Still Silver"
+  },
+  {
+    "id": "bleach-hard-065",
+    "difficulty": "hard",
+    "question": "Which character possesses the 'The Deathdealing' Schrift?",
+    "options": ["Askin Nakk Le Vaar", "Gerard Valkyrie", "Lille Barro", "Pernida Parnkgjas"],
+    "answer": "Askin Nakk Le Vaar"
+  },
+  {
+    "id": "bleach-hard-069",
+    "difficulty": "hard",
+    "question": "Which member of the Zero Squad is known as the 'Great Weaver'?",
+    "options": ["Senjumaru Shutara", "Kirio Hikifune", "Tenjirō Kirinji", "Ichibē Hyōsube"],
+    "answer": "Senjumaru Shutara"
+  },
+  {
+    "id": "bleach-hard-072",
+    "difficulty": "hard",
+    "question": "Which of these characters was NEVER a member of the 11th Division?",
+    "options": ["Tetsuzaemon Iba", "Maki Ichinose", "Renji Abarai", "Izuru Kira"],
+    "answer": "Izuru Kira"
+  },
+  {
+    "id": "bleach-hard-073",
+    "difficulty": "hard",
+    "question": "Who was Isshin Kurosaki's Lieutenant when he was Captain of Squad 10?",
+    "options": ["Rangiku Matsumoto", "Tōshirō Hitsugaya", "Ginrei Kuchiki", "Kaien Shiba"],
+    "answer": "Rangiku Matsumoto"
+  },
+  {
+    "id": "bleach-hard-074",
+    "difficulty": "hard",
+    "question": "What is the name of the fortress inside Hueco Mundo?",
+    "options": ["Las Noches", "Seireitei", "Silbern", "Wandenreich"],
+    "answer": "Las Noches"
+  },
+  {
+    "id": "bleach-hard-079",
+    "difficulty": "hard",
+    "question": "Which Sternritter is 'C' - The Compulsory?",
+    "options": ["Pernida Parnkgjas", "Askin Nakk Le Vaar", "Gerard Valkyrie", "Lille Barro"],
+    "answer": "Pernida Parnkgjas"
+  },
+  {
+    "id": "bleach-hard-084",
+    "difficulty": "hard",
+    "question": "Which Espada represents the aspect of death 'Madness'?",
+    "options": ["Szayelaporro Granz", "Aaroniero Arruruerie", "Zommari Rureaux", "Grimmjow"],
+    "answer": "Szayelaporro Granz"
+  },
+  {
+    "id": "bleach-hard-088",
+    "difficulty": "hard",
+    "question": "Which Sternritter is known as 'The Miracle'?",
+    "options": ["Gerard Valkyrie", "Lille Barro", "Askin Nakk Le Vaar", "Pernida Parnkgjas"],
+    "answer": "Gerard Valkyrie"
+  },
+  {
+    "id": "bleach-hard-089",
+    "difficulty": "hard",
+    "question": "What is the translation of Genryūsai Yamamoto's Bankai 'Zanka no Tachi'?",
+    "options": ["Longsword of the Remnant Flame", "Flowing Flame Blade", "Blade of the Scorching Sun", "Eternal Fire Sword"],
+    "answer": "Longsword of the Remnant Flame"
+  },
+  {
+    "id": "bleach-espada-001",
+    "difficulty": "medium",
+    "question": "Who is officially ranked as the strongest Espada (Rank 0) upon releasing their Zanpakutō?",
+    "options": ["Coyote Starrk", "Yammy Llargo", "Ulquiorra Cifer", "Barragan Louisenbairn"],
+    "answer": "Yammy Llargo"
+  },
+  {
+    "id": "bleach-espada-002",
+    "difficulty": "hard",
+    "question": "Which of these characters is NOT a member of the Espada?",
+    "options": ["Grimmjow Jaegerjaquez", "Szayelaporro Granz", "Bazz-B", "Aaroniero Arruruerie"],
+    "answer": "Bazz-B"
+  },
+  {
+    "id": "bleach-espada-004",
+    "difficulty": "easy",
+    "question": "Who is the 6th ranked Espada?",
+    "options": ["Nnoitra Gilga", "Grimmjow Jaegerjaquez", "Zommari Rureaux", "Yammy Llargo"],
+    "answer": "Grimmjow Jaegerjaquez"
+  },
+  {
+    "id": "bleach-meta-001",
+    "difficulty": "hard",
+    "question": "How many original seasons are in the Bleach anime?",
+    "options": ["16", "20", "17", "19"],
+    "answer": "16"
+  },
+  {
+    "id": "bleach-meta-002",
+    "difficulty": "hard",
+    "question": "Who is the original creator and illustrator of the Bleach manga?",
+    "options": ["Eiichiro Oda", "Masashi Kishimoto", "Tite Kubo", "Akira Toriyama"],
+    "answer": "Tite Kubo"
+  },
+  {
+    "id": "bleach-meta-003",
+    "difficulty": "hard",
+    "question": "Who is the Japanese voice actor (Seiyū) for the protagonist Ichigo Kurosaki?",
+    "options": ["Masakazu Morita", "Noriaki Sugiyama", "Hiroshi Kamiya", "Mamoru Miyano"],
+    "answer": "Masakazu Morita"
+  },
+  {
+    "id": "bleach-meta-004",
+    "difficulty": "hard",
+    "question": "What year did the Bleach anime first premiere in Japan?",
+    "options": ["2001", "2004", "2006", "2002"],
+    "answer": "2004"
+  },
+  {
+    "id": "bleach-bankai-002",
+    "difficulty": "medium",
+    "question": "What is the name of Shunsui Kyōraku's Bankai?",
+    "options": ["Katen Kyōkotsu: Karamatsu Shinjū", "Sōgyo no Kotowari", "Kinshara Butōdan", "Jakuhō Raikōben"],
+    "answer": "Katen Kyōkotsu: Karamatsu Shinjū"
+  },
+  {
+    "id": "bleach-bankai-003",
+    "difficulty": "medium",
+    "question": "What is the name of Sajin Komamura's Bankai?",
+    "options": ["Kokujō Tengen Myō'ō", "Daiguren Hyōrinmaru", "Tekken Tachikaze", "Konjiki Ashisogi Jizō"],
+    "answer": "Kokujō Tengen Myō'ō"
+  },
+  {
+    "id": "bleach-hard-091",
+    "difficulty": "hard",
+    "question": "Which character possesses the 'The X-Axis' Schrift?",
+    "options": ["Lille Barro", "Gerard Valkyrie", "Askin Nakk Le Vaar", "Pernida Parnkgjas"],
+    "answer": "Lille Barro"
+  },
+  {
+    "id": "bleach-hard-097",
+    "difficulty": "hard",
+    "question": "What is the name of Shunsui Kyōraku's Lieutenant?",
+    "options": ["Nanao Ise", "Rangiku Matsumoto", "Nemu Kurotsuchi", "Isane Kotetsu"],
+    "answer": "Nanao Ise"
+  }
+]

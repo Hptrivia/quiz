@@ -1,0 +1,706 @@
+[
+  {
+    "id": "sekiro-001",
+    "difficulty": "easy",
+    "question": "What is the name of the protagonist's primary katana?",
+    "options": ["Mortal Blade", "Kusabimaru", "Sabimaru", "Fushigiri"],
+    "answer": "Kusabimaru"
+  },
+  {
+    "id": "sek-006",
+    "difficulty": "easy",
+    "question": "What is the name of the mechanical arm Sekiro receives?",
+    "options": ["Shinobi Prosthetic", "Iron Arm", "Puppeteer Limb", "Wolf's Claw"],
+    "answer": "Shinobi Prosthetic"
+  },
+  {
+    "id": "sek-029",
+    "difficulty": "easy",
+    "question": "What item is used to increase Attack Power?",
+    "options": ["Prayer Bead", "Memory", "Gourd Seed", "Shinobi Tool"],
+    "answer": "Memory"
+  },
+  {
+    "id": "sek-026",
+    "difficulty": "easy",
+    "question": "What is the chance of keeping XP/Sen upon death called?",
+    "options": ["Divine Grace", "Unseen Aid", "Buddha's Mercy", "Luck"],
+    "answer": "Unseen Aid"
+  },
+  {
+    "id": "sek-025",
+    "difficulty": "easy",
+    "question": "What happens to your XP and Sen when you die permanently?",
+    "options": ["You lose all of it", "You lose half of it", "You lose none of it", "You lose 10%"],
+    "answer": "You lose half of it"
+  },
+  {
+    "id": "sekiro-002",
+    "difficulty": "easy",
+    "question": "Which studio developed Sekiro: Shadows Die Twice?",
+    "options": ["Capcom", "Team Ninja", "FromSoftware", "Sucker Punch"],
+    "answer": "FromSoftware"
+  },
+  {
+    "id": "sekiro-004",
+    "difficulty": "easy",
+    "question": "What is the young lord's name whom Sekiro protects?",
+    "options": ["Genichiro", "Kuro", "Takeru", "Isshin"],
+    "answer": "Kuro"
+  },
+  {
+    "id": "sekiro-006",
+    "difficulty": "easy",
+    "question": "What item is used to replenish health during combat?",
+    "options": ["Estus Flask", "Healing Gourd", "Blood Vial", "Rice"],
+    "answer": "Healing Gourd"
+  },
+  {
+    "id": "sekiro-007",
+    "difficulty": "easy",
+    "question": "Who gives Sekiro his Shinobi Prosthetic?",
+    "options": ["The Owl", "The Sculptor", "The Puppeteer", "Lord Kuro"],
+    "answer": "The Sculptor"
+  },
+  {
+    "id": "sekiro-009",
+    "difficulty": "easy",
+    "question": "What is the name of the sickness that spreads when Sekiro dies and resurrects?",
+    "options": ["The Blight", "Dragonrot", "Centipede Infestation", "Ashina Fever"],
+    "answer": "Dragonrot"
+  },
+  {
+    "id": "sekiro-010",
+    "difficulty": "easy",
+    "question": "Which boss is famously fought on a horse?",
+    "options": ["Gyoubu Oniwa", "Seven Ashina Spears", "General Tenzen", "Genichiro"],
+    "answer": "Gyoubu Oniwa"
+  },
+  {
+    "id": "sekiro-011",
+    "difficulty": "easy",
+    "question": "What is the name of the location where the Sculptor resides?",
+    "options": ["Ashina Castle", "Dilapidated Temple", "Senpou Temple", "Hirata Estate"],
+    "answer": "Dilapidated Temple"
+  },
+  {
+    "id": "sekiro-012",
+    "difficulty": "easy",
+    "question": "How many times can Sekiro die and resurrect by default?",
+    "options": ["One", "Two", "Three", "Unlimited"],
+    "answer": "Two"
+  },
+  {
+    "id": "sekiro-013",
+    "difficulty": "easy",
+    "question": "What skill allows you to counter thrust attacks by stepping on the blade?",
+    "options": ["Shadowrush", "Mikiri Counter", "Vault Over", "Ichimonji"],
+    "answer": "Mikiri Counter"
+  },
+  {
+    "id": "sekiro-014",
+    "difficulty": "easy",
+    "question": "Which animal is the protagonist's namesake?",
+    "options": ["Hawk", "Tiger", "Wolf", "Dragon"],
+    "answer": "Wolf"
+  },
+  {
+    "id": "sekiro-015",
+    "difficulty": "easy",
+    "question": "What do you collect four of to increase your Vitality and Posture?",
+    "options": ["Gourd Seeds", "Prayer Beads", "Memories", "Dragon Droplets"],
+    "answer": "Prayer Beads"
+  },
+{
+"id": "sekiro-easy-0008",
+"question": "What does parrying build?",
+"options": ["Posture", "Health", "Attack Power", "Spirit Emblems"],
+"answer": "Posture",
+"difficulty": "easy"
+},
+  {
+    "id": "sekiro-016",
+    "difficulty": "easy",
+    "question": "Who is the 'Physician' who helps Sekiro and Kuro?",
+    "options": ["Lady Butterfly", "Emma", "O'Rin", "The Divine Child"],
+    "answer": "Emma"
+  },
+  {
+    "id": "sekiro-017",
+    "difficulty": "easy",
+    "question": "What currency is dropped by enemies?",
+    "options": ["Souls", "Sen", "Gold", "Echoes"],
+    "answer": "Sen"
+  },
+  {
+    "id": "sekiro-018",
+    "difficulty": "easy",
+    "question": "What is the name of the giant animal that blocks your path in the Sunken Valley?",
+    "options": ["Great Ape", "Great Serpent", "Giant Carp", "Blazing Bull"],
+    "answer": "Great Serpent"
+  },
+  {
+    "id": "sek-008",
+    "difficulty": "easy",
+    "question": "What are the checkpoints called in Sekiro?",
+    "options": ["Bonfires", "Lanterns", "Sculptor's Idols", "Shrines"],
+    "answer": "Sculptor's Idols"
+  },
+  {
+    "id": "sekiro-020",
+    "difficulty": "easy",
+    "question": "What is the Chained Ogre weak to?",
+    "options": ["Poison", "Fire", "Lightning", "Terror"],
+    "answer": "Fire"
+  },
+  {
+    "id": "sekiro-022",
+    "difficulty": "easy",
+    "question": "What color is the 'Perilous Attack' warning kanji?",
+    "options": ["Blue", "Red", "Yellow", "White"],
+    "answer": "Red"
+  },
+  {
+    "id": "sekiro-med-012",
+    "difficulty": "medium",
+    "question": "What is the primary material used to upgrade prosthetic tools to their final forms?",
+    "options": ["Adamantite Scrap", "Lapis Lazuli", "Fulminated Mercury", "Phantom Matsutake"],
+    "answer": "Lapis Lazuli"
+  },
+  {
+    "id": "sekiro-med-008",
+    "difficulty": "hard",
+    "question": "Which merchant lives inside a pot in the Hirata Estate?",
+    "options": ["Harunaga", "Koremitsu", "Anayama", "Fujioka"],
+    "answer": "Harunaga"
+  },
+  {
+    "id": "sekiro-med-004",
+    "difficulty": "medium",
+    "question": "Which of these prosthetic tools is specifically effective against the Chained Ogre?",
+    "options": ["Loaded Axe", "Flame Vent", "Shinobi Firecracker", "Mist Raven"],
+    "answer": "Flame Vent"
+  },
+  {
+    "id": "sekiro-003",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a boss or mini-boss in Sekiro: Shadows Die Twice?",
+    "options": ["Gyoubu Masataka Oniwa", "Lady Butterfly", "Malenia, Blade of Miquella", "Guardian Ape"],
+    "answer": "Malenia, Blade of Miquella"
+  },
+  {
+    "id": "sekiro-004",
+    "difficulty": "medium",
+    "question": "Which character is NOT encountered as a boss fight in the game?",
+    "options": ["Emma, the Gentle Blade", "The Sculptor", "Hanbei the Undying", "Owl (Father)"],
+    "answer": "Hanbei the Undying"
+  },
+  {
+    "id": "sekiro-005",
+    "difficulty": "hard",
+    "question": "What is the name of Gyoubu Masataka Oniwa's horse?",
+    "options": ["Kage", "Onikage", "Torrent", "Roach"],
+    "answer": "Onikage"
+  },
+
+{
+"id": "sekiro-easy-0012",
+"question": "What causes Dragonrot?",
+"options": ["Resurrections", "Deathblows", "Parries", "Prosthetics"],
+"answer": "Resurrections",
+"difficulty": "easy"
+},
+  {
+    "id": "sek-046",
+    "difficulty": "hard",
+    "question": "What is the name of the first mini-boss encounter in the game?",
+    "options": ["Leader Shigenari Yamauchi", "General Naomori Kawarada", "Chained Ogre", "Shinobi Hunter"],
+    "answer": "Leader Shigenari Yamauchi"
+  },
+  {
+    "id": "sek-045",
+    "difficulty": "easy",
+    "question": "Which boss is a giant fish in Fountainhead Palace?",
+    "options": ["Great Colored Carp", "Divine Colored Shark", "Guardian Whale", "Sea Serpent"],
+    "answer": "Great Colored Carp"
+  },
+  {
+    "id": "sek-041",
+    "difficulty": "hard",
+    "question": "What is the name of the flower needed for the Fountainhead Aroma?",
+    "options": ["Lotus of the Palace", "Sakura Bloom", "Divine Flower", "Everblossom"],
+    "answer": "Lotus of the Palace"
+  },
+{
+"id": "sekiro-easy-0020",
+"question": "Which director made Sekiro?",
+"options": ["Miyazaki", "Yoko Taro", "Suzuki", "Oda"],
+"answer": "Miyazaki",
+"difficulty": "hard"
+},
+  {
+    "id": "sekiro-023",
+    "difficulty": "easy",
+    "question": "Which prosthetic tool is best for breaking wooden shields?",
+    "options": ["Shuriken", "Loaded Axe", "Flame Vent", "Loaded Umbrella"],
+    "answer": "Loaded Axe"
+  },
+  {
+    "id": "sekiro-024",
+    "difficulty": "easy",
+    "question": "What is the title of the game's final main story boss (in most endings)?",
+    "options": ["Great Shinobi Owl", "Isshin, the Sword Saint", "Demon of Hatred", "Genichiro Ashina"],
+    "answer": "Isshin, the Sword Saint"
+  },
+  {
+    "id": "sekiro-025",
+    "difficulty": "easy",
+    "question": "What consumable is used to cure Dragonrot?",
+    "options": ["Dragon's Blood Droplet", "Pellet", "Antidote Powder", "Mibu Balloon"],
+    "answer": "Dragon's Blood Droplet"
+  },
+  {
+    "id": "sekiro-026",
+    "difficulty": "hard",
+    "question": "In which Japanese period is the game set?",
+    "options": ["Edo", "Heian", "Sengoku", "Meiji"],
+    "answer": "Sengoku"
+  },
+  {
+    "id": "sekiro-027",
+    "difficulty": "easy",
+    "question": "What is the name of the special sword that can kill immortals?",
+    "options": ["Kusabimaru", "Mortal Blade", "Sabimaru", "Holy Blade"],
+    "answer": "Mortal Blade"
+  },
+  {
+    "id": "sekiro-028",
+    "difficulty": "easy",
+    "question": "Which main boss resides in the Hirata Estate initial memory?",
+    "options": ["Lady Butterfly", "Guardian Ape", "Corrupted Monk", "Folding Screen Monkeys"],
+    "answer": "Lady Butterfly"
+  },
+  {
+    "id": "sekiro-029",
+    "difficulty": "easy",
+    "question": "What is the name of the NPC who lets you practice combat at the temple?",
+    "options": ["Hanbei the Undying", "Anayama", "Blackhat Badger", "Kotaro"],
+    "answer": "Hanbei the Undying"
+  },
+  {
+    "id": "sekiro-030",
+    "difficulty": "easy",
+    "question": "What resource is consumed when using Prosthetic Tools?",
+    "options": ["Mana", "Stamina", "Spirit Emblems", "Oil"],
+    "answer": "Spirit Emblems"
+  },
+  {
+    "id": "sekiro-031",
+    "difficulty": "easy",
+    "question": "What is the name of the giant boss with a flaming log on its head?",
+    "options": ["Raging Bull", "Blazing Bull", "Great Bull", "Ashina Bull"],
+    "answer": "Blazing Bull"
+  },
+  {
+    "id": "sekiro-032",
+    "difficulty": "easy",
+    "question": "What do you receive from the Sculptor to unlock new skill trees?",
+    "options": ["Esoteric Texts", "Prayer Beads", "Sen", "Skill Points"],
+    "answer": "Esoteric Texts"
+  },
+  {
+    "id": "sekiro-033",
+    "difficulty": "easy",
+    "question": "What is the name of the 'true' immortality Kuro possesses?",
+    "options": ["Centipede curse", "Dragon's Heritage", "Mibu Water", "Rejuvenating Sediment"],
+    "answer": "Dragon's Heritage"
+  },
+  {
+    "id": "sekiro-034",
+    "difficulty": "easy",
+    "question": "Which character is the leader and commander of the Ashina clan during the game?",
+    "options": ["Isshin Ashina", "Genichiro Ashina", "Lord Kuro", "The Owl"],
+    "answer": "Genichiro Ashina"
+  },
+  {
+    "id": "sekiro-037",
+    "difficulty": "easy",
+    "question": "What item increases the number of uses for the Healing Gourd?",
+    "options": ["Gourd Seeds", "Water of the Palace", "Rice", "Pellets"],
+    "answer": "Gourd Seeds"
+  },
+  {
+    "id": "sekiro-038",
+    "difficulty": "hard",
+    "question": "What is the effect of the 'Unseen Aid' mechanic?",
+    "options": ["Increased damage", "Prevents loss of Sen/XP on death", "Reveals hidden items", "Heals the player"],
+    "answer": "Prevents loss of Sen/XP on death"
+  },
+  {
+    "id": "sekiro-hard-035",
+    "difficulty": "hard",
+    "question": "How many total 'Lapis Lazuli' can be obtained in a single NG cycle?",
+    "options": ["4", "5", "6", "8"],
+    "answer": "6"
+  },
+  {
+    "id": "sekiro-hard-039",
+    "difficulty": "hard",
+    "question": "The 'Old Hag' NPC at Ashina Castle requests what item to tell you about the Great Serpent?",
+    "options": ["Rice", "Sake", "Persimmon", "Mibu Balloon"],
+    "answer": "Rice"
+  },
+  {
+    "id": "sekiro-med-045",
+    "difficulty": "medium",
+    "question": "How many 'Resurrection' nodes can Wolf have at most?",
+    "options": ["1", "2", "3", "4"],
+    "answer": "3"
+  },
+  {
+    "id": "sekiro-hard-027",
+    "difficulty": "hard",
+    "question": "What is the real name of the 'Owl's' secret technique that combines a thrust and a leap?",
+    "options": ["Shadowrush", "Shadowfall", "Spiral Cloud Passage", "Mist Raven's Feathers"],
+    "answer": "Shadowfall"
+  },
+  {
+    "id": "sekiro-hard-026",
+    "difficulty": "hard",
+    "question": "Which specific 'Sugar' consumable is represented by the color light blue and increases stealth?",
+    "options": ["Ako's Sugar", "Gachiin's Sugar", "Ungo's Sugar", "Gokan's Sugar"],
+    "answer": "Gachiin's Sugar"
+  },
+  {
+    "id": "sekiro-med-048",
+    "difficulty": "hard",
+    "question": "Which skill tree contains the 'Emma's Medicine' passive skills?",
+    "options": ["Shinobi Arts", "Prosthetic Arts", "Ashina Arts", "Mushin Arts"],
+    "answer": "Prosthetic Arts"
+  },
+  {
+    "id": "sekiro-med-039",
+    "difficulty": "medium",
+    "question": "Which Ninjutsu Technique allows you to turn a killed enemy into an ally?",
+    "options": ["Bloodsmoke", "Puppeteer", "Bestowal", "Shadowrush"],
+    "answer": "Puppeteer"
+  },
+  {
+    "id": "sekiro-med-026",
+    "difficulty": "hard",
+    "question": "Which item is required to access the Hirata Estate memory at the Dilapidated Temple?",
+    "options": ["Young Lord's Bell Charm", "Kuro's Charm", "Aromatic Branch", "Gatekeeper's Key"],
+    "answer": "Young Lord's Bell Charm"
+  },
+  {
+    "id": "sekiro-039",
+    "difficulty": "easy",
+    "question": "What status effect causes rapid health loss and is represented by a purple bar?",
+    "options": ["Poison", "Burn", "Terror", "Shock"],
+    "answer": "Terror"
+  },
+  {
+    "id": "sekiro-040",
+    "difficulty": "easy",
+    "question": "Which button is used to perform a 'Deathblow' when an enemy's posture is broken?",
+    "options": ["L1/LB", "R1/RB", "Square/X", "Triangle/Y"],
+    "answer": "R1/RB"
+  },
+  {
+    "id": "sekiro-041",
+    "difficulty": "hard",
+    "question": "Where does the Divine Child of Rejuvenation reside?",
+    "options": ["Ashina Castle", "Senpou Temple", "Fountainhead Palace", "Mibu Village"],
+    "answer": "Senpou Temple"
+  },
+  {
+    "id": "sekiro-042",
+    "difficulty": "hard",
+    "question": "What is the name of the boss encountered in the 'Abandoned Dungeon'?",
+    "options": ["Shichimen Warrior", "Headless", "Lone Shadow", "Centipede Giraffe"],
+    "answer": "Shichimen Warrior"
+  },
+  {
+    "id": "sekiro-easy-002",
+    "question": "What is the full title of the game?",
+    "options": ["Sekiro: Shadows Die Twice", "Sekiro: Blade of Ashina", "Sekiro: Rise of the Wolf", "Sekiro: Path of the Dragon"],
+    "answer": "Sekiro: Shadows Die Twice",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sekiro-easy-009",
+    "question": "Who cuts off Wolf's arm at the start of the game?",
+    "options": ["Owl", "Isshin", "Genichiro Ashina", "Lady Butterfly"],
+    "answer": "Genichiro Ashina",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sekiro-easy-049",
+    "question": "How many endings does Sekiro have?",
+    "options": ["2", "3", "4", "5"],
+    "answer": "4",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sekiro-hard-149",
+    "question": "Sekiro won which major Game Awards title for 2019?",
+    "options": ["Best Action Game only", "Game of the Year", "Best RPG", "Best Narrative"],
+    "answer": "Game of the Year",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sekiro-044",
+    "difficulty": "easy",
+    "question": "What do you do with 'Memories' obtained from major bosses?",
+    "options": ["Increase Vitality", "Increase Attack Power", "Unlock Skills", "Upgrade Prosthetics"],
+    "answer": "Increase Attack Power"
+  },
+{
+"id": "sekiro-easy-0003",
+"question": "What year was Sekiro released?",
+"options": ["2018", "2019", "2020", "2017"],
+"answer": "2019",
+"difficulty": "hard"
+},
+  {
+    "id": "sekiro-045",
+    "difficulty": "hard",
+    "question": "Which ending is triggered by obeying the Iron Code and betraying Kuro?",
+    "options": ["Immortal Severance", "Purification", "Return", "Shura"],
+    "answer": "Shura"
+  },
+{
+"id": "inv-051",
+"difficulty": "hard",
+"question": "What is the name of the prosthetic tool that allows Wolf to perform a mid-air recovery after being hit?",
+"options": ["Mist Raven", "Loaded Umbrella", "Shinobi Firecracker", "Flame Barrel"],
+"answer": "Mist Raven"
+},
+{
+"id": "inv-052",
+"difficulty": "hard",
+"question": "Which boss must be defeated to obtain the 'Mortal Blade'?",
+"options": ["Genichiro Ashina", "Folding Screen Monkeys", "Guardian Ape", "Lady Butterfly"],
+"answer": "Folding Screen Monkeys"
+},
+{
+"id": "inv-053",
+"difficulty": "medium",
+"question": "What is the true identity of the Sculptor?",
+"options": ["Owl", "Hanzō", "Sekijo", "Dogen"],
+"answer": "Sekijo"
+},
+{
+"id": "inv-054",
+"difficulty": "hard",
+"question": "In the 'Purification' ending, what item is needed alongside the Dragon's Tears?",
+"options": ["Frozen Tears", "Everblossom Flower", "Aromatic Flower", "Auruous Water"],
+"answer": "Everblossom Flower"
+},
+{
+"id": "inv-055",
+"difficulty": "hard",
+"question": "Which combat art is rewarded for defeating the Inner Genichiro boss?",
+"options": ["Dragon Flash", "One Mind", "Sakura Dance", "Empowered Mortal Draw"],
+"answer": "Sakura Dance"
+},
+{
+"id": "inv-060",
+"difficulty": "hard",
+"question": "What is the unique effect of the 'Bestowal Ninjutsu'?",
+"options": ["Health regen on kill", "Increased sword reach and damage", "Invisibility", "Mind control"],
+"answer": "Increased sword reach and damage"
+},
+{
+"id": "inv-063",
+"difficulty": "hard",
+"question": "What is the name of the flute used to upgrade the Finger Whistle into 'Malcontent'?",
+"options": ["Sculptor's Whistle", "Malcontent's Ring", "Phantom Flute", "Demon's Bell"],
+"answer": "Malcontent's Ring"
+},
+{
+"id": "inv-064",
+"difficulty": "hard",
+"question": "Which mini-boss guards the entrance to the Gun Fort?",
+"options": ["Long-arm Gentipede Giraffe", "Snake Eyes Shirafuji", "O-Rin of the Water", "Seven Ashina Spears"],
+"answer": "Snake Eyes Shirafuji"
+},
+{
+"id": "inv-064",
+"difficulty": "hard",
+"question": "Which boss guards the inner shrine in the Gun Fort?",
+"options": ["Long-arm Gentipede Giraffe", "Snake Eyes Shirafuji", "O-Rin of the Water", "Seven Ashina Spears"],
+"answer": "Long-arm Gentipede Giraffe"
+},
+{
+"id": "inv-065",
+"difficulty": "hard",
+"question": "What status effect does the 'Scream' attack of the Headless Ape cause?",
+"options": ["Poison", "Burn", "Terror", "Shock"],
+"answer": "Terror"
+},
+{
+"id": "inv-068",
+"difficulty": "hard",
+"question": "What item allows Wolf to breathe underwater?",
+"options": ["Lung of the Sea", "Mibu Breathing Technique", "Dragon's Lung", "Gourd of Bubbles"],
+"answer": "Mibu Breathing Technique"
+},
+{
+"id": "inv-069",
+"difficulty": "hard",
+"question": "Which NPC is looking for a 'sturdy man' to send to the abandoned dungeon?",
+"options": ["Dojun", "Kotaro", "Jinzaemon", "Anayama"],
+"answer": "Dojun"
+},
+{
+"id": "inv-070",
+"difficulty": "hard",
+"question": "The 'Sabimaru' prosthetic is particularly effective against which group of enemies?",
+"options": ["Monks", "Okami Warriors", "Nightjar Ninjas", "Red Guard"],
+"answer": "Okami Warriors"
+},
+{
+"id": "inv-072",
+"difficulty": "hard",
+"question": "Which of these is NOT a version of the Monkey boss?",
+"options": ["Seeing Monkey", "Hearing Monkey", "Speaking Monkey", "Fighting Monkey"],
+"answer": "Fighting Monkey"
+},
+{
+"id": "inv-075",
+"difficulty": "hard",
+"question": "Who created the Prosthetic Arm originally?",
+"options": ["The Sculptor", "Dogen", "Isshin Ashina", "Kuro"],
+"answer": "Dogen"
+},
+{
+"id": "inv-079",
+"difficulty": "hard",
+"question": "What does the 'Demon Bell' do to the game's difficulty?",
+"options": ["Decreases it", "Increases it", "No change to difficulty", "Removes bosses"],
+"answer": "Increases it"
+},
+{
+"id": "inv-086",
+"difficulty": "hard",
+"question": "What is the maximum number of Healing Gourd charges you can have?",
+"options": ["8", "9", "10", "12"],
+"answer": "10"
+},
+{
+"id": "inv-099",
+"difficulty": "hard",
+"question": "Which item allows you to teleport back to the last Sculptor's Idol?",
+"options": ["Homeward Idol", "Spirit Balloon", "Bell Demon", "Bite Down"],
+"answer": "Homeward Idol"
+},
+{
+"id": "inv-104",
+"difficulty": "hard",
+"question": "What is the name of the woman the Sculptor trained with in the Sunken Valley?",
+"options": ["Emma", "Lady Butterfly", "Kingfisher", "Tomoe"],
+"answer": "Kingfisher"
+},
+{
+"id": "inv-114",
+"difficulty": "hard",
+"question": "In the Shura ending, which two characters are the final bosses back-to-back?",
+"options": ["Emma and Isshin Ashina", "Owl and Genichiro", "Emma and Owl", "Isshin and Kuro"],
+"answer": "Emma and Isshin Ashina"
+},
+{
+"id": "inv-122",
+"difficulty": "hard",
+"question": "What is the 'Dragon Tally Board' used for?",
+"options": ["Upgrading the sword", "Unlocking more items in shops", "Increasing Spirit Emblems", "Accessing Fountainhead"],
+"answer": "Unlocking more items in shops"
+},
+{
+"id": "inv-124",
+"difficulty": "hard",
+"question": "Who is the leader of the clan that guards the Sunken Valley?",
+"options": ["Ashina Clan", "Okami Clan", "Snake Eyes", "Nightjar"],
+"answer": "Snake Eyes"
+},
+{
+"id": "inv-125",
+"difficulty": "hard",
+"question": "The 'Phantom Kunai' is an upgrade material for which tool?",
+"options": ["Loaded Shuriken", "Sabimaru", "Mist Raven", "Loaded Axe"],
+"answer": "Loaded Shuriken"
+},
+{
+"id": "inv-128",
+"difficulty": "hard",
+"question": "Which skill tree contains the 'Breath of Life: Light' ability?",
+"options": ["Shinobi Arts", "Ashina Arts", "Prosthetic Arts", "Senpou Arts"],
+"answer": "Shinobi Arts"
+},
+{
+"id": "inv-128",
+"difficulty": "hard",
+"question": "Which skill tree contains the 'Breath of Nature: Light' ability?",
+"options": ["Shinobi Arts", "Ashina Arts", "Prosthetic Arts", "Senpou Arts"],
+"answer": "Ashina Arts"
+},
+{
+"id": "inv-129",
+"difficulty": "hard",
+"question": "How many 'Treasure Carp Scales' are required to buy the 'Mask Fragment: Left'?",
+"options": ["5", "7", "12", "15"],
+"answer": "12"
+},
+{
+"id": "inv-133",
+"difficulty": "hard",
+"question": "What is the name of the legendary swordswoman from whom Genichiro learned lightning techniques?",
+"options": ["Tomoe", "Takeru", "Emma", "O-Rin"],
+"answer": "Tomoe"
+},
+{
+"id": "inv-134",
+"difficulty": "hard",
+"question": "The 'Dragon's Flash' attack is performed by which boss?",
+"options": ["Isshin, the Sword Saint", "Genichiro, Way of Tomoe", "Great Shinobi Owl", "Divine Dragon"],
+"answer": "Isshin, the Sword Saint"
+},
+{
+"id": "inv-139",
+"difficulty": "hard",
+"question": "What is the maximum number of Spirit Emblems a player can carry after all upgrades?",
+"options": ["15", "18", "20", "21"],
+"answer": "20"
+},
+{
+"id": "inv-143",
+"difficulty": "hard",
+"question": "Which NPC becomes the second merchant at the Dilapidated Temple?",
+"options": ["Fujioka the Info Broker", "Anayama", "Blackhat Badger", "Pot Noble Harunaga"],
+"answer": "Fujioka the Info Broker"
+},
+{
+"id": "inv-144",
+"difficulty": "hard",
+"question": "How many phases does the 'True Corrupted Monk' boss fight have?",
+"options": ["1", "2", "3", "4"],
+"answer": "3"
+},
+{
+"id": "inv-148",
+"difficulty": "hard",
+"question": "Which of these is NOT a location in the game?",
+"options": ["Senpou Temple", "Sunken Valley", "Forbidden Woods", "Fountainhead Palace"],
+"answer": "Forbidden Woods"
+},
+{
+"id": "inv-149",
+"difficulty": "hard",
+"question": "Which item removes the 'Rot' from the world's NPCs?",
+"options": ["Dragon's Blood Droplet", "Mortal Blade", "Healing Gourd", "Mibu Balloon"],
+"answer": "Dragon's Blood Droplet"
+}
+]
+
+
+

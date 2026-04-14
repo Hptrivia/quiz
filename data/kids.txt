@@ -1,0 +1,723 @@
+[
+  {
+    "id": 1,
+    "question": "What color are bananas when they are ripe?",
+    "options": ["Yellow", "Blue", "Purple", "Black"],
+    "answer": "Yellow",
+    "difficulty": "easy"
+  },
+  {
+    "id": 2,
+    "question": "Which animal says 'moo'?",
+    "options": ["Cow", "Dog", "Cat", "Sheep"],
+    "answer": "Cow",
+    "difficulty": "easy"
+  },
+  {
+    "id": 3,
+    "question": "How many legs does a spider have?",
+    "options": ["8", "6", "4", "10"],
+    "answer": "8",
+    "difficulty": "easy"
+  },
+  {
+    "id": 4,
+    "question": "Which planet do we live on?",
+    "options": ["Earth", "Mars", "Jupiter", "Venus"],
+    "answer": "Earth",
+    "difficulty": "easy"
+  },
+  {
+    "id": 5,
+    "question": "What do bees make?",
+    "options": ["Honey", "Milk", "Bread", "Juice"],
+    "answer": "Honey",
+    "difficulty": "easy"
+  },
+  {
+    "id": 6,
+    "question": "Which season comes after summer?",
+    "options": ["Autumn", "Spring", "Winter", "Rainy"],
+    "answer": "Autumn",
+    "difficulty": "easy"
+  },
+  {
+    "id": 7,
+    "question": "What shape has three sides?",
+    "options": ["Triangle", "Circle", "Square", "Rectangle"],
+    "answer": "Triangle",
+    "difficulty": "easy"
+  },
+  {
+    "id": 8,
+    "question": "Which animal is known as man's best friend?",
+    "options": ["Dog", "Cat", "Rabbit", "Horse"],
+    "answer": "Dog",
+    "difficulty": "easy"
+  },
+  {
+    "id": 9,
+    "question": "How many days are in a week?",
+    "options": ["7", "5", "6", "8"],
+    "answer": "7",
+    "difficulty": "easy"
+  },
+  {
+    "id": 10,
+    "question": "What do you call frozen water?",
+    "options": ["Ice", "Steam", "Rain", "Cloud"],
+    "answer": "Ice",
+    "difficulty": "easy"
+  },
+  {
+    "id": 11,
+    "question": "Which animal says 'meow'?",
+    "options": ["Cat", "Dog", "Duck", "Horse"],
+    "answer": "Cat",
+    "difficulty": "easy"
+  },
+  {
+    "id": 12,
+    "question": "What color is grass?",
+    "options": ["Green", "Blue", "Red", "Purple"],
+    "answer": "Green",
+    "difficulty": "easy"
+  },
+  {
+    "id": 13,
+    "question": "How many wheels does a bicycle usually have?",
+    "options": ["2", "3", "4", "1"],
+    "answer": "2",
+    "difficulty": "easy"
+  },
+  {
+    "id": 14,
+    "question": "Which animal is famous for having a long neck?",
+    "options": ["Giraffe", "Elephant", "Lion", "Dog"],
+    "answer": "Giraffe",
+    "difficulty": "easy"
+  },
+  {
+    "id": 15,
+    "question": "What do cows drink?",
+    "options": ["Water", "Milk", "Juice", "Tea"],
+    "answer": "Water",
+    "difficulty": "easy"
+  },
+  {
+    "id": 16,
+    "question": "Which part of your body do you use to see?",
+    "options": ["Eyes", "Ears", "Hands", "Feet"],
+    "answer": "Eyes",
+    "difficulty": "easy"
+  },
+  {
+    "id": 17,
+    "question": "What color is the sky on a clear day?",
+    "options": ["Blue", "Green", "Pink", "Orange"],
+    "answer": "Blue",
+    "difficulty": "easy"
+  },
+  {
+    "id": 18,
+    "question": "Which animal says 'quack'?",
+    "options": ["Duck", "Cow", "Pig", "Cat"],
+    "answer": "Duck",
+    "difficulty": "easy"
+  },
+  {
+    "id": 19,
+    "question": "How many fingers do most people have in total?",
+    "options": ["10", "8", "12", "6"],
+    "answer": "10",
+    "difficulty": "easy"
+  },
+  {
+    "id": 20,
+    "question": "Which fruit is usually red and has seeds on the outside?",
+    "options": ["Strawberry", "Banana", "Apple", "Grape"],
+    "answer": "Strawberry",
+    "difficulty": "easy"
+  },
+  {
+    "id": 21,
+    "question": "What do you use to write on a blackboard?",
+    "options": ["Chalk", "Soap", "Glue", "Paint"],
+    "answer": "Chalk",
+    "difficulty": "easy"
+  },
+  {
+    "id": 22,
+    "question": "Which meal do people usually eat first in the day?",
+    "options": ["Breakfast", "Lunch", "Dinner", "Dessert"],
+    "answer": "Breakfast",
+    "difficulty": "easy"
+  },
+  {
+    "id": 23,
+    "question": "Which animal is known for hopping and carrying a baby in a pouch?",
+    "options": ["Kangaroo", "Bear", "Tiger", "Dolphin"],
+    "answer": "Kangaroo",
+    "difficulty": "easy"
+  },
+  {
+    "id": 24,
+    "question": "What do fish use to breathe underwater?",
+    "options": ["Gills", "Lungs", "Noses", "Beaks"],
+    "answer": "Gills",
+    "difficulty": "easy"
+  },
+  {
+    "id": 25,
+    "question": "Which shape is perfectly round?",
+    "options": ["Circle", "Square", "Triangle", "Rectangle"],
+    "answer": "Circle",
+    "difficulty": "easy"
+  },
+  {
+    "id": 26,
+    "question": "What do you call a baby dog?",
+    "options": ["Puppy", "Kitten", "Calf", "Cub"],
+    "answer": "Puppy",
+    "difficulty": "easy"
+  },
+  {
+    "id": 27,
+    "question": "Which hand do most people write with?",
+    "options": ["Right", "Left", "Both", "Neither"],
+    "answer": "Right",
+    "difficulty": "easy"
+  },
+  {
+    "id": 29,
+    "question": "What do you wear on your feet?",
+    "options": ["Shoes", "Gloves", "Hat", "Scarf"],
+    "answer": "Shoes",
+    "difficulty": "easy"
+  },
+  {
+    "id": 30,
+    "question": "Which animal is known for barking?",
+    "options": ["Dog", "Cat", "Mouse", "Duck"],
+    "answer": "Dog",
+    "difficulty": "easy"
+  },
+  {
+    "id": 31,
+    "question": "What do you use to cut paper safely in class?",
+    "options": ["Scissors", "Fork", "Spoon", "Brush"],
+    "answer": "Scissors",
+    "difficulty": "easy"
+  },
+  {
+    "id": 32,
+    "question": "How many months are in a year?",
+    "options": ["12", "10", "8", "14"],
+    "answer": "12",
+    "difficulty": "easy"
+  },
+  {
+    "id": 34,
+    "question": "Which star gives us light during the day?",
+    "options": ["The Sun", "The Moon", "Mars", "Venus"],
+    "answer": "The Sun",
+    "difficulty": "easy"
+  },
+  {
+    "id": 35,
+    "question": "What do you call a young cat?",
+    "options": ["Kitten", "Puppy", "Cub", "Chick"],
+    "answer": "Kitten",
+    "difficulty": "easy"
+  },
+  {
+    "id": 36,
+    "question": "What do we use to smell things?",
+    "options": ["Nose", "Eye", "Ear", "Knee"],
+    "answer": "Nose",
+    "difficulty": "easy"
+  },
+  {
+    "id": 37,
+    "question": "Which animal can give us wool?",
+    "options": ["Sheep", "Chicken", "Pig", "Duck"],
+    "answer": "Sheep",
+    "difficulty": "easy"
+  },
+  {
+    "id": 38,
+    "question": "What color are most school buses in many countries' cartoons and books?",
+    "options": ["Yellow", "Blue", "Purple", "White"],
+    "answer": "Yellow",
+    "difficulty": "easy"
+  },
+  {
+    "id": 39,
+    "question": "How many ears does most person have?",
+    "options": ["2", "1", "3", "4"],
+    "answer": "2",
+    "difficulty": "easy"
+  },
+  {
+    "id": 40,
+    "question": "Which season is usually the coldest?",
+    "options": ["Winter", "Summer", "Spring", "Autumn"],
+    "answer": "Winter",
+    "difficulty": "easy"
+  },
+  {
+    "id": 41,
+    "question": "What do chickens lay?",
+    "options": ["Eggs", "Wool", "Honey", "Milk"],
+    "answer": "Eggs",
+    "difficulty": "easy"
+  },
+  {
+    "id": 42,
+    "question": "Which color do you get when you mix red and yellow?",
+    "options": ["Orange", "Green", "Purple", "Blue"],
+    "answer": "Orange",
+    "difficulty": "medium"
+  },
+  {
+    "id": 43,
+    "question": "What is 5 + 5?",
+    "options": ["10", "8", "12", "9"],
+    "answer": "10",
+    "difficulty": "easy"
+  },
+  {
+    "id": 44,
+    "question": "Which animal is called the king of the jungle?",
+    "options": ["Lion", "Tiger", "Elephant", "Monkey"],
+    "answer": "Lion",
+    "difficulty": "easy"
+  },
+  {
+    "id": 45,
+    "question": "What do you call the red light at a traffic signal?",
+    "options": ["Stop", "Go", "Hurry", "Turn"],
+    "answer": "Stop",
+    "difficulty": "easy"
+  },
+  {
+    "id": 46,
+    "question": "Which ocean animal has eight arms?",
+    "options": ["Octopus", "Shark", "Whale", "Seal"],
+    "answer": "Octopus",
+    "difficulty": "easy"
+  },
+  {
+    "id": 47,
+    "question": "How many sides does a square have?",
+    "options": ["4", "3", "5", "6"],
+    "answer": "4",
+    "difficulty": "easy"
+  },
+  {
+    "id": 48,
+    "question": "What do firefighters usually use to put out fires?",
+    "options": ["Water", "Sandwiches", "Pillows", "Paper"],
+    "answer": "Water",
+    "difficulty": "easy"
+  },
+  {
+    "id": 49,
+    "question": "Which animal is the biggest on land?",
+    "options": ["Elephant", "Horse", "Lion", "Giraffe"],
+    "answer": "Elephant",
+    "difficulty": "easy"
+  },
+  {
+    "id": 50,
+    "question": "What is the opposite of day?",
+    "options": ["Night", "Morning", "Noon", "Sun"],
+    "answer": "Night",
+    "difficulty": "easy"
+  },
+  {
+    "id": 51,
+    "question": "What do you wear on your head?",
+    "options": ["Hat", "Sock", "Belt", "Glove"],
+    "answer": "Hat",
+    "difficulty": "easy"
+  },
+  {
+    "id": 52,
+    "question": "Which fruit is orange in color and name?",
+    "options": ["Orange", "Apple", "Banana", "Kiwi"],
+    "answer": "Orange",
+    "difficulty": "easy"
+  },
+  {
+    "id": 53,
+    "question": "What sound does a sheep make?",
+    "options": ["Baa", "Moo", "Woof", "Quack"],
+    "answer": "Baa",
+    "difficulty": "easy"
+  },
+  {
+    "id": 54,
+    "question": "How many toes do most people have in total?",
+    "options": ["10", "8", "12", "6"],
+    "answer": "10",
+    "difficulty": "easy"
+  },
+  {
+    "id": 55,
+    "question": "Which planet is known as the Red Planet?",
+    "options": ["Mars", "Earth", "Venus", "Jupiter"],
+    "answer": "Mars",
+    "difficulty": "medium"
+  },
+  {
+    "id": 56,
+    "question": "What is 2 + 3?",
+    "options": ["5", "4", "6", "7"],
+    "answer": "5",
+    "difficulty": "easy"
+  },
+  {
+    "id": 58,
+    "question": "What do you call water that falls from clouds?",
+    "options": ["Rain", "Snow", "Steam", "Fog"],
+    "answer": "Rain",
+    "difficulty": "easy"
+  },
+  {
+    "id": 59,
+    "question": "Which part of a plant is usually green and helps it make food?",
+    "options": ["Leaf", "Root", "Seed", "Rock"],
+    "answer": "Leaf",
+    "difficulty": "medium"
+  },
+  {
+    "id": 60,
+    "question": "What do you brush to keep them clean every day?",
+    "options": ["Teeth", "Elbows", "Knees", "Ears"],
+    "answer": "Teeth",
+    "difficulty": "easy"
+  },
+  {
+    "id": 61,
+    "question": "Which animal lives in water and is known for being very big and blue?",
+    "options": ["Whale", "Cat", "Goat", "Fox"],
+    "answer": "Whale",
+    "difficulty": "easy"
+  },
+  {
+    "id": 64,
+    "question": "What do you need to do before crossing the road?",
+    "options": ["Look both ways", "Run fast", "Close your eyes", "Jump"],
+    "answer": "Look both ways",
+    "difficulty": "easy"
+  },
+  {
+    "id": 65,
+    "question": "What is 10 - 1?",
+    "options": ["9", "8", "10", "7"],
+    "answer": "9",
+    "difficulty": "easy"
+  },
+  {
+    "id": 66,
+    "question": "Which animal is famous for carrying a shell on its back?",
+    "options": ["Turtle", "Horse", "Wolf", "Monkey"],
+    "answer": "Turtle",
+    "difficulty": "easy"
+  },
+  {
+    "id": 68,
+    "question": "Which room in a house is usually used for cooking?",
+    "options": ["Kitchen", "Bathroom", "Bedroom", "Garage"],
+    "answer": "Kitchen",
+    "difficulty": "easy"
+  },
+  {
+    "id": 70,
+    "question": "Which animal can change color and is famous for blending in?",
+    "options": ["Chameleon", "Elephant", "Rabbit", "Whale"],
+    "answer": "Chameleon",
+    "difficulty": "hard"
+  },
+  {
+    "id": 71,
+    "question": "How many hours are in a day?",
+    "options": ["24", "12", "36", "48"],
+    "answer": "24",
+    "difficulty": "hard"
+  },
+  {
+    "id": 74,
+    "question": "Which animal is known for black and white stripes?",
+    "options": ["Zebra", "Tiger", "Panda", "Skunk"],
+    "answer": "Zebra",
+    "difficulty": "easy"
+  },
+  {
+    "id": 75,
+    "question": "What do caterpillars turn into?",
+    "options": ["Butterflies", "Spiders", "Mice", "Fish"],
+    "answer": "Butterflies",
+    "difficulty": "easy"
+  },
+  {
+    "id": 76,
+    "question": "Which animal is famous for swinging from trees?",
+    "options": ["Monkey", "Cow", "Horse", "Penguin"],
+    "answer": "Monkey",
+    "difficulty": "easy"
+  },
+  {
+    "id": 77,
+    "question": "What do you call the baby of a chicken?",
+    "options": ["Chick", "Cub", "Puppy", "Calf"],
+    "answer": "Chick",
+    "difficulty": "easy"
+  },
+  {
+    "id": 78,
+    "question": "What is 3 + 4?",
+    "options": ["7", "6", "8", "9"],
+    "answer": "7",
+    "difficulty": "easy"
+  },
+  {
+    "id": 79,
+    "question": "Which animal is known for being very slow and carrying a shell?",
+    "options": ["Snail", "Rabbit", "Cheetah", "Dolphin"],
+    "answer": "Snail",
+    "difficulty": "easy"
+  },
+  {
+    "id": 80,
+    "question": "What do you call the person who teaches students in school?",
+    "options": ["Teacher", "Farmer", "Pilot", "Chef"],
+    "answer": "Teacher",
+    "difficulty": "easy"
+  },
+  {
+    "id": 81,
+    "question": "Which color do you get when you mix blue and yellow?",
+    "options": ["Green", "Purple", "Orange", "Red"],
+    "answer": "Green",
+    "difficulty": "medium"
+  },
+  {
+    "id": 82,
+    "question": "What is the opposite of hot?",
+    "options": ["Cold", "Warm", "Wet", "Dry"],
+    "answer": "Cold",
+    "difficulty": "easy"
+  },
+  {
+    "id": 83,
+    "question": "Which animal is famous for black and white fur and eating bamboo?",
+    "options": ["Panda", "Tiger", "Zebra", "Goat"],
+    "answer": "Panda",
+    "difficulty": "easy"
+  },
+  {
+    "id": 84,
+    "question": "How many sides does a triangle have?",
+    "options": ["3", "4", "5", "2"],
+    "answer": "3",
+    "difficulty": "easy"
+  },
+  {
+    "id": 85,
+    "question": "What do you call the place where books are kept for people to borrow?",
+    "options": ["Library", "Bakery", "Garage", "Factory"],
+    "answer": "Library",
+    "difficulty": "easy"
+  },
+  {
+    "id": 86,
+    "question": "What is 6 - 2?",
+    "options": ["4", "3", "5", "2"],
+    "answer": "4",
+    "difficulty": "easy"
+  },
+  {
+    "id": 88,
+    "question": "What do you use to tell the time on a wall?",
+    "options": ["Clock", "Mirror", "Calendar", "Window"],
+    "answer": "Clock",
+    "difficulty": "easy"
+  },
+  {
+    "id": 91,
+    "question": "What do you call a group of stars that makes a pattern in the sky?",
+    "options": ["Constellation", "Rainbow", "Cloud", "Planet"],
+    "answer": "Constellation",
+    "difficulty": "hard"
+  },
+  {
+    "id": 92,
+    "question": "Which animal is known as the fastest land animal?",
+    "options": ["Cheetah", "Horse", "Lion", "Leopard"],
+    "answer": "Cheetah",
+    "difficulty": "medium"
+  },
+  {
+    "id": 93,
+    "question": "What is 4 + 4?",
+    "options": ["8", "7", "9", "6"],
+    "answer": "8",
+    "difficulty": "easy"
+  },
+  {
+    "id": 94,
+    "question": "Which season comes after winter?",
+    "options": ["Spring", "Summer", "Autumn", "Rainy"],
+    "answer": "Spring",
+    "difficulty": "easy"
+  },
+  {
+    "id": 96,
+    "question": "Which animal says 'neigh'?",
+    "options": ["Horse", "Cow", "Pig", "Duck"],
+    "answer": "Horse",
+    "difficulty": "easy"
+  },
+  {
+    "id": 97,
+    "question": "What is the name of our natural satellite that shines at night?",
+    "options": ["Moon", "Sun", "Mars", "Star"],
+    "answer": "Moon",
+    "difficulty": "easy"
+  },
+  {
+    "id": 98,
+    "question": "Which room in a house is usually used for sleeping?",
+    "options": ["Bedroom", "Kitchen", "Bathroom", "Garage"],
+    "answer": "Bedroom",
+    "difficulty": "easy"
+  },
+  {
+    "id": 99,
+    "question": "What is 9 - 3?",
+    "options": ["6", "5", "7", "4"],
+    "answer": "6",
+    "difficulty": "easy"
+  },
+  {
+    "id": 100,
+    "question": "Which animal is famous for carrying people in the desert?",
+    "options": ["Camel", "Tiger", "Hippo", "Seal"],
+    "answer": "Camel",
+    "difficulty": "easy"
+  },
+  {
+    "id": 104,
+    "question": "What do you call the person who helps put out fires?",
+    "options": ["Firefighter", "Painter", "Driver", "Singer"],
+    "answer": "Firefighter",
+    "difficulty": "easy"
+  },
+  {
+    "id": 105,
+    "question": "Which fruit is green on the outside and red on the inside with black seeds?",
+    "options": ["Watermelon", "Apple", "Kiwi", "Pear"],
+    "answer": "Watermelon",
+    "difficulty": "easy"
+  },
+  {
+    "id": 106,
+    "question": "What is 7 + 2?",
+    "options": ["9", "8", "10", "7"],
+    "answer": "9",
+    "difficulty": "easy"
+  },
+  {
+    "id": 107,
+    "question": "Which animal is known for making a web?",
+    "options": ["Spider", "Bee", "Ant", "Fly"],
+    "answer": "Spider",
+    "difficulty": "easy"
+  },
+  {
+    "id": 108,
+    "question": "What do you use to drink soup?",
+    "options": ["Spoon", "Fork", "Knife", "Brush"],
+    "answer": "Spoon",
+    "difficulty": "easy"
+  },
+  {
+    "id": 109,
+    "question": "Which color do you get when you mix red and blue?",
+    "options": ["Purple", "Green", "Orange", "Yellow"],
+    "answer": "Purple",
+    "difficulty": "medium"
+  },
+  {
+    "id": 111,
+    "question": "Which animal is known for laughing in its name and living in Australia?",
+    "options": ["Kookaburra", "Penguin", "Robin", "Owl"],
+    "answer": "Kookaburra",
+    "difficulty": "hard"
+  },
+  {
+    "id": 112,
+    "question": "What do you call the baby of a frog before it grows legs?",
+    "options": ["Tadpole", "Puppy", "Larva", "Cub"],
+    "answer": "Tadpole",
+    "difficulty": "medium"
+  },
+  {
+    "id": 113,
+    "question": "What is 12 - 5?",
+    "options": ["7", "6", "8", "5"],
+    "answer": "7",
+    "difficulty": "easy"
+  },
+  {
+    "id": 116,
+    "question": "What do we call baby sheep?",
+    "options": ["Lambs", "Calves", "Foals", "Kids"],
+    "answer": "Lambs",
+    "difficulty": "medium"
+  },
+  {
+    "id": 117,
+    "question": "Which room in a house usually has a shower?",
+    "options": ["Bathroom", "Kitchen", "Bedroom", "Dining room"],
+    "answer": "Bathroom",
+    "difficulty": "easy"
+  },
+  {
+    "id": 118,
+    "question": "What is 8 + 1?",
+    "options": ["9", "10", "8", "7"],
+    "answer": "9",
+    "difficulty": "easy"
+  },
+  {
+    "id": 119,
+    "question": "Which animal is known for having a trunk?",
+    "options": ["Elephant", "Rhino", "Hippo", "Buffalo"],
+    "answer": "Elephant",
+    "difficulty": "easy"
+  },
+  {
+    "id": 122,
+    "question": "What is the opposite of big?",
+    "options": ["Small", "Tall", "Wide", "Long"],
+    "answer": "Small",
+    "difficulty": "easy"
+  },
+  {
+    "id": 123,
+    "question": "Which animal is known for black and white coloring and living in Antarctica?",
+    "options": ["Penguin", "Panda", "Zebra", "Seal"],
+    "answer": "Penguin",
+    "difficulty": "easy"
+  },
+  {
+    "id": 125,
+    "question": "Which day comes after Friday?",
+    "options": ["Saturday", "Sunday", "Thursday", "Monday"],
+    "answer": "Saturday",
+    "difficulty": "easy"
+  }
+]

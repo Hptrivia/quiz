@@ -1,0 +1,842 @@
+[
+  {
+    "id": 1,
+    "question": "Which TV series follows a group of 6 friends living in New York?",
+    "options": ["Friends", "How I Met Your Mother", "New Girl", "Seinfeld"],
+    "answer": "Friends",
+    "difficulty": "easy"
+  },
+  {
+    "id": 2,
+    "question": "Which TV series is set in the fictional continent of Westeros?",
+    "options": ["Game of Thrones", "The Witcher", "House of the Dragon", "Vikings"],
+    "answer": "Game of Thrones",
+    "difficulty": "easy"
+  },
+  {
+    "id": 3,
+    "question": "Which TV series follows chemistry teacher Walter White?",
+    "options": ["Breaking Bad", "Better Call Saul", "Ozark", "Narcos"],
+    "answer": "Breaking Bad",
+    "difficulty": "easy"
+  },
+  {
+    "id": 4,
+    "question": "Which TV series is set in the Dunder Mifflin paper company?",
+    "options": ["The Office", "Parks and Recreation", "Brooklyn Nine-Nine", "Superstore"],
+    "answer": "The Office",
+    "difficulty": "easy"
+  },
+  {
+    "id": 5,
+    "question": "Which TV series features the characters Eleven, Mike, Dustin, and Lucas?",
+    "options": ["Stranger Things", "Dark", "Locke & Key", "Wednesday"],
+    "answer": "Stranger Things",
+    "difficulty": "easy"
+  },
+  {
+    "id": 6,
+    "question": "Which TV series is about doctors at Grey Sloan Memorial Hospital?",
+    "options": ["Grey's Anatomy", "House", "ER", "The Good Doctor"],
+    "answer": "Grey's Anatomy",
+    "difficulty": "easy"
+  },
+  {
+    "id": 7,
+    "question": "Which sitcom centers on the Belcher family and their burger restaurant?",
+    "options": ["Bob's Burgers", "The Simpsons", "Family Guy", "King of the Hill"],
+    "answer": "Bob's Burgers",
+    "difficulty": "easy"
+  },
+  {
+    "id": 8,
+    "question": "Which TV series follows Sheldon, Leonard, Penny, Howard, and Raj?",
+    "options": ["The Big Bang Theory", "How I Met Your Mother", "Friends", "Community"],
+    "answer": "The Big Bang Theory",
+    "difficulty": "easy"
+  },
+  {
+    "id": 9,
+    "question": "Which TV series features a masked killer game in South Korea?",
+    "options": ["Squid Game", "Alice in Borderland", "Money Heist", "Hellbound"],
+    "answer": "Squid Game",
+    "difficulty": "easy"
+  },
+  {
+    "id": 10,
+    "question": "Which TV series follows the Addams family at Nevermore Academy?",
+    "options": ["Wednesday", "Chilling Adventures of Sabrina", "Riverdale", "The Umbrella Academy"],
+    "answer": "Wednesday",
+    "difficulty": "easy"
+  },
+  {
+    "id": 11,
+    "question": "Which animated TV series is about the Griffin family?",
+    "options": ["Family Guy", "The Simpsons", "American Dad!", "South Park"],
+    "answer": "Family Guy",
+    "difficulty": "easy"
+  },
+  {
+    "id": 12,
+    "question": "Which TV series is centered on a chemistry teacher turned meth producer?",
+    "options": ["Breaking Bad", "Narcos", "Ozark", "Weeds"],
+    "answer": "Breaking Bad",
+    "difficulty": "easy"
+  },
+  {
+    "id": 13,
+    "question": "Which TV series follows a zombie apocalypse and characters like Rick Grimes and Daryl Dixon?",
+    "options": ["The Walking Dead", "Fear the Walking Dead", "The Last of Us", "Black Summer"],
+    "answer": "The Walking Dead",
+    "difficulty": "easy"
+  },
+  {
+    "id": 14,
+    "question": "Which TV series is about a family running a funeral home?",
+    "options": ["Six Feet Under", "Succession", "Shameless", "Dead to Me"],
+    "answer": "Six Feet Under",
+    "difficulty": "easy"
+  },
+  {
+    "id": 15,
+    "question": "Which TV series follows Ted Mosby and his friends?",
+    "options": ["How I Met Your Mother", "Friends", "New Girl", "The Big Bang Theory"],
+    "answer": "How I Met Your Mother",
+    "difficulty": "easy"
+  },
+  {
+    "id": 16,
+    "question": "Which TV series is set in a women's prison called Litchfield?",
+    "options": ["Orange Is the New Black", "Wentworth", "The Handmaid's Tale", "Glow"],
+    "answer": "Orange Is the New Black",
+    "difficulty": "easy"
+  },
+  {
+    "id": 17,
+    "question": "Which TV series follows the Shelby family in Birmingham?",
+    "options": ["Peaky Blinders", "Boardwalk Empire", "Sons of Anarchy", "Taboo"],
+    "answer": "Peaky Blinders",
+    "difficulty": "easy"
+  },
+  {
+    "id": 18,
+    "question": "Which TV series features the family Homer, Marge, Bart, Lisa, and Maggie?",
+    "options": ["The Simpsons", "Family Guy", "Bob's Burgers", "American Dad!"],
+    "answer": "The Simpsons",
+    "difficulty": "easy"
+  },
+  {
+    "id": 19,
+    "question": "Which TV series is about a wealthy media family led by Logan Roy?",
+    "options": ["Succession", "Billions", "Industry", "Empire"],
+    "answer": "Succession",
+    "difficulty": "easy"
+  },
+  {
+    "id": 20,
+    "question": "Which TV series stars Pedro Pascal as Joel in a post-apocalyptic world?",
+    "options": ["The Last of Us", "The Mandalorian", "Station Eleven", "Fallout"],
+    "answer": "The Last of Us",
+    "difficulty": "easy"
+  },
+  {
+    "id": 21,
+    "question": "Which sitcom is set around a study group at Greendale Community College?",
+    "options": ["Community", "Brooklyn Nine-Nine", "Parks and Recreation", "The Office"],
+    "answer": "Community",
+    "difficulty": "easy"
+  },
+  {
+    "id": 22,
+    "question": "Which TV series follows an awkward teenage girl named Devi Vishwakumar?",
+    "options": ["Never Have I Ever", "Ginny & Georgia", "Sex Education", "Heartstopper"],
+    "answer": "Never Have I Ever",
+    "difficulty": "hard"
+  },
+  {
+    "id": 23,
+    "question": "Which TV series follows Rory and Lorelai?",
+    "options": ["Gilmore Girls", "One Tree Hill", "Dawson's Creek", "Felicity"],
+    "answer": "Gilmore Girls",
+    "difficulty": "easy"
+  },
+  {
+    "id": 24,
+    "question": "Which TV series is about a forensic blood spatter analyst who is also a serial killer?",
+    "options": ["Dexter", "You", "Barry", "Mindhunter"],
+    "answer": "Dexter",
+    "difficulty": "easy"
+  },
+  {
+    "id": 25,
+    "question": "Which TV series follows the Pearson family across different timelines?",
+    "options": ["This Is Us", "Parenthood", "Brothers & Sisters", "A Million Little Things"],
+    "answer": "This Is Us",
+    "difficulty": "easy"
+  },
+  {
+    "id": 26,
+    "question": "Which TV series is about students at Liberty High and starts with Hannah Baker's tapes?",
+    "options": ["13 Reasons Why", "Euphoria", "Elite", "Skins"],
+    "answer": "13 Reasons Why",
+    "difficulty": "easy"
+  },
+  {
+    "id": 27,
+    "question": "Which TV series follows the Bluth family after losing their fortune?",
+    "options": ["Arrested Development", "Schitt's Creek", "Modern Family", "Succession"],
+    "answer": "Arrested Development",
+    "difficulty": "easy"
+  },
+  {
+    "id": 28,
+    "question": "Which TV series follows detective Jake Peralta in the NYPD?",
+    "options": ["Brooklyn Nine-Nine", "The Rookie", "Castle", "Psych"],
+    "answer": "Brooklyn Nine-Nine",
+    "difficulty": "easy"
+  },
+  {
+    "id": 29,
+    "question": "Which TV series is about the wealthy Carrington family?",
+    "options": ["Dynasty", "Succession", "Empire", "Dallas"],
+    "answer": "Dynasty",
+    "difficulty": "easy"
+  },
+  {
+    "id": 30,
+    "question": "Which TV series follows the employees in Pawnee?",
+    "options": ["Parks and Recreation", "The Office", "Superstore", "Community"],
+    "answer": "Parks and Recreation",
+    "difficulty": "easy"
+  },
+  {
+    "id": 32,
+    "question": "Which TV series follows lawyer Jimmy McGill?",
+    "options": ["Better Call Saul", "Suits", "The Good Wife", "Billions"],
+    "answer": "Better Call Saul",
+    "difficulty": "easy"
+  },
+  {
+    "id": 35,
+    "question": "Which TV series follows students at East Highland High and stars Zendaya?",
+    "options": ["Euphoria", "Elite", "Skins", "Gossip Girl"],
+    "answer": "Euphoria",
+    "difficulty": "easy"
+  },
+  {
+    "id": 37,
+    "question": "Which sitcom follows the Rose family after they lose their fortune?",
+    "options": ["Schitt's Creek", "Arrested Development", "Modern Family", "Kim's Convenience"],
+    "answer": "Schitt's Creek",
+    "difficulty": "easy"
+  },
+  {
+    "id": 39,
+    "question": "Which TV series is about a quirky group working in Cloud 9?",
+    "options": ["Superstore", "The Office", "Parks and Recreation", "Community"],
+    "answer": "Superstore",
+    "difficulty": "easy"
+  },
+  {
+    "id": 40,
+    "question": "Which TV series follows a high school teacher and his wife, who are secretly KGB spies in the U.S.?",
+    "options": ["The Americans", "Homeland", "24", "The Diplomat"],
+    "answer": "The Americans",
+    "difficulty": "easy"
+  },
+  {
+    "id": 41,
+    "question": "Which TV series follows the affluent and dramatic lives of Serena and Blair?",
+    "options": ["Gossip Girl", "The O.C.", "90210", "Elite"],
+    "answer": "Gossip Girl",
+    "difficulty": "easy"
+  },
+  {
+    "id": 43,
+    "question": "Which TV series follows an English football coach hired to manage AFC Richmond?",
+    "options": ["Ted Lasso", "Welcome to Wrexham", "Ballers", "The League"],
+    "answer": "Ted Lasso",
+    "difficulty": "easy"
+  },
+  {
+    "id": 44,
+    "question": "Which TV series follows a young queen navigating royal life in Britain?",
+    "options": ["The Crown", "Victoria", "Reign", "Bridgerton"],
+    "answer": "The Crown",
+    "difficulty": "easy"
+  },
+  {
+    "id": 46,
+    "question": "Which TV series follows the students of Moordale Secondary and Otis Milburn?",
+    "options": ["Sex Education", "Heartstopper", "Skins", "Never Have I Ever"],
+    "answer": "Sex Education",
+    "difficulty": "easy"
+  },
+  {
+    "id": 47,
+    "question": "Which TV series follows the lives of the Tanner family in San Francisco?",
+    "options": ["Full House", "Step by Step", "Modern Family", "Growing Pains"],
+    "answer": "Full House",
+    "difficulty": "easy"
+  },
+  {
+    "id": 48,
+    "question": "Which TV series follows Olivia Benson in the Special Victims Unit?",
+    "options": ["Law & Order", "CSI", "Criminal Minds", "NCIS"],
+    "answer": "Law & Order",
+    "difficulty": "easy"
+  },
+  {
+    "id": 49,
+    "question": "Which TV series follows the lives of vampires in Mystic Falls?",
+    "options": ["The Vampire Diaries", "True Blood", "Buffy the Vampire Slayer", "Teen Wolf"],
+    "answer": "The Vampire Diaries",
+    "difficulty": "easy"
+  },
+  {
+    "id": 50,
+    "question": "Which TV series follows a dysfunctional family on Wisteria Lane?",
+    "options": ["Desperate Housewives", "Big Little Lies", "Devious Maids", "Why Women Kill"],
+    "answer": "Desperate Housewives",
+    "difficulty": "easy"
+  },
+  {
+    "id": 52,
+    "question": "What is the name of Walter White's former student and partner in Breaking Bad?",
+    "options": ["Jesse Pinkman", "Saul Goodman", "Mike Ehrmantraut", "Hank Schrader"],
+    "answer": "Jesse Pinkman",
+    "difficulty": "medium"
+  },
+  {
+    "id": 53,
+    "question": "What is the name of the coffee shop the Friends characters often visit?",
+    "options": ["Central Perk", "Monk's Café", "The Peach Pit", "MacLaren's"],
+    "answer": "Central Perk",
+    "difficulty": "medium"
+  },
+  {
+    "id": 54,
+    "question": "Who sits on the Iron Throne at the end of Game of Thrones?",
+    "options": ["No one", "Jon Snow", "Daenerys Targaryen", "Sansa Stark"],
+    "answer": "No one",
+    "difficulty": "medium"
+  },
+  {
+    "id": 56,
+    "question": "What is Sheldon Cooper's profession in The Big Bang Theory at the start of the series?",
+    "options": ["Physicist", "Doctor", "Chemist", "Engineer"],
+    "answer": "Physicist",
+    "difficulty": "hard"
+  },
+  {
+    "id": 57,
+    "question": "What is the name of the paper company in The Office?",
+    "options": ["Dunder Mifflin", "Staples & Co.", "Sabre Point", "Paper Depot"],
+    "answer": "Dunder Mifflin",
+    "difficulty": "medium"
+  },
+  {
+    "id": 58,
+    "question": "Who is Meredith Grey's mother in Grey's Anatomy?",
+    "options": ["Ellis Grey", "Addison Grey", "Maggie Grey", "Lexie Grey"],
+    "answer": "Ellis Grey",
+    "difficulty": "medium"
+  },
+  {
+    "id": 60,
+    "question": "What is Dexter Morgan's day job in Dexter?",
+    "options": ["Blood spatter analyst", "Detective", "Coroner", "Lawyer"],
+    "answer": "Blood spatter analyst",
+    "difficulty": "medium"
+  },
+  {
+    "id": 62,
+    "question": "What is the name of the family in Succession?",
+    "options": ["Roy", "Pierce", "Carrington", "Bluth"],
+    "answer": "Roy",
+    "difficulty": "medium"
+  },
+  {
+    "id": 63,
+    "question": "What school does Wednesday attend in Wednesday?",
+    "options": ["Nevermore Academy", "Nightshade Academy", "Blackwood School", "Ravenhall Academy"],
+    "answer": "Nevermore Academy",
+    "difficulty": "medium"
+  },
+  {
+    "id": 64,
+    "question": "What is the name of the fictional city where The Simpsons takes place?",
+    "options": ["Springfield", "Shelbyville", "Quahog", "Arlen"],
+    "answer": "Springfield",
+    "difficulty": "medium"
+  },
+  {
+    "id": 65,
+    "question": "Which Friend says 'How you doin?'",
+    "options": ["Joey", "Chandler", "Ross", "Mike"],
+    "answer": "Joey",
+    "difficulty": "medium"
+  },
+  {
+    "id": 66,
+    "question": "What is the name of Eleven's adoptive police-chief father figure in Stranger Things?",
+    "options": ["Jim Hopper", "Bob Newby", "Steve Harrington", "Murray Bauman"],
+    "answer": "Jim Hopper",
+    "difficulty": "medium"
+  },
+  {
+    "id": 67,
+    "question": "Who is Walter White's lawyer in Breaking Bad?",
+    "options": ["Saul Goodman", "Howard Hamlin", "Kim Wexler", "Gus Fring"],
+    "answer": "Saul Goodman",
+    "difficulty": "medium"
+  },
+  {
+    "id": 68,
+    "question": "What does Michael Scott burn his foot on in The Office?",
+    "options": ["A George Foreman grill", "A space heater", "A toaster", "A kettle"],
+    "answer": "A George Foreman grill",
+    "difficulty": "hard"
+  },
+  {
+    "id": 69,
+    "question": "Who is the mother of dragons in Game of Thrones?",
+    "options": ["Daenerys Targaryen", "Cersei Lannister", "Sansa Stark", "Melisandre"],
+    "answer": "Daenerys Targaryen",
+    "difficulty": "hard"
+  },
+  {
+    "id": 71,
+    "question": "What is the title of Queen Elizabeth II's husband in The Crown?",
+    "options": ["Prince Philip", "Duke Charles", "King Philip", "Lord Mountbatten"],
+    "answer": "Prince Philip",
+    "difficulty": "hard"
+  },
+  {
+    "id": 72,
+    "question": "What is the name of the football club in Ted Lasso?",
+    "options": ["AFC Richmond", "FC London", "West Ham United", "AFC Wrexham"],
+    "answer": "AFC Richmond",
+    "difficulty": "hard"
+  },
+  {
+    "id": 73,
+    "question": "Who is the gossip blogger in the original Gossip Girl series?",
+    "options": ["Dan Humphrey", "Nate Archibald", "Chuck Bass", "Eric van der Woodsen"],
+    "answer": "Dan Humphrey",
+    "difficulty": "hard"
+  },
+  {
+    "id": 74,
+    "question": "Which brother is the eldest in The Vampire Diaries?",
+    "options": ["Damon", "Stefan", "Jeremy", "Tyler"],
+    "answer": "Damon",
+    "difficulty": "medium"
+  },
+  {
+    "id": 77,
+    "question": "Who is Devi's late father in Never Have I Ever?",
+    "options": ["Mohan", "Nikhil", "Prakash", "Arun"],
+    "answer": "Mohan",
+    "difficulty": "medium"
+  },
+  {
+    "id": 78,
+    "question": "Who is the mother in Gilmore Girls?",
+    "options": ["Lorelai", "Rory", "Emily", "Paris"],
+    "answer": "Lorelai",
+    "difficulty": "medium"
+  },
+  {
+    "id": 79,
+    "question": "What is the name of the prison in Orange Is the New Black?",
+    "options": ["Litchfield", "Wentworth", "Blackgate", "Bedford"],
+    "answer": "Litchfield",
+    "difficulty": "hard"
+  },
+  {
+    "id": 80,
+    "question": "What city is Peaky Blinders primarily set in?",
+    "options": ["Birmingham", "London", "Manchester", "Liverpool"],
+    "answer": "Birmingham",
+    "difficulty": "medium"
+  },
+  {
+    "id": 81,
+    "question": "Which doctor is known as 'McDreamy' in Grey's Anatomy?",
+    "options": ["Derek Shepherd", "Mark Sloan", "Preston Burke", "Alex Karev"],
+    "answer": "Derek Shepherd",
+    "difficulty": "medium"
+  },
+  {
+    "id": 82,
+    "question": "What is Barney Stinson's favorite word in How I Met Your Mother?",
+    "options": ["Legendary", "Awesome", "Bro", "Suit up"],
+    "answer": "Legendary",
+    "difficulty": "medium"
+  },
+  {
+    "id": 83,
+    "question": "Who plays the title role in Wednesday?",
+    "options": ["Jenna Ortega", "Millie Bobby Brown", "Kiernan Shipka", "Emma Myers"],
+    "answer": "Jenna Ortega",
+    "difficulty": "medium"
+  },
+  {
+    "id": 84,
+    "question": "Which Roy sibling is often seen as the eldest son in Succession despite Connor being older?",
+    "options": ["Kendall", "Roman", "Shiv", "Connor"],
+    "answer": "Kendall",
+    "difficulty": "hard"
+  },
+  {
+    "id": 85,
+    "question": "Who is the principal love interest of Otis in much of Sex Education?",
+    "options": ["Maeve", "Ruby", "Aimee", "Lily"],
+    "answer": "Maeve",
+    "difficulty": "hard"
+  },
+  {
+    "id": 86,
+    "question": "What is the family surname in Desperate Housewives for Susan and Julie?",
+    "options": ["Mayer", "Scavo", "Solis", "Van de Kamp"],
+    "answer": "Mayer",
+    "difficulty": "medium"
+  },
+  {
+    "id": 87,
+    "question": "Which character works at Los Pollos Hermanos in Breaking Bad?",
+    "options": ["Gus Fring", "Tuco Salamanca", "Hank Schrader", "Ted Beneke"],
+    "answer": "Gus Fring",
+    "difficulty": "medium"
+  },
+  {
+    "id": 88,
+    "question": "Who is the regional manager at the start of The Office?",
+    "options": ["Michael Scott", "Jim Halpert", "Dwight Schrute", "Ryan Howard"],
+    "answer": "Michael Scott",
+    "difficulty": "medium"
+  },
+  {
+    "id": 89,
+    "question": "What is Jon Snow's direwolf named in Game of Thrones?",
+    "options": ["Ghost", "Nymeria", "Summer", "Grey Wind"],
+    "answer": "Ghost",
+    "difficulty": "medium"
+  },
+  {
+    "id": 91,
+    "question": "What is the name of the school's football star in Euphoria who dates Maddy?",
+    "options": ["Nate Jacobs", "Fezco", "Cal Jacobs", "Elliot"],
+    "answer": "Nate Jacobs",
+    "difficulty": "medium"
+  },
+  {
+    "id": 93,
+    "question": "Who is the captain in Brooklyn Nine-Nine for most of the series?",
+    "options": ["Raymond Holt", "Terry Jeffords", "Jake Peralta", "Madeline Wuntch"],
+    "answer": "Raymond Holt",
+    "difficulty": "medium"
+  },
+  {
+    "id": 96,
+    "question": "Who is the ruler of Dragonstone at the start of House of the Dragon?",
+    "options": ["Daemon Targaryen", "Rhaenyra Targaryen", "Viserys I", "Corlys Velaryon"],
+    "answer": "Daemon Targaryen",
+    "difficulty": "hard"
+  },
+  {
+    "id": 97,
+    "question": "What is the first name of Dr. House in House?",
+    "options": ["Gregory", "George", "Graham", "Gabriel"],
+    "answer": "Gregory",
+    "difficulty": "medium"
+  },
+  {
+    "id": 98,
+    "question": "Who is the footballer-turned-pundit style veteran on AFC Richmond in Ted Lasso?",
+    "options": ["Roy Kent", "Jamie Tartt", "Sam Obisanya", "Dani Rojas"],
+    "answer": "Roy Kent",
+    "difficulty": "hard"
+  },
+  {
+    "id": 99,
+    "question": "What is Eleven's real first name in Stranger Things?",
+    "options": ["Jane", "Sarah", "Max", "Joyce"],
+    "answer": "Jane",
+    "difficulty": "medium"
+  },
+  {
+    "id": 100,
+    "question": "Which actress plays Meredith Grey in Grey's Anatomy?",
+    "options": ["Ellen Pompeo", "Katherine Heigl", "Sandra Oh", "Kate Walsh"],
+    "answer": "Ellen Pompeo",
+    "difficulty": "medium"
+  },
+  {
+    "id": 102,
+    "question": "Which actor portrayed Saul Goodman in Breaking Bad and Better Call Saul?",
+    "options": ["Bob Odenkirk", "Bryan Cranston", "Aaron Paul", "Jonathan Banks"],
+    "answer": "Bob Odenkirk",
+    "difficulty": "hard"
+  },
+  {
+    "id": 103,
+    "question": "What is the name of the fictional county where The Walking Dead begins for Rick Grimes?",
+    "options": ["King County", "Fulton County", "Cobb County", "Jefferson County"],
+    "answer": "King County",
+    "difficulty": "hard"
+  },
+  {
+    "id": 104,
+    "question": "Which House of the Dragon actor plays King Viserys I Targaryen?",
+    "options": ["Paddy Considine", "Matt Smith", "Rhys Ifans", "Fabien Frankel"],
+    "answer": "Paddy Considine",
+    "difficulty": "hard"
+  },
+  {
+    "id": 105,
+    "question": "What is the name of Logan Roy's company in Succession?",
+    "options": ["Waystar Royco", "Roy Global", "Star Roy Media", "ATN Group"],
+    "answer": "Waystar Royco",
+    "difficulty": "hard"
+  },
+  {
+    "id": 108,
+    "question": "What is the title of the first episode of Stranger Things?",
+    "options": ["The Vanishing of Will Byers", "Madmax", "The Weirdo on Maple Street", "Chapter One"],
+    "answer": "The Vanishing of Will Byers",
+    "difficulty": "hard"
+  },
+  {
+    "id": 109,
+    "question": "Which actress plays Shiv Roy in Succession?",
+    "options": ["Sarah Snook", "Kieran Culkin", "J. Smith-Cameron", "Annabelle Dexter-Jones"],
+    "answer": "Sarah Snook",
+    "difficulty": "hard"
+  },
+  {
+    "id": 111,
+    "question": "Which actor played Prince Philip in the first two seasons of The Crown?",
+    "options": ["Matt Smith", "Tobias Menzies", "Jonathan Pryce", "Dominic West"],
+    "answer": "Matt Smith",
+    "difficulty": "hard"
+  },
+  {
+    "id": 112,
+    "question": "What is the name of the town in Gilmore Girls?",
+    "options": ["Stars Hollow", "Tree Hill", "Mystic Falls", "Bluebell"],
+    "answer": "Stars Hollow",
+    "difficulty": "hard"
+  },
+  {
+    "id": 114,
+    "question": "Which actor portrays Tommy Shelby in Peaky Blinders?",
+    "options": ["Cillian Murphy", "Tom Hardy", "Paul Anderson", "Sam Claflin"],
+    "answer": "Cillian Murphy",
+    "difficulty": "hard"
+  },
+  {
+    "id": 115,
+    "question": "What is the first name of Dr. Melfi in The Sopranos?",
+    "options": ["Jennifer", "Janice", "Joanne", "Jessica"],
+    "answer": "Jennifer",
+    "difficulty": "hard"
+  },
+  {
+    "id": 116,
+    "question": "Which actress plays Villanelle in Killing Eve?",
+    "options": ["Jodie Comer", "Sandra Oh", "Phoebe Waller-Bridge", "Fiona Shaw"],
+    "answer": "Jodie Comer",
+    "difficulty": "hard"
+  },
+  {
+    "id": 117,
+    "question": "What is the name of the pub in How I Met Your Mother?",
+    "options": ["MacLaren's", "McGinty's", "Paddy's Pub", "Cheers"],
+    "answer": "MacLaren's",
+    "difficulty": "hard"
+  },
+  {
+    "id": 118,
+    "question": "Which actor played Michael Scott in The Office?",
+    "options": ["Steve Carell", "John Krasinski", "Rainn Wilson", "Ed Helms"],
+    "answer": "Steve Carell",
+    "difficulty": "hard"
+  },
+  {
+    "id": 120,
+    "question": "Which actor voices BoJack in BoJack Horseman?",
+    "options": ["Will Arnett", "Aaron Paul", "Paul F. Tompkins", "Jason Bateman"],
+    "answer": "Will Arnett",
+    "difficulty": "hard"
+  },
+  {
+    "id": 122,
+    "question": "Which actor played Daemon Targaryen in House of the Dragon?",
+    "options": ["Matt Smith", "Fabien Frankel", "Rhys Ifans", "Paddy Considine"],
+    "answer": "Matt Smith",
+    "difficulty": "hard"
+  },
+  {
+    "id": 124,
+    "question": "What is the name of the media news network within Succession?",
+    "options": ["ATN", "NTN", "WNR", "GNN"],
+    "answer": "ATN",
+    "difficulty": "hard"
+  },
+  {
+    "id": 125,
+    "question": "Which actress played Blair Waldorf in Gossip Girl?",
+    "options": ["Leighton Meester", "Blake Lively", "Taylor Momsen", "Jessica Szohr"],
+    "answer": "Leighton Meester",
+    "difficulty": "hard"
+  },
+  {
+    "id": 126,
+    "question": "Which actor portrayed Logan Roy in Succession?",
+    "options": ["Brian Cox", "Jeremy Strong", "Kieran Culkin", "Matthew Macfadyen"],
+    "answer": "Brian Cox",
+    "difficulty": "hard"
+  },
+  {
+    "id": 127,
+    "question": "What is the name of the company where Jim and Pam work in The Office?",
+    "options": ["Dunder Mifflin", "Sabre", "Athlead", "Vance Refrigeration"],
+    "answer": "Dunder Mifflin",
+    "difficulty": "hard"
+  },
+  {
+    "id": 128,
+    "question": "Which actress played Daenerys Targaryen in Game of Thrones?",
+    "options": ["Emilia Clarke", "Natalie Dormer", "Sophie Turner", "Lena Headey"],
+    "answer": "Emilia Clarke",
+    "difficulty": "hard"
+  },
+  {
+    "id": 129,
+    "question": "What is the first name of Dr. Cox in Scrubs?",
+    "options": ["Perry", "Jordan", "Christopher", "John"],
+    "answer": "Perry",
+    "difficulty": "hard"
+  },
+  {
+    "id": 130,
+    "question": "Which actor plays Joe Goldberg in You?",
+    "options": ["Penn Badgley", "Ed Westwick", "Chace Crawford", "Adam Brody"],
+    "answer": "Penn Badgley",
+    "difficulty": "hard"
+  },
+  {
+    "id": 131,
+    "question": "Which actress played Olivia Pope in Scandal?",
+    "options": ["Kerry Washington", "Viola Davis", "Taraji P. Henson", "Regina King"],
+    "answer": "Kerry Washington",
+    "difficulty": "hard"
+  },
+  {
+    "id": 132,
+    "question": "What is the surname of the family in Modern Family that includes Jay, Claire, and Mitchell?",
+    "options": ["Pritchett", "Dunphy", "Tucker", "Delgado"],
+    "answer": "Pritchett",
+    "difficulty": "hard"
+  },
+  {
+    "id": 133,
+    "question": "Which actor played Dr. Gregory House in House?",
+    "options": ["Hugh Laurie", "David Tennant", "Benedict Cumberbatch", "James Spader"],
+    "answer": "Hugh Laurie",
+    "difficulty": "hard"
+  },
+  {
+    "id": 134,
+    "question": "Who created the original 1990s Twin Peaks series with Mark Frost?",
+    "options": ["David Lynch", "David Fincher", "J.J. Abrams", "Chris Carter"],
+    "answer": "David Lynch",
+    "difficulty": "hard"
+  },
+  {
+    "id": 136,
+    "question": "Which actor played Tyrion Lannister in Game of Thrones?",
+    "options": ["Peter Dinklage", "Nikolaj Coster-Waldau", "Alfie Allen", "Aidan Gillen"],
+    "answer": "Peter Dinklage",
+    "difficulty": "hard"
+  },
+  {
+    "id": 137,
+    "question": "Which actress plays Jean Milburn in Sex Education?",
+    "options": ["Gillian Anderson", "Emma Mackey", "Aimee Lou Wood", "Ncuti Gatwa"],
+    "answer": "Gillian Anderson",
+    "difficulty": "hard"
+  },
+  {
+    "id": 139,
+    "question": "Which actor plays Kendall Roy in Succession?",
+    "options": ["Jeremy Strong", "Kieran Culkin", "Matthew Macfadyen", "Alan Ruck"],
+    "answer": "Jeremy Strong",
+    "difficulty": "hard"
+  },
+  {
+    "id": 140,
+    "question": "What is the full title of the company founded by Rebecca's ex-husband in Ted Lasso's later seasons?",
+    "options": ["West Ham United", "Richmond FC Holdings", "Akufo League", "Dubai Air FC"],
+    "answer": "West Ham United",
+    "difficulty": "hard"
+  },
+  {
+    "id": 141,
+    "question": "Which actor plays Lucifer Morningstar in Lucifer?",
+    "options": ["Tom Ellis", "Matt Ryan", "Ian Somerhalder", "Joseph Morgan"],
+    "answer": "Tom Ellis",
+    "difficulty": "hard"
+  },
+  {
+    "id": 142,
+    "question": "Which TV series features the fictional ad agency Sterling Cooper?",
+    "options": ["Mad Men", "Suits", "Billions", "Industry"],
+    "answer": "Mad Men",
+    "difficulty": "hard"
+  },
+  {
+    "id": 144,
+    "question": "Which actress plays Rue in Euphoria?",
+    "options": ["Zendaya", "Sydney Sweeney", "Hunter Schafer", "Alexa Demie"],
+    "answer": "Zendaya",
+    "difficulty": "hard"
+  },
+  {
+    "id": 145,
+    "question": "Which actor played Chandler Bing in Friends?",
+    "options": ["Matthew Perry", "Matt LeBlanc", "David Schwimmer", "Paul Rudd"],
+    "answer": "Matthew Perry",
+    "difficulty": "hard"
+  },
+  {
+    "id": 146,
+    "question": "What is the name of the town in The Vampire Diaries?",
+    "options": ["Mystic Falls", "Sunnydale", "Bon Temps", "Stars Hollow"],
+    "answer": "Mystic Falls",
+    "difficulty": "hard"
+  },
+  {
+    "id": 147,
+    "question": "Which actress played Villanelle's counterpart Eve Polastri in Killing Eve?",
+    "options": ["Sandra Oh", "Jodie Comer", "Phoebe Waller-Bridge", "Fiona Shaw"],
+    "answer": "Sandra Oh",
+    "difficulty": "hard"
+  },
+  {
+    "id": 148,
+    "question": "Which actor played Jamie Tartt in Ted Lasso?",
+    "options": ["Phil Dunster", "Brett Goldstein", "Nick Mohammed", "Toheeb Jimoh"],
+    "answer": "Phil Dunster",
+    "difficulty": "hard"
+  },
+  {
+    "id": 150,
+    "question": "Which actress played Serena van der Woodsen in Gossip Girl?",
+    "options": ["Blake Lively", "Leighton Meester", "Taylor Momsen", "Jessica Szohr"],
+    "answer": "Blake Lively",
+    "difficulty": "hard"
+  }
+]

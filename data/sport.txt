@@ -1,0 +1,963 @@
+[
+  {
+    "id": 1,
+    "question": "Which sport is LeBron James famous for?",
+    "options": ["Basketball", "Tennis", "Baseball", "Golf"],
+    "answer": "Basketball",
+    "difficulty": "easy"
+  },
+  {
+    "id": 2,
+    "question": "Which sport is Lionel Messi famous for?",
+    "options": ["Football", "Basketball", "Tennis", "Cricket"],
+    "answer": "Football",
+    "difficulty": "easy"
+  },
+  {
+    "id": 3,
+    "question": "Which sport is Serena Williams famous for?",
+    "options": ["Tennis", "Golf", "Swimming", "Gymnastics"],
+    "answer": "Tennis",
+    "difficulty": "easy"
+  },
+  {
+    "id": 4,
+    "question": "How many players from one team are usually on the field in football (soccer)?",
+    "options": ["11", "9", "7", "5"],
+    "answer": "11",
+    "difficulty": "easy"
+  },
+  {
+    "id": 6,
+    "question": "Which sport is played at Wimbledon?",
+    "options": ["Tennis", "Golf", "Cricket", "Badminton"],
+    "answer": "Tennis",
+    "difficulty": "easy"
+  },
+  {
+    "id": 7,
+    "question": "Which country won the FIFA World Cup in 2022?",
+    "options": ["Argentina", "France", "Brazil", "Germany"],
+    "answer": "Argentina",
+    "difficulty": "easy"
+  },
+  {
+    "id": 8,
+    "question": "Which sport is Michael Jordan most associated with?",
+    "options": ["Basketball", "Baseball", "Boxing", "Football"],
+    "answer": "Basketball",
+    "difficulty": "easy"
+  },
+  {
+    "id": 10,
+    "question": "What color card usually means a player is sent off in football?",
+    "options": ["Red", "Yellow", "Blue", "Green"],
+    "answer": "Red",
+    "difficulty": "easy"
+  },
+  {
+    "id": 11,
+    "question": "Which sport is Usain Bolt famous for?",
+    "options": ["Sprint running", "Cycling", "Swimming", "Boxing"],
+    "answer": "Sprint running",
+    "difficulty": "easy"
+  },
+  {
+    "id": 12,
+    "question": "Which sport is played in the NBA?",
+    "options": ["Basketball", "Baseball", "Ice hockey", "American football"],
+    "answer": "Basketball",
+    "difficulty": "easy"
+  },
+  {
+    "id": 13,
+    "question": "Which sport is played in the NFL?",
+    "options": ["American football", "Baseball", "Basketball", "Rugby"],
+    "answer": "American football",
+    "difficulty": "easy"
+  },
+  {
+    "id": 15,
+    "question": "Which country is strongly associated with cricket?",
+    "options": ["India", "Italy", "Brazil", "Norway"],
+    "answer": "India",
+    "difficulty": "easy"
+  },
+  {
+    "id": 16,
+    "question": "Which sport is played at the Super Bowl?",
+    "options": ["American football", "Basketball", "Baseball", "Rugby"],
+    "answer": "American football",
+    "difficulty": "easy"
+  },
+  {
+    "id": 18,
+    "question": "Which sport is Novak Djokovic famous for?",
+    "options": ["Tennis", "Golf", "Swimming", "Boxing"],
+    "answer": "Tennis",
+    "difficulty": "easy"
+  },
+  {
+    "id": 19,
+    "question": "Which sport features the Tour de France?",
+    "options": ["Cycling", "Running", "Swimming", "Tennis"],
+    "answer": "Cycling",
+    "difficulty": "easy"
+  },
+  {
+    "id": 20,
+    "question": "Which sport is Cristiano Ronaldo famous for?",
+    "options": ["Football", "Basketball", "Tennis", "Boxing"],
+    "answer": "Football",
+    "difficulty": "easy"
+  },
+  {
+    "id": 23,
+    "question": "Which sport is Simone Biles famous for?",
+    "options": ["Gymnastics", "Swimming", "Tennis", "Skating"],
+    "answer": "Gymnastics",
+    "difficulty": "easy"
+  },
+  {
+    "id": 24,
+    "question": "How many points is a touchdown worth in American football before the extra kick?",
+    "options": ["6", "3", "7", "1"],
+    "answer": "6",
+    "difficulty": "easy"
+  },
+  {
+    "id": 26,
+    "question": "Which sport is Tiger Woods famous for?",
+    "options": ["Golf", "Tennis", "Baseball", "Basketball"],
+    "answer": "Golf",
+    "difficulty": "easy"
+  },
+  {
+    "id": 27,
+    "question": "Which sport is played at the World Series?",
+    "options": ["Baseball", "Basketball", "Tennis", "Cricket"],
+    "answer": "Baseball",
+    "difficulty": "easy"
+  },
+  {
+    "id": 29,
+    "question": "Which sport is Rafael Nadal famous for?",
+    "options": ["Tennis", "Football", "Golf", "Cycling"],
+    "answer": "Tennis",
+    "difficulty": "easy"
+  },
+  {
+    "id": 33,
+    "question": "Which sport is played with a cue and colored balls on a table?",
+    "options": ["Snooker", "Tennis", "Bowling", "Darts"],
+    "answer": "Snooker",
+    "difficulty": "easy"
+  },
+  {
+    "id": 34,
+    "question": "Which sport is Roger Federer famous for?",
+    "options": ["Tennis", "Golf", "Basketball", "Cycling"],
+    "answer": "Tennis",
+    "difficulty": "easy"
+  },
+  {
+    "id": 35,
+    "question": "Which sport includes the famous event called the Masters?",
+    "options": ["Golf", "Tennis", "Cricket", "Boxing"],
+    "answer": "Golf",
+    "difficulty": "easy"
+  },
+  {
+    "id": 37,
+    "question": "Which sport is Muhammad Ali famous for?",
+    "options": ["Boxing", "Wrestling", "Basketball", "Tennis"],
+    "answer": "Boxing",
+    "difficulty": "easy"
+  },
+  {
+    "id": 38,
+    "question": "How many holes are in a standard round of golf?",
+    "options": ["18", "9", "12", "20"],
+    "answer": "18",
+    "difficulty": "easy"
+  },
+  {
+    "id": 41,
+    "question": "Which sport is Max Verstappen famous for?",
+    "options": ["Formula 1", "MotoGP", "Rally", "Cycling"],
+    "answer": "Formula 1",
+    "difficulty": "easy"
+  },
+  {
+    "id": 43,
+    "question": "Which sport is Shaquille O'Neal famous for?",
+    "options": ["Basketball", "Baseball", "American football", "Boxing"],
+    "answer": "Basketball",
+    "difficulty": "easy"
+  },
+  {
+    "id": 45,
+    "question": "Which sport is Lewis Hamilton famous for?",
+    "options": ["Formula 1", "Tennis", "Cycling", "Football"],
+    "answer": "Formula 1",
+    "difficulty": "easy"
+  },
+  {
+    "id": 47,
+    "question": "Which sport is Kylian Mbappé famous for?",
+    "options": ["Football", "Basketball", "Tennis", "Cricket"],
+    "answer": "Football",
+    "difficulty": "easy"
+  },
+  {
+    "id": 52,
+    "question": "In tennis, what is the score called when both players have 40 points?",
+    "options": ["Deuce", "Love", "Advantage", "Break point"],
+    "answer": "Deuce",
+    "difficulty": "medium"
+  },
+  {
+    "id": 53,
+    "question": "Which boxer was known as 'Iron'?",
+    "options": ["Mike Tyson", "Muhammad Ali", "Floyd Mayweather Jr.", "Manny Pacquiao"],
+    "answer": "Mike Tyson",
+    "difficulty": "medium"
+  },
+  {
+    "id": 54,
+    "question": "Which country is the home of the football club FC Barcelona?",
+    "options": ["Spain", "Italy", "France", "Portugal"],
+    "answer": "Spain",
+    "difficulty": "medium"
+  },
+  {
+    "id": 55,
+    "question": "What is the term for three goals scored by one player in a football match?",
+    "options": ["Hat-trick", "Treble", "Double", "Clean sheet"],
+    "answer": "Hat-trick",
+    "difficulty": "medium"
+  },
+  {
+    "id": 56,
+    "question": "Which athlete was nicknamed 'The Fastest Man Alive'?",
+    "options": ["Usain Bolt", "Carl Lewis", "Tyson Gay", "Noah Lyles"],
+    "answer": "Usain Bolt",
+    "difficulty": "medium"
+  },
+  {
+    "id": 58,
+    "question": "How many sets are needed to win a men's singles Grand Slam final in tennis?",
+    "options": ["3", "2", "4", "5"],
+    "answer": "3",
+    "difficulty": "medium"
+  },
+  {
+    "id": 60,
+    "question": "Which NFL legend is often referred to as 'TB12'?",
+    "options": ["Tom Brady", "Terry Bradshaw", "Tony Romo", "Troy Aikman"],
+    "answer": "Tom Brady",
+    "difficulty": "medium"
+  },
+  {
+    "id": 61,
+    "question": "Which country has won the most FIFA World Cups?",
+    "options": ["Brazil", "Germany", "Argentina", "Italy"],
+    "answer": "Brazil",
+    "difficulty": "medium"
+  },
+  {
+    "id": 62,
+    "question": "What is a score of zero called in tennis?",
+    "options": ["Love", "Deuce", "Fault", "Let"],
+    "answer": "Love",
+    "difficulty": "hard"
+  },
+  {
+    "id": 63,
+    "question": "Which golf tournament is played at Augusta National?",
+    "options": ["The Masters", "The Open Championship", "U.S. Open", "PGA Championship"],
+    "answer": "The Masters",
+    "difficulty": "hard"
+  },
+  {
+    "id": 64,
+    "question": "Which basketball player is famous for the 'Skyhook' shot?",
+    "options": ["Kareem Abdul-Jabbar", "Magic Johnson", "Larry Bird", "Wilt Chamberlain"],
+    "answer": "Kareem Abdul-Jabbar",
+    "difficulty": "hard"
+  },
+  {
+    "id": 65,
+    "question": "In baseball, how many strikes usually make an out?",
+    "options": ["3", "2", "4", "5"],
+    "answer": "3",
+    "difficulty": "hard"
+  },
+  {
+    "id": 66,
+    "question": "Which country is associated with the All Blacks rugby team?",
+    "options": ["New Zealand", "Australia", "South Africa", "England"],
+    "answer": "New Zealand",
+    "difficulty": "medium"
+  },
+  {
+    "id": 67,
+    "question": "Which Formula 1 driver is nicknamed 'The Iceman'?",
+    "options": ["Kimi Räikkönen", "Lewis Hamilton", "Fernando Alonso", "Sebastian Vettel"],
+    "answer": "Kimi Räikkönen",
+    "difficulty": "hard"
+  },
+  {
+    "id": 68,
+    "question": "Which boxer retired undefeated with a 50-0 professional record?",
+    "options": ["Floyd Mayweather Jr.", "Mike Tyson", "Manny Pacquiao", "Oscar De La Hoya"],
+    "answer": "Floyd Mayweather Jr.",
+    "difficulty": "medium"
+  },
+  {
+    "id": 69,
+    "question": "Which football club is known as 'The Red Devils'?",
+    "options": ["Manchester United", "Liverpool", "Arsenal", "AC Milan"],
+    "answer": "Manchester United",
+    "difficulty": "medium"
+  },
+  {
+    "id": 70,
+    "question": "In American football, how many points is a field goal worth?",
+    "options": ["3", "1", "2", "6"],
+    "answer": "3",
+    "difficulty": "medium"
+  },
+  {
+    "id": 71,
+    "question": "Which female gymnast won four gold medals at the 2016 Olympics?",
+    "options": ["Simone Biles", "Aly Raisman", "Gabby Douglas", "Nadia Comăneci"],
+    "answer": "Simone Biles",
+    "difficulty": "hard"
+  },
+  {
+    "id": 72,
+    "question": "Which footballer is nicknamed 'La Pulga'?",
+    "options": ["Lionel Messi", "Luis Suárez", "Neymar", "Sergio Agüero"],
+    "answer": "Lionel Messi",
+    "difficulty": "hard"
+  },
+  {
+    "id": 73,
+    "question": "Which country hosted the 2016 Summer Olympics?",
+    "options": ["Brazil", "China", "Japan", "United Kingdom"],
+    "answer": "Brazil",
+    "difficulty": "medium"
+  },
+  {
+    "id": 74,
+    "question": "What is the maximum score with one dart in standard darts?",
+    "options": ["60", "50", "100", "180"],
+    "answer": "60",
+    "difficulty": "hard"
+  },
+  {
+    "id": 75,
+    "question": "Which NBA team did Michael Jordan win most of his championships with?",
+    "options": ["Chicago Bulls", "Los Angeles Lakers", "Miami Heat", "New York Knicks"],
+    "answer": "Chicago Bulls",
+    "difficulty": "medium"
+  },
+  {
+    "id": 76,
+    "question": "Which tennis tournament is played on clay at Roland-Garros?",
+    "options": ["French Open", "US Open", "Australian Open", "Wimbledon"],
+    "answer": "French Open",
+    "difficulty": "medium"
+  },
+  {
+    "id": 77,
+    "question": "Which country won the Cricket World Cup in 2019?",
+    "options": ["England", "India", "Australia", "New Zealand"],
+    "answer": "England",
+    "difficulty": "hard"
+  },
+  {
+    "id": 78,
+    "question": "In boxing, what is a KO?",
+    "options": ["Knockout", "Kick out", "Knuckle offense", "Key opening"],
+    "answer": "Knockout",
+    "difficulty": "medium"
+  },
+  {
+    "id": 79,
+    "question": "Which famous basketball player was nicknamed 'Black Mamba'?",
+    "options": ["Kobe Bryant", "LeBron James", "Allen Iverson", "Shaquille O'Neal"],
+    "answer": "Kobe Bryant",
+    "difficulty": "medium"
+  },
+  {
+    "id": 80,
+    "question": "Which racing driver won a record-equaling seven Formula 1 world titles?",
+    "options": ["Lewis Hamilton", "Ayrton Senna", "Fernando Alonso", "Niki Lauda"],
+    "answer": "Lewis Hamilton",
+    "difficulty": "hard"
+  },
+  {
+    "id": 81,
+    "question": "Which football club plays home matches at Anfield?",
+    "options": ["Liverpool", "Chelsea", "Manchester City", "Tottenham Hotspur"],
+    "answer": "Liverpool",
+    "difficulty": "medium"
+  },
+  {
+    "id": 82,
+    "question": "What is the standard distance of a marathon?",
+    "options": ["42.195 km", "40 km", "50 km", "26 km"],
+    "answer": "42.195 km",
+    "difficulty": "hard"
+  },
+  {
+    "id": 83,
+    "question": "Which tennis player is nicknamed 'The King of Clay'?",
+    "options": ["Rafael Nadal", "Roger Federer", "Novak Djokovic", "Andy Murray"],
+    "answer": "Rafael Nadal",
+    "difficulty": "medium"
+  },
+  {
+    "id": 85,
+    "question": "Which nation won the UEFA Euro 2020 final?",
+    "options": ["Italy", "England", "France", "Spain"],
+    "answer": "Italy",
+    "difficulty": "hard"
+  },
+  {
+    "id": 86,
+    "question": "Which boxer was called 'The Greatest'?",
+    "options": ["Muhammad Ali", "Joe Frazier", "Mike Tyson", "George Foreman"],
+    "answer": "Muhammad Ali",
+    "difficulty": "medium"
+  },
+  {
+    "id": 89,
+    "question": "Which UFC fighter became famous for the nickname 'The Notorious'?",
+    "options": ["Conor McGregor", "Khabib Nurmagomedov", "Jon Jones", "Israel Adesanya"],
+    "answer": "Conor McGregor",
+    "difficulty": "hard"
+  },
+  {
+    "id": 90,
+    "question": "In snooker, what color ball is worth the most points?",
+    "options": ["Black", "Blue", "Pink", "Red"],
+    "answer": "Black",
+    "difficulty": "medium"
+  },
+  {
+    "id": 91,
+    "question": "Which basketball player is widely known for revolutionizing long-range shooting in the NBA?",
+    "options": ["Stephen Curry", "Tim Duncan", "Dirk Nowitzki", "Kevin Garnett"],
+    "answer": "Stephen Curry",
+    "difficulty": "medium"
+  },
+  {
+    "id": 92,
+    "question": "Which event is known as tennis's oldest Grand Slam tournament?",
+    "options": ["Wimbledon", "US Open", "French Open", "Australian Open"],
+    "answer": "Wimbledon",
+    "difficulty": "medium"
+  },
+  {
+    "id": 93,
+    "question": "Which football player won the 1986 World Cup with Argentina and is often compared with Messi?",
+    "options": ["Diego Maradona", "Gabriel Batistuta", "Javier Zanetti", "Hernán Crespo"],
+    "answer": "Diego Maradona",
+    "difficulty": "hard"
+  },
+  {
+    "id": 94,
+    "question": "Which sport has a competition called the Ashes?",
+    "options": ["Cricket", "Rugby", "Tennis", "Golf"],
+    "answer": "Cricket",
+    "difficulty": "medium"
+  },
+  {
+    "id": 95,
+    "question": "Which country is associated with sumo wrestling?",
+    "options": ["Japan", "China", "South Korea", "Thailand"],
+    "answer": "Japan",
+    "difficulty": "medium"
+  },
+  {
+    "id": 96,
+    "question": "Which NBA player was nicknamed 'The Diesel'?",
+    "options": ["Shaquille O'Neal", "Kobe Bryant", "Charles Barkley", "Hakeem Olajuwon"],
+    "answer": "Shaquille O'Neal",
+    "difficulty": "medium"
+  },
+  {
+    "id": 100,
+    "question": "How many players are on court for one basketball team at a time?",
+    "options": ["5", "6", "7", "11"],
+    "answer": "5",
+    "difficulty": "medium"
+  },
+
+  {
+    "id": 101,
+    "question": "Which boxer defeated Wladimir Klitschko in 2015 to become heavyweight champion?",
+    "options": ["Tyson Fury", "Anthony Joshua", "Deontay Wilder", "Oleksandr Usyk"],
+    "answer": "Tyson Fury",
+    "difficulty": "hard"
+  },
+  {
+    "id": 102,
+    "question": "Which tennis player completed a calendar-year Grand Slam in 1988 and also won Olympic gold that year?",
+    "options": ["Steffi Graf", "Martina Navratilova", "Serena Williams", "Chris Evert"],
+    "answer": "Steffi Graf",
+    "difficulty": "hard"
+  },
+  {
+    "id": 103,
+    "question": "Which country won the first ever FIFA World Cup in 1930?",
+    "options": ["Uruguay", "Brazil", "Argentina", "Italy"],
+    "answer": "Uruguay",
+    "difficulty": "hard"
+  },
+  {
+    "id": 104,
+    "question": "In golf, what is the term for three under par on a single hole?",
+    "options": ["Albatross", "Eagle", "Birdie", "Bogey"],
+    "answer": "Albatross",
+    "difficulty": "hard"
+  },
+  {
+    "id": 105,
+    "question": "Which NBA team drafted Kobe Bryant before he was traded to the Lakers?",
+    "options": ["Charlotte Hornets", "Chicago Bulls", "Boston Celtics", "Philadelphia 76ers"],
+    "answer": "Charlotte Hornets",
+    "difficulty": "hard"
+  },
+  {
+    "id": 106,
+    "question": "Which cricketer was nicknamed 'The Master Blaster'?",
+    "options": ["Sachin Tendulkar", "Virat Kohli", "MS Dhoni", "Ricky Ponting"],
+    "answer": "Sachin Tendulkar",
+    "difficulty": "hard"
+  },
+  {
+    "id": 108,
+    "question": "Which boxer famously said, 'Float like a butterfly, sting like a bee'?",
+    "options": ["Muhammad Ali", "Sugar Ray Leonard", "Joe Louis", "Mike Tyson"],
+    "answer": "Muhammad Ali",
+    "difficulty": "hard"
+  },
+  {
+    "id": 109,
+    "question": "Which football club did Diego Maradona play for in Italy?",
+    "options": ["Napoli", "Juventus", "AC Milan", "Inter Milan"],
+    "answer": "Napoli",
+    "difficulty": "hard"
+  },
+  {
+    "id": 110,
+    "question": "Which nation won the Rugby World Cup in 2019?",
+    "options": ["South Africa", "England", "New Zealand", "Australia"],
+    "answer": "South Africa",
+    "difficulty": "hard"
+  },
+  {
+    "id": 112,
+    "question": "Which athlete lit the Olympic cauldron at the 1996 Atlanta Olympics?",
+    "options": ["Muhammad Ali", "Michael Jordan", "Carl Lewis", "Magic Johnson"],
+    "answer": "Muhammad Ali",
+    "difficulty": "hard"
+  },
+  {
+    "id": 113,
+    "question": "Which baseball team is known as the Bronx Bombers?",
+    "options": ["New York Yankees", "Boston Red Sox", "Los Angeles Dodgers", "Chicago Cubs"],
+    "answer": "New York Yankees",
+    "difficulty": "hard"
+  },
+  {
+    "id": 114,
+    "question": "Which footballer scored the infamous 'Hand of God' goal?",
+    "options": ["Diego Maradona", "Pelé", "Zinedine Zidane", "Lionel Messi"],
+    "answer": "Diego Maradona",
+    "difficulty": "hard"
+  },
+  {
+    "id": 115,
+    "question": "Which boxer became the undisputed cruiserweight champion before later becoming a heavyweight champion?",
+    "options": ["Oleksandr Usyk", "Anthony Joshua", "Tyson Fury", "Vitali Klitschko"],
+    "answer": "Oleksandr Usyk",
+    "difficulty": "hard"
+  },
+  {
+    "id": 116,
+    "question": "Which country won the inaugural ICC T20 World Cup in 2007?",
+    "options": ["India", "Pakistan", "Sri Lanka", "Australia"],
+    "answer": "India",
+    "difficulty": "hard"
+  },
+  {
+    "id": 118,
+    "question": "Which golfer is nicknamed 'Lefty'?",
+    "options": ["Phil Mickelson", "Tiger Woods", "Rory McIlroy", "Jordan Spieth"],
+    "answer": "Phil Mickelson",
+    "difficulty": "hard"
+  },
+  {
+    "id": 119,
+    "question": "Which basketball player was known as 'The Answer'?",
+    "options": ["Allen Iverson", "Dwyane Wade", "Paul Pierce", "Tracy McGrady"],
+    "answer": "Allen Iverson",
+    "difficulty": "hard"
+  },
+  {
+    "id": 120,
+    "question": "Which country hosted the 1994 FIFA World Cup?",
+    "options": ["United States", "Mexico", "Italy", "France"],
+    "answer": "United States",
+    "difficulty": "hard"
+  },
+  {
+    "id": 122,
+    "question": "Which boxer was known as 'The Hitman' from Manchester?",
+    "options": ["Ricky Hatton", "Amir Khan", "Joe Calzaghe", "Naseem Hamed"],
+    "answer": "Ricky Hatton",
+    "difficulty": "hard"
+  },
+  {
+    "id": 123,
+    "question": "Which football club won the UEFA Champions League in 2012 despite not winning the Premier League that season?",
+    "options": ["Chelsea", "Manchester United", "Arsenal", "Liverpool"],
+    "answer": "Chelsea",
+    "difficulty": "hard"
+  },
+  {
+    "id": 124,
+    "question": "Which runner won both the 100m and 200m at three consecutive Olympics from 2008 to 2016?",
+    "options": ["Usain Bolt", "Yohan Blake", "Justin Gatlin", "Carl Lewis"],
+    "answer": "Usain Bolt",
+    "difficulty": "hard"
+  },
+  {
+    "id": 125,
+    "question": "Which NFL quarterback won two Super Bowls with the New York Giants against the Patriots?",
+    "options": ["Eli Manning", "Peyton Manning", "Tom Brady", "Ben Roethlisberger"],
+    "answer": "Eli Manning",
+    "difficulty": "hard"
+  },
+  {
+    "id": 126,
+    "question": "Which Formula 1 driver suffered a near-fatal crash in 1976 and returned to racing later that same season?",
+    "options": ["Niki Lauda", "Ayrton Senna", "James Hunt", "Mika Häkkinen"],
+    "answer": "Niki Lauda",
+    "difficulty": "hard"
+  },
+  {
+    "id": 127,
+    "question": "Which footballer won the Ballon d'Or in 1995, becoming the first African-born winner?",
+    "options": ["George Weah", "Samuel Eto'o", "Didier Drogba", "Roger Milla"],
+    "answer": "George Weah",
+    "difficulty": "hard"
+  },
+  {
+    "id": 128,
+    "question": "Which nation won the men's football gold medal at the 2016 Olympics?",
+    "options": ["Brazil", "Germany", "Argentina", "Spain"],
+    "answer": "Brazil",
+    "difficulty": "hard"
+  },
+  {
+    "id": 129,
+    "question": "Which boxer did Buster Douglas shockingly defeat in 1990?",
+    "options": ["Mike Tyson", "Evander Holyfield", "Lennox Lewis", "Larry Holmes"],
+    "answer": "Mike Tyson",
+    "difficulty": "hard"
+  },
+  {
+    "id": 130,
+    "question": "Which basketball player won six NBA titles and six Finals MVPs with the Chicago Bulls?",
+    "options": ["Michael Jordan", "Scottie Pippen", "Dennis Rodman", "Magic Johnson"],
+    "answer": "Michael Jordan",
+    "difficulty": "hard"
+  },
+  {
+    "id": 131,
+    "question": "Which golfer completed the career Grand Slam at age 24 in 2000?",
+    "options": ["Tiger Woods", "Rory McIlroy", "Jack Nicklaus", "Phil Mickelson"],
+    "answer": "Tiger Woods",
+    "difficulty": "hard"
+  },
+  {
+    "id": 132,
+    "question": "Which football manager led Leicester City to the Premier League title in 2015-16?",
+    "options": ["Claudio Ranieri", "Brendan Rodgers", "Nigel Pearson", "José Mourinho"],
+    "answer": "Claudio Ranieri",
+    "difficulty": "hard"
+  },
+  {
+    "id": 134,
+    "question": "Which country won the first ever ICC Cricket World Cup in 1975?",
+    "options": ["West Indies", "Australia", "India", "England"],
+    "answer": "West Indies",
+    "difficulty": "hard"
+  },
+  {
+    "id": 135,
+    "question": "Which MMA fighter ended Ronda Rousey's UFC title reign in 2015?",
+    "options": ["Holly Holm", "Amanda Nunes", "Miesha Tate", "Valentina Shevchenko"],
+    "answer": "Holly Holm",
+    "difficulty": "hard"
+  },
+  {
+    "id": 136,
+    "question": "Which football country won Euro 2004 as one of the biggest upsets in tournament history?",
+    "options": ["Greece", "Portugal", "Spain", "Czech Republic"],
+    "answer": "Greece",
+    "difficulty": "hard"
+  },
+  {
+    "id": 137,
+    "question": "Which American swimmer won eight gold medals at a single Olympics in 2008?",
+    "options": ["Michael Phelps", "Ryan Lochte", "Mark Spitz", "Caeleb Dressel"],
+    "answer": "Michael Phelps",
+    "difficulty": "hard"
+  },
+  {
+    "id": 138,
+    "question": "Which snooker player is nicknamed 'The Rocket'?",
+    "options": ["Ronnie O'Sullivan", "Stephen Hendry", "Mark Selby", "Judd Trump"],
+    "answer": "Ronnie O'Sullivan",
+    "difficulty": "hard"
+  },
+  {
+    "id": 139,
+    "question": "Which boxer became heavyweight champion at age 20, the youngest ever?",
+    "options": ["Mike Tyson", "Muhammad Ali", "Lennox Lewis", "Joe Frazier"],
+    "answer": "Mike Tyson",
+    "difficulty": "hard"
+  },
+  {
+    "id": 140,
+    "question": "Which football club is nicknamed 'The Old Lady'?",
+    "options": ["Juventus", "AC Milan", "Inter Milan", "Roma"],
+    "answer": "Juventus",
+    "difficulty": "hard"
+  },
+  {
+    "id": 141,
+    "question": "Which cyclist is the first rider officially credited with five Tour de France wins?",
+    "options": ["Miguel Induráin", "Lance Armstrong", "Chris Froome", "Bernard Hinault"],
+    "answer": "Miguel Induráin",
+    "difficulty": "hard"
+  },
+  {
+    "id": 142,
+    "question": "Which tennis player won the 'Golden Slam' in 1988?",
+    "options": ["Steffi Graf", "Monica Seles", "Martina Hingis", "Venus Williams"],
+    "answer": "Steffi Graf",
+    "difficulty": "hard"
+  },
+  {
+    "id": 144,
+    "question": "Which basketball player scored 100 points in a single NBA game in 1962?",
+    "options": ["Wilt Chamberlain", "Michael Jordan", "Kobe Bryant", "Elgin Baylor"],
+    "answer": "Wilt Chamberlain",
+    "difficulty": "hard"
+  },
+  {
+    "id": 145,
+    "question": "Which Formula 1 driver won the 1992 world title in a dominant Williams car?",
+    "options": ["Nigel Mansell", "Alain Prost", "Ayrton Senna", "Damon Hill"],
+    "answer": "Nigel Mansell",
+    "difficulty": "hard"
+  },
+  {
+    "id": 146,
+    "question": "Which boxer was known as 'The Gypsy King'?",
+    "options": ["Tyson Fury", "Joe Joyce", "Anthony Joshua", "Daniel Dubois"],
+    "answer": "Tyson Fury",
+    "difficulty": "hard"
+  },
+  {
+    "id": 147,
+    "question": "Which country won the FIFA Women's World Cup in 2019?",
+    "options": ["United States", "Netherlands", "Germany", "Japan"],
+    "answer": "United States",
+    "difficulty": "hard"
+  },
+  {
+    "id": 148,
+    "question": "Which golfer has the most men's major championship wins?",
+    "options": ["Jack Nicklaus", "Tiger Woods", "Arnold Palmer", "Ben Hogan"],
+    "answer": "Jack Nicklaus",
+    "difficulty": "hard"
+  },
+  {
+    "id": 149,
+    "question": "Which footballer won the 2023 Ballon d'Or after winning the 2022 World Cup?",
+    "options": ["Lionel Messi", "Erling Haaland", "Kylian Mbappé", "Kevin De Bruyne"],
+    "answer": "Lionel Messi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-easy-0001",
+    "question": "How many rings are there on the Olympic flag?",
+    "options": ["4", "5", "6", "7"],
+    "answer": "5",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-easy-0011",
+    "question": "Which city hosted the 2024 Summer Olympics?",
+    "options": ["Tokyo", "London", "Paris", "Los Angeles"],
+    "answer": "Paris",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-easy-0013",
+    "question": "What is the diameter of a basketball hoop in inches?",
+    "options": ["16", "18", "20", "22"],
+    "answer": "18",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-easy-0045",
+    "question": "How long is a professional soccer match (excluding stoppage time)?",
+    "options": ["60 min", "80 min", "90 min", "100 min"],
+    "answer": "90 min",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sp-med-0051",
+    "question": "Who holds the record for most career goals in NHL history?",
+    "options": ["Mario Lemieux", "Wayne Gretzky", "Alex Ovechkin", "Gordie Howe"],
+    "answer": "Alex Ovechkin",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-med-0053",
+    "question": "In what year were the first modern Olympic Games held?",
+    "options": ["1896", "1900", "1924", "1888"],
+    "answer": "1896",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-med-0056",
+    "question": "In horse racing, what is the first leg of the Triple Crown?",
+    "options": ["Preakness Stakes", "Belmont Stakes", "Kentucky Derby", "Breeders' Cup"],
+    "answer": "Kentucky Derby",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-med-0057",
+    "question": "Which NFL team has the most Super Bowl appearances?",
+    "options": ["Pittsburgh Steelers", "Dallas Cowboys", "New England Patriots", "San Francisco 49ers"],
+    "answer": "New England Patriots",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-med-0058",
+    "question": "Who was the first woman to win a Grand Slam in the Open Era?",
+    "options": ["Serena Williams", "Steffi Graf", "Margaret Court", "Billie Jean King"],
+    "answer": "Margaret Court",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-med-0059",
+    "question": "What is the nickname of the Belgian national soccer team?",
+    "options": ["The Lions", "The Red Devils", "The Blues", "The Eagles"],
+    "answer": "The Red Devils",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-med-0070",
+    "question": "In baseball, who is the all-time leader in home runs?",
+    "options": ["Babe Ruth", "Hank Aaron", "Barry Bonds", "Alex Rodriguez"],
+    "answer": "Barry Bonds",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sp-med-0074",
+    "question": "In what year did the Premier League begin?",
+    "options": ["1988", "1990", "1992", "1994"],
+    "answer": "1992",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-med-0075",
+    "question": "Who is the all-time leading scorer in the history of the NBA?",
+    "options": ["Kareem Abdul-Jabbar", "LeBron James", "Micheal Jordan", "Kobe Bryant"],
+    "answer": "LeBron James",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sp-med-0078",
+    "question": "Which country is the birthplace of the sport of Curling?",
+    "options": ["Norway", "Scotland", "Canada", "Sweden"],
+    "answer": "Scotland",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sp-med-0117",
+    "question": "Which of these is NOT an MMA fighter?",
+    "options": ["Max Holloway", "Holly Holm", "Sydney McLaughlin", "Stipe Miocic"],
+    "answer": "Sydney McLaughlin",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sp-med-0118",
+    "question": "Which of these is NOT a footballer (Soccer)?",
+    "options": ["Antoine Griezmann", "Son Heung-min", "Patrick Cantlay", "Bukayo Saka"],
+    "answer": "Patrick Cantlay",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sp-med-0119",
+    "question": "Which of these is NOT a basketball player?",
+    "options": ["Kyrie Irving", "Paul George", "Mikaela Shiffrin", "De'Aaron Fox"],
+    "answer": "Mikaela Shiffrin",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sp-med-0120",
+    "question": "Which of these is NOT an MMA fighter?",
+    "options": ["Chuck Liddell", "Rose Namajunas", "Tadej Pogačar", "Daniel Cormier"],
+    "answer": "Tadej Pogačar",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sp-med-0121",
+    "question": "Which of these is NOT a footballer (Soccer)?",
+    "options": ["Virgil van Dijk", "Alisson Becker", "CeeDee Lamb", "Luka Modrić"],
+    "answer": "CeeDee Lamb",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sp-med-0122",
+    "question": "Which of these is NOT an NBA player?",
+    "options": ["Zion Williamson", "Brandon Ingram", "Coco Gauff", "Tyrese Haliburton"],
+    "answer": "Coco Gauff",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sp-med-0123",
+    "question": "Which of these is NOT an MMA fighter?",
+    "options": ["Randy Couture", "Tito Ortiz", "Yuzuru Hanyu", "B.J. Penn"],
+    "answer": "Yuzuru Hanyu",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sp-med-0124",
+    "question": "Which of these is NOT a footballer (Soccer)?",
+    "options": ["Phil Foden", "Declan Rice", "Saquon Barkley", "Rodri"],
+    "answer": "Saquon Barkley",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sp-med-0125",
+    "question": "Which of these is NOT a basketball player?",
+    "options": ["Jaylen Brown", "DeMar DeRozan", "Charles Leclerc", "Pascal Siakam"],
+    "answer": "Charles Leclerc",
+    "difficulty": "medium"
+  }
+]
+

@@ -1,0 +1,742 @@
+[
+  {
+    "id": "death-note-easy-0001",
+    "question": "What is the name of the main protagonist who finds the Death Note?",
+    "options": ["Light Yagami", "L Lawliet", "Misa Amane", "Teru Mikami"],
+    "answer": "Light Yagami",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0002",
+    "question": "What is the name of the Shinigami who drops the Death Note into the human world?",
+    "options": ["Rem", "Ryuk", "Gelus", "Sidoh"],
+    "answer": "Ryuk",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0003",
+    "question": "What is Ryuk's favorite human food?",
+    "options": ["Cake", "Chocolate", "Apples", "Potato chips"],
+    "answer": "Apples",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0004",
+    "question": "What alias does the public give to the mysterious killer?",
+    "options": ["L", "Kira", "Reaper", "Justice"],
+    "answer": "Kira",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0005",
+    "question": "What is the default cause of death if none is specified in the Death Note?",
+    "options": ["Suicide", "Heart attack", "Accident", "Stroke"],
+    "answer": "Heart attack",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0006",
+    "question": "How many seconds do you have to write the cause of death after the name?",
+    "options": ["30 seconds", "40 seconds", "60 seconds", "5 minutes"],
+    "answer": "40 seconds",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0008",
+    "question": "What kind of food does L exclusively eat?",
+    "options": ["Fruits", "Sweets and desserts", "Spicy food", "Vegetables"],
+    "answer": "Sweets and desserts",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0009",
+    "question": "Who is known as the 'Second Kira'?",
+    "options": ["Kiyomi Takada", "Teru Mikami", "Misa Amane", "Light Yagami"],
+    "answer": "Misa Amane",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0010",
+    "question": "What is Misa Amane's profession?",
+    "options": ["Detective", "Model and actress", "Teacher", "Lawyer"],
+    "answer": "Model and actress",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0011",
+    "question": "What must the user have in mind while writing a name in the Death Note?",
+    "options": ["The person's address", "The person's face", "The person's family", "The person's name"],
+    "answer": "The person's face",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0012",
+    "question": "What is the price of the 'Shinigami Eyes' deal?",
+    "options": ["Your soul", "Your memories", "Half of your remaining lifespan", "Your eyesight"],
+    "answer": "Half of your remaining lifespan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0013",
+    "question": "What is the name of Light's father?",
+    "options": ["Soichiro", "Ichiro", "Shuichi", "Kanzo"],
+    "answer": "Soichiro",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0014",
+    "question": "Which Shinigami is Misa's second protector?",
+    "options": ["Ryuk", "Rem", "Sidoh", "Gelus"],
+    "answer": "Rem",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0015",
+    "question": "What is the name of L's assistant/butler?",
+    "options": ["Matt", "Mello", "Watari", "Near"],
+    "answer": "Watari",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0018",
+    "question": "What does L call himself when he meets Light at university?",
+    "options": ["Hideki Ryuga", "Teru Mikami", "Raye Penber", "Nate River"],
+    "answer": "Hideki Ryuga",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0019",
+    "question": "In what city does the story primarily take place?",
+    "options": ["Tokyo", "Osaka", "Kyoto", "Yokohama"],
+    "answer": "Tokyo",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-easy-0021",
+    "question": "How many total episodes are in the Death Note anime?",
+    "options": ["42", "37", "50", "40"],
+    "answer": "37",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-easy-0022",
+    "question": "Who is the first person Light kills with the Death Note?",
+    "options": ["Lind L. Tailor", "Raye Penber", "Kurou Otoharada", "Naomi Misora"],
+    "answer": "Kurou Otoharada",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0024",
+    "question": "What happens if you touch someone else's Death Note?",
+    "options": ["You die", "You see their Shinigami", "You forget your name", "The notebook burns"],
+    "answer": "You see their Shinigami",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0025",
+    "question": "What is Mello's favorite snack?",
+    "options": ["Lollipops", "Chocolate", "Pizza", "Crepes"],
+    "answer": "Chocolate",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0026",
+    "question": "What is the name of the orphanage where L's successors were raised?",
+    "options": ["Wammy's House", "Saint Mary's", "The White Room", "L's Academy"],
+    "answer": "Wammy's House",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0027",
+    "question": "Which character always plays with toys and puzzles?",
+    "options": ["Mello", "Near", "L", "Matt"],
+    "answer": "Near",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0028",
+    "question": "What does Kira stand for in Japanese phonetics?",
+    "options": ["King", "Killer", "Knight", "Kind"],
+    "answer": "Killer",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0030",
+    "question": "What is Light's sister's name?",
+    "options": ["Sayu", "Sachiko", "Misa", "Kiyomi"],
+    "answer": "Sayu",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0031",
+    "question": "Who was the 'decoy L' that Light killed on live TV?",
+    "options": ["Raye Penber", "Lind Tailor", "Aiber", "Wedy"],
+    "answer": "Lind Tailor",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0032",
+    "question": "What sport did Light and L play against each other?",
+    "options": ["Soccer", "Basketball", "Tennis", "Chess"],
+    "answer": "Tennis",
+    "difficulty": "easy"
+  },
+{
+  "id": "death-note-easy-0037",
+  "question": "Light had Ryuk write a fake rule in the notebook stating the user would die if they didn't use it within how many days?",
+  "options": ["7 days", "13 days", "30 days", "1 day"],
+  "answer": "13 days",
+  "difficulty": "hard"
+},
+  {
+    "id": "death-note-easy-0038",
+    "question": "Who eventually kills L?",
+    "options": ["Light", "Rem", "Ryuk", "Misa"],
+    "answer": "Rem",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0039",
+    "question": "What is the real name of L?",
+    "options": ["Lawliet", "Leekh", "Lilish", "Lattice"],
+    "answer": "Lawliet",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0040",
+    "question": "What is Near's real name?",
+    "options": ["Nate River", "Mihael Keehl", "Mail Jeevas", "Anthony Rester"],
+    "answer": "Nate River",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0041",
+    "question": "What is Mello's real name?",
+    "options": ["Nate River", "Mihael Keehl", "Mail Jeevas", "Quillsh Wammy"],
+    "answer": "Mihael Keehl",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0046",
+    "question": "How many Death Notes are in the human world at the very start of the series?",
+    "options": ["1", "2", "3", "0"],
+    "answer": "1",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0047",
+    "question": "Who was the FBI agent following Light?",
+    "options": ["Raye Penber", "Stephen Gevanni", "Anthony Rester", "Lind L. Tailor"],
+    "answer": "Raye Penber",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0050",
+    "question": "How does the Death Note series end for Light?",
+    "options": ["He escapes", "He is arrested", "Ryuk writes his name", "He writes his own name"],
+    "answer": "Ryuk writes his name",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-med-0051",
+    "question": "What was the name of the Shinigami who originally owned the Death Note Misa received?",
+    "options": ["Rem", "Gelus", "Sidoh", "Kindara"],
+    "answer": "Gelus",
+    "difficulty": "medium"
+  },
+  {
+    "id": "death-note-med-0052",
+    "question": "What was Light Yagami's university major?",
+    "options": ["Law", "Medicine", "Psychology", "Criminal Justice"],
+    "answer": "Law",
+    "difficulty": "medium"
+  },
+  {
+    "id": "death-note-med-0053",
+    "question": "What was the name of Raye Penber's fiancée who was also a former FBI agent?",
+    "options": ["Naomi Misora", "Kiyomi Takada", "Halle Lidner", "Sachiko Yagami"],
+    "answer": "Naomi Misora",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dn-easy-0036",
+    "question": "What happens if a human stops using the Death Note?",
+    "options": ["They die", "They lose their memories of it", "They become a Shinigami", "Nothing"],
+    "answer": "They lose their memories of it",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dn-easy-0043",
+    "question": "What is the first rule written in the Death Note?",
+    "options": ["The human whose name is written shall die", "You must have a face in mind", "Heart attack is the default", "Shinigami love apples"],
+    "answer": "The human whose name is written shall die",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dn-easy-0042",
+    "question": "How many Death Notes are initially active in the human world at the start of the Misa arc?",
+    "options": ["1", "2", "3", "4"],
+    "answer": "2",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dn-med-0034",
+    "question": "What is the name of the first Opening song of the anime?",
+    "options": ["What's up, people?!", "The World", "Alumina", "Zetsubou Billy"],
+    "answer": "The World",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dn-med-0035",
+    "question": "Which band performed the second Opening and Ending themes?",
+    "options": ["Nightmare", "Maximum the Hormone", "Fear, and Loathing in Las Vegas", "Galneryus"],
+    "answer": "Maximum the Hormone",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dn-easy-0034",
+    "question": "What is Light's ranking in his school entrance exams?",
+    "options": ["1st", "10th", "50th", "Last"],
+    "answer": "1st",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dn-med-0020",
+    "question": "What was the flavor of the potato chips in the iconic surveillance scene?",
+    "options": ["Salt", "Consommé", "Seaweed", "Pizza"],
+    "answer": "Consommé",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dn-med-0013",
+    "question": "What are the fake rules Light added to the Death Note?",
+    "options": ["The 13-day and 23-day rules", "The 13-day and the burning rules", "The lifespan and memory rules", "The heart attack and accident rules"],
+    "answer": "The 13-day and the burning rules",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dn-med-0012",
+    "question": "How many fake rules did Light add to the Death Note to clear his name?",
+    "options": ["1", "2", "3", "4"],
+    "answer": "2",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dn-med-0004",
+    "question": "How many days did Light spend killing people during his first 'spree'?",
+    "options": ["3", "5", "7", "10"],
+    "answer": "5",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dn-easy-0048",
+    "question": "What happens if a Shinigami saves a human's life  by intentionally killing another human?",
+    "options": ["They become human", "They die", "They lose their Death Note", "Nothing"],
+    "answer": "They die",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dn-easy-0046",
+    "question": "How many Death Notes does Ryuk own at the very beginning of the series?",
+    "options": ["1", "2", "3", "0"],
+    "answer": "2",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dn-easy-0040",
+    "question": "What is the title of the first episode?",
+    "options": ["L", "Kira", "Rebirth", "Confrontation"],
+    "answer": "Rebirth",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dn-easy-0033",
+    "question": "What are Shinigami known as in English?",
+    "options": ["Demons", "Ghosts", "Gods of Death", "Reapers"],
+    "answer": "Gods of Death",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-med-0054",
+    "question": "What is the name of the group of businessmen who use the Death Note for profit?",
+    "options": ["The Sakura Group", "The Yotsuba Group", "The Tokyo Group", "The Kira Group"],
+    "answer": "The Yotsuba Group",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-med-0055",
+    "question": "Which member of the Yotsuba Group was the one actually using the notebook?",
+    "options": ["Kyosuke Higuchi", "Reiji Namikawa", "Shingo Mido", "Eiichi Takahashi"],
+    "answer": "Kyosuke Higuchi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-med-0056",
+    "question": "What is the name of the organization Near leads?",
+    "options": ["FBI", "CIA", "SPK", "NPA"],
+    "answer": "SPK",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-med-0057",
+    "question": "What does SPK stand for?",
+    "options": ["Special Police for Kira", "Special Provision for Kira", "Secret Police for Kira", "Special Pursuit of Kira"],
+    "answer": "Special Provision for Kira",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-med-0058",
+    "question": "Which Shinigami came to the human world to retrieve his stolen Death Note from Ryuk?",
+    "options": ["Rem", "Sidoh", "Gelus", "Armonia Justin"],
+    "answer": "Sidoh",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-med-0059",
+    "question": "What is the name of Mello's friend and fellow Wammy's House orphan who helps him?",
+    "options": ["Near", "Matt", "Beyond Birthday", "Roger"],
+    "answer": "Matt",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-med-0060",
+    "question": "How did Naomi Misora die?",
+    "options": ["Heart attack", "Car accident", "Suicide", "Gunshot"],
+    "answer": "Suicide",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-med-0061",
+    "question": "What was the name of the university Light and L attended?",
+    "options": ["Tokyo University", "To-Oh University", "Kyoto University", "Waseda University"],
+    "answer": "To-Oh University",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-med-0062",
+    "question": "How many total rules were written in the instructions of the Death Note by Ryuk?",
+    "options": ["5", "10", "13", "20"],
+    "answer": "5",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-med-0064",
+    "question": "What is the name of the detective who took over as the lead of the Task Force after Soichiro died?",
+    "options": ["Matsuda", "Aizawa", "Mogi", "Ide"],
+    "answer": "Aizawa",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-med-0065",
+    "question": "What is the name of the warehouse where the final confrontation takes place?",
+    "options": ["Yellow Box Warehouse", "Black Box Warehouse", "Red Box Warehouse", "Blue Box Warehouse"],
+    "answer": "Yellow Box Warehouse",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-med-0066",
+    "question": "What is the name of the con-artist L hires to assist in the Yotsuba investigation?",
+    "options": ["Wedy", "Aiber", "Matt", "Gevanni"],
+    "answer": "Aiber",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-med-0067",
+    "question": "What is the name of the professional thief L hires for the Yotsuba investigation?",
+    "options": ["Wedy", "Aiber", "Matt", "Lidner"],
+    "answer": "Wedy",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-med-0068",
+    "question": "In the anime, how many times did Misa Amane perform the Shinigami Eye deal?",
+    "options": ["Once", "Twice", "Three times", "Never"],
+    "answer": "Twice",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-med-0069",
+    "question": "Who was the Shinigami that died because they loved Misa and saved her life?",
+    "options": ["Ryuk", "Rem", "Gelus", "Sidoh"],
+    "answer": "Gelus",
+    "difficulty": "medium"
+  },
+  {
+    "id": "death-note-med-0070",
+    "question": "What was the name of the 'X-Kira'?",
+    "options": ["Kyosuke Higuchi", "Teru Mikami", "Kiyomi Takada", "Soichiro Yagami"],
+    "answer": "Teru Mikami",
+    "difficulty": "medium"
+  },
+  {
+    "id": "death-note-med-0071",
+    "question": "What language did Ryuk write the instructions of the Death Note in?",
+    "options": ["Japanese", "English", "Latin", "Shinigami script"],
+    "answer": "English",
+    "difficulty": "medium"
+  },
+  {
+    "id": "death-note-med-0076",
+    "question": "How did Soichiro Yagami die?",
+    "options": ["Heart attack from the Death Note", "Gunshot wound", "Explosion", "Illness"],
+    "answer": "Gunshot wound",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-med-0077",
+    "question": "What is the real name of the SPK agent who successfully stole and copied Mikami's Death Note?",
+    "options": ["Stephen Gevanni", "Anthony Rester", "Halle Lidner", "Ill Ratt"],
+    "answer": "Stephen Gevanni",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-med-0078",
+    "question": "Who was the female SPK agent who acted as a bodyguard for Kiyomi Takada?",
+    "options": ["Misa Amane", "Halle Lidner", "Wedy", "Naomi Misora"],
+    "answer": "Halle Lidner",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-med-0079",
+    "question": "What is the '6 minute and 40 second' rule in the Death Note?",
+    "options": ["Time to write cause of death", "Time to write specific details of death", "Time before the note expires", "Time the user has to live"],
+    "answer": "Time to write specific details of death",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-med-0088",
+    "question": "What is the minimum age a human must be to be affected by the Death Note?",
+    "options": ["250 day old", "780 days old", "There is no minimum", "13 years old"],
+    "answer": "780 days old",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-med-0089",
+    "question": "What is the name of the Mafia leader Mello joins?",
+    "options": ["Rod Ross", "Jack Neylon", "Yitzak Ghazanin", "Kal Snydar"],
+    "answer": "Rod Ross",
+    "difficulty": "medium"
+  },
+  {
+    "id": "death-note-med-0093",
+    "question": "Who was the 'Third Kira'?",
+    "options": ["Teru Mikami", "Kyosuke Higuchi", "Kiyomi Takada", "Misa Amane"],
+    "answer": "Kyosuke Higuchi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-hard-0002",
+    "question": "Which Shinigami is known as the 'Jewel Skeleton' and is ranked as the 2nd highest in the hierarchy?",
+    "options": ["Armonia Justin Beyondormason", "Nu", "Dalil Guillory", "Deridovely"],
+    "answer": "Armonia Justin Beyondormason",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-hard-0003",
+    "question": "How many total Death Notes are present in the human world during the peak of the Mafia/SPK arc?",
+    "options": ["2", "3", "4", "5"],
+    "answer": "3",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-hard-0006",
+    "question": "According to the Death Note rules, what is the maximum length of time you can manipulate a victim's death before they must die?",
+    "options": ["13 days", "23 days", "30 days", "40 days"],
+    "answer": "23 days",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-hard-0007",
+    "question": "What was the occupation of Kyosuke Higuchi before he became the Yotsuba Kira?",
+    "options": ["Head of Personnel Development", "Head of Technology Development", "Head of Sales", "Head of Public Relations"],
+    "answer": "Head of Technology Development",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-med-0101",
+    "question": "In what year did the Death Note anime first premiere in Japan?",
+    "options": ["2004", "2005", "2006", "2007"],
+    "answer": "2006",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-med-0102",
+    "question": "Who is the writer and creator of the Death Note series?",
+    "options": ["Tsugumi Ohba", "Takeshi Obata", "Tite Kubo", "Yoshihiro Togashi"],
+    "answer": "Tsugumi Ohba",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-easy-0051",
+    "question": "How many seasons does the Death Note anime have?",
+    "options": ["1", "2", "3", "4"],
+    "answer": "1",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-med-0103",
+    "question": "Who is the Japanese voice actor (Seiyuu) for Light Yagami?",
+    "options": ["Mamoru Miyano", "Daisuke Ono", "Hiroshi Kamiya", "Yuki Kaji"],
+    "answer": "Mamoru Miyano",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-med-0104",
+    "question": "Which of these is NOT a Shinigami featured in the show?",
+    "options": ["Sidoh", "Zellogi", "Midora", "Ryuk"],
+    "answer": "Midora",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-hard-0010",
+    "question": "What is the exact floor number of the L's headquarters building in the Yotsuba arc?",
+    "options": ["23", "40", "50", "64"],
+    "answer": "23",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-hard-0011",
+    "question": "What was the name of the FBI Director who provided L with the details of the 12 agents sent to Japan?",
+    "options": ["David Hoope", "Steve Mason", "George Sairas", "Anthony Rester"],
+    "answer": "Steve Mason",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-hard-0014",
+    "question": "In the anime, what color are the eyes of the Shinigami Sidoh?",
+    "options": ["Red", "Yellow", "Blue", "Green"],
+    "answer": "Yellow",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-hard-0015",
+    "question": "What is the real name of the US President who decides to stop pursuing Kira?",
+    "options": ["David Hoope", "George Sairas", "Vicente Carter", "Halle Lidner"],
+    "answer": "George Sairas",
+    "difficulty": "hard"
+  },
+{
+"id": "dn-easy-0006",
+"question": "What race is Ryuk from?",
+"options": ["Shinigami", "Human", "Angel", "Demon"],
+"answer": "Shinigami",
+"difficulty": "easy"
+},
+{
+"id": "dn-medium-0010",
+"question": "What episode does L die?",
+"options": ["25", "37", "15", "30"],
+"answer": "25",
+"difficulty": "hard"
+},
+{
+"id": "dn-easy-0010",
+"question": "What TV station broadcasts Kira's message?",
+"options": ["Sakura TV", "NBS", "NHK", "Fuji TV"],
+"answer": "Sakura TV",
+"difficulty": "easy"
+},
+  {
+    "id": "death-note-hard-0025",
+    "question": "What is the rank of Ryuk in the Shinigami hierarchy?",
+    "options": ["4", "6", "8", "12"],
+    "answer": "6",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-hard-0027",
+    "question": "How many FBI agents died in the Raye Penber incident?",
+    "options": ["8", "10", "12", "15"],
+    "answer": "12",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-easy-0002",
+    "question": "What is the name of the notebook that kills people?",
+    "options": ["Soul Book", "Death Note", "Shadow Note", "Dark Journal"],
+    "answer": "Death Note",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0024",
+    "question": "What is Light's mother's name?",
+    "options": ["Sachiko", "Sayuka", "Kiyomi", "Naomi"],
+    "answer": "Sachiko",
+    "difficulty": "easy"
+  },
+  {
+    "id": "death-note-easy-0032",
+    "question": "What happens to people who use the Death Note, according to Ryuk?",
+    "options": ["They become Shinigami", "They go to heaven", "They go to neither heaven nor hell", "They go to hell"],
+    "answer": "They go to neither heaven nor hell",
+    "difficulty": "easy"
+  },
+
+  {
+    "id": "death-note-easy-0043",
+    "question": "What do Shinigami Eyes allow a person to see?",
+    "options": ["A person's thoughts", "A person's true name and lifespan", "A person's crimes", "Future events"],
+    "answer": "A person's true name and lifespan",
+    "difficulty": "easy"
+  },
+{
+  "id": "death-note-med-0107",
+  "question": "Where did Light hide his Death Note to prevent his family from finding it?",
+  "options": ["Inside a hollowed-out book", "Under his mattress", "A desk drawer with a false bottom", "Behind a poster on his wall"],
+  "answer": "A desk drawer with a false bottom",
+  "difficulty": "medium"
+},
+  {
+    "id": "death-note-easy-0046",
+    "question": "What is Teru Mikami's profession?",
+    "options": ["Teacher", "News anchor", "Prosecutor", "Police officer"],
+    "answer": "Prosecutor",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-medium-0004",
+    "question": "What does a human need to do in order to see a Shinigami attached to a Death Note?",
+    "options": ["Read the rules aloud", "Touch the Death Note", "Write a name", "Own two notebooks"],
+    "answer": "Touch the Death Note",
+    "difficulty": "medium"
+  },
+
+  {
+    "id": "death-note-medium-0019",
+    "question": "What object does Light use to hide a tiny piece of the Death Note as a last resort weapon?",
+    "options": ["His ring", "His watch", "His shoe", "His tie pin"],
+    "answer": "His watch",
+    "difficulty": "medium"
+  },
+  {
+    "id": "death-note-medium-0034",
+    "question": "What is Teru Mikami's catchphrase when judging evil?",
+    "options": ["Repent", "Delete", "Justice", "Condemn"],
+    "answer": "Delete",
+    "difficulty": "medium"
+  },
+
+  {
+    "id": "death-note-hard-0034",
+    "question": "What is the rank of Rem in the Shinigami hierarchy?",
+    "options": ["2", "4", "5", "10"],
+    "answer": "4",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-hard-0037",
+    "question": "What was the name of the school Light attended before University?",
+    "options": ["Daikoku Private Academy", "Tokyo High", "To-Oh High", "Wammy's Academy"],
+    "answer": "Daikoku Private Academy",
+    "difficulty": "hard"
+  },
+  {
+    "id": "death-note-hard-0048",
+    "question": "What is the date of Light Yagami's birth?",
+    "options": ["February 28, 1986", "March 28, 1986", "February 28, 1989", "February 28, 1989"],
+    "answer": "February 28, 1989",
+    "difficulty": "hard"
+  }
+]
+
+

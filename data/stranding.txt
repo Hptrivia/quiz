@@ -1,0 +1,728 @@
+[
+  {
+    "id": "ds-001",
+    "difficulty": "easy",
+    "question": "Who is the main protagonist of Death Stranding?",
+    "options": ["Cliff Unger", "Sam Porter Bridges", "Higgs Monaghan", "Die Hardman"],
+    "answer": "Sam Porter Bridges"
+  },
+  {
+    "id": "ds-002",
+    "difficulty": "easy",
+    "question": "What is the name of the mysterious rain that ages anything it touches?",
+    "options": ["Acid Rain", "Chiral Mist", "Timefall", "Voidfall"],
+    "answer": "Timefall"
+  },
+  {
+    "id": "ds-003",
+    "difficulty": "easy",
+    "question": "What does 'BB' stand for in the game?",
+    "options": ["Baby Boy", "Bridge Baby", "Beach Buddy", "Biological Battery"],
+    "answer": "Bridge Baby"
+  },
+  {
+    "id": "ds-004",
+    "difficulty": "easy",
+    "question": "Which actor provides the likeness and voice for Sam Porter Bridges?",
+    "options": ["Mads Mikkelsen", "Norman Reedus", "Troy Baker", "Tommie Earl Jenkins"],
+    "answer": "Norman Reedus"
+  },
+  {
+    "id": "ds-005",
+    "difficulty": "easy",
+    "question": "What are the invisible spectral entities that Sam must avoid?",
+    "options": ["Ghosts", "MULEs", "BTs", "Demens"],
+    "answer": "BTs"
+  },
+  {
+    "id": "ds-006",
+    "difficulty": "easy",
+    "question": "What is the primary goal of Sam's journey across America?",
+    "options": ["To kill Higgs", "To deliver pizza", "To reconnect the Chiral Network", "To find a cure for Timefall"],
+    "answer": "To reconnect the Chiral Network"
+  },
+  {
+    "id": "ds-007",
+    "difficulty": "easy",
+    "question": "What is the name of the company Sam works for at the start of the game?",
+    "options": ["Amazon", "Bridges", "Fragile Express", "UCA"],
+    "answer": "Bridges"
+  },
+  {
+    "id": "ds-008",
+    "difficulty": "easy",
+    "question": "What does Sam drink to restore his stamina?",
+    "options": ["Monster Energy", "Water", "Pheropods", "Cryptobiotes"],
+    "answer": "Monster Energy"
+  },
+  {
+    "id": "ds-009",
+    "difficulty": "easy",
+    "question": "Who is the leader of Fragile Express?",
+    "options": ["Amelie", "Mama", "Fragile", "Lockne"],
+    "answer": "Fragile"
+  },
+  {
+    "id": "ds-010",
+    "difficulty": "easy",
+    "question": "What happens when a BT consumes a human?",
+    "options": ["A hurricane", "A Voidout", "A Chiral storm", "A landslide"],
+    "answer": "A Voidout"
+  },
+  {
+    "id": "ds-012",
+    "difficulty": "easy",
+    "question": "What color is the Chiralium crystals found in the world?",
+    "options": ["Blue", "Gold", "Green", "Red"],
+    "answer": "Gold"
+  },
+  {
+    "id": "ds-013",
+    "difficulty": "easy",
+    "question": "Who is the main antagonist wearing a golden mask in the first game?",
+    "options": ["Cliff", "Deadman", "Higgs", "Die-Hardman"],
+    "answer": "Higgs"
+  },
+  {
+    "id": "ds-014",
+    "difficulty": "easy",
+    "question": "What are the cargo-obsessed enemies called?",
+    "options": ["Bandits", "MULEs", "Scavengers", "Raiders"],
+    "answer": "MULEs"
+  },
+  {
+    "id": "ds-015",
+    "difficulty": "easy",
+    "question": "What is the name of the afterlife-like dimension unique to each person?",
+    "options": ["The Shore", "The Beach", "The Void", "The Beyond"],
+    "answer": "The Beach"
+  },
+  {
+    "id": "ds-016",
+    "difficulty": "easy",
+    "question": "What creature can Sam eat to quickly restore blood and health?",
+    "options": ["Fish", "Cryptobiotes", "Tardigrades", "Mushrooms"],
+    "answer": "Cryptobiotes"
+  },
+  {
+    "id": "ds-017",
+    "difficulty": "easy",
+    "question": "What is the name of the mechanical arm on Sam's shoulder?",
+    "options": ["Scanner", "Odradek", "Sensor", "Link Arm"],
+    "answer": "Odradek"
+  },
+  {
+    "id": "ds-018",
+    "difficulty": "easy",
+    "question": "Who is the President of the UCA at the beginning of the game?",
+    "options": ["Amelie", "Bridget Strand", "Fragile", "Martha Barber"],
+    "answer": "Bridget Strand"
+  },
+  {
+    "id": "ds-020",
+    "difficulty": "easy",
+    "question": "What weapon does Sam use to tie up MULEs without killing them?",
+    "options": ["Bola Gun", "Handgun", "Grenade Launcher", "Knife"],
+    "answer": "Bola Gun"
+  },
+  {
+    "id": "ds-021",
+    "difficulty": "easy",
+    "question": "In Death Stranding 2, what is the name of the new organization Sam joins?",
+    "options": ["Bridges", "Drawbridge", "UCA", "Fragile Express"],
+    "answer": "Drawbridge"
+  },
+  {
+    "id": "ds-022",
+    "difficulty": "easy",
+    "question": "What is Sam’s condition called that makes him break out in hives when touched?",
+    "options": ["DOOMS", "Aphenphosmphobia", "Aprophiphosphobia", "Chiral Allergy"],
+    "answer": "Aphenphosmphobia"
+  },
+  {
+    "id": "ds-101",
+    "difficulty": "hard",
+    "question": "Which of the following is NOT a city located in the game?",
+    "options": ["South Knot City", "Valley Knot City", "Lake Knot City", "Mountain Knot City"],
+    "answer": "Valley Knot City"
+  },
+  {
+    "id": "ds-101",
+    "difficulty": "hard",
+    "question": "Which of the following is NOT a city located in the game?",
+    "options": ["Capital Knot City", "Central Knot City", "Edge Knot City", "Coastal Knot City"],
+    "answer": "Coastal Knot City"
+  },
+  {
+    "id": "ds-076",
+    "difficulty": "hard",
+    "question": "How long does a human body take to undergo full Necrosis?",
+    "options": ["24 hours", "48 hours", "12 hours", "6 hours"],
+    "answer": "48 hours"
+  },
+  {
+    "id": "ds-071",
+    "difficulty": "hard",
+    "question": "What is the maximum number of stars a facility can give Sam?",
+    "options": ["3", "5", "10", "4"],
+    "answer": "5"
+  },
+  {
+    "id": "ds-023",
+    "difficulty": "easy",
+    "question": "What is the name of the ship in Death Stranding 2?",
+    "options": ["The Titanic", "DHV Nautilus", "DHV Magellan", "The Enterprise"],
+    "answer": "DHV Magellan"
+  },
+  {
+    "id": "ds-024",
+    "difficulty": "easy",
+    "question": "Who is the director of Death Stranding?",
+    "options": ["Hidetaka Miyazaki", "Hideo Kojima", "Cory Barlog", "Shinji Mikami"],
+    "answer": "Hideo Kojima"
+  },
+  {
+    "id": "ds-026",
+    "difficulty": "easy",
+    "question": "What is the special ability of people with DOOMS?",
+    "options": ["Super strength", "Sensing or seeing BTs", "Time travel", "Invincibility"],
+    "answer": "Sensing or seeing BTs"
+  },
+  {
+    "id": "ds-028",
+    "difficulty": "easy",
+    "question": "What is the materials used to upgrade structures?",
+    "options": ["Gold", "Chiralium Crystals", "Dollars", "Credits"],
+    "answer": "Chiralium Crystals"
+  },
+  {
+    "id": "ds-030",
+    "difficulty": "hard",
+    "question": "Who is the character that looks like Guillermo del Toro?",
+    "options": ["Heartman", "Deadman", "Die-Hardman", "Mama"],
+    "answer": "Deadman"
+  },
+  {
+    "id": "ds-031",
+    "difficulty": "easy",
+    "question": "What is the name of the musical instrument Sam can play?",
+    "options": ["Guitar", "Harmonica", "Flute", "Piano"],
+    "answer": "Harmonica"
+  },
+  {
+    "id": "ds-033",
+    "difficulty": "easy",
+    "question": "What is the 'UCA' abbreviation?",
+    "options": ["United Cities of America", "Union of Coastal Areas", "United Counties of America", "Universal City Alliance"],
+    "answer": "United Cities of America"
+  },
+  {
+    "id": "ds-037",
+    "difficulty": "easy",
+    "question": "Who is Sam's sister?",
+    "options": ["Petra", "Lockne", "Amelie", "Katie"],
+    "answer": "Amelie"
+  },
+  {
+    "id": "ds-038",
+    "difficulty": "easy",
+    "question": "What does Sam do to calm a crying BB?",
+    "options": ["Feeds it", "Rocks the controller", "Sings to it", "Ignores it"],
+    "answer": "Rocks the controller"
+  },
+  {
+    "id": "ds-042",
+    "difficulty": "easy",
+    "question": "What is the name of the character who dies every 21 minutes?",
+    "options": ["Deadman", "Die-Hardman", "Heartman", "Lockne"],
+    "answer": "Heartman"
+  },
+  {
+    "id": "ds-044",
+    "difficulty": "easy",
+    "question": "What type of grenades are made from Sam's bodily waste?",
+    "options": ["EX Grenades", "Frag Grenades", "Stun Grenades", "Smoke Grenades"],
+    "answer": "EX Grenades"
+  },
+  {
+    "id": "ds-046",
+    "difficulty": "easy",
+    "question": "What is a 'Repatriate'?",
+    "options": ["A person who can return from the Seam after death", "A type of BT", "A member of the UCA government", "A MULE leader"],
+    "answer": "A person who can return from the Seam after death"
+  },
+  {
+    "id": "ds-047",
+    "difficulty": "hard",
+    "question": "Who provides the voice for Higgs?",
+    "options": ["Norman Reedus", "Troy Baker", "Mads Mikkelsen", "Kevin Durand"],
+    "answer": "Troy Baker"
+  },
+  {
+    "id": "ds-048",
+    "difficulty": "easy",
+    "question": "What is the name of the robot companions that can deliver cargo?",
+    "options": ["Buddy Bots", "Carry Bots", "Porter Drones", "Walker Gears"],
+    "answer": "Buddy Bots"
+  },
+  {
+    "id": "ds-071",
+    "difficulty": "hard",
+    "question": "What is the 'Odyssey' Sam must complete called?",
+    "options": ["The Westward Journey", "The Great Reconnection", "The Long Walk", "The Final Delivery"],
+    "answer": "The Westward Journey"
+  },
+  {
+    "id": "ds-049",
+    "difficulty": "easy",
+    "question": "What does Sam commonly use to cross deep rivers safely?",
+    "options": ["Ladders", "Boats", "Swimming Fins", "Gliders"],
+    "answer": "Ladders"
+  },
+  {
+    "id": "ds-050",
+    "difficulty": "easy",
+    "question": "Which of these is the name of Sam's BB in the first game?",
+    "options": ["Lou", "Jill", "Max", "Buddy"],
+    "answer": "Lou"
+  },
+  {
+    "id": "ds-151",
+    "difficulty": "hard",
+    "question": "What is the official serial number of Sam's Bridge Baby in the first game before she is named Lou?",
+    "options": ["BB-01", "BB-28", "BB-00", "BB-42"],
+    "answer": "BB-28"
+  },
+  {
+    "id": "ds-052",
+    "difficulty": "hard",
+    "question": "Which character is the mother of the original Bridge Baby?",
+    "options": ["Mary", "Lisa", "Bridget", "Lara"],
+    "answer": "Lisa"
+  },
+  {
+    "id": "ds2-019",
+    "difficulty": "hard",
+    "question": "Which facility is the starting point (F1) for the major route delivery puzzle?",
+    "options": ["Capital Knot City", "West Fort Knot", "The Motherhood", "Sydney Hub"],
+    "answer": "West Fort Knot"
+  },
+  {
+    "id": "ds2-017",
+    "difficulty": "hard",
+    "question": "How many months after the first game does Death Stranding 2 take place?",
+    "options": ["6 months", "11 months", "24 months", "5 years"],
+    "answer": "11 months"
+  },
+  {
+    "id": "ds2-007",
+    "difficulty": "hard",
+    "question": "In Rainy’s quiz about the platypus life cycle, which stage is missing at the '?' icon?",
+    "options": ["Tadpole", "Platypus Egg", "Larva", "Platypus Embryo"],
+    "answer": "Platypus Egg"
+  },
+  {
+    "id": "ds2-016",
+    "difficulty": "medium",
+    "question": "Which character asks Sam the series of logic puzzles in Episode 7?",
+    "options": ["Tomorrow", "Fragile", "Rainy", "Dollman"],
+    "answer": "Rainy"
+  },
+  {
+    "id": "ds-084",
+    "difficulty": "hard",
+    "question": "How many 'Great Extinctions' occurred before the Death Stranding in the game's lore?",
+    "options": ["3", "5", "6", "10"],
+    "answer": "5"
+  },
+  {
+    "id": "ds-062",
+    "difficulty": "hard",
+    "question": "What war setting is the first 'Nightmare' Sam experiences with Cliff?",
+    "options": ["World War I", "World War II", "Vietnam War", "Gulf War"],
+    "answer": "World War I"
+  },
+  {
+    "id": "ds2-026",
+    "difficulty": "hard",
+    "question": "In Rainy's block puzzle, which shape fits the missing gap?",
+    "options": ["T-Shape", "L-Shape", "Square", "Z-Shape"],
+    "answer": "L-Shape"
+  },
+  {
+    "id": "ds2-086",
+    "difficulty": "hard",
+    "question": "How many total quizzes must Sam complete for Rainy in Episode 7?",
+    "options": ["3", "5", "7", "10"],
+    "answer": "3"
+  },
+  {
+    "id": "ds2-058",
+    "difficulty": "hard",
+    "question": "What is the maximum weight Sam can carry in the base game?",
+    "options": ["100kg", "120kg", "150kg", "200kg"],
+    "answer": "120kg"
+  },
+  {
+    "id": "ds2-032",
+    "difficulty": "easy",
+    "question": "Which button is used to scan the environment with the Odradek?",
+    "options": ["L1", "R1", "Square", "Triangle"],
+    "answer": "R1"
+  },
+  {
+    "id": "ds2-024",
+    "difficulty": "hard",
+    "question": "Which button is used to soothe Lou when she is crying?",
+    "options": ["L2 + Down on D-Pad", "L2 + Up on D-Pad", "L1 + Down on D-Pad", "L1 + Up on D-Pad"],
+    "answer": "L1 + Down on D-Pad"
+  },
+  {
+    "id": "ds2-022",
+    "difficulty": "easy",
+    "question": "What is the primary currency earned for successful deliveries?",
+    "options": ["Gold", "Likes", "Chiral Coins", "Bridges Credits"],
+    "answer": "Likes"
+  },
+  {
+    "id": "ds-026",
+    "difficulty": "hard",
+    "question": "What is the name of the device Sam wears around his neck to connect terminals?",
+    "options": ["Q-pid", "U-link", "Chiral-Key", "Dog Tags"],
+    "answer": "Q-pid"
+  },
+  {
+    "id": "ds-014",
+    "difficulty": "easy",
+    "question": "Which item allows Sam to build structures like bridges and generators?",
+    "options": ["Q-pid", "PCC", "S-Skeleton", "Cargo Case"],
+    "answer": "PCC"
+  },
+{
+  "id": "ds2-016",
+  "difficulty": "hard",
+  "question": "What is the primary reward for correctly answering Rainy’s 'B-A-C-D' fastest route puzzle in Episode 7?",
+  "options": [
+    "300 Likes and a Fragile Decal", 
+    "A Level 3 Speed Skeleton", 
+    "500 Chiral Crystals", 
+    "200 Likes and a Fragile Decal"
+  ],
+  "answer": "300 Likes and a Fragile Decal"
+},
+  {
+    "id": "ds2-001",
+    "difficulty": "easy",
+    "question": "What is the primary new setting for Death Stranding 2: On the Beach?",
+    "options": ["United States", "Australia", "Iceland", "Japan"],
+    "answer": "Australia"
+  },
+  {
+    "id": "ds2-009",
+    "difficulty": "hard",
+    "question": "What is the name of the captain and pilot of the DHV Magellan?",
+    "options": ["Charlie", "Tarman", "Neil", "The President"],
+    "answer": "Tarman"
+  },
+  {
+    "id": "ds2-010",
+    "difficulty": "hard",
+    "question": "Which new difficulty level, added with the PC release, is considered the hardest in the game?",
+    "options": ["Brutal", "Extinction", "To the Wilder", "Hard Core"],
+    "answer": "To the Wilder"
+  },
+  {
+    "id": "ds-075",
+    "difficulty": "medium",
+    "question": "What is the term for the golden particles that float in the air in Timefall areas?",
+    "options": ["Dust", "Chiralium", "Gold Flakes", "Aura"],
+    "answer": "Chiralium"
+  },
+  {
+    "id": "ds-108",
+    "difficulty": "hard",
+    "question": "What is the name of the floating, humanoid, and nearly invisible spirits that hunt by sound?",
+    "options": ["Gazers", "Hunters", "Catchers", "Leapers"],
+    "answer": "Gazers"
+  },
+  {
+    "id": "ds-126",
+    "difficulty": "hard",
+    "question": "How many 'Memory Chips' are hidden throughout the game world?",
+    "options": ["30", "56", "100", "42"],
+    "answer": "56"
+  },
+  {
+    "id": "ds-109",
+    "difficulty": "hard",
+    "question": "What are the tar-like humanoids that emerge from the ground to drag Sam toward a larger encounter called?",
+    "options": ["Stalkers", "Hunters", "Leeches", "Grabbers"],
+    "answer": "Hunters"
+  },
+  {
+    "id": "ds-110",
+    "difficulty": "hard",
+    "question": "What are the large, physical BTs that manifest once a Hunter successfully drags Sam into the tar?",
+    "options": ["Gazers", "Voidouts", "Catchers", "Titans"],
+    "answer": "Catchers"
+  }
+  {
+    "id": "ds-107",
+    "difficulty": "hard",
+    "question": "Which alcoholic beverage replaces the Monster Energy drinks in Sam's private room after certain deliveries?",
+    "options": ["Timefall Brew", "Timefall Porter", "Bridges Brew", "Chiral Cider"],
+    "answer": "Timefall Porter"
+  }
+  {
+    "id": "ds-081",
+    "difficulty": "medium",
+    "question": "What is the 'The Death Stranding' also known as in the game?",
+    "options": ["The Sixth Extinction", "The Fifth Extinction", "The Fourth Extinction", "The Last Strand"],
+    "answer": "The Sixth Extinction"
+  },
+  {
+    "id": "ds-077",
+    "difficulty": "medium",
+    "question": "What is the 'PCC' used for?",
+    "options": ["Portable Communication Charger", "Portable Chiral Constructor", "Power Chiral Charger", "Primary Chiral Constructor"],
+    "answer": "Portable Chiral Constructor"
+  },
+  {
+    "id": "ds2-090",
+    "difficulty": "medium",
+    "question": "Which character is revealed to be the biological mother of Tomorrow?",
+    "options": ["Fragile", "Rainy", "Lucy", "Amelie"],
+    "answer": "Lucy"
+  },
+  {
+    "id": "ds2-008",
+    "difficulty": "hard",
+    "question": "According to Rainy’s quiz in Episode 7, what is the fastest delivery route starting from F1?",
+    "options": ["A, B, C, D", "B, A, C, D", "C, D, A, B", "D, C, B, A"],
+    "answer": "B, A, C, D"
+  },
+  {
+    "id": "ds2-006",
+    "difficulty": "medium",
+    "question": "Which character possesses the ability to move through tar pools?",
+    "options": ["Rainy", "Tomorrow", "Lucy", "Amelie"],
+    "answer": "Tomorrow"
+  },
+  {
+    "id": "ds2-007",
+    "difficulty": "hard",
+    "question": "What is the name of the new automated system that took over distribution in the UCA after Bridges disbanded?",
+    "options": ["APAS 4000", "Chiral Net 2.0", "Bridges Auto", "APAS 2000"],
+    "answer": "APAS 4000"
+  },
+  {
+    "id": "ds-055",
+    "difficulty": "hard",
+    "question": "Heartman’s heart stops every 21 minutes. How long does he spend on 'The Beach' each time?",
+    "options": ["1 minute", "3 minutes", "5 minutes", "10 minutes"],
+    "answer": "3 minutes"
+  },
+  {
+    "id": "ds-056",
+    "difficulty": "medium",
+    "question": "What is the 'Seam' in Death Stranding?",
+    "options": ["A place between life and death", "An underwater canyon", "A MULE camp", "The Chiral Network hub"],
+    "answer": "A place between life and death"
+  },
+  {
+    "id": "ds-060",
+    "difficulty": "medium",
+    "question": "What classification is given to Sam’s level of DOOMS?",
+    "options": ["Level 1", "Level 2", "Level 5", "Extinction Level"],
+    "answer": "Level 2"
+  },
+  {
+    "id": "ds-068",
+    "difficulty": "medium",
+    "question": "What is the name of the cargo-stealing cult that Higgs leads?",
+    "options": ["The Fallen", "Homo Demens", "The Stranded", "The Void Walkers"],
+    "answer": "Homo Demens"
+  },
+  {
+    "id": "ds-086",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a type of BT encountered?",
+    "options": ["Gazer", "Hunter", "Catcher", "Runner"],
+    "answer": "Runner"
+  },
+  {
+    "id": "ds-090",
+    "difficulty": "hard",
+    "question": "What is the name of the actor who portrays Cliff Unger?",
+    "options": ["Norman Reedus", "Mads Mikkelsen", "Troy Baker", "Tommie Earl Jenkins"],
+    "answer": "Mads Mikkelsen"
+  },
+ {
+    "id": "ds-153",
+    "difficulty": "hard",
+    "question": "In which year was the first Death Stranding game originally released?",
+    "options": ["2017", "2018", "2019", "2020"],
+    "answer": "2019"
+  },
+  {
+    "id": "ds-156",
+    "difficulty": "hard",
+    "question": "Which company served as the original publisher for Death Stranding on PlayStation 4 and 5?",
+    "options": ["Konami", "Sony Interactive Entertainment", "505 Games", "Kojima Productions"],
+    "answer": "Sony Interactive Entertainment"
+  },
+  {
+    "id": "ds-154",
+    "difficulty": "medium",
+    "question": "In which year was Death Stranding 2: On the Beach officially released?",
+    "options": ["2023", "2024", "2025", "2026"],
+    "answer": "2025"
+  },
+  {
+    "id": "ds-155",
+    "difficulty": "hard",
+    "question": "Which development studio created the Death Stranding series?",
+    "options": ["Konami", "Kojima Productions", "Guerrilla Games", "Santa Monica Studio"],
+    "answer": "Kojima Productions"
+  }
+  {
+    "id": "ds-easy-006",
+    "question": "What does BT stand for?",
+    "options": ["Beached Thing", "Broken Thing", "Bound Terror", "Black Tide"],
+    "answer": "Beached Thing",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds-116",
+    "difficulty": "hard",
+    "question": "In DS1, what is the name of the first city Sam arrives at after the prologue?",
+    "options": ["Capital Knot City", "Central Knot City", "South Knot City", "Edge Knot City"],
+    "answer": "Capital Knot City"
+  },
+  {
+    "id": "ds-058",
+    "difficulty": "medium",
+    "question": "In the game, what does 'Ka' represent?",
+    "options": ["The Soul", "The Body", "The Beach", "The Death"],
+    "answer": "The Soul"
+  },
+  {
+    "id": "ds-059",
+    "difficulty": "medium",
+    "question": "In the game, what does 'Ha' represent?",
+    "options": ["The Soul", "The Body", "The Ground", "The Breath"],
+    "answer": "The Body"
+  },
+  {
+    "id": "ds-040",
+    "difficulty": "hard",
+    "question": "What color are the Bridges members suits for the special delivery team?",
+    "options": ["Blue", "Yellow", "Black", "Grey"],
+    "answer": "Black"
+  },
+  {
+    "id": "ds-040",
+    "difficulty": "hard",
+    "question": "What color are the Bridges members suits for the medical team?",
+    "options": ["Red", "Yellow", "Black", "Grey"],
+    "answer": "Red"
+  },
+  {
+    "id": "ds-050",
+    "difficulty": "hard",
+    "question": "What is the final Knot City on the West Coast?",
+    "options": ["Capital Knot City", "Lake Knot City", "Edge Knot City", "Mountain Knot City"],
+    "answer": "Edge Knot City"
+  },
+  {
+    "id": "ds-040",
+    "difficulty": "hard",
+    "question": "What color are the Bridges members suits for the engineering team?",
+    "options": ["Blue", "Ivory", "Red", "Orange"],
+    "answer": "Ivory"
+  },
+  {
+    "id": "ds-040",
+    "difficulty": "hard",
+    "question": "What color are the Bridges members suits for the special security team?",
+    "options": ["Blue", "Yellow", "Red", "Orange"],
+    "answer": "Orange"
+  },
+  {
+    "id": "ds-040",
+    "difficulty": "hard",
+    "question": "What color are the Bridges members suits for the corpse disposal team?",
+    "options": ["Blue", "Yellow", "Red", "Orange"],
+    "answer": "Orange"
+  },
+  {
+    "id": "ds-025",
+    "difficulty": "easy",
+    "question": "What animal is often associated with the game's logo and the Beach?",
+    "options": ["Wolf", "Whale", "Eagle", "Lion"],
+    "answer": "Whale"
+  },
+  {
+    "id": "ds-031",
+    "difficulty": "hard",
+    "question": "Which material is NOT a standard resource used for crafting?",
+    "options": ["Metals", "Ceramics", "Wood", "Resins"],
+    "answer": "Wood"
+  },
+  {
+    "id": "ds-024",
+    "difficulty": "easy",
+    "question": "What is the name of the place where Sam ends up after dying?",
+    "options": ["The Beach", "The Seam", "The Void", "The Afterlife"],
+    "answer": "The Seam"
+  },
+  {
+    "id": "ds2-031",
+    "difficulty": "hard",
+    "question": "What is the name of the actress who played Mama?",
+    "options": ["Margaret Qualley", "Léa Seydoux", "Shioli Kutsuna", "Elle Fanning"],
+    "answer": "Margaret Qualley"
+  },
+  {
+    "id": "ds2-016",
+    "difficulty": "hard",
+    "question": "Death Stranding 2 is built using which game engine?",
+    "options": ["Unreal Engine 5", "Decima Engine", "Unity", "RE Engine"],
+    "answer": "Decima Engine"
+  },
+  {
+    "id": "ds2-007",
+    "difficulty": "hard",
+    "question": "Who plays the character Fragile in the game?",
+    "options": ["Léa Seydoux", "Margaret Qualley", "Elle Fanning", "Shioli Kutsuna"],
+    "answer": "Léa Seydoux"
+  },
+  {
+    "id": "ds2-001",
+    "difficulty": "easy",
+    "question": "What is the official subtitle of the Death Stranding sequel?",
+    "options": ["On the Beach", "On the Road", "On the Edge", "On the Shore"],
+    "answer": "On the Beach"
+  },
+  {
+    "id": "ds-easy-002",
+    "question": "What is Sam's job title for most of the game?",
+    "options": ["Soldier", "Porter", "Engineer", "Scientist"],
+    "answer": "Porter",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ds-117",
+    "difficulty": "hard",
+    "question": "What is the name of the organization that Sam joins in the beginning of DS2?",
+    "options": ["Drawbridge", "Bridges", "Fragile Express", "The UCA"],
+    "answer": "Drawbridge"
+  },
+  {
+    "id": "ds-152",
+    "difficulty": "medium",
+    "question": "Which major UCA city is located on the edge of the first map and requires Sam to cross a BT-infested mountain pass to reach the harbor?",
+    "options": ["Capital Knot City", "Port Knot City", "Lake Knot City", "South Knot City"],
+    "answer": "Port Knot City"
+  }
+]

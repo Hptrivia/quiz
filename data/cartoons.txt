@@ -1,0 +1,796 @@
+[
+  {
+    "id": 1,
+    "question": "What is the name of the sponge who lives in a pineapple under the sea?",
+    "options": ["SpongeBob SquarePants", "Patrick Star", "Squidward Tentacles", "Mr. Krabs"],
+    "answer": "SpongeBob SquarePants",
+    "difficulty": "easy"
+  },
+  {
+    "id": 2,
+    "question": "Who is SpongeBob’s best friend?",
+    "options": ["Patrick Star", "Squidward", "Mr. Krabs", "Plankton"],
+    "answer": "Patrick Star",
+    "difficulty": "easy"
+  },
+  {
+    "id": 5,
+    "question": "What kind of animal is Scooby-Doo?",
+    "options": ["Dog", "Cat", "Bear", "Wolf"],
+    "answer": "Dog",
+    "difficulty": "easy"
+  },
+  {
+    "id": 6,
+    "question": "Who is Mickey Mouse’s girlfriend?",
+    "options": ["Minnie Mouse", "Daisy Duck", "Betty Boop", "Lola Bunny"],
+    "answer": "Minnie Mouse",
+    "difficulty": "easy"
+  },
+  {
+    "id": 7,
+    "question": "What is the name of the boy genius in Dexter’s Laboratory?",
+    "options": ["Dexter", "Jimmy", "Timmy", "Johnny"],
+    "answer": "Dexter",
+    "difficulty": "easy"
+  },
+  {
+    "id": 8,
+    "question": "Who is the pink starfish in SpongeBob?",
+    "options": ["Patrick", "Gary", "Plankton", "Sandy"],
+    "answer": "Patrick",
+    "difficulty": "easy"
+  },
+  {
+    "id": 9,
+    "question": "What is the name of the talking cat in 'Tom and Jerry'?",
+    "options": ["Tom", "Jerry", "Spike", "Butch"],
+    "answer": "Tom",
+    "difficulty": "easy"
+  },
+
+  {
+    "id": 11,
+    "question": "What is the name of the baby in 'The Simpsons'?",
+    "options": ["Maggie", "Lisa", "Bart", "Marge"],
+    "answer": "Maggie",
+    "difficulty": "easy"
+  },
+  {
+    "id": 12,
+    "question": "Who says 'What’s up, Doc?'",
+    "options": ["Bugs Bunny", "Daffy Duck", "Elmer Fudd", "Porky Pig"],
+    "answer": "Bugs Bunny",
+    "difficulty": "easy"
+  },
+  {
+    "id": 13,
+    "question": "What animal is Bugs Bunny?",
+    "options": ["Rabbit", "Dog", "Fox", "Cat"],
+    "answer": "Rabbit",
+    "difficulty": "easy"
+  },
+  {
+    "id": 14,
+    "question": "Who is the main character in 'Adventure Time'?",
+    "options": ["Finn", "Jake", "Ice King", "Marceline"],
+    "answer": "Finn",
+    "difficulty": "easy"
+  },
+  {
+    "id": 15,
+    "question": "What type of animal is Jake in 'Adventure Time'?",
+    "options": ["Dog", "Cat", "Bear", "Fox"],
+    "answer": "Dog",
+    "difficulty": "easy"
+  },
+  {
+    "id": 17,
+    "question": "What is the name of the yellow bird in Looney Tunes?",
+    "options": ["Tweety", "Daffy", "Porky", "Sylvester"],
+    "answer": "Tweety",
+    "difficulty": "easy"
+  },
+  {
+    "id": 18,
+    "question": "Who tries to catch Tweety?",
+    "options": ["Sylvester", "Bugs", "Elmer", "Daffy"],
+    "answer": "Sylvester",
+    "difficulty": "easy"
+  },
+  {
+    "id": 19,
+    "question": "What is the name of the dog in 'The Flintstones'?",
+    "options": ["Dino", "Scooby", "Pluto", "Odie"],
+    "answer": "Dino",
+    "difficulty": "easy"
+  },
+  {
+    "id": 21,
+    "question": "What is the name of the robot maid in 'The Jetsons'?",
+    "options": ["Rosie", "Betty", "Judy", "Daisy"],
+    "answer": "Rosie",
+    "difficulty": "medium"
+  },
+  {
+    "id": 22,
+    "question": "Who is Bart Simpson’s sister?",
+    "options": ["Lisa", "Maggie", "Marge", "Milhouse"],
+    "answer": "Lisa",
+    "difficulty": "easy"
+  },
+  {
+    "id": 23,
+    "question": "What instrument does Lisa Simpson play?",
+    "options": ["Saxophone", "Piano", "Guitar", "Drums"],
+    "answer": "Saxophone",
+    "difficulty": "medium"
+  },
+  {
+    "id": 24,
+    "question": "Who owns the Krusty Krab?",
+    "options": ["Mr. Krabs", "SpongeBob", "Plankton", "Squidward"],
+    "answer": "Mr. Krabs",
+    "difficulty": "easy"
+  },
+  {
+    "id": 25,
+    "question": "What is the name of SpongeBob’s pet snail?",
+    "options": ["Gary", "Larry", "Barry", "Jerry"],
+    "answer": "Gary",
+    "difficulty": "easy"
+  },
+  {
+    "id": 26,
+    "question": "What is the name of the villain in 'Powerpuff Girls' with a big brain?",
+    "options": ["Mojo Jojo", "HIM", "Professor", "Ace"],
+    "answer": "Mojo Jojo",
+    "difficulty": "medium"
+  },
+  {
+    "id": 27,
+    "question": "Who are the three Powerpuff Girls?",
+    "options": ["Blossom, Bubbles, Buttercup", "Blossom, Bubbles, Bonnie", "Star, Moon, Marco", "Raven, Starfire, Terra"],
+    "answer": "Blossom, Bubbles, Buttercup",
+    "difficulty": "easy"
+  },
+  {
+    "id": 29,
+    "question": "Who is the villain in 'Inspector Gadget'?",
+    "options": ["Dr. Claw", "Megamind", "Plankton", "Mojo Jojo"],
+    "answer": "Dr. Claw",
+    "difficulty": "medium"
+  },
+  {
+    "id": 31,
+    "question": "Who is the leader of the Teenage Mutant Ninja Turtles?",
+    "options": ["Leonardo", "Michelangelo", "Donatello", "Raphael"],
+    "answer": "Leonardo",
+    "difficulty": "medium"
+  },
+  {
+    "id": 32,
+    "question": "What color mask does Michelangelo wear?",
+    "options": ["Orange", "Blue", "Red", "Purple"],
+    "answer": "Orange",
+    "difficulty": "medium"
+  },
+  {
+    "id": 33,
+    "question": "What is the name of the villain in 'TMNT' who is a brain?",
+    "options": ["Krang", "Shredder", "Bebop", "Rocksteady"],
+    "answer": "Krang",
+    "difficulty": "hard"
+  },
+  {
+    "id": 35,
+    "question": "What is the name of the school in 'Recess'?",
+    "options": ["Third Street School", "Sunnydale High", "Springfield Elementary", "Hillwood School"],
+    "answer": "Third Street School",
+    "difficulty": "medium"
+  },
+
+  {
+    "id": 36,
+    "question": "Who is the main character in 'Johnny Bravo'?",
+    "options": ["Johnny", "Dexter", "Ed", "Ben"],
+    "answer": "Johnny",
+    "difficulty": "easy"
+  },
+  {
+    "id": 38,
+    "question": "What is the name of the alien boy in 'Ben 10'?",
+    "options": ["Ben Tennyson", "Max Steel", "Danny Phantom", "Rex"],
+    "answer": "Ben Tennyson",
+    "difficulty": "easy"
+  },
+  {
+    "id": 39,
+    "question": "What device lets Ben transform into aliens?",
+    "options": ["Omnitrix", "Watchtron", "Alien Gear", "Transform Ring"],
+    "answer": "Omnitrix",
+    "difficulty": "medium"
+  },
+  {
+    "id": 40,
+    "question": "Who is the ghost boy in 'Danny Phantom'?",
+    "options": ["Danny Fenton", "Timmy Turner", "Jimmy Neutron", "Aang"],
+    "answer": "Danny Fenton",
+    "difficulty": "medium"
+  },
+  {
+    "id": 41,
+    "question": "What is the name of the dog in 'Hey Arnold!'?",
+    "options": ["Abner", "Spike", "Odie", "Pluto"],
+    "answer": "Abner",
+    "difficulty": "medium"
+  },
+  {
+    "id": 42,
+    "question": "Who is Arnold’s best friend in 'Hey Arnold!'?",
+    "options": ["Gerald", "Sid", "Stinky", "Harold"],
+    "answer": "Gerald",
+    "difficulty": "easy"
+  },
+  {
+    "id": 44,
+    "question": "Who is the main villain in 'The Powerpuff Girls' with a devil-like appearance?",
+    "options": ["HIM", "Mojo Jojo", "Ace", "Fuzzy Lumpkins"],
+    "answer": "HIM",
+    "difficulty": "medium"
+  },
+  {
+    "id": 45,
+    "question": "What city do the Powerpuff Girls protect?",
+    "options": ["Townsville", "Springfield", "Gotham", "Metro City"],
+    "answer": "Townsville",
+    "difficulty": "medium"
+  },
+
+  {
+    "id": 47,
+    "question": "What instrument does Squidward play?",
+    "options": ["Clarinet", "Guitar", "Piano", "Drums"],
+    "answer": "Clarinet",
+    "difficulty": "medium"
+  },
+  {
+    "id": 48,
+    "question": "Who is the villain trying to steal the Krabby Patty formula?",
+    "options": ["Plankton", "Karen", "Larry", "Sandy"],
+    "answer": "Plankton",
+    "difficulty": "easy"
+  },
+  {
+    "id": 49,
+    "question": "What animal is Sandy Cheeks?",
+    "options": ["Squirrel", "Rabbit", "Dog", "Cat"],
+    "answer": "Squirrel",
+    "difficulty": "medium"
+  },
+  {
+    "id": 50,
+    "question": "What does SpongeBob work as?",
+    "options": ["Fry cook", "Teacher", "Driver", "Singer"],
+    "answer": "Fry cook",
+    "difficulty": "easy"
+  },
+  {
+    "id": 53,
+    "question": "What are the names of Timmy’s fairy godparents?",
+    "options": ["Cosmo and Wanda", "Tim and Tina", "Max and Lily", "Ben and Gwen"],
+    "answer": "Cosmo and Wanda",
+    "difficulty": "easy"
+  },
+  {
+    "id": 54,
+    "question": "What color is Cosmo’s hair?",
+    "options": ["Green", "Blue", "Pink", "Red"],
+    "answer": "Green",
+    "difficulty": "easy"
+  },
+  {
+    "id": 55,
+    "question": "What color is Wanda’s hair?",
+    "options": ["Pink", "Blue", "Green", "Yellow"],
+    "answer": "Pink",
+    "difficulty": "easy"
+  },
+
+  {
+    "id": 56,
+    "question": "Who is the babysitter in 'Fairly OddParents'?",
+    "options": ["Vicky", "Trixie", "Wanda", "Chloe"],
+    "answer": "Vicky",
+    "difficulty": "easy"
+  },
+  {
+    "id": 57,
+    "question": "What is the name of Jimmy Neutron’s robot dog?",
+    "options": ["Goddard", "Bolt", "Robo", "Max"],
+    "answer": "Goddard",
+    "difficulty": "medium"
+  },
+  {
+    "id": 60,
+    "question": "What is Dexter’s sister’s name?",
+    "options": ["Dee Dee", "Daisy", "Dora", "Dina"],
+    "answer": "Dee Dee",
+    "difficulty": "easy"
+  },
+
+  {
+    "id": 61,
+    "question": "What is the name of the show featuring three misfit boys named Ed?",
+    "options": ["Ed, Edd n Eddy", "Three Eds", "Ed Squad", "Ed World"],
+    "answer": "Ed, Edd n Eddy",
+    "difficulty": "easy"
+  },
+  {
+    "id": 62,
+    "question": "What nickname does Edd go by?",
+    "options": ["Double D", "Big D", "Little D", "DD"],
+    "answer": "Double D",
+    "difficulty": "easy"
+  },
+  {
+    "id": 63,
+    "question": "What do the Eds often try to earn money for?",
+    "options": ["Jawbreakers", "Candy bars", "Pizza", "Toys"],
+    "answer": "Jawbreakers",
+    "difficulty": "medium"
+  },
+  {
+    "id": 64,
+    "question": "What is the name of the boy with a plank in 'Ed, Edd n Eddy'?",
+    "options": ["Johnny", "Kevin", "Rolf", "Nazz"],
+    "answer": "Johnny",
+    "difficulty": "medium"
+  },
+  {
+    "id": 66,
+    "question": "Who is the main character in 'Courage the Cowardly Dog'?",
+    "options": ["Courage", "Muriel", "Eustace", "Katz"],
+    "answer": "Courage",
+    "difficulty": "easy"
+  },
+  {
+    "id": 67,
+    "question": "Where does Courage live?",
+    "options": ["Nowhere", "Somewhere", "Cityville", "Townsville"],
+    "answer": "Nowhere",
+    "difficulty": "medium"
+  },
+  {
+    "id": 68,
+    "question": "Who owns Courage?",
+    "options": ["Muriel", "Eustace", "Fred", "Katz"],
+    "answer": "Muriel",
+    "difficulty": "easy"
+  },
+  {
+    "id": 69,
+    "question": "Who is Muriel’s husband?",
+    "options": ["Eustace", "Fred", "John", "Max"],
+    "answer": "Eustace",
+    "difficulty": "easy"
+  },
+  {
+    "id": 70,
+    "question": "What is Eustace’s personality like?",
+    "options": ["Grumpy", "Happy", "Kind", "Funny"],
+    "answer": "Grumpy",
+    "difficulty": "easy"
+  },
+
+  {
+    "id": 73,
+    "question": "Who is the main villain obsessed with candy in KND?",
+    "options": ["Stickybeard", "Father", "Grandfather", "Delightful Children"],
+    "answer": "Stickybeard",
+    "difficulty": "hard"
+  },
+  {
+    "id": 75,
+    "question": "What is Zim’s robot sidekick called?",
+    "options": ["GIR", "BOT", "Zed", "Mini"],
+    "answer": "GIR",
+    "difficulty": "easy"
+  },
+
+  {
+    "id": 77,
+    "question": "Who is Dib’s sister?",
+    "options": ["Gaz", "Vicky", "Helga", "Mandy"],
+    "answer": "Gaz",
+    "difficulty": "medium"
+  },
+  {
+    "id": 78,
+    "question": "What is the name of the grim reaper in 'Billy & Mandy'?",
+    "options": ["Grim", "Death", "Skull", "Bones"],
+    "answer": "Grim",
+    "difficulty": "easy"
+  },
+  {
+    "id": 83,
+    "question": "What is the name of the cartoon with a boy who can bend elements?",
+    "options": ["Avatar: The Last Airbender", "Ben 10", "Danny Phantom", "Samurai Jack"],
+    "answer": "Avatar: The Last Airbender",
+    "difficulty": "medium"
+  },
+  {
+    "id": 85,
+    "question": "Which element does Aang have at the start?",
+    "options": ["Air", "Fire", "Water", "Earth"],
+    "answer": "Air",
+    "difficulty": "medium"
+  },
+
+  {
+    "id": 86,
+    "question": "What animal is Appa?",
+    "options": ["Sky bison", "Dragon", "Elephant", "Buffalo"],
+    "answer": "Sky bison",
+    "difficulty": "medium"
+  },
+  {
+    "id": 87,
+    "question": "What is the name of Aang’s flying lemur?",
+    "options": ["Momo", "Appa", "Zuko", "Sokka"],
+    "answer": "Momo",
+    "difficulty": "medium"
+  },
+  {
+    "id": 88,
+    "question": "Who is the fire prince hunting Aang?",
+    "options": ["Zuko", "Ozai", "Iroh", "Azula"],
+    "answer": "Zuko",
+    "difficulty": "easy"
+  },
+  {
+    "id": 89,
+    "question": "Who is Zuko’s uncle?",
+    "options": ["Iroh", "Ozai", "Roku", "Sozin"],
+    "answer": "Iroh",
+    "difficulty": "medium"
+  },
+  {
+    "id": 90,
+    "question": "What is Iroh known for loving?",
+    "options": ["Tea", "Coffee", "Juice", "Milk"],
+    "answer": "Tea",
+    "difficulty": "easy"
+  },
+
+  {
+    "id": 91,
+    "question": "What is the name of the cartoon dog owned by Jon Arbuckle?",
+    "options": ["Odie", "Pluto", "Scooby", "Brian"],
+    "answer": "Odie",
+    "difficulty": "medium"
+  },
+  {
+    "id": 93,
+    "question": "What food does Garfield love?",
+    "options": ["Lasagna", "Pizza", "Cake", "Burger"],
+    "answer": "Lasagna",
+    "difficulty": "easy"
+  },
+  {
+    "id": 94,
+    "question": "What day does Garfield hate?",
+    "options": ["Monday", "Friday", "Sunday", "Wednesday"],
+    "answer": "Monday",
+    "difficulty": "easy"
+  },
+  {
+    "id": 95,
+    "question": "Who owns Garfield?",
+    "options": ["Jon", "Tim", "Bob", "Max"],
+    "answer": "Jon",
+    "difficulty": "easy"
+  },
+
+  {
+    "id": 96,
+    "question": "What is the name of the yellow family in Springfield?",
+    "options": ["The Simpsons", "The Griffins", "The Browns", "The Hills"],
+    "answer": "The Simpsons",
+    "difficulty": "easy"
+  },
+  {
+    "id": 97,
+    "question": "Who is Homer’s wife?",
+    "options": ["Marge", "Lisa", "Maggie", "Selma"],
+    "answer": "Marge",
+    "difficulty": "easy"
+  },
+  {
+    "id": 98,
+    "question": "What is Bart’s catchphrase?",
+    "options": ["Eat my shorts!", "What’s up doc?", "D’oh!", "Cowabunga!"],
+    "answer": "Eat my shorts!",
+    "difficulty": "medium"
+  },
+  {
+    "id": 99,
+    "question": "What does Homer say when annoyed?",
+    "options": ["D’oh!", "Oops!", "Oh no!", "Yikes!"],
+    "answer": "D’oh!",
+    "difficulty": "easy"
+  },
+  {
+    "id": 100,
+    "question": "Where do the Simpsons live?",
+    "options": ["Springfield", "Quahog", "Bedrock", "Townsville"],
+    "answer": "Springfield",
+    "difficulty": "easy"
+  },
+
+  {
+    "id": 101,
+    "question": "What is the name of the cartoon family in 'Family Guy'?",
+    "options": ["Griffins", "Simpsons", "Hills", "Smiths"],
+    "answer": "Griffins",
+    "difficulty": "medium"
+  },
+  {
+    "id": 102,
+    "question": "Who is the talking dog in 'Family Guy'?",
+    "options": ["Brian", "Stewie", "Peter", "Joe"],
+    "answer": "Brian",
+    "difficulty": "medium"
+  },
+  {
+    "id": 103,
+    "question": "Who is the baby genius in 'Family Guy'?",
+    "options": ["Stewie", "Chris", "Meg", "Brian"],
+    "answer": "Stewie",
+    "difficulty": "medium"
+  },
+  {
+    "id": 104,
+    "question": "What is the name of Peter’s wife?",
+    "options": ["Lois", "Marge", "Linda", "Judy"],
+    "answer": "Lois",
+    "difficulty": "medium"
+  },
+  {
+    "id": 105,
+    "question": "What city does 'Family Guy' take place in?",
+    "options": ["Quahog", "Springfield", "Bedrock", "Gotham"],
+    "answer": "Quahog",
+    "difficulty": "hard"
+  },
+
+  {
+    "id": 107,
+    "question": "Who is the leader of the Teen Titans?",
+    "options": ["Robin", "Beast Boy", "Cyborg", "Raven"],
+    "answer": "Robin",
+    "difficulty": "easy"
+  },
+  {
+    "id": 108,
+    "question": "Who can transform into animals in Teen Titans?",
+    "options": ["Beast Boy", "Cyborg", "Robin", "Raven"],
+    "answer": "Beast Boy",
+    "difficulty": "easy"
+  },
+  {
+    "id": 109,
+    "question": "Who is the half-demon Titan?",
+    "options": ["Raven", "Starfire", "Terra", "Jinx"],
+    "answer": "Raven",
+    "difficulty": "medium"
+  },
+  {
+    "id": 110,
+    "question": "Who is the alien princess in Teen Titans?",
+    "options": ["Starfire", "Raven", "Terra", "Jinx"],
+    "answer": "Starfire",
+    "difficulty": "easy"
+  },
+
+  {
+    "id": 111,
+    "question": "What is the name of the samurai in 'Samurai Jack'?",
+    "options": ["Jack", "Ken", "Ryu", "Hiro"],
+    "answer": "Jack",
+    "difficulty": "easy"
+  },
+  {
+    "id": 112,
+    "question": "Who is the main villain in 'Samurai Jack'?",
+    "options": ["Aku", "Zuko", "Mojo", "Plankton"],
+    "answer": "Aku",
+    "difficulty": "medium"
+  },
+  {
+    "id": 113,
+    "question": "What is the name of the pink character in 'Foster’s Home for Imaginary Friends'?",
+    "options": ["Bloo", "Mac", "Wilt", "Eduardo"],
+    "answer": "Bloo",
+    "difficulty": "medium"
+  },
+  {
+    "id": 114,
+    "question": "Who created Bloo?",
+    "options": ["Mac", "Wilt", "Eduardo", "Frankie"],
+    "answer": "Mac",
+    "difficulty": "medium"
+  },
+  {
+    "id": 117,
+    "question": "What is the name of the cartoon scientist boy with a big head?",
+    "options": ["Jimmy Neutron", "Dexter", "Timmy", "Ben"],
+    "answer": "Jimmy Neutron",
+    "difficulty": "easy"
+  },
+  {
+    "id": 118,
+    "question": "What phrase does Jimmy Neutron say when he gets an idea?",
+    "options": ["Brain blast!", "Eureka!", "Got it!", "Yes!"],
+    "answer": "Brain blast!",
+    "difficulty": "medium"
+  },
+  {
+    "id": 119,
+    "question": "What is the name of the cartoon about a boy with a magic pencil?",
+    "options": ["Pinky Dinky Doo", "Harold and the Purple Crayon", "Danny Phantom", "Ben 10"],
+    "answer": "Harold and the Purple Crayon",
+    "difficulty": "hard"
+  },
+  {
+    "id": 121,
+    "question": "Who is the villain in 'Kim Possible'?",
+    "options": ["Dr. Drakken", "Mojo Jojo", "Plankton", "Aku"],
+    "answer": "Dr. Drakken",
+    "difficulty": "medium"
+  },
+  {
+    "id": 122,
+    "question": "Who is Kim Possible’s best friend?",
+    "options": ["Ron Stoppable", "Ben", "Danny", "Jimmy"],
+    "answer": "Ron Stoppable",
+    "difficulty": "easy"
+  },
+  {
+    "id": 123,
+    "question": "What is Ron’s pet called?",
+    "options": ["Rufus", "Spike", "Odie", "Max"],
+    "answer": "Rufus",
+    "difficulty": "medium"
+  },
+  {
+    "id": 125,
+    "question": "What is Kim Possible’s catchphrase?",
+    "options": ["What’s the sitch?", "Let’s go!", "Time to fight!", "Ready!"],
+    "answer": "What’s the sitch?",
+    "difficulty": "medium"
+  },
+
+  {
+    "id": 126,
+    "question": "What is the name of the duck in Disney cartoons?",
+    "options": ["Donald Duck", "Daffy Duck", "Howard Duck", "Scrooge Duck"],
+    "answer": "Donald Duck",
+    "difficulty": "easy"
+  },
+  {
+    "id": 127,
+    "question": "Who is Donald Duck’s rich uncle?",
+    "options": ["Scrooge McDuck", "Huey", "Dewey", "Louie"],
+    "answer": "Scrooge McDuck",
+    "difficulty": "medium"
+  },
+  {
+    "id": 128,
+    "question": "What are the names of Donald’s nephews?",
+    "options": ["Huey, Dewey, Louie", "Tim, Tom, Ted", "Max, Leo, Ben", "Dan, Don, Dave"],
+    "answer": "Huey, Dewey, Louie",
+    "difficulty": "medium"
+  },
+  {
+    "id": 129,
+    "question": "What is the name of Mickey Mouse’s dog?",
+    "options": ["Pluto", "Goofy", "Odie", "Scooby"],
+    "answer": "Pluto",
+    "difficulty": "easy"
+  },
+  {
+    "id": 130,
+    "question": "Who is Mickey Mouse’s tall dog friend?",
+    "options": ["Goofy", "Pluto", "Donald", "Pete"],
+    "answer": "Goofy",
+    "difficulty": "easy"
+  },
+
+  {
+    "id": 131,
+    "question": "What is the name of the villain in 'DuckTales' with magic powers?",
+    "options": ["Magica De Spell", "Ursula", "Maleficent", "Hades"],
+    "answer": "Magica De Spell",
+    "difficulty": "hard"
+  },
+  {
+    "id": 132,
+    "question": "What do the DuckTales characters search for?",
+    "options": ["Treasure", "Food", "Magic", "Aliens"],
+    "answer": "Treasure",
+    "difficulty": "easy"
+  },
+  {
+    "id": 133,
+    "question": "What is the name of the cartoon cat detective?",
+    "options": ["Inspector Gadget", "Felix", "Top Cat", "Garfield"],
+    "answer": "Top Cat",
+    "difficulty": "hard"
+  },
+
+  {
+    "id": 136,
+    "question": "What is the name of Ben’s cousin?",
+    "options": ["Gwen", "Anna", "Kim", "Lisa"],
+    "answer": "Gwen",
+    "difficulty": "easy"
+  },
+  {
+    "id": 137,
+    "question": "Who is Ben 10’s grandfather?",
+    "options": ["Max", "Joe", "Rick", "Tom"],
+    "answer": "Max",
+    "difficulty": "easy"
+  },
+  {
+    "id": 138,
+    "question": "What is the name of the alien made of fire in Ben 10?",
+    "options": ["Heatblast", "Fireman", "Flame Guy", "Inferno"],
+    "answer": "Heatblast",
+    "difficulty": "medium"
+  },
+  {
+    "id": 139,
+    "question": "What is the name of the cartoon channel known for many of these shows?",
+    "options": ["Cartoon Network", "Nickelodeon", "Disney Channel", "Fox Kids"],
+    "answer": "Cartoon Network",
+    "difficulty": "easy"
+  },
+  {
+    "id": 141,
+    "question": "What is the name of the Krusty Krab’s rival restaurant?",
+    "options": ["Chum Bucket", "Burger Place", "Krabby House", "Sea Diner"],
+    "answer": "Chum Bucket",
+    "difficulty": "medium"
+  },
+  {
+    "id": 142,
+    "question": "Who is Plankton’s computer wife?",
+    "options": ["Karen", "Sandy", "Wanda", "Lisa"],
+    "answer": "Karen",
+    "difficulty": "medium"
+  },
+  {
+    "id": 143,
+    "question": "What is the name of the superhero family in 'The Incredibles' (animated universe crossover knowledge)?",
+    "options": ["Parr family", "Simpsons", "Griffins", "Flintstones"],
+    "answer": "Parr family",
+    "difficulty": "hard"
+  },
+
+  {
+    "id": 146,
+    "question": "What is the name of the villain in 'Teen Titans'?",
+    "options": ["Slade", "Joker", "Lex", "Thanos"],
+    "answer": "Slade",
+    "difficulty": "medium"
+  },
+  {
+    "id": 149,
+    "question": "What is the name of the cartoon about three girls with superpowers?",
+    "options": ["Powerpuff Girls", "Totally Spies", "Winx Club", "Teen Titans"],
+    "answer": "Powerpuff Girls",
+    "difficulty": "easy"
+  }
+]
