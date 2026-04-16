@@ -22,6 +22,18 @@ function ensureDir(dir) {
     fs.mkdirSync(dir, { recursive: true });
   }
 }
+function shuffleArray(array) {
+  return [...array].sort(() => Math.random() - 0.5);
+}
+
+function getRelatedThemes(allThemes, currentTheme, limit = 5) {
+  const sameCategory = allThemes.filter(t =>
+    t.slug !== currentTheme.slug &&
+    t.category === currentTheme.category
+  );
+
+  return shuffleArray(sameCategory).slice(0, limit);
+}
 
 function getThemeCoverageText(theme) {
   const category = theme.category || "";
@@ -80,7 +92,7 @@ function getTotalQuestions(questionFilePath) {
   }
 }
 
-function buildThemePage(theme, hasEpisodeMode, sampleQuestions = []) {
+function buildThemePage(theme, allThemes, hasEpisodeMode, sampleQuestions = []) {
   const rawTitle = theme.title || "";
   const rawDescription = theme.description || "";
   const rawSlug = theme.slug || "";
@@ -120,6 +132,23 @@ const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
         </div>
       `
     : "";
+
+  const relatedThemes = getRelatedThemes(allThemes, theme, 5);
+
+const relatedThemesHtml = relatedThemes.length
+  ? `
+      <div class="theme-related-quizzes">
+        <h2>Related Quizzes</h2>
+        <div class="grid">
+          ${relatedThemes.map((t) => `
+            <a class="card" href="../themes/${escapeHtml(t.slug)}.html">
+              <h3>${escapeHtml(t.title)}</h3>
+            </a>
+          `).join("")}
+        </div>
+      </div>
+    `
+  : "";
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -196,6 +225,7 @@ ${rawSeoDetail ? `<p>${detailText}</p>` : ""}
         </a>
       </div>
       ${sampleQuestionsHtml}
+      ${relatedThemesHtml}
     </section>
   </main>
 
@@ -324,7 +354,7 @@ function main() {
 
     const hasEpisodeMode = Boolean(episodeThemes[theme.slug]);
     const sampleQuestions = getSampleQuestions(theme.questionFile);
-    const html = buildThemePage(theme, hasEpisodeMode, sampleQuestions);
+    const html = buildThemePage(theme, themes, hasEpisodeMode, sampleQuestions);
     const outPath = path.join(outputDir, `${theme.slug}.html`);
 
     fs.writeFileSync(outPath, html, "utf8");

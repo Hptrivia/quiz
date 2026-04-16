@@ -104,7 +104,7 @@
   },
   {
     "question": "Which UFC fighter is known for the 'Stockton Slap'?",
-    "options": ["Nick Diaz", "Nate Diaz", "Sean Strickland", "Clay Guida"],
+    "options": ["Luke Rockhold", "Nate Diaz", "Sean Strickland", "Clay Guida"],
     "answer": "Nate Diaz",
     "difficulty": "easy",
     "score": 1,
@@ -621,20 +621,6 @@
     "id": "ufc-0044"
   },
   {
-    "question": "Which MMA fighter once pulled off a flying triangle choke in the UFC?",
-    "options": ["Charles Oliveira", "Tony Ferguson", "Nate Diaz", "Nick Diaz"],
-    "answer": "Charles Oliveira",
-    "difficulty": "hard",
-    "score": 1,
-    "category": "Submissions",
-    "tags": ["highlight reel", "bjj"],
-    "timed": false,
-    "type": "multiple_choice",
-    "source": "UFC Fight Night",
-    "explanation": "Oliveira pulled off the flying triangle early in his UFC career, showcasing wild grappling.",
-    "id": "ufc-0045"
-  },
-  {
     "question": "What year did the UFC implement the Unified Rules of MMA?",
     "options": ["2000", "2001", "2005", "1999"],
     "answer": "2001",
@@ -675,20 +661,6 @@
     "source": "UFC Stats",
     "explanation": "UFC 138 introduced the first 5-rounder that wasn’t a title fight: Leben vs. Munoz.",
     "id": "ufc-0048"
-  },
-  {
-    "question": "Which fighter famously ate a Twix bar during a post-fight press conference?",
-    "options": ["Derrick Lewis", "Daniel Cormier", "Tai Tuivasa", "Nate Diaz"],
-    "answer": "Derrick Lewis",
-    "difficulty": "medium",
-    "score": 1,
-    "category": "Funny Moments",
-    "tags": ["post fight", "personality"],
-    "timed": false,
-    "type": "multiple_choice",
-    "source": "UFC Press Conference",
-    "explanation": "Lewis is known for his hilarious post-fight moments, including the Twix munch.",
-    "id": "ufc-0049"
   },
   {
     "question": "Which UFC fighter is deaf and has competed multiple times in the Octagon?",
@@ -1363,7 +1335,7 @@
     "id": "ufc-0097"
   },
   {
-    "question": "Which UFC legend finished a championship fight with a signature triangle choke from the bottom?",
+    "question": "Which UFC legend finished a championship fight with a triangle choke from the bottom?",
     "options": ["Nick Diaz", "Tony Ferguson", "Nate Diaz", "Anderson Silva"],
     "answer": "Anderson Silva",
     "difficulty": "medium",

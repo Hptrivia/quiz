@@ -9,6 +9,15 @@ function getParam(name) {
   return params.get(name);
 }
 
+function getRelatedThemes(allThemes, currentTheme, limit = 5) {
+  const sameCategory = allThemes.filter(t =>
+    t.slug !== currentTheme.slug &&
+    t.category === currentTheme.category
+  );
+
+  return shuffleArray(sameCategory).slice(0, limit);
+}
+
 function slugify(text) {
   return text.toLowerCase().replace(/\s+/g, "-");
 }
@@ -523,6 +532,21 @@ function renderResult() {
   const hasNextPage = safePage < totalPages;
   const tierText = getMarathonTier(quizState.score, quizState.questions.length);
 
+  const relatedThemes = getRelatedThemes(themes, theme, 5);
+
+const relatedThemesHtml = relatedThemes.length ? `
+  <div class="theme-related-quizzes">
+    <h3>Related Quizzes</h3>
+    <div class="grid">
+      ${relatedThemes.map(item => `
+        <a class="card" href="play.html?theme=${item.slug}">
+          <h3>${item.title}</h3>
+        </a>
+      `).join("")}
+    </div>
+  </div>
+` : "";
+
   resultBox.innerHTML = `
     <h2>Quiz Complete</h2>
     <p>Your score: ${quizState.score} / ${quizState.questions.length}</p>
@@ -540,6 +564,7 @@ function renderResult() {
       <div id="resultThemeSearchResults" class="search-results"></div>
     </div>
   </div>
+  ${relatedThemesHtml}
   `;
   const resultSearchInput = document.getElementById("resultThemeSearchInput");
 const resultSearchResults = document.getElementById("resultThemeSearchResults");

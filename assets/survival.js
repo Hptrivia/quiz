@@ -90,12 +90,12 @@ function shuffleQuestionOptions(question) {
 }
 
   function updateTopbar() {
-    scoreEl.textContent = `Score: ${state.score}`;
+    scoreEl.textContent = state.score;
 
     if (state.recoveryStarted || state.pendingRecoveryStart) {
-      streakEl.textContent = `Recovery Streak: Started (${state.recoveryPoints})`;
+      streakEl.textContent = `Started (${state.recoveryPoints})`;
     } else {
-      streakEl.textContent = "Recovery Streak: Not started";
+      streakEl.textContent = "Not started";
     }
 
     fiftyBtn.disabled = !state.fiftyAvailable || state.answerLocked || state.gameOver;
@@ -114,6 +114,22 @@ function shuffleQuestionOptions(question) {
     resultBox.classList.remove("result-anim");
     void resultBox.offsetWidth;
     resultBox.classList.add("result-anim");
+
+    const relatedThemes = getRelatedThemes(themes, theme, 5);
+
+const relatedThemesHtml = relatedThemes.length ? `
+  <div class="theme-related-quizzes">
+    <h3>Related Quizzes</h3>
+    <div class="grid">
+      ${relatedThemes.map(item => `
+        <a class="card" href="survival.html?theme=${item.slug}">
+          <h3>${item.title}</h3>
+        </a>
+      `).join("")}
+    </div>
+  </div>
+` : "";
+
     resultBox.innerHTML = `
       <h2>Survival Over</h2>
       <p>Your score: ${state.score}</p>
@@ -128,6 +144,7 @@ function shuffleQuestionOptions(question) {
       <input id="survivalResultThemeSearchInput" class="theme-search-input" type="text" placeholder="Search themes..." autocomplete="off" />
       <div id="survivalResultThemeSearchResults" class="search-results"></div>
     </div>
+    ${relatedThemesHtml}
   </div>
 
     `;

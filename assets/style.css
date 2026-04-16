@@ -713,6 +713,29 @@ a {
   font-weight: 500;
 }
 
+.theme-related-quizzes {
+  margin-top: 24px;
+}
+.survival-meta-row {
+  padding: 6px 10px;
+  margin: 8px 0 10px;
+}
+
+.survival-meta-row p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+.survival-meta-row p + p {
+  margin-top: 2px;
+}
+
+.theme-related-quizzes h2,
+.theme-related-quizzes h3 {
+  margin-bottom: 14px;
+}
+
 .grid .card h3 {
   margin: 0;
   }

@@ -136,6 +136,20 @@ btn.addEventListener("click", () => {
       </p>
     </div>
   ` : "";
+  const relatedThemes = getRelatedThemes(themes, theme, 5);
+
+const relatedThemesHtml = relatedThemes.length ? `
+  <div class="theme-related-quizzes">
+    <h3>Related Quizzes</h3>
+    <div class="grid">
+      ${relatedThemes.map(item => `
+        <a class="card" href="challenge.html?theme=${item.slug}&round=1">
+          <h3>${item.title}</h3>
+        </a>
+      `).join("")}
+    </div>
+  </div>
+` : "";
 
   resultBox.innerHTML = `
     <h2>Round ${safeRound} Complete</h2>
@@ -146,15 +160,15 @@ btn.addEventListener("click", () => {
       ${hasNextRound ? `<a class="primary-btn" href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}">Next Round</a>` : ""}
      <a class="secondary-btn" href="contact.html">Report a Question</a>
     </div>
-
-      <div class="result-theme-search">
+  </div>
+    ${affiliateHtml}
+          <div class="result-theme-search">
     <p class="result-theme-search-title">Try another theme</p>
     <div class="search-wrap">
       <input id="challengeResultThemeSearchInput" class="theme-search-input" type="text" placeholder="Search themes..." autocomplete="off" />
       <div id="challengeResultThemeSearchResults" class="search-results"></div>
     </div>
-  </div>
-    ${affiliateHtml}
+    ${relatedThemesHtml}
   `;
    const resultSearchInput = document.getElementById("challengeResultThemeSearchInput");
 const resultSearchResults = document.getElementById("challengeResultThemeSearchResults");
