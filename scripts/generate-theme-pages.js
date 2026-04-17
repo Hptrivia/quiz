@@ -110,7 +110,7 @@ const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
     ? `${totalQuestions} questions across multiple rounds`
     : "";
   const metaDescription = totalQuestions > 0
-    ? `Play ${totalQuestions}+ ${rawTitle} trivia questions on Trivia Gauntlet. Test your knowledge in Marathon, Challenge, Survival, and more.`
+    ? `Play ${totalQuestions} ${rawTitle} trivia questions on Trivia Gauntlet. Test your knowledge in Marathon, Challenge, Survival, and more.`
     : `Play ${rawTitle} trivia questions on Trivia Gauntlet. Test your knowledge in multiple quiz modes.`;
 
   const episodeButton = hasEpisodeMode
@@ -192,8 +192,6 @@ const relatedThemesHtml = relatedThemes.length
       <h1>${title} Trivia Questions</h1>
       ${totalQuestionsText ? `<p class="theme-question-count">${escapeHtml(totalQuestionsText)}</p>` : ""}
 <p>${description}</p>
-${rawSeoIntro ? `<p>${coverageText}</p>` : ""}
-${rawSeoDetail ? `<p>${detailText}</p>` : ""}
 <p>${bestModeText}</p>
       
       <div class="grid">
