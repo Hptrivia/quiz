@@ -727,6 +727,14 @@ a {
   line-height: 1.25;
 }
 
+.article-link-row .inline-link {
+  display: inline-block;
+  color: #7cc6ff;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .survival-meta-row p + p {
   margin-top: 2px;
 }

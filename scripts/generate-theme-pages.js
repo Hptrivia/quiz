@@ -192,7 +192,7 @@ const relatedThemesHtml = relatedThemes.length
       <h1>${title} Trivia Questions</h1>
       ${totalQuestionsText ? `<p class="theme-question-count">${escapeHtml(totalQuestionsText)}</p>` : ""}
 <p>${description}</p>
-<p>${bestModeText}</p>
+
       
       <div class="grid">
         <a class="card" href="../play.html?theme=${slug}">
