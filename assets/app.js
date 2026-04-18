@@ -552,8 +552,8 @@ const relatedThemesHtml = relatedThemes.length ? `
     <p>Your score: ${quizState.score} / ${quizState.questions.length}</p>
     <p class="result-tier">${tierText}</p>
     <div class="cta-row">
-      ${hasNextPage ? `<a class="primary-btn" href="play.html?theme=${theme.slug}&page=${safePage + 1}">More Questions</a>` : ""}
-      <a class="secondary-btn" href="${buyPackUrl}" target="_blank" rel="noopener noreferrer">Ad-Free Play + Extras</a>
+      ${hasNextPage ? `<a class="primary-btn" href="play.html?theme=${theme.slug}&page=${safePage + 1}">Next Round</a>` : ""}
+      <a class="secondary-btn" href="${buyPackUrl}" target="_blank" rel="noopener noreferrer">Ad-Free</a>
       <a class="secondary-btn" href="contact.html">Report a Question</a>
     </div>
 
