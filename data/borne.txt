@@ -37,9 +37,16 @@
   {
     "id": "bb-006",
     "difficulty": "easy",
-    "question": "Which stat increases the power of firearm damage scaling and visceral attacks?",
-    "options": ["Skill", "Strength", "Arcane", "Endurance"],
+    "question": "Which stat increases the power of visceral attacks?",
+    "options": ["Skill", "Strength", "Bloodtinge", "Endurance"],
     "answer": "Skill"
+  },
+  {
+    "id": "bb-006",
+    "difficulty": "easy",
+    "question": "Which stat increases the power of firearm damage?",
+    "options": ["Skill", "Strength", "Bloodtinge", "Endurance"],
+    "answer": "Bloodtinge"
   },
   {
     "id": "bb-007",
