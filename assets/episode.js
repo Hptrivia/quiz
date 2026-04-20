@@ -4,12 +4,13 @@ async function renderEpisodePage() {
   const theme = themes.find(t => t.slug === slug);
 
   if (!theme) return;
+
   if (typeof gtag === "function") {
-  gtag("event", "page_view", {
-    page_title: `Episode Mode - ${theme.title}`,
-    page_location: window.location.href
-  });
-}
+    gtag("event", "page_view", {
+      page_title: `Episode Mode - ${theme.title}`,
+      page_location: window.location.href
+    });
+  }
 
   if (typeof updateRemoveAdsFooter === "function") {
     updateRemoveAdsFooter(theme.slug, "episode");
@@ -24,16 +25,9 @@ async function renderEpisodePage() {
     buyPackUrl = "https://ko-fi.com/triviaking/shop";
   }
 
-  const progressEl = document.getElementById("episodeProgressText");
   const nextPageLink = document.getElementById("episodeNextPageLink");
-  const contextEl = document.getElementById("episodeContext");
-  const questionEl = document.getElementById("episodeQuestionText");
-  const optionsEl = document.getElementById("episodeOptionsList");
   const scoreEl = document.getElementById("episodeScoreText");
-  const feedbackEl = document.getElementById("episodeFeedbackText");
-  const descriptionEl = document.getElementById("episodeDescription");
-  const submitBtn = document.getElementById("episodeSubmitButton");
-  const nextBtn = document.getElementById("episodeNextButton");
+  const slidesContainer = document.getElementById("episodeSlides");
   const resultBox = document.getElementById("episodeResultBox");
   const gameBox = document.getElementById("episodeGameBox");
 
@@ -44,7 +38,7 @@ async function renderEpisodePage() {
   const episodeFile = episodeThemes[slug];
 
   if (!episodeFile) {
-    questionEl.textContent = "Episode Mode not available for this theme.";
+    slidesContainer.textContent = "Episode Mode not available for this theme.";
     return;
   }
 
@@ -67,12 +61,10 @@ async function renderEpisodePage() {
 
   allQuestions.forEach(q => {
     const marker = extractEpisodeMarker(q);
-
     if (marker !== null) {
       currentMarker = marker;
       foundAnyEpisodeMarkers = true;
     }
-
     if (currentMarker !== null) {
       if (!episodeMap.has(currentMarker)) episodeMap.set(currentMarker, []);
       episodeMap.get(currentMarker).push(q);
@@ -100,20 +92,22 @@ async function renderEpisodePage() {
   }
 
   if (!episodeQuestions.length) {
-    questionEl.textContent = "No episode data found.";
+    slidesContainer.textContent = "No episode data found.";
     return;
+  }
+
+  if (nextPageLink) {
+    if (hasNextEpisode) {
+      nextPageLink.style.display = "inline-block";
+      nextPageLink.textContent = "Skip to next episode";
+      nextPageLink.href = `episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}`;
+    } else {
+      nextPageLink.style.display = "none";
+    }
   }
 
   let currentIndex = 0;
   let score = 0;
-  let answered = false;
-  let selectedAnswer = null;
-
-  function setFeedback(text, type = "") {
-    feedbackEl.textContent = text;
-    feedbackEl.className = "feedback";
-    if (type) feedbackEl.classList.add(type);
-  }
 
   function renderResult() {
     gameBox.style.display = "none";
@@ -132,112 +126,141 @@ async function renderEpisodePage() {
     `;
   }
 
-  function renderQuestion() {
-    const q = episodeQuestions[currentIndex];
-    if (!q) {
-      renderResult();
-      return;
+  function showQuestion(index) {
+    const prev = slidesContainer.querySelector(".question-slide.active");
+    if (prev) {
+      prev.classList.remove("active");
+      prev.classList.add("answered");
     }
-
-    answered = false;
-    selectedAnswer = null;
-    optionsEl.innerHTML = "";
-    descriptionEl.innerHTML = "";
-    setFeedback("");
-    nextBtn.style.display = "none";
-    submitBtn.style.display = "inline-block";
-    submitBtn.disabled = false;
-
-    progressEl.textContent = `Question ${currentIndex + 1} of ${episodeQuestions.length}`;
+    const slide = slidesContainer.querySelector(`.question-slide[data-index="${index}"]`);
+    if (slide) {
+      slide.classList.add("active");
+      slide.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
     scoreEl.textContent = `Score: ${score}`;
-    contextEl.textContent = cleanText(q.context);
-    questionEl.textContent = q.question || "";
+  }
 
-    if (nextPageLink) {
-      if (hasNextEpisode) {
-        nextPageLink.style.display = "inline-block";
-        nextPageLink.textContent = "Skip to next episode";
-        nextPageLink.href = `episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}`;
-      } else {
-        nextPageLink.style.display = "none";
-      }
-    }
+  // Pre-render all question slides
+  episodeQuestions.forEach((q, index) => {
+    const slide = document.createElement("div");
+    slide.className = "question-slide";
+    slide.dataset.index = index;
+
+    const qNum = document.createElement("p");
+    qNum.className = "slide-question-num";
+    qNum.textContent = `Question ${index + 1} of ${episodeQuestions.length}`;
+
+    const contextP = document.createElement("div");
+    contextP.className = "episode-context";
+    contextP.textContent = cleanText(q.context);
+
+    const qText = document.createElement("h2");
+    qText.textContent = q.question || "";
+
+    const optsList = document.createElement("div");
+    optsList.className = "options";
+
+    let answered = false;
+    let selectedAnswer = null;
 
     q.options.forEach(option => {
       const btn = document.createElement("button");
       btn.className = "option-btn";
       btn.textContent = option;
-
-btn.addEventListener("click", () => {
-  if (answered) return;
-  selectedAnswer = option;
-
-  document.querySelectorAll("#episodeOptionsList .option-btn").forEach(b => {
-    b.classList.remove("selected", "correct-anim", "wrong-anim");
-  });
-  btn.classList.add("selected");
-});
-      optionsEl.appendChild(btn);
+      btn.addEventListener("click", () => {
+        if (answered || currentIndex !== index) return;
+        selectedAnswer = option;
+        optsList.querySelectorAll(".option-btn").forEach(b => {
+          b.classList.remove("selected", "correct-anim", "wrong-anim");
+        });
+        btn.classList.add("selected");
+      });
+      optsList.appendChild(btn);
     });
-  }
 
-  function submitAnswer() {
-    if (answered) return;
-    if (!selectedAnswer) return;
+    const feedbackP = document.createElement("p");
+    feedbackP.className = "feedback";
 
-    const q = episodeQuestions[currentIndex];
-    answered = true;
+    const descDiv = document.createElement("div");
+    descDiv.className = "episode-description";
 
-    document.querySelectorAll("#episodeOptionsList .option-btn").forEach(b => {
-      b.disabled = true;
-      if (b.textContent === q.answer) {
-        b.classList.add("selected");
+    const submitBtn = document.createElement("button");
+    submitBtn.className = "primary-btn";
+    submitBtn.textContent = "Submit";
+
+    const nextBtn = document.createElement("button");
+    nextBtn.className = "secondary-btn";
+    nextBtn.textContent = "Next";
+    nextBtn.style.display = "none";
+
+    const ctaRow = document.createElement("div");
+    ctaRow.className = "cta-row";
+    ctaRow.appendChild(submitBtn);
+    ctaRow.appendChild(nextBtn);
+
+    submitBtn.addEventListener("click", () => {
+      if (answered || !selectedAnswer || currentIndex !== index) return;
+
+      answered = true;
+
+      optsList.querySelectorAll(".option-btn").forEach(b => {
+        b.disabled = true;
+        if (b.textContent === q.answer) b.classList.add("selected");
+      });
+
+      const selectedBtn = optsList.querySelector(".option-btn.selected");
+
+      if (selectedAnswer === q.answer) {
+        score += 1;
+        feedbackP.textContent = `Correct. The answer is ${q.answer}.`;
+        feedbackP.className = "feedback correct";
+        if (selectedBtn) {
+          selectedBtn.classList.remove("wrong-anim");
+          void selectedBtn.offsetWidth;
+          selectedBtn.classList.add("correct-anim");
+        }
+      } else {
+        feedbackP.textContent = `Wrong. The correct answer is ${q.answer}.`;
+        feedbackP.className = "feedback wrong";
+        if (selectedBtn) {
+          selectedBtn.classList.remove("correct-anim");
+          void selectedBtn.offsetWidth;
+          selectedBtn.classList.add("wrong-anim");
+        }
+      }
+
+      descDiv.innerHTML = `
+        <div class="episode-description-box">
+          <p class="episode-description-label">Explanation</p>
+          <p>${cleanText(q.description)}</p>
+        </div>
+      `;
+
+      scoreEl.textContent = `Score: ${score}`;
+      submitBtn.style.display = "none";
+      nextBtn.style.display = "inline-block";
+    });
+
+    nextBtn.addEventListener("click", () => {
+      currentIndex += 1;
+      if (currentIndex >= episodeQuestions.length) {
+        renderResult();
+      } else {
+        showQuestion(currentIndex);
       }
     });
 
-  const selectedBtn = document.querySelector("#episodeOptionsList .option-btn.selected");
-  
-  if (selectedAnswer === q.answer) {
-    score += 1;
-    setFeedback(`Correct. The answer is ${q.answer}.`, "correct");
-    if (selectedBtn) {
-      selectedBtn.classList.remove("wrong-anim");
-      void selectedBtn.offsetWidth;
-      selectedBtn.classList.add("correct-anim");
-    }
-  } else {
-    setFeedback(`Wrong. The correct answer is ${q.answer}.`, "wrong");
-    if (selectedBtn) {
-      selectedBtn.classList.remove("correct-anim");
-      void selectedBtn.offsetWidth;
-      selectedBtn.classList.add("wrong-anim");
-    }
-  }
-
-    descriptionEl.innerHTML = `
-      <div class="episode-description-box">
-        <p class="episode-description-label">Explanation</p>
-        <p>${cleanText(q.description)}</p>
-      </div>
-    `;
-
-    scoreEl.textContent = `Score: ${score}`;
-    submitBtn.style.display = "none";
-    nextBtn.style.display = "inline-block";
-  }
-
-  submitBtn.addEventListener("click", submitAnswer);
-
-  nextBtn.addEventListener("click", () => {
-    currentIndex += 1;
-    if (currentIndex >= episodeQuestions.length) {
-      renderResult();
-    } else {
-      renderQuestion();
-    }
+    slide.appendChild(qNum);
+    slide.appendChild(contextP);
+    slide.appendChild(qText);
+    slide.appendChild(optsList);
+    slide.appendChild(feedbackP);
+    slide.appendChild(descDiv);
+    slide.appendChild(ctaRow);
+    slidesContainer.appendChild(slide);
   });
 
-  renderQuestion();
+  showQuestion(0);
 }
 
 document.addEventListener("DOMContentLoaded", () => {

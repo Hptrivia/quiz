@@ -491,18 +491,12 @@ async function renderPlayPage() {
 
   const PAGE_SIZE = 30; // later change 10 -> 30
 
-  const progress = document.getElementById("progressText");
-  const questionEl = document.getElementById("questionText");
-  const optionsEl = document.getElementById("optionsList");
-  const feedbackEl = document.getElementById("feedbackText");
-  const submitBtn = document.getElementById("submitButton");
-  const nextBtn = document.getElementById("nextButton");
+  const slidesContainer = document.getElementById("playSlides");
   const resultBox = document.getElementById("resultBox");
-  const scoreEl = document.getElementById("scoreText");
   const nextPageLink = document.getElementById("nextPageLink");
 
   if (!theme) {
-    questionEl.textContent = "Theme not found";
+    slidesContainer.textContent = "Theme not found";
     return;
   }
 
@@ -531,7 +525,7 @@ let buyPackUrl = "https://ko-fi.com/triviaking/shop";
   const totalPages = allPages.length;
   const safePage = Math.min(currentPage, totalPages);
 
-  quizState.questions = allPages[safePage - 1] || [];
+  quizState.questions = (allPages[safePage - 1] || []).map(q => shuffleQuestionOptions(q));
   quizState.currentIndex = 0;
   quizState.score = 0;
   quizState.selectedAnswer = null;
@@ -546,36 +540,112 @@ let buyPackUrl = "https://ko-fi.com/triviaking/shop";
     }
   }
 
-  function renderQuestion() {
-    const q = shuffleQuestionOptions(quizState.questions[quizState.currentIndex]);
-
-    feedbackEl.textContent = "";
-    feedbackEl.className = "feedback";
-    optionsEl.innerHTML = "";
-    submitBtn.disabled = false;
-    nextBtn.style.display = "none";
+  function showQuestion(index) {
+    const prev = slidesContainer.querySelector(".question-slide.active");
+    if (prev) {
+      prev.classList.remove("active");
+      prev.classList.add("answered");
+    }
+    const slide = slidesContainer.querySelector(`.question-slide[data-index="${index}"]`);
+    if (slide) {
+      slide.classList.add("active");
+      slide.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
     quizState.selectedAnswer = null;
+  }
 
-    progress.textContent = `Question ${quizState.currentIndex + 1} of ${quizState.questions.length}`;
-    scoreEl.textContent = `Score: ${quizState.score}`;
-    questionEl.textContent = q.question;
+  // Pre-render all question slides
+  quizState.questions.forEach((q, index) => {
+    const slide = document.createElement("div");
+    slide.className = "question-slide";
+    slide.dataset.index = index;
+
+    const qNum = document.createElement("p");
+    qNum.className = "slide-question-num";
+    qNum.textContent = `Question ${index + 1} of ${quizState.questions.length}`;
+
+    const qText = document.createElement("h2");
+    qText.textContent = q.question;
+
+    const optsList = document.createElement("div");
+    optsList.className = "options";
 
     q.options.forEach(option => {
       const btn = document.createElement("button");
       btn.className = "option-btn";
       btn.textContent = option;
-
-btn.addEventListener("click", () => {
-  quizState.selectedAnswer = option;
-  document.querySelectorAll("#optionsList .option-btn").forEach(b => {
-    b.classList.remove("selected", "correct-anim", "wrong-anim");
-  });
-  btn.classList.add("selected");
-});
-
-      optionsEl.appendChild(btn);
+      btn.addEventListener("click", () => {
+        if (quizState.currentIndex !== index) return;
+        quizState.selectedAnswer = option;
+        optsList.querySelectorAll(".option-btn").forEach(b => {
+          b.classList.remove("selected", "correct-anim", "wrong-anim");
+        });
+        btn.classList.add("selected");
+      });
+      optsList.appendChild(btn);
     });
-  }
+
+    const feedbackP = document.createElement("p");
+    feedbackP.className = "feedback";
+
+    const submitBtn = document.createElement("button");
+    submitBtn.className = "primary-btn";
+    submitBtn.textContent = "Submit";
+
+    const nextBtn = document.createElement("button");
+    nextBtn.className = "secondary-btn";
+    nextBtn.textContent = "Next";
+    nextBtn.style.display = "none";
+
+    const ctaRow = document.createElement("div");
+    ctaRow.className = "cta-row";
+    ctaRow.appendChild(submitBtn);
+    ctaRow.appendChild(nextBtn);
+
+    submitBtn.addEventListener("click", () => {
+      if (quizState.currentIndex !== index || !quizState.selectedAnswer) return;
+
+      const selectedBtn = optsList.querySelector(".option-btn.selected");
+
+      if (quizState.selectedAnswer === q.answer) {
+        quizState.score += 1;
+        feedbackP.textContent = "Correct";
+        feedbackP.className = "feedback correct";
+        if (selectedBtn) {
+          selectedBtn.classList.remove("wrong-anim");
+          void selectedBtn.offsetWidth;
+          selectedBtn.classList.add("correct-anim");
+        }
+      } else {
+        feedbackP.textContent = "Wrong";
+        feedbackP.className = "feedback wrong";
+        if (selectedBtn) {
+          selectedBtn.classList.remove("correct-anim");
+          void selectedBtn.offsetWidth;
+          selectedBtn.classList.add("wrong-anim");
+        }
+      }
+
+      submitBtn.disabled = true;
+      nextBtn.style.display = "inline-block";
+    });
+
+    nextBtn.addEventListener("click", () => {
+      quizState.currentIndex += 1;
+      if (quizState.currentIndex >= quizState.questions.length) {
+        renderResult();
+      } else {
+        showQuestion(quizState.currentIndex);
+      }
+    });
+
+    slide.appendChild(qNum);
+    slide.appendChild(qText);
+    slide.appendChild(optsList);
+    slide.appendChild(feedbackP);
+    slide.appendChild(ctaRow);
+    slidesContainer.appendChild(slide);
+  });
 
 function renderResult() {
   document.getElementById("quizBox").style.display = "none";
@@ -664,45 +734,7 @@ if (resultSearchInput && resultSearchResults) {
   }, 800);
 }
 
-submitBtn.addEventListener("click", () => {
-  if (!quizState.selectedAnswer) return;
-
-  const q = quizState.questions[quizState.currentIndex];
-  const selectedBtn = document.querySelector("#optionsList .option-btn.selected");
-
-  if (quizState.selectedAnswer === q.answer) {
-    quizState.score += 1;
-    feedbackEl.textContent = "Correct";
-    feedbackEl.className = "feedback correct";
-    if (selectedBtn) {
-      selectedBtn.classList.remove("wrong-anim");
-      void selectedBtn.offsetWidth;
-      selectedBtn.classList.add("correct-anim");
-    }
-  } else {
-    feedbackEl.textContent = "Wrong";
-    feedbackEl.className = "feedback wrong";
-    if (selectedBtn) {
-      selectedBtn.classList.remove("correct-anim");
-      void selectedBtn.offsetWidth;
-      selectedBtn.classList.add("wrong-anim");
-    }
-  }
-
-  submitBtn.disabled = true;
-  nextBtn.style.display = "inline-block";
-});
-
-  nextBtn.addEventListener("click", () => {
-    quizState.currentIndex += 1;
-    if (quizState.currentIndex >= quizState.questions.length) {
-      renderResult();
-    } else {
-      renderQuestion();
-    }
-  });
-
-  renderQuestion();
+  showQuestion(0);
 }
 
 /* ---------------- BOOTSTRAP ---------------- */

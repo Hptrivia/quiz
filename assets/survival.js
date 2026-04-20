@@ -6,30 +6,27 @@ async function renderSurvivalPage() {
   const difficultyBox = document.getElementById("difficultyBox");
   const gameBox = document.getElementById("survivalGameBox");
   const resultBox = document.getElementById("survivalResultBox");
+  const slidesContainer = document.getElementById("survivalSlides");
 
   const scoreEl = document.getElementById("survivalScoreText");
   const streakEl = document.getElementById("survivalStreakText");
-  const questionEl = document.getElementById("survivalQuestionText");
-  const optionsEl = document.getElementById("survivalOptionsList");
-  const feedbackEl = document.getElementById("survivalFeedbackText");
+  const sharedFeedbackEl = document.getElementById("survivalSharedFeedback");
 
-  const submitBtn = document.getElementById("survivalSubmitButton");
-  const nextBtn = document.getElementById("survivalNextButton");
   const fiftyBtn = document.getElementById("fiftyBtn");
   const friendBtn = document.getElementById("friendBtn");
 
   if (!theme) return;
 
   if (typeof gtag === "function") {
-  gtag("event", "page_view", {
-    page_title: `Survival Mode - ${theme.title}`,
-    page_location: window.location.href
-  });
-}
-  
+    gtag("event", "page_view", {
+      page_title: `Survival Mode - ${theme.title}`,
+      page_location: window.location.href
+    });
+  }
+
   if (typeof updateRemoveAdsFooter === "function") {
-  updateRemoveAdsFooter(theme.slug, "normal");
-}
+    updateRemoveAdsFooter(theme.slug, "normal");
+  }
 
   const difficultyMap = {
     easy: ["easy", "medium"],
@@ -60,7 +57,11 @@ async function renderSurvivalPage() {
     answerLocked: false
   };
 
-  function normalizeDifficulty(value) {
+  // Tracks the active slide's submit/next buttons
+  let currentSubmitBtn = null;
+  let currentNextBtn = null;
+
+  function normalizeDiff(value) {
     return String(value || "").trim().toLowerCase();
   }
 
@@ -72,22 +73,15 @@ async function renderSurvivalPage() {
     return state.questions[state.currentIndex];
   }
 
-  function setFeedback(text, type = "") {
-    feedbackEl.textContent = text;
-    feedbackEl.className = "feedback";
-    if (type) feedbackEl.classList.add(type);
+  function getCurrentSlide() {
+    return slidesContainer.querySelector(`.question-slide[data-index="${state.currentIndex}"]`);
   }
 
-  function shuffleArray(array) {
-  return [...array].sort(() => Math.random() - 0.5);
-}
-
-function shuffleQuestionOptions(question) {
-  return {
-    ...question,
-    options: shuffleArray(question.options)
-  };
-}
+  function setFeedback(text, type = "") {
+    sharedFeedbackEl.textContent = text;
+    sharedFeedbackEl.className = "feedback";
+    if (type) sharedFeedbackEl.classList.add(type);
+  }
 
   function updateTopbar() {
     scoreEl.textContent = state.score;
@@ -117,18 +111,18 @@ function shuffleQuestionOptions(question) {
 
     const relatedThemes = getRelatedThemes(themes, theme, 5);
 
-const relatedThemesHtml = relatedThemes.length ? `
-  <div class="theme-related-quizzes">
-    <h3>Related Quizzes</h3>
-    <div class="grid">
-      ${relatedThemes.map(item => `
-        <a class="card" href="survival.html?theme=${item.slug}">
-          <h3>${item.title}</h3>
-        </a>
-      `).join("")}
-    </div>
-  </div>
-` : "";
+    const relatedThemesHtml = relatedThemes.length ? `
+      <div class="theme-related-quizzes">
+        <h3>Related Quizzes</h3>
+        <div class="grid">
+          ${relatedThemes.map(item => `
+            <a class="card" href="survival.html?theme=${item.slug}">
+              <h3>${item.title}</h3>
+            </a>
+          `).join("")}
+        </div>
+      </div>
+    ` : "";
 
     resultBox.innerHTML = `
       <h2>Survival Over</h2>
@@ -137,58 +131,52 @@ const relatedThemesHtml = relatedThemes.length ? `
         <a class="primary-btn" href="survival.html?theme=${theme.slug}">Play Again</a>
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
-      
-        <div class="result-theme-search">
-    <p class="result-theme-search-title">Try another theme</p>
-    <div class="search-wrap">
-      <input id="survivalResultThemeSearchInput" class="theme-search-input" type="text" placeholder="Search themes..." autocomplete="off" />
-      <div id="survivalResultThemeSearchResults" class="search-results"></div>
-    </div>
-    ${relatedThemesHtml}
-  </div>
-
+      <div class="result-theme-search">
+        <p class="result-theme-search-title">Try another theme</p>
+        <div class="search-wrap">
+          <input id="survivalResultThemeSearchInput" class="theme-search-input" type="text" placeholder="Search themes..." autocomplete="off" />
+          <div id="survivalResultThemeSearchResults" class="search-results"></div>
+        </div>
+        ${relatedThemesHtml}
+      </div>
     `;
-const resultSearchInput = document.getElementById("survivalResultThemeSearchInput");
-const resultSearchResults = document.getElementById("survivalResultThemeSearchResults");
 
-if (resultSearchInput && resultSearchResults) {
-  const renderThemeResults = (items) => {
-    if (!items.length) {
-      resultSearchResults.innerHTML = '<div class="search-item">No results found</div>';
-      return;
+    const resultSearchInput = document.getElementById("survivalResultThemeSearchInput");
+    const resultSearchResults = document.getElementById("survivalResultThemeSearchResults");
+
+    if (resultSearchInput && resultSearchResults) {
+      const renderThemeResults = (items) => {
+        if (!items.length) {
+          resultSearchResults.innerHTML = '<div class="search-item">No results found</div>';
+          return;
+        }
+        resultSearchResults.innerHTML = items.map(item => `
+          <a class="search-item" href="survival.html?theme=${item.slug}">${item.title}</a>
+        `).join("");
+      };
+
+      resultSearchInput.addEventListener("focus", () => {
+        renderThemeResults(themes);
+        resultSearchResults.style.display = "block";
+      });
+
+      resultSearchInput.addEventListener("input", (e) => {
+        const value = e.target.value.trim().toLowerCase();
+        const filtered = themes.filter(item => item.title.toLowerCase().includes(value));
+        renderThemeResults(filtered);
+        resultSearchResults.style.display = "block";
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!resultSearchInput.contains(e.target) && !resultSearchResults.contains(e.target)) {
+          resultSearchResults.style.display = "none";
+        }
+      });
     }
 
-    resultSearchResults.innerHTML = items.map(item => `
-      <a class="search-item" href="survival.html?theme=${item.slug}">${item.title}</a>
-    `).join("");
-  };
-
-  resultSearchInput.addEventListener("focus", () => {
-    renderThemeResults(themes);
-    resultSearchResults.style.display = "block";
-  });
-
-  resultSearchInput.addEventListener("input", (e) => {
-    const value = e.target.value.trim().toLowerCase();
-    const filtered = themes.filter(item =>
-      item.title.toLowerCase().includes(value)
-    );
-    renderThemeResults(filtered);
-    resultSearchResults.style.display = "block";
-  });
-
-  document.addEventListener("click", (e) => {
-    if (!resultSearchInput.contains(e.target) && !resultSearchResults.contains(e.target)) {
-      resultSearchResults.style.display = "none";
-    }
-  });
-}
-    
-        setTimeout(() => {
-  if (typeof showInstallCard === "function") {
-    showInstallCard();
-  }
-}, 800);
+    setTimeout(() => {
+      if (typeof showInstallCard === "function") showInstallCard();
+    }, 800);
   }
 
   function maybeStartRecovery() {
@@ -201,7 +189,6 @@ if (resultSearchInput && resultSearchResults) {
 
   function handleRecoveryOnCorrect(questionDifficulty) {
     const points = pointsMap[questionDifficulty] || 1;
-
     if (!state.recoveryStarted) return null;
 
     state.recoveryPoints += points;
@@ -221,108 +208,92 @@ if (resultSearchInput && resultSearchResults) {
     return null;
   }
 
-  function renderQuestion() {
-    const q = shuffleQuestionOptions(getCurrentQuestion());
-    if (!q) {
-      renderResult();
-      return;
+  function showQuestion(index) {
+    const prev = slidesContainer.querySelector(".question-slide.active");
+    if (prev) {
+      prev.classList.remove("active");
+      prev.classList.add("answered");
+    }
+    const slide = slidesContainer.querySelector(`.question-slide[data-index="${index}"]`);
+    if (slide) {
+      slide.classList.add("active");
+      slide.scrollIntoView({ behavior: "smooth", block: "center" });
+      currentSubmitBtn = slide.querySelector(".slide-submit-btn");
+      currentNextBtn = slide.querySelector(".slide-next-btn");
     }
 
     state.selectedAnswer = null;
     state.answerLocked = false;
-    optionsEl.innerHTML = "";
-    submitBtn.disabled = false;
-    nextBtn.style.display = "none";
-
-    questionEl.textContent = q.question;
-
-    q.options.forEach(option => {
-      const btn = document.createElement("button");
-      btn.className = "option-btn";
-      btn.textContent = option;
-
-btn.addEventListener("click", () => {
-  if (state.answerLocked || state.gameOver) return;
-  state.selectedAnswer = option;
-  document.querySelectorAll("#survivalOptionsList .option-btn").forEach(b => {
-    b.classList.remove("selected", "correct-anim", "wrong-anim");
-  });
-  btn.classList.add("selected");
-});
-
-      optionsEl.appendChild(btn);
-    });
+    if (currentSubmitBtn) currentSubmitBtn.disabled = false;
+    if (currentNextBtn) currentNextBtn.style.display = "none";
+    setFeedback("");
 
     if (state.pendingRecoveryStart) {
       state.pendingRecoveryStart = false;
       state.recoveryStarted = true;
       state.recoveryPoints = 0;
     }
-    setFeedback("");
-    
-        updateTopbar();
-      }
 
-function handleWrongAnswer() {
-  const selectedBtn = document.querySelector("#survivalOptionsList .option-btn.selected");
-
-  state.gameOver = true;
-  state.answerLocked = true;
-  submitBtn.disabled = true;
-
-  if (selectedBtn) {
-    selectedBtn.classList.remove("correct-anim");
-    void selectedBtn.offsetWidth;
-    selectedBtn.classList.add("wrong-anim");
+    updateTopbar();
   }
 
-  setFeedback("Wrong. Run over.", "wrong");
-  updateTopbar();
+  function handleWrongAnswer() {
+    const slide = getCurrentSlide();
+    const selectedBtn = slide ? slide.querySelector(".option-btn.selected") : null;
 
-  setTimeout(() => {
-    renderResult();
-  }, 500);
-}
+    state.gameOver = true;
+    state.answerLocked = true;
+    if (currentSubmitBtn) currentSubmitBtn.disabled = true;
 
-function handleCorrectAnswer() {
-  const q = getCurrentQuestion();
-  const difficulty = normalizeDifficulty(q.difficulty);
-  const points = pointsMap[difficulty] || 1;
-  const selectedBtn = document.querySelector("#survivalOptionsList .option-btn.selected");
+    if (selectedBtn) {
+      selectedBtn.classList.remove("correct-anim");
+      void selectedBtn.offsetWidth;
+      selectedBtn.classList.add("wrong-anim");
+    }
 
-  state.score += points;
-  state.answerLocked = true;
-  submitBtn.disabled = true;
-  nextBtn.style.display = "inline-block";
+    setFeedback("Wrong. Run over.", "wrong");
+    updateTopbar();
 
-  if (selectedBtn) {
-    selectedBtn.classList.remove("wrong-anim");
-    void selectedBtn.offsetWidth;
-    selectedBtn.classList.add("correct-anim");
+    setTimeout(() => renderResult(), 500);
   }
 
-  const recoveryMessage = handleRecoveryOnCorrect(difficulty);
+  function handleCorrectAnswer() {
+    const q = getCurrentQuestion();
+    const difficulty = normalizeDiff(q.difficulty);
+    const points = pointsMap[difficulty] || 1;
+    const slide = getCurrentSlide();
+    const selectedBtn = slide ? slide.querySelector(".option-btn.selected") : null;
 
-  if (recoveryMessage) {
-    setFeedback(`Correct. +${points} point(s). ${recoveryMessage}`, "correct");
-  } else {
-    setFeedback(`Correct. +${points} point(s).`, "correct");
+    state.score += points;
+    state.answerLocked = true;
+    if (currentSubmitBtn) currentSubmitBtn.disabled = true;
+    if (currentNextBtn) currentNextBtn.style.display = "inline-block";
+
+    if (selectedBtn) {
+      selectedBtn.classList.remove("wrong-anim");
+      void selectedBtn.offsetWidth;
+      selectedBtn.classList.add("correct-anim");
+    }
+
+    const recoveryMessage = handleRecoveryOnCorrect(difficulty);
+    setFeedback(
+      recoveryMessage
+        ? `Correct. +${points} point(s). ${recoveryMessage}`
+        : `Correct. +${points} point(s).`,
+      "correct"
+    );
+
+    updateTopbar();
   }
-
-  updateTopbar();
-}
 
   function useFiftyFifty() {
     if (!state.fiftyAvailable || state.answerLocked || state.gameOver) return;
 
     const q = getCurrentQuestion();
-    const buttons = [...optionsEl.querySelectorAll(".option-btn")];
+    const slide = getCurrentSlide();
+    const buttons = slide ? [...slide.querySelectorAll(".option-btn")] : [];
     const wrongButtons = buttons.filter(btn => btn.textContent !== q.answer && btn.style.display !== "none");
-    const toRemove = shuffle(wrongButtons).slice(0, 2);
-
-    toRemove.forEach(btn => {
-      btn.style.display = "none";
-    });
+    shuffle(wrongButtons).slice(0, 2).forEach(btn => { btn.style.display = "none"; });
 
     state.fiftyAvailable = false;
 
@@ -349,34 +320,6 @@ function handleCorrectAnswer() {
     updateTopbar();
   }
 
-  submitBtn.addEventListener("click", () => {
-    if (state.gameOver || state.answerLocked) return;
-    if (!state.selectedAnswer) return;
-
-    const q = getCurrentQuestion();
-
-    if (state.selectedAnswer === q.answer) {
-      handleCorrectAnswer();
-    } else {
-      handleWrongAnswer();
-    }
-  });
-
-  nextBtn.addEventListener("click", () => {
-    if (state.gameOver) {
-      renderResult();
-      return;
-    }
-
-    state.currentIndex += 1;
-
-    if (state.currentIndex >= state.questions.length) {
-      renderResult();
-    } else {
-      renderQuestion();
-    }
-  });
-
   fiftyBtn.addEventListener("click", useFiftyFifty);
   friendBtn.addEventListener("click", useCallFriend);
 
@@ -388,10 +331,8 @@ function handleCorrectAnswer() {
       const allowedDifficulties = difficultyMap[state.difficulty];
 
       state.questions = shuffle(
-        allQuestions.filter(q =>
-          allowedDifficulties.includes(normalizeDifficulty(q.difficulty))
-        )
-      );
+        allQuestions.filter(q => allowedDifficulties.includes(normalizeDiff(q.difficulty)))
+      ).map(q => shuffleQuestionOptions(q));
 
       state.currentIndex = 0;
       state.selectedAnswer = null;
@@ -405,11 +346,88 @@ function handleCorrectAnswer() {
       state.pendingRecoveryStart = false;
       state.answerLocked = false;
 
+      slidesContainer.innerHTML = "";
+
+      state.questions.forEach((q, index) => {
+        const slide = document.createElement("div");
+        slide.className = "question-slide";
+        slide.dataset.index = index;
+
+        const qNum = document.createElement("p");
+        qNum.className = "slide-question-num";
+        qNum.textContent = `Question ${index + 1}`;
+
+        const qText = document.createElement("h2");
+        qText.textContent = q.question;
+
+        const optsList = document.createElement("div");
+        optsList.className = "options";
+
+        q.options.forEach(option => {
+          const optBtn = document.createElement("button");
+          optBtn.className = "option-btn";
+          optBtn.textContent = option;
+          optBtn.addEventListener("click", () => {
+            if (state.answerLocked || state.gameOver) return;
+            if (state.currentIndex !== index) return;
+            state.selectedAnswer = option;
+            optsList.querySelectorAll(".option-btn").forEach(b => {
+              b.classList.remove("selected", "correct-anim", "wrong-anim");
+            });
+            optBtn.classList.add("selected");
+          });
+          optsList.appendChild(optBtn);
+        });
+
+        const submitBtn = document.createElement("button");
+        submitBtn.className = "slide-submit-btn secondary-btn";
+        submitBtn.textContent = "Submit";
+
+        const nextBtn = document.createElement("button");
+        nextBtn.className = "slide-next-btn secondary-btn";
+        nextBtn.textContent = "Next";
+        nextBtn.style.display = "none";
+
+        submitBtn.addEventListener("click", () => {
+          if (state.gameOver || state.answerLocked) return;
+          if (!state.selectedAnswer) return;
+          if (state.currentIndex !== index) return;
+
+          const q = getCurrentQuestion();
+          if (state.selectedAnswer === q.answer) {
+            handleCorrectAnswer();
+          } else {
+            handleWrongAnswer();
+          }
+        });
+
+        nextBtn.addEventListener("click", () => {
+          if (state.gameOver) { renderResult(); return; }
+          state.currentIndex += 1;
+          if (state.currentIndex >= state.questions.length) {
+            renderResult();
+          } else {
+            showQuestion(state.currentIndex);
+          }
+        });
+
+        const ctaRow = document.createElement("div");
+        ctaRow.className = "cta-row";
+        ctaRow.appendChild(submitBtn);
+        ctaRow.appendChild(nextBtn);
+
+        slide.appendChild(qNum);
+        slide.appendChild(qText);
+        slide.appendChild(optsList);
+        slide.appendChild(ctaRow);
+        slidesContainer.appendChild(slide);
+      });
+
       difficultyBox.style.display = "none";
       gameBox.style.display = "block";
       resultBox.style.display = "none";
 
-      renderQuestion();
+      showQuestion(0);
     });
   });
 }

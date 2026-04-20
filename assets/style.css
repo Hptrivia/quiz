@@ -976,3 +976,37 @@ a {
   margin: 0 0 10px;
   font-size: 22px;
 }
+
+/* ---------- question slide stack ---------- */
+.question-slide {
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  margin-bottom: 16px;
+  opacity: 0.35;
+  pointer-events: none;
+  transition: opacity 0.25s ease, border-color 0.25s ease;
+}
+
+.question-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+  border-color: #3b82f6;
+  background: rgba(59, 130, 246, 0.06);
+}
+
+.slide-question-num {
+  font-size: 13px;
+  color: var(--muted-text);
+  margin: 0 0 6px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.question-slide.answered {
+  opacity: 0.6;
+  pointer-events: none;
+  border-color: transparent;
+  background: transparent;
+}

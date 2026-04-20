@@ -26,10 +26,6 @@ async function renderWordlePage() {
     updateRemoveAdsFooter(theme.slug, "normal");
   }
 
-  const WORDS_PER_PAGE = 3;
-  const rawPage = parseInt(getParam("page") || "1", 10);
-  const currentPage = Number.isNaN(rawPage) || rawPage < 1 ? 1 : rawPage;
-
   const allWordleData = await fetchJSON("data/wordle_words.txt");
   const words = allWordleData[theme.title];
 
@@ -38,16 +34,9 @@ async function renderWordlePage() {
     return;
   }
 
-  const totalPages = Math.ceil(words.length / WORDS_PER_PAGE);
-  const safePage = Math.min(currentPage, totalPages);
-
-  const startIndex = (safePage - 1) * WORDS_PER_PAGE;
-  const endIndex = Math.min(startIndex + WORDS_PER_PAGE, words.length);
-  const pageWords = words.slice(startIndex, endIndex);
-
-  const storageKey = `wordle_page_index_${theme.slug}_${safePage}`;
+  const storageKey = `wordle_index_${theme.slug}`;
   let currentWordIndex = parseInt(localStorage.getItem(storageKey) || "0", 10);
-  if (currentWordIndex < 0 || currentWordIndex >= pageWords.length) currentWordIndex = 0;
+  if (currentWordIndex < 0 || currentWordIndex >= words.length) currentWordIndex = 0;
 
   let targetWord = "";
   let guesses = [];
@@ -162,22 +151,9 @@ async function renderWordlePage() {
   }
 
   function updateNavButtons() {
-    prevBtn.disabled = safePage === 1 && currentWordIndex === 0;
-
-    const isLastWordOnPage = currentWordIndex === pageWords.length - 1;
-    const hasNextPage = safePage < totalPages;
-
-    if (isLastWordOnPage && hasNextPage) {
-      nextBtn.textContent = "Next Page";
-    } else {
-      nextBtn.textContent = "Next Word";
-    }
-
-    if (isLastWordOnPage && !hasNextPage) {
-      nextBtn.disabled = true;
-    } else {
-      nextBtn.disabled = false;
-    }
+    prevBtn.disabled = currentWordIndex === 0;
+    nextBtn.disabled = currentWordIndex === words.length - 1;
+    nextBtn.textContent = "Next Word";
   }
 
   function submitGuess() {
@@ -237,22 +213,18 @@ async function renderWordlePage() {
     currentWordIndex = index;
     localStorage.setItem(storageKey, String(currentWordIndex));
 
-    targetWord = String(pageWords[currentWordIndex]).toUpperCase();
+    targetWord = String(words[currentWordIndex]).toUpperCase();
     guesses = [];
     currentGuess = "";
     gameOver = false;
     keyStates = {};
 
-    progressEl.textContent = `Word ${currentWordIndex + 1} of ${pageWords.length}`;
+    progressEl.textContent = `Word ${currentWordIndex + 1} of ${words.length}`;
     setFeedback("");
 
     renderBoard();
     renderKeyboard();
     updateNavButtons();
-  }
-
-  function goToPage(pageNumber) {
-    window.location.href = `wordle.html?theme=${theme.slug}&page=${pageNumber}`;
   }
 
   document.addEventListener("keydown", e => {
@@ -277,27 +249,11 @@ async function renderWordlePage() {
   });
 
   prevBtn.addEventListener("click", () => {
-    if (currentWordIndex > 0) {
-      loadWord(currentWordIndex - 1);
-      return;
-    }
-
-    if (safePage > 1) {
-      goToPage(safePage - 1);
-    }
+    if (currentWordIndex > 0) loadWord(currentWordIndex - 1);
   });
 
   nextBtn.addEventListener("click", () => {
-    const isLastWordOnPage = currentWordIndex === pageWords.length - 1;
-
-    if (!isLastWordOnPage) {
-      loadWord(currentWordIndex + 1);
-      return;
-    }
-
-    if (safePage < totalPages) {
-      goToPage(safePage + 1);
-    }
+    if (currentWordIndex < words.length - 1) loadWord(currentWordIndex + 1);
   });
 
   loadWord(currentWordIndex);
