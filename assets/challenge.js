@@ -54,8 +54,36 @@ try {
   const currentRound = Number.isNaN(rawRound) || rawRound < 1 ? 1 : rawRound;
 
   const allQuestions = await fetchJSON(theme.questionFile);
-  const totalRounds = Math.ceil(allQuestions.length / ROUND_SIZE);
+  const allRounds = buildBalancedBatches(allQuestions, ROUND_SIZE, 5, 5);
+  console.log("CHALLENGE ROUNDS DEBUG");
+allRounds.forEach((roundQuestions, roundIndex) => {
+  console.log(
+    `Round ${roundIndex + 1}`,
+    roundQuestions.map(q => ({
+      question: q.question,
+      difficulty: q.difficulty
+    }))
+  );
+});
+
+const challengeSeen = new Set();
+let challengeHasDuplicates = false;
+
+allRounds.forEach((roundQuestions, roundIndex) => {
+  roundQuestions.forEach((q, questionIndex) => {
+    const key = `${q.question}||${q.answer}`;
+    if (challengeSeen.has(key)) {
+      challengeHasDuplicates = true;
+      console.warn(`Duplicate found in challenge: round ${roundIndex + 1}, question ${questionIndex + 1}`, q);
+    }
+    challengeSeen.add(key);
+  });
+});
+
+console.log("Challenge duplicate check:", challengeHasDuplicates ? "DUPLICATES FOUND" : "NO DUPLICATES");
+  const totalRounds = allRounds.length;
   const safeRound = Math.min(currentRound, totalRounds);
+
 if (nextRoundLink) {
   if (safeRound < totalRounds) {
     nextRoundLink.style.display = "inline-block";
@@ -65,9 +93,8 @@ if (nextRoundLink) {
     nextRoundLink.style.display = "none";
   }
 }
-  const startIndex = (safeRound - 1) * ROUND_SIZE;
-  const endIndex = Math.min(startIndex + ROUND_SIZE, allQuestions.length);
-  const roundQuestions = shuffleArray(allQuestions.slice(startIndex, endIndex));
+
+  const roundQuestions = allRounds[safeRound - 1] || [];
 
   const state = {
     questions: roundQuestions,

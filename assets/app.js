@@ -54,6 +54,64 @@ function groupByCategory(items) {
   return map;
 }
 
+function normalizeDifficulty(value) {
+  return String(value || "").trim().toLowerCase();
+}
+
+function getDifficultyGroups(questions) {
+  const easyMedium = [];
+  const hardExpert = [];
+
+  questions.forEach(question => {
+    const difficulty = normalizeDifficulty(question.difficulty);
+
+    if (difficulty === "easy" || difficulty === "medium") {
+      easyMedium.push(question);
+    } else if (difficulty === "hard" || difficulty === "expert") {
+      hardExpert.push(question);
+    }
+  });
+
+  return { easyMedium, hardExpert };
+}
+
+function buildBalancedBatches(allQuestions, batchSize, easyMediumCount, hardExpertCount) {
+  const { easyMedium, hardExpert } = getDifficultyGroups(allQuestions);
+
+  let easyMediumIndex = 0;
+  let hardExpertIndex = 0;
+  const batches = [];
+
+  while (easyMediumIndex < easyMedium.length || hardExpertIndex < hardExpert.length) {
+    const batch = [];
+
+    const takeEasyMedium = Math.min(easyMediumCount, easyMedium.length - easyMediumIndex);
+    const takeHardExpert = Math.min(hardExpertCount, hardExpert.length - hardExpertIndex);
+
+    for (let i = 0; i < takeEasyMedium; i++) {
+      batch.push(easyMedium[easyMediumIndex++]);
+    }
+
+    for (let i = 0; i < takeHardExpert; i++) {
+      batch.push(hardExpert[hardExpertIndex++]);
+    }
+
+    while (batch.length < batchSize && easyMediumIndex < easyMedium.length) {
+      batch.push(easyMedium[easyMediumIndex++]);
+    }
+
+    while (batch.length < batchSize && hardExpertIndex < hardExpert.length) {
+      batch.push(hardExpert[hardExpertIndex++]);
+    }
+
+    if (!batch.length) break;
+
+    batches.push(shuffleArray(batch));
+  }
+
+  return batches;
+}
+
 async function loadThemes() {
   return await fetchJSON("data/themes.json");
 }
@@ -469,14 +527,11 @@ let buyPackUrl = "https://ko-fi.com/triviaking/shop";
   const currentPage = Number.isNaN(rawPage) || rawPage < 1 ? 1 : rawPage;
 
   const allQuestions = await fetchJSON(theme.questionFile);
-  const totalPages = Math.ceil(allQuestions.length / PAGE_SIZE);
+  const allPages = buildBalancedBatches(allQuestions, PAGE_SIZE, 15, 15);
+  const totalPages = allPages.length;
   const safePage = Math.min(currentPage, totalPages);
 
-  const startIndex = (safePage - 1) * PAGE_SIZE;
-  const endIndex = Math.min(startIndex + PAGE_SIZE, allQuestions.length);
-
-  // same 10 questions for each page, but randomized order inside the page
-  quizState.questions = shuffleArray(allQuestions.slice(startIndex, endIndex));
+  quizState.questions = allPages[safePage - 1] || [];
   quizState.currentIndex = 0;
   quizState.score = 0;
   quizState.selectedAnswer = null;
