@@ -8,12 +8,11 @@ async function renderSurvivalPage() {
   const resultBox = document.getElementById("survivalResultBox");
   const slidesContainer = document.getElementById("survivalSlides");
 
-  const scoreEl = document.getElementById("survivalScoreText");
-  const streakEl = document.getElementById("survivalStreakText");
-  const sharedFeedbackEl = document.getElementById("survivalSharedFeedback");
-
-  const fiftyBtn = document.getElementById("fiftyBtn");
-  const friendBtn = document.getElementById("friendBtn");
+  let scoreEl = null;
+  let streakEl = null;
+  let sharedFeedbackEl = null;
+  let fiftyBtn = null;
+  let friendBtn = null;
 
   if (!theme) return;
 
@@ -220,6 +219,13 @@ async function renderSurvivalPage() {
       slide.scrollIntoView({ behavior: "smooth", block: "center" });
       currentSubmitBtn = slide.querySelector(".slide-submit-btn");
       currentNextBtn = slide.querySelector(".slide-next-btn");
+      scoreEl = slide.querySelector(".slide-score-text");
+      streakEl = slide.querySelector(".slide-streak-text");
+      sharedFeedbackEl = slide.querySelector(".slide-feedback");
+      fiftyBtn = slide.querySelector(".slide-fifty-btn");
+      friendBtn = slide.querySelector(".slide-friend-btn");
+      fiftyBtn.onclick = useFiftyFifty;
+      friendBtn.onclick = useCallFriend;
     }
 
     state.selectedAnswer = null;
@@ -320,9 +326,6 @@ async function renderSurvivalPage() {
     updateTopbar();
   }
 
-  fiftyBtn.addEventListener("click", useFiftyFifty);
-  friendBtn.addEventListener("click", useCallFriend);
-
   document.querySelectorAll(".difficulty-btn").forEach(btn => {
     btn.addEventListener("click", async () => {
       state.difficulty = btn.dataset.difficulty;
@@ -411,14 +414,44 @@ async function renderSurvivalPage() {
           }
         });
 
+        const lifelinesDiv = document.createElement("div");
+        lifelinesDiv.className = "survival-lifelines";
+
+        const slideFFBtn = document.createElement("button");
+        slideFFBtn.className = "secondary-btn slide-fifty-btn";
+        slideFFBtn.textContent = "50-50";
+
+        const slideFriendBtn = document.createElement("button");
+        slideFriendBtn.className = "secondary-btn slide-friend-btn";
+        slideFriendBtn.textContent = "Call a Friend";
+
+        lifelinesDiv.appendChild(slideFFBtn);
+        lifelinesDiv.appendChild(slideFriendBtn);
+
+        const metaRow = document.createElement("div");
+        metaRow.className = "episode-context survival-meta-row";
+        const scoreP = document.createElement("p");
+        scoreP.innerHTML = "<strong>Score:</strong> <span class='slide-score-text'>0</span>";
+        const streakP = document.createElement("p");
+        streakP.innerHTML = "<strong>Recovery Streak:</strong> <span class='slide-streak-text'>Not started</span>";
+        metaRow.appendChild(scoreP);
+        metaRow.appendChild(streakP);
+
+        const slideFeedback = document.createElement("p");
+        slideFeedback.className = "feedback slide-feedback";
+
         const ctaRow = document.createElement("div");
         ctaRow.className = "cta-row";
+        ctaRow.style.marginTop = "1.5rem";
         ctaRow.appendChild(submitBtn);
         ctaRow.appendChild(nextBtn);
 
         slide.appendChild(qNum);
         slide.appendChild(qText);
         slide.appendChild(optsList);
+        slide.appendChild(lifelinesDiv);
+        slide.appendChild(metaRow);
+        slide.appendChild(slideFeedback);
         slide.appendChild(ctaRow);
         slidesContainer.appendChild(slide);
       });
