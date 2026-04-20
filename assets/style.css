@@ -1021,12 +1021,12 @@ a {
     margin: 6px 0 0;
   }
 
-  .option-btn {
+  .question-slide .option-btn {
     padding: 9px 12px;
     font-size: 14px;
   }
 
-  .options {
+  .question-slide .options {
     margin: 12px 0;
     gap: 8px;
   }
@@ -1054,7 +1054,7 @@ a {
     font-size: 13px;
   }
 
-  .cta-row {
+  .question-slide .cta-row {
     margin-top: 1rem !important;
   }
 }
