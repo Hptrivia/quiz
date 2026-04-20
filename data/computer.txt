@@ -5,5 +5,1328 @@
     "options": ["Hyper Trainer Marking Language", "Hyper Text Markup Language", "Hyper Text Markdown Language", "High Text Machine Language"],
     "answer": "Hyper Text Markup Language",
     "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0002",
+    "question": "Which company developed the Windows operating system?",
+    "options": ["Apple", "IBM", "Microsoft", "Google"],
+    "answer": "Microsoft",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0003",
+    "question": "What does CPU stand for?",
+    "options": ["Central Processing Unit", "Central Power Unit", "Computer Processing Unit", "Central Program Unit"],
+    "answer": "Central Processing Unit",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0004",
+    "question": "Which of the following is a programming language?",
+    "options": ["Firefox", "C++", "Chrome", "Instagram"],
+    "answer": "C++",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0005",
+    "question": "What is the name of the first electronic general-purpose computer?",
+    "options": ["ENIAC", "UNIVAC", "MAC", "IBM-5100"],
+    "answer": "ENIAC",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-easy-0006",
+    "question": "Which of these is NOT a web browser?",
+    "options": ["Safari", "Chrome", "Linux", "Firefox"],
+    "answer": "Linux",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0007",
+    "question": "What does 'URL' stand for?",
+    "options": ["Uniform Resource Locator", "User Retrieval Link", "Unified Reference Language", "Universal Resource Locator"],
+    "answer": "Uniform Resource Locator",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0008",
+    "question": "Which company owns the Android operating system?",
+    "options": ["Apple", "Microsoft", "Google", "Samsung"],
+    "answer": "Google",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0009",
+    "question": "Which language is primarily used for web development pages?",
+    "options": ["Python", "HTML", "C", "Java"],
+    "answer": "HTML",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0010",
+    "question": "Which symbol is used for comments in Python?",
+    "options": ["//", "#", "<!-- -->", "/* */"],
+    "answer": "#",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0011",
+    "question": "What company makes the iPhone?",
+    "options": ["Apple", "Samsung", "Google", "Huawei"],
+    "answer": "Apple",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0012",
+    "question": "What does RAM stand for?",
+    "options": ["Read Access Memory", "Random Access Memory", "Ready Available Memory", "Run Active Memory"],
+    "answer": "Random Access Memory",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0013",
+    "question": "Which device is used to input text into a computer?",
+    "options": ["Monitor", "Mouse", "Keyboard", "Speaker"],
+    "answer": "Keyboard",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0014",
+    "question": "Which one is an operating system?",
+    "options": ["Windows", "Intel", "Bluetooth", "Chrome"],
+    "answer": "Windows",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0015",
+    "question": "What does 'Wi-Fi' allow you to do?",
+    "options": ["Charge devices wirelessly", "Connect to the internet", "Use GPS", "Call other phones"],
+    "answer": "Connect to the internet",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0016",
+    "question": "What is the main function of a web browser?",
+    "options": ["Edit images", "Play games", "Browse websites", "Write code"],
+    "answer": "Browse websites",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0017",
+    "question": "Which of these is a popular search engine?",
+    "options": ["Firefox", "Windows", "Google", "iOS"],
+    "answer": "Google",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0018",
+    "question": "What does 'www' stand for in a web address?",
+    "options": ["World Wide Web", "Web With Widgets", "World Web Window", "Wired Web Works"],
+    "answer": "World Wide Web",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0019",
+    "question": "Which of these is a social media platform?",
+    "options": ["Python", "Instagram", "Excel", "Apache"],
+    "answer": "Instagram",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0020",
+    "question": "Which of the following is an email service?",
+    "options": ["Gmail", "Safari", "YouTube", "Chrome"],
+    "answer": "Gmail",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0021",
+    "question": "What file extension is used for Microsoft Word documents?",
+    "options": [".xls", ".docx", ".ppt", ".html"],
+    "answer": ".docx",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0022",
+    "question": "Which shortcut is used to copy text on a Windows PC?",
+    "options": ["Ctrl + P", "Ctrl + C", "Ctrl + V", "Ctrl + X"],
+    "answer": "Ctrl + C",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0023",
+    "question": "Which of these is NOT a programming language?",
+    "options": ["Python", "Ruby", "JavaScript", "Adobe"],
+    "answer": "Adobe",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0024",
+    "question": "Where do you typically save files permanently?",
+    "options": ["RAM", "Hard Drive", "Cache", "Clipboard"],
+    "answer": "Hard Drive",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0025",
+    "question": "What does 'bit' stand for?",
+    "options": ["Binary digit", "Basic integer", "Byte integer", "Built-in technology"],
+    "answer": "Binary digit",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0026",
+    "question": "What is the name of Apple's voice assistant?",
+    "options": ["Cortana", "Siri", "Alexa", "Google"],
+    "answer": "Siri",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0027",
+    "question": "What is the name of Microsoft's voice assistant?",
+    "options": ["Siri", "Cortana", "Alexa", "Google"],
+    "answer": "Cortana",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0028",
+    "question": "What is used to connect a computer to a network?",
+    "options": ["Router", "Mouse", "Printer", "USB"],
+    "answer": "Router",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0030",
+    "question": "What icon is commonly used to represent saving a file?",
+    "options": ["Pencil", "Trash can", "Floppy disk", "Magnifying glass"],
+    "answer": "Floppy disk",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0031",
+    "question": "Which company developed the Android OS?",
+    "options": ["Apple", "Samsung", "Google", "Sony"],
+    "answer": "Google",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0032",
+    "question": "What is the primary use of Excel?",
+    "options": ["Drawing", "Photo editing", "Spreadsheets", "Web browsing"],
+    "answer": "Spreadsheets",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0033",
+    "question": "Which of the following is a search engine?",
+    "options": ["Bing", "Outlook", "iTunes", "Excel"],
+    "answer": "Bing",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0034",
+    "question": "Which of these is a cloud storage service?",
+    "options": ["Dropbox", "Photoshop", "Steam", "Notepad"],
+    "answer": "Dropbox",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0035",
+    "question": "What is an emoji?",
+    "options": ["A code language", "A hardware part", "A text editor", "A digital icon or smiley"],
+    "answer": "A digital icon or smiley",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0036",
+    "question": "What kind of device is a Chromebook?",
+    "options": ["Webbrowser", "Game console", "Laptop", "Phone"],
+    "answer": "Laptop",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0037",
+    "question": "What is the function of a modem?",
+    "options": ["Displays images", "Connects to the internet", "Processes data", "Cleans memory"],
+    "answer": "Connects to the internet",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0038",
+    "question": "Which programming language shares its name with a type of snake?",
+    "options": ["Cobra", "Python", "Viper", "Anaconda"],
+    "answer": "Python",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0039",
+    "question": "What is the shortcut to paste text?",
+    "options": ["Ctrl + X", "Ctrl + C", "Ctrl + V", "Ctrl + Z"],
+    "answer": "Ctrl + V",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0040",
+    "question": "What does 'AI' stand for?",
+    "options": ["Automatic Interface", "Artificial Intelligence", "Advanced Internet", "Applied Information"],
+    "answer": "Artificial Intelligence",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0041",
+    "question": "Which of the following is a video conferencing tool?",
+    "options": ["Zoom", "Paint", "Spotify", "Notepad"],
+    "answer": "Zoom",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0042",
+    "question": "What is a common use for QR codes?",
+    "options": ["Heating devices", "Encoding software", "Scanning and accessing info", "Cleaning files"],
+    "answer": "Scanning and accessing info",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0043",
+    "question": "What is the main function of antivirus software?",
+    "options": ["Send emails", "Play games", "Protect from malware", "Increase internet speed"],
+    "answer": "Protect from malware",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0044",
+    "question": "Which of these is an input device?",
+    "options": ["Printer", "Monitor", "Scanner", "Projector"],
+    "answer": "Scanner",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0045",
+    "question": "What is the term for a program that replicates itself to spread to other computers?",
+    "options": ["Bug", "Virus", "Compiler", "Firewall"],
+    "answer": "Virus",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0046",
+    "question": "What is used to design web pages?",
+    "options": ["HTML", "Excel", "Access", "Paint"],
+    "answer": "HTML",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0047",
+    "question": "What app is used to write code?",
+    "options": ["Visual Studio", "Outlook", "Spotify", "Zoom"],
+    "answer": "Visual Studio",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0048",
+    "question": "What does 'USB' stand for?",
+    "options": ["Universal Serial Bus", "Ultra System Board", "United Software Base", "Universal Security Base"],
+    "answer": "Universal Serial Bus",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0049",
+    "question": "Which one is NOT an email provider?",
+    "options": ["Yahoo", "Outlook", "Gmail", "Spotify"],
+    "answer": "Spotify",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-easy-0050",
+    "question": "Which of these is used to track website traffic?",
+    "options": ["Google Ads", "Google Drive", "Google Analytics", "Google Docs"],
+    "answer": "Google Analytics",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tech-medium-0001",
+    "question": "Which programming language is known for its use in data science and machine learning?",
+    "options": ["C", "Python", "Java", "Ruby"],
+    "answer": "Python",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0002",
+    "question": "In which year was the World Wide Web first introduced to the public?",
+    "options": ["1989", "1991", "1995", "2000"],
+    "answer": "1991",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0003",
+    "question": "What does SQL stand for?",
+    "options": ["Sequential Query Language", "Structured Query Language", "Server Query Language", "Simple Query Logic"],
+    "answer": "Structured Query Language",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0004",
+    "question": "What is the main purpose of an IP address?",
+    "options": ["To store user data", "To identify a device on a network", "To encrypt files", "To track cookies"],
+    "answer": "To identify a device on a network",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0005",
+    "question": "Which of these is a backend programming language?",
+    "options": ["HTML", "CSS", "JavaScript", "Node.js"],
+    "answer": "Node.js",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0006",
+    "question": "Which protocol is used to transfer web pages?",
+    "options": ["FTP", "HTTP", "SSH", "SMTP"],
+    "answer": "HTTP",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0007",
+    "question": "Which company created the programming language Go?",
+    "options": ["Facebook", "Microsoft", "Google", "Apple"],
+    "answer": "Google",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0008",
+    "question": "Which type of database is MongoDB?",
+    "options": ["Relational", "Hierarchical", "NoSQL", "Flat-file"],
+    "answer": "NoSQL",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0009",
+    "question": "What does 'API' stand for?",
+    "options": ["Application Programming Interface", "Advanced Processing Interface", "Applied Protocol Instruction", "Application Page Index"],
+    "answer": "Application Programming Interface",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0010",
+    "question": "What is Git primarily used for?",
+    "options": ["Managing databases", "Creating web servers", "Version control", "Compiling code"],
+    "answer": "Version control",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0011",
+    "question": "What is the primary purpose of a DNS server?",
+    "options": ["To store website files", "To resolve domain names to IP addresses", "To block malware", "To host emails"],
+    "answer": "To resolve domain names to IP addresses",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0012",
+    "question": "Which of these languages is primarily used for iOS app development?",
+    "options": ["Java", "Kotlin", "Swift", "C#"],
+    "answer": "Swift",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0013",
+    "question": "Which HTML tag is used to link a JavaScript file?",
+    "options": ["<script>", "<link>", "<js>", "<code>"],
+    "answer": "<script>",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0014",
+    "question": "What is the default port number for HTTPS?",
+    "options": ["443", "80", "22", "21"],
+    "answer": "443",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0015",
+    "question": "What kind of attack involves overwhelming a system with traffic?",
+    "options": ["Phishing", "Brute force", "DDoS", "MITM"],
+    "answer": "DDoS",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0016",
+    "question": "Which company created the Java programming language?",
+    "options": ["Microsoft", "Google", "Sun Microsystems", "Oracle"],
+    "answer": "Sun Microsystems",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0017",
+    "question": "What does CSS stand for?",
+    "options": ["Creative Style Sheet", "Cascading Style Sheet", "Computer Style Sheet", "Color Style Syntax"],
+    "answer": "Cascading Style Sheet",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0018",
+    "question": "Which company owns GitHub?",
+    "options": ["Apple", "Microsoft", "Google", "Amazon"],
+    "answer": "Microsoft",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0019",
+    "question": "What is a container in software development?",
+    "options": ["A physical server", "A way to group network devices", "A lightweight, standalone environment for apps", "An IDE feature"],
+    "answer": "A lightweight, standalone environment for apps",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0020",
+    "question": "What does JSON stand for?",
+    "options": ["JavaScript Object Notation", "Java Source Output Network", "Joined Standard Object Network", "Java Syntax Overload Notation"],
+    "answer": "JavaScript Object Notation",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0021",
+    "question": "Which command initializes a new Git repository?",
+    "options": ["git start", "git init", "git new", "git create"],
+    "answer": "git init",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0022",
+    "question": "Which Linux command lists the files in a directory?",
+    "options": ["cd", "list", "ls", "dir"],
+    "answer": "ls",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0023",
+    "question": "Which company originally developed Android OS?",
+    "options": ["Google", "Android Inc.", "Nokia", "Samsung"],
+    "answer": "Android Inc.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0024",
+    "question": "Which symbol is used for ID selectors in CSS?",
+    "options": ["#", ".", "*", "$"],
+    "answer": "#",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0025",
+    "question": "Which of the following is a NoSQL database?",
+    "options": ["MySQL", "PostgreSQL", "MongoDB", "OracleDB"],
+    "answer": "MongoDB",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0026",
+    "question": "What is the process of finding and fixing errors in software called?",
+    "options": ["Compiling", "Debugging", "Executing", "Forking"],
+    "answer": "Debugging",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0027",
+    "question": "Which of the following is a compiled language?",
+    "options": ["Java", "Python", "JavaScript", "PHP"],
+    "answer": "Java",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0028",
+    "question": "What is the term for disguising malicious code inside legitimate files?",
+    "options": ["Phishing", "Trojans", "Spoofing", "Sniffing"],
+    "answer": "Trojans",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0030",
+    "question": "Which web development stack includes Angular, MongoDB, Express and Node.js?",
+    "options": ["MEAN", "AMEN", "MERN", "JAM"],
+    "answer": "MEAN",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0031",
+    "question": "What does the 'chmod' command do in Linux?",
+    "options": ["Change owner", "Modify file permissions", "Rename file", "Move directory"],
+    "answer": "Modify file permissions",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0032",
+    "question": "What’s the role of a CDN?",
+    "options": ["Enhance video playback", "Store user data", "Distribute content closer to users", "Compress website files"],
+    "answer": "Distribute content closer to users",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0033",
+    "question": "What is a virtual machine (VM)?",
+    "options": ["A physical server", "An emulator for games", "A software-based simulation of a computer", "A browser extension"],
+    "answer": "A software-based simulation of a computer",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0034",
+    "question": "Which of the following is a frontend JavaScript framework?",
+    "options": ["Node.js", "Flask", "React", "Django"],
+    "answer": "React",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0035",
+    "question": "What port does SSH typically use?",
+    "options": ["22", "80", "443", "21"],
+    "answer": "22",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0036",
+    "question": "Which term describes unauthorized access to or control of a computer system?",
+    "options": ["Debugging", "Hacking", "Logging", "Cloning"],
+    "answer": "Hacking",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0037",
+    "question": "Which keyword defines a function in JavaScript?",
+    "options": ["func", "function", "def", "lambda"],
+    "answer": "function",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0038",
+    "question": "What is the core language used to build Android apps?",
+    "options": ["Swift", "Kotlin", "Objective-C", "PHP"],
+    "answer": "Kotlin",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0039",
+    "question": "Which of these formats is commonly used for REST API data exchange?",
+    "options": ["XML", "YAML", "JSON", "CSV"],
+    "answer": "JSON",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0040",
+    "question": "What does SaaS stand for?",
+    "options": ["Software as a System", "Software as a Service", "Storage and System", "Secure API and Service"],
+    "answer": "Software as a Service",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0041",
+    "question": "Which programming concept involves using classes and objects?",
+    "options": ["Functional Programming", "Object-Oriented Programming", "Procedural Programming", "Scripting"],
+    "answer": "Object-Oriented Programming",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0042",
+    "question": "What is the purpose of a load balancer?",
+    "options": ["Block traffic", "Store user data", "Distribute incoming traffic", "Monitor CPU temperature"],
+    "answer": "Distribute incoming traffic",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0043",
+    "question": "Which layer in the OSI model handles encryption?",
+    "options": ["Transport", "Network", "Presentation", "Application"],
+    "answer": "Presentation",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0044",
+    "question": "Which type of software testing checks if new changes broke anything?",
+    "options": ["Unit testing", "Smoke testing", "Regression testing", "Beta testing"],
+    "answer": "Regression testing",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0045",
+    "question": "What does MVC stand for in software architecture?",
+    "options": ["Model View Controller", "Monitor Virtual Command", "Main View Class", "Manage View Content"],
+    "answer": "Model View Controller",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0046",
+    "question": "What’s the main use of a cron job in Unix/Linux?",
+    "options": ["Monitor disk space", "Schedule tasks", "Compile code", "Transfer files"],
+    "answer": "Schedule tasks",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0047",
+    "question": "Which command is used to install packages in Python?",
+    "options": ["pip install", "python install", "install pkg", "py install"],
+    "answer": "pip install",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0048",
+    "question": "What type of file is .tar.gz?",
+    "options": ["Uncompressed text", "Executable", "Compressed archive", "Log file"],
+    "answer": "Compressed archive",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0049",
+    "question": "What’s the default file extension for a Python script?",
+    "options": [".py", ".p", ".pt", ".txt"],
+    "answer": ".py",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-medium-0050",
+    "question": "Which programming language is used in most blockchain smart contracts?",
+    "options": ["Rust", "Solidity", "Python", "Go"],
+    "answer": "Solidity",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-hard-0001",
+    "question": "What does the acronym ACID stand for in database systems?",
+    "options": ["Atomicity, Consistency, Isolation, Durability", "Access, Control, Integrity, Durability", "Atomicity, Control, Isolation, Delivery", "Association, Consistency, Interface, Data"],
+    "answer": "Atomicity, Consistency, Isolation, Durability",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0002",
+    "question": "Which sorting algorithm has the best average-case time complexity?",
+    "options": ["Bubble Sort", "Insertion Sort", "Quick Sort", "Merge Sort"],
+    "answer": "Quick Sort",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0003",
+    "question": "In cryptography, what does RSA stand for?",
+    "options": ["Random Secure Algorithm", "Rivest–Shamir–Adleman", "Reliable Secure Access", "Restricted Security Architecture"],
+    "answer": "Rivest–Shamir–Adleman",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0005",
+    "question": "Which of these is a characteristic of a Turing-complete system?",
+    "options": ["It can store large amounts of data", "It can simulate any other computational system", "It requires quantum processors", "It must be built in C"],
+    "answer": "It can simulate any other computational system",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0006",
+    "question": "What does the 'volatile' keyword in C indicate?",
+    "options": ["That a variable is temporary", "That a variable can be modified externally", "That memory is cleared", "That memory is encrypted"],
+    "answer": "That a variable can be modified externally",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0007",
+    "question": "Which algorithm is used in public key cryptography?",
+    "options": ["AES", "SHA-256", "RSA", "MD5"],
+    "answer": "RSA",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0008",
+    "question": "What is the worst-case time complexity of quicksort?",
+    "options": ["O(n log n)", "O(n^2)", "O(n)", "O(log n)"],
+    "answer": "O(n^2)",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0009",
+    "question": "Which protocol is primarily used for secure email transmission?",
+    "options": ["POP3", "SMTP", "IMAP", "SMTPS"],
+    "answer": "SMTPS",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0010",
+    "question": "Which data structure uses LIFO (Last-In, First-Out)?",
+    "options": ["Queue", "Tree", "Stack", "Heap"],
+    "answer": "Stack",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0011",
+    "question": "What is the main advantage of using a B-tree over a binary search tree?",
+    "options": ["Faster insertions", "Smaller memory usage", "Optimized for disk storage", "Easier recursion"],
+    "answer": "Optimized for disk storage",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0012",
+    "question": "Which hashing algorithm is considered broken due to collision vulnerabilities?",
+    "options": ["SHA-256", "MD5", "AES", "Blowfish"],
+    "answer": "MD5",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0013",
+    "question": "Which component of a compiler performs syntax analysis?",
+    "options": ["Lexer", "Parser", "Linker", "Optimizer"],
+    "answer": "Parser",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0014",
+    "question": "Which scheduling algorithm may lead to starvation?",
+    "options": ["Round Robin", "First Come First Serve", "Shortest Job First", "Priority Scheduling"],
+    "answer": "Priority Scheduling",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0015",
+    "question": "What does RAID stand for in storage systems?",
+    "options": ["Random Access In-Disk", "Redundant Array of Independent Disks", "Reliable Allocation of Input Devices", "Read And Internal Devices"],
+    "answer": "Redundant Array of Independent Disks",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0016",
+    "question": "Which part of a CPU is responsible for executing instructions?",
+    "options": ["Control Unit", "Register", "ALU", "Cache"],
+    "answer": "Control Unit",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0017",
+    "question": "What is the default number of IP addresses in a /24 subnet?",
+    "options": ["128", "256", "254", "512"],
+    "answer": "254",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0018",
+    "question": "Which machine learning algorithm is best suited for classification problems?",
+    "options": ["K-Means", "Linear Regression", "SVM", "Apriori"],
+    "answer": "SVM",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0019",
+    "question": "Which software development model is characterized by iterations and constant feedback?",
+    "options": ["Waterfall", "V-Model", "Agile", "Spiral"],
+    "answer": "Agile",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-hard-0020",
+    "question": "In Python, what does the 'yield' keyword do?",
+    "options": ["Returns a value and exits", "Raises an exception", "Creates a generator", "Declares a variable"],
+    "answer": "Creates a generator",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0021",
+    "question": "Which protocol secures web traffic by default?",
+    "options": ["HTTP", "HTTPS", "FTP", "UDP"],
+    "answer": "HTTPS",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0022",
+    "question": "Which Python data structure is immutable?",
+    "options": ["List", "Set", "Tuple", "Dictionary"],
+    "answer": "Tuple",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0023",
+    "question": "Which operation is present in a hash table?",
+    "options": ["Search", "Insert", "Delete", "All of the above"],
+    "answer": "All of the above",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0024",
+    "question": "What does the 'git rebase' command do?",
+    "options": ["Deletes branches", "Combines commits", "Applies commits on top of another base", "Merges with remote"],
+    "answer": "Applies commits on top of another base",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0025",
+    "question": "Which concept in OOP allows using the same method name with different implementations?",
+    "options": ["Encapsulation", "Inheritance", "Polymorphism", "Abstraction"],
+    "answer": "Polymorphism",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0027",
+    "question": "Which HTTP method is idempotent?",
+    "options": ["POST", "PUT", "PATCH", "GIT"],
+    "answer": "PUT",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0028",
+    "question": "Which operating system concept allows different processes to share the CPU?",
+    "options": ["Virtual Memory", "Time Sharing", "Memory Paging", "Swapping"],
+    "answer": "Time Sharing",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0029",
+    "question": "What is the purpose of the OSI model?",
+    "options": ["To provide security protocols", "To categorize cybersecurity risks", "To standardize networking layers", "To build server hardware"],
+    "answer": "To standardize networking layers",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0030",
+    "question": "Which attack tricks users into revealing sensitive information?",
+    "options": ["Brute force", "Phishing", "Sniffing", "Spoofing"],
+    "answer": "Phishing",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-hard-0031",
+    "question": "Which design pattern restricts object creation to only one instance?",
+    "options": ["Factory", "Observer", "Decorator", "Singleton"],
+    "answer": "Singleton",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0032",
+    "question": "Which Git command lists all branches?",
+    "options": ["git list", "git branches", "git branch", "git show"],
+    "answer": "git branch",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0033",
+    "question": "Which data structure is used for BFS (Breadth-First Search)?",
+    "options": ["Stack", "Queue", "Heap", "Linked List"],
+    "answer": "Queue",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0034",
+    "question": "What is a deadlock in OS?",
+    "options": ["Too many processes", "Race condition", "Circular waiting of resources", "Thread failure"],
+    "answer": "Circular waiting of resources",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0035",
+    "question": "What does 'stateless' mean in REST APIs?",
+    "options": ["No parameters are used", "The server stores no client context", "The database is read-only", "It requires session cookies"],
+    "answer": "The server stores no client context",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0036",
+    "question": "What algorithm is used to find shortest paths in a graph?",
+    "options": ["Prim’s", "Kruskal’s", "Dijkstra’s", "DFS"],
+    "answer": "Dijkstra’s",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0037",
+    "question": "Which programming concept hides implementation details?",
+    "options": ["Polymorphism", "Abstraction", "Encapsulation", "Inheritance"],
+    "answer": "Abstraction",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0038",
+    "question": "What does the 'TOP' clause do in SQL?",
+    "options": ["Sort results", "Return a limited number of rows", "Delete rows", "Update the first row"],
+    "answer": "Return a limited number of rows",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0039",
+    "question": "Which technology isolates application dependencies in Python?",
+    "options": ["Docker", "Virtualenv", "Pip", "Anaconda"],
+    "answer": "Virtualenv",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0040",
+    "question": "What is the time complexity of inserting into a hash table (average case)?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": "O(1)",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0042",
+    "question": "Which Linux command modifies file permissions?",
+    "options": ["chmod", "chperm", "setperm", "perm"],
+    "answer": "chmod",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0043",
+    "question": "What is the hexadecimal equivalent of the binary number 1101?",
+    "options": ["B", "C", "D", "E"],
+    "answer": "D",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0044",
+    "question": "Which sorting algorithm is NOT stable?",
+    "options": ["Merge Sort", "Bubble Sort", "Quick Sort", "Insertion Sort"],
+    "answer": "Quick Sort",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0046",
+    "question": "Which model is used to represent entities and their relationships in a database?",
+    "options": ["Network Model", "Object-Oriented Model", "ER Model", "Relational Model"],
+    "answer": "ER Model",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0047",
+    "question": "Which data structure is used in recursion?",
+    "options": ["Queue", "Array", "Stack", "Heap"],
+    "answer": "Stack",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0048",
+    "question": "What is the default priority of a process in Linux?",
+    "options": ["0", "10", "20", "5"],
+    "answer": "0",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0049",
+    "question": "Which type of join returns all rows when there is a match in one table?",
+    "options": ["Inner Join", "Right Join", "Full Outer Join", "Left Join"],
+    "answer": "Full Outer Join",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-hard-0050",
+    "question": "Which protocol is commonly used for file transfers between computers?",
+    "options": ["FTP", "IMAP", "SMTP", "ARP"],
+    "answer": "FTP",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tech-expert-0001",
+    "question": "What is the halting problem in computer science?",
+    "options": ["A memory leak issue", "The problem of determining if a program finishes running", "An error in CPU cache timing", "A compiler bug in loops"],
+    "answer": "The problem of determining if a program finishes running",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0003",
+    "question": "What is the purpose of the Paxos algorithm?",
+    "options": ["Encrypt user passwords", "Achieve consensus in distributed systems", "Compress data efficiently", "Improve search engine ranking"],
+    "answer": "Achieve consensus in distributed systems",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0005",
+    "question": "What is a monad in functional programming?",
+    "options": ["A type of loop structure", "A class with one method", "A design pattern for encapsulating computations", "A compiler directive"],
+    "answer": "A design pattern for encapsulating computations",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0006",
+    "question": "Which theorem proves limits of formal systems like arithmetic?",
+    "options": ["Bayes' Theorem", "Gödel's Incompleteness Theorem", "Turing’s Halting Theorem", "Shannon’s Coding Theorem"],
+    "answer": "Gödel's Incompleteness Theorem",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0007",
+    "question": "What is tail call optimization?",
+    "options": ["An optimization that removes the need for recursive calls to grow the stack", "A CPU scheduling policy", "An OS process cache", "A memory compaction strategy"],
+    "answer": "An optimization that removes the need for recursive calls to grow the stack",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0008",
+    "question": "Which algorithm is used for Byzantine fault tolerance?",
+    "options": ["Paxos", "PBFT", "Dijkstra's", "Kruskal's"],
+    "answer": "PBFT",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0009",
+    "question": "What does 'eventual consistency' mean in distributed systems?",
+    "options": ["All nodes remain instantly synced", "All updates must be manually verified", "All nodes will become consistent over time", "Data is always inconsistent"],
+    "answer": "All nodes will become consistent over time",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0010",
+    "question": "Which storage engine does InnoDB replace in MySQL for ACID compliance?",
+    "options": ["MyISAM", "PostgreSQL", "RocksDB", "BerkeleyDB"],
+    "answer": "MyISAM",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0011",
+    "question": "Which type of memory is not directly addressable by the CPU?",
+    "options": ["RAM", "ROM", "Cache", "Virtual memory"],
+    "answer": "Virtual memory",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0012",
+    "question": "What is the purpose of the MapReduce framework?",
+    "options": ["Secure data in transmission", "Provide UI components", "Process large datasets in parallel", "Generate encryption keys"],
+    "answer": "Process large datasets in parallel",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0013",
+    "question": "Which tool is patricularly suited for formal verification and analysis of software?",
+    "options": ["Docker", "Z3", "React", "GraphQL"],
+    "answer": "Z3",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0014",
+    "question": "What is the purpose of differential privacy?",
+    "options": ["To ensure secure file storage", "To protect individual data while providing insights from datasets", "To enhance sorting algorithms", "To boost graphics rendering"],
+    "answer": "To protect individual data while providing insights from datasets",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0015",
+    "question": "Which cryptographic method is quantum-resistant?",
+    "options": ["RSA", "ECC", "SHA-1", "Lattice-based cryptography"],
+    "answer": "Lattice-based cryptography",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0016",
+    "question": "Which computational model uses finite states and transitions?",
+    "options": ["Turing Machine", "Lambda Calculus", "Finite State Machine", "Neural Network"],
+    "answer": "Finite State Machine",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0017",
+    "question": "Which machine learning technique reduces dimensionality?",
+    "options": ["SVM", "PCA", "CNN", "Naive Bayes"],
+    "answer": "PCA",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0018",
+    "question": "What is the goal of gradient descent?",
+    "options": ["Increase model variance", "Find local maxima", "Minimize loss function", "Shrink memory usage"],
+    "answer": "Minimize loss function",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0020",
+    "question": "What does CSP stand for in web security?",
+    "options": ["Content Security Policy", "Centralized Service Protocol", "Control System Provider", "Crypto-Signed Packet"],
+    "answer": "Content Security Policy",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0021",
+    "question": "What’s the output of applying HMAC to a message?",
+    "options": ["An encrypted file", "A digital signature", "A hash-based authentication code", "A certificate chain"],
+    "answer": "A hash-based authentication code",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0023",
+    "question": "Which mathematical structure underpins elliptic curve cryptography?",
+    "options": ["Prime numbers", "Finite fields", "Matrix groups", "Modular rings"],
+    "answer": "Finite fields",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0024",
+    "question": "Which regular expression character denotes zero or more repetitions?",
+    "options": ["+", "*", "?", "."],
+    "answer": "*",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0025",
+    "question": "Which database isolation level prevents dirty reads?",
+    "options": ["Read Uncommitted", "Read Committed", "Repeatable Read", "Serializable"],
+    "answer": "Read Committed",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0026",
+    "question": "What is the key principle behind blockchain immutability?",
+    "options": ["Distributed storage", "Encryption", "Merkle trees", "Consensus and hashing"],
+    "answer": "Consensus and hashing",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0027",
+    "question": "Which algorithm optimally balances a binary search tree?",
+    "options": ["DFS", "BFS", "AVL", "Trie"],
+    "answer": "AVL",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0028",
+    "question": "What does an LRU cache discard?",
+    "options": ["Newest item", "Oldest item", "Least recently used item", "Largest item"],
+    "answer": "Least recently used item",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0029",
+    "question": "What protocol does Docker use to share images?",
+    "options": ["FTP", "HTTP", "gRPC", "OCI Distribution"],
+    "answer": "OCI Distribution",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0030",
+    "question": "Which Linux syscall is used to create a child process?",
+    "options": ["exec()", "malloc()", "fork()", "pipe()"],
+    "answer": "fork()",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0031",
+    "question": "What is the output of the SHA-256 algorithm?",
+    "options": ["128 bits", "64 bytes", "256 bits", "512 bits"],
+    "answer": "256 bits",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0032",
+    "question": "Which algorithm is used in Git for merging histories?",
+    "options": ["DAG traversal", "Tree sort", "Patricia trie", "K-way merge"],
+    "answer": "DAG traversal",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0033",
+    "question": "What is the default file system for most Linux distributions?",
+    "options": ["FAT32", "ext4", "NTFS", "HFS+"],
+    "answer": "ext4",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0034",
+    "question": "Which consensus algorithm is used in Ethereum 2.0?",
+    "options": ["Proof of Work", "Proof of Authority", "Proof of Stake", "PBFT"],
+    "answer": "Proof of Stake",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0035",
+    "question": "Which language is often used to write device drivers?",
+    "options": ["Python", "C", "Java", "Ruby"],
+    "answer": "C",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0036",
+    "question": "Which OS concept prevents simultaneous access to a resource?",
+    "options": ["Semaphores", "Pipes", "Forks", "Interrupts"],
+    "answer": "Semaphores",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0037",
+    "question": "What kind of algorithm is KMP used for?",
+    "options": ["Image processing", "Graph traversal", "Pattern matching", "Sorting"],
+    "answer": "Pattern matching",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0038",
+    "question": "What does 'immutability' mean in programming?",
+    "options": ["Object size cannot change", "Object memory is locked", "Object value cannot change", "Variable must be static"],
+    "answer": "Object value cannot change",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0039",
+    "question": "Which component converts high-level code to machine code?",
+    "options": ["Interpreter", "Linker", "Compiler", "Preprocessor"],
+    "answer": "Compiler",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0040",
+    "question": "What is the maximum value of a signed 8-bit integer?",
+    "options": ["127", "128", "255", "256"],
+    "answer": "127",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0041",
+    "question": "What is TLB in virtual memory systems?",
+    "options": ["Temporary Load Buffer", "Translation Lookaside Buffer", "Tagged Load Block", "Temporary Loop Block"],
+    "answer": "Translation Lookaside Buffer",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0042",
+    "question": "Which technique helps detect buffer overflows?",
+    "options": ["Stack canaries", "Heap pruning", "Shell escaping", "RSA padding"],
+    "answer": "Stack canaries",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0043",
+    "question": "What is the output size of MD5 hash?",
+    "options": ["128 bits", "160 bits", "256 bits", "512 bits"],
+    "answer": "128 bits",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0044",
+    "question": "What’s the key difference between TCP and UDP?",
+    "options": ["Encryption", "Speed", "Reliability", "Port usage"],
+    "answer": "Reliability",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0045",
+    "question": "What is the IEEE standard for Wi-Fi?",
+    "options": ["802.3", "802.11", "802.5", "802.1X"],
+    "answer": "802.11",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0046",
+    "question": "Which protocol helps assign IP addresses dynamically?",
+    "options": ["DNS", "DHCP", "ARP", "ICMP"],
+    "answer": "DHCP",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tech-expert-0047",
+    "question": "Which OS concept swaps pages in and out of memory?",
+    "options": ["Paging", "Forking", "Scheduling", "Semaphores"],
+    "answer": "Paging",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0048",
+    "question": "Which data structure is used in Dijkstra’s algorithm?",
+    "options": ["Stack", "Queue", "Priority Queue", "Linked List"],
+    "answer": "Priority Queue",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0049",
+    "question": "What’s the main purpose of a MAC address?",
+    "options": ["Identify IP range", "Locate DNS", "Unique device identifier", "Control application access"],
+    "answer": "Unique device identifier",
+    "difficulty": "expert"
+  },
+  {
+    "id": "tech-expert-0050",
+    "question": "What is the final stage in a compiler?",
+    "options": ["Lexical analysis", "Code generation", "Optimization", "Parsing"],
+    "answer": "Code generation",
+    "difficulty": "expert"
   }
 ]
