@@ -307,6 +307,16 @@ async function renderChallengePage() {
         }
       });
     }
+
+    maybShowChallengeEmailPopup(theme.title);
+  }
+
+  function maybShowChallengeEmailPopup(themeName) {
+    if (!emailPopupDismissAllowed()) return;
+    const rounds = parseInt(localStorage.getItem("epChallengeRounds") || "0", 10) + 1;
+    localStorage.setItem("epChallengeRounds", rounds);
+    if (rounds < 3) return;
+    showEmailPopupUI(themeName);
   }
 
   showQuestion(0);

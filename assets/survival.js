@@ -177,79 +177,16 @@ async function renderSurvivalPage() {
       if (typeof showInstallCard === "function") showInstallCard();
     }, 800);
 
-    maybeShowEmailPopup(theme.title);
+    maybeShowEmailPopup(theme.slug, theme.title, state.score);
   }
 
-  function maybeShowEmailPopup(themeName) {
-    if (localStorage.getItem("emailPopupDismissed")) return;
-
-    const overlay = document.createElement("div");
-    overlay.className = "email-popup-overlay";
-    overlay.innerHTML = `
-      <div class="email-popup">
-        <button class="email-popup-close" aria-label="Close">&times;</button>
-        <h3>Get new trivia picks</h3>
-        <p>Drop your email and we'll send you new themes and challenges.</p>
-        <div class="email-popup-form">
-          <input class="email-popup-input" type="email" placeholder="you@example.com" autocomplete="email" />
-          <button class="email-popup-submit">Subscribe</button>
-        </div>
-        <p class="email-popup-status"></p>
-      </div>
-    `;
-    document.body.appendChild(overlay);
-
-    const closePopup = () => {
-      localStorage.setItem("emailPopupDismissed", "1");
-      overlay.classList.remove("visible");
-      setTimeout(() => overlay.remove(), 400);
-    };
-
-    overlay.querySelector(".email-popup-close").addEventListener("click", closePopup);
-
-    const input = overlay.querySelector(".email-popup-input");
-    const submitBtn = overlay.querySelector(".email-popup-submit");
-    const statusEl = overlay.querySelector(".email-popup-status");
-
-    submitBtn.addEventListener("click", async () => {
-      const email = input.value.trim();
-      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        statusEl.textContent = "Please enter a valid email.";
-        statusEl.style.color = "var(--feedback-wrong)";
-        return;
-      }
-
-      submitBtn.disabled = true;
-      statusEl.textContent = "Subscribing...";
-      statusEl.style.color = "";
-
-      const success = await submitEmailToMailchimp(email, themeName);
-      if (success) {
-        localStorage.setItem("emailPopupDismissed", "1");
-        statusEl.textContent = "You're in! Thanks for subscribing.";
-        statusEl.style.color = "var(--feedback-correct)";
-        setTimeout(() => closePopup(), 2000);
-      } else {
-        submitBtn.disabled = false;
-        statusEl.textContent = "Something went wrong. Please try again.";
-        statusEl.style.color = "var(--feedback-wrong)";
-      }
-    });
-
-    setTimeout(() => overlay.classList.add("visible"), 3500);
-  }
-
-  async function submitEmailToMailchimp(email, themeName) {
-    try {
-      const res = await fetch("https://formspree.io/f/mqewdrkn", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, theme: themeName })
-      });
-      return res.ok;
-    } catch {
-      return false;
-    }
+  function maybeShowEmailPopup(themeSlug, themeName, currentScore) {
+    if (!emailPopupDismissAllowed()) return;
+    const key = `epSurvivalBest_${themeSlug}`;
+    const prevBest = parseInt(localStorage.getItem(key) || "0", 10);
+    if (currentScore <= prevBest) return;
+    localStorage.setItem(key, currentScore);
+    showEmailPopupUI(themeName);
   }
 
   function maybeStartRecovery() {

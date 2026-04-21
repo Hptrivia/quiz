@@ -740,8 +740,20 @@ if (resultSearchInput && resultSearchResults) {
 }
 
 /* ---------------- EMAIL POPUP ---------------- */
-function maybeShowEmailPopup(themeName) {
-  if (localStorage.getItem("emailPopupDismissed")) return;
+function emailPopupDismissAllowed() {
+  if (localStorage.getItem("epDone")) return false;
+  const dismissCount = parseInt(localStorage.getItem("epDismissCount") || "0", 10);
+  const dismissedAt = parseInt(localStorage.getItem("epDismissedAt") || "0", 10);
+  if (dismissedAt) {
+    const waitDays = dismissCount >= 2 ? 30 : 7;
+    const elapsed = (Date.now() - dismissedAt) / (1000 * 60 * 60 * 24);
+    if (elapsed < waitDays) return false;
+  }
+  return true;
+}
+
+function showEmailPopupUI(themeName) {
+  const dismissCount = parseInt(localStorage.getItem("epDismissCount") || "0", 10);
 
   const overlay = document.createElement("div");
   overlay.className = "email-popup-overlay";
@@ -759,13 +771,18 @@ function maybeShowEmailPopup(themeName) {
   `;
   document.body.appendChild(overlay);
 
-  const closePopup = () => {
-    localStorage.setItem("emailPopupDismissed", "1");
+  const removeOverlay = () => {
     overlay.classList.remove("visible");
     setTimeout(() => overlay.remove(), 400);
   };
 
-  overlay.querySelector(".email-popup-close").addEventListener("click", closePopup);
+  overlay.querySelector(".email-popup-close").addEventListener("click", () => {
+    const newCount = dismissCount + 1;
+    localStorage.setItem("epDismissCount", newCount);
+    localStorage.setItem("epDismissedAt", Date.now());
+    if (newCount >= 3) localStorage.setItem("epDone", "1");
+    removeOverlay();
+  });
 
   const input = overlay.querySelector(".email-popup-input");
   const submitBtn = overlay.querySelector(".email-popup-submit");
@@ -785,10 +802,10 @@ function maybeShowEmailPopup(themeName) {
 
     const success = await submitEmailToMailchimp(email, themeName);
     if (success) {
-      localStorage.setItem("emailPopupDismissed", "1");
+      localStorage.setItem("epDone", "1");
       statusEl.textContent = "You're in! Thanks for subscribing.";
       statusEl.style.color = "var(--feedback-correct)";
-      setTimeout(() => closePopup(), 2000);
+      setTimeout(() => removeOverlay(), 2000);
     } else {
       submitBtn.disabled = false;
       statusEl.textContent = "Something went wrong. Please try again.";
@@ -797,6 +814,14 @@ function maybeShowEmailPopup(themeName) {
   });
 
   setTimeout(() => overlay.classList.add("visible"), 3500);
+}
+
+function maybeShowEmailPopup(themeName) {
+  if (!emailPopupDismissAllowed()) return;
+  const rounds = parseInt(localStorage.getItem("epMarathonRounds") || "0", 10) + 1;
+  localStorage.setItem("epMarathonRounds", rounds);
+  if (rounds < 2) return;
+  showEmailPopupUI(themeName);
 }
 
 async function submitEmailToMailchimp(email, themeName) {
