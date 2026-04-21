@@ -1,114 +1,91 @@
 {
-  "Friends": {
-    "title": "Friends Mug",
-    "url": "https://amzn.to/3Nqhw2m"
-  },
-  "Modern Family": {
-    "title": "Phils-osophy Mug",
-    "url": "https://amzn.to/3PuagD7"
-  },
-  "One Piece": {
-    "title": "One Piece Tumbler",
-    "url": "https://amzn.to/4vB5uo4"
-  },
-  "Wednesday": {
-    "title": "Wednesday Mug and Socks",
-    "url": "https://amzn.to/41vUc6G"
-  },
-  "Minecraft": {
-    "title": "Minecraft Legos",
-    "url": "https://amzn.to/4sqQmqq"
-  },
-  "Star Wars": {
-    "title": "Star Wars Mug",
-    "url": "https://amzn.to/3NEhzrq"
-  },
-  "Demon Slayer": {
-    "title": "Demon Slayer Mug",
-    "url": "https://amzn.to/4tEAaTs"
-  },
-  "Lord of the Rings": {
-    "title": "Lord of the Rings Mug",
-    "url": "https://amzn.to/4ssKrln"
-  },
-  "Harry Potter": {
-    "title": "Harry Potter Mug & Socks",
-    "url": "https://amzn.to/4rPZbcQ"
-  },
-  "The Office": {
-    "title": "Dunder Mifflin Mug",
-    "url": "https://amzn.to/47PPiF0"
-  },
-  "The Big Bang Theory": {
-    "title": "The Big Bang Theory Mug",
-    "url": "https://amzn.to/4lOGy81"
-  },
-  "Community": {
-    "title": "Troy & Abed Mug",
-    "url": "https://amzn.to/4bvrg4D"
-  },
-  "Pokémon": {
-    "title": "Pokemon Cards",
-    "url": "https://amzn.to/3OfgZjW"
-  },
-  "Stranger Things": {
-    "title": "Stranger Things Mug",
-    "url": "https://amzn.to/3NZY3ph"
-  },
-  "How I Met Your Mother": {
-    "title": "HIMYM Mug",
-    "url": "https://amzn.to/4uMTI9p"
-  },
-  "Buffy the Vampire Slayer": {
-    "title": "Slayer Mug",
-    "url": "https://amzn.to/4sVADk8"
-  },
-  "Brooklyn 99": {
-    "title": "Brooklyn Nine-Nine Signed Photo",
-    "url": "https://amzn.to/3NTS7hA"
-  },
-  "Seinfeld": {
-    "title": "Seinfeld Mug",
-    "url": "https://amzn.to/4brr3zi"
-  },
-  "Game of Thrones": {
-    "title": "Game of Thrones Book 1",
-    "url": "https://amzn.to/4bGZiBE"
-  },
-  "Bridgerton": {
-    "title": "Bridgerton Book 1",
-    "url": "https://amzn.to/47mBYI6"
-  },
-  "House": {
-    "title": "House Funko Pop",
-    "url": "https://amzn.to/4sW8edP"
-  },
-  "Sex and the City": {
-    "title": "Sex and the City Mug",
-    "url": "https://amzn.to/4c9WA9r"
-  },
-  "Suits": {
-    "title": "Suits Mug",
-    "url": "https://amzn.to/4twGkoA"
-  },
-  "GTA V": {
-    "title": "Grand Theft Auto V Shirt",
-    "url": "https://amzn.to/41rjpyY"
-  },
-  "Greys Anatomy": {
-    "title": "Greys Anatomy Mug",
-    "url": "https://amzn.to/4cwpEI6"
-  },
-  "Red Dead Redemption 2": {
-    "title": "Red Dead Redemption 2 Poster",
-    "url": "https://amzn.to/4bx1fSk"
-  },
-  "Gilmore Girls": {
-    "title": "Gilmore Girls Mug",
-    "url": "https://amzn.to/3PXkUlV"
-  },
-  "Gossip Girl": {
-    "title": "Gossip Girl Mug",
-    "url": "https://amzn.to/4dqlxyr"
-  }
+  "Friends": [
+    { "title": "Friends Mug", "url": "https://amzn.to/3Nqhw2m" },
+    { "title": "Central Perk T-Shirt", "url": "https://amzn.to/3OPjR7w" },
+    { "title": "Joey Tribbiani Funko Pop", "url": "https://amzn.to/4mEVR3s" }
+  ],
+  "Modern Family": [
+    { "title": "Phils-osophy Mug", "url": "https://amzn.to/3PuagD7" }
+  ],
+  "One Piece": [
+    { "title": "One Piece Tumbler", "url": "https://amzn.to/4vB5uo4" }
+  ],
+  "Wednesday": [
+    { "title": "Wednesday Mug and Socks", "url": "https://amzn.to/41vUc6G" },
+    { "title": "Wednesday Funko Pop", "url": "https://amzn.to/4sIz0pf" }
+  ],
+  "Minecraft": [
+    { "title": "Minecraft Legos", "url": "https://amzn.to/4sqQmqq" }
+  ],
+  "Star Wars": [
+    { "title": "Star Wars Mug", "url": "https://amzn.to/3NEhzrq" }
+  ],
+  "Demon Slayer": [
+    { "title": "Demon Slayer Mug", "url": "https://amzn.to/4tEAaTs" }
+  ],
+  "Lord of the Rings": [
+    { "title": "Lord of the Rings Mug", "url": "https://amzn.to/4ssKrln" }
+  ],
+  "Harry Potter": [
+    { "title": "Harry Potter Mug & Socks", "url": "https://amzn.to/4rPZbcQ" }
+  ],
+  "The Office": [
+    { "title": "Dunder Mifflin Mug", "url": "https://amzn.to/47PPiF0" }
+  ],
+  "The Big Bang Theory": [
+    { "title": "The Big Bang Theory Mug", "url": "https://amzn.to/4lOGy81" }
+  ],
+  "Community": [
+    { "title": "Troy & Abed Mug", "url": "https://amzn.to/4bvrg4D" }
+  ],
+  "Pokémon": [
+    { "title": "Pokemon Cards", "url": "https://amzn.to/3OfgZjW" },
+    { "title": "Pokemon Ramen Bowl", "url": "https://amzn.to/4cASR3l" }
+  ],
+  "Stranger Things": [
+    { "title": "Stranger Things Mug", "url": "https://amzn.to/3NZY3ph" }
+  ],
+  "How I Met Your Mother": [
+    { "title": "HIMYM Mug", "url": "https://amzn.to/4uMTI9p" }
+  ],
+  "Buffy the Vampire Slayer": [
+    { "title": "Slayer Mug", "url": "https://amzn.to/4sVADk8" }
+  ],
+  "Brooklyn 99": [
+    { "title": "Brooklyn Nine-Nine Signed Photo", "url": "https://amzn.to/3NTS7hA" }
+  ],
+  "Seinfeld": [
+    { "title": "Seinfeld Mug", "url": "https://amzn.to/4brr3zi" }
+  ],
+  "Game of Thrones": [
+    { "title": "Game of Thrones Book 1", "url": "https://amzn.to/4bGZiBE" }
+  ],
+  "Bridgerton": [
+    { "title": "Bridgerton Book 1", "url": "https://amzn.to/47mBYI6" }
+  ],
+  "House": [
+    { "title": "House Funko Pop", "url": "https://amzn.to/4sW8edP" }
+  ],
+  "Sex and the City": [
+    { "title": "Sex and the City Mug", "url": "https://amzn.to/4c9WA9r" }
+  ],
+  "Suits": [
+    { "title": "Suits Mug", "url": "https://amzn.to/4twGkoA" }
+  ],
+  "GTA V": [
+    { "title": "Grand Theft Auto V Shirt", "url": "https://amzn.to/41rjpyY" }
+  ],
+  "Greys Anatomy": [
+    { "title": "Greys Anatomy Mug", "url": "https://amzn.to/4cwpEI6" }
+  ],
+  "Red Dead Redemption 2": [
+    { "title": "Red Dead Redemption 2 Poster", "url": "https://amzn.to/4bx1fSk" }
+  ],
+  "Gilmore Girls": [
+    { "title": "Gilmore Girls Mug", "url": "https://amzn.to/3PXkUlV" },
+    { "title": "Lorelai Funko Pop", "url": "https://amzn.to/48eJgy4" }
+  ],
+  "Gossip Girl": [
+    { "title": "Gossip Girl Mug", "url": "https://amzn.to/4dqlxyr" }
+  ]
 }
