@@ -1,0 +1,784 @@
+[
+  {
+    "id": "pitt-easy-0001",
+    "question": "What is the full name of the lead doctor?",
+    "options": ["Doctor John Carter", "Doctor Michael Robinavitch", "Doctor Mark Greene", "Doctor Doug Ross"],
+    "answer": "Doctor Michael Robinavitch",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-easy-0002",
+    "question": "In which city is the series set?",
+    "options": ["Philadelphia", "Seattle", "Pittsburgh", "Chicago"],
+    "answer": "Pittsburgh",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-easy-0003",
+    "question": "What is the nickname for the hospital's emergency room in the show?",
+    "options": ["The Hole", "The Pitt", "The Jungle", "The Cage"],
+    "answer": "The Pitt",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-easy-0004",
+    "question": "How many hours long is the shift depicted in each season of the series?",
+    "options": ["Eight hours", "Twelve hours", "Fifteen hours", "Twenty-four hours"],
+    "answer": "Fifteen hours",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-easy-0005",
+    "question": "Which streaming service is the original home of The Pitt?",
+    "options": ["Netflix", "Hulu", "Max", "Disney Plus"],
+    "answer": "Max",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-easy-0007",
+    "question": "Who plays the no-nonsense charge nurse Dana Evans?",
+    "options": ["Tracy Ifeachor", "Katherine LaNasa", "Fiona Dourif", "Taylor Dearden"],
+    "answer": "Katherine LaNasa",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-easy-0008",
+    "question": "What holiday serves as the setting for the start of season one?",
+    "options": ["Christmas Day", "Thanksgiving", "Fourth of July", "Labor Day"],
+    "answer": "Labor Day",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-easy-0008",
+    "question": "What holiday serves as the setting for the start of season two?",
+    "options": ["Christmas Day", "Thanksgiving", "Fourth of July", "Labor Day"],
+    "answer": "Fourth of July",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-easy-0009",
+    "question": "In the series premiere, where does Doctor Robby find Doctor Jack Abbott?",
+    "options": ["In the cafeteria", "On the hospital roof", "In the parking garage", "In the ER"],
+    "answer": "On the hospital roof",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-easy-0010",
+    "question": "Which character is a medical student whose parents also work in medicine?",
+    "options": ["Victoria Javadi", "Dennis Whitaker", "Trinity Santos", "Melissa King"],
+    "answer": "Victoria Javadi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-easy-0011",
+    "question": "What is the primary profession of the main characters in the show?",
+    "options": ["Police officers", "Lawyers", "Healthcare professionals", "Firefighters"],
+    "answer": "Healthcare professionals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-easy-0012",
+    "question": "Which character is the naive medical student from a farm background?",
+    "options": ["Frank Langdon", "Dennis Whitaker", "Michael Robinavitch", "Jack Abbott"],
+    "answer": "Dennis Whitaker",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-easy-0014",
+    "question": "What is the name of the neurodivergent resident with an autistic twin sister?",
+    "options": ["Doctor Melissa King", "Doctor Cassie McKay", "Doctor Samira Mohan", "Doctor Trinity Santos"],
+    "answer": "Doctor Melissa King",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-easy-0015",
+    "question": "How many episodes are in the first season of the series?",
+    "options": ["Ten episodes", "Twelve episodes", "Fifteen episodes", "Twenty-two episodes"],
+    "answer": "Fifteen episodes",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-easy-0016",
+    "question": "What is the name of the new attending physician introduced in season two as a replacement?",
+    "options": ["Dr Baran Al-Hashimi", "Dr Darya Al-Sayed", "Dr Laleh Mansouri", "Dr Zoya El-Khoury"],
+    "answer": "Dr Baran Al-Hashimi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-easy-0017",
+    "question": "What nickname does Victoria Javadi receive after fainting on her first day?",
+    "options": ["Faint", "Crash", "Sleepy", "Swoon"],
+    "answer": "Crash",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-easy-0019",
+    "question": "What is the name of the hospital administrator focused on patient satisfaction scores?",
+    "options": ["Gloria Underwood", "Dana Evans", "Theresa Saunders", "Eileen Shamsi"],
+    "answer": "Gloria Underwood",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-easy-0020",
+    "question": "Which actor plays the ambitious and cocky resident Doctor Trinity Santos?",
+    "options": ["Isa Briones", "Taylor Dearden", "Supriya Ganesh", "Shabana Azeez"],
+    "answer": "Isa Briones",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-easy-0021",
+    "question": "Doctor Robby is still reeling from the death of which person at the start of season one?",
+    "options": ["His wife", "His father", "His mentor", "His son"],
+    "answer": "His mentor",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-easy-0022",
+    "question": "What event at the end of season one causes a mass casualty situation?",
+    "options": ["A building collapse", "A mass shooting", "A train derailment", "A chemical spill"],
+    "answer": "A mass shooting",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-easy-0023",
+    "question": "What is the medical specialty of the characters in the series?",
+    "options": ["Cardiology", "Pediatrics", "Emergency Medicine", "Oncology"],
+    "answer": "Emergency Medicine",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-easy-0030",
+    "question": "What is the name of the nurse Victoria Javadi is smitten with in season one?",
+    "options": ["Mateo", "Donnie", "Gomez", "Luis"],
+    "answer": "Mateo",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-easy-0031",
+    "question": "What global event's impact on healthcare is a major theme of the series?",
+    "options": ["Swine Flu", "COVID-19 pandemic", "Ebola Pandemic", "Smallpox epidemic"],
+    "answer": "COVID-19 pandemic",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-easy-0037",
+    "question": "What animal infestation causes a chaotic moment in the emergency room in season one?",
+    "options": ["Snakes", "Rats", "Cocokroaches", "Birds"],
+    "answer": "Rats",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-easy-0042",
+    "question": "How many months after the first season does the second season take place?",
+    "options": ["One month", "Six months", "Ten months", "Two years"],
+    "answer": "Ten months",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-easy-0044",
+    "question": "What is the title of the season one finale?",
+    "options": ["Nine PM", "Seven AM", "Six PM", "The Pitt"],
+    "answer": "Nine PM",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-easy-0046",
+    "question": "Which character is arrested in season one for destroying an ankle monitor?",
+    "options": ["Frank Langdon", "Cassie McKay", "Trinity Santos", "Dennis Whitaker"],
+    "answer": "Cassie McKay",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-easy-0048",
+    "question": "What is the name of the medical tech played by Jermaine Williams?",
+    "options": ["Antoine", "Larry", "Donnie", "Ahmad"],
+    "answer": "Antoine",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-medium-0002",
+    "question": "In season one, which two specific drugs does Dr. Frank Langdon steal and tamper with in the hospital pharmacy?",
+    "options": [
+      "Librium and Morphine",
+      "Ativan and Fentanyl",
+      "Librium and Ativan",
+      "Ketamine and Ativan"
+    ],
+    "answer": "Librium and Ativan",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pitt-hard-0049",
+    "question": "Which recurring patient's Librium prescription provided the physical evidence that Trinity Santos used to track Dr. Langdon’s diversion?",
+    "options": ["Louie", "Silas", "Arthur", "Mose"],
+    "answer": "Louie",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0050",
+    "question": "When Trinity Santos audited the Librium prescription bottle, how many pills did she find?",
+    "options": ["5", "10", "12", "15"],
+    "answer": "10",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-medium-0003",
+    "question": "Which medical school does Victoria Javadi attend while completing her rotation at The Pitt?",
+    "options": ["University of Pittsburgh", "Carnegie Mellon", "Duquesne University", "Drexel University"],
+    "answer": "University of Pittsburgh",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pitt-medium-0008",
+    "question": "What is the name of Cassie McKay’s son?",
+    "options": ["Harrison", "Leo", "Charlie", "Mason"],
+    "answer": "Harrison",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pitt-medium-0014",
+    "question": "How did Doctor Robby’s mentor, who he mourns in season one, pass away?",
+    "options": ["Heart attack during a shift", "Complications from COVID-19", "A car accident", "Suicide"],
+    "answer": "Complications from COVID-19",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pitt-medium-0017",
+    "question": "What is the ethnic background of Doctor Baran Al-Hashimi?",
+    "options": ["Iranian Iraqi", "Syrian Iraqi", "Egyptian", "Syrian Iranian"],
+    "answer": "Iranian Iraqi",
+    "difficulty": "hard"
+  },
+
+  {
+    "id": "pitt-medium-0026",
+    "question": "What is the title of the first episode of season one and twotwo?",
+    "options": ["7:00 A.M", "6:00 A.M", "7:00 P.M", "6:00 P.M"],
+    "answer": "7:00 A.M",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pitt-medium-0029",
+    "question": "In season two, which doctor is assigned to lead the Triage unit as a punishment?",
+    "options": ["Frank Langdon", "Trinity Santos", "Jack Abbott", "Dennis Whitaker"],
+    "answer": "Frank Langdon",
+    "difficulty": "medium"
+  },
+
+
+  {
+    "id": "pitt-hard-0002",
+    "question": "Which specific medical condition does Doctor Baran Al-Hashimi reveal she suffers from in the season two finale?",
+    "options": ["Multiple Sclerosis", "Post-meningitis seizures", "Chronic migraines", "Narcolepsy"],
+    "answer": "Post-meningitis seizures",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0003",
+    "question": "What is the name of the mentor whose death anniversary haunts Doctor Michael Robinavitch?",
+    "options": ["Doctor Adamson", "Doctor Greene", "Doctor Miller", "Doctor Sterling"],
+    "answer": "Doctor Adamson",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tp-easy-0005",
+    "question": "Who plays Dr. Michael 'Robby' Robinavitch?",
+    "options": ["Patrick Ball", "Noah Wyle", "Gerran Howell", "Shawn Hatosy"],
+    "answer": "Noah Wyle",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-s1-easy-0005",
+    "question": "What is Dr. Robby's role at the start of season 1?",
+    "options": ["Resident", "Attending physician", "Intern", "Chief of Medicine"],
+    "answer": "Attending physician",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-s1-easy-0012",
+    "question": "How many trainee doctors join in season 1?",
+    "options": ["2", "4", "6", "3"],
+    "answer": "4",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-s1-easy-0023",
+    "question": "Which episode features McKay's arrest?",
+    "options": ["7:00 A.M.", "8:00 P.M.", "12:00 P.M.", "3:00 P.M."],
+    "answer": "8:00 P.M.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tp-easy-0008",
+    "question": "What is Dana Evans' job?",
+    "options": ["Paramedic", "Charge nurse", "Surgeon", "Hospital lawyer"],
+    "answer": "Charge nurse",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tp-easy-0009",
+    "question": "Who plays Dana Evans?",
+    "options": ["Katherine LaNasa", "Tracy Ifeachor", "Fiona Dourif", "Isa Briones"],
+    "answer": "Katherine LaNasa",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tp-easy-0011",
+    "question": "Who plays Dr. Frank Langdon?",
+    "options": ["Patrick Ball", "Noah Wyle", "Gerran Howell", "Taylor Dearden"],
+    "answer": "Patrick Ball",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tp-easy-0013",
+    "question": "Who plays Dr. Heather Collins?",
+    "options": ["Tracy Ifeachor", "Shabana Azeez", "Sepideh Moafi", "Fiona Dourif"],
+    "answer": "Tracy Ifeachor",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tp-easy-0014",
+    "question": "Which doctor is secretly pregnant in Season 1?",
+    "options": ["Dr. Samira Mohan", "Dr. Heather Collins", "Dr. Mel King", "Dr. Parker Ellis"],
+    "answer": "Dr. Heather Collins",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pitt-hard-0065",
+    "question": "What is the name of the scruffy terrier dog featured in the series?",
+    "options": ["Crosby", "Murphy", "Cooper", "Barnaby"],
+    "answer": "Crosby",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0067",
+    "question": "At which institution did Doctor Baran Al-Hashimi complete her medical studies?",
+    "options": ["Johns Hopkins Medicine", "Stanford Medicine", "Harvard Medical School", "University of Pittsburgh"],
+    "answer": "Stanford Medicine",
+    "difficulty": "hard"
+  },
+
+  {
+    "id": "pitt-hard-0051",
+    "question": "What is the official name of the hospital where the series takes place?",
+    "options": ["Pittsburgh General", "Pittsburgh Trauma Medical Center", "Mercy Hospital", "Steel City Medical"],
+    "answer": "Pittsburgh Trauma Medical Center",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pitt-hard-0053",
+    "question": "As of April 2026, how many seasons of The Pitt have been released?",
+    "options": ["One season", "Two seasons", "Three seasons", "Four seasons"],
+    "answer": "Two seasons",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pitt-hard-0054",
+    "question": "Who created the television series The Pitt?",
+    "options": ["Noah Wyle", "John Wells", "R. Scott Gemmill", "George Clooney"],
+    "answer": "R. Scott Gemmill",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0056",
+    "question": "What year of medical school is Victoria Javadi in at the start of the series?",
+    "options": ["First year", "Second year", "Third year", "Fourth year"],
+    "answer": "Third year",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pitt-hard-0057",
+    "question": "What year of medical school is Dennis Whitaker in at the start of the series?",
+    "options": ["First year", "Second year", "Third year", "Fourth year"],
+    "answer": "Fourth year",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pitt-hard-0064",
+    "question": "What is the name of Dennis Whitaker’s hometown?",
+    "options": ["Broken Bow, Nebraska", "North Platte, Nebraska", "Grand Island, Nebraska", "Kearney, Nebraska"],
+    "answer": "Broken Bow, Nebraska",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pitt-hard-0059",
+    "question": "What is the name of Doctor Melissa King's twin sister?",
+    "options": ["Becca", "Sarah", "Cassie", "Trinity"],
+    "answer": "Becca",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0060",
+    "question": "What specific injury or procedure did Victoria Javadi faint at the sight of in the pilot?",
+    "options": ["A spinal tap", "A degloved foot", "An open heart surgery", "A craniotomy"],
+    "answer": "A degloved foot",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pitt-hard-0061",
+    "question": "Which character gave Victoria Javadi her nickname 'Crash'?",
+    "options": ["Trinity Santos", "Dennis Whitaker", "Nurse Dana Evans", "Doctor Frank Langdon"],
+    "answer": "Trinity Santos",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pitt-hard-0062",
+    "question": "What was the anniversary year of Doctor Roberts' mentor's death at the start of the show?",
+    "options": ["Second anniversary", "Fourth anniversary", "Fifth anniversary", "Tenth anniversary"],
+    "answer": "Fourth anniversary",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pitt-hard-0063",
+    "question": "What is the name of the music festival featured in the season one finale?",
+    "options": ["PittFest", "Pittjam", "Keystone Music Fest", "Pittstop"],
+    "answer": "PittFest",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pitt-hard-0001",
+    "question": "What is the specific nickname given to the recurring ER patient known for frequently causing chaos and disruptions?",
+    "options": ["The Kraken", "The Storm", "Chaos King", "The Maelstrom"],
+    "answer": "The Kraken",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0002",
+    "question": "In the series premiere, how old was the veteran who tragically passed away?",
+    "options": ["35", "39", "42", "45"],
+    "answer": "39",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0003",
+    "question": "What was the specific cause of death for the veteran treated in the first episode?",
+    "options": ["Gunshot wound", "Hit by a bus", "Drug overdose", "Cardiac arrest"],
+    "answer": "Hit by a bus",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0004",
+    "question": "Which of these was NOT one of the new faces joining the hospital staff in the series premiere?",
+    "options": ["Melissa King", "Trinity Santos", "Dennis Whitaker", "Yolanda Garcia"],
+    "answer": "Yolanda Garcia",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pitt-hard-0005",
+    "question": "At the start of Episode 1, what year of residency was Dr. Melissa King currently in?",
+    "options": ["First Year", "Second Year", "Third Year", "Fourth Year"],
+    "answer": "Second Year",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0006",
+    "question": "What specific term does the staff use for admitted patients who remain in the ER waiting for an upstairs room, often for days?",
+    "options": ["Holdovers", "Boarders", "Parkers", "Stayers"],
+    "answer": "Boarders",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pitt-hard-0007",
+    "question": "In the pilot episode, what was the name of the patient being treated for a gunshot wound?",
+    "options": ["Virgil", "Silas", "Otis", "Sam"],
+    "answer": "Virgil",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0008",
+    "question": "Regarding the patient treated for a gunshot wound in the series premiere, where specifically on their body was the wound located?",
+    "options": ["Right thigh", "Left shoulder", "Lower back", "Right shoulder"],
+    "answer": "Left shoulder",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0009",
+    "question": "What specific antibiotic was prescribed to the gunshot wound patient before their discharge in the first episode?",
+    "options": ["Amoxicillin", "Ceftin", "Penicillin", "Doxycycline"],
+    "answer": "Ceftin",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0010",
+    "question": "Which of the following was NOT a patient treated at PTMC in Season 1?",
+    "options": ["Sam Wallace", "Virgil Straker", "Louie Cloverfield", "Marcus Thorne"],
+    "answer": "Marcus Thorne",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0011",
+    "question": "Which of these individuals was NOT a patient seen during the events of the pilot?",
+    "options": ["Murphy Rottenstein", "Charlie", "Otis Williams", "Derek Vane"],
+    "answer": "Derek Vane",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0012",
+    "question": "In the pilot episode, which specific tooth number is the patient Charlie missing?",
+    "options": ["Tooth 4", "Tooth 8", "Tooth 12", "Tooth 15"],
+    "answer": "Tooth 8",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0013",
+    "question": "How old was the man who heroically rescued a woman who had fallen onto the train tracks in the pilot?",
+    "options": ["38", "40", "42", "45"],
+    "answer": "42",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0014",
+    "question": "What was the name of the heroic man who saved the woman on the train tracks in the series premiere?",
+    "options": ["Sam Wallace", "Virgil Straker", "Dennis Whitaker", "Jack Abbot"],
+    "answer": "Sam Wallace",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pitt-hard-0015",
+    "question": "In the pilot, Princess mentions that she is multilingual. How many languages does she claim to speak?",
+    "options": ["3", "4", "6", "8"],
+    "answer": "6",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0016",
+    "question": "What was the specific percentage goal for patient satisfaction that Gloria mentioned in the pilot?",
+    "options": ["25%", "36%", "50%", "85%"],
+    "answer": "36%",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0017",
+    "question": "According to Gloria in the pilot, what was the actual patient satisfaction percentage for Robinavitch's department?",
+    "options": ["4%", "8%", "12%", "15%"],
+    "answer": "8%",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0018",
+    "question": "What was the percentage mentioned by Gloria regarding how likely the hospital was to be recommended by patients?",
+    "options": ["5%", "11%", "18%", "22%"],
+    "answer": "11%",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0019",
+    "question": "What is the specific industry term used throughout the show to describe patient satisfaction scores?",
+    "options": ["HCAHPS", "Press Ganey", "CareMetrics", "PatientPulse"],
+    "answer": "Press Ganey",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pitt-hard-0020",
+    "question": "Which city's marathon did the patient in Season 1 say he ran?",
+    "options": ["Pittsburgh", "Boston", "Rochester", "New York"],
+    "answer": "Rochester",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0021",
+    "question": "According to the dialogue in the Season 1 pilot, how many distinct languages are spoken in Pakistan?",
+    "options": ["52", "64", "77", "81"],
+    "answer": "77",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0022",
+    "question": "How old is Victoria Javadi stated to be during the events of the pilot episode?",
+    "options": ["20", "22", "24", "26"],
+    "answer": "20",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pitt-hard-0023",
+    "question": "What is the name of Victoria's mother, who is also a physician?",
+    "options": ["Eileen Shamsi", "Mariam Javadi", "Soraya Bakhtiari", "Leila Nassar"],
+    "answer": "Eileen Shamsi",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pitt-hard-0024",
+    "question": "What specific medical profession does Victoria’s father practice?",
+    "options": ["Cardiologist", "Endocrinologist", "Radiologist", "Neurologist"],
+    "answer": "Endocrinologist",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pitt-hard-0025",
+    "question": "In the pilot, the team eventually discovers that the woman with the degloving injury speaks which language?",
+    "options": ["Hindi", "Bengali", "Nepali", "Tibetan"],
+    "answer": "Nepali",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pitt-hard-0026",
+    "question": "Dr. Heather Collins mentions she is originally from which city?",
+    "options": ["Seattle", "Portland", "Denver", "Boston"],
+    "answer": "Portland",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pitt-hard-0027",
+    "question": "What is the name of the hospital's dedicated social worker who assists the medical team?",
+    "options": ["Kiara Alfaro", "Elena Rodriguez", "Sofia Mendez", "Carmen Vega"],
+    "answer": "Kiara Alfaro",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pitt-hard-0028",
+    "question": "In the pilot episode, Victoria mentions she is currently on which specific rotation number?",
+    "options": ["1st", "2nd", "3rd", "4th"],
+    "answer": "3rd",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pitt-hard-0029",
+    "question": "Which two rotations does Victoria state she has already completed prior to arriving at PTMC?",
+    "options": ["OB-GYN and Oncology", "OB-GYN and Pediatrics", "Psychiatry and Neurology", "Internal Medicine and Pediatrics"],
+    "answer": "OB-GYN and Pediatrics",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0030",
+    "question": "What is the age of Dr. Cassie McKay as specified in the pilot episode?",
+    "options": ["38", "40", "42", "45"],
+    "answer": "42",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0031",
+    "question": "Which of the following names was NOT a patient mentioned or treated in the Season 1 pilot?",
+    "options": ["Fred Saeta", "Mr. Driscoll", "Joseph Spencer", "Arthur Pame"],
+    "answer": "Arthur Pame",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0032",
+    "question": "What nickname is given to the medical student Dennis Whitaker during the pilot?",
+    "options": ["Cowboy", "Huckleberry", "Hurtleberry", "Rookie"],
+    "answer": "Huckleberry",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0033",
+    "question": "Which of the following was NOT a patient mentioned in the Season 2 pilot episode?",
+    "options": ["Margaret Walker", "Mr. Burgess", "Liam Sanders", "Harvey Denis"],
+    "answer": "Harvey Denis",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0034",
+    "question": "Which of these names was NOT listed as a patient in the Season 2 pilot?",
+    "options": ["Kylie Connors", "Candace O'Grady", "Mr. Williams", "Mrs O Brien"],
+    "answer": "Mrs O Brien",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0035",
+    "question": "Which recurring patient makes an appearance in both the Season 1 pilot and the Season 2 pilot of The Pitt?",
+    "options": ["Louie Cloverfield", "Virgil Straker", "Margaret Walker", "Liam Sanders"],
+    "answer": "Louie Cloverfield",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0036",
+    "question": "What is the acronym used by the PTMC staff to assess potentially violent or agitated patients?",
+    "options": ["STAMP", "VINE", "FAST", "STUMP"],
+    "answer": "STAMP",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0037",
+    "question": "In the STAMP acronym used for patient assessment, what does the 'S' stand for?",
+    "options": ["Shouting", "Staring", "Struggling", "Sweating"],
+    "answer": "Staring",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0038",
+    "question": "In the STAMP acronym used for patient assessment, what does the 'T' stand for?",
+    "options": ["Trembling", "Threatening", "Tone of voice", "Tension"],
+    "answer": "Tone of voice",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0039",
+    "question": "In the STAMP acronym used for patient assessment, what does the 'A' stand for?",
+    "options": ["Anxiety", "Apathy", "Agitation", "Argumentative"],
+    "answer": "Anxiety",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0040",
+    "question": "In the STAMP acronym used for patient assessment, what does the 'M' stand for?",
+    "options": ["Movement", "Mumbling", "Muttering", "Manic"],
+    "answer": "Mumbling",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0041",
+    "question": "In the STAMP acronym used for patient assessment, what does the 'P' stand for?",
+    "options": ["Posturing", "Pushing", "Pacing", "Panic"],
+    "answer": "Pacing",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0042",
+    "question": "What specific 'safe word' is mentioned in the Season 2 pilot for staff to use when they feel a situation is becoming unsafe?",
+    "options": ["Hula Hoop", "Red Rocket", "Code Blue", "Safety Net"],
+    "answer": "Hula Hoop",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0043",
+    "question": "What is the full meaning of the medical acronym POLST, discussed regarding patient care?",
+    "options": ["Physician Orders for Life-Sustaining Treatment", "Patient Options for Life-Saving Therapy", "Physician Organization for Legal Standard Treatment", "Patient Orders for Long-term Support and Triage"],
+    "answer": "Physician Orders for Life-Sustaining Treatment",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0044",
+    "question": "Who is the very first patient of the day seen in the Season 2 pilot?",
+    "options": ["Margaret Walker", "Louie Cloverfield", "Kylie Connors", "Mark Lindsay"],
+    "answer": "Mark Lindsay",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0045",
+    "question": "In the Season 2 pilot, how old was the woman brought in by her son for intractable vomiting?",
+    "options": ["78", "80", "82", "85"],
+    "answer": "82",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0046",
+    "question": "What was the name of the high school band Dr. Shen used to play in, as mentioned in the show?",
+    "options": ["Giant Balls of Disrespect", "Massive Tones of Defiance", "Giant Balls of Chaos", "Big Sticks of Anarchy"],
+    "answer": "Giant Balls of Disrespect",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0047",
+    "question": "Dr. Baran Al-Hashimi is introduced as what specific type of expert in Season 2?",
+    "options": ["Clinical Informatics", "Biomedical Ethics", "Surgical Logistics", "Hospital Administration"],
+    "answer": "Clinical Informatics",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0048",
+    "question": "What is the name of the new grad RN who is seen shadowing at the hospital in the Season 2 pilot?",
+    "options": ["Emma Nolan", "Sarah Miller", "Chloe Price", "Lily Chen"],
+    "answer": "Emma Nolan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pitt-hard-0049",
+    "question": "Emma Nolan mentions she is originally from which city?",
+    "options": ["Sault Ste. Marie", "Thunder Bay", "Winnipeg", "Sudbury"],
+    "answer": "Sault Ste. Marie",
+    "difficulty": "hard"
+  }
+
+]
+
+
