@@ -760,8 +760,8 @@ function showEmailPopupUI(themeName) {
   overlay.innerHTML = `
     <div class="email-popup">
       <button class="email-popup-close" aria-label="Close">&times;</button>
-      <h3>Get new trivia picks</h3>
-      <p>Drop your email and we'll send you new themes and challenges.</p>
+      <h3>Don´t miss what´s next</h3>
+      <p>Get notified about new questions, themes and game modes</p>
       <div class="email-popup-form">
         <input class="email-popup-input" type="email" placeholder="you@example.com" autocomplete="email" />
         <button class="email-popup-submit">Subscribe</button>
