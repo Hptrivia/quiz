@@ -152,6 +152,15 @@ if (newlyAddedList) {
   newlyAddedList.appendChild(card);
 }
 
+    const mashupCard = document.createElement("a");
+    mashupCard.className = "card";
+    mashupCard.href = "mashup.html";
+    mashupCard.innerHTML = `
+      <h3>Mashup Mode</h3>
+      <p>Mix up to 5 themes into one custom quiz</p>
+    `;
+    if (categoryList) categoryList.appendChild(mashupCard);
+
     const grouped = groupByCategory(filteredThemes);
 
     const categoryOrder = [

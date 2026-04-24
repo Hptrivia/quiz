@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mashup Mode | Trivia Gauntlet</title>
+  <meta name="description" content="Play a custom Mashup trivia quiz combining multiple themes on Trivia Gauntlet." />
+  <link rel="icon" href="/favicon.ico.png" sizes="any">
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="apple-touch-icon" href="/assets/icon-192.png" />
+  <meta name="theme-color" content="#0f172a" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2544021252380572"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E6BY9F2ZDT');
+  </script>
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    .mashup-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0 20px;
+    }
+
+    .mashup-theme-badge {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 999px;
+      border: 1px solid;
+    }
+
+    .mashup-sample-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid;
+      margin-right: 7px;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+
+    .theme-sample-questions ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .theme-sample-questions li {
+      display: flex;
+      align-items: baseline;
+      gap: 0;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <main class="container narrow">
+    <div class="theme-top-links">
+      <a href="mashup.html" class="back-link">← Change Themes</a>
+      <a href="index.html" class="back-link">⌂ Home</a>
+    </div>
+
+    <div class="theme-search-wrap">
+      <div class="search-wrap">
+        <input id="themeSearchInput" class="theme-search-input" type="text" placeholder="Search themes..." autocomplete="off" />
+        <div id="themeSearchResults" class="search-results"></div>
+      </div>
+    </div>
+
+    <section class="panel">
+      <h1 id="mashupTitle">Mashup Mode</h1>
+      <p class="theme-question-count" id="questionCount">Loading...</p>
+      <p id="mashupDescription"></p>
+
+      <div class="mashup-badges" id="themeBadges"></div>
+
+      <div class="grid">
+        <a class="card" id="marathonLink" href="#">
+          <h3>Marathon Mode</h3>
+          <p>30-question rounds</p>
+        </a>
+
+        <a class="card" id="challengeLink" href="#">
+          <h3>Challenge Mode</h3>
+          <p>10-question quick rounds</p>
+        </a>
+
+        <a class="card" id="survivalLink" href="#">
+          <h3>Survival Mode</h3>
+          <p>One mistake and the run ends</p>
+        </a>
+      </div>
+
+      <div class="theme-sample-questions" id="sampleSection" style="display:none">
+        <h2>Sample Questions</h2>
+        <ul id="sampleList"></ul>
+      </div>
+
+      <div class="theme-related-quizzes" id="relatedSection" style="display:none">
+        <h2>Play Themes Individually</h2>
+        <div class="grid" id="relatedGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a class="footer-highlight" href="remove-ads.html">Ad-Free + Extras</a>
+        <a href="about.html">About</a>
+        <a class="footer-highlight" href="how-it-works.html">How It Works</a>
+        <a class="footer-highlight" href="contact.html">Contact</a>
+        <a class="footer-highlight" href="blog.html">Blog</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const BADGE_COLORS = [
+      { bg: "rgba(59,130,246,0.15)", border: "#3b82f6", text: "#93c5fd" },
+      { bg: "rgba(34,197,94,0.12)",  border: "#22c55e", text: "#86efac" },
+      { bg: "rgba(249,115,22,0.15)", border: "#f97316", text: "#fdba74" },
+      { bg: "rgba(168,85,247,0.15)", border: "#a855f7", text: "#d8b4fe" },
+      { bg: "rgba(236,72,153,0.15)", border: "#ec4899", text: "#f9a8d4" },
+    ];
+
+    function setupSearch(themes) {
+      const input = document.getElementById("themeSearchInput");
+      const results = document.getElementById("themeSearchResults");
+      if (!input || !results) return;
+
+      function render(items) {
+        if (!items.length) {
+          results.innerHTML = '<div class="search-item">No results found</div>';
+          return;
+        }
+        results.innerHTML = items.map(t =>
+          `<a class="search-item" href="themes/${t.slug}.html">${t.title}</a>`
+        ).join("");
+      }
+
+      input.addEventListener("focus", () => { render(themes); results.style.display = "block"; });
+      input.addEventListener("input", e => {
+        const value = e.target.value.trim().toLowerCase();
+        render(themes.filter(t => t.title.toLowerCase().includes(value)));
+        results.style.display = "block";
+      });
+      document.addEventListener("click", e => {
+        if (!input.contains(e.target) && !results.contains(e.target)) {
+          results.style.display = "none";
+        }
+      });
+    }
+
+    (async function init() {
+      const params = new URLSearchParams(window.location.search);
+      const themeParam = params.get("themes") || "";
+      const slugs = themeParam.split(",").map(s => s.trim()).filter(Boolean);
+
+      if (slugs.length < 2 || slugs.length > 5) {
+        window.location.href = "mashup.html";
+        return;
+      }
+
+      let allThemes;
+      try {
+        allThemes = await fetch("data/themes.json").then(r => r.json());
+      } catch (e) {
+        document.getElementById("questionCount").textContent = "Failed to load. Please try again.";
+        return;
+      }
+
+      const selectedThemes = slugs
+        .map(slug => allThemes.find(t => t.slug === slug))
+        .filter(Boolean);
+
+      if (selectedThemes.length < 2) {
+        window.location.href = "mashup.html";
+        return;
+      }
+
+      const themesParam = selectedThemes.map(t => t.slug).join(",");
+      const themeColors = selectedThemes.map((t, i) => BADGE_COLORS[i % BADGE_COLORS.length]);
+
+      // Title
+      const titleParts = selectedThemes.map(t => t.title);
+      const pageTitle = titleParts.join(" + ") + " Mashup";
+      document.title = pageTitle + " | Trivia Gauntlet";
+      document.getElementById("mashupTitle").textContent = "Mashup Mode";
+
+      // Description
+      const last = titleParts[titleParts.length - 1];
+      const rest = titleParts.slice(0, -1);
+      const combined = rest.length > 0 ? rest.join(", ") + " and " + last : last;
+      document.getElementById("mashupDescription").textContent =
+        `A custom Mashup quiz combining ${combined}. Questions are pulled from all ${selectedThemes.length} themes for a mixed trivia experience.`;
+
+      // Theme badges
+      const badgesEl = document.getElementById("themeBadges");
+      selectedThemes.forEach((theme, i) => {
+        const c = themeColors[i];
+        const badge = document.createElement("span");
+        badge.className = "mashup-theme-badge";
+        badge.style.cssText = `background:${c.bg};border-color:${c.border};color:${c.text}`;
+        badge.textContent = theme.title;
+        badgesEl.appendChild(badge);
+      });
+
+      // Game mode links
+      document.getElementById("marathonLink").href  = `mashup-play.html?themes=${themesParam}&mode=marathon`;
+      document.getElementById("challengeLink").href = `mashup-play.html?themes=${themesParam}&mode=challenge`;
+      document.getElementById("survivalLink").href  = `mashup-play.html?themes=${themesParam}&mode=survival`;
+
+      // Load questions from all selected themes in parallel
+      const questionsByTheme = {};
+      let totalQuestions = 0;
+
+      await Promise.all(selectedThemes.map(async (theme) => {
+        try {
+          const qs = await fetch(theme.questionFile).then(r => r.json());
+          questionsByTheme[theme.slug] = Array.isArray(qs) ? qs : [];
+          totalQuestions += questionsByTheme[theme.slug].length;
+        } catch (e) {
+          questionsByTheme[theme.slug] = [];
+        }
+      }));
+
+      document.getElementById("questionCount").textContent =
+        `${totalQuestions} questions across ${selectedThemes.length} themes`;
+
+      // Sample questions — evenly distributed across themes
+      const samplesPerTheme = Math.max(1, Math.min(Math.floor(10 / selectedThemes.length), 3));
+      const sampleList = document.getElementById("sampleList");
+      let hasSamples = false;
+
+      selectedThemes.forEach((theme, i) => {
+        const c = themeColors[i];
+        const qs = questionsByTheme[theme.slug] || [];
+        const shuffled = [...qs].sort(() => Math.random() - 0.5).slice(0, samplesPerTheme);
+
+        shuffled.forEach(q => {
+          hasSamples = true;
+          const li = document.createElement("li");
+          li.innerHTML =
+            `<span class="mashup-sample-badge" style="background:${c.bg};border-color:${c.border};color:${c.text}">${theme.title}</span>` +
+            `${q.question}`;
+          sampleList.appendChild(li);
+        });
+      });
+
+      if (hasSamples) {
+        document.getElementById("sampleSection").style.display = "";
+      }
+
+      // Related quizzes — individual theme pages
+      const relatedGrid = document.getElementById("relatedGrid");
+      selectedThemes.forEach(theme => {
+        const a = document.createElement("a");
+        a.className = "card";
+        a.href = `themes/${theme.slug}.html`;
+        a.innerHTML = `<h3>${theme.title}</h3>`;
+        relatedGrid.appendChild(a);
+      });
+      document.getElementById("relatedSection").style.display = "";
+
+      setupSearch(allThemes);
+    })();
+  </script>
+</body>
+</html>

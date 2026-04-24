@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mashup Mode | Trivia Gauntlet</title>
+  <meta name="description" content="Mix up to 5 trivia themes into one custom quiz. Select your themes and start playing on Trivia Gauntlet." />
+  <link rel="icon" href="/favicon.ico.png" sizes="any">
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="apple-touch-icon" href="/assets/icon-192.png" />
+  <meta name="theme-color" content="#0f172a" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2544021252380572"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E6BY9F2ZDT');
+  </script>
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    .mashup-search-wrap {
+      margin: 16px 0 12px;
+    }
+
+    .mashup-top-bar {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 20px 0 6px;
+      flex-wrap: wrap;
+    }
+
+    .mashup-counter {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .mashup-error {
+      margin: 0;
+      color: var(--feedback-wrong);
+      font-size: 14px;
+    }
+
+    .mashup-filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .filter-btn {
+      padding: 7px 14px;
+      border: 1px solid var(--option-border);
+      border-radius: 999px;
+      background: var(--option-bg);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 14px;
+      transition: border-color 0.15s, background 0.15s, color 0.15s;
+    }
+
+    .filter-btn:hover {
+      border-color: var(--card-hover-border);
+    }
+
+    .filter-btn.active {
+      background: var(--primary-btn-bg);
+      border-color: var(--primary-btn-bg);
+      color: #fff;
+    }
+
+    #themeGrid {
+      margin-bottom: 24px;
+    }
+
+    .theme-select-card {
+      background: var(--panel-bg);
+      border: 1px solid var(--panel-border);
+      border-radius: 14px;
+      padding: 12px 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: border-color 0.15s, background 0.15s;
+      user-select: none;
+    }
+
+    .theme-select-card:hover {
+      border-color: var(--card-hover-border);
+    }
+
+    .theme-select-card.selected {
+      border-color: #3b82f6;
+      background: var(--option-selected-bg);
+    }
+
+    .theme-checkbox {
+      width: 18px;
+      height: 18px;
+      border: 2px solid #555;
+      border-radius: 4px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: bold;
+      color: #fff;
+      transition: background 0.15s, border-color 0.15s;
+    }
+
+    .theme-select-card.selected .theme-checkbox {
+      background: #3b82f6;
+      border-color: #3b82f6;
+    }
+
+    .theme-select-name {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    .mashup-no-results {
+      color: var(--muted-text);
+      font-size: 15px;
+      padding: 14px 0;
+      grid-column: 1 / -1;
+      margin: 0;
+    }
+
+    .mashup-start-row {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    #startBtn {
+      font-size: 16px;
+      padding: 14px 28px;
+    }
+
+    #startBtn:not(.btn-ready) {
+      opacity: var(--disabled-opacity);
+      cursor: not-allowed;
+    }
+
+    #startBtn:not(.btn-ready):hover {
+      background: var(--primary-btn-bg);
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Trivia Gauntlet</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+
+    <section class="panel category-intro-panel">
+      <h1>Mashup Mode</h1>
+      <div class="category-intro-text">
+        <p>Select between 2 and 5 themes to create your own mixed trivia game</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="mashup-top-bar">
+        <p id="selectionCounter" class="mashup-counter">0 of 5 selected</p>
+        <p id="maxError" class="mashup-error" aria-live="polite"></p>
+      </div>
+
+      <div class="mashup-search-wrap">
+        <input id="mashupSearch" class="theme-search-input" type="text" placeholder="Search themes..." autocomplete="off" />
+      </div>
+
+      <div class="mashup-filters" id="categoryFilters">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="TV/Series">TV</button>
+        <button class="filter-btn" data-category="Games">Games</button>
+        <button class="filter-btn" data-category="Sports">Sports</button>
+        <button class="filter-btn" data-category="Books">Books</button>
+        <button class="filter-btn" data-category="Countries">Countries</button>
+        <button class="filter-btn" data-category="Education">Education</button>
+        <button class="filter-btn" data-category="General">General</button>
+      </div>
+
+      <div id="themeGrid" class="grid"></div>
+
+      <div class="mashup-start-row">
+        <p id="startError" class="mashup-error" aria-live="polite"></p>
+        <button id="startBtn" class="primary-btn">Start Quiz</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a class="footer-highlight" href="remove-ads.html">Ad-Free + Extras</a>
+        <a href="about.html">About</a>
+        <a class="footer-highlight" href="how-it-works.html">How It Works</a>
+        <a class="footer-highlight" href="contact.html">Contact</a>
+        <a class="footer-highlight" href="blog.html">Blog</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const MAX_THEMES = 5;
+    const MIN_THEMES = 2;
+
+    let allThemes = [];
+    let selectedSlugs = new Set();
+    let activeCategory = "all";
+    let searchQuery = "";
+
+    const themeGrid = document.getElementById("themeGrid");
+    const counterEl = document.getElementById("selectionCounter");
+    const maxErrorEl = document.getElementById("maxError");
+    const startErrorEl = document.getElementById("startError");
+    const startBtn = document.getElementById("startBtn");
+    const searchInput = document.getElementById("mashupSearch");
+
+    async function init() {
+      try {
+        const res = await fetch("data/themes.json");
+        allThemes = await res.json();
+      } catch (e) {
+        themeGrid.innerHTML = '<p class="mashup-no-results">Failed to load themes. Please refresh and try again.</p>';
+        return;
+      }
+      renderGrid();
+    }
+
+    function getFilteredThemes() {
+      return allThemes.filter(theme => {
+        const matchesCategory = activeCategory === "all" || theme.category === activeCategory;
+        const matchesSearch = !searchQuery || theme.title.toLowerCase().includes(searchQuery);
+        return matchesCategory && matchesSearch;
+      });
+    }
+
+    function renderGrid() {
+      const filtered = getFilteredThemes();
+      themeGrid.innerHTML = "";
+
+      if (!filtered.length) {
+        themeGrid.innerHTML = '<p class="mashup-no-results">No themes found.</p>';
+        return;
+      }
+
+      filtered.forEach(theme => {
+        const isSelected = selectedSlugs.has(theme.slug);
+        const card = document.createElement("div");
+        card.className = "theme-select-card" + (isSelected ? " selected" : "");
+        card.dataset.slug = theme.slug;
+        card.innerHTML = `
+          <div class="theme-checkbox">${isSelected ? "&#10003;" : ""}</div>
+          <span class="theme-select-name">${theme.title}</span>
+        `;
+        card.addEventListener("click", () => handleCardClick(theme.slug));
+        themeGrid.appendChild(card);
+      });
+    }
+
+    function handleCardClick(slug) {
+      if (selectedSlugs.has(slug)) {
+        selectedSlugs.delete(slug);
+        maxErrorEl.textContent = "";
+      } else {
+        if (selectedSlugs.size >= MAX_THEMES) {
+          maxErrorEl.textContent = "Maximum 5 themes allowed";
+          return;
+        }
+        selectedSlugs.add(slug);
+        maxErrorEl.textContent = "";
+      }
+      startErrorEl.textContent = "";
+      updateCard(slug);
+      updateCounter();
+    }
+
+    function updateCard(slug) {
+      const card = themeGrid.querySelector(`[data-slug="${slug}"]`);
+      if (!card) return;
+      const isSelected = selectedSlugs.has(slug);
+      card.classList.toggle("selected", isSelected);
+      card.querySelector(".theme-checkbox").innerHTML = isSelected ? "&#10003;" : "";
+    }
+
+    function updateCounter() {
+      const count = selectedSlugs.size;
+      counterEl.textContent = `${count} of 5 selected`;
+      if (count >= MIN_THEMES) {
+        startBtn.classList.add("btn-ready");
+      } else {
+        startBtn.classList.remove("btn-ready");
+      }
+    }
+
+    document.getElementById("categoryFilters").addEventListener("click", e => {
+      const btn = e.target.closest(".filter-btn");
+      if (!btn) return;
+      document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      activeCategory = btn.dataset.category;
+      renderGrid();
+    });
+
+    searchInput.addEventListener("input", e => {
+      searchQuery = e.target.value.trim().toLowerCase();
+      renderGrid();
+    });
+
+    startBtn.addEventListener("click", () => {
+      if (selectedSlugs.size < MIN_THEMES) {
+        startErrorEl.textContent = "Please select at least 2 themes";
+        return;
+      }
+      startErrorEl.textContent = "";
+      const slugList = Array.from(selectedSlugs).join(",");
+      window.location.href = `mashup-landing.html?themes=${slugList}`;
+    });
+
+    init();
+  </script>
+</body>
+</html>

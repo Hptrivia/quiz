@@ -1,0 +1,802 @@
+[
+  {
+    "id": "dd-easy-0001",
+    "question": "What is Matt Murdock's profession by day?",
+    "options": ["Judge", "Lawyer", "Police Officer", "Doctor"],
+    "answer": "Lawyer",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0051",
+    "question": "What is the primary city where Daredevil's story takes place?",
+    "options": ["Gotham City", "Metropolis", "New York City", "Chicago"],
+    "answer": "New York City",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0002",
+    "question": "Which New York City neighborhood does Daredevil primarily protect?",
+    "options": ["Harlem", "Brooklyn", "Hell's Kitchen", "Queens"],
+    "answer": "Hell's Kitchen",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0003",
+    "question": "What sense did Matt Murdock lose as a child?",
+    "options": ["Hearing", "Smell", "Touch", "Sight"],
+    "answer": "Sight",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0004",
+    "question": "Who is Matt Murdock's loyal best friend and law partner?",
+    "options": ["Franklin Nelson", "Frank Castle", "Wilson Fisk", "Ben Urich"],
+    "answer": "Franklin Nelson",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0052",
+    "question": "What is Franklin Nelson's common nickname used by Matt Murdock?",
+    "options": ["Froggy", "Foggy", "Frankie", "Fudge"],
+    "answer": "Foggy",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0005",
+    "question": "What is the alias of the criminal mastermind Wilson Fisk?",
+    "options": ["The Joker", "Bullseye", "The Penguin", "Kingpin"],
+    "answer": "Kingpin",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0006",
+    "question": "What is the name of the law firm Matt and Foggy start in Season 1?",
+    "options": ["Nelson & Murdock", "Murdock & Nelson", "Franklin & Murdock", "The Defenders"],
+    "answer": "Nelson & Murdock",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0007",
+    "question": "Who is the blind martial arts master who trained young Matt?",
+    "options": ["Nobu", "Stick", "Gao", "Oshiro"],
+    "answer": "Stick",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0008",
+    "question": "In 'Daredevil: Born Again' (2025), what political office is Wilson Fisk elected to?",
+    "options": ["Governor", "Senator", "Mayor", "Police Commissioner"],
+    "answer": "Mayor",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0009",
+    "question": "What is the name of the secretary/investigative journalist that worked for Matt?",
+    "options": ["Claire Temple", "Elektra Natchios", "Karen Page", "Vanessa Marianna"],
+    "answer": "Karen Page",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0010",
+    "question": "What was the occupation of Matt's father?",
+    "options": ["Wrestler", "Firefighter", "Boxer", "Construction Worker"],
+    "answer": "Boxer",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0011",
+    "question": "What color is Daredevil's primary armored suit introduced in the Season 1 finale?",
+    "options": ["Black", "Yellow", "Blue", "Red"],
+    "answer": "Red",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0012",
+    "question": "Who is the lethal vigilante introduced in Season 2 who uses firearms?",
+    "options": ["The Punisher", "Bullseye", "Blade", "Moon Knight"],
+    "answer": "The Punisher",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0013",
+    "question": "What is the name of Wilson Fisk's wife?",
+    "options": ["Marcy", "Vanessa", "Kate", "Teresa"],
+    "answer": "Vanessa",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0015",
+    "question": "What is the name of the ancient ninja organization Daredevil fights in ealier seasons?",
+    "options": ["The Foot", "The Hand", "The Claw", "The Fist"],
+    "answer": "The Hand",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0016",
+    "question": "What is the real name of the Punisher?",
+    "options": ["Frank Castle", "Billy Russo", "Ben Castle", "Frank Marcy"],
+    "answer": "Frank Castle",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-medium-0077",
+    "question": "What is the name of Melvin Potter's girlfriend who he wanted to save?",
+    "options": ["Betsy", "Martha", "Marci", "Clara"],
+    "answer": "Betsy",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dd-easy-0017",
+    "question": "Which nurse frequently patches up Matt in the early seasons?",
+    "options": ["Linda Carter", "Claire Temple", "Jane Foster", "Christine Palmer"],
+    "answer": "Claire Temple",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0050",
+    "question": "What is the name of the drug Madame Gao distributes?",
+    "options": ["Steel Serpent", "Red Dragon", "White Powder", "Hand Heroin"],
+    "answer": "Steel Serpent",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-easy-0041",
+    "question": "What is the name of the Irish mob in Season 2?",
+    "options": ["Kitchen Irish", "Irish Dogs", "Irish Hell", "The Real IRA"],
+    "answer": "Kitchen Irish",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-easy-0015",
+    "question": "What weapon does Daredevil primarily use?",
+    "options": ["Baton", "Sword", "Gun", "Bow"],
+    "answer": "Baton",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0018",
+    "question": "What is Matt Murdock's religious background?",
+    "options": ["Lutheran", "Jewish", "Catholic", "Atheist"],
+    "answer": "Catholic",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0019",
+    "question": "Who is the expert marksman villain introduced in Season 3?",
+    "options": ["Deadshot", "Bullseye", "Hawkeye", "Taskmaster"],
+    "answer": "Bullseye",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0023",
+    "question": "Who was Matt’s mysterious college love interest in Season 2?",
+    "options": ["Karen Page", "Elektra Natchios", "Marci Stahl", "Claire Temple"],
+    "answer": "Elektra Natchios",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0024",
+    "question": "What newspaper does Ben Urich work for in Season 1?",
+    "options": ["The Daily Bugle", "The New York Bulletin", "The Metro", "The Daily Globe"],
+    "answer": "The New York Bulletin",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0026",
+    "question": "What is the name of the bar where Matt, Foggy, and Karen often hang out?",
+    "options": ["Josie’s", "Paddy’s", "Marcy's", "Hell's Tavern"],
+    "answer": "Josie’s",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0027",
+    "question": "Which FBI agent is blackmailed by Fisk in Season 3?",
+    "options": ["Ray Nadeem", "Phil Coulson", "Mark Dawson", "Everett Ross"],
+    "answer": "Ray Nadeem",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0028",
+    "question": "What was the name of the gym Matt's father's trained at?",
+    "options": ["Fogwell's Gym", "Gleason's", "Hell's Gym", "Murdock's Mat"],
+    "answer": "Fogwell's Gym",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-easy-0029",
+    "question": "Who is the primary antagonist of 'Daredevil: Born Again' (2025)?",
+    "options": ["Wilson Fisk", "The Hand", "Kilgrave", "Bullseye"],
+    "answer": "Wilson Fisk",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0031",
+    "question": "In Season 1, what is the name of Fisk’s right-hand man?",
+    "options": ["James Wesley", "Leland Owlsley", "Nobu", "Turk Barrett"],
+    "answer": "James Wesley",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0032",
+    "question": "What is the title of the spin-off show featuring Frank Castle?",
+    "options": ["The Punisher", "Defenders", "Iron Fist", "Jessica Jones"],
+    "answer": "The Punisher",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0034",
+    "question": "Which character is a high-ranking member of 'The Hand'?",
+    "options": ["Nobu", "Turk", "Leland", "Blake"],
+    "answer": "Nobu",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0036",
+    "question": "What is the name of the local priest Matt talks to for advice?",
+    "options": ["Father Lantom", "Father Paul", "Father Gabriel", "Father Thomas"],
+    "answer": "Father Lantom",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-easy-0037",
+    "question": "Who plays Matt Murdock in the series?",
+    "options": ["Ben Affleck", "Charlie Cox", "Robert Downey Jr.", "Oscar Isaac"],
+    "answer": "Charlie Cox",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0038",
+    "question": "Who plays Wilson Fisk in the series?",
+    "options": ["Josh Brolin", "Vincent D'Onofrio", "Bryan Cranston", "Jon Bernthal"],
+    "answer": "Vincent D'Onofrio",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-medium-0088",
+    "question": "What is the name of the Russian brother Matt interrogates later in Season 1?",
+    "options": ["Vladimir", "Anatoly", "Sergei", "Ivan"],
+    "answer": "Vladimir",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-easy-0039",
+    "question": "Which season finale features the famous 'three-way fight' in Fisk's penthouse?",
+    "options": ["Season 1", "Season 2", "Season 3", "Born Again"],
+    "answer": "Season 3",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-easy-0040",
+    "question": "What is the name of the small-time criminal who frequently appears across all seasons?",
+    "options": ["Turk", "Grotto", "Stilt-Man", "Melvin Potter"],
+    "answer": "Turk",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-medium-0088",
+    "question": "What is the name of the Russian Matt interrogates on the rooftop in Season 1 to find the kidnapped boy?",
+    "options": ["Vladimir", "Anatoly", "Semyon", "Ivan"],
+    "answer": "Semyon",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-easy-0042",
+    "question": "What is the name of the skilled craftsman who builds Daredevil's suits?",
+    "options": ["Melvin", "Healy", "Silas", "Kelvin"],
+    "answer": "Melvin",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-easy-0043",
+    "question": "What weapon does Elektra famously use?",
+    "options": ["Katanas", "Sais", "Bow and Arrow", "Nunchucks"],
+    "answer": "Sais",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-easy-0046",
+    "question": "Which of these characters is also a lawyer who dated Foggy?",
+    "options": ["Karen Page", "Marci Stahl", "Claire Temple", "Vanessa Marianna"],
+    "answer": "Marci Stahl",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0047",
+    "question": "What is the logo on the Punisher’s chest?",
+    "options": ["A Star", "A Skull", "A Cross", "A Target"],
+    "answer": "A Skull",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-easy-0050",
+    "question": "What is the name of the orphanage where Matt grew up?",
+    "options": ["Saint Agnes", "Saint Mary’s", "Hell’s Haven", "Saint Margeret"],
+    "answer": "Saint Agnes",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-med-0001",
+    "question": "What is the name of the law firm Matt and Foggy interned at before starting their own?",
+    "options": ["Landman & Zack", "Hogarth & Associates", "Goodman, Lieber & Holliway", "Crane, Poole & Schmidt"],
+    "answer": "Landman & Zack",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-med-0002",
+    "question": "In Season 1, what specific item does Wilson Fisk use to kill Anatoly Ranskahov?",
+    "options": ["A car door", "A fireplace poker", "His bare hands", "A weight plate"],
+    "answer": "A car door",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-med-0003",
+    "question": "What is the name of the chemical company responsible for the accident that blinded Matt?",
+    "options": ["Oslow Chemicals", "Roxxon", "Rand Oil & Chemicals", "AccuTech"],
+    "answer": "Rand Oil & Chemicals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-med-0004",
+    "question": "Who was the 'Black Sky' in Season 2?",
+    "options": ["Stick", "Elektra Natchios", "Nobu Yoshioka", "Madame Gao"],
+    "answer": "Elektra Natchios",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-med-0007",
+    "question": "In 'Daredevil: Born Again' (2025), which serial killer artist serves as a major antagonist?",
+    "options": ["The Painter", "Muse", "Bones", "The Rose"],
+    "answer": "Muse",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dd-med-0008",
+    "question": "What is the name of the editor-in-chief at the Bulletin?",
+    "options": ["Mitchell Ellison", "Ben Urich", "Ronnie Tharp", "Jasper Sitwell"],
+    "answer": "Mitchell Ellison",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-medium-0101",
+    "question": "Who kills Elektra at the end of Season 2?",
+    "options": ["Wilson Fisk", "Nobu Yoshioka", "Stick", "Frank Castle"],
+    "answer": "Nobu Yoshioka",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-medium-0102",
+    "question": "Who finally kills Nobu in the Season 2 finale?",
+    "options": ["Matt Murdock", "Elektra", "Stick", "The Punisher"],
+    "answer": "Stick",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-medium-0103",
+    "question": "What is the name of the law firm where Marci Stahl works in Season 1?",
+    "options": ["Landman & Zack", "Nelson & Murdock", "Hogarth, Chao & Benowitz", "Goodman, Lieber, Kurtzberg & Holliway"],
+    "answer": "Landman & Zack",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-medium-0104",
+    "question": "Which firm does Marci Stahl eventually move to in later seasons?",
+    "options": ["Nelson & Murdock", "Hogarth, Chao & Benowitz", "The Bulletin", "District Attorney's Office"],
+    "answer": "Hogarth, Chao & Benowitz",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-med-0009",
+    "question": "In Season 2, what is the name of the 'John Doe' who turns out to be Frank Castle’s commanding officer?",
+    "options": ["Colonel Schoonover", "Agent Orange", "William Rawlins", "General Montgomery"],
+    "answer": "Colonel Schoonover",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dd-hard-0120",
+    "question": "What was the name of the restaurant where the Ranskahov brothers operated?",
+    "options": ["Troika", "The Velvet Room", "The Red Room", "The Svetka"],
+    "answer": "Troika",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-hard-0110",
+    "question": "Who is revealed to be the killer of White Tiger in Born Again?",
+    "options": ["Frank Castle", "Cole North", "Buck Cashman", "Benjamin Poindexter"],
+    "answer": "Cole North",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-med-0011",
+    "question": "What is the name of the detective who Fisk bribed to poisin his partner in the hospital?",
+    "options": ["Detective Hoffman", "Detective Blake", "Detective Mahoney", "Detective Sgt. Brett"],
+    "answer": "Detective Hoffman",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-med-0012",
+    "question": "In Season 1, what painting does Vanessa sell to Wilson Fisk that becomes a recurring symbol?",
+    "options": ["The Red Square", "Rabbit in a Snowstorm", "White Noise", "The Void"],
+    "answer": "Rabbit in a Snowstorm",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-med-0013",
+    "question": "What is the name of the Irish gang member who survives the Punisher's massacre in the Season 2 premiere?",
+    "options": ["Grotto", "Finn Cooley", "Nesbitt", "Sweeney"],
+    "answer": "Grotto",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-med-0016",
+    "question": "What was the name of the rival boxer Jack Murdock refused to take a dive against?",
+    "options": ["Carl Crusher Creel", "Rocky Bill Marks", "Bruiser Ben Wyatt", "Bushwacker Bill Hayes"],
+    "answer": "Carl Crusher Creel",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-med-0022",
+    "question": "Who is the primary contact for the Hand's heroin trade in Hell's Kitchen?",
+    "options": ["Leland Owlsley", "Madame Gao", "Madame Yao", "Turk Barrett"],
+    "answer": "Madame Gao",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dd-med-0025",
+    "question": "What is the name of the operation in Kandahar that Frank Castle was part of?",
+    "options": ["Operation Cerberus", "Operation Paperclip", "Operation Blacklight", "Operation Trident"],
+    "answer": "Operation Cerberus",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-med-0027",
+    "question": "What is the name of the prison where Frank Castle and Wilson Fisk first meet?",
+    "options": ["Ryker's Island", "Seagate", "The Raft", "Green Dolphin"],
+    "answer": "Ryker's Island",
+    "difficulty": "medium"
+  },
+
+  {
+    "id": "dd-med-0030",
+    "question": "What is the name of the The Hand rival group led by Stick?",
+    "options": ["The Snakers", "The Chaste", "The Foot", "The Shadow-Claws"],
+    "answer": "The Chaste",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-med-0032",
+    "question": "Who is the doctor who performs the surgery on Dex’s spine in the Season 3 finale?",
+    "options": ["Dr. Oyama", "Dr. Noba", "Dr. Zola", "Dr. Abraham"],
+    "answer": "Dr. Oyama",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dd-med-0040",
+    "question": "What is the name of the old woman tenant who is murdered in Season 1?",
+    "options": ["Elena Cardenas", "Martha Garcia", "Josie Garcia", "Josie Cardenas"],
+    "answer": "Elena Cardenas",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dd-med-0041",
+    "question": "In 'Born Again', Muse uses what as his primary artistic medium?",
+    "options": ["Spray paint", "Human blood", "Scrap metal", "Stolen marble"],
+    "answer": "Human blood",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dd-med-0042",
+    "question": "What is the name of the biker gang that Frank Castle attacks in Season 2?",
+    "options": ["The Dogs of Hell", "The Reapers", "The Lost", "The Wild Cards"],
+    "answer": "The Dogs of Hell",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-med-0043",
+    "question": "What is the specific psychological condition Dex is diagnosed with as a child?",
+    "options": ["Psychopathic tendencies with Bipolar Disorder", "Schizophrenia", "Psychopathic tendencies with Borderline Personality", "Post-Traumatic Stress Disorder"],
+    "answer": "Psychopathic tendencies with Borderline Personality",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-med-0044",
+    "question": "Who becomes the acting District Attorney after Samantha Reyes is assassinated?",
+    "options": ["John Strickland", "Blake Tower", "Grey Harold", "Mark Silas"],
+    "answer": "Blake Tower",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dd-med-0045",
+    "question": "What does Wilson Fisk do to Leland Owlsley in the Season 1 finale?",
+    "options": ["Shoots him", "Strangles him", "Pushes him down an elevator shaft", "Smashes his head with his car"],
+    "answer": "Pushes him down an elevator shaft",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-hard-0002",
+    "question": "In Season 1, what is the name of the Russian brother Wilson Fisk decapitates with a car door?",
+    "options": ["Vladimir Ranskahov", "Anatoly Ranskahov", "Semyon Ranskahov", "Piotr Ranskahov"],
+    "answer": "Anatoly Ranskahov",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-hard-0004",
+    "question": "In 'Born Again', what is the name of Ben Urich’s niece who follows in his footsteps as a journalist?",
+    "options": ["BB", "Ela", "Gina", "CC"],
+    "answer": "BB",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-hard-0008",
+    "question": "In 'Born Again', who is the new lawyer joining Matt Murdock’s firm after his return to law?",
+    "options": ["Kirsten McDuffie", "Becky Blake", "Martha Hanover", "Marci Clusker"],
+    "answer": "Kirsten McDuffie",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-hard-0012",
+    "question": "What is the name of the first 'vigilante' Fisk’s Anti-Vigilante Task Force targets in 'Born Again'?",
+    "options": ["White Tiger", "Black Tiger", "Rover", "Echo"],
+    "answer": "White Tiger",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-hard-0037",
+    "question": "Which character in 'Born Again' is the niece of the vigilante Hector Ayala?",
+    "options": ["Angela del Toro", "Ava Ayala", "Maria del Toro", "Soledad Ayala"],
+    "answer": "Angela del Toro",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-easy-0053",
+    "question": "What is the name of the company Karen Page works for as a secretary in the first episode?",
+    "options": ["Rand Enterprises", "Union Allied Construction", "Trave Industries", "Roxxon Construction"],
+    "answer": "Union Allied Construction",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-easy-0054",
+    "question": "What was the name of Matt Murdock's father?",
+    "options": ["Jack Murdock", "Bill Murdock", "John Murdock", "Thomas Murdock"],
+    "answer": "Jack Murdock",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-easy-0055",
+    "question": "What was the fighting nickname of Matt's father?",
+    "options": ["The Irish Brawler", "Battlin' Jack", "The Kitchen King", "Iron Jack"],
+    "answer": "Battlin' Jack",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-med-0051",
+    "question": "What is the weapon of immense power and living vessel worshipped by The Hand?",
+    "options": ["The Iron Fist", "The Black Sky", "The Dragon Heart", "The Blood Vessel"],
+    "answer": "The Black Sky",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dd-easy-0056",
+    "question": "What is the name of Matt Murdock's mother?",
+    "options": ["Sister Mary", "Sister Maggie", "Sister Sarah", "Sister Teresa"],
+    "answer": "Sister Maggie",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-hard-0051",
+    "question": "In 'Daredevil: Born Again', what martial arts did Muse learn as a child?",
+    "options": ["Silat", "Taekwando", "Krav Maga", "Muay Thai"],
+    "answer": "Taekwando",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-med-0052",
+    "question": "What weapon does Wilson Fisk use to kill his father when he was a child?",
+    "options": ["A handgun", "A hammer", "A baseball bat", "A kitchen knife"],
+    "answer": "A hammer",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-easy-0057",
+    "question": "In what year did the original 'Daredevil' series premiere?",
+    "options": ["2012", "2015", "2016", "2014"],
+    "answer": "2015",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-easy-0058",
+    "question": "How many seasons does the original Netflix 'Daredevil' series have?",
+    "options": ["2 Seasons", "3 Seasons", "4 Seasons", "5 Seasons"],
+    "answer": "3 Seasons",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-med-0053",
+    "question": "Who created the 'Daredevil' television series for Netflix?",
+    "options": ["Drew Goddard", "Steven S. DeKnight", "Kevin Feige", "Jeph Loeb"],
+    "answer": "Drew Goddard",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dd-easy-0059",
+    "question": "What is the name of the new Daredevil revival?",
+    "options": ["Daredevil: Man Without Fear", "Daredevil: Born Again", "Daredevil: The Guardian", "Daredevil: Resurgence"],
+    "answer": "Daredevil: Born Again",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-med-0054",
+    "question": "In what year did 'Daredevil: Born Again' primarily take premiere?",
+    "options": ["2022", "2023", "2024", "2025"],
+    "answer": "2025",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dd-easy-0060",
+    "question": "Which actress plays the role of Karen Page?",
+    "options": ["Deborah Ann Woll", "Krysten Ritter", "Rachel McAdams", "Elodie Yung"],
+    "answer": "Deborah Ann Woll",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dd-hard-0052",
+    "question": "Who is the character that kills James Wesley in Season 1 of the original series?",
+    "options": ["Wilson Fisk", "Karen Page", "Matt Murdock", "Foggy Nelson"],
+    "answer": "Karen Page",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-med-0055",
+    "question": "Which villain is responsible for the death of Foggy Nelson in the premiere of 'Daredevil: Born Again'?",
+    "options": ["Wilson Fisk", "Bullseye", "Muse", "The Punisher"],
+    "answer": "Bullseye",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dd-hard-0053",
+    "question": "What is the name of the port in New York City with 'freeport' status used by Fisk for illegal activities?",
+    "options": ["Port Newark", "Red Hook Port", "Chelsea Piers", "Staten Island Terminal"],
+    "answer": "Red Hook Port",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-hard-0054",
+    "question": "What is the name of the online news show run by Ben Urich's niece, BB Urich, in 'Born Again'?",
+    "options": ["The DD Report", "The BB Report", "Hell's Kitchen Live", "Frontline Report"],
+    "answer": "The BB Report",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-med-0056",
+    "question": "What is the name of the bank where Matt Murdock is caught in a hostage situation in 'Born Again' Episode 5?",
+    "options": ["New York Mutual Bank", "New York Allied Savings", "Union Allied Bank", "Manhattan Trust"],
+    "answer": "New York Mutual Bank",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-hard-0055",
+    "question": "Who is the leader of the gang that robs the bank in 'Born Again' Episode 5?",
+    "options": ["Luca", "Devlin", "Viktor", "Cashman"],
+    "answer": "Devlin",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-hard-0056",
+    "question": "What specific item was the primary target of the robbery in 'Born Again' Episode 5?",
+    "options": ["A hard drive", "A diamond", "A Ruby", "Cash from the vault"],
+    "answer": "A diamond",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-med-0057",
+    "question": "How many crime families make up the primary criminal organization in 'Daredevil: Born Again'?",
+    "options": ["Three", "Five", "Four", "Six"],
+    "answer": "Five",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dd-easy-0061",
+    "question": "Which actor plays the role of Foggy Nelson?",
+    "options": ["Elden Henson", "Charlie Cox", "Jon Bernthal", "Wilson Bethel"],
+    "answer": "Elden Henson",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dba-med-0002",
+    "question": "Who is Matt Murdock's primary romantic interest and therapist in Born Again?",
+    "options": ["Heather", "Kirsten", "Angela", "Sheila"],
+    "answer": "Heather",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dba-med-0003",
+    "question": "What is the name of the new law firm Matt joins after the one-year time jump?",
+    "options": ["Murdock & Nelson", "Murdock & McDuffie", "Murdock & Glenn", "Murdock & McCaffrey"],
+    "answer": "Murdock & McDuffie",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dba-med-0005",
+    "question": "What is the true name of the serial killer known as Muse?",
+    "options": ["Benjamin Poindexter", "Buck Cashman", "Bastian Cooper", "Daniel Blake"],
+    "answer": "Bastian Cooper",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dba-med-0006",
+    "question": "Which public official does Wilson Fisk eventually murder to consolidate his power as Mayor?",
+    "options": ["Commissioner Gallo", "District Attorney Hochberg", "Governor McCaffrey", "Commisioner Blake"],
+    "answer": "Commissioner Gallo",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dba-med-0007",
+    "question": "Who is revealed to have actually ordered the hit on Foggy Nelson?",
+    "options": ["Wilson Fisk", "Vanessa Fisk", "Bullseye", "The Punisher"],
+    "answer": "Vanessa Fisk",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dba-med-0010",
+    "question": "Which MCU father does Matt Murdock meet at a bank before a robbery occurs?",
+    "options": ["Howard Stark", "Yusuf Khan", "Scott Lang", "Clint Barton"],
+    "answer": "Yusuf Khan",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dba-med-0011",
+    "question": "What specific metal alloy was used to fix Bullseye's spine after the events of the original series?",
+    "options": ["Adamantium", "Vibranium", "Cogmium", "Carbonadium"],
+    "answer": "Cogmium",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dba-med-0012",
+    "question": "What is the name of the retired NYPD officer who acts as Matt's investigator in Born Again?",
+    "options": ["Cole North", "Cherry", "Connor", "Brett"],
+    "answer": "Cherry",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dba-med-0014",
+    "question": "Who kills Muse?",
+    "options": ["Daredevil", "The Punisher", "Heather Glenn", "Wilson Fisk"],
+    "answer": "Heather Glenn",
+    "difficulty": "medium"
+  },
+
+  {
+    "id": "dba-med-0018",
+    "question": "Which character is Fisk's young protege and public relations head?",
+    "options": ["Buck", "Daniel", "Connor", "Cooper"],
+    "answer": "Daniel",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dba-med-0026",
+    "question": "What is the name of the man Vanessa had an affair with while Wilson was away?",
+    "options": ["Adam", "Devlin", "Daniel", "Luca"],
+    "answer": "Adam",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dba-med-0030",
+    "question": "What is the occupation of Heather Glenn in the series?",
+    "options": ["Lawyer", "Therapist", "Journalist", "Police Officer"],
+    "answer": "Therapist",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dba-med-0031",
+    "question": "Which character serves as Wilson Fisk's mayoral campaign director?",
+    "options": ["Daniel", "Sheila", "Marissa", "Vanessa"],
+    "answer": "Sheila",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dba-med-0039",
+    "question": "How many episodes comprise the first season of Daredevil: Born Again?",
+    "options": ["8", "9", "13", "10"],
+    "answer": "9",
+    "difficulty": "hard"
+  }
+]

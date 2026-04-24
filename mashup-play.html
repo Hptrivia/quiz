@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mashup Mode | Trivia Gauntlet</title>
+  <link rel="icon" href="/favicon.ico.png" sizes="any">
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="apple-touch-icon" href="/assets/icon-192.png" />
+  <meta name="theme-color" content="#0f172a" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2544021252380572"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E6BY9F2ZDT');
+  </script>
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    .mashup-q-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 9px;
+      border-radius: 999px;
+      border: 1px solid;
+      margin-bottom: 8px;
+    }
+    .mashup-score-breakdown {
+      margin: 14px 0 4px;
+    }
+    .mashup-score-breakdown p {
+      margin: 5px 0;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+  </style>
+</head>
+<body>
+  <main class="container narrow">
+    <a id="backLink" href="mashup.html" class="back-link">← Back</a>
+
+    <section class="panel">
+
+      <!-- Marathon Mode -->
+      <div id="marathonBox" style="display:none">
+        <div id="marathonQuizBox">
+          <div class="play-progress-row">
+            <p id="marathonProgressText"></p>
+          </div>
+          <div id="marathonSlides"></div>
+        </div>
+        <div id="marathonResultBox" style="display:none"></div>
+      </div>
+
+      <!-- Challenge Mode -->
+      <div id="challengeBox" style="display:none">
+        <div id="mashupChallengeQuizBox">
+          <p id="mashupChallengeRoundText">Round 1</p>
+          <div class="play-progress-row">
+            <p id="mashupChallengeProgressText"></p>
+            <a id="mashupChallengeNextRoundLink" class="skip-link" href="#" style="display:none">Skip to next round</a>
+          </div>
+          <div id="mashupChallengeSlides"></div>
+          <p id="mashupChallengeScoreText">Score: 0</p>
+        </div>
+        <div id="mashupChallengeResultBox" style="display:none"></div>
+      </div>
+
+      <!-- Survival Mode -->
+      <div id="survivalBox" style="display:none">
+        <div id="mashupDifficultyBox">
+          <p>Select a difficulty:</p>
+          <div class="cta-row">
+            <button class="secondary-btn difficulty-btn" data-difficulty="easy">Easy</button>
+            <button class="secondary-btn difficulty-btn" data-difficulty="hard">Hard</button>
+            <button class="secondary-btn difficulty-btn" data-difficulty="mixed">Mixed</button>
+          </div>
+        </div>
+        <div id="mashupSurvivalGameBox" style="display:none">
+          <div id="mashupSurvivalSlides"></div>
+        </div>
+        <div id="mashupSurvivalResultBox" style="display:none"></div>
+      </div>
+
+      <div id="installCard" class="install-card" style="display:none">
+        <div class="install-card-content">
+          <p id="installText"></p>
+          <div class="install-card-actions">
+            <button id="installButton" class="primary-btn" type="button">Install App</button>
+            <button id="installDismiss" class="secondary-btn" type="button">Dismiss</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a class="footer-highlight" href="remove-ads.html">Ad-Free + Extras</a>
+        <a href="about.html">About</a>
+        <a class="footer-highlight" href="how-it-works.html">How It Works</a>
+        <a class="footer-highlight" href="contact.html">Contact</a>
+        <a class="footer-highlight" href="blog.html">Blog</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+  <script src="assets/install.js"></script>
+  <script>
+  (async function () {
+    const BADGE_COLORS = [
+      { bg: "rgba(59,130,246,0.15)", border: "#3b82f6", text: "#93c5fd" },
+      { bg: "rgba(34,197,94,0.12)",  border: "#22c55e", text: "#86efac" },
+      { bg: "rgba(249,115,22,0.15)", border: "#f97316", text: "#fdba74" },
+      { bg: "rgba(168,85,247,0.15)", border: "#a855f7", text: "#d8b4fe" },
+      { bg: "rgba(236,72,153,0.15)", border: "#ec4899", text: "#f9a8d4" },
+    ];
+
+    const params = new URLSearchParams(window.location.search);
+    const themeParam = params.get("themes") || "";
+    const mode = (params.get("mode") || "marathon").toLowerCase();
+    const slugs = themeParam.split(",").map(s => s.trim()).filter(Boolean);
+
+    if (slugs.length < 2 || slugs.length > 5 || !["marathon", "challenge", "survival"].includes(mode)) {
+      window.location.href = "mashup.html";
+      return;
+    }
+
+    let allThemeMeta;
+    try {
+      allThemeMeta = await fetchJSON("data/themes.json");
+    } catch (e) {
+      window.location.href = "mashup.html";
+      return;
+    }
+
+    const selectedThemes = slugs.map(slug => allThemeMeta.find(t => t.slug === slug)).filter(Boolean);
+    if (selectedThemes.length < 2) {
+      window.location.href = "mashup.html";
+      return;
+    }
+
+    const themesParam = selectedThemes.map(t => t.slug).join(",");
+    const colorBySlug = {};
+    selectedThemes.forEach((t, i) => { colorBySlug[t.slug] = BADGE_COLORS[i % BADGE_COLORS.length]; });
+
+    const modeLabel = { marathon: "Marathon Mode", challenge: "Challenge Mode", survival: "Survival Mode" }[mode];
+    document.title = selectedThemes.map(t => t.title).join(" + ") + " — " + modeLabel + " | Trivia Gauntlet";
+    document.getElementById("backLink").href = "mashup-landing.html?themes=" + themesParam;
+
+    if (typeof gtag === "function") {
+      gtag("event", "page_view", {
+        page_title: document.title,
+        page_location: window.location.href
+      });
+    }
+
+    const questionsByTheme = {};
+    await Promise.all(selectedThemes.map(async (theme) => {
+      try {
+        const qs = await fetchJSON(theme.questionFile);
+        questionsByTheme[theme.slug] = Array.isArray(qs) ? qs : [];
+      } catch (e) {
+        questionsByTheme[theme.slug] = [];
+      }
+    }));
+
+    // ---- Shared helpers ----
+
+    function normDiff(v) {
+      return String(v || "").trim().toLowerCase();
+    }
+
+    function makeBadge(themeSlug, themeName) {
+      const c = colorBySlug[themeSlug] || BADGE_COLORS[0];
+      const span = document.createElement("span");
+      span.className = "mashup-q-badge";
+      span.style.cssText = "background:" + c.bg + ";border-color:" + c.border + ";color:" + c.text;
+      span.textContent = themeName;
+      return span;
+    }
+
+    function themeNameBySlug(slug) {
+      const t = selectedThemes.find(t => t.slug === slug);
+      return t ? t.title : slug;
+    }
+
+    function renderThemeBreakdown(themeScores) {
+      const div = document.createElement("div");
+      div.className = "mashup-score-breakdown";
+      selectedThemes.forEach(theme => {
+        const s = themeScores[theme.slug] || { correct: 0, total: 0 };
+        const c = colorBySlug[theme.slug] || BADGE_COLORS[0];
+        const p = document.createElement("p");
+        p.innerHTML = '<span class="mashup-q-badge" style="background:' + c.bg + ';border-color:' + c.border + ';color:' + c.text + '">' + theme.title + '</span>' + s.correct + " / " + s.total;
+        div.appendChild(p);
+      });
+      return div;
+    }
+
+    // Build balanced pools per theme (split by difficulty, pre-shuffled)
+    function buildPools() {
+      return selectedThemes.map((theme, ti) => ({
+        slug: theme.slug,
+        ti,
+        em: shuffleArray((questionsByTheme[theme.slug] || []).filter(q => ["easy", "medium"].includes(normDiff(q.difficulty)))),
+        he: shuffleArray((questionsByTheme[theme.slug] || []).filter(q => ["hard", "expert"].includes(normDiff(q.difficulty))))
+      }));
+    }
+
+    // Pick one page/round worth of questions from pre-built pools at a given index
+    function sliceFromPools(pools, batchSize, batchIndex) {
+      const n = pools.length;
+      const base = Math.floor(batchSize / n);
+      const extra = batchSize - base * n;
+      const pageQs = [];
+
+      pools.forEach((pool, idx) => {
+        const count = base + (idx < extra ? 1 : 0);
+        const emPerBatch = Math.ceil(count / 2);
+        const hePerBatch = Math.floor(count / 2);
+        const emSlice = pool.em.slice(batchIndex * emPerBatch, (batchIndex + 1) * emPerBatch);
+        const heSlice = pool.he.slice(batchIndex * hePerBatch, (batchIndex + 1) * hePerBatch);
+        let slice = [...emSlice, ...heSlice];
+
+        if (slice.length < count) {
+          const used = new Set(slice.map(q => q.question));
+          const all = shuffleArray([...pool.em, ...pool.he]).filter(q => !used.has(q.question));
+          slice = [...slice, ...all.slice(0, count - slice.length)];
+        }
+
+        slice.forEach(q => pageQs.push(Object.assign({}, q, { _themeSlug: pool.slug })));
+      });
+
+      return shuffleArray(pageQs);
+    }
+
+    function calcTotalBatches(pools, batchSize) {
+      const n = pools.length;
+      const base = Math.floor(batchSize / n);
+      const extra = batchSize - base * n;
+      return Math.max(1, Math.max(...pools.map((pool, idx) => {
+        const count = base + (idx < extra ? 1 : 0);
+        const emPer = Math.ceil(count / 2);
+        const hePer = Math.floor(count / 2);
+        const emBatches = emPer > 0 ? Math.ceil(pool.em.length / emPer) : 0;
+        const heBatches = hePer > 0 ? Math.ceil(pool.he.length / hePer) : 0;
+        return Math.max(emBatches, heBatches);
+      })));
+    }
+
+    function initThemeScores() {
+      const s = {};
+      selectedThemes.forEach(t => { s[t.slug] = { correct: 0, total: 0 }; });
+      return s;
+    }
+
+    // ---- Marathon Mode ----
+    function runMarathon() {
+      const PAGE_SIZE = 30;
+      document.getElementById("marathonBox").style.display = "";
+
+      const rawPage = parseInt(params.get("page") || "1", 10);
+      const currentPage = Number.isNaN(rawPage) || rawPage < 1 ? 1 : rawPage;
+
+      const pools = buildPools();
+      const totalPages = calcTotalBatches(pools, PAGE_SIZE);
+      const safePage = Math.min(currentPage, totalPages);
+
+      const pageQuestions = sliceFromPools(pools, PAGE_SIZE, safePage - 1).map(q => shuffleQuestionOptions(q));
+
+      const slidesContainer = document.getElementById("marathonSlides");
+      const progressEl = document.getElementById("marathonProgressText");
+      const quizBox = document.getElementById("marathonQuizBox");
+      const resultBox = document.getElementById("marathonResultBox");
+
+      const state = {
+        currentIndex: 0,
+        score: 0,
+        selectedAnswer: null,
+        themeScores: initThemeScores()
+      };
+
+      pageQuestions.forEach(q => {
+        if (state.themeScores[q._themeSlug]) state.themeScores[q._themeSlug].total++;
+      });
+
+      function showQuestion(index) {
+        const prev = slidesContainer.querySelector(".question-slide.active");
+        if (prev) { prev.classList.remove("active"); prev.classList.add("answered"); }
+        const slide = slidesContainer.querySelector('.question-slide[data-index="' + index + '"]');
+        if (slide) { slide.classList.add("active"); slide.scrollIntoView({ behavior: "smooth", block: "center" }); }
+        progressEl.textContent = "Question " + (index + 1) + " of " + pageQuestions.length;
+        state.selectedAnswer = null;
+      }
+
+      pageQuestions.forEach((q, index) => {
+        const slug = q._themeSlug;
+        const slide = document.createElement("div");
+        slide.className = "question-slide";
+        slide.dataset.index = index;
+
+        const qNum = document.createElement("p");
+        qNum.className = "slide-question-num";
+        qNum.textContent = "Question " + (index + 1) + " of " + pageQuestions.length;
+
+        const qText = document.createElement("h2");
+        qText.textContent = q.question;
+
+        const optsList = document.createElement("div");
+        optsList.className = "options";
+        q.options.forEach(option => {
+          const btn = document.createElement("button");
+          btn.className = "option-btn";
+          btn.textContent = option;
+          btn.addEventListener("click", () => {
+            if (state.currentIndex !== index) return;
+            state.selectedAnswer = option;
+            optsList.querySelectorAll(".option-btn").forEach(b => b.classList.remove("selected", "correct-anim", "wrong-anim"));
+            btn.classList.add("selected");
+          });
+          optsList.appendChild(btn);
+        });
+
+        const feedbackP = document.createElement("p");
+        feedbackP.className = "feedback";
+
+        const submitBtn = document.createElement("button");
+        submitBtn.className = "primary-btn";
+        submitBtn.textContent = "Submit";
+
+        const nextBtn = document.createElement("button");
+        nextBtn.className = "secondary-btn";
+        nextBtn.textContent = "Next";
+        nextBtn.style.display = "none";
+
+        const ctaRow = document.createElement("div");
+        ctaRow.className = "cta-row";
+        ctaRow.appendChild(submitBtn);
+        ctaRow.appendChild(nextBtn);
+
+        submitBtn.addEventListener("click", () => {
+          if (state.currentIndex !== index || !state.selectedAnswer) return;
+          const selBtn = optsList.querySelector(".option-btn.selected");
+          if (state.selectedAnswer === q.answer) {
+            state.score++;
+            state.themeScores[slug].correct++;
+            feedbackP.textContent = "Correct";
+            feedbackP.className = "feedback correct";
+            if (selBtn) { selBtn.classList.remove("wrong-anim"); void selBtn.offsetWidth; selBtn.classList.add("correct-anim"); }
+          } else {
+            feedbackP.textContent = "Wrong";
+            feedbackP.className = "feedback wrong";
+            if (selBtn) { selBtn.classList.remove("correct-anim"); void selBtn.offsetWidth; selBtn.classList.add("wrong-anim"); }
+          }
+          submitBtn.disabled = true;
+          nextBtn.style.display = "inline-block";
+        });
+
+        nextBtn.addEventListener("click", () => {
+          state.currentIndex++;
+          if (state.currentIndex >= pageQuestions.length) renderMarathonResult();
+          else showQuestion(state.currentIndex);
+        });
+
+        slide.appendChild(qNum);
+        slide.appendChild(makeBadge(slug, themeNameBySlug(slug)));
+        slide.appendChild(qText);
+        slide.appendChild(optsList);
+        slide.appendChild(feedbackP);
+        slide.appendChild(ctaRow);
+        slidesContainer.appendChild(slide);
+      });
+
+      function renderMarathonResult() {
+        quizBox.style.display = "none";
+        resultBox.style.display = "block";
+        resultBox.classList.remove("result-anim");
+        void resultBox.offsetWidth;
+        resultBox.classList.add("result-anim");
+
+        const tierText = getMarathonTier(state.score, pageQuestions.length);
+        const hasNextPage = safePage < totalPages;
+
+        resultBox.innerHTML =
+          "<h2>Quiz Complete</h2>" +
+          "<p>Your score: " + state.score + " / " + pageQuestions.length + "</p>" +
+          "<p class=\"result-tier\">" + tierText + "</p>" +
+          "<div id=\"marathonThemeBreakdown\"></div>" +
+          "<div class=\"cta-row\">" +
+          (hasNextPage ? "<a class=\"primary-btn\" href=\"mashup-play.html?themes=" + themesParam + "&mode=marathon&page=" + (safePage + 1) + "\">Next Round</a>" : "") +
+          "<a class=\"secondary-btn\" href=\"contact.html\">Report a Question</a>" +
+          "</div>";
+
+        document.getElementById("marathonThemeBreakdown").appendChild(renderThemeBreakdown(state.themeScores));
+        setTimeout(() => { if (typeof showInstallCard === "function") showInstallCard(); }, 800);
+      }
+
+      showQuestion(0);
+    }
+
+    // ---- Challenge Mode ----
+    function runChallenge() {
+      const ROUND_SIZE = 10;
+      document.getElementById("challengeBox").style.display = "";
+
+      const rawRound = parseInt(params.get("round") || "1", 10);
+      const currentRound = Number.isNaN(rawRound) || rawRound < 1 ? 1 : rawRound;
+
+      const pools = buildPools();
+      const totalRounds = calcTotalBatches(pools, ROUND_SIZE);
+      const safeRound = Math.min(currentRound, totalRounds);
+
+      const roundQuestions = sliceFromPools(pools, ROUND_SIZE, safeRound - 1).map(q => shuffleQuestionOptions(q));
+
+      const roundEl = document.getElementById("mashupChallengeRoundText");
+      const progressEl = document.getElementById("mashupChallengeProgressText");
+      const scoreEl = document.getElementById("mashupChallengeScoreText");
+      const slidesContainer = document.getElementById("mashupChallengeSlides");
+      const quizBox = document.getElementById("mashupChallengeQuizBox");
+      const resultBox = document.getElementById("mashupChallengeResultBox");
+      const nextRoundLink = document.getElementById("mashupChallengeNextRoundLink");
+
+      if (nextRoundLink) {
+        if (safeRound < totalRounds) {
+          nextRoundLink.style.display = "inline-block";
+          nextRoundLink.textContent = "Skip to next round";
+          nextRoundLink.href = "mashup-play.html?themes=" + themesParam + "&mode=challenge&round=" + (safeRound + 1);
+        } else {
+          nextRoundLink.style.display = "none";
+        }
+      }
+
+      roundEl.textContent = "Round " + safeRound;
+      progressEl.textContent = "Question 1 of " + roundQuestions.length;
+
+      const state = {
+        currentIndex: 0,
+        score: 0,
+        selectedAnswer: null,
+        themeScores: initThemeScores()
+      };
+
+      roundQuestions.forEach(q => {
+        if (state.themeScores[q._themeSlug]) state.themeScores[q._themeSlug].total++;
+      });
+
+      function showQuestion(index) {
+        const prev = slidesContainer.querySelector(".question-slide.active");
+        if (prev) { prev.classList.remove("active"); prev.classList.add("answered"); }
+        const slide = slidesContainer.querySelector('.question-slide[data-index="' + index + '"]');
+        if (slide) { slide.classList.add("active"); slide.scrollIntoView({ behavior: "smooth", block: "center" }); }
+        progressEl.textContent = "Question " + (index + 1) + " of " + roundQuestions.length;
+        scoreEl.textContent = "Score: " + state.score;
+        state.selectedAnswer = null;
+      }
+
+      roundQuestions.forEach((q, index) => {
+        const slug = q._themeSlug;
+        const slide = document.createElement("div");
+        slide.className = "question-slide";
+        slide.dataset.index = index;
+
+        const qNum = document.createElement("p");
+        qNum.className = "slide-question-num";
+        qNum.textContent = "Question " + (index + 1) + " of " + roundQuestions.length;
+
+        const qText = document.createElement("h2");
+        qText.textContent = q.question;
+
+        const optsList = document.createElement("div");
+        optsList.className = "options";
+        q.options.forEach(option => {
+          const btn = document.createElement("button");
+          btn.className = "option-btn";
+          btn.textContent = option;
+          btn.addEventListener("click", () => {
+            if (state.currentIndex !== index) return;
+            state.selectedAnswer = option;
+            optsList.querySelectorAll(".option-btn").forEach(b => b.classList.remove("selected", "correct-anim", "wrong-anim"));
+            btn.classList.add("selected");
+          });
+          optsList.appendChild(btn);
+        });
+
+        const feedbackP = document.createElement("p");
+        feedbackP.className = "feedback";
+
+        const submitBtn = document.createElement("button");
+        submitBtn.className = "primary-btn";
+        submitBtn.textContent = "Submit";
+
+        const nextBtn = document.createElement("button");
+        nextBtn.className = "secondary-btn";
+        nextBtn.textContent = "Next";
+        nextBtn.style.display = "none";
+
+        const ctaRow = document.createElement("div");
+        ctaRow.className = "cta-row";
+        ctaRow.appendChild(submitBtn);
+        ctaRow.appendChild(nextBtn);
+
+        submitBtn.addEventListener("click", () => {
+          if (state.currentIndex !== index || !state.selectedAnswer) return;
+          const selBtn = optsList.querySelector(".option-btn.selected");
+          if (state.selectedAnswer === q.answer) {
+            state.score++;
+            state.themeScores[slug].correct++;
+            feedbackP.textContent = "Correct";
+            feedbackP.className = "feedback correct";
+            if (selBtn) { selBtn.classList.remove("wrong-anim"); void selBtn.offsetWidth; selBtn.classList.add("correct-anim"); }
+          } else {
+            feedbackP.textContent = "Wrong";
+            feedbackP.className = "feedback wrong";
+            if (selBtn) { selBtn.classList.remove("correct-anim"); void selBtn.offsetWidth; selBtn.classList.add("wrong-anim"); }
+          }
+          scoreEl.textContent = "Score: " + state.score;
+          submitBtn.disabled = true;
+          nextBtn.style.display = "inline-block";
+        });
+
+        nextBtn.addEventListener("click", () => {
+          state.currentIndex++;
+          if (state.currentIndex >= roundQuestions.length) renderChallengeResult();
+          else showQuestion(state.currentIndex);
+        });
+
+        slide.appendChild(qNum);
+        slide.appendChild(makeBadge(slug, themeNameBySlug(slug)));
+        slide.appendChild(qText);
+        slide.appendChild(optsList);
+        slide.appendChild(feedbackP);
+        slide.appendChild(ctaRow);
+        slidesContainer.appendChild(slide);
+      });
+
+      function renderChallengeResult() {
+        quizBox.style.display = "none";
+        resultBox.style.display = "block";
+        resultBox.classList.remove("result-anim");
+        void resultBox.offsetWidth;
+        resultBox.classList.add("result-anim");
+
+        const hasNextRound = safeRound < totalRounds;
+        const shareUrl = window.location.origin + window.location.pathname + "?themes=" + encodeURIComponent(themesParam) + "&mode=challenge&round=" + safeRound;
+
+        resultBox.innerHTML =
+          "<h2>Round " + safeRound + " Complete</h2>" +
+          "<p>Your score: " + state.score + " / " + roundQuestions.length + "</p>" +
+          "<div id=\"challengeThemeBreakdown\"></div>" +
+          "<p class=\"challenge-share-text\">Challenge a friend with this exact theme combination.</p>" +
+          "<div class=\"challenge-link-box\" id=\"shareUrlBox\" style=\"cursor:pointer\" title=\"Click to copy\">" + shareUrl + "</div>" +
+          "<div class=\"cta-row\">" +
+          (hasNextRound ? "<a class=\"primary-btn\" href=\"mashup-play.html?themes=" + themesParam + "&mode=challenge&round=" + (safeRound + 1) + "\">Next Round</a>" : "") +
+          "<button class=\"secondary-btn\" id=\"copyShareBtn\">Copy Link</button>" +
+          "<a class=\"secondary-btn\" href=\"contact.html\">Report a Question</a>" +
+          "</div>";
+
+        document.getElementById("challengeThemeBreakdown").appendChild(renderThemeBreakdown(state.themeScores));
+
+        const copyBtn = document.getElementById("copyShareBtn");
+        const urlBox = document.getElementById("shareUrlBox");
+        function doCopy() {
+          navigator.clipboard.writeText(shareUrl).then(() => {
+            copyBtn.textContent = "Copied!";
+            setTimeout(() => { copyBtn.textContent = "Copy Link"; }, 2000);
+          }).catch(() => {
+            copyBtn.textContent = "Copy failed";
+          });
+        }
+        copyBtn.addEventListener("click", doCopy);
+        urlBox.addEventListener("click", doCopy);
+      }
+
+      showQuestion(0);
+    }
+
+    // ---- Survival Mode ----
+    function runSurvival() {
+      document.getElementById("survivalBox").style.display = "";
+
+      const difficultyMap = {
+        easy: ["easy", "medium"],
+        hard: ["hard", "expert"],
+        mixed: ["easy", "medium", "hard", "expert"]
+      };
+      const pointsMap = { easy: 1, medium: 2, hard: 3, expert: 4 };
+
+      document.querySelectorAll(".difficulty-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const difficulty = btn.dataset.difficulty;
+          const allowed = difficultyMap[difficulty] || difficultyMap.mixed;
+
+          // Rotate through themes: theme0[0], theme1[0], theme2[0], theme0[1], ...
+          const perTheme = selectedThemes.map(theme => ({
+            slug: theme.slug,
+            questions: shuffleArray(
+              (questionsByTheme[theme.slug] || [])
+                .filter(q => allowed.includes(normDiff(q.difficulty)))
+            ).map(q => Object.assign({}, q, { _themeSlug: theme.slug }))
+          }));
+
+          const questions = [];
+          const maxLen = Math.max(...perTheme.map(t => t.questions.length));
+          for (let i = 0; i < maxLen; i++) {
+            perTheme.forEach(t => { if (i < t.questions.length) questions.push(t.questions[i]); });
+          }
+          const shuffledQuestions = questions.map(q => shuffleQuestionOptions(q));
+
+          const state = {
+            questions: shuffledQuestions,
+            currentIndex: 0,
+            score: 0,
+            selectedAnswer: null,
+            gameOver: false,
+            fiftyAvailable: true,
+            friendAvailable: true,
+            recoveryStage: 0,
+            recoveryPoints: 0,
+            recoveryStarted: false,
+            pendingRecoveryStart: false,
+            answerLocked: false,
+            themeScores: initThemeScores()
+          };
+
+          shuffledQuestions.forEach(q => {
+            if (state.themeScores[q._themeSlug]) state.themeScores[q._themeSlug].total++;
+          });
+
+          let currentSubmitBtn = null;
+          let currentNextBtn = null;
+          let scoreEl = null;
+          let streakEl = null;
+          let sharedFeedbackEl = null;
+          let fiftyBtn = null;
+          let friendBtn = null;
+
+          const difficultyBox = document.getElementById("mashupDifficultyBox");
+          const gameBox = document.getElementById("mashupSurvivalGameBox");
+          const resultBox = document.getElementById("mashupSurvivalResultBox");
+          const slidesContainer = document.getElementById("mashupSurvivalSlides");
+          slidesContainer.innerHTML = "";
+
+          function setFeedback(text, type) {
+            sharedFeedbackEl.textContent = text;
+            sharedFeedbackEl.className = "feedback";
+            if (type) sharedFeedbackEl.classList.add(type);
+          }
+
+          function updateTopbar() {
+            scoreEl.textContent = state.score;
+            streakEl.textContent = (state.recoveryStarted || state.pendingRecoveryStart) ? "Started (" + state.recoveryPoints + ")" : "Not started";
+            fiftyBtn.disabled = !state.fiftyAvailable || state.answerLocked || state.gameOver;
+            friendBtn.disabled = !state.friendAvailable || state.answerLocked || state.gameOver;
+            fiftyBtn.textContent = state.fiftyAvailable ? "50-50" : "50-50 Used";
+            friendBtn.textContent = state.friendAvailable ? "Call a Friend" : "Friend Used";
+            fiftyBtn.classList.toggle("used-lifeline", !state.fiftyAvailable);
+            friendBtn.classList.toggle("used-lifeline", !state.friendAvailable);
+          }
+
+          function maybeStartRecovery() {
+            if (!state.fiftyAvailable && !state.friendAvailable && !state.recoveryStarted && !state.pendingRecoveryStart) {
+              state.pendingRecoveryStart = true;
+              state.recoveryStage = 0;
+              state.recoveryPoints = 0;
+            }
+          }
+
+          function handleRecoveryOnCorrect(diff) {
+            const pts = pointsMap[diff] || 1;
+            if (!state.recoveryStarted) return null;
+            state.recoveryPoints += pts;
+            if (state.recoveryStage === 0 && state.recoveryPoints >= 25) {
+              state.fiftyAvailable = true;
+              state.recoveryStage = 1;
+              return "50-50 regained.";
+            }
+            if (state.recoveryStage === 1 && state.recoveryPoints >= 50) {
+              state.friendAvailable = true;
+              state.recoveryStage = 2;
+              return "Call a Friend regained.";
+            }
+            return null;
+          }
+
+          function useFiftyFifty() {
+            if (!state.fiftyAvailable || state.answerLocked || state.gameOver) return;
+            const q = state.questions[state.currentIndex];
+            const slide = slidesContainer.querySelector('.question-slide[data-index="' + state.currentIndex + '"]');
+            const buttons = slide ? [...slide.querySelectorAll(".option-btn")] : [];
+            const wrong = buttons.filter(b => b.textContent !== q.answer && b.style.display !== "none");
+            shuffleArray(wrong).slice(0, 2).forEach(b => { b.style.display = "none"; });
+            state.fiftyAvailable = false;
+            if (state.recoveryStarted && state.recoveryStage === 1) {
+              state.recoveryStarted = false;
+              state.recoveryPoints = 0;
+              state.recoveryStage = 0;
+              state.pendingRecoveryStart = true;
+              setFeedback("Recovery streak broken. It will restart on the next question.", "wrong");
+            }
+            maybeStartRecovery();
+            updateTopbar();
+          }
+
+          function useCallFriend() {
+            if (!state.friendAvailable || state.answerLocked || state.gameOver) return;
+            const q = state.questions[state.currentIndex];
+            state.friendAvailable = false;
+            setFeedback("Call a Friend: The answer is " + q.answer, "correct");
+            maybeStartRecovery();
+            updateTopbar();
+          }
+
+          function renderSurvivalResult() {
+            gameBox.style.display = "none";
+            resultBox.style.display = "block";
+            resultBox.classList.remove("result-anim");
+            void resultBox.offsetWidth;
+            resultBox.classList.add("result-anim");
+            resultBox.innerHTML =
+              "<h2>Survival Over</h2>" +
+              "<p>Your score: " + state.score + "</p>" +
+              "<div id=\"survivalThemeBreakdown\"></div>" +
+              "<div class=\"cta-row\">" +
+              "<a class=\"primary-btn\" href=\"mashup-play.html?themes=" + themesParam + "&mode=survival\">Play Again</a>" +
+              "<a class=\"secondary-btn\" href=\"contact.html\">Report a Question</a>" +
+              "</div>";
+            document.getElementById("survivalThemeBreakdown").appendChild(renderThemeBreakdown(state.themeScores));
+            setTimeout(() => { if (typeof showInstallCard === "function") showInstallCard(); }, 800);
+          }
+
+          function showQuestion(index) {
+            const prev = slidesContainer.querySelector(".question-slide.active");
+            if (prev) { prev.classList.remove("active"); prev.classList.add("answered"); }
+            const slide = slidesContainer.querySelector('.question-slide[data-index="' + index + '"]');
+            if (slide) {
+              slide.classList.add("active");
+              slide.scrollIntoView({ behavior: "smooth", block: "center" });
+              currentSubmitBtn = slide.querySelector(".slide-submit-btn");
+              currentNextBtn = slide.querySelector(".slide-next-btn");
+              scoreEl = slide.querySelector(".slide-score-text");
+              streakEl = slide.querySelector(".slide-streak-text");
+              sharedFeedbackEl = slide.querySelector(".slide-feedback");
+              fiftyBtn = slide.querySelector(".slide-fifty-btn");
+              friendBtn = slide.querySelector(".slide-friend-btn");
+              fiftyBtn.onclick = useFiftyFifty;
+              friendBtn.onclick = useCallFriend;
+            }
+            state.selectedAnswer = null;
+            state.answerLocked = false;
+            if (currentSubmitBtn) currentSubmitBtn.disabled = false;
+            if (currentNextBtn) currentNextBtn.style.display = "none";
+            setFeedback("");
+            if (state.pendingRecoveryStart) {
+              state.pendingRecoveryStart = false;
+              state.recoveryStarted = true;
+              state.recoveryPoints = 0;
+            }
+            updateTopbar();
+          }
+
+          shuffledQuestions.forEach((q, index) => {
+            const slug = q._themeSlug;
+            const slide = document.createElement("div");
+            slide.className = "question-slide";
+            slide.dataset.index = index;
+
+            const qNum = document.createElement("p");
+            qNum.className = "slide-question-num";
+            qNum.textContent = "Question " + (index + 1);
+
+            const qText = document.createElement("h2");
+            qText.textContent = q.question;
+
+            const optsList = document.createElement("div");
+            optsList.className = "options";
+            q.options.forEach(option => {
+              const optBtn = document.createElement("button");
+              optBtn.className = "option-btn";
+              optBtn.textContent = option;
+              optBtn.addEventListener("click", () => {
+                if (state.answerLocked || state.gameOver || state.currentIndex !== index) return;
+                state.selectedAnswer = option;
+                optsList.querySelectorAll(".option-btn").forEach(b => b.classList.remove("selected", "correct-anim", "wrong-anim"));
+                optBtn.classList.add("selected");
+              });
+              optsList.appendChild(optBtn);
+            });
+
+            const submitBtn = document.createElement("button");
+            submitBtn.className = "slide-submit-btn secondary-btn";
+            submitBtn.textContent = "Submit";
+
+            const nextBtn = document.createElement("button");
+            nextBtn.className = "slide-next-btn secondary-btn";
+            nextBtn.textContent = "Next";
+            nextBtn.style.display = "none";
+
+            submitBtn.addEventListener("click", () => {
+              if (state.gameOver || state.answerLocked || !state.selectedAnswer || state.currentIndex !== index) return;
+              const qCurrent = state.questions[state.currentIndex];
+              if (state.selectedAnswer === qCurrent.answer) {
+                const diff = normDiff(qCurrent.difficulty);
+                const pts = pointsMap[diff] || 1;
+                state.score += pts;
+                state.themeScores[slug].correct++;
+                state.answerLocked = true;
+                if (currentSubmitBtn) currentSubmitBtn.disabled = true;
+                if (currentNextBtn) currentNextBtn.style.display = "inline-block";
+                const selBtn = optsList.querySelector(".option-btn.selected");
+                if (selBtn) { selBtn.classList.remove("wrong-anim"); void selBtn.offsetWidth; selBtn.classList.add("correct-anim"); }
+                const recoveryMsg = handleRecoveryOnCorrect(diff);
+                setFeedback(recoveryMsg ? "Correct. +" + pts + " point(s). " + recoveryMsg : "Correct. +" + pts + " point(s).", "correct");
+                updateTopbar();
+              } else {
+                state.gameOver = true;
+                state.answerLocked = true;
+                if (currentSubmitBtn) currentSubmitBtn.disabled = true;
+                const selBtn = optsList.querySelector(".option-btn.selected");
+                if (selBtn) { selBtn.classList.remove("correct-anim"); void selBtn.offsetWidth; selBtn.classList.add("wrong-anim"); }
+                setFeedback("Wrong. Run over.", "wrong");
+                updateTopbar();
+                setTimeout(() => renderSurvivalResult(), 500);
+              }
+            });
+
+            nextBtn.addEventListener("click", () => {
+              if (state.gameOver) { renderSurvivalResult(); return; }
+              state.currentIndex++;
+              if (state.currentIndex >= state.questions.length) renderSurvivalResult();
+              else showQuestion(state.currentIndex);
+            });
+
+            const lifelinesDiv = document.createElement("div");
+            lifelinesDiv.className = "survival-lifelines";
+            const slideFFBtn = document.createElement("button");
+            slideFFBtn.className = "secondary-btn slide-fifty-btn";
+            slideFFBtn.textContent = "50-50";
+            const slideFriendBtn = document.createElement("button");
+            slideFriendBtn.className = "secondary-btn slide-friend-btn";
+            slideFriendBtn.textContent = "Call a Friend";
+            lifelinesDiv.appendChild(slideFFBtn);
+            lifelinesDiv.appendChild(slideFriendBtn);
+
+            const metaRow = document.createElement("div");
+            metaRow.className = "episode-context survival-meta-row";
+            const scoreP = document.createElement("p");
+            scoreP.innerHTML = "<strong>Score:</strong> <span class='slide-score-text'>0</span>";
+            const streakP = document.createElement("p");
+            streakP.innerHTML = "<strong>Recovery Streak:</strong> <span class='slide-streak-text'>Not started</span>";
+            metaRow.appendChild(scoreP);
+            metaRow.appendChild(streakP);
+
+            const slideFeedback = document.createElement("p");
+            slideFeedback.className = "feedback slide-feedback";
+
+            const ctaRow = document.createElement("div");
+            ctaRow.className = "cta-row";
+            ctaRow.style.marginTop = "1.5rem";
+            ctaRow.appendChild(submitBtn);
+            ctaRow.appendChild(nextBtn);
+
+            slide.appendChild(qNum);
+            slide.appendChild(makeBadge(slug, themeNameBySlug(slug)));
+            slide.appendChild(qText);
+            slide.appendChild(optsList);
+            slide.appendChild(lifelinesDiv);
+            slide.appendChild(metaRow);
+            slide.appendChild(slideFeedback);
+            slide.appendChild(ctaRow);
+            slidesContainer.appendChild(slide);
+          });
+
+          difficultyBox.style.display = "none";
+          gameBox.style.display = "block";
+          resultBox.style.display = "none";
+
+          showQuestion(0);
+        });
+      });
+    }
+
+    if (mode === "marathon") runMarathon();
+    else if (mode === "challenge") runChallenge();
+    else if (mode === "survival") runSurvival();
+
+  })();
+  </script>
+</body>
+</html>
