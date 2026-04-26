@@ -120,7 +120,14 @@
   },
   {
     "id": "buffy-029",
-    "question": "Who is the principal of Sunnydale High for much of the early series?",
+    "question": "Who is the principal of Sunnydale High in Season 1?",
+    "options": ["Principal Snyder", "Principal Wood", "Principal Flutie", "Principal Travers"],
+    "answer": "Principal Flutie",
+    "difficulty": "easy"
+  },
+  {
+    "id": "buffy-029",
+    "question": "Who is the principal of Sunnydale High in Season 2?",
     "options": ["Principal Snyder", "Principal Wood", "Principal Flutie", "Principal Travers"],
     "answer": "Principal Snyder",
     "difficulty": "easy"
@@ -308,13 +315,6 @@
     "question": "What is the name of the high school swim coach who transformed his team into monsters?",
     "options": ["Coach Marin", "Coach Snyder", "Coach Miller", "Coach Flutie"],
     "answer": "Coach Marin",
-    "difficulty": "hard"
-  },
-  {
-    "id": "buffy-108",
-    "question": "What is the name of the demon who sired the Master?",
-    "options": ["Archeus", "Maloker", "The First", "Kakistos"],
-    "answer": "Archeus",
     "difficulty": "hard"
   },
   {
