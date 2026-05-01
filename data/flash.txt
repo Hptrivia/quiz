@@ -1,0 +1,754 @@
+[
+  {
+    "id": "tf-easy-0001",
+    "question": "What is the real name of the Flash?",
+    "options": ["Oliver Queen", "Barry Allen", "Wally West", "Cisco Ramon"],
+    "answer": "Barry Allen",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-easy-0002",
+    "question": "What city does the Flash protect?",
+    "options": ["Star City", "Gotham City", "Central City", "Metropolis"],
+    "answer": "Central City",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-easy-0003",
+    "question": "What event gave Barry Allen his super speed?",
+    "options": ["A chemical spill", "A particle accelerator explosion", "An alien encounter", "A laboratory fire"],
+    "answer": "A particle accelerator explosion",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-easy-0004",
+    "question": "Who is the 'Man in the Yellow Suit' that killed Barry's mother?",
+    "options": ["Zoom", "Savitar", "The Thinker", "Reverse-Flash"],
+    "answer": "Reverse-Flash",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-easy-0005",
+    "question": "What is the name of the laboratory where Team Flash is based?",
+    "options": ["LexCorp", "S.T.A.R. Labs", "S.T.A.R Enterprises", "Queen Consolidated"],
+    "answer": "S.T.A.R. Labs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-easy-0006",
+    "question": "Which character is Barry's main love interest and eventual wife?",
+    "options": ["Kate", "Felicity", "Iris", "Patty"],
+    "answer": "Iris",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-easy-0007",
+    "question": "What is the name of Barry's daughter from the future?",
+    "options": ["Nora", "Mara", "Sara", "Kara"],
+    "answer": "Nora",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-easy-0008",
+    "question": "What is Cisco Ramon's metahuman alter-ego name?",
+    "options": ["Vibe", "Reverb", "Echo", "Static"],
+    "answer": "Vibe",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-easy-0009",
+    "question": "What is Caitlin Snow's icy alter-ego name?",
+    "options": ["Ice Queen", "Frostbite", "Killer Frost", "Cold Snap"],
+    "answer": "Killer Frost",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-easy-0010",
+    "question": "Who raised Barry after his father was sent to prison?",
+    "options": ["Harrison", "Joe", "Marcus", "Henry"],
+    "answer": "Joe",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-easy-0011",
+    "question": "What is Barry's profession?",
+    "options": ["Lawyer", "Doctor", "Forensic Investigator", "Journalist"],
+    "answer": "Forensic Investigator",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-easy-0012",
+    "question": "What is the name of the coffee shop where the team often hangs out?",
+    "options": ["Central Perk", "Jitters", "Daily Grind", "Star Coffee"],
+    "answer": "Jitters",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-easy-0013",
+    "question": "Who is the main villain of Season 2?",
+    "options": ["Zoom", "Savitar", "The Thinker", "Reverse-Flash"],
+    "answer": "Zoom",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-med-0033",
+    "question": "Which actor portrays Captain Cold?",
+    "options": ["Dominic Purcell", "Wentworth Miller", "Victor Garber", "Brandon Routh"],
+    "answer": "Wentworth Miller",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tf-med-0034",
+    "question": "Who plays the role  Heat Wave?",
+    "options": ["Wentworth Miller", "Dominic Purcell", "John Wesley Shipp", "Teddy Sears"],
+    "answer": "Dominic Purcell",
+    "difficulty": "hard"
+  },
+  {
+    "id": "flash-hard-0006",
+    "question": "Who is the avatar of the Strength Force?",
+    "options": ["Alexa Rivera", "Deon Owens", "Bashir Malik", "Nora West-Allen"],
+    "answer": "Alexa Rivera",
+    "difficulty": "hard"
+  },
+  {
+    "id": "flash-hard-0007",
+    "question": "Who is the avatar of the Still Force?",
+    "options": ["Deon Owens", "Alexa Rivera", "Bashir Malik", "Nora West-Allen"],
+    "answer": "Deon Owens",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tf-easy-0014",
+    "question": "What is the alias of Eobard Thawne?",
+    "options": ["Harrison Wells", "Joe West", "Eddie Thawne", "Hunter Zolomon"],
+    "answer": "Harrison Wells",
+    "difficulty": "easy"
+  },
+  {
+    "id": "flash-easy-0012",
+    "question": "What is Wally West's superhero name?",
+    "options": ["Kid Flash", "Impulse", "Quick Silver", "Speedy"],
+    "answer": "Kid Flash",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-easy-0016",
+    "question": "Who is Joe West's son?",
+    "options": ["Bart", "Wally", "Jesse", "Harvey"],
+    "answer": "Wally",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-easy-0017",
+    "question": "What color is the Flash's suit?",
+    "options": ["Blue", "Green", "Red", "Yellow"],
+    "answer": "Red",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-easy-0020",
+    "question": "Which character uses a 'Cold Gun'?",
+    "options": ["Heat Wave", "Captain Cold", "Killer Frost", "The Mist"],
+    "answer": "Captain Cold",
+    "difficulty": "easy"
+  },
+  {
+    "id": "flash-easy-0020",
+    "question": "What is Captain Cold's real name?",
+    "options": ["Mick Rory", "Leonard Snart", "Hartley Rathaway", "Sam Scudder"],
+    "answer": "Leonard Snart",
+    "difficulty": "easy"
+  },
+  {
+    "id": "flash-easy-0022",
+    "question": "What is Heat Wave's real name?",
+    "options": ["Mick Rory", "Leonard Snart", "Axel Walker", "Roy Bivolo"],
+    "answer": "Mick Rory",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-easy-0022",
+    "question": "What was the name of Barry's mother?",
+    "options": ["Martha", "Nora", "Iris", "Caitlin"],
+    "answer": "Nora",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-easy-0023",
+    "question": "What is the source of the speedsters' powers?",
+    "options": ["The Time Stream", "The Speed Force", "The Multiverse", "The Light"],
+    "answer": "The Speed Force",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-easy-0024",
+    "question": "What is the name of the prison for metahumans inside S.T.A.R. Labs?",
+    "options": ["The Raft", "The Pipeline", "The Cage", "Iron Heights"],
+    "answer": "The Pipeline",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tf-easy-0026",
+    "question": "Which actor plays Barry Allen?",
+    "options": ["Stephen Amell", "Grant Gustin", "Melissa Benoist", "Ezra Miller"],
+    "answer": "Grant Gustin",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tf-easy-0027",
+    "question": "Who is the main villain of Season 3?",
+    "options": ["Savitar", "Godspeed", "The Rival", "Zoom"],
+    "answer": "Savitar",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tf-easy-0028",
+    "question": "What was the occupation of Henry Allen?",
+    "options": ["Police Officer", "Doctor", "Scientist", "Teacher"],
+    "answer": "Doctor",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-easy-0029",
+    "question": "What is the name of the intelligent gorilla villain?",
+    "options": ["King Gorilla", "Grodd", "Gould", "Kongo"],
+    "answer": "Grodd",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-easy-0032",
+    "question": "What is the name of the alternate timeline Barry created by saving his mother?",
+    "options": ["Crisis", "Flashpoint", "Invasion", "Elseworlds"],
+    "answer": "Flashpoint",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-easy-0033",
+    "question": "What is the name of the detective who was Iris's boyfriend in Season 1?",
+    "options": ["Eddie Thawne", "Julian Albert", "Ralph Dibny", "Rick Cosnett"],
+    "answer": "Eddie Thawne",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-easy-0034",
+    "question": "What is the name of the metahuman who can stretch his body?",
+    "options": ["Elongated Man", "Plastic Man", "Stretch", "Elastic"],
+    "answer": "Elongated Man",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-easy-0036",
+    "question": "Who are the two people that merge to become Firestorm in Season 1?",
+    "options": ["Donnie and Professor Stein", "Ronnie and Professor Stein", "Ronnie and Professor Clive", "Donnie and Ronnie"],
+    "answer": "Ronnie and Professor Stein",
+    "difficulty": "easy"
+  },
+  {
+    "id": "fl-hard-0046",
+    "question": "Who is Gypsy's father, the inter-dimensional bounty hunter?",
+    "options": [
+      "Breacher",
+      "Crucifer",
+      "Deathstrike",
+      "Tenant"
+    ],
+    "answer": "Breacher",
+    "difficulty": "hard"
+  },
+{
+  "id": "tf-hard-0035",
+  "question": "Which iconic action star portrays Breacher, the interdimensional bounty hunter?",
+  "options": [
+    "Vinnie Jones",
+    "Danny Trejo",
+    "Robert Rodriguez",
+    "Michael Madsen"
+  ],
+  "answer": "Danny Trejo",
+  "difficulty": "hard"
+},
+  {
+    "id": "fl-hard-0050",
+    "question": "What is the name of the meta-tech-wielding magician introduced in Season 3?",
+    "options": [
+      "Abra Kadabra",
+      "Music Meister",
+      "The Trickster",
+      "Hocus Pocus"
+    ],
+    "answer": "Abra Kadabra",
+    "difficulty": "hard"
+  },
+  {
+    "id": "flash-easy-0039",
+    "question": "Who plays Iris West?",
+    "options": ["Candice Patton", "Danielle Panabaker", "Jessica Parker Kennedy", "Violett Beane"],
+    "answer": "Candice Patton",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tf-easy-0037",
+    "question": "What is the name of the AI Barry created in the future?",
+    "options": ["Siri", "Alexa", "Gideon", "Cortana"],
+    "answer": "Gideon",
+    "difficulty": "easy"
+  },
+  {
+    "id": "flash-hard-0041",
+    "question": "What is Shawna Baez's villain alias?",
+    "options": ["Peek-a-Boo", "Plastique", "Magenta", "Hazard"],
+    "answer": "Peek-a-Boo",
+    "difficulty": "hard"
+  },
+  {
+    "id": "flash-hard-0042",
+    "question": "What is Farooq Gibran's metahuman alias?",
+    "options": ["Blackout", "Brownout", "Voltage", "Pulse"],
+    "answer": "Blackout",
+    "difficulty": "hard"
+  },
+  {
+    "id": "flash-hard-0039",
+    "question": "What is the name of the rival newspaper where Iris first works?",
+    "options": ["Central City Picture News", "The Central City Citizen", "Coast City Gazette", "Central City Register"],
+    "answer": "Central City Picture News",
+    "difficulty": "hard"
+  },
+  {
+    "id": "flash-easy-0029",
+    "question": "What network originally aired The Flash?",
+    "options": ["NBC", "ABC", "The CW", "FOX"],
+    "answer": "The CW",
+    "difficulty": "hard"
+  },
+  {
+    "id": "flash-hard-0038",
+    "question": "What is the name of the news website Iris founds?",
+    "options": ["The Central City Citizen", "CC Daily", "Iris Reports", "The Picture News"],
+    "answer": "The Central City Citizen",
+    "difficulty": "hard"
+  },
+  {
+    "id": "flash-hard-0022",
+    "question": "How many bus metas are created during the Thinker's plan in Season 4?",
+    "options": ["10", "12", "15", "8"],
+    "answer": "12",
+    "difficulty": "hard"
+  },
+  {
+    "id": "flash-hard-0019",
+    "question": "What is the name of Dante Ramon's Earth-2 doppelgänger?",
+    "options": ["Rupture", "Reverb", "Brawler", "Echo"],
+    "answer": "Rupture",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tf-med-0028",
+    "question": "Who were the three main developers credited as creators of The Flash?",
+    "options": [
+      "Greg Berlanti, Andrew Kreisberg, and Geoff Johns",
+      "Marc Guggenheim, Phil Klemmer, and Greg Berlanti",
+      "Todd Helbing, Eric Wallace, and Geoff Johns",
+      "Danny Bilson, Andrew Kreisberg, and Stan Lee"
+    ],
+    "answer": "Greg Berlanti, Andrew Kreisberg, and Geoff Johns",
+    "difficulty": "medium"
+  },
+  {
+    "id": "fl-hard-0013",
+    "question": "Who plays the Trickster (James Jesse) on The Flash?",
+    "options": [
+      "Mark Hamill",
+      "John Wesley Shipp",
+      "Wentworth Miller",
+      "Tom Cavanagh"
+    ],
+    "answer": "Mark Hamill",
+    "difficulty": "hard"
+  },
+  {
+    "id": "fl-hard-0025",
+    "question": "What does S.T.A.R. stand for?",
+    "options": [
+      "Scientific and Technological Advanced Research",
+      "Scientific Technical Advanced Research",
+      "Science and Technology Applied Research",
+      "Strategic Technological Advanced Research"
+    ],
+    "answer": "Scientific and Technological Advanced Research",
+    "difficulty": "hard"
+  },
+  {
+    "id": "fl-hard-0033",
+    "question": "What is the alias used by speedster Eliza Harmon?",
+    "options": [
+      "Trajectory",
+      "Accelerated Woman",
+      "Jesse Quick",
+      "Tachyon"
+    ],
+    "answer": "Trajectory",
+    "difficulty": "hard"
+  },
+  {
+    "id": "fl-hard-0038",
+    "question": "What is Esperanza Garcia's villain name in Season 7?",
+    "options": [
+      "Ultraviolet",
+      "Black Siren",
+      "Top",
+      "Rainbow Raider"
+    ],
+    "answer": "Ultraviolet",
+    "difficulty": "hard"
+  },
+  {
+    "id": "flash-med-0008",
+    "question": "What is the name of The Thinker's wife?",
+    "options": ["Marlize", "Eva", "Nora", "Grace"],
+    "answer": "Marlize",
+    "difficulty": "hard"
+  },
+  {
+    "id": "flash-med-0002",
+    "question": "What is Hartley Rathaway's villain alias?",
+    "options": ["Pied Piper", "Rainbow Raider", "Mirror Master", "Weather Wizard"],
+    "answer": "Pied Piper",
+    "difficulty": "hard"
+  },
+  {
+    "id": "flash-med-0012",
+    "question": "What is Bloodwork's real name?",
+    "options": ["Ramsey Rosso", "Clifford DeVoe", "August Heart", "Orlin Dwyer"],
+    "answer": "Ramsey Rosso",
+    "difficulty": "hard"
+  },
+  {
+    "id": "flash-med-0003",
+    "question": "What is Mark Mardon's villain alias?",
+    "options": ["Weather Wizard", "Tornado", "Stormfront", "Cyclone"],
+    "answer": "Weather Wizard",
+    "difficulty": "hard"
+  },
+{
+  "id": "tf-med-0032",
+  "question": "How many seasons does the TV show 'The Flash' have in total?",
+  "options": ["7", "8", "9", "10"],
+  "answer": "9",
+  "difficulty": "medium"
+},
+  {
+    "id": "fl-hard-0008",
+    "question": "What is Godspeed's real name?",
+    "options": [
+      "August Heart",
+      "Hunter Zolomon",
+      "Edward Clariss",
+      "Eobard Thawne"
+    ],
+    "answer": "August Heart",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tf-easy-0029",
+    "question": "What is the moniker of Janet Petty, the 'Bus Meta' with gravity powers?",
+    "options": ["Hazard", "Null", "Kilgore", "Melting Point"],
+    "answer": "Null",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tf-easy-0038",
+    "question": "What is the name of the official prison in Central City?",
+    "options": ["Blackgate", "Iron Heights", "Arkham", "Belle Reve"],
+    "answer": "Iron Heights",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-easy-0039",
+    "question": "Which villain uses a mirror to travel and trap people?",
+    "options": ["Mirror Master", "Glass Man", "Reflection", "The Top"],
+    "answer": "Mirror Master",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-easy-0040",
+    "question": "What is the name of the speedster villain with white lightning in Season 6?",
+    "options": ["Savitar", "Godspeed", "Reverse-Flash", "Zoom"],
+    "answer": "Godspeed",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-easy-0041",
+    "question": "Who is the leader of the CCPD for most of the early seasons?",
+    "options": ["Joe West", "David Singh", "Julian Albert", "Eddie Thawne"],
+    "answer": "David Singh",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-easy-0045",
+    "question": "Which Arrowverse show does The Flash frequently crossover with?",
+    "options": ["Gotham", "Titans", "Arrow", "Smallville"],
+    "answer": "Arrow",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tf-easy-0046",
+    "question": "What is the name of Cisco’s brother?",
+    "options": ["Dante", "Armando", "Carlos", "Luis"],
+    "answer": "Dante",
+    "difficulty": "hard"
+  },
+  {
+    "id": "flash-easy-0038",
+    "question": "Who plays Harrison Wells and his various counterparts?",
+    "options": ["Jesse L. Martin", "Tom Cavanagh", "Carlos Valdes", "Rick Cosnett"],
+    "answer": "Tom Cavanagh",
+    "difficulty": "hard"
+  },
+  {
+    "id": "flash-med-0031",
+    "question": "What is Rosa Dillon's villain alias?",
+    "options": ["Top", "Plastique", "Magenta", "Hazard"],
+    "answer": "Top",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tf-easy-0048",
+    "question": "How long was Barry in a coma after the explosion?",
+    "options": ["3 months", "6 months", "9 months", "1 year"],
+    "answer": "9 months",
+    "difficulty": "hard"
+  },
+  {
+    "id": "flash-med-0026",
+    "question": "Who is Tony Woodward's metahuman alias?",
+    "options": ["Girder", "Tar Pit", "Rampage", "Plastique"],
+    "answer": "Girder",
+    "difficulty": "hard"
+  },
+  {
+    "id": "flash-med-0027",
+    "question": "What is Kyle Nimbus's metahuman alias?",
+    "options": ["The Mist", "Smoke", "Fog", "Vapor"],
+    "answer": "The Mist",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tf-med-0001",
+    "question": "What is the name of the futuristic newspaper article Iris West-Allen writes?",
+    "options": ["The Flash Missing, Vanishes In Crisis", "The End of the Speed Force", "A New Hero in Central City", "The Scarlet Speedster Retires"],
+    "answer": "The Flash Missing, Vanishes In Crisis",
+    "difficulty": "hard"
+  },
+{
+  "id": "tf-hard-0031",
+  "question": "In what year did the show officially premiere on The CW?",
+  "options": [
+    "2012",
+    "2013",
+    "2014",
+    "2015"
+  ],
+  "answer": "2014",
+  "difficulty": "hard"
+},
+  {
+    "id": "tf-med-0003",
+    "question": "What is the name of the serum used by Hunter Zolomon to increase his speed?",
+    "options": ["Velocity", "Mirakuru", "Compound V", "Promethium"],
+    "answer": "Velocity",
+    "difficulty": "medium"
+  },
+  {
+    "id": "flash-easy-0040",
+    "question": "Who plays Cisco Ramon?",
+    "options": ["Carlos Valdes", "Tom Cavanagh", "Grant Gustin", "Jesse L. Martin"],
+    "answer": "Carlos Valdes",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tf-med-0004",
+    "question": "What was the name of the bus that was hit by dark matter, creating 'Bus Metas'?",
+    "options": ["Bus 52", "Bus 405", "Line 11", "Buus 505"],
+    "answer": "Bus 405",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tf-med-0006",
+    "question": "What is the name of the earth where Jesse Quick and Harry Wells are from?",
+    "options": ["Earth-1", "Earth-2", "Earth-3", "Earth-19"],
+    "answer": "Earth-2",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tf-med-0008",
+    "question": "What is the name of the dagger-wielding villain who hunts metahumans in Season 5?",
+    "options": ["Cicada", "The Thinker", "Bloodwork", "Despero"],
+    "answer": "Cicada",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tf-easy-0013",
+    "question": "Who is the main villain of Season 4?",
+    "options": ["Zoom", "Savitar", "The Thinker", "Reverse-Flash"],
+    "answer": "The Thinker",
+    "difficulty": "hard"
+  },
+  {
+    "id": "flash-med-0045",
+    "question": "What is Frankie Kane's villain alias?",
+    "options": ["Magenta", "Plastique", "Livewire", "Volcana"],
+    "answer": "Magenta",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tf-med-0009",
+    "question": "What is the name of the multiversal bounty hunter who was Cisco's girlfriend?",
+    "options": ["Gypsy", "Cynthia", "Kamilla", "Breacher"],
+    "answer": "Gypsy",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tf-med-0011",
+    "question": "What is the secret identity of the villain Zoom?",
+    "options": ["Hunter Zolomon", "Jay Garrick", "Edward Clariss", "August Heart"],
+    "answer": "Hunter Zolomon",
+    "difficulty": "medium"
+  },
+  {
+    "id": "flash-easy-0041",
+    "question": "Who plays Caitlin Snow?",
+    "options": ["Candice Patton", "Danielle Panabaker", "Violett Beane", "Katie Cassidy"],
+    "answer": "Danielle Panabaker",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tf-med-0013",
+    "question": "What was Julian Albert's secret identity while working for Savitar?",
+    "options": ["Alchemy", "Magog", "The Rival", "Mirror Master"],
+    "answer": "Alchemy",
+    "difficulty": "medium"
+  },
+  {
+    "id": "flash-easy-0042",
+    "question": "Who is the Flash of Earth-3?",
+    "options": ["Barry Allen", "Jay Garrick", "Wally West", "Hunter Zolomon"],
+    "answer": "Jay Garrick",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tf-med-0015",
+    "question": "What is the name of the group of villains led by Captain Cold and Heat Wave?",
+    "options": ["The Rogues", "The Injustice League", "The Legion of Doom", "The Secret Society"],
+    "answer": "The Rogues",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tf-med-0017",
+    "question": "What was the name of the ship the Legends used, which Barry visited in a crossover?",
+    "options": ["The Waverider", "The Odyssey", "The Enterprise", "The Milano"],
+    "answer": "The Waverider",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tf-med-0018",
+    "question": "What is the name of the fictional city where Jay Garrick is from?",
+    "options": ["Keystone City", "Star City", "Coast City", "Blüdhaven"],
+    "answer": "Keystone City",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tf-med-0022",
+    "question": "What is the name of the organization Lyla Michaels leads?",
+    "options": ["A.R.G.U.S.", "S.H.I.E.L.D.", "Checkmate", "The D.E.O."],
+    "answer": "A.R.G.U.S.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tf-med-0025",
+    "question": "What is the name of the Earth where Sherloque Wells is from?",
+    "options": ["Earth-221", "Earth-19", "Earth-38", "Earth-13"],
+    "answer": "Earth-221",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tf-med-0028",
+    "question": "What is the name of the group of Wells doppelgängers that Harry occasionally consults?",
+    "options": ["The Council of Wells", "The Wells League", "The Multi-Wells", "The Council of Harrisons"],
+    "answer": "The Council of Wells",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tf-med-0032",
+    "question": "What is the name of the cosmic event that combined all the Earths?",
+    "options": ["Crisis on Infinite Earths", "The Convergence", "The Merge", "Flashpoint"],
+    "answer": "Crisis on Infinite Earths",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tf-med-0034",
+    "question": "What was the name of the 'Still Force' avatar?",
+    "options": ["Deon Owens", "Alexa Rivera", "Bashir Malik", "Psych"],
+    "answer": "Deon Owens",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tf-med-0037",
+    "question": "What was the name of the villainous organization in Season 7 led by Eva McCulloch?",
+    "options": ["Black Hole", "The Mirror World", "H.I.V.E.", "The Light"],
+    "answer": "Black Hole",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tf-med-0040",
+    "question": "What is the name of the bar where many villains hang out?",
+    "options": ["The Gold Lode", "The Smoke Stack", "O'Shaughnessy's", "The Black Hole"],
+    "answer": "O'Shaughnessy's",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tf-med-0043",
+    "question": "What was the occupation of Clifford DeVoe before he became The Thinker?",
+    "options": ["History Professor", "Science Professor", "Physicist", "Lawyer"],
+    "answer": "History Professor",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tf-hard-0002",
+    "question": "What was the name of the project Eobard Thawne worked on at Mercury Labs while posing as Wells?",
+    "options": ["The Tachyon Prototype", "The Photon Accelerator", "The Zenith Engine", "The Speed Pulse"],
+    "answer": "The Tachyon Prototype",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tf-hard-0027",
+    "question": "What was the alias of the Earth-19 version of Cisco Ramon?",
+    "options": ["Vibe", "Reverb", "Echo", "Breacher"],
+    "answer": "Echo",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tf-hard-0030",
+    "question": "What was the name of the bus meta who could manipulate gravity?",
+    "options": ["Janet Petty", "Sylbert Rundine", "Becky Sharpe", "Dominic Lanse"],
+    "answer": "Janet Petty",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tf-hard-0039",
+    "question": "What was the specific date shown on the newspaper in the secret room at S.T.A.R. Labs?",
+    "options": ["April 25, 2024", "May 20, 2024", "June 15, 2024", "April 1, 2024"],
+    "answer": "April 25, 2024",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tf-hard-0042",
+    "question": "What is the name of the goddess Caitlin Snow becomes in Season 9?",
+    "options": ["Khione", "Frost", "Killer Frost", "Ice Goddess"],
+    "answer": "Khione",
+    "difficulty": "hard"
+  }
+]
+
+

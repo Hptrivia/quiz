@@ -445,6 +445,33 @@
     "seoDetail": "A strong True or False quiz can include history, science, geography, sport, entertainment, animals, and weird facts presented as short statements that feel obvious until players have to commit to an answer. The theme stays useful because it relies on clarity, speed, and misdirection, making it ideal for quicker rounds that still test real knowledge.",
     "seoIntro": "True or False works well because the format is instantly understandable and keeps the pace moving. It can be used across almost any topic, and the challenge comes from how believable a statement sounds rather than from long question wording."
   },
+    {
+    "slug": "lucifer",
+    "title": "Lucifer",
+    "category": "TV/Series",
+    "questionFile": "data/lucifer.txt",
+    "description": "A supernatural crime drama trivia theme focused on Lucifer, covering celestial beings, detective work, relationships, moral choices, and the blend of humour and mythology that defines the series.",
+    "seoIntro": "Lucifer trivia works because the show combines police procedural cases with supernatural mythology, creating a mix of character-driven drama, humour, and larger cosmic themes that are easy to remember.",
+    "seoDetail": "A strong Lucifer quiz can include Lucifer Morningstar, Chloe Decker, Amenadiel, Maze, Linda, celestial hierarchy, angels and demons, the LAPD cases, Lux nightclub, Heaven and Hell dynamics, personal growth arcs, and major revelations about identity and purpose. The theme works because it balances episodic crime-solving with long-term character development and mythological storytelling."
+  },
+  {
+    "slug": "the-flash",
+    "title": "The Flash",
+    "category": "TV/Series",
+    "questionFile": "data/flash.txt",
+    "description": "A superhero trivia theme focused on The Flash, covering Barry Allen, speedster powers, villains, time travel, alternate timelines, and the science-driven elements of the series.",
+    "seoIntro": "The Flash trivia works because the show mixes superhero action with science concepts, time travel, and emotional character arcs, making both powers and storylines highly memorable.",
+    "seoDetail": "A strong The Flash quiz can include Barry Allen, Iris West, Team Flash, S.T.A.R. Labs, Speed Force, Reverse-Flash, Zoom, Savitar, alternate timelines, multiverse concepts, metahumans, and major crossover events. The theme works because it combines fast-paced action, scientific ideas, and evolving character relationships across seasons."
+  },
+  {
+    "slug": "arrow",
+    "title": "Arrow",
+    "category": "TV/Series",
+    "questionFile": "data/arrow.txt",
+    "description": "A superhero crime drama trivia theme focused on Arrow, covering Oliver Queen, vigilantism, Star City, flashbacks, allies, enemies, and the darker tone of the series.",
+    "seoIntro": "Arrow trivia works because the show builds its identity around grounded action, long-term character development, and a structured narrative that mixes present-day missions with past events.",
+    "seoDetail": "A strong Arrow quiz can include Oliver Queen, Felicity Smoak, John Diggle, Star City, The Hood/Green Arrow identity, flashback storylines, major villains, Team Arrow, missions, and crossovers within the Arrowverse. The theme works because it blends crime drama, superhero elements, and character history into a cohesive and evolving storyline."
+  },
   {
   "slug": "daredevil",
   "title": "Daredevil",
