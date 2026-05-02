@@ -51,7 +51,7 @@
   {
     "id": "bg3-013",
     "difficulty": "easy",
-    "question": "What is the name of the ship you start on?",
+    "question": "What is the type of the ship you start on?",
     "options": ["Nautiloid", "Spelljammer", "Dreadnought", "Astral Ark"],
     "answer": "Nautiloid"
   },
@@ -219,7 +219,7 @@
   {
     "id": "bg3-042",
     "difficulty": "hard",
-    "question": "Which companion is a famous \"hero\" character with a giant miniature space hamster companion?",
+    "question": "Which companion is a famous \"hero\" character with a miniature space hamster companion?",
     "options": ["Minsc", "Gale", "Wyll", "Halsin"],
     "answer": "Minsc"
   },
