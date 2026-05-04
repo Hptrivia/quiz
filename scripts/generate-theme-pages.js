@@ -222,6 +222,8 @@ const relatedThemesHtml = relatedThemes.length
         </a>
       </div>
       ${sampleQuestionsHtml}
+      ${rawSeoIntro ? `<p>${coverageText}</p>` : ""}
+      ${rawSeoDetail ? `<p>${detailText}</p>` : ""} 
       ${relatedThemesHtml}
     </section>
   </main>
