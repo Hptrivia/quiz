@@ -135,7 +135,7 @@ async function renderEpisodePage() {
     const slide = slidesContainer.querySelector(`.question-slide[data-index="${index}"]`);
     if (slide) {
       slide.classList.add("active");
-      slide.scrollIntoView({ behavior: "smooth", block: "center" });
+      slide.scrollIntoView({ behavior: "smooth", block: "start" });
     }
     scoreEl.textContent = `Score: ${score}`;
   }

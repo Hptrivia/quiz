@@ -16,6 +16,7 @@ async function renderChallengePage() {
     return;
   }
 
+
   if (typeof gtag === "function") {
     gtag("event", "page_view", {
       page_title: `Challenge Mode - ${theme.title}`,
@@ -113,7 +114,7 @@ async function renderChallengePage() {
     const slide = slidesContainer.querySelector(`.question-slide[data-index="${index}"]`);
     if (slide) {
       slide.classList.add("active");
-      slide.scrollIntoView({ behavior: "smooth", block: "center" });
+      slide.scrollIntoView({ behavior: "smooth", block: "start" });
     }
     progressEl.textContent = `Question ${index + 1} of ${state.questions.length}`;
     scoreEl.textContent = `Score: ${state.score}`;

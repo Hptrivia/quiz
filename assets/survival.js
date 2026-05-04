@@ -227,7 +227,7 @@ async function renderSurvivalPage() {
     const slide = slidesContainer.querySelector(`.question-slide[data-index="${index}"]`);
     if (slide) {
       slide.classList.add("active");
-      slide.scrollIntoView({ behavior: "smooth", block: "center" });
+      slide.scrollIntoView({ behavior: "smooth", block: "start" });
       currentSubmitBtn = slide.querySelector(".slide-submit-btn");
       currentNextBtn = slide.querySelector(".slide-next-btn");
       scoreEl = slide.querySelector(".slide-score-text");
