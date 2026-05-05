@@ -294,6 +294,10 @@ a {
   color: var(--footer-link-hover);
 }
 
+body[data-page="wordle"] main {
+  padding-top: 150px;
+}
+
 .wordle-board {
   display: grid;
   gap: 10px;

@@ -4,11 +4,11 @@ async function renderWordlePage() {
   const theme = themes.find(t => t.slug === slug);
 
   const progressEl = document.getElementById("wordleProgress");
-  const boardEl = document.getElementById("wordleBoard");
+  const boardEl    = document.getElementById("wordleBoard");
   const feedbackEl = document.getElementById("wordleFeedback");
   const keyboardEl = document.getElementById("wordleKeyboard");
-  const prevBtn = document.getElementById("prevWordBtn");
-  const nextBtn = document.getElementById("nextWordBtn");
+  const prevBtn    = document.getElementById("prevWordBtn");
+  const nextBtn    = document.getElementById("nextWordBtn");
 
   if (!theme) {
     progressEl.textContent = "Theme not found";
@@ -16,11 +16,11 @@ async function renderWordlePage() {
   }
 
   if (typeof gtag === "function") {
-  gtag("event", "page_view", {
-    page_title: `Wordle - ${theme.title}`,
-    page_location: window.location.href
-  });
-}
+    gtag("event", "page_view", {
+      page_title: `Wordle - ${theme.title}`,
+      page_location: window.location.href
+    });
+  }
 
   if (typeof updateRemoveAdsFooter === "function") {
     updateRemoveAdsFooter(theme.slug, "normal");
@@ -34,15 +34,20 @@ async function renderWordlePage() {
     return;
   }
 
-  const storageKey = `wordle_index_${theme.slug}`;
-  let currentWordIndex = parseInt(localStorage.getItem(storageKey) || "0", 10);
-  if (currentWordIndex < 0 || currentWordIndex >= words.length) currentWordIndex = 0;
+  const PAGE_SIZE   = 4;
+  const rawPage     = parseInt(getParam("page") || "1", 10);
+  const currentPage = Number.isNaN(rawPage) || rawPage < 1 ? 1 : rawPage;
+  const totalPages  = Math.ceil(words.length / PAGE_SIZE);
+  const safePage    = Math.min(currentPage, totalPages);
+  const pageStart   = (safePage - 1) * PAGE_SIZE;
+  const pageWords   = words.slice(pageStart, pageStart + PAGE_SIZE);
 
-  let targetWord = "";
-  let guesses = [];
+  let currentWordInPage = 0;
+  let targetWord   = "";
+  let guesses      = [];
   let currentGuess = "";
-  let gameOver = false;
-  let keyStates = {};
+  let gameOver     = false;
+  let keyStates    = {};
 
   const keyboardRows = [
     ["Q","W","E","R","T","Y","U","I","O","P"],
@@ -75,7 +80,6 @@ async function renderWordlePage() {
 
   function updateKeyboard(guess, states) {
     const rank = { absent: 1, present: 2, correct: 3 };
-
     guess.split("").forEach((letter, i) => {
       const nextState = states[i];
       const currentState = keyStates[letter];
@@ -93,7 +97,7 @@ async function renderWordlePage() {
       rowEl.className = "wordle-row";
       rowEl.style.gridTemplateColumns = `repeat(${targetWord.length}, 1fr)`;
 
-      const submittedGuess = guesses[row] ? guesses[row].word : "";
+      const submittedGuess  = guesses[row] ? guesses[row].word   : "";
       const submittedStates = guesses[row] ? guesses[row].states : [];
 
       for (let col = 0; col < targetWord.length; col++) {
@@ -128,13 +132,8 @@ async function renderWordlePage() {
         key.className = "wordle-key";
         key.textContent = letter;
 
-        if (letter === "ENTER" || letter === "⌫") {
-          key.classList.add("wide");
-        }
-
-        if (keyStates[letter]) {
-          key.classList.add(keyStates[letter]);
-        }
+        if (letter === "ENTER" || letter === "⌫") key.classList.add("wide");
+        if (keyStates[letter]) key.classList.add(keyStates[letter]);
 
         key.addEventListener("click", () => handleKey(letter));
         rowEl.appendChild(key);
@@ -151,8 +150,8 @@ async function renderWordlePage() {
   }
 
   function updateNavButtons() {
-    prevBtn.disabled = currentWordIndex === 0;
-    nextBtn.disabled = currentWordIndex === words.length - 1;
+    prevBtn.disabled = currentWordInPage === 0 && safePage === 1;
+    nextBtn.disabled = currentWordInPage === pageWords.length - 1 && safePage === totalPages;
     nextBtn.textContent = "Next Word";
   }
 
@@ -164,7 +163,7 @@ async function renderWordlePage() {
       return;
     }
 
-    const guess = currentGuess.toUpperCase();
+    const guess  = currentGuess.toUpperCase();
     const states = getLetterState(guess, targetWord);
 
     guesses.push({ word: guess, states });
@@ -192,17 +191,8 @@ async function renderWordlePage() {
   function handleKey(key) {
     if (gameOver) return;
 
-    if (key === "ENTER") {
-      submitGuess();
-      return;
-    }
-
-    if (key === "⌫") {
-      currentGuess = currentGuess.slice(0, -1);
-      renderBoard();
-      return;
-    }
-
+    if (key === "ENTER") { submitGuess(); return; }
+    if (key === "⌫") { currentGuess = currentGuess.slice(0, -1); renderBoard(); return; }
     if (/^[A-Z]$/.test(key) && currentGuess.length < targetWord.length) {
       currentGuess += key;
       renderBoard();
@@ -210,18 +200,16 @@ async function renderWordlePage() {
   }
 
   function loadWord(index) {
-    currentWordIndex = index;
-    localStorage.setItem(storageKey, String(currentWordIndex));
-
-    targetWord = String(words[currentWordIndex]).toUpperCase();
-    guesses = [];
+    currentWordInPage = index;
+    targetWord   = String(pageWords[currentWordInPage]).toUpperCase();
+    guesses      = [];
     currentGuess = "";
-    gameOver = false;
-    keyStates = {};
+    gameOver     = false;
+    keyStates    = {};
 
-    progressEl.textContent = `Word ${currentWordIndex + 1} of ${words.length}`;
+    const globalIndex = pageStart + currentWordInPage;
+    progressEl.textContent = `Word ${globalIndex + 1} of ${words.length}`;
     setFeedback("");
-
     renderBoard();
     renderKeyboard();
     updateNavButtons();
@@ -230,33 +218,30 @@ async function renderWordlePage() {
   document.addEventListener("keydown", e => {
     if (document.body.dataset.page !== "wordle") return;
 
-    if (e.key === "Enter") {
-      e.preventDefault();
-      handleKey("ENTER");
-      return;
-    }
-
-    if (e.key === "Backspace") {
-      e.preventDefault();
-      handleKey("⌫");
-      return;
-    }
+    if (e.key === "Enter")     { e.preventDefault(); handleKey("ENTER"); return; }
+    if (e.key === "Backspace") { e.preventDefault(); handleKey("⌫");     return; }
 
     const letter = e.key.toUpperCase();
-    if (/^[A-Z]$/.test(letter)) {
-      handleKey(letter);
-    }
+    if (/^[A-Z]$/.test(letter)) handleKey(letter);
   });
 
   prevBtn.addEventListener("click", () => {
-    if (currentWordIndex > 0) loadWord(currentWordIndex - 1);
+    if (currentWordInPage > 0) {
+      loadWord(currentWordInPage - 1);
+    } else if (safePage > 1) {
+      window.location.href = `wordle.html?theme=${theme.slug}&page=${safePage - 1}`;
+    }
   });
 
   nextBtn.addEventListener("click", () => {
-    if (currentWordIndex < words.length - 1) loadWord(currentWordIndex + 1);
+    if (currentWordInPage < pageWords.length - 1) {
+      loadWord(currentWordInPage + 1);
+    } else if (safePage < totalPages) {
+      window.location.href = `wordle.html?theme=${theme.slug}&page=${safePage + 1}`;
+    }
   });
 
-  loadWord(currentWordIndex);
+  loadWord(0);
 }
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -105,15 +105,34 @@ async function renderChallengePage() {
   roundEl.textContent = `Round ${safeRound}`;
   progressEl.textContent = `Question 1 of ${shuffledQuestions.length}`;
 
+  function applyDisplayMode() {
+    const slides = slidesContainer.querySelectorAll(".question-slide");
+    if (ONE_PER_PAGE_CHALLENGE) {
+      slides.forEach(s => {
+        s.style.display = parseInt(s.dataset.index, 10) === state.currentIndex ? "block" : "none";
+      });
+    } else {
+      slides.forEach(s => {
+        s.style.display = "";
+      });
+      const activeSlide = slidesContainer.querySelector(".question-slide.active");
+      if (activeSlide) {
+        activeSlide.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }
+
   function showQuestion(index) {
     const prev = slidesContainer.querySelector(".question-slide.active");
     if (prev) {
       prev.classList.remove("active");
       prev.classList.add("answered");
+      if (ONE_PER_PAGE_CHALLENGE) prev.style.display = "none";
     }
     const slide = slidesContainer.querySelector(`.question-slide[data-index="${index}"]`);
     if (slide) {
       slide.classList.add("active");
+      if (ONE_PER_PAGE_CHALLENGE) slide.style.display = "block";
       slide.scrollIntoView({ behavior: "smooth", block: "start" });
     }
     progressEl.textContent = `Question ${index + 1} of ${state.questions.length}`;
@@ -214,6 +233,13 @@ async function renderChallengePage() {
     slide.appendChild(ctaRow);
     slidesContainer.appendChild(slide);
   });
+
+  // Hide all slides upfront in one-per-page mode; showQuestion(0) will reveal the first
+  if (ONE_PER_PAGE_CHALLENGE) {
+    slidesContainer.querySelectorAll(".question-slide").forEach(s => {
+      s.style.display = "none";
+    });
+  }
 
   function renderResult() {
     quizBox.style.display = "none";

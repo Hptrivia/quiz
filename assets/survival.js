@@ -223,10 +223,12 @@ async function renderSurvivalPage() {
     if (prev) {
       prev.classList.remove("active");
       prev.classList.add("answered");
+      if (ONE_PER_PAGE_SURVIVAL) prev.style.display = "none";
     }
     const slide = slidesContainer.querySelector(`.question-slide[data-index="${index}"]`);
     if (slide) {
       slide.classList.add("active");
+      if (ONE_PER_PAGE_SURVIVAL) slide.style.display = "block";
       slide.scrollIntoView({ behavior: "smooth", block: "start" });
       currentSubmitBtn = slide.querySelector(".slide-submit-btn");
       currentNextBtn = slide.querySelector(".slide-next-btn");
@@ -470,6 +472,12 @@ async function renderSurvivalPage() {
       difficultyBox.style.display = "none";
       gameBox.style.display = "block";
       resultBox.style.display = "none";
+
+      if (ONE_PER_PAGE_SURVIVAL) {
+        slidesContainer.querySelectorAll(".question-slide").forEach(s => {
+          s.style.display = "none";
+        });
+      }
 
       showQuestion(0);
     });

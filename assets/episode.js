@@ -131,10 +131,12 @@ async function renderEpisodePage() {
     if (prev) {
       prev.classList.remove("active");
       prev.classList.add("answered");
+      if (ONE_PER_PAGE_EPISODE) prev.style.display = "none";
     }
     const slide = slidesContainer.querySelector(`.question-slide[data-index="${index}"]`);
     if (slide) {
       slide.classList.add("active");
+      if (ONE_PER_PAGE_EPISODE) slide.style.display = "block";
       slide.scrollIntoView({ behavior: "smooth", block: "start" });
     }
     scoreEl.textContent = `Score: ${score}`;
@@ -259,6 +261,12 @@ async function renderEpisodePage() {
     slide.appendChild(ctaRow);
     slidesContainer.appendChild(slide);
   });
+
+  if (ONE_PER_PAGE_EPISODE) {
+    slidesContainer.querySelectorAll(".question-slide").forEach(s => {
+      s.style.display = "none";
+    });
+  }
 
   showQuestion(0);
 }
