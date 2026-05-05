@@ -128,6 +128,7 @@ async function renderSurvivalPage() {
       <p>Your score: ${state.score}</p>
       <div class="cta-row">
         <a class="primary-btn" href="survival.html?theme=${theme.slug}">Play Again</a>
+        <a class="secondary-btn" href="remove-ads.html?theme=${theme.slug}">Unlimited Lifelines</a>
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
       <div class="result-theme-search">

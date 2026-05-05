@@ -96,6 +96,9 @@ async function renderEpisodePage() {
     return;
   }
 
+  const episodeHeading = document.getElementById("episodeHeading");
+  if (episodeHeading) episodeHeading.textContent = `Episode ${safeEpisode}`;
+
   if (nextPageLink) {
     if (hasNextEpisode) {
       nextPageLink.style.display = "inline-block";

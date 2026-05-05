@@ -202,7 +202,7 @@ a {
 }
 
 .option-btn.selected {
-  border-color: var(--option-selected-border);
+  border-color: var(--option-border);
   background: var(--option-selected-bg);
 }
 
@@ -548,8 +548,10 @@ body[data-page="wordle"] main {
   border-radius: 12px;
 }
 
-#challengeRoundText {
-  margin: 0 0 10px;
+#challengeRoundText,
+#episodeHeading,
+#progressText {
+  margin: 0;
   font-weight: 700;
 }
 
@@ -992,7 +994,7 @@ body[data-page="wordle"] main {
 
 /* ---------- question slide stack ---------- */
 .question-slide {
-  padding: 20px;
+  padding: 20px 0;
   border-radius: 12px;
   border: 2px solid transparent;
   margin-bottom: 16px;
@@ -1005,8 +1007,8 @@ body[data-page="wordle"] main {
 .question-slide.active {
   opacity: 1;
   pointer-events: auto;
-  border-color: #3b82f6;
-  background: rgba(59, 130, 246, 0.06);
+  border-color: transparent;
+  background: transparent;
 }
 
 .slide-question-num {

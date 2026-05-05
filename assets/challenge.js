@@ -103,7 +103,6 @@ async function renderChallengePage() {
   };
 
   roundEl.textContent = `Round ${safeRound}`;
-  progressEl.textContent = `Question 1 of ${shuffledQuestions.length}`;
 
   function applyDisplayMode() {
     const slides = slidesContainer.querySelectorAll(".question-slide");
@@ -135,7 +134,6 @@ async function renderChallengePage() {
       if (ONE_PER_PAGE_CHALLENGE) slide.style.display = "block";
       slide.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-    progressEl.textContent = `Question ${index + 1} of ${state.questions.length}`;
     scoreEl.textContent = `Score: ${state.score}`;
     state.selectedAnswer = null;
   }
@@ -287,6 +285,7 @@ async function renderChallengePage() {
       <div class="challenge-link-box">${roundLink}</div>
       <div class="cta-row">
         ${hasNextRound ? `<a class="primary-btn" href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}">Next Round</a>` : ""}
+        <a class="secondary-btn" href="remove-ads.html?theme=${theme.slug}">Reveal Answers</a>
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
     </div>

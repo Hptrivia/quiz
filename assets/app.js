@@ -509,6 +509,10 @@ async function renderPlayPage() {
   const slidesContainer = document.getElementById("playSlides");
   const resultBox = document.getElementById("resultBox");
   const nextPageLink = document.getElementById("nextPageLink");
+  const progressText = document.getElementById("progressText");
+  const scoreText = document.createElement("p");
+  scoreText.className = "play-score-text";
+  scoreText.textContent = "Score: 0";
 
   if (!theme) {
     slidesContainer.textContent = "Theme not found";
@@ -545,6 +549,8 @@ let buyPackUrl = "https://ko-fi.com/triviaking/shop";
   quizState.score = 0;
   quizState.selectedAnswer = null;
 
+  if (progressText) progressText.textContent = `Page ${safePage}`;
+
   if (nextPageLink) {
     if (safePage < totalPages) {
       nextPageLink.style.display = "inline-block";
@@ -566,6 +572,7 @@ let buyPackUrl = "https://ko-fi.com/triviaking/shop";
     if (slide) {
       slide.classList.add("active");
       if (ONE_PER_PAGE_MARATHON) slide.style.display = "block";
+      slide.appendChild(scoreText);
       slide.scrollIntoView({ behavior: "smooth", block: "start" });
     }
     quizState.selectedAnswer = null;
@@ -643,6 +650,7 @@ let buyPackUrl = "https://ko-fi.com/triviaking/shop";
         }
       }
 
+      if (scoreText) scoreText.textContent = `Score: ${quizState.score}`;
       submitBtn.disabled = true;
       nextBtn.style.display = "inline-block";
     });
@@ -701,7 +709,7 @@ const relatedThemesHtml = relatedThemes.length ? `
     <p class="result-tier">${tierText}</p>
     <div class="cta-row">
       ${hasNextPage ? `<a class="primary-btn" href="play.html?theme=${theme.slug}&page=${safePage + 1}">Next Round</a>` : ""}
-      <a class="secondary-btn" href="${buyPackUrl}" target="_blank" rel="noopener noreferrer">Ad-Free</a>
+      <a class="secondary-btn" href="remove-ads.html?theme=${theme.slug}">Ad-Free</a>
       <a class="secondary-btn" href="contact.html">Report a Question</a>
     </div>
 
