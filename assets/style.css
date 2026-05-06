@@ -298,6 +298,14 @@ body[data-page="wordle"] main {
   padding-top: 150px;
 }
 
+body[data-page="wordle"].premium-mode main {
+  padding-top: 24px;
+}
+
+body[data-page="wordsearch"].premium-mode .ws-game-area {
+  padding-top: 8px;
+}
+
 .wordle-board {
   display: grid;
   gap: 10px;

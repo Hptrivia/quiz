@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body data-page="wordle">
+<script>if (isPremiumUser()) document.body.classList.add('premium-mode');</script>
   <main class="container narrow">
     <a href="index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
 
