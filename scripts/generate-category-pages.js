@@ -339,7 +339,7 @@ function buildCategoryPage(categoryName, themes) {
   <footer class="site-footer">
     <div class="container">
       <div class="footer-links">
-        <a id="removeAdsLink" class="footer-highlight" href="../remove-ads.html">Ad-Free + Extras</a>
+        <a id="removeAdsLink" class="footer-highlight" href="../remove-ads.html">Ad-Free</a>
         <a href="../about.html">About</a>
         <a class="footer-highlight" href="../how-it-works.html">How It Works</a>
         <a class="footer-highlight" href="../contact.html">Contact</a>

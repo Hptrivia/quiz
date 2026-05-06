@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>(function(s){s.dataset.zone='10961427',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-<script>(function(s){s.dataset.zone='10961935',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-<script>(function(s){s.dataset.zone='10962017',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+<script>function isPremiumUser(){var e=localStorage.getItem('adsRemovedUntil');if(!e)return false;return new Date(e)>new Date();}if(!isPremiumUser()){(function(s){s.dataset.zone='10961427',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));(function(s){s.dataset.zone='10961935',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));}</script>
 <script data-grow-initializer="">!(function(){window.growMe||((window.growMe=function(e){window.growMe._.push(e);}),(window.growMe._=[]));var e=document.createElement("script");(e.type="text/javascript"),(e.src="https://faves.grow.me/main.js"),(e.defer=!0),e.setAttribute("data-grow-faves-site-id","U2l0ZTowMmFjMDYwOC03YWNmLTQ4ZGItYTcxYS1iMjgxOTNmY2E2ZDQ=");var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,6 +21,7 @@
 
   <section class="panel">
     <p id="wordleProgress"></p>
+    <div id="wordleThemeBadge" style="min-height:24px;margin-bottom:4px;"></div>
 
     <div id="wordleBoard" class="wordle-board"></div>
     <p id="wordleFeedback" class="feedback"></p>
@@ -33,13 +32,17 @@
       <button id="prevWordBtn" class="secondary-btn">Previous Word</button>
       <button id="nextWordBtn" class="secondary-btn">Next Word</button>
     </div>
+
+    <div style="margin-top:20px;text-align:center;">
+      <a href="contact.html" class="secondary-btn" style="font-size:0.85rem;padding:8px 18px;text-decoration:none;">Leave Feedback</a>
+    </div>
   </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
       <div class="footer-links">
-        <a id="removeAdsLink" class="footer-highlight" href="remove-ads.html">Ad-Free + Extras</a>
+        <a id="removeAdsLink" class="footer-highlight" href="remove-ads.html">Ad-Free</a>
         <a href="about.html">About</a>
         <a href="how-it-works.html">How It Works</a>
         <a href="contact.html">Contact</a>

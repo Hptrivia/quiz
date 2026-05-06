@@ -96,6 +96,16 @@
           <h3>Survival Mode</h3>
           <p>One mistake and the run ends</p>
         </a>
+
+        <a class="card" id="wordSearchLink" href="#">
+          <h3>Word Search</h3>
+          <p>Find hidden themed words</p>
+        </a>
+
+        <a class="card" id="wordleLink" href="#">
+          <h3>Wordle</h3>
+          <p>Guess themed words</p>
+        </a>
       </div>
 
       <div class="theme-sample-questions" id="sampleSection" style="display:none">
@@ -113,7 +123,7 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-links">
-        <a class="footer-highlight" href="remove-ads.html">Ad-Free + Extras</a>
+        <a class="footer-highlight" href="remove-ads.html">Ad-Free</a>
         <a href="about.html">About</a>
         <a class="footer-highlight" href="how-it-works.html">How It Works</a>
         <a class="footer-highlight" href="contact.html">Contact</a>
@@ -219,6 +229,8 @@
       document.getElementById("marathonLink").href  = `mashup-play.html?themes=${themesParam}&mode=marathon`;
       document.getElementById("challengeLink").href = `mashup-play.html?themes=${themesParam}&mode=challenge`;
       document.getElementById("survivalLink").href  = `mashup-play.html?themes=${themesParam}&mode=survival`;
+      document.getElementById("wordSearchLink").href = `wordsearch.html?themes=${themesParam}&page=1`;
+      document.getElementById("wordleLink").href     = `wordle.html?themes=${themesParam}&page=1`;
 
       // Load questions from all selected themes in parallel
       const questionsByTheme = {};

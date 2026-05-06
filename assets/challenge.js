@@ -102,6 +102,8 @@ async function renderChallengePage() {
     selectedAnswer: null
   };
 
+  let revealAnswers = false;
+
   roundEl.textContent = `Round ${safeRound}`;
 
   function applyDisplayMode() {
@@ -136,6 +138,20 @@ async function renderChallengePage() {
     }
     scoreEl.textContent = `Score: ${state.score}`;
     state.selectedAnswer = null;
+  }
+
+  if (isPremiumUser()) {
+    const revealToggleBtn = document.createElement("button");
+    revealToggleBtn.className = "secondary-btn reveal-answers-toggle";
+    revealToggleBtn.textContent = "Reveal Answers: OFF";
+    revealToggleBtn.addEventListener("click", () => {
+      revealAnswers = !revealAnswers;
+      revealToggleBtn.className = revealAnswers
+        ? "primary-btn reveal-answers-toggle"
+        : "secondary-btn reveal-answers-toggle";
+      revealToggleBtn.textContent = revealAnswers ? "Reveal Answers: ON" : "Reveal Answers: OFF";
+    });
+    quizBox.insertBefore(revealToggleBtn, slidesContainer);
   }
 
   // Render all question slides with their own Submit/Next buttons
@@ -201,7 +217,7 @@ async function renderChallengePage() {
           selectedBtn.classList.add("correct-anim");
         }
       } else {
-        feedbackP.textContent = "Wrong";
+        feedbackP.textContent = revealAnswers ? `Wrong. The correct answer is ${q.answer}.` : "Wrong";
         feedbackP.className = "feedback wrong";
         if (selectedBtn) {
           selectedBtn.classList.remove("correct-anim");
@@ -285,7 +301,7 @@ async function renderChallengePage() {
       <div class="challenge-link-box">${roundLink}</div>
       <div class="cta-row">
         ${hasNextRound ? `<a class="primary-btn" href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}">Next Round</a>` : ""}
-        <a class="secondary-btn" href="remove-ads.html?theme=${theme.slug}">Reveal Answers</a>
+        ${isPremiumUser() ? '' : `<a class="secondary-btn" href="remove-ads.html?theme=${theme.slug}">Reveal Answers</a>`}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
     </div>

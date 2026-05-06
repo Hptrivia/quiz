@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>function isPremiumUser(){var e=localStorage.getItem('adsRemovedUntil');if(!e)return false;return new Date(e)>new Date();}if(!isPremiumUser()){(function(s){s.dataset.zone='10961427',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));(function(s){s.dataset.zone='10961935',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));}</script>
+<script data-grow-initializer="">!(function(){window.growMe||((window.growMe=function(e){window.growMe._.push(e);}),(window.growMe._=[]));var e=document.createElement("script");(e.type="text/javascript"),(e.src="https://faves.grow.me/main.js"),(e.defer=!0),e.setAttribute("data-grow-faves-site-id","U2l0ZTowMmFjMDYwOC03YWNmLTQ4ZGItYTcxYS1iMjgxOTNmY2E2ZDQ=");var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Word Search</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E6BY9F2ZDT');
+</script>
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    .ws-game-area {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+      padding-top: 48px;
+    }
+    .ws-top-bar {
+      display: flex;
+      gap: 8px;
+      margin: 12px 0 8px;
+    }
+    .ws-top-bar .secondary-btn {
+      flex: 1;
+      font-size: 0.85rem;
+      padding: 9px 10px;
+    }
+    .ws-top-bar .secondary-btn.ws-btn-active {
+      background: var(--primary-btn-bg);
+      color: var(--primary-btn-text);
+    }
+    .ws-stats {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .ws-grid {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 3px;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: none;
+    }
+    .ws-cell {
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: min(1rem, 3.5vw);
+      font-weight: 700;
+      background: var(--wordle-tile-bg);
+      border-radius: 4px;
+      border: 2px solid transparent;
+      cursor: pointer;
+    }
+    .ws-cell.ws-selected {
+      background: #2563eb;
+      color: #fff;
+      border-color: #60a5fa;
+    }
+    .ws-cell.ws-found {
+      color: #111 !important;
+    }
+    .ws-word-list {
+      display: none;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 12px;
+    }
+    .ws-word-list.ws-visible { display: flex; }
+    .ws-word-item {
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      background: var(--wordle-absent);
+      color: #888;
+    }
+    .ws-word-item.found { color: #111; }
+    .ws-found-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 12px;
+    }
+    .ws-found-badge {
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #111;
+    }
+    .ws-next-btn {
+      display: none;
+      text-align: center;
+      margin-top: 16px;
+      text-decoration: none;
+      width: 100%;
+    }
+    .ws-toast {
+      position: fixed;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%) translateY(16px);
+      background: var(--panel-bg);
+      border: 1px solid var(--panel-border);
+      color: var(--text);
+      padding: 10px 22px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      opacity: 0;
+      transition: opacity 0.25s, transform 0.25s;
+      pointer-events: none;
+      white-space: nowrap;
+      z-index: 100;
+    }
+    .ws-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+    .ws-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+      padding: 16px;
+    }
+    .ws-modal-overlay.ws-modal-show { display: flex; }
+    .ws-modal {
+      background: var(--panel-bg);
+      border: 1px solid var(--panel-border);
+      border-radius: 16px;
+      padding: 28px 24px;
+      text-align: center;
+      max-width: 340px;
+      width: 100%;
+    }
+    .ws-modal h2 { font-size: 1.4rem; margin-bottom: 14px; }
+    .ws-modal p  { color: #aaa; font-size: 0.88rem; line-height: 1.6; margin-bottom: 6px; }
+    .ws-modal-actions { display: flex; flex-direction: column; gap: 8px; margin-top: 20px; }
+  </style>
+</head>
+<body data-page="wordsearch">
+  <main class="container narrow">
+    <a href="index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+
+    <section class="panel">
+      <h1 id="wsTitle">Loading...</h1>
+
+      <div class="ws-game-area">
+        <div class="ws-top-bar">
+          <button class="secondary-btn" id="wsHowToBtn">ℹ How to Play</button>
+          <button class="secondary-btn" id="wsRevealBtn">👁 Reveal Words</button>
+        </div>
+
+        <div class="ws-stats">
+          <span id="wsWordsLeft"></span>
+        </div>
+
+        <div class="ws-grid" id="wsGrid"></div>
+
+        <div class="ws-word-list" id="wsWordList"></div>
+        <div class="ws-found-list" id="wsFoundList"></div>
+
+        <a class="secondary-btn ws-next-btn" id="wsNextBtn" href="#">Next Grid →</a>
+      </div>
+
+      <div style="margin-top:20px;text-align:center;">
+        <a href="contact.html" class="secondary-btn" style="font-size:0.85rem;padding:8px 18px;text-decoration:none;">Leave Feedback</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a id="removeAdsLink" class="footer-highlight" href="remove-ads.html">Ad-Free</a>
+        <a href="about.html">About</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="contact.html">Contact</a>
+        <a class="footer-highlight" href="blog.html">Blog</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="ws-toast" id="wsToast"></div>
+
+  <!-- How to Play modal -->
+  <div class="ws-modal-overlay" id="wsHowToModal">
+    <div class="ws-modal">
+      <h2>How to Play</h2>
+      <p>Words from the <strong id="wsHowToTheme"></strong> theme are hidden in the grid — you won't know what they are until you find them.</p>
+      <p>Drag across letters in any direction (including diagonals and backwards) to select a word.</p>
+      <p>When you find one it lights up and gets revealed.</p>
+      <p>Stuck? Tap <strong>Reveal Words</strong> to see what you're looking for.</p>
+      <div class="ws-modal-actions">
+        <button class="primary-btn" onclick="wsCloseModal('wsHowToModal')">Got it!</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Completion modal -->
+  <div class="ws-modal-overlay" id="wsDoneModal">
+    <div class="ws-modal">
+      <h2>Well done!</h2>
+      <div class="ws-modal-actions">
+        <button class="primary-btn" onclick="location.reload()">Play Again</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/app.js"></script>
+  <script src="assets/wordsearch.js"></script>
+</body>
+</html>

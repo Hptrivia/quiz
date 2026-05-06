@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Word Search Test – Friends</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #111;
+      color: #f5f5f5;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 16px;
+      gap: 12px;
+    }
+
+    h1 { font-size: 1.4rem; font-weight: 700; text-align: center; }
+
+    .top-bar {
+      display: flex;
+      gap: 8px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid #374151;
+      background: #1f2937;
+      color: #f5f5f5;
+    }
+    .btn:hover { background: #374151; }
+    .btn.active { background: #2563eb; border-color: #3b82f6; }
+
+    .stats {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 400px;
+      font-size: 0.95rem;
+    }
+
+    #wordsLeft { font-weight: 600; }
+    #gridIndicator { color: #aaa; }
+
+    .grid-wrapper { width: 100%; max-width: 400px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 3px;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: none;
+    }
+
+    .cell {
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 700;
+      background: #1b1b1b;
+      border-radius: 4px;
+      border: 2px solid transparent;
+    }
+    .cell.selected { background: #2563eb; color: #fff; border-color: #60a5fa; }
+    .cell.found    { color: #111 !important; }
+
+    /* Word list shown in reveal mode */
+    .word-list {
+      display: none;
+      width: 100%;
+      max-width: 400px;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .word-list.visible { display: flex; }
+
+    .word-item {
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      background: #2a2a2a;
+      color: #777;
+    }
+    .word-item.found { color: #111; }
+
+    /* Badges that appear as words are found in normal mode */
+    .found-list {
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .found-badge {
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #111;
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%) translateY(16px);
+      background: #1f2937;
+      border: 1px solid #374151;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      opacity: 0;
+      transition: opacity 0.25s, transform 0.25s;
+      pointer-events: none;
+      white-space: nowrap;
+      z-index: 100;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    /* Modals */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+      padding: 16px;
+    }
+    .modal-overlay.show { display: flex; }
+
+    .modal {
+      background: #1b1b1b;
+      border: 1px solid #303036;
+      border-radius: 16px;
+      padding: 28px 24px;
+      text-align: center;
+      max-width: 340px;
+      width: 100%;
+    }
+    .modal h2 { font-size: 1.5rem; margin-bottom: 14px; }
+    .modal p  { color: #aaa; font-size: 0.9rem; line-height: 1.6; margin-bottom: 6px; }
+    .modal .actions { display: flex; flex-direction: column; gap: 8px; margin-top: 20px; }
+    .modal .actions button {
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+    }
+    .primary-btn { background: #3b82f6; color: #fff; }
+    .primary-btn:hover { background: #2563eb; }
+    .secondary-btn { background: #1f2937; color: #f5f5f5; border: 1px solid #374151 !important; }
+    .secondary-btn:hover { background: #374151; }
+  </style>
+</head>
+<body>
+
+  <h1>Friends Word Search</h1>
+
+  <div class="top-bar">
+    <button class="btn" id="howToBtn">ℹ How to Play</button>
+    <button class="btn" id="revealBtn">👁 Reveal Words</button>
+  </div>
+
+  <div class="stats">
+    <span id="wordsLeft"></span>
+    <span id="gridIndicator"></span>
+  </div>
+
+  <div class="grid-wrapper">
+    <div class="grid" id="grid"></div>
+  </div>
+
+  <!-- Shown when Reveal Words is active — all words listed, greyed until found -->
+  <div class="word-list" id="wordList"></div>
+
+  <!-- Shown in normal mode — words appear here only after found -->
+  <div class="found-list" id="foundList"></div>
+
+  <div class="toast" id="toast"></div>
+
+  <!-- How to Play modal -->
+  <div class="modal-overlay" id="howToModal">
+    <div class="modal">
+      <h2>How to Play</h2>
+      <p>Words from the <strong>Friends</strong> theme are hidden in the grid — you won't know what they are until you find them.</p>
+      <p>Drag across letters in any direction (including diagonals and backwards) to select a word.</p>
+      <p>When you find one it lights up on the grid and gets revealed.</p>
+      <p>Stuck? Tap <strong>Reveal Words</strong> to see what you're looking for.</p>
+      <div class="actions">
+        <button class="primary-btn" onclick="closeModal('howToModal')">Got it!</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Completion modal -->
+  <div class="modal-overlay" id="doneModal">
+    <div class="modal">
+      <h2>Well done, babber! 🎉</h2>
+      <p>You found every word in this grid.</p>
+      <div class="actions">
+        <button class="primary-btn"   id="nextGridBtn" style="display:none" onclick="nextGrid()">Next Grid →</button>
+        <button class="secondary-btn" onclick="location.reload()">Play Again</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const GRID_SIZE = 10;
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // DATA
+    // Each inner array is one grid. To add a new grid, add another array.
+    // In production this comes from wordsearch_words.json keyed by theme title.
+    // ─────────────────────────────────────────────────────────────────────────
+    const ALL_GRIDS = [
+      ["JOEY","ROSS","MONICA","PHOEBE","RACHEL","GUNTHER","CENTRAL","CHANDLER","FOOSBALL","LOBSTER"],
+      // Add Grid 2 here, e.g.:
+      // ["BUFFAY","GELLER","COFFEE","SMELLY","LEATHER","TRIBBIANI","BISCOTTI","MUFFIN","WEDDING","UGLY"],
+    ];
+
+    const COLORS = [
+      '#4ade80','#60a5fa','#f472b6','#fb923c',
+      '#a78bfa','#34d399','#fbbf24','#e879f9',
+      '#38bdf8','#f87171',
+    ];
+
+    const ALL_DIRS = [
+      [0,1],[1,0],[1,1],[1,-1],
+      [0,-1],[-1,0],[-1,1],[-1,-1],
+    ];
+
+    // ─── State ────────────────────────────────────────────────────────────────
+    let currentGridIndex = 0;
+    let grid       = [];
+    let placements = [];   // { word, cells:[{r,c}], found, color }
+    let wordsFound = 0;
+    let isRevealed = false;
+
+    // Drag state
+    let isDragging    = false;
+    let dragStartCell = null;
+    let lockedDir     = null;   // locked once first movement detected
+    let selectedCells = [];
+
+    // ─── Grid generation ──────────────────────────────────────────────────────
+
+    function shuffle(arr) {
+      const a = [...arr];
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+
+    function initGrid() {
+      grid = Array.from({ length: GRID_SIZE }, () => Array(GRID_SIZE).fill(''));
+    }
+
+    function validStarts(wordLen, dir) {
+      const [dr, dc] = dir;
+      const out = [];
+      for (let r = 0; r < GRID_SIZE; r++) {
+        for (let c = 0; c < GRID_SIZE; c++) {
+          const er = r + dr * (wordLen - 1);
+          const ec = c + dc * (wordLen - 1);
+          if (er >= 0 && er < GRID_SIZE && ec >= 0 && ec < GRID_SIZE) out.push([r, c]);
+        }
+      }
+      return out;
+    }
+
+    function tryPlace(word, dir) {
+      const [dr, dc] = dir;
+      for (const [r, c] of shuffle(validStarts(word.length, dir))) {
+        let ok = true;
+        const cells = [];
+        for (let i = 0; i < word.length; i++) {
+          const nr = r + dr * i, nc = c + dc * i;
+          const ex = grid[nr][nc];
+          if (ex !== '' && ex !== word[i]) { ok = false; break; }
+          cells.push({ r: nr, c: nc });
+        }
+        if (ok) {
+          cells.forEach((cell, i) => { grid[cell.r][cell.c] = word[i]; });
+          return cells;
+        }
+      }
+      return null;
+    }
+
+    function buildGrid(words) {
+      const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      const colors  = shuffle([...COLORS]);
+
+      // Try up to 5 times to place all words (randomised order each attempt)
+      for (let attempt = 0; attempt < 5; attempt++) {
+        initGrid();
+        placements = [];
+        let allPlaced = true;
+
+        for (const word of shuffle([...words])) {
+          let placed = false;
+          for (const dir of shuffle([...ALL_DIRS])) {
+            const cells = tryPlace(word, dir);
+            if (cells) {
+              placements.push({ word, cells, found: false, color: null });
+              placed = true;
+              break;
+            }
+          }
+          if (!placed) { allPlaced = false; break; }
+        }
+
+        if (allPlaced) break;
+      }
+
+      // Fill empty cells with random letters
+      for (let r = 0; r < GRID_SIZE; r++)
+        for (let c = 0; c < GRID_SIZE; c++)
+          if (!grid[r][c]) grid[r][c] = letters[Math.floor(Math.random() * 26)];
+
+      placements.forEach((p, i) => { p.color = colors[i % colors.length]; });
+    }
+
+    // ─── Rendering ────────────────────────────────────────────────────────────
+
+    function renderGrid() {
+      const el = document.getElementById('grid');
+      el.innerHTML = '';
+      for (let r = 0; r < GRID_SIZE; r++) {
+        for (let c = 0; c < GRID_SIZE; c++) {
+          const cell = document.createElement('div');
+          cell.className = 'cell';
+          cell.dataset.r = r;
+          cell.dataset.c = c;
+          cell.textContent = grid[r][c];
+          el.appendChild(cell);
+        }
+      }
+    }
+
+    function renderWordList() {
+      const el = document.getElementById('wordList');
+      el.innerHTML = '';
+      placements.forEach(p => {
+        const item = document.createElement('span');
+        item.className = 'word-item' + (p.found ? ' found' : '');
+        item.dataset.word = p.word;
+        item.textContent = p.word;
+        if (p.found) item.style.background = p.color;
+        el.appendChild(item);
+      });
+    }
+
+    function updateStats() {
+      const rem = placements.length - wordsFound;
+      document.getElementById('wordsLeft').textContent =
+        rem === 0 ? 'All found!' : `${rem} word${rem !== 1 ? 's' : ''} left`;
+
+      const gi = document.getElementById('gridIndicator');
+      gi.textContent = ALL_GRIDS.length > 1
+        ? `Grid ${currentGridIndex + 1} of ${ALL_GRIDS.length}` : '';
+    }
+
+    // ─── Drag helpers ─────────────────────────────────────────────────────────
+
+    function cellEl(r, c) {
+      return document.querySelector(`.cell[data-r="${r}"][data-c="${c}"]`);
+    }
+
+    function cellFromPoint(x, y) {
+      const el = document.elementFromPoint(x, y);
+      return (el && el.classList.contains('cell'))
+        ? { r: +el.dataset.r, c: +el.dataset.c } : null;
+    }
+
+    function snapDir(dr, dc) {
+      if (!dr && !dc) return null;
+      const angle = Math.atan2(dr, dc) * 180 / Math.PI;
+      const dirs = [
+        { dr: 0, dc: 1, a: 0 },    { dr: 1,  dc: 1,  a: 45  },
+        { dr: 1, dc: 0, a: 90 },   { dr: 1,  dc: -1, a: 135 },
+        { dr: 0, dc: -1, a: 180 }, { dr: -1, dc: -1, a: -135 },
+        { dr: -1, dc: 0, a: -90 }, { dr: -1, dc: 1,  a: -45 },
+      ];
+      let best = dirs[0], bd = Infinity;
+      for (const d of dirs) {
+        let diff = Math.abs(angle - d.a);
+        if (diff > 180) diff = 360 - diff;
+        if (diff < bd) { bd = diff; best = d; }
+      }
+      return best;
+    }
+
+    function clearSel() {
+      selectedCells.forEach(({ r, c }) => {
+        const el = cellEl(r, c);
+        if (el) el.classList.remove('selected');
+      });
+      selectedCells = [];
+    }
+
+    function updateSel(end) {
+      if (!dragStartCell || !end) return;
+
+      const rawDr = end.r - dragStartCell.r;
+      const rawDc = end.c - dragStartCell.c;
+
+      // Lock direction on first non-zero movement; can only change length after that
+      if (!lockedDir) {
+        if (rawDr === 0 && rawDc === 0) return;
+        lockedDir = snapDir(rawDr, rawDc);
+      }
+
+      clearSel();
+
+      // Project displacement onto locked direction to get step count.
+      // Using dot product: steps = (rawDelta · dir) / |dir|²
+      // Clamped to 0 so selection can shrink back to start but not reverse.
+      const dirLenSq = lockedDir.dr * lockedDir.dr + lockedDir.dc * lockedDir.dc;
+      const dot      = rawDr * lockedDir.dr + rawDc * lockedDir.dc;
+      const steps    = Math.max(0, Math.round(dot / dirLenSq));
+
+      selectedCells = [];
+      for (let i = 0; i <= steps; i++) {
+        const nr = dragStartCell.r + lockedDir.dr * i;
+        const nc = dragStartCell.c + lockedDir.dc * i;
+        if (nr >= 0 && nr < GRID_SIZE && nc >= 0 && nc < GRID_SIZE)
+          selectedCells.push({ r: nr, c: nc });
+        else break;
+      }
+
+      selectedCells.forEach(({ r, c }) => {
+        const el = cellEl(r, c);
+        if (el && !el.classList.contains('found')) el.classList.add('selected');
+      });
+    }
+
+    function endDrag() {
+      if (!isDragging) return;
+      isDragging = false;
+      if (selectedCells.length >= 2) checkSel();
+      clearSel();
+      dragStartCell = null;
+      lockedDir     = null;
+    }
+
+    function checkSel() {
+      const typed = selectedCells.map(({ r, c }) => grid[r][c]).join('');
+      for (const p of placements) {
+        if (!p.found && typed === p.word) { markFound(p); return; }
+      }
+    }
+
+    function markFound(p) {
+      p.found = true;
+      wordsFound++;
+
+      p.cells.forEach(({ r, c }) => {
+        const el = cellEl(r, c);
+        if (el) {
+          el.classList.remove('selected');
+          el.classList.add('found');
+          el.style.background = p.color;
+        }
+      });
+
+      if (isRevealed) {
+        const item = document.querySelector(`.word-item[data-word="${p.word}"]`);
+        if (item) { item.classList.add('found'); item.style.background = p.color; }
+      } else {
+        const badge = document.createElement('span');
+        badge.className = 'found-badge';
+        badge.textContent = p.word;
+        badge.style.background = p.color;
+        document.getElementById('foundList').appendChild(badge);
+      }
+
+      updateStats();
+      showToast(`${p.word} found!`);
+
+      if (wordsFound === placements.length) setTimeout(showCompletion, 800);
+    }
+
+    // ─── Toast ────────────────────────────────────────────────────────────────
+
+    let toastTimer;
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => t.classList.remove('show'), 2200);
+    }
+
+    // ─── Modals ───────────────────────────────────────────────────────────────
+
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('show');
+    }
+
+    function showCompletion() {
+      const hasNext = currentGridIndex + 1 < ALL_GRIDS.length;
+      document.getElementById('nextGridBtn').style.display = hasNext ? '' : 'none';
+      document.getElementById('doneModal').classList.add('show');
+    }
+
+    document.getElementById('howToBtn').addEventListener('click', () =>
+      document.getElementById('howToModal').classList.add('show'));
+
+    document.getElementById('revealBtn').addEventListener('click', () => {
+      isRevealed = !isRevealed;
+      const btn = document.getElementById('revealBtn');
+      const wl  = document.getElementById('wordList');
+      const fl  = document.getElementById('foundList');
+
+      btn.textContent = isRevealed ? '🙈 Hide Words' : '👁 Reveal Words';
+      btn.classList.toggle('active', isRevealed);
+
+      if (isRevealed) {
+        renderWordList();
+        wl.classList.add('visible');
+        fl.style.display = 'none';
+      } else {
+        wl.classList.remove('visible');
+        fl.style.display = '';
+      }
+    });
+
+    // ─── Multi-grid ───────────────────────────────────────────────────────────
+
+    function loadGrid(index) {
+      currentGridIndex = index;
+      wordsFound  = 0;
+      isRevealed  = false;
+
+      document.getElementById('revealBtn').textContent = '👁 Reveal Words';
+      document.getElementById('revealBtn').classList.remove('active');
+      document.getElementById('wordList').classList.remove('visible');
+      document.getElementById('foundList').innerHTML = '';
+      document.getElementById('foundList').style.display = '';
+
+      buildGrid(ALL_GRIDS[index]);
+      renderGrid();
+      updateStats();
+    }
+
+    function nextGrid() {
+      closeModal('doneModal');
+      if (currentGridIndex + 1 < ALL_GRIDS.length) loadGrid(currentGridIndex + 1);
+    }
+
+    // ─── Mouse events ─────────────────────────────────────────────────────────
+
+    const gridEl = document.getElementById('grid');
+
+    gridEl.addEventListener('mousedown', e => {
+      const cell = cellFromPoint(e.clientX, e.clientY);
+      if (!cell) return;
+      isDragging = true; dragStartCell = cell; lockedDir = null;
+      updateSel(cell);
+    });
+
+    window.addEventListener('mousemove', e => {
+      if (!isDragging) return;
+      const cell = cellFromPoint(e.clientX, e.clientY);
+      if (cell) updateSel(cell);
+    });
+
+    window.addEventListener('mouseup', endDrag);
+
+    // ─── Touch events ─────────────────────────────────────────────────────────
+
+    gridEl.addEventListener('touchstart', e => {
+      e.preventDefault();
+      const t = e.touches[0];
+      const cell = cellFromPoint(t.clientX, t.clientY);
+      if (!cell) return;
+      isDragging = true; dragStartCell = cell; lockedDir = null;
+      updateSel(cell);
+    }, { passive: false });
+
+    gridEl.addEventListener('touchmove', e => {
+      e.preventDefault();
+      if (!isDragging) return;
+      const cell = cellFromPoint(e.touches[0].clientX, e.touches[0].clientY);
+      if (cell) updateSel(cell);
+    }, { passive: false });
+
+    gridEl.addEventListener('touchend', e => {
+      e.preventDefault();
+      endDrag();
+    }, { passive: false });
+
+    // ─── Init ─────────────────────────────────────────────────────────────────
+    loadGrid(0);
+  </script>
+</body>
+</html>

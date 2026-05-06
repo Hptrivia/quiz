@@ -1,3 +1,9 @@
+function isPremiumUser() {
+  const expiry = localStorage.getItem('adsRemovedUntil');
+  if (!expiry) return false;
+  return new Date(expiry) > new Date();
+}
+
 async function fetchJSON(path) {
   const res = await fetch(path);
   if (!res.ok) throw new Error(`Failed to load ${path}`);
@@ -440,7 +446,9 @@ async function renderQuizPage() {
   const survivalBtn = document.getElementById("survivalButton");
   const challengeBtn = document.getElementById("challengeButton");
   const episodeBtn = document.getElementById("episodeButton");
+  const wordSearchBtn = document.getElementById("wordSearchButton");
   const wordleBtn = document.getElementById("wordleButton");
+  const adFreeBtn = document.getElementById("adFreeButton");
 
   if (!theme) {
     title.textContent = "Theme not found";
@@ -456,7 +464,9 @@ async function renderQuizPage() {
   playBtn.href = `play.html?theme=${theme.slug}`;
   challengeBtn.href = `challenge.html?theme=${theme.slug}&round=1`;
   survivalBtn.href = `survival.html?theme=${theme.slug}`;
+  wordSearchBtn.href = `wordsearch.html?theme=${theme.slug}&page=1`;
   wordleBtn.href = `wordle.html?theme=${theme.slug}`;
+  if (adFreeBtn) adFreeBtn.href = `remove-ads.html?theme=${theme.slug}&mode=normal`;
   try {
   const episodeThemes = await fetchJSON("data/episode_themes.json");
   if (episodeThemes[theme.slug]) {
@@ -549,6 +559,8 @@ let buyPackUrl = "https://ko-fi.com/triviaking/shop";
   quizState.score = 0;
   quizState.selectedAnswer = null;
 
+  let revealAnswers = false;
+
   if (progressText) progressText.textContent = `Page ${safePage}`;
 
   if (nextPageLink) {
@@ -576,6 +588,21 @@ let buyPackUrl = "https://ko-fi.com/triviaking/shop";
       slide.scrollIntoView({ behavior: "smooth", block: "start" });
     }
     quizState.selectedAnswer = null;
+  }
+
+  if (isPremiumUser()) {
+    const revealToggleBtn = document.createElement("button");
+    revealToggleBtn.className = "secondary-btn reveal-answers-toggle";
+    revealToggleBtn.textContent = "Reveal Answers: OFF";
+    revealToggleBtn.addEventListener("click", () => {
+      revealAnswers = !revealAnswers;
+      revealToggleBtn.className = revealAnswers
+        ? "primary-btn reveal-answers-toggle"
+        : "secondary-btn reveal-answers-toggle";
+      revealToggleBtn.textContent = revealAnswers ? "Reveal Answers: ON" : "Reveal Answers: OFF";
+    });
+    const quizBoxEl = document.getElementById("quizBox");
+    if (quizBoxEl) quizBoxEl.insertBefore(revealToggleBtn, slidesContainer);
   }
 
   // Pre-render all question slides
@@ -641,7 +668,7 @@ let buyPackUrl = "https://ko-fi.com/triviaking/shop";
           selectedBtn.classList.add("correct-anim");
         }
       } else {
-        feedbackP.textContent = "Wrong";
+        feedbackP.textContent = revealAnswers ? `Wrong. The correct answer is ${q.answer}.` : "Wrong";
         feedbackP.className = "feedback wrong";
         if (selectedBtn) {
           selectedBtn.classList.remove("correct-anim");

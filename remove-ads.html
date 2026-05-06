@@ -4,7 +4,7 @@
 <script data-grow-initializer="">!(function(){window.growMe||((window.growMe=function(e){window.growMe._.push(e);}),(window.growMe._=[]));var e=document.createElement("script");(e.type="text/javascript"),(e.src="https://faves.grow.me/main.js"),(e.defer=!0),e.setAttribute("data-grow-faves-site-id","U2l0ZTowMmFjMDYwOC03YWNmLTQ4ZGItYTcxYS1iMjgxOTNmY2E2ZDQ=");var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ad-Free + Extras</title>
+  <title>Ad-Free</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -19,52 +19,80 @@
     <a href="index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
 
     <section class="panel">
-      <h1 id="removeAdsTitle">Ad-Free + Extras</h1>
-      <p id="removeAdsIntro">
-        Purchase the pack to play without ads and unlock extra benefits.
-      </p>
-
-      <ul class="benefits-list">
-        <li>Ad-free play</li>
-        <li>Printables, questions and answer sheets</li>
-        <li>Unlimited lifelines in Survival Mode</li>
-        <li>Answers shown in Episode Mode</li>
-        <li>Perfect for Quiz Night with Friends</li>
-      </ul>
-
-      <div class="cta-row">
-        <a id="removeAdsBuyButton" class="primary-btn" href="https://ko-fi.com/triviaking/shop" target="_blank" rel="noopener noreferrer">
-          View Shop
-        </a>
-        <a class="secondary-btn" href="contact.html?topic=pack">Request a Theme Pack</a>
-        <a class="secondary-btn" href="https://trivia-5pja.onrender.com" target="_blank" rel="noopener noreferrer">
-          Upload Purchased File
-        </a>
+      <div class="tab-bar">
+        <button class="tab-btn active" data-tab="sitewide">Site-Wide Ad-Free</button>
+        <button class="tab-btn" data-tab="theme-packs">Theme Packs</button>
       </div>
 
-      <div class="remove-ads-how">
-        <h3>How it works</h3>
-        <p>1. Buy the pack.</p>
-        <p>2. Download the file.</p>
-        <p>3. Open the upload page.</p>
-        <p>4. Upload and play ad-free.</p>
-        <p>5. Or use printables for offline play.</p>
+      <div id="tab-sitewide" class="tab-content active">
+        <div id="premiumIndicator" class="premium-indicator" style="display:none"></div>
+        <h1>Ad-Free Everywhere — €5 for 30 Days</h1>
+        <ul class="benefits-list">
+          <li>No ads on any theme</li>
+          <li>Unlimited lifelines in Survival Mode</li>
+          <li>Answers shown after every wrong answer in Challenge and Marathon modes</li>
+          <li>Works on any device with your code</li>
+        </ul>
+        <div class="cta-row">
+          <a class="primary-btn" href="https://ko-fi.com/s/d1c9104d3b" target="_blank" rel="noopener noreferrer">Pay €5</a>
+        </div>
+        <div id="activationSection" class="already-have-code">
+          <p>Already have a code?</p>
+          <div class="code-input-row">
+            <input type="text" id="adFreeCodeInput" placeholder="Enter your code" />
+            <button class="secondary-btn" id="adFreeActivateBtn">Activate</button>
+          </div>
+          <p id="activationMsg" class="activation-msg"></p>
+        </div>
       </div>
 
-      <div class="blog-list home-blog-list">
-      <a class="card" href="what-you-get-in-a-trivia-gauntlet-printable-pack.html">
-        <h3>Read: What You Get in a Trivia Gauntlet Printable Pack</h3>
-        <p>What is included in a Trivia Gauntlet pack, from the upload file and printable PDF to editable files, quiz modes, and group-play use.</p>
-      </a>
-            </div>
+      <div id="tab-theme-packs" class="tab-content">
+        <h1 id="removeAdsTitle">Ad-Free</h1>
+        <p id="removeAdsIntro">
+          Purchase the pack to play without ads and unlock extra benefits.
+        </p>
 
+        <ul class="benefits-list">
+          <li>Ad-free play</li>
+          <li>Printables, questions and answer sheets</li>
+          <li>Unlimited lifelines in Survival Mode</li>
+          <li>Answers shown in Episode Mode</li>
+          <li>Perfect for Quiz Night with Friends</li>
+        </ul>
+
+        <div class="cta-row">
+          <a id="removeAdsBuyButton" class="primary-btn" href="https://ko-fi.com/triviaking/shop" target="_blank" rel="noopener noreferrer">
+            View Shop
+          </a>
+          <a class="secondary-btn" href="contact.html?topic=pack">Request a Theme Pack</a>
+          <a class="secondary-btn" href="https://trivia-5pja.onrender.com" target="_blank" rel="noopener noreferrer">
+            Upload Purchased File
+          </a>
+        </div>
+
+        <div class="remove-ads-how">
+          <h3>How it works</h3>
+          <p>1. Buy the pack.</p>
+          <p>2. Download the file.</p>
+          <p>3. Open the upload page.</p>
+          <p>4. Upload and play ad-free.</p>
+          <p>5. Or use printables for offline play.</p>
+        </div>
+
+        <div class="blog-list home-blog-list">
+          <a class="card" href="what-you-get-in-a-trivia-gauntlet-printable-pack.html">
+            <h3>Read: What You Get in a Trivia Gauntlet Printable Pack</h3>
+            <p>What is included in a Trivia Gauntlet pack, from the upload file and printable PDF to editable files, quiz modes, and group-play use.</p>
+          </a>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
       <div class="footer-links">
-        <a id="removeAdsLink" class="footer-highlight" href="remove-ads.html">Ad-Free + Extras</a>
+        <a id="removeAdsLink" class="footer-highlight" href="remove-ads.html">Ad-Free</a>
         <a href="about.html">About</a>
         <a href="how-it-works.html">How It Works</a>
         <a href="contact.html">Contact</a>
@@ -77,5 +105,16 @@
 
   <script src="assets/app.js"></script>
   <script src="assets/remove-ads.js"></script>
+  <script>
+    document.querySelectorAll('.tab-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var tab = btn.dataset.tab;
+        document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+        document.querySelectorAll('.tab-content').forEach(function(c) { c.classList.remove('active'); });
+        btn.classList.add('active');
+        document.getElementById('tab-' + tab).classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>

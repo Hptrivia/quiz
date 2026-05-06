@@ -1,3 +1,42 @@
+const VALID_CODE = "=z7.K[md4z7Q";
+const ACTIVATION_DAYS = 30;
+
+function formatExpiry(date) {
+  return date.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+}
+
+function initSitewideTab() {
+  const indicator = document.getElementById('premiumIndicator');
+  const activationSection = document.getElementById('activationSection');
+
+  if (isPremiumUser()) {
+    const expiry = new Date(localStorage.getItem('adsRemovedUntil'));
+    indicator.textContent = '✓ Premium active until ' + formatExpiry(expiry);
+    indicator.style.display = 'block';
+    activationSection.style.display = 'none';
+    return;
+  }
+
+  const btn = document.getElementById('adFreeActivateBtn');
+  const input = document.getElementById('adFreeCodeInput');
+  const msg = document.getElementById('activationMsg');
+
+  btn.addEventListener('click', function () {
+    const entered = input.value.trim();
+    if (entered === VALID_CODE) {
+      const expiry = new Date();
+      expiry.setDate(expiry.getDate() + ACTIVATION_DAYS);
+      localStorage.setItem('adsRemovedUntil', expiry.toISOString());
+      msg.textContent = 'Activated! Premium features unlocked until ' + formatExpiry(expiry) + '.';
+      msg.className = 'activation-msg success';
+      setTimeout(function () { location.reload(); }, 2000);
+    } else {
+      msg.textContent = 'Invalid code. Please check the email you received from Ko-Fi.';
+      msg.className = 'activation-msg error';
+    }
+  });
+}
+
 async function renderRemoveAdsPage() {
   const slug = getParam("theme");
   const mode = getParam("mode") || "normal";
@@ -54,11 +93,11 @@ async function renderRemoveAdsPage() {
   }
 
   if (selectedThemeTitle) {
-    titleEl.textContent = `Ad-Free + Extras for ${selectedThemeTitle}`;
+    titleEl.textContent = `Ad-Free for ${selectedThemeTitle}`;
     introEl.textContent = `Purchase the pack for ${selectedThemeTitle} to play without ads and unlock extra benefits.`;
     buyBtn.textContent = `Buy ${selectedThemeTitle} Pack`;
   } else {
-    titleEl.textContent = "Ad-Free + Extras";
+    titleEl.textContent = "Ad-Free";
     introEl.textContent = "Purchase a pack to play without ads and unlock extra benefits.";
     buyBtn.textContent = "View Shop";
   }
@@ -69,5 +108,6 @@ async function renderRemoveAdsPage() {
 document.addEventListener("DOMContentLoaded", () => {
   if (document.body.dataset.page === "remove-ads") {
     renderRemoveAdsPage();
+    initSitewideTab();
   }
 });
