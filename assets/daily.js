@@ -416,21 +416,6 @@ function showDailyResult(state) {
 
   startCountdown();
 
-  // Hide OneSignal container when permission is already decided or button gets disabled
-  const osContainer = document.querySelector('.onesignal-customlink-container');
-  if (osContainer) {
-    const hideOs = function() { osContainer.style.display = 'none'; };
-    if (typeof Notification !== 'undefined' && Notification.permission === 'denied') {
-      hideOs();
-    } else {
-      const observer = new MutationObserver(function() {
-        const btn = osContainer.querySelector('[disabled], .disabled, [aria-disabled="true"]');
-        if (btn) { hideOs(); observer.disconnect(); }
-      });
-      observer.observe(osContainer, { childList: true, subtree: true, attributes: true });
-    }
-  }
-
   // Related theme cards from today's questions
   const relatedEl = document.getElementById("dailyRelated");
   if (relatedEl) {
