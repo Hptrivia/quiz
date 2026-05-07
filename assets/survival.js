@@ -178,6 +178,7 @@ async function renderSurvivalPage() {
       if (typeof showInstallCard === "function") showInstallCard();
     }, 800);
 
+    if (typeof maybeShowPwaPopup === "function" && maybeShowPwaPopup()) return;
     maybeShowEmailPopup(theme.slug, theme.title, state.score);
   }
 

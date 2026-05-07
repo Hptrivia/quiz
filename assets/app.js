@@ -128,44 +128,9 @@ async function renderHomePage() {
   const searchInput = document.getElementById("searchInput");
   const searchResults = document.getElementById("searchResults");
   const categoryList = document.getElementById("categoryList");
-  const newlyAddedList = document.getElementById("newlyAddedList");
-
-  let newThemeSlugs = [];
-  try {
-    const data = await fetchJSON("data/new_themes.json");
-    newThemeSlugs = Array.isArray(data) ? data : [];
-  } catch (e) {
-    newThemeSlugs = [];
-  }
 
   function render(filteredThemes) {
     if (categoryList) categoryList.innerHTML = "";
-    if (newlyAddedList) newlyAddedList.innerHTML = "";
-
-
-if (newlyAddedList) {
-  const matchedNewThemes = newThemeSlugs
-    .map(slug => filteredThemes.find(theme => theme.slug === slug))
-    .filter(Boolean);
-
-  const card = document.createElement("a");
-  card.className = "card";
-  card.href = `categories/newly-added.html`;
-  card.innerHTML = `
-    <h3>Newly Added</h3>
-    <p>${matchedNewThemes.length} theme(s)</p>
-  `;
-  newlyAddedList.appendChild(card);
-}
-
-    const mashupCard = document.createElement("a");
-    mashupCard.className = "card";
-    mashupCard.href = "mashup.html";
-    mashupCard.innerHTML = `
-      <h3>Mashup Mode</h3>
-      <p>Mix up to 5 themes into one custom quiz</p>
-    `;
-    if (categoryList) categoryList.appendChild(mashupCard);
 
     const grouped = groupByCategory(filteredThemes);
 
@@ -791,6 +756,7 @@ if (resultSearchInput && resultSearchResults) {
     }
   }, 800);
 
+  if (typeof maybeShowPwaPopup === "function" && maybeShowPwaPopup()) return;
   maybeShowEmailPopup(theme.title);
 }
 
@@ -810,7 +776,11 @@ function emailPopupDismissAllowed() {
   return true;
 }
 
+let emailPopupShown = false;
+
 function showEmailPopupUI(themeName) {
+  if (emailPopupShown) return;
+  emailPopupShown = true;
   const dismissCount = parseInt(localStorage.getItem("epDismissCount") || "0", 10);
 
   const overlay = document.createElement("div");
@@ -894,6 +864,15 @@ async function submitEmailToMailchimp(email, themeName) {
     return false;
   }
 }
+
+/* ---------------- PWA SESSION TRACKING ---------------- */
+document.addEventListener("DOMContentLoaded", () => {
+  const isPWA = window.matchMedia("(display-mode: standalone)").matches
+    || window.navigator.standalone === true;
+  if (isPWA && typeof gtag === "function") {
+    gtag("event", "pwa_session");
+  }
+});
 
 /* ---------------- BOOTSTRAP ---------------- */
 document.addEventListener("DOMContentLoaded", () => {

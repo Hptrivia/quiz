@@ -53,7 +53,7 @@ async function renderWordleMashupMode(themesParam) {
     }
   }
 
-  const PAGE_SIZE   = 4;
+  const PAGE_SIZE   = 1;
   const currentPage = Number.isNaN(rawPage) || rawPage < 1 ? 1 : rawPage;
   const totalPages  = Math.ceil(allWords.length / PAGE_SIZE);
   const safePage    = Math.min(currentPage, totalPages);
@@ -258,7 +258,7 @@ async function renderWordlePage() {
     return;
   }
 
-  const PAGE_SIZE   = 4;
+  const PAGE_SIZE   = 1;
   const rawPage     = parseInt(getParam("page") || "1", 10);
   const currentPage = Number.isNaN(rawPage) || rawPage < 1 ? 1 : rawPage;
   const totalPages  = Math.ceil(words.length / PAGE_SIZE);

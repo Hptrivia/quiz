@@ -350,6 +350,7 @@ async function renderChallengePage() {
       });
     }
 
+    if (typeof maybeShowPwaPopup === "function" && maybeShowPwaPopup()) return;
     maybShowChallengeEmailPopup(theme.title);
   }
 
