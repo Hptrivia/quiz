@@ -1441,4 +1441,5 @@ body[data-page="wordsearch"].premium-mode .ws-game-area {
 .daily-card-cta { font-weight: 600; }
 .daily-card-sub { font-size: 12px; margin-top: 4px; opacity: 0.85; }
 
+body[data-page="daily"] main { padding-top: 150px; }
 body[data-page="daily"].premium-mode main { padding-top: 20px; }
