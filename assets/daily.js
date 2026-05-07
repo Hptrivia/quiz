@@ -416,18 +416,30 @@ function showDailyResult(state) {
 
   startCountdown();
 
-  // Hide OneSignal prompt if browser permission is already decided or SDK can't request
+  // Hide OneSignal container when permission is decided or the button gets disabled
   const osContainer = document.querySelector('.onesignal-customlink-container');
   if (osContainer) {
+    const hideOs = function() { osContainer.style.display = 'none'; };
+
+    // Already decided — hide immediately
     if (typeof Notification !== 'undefined' && Notification.permission !== 'default') {
-      osContainer.style.display = 'none';
+      hideOs();
     } else {
-      window.OneSignalDeferred = window.OneSignalDeferred || [];
-      window.OneSignalDeferred.push(function(OneSignal) {
-        OneSignal.Notifications.canRequestPermission().then(function(can) {
-          if (!can) osContainer.style.display = 'none';
-        });
+      // Watch for browser permission changes in real time (granted or blocked)
+      if (navigator.permissions) {
+        navigator.permissions.query({ name: 'notifications' }).then(function(status) {
+          if (status.state !== 'prompt') { hideOs(); return; }
+          status.addEventListener('change', function() {
+            if (status.state !== 'prompt') hideOs();
+          });
+        }).catch(function() {});
+      }
+      // Watch for OneSignal disabling the button after dismissal
+      const observer = new MutationObserver(function() {
+        const btn = osContainer.querySelector('[disabled], .disabled, [aria-disabled="true"]');
+        if (btn) { hideOs(); observer.disconnect(); }
       });
+      observer.observe(osContainer, { childList: true, subtree: true, attributes: true });
     }
   }
 
