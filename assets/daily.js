@@ -416,25 +416,13 @@ function showDailyResult(state) {
 
   startCountdown();
 
-  // Hide OneSignal container when permission is decided or the button gets disabled
+  // Hide OneSignal container when permission is already decided or button gets disabled
   const osContainer = document.querySelector('.onesignal-customlink-container');
   if (osContainer) {
     const hideOs = function() { osContainer.style.display = 'none'; };
-
-    // Already decided — hide immediately
-    if (typeof Notification !== 'undefined' && Notification.permission !== 'default') {
+    if (typeof Notification !== 'undefined' && Notification.permission === 'denied') {
       hideOs();
     } else {
-      // Watch for browser permission changes in real time (granted or blocked)
-      if (navigator.permissions) {
-        navigator.permissions.query({ name: 'notifications' }).then(function(status) {
-          if (status.state !== 'prompt') { hideOs(); return; }
-          status.addEventListener('change', function() {
-            if (status.state !== 'prompt') hideOs();
-          });
-        }).catch(function() {});
-      }
-      // Watch for OneSignal disabling the button after dismissal
       const observer = new MutationObserver(function() {
         const btn = osContainer.querySelector('[disabled], .disabled, [aria-disabled="true"]');
         if (btn) { hideOs(); observer.disconnect(); }
