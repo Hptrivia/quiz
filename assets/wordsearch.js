@@ -397,6 +397,8 @@ async function renderWordSearchMashupMode(themesParam) {
   wsRenderGrid();
   wsUpdateStats();
   wsWireEvents();
+
+  if (safePage >= 2 && typeof maybeShowPwaPopup === "function") maybeShowPwaPopup();
 }
 
 // ─── Main ─────────────────────────────────────────────────────────────────────
@@ -463,6 +465,8 @@ async function renderWordSearchPage() {
   wsRenderGrid();
   wsUpdateStats();
   wsWireEvents();
+
+  if (safePage >= 2 && typeof maybeShowPwaPopup === "function") maybeShowPwaPopup();
 }
 
 document.addEventListener("DOMContentLoaded", () => {

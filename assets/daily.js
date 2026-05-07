@@ -171,9 +171,31 @@ function dcUpdateStreak() {
   return streak;
 }
 
+/* ── Score history ── */
+function dcSaveHistory(date, score, total) {
+  const history = JSON.parse(localStorage.getItem("dcHistory") || "[]");
+  if (history.some(e => e.date === date)) return;
+  history.push({ date, score, total });
+  if (history.length > 30) history.splice(0, history.length - 30);
+  localStorage.setItem("dcHistory", JSON.stringify(history));
+}
+
+function dcGetHistoryStats(todayDate, todayScore, total) {
+  const history = JSON.parse(localStorage.getItem("dcHistory") || "[]");
+  const past    = history.filter(e => e.date !== todayDate);
+  if (!past.length) return null;
+  const scores     = past.map(e => e.score);
+  const best       = Math.max(...scores);
+  const avg        = Math.round((scores.reduce((a, b) => a + b, 0) / scores.length) * 10) / 10;
+  const beatCount  = scores.filter(s => todayScore > s).length;
+  const percentile = Math.round((beatCount / scores.length) * 100);
+  return { best, avg, total, attempts: scores.length, percentile };
+}
+
 /* ── Save / read result ── */
 function saveDailyResult(score, total, missedQuestions) {
   const dateKey = dcTodayKey();
+  dcSaveHistory(dateKey, score, total);
   const streak  = dcUpdateStreak();
   const result  = { completed: true, score, total, missedQuestions, streak: streak.current, bestStreak: streak.best };
   localStorage.setItem(`dcState_${dateKey}`, JSON.stringify(result));
@@ -217,16 +239,24 @@ function initDailyHomepageCard() {
   const card = document.querySelector(".daily-challenge-card");
   if (!card) return;
 
-  const status = getDailyChallengeStatus();
-  const ctaEl  = card.querySelector(".daily-card-cta");
-  const subEl  = card.querySelector(".daily-card-sub");
+  const status  = getDailyChallengeStatus();
+  const streak  = dcGetStreak();
+  const ctaEl   = card.querySelector(".daily-card-cta");
+  const subEl   = card.querySelector(".daily-card-sub");
 
   if (ctaEl) {
     ctaEl.textContent = status.completedToday ? "Come back tomorrow" : "Play Today's Challenge";
   }
 
-  if (subEl && status.currentStreak > 0) {
-    subEl.textContent = `🔥 ${status.currentStreak} day streak`;
+  if (subEl) {
+    const missedDay = streak.lastCompleted &&
+                      streak.lastCompleted !== dcTodayKey() &&
+                      streak.lastCompleted !== dcYesterdayKey();
+    if (missedDay) {
+      subEl.textContent = "Streak lost — play today to start a new one";
+    } else if (status.currentStreak > 0) {
+      subEl.textContent = `🔥 ${status.currentStreak} day streak`;
+    }
   }
 }
 
@@ -349,7 +379,11 @@ function showDailyResult(state) {
   if (!resultEl)  return;
   resultEl.style.display = "block";
 
-  const scoreEl = document.getElementById("dailyScoreText");
+  if (typeof maybeShowPwaPopup === "function") {
+    setTimeout(() => maybeShowPwaPopup(), 2000);
+  }
+
+  const scoreEl    = document.getElementById("dailyScoreText");
   if (scoreEl) scoreEl.textContent = `${state.score} / ${state.total}`;
 
   const streakEl = document.getElementById("dailyStreakBox");
@@ -358,6 +392,26 @@ function showDailyResult(state) {
       <div class="streak-current">🔥 ${state.streak} day streak</div>
       <div class="streak-best">Best: ${state.bestStreak} days</div>
     `;
+  }
+
+  const historyEl = document.getElementById("dailyHistoryBox");
+  if (historyEl) {
+    const stats = dcGetHistoryStats(dcTodayKey(), state.score, state.total);
+    if (!stats) {
+      historyEl.innerHTML = `<p class="daily-history-first">Play again tomorrow to start tracking your stats</p>`;
+    } else {
+      let label;
+      if      (stats.percentile >= 80) label = "One of your best";
+      else if (stats.percentile >= 50) label = "Above your average";
+      else if (stats.percentile >= 20) label = "Below your average";
+      else                             label = "One of your tougher days";
+      historyEl.innerHTML = `
+        <div class="daily-history-stats">
+          <div class="daily-history-stat"><span class="dhs-label">Personal best</span><span class="dhs-value">${stats.best}/${stats.total}</span></div>
+          <div class="daily-history-stat"><span class="dhs-label">Your average</span><span class="dhs-value">${stats.avg}/${stats.total}</span></div>
+          <div class="daily-history-stat"><span class="dhs-label">vs your history</span><span class="dhs-value">${label}</span></div>
+        </div>`;
+    }
   }
 
   startCountdown();
@@ -381,6 +435,18 @@ function showDailyResult(state) {
           </div>
         </div>`;
     }
+  }
+
+  const shareBtn = document.getElementById("dailyShareBtn");
+  if (shareBtn) {
+    shareBtn.addEventListener("click", () => {
+      const url  = window.location.href.split("?")[0];
+      const text = `I scored ${state.score}/${state.total} on today's Trivia Gauntlet Daily Challenge!\n${url}`;
+      navigator.clipboard.writeText(text).then(() => {
+        shareBtn.textContent = "Copied!";
+        setTimeout(() => { shareBtn.textContent = "Share Results"; }, 2000);
+      });
+    });
   }
 
   const revealBtn = document.getElementById("revealMissedBtn");

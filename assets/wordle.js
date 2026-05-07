@@ -216,6 +216,7 @@ async function renderWordleMashupMode(themesParam) {
   });
 
   loadWord(0);
+  if (safePage >= 4 && typeof maybeShowPwaPopup === "function") maybeShowPwaPopup();
 }
 
 // ─── Single-theme Wordle ──────────────────────────────────────────────────────
@@ -466,6 +467,7 @@ async function renderWordlePage() {
   });
 
   loadWord(0);
+  if (safePage >= 4 && typeof maybeShowPwaPopup === "function") maybeShowPwaPopup();
 }
 
 document.addEventListener("DOMContentLoaded", () => {

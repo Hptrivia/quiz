@@ -1407,6 +1407,13 @@ body[data-page="wordsearch"].premium-mode .ws-game-area {
   font-variant-numeric: tabular-nums;
 }
 
+.daily-history-box    { margin: 10px 0 4px; }
+.daily-history-first  { text-align: center; font-size: 13px; color: var(--muted-text); margin: 0; }
+.daily-history-stats  { display: flex; justify-content: space-between; gap: 8px; }
+.daily-history-stat   { flex: 1; background: var(--context-bg); border: 1px solid var(--context-border); border-radius: 10px; padding: 10px 8px; text-align: center; }
+.dhs-label            { display: block; font-size: 11px; color: var(--muted-text); margin-bottom: 4px; }
+.dhs-value            { display: block; font-size: 15px; font-weight: 600; }
+
 .daily-perfect { color: var(--feedback-correct); margin: 0; font-size: 14px; }
 
 .daily-missed-item {
