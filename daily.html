@@ -19,6 +19,15 @@
     gtag('config', 'G-E6BY9F2ZDT');
   </script>
   <link rel="stylesheet" href="assets/style.css" />
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(async function(OneSignal) {
+      await OneSignal.init({
+        appId: "89878a14-2849-4de0-be1b-1d2f628219ed",
+      });
+    });
+  </script>
 </head>
 <body data-page="daily">
 
@@ -52,6 +61,7 @@
         <div id="dailyStreakBox" class="daily-streak-box"></div>
         <div id="dailyHistoryBox" class="daily-history-box"></div>
         <p id="dailyCountdown" class="daily-countdown"></p>
+        <div class='onesignal-customlink-container'></div>
         <button id="dailyShareBtn" class="secondary-btn" style="margin-top:16px;width:100%">Share Results</button>
         <button id="revealMissedBtn" class="secondary-btn" style="margin-top:8px;width:100%">Show Missed Answers</button>
         <div id="dailyMissed" style="display:none;margin-top:14px"></div>
