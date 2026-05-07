@@ -416,6 +416,21 @@ function showDailyResult(state) {
 
   startCountdown();
 
+  // Hide OneSignal prompt if browser permission is already decided or SDK can't request
+  const osContainer = document.querySelector('.onesignal-customlink-container');
+  if (osContainer) {
+    if (typeof Notification !== 'undefined' && Notification.permission !== 'default') {
+      osContainer.style.display = 'none';
+    } else {
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+      window.OneSignalDeferred.push(function(OneSignal) {
+        OneSignal.Notifications.canRequestPermission().then(function(can) {
+          if (!can) osContainer.style.display = 'none';
+        });
+      });
+    }
+  }
+
   // Related theme cards from today's questions
   const relatedEl = document.getElementById("dailyRelated");
   if (relatedEl) {
