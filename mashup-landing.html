@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>function isPremiumUser(){var e=localStorage.getItem('adsRemovedUntil');if(!e)return false;return new Date(e)>new Date();}if(!isPremiumUser()){(function(s){s.dataset.zone='10961427',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));(function(s){s.dataset.zone='10961935',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));}</script>
 <script data-grow-initializer="">!(function(){window.growMe||((window.growMe=function(e){window.growMe._.push(e);}),(window.growMe._=[]));var e=document.createElement("script");(e.type="text/javascript"),(e.src="https://faves.grow.me/main.js"),(e.defer=!0),e.setAttribute("data-grow-faves-site-id","U2l0ZTowMmFjMDYwOC03YWNmLTQ4ZGItYTcxYS1iMjgxOTNmY2E2ZDQ=");var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -63,7 +64,7 @@
 <body>
   <main class="container narrow">
     <div class="theme-top-links">
-      <a href="mashup.html" class="back-link">← Change Themes</a>
+      <a href="mashup.html" class="back-link">← Back</a>
       <a href="index.html" class="back-link">⌂ Home</a>
     </div>
 
@@ -95,6 +96,11 @@
         <a class="card" id="survivalLink" href="#">
           <h3>Survival Mode</h3>
           <p>One mistake and the run ends</p>
+        </a>
+
+        <a class="card" id="triviaRushLink" href="#">
+          <h3>Trivia Rush</h3>
+          <p>Timed arcade mode — build streaks, chase the heat</p>
         </a>
 
         <a class="card" id="wordSearchLink" href="#">
@@ -226,9 +232,10 @@
       });
 
       // Game mode links
-      document.getElementById("marathonLink").href  = `mashup-play.html?themes=${themesParam}&mode=marathon`;
-      document.getElementById("challengeLink").href = `mashup-play.html?themes=${themesParam}&mode=challenge`;
-      document.getElementById("survivalLink").href  = `mashup-play.html?themes=${themesParam}&mode=survival`;
+      document.getElementById("marathonLink").href   = `mashup-play.html?themes=${themesParam}&mode=marathon`;
+      document.getElementById("challengeLink").href  = `mashup-play.html?themes=${themesParam}&mode=challenge`;
+      document.getElementById("survivalLink").href   = `mashup-play.html?themes=${themesParam}&mode=survival`;
+      document.getElementById("triviaRushLink").href = `mashup-trivia-rush.html?themes=${themesParam}`;
       document.getElementById("wordSearchLink").href = `wordsearch.html?themes=${themesParam}&page=1`;
       document.getElementById("wordleLink").href     = `wordle.html?themes=${themesParam}&page=1`;
 

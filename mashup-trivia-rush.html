@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>function isPremiumUser(){var e=localStorage.getItem('adsRemovedUntil');if(!e)return false;return new Date(e)>new Date();}if(!isPremiumUser()){(function(s){s.dataset.zone='10961935',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));}</script>
+<script data-grow-initializer="">!(function(){window.growMe||((window.growMe=function(e){window.growMe._.push(e);}),(window.growMe._=[]));var e=document.createElement("script");(e.type="text/javascript"),(e.src="https://faves.grow.me/main.js"),(e.defer=!0),e.setAttribute("data-grow-faves-site-id","U2l0ZTowMmFjMDYwOC03YWNmLTQ4ZGItYTcxYS1iMjgxOTNmY2E2ZDQ=");var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trivia Rush Mashup | Trivia Gauntlet</title>
+  <meta name="description" content="Play a Trivia Rush mashup on Trivia Gauntlet. Answer fast, build streaks, chase the rush." />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="apple-touch-icon" href="/assets/icon-192.png" />
+  <meta name="theme-color" content="#0f172a" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E6BY9F2ZDT');
+  </script>
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    /* ── Layout ── */
+    .tr-wrap {
+      width: 100%;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+    body:not(.premium-mode) .tr-wrap {
+      padding-top: 90px;
+    }
+
+    /* ── Stats bar ── */
+    .tr-stats-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      padding: 10px 14px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+    .tr-score-col, .tr-streak-col { text-align: center; }
+    .tr-stat-label-sm {
+      display: block;
+      font-size: 0.58rem;
+      font-weight: 700;
+      color: #475569;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+    .tr-stat-val-lg {
+      display: block;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #f1f5f9;
+      line-height: 1.2;
+    }
+    .tr-multiplier {
+      font-size: 1.45rem;
+      font-weight: 900;
+      letter-spacing: -1px;
+      transition: color 0.3s;
+      min-width: 40px;
+      text-align: right;
+    }
+    .tr-mult-1 { color: #64748b; }
+    .tr-mult-2 { color: #60a5fa; }
+    .tr-mult-3 { color: #4ade80; }
+    .tr-mult-4 { color: #fbbf24; }
+    .tr-mult-5 { color: #fb923c; }
+    .tr-mult-6 { color: #f87171; }
+
+    /* ── Double points bar ── */
+    .tr-double-bar {
+      text-align: center;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: #f97316;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      min-height: 16px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .tr-double-bar.tr-double-active {
+      opacity: 1;
+      animation: trPulse 1s ease-in-out infinite;
+    }
+
+    /* ── Heat meter ── */
+    .tr-heat-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 7px;
+    }
+    .tr-meter-label {
+      font-size: 0.62rem;
+      font-weight: 700;
+      color: #475569;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      min-width: 34px;
+    }
+    .tr-meter-track {
+      flex: 1;
+      height: 6px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+    .tr-heat-fill {
+      height: 100%;
+      border-radius: 99px;
+      background: linear-gradient(90deg,#3b82f6,#60a5fa);
+      width: 0%;
+      transition: width 0.35s ease, background 0.5s ease;
+    }
+    .tr-meter-num {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: #475569;
+      min-width: 32px;
+      text-align: right;
+    }
+
+    /* ── Timer ── */
+    .tr-timer-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+    .tr-timer-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+    .tr-timer-fill {
+      height: 100%;
+      border-radius: 99px;
+      background: #22c55e;
+      width: 100%;
+      transition: width 0.9s linear, background 0.3s;
+    }
+    .tr-timer-fill.tr-timer-urgent {
+      animation: trTimerPulse 0.5s ease-in-out infinite;
+    }
+    .tr-timer-num {
+      font-size: 0.75rem;
+      font-weight: 800;
+      min-width: 22px;
+      text-align: right;
+      transition: color 0.3s;
+      color: #64748b;
+    }
+
+    /* ── Difficulty badge ── */
+    .tr-diff-badge {
+      display: inline-block;
+      font-size: 0.67rem;
+      font-weight: 800;
+      letter-spacing: 1.8px;
+      padding: 3px 12px;
+      border-radius: 999px;
+      margin-bottom: 6px;
+    }
+    .tr-diff-easy   { background: rgba(34,197,94,0.12);  color: #4ade80; border: 1px solid rgba(34,197,94,0.3); }
+    .tr-diff-medium { background: rgba(96,165,250,0.12); color: #60a5fa; border: 1px solid rgba(96,165,250,0.3); }
+    .tr-diff-hard   { background: rgba(251,191,36,0.12); color: #fbbf24; border: 1px solid rgba(251,191,36,0.3); }
+    .tr-diff-expert { background: rgba(239,68,68,0.12);  color: #f87171; border: 1px solid rgba(239,68,68,0.3); }
+
+    /* ── Theme badge ── */
+    .tr-theme-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 9px;
+      border-radius: 999px;
+      border: 1px solid;
+      margin-bottom: 8px;
+    }
+
+    /* ── Question ── */
+    .tr-question {
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.55;
+      color: #f1f5f9;
+      margin-bottom: 18px;
+    }
+
+    /* ── Options ── */
+    .tr-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .tr-option-btn {
+      padding: 15px 10px;
+      background: rgba(255,255,255,0.055);
+      border: 1.5px solid rgba(255,255,255,0.09);
+      border-radius: 10px;
+      color: #e2e8f0;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      line-height: 1.4;
+      transition: background 0.12s, border-color 0.12s, transform 0.08s;
+    }
+    .tr-option-btn:hover:not(:disabled) {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.18);
+      transform: translateY(-1px);
+    }
+    .tr-option-btn:active:not(:disabled) { transform: scale(0.98); }
+    .tr-option-btn.tr-correct {
+      background: rgba(34,197,94,0.18);
+      border-color: #22c55e;
+      color: #4ade80;
+    }
+    .tr-option-btn.tr-wrong {
+      background: rgba(239,68,68,0.18);
+      border-color: #ef4444;
+      color: #f87171;
+    }
+    .tr-option-btn:disabled { cursor: default; }
+
+    /* ── Info / feedback row ── */
+    .tr-top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .tr-theme-name {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #64748b;
+      flex: 1;
+      text-align: right;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .tr-feedback-row {
+      text-align: center;
+      margin-top: 22px;
+    }
+
+    /* ── Start screen ── */
+    .tr-start-screen { text-align: center; padding: 8px 0 4px; }
+    .tr-start-theme {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #64748b;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .tr-start-title {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: #f97316;
+      text-shadow: 0 0 24px rgba(249,115,22,0.28);
+      letter-spacing: -1px;
+      margin-bottom: 4px;
+    }
+    .tr-start-tagline {
+      font-size: 0.88rem;
+      color: #64748b;
+      margin-bottom: 26px;
+    }
+    .tr-start-rules {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .tr-start-rule {
+      background: rgba(255,255,255,0.045);
+      border-radius: 10px;
+      padding: 14px 10px;
+    }
+    .tr-start-rule-val {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: #f97316;
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+    .tr-start-rule-label {
+      display: block;
+      font-size: 0.66rem;
+      font-weight: 700;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .tr-start-btn {
+      width: 100%;
+      padding: 16px;
+      font-size: 1.05rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    /* ── Heat glow on panel ── */
+    .tr-glow-warm { box-shadow: 0 0 24px rgba(245,158,11,0.14); transition: box-shadow 0.5s; }
+    .tr-glow-hot  { box-shadow: 0 0 36px rgba(249,115,22,0.22), 0 0 70px rgba(249,115,22,0.08); transition: box-shadow 0.5s; }
+    .tr-glow-max  { animation: trGlowMax 1.5s ease-in-out; }
+
+    /* ── Shake ── */
+    .tr-shake      { animation: trShake 0.35s ease; }
+    .tr-shake-hard { animation: trShakeHard 0.45s ease; }
+
+    /* ── Flash overlay ── */
+    .tr-flash-overlay {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9998;
+      opacity: 0;
+    }
+    .tr-flash-overlay.tr-flash-red {
+      background: #ef4444;
+      animation: trFlash 0.5s ease-out forwards;
+    }
+
+    /* ── Floating effects (fixed to viewport) ── */
+    .tr-fx-layer {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+    }
+    .tr-score-popup {
+      position: absolute;
+      top: 44%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.7rem;
+      font-weight: 900;
+      color: #fbbf24;
+      text-shadow: 0 0 10px rgba(251,191,36,0.55);
+      opacity: 0;
+      white-space: nowrap;
+    }
+    .tr-score-popup.tr-pop-show {
+      animation: trScoreFloat 1.2s ease-out forwards;
+    }
+    .tr-score-popup.tr-pop-double {
+      color: #f97316;
+      text-shadow: 0 0 12px rgba(249,115,22,0.65);
+    }
+    .tr-deduct-popup {
+      position: absolute;
+      top: 44%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: #ef4444;
+      text-shadow: 0 0 10px rgba(239,68,68,0.55);
+      opacity: 0;
+      white-space: nowrap;
+    }
+    .tr-deduct-popup.tr-deduct-show {
+      animation: trDeductFloat 1.2s ease-out forwards;
+    }
+    .tr-combo-text {
+      position: absolute;
+      top: 38%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.1rem;
+      font-weight: 900;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #f97316;
+      text-shadow: 0 0 8px rgba(249,115,22,0.55);
+      opacity: 0;
+      white-space: nowrap;
+    }
+    .tr-combo-text.tr-combo-show {
+      animation: trComboIn 1.4s ease-out forwards;
+    }
+    .tr-combo-text.tr-times-up  { color: #ef4444; text-shadow: 0 0 8px rgba(239,68,68,0.55); }
+    .tr-combo-text.tr-max-heat-msg { color: #fbbf24; font-size: 0.9rem; }
+    .tr-streak-broken {
+      position: absolute;
+      top: 41%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #ef4444;
+      text-shadow: 0 0 8px rgba(239,68,68,0.55);
+      opacity: 0;
+      white-space: nowrap;
+    }
+    .tr-streak-broken.tr-broken-show {
+      animation: trBroken 1.2s ease-out forwards;
+    }
+
+    /* ── Multiplier animations ── */
+    .tr-mult-up   { animation: trMultUp 0.4s cubic-bezier(0.36,0.07,0.19,0.97); }
+    .tr-mult-crack { animation: trMultCrack 0.5s ease-out; }
+
+    /* ── Game-over screen ── */
+    .tr-gameover { text-align: center; }
+    .tr-gameover-title { font-size: 1.75rem; font-weight: 900; margin-bottom: 6px; }
+    .tr-new-best {
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: #fbbf24;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .tr-final-score {
+      font-size: 3rem;
+      font-weight: 900;
+      color: #f97316;
+      text-shadow: 0 0 20px rgba(249,115,22,0.35);
+      margin: 10px 0 18px;
+      letter-spacing: -2px;
+    }
+    .tr-final-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 4px;
+    }
+    .tr-stat {
+      background: rgba(255,255,255,0.045);
+      border-radius: 10px;
+      padding: 12px 10px;
+    }
+    .tr-stat-label {
+      display: block;
+      font-size: 0.64rem;
+      font-weight: 700;
+      color: #475569;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+    .tr-stat-val {
+      display: block;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #f1f5f9;
+    }
+
+    /* ── Modal ── */
+    .tr-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.78);
+      align-items: center;
+      justify-content: center;
+      z-index: 300;
+      padding: 16px;
+    }
+    .tr-modal-overlay.tr-modal-show { display: flex; }
+    .tr-modal {
+      background: var(--panel-bg);
+      border: 1px solid var(--panel-border);
+      border-radius: 16px;
+      padding: 26px 22px;
+      max-width: 360px;
+      width: 100%;
+      text-align: center;
+    }
+    .tr-modal h2 { font-size: 1.35rem; margin-bottom: 4px; }
+    .tr-modal .tr-subtext { font-style: italic; color: #64748b; font-size: 0.88rem; margin-bottom: 16px; }
+    .tr-modal p  { color: #94a3b8; font-size: 0.87rem; line-height: 1.65; margin-bottom: 8px; }
+    .tr-rule-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin: 12px 0;
+    }
+    .tr-rule-cell {
+      background: rgba(255,255,255,0.04);
+      border-radius: 8px;
+      padding: 8px 10px;
+      text-align: center;
+    }
+    .tr-rule-cell .tr-rc-label { display: block; font-size: 0.62rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px; }
+    .tr-rule-cell .tr-rc-val   { display: block; font-size: 0.9rem; font-weight: 800; color: #f1f5f9; }
+    .tr-rule-cell.tr-rc-easy   .tr-rc-val { color: #4ade80; }
+    .tr-rule-cell.tr-rc-medium .tr-rc-val { color: #60a5fa; }
+    .tr-rule-cell.tr-rc-hard   .tr-rc-val { color: #fbbf24; }
+    .tr-rule-cell.tr-rc-expert .tr-rc-val { color: #f87171; }
+    .tr-modal-actions { margin-top: 18px; }
+
+    /* ── Keyframes ── */
+    @keyframes trScoreFloat {
+      0%   { opacity:1; transform:translate(-50%,-50%) scale(1); }
+      20%  { opacity:1; transform:translate(-50%,calc(-50% - 14px)) scale(1.15); }
+      70%  { opacity:0.9; transform:translate(-50%,calc(-50% - 52px)) scale(1); }
+      100% { opacity:0; transform:translate(-50%,calc(-50% - 80px)) scale(0.85); }
+    }
+    @keyframes trDeductFloat {
+      0%   { opacity:1; transform:translate(-50%,-50%) scale(1); }
+      20%  { opacity:1; transform:translate(-50%,calc(-50% + 12px)) scale(1.1); }
+      70%  { opacity:0.9; transform:translate(-50%,calc(-50% + 48px)) scale(1); }
+      100% { opacity:0; transform:translate(-50%,calc(-50% + 75px)) scale(0.85); }
+    }
+    @keyframes trComboIn {
+      0%   { opacity:0; transform:translate(-50%,calc(-50% + 18px)) scale(0.85); }
+      15%  { opacity:1; transform:translate(-50%,-50%) scale(1.1); }
+      70%  { opacity:1; transform:translate(-50%,-50%) scale(1); }
+      100% { opacity:0; transform:translate(-50%,calc(-50% - 14px)) scale(0.9); }
+    }
+    @keyframes trBroken {
+      0%   { opacity:0; transform:translate(-50%,calc(-50% - 12px)) scale(1.2); }
+      20%  { opacity:1; transform:translate(-50%,-50%) scale(1); }
+      75%  { opacity:1; transform:translate(-50%,-50%); }
+      100% { opacity:0; transform:translate(-50%,calc(-50% + 8px)); }
+    }
+    @keyframes trFlash {
+      0%   { opacity:0; }
+      25%  { opacity:0.32; }
+      100% { opacity:0; }
+    }
+    @keyframes trShake {
+      0%,100% { transform:translateX(0); }
+      20% { transform:translateX(-4px); }
+      40% { transform:translateX(4px); }
+      60% { transform:translateX(-3px); }
+      80% { transform:translateX(3px); }
+    }
+    @keyframes trShakeHard {
+      0%,100% { transform:translate(0,0); }
+      15% { transform:translate(-8px,-2px) rotate(-0.4deg); }
+      30% { transform:translate(8px,2px)  rotate(0.4deg); }
+      45% { transform:translate(-6px,-1px); }
+      60% { transform:translate(6px,1px); }
+      75% { transform:translate(-3px,0); }
+      90% { transform:translate(3px,0); }
+    }
+    @keyframes trGlowMax {
+      0%,100% { box-shadow:0 0 30px rgba(239,68,68,0.28),0 0 60px rgba(249,115,22,0.12); }
+      50%      { box-shadow:0 0 55px rgba(239,68,68,0.5),0 0 110px rgba(249,115,22,0.22),0 0 150px rgba(251,191,36,0.1); }
+    }
+    @keyframes trMultUp {
+      0%   { transform:scale(1); }
+      40%  { transform:scale(1.6) translateY(-4px); filter:brightness(1.4); }
+      70%  { transform:scale(0.9); }
+      100% { transform:scale(1); filter:brightness(1); }
+    }
+    @keyframes trMultCrack {
+      0%   { transform:scale(1); }
+      15%  { transform:scale(1.3) rotate(-5deg); filter:brightness(0.65); }
+      30%  { transform:scale(0.8) rotate(5deg); }
+      55%  { transform:scale(1.1) rotate(-2deg); }
+      78%  { transform:scale(0.96) rotate(1deg); }
+      100% { transform:scale(1) rotate(0); filter:brightness(1); }
+    }
+    @keyframes trTimerPulse {
+      0%,100% { opacity:1; }
+      50%      { opacity:0.55; }
+    }
+    @keyframes trPulse {
+      0%,100% { opacity:1; }
+      50%      { opacity:0.5; }
+    }
+  </style>
+</head>
+<body data-page="mashup-trivia-rush">
+<script>if(isPremiumUser())document.body.classList.add('premium-mode');</script>
+
+  <main class="container narrow">
+    <a id="trBackLink" href="mashup.html" class="back-link">← Back</a>
+
+    <!-- Loading state -->
+    <div id="trLoadingBox">
+      <section class="panel">
+        <p>Loading...</p>
+      </section>
+    </div>
+
+    <!-- Start screen -->
+    <section class="panel" id="trStartBox" style="display:none">
+      <div class="tr-wrap">
+        <div class="tr-start-screen">
+          <p class="tr-start-theme" id="trStartTheme"></p>
+          <h1 class="tr-start-title">Trivia Rush</h1>
+          <p class="tr-start-tagline">Answer fast · Build streaks · Chase the rush</p>
+          <div class="tr-start-rules">
+            <div class="tr-start-rule">
+              <span class="tr-start-rule-val">20s</span>
+              <span class="tr-start-rule-label">Per question</span>
+            </div>
+            <div class="tr-start-rule">
+              <span class="tr-start-rule-val">+1x</span>
+              <span class="tr-start-rule-label">Every 3 correct</span>
+            </div>
+            <div class="tr-start-rule">
+              <span class="tr-start-rule-val">−1x</span>
+              <span class="tr-start-rule-label">2 wrong = 2x deduct</span>
+            </div>
+            <div class="tr-start-rule">
+              <span class="tr-start-rule-val">2x</span>
+              <span class="tr-start-rule-label">Max heat bonus</span>
+            </div>
+          </div>
+          <button class="primary-btn tr-start-btn" id="trStartBtn">Start Rush</button>
+          <button class="secondary-btn" id="trStartHowToBtn" style="width:100%;">How to Play</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Game panel -->
+    <section class="panel" id="trGamePanel" style="display:none">
+      <div class="tr-wrap">
+
+        <!-- Theme name -->
+        <p class="tr-theme-name" id="trTitle" style="text-align:center;margin-bottom:12px;"></p>
+
+        <!-- Stats -->
+        <div class="tr-stats-bar">
+          <div class="tr-score-col">
+            <span class="tr-stat-label-sm">Score</span>
+            <span class="tr-stat-val-lg" id="trScore">0</span>
+          </div>
+          <div class="tr-streak-col">
+            <span class="tr-stat-label-sm">Streak</span>
+            <span class="tr-stat-val-lg" id="trStreak">0</span>
+          </div>
+          <div class="tr-multiplier tr-mult-1" id="trMultiplier">x1</div>
+        </div>
+
+        <!-- Double points banner -->
+        <div class="tr-double-bar" id="trDoubleBar">DOUBLE POINTS ACTIVE</div>
+
+        <!-- Heat meter -->
+        <div class="tr-heat-row">
+          <span class="tr-meter-label">Heat</span>
+          <div class="tr-meter-track">
+            <div class="tr-heat-fill" id="trHeatFill"></div>
+          </div>
+          <span class="tr-meter-num" id="trHeatText">0/10</span>
+        </div>
+
+        <!-- Timer -->
+        <div class="tr-timer-row">
+          <div class="tr-timer-track">
+            <div class="tr-timer-fill" id="trTimerFill"></div>
+          </div>
+          <span class="tr-timer-num" id="trTimerText">20</span>
+        </div>
+
+        <!-- Theme badge + question + options -->
+        <div style="margin-bottom:12px">
+          <span class="tr-theme-badge" id="trThemeBadge"></span>
+        </div>
+        <p class="tr-question" id="trQuestionText"></p>
+        <div class="tr-options" id="trOptionsGrid"></div>
+
+        <!-- Feedback link -->
+        <div class="tr-feedback-row">
+          <a href="contact.html" class="secondary-btn" style="font-size:0.83rem;padding:8px 18px;text-decoration:none;">Leave Feedback</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Game over panel -->
+    <section class="panel" id="trGameOverBox" style="display:none"></section>
+  </main>
+
+  <!-- Red screen flash -->
+  <div class="tr-flash-overlay" id="trFlashOverlay"></div>
+
+  <!-- Floating arcade effects -->
+  <div class="tr-fx-layer">
+    <div class="tr-score-popup" id="trScorePopup"></div>
+    <div class="tr-deduct-popup" id="trDeductPopup"></div>
+    <div class="tr-combo-text"  id="trComboText"></div>
+    <div class="tr-streak-broken" id="trStreakBroken">STREAK BROKEN</div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a class="footer-highlight" href="remove-ads.html">Ad-Free</a>
+        <a href="about.html">About</a>
+        <a class="footer-highlight" href="how-it-works.html">How It Works</a>
+        <a class="footer-highlight" href="contact.html">Contact</a>
+        <a class="footer-highlight" href="blog.html">Blog</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- How to Play modal -->
+  <div class="tr-modal-overlay" id="trHowToModal">
+    <div class="tr-modal">
+      <h2>Trivia Rush</h2>
+      <p class="tr-subtext">Answer fast, build streaks, chase the rush</p>
+
+      <p>Questions go <strong>Easy → Medium → Hard → Expert</strong>. Tap an answer before the <strong>20-second timer</strong> runs out.</p>
+
+      <div class="tr-rule-grid">
+        <div class="tr-rule-cell tr-rc-easy">
+          <span class="tr-rc-label">Easy</span>
+          <span class="tr-rc-val">100 pts</span>
+        </div>
+        <div class="tr-rule-cell tr-rc-medium">
+          <span class="tr-rc-label">Medium</span>
+          <span class="tr-rc-val">200 pts</span>
+        </div>
+        <div class="tr-rule-cell tr-rc-hard">
+          <span class="tr-rc-label">Hard</span>
+          <span class="tr-rc-val">300 pts</span>
+        </div>
+        <div class="tr-rule-cell tr-rc-expert">
+          <span class="tr-rc-label">Expert</span>
+          <span class="tr-rc-val">400 pts</span>
+        </div>
+      </div>
+
+      <p>Every <strong>3 correct answers</strong> in a row raises your multiplier by +1x. Every <strong>2 wrong in a row</strong> drops it by −1x and hits you with a <strong>double deduction</strong>. Streaks reset each other.</p>
+      <p>Wrong answer or timeout deducts points. <strong>The higher your score, the bigger the penalty</strong> — deductions scale up at 500, 2000, and 4000 points. Score hits 0 and the run ends.</p>
+      <p>Fill the <strong>Heat Meter</strong> with 10 consecutive correct answers to unlock <strong>Double Points</strong> for 3 questions.</p>
+
+      <div class="tr-modal-actions">
+        <button class="primary-btn" onclick="document.getElementById('trHowToModal').classList.remove('tr-modal-show')">Got it!</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/app.js"></script>
+  <script src="assets/trivia-rush.js"></script>
+</body>
+</html>

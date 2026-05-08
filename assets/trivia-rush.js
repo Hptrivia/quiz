@@ -148,8 +148,21 @@ function trRender() {
   const { currentQ, currentDiff } = trState;
 
   const badge = document.getElementById('trDiffBadge');
-  badge.textContent = currentDiff.toUpperCase();
-  badge.className = 'tr-diff-badge tr-diff-' + currentDiff;
+  if (badge) {
+    badge.textContent = currentDiff.toUpperCase();
+    badge.className = 'tr-diff-badge tr-diff-' + currentDiff;
+  }
+
+  const themeBadge = document.getElementById('trThemeBadge');
+  if (themeBadge && currentQ._themeName) {
+    const c = trState.themeColorMap && trState.themeColorMap[currentQ._themeSlug];
+    if (c) {
+      themeBadge.style.background = c.bg;
+      themeBadge.style.borderColor = c.border;
+      themeBadge.style.color = c.text;
+    }
+    themeBadge.textContent = currentQ._themeName;
+  }
 
   document.getElementById('trQuestionText').textContent = currentQ.question;
 
@@ -488,9 +501,16 @@ function trEnd(completed) {
   const isNewBest = trState.score > prev;
   if (isNewBest) localStorage.setItem(bestKey, trState.score);
 
+  const pageBase = window.location.pathname.includes('mashup-trivia-rush') ? 'mashup-trivia-rush.html' :
+                   window.location.pathname.includes('test') ? 'trivia-rush-test.html' : 'trivia-rush.html';
+  const isMashup = pageBase === 'mashup-trivia-rush.html';
+
+  const playAgainHref = isMashup
+    ? `${pageBase}?themes=${encodeURIComponent(trState.themeSlug)}`
+    : `${pageBase}?theme=${trState.themeSlug}`;
+
   const themeObj = trState.allThemes.find(t => t.slug === trState.themeSlug) || { slug: trState.themeSlug, category: '' };
-  const related = typeof getRelatedThemes === 'function' ? getRelatedThemes(trState.allThemes, themeObj, 5) : [];
-  const pageBase = window.location.pathname.includes('test') ? 'trivia-rush-test.html' : 'trivia-rush.html';
+  const related = (!isMashup && typeof getRelatedThemes === 'function') ? getRelatedThemes(trState.allThemes, themeObj, 5) : [];
 
   const relatedHtml = related.length ? `
     <div class="theme-related-quizzes" style="margin-top:1.5rem">
@@ -500,9 +520,11 @@ function trEnd(completed) {
       </div>
     </div>` : '';
 
+  const searchLinkBase = isMashup ? 'trivia-rush.html' : pageBase;
+
   gameOverBox.innerHTML = `
     <div class="tr-gameover">
-      <h2 class="tr-gameover-title">${completed ? 'Theme Complete!' : 'Rush Over'}</h2>
+      <h2 class="tr-gameover-title">${completed ? 'Rush Complete!' : 'Rush Over'}</h2>
       ${isNewBest ? '<p class="tr-new-best">NEW BEST SCORE</p>' : ''}
       <div class="tr-final-score">${trState.score.toLocaleString()}</div>
       <div class="tr-final-stats">
@@ -512,7 +534,7 @@ function trEnd(completed) {
         <div class="tr-stat"><span class="tr-stat-label">Peak Multi</span><span class="tr-stat-val">x${trState.multiplier}</span></div>
       </div>
       <div class="cta-row" style="margin-top:1.5rem">
-        <a class="primary-btn" href="${pageBase}?theme=${trState.themeSlug}">Play Again</a>
+        <a class="primary-btn" href="${playAgainHref}">Play Again</a>
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
       <div class="result-theme-search" style="margin-top:1.5rem">
@@ -530,7 +552,7 @@ function trEnd(completed) {
   if (si && sr) {
     const render = items => {
       sr.innerHTML = items.length
-        ? items.map(t => `<a class="search-item" href="${pageBase}?theme=${t.slug}">${t.title}</a>`).join('')
+        ? items.map(t => `<a class="search-item" href="${searchLinkBase}?theme=${t.slug}">${t.title}</a>`).join('')
         : '<div class="search-item">No results found</div>';
     };
     si.addEventListener('focus', () => { render(trState.allThemes); sr.style.display = 'block'; });
@@ -546,6 +568,108 @@ function trEnd(completed) {
 
 }
 
+const TR_BADGE_COLORS = [
+  { bg: 'rgba(59,130,246,0.15)',  border: '#3b82f6', text: '#93c5fd' },
+  { bg: 'rgba(34,197,94,0.12)',   border: '#22c55e', text: '#86efac' },
+  { bg: 'rgba(249,115,22,0.15)',  border: '#f97316', text: '#fdba74' },
+  { bg: 'rgba(168,85,247,0.15)', border: '#a855f7', text: '#d8b4fe' },
+  { bg: 'rgba(236,72,153,0.15)', border: '#ec4899', text: '#f9a8d4' },
+];
+
+async function trMashupInit() {
+  const loadBox = document.getElementById('trLoadingBox');
+  const gamePanel = document.getElementById('trGamePanel');
+  if (!loadBox) return;
+
+  const themesParam = getParam('themes');
+  if (!themesParam) {
+    loadBox.querySelector('p').textContent = 'No themes specified.';
+    return;
+  }
+
+  const slugs = themesParam.split(',').map(s => s.trim()).filter(Boolean);
+  if (slugs.length < 2) {
+    window.location.href = 'mashup.html';
+    return;
+  }
+
+  try {
+    const allThemes = await loadThemes();
+    const selectedThemes = slugs.map(s => allThemes.find(t => t.slug === s)).filter(Boolean);
+    if (selectedThemes.length < 2) {
+      window.location.href = 'mashup.html';
+      return;
+    }
+
+    const allQuestions = [];
+    await Promise.all(selectedThemes.map(async (theme) => {
+      try {
+        const qs = await fetchJSON(theme.questionFile);
+        if (Array.isArray(qs)) {
+          qs.forEach(q => allQuestions.push(Object.assign({}, q, { _themeSlug: theme.slug, _themeName: theme.title })));
+        }
+      } catch (e) {}
+    }));
+
+    const mashupSlug = selectedThemes.map(t => t.slug).join(',');
+    const mashupTitle = selectedThemes.map(t => t.title).join(' + ');
+    trState = trMakeState(mashupTitle, mashupSlug, allThemes);
+
+    trState.themeColorMap = {};
+    selectedThemes.forEach((t, i) => {
+      trState.themeColorMap[t.slug] = TR_BADGE_COLORS[i % TR_BADGE_COLORS.length];
+    });
+
+    TR_DIFF_ORDER.forEach(d => {
+      trState.pools[d] = shuffleArray(allQuestions.filter(q => normalizeDifficulty(q.difficulty) === d));
+    });
+
+    while (trState.diffIndex < TR_DIFF_ORDER.length &&
+           trState.pools[TR_DIFF_ORDER[trState.diffIndex]].length === 0) {
+      trState.diffIndex++;
+    }
+
+    if (trState.diffIndex >= TR_DIFF_ORDER.length) {
+      loadBox.querySelector('p').textContent = 'No questions found for these themes.';
+      return;
+    }
+
+    trState.currentDiff = TR_DIFF_ORDER[trState.diffIndex];
+
+    const titleEl = document.getElementById('trTitle');
+    if (titleEl) titleEl.textContent = mashupTitle;
+    document.title = mashupTitle + ' — Trivia Rush | Trivia Gauntlet';
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute('content', `Play ${mashupTitle} Trivia Rush on Trivia Gauntlet. Answer fast, build streaks, chase the rush.`);
+
+    const backLink = document.getElementById('trBackLink');
+    if (backLink) backLink.href = 'mashup-landing.html?themes=' + encodeURIComponent(mashupSlug);
+
+    const openModal = () => document.getElementById('trHowToModal').classList.add('tr-modal-show');
+    document.getElementById('trHowToBtn')?.addEventListener('click', openModal);
+    document.getElementById('trStartHowToBtn')?.addEventListener('click', openModal);
+
+    const startThemeEl = document.getElementById('trStartTheme');
+    if (startThemeEl) startThemeEl.textContent = 'Mashup · ' + selectedThemes.length + ' themes';
+
+    document.getElementById('trStartBtn')?.addEventListener('click', () => {
+      document.getElementById('trStartBox').style.display = 'none';
+      gamePanel.style.display = '';
+      trUpdateStats();
+      trUpdateHeat();
+      trNext();
+    });
+
+    loadBox.style.display = 'none';
+    document.getElementById('trStartBox').style.display = '';
+
+  } catch (err) {
+    loadBox.querySelector('p').textContent = 'Failed to load questions. Please try again.';
+    console.error(err);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   if (document.body.dataset.page === 'trivia-rush') trInit();
+  else if (document.body.dataset.page === 'mashup-trivia-rush') trMashupInit();
 });
