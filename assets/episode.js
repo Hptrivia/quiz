@@ -221,6 +221,7 @@ async function renderEpisodePage() {
 
       if (selectedAnswer === q.answer) {
         score += 1;
+        if (typeof SoundFX !== 'undefined') SoundFX.play('correct');
         feedbackP.textContent = `Correct. The answer is ${q.answer}.`;
         feedbackP.className = "feedback correct";
         if (selectedBtn) {
@@ -229,6 +230,7 @@ async function renderEpisodePage() {
           selectedBtn.classList.add("correct-anim");
         }
       } else {
+        if (typeof SoundFX !== 'undefined') SoundFX.play('wrong');
         feedbackP.textContent = `Wrong. The correct answer is ${q.answer}.`;
         feedbackP.className = "feedback wrong";
         if (selectedBtn) {
