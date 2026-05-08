@@ -16,6 +16,9 @@ async function renderChallengePage() {
     return;
   }
 
+  document.title = `${theme.title} Challenge Mode - Trivia Gauntlet`;
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.setAttribute('content', `Play ${theme.title} trivia in Challenge Mode on Trivia Gauntlet. 30 questions per round across multiple rounds.`);
 
   if (typeof gtag === "function") {
     gtag("event", "page_view", {

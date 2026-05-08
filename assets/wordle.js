@@ -240,6 +240,10 @@ async function renderWordlePage() {
     return;
   }
 
+  document.title = `${theme.title} Wordle - Trivia Gauntlet`;
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.setAttribute('content', `Play the ${theme.title} Wordle on Trivia Gauntlet. Guess hidden words from the ${theme.title} universe one letter at a time.`);
+
   if (typeof gtag === "function") {
     gtag("event", "page_view", {
       page_title: `Wordle - ${theme.title}`,
@@ -466,8 +470,68 @@ async function renderWordlePage() {
     }
   });
 
+  renderWordlePageContent(theme, themes, safePage, words);
   loadWord(0);
   if (safePage >= 4 && typeof maybeShowPwaPopup === "function") maybeShowPwaPopup();
+}
+
+function renderWordlePageContent(theme, themes, page, allWords = []) {
+  const container = document.getElementById("wordlePageContent");
+  if (!container) return;
+
+  const ctx = getThemeContext(theme.category);
+  const relatedThemes = getRelatedThemes(themes, theme, 5);
+  const toTitleCase = s => String(s).toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
+  const sample = allWords.slice(0, 4).map(toTitleCase);
+  const wordLine = sample.length >= 2
+    ? `Find words like ${sample.slice(0, -1).join(", ")}, and ${sample[sample.length - 1]} alongside other characters, locations, and key terms that define ${theme.title}.`
+    : `Words are drawn from the characters, locations, and key terms that define ${theme.title}.`;
+
+  const relatedHtml = relatedThemes.length ? `
+    <div class="theme-related-quizzes">
+      <h3>Related themes</h3>
+      <div class="grid">
+        ${relatedThemes.map(t => `<a class="card" href="wordle.html?theme=${t.slug}&page=1"><h3>${t.title}</h3></a>`).join("")}
+      </div>
+    </div>` : "";
+
+  const descHtml = page === 1 ? `
+    <h2>About the ${theme.title} Wordle</h2>
+    <p>The ${theme.title} Wordle pulls words from across ${ctx} and challenges you to guess each one a letter at a time. ${wordLine} Green tiles mean the letter is in the right position, yellow means it appears somewhere else in the word, and grey means it is not in the word at all. Each page covers a new set of words, working through the theme from familiar names to more specific terms.</p>
+    <hr style="border:none;border-top:1px solid var(--panel-border);margin:20px 0;">` : "";
+
+  container.innerHTML = `
+    <section class="panel" style="margin-top:16px;">
+      ${descHtml}
+      <div class="result-theme-search">
+        <p class="result-theme-search-title">Try another Wordle theme</p>
+        <div class="search-wrap">
+          <input id="wordleThemeSearchInput" class="theme-search-input" type="text" placeholder="Search themes..." autocomplete="off" />
+          <div id="wordleThemeSearchResults" class="search-results"></div>
+        </div>
+        ${relatedHtml}
+      </div>
+    </section>`;
+
+  const input = document.getElementById("wordleThemeSearchInput");
+  const results = document.getElementById("wordleThemeSearchResults");
+  if (!input || !results) return;
+
+  const renderResults = (items) => {
+    results.innerHTML = items.length
+      ? items.map(t => `<a class="search-item" href="wordle.html?theme=${t.slug}&page=1">${t.title}</a>`).join("")
+      : '<div class="search-item">No results found</div>';
+  };
+
+  input.addEventListener("focus", () => { renderResults(themes); results.style.display = "block"; });
+  input.addEventListener("input", e => {
+    const v = e.target.value.trim().toLowerCase();
+    renderResults(themes.filter(t => t.title.toLowerCase().includes(v)));
+    results.style.display = "block";
+  });
+  document.addEventListener("click", e => {
+    if (!input.contains(e.target) && !results.contains(e.target)) results.style.display = "none";
+  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {

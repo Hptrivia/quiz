@@ -16,6 +16,10 @@ async function renderSurvivalPage() {
 
   if (!theme) return;
 
+  document.title = `${theme.title} Survival Mode - Trivia Gauntlet`;
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.setAttribute('content', `Play ${theme.title} Survival Mode on Trivia Gauntlet. Answer correctly to keep your streak alive — one wrong answer ends the run.`);
+
   if (typeof gtag === "function") {
     gtag("event", "page_view", {
       page_title: `Survival Mode - ${theme.title}`,

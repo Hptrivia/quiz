@@ -5,6 +5,10 @@ async function renderEpisodePage() {
 
   if (!theme) return;
 
+  document.title = `${theme.title} Episode Mode - Trivia Gauntlet`;
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.setAttribute('content', `Play ${theme.title} Episode Mode on Trivia Gauntlet. Episode-by-episode trivia questions following the series.`);
+
   if (typeof gtag === "function") {
     gtag("event", "page_view", {
       page_title: `Episode Mode - ${theme.title}`,

@@ -15,6 +15,14 @@ function getParam(name) {
   return params.get(name);
 }
 
+function getThemeContext(category) {
+  if (category === "Games") return "the game";
+  if (category === "Sports") return "the sport";
+  if (category === "Books") return "the books";
+  if (category === "Movies") return "the film";
+  return "the series";
+}
+
 function getRelatedThemes(allThemes, currentTheme, limit = 5) {
   const sameCategory = allThemes.filter(t =>
     t.slug !== currentTheme.slug &&

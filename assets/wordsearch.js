@@ -422,6 +422,9 @@ async function renderWordSearchPage() {
   }
 
   titleEl.textContent = `${theme.title} Word Search`;
+  document.title = `${theme.title} Word Search - Trivia Gauntlet`;
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.setAttribute('content', `Play the ${theme.title} Word Search on Trivia Gauntlet. Find hidden words from the ${theme.title} universe across multiple pages.`);
 
   if (typeof gtag === "function") {
     gtag("event", "page_view", {
@@ -466,7 +469,67 @@ async function renderWordSearchPage() {
   wsUpdateStats();
   wsWireEvents();
 
+  renderWsPageContent(theme, themes, safePage, themeWords);
   if (safePage >= 2 && typeof maybeShowPwaPopup === "function") maybeShowPwaPopup();
+}
+
+function renderWsPageContent(theme, themes, page, allWords = []) {
+  const container = document.getElementById("wsPageContent");
+  if (!container) return;
+
+  const ctx = getThemeContext(theme.category);
+  const relatedThemes = getRelatedThemes(themes, theme, 5);
+  const toTitleCase = s => String(s).toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
+  const sample = allWords.slice(0, 6).map(toTitleCase);
+  const wordLine = sample.length >= 2
+    ? `Find words like ${sample.slice(0, -1).join(", ")}, and ${sample[sample.length - 1]} alongside other characters, locations, and key terms associated with ${theme.title}.`
+    : `The words are drawn from the characters, locations, and key terms associated with ${theme.title}.`;
+
+  const relatedHtml = relatedThemes.length ? `
+    <div class="theme-related-quizzes">
+      <h3>Related themes</h3>
+      <div class="grid">
+        ${relatedThemes.map(t => `<a class="card" href="wordsearch.html?theme=${t.slug}&page=1"><h3>${t.title}</h3></a>`).join("")}
+      </div>
+    </div>` : "";
+
+  const descHtml = page === 1 ? `
+    <h2>About the ${theme.title} Word Search</h2>
+    <p>The ${theme.title} Word Search hides words from ${ctx} inside a grid of letters — you won't know what you're looking for until you find it. ${wordLine} Words run horizontally, vertically, or diagonally, and each one reveals itself as you drag across the right letters. Each page works through a different set of words, so there is always more to find.</p>
+    <hr style="border:none;border-top:1px solid var(--panel-border);margin:20px 0;">` : "";
+
+  container.innerHTML = `
+    <section class="panel" style="margin-top:16px;">
+      ${descHtml}
+      <div class="result-theme-search">
+        <p class="result-theme-search-title">Try another Word Search theme</p>
+        <div class="search-wrap">
+          <input id="wsThemeSearchInput" class="theme-search-input" type="text" placeholder="Search themes..." autocomplete="off" />
+          <div id="wsThemeSearchResults" class="search-results"></div>
+        </div>
+        ${relatedHtml}
+      </div>
+    </section>`;
+
+  const input = document.getElementById("wsThemeSearchInput");
+  const results = document.getElementById("wsThemeSearchResults");
+  if (!input || !results) return;
+
+  const renderResults = (items) => {
+    results.innerHTML = items.length
+      ? items.map(t => `<a class="search-item" href="wordsearch.html?theme=${t.slug}&page=1">${t.title}</a>`).join("")
+      : '<div class="search-item">No results found</div>';
+  };
+
+  input.addEventListener("focus", () => { renderResults(themes); results.style.display = "block"; });
+  input.addEventListener("input", e => {
+    const v = e.target.value.trim().toLowerCase();
+    renderResults(themes.filter(t => t.title.toLowerCase().includes(v)));
+    results.style.display = "block";
+  });
+  document.addEventListener("click", e => {
+    if (!input.contains(e.target) && !results.contains(e.target)) results.style.display = "none";
+  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
