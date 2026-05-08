@@ -517,6 +517,20 @@ function renderWordlePageContent(theme, themes, page, allWords = []) {
       </div>
     </section>`;
 
+  if (typeof isPremiumUser === 'function' && !isPremiumUser()) {
+    const adDiv = document.createElement('div');
+    adDiv.id = 'mid-banner-ad';
+    adDiv.style.cssText = 'text-align:center;margin:12px 0;';
+    const s1 = document.createElement('script');
+    s1.textContent = 'atOptions={"key":"6cd708c27c2130cedbed5e1a3bc703d0","format":"iframe","height":250,"width":300,"params":{}};';
+    const s2 = document.createElement('script');
+    s2.src = 'https://www.highperformanceformat.com/6cd708c27c2130cedbed5e1a3bc703d0/invoke.js';
+    adDiv.appendChild(s1);
+    adDiv.appendChild(s2);
+    const tryAnother = container.querySelector('.result-theme-search');
+    if (tryAnother) tryAnother.parentNode.insertBefore(adDiv, tryAnother);
+  }
+
   const input = document.getElementById("wordleThemeSearchInput");
   const results = document.getElementById("wordleThemeSearchResults");
   if (!input || !results) return;

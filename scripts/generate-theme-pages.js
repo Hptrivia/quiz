@@ -233,6 +233,21 @@ const relatedThemesHtml = relatedThemes.length
           <p>Printables, answer sheets, and bonus files</p>
         </a>
       </div>
+
+    <div id="mid-banner-ad" style="text-align:center;margin:12px 0;">
+      <script>
+        if(!isPremiumUser()){
+          var adDiv=document.getElementById('mid-banner-ad');
+          var s1=document.createElement('script');
+          s1.textContent='atOptions={"key":"6cd708c27c2130cedbed5e1a3bc703d0","format":"iframe","height":250,"width":300,"params":{}};';
+          var s2=document.createElement('script');
+          s2.src='https://www.highperformanceformat.com/6cd708c27c2130cedbed5e1a3bc703d0/invoke.js';
+          adDiv.appendChild(s1);
+          adDiv.appendChild(s2);
+        }
+      </script>
+    </div>
+
       ${sampleQuestionsHtml}
       ${rawSeoIntro ? `<p>${coverageText}</p>` : ""}
       ${rawSeoDetail ? `<p>${detailText}</p>` : ""} 
@@ -356,8 +371,10 @@ function main() {
     `${SITE_URL}/trivia-rush.html`
   ];
 
+  const onlySlugs = process.env.ONLY_SLUGS ? new Set(process.env.ONLY_SLUGS.split(',')) : null;
   themes.forEach((theme) => {
     if (!theme.slug || !theme.title || !theme.questionFile) return;
+    if (onlySlugs && !onlySlugs.has(theme.slug)) return;
 
     if (seen.has(theme.slug)) {
       console.warn(`Duplicate slug detected: ${theme.slug} — later file will overwrite earlier one.`);
