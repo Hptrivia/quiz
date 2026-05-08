@@ -10,18 +10,18 @@
     "seoIntro": "Bible trivia works well because it covers a huge range of recognisable material, from Genesis and Exodus to the Gospels, parables, kings, prophets, apostles, and major miracles. It gives casual players plenty of entry points while still leaving room for harder questions on people, places, sequences, and specific events."
   },
   {
-  "slug": "the-pitt",
-  "title": "The Pitt",
-  "category": "TV/Series",
-  "questionFile": "data/pitt.txt",
-  "description": "A medical drama trivia theme focused on The Pitt, covering emergency room dynamics, doctors, nurses, patients, high-pressure decisions, and the fast-paced hospital environment that drives the series.",
-  "seoIntro": "The Pitt trivia works because medical dramas naturally create tension through urgent cases, ethical decisions, and character relationships under pressure. The hospital setting provides a constant flow of memorable situations and personal conflicts.",
-  "seoDetail": "A strong The Pitt quiz can include main doctors and staff, emergency room procedures, patient cases, hospital hierarchy, ethical dilemmas, medical terminology, personal storylines, and key turning points across episodes. The theme works because it combines fast-paced medical scenarios with character-driven drama, making both the cases and the people behind them central to the experience."
-},
-    {
+    "slug": "the-pitt",
+    "title": "The Pitt",
+    "category": "TV",
+    "questionFile": "data/pitt.txt",
+    "description": "A medical drama trivia theme focused on The Pitt, covering emergency room dynamics, doctors, nurses, patients, high-pressure decisions, and the fast-paced hospital environment that drives the series.",
+    "seoIntro": "The Pitt trivia works because medical dramas naturally create tension through urgent cases, ethical decisions, and character relationships under pressure. The hospital setting provides a constant flow of memorable situations and personal conflicts.",
+    "seoDetail": "A strong The Pitt quiz can include main doctors and staff, emergency room procedures, patient cases, hospital hierarchy, ethical dilemmas, medical terminology, personal storylines, and key turning points across episodes. The theme works because it combines fast-paced medical scenarios with character-driven drama, making both the cases and the people behind them central to the experience."
+  },
+  {
     "slug": "wednesday",
     "title": "Wednesday",
-    "category": "TV/Series",
+    "category": "TV",
     "questionFile": "data/wednesday.txt",
     "description": "A dark comedy and mystery trivia theme focused on Wednesday Addams, Nevermore Academy, psychic abilities, investigations, outcasts, and the gothic tone of the series.",
     "seoIntro": "Wednesday trivia works because the show mixes mystery, supernatural elements, school drama, and gothic humour around a very distinct main character. The setting and tone make even small details memorable.",
@@ -30,7 +30,7 @@
   {
     "slug": "family-guy",
     "title": "Family Guy",
-    "category": "TV/Series",
+    "category": "TV",
     "questionFile": "data/family.txt",
     "description": "A satirical animated trivia theme focused on Family Guy, covering the Griffin family, cutaway gags, pop culture references, and the chaotic humour style of the series.",
     "seoIntro": "Family Guy trivia works because the show is built on fast-paced jokes, recurring characters, absurd cutaway scenes, and constant pop culture parody that makes it highly memorable.",
@@ -39,7 +39,7 @@
   {
     "slug": "pretty-little-liars",
     "title": "Pretty Little Liars",
-    "category": "TV/Series",
+    "category": "TV",
     "questionFile": "data/pll.txt",
     "description": "A mystery drama trivia theme focused on Pretty Little Liars, covering secrets, identities, relationships, and the central mystery surrounding 'A'.",
     "seoIntro": "Pretty Little Liars trivia works because the series is driven by mystery, secrets, shifting identities, and constant twists that keep viewers guessing across multiple seasons.",
@@ -445,10 +445,10 @@
     "seoDetail": "A strong True or False quiz can include history, science, geography, sport, entertainment, animals, and weird facts presented as short statements that feel obvious until players have to commit to an answer. The theme stays useful because it relies on clarity, speed, and misdirection, making it ideal for quicker rounds that still test real knowledge.",
     "seoIntro": "True or False works well because the format is instantly understandable and keeps the pace moving. It can be used across almost any topic, and the challenge comes from how believable a statement sounds rather than from long question wording."
   },
-    {
+  {
     "slug": "lucifer",
     "title": "Lucifer",
-    "category": "TV/Series",
+    "category": "TV",
     "questionFile": "data/lucifer.txt",
     "description": "A supernatural crime drama trivia theme focused on Lucifer, covering celestial beings, detective work, relationships, moral choices, and the blend of humour and mythology that defines the series.",
     "seoIntro": "Lucifer trivia works because the show combines police procedural cases with supernatural mythology, creating a mix of character-driven drama, humour, and larger cosmic themes that are easy to remember.",
@@ -457,7 +457,7 @@
   {
     "slug": "the-flash",
     "title": "The Flash",
-    "category": "TV/Series",
+    "category": "TV",
     "questionFile": "data/flash.txt",
     "description": "A superhero trivia theme focused on The Flash, covering Barry Allen, speedster powers, villains, time travel, alternate timelines, and the science-driven elements of the series.",
     "seoIntro": "The Flash trivia works because the show mixes superhero action with science concepts, time travel, and emotional character arcs, making both powers and storylines highly memorable.",
@@ -466,30 +466,30 @@
   {
     "slug": "arrow",
     "title": "Arrow",
-    "category": "TV/Series",
+    "category": "TV",
     "questionFile": "data/arrow.txt",
     "description": "A superhero crime drama trivia theme focused on Arrow, covering Oliver Queen, vigilantism, Star City, flashbacks, allies, enemies, and the darker tone of the series.",
     "seoIntro": "Arrow trivia works because the show builds its identity around grounded action, long-term character development, and a structured narrative that mixes present-day missions with past events.",
     "seoDetail": "A strong Arrow quiz can include Oliver Queen, Felicity Smoak, John Diggle, Star City, The Hood/Green Arrow identity, flashback storylines, major villains, Team Arrow, missions, and crossovers within the Arrowverse. The theme works because it blends crime drama, superhero elements, and character history into a cohesive and evolving storyline."
   },
   {
-  "slug": "daredevil",
-  "title": "Daredevil",
-  "category": "TV/Series",
-  "questionFile": "data/daredevil.txt",
-  "description": "A superhero crime drama trivia theme focused on Daredevil, covering Matt Murdock, Hell’s Kitchen, vigilante justice, legal battles, organised crime, and the grounded, character-driven storytelling of the series.",
-  "seoIntro": "Daredevil trivia works because the show blends street-level superhero action with legal drama, moral conflict, and intense character development. Its grounded tone and realistic stakes make key moments, fights, and relationships easy to remember.",
-  "seoDetail": "A strong Daredevil quiz can include Matt Murdock, Daredevil identity, Foggy Nelson, Karen Page, Wilson Fisk, Bullseye, Elektra, Nelson & Murdock law firm, Hell’s Kitchen, The Hand, major court cases, vigilante actions, hallway fight scenes, and the evolving conflict between justice and revenge. The theme works because it combines crime storytelling, superhero elements, emotional character arcs, and memorable action sequences that define the series across its seasons."
-},
+    "slug": "daredevil",
+    "title": "Daredevil",
+    "category": "TV",
+    "questionFile": "data/daredevil.txt",
+    "description": "A superhero crime drama trivia theme focused on Daredevil, covering Matt Murdock, Hell’s Kitchen, vigilante justice, legal battles, organised crime, and the grounded, character-driven storytelling of the series.",
+    "seoIntro": "Daredevil trivia works because the show blends street-level superhero action with legal drama, moral conflict, and intense character development. Its grounded tone and realistic stakes make key moments, fights, and relationships easy to remember.",
+    "seoDetail": "A strong Daredevil quiz can include Matt Murdock, Daredevil identity, Foggy Nelson, Karen Page, Wilson Fisk, Bullseye, Elektra, Nelson & Murdock law firm, Hell’s Kitchen, The Hand, major court cases, vigilante actions, hallway fight scenes, and the evolving conflict between justice and revenge. The theme works because it combines crime storytelling, superhero elements, emotional character arcs, and memorable action sequences that define the series across its seasons."
+  },
   {
-  "slug": "from",
-  "title": "From",
-  "category": "TV/Series",
-  "questionFile": "data/from.txt",
-  "description": "A mystery horror trivia theme focused on From, covering the trapped town, its residents, supernatural threats, survival strategies, and the unfolding mystery behind why no one can leave.",
-  "seoIntro": "From trivia works because the series builds tension through unanswered questions, survival pressure, and a constantly expanding mystery. The setting is simple but the rules and details around it make everything feel significant.",
-  "seoDetail": "A strong From quiz can include Boyd Stevens, Tabitha Matthews, Jim Matthews, Victor, the town itself, the road loop, night creatures, talismans, the diner, the lighthouse, tunnels, symbols, and key survival rules. It can also cover relationships, shifting group dynamics, and major discoveries about the nature of the place. The theme works because it combines horror, mystery, and character-driven storytelling, where small details and clues become important over time."
-},
+    "slug": "from",
+    "title": "From",
+    "category": "TV",
+    "questionFile": "data/from.txt",
+    "description": "A mystery horror trivia theme focused on From, covering the trapped town, its residents, supernatural threats, survival strategies, and the unfolding mystery behind why no one can leave.",
+    "seoIntro": "From trivia works because the series builds tension through unanswered questions, survival pressure, and a constantly expanding mystery. The setting is simple but the rules and details around it make everything feel significant.",
+    "seoDetail": "A strong From quiz can include Boyd Stevens, Tabitha Matthews, Jim Matthews, Victor, the town itself, the road loop, night creatures, talismans, the diner, the lighthouse, tunnels, symbols, and key survival rules. It can also cover relationships, shifting group dynamics, and major discoveries about the nature of the place. The theme works because it combines horror, mystery, and character-driven storytelling, where small details and clues become important over time."
+  },
   {
     "slug": "world-capitals",
     "title": "World Capitals",
@@ -593,7 +593,7 @@
   {
     "slug": "a-knight-of-the-seven-kingdoms",
     "title": "A Knight of the Seven Kingdoms",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A fantasy trivia theme based on A Knight of the Seven Kingdoms, covering Dunk, Egg, tournaments, noble houses, Westerosi politics, and the smaller-scale character-driven storytelling tied to George R.R. Martin's world.",
     "image": "",
     "questionFile": "data/akots.txt",
@@ -603,7 +603,7 @@
   {
     "slug": "arcane",
     "title": "Arcane",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "An animated fantasy and sci-fi trivia theme focused on Arcane, covering Piltover, Zaun, Vi, Jinx, major relationships, politics, inventions, and the emotional story beats that made the series stand out.",
     "image": "",
     "questionFile": "data/arcane.txt",
@@ -613,7 +613,7 @@
   {
     "slug": "attack-on-titan",
     "title": "Attack on Titan",
-    "category": "TV/Series",
+    "category": "Anime",
     "description": "A dark anime trivia theme built around Attack on Titan, covering Titans, military factions, hidden truths, battles, shifting loyalties, and the world-changing revelations that define the series.",
     "image": "",
     "questionFile": "data/attack.txt",
@@ -623,7 +623,7 @@
   {
     "slug": "avatar-the-last-airbender",
     "title": "Avatar: The Last Airbender",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "An animated fantasy trivia theme focused on Avatar: The Last Airbender, covering bending arts, the four nations, Aang's journey, major characters, humour, and the emotional moments that made the series so widely loved.",
     "image": "",
     "questionFile": "data/avatar.txt",
@@ -633,7 +633,7 @@
   {
     "slug": "breaking-bad",
     "title": "Breaking Bad",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A crime drama trivia theme built around Breaking Bad, covering Walter White, Jesse Pinkman, the meth empire, family tension, criminal partnerships, and the major turning points of the series.",
     "image": "",
     "questionFile": "data/breaking.txt",
@@ -643,7 +643,7 @@
   {
     "slug": "bridgerton",
     "title": "Bridgerton",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A period romance trivia theme focused on Bridgerton, covering family dynamics, courtship, scandal, society politics, major romances, and the social world that drives the series.",
     "image": "",
     "questionFile": "data/bridgerton.txt",
@@ -653,7 +653,7 @@
   {
     "slug": "brooklyn-99",
     "title": "Brooklyn 99",
-    "category": "TV/Series",
+    "category": "Sitcoms",
     "description": "A workplace comedy trivia theme centered on Brooklyn Nine-Nine, covering the precinct squad, running jokes, Halloween heists, relationships, casework, and the ensemble dynamics that made the show so rewatchable.",
     "image": "",
     "questionFile": "data/brooklyn.txt",
@@ -663,7 +663,7 @@
   {
     "slug": "community",
     "title": "Community",
-    "category": "TV/Series",
+    "category": "Sitcoms",
     "description": "A meta sitcom trivia theme built around Community, covering the Greendale study group, genre parodies, recurring jokes, school chaos, and the inventive episode ideas that made the show feel unlike a normal comedy.",
     "image": "",
     "questionFile": "data/community.txt",
@@ -673,7 +673,7 @@
   {
     "slug": "dc-movies",
     "title": "DC Movies",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A superhero movie trivia theme covering DC films through heroes, villains, major storylines, actors, powers, team-ups, and the different cinematic interpretations of the franchise.",
     "image": "",
     "questionFile": "data/DC.txt",
@@ -683,7 +683,7 @@
   {
     "slug": "demon-slayer",
     "title": "Demon Slayer",
-    "category": "TV/Series",
+    "category": "Anime",
     "description": "An anime trivia theme focused on Demon Slayer, covering Tanjiro, Nezuko, the Hashira, breathing styles, demons, battles, and the emotional story moments that made the series such a major hit.",
     "image": "",
     "questionFile": "data/demon.txt",
@@ -693,7 +693,7 @@
   {
     "slug": "dexter",
     "title": "Dexter",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A crime thriller trivia theme built around Dexter, covering Dexter Morgan, Miami Metro, killers, investigations, family relationships, and the dual life that drives the series.",
     "image": "",
     "questionFile": "data/dexter.txt",
@@ -703,7 +703,7 @@
   {
     "slug": "dragon-ball-z",
     "title": "Dragon Ball Z",
-    "category": "TV/Series",
+    "category": "Anime",
     "description": "An anime action trivia theme focused on Dragon Ball Z, covering Saiyans, transformations, villains, attacks, training arcs, fusions, and the iconic battles that made the series a global phenomenon.",
     "image": "",
     "questionFile": "data/dragon.txt",
@@ -713,7 +713,7 @@
   {
     "slug": "friends",
     "title": "Friends",
-    "category": "TV/Series",
+    "category": "Sitcoms",
     "description": "A sitcom trivia theme centered on Friends, covering the six main characters, relationships, apartments, jobs, recurring jokes, memorable side characters, and the everyday moments that made the show endlessly rewatchable.",
     "image": "",
     "questionFile": "data/FRIENDS.txt",
@@ -723,7 +723,7 @@
   {
     "slug": "fullmetal-alchemist",
     "title": "Fullmetal Alchemist",
-    "category": "TV/Series",
+    "category": "Anime",
     "description": "An anime fantasy trivia theme focused on Fullmetal Alchemist, covering the Elric brothers, alchemy, military conflict, homunculi, philosophy, sacrifice, and the world-building that makes the story so distinctive.",
     "image": "",
     "questionFile": "data/fma.txt",
@@ -733,7 +733,7 @@
   {
     "slug": "game-of-thrones",
     "title": "Game of Thrones",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A fantasy drama trivia theme built around Game of Thrones, covering the great houses, political betrayals, dragons, battles, shifting alliances, major deaths, and the sprawling conflicts that define the series.",
     "image": "",
     "questionFile": "data/GOT.txt",
@@ -743,7 +743,7 @@
   {
     "slug": "house-of-the-dragon",
     "title": "House of the Dragon",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A fantasy trivia theme focused on House of the Dragon, covering Targaryen succession, dragon riders, family alliances, betrayals, court politics, and the civil-war tensions at the heart of the story.",
     "image": "",
     "questionFile": "data/hod.txt",
@@ -753,7 +753,7 @@
   {
     "slug": "how-i-met-your-mother",
     "title": "How I Met Your Mother",
-    "category": "TV/Series",
+    "category": "Sitcoms",
     "description": "A sitcom trivia theme centered on How I Met Your Mother, covering Ted, Barney, Robin, Marshall, Lily, long-running callbacks, relationship turns, storytelling tricks, and the group traditions that define the show.",
     "image": "",
     "questionFile": "data/himym.txt",
@@ -763,7 +763,7 @@
   {
     "slug": "invincible",
     "title": "Invincible",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "An animated superhero trivia theme focused on Invincible, covering Mark Grayson, Omni-Man, powers, brutal fights, betrayals, villains, and the family and political tensions that drive the series.",
     "image": "",
     "questionFile": "data/invincible.txt",
@@ -773,7 +773,7 @@
   {
     "slug": "its-always-sunny-in-philadelphia",
     "title": "Its Always Sunny in Philadelphia",
-    "category": "TV/Series",
+    "category": "Sitcoms",
     "description": "A dark comedy trivia theme focused on It's Always Sunny in Philadelphia, covering the gang, terrible schemes, recurring arguments, side characters, and the shameless chaos that defines the series.",
     "image": "",
     "questionFile": "data/iasip.txt",
@@ -783,7 +783,7 @@
   {
     "slug": "lord-of-the-rings",
     "title": "Lord of The Rings",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A fantasy trivia theme built around The Lord of the Rings, covering the Fellowship, Middle-earth locations, races, rulers, battles, creatures, and the epic quest against Sauron.",
     "image": "",
     "questionFile": "data/LOTR.txt",
@@ -793,7 +793,7 @@
   {
     "slug": "lost",
     "title": "Lost",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A mystery drama trivia theme focused on Lost, covering the crash survivors, the island, factions, flashbacks, time shifts, secrets, and the mythology that made the show so addictive.",
     "image": "",
     "questionFile": "data/lost.txt",
@@ -803,7 +803,7 @@
   {
     "slug": "mad-men",
     "title": "Mad Men",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A drama trivia theme built around Mad Men, covering Don Draper, the ad world of the 1960s, office politics, family life, social change, and the character-driven tensions that shape the series.",
     "image": "",
     "questionFile": "data/mad.txt",
@@ -813,7 +813,7 @@
   {
     "slug": "marvel-movies",
     "title": "Marvel Movies",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A superhero movie trivia theme covering Marvel films through heroes, villains, phases, team-ups, powers, actors, and the major crossover moments that shaped the franchise.",
     "image": "",
     "questionFile": "data/avengers.txt",
@@ -823,7 +823,7 @@
   {
     "slug": "modern-family",
     "title": "Modern Family",
-    "category": "TV/Series",
+    "category": "Sitcoms",
     "description": "A family sitcom trivia theme centered on Modern Family, covering the three connected households, parenting disasters, relationships, running jokes, and the character dynamics that made the show such a comfort-watch hit.",
     "image": "",
     "questionFile": "data/modern.txt",
@@ -833,7 +833,7 @@
   {
     "slug": "money-heist",
     "title": "Money Heist",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A crime thriller trivia theme focused on Money Heist, covering the Professor, the robbery crews, codenames, hostages, plans, betrayals, and the twists that made the series such a global hit.",
     "image": "",
     "questionFile": "data/heist.txt",
@@ -843,7 +843,7 @@
   {
     "slug": "naruto",
     "title": "Naruto",
-    "category": "TV/Series",
+    "category": "Anime",
     "description": "An anime trivia theme built around Naruto, covering ninja villages, jutsu, rivalries, clans, major arcs, emotional backstories, and the long journey from outcast to hero.",
     "image": "",
     "questionFile": "data/Naruto.txt",
@@ -853,7 +853,7 @@
   {
     "slug": "new-girl",
     "title": "New Girl",
-    "category": "TV/Series",
+    "category": "Sitcoms",
     "description": "A sitcom trivia theme centered on New Girl, covering Jess, Nick, Schmidt, Winston, Cece, the loft, relationships, running jokes, and the awkward group chemistry that defines the show.",
     "image": "",
     "questionFile": "data/newgirl.txt",
@@ -863,7 +863,7 @@
   {
     "slug": "one-piece",
     "title": "One Piece",
-    "category": "TV/Series",
+    "category": "Anime",
     "description": "An anime adventure trivia theme focused on One Piece, covering the Straw Hat crew, Devil Fruits, islands, marines, pirates, rival crews, major arcs, and the massive world-building of the series.",
     "image": "",
     "questionFile": "data/onepiece.txt",
@@ -873,7 +873,7 @@
   {
     "slug": "parks-and-recreation",
     "title": "Parks and Recreation",
-    "category": "TV/Series",
+    "category": "Sitcoms",
     "description": "A workplace comedy trivia theme focused on Parks and Recreation, covering Leslie Knope, Pawnee, city politics, running jokes, friendships, romances, and the warm ensemble energy that made the show so beloved.",
     "image": "",
     "questionFile": "data/parks.txt",
@@ -883,7 +883,7 @@
   {
     "slug": "peaky-blinders",
     "title": "Peaky Blinders",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A crime drama trivia theme built around Peaky Blinders, covering the Shelby family, gang politics, betrayals, business expansion, rivals, and the postwar Birmingham world that shapes the story.",
     "image": "",
     "questionFile": "data/peaky.txt",
@@ -893,7 +893,7 @@
   {
     "slug": "prison-break",
     "title": "Prison Break",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A thriller trivia theme focused on Prison Break, covering Michael Scofield, Lincoln Burrows, prison life, escape plans, codes, conspiracies, and the twists that drove the series.",
     "image": "",
     "questionFile": "data/prison.txt",
@@ -903,7 +903,7 @@
   {
     "slug": "rick-and-morty",
     "title": "Rick and Morty",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "An animated sci-fi comedy trivia theme focused on Rick and Morty, covering alternate realities, gadgets, family chaos, recurring characters, bizarre episode concepts, and the dark humour that defines the series.",
     "image": "",
     "questionFile": "data/morty.txt",
@@ -913,7 +913,7 @@
   {
     "slug": "seinfeld",
     "title": "Seinfeld",
-    "category": "TV/Series",
+    "category": "Sitcoms",
     "description": "A sitcom trivia theme centered on Seinfeld, covering Jerry, George, Elaine, Kramer, awkward social conflicts, classic episode setups, recurring side characters, and the tiny details that made the show iconic.",
     "image": "",
     "questionFile": "data/seinfeld.txt",
@@ -923,7 +923,7 @@
   {
     "slug": "severance",
     "title": "Severance",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A psychological sci-fi thriller trivia theme focused on Severance, covering Lumon, innies and outies, departments, corporate rituals, hidden motives, and the unsettling details that make the series so distinctive.",
     "image": "",
     "questionFile": "data/severance.txt",
@@ -933,7 +933,7 @@
   {
     "slug": "sons-of-anarchy",
     "title": "Sons of Anarchy",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A crime drama trivia theme built around Sons of Anarchy, covering the motorcycle club, family loyalty, violence, betrayals, rival gangs, and the escalating moral collapse at the centre of the story.",
     "image": "",
     "questionFile": "data/sons.txt",
@@ -943,7 +943,7 @@
   {
     "slug": "squid-game",
     "title": "Squid Game",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A survival thriller trivia theme focused on Squid Game, covering contestants, numbered players, deadly games, masked staff, symbolism, class pressure, and the moral choices that define the series.",
     "image": "",
     "questionFile": "data/squid.txt",
@@ -953,7 +953,7 @@
   {
     "slug": "star-trek",
     "title": "Star Trek",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A sci-fi trivia theme built around Star Trek, covering starships, crews, captains, species, exploration, diplomacy, technology, and the franchise-wide world that spans multiple series and eras.",
     "image": "",
     "questionFile": "data/trek.txt",
@@ -963,7 +963,7 @@
   {
     "slug": "star-wars",
     "title": "Star Wars",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A sci-fi fantasy trivia theme focused on Star Wars, covering Jedi, Sith, the Force, rebels, empires, planets, battles, droids, and the characters and lore that made the saga world-famous.",
     "image": "",
     "questionFile": "data/starwars.txt",
@@ -973,7 +973,7 @@
   {
     "slug": "stranger-things",
     "title": "Stranger Things",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A sci-fi horror trivia theme built around Stranger Things, covering Hawkins, the Upside Down, friendships, secret experiments, monsters, powers, and the nostalgic setting that shapes the series.",
     "image": "",
     "questionFile": "data/stranger.txt",
@@ -983,7 +983,7 @@
   {
     "slug": "succession",
     "title": "Succession",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A drama trivia theme focused on Succession, covering the Roy family, corporate power struggles, betrayals, media politics, boardroom manoeuvring, and the brutal personal dynamics that drive the series.",
     "image": "",
     "questionFile": "data/succession.txt",
@@ -993,7 +993,7 @@
   {
     "slug": "supernatural",
     "title": "Supernatural",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A fantasy horror trivia theme built around Supernatural, covering Sam and Dean Winchester, monsters, demons, angels, lore, recurring allies and enemies, and the long-running mythology of the series.",
     "image": "",
     "questionFile": "data/supernatural.txt",
@@ -1003,7 +1003,7 @@
   {
     "slug": "superstore",
     "title": "Superstore",
-    "category": "TV/Series",
+    "category": "Sitcoms",
     "description": "A workplace comedy trivia theme centered on Superstore, covering Cloud 9, staff relationships, customers, running jokes, corporate absurdity, and the retail chaos that defines the show.",
     "image": "",
     "questionFile": "data/superstore.txt",
@@ -1013,7 +1013,7 @@
   {
     "slug": "ted-lasso",
     "title": "Ted Lasso",
-    "category": "TV/Series",
+    "category": "Sitcoms",
     "description": "A comedy-drama trivia theme focused on Ted Lasso, covering AFC Richmond, coaching, football culture, friendships, rivalries, emotional growth, and the character relationships that give the show its heart.",
     "image": "",
     "questionFile": "data/ted.txt",
@@ -1023,7 +1023,7 @@
   {
     "slug": "the-big-bang-theory",
     "title": "The Big Bang Theory",
-    "category": "TV/Series",
+    "category": "Sitcoms",
     "description": "A sitcom trivia theme focused on The Big Bang Theory, covering the friend group, apartments, scientific references, relationships, geek culture, recurring jokes, and the habits that define the main cast.",
     "image": "",
     "questionFile": "data/TBBT.txt",
@@ -1033,7 +1033,7 @@
   {
     "slug": "the-boys",
     "title": "The Boys",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A dark superhero trivia theme built around The Boys, covering corrupt supes, Vought, vigilantes, powers, scandals, violence, and the political and personal power struggles that shape the series.",
     "image": "",
     "questionFile": "data/boys.txt",
@@ -1043,7 +1043,7 @@
   {
     "slug": "the-office",
     "title": "The Office",
-    "category": "TV/Series",
+    "category": "Sitcoms",
     "description": "A workplace comedy trivia theme centered on The Office, covering Dunder Mifflin, office culture, awkward management, relationships, recurring jokes, and the everyday moments that made the series endlessly quotable.",
     "image": "",
     "questionFile": "data/Office.txt",
@@ -1053,7 +1053,7 @@
   {
     "slug": "the-sopranos",
     "title": "The Sopranos",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A crime drama trivia theme focused on The Sopranos, covering Tony Soprano, mob politics, therapy, family conflict, crew relationships, betrayals, and the everyday details that gave the series its depth.",
     "image": "",
     "questionFile": "data/sopranos.txt",
@@ -1063,7 +1063,7 @@
   {
     "slug": "the-vampire-diaries",
     "title": "The Vampire Diaries",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A supernatural drama trivia theme built around The Vampire Diaries, covering Mystic Falls, vampires, witches, werewolves, love triangles, family legacies, and the constant twists that drive the story.",
     "image": "",
     "questionFile": "data/tvd.txt",
@@ -1073,7 +1073,7 @@
   {
     "slug": "the-walking-dead",
     "title": "The Walking Dead",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A post-apocalyptic horror trivia theme focused on The Walking Dead, covering survivors, walkers, communities, rival groups, losses, and the moral and practical struggle to stay alive.",
     "image": "",
     "questionFile": "data/dead.txt",
@@ -1083,7 +1083,7 @@
   {
     "slug": "the-wire",
     "title": "The Wire",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A crime drama trivia theme built around The Wire, covering police units, street crews, politics, institutions, Baltimore neighbourhoods, and the layered social world that makes the series so acclaimed.",
     "image": "",
     "questionFile": "data/wire.txt",
@@ -1093,7 +1093,7 @@
   {
     "slug": "true-blood",
     "title": "True Blood",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A supernatural drama trivia theme focused on True Blood, covering Bon Temps, vampires, shapeshifters, witches, faeries, relationships, and the Southern Gothic world of the series.",
     "image": "",
     "questionFile": "data/blood.txt",
@@ -1103,7 +1103,7 @@
   {
     "slug": "twilight",
     "title": "Twilight",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A supernatural romance trivia theme built around Twilight, covering Bella, Edward, Jacob, the Cullens, werewolves, romance, danger, and the franchise-defining love triangle at its centre.",
     "image": "",
     "questionFile": "data/twilight.txt",
@@ -1168,7 +1168,7 @@
     "title": "Spartacus",
     "slug": "spartacus",
     "description": "A historical drama trivia theme built around Spartacus, covering gladiators, houses, Roman politics, rebellions, rivalries, and the violent arena world that drives the series.",
-    "category": "TV/Series",
+    "category": "TV",
     "questionFile": "data/spartacus.txt",
     "seoDetail": "A strong Spartacus quiz can include Spartacus, Crixus, Gannicus, Batiatus, Lucretia, Oenomaus, the ludus, arena combat, Roman elites, slavery, rebellions, alliances, betrayals, and the major battles or personal rivalries that shape the story. The theme stays strong because it can move between action, house politics, character ambition, and the brutal structure of the world the series builds.",
     "seoIntro": "Spartacus trivia works because the show has a strong identity built on gladiator combat, betrayals, shifting loyalties, and a very memorable cast of fighters, masters, and political figures. Even small details tend to stand out because the world is so heightened."
@@ -1177,7 +1177,7 @@
     "title": "Gossip Girl",
     "slug": "gossip-girl",
     "description": "A teen drama trivia theme focused on Gossip Girl, covering the Upper East Side, scandals, secrets, relationships, rivalries, and the social chaos surrounding its central characters.",
-    "category": "TV/Series",
+    "category": "TV",
     "questionFile": "data/gossip.txt",
     "seoDetail": "A strong Gossip Girl quiz can include Serena, Blair, Chuck, Nate, Dan, Jenny, Lily, Rufus, the Gossip Girl blasts, school life, family money, social events, romances, breakups, and the constant cycle of manipulation and reputation damage. The theme works because it can balance character relationships, elite social life, secrets, and the recurring settings and patterns that made the show such a strong guilty-pleasure watch.",
     "seoIntro": "Gossip Girl trivia works because the show is built on memorable relationships, betrayals, family power, status anxiety, and a nonstop flow of reveals and public humiliation. Fans tend to remember both the big scandals and the smaller social details."
@@ -1186,7 +1186,7 @@
     "title": "Gilmore Girls",
     "slug": "gilmore-girls",
     "description": "A comedy-drama trivia theme centered on Gilmore Girls, covering Lorelai, Rory, Stars Hollow, family dynamics, relationships, town traditions, and the comfort-show details fans remember best.",
-    "category": "TV/Series",
+    "category": "TV",
     "questionFile": "data/gilmore.txt",
     "seoDetail": "A strong Gilmore Girls quiz can include Lorelai, Rory, Emily, Richard, Luke, Sookie, Lane, Jess, Dean, Logan, Stars Hollow traditions, Chilton, Yale, family arguments, romances, and the many local side characters who make the town feel alive. The theme stays strong because it can move between relationships, family history, town culture, and the smaller recurring details that make the series so comforting and rewatchable.",
     "seoIntro": "Gilmore Girls trivia works especially well because the series is full of fast dialogue, distinctive town characters, repeated routines, and relationship turns that fans absorb over many rewatches. It is one of those shows where even background details feel familiar."
@@ -1195,7 +1195,7 @@
     "title": "Greys Anatomy",
     "slug": "greys-anatomy",
     "description": "A medical drama trivia theme focused on Grey's Anatomy, covering doctors, surgeries, relationships, hospital politics, emotional losses, and the long-running storylines that define the series.",
-    "category": "TV/Series",
+    "category": "TV",
     "questionFile": "data/grey.txt",
     "seoDetail": "A strong Grey's Anatomy quiz can include Meredith, Derek, Cristina, Alex, Bailey, Richard, Callie, Arizona, Izzie, the hospital's name changes, big surgeries, plane crashes, weddings, breakups, mentorships, and the professional and personal choices that shape each era of the show. The theme works because it can balance medicine, relationships, character exits, and the many emotional turning points long-time viewers still remember clearly.",
     "seoIntro": "Grey's Anatomy trivia works because the show combines memorable medical cases with intense romances, friendships, rivalries, and major tragedies that fans remember for years. It gives you both hospital drama and personal drama in the same category."
@@ -1204,7 +1204,7 @@
     "title": "Sex and the City",
     "slug": "sex-and-the-city",
     "description": "A relationship and lifestyle trivia theme centered on Sex and the City, covering Carrie, Samantha, Charlotte, Miranda, New York life, friendships, dating, careers, and the iconic moments that define the series.",
-    "category": "TV/Series",
+    "category": "TV",
     "questionFile": "data/satc.txt",
     "seoDetail": "A strong Sex and the City quiz can include Carrie, Samantha, Charlotte, Miranda, Big, Steve, Aidan, New York locations, careers, friendships, breakups, weddings, fashion moments, and the recurring dilemmas around love, independence, and lifestyle. The theme stays strong because it can move between character-specific habits, relationship history, city culture, and the scenes or choices that made the series so identifiable.",
     "seoIntro": "Sex and the City trivia works because the show is built on strong character voices, repeated conversations about love and sex, city life, fashion, and highly memorable relationships. Fans often remember both the broad arcs and the smaller details tied to each woman's personality."
@@ -1213,7 +1213,7 @@
     "title": "Desperate Housewives",
     "slug": "desperate-housewives",
     "description": "A suburban mystery-drama trivia theme focused on Desperate Housewives, covering Wisteria Lane, secrets, marriages, scandals, neighbour conflicts, family drama, and the darkly comic twists that define the show.",
-    "category": "TV/Series",
+    "category": "TV",
     "questionFile": "data/dhw.txt",
     "seoDetail": "A strong Desperate Housewives quiz can include Susan, Lynette, Bree, Gabrielle, Edie, Mary Alice, Wisteria Lane families, affairs, cover-ups, pregnancies, crimes, house moves, family secrets, and the season-level mysteries that keep the neighbourhood unstable. The theme works because it can balance character drama, scandal, domestic conflict, and the many outrageous reveals that made the series more memorable than a typical suburban soap.",
     "seoIntro": "Desperate Housewives trivia works because the show mixes soap-style secrets with sharp humour, strong housewife identities, and constant shocks happening behind polished suburban walls. Viewers tend to remember both the mysteries and the personal chaos."
@@ -1230,7 +1230,7 @@
   {
     "slug": "buffy-the-vampire-slayer",
     "title": "Buffy the Vampire Slayer",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A supernatural drama trivia theme centered on Buffy the Vampire Slayer, covering Buffy, the Scooby Gang, Sunnydale, monsters, villains, romances, and the mix of horror, humour, and emotion that defines the series.",
     "questionFile": "data/buffy.txt",
     "seoDetail": "A strong Buffy the Vampire Slayer quiz can include Buffy, Willow, Xander, Giles, Angel, Spike, Dawn, Sunnydale High, the Hellmouth, major Big Bads, slayer lore, spells, romances, and the standout episodes that shaped the series. The theme works because it can move between creature mythology, character development, humour, heartbreak, and the many repeated details that made Buffy's world feel so specific.",
@@ -1246,45 +1246,45 @@
     "seoIntro": "Dark Souls 3 trivia works because the game leaves players with strong memory of its bosses, areas, builds, NPC questlines, and cryptic lore connections. Even when the story is indirect, the named encounters and systems are very memorable."
   },
   {
-  "slug": "death-stranding",
-  "title": "Death Stranding",
-  "category": "Games",
-  "description": "A game trivia theme focused on Death Stranding, covering characters, storylines, mechanics, traversal systems, and the unusual delivery-based structure that defines the gameplay experience in a fractured world.",
-  "questionFile": "data/stranding.txt",
-  "seoIntro": "Death Stranding trivia works because the game builds its identity around isolation, connection, and a completely unconventional gameplay loop where delivering cargo becomes the core experience. Players remember not just the story but the systems, terminology, and strange emotional tone that runs through the entire world.",
-  "seoDetail": "A strong Death Stranding quiz can include Sam Porter Bridges, BB units, Bridges organisation, the Chiral Network, BT encounters, DOOMS abilities, timefall, major story beats, and the mechanics of traversal, cargo management, and infrastructure building. It also benefits from the game’s unusual structure, where player cooperation is indirect and environmental storytelling plays a major role. The theme works because it blends lore-heavy narrative with mechanical systems that are unlike traditional action or open-world games, making even basic concepts feel distinctive and memorable."
-},
-{
-  "slug": "final-fantasy",
-  "title": "Final Fantasy",
-  "category": "Games",
-  "description": "A game trivia theme covering the Final Fantasy franchise, including its recurring characters, summons, worlds, combat systems, and long-running narrative themes across multiple generations of games.",
-  "questionFile": "data/ff.txt",
-  "seoIntro": "Final Fantasy trivia works because the franchise spans decades of evolving storytelling, with each entry introducing new worlds while still retaining iconic recurring elements like summons, crystals, job systems, and legendary characters that define the series identity.",
-  "seoDetail": "A strong Final Fantasy quiz can include characters such as Cloud, Sephiroth, Tidus, Yuna, and Squall, alongside summons like Ifrit, Shiva, Bahamut, and Leviathan. It can also explore recurring systems like job classes, turn-based combat variations, crystals, airships, and key antagonists across different titles. The franchise’s structure allows questions to move between individual game plots and broader series-wide traditions, making it ideal for both deep fan knowledge and general recognition."
-},
-{
-  "slug": "sekiro-shadows-die-twice",
-  "title": "Sekiro: Shadows Die Twice",
-  "category": "Games",
-  "description": "A game trivia theme focused on Sekiro: Shadows Die Twice, covering its combat system, bosses, stealth mechanics, world design, and the Sengoku-era inspired setting.",
-  "questionFile": "data/sekiro.txt",
-  "seoIntro": "Sekiro trivia works because the game is built around precision combat, timing-based deflection, and high-stakes boss encounters that reward mastery rather than progression grinding. Every encounter feels memorable due to its difficulty and design clarity.",
-  "seoDetail": "A strong Sekiro quiz can include Wolf, Kuro, Genichiro Ashina, Isshin the Sword Saint, Lady Butterfly, and major factions such as the Ashina clan. It also covers mechanics like posture breaks, resurrection, stealth assassinations, prosthetic tools, and combat arts. The theme works because it tightly blends gameplay systems with narrative progression, where each boss and area is mechanically distinct and heavily tied to the player’s learning curve."
-},
-{
-  "slug": "bleach",
-  "title": "Bleach",
-  "category": "TV/Series",
-  "description": "A TV trivia theme covering Bleach, including Soul Reapers, Hollows, Espada, Zanpakuto abilities, major arcs, and the evolving power system across the series.",
-  "questionFile": "data/bleach.txt",
-  "seoIntro": "Bleach trivia works because the series combines a large cast of characters with a structured power system built around Zanpakuto, Bankai transformations, and faction-based conflicts that evolve across long story arcs.",
-  "seoDetail": "A strong Bleach quiz can include Ichigo Kurosaki, Rukia Kuchiki, Soul Society, Hueco Mundo, Arrancar, Espada, and major captains such as Byakuya and Kenpachi. It also includes Zanpakuto abilities, Bankai forms, Hollows, Quincy lore, and key battles that define each arc. The theme works because it balances character recognition, power system knowledge, and long-running narrative progression across multiple story phases."
-},
+    "slug": "death-stranding",
+    "title": "Death Stranding",
+    "category": "Games",
+    "description": "A game trivia theme focused on Death Stranding, covering characters, storylines, mechanics, traversal systems, and the unusual delivery-based structure that defines the gameplay experience in a fractured world.",
+    "questionFile": "data/stranding.txt",
+    "seoIntro": "Death Stranding trivia works because the game builds its identity around isolation, connection, and a completely unconventional gameplay loop where delivering cargo becomes the core experience. Players remember not just the story but the systems, terminology, and strange emotional tone that runs through the entire world.",
+    "seoDetail": "A strong Death Stranding quiz can include Sam Porter Bridges, BB units, Bridges organisation, the Chiral Network, BT encounters, DOOMS abilities, timefall, major story beats, and the mechanics of traversal, cargo management, and infrastructure building. It also benefits from the game’s unusual structure, where player cooperation is indirect and environmental storytelling plays a major role. The theme works because it blends lore-heavy narrative with mechanical systems that are unlike traditional action or open-world games, making even basic concepts feel distinctive and memorable."
+  },
+  {
+    "slug": "final-fantasy",
+    "title": "Final Fantasy",
+    "category": "Games",
+    "description": "A game trivia theme covering the Final Fantasy franchise, including its recurring characters, summons, worlds, combat systems, and long-running narrative themes across multiple generations of games.",
+    "questionFile": "data/ff.txt",
+    "seoIntro": "Final Fantasy trivia works because the franchise spans decades of evolving storytelling, with each entry introducing new worlds while still retaining iconic recurring elements like summons, crystals, job systems, and legendary characters that define the series identity.",
+    "seoDetail": "A strong Final Fantasy quiz can include characters such as Cloud, Sephiroth, Tidus, Yuna, and Squall, alongside summons like Ifrit, Shiva, Bahamut, and Leviathan. It can also explore recurring systems like job classes, turn-based combat variations, crystals, airships, and key antagonists across different titles. The franchise’s structure allows questions to move between individual game plots and broader series-wide traditions, making it ideal for both deep fan knowledge and general recognition."
+  },
+  {
+    "slug": "sekiro-shadows-die-twice",
+    "title": "Sekiro: Shadows Die Twice",
+    "category": "Games",
+    "description": "A game trivia theme focused on Sekiro: Shadows Die Twice, covering its combat system, bosses, stealth mechanics, world design, and the Sengoku-era inspired setting.",
+    "questionFile": "data/sekiro.txt",
+    "seoIntro": "Sekiro trivia works because the game is built around precision combat, timing-based deflection, and high-stakes boss encounters that reward mastery rather than progression grinding. Every encounter feels memorable due to its difficulty and design clarity.",
+    "seoDetail": "A strong Sekiro quiz can include Wolf, Kuro, Genichiro Ashina, Isshin the Sword Saint, Lady Butterfly, and major factions such as the Ashina clan. It also covers mechanics like posture breaks, resurrection, stealth assassinations, prosthetic tools, and combat arts. The theme works because it tightly blends gameplay systems with narrative progression, where each boss and area is mechanically distinct and heavily tied to the player’s learning curve."
+  },
+  {
+    "slug": "bleach",
+    "title": "Bleach",
+    "category": "Anime",
+    "description": "A TV trivia theme covering Bleach, including Soul Reapers, Hollows, Espada, Zanpakuto abilities, major arcs, and the evolving power system across the series.",
+    "questionFile": "data/bleach.txt",
+    "seoIntro": "Bleach trivia works because the series combines a large cast of characters with a structured power system built around Zanpakuto, Bankai transformations, and faction-based conflicts that evolve across long story arcs.",
+    "seoDetail": "A strong Bleach quiz can include Ichigo Kurosaki, Rukia Kuchiki, Soul Society, Hueco Mundo, Arrancar, Espada, and major captains such as Byakuya and Kenpachi. It also includes Zanpakuto abilities, Bankai forms, Hollows, Quincy lore, and key battles that define each arc. The theme works because it balances character recognition, power system knowledge, and long-running narrative progression across multiple story phases."
+  },
   {
     "slug": "death-note",
     "title": "Death Note",
-    "category": "TV/Series",
+    "category": "Anime",
     "questionFile": "data/note.txt",
     "description": "A psychological anime trivia theme focused on Death Note, covering its characters, rules, investigations, moral conflict, and major plot twists.",
     "seoIntro": "Death Note trivia works because the series is built around strict rules, psychological tension, and strategic mind games between highly intelligent characters.",
@@ -1293,25 +1293,25 @@
   {
     "slug": "shameless",
     "title": "Shameless",
-    "category": "TV/Series",
+    "category": "TV",
     "questionFile": "data/shameless.txt",
     "description": "A TV trivia theme focused on Shameless, covering the Gallagher family, relationships, chaotic life events, and long-running character arcs.",
     "seoIntro": "Shameless trivia works because the series is built on messy, long-running character stories, dysfunctional family dynamics, and constantly evolving relationships.",
     "seoDetail": "A strong Shameless quiz can include Frank Gallagher, Fiona, Lip, Ian, Debbie, Carl, Liam, key relationships, major life events, recurring schemes, and turning points across seasons. The theme works because it mixes emotional storylines with chaotic comedy and evolving character development."
   },
   {
-  "slug": "disney",
-  "title": "Disney",
-  "category": "General",
-  "questionFile": "data/disney.txt",
-  "description": "A broad entertainment trivia theme covering Disney films, characters, worlds, songs, and stories from animated classics to modern releases and Pixar crossovers.",
-  "seoIntro": "Disney trivia works because the franchise spans decades of globally recognisable films, iconic characters, emotional stories, and unforgettable music that most people have grown up with in some form. It mixes nostalgia with broad cultural familiarity, making it instantly accessible while still allowing deeper detail for fans.",
-  "seoDetail": "A strong Disney quiz can include classic animated films like The Lion King, Aladdin, Beauty and the Beast, and Snow White, alongside modern titles like Frozen, Moana, and Encanto, as well as Pixar films such as Toy Story, Finding Nemo, and Inside Out. It can also cover characters like Mickey Mouse, Elsa, Simba, Ariel, and Buzz Lightyear, along with villains, sidekicks, songs, magical items, kingdoms, and emotional story moments. The theme works because it blends characters, music, storytelling, and animation history into a wide-ranging universe that spans generations and continues to evolve."
-},
+    "slug": "disney",
+    "title": "Disney",
+    "category": "General",
+    "questionFile": "data/disney.txt",
+    "description": "A broad entertainment trivia theme covering Disney films, characters, worlds, songs, and stories from animated classics to modern releases and Pixar crossovers.",
+    "seoIntro": "Disney trivia works because the franchise spans decades of globally recognisable films, iconic characters, emotional stories, and unforgettable music that most people have grown up with in some form. It mixes nostalgia with broad cultural familiarity, making it instantly accessible while still allowing deeper detail for fans.",
+    "seoDetail": "A strong Disney quiz can include classic animated films like The Lion King, Aladdin, Beauty and the Beast, and Snow White, alongside modern titles like Frozen, Moana, and Encanto, as well as Pixar films such as Toy Story, Finding Nemo, and Inside Out. It can also cover characters like Mickey Mouse, Elsa, Simba, Ariel, and Buzz Lightyear, along with villains, sidekicks, songs, magical items, kingdoms, and emotional story moments. The theme works because it blends characters, music, storytelling, and animation history into a wide-ranging universe that spans generations and continues to evolve."
+  },
   {
     "slug": "downton-abbey",
     "title": "Downton Abbey",
-    "category": "TV/Series",
+    "category": "TV",
     "questionFile": "data/abbey.txt",
     "description": "A TV trivia theme focused on Downton Abbey, covering the Crawley family, household staff, relationships, and historical setting.",
     "seoIntro": "Downton Abbey trivia works because it blends aristocratic family drama with historical context, creating a structured world of upstairs and downstairs relationships.",
@@ -1326,28 +1326,28 @@
     "seoIntro": "Sports trivia works because it spans multiple disciplines with globally recognisable athletes, tournaments, and rules that appeal across audiences.",
     "seoDetail": "A strong sports quiz can include football, basketball, tennis, cricket, Olympic events, famous athletes, championships, records, rules, and iconic sporting moments. The theme works because it mixes general knowledge with sport-specific expertise across multiple categories."
   },
-{
-  "slug": "tv-series",
-  "title": "TV Series",
-  "category": "General",
-  "description": "A broad trivia theme covering TV series across genres, focusing on characters, plots, iconic moments, and long-running shows from different eras and platforms.",
-  "questionFile": "data/tv.txt",
-  "seoIntro": "TV series trivia works because television spans decades of storytelling across drama, comedy, sci-fi, and reality formats, creating widely recognisable characters and moments.",
-  "seoDetail": "A strong TV series quiz can include character identification, major plot twists, pilot episodes, finales, streaming-era hits, cult classics, and long-running network shows. The category works because it allows movement between sitcom humour, dramatic arcs, procedural storytelling, and high-budget prestige series, giving it enough range to stay relevant across all audience types."
-},
-{
-  "slug": "anime",
-  "title": "Anime",
-  "category": "General",
-  "description": "A broad anime trivia theme covering major series, characters, abilities, story arcs, and iconic moments from Japanese animation across multiple genres.",
-  "questionFile": "data/anime.txt",
-  "seoIntro": "Anime trivia works because it spans a huge variety of series with strong visual identity, emotional storytelling, and distinctive power systems.",
-  "seoDetail": "A strong anime quiz can include Naruto, One Piece, Dragon Ball, Attack on Titan, Jujutsu Kaisen, and Demon Slayer, alongside characters, transformations, abilities, arcs, and major battles. The category is effective because anime often builds structured worlds with clear rules, emotional stakes, and highly memorable moments that translate well into trivia questions."
-},
+  {
+    "slug": "tv-series",
+    "title": "TV Series",
+    "category": "General",
+    "description": "A broad trivia theme covering TV series across genres, focusing on characters, plots, iconic moments, and long-running shows from different eras and platforms.",
+    "questionFile": "data/tv.txt",
+    "seoIntro": "TV series trivia works because television spans decades of storytelling across drama, comedy, sci-fi, and reality formats, creating widely recognisable characters and moments.",
+    "seoDetail": "A strong TV series quiz can include character identification, major plot twists, pilot episodes, finales, streaming-era hits, cult classics, and long-running network shows. The category works because it allows movement between sitcom humour, dramatic arcs, procedural storytelling, and high-budget prestige series, giving it enough range to stay relevant across all audience types."
+  },
+  {
+    "slug": "anime",
+    "title": "Anime",
+    "category": "General",
+    "description": "A broad anime trivia theme covering major series, characters, abilities, story arcs, and iconic moments from Japanese animation across multiple genres.",
+    "questionFile": "data/anime.txt",
+    "seoIntro": "Anime trivia works because it spans a huge variety of series with strong visual identity, emotional storytelling, and distinctive power systems.",
+    "seoDetail": "A strong anime quiz can include Naruto, One Piece, Dragon Ball, Attack on Titan, Jujutsu Kaisen, and Demon Slayer, alongside characters, transformations, abilities, arcs, and major battles. The category is effective because anime often builds structured worlds with clear rules, emotional stakes, and highly memorable moments that translate well into trivia questions."
+  },
   {
     "slug": "jujutsu-kaisen",
     "title": "Jujutsu Kaisen",
-    "category": "TV/Series",
+    "category": "Anime",
     "questionFile": "data/jujutsu.txt",
     "description": "A supernatural action anime trivia theme focused on Jujutsu Kaisen, covering cursed energy, sorcerers, spirits, battles, schools, and the dark world that drives the series.",
     "seoIntro": "Jujutsu Kaisen trivia works because the series combines fast-paced combat, distinct powers, memorable characters, and a structured supernatural system that makes abilities and story arcs easy to remember.",
@@ -1356,39 +1356,39 @@
   {
     "slug": "yellowstone",
     "title": "Yellowstone",
-    "category": "TV/Series",
+    "category": "TV",
     "questionFile": "data/yellowstone.txt",
     "description": "A modern western drama trivia theme focused on Yellowstone, covering the Dutton family, ranch conflicts, land disputes, power struggles, and the violent political world surrounding the ranch.",
     "seoIntro": "Yellowstone trivia works because the series combines family drama, western themes, political conflict, and shifting alliances in a setting filled with memorable characters and confrontations.",
     "seoDetail": "A strong Yellowstone quiz can include John Dutton, Beth Dutton, Kayce Dutton, Rip Wheeler, Jamie Dutton, Yellowstone Ranch, land ownership conflicts, rival families, political battles, branding, bunkhouse culture, and major betrayals or confrontations across seasons. The theme works because it mixes modern western identity with family power struggles and long-running personal conflicts."
   },
-{
-  "slug": "video-games",
-  "title": "Video Games",
-  "category": "General",
-  "description": "A general trivia theme covering video games across platforms, genres, franchises, characters, mechanics, and gaming history.",
-  "questionFile": "data/games.txt",
-  "seoIntro": "Video game trivia works because gaming spans decades of evolving technology, storytelling, and iconic franchises recognised worldwide.",
-  "seoDetail": "A strong video games quiz can include franchises like GTA, Red Dead Redemption, Zelda, Call of Duty, Minecraft, and Elden Ring, along with developers, consoles, mechanics, and gaming history. The category works because it blends cultural impact, gameplay systems, and character recognition across multiple generations of players."
-},
-{
-  "slug": "cartoons",
-  "title": "Cartoons",
-  "category": "General",
-  "description": "A general trivia theme covering cartoons from classic animation to modern series, including characters, shows, and memorable episodes.",
-  "questionFile": "data/cartoons.txt",
-  "seoIntro": "Cartoon trivia works because it spans generations of animated storytelling, from childhood classics to modern adult animation.",
-  "seoDetail": "A strong cartoons quiz can include shows like The Simpsons, SpongeBob SquarePants, Tom and Jerry, Adventure Time, Family Guy, and Rick and Morty, alongside characters, catchphrases, studios, and iconic episodes. The category works because animation creates instantly recognisable visual identity and long-term cultural memory."
-},
-{
-  "slug": "kids",
-  "title": "Kids",
-  "category": "General",
-  "description": "A general trivia theme designed for younger audiences, covering simple and familiar topics such as animals, colours, school basics, and cartoons.",
-  "questionFile": "data/kids.txt",
-  "seoIntro": "Kids trivia works because it focuses on simple, familiar knowledge that is easy to recognise, understand, and recall quickly.",
-  "seoDetail": "A strong kids quiz can include animals, colours, numbers, shapes, basic science, simple geography, fairy tales, and popular cartoons. The category works because it prioritises clarity, repetition, and recognition, making it accessible while still allowing variety across everyday knowledge areas."
-},
+  {
+    "slug": "video-games",
+    "title": "Video Games",
+    "category": "General",
+    "description": "A general trivia theme covering video games across platforms, genres, franchises, characters, mechanics, and gaming history.",
+    "questionFile": "data/games.txt",
+    "seoIntro": "Video game trivia works because gaming spans decades of evolving technology, storytelling, and iconic franchises recognised worldwide.",
+    "seoDetail": "A strong video games quiz can include franchises like GTA, Red Dead Redemption, Zelda, Call of Duty, Minecraft, and Elden Ring, along with developers, consoles, mechanics, and gaming history. The category works because it blends cultural impact, gameplay systems, and character recognition across multiple generations of players."
+  },
+  {
+    "slug": "cartoons",
+    "title": "Cartoons",
+    "category": "General",
+    "description": "A general trivia theme covering cartoons from classic animation to modern series, including characters, shows, and memorable episodes.",
+    "questionFile": "data/cartoons.txt",
+    "seoIntro": "Cartoon trivia works because it spans generations of animated storytelling, from childhood classics to modern adult animation.",
+    "seoDetail": "A strong cartoons quiz can include shows like The Simpsons, SpongeBob SquarePants, Tom and Jerry, Adventure Time, Family Guy, and Rick and Morty, alongside characters, catchphrases, studios, and iconic episodes. The category works because animation creates instantly recognisable visual identity and long-term cultural memory."
+  },
+  {
+    "slug": "kids",
+    "title": "Kids",
+    "category": "General",
+    "description": "A general trivia theme designed for younger audiences, covering simple and familiar topics such as animals, colours, school basics, and cartoons.",
+    "questionFile": "data/kids.txt",
+    "seoIntro": "Kids trivia works because it focuses on simple, familiar knowledge that is easy to recognise, understand, and recall quickly.",
+    "seoDetail": "A strong kids quiz can include animals, colours, numbers, shapes, basic science, simple geography, fairy tales, and popular cartoons. The category works because it prioritises clarity, repetition, and recognition, making it accessible while still allowing variety across everyday knowledge areas."
+  },
   {
     "slug": "marvels-spider-man",
     "title": "Marvels Spider-Man",
@@ -1410,7 +1410,7 @@
   {
     "slug": "suits",
     "title": "Suits",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A legal drama trivia theme focused on Suits, covering Harvey Specter, Mike Ross, Pearson Specter, high-stakes cases, corporate power plays, rivalries, and the secret that drives the series.",
     "questionFile": "data/suits.txt",
     "seoDetail": "A strong Suits quiz can include Harvey, Mike, Jessica, Louis, Donna, Rachel, Pearson Specter and its later forms, mergers, rival firms, promotions, betrayals, mock trials, negotiations, and the many episodes built around Mike's hidden lack of a law degree. The theme works because it can move between legal drama, workplace hierarchy, relationships, and the specific character traits that made the show's dialogue and power struggles so recognisable.",
@@ -1419,7 +1419,7 @@
   {
     "slug": "house",
     "title": "House",
-    "category": "TV/Series",
+    "category": "TV",
     "description": "A medical drama trivia theme centered on House, covering Gregory House, diagnostic medicine, unusual cases, the hospital team, personal conflict, and the abrasive brilliance that defines the series.",
     "questionFile": "data/house.txt",
     "seoDetail": "A strong House quiz can include House, Wilson, Cuddy, Foreman, Chase, Cameron, later team members, Princeton-Plainsboro, diagnostic methods, unusual symptoms, addictions, ethics clashes, and the many moments where House solves a case by spotting a detail everyone else missed. The theme stays strong because it can balance medicine, personality conflict, hospital structure, and the repeated case-solving patterns that made the series so watchable.",

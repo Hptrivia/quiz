@@ -40,7 +40,9 @@ function getThemeCoverageText(theme) {
   const title = theme.title || "this theme";
 
   const map = {
-    "TV/Series": `This quiz is built for fans who remember both the major moments and the smaller details from ${title}, including character dynamics, memorable scenes, recurring jokes, quotes, and storylines across the series.`,
+    "TV":      `This quiz is built for fans who remember both the major moments and the smaller details from ${title}, including character dynamics, memorable scenes, recurring jokes, quotes, and storylines across the series.`,
+    "Anime":   `This quiz is built for fans who know ${title} beyond the surface, mixing character knowledge, story arcs, power systems, key moments, and deeper lore across the series.`,
+    "Sitcoms": `This quiz is built for fans who remember the characters, recurring jokes, quotes, standout episodes, and smaller details that make ${title} memorable.`,
     "Games": `This quiz is built for players who know more than just the basics of ${title}, mixing characters, story moments, bosses, gameplay details, locations, weapons, and stronger fan-level knowledge.`,
     "Sports": `This quiz mixes well-known facts with deeper fan knowledge from ${title}, including players, teams, championships, records, rivalries, and major moments connected to the sport.`,
     "Education": `This quiz is designed to mix quick recall with broader knowledge in ${title}, covering important ideas, facts, terms, and subject-specific details in a faster quiz format.`,
@@ -204,6 +206,11 @@ const relatedThemesHtml = relatedThemes.length
           <p>10-question quick rounds</p>
         </a>
 
+        <a class="card" href="../trivia-rush.html?theme=${slug}">
+          <h3>Trivia Rush</h3>
+          <p>Score, streak, and multiplier run</p>
+        </a>
+
         <a class="card" href="../survival.html?theme=${slug}">
           <h3>Survival Mode</h3>
           <p>One mistake and the run ends</p>
@@ -345,7 +352,8 @@ function main() {
     `${SITE_URL}/categories/books.html`,
     `${SITE_URL}/categories/countries.html`,
     `${SITE_URL}/categories/newly-added.html`,
-    `${SITE_URL}/remove-ads.html`
+    `${SITE_URL}/remove-ads.html`,
+    `${SITE_URL}/trivia-rush.html`
   ];
 
   themes.forEach((theme) => {
@@ -365,6 +373,9 @@ function main() {
     console.log(`Generated themes/${theme.slug}.html`);
 
     sitemapUrls.push(`${SITE_URL}/themes/${theme.slug}.html`);
+    sitemapUrls.push(`${SITE_URL}/wordsearch.html?theme=${theme.slug}&page=1`);
+    sitemapUrls.push(`${SITE_URL}/wordle.html?theme=${theme.slug}&page=1`);
+    sitemapUrls.push(`${SITE_URL}/trivia-rush.html?theme=${theme.slug}`);
   });
 
   fs.writeFileSync(sitemapPath, buildSitemap(sitemapUrls), "utf8");
