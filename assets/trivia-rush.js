@@ -225,6 +225,7 @@ function trTimerOut() {
 
 function trMarkButtons(chosen, correct) {
   document.querySelectorAll('#trOptionsGrid .tr-option-btn').forEach(btn => {
+    if (correct && btn.textContent === chosen) btn.classList.add('tr-correct');
     if (!correct && btn.textContent === chosen) btn.classList.add('tr-wrong');
     btn.disabled = true;
   });
