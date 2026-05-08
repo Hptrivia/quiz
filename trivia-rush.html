@@ -778,5 +778,14 @@
 
   <script src="assets/app.js"></script>
   <script src="assets/trivia-rush.js"></script>
+  <script src="assets/sound.js"></script>
+  <script>
+    const sfxBtn = document.createElement('button');
+    sfxBtn.className = 'sfx-toggle';
+    sfxBtn.title = 'Toggle sound';
+    sfxBtn.textContent = SoundFX.isMuted() ? '🔇' : '🔊';
+    sfxBtn.addEventListener('click', () => { sfxBtn.textContent = SoundFX.toggleMute() ? '🔇' : '🔊'; });
+    document.body.appendChild(sfxBtn);
+  </script>
 </body>
 </html>

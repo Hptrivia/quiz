@@ -292,6 +292,7 @@ async function renderSurvivalPage() {
     state.gameOver = true;
     state.answerLocked = true;
     if (currentSubmitBtn) currentSubmitBtn.disabled = true;
+    if (typeof SoundFX !== 'undefined') SoundFX.play('wrong');
 
     if (selectedBtn) {
       selectedBtn.classList.remove("correct-anim");
@@ -316,6 +317,7 @@ async function renderSurvivalPage() {
     state.answerLocked = true;
     if (currentSubmitBtn) currentSubmitBtn.disabled = true;
     if (currentNextBtn) currentNextBtn.style.display = "inline-block";
+    if (typeof SoundFX !== 'undefined') SoundFX.play('correct');
 
     if (selectedBtn) {
       selectedBtn.classList.remove("wrong-anim");

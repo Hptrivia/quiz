@@ -200,6 +200,7 @@ function trSelect(chosen) {
 
   const correct = chosen === trState.currentQ.answer;
   trMarkButtons(chosen, correct);
+  if (typeof SoundFX !== 'undefined') SoundFX.play(correct ? 'correct' : 'wrong');
 
   if (correct) {
     trOnCorrect();

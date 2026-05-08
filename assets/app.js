@@ -526,6 +526,7 @@ let buyPackUrl = "https://ko-fi.com/triviaking/shop";
 
       if (quizState.selectedAnswer === q.answer) {
         quizState.score += 1;
+        if (typeof SoundFX !== 'undefined') SoundFX.play('correct');
         feedbackP.textContent = "Correct";
         feedbackP.className = "feedback correct";
         if (selectedBtn) {
@@ -534,6 +535,7 @@ let buyPackUrl = "https://ko-fi.com/triviaking/shop";
           selectedBtn.classList.add("correct-anim");
         }
       } else {
+        if (typeof SoundFX !== 'undefined') SoundFX.play('wrong');
         feedbackP.textContent = revealAnswers ? `Wrong. The correct answer is ${q.answer}.` : "Wrong";
         feedbackP.className = "feedback wrong";
         if (selectedBtn) {

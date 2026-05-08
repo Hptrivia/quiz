@@ -340,6 +340,7 @@ async function renderDailyPage() {
     answered = true;
 
     const correct = selected === q.answer;
+    if (typeof SoundFX !== 'undefined') SoundFX.play(correct ? 'correct' : 'wrong');
 
     document.querySelectorAll(".daily-option-btn").forEach(b => { b.disabled = true; });
     btn.classList.add(correct ? "correct" : "wrong");

@@ -212,6 +212,7 @@ async function renderChallengePage() {
 
       if (state.selectedAnswer === q.answer) {
         state.score += 1;
+        if (typeof SoundFX !== 'undefined') SoundFX.play('correct');
         feedbackP.textContent = "Correct";
         feedbackP.className = "feedback correct";
         if (selectedBtn) {
@@ -220,6 +221,7 @@ async function renderChallengePage() {
           selectedBtn.classList.add("correct-anim");
         }
       } else {
+        if (typeof SoundFX !== 'undefined') SoundFX.play('wrong');
         feedbackP.textContent = revealAnswers ? `Wrong. The correct answer is ${q.answer}.` : "Wrong";
         feedbackP.className = "feedback wrong";
         if (selectedBtn) {
