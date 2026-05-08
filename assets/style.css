@@ -344,8 +344,8 @@ a {
 
 .sfx-toggle {
   position: fixed;
-  top: 16px;
-  right: 16px;
+  bottom: 160px;
+  left: 16px;
   width: 36px;
   height: 36px;
   border-radius: 50%;
