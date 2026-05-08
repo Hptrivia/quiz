@@ -42,7 +42,7 @@
       border-radius: 12px;
       margin-bottom: 10px;
     }
-    .tr-score-col, .tr-streak-col { text-align: center; }
+    .tr-score-col, .tr-streak-col, .tr-best-col { text-align: center; }
     .tr-stat-label-sm {
       display: block;
       font-size: 0.58rem;
@@ -66,6 +66,42 @@
       min-width: 40px;
       text-align: right;
     }
+    .tr-best-num {
+      display: block;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #475569;
+      line-height: 1.2;
+      transition: color 0.3s;
+    }
+    .tr-best-num.tr-beating-best { color: #fbbf24; }
+    .tr-start-best {
+      font-size: 0.78rem;
+      color: #64748b;
+      margin-top: 10px;
+    }
+    .tr-pb-result {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-top: 10px;
+    }
+    .tr-pb-result-new {
+      background: rgba(251,191,36,0.08);
+      border-color: rgba(251,191,36,0.3);
+    }
+    .tr-pb-result .tr-stat-label { margin-bottom: 0; }
+    .tr-pb-result-new .tr-stat-label { color: #fbbf24; }
+    .tr-pb-result-val {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #f1f5f9;
+    }
+    .tr-pb-result-new .tr-pb-result-val { color: #fbbf24; }
     .tr-mult-1 { color: #64748b; }
     .tr-mult-2 { color: #60a5fa; }
     .tr-mult-3 { color: #4ade80; }
@@ -612,6 +648,7 @@
           </div>
           <button class="primary-btn tr-start-btn" id="trStartBtn">Start Rush</button>
           <button class="secondary-btn" id="trStartHowToBtn" style="width:100%;">How to Play</button>
+          <p class="tr-start-best" id="trStartBest" style="display:none"></p>
         </div>
       </div>
     </section>
@@ -628,6 +665,10 @@
           <div class="tr-score-col">
             <span class="tr-stat-label-sm">Score</span>
             <span class="tr-stat-val-lg" id="trScore">0</span>
+          </div>
+          <div class="tr-best-col">
+            <span class="tr-stat-label-sm">Best</span>
+            <span class="tr-best-num" id="trInGameBest">—</span>
           </div>
           <div class="tr-streak-col">
             <span class="tr-stat-label-sm">Streak</span>

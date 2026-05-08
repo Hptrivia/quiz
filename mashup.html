@@ -153,6 +153,15 @@
     #startBtn:not(.btn-ready):hover {
       background: var(--primary-btn-bg);
     }
+    .mashup-mode-hint {
+      font-size: 0.82rem;
+      color: #94a3b8;
+      background: rgba(249, 115, 22, 0.08);
+      border: 1px solid rgba(249, 115, 22, 0.2);
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin-bottom: 12px;
+    }
   </style>
 </head>
 <body>
@@ -173,6 +182,7 @@
     </section>
 
     <section>
+      <div id="mashupHint" class="mashup-mode-hint" style="display:none"></div>
       <div class="mashup-top-bar">
         <p id="selectionCounter" class="mashup-counter">0 of 5 selected</p>
         <p id="maxError" class="mashup-error" aria-live="polite"></p>
@@ -220,6 +230,19 @@
     const MAX_THEMES = 5;
     const MIN_THEMES = 2;
 
+    const params = new URLSearchParams(window.location.search);
+    const presetSlug = params.get('preset') || '';
+    const returnMode = params.get('mode') || '';
+
+    const modeRoutes = {
+      'marathon':    s => `mashup-play.html?themes=${s}&mode=marathon`,
+      'challenge':   s => `mashup-play.html?themes=${s}&mode=challenge`,
+      'survival':    s => `mashup-play.html?themes=${s}&mode=survival`,
+      'trivia-rush': s => `mashup-trivia-rush.html?themes=${s}`,
+      'wordle':      s => `wordle.html?themes=${s}&page=1`,
+      'wordsearch':  s => `wordsearch.html?themes=${s}&page=1`,
+    };
+
     let allThemes = [];
     let selectedSlugs = new Set();
     let activeCategory = "all";
@@ -232,6 +255,8 @@
     const startBtn = document.getElementById("startBtn");
     const searchInput = document.getElementById("mashupSearch");
 
+    if (returnMode) startBtn.textContent = 'Play Mashup';
+
     async function init() {
       try {
         const res = await fetch("data/themes.json");
@@ -240,6 +265,20 @@
         themeGrid.innerHTML = '<p class="mashup-no-results">Failed to load themes. Please refresh and try again.</p>';
         return;
       }
+
+      if (presetSlug) {
+        const presetTheme = allThemes.find(t => t.slug === presetSlug);
+        if (presetTheme) {
+          selectedSlugs.add(presetSlug);
+          const hintEl = document.getElementById('mashupHint');
+          if (hintEl) {
+            hintEl.textContent = `${presetTheme.title} is pre-selected — add at least one more theme to mix`;
+            hintEl.style.display = '';
+          }
+          updateCounter();
+        }
+      }
+
       renderGrid();
     }
 
@@ -330,7 +369,8 @@
       }
       startErrorEl.textContent = "";
       const slugList = Array.from(selectedSlugs).join(",");
-      window.location.href = `mashup-landing.html?themes=${slugList}`;
+      const routeFn = modeRoutes[returnMode];
+      window.location.href = routeFn ? routeFn(slugList) : `mashup-landing.html?themes=${slugList}`;
     });
 
     init();

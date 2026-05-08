@@ -478,20 +478,24 @@ function renderWsPageContent(theme, themes, page, allWords = []) {
   if (!container) return;
 
   const ctx = getThemeContext(theme.category);
-  const relatedThemes = getRelatedThemes(themes, theme, 5);
+  const relatedThemes = getRelatedThemes(themes, theme, 4);
   const toTitleCase = s => String(s).toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
   const sample = allWords.slice(0, 6).map(toTitleCase);
   const wordLine = sample.length >= 2
     ? `Find words like ${sample.slice(0, -1).join(", ")}, and ${sample[sample.length - 1]} alongside other characters, locations, and key terms associated with ${theme.title}.`
     : `The words are drawn from the characters, locations, and key terms associated with ${theme.title}.`;
 
-  const relatedHtml = relatedThemes.length ? `
+  const relatedHtml = `
     <div class="theme-related-quizzes">
       <h3>Related themes</h3>
       <div class="grid">
+        <a class="card card-mix" href="mashup.html?preset=${theme.slug}&mode=wordsearch">
+          <h3>${theme.title} + other themes</h3>
+          <span class="card-mix-sub">Play as a mashup</span>
+        </a>
         ${relatedThemes.map(t => `<a class="card" href="wordsearch.html?theme=${t.slug}&page=1"><h3>${t.title}</h3></a>`).join("")}
       </div>
-    </div>` : "";
+    </div>`;
 
   const descHtml = page === 1 ? `
     <h2>About the ${theme.title} Word Search</h2>

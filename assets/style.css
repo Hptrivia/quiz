@@ -190,6 +190,22 @@ a {
   color: rgba(216, 180, 254, 0.75);
 }
 
+.card-mix {
+  border-color: rgba(249, 115, 22, 0.35);
+  background: rgba(249, 115, 22, 0.06);
+}
+.card-mix:hover {
+  border-color: rgba(249, 115, 22, 0.6);
+  background: rgba(249, 115, 22, 0.12);
+}
+.card-mix h3 { color: #f97316; }
+.card-mix-sub {
+  display: block;
+  font-size: 0.72rem;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
 .badge {
   display: inline-block;
   margin-top: 8px;

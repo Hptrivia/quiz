@@ -581,12 +581,16 @@ function renderResult() {
   const hasNextPage = safePage < totalPages;
   const tierText = getMarathonTier(quizState.score, quizState.questions.length);
 
-  const relatedThemes = getRelatedThemes(themes, theme, 5);
+  const relatedThemes = getRelatedThemes(themes, theme, 4);
 
-const relatedThemesHtml = relatedThemes.length ? `
+const relatedThemesHtml = `
   <div class="theme-related-quizzes">
     <h3>Related Quizzes</h3>
     <div class="grid">
+      <a class="card card-mix" href="mashup.html?preset=${theme.slug}&mode=marathon">
+        <h3>${theme.title} + other themes</h3>
+        <span class="card-mix-sub">Play as a mashup</span>
+      </a>
       ${relatedThemes.map(item => `
         <a class="card" href="play.html?theme=${item.slug}">
           <h3>${item.title}</h3>
@@ -594,7 +598,7 @@ const relatedThemesHtml = relatedThemes.length ? `
       `).join("")}
     </div>
   </div>
-` : "";
+`;
 
   resultBox.innerHTML = `
     <h2>Quiz Complete</h2>

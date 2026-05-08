@@ -112,12 +112,16 @@ async function renderSurvivalPage() {
     void resultBox.offsetWidth;
     resultBox.classList.add("result-anim");
 
-    const relatedThemes = getRelatedThemes(themes, theme, 5);
+    const relatedThemes = getRelatedThemes(themes, theme, 4);
 
-    const relatedThemesHtml = relatedThemes.length ? `
+    const relatedThemesHtml = `
       <div class="theme-related-quizzes">
         <h3>Related Quizzes</h3>
         <div class="grid">
+          <a class="card card-mix" href="mashup.html?preset=${theme.slug}&mode=survival">
+            <h3>${theme.title} + other themes</h3>
+            <span class="card-mix-sub">Play as a mashup</span>
+          </a>
           ${relatedThemes.map(item => `
             <a class="card" href="survival.html?theme=${item.slug}">
               <h3>${item.title}</h3>
@@ -125,7 +129,7 @@ async function renderSurvivalPage() {
           `).join("")}
         </div>
       </div>
-    ` : "";
+    `;
 
     resultBox.innerHTML = `
       <h2>Survival Over</h2>

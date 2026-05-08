@@ -282,12 +282,16 @@ async function renderChallengePage() {
       </div>
     ` : "";
 
-    const relatedThemes = getRelatedThemes(themes, theme, 5);
+    const relatedThemes = getRelatedThemes(themes, theme, 4);
 
-    const relatedThemesHtml = relatedThemes.length ? `
+    const relatedThemesHtml = `
       <div class="theme-related-quizzes">
         <h3>Related Quizzes</h3>
         <div class="grid">
+          <a class="card card-mix" href="mashup.html?preset=${theme.slug}&mode=challenge">
+            <h3>${theme.title} + other themes</h3>
+            <span class="card-mix-sub">Play as a mashup</span>
+          </a>
           ${relatedThemes.map(item => `
             <a class="card" href="challenge.html?theme=${item.slug}&round=1">
               <h3>${item.title}</h3>
@@ -295,7 +299,7 @@ async function renderChallengePage() {
           `).join("")}
         </div>
       </div>
-    ` : "";
+    `;
 
     resultBox.innerHTML = `
       <h2>Round ${safeRound} Complete</h2>

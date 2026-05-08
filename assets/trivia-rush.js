@@ -28,6 +28,7 @@ function trMakeState(themeName, themeSlug, allThemes) {
     diffIndex: 0,
     poolIndex: 0,
     score: 0,
+    peakScore: 0,
     streak: 0,
     wrongStreak: 0,
     bestStreak: 0,
@@ -42,6 +43,7 @@ function trMakeState(themeName, themeSlug, allThemes) {
     totalCorrect: 0,
     currentQ: null,
     currentDiff: 'easy',
+    personalBest: 0,
   };
 }
 
@@ -63,6 +65,7 @@ async function trInit() {
 
     const questions = await fetchJSON(theme.questionFile);
     trState = trMakeState(theme.title, theme.slug, themes);
+    trState.personalBest = parseInt(localStorage.getItem('trRushBest_' + theme.slug) || '0', 10);
 
     TR_DIFF_ORDER.forEach(d => {
       trState.pools[d] = shuffleArray(questions.filter(q => normalizeDifficulty(q.difficulty) === d));
@@ -109,6 +112,12 @@ async function trInit() {
 
     loadBox.style.display = 'none';
     document.getElementById('trStartBox').style.display = '';
+
+    const startBestEl = document.getElementById('trStartBest');
+    if (startBestEl && trState.personalBest > 0) {
+      startBestEl.textContent = 'Your best: ' + trState.personalBest.toLocaleString();
+      startBestEl.style.display = '';
+    }
 
   } catch (err) {
     loadBox.querySelector('p').textContent = 'Failed to load questions. Please try again.';
@@ -215,8 +224,7 @@ function trTimerOut() {
 
 function trMarkButtons(chosen, correct) {
   document.querySelectorAll('#trOptionsGrid .tr-option-btn').forEach(btn => {
-    if (btn.textContent === trState.currentQ.answer) btn.classList.add('tr-correct');
-    else if (btn.textContent === chosen && !correct) btn.classList.add('tr-wrong');
+    if (!correct && btn.textContent === chosen) btn.classList.add('tr-wrong');
     btn.disabled = true;
   });
 }
@@ -245,6 +253,7 @@ function trOnCorrect() {
     trState.doubleRemaining--;
   }
   trState.score += earned;
+  if (trState.score > trState.peakScore) trState.peakScore = trState.score;
 
   if (trState.heat >= TR_MAX_HEAT) trTriggerMaxHeat();
 
@@ -357,6 +366,16 @@ function trUpdateStats() {
   if (multEl) {
     multEl.textContent = 'x' + trState.multiplier;
     multEl.className = 'tr-multiplier tr-mult-' + Math.min(trState.multiplier, 6);
+  }
+  const bestEl = document.getElementById('trInGameBest');
+  if (bestEl) {
+    if (trState.personalBest > 0) {
+      bestEl.textContent = trState.personalBest.toLocaleString();
+      bestEl.classList.toggle('tr-beating-best', trState.peakScore > trState.personalBest);
+    } else {
+      bestEl.textContent = '—';
+      bestEl.classList.remove('tr-beating-best');
+    }
   }
 }
 
@@ -496,10 +515,19 @@ function trEnd(completed) {
     ? Math.round((trState.totalCorrect / trState.totalAnswered) * 100)
     : 0;
 
+  const runScore = completed ? trState.score : trState.peakScore;
   const bestKey = 'trRushBest_' + trState.themeSlug;
   const prev = parseInt(localStorage.getItem(bestKey) || '0', 10);
-  const isNewBest = trState.score > prev;
-  if (isNewBest) localStorage.setItem(bestKey, trState.score);
+  const isNewBest = runScore > prev;
+  if (isNewBest) localStorage.setItem(bestKey, runScore);
+  const currentBest = isNewBest ? runScore : prev;
+  const isImprovement = isNewBest && prev > 0;
+  const pbTile = currentBest > 0
+    ? `<div class="tr-pb-result${isImprovement ? ' tr-pb-result-new' : ''}">
+        <span class="tr-stat-label">${isImprovement ? '★ New ' : ''}Personal Best</span>
+        <span class="tr-pb-result-val">${currentBest.toLocaleString()}</span>
+      </div>`
+    : '';
 
   const pageBase = window.location.pathname.includes('mashup-trivia-rush') ? 'mashup-trivia-rush.html' :
                    window.location.pathname.includes('test') ? 'trivia-rush-test.html' : 'trivia-rush.html';
@@ -510,34 +538,50 @@ function trEnd(completed) {
     : `${pageBase}?theme=${trState.themeSlug}`;
 
   const themeObj = trState.allThemes.find(t => t.slug === trState.themeSlug) || { slug: trState.themeSlug, category: '' };
-  const related = (!isMashup && typeof getRelatedThemes === 'function') ? getRelatedThemes(trState.allThemes, themeObj, 5) : [];
+  const related = (!isMashup && typeof getRelatedThemes === 'function') ? getRelatedThemes(trState.allThemes, themeObj, 4) : [];
 
-  const relatedHtml = related.length ? `
-    <div class="theme-related-quizzes" style="margin-top:1.5rem">
+  const relatedHtml = isMashup
+    ? (() => {
+        const mashupThemes = trState.themeSlug.split(',').map(s => trState.allThemes.find(t => t.slug === s.trim())).filter(Boolean);
+        if (!mashupThemes.length) return '';
+        return `<div class="theme-related-quizzes" style="margin-top:1.5rem">
+          <h3>Play Individually</h3>
+          <div class="grid">
+            ${mashupThemes.map(t => `<a class="card" href="trivia-rush.html?theme=${t.slug}"><h3>${t.title}</h3></a>`).join('')}
+          </div>
+        </div>`;
+      })()
+    : `<div class="theme-related-quizzes" style="margin-top:1.5rem">
       <h3>Related Quizzes</h3>
       <div class="grid">
+        <a class="card card-mix" href="mashup.html?preset=${trState.themeSlug}&mode=trivia-rush">
+          <h3>${trState.themeName} + other themes</h3>
+          <span class="card-mix-sub">Play as a mashup</span>
+        </a>
         ${related.map(t => `<a class="card" href="${pageBase}?theme=${t.slug}"><h3>${t.title}</h3></a>`).join('')}
       </div>
-    </div>` : '';
+    </div>`;
 
   const searchLinkBase = isMashup ? 'trivia-rush.html' : pageBase;
 
   gameOverBox.innerHTML = `
     <div class="tr-gameover">
       <h2 class="tr-gameover-title">${completed ? 'Rush Complete!' : 'Rush Over'}</h2>
-      ${isNewBest ? '<p class="tr-new-best">NEW BEST SCORE</p>' : ''}
-      <div class="tr-final-score">${trState.score.toLocaleString()}</div>
+      <div class="tr-final-score">${runScore.toLocaleString()}</div>
+      ${!completed && trState.peakScore > 0 ? '<p style="font-size:0.72rem;color:#475569;margin:-8px 0 10px;letter-spacing:0.5px">PEAK SCORE</p>' : ''}
       <div class="tr-final-stats">
         <div class="tr-stat"><span class="tr-stat-label">Accuracy</span><span class="tr-stat-val">${accuracy}%</span></div>
         <div class="tr-stat"><span class="tr-stat-label">Answered</span><span class="tr-stat-val">${trState.totalAnswered}</span></div>
         <div class="tr-stat"><span class="tr-stat-label">Best Streak</span><span class="tr-stat-val">${trState.bestStreak}</span></div>
         <div class="tr-stat"><span class="tr-stat-label">Peak Multi</span><span class="tr-stat-val">x${trState.multiplier}</span></div>
       </div>
+      ${pbTile}
       <div class="cta-row" style="margin-top:1.5rem">
         <a class="primary-btn" href="${playAgainHref}">Play Again</a>
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
-      <div class="result-theme-search" style="margin-top:1.5rem">
+      <hr style="border:none;border-top:1px solid rgba(255,255,255,0.07);margin:1.75rem 0">
+      <div class="result-theme-search">
         <p class="result-theme-search-title">Try another theme</p>
         <div class="search-wrap">
           <input id="trResultSearch" class="theme-search-input" type="text" placeholder="Search themes..." autocomplete="off" />
@@ -614,6 +658,7 @@ async function trMashupInit() {
     const mashupSlug = selectedThemes.map(t => t.slug).join(',');
     const mashupTitle = selectedThemes.map(t => t.title).join(' + ');
     trState = trMakeState(mashupTitle, mashupSlug, allThemes);
+    trState.personalBest = parseInt(localStorage.getItem('trRushBest_' + mashupSlug) || '0', 10);
 
     trState.themeColorMap = {};
     selectedThemes.forEach((t, i) => {
@@ -662,6 +707,12 @@ async function trMashupInit() {
 
     loadBox.style.display = 'none';
     document.getElementById('trStartBox').style.display = '';
+
+    const startBestElM = document.getElementById('trStartBest');
+    if (startBestElM && trState.personalBest > 0) {
+      startBestElM.textContent = 'Your best: ' + trState.personalBest.toLocaleString();
+      startBestElM.style.display = '';
+    }
 
   } catch (err) {
     loadBox.querySelector('p').textContent = 'Failed to load questions. Please try again.';
