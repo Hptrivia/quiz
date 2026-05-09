@@ -156,9 +156,33 @@ async function renderMultiThemeChallenge() {
         ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html">Reveal Answers</a>` : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
+      <div class="result-theme-search">
+        <p class="result-theme-search-title">Try another theme</p>
+        <div class="search-wrap">
+          <input id="mashupChallengeSearchInput" class="theme-search-input" type="text" placeholder="Search themes..." autocomplete="off" />
+          <div id="mashupChallengeSearchResults" class="search-results"></div>
+        </div>
+      </div>
+      <div id="mashupChallengeAdSlot"></div>
+      <div class="theme-related-quizzes">
+        <h3>Play these themes individually</h3>
+        <div class="grid">
+          ${selectedThemes.map(t => `<a class="card" href="challenge.html?theme=${t.slug}&round=1"><h3>${t.title}</h3></a>`).join("")}
+        </div>
+      </div>
     `;
     document.getElementById("mashupChallengeBreakdown").appendChild(renderMashupThemeBreakdown(themeScores, selectedThemes, colorBySlug));
-    injectMashupResultAd(resultBox);
+    injectMashupResultAd(document.getElementById("mashupChallengeAdSlot"));
+    const msInput = document.getElementById("mashupChallengeSearchInput");
+    const msResults = document.getElementById("mashupChallengeSearchResults");
+    if (msInput && msResults) {
+      const renderSearch = items => {
+        msResults.innerHTML = items.length ? items.map(t => `<a class="search-item" href="challenge.html?theme=${t.slug}&round=1">${t.title}</a>`).join("") : '<div class="search-item">No results found</div>';
+      };
+      msInput.addEventListener("focus", () => { renderSearch(allThemeMeta); msResults.style.display = "block"; });
+      msInput.addEventListener("input", e => { renderSearch(allThemeMeta.filter(t => t.title.toLowerCase().includes(e.target.value.trim().toLowerCase()))); msResults.style.display = "block"; });
+      document.addEventListener("click", e => { if (!msInput.contains(e.target) && !msResults.contains(e.target)) msResults.style.display = "none"; });
+    }
   }
 
   showQuestion(0);

@@ -161,9 +161,33 @@ async function renderMultiThemeSurvival() {
         ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html">Unlimited Lifelines</a>` : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
+      <div class="result-theme-search">
+        <p class="result-theme-search-title">Try another theme</p>
+        <div class="search-wrap">
+          <input id="mashupSurvivalSearchInput" class="theme-search-input" type="text" placeholder="Search themes..." autocomplete="off" />
+          <div id="mashupSurvivalSearchResults" class="search-results"></div>
+        </div>
+      </div>
+      <div id="mashupSurvivalAdSlot"></div>
+      <div class="theme-related-quizzes">
+        <h3>Play these themes individually</h3>
+        <div class="grid">
+          ${selectedThemes.map(t => `<a class="card" href="survival.html?theme=${t.slug}"><h3>${t.title}</h3></a>`).join("")}
+        </div>
+      </div>
     `;
     document.getElementById("mashupSurvivalBreakdown").appendChild(renderMashupThemeBreakdown(themeScores, selectedThemes, colorBySlug));
-    injectMashupResultAd(resultBox);
+    injectMashupResultAd(document.getElementById("mashupSurvivalAdSlot"));
+    const msInput = document.getElementById("mashupSurvivalSearchInput");
+    const msResults = document.getElementById("mashupSurvivalSearchResults");
+    if (msInput && msResults) {
+      const renderSearch = items => {
+        msResults.innerHTML = items.length ? items.map(t => `<a class="search-item" href="survival.html?theme=${t.slug}">${t.title}</a>`).join("") : '<div class="search-item">No results found</div>';
+      };
+      msInput.addEventListener("focus", () => { renderSearch(allThemeMeta); msResults.style.display = "block"; });
+      msInput.addEventListener("input", e => { renderSearch(allThemeMeta.filter(t => t.title.toLowerCase().includes(e.target.value.trim().toLowerCase()))); msResults.style.display = "block"; });
+      document.addEventListener("click", e => { if (!msInput.contains(e.target) && !msResults.contains(e.target)) msResults.style.display = "none"; });
+    }
     setTimeout(() => { if (typeof showInstallCard === "function") showInstallCard(); }, 800);
   }
 
