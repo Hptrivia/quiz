@@ -375,7 +375,250 @@ const ONE_PER_PAGE_CHALLENGE = true;
 const ONE_PER_PAGE_SURVIVAL  = true;
 const ONE_PER_PAGE_EPISODE   = true;
 
+// ---- Multi-theme (Mashup) shared helpers — used by app.js, challenge.js, survival.js ----
+const MASHUP_BADGE_COLORS = [
+  { bg: "rgba(59,130,246,0.15)", border: "#3b82f6", text: "#93c5fd" },
+  { bg: "rgba(34,197,94,0.12)",  border: "#22c55e", text: "#86efac" },
+  { bg: "rgba(249,115,22,0.15)", border: "#f97316", text: "#fdba74" },
+  { bg: "rgba(168,85,247,0.15)", border: "#a855f7", text: "#d8b4fe" },
+  { bg: "rgba(236,72,153,0.15)", border: "#ec4899", text: "#f9a8d4" },
+];
+function makeMashupBadge(slug, colorBySlug, themeName) {
+  const c = colorBySlug[slug] || MASHUP_BADGE_COLORS[0];
+  const span = document.createElement("span");
+  span.className = "mashup-q-badge";
+  span.style.cssText = `background:${c.bg};border-color:${c.border};color:${c.text}`;
+  span.textContent = themeName;
+  return span;
+}
+function renderMashupThemeBreakdown(themeScores, selectedThemes, colorBySlug) {
+  const div = document.createElement("div");
+  div.className = "mashup-score-breakdown";
+  selectedThemes.forEach(theme => {
+    const s = themeScores[theme.slug] || { correct: 0, total: 0 };
+    const c = colorBySlug[theme.slug] || MASHUP_BADGE_COLORS[0];
+    const p = document.createElement("p");
+    p.innerHTML = `<span class="mashup-q-badge" style="background:${c.bg};border-color:${c.border};color:${c.text}">${theme.title}</span>${s.correct} / ${s.total}`;
+    div.appendChild(p);
+  });
+  return div;
+}
+function buildMashupPools(selectedThemes, questionsByTheme) {
+  const nd = v => String(v || "").trim().toLowerCase();
+  return selectedThemes.map(theme => ({
+    slug: theme.slug,
+    em: shuffleArray((questionsByTheme[theme.slug] || []).filter(q => ["easy","medium"].includes(nd(q.difficulty)))),
+    he: shuffleArray((questionsByTheme[theme.slug] || []).filter(q => ["hard","expert"].includes(nd(q.difficulty))))
+  }));
+}
+function sliceFromMashupPools(pools, batchSize, batchIndex) {
+  const n = pools.length;
+  const base = Math.floor(batchSize / n);
+  const extra = batchSize - base * n;
+  const out = [];
+  pools.forEach((pool, idx) => {
+    const count = base + (idx < extra ? 1 : 0);
+    const emPer = Math.ceil(count / 2), hePer = Math.floor(count / 2);
+    let slice = [...pool.em.slice(batchIndex * emPer, (batchIndex + 1) * emPer),
+                  ...pool.he.slice(batchIndex * hePer, (batchIndex + 1) * hePer)];
+    if (slice.length < count) {
+      const used = new Set(slice.map(q => q.question));
+      slice = [...slice, ...shuffleArray([...pool.em, ...pool.he]).filter(q => !used.has(q.question)).slice(0, count - slice.length)];
+    }
+    slice.forEach(q => out.push(Object.assign({}, q, { _themeSlug: pool.slug })));
+  });
+  return shuffleArray(out);
+}
+function calcMashupTotalBatches(pools, batchSize) {
+  const n = pools.length, base = Math.floor(batchSize / n), extra = batchSize - base * n;
+  return Math.max(1, Math.max(...pools.map((pool, idx) => {
+    const count = base + (idx < extra ? 1 : 0);
+    const emPer = Math.ceil(count / 2), hePer = Math.floor(count / 2);
+    return Math.max(emPer > 0 ? Math.ceil(pool.em.length / emPer) : 0, hePer > 0 ? Math.ceil(pool.he.length / hePer) : 0);
+  })));
+}
+function injectMashupResultAd(container) {
+  if (typeof isPremiumUser === 'function' && !isPremiumUser()) {
+    const adDiv = document.createElement('div');
+    adDiv.style.cssText = 'text-align:center;margin:12px 0;';
+    const s1 = document.createElement('script');
+    s1.textContent = 'atOptions={"key":"6cd708c27c2130cedbed5e1a3bc703d0","format":"iframe","height":250,"width":300,"params":{}};';
+    const s2 = document.createElement('script');
+    s2.src = 'https://www.highperformanceformat.com/6cd708c27c2130cedbed5e1a3bc703d0/invoke.js';
+    adDiv.appendChild(s1); adDiv.appendChild(s2); container.appendChild(adDiv);
+  }
+}
+
+async function renderMultiThemeMarathon() {
+  const params = new URLSearchParams(window.location.search);
+  const slugs = (params.get("themes") || "").split(",").map(s => s.trim()).filter(Boolean);
+  if (slugs.length < 2) { window.location.href = "mashup.html"; return; }
+
+  const allThemeMeta = await loadThemes();
+  const selectedThemes = slugs.map(slug => allThemeMeta.find(t => t.slug === slug)).filter(Boolean);
+  if (selectedThemes.length < 2) { window.location.href = "mashup.html"; return; }
+
+  const themesParam = selectedThemes.map(t => t.slug).join(",");
+  const colorBySlug = {};
+  selectedThemes.forEach((t, i) => { colorBySlug[t.slug] = MASHUP_BADGE_COLORS[i % MASHUP_BADGE_COLORS.length]; });
+
+  document.title = selectedThemes.map(t => t.title).join(" + ") + " — Marathon | Trivia Gauntlet";
+  if (typeof gtag === "function") gtag("event", "page_view", { page_title: document.title, page_location: window.location.href });
+
+  const questionsByTheme = {};
+  await Promise.all(selectedThemes.map(async theme => {
+    try { questionsByTheme[theme.slug] = (await fetchJSON(theme.questionFile)) || []; }
+    catch(e) { questionsByTheme[theme.slug] = []; }
+  }));
+
+  const PAGE_SIZE = 30;
+  const slidesContainer = document.getElementById("playSlides");
+  const resultBox = document.getElementById("resultBox");
+  const nextPageLink = document.getElementById("nextPageLink");
+  const progressText = document.getElementById("progressText");
+  const scoreText = document.createElement("p");
+  scoreText.className = "play-score-text";
+  scoreText.textContent = "Score: 0";
+
+  const rawPage = parseInt(params.get("page") || "1", 10);
+  const currentPage = isNaN(rawPage) || rawPage < 1 ? 1 : rawPage;
+  const pools = buildMashupPools(selectedThemes, questionsByTheme);
+  const totalPages = calcMashupTotalBatches(pools, PAGE_SIZE);
+  const safePage = Math.min(currentPage, totalPages);
+  const pageQuestions = sliceFromMashupPools(pools, PAGE_SIZE, safePage - 1).map(q => shuffleQuestionOptions(q));
+
+  const themeScores = {};
+  selectedThemes.forEach(t => { themeScores[t.slug] = { correct: 0, total: 0 }; });
+  pageQuestions.forEach(q => { if (themeScores[q._themeSlug]) themeScores[q._themeSlug].total++; });
+
+  let score = 0, currentIndex = 0, revealAnswers = false;
+
+  if (progressText) progressText.textContent = `Page ${safePage}`;
+  if (nextPageLink) {
+    if (safePage < totalPages) {
+      nextPageLink.style.display = "inline-block";
+      nextPageLink.textContent = "Skip to next page";
+      nextPageLink.href = `play.html?themes=${themesParam}&page=${safePage + 1}`;
+    } else { nextPageLink.style.display = "none"; }
+  }
+
+  function showQuestion(index) {
+    const prev = slidesContainer.querySelector(".question-slide.active");
+    if (prev) { prev.classList.remove("active"); prev.classList.add("answered"); prev.style.display = "none"; }
+    const slide = slidesContainer.querySelector(`.question-slide[data-index="${index}"]`);
+    if (slide) { slide.classList.add("active"); slide.style.display = "block"; slide.appendChild(scoreText); slide.scrollIntoView({ behavior: "smooth", block: "start" }); }
+  }
+
+  if (isPremiumUser()) {
+    const revealBtn = document.createElement("button");
+    revealBtn.className = "secondary-btn reveal-answers-toggle";
+    revealBtn.textContent = "Reveal Answers: OFF";
+    revealBtn.addEventListener("click", () => {
+      revealAnswers = !revealAnswers;
+      revealBtn.className = revealAnswers ? "primary-btn reveal-answers-toggle" : "secondary-btn reveal-answers-toggle";
+      revealBtn.textContent = revealAnswers ? "Reveal Answers: ON" : "Reveal Answers: OFF";
+    });
+    const quizBoxEl = document.getElementById("quizBox");
+    if (quizBoxEl) quizBoxEl.insertBefore(revealBtn, slidesContainer);
+  }
+
+  pageQuestions.forEach((q, index) => {
+    const slug = q._themeSlug;
+    const themeName = (selectedThemes.find(t => t.slug === slug) || {}).title || slug;
+    const slide = document.createElement("div");
+    slide.className = "question-slide";
+    slide.dataset.index = index;
+    const qNum = document.createElement("p");
+    qNum.className = "slide-question-num";
+    qNum.textContent = `Question ${index + 1} of ${pageQuestions.length}`;
+    const qText = document.createElement("h2");
+    qText.textContent = q.question;
+    const optsList = document.createElement("div");
+    optsList.className = "options";
+    q.options.forEach(option => {
+      const btn = document.createElement("button");
+      btn.className = "option-btn";
+      btn.textContent = option;
+      btn.addEventListener("click", () => {
+        if (currentIndex !== index) return;
+        optsList.querySelectorAll(".option-btn").forEach(b => b.classList.remove("selected", "correct-anim", "wrong-anim"));
+        btn.classList.add("selected");
+      });
+      optsList.appendChild(btn);
+    });
+    const feedbackP = document.createElement("p");
+    feedbackP.className = "feedback";
+    const submitBtn = document.createElement("button");
+    submitBtn.className = "primary-btn";
+    submitBtn.textContent = "Submit";
+    const nextBtn = document.createElement("button");
+    nextBtn.className = "secondary-btn";
+    nextBtn.textContent = "Next";
+    nextBtn.style.display = "none";
+    const ctaRow = document.createElement("div");
+    ctaRow.className = "cta-row";
+    ctaRow.appendChild(submitBtn);
+    ctaRow.appendChild(nextBtn);
+    submitBtn.addEventListener("click", () => {
+      if (currentIndex !== index) return;
+      const selBtn = optsList.querySelector(".option-btn.selected");
+      if (!selBtn) return;
+      if (selBtn.textContent === q.answer) {
+        score++; themeScores[slug].correct++;
+        feedbackP.textContent = "Correct"; feedbackP.className = "feedback correct";
+        selBtn.classList.remove("wrong-anim"); void selBtn.offsetWidth; selBtn.classList.add("correct-anim");
+        if (typeof SoundFX !== 'undefined') SoundFX.play('correct');
+      } else {
+        feedbackP.textContent = revealAnswers ? `Wrong. The correct answer is ${q.answer}.` : "Wrong";
+        feedbackP.className = "feedback wrong";
+        selBtn.classList.remove("correct-anim"); void selBtn.offsetWidth; selBtn.classList.add("wrong-anim");
+        if (typeof SoundFX !== 'undefined') SoundFX.play('wrong');
+      }
+      if (scoreText) scoreText.textContent = `Score: ${score}`;
+      submitBtn.disabled = true; nextBtn.style.display = "inline-block";
+    });
+    nextBtn.addEventListener("click", () => {
+      currentIndex++;
+      if (currentIndex >= pageQuestions.length) renderResult();
+      else showQuestion(currentIndex);
+    });
+    slide.appendChild(qNum);
+    slide.appendChild(makeMashupBadge(slug, colorBySlug, themeName));
+    slide.appendChild(qText);
+    slide.appendChild(optsList);
+    slide.appendChild(feedbackP);
+    slide.appendChild(ctaRow);
+    slidesContainer.appendChild(slide);
+  });
+
+  slidesContainer.querySelectorAll(".question-slide").forEach(s => { s.style.display = "none"; });
+
+  function renderResult() {
+    document.getElementById("quizBox").style.display = "none";
+    resultBox.style.display = "block";
+    resultBox.classList.remove("result-anim"); void resultBox.offsetWidth; resultBox.classList.add("result-anim");
+    const hasNextPage = safePage < totalPages;
+    resultBox.innerHTML = `
+      <h2>Quiz Complete</h2>
+      <p>Your score: ${score} / ${pageQuestions.length}</p>
+      <p class="result-tier">${getMarathonTier(score, pageQuestions.length)}</p>
+      <div id="mashupMarathonBreakdown"></div>
+      <div class="cta-row">
+        ${hasNextPage ? `<a class="primary-btn" href="play.html?themes=${themesParam}&page=${safePage + 1}">Next Round</a>` : ""}
+        ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html">Ad-Free</a>` : ""}
+        <a class="secondary-btn" href="contact.html">Report a Question</a>
+      </div>
+    `;
+    document.getElementById("mashupMarathonBreakdown").appendChild(renderMashupThemeBreakdown(themeScores, selectedThemes, colorBySlug));
+    injectMashupResultAd(resultBox);
+    setTimeout(() => { if (typeof showInstallCard === "function") showInstallCard(); }, 800);
+  }
+
+  showQuestion(0);
+}
+
 async function renderPlayPage() {
+  if (getParam("themes")) { await renderMultiThemeMarathon(); return; }
   const slug = getParam("theme");
   const themes = await loadThemes();
   const theme = themes.find(t => t.slug === slug);

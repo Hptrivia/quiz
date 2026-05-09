@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>function isPremiumUser(){var e=localStorage.getItem('adsRemovedUntil');if(!e)return false;return new Date(e)>new Date();}if(!isPremiumUser()){(function(s){s.dataset.zone='10961427',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));(function(s){s.dataset.zone='10961935',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));(function(s){s.dataset.zone='10962017',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));}</script>
+<script>function isPremiumUser(){var e=localStorage.getItem('adsRemovedUntil');if(!e)return false;return new Date(e)>new Date();}if(!isPremiumUser()){(function(s){s.dataset.zone='10961427',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));(function(s){s.dataset.zone='10961935',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));}</script>
 <script data-grow-initializer="">!(function(){window.growMe||((window.growMe=function(e){window.growMe._.push(e);}),(window.growMe._=[]));var e=document.createElement("script");(e.type="text/javascript"),(e.src="https://faves.grow.me/main.js"),(e.defer=!0),e.setAttribute("data-grow-faves-site-id","U2l0ZTowMmFjMDYwOC03YWNmLTQ4ZGItYTcxYS1iMjgxOTNmY2E2ZDQ=");var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -194,7 +194,9 @@
 
       <div class="mashup-filters" id="categoryFilters">
         <button class="filter-btn active" data-category="all">All</button>
-        <button class="filter-btn" data-category="TV/Series">TV</button>
+        <button class="filter-btn" data-category="TV">TV</button>
+        <button class="filter-btn" data-category="Anime">Anime</button>
+        <button class="filter-btn" data-category="Sitcoms">Sitcoms</button>
         <button class="filter-btn" data-category="Games">Games</button>
         <button class="filter-btn" data-category="Sports">Sports</button>
         <button class="filter-btn" data-category="Books">Books</button>
@@ -235,9 +237,9 @@
     const returnMode = params.get('mode') || '';
 
     const modeRoutes = {
-      'marathon':    s => `mashup-play.html?themes=${s}&mode=marathon`,
-      'challenge':   s => `mashup-play.html?themes=${s}&mode=challenge`,
-      'survival':    s => `mashup-play.html?themes=${s}&mode=survival`,
+      'marathon':    s => `play.html?themes=${s}`,
+      'challenge':   s => `challenge.html?themes=${s}&round=1`,
+      'survival':    s => `survival.html?themes=${s}`,
       'trivia-rush': s => `mashup-trivia-rush.html?themes=${s}`,
       'wordle':      s => `wordle.html?themes=${s}&page=1`,
       'wordsearch':  s => `wordsearch.html?themes=${s}&page=1`,

@@ -217,6 +217,17 @@ async function renderWordleMashupMode(themesParam) {
 
   loadWord(0);
   if (safePage >= 4 && typeof maybeShowPwaPopup === "function") maybeShowPwaPopup();
+
+  if (typeof isPremiumUser === 'function' && !isPremiumUser()) {
+    const adDiv = document.createElement('div');
+    adDiv.style.cssText = 'text-align:center;margin:28px 0 12px;';
+    const s1 = document.createElement('script');
+    s1.textContent = 'atOptions={"key":"b9be7f308767ec033bd304d299704695","format":"iframe","height":50,"width":320,"params":{}};';
+    const s2 = document.createElement('script');
+    s2.src = 'https://www.highperformanceformat.com/b9be7f308767ec033bd304d299704695/invoke.js';
+    adDiv.appendChild(s1); adDiv.appendChild(s2);
+    document.querySelector('footer.site-footer').before(adDiv);
+  }
 }
 
 // ─── Single-theme Wordle ──────────────────────────────────────────────────────

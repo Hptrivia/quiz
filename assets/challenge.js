@@ -1,4 +1,171 @@
+async function renderMultiThemeChallenge() {
+  const params = new URLSearchParams(window.location.search);
+  const slugs = (params.get("themes") || "").split(",").map(s => s.trim()).filter(Boolean);
+  if (slugs.length < 2) { window.location.href = "mashup.html"; return; }
+
+  const allThemeMeta = await loadThemes();
+  const selectedThemes = slugs.map(slug => allThemeMeta.find(t => t.slug === slug)).filter(Boolean);
+  if (selectedThemes.length < 2) { window.location.href = "mashup.html"; return; }
+
+  const themesParam = selectedThemes.map(t => t.slug).join(",");
+  const colorBySlug = {};
+  selectedThemes.forEach((t, i) => { colorBySlug[t.slug] = MASHUP_BADGE_COLORS[i % MASHUP_BADGE_COLORS.length]; });
+
+  document.title = selectedThemes.map(t => t.title).join(" + ") + " — Challenge | Trivia Gauntlet";
+  if (typeof gtag === "function") gtag("event", "page_view", { page_title: document.title, page_location: window.location.href });
+
+  const questionsByTheme = {};
+  await Promise.all(selectedThemes.map(async theme => {
+    try { questionsByTheme[theme.slug] = (await fetchJSON(theme.questionFile)) || []; }
+    catch(e) { questionsByTheme[theme.slug] = []; }
+  }));
+
+  const ROUND_SIZE = 10;
+  const rawRound = parseInt(params.get("round") || "1", 10);
+  const currentRound = isNaN(rawRound) || rawRound < 1 ? 1 : rawRound;
+
+  const pools = buildMashupPools(selectedThemes, questionsByTheme);
+  const totalRounds = calcMashupTotalBatches(pools, ROUND_SIZE);
+  const safeRound = Math.min(currentRound, totalRounds);
+  const roundQuestions = sliceFromMashupPools(pools, ROUND_SIZE, safeRound - 1).map(q => shuffleQuestionOptions(q));
+
+  const themeScores = {};
+  selectedThemes.forEach(t => { themeScores[t.slug] = { correct: 0, total: 0 }; });
+  roundQuestions.forEach(q => { if (themeScores[q._themeSlug]) themeScores[q._themeSlug].total++; });
+
+  const roundEl = document.getElementById("challengeRoundText");
+  const slidesContainer = document.getElementById("challengeSlides");
+  const scoreEl = document.getElementById("challengeScoreText");
+  const quizBox = document.getElementById("challengeQuizBox");
+  const resultBox = document.getElementById("challengeResultBox");
+  const nextRoundLink = document.getElementById("challengeNextRoundLink");
+
+  if (roundEl) roundEl.textContent = `Round ${safeRound}`;
+  if (nextRoundLink) {
+    if (safeRound < totalRounds) {
+      nextRoundLink.style.display = "inline-block";
+      nextRoundLink.textContent = "Skip to next round";
+      nextRoundLink.href = `challenge.html?themes=${themesParam}&round=${safeRound + 1}`;
+    } else { nextRoundLink.style.display = "none"; }
+  }
+
+  let score = 0, currentIndex = 0, revealAnswers = false;
+
+  function showQuestion(index) {
+    const prev = slidesContainer.querySelector(".question-slide.active");
+    if (prev) { prev.classList.remove("active"); prev.classList.add("answered"); prev.style.display = "none"; }
+    const slide = slidesContainer.querySelector(`.question-slide[data-index="${index}"]`);
+    if (slide) { slide.classList.add("active"); slide.style.display = "block"; slide.scrollIntoView({ behavior: "smooth", block: "start" }); }
+    if (scoreEl) scoreEl.textContent = `Score: ${score}`;
+  }
+
+  if (isPremiumUser()) {
+    const revealBtn = document.createElement("button");
+    revealBtn.className = "secondary-btn reveal-answers-toggle";
+    revealBtn.textContent = "Reveal Answers: OFF";
+    revealBtn.addEventListener("click", () => {
+      revealAnswers = !revealAnswers;
+      revealBtn.className = revealAnswers ? "primary-btn reveal-answers-toggle" : "secondary-btn reveal-answers-toggle";
+      revealBtn.textContent = revealAnswers ? "Reveal Answers: ON" : "Reveal Answers: OFF";
+    });
+    if (quizBox) quizBox.insertBefore(revealBtn, slidesContainer);
+  }
+
+  roundQuestions.forEach((q, index) => {
+    const slug = q._themeSlug;
+    const themeName = (selectedThemes.find(t => t.slug === slug) || {}).title || slug;
+    const slide = document.createElement("div");
+    slide.className = "question-slide";
+    slide.dataset.index = index;
+    const qNum = document.createElement("p");
+    qNum.className = "slide-question-num";
+    qNum.textContent = `Question ${index + 1} of ${roundQuestions.length}`;
+    const qText = document.createElement("h2");
+    qText.textContent = q.question;
+    const optsList = document.createElement("div");
+    optsList.className = "options";
+    q.options.forEach(option => {
+      const btn = document.createElement("button");
+      btn.className = "option-btn";
+      btn.textContent = option;
+      btn.addEventListener("click", () => {
+        if (currentIndex !== index) return;
+        optsList.querySelectorAll(".option-btn").forEach(b => b.classList.remove("selected", "correct-anim", "wrong-anim"));
+        btn.classList.add("selected");
+      });
+      optsList.appendChild(btn);
+    });
+    const feedbackP = document.createElement("p");
+    feedbackP.className = "feedback";
+    const submitBtn = document.createElement("button");
+    submitBtn.className = "primary-btn";
+    submitBtn.textContent = "Submit";
+    const nextBtn = document.createElement("button");
+    nextBtn.className = "secondary-btn";
+    nextBtn.textContent = "Next";
+    nextBtn.style.display = "none";
+    const ctaRow = document.createElement("div");
+    ctaRow.className = "cta-row";
+    ctaRow.appendChild(submitBtn);
+    ctaRow.appendChild(nextBtn);
+    submitBtn.addEventListener("click", () => {
+      if (currentIndex !== index) return;
+      const selBtn = optsList.querySelector(".option-btn.selected");
+      if (!selBtn) return;
+      if (selBtn.textContent === q.answer) {
+        score++; themeScores[slug].correct++;
+        feedbackP.textContent = "Correct"; feedbackP.className = "feedback correct";
+        selBtn.classList.remove("wrong-anim"); void selBtn.offsetWidth; selBtn.classList.add("correct-anim");
+        if (typeof SoundFX !== 'undefined') SoundFX.play('correct');
+      } else {
+        feedbackP.textContent = revealAnswers ? `Wrong. The correct answer is ${q.answer}.` : "Wrong";
+        feedbackP.className = "feedback wrong";
+        selBtn.classList.remove("correct-anim"); void selBtn.offsetWidth; selBtn.classList.add("wrong-anim");
+        if (typeof SoundFX !== 'undefined') SoundFX.play('wrong');
+      }
+      if (scoreEl) scoreEl.textContent = `Score: ${score}`;
+      submitBtn.disabled = true; nextBtn.style.display = "inline-block";
+    });
+    nextBtn.addEventListener("click", () => {
+      currentIndex++;
+      if (currentIndex >= roundQuestions.length) renderResult();
+      else showQuestion(currentIndex);
+    });
+    slide.appendChild(qNum);
+    slide.appendChild(makeMashupBadge(slug, colorBySlug, themeName));
+    slide.appendChild(qText);
+    slide.appendChild(optsList);
+    slide.appendChild(feedbackP);
+    slide.appendChild(ctaRow);
+    slidesContainer.appendChild(slide);
+  });
+
+  slidesContainer.querySelectorAll(".question-slide").forEach(s => { s.style.display = "none"; });
+
+  function renderResult() {
+    quizBox.style.display = "none";
+    resultBox.style.display = "block";
+    resultBox.classList.remove("result-anim"); void resultBox.offsetWidth; resultBox.classList.add("result-anim");
+    const hasNextRound = safeRound < totalRounds;
+    resultBox.innerHTML = `
+      <h2>Round ${safeRound} Complete</h2>
+      <p>Your score: ${score} / ${roundQuestions.length}</p>
+      <div id="mashupChallengeBreakdown"></div>
+      <div class="cta-row">
+        ${hasNextRound ? `<a class="primary-btn" href="challenge.html?themes=${themesParam}&round=${safeRound + 1}">Next Round</a>` : ""}
+        ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html">Reveal Answers</a>` : ""}
+        <a class="secondary-btn" href="contact.html">Report a Question</a>
+      </div>
+    `;
+    document.getElementById("mashupChallengeBreakdown").appendChild(renderMashupThemeBreakdown(themeScores, selectedThemes, colorBySlug));
+    injectMashupResultAd(resultBox);
+  }
+
+  showQuestion(0);
+}
+
 async function renderChallengePage() {
+  if (getParam("themes")) { await renderMultiThemeChallenge(); return; }
   const slug = getParam("theme");
   const themes = await loadThemes();
   const theme = themes.find(t => t.slug === slug);
