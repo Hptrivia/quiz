@@ -18,17 +18,16 @@
 </head>
 <body data-page="wordle">
 <script>if (isPremiumUser()) document.body.classList.add('premium-mode');</script>
-  <main class="container narrow">
+  <div style="text-align:center;margin:8px 0 0;">
+    <script>if(!isPremiumUser()){atOptions={'key':'b9be7f308767ec033bd304d299704695','format':'iframe','height':50,'width':320,'params':{}};}</script>
+    <script>if(!isPremiumUser()){document.write('<scr'+'ipt src="https://www.highperformanceformat.com/b9be7f308767ec033bd304d299704695/invoke.js"><\/scr'+'ipt>');}</script>
+  </div>
+  <main class="container narrow" style="padding-top:8px;">
     <a href="index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
 
   <section class="panel">
     <p id="wordleProgress"></p>
     <div id="wordleThemeBadge" style="min-height:24px;margin-bottom:4px;"></div>
-
-    <div style="text-align:center;margin:0 0 10px;">
-      <script>if(!isPremiumUser()){atOptions={'key':'b9be7f308767ec033bd304d299704695','format':'iframe','height':50,'width':320,'params':{}};}</script>
-      <script>if(!isPremiumUser()){document.write('<scr'+'ipt src="https://www.highperformanceformat.com/b9be7f308767ec033bd304d299704695/invoke.js"><\/scr'+'ipt>');}</script>
-    </div>
 
     <div id="wordleBoard" class="wordle-board"></div>
     <p id="wordleFeedback" class="feedback"></p>
