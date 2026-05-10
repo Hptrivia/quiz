@@ -8,6 +8,25 @@ const outputDir = path.join(rootDir, "themes");
 const sitemapPath = path.join(rootDir, "sitemap.xml");
 const SITE_URL = "https://triviagauntlet.app";
 
+// Set to 1 or 2 to switch ad stacks
+const AD_STACK = 2;
+
+const PREMIUM_FN = "function isPremiumUser(){var e=localStorage.getItem('adsRemovedUntil');if(!e)return false;return new Date(e)>new Date();}";
+
+const AD_SCRIPTS = {
+  1: `  <script>${PREMIUM_FN}if(!isPremiumUser()){(function(s){s.dataset.zone='10961935',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));}</script>`,
+  2: `  <script>${PREMIUM_FN}</script>`,
+};
+
+const BANNER_TOP = {
+  1: ``,
+  2: `
+    <div style="text-align:center;margin:10px 0;">
+      <script>if(!isPremiumUser()){atOptions={'key':'b9be7f308767ec033bd304d299704695','format':'iframe','height':50,'width':320,'params':{}};}</script>
+      <script>if(!isPremiumUser()){document.write('<scr'+'ipt src="https://www.highperformanceformat.com/b9be7f308767ec033bd304d299704695/invoke.js"><\\/scr'+'ipt>');}</script>
+    </div>`,
+};
+
 function escapeHtml(str = "") {
   return String(str)
     .replace(/&/g, "&amp;")
@@ -160,7 +179,7 @@ const relatedThemesHtml = relatedThemes.length
 <title>${title} Trivia Questions | Trivia Gauntlet</title>
 <meta name="description" content="${escapeHtml(metaDescription)}" />
   <link rel="canonical" href="${SITE_URL}/themes/${slug}.html" />
-  <script>function isPremiumUser(){var e=localStorage.getItem('adsRemovedUntil');if(!e)return false;return new Date(e)>new Date();}if(!isPremiumUser()){(function(s){s.dataset.zone='10961935',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));}</script>
+${AD_SCRIPTS[AD_STACK]}
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -179,8 +198,7 @@ const relatedThemesHtml = relatedThemes.length
       <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
       <a href="../index.html" class="back-link">⌂ Home</a>
     </div>
-
-
+${BANNER_TOP[AD_STACK]}
 
     <div class="theme-search-wrap">
       <div class="search-wrap">
