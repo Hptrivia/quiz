@@ -20,11 +20,10 @@ const AD_SCRIPTS = {
 
 const BANNER_TOP = {
   1: ``,
-  2: `
-    <div style="text-align:center;margin:10px 0;">
-      <script>if(!isPremiumUser()){atOptions={'key':'b9be7f308767ec033bd304d299704695','format':'iframe','height':50,'width':320,'params':{}};}</script>
-      <script>if(!isPremiumUser()){document.write('<scr'+'ipt src="https://www.highperformanceformat.com/b9be7f308767ec033bd304d299704695/invoke.js"><\\/scr'+'ipt>');}</script>
-    </div>`,
+  2: `  <div style="text-align:center;margin:12px 0;">
+    <script>if(!isPremiumUser()){atOptions={'key':'b9be7f308767ec033bd304d299704695','format':'iframe','height':50,'width':320,'params':{}};}</script>
+    <script>if(!isPremiumUser()){document.write('<scr'+'ipt src="https://www.highperformanceformat.com/b9be7f308767ec033bd304d299704695/invoke.js"><\\/scr'+'ipt>');}</script>
+  </div>`,
 };
 
 function escapeHtml(str = "") {
@@ -193,12 +192,12 @@ ${AD_SCRIPTS[AD_STACK]}
   <link rel="stylesheet" href="../assets/style.css" />
 </head>
 <body>
+${BANNER_TOP[AD_STACK]}
   <main class="container narrow">
     <div class="theme-top-links">
       <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
       <a href="../index.html" class="back-link">⌂ Home</a>
     </div>
-${BANNER_TOP[AD_STACK]}
 
     <div class="theme-search-wrap">
       <div class="search-wrap">
