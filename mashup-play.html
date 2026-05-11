@@ -41,6 +41,10 @@
   </style>
 </head>
 <body>
+  <div style="text-align:center;margin:12px 0;">
+    <script>if(!isPremiumUser()){atOptions={'key':'b9be7f308767ec033bd304d299704695','format':'iframe','height':50,'width':320,'params':{}};}</script>
+    <script>if(!isPremiumUser()){document.write('<scr'+'ipt src="https://www.highperformanceformat.com/b9be7f308767ec033bd304d299704695/invoke.js"><\/scr'+'ipt>');}</script>
+  </div>
   <main class="container narrow" style="padding-top: 16px;">
     <a id="backLink" href="mashup.html" class="back-link">← Back</a>
 
@@ -105,9 +109,9 @@
       if(!isPremiumUser()){
         var adDiv=document.getElementById('bottom-banner-ad');
         var s1=document.createElement('script');
-        s1.textContent='atOptions={"key":"b9be7f308767ec033bd304d299704695","format":"iframe","height":50,"width":320,"params":{}};';
+        s1.textContent='atOptions={"key":"6cd708c27c2130cedbed5e1a3bc703d0","format":"iframe","height":250,"width":300,"params":{}};';
         var s2=document.createElement('script');
-        s2.src='https://www.highperformanceformat.com/b9be7f308767ec033bd304d299704695/invoke.js';
+        s2.src='https://www.highperformanceformat.com/6cd708c27c2130cedbed5e1a3bc703d0/invoke.js';
         adDiv.appendChild(s1);
         adDiv.appendChild(s2);
       }
@@ -437,17 +441,6 @@
           "</div>";
 
         document.getElementById("marathonThemeBreakdown").appendChild(renderThemeBreakdown(state.themeScores));
-        if (!isPremiumUser()) {
-          const adDiv = document.createElement('div');
-          adDiv.style.cssText = 'text-align:center;margin:12px 0;';
-          const s1 = document.createElement('script');
-          s1.textContent = 'atOptions={"key":"6cd708c27c2130cedbed5e1a3bc703d0","format":"iframe","height":250,"width":300,"params":{}};';
-          const s2 = document.createElement('script');
-          s2.src = 'https://www.highperformanceformat.com/6cd708c27c2130cedbed5e1a3bc703d0/invoke.js';
-          adDiv.appendChild(s1);
-          adDiv.appendChild(s2);
-          resultBox.appendChild(adDiv);
-        }
         setTimeout(() => { if (typeof showInstallCard === "function") showInstallCard(); }, 800);
       }
 
@@ -632,18 +625,6 @@
           "</div>";
 
         document.getElementById("challengeThemeBreakdown").appendChild(renderThemeBreakdown(state.themeScores));
-        if (!isPremiumUser()) {
-          const adDiv = document.createElement('div');
-          adDiv.style.cssText = 'text-align:center;margin:12px 0;';
-          const s1 = document.createElement('script');
-          s1.textContent = 'atOptions={"key":"6cd708c27c2130cedbed5e1a3bc703d0","format":"iframe","height":250,"width":300,"params":{}};';
-          const s2 = document.createElement('script');
-          s2.src = 'https://www.highperformanceformat.com/6cd708c27c2130cedbed5e1a3bc703d0/invoke.js';
-          adDiv.appendChild(s1);
-          adDiv.appendChild(s2);
-          resultBox.appendChild(adDiv);
-        }
-
         const copyBtn = document.getElementById("copyShareBtn");
         const urlBox = document.getElementById("shareUrlBox");
         function doCopy() {
@@ -813,17 +794,6 @@
               "<a class=\"secondary-btn\" href=\"contact.html\">Report a Question</a>" +
               "</div>";
             document.getElementById("survivalThemeBreakdown").appendChild(renderThemeBreakdown(state.themeScores));
-            if (!isPremiumUser()) {
-              const adDiv = document.createElement('div');
-              adDiv.style.cssText = 'text-align:center;margin:12px 0;';
-              const s1 = document.createElement('script');
-              s1.textContent = 'atOptions={"key":"6cd708c27c2130cedbed5e1a3bc703d0","format":"iframe","height":250,"width":300,"params":{}};';
-              const s2 = document.createElement('script');
-              s2.src = 'https://www.highperformanceformat.com/6cd708c27c2130cedbed5e1a3bc703d0/invoke.js';
-              adDiv.appendChild(s1);
-              adDiv.appendChild(s2);
-              resultBox.appendChild(adDiv);
-            }
             setTimeout(() => { if (typeof showInstallCard === "function") showInstallCard(); }, 800);
           }
 
@@ -992,7 +962,5 @@
     else if (mode === "survival") runSurvival();
 
   })();
-  </script>
-  <script>if(!isPremiumUser()){var _as=document.createElement('script');_as.src='https://pl29378740.profitablecpmratenetwork.com/54/0b/d4/540bd45393d3b426f087b18680fbe67c.js';document.body.appendChild(_as);}</script>
-</body>
+  </script></body>
 </html>
