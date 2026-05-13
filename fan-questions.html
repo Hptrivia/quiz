@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fan Questions | Trivia Gauntlet</title>
+  <script>function isPremiumUser(){var e=localStorage.getItem('adsRemovedUntil');if(!e)return false;return new Date(e)>new Date();}</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E6BY9F2ZDT');
+  </script>
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div style="text-align:center;margin:12px 0;">
+    <script>if(!isPremiumUser()){atOptions={'key':'b9be7f308767ec033bd304d299704695','format':'iframe','height':50,'width':320,'params':{}};}</script>
+    <script>if(!isPremiumUser()){document.write('<scr'+'ipt src="https://www.highperformanceformat.com/b9be7f308767ec033bd304d299704695/invoke.js"><\/scr'+'ipt>');}</script>
+  </div>
+
+  <main class="container narrow">
+    <a href="#" class="back-link" onclick="history.back(); return false;">← Back</a>
+
+    <section class="panel">
+      <h1 id="pageTitle">Fan Questions</h1>
+      <p id="pageTheme" style="opacity:0.6;margin-bottom:4px;"></p>
+      <p style="font-size:0.9rem;opacity:0.7;margin-bottom:24px;">Community-created questions. Quality and difficulty may vary.</p>
+
+      <div class="grid">
+        <a class="card" id="createLink" href="#">
+          <h3>Create a Question</h3>
+          <p>Submit your own trivia question to the community pool</p>
+        </a>
+        <a class="card" id="playLink" href="#">
+          <h3>Play Fan Questions</h3>
+          <p id="playCount">Play community-created questions for this theme</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a class="footer-highlight" href="remove-ads.html">Ad-Free</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwmQxl5rolsKmgtSSnaeGdEeHGCPN14AsYm1bg_X2dbgtvE2mrnYsm4Velf5SU0gjzO/exec';
+
+    function jsonp(url, params) {
+      return new Promise((resolve) => {
+        const cbName = 'jcb_' + Date.now();
+        const script = document.createElement('script');
+        const p = new URLSearchParams({ ...params, callback: cbName });
+        script.src = `${url}?${p.toString()}`;
+        window[cbName] = (data) => { delete window[cbName]; script.remove(); resolve(data); };
+        script.onerror = () => { delete window[cbName]; script.remove(); resolve(null); };
+        document.head.appendChild(script);
+      });
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const theme = params.get('theme') || '';
+
+    if (theme) {
+      const label = theme.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+      document.getElementById('pageTheme').textContent = label;
+      document.getElementById('createLink').href = `fan-create.html?theme=${encodeURIComponent(theme)}`;
+      document.getElementById('playLink').href = `fan-play.html?theme=${encodeURIComponent(theme)}`;
+
+      jsonp(APPS_SCRIPT_URL, { theme }).then(data => {
+        const countEl = document.getElementById('playCount');
+        if (!data || !data.questions) return;
+        const n = data.questions.length;
+        countEl.textContent = n === 0
+          ? 'No questions yet — be the first to add one!'
+          : `${n} question${n !== 1 ? 's' : ''} available`;
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Fan Question | Trivia Gauntlet</title>
+  <script>function isPremiumUser(){var e=localStorage.getItem('adsRemovedUntil');if(!e)return false;return new Date(e)>new Date();}</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E6BY9F2ZDT');
+  </script>
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    .fan-form label {
+      display: block;
+      font-size: 0.85rem;
+      opacity: 0.75;
+      margin-bottom: 4px;
+      margin-top: 16px;
+    }
+    .fan-form input[type="text"],
+    .fan-form select,
+    .fan-form textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--card-border, #334155);
+      background: var(--card-bg, #1e293b);
+      color: inherit;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    .fan-form textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+    .fan-form input[type="text"]:focus,
+    .fan-form select:focus,
+    .fan-form textarea:focus {
+      outline: none;
+      border-color: var(--accent, #38bdf8);
+    }
+    .correct-radio-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .correct-radio-group label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 0;
+      opacity: 1;
+      cursor: pointer;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--card-border, #334155);
+      background: var(--card-bg, #1e293b);
+      font-size: 0.9rem;
+    }
+    .correct-radio-group input[type="radio"] {
+      accent-color: var(--accent, #38bdf8);
+    }
+    #formError {
+      color: var(--feedback-wrong, #ff8b8b);
+      font-size: 0.9rem;
+      margin-top: 12px;
+      display: none;
+    }
+    #formSuccess {
+      color: var(--feedback-correct, #7cfc98);
+      font-size: 0.95rem;
+      margin-top: 12px;
+      display: none;
+    }
+    #submitBtn {
+      margin-top: 20px;
+      width: 100%;
+    }
+    .char-count {
+      font-size: 0.75rem;
+      opacity: 0.5;
+      text-align: right;
+      margin-top: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div style="text-align:center;margin:12px 0;">
+    <script>if(!isPremiumUser()){atOptions={'key':'b9be7f308767ec033bd304d299704695','format':'iframe','height':50,'width':320,'params':{}};}</script>
+    <script>if(!isPremiumUser()){document.write('<scr'+'ipt src="https://www.highperformanceformat.com/b9be7f308767ec033bd304d299704695/invoke.js"><\/scr'+'ipt>');}</script>
+  </div>
+
+  <main class="container narrow">
+    <a href="#" class="back-link" onclick="history.back(); return false;">← Back</a>
+
+    <section class="panel">
+      <h1>Create a Fan Question</h1>
+      <p id="pageThemeLabel" style="opacity:0.6;margin-bottom:16px;"></p>
+
+      <form class="fan-form" id="fanForm" novalidate>
+
+        <label for="questionText">Question <span style="opacity:0.5;">(min 15 characters)</span></label>
+        <textarea id="questionText" maxlength="300" placeholder="Enter your trivia question..."></textarea>
+        <div class="char-count"><span id="qCount">0</span>/300</div>
+
+        <label for="optA">Correct Answer</label>
+        <input type="text" id="optA" maxlength="150" placeholder="The correct answer" />
+        <label for="optB">Wrong Option 1</label>
+        <input type="text" id="optB" maxlength="150" placeholder="A wrong answer" />
+        <label for="optC">Wrong Option 2</label>
+        <input type="text" id="optC" maxlength="150" placeholder="Another wrong answer" />
+
+        <div id="formError"></div>
+        <div id="formSuccess"></div>
+
+        <button type="submit" id="submitBtn" class="primary-btn">Submit Question</button>
+      </form>
+
+      <div style="margin-top:24px;text-align:center;">
+        <a href="contact.html" class="secondary-btn" style="font-size:0.85rem;padding:8px 18px;text-decoration:none;">Leave Feedback</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a class="footer-highlight" href="remove-ads.html">Ad-Free</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwmQxl5rolsKmgtSSnaeGdEeHGCPN14AsYm1bg_X2dbgtvE2mrnYsm4Velf5SU0gjzO/exec';
+    const WINDOW_MS = 5 * 60 * 1000;
+    const MAX_PER_WINDOW = 10;
+
+    function getSubmissionLog() {
+      try { return JSON.parse(localStorage.getItem('fanQ_log') || '[]'); } catch { return []; }
+    }
+    function saveSubmissionLog(log) {
+      localStorage.setItem('fanQ_log', JSON.stringify(log));
+    }
+    function checkRateLimit() {
+      const now = Date.now();
+      const log = getSubmissionLog().filter(t => now - t < WINDOW_MS);
+      if (log.length >= MAX_PER_WINDOW) {
+        const oldest = Math.min(...log);
+        const minutesLeft = Math.ceil((WINDOW_MS - (now - oldest)) / 60000);
+        return `You've submitted 10 questions — thanks! Come back in ${minutesLeft} minute${minutesLeft !== 1 ? 's' : ''} to add more.`;
+      }
+      return null;
+    }
+    function recordSubmission() {
+      const now = Date.now();
+      const log = getSubmissionLog().filter(t => now - t < WINDOW_MS);
+      log.push(now);
+      saveSubmissionLog(log);
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const theme = params.get('theme') || '';
+
+    if (theme) {
+      const label = theme.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+      document.getElementById('pageThemeLabel').textContent = 'Theme: ' + label;
+    }
+
+    function jsonp(url, params) {
+      return new Promise((resolve) => {
+        const cbName = 'jcb_' + Date.now();
+        const script = document.createElement('script');
+        const p = new URLSearchParams({ ...params, callback: cbName });
+        script.src = `${url}?${p.toString()}`;
+        window[cbName] = (data) => { delete window[cbName]; script.remove(); resolve(data); };
+        script.onerror = () => { delete window[cbName]; script.remove(); resolve(null); };
+        document.head.appendChild(script);
+      });
+    }
+
+    const qTextEl = document.getElementById('questionText');
+    qTextEl.addEventListener('input', () => {
+      document.getElementById('qCount').textContent = qTextEl.value.length;
+    });
+
+    document.getElementById('fanForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const errorEl = document.getElementById('formError');
+      const successEl = document.getElementById('formSuccess');
+      const submitBtn = document.getElementById('submitBtn');
+      errorEl.style.display = 'none';
+      successEl.style.display = 'none';
+
+      const rateLimitMsg = checkRateLimit();
+      if (rateLimitMsg) { showError(rateLimitMsg); return; }
+
+      const question = qTextEl.value.trim();
+      const optA = document.getElementById('optA').value.trim();
+      const optB = document.getElementById('optB').value.trim();
+      const optC = document.getElementById('optC').value.trim();
+
+      if (!question) return showError('Please enter a question.');
+      if (question.length < 15) return showError('Question must be at least 15 characters.');
+      const wordCount = question.split(/\s+/).filter(w => w.length > 0).length;
+      if (wordCount < 5) return showError('Question must contain at least 5 words.');
+      if (!optA || !optB || !optC) return showError('Please fill in all three options.');
+      if ([optA, optB, optC].some(o => o.length < 2)) return showError('Each option must be at least 2 characters.');
+      const optsLower = [optA, optB, optC].map(o => o.toLowerCase());
+      if (new Set(optsLower).size < 3) return showError('All three options must be different.');
+      if (!theme) return showError('No theme specified. Please go back and try again.');
+
+      const payload = {
+        theme,
+        question,
+        optionA: optA,
+        optionB: optB,
+        optionC: optC,
+        correct: optA
+      };
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting...';
+
+      await jsonp(APPS_SCRIPT_URL, { action: 'submit', ...payload });
+
+      recordSubmission();
+      successEl.textContent = 'Question submitted! It\'ll be available to play soon after review.';
+      successEl.style.display = 'block';
+      document.getElementById('fanForm').reset();
+      document.getElementById('qCount').textContent = '0';
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit Question';
+
+      function showError(msg) {
+        errorEl.textContent = msg;
+        errorEl.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>

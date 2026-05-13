@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Play Fan Questions | Trivia Gauntlet</title>
+  <script>function isPremiumUser(){var e=localStorage.getItem('adsRemovedUntil');if(!e)return false;return new Date(e)>new Date();}</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E6BY9F2ZDT');
+  </script>
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    .fan-question-card {
+      margin-bottom: 8px;
+    }
+    .fan-question-text {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+    .fan-options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .fan-vote-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+    .fan-vote-row .vote-btn {
+      background: none;
+      border: 1px solid var(--card-border, #334155);
+      border-radius: 6px;
+      color: inherit;
+      padding: 4px 12px;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+    .fan-vote-row .vote-btn:hover { border-color: var(--accent, #38bdf8); }
+    .fan-vote-row .vote-btn.voted { opacity: 0.5; cursor: default; }
+    .vote-note {
+      font-size: 0.75rem;
+      opacity: 0.5;
+      flex: 1 1 100%;
+      margin-top: 2px;
+    }
+    .fan-progress {
+      font-size: 0.85rem;
+      opacity: 0.6;
+      margin-bottom: 16px;
+    }
+    .fan-score-text {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    #loadingMsg, #emptyMsg { text-align: center; padding: 32px 0; opacity: 0.7; }
+    .result-section { text-align: center; }
+    .result-score { font-size: 2rem; font-weight: 700; margin: 16px 0 8px; }
+    .result-tier { font-size: 1.1rem; opacity: 0.8; }
+    .option-btn.selected {
+      border-color: var(--accent, #38bdf8);
+      background: rgba(56, 189, 248, 0.1);
+    }
+    .next-locked {
+      filter: blur(2px);
+      opacity: 0.4;
+      pointer-events: none;
+    }
+    .vote-nudge {
+      font-size: 0.8rem;
+      opacity: 0.6;
+      text-align: center;
+      margin-top: 6px;
+    }
+    .vote-error {
+      color: var(--feedback-wrong, #ff8b8b);
+      font-size: 0.8rem;
+      margin-top: 4px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div style="text-align:center;margin:12px 0;">
+    <script>if(!isPremiumUser()){atOptions={'key':'b9be7f308767ec033bd304d299704695','format':'iframe','height':50,'width':320,'params':{}};}</script>
+    <script>if(!isPremiumUser()){document.write('<scr'+'ipt src="https://www.highperformanceformat.com/b9be7f308767ec033bd304d299704695/invoke.js"><\/scr'+'ipt>');}</script>
+  </div>
+
+  <main class="container narrow" style="padding-top:16px;">
+    <a href="#" class="back-link" onclick="history.back(); return false;">← Back</a>
+
+    <section class="panel">
+      <div id="loadingMsg">Loading community questions...</div>
+      <div id="emptyMsg" style="display:none;text-align:center;padding:32px 0;">
+        <p style="font-size:1.1rem;font-weight:600;margin-bottom:8px;">No questions submitted yet.</p>
+        <p style="opacity:0.7;margin-bottom:24px;">Be the first to add a question to the community pool!</p>
+        <a id="createLink" href="#" class="primary-btn">Add a Question</a>
+      </div>
+
+      <div id="quizArea" style="display:none;">
+        <h2 id="quizTitle" style="margin-bottom:4px;"></h2>
+        <p style="font-size:0.8rem;opacity:0.5;margin-bottom:4px;">Community questions</p>
+        <p id="newQuestionsNote" style="display:none;font-size:0.82rem;color:var(--accent,#38bdf8);margin-bottom:12px;"></p>
+        <div class="fan-score-text">Score: <span id="scoreDisplay">0</span></div>
+        <div class="fan-progress">Question <span id="qNum">1</span> of <span id="qTotal">0</span></div>
+        <div id="questionArea"></div>
+        <div style="margin-top:20px;text-align:center;">
+          <a href="contact.html" class="secondary-btn" style="font-size:0.85rem;padding:8px 18px;text-decoration:none;">Leave Feedback</a>
+        </div>
+      </div>
+
+      <div id="resultArea" style="display:none;" class="result-section">
+        <h2>Round Complete</h2>
+        <div class="result-score"><span id="finalScore">0</span> / <span id="finalTotal">0</span></div>
+        <p class="result-tier" id="resultTier"></p>
+        <div style="margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+          <button class="primary-btn" id="playAgainBtn">Play Again</button>
+          <a class="secondary-btn" id="backToFanLink" href="#">Back to Fan Questions</a>
+        </div>
+        <div style="margin-top:20px;">
+          <a href="contact.html" class="secondary-btn" style="font-size:0.85rem;padding:8px 18px;text-decoration:none;">Leave Feedback</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a class="footer-highlight" href="remove-ads.html">Ad-Free</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwmQxl5rolsKmgtSSnaeGdEeHGCPN14AsYm1bg_X2dbgtvE2mrnYsm4Velf5SU0gjzO/exec';
+    const MAX_QUESTIONS = 30;
+
+    function jsonp(url, params) {
+      return new Promise((resolve) => {
+        const cbName = 'jcb_' + Date.now();
+        const script = document.createElement('script');
+        const p = new URLSearchParams({ ...params, callback: cbName });
+        script.src = `${url}?${p.toString()}`;
+        window[cbName] = (data) => { delete window[cbName]; script.remove(); resolve(data); };
+        script.onerror = () => { delete window[cbName]; script.remove(); resolve(null); };
+        document.head.appendChild(script);
+      });
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const theme = params.get('theme') || '';
+    const themeLabel = theme.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+
+    document.getElementById('quizTitle').textContent = themeLabel + ' Fan Questions';
+    document.getElementById('createLink').href = `fan-create.html?theme=${encodeURIComponent(theme)}`;
+    document.getElementById('backToFanLink').href = `fan-questions.html?theme=${encodeURIComponent(theme)}`;
+
+    let questions = [];
+    let current = 0;
+    let score = 0;
+    let answered = false;
+
+    const CACHE_KEY = `fanPlay_result_${theme}`;
+
+    function getCachedResult() {
+      try { return JSON.parse(localStorage.getItem(CACHE_KEY)); } catch { return null; }
+    }
+    function saveCachedResult(score, total, ids) {
+      localStorage.setItem(CACHE_KEY, JSON.stringify({ score, total, ids }));
+    }
+    function clearCachedResult() {
+      localStorage.removeItem(CACHE_KEY);
+    }
+
+    function shuffle(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    function getTier(score, total) {
+      const pct = (score / total) * 100;
+      if (pct === 100) return 'Perfect score!';
+      if (pct >= 80) return 'Great effort!';
+      if (pct >= 60) return 'Not bad!';
+      if (pct >= 40) return 'Keep practicing!';
+      return 'Better luck next time!';
+    }
+
+    function startFresh(allQuestions) {
+      questions = shuffle(allQuestions).slice(0, MAX_QUESTIONS);
+      document.getElementById('loadingMsg').style.display = 'none';
+      document.getElementById('qTotal').textContent = questions.length;
+      document.getElementById('quizArea').style.display = 'block';
+      renderQuestion();
+    }
+
+    async function loadQuestions() {
+      try {
+        const data = await jsonp(APPS_SCRIPT_URL, { theme });
+        if (!data || !data.questions || data.questions.length === 0) {
+          document.getElementById('loadingMsg').style.display = 'none';
+          document.getElementById('emptyMsg').style.display = 'block';
+          return;
+        }
+
+        const cached = getCachedResult();
+        if (cached) {
+          const fetchedIds = new Set(data.questions.map(q => q.id));
+          const cachedIds = new Set(cached.ids || []);
+          const newCount = [...fetchedIds].filter(id => !cachedIds.has(id)).length;
+
+          if (newCount === 0) {
+            // No new questions — show cached results screen
+            document.getElementById('loadingMsg').style.display = 'none';
+            document.getElementById('finalScore').textContent = cached.score;
+            document.getElementById('finalTotal').textContent = cached.total;
+            document.getElementById('resultTier').textContent = getTier(cached.score, cached.total);
+            document.getElementById('resultArea').style.display = 'block';
+            return;
+          } else {
+            // New questions available — clear cache and start fresh, note shown in quiz header
+            clearCachedResult();
+            const note = document.getElementById('newQuestionsNote');
+            note.textContent = `${newCount} new question${newCount !== 1 ? 's' : ''} added since your last session!`;
+            note.style.display = 'block';
+            startFresh(data.questions);
+            return;
+          }
+        }
+
+        startFresh(data.questions);
+      } catch (err) {
+        document.getElementById('loadingMsg').style.display = 'none';
+        document.getElementById('emptyMsg').style.display = 'block';
+      }
+    }
+
+    function renderQuestion() {
+      const q = questions[current];
+      answered = false;
+      document.getElementById('qNum').textContent = current + 1;
+
+      const options = shuffle([{ label: q.optionA }, { label: q.optionB }, { label: q.optionC }]);
+      const isLast = current + 1 >= questions.length;
+
+      const area = document.getElementById('questionArea');
+      area.innerHTML = `
+        <div class="fan-question-card">
+          <p class="fan-question-text">${escHtml(q.question)}</p>
+          <div class="fan-options" id="optionsContainer">
+            ${options.map(o => `<button class="option-btn" data-answer="${escHtml(o.label)}">${escHtml(o.label)}</button>`).join('')}
+          </div>
+          <div class="fan-vote-row" id="voteRow">
+            <button class="vote-btn" id="upvoteBtn" title="Good question with a correct answer">👍 Good question</button>
+            <button class="vote-btn" id="downvoteBtn" title="Disagree with the question, think the answer is wrong, or there's an issue">👎 Disagree / Issue</button>
+            <button class="vote-btn" id="reportBtn" title="Spam, inappropriate, or offensive content">🚩 Report</button>
+            <span class="vote-error" id="voteError">Answer the question before upvoting.</span>
+            <span class="vote-note">👍 Good question &nbsp;|&nbsp; 👎 Answer seems wrong or issue &nbsp;|&nbsp; 🚩 Spam or inappropriate</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;margin-top:12px;flex-wrap:wrap;">
+            <button class="primary-btn" id="submitAnswerBtn" disabled>Submit</button>
+            <button class="primary-btn next-locked" id="nextBtn" style="display:none;">${isLast ? 'See Results' : 'Next Question'}</button>
+            <span class="vote-nudge" id="voteNudge" style="display:none;margin:0;">Vote to continue</span>
+          </div>
+          <p class="feedback" id="feedbackText" style="min-height:1.4em;margin-top:8px;"></p>
+        </div>
+      `;
+
+      let selectedAnswer = null;
+
+      document.querySelectorAll('.option-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (answered) return;
+          document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+          btn.classList.add('selected');
+          selectedAnswer = btn.dataset.answer;
+          document.getElementById('submitAnswerBtn').disabled = false;
+        });
+      });
+
+      document.getElementById('submitAnswerBtn').addEventListener('click', () => {
+        if (!selectedAnswer || answered) return;
+        handleAnswer(selectedAnswer, q);
+      });
+
+      ['upvoteBtn', 'downvoteBtn', 'reportBtn'].forEach(id => {
+        document.getElementById(id).addEventListener('click', () => handleVote(id, q));
+      });
+
+      document.getElementById('nextBtn').addEventListener('click', () => {
+        current++;
+        if (current >= questions.length) showResult();
+        else renderQuestion();
+      });
+    }
+
+    function handleAnswer(selected, q) {
+      answered = true;
+      const feedback = document.getElementById('feedbackText');
+
+      document.getElementById('submitAnswerBtn').disabled = true;
+      document.querySelectorAll('.option-btn').forEach(b => {
+        b.disabled = true;
+        b.classList.remove('selected');
+        if (b.dataset.answer === selected && selected !== q.correct) b.classList.add('wrong-anim');
+        if (b.dataset.answer === selected && selected === q.correct) b.classList.add('correct-anim');
+      });
+
+      if (selected === q.correct) {
+        score++;
+        document.getElementById('scoreDisplay').textContent = score;
+        feedback.textContent = 'Correct!';
+        feedback.className = 'feedback correct';
+      } else {
+        feedback.textContent = 'Wrong!';
+        feedback.className = 'feedback wrong';
+      }
+
+      document.getElementById('submitAnswerBtn').style.display = 'none';
+      document.getElementById('nextBtn').style.display = 'inline-flex';
+      document.getElementById('voteNudge').style.display = 'inline';
+    }
+
+    function handleVote(btnId, q) {
+      if (btnId === 'upvoteBtn' && !answered) {
+        const err = document.getElementById('voteError');
+        err.style.display = 'block';
+        setTimeout(() => { err.style.display = 'none'; }, 3000);
+        return;
+      }
+
+      const btn = document.getElementById(btnId);
+      if (btn.classList.contains('voted')) return;
+
+      const voteType = btnId === 'upvoteBtn' ? 'upvote' : btnId === 'downvoteBtn' ? 'downvote' : 'report';
+      ['upvoteBtn', 'downvoteBtn', 'reportBtn'].forEach(id => {
+        const b = document.getElementById(id);
+        if (b) b.classList.add('voted');
+      });
+
+      jsonp(APPS_SCRIPT_URL, { action: 'vote', rowId: q.id, voteType });
+
+      if (answered) {
+        document.querySelectorAll('.option-btn').forEach(b => {
+          if (b.dataset.answer === q.correct) b.classList.add('correct-anim');
+        });
+        const feedback = document.getElementById('feedbackText');
+        if (feedback.className.includes('wrong')) {
+          feedback.textContent = `Wrong! The correct answer was: ${q.correct}`;
+        }
+      }
+
+      const nextBtn = document.getElementById('nextBtn');
+      nextBtn.classList.remove('next-locked');
+      document.getElementById('voteNudge').style.display = 'none';
+    }
+
+    function showResult() {
+      document.getElementById('quizArea').style.display = 'none';
+      const total = questions.length;
+      document.getElementById('finalScore').textContent = score;
+      document.getElementById('finalTotal').textContent = total;
+      document.getElementById('resultTier').textContent = getTier(score, total);
+      document.getElementById('resultArea').style.display = 'block';
+      saveCachedResult(score, total, questions.map(q => q.id));
+    }
+
+    function escHtml(str) {
+      return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    document.getElementById('playAgainBtn').addEventListener('click', () => {
+      clearCachedResult();
+      location.reload();
+    });
+
+    loadQuestions();
+  </script>
+</body>
+</html>
