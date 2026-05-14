@@ -12,7 +12,7 @@ const PREMIUM_FN = "function isPremiumUser(){var e=localStorage.getItem('adsRemo
 
 const AD_SCRIPTS = {
   1: `  <script>${PREMIUM_FN}if(!isPremiumUser()){(function(s){s.dataset.zone='10961427',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));(function(s){s.dataset.zone='10961935',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));(function(s){s.dataset.zone='10962017',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));}</script>`,
-  2: `  <script>${PREMIUM_FN}</script>`,
+  2: `  <script>${PREMIUM_FN}</script>\n  <script>if(!isPremiumUser()){(function(s){s.dataset.zone='10962017',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));}</script>`,
 };
 
 const BANNER_TOP = {
@@ -21,6 +21,24 @@ const BANNER_TOP = {
   <div style="text-align:center;margin:10px 0;">
     <script>if(!isPremiumUser()){atOptions={'key':'b9be7f308767ec033bd304d299704695','format':'iframe','height':50,'width':320,'params':{}};}</script>
     <script>if(!isPremiumUser()){document.write('<scr'+'ipt src="https://www.highperformanceformat.com/b9be7f308767ec033bd304d299704695/invoke.js"><\\/scr'+'ipt>');}</script>
+  </div>`,
+};
+
+const BANNER_MID = {
+  1: ``,
+  2: `
+  <div id="mid-banner-ad" style="text-align:center;margin:12px 0;">
+    <script>
+      if(!isPremiumUser()){
+        var adDiv=document.getElementById('mid-banner-ad');
+        var s1=document.createElement('script');
+        s1.textContent='atOptions={"key":"6cd708c27c2130cedbed5e1a3bc703d0","format":"iframe","height":250,"width":300,"params":{}};';
+        var s2=document.createElement('script');
+        s2.src='https://www.highperformanceformat.com/6cd708c27c2130cedbed5e1a3bc703d0/invoke.js';
+        adDiv.appendChild(s1);
+        adDiv.appendChild(s2);
+      }
+    </script>
   </div>`,
 };
 
@@ -75,11 +93,39 @@ function buildCategoryPage(categoryName, themes) {
     "Browse trivia themes in this category and choose the mode that fits how you want to play."
   ];
 
-  const cardsHtml = themes.map(theme => `
+  const cardHtml = theme => `
     <a class="card" href="../themes/${escapeHtml(theme.slug)}.html">
       <h3>${escapeHtml(theme.title)}</h3>
     </a>
-  `).join("");
+  `;
+
+  const MID_THRESHOLD = 6;
+  let gridHtml;
+  if (themes.length > MID_THRESHOLD) {
+    const mid = Math.ceil(themes.length / 2);
+    const firstHalf  = themes.slice(0, mid).map(cardHtml).join("");
+    const secondHalf = themes.slice(mid).map(cardHtml).join("");
+    gridHtml = `
+    <section>
+      <div class="grid">
+        ${firstHalf}
+      </div>
+    </section>
+${BANNER_MID[AD_STACK]}
+    <section>
+      <div class="grid">
+        ${secondHalf}
+      </div>
+    </section>`;
+  } else {
+    gridHtml = `
+    <section>
+      <div class="grid">
+        ${themes.map(cardHtml).join("")}
+      </div>
+    </section>
+${BANNER_MID[AD_STACK]}`;
+  }
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -114,12 +160,7 @@ ${BANNER_TOP[AD_STACK]}
       </div>
     </section>
 
-    <section>
-      <div class="grid">
-        ${cardsHtml}
-      </div>
-    </section>
-
+  ${gridHtml}
   </main>
 
   <footer class="site-footer">

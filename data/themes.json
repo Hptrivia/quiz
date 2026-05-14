@@ -52,7 +52,7 @@
     "description": "A fantasy trivia theme built around Harry Potter, Hogwarts, magical creatures, spells, rivalries, and the larger wizarding world. It covers the characters, places, objects, and story beats that made the series one of the biggest modern fantasy franchises.",
     "image": "",
     "questionFile": "data/real_qs.txt",
-    "seoDetail": "A strong Harry Potter quiz can pull from Hogwarts houses, Quidditch, classes, professors, Death Eaters, Horcruxes, magical creatures, family names, friendships, duels, and key events across Harry’s years at school. It also benefits from the fact that fans often remember both broad plot points and very specific world-building details, which makes the theme richer than a simple character-and-villain round.",
+    "seoDetail": "A strong Harry Potter quiz can pull from Hogwarts houses, Quidditch, classes, professors, Death Eaters, Horcruxes, magical creatures, family names, friendships, duels, and key events across Harry\u2019s years at school. It also benefits from the fact that fans often remember both broad plot points and very specific world-building details, which makes the theme richer than a simple character-and-villain round.",
     "seoIntro": "Harry Potter trivia works because the series is packed with memorable houses, teachers, spells, villains, magical items, school traditions, and storylines that fans tend to remember years after reading the books or watching the films. Even basic rounds have depth because the world is so full of named detail."
   },
   {
@@ -62,7 +62,7 @@
     "description": "A scripture trivia theme focused on the Quran, including its themes, figures, stories, structure, and widely known religious knowledge. It is designed to stay broad, respectful, and accessible rather than overly technical.",
     "image": "",
     "questionFile": "data/quran.txt",
-    "seoDetail": "A strong Quran quiz can include prophets mentioned in the text, notable stories, recurring themes such as mercy, guidance, judgment, and patience, along with revelations, surah knowledge, important figures, and general understanding of the Quran’s place in Islam. Because the material carries both religious and historical significance, it gives the theme more weight and variety than a simple fact list.",
+    "seoDetail": "A strong Quran quiz can include prophets mentioned in the text, notable stories, recurring themes such as mercy, guidance, judgment, and patience, along with revelations, surah knowledge, important figures, and general understanding of the Quran\u2019s place in Islam. Because the material carries both religious and historical significance, it gives the theme more weight and variety than a simple fact list.",
     "seoIntro": "Quran trivia works best when it balances familiarity with respectful breadth, drawing from prophets, major themes, surahs, moral teachings, and core concepts that many players recognise even without specialist study. That helps the round feel meaningful instead of narrow."
   },
   {
@@ -259,7 +259,7 @@
     "slug": "lies-of-p",
     "title": "Lies of P",
     "category": "Games",
-    "description": "A dark action RPG trivia theme focused on Lies of P, including its Belle Époque setting, weapon assembly system, major bosses, locations, characters, lies mechanic, and the twisted fairy-tale tone of the game.",
+    "description": "A dark action RPG trivia theme focused on Lies of P, including its Belle \u00c9poque setting, weapon assembly system, major bosses, locations, characters, lies mechanic, and the twisted fairy-tale tone of the game.",
     "image": "",
     "questionFile": "data/lies.txt",
     "seoDetail": "A strong Lies of P quiz can include Krat, Geppetto, Sophia, the Puppet Frenzy, the Legion Arm, P-Organ upgrades, boss fights, amulets, weapon handles and blades, status effects, factions, and the major moral choices tied to lying. The theme has good depth because it can test players on both the game's combat and progression systems and its distinctive reworking of Pinocchio-inspired characters, places, and story ideas.",
@@ -277,13 +277,13 @@
   },
   {
     "slug": "pokemon",
-    "title": "Pokémon",
+    "title": "Pok\u00e9mon",
     "category": "Games",
-    "description": "A monster-collecting trivia theme built around Pokémon, covering regions, starters, evolutions, types, trainers, legendary Pokémon, items, battle concepts, and the franchise-wide knowledge that spans games and anime alike.",
+    "description": "A monster-collecting trivia theme built around Pok\u00e9mon, covering regions, starters, evolutions, types, trainers, legendary Pok\u00e9mon, items, battle concepts, and the franchise-wide knowledge that spans games and anime alike.",
     "image": "",
     "questionFile": "data/pokemon.txt",
-    "seoDetail": "A strong Pokémon quiz can include Kanto, Johto, Hoenn, Sinnoh, starters, Gym Leaders, Elite Four members, type advantages, evolution methods, legendary and mythical Pokémon, Poké Balls, moves, held items, villain teams, and anime crossover knowledge. The theme stays rich because it can test players on both broad franchise familiarity and very specific game systems, species knowledge, and region-by-region memory.",
-    "seoIntro": "Pokémon trivia works because the franchise is full of instantly recognisable creatures, type matchups, regions, gyms, evolutions, and named characters that many players have known since childhood. It is broad enough to work for casual fans but detailed enough to reward deeper franchise memory."
+    "seoDetail": "A strong Pok\u00e9mon quiz can include Kanto, Johto, Hoenn, Sinnoh, starters, Gym Leaders, Elite Four members, type advantages, evolution methods, legendary and mythical Pok\u00e9mon, Pok\u00e9 Balls, moves, held items, villain teams, and anime crossover knowledge. The theme stays rich because it can test players on both broad franchise familiarity and very specific game systems, species knowledge, and region-by-region memory.",
+    "seoIntro": "Pok\u00e9mon trivia works because the franchise is full of instantly recognisable creatures, type matchups, regions, gyms, evolutions, and named characters that many players have known since childhood. It is broad enough to work for casual fans but detailed enough to reward deeper franchise memory."
   },
   {
     "slug": "red-dead-redemption-2",
@@ -339,7 +339,7 @@
     "slug": "bollywood",
     "title": "Bollywood",
     "category": "General",
-    "description": "A film trivia theme centered on Bollywood, covering major stars, hit films, music, directors, iconic roles, and the style and scale that made Hindi cinema one of the world’s biggest entertainment industries.",
+    "description": "A film trivia theme centered on Bollywood, covering major stars, hit films, music, directors, iconic roles, and the style and scale that made Hindi cinema one of the world\u2019s biggest entertainment industries.",
     "image": "",
     "questionFile": "data/bolly.txt",
     "seoDetail": "A strong Bollywood quiz can draw from stars such as Shah Rukh Khan, Salman Khan, Aamir Khan, Amitabh Bachchan, Deepika Padukone, Kareena Kapoor, and other major names, while also covering classic and modern films, playback music, directors, awards, dance numbers, and famous dialogues or pairings. The theme stays strong because it can move between actors, stories, songs, cultural impact, and industry history, which gives it far more depth than a basic film-trivia round.",
@@ -399,7 +399,7 @@
     "slug": "nigerian-music",
     "title": "Nigerian Music",
     "category": "General",
-    "description": "A music trivia theme focused on Nigerian music, covering Afrobeats, major artists, hit songs, producers, collaborations, and the wider cultural impact of the country’s music scene.",
+    "description": "A music trivia theme focused on Nigerian music, covering Afrobeats, major artists, hit songs, producers, collaborations, and the wider cultural impact of the country\u2019s music scene.",
     "image": "",
     "questionFile": "data/naija.txt",
     "seoDetail": "A strong Nigerian music quiz can include artists such as Burna Boy, Wizkid, Davido, Tiwa Savage, Olamide, Yemi Alade, and other major names, while also covering hit songs, albums, collaborations, labels, awards, producers, and the rise of Afrobeats on the global stage. The theme has depth because it can balance local industry knowledge with mainstream hits and wider cultural recognition, making it strong for both dedicated fans and broader pop-culture players.",
@@ -412,7 +412,7 @@
     "description": "A film trivia theme built around Nollywood, covering actors, actresses, directors, major films, genres, and the huge cultural reach of Nigerian cinema.",
     "image": "",
     "questionFile": "data/nolly.txt",
-    "seoDetail": "A strong Nollywood quiz can draw from famous actors and actresses, directors, hit films, classic titles, newer productions, genre trends, industry milestones, and the wider influence of Nigerian cinema across Africa and beyond. The theme works because it can move between celebrity recognition, film knowledge, cultural context, and the evolution of one of the world’s most productive film industries.",
+    "seoDetail": "A strong Nollywood quiz can draw from famous actors and actresses, directors, hit films, classic titles, newer productions, genre trends, industry milestones, and the wider influence of Nigerian cinema across Africa and beyond. The theme works because it can move between celebrity recognition, film knowledge, cultural context, and the evolution of one of the world\u2019s most productive film industries.",
     "seoIntro": "Nollywood trivia works because the industry has produced a huge number of recognisable stars, films, and story patterns that audiences remember well, from family drama and romance to comedy and crime. That gives it a stronger identity than a vague general movie round."
   },
   {
@@ -477,9 +477,9 @@
     "title": "Daredevil",
     "category": "TV",
     "questionFile": "data/daredevil.txt",
-    "description": "A superhero crime drama trivia theme focused on Daredevil, covering Matt Murdock, Hell’s Kitchen, vigilante justice, legal battles, organised crime, and the grounded, character-driven storytelling of the series.",
+    "description": "A superhero crime drama trivia theme focused on Daredevil, covering Matt Murdock, Hell\u2019s Kitchen, vigilante justice, legal battles, organised crime, and the grounded, character-driven storytelling of the series.",
     "seoIntro": "Daredevil trivia works because the show blends street-level superhero action with legal drama, moral conflict, and intense character development. Its grounded tone and realistic stakes make key moments, fights, and relationships easy to remember.",
-    "seoDetail": "A strong Daredevil quiz can include Matt Murdock, Daredevil identity, Foggy Nelson, Karen Page, Wilson Fisk, Bullseye, Elektra, Nelson & Murdock law firm, Hell’s Kitchen, The Hand, major court cases, vigilante actions, hallway fight scenes, and the evolving conflict between justice and revenge. The theme works because it combines crime storytelling, superhero elements, emotional character arcs, and memorable action sequences that define the series across its seasons."
+    "seoDetail": "A strong Daredevil quiz can include Matt Murdock, Daredevil identity, Foggy Nelson, Karen Page, Wilson Fisk, Bullseye, Elektra, Nelson & Murdock law firm, Hell\u2019s Kitchen, The Hand, major court cases, vigilante actions, hallway fight scenes, and the evolving conflict between justice and revenge. The theme works because it combines crime storytelling, superhero elements, emotional character arcs, and memorable action sequences that define the series across its seasons."
   },
   {
     "slug": "from",
@@ -524,7 +524,7 @@
     "slug": "epl-football",
     "title": "EPL Football",
     "category": "Sports",
-    "description": "A football trivia theme focused on the English Premier League, covering clubs, players, managers, title races, records, rivalries, and famous seasons from one of the world’s biggest leagues.",
+    "description": "A football trivia theme focused on the English Premier League, covering clubs, players, managers, title races, records, rivalries, and famous seasons from one of the world\u2019s biggest leagues.",
     "image": "",
     "questionFile": "data/EPL.txt",
     "seoDetail": "A strong EPL Football quiz can include Manchester United, Liverpool, Arsenal, Chelsea, Manchester City, Tottenham, famous managers, Golden Boot winners, title-winning seasons, records, iconic matches, stadiums, and club identities across the modern Premier League era. The theme has real depth because it can balance team knowledge, player history, trophies, stats, rivalry moments, and the broader story of how the league developed into a global football product.",
@@ -577,7 +577,7 @@
     "description": "A broad football trivia theme covering the global game through international stars, clubs, tournaments, records, rivalries, and famous moments from different leagues and competitions.",
     "image": "",
     "questionFile": "data/foot.txt",
-    "seoDetail": "A strong World Football quiz can include Pelé, Maradona, Messi, Ronaldo, Zidane, World Cup winners, European champions, famous clubs, Ballon d'Or winners, derby rivalries, tournament history, records, stadiums, and iconic goals or controversies. The category works because it can move between club and international football, balancing old legends with modern stars and giving rounds enough global variety to stay fresh.",
+    "seoDetail": "A strong World Football quiz can include Pel\u00e9, Maradona, Messi, Ronaldo, Zidane, World Cup winners, European champions, famous clubs, Ballon d'Or winners, derby rivalries, tournament history, records, stadiums, and iconic goals or controversies. The category works because it can move between club and international football, balancing old legends with modern stars and giving rounds enough global variety to stay fresh.",
     "seoIntro": "World football trivia works because the sport gives you endless material across World Cups, Champions League nights, league giants, legendary players, and unforgettable goals or finals. It is broad enough to feel huge, but familiar enough that most players have a way into it."
   },
   {
@@ -1067,7 +1067,7 @@
     "description": "A supernatural drama trivia theme built around The Vampire Diaries, covering Mystic Falls, vampires, witches, werewolves, love triangles, family legacies, and the constant twists that drive the story.",
     "image": "",
     "questionFile": "data/tvd.txt",
-    "seoDetail": "A strong The Vampire Diaries quiz can include Elena, Stefan, Damon, Bonnie, Caroline, Klaus, Katherine, Mystic Falls families, doppelgängers, Originals, witches, werewolves, spells, rings, and the major relationships and betrayals that shape the series. The theme works because it can balance lore, romance, family history, supernatural conflict, and the specific turning points that kept the story moving quickly.",
+    "seoDetail": "A strong The Vampire Diaries quiz can include Elena, Stefan, Damon, Bonnie, Caroline, Klaus, Katherine, Mystic Falls families, doppelg\u00e4ngers, Originals, witches, werewolves, spells, rings, and the major relationships and betrayals that shape the series. The theme works because it can balance lore, romance, family history, supernatural conflict, and the specific turning points that kept the story moving quickly.",
     "seoIntro": "The Vampire Diaries trivia works because the series is packed with romance, supernatural rules, rivalries, bloodlines, and dramatic reversals that viewers tend to remember clearly. It has the kind of high-stakes relationship drama that suits trivia well."
   },
   {
@@ -1252,7 +1252,7 @@
     "description": "A game trivia theme focused on Death Stranding, covering characters, storylines, mechanics, traversal systems, and the unusual delivery-based structure that defines the gameplay experience in a fractured world.",
     "questionFile": "data/stranding.txt",
     "seoIntro": "Death Stranding trivia works because the game builds its identity around isolation, connection, and a completely unconventional gameplay loop where delivering cargo becomes the core experience. Players remember not just the story but the systems, terminology, and strange emotional tone that runs through the entire world.",
-    "seoDetail": "A strong Death Stranding quiz can include Sam Porter Bridges, BB units, Bridges organisation, the Chiral Network, BT encounters, DOOMS abilities, timefall, major story beats, and the mechanics of traversal, cargo management, and infrastructure building. It also benefits from the game’s unusual structure, where player cooperation is indirect and environmental storytelling plays a major role. The theme works because it blends lore-heavy narrative with mechanical systems that are unlike traditional action or open-world games, making even basic concepts feel distinctive and memorable."
+    "seoDetail": "A strong Death Stranding quiz can include Sam Porter Bridges, BB units, Bridges organisation, the Chiral Network, BT encounters, DOOMS abilities, timefall, major story beats, and the mechanics of traversal, cargo management, and infrastructure building. It also benefits from the game\u2019s unusual structure, where player cooperation is indirect and environmental storytelling plays a major role. The theme works because it blends lore-heavy narrative with mechanical systems that are unlike traditional action or open-world games, making even basic concepts feel distinctive and memorable."
   },
   {
     "slug": "final-fantasy",
@@ -1261,7 +1261,7 @@
     "description": "A game trivia theme covering the Final Fantasy franchise, including its recurring characters, summons, worlds, combat systems, and long-running narrative themes across multiple generations of games.",
     "questionFile": "data/ff.txt",
     "seoIntro": "Final Fantasy trivia works because the franchise spans decades of evolving storytelling, with each entry introducing new worlds while still retaining iconic recurring elements like summons, crystals, job systems, and legendary characters that define the series identity.",
-    "seoDetail": "A strong Final Fantasy quiz can include characters such as Cloud, Sephiroth, Tidus, Yuna, and Squall, alongside summons like Ifrit, Shiva, Bahamut, and Leviathan. It can also explore recurring systems like job classes, turn-based combat variations, crystals, airships, and key antagonists across different titles. The franchise’s structure allows questions to move between individual game plots and broader series-wide traditions, making it ideal for both deep fan knowledge and general recognition."
+    "seoDetail": "A strong Final Fantasy quiz can include characters such as Cloud, Sephiroth, Tidus, Yuna, and Squall, alongside summons like Ifrit, Shiva, Bahamut, and Leviathan. It can also explore recurring systems like job classes, turn-based combat variations, crystals, airships, and key antagonists across different titles. The franchise\u2019s structure allows questions to move between individual game plots and broader series-wide traditions, making it ideal for both deep fan knowledge and general recognition."
   },
   {
     "slug": "sekiro-shadows-die-twice",
@@ -1270,7 +1270,7 @@
     "description": "A game trivia theme focused on Sekiro: Shadows Die Twice, covering its combat system, bosses, stealth mechanics, world design, and the Sengoku-era inspired setting.",
     "questionFile": "data/sekiro.txt",
     "seoIntro": "Sekiro trivia works because the game is built around precision combat, timing-based deflection, and high-stakes boss encounters that reward mastery rather than progression grinding. Every encounter feels memorable due to its difficulty and design clarity.",
-    "seoDetail": "A strong Sekiro quiz can include Wolf, Kuro, Genichiro Ashina, Isshin the Sword Saint, Lady Butterfly, and major factions such as the Ashina clan. It also covers mechanics like posture breaks, resurrection, stealth assassinations, prosthetic tools, and combat arts. The theme works because it tightly blends gameplay systems with narrative progression, where each boss and area is mechanically distinct and heavily tied to the player’s learning curve."
+    "seoDetail": "A strong Sekiro quiz can include Wolf, Kuro, Genichiro Ashina, Isshin the Sword Saint, Lady Butterfly, and major factions such as the Ashina clan. It also covers mechanics like posture breaks, resurrection, stealth assassinations, prosthetic tools, and combat arts. The theme works because it tightly blends gameplay systems with narrative progression, where each boss and area is mechanically distinct and heavily tied to the player\u2019s learning curve."
   },
   {
     "slug": "bleach",
@@ -1433,5 +1433,35 @@
     "questionFile": "data/crime.txt",
     "seoDetail": "A strong True Crime quiz can include serial killers, famous unsolved cases, kidnappings, frauds, police work, forensic evidence, confessions, trials, sentencing, and the media attention that turned certain investigations into major public stories. The theme works because it can move between criminals, victims, locations, investigative breakthroughs, and the wider history of how real cases were pursued, interpreted, and remembered.",
     "seoIntro": "True crime trivia works because the category draws on cases people recognise from news, documentaries, books, and wider cultural discussion. It combines criminal acts, investigations, courtroom outcomes, and the details that made certain cases notorious."
+  },
+  {
+    "slug": "schitts-creek",
+    "title": "Schitt's Creek",
+    "category": "Sitcoms",
+    "description": "A comedy drama trivia theme centred on Schitt's Creek, covering the Rose family, the eccentric residents of their small Canadian town, personal growth, relationships, business ambitions, and the warmth that made the series so beloved.",
+    "image": "",
+    "questionFile": "data/creek.txt",
+    "seoIntro": "Schitt's Creek trivia works because the series builds a very specific world around a small group of characters, each with a distinct voice, running jokes, and a clear personal arc. The contrast between the Rose family's wealthy past and their new small-town life gives questions plenty of varied ground to cover.",
+    "seoDetail": "A strong Schitt's Creek quiz can include the four Rose family members and their roles, town residents like Roland, Jocelyn, Stevie and Twyla, the Rosebud Motel, Rose Apothecary, Moira's acting career and wig collection, David and Patrick's relationship, Alexis's many pre-Creek adventures, Johnny's business plans, Sunrise Bay, Caf\u00e9 Tropical, town elections, and signature moments like the fold-in-the-cheese scene and Patrick's Simply the Best proposal."
+  },
+  {
+    "slug": "mindhunter",
+    "title": "Mindhunter",
+    "category": "TV",
+    "description": "A psychological crime drama trivia theme centred on Mindhunter, covering FBI profilers, serial killer interviews, the founding of criminal profiling, key cases, and the personal toll the work takes on the agents involved.",
+    "image": "",
+    "questionFile": "data/mindhunter.txt",
+    "seoIntro": "Mindhunter trivia works because the series draws directly from real FBI history and real serial killers, giving questions a grounded edge that fans of true crime and psychological drama both respond to. The blend of procedural detail and character psychology makes it rich territory for a quiz.",
+    "seoDetail": "A strong Mindhunter quiz can include Holden Ford and Bill Tench, the Behavioral Science Unit, serial killer interviews with figures like Ed Kemper and Charles Manson, criminal profiling methods, Quantico, Wendy Carr's research role, Holden's personal unravelling, the BTK storyline, and the tension between academic theory and fieldwork that drives the series."
+  },
+  {
+    "slug": "the-white-lotus",
+    "title": "The White Lotus",
+    "category": "TV",
+    "description": "A dark comedy drama trivia theme built around The White Lotus, covering the luxury resort setting, its guests and staff, the secrets, tensions, and moral decay that unfold across each anthology season.",
+    "image": "",
+    "questionFile": "data/lotus.txt",
+    "seoIntro": "The White Lotus trivia works because each season builds a tight, character-driven world inside a single resort setting, with a small ensemble whose relationships and agendas become increasingly layered. The anthology format means fans have two very distinct casts and locations to draw from.",
+    "seoDetail": "A strong The White Lotus quiz can include the Hawaii and Sicily settings, characters like Tanya, Armond, Shane, Rachel, Belinda, and the Season 2 ensemble of Ethan, Harper, Daphne and Cameron, the resort staff dynamics, recurring themes of wealth and privilege, the deaths that bookend each season, family dysfunction, infidelity, and the specific moments that became widely talked about after each episode."
   }
 ]
