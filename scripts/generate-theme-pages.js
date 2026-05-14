@@ -142,6 +142,15 @@ const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
       `
     : "";
 
+  const fanQuestionsButton = theme.fanQuestions
+    ? `
+        <a class="card" href="../fan-questions.html?theme=${slug}">
+          <h3>Fan Section <span style="font-size:0.65rem;font-weight:700;background:#f97316;color:#fff;padding:2px 7px;border-radius:4px;vertical-align:middle;margin-left:6px;">BETA</span></h3>
+          <p>Community-created questions. Quality and difficulty may vary.</p>
+        </a>
+      `
+    : "";
+
   const sampleQuestionsHtml = sampleQuestions.length
     ? `
         <div class="theme-sample-questions">
@@ -222,6 +231,8 @@ ${BANNER_TOP[AD_STACK]}
           <h3>Challenge Mode</h3>
           <p>10-question quick rounds</p>
         </a>
+
+        ${fanQuestionsButton}
 
         <a class="card" href="../trivia-rush.html?theme=${slug}">
           <h3>Trivia Rush</h3>
