@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Versus Mode | Trivia Gauntlet</title>
+  <meta name="description" content="Play locally against friends in Versus Mode on Trivia Gauntlet. Take turns answering questions and see who scores highest." />
+  <link rel="icon" href="/favicon.ico.png" sizes="any">
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="apple-touch-icon" href="/assets/icon-192.png" />
+  <meta name="theme-color" content="#0f172a" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E6BY9F2ZDT');
+  </script>
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    .vs-screen { display: none; }
+    .vs-screen.active { display: block; }
+
+    .vs-player-badge {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: var(--option-selected-bg);
+      border: 1px solid var(--option-selected-border);
+      color: var(--option-selected-border);
+      margin-bottom: 12px;
+    }
+
+    .vs-theme-label {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid #a855f7;
+      color: #d8b4fe;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+
+    .vs-steal-label {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid #f59e0b;
+      color: #f59e0b;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 10px;
+    }
+
+    .vs-leaderboard {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0;
+    }
+    .vs-leaderboard li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--option-border);
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+    .vs-leaderboard li.vs-winner {
+      border-color: #f59e0b;
+      background: rgba(245,158,11,0.07);
+    }
+    .vs-rank {
+      font-size: 18px;
+      font-weight: 700;
+      min-width: 28px;
+    }
+    .vs-player-name { flex: 1; font-weight: 600; }
+    .vs-player-score { font-weight: 700; font-size: 17px; }
+
+    .vs-progress {
+      font-size: 13px;
+      color: var(--muted-text);
+      margin-bottom: 4px;
+    }
+
+    .vs-feedback-box {
+      padding: 12px 0 6px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .vs-feedback-box.correct { color: var(--feedback-correct); }
+    .vs-feedback-box.wrong   { color: var(--feedback-wrong); }
+
+    .vs-between-box {
+      text-align: center;
+      padding: 32px 16px;
+    }
+    .vs-between-box h2 {
+      font-size: 24px;
+      margin-bottom: 6px;
+    }
+    .vs-between-box p {
+      color: var(--muted-text);
+      margin-bottom: 6px;
+    }
+
+    .vs-steal-note {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      color: #f59e0b;
+      margin-bottom: 10px;
+    }
+
+    .vs-setup-group {
+      margin-bottom: 20px;
+    }
+    .vs-setup-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted-text);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .vs-seg {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .vs-seg button {
+      flex: 1;
+      min-width: 48px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--option-border);
+      background: var(--option-bg);
+      color: var(--option-text);
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .vs-seg button.selected {
+      border-color: var(--option-selected-border);
+      background: var(--option-selected-bg);
+      color: #fff;
+    }
+
+    .vs-name-inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .vs-name-inputs input {
+      padding: 9px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--option-border);
+      background: var(--option-bg);
+      color: var(--option-text);
+      font-size: 15px;
+      outline: none;
+    }
+    .vs-name-inputs input:focus {
+      border-color: var(--option-selected-border);
+    }
+
+    .vs-best-of-note {
+      font-size: 13px;
+      color: var(--muted-text);
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+
+    .vs-tiebreaker-label {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #f59e0b;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <main class="container narrow" style="padding-top: 16px;">
+    <a id="vsBackLink" href="index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+
+    <section class="panel">
+
+      <!-- SETUP SCREEN -->
+      <div id="vsSetup" class="vs-screen active">
+        <h1 style="margin-bottom:4px;">Versus Mode</h1>
+        <p style="color:var(--muted-text);margin-bottom:24px;">Play locally against friends</p>
+
+        <div class="vs-setup-group">
+          <label>Number of players</label>
+          <div class="vs-seg" id="vsPlayerCountSeg">
+            <button data-val="2">2</button>
+            <button data-val="3">3</button>
+            <button data-val="4">4</button>
+          </div>
+        </div>
+
+        <div class="vs-setup-group">
+          <label>Player names</label>
+          <div class="vs-name-inputs" id="vsNameInputs"></div>
+        </div>
+
+        <div class="vs-setup-group">
+          <label>Questions per player</label>
+          <div class="vs-seg" id="vsBestOfSeg">
+            <button data-val="3">3</button>
+            <button data-val="5">5</button>
+            <button data-val="10">10</button>
+          </div>
+          <p class="vs-best-of-note" id="vsBestOfNote"></p>
+        </div>
+
+        <p id="vsSetupError" style="color:var(--feedback-wrong);font-size:14px;display:none;margin-bottom:12px;"></p>
+        <button id="vsStartBtn" class="primary-btn" style="width:100%;">Start Game</button>
+
+        <div style="text-align:center;margin-top:20px;">
+          <a href="contact.html" class="secondary-btn" style="font-size:0.85rem;padding:8px 18px;text-decoration:none;">Leave Feedback</a>
+        </div>
+      </div>
+
+      <!-- QUESTION SCREEN -->
+      <div id="vsQuestion" class="vs-screen">
+        <p class="vs-progress" id="vsQuestionProgress"></p>
+        <div class="vs-theme-label" id="vsQuestionTheme" style="display:none;"></div>
+        <div class="vs-steal-label" id="vsStealLabel" style="display:none;"></div>
+        <div class="vs-player-badge" id="vsQuestionPlayer"></div>
+        <h2 id="vsQuestionText" style="margin-bottom:16px;"></h2>
+        <div id="vsOptions" class="options"></div>
+        <div id="vsQuestionFeedback" class="vs-feedback-box" style="display:none;"></div>
+        <div class="cta-row" style="margin-top:16px;">
+          <button id="vsSubmitBtn" class="primary-btn">Submit</button>
+          <button id="vsNextBtn" class="secondary-btn" style="display:none;">Continue</button>
+        </div>
+        <div style="text-align:center;margin-top:14px;">
+          <a href="contact.html" class="secondary-btn" style="font-size:0.85rem;padding:8px 18px;text-decoration:none;">Leave Feedback</a>
+        </div>
+      </div>
+
+      <!-- BETWEEN TURNS SCREEN -->
+      <div id="vsBetween" class="vs-screen">
+        <div class="vs-between-box">
+          <p class="vs-steal-note" id="vsBetweenStealNote" style="display:none;"></p>
+          <h2 id="vsBetweenNextPlayer"></h2>
+          <p id="vsBetweenNextScore"></p>
+          <button id="vsBetweenBtn" class="primary-btn" style="min-width:160px;margin-top:12px;"></button>
+          <div style="margin-top:14px;">
+            <a href="contact.html" class="secondary-btn" style="font-size:0.85rem;padding:8px 18px;text-decoration:none;">Leave Feedback</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESULTS SCREEN -->
+      <div id="vsResults" class="vs-screen">
+        <h2 id="vsResultsTitle" style="margin-bottom:4px;"></h2>
+        <p id="vsResultsSubtitle" style="color:var(--muted-text);margin-bottom:16px;"></p>
+        <ul class="vs-leaderboard" id="vsLeaderboard"></ul>
+        <div id="vsTiebreakerOffer" style="display:none;margin-bottom:16px;">
+          <p style="margin-bottom:10px;" id="vsTiebreakerOfferText">Would you like a tiebreaker question?</p>
+          <div style="display:flex;gap:8px;">
+            <button id="vsTiebreakerYes" class="primary-btn" style="flex:1;">Yes, tiebreaker</button>
+            <button id="vsTiebreakerNo" class="secondary-btn" style="flex:1;">Declare draw</button>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <button id="vsPlayAgainBtn" class="primary-btn" style="flex:1;">Play Again</button>
+          <a id="vsBackToThemeBtn" class="secondary-btn" style="flex:1;text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center;"></a>
+        </div>
+        <div style="text-align:center;margin-top:14px;">
+          <a href="contact.html" class="secondary-btn" style="font-size:0.85rem;padding:8px 18px;text-decoration:none;">Leave Feedback</a>
+        </div>
+      </div>
+
+      <!-- TIEBREAKER SCREEN -->
+      <div id="vsTiebreaker" class="vs-screen">
+        <div class="vs-tiebreaker-label">Tiebreaker</div>
+        <p class="vs-progress" id="vsTbProgress"></p>
+        <div class="vs-player-badge" id="vsTbPlayer"></div>
+        <h2 id="vsTbQuestion" style="margin-bottom:16px;"></h2>
+        <div id="vsTbOptions" class="options"></div>
+        <div id="vsTbFeedback" class="vs-feedback-box" style="display:none;"></div>
+        <div class="cta-row" style="margin-top:16px;">
+          <button id="vsTbSubmitBtn" class="primary-btn">Submit</button>
+          <button id="vsTbNextBtn" class="secondary-btn" style="display:none;">Continue</button>
+        </div>
+        <div style="text-align:center;margin-top:14px;">
+          <a href="contact.html" class="secondary-btn" style="font-size:0.85rem;padding:8px 18px;text-decoration:none;">Leave Feedback</a>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="remove-ads.html" class="footer-highlight">Buy me a coffee</a>
+        <a href="about.html">About</a>
+        <a class="footer-highlight" href="how-it-works.html">How It Works</a>
+        <a class="footer-highlight" href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+  <script src="assets/versus.js"></script>
+</body>
+</html>
