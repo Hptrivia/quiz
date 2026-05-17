@@ -94,7 +94,7 @@ async function renderMultiThemeSurvival() {
     if (currentNextBtn) currentNextBtn.style.display = "none";
     setFeedback("");
     if (state.pendingRecoveryStart) { state.pendingRecoveryStart = false; state.recoveryStarted = true; state.recoveryPoints = 0; }
-    if (isPremiumUser()) { state.fiftyAvailable = true; state.friendAvailable = true; }
+    state.fiftyAvailable = true; state.friendAvailable = true;
     updateTopbar();
   }
   function handleWrongAnswer() {
@@ -158,7 +158,6 @@ async function renderMultiThemeSurvival() {
       <div id="mashupSurvivalBreakdown"></div>
       <div class="cta-row">
         <a class="primary-btn" href="survival.html?themes=${themesParam}">Play Again</a>
-        ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html">Unlimited Lifelines</a>` : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
       <div class="result-theme-search">
@@ -419,7 +418,6 @@ async function renderSurvivalPage() {
       <p>Your score: ${state.score}</p>
       <div class="cta-row">
         <a class="primary-btn" href="survival.html?theme=${theme.slug}">Play Again</a>
-        ${isPremiumUser() ? '' : `<a class="secondary-btn" href="remove-ads.html?theme=${theme.slug}">Unlimited Lifelines</a>`}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
       <div class="result-theme-search">
@@ -547,10 +545,8 @@ async function renderSurvivalPage() {
       state.recoveryPoints = 0;
     }
 
-    if (isPremiumUser()) {
-      state.fiftyAvailable = true;
-      state.friendAvailable = true;
-    }
+    state.fiftyAvailable = true;
+    state.friendAvailable = true;
 
     updateTopbar();
   }

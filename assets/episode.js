@@ -150,7 +150,7 @@ async function renderEpisodePage() {
   }
 
   // Pre-render all question slides
-  episodeQuestions.forEach((q, index) => {
+  episodeQuestions.map(q => shuffleQuestionOptions(q)).forEach((q, index) => {
     const slide = document.createElement("div");
     slide.className = "question-slide";
     slide.dataset.index = index;

@@ -59,17 +59,15 @@ async function renderMultiThemeChallenge() {
     if (scoreEl) scoreEl.textContent = `Score: ${score}`;
   }
 
-  if (isPremiumUser()) {
-    const revealBtn = document.createElement("button");
-    revealBtn.className = "secondary-btn reveal-answers-toggle";
-    revealBtn.textContent = "Reveal Answers: OFF";
-    revealBtn.addEventListener("click", () => {
-      revealAnswers = !revealAnswers;
-      revealBtn.className = revealAnswers ? "primary-btn reveal-answers-toggle" : "secondary-btn reveal-answers-toggle";
-      revealBtn.textContent = revealAnswers ? "Reveal Answers: ON" : "Reveal Answers: OFF";
-    });
-    if (quizBox) quizBox.insertBefore(revealBtn, slidesContainer);
-  }
+  const revealBtnMashup = document.createElement("button");
+  revealBtnMashup.className = "secondary-btn reveal-answers-toggle";
+  revealBtnMashup.textContent = "Reveal Answers: OFF";
+  revealBtnMashup.addEventListener("click", () => {
+    revealAnswers = !revealAnswers;
+    revealBtnMashup.className = revealAnswers ? "primary-btn reveal-answers-toggle" : "secondary-btn reveal-answers-toggle";
+    revealBtnMashup.textContent = revealAnswers ? "Reveal Answers: ON" : "Reveal Answers: OFF";
+  });
+  if (quizBox) quizBox.insertBefore(revealBtnMashup, slidesContainer);
 
   roundQuestions.forEach((q, index) => {
     const slug = q._themeSlug;
@@ -153,7 +151,6 @@ async function renderMultiThemeChallenge() {
       <div id="mashupChallengeBreakdown"></div>
       <div class="cta-row">
         ${hasNextRound ? `<a class="primary-btn" href="challenge.html?themes=${themesParam}&round=${safeRound + 1}">Next Round</a>` : ""}
-        ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html">Reveal Answers</a>` : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
       <div class="result-theme-search">
@@ -334,19 +331,17 @@ async function renderChallengePage() {
     state.selectedAnswer = null;
   }
 
-  if (isPremiumUser()) {
-    const revealToggleBtn = document.createElement("button");
-    revealToggleBtn.className = "secondary-btn reveal-answers-toggle";
-    revealToggleBtn.textContent = "Reveal Answers: OFF";
-    revealToggleBtn.addEventListener("click", () => {
-      revealAnswers = !revealAnswers;
-      revealToggleBtn.className = revealAnswers
-        ? "primary-btn reveal-answers-toggle"
-        : "secondary-btn reveal-answers-toggle";
-      revealToggleBtn.textContent = revealAnswers ? "Reveal Answers: ON" : "Reveal Answers: OFF";
-    });
-    quizBox.insertBefore(revealToggleBtn, slidesContainer);
-  }
+  const revealToggleBtn = document.createElement("button");
+  revealToggleBtn.className = "secondary-btn reveal-answers-toggle";
+  revealToggleBtn.textContent = "Reveal Answers: OFF";
+  revealToggleBtn.addEventListener("click", () => {
+    revealAnswers = !revealAnswers;
+    revealToggleBtn.className = revealAnswers
+      ? "primary-btn reveal-answers-toggle"
+      : "secondary-btn reveal-answers-toggle";
+    revealToggleBtn.textContent = revealAnswers ? "Reveal Answers: ON" : "Reveal Answers: OFF";
+  });
+  quizBox.insertBefore(revealToggleBtn, slidesContainer);
 
   // Render all question slides with their own Submit/Next buttons
   shuffledQuestions.forEach((q, index) => {
@@ -501,7 +496,6 @@ async function renderChallengePage() {
       <div class="challenge-link-box">${roundLink}</div>
       <div class="cta-row">
         ${hasNextRound ? `<a class="primary-btn" href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}">Next Round</a>` : ""}
-        ${isPremiumUser() ? '' : `<a class="secondary-btn" href="remove-ads.html?theme=${theme.slug}">Reveal Answers</a>`}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
     </div>

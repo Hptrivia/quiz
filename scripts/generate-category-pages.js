@@ -5,42 +5,6 @@ const rootDir = path.resolve(__dirname, "..");
 const themesPath = path.join(rootDir, "data", "themes.json");
 const outputDir = path.join(rootDir, "categories");
 
-// Set to 1 or 2 to switch ad stacks
-const AD_STACK = 2;
-
-const PREMIUM_FN = "function isPremiumUser(){var e=localStorage.getItem('adsRemovedUntil');if(!e)return false;return new Date(e)>new Date();}";
-
-const AD_SCRIPTS = {
-  1: `  <script>${PREMIUM_FN}if(!isPremiumUser()){(function(s){s.dataset.zone='10961427',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));(function(s){s.dataset.zone='10961935',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));(function(s){s.dataset.zone='10962017',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));}</script>`,
-  2: `  <script>${PREMIUM_FN}</script>\n  <script>if(!isPremiumUser()){(function(s){s.dataset.zone='10962017',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));}</script>`,
-};
-
-const BANNER_TOP = {
-  1: ``,
-  2: `
-  <div style="text-align:center;margin:10px 0;">
-    <script>if(!isPremiumUser()){atOptions={'key':'b9be7f308767ec033bd304d299704695','format':'iframe','height':50,'width':320,'params':{}};}</script>
-    <script>if(!isPremiumUser()){document.write('<scr'+'ipt src="https://www.highperformanceformat.com/b9be7f308767ec033bd304d299704695/invoke.js"><\\/scr'+'ipt>');}</script>
-  </div>`,
-};
-
-const BANNER_MID = {
-  1: ``,
-  2: `
-  <div id="mid-banner-ad" style="text-align:center;margin:12px 0;">
-    <script>
-      if(!isPremiumUser()){
-        var adDiv=document.getElementById('mid-banner-ad');
-        var s1=document.createElement('script');
-        s1.textContent='atOptions={"key":"6cd708c27c2130cedbed5e1a3bc703d0","format":"iframe","height":250,"width":300,"params":{}};';
-        var s2=document.createElement('script');
-        s2.src='https://www.highperformanceformat.com/6cd708c27c2130cedbed5e1a3bc703d0/invoke.js';
-        adDiv.appendChild(s1);
-        adDiv.appendChild(s2);
-      }
-    </script>
-  </div>`,
-};
 
 function ensureDir(dir) {
   if (!fs.existsSync(dir)) {
@@ -110,9 +74,7 @@ function buildCategoryPage(categoryName, themes) {
       <div class="grid">
         ${firstHalf}
       </div>
-    </section>
-${BANNER_MID[AD_STACK]}
-    <section>
+    </section>    <section>
       <div class="grid">
         ${secondHalf}
       </div>
@@ -123,8 +85,7 @@ ${BANNER_MID[AD_STACK]}
       <div class="grid">
         ${themes.map(cardHtml).join("")}
       </div>
-    </section>
-${BANNER_MID[AD_STACK]}`;
+    </section>`;
   }
 
   return `<!DOCTYPE html>
@@ -138,7 +99,6 @@ ${BANNER_MID[AD_STACK]}`;
   <link rel="manifest" href="/manifest.json" />
   <link rel="apple-touch-icon" href="/assets/icon-192.png" />
   <meta name="theme-color" content="#0f172a" />
-${AD_SCRIPTS[AD_STACK]}
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -149,7 +109,6 @@ ${AD_SCRIPTS[AD_STACK]}
   <link rel="stylesheet" href="../assets/style.css" />
 </head>
 <body>
-${BANNER_TOP[AD_STACK]}
   <main class="container">
     <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
 
@@ -166,7 +125,6 @@ ${BANNER_TOP[AD_STACK]}
   <footer class="site-footer">
     <div class="container">
       <div class="footer-links">
-        <a id="removeAdsLink" class="footer-highlight" href="../remove-ads.html">Ad-Free</a>
         <a href="../about.html">About</a>
         <a class="footer-highlight" href="../how-it-works.html">How It Works</a>
         <a class="footer-highlight" href="../contact.html">Contact</a>

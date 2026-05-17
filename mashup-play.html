@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>function isPremiumUser(){var e=localStorage.getItem('adsRemovedUntil');if(!e)return false;return new Date(e)>new Date();}</script>
-<script data-grow-initializer="">!(function(){window.growMe||((window.growMe=function(e){window.growMe._.push(e);}),(window.growMe._=[]));var e=document.createElement("script");(e.type="text/javascript"),(e.src="https://faves.grow.me/main.js"),(e.defer=!0),e.setAttribute("data-grow-faves-site-id","U2l0ZTowMmFjMDYwOC03YWNmLTQ4ZGItYTcxYS1iMjgxOTNmY2E2ZDQ=");var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mashup Mode | Trivia Gauntlet</title>
@@ -41,10 +39,6 @@
   </style>
 </head>
 <body>
-  <div style="text-align:center;margin:12px 0;">
-    <script>if(!isPremiumUser()){atOptions={'key':'b9be7f308767ec033bd304d299704695','format':'iframe','height':50,'width':320,'params':{}};}</script>
-    <script>if(!isPremiumUser()){document.write('<scr'+'ipt src="https://www.highperformanceformat.com/b9be7f308767ec033bd304d299704695/invoke.js"><\/scr'+'ipt>');}</script>
-  </div>
   <main class="container narrow" style="padding-top: 16px;">
     <a id="backLink" href="mashup.html" class="back-link">← Back</a>
 
@@ -103,20 +97,6 @@
 
     </section>
   </main>
-
-  <div id="bottom-banner-ad" style="text-align:center;margin:28px 0 12px;">
-    <script>
-      if(!isPremiumUser()){
-        var adDiv=document.getElementById('bottom-banner-ad');
-        var s1=document.createElement('script');
-        s1.textContent='atOptions={"key":"6cd708c27c2130cedbed5e1a3bc703d0","format":"iframe","height":250,"width":300,"params":{}};';
-        var s2=document.createElement('script');
-        s2.src='https://www.highperformanceformat.com/6cd708c27c2130cedbed5e1a3bc703d0/invoke.js';
-        adDiv.appendChild(s1);
-        adDiv.appendChild(s2);
-      }
-    </script>
-  </div>
 
   <footer class="site-footer">
     <div class="container">
@@ -324,18 +304,16 @@
         state.selectedAnswer = null;
       }
 
-      if (isPremiumUser()) {
-        const revealToggleBtn = document.createElement("button");
-        revealToggleBtn.className = "secondary-btn reveal-answers-toggle";
-        revealToggleBtn.textContent = "Reveal Answers: OFF";
-        revealToggleBtn.addEventListener("click", () => {
-          revealAnswers = !revealAnswers;
-          revealToggleBtn.className = revealAnswers ? "primary-btn reveal-answers-toggle" : "secondary-btn reveal-answers-toggle";
-          revealToggleBtn.textContent = revealAnswers ? "Reveal Answers: ON" : "Reveal Answers: OFF";
-        });
-        const quizBoxEl = document.getElementById("marathonQuizBox");
-        if (quizBoxEl) quizBoxEl.insertBefore(revealToggleBtn, slidesContainer);
-      }
+      const revealToggleBtnMarathon = document.createElement("button");
+      revealToggleBtnMarathon.className = "secondary-btn reveal-answers-toggle";
+      revealToggleBtnMarathon.textContent = "Reveal Answers: OFF";
+      revealToggleBtnMarathon.addEventListener("click", () => {
+        revealAnswers = !revealAnswers;
+        revealToggleBtnMarathon.className = revealAnswers ? "primary-btn reveal-answers-toggle" : "secondary-btn reveal-answers-toggle";
+        revealToggleBtnMarathon.textContent = revealAnswers ? "Reveal Answers: ON" : "Reveal Answers: OFF";
+      });
+      const quizBoxEl = document.getElementById("marathonQuizBox");
+      if (quizBoxEl) quizBoxEl.insertBefore(revealToggleBtnMarathon, slidesContainer);
 
       pageQuestions.forEach((q, index) => {
         const slug = q._themeSlug;
@@ -436,7 +414,6 @@
           "<div id=\"marathonThemeBreakdown\"></div>" +
           "<div class=\"cta-row\">" +
           (hasNextPage ? "<a class=\"primary-btn\" href=\"mashup-play.html?themes=" + themesParam + "&mode=marathon&page=" + (safePage + 1) + "\">Next Round</a>" : "") +
-          (!isPremiumUser() ? "<a class=\"secondary-btn\" href=\"remove-ads.html\">Ad-Free</a>" : "") +
           "<a class=\"secondary-btn\" href=\"contact.html\">Report a Question</a>" +
           "</div>";
 
@@ -505,18 +482,16 @@
         state.selectedAnswer = null;
       }
 
-      if (isPremiumUser()) {
-        const revealToggleBtn = document.createElement("button");
-        revealToggleBtn.className = "secondary-btn reveal-answers-toggle";
-        revealToggleBtn.textContent = "Reveal Answers: OFF";
-        revealToggleBtn.addEventListener("click", () => {
-          revealAnswers = !revealAnswers;
-          revealToggleBtn.className = revealAnswers ? "primary-btn reveal-answers-toggle" : "secondary-btn reveal-answers-toggle";
-          revealToggleBtn.textContent = revealAnswers ? "Reveal Answers: ON" : "Reveal Answers: OFF";
-        });
-        const quizBoxEl = document.getElementById("mashupChallengeQuizBox");
-        if (quizBoxEl) quizBoxEl.insertBefore(revealToggleBtn, slidesContainer);
-      }
+      const revealToggleBtnChallenge = document.createElement("button");
+      revealToggleBtnChallenge.className = "secondary-btn reveal-answers-toggle";
+      revealToggleBtnChallenge.textContent = "Reveal Answers: OFF";
+      revealToggleBtnChallenge.addEventListener("click", () => {
+        revealAnswers = !revealAnswers;
+        revealToggleBtnChallenge.className = revealAnswers ? "primary-btn reveal-answers-toggle" : "secondary-btn reveal-answers-toggle";
+        revealToggleBtnChallenge.textContent = revealAnswers ? "Reveal Answers: ON" : "Reveal Answers: OFF";
+      });
+      const quizBoxElChallenge = document.getElementById("mashupChallengeQuizBox");
+      if (quizBoxElChallenge) quizBoxElChallenge.insertBefore(revealToggleBtnChallenge, slidesContainer);
 
       roundQuestions.forEach((q, index) => {
         const slug = q._themeSlug;
@@ -620,7 +595,6 @@
           "<div class=\"cta-row\">" +
           (hasNextRound ? "<a class=\"primary-btn\" href=\"mashup-play.html?themes=" + themesParam + "&mode=challenge&round=" + (safeRound + 1) + "\">Next Round</a>" : "") +
           "<button class=\"secondary-btn\" id=\"copyShareBtn\">Copy Link</button>" +
-          (!isPremiumUser() ? "<a class=\"secondary-btn\" href=\"remove-ads.html\">Reveal Answers</a>" : "") +
           "<a class=\"secondary-btn\" href=\"contact.html\">Report a Question</a>" +
           "</div>";
 
@@ -790,7 +764,6 @@
               "<div id=\"survivalThemeBreakdown\"></div>" +
               "<div class=\"cta-row\">" +
               "<a class=\"primary-btn\" href=\"mashup-play.html?themes=" + themesParam + "&mode=survival\">Play Again</a>" +
-              (!isPremiumUser() ? "<a class=\"secondary-btn\" href=\"remove-ads.html\">Unlimited Lifelines</a>" : "") +
               "<a class=\"secondary-btn\" href=\"contact.html\">Report a Question</a>" +
               "</div>";
             document.getElementById("survivalThemeBreakdown").appendChild(renderThemeBreakdown(state.themeScores));
@@ -825,10 +798,8 @@
               state.recoveryStarted = true;
               state.recoveryPoints = 0;
             }
-            if (isPremiumUser()) {
-              state.fiftyAvailable = true;
-              state.friendAvailable = true;
-            }
+            state.fiftyAvailable = true;
+            state.friendAvailable = true;
             updateTopbar();
           }
 
@@ -963,6 +934,5 @@
 
   })();
   </script>
-  <script>if(!isPremiumUser()){var _mp=new URLSearchParams(window.location.search),_mm=(_mp.get('mode')||'marathon').toLowerCase(),_mn=parseInt(_mm==='challenge'?(_mp.get('round')||'1'):(_mp.get('page')||'1'));var _mf=_mm==='challenge'?(_mn>=3&&_mn%2===1):(_mn>=2&&_mn%2===0);if(_mf)(function(s){s.dataset.zone='10961427',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement,document.body].filter(Boolean).pop().appendChild(document.createElement('script')));}</script>
 </body>
 </html>

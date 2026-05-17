@@ -1,9 +1,3 @@
-function isPremiumUser() {
-  const expiry = localStorage.getItem('adsRemovedUntil');
-  if (!expiry) return false;
-  return new Date(expiry) > new Date();
-}
-
 async function fetchJSON(path) {
   const res = await fetch(path);
   if (!res.ok) throw new Error(`Failed to load ${path}`);
@@ -36,17 +30,6 @@ function slugify(text) {
   return text.toLowerCase().replace(/\s+/g, "-");
 }
 
-function updateRemoveAdsFooter(themeSlug = "", mode = "normal") {
-  const link = document.getElementById("removeAdsLink");
-  if (!link) return;
-
-  if (!themeSlug) {
-    link.href = "remove-ads.html";
-    return;
-  }
-
-  link.href = `remove-ads.html?theme=${encodeURIComponent(themeSlug)}&mode=${encodeURIComponent(mode)}`;
-}
 
 function shuffleArray(array) {
   return [...array].sort(() => Math.random() - 0.5);
@@ -332,7 +315,6 @@ async function renderQuizPage() {
   wordSearchBtn.href = `wordsearch.html?theme=${theme.slug}&page=1`;
   wordleBtn.href = `wordle.html?theme=${theme.slug}`;
   if (triviaRushBtn) triviaRushBtn.href = `trivia-rush.html?theme=${theme.slug}`;
-  if (adFreeBtn) adFreeBtn.href = `remove-ads.html?theme=${theme.slug}&mode=normal`;
   try {
   const episodeThemes = await fetchJSON("data/episode_themes.json");
   if (episodeThemes[theme.slug]) {
@@ -499,18 +481,16 @@ async function renderMultiThemeMarathon() {
     if (slide) { slide.classList.add("active"); slide.style.display = "block"; slide.appendChild(scoreText); slide.scrollIntoView({ behavior: "smooth", block: "start" }); }
   }
 
-  if (isPremiumUser()) {
-    const revealBtn = document.createElement("button");
-    revealBtn.className = "secondary-btn reveal-answers-toggle";
-    revealBtn.textContent = "Reveal Answers: OFF";
-    revealBtn.addEventListener("click", () => {
-      revealAnswers = !revealAnswers;
-      revealBtn.className = revealAnswers ? "primary-btn reveal-answers-toggle" : "secondary-btn reveal-answers-toggle";
-      revealBtn.textContent = revealAnswers ? "Reveal Answers: ON" : "Reveal Answers: OFF";
-    });
-    const quizBoxEl = document.getElementById("quizBox");
-    if (quizBoxEl) quizBoxEl.insertBefore(revealBtn, slidesContainer);
-  }
+  const revealBtn = document.createElement("button");
+  revealBtn.className = "secondary-btn reveal-answers-toggle";
+  revealBtn.textContent = "Reveal Answers: OFF";
+  revealBtn.addEventListener("click", () => {
+    revealAnswers = !revealAnswers;
+    revealBtn.className = revealAnswers ? "primary-btn reveal-answers-toggle" : "secondary-btn reveal-answers-toggle";
+    revealBtn.textContent = revealAnswers ? "Reveal Answers: ON" : "Reveal Answers: OFF";
+  });
+  const quizBoxElReveal = document.getElementById("quizBox");
+  if (quizBoxElReveal) quizBoxElReveal.insertBefore(revealBtn, slidesContainer);
 
   pageQuestions.forEach((q, index) => {
     const slug = q._themeSlug;
@@ -595,7 +575,6 @@ async function renderMultiThemeMarathon() {
       <div id="mashupMarathonBreakdown"></div>
       <div class="cta-row">
         ${hasNextPage ? `<a class="primary-btn" href="play.html?themes=${themesParam}&page=${safePage + 1}">Next Round</a>` : ""}
-        ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html">Ad-Free</a>` : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
       <div class="result-theme-search">
@@ -713,20 +692,18 @@ let buyPackUrl = "https://ko-fi.com/triviaking/shop";
     quizState.selectedAnswer = null;
   }
 
-  if (isPremiumUser()) {
-    const revealToggleBtn = document.createElement("button");
-    revealToggleBtn.className = "secondary-btn reveal-answers-toggle";
-    revealToggleBtn.textContent = "Reveal Answers: OFF";
-    revealToggleBtn.addEventListener("click", () => {
-      revealAnswers = !revealAnswers;
-      revealToggleBtn.className = revealAnswers
-        ? "primary-btn reveal-answers-toggle"
-        : "secondary-btn reveal-answers-toggle";
-      revealToggleBtn.textContent = revealAnswers ? "Reveal Answers: ON" : "Reveal Answers: OFF";
-    });
-    const quizBoxEl = document.getElementById("quizBox");
-    if (quizBoxEl) quizBoxEl.insertBefore(revealToggleBtn, slidesContainer);
-  }
+  const revealToggleBtn = document.createElement("button");
+  revealToggleBtn.className = "secondary-btn reveal-answers-toggle";
+  revealToggleBtn.textContent = "Reveal Answers: OFF";
+  revealToggleBtn.addEventListener("click", () => {
+    revealAnswers = !revealAnswers;
+    revealToggleBtn.className = revealAnswers
+      ? "primary-btn reveal-answers-toggle"
+      : "secondary-btn reveal-answers-toggle";
+    revealToggleBtn.textContent = revealAnswers ? "Reveal Answers: ON" : "Reveal Answers: OFF";
+  });
+  const quizBoxElToggle = document.getElementById("quizBox");
+  if (quizBoxElToggle) quizBoxElToggle.insertBefore(revealToggleBtn, slidesContainer);
 
   // Pre-render all question slides
   quizState.questions.forEach((q, index) => {
@@ -865,7 +842,6 @@ const relatedThemesHtml = `
     <p class="result-tier">${tierText}</p>
     <div class="cta-row">
       ${hasNextPage ? `<a class="primary-btn" href="play.html?theme=${theme.slug}&page=${safePage + 1}">Next Round</a>` : ""}
-      <a class="secondary-btn" href="remove-ads.html?theme=${theme.slug}">Ad-Free</a>
       <a class="secondary-btn" href="contact.html">Report a Question</a>
     </div>
 
