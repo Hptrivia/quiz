@@ -128,7 +128,7 @@ async function renderEpisodePage() {
       <p>Your score: ${score} / ${episodeQuestions.length}</p>
       <div class="cta-row">
         ${hasNextEpisode ? `<a class="primary-btn" href="episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}">Next Episode</a>` : ""}
-        <a class="secondary-btn" href="${buyPackUrl}" target="_blank" rel="noopener noreferrer">Buy ${theme.title} Episode Pack</a>
+        ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html">Buy me a coffee</a>` : ""}
       </div>
     `;
   }
