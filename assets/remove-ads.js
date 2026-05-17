@@ -1,17 +1,11 @@
 const VALID_CODE = "=z7.K[md4z7Q";
-const ACTIVATION_DAYS = 30;
-
-function formatExpiry(date) {
-  return date.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
-}
 
 function initCoffeePage() {
   const indicator = document.getElementById('premiumIndicator');
   const activationSection = document.getElementById('activationSection');
 
   if (isPremiumUser()) {
-    const expiry = new Date(localStorage.getItem('adsRemovedUntil'));
-    indicator.textContent = '✓ Features active until ' + formatExpiry(expiry);
+    indicator.textContent = '✓ Features unlocked';
     indicator.style.display = 'block';
     if (activationSection) activationSection.style.display = 'none';
     return;
@@ -26,10 +20,9 @@ function initCoffeePage() {
   btn.addEventListener('click', function () {
     const entered = input.value.trim();
     if (entered === VALID_CODE) {
-      const expiry = new Date();
-      expiry.setDate(expiry.getDate() + ACTIVATION_DAYS);
-      localStorage.setItem('adsRemovedUntil', expiry.toISOString());
-      msg.textContent = 'Activated! Features unlocked until ' + formatExpiry(expiry) + '.';
+      const permanent = new Date('2999-12-31').toISOString();
+      localStorage.setItem('adsRemovedUntil', permanent);
+      msg.textContent = 'Activated! Features are now unlocked.';
       msg.className = 'activation-msg success';
       setTimeout(function () { location.reload(); }, 2000);
     } else {
