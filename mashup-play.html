@@ -101,7 +101,7 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-links">
-        <a class="footer-highlight" href="remove-ads.html">Ad-Free</a>
+        <a class="footer-highlight" href="remove-ads.html">Buy me a coffee</a>
         <a href="about.html">About</a>
         <a class="footer-highlight" href="how-it-works.html">How It Works</a>
         <a class="footer-highlight" href="contact.html">Contact</a>
@@ -304,16 +304,18 @@
         state.selectedAnswer = null;
       }
 
-      const revealToggleBtnMarathon = document.createElement("button");
-      revealToggleBtnMarathon.className = "secondary-btn reveal-answers-toggle";
-      revealToggleBtnMarathon.textContent = "Reveal Answers: OFF";
-      revealToggleBtnMarathon.addEventListener("click", () => {
-        revealAnswers = !revealAnswers;
-        revealToggleBtnMarathon.className = revealAnswers ? "primary-btn reveal-answers-toggle" : "secondary-btn reveal-answers-toggle";
-        revealToggleBtnMarathon.textContent = revealAnswers ? "Reveal Answers: ON" : "Reveal Answers: OFF";
-      });
-      const quizBoxEl = document.getElementById("marathonQuizBox");
-      if (quizBoxEl) quizBoxEl.insertBefore(revealToggleBtnMarathon, slidesContainer);
+      if (isPremiumUser()) {
+        const revealToggleBtnMarathon = document.createElement("button");
+        revealToggleBtnMarathon.className = "secondary-btn reveal-answers-toggle";
+        revealToggleBtnMarathon.textContent = "Reveal Answers: OFF";
+        revealToggleBtnMarathon.addEventListener("click", () => {
+          revealAnswers = !revealAnswers;
+          revealToggleBtnMarathon.className = revealAnswers ? "primary-btn reveal-answers-toggle" : "secondary-btn reveal-answers-toggle";
+          revealToggleBtnMarathon.textContent = revealAnswers ? "Reveal Answers: ON" : "Reveal Answers: OFF";
+        });
+        const quizBoxEl = document.getElementById("marathonQuizBox");
+        if (quizBoxEl) quizBoxEl.insertBefore(revealToggleBtnMarathon, slidesContainer);
+      }
 
       pageQuestions.forEach((q, index) => {
         const slug = q._themeSlug;
@@ -414,6 +416,7 @@
           "<div id=\"marathonThemeBreakdown\"></div>" +
           "<div class=\"cta-row\">" +
           (hasNextPage ? "<a class=\"primary-btn\" href=\"mashup-play.html?themes=" + themesParam + "&mode=marathon&page=" + (safePage + 1) + "\">Next Round</a>" : "") +
+          (!isPremiumUser() ? "<a class=\"secondary-btn\" href=\"remove-ads.html\">Buy me a coffee</a>" : "") +
           "<a class=\"secondary-btn\" href=\"contact.html\">Report a Question</a>" +
           "</div>";
 
@@ -482,16 +485,18 @@
         state.selectedAnswer = null;
       }
 
-      const revealToggleBtnChallenge = document.createElement("button");
-      revealToggleBtnChallenge.className = "secondary-btn reveal-answers-toggle";
-      revealToggleBtnChallenge.textContent = "Reveal Answers: OFF";
-      revealToggleBtnChallenge.addEventListener("click", () => {
-        revealAnswers = !revealAnswers;
-        revealToggleBtnChallenge.className = revealAnswers ? "primary-btn reveal-answers-toggle" : "secondary-btn reveal-answers-toggle";
-        revealToggleBtnChallenge.textContent = revealAnswers ? "Reveal Answers: ON" : "Reveal Answers: OFF";
-      });
-      const quizBoxElChallenge = document.getElementById("mashupChallengeQuizBox");
-      if (quizBoxElChallenge) quizBoxElChallenge.insertBefore(revealToggleBtnChallenge, slidesContainer);
+      if (isPremiumUser()) {
+        const revealToggleBtnChallenge = document.createElement("button");
+        revealToggleBtnChallenge.className = "secondary-btn reveal-answers-toggle";
+        revealToggleBtnChallenge.textContent = "Reveal Answers: OFF";
+        revealToggleBtnChallenge.addEventListener("click", () => {
+          revealAnswers = !revealAnswers;
+          revealToggleBtnChallenge.className = revealAnswers ? "primary-btn reveal-answers-toggle" : "secondary-btn reveal-answers-toggle";
+          revealToggleBtnChallenge.textContent = revealAnswers ? "Reveal Answers: ON" : "Reveal Answers: OFF";
+        });
+        const quizBoxElChallenge = document.getElementById("mashupChallengeQuizBox");
+        if (quizBoxElChallenge) quizBoxElChallenge.insertBefore(revealToggleBtnChallenge, slidesContainer);
+      }
 
       roundQuestions.forEach((q, index) => {
         const slug = q._themeSlug;
@@ -595,6 +600,7 @@
           "<div class=\"cta-row\">" +
           (hasNextRound ? "<a class=\"primary-btn\" href=\"mashup-play.html?themes=" + themesParam + "&mode=challenge&round=" + (safeRound + 1) + "\">Next Round</a>" : "") +
           "<button class=\"secondary-btn\" id=\"copyShareBtn\">Copy Link</button>" +
+          (!isPremiumUser() ? "<a class=\"secondary-btn\" href=\"remove-ads.html\">Reveal Answers</a>" : "") +
           "<a class=\"secondary-btn\" href=\"contact.html\">Report a Question</a>" +
           "</div>";
 
@@ -764,6 +770,7 @@
               "<div id=\"survivalThemeBreakdown\"></div>" +
               "<div class=\"cta-row\">" +
               "<a class=\"primary-btn\" href=\"mashup-play.html?themes=" + themesParam + "&mode=survival\">Play Again</a>" +
+              (!isPremiumUser() ? "<a class=\"secondary-btn\" href=\"remove-ads.html\">Unlimited Lifelines</a>" : "") +
               "<a class=\"secondary-btn\" href=\"contact.html\">Report a Question</a>" +
               "</div>";
             document.getElementById("survivalThemeBreakdown").appendChild(renderThemeBreakdown(state.themeScores));
@@ -798,8 +805,10 @@
               state.recoveryStarted = true;
               state.recoveryPoints = 0;
             }
-            state.fiftyAvailable = true;
-            state.friendAvailable = true;
+            if (isPremiumUser()) {
+              state.fiftyAvailable = true;
+              state.friendAvailable = true;
+            }
             updateTopbar();
           }
 
