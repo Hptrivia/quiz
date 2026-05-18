@@ -1,7 +1,7 @@
 // Versus Mode — local multiplayer trivia
 
-const VS_DIFF_ORDER = ['easy', 'medium', 'hard'];
-const VS_DIFF_POINTS = { easy: 1, medium: 2, hard: 3 };
+const VS_DIFF_ORDER = ['easy', 'medium', 'hard', 'expert'];
+const VS_DIFF_POINTS = { easy: 1, medium: 2, hard: 3, expert: 4 };
 
 let vsState = null;
 
@@ -14,15 +14,14 @@ function vsShow(screenId) {
   }
 }
 
-function vsBuildSchedule(n) {
-  const hardCount = Math.max(1, Math.round(n * 0.2));
-  const easyCount = Math.max(1, Math.round(n * 0.4));
-  const mediumCount = Math.max(0, n - easyCount - hardCount);
-  const schedule = [];
-  for (let i = 0; i < easyCount; i++) schedule.push('easy');
-  for (let i = 0; i < mediumCount; i++) schedule.push('medium');
-  for (let i = 0; i < hardCount; i++) schedule.push('hard');
-  return schedule;
+function vsBuildSchedule(n, hasExpert) {
+  const e = hasExpert ? 'expert' : 'hard';
+  const schedules = {
+    3:  ['easy', 'medium', 'hard'],
+    5:  ['easy', 'medium', 'hard', 'hard', e],
+    10: ['easy', 'easy', 'medium', 'medium', 'hard', 'hard', 'hard', e, e, e],
+  };
+  return schedules[n] || schedules[5];
 }
 
 function vsDrawQuestion(state, preferredDiff) {
@@ -432,7 +431,7 @@ function vsStartGame(players, numQuestions, pools, themeSlug, themeName, isMashu
     themeName,
     isMashup: !!isMashup,
     usedIds: new Set(),
-    schedule: vsBuildSchedule(numQuestions),
+    schedule: vsBuildSchedule(numQuestions, (pools.expert || []).length > 0),
     currentRound: 0,
     currentPlayerIdx: 0,
   };
@@ -505,7 +504,7 @@ async function vsInit() {
   const bestOfNote = document.getElementById('vsBestOfNote');
 
   function updateBestOfNote(n) {
-    bestOfNote.textContent = `Each player answers ${n} question${n !== 1 ? 's' : ''}. Questions get harder as you go. Miss one and the next player can steal it for 1 pt.`;
+    bestOfNote.textContent = `Each player answers ${n} question${n !== 1 ? 's' : ''}. Miss one and the next player can steal it for 1 pt.`;
   }
 
   bestOfSeg.querySelectorAll('button').forEach(btn => {
