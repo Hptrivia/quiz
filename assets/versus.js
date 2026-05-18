@@ -4,6 +4,7 @@ const VS_DIFF_ORDER = ['easy', 'medium', 'hard', 'expert'];
 const VS_DIFF_POINTS = { easy: 1, medium: 2, hard: 3, expert: 4 };
 
 let vsState = null;
+let vsRevealAnswers = false;
 
 function vsShow(screenId) {
   document.querySelectorAll('.vs-screen').forEach(el => el.classList.remove('active'));
@@ -129,7 +130,7 @@ function vsShowQuestion(player, diff, round, numQuestions) {
         nextBtn.onclick = () => vsAdvanceTurn(player, 0, { player: stealPlayer, success: true });
       } else {
         sel.classList.add('wrong-anim');
-        feedbackEl.textContent = 'Steal missed!';
+        feedbackEl.textContent = vsRevealAnswers ? `Steal missed! The correct answer is ${q.answer}.` : 'Steal missed!';
         feedbackEl.className = 'vs-feedback-box wrong';
         if (typeof SoundFX !== 'undefined') SoundFX.play('wrong');
         nextBtn.onclick = () => vsAdvanceTurn(player, 0, { player: stealPlayer, success: false });
@@ -582,6 +583,18 @@ async function vsInit() {
   document.getElementById('vsPlayAgainBtn').addEventListener('click', () => {
     vsShow('vsSetup');
   });
+
+  if (isPremiumUser()) {
+    const revealBtn = document.getElementById('vsRevealToggle');
+    if (revealBtn) {
+      revealBtn.style.display = '';
+      revealBtn.addEventListener('click', () => {
+        vsRevealAnswers = !vsRevealAnswers;
+        revealBtn.className = vsRevealAnswers ? 'primary-btn reveal-answers-toggle' : 'secondary-btn reveal-answers-toggle';
+        revealBtn.textContent = vsRevealAnswers ? 'Reveal Answers: ON' : 'Reveal Answers: OFF';
+      });
+    }
+  }
 
   document.getElementById('vsTiebreakerYes').addEventListener('click', vsStartTiebreaker);
   document.getElementById('vsTiebreakerNo').addEventListener('click', vsDeclareDraw);
