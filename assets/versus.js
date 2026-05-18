@@ -5,6 +5,8 @@ const VS_DIFF_POINTS = { easy: 1, medium: 2, hard: 3, expert: 4 };
 
 let vsState = null;
 let vsRevealAnswers = false;
+let vsSessionUsedIds = new Set(); // persists across games within a tab session
+let vsLastPlayerNames = [];       // remember names for Play Again
 
 function vsShow(screenId) {
   document.querySelectorAll('.vs-screen').forEach(el => el.classList.remove('active'));
@@ -27,13 +29,40 @@ function vsBuildSchedule(n, hasExpert) {
 
 function vsDrawQuestion(state, preferredDiff) {
   const diffIndex = VS_DIFF_ORDER.indexOf(preferredDiff);
+
+  if (state.isMashup && state.themeQueues) {
+    const numThemes = state.themeQueues.length;
+    // Outer: try preferred difficulty first, then fall back
+    for (let offset = 0; offset < VS_DIFF_ORDER.length; offset++) {
+      const diff = VS_DIFF_ORDER[(diffIndex + offset) % VS_DIFF_ORDER.length];
+      // Inner: rotate through themes starting at current index
+      for (let t = 0; t < numThemes; t++) {
+        const themeIdx = (state.themeRotationIdx + t) % numThemes;
+        const pool = state.themeQueues[themeIdx][diff];
+        while (pool.length > 0) {
+          const q = pool.shift();
+          const key = q.id || q.question;
+          if (!state.usedIds.has(key)) {
+            state.usedIds.add(key);
+            vsSessionUsedIds.add(key);
+            state.themeRotationIdx = (themeIdx + 1) % numThemes;
+            return { ...q, _diff: diff };
+          }
+        }
+      }
+    }
+    return null;
+  }
+
   for (let offset = 0; offset < VS_DIFF_ORDER.length; offset++) {
     const diff = VS_DIFF_ORDER[(diffIndex + offset) % VS_DIFF_ORDER.length];
     const pool = state.pools[diff];
     while (pool.length > 0) {
       const q = pool.shift();
-      if (!state.usedIds.has(q.id || q.question)) {
-        state.usedIds.add(q.id || q.question);
+      const key = q.id || q.question;
+      if (!state.usedIds.has(key)) {
+        state.usedIds.add(key);
+        vsSessionUsedIds.add(key);
         return { ...q, _diff: diff };
       }
     }
@@ -436,16 +465,21 @@ function vsDeclareDraw() {
   vsShow('vsResults');
 }
 
-function vsStartGame(players, numQuestions, pools, themeSlug, themeName, isMashup) {
+function vsStartGame(players, numQuestions, pools, themeSlug, themeName, isMashup, themeQueues) {
+  const hasExpert = themeQueues
+    ? themeQueues.some(tq => (tq.expert || []).length > 0)
+    : (pools.expert || []).length > 0;
   vsState = {
     players,
     numQuestions,
     pools,
+    themeQueues: themeQueues || null,
+    themeRotationIdx: 0,
     themeSlug,
     themeName,
     isMashup: !!isMashup,
-    usedIds: new Set(),
-    schedule: vsBuildSchedule(numQuestions, (pools.expert || []).length > 0),
+    usedIds: new Set(vsSessionUsedIds),
+    schedule: vsBuildSchedule(numQuestions, hasExpert),
     currentRound: 0,
     currentPlayerIdx: 0,
   };
@@ -508,7 +542,7 @@ async function vsInit() {
       inp.type = 'text';
       inp.placeholder = `Player ${i + 1}`;
       inp.maxLength = 20;
-      inp.value = vals[i] || '';
+      inp.value = vals[i] || vsLastPlayerNames[i] || '';
       wrap.appendChild(inp);
     }
   }
@@ -564,20 +598,18 @@ async function vsInit() {
     }
 
     const pools = {};
+    let themeQueues = null;
     if (resolvedThemes.length > 1) {
-      // Mashup: interleave themes round-robin within each difficulty so all themes appear evenly
-      VS_DIFF_ORDER.forEach(d => {
-        const perTheme = questionsByTheme.map(({ title, questions }) =>
-          shuffleArray(questions.filter(q => normalizeDifficulty(q.difficulty) === d))
-            .map(q => ({ ...q, _themeTitle: title }))
-        );
-        const interleaved = [];
-        const maxLen = Math.max(...perTheme.map(qs => qs.length), 0);
-        for (let i = 0; i < maxLen; i++) {
-          perTheme.forEach(qs => { if (i < qs.length) interleaved.push(qs[i]); });
-        }
-        pools[d] = interleaved;
+      // Mashup: build per-theme, per-difficulty queues for even rotation across questions
+      themeQueues = questionsByTheme.map(({ title, questions }) => {
+        const byDiff = {};
+        VS_DIFF_ORDER.forEach(d => {
+          byDiff[d] = shuffleArray(questions.filter(q => normalizeDifficulty(q.difficulty) === d))
+            .map(q => ({ ...q, _themeTitle: title }));
+        });
+        return byDiff;
       });
+      VS_DIFF_ORDER.forEach(d => { pools[d] = []; });
     } else {
       // Single theme: flat shuffle as before
       const allQuestions = questionsByTheme[0]?.questions || [];
@@ -589,11 +621,19 @@ async function vsInit() {
     const themeSlug = resolvedThemes.length === 1 ? resolvedThemes[0].slug : null;
     const themeName = resolvedThemes.map(t => t.title).join(' + ');
     const isMashup = resolvedThemes.length > 1;
+    vsLastPlayerNames = names;
     const players = names.map(name => ({ name, score: 0 }));
-    vsStartGame(players, bestOf, pools, themeSlug, themeName, isMashup);
+    vsStartGame(players, bestOf, pools, themeSlug, themeName, isMashup, themeQueues);
   });
 
   document.getElementById('vsPlayAgainBtn').addEventListener('click', () => {
+    if (vsLastPlayerNames.length > 0) {
+      playerCount = vsLastPlayerNames.length;
+      playerSeg.querySelectorAll('button').forEach(btn => {
+        btn.classList.toggle('selected', parseInt(btn.dataset.val) === playerCount);
+      });
+      renderNameInputs(playerCount);
+    }
     vsShow('vsSetup');
   });
 
