@@ -36,6 +36,49 @@ function getRelatedThemes(allThemes, currentTheme, limit = 5) {
   return shuffleArray(sameCategory).slice(0, limit);
 }
 
+const CATEGORY_PAGE_MAP = {
+  "TV": "tv", "Anime": "anime", "Sitcoms": "sitcoms", "Games": "games",
+  "Sports": "sports", "General": "general", "Education": "education",
+  "Books": "books", "Countries": "countries"
+};
+
+const HARDCODED_RELATED = {
+  "harry-potter": [
+    { slug: "lord-of-the-rings", title: "Lord of The Rings" },
+    { slug: "avatar-the-last-airbender", title: "Avatar: The Last Airbender" },
+    { slug: "game-of-thrones", title: "Game of Thrones" },
+    { slug: "house-of-the-dragon", title: "House of the Dragon" },
+    { slug: "arcane", title: "Arcane" }
+  ]
+};
+
+function buildJsonLd(theme, sampleQA) {
+  const catSlug = CATEGORY_PAGE_MAP[theme.category] || "general";
+  const breadcrumb = {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": `${SITE_URL}/` },
+      { "@type": "ListItem", "position": 2, "name": theme.category, "item": `${SITE_URL}/categories/${catSlug}.html` },
+      { "@type": "ListItem", "position": 3, "name": `${theme.title} Trivia`, "item": `${SITE_URL}/themes/${theme.slug}.html` }
+    ]
+  };
+
+  const graph = [breadcrumb];
+
+  if (sampleQA.length) {
+    graph.push({
+      "@type": "FAQPage",
+      "mainEntity": sampleQA.slice(0, 5).map(qa => ({
+        "@type": "Question",
+        "name": qa.question,
+        "acceptedAnswer": { "@type": "Answer", "text": qa.answer }
+      }))
+    });
+  }
+
+  return JSON.stringify({ "@context": "https://schema.org", "@graph": graph }, null, 2);
+}
+
 function getThemeCoverageText(theme) {
   const category = theme.category || "";
   const title = theme.title || "this theme";
@@ -63,7 +106,7 @@ function getBestModeText(hasEpisodeMode) {
   return "Marathon Mode is best for a longer run with bigger rounds, while Challenge Mode works better for shorter 10-question sessions.";
 }
 
-function getSampleQuestions(questionFilePath) {
+function getSampleQuestionsWithAnswers(questionFilePath) {
   try {
     const fullPath = path.join(rootDir, questionFilePath);
     if (!fs.existsSync(fullPath)) return [];
@@ -72,8 +115,8 @@ function getSampleQuestions(questionFilePath) {
     if (!Array.isArray(questions)) return [];
 
     return questions
-      .map((q) => (q && q.question ? String(q.question).trim() : ""))
-      .filter(Boolean)
+      .filter((q) => q && q.question && q.answer)
+      .map((q) => ({ question: String(q.question).trim(), answer: String(q.answer).trim() }))
       .sort(() => Math.random() - 0.5)
       .slice(0, 10);
   } catch (err) {
@@ -95,7 +138,7 @@ function getTotalQuestions(questionFilePath) {
   }
 }
 
-function buildThemePage(theme, allThemes, hasEpisodeMode, sampleQuestions = []) {
+function buildThemePage(theme, allThemes, hasEpisodeMode, sampleQA = []) {
   const rawTitle = theme.title || "";
   const rawDescription = theme.description || "";
   const rawSlug = theme.slug || "";
@@ -134,33 +177,40 @@ const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
       `
     : "";
 
-  const sampleQuestionsHtml = sampleQuestions.length
+  const sampleQuestionsHtml = sampleQA.length
     ? `
         <div class="theme-sample-questions">
           <h2>Sample Questions</h2>
+          <p class="sq-hint">Tap an answer to reveal it.</p>
           <ul>
-            ${sampleQuestions.map((q) => `<li>${escapeHtml(q)}</li>`).join("")}
+            ${sampleQA.map((qa) => `<li>${escapeHtml(qa.question)} <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">${escapeHtml(qa.answer)}</span></li>`).join("")}
           </ul>
         </div>
       `
     : "";
 
-  const relatedThemes = getRelatedThemes(allThemes, theme, 5);
+  const relatedThemes = HARDCODED_RELATED[rawSlug] || getRelatedThemes(allThemes, theme, 5);
 
-const relatedThemesHtml = relatedThemes.length
-  ? `
-      <div class="theme-related-quizzes">
-        <h2>Related Quizzes</h2>
-        <div class="grid">
-          ${relatedThemes.map((t) => `
-            <a class="card" href="../themes/${escapeHtml(t.slug)}.html">
-              <h3>${escapeHtml(t.title)}</h3>
-            </a>
-          `).join("")}
+  const crossLinkHtml = relatedThemes.length >= 2
+    ? `<p>If you enjoy ${title} trivia, also try <a href="../themes/${escapeHtml(relatedThemes[0].slug)}.html">${escapeHtml(relatedThemes[0].title)}</a> and <a href="../themes/${escapeHtml(relatedThemes[1].slug)}.html">${escapeHtml(relatedThemes[1].title)}</a> on Trivia Gauntlet.</p>`
+    : "";
+
+  const relatedThemesHtml = relatedThemes.length
+    ? `
+        <div class="theme-related-quizzes">
+          <h2>Related Quizzes</h2>
+          <div class="grid">
+            ${relatedThemes.map((t) => `
+              <a class="card" href="../themes/${escapeHtml(t.slug)}.html">
+                <h3>${escapeHtml(t.title)}</h3>
+              </a>
+            `).join("")}
+          </div>
         </div>
-      </div>
-    `
-  : "";
+      `
+    : "";
+
+  const jsonLd = buildJsonLd(theme, sampleQA);
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -181,6 +231,16 @@ const relatedThemesHtml = relatedThemes.length
   <link rel="apple-touch-icon" href="/assets/icon-192.png" />
   <meta name="theme-color" content="#0f172a" />
   <link rel="stylesheet" href="../assets/style.css" />
+  <meta property="og:title" content="${title} Trivia Questions | Trivia Gauntlet" />
+  <meta property="og:description" content="${escapeHtml(metaDescription)}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="${SITE_URL}/themes/${slug}.html" />
+  <meta property="og:image" content="${SITE_URL}/assets/icon-192.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="${title} Trivia Questions | Trivia Gauntlet" />
+  <meta name="twitter:description" content="${escapeHtml(metaDescription)}" />
+  <meta name="twitter:image" content="${SITE_URL}/assets/icon-192.png" />
+  <script type="application/ld+json">${jsonLd}</script>
 </head>
 <body>
   <main class="container narrow">
@@ -251,7 +311,8 @@ const relatedThemesHtml = relatedThemes.length
 
       ${sampleQuestionsHtml}
       ${rawSeoIntro ? `<p>${coverageText}</p>` : ""}
-      ${rawSeoDetail ? `<p>${detailText}</p>` : ""} 
+      ${rawSeoDetail ? `<p>${detailText}</p>` : ""}
+      ${crossLinkHtml}
       ${relatedThemesHtml}
     </section>
   </main>
@@ -383,8 +444,8 @@ function main() {
     seen.add(theme.slug);
 
     const hasEpisodeMode = Boolean(episodeThemes[theme.slug]);
-    const sampleQuestions = getSampleQuestions(theme.questionFile);
-    const html = buildThemePage(theme, themes, hasEpisodeMode, sampleQuestions);
+    const sampleQA = getSampleQuestionsWithAnswers(theme.questionFile);
+    const html = buildThemePage(theme, themes, hasEpisodeMode, sampleQA);
     const outPath = path.join(outputDir, `${theme.slug}.html`);
 
     fs.writeFileSync(outPath, html, "utf8");

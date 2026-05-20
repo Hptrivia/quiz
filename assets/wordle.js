@@ -237,7 +237,25 @@ async function renderWordlePage() {
   const nextBtn    = document.getElementById("nextWordBtn");
 
   if (!theme) {
-    progressEl.textContent = "Theme not found";
+    document.title = "Themed Wordle | Trivia Gauntlet";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute('content', 'Play themed Wordle on Trivia Gauntlet. All 151 themes available — guess words from TV shows, games, sports, and more.');
+
+    const gamePanel = document.querySelector('[data-page="wordle"] .panel, body .panel');
+    if (gamePanel) gamePanel.style.display = 'none';
+
+    const pageContentEl = document.getElementById("wordlePageContent");
+    if (pageContentEl) {
+      pageContentEl.innerHTML = `
+        <section class="panel">
+          <h1>Themed Wordle</h1>
+          <p>Pick any theme below to start. Each theme has its own set of words drawn from characters, locations, and key terms. One word per page — guess it letter by letter.</p>
+          <div class="grid">
+            ${themes.map(t => `<a class="card" href="wordle.html?theme=${t.slug}&page=1"><h3>${t.title}</h3><p>Wordle</p></a>`).join("")}
+          </div>
+        </section>
+      `;
+    }
     return;
   }
 
@@ -476,9 +494,50 @@ async function renderWordlePage() {
   if (safePage >= 4 && typeof maybeShowPwaPopup === "function") maybeShowPwaPopup();
 }
 
+function injectWordleHead(theme, page) {
+  const SITE = "https://triviagauntlet.app";
+  const canonicalUrl = `${SITE}/wordle.html?theme=${theme.slug}&page=1`;
+
+  let canonical = document.querySelector('link[rel="canonical"]');
+  if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical); }
+  canonical.href = canonicalUrl;
+
+  let ogUrl = document.querySelector('meta[property="og:url"]');
+  if (!ogUrl) { ogUrl = document.createElement('meta'); ogUrl.setAttribute('property', 'og:url'); document.head.appendChild(ogUrl); }
+  ogUrl.setAttribute('content', `${SITE}/wordle.html?theme=${theme.slug}&page=${page}`);
+
+  let ogTitle = document.querySelector('meta[property="og:title"]');
+  if (!ogTitle) { ogTitle = document.createElement('meta'); ogTitle.setAttribute('property', 'og:title'); document.head.appendChild(ogTitle); }
+  ogTitle.setAttribute('content', `${theme.title} Wordle | Trivia Gauntlet`);
+
+  let ogDesc = document.querySelector('meta[property="og:description"]');
+  if (!ogDesc) { ogDesc = document.createElement('meta'); ogDesc.setAttribute('property', 'og:description'); document.head.appendChild(ogDesc); }
+  ogDesc.setAttribute('content', `Guess ${theme.title} words one letter at a time on Trivia Gauntlet.`);
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": `${SITE}/` },
+          { "@type": "ListItem", "position": 2, "name": `${theme.title} Trivia`, "item": `${SITE}/themes/${theme.slug}.html` },
+          { "@type": "ListItem", "position": 3, "name": `${theme.title} Wordle`, "item": canonicalUrl }
+        ]
+      }
+    ]
+  };
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify(jsonLd);
+  document.head.appendChild(script);
+}
+
 function renderWordlePageContent(theme, themes, page, allWords = []) {
   const container = document.getElementById("wordlePageContent");
   if (!container) return;
+
+  injectWordleHead(theme, page);
 
   const ctx = getThemeContext(theme.category);
   const relatedThemes = getRelatedThemes(themes, theme, 4);

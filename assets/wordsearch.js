@@ -418,7 +418,25 @@ async function renderWordSearchPage() {
   if (backEl && slug) backEl.href = `quiz.html?theme=${slug}`;
 
   if (!theme) {
-    titleEl.textContent = "Theme not found";
+    document.title = "Themed Word Search | Trivia Gauntlet";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute('content', 'Play themed Word Search on Trivia Gauntlet. All 151 themes available — find hidden words from TV shows, games, sports, and more.');
+
+    if (titleEl) titleEl.textContent = "Themed Word Search";
+    const gameArea = document.querySelector('.ws-game-area');
+    if (gameArea) gameArea.style.display = 'none';
+
+    const pageContentEl = document.getElementById("wsPageContent");
+    if (pageContentEl) {
+      pageContentEl.innerHTML = `
+        <div style="margin-top:16px;">
+          <p>Pick any theme below to start. Words are hidden in a 10×10 grid — drag across letters to find them. Each page covers a new set of words.</p>
+          <div class="grid">
+            ${themes.map(t => `<a class="card" href="wordsearch.html?theme=${t.slug}&page=1"><h3>${t.title}</h3><p>Word Search</p></a>`).join("")}
+          </div>
+        </div>
+      `;
+    }
     return;
   }
 
@@ -474,9 +492,50 @@ async function renderWordSearchPage() {
   if (safePage >= 2 && typeof maybeShowPwaPopup === "function") maybeShowPwaPopup();
 }
 
+function injectWsHead(theme, page) {
+  const SITE = "https://triviagauntlet.app";
+  const canonicalUrl = `${SITE}/wordsearch.html?theme=${theme.slug}&page=1`;
+
+  let canonical = document.querySelector('link[rel="canonical"]');
+  if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical); }
+  canonical.href = canonicalUrl;
+
+  let ogUrl = document.querySelector('meta[property="og:url"]');
+  if (!ogUrl) { ogUrl = document.createElement('meta'); ogUrl.setAttribute('property', 'og:url'); document.head.appendChild(ogUrl); }
+  ogUrl.setAttribute('content', `${SITE}/wordsearch.html?theme=${theme.slug}&page=${page}`);
+
+  let ogTitle = document.querySelector('meta[property="og:title"]');
+  if (!ogTitle) { ogTitle = document.createElement('meta'); ogTitle.setAttribute('property', 'og:title'); document.head.appendChild(ogTitle); }
+  ogTitle.setAttribute('content', `${theme.title} Word Search | Trivia Gauntlet`);
+
+  let ogDesc = document.querySelector('meta[property="og:description"]');
+  if (!ogDesc) { ogDesc = document.createElement('meta'); ogDesc.setAttribute('property', 'og:description'); document.head.appendChild(ogDesc); }
+  ogDesc.setAttribute('content', `Find hidden ${theme.title} words in a 10×10 grid on Trivia Gauntlet.`);
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": `${SITE}/` },
+          { "@type": "ListItem", "position": 2, "name": `${theme.title} Trivia`, "item": `${SITE}/themes/${theme.slug}.html` },
+          { "@type": "ListItem", "position": 3, "name": `${theme.title} Word Search`, "item": canonicalUrl }
+        ]
+      }
+    ]
+  };
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify(jsonLd);
+  document.head.appendChild(script);
+}
+
 function renderWsPageContent(theme, themes, page, allWords = []) {
   const container = document.getElementById("wsPageContent");
   if (!container) return;
+
+  injectWsHead(theme, page);
 
   const ctx = getThemeContext(theme.category);
   const relatedThemes = getRelatedThemes(themes, theme, 4);
