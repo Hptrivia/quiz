@@ -27,48 +27,18 @@
 
       <!-- Avatar + name -->
       <div style="text-align:center;margin-bottom:20px;">
-        <div id="profileAvatarLarge" style="margin:0 auto 10px;cursor:pointer;" title="Change colour" onclick="document.getElementById('colorPickerSection').style.display=document.getElementById('colorPickerSection').style.display==='none'?'block':'none'"></div>
+        <div id="profileAvatarLarge" style="margin:0 auto 10px;"></div>
         <div id="profileNameDisplay" class="profile-name"></div>
         <div id="profileSince" class="profile-since"></div>
       </div>
 
-      <!-- Edit name -->
-      <div style="margin-bottom:16px;">
-        <label class="form-label" for="profileNameInput">Display name</label>
+      <!-- First-time setup (only shown when no name set) -->
+      <div id="firstTimeSetup" style="display:none;margin-bottom:20px;padding:16px;background:var(--card-bg,#1e293b);border-radius:10px;border:1px solid var(--border-color,#334155);">
+        <div style="font-weight:600;margin-bottom:10px;">&#128075; Set your display name to get started</div>
         <div style="display:flex;gap:8px;">
           <input id="profileNameInput" class="form-input" type="text" maxlength="30" placeholder="Enter your name" style="flex:1;" />
           <button class="secondary-btn" onclick="saveName()" style="white-space:nowrap;">Save</button>
         </div>
-      </div>
-
-      <!-- Color picker -->
-      <div id="colorPickerSection" style="display:none;margin-bottom:16px;">
-        <div class="form-label">Avatar colour</div>
-        <div id="colorSwatches" class="profile-color-picker"></div>
-      </div>
-
-      <!-- Warning -->
-      <div class="profile-warning">
-        &#9888; Stats are saved on this device only. Clearing your browser cache will erase them. Export regularly to keep a backup.
-      </div>
-
-      <!-- Email -->
-      <div style="margin-bottom:20px;">
-        <label class="form-label" for="profileEmail">Email (for future recovery)</label>
-        <div style="display:flex;gap:8px;">
-          <input id="profileEmail" class="form-input" type="email" placeholder="your@email.com" style="flex:1;" />
-          <button class="secondary-btn" id="emailSaveBtn" onclick="saveEmail()" style="white-space:nowrap;">Save</button>
-        </div>
-        <p style="font-size:0.78rem;color:var(--muted-text);margin-top:5px;">We&#39;ll use this to help you recover your stats when cloud save launches.</p>
-      </div>
-
-      <!-- Export / Import -->
-      <div style="display:flex;gap:10px;margin-bottom:24px;">
-        <button class="secondary-btn" style="flex:1;" onclick="doExport()">&#8595; Export Stats</button>
-        <label class="secondary-btn" style="flex:1;text-align:center;cursor:pointer;">
-          &#8593; Import Stats
-          <input type="file" accept=".json" style="display:none;" onchange="doImport(this)" />
-        </label>
       </div>
 
       <!-- Tabs -->
@@ -76,6 +46,7 @@
         <button class="profile-tab active" onclick="switchTab('overall', this)">Overall</button>
         <button class="profile-tab" onclick="switchTab('themes', this)">My Themes</button>
         <button class="profile-tab" onclick="switchTab('mashups', this)">Saved Mashups</button>
+        <button class="profile-tab" onclick="switchTab('settings', this)">Settings</button>
       </div>
 
       <!-- Overall tab -->
@@ -92,6 +63,50 @@
       <!-- Saved Mashups tab -->
       <div id="tab-mashups" style="display:none;">
         <div id="savedMashupsList"></div>
+      </div>
+
+      <!-- Settings tab -->
+      <div id="tab-settings" style="display:none;">
+
+        <!-- Edit name -->
+        <div style="margin-bottom:16px;margin-top:16px;">
+          <label class="form-label" for="profileNameInputSettings">Display name</label>
+          <div style="display:flex;gap:8px;">
+            <input id="profileNameInputSettings" class="form-input" type="text" maxlength="30" placeholder="Enter your name" style="flex:1;" />
+            <button class="secondary-btn" onclick="saveNameSettings()" style="white-space:nowrap;">Save</button>
+          </div>
+        </div>
+
+        <!-- Color picker -->
+        <div style="margin-bottom:16px;">
+          <div class="form-label">Avatar colour</div>
+          <div id="colorSwatches" class="profile-color-picker"></div>
+        </div>
+
+        <!-- Warning -->
+        <div class="profile-warning">
+          &#9888; Stats are saved on this device only. Clearing your browser cache will erase them. Export regularly to keep a backup.
+        </div>
+
+        <!-- Email -->
+        <div style="margin-bottom:20px;">
+          <label class="form-label" for="profileEmail">Email (for future recovery)</label>
+          <div style="display:flex;gap:8px;">
+            <input id="profileEmail" class="form-input" type="email" placeholder="your@email.com" style="flex:1;" />
+            <button class="secondary-btn" id="emailSaveBtn" onclick="saveEmail()" style="white-space:nowrap;">Save</button>
+          </div>
+          <p style="font-size:0.78rem;color:var(--muted-text);margin-top:5px;">We&#39;ll use this to help you recover your stats when cloud save launches.</p>
+        </div>
+
+        <!-- Export / Import -->
+        <div style="display:flex;gap:10px;margin-bottom:8px;">
+          <button class="secondary-btn" style="flex:1;" onclick="doExport()">&#8595; Export Stats</button>
+          <label class="secondary-btn" style="flex:1;text-align:center;cursor:pointer;">
+            &#8593; Import Stats
+            <input type="file" accept=".json" style="display:none;" onchange="doImport(this)" />
+          </label>
+        </div>
+
       </div>
 
     </section>
@@ -123,8 +138,11 @@
       document.getElementById("profileNameDisplay").textContent = p.name || "Anonymous Player";
       document.getElementById("profileSince").textContent = p.createdAt ? `Playing since ${p.createdAt}` : "";
 
-      // Pre-fill inputs
-      document.getElementById("profileNameInput").value = p.name || "";
+      // First-time setup: show if no name yet
+      document.getElementById("firstTimeSetup").style.display = p.name ? "none" : "";
+
+      // Pre-fill settings inputs
+      document.getElementById("profileNameInputSettings").value = p.name || "";
       document.getElementById("profileEmail").value = p.email || "";
 
       // Color swatches
@@ -267,7 +285,7 @@
     function switchTab(name, btn) {
       document.querySelectorAll(".profile-tab").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
-      ["overall","themes","mashups"].forEach(t => {
+      ["overall","themes","mashups","settings"].forEach(t => {
         document.getElementById(`tab-${t}`).style.display = t === name ? "" : "none";
       });
       if (typeof gtag === "function") gtag("event", "profile_tab_view", { tab: name });
@@ -283,12 +301,26 @@
 
     function saveName() {
       const name = document.getElementById("profileNameInput").value.trim();
+      if (!name) return;
       const p = getProfile();
       p.name = name;
       if (!p.createdAt) p.createdAt = new Date().toISOString().split("T")[0];
       saveProfile(p);
       renderPage();
-      if (name && typeof gtag === "function") gtag("event", "profile_name_saved");
+      if (typeof gtag === "function") gtag("event", "profile_name_saved");
+    }
+
+    function saveNameSettings() {
+      const name = document.getElementById("profileNameInputSettings").value.trim();
+      if (!name) return;
+      const p = getProfile();
+      p.name = name;
+      if (!p.createdAt) p.createdAt = new Date().toISOString().split("T")[0];
+      saveProfile(p);
+      renderPage();
+      // Stay on settings tab after save
+      switchTab("settings", document.querySelector(".profile-tab:last-child"));
+      if (typeof gtag === "function") gtag("event", "profile_name_saved");
     }
 
     async function saveEmail() {
