@@ -57,14 +57,6 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "As of February 2026, how many total episodes of Bridgerton have aired?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "28"
-          }
-        },
-        {
-          "@type": "Question",
           "name": "Which Bridgerton brother is an artist?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -73,26 +65,34 @@
         },
         {
           "@type": "Question",
-          "name": "Who assists Sophie Baek in attending the masquerade ball in Season 4?",
+          "name": "Who is revealed to be Lady Whistledown?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Alfie and Irma"
+            "text": "Penelope Featherington"
           }
         },
         {
           "@type": "Question",
-          "name": "Who is Daphne’s husband?",
+          "name": "What is the name of the maid Sophie tries to rescue at Cavender House?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Simon Basset"
+            "text": "Hazel"
           }
         },
         {
           "@type": "Question",
-          "name": "What is the name of the Bridgertons’ country estate?",
+          "name": "What era is Bridgerton set in?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Aubrey Hall"
+            "text": "Regency era"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "In Season 4, what is the name of the cook at Penwood House who helps find the will?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Irma"
           }
         }
       ]
@@ -104,6 +104,7 @@
   <main class="container narrow">
     <div class="theme-top-links">
       <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+      <span id="navAvatarSlot"></span>
       <a href="../index.html" class="back-link">⌂ Home</a>
     </div>
 
@@ -155,14 +156,14 @@
           <p>Play locally against friends</p>
         </a>
 
+        <a class="card" href="../wordle/bridgerton.html">
+          <h3>Wordle</h3>
+          <p>Guess themed words</p>
+        </a>
+
         <a class="card" href="../wordsearch.html?theme=bridgerton&page=1">
           <h3>Word Search</h3>
           <p>Find hidden themed words</p>
-        </a>
-
-        <a class="card" href="../wordle.html?theme=bridgerton&page=1">
-          <h3>Wordle</h3>
-          <p>Guess themed words</p>
         </a>
 
       </div>
@@ -172,36 +173,36 @@
           <h2>Sample Questions</h2>
           <p class="sq-hint">Tap an answer to reveal it.</p>
           <ul>
-            <li>As of February 2026, how many total episodes of Bridgerton have aired? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">28</span></li><li>Which Bridgerton brother is an artist? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Benedict</span></li><li>Who assists Sophie Baek in attending the masquerade ball in Season 4? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Alfie and Irma</span></li><li>Who is Daphne’s husband? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Simon Basset</span></li><li>What is the name of the Bridgertons’ country estate? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Aubrey Hall</span></li><li>Who narrates Lady Whistledown’s voiceover? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Julie Andrews</span></li><li>What is the name of the Bridgerton family’s youngest brother? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Gregory</span></li><li>What is the name of the boxer who becomes part of the social circle? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Will</span></li><li>How many books are in the main Bridgerton series? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">8</span></li><li>Who is the Duke of Hastings? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Simon Basset</span></li>
+            <li>Which Bridgerton brother is an artist? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Benedict</span></li><li>Who is revealed to be Lady Whistledown? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Penelope Featherington</span></li><li>What is the name of the maid Sophie tries to rescue at Cavender House? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Hazel</span></li><li>What era is Bridgerton set in? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Regency era</span></li><li>In Season 4, what is the name of the cook at Penwood House who helps find the will? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Irma</span></li><li>What is the title of Season 4, Episode 1? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">The Waltz</span></li><li>Who plays Colin Bridgerton? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Luke Newton</span></li><li>What is the name of the episode where Hyacinth and Gregory take their first steps into society? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Yes or No</span></li><li>How many episodes are in the Queen Charlotte spin-off? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">6</span></li><li>What is the name of the young woman whose pregnancy becomes a major scandal in Season 1? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Marina</span></li>
           </ul>
         </div>
       
       <p>Bridgerton trivia works because the show blends high-society ritual with strong romantic storylines, family pressure, gossip, and very recognisable characters. It has enough mainstream visibility to be accessible, but enough social detail to reward attentive viewers too.</p>
       <p>A strong Bridgerton quiz can include the Bridgerton siblings, the Featheringtons, Queen Charlotte, Lady Whistledown, courtship customs, titles, balls, scandals, marriage arrangements, family alliances, and the season-by-season romantic pairings at the centre of the story. The theme stays engaging because it moves between character relationships, social expectations, secrets, and the wider world of power and reputation that surrounds each romance.</p>
-      <p>If you enjoy Bridgerton trivia, also try <a href="../themes/family-guy.html">Family Guy</a> and <a href="../themes/breaking-bad.html">Breaking Bad</a> on Trivia Gauntlet.</p>
+      <p>If you enjoy Bridgerton trivia, also try <a href="../themes/the-flash.html">The Flash</a> and <a href="../themes/supernatural.html">Supernatural</a> on Trivia Gauntlet.</p>
       
         <div class="theme-related-quizzes">
           <h2>Related Quizzes</h2>
           <div class="grid">
             
-              <a class="card" href="../themes/family-guy.html">
-                <h3>Family Guy</h3>
+              <a class="card" href="../themes/the-flash.html">
+                <h3>The Flash</h3>
               </a>
             
-              <a class="card" href="../themes/breaking-bad.html">
-                <h3>Breaking Bad</h3>
+              <a class="card" href="../themes/supernatural.html">
+                <h3>Supernatural</h3>
               </a>
             
-              <a class="card" href="../themes/pretty-little-liars.html">
-                <h3>Pretty Little Liars</h3>
+              <a class="card" href="../themes/marvel-movies.html">
+                <h3>Marvel Movies</h3>
               </a>
             
-              <a class="card" href="../themes/sex-and-the-city.html">
-                <h3>Sex and the City</h3>
+              <a class="card" href="../themes/the-wire.html">
+                <h3>The Wire</h3>
               </a>
             
-              <a class="card" href="../themes/sons-of-anarchy.html">
-                <h3>Sons of Anarchy</h3>
+              <a class="card" href="../themes/peaky-blinders.html">
+                <h3>Peaky Blinders</h3>
               </a>
             
           </div>
@@ -270,5 +271,6 @@
 
     setupThemePageSearch();
   </script>
+  <script src="../assets/profile.js"></script>
 </body>
 </html>

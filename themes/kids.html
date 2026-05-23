@@ -57,7 +57,7 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is 12 - 5?",
+          "name": "How many days are in a week?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "7"
@@ -65,26 +65,10 @@
         },
         {
           "@type": "Question",
-          "name": "Which planet is known as the Red Planet?",
+          "name": "What color are bananas when they are ripe?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Mars"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which animal is famous for carrying people in the desert?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Camel"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How many months are in a year?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "12"
+            "text": "Yellow"
           }
         },
         {
@@ -93,6 +77,22 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Kangaroo"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What do you brush to keep them clean every day?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Teeth"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many months are in a year?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "12"
           }
         }
       ]
@@ -104,6 +104,7 @@
   <main class="container narrow">
     <div class="theme-top-links">
       <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+      <span id="navAvatarSlot"></span>
       <a href="../index.html" class="back-link">⌂ Home</a>
     </div>
 
@@ -155,14 +156,14 @@
           <p>Play locally against friends</p>
         </a>
 
+        <a class="card" href="../wordle/kids.html">
+          <h3>Wordle</h3>
+          <p>Guess themed words</p>
+        </a>
+
         <a class="card" href="../wordsearch.html?theme=kids&page=1">
           <h3>Word Search</h3>
           <p>Find hidden themed words</p>
-        </a>
-
-        <a class="card" href="../wordle.html?theme=kids&page=1">
-          <h3>Wordle</h3>
-          <p>Guess themed words</p>
         </a>
 
       </div>
@@ -172,36 +173,36 @@
           <h2>Sample Questions</h2>
           <p class="sq-hint">Tap an answer to reveal it.</p>
           <ul>
-            <li>What is 12 - 5? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">7</span></li><li>Which planet is known as the Red Planet? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Mars</span></li><li>Which animal is famous for carrying people in the desert? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Camel</span></li><li>How many months are in a year? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">12</span></li><li>Which animal is known for hopping and carrying a baby in a pouch? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Kangaroo</span></li><li>What is 10 - 1? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">9</span></li><li>How many days are in a week? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">7</span></li><li>How many hours are in a day? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">24</span></li><li>Which ocean animal has eight arms? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Octopus</span></li><li>What do you need to do before crossing the road? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Look both ways</span></li>
+            <li>How many days are in a week? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">7</span></li><li>What color are bananas when they are ripe? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Yellow</span></li><li>Which animal is known for hopping and carrying a baby in a pouch? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Kangaroo</span></li><li>What do you brush to keep them clean every day? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Teeth</span></li><li>How many months are in a year? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">12</span></li><li>What do you call the baby of a chicken? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Chick</span></li><li>What do you wear on your feet? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Shoes</span></li><li>What do you use to cut paper safely in class? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Scissors</span></li><li>Which day comes after Friday? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Saturday</span></li><li>What is 9 - 3? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">6</span></li>
           </ul>
         </div>
       
       <p>Kids trivia works because it focuses on simple, familiar knowledge that is easy to recognise, understand, and recall quickly.</p>
       <p>A strong kids quiz can include animals, colours, numbers, shapes, basic science, simple geography, fairy tales, and popular cartoons. The category works because it prioritises clarity, repetition, and recognition, making it accessible while still allowing variety across everyday knowledge areas.</p>
-      <p>If you enjoy Kids trivia, also try <a href="../themes/world-facts.html">World Facts</a> and <a href="../themes/bollywood.html">Bollywood</a> on Trivia Gauntlet.</p>
+      <p>If you enjoy Kids trivia, also try <a href="../themes/sports.html">Sports</a> and <a href="../themes/video-games.html">Video Games</a> on Trivia Gauntlet.</p>
       
         <div class="theme-related-quizzes">
           <h2>Related Quizzes</h2>
           <div class="grid">
             
-              <a class="card" href="../themes/world-facts.html">
-                <h3>World Facts</h3>
+              <a class="card" href="../themes/sports.html">
+                <h3>Sports</h3>
               </a>
             
-              <a class="card" href="../themes/bollywood.html">
-                <h3>Bollywood</h3>
+              <a class="card" href="../themes/video-games.html">
+                <h3>Video Games</h3>
               </a>
             
               <a class="card" href="../themes/anime.html">
                 <h3>Anime</h3>
               </a>
             
-              <a class="card" href="../themes/animals.html">
-                <h3>Animals</h3>
+              <a class="card" href="../themes/world-capitals.html">
+                <h3>World Capitals</h3>
               </a>
             
-              <a class="card" href="../themes/true-or-false.html">
-                <h3>True or False</h3>
+              <a class="card" href="../themes/history.html">
+                <h3>History</h3>
               </a>
             
           </div>
@@ -270,5 +271,6 @@
 
     setupThemePageSearch();
   </script>
+  <script src="../assets/profile.js"></script>
 </body>
 </html>

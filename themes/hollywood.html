@@ -57,10 +57,10 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Which film won Best Picture at the Academy Awards in 2001, beating out 'Crouching Tiger, Hidden Dragon'?",
+          "name": "Which movie involves toys coming to life when humans aren't around?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Gladiator"
+            "text": "Toy Story"
           }
         },
         {
@@ -73,26 +73,26 @@
         },
         {
           "@type": "Question",
-          "name": "Which 2010 film stars Natalie Portman as a ballerina descending into madness?",
+          "name": "Who played Jack in 'Titanic'?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The Black Swan"
+            "text": "Leonardo DiCaprio"
           }
         },
         {
           "@type": "Question",
-          "name": "What kind of creature is Dobby in the 'Harry Potter' series?",
+          "name": "Which 2017 horror film is centered around a hypnotic form of racism?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "House-elf"
+            "text": "Get Out"
           }
         },
         {
           "@type": "Question",
-          "name": "What is the name of Simba’s father in 'The Lion King'?",
+          "name": "Which movie features the character Buzz Lightyear?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Mufasa"
+            "text": "Toy Story"
           }
         }
       ]
@@ -104,6 +104,7 @@
   <main class="container narrow">
     <div class="theme-top-links">
       <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+      <span id="navAvatarSlot"></span>
       <a href="../index.html" class="back-link">⌂ Home</a>
     </div>
 
@@ -155,14 +156,14 @@
           <p>Play locally against friends</p>
         </a>
 
+        <a class="card" href="../wordle/hollywood.html">
+          <h3>Wordle</h3>
+          <p>Guess themed words</p>
+        </a>
+
         <a class="card" href="../wordsearch.html?theme=hollywood&page=1">
           <h3>Word Search</h3>
           <p>Find hidden themed words</p>
-        </a>
-
-        <a class="card" href="../wordle.html?theme=hollywood&page=1">
-          <h3>Wordle</h3>
-          <p>Guess themed words</p>
         </a>
 
       </div>
@@ -172,20 +173,20 @@
           <h2>Sample Questions</h2>
           <p class="sq-hint">Tap an answer to reveal it.</p>
           <ul>
-            <li>Which film won Best Picture at the Academy Awards in 2001, beating out &#39;Crouching Tiger, Hidden Dragon&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Gladiator</span></li><li>Which movie stars a clown named Pennywise? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">It</span></li><li>Which 2010 film stars Natalie Portman as a ballerina descending into madness? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">The Black Swan</span></li><li>What kind of creature is Dobby in the &#39;Harry Potter&#39; series? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">House-elf</span></li><li>What is the name of Simba’s father in &#39;The Lion King&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Mufasa</span></li><li>Which 2017 horror film is centered around a hypnotic form of racism? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Get Out</span></li><li>Which character does Tom Holland play in the Marvel Cinematic Universe? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Spider-Man</span></li><li>Who played Jack in &#39;Titanic&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Leonardo DiCaprio</span></li><li>Which actor is known for playing Deadpool? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Ryan Reynolds</span></li><li>Which actress plays the AI robot Ava in &#39;Ex Machina&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Alicia Vikander</span></li>
+            <li>Which movie involves toys coming to life when humans aren&#39;t around? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Toy Story</span></li><li>Which movie stars a clown named Pennywise? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">It</span></li><li>Who played Jack in &#39;Titanic&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Leonardo DiCaprio</span></li><li>Which 2017 horror film is centered around a hypnotic form of racism? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Get Out</span></li><li>Which movie features the character Buzz Lightyear? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Toy Story</span></li><li>Which actor played the Joker in &#39;The Dark Knight&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Heath Ledger</span></li><li>Which superhero uses a shield as a weapon? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Captain America</span></li><li>Who composed the musical score for &#39;Inception&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Hans Zimmer</span></li><li>What is the name of the character played by Rosamund Pike in &#39;Gone Girl&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Amy Dunne</span></li><li>Which movie features the song &#39;Let It Go&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Frozen</span></li>
           </ul>
         </div>
       
       <p>Hollywood trivia works because the subject is full of globally recognised stars, major films, iconic roles, and award-season moments that many players already know from pop culture alone. That makes it accessible, but still broad enough for deeper film knowledge too.</p>
       <p>A strong Hollywood quiz can draw from actors, directors, Oscar-winning films, blockbuster franchises, classic scenes, studio history, genres, famous pairings, and high-profile award moments across different decades. The theme stays lively because it can move between old Hollywood, modern cinema, celebrity culture, box-office giants, and memorable performances rather than sticking to one narrow era or style.</p>
-      <p>If you enjoy Hollywood trivia, also try <a href="../themes/fun-facts.html">Fun Facts</a> and <a href="../themes/nigerian-music.html">Nigerian Music</a> on Trivia Gauntlet.</p>
+      <p>If you enjoy Hollywood trivia, also try <a href="../themes/disney.html">Disney</a> and <a href="../themes/nigerian-music.html">Nigerian Music</a> on Trivia Gauntlet.</p>
       
         <div class="theme-related-quizzes">
           <h2>Related Quizzes</h2>
           <div class="grid">
             
-              <a class="card" href="../themes/fun-facts.html">
-                <h3>Fun Facts</h3>
+              <a class="card" href="../themes/disney.html">
+                <h3>Disney</h3>
               </a>
             
               <a class="card" href="../themes/nigerian-music.html">
@@ -196,12 +197,12 @@
                 <h3>World Facts</h3>
               </a>
             
-              <a class="card" href="../themes/true-or-false.html">
-                <h3>True or False</h3>
+              <a class="card" href="../themes/music.html">
+                <h3>Music</h3>
               </a>
             
-              <a class="card" href="../themes/bollywood.html">
-                <h3>Bollywood</h3>
+              <a class="card" href="../themes/tv-series.html">
+                <h3>TV Series</h3>
               </a>
             
           </div>
@@ -270,5 +271,6 @@
 
     setupThemePageSearch();
   </script>
+  <script src="../assets/profile.js"></script>
 </body>
 </html>

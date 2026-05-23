@@ -170,7 +170,7 @@
   </header>
 
   <main class="container">
-    <a href="index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+    <div class="theme-top-links"><a href="index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a><span id="navAvatarSlot"></span></div>
 
     <section class="panel category-intro-panel">
       <h1>Mashup Mode</h1>
@@ -376,5 +376,6 @@
 
     init();
   </script>
+  <script src="assets/profile.js"></script>
 </body>
 </html>

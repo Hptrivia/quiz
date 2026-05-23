@@ -63,6 +63,7 @@
   <main class="container narrow">
     <div class="theme-top-links">
       <a href="mashup.html" class="back-link">← Back</a>
+      <span id="navAvatarSlot"></span>
       <a href="index.html" class="back-link">⌂ Home</a>
     </div>
 
@@ -79,6 +80,7 @@
       <p id="mashupDescription"></p>
 
       <div class="mashup-badges" id="themeBadges"></div>
+      <div id="saveMixSection" style="margin-bottom:16px;"></div>
 
       <div class="grid">
         <a class="card" id="marathonLink" href="#">
@@ -235,6 +237,81 @@
         badgesEl.appendChild(badge);
       });
 
+      // Save mix UI
+      const saveSection = document.getElementById("saveMixSection");
+      const slugsSorted = themesParam.split(",").map(s => s.trim()).sort().join(",");
+
+      function isSaved() {
+        if (typeof getProfile !== "function") return false;
+        const p = getProfile();
+        return (p.savedMashups || []).some(m =>
+          (m.themes || []).slice().sort().join(",") === slugsSorted
+        );
+      }
+
+      function renderSaveUI() {
+        if (isSaved()) {
+          saveSection.innerHTML = `
+            <div style="display:flex;align-items:center;gap:10px;font-size:0.88rem;color:var(--muted-text);">
+              <span style="color:#10b981;font-weight:600;">&#10003; Saved to profile</span>
+              <button class="secondary-btn" style="font-size:0.78rem;padding:4px 10px;" onclick="removeMix()">Remove</button>
+            </div>`;
+        } else {
+          saveSection.innerHTML = `
+            <div id="saveMixCollapsed">
+              <button class="secondary-btn" style="font-size:0.85rem;padding:7px 16px;" onclick="expandSaveUI()">&#9733; Save this mix</button>
+            </div>
+            <div id="saveMixExpanded" style="display:none;display:none;">
+              <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+                <input id="mixNameInput" class="form-input" type="text" maxlength="40"
+                  placeholder="Name this mix..." style="flex:1;min-width:160px;padding:8px 12px;" />
+                <button class="primary-btn" style="padding:8px 18px;" onclick="confirmSave()">Save</button>
+                <button class="secondary-btn" style="padding:8px 14px;" onclick="collapseSaveUI()">Cancel</button>
+              </div>
+            </div>`;
+        }
+      }
+
+      window.expandSaveUI = function() {
+        document.getElementById("saveMixCollapsed").style.display = "none";
+        document.getElementById("saveMixExpanded").style.display = "block";
+        document.getElementById("mixNameInput").value = selectedThemes.map(t => t.title).join(" + ");
+        document.getElementById("mixNameInput").focus();
+      };
+
+      window.collapseSaveUI = function() {
+        document.getElementById("saveMixCollapsed").style.display = "";
+        document.getElementById("saveMixExpanded").style.display = "none";
+      };
+
+      window.confirmSave = function() {
+        if (typeof getProfile !== "function") return;
+        const name = document.getElementById("mixNameInput").value.trim() ||
+          selectedThemes.map(t => t.title).join(" + ");
+        const p = getProfile();
+        p.savedMashups = p.savedMashups || [];
+        p.savedMashups.push({
+          name,
+          themes: themesParam.split(",").map(s => s.trim()),
+          savedAt: new Date().toISOString().split("T")[0]
+        });
+        saveProfile(p);
+        if (typeof gtag === "function") gtag("event", "mashup_saved", { theme_count: selectedThemes.length });
+        renderSaveUI();
+      };
+
+      window.removeMix = function() {
+        if (typeof getProfile !== "function") return;
+        const p = getProfile();
+        p.savedMashups = (p.savedMashups || []).filter(m =>
+          (m.themes || []).slice().sort().join(",") !== slugsSorted
+        );
+        saveProfile(p);
+        renderSaveUI();
+      };
+
+      renderSaveUI();
+
       // Game mode links
       document.getElementById("marathonLink").href   = `play.html?themes=${themesParam}`;
       document.getElementById("challengeLink").href  = `challenge.html?themes=${themesParam}&round=1`;
@@ -299,5 +376,6 @@
       setupSearch(allThemes);
     })();
   </script>
+  <script src="assets/profile.js"></script>
 </body>
 </html>

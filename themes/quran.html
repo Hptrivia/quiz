@@ -57,42 +57,42 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Which of these is NOT one of the Names of Allah?",
+          "name": "To which people was Prophet Hud sent as a messenger?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Al-Mutakabbirun"
+            "text": "People of 'Ad"
           }
         },
         {
           "@type": "Question",
-          "name": "Which of these is NOT a month in the Islamic (Hijri) calendar?",
+          "name": "What is the Arabic term for the shorter call immediately before congregational prayer begins (distinct from the adhān)?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Rajaban"
+            "text": "Iqāmah"
           }
         },
         {
           "@type": "Question",
-          "name": "Which prophet was granted the Gospel (Injil) by Allah?",
+          "name": "Which wealthy man was swallowed by the earth for his arrogance and disbelief?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Prophet Isa"
+            "text": "Qarun"
           }
         },
         {
           "@type": "Question",
-          "name": "Which prophet was given the Psalms (Zabur) by Allah?",
+          "name": "Who was the brother and helper of Prophet Musa?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Prophet Dawud"
+            "text": "Prophet Harun"
           }
         },
         {
           "@type": "Question",
-          "name": "In Islamic tradition, what is the name of Adam’s wife?",
+          "name": "In Islamic creed, what is the Arabic term for the absolute oneness of God?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Hawwa"
+            "text": "Tawḥīd"
           }
         }
       ]
@@ -104,6 +104,7 @@
   <main class="container narrow">
     <div class="theme-top-links">
       <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+      <span id="navAvatarSlot"></span>
       <a href="../index.html" class="back-link">⌂ Home</a>
     </div>
 
@@ -155,14 +156,14 @@
           <p>Play locally against friends</p>
         </a>
 
+        <a class="card" href="../wordle/quran.html">
+          <h3>Wordle</h3>
+          <p>Guess themed words</p>
+        </a>
+
         <a class="card" href="../wordsearch.html?theme=quran&page=1">
           <h3>Word Search</h3>
           <p>Find hidden themed words</p>
-        </a>
-
-        <a class="card" href="../wordle.html?theme=quran&page=1">
-          <h3>Wordle</h3>
-          <p>Guess themed words</p>
         </a>
 
       </div>
@@ -172,7 +173,7 @@
           <h2>Sample Questions</h2>
           <p class="sq-hint">Tap an answer to reveal it.</p>
           <ul>
-            <li>Which of these is NOT one of the Names of Allah? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Al-Mutakabbirun</span></li><li>Which of these is NOT a month in the Islamic (Hijri) calendar? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Rajaban</span></li><li>Which prophet was granted the Gospel (Injil) by Allah? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Prophet Isa</span></li><li>Which prophet was given the Psalms (Zabur) by Allah? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Prophet Dawud</span></li><li>In Islamic tradition, what is the name of Adam’s wife? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Hawwa</span></li><li>Which surah is named &#39;The Dawn&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Al-Fajr</span></li><li>What miraculous sign did Prophet Saleh bring to his people, the Thamud? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">A she-camel</span></li><li>What is the Qur&#39;anic term for &#39;hypocrisy&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Nifaq</span></li><li>What is the holy book of Islam called? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Qur&#39;an</span></li><li>Which surah is known for Ayat al-Kursi (The Throne Verse)? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Al-Baqarah</span></li>
+            <li>To which people was Prophet Hud sent as a messenger? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">People of &#39;Ad</span></li><li>What is the Arabic term for the shorter call immediately before congregational prayer begins (distinct from the adhān)? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Iqāmah</span></li><li>Which wealthy man was swallowed by the earth for his arrogance and disbelief? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Qarun</span></li><li>Who was the brother and helper of Prophet Musa? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Prophet Harun</span></li><li>In Islamic creed, what is the Arabic term for the absolute oneness of God? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Tawḥīd</span></li><li>Which surah is named &#39;Time&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Al-Asr</span></li><li>What is the Arabic term for the ‘opening declaration’ recited before most Qur’anic recitation: “I seek refuge in God…”? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Istiʿādhah</span></li><li>What is the name of the Qur’anic term often used for the pre-dawn meal before fasting begins? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Suḥūr</span></li><li>What is the name of the event describing the Prophet’s night journey and ascension, central in Islamic tradition and referenced in discussion of revelation-era miracles? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Al-Isrā’ wal-Miʿrāj</span></li><li>How many surahs are in the Qur&#39;an? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">114</span></li>
           </ul>
         </div>
       
@@ -258,5 +259,6 @@
 
     setupThemePageSearch();
   </script>
+  <script src="../assets/profile.js"></script>
 </body>
 </html>

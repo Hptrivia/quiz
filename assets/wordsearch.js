@@ -271,6 +271,9 @@ function wsCloseModal(id) {
 
 function wsShowCompletion() {
   document.getElementById('wsDoneModal').classList.add('ws-modal-show');
+  if (typeof recordWordSearch === "function" && window._wsThemeSlug) {
+    recordWordSearch(window._wsThemeSlug);
+  }
 }
 
 // ─── Event wiring ─────────────────────────────────────────────────────────────
@@ -456,6 +459,7 @@ async function renderWordSearchPage() {
     updateRemoveAdsFooter(theme.slug, "normal");
   }
 
+  window._wsThemeSlug = theme.slug;
   const allWords   = await fetchJSON("data/wordsearch_words.json");
   const themeWords = allWords[theme.title];
 

@@ -11,6 +11,7 @@ const WORDLE_BADGE_COLORS = [
 async function renderWordleMashupMode(themesParam) {
   const rawPage    = parseInt(getParam("page") || "1", 10);
   const slugs      = themesParam.split(",").map(s => s.trim()).filter(Boolean);
+  const sessionKey = slugs.slice().sort().join(",");
 
   const progressEl = document.getElementById("wordleProgress");
   const boardEl    = document.getElementById("wordleBoard");
@@ -163,8 +164,16 @@ async function renderWordleMashupMode(themesParam) {
     currentGuess = "";
     renderBoard();
     renderKeyboard();
-    if (guess === targetWord) { setFeedback("Correct", "correct"); gameOver = true; return; }
-    if (guesses.length === 6) { setFeedback(`Wrong. The word was ${targetWord}.`, "wrong"); gameOver = true; return; }
+    if (guess === targetWord) {
+      setFeedback("Correct", "correct"); gameOver = true;
+      if (typeof saveSession === "function") saveSession("wordle", sessionKey, safePage, 0, totalPages);
+      return;
+    }
+    if (guesses.length === 6) {
+      setFeedback(`Wrong. The word was ${targetWord}.`, "wrong"); gameOver = true;
+      if (typeof saveSession === "function") saveSession("wordle", sessionKey, safePage, 0, totalPages);
+      return;
+    }
     setFeedback(`${6 - guesses.length} guess(es) left.`);
   }
 
@@ -215,6 +224,33 @@ async function renderWordleMashupMode(themesParam) {
     else if (safePage < totalPages) window.location.href = `wordle.html?themes=${themesParam}&page=${safePage + 1}`;
   });
 
+  if (parseInt(getParam("page") || "1", 10) === 1 && typeof getSession === "function") {
+    const saved = getSession("wordle", sessionKey);
+    if (saved && saved.round < totalPages) {
+      const promptDiv = document.createElement("div");
+      promptDiv.style.cssText = "text-align:center;padding:16px 0 8px;";
+      promptDiv.innerHTML = `
+        <p style="margin-bottom:12px;">You've completed <strong>${saved.round}</strong> of <strong>${totalPages}</strong> words.</p>
+        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+          <a class="primary-btn" href="wordle.html?themes=${themesParam}&page=${saved.round + 1}">Continue from Word ${saved.round + 1}</a>
+          <button class="secondary-btn" id="wordleReset1Btn">Start from Word 1</button>
+        </div>`;
+      boardEl.parentNode.insertBefore(promptDiv, boardEl);
+      boardEl.style.display = "none";
+      keyboardEl.style.display = "none";
+      prevBtn.closest(".cta-row").style.display = "none";
+      document.getElementById("wordleReset1Btn").addEventListener("click", () => {
+        if (typeof clearSession === "function") clearSession("wordle", sessionKey);
+        promptDiv.remove();
+        boardEl.style.display = "";
+        keyboardEl.style.display = "";
+        prevBtn.closest(".cta-row").style.display = "";
+        loadWord(0);
+      });
+      return;
+    }
+  }
+
   loadWord(0);
   if (safePage >= 4 && typeof maybeShowPwaPopup === "function") maybeShowPwaPopup();
 
@@ -251,7 +287,7 @@ async function renderWordlePage() {
           <h1>Themed Wordle</h1>
           <p>Pick any theme below to start. Each theme has its own set of words drawn from characters, locations, and key terms. One word per page — guess it letter by letter.</p>
           <div class="grid">
-            ${themes.map(t => `<a class="card" href="wordle.html?theme=${t.slug}&page=1"><h3>${t.title}</h3><p>Wordle</p></a>`).join("")}
+            ${themes.map(t => `<a class="card" href="wordle/${t.slug}.html"><h3>${t.title}</h3><p>Wordle</p></a>`).join("")}
           </div>
         </section>
       `;
@@ -424,12 +460,16 @@ async function renderWordlePage() {
     if (guess === targetWord) {
       setFeedback("Correct", "correct");
       gameOver = true;
+      if (typeof recordWordle === "function") recordWordle(theme.slug, true);
+      if (typeof saveSession === "function") saveSession("wordle", theme.slug, safePage, 0, totalPages);
       return;
     }
 
     if (guesses.length === 6) {
       setFeedback(`Wrong. The word was ${targetWord}.`, "wrong");
       gameOver = true;
+      if (typeof recordWordle === "function") recordWordle(theme.slug, false);
+      if (typeof saveSession === "function") saveSession("wordle", theme.slug, safePage, 0, totalPages);
       return;
     }
 
@@ -490,6 +530,35 @@ async function renderWordlePage() {
   });
 
   renderWordlePageContent(theme, themes, safePage, words);
+
+  if (currentPage === 1 && typeof getSession === "function") {
+    const saved = getSession("wordle", theme.slug);
+    if (saved && saved.round < totalPages) {
+      const promptDiv = document.createElement("div");
+      promptDiv.style.cssText = "text-align:center;padding:16px 0 8px;";
+      promptDiv.innerHTML = `
+        <p style="margin-bottom:12px;">You've completed <strong>${saved.round}</strong> of <strong>${totalPages}</strong> words.</p>
+        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+          <a class="primary-btn" href="wordle.html?theme=${theme.slug}&page=${saved.round + 1}">Continue from Word ${saved.round + 1}</a>
+          <button class="secondary-btn" id="wordleReset1Btn">Start from Word 1</button>
+        </div>`;
+      boardEl.parentNode.insertBefore(promptDiv, boardEl);
+      boardEl.style.display = "none";
+      keyboardEl.style.display = "none";
+      prevBtn.closest(".cta-row").style.display = "none";
+      document.getElementById("wordleReset1Btn").addEventListener("click", () => {
+        if (typeof clearSession === "function") clearSession("wordle", theme.slug);
+        promptDiv.remove();
+        boardEl.style.display = "";
+        keyboardEl.style.display = "";
+        prevBtn.closest(".cta-row").style.display = "";
+        loadWord(0);
+      });
+      if (safePage >= 4 && typeof maybeShowPwaPopup === "function") maybeShowPwaPopup();
+      return;
+    }
+  }
+
   loadWord(0);
   if (safePage >= 4 && typeof maybeShowPwaPopup === "function") maybeShowPwaPopup();
 }
@@ -539,13 +608,7 @@ function renderWordlePageContent(theme, themes, page, allWords = []) {
 
   injectWordleHead(theme, page);
 
-  const ctx = getThemeContext(theme.category);
   const relatedThemes = getRelatedThemes(themes, theme, 4);
-  const toTitleCase = s => String(s).toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
-  const sample = allWords.slice(0, 4).map(toTitleCase);
-  const wordLine = sample.length >= 2
-    ? `Find words like ${sample.slice(0, -1).join(", ")}, and ${sample[sample.length - 1]} alongside other characters, locations, and key terms that define ${theme.title}.`
-    : `Words are drawn from the characters, locations, and key terms that define ${theme.title}.`;
 
   const relatedHtml = `
     <div class="theme-related-quizzes">
@@ -555,18 +618,12 @@ function renderWordlePageContent(theme, themes, page, allWords = []) {
           <h3>${theme.title} + other themes</h3>
           <span class="card-mix-sub">Play as a mashup</span>
         </a>
-        ${relatedThemes.map(t => `<a class="card" href="wordle.html?theme=${t.slug}&page=1"><h3>${t.title}</h3></a>`).join("")}
+        ${relatedThemes.map(t => `<a class="card" href="wordle/${t.slug}.html"><h3>${t.title}</h3></a>`).join("")}
       </div>
     </div>`;
 
-  const descHtml = page === 1 ? `
-    <h2>About the ${theme.title} Wordle</h2>
-    <p>The ${theme.title} Wordle pulls words from across ${ctx} and challenges you to guess each one a letter at a time. ${wordLine} Green tiles mean the letter is in the right position, yellow means it appears somewhere else in the word, and grey means it is not in the word at all. Each page covers a new set of words, working through the theme from familiar names to more specific terms.</p>
-    <hr style="border:none;border-top:1px solid var(--panel-border);margin:20px 0;">` : "";
-
   container.innerHTML = `
     <section class="panel" style="margin-top:16px;">
-      ${descHtml}
       <div class="result-theme-search">
         <p class="result-theme-search-title">Try another Wordle theme</p>
         <div class="search-wrap">
@@ -583,7 +640,7 @@ function renderWordlePageContent(theme, themes, page, allWords = []) {
 
   const renderResults = (items) => {
     results.innerHTML = items.length
-      ? items.map(t => `<a class="search-item" href="wordle.html?theme=${t.slug}&page=1">${t.title}</a>`).join("")
+      ? items.map(t => `<a class="search-item" href="wordle/${t.slug}.html">${t.title}</a>`).join("")
       : '<div class="search-item">No results found</div>';
   };
 

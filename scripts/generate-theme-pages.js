@@ -246,6 +246,7 @@ const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
   <main class="container narrow">
     <div class="theme-top-links">
       <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+      <span id="navAvatarSlot"></span>
       <a href="../index.html" class="back-link">⌂ Home</a>
     </div>
 
@@ -297,14 +298,14 @@ const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
           <p>Play locally against friends</p>
         </a>
 
+        <a class="card" href="../wordle/${rawSlug}.html">
+          <h3>Wordle</h3>
+          <p>Guess themed words</p>
+        </a>
+
         <a class="card" href="../wordsearch.html?theme=${slug}&page=1">
           <h3>Word Search</h3>
           <p>Find hidden themed words</p>
-        </a>
-
-        <a class="card" href="../wordle.html?theme=${slug}&page=1">
-          <h3>Wordle</h3>
-          <p>Guess themed words</p>
         </a>
 
       </div>
@@ -377,6 +378,7 @@ const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
 
     setupThemePageSearch();
   </script>
+  <script src="../assets/profile.js"></script>
 </body>
 </html>`;
 }
@@ -453,7 +455,7 @@ function main() {
 
     sitemapUrls.push(`${SITE_URL}/themes/${theme.slug}.html`);
     sitemapUrls.push(`${SITE_URL}/wordsearch.html?theme=${theme.slug}&page=1`);
-    sitemapUrls.push(`${SITE_URL}/wordle.html?theme=${theme.slug}&page=1`);
+    sitemapUrls.push(`${SITE_URL}/wordle/${theme.slug}.html`);
     sitemapUrls.push(`${SITE_URL}/trivia-rush.html?theme=${theme.slug}`);
   });
 

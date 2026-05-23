@@ -57,18 +57,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Which actress played the lead role in the hit movie *Jenifa*?",
+          "name": "Which filmmaker is behind the supernatural movie *Diamond Ring*?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Funke Akindele"
+            "text": "Tade Ogidan"
           }
         },
         {
           "@type": "Question",
-          "name": "Which film franchise is based around a chaotic upper-class Nigerian wedding?",
+          "name": "What’s the full name of the actor popularly known as ‘Aki’?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The Wedding Party"
+            "text": "Osita Iheme"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which actor starred alongside Genevieve Nnaji in the classic love story *My Only Love*?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ramsey Nouah"
           }
         },
         {
@@ -81,18 +89,10 @@
         },
         {
           "@type": "Question",
-          "name": "Which Yoruba film is known for launching Femi Adebayo’s career?",
+          "name": "Which 2016 thriller features Adesua Etomi playing a character who turns to crime for survival?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Owo Blow"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which actor portrayed a twin in *Dangerous Twins*?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Ramsey Nouah"
+            "text": "The Set Up"
           }
         }
       ]
@@ -104,6 +104,7 @@
   <main class="container narrow">
     <div class="theme-top-links">
       <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+      <span id="navAvatarSlot"></span>
       <a href="../index.html" class="back-link">⌂ Home</a>
     </div>
 
@@ -155,14 +156,14 @@
           <p>Play locally against friends</p>
         </a>
 
+        <a class="card" href="../wordle/nollywood.html">
+          <h3>Wordle</h3>
+          <p>Guess themed words</p>
+        </a>
+
         <a class="card" href="../wordsearch.html?theme=nollywood&page=1">
           <h3>Word Search</h3>
           <p>Find hidden themed words</p>
-        </a>
-
-        <a class="card" href="../wordle.html?theme=nollywood&page=1">
-          <h3>Wordle</h3>
-          <p>Guess themed words</p>
         </a>
 
       </div>
@@ -172,36 +173,36 @@
           <h2>Sample Questions</h2>
           <p class="sq-hint">Tap an answer to reveal it.</p>
           <ul>
-            <li>Which actress played the lead role in the hit movie *Jenifa*? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Funke Akindele</span></li><li>Which film franchise is based around a chaotic upper-class Nigerian wedding? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">The Wedding Party</span></li><li>Which actress starred in both *Shanty Town* and *Blood Sisters*? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Nancy Isime</span></li><li>Which Yoruba film is known for launching Femi Adebayo’s career? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Owo Blow</span></li><li>Which actor portrayed a twin in *Dangerous Twins*? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Ramsey Nouah</span></li><li>Which actress stars in *Skinny Girl in Transit*? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Abimbola Craig</span></li><li>Which actress starred as &#39;Lefty&#39; in *Omo Ghetto: The Saga*? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Funke Akindele</span></li><li>Which actress starred in both &#39;Moms at War&#39; and &#39;Sugar Rush&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Omoni Oboli</span></li><li>Which actor plays the role of the prohetess in *Prophetess* movie? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Toyin Abraham</span></li><li>Which movie marked Kunle Afolayan’s directorial debut? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Irapada</span></li>
+            <li>Which filmmaker is behind the supernatural movie *Diamond Ring*? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Tade Ogidan</span></li><li>What’s the full name of the actor popularly known as ‘Aki’? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Osita Iheme</span></li><li>Which actor starred alongside Genevieve Nnaji in the classic love story *My Only Love*? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Ramsey Nouah</span></li><li>Which actress starred in both *Shanty Town* and *Blood Sisters*? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Nancy Isime</span></li><li>Which 2016 thriller features Adesua Etomi playing a character who turns to crime for survival? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">The Set Up</span></li><li>Which streaming platform has produced Nigerian movies like *King of Boys* and *The Black Book*? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Netflix</span></li><li>What is the title of the Nollywood film based on Nigerian independence day events? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">October 1</span></li><li>Who directed *Citation* (2020)? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Kunle Afolayan</span></li><li>What year did *The Figurine* win Best Picture at the AMAA awards? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">2010</span></li><li>What character does Sola Sobowale portray in *King of Boys*? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Eniola Salami</span></li>
           </ul>
         </div>
       
       <p>Nollywood trivia works because the industry has produced a huge number of recognisable stars, films, and story patterns that audiences remember well, from family drama and romance to comedy and crime. That gives it a stronger identity than a vague general movie round.</p>
       <p>A strong Nollywood quiz can draw from famous actors and actresses, directors, hit films, classic titles, newer productions, genre trends, industry milestones, and the wider influence of Nigerian cinema across Africa and beyond. The theme works because it can move between celebrity recognition, film knowledge, cultural context, and the evolution of one of the world’s most productive film industries.</p>
-      <p>If you enjoy Nollywood trivia, also try <a href="../themes/true-or-false.html">True or False</a> and <a href="../themes/food-drink.html">Food &amp; Drink</a> on Trivia Gauntlet.</p>
+      <p>If you enjoy Nollywood trivia, also try <a href="../themes/sports.html">Sports</a> and <a href="../themes/animals.html">Animals</a> on Trivia Gauntlet.</p>
       
         <div class="theme-related-quizzes">
           <h2>Related Quizzes</h2>
           <div class="grid">
             
-              <a class="card" href="../themes/true-or-false.html">
-                <h3>True or False</h3>
+              <a class="card" href="../themes/sports.html">
+                <h3>Sports</h3>
               </a>
             
-              <a class="card" href="../themes/food-drink.html">
-                <h3>Food &amp; Drink</h3>
-              </a>
-            
-              <a class="card" href="../themes/nigerian-music.html">
-                <h3>Nigerian Music</h3>
+              <a class="card" href="../themes/animals.html">
+                <h3>Animals</h3>
               </a>
             
               <a class="card" href="../themes/cartoons.html">
                 <h3>Cartoons</h3>
               </a>
             
-              <a class="card" href="../themes/music.html">
-                <h3>Music</h3>
+              <a class="card" href="../themes/bollywood.html">
+                <h3>Bollywood</h3>
+              </a>
+            
+              <a class="card" href="../themes/video-games.html">
+                <h3>Video Games</h3>
               </a>
             
           </div>
@@ -270,5 +271,6 @@
 
     setupThemePageSearch();
   </script>
+  <script src="../assets/profile.js"></script>
 </body>
 </html>

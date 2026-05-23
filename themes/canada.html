@@ -57,26 +57,34 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Which of these is a popular Canadian dish made of fries, gravy, and cheese curds?",
+          "name": "Which of these is NOT a Canadian province?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Poutine"
+            "text": "Northwest Territories"
           }
         },
         {
           "@type": "Question",
-          "name": "What is the capital of Canada?",
+          "name": "Which Canadian city is known for the CN Tower?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ottawa"
+            "text": "Toronto"
           }
         },
         {
           "@type": "Question",
-          "name": "How many territories does Canada have?",
+          "name": "What does RCMP stand for?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "3"
+            "text": "Royal Canadian Mounted Police"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which province has Halifax as its capital?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nova Scotia"
           }
         },
         {
@@ -85,14 +93,6 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Bryan Adams"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which sport is most associated with Canada internationally?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Ice hockey"
           }
         }
       ]
@@ -104,6 +104,7 @@
   <main class="container narrow">
     <div class="theme-top-links">
       <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+      <span id="navAvatarSlot"></span>
       <a href="../index.html" class="back-link">⌂ Home</a>
     </div>
 
@@ -155,14 +156,14 @@
           <p>Play locally against friends</p>
         </a>
 
+        <a class="card" href="../wordle/canada.html">
+          <h3>Wordle</h3>
+          <p>Guess themed words</p>
+        </a>
+
         <a class="card" href="../wordsearch.html?theme=canada&page=1">
           <h3>Word Search</h3>
           <p>Find hidden themed words</p>
-        </a>
-
-        <a class="card" href="../wordle.html?theme=canada&page=1">
-          <h3>Wordle</h3>
-          <p>Guess themed words</p>
         </a>
 
       </div>
@@ -172,17 +173,21 @@
           <h2>Sample Questions</h2>
           <p class="sq-hint">Tap an answer to reveal it.</p>
           <ul>
-            <li>Which of these is a popular Canadian dish made of fries, gravy, and cheese curds? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Poutine</span></li><li>What is the capital of Canada? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Ottawa</span></li><li>How many territories does Canada have? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">3</span></li><li>Which Canadian rock band released the song &quot;Summer of &#39;69&quot;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Bryan Adams</span></li><li>Which sport is most associated with Canada internationally? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Ice hockey</span></li><li>Which Canadian province is known for being largely French-speaking? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Quebec</span></li><li>What is Canada’s national anthem? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">O Canada</span></li><li>Which animal is commonly associated with Canada as a national symbol? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Beaver</span></li><li>Which province has Regina as its capital? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Saskatchewan</span></li><li>What currency is used in Canada? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Canadian dollar</span></li>
+            <li>Which of these is NOT a Canadian province? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Northwest Territories</span></li><li>Which Canadian city is known for the CN Tower? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Toronto</span></li><li>What does RCMP stand for? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Royal Canadian Mounted Police</span></li><li>Which province has Halifax as its capital? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Nova Scotia</span></li><li>Which Canadian rock band released the song &quot;Summer of &#39;69&quot;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Bryan Adams</span></li><li>Which Canadian actor played Deadpool? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Ryan Reynolds</span></li><li>Which Canadian province is known for Niagara Falls? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Ontario</span></li><li>Which Canadian rapper released the album &quot;Take Care&quot;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Drake</span></li><li>Which ocean borders Canada’s east coast? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Atlantic Ocean</span></li><li>Which province has Toronto as its capital? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Ontario</span></li>
           </ul>
         </div>
       
       <p>Canada trivia works well because it can move easily between provinces, capitals, major cities, national symbols, history, sport, and cultural identity without feeling repetitive. It gives you more range than a narrow capitals-only or flag-only country quiz.</p>
       <p>A strong Canada quiz can draw from Ottawa, Toronto, Vancouver, Montreal, the provinces and territories, the maple leaf, national parks, hockey culture, Indigenous history, famous Canadians, bilingual identity, and political institutions. That mix helps the theme feel more complete, because players are not only recalling geography but also wider cultural and historical knowledge tied to the country.</p>
-      <p>If you enjoy Canada trivia, also try <a href="../themes/usa.html">U.S.A</a> and <a href="../themes/germany.html">Germany</a> on Trivia Gauntlet.</p>
+      <p>If you enjoy Canada trivia, also try <a href="../themes/united-kingdom.html">United Kingdom</a> and <a href="../themes/usa.html">U.S.A</a> on Trivia Gauntlet.</p>
       
         <div class="theme-related-quizzes">
           <h2>Related Quizzes</h2>
           <div class="grid">
+            
+              <a class="card" href="../themes/united-kingdom.html">
+                <h3>United Kingdom</h3>
+              </a>
             
               <a class="card" href="../themes/usa.html">
                 <h3>U.S.A</h3>
@@ -190,10 +195,6 @@
             
               <a class="card" href="../themes/germany.html">
                 <h3>Germany</h3>
-              </a>
-            
-              <a class="card" href="../themes/united-kingdom.html">
-                <h3>United Kingdom</h3>
               </a>
             
               <a class="card" href="../themes/australia.html">
@@ -266,5 +267,6 @@
 
     setupThemePageSearch();
   </script>
+  <script src="../assets/profile.js"></script>
 </body>
 </html>

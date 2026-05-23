@@ -57,42 +57,42 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What does Obi-Wan call blasters in Revenge of the Sith?",
+          "name": "What species is Watto, Anakin’s owner on Tatooine?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Uncivilized"
+            "text": "Toydarian"
           }
         },
         {
           "@type": "Question",
-          "name": "Which planet is destroyed by the first Death Star?",
+          "name": "Who served as Chancellor of the Republic before Palpatine?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Alderaan"
+            "text": "Valorum"
           }
         },
         {
           "@type": "Question",
-          "name": "Which Resistance pilot is known for his daring flying?",
+          "name": "What is the name of the officer who Vader chokes via hologram in Empire Strikes Back?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Poe Dameron"
+            "text": "Admiral Ozzel"
           }
         },
         {
           "@type": "Question",
-          "name": "Which actor physically portrayed Darth Maul in The Phantom Menace?",
+          "name": "What is the Sith homeworld according to canonical lore?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ray Park"
+            "text": "Exegol"
           }
         },
         {
           "@type": "Question",
-          "name": "Who is the father of Princess Leia?",
+          "name": "What is the name of General Grievous’s flagship in Revenge of the Sith?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Anakin Skywalker"
+            "text": "Invisible Hand"
           }
         }
       ]
@@ -104,6 +104,7 @@
   <main class="container narrow">
     <div class="theme-top-links">
       <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+      <span id="navAvatarSlot"></span>
       <a href="../index.html" class="back-link">⌂ Home</a>
     </div>
 
@@ -160,14 +161,14 @@
           <p>Play locally against friends</p>
         </a>
 
+        <a class="card" href="../wordle/star-wars.html">
+          <h3>Wordle</h3>
+          <p>Guess themed words</p>
+        </a>
+
         <a class="card" href="../wordsearch.html?theme=star-wars&page=1">
           <h3>Word Search</h3>
           <p>Find hidden themed words</p>
-        </a>
-
-        <a class="card" href="../wordle.html?theme=star-wars&page=1">
-          <h3>Wordle</h3>
-          <p>Guess themed words</p>
         </a>
 
       </div>
@@ -177,36 +178,36 @@
           <h2>Sample Questions</h2>
           <p class="sq-hint">Tap an answer to reveal it.</p>
           <ul>
-            <li>What does Obi-Wan call blasters in Revenge of the Sith? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Uncivilized</span></li><li>Which planet is destroyed by the first Death Star? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Alderaan</span></li><li>Which Resistance pilot is known for his daring flying? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Poe Dameron</span></li><li>Which actor physically portrayed Darth Maul in The Phantom Menace? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Ray Park</span></li><li>Who is the father of Princess Leia? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Anakin Skywalker</span></li><li>What planet does Padmé represent in the Senate? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Naboo</span></li><li>Who composed the musical score for all nine Skywalker Saga films? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">John Williams</span></li><li>What is the name of the Sith homeworld mentioned in The Rise of Skywalker? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Exegol</span></li><li>Which planet is home to the Jedi Temple in the prequel trilogy? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Coruscant</span></li><li>Which Jedi general was betrayed on Felucia? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Aayla Secura</span></li>
+            <li>What species is Watto, Anakin’s owner on Tatooine? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Toydarian</span></li><li>Who served as Chancellor of the Republic before Palpatine? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Valorum</span></li><li>What is the name of the officer who Vader chokes via hologram in Empire Strikes Back? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Admiral Ozzel</span></li><li>What is the Sith homeworld according to canonical lore? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Exegol</span></li><li>What is the name of General Grievous’s flagship in Revenge of the Sith? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Invisible Hand</span></li><li>What object does Jyn wear around her neck as a child? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Kyber crystal</span></li><li>What does Kylo Ren destroy after Snoke mocks him? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">His helmet</span></li><li>What is the name of the planet where the Jedi Order was founded? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Ahch-To</span></li><li>Which Sith Lord trained Darth Sidious? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Darth Plagueis</span></li><li>Who is Kylo Ren&#39;s father? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Han Solo</span></li>
           </ul>
         </div>
       
       <p>Star Wars trivia works because the franchise is full of instantly recognisable characters, quotes, planets, powers, and faction conflict that people remember even if they are not deep fans. At the same time, the lore is broad enough to support much harder questions too.</p>
       <p>A strong Star Wars quiz can include Luke, Leia, Han, Vader, Obi-Wan, Yoda, Palpatine, the Jedi Order, the Sith, lightsabers, droids, clones, planets, rebellions, empires, and the major battles and family revelations that define the saga. The theme works because it can move between characters, mythology, politics, technology, and the wider franchise memory that stretches across films, series, and generations of fandom.</p>
-      <p>If you enjoy Star Wars trivia, also try <a href="../themes/money-heist.html">Money Heist</a> and <a href="../themes/star-trek.html">Star Trek</a> on Trivia Gauntlet.</p>
+      <p>If you enjoy Star Wars trivia, also try <a href="../themes/arrow.html">Arrow</a> and <a href="../themes/the-flash.html">The Flash</a> on Trivia Gauntlet.</p>
       
         <div class="theme-related-quizzes">
           <h2>Related Quizzes</h2>
           <div class="grid">
             
-              <a class="card" href="../themes/money-heist.html">
-                <h3>Money Heist</h3>
+              <a class="card" href="../themes/arrow.html">
+                <h3>Arrow</h3>
               </a>
             
-              <a class="card" href="../themes/star-trek.html">
-                <h3>Star Trek</h3>
-              </a>
-            
-              <a class="card" href="../themes/sons-of-anarchy.html">
-                <h3>Sons of Anarchy</h3>
+              <a class="card" href="../themes/the-flash.html">
+                <h3>The Flash</h3>
               </a>
             
               <a class="card" href="../themes/the-vampire-diaries.html">
                 <h3>The Vampire Diaries</h3>
               </a>
             
-              <a class="card" href="../themes/pretty-little-liars.html">
-                <h3>Pretty Little Liars</h3>
+              <a class="card" href="../themes/lucifer.html">
+                <h3>Lucifer</h3>
+              </a>
+            
+              <a class="card" href="../themes/lord-of-the-rings.html">
+                <h3>Lord of The Rings</h3>
               </a>
             
           </div>
@@ -275,5 +276,6 @@
 
     setupThemePageSearch();
   </script>
+  <script src="../assets/profile.js"></script>
 </body>
 </html>

@@ -57,42 +57,42 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What genre is Drake most known for?",
+          "name": "Which pop group had hits like 'Wannabe' and 'Spice Up Your Life'?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Hip-Hop"
+            "text": "Spice Girls"
           }
         },
         {
           "@type": "Question",
-          "name": "What genre is BTS best known for?",
+          "name": "Who composed 'The Rite of Spring'?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "K-pop"
+            "text": "Igor Stravinsky"
           }
         },
         {
           "@type": "Question",
-          "name": "Which band recorded the concept album 'Tommy'?",
+          "name": "Which singer starred in 'A Star Is Born' with Bradley Cooper?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The Who"
+            "text": "Lady Gaga"
           }
         },
         {
           "@type": "Question",
-          "name": "Which singer is known for the song 'Roar'?",
+          "name": "Who sang 'Uptown Funk' with Mark Ronson?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Katy Perry"
+            "text": "Bruno Mars"
           }
         },
         {
           "@type": "Question",
-          "name": "Which Disney movie featured the song 'Let It Go'?",
+          "name": "Which artist has an alter ego named Sasha Fierce?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Frozen"
+            "text": "Beyoncé"
           }
         }
       ]
@@ -104,6 +104,7 @@
   <main class="container narrow">
     <div class="theme-top-links">
       <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+      <span id="navAvatarSlot"></span>
       <a href="../index.html" class="back-link">⌂ Home</a>
     </div>
 
@@ -155,14 +156,14 @@
           <p>Play locally against friends</p>
         </a>
 
+        <a class="card" href="../wordle/music.html">
+          <h3>Wordle</h3>
+          <p>Guess themed words</p>
+        </a>
+
         <a class="card" href="../wordsearch.html?theme=music&page=1">
           <h3>Word Search</h3>
           <p>Find hidden themed words</p>
-        </a>
-
-        <a class="card" href="../wordle.html?theme=music&page=1">
-          <h3>Wordle</h3>
-          <p>Guess themed words</p>
         </a>
 
       </div>
@@ -172,36 +173,36 @@
           <h2>Sample Questions</h2>
           <p class="sq-hint">Tap an answer to reveal it.</p>
           <ul>
-            <li>What genre is Drake most known for? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Hip-Hop</span></li><li>What genre is BTS best known for? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">K-pop</span></li><li>Which band recorded the concept album &#39;Tommy&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">The Who</span></li><li>Which singer is known for the song &#39;Roar&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Katy Perry</span></li><li>Which Disney movie featured the song &#39;Let It Go&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Frozen</span></li><li>Which artist is known for wearing a meat dress at the VMAs? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Lady Gaga</span></li><li>Who is known for the hit song &#39;Shake It Off&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Taylor Swift</span></li><li>Which singer is known for &#39;Bad Guy&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Billie Eilish</span></li><li>Which artist sang &#39;Someone Like You&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Adele</span></li><li>Who sang &#39;Hips Don’t Lie&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Shakira</span></li>
+            <li>Which pop group had hits like &#39;Wannabe&#39; and &#39;Spice Up Your Life&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Spice Girls</span></li><li>Who composed &#39;The Rite of Spring&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Igor Stravinsky</span></li><li>Which singer starred in &#39;A Star Is Born&#39; with Bradley Cooper? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Lady Gaga</span></li><li>Who sang &#39;Uptown Funk&#39; with Mark Ronson? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Bruno Mars</span></li><li>Which artist has an alter ego named Sasha Fierce? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Beyoncé</span></li><li>Which band is Mick Jagger the frontman of? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">The Rolling Stones</span></li><li>Which British singer is known for the song &#39;Hello&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Adele</span></li><li>Which band released the song &#39;Yellow Submarine&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">The Beatles</span></li><li>Who sang &#39;Hips Don’t Lie&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Shakira</span></li><li>Which band’s album is titled &#39;Aenima&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Tool</span></li>
           </ul>
         </div>
       
       <p>Music trivia works because almost everyone has some connection to songs, artists, and genres they recognise, even if they are not serious music fans. The subject can shift easily between pop, rock, rap, classics, chart history, and cultural moments, which keeps rounds varied.</p>
       <p>A strong music quiz can include famous singers and bands, major albums, chart-topping songs, music awards, genres, collaborations, iconic performances, lyrics, and industry milestones from different eras. The category stays strong because it allows for both instant-recognition questions and tougher details on release history, artist identity, song titles, and the wider cultural impact of major hits.</p>
-      <p>If you enjoy Music trivia, also try <a href="../themes/disney.html">Disney</a> and <a href="../themes/hollywood.html">Hollywood</a> on Trivia Gauntlet.</p>
+      <p>If you enjoy Music trivia, also try <a href="../themes/sports.html">Sports</a> and <a href="../themes/nigerian-music.html">Nigerian Music</a> on Trivia Gauntlet.</p>
       
         <div class="theme-related-quizzes">
           <h2>Related Quizzes</h2>
           <div class="grid">
             
-              <a class="card" href="../themes/disney.html">
-                <h3>Disney</h3>
-              </a>
-            
-              <a class="card" href="../themes/hollywood.html">
-                <h3>Hollywood</h3>
-              </a>
-            
-              <a class="card" href="../themes/kids.html">
-                <h3>Kids</h3>
-              </a>
-            
               <a class="card" href="../themes/sports.html">
                 <h3>Sports</h3>
               </a>
             
-              <a class="card" href="../themes/world-facts.html">
-                <h3>World Facts</h3>
+              <a class="card" href="../themes/nigerian-music.html">
+                <h3>Nigerian Music</h3>
+              </a>
+            
+              <a class="card" href="../themes/bollywood.html">
+                <h3>Bollywood</h3>
+              </a>
+            
+              <a class="card" href="../themes/science.html">
+                <h3>Science</h3>
+              </a>
+            
+              <a class="card" href="../themes/fun-facts.html">
+                <h3>Fun Facts</h3>
               </a>
             
           </div>
@@ -270,5 +271,6 @@
 
     setupThemePageSearch();
   </script>
+  <script src="../assets/profile.js"></script>
 </body>
 </html>

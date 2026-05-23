@@ -57,18 +57,10 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Which Act 3 location is a major fortress/bridge gate complex tied to Gortash’s rise?",
+          "name": "What is the name of Raphael’s domain you can visit in Act 3?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Wyrm’s Rock"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the title/name commonly used for the imprisoned celestial tied to Ketheric’s immortality?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The Nightsong"
+            "text": "House of Hope"
           }
         },
         {
@@ -76,23 +68,31 @@
           "name": "Which of these is a playable origin companion?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Gale"
+            "text": "Shadowheart"
           }
         },
         {
           "@type": "Question",
-          "name": "What kind of game is Baldur’s Gate 3 primarily?",
+          "name": "Which subclass is associated with a paladin oath focused on defending nature and the light?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Turn-based RPG"
+            "text": "Oath of the Ancients"
           }
         },
         {
           "@type": "Question",
-          "name": "Which BG3 companion is a wizard from Waterdeep?",
+          "name": "Which studio made Baldur’s Gate 3?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Gale"
+            "text": "Larian Studios"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which BG3 companion is a tiefling barbarian with an infernal engine heart?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Karlach"
           }
         }
       ]
@@ -104,6 +104,7 @@
   <main class="container narrow">
     <div class="theme-top-links">
       <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+      <span id="navAvatarSlot"></span>
       <a href="../index.html" class="back-link">⌂ Home</a>
     </div>
 
@@ -155,14 +156,14 @@
           <p>Play locally against friends</p>
         </a>
 
+        <a class="card" href="../wordle/baldurs-gate-3.html">
+          <h3>Wordle</h3>
+          <p>Guess themed words</p>
+        </a>
+
         <a class="card" href="../wordsearch.html?theme=baldurs-gate-3&page=1">
           <h3>Word Search</h3>
           <p>Find hidden themed words</p>
-        </a>
-
-        <a class="card" href="../wordle.html?theme=baldurs-gate-3&page=1">
-          <h3>Wordle</h3>
-          <p>Guess themed words</p>
         </a>
 
       </div>
@@ -172,36 +173,36 @@
           <h2>Sample Questions</h2>
           <p class="sq-hint">Tap an answer to reveal it.</p>
           <ul>
-            <li>Which Act 3 location is a major fortress/bridge gate complex tied to Gortash’s rise? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Wyrm’s Rock</span></li><li>What is the title/name commonly used for the imprisoned celestial tied to Ketheric’s immortality? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">The Nightsong</span></li><li>Which of these is a playable origin companion? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Gale</span></li><li>What kind of game is Baldur’s Gate 3 primarily? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Turn-based RPG</span></li><li>Which BG3 companion is a wizard from Waterdeep? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Gale</span></li><li>Which god is Ketheric Thorm primarily associated with as a Chosen? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Myrkul</span></li><li>What is the proficiency bonus at character levels 1–4? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">+2</span></li><li>What are the mechanical enforcers patrolling the city under Gortash’s control called? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Steel Watch</span></li><li>Which of these is NOT a class in BG3? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Necromancer</span></li><li>How many camp supplies do you need for a Long Rest (default rules)? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">40</span></li>
+            <li>What is the name of Raphael’s domain you can visit in Act 3? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">House of Hope</span></li><li>Which of these is a playable origin companion? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Shadowheart</span></li><li>Which subclass is associated with a paladin oath focused on defending nature and the light? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Oath of the Ancients</span></li><li>Which studio made Baldur’s Gate 3? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Larian Studios</span></li><li>Which BG3 companion is a tiefling barbarian with an infernal engine heart? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Karlach</span></li><li>Which of these is a standard D&amp;D ability score in BG3? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Charisma</span></li><li>Which deity is Shadowheart devoted to at the start of the game? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Shar</span></li><li>Which companion is a powerful druid and potential ally from the grove? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Halsin</span></li><li>Which BG3 companion is a warlock known as the &quot;Blade of Frontiers&quot;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Wyll</span></li><li>What is the name of the antagonist who rules Moonrise Towers as the chosen of Myrkul? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Ketheric Thorm</span></li>
           </ul>
         </div>
       
       <p>Baldur&#39;s Gate 3 trivia works especially well because the game is full of memorable companions, dialogue choices, quests, powers, factions, and encounters that players experience in very different ways. That gives the theme a lot more depth than a basic fantasy game quiz built only on names and locations.</p>
       <p>A strong Baldur&#39;s Gate 3 quiz can draw from Shadowheart, Astarion, Lae&#39;zel, Gale, Karlach, Wyll, major areas like the Emerald Grove and Baldur&#39;s Gate itself, the Absolute storyline, Illithid powers, romance paths, classes, spells, builds, and big moral decisions. The game rewards attention to both story and systems, so the theme can move naturally between character knowledge, quest outcomes, combat mechanics, world-building, and the smaller details players remember from long playthroughs.</p>
-      <p>If you enjoy Baldurs Gate 3 trivia, also try <a href="../themes/ghost-of-tsushima.html">Ghost of Tsushima</a> and <a href="../themes/elden-ring.html">Elden Ring</a> on Trivia Gauntlet.</p>
+      <p>If you enjoy Baldurs Gate 3 trivia, also try <a href="../themes/lies-of-p.html">Lies of P</a> and <a href="../themes/bloodborne.html">Bloodborne</a> on Trivia Gauntlet.</p>
       
         <div class="theme-related-quizzes">
           <h2>Related Quizzes</h2>
           <div class="grid">
             
-              <a class="card" href="../themes/ghost-of-tsushima.html">
-                <h3>Ghost of Tsushima</h3>
+              <a class="card" href="../themes/lies-of-p.html">
+                <h3>Lies of P</h3>
               </a>
             
-              <a class="card" href="../themes/elden-ring.html">
-                <h3>Elden Ring</h3>
+              <a class="card" href="../themes/bloodborne.html">
+                <h3>Bloodborne</h3>
               </a>
             
-              <a class="card" href="../themes/pokemon.html">
-                <h3>Pokémon</h3>
+              <a class="card" href="../themes/clair-obscur-expedition-33.html">
+                <h3>Clair Obscur Expedition 33</h3>
               </a>
             
               <a class="card" href="../themes/dark-souls-3.html">
                 <h3>Dark Souls 3</h3>
               </a>
             
-              <a class="card" href="../themes/death-stranding.html">
-                <h3>Death Stranding</h3>
+              <a class="card" href="../themes/god-of-war.html">
+                <h3>God of War</h3>
               </a>
             
           </div>
@@ -270,5 +271,6 @@
 
     setupThemePageSearch();
   </script>
+  <script src="../assets/profile.js"></script>
 </body>
 </html>

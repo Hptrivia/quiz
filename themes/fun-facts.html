@@ -57,42 +57,42 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is the record for the longest time someone has gone without sleep under observation?",
+          "name": "Which body part continues to grow throughout a person's life?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "11 days"
+            "text": "Nose and ears"
           }
         },
         {
           "@type": "Question",
-          "name": "What household pet is known for having a third eyelid?",
+          "name": "Which animal can hold its breath underwater for up to two hours?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Cat"
+            "text": "Crocodile"
           }
         },
         {
           "@type": "Question",
-          "name": "Which country invented tea?",
+          "name": "What creature was declared legally a 'non-human person' with rights in India?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "China"
+            "text": "Dolphin"
           }
         },
         {
           "@type": "Question",
-          "name": "Which fruit floats in water because 25% of its volume is air?",
+          "name": "What rare phenomenon involves the sky glowing with pink or red lights before an earthquake?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Apple"
+            "text": "Earthquake lights"
           }
         },
         {
           "@type": "Question",
-          "name": "In Texas, it's illegal to swear in front of what?",
+          "name": "How many times was the record holder for the most hiccups estimated to have hiccupped?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A corpse"
+            "text": "430 million times"
           }
         }
       ]
@@ -104,6 +104,7 @@
   <main class="container narrow">
     <div class="theme-top-links">
       <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+      <span id="navAvatarSlot"></span>
       <a href="../index.html" class="back-link">⌂ Home</a>
     </div>
 
@@ -155,14 +156,14 @@
           <p>Play locally against friends</p>
         </a>
 
+        <a class="card" href="../wordle/fun-facts.html">
+          <h3>Wordle</h3>
+          <p>Guess themed words</p>
+        </a>
+
         <a class="card" href="../wordsearch.html?theme=fun-facts&page=1">
           <h3>Word Search</h3>
           <p>Find hidden themed words</p>
-        </a>
-
-        <a class="card" href="../wordle.html?theme=fun-facts&page=1">
-          <h3>Wordle</h3>
-          <p>Guess themed words</p>
         </a>
 
       </div>
@@ -172,36 +173,36 @@
           <h2>Sample Questions</h2>
           <p class="sq-hint">Tap an answer to reveal it.</p>
           <ul>
-            <li>What is the record for the longest time someone has gone without sleep under observation? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">11 days</span></li><li>What household pet is known for having a third eyelid? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Cat</span></li><li>Which country invented tea? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">China</span></li><li>Which fruit floats in water because 25% of its volume is air? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Apple</span></li><li>In Texas, it&#39;s illegal to swear in front of what? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">A corpse</span></li><li>What is the only mammal capable of true flight? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Bat</span></li><li>What is the fear of long words called? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Hippopotomonstrosesquipedaliophobia</span></li><li>Which country has a McDonald’s menu item called the McSpicy Paneer? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">India</span></li><li>What creature has been known to cause the most human deaths annually? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Mosquito</span></li><li>Which U.S. state bans sleeping in cheese factories? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Wisconsin</span></li>
+            <li>Which body part continues to grow throughout a person&#39;s life? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Nose and ears</span></li><li>Which animal can hold its breath underwater for up to two hours? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Crocodile</span></li><li>What creature was declared legally a &#39;non-human person&#39; with rights in India? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Dolphin</span></li><li>What rare phenomenon involves the sky glowing with pink or red lights before an earthquake? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Earthquake lights</span></li><li>How many times was the record holder for the most hiccups estimated to have hiccupped? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">430 million times</span></li><li>What shape is DNA? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Helix</span></li><li>Which country was the first to grant animals legal status as sentient beings? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Ecuador</span></li><li>What type of creature is known for being able to clone itself by splitting in half? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Starfish</span></li><li>Which U.S. state is the only one to grow coffee commercially? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Hawaii</span></li><li>Which planet has days longer than its years? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Venus</span></li>
           </ul>
         </div>
       
       <p>Fun facts trivia works because it leans into the kind of information people love repeating, unusual details, weird records, surprising comparisons, and everyday facts that sound too odd to be true. That makes it easy to play casually while still giving each round plenty of variety.</p>
       <p>A strong fun facts quiz can include strange animal facts, unusual geography, human-body surprises, surprising inventions, records, language oddities, food facts, historical curiosities, and bits of science or culture that are memorable because they feel unexpected. The category works best when it keeps switching angles, since the appeal comes from surprise and fast recognition rather than from building around one single knowledge area.</p>
-      <p>If you enjoy Fun Facts trivia, also try <a href="../themes/kids.html">Kids</a> and <a href="../themes/history.html">History</a> on Trivia Gauntlet.</p>
+      <p>If you enjoy Fun Facts trivia, also try <a href="../themes/music.html">Music</a> and <a href="../themes/sports.html">Sports</a> on Trivia Gauntlet.</p>
       
         <div class="theme-related-quizzes">
           <h2>Related Quizzes</h2>
           <div class="grid">
             
-              <a class="card" href="../themes/kids.html">
-                <h3>Kids</h3>
+              <a class="card" href="../themes/music.html">
+                <h3>Music</h3>
               </a>
             
-              <a class="card" href="../themes/history.html">
-                <h3>History</h3>
+              <a class="card" href="../themes/sports.html">
+                <h3>Sports</h3>
               </a>
             
-              <a class="card" href="../themes/video-games.html">
-                <h3>Video Games</h3>
+              <a class="card" href="../themes/bollywood.html">
+                <h3>Bollywood</h3>
               </a>
             
               <a class="card" href="../themes/nollywood.html">
                 <h3>Nollywood</h3>
               </a>
             
-              <a class="card" href="../themes/world-facts.html">
-                <h3>World Facts</h3>
+              <a class="card" href="../themes/odd-one-out.html">
+                <h3>Odd One Out</h3>
               </a>
             
           </div>
@@ -270,5 +271,6 @@
 
     setupThemePageSearch();
   </script>
+  <script src="../assets/profile.js"></script>
 </body>
 </html>

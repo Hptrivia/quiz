@@ -522,6 +522,7 @@ function trEnd(completed) {
   const prev = parseInt(localStorage.getItem(bestKey) || '0', 10);
   const isNewBest = runScore > prev;
   if (isNewBest) localStorage.setItem(bestKey, runScore);
+  if (typeof recordTriviaRush === "function") recordTriviaRush(trState.themeSlug, runScore, trState.bestStreak || 0);
   const currentBest = isNewBest ? runScore : prev;
   const isImprovement = isNewBest && prev > 0;
   const pbTile = currentBest > 0

@@ -57,7 +57,23 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Who is Jackie's girlfriend?",
+          "name": "Which gang is associated with Japantown and katana-wielding members?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tyger Claws"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What year did Johnny Silverhand nuke Arasaka Tower?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "2023"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who runs the Esoterica located near the ripperdoc clinic?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Misty"
@@ -65,34 +81,18 @@
         },
         {
           "@type": "Question",
-          "name": "What is the biochip central to the story called?",
+          "name": "What does Soulkiller basically do?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Relic"
+            "text": "Creates digital copies"
           }
         },
         {
           "@type": "Question",
-          "name": "What infamous program is Alt Cunningham associated with?",
+          "name": "Who is the NCPD detective V can romance in one storyline?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Soulkiller"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the maximum number of attribute points V can have in a single category?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "20"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which weapon class can charge shots and pierce cover?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Tech"
+            "text": "River Ward"
           }
         }
       ]
@@ -104,6 +104,7 @@
   <main class="container narrow">
     <div class="theme-top-links">
       <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+      <span id="navAvatarSlot"></span>
       <a href="../index.html" class="back-link">⌂ Home</a>
     </div>
 
@@ -155,14 +156,14 @@
           <p>Play locally against friends</p>
         </a>
 
+        <a class="card" href="../wordle/cyberpunk-2077.html">
+          <h3>Wordle</h3>
+          <p>Guess themed words</p>
+        </a>
+
         <a class="card" href="../wordsearch.html?theme=cyberpunk-2077&page=1">
           <h3>Word Search</h3>
           <p>Find hidden themed words</p>
-        </a>
-
-        <a class="card" href="../wordle.html?theme=cyberpunk-2077&page=1">
-          <h3>Wordle</h3>
-          <p>Guess themed words</p>
         </a>
 
       </div>
@@ -172,36 +173,36 @@
           <h2>Sample Questions</h2>
           <p class="sq-hint">Tap an answer to reveal it.</p>
           <ul>
-            <li>Who is Jackie&#39;s girlfriend? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Misty</span></li><li>What is the biochip central to the story called? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Relic</span></li><li>What infamous program is Alt Cunningham associated with? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Soulkiller</span></li><li>What is the maximum number of attribute points V can have in a single category? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">20</span></li><li>Which weapon class can charge shots and pierce cover? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Tech</span></li><li>Which famous actor plays the agent in Phantom Liberty? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Idris Elba</span></li><li>What operating system implant is mainly used for quickhacking? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Cyberdeck</span></li><li>What arm cyberware gives V retractable blades? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Mantis Blades</span></li><li>Where does Claire Rusell work? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Afterlife</span></li><li>What is the name of V&#39;s ripperdoc in Watson? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Viktor Vektor</span></li>
+            <li>Which gang is associated with Japantown and katana-wielding members? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Tyger Claws</span></li><li>What year did Johnny Silverhand nuke Arasaka Tower? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">2023</span></li><li>Who runs the Esoterica located near the ripperdoc clinic? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Misty</span></li><li>What does Soulkiller basically do? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Creates digital copies</span></li><li>Who is the NCPD detective V can romance in one storyline? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">River Ward</span></li><li>Which of these is not an arm cyberware in the game? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Kerenzikov Arms</span></li><li>Which corporation makes many of the high-end guns in the game? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Militech</span></li><li>What resource is mainly used for hacking enemies and devices? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">RAM</span></li><li>What restaurant is the no-turning-back meeting point near the end? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Embers</span></li><li>Which bodyguard of Hanako later fights beside or against V depending on pathing? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Oda</span></li>
           </ul>
         </div>
       
       <p>Cyberpunk 2077 trivia works because the game is full of named districts, gangs, implants, side characters, corporate power struggles, and mission paths that stick in players&#39; memory. Its setting is visually and conceptually strong enough to support more than surface-level questions.</p>
       <p>A strong Cyberpunk 2077 quiz can include V, Johnny Silverhand, Night City districts, Arasaka, Militech, gangs such as the Valentinos and Tyger Claws, ripperdocs, cyberware, relic technology, vehicles, weapons, fixers, and the major choices that shape the story. The theme stays strong because it can balance world-building, tech concepts, faction identity, gameplay systems, and the many character-driven missions that make the city feel alive.</p>
-      <p>If you enjoy Cyberpunk 2077 trivia, also try <a href="../themes/gta-v.html">GTA V</a> and <a href="../themes/god-of-war.html">God of War</a> on Trivia Gauntlet.</p>
+      <p>If you enjoy Cyberpunk 2077 trivia, also try <a href="../themes/horizon-zero-dawn.html">Horizon Zero Dawn</a> and <a href="../themes/clair-obscur-expedition-33.html">Clair Obscur Expedition 33</a> on Trivia Gauntlet.</p>
       
         <div class="theme-related-quizzes">
           <h2>Related Quizzes</h2>
           <div class="grid">
             
-              <a class="card" href="../themes/gta-v.html">
-                <h3>GTA V</h3>
+              <a class="card" href="../themes/horizon-zero-dawn.html">
+                <h3>Horizon Zero Dawn</h3>
               </a>
             
-              <a class="card" href="../themes/god-of-war.html">
-                <h3>God of War</h3>
+              <a class="card" href="../themes/clair-obscur-expedition-33.html">
+                <h3>Clair Obscur Expedition 33</h3>
               </a>
             
-              <a class="card" href="../themes/resident-evil-4.html">
-                <h3>Resident Evil 4</h3>
+              <a class="card" href="../themes/assassins-creed-valhalla.html">
+                <h3>Assassins Creed Valhalla</h3>
               </a>
             
-              <a class="card" href="../themes/ghost-of-tsushima.html">
-                <h3>Ghost of Tsushima</h3>
+              <a class="card" href="../themes/minecraft.html">
+                <h3>Minecraft</h3>
               </a>
             
-              <a class="card" href="../themes/baldurs-gate-3.html">
-                <h3>Baldurs Gate 3</h3>
+              <a class="card" href="../themes/the-last-of-us.html">
+                <h3>The Last of Us</h3>
               </a>
             
           </div>
@@ -270,5 +271,6 @@
 
     setupThemePageSearch();
   </script>
+  <script src="../assets/profile.js"></script>
 </body>
 </html>

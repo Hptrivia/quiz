@@ -24,6 +24,8 @@ async function renderMultiThemeChallenge() {
   const rawRound = parseInt(params.get("round") || "1", 10);
   const currentRound = isNaN(rawRound) || rawRound < 1 ? 1 : rawRound;
 
+  const sessionKey = slugs.slice().sort().join(",");
+
   const pools = buildMashupPools(selectedThemes, questionsByTheme);
   const totalRounds = calcMashupTotalBatches(pools, ROUND_SIZE);
   const safeRound = Math.min(currentRound, totalRounds);
@@ -147,6 +149,7 @@ async function renderMultiThemeChallenge() {
     resultBox.style.display = "block";
     resultBox.classList.remove("result-anim"); void resultBox.offsetWidth; resultBox.classList.add("result-anim");
     const hasNextRound = safeRound < totalRounds;
+    if (typeof saveSession === "function") saveSession("challenge", sessionKey, safeRound, score, roundQuestions.length);
     resultBox.innerHTML = `
       <h2>Round ${safeRound} Complete</h2>
       <p>Your score: ${score} / ${roundQuestions.length}</p>
@@ -182,6 +185,33 @@ async function renderMultiThemeChallenge() {
       msInput.addEventListener("focus", () => { renderSearch(allThemeMeta); msResults.style.display = "block"; });
       msInput.addEventListener("input", e => { renderSearch(allThemeMeta.filter(t => t.title.toLowerCase().includes(e.target.value.trim().toLowerCase()))); msResults.style.display = "block"; });
       document.addEventListener("click", e => { if (!msInput.contains(e.target) && !msResults.contains(e.target)) msResults.style.display = "none"; });
+    }
+  }
+
+  if (currentRound === 1 && typeof getSession === "function") {
+    const saved = getSession("challenge", sessionKey);
+    if (saved && saved.round < totalRounds) {
+      quizBox.style.display = "none";
+      resultBox.style.display = "block";
+      resultBox.innerHTML = `
+        <h2>Round ${saved.round} Complete</h2>
+        <p>Your score: ${saved.score} / ${saved.total}</p>
+        <div class="cta-row">
+          <a class="primary-btn" id="mashupContinueBtn" href="challenge.html?themes=${themesParam}&round=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>
+          <button class="secondary-btn" id="mashupRound1Btn">Start from Round 1</button>
+        </div>`;
+      document.getElementById("mashupContinueBtn").addEventListener("click", () => {
+        if (typeof gtag === "function") gtag("event", "session_resumed", { theme: sessionKey, round: saved.round + 1 });
+      });
+      document.getElementById("mashupRound1Btn").addEventListener("click", () => {
+        if (typeof gtag === "function") gtag("event", "session_reset", { theme: sessionKey });
+        if (typeof clearSession === "function") clearSession("challenge", sessionKey);
+        resultBox.style.display = "none";
+        resultBox.innerHTML = "";
+        quizBox.style.display = "block";
+        showQuestion(0);
+      });
+      return;
     }
   }
 
@@ -247,37 +277,46 @@ async function renderChallengePage() {
   const rawRound = parseInt(getParam("round") || "1", 10);
   const currentRound = Number.isNaN(rawRound) || rawRound < 1 ? 1 : rawRound;
 
-  const allQuestions = await fetchJSON(theme.questionFile);
-  const allRounds = buildBalancedBatches(allQuestions, ROUND_SIZE, 5, 5);
-  console.log("CHALLENGE ROUNDS DEBUG");
-  allRounds.forEach((roundQuestions, roundIndex) => {
-    console.log(
-      `Round ${roundIndex + 1}`,
-      roundQuestions.map(q => ({ question: q.question, difficulty: q.difficulty }))
-    );
-  });
+  let isReplay = getParam("replay") === "1";
+  let totalRounds, safeRound, shuffledQuestions;
 
-  const challengeSeen = new Set();
-  let challengeHasDuplicates = false;
+  if (isReplay) {
+    try {
+      const rd = JSON.parse(localStorage.getItem("tg_replay") || "null");
+      if (rd && rd.questions && rd.questions.length) {
+        shuffledQuestions = rd.questions.map(q => shuffleQuestionOptions(q));
+        totalRounds = 1;
+        safeRound = 1;
+        if (typeof gtag === "function") gtag("event", "wrong_answers_replayed", { theme: theme.slug, count: rd.questions.length });
+      } else { isReplay = false; }
+    } catch { isReplay = false; }
+  }
 
-  allRounds.forEach((roundQuestions, roundIndex) => {
-    roundQuestions.forEach((q, questionIndex) => {
-      const key = `${q.question}||${q.answer}`;
-      if (challengeSeen.has(key)) {
-        challengeHasDuplicates = true;
-        console.warn(`Duplicate found in challenge: round ${roundIndex + 1}, question ${questionIndex + 1}`, q);
-      }
-      challengeSeen.add(key);
+  if (!isReplay) {
+    const allQuestions = await fetchJSON(theme.questionFile);
+    const allRounds = buildBalancedBatches(allQuestions, ROUND_SIZE, 5, 5);
+
+    const challengeSeen = new Set();
+    let challengeHasDuplicates = false;
+    allRounds.forEach((rq, ri) => {
+      rq.forEach((q, qi) => {
+        const key = `${q.question}||${q.answer}`;
+        if (challengeSeen.has(key)) {
+          challengeHasDuplicates = true;
+          console.warn(`Duplicate found in challenge: round ${ri + 1}, question ${qi + 1}`, q);
+        }
+        challengeSeen.add(key);
+      });
     });
-  });
+    console.log("Challenge duplicate check:", challengeHasDuplicates ? "DUPLICATES FOUND" : "NO DUPLICATES");
 
-  console.log("Challenge duplicate check:", challengeHasDuplicates ? "DUPLICATES FOUND" : "NO DUPLICATES");
-
-  const totalRounds = allRounds.length;
-  const safeRound = Math.min(currentRound, totalRounds);
+    totalRounds = allRounds.length;
+    safeRound = Math.min(currentRound, totalRounds);
+    shuffledQuestions = (allRounds[safeRound - 1] || []).map(q => shuffleQuestionOptions(q));
+  }
 
   if (nextRoundLink) {
-    if (safeRound < totalRounds) {
+    if (!isReplay && safeRound < totalRounds) {
       nextRoundLink.style.display = "inline-block";
       nextRoundLink.textContent = "Skip to next round";
       nextRoundLink.href = `challenge.html?theme=${theme.slug}&round=${safeRound + 1}`;
@@ -286,8 +325,53 @@ async function renderChallengePage() {
     }
   }
 
-  const roundQuestions = allRounds[safeRound - 1] || [];
-  const shuffledQuestions = roundQuestions.map(q => shuffleQuestionOptions(q));
+  let showContinuePrompt = false;
+
+  if (!isReplay && currentRound === 1 && typeof getSession === "function") {
+    const saved = getSession("challenge", theme.slug);
+    if (saved && saved.round < totalRounds) {
+      showContinuePrompt = true;
+      quizBox.style.display = "none";
+      resultBox.style.display = "block";
+
+      let replayCount = 0;
+      try {
+        const raw = localStorage.getItem("tg_replay");
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (parsed.mode === "challenge" && parsed.themeSlug === theme.slug)
+            replayCount = (parsed.questions || []).length;
+        }
+      } catch {}
+
+      const replayHtml = replayCount > 0
+        ? `<div class="wrong-replay-row">You have ${replayCount} wrong answer${replayCount !== 1 ? "s" : ""} accumulated &mdash; <a href="challenge.html?theme=${theme.slug}&replay=1">Replay them all</a></div>`
+        : "";
+
+      resultBox.innerHTML = `
+        <h2>Round ${saved.round} Complete</h2>
+        <p>Your score: ${saved.score} / ${saved.total}</p>
+        <div class="cta-row">
+          <a class="primary-btn" id="continueRoundBtn" href="challenge.html?theme=${theme.slug}&round=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>
+          <button class="secondary-btn" id="startRound1Btn">Start from Round 1</button>
+        </div>
+        ${replayHtml}`;
+
+      document.getElementById("continueRoundBtn").addEventListener("click", () => {
+        if (typeof gtag === "function") gtag("event", "session_resumed", { theme: theme.slug, round: saved.round + 1 });
+      });
+
+      document.getElementById("startRound1Btn").addEventListener("click", () => {
+        if (typeof gtag === "function") gtag("event", "session_reset", { theme: theme.slug });
+        if (typeof clearSession === "function") clearSession("challenge", theme.slug);
+        localStorage.removeItem("tg_replay");
+        resultBox.style.display = "none";
+        resultBox.innerHTML = "";
+        quizBox.style.display = "block";
+        showQuestion(0);
+      });
+    }
+  }
 
   const state = {
     questions: shuffledQuestions,
@@ -295,6 +379,7 @@ async function renderChallengePage() {
     score: 0,
     selectedAnswer: null
   };
+  const wrongQuestions = [];
 
   let revealAnswers = false;
 
@@ -412,6 +497,7 @@ async function renderChallengePage() {
           selectedBtn.classList.add("correct-anim");
         }
       } else {
+        wrongQuestions.push(q);
         if (typeof SoundFX !== 'undefined') SoundFX.play('wrong');
         feedbackP.textContent = revealAnswers ? `Wrong. The correct answer is ${q.answer}.` : "Wrong";
         feedbackP.className = "feedback wrong";
@@ -494,6 +580,16 @@ async function renderChallengePage() {
       </div>
     `;
 
+    const wrongCount = (typeof recordChallenge === "function")
+      ? recordChallenge(theme.slug, state.score, state.questions.length, wrongQuestions, isReplay)
+      : wrongQuestions.length;
+
+    if (!isReplay && typeof saveSession === "function") saveSession("challenge", theme.slug, safeRound, state.score, state.questions.length);
+
+    const replayHtml = wrongCount > 0
+      ? `<div class="wrong-replay-row">You have ${wrongCount} wrong answer${wrongCount !== 1 ? "s" : ""} &mdash; <a href="challenge.html?theme=${theme.slug}&replay=1">Replay them all</a></div>`
+      : "";
+
     resultBox.innerHTML = `
       <h2>Round ${safeRound} Complete</h2>
       <p>Your score: ${state.score} / ${state.questions.length}</p>
@@ -504,6 +600,7 @@ async function renderChallengePage() {
         ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html?theme=${theme.slug}">Reveal Answers</a>` : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
+      ${replayHtml}
     </div>
       ${affiliateHtml}
       <div class="result-theme-search">
@@ -563,7 +660,7 @@ async function renderChallengePage() {
     showEmailPopupUI(themeName);
   }
 
-  showQuestion(0);
+  if (!showContinuePrompt) showQuestion(0);
 }
 
 document.addEventListener("DOMContentLoaded", () => {

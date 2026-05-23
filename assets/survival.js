@@ -414,6 +414,8 @@ async function renderSurvivalPage() {
       </div>
     `;
 
+    if (typeof recordSurvival === "function") recordSurvival(theme.slug, state.score);
+
     resultBox.innerHTML = `
       <h2>Survival Over</h2>
       <p>Your score: ${state.score}</p>

@@ -57,34 +57,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is the password to the encrypted drive in 'The Batman' (2022)?",
+          "name": "What specific job does Rachel Dawes hold in Batman Begins?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Drive"
+            "text": "Assistant District Attorney"
           }
         },
         {
           "@type": "Question",
-          "name": "What is the name of the judge in The Dark Knight who is later killed by a car bomb?",
+          "name": "Which member of the Shazam Family wears purple in his superhero form?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Judge Surrillo"
+            "text": "Eugene"
           }
         },
         {
           "@type": "Question",
-          "name": "Who kills the character of Rick Flag in 'The Suicide Squad' (2021)?",
+          "name": "What was the name of the failed Wayne orphanage project in 'The Batman'?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Peacemaker"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the name of the cop who admired Batman and who was later promoted to detective by Gordon?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Blake"
+            "text": "Renewal"
           }
         },
         {
@@ -93,6 +85,14 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Harvey Dent"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Wonder Woman´s real name?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Diana Prince"
           }
         }
       ]
@@ -104,6 +104,7 @@
   <main class="container narrow">
     <div class="theme-top-links">
       <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+      <span id="navAvatarSlot"></span>
       <a href="../index.html" class="back-link">⌂ Home</a>
     </div>
 
@@ -160,14 +161,14 @@
           <p>Play locally against friends</p>
         </a>
 
+        <a class="card" href="../wordle/dc-movies.html">
+          <h3>Wordle</h3>
+          <p>Guess themed words</p>
+        </a>
+
         <a class="card" href="../wordsearch.html?theme=dc-movies&page=1">
           <h3>Word Search</h3>
           <p>Find hidden themed words</p>
-        </a>
-
-        <a class="card" href="../wordle.html?theme=dc-movies&page=1">
-          <h3>Wordle</h3>
-          <p>Guess themed words</p>
         </a>
 
       </div>
@@ -177,36 +178,36 @@
           <h2>Sample Questions</h2>
           <p class="sq-hint">Tap an answer to reveal it.</p>
           <ul>
-            <li>What is the password to the encrypted drive in &#39;The Batman&#39; (2022)? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Drive</span></li><li>What is the name of the judge in The Dark Knight who is later killed by a car bomb? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Judge Surrillo</span></li><li>Who kills the character of Rick Flag in &#39;The Suicide Squad&#39; (2021)? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Peacemaker</span></li><li>What is the name of the cop who admired Batman and who was later promoted to detective by Gordon? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Blake</span></li><li>Which character says: &#39;You either die a hero, or live long enough to see yourself become the villain&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Harvey Dent</span></li><li>What city does Aquaman and Mera visit on land to find the hidden location of the trident? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Sicily</span></li><li>Which mob boss does The Joker order to be cut up and fed to his dogs? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Chechen</span></li><li>What language does Diana speak that surprises Steve in Wonder Woman (2017)? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Sumerian</span></li><li>What is the code name of the secret government team led by Amanda Waller? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Task Force X</span></li><li>Which member of the Shazam Family is the fastest and represents Mercury? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Darla</span></li>
+            <li>What specific job does Rachel Dawes hold in Batman Begins? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Assistant District Attorney</span></li><li>Which member of the Shazam Family wears purple in his superhero form? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Eugene</span></li><li>What was the name of the failed Wayne orphanage project in &#39;The Batman&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Renewal</span></li><li>Which character says: &#39;You either die a hero, or live long enough to see yourself become the villain&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Harvey Dent</span></li><li>What is Wonder Woman´s real name? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Diana Prince</span></li><li>In &#39;Wonder Woman&#39;, which war is the setting for most of the film? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">World War I</span></li><li>Which city does Superman reside in? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Metropolis</span></li><li>Which squad member was secretly working for Amanda Waller in &#39;The Suicide Squad&#39; (2021)? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Peacemaker</span></li><li>What is the name of the ferry ship holding the criminals in The Dark Knight? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Spirit of Gotham</span></li><li>What is the name of the radioactive mineral central to the plot in &#39;Black Adam&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Eternium</span></li>
           </ul>
         </div>
       
       <p>DC Movies trivia works because the category spans some of the most recognisable comic-book characters in popular culture, from Batman and Superman to Wonder Woman, the Joker, and beyond. That gives it immediate recognition while still leaving room for deeper franchise knowledge.</p>
       <p>A strong DC Movies quiz can include Batman, Superman, Wonder Woman, Aquaman, The Flash, Harley Quinn, the Joker, Justice League storylines, origin stories, villains, powers, actors, directors, reboots, and major release-era moments across the DC film slate. The theme stays strong because it can move between character identity, casting, plot beats, franchise structure, and the wider cultural pull of one of the biggest superhero brands in cinema.</p>
-      <p>If you enjoy DC Movies trivia, also try <a href="../themes/gilmore-girls.html">Gilmore Girls</a> and <a href="../themes/spartacus.html">Spartacus</a> on Trivia Gauntlet.</p>
+      <p>If you enjoy DC Movies trivia, also try <a href="../themes/sons-of-anarchy.html">Sons of Anarchy</a> and <a href="../themes/rick-and-morty.html">Rick and Morty</a> on Trivia Gauntlet.</p>
       
         <div class="theme-related-quizzes">
           <h2>Related Quizzes</h2>
           <div class="grid">
             
-              <a class="card" href="../themes/gilmore-girls.html">
-                <h3>Gilmore Girls</h3>
+              <a class="card" href="../themes/sons-of-anarchy.html">
+                <h3>Sons of Anarchy</h3>
               </a>
             
-              <a class="card" href="../themes/spartacus.html">
-                <h3>Spartacus</h3>
+              <a class="card" href="../themes/rick-and-morty.html">
+                <h3>Rick and Morty</h3>
               </a>
             
-              <a class="card" href="../themes/from.html">
-                <h3>From</h3>
+              <a class="card" href="../themes/downton-abbey.html">
+                <h3>Downton Abbey</h3>
+              </a>
+            
+              <a class="card" href="../themes/lucifer.html">
+                <h3>Lucifer</h3>
               </a>
             
               <a class="card" href="../themes/arrow.html">
                 <h3>Arrow</h3>
-              </a>
-            
-              <a class="card" href="../themes/greys-anatomy.html">
-                <h3>Greys Anatomy</h3>
               </a>
             
           </div>
@@ -275,5 +276,6 @@
 
     setupThemePageSearch();
   </script>
+  <script src="../assets/profile.js"></script>
 </body>
 </html>

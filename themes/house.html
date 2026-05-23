@@ -57,10 +57,34 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is the nickname of Remy Hadley?",
+          "name": "Which creator made House?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Thirteen"
+            "text": "David Shore"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What nickname did House give to Dr. Jeffrey Cole during the competition?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Big Love"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What did House's father do for a living?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Marine Pilot"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What kind of pet did House have?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A rat"
           }
         },
         {
@@ -69,30 +93,6 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Endocrinology"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What was the occupation of Stacy Warner’s husband?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Counselor"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which actor played Lawrence Kutner?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Kal Penn"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "In the early seasons, what does House hate doing the most?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Clinic duty"
           }
         }
       ]
@@ -104,6 +104,7 @@
   <main class="container narrow">
     <div class="theme-top-links">
       <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+      <span id="navAvatarSlot"></span>
       <a href="../index.html" class="back-link">⌂ Home</a>
     </div>
 
@@ -155,14 +156,14 @@
           <p>Play locally against friends</p>
         </a>
 
+        <a class="card" href="../wordle/house.html">
+          <h3>Wordle</h3>
+          <p>Guess themed words</p>
+        </a>
+
         <a class="card" href="../wordsearch.html?theme=house&page=1">
           <h3>Word Search</h3>
           <p>Find hidden themed words</p>
-        </a>
-
-        <a class="card" href="../wordle.html?theme=house&page=1">
-          <h3>Wordle</h3>
-          <p>Guess themed words</p>
         </a>
 
       </div>
@@ -172,36 +173,36 @@
           <h2>Sample Questions</h2>
           <p class="sq-hint">Tap an answer to reveal it.</p>
           <ul>
-            <li>What is the nickname of Remy Hadley? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Thirteen</span></li><li>What is Dr. Cuddy&#39;s medical specialty? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Endocrinology</span></li><li>What was the occupation of Stacy Warner’s husband? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Counselor</span></li><li>Which actor played Lawrence Kutner? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Kal Penn</span></li><li>In the early seasons, what does House hate doing the most? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Clinic duty</span></li><li>What is James Wilson’s medical specialty? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Oncology</span></li><li>What is the name of the man who shoots House in the Season 2 finale? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Jack Moriarty</span></li><li>Which applicant in the Season 4 competition was assigned the number 32? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Jodi Desai</span></li><li>Which member of the team is an immunologist? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Allison Cameron</span></li><li>Which of these is not one of Wilson´s wifes? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Amber</span></li>
+            <li>Which creator made House? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">David Shore</span></li><li>What nickname did House give to Dr. Jeffrey Cole during the competition? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Big Love</span></li><li>What did House&#39;s father do for a living? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Marine Pilot</span></li><li>What kind of pet did House have? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">A rat</span></li><li>What is Dr. Cuddy&#39;s medical specialty? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Endocrinology</span></li><li>What is the name of the man who shoots House in the Season 2 finale? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Jack Moriarty</span></li><li>What is the name of Wilson&#39;s brother who went missing? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Danny</span></li><li>Which member of the team is an immunologist? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Allison Cameron</span></li><li>What is Gregory House’s medical department? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Diagnostic Medicine</span></li><li>In the early seasons, what does House hate doing the most? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Clinic duty</span></li>
           </ul>
         </div>
       
       <p>House trivia works because the show is built on a very distinctive formula: bizarre medical mysteries, House&#39;s brutal logic, team conflict, and personal dysfunction inside the hospital. That structure makes both the cases and the character dynamics easy for viewers to remember.</p>
       <p>A strong House quiz can include House, Wilson, Cuddy, Foreman, Chase, Cameron, later team members, Princeton-Plainsboro, diagnostic methods, unusual symptoms, addictions, ethics clashes, and the many moments where House solves a case by spotting a detail everyone else missed. The theme stays strong because it can balance medicine, personality conflict, hospital structure, and the repeated case-solving patterns that made the series so watchable.</p>
-      <p>If you enjoy House trivia, also try <a href="../themes/sons-of-anarchy.html">Sons of Anarchy</a> and <a href="../themes/sex-and-the-city.html">Sex and the City</a> on Trivia Gauntlet.</p>
+      <p>If you enjoy House trivia, also try <a href="../themes/lucifer.html">Lucifer</a> and <a href="../themes/gossip-girl.html">Gossip Girl</a> on Trivia Gauntlet.</p>
       
         <div class="theme-related-quizzes">
           <h2>Related Quizzes</h2>
           <div class="grid">
             
-              <a class="card" href="../themes/sons-of-anarchy.html">
-                <h3>Sons of Anarchy</h3>
+              <a class="card" href="../themes/lucifer.html">
+                <h3>Lucifer</h3>
+              </a>
+            
+              <a class="card" href="../themes/gossip-girl.html">
+                <h3>Gossip Girl</h3>
+              </a>
+            
+              <a class="card" href="../themes/game-of-thrones.html">
+                <h3>Game of Thrones</h3>
               </a>
             
               <a class="card" href="../themes/sex-and-the-city.html">
                 <h3>Sex and the City</h3>
               </a>
             
-              <a class="card" href="../themes/arcane.html">
-                <h3>Arcane</h3>
-              </a>
-            
-              <a class="card" href="../themes/daredevil.html">
-                <h3>Daredevil</h3>
-              </a>
-            
-              <a class="card" href="../themes/invincible.html">
-                <h3>Invincible</h3>
+              <a class="card" href="../themes/the-boys.html">
+                <h3>The Boys</h3>
               </a>
             
           </div>
@@ -270,5 +271,6 @@
 
     setupThemePageSearch();
   </script>
+  <script src="../assets/profile.js"></script>
 </body>
 </html>

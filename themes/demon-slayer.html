@@ -57,10 +57,34 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Which demon turned Nezuko into a demon?",
+          "name": "Tanjiro’s family passes down the Sun Breathing through what cover tradition?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Muzan Kibutsuji"
+            "text": "The Hinokami Kagura dance"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What animal is Zenitsu’s messenger instead of a crow?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sparrow"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Whose ghostly guidance helps Tanjiro cut the boulder during training?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sabito & Makomo"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the special dance Tanjiro learned from his father?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hinokami Kagura"
           }
         },
         {
@@ -69,30 +93,6 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Kimetsu no Yaiba"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which Thunder Breathing form is Zenitsu best known for perfecting?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "First Form: Thunderclap and Flash"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which siblings share the Upper Rank Six position?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Daki & Gyutaro"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which demon manipulates a mansion by striking tsuzumi drums embedded in his body?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Kyogai"
           }
         }
       ]
@@ -104,6 +104,7 @@
   <main class="container narrow">
     <div class="theme-top-links">
       <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+      <span id="navAvatarSlot"></span>
       <a href="../index.html" class="back-link">⌂ Home</a>
     </div>
 
@@ -160,14 +161,14 @@
           <p>Play locally against friends</p>
         </a>
 
+        <a class="card" href="../wordle/demon-slayer.html">
+          <h3>Wordle</h3>
+          <p>Guess themed words</p>
+        </a>
+
         <a class="card" href="../wordsearch.html?theme=demon-slayer&page=1">
           <h3>Word Search</h3>
           <p>Find hidden themed words</p>
-        </a>
-
-        <a class="card" href="../wordle.html?theme=demon-slayer&page=1">
-          <h3>Wordle</h3>
-          <p>Guess themed words</p>
         </a>
 
       </div>
@@ -177,24 +178,24 @@
           <h2>Sample Questions</h2>
           <p class="sq-hint">Tap an answer to reveal it.</p>
           <ul>
-            <li>Which demon turned Nezuko into a demon? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Muzan Kibutsuji</span></li><li>What is the Japanese title of Demon Slayer? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Kimetsu no Yaiba</span></li><li>Which Thunder Breathing form is Zenitsu best known for perfecting? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">First Form: Thunderclap and Flash</span></li><li>Which siblings share the Upper Rank Six position? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Daki &amp; Gyutaro</span></li><li>Which demon manipulates a mansion by striking tsuzumi drums embedded in his body? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Kyogai</span></li><li>What term does Tanjiro use for the precise instant he senses to cut through an enemy’s openings? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Opening Thread</span></li><li>Which earrings does Tanjiro wear that stand out? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Hanafuda earrings</span></li><li>Which of Uzui Tengen’s wives infiltrates Tokito House? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Suma</span></li><li>Nichirin swords change color based primarily on what? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">The wielder</span></li><li>Before being expelled from the Twelve Kizuki, what rank did Kyogai formerly hold? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Lower Rank Six</span></li>
+            <li>Tanjiro’s family passes down the Sun Breathing through what cover tradition? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">The Hinokami Kagura dance</span></li><li>What animal is Zenitsu’s messenger instead of a crow? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Sparrow</span></li><li>Whose ghostly guidance helps Tanjiro cut the boulder during training? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Sabito &amp; Makomo</span></li><li>What is the special dance Tanjiro learned from his father? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Hinokami Kagura</span></li><li>What is the Japanese title of Demon Slayer? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Kimetsu no Yaiba</span></li><li>What is the leader of the Demon Slayer Corps called by the slayers? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Oyakata-sama</span></li><li>Inside Yoriichi Type Zero, Tanjiro discovers an ancient blade roughly how old? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">300 years</span></li><li>Which demon is the Lower Rank Five who controls spider threads? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Rui</span></li><li>Genya Shinazugawa is the younger brother of which Hashira? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Sanemi Shinazugawa</span></li><li>Which demon manipulates a mansion by striking tsuzumi drums embedded in his body? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Kyogai</span></li>
           </ul>
         </div>
       
       <p>Demon Slayer trivia works well because the series combines very recognisable characters and powers with dramatic fights, clear ranks, named techniques, and emotional backstories that viewers tend to remember easily. Its visual identity also helps specific moments stick.</p>
       <p>A strong Demon Slayer quiz can include Tanjiro, Nezuko, Zenitsu, Inosuke, Muzan, the Hashira, breathing styles, demon ranks, swords, training, major arcs, and the key battles that shape the story. The theme stays strong because it can move between character identity, combat techniques, lore, tragic backstories, and the smaller details that fans pick up from both the action and the emotional side of the series.</p>
-      <p>If you enjoy Demon Slayer trivia, also try <a href="../themes/jujutsu-kaisen.html">Jujutsu Kaisen</a> and <a href="../themes/one-piece.html">One Piece</a> on Trivia Gauntlet.</p>
+      <p>If you enjoy Demon Slayer trivia, also try <a href="../themes/one-piece.html">One Piece</a> and <a href="../themes/fullmetal-alchemist.html">Fullmetal Alchemist</a> on Trivia Gauntlet.</p>
       
         <div class="theme-related-quizzes">
           <h2>Related Quizzes</h2>
           <div class="grid">
             
-              <a class="card" href="../themes/jujutsu-kaisen.html">
-                <h3>Jujutsu Kaisen</h3>
-              </a>
-            
               <a class="card" href="../themes/one-piece.html">
                 <h3>One Piece</h3>
+              </a>
+            
+              <a class="card" href="../themes/fullmetal-alchemist.html">
+                <h3>Fullmetal Alchemist</h3>
               </a>
             
               <a class="card" href="../themes/attack-on-titan.html">
@@ -205,8 +206,8 @@
                 <h3>Bleach</h3>
               </a>
             
-              <a class="card" href="../themes/dragon-ball-z.html">
-                <h3>Dragon Ball Z</h3>
+              <a class="card" href="../themes/naruto.html">
+                <h3>Naruto</h3>
               </a>
             
           </div>
@@ -275,5 +276,6 @@
 
     setupThemePageSearch();
   </script>
+  <script src="../assets/profile.js"></script>
 </body>
 </html>

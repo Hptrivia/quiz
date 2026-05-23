@@ -608,7 +608,7 @@
 </head>
 <body data-page="trivia-rush">
   <main class="container narrow">
-    <a href="index.html" class="back-link" onclick="if(history.length>1){history.back();return false;}">← Back</a>
+    <div class="theme-top-links"><a href="index.html" class="back-link" onclick="if(history.length>1){history.back();return false;}">← Back</a><span id="navAvatarSlot"></span></div>
 
     <!-- Loading state -->
     <div id="trLoadingBox">
@@ -774,5 +774,6 @@
 
   <script src="assets/app.js"></script>
   <script src="assets/trivia-rush.js"></script>
-  <script src="assets/sound.js"></script></body>
+  <script src="assets/sound.js"></script>  <script src="assets/profile.js"></script>
+</body>
 </html>

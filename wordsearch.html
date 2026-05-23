@@ -155,7 +155,7 @@
 </head>
 <body data-page="wordsearch">
   <main class="container narrow">
-    <a href="index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+    <div class="theme-top-links"><a href="index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a><span id="navAvatarSlot"></span></div>
 
     <section class="panel">
       <h1 id="wsTitle">Loading...</h1>
@@ -227,5 +227,6 @@
 
   <script src="assets/app.js"></script>
   <script src="assets/wordsearch.js"></script>
+  <script src="assets/profile.js"></script>
 </body>
 </html>

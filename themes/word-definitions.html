@@ -57,18 +57,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What does \"calm\" mean?",
+          "name": "What does \"obfuscate\" mean?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Peaceful"
+            "text": "Make unclear or confusing"
           }
         },
         {
           "@type": "Question",
-          "name": "What does \"comply\" mean?",
+          "name": "What does \"intricate\" mean?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Follow rules or requests"
+            "text": "Very detailed and complex"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does \"usufruct\" mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Right to use and benefit from property"
           }
         },
         {
@@ -81,18 +89,10 @@
         },
         {
           "@type": "Question",
-          "name": "What does \"subtle\" mean?",
+          "name": "What does \"recondite\" mean?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Not obvious; slight"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What does \"miserable\" mean?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Very unhappy"
+            "text": "Obscure; not widely known"
           }
         }
       ]
@@ -104,6 +104,7 @@
   <main class="container narrow">
     <div class="theme-top-links">
       <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+      <span id="navAvatarSlot"></span>
       <a href="../index.html" class="back-link">⌂ Home</a>
     </div>
 
@@ -155,14 +156,14 @@
           <p>Play locally against friends</p>
         </a>
 
+        <a class="card" href="../wordle/word-definitions.html">
+          <h3>Wordle</h3>
+          <p>Guess themed words</p>
+        </a>
+
         <a class="card" href="../wordsearch.html?theme=word-definitions&page=1">
           <h3>Word Search</h3>
           <p>Find hidden themed words</p>
-        </a>
-
-        <a class="card" href="../wordle.html?theme=word-definitions&page=1">
-          <h3>Wordle</h3>
-          <p>Guess themed words</p>
         </a>
 
       </div>
@@ -172,36 +173,36 @@
           <h2>Sample Questions</h2>
           <p class="sq-hint">Tap an answer to reveal it.</p>
           <ul>
-            <li>What does &quot;calm&quot; mean? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Peaceful</span></li><li>What does &quot;comply&quot; mean? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Follow rules or requests</span></li><li>What does &quot;brave&quot; mean? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Courageous</span></li><li>What does &quot;subtle&quot; mean? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Not obvious; slight</span></li><li>What does &quot;miserable&quot; mean? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Very unhappy</span></li><li>What does &quot;obsolete&quot; mean? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Outdated and no longer used</span></li><li>What does &quot;angry&quot; mean? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Mad</span></li><li>What does &quot;impartial&quot; mean? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Fair and not taking sides</span></li><li>What does &quot;fragile&quot; mean? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Easy to break</span></li><li>What does &quot;mendacious&quot; mean? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Dishonest; lying</span></li>
+            <li>What does &quot;obfuscate&quot; mean? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Make unclear or confusing</span></li><li>What does &quot;intricate&quot; mean? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Very detailed and complex</span></li><li>What does &quot;usufruct&quot; mean? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Right to use and benefit from property</span></li><li>What does &quot;brave&quot; mean? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Courageous</span></li><li>What does &quot;recondite&quot; mean? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Obscure; not widely known</span></li><li>What does &quot;permit&quot; mean? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Allow</span></li><li>What does &quot;relentless&quot; mean? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Not giving up or stopping</span></li><li>What does &quot;swift&quot; mean? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Fast</span></li><li>What does &quot;temporary&quot; mean? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Not lasting long</span></li><li>What does &quot;rapid&quot; mean? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Fast</span></li>
           </ul>
         </div>
       
       <p>Word definitions trivia works because it tests a form of knowledge people use constantly without always thinking about it. Familiar words, less common meanings, shades of meaning, and context all help the category feel broader than a simple dictionary exercise.</p>
       <p>A strong word definitions quiz can include synonyms, antonyms, precise meanings, multiple-use words, context clues, abstract vocabulary, and terms that sound familiar until players have to define them clearly. The theme works because it sits in the gap between recognition and precision, which makes it challenging in a different way from spelling or grammar.</p>
-      <p>If you enjoy Word Definitions trivia, also try <a href="../themes/spelling.html">Spelling</a> and <a href="../themes/finance-and-investing.html">Finance &amp; Investing</a> on Trivia Gauntlet.</p>
+      <p>If you enjoy Word Definitions trivia, also try <a href="../themes/finance-and-investing.html">Finance &amp; Investing</a> and <a href="../themes/health-and-medicine.html">Health &amp; Medicine</a> on Trivia Gauntlet.</p>
       
         <div class="theme-related-quizzes">
           <h2>Related Quizzes</h2>
           <div class="grid">
             
-              <a class="card" href="../themes/spelling.html">
-                <h3>Spelling</h3>
-              </a>
-            
               <a class="card" href="../themes/finance-and-investing.html">
                 <h3>Finance &amp; Investing</h3>
               </a>
             
-              <a class="card" href="../themes/marketing-and-brands.html">
-                <h3>Marketing &amp; Brands</h3>
-              </a>
-            
-              <a class="card" href="../themes/mathematics.html">
-                <h3>Mathematics</h3>
-              </a>
-            
               <a class="card" href="../themes/health-and-medicine.html">
                 <h3>Health &amp; Medicine</h3>
+              </a>
+            
+              <a class="card" href="../themes/physics.html">
+                <h3>Physics</h3>
+              </a>
+            
+              <a class="card" href="../themes/technology.html">
+                <h3>Technology</h3>
+              </a>
+            
+              <a class="card" href="../themes/language.html">
+                <h3>Language</h3>
               </a>
             
           </div>
@@ -270,5 +271,6 @@
 
     setupThemePageSearch();
   </script>
+  <script src="../assets/profile.js"></script>
 </body>
 </html>

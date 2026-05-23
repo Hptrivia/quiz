@@ -667,17 +667,81 @@ let buyPackUrl = "https://ko-fi.com/triviaking/shop";
   const rawPage = parseInt(getParam("page") || "1", 10);
   const currentPage = Number.isNaN(rawPage) || rawPage < 1 ? 1 : rawPage;
 
-  const allQuestions = await fetchJSON(theme.questionFile);
-  const allPages = buildBalancedBatches(allQuestions, PAGE_SIZE, 15, 15);
-  const totalPages = allPages.length;
-  const safePage = Math.min(currentPage, totalPages);
+  let isReplay = getParam("replay") === "1";
+  let allQuestions, allPages, totalPages, safePage;
 
-  quizState.questions = (allPages[safePage - 1] || []).map(q => shuffleQuestionOptions(q));
+  if (isReplay) {
+    try {
+      const replayData = JSON.parse(localStorage.getItem("tg_replay") || "null");
+      if (replayData && replayData.questions && replayData.questions.length) {
+        quizState.questions = replayData.questions.map(q => shuffleQuestionOptions(q));
+        allPages = [quizState.questions]; totalPages = 1; safePage = 1;
+        if (typeof gtag === "function") gtag("event", "wrong_answers_replayed", { theme: theme.slug, count: replayData.questions.length });
+      } else { isReplay = false; }
+    } catch { }
+  }
+
+  if (!isReplay) {
+    allQuestions = await fetchJSON(theme.questionFile);
+    allPages = buildBalancedBatches(allQuestions, PAGE_SIZE, 15, 15);
+    totalPages = allPages.length;
+    safePage = Math.min(currentPage, totalPages);
+    quizState.questions = (allPages[safePage - 1] || []).map(q => shuffleQuestionOptions(q));
+  }
   quizState.currentIndex = 0;
   quizState.score = 0;
   quizState.selectedAnswer = null;
+  const wrongQuestions = [];
 
   let revealAnswers = false;
+  let showContinuePrompt = false;
+
+  if (!isReplay && currentPage === 1 && typeof getSession === "function") {
+    const saved = getSession("marathon", theme.slug);
+    if (saved && saved.round < totalPages) {
+      showContinuePrompt = true;
+      const quizBoxEl = document.getElementById("quizBox");
+      if (quizBoxEl) quizBoxEl.style.display = "none";
+      resultBox.style.display = "block";
+
+      let replayCount = 0;
+      try {
+        const raw = localStorage.getItem("tg_replay");
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (parsed.mode === "marathon" && parsed.themeSlug === theme.slug)
+            replayCount = (parsed.questions || []).length;
+        }
+      } catch {}
+
+      const replayHtml = replayCount > 0
+        ? `<div class="wrong-replay-row">You have ${replayCount} wrong answer${replayCount !== 1 ? "s" : ""} accumulated &mdash; <a href="play.html?theme=${theme.slug}&replay=1">Replay them all</a></div>`
+        : "";
+
+      resultBox.innerHTML = `
+        <h2>Round ${saved.round} Complete</h2>
+        <p>Your score: ${saved.score} / ${saved.total}</p>
+        <div class="cta-row">
+          <a class="primary-btn" id="continueRoundBtn" href="play.html?theme=${theme.slug}&page=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>
+          <button class="secondary-btn" id="startRound1Btn">Start from Round 1</button>
+        </div>
+        ${replayHtml}`;
+
+      document.getElementById("continueRoundBtn").addEventListener("click", () => {
+        if (typeof gtag === "function") gtag("event", "session_resumed", { theme: theme.slug, round: saved.round + 1 });
+      });
+
+      document.getElementById("startRound1Btn").addEventListener("click", () => {
+        if (typeof gtag === "function") gtag("event", "session_reset", { theme: theme.slug });
+        if (typeof clearSession === "function") clearSession("marathon", theme.slug);
+        localStorage.removeItem("tg_replay");
+        resultBox.style.display = "none";
+        resultBox.innerHTML = "";
+        if (quizBoxEl) quizBoxEl.style.display = "block";
+        showQuestion(0);
+      });
+    }
+  }
 
   if (progressText) progressText.textContent = `Page ${safePage}`;
 
@@ -787,6 +851,7 @@ let buyPackUrl = "https://ko-fi.com/triviaking/shop";
           selectedBtn.classList.add("correct-anim");
         }
       } else {
+        wrongQuestions.push(q);
         if (typeof SoundFX !== 'undefined') SoundFX.play('wrong');
         feedbackP.textContent = revealAnswers ? `Wrong. The correct answer is ${q.answer}.` : "Wrong";
         feedbackP.className = "feedback wrong";
@@ -854,6 +919,16 @@ const relatedThemesHtml = `
   </div>
 `;
 
+  const wrongCount = (typeof recordMarathon === "function")
+    ? recordMarathon(theme.slug, quizState.score, quizState.questions.length, wrongQuestions, isReplay)
+    : wrongQuestions.length;
+
+  if (!isReplay && typeof saveSession === "function") saveSession("marathon", theme.slug, safePage, quizState.score, quizState.questions.length);
+
+  const replayHtml = wrongCount > 0
+    ? `<div class="wrong-replay-row">You have ${wrongCount} wrong answer${wrongCount !== 1 ? "s" : ""} &mdash; <a href="play.html?theme=${theme.slug}&replay=1">Replay them all</a></div>`
+    : "";
+
   resultBox.innerHTML = `
     <h2>Quiz Complete</h2>
     <p>Your score: ${quizState.score} / ${quizState.questions.length}</p>
@@ -863,6 +938,7 @@ const relatedThemesHtml = `
       ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html">Buy me a coffee</a>` : ""}
       <a class="secondary-btn" href="contact.html">Report a Question</a>
     </div>
+    ${replayHtml}
 
       <div class="result-theme-search">
     <p class="result-theme-search-title">Try another theme</p>
@@ -921,7 +997,7 @@ if (resultSearchInput && resultSearchResults) {
   maybeShowEmailPopup(theme.title);
 }
 
-  showQuestion(0);
+  if (!showContinuePrompt) showQuestion(0);
 }
 
 /* ---------------- EMAIL POPUP ---------------- */

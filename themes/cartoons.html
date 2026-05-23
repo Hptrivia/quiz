@@ -57,34 +57,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What instrument does Lisa Simpson play?",
+          "name": "What is the name of the superhero family in 'The Incredibles' (animated universe crossover knowledge)?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Saxophone"
+            "text": "Parr family"
           }
         },
         {
           "@type": "Question",
-          "name": "Who owns the Krusty Krab?",
+          "name": "Who is Muriel’s husband?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Mr. Krabs"
+            "text": "Eustace"
           }
         },
         {
           "@type": "Question",
-          "name": "What is the name of the dog in 'Hey Arnold!'?",
+          "name": "What is the name of the robot maid in 'The Jetsons'?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Abner"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Who are the three Powerpuff Girls?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Blossom, Bubbles, Buttercup"
+            "text": "Rosie"
           }
         },
         {
@@ -93,6 +85,14 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Krang"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What do the Eds often try to earn money for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jawbreakers"
           }
         }
       ]
@@ -104,6 +104,7 @@
   <main class="container narrow">
     <div class="theme-top-links">
       <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+      <span id="navAvatarSlot"></span>
       <a href="../index.html" class="back-link">⌂ Home</a>
     </div>
 
@@ -155,14 +156,14 @@
           <p>Play locally against friends</p>
         </a>
 
+        <a class="card" href="../wordle/cartoons.html">
+          <h3>Wordle</h3>
+          <p>Guess themed words</p>
+        </a>
+
         <a class="card" href="../wordsearch.html?theme=cartoons&page=1">
           <h3>Word Search</h3>
           <p>Find hidden themed words</p>
-        </a>
-
-        <a class="card" href="../wordle.html?theme=cartoons&page=1">
-          <h3>Wordle</h3>
-          <p>Guess themed words</p>
         </a>
 
       </div>
@@ -172,36 +173,36 @@
           <h2>Sample Questions</h2>
           <p class="sq-hint">Tap an answer to reveal it.</p>
           <ul>
-            <li>What instrument does Lisa Simpson play? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Saxophone</span></li><li>Who owns the Krusty Krab? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Mr. Krabs</span></li><li>What is the name of the dog in &#39;Hey Arnold!&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Abner</span></li><li>Who are the three Powerpuff Girls? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Blossom, Bubbles, Buttercup</span></li><li>What is the name of the villain in &#39;TMNT&#39; who is a brain? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Krang</span></li><li>Who is Zuko’s uncle? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Iroh</span></li><li>Who is the main villain in &#39;The Powerpuff Girls&#39; with a devil-like appearance? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">HIM</span></li><li>Who is the main villain obsessed with candy in KND? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Stickybeard</span></li><li>What is the name of the yellow bird in Looney Tunes? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Tweety</span></li><li>Who owns Courage? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Muriel</span></li>
+            <li>What is the name of the superhero family in &#39;The Incredibles&#39; (animated universe crossover knowledge)? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Parr family</span></li><li>Who is Muriel’s husband? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Eustace</span></li><li>What is the name of the robot maid in &#39;The Jetsons&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Rosie</span></li><li>What is the name of the villain in &#39;TMNT&#39; who is a brain? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Krang</span></li><li>What do the Eds often try to earn money for? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Jawbreakers</span></li><li>What are the names of Timmy’s fairy godparents? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Cosmo and Wanda</span></li><li>What is the name of the talking cat in &#39;Tom and Jerry&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Tom</span></li><li>What is Eustace’s personality like? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Grumpy</span></li><li>What is Dexter’s sister’s name? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Dee Dee</span></li><li>Who owns Courage? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Muriel</span></li>
           </ul>
         </div>
       
       <p>Cartoon trivia works because it spans generations of animated storytelling, from childhood classics to modern adult animation.</p>
       <p>A strong cartoons quiz can include shows like The Simpsons, SpongeBob SquarePants, Tom and Jerry, Adventure Time, Family Guy, and Rick and Morty, alongside characters, catchphrases, studios, and iconic episodes. The category works because animation creates instantly recognisable visual identity and long-term cultural memory.</p>
-      <p>If you enjoy Cartoons trivia, also try <a href="../themes/bollywood.html">Bollywood</a> and <a href="../themes/nigerian-music.html">Nigerian Music</a> on Trivia Gauntlet.</p>
+      <p>If you enjoy Cartoons trivia, also try <a href="../themes/true-crime.html">True Crime</a> and <a href="../themes/anime.html">Anime</a> on Trivia Gauntlet.</p>
       
         <div class="theme-related-quizzes">
           <h2>Related Quizzes</h2>
           <div class="grid">
             
-              <a class="card" href="../themes/bollywood.html">
-                <h3>Bollywood</h3>
+              <a class="card" href="../themes/true-crime.html">
+                <h3>True Crime</h3>
               </a>
             
-              <a class="card" href="../themes/nigerian-music.html">
-                <h3>Nigerian Music</h3>
+              <a class="card" href="../themes/anime.html">
+                <h3>Anime</h3>
               </a>
             
-              <a class="card" href="../themes/world-capitals.html">
-                <h3>World Capitals</h3>
+              <a class="card" href="../themes/true-or-false.html">
+                <h3>True or False</h3>
               </a>
             
-              <a class="card" href="../themes/science.html">
-                <h3>Science</h3>
+              <a class="card" href="../themes/video-games.html">
+                <h3>Video Games</h3>
               </a>
             
-              <a class="card" href="../themes/animals.html">
-                <h3>Animals</h3>
+              <a class="card" href="../themes/fun-facts.html">
+                <h3>Fun Facts</h3>
               </a>
             
           </div>
@@ -270,5 +271,6 @@
 
     setupThemePageSearch();
   </script>
+  <script src="../assets/profile.js"></script>
 </body>
 </html>
