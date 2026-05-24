@@ -13,6 +13,7 @@ async function renderMultiThemeSurvival() {
 
   document.title = selectedThemes.map(t => t.title).join(" + ") + " — Survival | Trivia Gauntlet";
   if (typeof gtag === "function") gtag("event", "page_view", { page_title: document.title, page_location: window.location.href });
+  if (typeof addNoIndex === "function") addNoIndex();
 
   const difficultyBox = document.getElementById("difficultyBox");
   const gameBox = document.getElementById("survivalGameBox");
@@ -304,6 +305,7 @@ async function renderSurvivalPage() {
   if (!theme) return;
 
   document.title = `${theme.title} Survival Mode - Trivia Gauntlet`;
+  if (typeof setCanonical === "function") setCanonical(`${window.location.origin}/themes/${theme.slug}.html`);
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.setAttribute('content', `Play ${theme.title} Survival Mode on Trivia Gauntlet. Answer correctly to keep your streak alive — one wrong answer ends the run.`);
 

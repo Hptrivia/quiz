@@ -1,3 +1,14 @@
+function setCanonical(url) {
+  let el = document.querySelector('link[rel="canonical"]');
+  if (!el) { el = document.createElement('link'); el.rel = 'canonical'; document.head.appendChild(el); }
+  el.href = url;
+}
+function addNoIndex() {
+  let el = document.querySelector('meta[name="robots"]');
+  if (!el) { el = document.createElement('meta'); el.name = 'robots'; document.head.appendChild(el); }
+  el.content = 'noindex,follow';
+}
+
 function isPremiumUser() {
   const expiry = localStorage.getItem('adsRemovedUntil');
   if (!expiry) return false;
@@ -451,6 +462,7 @@ async function renderMultiThemeMarathon() {
 
   document.title = selectedThemes.map(t => t.title).join(" + ") + " — Marathon | Trivia Gauntlet";
   if (typeof gtag === "function") gtag("event", "page_view", { page_title: document.title, page_location: window.location.href });
+  addNoIndex();
 
   const questionsByTheme = {};
   await Promise.all(selectedThemes.map(async theme => {
@@ -739,6 +751,7 @@ async function renderPlayPage() {
     page_location: window.location.href
   });
 }
+  setCanonical(`${window.location.origin}/themes/${theme.slug}.html`);
 
 let buyPackUrl = "https://ko-fi.com/triviaking/shop";
  try { const normalPackLinks = await fetchJSON("data/normal_pack_links.json"); 

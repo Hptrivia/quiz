@@ -13,6 +13,7 @@ async function renderMultiThemeChallenge() {
 
   document.title = selectedThemes.map(t => t.title).join(" + ") + " — Challenge | Trivia Gauntlet";
   if (typeof gtag === "function") gtag("event", "page_view", { page_title: document.title, page_location: window.location.href });
+  if (typeof addNoIndex === "function") addNoIndex();
 
   const questionsByTheme = {};
   await Promise.all(selectedThemes.map(async theme => {
@@ -295,6 +296,7 @@ async function renderChallengePage() {
   }
 
   document.title = `${theme.title} Challenge Mode - Trivia Gauntlet`;
+  if (typeof setCanonical === "function") setCanonical(`${window.location.origin}/themes/${theme.slug}.html`);
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.setAttribute('content', `Play ${theme.title} trivia in Challenge Mode on Trivia Gauntlet. 30 questions per round across multiple rounds.`);
 

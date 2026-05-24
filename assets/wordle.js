@@ -9,6 +9,7 @@ const WORDLE_BADGE_COLORS = [
 ];
 
 async function renderWordleMashupMode(themesParam) {
+  if (typeof addNoIndex === "function") addNoIndex();
   const rawPage    = parseInt(getParam("page") || "1", 10);
   const slugs      = themesParam.split(",").map(s => s.trim()).filter(Boolean);
   const sessionKey = slugs.slice().sort().join(",");
@@ -602,7 +603,7 @@ async function renderWordlePage() {
 
 function injectWordleHead(theme, page) {
   const SITE = "https://triviagauntlet.app";
-  const canonicalUrl = `${SITE}/wordle.html?theme=${theme.slug}&page=1`;
+  const canonicalUrl = `${SITE}/wordle/${theme.slug}.html`;
 
   let canonical = document.querySelector('link[rel="canonical"]');
   if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical); }

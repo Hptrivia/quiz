@@ -346,6 +346,7 @@ function wsWireEvents() {
 // ─── Mashup Word Search ───────────────────────────────────────────────────────
 
 async function renderWordSearchMashupMode(themesParam) {
+  if (typeof addNoIndex === "function") addNoIndex();
   const rawPage = parseInt(getParam("page") || "1", 10);
   const slugs   = themesParam.split(",").map(s => s.trim()).filter(Boolean);
 
