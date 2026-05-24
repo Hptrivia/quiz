@@ -1340,6 +1340,58 @@ body[data-page="wordsearch"].premium-mode .ws-game-area {
   min-height: 18px;
 }
 
+/* ---------- notify card (inline, end of last round) ---------- */
+.notify-card {
+  background: linear-gradient(135deg, rgba(59,130,246,.12), rgba(59,130,246,.05));
+  border: 1px solid rgba(59,130,246,.4);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+}
+.notify-card-heading {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+.notify-card-sub {
+  font-size: 13px;
+  color: var(--muted-text, #aaa);
+  margin: 0 0 14px;
+}
+.notify-card-form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.notify-card-input {
+  flex: 1;
+  min-width: 180px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--input-border, #333);
+  background: var(--input-bg, #0f0f0f);
+  color: var(--text, #f5f5f5);
+  font-size: 14px;
+  outline: none;
+}
+.notify-card-input:focus { border-color: var(--card-hover-border, #3b82f6); }
+.notify-card-btn {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  background: var(--primary-btn-bg, #3b82f6);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.notify-card-btn:hover { background: var(--primary-btn-hover, #2563eb); }
+.notify-card-btn:disabled { opacity: .6; cursor: default; }
+.notify-card-status { font-size: 12px; margin-top: 8px; min-height: 16px; }
+.notify-card-done { font-size: 14px; color: var(--feedback-correct, #4ade80); text-align: center; padding: 6px 0; }
+
 .mashup-q-badge {
   display: inline-block;
   font-size: 11px;
@@ -1546,3 +1598,63 @@ body[data-page="daily"].premium-mode main { padding-top: 20px; }
 .wrong-replay-row { text-align: center; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--panel-border); }
 .wrong-replay-row a { color: var(--muted-text); font-size: 0.88rem; text-decoration: underline; text-underline-offset: 3px; }
 .wrong-replay-row a:hover { color: var(--text-color); }
+
+/* ── Profile onboarding toast ── */
+.profile-onboard-toast {
+  position: fixed;
+  top: 56px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-16px);
+  opacity: 0;
+  z-index: 9990;
+  width: min(420px, calc(100vw - 24px));
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.55);
+  padding: 14px 16px;
+  transition: transform 0.32s ease, opacity 0.28s ease;
+}
+.profile-onboard-toast--in { transform: translateX(-50%) translateY(0); opacity: 1; }
+.profile-onboard-body {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.profile-onboard-icon { flex-shrink: 0; }
+.profile-onboard-text {
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: var(--text-color, #f1f5f9);
+}
+.profile-onboard-text strong { display: block; font-size: 0.97rem; margin-bottom: 3px; }
+.profile-onboard-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+.profile-onboard-btn {
+  background: var(--primary-btn-bg, #3b82f6);
+  color: #fff;
+  border-radius: 8px;
+  padding: 7px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+.profile-onboard-btn:hover { opacity: 0.85; }
+.profile-onboard-dismiss {
+  background: none;
+  border: none;
+  color: var(--muted-text, #94a3b8);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 6px;
+  line-height: 1;
+  transition: background 0.15s, color 0.15s;
+}
+.profile-onboard-dismiss:hover { background: rgba(255,255,255,0.08); color: var(--text-color, #f1f5f9); }

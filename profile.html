@@ -90,12 +90,12 @@
 
         <!-- Email -->
         <div style="margin-bottom:20px;">
-          <label class="form-label" for="profileEmail">Email (for future recovery)</label>
+          <label class="form-label" for="profileEmail">Get notified when new questions arrive</label>
           <div style="display:flex;gap:8px;">
             <input id="profileEmail" class="form-input" type="email" placeholder="your@email.com" style="flex:1;" />
             <button class="secondary-btn" id="emailSaveBtn" onclick="saveEmail()" style="white-space:nowrap;">Save</button>
           </div>
-          <p style="font-size:0.78rem;color:var(--muted-text);margin-top:5px;">We&#39;ll use this to help you recover your stats when cloud save launches.</p>
+          <p style="font-size:0.78rem;color:var(--muted-text);margin-top:5px;">New questions are coming soon for every theme. We'll email you when they drop — nothing else.</p>
         </div>
 
         <!-- Export / Import -->
@@ -110,6 +110,10 @@
       </div>
 
     </section>
+
+    <div style="text-align:center;margin:16px 0 24px;">
+      <a href="contact.html" class="secondary-btn" style="font-size:0.85rem;padding:8px 18px;text-decoration:none;">Leave Feedback</a>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -255,10 +259,10 @@
           if (mode === "Word Search") val = `${d.completed || 0} completed`;
           return `<div class="theme-stat-row"><span>${mode}</span><span>${val}</span></div>`;
         }).join("");
-        return `<div class="theme-stat-card">
-          <h3><a href="themes/${slug}.html" style="color:inherit;text-decoration:none;">${title}</a></h3>
+        return `<a href="themes/${slug}.html" class="theme-stat-card" style="display:block;color:inherit;text-decoration:none;cursor:pointer;">
+          <h3>${title}</h3>
           ${rows}
-        </div>`;
+        </a>`;
       }).join("");
     }
 
@@ -269,12 +273,12 @@
         return;
       }
       document.getElementById("savedMashupsList").innerHTML = list.map((m, i) => `
-        <div class="theme-stat-card" style="display:flex;justify-content:space-between;align-items:center;">
+        <div class="theme-stat-card" style="display:flex;justify-content:space-between;align-items:center;cursor:pointer;" onclick="window.location.href='mashup.html?preset=${(m.themes || []).join(',')}'">
           <div>
             <div style="font-weight:600;margin-bottom:4px;">${m.name || "My Mix"}</div>
             <div style="font-size:0.78rem;color:var(--muted-text);">${(m.themes || []).join(", ")}</div>
           </div>
-          <div style="display:flex;gap:8px;">
+          <div style="display:flex;gap:8px;" onclick="event.stopPropagation()">
             <a href="mashup.html?preset=${(m.themes || []).join(',')}" class="secondary-btn" style="font-size:0.8rem;padding:6px 12px;text-decoration:none;">Play</a>
             <button class="secondary-btn" style="font-size:0.8rem;padding:6px 12px;" onclick="deleteMashup(${i})">&#10005;</button>
           </div>

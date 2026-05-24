@@ -416,6 +416,12 @@ async function renderSurvivalPage() {
 
     if (typeof recordSurvival === "function") recordSurvival(theme.slug, state.score);
 
+    const pbKey = `epSurvivalBest_${theme.slug}`;
+    const prevBest = parseInt(localStorage.getItem(pbKey) || "0", 10);
+    const isNewPB = state.score > prevBest;
+    if (isNewPB) localStorage.setItem(pbKey, state.score);
+    const notifyHtml = isNewPB ? buildNotifyCard(theme.title, true, "survival") : "";
+
     resultBox.innerHTML = `
       <h2>Survival Over</h2>
       <p>Your score: ${state.score}</p>
@@ -424,6 +430,7 @@ async function renderSurvivalPage() {
         ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html?theme=${theme.slug}">Unlimited Lifelines</a>` : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
+      ${notifyHtml}
       <div class="result-theme-search">
         <p class="result-theme-search-title">Try another theme</p>
         <div class="search-wrap">
@@ -472,17 +479,8 @@ async function renderSurvivalPage() {
       if (typeof showInstallCard === "function") showInstallCard();
     }, 800);
 
+    if (notifyHtml) wireNotifyCard(theme.title, "survival");
     if (typeof maybeShowPwaPopup === "function" && maybeShowPwaPopup()) return;
-    maybeShowEmailPopup(theme.slug, theme.title, state.score);
-  }
-
-  function maybeShowEmailPopup(themeSlug, themeName, currentScore) {
-    if (!emailPopupDismissAllowed()) return;
-    const key = `epSurvivalBest_${themeSlug}`;
-    const prevBest = parseInt(localStorage.getItem(key) || "0", 10);
-    if (currentScore <= prevBest) return;
-    localStorage.setItem(key, currentScore);
-    showEmailPopupUI(themeName);
   }
 
   function maybeStartRecovery() {

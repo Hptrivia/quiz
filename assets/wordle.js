@@ -167,14 +167,29 @@ async function renderWordleMashupMode(themesParam) {
     if (guess === targetWord) {
       setFeedback("Correct", "correct"); gameOver = true;
       if (typeof saveSession === "function") saveSession("wordle", sessionKey, safePage, 0, totalPages);
+      maybeInjectWordleCard();
       return;
     }
     if (guesses.length === 6) {
       setFeedback(`Wrong. The word was ${targetWord}.`, "wrong"); gameOver = true;
       if (typeof saveSession === "function") saveSession("wordle", sessionKey, safePage, 0, totalPages);
+      maybeInjectWordleCard();
       return;
     }
     setFeedback(`${6 - guesses.length} guess(es) left.`);
+  }
+
+  function maybeInjectWordleCard() {
+    if (currentWordInPage !== pageWords.length - 1 || safePage !== totalPages) return;
+    if (typeof buildNotifyCard !== "function") return;
+    const cont = document.getElementById("wordlePageContent");
+    if (!cont || cont.querySelector(".notify-card")) return;
+    const html = buildNotifyCard("Wordle", false, "wordle");
+    if (!html) return;
+    const div = document.createElement("div");
+    div.innerHTML = html;
+    cont.insertBefore(div.firstElementChild, cont.firstChild);
+    wireNotifyCard("Wordle", "wordle");
   }
 
   function handleKey(key) {
@@ -309,6 +324,11 @@ async function renderWordlePage() {
   if (typeof updateRemoveAdsFooter === "function") {
     updateRemoveAdsFooter(theme.slug, "normal");
   }
+
+  // Update trivia nav link to point to the theme page
+  const _wdBackEls  = document.querySelectorAll('.back-link');
+  const _wdTriviaEl = _wdBackEls.length > 1 ? _wdBackEls[_wdBackEls.length - 1] : null;
+  if (_wdTriviaEl && slug) _wdTriviaEl.href = `themes/${slug}.html`;
 
   const allWordleData = await fetchJSON("data/wordle_words.txt");
   const words = allWordleData[theme.title];
@@ -462,6 +482,7 @@ async function renderWordlePage() {
       gameOver = true;
       if (typeof recordWordle === "function") recordWordle(theme.slug, true);
       if (typeof saveSession === "function") saveSession("wordle", theme.slug, safePage, 0, totalPages);
+      maybeInjectWordleCard();
       return;
     }
 
@@ -470,10 +491,24 @@ async function renderWordlePage() {
       gameOver = true;
       if (typeof recordWordle === "function") recordWordle(theme.slug, false);
       if (typeof saveSession === "function") saveSession("wordle", theme.slug, safePage, 0, totalPages);
+      maybeInjectWordleCard();
       return;
     }
 
     setFeedback(`${6 - guesses.length} guess(es) left.`);
+  }
+
+  function maybeInjectWordleCard() {
+    if (currentWordInPage !== pageWords.length - 1 || safePage !== totalPages) return;
+    if (typeof buildNotifyCard !== "function") return;
+    const cont = document.getElementById("wordlePageContent");
+    if (!cont || cont.querySelector(".notify-card")) return;
+    const html = buildNotifyCard(theme.title, false, "wordle");
+    if (!html) return;
+    const div = document.createElement("div");
+    div.innerHTML = html;
+    cont.insertBefore(div.firstElementChild, cont.firstChild);
+    wireNotifyCard(theme.title, "wordle");
   }
 
   function handleKey(key) {

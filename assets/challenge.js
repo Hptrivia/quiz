@@ -590,6 +590,8 @@ async function renderChallengePage() {
       ? `<div class="wrong-replay-row">You have ${wrongCount} wrong answer${wrongCount !== 1 ? "s" : ""} &mdash; <a href="challenge.html?theme=${theme.slug}&replay=1">Replay them all</a></div>`
       : "";
 
+    const notifyHtml = (!hasNextRound && !isReplay) ? buildNotifyCard(theme.title, false, "challenge") : "";
+
     resultBox.innerHTML = `
       <h2>Round ${safeRound} Complete</h2>
       <p>Your score: ${state.score} / ${state.questions.length}</p>
@@ -601,6 +603,7 @@ async function renderChallengePage() {
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
       ${replayHtml}
+      ${notifyHtml}
     </div>
       ${affiliateHtml}
       <div class="result-theme-search">
@@ -648,16 +651,8 @@ async function renderChallengePage() {
       });
     }
 
+    if (notifyHtml) wireNotifyCard(theme.title, "challenge");
     if (typeof maybeShowPwaPopup === "function" && maybeShowPwaPopup()) return;
-    maybShowChallengeEmailPopup(theme.title);
-  }
-
-  function maybShowChallengeEmailPopup(themeName) {
-    if (!emailPopupDismissAllowed()) return;
-    const rounds = parseInt(localStorage.getItem("epChallengeRounds") || "0", 10) + 1;
-    localStorage.setItem("epChallengeRounds", rounds);
-    if (rounds < 3) return;
-    showEmailPopupUI(themeName);
   }
 
   if (!showContinuePrompt) showQuestion(0);

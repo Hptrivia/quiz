@@ -415,10 +415,13 @@ async function renderWordSearchPage() {
   const themes  = await loadThemes();
   const theme   = themes.find(t => t.slug === slug);
 
-  const titleEl  = document.getElementById('wsTitle');
-  const backEl   = document.querySelector('.back-link');
+  const titleEl   = document.getElementById('wsTitle');
+  const backEl    = document.querySelector('.back-link');
+  const backEls   = document.querySelectorAll('.back-link');
+  const triviaEl  = backEls.length > 1 ? backEls[backEls.length - 1] : null;
 
   if (backEl && slug) backEl.href = `quiz.html?theme=${slug}`;
+  if (triviaEl && slug) triviaEl.href = `themes/${slug}.html`;
 
   if (!theme) {
     document.title = "Themed Word Search | Trivia Gauntlet";

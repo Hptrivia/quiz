@@ -929,6 +929,8 @@ const relatedThemesHtml = `
     ? `<div class="wrong-replay-row">You have ${wrongCount} wrong answer${wrongCount !== 1 ? "s" : ""} &mdash; <a href="play.html?theme=${theme.slug}&replay=1">Replay them all</a></div>`
     : "";
 
+  const notifyHtml = (!hasNextPage && !isReplay) ? buildNotifyCard(theme.title, false, "marathon") : "";
+
   resultBox.innerHTML = `
     <h2>Quiz Complete</h2>
     <p>Your score: ${quizState.score} / ${quizState.questions.length}</p>
@@ -939,6 +941,7 @@ const relatedThemesHtml = `
       <a class="secondary-btn" href="contact.html">Report a Question</a>
     </div>
     ${replayHtml}
+    ${notifyHtml}
 
       <div class="result-theme-search">
     <p class="result-theme-search-title">Try another theme</p>
@@ -993,108 +996,65 @@ if (resultSearchInput && resultSearchResults) {
     }
   }, 800);
 
+  if (notifyHtml) wireNotifyCard(theme.title, "marathon");
   if (typeof maybeShowPwaPopup === "function" && maybeShowPwaPopup()) return;
-  maybeShowEmailPopup(theme.title);
 }
 
   if (!showContinuePrompt) showQuestion(0);
 }
 
-/* ---------------- EMAIL POPUP ---------------- */
-function emailPopupDismissAllowed() {
-  if (localStorage.getItem("epDone")) return false;
-  const dismissCount = parseInt(localStorage.getItem("epDismissCount") || "0", 10);
-  const dismissedAt = parseInt(localStorage.getItem("epDismissedAt") || "0", 10);
-  if (dismissedAt) {
-    const waitDays = dismissCount >= 2 ? 30 : 7;
-    const elapsed = (Date.now() - dismissedAt) / (1000 * 60 * 60 * 24);
-    if (elapsed < waitDays) return false;
-  }
-  return true;
+/* ---------------- NOTIFY CARD (inline, last round / new PB) ---------------- */
+function buildNotifyCard(themeName, isPB = false, source = "trivia") {
+  if (localStorage.getItem("epDone")) return "";
+  const heading = isPB
+    ? `🏆 New personal best for <strong>${themeName}</strong>`
+    : `🎉 You've answered every question for <strong>${themeName}</strong>`;
+  return `
+    <div class="notify-card" id="notifyCard" data-source="${source}" data-theme="${themeName}">
+      <div class="notify-card-heading">${heading}</div>
+      <p class="notify-card-sub">New questions are on the way. Want to know when they drop?</p>
+      <div class="notify-card-form">
+        <input class="notify-card-input" type="email" placeholder="you@example.com" autocomplete="email" id="notifyEmailInput" />
+        <button class="notify-card-btn" id="notifySubmitBtn">Notify me</button>
+      </div>
+      <p class="notify-card-status" id="notifyStatus"></p>
+    </div>`;
 }
 
-let emailPopupShown = false;
-
-function showEmailPopupUI(themeName) {
-  if (emailPopupShown) return;
-  emailPopupShown = true;
-  const dismissCount = parseInt(localStorage.getItem("epDismissCount") || "0", 10);
-
-  const overlay = document.createElement("div");
-  overlay.className = "email-popup-overlay";
-  overlay.innerHTML = `
-    <div class="email-popup">
-      <button class="email-popup-close" aria-label="Close">&times;</button>
-      <h3>Don´t miss what´s next</h3>
-      <p>Get notified about new questions, themes and game modes</p>
-      <div class="email-popup-form">
-        <input class="email-popup-input" type="email" placeholder="you@example.com" autocomplete="email" />
-        <button class="email-popup-submit">Subscribe</button>
-      </div>
-      <p class="email-popup-status"></p>
-    </div>
-  `;
-  document.body.appendChild(overlay);
-
-  const removeOverlay = () => {
-    overlay.classList.remove("visible");
-    setTimeout(() => overlay.remove(), 400);
-  };
-
-  overlay.querySelector(".email-popup-close").addEventListener("click", () => {
-    const newCount = dismissCount + 1;
-    localStorage.setItem("epDismissCount", newCount);
-    localStorage.setItem("epDismissedAt", Date.now());
-    if (newCount >= 3) localStorage.setItem("epDone", "1");
-    removeOverlay();
-  });
-
-  const input = overlay.querySelector(".email-popup-input");
-  const submitBtn = overlay.querySelector(".email-popup-submit");
-  const statusEl = overlay.querySelector(".email-popup-status");
-
-  submitBtn.addEventListener("click", async () => {
+function wireNotifyCard(themeName, source = "trivia") {
+  const card = document.getElementById("notifyCard");
+  if (!card) return;
+  const input = document.getElementById("notifyEmailInput");
+  const btn = document.getElementById("notifySubmitBtn");
+  const status = document.getElementById("notifyStatus");
+  btn.addEventListener("click", async () => {
     const email = input.value.trim();
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      statusEl.textContent = "Please enter a valid email.";
-      statusEl.style.color = "var(--feedback-wrong)";
+      status.textContent = "Please enter a valid email.";
+      status.style.color = "var(--feedback-wrong)";
       return;
     }
-
-    submitBtn.disabled = true;
-    statusEl.textContent = "Subscribing...";
-    statusEl.style.color = "";
-
-    const success = await submitEmailToMailchimp(email, themeName);
-    if (success) {
+    btn.disabled = true;
+    status.textContent = "Saving...";
+    status.style.color = "";
+    const ok = await submitEmailToMailchimp(email, themeName, source);
+    if (ok) {
       localStorage.setItem("epDone", "1");
-      statusEl.textContent = "You're in! Thanks for subscribing.";
-      statusEl.style.color = "var(--feedback-correct)";
-      setTimeout(() => removeOverlay(), 2000);
+      card.innerHTML = `<p class="notify-card-done">✓ You're in! We'll let you know when new questions drop.</p>`;
     } else {
-      submitBtn.disabled = false;
-      statusEl.textContent = "Something went wrong. Please try again.";
-      statusEl.style.color = "var(--feedback-wrong)";
+      btn.disabled = false;
+      status.textContent = "Something went wrong. Try again.";
+      status.style.color = "var(--feedback-wrong)";
     }
   });
-
-  setTimeout(() => overlay.classList.add("visible"), 3500);
 }
 
-function maybeShowEmailPopup(themeName) {
-  if (!emailPopupDismissAllowed()) return;
-  const rounds = parseInt(localStorage.getItem("epMarathonRounds") || "0", 10) + 1;
-  localStorage.setItem("epMarathonRounds", rounds);
-  if (rounds < 2) return;
-  showEmailPopupUI(themeName);
-}
-
-async function submitEmailToMailchimp(email, themeName) {
+async function submitEmailToMailchimp(email, themeName, source = "trivia") {
   try {
     const res = await fetch("https://formspree.io/f/mqewdrkn", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, theme: themeName })
+      body: JSON.stringify({ email, theme: themeName, source, _subject: `New questions notify — ${source} — ${themeName}` })
     });
     return res.ok;
   } catch {
