@@ -175,54 +175,7 @@
         <div class="stat-card"><div class="stat-card-val">${s.triviaRush.highestScore.toLocaleString()}</div><div class="stat-card-label">Trivia Rush Best</div></div>
       `;
 
-      let html = "";
-
-      if (s.marathon.roundsCompleted > 0) {
-        html += `<div class="profile-section-title">Marathon</div>
-        <div class="theme-stat-card">
-          <div class="theme-stat-row"><span>Best score</span><span>${s.marathon.bestScore}/30${s.marathon.bestScoreTheme ? ` (${s.marathon.bestScoreTheme})` : ""}</span></div>
-          <div class="theme-stat-row"><span>Rounds completed</span><span>${s.marathon.roundsCompleted}</span></div>
-          <div class="theme-stat-row"><span>Total correct</span><span>${s.marathon.totalCorrect} / ${s.marathon.totalAnswered}</span></div>
-        </div>`;
-      }
-      if (s.challenge.roundsCompleted > 0) {
-        html += `<div class="profile-section-title">Challenge</div>
-        <div class="theme-stat-card">
-          <div class="theme-stat-row"><span>Best score</span><span>${s.challenge.bestScore}/10${s.challenge.bestScoreTheme ? ` (${s.challenge.bestScoreTheme})` : ""}</span></div>
-          <div class="theme-stat-row"><span>Rounds completed</span><span>${s.challenge.roundsCompleted}</span></div>
-        </div>`;
-      }
-      if (s.survival.totalRuns > 0) {
-        html += `<div class="profile-section-title">Survival</div>
-        <div class="theme-stat-card">
-          <div class="theme-stat-row"><span>Longest run</span><span>${s.survival.longestRun} Qs${s.survival.longestRunTheme ? ` (${s.survival.longestRunTheme})` : ""}</span></div>
-          <div class="theme-stat-row"><span>Total runs</span><span>${s.survival.totalRuns}</span></div>
-        </div>`;
-      }
-      if (s.triviaRush.totalRuns > 0) {
-        html += `<div class="profile-section-title">Trivia Rush</div>
-        <div class="theme-stat-card">
-          <div class="theme-stat-row"><span>Highest score</span><span>${s.triviaRush.highestScore.toLocaleString()}${s.triviaRush.highestScoreTheme ? ` (${s.triviaRush.highestScoreTheme})` : ""}</span></div>
-          <div class="theme-stat-row"><span>Longest streak</span><span>${s.triviaRush.longestStreak}</span></div>
-          <div class="theme-stat-row"><span>Total runs</span><span>${s.triviaRush.totalRuns}</span></div>
-        </div>`;
-      }
-      if (s.wordle.totalAttempted > 0) {
-        const wPct = Math.round((s.wordle.totalSolved / s.wordle.totalAttempted) * 100);
-        html += `<div class="profile-section-title">Wordle</div>
-        <div class="theme-stat-card">
-          <div class="theme-stat-row"><span>Words solved</span><span>${s.wordle.totalSolved} / ${s.wordle.totalAttempted} (${wPct}%)</span></div>
-        </div>`;
-      }
-      if (s.wordSearch.totalCompleted > 0) {
-        html += `<div class="profile-section-title">Word Search</div>
-        <div class="theme-stat-card">
-          <div class="theme-stat-row"><span>Puzzles completed</span><span>${s.wordSearch.totalCompleted}</span></div>
-        </div>`;
-      }
-
-      if (!html) html = `<p class="profile-empty">No stats yet. Start playing to build your history.</p>`;
-      document.getElementById("overallModeStats").innerHTML = html;
+      document.getElementById("overallModeStats").innerHTML = "";
     }
 
     function renderThemes(p) {
@@ -251,8 +204,14 @@
         const title = slug.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
         const rows = Object.entries(modes).map(([mode, d]) => {
           let val = "";
-          if (mode === "Marathon")    val = `Best ${d.bestScore || 0}/30 · ${d.rounds || 0} rounds`;
-          if (mode === "Challenge")   val = `Best ${d.bestScore || 0}/10 · ${d.rounds || 0} rounds`;
+          if (mode === "Marathon") {
+            const pct = (d.highestRound && d.totalRounds) ? `${Math.round(d.highestRound / d.totalRounds * 100)}% completed` : null;
+            val = `${pct ? pct + " · " : ""}best score ${d.bestScore || 0}/30`;
+          }
+          if (mode === "Challenge") {
+            const pct = (d.highestRound && d.totalRounds) ? `${Math.round(d.highestRound / d.totalRounds * 100)}% completed` : null;
+            val = `${pct ? pct + " · " : ""}best score ${d.bestScore || 0}/10`;
+          }
           if (mode === "Survival")    val = `Best ${d.longestRun || 0} Qs · ${d.runs || 0} runs`;
           if (mode === "Trivia Rush") val = `Best ${(d.highestScore || 0).toLocaleString()} · ${d.runs || 0} runs`;
           if (mode === "Wordle")      val = `${d.solved || 0}/${d.attempted || 0} solved`;
@@ -268,22 +227,42 @@
 
     function renderMashups(p) {
       const list = p.savedMashups || [];
+      const allStats = p.savedMashupStats || {};
       if (!list.length) {
         document.getElementById("savedMashupsList").innerHTML = `<p class="profile-empty">No saved mashups yet. Save a custom theme mix from the Mashup page.</p>`;
         return;
       }
-      document.getElementById("savedMashupsList").innerHTML = list.map((m, i) => `
-        <div class="theme-stat-card" style="display:flex;justify-content:space-between;align-items:center;cursor:pointer;" onclick="window.location.href='mashup.html?preset=${(m.themes || []).join(',')}'">
-          <div>
-            <div style="font-weight:600;margin-bottom:4px;">${m.name || "My Mix"}</div>
-            <div style="font-size:0.78rem;color:var(--muted-text);">${(m.themes || []).join(", ")}</div>
-          </div>
-          <div style="display:flex;gap:8px;" onclick="event.stopPropagation()">
-            <a href="mashup.html?preset=${(m.themes || []).join(',')}" class="secondary-btn" style="font-size:0.8rem;padding:6px 12px;text-decoration:none;">Play</a>
-            <button class="secondary-btn" style="font-size:0.8rem;padding:6px 12px;" onclick="deleteMashup(${i})">&#10005;</button>
-          </div>
-        </div>
-      `).join("");
+      const noteHtml = `<p style="font-size:0.78rem;color:var(--muted-text);margin:0 0 12px;">Stats are tracked from the time you save a mix.</p>`;
+      document.getElementById("savedMashupsList").innerHTML = noteHtml + list.map((m, i) => {
+        const key = (m.themes || []).slice().sort().join(",");
+        const ms = allStats[key] || {};
+        const statRows = [];
+        if (ms.marathon?.rounds) {
+          const pct = (ms.marathon.highestRound && ms.marathon.totalRounds) ? `${Math.round(ms.marathon.highestRound / ms.marathon.totalRounds * 100)}% completed · ` : "";
+          statRows.push(`Marathon: ${pct}best score ${ms.marathon.bestScore || 0}/30`);
+        }
+        if (ms.challenge?.rounds) {
+          const pct = (ms.challenge.highestRound && ms.challenge.totalRounds) ? `${Math.round(ms.challenge.highestRound / ms.challenge.totalRounds * 100)}% completed · ` : "";
+          statRows.push(`Challenge: ${pct}best score ${ms.challenge.bestScore || 0}/10`);
+        }
+        if (ms.survival?.runs)        statRows.push(`Survival: best ${ms.survival.longestRun || 0} · ${ms.survival.runs} run${ms.survival.runs !== 1 ? "s" : ""}`);
+        if (ms.wordle?.attempted)     statRows.push(`Wordle: ${ms.wordle.solved || 0}/${ms.wordle.attempted} solved`);
+        if (ms.wordSearch?.completed) statRows.push(`Word Search: ${ms.wordSearch.completed} completed`);
+        const statsLine = statRows.length
+          ? `<div style="font-size:0.75rem;color:var(--muted-text);margin-top:5px;">${statRows.map(r => `<div>${r}</div>`).join("")}</div>`
+          : "";
+        return `
+          <div class="theme-stat-card" style="display:flex;justify-content:space-between;align-items:center;cursor:pointer;" onclick="window.location.href='mashup-landing.html?themes=${(m.themes || []).join(',')}'">
+            <div>
+              <div style="font-weight:600;margin-bottom:2px;">${m.name || "My Mix"}</div>
+              ${statsLine}
+            </div>
+            <div style="display:flex;gap:8px;" onclick="event.stopPropagation()">
+              <a href="mashup-landing.html?themes=${(m.themes || []).join(',')}" class="secondary-btn" style="font-size:0.8rem;padding:6px 12px;text-decoration:none;">Play</a>
+              <button class="secondary-btn" style="font-size:0.8rem;padding:6px 12px;" onclick="deleteMashup(${i})">&#10005;</button>
+            </div>
+          </div>`;
+      }).join("");
     }
 
     function switchTab(name, btn) {

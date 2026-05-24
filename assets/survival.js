@@ -152,6 +152,10 @@ async function renderMultiThemeSurvival() {
     gameBox.style.display = "none";
     resultBox.style.display = "block";
     resultBox.classList.remove("result-anim"); void resultBox.offsetWidth; resultBox.classList.add("result-anim");
+    if (typeof recordMashupStats === "function") {
+      const mashupKey = slugs.slice().sort().join(",");
+      recordMashupStats(mashupKey, "survival", { score: state.score });
+    }
     resultBox.innerHTML = `
       <h2>Survival Over</h2>
       <p>Your score: ${state.score}</p>

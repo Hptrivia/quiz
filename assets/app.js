@@ -444,6 +444,8 @@ async function renderMultiThemeMarathon() {
   if (selectedThemes.length < 2) { window.location.href = "mashup.html"; return; }
 
   const themesParam = selectedThemes.map(t => t.slug).join(",");
+  const mashupKey = slugs.slice().sort().join(",");
+  let isReplay = getParam("replay") === "1";
   const colorBySlug = {};
   selectedThemes.forEach((t, i) => { colorBySlug[t.slug] = MASHUP_BADGE_COLORS[i % MASHUP_BADGE_COLORS.length]; });
 
@@ -467,16 +469,30 @@ async function renderMultiThemeMarathon() {
 
   const rawPage = parseInt(params.get("page") || "1", 10);
   const currentPage = isNaN(rawPage) || rawPage < 1 ? 1 : rawPage;
-  const pools = buildMashupPools(selectedThemes, questionsByTheme);
-  const totalPages = calcMashupTotalBatches(pools, PAGE_SIZE);
-  const safePage = Math.min(currentPage, totalPages);
-  const pageQuestions = sliceFromMashupPools(pools, PAGE_SIZE, safePage - 1).map(q => shuffleQuestionOptions(q));
+  let pools, totalPages, safePage, pageQuestions;
+  if (isReplay) {
+    try {
+      const replayData = JSON.parse(localStorage.getItem("tg_replay") || "null");
+      if (replayData && replayData.mashupKey === mashupKey && replayData.questions && replayData.questions.length) {
+        pageQuestions = replayData.questions.map(q => shuffleQuestionOptions(q));
+        totalPages = 1; safePage = 1;
+        if (typeof gtag === "function") gtag("event", "wrong_answers_replayed", { theme: mashupKey, count: replayData.questions.length });
+      } else { isReplay = false; }
+    } catch { isReplay = false; }
+  }
+  if (!isReplay) {
+    pools = buildMashupPools(selectedThemes, questionsByTheme);
+    totalPages = calcMashupTotalBatches(pools, PAGE_SIZE);
+    safePage = Math.min(currentPage, totalPages);
+    pageQuestions = sliceFromMashupPools(pools, PAGE_SIZE, safePage - 1).map(q => shuffleQuestionOptions(q));
+  }
 
   const themeScores = {};
   selectedThemes.forEach(t => { themeScores[t.slug] = { correct: 0, total: 0 }; });
   pageQuestions.forEach(q => { if (themeScores[q._themeSlug]) themeScores[q._themeSlug].total++; });
 
   let score = 0, currentIndex = 0, revealAnswers = false;
+  const wrongQuestions = [];
 
   if (progressText) progressText.textContent = `Page ${safePage}`;
   if (nextPageLink) {
@@ -558,6 +574,7 @@ async function renderMultiThemeMarathon() {
         feedbackP.className = "feedback wrong";
         selBtn.classList.remove("correct-anim"); void selBtn.offsetWidth; selBtn.classList.add("wrong-anim");
         if (typeof SoundFX !== 'undefined') SoundFX.play('wrong');
+        wrongQuestions.push(q);
       }
       if (scoreText) scoreText.textContent = `Score: ${score}`;
       submitBtn.disabled = true; nextBtn.style.display = "inline-block";
@@ -582,7 +599,34 @@ async function renderMultiThemeMarathon() {
     document.getElementById("quizBox").style.display = "none";
     resultBox.style.display = "block";
     resultBox.classList.remove("result-anim"); void resultBox.offsetWidth; resultBox.classList.add("result-anim");
+    if (typeof recordMashupStats === "function") {
+      recordMashupStats(mashupKey, "marathon", { correct: score, answered: pageQuestions.length, round: safePage, totalRounds: totalPages });
+    }
+    if (!isReplay && typeof saveSession === "function") saveSession("marathon", mashupKey, safePage, score, pageQuestions.length);
+    let wrongCount = 0;
+    if (isReplay) {
+      localStorage.removeItem("tg_replay");
+    } else {
+      let bank = [];
+      try {
+        const raw = localStorage.getItem("tg_replay");
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (parsed.mode === "marathon" && parsed.mashupKey === mashupKey) bank = parsed.questions || [];
+        }
+      } catch {}
+      if (wrongQuestions.length) {
+        const merged = [...bank, ...wrongQuestions].filter((q, i, arr) => arr.findIndex(x => x.question === q.question) === i);
+        localStorage.setItem("tg_replay", JSON.stringify({ mode: "marathon", mashupKey, questions: merged }));
+        wrongCount = merged.length;
+      } else {
+        wrongCount = bank.length;
+      }
+    }
     const hasNextPage = safePage < totalPages;
+    const replayHtml = wrongCount > 0
+      ? `<div class="wrong-replay-row">You have ${wrongCount} wrong answer${wrongCount !== 1 ? "s" : ""} &mdash; <a href="play.html?themes=${themesParam}&replay=1">Replay them all</a></div>`
+      : "";
     resultBox.innerHTML = `
       <h2>Quiz Complete</h2>
       <p>Your score: ${score} / ${pageQuestions.length}</p>
@@ -593,6 +637,7 @@ async function renderMultiThemeMarathon() {
         ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html">Buy me a coffee</a>` : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
+      ${replayHtml}
       <div class="result-theme-search">
         <p class="result-theme-search-title">Try another theme</p>
         <div class="search-wrap">
@@ -621,6 +666,47 @@ async function renderMultiThemeMarathon() {
       document.addEventListener("click", e => { if (!msInput.contains(e.target) && !msResults.contains(e.target)) msResults.style.display = "none"; });
     }
     setTimeout(() => { if (typeof showInstallCard === "function") showInstallCard(); }, 800);
+  }
+
+  if (!isReplay && currentPage === 1 && typeof getSession === "function") {
+    const saved = getSession("marathon", mashupKey);
+    if (saved && saved.round < totalPages) {
+      document.getElementById("quizBox").style.display = "none";
+      resultBox.style.display = "block";
+      let replayCount = 0;
+      try {
+        const raw = localStorage.getItem("tg_replay");
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (parsed.mode === "marathon" && parsed.mashupKey === mashupKey)
+            replayCount = (parsed.questions || []).length;
+        }
+      } catch {}
+      const replayHtml = replayCount > 0
+        ? `<div class="wrong-replay-row">You have ${replayCount} wrong answer${replayCount !== 1 ? "s" : ""} accumulated &mdash; <a href="play.html?themes=${themesParam}&replay=1">Replay them all</a></div>`
+        : "";
+      resultBox.innerHTML = `
+        <h2>Round ${saved.round} Complete</h2>
+        <p>Your score: ${saved.score} / ${saved.total}</p>
+        <div class="cta-row">
+          <a class="primary-btn" id="mashupMarathonContinueBtn" href="play.html?themes=${themesParam}&page=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>
+          <button class="secondary-btn" id="mashupMarathonRound1Btn">Start from Round 1</button>
+        </div>
+        ${replayHtml}`;
+      document.getElementById("mashupMarathonContinueBtn").addEventListener("click", () => {
+        if (typeof gtag === "function") gtag("event", "session_resumed", { theme: mashupKey, round: saved.round + 1 });
+      });
+      document.getElementById("mashupMarathonRound1Btn").addEventListener("click", () => {
+        if (typeof gtag === "function") gtag("event", "session_reset", { theme: mashupKey });
+        if (typeof clearSession === "function") clearSession("marathon", mashupKey);
+        localStorage.removeItem("tg_replay");
+        resultBox.style.display = "none";
+        resultBox.innerHTML = "";
+        document.getElementById("quizBox").style.display = "block";
+        showQuestion(0);
+      });
+      return;
+    }
   }
 
   showQuestion(0);
@@ -920,7 +1006,7 @@ const relatedThemesHtml = `
 `;
 
   const wrongCount = (typeof recordMarathon === "function")
-    ? recordMarathon(theme.slug, quizState.score, quizState.questions.length, wrongQuestions, isReplay)
+    ? recordMarathon(theme.slug, quizState.score, quizState.questions.length, wrongQuestions, isReplay, safePage, totalPages)
     : wrongQuestions.length;
 
   if (!isReplay && typeof saveSession === "function") saveSession("marathon", theme.slug, safePage, quizState.score, quizState.questions.length);

@@ -25,11 +25,25 @@ async function renderMultiThemeChallenge() {
   const currentRound = isNaN(rawRound) || rawRound < 1 ? 1 : rawRound;
 
   const sessionKey = slugs.slice().sort().join(",");
+  let isReplay = getParam("replay") === "1";
 
-  const pools = buildMashupPools(selectedThemes, questionsByTheme);
-  const totalRounds = calcMashupTotalBatches(pools, ROUND_SIZE);
-  const safeRound = Math.min(currentRound, totalRounds);
-  const roundQuestions = sliceFromMashupPools(pools, ROUND_SIZE, safeRound - 1).map(q => shuffleQuestionOptions(q));
+  let pools, totalRounds, safeRound, roundQuestions;
+  if (isReplay) {
+    try {
+      const replayData = JSON.parse(localStorage.getItem("tg_replay") || "null");
+      if (replayData && replayData.mashupKey === sessionKey && replayData.questions && replayData.questions.length) {
+        roundQuestions = replayData.questions.map(q => shuffleQuestionOptions(q));
+        totalRounds = 1; safeRound = 1;
+        if (typeof gtag === "function") gtag("event", "wrong_answers_replayed", { theme: sessionKey, count: replayData.questions.length });
+      } else { isReplay = false; }
+    } catch { isReplay = false; }
+  }
+  if (!isReplay) {
+    pools = buildMashupPools(selectedThemes, questionsByTheme);
+    totalRounds = calcMashupTotalBatches(pools, ROUND_SIZE);
+    safeRound = Math.min(currentRound, totalRounds);
+    roundQuestions = sliceFromMashupPools(pools, ROUND_SIZE, safeRound - 1).map(q => shuffleQuestionOptions(q));
+  }
 
   const themeScores = {};
   selectedThemes.forEach(t => { themeScores[t.slug] = { correct: 0, total: 0 }; });
@@ -52,6 +66,7 @@ async function renderMultiThemeChallenge() {
   }
 
   let score = 0, currentIndex = 0, revealAnswers = false;
+  const wrongQuestions = [];
 
   function showQuestion(index) {
     const prev = slidesContainer.querySelector(".question-slide.active");
@@ -124,6 +139,7 @@ async function renderMultiThemeChallenge() {
         feedbackP.className = "feedback wrong";
         selBtn.classList.remove("correct-anim"); void selBtn.offsetWidth; selBtn.classList.add("wrong-anim");
         if (typeof SoundFX !== 'undefined') SoundFX.play('wrong');
+        wrongQuestions.push(q);
       }
       if (scoreEl) scoreEl.textContent = `Score: ${score}`;
       submitBtn.disabled = true; nextBtn.style.display = "inline-block";
@@ -149,7 +165,33 @@ async function renderMultiThemeChallenge() {
     resultBox.style.display = "block";
     resultBox.classList.remove("result-anim"); void resultBox.offsetWidth; resultBox.classList.add("result-anim");
     const hasNextRound = safeRound < totalRounds;
-    if (typeof saveSession === "function") saveSession("challenge", sessionKey, safeRound, score, roundQuestions.length);
+    if (!isReplay && typeof saveSession === "function") saveSession("challenge", sessionKey, safeRound, score, roundQuestions.length);
+    if (typeof recordMashupStats === "function") {
+      recordMashupStats(sessionKey, "challenge", { correct: score, answered: roundQuestions.length, round: safeRound, totalRounds });
+    }
+    let wrongCount = 0;
+    if (isReplay) {
+      localStorage.removeItem("tg_replay");
+    } else {
+      let bank = [];
+      try {
+        const raw = localStorage.getItem("tg_replay");
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (parsed.mode === "challenge" && parsed.mashupKey === sessionKey) bank = parsed.questions || [];
+        }
+      } catch {}
+      if (wrongQuestions.length) {
+        const merged = [...bank, ...wrongQuestions].filter((q, i, arr) => arr.findIndex(x => x.question === q.question) === i);
+        localStorage.setItem("tg_replay", JSON.stringify({ mode: "challenge", mashupKey: sessionKey, questions: merged }));
+        wrongCount = merged.length;
+      } else {
+        wrongCount = bank.length;
+      }
+    }
+    const replayHtml = wrongCount > 0
+      ? `<div class="wrong-replay-row">You have ${wrongCount} wrong answer${wrongCount !== 1 ? "s" : ""} &mdash; <a href="challenge.html?themes=${themesParam}&replay=1">Replay them all</a></div>`
+      : "";
     resultBox.innerHTML = `
       <h2>Round ${safeRound} Complete</h2>
       <p>Your score: ${score} / ${roundQuestions.length}</p>
@@ -159,6 +201,7 @@ async function renderMultiThemeChallenge() {
         ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html">Reveal Answers</a>` : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
+      ${replayHtml}
       <div class="result-theme-search">
         <p class="result-theme-search-title">Try another theme</p>
         <div class="search-wrap">
@@ -188,24 +231,38 @@ async function renderMultiThemeChallenge() {
     }
   }
 
-  if (currentRound === 1 && typeof getSession === "function") {
+  if (!isReplay && currentRound === 1 && typeof getSession === "function") {
     const saved = getSession("challenge", sessionKey);
     if (saved && saved.round < totalRounds) {
       quizBox.style.display = "none";
       resultBox.style.display = "block";
+      let replayCount = 0;
+      try {
+        const raw = localStorage.getItem("tg_replay");
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (parsed.mode === "challenge" && parsed.mashupKey === sessionKey)
+            replayCount = (parsed.questions || []).length;
+        }
+      } catch {}
+      const replayHtml = replayCount > 0
+        ? `<div class="wrong-replay-row">You have ${replayCount} wrong answer${replayCount !== 1 ? "s" : ""} accumulated &mdash; <a href="challenge.html?themes=${themesParam}&replay=1">Replay them all</a></div>`
+        : "";
       resultBox.innerHTML = `
         <h2>Round ${saved.round} Complete</h2>
         <p>Your score: ${saved.score} / ${saved.total}</p>
         <div class="cta-row">
           <a class="primary-btn" id="mashupContinueBtn" href="challenge.html?themes=${themesParam}&round=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>
           <button class="secondary-btn" id="mashupRound1Btn">Start from Round 1</button>
-        </div>`;
+        </div>
+        ${replayHtml}`;
       document.getElementById("mashupContinueBtn").addEventListener("click", () => {
         if (typeof gtag === "function") gtag("event", "session_resumed", { theme: sessionKey, round: saved.round + 1 });
       });
       document.getElementById("mashupRound1Btn").addEventListener("click", () => {
         if (typeof gtag === "function") gtag("event", "session_reset", { theme: sessionKey });
         if (typeof clearSession === "function") clearSession("challenge", sessionKey);
+        localStorage.removeItem("tg_replay");
         resultBox.style.display = "none";
         resultBox.innerHTML = "";
         quizBox.style.display = "block";
@@ -581,7 +638,7 @@ async function renderChallengePage() {
     `;
 
     const wrongCount = (typeof recordChallenge === "function")
-      ? recordChallenge(theme.slug, state.score, state.questions.length, wrongQuestions, isReplay)
+      ? recordChallenge(theme.slug, state.score, state.questions.length, wrongQuestions, isReplay, safeRound, totalRounds)
       : wrongQuestions.length;
 
     if (!isReplay && typeof saveSession === "function") saveSession("challenge", theme.slug, safeRound, state.score, state.questions.length);

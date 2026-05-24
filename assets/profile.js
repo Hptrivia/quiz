@@ -23,7 +23,8 @@ function _defaultProfile() {
       wordSearch: { totalCompleted: 0, themes: {} }
     },
     sessions: {},
-    savedMashups: []
+    savedMashups: [],
+    savedMashupStats: {}
   };
 }
 
@@ -40,6 +41,7 @@ function getProfile() {
     for (const mode of Object.keys(def.stats)) {
       if (!p.stats[mode]) p.stats[mode] = def.stats[mode];
     }
+    if (!p.savedMashupStats) p.savedMashupStats = {};
     return p;
   } catch { return _defaultProfile(); }
 }
@@ -55,7 +57,7 @@ function _ensureTheme(modeObj, slug) {
   return modeObj.themes[slug];
 }
 
-function recordMarathon(themeSlug, score, total, wrongQuestions, isReplaySession) {
+function recordMarathon(themeSlug, score, total, wrongQuestions, isReplaySession, round, totalRoundsArg) {
   const p = getProfile();
   const m = p.stats.marathon;
   const t = _ensureTheme(m, themeSlug);
@@ -69,6 +71,10 @@ function recordMarathon(themeSlug, score, total, wrongQuestions, isReplaySession
   t.correct   = (t.correct   || 0) + score;
   t.answered  = (t.answered  || 0) + total;
   if (!t.bestScore || score > t.bestScore) t.bestScore = score;
+  if (!isReplaySession && round && round > (t.highestRound || 0)) {
+    t.highestRound = round;
+    if (totalRoundsArg) t.totalRounds = totalRoundsArg;
+  }
 
   let cumulativeCount = 0;
   if (isReplaySession) {
@@ -97,7 +103,7 @@ function recordMarathon(themeSlug, score, total, wrongQuestions, isReplaySession
   return cumulativeCount;
 }
 
-function recordChallenge(themeSlug, score, total, wrongQuestions, isReplaySession) {
+function recordChallenge(themeSlug, score, total, wrongQuestions, isReplaySession, round, totalRoundsArg) {
   const p = getProfile();
   const m = p.stats.challenge;
   const t = _ensureTheme(m, themeSlug);
@@ -111,6 +117,10 @@ function recordChallenge(themeSlug, score, total, wrongQuestions, isReplaySessio
   t.correct  = (t.correct  || 0) + score;
   t.answered = (t.answered || 0) + total;
   if (!t.bestScore || score > t.bestScore) t.bestScore = score;
+  if (!isReplaySession && round && round > (t.highestRound || 0)) {
+    t.highestRound = round;
+    if (totalRoundsArg) t.totalRounds = totalRoundsArg;
+  }
 
   let cumulativeCount = 0;
   if (isReplaySession) {
@@ -190,6 +200,44 @@ function recordWordSearch(themeSlug) {
 
   m.totalCompleted++;
   t.completed = (t.completed || 0) + 1;
+
+  saveProfile(p);
+}
+
+// --- Mashup stats (only for saved mashups) ---
+
+function recordMashupStats(sessionKey, mode, data) {
+  const p = getProfile();
+  // Only record if user has saved this mashup
+  const isSaved = (p.savedMashups || []).some(m => {
+    return (m.themes || []).slice().sort().join(",") === sessionKey;
+  });
+  if (!isSaved) return;
+
+  if (!p.savedMashupStats) p.savedMashupStats = {};
+  if (!p.savedMashupStats[sessionKey]) p.savedMashupStats[sessionKey] = {};
+  const ms = p.savedMashupStats[sessionKey];
+  if (!ms[mode]) ms[mode] = {};
+  const m = ms[mode];
+
+  if (mode === "marathon" || mode === "challenge") {
+    m.rounds   = (m.rounds   || 0) + 1;
+    m.correct  = (m.correct  || 0) + (data.correct  || 0);
+    m.answered = (m.answered || 0) + (data.answered || 0);
+    if (!m.bestScore || (data.correct || 0) > m.bestScore) m.bestScore = data.correct || 0;
+    if (data.round && data.round > (m.highestRound || 0)) {
+      m.highestRound = data.round;
+      if (data.totalRounds) m.totalRounds = data.totalRounds;
+    }
+  } else if (mode === "survival") {
+    m.runs = (m.runs || 0) + 1;
+    if (!m.longestRun || (data.score || 0) > m.longestRun) m.longestRun = data.score || 0;
+  } else if (mode === "wordle") {
+    m.attempted = (m.attempted || 0) + 1;
+    if (data.solved) m.solved = (m.solved || 0) + 1;
+  } else if (mode === "wordSearch") {
+    m.completed = (m.completed || 0) + 1;
+  }
 
   saveProfile(p);
 }

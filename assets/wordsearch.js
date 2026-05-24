@@ -274,6 +274,9 @@ function wsShowCompletion() {
   if (typeof recordWordSearch === "function" && window._wsThemeSlug) {
     recordWordSearch(window._wsThemeSlug);
   }
+  if (typeof recordMashupStats === "function" && window._wsMashupKey) {
+    recordMashupStats(window._wsMashupKey, "wordSearch", {});
+  }
 }
 
 // ─── Event wiring ─────────────────────────────────────────────────────────────
@@ -395,6 +398,8 @@ async function renderWordSearchMashupMode(themesParam) {
     nextBtn.href = `wordsearch.html?themes=${themesParam}&page=${safePage + 1}`;
     nextBtn.style.display = 'block';
   }
+
+  window._wsMashupKey = slugs.slice().sort().join(",");
 
   wsBuildGrid(words);
   wsRenderGrid();

@@ -167,12 +167,14 @@ async function renderWordleMashupMode(themesParam) {
     if (guess === targetWord) {
       setFeedback("Correct", "correct"); gameOver = true;
       if (typeof saveSession === "function") saveSession("wordle", sessionKey, safePage, 0, totalPages);
+      if (typeof recordMashupStats === "function") recordMashupStats(sessionKey, "wordle", { solved: true });
       maybeInjectWordleCard();
       return;
     }
     if (guesses.length === 6) {
       setFeedback(`Wrong. The word was ${targetWord}.`, "wrong"); gameOver = true;
       if (typeof saveSession === "function") saveSession("wordle", sessionKey, safePage, 0, totalPages);
+      if (typeof recordMashupStats === "function") recordMashupStats(sessionKey, "wordle", { solved: false });
       maybeInjectWordleCard();
       return;
     }

@@ -1587,10 +1587,43 @@ body[data-page="daily"].premium-mode main { padding-top: 20px; }
 .theme-stat-card {
   background: var(--card-bg); border: 1px solid var(--panel-border);
   border-radius: 10px; padding: 14px; margin-bottom: 10px;
+  display: block; position: relative;
+}
+a.theme-stat-card,
+.theme-stat-card[onclick] {
+  cursor: pointer;
+  transition: border-color .15s, background .15s, transform .1s;
+  padding-right: 34px;
+}
+a.theme-stat-card::after,
+.theme-stat-card[onclick]::after {
+  content: "›";
+  position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
+  font-size: 22px; line-height: 1; color: var(--muted-text);
+  transition: color .15s, right .15s;
+}
+a.theme-stat-card:hover,
+.theme-stat-card[onclick]:hover {
+  border-color: var(--card-hover-border);
+  background: var(--panel-bg);
+}
+a.theme-stat-card:hover::after,
+.theme-stat-card[onclick]:hover::after {
+  color: var(--card-hover-border); right: 10px;
+}
+a.theme-stat-card:active,
+.theme-stat-card[onclick]:active {
+  transform: scale(0.98);
+}
+/* Saved mashup cards have buttons on the right — suppress the arrow */
+.theme-stat-card[onclick][style*="justify-content:space-between"]::after,
+.theme-stat-card[onclick][style*="justify-content: space-between"]::after {
+  display: none;
 }
 .theme-stat-card h3 { font-size: 0.95rem; margin: 0 0 8px; }
 .theme-stat-row { display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--muted-text); margin-bottom: 3px; }
 .theme-stat-row span:last-child { color: var(--text-color); font-weight: 600; }
+.theme-name-badge { display: inline-block; font-size: 0.7rem; padding: 1px 7px; border-radius: 10px; background: var(--badge-bg, #2e2e2e); border: 1px solid var(--card-border, #2d2d2d); color: var(--muted-text, #94a3b8); margin-left: 6px; vertical-align: middle; white-space: nowrap; font-weight: 400; }
 
 .profile-empty { text-align: center; color: var(--muted-text); padding: 30px 0; font-size: 0.9rem; }
 .profile-section-title { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted-text); margin: 20px 0 10px; }
