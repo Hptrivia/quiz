@@ -303,7 +303,7 @@ const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
           <p>Guess themed words</p>
         </a>
 
-        <a class="card" href="../wordsearch.html?theme=${slug}&page=1">
+        <a class="card" href="../wordsearch/${rawSlug}.html">
           <h3>Word Search</h3>
           <p>Find hidden themed words</p>
         </a>
@@ -454,7 +454,7 @@ function main() {
     console.log(`Generated themes/${theme.slug}.html`);
 
     sitemapUrls.push(`${SITE_URL}/themes/${theme.slug}.html`);
-    sitemapUrls.push(`${SITE_URL}/wordsearch.html?theme=${theme.slug}&page=1`);
+    sitemapUrls.push(`${SITE_URL}/wordsearch/${theme.slug}.html`);
     sitemapUrls.push(`${SITE_URL}/wordle/${theme.slug}.html`);
     sitemapUrls.push(`${SITE_URL}/trivia-rush.html?theme=${theme.slug}`);
   });

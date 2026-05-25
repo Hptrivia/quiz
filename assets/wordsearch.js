@@ -444,7 +444,7 @@ async function renderWordSearchPage() {
         <div style="margin-top:16px;">
           <p>Pick any theme below to start. Words are hidden in a 10×10 grid — drag across letters to find them. Each page covers a new set of words.</p>
           <div class="grid">
-            ${themes.map(t => `<a class="card" href="wordsearch.html?theme=${t.slug}&page=1"><h3>${t.title}</h3><p>Word Search</p></a>`).join("")}
+            ${themes.map(t => `<a class="card" href="wordsearch/${t.slug}.html"><h3>${t.title}</h3><p>Word Search</p></a>`).join("")}
           </div>
         </div>
       `;
@@ -550,13 +550,7 @@ function renderWsPageContent(theme, themes, page, allWords = []) {
 
   injectWsHead(theme, page);
 
-  const ctx = getThemeContext(theme.category);
   const relatedThemes = getRelatedThemes(themes, theme, 4);
-  const toTitleCase = s => String(s).toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
-  const sample = allWords.slice(0, 6).map(toTitleCase);
-  const wordLine = sample.length >= 2
-    ? `Find words like ${sample.slice(0, -1).join(", ")}, and ${sample[sample.length - 1]} alongside other characters, locations, and key terms associated with ${theme.title}.`
-    : `The words are drawn from the characters, locations, and key terms associated with ${theme.title}.`;
 
   const relatedHtml = `
     <div class="theme-related-quizzes">
@@ -566,18 +560,12 @@ function renderWsPageContent(theme, themes, page, allWords = []) {
           <h3>${theme.title} + other themes</h3>
           <span class="card-mix-sub">Play as a mashup</span>
         </a>
-        ${relatedThemes.map(t => `<a class="card" href="wordsearch.html?theme=${t.slug}&page=1"><h3>${t.title}</h3></a>`).join("")}
+        ${relatedThemes.map(t => `<a class="card" href="wordsearch/${t.slug}.html"><h3>${t.title}</h3></a>`).join("")}
       </div>
     </div>`;
 
-  const descHtml = page === 1 ? `
-    <h2>About the ${theme.title} Word Search</h2>
-    <p>The ${theme.title} Word Search hides words from ${ctx} inside a grid of letters — you won't know what you're looking for until you find it. ${wordLine} Words run horizontally, vertically, or diagonally, and each one reveals itself as you drag across the right letters. Each page works through a different set of words, so there is always more to find.</p>
-    <hr style="border:none;border-top:1px solid var(--panel-border);margin:20px 0;">` : "";
-
   container.innerHTML = `
     <section class="panel" style="margin-top:16px;">
-      ${descHtml}
       <div class="result-theme-search">
         <p class="result-theme-search-title">Try another Word Search theme</p>
         <div class="search-wrap">
@@ -588,14 +576,13 @@ function renderWsPageContent(theme, themes, page, allWords = []) {
       </div>
     </section>`;
 
-
   const input = document.getElementById("wsThemeSearchInput");
   const results = document.getElementById("wsThemeSearchResults");
   if (!input || !results) return;
 
   const renderResults = (items) => {
     results.innerHTML = items.length
-      ? items.map(t => `<a class="search-item" href="wordsearch.html?theme=${t.slug}&page=1">${t.title}</a>`).join("")
+      ? items.map(t => `<a class="search-item" href="wordsearch/${t.slug}.html">${t.title}</a>`).join("")
       : '<div class="search-item">No results found</div>';
   };
 

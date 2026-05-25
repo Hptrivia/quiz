@@ -128,7 +128,7 @@ function buildWordlePage(theme, words, allThemes, wordleSet) {
       </div>
 
       <p style="text-align:center;margin-top:8px;">
-        <a href="../wordsearch.html?theme=${slug}&page=1" style="color:#94a3b8;font-size:0.9rem;">Also try ${title} Word Search &#8594;</a>
+        <a href="../wordsearch/${slug}.html" style="color:#94a3b8;font-size:0.9rem;">Also try ${title} Word Search &#8594;</a>
       </p>
 
       ${relatedHtml}
