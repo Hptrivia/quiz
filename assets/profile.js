@@ -330,7 +330,7 @@ function maybeShowProfileOnboarding() {
       <div class="profile-onboard-icon">${avatarHtml}</div>
       <div class="profile-onboard-text">
         <strong>✨ Your stats are now live!</strong>
-        <span>Every theme you play is tracked here — scores, streaks, wrong answers to replay, and quick links back to any theme.</span>
+        <span>Every theme you play is tracked — scores, streaks, wrong answers to replay, and survival leaderboards.</span>
       </div>
     </div>
     <div class="profile-onboard-actions">

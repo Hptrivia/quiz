@@ -28,10 +28,7 @@ async function renderWordleMashupMode(themesParam) {
   const allThemes      = await loadThemes();
   const selectedThemes = slugs.map(slug => allThemes.find(t => t.slug === slug)).filter(Boolean);
 
-  if (selectedThemes.length < 2) {
-    progressEl.textContent = "Invalid theme selection.";
-    return;
-  }
+  if (selectedThemes.length < 2) { progressEl.textContent = "Invalid theme selection."; return; }
 
   const colorBySlug = {};
   selectedThemes.forEach((t, i) => { colorBySlug[t.slug] = WORDLE_BADGE_COLORS[i % WORDLE_BADGE_COLORS.length]; });
@@ -41,12 +38,8 @@ async function renderWordleMashupMode(themesParam) {
     .map(t => ({ slug: t.slug, title: t.title, words: Array.isArray(allWordleData[t.title]) ? allWordleData[t.title] : [] }))
     .filter(t => t.words.length > 0);
 
-  if (!themeWordLists.length) {
-    progressEl.textContent = "No Wordle words found for these themes.";
-    return;
-  }
+  if (!themeWordLists.length) { progressEl.textContent = "No Wordle words found for these themes."; return; }
 
-  // Interleave round-robin: t0[0], t1[0], t2[0], t0[1], t1[1], ...
   const maxLen  = Math.max(...themeWordLists.map(t => t.words.length));
   const allWords = [];
   for (let i = 0; i < maxLen; i++) {
@@ -63,11 +56,24 @@ async function renderWordleMashupMode(themesParam) {
   const pageWords   = allWords.slice(pageStart, pageStart + PAGE_SIZE);
 
   let currentWordInPage = 0;
-  let targetWord   = "";
-  let guesses      = [];
-  let currentGuess = "";
-  let gameOver     = false;
-  let keyStates    = {};
+  let targetWord        = "";
+  let guesses           = [];
+  let currentGuess      = []; // array of chars, null = empty
+  let gameOver          = false;
+  let keyStates         = {};
+  let _animatingRow     = -1;
+  let revealsUsed       = 0;
+  let revealedPositions = {};
+  let revealedAtRow     = {};
+  let revealUsedThisRow = false;
+
+  function initCurrentGuess() {
+    const arr = Array(targetWord.length).fill(null);
+    for (const [i, letter] of Object.entries(revealedPositions)) {
+      arr[parseInt(i)] = letter;
+    }
+    return arr;
+  }
 
   const keyboardRows = [
     ["Q","W","E","R","T","Y","U","I","O","P"],
@@ -110,10 +116,15 @@ async function renderWordleMashupMode(themesParam) {
         tile.className = "wordle-tile";
         if (sg) {
           tile.textContent = sg[col] || "";
-          if (ss[col]) tile.classList.add(ss[col]);
+          if (row !== _animatingRow && ss[col]) tile.classList.add(ss[col]);
         } else if (row === guesses.length) {
-          tile.textContent = currentGuess[col] || "";
-          if (currentGuess[col]) tile.classList.add("filled");
+          if (revealedPositions[col] && revealedAtRow[col] === guesses.length) {
+            tile.textContent = revealedPositions[col];
+            tile.classList.add("correct", "wordle-tile-locked");
+          } else if (currentGuess[col]) {
+            tile.textContent = currentGuess[col];
+            tile.classList.add("filled");
+          }
         }
         rowEl.appendChild(tile);
       }
@@ -152,34 +163,176 @@ async function renderWordleMashupMode(themesParam) {
     nextBtn.textContent = "Next Word";
   }
 
-  function submitGuess() {
-    if (gameOver) return;
-    if (currentGuess.length !== targetWord.length) {
-      setFeedback(`Guess must be ${targetWord.length} letters.`, "wrong");
-      return;
+  // ── Animations ──────────────────────────────────────────────────────────
+  function animateRow(rowIndex, states, onComplete) {
+    const rows = boardEl.querySelectorAll(".wordle-row");
+    const row  = rows[rowIndex];
+    if (!row) { if (onComplete) onComplete(); return; }
+    const tiles = row.querySelectorAll(".wordle-tile");
+    const FOLD = 150, STAGGER = 110;
+    tiles.forEach((tile, i) => {
+      setTimeout(() => {
+        tile.style.transition = `transform ${FOLD}ms ease`;
+        tile.style.transform  = "scaleY(0)";
+        setTimeout(() => {
+          tile.classList.add(states[i]);
+          tile.style.transform = "scaleY(1)";
+          if (i === tiles.length - 1 && onComplete) setTimeout(onComplete, FOLD);
+        }, FOLD);
+      }, i * STAGGER);
+    });
+  }
+
+  function shakeCurrentRow() {
+    const rows = boardEl.querySelectorAll(".wordle-row");
+    const row  = rows[guesses.length];
+    if (!row) return;
+    row.classList.remove("wordle-row-shake");
+    void row.offsetWidth;
+    row.classList.add("wordle-row-shake");
+    setTimeout(() => row.classList.remove("wordle-row-shake"), 400);
+  }
+
+  function bounceWinRow(rowIndex) {
+    const rows = boardEl.querySelectorAll(".wordle-row");
+    const row  = rows[rowIndex];
+    if (!row) return;
+    row.querySelectorAll(".wordle-tile").forEach((tile, i) => {
+      setTimeout(() => {
+        tile.classList.add("wordle-tile-bounce");
+        setTimeout(() => tile.classList.remove("wordle-tile-bounce"), 600);
+      }, i * 80);
+    });
+  }
+
+  // ── Reveals ──────────────────────────────────────────────────────────────
+  function updateRevealBtn() {
+    let btn = document.getElementById("wordleRevealBtn");
+    if (!btn) {
+      btn = document.createElement("button");
+      btn.id        = "wordleRevealBtn";
+      btn.type      = "button";
+      btn.className = "secondary-btn wordle-reveal-btn";
+      progressEl.appendChild(btn);
+      progressEl.style.position = "relative";
+      btn.addEventListener("click", useReveal);
     }
-    const guess  = currentGuess.toUpperCase();
-    const states = getLetterState(guess, targetWord);
-    guesses.push({ word: guess, states });
-    updateKeyboard(guess, states);
-    currentGuess = "";
+    const left = 2 - revealsUsed;
+    if (left <= 0 || gameOver) {
+      btn.disabled = true; btn.style.opacity = "0.4";
+      btn.textContent = "💡 No reveals left";
+    } else if (revealUsedThisRow) {
+      btn.disabled = true; btn.style.opacity = "0.4";
+      btn.textContent = "💡 Reveal (guess first)";
+    } else {
+      btn.disabled = false; btn.style.opacity = "";
+      btn.textContent = `💡 Reveal · ${left} left`;
+    }
+  }
+
+  function useReveal() {
+    if (revealsUsed >= 2 || revealUsedThisRow || gameOver) return;
+    const alreadyKnown = new Set();
+    for (const g of guesses) g.states.forEach((s, i) => { if (s === "correct") alreadyKnown.add(i); });
+    const available = [];
+    for (let i = 0; i < targetWord.length; i++) {
+      if (!revealedPositions[i] && !alreadyKnown.has(i)) available.push(i);
+    }
+    if (!available.length) return;
+    const idx = available[Math.floor(Math.random() * available.length)];
+    revealedPositions[idx] = targetWord[idx];
+    revealedAtRow[idx]     = guesses.length;
+    revealsUsed++;
+    revealUsedThisRow = true;
+    keyStates[targetWord[idx]] = "correct";
+    currentGuess[idx] = targetWord[idx];
+    updateRevealBtn();
     renderBoard();
     renderKeyboard();
-    if (guess === targetWord) {
-      setFeedback("Correct", "correct"); gameOver = true;
-      if (typeof saveSession === "function") saveSession("wordle", sessionKey, safePage, 0, totalPages);
-      if (typeof recordMashupStats === "function") recordMashupStats(sessionKey, "wordle", { solved: true });
-      maybeInjectWordleCard();
+  }
+
+  // ── Result panel ─────────────────────────────────────────────────────────
+  function showResultPanel(solved, entry) {
+    const existing = document.getElementById("wordleResultPanel");
+    if (existing) existing.remove();
+    const isLast   = currentWordInPage === pageWords.length - 1 && safePage === totalPages;
+    const emoji    = solved ? (guesses.length <= 2 ? "🎯" : guesses.length <= 4 ? "🎉" : "😅") : "😔";
+    const msg      = solved
+      ? `<strong>${targetWord}</strong> — solved in ${guesses.length}/6 ${emoji}`
+      : `<strong>${targetWord}</strong> — not solved ${emoji}`;
+    const emojiGrid = guesses.map(g =>
+      g.states.map(s => s === "correct" ? "🟩" : s === "present" ? "🟨" : "⬛").join("")
+    ).join("\n");
+
+    const panel = document.createElement("div");
+    panel.id        = "wordleResultPanel";
+    panel.className = "wordle-result-panel";
+    panel.innerHTML = `
+      <p class="wordle-result-text">${msg}</p>
+      <pre class="wordle-result-grid">${emojiGrid}</pre>
+      <div class="cta-row" style="margin-top:10px;justify-content:center;">
+        ${!isLast ? `<button class="primary-btn" id="wordleNextFromPanel">Next Word →</button>` : ""}
+      </div>`;
+
+    feedbackEl.textContent   = "";
+    boardEl.style.display    = "none";
+    keyboardEl.style.display = "none";
+    const revealBtn = document.getElementById("wordleRevealBtn");
+    if (revealBtn) revealBtn.style.display = "none";
+    feedbackEl.after(panel);
+
+    const nextFromPanel = document.getElementById("wordleNextFromPanel");
+    if (nextFromPanel) {
+      nextFromPanel.addEventListener("click", () => {
+        if (currentWordInPage < pageWords.length - 1) loadWord(currentWordInPage + 1);
+        else if (safePage < totalPages) window.location.href = `wordle.html?themes=${themesParam}&page=${safePage + 1}`;
+      });
+    }
+  }
+
+  // ── Submit ────────────────────────────────────────────────────────────────
+  function submitGuess() {
+    if (gameOver) return;
+    if (currentGuess.includes(null)) {
+      setFeedback(`Guess must be ${targetWord.length} letters.`, "wrong");
+      shakeCurrentRow();
       return;
     }
-    if (guesses.length === 6) {
-      setFeedback(`Wrong. The word was ${targetWord}.`, "wrong"); gameOver = true;
-      if (typeof saveSession === "function") saveSession("wordle", sessionKey, safePage, 0, totalPages);
-      if (typeof recordMashupStats === "function") recordMashupStats(sessionKey, "wordle", { solved: false });
-      maybeInjectWordleCard();
-      return;
-    }
-    setFeedback(`${6 - guesses.length} guess(es) left.`);
+    const guess    = currentGuess.join("");
+    const states   = getLetterState(guess, targetWord);
+    const rowIndex = guesses.length;
+    guesses.push({ word: guess, states });
+    updateKeyboard(guess, states);
+    currentGuess      = Array(targetWord.length).fill(null);
+    revealUsedThisRow = false;
+    updateRevealBtn();
+
+    _animatingRow = rowIndex;
+    renderBoard();
+    _animatingRow = -1;
+    renderKeyboard();
+
+    const entry = pageWords[currentWordInPage];
+    animateRow(rowIndex, states, () => {
+      if (guess === targetWord) {
+        bounceWinRow(rowIndex);
+        gameOver = true;
+        updateRevealBtn();
+        if (typeof saveSession === "function") saveSession("wordle", sessionKey, safePage, 0, totalPages);
+        if (typeof recordMashupStats === "function") recordMashupStats(sessionKey, "wordle", { solved: true });
+        setTimeout(() => { showResultPanel(true, entry); maybeInjectWordleCard(); }, 350);
+        return;
+      }
+      if (guesses.length === 6) {
+        gameOver = true;
+        updateRevealBtn();
+        if (typeof saveSession === "function") saveSession("wordle", sessionKey, safePage, 0, totalPages);
+        if (typeof recordMashupStats === "function") recordMashupStats(sessionKey, "wordle", { solved: false });
+        setTimeout(() => { showResultPanel(false, entry); maybeInjectWordleCard(); }, 200);
+        return;
+      }
+      setFeedback(`${6 - guesses.length} guess${guesses.length === 5 ? "" : "es"} left.`);
+    });
   }
 
   function maybeInjectWordleCard() {
@@ -198,18 +351,39 @@ async function renderWordleMashupMode(themesParam) {
   function handleKey(key) {
     if (gameOver) return;
     if (key === "ENTER") { submitGuess(); return; }
-    if (key === "⌫") { currentGuess = currentGuess.slice(0, -1); renderBoard(); return; }
-    if (/^[A-Z]$/.test(key) && currentGuess.length < targetWord.length) { currentGuess += key; renderBoard(); }
+    if (key === "⌫") {
+      for (let i = currentGuess.length - 1; i >= 0; i--) {
+        if (currentGuess[i] !== null && !revealedPositions[i]) {
+          currentGuess[i] = null; renderBoard(); return;
+        }
+      }
+      return;
+    }
+    if (/^[A-Z]$/.test(key)) {
+      const nextEmpty = currentGuess.indexOf(null);
+      if (nextEmpty !== -1) { currentGuess[nextEmpty] = key; renderBoard(); }
+    }
   }
 
   function loadWord(index) {
     currentWordInPage = index;
-    const entry  = pageWords[currentWordInPage];
-    targetWord   = entry.word;
-    guesses      = [];
-    currentGuess = "";
-    gameOver     = false;
-    keyStates    = {};
+    const entry       = pageWords[currentWordInPage];
+    targetWord        = entry.word;
+    guesses           = [];
+    gameOver          = false;
+    keyStates         = {};
+    revealsUsed       = 0;
+    revealedPositions = {};
+    revealedAtRow     = {};
+    revealUsedThisRow = false;
+    currentGuess      = initCurrentGuess();
+
+    const resultPanel = document.getElementById("wordleResultPanel");
+    if (resultPanel) resultPanel.remove();
+    boardEl.style.display    = "";
+    keyboardEl.style.display = "";
+    const revealBtn = document.getElementById("wordleRevealBtn");
+    if (revealBtn) revealBtn.style.display = "";
 
     progressEl.textContent = `Word ${pageStart + currentWordInPage + 1} of ${allWords.length}`;
 
@@ -222,6 +396,7 @@ async function renderWordleMashupMode(themesParam) {
     renderBoard();
     renderKeyboard();
     updateNavButtons();
+    updateRevealBtn();
   }
 
   document.addEventListener("keydown", e => {
@@ -271,7 +446,6 @@ async function renderWordleMashupMode(themesParam) {
 
   loadWord(0);
   if (safePage >= 4 && typeof maybeShowPwaPopup === "function") maybeShowPwaPopup();
-
 }
 
 // ─── Single-theme Wordle ──────────────────────────────────────────────────────
@@ -352,9 +526,23 @@ async function renderWordlePage() {
   let currentWordInPage = 0;
   let targetWord   = "";
   let guesses      = [];
-  let currentGuess = "";
+  let currentGuess = []; // array of chars (null = empty), length = targetWord.length
   let gameOver     = false;
   let keyStates    = {};
+  let _animatingRow = -1;
+  let revealsUsed       = 0;
+  let revealedPositions = {}; // index → letter
+  let revealedAtRow     = {}; // index → guesses.length when revealed
+  let revealUsedThisRow = false;
+
+  // Build a fresh currentGuess array, pre-filling any revealed positions
+  function initCurrentGuess() {
+    const arr = Array(targetWord.length).fill(null);
+    for (const [i, letter] of Object.entries(revealedPositions)) {
+      arr[parseInt(i)] = letter;
+    }
+    return arr;
+  }
 
   const keyboardRows = [
     ["Q","W","E","R","T","Y","U","I","O","P"],
@@ -413,10 +601,19 @@ async function renderWordlePage() {
 
         if (submittedGuess) {
           tile.textContent = submittedGuess[col] || "";
-          if (submittedStates[col]) tile.classList.add(submittedStates[col]);
+          // Skip state class for row currently being flip-animated
+          if (row !== _animatingRow && submittedStates[col]) {
+            tile.classList.add(submittedStates[col]);
+          }
         } else if (row === guesses.length) {
-          tile.textContent = currentGuess[col] || "";
-          if (currentGuess[col]) tile.classList.add("filled");
+          // Active row: only show revealed tile if it was revealed on THIS row
+          if (revealedPositions[col] && revealedAtRow[col] === guesses.length) {
+            tile.textContent = revealedPositions[col];
+            tile.classList.add("correct", "wordle-tile-locked");
+          } else if (currentGuess[col]) {
+            tile.textContent = currentGuess[col];
+            tile.classList.add("filled");
+          }
         }
 
         rowEl.appendChild(tile);
@@ -462,43 +659,245 @@ async function renderWordlePage() {
     nextBtn.textContent = "Next Word";
   }
 
+  // ── Tile flip animation ───────────────────────────────────────────────────
+  function animateRow(rowIndex, states, onComplete) {
+    const rows = boardEl.querySelectorAll(".wordle-row");
+    const row  = rows[rowIndex];
+    if (!row) { if (onComplete) onComplete(); return; }
+    const tiles = row.querySelectorAll(".wordle-tile");
+    const FOLD  = 150; // ms per half
+    const STAGGER = 110; // ms between tiles
+
+    tiles.forEach((tile, i) => {
+      setTimeout(() => {
+        tile.style.transition = `transform ${FOLD}ms ease`;
+        tile.style.transform  = "scaleY(0)";
+        setTimeout(() => {
+          tile.classList.add(states[i]);
+          tile.style.transform = "scaleY(1)";
+          if (i === tiles.length - 1 && onComplete) setTimeout(onComplete, FOLD);
+        }, FOLD);
+      }, i * STAGGER);
+    });
+  }
+
+  function shakeCurrentRow() {
+    const rows = boardEl.querySelectorAll(".wordle-row");
+    const row  = rows[guesses.length];
+    if (!row) return;
+    row.classList.remove("wordle-row-shake");
+    void row.offsetWidth;
+    row.classList.add("wordle-row-shake");
+    setTimeout(() => row.classList.remove("wordle-row-shake"), 400);
+  }
+
+  function bounceWinRow(rowIndex) {
+    const rows = boardEl.querySelectorAll(".wordle-row");
+    const row  = rows[rowIndex];
+    if (!row) return;
+    row.querySelectorAll(".wordle-tile").forEach((tile, i) => {
+      setTimeout(() => {
+        tile.classList.add("wordle-tile-bounce");
+        setTimeout(() => tile.classList.remove("wordle-tile-bounce"), 600);
+      }, i * 80);
+    });
+  }
+
+  // ── Share ─────────────────────────────────────────────────────────────────
+  function buildShareText(solved) {
+    const wordNum  = pageStart + currentWordInPage + 1;
+    const result   = solved ? `${guesses.length}/6` : "X/6";
+    const grid     = guesses.map(g =>
+      g.states.map(s => s === "correct" ? "🟩" : s === "present" ? "🟨" : "⬛").join("")
+    ).join("\n");
+    return `${theme.title} Wordle — Word ${wordNum}/${words.length} ${result}\n\n${grid}\n\ntriviagauntlet.app/wordle/${theme.slug}.html`;
+  }
+
+  function copyShare(solved) {
+    const text = buildShareText(solved);
+    const fb   = document.getElementById("wordleShareFeedback");
+    const doFeedback = () => { if (fb) { fb.textContent = "Copied!"; setTimeout(() => { if (fb) fb.textContent = ""; }, 2000); } };
+
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text).then(doFeedback).catch(() => {
+        const ta = document.createElement("textarea");
+        ta.value = text; ta.style.cssText = "position:fixed;opacity:0;";
+        document.body.appendChild(ta); ta.select();
+        document.execCommand("copy"); ta.remove(); doFeedback();
+      });
+    } else {
+      const ta = document.createElement("textarea");
+      ta.value = text; ta.style.cssText = "position:fixed;opacity:0;";
+      document.body.appendChild(ta); ta.select();
+      document.execCommand("copy"); ta.remove(); doFeedback();
+    }
+  }
+
+  // ── Save last result ──────────────────────────────────────────────────────
+  function saveLastResult(solved) {
+    const grid = guesses.map(g =>
+      g.states.map(s => s === "correct" ? "🟩" : s === "present" ? "🟨" : "⬛").join("")
+    ).join("\n");
+    const data = {
+      word:    targetWord,
+      solved,
+      wordNum: pageStart + currentWordInPage + 1,
+      total:   words.length,
+      result:  solved ? `${guesses.length}/6` : "X/6",
+      grid
+    };
+    try { localStorage.setItem(`tg_wordle_last_${theme.slug}`, JSON.stringify(data)); } catch(e) {}
+  }
+
+  // ── Result panel ──────────────────────────────────────────────────────────
+  function showResultPanel(solved) {
+    saveLastResult(solved);
+    const existing = document.getElementById("wordleResultPanel");
+    if (existing) existing.remove();
+
+    const isLast = currentWordInPage === pageWords.length - 1 && safePage === totalPages;
+    const emoji  = solved ? (guesses.length <= 2 ? "🎯" : guesses.length <= 4 ? "🎉" : "😅") : "😔";
+    const msg    = solved
+      ? `<strong>${targetWord}</strong> — solved in ${guesses.length}/6 ${emoji}`
+      : `<strong>${targetWord}</strong> — not solved ${emoji}`;
+
+    const emojiGrid = guesses.map(g =>
+      g.states.map(s => s === "correct" ? "🟩" : s === "present" ? "🟨" : "⬛").join("")
+    ).join("\n");
+
+    const panel = document.createElement("div");
+    panel.id        = "wordleResultPanel";
+    panel.className = "wordle-result-panel";
+    panel.innerHTML = `
+      <p class="wordle-result-text">${msg}</p>
+      <pre class="wordle-result-grid">${emojiGrid}</pre>
+      <div class="cta-row" style="margin-top:10px;justify-content:center;">
+        <button class="secondary-btn" id="wordleShareBtn">📋 Share</button>
+        ${!isLast ? `<button class="primary-btn" id="wordleNextFromPanel">Next Word →</button>` : ""}
+      </div>
+      <p class="wordle-share-feedback" id="wordleShareFeedback"></p>`;
+
+    feedbackEl.textContent   = "";
+    boardEl.style.display    = "none";
+    keyboardEl.style.display = "none";
+    const revealBtn = document.getElementById("wordleRevealBtn");
+    if (revealBtn) revealBtn.style.display = "none";
+    feedbackEl.after(panel);
+
+    document.getElementById("wordleShareBtn").addEventListener("click", () => copyShare(solved));
+
+    const nextFromPanel = document.getElementById("wordleNextFromPanel");
+    if (nextFromPanel) {
+      nextFromPanel.addEventListener("click", () => {
+        if (currentWordInPage < pageWords.length - 1) loadWord(currentWordInPage + 1);
+        else if (safePage < totalPages) window.location.href = `wordle.html?theme=${theme.slug}&page=${safePage + 1}`;
+      });
+    }
+  }
+
+  // ── Letter Reveals ────────────────────────────────────────────────────────
+  function updateRevealBtn() {
+    let btn = document.getElementById("wordleRevealBtn");
+    if (!btn) {
+      btn = document.createElement("button");
+      btn.id        = "wordleRevealBtn";
+      btn.type      = "button";
+      btn.className = "secondary-btn wordle-reveal-btn";
+      progressEl.appendChild(btn);
+      progressEl.style.position = "relative";
+      btn.addEventListener("click", useReveal);
+    }
+    const left = 2 - revealsUsed;
+    if (left <= 0 || gameOver) {
+      btn.disabled      = true;
+      btn.style.opacity = "0.4";
+      btn.textContent   = "💡 No reveals left";
+    } else if (revealUsedThisRow) {
+      btn.disabled      = true;
+      btn.style.opacity = "0.4";
+      btn.textContent   = `💡 Reveal (guess first)`;
+    } else {
+      btn.disabled      = false;
+      btn.style.opacity = "";
+      btn.textContent   = `💡 Reveal · ${left} left`;
+    }
+  }
+
+  function useReveal() {
+    if (revealsUsed >= 2 || revealUsedThisRow || gameOver) return;
+
+    // Skip positions the player already got correct themselves
+    const alreadyKnown = new Set();
+    for (const g of guesses) {
+      g.states.forEach((s, i) => { if (s === "correct") alreadyKnown.add(i); });
+    }
+
+    // Available = not yet revealed AND not already correctly guessed
+    const available = [];
+    for (let i = 0; i < targetWord.length; i++) {
+      if (!revealedPositions[i] && !alreadyKnown.has(i)) available.push(i);
+    }
+    if (!available.length) return;
+
+    const idx = available[Math.floor(Math.random() * available.length)];
+    revealedPositions[idx] = targetWord[idx];
+    revealedAtRow[idx]     = guesses.length;
+    revealsUsed++;
+    revealUsedThisRow = true;
+
+    keyStates[targetWord[idx]] = "correct";
+    currentGuess[idx] = targetWord[idx]; // lock only this revealed letter into active row
+
+    updateRevealBtn();
+    renderBoard();
+    renderKeyboard();
+  }
+
+  // ── Submit ────────────────────────────────────────────────────────────────
   function submitGuess() {
     if (gameOver) return;
 
-    if (currentGuess.length !== targetWord.length) {
+    if (currentGuess.includes(null)) {
       setFeedback(`Guess must be ${targetWord.length} letters.`, "wrong");
+      shakeCurrentRow();
       return;
     }
 
-    const guess  = currentGuess.toUpperCase();
-    const states = getLetterState(guess, targetWord);
+    const guess    = currentGuess.join("");
+    const states   = getLetterState(guess, targetWord);
+    const rowIndex = guesses.length;
 
     guesses.push({ word: guess, states });
     updateKeyboard(guess, states);
-    currentGuess = "";
+    currentGuess      = Array(targetWord.length).fill(null); // fresh row, reveal was a one-time hint
+    revealUsedThisRow = false;
+    updateRevealBtn();
 
+    _animatingRow = rowIndex;
     renderBoard();
+    _animatingRow = -1;
     renderKeyboard();
 
-    if (guess === targetWord) {
-      setFeedback("Correct", "correct");
-      gameOver = true;
-      if (typeof recordWordle === "function") recordWordle(theme.slug, true);
-      if (typeof saveSession === "function") saveSession("wordle", theme.slug, safePage, 0, totalPages);
-      maybeInjectWordleCard();
-      return;
-    }
-
-    if (guesses.length === 6) {
-      setFeedback(`Wrong. The word was ${targetWord}.`, "wrong");
-      gameOver = true;
-      if (typeof recordWordle === "function") recordWordle(theme.slug, false);
-      if (typeof saveSession === "function") saveSession("wordle", theme.slug, safePage, 0, totalPages);
-      maybeInjectWordleCard();
-      return;
-    }
-
-    setFeedback(`${6 - guesses.length} guess(es) left.`);
+    animateRow(rowIndex, states, () => {
+      if (guess === targetWord) {
+        bounceWinRow(rowIndex);
+        gameOver = true;
+        updateRevealBtn();
+        if (typeof recordWordle === "function") recordWordle(theme.slug, true);
+        if (typeof saveSession === "function") saveSession("wordle", theme.slug, safePage, 0, totalPages);
+        setTimeout(() => { showResultPanel(true); maybeInjectWordleCard(); }, 350);
+        return;
+      }
+      if (guesses.length === 6) {
+        gameOver = true;
+        updateRevealBtn();
+        if (typeof recordWordle === "function") recordWordle(theme.slug, false);
+        if (typeof saveSession === "function") saveSession("wordle", theme.slug, safePage, 0, totalPages);
+        setTimeout(() => { showResultPanel(false); maybeInjectWordleCard(); }, 200);
+        return;
+      }
+      setFeedback(`${6 - guesses.length} guess${guesses.length === 5 ? "" : "es"} left.`);
+    });
   }
 
   function maybeInjectWordleCard() {
@@ -518,20 +917,48 @@ async function renderWordlePage() {
     if (gameOver) return;
 
     if (key === "ENTER") { submitGuess(); return; }
-    if (key === "⌫") { currentGuess = currentGuess.slice(0, -1); renderBoard(); return; }
-    if (/^[A-Z]$/.test(key) && currentGuess.length < targetWord.length) {
-      currentGuess += key;
-      renderBoard();
+
+    if (key === "⌫") {
+      // Remove last typed letter, skipping locked revealed positions
+      for (let i = currentGuess.length - 1; i >= 0; i--) {
+        if (currentGuess[i] !== null && !revealedPositions[i]) {
+          currentGuess[i] = null;
+          renderBoard();
+          return;
+        }
+      }
+      return;
+    }
+
+    if (/^[A-Z]$/.test(key)) {
+      // Type into the next empty (non-revealed) position
+      const nextEmpty = currentGuess.indexOf(null);
+      if (nextEmpty !== -1) {
+        currentGuess[nextEmpty] = key;
+        renderBoard();
+      }
     }
   }
 
   function loadWord(index) {
     currentWordInPage = index;
-    targetWord   = String(pageWords[currentWordInPage]).toUpperCase();
-    guesses      = [];
-    currentGuess = "";
-    gameOver     = false;
-    keyStates    = {};
+    targetWord        = String(pageWords[currentWordInPage]).toUpperCase();
+    guesses           = [];
+    gameOver          = false;
+    keyStates         = {};
+    revealsUsed       = 0;
+    revealedPositions = {};
+    revealedAtRow     = {};
+    revealUsedThisRow = false;
+    currentGuess      = initCurrentGuess(); // fresh array, no reveals yet
+
+    // Clear result panel and restore board + keyboard for new word
+    const resultPanel = document.getElementById("wordleResultPanel");
+    if (resultPanel) resultPanel.remove();
+    boardEl.style.display    = "";
+    keyboardEl.style.display = "";
+    const revealBtn = document.getElementById("wordleRevealBtn");
+    if (revealBtn) revealBtn.style.display = "";
 
     const globalIndex = pageStart + currentWordInPage;
     progressEl.textContent = `Word ${globalIndex + 1} of ${words.length}`;
@@ -539,6 +966,7 @@ async function renderWordlePage() {
     renderBoard();
     renderKeyboard();
     updateNavButtons();
+    updateRevealBtn();
   }
 
   document.addEventListener("keydown", e => {
@@ -572,9 +1000,34 @@ async function renderWordlePage() {
   if (currentPage === 1 && typeof getSession === "function") {
     const saved = getSession("wordle", theme.slug);
     if (saved && saved.round < totalPages) {
+      // Load last result from localStorage if available
+      let lastHtml = "";
+      try {
+        const last = JSON.parse(localStorage.getItem(`tg_wordle_last_${theme.slug}`) || "null");
+        if (last) {
+          const emoji = last.solved ? (last.result === "1/6" ? "🎯" : last.result <= "4/6" ? "🎉" : "😅") : "😔";
+          const msg   = last.solved
+            ? `Word ${last.wordNum}: <strong>${last.word}</strong> — solved in ${last.result} ${emoji}`
+            : `Word ${last.wordNum}: <strong>${last.word}</strong> — not solved ${emoji}`;
+          lastHtml = `
+            <div class="wordle-last-result">
+              <p>${msg}</p>
+              <pre class="wordle-last-grid">${last.grid}</pre>
+            </div>`;
+        } else {
+          // Fallback: we know the last word from the words array
+          const lastWord = String(words[saved.round - 1] || "").toUpperCase();
+          if (lastWord) lastHtml = `
+            <div class="wordle-last-result">
+              <p>Last word: <strong>${lastWord}</strong></p>
+            </div>`;
+        }
+      } catch(e) {}
+
       const promptDiv = document.createElement("div");
       promptDiv.style.cssText = "text-align:center;padding:16px 0 8px;";
       promptDiv.innerHTML = `
+        ${lastHtml}
         <p style="margin-bottom:12px;">You've completed <strong>${saved.round}</strong> of <strong>${totalPages}</strong> words.</p>
         <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
           <a class="primary-btn" href="wordle.html?theme=${theme.slug}&page=${saved.round + 1}">Continue from Word ${saved.round + 1}</a>

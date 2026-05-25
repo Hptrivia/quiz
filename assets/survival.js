@@ -346,8 +346,19 @@ async function renderSurvivalPage() {
     recoveryPoints: 0,
     recoveryStarted: false,
     pendingRecoveryStart: false,
-    answerLocked: false
+    answerLocked: false,
+    topScore: null
   };
+
+  // Inject leaderboard button into difficulty screen
+  if (typeof lbOpenModal === "function") {
+    const lbBtn = document.createElement("button");
+    lbBtn.className = "secondary-btn";
+    lbBtn.style.cssText = "margin-top:14px;width:100%;";
+    lbBtn.textContent = "🏆 Leaderboard";
+    lbBtn.addEventListener("click", () => lbOpenModal(theme.slug, theme.title));
+    difficultyBox.appendChild(lbBtn);
+  }
 
   // Tracks the active slide's submit/next buttons
   let currentSubmitBtn = null;
@@ -392,6 +403,10 @@ async function renderSurvivalPage() {
 
     fiftyBtn.classList.toggle("used-lifeline", !state.fiftyAvailable);
     friendBtn.classList.toggle("used-lifeline", !state.friendAvailable);
+
+    const slide = getCurrentSlide();
+    const topEl = slide ? slide.querySelector(".slide-top-text") : null;
+    if (topEl) topEl.textContent = state.topScore !== null ? state.topScore : "—";
   }
 
   function renderResult() {
@@ -426,11 +441,13 @@ async function renderSurvivalPage() {
     const prevBest = parseInt(localStorage.getItem(pbKey) || "0", 10);
     const isNewPB = state.score > prevBest;
     if (isNewPB) localStorage.setItem(pbKey, state.score);
-    const notifyHtml = isNewPB ? buildNotifyCard(theme.title, true, "survival") : "";
+    const nearEnd    = state.currentIndex >= Math.ceil(state.questions.length * 0.75);
+    const notifyHtml = (isNewPB && nearEnd) ? buildNotifyCard(theme.title, true, "survival") : "";
 
     resultBox.innerHTML = `
       <h2>Survival Over</h2>
-      <p>Your score: ${state.score}</p>
+      <p>${isNewPB ? "🏆 New personal best! " : ""}Your score: <strong>${state.score}</strong></p>
+      <div id="lbSubmitPlaceholder"></div>
       <div class="cta-row">
         <a class="primary-btn" href="survival.html?theme=${theme.slug}">Play Again</a>
         ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html?theme=${theme.slug}">Unlimited Lifelines</a>` : ""}
@@ -447,6 +464,12 @@ async function renderSurvivalPage() {
       </div>
     `;
 
+
+    // Leaderboard submit section (new PB only, score > 0)
+    if (isNewPB && state.score > 0 && typeof lbShowSubmit === "function") {
+      const placeholder = document.getElementById("lbSubmitPlaceholder");
+      if (placeholder) lbShowSubmit(theme.slug, theme.title, state.score, placeholder);
+    }
 
     const resultSearchInput = document.getElementById("survivalResultThemeSearchInput");
     const resultSearchResults = document.getElementById("survivalResultThemeSearchResults");
@@ -650,7 +673,10 @@ async function renderSurvivalPage() {
     btn.addEventListener("click", async () => {
       state.difficulty = btn.dataset.difficulty;
 
-      const allQuestions = await fetchJSON(theme.questionFile);
+      const [allQuestions, fetchedTopScore] = await Promise.all([
+        fetchJSON(theme.questionFile),
+        (typeof lbTopScore === "function") ? lbTopScore(theme.slug) : Promise.resolve(null)
+      ]);
       const allowedDifficulties = difficultyMap[state.difficulty];
 
       state.questions = shuffle(
@@ -668,6 +694,7 @@ async function renderSurvivalPage() {
       state.recoveryStarted = false;
       state.pendingRecoveryStart = false;
       state.answerLocked = false;
+      state.topScore = fetchedTopScore;
 
       slidesContainer.innerHTML = "";
 
@@ -752,9 +779,12 @@ async function renderSurvivalPage() {
         metaRow.className = "episode-context survival-meta-row";
         const scoreP = document.createElement("p");
         scoreP.innerHTML = "<strong>Score:</strong> <span class='slide-score-text'>0</span>";
+        const topP = document.createElement("p");
+        topP.innerHTML = `<strong>Best:</strong> <span class='slide-top-text'>${state.topScore !== null ? state.topScore : "—"}</span>`;
         const streakP = document.createElement("p");
         streakP.innerHTML = "<strong>Recovery Streak:</strong> <span class='slide-streak-text'>Not started</span>";
         metaRow.appendChild(scoreP);
+        metaRow.appendChild(topP);
         metaRow.appendChild(streakP);
 
         const slideFeedback = document.createElement("p");

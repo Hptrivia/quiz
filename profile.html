@@ -131,6 +131,7 @@
   </footer>
 
   <script src="assets/profile.js"></script>
+  <script src="assets/leaderboard.js"></script>
   <script>
     const FORMSPREE = "https://formspree.io/f/mpqybwea";
 
@@ -212,7 +213,10 @@
             const pct = (d.highestRound && d.totalRounds) ? `${Math.round(d.highestRound / d.totalRounds * 100)}% completed` : null;
             val = `${pct ? pct + " · " : ""}best score ${d.bestScore || 0}/10`;
           }
-          if (mode === "Survival")    val = `Best ${d.longestRun || 0} Qs · ${d.runs || 0} runs`;
+          if (mode === "Survival") {
+            const lbSpan = d.longestRun ? `<span class="lb-inline-rank" data-lb-slug="${slug}" data-lb-score="${d.longestRun}"></span>` : "";
+            val = `Best ${d.longestRun || 0} Qs · ${d.runs || 0} runs${lbSpan ? " " + lbSpan : ""}`;
+          }
           if (mode === "Trivia Rush") val = `Best ${(d.highestScore || 0).toLocaleString()} · ${d.runs || 0} runs`;
           if (mode === "Wordle")      val = `${d.solved || 0}/${d.attempted || 0} solved`;
           if (mode === "Word Search") val = `${d.completed || 0} completed`;
@@ -265,6 +269,21 @@
       }).join("");
     }
 
+    async function loadLeaderboardRanks() {
+      if (typeof lbRank !== "function") return;
+      const spans = [...document.querySelectorAll(".lb-inline-rank[data-lb-slug]")];
+      if (!spans.length) return;
+      await Promise.all(spans.map(async span => {
+        const slug  = span.dataset.lbSlug;
+        const score = parseInt(span.dataset.lbScore, 10);
+        if (!score) return;
+        try {
+          const rank = await lbRank(slug, score);
+          if (rank !== null) span.textContent = `· #${rank}`;
+        } catch {}
+      }));
+    }
+
     function switchTab(name, btn) {
       document.querySelectorAll(".profile-tab").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
@@ -272,6 +291,7 @@
         document.getElementById(`tab-${t}`).style.display = t === name ? "" : "none";
       });
       if (typeof gtag === "function") gtag("event", "profile_tab_view", { tab: name });
+      if (name === "themes") loadLeaderboardRanks();
     }
 
     function pickColor(color) {
