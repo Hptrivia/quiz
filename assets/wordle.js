@@ -70,9 +70,35 @@ async function renderWordleMashupMode(themesParam) {
   function initCurrentGuess() {
     const arr = Array(targetWord.length).fill(null);
     for (const [i, letter] of Object.entries(revealedPositions)) {
-      arr[parseInt(i)] = letter;
+      if (revealedAtRow[parseInt(i)] === guesses.length) arr[parseInt(i)] = letter;
     }
     return arr;
+  }
+
+  // ── Mid-game persistence ──────────────────────────────────────────────────
+  const MID_KEY_M = `tg_wordle_mid_${sessionKey}_p${safePage}`;
+  function saveMidGame() {
+    try { localStorage.setItem(MID_KEY_M, JSON.stringify({ guesses, revealedPositions, revealedAtRow, revealsUsed })); } catch(e) {}
+  }
+  function clearMidGame() {
+    try { localStorage.removeItem(MID_KEY_M); } catch(e) {}
+  }
+  function restoreMidGame() {
+    try {
+      const saved = JSON.parse(localStorage.getItem(MID_KEY_M) || "null");
+      if (!saved || !Array.isArray(saved.guesses) || !saved.guesses.length) return;
+      if (saved.guesses[0].word.length !== targetWord.length) return;
+      guesses           = saved.guesses;
+      revealedPositions = saved.revealedPositions || {};
+      revealedAtRow     = saved.revealedAtRow     || {};
+      revealsUsed       = saved.revealsUsed       || 0;
+      for (const g of guesses) updateKeyboard(g.word, g.states);
+      for (const letter of Object.values(revealedPositions)) keyStates[letter] = "correct";
+      revealUsedThisRow = Object.values(revealedAtRow).some(r => r === guesses.length);
+      currentGuess      = (Array.isArray(saved.currentGuess) && saved.currentGuess.length === targetWord.length)
+        ? saved.currentGuess
+        : initCurrentGuess();
+    } catch(e) {}
   }
 
   const keyboardRows = [
@@ -249,6 +275,7 @@ async function renderWordleMashupMode(themesParam) {
     updateRevealBtn();
     renderBoard();
     renderKeyboard();
+    saveMidGame();
   }
 
   // ── Result panel ─────────────────────────────────────────────────────────
@@ -306,6 +333,7 @@ async function renderWordleMashupMode(themesParam) {
     currentGuess      = Array(targetWord.length).fill(null);
     revealUsedThisRow = false;
     updateRevealBtn();
+    saveMidGame();
 
     _animatingRow = rowIndex;
     renderBoard();
@@ -317,6 +345,7 @@ async function renderWordleMashupMode(themesParam) {
       if (guess === targetWord) {
         bounceWinRow(rowIndex);
         gameOver = true;
+        clearMidGame();
         updateRevealBtn();
         if (typeof saveSession === "function") saveSession("wordle", sessionKey, safePage, 0, totalPages);
         if (typeof recordMashupStats === "function") recordMashupStats(sessionKey, "wordle", { solved: true });
@@ -325,6 +354,7 @@ async function renderWordleMashupMode(themesParam) {
       }
       if (guesses.length === 6) {
         gameOver = true;
+        clearMidGame();
         updateRevealBtn();
         if (typeof saveSession === "function") saveSession("wordle", sessionKey, safePage, 0, totalPages);
         if (typeof recordMashupStats === "function") recordMashupStats(sessionKey, "wordle", { solved: false });
@@ -353,7 +383,8 @@ async function renderWordleMashupMode(themesParam) {
     if (key === "ENTER") { submitGuess(); return; }
     if (key === "⌫") {
       for (let i = currentGuess.length - 1; i >= 0; i--) {
-        if (currentGuess[i] !== null && !revealedPositions[i]) {
+        const lockedThisRow = revealedPositions[i] && revealedAtRow[i] === guesses.length;
+        if (currentGuess[i] !== null && !lockedThisRow) {
           currentGuess[i] = null; renderBoard(); return;
         }
       }
@@ -377,6 +408,7 @@ async function renderWordleMashupMode(themesParam) {
     revealedAtRow     = {};
     revealUsedThisRow = false;
     currentGuess      = initCurrentGuess();
+    restoreMidGame();
 
     const resultPanel = document.getElementById("wordleResultPanel");
     if (resultPanel) resultPanel.remove();
@@ -392,7 +424,7 @@ async function renderWordleMashupMode(themesParam) {
       badgeEl.innerHTML = `<span class="mashup-q-badge" style="background:${c.bg};border-color:${c.border};color:${c.text}">${entry.title}</span>`;
     }
 
-    setFeedback("");
+    setFeedback(guesses.length ? `${6 - guesses.length} guess${guesses.length === 5 ? "" : "es"} left.` : "");
     renderBoard();
     renderKeyboard();
     updateNavButtons();
@@ -539,9 +571,33 @@ async function renderWordlePage() {
   function initCurrentGuess() {
     const arr = Array(targetWord.length).fill(null);
     for (const [i, letter] of Object.entries(revealedPositions)) {
-      arr[parseInt(i)] = letter;
+      if (revealedAtRow[parseInt(i)] === guesses.length) arr[parseInt(i)] = letter;
     }
     return arr;
+  }
+
+  // ── Mid-game persistence ──────────────────────────────────────────────────
+  const MID_KEY_S = `tg_wordle_mid_${slug}_p${safePage}`;
+  function saveMidGame() {
+    try { localStorage.setItem(MID_KEY_S, JSON.stringify({ guesses, revealedPositions, revealedAtRow, revealsUsed })); } catch(e) {}
+  }
+  function clearMidGame() {
+    try { localStorage.removeItem(MID_KEY_S); } catch(e) {}
+  }
+  function restoreMidGame() {
+    try {
+      const saved = JSON.parse(localStorage.getItem(MID_KEY_S) || "null");
+      if (!saved || !Array.isArray(saved.guesses) || !saved.guesses.length) return;
+      if (saved.guesses[0].word.length !== targetWord.length) return;
+      guesses           = saved.guesses;
+      revealedPositions = saved.revealedPositions || {};
+      revealedAtRow     = saved.revealedAtRow     || {};
+      revealsUsed       = saved.revealsUsed       || 0;
+      for (const g of guesses) updateKeyboard(g.word, g.states);
+      for (const letter of Object.values(revealedPositions)) keyStates[letter] = "correct";
+      revealUsedThisRow = Object.values(revealedAtRow).some(r => r === guesses.length);
+      currentGuess      = initCurrentGuess();
+    } catch(e) {}
   }
 
   const keyboardRows = [
@@ -851,6 +907,7 @@ async function renderWordlePage() {
     updateRevealBtn();
     renderBoard();
     renderKeyboard();
+    saveMidGame();
   }
 
   // ── Submit ────────────────────────────────────────────────────────────────
@@ -872,6 +929,7 @@ async function renderWordlePage() {
     currentGuess      = Array(targetWord.length).fill(null); // fresh row, reveal was a one-time hint
     revealUsedThisRow = false;
     updateRevealBtn();
+    saveMidGame();
 
     _animatingRow = rowIndex;
     renderBoard();
@@ -879,19 +937,22 @@ async function renderWordlePage() {
     renderKeyboard();
 
     animateRow(rowIndex, states, () => {
+      const alreadyRecorded = typeof getSession === "function" && (s => s && s.round >= safePage)(getSession("wordle", theme.slug));
       if (guess === targetWord) {
         bounceWinRow(rowIndex);
         gameOver = true;
+        clearMidGame();
         updateRevealBtn();
-        if (typeof recordWordle === "function") recordWordle(theme.slug, true);
+        if (!alreadyRecorded && typeof recordWordle === "function") recordWordle(theme.slug, true);
         if (typeof saveSession === "function") saveSession("wordle", theme.slug, safePage, 0, totalPages);
         setTimeout(() => { showResultPanel(true); maybeInjectWordleCard(); }, 350);
         return;
       }
       if (guesses.length === 6) {
         gameOver = true;
+        clearMidGame();
         updateRevealBtn();
-        if (typeof recordWordle === "function") recordWordle(theme.slug, false);
+        if (!alreadyRecorded && typeof recordWordle === "function") recordWordle(theme.slug, false);
         if (typeof saveSession === "function") saveSession("wordle", theme.slug, safePage, 0, totalPages);
         setTimeout(() => { showResultPanel(false); maybeInjectWordleCard(); }, 200);
         return;
@@ -919,9 +980,10 @@ async function renderWordlePage() {
     if (key === "ENTER") { submitGuess(); return; }
 
     if (key === "⌫") {
-      // Remove last typed letter, skipping locked revealed positions
+      // Remove last typed letter — only lock reveals on the row they were shown
       for (let i = currentGuess.length - 1; i >= 0; i--) {
-        if (currentGuess[i] !== null && !revealedPositions[i]) {
+        const lockedThisRow = revealedPositions[i] && revealedAtRow[i] === guesses.length;
+        if (currentGuess[i] !== null && !lockedThisRow) {
           currentGuess[i] = null;
           renderBoard();
           return;
@@ -951,6 +1013,7 @@ async function renderWordlePage() {
     revealedAtRow     = {};
     revealUsedThisRow = false;
     currentGuess      = initCurrentGuess(); // fresh array, no reveals yet
+    restoreMidGame();
 
     // Clear result panel and restore board + keyboard for new word
     const resultPanel = document.getElementById("wordleResultPanel");
@@ -962,7 +1025,7 @@ async function renderWordlePage() {
 
     const globalIndex = pageStart + currentWordInPage;
     progressEl.textContent = `Word ${globalIndex + 1} of ${words.length}`;
-    setFeedback("");
+    setFeedback(guesses.length ? `${6 - guesses.length} guess${guesses.length === 5 ? "" : "es"} left.` : "");
     renderBoard();
     renderKeyboard();
     updateNavButtons();

@@ -274,21 +274,14 @@ const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
           <p>10-question quick rounds</p>
         </a>
 
-        <a class="card" href="../remove-ads.html?theme=${slug}&mode=normal">
-          <h3>Buy me a coffee</h3>
-          <p>If you enjoyed playing, every little bit helps.</p>
+        <a class="card" href="../survival.html?theme=${slug}">
+          <h3>Survival Mode</h3>
+          <p>One mistake and the run ends</p>
         </a>
-
-        ${fanQuestionsButton}
 
         <a class="card" href="../trivia-rush.html?theme=${slug}">
           <h3>Trivia Rush</h3>
           <p>Score, streak, and multiplier run</p>
-        </a>
-
-        <a class="card" href="../survival.html?theme=${slug}">
-          <h3>Survival Mode</h3>
-          <p>One mistake and the run ends</p>
         </a>
 
         ${episodeButton}
@@ -306,6 +299,13 @@ const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
         <a class="card" href="../wordsearch/${rawSlug}.html">
           <h3>Word Search</h3>
           <p>Find hidden themed words</p>
+        </a>
+
+        ${fanQuestionsButton}
+
+        <a class="card" href="../remove-ads.html?theme=${slug}&mode=normal">
+          <h3>Buy me a coffee</h3>
+          <p>If you enjoyed playing, every little bit helps.</p>
         </a>
 
       </div>

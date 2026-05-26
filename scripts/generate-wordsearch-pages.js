@@ -29,7 +29,22 @@ function getThemeContext(category) {
   return "the series";
 }
 
+const HARDCODED_RELATED = {
+  "harry-potter": [
+    { slug: "lord-of-the-rings",          title: "Lord of The Rings" },
+    { slug: "avatar-the-last-airbender",  title: "Avatar: The Last Airbender" },
+    { slug: "game-of-thrones",            title: "Game of Thrones" },
+    { slug: "house-of-the-dragon",        title: "House of the Dragon" },
+    { slug: "arcane",                     title: "Arcane" }
+  ]
+};
+
 function getRelatedThemes(allThemes, currentTheme, wordsearchSet, limit = 4) {
+  if (HARDCODED_RELATED[currentTheme.slug]) {
+    return HARDCODED_RELATED[currentTheme.slug]
+      .filter(t => wordsearchSet.has(normalizeTitle(t.title)))
+      .slice(0, limit);
+  }
   const sameCategory = allThemes.filter(t =>
     t.slug !== currentTheme.slug &&
     t.category === currentTheme.category &&
@@ -110,9 +125,9 @@ function buildWordsearchPage(theme, allThemes, wordsearchSet) {
 <body>
   <main class="container narrow">
     <div class="theme-top-links">
-      <a href="../wordsearch.html" class="back-link">&#8592; Back</a>
+      <a href="../themes/${slug}.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">&#8592; Back</a>
       <span id="navAvatarSlot"></span>
-      <a href="../themes/${slug}.html" class="back-link">Trivia &#8594;</a>
+      <a href="../themes/${slug}.html" class="back-link">Theme Page &#8594;</a>
     </div>
 
     <section class="panel">
@@ -126,7 +141,7 @@ function buildWordsearchPage(theme, allThemes, wordsearchSet) {
       </div>
 
       <p style="text-align:center;margin-top:8px;">
-        <a href="../wordle/${slug}.html" style="color:#94a3b8;font-size:0.9rem;">Also try ${title} Wordle &#8594;</a>
+        <a href="../play.html?theme=${slug}" style="color:#94a3b8;font-size:0.9rem;">Also try ${title} Trivia &#8594;</a>
       </p>
 
       ${relatedHtml}
