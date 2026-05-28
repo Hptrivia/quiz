@@ -300,6 +300,7 @@ function wsWireEvents() {
       wsRenderWordList();
       wl.classList.add('ws-visible');
       fl.style.display = 'none';
+      wl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     } else {
       wl.classList.remove('ws-visible');
       fl.style.display = '';
