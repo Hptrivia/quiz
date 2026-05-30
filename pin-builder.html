@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trivia Gauntlet – Pin Builder</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:#EDEBE4;min-height:100vh;padding:28px 20px}
+.wrap{max-width:1040px;margin:0 auto}
+h1{font-size:20px;font-weight:800;color:#1a1a1a;margin-bottom:4px}
+.sub{font-size:13px;color:#777;margin-bottom:22px}
+.layout{display:grid;grid-template-columns:260px 1fr;gap:22px;align-items:start}
+.side{background:#fff;border-radius:16px;padding:20px;box-shadow:0 2px 14px rgba(0,0,0,.07)}
+label{display:block;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#999;margin:14px 0 4px}
+label:first-of-type{margin-top:0}
+select,input[type=text]{width:100%;border:1.5px solid #e5e5e5;border-radius:8px;padding:9px 11px;font-size:13px;font-family:inherit;outline:none;transition:border .15s;color:#1a1a1a;background:#fff;cursor:pointer;appearance:none;-webkit-appearance:none}
+select:focus,input[type=text]:focus{border-color:#1a1a1a;cursor:auto}
+input[type=text]{cursor:text}
+.sep{border:none;border-top:1px solid #eee;margin:16px 0 2px}
+.pal-lbl{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#999;margin:14px 0 7px;display:block}
+.pal{display:flex;gap:8px;flex-wrap:wrap}
+.dot{width:26px;height:26px;border-radius:50%;cursor:pointer;border:3px solid transparent;transition:all .15s;flex-shrink:0}
+.dot.on{border-color:#1a1a1a;transform:scale(1.12)}
+.tip{font-size:11px;color:#aaa;line-height:1.75;margin-top:18px;padding-top:14px;border-top:1px solid #eee}
+.tip strong{color:#888}
+.pins-wrap{background:#fff;border-radius:16px;padding:20px;box-shadow:0 2px 14px rgba(0,0,0,.07)}
+.pins{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pw{display:flex;flex-direction:column;gap:8px}
+.pin-lbl{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#999;text-align:center}
+.pin{width:100%;aspect-ratio:2/3;border-radius:14px;overflow:hidden;position:relative;box-shadow:0 6px 28px rgba(0,0,0,.2)}
+.pin-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.pin-scrim{position:absolute;inset:0;z-index:1}
+.pin-content{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;padding:16px 14px 18px}
+.pin-title{font-family:'Bebas Neue',sans-serif;line-height:1.0;margin-bottom:6px;word-break:break-word}
+.pin-hook{font-size:11px;font-weight:600;line-height:1.4;font-family:'DM Sans',sans-serif}
+.pin-cat{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;font-family:'DM Sans',sans-serif}
+.pin-question{font-size:10px;font-style:italic;line-height:1.4;margin-bottom:5px;font-family:'DM Sans',sans-serif;opacity:.88}
+.pin-cta{display:inline-block;align-self:flex-start;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 13px;border-radius:5px;margin-top:7px;font-family:'DM Sans',sans-serif}
+.btn-row{display:flex;gap:6px}
+.btn{flex:1;padding:8px 4px;border-radius:8px;border:none;font-size:11px;font-weight:700;cursor:pointer;font-family:inherit;letter-spacing:.01em;transition:all .15s}
+.btn-dl{background:#1a1a1a;color:#fff}
+.btn-dl:hover{background:#333}
+.btn-cp{background:#f0f0f0;color:#555;border:1.5px solid #e0e0e0}
+.btn-cp:hover{background:#e5e5e5}
+.btn:disabled{opacity:.45;cursor:wait}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Trivia Gauntlet – Pin Builder</h1>
+  <p class="sub">Pick a theme, choose an overlay colour, then hit ↓ Download to save a 1000×1500px PNG ready for Pinterest.</p>
+  <div class="layout">
+    <div class="side">
+      <label>Theme</label>
+      <input type="text" id="theme-input" value="Stranger Things" oninput="render()" placeholder="e.g. Breaking Bad">
+      <label>Hook text</label>
+      <input type="text" id="hk" value="Only real fans score 8/10" oninput="render()">
+      <hr class="sep">
+      <label>Category tag <small style="font-size:9px;color:#ccc;text-transform:none;letter-spacing:0">(Template 2)</small></label>
+      <input type="text" id="cat-input" value="TV Series" oninput="render()" placeholder="e.g. TV Series, Anime, Games">
+      <hr class="sep">
+      <label>Sample question <small style="font-size:9px;color:#ccc;text-transform:none;letter-spacing:0">(Template 3)</small></label>
+      <input type="text" id="qst" value="Who is the Mind Flayer?" oninput="render()">
+      <hr class="sep">
+      <label>Background image</label>
+      <input type="file" id="img-upload" accept="image/*" onchange="loadBg(this)" style="font-size:12px;font-family:inherit;width:100%;cursor:pointer;">
+      <p style="font-size:10px;color:#bbb;margin-top:4px;">Leave blank to keep the default.</p>
+      <span class="pal-lbl">Overlay colour</span>
+      <div class="pal">
+        <div class="dot on" data-i="0" style="background:#111" onclick="setPal(0)" title="Black"></div>
+        <div class="dot" data-i="1" style="background:#7f1d1d" onclick="setPal(1)" title="Red"></div>
+        <div class="dot" data-i="2" style="background:#1e3a8a" onclick="setPal(2)" title="Blue"></div>
+        <div class="dot" data-i="3" style="background:#14532d" onclick="setPal(3)" title="Green"></div>
+        <div class="dot" data-i="4" style="background:#78350f" onclick="setPal(4)" title="Amber"></div>
+        <div class="dot" data-i="5" style="background:#4c1d95" onclick="setPal(5)" title="Purple"></div>
+        <div class="dot" data-i="6" style="background:#134e4a" onclick="setPal(6)" title="Teal"></div>
+        <div class="dot" data-i="7" style="background:#831843" onclick="setPal(7)" title="Pink"></div>
+      </div>
+      <p class="tip"><strong>Workflow</strong><br>1. Pick theme &amp; hook<br>2. Choose overlay colour<br>3. <strong>↓ Download</strong> → 1000×1500 PNG<br>4. <strong>Copy caption</strong> → paste to Pinterest</p>
+    </div>
+    <div class="pins-wrap">
+      <div class="pins">
+        <div class="pw">
+          <div class="pin" id="pin1">
+            <img class="pin-bg" id="bg1">
+            <div class="pin-scrim" id="scrim1"></div>
+            <div class="pin-content">
+              <div class="pin-title" id="t1"></div>
+              <div class="pin-hook" id="h1"></div>
+            </div>
+          </div>
+          <div class="btn-row">
+            <button class="btn btn-dl" onclick="dlPin(1)">↓ Download</button>
+            <button class="btn btn-cp" onclick="cpCaption(1)">Copy caption</button>
+          </div>
+          <div class="pin-lbl">Template 1</div>
+        </div>
+        <div class="pw">
+          <div class="pin" id="pin2">
+            <img class="pin-bg" id="bg2">
+            <div class="pin-scrim" id="scrim2"></div>
+            <div class="pin-content">
+              <div class="pin-cat" id="ct2"></div>
+              <div class="pin-title" id="t2"></div>
+              <div class="pin-hook" id="h2"></div>
+            </div>
+          </div>
+          <div class="btn-row">
+            <button class="btn btn-dl" onclick="dlPin(2)">↓ Download</button>
+            <button class="btn btn-cp" onclick="cpCaption(2)">Copy caption</button>
+          </div>
+          <div class="pin-lbl">Template 2</div>
+        </div>
+        <div class="pw">
+          <div class="pin" id="pin3">
+            <img class="pin-bg" id="bg3">
+            <div class="pin-scrim" id="scrim3"></div>
+            <div class="pin-content">
+              <div class="pin-title" id="t3"></div>
+              <div class="pin-question" id="q3"></div>
+              <div class="pin-hook" id="h3"></div>
+              <div class="pin-cta" id="cta3">Play free →</div>
+            </div>
+          </div>
+          <div class="btn-row">
+            <button class="btn btn-dl" onclick="dlPin(3)">↓ Download</button>
+            <button class="btn btn-cp" onclick="cpCaption(3)">Copy caption</button>
+          </div>
+          <div class="pin-lbl">Template 3</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+const PALS=[
+  {base:'0,0,0',accent:'#FFD700',hook:'rgba(255,255,255,.92)',cat:'rgba(255,255,255,.62)',cta:'#FFD700',ctaTxt:'#111'},
+  {base:'120,10,10',accent:'#fca5a5',hook:'rgba(255,255,255,.92)',cat:'rgba(255,255,255,.62)',cta:'#fca5a5',ctaTxt:'#7f1d1d'},
+  {base:'10,30,120',accent:'#93c5fd',hook:'rgba(255,255,255,.92)',cat:'rgba(255,255,255,.62)',cta:'#93c5fd',ctaTxt:'#1e3a8a'},
+  {base:'10,70,30',accent:'#86efac',hook:'rgba(255,255,255,.92)',cat:'rgba(255,255,255,.62)',cta:'#86efac',ctaTxt:'#14532d'},
+  {base:'100,45,5',accent:'#fcd34d',hook:'rgba(255,255,255,.92)',cat:'rgba(255,255,255,.62)',cta:'#fcd34d',ctaTxt:'#78350f'},
+  {base:'60,20,130',accent:'#d8b4fe',hook:'rgba(255,255,255,.92)',cat:'rgba(255,255,255,.62)',cta:'#d8b4fe',ctaTxt:'#4c1d95'},
+  {base:'10,65,60',accent:'#5eead4',hook:'rgba(255,255,255,.92)',cat:'rgba(255,255,255,.62)',cta:'#5eead4',ctaTxt:'#134e4a'},
+  {base:'110,15,55',accent:'#f9a8d4',hook:'rgba(255,255,255,.92)',cat:'rgba(255,255,255,.62)',cta:'#f9a8d4',ctaTxt:'#831843'},
+];
+let cur=0;
+let currentImg='';
+const g=id=>document.getElementById(id);
+function loadBg(input){if(!input.files||!input.files[0]){currentImg='';render();return;}const r=new FileReader();r.onload=e=>{currentImg=e.target.result;render();};r.readAsDataURL(input.files[0]);}
+function getTitle(){return g('theme-input').value.trim()||'Theme Title';}
+function getCat(){return g('cat-input').value.trim()||'General';}
+function setPal(i){cur=i;document.querySelectorAll('.dot').forEach(d=>d.classList.remove('on'));document.querySelectorAll('.dot')[i].classList.add('on');render();}
+function scrimGrad(base){return`linear-gradient(to top,rgba(${base},.97) 0%,rgba(${base},.93) 18%,rgba(${base},.4) 42%,rgba(${base},0) 60%)`;}
+function render(){
+  const ttl=getTitle(),hk=g('hk').value||'Hook text',cat=getCat(),qst=g('qst').value||'Sample question?',p=PALS[cur];
+  [1,2,3].forEach(n=>{
+    const im=g('bg'+n);
+    if(currentImg){im.src=currentImg;}else{im.removeAttribute('src');}
+    g('scrim'+n).style.background=scrimGrad(p.base);
+  });
+  g('t1').textContent=ttl;g('t1').style.cssText=`font-family:'Bebas Neue',sans-serif;font-size:32px;line-height:1.0;margin-bottom:6px;word-break:break-word;color:${p.accent}`;
+  g('h1').textContent=hk;g('h1').style.cssText=`font-size:11px;font-weight:600;line-height:1.4;font-family:'DM Sans',sans-serif;color:${p.hook}`;
+  g('ct2').textContent='— '+cat.toUpperCase()+' —';g('ct2').style.cssText=`font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;font-family:'DM Sans',sans-serif;color:${p.cat}`;
+  g('t2').textContent=ttl;g('t2').style.cssText=`font-family:'Bebas Neue',sans-serif;font-size:32px;line-height:1.0;margin-bottom:6px;word-break:break-word;color:${p.accent}`;
+  g('h2').textContent='Hard trivia quiz';g('h2').style.cssText=`font-size:11px;font-weight:600;line-height:1.4;font-family:'DM Sans',sans-serif;color:${p.hook}`;
+  g('t3').textContent=ttl;g('t3').style.cssText=`font-family:'Bebas Neue',sans-serif;font-size:28px;line-height:1.0;margin-bottom:5px;word-break:break-word;color:${p.accent}`;
+  g('q3').textContent='"'+qst+'"';g('q3').style.cssText=`font-size:10px;font-style:italic;line-height:1.4;margin-bottom:4px;font-family:'DM Sans',sans-serif;color:${p.hook};opacity:.88`;
+  g('h3').textContent=hk;g('h3').style.cssText=`font-size:10px;font-weight:600;line-height:1.4;font-family:'DM Sans',sans-serif;color:${p.hook}`;
+  const cta=g('cta3');cta.textContent='Play free →';cta.style.cssText=`display:inline-block;align-self:flex-start;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 13px;border-radius:5px;margin-top:7px;font-family:'DM Sans',sans-serif;background:${p.cta};color:${p.ctaTxt}`;
+}
+function dlPin(n){
+  const pin=g('pin'+n),ttl=getTitle(),btn=document.querySelectorAll('.btn-dl')[n-1];
+  btn.disabled=true;btn.textContent='Rendering…';
+  const scale=1000/pin.offsetWidth;
+  html2canvas(pin,{scale,useCORS:true,allowTaint:true,backgroundColor:null,imageTimeout:0,logging:false}).then(canvas=>{
+    const out=document.createElement('canvas');out.width=1000;out.height=1500;
+    out.getContext('2d').drawImage(canvas,0,0,1000,1500);
+    const a=document.createElement('a');
+    const slug=ttl.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+    a.download=`triviagauntlet-${slug}-t${n}.png`;a.href=out.toDataURL('image/png');a.click();
+    btn.disabled=false;btn.textContent='✓ Saved!';setTimeout(()=>btn.textContent='↓ Download',2200);
+  }).catch(()=>{btn.disabled=false;btn.textContent='↓ Download';});
+}
+function cpCaption(n){
+  const ttl=getTitle(),hk=g('hk').value||'',cat=getCat(),qst=g('qst').value||'';
+  const slug=ttl.toLowerCase().replace(/\s+/g,''),catSlug=cat.toLowerCase().replace(/\s+/g,'');
+  const caps={
+    1:`${ttl} Trivia Quiz\n${hk}\n\nPlay free → triviagauntlet.app\n\n#trivia #${slug} #trivianight #quiznight #funfacts #triviatime`,
+    2:`${ttl} – ${cat}\nHard trivia quiz\n\nPlay free → triviagauntlet.app\n\n#trivia #${slug} #${catSlug} #trivianight #quiztime`,
+    3:`${ttl} Trivia\n"${qst}"\n${hk}\n\nPlay free → triviagauntlet.app\n\n#trivia #${slug} #triviatime #quiznight #trivianerds`
+  };
+  navigator.clipboard.writeText(caps[n]).then(()=>{
+    const btn=document.querySelectorAll('.btn-cp')[n-1];btn.textContent='✓ Copied!';setTimeout(()=>btn.textContent='Copy caption',1800);
+  });
+}
+window.onload=()=>{render();};
+</script>
+</body>
+</html>
