@@ -26,6 +26,19 @@ async function generatePin(theme, outputPath) {
       document.getElementById('qst').value = `Can you answer every ${t.title} question?`;
       setPal(t.palette);
       render();
+
+      // Apply gradient background to pins since no image is uploaded
+      const p = PALS[t.palette];
+      const grad = `linear-gradient(160deg, rgba(${p.base},0.55) 0%, rgba(${p.base},0.85) 50%, rgb(${p.base}) 100%)`;
+      const solidFallback = `rgb(${p.base})`;
+      [1, 2, 3].forEach(n => {
+        const pin = document.getElementById('pin' + n);
+        pin.style.background = solidFallback;
+        const bg = document.getElementById('bg' + n);
+        // Replace the blank img with a styled div gradient
+        bg.style.cssText = `position:absolute;inset:0;background:${grad};display:block;`;
+        bg.removeAttribute('src');
+      });
     }, theme);
 
     await new Promise(r => setTimeout(r, 500));
