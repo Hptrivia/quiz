@@ -1,6 +1,6 @@
 // Preview mode — generates morning and evening images locally, no Pinterest posting
-// Run: node scripts/preview.js
-// Then open daily-content/preview/ to see both images
+// Run: node scripts/preview.js                        (uses today's auto theme)
+// Run: node scripts/preview.js vampire-diaries        (forces a specific theme)
 
 const path = require('path');
 const fs = require('fs');
@@ -8,9 +8,20 @@ const { getMorningTheme, getEveningTheme } = require('./get-theme');
 const { generatePin } = require('./generate-pin');
 const { screenshotSurvival } = require('./screenshot-survival');
 
+function overrideTheme(theme, slug) {
+  const themes = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'themes.json'), 'utf8'));
+  const found = themes.find(t => t.slug === slug);
+  if (!found) { console.error(`Theme "${slug}" not found in data/themes.json`); process.exit(1); }
+
+  const { buildThemeData } = require('./get-theme');
+  return buildThemeData(found, theme.template);
+}
+
 async function main() {
-  const morning = getMorningTheme();
-  const evening = getEveningTheme();
+  const slug = process.argv[2];
+  let morning = getMorningTheme();
+  let evening = getEveningTheme();
+  if (slug) { morning = overrideTheme(morning, slug); evening = overrideTheme(evening, slug); }
 
   const outDir = path.join(__dirname, '..', 'daily-content', 'preview');
   fs.mkdirSync(outDir, { recursive: true });

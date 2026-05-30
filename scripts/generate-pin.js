@@ -27,6 +27,12 @@ async function generatePin(theme, outputPath) {
       setPal(t.palette);
       render();
 
+      // Tighten scrim — dark overlay only at bottom where title sits
+      const p = PALS[t.palette];
+      [1, 2, 3].forEach(n => {
+        document.getElementById('scrim' + n).style.background =
+          `linear-gradient(to top, rgba(${p.base},.97) 0%, rgba(${p.base},.95) 15%, rgba(${p.base},.6) 28%, rgba(${p.base},0) 40%)`;
+      });
     }, theme);
 
     await new Promise(r => setTimeout(r, 500));

@@ -9,8 +9,8 @@ async function screenshotSurvival(theme, outputPath) {
 
   try {
     const page = await browser.newPage();
-    // Portrait viewport — good for Pinterest
-    await page.setViewport({ width: 390, height: 844, deviceScaleFactor: 2 });
+    // 500x750 at scale 2 = exactly 1000x1500px (Pinterest 2:3 ratio)
+    await page.setViewport({ width: 500, height: 750, deviceScaleFactor: 2 });
 
     await page.goto(theme.survivalUrl, { waitUntil: 'networkidle0', timeout: 30000 });
     await new Promise(r => setTimeout(r, 2000));

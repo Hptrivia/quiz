@@ -122,4 +122,22 @@ function getEveningTheme() {
   return getThemeForSlot(dayIndex, 77);
 }
 
-module.exports = { getMorningTheme, getEveningTheme };
+function buildThemeData(theme, templateNum) {
+  const boardEnvKey = BOARD_MAP[theme.category] || 'PINTEREST_BOARD_GENERAL';
+  return {
+    slug: theme.slug,
+    title: theme.title,
+    category: theme.category,
+    template: templateNum,
+    hook: HOOKS[templateNum],
+    pinTitle: PIN_TITLES[templateNum](theme.title),
+    description: (DESCRIPTIONS[theme.category] || DESCRIPTIONS.General)(theme.title),
+    boardName: BOARD_NAMES[theme.category] || 'General Trivia',
+    boardId: process.env[boardEnvKey] || process.env.PINTEREST_BOARD_GENERAL,
+    palette: PALETTE[theme.category] || 0,
+    themeUrl: `https://triviagauntlet.app/themes/${theme.slug}.html`,
+    survivalUrl: `https://triviagauntlet.app/survival.html?theme=${theme.slug}`,
+  };
+}
+
+module.exports = { getMorningTheme, getEveningTheme, buildThemeData };
