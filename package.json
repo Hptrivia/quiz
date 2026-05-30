@@ -21,6 +21,7 @@
   "dependencies": {
     "@capacitor/android": "^8.3.4",
     "@capacitor/cli": "^8.3.4",
-    "@capacitor/core": "^8.3.4"
+    "@capacitor/core": "^8.3.4",
+    "puppeteer": "^25.1.0"
   }
 }
