@@ -56,8 +56,9 @@ async function renderMultiThemeSurvival() {
     const inApp = typeof isInApp === 'function' && isInApp();
     fiftyBtn.disabled = (inApp ? false : !state.fiftyAvailable) || state.answerLocked || state.gameOver;
     friendBtn.disabled = (inApp ? false : !state.friendAvailable) || state.answerLocked || state.gameOver;
-    fiftyBtn.textContent = state.fiftyAvailable ? "50-50" : "50-50 Used";
-    friendBtn.textContent = state.friendAvailable ? "Call a Friend" : "Friend Used";
+    const _inApp = typeof isInApp === 'function' && isInApp();
+    fiftyBtn.textContent = state.fiftyAvailable ? "50-50" : (_inApp ? "50-50 (Watch Ad)" : "50-50 Used");
+    friendBtn.textContent = state.friendAvailable ? "Call a Friend" : (_inApp ? "Friend (Watch Ad)" : "Friend Used");
     fiftyBtn.classList.toggle("used-lifeline", !state.fiftyAvailable);
     friendBtn.classList.toggle("used-lifeline", !state.friendAvailable);
   }
@@ -409,8 +410,9 @@ async function renderSurvivalPage() {
     fiftyBtn.disabled = (inApp ? false : !state.fiftyAvailable) || state.answerLocked || state.gameOver;
     friendBtn.disabled = (inApp ? false : !state.friendAvailable) || state.answerLocked || state.gameOver;
 
-    fiftyBtn.textContent = state.fiftyAvailable ? "50-50" : "50-50 Used";
-    friendBtn.textContent = state.friendAvailable ? "Call a Friend" : "Friend Used";
+    const _inApp = typeof isInApp === 'function' && isInApp();
+    fiftyBtn.textContent = state.fiftyAvailable ? "50-50" : (_inApp ? "50-50 (Watch Ad)" : "50-50 Used");
+    friendBtn.textContent = state.friendAvailable ? "Call a Friend" : (_inApp ? "Friend (Watch Ad)" : "Friend Used");
 
     fiftyBtn.classList.toggle("used-lifeline", !state.fiftyAvailable);
     friendBtn.classList.toggle("used-lifeline", !state.friendAvailable);
