@@ -404,6 +404,7 @@ function _injectAndroidBanner() {
   const path = window.location.pathname;
   const isLobby = path.endsWith('/index.html') || path === '/' || path.endsWith('/index')
     || path.endsWith('/category.html')
+    || /\/categories\//.test(path)
     || /\/themes\//.test(path)
     || /\/(wordle|wordsearch)\//.test(path);
   if (!isLobby) return;

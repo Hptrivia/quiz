@@ -292,6 +292,10 @@ async function renderWordleMashupMode(themesParam) {
     const emojiGrid = guesses.map(g =>
       g.states.map(s => s === "correct" ? "🟩" : s === "present" ? "🟨" : "⬛").join("")
     ).join("\n");
+    const wordNum     = pageStart + currentWordInPage + 1;
+    const nextPageHref = !isLast && currentWordInPage >= pageWords.length - 1 && safePage < totalPages
+      ? `wordle.html?themes=${themesParam}&page=${safePage + 1}` : null;
+    const useReward   = isInApp() && wordNum % 2 === 0 && !!nextPageHref;
 
     const panel = document.createElement("div");
     panel.id        = "wordleResultPanel";
@@ -300,7 +304,7 @@ async function renderWordleMashupMode(themesParam) {
       <p class="wordle-result-text">${msg}</p>
       <pre class="wordle-result-grid">${emojiGrid}</pre>
       <div class="cta-row" style="margin-top:10px;justify-content:center;">
-        ${!isLast && !(typeof isWebWordleLimit === 'function' && isWebWordleLimit()) ? `<button class="primary-btn" id="wordleNextFromPanel">Next Word →</button>` : ""}
+        ${!isLast && !(typeof isWebWordleLimit === 'function' && isWebWordleLimit()) ? `<button class="primary-btn" id="wordleNextFromPanel"${useReward ? ` data-rewarded-href="${nextPageHref}"` : ''}>Next Word →</button>` : ""}
         ${!isLast && (typeof isWebWordleLimit === 'function' && isWebWordleLimit()) ? (typeof webWallHTML === 'function' ? webWallHTML("You've played your 2 free Wordle words!") : "") : ""}
       </div>`;
 
@@ -312,15 +316,10 @@ async function renderWordleMashupMode(themesParam) {
     feedbackEl.after(panel);
 
     const nextFromPanel = document.getElementById("wordleNextFromPanel");
-    if (nextFromPanel) {
+    if (nextFromPanel && !useReward) {
       nextFromPanel.addEventListener("click", () => {
-        const wordNum = pageStart + currentWordInPage + 1;
-        const proceed = () => {
-          if (currentWordInPage < pageWords.length - 1) loadWord(currentWordInPage + 1);
-          else if (safePage < totalPages) window.location.href = `wordle.html?themes=${themesParam}&page=${safePage + 1}`;
-        };
-        if (isInApp() && wordNum % 2 === 0) _offerRewardedLifeline('Next Word', proceed);
-        else proceed();
+        if (currentWordInPage < pageWords.length - 1) loadWord(currentWordInPage + 1);
+        else if (nextPageHref) window.location.href = nextPageHref;
       });
     }
   }
@@ -829,6 +828,10 @@ async function renderWordlePage() {
     const emojiGrid = guesses.map(g =>
       g.states.map(s => s === "correct" ? "🟩" : s === "present" ? "🟨" : "⬛").join("")
     ).join("\n");
+    const wordNum      = pageStart + currentWordInPage + 1;
+    const nextPageHref = !isLast && currentWordInPage >= pageWords.length - 1 && safePage < totalPages
+      ? `wordle.html?theme=${theme.slug}&page=${safePage + 1}` : null;
+    const useReward    = isInApp() && wordNum % 2 === 0 && !!nextPageHref;
 
     const panel = document.createElement("div");
     panel.id        = "wordleResultPanel";
@@ -838,7 +841,7 @@ async function renderWordlePage() {
       <pre class="wordle-result-grid">${emojiGrid}</pre>
       <div class="cta-row" style="margin-top:10px;justify-content:center;">
         <button class="secondary-btn" id="wordleShareBtn">📋 Share</button>
-        ${!isLast && !(typeof isWebWordleLimit === 'function' && isWebWordleLimit()) ? `<button class="primary-btn" id="wordleNextFromPanel">Next Word →</button>` : ""}
+        ${!isLast && !(typeof isWebWordleLimit === 'function' && isWebWordleLimit()) ? `<button class="primary-btn" id="wordleNextFromPanel"${useReward ? ` data-rewarded-href="${nextPageHref}"` : ''}>Next Word →</button>` : ""}
         ${!isLast && (typeof isWebWordleLimit === 'function' && isWebWordleLimit()) ? (typeof webWallHTML === 'function' ? webWallHTML("You've played your 2 free Wordle words!") : "") : ""}
       </div>
       <p class="wordle-share-feedback" id="wordleShareFeedback"></p>`;
@@ -853,15 +856,10 @@ async function renderWordlePage() {
     document.getElementById("wordleShareBtn").addEventListener("click", () => copyShare(solved));
 
     const nextFromPanel = document.getElementById("wordleNextFromPanel");
-    if (nextFromPanel) {
+    if (nextFromPanel && !useReward) {
       nextFromPanel.addEventListener("click", () => {
-        const wordNum = pageStart + currentWordInPage + 1;
-        const proceed = () => {
-          if (currentWordInPage < pageWords.length - 1) loadWord(currentWordInPage + 1);
-          else if (safePage < totalPages) window.location.href = `wordle.html?theme=${theme.slug}&page=${safePage + 1}`;
-        };
-        if (isInApp() && wordNum % 2 === 0) _offerRewardedLifeline('Next Word', proceed);
-        else proceed();
+        if (currentWordInPage < pageWords.length - 1) loadWord(currentWordInPage + 1);
+        else if (nextPageHref) window.location.href = nextPageHref;
       });
     }
   }
