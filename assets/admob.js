@@ -31,8 +31,10 @@ let _interstitialLoaded = false;
 
 async function adMobInit() {
   if (!isInApp() || _adMobReady) return;
-  const showInterstitialFirst = getRoundStartParams();
+  const _adKey = '_adShown_' + window.location.pathname + window.location.search;
+  const showInterstitialFirst = getRoundStartParams() && !sessionStorage.getItem(_adKey);
   if (showInterstitialFirst) {
+    sessionStorage.setItem(_adKey, '1');
     document.body.style.visibility = 'hidden';
     const loader = document.createElement('div');
     loader.id = '_adLoader';
