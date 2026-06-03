@@ -78,7 +78,7 @@ async function adMobInit() {
     }
     _adMobPreloadRewarded();
     _adMobPreloadInterstitial();
-    if (!isGamePage()) adMobShowBanner();
+    if (isGamePage()) adMobHideBanner(); else adMobShowBanner();
   } catch (e) {
     document.body.style.visibility = 'visible';
     console.warn('[AdMob] init failed', e);
