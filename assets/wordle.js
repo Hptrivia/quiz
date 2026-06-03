@@ -317,8 +317,7 @@ async function renderWordleMashupMode(themesParam) {
           if (currentWordInPage < pageWords.length - 1) loadWord(currentWordInPage + 1);
           else if (safePage < totalPages) window.location.href = `wordle.html?themes=${themesParam}&page=${safePage + 1}`;
         };
-        const isPrem = typeof isPremiumUser === 'function' && isPremiumUser();
-        if (isInApp() && wordNum % 2 === 0 && !isPrem) _offerRewardedLifeline('Next Word', proceed);
+        if (isInApp() && wordNum % 2 === 0) _offerRewardedLifeline('Next Word', proceed);
         else proceed();
       });
     }
@@ -857,8 +856,7 @@ async function renderWordlePage() {
           if (currentWordInPage < pageWords.length - 1) loadWord(currentWordInPage + 1);
           else if (safePage < totalPages) window.location.href = `wordle.html?theme=${theme.slug}&page=${safePage + 1}`;
         };
-        const isPrem = typeof isPremiumUser === 'function' && isPremiumUser();
-        if (isInApp() && wordNum % 2 === 0 && !isPrem) _offerRewardedLifeline('Next Word', proceed);
+        if (isInApp() && wordNum % 2 === 0) _offerRewardedLifeline('Next Word', proceed);
         else proceed();
       });
     }

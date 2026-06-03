@@ -183,7 +183,6 @@ function _offerRewardedLifeline(name, onEarned) {
 document.addEventListener('click', async (e) => {
   const btn = e.target.closest('[data-rewarded-href]');
   if (!btn || !isInApp()) return;
-  if (typeof isPremiumUser === 'function' && isPremiumUser()) return;
   e.preventDefault();
   const href = btn.dataset.rewardedHref;
   const label = btn.textContent.trim() || 'the next round';
