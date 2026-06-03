@@ -19,6 +19,12 @@
   <link rel="stylesheet" href="../assets/style.css" />
 </head>
 <body>
+  <header class="site-header">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+      <a href="../index.html" style="text-decoration:none;color:inherit;font-weight:700;font-size:1.1rem;">Trivia Gauntlet</a>
+      <span id="navAvatarSlot"></span>
+    </div>
+  </header>
   <main class="container">
     <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
 
@@ -90,5 +96,6 @@
       </div>
     </div>
   </footer>
+  <script src="../assets/profile.js"></script>
 </body>
 </html>
