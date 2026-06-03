@@ -21,29 +21,8 @@ function isGamePage() {
 
 function getRoundStartParams() {
   const path = window.location.pathname;
-  const p = new URLSearchParams(window.location.search);
-  // Challenge: round 2+ but NOT rounds where rewarded fires (4, 7, 10...)
-  if (path.endsWith('/challenge.html')) {
-    const r = parseInt(p.get('round') || '1');
-    return r > 1 && (r - 1) % 3 !== 0;
-  }
-  // Mashup-play: same logic as challenge/marathon depending on mode param
-  if (path.endsWith('/mashup-play.html')) {
-    const mode = p.get('mode') || 'marathon';
-    if (mode === 'challenge') {
-      const r = parseInt(p.get('round') || '1');
-      return r > 1 && (r - 1) % 3 !== 0;
-    }
-    return parseInt(p.get('page') || '1') === 1;
-  }
-  // All other modes: interstitial only at the very start (page/episode 1)
-  if (path.endsWith('/play.html'))      return parseInt(p.get('page')    || '1') === 1;
-  if (path.endsWith('/episode.html'))   return parseInt(p.get('episode') || '1') === 1;
-  if (path.endsWith('/wordle.html'))    return parseInt(p.get('page')    || '1') === 1;
-  if (path.endsWith('/wordsearch.html')) return parseInt(p.get('page')   || '1') === 1;
-  if (/\/(survival|versus|trivia-rush)\.html$/.test(path)) return true;
-  if (/\/(wordle|wordsearch)\//.test(path)) return true;
-  return false;
+  return /\/(play|challenge|survival|episode|trivia-rush|versus|wordle|wordsearch|mashup-play)\.html$/.test(path)
+    || /\/(wordle|wordsearch)\//.test(path);
 }
 
 let _AdMob = null;
@@ -53,10 +32,8 @@ let _interstitialLoaded = false;
 
 async function adMobInit() {
   if (!isInApp() || _adMobReady) return;
-  const _adKey = '_adShown_' + window.location.pathname + window.location.search;
-  const showInterstitialFirst = getRoundStartParams() && !sessionStorage.getItem(_adKey);
+  const showInterstitialFirst = getRoundStartParams();
   if (showInterstitialFirst) {
-    sessionStorage.setItem(_adKey, '1');
     document.body.style.visibility = 'hidden';
     const loader = document.createElement('div');
     loader.id = '_adLoader';
