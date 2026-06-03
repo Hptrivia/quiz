@@ -282,8 +282,7 @@ async function renderWordleMashupMode(themesParam) {
   function showResultPanel(solved, entry) {
     const existing = document.getElementById("wordleResultPanel");
     if (existing) existing.remove();
-    const wordNum = pageStart + currentWordInPage + 1;
-    if (wordNum >= 2 && wordNum % 2 === 0) adMobShowInterstitial();
+    adMobShowInterstitial();
     const isLast   = currentWordInPage === pageWords.length - 1 && safePage === totalPages;
     const emoji    = solved ? (guesses.length <= 2 ? "🎯" : guesses.length <= 4 ? "🎉" : "😅") : "😔";
     const msg      = solved
@@ -812,8 +811,7 @@ async function renderWordlePage() {
     saveLastResult(solved);
     const existing = document.getElementById("wordleResultPanel");
     if (existing) existing.remove();
-    const wordNum = pageStart + currentWordInPage + 1;
-    if (wordNum >= 2 && wordNum % 2 === 0) adMobShowInterstitial();
+    adMobShowInterstitial();
     const isLast = currentWordInPage === pageWords.length - 1 && safePage === totalPages;
     const emoji  = solved ? (guesses.length <= 2 ? "🎯" : guesses.length <= 4 ? "🎉" : "😅") : "😔";
     const msg    = solved
