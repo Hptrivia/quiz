@@ -270,6 +270,7 @@ function wsCloseModal(id) {
 }
 
 function wsShowCompletion() {
+  adMobShowInterstitial();
   document.getElementById('wsDoneModal').classList.add('ws-modal-show');
   if (typeof recordWordSearch === "function" && window._wsThemeSlug) {
     recordWordSearch(window._wsThemeSlug);
