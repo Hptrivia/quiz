@@ -311,11 +311,15 @@ async function renderWordleMashupMode(themesParam) {
 
     const nextFromPanel = document.getElementById("wordleNextFromPanel");
     if (nextFromPanel) {
-      nextFromPanel.addEventListener("click", async () => {
+      nextFromPanel.addEventListener("click", () => {
         const wordNum = pageStart + currentWordInPage + 1;
-        if (isInApp() && wordNum % 2 === 0) await adMobShowRewarded();
-        if (currentWordInPage < pageWords.length - 1) loadWord(currentWordInPage + 1);
-        else if (safePage < totalPages) window.location.href = `wordle.html?themes=${themesParam}&page=${safePage + 1}`;
+        const proceed = () => {
+          if (currentWordInPage < pageWords.length - 1) loadWord(currentWordInPage + 1);
+          else if (safePage < totalPages) window.location.href = `wordle.html?themes=${themesParam}&page=${safePage + 1}`;
+        };
+        const isPrem = typeof isPremiumUser === 'function' && isPremiumUser();
+        if (isInApp() && wordNum % 2 === 0 && !isPrem) _offerRewardedLifeline('Next Word', proceed);
+        else proceed();
       });
     }
   }
@@ -847,11 +851,15 @@ async function renderWordlePage() {
 
     const nextFromPanel = document.getElementById("wordleNextFromPanel");
     if (nextFromPanel) {
-      nextFromPanel.addEventListener("click", async () => {
+      nextFromPanel.addEventListener("click", () => {
         const wordNum = pageStart + currentWordInPage + 1;
-        if (isInApp() && wordNum % 2 === 0) await adMobShowRewarded();
-        if (currentWordInPage < pageWords.length - 1) loadWord(currentWordInPage + 1);
-        else if (safePage < totalPages) window.location.href = `wordle.html?theme=${theme.slug}&page=${safePage + 1}`;
+        const proceed = () => {
+          if (currentWordInPage < pageWords.length - 1) loadWord(currentWordInPage + 1);
+          else if (safePage < totalPages) window.location.href = `wordle.html?theme=${theme.slug}&page=${safePage + 1}`;
+        };
+        const isPrem = typeof isPremiumUser === 'function' && isPremiumUser();
+        if (isInApp() && wordNum % 2 === 0 && !isPrem) _offerRewardedLifeline('Next Word', proceed);
+        else proceed();
       });
     }
   }
