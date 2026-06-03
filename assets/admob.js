@@ -54,7 +54,15 @@ let _interstitialLoaded = false;
 async function adMobInit() {
   if (!isInApp() || _adMobReady) return;
   const showInterstitialFirst = getRoundStartParams();
-  if (showInterstitialFirst) document.body.style.visibility = 'hidden';
+  if (showInterstitialFirst) {
+    document.body.style.visibility = 'hidden';
+    const loader = document.createElement('div');
+    loader.id = '_adLoader';
+    loader.style.cssText = 'position:fixed;inset:0;background:#000;display:flex;align-items:center;justify-content:center;z-index:99999;color:#fff;font-size:1.2em';
+    loader.textContent = 'Loading...';
+    document.body.appendChild(loader);
+    document.body.style.visibility = 'visible';
+  }
   try {
     _AdMob = window.Capacitor.Plugins.AdMob;
     await _AdMob.initialize({ initializeForTesting: ADMOB_TEST_MODE });
@@ -63,6 +71,7 @@ async function adMobInit() {
       await _AdMob.prepareInterstitial({ adId: ADMOB_IDS.interstitial });
       _interstitialLoaded = true;
       await adMobShowInterstitial();
+      document.getElementById('_adLoader')?.remove();
       document.body.style.visibility = 'visible';
     }
     _adMobPreloadRewarded();
@@ -175,8 +184,10 @@ document.addEventListener('click', async (e) => {
   e.preventDefault();
   const href = btn.dataset.rewardedHref;
   btn.style.pointerEvents = 'none';
+  const orig = btn.textContent;
   btn.textContent = '⏳ Loading ad...';
-  await adMobShowRewarded();
+  const earned = await adMobShowRewarded();
+  if (!earned) btn.textContent = orig; // restore if ad failed/skipped
   window.location.href = href;
 });
 

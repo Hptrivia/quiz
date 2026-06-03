@@ -63,6 +63,7 @@ async function renderMultiThemeChallenge() {
       nextRoundLink.style.display = "inline-block";
       nextRoundLink.textContent = "Skip to next round";
       nextRoundLink.href = `challenge.html?themes=${themesParam}&round=${safeRound + 1}`;
+      if (safeRound % 3 === 0) nextRoundLink.dataset.rewardedHref = `challenge.html?themes=${themesParam}&round=${safeRound + 1}`;
     } else { nextRoundLink.style.display = "none"; }
   }
 
@@ -379,6 +380,7 @@ async function renderChallengePage() {
       nextRoundLink.style.display = "inline-block";
       nextRoundLink.textContent = "Skip to next round";
       nextRoundLink.href = `challenge.html?theme=${theme.slug}&round=${safeRound + 1}`;
+      if (safeRound % 3 === 0) nextRoundLink.dataset.rewardedHref = `challenge.html?theme=${theme.slug}&round=${safeRound + 1}`;
     } else {
       nextRoundLink.style.display = "none";
     }
