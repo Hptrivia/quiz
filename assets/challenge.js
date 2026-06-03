@@ -162,7 +162,6 @@ async function renderMultiThemeChallenge() {
   slidesContainer.querySelectorAll(".question-slide").forEach(s => { s.style.display = "none"; });
 
   function renderResult() {
-    adMobShowInterstitial();
     quizBox.style.display = "none";
     resultBox.style.display = "block";
     resultBox.classList.remove("result-anim"); void resultBox.offsetWidth; resultBox.classList.add("result-anim");

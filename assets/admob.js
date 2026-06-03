@@ -13,58 +13,47 @@ function isInApp() {
   return !!(window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative));
 }
 
+function isGamePage() {
+  const path = window.location.pathname;
+  return /\/(play|challenge|survival|episode|trivia-rush|versus|wordle|wordsearch)\.html$/.test(path)
+    || /\/(wordle|wordsearch)\//.test(path);
+}
+
+function getRoundStartParams() {
+  const path = window.location.pathname;
+  const p = new URLSearchParams(window.location.search);
+  if (path.endsWith('/challenge.html') && parseInt(p.get('round') || '1') > 1) return true;
+  if (path.endsWith('/play.html')      && parseInt(p.get('page')  || '1') > 1) return true;
+  if (path.endsWith('/episode.html')   && parseInt(p.get('episode') || '1') > 1) return true;
+  return false;
+}
+
 let _AdMob = null;
 let _adMobReady = false;
 let _rewardedLoaded = false;
 let _interstitialLoaded = false;
-let _appOpenLoaded = false;
 
 async function adMobInit() {
-  console.log('[AdMob] adMobInit called, isNative=', window.Capacitor?.isNative);
   if (!isInApp() || _adMobReady) return;
   try {
     _AdMob = window.Capacitor.Plugins.AdMob;
-    console.log('[AdMob] plugin=', _AdMob);
     await _AdMob.initialize({ initializeForTesting: ADMOB_TEST_MODE });
     _adMobReady = true;
-    console.log('[AdMob] initialized OK, testMode=', ADMOB_TEST_MODE);
     _adMobPreloadRewarded();
     _adMobPreloadInterstitial();
-    adMobShowBanner();
-    await _adMobPreloadAppOpen();
-    if (!sessionStorage.getItem('_aoShown')) {
-      sessionStorage.setItem('_aoShown', '1');
-      adMobShowAppOpen();
-    }
-    if (window.Capacitor.Plugins.App) {
-      window.Capacitor.Plugins.App.addListener('appStateChange', ({ isActive }) => {
-        if (isActive) adMobShowAppOpen();
-      });
-    }
+    if (!isGamePage()) adMobShowBanner();
+    if (getRoundStartParams()) _adMobShowInterstitialWhenReady();
   } catch (e) {
     console.warn('[AdMob] init failed', e);
   }
 }
 
-async function _adMobPreloadAppOpen() {
-  if (!_adMobReady) return;
-  try {
-    await _AdMob.prepareAppOpenAd({ adId: ADMOB_IDS.appOpen });
-    _appOpenLoaded = true;
-  } catch (e) {
-    _appOpenLoaded = false;
-  }
-}
-
-async function adMobShowAppOpen() {
-  if (!_adMobReady || !_appOpenLoaded) return;
-  try {
-    await _AdMob.showAppOpenAd();
-  } catch (e) {
-    console.warn('[AdMob] app open error', e);
-  }
-  _appOpenLoaded = false;
-  _adMobPreloadAppOpen();
+function _adMobShowInterstitialWhenReady() {
+  let tries = 0;
+  const poll = setInterval(() => {
+    if (_interstitialLoaded) { clearInterval(poll); adMobShowInterstitial(); }
+    else if (++tries > 50) clearInterval(poll);
+  }, 300);
 }
 
 async function _adMobPreloadRewarded() {
@@ -146,15 +135,13 @@ async function adMobHideBanner() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('[AdMob] DOMContentLoaded, Capacitor=', !!window.Capacitor, 'isNative=', window.Capacitor?.isNative);
   if (isInApp()) {
     adMobInit();
   } else {
     let tries = 0;
     const retry = setInterval(() => {
-      console.log('[AdMob] retry', tries, 'isNative=', window.Capacitor?.isNative);
       if (isInApp()) { clearInterval(retry); adMobInit(); }
-      else if (++tries > 25) { clearInterval(retry); console.log('[AdMob] gave up waiting for bridge'); }
+      else if (++tries > 25) clearInterval(retry);
     }, 200);
   }
 });
