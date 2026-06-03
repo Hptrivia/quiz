@@ -27,6 +27,7 @@ async function adMobInit() {
     _adMobReady = true;
     _adMobPreloadRewarded();
     _adMobPreloadInterstitial();
+    adMobShowBanner();
     await _adMobPreloadAppOpen();
     if (!sessionStorage.getItem('_aoShown')) {
       sessionStorage.setItem('_aoShown', '1');
