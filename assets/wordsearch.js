@@ -270,7 +270,6 @@ function wsCloseModal(id) {
 }
 
 function wsShowCompletion() {
-  adMobShowInterstitial();
   document.getElementById('wsDoneModal').classList.add('ws-modal-show');
   if (typeof recordWordSearch === "function" && window._wsThemeSlug) {
     recordWordSearch(window._wsThemeSlug);
@@ -398,7 +397,9 @@ async function renderWordSearchMashupMode(themesParam) {
 
   const nextBtn = document.getElementById('wsNextBtn');
   if (safePage < totalPages) {
-    nextBtn.href = `wordsearch.html?themes=${themesParam}&page=${safePage + 1}`;
+    const nextHref = `wordsearch.html?themes=${themesParam}&page=${safePage + 1}`;
+    nextBtn.href = nextHref;
+    nextBtn.dataset.rewardedHref = nextHref;
     nextBtn.style.display = 'block';
   }
 
@@ -494,7 +495,9 @@ async function renderWordSearchPage() {
   // Next Grid button — only shown if more pages exist
   const nextBtn = document.getElementById('wsNextBtn');
   if (safePage < totalPages) {
-    nextBtn.href = `wordsearch.html?theme=${slug}&page=${safePage + 1}`;
+    const nextHref = `wordsearch.html?theme=${slug}&page=${safePage + 1}`;
+    nextBtn.href = nextHref;
+    nextBtn.dataset.rewardedHref = nextHref;
     nextBtn.style.display = 'block';
   }
 
