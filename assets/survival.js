@@ -53,8 +53,9 @@ async function renderMultiThemeSurvival() {
   function updateTopbar() {
     scoreEl.textContent = state.score;
     streakEl.textContent = (state.recoveryStarted || state.pendingRecoveryStart) ? `Started (${state.recoveryPoints})` : "Not started";
-    fiftyBtn.disabled = !state.fiftyAvailable || state.answerLocked || state.gameOver;
-    friendBtn.disabled = !state.friendAvailable || state.answerLocked || state.gameOver;
+    const inApp = typeof isInApp === 'function' && isInApp();
+    fiftyBtn.disabled = (inApp ? false : !state.fiftyAvailable) || state.answerLocked || state.gameOver;
+    friendBtn.disabled = (inApp ? false : !state.friendAvailable) || state.answerLocked || state.gameOver;
     fiftyBtn.textContent = state.fiftyAvailable ? "50-50" : "50-50 Used";
     friendBtn.textContent = state.friendAvailable ? "Call a Friend" : "Friend Used";
     fiftyBtn.classList.toggle("used-lifeline", !state.fiftyAvailable);
@@ -404,8 +405,9 @@ async function renderSurvivalPage() {
       streakEl.textContent = "Not started";
     }
 
-    fiftyBtn.disabled = !state.fiftyAvailable || state.answerLocked || state.gameOver;
-    friendBtn.disabled = !state.friendAvailable || state.answerLocked || state.gameOver;
+    const inApp = typeof isInApp === 'function' && isInApp();
+    fiftyBtn.disabled = (inApp ? false : !state.fiftyAvailable) || state.answerLocked || state.gameOver;
+    friendBtn.disabled = (inApp ? false : !state.friendAvailable) || state.answerLocked || state.gameOver;
 
     fiftyBtn.textContent = state.fiftyAvailable ? "50-50" : "50-50 Used";
     friendBtn.textContent = state.friendAvailable ? "Call a Friend" : "Friend Used";
