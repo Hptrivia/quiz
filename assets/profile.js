@@ -398,8 +398,8 @@ function webQCounterHTML() {
 function _injectAndroidBanner() {
   if (!isAndroidWeb()) return;
   const path = window.location.pathname;
-  const isLobby = path.endsWith('/index.html') || path === '/' || path.endsWith('/index')
-    || path.endsWith('/category.html')
+  const isLobby = path.endsWith('/category.html')
+    || /\/themes\//.test(path)
     || /\/(wordle|wordsearch)\//.test(path);
   if (!isLobby) return;
   const banner = document.createElement('div');
