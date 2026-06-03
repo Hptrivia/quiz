@@ -46,7 +46,7 @@ async function adMobInit() {
   }
   try {
     _AdMob = window.Capacitor.Plugins.AdMob;
-    await _AdMob.initialize({ initializeForTesting: ADMOB_TEST_MODE });
+    await _AdMob.initialize({ initializeForTesting: ADMOB_TEST_MODE, requestTrackingAuthorization: true });
     _adMobReady = true;
     if (showInterstitialFirst) {
       await _AdMob.prepareInterstitial({ adId: ADMOB_IDS.interstitial });
