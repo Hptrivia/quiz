@@ -20,11 +20,14 @@ let _interstitialLoaded = false;
 let _appOpenLoaded = false;
 
 async function adMobInit() {
+  console.log('[AdMob] adMobInit called, isNative=', window.Capacitor?.isNative);
   if (!isInApp() || _adMobReady) return;
   try {
     _AdMob = window.Capacitor.Plugins.AdMob;
+    console.log('[AdMob] plugin=', _AdMob);
     await _AdMob.initialize({ initializeForTesting: ADMOB_TEST_MODE });
     _adMobReady = true;
+    console.log('[AdMob] initialized OK, testMode=', ADMOB_TEST_MODE);
     _adMobPreloadRewarded();
     _adMobPreloadInterstitial();
     adMobShowBanner();
@@ -143,13 +146,15 @@ async function adMobHideBanner() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('[AdMob] DOMContentLoaded, Capacitor=', !!window.Capacitor, 'isNative=', window.Capacitor?.isNative);
   if (isInApp()) {
     adMobInit();
   } else {
     let tries = 0;
     const retry = setInterval(() => {
+      console.log('[AdMob] retry', tries, 'isNative=', window.Capacitor?.isNative);
       if (isInApp()) { clearInterval(retry); adMobInit(); }
-      else if (++tries > 25) clearInterval(retry);
+      else if (++tries > 25) { clearInterval(retry); console.log('[AdMob] gave up waiting for bridge'); }
     }, 200);
   }
 });
