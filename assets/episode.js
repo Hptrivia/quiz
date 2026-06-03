@@ -127,7 +127,7 @@ async function renderEpisodePage() {
       <h2>${foundAnyEpisodeMarkers ? `Episode ${safeEpisode} Complete` : "Episode Mode Complete"}</h2>
       <p>Your score: ${score} / ${episodeQuestions.length}</p>
       <div class="cta-row">
-        ${hasNextEpisode ? `<a class="primary-btn" href="episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}">Next Episode</a>` : ""}
+        ${hasNextEpisode ? `<a class="primary-btn" href="episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}" data-rewarded-href="episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}">Next Episode</a>` : ""}
         ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html">Buy me a coffee</a>` : ""}
       </div>
     `;

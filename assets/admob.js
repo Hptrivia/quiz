@@ -134,6 +134,17 @@ async function adMobHideBanner() {
   try { await _AdMob.hideBanner(); } catch {}
 }
 
+document.addEventListener('click', async (e) => {
+  const btn = e.target.closest('[data-rewarded-href]');
+  if (!btn || !isInApp()) return;
+  e.preventDefault();
+  const href = btn.dataset.rewardedHref;
+  btn.style.pointerEvents = 'none';
+  btn.textContent = '⏳ Loading ad...';
+  await adMobShowRewarded();
+  window.location.href = href;
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   if (isInApp()) {
     adMobInit();

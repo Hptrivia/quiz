@@ -645,7 +645,7 @@ async function renderMultiThemeMarathon() {
       <p class="result-tier">${getMarathonTier(score, pageQuestions.length)}</p>
       <div id="mashupMarathonBreakdown"></div>
       <div class="cta-row">
-        ${hasNextPage ? `<a class="primary-btn" href="play.html?themes=${themesParam}&page=${safePage + 1}">Next Round</a>` : ""}
+        ${hasNextPage ? `<a class="primary-btn" href="play.html?themes=${themesParam}&page=${safePage + 1}" data-rewarded-href="play.html?themes=${themesParam}&page=${safePage + 1}">Next Round</a>` : ""}
         ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html">Buy me a coffee</a>` : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
@@ -1035,7 +1035,7 @@ const relatedThemesHtml = `
     <p>Your score: ${quizState.score} / ${quizState.questions.length}</p>
     <p class="result-tier">${tierText}</p>
     <div class="cta-row">
-      ${hasNextPage ? `<a class="primary-btn" href="play.html?theme=${theme.slug}&page=${safePage + 1}">Next Round</a>` : ""}
+      ${hasNextPage ? `<a class="primary-btn" href="play.html?theme=${theme.slug}&page=${safePage + 1}" data-rewarded-href="play.html?theme=${theme.slug}&page=${safePage + 1}">Next Round</a>` : ""}
       ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html">Buy me a coffee</a>` : ""}
       <a class="secondary-btn" href="contact.html">Report a Question</a>
     </div>

@@ -311,7 +311,8 @@ async function renderWordleMashupMode(themesParam) {
 
     const nextFromPanel = document.getElementById("wordleNextFromPanel");
     if (nextFromPanel) {
-      nextFromPanel.addEventListener("click", () => {
+      nextFromPanel.addEventListener("click", async () => {
+        if (isInApp()) await adMobShowRewarded();
         if (currentWordInPage < pageWords.length - 1) loadWord(currentWordInPage + 1);
         else if (safePage < totalPages) window.location.href = `wordle.html?themes=${themesParam}&page=${safePage + 1}`;
       });
@@ -845,7 +846,8 @@ async function renderWordlePage() {
 
     const nextFromPanel = document.getElementById("wordleNextFromPanel");
     if (nextFromPanel) {
-      nextFromPanel.addEventListener("click", () => {
+      nextFromPanel.addEventListener("click", async () => {
+        if (isInApp()) await adMobShowRewarded();
         if (currentWordInPage < pageWords.length - 1) loadWord(currentWordInPage + 1);
         else if (safePage < totalPages) window.location.href = `wordle.html?theme=${theme.slug}&page=${safePage + 1}`;
       });
