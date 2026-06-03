@@ -283,6 +283,7 @@ async function renderWordleMashupMode(themesParam) {
     const existing = document.getElementById("wordleResultPanel");
     if (existing) existing.remove();
     adMobShowInterstitial();
+    if (typeof webAddWordle === 'function') webAddWordle();
     const isLast   = currentWordInPage === pageWords.length - 1 && safePage === totalPages;
     const emoji    = solved ? (guesses.length <= 2 ? "🎯" : guesses.length <= 4 ? "🎉" : "😅") : "😔";
     const msg      = solved
@@ -299,7 +300,8 @@ async function renderWordleMashupMode(themesParam) {
       <p class="wordle-result-text">${msg}</p>
       <pre class="wordle-result-grid">${emojiGrid}</pre>
       <div class="cta-row" style="margin-top:10px;justify-content:center;">
-        ${!isLast ? `<button class="primary-btn" id="wordleNextFromPanel">Next Word →</button>` : ""}
+        ${!isLast && !(typeof isWebWordleLimit === 'function' && isWebWordleLimit()) ? `<button class="primary-btn" id="wordleNextFromPanel">Next Word →</button>` : ""}
+        ${!isLast && (typeof isWebWordleLimit === 'function' && isWebWordleLimit()) ? (typeof webWallHTML === 'function' ? webWallHTML("You've played your 2 free Wordle words!") : "") : ""}
       </div>`;
 
     feedbackEl.textContent   = "";
@@ -817,6 +819,7 @@ async function renderWordlePage() {
     const existing = document.getElementById("wordleResultPanel");
     if (existing) existing.remove();
     adMobShowInterstitial();
+    if (typeof webAddWordle === 'function') webAddWordle();
     const isLast = currentWordInPage === pageWords.length - 1 && safePage === totalPages;
     const emoji  = solved ? (guesses.length <= 2 ? "🎯" : guesses.length <= 4 ? "🎉" : "😅") : "😔";
     const msg    = solved
@@ -835,7 +838,8 @@ async function renderWordlePage() {
       <pre class="wordle-result-grid">${emojiGrid}</pre>
       <div class="cta-row" style="margin-top:10px;justify-content:center;">
         <button class="secondary-btn" id="wordleShareBtn">📋 Share</button>
-        ${!isLast ? `<button class="primary-btn" id="wordleNextFromPanel">Next Word →</button>` : ""}
+        ${!isLast && !(typeof isWebWordleLimit === 'function' && isWebWordleLimit()) ? `<button class="primary-btn" id="wordleNextFromPanel">Next Word →</button>` : ""}
+        ${!isLast && (typeof isWebWordleLimit === 'function' && isWebWordleLimit()) ? (typeof webWallHTML === 'function' ? webWallHTML("You've played your 2 free Wordle words!") : "") : ""}
       </div>
       <p class="wordle-share-feedback" id="wordleShareFeedback"></p>`;
 

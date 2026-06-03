@@ -1900,3 +1900,45 @@ a.theme-stat-card:active,
   padding: 3px 10px;
   white-space: nowrap;
 }
+
+/* ── Android Web CTA ─────────────────────────────────────────────────────── */
+.android-cta-banner {
+  background: #1e3a5f;
+  border: 1px solid #3b82f6;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  font-size: 0.9em;
+  text-align: center;
+}
+.android-cta-banner a { color: #93c5fd; }
+
+.android-wall {
+  background: #1e1e2e;
+  border: 1px solid #6c63ff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  margin: 8px 0;
+}
+.android-wall-icon { font-size: 2em; margin-bottom: 8px; }
+.android-wall h3 { margin: 0 0 8px; font-size: 1em; }
+.android-wall p  { margin: 0 0 14px; font-size: 0.85em; color: #aaa; }
+
+.android-wall-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9998;
+  padding: 24px;
+}
+.android-wall-overlay .android-wall { max-width: 320px; width: 100%; }
+
+.web-q-counter {
+  font-size: 0.78em;
+  color: #888;
+  margin: 4px 0 8px;
+}

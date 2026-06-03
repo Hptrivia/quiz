@@ -270,7 +270,13 @@ function wsCloseModal(id) {
 }
 
 function wsShowCompletion() {
-  document.getElementById('wsDoneModal').classList.add('ws-modal-show');
+  if (typeof webAddWS === 'function') webAddWS();
+  const modal = document.getElementById('wsDoneModal');
+  if (modal && typeof isWebWSLimit === 'function' && isWebWSLimit() && typeof webWallHTML === 'function') {
+    const actions = modal.querySelector('.ws-modal-actions');
+    if (actions) actions.innerHTML = webWallHTML("You've played your free Word Search!");
+  }
+  modal.classList.add('ws-modal-show');
   if (typeof recordWordSearch === "function" && window._wsThemeSlug) {
     recordWordSearch(window._wsThemeSlug);
   }

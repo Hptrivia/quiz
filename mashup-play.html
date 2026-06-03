@@ -49,6 +49,7 @@
         <div id="marathonQuizBox">
           <div class="play-progress-row">
             <p id="marathonProgressText"></p>
+            <a id="mashupMarathonNextPageLink" class="skip-link" href="#" style="display:none">Skip to next page</a>
           </div>
           <div id="marathonSlides"></div>
         </div>
@@ -399,7 +400,20 @@
 
       slidesContainer.querySelectorAll(".question-slide").forEach(s => { s.style.display = "none"; });
 
+      const marathonSkipLink = document.getElementById("mashupMarathonNextPageLink");
+      if (marathonSkipLink) {
+        if (safePage < totalPages) {
+          const nextHref = "mashup-play.html?themes=" + themesParam + "&mode=marathon&page=" + (safePage + 1);
+          marathonSkipLink.href = nextHref;
+          marathonSkipLink.dataset.rewardedHref = nextHref;
+          marathonSkipLink.style.display = "inline-block";
+        } else {
+          marathonSkipLink.style.display = "none";
+        }
+      }
+
       function renderMarathonResult() {
+        if (typeof webAddQ === 'function') webAddQ(pageQuestions.length);
         quizBox.style.display = "none";
         resultBox.style.display = "block";
         resultBox.classList.remove("result-anim");
@@ -408,14 +422,18 @@
 
         const tierText = getMarathonTier(state.score, pageQuestions.length);
         const hasNextPage = safePage < totalPages;
+        const atLimit = typeof isWebQLimit === 'function' && isWebQLimit();
+        const wallHtml = typeof webWallHTML === 'function' ? webWallHTML("You've used your 30 free questions!") : "";
 
         resultBox.innerHTML =
           "<h2>Quiz Complete</h2>" +
           "<p>Your score: " + state.score + " / " + pageQuestions.length + "</p>" +
           "<p class=\"result-tier\">" + tierText + "</p>" +
           "<div id=\"marathonThemeBreakdown\"></div>" +
+          (typeof webQCounterHTML === 'function' ? webQCounterHTML() : '') +
           "<div class=\"cta-row\">" +
-          (hasNextPage ? "<a class=\"primary-btn\" href=\"mashup-play.html?themes=" + themesParam + "&mode=marathon&page=" + (safePage + 1) + "\" data-rewarded-href=\"mashup-play.html?themes=" + themesParam + "&mode=marathon&page=" + (safePage + 1) + "\">Next Round</a>" : "") +
+          (hasNextPage && !atLimit ? "<a class=\"primary-btn\" href=\"mashup-play.html?themes=" + themesParam + "&mode=marathon&page=" + (safePage + 1) + "\" data-rewarded-href=\"mashup-play.html?themes=" + themesParam + "&mode=marathon&page=" + (safePage + 1) + "\">Next Round</a>" : "") +
+          (hasNextPage && atLimit ? wallHtml : "") +
           (!isPremiumUser() ? "<a class=\"secondary-btn\" href=\"remove-ads.html\">Buy me a coffee</a>" : "") +
           "<a class=\"secondary-btn\" href=\"contact.html\">Report a Question</a>" +
           "</div>";
@@ -454,6 +472,7 @@
           nextRoundLink.style.display = "inline-block";
           nextRoundLink.textContent = "Skip to next round";
           nextRoundLink.href = "mashup-play.html?themes=" + themesParam + "&mode=challenge&round=" + (safeRound + 1);
+          if (safeRound % 3 === 0) nextRoundLink.dataset.rewardedHref = "mashup-play.html?themes=" + themesParam + "&mode=challenge&round=" + (safeRound + 1);
         } else {
           nextRoundLink.style.display = "none";
         }
@@ -582,6 +601,7 @@
       slidesContainer.querySelectorAll(".question-slide").forEach(s => { s.style.display = "none"; });
 
       function renderChallengeResult() {
+        if (typeof webAddQ === 'function') webAddQ(roundQuestions.length);
         quizBox.style.display = "none";
         resultBox.style.display = "block";
         resultBox.classList.remove("result-anim");
@@ -590,15 +610,19 @@
 
         const hasNextRound = safeRound < totalRounds;
         const shareUrl = window.location.origin + window.location.pathname + "?themes=" + encodeURIComponent(themesParam) + "&mode=challenge&round=" + safeRound;
+        const atLimit = typeof isWebQLimit === 'function' && isWebQLimit();
+        const wallHtml = typeof webWallHTML === 'function' ? webWallHTML("You've used your 30 free questions!") : "";
 
         resultBox.innerHTML =
           "<h2>Round " + safeRound + " Complete</h2>" +
           "<p>Your score: " + state.score + " / " + roundQuestions.length + "</p>" +
           "<div id=\"challengeThemeBreakdown\"></div>" +
+          (typeof webQCounterHTML === 'function' ? webQCounterHTML() : '') +
           "<p class=\"challenge-share-text\">Challenge a friend with this exact theme combination.</p>" +
           "<div class=\"challenge-link-box\" id=\"shareUrlBox\" style=\"cursor:pointer\" title=\"Click to copy\">" + shareUrl + "</div>" +
           "<div class=\"cta-row\">" +
-          (hasNextRound ? "<a class=\"primary-btn\" href=\"mashup-play.html?themes=" + themesParam + "&mode=challenge&round=" + (safeRound + 1) + "\"" + (safeRound % 3 === 0 ? " data-rewarded-href=\"mashup-play.html?themes=" + themesParam + "&mode=challenge&round=" + (safeRound + 1) + "\"" : "") + ">Next Round</a>" : "") +
+          (hasNextRound && !atLimit ? "<a class=\"primary-btn\" href=\"mashup-play.html?themes=" + themesParam + "&mode=challenge&round=" + (safeRound + 1) + "\"" + (safeRound % 3 === 0 ? " data-rewarded-href=\"mashup-play.html?themes=" + themesParam + "&mode=challenge&round=" + (safeRound + 1) + "\"" : "") + ">Next Round</a>" : "") +
+          (hasNextRound && atLimit ? wallHtml : "") +
           "<button class=\"secondary-btn\" id=\"copyShareBtn\">Copy Link</button>" +
           (!isPremiumUser() ? "<a class=\"secondary-btn\" href=\"remove-ads.html\">Reveal Answers</a>" : "") +
           "<a class=\"secondary-btn\" href=\"contact.html\">Report a Question</a>" +

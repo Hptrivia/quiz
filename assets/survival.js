@@ -160,6 +160,7 @@ async function renderMultiThemeSurvival() {
     maybeStartRecovery(); updateTopbar();
   }
   function renderResult() {
+    if (typeof webAddQ === 'function') webAddQ(state.currentIndex);
     adMobShowInterstitial();
     gameBox.style.display = "none";
     resultBox.style.display = "block";
@@ -168,12 +169,14 @@ async function renderMultiThemeSurvival() {
       const mashupKey = slugs.slice().sort().join(",");
       recordMashupStats(mashupKey, "survival", { score: state.score });
     }
+    const _survMashupAtLimit = typeof isWebQLimit === 'function' && isWebQLimit();
     resultBox.innerHTML = `
       <h2>Survival Over</h2>
       <p>Your score: ${state.score}</p>
       <div id="mashupSurvivalBreakdown"></div>
+      ${typeof webQCounterHTML === 'function' ? webQCounterHTML() : ''}
       <div class="cta-row">
-        <a class="primary-btn" href="survival.html?themes=${themesParam}">Play Again</a>
+        ${_survMashupAtLimit ? (typeof webWallHTML === 'function' ? webWallHTML("You've used your 30 free questions!") : '') : `<a class="primary-btn" href="survival.html?themes=${themesParam}">Play Again</a>`}
         ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html">Unlimited Lifelines</a>` : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
@@ -423,6 +426,7 @@ async function renderSurvivalPage() {
   }
 
   function renderResult() {
+    if (typeof webAddQ === 'function') webAddQ(state.currentIndex);
     adMobShowInterstitial();
     gameBox.style.display = "none";
     resultBox.style.display = "block";
@@ -458,12 +462,14 @@ async function renderSurvivalPage() {
     const nearEnd    = state.currentIndex >= Math.ceil(state.questions.length * 0.75);
     const notifyHtml = (isNewPB && nearEnd) ? buildNotifyCard(theme.title, true, "survival") : "";
 
+    const _survAtLimit = typeof isWebQLimit === 'function' && isWebQLimit();
     resultBox.innerHTML = `
       <h2>Survival Over</h2>
       <p>${isNewPB ? "🏆 New personal best! " : ""}Your score: <strong>${state.score}</strong></p>
       <div id="lbSubmitPlaceholder"></div>
+      ${typeof webQCounterHTML === 'function' ? webQCounterHTML() : ''}
       <div class="cta-row">
-        <a class="primary-btn" href="survival.html?theme=${theme.slug}">Play Again</a>
+        ${_survAtLimit ? (typeof webWallHTML === 'function' ? webWallHTML("You've used your 30 free questions!") : '') : `<a class="primary-btn" href="survival.html?theme=${theme.slug}">Play Again</a>`}
         ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html?theme=${theme.slug}">Unlimited Lifelines</a>` : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>

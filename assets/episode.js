@@ -117,6 +117,7 @@ async function renderEpisodePage() {
   let score = 0;
 
   function renderResult() {
+    if (typeof webAddEp === 'function') webAddEp();
     gameBox.style.display = "none";
     resultBox.style.display = "block";
     resultBox.classList.remove("result-anim");
@@ -126,8 +127,10 @@ async function renderEpisodePage() {
     resultBox.innerHTML = `
       <h2>${foundAnyEpisodeMarkers ? `Episode ${safeEpisode} Complete` : "Episode Mode Complete"}</h2>
       <p>Your score: ${score} / ${episodeQuestions.length}</p>
+      ${webQCounterHTML()}
       <div class="cta-row">
-        ${hasNextEpisode ? `<a class="primary-btn" href="episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}" data-rewarded-href="episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}">Next Episode</a>` : ""}
+        ${hasNextEpisode && !isWebEpLimit() ? `<a class="primary-btn" href="episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}" data-rewarded-href="episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}">Next Episode</a>` : ""}
+        ${hasNextEpisode && isWebEpLimit() ? webWallHTML("You've played your free episode!") : ""}
         ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html">Buy me a coffee</a>` : ""}
       </div>
     `;

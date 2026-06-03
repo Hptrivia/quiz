@@ -512,6 +512,7 @@ async function renderMultiThemeMarathon() {
       nextPageLink.style.display = "inline-block";
       nextPageLink.textContent = "Skip to next page";
       nextPageLink.href = `play.html?themes=${themesParam}&page=${safePage + 1}`;
+      nextPageLink.dataset.rewardedHref = `play.html?themes=${themesParam}&page=${safePage + 1}`;
     } else { nextPageLink.style.display = "none"; }
   }
 
@@ -608,6 +609,7 @@ async function renderMultiThemeMarathon() {
   slidesContainer.querySelectorAll(".question-slide").forEach(s => { s.style.display = "none"; });
 
   function renderResult() {
+    if (typeof webAddQ === 'function') webAddQ(pageQuestions.length);
     document.getElementById("quizBox").style.display = "none";
     resultBox.style.display = "block";
     resultBox.classList.remove("result-anim"); void resultBox.offsetWidth; resultBox.classList.add("result-anim");
@@ -644,8 +646,10 @@ async function renderMultiThemeMarathon() {
       <p>Your score: ${score} / ${pageQuestions.length}</p>
       <p class="result-tier">${getMarathonTier(score, pageQuestions.length)}</p>
       <div id="mashupMarathonBreakdown"></div>
+      ${typeof webQCounterHTML === 'function' ? webQCounterHTML() : ''}
       <div class="cta-row">
-        ${hasNextPage ? `<a class="primary-btn" href="play.html?themes=${themesParam}&page=${safePage + 1}" data-rewarded-href="play.html?themes=${themesParam}&page=${safePage + 1}">Next Round</a>` : ""}
+        ${hasNextPage && !(typeof isWebQLimit === 'function' && isWebQLimit()) ? `<a class="primary-btn" href="play.html?themes=${themesParam}&page=${safePage + 1}" data-rewarded-href="play.html?themes=${themesParam}&page=${safePage + 1}">Next Round</a>` : ""}
+        ${hasNextPage && (typeof isWebQLimit === 'function' && isWebQLimit()) ? (typeof webWallHTML === 'function' ? webWallHTML("You've used your 30 free questions!") : "") : ""}
         ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html">Buy me a coffee</a>` : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
@@ -849,6 +853,7 @@ let buyPackUrl = "https://ko-fi.com/triviaking/shop";
       nextPageLink.style.display = "inline-block";
       nextPageLink.textContent = "Skip to next page";
       nextPageLink.href = `play.html?theme=${theme.slug}&page=${safePage + 1}`;
+      nextPageLink.dataset.rewardedHref = `play.html?theme=${theme.slug}&page=${safePage + 1}`;
     } else {
       nextPageLink.style.display = "none";
     }
@@ -996,6 +1001,7 @@ function renderResult() {
   void resultBox.offsetWidth;
   resultBox.classList.add("result-anim");
 
+  if (typeof webAddQ === 'function') webAddQ(quizState.questions.length);
   const hasNextPage = safePage < totalPages;
   const tierText = getMarathonTier(quizState.score, quizState.questions.length);
 
@@ -1034,8 +1040,10 @@ const relatedThemesHtml = `
     <h2>Quiz Complete</h2>
     <p>Your score: ${quizState.score} / ${quizState.questions.length}</p>
     <p class="result-tier">${tierText}</p>
+    ${typeof webQCounterHTML === 'function' ? webQCounterHTML() : ''}
     <div class="cta-row">
-      ${hasNextPage ? `<a class="primary-btn" href="play.html?theme=${theme.slug}&page=${safePage + 1}" data-rewarded-href="play.html?theme=${theme.slug}&page=${safePage + 1}">Next Round</a>` : ""}
+      ${hasNextPage && !(typeof isWebQLimit === 'function' && isWebQLimit()) ? `<a class="primary-btn" href="play.html?theme=${theme.slug}&page=${safePage + 1}" data-rewarded-href="play.html?theme=${theme.slug}&page=${safePage + 1}">Next Round</a>` : ""}
+      ${hasNextPage && (typeof isWebQLimit === 'function' && isWebQLimit()) ? (typeof webWallHTML === 'function' ? webWallHTML("You've used your 30 free questions!") : "") : ""}
       ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html">Buy me a coffee</a>` : ""}
       <a class="secondary-btn" href="contact.html">Report a Question</a>
     </div>

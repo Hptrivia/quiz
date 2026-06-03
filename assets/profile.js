@@ -356,3 +356,79 @@ function maybeShowProfileOnboarding() {
 }
 
 document.addEventListener("DOMContentLoaded", injectAvatarNav);
+
+// ── Android Web Question Limit ───────────────────────────────────────────────
+
+const _PLAY_STORE = 'https://play.google.com/store/apps/details?id=com.trivia.trivia_gauntlet';
+const _WEB_LIMITS = { Q: 30, Wordle: 2, WS: 1, Ep: 1 };
+
+function isAndroidWeb() {
+  return /android/i.test(navigator.userAgent)
+    && !(window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative));
+}
+
+function _webCount(key)     { return parseInt(localStorage.getItem('tgWeb' + key) || '0'); }
+function _addWebCount(key, n) { if (isAndroidWeb()) localStorage.setItem('tgWeb' + key, _webCount(key) + (n || 1)); }
+
+function webAddQ(n)     { _addWebCount('Q', n); }
+function webAddWordle() { _addWebCount('Wordle', 1); }
+function webAddWS()     { _addWebCount('WS', 1); }
+function webAddEp()     { _addWebCount('Ep', 1); }
+
+function isWebQLimit()      { return isAndroidWeb() && _webCount('Q')      >= _WEB_LIMITS.Q; }
+function isWebWordleLimit() { return isAndroidWeb() && _webCount('Wordle') >= _WEB_LIMITS.Wordle; }
+function isWebWSLimit()     { return isAndroidWeb() && _webCount('WS')     >= _WEB_LIMITS.WS; }
+function isWebEpLimit()     { return isAndroidWeb() && _webCount('Ep')     >= _WEB_LIMITS.Ep; }
+function webQUsed()         { return _webCount('Q'); }
+
+function webWallHTML(msg) {
+  return `<div class="android-wall">
+    <div class="android-wall-icon">📱</div>
+    <h3>${msg || "You've used your free questions!"}</h3>
+    <p>Download the free app for unlimited trivia — no limits, no hassle.</p>
+    <a href="${_PLAY_STORE}" class="primary-btn" target="_blank">Get the Free App</a>
+  </div>`;
+}
+
+function webQCounterHTML() {
+  if (!isAndroidWeb()) return '';
+  return `<p class="web-q-counter">${webQUsed()}/${_WEB_LIMITS.Q} free questions used</p>`;
+}
+
+function _injectAndroidBanner() {
+  if (!isAndroidWeb()) return;
+  const path = window.location.pathname;
+  const isLobby = path.endsWith('/index.html') || path === '/' || path.endsWith('/index')
+    || path.endsWith('/category.html')
+    || /\/(wordle|wordsearch)\//.test(path);
+  if (!isLobby) return;
+  const banner = document.createElement('div');
+  banner.className = 'android-cta-banner';
+  banner.innerHTML = `📱 Enjoying the trivia? Get unlimited questions on the <a href="${_PLAY_STORE}" target="_blank">free Android app</a>`;
+  const main = document.querySelector('main, .container');
+  if (main) main.prepend(banner);
+}
+
+function _checkWebPageWall() {
+  if (!isAndroidWeb()) return;
+  const path = window.location.pathname;
+  let msg = null;
+  if (/\/(play|challenge|survival|versus|trivia-rush|mashup-play)\.html$/.test(path) && isWebQLimit())
+    msg = "You've used your 30 free questions on Android browser.";
+  else if (path.endsWith('/episode.html') && isWebEpLimit())
+    msg = "You've played your free episode on Android browser.";
+  else if ((path.endsWith('/wordle.html') || /\/wordle\//.test(path)) && isWebWordleLimit())
+    msg = "You've played your 2 free Wordle words on Android browser.";
+  else if ((path.endsWith('/wordsearch.html') || /\/wordsearch\//.test(path)) && isWebWSLimit())
+    msg = "You've played your free Word Search on Android browser.";
+  if (!msg) return;
+  const overlay = document.createElement('div');
+  overlay.className = 'android-wall-overlay';
+  overlay.innerHTML = webWallHTML(msg);
+  document.body.appendChild(overlay);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  _injectAndroidBanner();
+  _checkWebPageWall();
+});

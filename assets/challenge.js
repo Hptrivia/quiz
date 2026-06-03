@@ -163,6 +163,7 @@ async function renderMultiThemeChallenge() {
   slidesContainer.querySelectorAll(".question-slide").forEach(s => { s.style.display = "none"; });
 
   function renderResult() {
+    if (typeof webAddQ === 'function') webAddQ(roundQuestions.length);
     quizBox.style.display = "none";
     resultBox.style.display = "block";
     resultBox.classList.remove("result-anim"); void resultBox.offsetWidth; resultBox.classList.add("result-anim");
@@ -198,8 +199,10 @@ async function renderMultiThemeChallenge() {
       <h2>Round ${safeRound} Complete</h2>
       <p>Your score: ${score} / ${roundQuestions.length}</p>
       <div id="mashupChallengeBreakdown"></div>
+      ${webQCounterHTML()}
       <div class="cta-row">
-        ${hasNextRound ? `<a class="primary-btn" href="challenge.html?themes=${themesParam}&round=${safeRound + 1}" ${safeRound % 3 === 0 ? `data-rewarded-href="challenge.html?themes=${themesParam}&round=${safeRound + 1}"` : ''}>Next Round</a>` : ""}
+        ${hasNextRound && !isWebQLimit() ? `<a class="primary-btn" href="challenge.html?themes=${themesParam}&round=${safeRound + 1}" ${safeRound % 3 === 0 ? `data-rewarded-href="challenge.html?themes=${themesParam}&round=${safeRound + 1}"` : ''}>Next Round</a>` : ""}
+        ${hasNextRound && isWebQLimit() ? webWallHTML("You've used your 30 free questions!") : ""}
         ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html">Reveal Answers</a>` : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
@@ -599,6 +602,7 @@ async function renderChallengePage() {
   }
 
   function renderResult() {
+    if (typeof webAddQ === 'function') webAddQ(roundQuestions.length);
     quizBox.style.display = "none";
     resultBox.style.display = "block";
     resultBox.classList.remove("result-anim");
@@ -658,8 +662,10 @@ async function renderChallengePage() {
       <p>Your score: ${state.score} / ${state.questions.length}</p>
       <p class="challenge-share-text">Send this round link to a friend to play the same 10 questions.</p>
       <div class="challenge-link-box">${roundLink}</div>
+      ${webQCounterHTML()}
       <div class="cta-row">
-        ${hasNextRound ? `<a class="primary-btn" href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}" ${safeRound % 3 === 0 ? `data-rewarded-href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}"` : ''}>Next Round</a>` : ""}
+        ${hasNextRound && !isWebQLimit() ? `<a class="primary-btn" href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}" ${safeRound % 3 === 0 ? `data-rewarded-href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}"` : ''}>Next Round</a>` : ""}
+        ${hasNextRound && isWebQLimit() ? webWallHTML("You've used your 30 free questions!") : ""}
         ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html?theme=${theme.slug}">Reveal Answers</a>` : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>

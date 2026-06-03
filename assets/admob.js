@@ -164,7 +164,13 @@ document.addEventListener('click', async (e) => {
   e.preventDefault();
   const href = btn.dataset.rewardedHref;
   const label = btn.textContent.trim() || 'the next round';
-  _offerRewardedLifeline(label, () => { window.location.href = href; });
+  _offerRewardedLifeline(label, () => {
+    try {
+      const dest = new URL(href, window.location.href);
+      sessionStorage.setItem('_adShown_' + dest.pathname + dest.search, '1');
+    } catch {}
+    window.location.href = href;
+  });
 });
 
 document.addEventListener('DOMContentLoaded', () => {
