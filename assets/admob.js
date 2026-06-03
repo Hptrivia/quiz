@@ -10,7 +10,7 @@ const ADMOB_IDS = {
 };
 
 function isInApp() {
-  return !!(window.Capacitor && window.Capacitor.isNative);
+  return !!(window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative));
 }
 
 let _AdMob = null;
