@@ -22,7 +22,7 @@ function isGamePage() {
 function getRoundStartParams() {
   const path = window.location.pathname;
   const p = new URLSearchParams(window.location.search);
-  if (path.endsWith('/challenge.html') && parseInt(p.get('round')   || '1') > 3) return true;
+  if (path.endsWith('/challenge.html') && parseInt(p.get('round')   || '1') > 1) return true;
   if (path.endsWith('/play.html')      && parseInt(p.get('page')    || '1') > 1) return true;
   if (path.endsWith('/episode.html')   && parseInt(p.get('episode') || '1') > 1) return true;
   return false;

@@ -198,7 +198,7 @@ async function renderMultiThemeChallenge() {
       <p>Your score: ${score} / ${roundQuestions.length}</p>
       <div id="mashupChallengeBreakdown"></div>
       <div class="cta-row">
-        ${hasNextRound ? `<a class="primary-btn" href="challenge.html?themes=${themesParam}&round=${safeRound + 1}" data-rewarded-href="challenge.html?themes=${themesParam}&round=${safeRound + 1}">Next Round</a>` : ""}
+        ${hasNextRound ? `<a class="primary-btn" href="challenge.html?themes=${themesParam}&round=${safeRound + 1}" ${safeRound >= 3 ? `data-rewarded-href="challenge.html?themes=${themesParam}&round=${safeRound + 1}"` : ''}>Next Round</a>` : ""}
         ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html">Reveal Answers</a>` : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
@@ -657,7 +657,7 @@ async function renderChallengePage() {
       <p class="challenge-share-text">Send this round link to a friend to play the same 10 questions.</p>
       <div class="challenge-link-box">${roundLink}</div>
       <div class="cta-row">
-        ${hasNextRound ? `<a class="primary-btn" href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}" data-rewarded-href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}">Next Round</a>` : ""}
+        ${hasNextRound ? `<a class="primary-btn" href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}" ${safeRound >= 3 ? `data-rewarded-href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}"` : ''}>Next Round</a>` : ""}
         ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html?theme=${theme.slug}">Reveal Answers</a>` : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
