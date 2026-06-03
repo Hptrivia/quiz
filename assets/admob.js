@@ -143,5 +143,13 @@ async function adMobHideBanner() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  if (isInApp()) adMobInit();
+  if (isInApp()) {
+    adMobInit();
+  } else {
+    let tries = 0;
+    const retry = setInterval(() => {
+      if (isInApp()) { clearInterval(retry); adMobInit(); }
+      else if (++tries > 25) clearInterval(retry);
+    }, 200);
+  }
 });
