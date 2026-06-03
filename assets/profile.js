@@ -367,6 +367,10 @@ function isAndroidWeb() {
     && !(window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative));
 }
 
+if (window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative)) {
+  document.body.classList.add('in-app');
+}
+
 function _webCount(key)     { return parseInt(localStorage.getItem('tgWeb' + key) || '0'); }
 function _addWebCount(key, n) { if (isAndroidWeb()) localStorage.setItem('tgWeb' + key, _webCount(key) + (n || 1)); }
 
