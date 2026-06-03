@@ -12,6 +12,8 @@ function isInApp() {
   return !!(window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative));
 }
 
+if (isInApp()) document.body.classList.add('in-app');
+
 function isGamePage() {
   const path = window.location.pathname;
   return /\/(play|challenge|survival|episode|trivia-rush|versus|wordle|wordsearch)\.html$/.test(path)
