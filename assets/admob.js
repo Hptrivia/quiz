@@ -35,25 +35,25 @@ let _interstitialLoaded = false;
 
 async function adMobInit() {
   if (!isInApp() || _adMobReady) return;
+  const showInterstitialFirst = getRoundStartParams();
+  if (showInterstitialFirst) document.body.style.visibility = 'hidden';
   try {
     _AdMob = window.Capacitor.Plugins.AdMob;
     await _AdMob.initialize({ initializeForTesting: ADMOB_TEST_MODE });
     _adMobReady = true;
+    if (showInterstitialFirst) {
+      await _AdMob.prepareInterstitial({ adId: ADMOB_IDS.interstitial });
+      _interstitialLoaded = true;
+      await adMobShowInterstitial();
+      document.body.style.visibility = 'visible';
+    }
     _adMobPreloadRewarded();
     _adMobPreloadInterstitial();
     if (!isGamePage()) adMobShowBanner();
-    if (getRoundStartParams()) _adMobShowInterstitialWhenReady();
   } catch (e) {
+    document.body.style.visibility = 'visible';
     console.warn('[AdMob] init failed', e);
   }
-}
-
-function _adMobShowInterstitialWhenReady() {
-  let tries = 0;
-  const poll = setInterval(() => {
-    if (_interstitialLoaded) { clearInterval(poll); adMobShowInterstitial(); }
-    else if (++tries > 50) clearInterval(poll);
-  }, 300);
 }
 
 async function _adMobPreloadRewarded() {
