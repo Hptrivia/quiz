@@ -608,6 +608,7 @@ async function renderMultiThemeMarathon() {
   slidesContainer.querySelectorAll(".question-slide").forEach(s => { s.style.display = "none"; });
 
   function renderResult() {
+    adMobShowInterstitial();
     document.getElementById("quizBox").style.display = "none";
     resultBox.style.display = "block";
     resultBox.classList.remove("result-anim"); void resultBox.offsetWidth; resultBox.classList.add("result-anim");
@@ -990,6 +991,7 @@ let buyPackUrl = "https://ko-fi.com/triviaking/shop";
   }
 
 function renderResult() {
+  adMobShowInterstitial();
   document.getElementById("quizBox").style.display = "none";
   resultBox.style.display = "block";
   resultBox.classList.remove("result-anim");

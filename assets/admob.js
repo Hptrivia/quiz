@@ -17,6 +17,7 @@ let _AdMob = null;
 let _adMobReady = false;
 let _rewardedLoaded = false;
 let _interstitialLoaded = false;
+let _appOpenLoaded = false;
 
 async function adMobInit() {
   if (!isInApp() || _adMobReady) return;
@@ -26,9 +27,40 @@ async function adMobInit() {
     _adMobReady = true;
     _adMobPreloadRewarded();
     _adMobPreloadInterstitial();
+    await _adMobPreloadAppOpen();
+    if (!sessionStorage.getItem('_aoShown')) {
+      sessionStorage.setItem('_aoShown', '1');
+      adMobShowAppOpen();
+    }
+    if (window.Capacitor.Plugins.App) {
+      window.Capacitor.Plugins.App.addListener('appStateChange', ({ isActive }) => {
+        if (isActive) adMobShowAppOpen();
+      });
+    }
   } catch (e) {
     console.warn('[AdMob] init failed', e);
   }
+}
+
+async function _adMobPreloadAppOpen() {
+  if (!_adMobReady) return;
+  try {
+    await _AdMob.prepareAppOpenAd({ adId: ADMOB_IDS.appOpen });
+    _appOpenLoaded = true;
+  } catch (e) {
+    _appOpenLoaded = false;
+  }
+}
+
+async function adMobShowAppOpen() {
+  if (!_adMobReady || !_appOpenLoaded) return;
+  try {
+    await _AdMob.showAppOpenAd();
+  } catch (e) {
+    console.warn('[AdMob] app open error', e);
+  }
+  _appOpenLoaded = false;
+  _adMobPreloadAppOpen();
 }
 
 async function _adMobPreloadRewarded() {

@@ -117,6 +117,7 @@ async function renderEpisodePage() {
   let score = 0;
 
   function renderResult() {
+    adMobShowInterstitial();
     gameBox.style.display = "none";
     resultBox.style.display = "block";
     resultBox.classList.remove("result-anim");

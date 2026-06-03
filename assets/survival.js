@@ -150,6 +150,7 @@ async function renderMultiThemeSurvival() {
     maybeStartRecovery(); updateTopbar();
   }
   function renderResult() {
+    adMobShowInterstitial();
     gameBox.style.display = "none";
     resultBox.style.display = "block";
     resultBox.classList.remove("result-anim"); void resultBox.offsetWidth; resultBox.classList.add("result-anim");
@@ -410,6 +411,7 @@ async function renderSurvivalPage() {
   }
 
   function renderResult() {
+    adMobShowInterstitial();
     gameBox.style.display = "none";
     resultBox.style.display = "block";
     resultBox.classList.remove("result-anim");
