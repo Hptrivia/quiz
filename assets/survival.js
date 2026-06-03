@@ -128,7 +128,11 @@ async function renderMultiThemeSurvival() {
     updateTopbar();
   }
   function useFiftyFifty() {
-    if (!state.fiftyAvailable || state.answerLocked || state.gameOver) return;
+    if (state.answerLocked || state.gameOver) return;
+    if (!state.fiftyAvailable) {
+      if (typeof isInApp === 'function' && isInApp()) _offerRewardedLifeline('50/50', () => { state.fiftyAvailable = true; useFiftyFifty(); });
+      return;
+    }
     const q = getCurrentQuestion();
     const slide = getCurrentSlide();
     const buttons = slide ? [...slide.querySelectorAll(".option-btn")] : [];
@@ -143,7 +147,11 @@ async function renderMultiThemeSurvival() {
     maybeStartRecovery(); updateTopbar();
   }
   function useCallFriend() {
-    if (!state.friendAvailable || state.answerLocked || state.gameOver) return;
+    if (state.answerLocked || state.gameOver) return;
+    if (!state.friendAvailable) {
+      if (typeof isInApp === 'function' && isInApp()) _offerRewardedLifeline('Call a Friend', () => { state.friendAvailable = true; useCallFriend(); });
+      return;
+    }
     const q = getCurrentQuestion();
     state.friendAvailable = false;
     setFeedback(`Call a Friend: The answer is ${q.answer}`, "correct");
@@ -638,7 +646,11 @@ async function renderSurvivalPage() {
   }
 
   function useFiftyFifty() {
-    if (!state.fiftyAvailable || state.answerLocked || state.gameOver) return;
+    if (state.answerLocked || state.gameOver) return;
+    if (!state.fiftyAvailable) {
+      if (typeof isInApp === 'function' && isInApp()) _offerRewardedLifeline('50/50', () => { state.fiftyAvailable = true; useFiftyFifty(); });
+      return;
+    }
 
     const q = getCurrentQuestion();
     const slide = getCurrentSlide();
@@ -661,7 +673,11 @@ async function renderSurvivalPage() {
   }
 
   function useCallFriend() {
-    if (!state.friendAvailable || state.answerLocked || state.gameOver) return;
+    if (state.answerLocked || state.gameOver) return;
+    if (!state.friendAvailable) {
+      if (typeof isInApp === 'function' && isInApp()) _offerRewardedLifeline('Call a Friend', () => { state.friendAvailable = true; useCallFriend(); });
+      return;
+    }
 
     const q = getCurrentQuestion();
     state.friendAvailable = false;

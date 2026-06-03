@@ -152,6 +152,23 @@ async function adMobHideBanner() {
   try { await _AdMob.hideBanner(); } catch {}
 }
 
+function _offerRewardedLifeline(name, onEarned) {
+  const overlay = document.createElement('div');
+  overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.75);display:flex;align-items:center;justify-content:center;z-index:9999';
+  overlay.innerHTML = `<div style="background:#1e1e2e;padding:24px;border-radius:12px;text-align:center;max-width:280px;color:#fff">
+    <p style="margin:0 0 16px;font-size:1.1em">Watch a short ad to use <strong>${name}</strong>?</p>
+    <button id="_adYes" style="margin-right:8px;padding:10px 20px;border-radius:8px;background:#6c63ff;color:#fff;border:none;cursor:pointer;font-size:1em">Watch Ad</button>
+    <button id="_adNo" style="padding:10px 20px;border-radius:8px;background:#444;color:#fff;border:none;cursor:pointer;font-size:1em">Cancel</button>
+  </div>`;
+  document.body.appendChild(overlay);
+  overlay.querySelector('#_adNo').onclick = () => overlay.remove();
+  overlay.querySelector('#_adYes').onclick = async () => {
+    overlay.remove();
+    const earned = await adMobShowRewarded();
+    if (earned) onEarned();
+  };
+}
+
 document.addEventListener('click', async (e) => {
   const btn = e.target.closest('[data-rewarded-href]');
   if (!btn || !isInApp()) return;
