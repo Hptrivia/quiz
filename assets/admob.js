@@ -176,21 +176,18 @@ function _offerRewardedLifeline(name, onEarned) {
   overlay.querySelector('#_adYes').onclick = async () => {
     overlay.remove();
     const earned = await adMobShowRewarded();
-    if (earned) onEarned();
+    if (earned || !_rewardedLoaded) onEarned(); // proceed if earned OR ad failed to load
   };
 }
 
 document.addEventListener('click', async (e) => {
   const btn = e.target.closest('[data-rewarded-href]');
   if (!btn || !isInApp()) return;
+  if (typeof isPremiumUser === 'function' && isPremiumUser()) return;
   e.preventDefault();
   const href = btn.dataset.rewardedHref;
-  btn.style.pointerEvents = 'none';
-  const orig = btn.textContent;
-  btn.textContent = '⏳ Loading ad...';
-  const earned = await adMobShowRewarded();
-  if (!earned) btn.textContent = orig; // restore if ad failed/skipped
-  window.location.href = href;
+  const label = btn.textContent.trim() || 'the next round';
+  _offerRewardedLifeline(label, () => { window.location.href = href; });
 });
 
 document.addEventListener('DOMContentLoaded', () => {
