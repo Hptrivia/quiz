@@ -415,7 +415,7 @@
           "<p class=\"result-tier\">" + tierText + "</p>" +
           "<div id=\"marathonThemeBreakdown\"></div>" +
           "<div class=\"cta-row\">" +
-          (hasNextPage ? "<a class=\"primary-btn\" href=\"mashup-play.html?themes=" + themesParam + "&mode=marathon&page=" + (safePage + 1) + "\">Next Round</a>" : "") +
+          (hasNextPage ? "<a class=\"primary-btn\" href=\"mashup-play.html?themes=" + themesParam + "&mode=marathon&page=" + (safePage + 1) + "\" data-rewarded-href=\"mashup-play.html?themes=" + themesParam + "&mode=marathon&page=" + (safePage + 1) + "\">Next Round</a>" : "") +
           (!isPremiumUser() ? "<a class=\"secondary-btn\" href=\"remove-ads.html\">Buy me a coffee</a>" : "") +
           "<a class=\"secondary-btn\" href=\"contact.html\">Report a Question</a>" +
           "</div>";
@@ -598,7 +598,7 @@
           "<p class=\"challenge-share-text\">Challenge a friend with this exact theme combination.</p>" +
           "<div class=\"challenge-link-box\" id=\"shareUrlBox\" style=\"cursor:pointer\" title=\"Click to copy\">" + shareUrl + "</div>" +
           "<div class=\"cta-row\">" +
-          (hasNextRound ? "<a class=\"primary-btn\" href=\"mashup-play.html?themes=" + themesParam + "&mode=challenge&round=" + (safeRound + 1) + "\">Next Round</a>" : "") +
+          (hasNextRound ? "<a class=\"primary-btn\" href=\"mashup-play.html?themes=" + themesParam + "&mode=challenge&round=" + (safeRound + 1) + "\"" + (safeRound % 3 === 0 ? " data-rewarded-href=\"mashup-play.html?themes=" + themesParam + "&mode=challenge&round=" + (safeRound + 1) + "\"" : "") + ">Next Round</a>" : "") +
           "<button class=\"secondary-btn\" id=\"copyShareBtn\">Copy Link</button>" +
           (!isPremiumUser() ? "<a class=\"secondary-btn\" href=\"remove-ads.html\">Reveal Answers</a>" : "") +
           "<a class=\"secondary-btn\" href=\"contact.html\">Report a Question</a>" +
@@ -943,6 +943,7 @@
 
   })();
   </script>
+  <script src="assets/admob.js"></script>
   <script src="assets/profile.js"></script>
 </body>
 </html>

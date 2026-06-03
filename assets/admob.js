@@ -27,6 +27,15 @@ function getRoundStartParams() {
     const r = parseInt(p.get('round') || '1');
     return r > 1 && (r - 1) % 3 !== 0;
   }
+  // Mashup-play: same logic as challenge/marathon depending on mode param
+  if (path.endsWith('/mashup-play.html')) {
+    const mode = p.get('mode') || 'marathon';
+    if (mode === 'challenge') {
+      const r = parseInt(p.get('round') || '1');
+      return r > 1 && (r - 1) % 3 !== 0;
+    }
+    return parseInt(p.get('page') || '1') === 1;
+  }
   // All other modes: interstitial only at the very start (page/episode 1)
   if (path.endsWith('/play.html'))      return parseInt(p.get('page')    || '1') === 1;
   if (path.endsWith('/episode.html'))   return parseInt(p.get('episode') || '1') === 1;
