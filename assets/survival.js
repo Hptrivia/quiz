@@ -589,6 +589,7 @@ async function renderSurvivalPage() {
 
     state.selectedAnswer = null;
     state.answerLocked = false;
+    state.lifelineUsedThisQ = false;
     if (currentSubmitBtn) currentSubmitBtn.disabled = false;
     if (currentNextBtn) currentNextBtn.style.display = "none";
     setFeedback("");
