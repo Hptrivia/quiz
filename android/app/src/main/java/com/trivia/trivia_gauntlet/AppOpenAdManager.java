@@ -11,16 +11,16 @@ import java.util.Date;
 
 public class AppOpenAdManager {
 
-    private static final String TEST_AD_UNIT_ID  = "ca-app-pub-3940256099942544/9257395921";
-    private static final String PROD_AD_UNIT_ID  = "ca-app-pub-9506123851374920/6062430756";
-    private static final boolean TEST_MODE       = true; // flip to false for production
+    private static final String TEST_AD_UNIT_ID = "ca-app-pub-3940256099942544/9257395921";
+    private static final String PROD_AD_UNIT_ID = "ca-app-pub-9506123851374920/6062430756";
+    private static final boolean TEST_MODE      = true;
+    private static final long AD_EXPIRY_MS      = 4 * 60 * 60 * 1000;
 
-    private static final long AD_EXPIRY_MS = 4 * 60 * 60 * 1000; // 4 hours
-
-    private AppOpenAd appOpenAd = null;
-    private boolean isLoadingAd = false;
-    private boolean isShowingAd = false;
-    private long loadTime = 0;
+    private AppOpenAd appOpenAd   = null;
+    private boolean isLoadingAd   = false;
+    private boolean isShowingAd   = false;
+    private long loadTime         = 0;
+    private Activity pendingActivity = null; // show as soon as ad loads
 
     private final Context context;
 
@@ -32,8 +32,9 @@ public class AppOpenAdManager {
         return TEST_MODE ? TEST_AD_UNIT_ID : PROD_AD_UNIT_ID;
     }
 
-    public void loadAd() {
+    public void loadAd(Activity activityToShowOn) {
         if (isLoadingAd || isAdAvailable()) return;
+        pendingActivity = activityToShowOn;
         isLoadingAd = true;
         AdRequest request = new AdRequest.Builder().build();
         AppOpenAd.load(context, getAdUnitId(), request, new AppOpenAd.AppOpenAdLoadCallback() {
@@ -42,25 +43,31 @@ public class AppOpenAdManager {
                 appOpenAd = ad;
                 isLoadingAd = false;
                 loadTime = new Date().getTime();
+                if (pendingActivity != null) {
+                    showAdIfAvailable(pendingActivity);
+                    pendingActivity = null;
+                }
             }
             @Override
             public void onAdFailedToLoad(LoadAdError error) {
                 isLoadingAd = false;
+                pendingActivity = null;
             }
         });
     }
 
-    private boolean wasLoadTimeLessThanNHoursAgo() {
-        return new Date().getTime() - loadTime < AD_EXPIRY_MS;
+    public void loadAd() {
+        loadAd(null);
     }
 
     private boolean isAdAvailable() {
-        return appOpenAd != null && wasLoadTimeLessThanNHoursAgo();
+        return appOpenAd != null && (new Date().getTime() - loadTime < AD_EXPIRY_MS);
     }
 
     public void showAdIfAvailable(Activity activity) {
-        if (isShowingAd || !isAdAvailable()) {
-            loadAd();
+        if (isShowingAd) return;
+        if (!isAdAvailable()) {
+            loadAd(activity);
             return;
         }
         appOpenAd.setFullScreenContentCallback(new FullScreenContentCallback() {

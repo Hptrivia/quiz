@@ -223,28 +223,28 @@ function _injectNativeAdSlots() {
   if (!isInApp()) return;
   const path = window.location.pathname;
 
-  // Category pages — mid-point of theme grid
-  if (/\/category\.html/.test(path)) {
-    const grid = document.querySelector('.themes-grid, .theme-grid, [class*="theme"][class*="grid"], [class*="theme"][class*="list"]');
+  // Category pages — mid-point of theme grid (#categoryThemes)
+  if (/\/category\.html/.test(path) || /\/categories\//.test(path)) {
+    const grid = document.getElementById('categoryThemes');
     if (grid) _insertMidSlot(grid);
   }
 
-  // Homepage — between category sections
+  // Homepage — between featured sections
   if (path === '/' || /\/index\.html/.test(path)) {
-    const sections = document.querySelectorAll('.category-section, .homepage-category, [class*="category-row"], [class*="category-section"]');
-    if (sections.length >= 2) _insertSlotAfter(sections[Math.floor(sections.length / 2) - 1]);
+    const sections = document.querySelectorAll('.featured-section');
+    if (sections.length >= 2) _insertSlotAfter(sections[0]);
   }
 
-  // Theme pages — before related cards
+  // Theme pages — before related quizzes section
   if (/\/themes\//.test(path)) {
-    const related = document.querySelector('.related-themes, [class*="related"], [id*="related"]');
+    const related = document.querySelector('.theme-related-quizzes');
     if (related) _insertSlotBefore(related);
   }
 
-  // Mashup picker (mashup.html / mashup-landing.html) — middle of content
-  if (/\/mashup\.html|\/mashup-landing\.html/.test(path)) {
-    const container = document.querySelector('main, .container, .mashup-themes');
-    if (container) _insertMidSlot(container);
+  // Mashup picker — middle of theme grid (#themeGrid)
+  if (/\/mashup\.html/.test(path) || /\/mashup-landing\.html/.test(path)) {
+    const grid = document.getElementById('themeGrid');
+    if (grid) _insertMidSlot(grid);
   }
 }
 
