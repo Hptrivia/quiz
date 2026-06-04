@@ -651,6 +651,7 @@ async function vsInit() {
 
       document.getElementById('_vsAdNo').addEventListener('click', () => {
         adOverlay.remove();
+        vsLastPlayerNames = [];
         vsGoSetup();
       });
 
