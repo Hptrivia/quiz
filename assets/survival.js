@@ -32,7 +32,7 @@ async function renderMultiThemeSurvival() {
     difficulty: null, questions: [], currentIndex: 0, selectedAnswer: null,
     score: 0, gameOver: false, fiftyAvailable: true, friendAvailable: true,
     recoveryStage: 0, recoveryPoints: 0, recoveryStarted: false,
-    pendingRecoveryStart: false, answerLocked: false
+    pendingRecoveryStart: false, answerLocked: false, lifelineUsedThisQ: false
   };
 
   const themeScores = {};
@@ -131,16 +131,14 @@ async function renderMultiThemeSurvival() {
   }
   function useFiftyFifty() {
     if (state.answerLocked || state.gameOver) return;
-    if (!state.fiftyAvailable) {
-      if (typeof isInApp === 'function' && isInApp()) _offerRewardedLifeline('50/50', () => { state.fiftyAvailable = true; useFiftyFifty(); });
-      return;
-    }
+    if (!state.fiftyAvailable) return;
     const q = getCurrentQuestion();
     const slide = getCurrentSlide();
     const buttons = slide ? [...slide.querySelectorAll(".option-btn")] : [];
     const wrongButtons = buttons.filter(btn => btn.textContent !== q.answer && btn.style.display !== "none");
     shuffle(wrongButtons).slice(0, 2).forEach(btn => { btn.style.display = "none"; });
     state.fiftyAvailable = false;
+    state.lifelineUsedThisQ = true;
     if (state.recoveryStarted && state.recoveryStage === 1) {
       state.recoveryStarted = false; state.recoveryPoints = 0; state.recoveryStage = 0;
       state.pendingRecoveryStart = true;
@@ -150,12 +148,10 @@ async function renderMultiThemeSurvival() {
   }
   function useCallFriend() {
     if (state.answerLocked || state.gameOver) return;
-    if (!state.friendAvailable) {
-      if (typeof isInApp === 'function' && isInApp()) _offerRewardedLifeline('Call a Friend', () => { state.friendAvailable = true; useCallFriend(); });
-      return;
-    }
+    if (!state.friendAvailable) return;
     const q = getCurrentQuestion();
     state.friendAvailable = false;
+    state.lifelineUsedThisQ = true;
     setFeedback(`Call a Friend: The answer is ${q.answer}`, "correct");
     maybeStartRecovery(); updateTopbar();
   }
@@ -270,9 +266,33 @@ async function renderMultiThemeSurvival() {
         });
         nextBtn.addEventListener("click", () => {
           if (state.gameOver) { renderResult(); return; }
-          state.currentIndex += 1;
-          if (state.currentIndex >= state.questions.length) renderResult();
-          else showQuestion(state.currentIndex);
+          const proceed = () => {
+            state.lifelineUsedThisQ = false;
+            state.currentIndex += 1;
+            if (state.currentIndex >= state.questions.length) renderResult();
+            else showQuestion(state.currentIndex);
+          };
+          if (state.lifelineUsedThisQ && typeof isInApp === 'function' && isInApp()) {
+            const adOverlay = document.createElement('div');
+            adOverlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.75);display:flex;align-items:center;justify-content:center;z-index:9999;padding:16px';
+            adOverlay.innerHTML = `<div style="background:#1e1e2e;padding:24px 20px;border-radius:14px;text-align:center;max-width:280px;width:100%;color:#fff">
+              <p style="margin:0 0 16px;font-size:1em">Watch a short ad to continue?</p>
+              <button id="_svAdYes" style="width:100%;padding:12px;border-radius:8px;background:#6c63ff;color:#fff;border:none;cursor:pointer;font-size:1em;margin-bottom:8px">Yes</button>
+              <button id="_svAdNo" style="width:100%;padding:10px;border-radius:8px;background:#2d2d3d;color:#94a3b8;border:none;cursor:pointer;font-size:0.9em">No</button>
+            </div>`;
+            document.body.appendChild(adOverlay);
+            document.getElementById('_svAdNo').addEventListener('click', () => { adOverlay.remove(); proceed(); });
+            document.getElementById('_svAdYes').addEventListener('click', async () => {
+              adOverlay.remove();
+              if (typeof adMobShowRewarded === 'function') {
+                const earned = await adMobShowRewarded();
+                if (earned) { state.fiftyAvailable = true; state.friendAvailable = true; }
+              }
+              proceed();
+            });
+          } else {
+            proceed();
+          }
         });
         const lifelinesDiv = document.createElement("div"); lifelinesDiv.className = "survival-lifelines";
         const slideFFBtn = document.createElement("button"); slideFFBtn.className = "secondary-btn slide-fifty-btn"; slideFFBtn.textContent = "50-50";
@@ -361,6 +381,7 @@ async function renderSurvivalPage() {
     recoveryStarted: false,
     pendingRecoveryStart: false,
     answerLocked: false,
+    lifelineUsedThisQ: false,
     topScore: null
   };
 
@@ -657,10 +678,7 @@ async function renderSurvivalPage() {
 
   function useFiftyFifty() {
     if (state.answerLocked || state.gameOver) return;
-    if (!state.fiftyAvailable) {
-      if (typeof isInApp === 'function' && isInApp()) _offerRewardedLifeline('50/50', () => { state.fiftyAvailable = true; useFiftyFifty(); });
-      return;
-    }
+    if (!state.fiftyAvailable) return;
 
     const q = getCurrentQuestion();
     const slide = getCurrentSlide();
@@ -669,6 +687,7 @@ async function renderSurvivalPage() {
     shuffle(wrongButtons).slice(0, 2).forEach(btn => { btn.style.display = "none"; });
 
     state.fiftyAvailable = false;
+    state.lifelineUsedThisQ = true;
 
     if (state.recoveryStarted && state.recoveryStage === 1) {
       state.recoveryStarted = false;
@@ -684,13 +703,11 @@ async function renderSurvivalPage() {
 
   function useCallFriend() {
     if (state.answerLocked || state.gameOver) return;
-    if (!state.friendAvailable) {
-      if (typeof isInApp === 'function' && isInApp()) _offerRewardedLifeline('Call a Friend', () => { state.friendAvailable = true; useCallFriend(); });
-      return;
-    }
+    if (!state.friendAvailable) return;
 
     const q = getCurrentQuestion();
     state.friendAvailable = false;
+    state.lifelineUsedThisQ = true;
     setFeedback(`Call a Friend: The answer is ${q.answer}`, "correct");
 
     maybeStartRecovery();
@@ -781,11 +798,32 @@ async function renderSurvivalPage() {
 
         nextBtn.addEventListener("click", () => {
           if (state.gameOver) { renderResult(); return; }
-          state.currentIndex += 1;
-          if (state.currentIndex >= state.questions.length) {
-            renderResult();
+          const proceed = () => {
+            state.lifelineUsedThisQ = false;
+            state.currentIndex += 1;
+            if (state.currentIndex >= state.questions.length) renderResult();
+            else showQuestion(state.currentIndex);
+          };
+          if (state.lifelineUsedThisQ && typeof isInApp === 'function' && isInApp()) {
+            const adOverlay = document.createElement('div');
+            adOverlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.75);display:flex;align-items:center;justify-content:center;z-index:9999;padding:16px';
+            adOverlay.innerHTML = `<div style="background:#1e1e2e;padding:24px 20px;border-radius:14px;text-align:center;max-width:280px;width:100%;color:#fff">
+              <p style="margin:0 0 16px;font-size:1em">Watch a short ad to continue?</p>
+              <button id="_svAdYes" style="width:100%;padding:12px;border-radius:8px;background:#6c63ff;color:#fff;border:none;cursor:pointer;font-size:1em;margin-bottom:8px">Yes</button>
+              <button id="_svAdNo" style="width:100%;padding:10px;border-radius:8px;background:#2d2d3d;color:#94a3b8;border:none;cursor:pointer;font-size:0.9em">No</button>
+            </div>`;
+            document.body.appendChild(adOverlay);
+            document.getElementById('_svAdNo').addEventListener('click', () => { adOverlay.remove(); proceed(); });
+            document.getElementById('_svAdYes').addEventListener('click', async () => {
+              adOverlay.remove();
+              if (typeof adMobShowRewarded === 'function') {
+                const earned = await adMobShowRewarded();
+                if (earned) { state.fiftyAvailable = true; state.friendAvailable = true; }
+              }
+              proceed();
+            });
           } else {
-            showQuestion(state.currentIndex);
+            proceed();
           }
         });
 
