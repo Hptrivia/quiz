@@ -225,17 +225,15 @@ function vsAdvanceTurn(player, points, stealInfo) {
   }
 
   if (isLastRound) {
-    nextPlayerEl.textContent = "That's a wrap!";
-    nextScoreEl.textContent = '';
-    btn.textContent = 'See results';
-    btn.onclick = vsShowResults;
-  } else {
-    const nextPlayer = state.players[state.currentPlayerIdx];
-    nextPlayerEl.textContent = `${nextPlayer.name}'s turn`;
-    nextScoreEl.textContent = `${nextPlayer.score} pt${nextPlayer.score !== 1 ? 's' : ''} so far`;
-    btn.textContent = 'Go';
-    btn.onclick = vsRunNextTurn;
+    vsShowResults();
+    return;
   }
+
+  const nextPlayer = state.players[state.currentPlayerIdx];
+  nextPlayerEl.textContent = `${nextPlayer.name}'s turn`;
+  nextScoreEl.textContent = `${nextPlayer.score} pt${nextPlayer.score !== 1 ? 's' : ''} so far`;
+  btn.textContent = 'Go';
+  btn.onclick = vsRunNextTurn;
 
   vsShow('vsBetween');
 }
