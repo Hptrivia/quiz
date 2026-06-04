@@ -14,7 +14,6 @@ function isInApp() {
   return !!(window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative));
 }
 
-
 function isGamePage() {
   const path = window.location.pathname;
   return /\/(play|challenge|survival|episode|trivia-rush|versus|wordle|wordsearch)\.html$/.test(path)
@@ -188,183 +187,24 @@ document.addEventListener('click', async (e) => {
   });
 });
 
-// ── Native Advanced Ads ──────────────────────────────────────────────────────
-
-let _NativeAd = null;
-let _nativeAdLoaded = false;
-let _activeSlotEl = null;
-let _scrollRafPending = false;
-
-async function _nativeAdInit() {
-  if (!isInApp()) return;
-  _NativeAd = window.Capacitor?.Plugins?.NativeAd;
-  if (!_NativeAd) return;
-  try {
-    await _NativeAd.prepareNativeAd({ adId: ADMOB_IDS.native });
-    _nativeAdLoaded = true;
-  } catch (e) {
-    _nativeAdLoaded = false;
-  }
-}
-
-// Keep native ad overlay in sync with slot as page scrolls
-function _startScrollSync(el) {
-  _activeSlotEl = el;
-  window.addEventListener('scroll', _onScroll, { passive: true });
-}
-
-function _stopScrollSync() {
-  _activeSlotEl = null;
-  window.removeEventListener('scroll', _onScroll);
-}
-
-function _onScroll() {
-  if (_scrollRafPending || !_activeSlotEl) return;
-  _scrollRafPending = true;
-  requestAnimationFrame(() => {
-    _scrollRafPending = false;
-    if (!_activeSlotEl) return;
-    const rect = _activeSlotEl.getBoundingClientRect();
-    _NativeAd?.showNativeAd({ x: rect.left, y: rect.top, width: rect.width, height: rect.height });
-  });
-}
-
-async function _showNativeAdAt(el) {
-  if (!_NativeAd || !_nativeAdLoaded) return;
-  const rect = el.getBoundingClientRect();
-  try {
-    await _NativeAd.showNativeAd({ x: rect.left, y: rect.top, width: rect.width, height: rect.height });
-    el.dataset.nativeAdShown = '1';
-    _startScrollSync(el);
-  } catch (e) {}
-}
-
-async function _hideNativeAd() {
-  _stopScrollSync();
-  if (!_NativeAd) return;
-  try { await _NativeAd.hideNativeAd(); } catch {}
-}
-
-function _injectNativeAdSlots() {
-  if (!isInApp()) return;
-  const path = window.location.pathname;
-
-  // /category.html — wait for #categoryThemes to populate
-  if (/\/category\.html/.test(path)) {
-    _waitForChildren('categoryThemes', (grid) => _insertMidSlot(grid));
-  }
-
-  // /categories/*.html — static .grid divs, insert between them
-  if (/\/categories\//.test(path)) {
-    const grids = document.querySelectorAll('.grid');
-    if (grids.length >= 2) _insertSlotAfter(grids[0]);
-    else if (grids.length === 1) _insertMidSlot(grids[0]);
-  }
-
-  // Homepage — before #categoryList
-  if (path === '/' || /\/index\.html/.test(path)) {
-    const list = document.getElementById('categoryList');
-    if (list) _insertSlotBefore(list);
-  }
-
-  // Theme pages — before related quizzes (static HTML)
-  if (/\/themes\//.test(path)) {
-    const related = document.querySelector('.theme-related-quizzes');
-    if (related) _insertSlotBefore(related);
-  }
-
-  // Mashup picker — wait for #themeGrid to populate
-  if (/\/mashup\.html/.test(path) || /\/mashup-landing\.html/.test(path)) {
-    _waitForChildren('themeGrid', (grid) => _insertMidSlot(grid));
-  }
-}
-
-function _waitForChildren(id, callback) {
-  const el = document.getElementById(id);
-  if (!el) return;
-  if (el.children.length > 1) { callback(el); return; }
-  const obs = new MutationObserver(() => {
-    if (el.children.length > 1) {
-      obs.disconnect();
-      callback(el);
-    }
-  });
-  obs.observe(el, { childList: true });
-}
-
-function _insertMidSlot(container) {
-  const children = Array.from(container.children);
-  if (!children.length) return;
-  const mid = Math.floor(children.length / 2);
-  const slot = _makeNativeSlot();
-  children[mid].before(slot);
-  _watchSlot(slot);
-}
-
-function _insertSlotAfter(el) {
-  const slot = _makeNativeSlot();
-  el.after(slot);
-  _watchSlot(slot);
-}
-
-function _insertSlotBefore(el) {
-  const slot = _makeNativeSlot();
-  el.before(slot);
-  _watchSlot(slot);
-}
-
-function _makeNativeSlot() {
-  const div = document.createElement('div');
-  div.className = 'native-ad-slot';
-  div.style.cssText = 'width:100%;height:80px;margin:12px 0;';
-  return div;
-}
-
-function _watchSlot(slot) {
-  const observer = new IntersectionObserver(async (entries) => {
-    const entry = entries[0];
-    if (entry.isIntersecting && !slot.dataset.nativeAdShown) {
-      await _showNativeAdAt(slot);
-    } else if (!entry.isIntersecting && slot.dataset.nativeAdShown) {
-      delete slot.dataset.nativeAdShown;
-      await _hideNativeAd();
-      // reload for next slot
-      _nativeAdLoaded = false;
-      _nativeAdInit();
-    }
-  }, { threshold: 0.5 });
-  observer.observe(slot);
-}
-
-// Watch for result screens appearing and inject native ad before "Try another theme"
+// Show banner on result screens when "Try another theme" section appears
 function _watchResultScreens() {
   if (!isInApp()) return;
-  const observer = new MutationObserver(async (mutations) => {
+  const observer = new MutationObserver((mutations) => {
     for (const mutation of mutations) {
       for (const node of mutation.addedNodes) {
         if (node.nodeType !== 1) continue;
         const target = node.querySelector?.('.result-theme-search') || (node.classList?.contains('result-theme-search') ? node : null);
-        if (target && !target.dataset.nativeSlotAdded) {
-          target.dataset.nativeSlotAdded = '1';
-          const slot = _makeNativeSlot();
-          target.before(slot);
-          if (!_nativeAdLoaded) await _nativeAdInit();
-          await _showNativeAdAt(slot);
-          adMobShowBanner(); // also show bottom banner on result screen
-        }
+        if (target) adMobShowBanner();
       }
     }
   });
   observer.observe(document.body, { childList: true, subtree: true });
 }
 
-// ── Init ─────────────────────────────────────────────────────────────────────
-
 document.addEventListener('DOMContentLoaded', () => {
   if (isInApp()) {
     adMobInit();
-    _nativeAdInit();
-    _injectNativeAdSlots();
     _watchResultScreens();
   } else {
     let tries = 0;
@@ -372,8 +212,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isInApp()) {
         clearInterval(retry);
         adMobInit();
-        _nativeAdInit();
-        _injectNativeAdSlots();
         _watchResultScreens();
       }
       else if (++tries > 25) clearInterval(retry);
