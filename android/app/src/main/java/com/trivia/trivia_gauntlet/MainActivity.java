@@ -17,7 +17,7 @@ public class MainActivity extends BridgeActivity {
     }
 
     @Override
-    protected void onStart() {
+    public void onStart() {
         super.onStart();
         if (!appOpenShownOnce) {
             appOpenShownOnce = true;
@@ -26,9 +26,8 @@ public class MainActivity extends BridgeActivity {
     }
 
     @Override
-    protected void onResume() {
+    public void onResume() {
         super.onResume();
-        // Reload ad for next background→foreground transition
         appOpenAdManager.loadAd();
     }
 }
