@@ -1,5 +1,6 @@
 import UIKit
 import Capacitor
+import AdSupport
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -7,7 +8,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // TEMP: show AdMob test device ID — remove after noting the ID
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+            let idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
+            let alert = UIAlertController(title: "AdMob Test Device ID", message: idfa, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            let vc = UIApplication.shared.windows.filter({ $0.isKeyWindow }).first?.rootViewController
+            vc?.present(alert, animated: true)
+        }
         return true
     }
 
