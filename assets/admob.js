@@ -192,6 +192,8 @@ document.addEventListener('click', async (e) => {
 
 let _NativeAd = null;
 let _nativeAdLoaded = false;
+let _activeSlotEl = null;
+let _scrollRafPending = false;
 
 async function _nativeAdInit() {
   if (!isInApp()) return;
@@ -205,16 +207,40 @@ async function _nativeAdInit() {
   }
 }
 
+// Keep native ad overlay in sync with slot as page scrolls
+function _startScrollSync(el) {
+  _activeSlotEl = el;
+  window.addEventListener('scroll', _onScroll, { passive: true });
+}
+
+function _stopScrollSync() {
+  _activeSlotEl = null;
+  window.removeEventListener('scroll', _onScroll);
+}
+
+function _onScroll() {
+  if (_scrollRafPending || !_activeSlotEl) return;
+  _scrollRafPending = true;
+  requestAnimationFrame(() => {
+    _scrollRafPending = false;
+    if (!_activeSlotEl) return;
+    const rect = _activeSlotEl.getBoundingClientRect();
+    _NativeAd?.showNativeAd({ x: rect.left, y: rect.top, width: rect.width, height: rect.height });
+  });
+}
+
 async function _showNativeAdAt(el) {
   if (!_NativeAd || !_nativeAdLoaded) return;
   const rect = el.getBoundingClientRect();
   try {
     await _NativeAd.showNativeAd({ x: rect.left, y: rect.top, width: rect.width, height: rect.height });
     el.dataset.nativeAdShown = '1';
+    _startScrollSync(el);
   } catch (e) {}
 }
 
 async function _hideNativeAd() {
+  _stopScrollSync();
   if (!_NativeAd) return;
   try { await _NativeAd.hideNativeAd(); } catch {}
 }
