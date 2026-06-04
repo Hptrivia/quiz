@@ -627,14 +627,41 @@ async function vsInit() {
   });
 
   document.getElementById('vsPlayAgainBtn').addEventListener('click', () => {
-    if (vsLastPlayerNames.length > 0) {
-      playerCount = vsLastPlayerNames.length;
-      playerSeg.querySelectorAll('button').forEach(btn => {
-        btn.classList.toggle('selected', parseInt(btn.dataset.val) === playerCount);
-      });
-      renderNameInputs(playerCount);
+    function vsGoSetup() {
+      if (vsLastPlayerNames.length > 0) {
+        playerCount = vsLastPlayerNames.length;
+        playerSeg.querySelectorAll('button').forEach(btn => {
+          btn.classList.toggle('selected', parseInt(btn.dataset.val) === playerCount);
+        });
+        renderNameInputs(playerCount);
+      }
+      vsShow('vsSetup');
     }
-    vsShow('vsSetup');
+
+    if (typeof isInApp === 'function' && isInApp()) {
+      const adOverlay = document.createElement('div');
+      adOverlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.75);display:flex;align-items:center;justify-content:center;z-index:9999;padding:16px';
+      adOverlay.innerHTML = `
+        <div style="background:#1e1e2e;padding:24px 20px;border-radius:14px;text-align:center;max-width:280px;width:100%;color:#fff">
+          <p style="margin:0 0 16px;font-size:1em">Watch a short ad before the next game?</p>
+          <button id="_vsAdWatch" style="width:100%;padding:12px;border-radius:8px;background:#6c63ff;color:#fff;border:none;cursor:pointer;font-size:1em;margin-bottom:8px">Watch Ad</button>
+          <button id="_vsAdNo" style="width:100%;padding:10px;border-radius:8px;background:#2d2d3d;color:#94a3b8;border:none;cursor:pointer;font-size:0.9em">No</button>
+        </div>`;
+      document.body.appendChild(adOverlay);
+
+      document.getElementById('_vsAdNo').addEventListener('click', () => {
+        adOverlay.remove();
+        vsGoSetup();
+      });
+
+      document.getElementById('_vsAdWatch').addEventListener('click', async () => {
+        adOverlay.remove();
+        if (typeof adMobShowRewarded === 'function') await adMobShowRewarded();
+        vsGoSetup();
+      });
+    } else {
+      vsGoSetup();
+    }
   });
 
   if (isPremiumUser()) {

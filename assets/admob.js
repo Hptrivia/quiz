@@ -32,10 +32,16 @@ let _interstitialLoaded = false;
 
 async function adMobInit() {
   if (!isInApp() || _adMobReady) return;
-  const _adKey = '_adShown_' + window.location.pathname + window.location.search;
-  const showInterstitialFirst = getRoundStartParams() && !sessionStorage.getItem(_adKey);
+  const _modeKey = (() => {
+    const p = window.location.pathname;
+    if (/\/wordsearch\//.test(p)) return '_iad_wordsearch';
+    if (/\/wordle\//.test(p)) return '_iad_wordle';
+    const m = p.match(/\/([^/]+)\.html$/);
+    return m ? '_iad_' + m[1] : '_iad_other';
+  })();
+  const showInterstitialFirst = getRoundStartParams() && !sessionStorage.getItem(_modeKey);
   if (showInterstitialFirst) {
-    sessionStorage.setItem(_adKey, '1');
+    sessionStorage.setItem(_modeKey, '1');
     document.body.style.visibility = 'hidden';
     const loader = document.createElement('div');
     loader.id = '_adLoader';
@@ -132,6 +138,7 @@ async function adMobShowBanner() {
       position: 'BOTTOM_CENTER',
       margin: 0,
     });
+    document.body.classList.add('has-banner');
   } catch (e) {
     console.warn('[AdMob] banner error', e);
   }
@@ -140,6 +147,7 @@ async function adMobShowBanner() {
 async function adMobHideBanner() {
   if (!_adMobReady) return;
   try { await _AdMob.hideBanner(); } catch {}
+  document.body.classList.remove('has-banner');
 }
 
 function _offerRewardedLifeline(name, onEarned) {
@@ -168,7 +176,11 @@ document.addEventListener('click', async (e) => {
   _offerRewardedLifeline(label, () => {
     try {
       const dest = new URL(href, window.location.href);
-      sessionStorage.setItem('_adShown_' + dest.pathname + dest.search, '1');
+      const dp = dest.pathname;
+      const dk = /\/wordsearch\//.test(dp) ? '_iad_wordsearch'
+               : /\/wordle\//.test(dp) ? '_iad_wordle'
+               : (dp.match(/\/([^/]+)\.html$/) || [])[1] ? '_iad_' + (dp.match(/\/([^/]+)\.html$/) || [])[1] : '_iad_other';
+      sessionStorage.setItem(dk, '1');
     } catch {}
     window.location.href = href;
   });

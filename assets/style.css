@@ -76,6 +76,10 @@ body {
   color: var(--text);
 }
 
+body.has-banner {
+  padding-bottom: calc(60px + env(safe-area-inset-bottom));
+}
+
 a {
   color: inherit;
   text-decoration: none;
