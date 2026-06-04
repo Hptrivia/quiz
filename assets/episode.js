@@ -108,6 +108,7 @@ async function renderEpisodePage() {
       nextPageLink.style.display = "inline-block";
       nextPageLink.textContent = "Skip to next episode";
       nextPageLink.href = `episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}`;
+      nextPageLink.dataset.rewardedHref = `episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}`;
     } else {
       nextPageLink.style.display = "none";
     }
