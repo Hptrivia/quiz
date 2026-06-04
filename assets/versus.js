@@ -229,6 +229,38 @@ function vsAdvanceTurn(player, points, stealInfo) {
     return;
   }
 
+  const isMidpoint = state.currentPlayerIdx === 0
+    && state.currentRound === Math.floor(state.numQuestions / 2)
+    && !state.midAdShown;
+
+  if (isMidpoint && typeof isInApp === 'function' && isInApp()) {
+    state.midAdShown = true;
+    const adOverlay = document.createElement('div');
+    adOverlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.75);display:flex;align-items:center;justify-content:center;z-index:9999;padding:16px';
+    adOverlay.innerHTML = `
+      <div style="background:#1e1e2e;padding:24px 20px;border-radius:14px;text-align:center;max-width:280px;width:100%;color:#fff">
+        <p style="margin:0 0 16px;font-size:1em">Watch a short ad to continue?</p>
+        <button id="_vsMidAdYes" style="width:100%;padding:12px;border-radius:8px;background:#6c63ff;color:#fff;border:none;cursor:pointer;font-size:1em;margin-bottom:8px">Yes</button>
+        <button id="_vsMidAdNo" style="width:100%;padding:10px;border-radius:8px;background:#2d2d3d;color:#94a3b8;border:none;cursor:pointer;font-size:0.9em">No</button>
+      </div>`;
+    document.body.appendChild(adOverlay);
+
+    document.getElementById('_vsMidAdNo').addEventListener('click', () => {
+      adOverlay.remove();
+      vsShowResults();
+    });
+
+    document.getElementById('_vsMidAdYes').addEventListener('click', async () => {
+      adOverlay.remove();
+      if (typeof adMobShowRewarded === 'function') {
+        const earned = await adMobShowRewarded();
+        if (!earned) { vsShowResults(); return; }
+      }
+      vsRunNextTurn();
+    });
+    return;
+  }
+
   const nextPlayer = state.players[state.currentPlayerIdx];
   nextPlayerEl.textContent = `${nextPlayer.name}'s turn`;
   nextScoreEl.textContent = `${nextPlayer.score} pt${nextPlayer.score !== 1 ? 's' : ''} so far`;
@@ -636,31 +668,7 @@ async function vsInit() {
       vsShow('vsSetup');
     }
 
-    if (typeof isInApp === 'function' && isInApp()) {
-      const adOverlay = document.createElement('div');
-      adOverlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.75);display:flex;align-items:center;justify-content:center;z-index:9999;padding:16px';
-      adOverlay.innerHTML = `
-        <div style="background:#1e1e2e;padding:24px 20px;border-radius:14px;text-align:center;max-width:280px;width:100%;color:#fff">
-          <p style="margin:0 0 16px;font-size:1em">Watch a short ad before the next game?</p>
-          <button id="_vsAdWatch" style="width:100%;padding:12px;border-radius:8px;background:#6c63ff;color:#fff;border:none;cursor:pointer;font-size:1em;margin-bottom:8px">Watch Ad</button>
-          <button id="_vsAdNo" style="width:100%;padding:10px;border-radius:8px;background:#2d2d3d;color:#94a3b8;border:none;cursor:pointer;font-size:0.9em">No</button>
-        </div>`;
-      document.body.appendChild(adOverlay);
-
-      document.getElementById('_vsAdNo').addEventListener('click', () => {
-        adOverlay.remove();
-        vsLastPlayerNames = [];
-        vsGoSetup();
-      });
-
-      document.getElementById('_vsAdWatch').addEventListener('click', async () => {
-        adOverlay.remove();
-        if (typeof adMobShowRewarded === 'function') await adMobShowRewarded();
-        vsGoSetup();
-      });
-    } else {
-      vsGoSetup();
-    }
+    vsGoSetup();
   });
 
   if (isPremiumUser()) {
