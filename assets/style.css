@@ -70,6 +70,7 @@
 
 body {
   margin: 0;
+  padding-top: env(safe-area-inset-top);
   font-family: Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
@@ -91,7 +92,7 @@ a {
 }
 
 .site-header {
-  padding: calc(10px + env(safe-area-inset-top)) 0 14px;
+  padding: 10px 0 14px;
   background: var(--header-bg);
   border-bottom: 1px solid var(--header-border);
 }
