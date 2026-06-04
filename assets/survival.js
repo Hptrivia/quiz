@@ -32,7 +32,7 @@ async function renderMultiThemeSurvival() {
     difficulty: null, questions: [], currentIndex: 0, selectedAnswer: null,
     score: 0, gameOver: false, fiftyAvailable: true, friendAvailable: true,
     recoveryStage: 0, recoveryPoints: 0, recoveryStarted: false,
-    pendingRecoveryStart: false, answerLocked: false
+    pendingRecoveryStart: false, answerLocked: false, lifelineUsedThisQ: false
   };
 
   const themeScores = {};
@@ -57,8 +57,8 @@ async function renderMultiThemeSurvival() {
     fiftyBtn.disabled = (inApp ? false : !state.fiftyAvailable) || state.answerLocked || state.gameOver;
     friendBtn.disabled = (inApp ? false : !state.friendAvailable) || state.answerLocked || state.gameOver;
     const _inApp = typeof isInApp === 'function' && isInApp();
-    fiftyBtn.textContent = state.fiftyAvailable ? "50-50" : (_inApp ? "50-50 (Watch Ad)" : "50-50 Used");
-    friendBtn.textContent = state.friendAvailable ? "Call a Friend" : (_inApp ? "Friend (Watch Ad)" : "Friend Used");
+    fiftyBtn.textContent = state.fiftyAvailable ? "50-50" : (state.lifelineUsedThisQ ? "50-50 Used" : (_inApp ? "50-50 (Watch Ad)" : "50-50 Used"));
+    friendBtn.textContent = state.friendAvailable ? "Call a Friend" : (state.lifelineUsedThisQ ? "Friend Used" : (_inApp ? "Friend (Watch Ad)" : "Friend Used"));
     fiftyBtn.classList.toggle("used-lifeline", !state.fiftyAvailable);
     friendBtn.classList.toggle("used-lifeline", !state.friendAvailable);
   }
@@ -92,7 +92,7 @@ async function renderMultiThemeSurvival() {
       fiftyBtn.onclick = useFiftyFifty;
       friendBtn.onclick = useCallFriend;
     }
-    state.selectedAnswer = null; state.answerLocked = false;
+    state.selectedAnswer = null; state.answerLocked = false; state.lifelineUsedThisQ = false;
     if (currentSubmitBtn) currentSubmitBtn.disabled = false;
     if (currentNextBtn) currentNextBtn.style.display = "none";
     setFeedback("");
@@ -141,6 +141,7 @@ async function renderMultiThemeSurvival() {
     const wrongButtons = buttons.filter(btn => btn.textContent !== q.answer && btn.style.display !== "none");
     shuffle(wrongButtons).slice(0, 2).forEach(btn => { btn.style.display = "none"; });
     state.fiftyAvailable = false;
+    state.lifelineUsedThisQ = true;
     if (state.recoveryStarted && state.recoveryStage === 1) {
       state.recoveryStarted = false; state.recoveryPoints = 0; state.recoveryStage = 0;
       state.pendingRecoveryStart = true;
@@ -156,6 +157,7 @@ async function renderMultiThemeSurvival() {
     }
     const q = getCurrentQuestion();
     state.friendAvailable = false;
+    state.lifelineUsedThisQ = true;
     setFeedback(`Call a Friend: The answer is ${q.answer}`, "correct");
     maybeStartRecovery(); updateTopbar();
   }
@@ -361,6 +363,7 @@ async function renderSurvivalPage() {
     recoveryStarted: false,
     pendingRecoveryStart: false,
     answerLocked: false,
+    lifelineUsedThisQ: false,
     topScore: null
   };
 
@@ -414,8 +417,8 @@ async function renderSurvivalPage() {
     friendBtn.disabled = (inApp ? false : !state.friendAvailable) || state.answerLocked || state.gameOver;
 
     const _inApp = typeof isInApp === 'function' && isInApp();
-    fiftyBtn.textContent = state.fiftyAvailable ? "50-50" : (_inApp ? "50-50 (Watch Ad)" : "50-50 Used");
-    friendBtn.textContent = state.friendAvailable ? "Call a Friend" : (_inApp ? "Friend (Watch Ad)" : "Friend Used");
+    fiftyBtn.textContent = state.fiftyAvailable ? "50-50" : (state.lifelineUsedThisQ ? "50-50 Used" : (_inApp ? "50-50 (Watch Ad)" : "50-50 Used"));
+    friendBtn.textContent = state.friendAvailable ? "Call a Friend" : (state.lifelineUsedThisQ ? "Friend Used" : (_inApp ? "Friend (Watch Ad)" : "Friend Used"));
 
     fiftyBtn.classList.toggle("used-lifeline", !state.fiftyAvailable);
     friendBtn.classList.toggle("used-lifeline", !state.friendAvailable);
@@ -669,6 +672,7 @@ async function renderSurvivalPage() {
     shuffle(wrongButtons).slice(0, 2).forEach(btn => { btn.style.display = "none"; });
 
     state.fiftyAvailable = false;
+    state.lifelineUsedThisQ = true;
 
     if (state.recoveryStarted && state.recoveryStage === 1) {
       state.recoveryStarted = false;
@@ -691,6 +695,7 @@ async function renderSurvivalPage() {
 
     const q = getCurrentQuestion();
     state.friendAvailable = false;
+    state.lifelineUsedThisQ = true;
     setFeedback(`Call a Friend: The answer is ${q.answer}`, "correct");
 
     maybeStartRecovery();
