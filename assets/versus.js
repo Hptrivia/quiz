@@ -230,7 +230,7 @@ function vsAdvanceTurn(player, points, stealInfo) {
   }
 
   const isMidpoint = state.currentPlayerIdx === 0
-    && state.currentRound === Math.floor(state.numQuestions / 2)
+    && state.currentRound === Math.ceil(state.numQuestions / 2)
     && !state.midAdShown;
 
   if (isMidpoint && typeof isInApp === 'function' && isInApp()) {
