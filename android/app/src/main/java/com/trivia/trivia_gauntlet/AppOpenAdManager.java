@@ -1,0 +1,86 @@
+package com.trivia.trivia_gauntlet;
+
+import android.app.Activity;
+import android.content.Context;
+import com.google.android.gms.ads.AdError;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.appopen.AppOpenAd;
+import java.util.Date;
+
+public class AppOpenAdManager {
+
+    private static final String TEST_AD_UNIT_ID  = "ca-app-pub-3940256099942544/9257395921";
+    private static final String PROD_AD_UNIT_ID  = "ca-app-pub-9506123851374920/6062430756";
+    private static final boolean TEST_MODE       = true; // flip to false for production
+
+    private static final long AD_EXPIRY_MS = 4 * 60 * 60 * 1000; // 4 hours
+
+    private AppOpenAd appOpenAd = null;
+    private boolean isLoadingAd = false;
+    private boolean isShowingAd = false;
+    private long loadTime = 0;
+
+    private final Context context;
+
+    public AppOpenAdManager(Context context) {
+        this.context = context;
+    }
+
+    private String getAdUnitId() {
+        return TEST_MODE ? TEST_AD_UNIT_ID : PROD_AD_UNIT_ID;
+    }
+
+    public void loadAd() {
+        if (isLoadingAd || isAdAvailable()) return;
+        isLoadingAd = true;
+        AdRequest request = new AdRequest.Builder().build();
+        AppOpenAd.load(context, getAdUnitId(), request, new AppOpenAd.AppOpenAdLoadCallback() {
+            @Override
+            public void onAdLoaded(AppOpenAd ad) {
+                appOpenAd = ad;
+                isLoadingAd = false;
+                loadTime = new Date().getTime();
+            }
+            @Override
+            public void onAdFailedToLoad(LoadAdError error) {
+                isLoadingAd = false;
+            }
+        });
+    }
+
+    private boolean wasLoadTimeLessThanNHoursAgo() {
+        return new Date().getTime() - loadTime < AD_EXPIRY_MS;
+    }
+
+    private boolean isAdAvailable() {
+        return appOpenAd != null && wasLoadTimeLessThanNHoursAgo();
+    }
+
+    public void showAdIfAvailable(Activity activity) {
+        if (isShowingAd || !isAdAvailable()) {
+            loadAd();
+            return;
+        }
+        appOpenAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+            @Override
+            public void onAdDismissedFullScreenContent() {
+                appOpenAd = null;
+                isShowingAd = false;
+                loadAd();
+            }
+            @Override
+            public void onAdFailedToShowFullScreenContent(AdError adError) {
+                appOpenAd = null;
+                isShowingAd = false;
+                loadAd();
+            }
+            @Override
+            public void onAdShowedFullScreenContent() {
+                isShowingAd = true;
+            }
+        });
+        appOpenAd.show(activity);
+    }
+}

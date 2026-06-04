@@ -3,9 +3,11 @@
 const ADMOB_TEST_MODE = true; // flip to false before production release
 
 const ADMOB_IDS = {
+  appOpen:      ADMOB_TEST_MODE ? 'ca-app-pub-3940256099942544/9257395921' : 'ca-app-pub-9506123851374920/6062430756',
   banner:       ADMOB_TEST_MODE ? 'ca-app-pub-3940256099942544/6300978111' : 'ca-app-pub-9506123851374920/2446089149',
   interstitial: ADMOB_TEST_MODE ? 'ca-app-pub-3940256099942544/1033173712' : 'ca-app-pub-9506123851374920/5206994172',
   rewarded:     ADMOB_TEST_MODE ? 'ca-app-pub-3940256099942544/5224354917' : 'ca-app-pub-9506123851374920/8819925805',
+  native:       ADMOB_TEST_MODE ? 'ca-app-pub-3940256099942544/2247696110' : 'ca-app-pub-9506123851374920/1114793190',
 };
 
 function isInApp() {
@@ -186,13 +188,150 @@ document.addEventListener('click', async (e) => {
   });
 });
 
+// ── Native Advanced Ads ──────────────────────────────────────────────────────
+
+let _NativeAd = null;
+let _nativeAdLoaded = false;
+
+async function _nativeAdInit() {
+  if (!isInApp()) return;
+  _NativeAd = window.Capacitor?.Plugins?.NativeAd;
+  if (!_NativeAd) return;
+  try {
+    await _NativeAd.prepareNativeAd({ adId: ADMOB_IDS.native });
+    _nativeAdLoaded = true;
+  } catch (e) {
+    _nativeAdLoaded = false;
+  }
+}
+
+async function _showNativeAdAt(el) {
+  if (!_NativeAd || !_nativeAdLoaded) return;
+  const rect = el.getBoundingClientRect();
+  try {
+    await _NativeAd.showNativeAd({ x: rect.left, y: rect.top, width: rect.width, height: rect.height });
+    el.dataset.nativeAdShown = '1';
+  } catch (e) {}
+}
+
+async function _hideNativeAd() {
+  if (!_NativeAd) return;
+  try { await _NativeAd.hideNativeAd(); } catch {}
+}
+
+function _injectNativeAdSlots() {
+  if (!isInApp()) return;
+  const path = window.location.pathname;
+
+  // Category pages — mid-point of theme grid
+  if (/\/category\.html/.test(path)) {
+    const grid = document.querySelector('.themes-grid, .theme-grid, [class*="theme"][class*="grid"], [class*="theme"][class*="list"]');
+    if (grid) _insertMidSlot(grid);
+  }
+
+  // Homepage — between category sections
+  if (path === '/' || /\/index\.html/.test(path)) {
+    const sections = document.querySelectorAll('.category-section, .homepage-category, [class*="category-row"], [class*="category-section"]');
+    if (sections.length >= 2) _insertSlotAfter(sections[Math.floor(sections.length / 2) - 1]);
+  }
+
+  // Theme pages — before related cards
+  if (/\/themes\//.test(path)) {
+    const related = document.querySelector('.related-themes, [class*="related"], [id*="related"]');
+    if (related) _insertSlotBefore(related);
+  }
+
+  // Mashup picker (mashup.html / mashup-landing.html) — middle of content
+  if (/\/mashup\.html|\/mashup-landing\.html/.test(path)) {
+    const container = document.querySelector('main, .container, .mashup-themes');
+    if (container) _insertMidSlot(container);
+  }
+}
+
+function _insertMidSlot(container) {
+  const children = Array.from(container.children);
+  if (!children.length) return;
+  const mid = Math.floor(children.length / 2);
+  const slot = _makeNativeSlot();
+  children[mid].before(slot);
+  _watchSlot(slot);
+}
+
+function _insertSlotAfter(el) {
+  const slot = _makeNativeSlot();
+  el.after(slot);
+  _watchSlot(slot);
+}
+
+function _insertSlotBefore(el) {
+  const slot = _makeNativeSlot();
+  el.before(slot);
+  _watchSlot(slot);
+}
+
+function _makeNativeSlot() {
+  const div = document.createElement('div');
+  div.className = 'native-ad-slot';
+  div.style.cssText = 'width:100%;height:80px;margin:12px 0;';
+  return div;
+}
+
+function _watchSlot(slot) {
+  const observer = new IntersectionObserver(async (entries) => {
+    const entry = entries[0];
+    if (entry.isIntersecting && !slot.dataset.nativeAdShown) {
+      await _showNativeAdAt(slot);
+    } else if (!entry.isIntersecting && slot.dataset.nativeAdShown) {
+      delete slot.dataset.nativeAdShown;
+      await _hideNativeAd();
+      // reload for next slot
+      _nativeAdLoaded = false;
+      _nativeAdInit();
+    }
+  }, { threshold: 0.5 });
+  observer.observe(slot);
+}
+
+// Watch for result screens appearing and inject native ad before "Try another theme"
+function _watchResultScreens() {
+  if (!isInApp()) return;
+  const observer = new MutationObserver(async (mutations) => {
+    for (const mutation of mutations) {
+      for (const node of mutation.addedNodes) {
+        if (node.nodeType !== 1) continue;
+        const target = node.querySelector?.('.result-theme-search') || (node.classList?.contains('result-theme-search') ? node : null);
+        if (target && !target.dataset.nativeSlotAdded) {
+          target.dataset.nativeSlotAdded = '1';
+          const slot = _makeNativeSlot();
+          target.before(slot);
+          if (!_nativeAdLoaded) await _nativeAdInit();
+          await _showNativeAdAt(slot);
+          adMobShowBanner(); // also show bottom banner on result screen
+        }
+      }
+    }
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+}
+
+// ── Init ─────────────────────────────────────────────────────────────────────
+
 document.addEventListener('DOMContentLoaded', () => {
   if (isInApp()) {
     adMobInit();
+    _nativeAdInit();
+    _injectNativeAdSlots();
+    _watchResultScreens();
   } else {
     let tries = 0;
     const retry = setInterval(() => {
-      if (isInApp()) { clearInterval(retry); adMobInit(); }
+      if (isInApp()) {
+        clearInterval(retry);
+        adMobInit();
+        _nativeAdInit();
+        _injectNativeAdSlots();
+        _watchResultScreens();
+      }
       else if (++tries > 25) clearInterval(retry);
     }, 200);
   }
