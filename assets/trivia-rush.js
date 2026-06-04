@@ -168,33 +168,11 @@ function trResume() {
 
 function trMidBreak() {
   trTimerStop();
-  const round = Math.floor(trState.totalAnswered / 30);
-  const accuracy = trState.totalAnswered > 0
-    ? Math.round((trState.totalCorrect / trState.totalAnswered) * 100) : 0;
-
-  const overlay = document.createElement('div');
-  overlay.id = '_trBreakOverlay';
-  overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.8);display:flex;align-items:center;justify-content:center;z-index:9999;padding:16px';
-  overlay.innerHTML = `
-    <div style="background:#1e1e2e;padding:24px 20px;border-radius:16px;text-align:center;max-width:300px;width:100%;color:#fff">
-      <div style="font-size:0.75rem;letter-spacing:2px;color:#6c63ff;margin-bottom:6px">ROUND ${round} COMPLETE</div>
-      <div style="display:flex;justify-content:center;gap:24px;margin:12px 0 20px">
-        <div><div style="font-size:1.4rem;font-weight:bold">${trState.score.toLocaleString()}</div><div style="font-size:0.7rem;color:#94a3b8">SCORE</div></div>
-        <div><div style="font-size:1.4rem;font-weight:bold">${trState.bestStreak}</div><div style="font-size:0.7rem;color:#94a3b8">STREAK</div></div>
-        <div><div style="font-size:1.4rem;font-weight:bold">${accuracy}%</div><div style="font-size:0.7rem;color:#94a3b8">ACCURACY</div></div>
-      </div>
-      <button id="_trBreakContinue" style="width:100%;padding:13px;border-radius:10px;background:#6c63ff;color:#fff;border:none;cursor:pointer;font-size:1em;font-weight:600">Continue</button>
-    </div>`;
-  document.body.appendChild(overlay);
-
-  document.getElementById('_trBreakContinue').addEventListener('click', () => {
-    overlay.remove();
-    if (typeof isInApp === 'function' && isInApp()) {
-      trAdOffer();
-    } else {
-      trResume();
-    }
-  });
+  if (typeof isInApp === 'function' && isInApp()) {
+    trAdOffer();
+  } else {
+    trResume();
+  }
 }
 
 function trAdOffer() {
@@ -203,7 +181,7 @@ function trAdOffer() {
   adOverlay.innerHTML = `
     <div style="background:#1e1e2e;padding:24px 20px;border-radius:14px;text-align:center;max-width:280px;width:100%;color:#fff">
       <p style="margin:0 0 16px;font-size:1em">Watch a short ad to continue?</p>
-      <button id="_trAdWatch" style="width:100%;padding:12px;border-radius:8px;background:#6c63ff;color:#fff;border:none;cursor:pointer;font-size:1em;margin-bottom:8px">Watch Ad</button>
+      <button id="_trAdWatch" style="width:100%;padding:12px;border-radius:8px;background:#6c63ff;color:#fff;border:none;cursor:pointer;font-size:1em;margin-bottom:8px">Yes</button>
       <button id="_trAdNo" style="width:100%;padding:10px;border-radius:8px;background:#2d2d3d;color:#94a3b8;border:none;cursor:pointer;font-size:0.9em">No</button>
     </div>`;
   document.body.appendChild(adOverlay);
