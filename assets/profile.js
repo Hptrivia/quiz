@@ -369,6 +369,10 @@ function isAndroidWeb() {
 
 if (window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative)) {
   document.body.classList.add('in-app');
+  const _p = window.location.pathname;
+  const _isGamePage = /\/(play|challenge|survival|episode|trivia-rush|versus|wordle|wordsearch|mashup-play|mashup-trivia-rush)\.html$/.test(_p)
+    || /\/(wordle|wordsearch)\//.test(_p);
+  if (!_isGamePage) document.body.classList.add('has-banner');
 }
 
 function _webCount(key)     { return parseInt(localStorage.getItem('tgWeb' + key) || '0'); }
