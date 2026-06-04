@@ -223,15 +223,22 @@ function _injectNativeAdSlots() {
   if (!isInApp()) return;
   const path = window.location.pathname;
 
-  // Category pages — wait for #categoryThemes to be populated
-  if (/\/category\.html/.test(path) || /\/categories\//.test(path)) {
+  // /category.html — wait for #categoryThemes to populate
+  if (/\/category\.html/.test(path)) {
     _waitForChildren('categoryThemes', (grid) => _insertMidSlot(grid));
   }
 
-  // Homepage — between featured sections (static)
+  // /categories/*.html — static .grid divs, insert between them
+  if (/\/categories\//.test(path)) {
+    const grids = document.querySelectorAll('.grid');
+    if (grids.length >= 2) _insertSlotAfter(grids[0]);
+    else if (grids.length === 1) _insertMidSlot(grids[0]);
+  }
+
+  // Homepage — before #categoryList
   if (path === '/' || /\/index\.html/.test(path)) {
-    const sections = document.querySelectorAll('.featured-section');
-    if (sections.length >= 2) _insertSlotAfter(sections[0]);
+    const list = document.getElementById('categoryList');
+    if (list) _insertSlotBefore(list);
   }
 
   // Theme pages — before related quizzes (static HTML)
@@ -240,7 +247,7 @@ function _injectNativeAdSlots() {
     if (related) _insertSlotBefore(related);
   }
 
-  // Mashup picker — wait for #themeGrid to be populated
+  // Mashup picker — wait for #themeGrid to populate
   if (/\/mashup\.html/.test(path) || /\/mashup-landing\.html/.test(path)) {
     _waitForChildren('themeGrid', (grid) => _insertMidSlot(grid));
   }
