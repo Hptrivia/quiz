@@ -145,7 +145,7 @@ function trPeekNext() {
 }
 
 function trNext() {
-  if (trState.totalAnswered > 0 && trState.totalAnswered % 1 === 0) {
+  if (trState.totalAnswered > 0 && trState.totalAnswered % 30 === 0) {
     trMidBreak();
     return;
   }
