@@ -223,29 +223,40 @@ function _injectNativeAdSlots() {
   if (!isInApp()) return;
   const path = window.location.pathname;
 
-  // Category pages — mid-point of theme grid (#categoryThemes)
+  // Category pages — wait for #categoryThemes to be populated
   if (/\/category\.html/.test(path) || /\/categories\//.test(path)) {
-    const grid = document.getElementById('categoryThemes');
-    if (grid) _insertMidSlot(grid);
+    _waitForChildren('categoryThemes', (grid) => _insertMidSlot(grid));
   }
 
-  // Homepage — between featured sections
+  // Homepage — between featured sections (static)
   if (path === '/' || /\/index\.html/.test(path)) {
     const sections = document.querySelectorAll('.featured-section');
     if (sections.length >= 2) _insertSlotAfter(sections[0]);
   }
 
-  // Theme pages — before related quizzes section
+  // Theme pages — before related quizzes (static HTML)
   if (/\/themes\//.test(path)) {
     const related = document.querySelector('.theme-related-quizzes');
     if (related) _insertSlotBefore(related);
   }
 
-  // Mashup picker — middle of theme grid (#themeGrid)
+  // Mashup picker — wait for #themeGrid to be populated
   if (/\/mashup\.html/.test(path) || /\/mashup-landing\.html/.test(path)) {
-    const grid = document.getElementById('themeGrid');
-    if (grid) _insertMidSlot(grid);
+    _waitForChildren('themeGrid', (grid) => _insertMidSlot(grid));
   }
+}
+
+function _waitForChildren(id, callback) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  if (el.children.length > 1) { callback(el); return; }
+  const obs = new MutationObserver(() => {
+    if (el.children.length > 1) {
+      obs.disconnect();
+      callback(el);
+    }
+  });
+  obs.observe(el, { childList: true });
 }
 
 function _insertMidSlot(container) {
