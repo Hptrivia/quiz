@@ -16,14 +16,12 @@ function isInApp() {
 
 function isGamePage() {
   const path = window.location.pathname;
-  return /\/(play|challenge|survival|episode|trivia-rush|versus|wordle|wordsearch)\.html$/.test(path)
-    || /\/(wordle|wordsearch)\//.test(path);
+  return /\/(play|challenge|survival|episode|trivia-rush|versus|wordle|wordsearch)\.html$/.test(path);
 }
 
 function getRoundStartParams() {
   const path = window.location.pathname;
-  return /\/(play|challenge|survival|episode|trivia-rush|mashup-trivia-rush|versus|wordle|wordsearch|mashup-play|daily)\.html$/.test(path)
-    || /\/(wordle|wordsearch)\//.test(path);
+  return /\/(play|challenge|survival|episode|trivia-rush|mashup-trivia-rush|versus|wordle|wordsearch|mashup-play|daily)\.html$/.test(path);
 }
 
 let _AdMob = null;
