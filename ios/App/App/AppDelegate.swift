@@ -1,6 +1,7 @@
 import UIKit
 import Capacitor
 import AdSupport
+import AppTrackingTransparency
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -10,11 +11,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // TEMP: show AdMob test device ID — remove after noting the ID
         DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-            let idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
-            let alert = UIAlertController(title: "AdMob Test Device ID", message: idfa, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default))
-            let vc = UIApplication.shared.windows.filter({ $0.isKeyWindow }).first?.rootViewController
-            vc?.present(alert, animated: true)
+            ATTrackingManager.requestTrackingAuthorization { _ in
+                DispatchQueue.main.async {
+                    let idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
+                    let alert = UIAlertController(title: "AdMob Test Device ID", message: idfa, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default))
+                    let vc = UIApplication.shared.windows.filter({ $0.isKeyWindow }).first?.rootViewController
+                    vc?.present(alert, animated: true)
+                }
+            }
         }
         return true
     }
