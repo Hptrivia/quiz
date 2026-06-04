@@ -532,7 +532,7 @@ async function renderSurvivalPage() {
     }, 800);
 
     if (notifyHtml) wireNotifyCard(theme.title, "survival");
-    if (typeof maybeShowPwaPopup === "function" && maybeShowPwaPopup()) return;
+  
   }
 
   function maybeStartRecovery() {

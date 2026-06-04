@@ -39,7 +39,6 @@ function dcHash(str) {
   for (let i = 0; i < str.length; i++) {
     h ^= str.charCodeAt(i);
     h = Math.imul(h, 0x01000193) >>> 0;
-  }
   return h;
 }
 
@@ -48,7 +47,6 @@ function dcShuffle(arr, rng) {
   for (let i = a.length - 1; i > 0; i--) {
     const j = Math.floor(rng() * (i + 1));
     [a[i], a[j]] = [a[j], a[i]];
-  }
   return a;
 }
 
@@ -87,7 +85,6 @@ async function getDailyQuestions() {
   if (expertThemeIdx !== -1) {
     [todayThemes[expertSlotIdx], todayThemes[expertThemeIdx]] =
     [todayThemes[expertThemeIdx], todayThemes[expertSlotIdx]];
-  }
 
   const questions = [];
 
@@ -146,7 +143,6 @@ async function getDailyQuestions() {
       themeName:  theme.name,
       themeSlug:  theme.slug,
     });
-  }
 
   const finalRng = dcRng(dcHash(`${dateKey}_final_c${cycle}`));
   const finalQs  = dcShuffle(questions, finalRng);
@@ -246,7 +242,6 @@ function initDailyHomepageCard() {
 
   if (ctaEl) {
     ctaEl.textContent = status.completedToday ? "Come back tomorrow" : "Play Today's Challenge";
-  }
 
   if (subEl) {
     const missedDay = streak.lastCompleted &&
@@ -257,7 +252,6 @@ function initDailyHomepageCard() {
     } else if (status.currentStreak > 0) {
       subEl.textContent = `🔥 ${status.currentStreak} day streak`;
     }
-  }
 }
 
 /* ── Daily page renderer ── */
@@ -271,7 +265,6 @@ async function renderDailyPage() {
     if (loadingEl) loadingEl.style.display = "none";
     showDailyResult(state);
     return;
-  }
 
   let questions;
   try {
@@ -279,12 +272,10 @@ async function renderDailyPage() {
   } catch {
     if (loadingEl) loadingEl.textContent = "Failed to load today's challenge. Please try again.";
     return;
-  }
 
   if (!questions.length) {
     if (loadingEl) loadingEl.textContent = "No questions available. Please try again later.";
     return;
-  }
 
   if (loadingEl) loadingEl.style.display = "none";
   if (quizEl)    quizEl.style.display    = "block";
@@ -296,7 +287,6 @@ async function renderDailyPage() {
     dateLabel.textContent = now.toLocaleDateString("en-US", {
       weekday: "long", month: "long", day: "numeric", timeZone: "UTC"
     });
-  }
 
   let currentIdx    = 0;
   let score         = 0;
@@ -333,7 +323,6 @@ async function renderDailyPage() {
     feedbackEl.textContent = "";
     feedbackEl.className   = "feedback";
     nextBtn.style.display  = "none";
-  }
 
   function handleAnswer(btn, selected, q) {
     if (answered) return;
@@ -357,7 +346,6 @@ async function renderDailyPage() {
 
     nextBtn.style.display  = "block";
     nextBtn.textContent    = currentIdx < questions.length - 1 ? "Next →" : "See Results";
-  }
 
   nextBtn.addEventListener("click", () => {
     currentIdx++;
@@ -380,9 +368,7 @@ function showDailyResult(state) {
   if (!resultEl)  return;
   resultEl.style.display = "block";
 
-  if (typeof maybeShowPwaPopup === "function") {
-    setTimeout(() => maybeShowPwaPopup(), 2000);
-  }
+
 
   const scoreEl    = document.getElementById("dailyScoreText");
   if (scoreEl) scoreEl.textContent = `${state.score} / ${state.total}`;
@@ -393,7 +379,6 @@ function showDailyResult(state) {
       <div class="streak-current">🔥 ${state.streak} day streak</div>
       <div class="streak-best">Best: ${state.bestStreak} days</div>
     `;
-  }
 
   const historyEl = document.getElementById("dailyHistoryBox");
   if (historyEl) {
@@ -413,7 +398,6 @@ function showDailyResult(state) {
           <div class="daily-history-stat"><span class="dhs-label">vs your history</span><span class="dhs-value">${label}</span></div>
         </div>`;
     }
-  }
 
   startCountdown();
 
@@ -437,7 +421,6 @@ function showDailyResult(state) {
         </div>`;
 
     }
-  }
 
   const shareBtn = document.getElementById("dailyShareBtn");
   if (shareBtn) {
@@ -449,7 +432,6 @@ function showDailyResult(state) {
         setTimeout(() => { shareBtn.textContent = "Share Results"; }, 2000);
       });
     });
-  }
 
   const revealBtn = document.getElementById("revealMissedBtn");
   const missedEl  = document.getElementById("dailyMissed");
@@ -471,7 +453,6 @@ function showDailyResult(state) {
         </div>
       `).join("");
     });
-  }
 }
 
 function startCountdown() {
@@ -480,7 +461,6 @@ function startCountdown() {
   function tick() {
     const { hours, minutes, seconds } = getTimeUntilNextChallenge();
     el.textContent = `Next challenge in ${String(hours).padStart(2,'0')}:${String(minutes).padStart(2,'0')}:${String(seconds).padStart(2,'0')}`;
-  }
   tick();
   setInterval(tick, 1000);
 }

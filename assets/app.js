@@ -1104,7 +1104,7 @@ if (resultSearchInput && resultSearchResults) {
   }, 800);
 
   if (notifyHtml) wireNotifyCard(theme.title, "marathon");
-  if (typeof maybeShowPwaPopup === "function" && maybeShowPwaPopup()) return;
+
 }
 
   if (!showContinuePrompt) showQuestion(0);

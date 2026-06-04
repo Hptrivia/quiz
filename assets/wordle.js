@@ -484,7 +484,6 @@ async function renderWordleMashupMode(themesParam) {
   }
 
   loadWord(0);
-  if (safePage >= 4 && typeof maybeShowPwaPopup === "function") maybeShowPwaPopup();
 }
 
 // ─── Single-theme Wordle ──────────────────────────────────────────────────────
@@ -1121,13 +1120,11 @@ async function renderWordlePage() {
         prevBtn.closest(".cta-row").style.display = "";
         loadWord(0);
       });
-      if (safePage >= 4 && typeof maybeShowPwaPopup === "function") maybeShowPwaPopup();
       return;
     }
   }
 
   loadWord(0);
-  if (safePage >= 4 && typeof maybeShowPwaPopup === "function") maybeShowPwaPopup();
 }
 
 function injectWordleHead(theme, page) {

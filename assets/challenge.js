@@ -719,7 +719,7 @@ async function renderChallengePage() {
     }
 
     if (notifyHtml) wireNotifyCard(theme.title, "challenge");
-    if (typeof maybeShowPwaPopup === "function" && maybeShowPwaPopup()) return;
+  
   }
 
   if (!showContinuePrompt) showQuestion(0);

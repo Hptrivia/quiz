@@ -416,7 +416,6 @@ async function renderWordSearchMashupMode(themesParam) {
   wsUpdateStats();
   wsWireEvents();
 
-  if (safePage >= 2 && typeof maybeShowPwaPopup === "function") maybeShowPwaPopup();
 
 }
 
@@ -513,7 +512,6 @@ async function renderWordSearchPage() {
   wsWireEvents();
 
   renderWsPageContent(theme, themes, safePage, themeWords);
-  if (safePage >= 2 && typeof maybeShowPwaPopup === "function") maybeShowPwaPopup();
 }
 
 function injectWsHead(theme, page) {
