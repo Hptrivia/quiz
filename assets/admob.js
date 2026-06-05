@@ -16,21 +16,42 @@ function isInApp() {
 // giving a near-real-time "new install" alert. Fires once per device (guarded
 // by localStorage), only inside the native app.
 const _INSTALL_PING = {
-  token: '7575210628:AAFFcH86Qzyr01drn4X3I-OCAZ4eNPN7Nj8',
-  chatId: '5039960902',
+  // Telegram token lives server-side as a Supabase secret — never in this file.
+  endpoint: 'https://avasbapxzgmpcosixgio.supabase.co/functions/v1/clever-task',
+  anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF2YXNiYXB4emdtcGNvc2l4Z2lvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk2NjM4MzUsImV4cCI6MjA5NTIzOTgzNX0.DLNnasmaQ1hdKXb2xqXrTBnBjISo0RxOiwy7TrlN9bg',
+  appVersion: '1.0.0', // bump this whenever you ship a new store release
 };
+// Country is resolved by IP at ping time (no plugin / permission needed).
+async function _lookupCountry() {
+  try {
+    const ctrl = new AbortController();
+    const t = setTimeout(() => ctrl.abort(), 3000);
+    const res = await fetch('https://ipwho.is/?fields=country,country_code', { signal: ctrl.signal });
+    clearTimeout(t);
+    const d = await res.json();
+    if (d && d.country) {
+      const flag = (d.country_code || '').toUpperCase().replace(/./g, c =>
+        String.fromCodePoint(127397 + c.charCodeAt(0)));
+      return `${flag} ${d.country}`.trim();
+    }
+  } catch {}
+  return 'Unknown';
+}
 async function _pingNewInstall() {
   if (!isInApp()) return;
   if (localStorage.getItem('_installPinged')) return;
   localStorage.setItem('_installPinged', '1'); // set first so a failure can't double-fire on retry
   const platform = (window.Capacitor.getPlatform?.() || 'unknown');
-  const label = platform === 'ios' ? 'iOS' : platform === 'android' ? 'Android' : platform;
-  const text = `📲 New install — ${label}`;
+  const country = await _lookupCountry();
   try {
-    await fetch(`https://api.telegram.org/bot${_INSTALL_PING.token}/sendMessage`, {
+    await fetch(_INSTALL_PING.endpoint, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ chat_id: _INSTALL_PING.chatId, text }),
+      headers: {
+        'Content-Type': 'application/json',
+        apikey: _INSTALL_PING.anonKey,
+        Authorization: `Bearer ${_INSTALL_PING.anonKey}`,
+      },
+      body: JSON.stringify({ platform, country, version: _INSTALL_PING.appVersion }),
     });
   } catch (e) {
     // Network hiccup on first open — clear the flag so the next launch retries.
