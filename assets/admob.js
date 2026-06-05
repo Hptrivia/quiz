@@ -5,8 +5,7 @@ const ADMOB_TEST_MODE = window.Capacitor?.getPlatform?.() === 'ios';
 const ADMOB_IDS = {
   banner:       ADMOB_TEST_MODE ? 'ca-app-pub-3940256099942544/6300978111' : 'ca-app-pub-9506123851374920/2446089149',
   interstitial: ADMOB_TEST_MODE ? 'ca-app-pub-3940256099942544/1033173712' : 'ca-app-pub-9506123851374920/5206994172',
-  // rewarded uses test ID until AdMob account is approved — real rewarded won't fill on unapproved accounts
-  rewarded:     'ca-app-pub-3940256099942544/5224354917',
+  rewarded:     ADMOB_TEST_MODE ? 'ca-app-pub-3940256099942544/5224354917' : 'ca-app-pub-9506123851374920/8819925805',
 };
 
 function isInApp() {
