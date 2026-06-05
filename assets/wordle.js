@@ -456,8 +456,14 @@ async function renderWordleMashupMode(themesParam) {
   });
 
   nextBtn.addEventListener("click", () => {
-    if (currentWordInPage < pageWords.length - 1) loadWord(currentWordInPage + 1);
-    else if (safePage < totalPages) window.location.href = `wordle.html?themes=${themesParam}&page=${safePage + 1}`;
+    const wordNum = pageStart + currentWordInPage + 1;
+    const hasNext = currentWordInPage < pageWords.length - 1 || safePage < totalPages;
+    const advance = () => {
+      if (currentWordInPage < pageWords.length - 1) loadWord(currentWordInPage + 1);
+      else if (safePage < totalPages) window.location.href = `wordle.html?themes=${themesParam}&page=${safePage + 1}`;
+    };
+    if (isInApp() && wordNum % 2 === 0 && hasNext) { adMobShowBanner(); _offerRewardedLifeline('Next Word', advance); }
+    else advance();
   });
 
   if (parseInt(getParam("page") || "1", 10) === 1 && typeof getSession === "function") {
@@ -1068,11 +1074,17 @@ async function renderWordlePage() {
   });
 
   nextBtn.addEventListener("click", () => {
-    if (currentWordInPage < pageWords.length - 1) {
-      loadWord(currentWordInPage + 1);
-    } else if (safePage < totalPages) {
-      window.location.href = `wordle.html?theme=${theme.slug}&page=${safePage + 1}`;
-    }
+    const wordNum = pageStart + currentWordInPage + 1;
+    const hasNext = currentWordInPage < pageWords.length - 1 || safePage < totalPages;
+    const advance = () => {
+      if (currentWordInPage < pageWords.length - 1) {
+        loadWord(currentWordInPage + 1);
+      } else if (safePage < totalPages) {
+        window.location.href = `wordle.html?theme=${theme.slug}&page=${safePage + 1}`;
+      }
+    };
+    if (isInApp() && wordNum % 2 === 0 && hasNext) { adMobShowBanner(); _offerRewardedLifeline('Next Word', advance); }
+    else advance();
   });
 
   renderWordlePageContent(theme, themes, safePage, words);
