@@ -19,12 +19,8 @@
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body data-page="daily-wordle">
-  <main class="container narrow">
-    <div class="theme-top-links">
-      <a href="index.html" class="back-link" onclick="if(history.length>1){history.back();return false;}">← Back</a>
-      <span id="navAvatarSlot"></span>
-      <button id="dwInfoBtn" class="wordle-info-btn" aria-label="How to play">?</button>
-    </div>
+  <main class="container narrow" style="padding-top:8px;">
+    <div class="theme-top-links"><a href="index.html" class="back-link" onclick="if(history.length>1){history.back();return false;}">← Back</a><span id="navAvatarSlot"></span></div>
 
     <!-- Info modal -->
     <div id="dwInfoModal" class="dw-info-modal" style="display:none;">
@@ -37,24 +33,30 @@
           <li><span class="wordle-tile correct" style="display:inline-flex;width:22px;height:22px;font-size:0.7rem;align-items:center;justify-content:center;border-radius:3px;">A</span> Right letter, right spot.</li>
           <li><span class="wordle-tile present" style="display:inline-flex;width:22px;height:22px;font-size:0.7rem;align-items:center;justify-content:center;border-radius:3px;">A</span> Right letter, wrong spot.</li>
           <li><span class="wordle-tile absent" style="display:inline-flex;width:22px;height:22px;font-size:0.7rem;align-items:center;justify-content:center;border-radius:3px;">A</span> Letter not in the word.</li>
+          <li>💡 <strong>Reveal</strong> — shows one correct letter in its position. You get 2 per game.</li>
         </ul>
         <p style="margin-top:10px;color:var(--muted-text);font-size:0.85rem;">A new word every day at midnight UTC.</p>
       </div>
     </div>
 
     <section class="panel">
+
       <div id="dwLoading">
         <p style="color:var(--muted-text)">Loading today's word...</p>
       </div>
 
       <div id="dwGame" style="display:none;">
-        <div class="daily-header">
-          <h2>Daily Wordle</h2>
-          <p id="dwDateLabel" class="daily-date"></p>
+        <h2 style="margin:0 0 4px;">Daily Wordle</h2>
+        <div id="dwDateRow" style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;margin-bottom:10px;">
+          <span id="dwDateLabel" style="font-size:0.8rem;color:var(--muted-text);"></span>
+          <button id="dwInfoBtn" class="wordle-info-btn" aria-label="How to play">?</button>
+          <span id="dwRevealSlot" style="display:flex;justify-content:flex-end;"></span>
         </div>
 
-        <p id="dwFeedback" class="feedback"></p>
+        <div id="dwToast" style="display:none;position:fixed;top:18%;left:50%;transform:translateX(-50%);background:#1e293b;color:#fff;padding:8px 18px;border-radius:8px;font-size:0.9rem;font-weight:600;z-index:9999;pointer-events:none;"></div>
+
         <div id="dwBoard" class="wordle-board"></div>
+        <p id="dwFeedback" class="feedback"></p>
         <div id="dwKeyboard" class="wordle-keyboard"></div>
       </div>
 
@@ -70,6 +72,7 @@
         <div id="dwRelated" style="margin-top:20px;"></div>
         <a href="contact.html" class="secondary-btn" style="display:block;margin-top:14px;text-align:center;text-decoration:none;font-size:0.85rem;padding:8px 18px;">Leave Feedback</a>
       </div>
+
     </section>
   </main>
 

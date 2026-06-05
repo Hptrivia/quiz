@@ -1,4 +1,4 @@
-/* ── Daily Challenge ─────────────────────────────────────────────── */
+/* ── Daily Trivia ────────────────────────────────────────────────── */
 
 const DAILY_THEMES = [
   { name: "Spelling",        slug: "spelling",    file: "data/spelling.txt"    },
@@ -39,6 +39,7 @@ function dcHash(str) {
   for (let i = 0; i < str.length; i++) {
     h ^= str.charCodeAt(i);
     h = Math.imul(h, 0x01000193) >>> 0;
+  }
   return h;
 }
 
@@ -47,6 +48,7 @@ function dcShuffle(arr, rng) {
   for (let i = a.length - 1; i > 0; i--) {
     const j = Math.floor(rng() * (i + 1));
     [a[i], a[j]] = [a[j], a[i]];
+  }
   return a;
 }
 
@@ -85,6 +87,7 @@ async function getDailyQuestions() {
   if (expertThemeIdx !== -1) {
     [todayThemes[expertSlotIdx], todayThemes[expertThemeIdx]] =
     [todayThemes[expertThemeIdx], todayThemes[expertSlotIdx]];
+  }
 
   const questions = [];
 
@@ -143,6 +146,7 @@ async function getDailyQuestions() {
       themeName:  theme.name,
       themeSlug:  theme.slug,
     });
+  }
 
   const finalRng = dcRng(dcHash(`${dateKey}_final_c${cycle}`));
   const finalQs  = dcShuffle(questions, finalRng);
@@ -242,6 +246,7 @@ function initDailyHomepageCard() {
 
   if (ctaEl) {
     ctaEl.textContent = status.completedToday ? "Come back tomorrow" : "Play Today's Trivia";
+  }
 
   if (subEl) {
     const missedDay = streak.lastCompleted &&
@@ -252,6 +257,7 @@ function initDailyHomepageCard() {
     } else if (status.currentStreak > 0) {
       subEl.textContent = `🔥 ${status.currentStreak} day streak`;
     }
+  }
 }
 
 /* ── Daily page renderer ── */
@@ -265,6 +271,7 @@ async function renderDailyPage() {
     if (loadingEl) loadingEl.style.display = "none";
     showDailyResult(state);
     return;
+  }
 
   let questions;
   try {
@@ -272,10 +279,12 @@ async function renderDailyPage() {
   } catch {
     if (loadingEl) loadingEl.textContent = "Failed to load today's challenge. Please try again.";
     return;
+  }
 
   if (!questions.length) {
     if (loadingEl) loadingEl.textContent = "No questions available. Please try again later.";
     return;
+  }
 
   if (loadingEl) loadingEl.style.display = "none";
   if (quizEl)    quizEl.style.display    = "block";
@@ -287,6 +296,7 @@ async function renderDailyPage() {
     dateLabel.textContent = now.toLocaleDateString("en-US", {
       weekday: "long", month: "long", day: "numeric", timeZone: "UTC"
     });
+  }
 
   let currentIdx    = 0;
   let score         = 0;
@@ -323,6 +333,7 @@ async function renderDailyPage() {
     feedbackEl.textContent = "";
     feedbackEl.className   = "feedback";
     nextBtn.style.display  = "none";
+  }
 
   function handleAnswer(btn, selected, q) {
     if (answered) return;
@@ -346,6 +357,7 @@ async function renderDailyPage() {
 
     nextBtn.style.display  = "block";
     nextBtn.textContent    = currentIdx < questions.length - 1 ? "Next →" : "See Results";
+  }
 
   nextBtn.addEventListener("click", () => {
     currentIdx++;
@@ -368,8 +380,6 @@ function showDailyResult(state) {
   if (!resultEl)  return;
   resultEl.style.display = "block";
 
-
-
   const scoreEl    = document.getElementById("dailyScoreText");
   if (scoreEl) scoreEl.textContent = `${state.score} / ${state.total}`;
 
@@ -379,6 +389,7 @@ function showDailyResult(state) {
       <div class="streak-current">🔥 ${state.streak} day streak</div>
       <div class="streak-best">Best: ${state.bestStreak} days</div>
     `;
+  }
 
   const historyEl = document.getElementById("dailyHistoryBox");
   if (historyEl) {
@@ -398,6 +409,7 @@ function showDailyResult(state) {
           <div class="daily-history-stat"><span class="dhs-label">vs your history</span><span class="dhs-value">${label}</span></div>
         </div>`;
     }
+  }
 
   startCountdown();
 
@@ -420,7 +432,21 @@ function showDailyResult(state) {
           </div>
         </div>`;
 
+      if (typeof isPremiumUser === 'function' && !isPremiumUser()) {
+        const adDiv = document.createElement('div');
+        adDiv.id = 'mid-banner-ad';
+        adDiv.style.cssText = 'text-align:center;margin:12px 0;';
+        const s1 = document.createElement('script');
+        s1.textContent = 'atOptions={"key":"6cd708c27c2130cedbed5e1a3bc703d0","format":"iframe","height":250,"width":300,"params":{}};';
+        const s2 = document.createElement('script');
+        s2.src = 'https://www.highperformanceformat.com/6cd708c27c2130cedbed5e1a3bc703d0/invoke.js';
+        adDiv.appendChild(s1);
+        adDiv.appendChild(s2);
+        const playThemes = relatedEl.querySelector('.theme-related-quizzes');
+        if (playThemes) relatedEl.insertBefore(adDiv, playThemes);
+      }
     }
+  }
 
   const shareBtn = document.getElementById("dailyShareBtn");
   if (shareBtn) {
@@ -432,6 +458,7 @@ function showDailyResult(state) {
         setTimeout(() => { shareBtn.textContent = "Share Results"; }, 2000);
       });
     });
+  }
 
   const revealBtn = document.getElementById("revealMissedBtn");
   const missedEl  = document.getElementById("dailyMissed");
@@ -453,6 +480,7 @@ function showDailyResult(state) {
         </div>
       `).join("");
     });
+  }
 }
 
 function startCountdown() {
@@ -461,6 +489,7 @@ function startCountdown() {
   function tick() {
     const { hours, minutes, seconds } = getTimeUntilNextChallenge();
     el.textContent = `Next challenge in ${String(hours).padStart(2,'0')}:${String(minutes).padStart(2,'0')}:${String(seconds).padStart(2,'0')}`;
+  }
   tick();
   setInterval(tick, 1000);
 }

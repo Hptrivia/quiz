@@ -16,7 +16,7 @@ function isInApp() {
 
 function isGamePage() {
   const path = window.location.pathname;
-  return /\/(play|challenge|survival|episode|trivia-rush|versus|wordle|wordsearch)\.html$/.test(path);
+  return /\/(play|challenge|survival|episode|trivia-rush|versus|wordle|wordsearch|daily|daily-wordle)\.html$/.test(path);
 }
 
 function getRoundStartParams() {

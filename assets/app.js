@@ -642,6 +642,7 @@ async function renderMultiThemeMarathon() {
         ${hasNextPage && !(typeof isWebQLimit === 'function' && isWebQLimit()) ? `<a class="primary-btn" href="play.html?themes=${themesParam}&page=${safePage + 1}" data-rewarded-href="play.html?themes=${themesParam}&page=${safePage + 1}">Next Round</a>` : ""}
         ${hasNextPage && (typeof isWebQLimit === 'function' && isWebQLimit()) ? (typeof webWallHTML === 'function' ? webWallHTML("You've used your 30 free questions!") : "") : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
+        ${!isPremiumUser() && !(typeof isInApp === 'function' && isInApp()) ? `<a class="secondary-btn" href="remove-ads.html">Buy me a coffee</a>` : ""}
       </div>
       ${replayHtml}
       <div class="result-theme-search">
@@ -1025,6 +1026,7 @@ const relatedThemesHtml = `
       ${hasNextPage && !(typeof isWebQLimit === 'function' && isWebQLimit()) ? `<a class="primary-btn" href="play.html?theme=${theme.slug}&page=${safePage + 1}" data-rewarded-href="play.html?theme=${theme.slug}&page=${safePage + 1}">Next Round</a>` : ""}
       ${hasNextPage && (typeof isWebQLimit === 'function' && isWebQLimit()) ? (typeof webWallHTML === 'function' ? webWallHTML("You've used your 30 free questions!") : "") : ""}
       <a class="secondary-btn" href="contact.html">Report a Question</a>
+      ${!isPremiumUser() && !(typeof isInApp === 'function' && isInApp()) ? `<a class="secondary-btn" href="remove-ads.html">Buy me a coffee</a>` : ""}
     </div>
     ${replayHtml}
     ${notifyHtml}
@@ -1165,4 +1167,16 @@ document.addEventListener("DOMContentLoaded", () => {
   if (page === "category") renderCategoryPage();
   if (page === "quiz") renderQuizPage();
   if (page === "play") renderPlayPage();
+
+  // Inject Buy Me a Coffee footer link on web only (not in app)
+  if (typeof isInApp === 'function' && !isInApp()) {
+    document.querySelectorAll('.footer-links').forEach(el => {
+      if (el.querySelector('a[href*="remove-ads"]')) return; // already there
+      const a = document.createElement('a');
+      a.href = 'remove-ads.html';
+      a.className = 'footer-highlight';
+      a.textContent = 'Buy me a coffee';
+      el.appendChild(a);
+    });
+  }
 });

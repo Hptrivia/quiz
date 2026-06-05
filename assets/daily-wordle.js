@@ -160,7 +160,6 @@ async function renderDailyWordlePage() {
   if (loadingEl) loadingEl.style.display = 'none';
   if (gameEl)    gameEl.style.display    = 'block';
 
-  // Show date
   const dateLabel = document.getElementById('dwDateLabel');
   if (dateLabel) {
     dateLabel.textContent = new Date().toLocaleDateString('en-US', {
@@ -168,24 +167,40 @@ async function renderDailyWordlePage() {
     });
   }
 
-  // Restore mid-game progress
-  let guesses    = [];
-  let gameOver   = false;
+  // Game state
+  let guesses           = [];
+  let gameOver          = false;
+  let revealsUsed       = 0;
+  let revealedPositions = {};  // {colIdx: letter}
+  let revealedAtRow     = {};  // {colIdx: rowIndexWhenRevealed}
+  let revealUsedThisRow = false;
+  let currentGuess      = Array(DW_WORD_LENGTH).fill(null); // null = empty slot
+  let keyStates         = {};
+  let validGuesses      = null;
+  let _animatingRow     = -1;
 
+  function initCurrentGuess() {
+    const arr = Array(DW_WORD_LENGTH).fill(null);
+    for (const [i, letter] of Object.entries(revealedPositions)) {
+      if (revealedAtRow[parseInt(i)] === guesses.length) arr[parseInt(i)] = letter;
+    }
+    return arr;
+  }
+
+  // Restore mid-game progress
   if (existing && existing.guesses) {
-    guesses = existing.guesses;
-    if (guesses.some(g => g.word === target || g.solved) || guesses.length >= DW_MAX_GUESSES) {
+    guesses           = existing.guesses;
+    revealsUsed       = existing.revealsUsed       || 0;
+    revealedPositions = existing.revealedPositions || {};
+    revealedAtRow     = existing.revealedAtRow     || {};
+    revealUsedThisRow = Object.values(revealedAtRow).some(r => r === guesses.length);
+    for (const letter of Object.values(revealedPositions)) keyStates[letter] = 'correct';
+    if (guesses.some(g => g.word === target) || guesses.length >= DW_MAX_GUESSES) {
       gameOver = true;
     }
   }
 
-  const boardEl    = document.getElementById('dwBoard');
-  const keyboardEl = document.getElementById('dwKeyboard');
-  const feedbackEl = document.getElementById('dwFeedback');
-  let   currentGuess = [];
-  let   keyStates    = {};
-  let   validGuesses = null;
-  let   _animatingRow = -1;
+  currentGuess = initCurrentGuess();
 
   // Rebuild key states from restored guesses
   for (const g of guesses) {
@@ -195,6 +210,10 @@ async function renderDailyWordlePage() {
       if (!keyStates[letter] || rank[s] > rank[keyStates[letter]]) keyStates[letter] = s;
     });
   }
+
+  const boardEl    = document.getElementById('dwBoard');
+  const keyboardEl = document.getElementById('dwKeyboard');
+  const feedbackEl = document.getElementById('dwFeedback');
 
   function renderBoard() {
     if (!boardEl) return;
@@ -211,7 +230,14 @@ async function renderDailyWordlePage() {
           tile.textContent = g.word[col] || '';
           if (row !== _animatingRow && g.states[col]) tile.classList.add(g.states[col]);
         } else if (row === guesses.length) {
-          if (currentGuess[col]) { tile.textContent = currentGuess[col]; tile.classList.add('filled'); }
+          const isRevealedHere = revealedPositions[col] !== undefined && revealedAtRow[col] === guesses.length;
+          if (isRevealedHere) {
+            tile.textContent = revealedPositions[col];
+            tile.classList.add('correct', 'wordle-tile-locked');
+          } else if (currentGuess[col] !== null) {
+            tile.textContent = currentGuess[col];
+            tile.classList.add('filled');
+          }
         }
         rowEl.appendChild(tile);
       }
@@ -296,30 +322,91 @@ async function renderDailyWordlePage() {
     });
   }
 
+  // ── Toast for invalid guesses ─────────────────────────────────────────────
+  let _toastTimer = null;
+  function showDWToast(text) {
+    const el = document.getElementById('dwToast');
+    if (!el) return;
+    el.textContent = text;
+    el.style.display = 'block';
+    if (_toastTimer) clearTimeout(_toastTimer);
+    _toastTimer = setTimeout(() => { el.style.display = 'none'; }, 1400);
+  }
+
+  // ── Reveal button ─────────────────────────────────────────────────────────
+  function updateRevealBtn() {
+    let btn = document.getElementById('dwRevealBtn');
+    if (!btn) {
+      btn = document.createElement('button');
+      btn.id        = 'dwRevealBtn';
+      btn.type      = 'button';
+      btn.className = 'secondary-btn';
+      btn.style.cssText = 'font-size:0.78rem;padding:3px 10px;white-space:nowrap;';
+      document.getElementById('dwRevealSlot').appendChild(btn);
+      btn.addEventListener('click', useReveal);
+    }
+    const left = 2 - revealsUsed;
+    if (left <= 0 || gameOver) {
+      btn.disabled = true; btn.style.opacity = '0.4';
+      btn.textContent = '💡 No reveals left';
+    } else if (revealUsedThisRow) {
+      btn.disabled = true; btn.style.opacity = '0.4';
+      btn.textContent = '💡 Reveal (guess first)';
+    } else {
+      btn.disabled = false; btn.style.opacity = '';
+      btn.textContent = `💡 Reveal · ${left} left`;
+    }
+  }
+
+  function useReveal() {
+    if (revealsUsed >= 2 || revealUsedThisRow || gameOver) return;
+    const alreadyKnown = new Set();
+    for (const g of guesses) g.states.forEach((s, i) => { if (s === 'correct') alreadyKnown.add(i); });
+    for (const i of Object.keys(revealedPositions)) alreadyKnown.add(parseInt(i));
+    const available = [];
+    for (let i = 0; i < DW_WORD_LENGTH; i++) {
+      if (!alreadyKnown.has(i)) available.push(i);
+    }
+    if (!available.length) return;
+    const idx = available[Math.floor(Math.random() * available.length)];
+    revealedPositions[idx] = target[idx];
+    revealedAtRow[idx]     = guesses.length;
+    revealsUsed++;
+    revealUsedThisRow      = true;
+    keyStates[target[idx]] = 'correct';
+    currentGuess[idx]      = target[idx];
+    updateRevealBtn();
+    renderBoard();
+    renderKeyboard();
+    saveDWState({ completed: false, guesses, revealsUsed, revealedPositions, revealedAtRow });
+  }
+
   async function handleKey(key) {
     if (gameOver) return;
     if (key === '⌫') {
-      currentGuess.pop();
-      setFeedback('');
-      renderBoard();
+      for (let i = DW_WORD_LENGTH - 1; i >= 0; i--) {
+        const lockedHere = revealedPositions[i] !== undefined && revealedAtRow[i] === guesses.length;
+        if (currentGuess[i] !== null && !lockedHere) {
+          currentGuess[i] = null; renderBoard(); return;
+        }
+      }
       return;
     }
     if (key === 'ENTER') {
-      if (currentGuess.length < DW_WORD_LENGTH) {
+      if (currentGuess.some(c => c === null)) {
         setFeedback('Not enough letters');
         shakeRow();
         return;
       }
       const word = currentGuess.join('');
 
-      // Validate against word list (lazy load)
       if (!validGuesses) {
         setFeedback('Checking...');
         validGuesses = await dwLoadValidGuesses();
         setFeedback('');
       }
       if (!validGuesses.has(word)) {
-        setFeedback('Not in word list');
+        showDWToast('Not in word list');
         shakeRow();
         return;
       }
@@ -328,7 +415,6 @@ async function renderDailyWordlePage() {
       const solved   = word === target;
       const rowIndex = guesses.length;
 
-      // Update key states
       states.forEach((s, i) => {
         const letter = word[i];
         const rank   = { absent: 1, present: 2, correct: 3 };
@@ -336,14 +422,16 @@ async function renderDailyWordlePage() {
       });
 
       guesses.push({ word, states });
-      currentGuess = [];
-      _animatingRow = rowIndex;
+      currentGuess      = Array(DW_WORD_LENGTH).fill(null);
+      revealUsedThisRow = false;
+      _animatingRow     = rowIndex;
       renderBoard();
 
       animateRow(rowIndex, states, () => {
         _animatingRow = -1;
         renderBoard();
         renderKeyboard();
+        updateRevealBtn();
 
         if (solved) {
           bounceRow(rowIndex);
@@ -365,8 +453,7 @@ async function renderDailyWordlePage() {
             showDWResult(guesses, false, entry);
           }, 1000);
         } else {
-          // Save mid-game progress
-          saveDWState({ completed: false, guesses });
+          saveDWState({ completed: false, guesses, revealsUsed, revealedPositions, revealedAtRow });
         }
       });
 
@@ -374,14 +461,12 @@ async function renderDailyWordlePage() {
       return;
     }
 
-    if (/^[A-Z]$/.test(key) && currentGuess.length < DW_WORD_LENGTH) {
-      currentGuess.push(key);
-      setFeedback('');
-      renderBoard();
+    if (/^[A-Z]$/.test(key)) {
+      const nextEmpty = currentGuess.indexOf(null);
+      if (nextEmpty !== -1) { currentGuess[nextEmpty] = key; setFeedback(''); renderBoard(); }
     }
   }
 
-  // Physical keyboard
   function onKeyDown(e) {
     if (e.ctrlKey || e.metaKey || e.altKey) return;
     if (e.key === 'Backspace') { handleKey('⌫'); return; }
@@ -391,12 +476,12 @@ async function renderDailyWordlePage() {
   document.addEventListener('keydown', onKeyDown);
 
   if (gameOver) {
-    // Restored a finished game mid-flow (shouldn't happen due to early return above)
     if (gameEl) gameEl.style.display = 'none';
     showDWResult(guesses, guesses.some(g => g.word === target), entry);
   } else {
     renderBoard();
     renderKeyboard();
+    updateRevealBtn();
   }
 }
 
@@ -426,11 +511,9 @@ async function showDWResult(guesses, solved, entry) {
   const gridEl = document.getElementById('dwResultGrid');
   if (gridEl) gridEl.textContent = emojiGrid;
 
-  // Countdown
   const countdownEl = document.getElementById('dwCountdown');
   if (countdownEl) startDWCountdown(countdownEl);
 
-  // Share button
   const shareBtn = document.getElementById('dwShareBtn');
   if (shareBtn) {
     shareBtn.addEventListener('click', () => {
@@ -444,10 +527,8 @@ async function showDWResult(guesses, solved, entry) {
     });
   }
 
-  // Related wordle cards
   const relatedEl = document.getElementById('dwRelated');
   if (relatedEl && entry.slug) {
-    // Load a few other themes for extra cards
     let extraCards = '';
     try {
       const allWords  = await fetchJSON('data/daily_wordle_words.json');
@@ -477,12 +558,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.body.dataset.page === 'daily-wordle') {
     renderDailyWordlePage();
 
-    // Info modal
     const infoBtn   = document.getElementById('dwInfoBtn');
     const infoModal = document.getElementById('dwInfoModal');
     const infoClose = document.getElementById('dwInfoClose');
     if (infoBtn && infoModal) {
       infoBtn.addEventListener('click', () => { infoModal.style.display = 'flex'; });
+    }
+    if (infoModal) {
       if (infoClose) infoClose.addEventListener('click', () => { infoModal.style.display = 'none'; });
       infoModal.addEventListener('click', e => { if (e.target === infoModal) infoModal.style.display = 'none'; });
     }

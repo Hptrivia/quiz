@@ -1540,14 +1540,6 @@ body[data-page="daily"] main { padding-top: 16px; }
 body[data-page="daily-wordle"] main { padding-top: 16px; }
 
 /* ── Featured pair (two daily cards side by side) ── */
-.featured-section-label {
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--muted-text);
-  margin: 0 0 8px;
-}
 .featured-pair {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1979,6 +1971,9 @@ a.theme-stat-card:active,
   margin-bottom: 16px;
   font-size: 0.9em;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  grid-column: 1 / -1;
 }
 .android-cta-banner a { color: #93c5fd; }
 
