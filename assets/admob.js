@@ -118,11 +118,19 @@ async function adMobShowRewarded() {
   });
 }
 
+const _IAD_COOLDOWN_MS = 20 * 60 * 1000;
+function _interstitialOnCooldown() {
+  const last = parseInt(localStorage.getItem('_iadLastShown') || '0');
+  return Date.now() - last < _IAD_COOLDOWN_MS;
+}
+
 // Shows interstitial ad (no reward, auto-dismissed).
 async function adMobShowInterstitial() {
   if (!_adMobReady || !_interstitialLoaded) return;
+  if (_interstitialOnCooldown()) return;
   try {
     await _AdMob.showInterstitial();
+    localStorage.setItem('_iadLastShown', Date.now().toString());
   } catch (e) {
     console.warn('[AdMob] interstitial error', e);
   }
