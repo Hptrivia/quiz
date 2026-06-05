@@ -92,11 +92,12 @@ function buildCategoryPage(categoryName, themes) {
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>${title} Trivia Themes | Trivia Gauntlet</title>
   <meta name="description" content="Browse ${title} trivia themes on Trivia Gauntlet." />
   <link rel="icon" href="/favicon.ico.png" sizes="any">
-  <link rel="manifest" href="/manifest.json" />
+
   <link rel="apple-touch-icon" href="/assets/icon-192.png" />
   <meta name="theme-color" content="#0f172a" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
@@ -131,7 +132,6 @@ function buildCategoryPage(categoryName, themes) {
   <footer class="site-footer">
     <div class="container">
       <div class="footer-links">
-        <a class="footer-highlight" href="../remove-ads.html">Buy me a coffee</a>
         <a href="../about.html">About</a>
         <a class="footer-highlight" href="../how-it-works.html">How It Works</a>
         <a class="footer-highlight" href="../contact.html">Contact</a>
@@ -142,6 +142,7 @@ function buildCategoryPage(categoryName, themes) {
     </div>
   </footer>
   <script src="../assets/profile.js"></script>
+  <script src="../assets/admob.js"></script>
 </body>
 </html>`;
 }

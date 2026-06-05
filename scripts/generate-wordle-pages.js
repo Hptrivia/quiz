@@ -99,7 +99,8 @@ function buildWordlePage(theme, words, allThemes, wordleSet) {
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>${title} Wordle | Trivia Gauntlet</title>
   <meta name="description" content="${escapeHtml(metaDesc)}" />
   <link rel="canonical" href="${SITE_URL}/wordle/${theme.slug}.html" />
@@ -110,7 +111,7 @@ function buildWordlePage(theme, words, allThemes, wordleSet) {
     gtag('js', new Date());
     gtag('config', 'G-E6BY9F2ZDT');
   </script>
-  <link rel="manifest" href="/manifest.json" />
+
   <link rel="apple-touch-icon" href="/assets/icon-192.png" />
   <meta name="theme-color" content="#0f172a" />
   <link rel="stylesheet" href="../assets/style.css" />
@@ -163,6 +164,7 @@ function buildWordlePage(theme, words, allThemes, wordleSet) {
     </div>
   </footer>
   <script src="../assets/profile.js"></script>
+  <script src="../assets/admob.js"></script>
 </body>
 </html>`;
 }
