@@ -1537,6 +1537,70 @@ body[data-page="wordsearch"].premium-mode .ws-game-area {
 .daily-card-sub { font-size: 12px; margin-top: 4px; opacity: 0.85; }
 
 body[data-page="daily"] main { padding-top: 16px; }
+body[data-page="daily-wordle"] main { padding-top: 16px; }
+
+/* ── Featured pair (two daily cards side by side) ── */
+.featured-section-label {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted-text);
+  margin: 0 0 8px;
+}
+.featured-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+@media (max-width: 380px) {
+  .featured-pair { grid-template-columns: 1fr; }
+}
+
+/* ── Daily Wordle info button + modal ── */
+.wordle-info-btn {
+  background: none;
+  border: 1px solid var(--panel-border);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--muted-text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+.wordle-info-btn:hover { color: var(--text); border-color: var(--text); }
+
+.dw-info-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+.dw-info-box {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 14px;
+  padding: 24px;
+  max-width: 320px;
+  width: 90%;
+  position: relative;
+}
+.dw-info-box h3 { margin: 0 0 10px; }
+.dw-info-box p, .dw-info-box li { font-size: 0.9rem; line-height: 1.6; }
+.dw-info-close {
+  position: absolute;
+  top: 12px; right: 14px;
+  background: none; border: none;
+  font-size: 16px; color: var(--muted-text);
+  cursor: pointer;
+}
 body[data-page="daily"].premium-mode main { padding-top: 20px; }
 
 /* ── Profile / Avatar ── */

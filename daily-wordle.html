@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Daily Wordle | Trivia Gauntlet</title>
+  <meta name="description" content="Guess today's 5-letter word on Trivia Gauntlet. One new word every day — 6 attempts to get it right." />
+  <link rel="icon" href="/favicon.ico.png" sizes="any">
+  <link rel="apple-touch-icon" href="/assets/icon-192.png" />
+  <meta name="theme-color" content="#0f172a" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E6BY9F2ZDT');
+  </script>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body data-page="daily-wordle">
+  <main class="container narrow">
+    <div class="theme-top-links">
+      <a href="index.html" class="back-link" onclick="if(history.length>1){history.back();return false;}">← Back</a>
+      <span id="navAvatarSlot"></span>
+      <button id="dwInfoBtn" class="wordle-info-btn" aria-label="How to play">?</button>
+    </div>
+
+    <!-- Info modal -->
+    <div id="dwInfoModal" class="dw-info-modal" style="display:none;">
+      <div class="dw-info-box">
+        <button id="dwInfoClose" class="dw-info-close">✕</button>
+        <h3>How to Play</h3>
+        <p>Guess today's hidden 5-letter word in 6 tries.</p>
+        <ul style="margin:10px 0 0;padding-left:18px;line-height:1.8;">
+          <li>Each guess must be a real word.</li>
+          <li><span class="wordle-tile correct" style="display:inline-flex;width:22px;height:22px;font-size:0.7rem;align-items:center;justify-content:center;border-radius:3px;">A</span> Right letter, right spot.</li>
+          <li><span class="wordle-tile present" style="display:inline-flex;width:22px;height:22px;font-size:0.7rem;align-items:center;justify-content:center;border-radius:3px;">A</span> Right letter, wrong spot.</li>
+          <li><span class="wordle-tile absent" style="display:inline-flex;width:22px;height:22px;font-size:0.7rem;align-items:center;justify-content:center;border-radius:3px;">A</span> Letter not in the word.</li>
+        </ul>
+        <p style="margin-top:10px;color:var(--muted-text);font-size:0.85rem;">A new word every day at midnight UTC.</p>
+      </div>
+    </div>
+
+    <section class="panel">
+      <div id="dwLoading">
+        <p style="color:var(--muted-text)">Loading today's word...</p>
+      </div>
+
+      <div id="dwGame" style="display:none;">
+        <div class="daily-header">
+          <h2>Daily Wordle</h2>
+          <p id="dwDateLabel" class="daily-date"></p>
+        </div>
+
+        <p id="dwFeedback" class="feedback"></p>
+        <div id="dwBoard" class="wordle-board"></div>
+        <div id="dwKeyboard" class="wordle-keyboard"></div>
+      </div>
+
+      <div id="dwResult" style="display:none;">
+        <h2 style="margin-bottom:6px;">Daily Wordle</h2>
+        <div class="daily-score-box">
+          <span id="dwResultWord" style="font-size:1.5rem;font-weight:800;letter-spacing:0.1em;"></span>
+        </div>
+        <p id="dwResultStatus" style="text-align:center;margin:6px 0 14px;font-size:1rem;"></p>
+        <pre id="dwResultGrid" class="wordle-result-grid" style="text-align:center;font-size:1.4rem;line-height:1.4;margin:0 0 16px;"></pre>
+        <p id="dwCountdown" class="daily-countdown"></p>
+        <button id="dwShareBtn" class="secondary-btn" style="width:100%;margin-top:12px;">Share Results</button>
+        <div id="dwRelated" style="margin-top:20px;"></div>
+        <a href="contact.html" class="secondary-btn" style="display:block;margin-top:14px;text-align:center;text-decoration:none;font-size:0.85rem;padding:8px 18px;">Leave Feedback</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+  <script src="assets/admob.js"></script>
+  <script src="assets/daily-wordle.js"></script>
+  <script src="assets/profile.js"></script>
+</body>
+</html>

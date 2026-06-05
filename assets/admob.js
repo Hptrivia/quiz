@@ -21,7 +21,7 @@ function isGamePage() {
 
 function getRoundStartParams() {
   const path = window.location.pathname;
-  return /\/(play|challenge|survival|episode|trivia-rush|mashup-trivia-rush|versus|wordle|wordsearch|mashup-play|daily)\.html$/.test(path);
+  return /\/(play|challenge|survival|episode|trivia-rush|mashup-trivia-rush|versus|wordle|wordsearch|mashup-play|daily|daily-wordle)\.html$/.test(path);
 }
 
 let _AdMob = null;

@@ -241,7 +241,7 @@ function initDailyHomepageCard() {
   const subEl   = card.querySelector(".daily-card-sub");
 
   if (ctaEl) {
-    ctaEl.textContent = status.completedToday ? "Come back tomorrow" : "Play Today's Challenge";
+    ctaEl.textContent = status.completedToday ? "Come back tomorrow" : "Play Today's Trivia";
 
   if (subEl) {
     const missedDay = streak.lastCompleted &&
@@ -426,7 +426,7 @@ function showDailyResult(state) {
   if (shareBtn) {
     shareBtn.addEventListener("click", () => {
       const url  = window.location.href.split("?")[0];
-      const text = `I scored ${state.score}/${state.total} on today's Trivia Gauntlet Daily Challenge!\n${url}`;
+      const text = `I scored ${state.score}/${state.total} on today's Trivia Gauntlet Daily Trivia!\n${url}`;
       navigator.clipboard.writeText(text).then(() => {
         shareBtn.textContent = "Copied!";
         setTimeout(() => { shareBtn.textContent = "Share Results"; }, 2000);
