@@ -2009,6 +2009,6 @@ a.theme-stat-card:active,
 
 /* ── In-app content hiding ───────────────────────────────────────────────── */
 body.in-app .homepage-intro,
-body.in-app .category-intro-panel,
+body.in-app .category-intro-panel .category-intro-text,
 body.in-app .theme-sample-questions,
 body.in-app .theme-sample-questions ~ p { display: none; }
