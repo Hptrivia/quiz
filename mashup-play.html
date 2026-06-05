@@ -94,7 +94,6 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-links">
-        <a class="footer-highlight" href="remove-ads.html">Buy me a coffee</a>
         <a href="about.html">About</a>
         <a class="footer-highlight" href="how-it-works.html">How It Works</a>
         <a class="footer-highlight" href="contact.html">Contact</a>
@@ -426,7 +425,6 @@
           "<div class=\"cta-row\">" +
           (hasNextPage && !atLimit ? "<a class=\"primary-btn\" href=\"mashup-play.html?themes=" + themesParam + "&mode=marathon&page=" + (safePage + 1) + "\" data-rewarded-href=\"mashup-play.html?themes=" + themesParam + "&mode=marathon&page=" + (safePage + 1) + "\">Next Round</a>" : "") +
           (hasNextPage && atLimit ? wallHtml : "") +
-          (!isPremiumUser() ? "<a class=\"secondary-btn\" href=\"remove-ads.html\">Buy me a coffee</a>" : "") +
           "<a class=\"secondary-btn\" href=\"contact.html\">Report a Question</a>" +
           "</div>";
 
@@ -616,7 +614,6 @@
           (hasNextRound && !atLimit ? "<a class=\"primary-btn\" href=\"mashup-play.html?themes=" + themesParam + "&mode=challenge&round=" + (safeRound + 1) + "\"" + (safeRound % 3 === 0 ? " data-rewarded-href=\"mashup-play.html?themes=" + themesParam + "&mode=challenge&round=" + (safeRound + 1) + "\"" : "") + ">Next Round</a>" : "") +
           (hasNextRound && atLimit ? wallHtml : "") +
           "<button class=\"secondary-btn\" id=\"copyShareBtn\">Copy Link</button>" +
-          (!isPremiumUser() ? "<a class=\"secondary-btn\" href=\"remove-ads.html\">Reveal Answers</a>" : "") +
           "<a class=\"secondary-btn\" href=\"contact.html\">Report a Question</a>" +
           "</div>";
 
@@ -795,7 +792,6 @@
               "<div id=\"survivalThemeBreakdown\"></div>" +
               "<div class=\"cta-row\">" +
               "<a class=\"primary-btn\" href=\"mashup-play.html?themes=" + themesParam + "&mode=survival\">Play Again</a>" +
-              (!isPremiumUser() ? "<a class=\"secondary-btn\" href=\"remove-ads.html\">Unlimited Lifelines</a>" : "") +
               "<a class=\"secondary-btn\" href=\"contact.html\">Report a Question</a>" +
               "</div>";
             document.getElementById("survivalThemeBreakdown").appendChild(renderThemeBreakdown(state.themeScores));

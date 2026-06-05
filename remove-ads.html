@@ -19,75 +19,17 @@
     <a href="index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
 
     <section class="panel">
-      <div class="tab-bar">
-        <button class="tab-btn active" data-tab="sitewide">Buy Me a Coffee</button>
-        <button class="tab-btn" data-tab="theme-packs">Theme Packs</button>
-      </div>
+      <h1>Buy Me a Coffee</h1>
 
-      <div id="tab-sitewide" class="tab-content active">
-        <div id="premiumIndicator" class="premium-indicator" style="display:none"></div>
+      <p>
+        Trivia Gauntlet is free to play and always will be. If you've had fun playing — whether it's a late-night quiz session, testing your knowledge on your favourite show, or competing with friends — buying me a coffee is a simple way to say thanks.
+      </p>
+      <p>
+        Every little bit helps with server costs and keeps the site running and growing. No subscription, no pressure — just a small gesture if you feel like it.
+      </p>
 
-        <h1>Buy Me a Coffee</h1>
-
-        <p>
-          Trivia Gauntlet is free to play and always will be. If you've had fun playing — whether it's a late-night quiz session, testing your knowledge on your favourite show, or competing with friends — buying me a coffee is a simple way to say thanks.
-        </p>
-        <p>
-          Every little bit helps with server costs and keeps the site running and growing. No subscription, no pressure — just a small gesture if you feel like it.
-        </p>
-
-        <div class="cta-row">
-          <a class="primary-btn" href="https://ko-fi.com/triviaking" target="_blank" rel="noopener noreferrer">Buy Me a Coffee ☕</a>
-        </div>
-
-        <hr style="border:none;border-top:1px solid var(--panel-border);margin:28px 0;" />
-
-        <h2 style="font-size:1.1rem;margin-bottom:10px;">As an Additional Benefit</h2>
-        <p>
-          Apart from helping me out, supporters will receive a code that unlocks extra features across the site:
-        </p>
-
-        <ul class="benefits-list">
-          <li>Unlimited lifelines in Survival Mode</li>
-          <li>Answers shown after every wrong answer in Challenge and Marathon modes</li>
-          <li>Reveal answers toggle in Versus Mode</li>
-          <li>Works on any device — just enter your code</li>
-        </ul>
-
-        <div id="activationSection" class="already-have-code">
-          <p>Already have a code?</p>
-          <div class="code-input-row">
-            <input type="text" id="adFreeCodeInput" placeholder="Enter your code" />
-            <button class="secondary-btn" id="adFreeActivateBtn">Activate</button>
-          </div>
-          <p id="activationMsg" class="activation-msg"></p>
-        </div>
-      </div>
-
-      <div id="tab-theme-packs" class="tab-content">
-        <h1 id="removeAdsTitle">Theme Packs</h1>
-        <p id="removeAdsIntro">
-          Purchase a theme pack to get printables, question sheets, and answer sheets for offline play.
-        </p>
-
-        <ul class="benefits-list">
-          <li>Printable question and answer sheets</li>
-          <li>Perfect for Quiz Night with Friends</li>
-        </ul>
-
-        <div class="cta-row">
-          <a id="removeAdsBuyButton" class="primary-btn" href="https://ko-fi.com/triviaking/shop" target="_blank" rel="noopener noreferrer">
-            View Shop
-          </a>
-          <a class="secondary-btn" href="contact.html?topic=pack">Request a Theme Pack</a>
-        </div>
-
-        <div class="remove-ads-how">
-          <h3>How it works</h3>
-          <p>1. Buy the pack.</p>
-          <p>2. Download the file.</p>
-          <p>3. Use printables for offline play.</p>
-        </div>
+      <div class="cta-row">
+        <a class="primary-btn" href="https://ko-fi.com/triviaking" target="_blank" rel="noopener noreferrer">Buy Me a Coffee ☕</a>
       </div>
     </section>
   </main>
@@ -106,17 +48,5 @@
   </footer>
 
   <script src="assets/app.js"></script>
-  <script src="assets/remove-ads.js"></script>
-  <script>
-    document.querySelectorAll('.tab-btn').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        var tab = btn.dataset.tab;
-        document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
-        document.querySelectorAll('.tab-content').forEach(function(c) { c.classList.remove('active'); });
-        btn.classList.add('active');
-        document.getElementById('tab-' + tab).classList.add('active');
-      });
-    });
-  </script>
 </body>
 </html>

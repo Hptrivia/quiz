@@ -203,7 +203,6 @@ async function renderMultiThemeChallenge() {
       <div class="cta-row">
         ${hasNextRound && !isWebQLimit() ? `<a class="primary-btn" href="challenge.html?themes=${themesParam}&round=${safeRound + 1}" ${safeRound % 3 === 0 ? `data-rewarded-href="challenge.html?themes=${themesParam}&round=${safeRound + 1}"` : ''}>Next Round</a>` : ""}
         ${hasNextRound && isWebQLimit() ? webWallHTML("You've used your 30 free questions!") : ""}
-        ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html">Reveal Answers</a>` : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
       ${replayHtml}
@@ -311,18 +310,6 @@ async function renderChallengePage() {
     });
   }
 
-  if (typeof updateRemoveAdsFooter === "function") {
-    updateRemoveAdsFooter(theme.slug, "normal");
-  }
-
-  let buyPackUrl = "https://ko-fi.com/triviaking/shop";
-
-  try {
-    const normalPackLinks = await fetchJSON("data/normal_pack_links.json");
-    buyPackUrl = normalPackLinks[theme.title] || buyPackUrl;
-  } catch (e) {
-    buyPackUrl = "https://ko-fi.com/triviaking/shop";
-  }
 
   let affiliateProducts = null;
 
@@ -666,7 +653,6 @@ async function renderChallengePage() {
       <div class="cta-row">
         ${hasNextRound && !isWebQLimit() ? `<a class="primary-btn" href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}" ${safeRound % 3 === 0 ? `data-rewarded-href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}"` : ''}>Next Round</a>` : ""}
         ${hasNextRound && isWebQLimit() ? webWallHTML("You've used your 30 free questions!") : ""}
-        ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html?theme=${theme.slug}">Reveal Answers</a>` : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
       ${replayHtml}

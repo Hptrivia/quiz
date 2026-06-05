@@ -15,12 +15,6 @@ function isPremiumUser() {
   return new Date(expiry) > new Date();
 }
 
-function updateRemoveAdsFooter(themeSlug = "", mode = "normal") {
-  const link = document.getElementById("removeAdsLink");
-  if (!link) return;
-  if (!themeSlug) { link.href = "remove-ads.html"; return; }
-  link.href = `remove-ads.html?theme=${encodeURIComponent(themeSlug)}&mode=${encodeURIComponent(mode)}`;
-}
 
 async function fetchJSON(path) {
   const res = await fetch(path);
@@ -320,8 +314,6 @@ async function renderQuizPage() {
   const wordSearchBtn = document.getElementById("wordSearchButton");
   const wordleBtn = document.getElementById("wordleButton");
   const triviaRushBtn = document.getElementById("triviaRushButton");
-  const adFreeBtn = document.getElementById("adFreeButton");
-
   if (!theme) {
     title.textContent = "Theme not found";
     desc.textContent = "Lorem ipsum dolor sit amet.";
@@ -332,7 +324,6 @@ async function renderQuizPage() {
 
   title.textContent = theme.title;
   desc.textContent = theme.description;
-  updateRemoveAdsFooter(theme.slug, "normal");
   playBtn.href = `play.html?theme=${theme.slug}`;
   challengeBtn.href = `challenge.html?theme=${theme.slug}&round=1`;
   survivalBtn.href = `survival.html?theme=${theme.slug}`;
@@ -650,7 +641,6 @@ async function renderMultiThemeMarathon() {
       <div class="cta-row">
         ${hasNextPage && !(typeof isWebQLimit === 'function' && isWebQLimit()) ? `<a class="primary-btn" href="play.html?themes=${themesParam}&page=${safePage + 1}" data-rewarded-href="play.html?themes=${themesParam}&page=${safePage + 1}">Next Round</a>` : ""}
         ${hasNextPage && (typeof isWebQLimit === 'function' && isWebQLimit()) ? (typeof webWallHTML === 'function' ? webWallHTML("You've used your 30 free questions!") : "") : ""}
-        ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html">Buy me a coffee</a>` : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
       ${replayHtml}
@@ -756,16 +746,6 @@ async function renderPlayPage() {
   });
 }
   setCanonical(`${window.location.origin}/themes/${theme.slug}.html`);
-
-let buyPackUrl = "https://ko-fi.com/triviaking/shop";
- try { const normalPackLinks = await fetchJSON("data/normal_pack_links.json"); 
-  buyPackUrl = normalPackLinks[theme.title] || buyPackUrl;
- } catch (e) { 
-  buyPackUrl = "https://ko-fi.com/triviaking/shop"; }
-
-  if (typeof updateRemoveAdsFooter === "function") {
-    updateRemoveAdsFooter(theme.slug, "normal");
-  }
 
   const rawPage = parseInt(getParam("page") || "1", 10);
   const currentPage = Number.isNaN(rawPage) || rawPage < 1 ? 1 : rawPage;
@@ -1044,7 +1024,6 @@ const relatedThemesHtml = `
     <div class="cta-row">
       ${hasNextPage && !(typeof isWebQLimit === 'function' && isWebQLimit()) ? `<a class="primary-btn" href="play.html?theme=${theme.slug}&page=${safePage + 1}" data-rewarded-href="play.html?theme=${theme.slug}&page=${safePage + 1}">Next Round</a>` : ""}
       ${hasNextPage && (typeof isWebQLimit === 'function' && isWebQLimit()) ? (typeof webWallHTML === 'function' ? webWallHTML("You've used your 30 free questions!") : "") : ""}
-      ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html">Buy me a coffee</a>` : ""}
       <a class="secondary-btn" href="contact.html">Report a Question</a>
     </div>
     ${replayHtml}

@@ -536,9 +536,6 @@ async function renderWordlePage() {
     });
   }
 
-  if (typeof updateRemoveAdsFooter === "function") {
-    updateRemoveAdsFooter(theme.slug, "normal");
-  }
 
   // Update trivia nav link to point to the theme page
   const _wdBackEls  = document.querySelectorAll('.back-link');

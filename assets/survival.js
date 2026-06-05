@@ -179,7 +179,6 @@ async function renderMultiThemeSurvival() {
       ${typeof webQCounterHTML === 'function' ? webQCounterHTML() : ''}
       <div class="cta-row">
         ${_survMashupAtLimit ? (typeof webWallHTML === 'function' ? webWallHTML("You've used your 30 free questions!") : '') : `<a class="primary-btn" href="survival.html?themes=${themesParam}">Play Again</a>`}
-        ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html">Unlimited Lifelines</a>` : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
       <div class="result-theme-search">
@@ -332,9 +331,6 @@ async function renderSurvivalPage() {
     });
   }
 
-  if (typeof updateRemoveAdsFooter === "function") {
-    updateRemoveAdsFooter(theme.slug, "normal");
-  }
 
   const difficultyMap = {
     easy: ["easy", "medium"],
@@ -473,7 +469,6 @@ async function renderSurvivalPage() {
       ${typeof webQCounterHTML === 'function' ? webQCounterHTML() : ''}
       <div class="cta-row">
         ${_survAtLimit ? (typeof webWallHTML === 'function' ? webWallHTML("You've used your 30 free questions!") : '') : `<a class="primary-btn" href="survival.html?theme=${theme.slug}">Play Again</a>`}
-        ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html?theme=${theme.slug}">Unlimited Lifelines</a>` : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>
       ${notifyHtml}

@@ -341,13 +341,6 @@ function vsShowResults() {
     backBtn.style.display = 'none';
   }
 
-  const revealWrap = document.getElementById('vsRevealAnswersWrap');
-  const revealBtn = document.getElementById('vsRevealAnswersBtn');
-  if (revealWrap && revealBtn && !isPremiumUser()) {
-    revealBtn.href = 'remove-ads.html';
-    revealWrap.style.display = '';
-  }
-
   vsShow('vsResults');
 }
 
@@ -469,12 +462,6 @@ function vsTiebreakerResults() {
       backBtn.style.display = '';
     } else {
       backBtn.style.display = 'none';
-    }
-    const revealWrap = document.getElementById('vsRevealAnswersWrap');
-    const revealBtn = document.getElementById('vsRevealAnswersBtn');
-    if (revealWrap && revealBtn && !isPremiumUser()) {
-      revealBtn.href = 'remove-ads.html';
-      revealWrap.style.display = '';
     }
     vsShow('vsResults');
   } else {

@@ -472,9 +472,6 @@ async function renderWordSearchPage() {
     });
   }
 
-  if (typeof updateRemoveAdsFooter === "function") {
-    updateRemoveAdsFooter(theme.slug, "normal");
-  }
 
   window._wsThemeSlug = theme.slug;
   const allWords   = await fetchJSON("data/wordsearch_words.json");

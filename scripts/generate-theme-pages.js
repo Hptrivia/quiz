@@ -303,11 +303,6 @@ const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
 
         ${fanQuestionsButton}
 
-        <a class="card" href="../remove-ads.html?theme=${slug}&mode=normal">
-          <h3>Buy me a coffee</h3>
-          <p>If you enjoyed playing, every little bit helps.</p>
-        </a>
-
       </div>
 
       ${sampleQuestionsHtml}
@@ -321,7 +316,6 @@ const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
   <footer class="site-footer">
     <div class="container">
       <div class="footer-links">
-        <a id="removeAdsLink" class="footer-highlight" href="../remove-ads.html?theme=${slug}&mode=normal">Buy me a coffee</a>
         <a href="../about.html">About</a>
         <a class="footer-highlight" href="../how-it-works.html">How It Works</a>
         <a class="footer-highlight" href="../contact.html">Contact</a>

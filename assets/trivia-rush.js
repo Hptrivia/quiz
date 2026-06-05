@@ -90,7 +90,6 @@ async function trInit() {
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) metaDesc.setAttribute('content', `Play ${theme.title} Trivia Rush on Trivia Gauntlet. Answer fast, build streaks, chase the rush.`);
 
-    if (typeof updateRemoveAdsFooter === 'function') updateRemoveAdsFooter(theme.slug, 'trivia-rush');
 
     // Wire How to Play buttons (start screen + in-game if present)
     const openModal = () => document.getElementById('trHowToModal').classList.add('tr-modal-show');

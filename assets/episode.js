@@ -16,18 +16,6 @@ async function renderEpisodePage() {
     });
   }
 
-  if (typeof updateRemoveAdsFooter === "function") {
-    updateRemoveAdsFooter(theme.slug, "episode");
-  }
-
-  let buyPackUrl = "https://ko-fi.com/triviaking/shop";
-
-  try {
-    const episodePackLinks = await fetchJSON("data/episode_pack_links.json");
-    buyPackUrl = episodePackLinks[theme.title] || buyPackUrl;
-  } catch (e) {
-    buyPackUrl = "https://ko-fi.com/triviaking/shop";
-  }
 
   const nextPageLink = document.getElementById("episodeNextPageLink");
   const scoreEl = document.getElementById("episodeScoreText");
@@ -132,7 +120,6 @@ async function renderEpisodePage() {
       <div class="cta-row">
         ${hasNextEpisode && !isWebEpLimit() ? `<a class="primary-btn" href="episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}" data-rewarded-href="episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}">Next Episode</a>` : ""}
         ${hasNextEpisode && isWebEpLimit() ? webWallHTML("You've played your free episode!") : ""}
-        ${!isPremiumUser() ? `<a class="secondary-btn" href="remove-ads.html">Buy me a coffee</a>` : ""}
       </div>
     `;
   }
