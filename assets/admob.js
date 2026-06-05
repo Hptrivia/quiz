@@ -37,6 +37,10 @@ async function adMobInit() {
     return m ? '_iad_' + m[1] : '_iad_other';
   })();
   const showInterstitialFirst = getRoundStartParams() && !sessionStorage.getItem(_modeKey);
+  const _removeLoader = () => {
+    document.getElementById('_adLoader')?.remove();
+    document.body.style.visibility = 'visible';
+  };
   if (showInterstitialFirst) {
     sessionStorage.setItem(_modeKey, '1');
     document.body.style.visibility = 'hidden';
@@ -46,6 +50,8 @@ async function adMobInit() {
     loader.textContent = 'Loading...';
     document.body.appendChild(loader);
     document.body.style.visibility = 'visible';
+    // Safety net: never let the loader block the app, even if the ad hangs or fails.
+    setTimeout(_removeLoader, 5000);
   }
   try {
     _AdMob = window.Capacitor.Plugins.AdMob;
@@ -56,17 +62,20 @@ async function adMobInit() {
     });
     _adMobReady = true;
     if (showInterstitialFirst) {
-      await _AdMob.prepareInterstitial({ adId: ADMOB_IDS.interstitial });
-      _interstitialLoaded = true;
-      await adMobShowInterstitial();
-      document.getElementById('_adLoader')?.remove();
-      document.body.style.visibility = 'visible';
+      try {
+        await _AdMob.prepareInterstitial({ adId: ADMOB_IDS.interstitial });
+        _interstitialLoaded = true;
+        await adMobShowInterstitial();
+      } catch (e) {
+        console.warn('[AdMob] interstitial-first failed', e);
+      }
+      _removeLoader();
     }
     _adMobPreloadRewarded();
     _adMobPreloadInterstitial();
     if (isGamePage()) adMobHideBanner(); else adMobShowBanner();
   } catch (e) {
-    document.body.style.visibility = 'visible';
+    _removeLoader();
     console.warn('[AdMob] init failed', e);
   }
 }
