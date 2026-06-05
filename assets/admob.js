@@ -49,7 +49,11 @@ async function adMobInit() {
   }
   try {
     _AdMob = window.Capacitor.Plugins.AdMob;
-    await _AdMob.initialize({ initializeForTesting: ADMOB_TEST_MODE, requestTrackingAuthorization: true });
+    await _AdMob.initialize({
+      initializeForTesting: ADMOB_TEST_MODE,
+      requestTrackingAuthorization: true,
+      testingDevices: ['c4437cfd-e803-4360-955a-ea0b5946ca9d', 'F8913AC8-ADD9-4288-9400-793D409E2C2B'],
+    });
     _adMobReady = true;
     if (showInterstitialFirst) {
       await _AdMob.prepareInterstitial({ adId: ADMOB_IDS.interstitial });
