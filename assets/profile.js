@@ -415,7 +415,7 @@ function _injectAndroidBanner() {
   const banner = document.createElement('div');
   banner.className = 'android-cta-banner';
   banner.innerHTML = `📱 Get 100+ questions for all themes on the <a href="${_PLAY_STORE}" target="_blank">free Android app</a>`;
-  const anchor = document.querySelector('.homepage-intro') || document.querySelector('main, .container');
+  const anchor = document.querySelector('.homepage-intro') || document.querySelector('main');
   if (anchor && anchor.classList.contains('homepage-intro')) anchor.before(banner);
   else if (anchor) anchor.prepend(banner);
 }
