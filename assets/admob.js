@@ -52,7 +52,7 @@ async function adMobInit() {
     await _AdMob.initialize({
       initializeForTesting: ADMOB_TEST_MODE,
       requestTrackingAuthorization: true,
-      testingDevices: ['c4437cfd-e803-4360-955a-ea0b5946ca9d', 'F8913AC8-ADD9-4288-9400-793D409E2C2B'],
+      testingDevices: ['26D6708FEB5BC4BACECD99956C13350E', 'F8913AC8-ADD9-4288-9400-793D409E2C2B'],
     });
     _adMobReady = true;
     if (showInterstitialFirst) {
