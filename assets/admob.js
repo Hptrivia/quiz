@@ -1,6 +1,6 @@
 // AdMob — only active inside the Capacitor Android app
 
-const ADMOB_TEST_MODE = false;
+const ADMOB_TEST_MODE = window.Capacitor?.getPlatform?.() === 'ios';
 
 const ADMOB_IDS = {
   banner:       ADMOB_TEST_MODE ? 'ca-app-pub-3940256099942544/6300978111' : 'ca-app-pub-9506123851374920/2446089149',
