@@ -640,7 +640,7 @@ async function renderMultiThemeMarathon() {
       ${typeof webQCounterHTML === 'function' ? webQCounterHTML() : ''}
       <div class="cta-row">
         ${hasNextPage && !(typeof isWebQLimit === 'function' && isWebQLimit()) ? `<a class="primary-btn" href="play.html?themes=${themesParam}&page=${safePage + 1}" data-rewarded-href="play.html?themes=${themesParam}&page=${safePage + 1}">Next Round</a>` : ""}
-        ${hasNextPage && (typeof isWebQLimit === 'function' && isWebQLimit()) ? (typeof webWallHTML === 'function' ? webWallHTML("You've used your 30 free questions!") : "") : ""}
+        ${hasNextPage && (typeof isWebQLimit === 'function' && isWebQLimit()) ? (typeof webWallHTML === 'function' ? webWallHTML("Yay! You've answered 30 questions") : "") : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
         ${!isPremiumUser() && !(typeof isInApp === 'function' && isInApp()) ? `<a class="secondary-btn" href="remove-ads.html">Buy me a coffee</a>` : ""}
       </div>
@@ -1024,7 +1024,7 @@ const relatedThemesHtml = `
     ${typeof webQCounterHTML === 'function' ? webQCounterHTML() : ''}
     <div class="cta-row">
       ${hasNextPage && !(typeof isWebQLimit === 'function' && isWebQLimit()) ? `<a class="primary-btn" href="play.html?theme=${theme.slug}&page=${safePage + 1}" data-rewarded-href="play.html?theme=${theme.slug}&page=${safePage + 1}">Next Round</a>` : ""}
-      ${hasNextPage && (typeof isWebQLimit === 'function' && isWebQLimit()) ? (typeof webWallHTML === 'function' ? webWallHTML("You've used your 30 free questions!") : "") : ""}
+      ${hasNextPage && (typeof isWebQLimit === 'function' && isWebQLimit()) ? (typeof webWallHTML === 'function' ? webWallHTML("Yay! You've answered 30 questions", theme.title) : "") : ""}
       <a class="secondary-btn" href="contact.html">Report a Question</a>
       ${!isPremiumUser() && !(typeof isInApp === 'function' && isInApp()) ? `<a class="secondary-btn" href="remove-ads.html">Buy me a coffee</a>` : ""}
     </div>

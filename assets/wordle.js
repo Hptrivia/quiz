@@ -305,7 +305,7 @@ async function renderWordleMashupMode(themesParam) {
       <pre class="wordle-result-grid">${emojiGrid}</pre>
       <div class="cta-row" style="margin-top:10px;justify-content:center;">
         ${!isLast && !(typeof isWebWordleLimit === 'function' && isWebWordleLimit()) ? `<button class="primary-btn" id="wordleNextFromPanel">Next Word →</button>` : ""}
-        ${!isLast && (typeof isWebWordleLimit === 'function' && isWebWordleLimit()) ? (typeof webWallHTML === 'function' ? webWallHTML("You've played your 2 free Wordle words!") : "") : ""}
+        ${!isLast && (typeof isWebWordleLimit === 'function' && isWebWordleLimit()) ? (typeof webWallHTML === 'function' ? webWallHTML("Yay! You've played 2 Wordle words", null, "Wordles") : "") : ""}
       </div>`;
 
     feedbackEl.textContent   = "";
@@ -848,7 +848,7 @@ async function renderWordlePage() {
       <div class="cta-row" style="margin-top:10px;justify-content:center;">
         <button class="secondary-btn" id="wordleShareBtn">📋 Share</button>
         ${!isLast && !(typeof isWebWordleLimit === 'function' && isWebWordleLimit()) ? `<button class="primary-btn" id="wordleNextFromPanel">Next Word →</button>` : ""}
-        ${!isLast && (typeof isWebWordleLimit === 'function' && isWebWordleLimit()) ? (typeof webWallHTML === 'function' ? webWallHTML("You've played your 2 free Wordle words!") : "") : ""}
+        ${!isLast && (typeof isWebWordleLimit === 'function' && isWebWordleLimit()) ? (typeof webWallHTML === 'function' ? webWallHTML("Yay! You've played 2 Wordle words", null, "Wordles") : "") : ""}
       </div>
       <p class="wordle-share-feedback" id="wordleShareFeedback"></p>`;
 

@@ -202,7 +202,7 @@ async function renderMultiThemeChallenge() {
       ${webQCounterHTML()}
       <div class="cta-row">
         ${hasNextRound && !isWebQLimit() ? `<a class="primary-btn" href="challenge.html?themes=${themesParam}&round=${safeRound + 1}" ${safeRound % 3 === 0 ? `data-rewarded-href="challenge.html?themes=${themesParam}&round=${safeRound + 1}"` : ''}>Next Round</a>` : ""}
-        ${hasNextRound && isWebQLimit() ? webWallHTML("You've used your 30 free questions!") : ""}
+        ${hasNextRound && isWebQLimit() ? webWallHTML("Yay! You've answered 30 questions") : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
         ${!isPremiumUser() && !(typeof isInApp === 'function' && isInApp()) ? `<a class="secondary-btn" href="remove-ads.html">Reveal Answers</a>` : ""}
       </div>
@@ -653,7 +653,7 @@ async function renderChallengePage() {
       ${webQCounterHTML()}
       <div class="cta-row">
         ${hasNextRound && !isWebQLimit() ? `<a class="primary-btn" href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}" ${safeRound % 3 === 0 ? `data-rewarded-href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}"` : ''}>Next Round</a>` : ""}
-        ${hasNextRound && isWebQLimit() ? webWallHTML("You've used your 30 free questions!") : ""}
+        ${hasNextRound && isWebQLimit() ? webWallHTML("Yay! You've answered 30 questions", theme.title) : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
         ${!isPremiumUser() && !(typeof isInApp === 'function' && isInApp()) ? `<a class="secondary-btn" href="remove-ads.html?theme=${theme.slug}">Reveal Answers</a>` : ""}
       </div>

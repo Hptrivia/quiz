@@ -274,7 +274,7 @@ function wsShowCompletion() {
   const modal = document.getElementById('wsDoneModal');
   if (modal && typeof isWebWSLimit === 'function' && isWebWSLimit() && typeof webWallHTML === 'function') {
     const actions = modal.querySelector('.ws-modal-actions');
-    if (actions) actions.innerHTML = webWallHTML("You've played your free Word Search!");
+    if (actions) actions.innerHTML = webWallHTML("Yay! You've finished the Word Search", null, "Word Searches");
   }
   modal.classList.add('ws-modal-show');
   if (typeof recordWordSearch === "function" && window._wsThemeSlug) {

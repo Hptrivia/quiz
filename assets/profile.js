@@ -389,18 +389,21 @@ function isWebWSLimit()     { return isAndroidWeb() && _webCount('WS')     >= _W
 function isWebEpLimit()     { return isAndroidWeb() && _webCount('Ep')     >= _WEB_LIMITS.Ep; }
 function webQUsed()         { return _webCount('Q'); }
 
-function webWallHTML(msg) {
+function webWallHTML(msg, themeName, noun) {
+  const item = noun || 'questions';
+  const moreLine = themeName
+    ? `Download the app for more ${themeName} ${item}.`
+    : `Download the app for more ${item}.`;
   return `<div class="android-wall">
     <div class="android-wall-icon">📱</div>
-    <h3>${msg || "You've used your free questions!"}</h3>
-    <p>Download the free app for unlimited trivia — no limits, no hassle.</p>
-    <a href="${_PLAY_STORE}" class="primary-btn" target="_blank">Get the Free App</a>
+    <h3>${msg || "Yay! You've answered 30 questions"}</h3>
+    <p>${moreLine}</p>
+    <a href="${_PLAY_STORE}" class="primary-btn" target="_blank">Get the App</a>
   </div>`;
 }
 
 function webQCounterHTML() {
-  if (!isAndroidWeb()) return '';
-  return `<p class="web-q-counter">${webQUsed()}/${_WEB_LIMITS.Q} free questions used</p>`;
+  return '';
 }
 
 function _injectAndroidBanner() {
@@ -424,18 +427,22 @@ function _checkWebPageWall() {
   if (!isAndroidWeb()) return;
   const path = window.location.pathname;
   let msg = null;
+  let noun = 'questions';
   if (/\/(play|challenge|survival|versus|trivia-rush|mashup-play)\.html$/.test(path) && isWebQLimit())
-    msg = "You've used your 30 free questions on Android browser.";
-  else if (path.endsWith('/episode.html') && isWebEpLimit())
-    msg = "You've played your free episode on Android browser.";
-  else if ((path.endsWith('/wordle.html') || /\/wordle\//.test(path)) && isWebWordleLimit())
-    msg = "You've played your 2 free Wordle words on Android browser.";
-  else if ((path.endsWith('/wordsearch.html') || /\/wordsearch\//.test(path)) && isWebWSLimit())
-    msg = "You've played your free Word Search on Android browser.";
+    msg = "Yay! You've answered 30 questions";
+  else if (path.endsWith('/episode.html') && isWebEpLimit()) {
+    msg = "Yay! You've played an episode"; noun = 'episodes';
+  }
+  else if ((path.endsWith('/wordle.html') || /\/wordle\//.test(path)) && isWebWordleLimit()) {
+    msg = "Yay! You've played 2 Wordle words"; noun = 'Wordles';
+  }
+  else if ((path.endsWith('/wordsearch.html') || /\/wordsearch\//.test(path)) && isWebWSLimit()) {
+    msg = "Yay! You've finished the Word Search"; noun = 'Word Searches';
+  }
   if (!msg) return;
   const overlay = document.createElement('div');
   overlay.className = 'android-wall-overlay';
-  overlay.innerHTML = webWallHTML(msg);
+  overlay.innerHTML = webWallHTML(msg, null, noun);
   document.body.appendChild(overlay);
 }
 

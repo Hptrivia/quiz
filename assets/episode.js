@@ -119,7 +119,7 @@ async function renderEpisodePage() {
       ${webQCounterHTML()}
       <div class="cta-row">
         ${hasNextEpisode && !isWebEpLimit() ? `<a class="primary-btn" href="episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}" data-rewarded-href="episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}">Next Episode</a>` : ""}
-        ${hasNextEpisode && isWebEpLimit() ? webWallHTML("You've played your free episode!") : ""}
+        ${hasNextEpisode && isWebEpLimit() ? webWallHTML("Yay! You've played an episode", theme.title, "episodes") : ""}
       </div>
     `;
   }

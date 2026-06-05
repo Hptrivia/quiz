@@ -414,7 +414,7 @@
         const tierText = getMarathonTier(state.score, pageQuestions.length);
         const hasNextPage = safePage < totalPages;
         const atLimit = typeof isWebQLimit === 'function' && isWebQLimit();
-        const wallHtml = typeof webWallHTML === 'function' ? webWallHTML("You've used your 30 free questions!") : "";
+        const wallHtml = typeof webWallHTML === 'function' ? webWallHTML("Yay! You've answered 30 questions") : "";
 
         resultBox.innerHTML =
           "<h2>Quiz Complete</h2>" +
@@ -601,7 +601,7 @@
         const hasNextRound = safeRound < totalRounds;
         const shareUrl = window.location.origin + window.location.pathname + "?themes=" + encodeURIComponent(themesParam) + "&mode=challenge&round=" + safeRound;
         const atLimit = typeof isWebQLimit === 'function' && isWebQLimit();
-        const wallHtml = typeof webWallHTML === 'function' ? webWallHTML("You've used your 30 free questions!") : "";
+        const wallHtml = typeof webWallHTML === 'function' ? webWallHTML("Yay! You've answered 30 questions") : "";
 
         resultBox.innerHTML =
           "<h2>Round " + safeRound + " Complete</h2>" +
