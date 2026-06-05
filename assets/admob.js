@@ -12,6 +12,33 @@ function isInApp() {
   return !!(window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative));
 }
 
+// Pings a Telegram bot the first time the app is ever opened on a device,
+// giving a near-real-time "new install" alert. Fires once per device (guarded
+// by localStorage), only inside the native app.
+const _INSTALL_PING = {
+  token: '7575210628:AAFFcH86Qzyr01drn4X3I-OCAZ4eNPN7Nj8',
+  chatId: '5039960902',
+};
+async function _pingNewInstall() {
+  if (!isInApp()) return;
+  if (localStorage.getItem('_installPinged')) return;
+  localStorage.setItem('_installPinged', '1'); // set first so a failure can't double-fire on retry
+  const platform = (window.Capacitor.getPlatform?.() || 'unknown');
+  const label = platform === 'ios' ? 'iOS' : platform === 'android' ? 'Android' : platform;
+  const text = `📲 New install — ${label}`;
+  try {
+    await fetch(`https://api.telegram.org/bot${_INSTALL_PING.token}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: _INSTALL_PING.chatId, text }),
+    });
+  } catch (e) {
+    // Network hiccup on first open — clear the flag so the next launch retries.
+    localStorage.removeItem('_installPinged');
+    console.warn('[install-ping] failed', e);
+  }
+}
+
 function isGamePage() {
   const path = window.location.pathname;
   return /\/(play|challenge|survival|episode|trivia-rush|versus|wordle|wordsearch|daily|daily-wordle)\.html$/.test(path);
@@ -221,6 +248,7 @@ function _watchResultScreens() {
 
 document.addEventListener('DOMContentLoaded', () => {
   if (isInApp()) {
+    _pingNewInstall();
     adMobInit();
     _watchResultScreens();
   } else {
@@ -228,6 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const retry = setInterval(() => {
       if (isInApp()) {
         clearInterval(retry);
+        _pingNewInstall();
         adMobInit();
         _watchResultScreens();
       }
