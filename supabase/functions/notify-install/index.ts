@@ -58,3 +58,4 @@ Deno.serve(async (req) => {
     headers: { ...CORS, "Content-Type": "application/json" },
   });
 });
+

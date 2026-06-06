@@ -150,7 +150,10 @@ async function adMobInit() {
     // starts (initialize() triggers MobileAds.start()).
     await _requestATT();
     await _AdMob.initialize({
-      initializeForTesting: ADMOB_TEST_MODE,
+      // Must be true for `testingDevices` to be applied (the plugin discards the
+      // list when this is false). This does NOT make real users see test ads —
+      // only the device IDs listed below get test ads; everyone else gets real ads.
+      initializeForTesting: true,
       testingDevices: ['26D6708FEB5BC4BACECD99956C13350E', 'F8913AC8-ADD9-4288-9400-793D409E2C2B'],
     });
     _adMobReady = true;
