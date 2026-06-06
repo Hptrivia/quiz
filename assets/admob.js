@@ -70,27 +70,6 @@ function getRoundStartParams() {
   return /\/(play|challenge|survival|episode|trivia-rush|mashup-trivia-rush|versus|wordle|wordsearch|mashup-play|daily|daily-wordle)\.html$/.test(path);
 }
 
-// === AD DEBUG OVERLAY (temporary — remove after verifying ads) ===
-function _adDbg(line) {
-  try {
-    let box = document.getElementById('_adDbgBox');
-    if (!box) {
-      box = document.createElement('div');
-      box.id = '_adDbgBox';
-      box.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:2147483647;background:rgba(0,0,0,.88);color:#0f0;font:12px/1.45 monospace;padding:6px 22px 6px 8px;max-height:48vh;overflow:auto;white-space:pre-wrap;border-bottom:2px solid #0f0';
-      const close = document.createElement('button');
-      close.textContent = '×';
-      close.style.cssText = 'position:fixed;top:2px;right:6px;z-index:2147483647;background:none;border:none;color:#f55;font-size:20px';
-      close.onclick = () => box.remove();
-      (document.body || document.documentElement).appendChild(box);
-      box.appendChild(close);
-    }
-    const t = new Date().toLocaleTimeString();
-    box.appendChild(Object.assign(document.createElement('div'), { textContent: `[${t}] ${line}` }));
-  } catch {}
-}
-// === END AD DEBUG ===
-
 let _AdMob = null;
 let _adMobReady = false;
 let _rewardedLoaded = false;
@@ -165,30 +144,16 @@ async function adMobInit() {
     // Safety net: never let the loader block the app, even if the ad hangs or fails.
     setTimeout(_removeLoader, 5000);
   }
-  _adDbg(`inApp=${isInApp()} platform=${window.Capacitor?.getPlatform?.()} plugin=${!!window.Capacitor?.Plugins?.AdMob}`);
-  _adDbg(`testMode=${ADMOB_TEST_MODE} bannerId=${ADMOB_IDS.banner}`);
   try {
     _AdMob = window.Capacitor.Plugins.AdMob;
-    // === AD DEBUG: report ad load/fail events (temporary) ===
-    _AdMob.addListener('bannerAdLoaded',           ()  => _adDbg('banner: LOADED ✓'));
-    _AdMob.addListener('bannerAdFailedToLoad',     (i) => _adDbg('banner: FAILED ' + JSON.stringify(i)));
-    _AdMob.addListener('interstitialAdLoaded',     ()  => _adDbg('interstitial: LOADED ✓'));
-    _AdMob.addListener('interstitialAdFailedToLoad',(i) => _adDbg('interstitial: FAILED ' + JSON.stringify(i)));
-    _AdMob.addListener('interstitialAdShowed',     ()  => _adDbg('interstitial: SHOWED ✓'));
-    _AdMob.addListener('interstitialAdFailedToShow',(i) => _adDbg('interstitial: failToShow ' + JSON.stringify(i)));
-    // === END AD DEBUG ===
     // Show the ATT prompt and wait for the user's choice BEFORE the ads SDK
     // starts (initialize() triggers MobileAds.start()).
     await _requestATT();
     await _AdMob.initialize({
-      // Must be true for `testingDevices` to be applied (the plugin discards the
-      // list when this is false). This does NOT make real users see test ads —
-      // only the device IDs listed below get test ads; everyone else gets real ads.
-      initializeForTesting: true,
+      initializeForTesting: ADMOB_TEST_MODE,
       testingDevices: ['26D6708FEB5BC4BACECD99956C13350E', 'F8913AC8-ADD9-4288-9400-793D409E2C2B'],
     });
     _adMobReady = true;
-    _adDbg('init: ok ✓');
     if (showInterstitialFirst) {
       try {
         await _AdMob.prepareInterstitial({ adId: ADMOB_IDS.interstitial });
@@ -204,7 +169,6 @@ async function adMobInit() {
     if (isGamePage()) adMobHideBanner(); else adMobShowBanner();
   } catch (e) {
     _removeLoader();
-    _adDbg('init FAILED: ' + (e?.message || JSON.stringify(e) || e));
     console.warn('[AdMob] init failed', e);
   }
 }
@@ -277,8 +241,7 @@ async function adMobShowInterstitial() {
 }
 
 async function adMobShowBanner() {
-  if (!_adMobReady) { _adDbg('showBanner skipped (not ready)'); return; }
-  _adDbg('showBanner() called');
+  if (!_adMobReady) return;
   try {
     await _AdMob.showBanner({
       adId: ADMOB_IDS.banner,
@@ -287,9 +250,7 @@ async function adMobShowBanner() {
       margin: 0,
     });
     document.body.classList.add('has-banner');
-    _adDbg('showBanner(): view created');
   } catch (e) {
-    _adDbg('banner error: ' + (e?.message || JSON.stringify(e) || e));
     console.warn('[AdMob] banner error', e);
   }
 }
