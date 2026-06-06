@@ -74,6 +74,26 @@ let _AdMob = null;
 let _adMobReady = false;
 let _rewardedLoaded = false;
 let _interstitialLoaded = false;
+let _attRequested = false;
+
+// App Tracking Transparency.
+// In @capacitor-community/admob v8 the `requestTrackingAuthorization: true`
+// option passed to initialize() is a NO-OP — initialize() only calls
+// MobileAds.start(). ATT must be requested explicitly via this dedicated
+// method, and it MUST happen before any tracking-capable data is collected
+// (i.e. before the ads SDK starts). iOS only; shows the system prompt once.
+async function _requestATT() {
+  if (_attRequested) return;
+  _attRequested = true;
+  if (!isInApp() || window.Capacitor.getPlatform?.() !== 'ios') return;
+  try {
+    const AdMob = window.Capacitor.Plugins.AdMob;
+    await AdMob.requestTrackingAuthorization();
+  } catch (e) {
+    _attRequested = false; // allow a retry if the call threw before prompting
+    console.warn('[AdMob] ATT request failed', e);
+  }
+}
 
 async function adMobInit() {
   if (!isInApp() || _adMobReady) return;
@@ -103,9 +123,11 @@ async function adMobInit() {
   }
   try {
     _AdMob = window.Capacitor.Plugins.AdMob;
+    // Show the ATT prompt and wait for the user's choice BEFORE the ads SDK
+    // starts (initialize() triggers MobileAds.start()).
+    await _requestATT();
     await _AdMob.initialize({
       initializeForTesting: ADMOB_TEST_MODE,
-      requestTrackingAuthorization: true,
       testingDevices: ['26D6708FEB5BC4BACECD99956C13350E', 'F8913AC8-ADD9-4288-9400-793D409E2C2B'],
     });
     _adMobReady = true;
@@ -267,19 +289,24 @@ function _watchResultScreens() {
   observer.observe(document.body, { childList: true, subtree: true });
 }
 
+async function _bootInApp() {
+  // ATT first: the prompt must appear before any data that could be used to
+  // track the user is collected (ads SDK start, IP-geolocated install ping).
+  await _requestATT();
+  _pingNewInstall();
+  adMobInit();
+  _watchResultScreens();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   if (isInApp()) {
-    _pingNewInstall();
-    adMobInit();
-    _watchResultScreens();
+    _bootInApp();
   } else {
     let tries = 0;
     const retry = setInterval(() => {
       if (isInApp()) {
         clearInterval(retry);
-        _pingNewInstall();
-        adMobInit();
-        _watchResultScreens();
+        _bootInApp();
       }
       else if (++tries > 25) clearInterval(retry);
     }, 200);
