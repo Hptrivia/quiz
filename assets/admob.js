@@ -88,7 +88,30 @@ async function _requestATT() {
   if (!isInApp() || window.Capacitor.getPlatform?.() !== 'ios') return;
   try {
     const AdMob = window.Capacitor.Plugins.AdMob;
+    // iOS only presents the ATT prompt while the app is foreground-active.
+    // On a cold launch the webview can run this a beat too early, so wait
+    // until the page is visible and give the launch transition a moment.
+    if (document.visibilityState !== 'visible') {
+      await new Promise((r) => {
+        const on = () => {
+          if (document.visibilityState === 'visible') {
+            document.removeEventListener('visibilitychange', on);
+            r();
+          }
+        };
+        document.addEventListener('visibilitychange', on);
+        on();
+      });
+    }
+    await new Promise((r) => setTimeout(r, 800));
     await AdMob.requestTrackingAuthorization();
+    // Surfaces the resulting status in the console for debugging (use Safari
+    // Web Inspector against the device). 0=notDetermined 1=restricted
+    // 2=denied 3=authorized.
+    try {
+      const s = await AdMob.trackingAuthorizationStatus();
+      console.log('[AdMob] ATT status', s);
+    } catch {}
   } catch (e) {
     _attRequested = false; // allow a retry if the call threw before prompting
     console.warn('[AdMob] ATT request failed', e);
