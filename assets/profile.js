@@ -601,7 +601,7 @@ function _injectWebBanner() {
   // wired via the `.web-wall-trigger` listener in _watchForQr().
   const banner = document.createElement('a');
   banner.className = 'android-cta-banner';
-  banner.innerHTML = '📱 Get 100+ questions for all themes <span class="cta-pill">Click to download the free app →</span>';
+  banner.textContent = '📱 Get 100+ questions for all themes — Click to download the free app →';
   // Navigate in the SAME tab (no target=_blank): more reliable than a new tab,
   // which strict private/incognito modes and in-app webviews often block.
   if (isIosWeb()) {
