@@ -557,7 +557,7 @@ function webWallHTML(msg, themeName, noun) {
       return `<div class="android-wall">
     <div class="android-wall-icon">📱</div>
     <h3>You've used today's ${_WEB_LIMITS.Q} free questions 🎉</h3>
-    <p>Come back tomorrow for ${_WEB_LIMITS.Q} more — or get unlimited access now.</p>
+    <p>${themeName ? `Come back tomorrow for more ${themeName} questions — or get unlimited access now.` : `Come back tomorrow for more questions — or get unlimited access now.`}</p>
     ${_webStoreLinksHTML()}
   </div>`;
     }
@@ -565,7 +565,7 @@ function webWallHTML(msg, themeName, noun) {
     return `<div class="android-wall">
     <div class="android-wall-icon">📱</div>
     <h3>You've played your ${_WEB_LIMITS.Q} free questions 🎉</h3>
-    <p>Download Trivia Gauntlet free for unlimited questions.</p>
+    <p>${themeName ? `Download Trivia Gauntlet free for more ${themeName} questions.` : `Download Trivia Gauntlet free for more questions.`}</p>
     ${_webStoreLinksHTML()}
   </div>`;
   }
