@@ -619,15 +619,21 @@ function webWallHTML(msg, themeName, noun) {
     <p class="wall-redirect-note">Taking you to the app in <span class="wall-redirect-count">4</span>…</p>
   </div>`;
   }
-  // Wordle / Word Search / Episode are lifetime limits — unchanged copy.
+  // Wordle / Word Search / Episode are lifetime limits — unchanged copy. Same
+  // mobile-web auto-redirect as the questions wall (armed by _watchForWallRedirect
+  // on the result screen; the page-load gate stays manual via the overlay guard).
   const moreLine = themeName
     ? `Download Trivia Gauntlet for more ${themeName} ${item}.`
     : `Download Trivia Gauntlet for more ${item}.`;
-  return `<div class="android-wall">
+  const redirectNote = _storeUrl()
+    ? `<p class="wall-redirect-note">Taking you to the app in <span class="wall-redirect-count">4</span>…</p>`
+    : '';
+  return `<div class="android-wall web-wall-redirect" data-store="${_storeUrl()}">
     <div class="android-wall-icon">📱</div>
     <h3>${msg || "Yay! You've finished this one 🎉"}</h3>
     <p>${moreLine}</p>
     ${_webStoreLinksHTML()}
+    ${redirectNote}
   </div>`;
 }
 
