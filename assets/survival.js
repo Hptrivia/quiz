@@ -180,7 +180,7 @@ async function renderMultiThemeSurvival() {
       <div class="cta-row">
         ${_survMashupAtLimit ? (typeof webWallHTML === 'function' ? webWallHTML("Yay! You've answered 30 questions") : '') : `<a class="primary-btn" href="survival.html?themes=${themesParam}">Play Again</a>`}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
-        ${!isPremiumUser() && !(typeof isInApp === 'function' && isInApp()) ? `<a class="secondary-btn" href="remove-ads.html">Unlimited Lifelines</a>` : ""}
+        ${!isPremiumUser() && (typeof isDesktopWeb === 'function' && isDesktopWeb()) ? `<a class="secondary-btn" href="remove-ads.html">Unlimited Lifelines</a>` : ""}
       </div>
       <div class="result-theme-search">
         <p class="result-theme-search-title">Try another theme</p>
@@ -471,7 +471,7 @@ async function renderSurvivalPage() {
       <div class="cta-row">
         ${_survAtLimit ? (typeof webWallHTML === 'function' ? webWallHTML("Yay! You've answered 30 questions", theme.title) : '') : `<a class="primary-btn" href="survival.html?theme=${theme.slug}">Play Again</a>`}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
-        ${!isPremiumUser() && !(typeof isInApp === 'function' && isInApp()) ? `<a class="secondary-btn" href="remove-ads.html?theme=${theme.slug}">Unlimited Lifelines</a>` : ""}
+        ${!isPremiumUser() && (typeof isDesktopWeb === 'function' && isDesktopWeb()) ? `<a class="secondary-btn" href="remove-ads.html?theme=${theme.slug}">Unlimited Lifelines</a>` : ""}
       </div>
       ${notifyHtml}
       <div class="result-theme-search">

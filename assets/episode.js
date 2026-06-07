@@ -105,7 +105,13 @@ async function renderEpisodePage() {
   let currentIndex = 0;
   let score = 0;
 
+  // Resume an in-progress episode (reuse the exact saved question set/order).
+  let _resume = (typeof _loadMidQuiz === 'function') ? _loadMidQuiz("episode", theme.slug, safeEpisode) : null;
+  const renderQuestions = _resume ? _resume.questions : episodeQuestions.map(q => shuffleQuestionOptions(q));
+  if (_resume) { score = _resume.score || 0; currentIndex = _resume.currentIndex; }
+
   function renderResult() {
+    if (typeof _clearMidQuiz === 'function') _clearMidQuiz("episode", theme.slug, safeEpisode);
     if (typeof webAddEp === 'function') webAddEp();
     gameBox.style.display = "none";
     resultBox.style.display = "block";
@@ -141,7 +147,7 @@ async function renderEpisodePage() {
   }
 
   // Pre-render all question slides
-  episodeQuestions.map(q => shuffleQuestionOptions(q)).forEach((q, index) => {
+  renderQuestions.forEach((q, index) => {
     const slide = document.createElement("div");
     slide.className = "question-slide";
     slide.dataset.index = index;
@@ -248,6 +254,7 @@ async function renderEpisodePage() {
       if (currentIndex >= episodeQuestions.length) {
         renderResult();
       } else {
+        if (typeof _saveMidQuiz === 'function') _saveMidQuiz("episode", theme.slug, safeEpisode, { questions: renderQuestions, currentIndex, score });
         showQuestion(currentIndex);
       }
     });
@@ -268,7 +275,7 @@ async function renderEpisodePage() {
     });
   }
 
-  showQuestion(0);
+  showQuestion(currentIndex);
 }
 
 document.addEventListener("DOMContentLoaded", () => {

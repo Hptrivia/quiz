@@ -436,6 +436,39 @@ function calcMashupTotalBatches(pools, batchSize) {
 }
 function injectMashupResultAd(container) {}
 
+// ── Mid-quiz resume ──────────────────────────────────────────────────────────
+// Long rounds (marathon = 30 questions, episode = 30+) are easy to lose on a
+// reload or app-close. These helpers persist the in-progress question set,
+// index and score so the round resumes where it stopped. Platform-agnostic
+// (works on web AND the native app — it's a UX feature, not a paywall).
+// Single-slot: only the most recent in-progress round is kept.
+const _MIDQUIZ_KEY = "tg_midquiz";
+function _midQuizId(mode, key, page) { return `${mode}::${key}::${page}`; }
+function _saveMidQuiz(mode, key, page, data) {
+  try {
+    localStorage.setItem(_MIDQUIZ_KEY, JSON.stringify({ id: _midQuizId(mode, key, page), ts: Date.now(), ...data }));
+  } catch (e) {}
+}
+function _loadMidQuiz(mode, key, page) {
+  try {
+    const raw = localStorage.getItem(_MIDQUIZ_KEY);
+    if (!raw) return null;
+    const d = JSON.parse(raw);
+    if (d.id !== _midQuizId(mode, key, page)) return null;
+    if (d.ts && Date.now() - d.ts > 7 * 864e5) { localStorage.removeItem(_MIDQUIZ_KEY); return null; } // expire after 7 days
+    if (!Array.isArray(d.questions) || !d.questions.length) return null;
+    if (!(d.currentIndex > 0 && d.currentIndex < d.questions.length)) return null;
+    return d;
+  } catch (e) { return null; }
+}
+function _clearMidQuiz(mode, key, page) {
+  try {
+    const raw = localStorage.getItem(_MIDQUIZ_KEY);
+    if (!raw) return;
+    if (JSON.parse(raw).id === _midQuizId(mode, key, page)) localStorage.removeItem(_MIDQUIZ_KEY);
+  } catch (e) {}
+}
+
 async function renderMultiThemeMarathon() {
   const params = new URLSearchParams(window.location.search);
   const slugs = (params.get("themes") || "").split(",").map(s => s.trim()).filter(Boolean);
@@ -490,12 +523,24 @@ async function renderMultiThemeMarathon() {
     pageQuestions = sliceFromMashupPools(pools, PAGE_SIZE, safePage - 1).map(q => shuffleQuestionOptions(q));
   }
 
+  // Resume an in-progress round (reuse the exact saved question set/order).
+  let _resume = isReplay ? null : _loadMidQuiz("marathon", mashupKey, safePage);
+  if (_resume) pageQuestions = _resume.questions;
+
   const themeScores = {};
   selectedThemes.forEach(t => { themeScores[t.slug] = { correct: 0, total: 0 }; });
   pageQuestions.forEach(q => { if (themeScores[q._themeSlug]) themeScores[q._themeSlug].total++; });
 
   let score = 0, currentIndex = 0, revealAnswers = false;
   const wrongQuestions = [];
+
+  if (_resume) {
+    score = _resume.score || 0;
+    currentIndex = _resume.currentIndex;
+    (_resume.wrongQuestions || []).forEach(q => wrongQuestions.push(q));
+    if (_resume.themeScores) for (const k in _resume.themeScores) if (themeScores[k]) themeScores[k] = _resume.themeScores[k];
+    scoreText.textContent = `Score: ${score}`;
+  }
 
   if (progressText) progressText.textContent = `Page ${safePage}`;
   if (nextPageLink) {
@@ -586,7 +631,10 @@ async function renderMultiThemeMarathon() {
     nextBtn.addEventListener("click", () => {
       currentIndex++;
       if (currentIndex >= pageQuestions.length) renderResult();
-      else showQuestion(currentIndex);
+      else {
+        _saveMidQuiz("marathon", mashupKey, safePage, { questions: pageQuestions, currentIndex, score, wrongQuestions, themeScores });
+        showQuestion(currentIndex);
+      }
     });
     slide.appendChild(qNum);
     slide.appendChild(makeMashupBadge(slug, colorBySlug, themeName));
@@ -600,6 +648,7 @@ async function renderMultiThemeMarathon() {
   slidesContainer.querySelectorAll(".question-slide").forEach(s => { s.style.display = "none"; });
 
   function renderResult() {
+    _clearMidQuiz("marathon", mashupKey, safePage);
     if (typeof webAddQ === 'function') webAddQ(pageQuestions.length);
     document.getElementById("quizBox").style.display = "none";
     resultBox.style.display = "block";
@@ -642,7 +691,7 @@ async function renderMultiThemeMarathon() {
         ${hasNextPage && !(typeof isWebQLimit === 'function' && isWebQLimit()) ? `<a class="primary-btn" href="play.html?themes=${themesParam}&page=${safePage + 1}" data-rewarded-href="play.html?themes=${themesParam}&page=${safePage + 1}">Next Round</a>` : ""}
         ${hasNextPage && (typeof isWebQLimit === 'function' && isWebQLimit()) ? (typeof webWallHTML === 'function' ? webWallHTML("Yay! You've answered 30 questions") : "") : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
-        ${!isPremiumUser() && !(typeof isInApp === 'function' && isInApp()) ? `<a class="secondary-btn" href="remove-ads.html">Buy me a coffee</a>` : ""}
+        ${!isPremiumUser() && (typeof isDesktopWeb === 'function' && isDesktopWeb()) ? `<a class="secondary-btn" href="remove-ads.html">Unlock Full Access</a>` : ""}
       </div>
       ${replayHtml}
       <div class="result-theme-search">
@@ -675,7 +724,7 @@ async function renderMultiThemeMarathon() {
     setTimeout(() => { if (typeof showInstallCard === "function") showInstallCard(); }, 800);
   }
 
-  if (!isReplay && currentPage === 1 && typeof getSession === "function") {
+  if (!_resume && !isReplay && currentPage === 1 && typeof getSession === "function") {
     const saved = getSession("marathon", mashupKey);
     if (saved && saved.round < totalPages) {
       document.getElementById("quizBox").style.display = "none";
@@ -706,6 +755,7 @@ async function renderMultiThemeMarathon() {
       document.getElementById("mashupMarathonRound1Btn").addEventListener("click", () => {
         if (typeof gtag === "function") gtag("event", "session_reset", { theme: mashupKey });
         if (typeof clearSession === "function") clearSession("marathon", mashupKey);
+        _clearMidQuiz("marathon", mashupKey, safePage);
         localStorage.removeItem("tg_replay");
         resultBox.style.display = "none";
         resultBox.innerHTML = "";
@@ -716,7 +766,7 @@ async function renderMultiThemeMarathon() {
     }
   }
 
-  showQuestion(0);
+  showQuestion(currentIndex);
 }
 
 async function renderPlayPage() {
@@ -777,10 +827,20 @@ async function renderPlayPage() {
   quizState.selectedAnswer = null;
   const wrongQuestions = [];
 
+  // Resume an in-progress round (reuse the exact saved question set/order).
+  let _resume = isReplay ? null : _loadMidQuiz("marathon", theme.slug, safePage);
+  if (_resume) {
+    quizState.questions = _resume.questions;
+    quizState.score = _resume.score || 0;
+    quizState.currentIndex = _resume.currentIndex;
+    (_resume.wrongQuestions || []).forEach(q => wrongQuestions.push(q));
+    scoreText.textContent = `Score: ${quizState.score}`;
+  }
+
   let revealAnswers = false;
   let showContinuePrompt = false;
 
-  if (!isReplay && currentPage === 1 && typeof getSession === "function") {
+  if (!_resume && !isReplay && currentPage === 1 && typeof getSession === "function") {
     const saved = getSession("marathon", theme.slug);
     if (saved && saved.round < totalPages) {
       showContinuePrompt = true;
@@ -818,6 +878,7 @@ async function renderPlayPage() {
       document.getElementById("startRound1Btn").addEventListener("click", () => {
         if (typeof gtag === "function") gtag("event", "session_reset", { theme: theme.slug });
         if (typeof clearSession === "function") clearSession("marathon", theme.slug);
+        _clearMidQuiz("marathon", theme.slug, safePage);
         localStorage.removeItem("tg_replay");
         resultBox.style.display = "none";
         resultBox.innerHTML = "";
@@ -957,6 +1018,7 @@ async function renderPlayPage() {
       if (quizState.currentIndex >= quizState.questions.length) {
         renderResult();
       } else {
+        _saveMidQuiz("marathon", theme.slug, safePage, { questions: quizState.questions, currentIndex: quizState.currentIndex, score: quizState.score, wrongQuestions });
         showQuestion(quizState.currentIndex);
       }
     });
@@ -976,6 +1038,7 @@ async function renderPlayPage() {
   }
 
 function renderResult() {
+  _clearMidQuiz("marathon", theme.slug, safePage);
   document.getElementById("quizBox").style.display = "none";
   resultBox.style.display = "block";
   resultBox.classList.remove("result-anim");
@@ -1026,7 +1089,7 @@ const relatedThemesHtml = `
       ${hasNextPage && !(typeof isWebQLimit === 'function' && isWebQLimit()) ? `<a class="primary-btn" href="play.html?theme=${theme.slug}&page=${safePage + 1}" data-rewarded-href="play.html?theme=${theme.slug}&page=${safePage + 1}">Next Round</a>` : ""}
       ${hasNextPage && (typeof isWebQLimit === 'function' && isWebQLimit()) ? (typeof webWallHTML === 'function' ? webWallHTML("Yay! You've answered 30 questions", theme.title) : "") : ""}
       <a class="secondary-btn" href="contact.html">Report a Question</a>
-      ${!isPremiumUser() && !(typeof isInApp === 'function' && isInApp()) ? `<a class="secondary-btn" href="remove-ads.html">Buy me a coffee</a>` : ""}
+      ${!isPremiumUser() && (typeof isDesktopWeb === 'function' && isDesktopWeb()) ? `<a class="secondary-btn" href="remove-ads.html">Unlock Full Access</a>` : ""}
     </div>
     ${replayHtml}
     ${notifyHtml}
@@ -1088,7 +1151,7 @@ if (resultSearchInput && resultSearchResults) {
 
 }
 
-  if (!showContinuePrompt) showQuestion(0);
+  if (!showContinuePrompt) showQuestion(quizState.currentIndex);
 }
 
 /* ---------------- NOTIFY CARD (inline, last round / new PB) ---------------- */
@@ -1167,16 +1230,5 @@ document.addEventListener("DOMContentLoaded", () => {
   if (page === "category") renderCategoryPage();
   if (page === "quiz") renderQuizPage();
   if (page === "play") renderPlayPage();
-
-  // Inject Buy Me a Coffee footer link on web only (not in app)
-  if (typeof isInApp === 'function' && !isInApp()) {
-    document.querySelectorAll('.footer-links').forEach(el => {
-      if (el.querySelector('a[href*="remove-ads"]')) return; // already there
-      const a = document.createElement('a');
-      a.href = 'remove-ads.html';
-      a.className = 'footer-highlight';
-      a.textContent = 'Buy me a coffee';
-      el.appendChild(a);
-    });
-  }
+  // (Footer "Unlock Full Access" link is injected site-wide from profile.js.)
 });

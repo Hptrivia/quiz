@@ -1,5 +1,93 @@
+// Full-access unlock via a monthly code (sold on Ko-fi). Entering a valid code
+// unlocks all questions + premium features for 30 days, after which it expires
+// and the user must re-subscribe. The code is rotated monthly (change VALID_CODE
+// each month) so any shared/leaked code only works until the next rotation.
+// (Ko-fi auto-renewing Memberships can replace the manual re-purchase later.)
+const VALID_CODE = "=z7.K[md4z7Q"; // ← rotate this every month
+const ACTIVATION_DAYS = 30;
+
+function formatExpiry(date) {
+  return date.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+}
+
+function initCoffeePage() {
+  const indicator = document.getElementById('premiumIndicator');
+  const activationSection = document.getElementById('activationSection');
+
+  if (isPremiumUser()) {
+    const expiry = new Date(localStorage.getItem('adsRemovedUntil'));
+    if (indicator) {
+      indicator.textContent = '✓ Full access active until ' + formatExpiry(expiry);
+      indicator.style.display = 'block';
+    }
+    if (activationSection) activationSection.style.display = 'none';
+    return;
+  }
+
+  const btn = document.getElementById('adFreeActivateBtn');
+  const input = document.getElementById('adFreeCodeInput');
+  const msg = document.getElementById('activationMsg');
+
+  if (!btn) return;
+
+  btn.addEventListener('click', function () {
+    const entered = input.value.trim();
+    if (entered === VALID_CODE) {
+      const expiry = new Date();
+      expiry.setDate(expiry.getDate() + ACTIVATION_DAYS);
+      localStorage.setItem('adsRemovedUntil', expiry.toISOString());
+      msg.textContent = 'Activated! Full access unlocked until ' + formatExpiry(expiry) + '.';
+      msg.className = 'activation-msg success';
+      setTimeout(function () { location.href = 'index.html'; }, 1800);
+    } else {
+      msg.textContent = 'Invalid code.';
+      msg.className = 'activation-msg error';
+    }
+  });
+}
+
+// Desktop-only "scan to get the free app" QR on the unlock page. (This page
+// doesn't load profile.js, so the QR is rendered self-contained here.)
+const _RA_APP_STORE  = "https://apps.apple.com/app/trivia-gauntlet/id6749189557";
+const _RA_PLAY_STORE = "https://play.google.com/store/apps/details?id=com.trivia.trivia_gauntlet";
+
+function _raIsDesktopWeb() {
+  const native = !!(window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative));
+  return !native && !/android|iphone|ipad|ipod/i.test(navigator.userAgent || "");
+}
+
+function initAppQr() {
+  if (!_raIsDesktopWeb()) return;
+  const wrap = document.getElementById("raAppQr");
+  if (!wrap) return;
+  const box = wrap.querySelector(".web-qr-box");
+  const url = location.origin + "/app.html";
+  box.dataset.qr = url;
+  wrap.style.display = "";
+
+  const fallback = () => {
+    box.innerHTML = `<a href="${_RA_APP_STORE}" target="_blank">App Store</a> · <a href="${_RA_PLAY_STORE}" target="_blank">Google Play</a>`;
+  };
+  const loadQr = window.qrcode
+    ? Promise.resolve()
+    : new Promise((res, rej) => {
+        const s = document.createElement("script");
+        s.src = "assets/qrcode.min.js";
+        s.onload = res; s.onerror = rej;
+        document.head.appendChild(s);
+      });
+  loadQr.then(() => {
+    try {
+      const qr = window.qrcode(0, "M");
+      qr.addData(url); qr.make();
+      box.innerHTML = qr.createSvgTag({ cellSize: 4, margin: 2, scalable: true });
+    } catch (e) { fallback(); }
+  }).catch(fallback);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   if (document.body.dataset.page === "remove-ads") {
-    // no-op: code activation removed
+    initCoffeePage();
+    initAppQr();
   }
 });

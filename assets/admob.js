@@ -1,12 +1,50 @@
-// AdMob — only active inside the Capacitor Android app
+// AdMob — only active inside the Capacitor native app
 
-const ADMOB_TEST_MODE = window.Capacitor?.getPlatform?.() === 'ios';
-
-const ADMOB_IDS = {
-  banner:       ADMOB_TEST_MODE ? 'ca-app-pub-3940256099942544/6300978111' : 'ca-app-pub-9506123851374920/2446089149',
-  interstitial: ADMOB_TEST_MODE ? 'ca-app-pub-3940256099942544/1033173712' : 'ca-app-pub-9506123851374920/5206994172',
-  rewarded:     ADMOB_TEST_MODE ? 'ca-app-pub-3940256099942544/5224354917' : 'ca-app-pub-9506123851374920/8819925805',
+// Per-platform ad mode. One switch per OS:
+//   'off'  — no ads at all. Use while a platform is still pending AdMob
+//            approval: the app runs completely ad-free (no "Test Ad"
+//            placeholders shown to real users).
+//   'test' — Google's sample/test ad units. Safe (no invalid-traffic risk),
+//            earns nothing, and every ad renders a visible "Test Ad" badge.
+//   'live' — your real production ad units (earns revenue). Only flip a
+//            platform to 'live' AFTER AdMob has approved that platform.
+//
+// iOS is 'off' until AdMob approves it. To go live on iOS:
+//   1. paste the real iOS ad unit IDs into _ADMOB_LIVE_IDS.ios below, then
+//   2. change ios: 'off' → 'live' here.
+const ADMOB_MODE_BY_PLATFORM = {
+  ios: 'off',
+  android: 'live',
 };
+const _ADMOB_PLATFORM = window.Capacitor?.getPlatform?.();
+const ADMOB_MODE = ADMOB_MODE_BY_PLATFORM[_ADMOB_PLATFORM] || 'off';
+const ADMOB_TEST_MODE = ADMOB_MODE === 'test';
+const ADMOB_ADS_ENABLED = ADMOB_MODE !== 'off';
+
+// Real production ad unit IDs, one set per platform (each platform is its own
+// AdMob app with its own unit IDs — never share IDs across platforms).
+const _ADMOB_LIVE_IDS = {
+  android: {
+    banner:       'ca-app-pub-9506123851374920/2446089149',
+    interstitial: 'ca-app-pub-9506123851374920/5206994172',
+    rewarded:     'ca-app-pub-9506123851374920/8819925805',
+  },
+  ios: {
+    // Filled in once AdMob approves iOS — paste the real iOS unit IDs here,
+    // then set ios: 'live' above. Left blank until then.
+    banner:       '',
+    interstitial: '',
+    rewarded:     '',
+  },
+};
+const _ADMOB_TEST_IDS = {
+  banner:       'ca-app-pub-3940256099942544/6300978111',
+  interstitial: 'ca-app-pub-3940256099942544/1033173712',
+  rewarded:     'ca-app-pub-3940256099942544/5224354917',
+};
+const ADMOB_IDS = ADMOB_TEST_MODE
+  ? _ADMOB_TEST_IDS
+  : (_ADMOB_LIVE_IDS[_ADMOB_PLATFORM] || _ADMOB_TEST_IDS);
 
 function isInApp() {
   return !!(window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative));
@@ -119,7 +157,7 @@ async function _requestATT() {
 }
 
 async function adMobInit() {
-  if (!isInApp() || _adMobReady) return;
+  if (!isInApp() || !ADMOB_ADS_ENABLED || _adMobReady) return;
   const _modeKey = (() => {
     const p = window.location.pathname;
     if (/\/wordsearch\//.test(p)) return '_iad_wordsearch';
@@ -280,7 +318,7 @@ function _offerRewardedLifeline(name, onEarned) {
 
 document.addEventListener('click', async (e) => {
   const btn = e.target.closest('[data-rewarded-href]');
-  if (!btn || !isInApp()) return;
+  if (!btn || !isInApp() || !ADMOB_ADS_ENABLED) return;
   e.preventDefault();
   const href = btn.dataset.rewardedHref;
   const label = btn.textContent.trim() || 'the next round';
@@ -313,12 +351,18 @@ function _watchResultScreens() {
 }
 
 async function _bootInApp() {
-  // ATT first: the prompt must appear before any data that could be used to
-  // track the user is collected (ads SDK start, IP-geolocated install ping).
-  await _requestATT();
+  if (ADMOB_ADS_ENABLED) {
+    // ATT first: the prompt must appear before any data that could be used to
+    // track the user is collected (ads SDK start, IP-geolocated install ping).
+    await _requestATT();
+  }
+  // Install ping always fires (it's our own install analytics, not ad tracking).
   _pingNewInstall();
-  adMobInit();
-  _watchResultScreens();
+  // With ads off (platform pending approval) the app stays fully ad-free.
+  if (ADMOB_ADS_ENABLED) {
+    adMobInit();
+    _watchResultScreens();
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {

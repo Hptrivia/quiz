@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <link rel="manifest" href="/manifest.json" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Buy Me a Coffee | Trivia Gauntlet</title>
+  <title>Unlock Full Access | Trivia Gauntlet</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -19,17 +19,40 @@
     <a href="index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
 
     <section class="panel">
-      <h1>Buy Me a Coffee</h1>
+      <h1>Unlock Full Access</h1>
+
+      <p id="premiumIndicator" style="display:none;color:#4ade80;font-weight:600;margin-bottom:14px;"></p>
 
       <p>
-        Trivia Gauntlet is free to play and always will be. If you've had fun playing — whether it's a late-night quiz session, testing your knowledge on your favourite show, or competing with friends — buying me a coffee is a simple way to say thanks.
+        Play without limits on this browser — every question in every theme, plus premium extras across all game modes. Just <strong>$2.99/month</strong>, or grab the free app instead and play unlimited there.
       </p>
-      <p>
-        Every little bit helps with server costs and keeps the site running and growing. No subscription, no pressure — just a small gesture if you feel like it.
-      </p>
+
+      <ul class="benefits-list">
+        <li>Unlimited questions across all themes &amp; categories</li>
+        <li>Unlimited Wordle, Word Search and Episodes</li>
+        <li>Unlimited lifelines in Survival Mode</li>
+        <li>Answers shown after every wrong answer in Challenge &amp; Marathon</li>
+        <li>Reveal answers toggle in Versus Mode</li>
+        <li>Works on any device — just enter your code</li>
+      </ul>
 
       <div class="cta-row">
-        <a class="primary-btn" href="https://ko-fi.com/triviaking" target="_blank" rel="noopener noreferrer">Buy Me a Coffee ☕</a>
+        <a class="primary-btn" href="https://ko-fi.com/s/d1c9104d3b" target="_blank" rel="noopener noreferrer">Subscribe — $2.99/month</a>
+      </div>
+
+      <div id="raAppQr" class="web-qr ra-app-qr" style="display:none">
+        <div class="web-or"><span>or get the free app</span></div>
+        <div class="web-qr-box" data-qr="">…</div>
+        <p class="web-qr-cap">📱 Scan with your phone camera to download free</p>
+      </div>
+
+      <div id="activationSection" class="already-have-code">
+        <p>Already subscribed? Enter your code:</p>
+        <div class="code-input-row">
+          <input type="text" id="adFreeCodeInput" placeholder="Enter your code" />
+          <button class="secondary-btn" id="adFreeActivateBtn">Activate</button>
+        </div>
+        <p id="activationMsg" class="activation-msg"></p>
       </div>
     </section>
   </main>
@@ -48,5 +71,6 @@
   </footer>
 
   <script src="assets/app.js"></script>
+  <script src="assets/remove-ads.js"></script>
 </body>
 </html>

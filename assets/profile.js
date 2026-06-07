@@ -357,17 +357,28 @@ function maybeShowProfileOnboarding() {
 
 document.addEventListener("DOMContentLoaded", injectAvatarNav);
 
-// ── Android Web Question Limit ───────────────────────────────────────────────
+// ── Web Question Limit (Android, iOS, Desktop) ───────────────────────────────
 
 const _PLAY_STORE = 'https://play.google.com/store/apps/details?id=com.trivia.trivia_gauntlet';
+const _APP_STORE  = 'https://apps.apple.com/app/trivia-gauntlet/id6749189557';
 const _WEB_LIMITS = { Q: 30, Wordle: 2, WS: 1, Ep: 1 };
 
-function isAndroidWeb() {
-  return /android/i.test(navigator.userAgent)
-    && !(window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative));
-}
+const _isNative = !!(window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative));
 
-if (window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative)) {
+function isAndroidWeb() { return /android/i.test(navigator.userAgent) && !_isNative; }
+function isIosWeb()     { return /iphone|ipad|ipod/i.test(navigator.userAgent) && !_isNative; }
+function isDesktopWeb() { return !_isNative && !/android|iphone|ipad|ipod/i.test(navigator.userAgent); }
+// Self-contained premium check (mirrors app.js's isPremiumUser so the gate works
+// even on pages that don't load app.js). A valid unlock code sets this expiry.
+function _isPremium() {
+  const e = localStorage.getItem('adsRemovedUntil');
+  return !!e && new Date(e) > new Date();
+}
+// Any browser visitor (not the native app) is subject to the free-play limit —
+// unless they've unlocked full access with a code.
+function isLimitedWeb() { return !_isNative && !_isPremium(); }
+
+if (_isNative) {
   document.body.classList.add('in-app');
   const _p = window.location.pathname;
   const _isGamePage = /\/(play|challenge|survival|episode|trivia-rush|versus|wordle|wordsearch|mashup-play|mashup-trivia-rush)\.html$/.test(_p)
@@ -375,30 +386,163 @@ if (window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacit
   if (!_isGamePage) document.body.classList.add('has-banner');
 }
 
-function _webCount(key)     { return parseInt(localStorage.getItem('tgWeb' + key) || '0'); }
-function _addWebCount(key, n) { if (isAndroidWeb()) localStorage.setItem('tgWeb' + key, _webCount(key) + (n || 1)); }
+// Questions reset DAILY (build a return habit); Wordle/Word Search/Episode stay
+// lifetime. For a daily key, the count is zeroed the first time it's touched on
+// a new calendar day.
+const _DAILY_KEYS = { Q: true };
+function _todayStr() { return new Date().toISOString().split('T')[0]; }
+function _maybeDailyReset(key) {
+  if (!_DAILY_KEYS[key]) return;
+  const dk = 'tgWeb' + key + 'Date';
+  const today = _todayStr();
+  if (localStorage.getItem(dk) !== today) {
+    localStorage.setItem('tgWeb' + key, '0');
+    localStorage.setItem(dk, today);
+  }
+}
+
+function _webCount(key)     { _maybeDailyReset(key); return parseInt(localStorage.getItem('tgWeb' + key) || '0'); }
+function _addWebCount(key, n) { if (isLimitedWeb()) localStorage.setItem('tgWeb' + key, _webCount(key) + (n || 1)); }
 
 function webAddQ(n)     { _addWebCount('Q', n); }
 function webAddWordle() { _addWebCount('Wordle', 1); }
 function webAddWS()     { _addWebCount('WS', 1); }
 function webAddEp()     { _addWebCount('Ep', 1); }
 
-function isWebQLimit()      { return isAndroidWeb() && _webCount('Q')      >= _WEB_LIMITS.Q; }
-function isWebWordleLimit() { return isAndroidWeb() && _webCount('Wordle') >= _WEB_LIMITS.Wordle; }
-function isWebWSLimit()     { return isAndroidWeb() && _webCount('WS')     >= _WEB_LIMITS.WS; }
-function isWebEpLimit()     { return isAndroidWeb() && _webCount('Ep')     >= _WEB_LIMITS.Ep; }
+function isWebQLimit()      { return isLimitedWeb() && _webCount('Q')      >= _WEB_LIMITS.Q; }
+function isWebWordleLimit() { return isLimitedWeb() && _webCount('Wordle') >= _WEB_LIMITS.Wordle; }
+function isWebWSLimit()     { return isLimitedWeb() && _webCount('WS')     >= _WEB_LIMITS.WS; }
+function isWebEpLimit()     { return isLimitedWeb() && _webCount('Ep')     >= _WEB_LIMITS.Ep; }
 function webQUsed()         { return _webCount('Q'); }
+
+// Store call-to-action for the paywall, tailored to the visitor's platform.
+// Mobile users (already on a phone) get a one-tap store button. Desktop users
+// can't install a phone app from their browser, so they get a QR code instead —
+// they scan it with their phone and land on the right store. The QR points at
+// /app.html, which redirects iPhones → App Store and Android → Play Store.
+const _APP_REDIRECT = '/app.html';
+function _appUrl() { return location.origin + _APP_REDIRECT; }
+
+function _webStoreLinksHTML() {
+  if (isAndroidWeb()) return `<a href="${_PLAY_STORE}" class="primary-btn" target="_blank">Get the free app</a>`;
+  if (isIosWeb())     return `<a href="${_APP_STORE}"  class="primary-btn" target="_blank">Get the free app</a>`;
+  // Desktop / unknown: a compact button opens the QR in an overlay (keeps the
+  // inline wall small), OR pay to unlock all questions right here on desktop.
+  return `<button type="button" class="primary-btn web-qr-trigger" data-qr="${_appUrl()}">📱 Get the free app</button>
+  <div class="web-or"><span>or</span></div>
+  <a href="/remove-ads.html" class="primary-btn web-unlock-btn">Unlock all questions here</a>`;
+}
+
+// QR rendering — the library (assets/qrcode.min.js) is only fetched the first
+// time a desktop paywall actually appears, so it never loads on normal pages.
+let _qrLibLoading = null;
+function _loadQrLib() {
+  if (window.qrcode) return Promise.resolve();
+  if (_qrLibLoading) return _qrLibLoading;
+  _qrLibLoading = new Promise((resolve, reject) => {
+    const s = document.createElement('script');
+    s.src = '/assets/qrcode.min.js';
+    s.onload = resolve;
+    s.onerror = reject;
+    document.head.appendChild(s);
+  });
+  return _qrLibLoading;
+}
+
+function _renderQr(box) {
+  if (box._qrDone) return;
+  box._qrDone = true;
+  const url = box.dataset.qr;
+  const fallback = () => {
+    box.innerHTML = `<a href="${_APP_STORE}" target="_blank">App Store</a> · <a href="${_PLAY_STORE}" target="_blank">Google Play</a>`;
+  };
+  _loadQrLib().then(() => {
+    try {
+      const qr = window.qrcode(0, 'M');
+      qr.addData(url);
+      qr.make();
+      box.innerHTML = qr.createSvgTag({ cellSize: 4, margin: 2, scalable: true });
+    } catch (e) { fallback(); }
+  }).catch(fallback);
+}
+
+// QR shown on demand in a dismissible overlay (keeps the inline wall compact).
+function _openQrOverlay(url) {
+  if (document.querySelector('.qr-overlay')) return;
+  const overlay = document.createElement('div');
+  overlay.className = 'qr-overlay';
+  overlay.innerHTML = `
+    <div class="qr-overlay-card">
+      <button type="button" class="qr-overlay-close" aria-label="Close">✕</button>
+      <h3>Get the free app</h3>
+      <div class="web-qr-box" data-qr="${url}">…</div>
+      <p class="web-qr-cap">📱 Scan with your phone camera to download free</p>
+    </div>`;
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay || e.target.closest('.qr-overlay-close')) overlay.remove();
+  });
+  document.body.appendChild(overlay);
+  _renderQr(overlay.querySelector('.web-qr-box'));
+}
+
+// Walls are injected from several places (result screens, modals…), so watch
+// the DOM and fill any QR placeholder as soon as it mounts. Also wire the
+// "Get the free app" buttons to open the QR overlay.
+function _watchForQr() {
+  if (!isDesktopWeb()) return;
+  const scan = (root) => root.querySelectorAll?.('.web-qr-box[data-qr]').forEach(_renderQr);
+  scan(document);
+  new MutationObserver((mutations) => {
+    for (const m of mutations) {
+      for (const n of m.addedNodes) {
+        if (n.nodeType !== 1) continue;
+        if (n.matches?.('.web-qr-box[data-qr]')) _renderQr(n);
+        else scan(n);
+      }
+    }
+  }).observe(document.body, { childList: true, subtree: true });
+  document.addEventListener('click', (e) => {
+    const t = e.target.closest?.('.web-qr-trigger');
+    if (t) { e.preventDefault(); _openQrOverlay(t.dataset.qr || _appUrl()); }
+  });
+}
+
+// "Unlock Full Access" footer link — desktop web only, non-premium, site-wide
+// (lives here in profile.js, which loads on every page, so every footer gets it).
+function _injectFooterUnlock() {
+  if (!isDesktopWeb() || _isPremium()) return;
+  if (/\/remove-ads\.html$/.test(window.location.pathname)) return;
+  document.querySelectorAll('.footer-links').forEach(el => {
+    if (el.querySelector('a[href*="remove-ads"]')) return;
+    const a = document.createElement('a');
+    a.href = '/remove-ads.html';
+    a.className = 'footer-highlight';
+    a.textContent = 'Unlock Full Access';
+    el.appendChild(a);
+  });
+}
 
 function webWallHTML(msg, themeName, noun) {
   const item = noun || 'questions';
+  // Questions are a DAILY allowance — the wall reflects that they reset tomorrow.
+  // (All callers pass the same "questions" message, so we override it centrally.)
+  if (item === 'questions') {
+    return `<div class="android-wall">
+    <div class="android-wall-icon">📱</div>
+    <h3>You've used today's ${_WEB_LIMITS.Q} free questions 🎉</h3>
+    <p>Come back tomorrow for ${_WEB_LIMITS.Q} more — or get unlimited access now.</p>
+    ${_webStoreLinksHTML()}
+  </div>`;
+  }
+  // Wordle / Word Search / Episode are lifetime limits — unchanged copy.
   const moreLine = themeName
-    ? `Download the app for more ${themeName} ${item}.`
-    : `Download the app for more ${item}.`;
+    ? `Download Trivia Gauntlet free for more ${themeName} ${item}.`
+    : `Download Trivia Gauntlet free for more ${item}.`;
   return `<div class="android-wall">
     <div class="android-wall-icon">📱</div>
-    <h3>${msg || "Yay! You've answered 30 questions"}</h3>
+    <h3>${msg || "Yay! You've finished this one 🎉"}</h3>
     <p>${moreLine}</p>
-    <a href="${_PLAY_STORE}" class="primary-btn" target="_blank">Get the App</a>
+    ${_webStoreLinksHTML()}
   </div>`;
 }
 
@@ -406,8 +550,8 @@ function webQCounterHTML() {
   return '';
 }
 
-function _injectAndroidBanner() {
-  if (!isAndroidWeb()) return;
+function _injectWebBanner() {
+  if (!isLimitedWeb()) return;
   const path = window.location.pathname;
   const isLobby = path.endsWith('/index.html') || path === '/' || path.endsWith('/index')
     || path.endsWith('/category.html')
@@ -417,14 +561,15 @@ function _injectAndroidBanner() {
   if (!isLobby) return;
   const banner = document.createElement('div');
   banner.className = 'android-cta-banner';
-  banner.innerHTML = `📱 Get 100+ questions for all themes on the <a href="${_PLAY_STORE}" target="_blank">free Android app</a>`;
+  // Informational only — no embedded store links on any platform.
+  banner.textContent = '📱 Get 100+ questions for all themes — download Trivia Gauntlet free on iOS or Android';
   const anchor = document.querySelector('.homepage-intro') || document.querySelector('main');
   if (anchor && anchor.classList.contains('homepage-intro')) anchor.before(banner);
   else if (anchor) anchor.prepend(banner);
 }
 
 function _checkWebPageWall() {
-  if (!isAndroidWeb()) return;
+  if (!isLimitedWeb()) return;
   const path = window.location.pathname;
   let msg = null;
   let noun = 'questions';
@@ -446,7 +591,24 @@ function _checkWebPageWall() {
   document.body.appendChild(overlay);
 }
 
+// On theme pages, add an "Unlock Full Access" card as the last game-mode card —
+// desktop web only, hidden for premium users.
+function _injectThemeUnlockCard() {
+  if (!isDesktopWeb() || _isPremium()) return;
+  if (!/\/themes\//.test(window.location.pathname)) return;
+  const grid = document.querySelector('.panel .grid') || document.querySelector('.grid');
+  if (!grid || grid.querySelector('.unlock-card')) return;
+  const card = document.createElement('a');
+  card.className = 'card unlock-card';
+  card.href = '/remove-ads.html';
+  card.innerHTML = `<h3>Unlock Full Access</h3><p>Unlimited questions + reveal answers &amp; lifelines</p>`;
+  grid.appendChild(card);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-  _injectAndroidBanner();
+  _injectWebBanner();
   _checkWebPageWall();
+  _watchForQr();
+  _injectThemeUnlockCard();
+  _injectFooterUnlock();
 });
