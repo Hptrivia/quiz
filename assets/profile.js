@@ -425,6 +425,14 @@ function webQUsed()         { return _webCount('Q'); }
 const _APP_REDIRECT = '/app.html';
 function _appUrl() { return location.origin + _APP_REDIRECT; }
 
+// The visitor's store URL on mobile web (empty elsewhere — desktop can't install
+// a phone app, so it never auto-redirects).
+function _storeUrl() {
+  if (isAndroidWeb()) return _PLAY_STORE;
+  if (isIosWeb())     return _APP_STORE;
+  return '';
+}
+
 function _webStoreLinksHTML() {
   if (isAndroidWeb()) return `<a href="${_PLAY_STORE}" class="primary-btn" target="_blank">Get the free app</a>`;
   if (isIosWeb())     return `<a href="${_APP_STORE}"  class="primary-btn" target="_blank">Get the free app</a>`;
@@ -532,6 +540,39 @@ function _watchForQr() {
   });
 }
 
+// Mobile web only: when a question-limit wall mounts (e.g. end of marathon at 30),
+// count down a few seconds so the player sees their score/rank, then send them to
+// the app store. Most cold Reddit traffic won't tap a button, so we flip the
+// default from opt-in to opt-out — they can still tap the button early, or leave.
+function _watchForWallRedirect() {
+  if (!isIosWeb() && !isAndroidWeb()) return;
+  const arm = (el) => {
+    if (el._redirectArmed) return;
+    el._redirectArmed = true;
+    const url = el.dataset.store;
+    if (!url) return;
+    const countEl = el.querySelector('.wall-redirect-count');
+    let n = 4;
+    const tick = () => {
+      if (countEl) countEl.textContent = n;
+      if (n <= 0) { window.location.href = url; return; }
+      n--; setTimeout(tick, 1000);
+    };
+    tick();
+  };
+  const scan = (root) => root.querySelectorAll?.('.web-wall-redirect[data-store]').forEach(arm);
+  scan(document);
+  new MutationObserver((mutations) => {
+    for (const m of mutations) {
+      for (const n of m.addedNodes) {
+        if (n.nodeType !== 1) continue;
+        if (n.matches?.('.web-wall-redirect[data-store]')) arm(n);
+        else scan(n);
+      }
+    }
+  }).observe(document.body, { childList: true, subtree: true });
+}
+
 // "Unlock Full Access" footer link — desktop web only, non-premium, site-wide
 // (lives here in profile.js, which loads on every page, so every footer gets it).
 function _injectFooterUnlock() {
@@ -556,23 +597,27 @@ function webWallHTML(msg, themeName, noun) {
     if (isDesktopWeb()) {
       return `<div class="android-wall">
     <div class="android-wall-icon">📱</div>
-    <h3>You've used today's ${_WEB_LIMITS.Q} free questions 🎉</h3>
+    <h3>You've used today's ${_WEB_LIMITS.Q} questions 🎉</h3>
     <p>${themeName ? `Come back tomorrow for more ${themeName} questions — or get unlimited access now.` : `Come back tomorrow for more questions — or get unlimited access now.`}</p>
     ${_webStoreLinksHTML()}
   </div>`;
     }
-    // iOS / Android web: a one-time 30-question taster — get the free app to keep going.
-    return `<div class="android-wall">
+    // iOS / Android web: a one-time 30-question taster — get the free app to keep
+    // going. Also auto-redirects to the store after a few seconds (armed by
+    // _watchForWallRedirect via the `web-wall-redirect` class); the button stays
+    // as a manual tap in case they want to go immediately.
+    return `<div class="android-wall web-wall-redirect" data-store="${_storeUrl()}">
     <div class="android-wall-icon">📱</div>
-    <h3>You've played your ${_WEB_LIMITS.Q} free questions 🎉</h3>
-    <p>${themeName ? `Download Trivia Gauntlet free for more ${themeName} questions.` : `Download Trivia Gauntlet free for more questions.`}</p>
+    <h3>You've played your ${_WEB_LIMITS.Q} questions 🎉</h3>
+    <p>${themeName ? `Download Trivia Gauntlet for more ${themeName} questions.` : `Download Trivia Gauntlet for more questions.`}</p>
     ${_webStoreLinksHTML()}
+    <p class="wall-redirect-note">Taking you to the app in <span class="wall-redirect-count">4</span>…</p>
   </div>`;
   }
   // Wordle / Word Search / Episode are lifetime limits — unchanged copy.
   const moreLine = themeName
-    ? `Download Trivia Gauntlet free for more ${themeName} ${item}.`
-    : `Download Trivia Gauntlet free for more ${item}.`;
+    ? `Download Trivia Gauntlet for more ${themeName} ${item}.`
+    : `Download Trivia Gauntlet for more ${item}.`;
   return `<div class="android-wall">
     <div class="android-wall-icon">📱</div>
     <h3>${msg || "Yay! You've finished this one 🎉"}</h3>
@@ -658,6 +703,7 @@ document.addEventListener('DOMContentLoaded', () => {
   _injectWebBanner();
   _checkWebPageWall();
   _watchForQr();
+  _watchForWallRedirect();
   _injectThemeUnlockCard();
   _injectFooterUnlock();
 });
