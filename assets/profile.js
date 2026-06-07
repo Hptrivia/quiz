@@ -548,6 +548,11 @@ function _watchForWallRedirect() {
   if (!isIosWeb() && !isAndroidWeb()) return;
   const arm = (el) => {
     if (el._redirectArmed) return;
+    // Only the end-of-game result wall auto-redirects. The same wall is also used
+    // as a full-screen gate when browsing INTO a locked page (_checkWebPageWall),
+    // wrapped in .android-wall-overlay — leave those a manual choice so exploring
+    // related quizzes doesn't fire you off to the store on every page load.
+    if (el.closest('.android-wall-overlay')) return;
     el._redirectArmed = true;
     const url = el.dataset.store;
     if (!url) return;
