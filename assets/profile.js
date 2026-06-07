@@ -601,7 +601,7 @@ function _injectWebBanner() {
   // wired via the `.web-wall-trigger` listener in _watchForQr().
   const banner = document.createElement('a');
   banner.className = 'android-cta-banner';
-  banner.textContent = '📱 Get 100+ questions for all themes — download the free app';
+  banner.innerHTML = '📱 Get 100+ questions for all themes <span class="cta-pill">Click to download the free app →</span>';
   if (isIosWeb()) {
     banner.href = _APP_STORE; banner.target = '_blank';
   } else if (isAndroidWeb()) {

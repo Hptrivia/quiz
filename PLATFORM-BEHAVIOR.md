@@ -43,7 +43,7 @@ All gating lives behind `isLimitedWeb()`. Unlocking full access (a valid code) f
 
 | Surface | iOS app | Android app | iOS web | Android web | Desktop web |
 |---|---|---|---|---|---|
-| **CTA banner** (lobby pages only) — whole banner clickable, copy = "download the free app" | ❌ none | ❌ none | ✅ tap → App Store | ✅ tap → Google Play | ✅ click → same end-of-game wall card (QR + "Unlock all questions"), dismissible |
+| **CTA banner** (lobby pages only) — whole banner clickable, copy = "📱 Get 100+ questions for all themes · [Click to download the free app →]" (blue pill) | ❌ none | ❌ none | ✅ tap → App Store | ✅ tap → Google Play | ✅ click → same end-of-game wall card (QR + "Unlock all questions"), dismissible |
 | **Theme-page Unlock card** (last grid card) | ❌ | ❌ | ❌ | ❌ | ✅ (non-premium) |
 | **Footer "Unlock Full Access" link** | ❌ | ❌ | ❌ | ❌ | ✅ (non-premium, all pages except remove-ads) |
 | **AdMob banner on lobby pages** | ❌ (ads off) | ✅ bottom banner | ❌ | ❌ | ❌ |
