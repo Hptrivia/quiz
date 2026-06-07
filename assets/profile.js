@@ -556,10 +556,16 @@ function _watchForWallRedirect() {
     el._redirectArmed = true;
     const url = el.dataset.store;
     if (!url) return;
-    const countEl = el.querySelector('.wall-redirect-count');
+    // Inject the countdown line only now, so it never lingers on walls that don't
+    // actually redirect (e.g. the page-load gate, which bails out above).
+    const note = document.createElement('p');
+    note.className = 'wall-redirect-note';
+    note.innerHTML = 'Taking you to the app in <span class="wall-redirect-count">4</span>…';
+    el.appendChild(note);
+    const countEl = note.querySelector('.wall-redirect-count');
     let n = 4;
     const tick = () => {
-      if (countEl) countEl.textContent = n;
+      countEl.textContent = n;
       if (n <= 0) { window.location.href = url; return; }
       n--; setTimeout(tick, 1000);
     };
@@ -608,32 +614,28 @@ function webWallHTML(msg, themeName, noun) {
   </div>`;
     }
     // iOS / Android web: a one-time 30-question taster — get the free app to keep
-    // going. Also auto-redirects to the store after a few seconds (armed by
-    // _watchForWallRedirect via the `web-wall-redirect` class); the button stays
-    // as a manual tap in case they want to go immediately.
+    // going. Auto-redirects to the store after a few seconds — but only on the
+    // result screen: _watchForWallRedirect arms it (skipping the .android-wall-overlay
+    // page-load gate) and INJECTS the "Taking you to the app…" countdown itself, so
+    // the note only ever shows where a redirect is genuinely happening.
     return `<div class="android-wall web-wall-redirect" data-store="${_storeUrl()}">
     <div class="android-wall-icon">📱</div>
     <h3>You've played your ${_WEB_LIMITS.Q} questions 🎉</h3>
     <p>${themeName ? `Download Trivia Gauntlet for more ${themeName} questions.` : `Download Trivia Gauntlet for more questions.`}</p>
     ${_webStoreLinksHTML()}
-    <p class="wall-redirect-note">Taking you to the app in <span class="wall-redirect-count">4</span>…</p>
   </div>`;
   }
   // Wordle / Word Search / Episode are lifetime limits — unchanged copy. Same
-  // mobile-web auto-redirect as the questions wall (armed by _watchForWallRedirect
-  // on the result screen; the page-load gate stays manual via the overlay guard).
+  // mobile-web auto-redirect as the questions wall (armed + countdown injected by
+  // _watchForWallRedirect on the result screen; page-load gate stays manual).
   const moreLine = themeName
     ? `Download Trivia Gauntlet for more ${themeName} ${item}.`
     : `Download Trivia Gauntlet for more ${item}.`;
-  const redirectNote = _storeUrl()
-    ? `<p class="wall-redirect-note">Taking you to the app in <span class="wall-redirect-count">4</span>…</p>`
-    : '';
   return `<div class="android-wall web-wall-redirect" data-store="${_storeUrl()}">
     <div class="android-wall-icon">📱</div>
     <h3>${msg || "Yay! You've finished this one 🎉"}</h3>
     <p>${moreLine}</p>
     ${_webStoreLinksHTML()}
-    ${redirectNote}
   </div>`;
 }
 

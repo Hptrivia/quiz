@@ -456,6 +456,21 @@ async function renderWordleMashupMode(themesParam) {
   });
 
   nextBtn.addEventListener("click", () => {
+    // Web question limit: the persistent nav must respect it too, not just the
+    // in-panel "Next Word" button — otherwise the nav arrow walks past the wall.
+    // Shown inline (not as an overlay) so the mobile auto-redirect still arms.
+    if (typeof isWebWordleLimit === 'function' && isWebWordleLimit()) {
+      const old = document.getElementById("wordleResultPanel");
+      if (old) old.remove();
+      const wall = document.createElement("div");
+      wall.id = "wordleResultPanel";
+      wall.className = "wordle-result-panel";
+      wall.innerHTML = `<div class="cta-row" style="justify-content:center;">${typeof webWallHTML === 'function' ? webWallHTML("Yay! You've played 2 Wordle words", null, "Wordles") : ""}</div>`;
+      boardEl.style.display = "none";
+      keyboardEl.style.display = "none";
+      feedbackEl.after(wall);
+      return;
+    }
     const wordNum = pageStart + currentWordInPage + 1;
     const hasNext = currentWordInPage < pageWords.length - 1 || safePage < totalPages;
     const advance = () => {
@@ -1074,6 +1089,21 @@ async function renderWordlePage() {
   });
 
   nextBtn.addEventListener("click", () => {
+    // Web question limit: the persistent nav must respect it too, not just the
+    // in-panel "Next Word" button — otherwise the nav arrow walks past the wall.
+    // Shown inline (not as an overlay) so the mobile auto-redirect still arms.
+    if (typeof isWebWordleLimit === 'function' && isWebWordleLimit()) {
+      const old = document.getElementById("wordleResultPanel");
+      if (old) old.remove();
+      const wall = document.createElement("div");
+      wall.id = "wordleResultPanel";
+      wall.className = "wordle-result-panel";
+      wall.innerHTML = `<div class="cta-row" style="justify-content:center;">${typeof webWallHTML === 'function' ? webWallHTML("Yay! You've played 2 Wordle words", null, "Wordles") : ""}</div>`;
+      boardEl.style.display = "none";
+      keyboardEl.style.display = "none";
+      feedbackEl.after(wall);
+      return;
+    }
     const wordNum = pageStart + currentWordInPage + 1;
     const hasNext = currentWordInPage < pageWords.length - 1 || safePage < totalPages;
     const advance = () => {
