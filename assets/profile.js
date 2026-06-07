@@ -386,13 +386,15 @@ if (_isNative) {
   if (!_isGamePage) document.body.classList.add('has-banner');
 }
 
-// Questions reset DAILY (build a return habit); Wordle/Word Search/Episode stay
-// lifetime. For a daily key, the count is zeroed the first time it's touched on
-// a new calendar day.
+// On DESKTOP web, questions reset DAILY (build a return habit) — you can't
+// install a phone app from a browser, so "come back tomorrow" is the ask.
+// On iOS/Android web the 30 questions are a ONE-TIME taster (no reset) — the
+// wall pushes the free app instead. Wordle/Word Search/Episode stay lifetime.
 const _DAILY_KEYS = { Q: true };
 function _todayStr() { return new Date().toISOString().split('T')[0]; }
 function _maybeDailyReset(key) {
   if (!_DAILY_KEYS[key]) return;
+  if (!isDesktopWeb()) return; // iOS/Android: one-time allowance, never resets
   const dk = 'tgWeb' + key + 'Date';
   const today = _todayStr();
   if (localStorage.getItem(dk) !== today) {
@@ -527,10 +529,20 @@ function webWallHTML(msg, themeName, noun) {
   // Questions are a DAILY allowance — the wall reflects that they reset tomorrow.
   // (All callers pass the same "questions" message, so we override it centrally.)
   if (item === 'questions') {
-    return `<div class="android-wall">
+    // Desktop web: a DAILY allowance that resets tomorrow.
+    if (isDesktopWeb()) {
+      return `<div class="android-wall">
     <div class="android-wall-icon">📱</div>
     <h3>You've used today's ${_WEB_LIMITS.Q} free questions 🎉</h3>
     <p>Come back tomorrow for ${_WEB_LIMITS.Q} more — or get unlimited access now.</p>
+    ${_webStoreLinksHTML()}
+  </div>`;
+    }
+    // iOS / Android web: a one-time 30-question taster — get the free app to keep going.
+    return `<div class="android-wall">
+    <div class="android-wall-icon">📱</div>
+    <h3>You've played your ${_WEB_LIMITS.Q} free questions 🎉</h3>
+    <p>Download Trivia Gauntlet free for unlimited questions.</p>
     ${_webStoreLinksHTML()}
   </div>`;
   }
@@ -561,8 +573,16 @@ function _injectWebBanner() {
   if (!isLobby) return;
   const banner = document.createElement('div');
   banner.className = 'android-cta-banner';
-  // Informational only — no embedded store links on any platform.
-  banner.textContent = '📱 Get 100+ questions for all themes — download Trivia Gauntlet free on iOS or Android';
+  // Platform-aware: phone visitors get a one-tap store link for THEIR store;
+  // desktop can't install a phone app from the browser, so it stays plain text.
+  const lead = '📱 Get 100+ questions for all themes — download Trivia Gauntlet free';
+  if (isIosWeb()) {
+    banner.innerHTML = `${lead} on the <a href="${_APP_STORE}" target="_blank">App Store</a>`;
+  } else if (isAndroidWeb()) {
+    banner.innerHTML = `${lead} on <a href="${_PLAY_STORE}" target="_blank">Google Play</a>`;
+  } else {
+    banner.textContent = `${lead} on iOS or Android`;
+  }
   const anchor = document.querySelector('.homepage-intro') || document.querySelector('main');
   if (anchor && anchor.classList.contains('homepage-intro')) anchor.before(banner);
   else if (anchor) anchor.prepend(banner);
