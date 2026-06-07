@@ -104,9 +104,11 @@ Native app (iOS + Android) and premium web = **no limits at all.** Everything be
 - **Daily reset is desktop-only** (`_maybeDailyReset` early-returns unless `isDesktopWeb()`).
 - **Do NOT count toward any limit / never walled:** Trivia Rush, Versus, Daily Trivia,
   Daily Wordle.
-- **Wall copy (questions), set in `webWallHTML`:**
-  - Desktop: *"You've used today's 30 free questions 🎉 — Come back tomorrow for 30 more…"* + QR / "Unlock all questions here".
-  - iOS/Android web: *"You've played your 30 free questions 🎉 — Download Trivia Gauntlet free for unlimited questions."* + their store button.
+- **Wall copy (questions), set in `webWallHTML`** — single-theme modes pass `theme.title`,
+  so the wall names the theme; mashup modes pass none → generic fallback:
+  - Desktop: *"You've used today's 30 free questions 🎉 — Come back tomorrow for more [theme] questions — or get unlimited access now."* + QR / "Unlock all questions here". (Mashup: "…for more questions…".)
+  - iOS/Android web: *"You've played your 30 free questions 🎉 — Download Trivia Gauntlet free for more [theme] questions."* + their store button. (Mashup: "…for more questions.")
+  - **Entry block:** opening a 2nd theme's game page while already over the limit triggers `_checkWebPageWall()` on load — a full-screen blocking overlay with the **generic** message (no theme name; passes `null`). The 30 is a single global budget across all themes — switching themes does NOT refill it.
 
 ---
 
