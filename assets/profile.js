@@ -487,6 +487,27 @@ function _openQrOverlay(url) {
   _renderQr(overlay.querySelector('.web-qr-box'));
 }
 
+// Promo wall opened by clicking the lobby banner on desktop — the SAME card the
+// end-of-game screens show (QR to grab the free app + the desktop "unlock all
+// questions" option), but dismissible. Reuses _webStoreLinksHTML() so it always
+// matches whatever the result-screen wall offers.
+function _openWebWallOverlay() {
+  if (document.querySelector('.android-wall-overlay')) return;
+  const overlay = document.createElement('div');
+  overlay.className = 'android-wall-overlay';
+  overlay.innerHTML = `<div class="android-wall">
+    <button type="button" class="qr-overlay-close" aria-label="Close">✕</button>
+    <div class="android-wall-icon">📱</div>
+    <h3>Get 100+ questions for every theme 🎉</h3>
+    <p>Unlock unlimited questions — or scan to grab the free app.</p>
+    ${_webStoreLinksHTML()}
+  </div>`;
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay || e.target.closest('.qr-overlay-close')) overlay.remove();
+  });
+  document.body.appendChild(overlay);
+}
+
 // Walls are injected from several places (result screens, modals…), so watch
 // the DOM and fill any QR placeholder as soon as it mounts. Also wire the
 // "Get the free app" buttons to open the QR overlay.
@@ -504,6 +525,8 @@ function _watchForQr() {
     }
   }).observe(document.body, { childList: true, subtree: true });
   document.addEventListener('click', (e) => {
+    const w = e.target.closest?.('.web-wall-trigger');
+    if (w) { e.preventDefault(); _openWebWallOverlay(); return; }
     const t = e.target.closest?.('.web-qr-trigger');
     if (t) { e.preventDefault(); _openQrOverlay(t.dataset.qr || _appUrl()); }
   });
@@ -571,17 +594,21 @@ function _injectWebBanner() {
     || /\/themes\//.test(path)
     || /\/(wordle|wordsearch)\//.test(path);
   if (!isLobby) return;
-  const banner = document.createElement('div');
+  // The WHOLE banner is one clickable element. Mobile web taps straight to the
+  // visitor's store. Desktop can't install a phone app from a browser, so its
+  // click opens the same wall card the end-of-game screens show (QR to grab the
+  // app + the desktop "unlock all questions" option) — see _openWebWallOverlay,
+  // wired via the `.web-wall-trigger` listener in _watchForQr().
+  const banner = document.createElement('a');
   banner.className = 'android-cta-banner';
-  // Platform-aware: phone visitors get a one-tap store link for THEIR store;
-  // desktop can't install a phone app from the browser, so it stays plain text.
-  const lead = '📱 Get 100+ questions for all themes — download Trivia Gauntlet free';
+  banner.textContent = '📱 Get 100+ questions for all themes — download the free app';
   if (isIosWeb()) {
-    banner.innerHTML = `${lead} on the <a href="${_APP_STORE}" target="_blank">App Store</a>`;
+    banner.href = _APP_STORE; banner.target = '_blank';
   } else if (isAndroidWeb()) {
-    banner.innerHTML = `${lead} on <a href="${_PLAY_STORE}" target="_blank">Google Play</a>`;
+    banner.href = _PLAY_STORE; banner.target = '_blank';
   } else {
-    banner.textContent = `${lead} on iOS or Android`;
+    banner.href = '#';
+    banner.classList.add('web-wall-trigger');
   }
   const anchor = document.querySelector('.homepage-intro') || document.querySelector('main');
   if (anchor && anchor.classList.contains('homepage-intro')) anchor.before(banner);

@@ -1964,6 +1964,7 @@ a.theme-stat-card:active,
 
 /* ── Android Web CTA ─────────────────────────────────────────────────────── */
 .android-cta-banner {
+  display: block;
   background: #1e3a5f;
   border: 1px solid #3b82f6;
   border-radius: 8px;
@@ -1974,8 +1975,12 @@ a.theme-stat-card:active,
   width: 100%;
   box-sizing: border-box;
   grid-column: 1 / -1;
+  color: #dbeafe;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background .15s ease, border-color .15s ease;
 }
-.android-cta-banner a { color: #93c5fd; }
+.android-cta-banner:hover { background: #244a78; border-color: #60a5fa; }
 
 .android-wall {
   background: #1e1e2e;
@@ -2000,7 +2005,7 @@ a.theme-stat-card:active,
   z-index: 9998;
   padding: 24px;
 }
-.android-wall-overlay .android-wall { max-width: 320px; width: 100%; }
+.android-wall-overlay .android-wall { max-width: 320px; width: 100%; position: relative; }
 
 .web-q-counter {
   font-size: 0.78em;
