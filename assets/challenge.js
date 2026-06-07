@@ -590,7 +590,7 @@ async function renderChallengePage() {
   }
 
   function renderResult() {
-    if (typeof webAddQ === 'function') webAddQ(roundQuestions.length);
+    if (typeof webAddQ === 'function') webAddQ(state.questions.length);
     quizBox.style.display = "none";
     resultBox.style.display = "block";
     resultBox.classList.remove("result-anim");
