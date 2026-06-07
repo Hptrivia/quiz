@@ -602,10 +602,12 @@ function _injectWebBanner() {
   const banner = document.createElement('a');
   banner.className = 'android-cta-banner';
   banner.innerHTML = '📱 Get 100+ questions for all themes <span class="cta-pill">Click to download the free app →</span>';
+  // Navigate in the SAME tab (no target=_blank): more reliable than a new tab,
+  // which strict private/incognito modes and in-app webviews often block.
   if (isIosWeb()) {
-    banner.href = _APP_STORE; banner.target = '_blank';
+    banner.href = _APP_STORE;
   } else if (isAndroidWeb()) {
-    banner.href = _PLAY_STORE; banner.target = '_blank';
+    banner.href = _PLAY_STORE;
   } else {
     banner.href = '#';
     banner.classList.add('web-wall-trigger');
