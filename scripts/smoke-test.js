@@ -207,6 +207,51 @@ function buildModes(themes) {
   ];
 }
 
+// ---- data integrity (no browser) -------------------------------------------
+// Every theme needs a parseable, non-empty question file plus wordle + wordsearch
+// word lists. A single malformed file (e.g. a stray trailing comma) silently loads
+// as an empty theme — which breaks that theme's games and short-changes any mashup
+// that includes it. Wordle/wordsearch are single aggregate files keyed by theme
+// TITLE (allData[theme.title]), matching how wordle.js / wordsearch.js look them up.
+function validateData() {
+  const problems = [];
+  const read = rel => JSON.parse(fs.readFileSync(path.join(ROOT, rel), 'utf8'));
+
+  let themes;
+  try { themes = read('data/themes.json'); }
+  catch (e) { return [`data/themes.json — invalid JSON: ${e.message}`]; }
+
+  let wordle = {}, wordsearch = {};
+  try { wordle = read('data/wordle_words.txt'); }
+  catch (e) { problems.push(`data/wordle_words.txt — invalid JSON: ${e.message}`); }
+  try { wordsearch = read('data/wordsearch_words.json'); }
+  catch (e) { problems.push(`data/wordsearch_words.json — invalid JSON: ${e.message}`); }
+
+  for (const t of themes) {
+    // Question file: present, parseable, non-empty array.
+    if (!t.questionFile) {
+      problems.push(`${t.slug} — no questionFile in themes.json`);
+    } else if (!fs.existsSync(path.join(ROOT, t.questionFile))) {
+      problems.push(`${t.slug} — questionFile missing: ${t.questionFile}`);
+    } else {
+      try {
+        const q = read(t.questionFile);
+        const arr = Array.isArray(q) ? q : (q && q.questions);
+        if (!Array.isArray(arr)) problems.push(`${t.slug} — ${t.questionFile}: not a question array`);
+        else if (!arr.length)    problems.push(`${t.slug} — ${t.questionFile}: empty (0 questions)`);
+      } catch (e) {
+        problems.push(`${t.slug} — ${t.questionFile}: invalid JSON (${e.message})`);
+      }
+    }
+    // Wordle + wordsearch word lists (keyed by title).
+    if (!Array.isArray(wordle[t.title]) || !wordle[t.title].length)
+      problems.push(`${t.slug} — no wordle words (key "${t.title}")`);
+    if (!Array.isArray(wordsearch[t.title]) || !wordsearch[t.title].length)
+      problems.push(`${t.slug} — no wordsearch words (key "${t.title}")`);
+  }
+  return problems;
+}
+
 async function runMode(browser, mode) {
   // Fresh context per mode = isolated localStorage (no resume/session leakage).
   const context = await browser.createBrowserContext();
@@ -230,8 +275,19 @@ async function runMode(browser, mode) {
 
 async function main() {
   const filter = process.argv.slice(2);
-  const themes = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'themes.json'), 'utf8'))
-    .map(t => t.slug);
+
+  // Data integrity first — fast, no browser needed.
+  const dataProblems = validateData();
+  console.log(`\nData integrity: ${dataProblems.length ? `${dataProblems.length} problem(s)` : 'all theme files valid'}`);
+  dataProblems.forEach(p => console.log(`  FAIL  ${p}`));
+  // If themes.json itself is unparseable we can't build the mode tests.
+  let themes;
+  try {
+    themes = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'themes.json'), 'utf8')).map(t => t.slug);
+  } catch {
+    console.log('\nResults: cannot run mode tests — data/themes.json is invalid\n');
+    process.exit(1);
+  }
 
   const server = await startServer();
   const browser = await puppeteer.launch({
@@ -260,8 +316,8 @@ async function main() {
   server.close();
 
   const failed = results.filter(r => !r.ok);
-  console.log(`\nResults: ${results.length - failed.length} passed, ${failed.length} failed\n`);
-  process.exit(failed.length ? 1 : 0);
+  console.log(`\nResults: ${results.length - failed.length} passed, ${failed.length} failed; data problems: ${dataProblems.length}\n`);
+  process.exit(failed.length + dataProblems.length ? 1 : 0);
 }
 
 main().catch(e => { console.error(e); process.exit(1); });
