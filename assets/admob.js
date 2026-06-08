@@ -370,17 +370,22 @@ document.addEventListener('click', async (e) => {
   //  2. Any <a> inside a container marked data-reward-gate="1" — used to gate all
   //     related cards + "try another theme" search links on a result screen at once
   //     (the marker is added only when that screen is on its rewarded cadence).
-  let href, label;
+  let href, label, promptHtml;
   const explicit = e.target.closest('[data-rewarded-href]');
   if (explicit) {
     href  = explicit.dataset.rewardedHref;
     label = explicit.dataset.rewardedLabel || explicit.textContent.trim() || 'the next round';
+    // "Next Round" / "Next Episode" — you're continuing the game, not "using" a thing.
+    promptHtml = `Watch a short ad to continue to the <strong>${label.toLowerCase()}</strong>?`;
   } else {
     const gate = e.target.closest('[data-reward-gate="1"]');
     const link = gate && e.target.closest('a[href]');
     if (gate && link && gate.contains(link)) {
       href  = link.getAttribute('href');
       label = link.querySelector('h3')?.textContent.trim() || link.textContent.trim() || 'the next quiz';
+      // Related cards + "try another theme" links are quizzes you go play, not
+      // a lifeline you "use" — so phrase the prompt accordingly.
+      promptHtml = `Watch a short ad to play <strong>${label}</strong>?`;
     }
   }
   if (!href || !isInApp() || !ADMOB_ADS_ENABLED) return;
@@ -395,7 +400,7 @@ document.addEventListener('click', async (e) => {
       sessionStorage.setItem(dk, '1');
     } catch {}
     window.location.href = href;
-  });
+  }, promptHtml);
 });
 
 // Show banner on result screens when "Try another theme" section appears

@@ -100,6 +100,26 @@ async function playQuiz(page, endSel, maxQ = 120) {
   return isVisible(page, endSel);
 }
 
+// Challenge: play through to `targetRound`, clicking "Next Round" between rounds.
+// Round 3 is the one that matters — that's when `safeRound % 3 === 0` turns on the
+// rewarded-gate markers + Next Round data-rewarded-href, the cadence a single-round
+// test never reaches. On web the rewarded click handler no-ops, so "Next Round" is
+// a plain link we just follow by URL.
+async function playChallengeRounds(page, endSel, targetRound = 3) {
+  for (let r = 1; r <= targetRound; r++) {
+    if (!await playQuiz(page, endSel)) return false;
+    if (r === targetRound) break;
+    const href = await page.evaluate(() => {
+      const a = [...document.querySelectorAll('a')].find(x => x.textContent.trim() === 'Next Round');
+      return a ? a.getAttribute('href') : null;
+    });
+    if (!href) return false; // theme ran out of rounds before reaching the target
+    await page.goto(new URL(href, page.url()).href, { waitUntil: 'networkidle2', timeout: 30000 });
+    await wait(200);
+  }
+  return isVisible(page, endSel);
+}
+
 // Wordle: burn six guesses to force the result panel (we don't know the word, so
 // we either lose all six or stumble into a win — both reach the result).
 // Daily Wordle validates guesses against a dictionary, so pass real words via
@@ -167,8 +187,8 @@ function buildModes(themes) {
   return [
     { name: 'marathon',        url: `play.html?theme=${a}`,            run: p => playQuiz(p, '#resultBox') },
     { name: 'marathon-mashup', url: `play.html?themes=${a},${b}`,      run: p => playQuiz(p, '#resultBox') },
-    { name: 'challenge',       url: `challenge.html?theme=${a}&round=1`, run: p => playQuiz(p, '#challengeResultBox') },
-    { name: 'challenge-mashup',url: `challenge.html?themes=${a},${b}`, run: p => playQuiz(p, '#challengeResultBox') },
+    { name: 'challenge',       url: `challenge.html?theme=${a}&round=1`, run: p => playChallengeRounds(p, '#challengeResultBox') },
+    { name: 'challenge-mashup',url: `challenge.html?themes=${a},${b}`, run: p => playChallengeRounds(p, '#challengeResultBox') },
     { name: 'survival',        url: `survival.html?theme=${a}`,        start: '[data-difficulty="mixed"]', run: p => playQuiz(p, '#survivalResultBox') },
     { name: 'survival-mashup', url: `survival.html?themes=${a},${b}`,  start: '[data-difficulty="mixed"]', run: p => playQuiz(p, '#survivalResultBox') },
     { name: 'episode',         url: `episode.html?theme=${ep}&episode=1`, run: p => playQuiz(p, '#episodeResultBox') },
