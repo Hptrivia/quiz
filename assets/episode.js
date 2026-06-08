@@ -119,6 +119,31 @@ async function renderEpisodePage() {
     void resultBox.offsetWidth;
     resultBox.classList.add("result-anim");
 
+    // Related quizzes: first card is THIS theme's regular (Marathon) trivia, styled
+    // like the mashup card so it stands apart as "not an episode". The rest are
+    // Episode Mode for other themes in the same category that also have episodes.
+    const relatedEpisodes = (typeof shuffleArray === "function"
+      ? shuffleArray(themes.filter(t => t.slug !== theme.slug && t.category === theme.category && episodeThemes[t.slug]))
+      : themes.filter(t => t.slug !== theme.slug && t.category === theme.category && episodeThemes[t.slug])
+    ).slice(0, 4);
+
+    const relatedHtml = `
+      <div class="theme-related-quizzes" data-reward-gate="1">
+        <h3>Related Quizzes</h3>
+        <div class="grid">
+          <a class="card card-mix" href="play.html?theme=${theme.slug}">
+            <h3>${theme.title} Trivia</h3>
+            <span class="card-mix-sub">Regular trivia</span>
+          </a>
+          ${relatedEpisodes.map(t => `
+            <a class="card" href="episode.html?theme=${t.slug}&episode=1">
+              <h3>${t.title}</h3>
+            </a>
+          `).join("")}
+        </div>
+      </div>
+    `;
+
     resultBox.innerHTML = `
       <h2>${foundAnyEpisodeMarkers ? `Episode ${safeEpisode} Complete` : "Episode Mode Complete"}</h2>
       <p>Your score: ${score} / ${episodeQuestions.length}</p>
@@ -127,6 +152,7 @@ async function renderEpisodePage() {
         ${hasNextEpisode && !isWebEpLimit() ? `<a class="primary-btn" href="episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}" data-rewarded-href="episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}">Next Episode</a>` : ""}
         ${hasNextEpisode && isWebEpLimit() ? webWallHTML("Yay! You've played an episode", theme.title, "episodes") : ""}
       </div>
+      ${relatedHtml}
     `;
   }
 

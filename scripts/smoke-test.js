@@ -100,8 +100,11 @@ async function playQuiz(page, endSel, maxQ = 120) {
   return isVisible(page, endSel);
 }
 
-// Wordle: lose six rounds to force the result panel (we don't know the word).
-async function playWordle(page, endSel) {
+// Wordle: burn six guesses to force the result panel (we don't know the word, so
+// we either lose all six or stumble into a win — both reach the result).
+// Daily Wordle validates guesses against a dictionary, so pass real words via
+// `validWords`; regular Wordle skips validation, so junk letters work there.
+async function playWordle(page, endSel, validWords) {
   const len = await page.evaluate(() => {
     const row = document.querySelector('.wordle-row');
     return row ? row.querySelectorAll('.wordle-tile').length : 5;
@@ -109,7 +112,12 @@ async function playWordle(page, endSel) {
   const pool = 'QWXZVBN';
   for (let g = 0; g < 6; g++) {
     if (await isVisible(page, endSel)) break;
-    for (let i = 0; i < len; i++) await clickKey(page, pool[(g + i) % pool.length]);
+    const word = validWords && validWords[g];
+    if (word && word.length === len) {
+      for (const ch of word) await clickKey(page, ch);
+    } else {
+      for (let i = 0; i < len; i++) await clickKey(page, pool[(g + i) % pool.length]);
+    }
     await clickKey(page, 'ENTER');
     await wait(900); // tile flip animation
   }
@@ -152,7 +160,10 @@ async function playVersus(page) {
 
 function buildModes(themes) {
   const a = themes[0], b = themes[1];
-  const ep = themes.find(t => t.slug === 'friends') ? 'friends' : a;
+  // `themes` is an array of slug strings, so match the slug directly (the old
+  // `t.slug === 'friends'` was always undefined → fell back to themes[0]=`bible`,
+  // which has no episode data, so the episode test could never reach the end).
+  const ep = themes.includes('friends') ? 'friends' : a;
   return [
     { name: 'marathon',        url: `play.html?theme=${a}`,            run: p => playQuiz(p, '#resultBox') },
     { name: 'marathon-mashup', url: `play.html?themes=${a},${b}`,      run: p => playQuiz(p, '#resultBox') },
@@ -167,7 +178,7 @@ function buildModes(themes) {
     { name: 'versus',          url: `versus.html`,                     run: p => playVersus(p) },
     { name: 'wordle',          url: `wordle.html?theme=${ep}`,         run: p => playWordle(p, '#wordleResultPanel') },
     { name: 'wordle-mashup',   url: `wordle.html?themes=${a},${b}`,    run: p => playWordle(p, '#wordleResultPanel') },
-    { name: 'daily-wordle',    url: `daily-wordle.html`,               run: p => playWordle(p, '#dwResult') },
+    { name: 'daily-wordle',    url: `daily-wordle.html`,               run: p => playWordle(p, '#dwResult', ['CRANE','SLATE','MOUNT','BRICK','PLUMB','GHOST']) },
     { name: 'wordsearch',      url: `wordsearch.html?theme=${ep}`,     run: async p => {
         // load + render check only (solving a grid via drag is too brittle)
         await wait(600);

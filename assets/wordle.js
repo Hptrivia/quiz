@@ -1068,6 +1068,17 @@ async function renderWordlePage() {
     renderKeyboard();
     updateNavButtons();
     updateRevealBtn();
+    // Related cards + "try another theme" links live in persistent page content,
+    // not a per-word result screen — so toggle their rewarded gate to match the
+    // Next-button cadence (every 2nd word). In-app gating happens in admob.js.
+    const _gateOn = ((globalIndex + 1) % 2 === 0);
+    const _relWrap = document.querySelector('#wordlePageContent .theme-related-quizzes');
+    const _searchRes = document.getElementById('wordleThemeSearchResults');
+    [_relWrap, _searchRes].forEach(el => {
+      if (!el) return;
+      if (_gateOn) el.setAttribute('data-reward-gate', '1');
+      else el.removeAttribute('data-reward-gate');
+    });
   }
 
   document.addEventListener("keydown", e => {

@@ -1997,6 +1997,9 @@ a.theme-stat-card:active,
 .wall-redirect-note { margin: 10px 0 0 !important; font-size: 0.8em; color: #888; }
 .wall-redirect-note .wall-redirect-count { color: #ccc; font-weight: 600; }
 
+.revealed-answers { margin: 12px 0; max-height: 320px; overflow-y: auto; text-align: left; }
+.revealed-answers h3 { margin: 0 0 10px; font-size: 1em; }
+
 .android-wall-overlay {
   position: fixed;
   inset: 0;

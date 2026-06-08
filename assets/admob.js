@@ -299,11 +299,11 @@ async function adMobHideBanner() {
   document.body.classList.remove('has-banner');
 }
 
-function _offerRewardedLifeline(name, onEarned) {
+function _offerRewardedLifeline(name, onEarned, promptHtml) {
   const overlay = document.createElement('div');
   overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.75);display:flex;align-items:center;justify-content:center;z-index:9999';
   overlay.innerHTML = `<div style="background:#1e1e2e;padding:24px;border-radius:12px;text-align:center;max-width:280px;color:#fff">
-    <p style="margin:0 0 16px;font-size:1.1em">Watch a short ad to use <strong>${name}</strong>?</p>
+    <p style="margin:0 0 16px;font-size:1.1em">${promptHtml || `Watch a short ad to use <strong>${name}</strong>?`}</p>
     <button id="_adYes" style="margin-right:8px;padding:10px 20px;border-radius:8px;background:#6c63ff;color:#fff;border:none;cursor:pointer;font-size:1em">Watch Ad</button>
     <button id="_adNo" style="padding:10px 20px;border-radius:8px;background:#444;color:#fff;border:none;cursor:pointer;font-size:1em">Cancel</button>
   </div>`;
@@ -316,12 +316,75 @@ function _offerRewardedLifeline(name, onEarned) {
   };
 }
 
+// App-only "Reveal Answers" button for marathon/challenge result screens: watch a
+// rewarded ad to reveal the correct answers for the round's missed questions.
+// Placed between "Next Round" and "Report a Question". Non-premium only (premium
+// already has the in-quiz reveal toggle). Web is unaffected (isInApp gate).
+function injectRevealMissedButton(wrongQuestions, ctaRow) {
+  if (!ctaRow || !Array.isArray(wrongQuestions) || !wrongQuestions.length) return;
+  if (typeof isInApp !== 'function' || !isInApp()) return;
+  if (!ADMOB_ADS_ENABLED) return;
+  if (typeof isPremiumUser === 'function' && isPremiumUser()) return;
+  if (ctaRow.querySelector('.reveal-missed-btn')) return;
+
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'secondary-btn reveal-missed-btn';
+  btn.textContent = 'Reveal Answers';
+  btn.addEventListener('click', () => {
+    _offerRewardedLifeline('Reveal Answers', () => {
+      if (btn.dataset.revealed) return;
+      btn.dataset.revealed = '1';
+      const panel = document.createElement('div');
+      panel.className = 'revealed-answers';
+      const h = document.createElement('h3');
+      h.textContent = 'Missed Answers';
+      panel.appendChild(h);
+      wrongQuestions.forEach((q) => {
+        // Reuse Daily Challenge's missed-answer styling for a consistent look.
+        const item = document.createElement('div');
+        item.className = 'daily-missed-item';
+        const qp = document.createElement('p');
+        qp.className = 'daily-missed-q';
+        qp.textContent = q.question || '';
+        const ap = document.createElement('p');
+        ap.className = 'daily-missed-a';
+        ap.textContent = '✓ ' + (q.answer || '');
+        item.appendChild(qp);
+        item.appendChild(ap);
+        panel.appendChild(item);
+      });
+      ctaRow.insertAdjacentElement('afterend', panel);
+      btn.remove();
+    }, 'Watch a short ad to <strong>reveal the answers</strong>?');
+  });
+
+  const report = ctaRow.querySelector('a[href*="contact"]');
+  if (report) ctaRow.insertBefore(btn, report);
+  else ctaRow.appendChild(btn);
+}
+
 document.addEventListener('click', async (e) => {
-  const btn = e.target.closest('[data-rewarded-href]');
-  if (!btn || !isInApp() || !ADMOB_ADS_ENABLED) return;
+  // Two ways a click is rewarded-gated:
+  //  1. An explicit control carrying data-rewarded-href (Next Round/Episode/Word).
+  //  2. Any <a> inside a container marked data-reward-gate="1" — used to gate all
+  //     related cards + "try another theme" search links on a result screen at once
+  //     (the marker is added only when that screen is on its rewarded cadence).
+  let href, label;
+  const explicit = e.target.closest('[data-rewarded-href]');
+  if (explicit) {
+    href  = explicit.dataset.rewardedHref;
+    label = explicit.dataset.rewardedLabel || explicit.textContent.trim() || 'the next round';
+  } else {
+    const gate = e.target.closest('[data-reward-gate="1"]');
+    const link = gate && e.target.closest('a[href]');
+    if (gate && link && gate.contains(link)) {
+      href  = link.getAttribute('href');
+      label = link.querySelector('h3')?.textContent.trim() || link.textContent.trim() || 'the next quiz';
+    }
+  }
+  if (!href || !isInApp() || !ADMOB_ADS_ENABLED) return;
   e.preventDefault();
-  const href = btn.dataset.rewardedHref;
-  const label = btn.textContent.trim() || 'the next round';
   _offerRewardedLifeline(label, () => {
     try {
       const dest = new URL(href, window.location.href);

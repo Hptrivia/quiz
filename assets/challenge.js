@@ -211,11 +211,11 @@ async function renderMultiThemeChallenge() {
         <p class="result-theme-search-title">Try another theme</p>
         <div class="search-wrap">
           <input id="mashupChallengeSearchInput" class="theme-search-input" type="text" placeholder="Search themes..." autocomplete="off" />
-          <div id="mashupChallengeSearchResults" class="search-results"></div>
+          <div id="mashupChallengeSearchResults" class="search-results"${safeRound % 3 === 0 ? ' data-reward-gate="1"' : ''}></div>
         </div>
       </div>
       <div id="mashupChallengeAdSlot"></div>
-      <div class="theme-related-quizzes">
+      <div class="theme-related-quizzes"${safeRound % 3 === 0 ? ' data-reward-gate="1"' : ''}>
         <h3>Play these themes individually</h3>
         <div class="grid">
           ${selectedThemes.map(t => `<a class="card" href="challenge.html?theme=${t.slug}&round=1"><h3>${t.title}</h3></a>`).join("")}
@@ -224,6 +224,7 @@ async function renderMultiThemeChallenge() {
     `;
     document.getElementById("mashupChallengeBreakdown").appendChild(renderMashupThemeBreakdown(themeScores, selectedThemes, colorBySlug));
     injectMashupResultAd(document.getElementById("mashupChallengeAdSlot"));
+    if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
     const msInput = document.getElementById("mashupChallengeSearchInput");
     const msResults = document.getElementById("mashupChallengeSearchResults");
     if (msInput && msResults) {
@@ -617,7 +618,7 @@ async function renderChallengePage() {
     const relatedThemes = getRelatedThemes(themes, theme, 4);
 
     const relatedThemesHtml = `
-      <div class="theme-related-quizzes">
+      <div class="theme-related-quizzes"${safeRound % 3 === 0 ? ' data-reward-gate="1"' : ''}>
         <h3>Related Quizzes</h3>
         <div class="grid">
           <a class="card card-mix" href="mashup.html?preset=${theme.slug}&mode=challenge">
@@ -665,11 +666,13 @@ async function renderChallengePage() {
         <p class="result-theme-search-title">Try another theme</p>
         <div class="search-wrap">
           <input id="challengeResultThemeSearchInput" class="theme-search-input" type="text" placeholder="Search themes..." autocomplete="off" />
-          <div id="challengeResultThemeSearchResults" class="search-results"></div>
+          <div id="challengeResultThemeSearchResults" class="search-results"${safeRound % 3 === 0 ? ' data-reward-gate="1"' : ''}></div>
         </div>
         ${relatedThemesHtml}
     `;
 
+
+    if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
 
     const resultSearchInput = document.getElementById("challengeResultThemeSearchInput");
     const resultSearchResults = document.getElementById("challengeResultThemeSearchResults");
