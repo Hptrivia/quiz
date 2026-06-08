@@ -1158,15 +1158,16 @@ if (resultSearchInput && resultSearchResults) {
 }
 
 /* ---------------- NOTIFY CARD (inline, last round / new PB) ---------------- */
-function buildNotifyCard(themeName, isPB = false, source = "trivia") {
+function buildNotifyCard(themeName, isPB = false, source = "trivia", opts = {}) {
   if (localStorage.getItem("epDone")) return "";
-  const heading = isPB
+  const heading = opts.heading || (isPB
     ? `🏆 New personal best for <strong>${themeName}</strong>`
-    : `🎉 You've answered every question for <strong>${themeName}</strong>`;
+    : `🎉 You've answered every question for <strong>${themeName}</strong>`);
+  const sub = opts.sub || "New questions are on the way. Want to know when they drop?";
   return `
     <div class="notify-card" id="notifyCard" data-source="${source}" data-theme="${themeName}">
       <div class="notify-card-heading">${heading}</div>
-      <p class="notify-card-sub">New questions are on the way. Want to know when they drop?</p>
+      <p class="notify-card-sub">${sub}</p>
       <div class="notify-card-form">
         <input class="notify-card-input" type="email" placeholder="you@example.com" autocomplete="email" id="notifyEmailInput" />
         <button class="notify-card-btn" id="notifySubmitBtn">Notify me</button>

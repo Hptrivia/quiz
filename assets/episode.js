@@ -144,6 +144,15 @@ async function renderEpisodePage() {
       </div>
     `;
 
+    // When they've finished the newest available episode, offer to be notified
+    // when the next one drops (email + theme via the shared Formspree card).
+    const notifyHtml = (!hasNextEpisode && typeof buildNotifyCard === "function")
+      ? buildNotifyCard(theme.title, false, "episode", {
+          heading: `🎬 You're caught up on <strong>${theme.title}</strong> episodes`,
+          sub: "Want to know when the next episode drops?",
+        })
+      : "";
+
     resultBox.innerHTML = `
       <h2>${foundAnyEpisodeMarkers ? `Episode ${safeEpisode} Complete` : "Episode Mode Complete"}</h2>
       <p>Your score: ${score} / ${episodeQuestions.length}</p>
@@ -152,8 +161,10 @@ async function renderEpisodePage() {
         ${hasNextEpisode && !isWebEpLimit() ? `<a class="primary-btn" href="episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}" data-rewarded-href="episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}">Next Episode</a>` : ""}
         ${hasNextEpisode && isWebEpLimit() ? webWallHTML("Yay! You've played an episode", theme.title, "episodes") : ""}
       </div>
+      ${notifyHtml}
       ${relatedHtml}
     `;
+    if (notifyHtml && typeof wireNotifyCard === "function") wireNotifyCard(theme.title, "episode");
   }
 
   function showQuestion(index) {
