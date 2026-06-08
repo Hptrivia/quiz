@@ -2071,8 +2071,10 @@ a.theme-stat-card:active,
 }
 
 /* Keep the end-of-game wall on its own line inside the result .cta-row so it
-   doesn't stretch sibling buttons. */
-.cta-row .android-wall { flex: 1 1 100%; }
+   doesn't stretch sibling buttons. The global 340px max-width was clamping the
+   flex item, letting siblings share its line and get stretched tall — override
+   it here so the wall truly occupies a full row. */
+.cta-row .android-wall { flex: 1 1 100%; max-width: 100%; }
 .android-wall .primary-btn,
 .android-wall .web-unlock-btn,
 .android-wall .web-qr-trigger { display: inline-block; width: auto; }

@@ -584,17 +584,20 @@ function _watchForWallRedirect() {
   }).observe(document.body, { childList: true, subtree: true });
 }
 
-// "Unlock Full Access" footer link — desktop web only, non-premium, site-wide
-// (lives here in profile.js, which loads on every page, so every footer gets it).
+// Footer link — desktop web only, site-wide (lives here in profile.js, which
+// loads on every page, so every footer gets it). Non-premium users see an
+// "Unlock Full Access" upsell; premium users get a "Membership" link so they
+// can still reach remove-ads.html to view their status / re-enter a code.
 function _injectFooterUnlock() {
-  if (!isDesktopWeb() || _isPremium()) return;
+  if (!isDesktopWeb()) return;
   if (/\/remove-ads\.html$/.test(window.location.pathname)) return;
+  const premium = _isPremium();
   document.querySelectorAll('.footer-links').forEach(el => {
     if (el.querySelector('a[href*="remove-ads"]')) return;
     const a = document.createElement('a');
     a.href = '/remove-ads.html';
     a.className = 'footer-highlight';
-    a.textContent = 'Unlock Full Access';
+    a.textContent = premium ? 'Membership' : 'Unlock Full Access';
     el.appendChild(a);
   });
 }
@@ -698,17 +701,22 @@ function _checkWebPageWall() {
   document.body.appendChild(overlay);
 }
 
-// On theme pages, add an "Unlock Full Access" card as the last game-mode card —
-// desktop web only, hidden for premium users.
+// On theme pages, add a card as the last game-mode card — desktop web only.
+// Non-premium users get an "Unlock Full Access" upsell; premium users get a
+// "Membership" card so they can reach remove-ads.html to view their status.
 function _injectThemeUnlockCard() {
-  if (!isDesktopWeb() || _isPremium()) return;
+  if (!isDesktopWeb()) return;
   if (!/\/themes\//.test(window.location.pathname)) return;
   const grid = document.querySelector('.panel .grid') || document.querySelector('.grid');
   if (!grid || grid.querySelector('.unlock-card')) return;
   const card = document.createElement('a');
   card.className = 'card unlock-card';
   card.href = '/remove-ads.html';
-  card.innerHTML = `<h3>Unlock Full Access</h3><p>Unlimited questions + reveal answers &amp; lifelines</p>`;
+  if (_isPremium()) {
+    card.innerHTML = `<h3>Membership</h3><p>View your active subscription</p>`;
+  } else {
+    card.innerHTML = `<h3>Unlock Full Access</h3><p>Unlimited questions + reveal answers &amp; lifelines</p>`;
+  }
   grid.appendChild(card);
 }
 
