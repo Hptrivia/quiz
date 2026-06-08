@@ -13,7 +13,7 @@
 //   1. paste the real iOS ad unit IDs into _ADMOB_LIVE_IDS.ios below, then
 //   2. change ios: 'off' → 'live' here.
 const ADMOB_MODE_BY_PLATFORM = {
-  ios: 'off',
+  ios: 'live',
   android: 'live',
 };
 const _ADMOB_PLATFORM = window.Capacitor?.getPlatform?.();
@@ -30,11 +30,9 @@ const _ADMOB_LIVE_IDS = {
     rewarded:     'ca-app-pub-9506123851374920/8819925805',
   },
   ios: {
-    // Filled in once AdMob approves iOS — paste the real iOS unit IDs here,
-    // then set ios: 'live' above. Left blank until then.
-    banner:       '',
-    interstitial: '',
-    rewarded:     '',
+    banner:       'ca-app-pub-9506123851374920/4221888010',
+    interstitial: 'ca-app-pub-9506123851374920/1512953871',
+    rewarded:     'ca-app-pub-9506123851374920/1704453155',
   },
 };
 const _ADMOB_TEST_IDS = {
