@@ -100,7 +100,10 @@ async function _pingNewInstall() {
 
 function isGamePage() {
   const path = window.location.pathname;
-  return /\/(play|challenge|survival|episode|trivia-rush|versus|wordle|wordsearch|daily|daily-wordle)\.html$/.test(path);
+  // Keep this list in sync with getRoundStartParams() below — both must cover every
+  // in-game page so the banner stays hidden during play (mashup-* were missing,
+  // which left a banner on the mashup trivia-rush / marathon gameplay screens).
+  return /\/(play|challenge|survival|episode|trivia-rush|mashup-trivia-rush|versus|wordle|wordsearch|mashup-play|daily|daily-wordle)\.html$/.test(path);
 }
 
 function getRoundStartParams() {
