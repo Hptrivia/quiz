@@ -42,4 +42,8 @@
     <!-- Permissions -->
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Required for AdMob: declares use of the Google Advertising ID. Must match
+         the Play Console "uses advertising ID = Yes" declaration, or the ad ID is
+         zeroed out on Android 13+ (lost ad revenue/attribution). -->
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
 </manifest>
