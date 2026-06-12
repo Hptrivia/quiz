@@ -382,10 +382,23 @@ const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
 function buildSitemap(urls) {
   const now = new Date().toISOString();
 
+  // Preserve existing <lastmod> values so unchanged URLs keep their original
+  // date; only brand-new URLs get today's date. Without this the generator
+  // resets every page's lastmod to "now" on each run, falsely signalling to
+  // search engines that the whole site changed.
+  const existing = {};
+  if (fs.existsSync(sitemapPath)) {
+    const prev = fs.readFileSync(sitemapPath, "utf8");
+    const re = /<loc>([^<]+)<\/loc>\s*<lastmod>([^<]+)<\/lastmod>/g;
+    let m;
+    while ((m = re.exec(prev))) existing[m[1]] = m[2];
+  }
+
   const entries = urls.map((url) => {
+    const lastmod = existing[escapeHtml(url)] || existing[url] || now;
     return `  <url>
     <loc>${escapeHtml(url)}</loc>
-    <lastmod>${now}</lastmod>
+    <lastmod>${lastmod}</lastmod>
   </url>`;
   }).join("\n");
 
