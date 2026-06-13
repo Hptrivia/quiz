@@ -93,6 +93,31 @@
       margin-bottom: 4px;
     }
 
+    .vs-scoreboard {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .vs-score-chip {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 6px;
+      font-size: 13px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      border: 1px solid var(--option-border);
+      background: var(--option-bg);
+      opacity: 0.7;
+    }
+    .vs-score-chip.current {
+      border-width: 2px;
+      padding: 4px 10px;
+      opacity: 1;
+    }
+    .vs-score-chip .vs-chip-name { font-weight: 700; }
+    .vs-score-chip .vs-chip-score { font-weight: 800; }
+
     .vs-feedback-box {
       padding: 12px 0 6px;
       font-size: 15px;
@@ -240,6 +265,7 @@
       <!-- QUESTION SCREEN -->
       <div id="vsQuestion" class="vs-screen">
         <button id="vsRevealToggle" class="secondary-btn reveal-answers-toggle" style="display:none;">Reveal Answers: OFF</button>
+        <div class="vs-scoreboard" id="vsScoreboard"></div>
         <p class="vs-progress" id="vsQuestionProgress"></p>
         <div class="vs-theme-label" id="vsQuestionTheme" style="display:none;"></div>
         <div class="vs-steal-label" id="vsStealLabel" style="display:none;"></div>
@@ -293,6 +319,7 @@
       <!-- TIEBREAKER SCREEN -->
       <div id="vsTiebreaker" class="vs-screen">
         <div class="vs-tiebreaker-label">Tiebreaker</div>
+        <div class="vs-scoreboard" id="vsTbScoreboard"></div>
         <p class="vs-progress" id="vsTbProgress"></p>
         <div class="vs-player-badge" id="vsTbPlayer"></div>
         <h2 id="vsTbQuestion" style="margin-bottom:16px;"></h2>

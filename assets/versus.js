@@ -2,6 +2,7 @@
 
 const VS_DIFF_ORDER = ['easy', 'medium', 'hard', 'expert'];
 const VS_DIFF_POINTS = { easy: 1, medium: 2, hard: 3, expert: 4 };
+const VS_PLAYER_COLORS = ['#38bdf8', '#f59e0b', '#34d399', '#f472b6']; // sky, amber, green, pink
 
 let vsState = null;
 let vsRevealAnswers = false;
@@ -15,6 +16,32 @@ function vsShow(screenId) {
     el.classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+}
+
+function vsColorBadge(el, color) {
+  if (!el) return;
+  if (color) {
+    el.style.color = color;
+    el.style.borderColor = color;
+    el.style.background = 'transparent';
+  } else {
+    el.style.color = '';
+    el.style.borderColor = '';
+    el.style.background = '';
+  }
+}
+
+function vsRenderScoreboard(elId, currentIdx) {
+  const el = document.getElementById(elId);
+  if (!el || !vsState) return;
+  el.innerHTML = '';
+  vsState.players.forEach((p, i) => {
+    const chip = document.createElement('span');
+    chip.className = 'vs-score-chip' + (i === currentIdx ? ' current' : '');
+    if (p.color) chip.style.borderColor = p.color;
+    chip.innerHTML = `<span class="vs-chip-name"${p.color ? ` style="color:${p.color}"` : ''}>${p.name}</span><span class="vs-chip-score">${p.score}</span>`;
+    el.appendChild(chip);
+  });
 }
 
 function vsBuildSchedule(n, hasExpert) {
@@ -88,7 +115,9 @@ function vsShowQuestion(player, diff, round, numQuestions) {
   const progressEl = document.getElementById('vsQuestionProgress');
 
   stealLabelEl.style.display = 'none';
+  vsRenderScoreboard('vsScoreboard', state.currentPlayerIdx);
   playerEl.textContent = player.name;
+  vsColorBadge(playerEl, player.color);
   questionEl.textContent = q.question;
   feedbackEl.style.display = 'none';
   submitBtn.style.display = '';
@@ -132,6 +161,7 @@ function vsShowQuestion(player, diff, round, numQuestions) {
     submitBtn.style.display = 'none';
 
     if (phase === 'primary') {
+      if (typeof webAddQ === 'function') webAddQ(1);
       if (isCorrect) {
         const points = VS_DIFF_POINTS[q._diff] || 1;
         sel.classList.add('correct-anim');
@@ -177,6 +207,7 @@ function vsShowQuestion(player, diff, round, numQuestions) {
     stealLabelEl.textContent = `Steal opportunity for ${stealPlayer.name} — 1 pt`;
     stealLabelEl.style.display = '';
     playerEl.textContent = stealPlayer.name;
+    vsColorBadge(playerEl, stealPlayer.color);
     feedbackEl.style.display = 'none';
 
     optionsEl.querySelectorAll('.option-btn').forEach(b => {
@@ -211,18 +242,6 @@ function vsAdvanceTurn(player, points, stealInfo) {
   }
 
   const isLastRound = state.currentRound >= state.numQuestions;
-
-  const stealNoteEl = document.getElementById('vsBetweenStealNote');
-  const nextPlayerEl = document.getElementById('vsBetweenNextPlayer');
-  const nextScoreEl = document.getElementById('vsBetweenNextScore');
-  const btn = document.getElementById('vsBetweenBtn');
-
-  if (stealInfo && stealInfo.success) {
-    stealNoteEl.textContent = `${stealInfo.player.name} stole 1 pt!`;
-    stealNoteEl.style.display = '';
-  } else {
-    stealNoteEl.style.display = 'none';
-  }
 
   if (isLastRound) {
     vsShowResults();
@@ -261,13 +280,7 @@ function vsAdvanceTurn(player, points, stealInfo) {
     return;
   }
 
-  const nextPlayer = state.players[state.currentPlayerIdx];
-  nextPlayerEl.textContent = `${nextPlayer.name}'s turn`;
-  nextScoreEl.textContent = `${nextPlayer.score} pt${nextPlayer.score !== 1 ? 's' : ''} so far`;
-  btn.textContent = 'Go';
-  btn.onclick = vsRunNextTurn;
-
-  vsShow('vsBetween');
+  vsRunNextTurn();
 }
 
 function vsRunNextTurn() {
@@ -297,7 +310,7 @@ function vsBuildLeaderboard(players, winnerIndexes) {
     if (winnerIndexes.includes(p.originalIndex)) li.classList.add('vs-winner');
     li.innerHTML = `
       <span class="vs-rank">${medals[rank] || rank + 1}</span>
-      <span class="vs-player-name">${p.name}</span>
+      <span class="vs-player-name"${p.color ? ` style="color:${p.color}"` : ''}>${p.name}</span>
       <span class="vs-player-score">${p.score} pt${p.score !== 1 ? 's' : ''}</span>
     `;
     ul.appendChild(li);
@@ -378,8 +391,10 @@ function vsNextTiebreakerTurn() {
   const submitBtn = document.getElementById('vsTbSubmitBtn');
   const nextBtn = document.getElementById('vsTbNextBtn');
 
+  vsRenderScoreboard('vsTbScoreboard', idx);
   progressEl.textContent = `Player ${state.tiebreakerIndex + 1} of ${state.tiebreakerPlayers.length}`;
   playerEl.textContent = player.name;
+  vsColorBadge(playerEl, player.color);
   questionEl.textContent = q.question;
   feedbackEl.style.display = 'none';
   submitBtn.style.display = '';
@@ -404,6 +419,7 @@ function vsNextTiebreakerTurn() {
     const sel = optionsEl.querySelector('.option-btn.selected');
     if (!sel) return;
     answered = true;
+    if (typeof webAddQ === 'function') webAddQ(1);
 
     const isCorrect = sel.textContent === q.answer;
     optionsEl.querySelectorAll('.option-btn').forEach(b => b.disabled = true);
@@ -639,7 +655,7 @@ async function vsInit() {
     const themeName = resolvedThemes.map(t => t.title).join(' + ');
     const isMashup = resolvedThemes.length > 1;
     vsLastPlayerNames = names;
-    const players = names.map(name => ({ name, score: 0 }));
+    const players = names.map((name, i) => ({ name, score: 0, color: VS_PLAYER_COLORS[i % VS_PLAYER_COLORS.length] }));
     vsStartGame(players, bestOf, pools, themeSlug, themeName, isMashup, themeQueues);
   });
 
