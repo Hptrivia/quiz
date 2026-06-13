@@ -38,7 +38,7 @@
   {
     "id": "ff7r-012",
     "difficulty": "easy",
-    "question": "What is the very first boss encounter in the game?",
+    "question": "What is the very first boss encounter in VII Remake?",
     "options": ["Air Buster", "Scorpion Sentinel", "Abzu", "Reno"],
     "answer": "Scorpion Sentinel"
   },
@@ -67,8 +67,8 @@
     "id": "ff7r-023",
     "difficulty": "easy",
     "question": "How does Cloud enter the city in the opening cinematic?",
-    "options": ["On a motorcycle", "By jumping off a train", "By helicopter", "On foot"],
-    "answer": "By jumping off a train"
+    "options": ["On a motorcycle", "On a train", "By helicopter", "On foot"],
+    "answer": "On a train"
   },
   {
     "id": "ff7r-025",
@@ -95,8 +95,8 @@
     "id": "ff7r-029",
     "difficulty": "hard",
     "question": "How many Mako Reactors power the city of Midgar?",
-    "options": ["4", "6", "8", "10"],
-    "answer": "8"
+    "options": ["4", "6", "9", "10"],
+    "answer": "9"
   },
   {
     "id": "ff7r-030",
@@ -109,8 +109,8 @@
     "id": "ff7r-031",
     "difficulty": "easy",
     "question": "Who is the lead scientist at Shinra?",
-    "options": ["Professor Hojo", "Heidegger", "Palmer", "Scarlet"],
-    "answer": "Professor Hojo"
+    "options": ["Hojo", "Heidegger", "Palmer", "Scarlet"],
+    "answer": "Hojo"
   },
   {
     "id": "ff7r-032",
@@ -150,7 +150,7 @@
   {
     "id": "ff7r-040",
     "difficulty": "hard",
-    "question": "What is the final chapter number of the game?",
+    "question": "What is the final chapter number of VII Remake?",
     "options": ["15", "18", "20", "25"],
     "answer": "18"
   },
@@ -174,13 +174,6 @@
     "question": "Which member of Avalanche is known for his love of cats?",
     "options": ["Biggs", "Barret", "Wedge", "Cloud"],
     "answer": "Wedge"
-  },
-  {
-    "id": "ff7r-050",
-    "difficulty": "hard",
-    "question": "What is the name of the main theme song of FF7 Remake?",
-    "options": ["Hollow", "Answers", "Dragonsong", "Vague Hope"],
-    "answer": "Hollow"
   },
   {
     "id": "ff7r-053",
@@ -291,8 +284,8 @@
     "id": "ffviirb-001",
     "difficulty": "hard",
     "question": "What is the name of the open region where the game begins after leaving Kalm?",
-    "options": ["The Grasslands", "Junon Region", "Corel Region", "Gongaga Region"],
-    "answer": "The Grasslands"
+    "options": ["Grasslands Region", "Junon Region", "Corel Region", "Gongaga Region"],
+    "answer": "Grasslands Region"
   },
   {
     "id": "ff7r-065",
