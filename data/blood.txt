@@ -65,7 +65,7 @@
   {
     "id": "tb-easy-0010",
     "question": "Who turns Jessica Hamby into a vampire?",
-    "options": ["Bill Compton", "Eric Northman", "Pam Ravenscroft", "Russell Edgington"],
+    "options": ["Bill Compton", "Eric Northman", "Pam", "Russell Edgington"],
     "answer": "Bill Compton",
     "difficulty": "easy"
   },
@@ -289,8 +289,8 @@
   {
     "id": "tb-medium-0056",
     "question": "Who is Tara Thornton’s vampire maker?",
-    "options": ["Pam Ravenscroft", "Eric Northman", "Bill Compton", "Russell Edgington"],
-    "answer": "Pam Ravenscroft",
+    "options": ["Pam Beaufort", "Eric Northman", "Bill Compton", "Russell Edgington"],
+    "answer": "Pam Beaufort",
     "difficulty": "medium"
   },
   {
@@ -466,7 +466,7 @@
   {
     "id": "tb-medium-0098",
     "question": "Which vampire temporarily becomes infected with Hepatitis V but survives?",
-    "options": ["Eric Northman", "Bill Compton", "Jessica Hamby", "Pam Ravenscroft"],
+    "options": ["Eric Northman", "Bill Compton", "Jessica Hamby", "Pam Beaufort"],
     "answer": "Eric Northman",
     "difficulty": "medium"
   },
@@ -487,7 +487,7 @@
   {
     "id": "tb-hard-0103",
     "question": "Who kidnapped Lafayette and held him in Fangtasia’s basement?",
-    "options": ["Eric Northman", "Pam Ravenscroft", "Chow", "Eddie Fournier"],
+    "options": ["Eric Northman", "Pam Beaufort ", "Chow", "Eddie Fournier"],
     "answer": "Eric Northman",
     "difficulty": "hard"
   },
