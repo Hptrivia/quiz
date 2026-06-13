@@ -199,6 +199,7 @@ async function renderMultiThemeSurvival() {
     `;
     document.getElementById("mashupSurvivalBreakdown").appendChild(renderMashupThemeBreakdown(themeScores, selectedThemes, colorBySlug));
     injectMashupResultAd(document.getElementById("mashupSurvivalAdSlot"));
+    if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Unlimited Lifelines', 'Unlimited Lifelines', 'Use 50-50 and Call a Friend as often as you like — free in the app, no limits.');
     const msInput = document.getElementById("mashupSurvivalSearchInput");
     const msResults = document.getElementById("mashupSurvivalSearchResults");
     if (msInput && msResults) {
@@ -484,6 +485,8 @@ async function renderSurvivalPage() {
       </div>
     `;
 
+
+    if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Unlimited Lifelines', 'Unlimited Lifelines', 'Use 50-50 and Call a Friend as often as you like — free in the app, no limits.');
 
     // Leaderboard submit section (new PB only, score > 0)
     if (isNewPB && state.score > 0 && typeof lbShowSubmit === "function") {

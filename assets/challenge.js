@@ -225,6 +225,7 @@ async function renderMultiThemeChallenge() {
     document.getElementById("mashupChallengeBreakdown").appendChild(renderMashupThemeBreakdown(themeScores, selectedThemes, colorBySlug));
     injectMashupResultAd(document.getElementById("mashupChallengeAdSlot"));
     if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
+    if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Reveal Answers', 'Reveal Answers', 'See the correct answer for every question you missed — free in the app, no limits.');
     const msInput = document.getElementById("mashupChallengeSearchInput");
     const msResults = document.getElementById("mashupChallengeSearchResults");
     if (msInput && msResults) {
@@ -673,6 +674,7 @@ async function renderChallengePage() {
 
 
     if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
+    if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Reveal Answers', 'Reveal Answers', 'See the correct answer for every question you missed — free in the app, no limits.');
 
     const resultSearchInput = document.getElementById("challengeResultThemeSearchInput");
     const resultSearchResults = document.getElementById("challengeResultThemeSearchResults");

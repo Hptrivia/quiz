@@ -499,21 +499,45 @@ function _openQrOverlay(url) {
 // end-of-game screens show (QR to grab the free app + the desktop "unlock all
 // questions" option), but dismissible. Reuses _webStoreLinksHTML() so it always
 // matches whatever the result-screen wall offers.
-function _openWebWallOverlay() {
+function _openWebWallOverlay(opts) {
   if (document.querySelector('.android-wall-overlay')) return;
+  const title = (opts && opts.title) || 'Get 100+ questions for every theme 🎉';
+  const body  = (opts && opts.body)  || 'Unlock unlimited questions — or scan to grab the free app.';
   const overlay = document.createElement('div');
   overlay.className = 'android-wall-overlay';
   overlay.innerHTML = `<div class="android-wall">
     <button type="button" class="qr-overlay-close" aria-label="Close">✕</button>
     <div class="android-wall-icon">📱</div>
-    <h3>Get 100+ questions for every theme 🎉</h3>
-    <p>Unlock unlimited questions — or scan to grab the free app.</p>
+    <h3>${title}</h3>
+    <p>${body}</p>
     ${_webStoreLinksHTML()}
   </div>`;
   overlay.addEventListener('click', (e) => {
     if (e.target === overlay || e.target.closest('.qr-overlay-close')) overlay.remove();
   });
   document.body.appendChild(overlay);
+}
+
+// Mobile-web only: a result-screen button that teases an app-only feature
+// (e.g. "Reveal Answers", "Unlimited Lifelines"). Tapping opens the existing
+// dismissible app-promo banner (_openWebWallOverlay) with feature-specific copy —
+// honouring the click and showing the benefit instead of cold-redirecting to the
+// store. Desktop web has its own upsell links (→ remove-ads.html); the native app
+// has the real rewarded feature; premium is excluded (isLimitedWeb covers both
+// native + premium). Inserted before "Report a Question" in the given cta-row.
+function injectWebFeatureTease(ctaRow, label, title, body) {
+  if (!ctaRow) return;
+  if (!isLimitedWeb() || isDesktopWeb()) return; // mobile web (iOS/Android) only
+  if (ctaRow.querySelector('.web-feature-tease')) return;
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'secondary-btn web-feature-tease';
+  btn.textContent = label;
+  btn.addEventListener('click', () => _openWebWallOverlay({ title, body }));
+  const report = [...ctaRow.querySelectorAll('a.secondary-btn')]
+    .find(a => /Report a Question/i.test(a.textContent));
+  if (report) ctaRow.insertBefore(btn, report);
+  else ctaRow.appendChild(btn);
 }
 
 // Walls are injected from several places (result screens, modals…), so watch
@@ -720,6 +744,22 @@ function _injectThemeUnlockCard() {
   grid.appendChild(card);
 }
 
+// Profile page, mobile web only: a tappable banner above the stats. Web stats
+// live only in this browser's localStorage (lost on clear/new device), so the
+// honest pull is "save your streak & stats in the app". Mirrors the homepage
+// .android-cta-banner — a direct store tap on mobile web. No-op anywhere the
+// #profileAppBanner slot is absent (i.e. every page except profile.html).
+function _injectProfileAppBanner() {
+  if (!isLimitedWeb() || isDesktopWeb()) return; // mobile web (iOS/Android) only
+  const slot = document.getElementById('profileAppBanner');
+  if (!slot || slot.querySelector('.android-cta-banner')) return;
+  const banner = document.createElement('a');
+  banner.className = 'android-cta-banner';
+  banner.textContent = "📱 Don't lose your streak — save your stats & scores in the free app →";
+  banner.href = isIosWeb() ? _APP_STORE : _PLAY_STORE;
+  slot.appendChild(banner);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   _injectWebBanner();
   _checkWebPageWall();
@@ -727,4 +767,5 @@ document.addEventListener('DOMContentLoaded', () => {
   _watchForWallRedirect();
   _injectThemeUnlockCard();
   _injectFooterUnlock();
+  _injectProfileAppBanner();
 });
