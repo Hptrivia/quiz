@@ -459,7 +459,14 @@ async function renderWordleMashupMode(themesParam) {
     // Web question limit: the persistent nav must respect it too, not just the
     // in-panel "Next Word" button — otherwise the nav arrow walks past the wall.
     // Shown inline (not as an overlay) so the mobile auto-redirect still arms.
-    if (typeof isWebWordleLimit === 'function' && isWebWordleLimit()) {
+    const wordNum = pageStart + currentWordInPage + 1;
+    // Two reasons to wall here: (1) the lifetime word count is spent, or (2) on
+    // mobile web the player is skipping PAST the 2-word free allowance with the
+    // nav arrow. Skipping an unfinished word never bumps the count, so without
+    // this positional check the arrow would walk straight past the wall.
+    const _mobileWeb = (typeof isIosWeb === 'function' && isIosWeb()) || (typeof isAndroidWeb === 'function' && isAndroidWeb());
+    const _skipPastFree = _mobileWeb && typeof isLimitedWeb === 'function' && isLimitedWeb() && wordNum >= 2;
+    if ((typeof isWebWordleLimit === 'function' && isWebWordleLimit()) || _skipPastFree) {
       const old = document.getElementById("wordleResultPanel");
       if (old) old.remove();
       const wall = document.createElement("div");
@@ -471,7 +478,6 @@ async function renderWordleMashupMode(themesParam) {
       feedbackEl.after(wall);
       return;
     }
-    const wordNum = pageStart + currentWordInPage + 1;
     const hasNext = currentWordInPage < pageWords.length - 1 || safePage < totalPages;
     const advance = () => {
       if (currentWordInPage < pageWords.length - 1) loadWord(currentWordInPage + 1);
@@ -1103,7 +1109,14 @@ async function renderWordlePage() {
     // Web question limit: the persistent nav must respect it too, not just the
     // in-panel "Next Word" button — otherwise the nav arrow walks past the wall.
     // Shown inline (not as an overlay) so the mobile auto-redirect still arms.
-    if (typeof isWebWordleLimit === 'function' && isWebWordleLimit()) {
+    const wordNum = pageStart + currentWordInPage + 1;
+    // Two reasons to wall here: (1) the lifetime word count is spent, or (2) on
+    // mobile web the player is skipping PAST the 2-word free allowance with the
+    // nav arrow. Skipping an unfinished word never bumps the count, so without
+    // this positional check the arrow would walk straight past the wall.
+    const _mobileWeb = (typeof isIosWeb === 'function' && isIosWeb()) || (typeof isAndroidWeb === 'function' && isAndroidWeb());
+    const _skipPastFree = _mobileWeb && typeof isLimitedWeb === 'function' && isLimitedWeb() && wordNum >= 2;
+    if ((typeof isWebWordleLimit === 'function' && isWebWordleLimit()) || _skipPastFree) {
       const old = document.getElementById("wordleResultPanel");
       if (old) old.remove();
       const wall = document.createElement("div");
@@ -1115,7 +1128,6 @@ async function renderWordlePage() {
       feedbackEl.after(wall);
       return;
     }
-    const wordNum = pageStart + currentWordInPage + 1;
     const hasNext = currentWordInPage < pageWords.length - 1 || safePage < totalPages;
     const advance = () => {
       if (currentWordInPage < pageWords.length - 1) {

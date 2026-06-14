@@ -407,6 +407,8 @@ async function renderWordSearchMashupMode(themesParam) {
     nextBtn.href = nextHref;
     nextBtn.dataset.rewardedHref = nextHref;
     nextBtn.style.display = 'block';
+    // Mobile web: skipping to the next grid bypasses the completion wall otherwise.
+    if (typeof gateWebSkip === 'function') gateWebSkip(nextBtn, true);
   }
 
   window._wsMashupKey = slugs.slice().sort().join(",");
@@ -501,6 +503,8 @@ async function renderWordSearchPage() {
     nextBtn.href = nextHref;
     nextBtn.dataset.rewardedHref = nextHref;
     nextBtn.style.display = 'block';
+    // Mobile web: skipping to the next grid bypasses the completion wall otherwise.
+    if (typeof gateWebSkip === 'function') gateWebSkip(nextBtn, true);
   }
 
   wsBuildGrid(words);
