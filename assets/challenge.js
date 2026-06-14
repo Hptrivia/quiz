@@ -66,6 +66,8 @@ async function renderMultiThemeChallenge() {
       if (safeRound % 3 === 0) nextRoundLink.dataset.rewardedHref = `challenge.html?themes=${themesParam}&round=${safeRound + 1}`;
     } else { nextRoundLink.style.display = "none"; }
   }
+  // Limited web: rounds 1-2 free; skipping on round 3 pops the app-download wall.
+  if (typeof gateWebSkip === 'function') gateWebSkip(nextRoundLink, safeRound >= 3);
 
   let score = 0, currentIndex = 0, revealAnswers = false;
   const wrongQuestions = [];
@@ -378,6 +380,8 @@ async function renderChallengePage() {
       nextRoundLink.style.display = "none";
     }
   }
+  // Limited web: rounds 1-2 free; skipping on round 3 pops the app-download wall.
+  if (typeof gateWebSkip === 'function') gateWebSkip(nextRoundLink, safeRound >= 3);
 
   let showContinuePrompt = false;
 

@@ -103,6 +103,7 @@ async function renderMultiThemeSurvival() {
   function handleWrongAnswer() {
     const slide = getCurrentSlide();
     const selectedBtn = slide ? slide.querySelector(".option-btn.selected") : null;
+    if (typeof webAddQ === 'function') webAddQ(1); // counts toward the 30-question web limit
     state.gameOver = true; state.answerLocked = true;
     if (currentSubmitBtn) currentSubmitBtn.disabled = true;
     if (typeof SoundFX !== 'undefined') SoundFX.play('wrong');
@@ -119,6 +120,7 @@ async function renderMultiThemeSurvival() {
     const selectedBtn = slide ? slide.querySelector(".option-btn.selected") : null;
     const slug = q._themeSlug;
     state.score += points;
+    if (typeof webAddQ === 'function') webAddQ(1); // counts toward the 30-question web limit
     if (themeScores[slug]) themeScores[slug].correct++;
     state.answerLocked = true;
     if (currentSubmitBtn) currentSubmitBtn.disabled = true;
@@ -162,7 +164,8 @@ async function renderMultiThemeSurvival() {
     maybeStartRecovery(); updateTopbar();
   }
   function renderResult() {
-    if (typeof webAddQ === 'function') webAddQ(state.currentIndex);
+    // (Questions are counted per-answer in handleCorrectAnswer/handleWrongAnswer
+    // so the 30-question web limit can hard-stop a run mid-game.)
     adMobShowInterstitial();
     gameBox.style.display = "none";
     resultBox.style.display = "block";
@@ -273,6 +276,8 @@ async function renderMultiThemeSurvival() {
         });
         nextBtn.addEventListener("click", () => {
           if (state.gameOver) { renderResult(); return; }
+          // Limited web: end the run once the 30-question limit is reached.
+          if (typeof isWebQLimit === 'function' && isWebQLimit()) { renderResult(); return; }
           state.currentIndex += 1;
           if (state.currentIndex >= state.questions.length) renderResult();
           else showQuestion(state.currentIndex);
@@ -427,7 +432,8 @@ async function renderSurvivalPage() {
   }
 
   function renderResult() {
-    if (typeof webAddQ === 'function') webAddQ(state.currentIndex);
+    // (Questions are counted per-answer in handleCorrectAnswer/handleWrongAnswer
+    // so the 30-question web limit can hard-stop a run mid-game.)
     adMobShowInterstitial();
     gameBox.style.display = "none";
     resultBox.style.display = "block";
@@ -612,6 +618,7 @@ async function renderSurvivalPage() {
     const slide = getCurrentSlide();
     const selectedBtn = slide ? slide.querySelector(".option-btn.selected") : null;
 
+    if (typeof webAddQ === 'function') webAddQ(1); // counts toward the 30-question web limit
     state.gameOver = true;
     state.answerLocked = true;
     if (currentSubmitBtn) currentSubmitBtn.disabled = true;
@@ -637,6 +644,7 @@ async function renderSurvivalPage() {
     const selectedBtn = slide ? slide.querySelector(".option-btn.selected") : null;
 
     state.score += points;
+    if (typeof webAddQ === 'function') webAddQ(1); // counts toward the 30-question web limit
     state.answerLocked = true;
     if (currentSubmitBtn) currentSubmitBtn.disabled = true;
     if (currentNextBtn) currentNextBtn.style.display = "inline-block";
@@ -787,6 +795,8 @@ async function renderSurvivalPage() {
 
         nextBtn.addEventListener("click", () => {
           if (state.gameOver) { renderResult(); return; }
+          // Limited web: end the run once the 30-question limit is reached.
+          if (typeof isWebQLimit === 'function' && isWebQLimit()) { renderResult(); return; }
           state.currentIndex += 1;
           if (state.currentIndex >= state.questions.length) {
             renderResult();

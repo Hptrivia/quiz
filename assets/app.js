@@ -551,6 +551,8 @@ async function renderMultiThemeMarathon() {
       nextPageLink.dataset.rewardedHref = `play.html?themes=${themesParam}&page=${safePage + 1}`;
     } else { nextPageLink.style.display = "none"; }
   }
+  // Limited web: only the first page is free — any skip pops the app-download wall.
+  if (typeof gateWebSkip === 'function') gateWebSkip(nextPageLink, true);
 
   function showQuestion(index) {
     const prev = slidesContainer.querySelector(".question-slide.active");
@@ -902,6 +904,8 @@ async function renderPlayPage() {
       nextPageLink.style.display = "none";
     }
   }
+  // Limited web: only the first page is free — any skip pops the app-download wall.
+  if (typeof gateWebSkip === 'function') gateWebSkip(nextPageLink, true);
 
   function showQuestion(index) {
     const prev = slidesContainer.querySelector(".question-slide.active");

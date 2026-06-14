@@ -101,6 +101,8 @@ async function renderEpisodePage() {
       nextPageLink.style.display = "none";
     }
   }
+  // Limited web: one episode is free — any skip pops the app-download wall.
+  if (typeof gateWebSkip === 'function') gateWebSkip(nextPageLink, true);
 
   let currentIndex = 0;
   let score = 0;

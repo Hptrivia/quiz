@@ -53,7 +53,11 @@ const _RA_PLAY_STORE = "https://play.google.com/store/apps/details?id=com.trivia
 
 function _raIsDesktopWeb() {
   const native = !!(window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative));
-  return !native && !/android|iphone|ipad|ipod/i.test(navigator.userAgent || "");
+  const ua = navigator.userAgent || "";
+  // iPadOS 13+ Safari reports a Macintosh UA (no "iPad"); a touch-capable Mac is
+  // really an iPad, so treat it as mobile, not desktop.
+  const isIpadOS = /Macintosh/.test(ua) && navigator.maxTouchPoints > 1;
+  return !native && !isIpadOS && !/android|iphone|ipad|ipod/i.test(ua);
 }
 
 function initAppQr() {

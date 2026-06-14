@@ -366,8 +366,18 @@ const _WEB_LIMITS = { Q: 30, Wordle: 2, WS: 1, Ep: 1 };
 const _isNative = !!(window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative));
 
 function isAndroidWeb() { return /android/i.test(navigator.userAgent) && !_isNative; }
-function isIosWeb()     { return /iphone|ipad|ipod/i.test(navigator.userAgent) && !_isNative; }
-function isDesktopWeb() { return !_isNative && !/android|iphone|ipad|ipod/i.test(navigator.userAgent); }
+function isIosWeb() {
+  if (_isNative) return false;
+  const ua = navigator.userAgent;
+  if (/iphone|ipad|ipod/i.test(ua)) return true;
+  // iPadOS 13+ Safari defaults to "Request Desktop Website", so it reports a
+  // Macintosh UA with no "iPad" string. A real Mac has no touchscreen, so a
+  // touch-capable "Macintosh" is an iPad in disguise.
+  return /Macintosh/.test(ua) && navigator.maxTouchPoints > 1;
+}
+// Desktop = any limited-web visitor that isn't iOS or Android web. Defined as the
+// negation so it can never disagree with the mobile checks (esp. the iPad case).
+function isDesktopWeb() { return !_isNative && !isIosWeb() && !isAndroidWeb(); }
 // Self-contained premium check (mirrors app.js's isPremiumUser so the gate works
 // even on pages that don't load app.js). A valid unlock code sets this expiry.
 function _isPremium() {
@@ -538,6 +548,30 @@ function injectWebFeatureTease(ctaRow, label, title, body) {
     .find(a => /Report a Question/i.test(a.textContent));
   if (report) ctaRow.insertBefore(btn, report);
   else ctaRow.appendChild(btn);
+}
+
+// In-quiz "Skip"/"Next batch" links (Marathon page, Challenge round, Episode)
+// bypass the answered-question counter — without this a tapper could farm
+// unlimited free batches without ever finishing a round. Gate them positionally;
+// `blocked` is the caller's per-mode rule (e.g. challenge safeRound >= 3).
+//
+// MOBILE WEB ONLY. Desktop's 30 questions reset DAILY, so a positional "always
+// block page 1" would wrongly lock out a returning desktop visitor the next day;
+// desktop instead stays gated by the daily counter at the result/page-load walls.
+// (chat 2026-06-14)
+function gateWebSkip(linkEl, blocked) {
+  if (!linkEl || !blocked || !isLimitedWeb()) return;
+  if (isDesktopWeb()) return; // mobile web (iOS/Android) only
+  linkEl.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    _openWebWallOverlay({
+      title: "Get 100+ questions for every theme 🎉",
+      body: isDesktopWeb()
+        ? "You've hit the free limit. Unlock unlimited questions — or scan to grab the free app."
+        : "Download Trivia Gauntlet to keep playing — it's free."
+    });
+  });
 }
 
 // Walls are injected from several places (result screens, modals…), so watch
