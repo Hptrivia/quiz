@@ -408,7 +408,11 @@ async function renderWordSearchMashupMode(themesParam) {
     nextBtn.dataset.rewardedHref = nextHref;
     nextBtn.style.display = 'block';
     // Mobile web: skipping to the next grid bypasses the completion wall otherwise.
-    if (typeof gateWebSkip === 'function') gateWebSkip(nextBtn, true);
+    // Match the wording the completion wall already uses (webWallHTML "Word Searches").
+    if (typeof gateWebSkip === 'function') gateWebSkip(nextBtn, true, {
+      title: "Get word searches for every theme 🎉",
+      body: "Download Trivia Gauntlet for more Word Searches."
+    });
   }
 
   window._wsMashupKey = slugs.slice().sort().join(",");
@@ -504,7 +508,11 @@ async function renderWordSearchPage() {
     nextBtn.dataset.rewardedHref = nextHref;
     nextBtn.style.display = 'block';
     // Mobile web: skipping to the next grid bypasses the completion wall otherwise.
-    if (typeof gateWebSkip === 'function') gateWebSkip(nextBtn, true);
+    // Match the wording the completion wall already uses (webWallHTML "Word Searches").
+    if (typeof gateWebSkip === 'function') gateWebSkip(nextBtn, true, {
+      title: "Get word searches for every theme 🎉",
+      body: "Download Trivia Gauntlet for more Word Searches."
+    });
   }
 
   wsBuildGrid(words);

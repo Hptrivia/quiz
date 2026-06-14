@@ -559,17 +559,16 @@ function injectWebFeatureTease(ctaRow, label, title, body) {
 // block page 1" would wrongly lock out a returning desktop visitor the next day;
 // desktop instead stays gated by the daily counter at the result/page-load walls.
 // (chat 2026-06-14)
-function gateWebSkip(linkEl, blocked) {
+function gateWebSkip(linkEl, blocked, opts) {
   if (!linkEl || !blocked || !isLimitedWeb()) return;
   if (isDesktopWeb()) return; // mobile web (iOS/Android) only
   linkEl.addEventListener('click', (e) => {
     e.preventDefault();
     e.stopPropagation();
     _openWebWallOverlay({
-      title: "Get 100+ questions for every theme 🎉",
-      body: isDesktopWeb()
-        ? "You've hit the free limit. Unlock unlimited questions — or scan to grab the free app."
-        : "Download Trivia Gauntlet to keep playing — it's free."
+      title: (opts && opts.title) || "Get 100+ questions for every theme 🎉",
+      body: (opts && opts.body) ||
+        "Download Trivia Gauntlet to keep playing — it's free."
     });
   });
 }
