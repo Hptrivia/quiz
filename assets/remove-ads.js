@@ -122,11 +122,13 @@ function initPwaInstall() {
 
   if (_raIsIosDevice()) {
     // No programmatic install on iOS — tapping toggles the manual instructions.
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
       iosSteps.style.display = iosSteps.style.display === "none" ? "" : "none";
     });
   } else {
-    btn.addEventListener("click", async () => {
+    btn.addEventListener("click", async (e) => {
+      e.preventDefault();
       if (!_raDeferredPrompt) {
         // Already installed, unsupported browser, or the event hasn't fired —
         // point them at the browser menu fallback.

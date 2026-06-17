@@ -1314,6 +1314,10 @@ body[data-page="wordsearch"].premium-mode .ws-game-area {
   line-height: 1.8;
 }
 
+.ra-pwa { margin-top: 16px; text-align: center; }
+.ra-pwa-line { font-size: 13px; color: var(--muted-text, #aaa); margin: 0; }
+.ra-pwa-link { color: #b8b3ff; white-space: nowrap; }
+
 .email-popup p {
   margin: 0 0 14px;
   font-size: 13px;
