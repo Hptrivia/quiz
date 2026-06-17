@@ -469,6 +469,40 @@ function _clearMidQuiz(mode, key, page) {
   } catch (e) {}
 }
 
+// ── Cumulative score across rounds/pages (per session) ───────────────────────
+// Each round/page is a separate page load, so the running total is stashed in
+// localStorage keyed by session. Recording is idempotent per round (a refresh
+// re-writes the same round, never double-counts) and resets at round 1 or when a
+// different session starts. Shared by Challenge (challenge.js) and Marathon.
+function _cumLoad(storeKey, key) {
+  try {
+    const d = JSON.parse(localStorage.getItem(storeKey) || 'null');
+    if (d && d.key === key && d.rounds) return d;
+  } catch {}
+  return { key, rounds: {} };
+}
+function _cumSum(d) {
+  let c = 0, t = 0;
+  Object.keys(d.rounds).forEach(r => { c += d.rounds[r].c; t += d.rounds[r].t; });
+  return { c, t, rounds: Object.keys(d.rounds).length };
+}
+function _cumRecord(storeKey, key, round, correct, total) {
+  let d = _cumLoad(storeKey, key);
+  if (round <= 1) d = { key, rounds: {} }; // new game — clear prior rounds
+  d.rounds[round] = { c: correct, t: total };
+  try { localStorage.setItem(storeKey, JSON.stringify(d)); } catch {}
+  return _cumSum(d);
+}
+function _cumReset(storeKey, key) {
+  try { localStorage.setItem(storeKey, JSON.stringify({ key, rounds: {} })); } catch {}
+}
+// Score line: this-round score, plus a Total line once more than one round is in.
+function cumScoreLine(roundScore, roundTotal, cum) {
+  const main = `<p>Your score: ${roundScore} / ${roundTotal}</p>`;
+  if (cum && cum.rounds > 1) return `${main}<p class="cum-total">Total: ${cum.c} / ${cum.t}</p>`;
+  return main;
+}
+
 async function renderMultiThemeMarathon() {
   const params = new URLSearchParams(window.location.search);
   const slugs = (params.get("themes") || "").split(",").map(s => s.trim()).filter(Boolean);
@@ -659,6 +693,7 @@ async function renderMultiThemeMarathon() {
       recordMashupStats(mashupKey, "marathon", { correct: score, answered: pageQuestions.length, round: safePage, totalRounds: totalPages });
     }
     if (!isReplay && typeof saveSession === "function") saveSession("marathon", mashupKey, safePage, score, pageQuestions.length);
+    const cum = isReplay ? null : _cumRecord('tg_mara_cum', mashupKey, safePage, score, pageQuestions.length);
     let wrongCount = 0;
     if (isReplay) {
       localStorage.removeItem("tg_replay");
@@ -685,7 +720,7 @@ async function renderMultiThemeMarathon() {
       : "";
     resultBox.innerHTML = `
       <h2>Quiz Complete</h2>
-      <p>Your score: ${score} / ${pageQuestions.length}</p>
+      ${cumScoreLine(score, pageQuestions.length, cum)}
       <p class="result-tier">${getMarathonTier(score, pageQuestions.length)}</p>
       <div id="mashupMarathonBreakdown"></div>
       ${typeof webQCounterHTML === 'function' ? webQCounterHTML() : ''}
@@ -745,20 +780,24 @@ async function renderMultiThemeMarathon() {
       const replayHtml = replayCount > 0
         ? `<div class="wrong-replay-row">You have ${replayCount} wrong answer${replayCount !== 1 ? "s" : ""} accumulated &mdash; <a href="play.html?themes=${themesParam}&replay=1">Replay them all</a></div>`
         : "";
+      // Resuming would bypass the question-limit wall, so gate Continue the same way.
+      const resumeWalled = (typeof isWebQLimit === 'function' && isWebQLimit());
       resultBox.innerHTML = `
         <h2>Round ${saved.round} Complete</h2>
-        <p>Your score: ${saved.score} / ${saved.total}</p>
+        ${cumScoreLine(saved.score, saved.total, _cumSum(_cumLoad('tg_mara_cum', mashupKey)))}
         <div class="cta-row">
-          <a class="primary-btn" id="mashupMarathonContinueBtn" href="play.html?themes=${themesParam}&page=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>
+          ${resumeWalled ? (typeof webWallHTML === 'function' ? webWallHTML("Yay! You've answered 30 questions") : "") : `<a class="primary-btn" id="mashupMarathonContinueBtn" href="play.html?themes=${themesParam}&page=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
           <button class="secondary-btn" id="mashupMarathonRound1Btn">Start from Round 1</button>
         </div>
         ${replayHtml}`;
-      document.getElementById("mashupMarathonContinueBtn").addEventListener("click", () => {
+      const _mashupMaraContBtn = document.getElementById("mashupMarathonContinueBtn");
+      if (_mashupMaraContBtn) _mashupMaraContBtn.addEventListener("click", () => {
         if (typeof gtag === "function") gtag("event", "session_resumed", { theme: mashupKey, round: saved.round + 1 });
       });
       document.getElementById("mashupMarathonRound1Btn").addEventListener("click", () => {
         if (typeof gtag === "function") gtag("event", "session_reset", { theme: mashupKey });
         if (typeof clearSession === "function") clearSession("marathon", mashupKey);
+        _cumReset('tg_mara_cum', mashupKey);
         _clearMidQuiz("marathon", mashupKey, safePage);
         localStorage.removeItem("tg_replay");
         resultBox.style.display = "none";
@@ -866,22 +905,26 @@ async function renderPlayPage() {
         ? `<div class="wrong-replay-row">You have ${replayCount} wrong answer${replayCount !== 1 ? "s" : ""} accumulated &mdash; <a href="play.html?theme=${theme.slug}&replay=1">Replay them all</a></div>`
         : "";
 
+      // Resuming would bypass the question-limit wall, so gate Continue the same way.
+      const resumeWalled = (typeof isWebQLimit === 'function' && isWebQLimit());
       resultBox.innerHTML = `
         <h2>Round ${saved.round} Complete</h2>
-        <p>Your score: ${saved.score} / ${saved.total}</p>
+        ${cumScoreLine(saved.score, saved.total, _cumSum(_cumLoad('tg_mara_cum', theme.slug)))}
         <div class="cta-row">
-          <a class="primary-btn" id="continueRoundBtn" href="play.html?theme=${theme.slug}&page=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>
+          ${resumeWalled ? (typeof webWallHTML === 'function' ? webWallHTML("Yay! You've answered 30 questions", theme.title) : "") : `<a class="primary-btn" id="continueRoundBtn" href="play.html?theme=${theme.slug}&page=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
           <button class="secondary-btn" id="startRound1Btn">Start from Round 1</button>
         </div>
         ${replayHtml}`;
 
-      document.getElementById("continueRoundBtn").addEventListener("click", () => {
+      const _maraContBtn = document.getElementById("continueRoundBtn");
+      if (_maraContBtn) _maraContBtn.addEventListener("click", () => {
         if (typeof gtag === "function") gtag("event", "session_resumed", { theme: theme.slug, round: saved.round + 1 });
       });
 
       document.getElementById("startRound1Btn").addEventListener("click", () => {
         if (typeof gtag === "function") gtag("event", "session_reset", { theme: theme.slug });
         if (typeof clearSession === "function") clearSession("marathon", theme.slug);
+        _cumReset('tg_mara_cum', theme.slug);
         _clearMidQuiz("marathon", theme.slug, safePage);
         localStorage.removeItem("tg_replay");
         resultBox.style.display = "none";
@@ -1079,6 +1122,7 @@ const relatedThemesHtml = `
     : wrongQuestions.length;
 
   if (!isReplay && typeof saveSession === "function") saveSession("marathon", theme.slug, safePage, quizState.score, quizState.questions.length);
+  const cum = isReplay ? null : _cumRecord('tg_mara_cum', theme.slug, safePage, quizState.score, quizState.questions.length);
 
   const replayHtml = wrongCount > 0
     ? `<div class="wrong-replay-row">You have ${wrongCount} wrong answer${wrongCount !== 1 ? "s" : ""} &mdash; <a href="play.html?theme=${theme.slug}&replay=1">Replay them all</a></div>`
@@ -1088,7 +1132,7 @@ const relatedThemesHtml = `
 
   resultBox.innerHTML = `
     <h2>Quiz Complete</h2>
-    <p>Your score: ${quizState.score} / ${quizState.questions.length}</p>
+    ${cumScoreLine(quizState.score, quizState.questions.length, cum)}
     <p class="result-tier">${tierText}</p>
     ${typeof webQCounterHTML === 'function' ? webQCounterHTML() : ''}
     <div class="cta-row">

@@ -573,6 +573,21 @@ function gateWebSkip(linkEl, blocked, opts) {
   });
 }
 
+// "Replay them all" (replaying your missed questions) is reserved for the app on
+// web — one global capture listener covers every Challenge + Marathon result and
+// resume screen. Native app + premium replay normally; limited web (mobile +
+// desktop) gets the app-promo wall instead.
+document.addEventListener('click', (e) => {
+  const link = e.target.closest && e.target.closest('a[href*="replay=1"]');
+  if (!link || !isLimitedWeb()) return;
+  e.preventDefault();
+  e.stopPropagation();
+  _openWebWallOverlay({
+    title: 'Replay missed questions in the app 🎉',
+    body: "Replaying the ones you got wrong is a free feature in the app — grab Trivia Gauntlet to use it."
+  });
+}, true);
+
 // Walls are injected from several places (result screens, modals…), so watch
 // the DOM and fill any QR placeholder as soon as it mounts. Also wire the
 // "Get the free app" buttons to open the QR overlay.
@@ -659,8 +674,11 @@ function _injectFooterUnlock() {
   });
 }
 
-function webWallHTML(msg, themeName, noun) {
+function webWallHTML(msg, themeName, noun, countOverride) {
   const item = noun || 'questions';
+  // Some callers (e.g. Challenge mode's per-round wall) enforce a smaller free
+  // allowance than the global daily limit — let them say the right number.
+  const qCount = countOverride || _WEB_LIMITS.Q;
   // Questions are a DAILY allowance — the wall reflects that they reset tomorrow.
   // (All callers pass the same "questions" message, so we override it centrally.)
   if (item === 'questions') {
@@ -668,19 +686,19 @@ function webWallHTML(msg, themeName, noun) {
     if (isDesktopWeb()) {
       return `<div class="android-wall">
     <div class="android-wall-icon">📱</div>
-    <h3>You've used today's ${_WEB_LIMITS.Q} questions 🎉</h3>
+    <h3>You've used today's ${qCount} questions 🎉</h3>
     <p>${themeName ? `Come back tomorrow for more ${themeName} questions — or get unlimited access now.` : `Come back tomorrow for more questions — or get unlimited access now.`}</p>
     ${_webStoreLinksHTML()}
   </div>`;
     }
-    // iOS / Android web: a one-time 30-question taster — get the free app to keep
+    // iOS / Android web: a one-time taster — get the free app to keep
     // going. Auto-redirects to the store after a few seconds — but only on the
     // result screen: _watchForWallRedirect arms it (skipping the .android-wall-overlay
     // page-load gate) and INJECTS the "Taking you to the app…" countdown itself, so
     // the note only ever shows where a redirect is genuinely happening.
     return `<div class="android-wall web-wall-redirect" data-store="${_storeUrl()}">
     <div class="android-wall-icon">📱</div>
-    <h3>You've played your ${_WEB_LIMITS.Q} questions 🎉</h3>
+    <h3>You've played your ${qCount} questions 🎉</h3>
     <p>${themeName ? `Download Trivia Gauntlet for more ${themeName} questions.` : `Download Trivia Gauntlet for more questions.`}</p>
     ${_webStoreLinksHTML()}
   </div>`;

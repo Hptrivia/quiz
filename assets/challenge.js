@@ -1,3 +1,23 @@
+// Challenge mode: on limited web (mobile + desktop), the first 2 rounds (20
+// questions) are free; finishing round 2 pops the app-install wall. This is
+// challenge-specific and independent of the global 30/day question limit.
+const CHAL_WEB_FREE_ROUNDS = 2;
+const CHAL_WEB_LIMIT_Q = CHAL_WEB_FREE_ROUNDS * 10;
+// True when this round's result screen should show the install wall instead of
+// a Next-Round button (web only — the native app never walls, it shows ads).
+function chalWebWalled(safeRound) {
+  if (typeof isWebQLimit === 'function' && isWebQLimit()) return true;
+  return typeof isLimitedWeb === 'function' && isLimitedWeb() && safeRound >= CHAL_WEB_FREE_ROUNDS;
+}
+
+// Cumulative score across rounds (per session). Thin wrappers over the shared
+// _cum* helpers in app.js, bound to Challenge's localStorage key.
+const _CHAL_CUM_KEY = 'tg_chal_cum';
+function _chalCumLoad(key)                    { return _cumLoad(_CHAL_CUM_KEY, key); }
+function _chalCumSum(d)                       { return _cumSum(d); }
+function _chalCumRecord(key, round, c, total) { return _cumRecord(_CHAL_CUM_KEY, key, round, c, total); }
+function _chalCumReset(key)                   { _cumReset(_CHAL_CUM_KEY, key); }
+
 async function renderMultiThemeChallenge() {
   const params = new URLSearchParams(window.location.search);
   const slugs = (params.get("themes") || "").split(",").map(s => s.trim()).filter(Boolean);
@@ -63,11 +83,11 @@ async function renderMultiThemeChallenge() {
       nextRoundLink.style.display = "inline-block";
       nextRoundLink.textContent = "Skip to next round";
       nextRoundLink.href = `challenge.html?themes=${themesParam}&round=${safeRound + 1}`;
-      if (safeRound % 3 === 0) nextRoundLink.dataset.rewardedHref = `challenge.html?themes=${themesParam}&round=${safeRound + 1}`;
+      if (safeRound % 2 === 0) nextRoundLink.dataset.rewardedHref = `challenge.html?themes=${themesParam}&round=${safeRound + 1}`;
     } else { nextRoundLink.style.display = "none"; }
   }
-  // Limited web: rounds 1-2 free; skipping on round 3 pops the app-download wall.
-  if (typeof gateWebSkip === 'function') gateWebSkip(nextRoundLink, safeRound >= 3);
+  // Limited web: round 1 free; skipping on round 2+ pops the app-download wall.
+  if (typeof gateWebSkip === 'function') gateWebSkip(nextRoundLink, safeRound >= CHAL_WEB_FREE_ROUNDS);
 
   let score = 0, currentIndex = 0, revealAnswers = false;
   const wrongQuestions = [];
@@ -171,6 +191,8 @@ async function renderMultiThemeChallenge() {
     resultBox.classList.remove("result-anim"); void resultBox.offsetWidth; resultBox.classList.add("result-anim");
     const hasNextRound = safeRound < totalRounds;
     if (!isReplay && typeof saveSession === "function") saveSession("challenge", sessionKey, safeRound, score, roundQuestions.length);
+    const cum = isReplay ? null : _chalCumRecord(sessionKey, safeRound, score, roundQuestions.length);
+    const webWalled = hasNextRound && chalWebWalled(safeRound);
     if (typeof recordMashupStats === "function") {
       recordMashupStats(sessionKey, "challenge", { correct: score, answered: roundQuestions.length, round: safeRound, totalRounds });
     }
@@ -199,12 +221,12 @@ async function renderMultiThemeChallenge() {
       : "";
     resultBox.innerHTML = `
       <h2>Round ${safeRound} Complete</h2>
-      <p>Your score: ${score} / ${roundQuestions.length}</p>
+      ${cumScoreLine(score, roundQuestions.length, cum)}
       <div id="mashupChallengeBreakdown"></div>
       ${webQCounterHTML()}
       <div class="cta-row">
-        ${hasNextRound && !isWebQLimit() ? `<a class="primary-btn" href="challenge.html?themes=${themesParam}&round=${safeRound + 1}" ${safeRound % 3 === 0 ? `data-rewarded-href="challenge.html?themes=${themesParam}&round=${safeRound + 1}"` : ''}>Next Round</a>` : ""}
-        ${hasNextRound && isWebQLimit() ? webWallHTML("Yay! You've answered 30 questions") : ""}
+        ${hasNextRound && !webWalled ? `<a class="primary-btn" href="challenge.html?themes=${themesParam}&round=${safeRound + 1}" ${safeRound % 2 === 0 ? `data-rewarded-href="challenge.html?themes=${themesParam}&round=${safeRound + 1}"` : ''}>Next Round</a>` : ""}
+        ${webWalled ? webWallHTML("Yay! You've answered " + CHAL_WEB_LIMIT_Q + " questions", null, null, CHAL_WEB_LIMIT_Q) : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
         ${!isPremiumUser() && (typeof isDesktopWeb === 'function' && isDesktopWeb()) ? `<a class="secondary-btn" href="remove-ads.html">Reveal Answers</a>` : ""}
       </div>
@@ -213,11 +235,11 @@ async function renderMultiThemeChallenge() {
         <p class="result-theme-search-title">Try another theme</p>
         <div class="search-wrap">
           <input id="mashupChallengeSearchInput" class="theme-search-input" type="text" placeholder="Search themes..." autocomplete="off" />
-          <div id="mashupChallengeSearchResults" class="search-results"${safeRound % 3 === 0 ? ' data-reward-gate="1"' : ''}></div>
+          <div id="mashupChallengeSearchResults" class="search-results"${safeRound % 2 === 0 ? ' data-reward-gate="1"' : ''}></div>
         </div>
       </div>
       <div id="mashupChallengeAdSlot"></div>
-      <div class="theme-related-quizzes"${safeRound % 3 === 0 ? ' data-reward-gate="1"' : ''}>
+      <div class="theme-related-quizzes"${safeRound % 2 === 0 ? ' data-reward-gate="1"' : ''}>
         <h3>Play these themes individually</h3>
         <div class="grid">
           ${selectedThemes.map(t => `<a class="card" href="challenge.html?theme=${t.slug}&round=1"><h3>${t.title}</h3></a>`).join("")}
@@ -257,20 +279,25 @@ async function renderMultiThemeChallenge() {
       const replayHtml = replayCount > 0
         ? `<div class="wrong-replay-row">You have ${replayCount} wrong answer${replayCount !== 1 ? "s" : ""} accumulated &mdash; <a href="challenge.html?themes=${themesParam}&replay=1">Replay them all</a></div>`
         : "";
+      const cumR = _chalCumSum(_chalCumLoad(sessionKey));
+      // Resuming would bypass the round-2 web wall, so gate Continue the same way.
+      const resumeWalled = chalWebWalled(saved.round);
       resultBox.innerHTML = `
         <h2>Round ${saved.round} Complete</h2>
-        <p>Your score: ${saved.score} / ${saved.total}</p>
+        ${cumScoreLine(saved.score, saved.total, cumR)}
         <div class="cta-row">
-          <a class="primary-btn" id="mashupContinueBtn" href="challenge.html?themes=${themesParam}&round=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>
+          ${resumeWalled ? webWallHTML("Yay! You've answered " + CHAL_WEB_LIMIT_Q + " questions", null, null, CHAL_WEB_LIMIT_Q) : `<a class="primary-btn" id="mashupContinueBtn" href="challenge.html?themes=${themesParam}&round=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
           <button class="secondary-btn" id="mashupRound1Btn">Start from Round 1</button>
         </div>
         ${replayHtml}`;
-      document.getElementById("mashupContinueBtn").addEventListener("click", () => {
+      const _mashupContBtn = document.getElementById("mashupContinueBtn");
+      if (_mashupContBtn) _mashupContBtn.addEventListener("click", () => {
         if (typeof gtag === "function") gtag("event", "session_resumed", { theme: sessionKey, round: saved.round + 1 });
       });
       document.getElementById("mashupRound1Btn").addEventListener("click", () => {
         if (typeof gtag === "function") gtag("event", "session_reset", { theme: sessionKey });
         if (typeof clearSession === "function") clearSession("challenge", sessionKey);
+        _chalCumReset(sessionKey);
         localStorage.removeItem("tg_replay");
         resultBox.style.display = "none";
         resultBox.innerHTML = "";
@@ -375,13 +402,13 @@ async function renderChallengePage() {
       nextRoundLink.style.display = "inline-block";
       nextRoundLink.textContent = "Skip to next round";
       nextRoundLink.href = `challenge.html?theme=${theme.slug}&round=${safeRound + 1}`;
-      if (safeRound % 3 === 0) nextRoundLink.dataset.rewardedHref = `challenge.html?theme=${theme.slug}&round=${safeRound + 1}`;
+      if (safeRound % 2 === 0) nextRoundLink.dataset.rewardedHref = `challenge.html?theme=${theme.slug}&round=${safeRound + 1}`;
     } else {
       nextRoundLink.style.display = "none";
     }
   }
-  // Limited web: rounds 1-2 free; skipping on round 3 pops the app-download wall.
-  if (typeof gateWebSkip === 'function') gateWebSkip(nextRoundLink, safeRound >= 3);
+  // Limited web: round 1 free; skipping on round 2+ pops the app-download wall.
+  if (typeof gateWebSkip === 'function') gateWebSkip(nextRoundLink, safeRound >= CHAL_WEB_FREE_ROUNDS);
 
   let showContinuePrompt = false;
 
@@ -406,22 +433,27 @@ async function renderChallengePage() {
         ? `<div class="wrong-replay-row">You have ${replayCount} wrong answer${replayCount !== 1 ? "s" : ""} accumulated &mdash; <a href="challenge.html?theme=${theme.slug}&replay=1">Replay them all</a></div>`
         : "";
 
+      const cumR = _chalCumSum(_chalCumLoad(theme.slug));
+      // Resuming would bypass the round-2 web wall, so gate Continue the same way.
+      const resumeWalled = chalWebWalled(saved.round);
       resultBox.innerHTML = `
         <h2>Round ${saved.round} Complete</h2>
-        <p>Your score: ${saved.score} / ${saved.total}</p>
+        ${cumScoreLine(saved.score, saved.total, cumR)}
         <div class="cta-row">
-          <a class="primary-btn" id="continueRoundBtn" href="challenge.html?theme=${theme.slug}&round=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>
+          ${resumeWalled ? webWallHTML("Yay! You've answered " + CHAL_WEB_LIMIT_Q + " questions", theme.title, null, CHAL_WEB_LIMIT_Q) : `<a class="primary-btn" id="continueRoundBtn" href="challenge.html?theme=${theme.slug}&round=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
           <button class="secondary-btn" id="startRound1Btn">Start from Round 1</button>
         </div>
         ${replayHtml}`;
 
-      document.getElementById("continueRoundBtn").addEventListener("click", () => {
+      const _contBtn = document.getElementById("continueRoundBtn");
+      if (_contBtn) _contBtn.addEventListener("click", () => {
         if (typeof gtag === "function") gtag("event", "session_resumed", { theme: theme.slug, round: saved.round + 1 });
       });
 
       document.getElementById("startRound1Btn").addEventListener("click", () => {
         if (typeof gtag === "function") gtag("event", "session_reset", { theme: theme.slug });
         if (typeof clearSession === "function") clearSession("challenge", theme.slug);
+        _chalCumReset(theme.slug);
         localStorage.removeItem("tg_replay");
         resultBox.style.display = "none";
         resultBox.innerHTML = "";
@@ -604,6 +636,8 @@ async function renderChallengePage() {
     resultBox.classList.add("result-anim");
 
     const hasNextRound = safeRound < totalRounds;
+    const cum = isReplay ? null : _chalCumRecord(theme.slug, safeRound, state.score, state.questions.length);
+    const webWalled = hasNextRound && chalWebWalled(safeRound);
     const roundLink = `${window.location.origin}${window.location.pathname}?theme=${encodeURIComponent(theme.slug)}&round=${safeRound}`;
 
     const affiliateHtml = affiliateProducts && affiliateProducts.length ? `
@@ -623,7 +657,7 @@ async function renderChallengePage() {
     const relatedThemes = getRelatedThemes(themes, theme, 4);
 
     const relatedThemesHtml = `
-      <div class="theme-related-quizzes"${safeRound % 3 === 0 ? ' data-reward-gate="1"' : ''}>
+      <div class="theme-related-quizzes"${safeRound % 2 === 0 ? ' data-reward-gate="1"' : ''}>
         <h3>Related Quizzes</h3>
         <div class="grid">
           <a class="card card-mix" href="mashup.html?preset=${theme.slug}&mode=challenge">
@@ -653,13 +687,13 @@ async function renderChallengePage() {
 
     resultBox.innerHTML = `
       <h2>Round ${safeRound} Complete</h2>
-      <p>Your score: ${state.score} / ${state.questions.length}</p>
+      ${cumScoreLine(state.score, state.questions.length, cum)}
       <p class="challenge-share-text">Send this round link to a friend to play the same 10 questions.</p>
       <div class="challenge-link-box">${roundLink}</div>
       ${webQCounterHTML()}
       <div class="cta-row">
-        ${hasNextRound && !isWebQLimit() ? `<a class="primary-btn" href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}" ${safeRound % 3 === 0 ? `data-rewarded-href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}"` : ''}>Next Round</a>` : ""}
-        ${hasNextRound && isWebQLimit() ? webWallHTML("Yay! You've answered 30 questions", theme.title) : ""}
+        ${hasNextRound && !webWalled ? `<a class="primary-btn" href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}" ${safeRound % 2 === 0 ? `data-rewarded-href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}"` : ''}>Next Round</a>` : ""}
+        ${webWalled ? webWallHTML("Yay! You've answered " + CHAL_WEB_LIMIT_Q + " questions", theme.title, null, CHAL_WEB_LIMIT_Q) : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
         ${!isPremiumUser() && (typeof isDesktopWeb === 'function' && isDesktopWeb()) ? `<a class="secondary-btn" href="remove-ads.html?theme=${theme.slug}">Reveal Answers</a>` : ""}
       </div>
@@ -671,7 +705,7 @@ async function renderChallengePage() {
         <p class="result-theme-search-title">Try another theme</p>
         <div class="search-wrap">
           <input id="challengeResultThemeSearchInput" class="theme-search-input" type="text" placeholder="Search themes..." autocomplete="off" />
-          <div id="challengeResultThemeSearchResults" class="search-results"${safeRound % 3 === 0 ? ' data-reward-gate="1"' : ''}></div>
+          <div id="challengeResultThemeSearchResults" class="search-results"${safeRound % 2 === 0 ? ' data-reward-gate="1"' : ''}></div>
         </div>
         ${relatedThemesHtml}
     `;

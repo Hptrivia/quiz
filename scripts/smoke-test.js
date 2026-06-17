@@ -101,11 +101,12 @@ async function playQuiz(page, endSel, maxQ = 120) {
 }
 
 // Challenge: play through to `targetRound`, clicking "Next Round" between rounds.
-// Round 3 is the one that matters — that's when `safeRound % 3 === 0` turns on the
+// Round 2 is the one that matters — that's when `safeRound % 2 === 0` turns on the
 // rewarded-gate markers + Next Round data-rewarded-href, the cadence a single-round
-// test never reaches. On web the rewarded click handler no-ops, so "Next Round" is
-// a plain link we just follow by URL.
-async function playChallengeRounds(page, endSel, targetRound = 3) {
+// test never reaches. (It's also where limited web now pops the app-install wall,
+// so the result screen at round 2 is the end of the line on web.) On web the
+// rewarded click handler no-ops, so "Next Round" is a plain link we follow by URL.
+async function playChallengeRounds(page, endSel, targetRound = 2) {
   for (let r = 1; r <= targetRound; r++) {
     if (!await playQuiz(page, endSel)) return false;
     if (r === targetRound) break;

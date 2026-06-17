@@ -1110,6 +1110,14 @@ body[data-page="wordsearch"].premium-mode .ws-game-area {
   line-height: 1.4;
 }
 
+/* Running total across rounds, shown under the per-round score from round 2 on. */
+.cum-total {
+  margin-top: 2px;
+  color: var(--muted-text);
+  font-size: 15px;
+  font-weight: 600;
+}
+
 .theme-question-count {
   margin: 10px 0 16px;
   color: var(--link-accent);
