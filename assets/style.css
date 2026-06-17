@@ -730,17 +730,31 @@ body[data-page="wordsearch"].premium-mode .ws-game-area {
   font-weight: 700;
 }
 
-.challenge-share-text {
-  margin-top: 12px;
-}
-
-.challenge-link-box {
-  margin: 10px 0 18px;
-  padding: 12px;
+.challenge-share-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: 12px 0 18px;
+  padding: 10px 16px;
   border: 1px solid var(--context-border);
   border-radius: 10px;
   background: var(--context-bg);
-  word-break: break-all;
+  color: var(--link-accent);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.challenge-share-link:hover {
+  border-color: var(--link-accent);
+}
+
+.challenge-share-link.copied {
+  color: #16a34a;
+  border-color: #16a34a;
 }
 
 .install-card-content p {

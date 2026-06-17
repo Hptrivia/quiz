@@ -716,7 +716,7 @@ async function renderMultiThemeMarathon() {
     }
     const hasNextPage = safePage < totalPages;
     const replayHtml = wrongCount > 0
-      ? `<div class="wrong-replay-row">You have ${wrongCount} wrong answer${wrongCount !== 1 ? "s" : ""} &mdash; <a href="play.html?themes=${themesParam}&replay=1">Replay them all</a></div>`
+      ? `<div class="wrong-replay-row">You have ${wrongCount} wrong answer${wrongCount !== 1 ? "s" : ""} &mdash; <a href="play.html?themes=${themesParam}&replay=1" data-rewarded-href="play.html?themes=${themesParam}&replay=1" data-rewarded-label="Replay">Replay them all</a></div>`
       : "";
     resultBox.innerHTML = `
       <h2>Quiz Complete</h2>
@@ -778,7 +778,7 @@ async function renderMultiThemeMarathon() {
         }
       } catch {}
       const replayHtml = replayCount > 0
-        ? `<div class="wrong-replay-row">You have ${replayCount} wrong answer${replayCount !== 1 ? "s" : ""} accumulated &mdash; <a href="play.html?themes=${themesParam}&replay=1">Replay them all</a></div>`
+        ? `<div class="wrong-replay-row">You have ${replayCount} wrong answer${replayCount !== 1 ? "s" : ""} accumulated &mdash; <a href="play.html?themes=${themesParam}&replay=1" data-rewarded-href="play.html?themes=${themesParam}&replay=1" data-rewarded-label="Replay">Replay them all</a></div>`
         : "";
       // Resuming would bypass the question-limit wall, so gate Continue the same way.
       const resumeWalled = (typeof isWebQLimit === 'function' && isWebQLimit());
@@ -902,7 +902,7 @@ async function renderPlayPage() {
       } catch {}
 
       const replayHtml = replayCount > 0
-        ? `<div class="wrong-replay-row">You have ${replayCount} wrong answer${replayCount !== 1 ? "s" : ""} accumulated &mdash; <a href="play.html?theme=${theme.slug}&replay=1">Replay them all</a></div>`
+        ? `<div class="wrong-replay-row">You have ${replayCount} wrong answer${replayCount !== 1 ? "s" : ""} accumulated &mdash; <a href="play.html?theme=${theme.slug}&replay=1" data-rewarded-href="play.html?theme=${theme.slug}&replay=1" data-rewarded-label="Replay">Replay them all</a></div>`
         : "";
 
       // Resuming would bypass the question-limit wall, so gate Continue the same way.
@@ -1125,7 +1125,7 @@ const relatedThemesHtml = `
   const cum = isReplay ? null : _cumRecord('tg_mara_cum', theme.slug, safePage, quizState.score, quizState.questions.length);
 
   const replayHtml = wrongCount > 0
-    ? `<div class="wrong-replay-row">You have ${wrongCount} wrong answer${wrongCount !== 1 ? "s" : ""} &mdash; <a href="play.html?theme=${theme.slug}&replay=1">Replay them all</a></div>`
+    ? `<div class="wrong-replay-row">You have ${wrongCount} wrong answer${wrongCount !== 1 ? "s" : ""} &mdash; <a href="play.html?theme=${theme.slug}&replay=1" data-rewarded-href="play.html?theme=${theme.slug}&replay=1" data-rewarded-label="Replay">Replay them all</a></div>`
     : "";
 
   const notifyHtml = (!hasNextPage && !isReplay) ? buildNotifyCard(theme.title, false, "marathon") : "";

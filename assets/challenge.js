@@ -217,7 +217,7 @@ async function renderMultiThemeChallenge() {
       }
     }
     const replayHtml = wrongCount > 0
-      ? `<div class="wrong-replay-row">You have ${wrongCount} wrong answer${wrongCount !== 1 ? "s" : ""} &mdash; <a href="challenge.html?themes=${themesParam}&replay=1">Replay them all</a></div>`
+      ? `<div class="wrong-replay-row">You have ${wrongCount} wrong answer${wrongCount !== 1 ? "s" : ""} &mdash; <a href="challenge.html?themes=${themesParam}&replay=1"${safeRound % 2 === 0 ? ` data-rewarded-href="challenge.html?themes=${themesParam}&replay=1" data-rewarded-label="Replay"` : ''}>Replay them all</a></div>`
       : "";
     resultBox.innerHTML = `
       <h2>Round ${safeRound} Complete</h2>
@@ -277,7 +277,7 @@ async function renderMultiThemeChallenge() {
         }
       } catch {}
       const replayHtml = replayCount > 0
-        ? `<div class="wrong-replay-row">You have ${replayCount} wrong answer${replayCount !== 1 ? "s" : ""} accumulated &mdash; <a href="challenge.html?themes=${themesParam}&replay=1">Replay them all</a></div>`
+        ? `<div class="wrong-replay-row">You have ${replayCount} wrong answer${replayCount !== 1 ? "s" : ""} accumulated &mdash; <a href="challenge.html?themes=${themesParam}&replay=1"${saved.round % 2 === 0 ? ` data-rewarded-href="challenge.html?themes=${themesParam}&replay=1" data-rewarded-label="Replay"` : ''}>Replay them all</a></div>`
         : "";
       const cumR = _chalCumSum(_chalCumLoad(sessionKey));
       // Resuming would bypass the round-2 web wall, so gate Continue the same way.
@@ -430,7 +430,7 @@ async function renderChallengePage() {
       } catch {}
 
       const replayHtml = replayCount > 0
-        ? `<div class="wrong-replay-row">You have ${replayCount} wrong answer${replayCount !== 1 ? "s" : ""} accumulated &mdash; <a href="challenge.html?theme=${theme.slug}&replay=1">Replay them all</a></div>`
+        ? `<div class="wrong-replay-row">You have ${replayCount} wrong answer${replayCount !== 1 ? "s" : ""} accumulated &mdash; <a href="challenge.html?theme=${theme.slug}&replay=1"${saved.round % 2 === 0 ? ` data-rewarded-href="challenge.html?theme=${theme.slug}&replay=1" data-rewarded-label="Replay"` : ''}>Replay them all</a></div>`
         : "";
 
       const cumR = _chalCumSum(_chalCumLoad(theme.slug));
@@ -680,7 +680,7 @@ async function renderChallengePage() {
     if (!isReplay && typeof saveSession === "function") saveSession("challenge", theme.slug, safeRound, state.score, state.questions.length);
 
     const replayHtml = wrongCount > 0
-      ? `<div class="wrong-replay-row">You have ${wrongCount} wrong answer${wrongCount !== 1 ? "s" : ""} &mdash; <a href="challenge.html?theme=${theme.slug}&replay=1">Replay them all</a></div>`
+      ? `<div class="wrong-replay-row">You have ${wrongCount} wrong answer${wrongCount !== 1 ? "s" : ""} &mdash; <a href="challenge.html?theme=${theme.slug}&replay=1"${safeRound % 2 === 0 ? ` data-rewarded-href="challenge.html?theme=${theme.slug}&replay=1" data-rewarded-label="Replay"` : ''}>Replay them all</a></div>`
       : "";
 
     const notifyHtml = (!hasNextRound && !isReplay) ? buildNotifyCard(theme.title, false, "challenge") : "";
@@ -688,8 +688,7 @@ async function renderChallengePage() {
     resultBox.innerHTML = `
       <h2>Round ${safeRound} Complete</h2>
       ${cumScoreLine(state.score, state.questions.length, cum)}
-      <p class="challenge-share-text">Send this round link to a friend to play the same 10 questions.</p>
-      <div class="challenge-link-box">${roundLink}</div>
+      <button type="button" class="challenge-share-link" data-share-link="${roundLink}">🔗 Copy link &mdash; challenge a friend to these 10 questions</button>
       ${webQCounterHTML()}
       <div class="cta-row">
         ${hasNextRound && !webWalled ? `<a class="primary-btn" href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}" ${safeRound % 2 === 0 ? `data-rewarded-href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}"` : ''}>Next Round</a>` : ""}
@@ -755,6 +754,36 @@ async function renderChallengePage() {
 
   if (!showContinuePrompt) showQuestion(0);
 }
+
+// Clickable "copy share link" pill on the challenge result screen — copies the
+// round URL to the clipboard so players don't have to select/copy it by hand.
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest && e.target.closest(".challenge-share-link");
+  if (!btn) return;
+  const link = btn.dataset.shareLink;
+  if (!link) return;
+  if (!btn.dataset.label) btn.dataset.label = btn.innerHTML;
+  const done = () => {
+    btn.textContent = "✓ Link copied — paste it to a friend";
+    btn.classList.add("copied");
+    clearTimeout(btn._copyT);
+    btn._copyT = setTimeout(() => {
+      btn.innerHTML = btn.dataset.label;
+      btn.classList.remove("copied");
+    }, 2000);
+  };
+  const fallback = () => {
+    const ta = document.createElement("textarea");
+    ta.value = link; document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); } catch {}
+    ta.remove(); done();
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(link).then(done).catch(fallback);
+  } else {
+    fallback();
+  }
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   if (document.body.dataset.page === "challenge") {

@@ -13,7 +13,7 @@
 //   1. paste the real iOS ad unit IDs into _ADMOB_LIVE_IDS.ios below, then
 //   2. change ios: 'off' → 'live' here.
 const ADMOB_MODE_BY_PLATFORM = {
-  ios: 'test', // TEMP: testing iOS — revert to 'live' when done
+  ios: 'live',
   android: 'live',
 };
 const _ADMOB_PLATFORM = window.Capacitor?.getPlatform?.();
