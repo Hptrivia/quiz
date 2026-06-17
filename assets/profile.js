@@ -444,8 +444,14 @@ function _storeUrl() {
 }
 
 function _webStoreLinksHTML() {
-  if (isAndroidWeb()) return `<a href="${_PLAY_STORE}" class="primary-btn" target="_blank">Get the free app</a>`;
-  if (isIosWeb())     return `<a href="${_APP_STORE}"  class="primary-btn" target="_blank">Get the free app</a>`;
+  // Secondary "pay to keep playing on web, ad-free" link — the SAME unlock page
+  // desktop uses. Shown under the app button on every mobile wall so a visitor who
+  // won't install an app can still continue (a €0 segment otherwise). Styled as a
+  // subtle outlined link so the free app stays the primary call to action.
+  const webUnlock = `<div class="web-or"><span>or</span></div>
+  <a href="/remove-ads.html" class="primary-btn web-unlock-btn">Keep playing on web</a>`;
+  if (isAndroidWeb()) return `<a href="${_PLAY_STORE}" class="primary-btn" target="_blank">Get the free app</a>${webUnlock}`;
+  if (isIosWeb())     return `<a href="${_APP_STORE}"  class="primary-btn" target="_blank">Get the free app</a>${webUnlock}`;
   // Desktop / unknown: a compact button opens the QR in an overlay (keeps the
   // inline wall small), OR pay to unlock all questions right here on desktop.
   return `<button type="button" class="primary-btn web-qr-trigger" data-qr="${_appUrl()}">📱 Get the free app</button>
@@ -636,11 +642,27 @@ function _watchForWallRedirect() {
     el.appendChild(note);
     const countEl = note.querySelector('.wall-redirect-count');
     let n = 4;
+    let timer = null;
+    let cancelled = false;
     const tick = () => {
+      if (cancelled) return;
       countEl.textContent = n;
       if (n <= 0) { window.location.href = url; return; }
-      n--; setTimeout(tick, 1000);
+      n--; timer = setTimeout(tick, 1000);
     };
+    // The auto-redirect serves the passive majority who won't tap anything. But the
+    // moment a visitor actually engages with the wall (taps it, or scrolls to read
+    // the "Keep playing on web" option), cancel the countdown — don't yank an
+    // intentful chooser off to the store mid-decision. The wall (and its web-unlock
+    // link) then stays put for as long as they're on the result screen.
+    const cancel = () => {
+      if (cancelled) return;
+      cancelled = true;
+      clearTimeout(timer);
+      note.remove();
+    };
+    el.addEventListener('pointerdown', cancel);
+    window.addEventListener('scroll', cancel, { once: true, passive: true });
     tick();
   };
   const scan = (root) => root.querySelectorAll?.('.web-wall-redirect[data-store]').forEach(arm);
@@ -656,12 +678,13 @@ function _watchForWallRedirect() {
   }).observe(document.body, { childList: true, subtree: true });
 }
 
-// Footer link — desktop web only, site-wide (lives here in profile.js, which
-// loads on every page, so every footer gets it). Non-premium users see an
-// "Unlock Full Access" upsell; premium users get a "Membership" link so they
-// can still reach remove-ads.html to view their status / re-enter a code.
+// Footer link — every web visitor (desktop + mobile), site-wide (lives here in
+// profile.js, which loads on every page, so every footer gets it). Non-premium
+// users see an "Unlock Full Access" upsell; premium users get a "Membership" link
+// so they can still reach remove-ads.html to view their status / re-enter a code.
+// Skipped in the native app, which has its own store-billed unlock.
 function _injectFooterUnlock() {
-  if (!isDesktopWeb()) return;
+  if (_isNative) return;
   if (/\/remove-ads\.html$/.test(window.location.pathname)) return;
   const premium = _isPremium();
   document.querySelectorAll('.footer-links').forEach(el => {
@@ -776,11 +799,12 @@ function _checkWebPageWall() {
   document.body.appendChild(overlay);
 }
 
-// On theme pages, add a card as the last game-mode card — desktop web only.
-// Non-premium users get an "Unlock Full Access" upsell; premium users get a
-// "Membership" card so they can reach remove-ads.html to view their status.
+// On theme pages, add a card as the last game-mode card — every web visitor
+// (desktop + mobile). Non-premium users get an "Unlock Full Access" upsell;
+// premium users get a "Membership" card so they can reach remove-ads.html to view
+// their status. Skipped in the native app, which has its own store-billed unlock.
 function _injectThemeUnlockCard() {
-  if (!isDesktopWeb()) return;
+  if (_isNative) return;
   if (!/\/themes\//.test(window.location.pathname)) return;
   const grid = document.querySelector('.panel .grid') || document.querySelector('.grid');
   if (!grid || grid.querySelector('.unlock-card')) return;
