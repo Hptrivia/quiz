@@ -776,20 +776,7 @@ function _injectWebBanner() {
   banner.textContent = '📱 Get 100+ questions for all themes — Click to download the free app →';
   // Navigate in the SAME tab (no target=_blank): more reliable than a new tab,
   // which strict private/incognito modes and in-app webviews often block.
-  const isWordGamePage = /\/(wordle|wordsearch)\//.test(path);
-  if (WEB_PAY_OPTION && isWordGamePage && (isIosWeb() || isAndroidWeb())) {
-    // Wordle / Word Search pages: give the mobile banner the SAME two options the
-    // end-of-game wall has (app + "Keep playing on web") by opening the overlay,
-    // instead of a one-tap straight-to-store. Other lobby pages keep the direct tap.
-    banner.href = '#';
-    banner.addEventListener('click', (e) => {
-      e.preventDefault();
-      _openWebWallOverlay({
-        title: 'Get 100+ questions for every theme 🎉',
-        body: 'Keep playing — grab the free app, or continue right here on the web.'
-      });
-    });
-  } else if (isIosWeb()) {
+  if (isIosWeb()) {
     banner.href = _APP_STORE;
   } else if (isAndroidWeb()) {
     banner.href = _PLAY_STORE;
