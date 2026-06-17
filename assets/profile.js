@@ -365,6 +365,16 @@ const _WEB_LIMITS = { Q: 30, Wordle: 2, WS: 1, Ep: 1 };
 
 const _isNative = !!(window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative));
 
+// ── KILL SWITCH: mobile-web "pay to keep playing on web" option (2026-06-17) ──
+// Master on/off for the whole mobile-web unlock experiment. Set to `false` to
+// instantly restore the OLD behaviour with no other edits:
+//   • mobile walls/banner go back to app-download only (no "Keep playing on web")
+//   • footer link + theme unlock card revert to desktop-web only
+//   • the end-of-game auto-redirect runs uninterrupted (never cancels on tap)
+// (The /remove-ads.html "add to home screen" line is self-contained and harmless
+//  when this is off — mobile simply has no link pointing visitors to that page.)
+const WEB_PAY_OPTION = true;
+
 function isAndroidWeb() { return /android/i.test(navigator.userAgent) && !_isNative; }
 function isIosWeb() {
   if (_isNative) return false;
@@ -448,8 +458,8 @@ function _webStoreLinksHTML() {
   // desktop uses. Shown under the app button on every mobile wall so a visitor who
   // won't install an app can still continue (a €0 segment otherwise). Styled as a
   // subtle outlined link so the free app stays the primary call to action.
-  const webUnlock = `<div class="web-or"><span>or</span></div>
-  <a href="/remove-ads.html" class="primary-btn web-unlock-btn">Keep playing on web</a>`;
+  const webUnlock = WEB_PAY_OPTION ? `<div class="web-or"><span>or</span></div>
+  <a href="/remove-ads.html" class="primary-btn web-unlock-btn">Keep playing on web</a>` : '';
   if (isAndroidWeb()) return `<a href="${_PLAY_STORE}" class="primary-btn" target="_blank">Get the free app</a>${webUnlock}`;
   if (isIosWeb())     return `<a href="${_APP_STORE}"  class="primary-btn" target="_blank">Get the free app</a>${webUnlock}`;
   // Desktop / unknown: a compact button opens the QR in an overlay (keeps the
@@ -655,14 +665,16 @@ function _watchForWallRedirect() {
     // the "Keep playing on web" option), cancel the countdown — don't yank an
     // intentful chooser off to the store mid-decision. The wall (and its web-unlock
     // link) then stays put for as long as they're on the result screen.
-    const cancel = () => {
-      if (cancelled) return;
-      cancelled = true;
-      clearTimeout(timer);
-      note.remove();
-    };
-    el.addEventListener('pointerdown', cancel);
-    window.addEventListener('scroll', cancel, { once: true, passive: true });
+    if (WEB_PAY_OPTION) {
+      const cancel = () => {
+        if (cancelled) return;
+        cancelled = true;
+        clearTimeout(timer);
+        note.remove();
+      };
+      el.addEventListener('pointerdown', cancel);
+      window.addEventListener('scroll', cancel, { once: true, passive: true });
+    }
     tick();
   };
   const scan = (root) => root.querySelectorAll?.('.web-wall-redirect[data-store]').forEach(arm);
@@ -685,6 +697,7 @@ function _watchForWallRedirect() {
 // Skipped in the native app, which has its own store-billed unlock.
 function _injectFooterUnlock() {
   if (_isNative) return;
+  if (!WEB_PAY_OPTION && !isDesktopWeb()) return; // off → desktop-web only (old behaviour)
   if (/\/remove-ads\.html$/.test(window.location.pathname)) return;
   const premium = _isPremium();
   document.querySelectorAll('.footer-links').forEach(el => {
@@ -763,7 +776,20 @@ function _injectWebBanner() {
   banner.textContent = '📱 Get 100+ questions for all themes — Click to download the free app →';
   // Navigate in the SAME tab (no target=_blank): more reliable than a new tab,
   // which strict private/incognito modes and in-app webviews often block.
-  if (isIosWeb()) {
+  const isWordGamePage = /\/(wordle|wordsearch)\//.test(path);
+  if (WEB_PAY_OPTION && isWordGamePage && (isIosWeb() || isAndroidWeb())) {
+    // Wordle / Word Search pages: give the mobile banner the SAME two options the
+    // end-of-game wall has (app + "Keep playing on web") by opening the overlay,
+    // instead of a one-tap straight-to-store. Other lobby pages keep the direct tap.
+    banner.href = '#';
+    banner.addEventListener('click', (e) => {
+      e.preventDefault();
+      _openWebWallOverlay({
+        title: 'Get 100+ questions for every theme 🎉',
+        body: 'Keep playing — grab the free app, or continue right here on the web.'
+      });
+    });
+  } else if (isIosWeb()) {
     banner.href = _APP_STORE;
   } else if (isAndroidWeb()) {
     banner.href = _PLAY_STORE;
@@ -805,6 +831,7 @@ function _checkWebPageWall() {
 // their status. Skipped in the native app, which has its own store-billed unlock.
 function _injectThemeUnlockCard() {
   if (_isNative) return;
+  if (!WEB_PAY_OPTION && !isDesktopWeb()) return; // off → desktop-web only (old behaviour)
   if (!/\/themes\//.test(window.location.pathname)) return;
   const grid = document.querySelector('.panel .grid') || document.querySelector('.grid');
   if (!grid || grid.querySelector('.unlock-card')) return;
