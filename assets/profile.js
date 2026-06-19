@@ -375,6 +375,16 @@ const _isNative = !!(window.Capacitor && (window.Capacitor.isNativePlatform?.() 
 //  when this is off — mobile simply has no link pointing visitors to that page.)
 const WEB_PAY_OPTION = true;
 
+// ── SUB-TOGGLE: "Keep playing on web" button on MOBILE walls/banner (2026-06-18) ──
+// Narrower than WEB_PAY_OPTION above. Controls ONLY the secondary "Keep playing on
+// web" button on the mobile-web app-install walls/banner (and the matching
+// auto-redirect cancel-on-tap). Set to `false` to show the OLD mobile banner with
+// just the "Get the free app" option — while STILL keeping the "Unlock Full Access"
+// link in the footer + the theme-page unlock card (those follow WEB_PAY_OPTION).
+// Desktop walls are unaffected (they have their own inline "Unlock all questions").
+// Currently OFF (app-only) — flip to `true` to show the "Keep playing on web" button.
+const WEB_PAY_OPTION_MOBILE = false;
+
 function isAndroidWeb() { return /android/i.test(navigator.userAgent) && !_isNative; }
 function isIosWeb() {
   if (_isNative) return false;
@@ -458,7 +468,7 @@ function _webStoreLinksHTML() {
   // desktop uses. Shown under the app button on every mobile wall so a visitor who
   // won't install an app can still continue (a €0 segment otherwise). Styled as a
   // subtle outlined link so the free app stays the primary call to action.
-  const webUnlock = WEB_PAY_OPTION ? `<div class="web-or"><span>or</span></div>
+  const webUnlock = (WEB_PAY_OPTION && WEB_PAY_OPTION_MOBILE) ? `<div class="web-or"><span>or</span></div>
   <a href="/remove-ads.html" class="primary-btn web-unlock-btn">Keep playing on web</a>` : '';
   if (isAndroidWeb()) return `<a href="${_PLAY_STORE}" class="primary-btn" target="_blank">Get the free app</a>${webUnlock}`;
   if (isIosWeb())     return `<a href="${_APP_STORE}"  class="primary-btn" target="_blank">Get the free app</a>${webUnlock}`;
@@ -665,7 +675,7 @@ function _watchForWallRedirect() {
     // the "Keep playing on web" option), cancel the countdown — don't yank an
     // intentful chooser off to the store mid-decision. The wall (and its web-unlock
     // link) then stays put for as long as they're on the result screen.
-    if (WEB_PAY_OPTION) {
+    if (WEB_PAY_OPTION && WEB_PAY_OPTION_MOBILE) {
       const cancel = () => {
         if (cancelled) return;
         cancelled = true;

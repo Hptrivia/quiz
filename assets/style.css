@@ -877,6 +877,12 @@ body[data-page="wordsearch"].premium-mode .ws-game-area {
   box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.15);
 }
 
+/* Episode mode: highlight the correct answer with a clear green fill */
+#episodeSlides .option-btn.correct-anim {
+  background: rgba(34, 197, 94, 0.18);
+  color: var(--option-text);
+}
+
 .result-anim {
   animation: resultFadeIn 0.35s ease;
 }

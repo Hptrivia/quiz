@@ -250,30 +250,22 @@ async function renderEpisodePage() {
 
       optsList.querySelectorAll(".option-btn").forEach(b => {
         b.disabled = true;
-        if (b.textContent === q.answer) b.classList.add("selected");
+        b.classList.remove("selected");
+        if (b.textContent === q.answer) b.classList.add("correct-anim");
       });
-
-      const selectedBtn = optsList.querySelector(".option-btn.selected");
 
       if (selectedAnswer === q.answer) {
         score += 1;
         if (typeof SoundFX !== 'undefined') SoundFX.play('correct');
-        feedbackP.textContent = `Correct. The answer is ${q.answer}.`;
+        feedbackP.textContent = "Correct";
         feedbackP.className = "feedback correct";
-        if (selectedBtn) {
-          selectedBtn.classList.remove("wrong-anim");
-          void selectedBtn.offsetWidth;
-          selectedBtn.classList.add("correct-anim");
-        }
       } else {
         if (typeof SoundFX !== 'undefined') SoundFX.play('wrong');
-        feedbackP.textContent = `Wrong. The correct answer is ${q.answer}.`;
+        feedbackP.textContent = "Wrong";
         feedbackP.className = "feedback wrong";
-        if (selectedBtn) {
-          selectedBtn.classList.remove("correct-anim");
-          void selectedBtn.offsetWidth;
-          selectedBtn.classList.add("wrong-anim");
-        }
+        optsList.querySelectorAll(".option-btn").forEach(b => {
+          if (b.textContent === selectedAnswer) b.classList.add("wrong-anim");
+        });
       }
 
       descDiv.innerHTML = `
