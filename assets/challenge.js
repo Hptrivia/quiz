@@ -1,7 +1,7 @@
-// Challenge mode: on limited web (mobile + desktop), the first 2 rounds (20
-// questions) are free; finishing round 2 pops the app-install wall. This is
+// Challenge mode: on limited web (mobile + desktop), the first 3 rounds (30
+// questions) are free; finishing round 3 pops the app-install wall. This is
 // challenge-specific and independent of the global 30/day question limit.
-const CHAL_WEB_FREE_ROUNDS = 2;
+const CHAL_WEB_FREE_ROUNDS = 3;
 const CHAL_WEB_LIMIT_Q = CHAL_WEB_FREE_ROUNDS * 10;
 // True when this round's result screen should show the install wall instead of
 // a Next-Round button (web only — the native app never walls, it shows ads).
@@ -60,10 +60,22 @@ async function renderMultiThemeChallenge() {
     } catch { isReplay = false; }
   }
   if (!isReplay) {
-    pools = buildMashupPools(selectedThemes, questionsByTheme);
-    totalRounds = calcMashupTotalBatches(pools, ROUND_SIZE);
-    safeRound = Math.min(currentRound, totalRounds);
-    roundQuestions = sliceFromMashupPools(pools, ROUND_SIZE, safeRound - 1).map(q => shuffleQuestionOptions(q));
+    if (selectedThemes.length === 1) {
+      // Single theme: draw from the same deterministic, file-order balanced batches
+      // marathon uses (buildBalancedBatches), so the questions match marathon — no
+      // per-load reshuffle and no repeats across rounds. Rounds 1-3 together equal
+      // marathon's page-1 set: ROUND_SIZE/2 easy-medium + ROUND_SIZE/2 hard-expert.
+      const slug = selectedThemes[0].slug;
+      const allBatches = buildBalancedBatches(questionsByTheme[slug] || [], ROUND_SIZE, ROUND_SIZE / 2, ROUND_SIZE / 2);
+      totalRounds = allBatches.length || 1;
+      safeRound = Math.min(currentRound, totalRounds);
+      roundQuestions = (allBatches[safeRound - 1] || []).map(q => { const c = shuffleQuestionOptions(q); c._themeSlug = slug; return c; });
+    } else {
+      pools = buildMashupPools(selectedThemes, questionsByTheme);
+      totalRounds = calcMashupTotalBatches(pools, ROUND_SIZE);
+      safeRound = Math.min(currentRound, totalRounds);
+      roundQuestions = sliceFromMashupPools(pools, ROUND_SIZE, safeRound - 1).map(q => shuffleQuestionOptions(q));
+    }
   }
 
   const themeScores = {};
