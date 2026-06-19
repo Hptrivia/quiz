@@ -1731,5 +1731,82 @@
     "seoIntro": "Euphoria trivia works because it portrays modern teenage life through an intense, stylised lens of addiction, love and self-discovery, with bold visuals and complex characters. Fans can be tested on the storylines, the relationships, and the show's distinctive moments.",
     "seoDetail": "A strong Euphoria quiz can include Rue Bennett and her narration and addiction, Jules Vaughn, Nate Jacobs, Maddy Perez, Cassie Howard, Kat Hernandez, Fezco and Ashtray, Lexi Howard, Cal Jacobs, the high school and party settings, key relationships and betrayals, Lexi's play, and the themes of addiction, identity and trauma that define the series.",
     "fanQuestions": true
+  },
+  {
+    "slug": "andor",
+    "title": "Andor",
+    "category": "TV",
+    "description": "A Star Wars trivia theme built around Andor, following Cassian Andor's journey from cynical thief to committed rebel in the years before the Rebellion.",
+    "image": "",
+    "questionFile": "data/andor.txt",
+    "seoIntro": "Andor trivia works because it tells a grounded, political Star Wars story about how ordinary people are pushed into rebellion, with rich characters and slow-burn tension. Fans can be tested on Cassian's journey, the Empire's machinery, and the early spark of the Rebellion.",
+    "seoDetail": "A strong Andor quiz can include Cassian Andor and his origins on Kenari and Ferrix, Luthen Rael and his rebel network, Mon Mothma's political balancing act, Dedra Meero and the ISB, Syril Karn and Pre-Mor security, the Aldhani heist, the Narkina 5 prison, Bix, Brasso, Maarva and the people of Ferrix, Saw Gerrera, and the themes of sacrifice, surveillance and resistance that define the series.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "arrested-development",
+    "title": "Arrested Development",
+    "category": "Sitcoms",
+    "description": "A sitcom trivia theme built around Arrested Development, following the wealthy and dysfunctional Bluth family after the father is arrested and the company collapses.",
+    "image": "",
+    "questionFile": "data/arrested.txt",
+    "seoIntro": "Arrested Development trivia works because it is a densely layered comedy packed with running jokes, callbacks and absurd family dynamics that reward close attention. Fans can be tested on the Bluth family, the recurring gags, and the show's intricate plotting.",
+    "seoDetail": "A strong Arrested Development quiz can include Michael Bluth holding the family together, George Michael and Maeby, Gob and his illusions and the Final Countdown, Lindsay and Tobias Funke, Buster and Lucille, George Sr. and Oscar, the banana stand and the model home, the Cornballer, the chicken dances, the never-nudes, narrator gags, and the running jokes and callbacks that define the series.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "off-campus",
+    "title": "Off Campus",
+    "category": "TV",
+    "description": "A college romance trivia theme built around Off Campus, following Briar University hockey star Garrett Graham and student Hannah Wells through a fake-tutoring deal that turns into something more.",
+    "image": "",
+    "questionFile": "data/campus.txt",
+    "seoIntro": "Off Campus trivia works because it blends college hockey, slow-burn romance and sharp banter into an addictive new-adult story. Fans can be tested on the Briar University crew, the central relationships, and the show's standout moments.",
+    "seoDetail": "A strong Off Campus quiz can include Garrett Graham and his hockey career, Hannah Wells and her music ambitions, the fake-relationship and tutoring deal, the Briar University team and rivals, Logan, Dean, Tucker and the housemates, Justin and Malone's, the games and parties, the family backstories, and the romance, friendship and college-life themes that define the series.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "the-mandalorian",
+    "title": "The Mandalorian",
+    "category": "TV",
+    "description": "A Star Wars trivia theme built around The Mandalorian, following a lone bounty hunter who becomes the protector of a mysterious Force-sensitive child across the outer rim.",
+    "image": "",
+    "questionFile": "data/mando.txt",
+    "seoIntro": "The Mandalorian trivia works because it brings a western, bounty-hunter feel to the Star Wars galaxy with a beloved central duo and rich world-building. Fans can be tested on Din Djarin, Grogu, and the journey across the outer rim.",
+    "seoDetail": "A strong The Mandalorian quiz can include Din Djarin and the Way of the Mandalore, Grogu and his Force abilities, the Razor Crest, Greef Karga and the Bounty Hunters' Guild, the Armorer and the Covert, beskar and Mandalorian culture, Cara Dune, Kuiil and IG-11, Moff Gideon and the darksaber, Boba Fett and Bo-Katan, the planets and quarry of each chapter, and the themes of loyalty, found family and creed that define the series.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "the-rookie",
+    "title": "The Rookie",
+    "category": "TV",
+    "description": "A police drama trivia theme built around The Rookie, following John Nolan, the oldest rookie in the LAPD, as he trains and rises through the ranks.",
+    "image": "",
+    "questionFile": "data/rookie.txt",
+    "seoIntro": "The Rookie trivia works because it mixes procedural police work with personal drama and humour, following an older recruit proving himself on the job. Fans can be tested on John Nolan, the officers of Mid-Wilshire, and the show's cases.",
+    "seoDetail": "A strong The Rookie quiz can include John Nolan and his late-career start, his training officers and fellow rookies, Tim Bradford and Lucy Chen, Angela Lopez, Wesley Evers, Nyla Harper, Sergeant Wade Grey, the Mid-Wilshire station, key cases and arcs across the seasons, the relationships and partnerships, and the themes of second chances, mentorship and duty that define the series.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "silicon-valley",
+    "title": "Silicon Valley",
+    "category": "Sitcoms",
+    "description": "A tech comedy trivia theme built around Silicon Valley, following Richard Hendricks and his startup Pied Piper as they chase success in the cutthroat tech industry.",
+    "image": "",
+    "questionFile": "data/silicon.txt",
+    "seoIntro": "Silicon Valley trivia works because it satirises startup culture, venture capital and tech egos with sharp writing and a memorable ensemble. Fans can be tested on Pied Piper, the rival companies, and the show's running gags.",
+    "seoDetail": "A strong Silicon Valley quiz can include Richard Hendricks and the Pied Piper compression algorithm, Erlich Bachman and the incubator, Dinesh and Gilfoyle, Jared Dunn, Big Head, Gavin Belson and Hooli, Peter Gregory and Laurie Bream at Raviga, the Weissman score, TechCrunch Disrupt, the funding rounds and pivots, and the satire of startup culture, venture capital and tech egos that defines the series.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "this-is-us",
+    "title": "This Is Us",
+    "category": "TV",
+    "description": "A family drama trivia theme built around This Is Us, following the Pearson family across multiple timelines through love, loss and the bonds that connect them.",
+    "image": "",
+    "questionFile": "data/thisisus.txt",
+    "seoIntro": "This Is Us trivia works because it weaves together past and present to tell an emotional, interconnected story about one family across generations. Fans can be tested on the Pearsons, the timelines, and the show's heartbreaking twists.",
+    "seoDetail": "A strong This Is Us quiz can include Jack and Rebecca Pearson, the Big Three Kevin, Kate and Randall, Beth, Toby, Miguel and Nicky, Randall's adoption and his birth father William, Kevin's acting career, Kate's journey, the multiple timelines and flashbacks, the crockpot and the cabin, the major reveals and losses, and the themes of family, memory and love that define the series.",
+    "fanQuestions": true
   }
 ]
