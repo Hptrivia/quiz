@@ -859,6 +859,22 @@ function _injectProfileAppBanner() {
   slot.appendChild(banner);
 }
 
+// Small "save your progress" install nudge for the Challenge round 1-2 result
+// screens (mobile web, non-premium, non-native). Mirrors the homepage/profile
+// .android-cta-banner — one tappable strip straight to the visitor's store. A
+// soft, passive nudge sitting under the score line; deliberately distinct from
+// the round-3 install wall + auto-redirect. Returns '' when it shouldn't show;
+// the round gate (rounds 1-2 only) lives at the call site in challenge.js.
+function resultAppBannerHTML() {
+  if (!isLimitedWeb()) return ''; // non-native, non-premium (covers mobile + desktop web)
+  const label = '📱 Download the free app to save your progress &amp; play more questions and topics &rarr;';
+  if (isIosWeb())     return `<a class="android-cta-banner result-app-banner" href="${_APP_STORE}">${label}</a>`;
+  if (isAndroidWeb()) return `<a class="android-cta-banner result-app-banner" href="${_PLAY_STORE}">${label}</a>`;
+  // Desktop can't install a phone app from a browser, so the click opens the QR /
+  // app-promo wall (same as the homepage banner) via the delegated .web-wall-trigger listener.
+  return `<a class="android-cta-banner result-app-banner web-wall-trigger" href="#">${label}</a>`;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   _injectWebBanner();
   _checkWebPageWall();

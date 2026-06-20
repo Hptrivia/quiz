@@ -232,6 +232,7 @@ async function renderMultiThemeChallenge() {
       ? `<div class="wrong-replay-row">You have ${wrongCount} wrong answer${wrongCount !== 1 ? "s" : ""} &mdash; <a href="challenge.html?themes=${themesParam}&replay=1"${safeRound % 2 === 0 ? ` data-rewarded-href="challenge.html?themes=${themesParam}&replay=1" data-rewarded-label="Replay"` : ''}>Replay them all</a></div>`
       : "";
     resultBox.innerHTML = `
+      ${(safeRound < CHAL_WEB_FREE_ROUNDS && typeof resultAppBannerHTML === 'function') ? resultAppBannerHTML() : ''}
       <h2>Round ${safeRound} Complete</h2>
       ${cumScoreLine(score, roundQuestions.length, cum)}
       <div id="mashupChallengeBreakdown"></div>
@@ -698,6 +699,7 @@ async function renderChallengePage() {
     const notifyHtml = (!hasNextRound && !isReplay) ? buildNotifyCard(theme.title, false, "challenge") : "";
 
     resultBox.innerHTML = `
+      ${(safeRound < CHAL_WEB_FREE_ROUNDS && typeof resultAppBannerHTML === 'function') ? resultAppBannerHTML() : ''}
       <h2>Round ${safeRound} Complete</h2>
       ${cumScoreLine(state.score, state.questions.length, cum)}
       <button type="button" class="challenge-share-link" data-share-link="${roundLink}">🔗 Copy link &mdash; challenge a friend to these 10 questions</button>

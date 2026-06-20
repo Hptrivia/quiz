@@ -13,11 +13,12 @@
   <!-- Grow.me — mobile web only (not the native app, not desktop). -->
   <script>
   (function(){
-    var ua = navigator.userAgent || "";
+    // Load Grow on all web (desktop + mobile); only skip the native Capacitor app.
+    // NOTE: do NOT re-add a mobile-UA guard here — Grow's verification crawler uses
+    // a desktop/bot UA, and gating to mobile makes its dashboard report the script
+    // as "not installed" even though it loads fine on real phones.
     var native = !!(window.Capacitor && (window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform() || window.Capacitor.isNative));
-    var isIpadOS = /Macintosh/.test(ua) && navigator.maxTouchPoints > 1;
-    var isMobile = isIpadOS || /android|iphone|ipad|ipod/i.test(ua);
-    if (native || !isMobile) return;
+    if (native) return;
     window.growMe||((window.growMe=function(e){window.growMe._.push(e);}),(window.growMe._=[]));var e=document.createElement("script");(e.type="text/javascript"),(e.src="https://faves.grow.me/main.js"),(e.defer=!0),e.setAttribute("data-grow-faves-site-id","U2l0ZTowMmFjMDYwOC03YWNmLTQ4ZGItYTcxYS1iMjgxOTNmY2E2ZDQ=");var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);
   })();
   </script>
