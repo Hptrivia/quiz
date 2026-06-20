@@ -15,26 +15,6 @@ function isPremiumUser() {
   return new Date(expiry) > new Date();
 }
 
-// Adsterra 300x250 medium rectangle — web only (never in native app), non-premium.
-// Rendered inside a sandboxed srcdoc iframe so the ad loader can't touch the page.
-function injectAdsterraRect(container) {
-  if (!container || isPremiumUser()) return;
-  const native = !!(window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative));
-  if (native) return;
-  const f = document.createElement('iframe');
-  f.scrolling = 'no';
-  f.setAttribute('frameborder', '0');
-  f.setAttribute('aria-hidden', 'true');
-  f.style.cssText = 'width:300px;height:250px;border:0;overflow:hidden;display:block;margin:16px auto;';
-  f.srcdoc = '<!doctype html><html><head><meta charset="utf-8">'
-    + '<style>html,body{margin:0;padding:0;overflow:hidden}</style></head><body>'
-    + '<script type="text/javascript">atOptions={"key":"6cd708c27c2130cedbed5e1a3bc703d0","format":"iframe","height":250,"width":300,"params":{}};<\/script>'
-    + '<script type="text/javascript" src="https://www.highperformanceformat.com/6cd708c27c2130cedbed5e1a3bc703d0/invoke.js"><\/script>'
-    + '</body></html>';
-  container.appendChild(f);
-}
-
-
 async function fetchJSON(path) {
   const res = await fetch(path);
   if (!res.ok) throw new Error(`Failed to load ${path}`);
@@ -750,7 +730,6 @@ async function renderMultiThemeMarathon() {
         ${!isPremiumUser() && (typeof isDesktopWeb === 'function' && isDesktopWeb()) && !(hasNextPage && (typeof isWebQLimit === 'function' && isWebQLimit())) ? `<a class="secondary-btn" href="remove-ads.html">Unlock Full Access</a>` : ""}
       </div>
       ${replayHtml}
-      <div id="marathonRectAd"></div>
       <div class="result-theme-search">
         <p class="result-theme-search-title">Try another theme</p>
         <div class="search-wrap">
@@ -770,7 +749,6 @@ async function renderMultiThemeMarathon() {
     injectMashupResultAd(document.getElementById("mashupMarathonAdSlot"));
     if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
     if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Reveal Answers', 'Reveal Answers', 'See the correct answer for every question you missed — free in the app, no limits.');
-    if (typeof injectAdsterraRect === 'function') injectAdsterraRect(document.getElementById("marathonRectAd"));
     const msInput = document.getElementById("mashupMarathonSearchInput");
     const msResults = document.getElementById("mashupMarathonSearchResults");
     if (msInput && msResults) {
@@ -1163,7 +1141,6 @@ const relatedThemesHtml = `
       ${!isPremiumUser() && (typeof isDesktopWeb === 'function' && isDesktopWeb()) && !(hasNextPage && (typeof isWebQLimit === 'function' && isWebQLimit())) ? `<a class="secondary-btn" href="remove-ads.html">Unlock Full Access</a>` : ""}
     </div>
     ${replayHtml}
-    <div id="marathonRectAd"></div>
     ${notifyHtml}
 
       <div class="result-theme-search">
@@ -1179,7 +1156,6 @@ const relatedThemesHtml = `
 
   if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
   if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Reveal Answers', 'Reveal Answers', 'See the correct answer for every question you missed — free in the app, no limits.');
-  if (typeof injectAdsterraRect === 'function') injectAdsterraRect(document.getElementById("marathonRectAd"));
 
   const resultSearchInput = document.getElementById("resultThemeSearchInput");
 const resultSearchResults = document.getElementById("resultThemeSearchResults");

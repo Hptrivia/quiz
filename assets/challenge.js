@@ -243,7 +243,6 @@ async function renderMultiThemeChallenge() {
         ${!isPremiumUser() && (typeof isDesktopWeb === 'function' && isDesktopWeb()) ? `<a class="secondary-btn" href="remove-ads.html">Reveal Answers</a>` : ""}
       </div>
       ${replayHtml}
-      <div id="challengeRectAd"></div>
       <div class="result-theme-search">
         <p class="result-theme-search-title">Try another theme</p>
         <div class="search-wrap">
@@ -261,7 +260,6 @@ async function renderMultiThemeChallenge() {
     `;
     document.getElementById("mashupChallengeBreakdown").appendChild(renderMashupThemeBreakdown(themeScores, selectedThemes, colorBySlug));
     injectMashupResultAd(document.getElementById("mashupChallengeAdSlot"));
-    if (typeof injectAdsterraRect === 'function') injectAdsterraRect(document.getElementById("challengeRectAd"));
     if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
     if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Reveal Answers', 'Reveal Answers', 'See the correct answer for every question you missed — free in the app, no limits.');
     const msInput = document.getElementById("mashupChallengeSearchInput");
@@ -711,7 +709,6 @@ async function renderChallengePage() {
         ${!isPremiumUser() && (typeof isDesktopWeb === 'function' && isDesktopWeb()) ? `<a class="secondary-btn" href="remove-ads.html?theme=${theme.slug}">Reveal Answers</a>` : ""}
       </div>
       ${replayHtml}
-      <div id="challengeRectAd"></div>
       ${notifyHtml}
     </div>
       ${affiliateHtml}
@@ -727,7 +724,6 @@ async function renderChallengePage() {
 
     if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
     if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Reveal Answers', 'Reveal Answers', 'See the correct answer for every question you missed — free in the app, no limits.');
-    if (typeof injectAdsterraRect === 'function') injectAdsterraRect(document.getElementById("challengeRectAd"));
 
     const resultSearchInput = document.getElementById("challengeResultThemeSearchInput");
     const resultSearchResults = document.getElementById("challengeResultThemeSearchResults");

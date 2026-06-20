@@ -306,8 +306,7 @@ async function renderWordleMashupMode(themesParam) {
       <div class="cta-row" style="margin-top:10px;justify-content:center;">
         ${!isLast && !(typeof isWebWordleLimit === 'function' && isWebWordleLimit()) ? `<button class="primary-btn" id="wordleNextFromPanel">Next Word →</button>` : ""}
         ${!isLast && (typeof isWebWordleLimit === 'function' && isWebWordleLimit()) ? (typeof webWallHTML === 'function' ? webWallHTML("Yay! You've played 2 Wordle words", null, "Wordles") : "") : ""}
-      </div>
-      <div id="wordleRectAd"></div>`;
+      </div>`;
 
     feedbackEl.textContent   = "";
     boardEl.style.display    = "none";
@@ -315,7 +314,6 @@ async function renderWordleMashupMode(themesParam) {
     const revealBtn = document.getElementById("wordleRevealBtn");
     if (revealBtn) revealBtn.style.display = "none";
     feedbackEl.after(panel);
-    if (typeof injectAdsterraRect === 'function') injectAdsterraRect(document.getElementById("wordleRectAd"));
 
     const nextFromPanel = document.getElementById("wordleNextFromPanel");
     if (nextFromPanel) {
@@ -873,8 +871,7 @@ async function renderWordlePage() {
         ${!isLast && !(typeof isWebWordleLimit === 'function' && isWebWordleLimit()) ? `<button class="primary-btn" id="wordleNextFromPanel">Next Word →</button>` : ""}
         ${!isLast && (typeof isWebWordleLimit === 'function' && isWebWordleLimit()) ? (typeof webWallHTML === 'function' ? webWallHTML("Yay! You've played 2 Wordle words", null, "Wordles") : "") : ""}
       </div>
-      <p class="wordle-share-feedback" id="wordleShareFeedback"></p>
-      <div id="wordleRectAd"></div>`;
+      <p class="wordle-share-feedback" id="wordleShareFeedback"></p>`;
 
     feedbackEl.textContent   = "";
     boardEl.style.display    = "none";
@@ -882,7 +879,6 @@ async function renderWordlePage() {
     const revealBtn = document.getElementById("wordleRevealBtn");
     if (revealBtn) revealBtn.style.display = "none";
     feedbackEl.after(panel);
-    if (typeof injectAdsterraRect === 'function') injectAdsterraRect(document.getElementById("wordleRectAd"));
 
     document.getElementById("wordleShareBtn").addEventListener("click", () => copyShare(solved));
 
