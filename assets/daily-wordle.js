@@ -116,7 +116,18 @@ function initDailyWordleHomepageCard() {
   const subEl  = card.querySelector('.daily-card-sub');
   if (ctaEl) ctaEl.textContent = (state && state.completed) ? 'Come back tomorrow' : "Play Today's Word";
   const streak = getDWStreak();
-  if (subEl && streak.current > 0) subEl.textContent = `🔥 ${streak.current} day streak`;
+  if (subEl) {
+    // Mirror daily trivia: if the last completion is neither today nor yesterday,
+    // the streak is broken — show that instead of the stale stored count.
+    const missedDay = streak.lastCompleted &&
+                      streak.lastCompleted !== dwTodayKey() &&
+                      streak.lastCompleted !== dwYesterdayKey();
+    if (missedDay) {
+      subEl.textContent = "Streak lost — play today to start a new one";
+    } else if (streak.current > 0) {
+      subEl.textContent = `🔥 ${streak.current} day streak`;
+    }
+  }
 }
 
 /* ── Letter evaluation ── */
