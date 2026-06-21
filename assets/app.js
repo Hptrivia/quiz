@@ -15,25 +15,6 @@ function isPremiumUser() {
   return new Date(expiry) > new Date();
 }
 
-// Injects a Monetag ad on challenge result screens (web-only, non-premium).
-// Rounds 1-2 => in-page vignette (auto-shows ~3-5s, dismissible, in-page overlay
-// so it works inside Reddit/in-app browsers). Round 3 => popunder.
-// NO frequency cap in code on purpose — capping is governed by the Monetag dashboard.
-function injectMonetagAd(round) {
-  if (isPremiumUser()) return;
-  // Web only — bail inside the native app.
-  if (window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative)) return;
-  const ad = round >= 3
-    ? { zone: '10962017', src: 'https://al5sm.com/tag.min.js' }      // popunder
-    : { zone: '10961427', src: 'https://n6wxm.com/vignette.min.js' }; // vignette (rounds 1-2)
-  try {
-    const s = document.createElement('script');
-    s.dataset.zone = ad.zone;
-    s.src = ad.src;
-    (document.body || document.documentElement).appendChild(s);
-  } catch (e) {}
-}
-
 async function fetchJSON(path) {
   const res = await fetch(path);
   if (!res.ok) throw new Error(`Failed to load ${path}`);
