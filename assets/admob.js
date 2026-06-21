@@ -241,7 +241,7 @@ async function adMobShowRewarded() {
   });
 }
 
-const _IAD_COOLDOWN_MS = 20 * 60 * 1000;
+const _IAD_COOLDOWN_MS = 10 * 60 * 1000;
 function _interstitialOnCooldown() {
   const last = parseInt(localStorage.getItem('_iadLastShown') || '0');
   return Date.now() - last < _IAD_COOLDOWN_MS;
