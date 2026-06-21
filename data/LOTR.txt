@@ -23,8 +23,8 @@
   {
     "id": "lotr-movie-1004",
     "question": "Who is the king of Rohan at the end of the movies?",
-    "options": ["Eomir", "Theoden", "Boromir", "Denethor"],
-    "answer": "Eomir",
+    "options": ["Eomer", "Theoden", "Boromir", "Denethor"],
+    "answer": "Eomer",
     "difficulty": "medium"
   },
   {
@@ -138,13 +138,6 @@
     "options": ["Gimli", "Eomir", "Merry", "Boromir"],
     "answer": "Eomir",
     "difficulty": "medium"
-  },
-  {
-    "id": "lotr-movie-0022",
-    "question": "What creature does Legolas ride in The Return of the King during their pursuit of the Uruk-hai?",
-    "options": ["Hasufel", "Fell", "Oliphaunt", "Arod"],
-    "answer": "Arod",
-    "difficulty": "hard"
   },
   {
     "id": "lotr-movie-0023",
