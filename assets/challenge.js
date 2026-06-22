@@ -244,6 +244,7 @@ async function renderMultiThemeChallenge() {
         ${!isPremiumUser() && (typeof isDesktopWeb === 'function' && isDesktopWeb()) ? `<a class="secondary-btn" href="remove-ads.html">Reveal Answers</a>` : ""}
       </div>
       ${replayHtml}
+      ${safeRound < CHAL_WEB_FREE_ROUNDS ? '<div id="challengeNativeAdSlot"></div>' : ''}
       <div class="result-theme-search">
         <p class="result-theme-search-title">Try another theme</p>
         <div class="search-wrap">
@@ -261,6 +262,8 @@ async function renderMultiThemeChallenge() {
     `;
     document.getElementById("mashupChallengeBreakdown").appendChild(renderMashupThemeBreakdown(themeScores, selectedThemes, colorBySlug));
     injectMashupResultAd(document.getElementById("mashupChallengeAdSlot"));
+    if (safeRound < CHAL_WEB_FREE_ROUNDS && typeof injectChallengeNativeAd === 'function') injectChallengeNativeAd(document.getElementById("challengeNativeAdSlot"));
+    if (safeRound < CHAL_WEB_FREE_ROUNDS && typeof injectMonetagVignette === 'function') injectMonetagVignette();
     if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
     if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Reveal Answers', 'Reveal Answers', 'See the correct answer for every question you missed — free in the app, no limits.');
     const msInput = document.getElementById("mashupChallengeSearchInput");
@@ -322,6 +325,8 @@ async function renderMultiThemeChallenge() {
   }
 
   showQuestion(0);
+
+  if (typeof injectAdsterraBanner === 'function') injectAdsterraBanner(document.getElementById("challengeGameAdSlot"));
 }
 
 async function renderChallengePage() {
@@ -713,6 +718,7 @@ async function renderChallengePage() {
       ${replayHtml}
       ${notifyHtml}
     </div>
+      ${safeRound < CHAL_WEB_FREE_ROUNDS ? '<div id="challengeNativeAdSlot"></div>' : ''}
       ${affiliateHtml}
       <div class="result-theme-search">
         <p class="result-theme-search-title">Try another theme</p>
@@ -724,6 +730,8 @@ async function renderChallengePage() {
     `;
 
 
+    if (safeRound < CHAL_WEB_FREE_ROUNDS && typeof injectChallengeNativeAd === 'function') injectChallengeNativeAd(document.getElementById("challengeNativeAdSlot"));
+    if (safeRound < CHAL_WEB_FREE_ROUNDS && typeof injectMonetagVignette === 'function') injectMonetagVignette();
     if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
     if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Reveal Answers', 'Reveal Answers', 'See the correct answer for every question you missed — free in the app, no limits.');
 
@@ -767,6 +775,8 @@ async function renderChallengePage() {
   }
 
   if (!showContinuePrompt) showQuestion(0);
+
+  if (typeof injectAdsterraBanner === 'function') injectAdsterraBanner(document.getElementById("challengeGameAdSlot"));
 }
 
 // Clickable "copy share link" pill on the challenge result screen — copies the

@@ -719,7 +719,7 @@ function _injectFooterUnlock() {
   });
 }
 
-function webWallHTML(msg, themeName, noun, countOverride) {
+function webWallHTML(msg, themeName, noun, countOverride, noRedirect) {
   const item = noun || 'questions';
   // Some callers (e.g. Challenge mode's per-round wall) enforce a smaller free
   // allowance than the global daily limit — let them say the right number.
@@ -754,7 +754,12 @@ function webWallHTML(msg, themeName, noun, countOverride) {
   const moreLine = themeName
     ? `Download Trivia Gauntlet for more ${themeName} ${item}.`
     : `Download Trivia Gauntlet for more ${item}.`;
-  return `<div class="android-wall web-wall-redirect" data-store="${_storeUrl()}">
+  // Some callers want the wall present but WITHOUT the 4s store auto-redirect —
+  // e.g. the "no next episode" screen, where we keep the email-notify card as a
+  // real choice and don't want to yank the visitor off to the store.
+  const rdClass = noRedirect ? '' : ' web-wall-redirect';
+  const rdStore = noRedirect ? '' : ` data-store="${_storeUrl()}"`;
+  return `<div class="android-wall${rdClass}"${rdStore}>
     <div class="android-wall-icon">📱</div>
     <h3>${msg || "Yay! You've finished this one 🎉"}</h3>
     <p>${moreLine}</p>

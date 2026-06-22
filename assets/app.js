@@ -435,6 +435,63 @@ function calcMashupTotalBatches(pools, batchSize) {
 }
 function injectMashupResultAd(container) {}
 
+// Adsterra NATIVE banner (inherits page fonts/colours to blend into content;
+// pays on impressions, unlike the old CPA display banner). Runs in the MAIN page
+// DOM — a native banner can't be sandboxed in an iframe or it can't inherit
+// styles. Web-only (bails in the native app), non-premium. Dashboard widget
+// layout = 1.1 (single card). Guards against a double-inject per page.
+let _CHAL_NATIVE_AD_ID = 'container-fade24365feae2ac254bb602dc7e4417';
+function injectChallengeNativeAd(container) {
+  if (!container) return;
+  if (isPremiumUser()) return;
+  if (typeof isLimitedWeb === 'function' ? !isLimitedWeb() : (window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative))) return;
+  if (document.getElementById(_CHAL_NATIVE_AD_ID)) return; // already injected
+  const slot = document.createElement('div');
+  slot.id = _CHAL_NATIVE_AD_ID;
+  container.appendChild(slot);
+  const s = document.createElement('script');
+  s.async = true;
+  s.dataset.cfasync = 'false';
+  s.src = '//pl29818335.effectivecpmnetwork.com/fade24365feae2ac254bb602dc7e4417/invoke.js';
+  container.appendChild(s);
+}
+
+// Adsterra 320×50 display BANNER (small, unobtrusive — for the gameplay screen).
+// The atOptions + invoke.js loader uses document.write, so it MUST run inside a
+// sandboxed srcdoc iframe (same approach as the old 300×250 rect) to isolate it
+// from the page. CPA-based (pays on clicks, not impressions) — a long shot for $
+// at this traffic, but unobtrusive enough to test. Web-only, non-premium.
+function injectAdsterraBanner(container) {
+  if (!container) return;
+  if (isPremiumUser()) return;
+  if (typeof isLimitedWeb === 'function' ? !isLimitedWeb() : (window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative))) return;
+  if (container.querySelector('iframe')) return; // already injected
+  const KEY = 'b9be7f308767ec033bd304d299704695';
+  const iframe = document.createElement('iframe');
+  iframe.width = '320';
+  iframe.height = '50';
+  iframe.scrolling = 'no';
+  iframe.style.cssText = 'border:0;width:320px;height:50px;max-width:100%;display:block;margin:12px auto;';
+  iframe.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox');
+  iframe.srcdoc = `<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;padding:0;overflow:hidden}</style></head><body>`
+    + `<script type="text/javascript">atOptions={'key':'${KEY}','format':'iframe','height':50,'width':320,'params':{}};<\/script>`
+    + `<script type="text/javascript" src="https://wraththreat.com/${KEY}/invoke.js"><\/script></body></html>`;
+  container.appendChild(iframe);
+}
+
+// Monetag in-page VIGNETTE (full-screen dismissible overlay, NOT a window.open —
+// so it fires inside Reddit's in-app webview and never breaks the install tap).
+// Auto-shows ~3-5s after inject; frequency is capped in the Monetag dashboard
+// (1/user/hr), so it effectively fires once. Web-only, non-premium, no code cap.
+function injectMonetagVignette() {
+  if (isPremiumUser()) return;
+  if (typeof isLimitedWeb === 'function' ? !isLimitedWeb() : (window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative))) return;
+  const s = document.createElement('script');
+  s.dataset.zone = '10961427';
+  s.src = 'https://n6wxm.com/vignette.min.js';
+  ([document.documentElement, document.body].filter(Boolean).pop()).appendChild(s);
+}
+
 // ── Mid-quiz resume ──────────────────────────────────────────────────────────
 // Long rounds (marathon = 30 questions, episode = 30+) are easy to lose on a
 // reload or app-close. These helpers persist the in-progress question set,
