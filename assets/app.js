@@ -193,7 +193,7 @@ card.href = `categories/${categoryPageMap[category]}.html`;
     items.forEach(theme => {
       const item = document.createElement("a");
       item.className = "search-item";
-      item.href = `play.html?theme=${theme.slug}`;
+      item.href = `challenge.html?theme=${theme.slug}&round=1`;
       item.textContent = theme.title;
       searchResults.appendChild(item);
     });

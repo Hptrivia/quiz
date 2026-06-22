@@ -66,11 +66,12 @@ select:focus{border-color:#1a1a1a}
 .card--ig .card-cta{margin-top:8px}
 /* Pinterest: breathing room between the theme title and the first question */
 .card--pin .card-theme{margin-bottom:18px}
-/* Reddit image cards: no theme title (the post title carries the theme), so give
-   the question a touch more room; 4:5 like IG */
-.card--reddit{--q-size:15px;--opt-size:10px}
-.card--reddit .card-inner{padding:18px 16px}
-.card--reddit .card-body{gap:13px}
+/* Reddit image cards: tall iPhone-screenshot proportions (no theme title — the
+   post title carries the theme). Bigger text + spacing so the content fills the
+   taller frame instead of looking small/sparse. */
+.card--reddit{--q-size:19px;--opt-size:12.5px}
+.card--reddit .card-inner{padding:30px 22px}
+.card--reddit .card-body{gap:20px}
 .qtext{font-size:calc(var(--q-size)*var(--cs,1));font-weight:700;line-height:1.28}
 .card-opts{display:flex;flex-direction:column;gap:7px}
 .opt{font-size:calc(var(--opt-size)*var(--cs,1));font-weight:600;background:rgba(255,255,255,.13);border:1.5px solid rgba(255,255,255,.2);border-radius:9px;padding:7px 9px;line-height:1.2;transition:none}
@@ -156,7 +157,7 @@ input[type=text]:focus{border-color:#1a1a1a}
         <option value="9:16">TikTok / Reels / Stories — 9:16</option>
         <option value="4:5">Instagram feed — 4:5</option>
         <option value="2:3">Pinterest pin — 2:3</option>
-        <option value="reddit">Reddit — 4:5 (no theme name)</option>
+        <option value="reddit">Reddit</option>
       </select>
 
       <div id="pinControls" style="display:none">
@@ -188,6 +189,7 @@ input[type=text]:focus{border-color:#1a1a1a}
         <button class="btn btn-soft btn-sm" data-open="https://www.tiktok.com/upload">TikTok</button>
         <button class="btn btn-soft btn-sm" data-open="https://www.instagram.com/">Instagram</button>
         <button class="btn btn-soft btn-sm" data-open="https://www.youtube.com/upload">YouTube</button>
+        <button class="btn btn-soft btn-sm" data-open="https://www.reddit.com/submit">Reddit</button>
       </div>
 
       <div class="keyline"><span><span class="kdot" id="kdot"></span>AI caption key</span><a id="set-key">Set key</a></div>
@@ -254,7 +256,7 @@ const FORMATS={
   '9:16':{w:1080,h:1920,ratio:'9/16'},  // TikTok / Reels / Stories (and the video)
   '4:5' :{w:1080,h:1350,ratio:'4/5'},   // Instagram feed
   '2:3' :{w:1000,h:1500,ratio:'2/3'},   // Pinterest pin
-  'reddit':{w:1080,h:1350,ratio:'4/5'}, // Reddit — 4:5, theme name hidden
+  'reddit':{w:1170,h:2532,ratio:'1170/2532'}, // Reddit — iPhone screenshot size, theme name hidden
 };
 let FMT=FORMATS['9:16'];
 

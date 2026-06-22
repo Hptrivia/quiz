@@ -133,7 +133,7 @@ async function renderEpisodePage() {
       <div class="theme-related-quizzes" data-reward-gate="1">
         <h3>Related Quizzes</h3>
         <div class="grid">
-          <a class="card card-mix" href="play.html?theme=${theme.slug}">
+          <a class="card card-mix" href="challenge.html?theme=${theme.slug}&round=1">
             <h3>${theme.title} Trivia</h3>
             <span class="card-mix-sub">Regular trivia</span>
           </a>
