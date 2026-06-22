@@ -13,7 +13,7 @@
 //   1. paste the real iOS ad unit IDs into _ADMOB_LIVE_IDS.ios below, then
 //   2. change ios: 'off' → 'live' here.
 const ADMOB_MODE_BY_PLATFORM = {
-  ios: 'live',
+  ios: 'test', // TEMP: test ads for device verification — revert to 'live' before release
   android: 'live',
 };
 const _ADMOB_PLATFORM = window.Capacitor?.getPlatform?.();
@@ -148,7 +148,9 @@ async function adMobInit() {
     const m = p.match(/\/([^/]+)\.html$/);
     return m ? '_iad_' + m[1] : '_iad_other';
   })();
-  const showInterstitialFirst = getRoundStartParams() && !sessionStorage.getItem(_modeKey);
+  // Skip the interstitial-first if we're still inside the cooldown window — no
+  // point preparing/showing one we'd be blocked from displaying anyway.
+  const showInterstitialFirst = getRoundStartParams() && !sessionStorage.getItem(_modeKey) && !_interstitialOnCooldown();
   const _removeLoader = () => {
     document.getElementById('_adLoader')?.remove();
     document.body.style.visibility = 'visible';
@@ -185,9 +187,14 @@ async function adMobInit() {
       }
       _removeLoader();
     }
-    _adMobPreloadRewarded();
-    _adMobPreloadInterstitial();
-    if (isGamePage()) adMobHideBanner(); else adMobShowBanner();
+    // Only request ads on pages that can actually show them. Browsing pages
+    // (themes/categories/home) never trigger an interstitial or rewarded, so
+    // preloading there just burns ad requests that never become impressions.
+    if (isGamePage()) {
+      _adMobPreloadRewarded();
+      _adMobPreloadInterstitial();
+    }
+    adMobShowBanner();
   } catch (e) {
     _removeLoader();
     console.warn('[AdMob] init failed', e);
@@ -206,6 +213,10 @@ async function _adMobPreloadRewarded() {
 
 async function _adMobPreloadInterstitial() {
   if (!_adMobReady) return;
+  // No point preparing one we can't show for the whole cooldown window — it
+  // would likely expire unshown, which is exactly the wasted-request pattern
+  // that tanks show rate. We lazy-load on demand once the cooldown clears.
+  if (_interstitialOnCooldown()) return;
   try {
     await _AdMob.prepareInterstitial({ adId: ADMOB_IDS.interstitial });
     _interstitialLoaded = true;
@@ -241,7 +252,7 @@ async function adMobShowRewarded() {
   });
 }
 
-const _IAD_COOLDOWN_MS = 10 * 60 * 1000;
+const _IAD_COOLDOWN_MS = 5 * 60 * 1000;
 function _interstitialOnCooldown() {
   const last = parseInt(localStorage.getItem('_iadLastShown') || '0');
   return Date.now() - last < _IAD_COOLDOWN_MS;
@@ -249,8 +260,14 @@ function _interstitialOnCooldown() {
 
 // Shows interstitial ad (no reward, auto-dismissed).
 async function adMobShowInterstitial() {
-  if (!_adMobReady || !_interstitialLoaded) return;
+  if (!_adMobReady) return;
   if (_interstitialOnCooldown()) return;
+  // We skip preloading during cooldown, so the slot can be empty even though
+  // we're now clear to show — lazy-load it just-in-time.
+  if (!_interstitialLoaded) {
+    await _adMobPreloadInterstitial();
+    if (!_interstitialLoaded) return;
+  }
   try {
     await _AdMob.showInterstitial();
     localStorage.setItem('_iadLastShown', Date.now().toString());
@@ -263,6 +280,9 @@ async function adMobShowInterstitial() {
 
 async function adMobShowBanner() {
   if (!_adMobReady) return;
+  // Bottom anchored adaptive banner (Google's recommended placement). The
+  // has-banner reserve pushes content/buttons up above the banner strip, so it
+  // stays clear of the answer/submit buttons and never covers the top nav.
   try {
     await _AdMob.showBanner({
       adId: ADMOB_IDS.banner,
@@ -386,21 +406,6 @@ document.addEventListener('click', async (e) => {
   }, promptHtml);
 });
 
-// Show banner on result screens when "Try another theme" section appears
-function _watchResultScreens() {
-  if (!isInApp()) return;
-  const observer = new MutationObserver((mutations) => {
-    for (const mutation of mutations) {
-      for (const node of mutation.addedNodes) {
-        if (node.nodeType !== 1) continue;
-        const target = node.querySelector?.('.result-theme-search') || (node.classList?.contains('result-theme-search') ? node : null);
-        if (target) adMobShowBanner();
-      }
-    }
-  });
-  observer.observe(document.body, { childList: true, subtree: true });
-}
-
 async function _bootInApp() {
   if (ADMOB_ADS_ENABLED) {
     // ATT first: the prompt must appear before any data that could be used to
@@ -411,8 +416,9 @@ async function _bootInApp() {
   _pingNewInstall();
   // With ads off (platform pending approval) the app stays fully ad-free.
   if (ADMOB_ADS_ENABLED) {
+    // The banner now shows from init on game pages (top) and browse pages
+    // (bottom), so the old result-screen banner watcher is no longer needed.
     adMobInit();
-    _watchResultScreens();
   }
 }
 

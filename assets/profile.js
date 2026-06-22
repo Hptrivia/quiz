@@ -410,10 +410,9 @@ function isLimitedWeb() { return !_isNative && !_isPremium(); }
 
 if (_isNative) {
   document.body.classList.add('in-app');
-  const _p = window.location.pathname;
-  const _isGamePage = /\/(play|challenge|survival|episode|trivia-rush|versus|wordle|wordsearch|mashup-play|mashup-trivia-rush)\.html$/.test(_p)
-    || /\/(wordle|wordsearch)\//.test(_p);
-  if (!_isGamePage) document.body.classList.add('has-banner');
+  // The bottom banner now shows on every in-app screen, game/quiz pages
+  // included, so reserve bottom space everywhere to avoid a first-paint jump.
+  document.body.classList.add('has-banner');
 }
 
 // On DESKTOP web, questions reset DAILY (build a return habit) — you can't
