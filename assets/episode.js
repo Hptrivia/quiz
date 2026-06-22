@@ -159,12 +159,12 @@ async function renderEpisodePage() {
       <h2>${foundAnyEpisodeMarkers ? `Episode ${safeEpisode} Complete` : "Episode Mode Complete"}</h2>
       <p>Your score: ${score} / ${episodeQuestions.length}</p>
       ${webQCounterHTML()}
+      ${notifyHtml}
       <div class="cta-row">
         ${hasNextEpisode && !isWebEpLimit() ? `<a class="primary-btn" href="episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}" data-rewarded-href="episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}">Next Episode</a>` : ""}
         ${hasNextEpisode && isWebEpLimit() ? webWallHTML("Yay! You've played an episode", theme.title, "episodes") : ""}
-        ${!hasNextEpisode && isWebEpLimit() ? webWallHTML("Want more episodes?", null, "episodes", null, true) : ""}
+        ${!hasNextEpisode && isWebEpLimit() ? webWallHTML("Want more Episode Mode trivia?", null, "episodes", null, true, "Download Trivia Gauntlet.") : ""}
       </div>
-      ${notifyHtml}
       ${relatedHtml}
     `;
     if (notifyHtml && typeof wireNotifyCard === "function") wireNotifyCard(theme.title, "episode");

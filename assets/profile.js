@@ -719,7 +719,7 @@ function _injectFooterUnlock() {
   });
 }
 
-function webWallHTML(msg, themeName, noun, countOverride, noRedirect) {
+function webWallHTML(msg, themeName, noun, countOverride, noRedirect, bodyOverride) {
   const item = noun || 'questions';
   // Some callers (e.g. Challenge mode's per-round wall) enforce a smaller free
   // allowance than the global daily limit — let them say the right number.
@@ -751,9 +751,11 @@ function webWallHTML(msg, themeName, noun, countOverride, noRedirect) {
   // Wordle / Word Search / Episode are lifetime limits — unchanged copy. Same
   // mobile-web auto-redirect as the questions wall (armed + countdown injected by
   // _watchForWallRedirect on the result screen; page-load gate stays manual).
-  const moreLine = themeName
-    ? `Download Trivia Gauntlet for more ${themeName} ${item}.`
-    : `Download Trivia Gauntlet for more ${item}.`;
+  const moreLine = bodyOverride
+    ? bodyOverride
+    : (themeName
+        ? `Download Trivia Gauntlet for more ${themeName} ${item}.`
+        : `Download Trivia Gauntlet for more ${item}.`);
   // Some callers want the wall present but WITHOUT the 4s store auto-redirect —
   // e.g. the "no next episode" screen, where we keep the email-notify card as a
   // real choice and don't want to yank the visitor off to the store.
