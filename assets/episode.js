@@ -36,6 +36,17 @@ async function renderEpisodePage() {
 
   const allQuestions = await fetchJSON(`data/${episodeFile}`);
 
+  let affiliateProducts = null;
+  try {
+    const affiliateLinks = await fetchJSON("data/affiliate_links.json");
+    const raw = affiliateLinks[theme.title];
+    if (raw) {
+      affiliateProducts = Array.isArray(raw) ? raw : [raw];
+    }
+  } catch (e) {
+    affiliateProducts = null;
+  }
+
   function cleanText(text) {
     return String(text || "").replace(/\*\*/g, "").trim();
   }
@@ -131,10 +142,10 @@ async function renderEpisodePage() {
 
     const relatedHtml = `
       <div class="theme-related-quizzes" data-reward-gate="1">
-        <h3>Related Quizzes</h3>
+        <h3>Related Trivia</h3>
         <div class="grid">
           <a class="card card-mix" href="challenge.html?theme=${theme.slug}&round=1">
-            <h3>${theme.title} Trivia</h3>
+            <h3>${theme.title}</h3>
             <span class="card-mix-sub">Regular trivia</span>
           </a>
           ${relatedEpisodes.map(t => `
@@ -155,6 +166,20 @@ async function renderEpisodePage() {
         })
       : "";
 
+    const affiliateHtml = affiliateProducts && affiliateProducts.length ? `
+      <div class="affiliate-box">
+        <p class="affiliate-label">Recommended for Fans</p>
+        ${affiliateProducts.map(item => `
+          <a class="affiliate-card" href="${item.url}" target="_blank" rel="noopener noreferrer sponsored">
+            <strong>${item.title}</strong>
+          </a>
+        `).join("")}
+        <p class="affiliate-disclaimer">
+          Affiliate link — I may earn a commission from qualifying purchases.
+        </p>
+      </div>
+    ` : "";
+
     resultBox.innerHTML = `
       <h2>${foundAnyEpisodeMarkers ? `Episode ${safeEpisode} Complete` : "Episode Mode Complete"}</h2>
       <p>Your score: ${score} / ${episodeQuestions.length}</p>
@@ -165,6 +190,7 @@ async function renderEpisodePage() {
         ${hasNextEpisode && isWebEpLimit() ? webWallHTML("Yay! You've played an episode", theme.title, "episodes") : ""}
         ${!hasNextEpisode && isWebEpLimit() ? webWallHTML("Want more Episode Mode trivia?", null, "episodes", null, true, "Download Trivia Gauntlet.") : ""}
       </div>
+      ${affiliateHtml}
       ${relatedHtml}
     `;
     if (notifyHtml && typeof wireNotifyCard === "function") wireNotifyCard(theme.title, "episode");
