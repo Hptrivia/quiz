@@ -262,7 +262,7 @@ async function renderMultiThemeChallenge() {
     `;
     document.getElementById("mashupChallengeBreakdown").appendChild(renderMashupThemeBreakdown(themeScores, selectedThemes, colorBySlug));
     injectMashupResultAd(document.getElementById("mashupChallengeAdSlot"));
-    if (safeRound < CHAL_WEB_FREE_ROUNDS && typeof injectChallengeNativeAd === 'function') injectChallengeNativeAd(document.getElementById("challengeNativeAdSlot"));
+    if (safeRound < CHAL_WEB_FREE_ROUNDS && typeof injectNativeBannerAd === 'function') injectNativeBannerAd(document.getElementById("challengeNativeAdSlot"));
     if (safeRound < CHAL_WEB_FREE_ROUNDS && typeof injectMonetagVignette === 'function') injectMonetagVignette();
     if (webWalled && typeof injectMonetagPopunder === 'function') injectMonetagPopunder();
     if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
@@ -719,8 +719,11 @@ async function renderChallengePage() {
       ${replayHtml}
       ${notifyHtml}
     </div>
-      ${safeRound < CHAL_WEB_FREE_ROUNDS ? '<div id="challengeNativeAdSlot"></div>' : ''}
-      ${affiliateHtml}
+      ${safeRound >= CHAL_WEB_FREE_ROUNDS
+          ? affiliateHtml
+          : safeRound === 1
+            ? '<div id="challengeNativeAdSlot"></div>' + affiliateHtml
+            : affiliateHtml + '<div id="challengeNativeAdSlot"></div>'}
       <div class="result-theme-search">
         <p class="result-theme-search-title">Try another theme</p>
         <div class="search-wrap">
@@ -731,7 +734,7 @@ async function renderChallengePage() {
     `;
 
 
-    if (safeRound < CHAL_WEB_FREE_ROUNDS && typeof injectChallengeNativeAd === 'function') injectChallengeNativeAd(document.getElementById("challengeNativeAdSlot"));
+    if (safeRound < CHAL_WEB_FREE_ROUNDS && typeof injectNativeBannerAd === 'function') injectNativeBannerAd(document.getElementById("challengeNativeAdSlot"));
     if (safeRound < CHAL_WEB_FREE_ROUNDS && typeof injectMonetagVignette === 'function') injectMonetagVignette();
     if (webWalled && typeof injectMonetagPopunder === 'function') injectMonetagPopunder();
     if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));

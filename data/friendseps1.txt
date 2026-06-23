@@ -30,16 +30,6 @@
     "description": "He says the phone rings and it’s his mother—‘very weird, because she never calls me.’"
   },
   {
-    "id": "fr-s1e1-easy-0004",
-    "context": "Ross arrives at Central Perk, devastated because something happened just that day.",
-    "question": "Who tries to ‘cleanse’ Ross’s aura when he arrives at Central Perk?",
-    "options": ["Phoebe", "Monica", "Chandler", "Rachel"],
-    "answer": "Phoebe",
-    "difficulty": "easy",
-    "episode": 1,
-    "description": "Phoebe plucks at the air in front of Ross to cleanse his aura; Ross asks her to stop."
-  },
-  {
     "id": "fr-s1e1-medium-0005",
     "context": "The group checks in on Ross as Monica fills them in.",
     "question": "What does Monica say happened earlier that day regarding Carol?",
@@ -50,16 +40,6 @@
     "description": "Monica explains to the group: ‘Carol moved her stuff out today.’"
   },
   {
-    "id": "fr-s1e1-truefalse-0006",
-    "context": "Ross vents about the breakup and how he feels.",
-    "question": "True or False: Ross says he wants to be single.",
-    "options": ["True", "False"],
-    "answer": "False",
-    "difficulty": "easy",
-    "episode": 1,
-    "description": "Ross says the opposite: ‘I don’t want to be single… I just wanna be married again!’"
-  },
-  {
     "id": "fr-s1e1-easy-0007",
     "context": "Joey offers his trademark ‘solution’ to heartbreak.",
     "question": "What does Joey suggest Ross should do to cope with the breakup?",
@@ -68,16 +48,6 @@
     "difficulty": "easy",
     "episode": 1,
     "description": "Joey’s solution is ‘Strip joint! C’mon, you’re single! Have some hormones!’"
-  },
-  {
-    "id": "fr-s1e1-truefalse-0008",
-    "context": "A shock entrance interrupts the conversation at Central Perk.",
-    "question": "True or False: Rachel enters Central Perk wearing a wet wedding dress.",
-    "options": ["True", "False"],
-    "answer": "True",
-    "difficulty": "easy",
-    "episode": 1,
-    "description": "Rachel bursts in ‘in a wet wedding dress,’ having fled her wedding."
   },
   {
     "id": "fr-s1e1-easy-0009",
@@ -98,16 +68,6 @@
     "difficulty": "medium",
     "episode": 1,
     "description": "She says Barry looks like ‘Mr. Potato Head.’"
-  },
-  {
-    "id": "fr-s1e1-medium-0011",
-    "context": "Later, the gang watches a Spanish soap together in Monica’s apartment.",
-    "question": "While watching the Spanish soap, what do the group chant about the character with the pants?",
-    "options": ["‘Push her down the stairs!’", "‘Tell him the truth!’", "‘Run away!’", "‘Open the door!’"],
-    "answer": "‘Push her down the stairs!’",
-    "difficulty": "medium",
-    "episode": 1,
-    "description": "They chant ‘Push her down the stairs!’ and cheer when it happens."
   },
   {
     "id": "fr-s1e1-easy-0012a",
@@ -138,8 +98,8 @@
     "id": "fr-s1e1-medium-0013",
     "context": "The buzzer goes—Monica’s date arrives.",
     "question": "Monica’s ‘not a real date’ that night is with whom?",
-    "options": ["Paul the Wine Guy", "Richard the Eye Doctor", "Alan", "Fun Bobby"],
-    "answer": "Paul the Wine Guy",
+    "options": ["Paul", "Richard the Eye Doctor", "Alan", "Fun Bobby"],
+    "answer": "Paul",
     "difficulty": "medium",
     "episode": 1,
     "description": "The buzzer reveals it’s Paul; everyone greets ‘Paul! The Wine Guy!’"
@@ -163,26 +123,6 @@
     "difficulty": "medium",
     "episode": 1,
     "description": "Pheebs deadpans the refusal when Joey invites her."
-  },
-  {
-    "id": "fr-s1e1-truefalse-0015",
-    "context": "Ross tries to make sure Rachel won’t be alone that night.",
-    "question": "True or False: Ross invites Rachel to come over while Joey and Chandler help him assemble furniture.",
-    "options": ["True", "False"],
-    "answer": "True",
-    "difficulty": "easy",
-    "episode": 1,
-    "description": "Ross says Joey and Chandler are helping and invites Rachel if she doesn’t want to be alone."
-  },
-  {
-    "id": "fr-s1e1-medium-0016",
-    "context": "At Ross’s place, the guys are mid-assembly and something doesn’t fit.",
-    "question": "When assembling furniture, what does Joey do with the mysterious leftover piece?",
-    "options": ["Dumps it in a plant pot", "Throws it in the trash", "Pockets it for later", "Tapes it inside the back panel"],
-    "answer": "Dumps it in a plant pot",
-    "difficulty": "medium",
-    "episode": 1,
-    "description": "Joey checks Ross isn’t looking and hides the extra bit in a plant pot."
   },
   {
     "id": "fr-s1e1-hard-0017",
@@ -235,16 +175,6 @@
     "description": "The TV audio includes wedding vows from ‘Joanie Loves Chachi.’"
   },
   {
-    "id": "fr-s1e1-easy-0022",
-    "context": "Next morning at Monica’s: Rachel makes coffee for the first time.",
-    "question": "The next morning, what do Joey and Chandler do with Rachel’s first-ever coffee?",
-    "options": ["They pour it into a plant pot", "They drink it quickly", "They dump it in the sink", "They add more sugar and keep it"],
-    "answer": "They pour it into a plant pot",
-    "difficulty": "easy",
-    "episode": 1,
-    "description": "They taste it, grimace, and quietly pour it into a plant."
-  },
-  {
     "id": "fr-s1e1-medium-0023",
     "context": "Rachel asks about jobs; Joey mentions his acting work.",
     "question": "Which production does Monica mention while teasing Joey about his acting work?",
@@ -293,16 +223,6 @@
     "difficulty": "hard",
     "episode": 1,
     "description": "Rachel calls them her new ‘I’ve got great boots’ boots—‘John and David’ brand."
-  },
-  {
-    "id": "fr-s1e1-easy-0028",
-    "context": "The gang questions how Rachel is paying for things now.",
-    "question": "Who does Rachel say pays her credit card bill?",
-    "options": ["Her father", "Her mother", "She doesnt say", "Barry"],
-    "answer": "Her father",
-    "difficulty": "easy",
-    "episode": 1,
-    "description": "Pressed by Monica, Rachel admits her dad pays for the card."
   },
   {
     "id": "fr-s1e1-medium-0029",

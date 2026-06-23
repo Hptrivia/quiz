@@ -75,51 +75,6 @@
     "description": "Jerry explains that he met Laura the night he did a show in Lansing, Michigan, and that she teaches political science."
   },
   {
-    "id": "seinfeld-s1e1-medium-0004",
-    "context": "Jerry describes Laura, the woman he met on the road, while George interrogates him in the diner.",
-    "question": "How does Jerry describe what it was like talking to Laura?",
-    "options": [
-      "Like talking to George, but obviously much better",
-      "Like talking to a best friend he’s known for years",
-      "Like talking to a therapist who understands everything",
-      "Like talking to George, but prettier"
-    ],
-    "answer": "Like talking to George, but obviously much better",
-    "difficulty": "medium",
-    "episode": 1,
-    "description": "Jerry says the conversation felt like talking to George, “but, ya know, obviously much better,” which George oddly takes as good news."
-  },
-  {
-    "id": "seinfeld-s1e1-medium-0005",
-    "context": "George dissects Laura’s phone call where she says she “has to come in for a seminar” and “maybe” they’ll get together.",
-    "question": "What does George conclude Jerry is to Laura after analyzing her phrasing?",
-    "options": [
-      "A back-up, a second-line, a just-in-case plan",
-      "Her first choice if nothing else comes up",
-      "A close friend she trusts with everything",
-      "An old flame she’s trying to rekindle"
-    ],
-    "answer": "A back-up, a second-line, a just-in-case plan",
-    "difficulty": "medium",
-    "episode": 1,
-    "description": "George declares Jerry is a “back-up, a second-line, a just-in-case, a B-plan of contingency.”"
-  },
-  {
-    "id": "seinfeld-s1e1-medium-0033",
-    "context": "Still obsessing over Laura’s call, George decides they need a “female point of view” and pulls the waitress into their analysis.",
-    "question": "How does George bring Claire into the conversation about Laura’s phone call?",
-    "options": [
-      "He says, “Claire, Claire, you’re a woman, right?”",
-      "He says, “Claire, you date guys, don’t you?”",
-      "He says, “Claire, we need a woman’s opinion here.”",
-      "He says, “Claire, be honest, what is she thinking?”"
-    ],
-    "answer": "He says, “Claire, Claire, you’re a woman, right?”",
-    "difficulty": "medium",
-    "episode": 1,
-    "description": "George waves her over with, “Claire, Claire, you’re a woman, right?”, setting up his “hypothetical” call."
-  },
-  {
     "id": "seinfeld-s1e1-hard-0006",
     "context": "George brings Claire into the analysis at the diner to settle the “had to” / “maybe” debate.",
     "question": "In Claire’s “female point of view,” why does she say the hypothetical woman called Jerry at all?",
@@ -287,21 +242,6 @@
     "description": "George can’t believe Jerry is bringing in an extra bed for a woman who clearly wants to sleep with him, joking he might as well bring in another guy too."
   },
   {
-    "id": "seinfeld-s1e1-hard-0014",
-    "context": "George insists that Laura’s “decent hotel room” problem is actually a neon sign.",
-    "question": "When Jerry quotes Laura saying she “couldn’t find a decent hotel room,” how does George interpret that line?",
-    "options": [
-      "As “the signal” that she wants to stay with Jerry",
-      "As proof she’s high-maintenance and fussy",
-      "As an excuse to avoid paying for a room",
-      "As evidence that she’s stranded and desperate"
-    ],
-    "answer": "As “the signal” that she wants to stay with Jerry",
-    "difficulty": "hard",
-    "episode": 1,
-    "description": "George says New York has millions of hotel rooms and calls it “the signal,” the ultimate sign she wants to stay with Jerry."
-  },
-  {
     "id": "seinfeld-s1e1-hard-0016",
     "context": "In his stand-up, Jerry talks about how much “equipment” women seem to need in the bathroom.",
     "question": "What everyday item does Jerry say he’s never owned, never bought, and never needed until women bring it into his apartment?",
@@ -315,21 +255,6 @@
     "difficulty": "hard",
     "episode": 1,
     "description": "He’s amazed by women’s giant bags of cotton balls, saying he’s never owned a single cotton ball and has no idea what they do with them."
-  },
-  {
-    "id": "seinfeld-s1e1-hard-0029",
-    "context": "In the cotton ball bit, Jerry talks about a girl leaving bathroom supplies at his place.",
-    "question": "What does Jerry say he did with the little zip-lock bag of cotton balls a girl left at his apartment?",
-    "options": [
-      "Put them on the kitchen floor like little tumbleweeds",
-      "Used them to clean his TV screen",
-      "Stuffed them into his sneakers for comfort",
-      "Kept them by the sink “just in case”"
-    ],
-    "answer": "Put them on the kitchen floor like little tumbleweeds",
-    "difficulty": "hard",
-    "episode": 1,
-    "description": "He scattered them on the kitchen floor like tumbleweeds, hoping cockroaches would see them and decide the town was dead."
   },
   {
     "id": "seinfeld-s1e1-medium-0026",
@@ -407,21 +332,6 @@
     "description": "Laura comes up behind him, covers his eyes, and says, “Guess who?”, giving George a brand-new, unclassified “surprise-blindfold greeting.”"
   },
   {
-    "id": "seinfeld-s1e1-medium-0020",
-    "context": "Back at the apartment, Jerry shows Laura around while George’s “signals” spin in his head.",
-    "question": "Which of these details does Laura do almost immediately that Jerry clearly reads as a strong “signal”?",
-    "options": [
-      "She takes off her shoes and unbuttons part of her shirt on the couch",
-      "She asks if she can lie down in his bed “just to rest”",
-      "She changes into one of his T-shirts without asking",
-      "She lays down on his couch"
-    ],
-    "answer": "She takes off her shoes and unbuttons part of her shirt on the couch",
-    "difficulty": "medium",
-    "episode": 1,
-    "description": "Laura makes herself at home, taking off her shoes and opening a few buttons while she sits on his couch, which only fuels Jerry’s expectations."
-  },
-  {
     "id": "seinfeld-s1e1-medium-0021",
     "context": "Jerry nervously offers Laura food and drink as she settles in.",
     "question": "When Jerry offers Laura something to drink, what does she specifically ask him for?",
@@ -482,22 +392,6 @@
     "description": "After arguing with her fiancé on the phone, Laura turns to Jerry and says, “Never get engaged,” revealing her relationship status."
   },
   {
-    "id": "seinfeld-s1e1-hard-0041",
-    "context": "When Jerry realizes Laura is engaged, he keeps repeating it in disbelief while she explains how it feels.",
-    "question": "Which of these lines does Laura NOT say while she’s talking about being engaged and Jerry quietly panics?",
-    "options": [
-      "“You have to start thinking in terms of ‘we.’”",
-      "“He’s a great guy.”",
-      "“You’d really like him.”",
-      "“I’m on this emotional roller coaster.”",
-      "“I don’t even know if I want to marry him.”"
-    ],
-    "answer": "“I don’t even know if I want to marry him.”",
-    "difficulty": "hard",
-    "episode": 1,
-    "description": "Laura says she has to think in terms of “we,” calls her fiancé a great guy, says Jerry would really like him, and describes it as an emotional roller coaster—she never says she doesn’t know if she wants to marry him."
-  },
-  {
     "id": "seinfeld-s1e1-hard-0027",
     "context": "Jerry mocks how desperate men are for attention from women in his last bit.",
     "question": "What everyday behavior does Jerry describe as evidence that men are “out of ideas” for how to get women’s attention?",
@@ -511,21 +405,6 @@
     "difficulty": "hard",
     "episode": 1,
     "description": "He jokes about men honking car horns as women walk past, imitating the honk and saying, “This man is out of ideas.”"
-  },
-  {
-    "id": "seinfeld-s1e1-medium-0028",
-    "context": "In the same routine, Jerry describes men as a kind of global “organization” working on the problem of meeting women.",
-    "question": "How does Jerry describe men’s presence “wherever women are” in his final stand-up?",
-    "options": [
-      "There’s always a man “working on the situation”",
-      "There’s always a man “ready to fall in love”",
-      "There’s always a man “waiting for a signal”",
-      "There’s always a man “one move from disaster”"
-    ],
-    "answer": "There’s always a man “working on the situation”",
-    "difficulty": "medium",
-    "episode": 1,
-    "description": "He says, “Wherever women are, we have a man working on the situation right now,” as if men are a worldwide organization."
   },
   {
     "id": "sf-s1e2-easy-0001",

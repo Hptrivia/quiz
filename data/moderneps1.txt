@@ -50,26 +50,6 @@
     "description": "He waves, the opponents score, and tempers flare on the sideline."
   },
   {
-    "id": "mf-s1e1-medium-0006b",
-    "context": "Sideline commentary at the youth soccer game: Gloria contrasts her wealthy husband’s city life with her own small Colombian village and trails off mid-claim; Jay dryly supplies the missing word.",
-    "question": "Gloria says her hometown is “the number one village in all Colombia for all the…”—how does Jay complete the sentence?",
-    "options": ["murders", "robberies", "crimes", "drug trafficking"],
-    "answer": "murders",
-    "difficulty": "medium",
-    "episode": 1,
-    "description": "Gloria pauses and Jay deadpans the punchline: “murders.”"
-  },
-  {
-    "id": "mf-s1e1-medium-0006",
-    "context": "Sideline spat: a finger-wagging mom criticizes; Gloria fires back about that mom’s kid.",
-    "question": "According to Gloria, where did the other boy keep his hand for the first half of the game?",
-    "options": ["In his pants", "In his mouth"],
-    "answer": "In his pants",
-    "difficulty": "medium",
-    "episode": 1,
-    "description": "Gloria’s line ends the exchange—decisively."
-  },
-  {
     "id": "mf-s1e1-medium-0007",
     "context": "Post-goal introductions on the touchline lead to an awkward age mix-up.",
     "question": "When Josh(a teammate´s father) meets them, who does he assume Jay is to Gloria?",
@@ -120,16 +100,6 @@
     "description": "Claire explicitly says, “You’re fifteen and it’s the first time you’ve had a boy over.”"
   },
   {
-    "id": "mf-s1e1-medium-0010",
-    "context": "Phil pitches himself as the ‘cool dad’ and shows off his texting chops—sort of.",
-    "question": "According to Phil, what does “WTF” stand for?",
-    "options": ["Why the face", "What the f**k", "What the fun", "Wow, that’s funny"],
-    "answer": "Why the face",
-    "difficulty": "medium",
-    "episode": 1,
-    "description": "His family is… unconvinced."
-  },
-  {
     "id": "mf-s1e1-easy-0010b",
     "context": "Phil’s ‘cool dad’ confessional: he brags about being hip—online, texting slang, and knowing all the dances to a certain movie.",
     "question": "Which production does Phil claim he knows all the dances to?",
@@ -159,16 +129,7 @@
     "episode": 1,
     "description": "Phil says, “I can’t shoot him at two; I’m showing a house at two.”"
   },
-  {
-    "id": "mf-s1e1-medium-0011c",
-    "context": "Claire and Phil schedule the BB-gun consequence; they run through the day’s conflicts before landing on a specific time.",
-    "question": "Why couldn’t Phil shoot Luke at 3:00?",
-    "options": ["He was showing a house", "Luke had a birthday party", "Luke had a soccer game", "He had a work conference call"],
-    "answer": "He was showing a house",
-    "difficulty": "medium",
-    "episode": 1,
-    "description": "Phil says, “ No, he’s got a soccer game at three.”"
-  },
+
   {
     "id": "mf-s1e1-medium-0012",
     "context": "Scheduling the consequence becomes a family logistics exercise.",
@@ -265,16 +226,6 @@
     "description": "Jay: “I’ll give you fifty bucks not to do this.”"
   },
   {
-    "id": "mf-s1e1-medium-0019",
-    "context": "As they leave the scene at the mall, an employee corrects Jay’s lane etiquette.",
-    "question": "According to the employer, which group should stay to the right (as he addresses Jay)?",
-    "options": ["Mall walkers", "Senior citizens", "Store greeters", "Elderly shoppers"],
-    "answer": "Mall walkers",
-    "difficulty": "medium",
-    "episode": 1,
-    "description": "“We ask that all mall walkers stay to the right.”"
-  },
-  {
     "id": "mf-s1e1-medium-0020",
     "context": "Back outside at the Dunphys, Luke armors up before the BB-gun consequence; Phil inspects the layers.",
     "question": "How many pairs of underwear is Luke wearing?",
@@ -303,41 +254,6 @@
     "difficulty": "hard",
     "episode": 1,
     "description": "“One moment you’re just friends watching Falcon Crest…”"
-  },
-  {
-    "id": "mf-s1e1-hard-0023",
-    "context": "Outside, Phil balks at following through; the BB gun discharges anyway.",
-    "question": "Who gets hit first immediately after Phil decides he can’t go through with the shot?",
-    "options": ["Luke", "Phil", "Dylan", "Alex"],
-    "answer": "Luke",
-    "difficulty": "hard",
-    "episode": 1,
-    "description": "A stray BB nails Luke the moment Phil relents."
-  },
-  {
-    "id": "mf-s1e1-medium-0023b",
-    "context": "Moments later, as the commotion spreads, another unintended target yelps before Phil takes a hit himself.",
-    "question": "Who else is accidentally shot by the BB gun before Phil gets hit?",
-    "options": ["Dylan", "Claire", "Haley", "Jay"],
-    "answer": "Dylan",
-    "difficulty": "medium",
-    "episode": 1,
-    "description": "Dylan yelps “Ow!” right before the gun drops and tags Phil, too."
-  },
-  {
-    "id": "mf-s1e1-medium-0024",
-    "context": "Arriving for dinner at Mitchell and Cameron’s, Jay uses his standard move to avoid walking in on anything.",
-    "question": "What does Jay do before entering their place to avoid surprises?",
-    "options": [
-      "He announces himself loudly",
-      "He calls from the car",
-      "He rings twice and waits",
-      "He texts first"
-    ],
-    "answer": "He announces himself loudly",
-    "difficulty": "medium",
-    "episode": 1,
-    "description": "Jay: “We’re here! Coming in!”"
   },
   {
     "id": "mf-s1e1-medium-0025",

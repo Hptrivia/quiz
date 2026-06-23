@@ -225,16 +225,6 @@
     "description": "Sheldon calls astrology a ‘mass cultural delusion.’"
   },
   {
-    "id": "bbt-s1e1-who-0016",
-    "context": "Penny laments a four-year relationship; the guys respond.",
-    "question": "WHO SAID THIS? “No, it’s not crazy, it’s a paradox… think about light… double slit… particles too.”",
-    "options": ["Leonard", "Sheldon", "Howard", "Raj"],
-    "answer": "Leonard",
-    "difficulty": "hard",
-    "episode": 1,
-    "description": "Leonard tries to console her with a wave–particle analogy."
-  },
-  {
     "id": "bbt-s1e1-medium-0017b",
     "context": "Apartment 4A living room, just after Penny heads to the shower; the roommates recall a prior holiday incident where a guest undressed and then debate Leonard’s intentions.",
     "question": "Who was the last guest who took their clothes off in the apartment before this scene?",
@@ -248,16 +238,6 @@
     "difficulty": "medium",
     "episode": 1,
     "description": "Sheldon reminds Leonard of a Thanksgiving episode involving his grandmother taking her clothes off."
-  },
-  {
-    "id": "bbt-s1e1-who-0018",
-    "context": "Hallway encounter: A just-toweled Penny is introduced to the rest of the gang.",
-    "question": "WHO SAID THIS? “Enchante, Mademoiselle… Cal-Tech Department of Applied Physics… my work is orbiting Jupiter’s largest moon.”",
-    "options": ["Howard", "Raj", "Sheldon", "Leonard"],
-    "answer": "Howard",
-    "difficulty": "easy",
-    "episode": 1,
-    "description": "Wolowitz lays it on thick with his credentials and French."
   },
   {
     "id": "bbt-s1e1-medium-0018b",
@@ -345,16 +325,6 @@
     "description": "At the door, after introductions, the man asks how they got in; Leonard answers, “We’re scientists,” and Sheldon adds, “Tell him about our IQ.”"
   },
   {
-    "id": "bbt-s1e1-who-0024",
-    "context": "Stairwell debrief. Leonard vows to move on and win a Nobel Prize;",
-    "question": "WHO SAID THIS? “You’re not going to die alone… and you’re certainly not going to win a Nobel Prize.”",
-    "options": ["Sheldon", "Leonard", "Howard", "Raj"],
-    "answer": "Sheldon",
-    "difficulty": "medium",
-    "episode": 1,
-    "description": "A classic Sheldon two-step: comfort, then undercut."
-  },
-  {
     "id": "bbt-s1e1-medium-0025",
     "context": "Back at the apartment: Howard pitches online gaming to Penny.",
     "question": "What is the name of Howard’s pet tiger in his game, and what level did he get it?",
@@ -383,21 +353,6 @@
     "difficulty": "medium",
     "episode": 1,
     "description": "Sheldon deadpans the unlikelihood of Leonard’s fantasy."
-  },
-  {
-    "id": "bbt-s1e1-hard-0027",
-    "context": "All five in the car: dinner debate.",
-    "question": "Why does Sheldon veto Thai food after Penny agrees to it?",
-    "options": [
-      "They already had Indian for lunch and both cuisines are curry-based",
-      "Thai violates his Tuesday food schedule",
-      "He’s allergic to lemongrass",
-      "They had Chinese for lunch"
-    ],
-    "answer": "They already had Indian for lunch and both cuisines are curry-based",
-    "difficulty": "hard",
-    "episode": 1,
-    "description": "He calls them ‘gastronomically redundant.’"
   },
   {
     "id": "bbt-s1e1-easy-0028",

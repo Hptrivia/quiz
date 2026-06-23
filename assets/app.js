@@ -439,15 +439,17 @@ function injectMashupResultAd(container) {}
 // pays on impressions, unlike the old CPA display banner). Runs in the MAIN page
 // DOM — a native banner can't be sandboxed in an iframe or it can't inherit
 // styles. Web-only (bails in the native app), non-premium. Dashboard widget
-// layout = 1.1 (single card). Guards against a double-inject per page.
-let _CHAL_NATIVE_AD_ID = 'container-fade24365feae2ac254bb602dc7e4417';
-function injectChallengeNativeAd(container) {
+// layout = 1.1 (single card). Guards against a double-inject per page. Used on
+// challenge, marathon and wordle result screens (the wordle panel is torn down
+// when advancing a word, so the guard's slot is gone and it re-injects cleanly).
+let _NATIVE_AD_ID = 'container-fade24365feae2ac254bb602dc7e4417';
+function injectNativeBannerAd(container) {
   if (!container) return;
   if (isPremiumUser()) return;
   if (typeof isLimitedWeb === 'function' ? !isLimitedWeb() : (window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative))) return;
-  if (document.getElementById(_CHAL_NATIVE_AD_ID)) return; // already injected
+  if (document.getElementById(_NATIVE_AD_ID)) return; // already injected
   const slot = document.createElement('div');
-  slot.id = _CHAL_NATIVE_AD_ID;
+  slot.id = _NATIVE_AD_ID;
   container.appendChild(slot);
   const s = document.createElement('script');
   s.async = true;
@@ -811,7 +813,7 @@ async function renderMultiThemeMarathon() {
           <div id="mashupMarathonSearchResults" class="search-results" data-reward-gate="1"></div>
         </div>
       </div>
-      <div id="mashupMarathonAdSlot"></div>
+      ${!isPremiumUser() ? '<div id="mashupMarathonAdSlot"></div>' : ''}
       <div class="theme-related-quizzes" data-reward-gate="1">
         <h3>Play these themes individually</h3>
         <div class="grid">
@@ -820,7 +822,7 @@ async function renderMultiThemeMarathon() {
       </div>
     `;
     document.getElementById("mashupMarathonBreakdown").appendChild(renderMashupThemeBreakdown(themeScores, selectedThemes, colorBySlug));
-    injectMashupResultAd(document.getElementById("mashupMarathonAdSlot"));
+    if (typeof injectNativeBannerAd === 'function') injectNativeBannerAd(document.getElementById("mashupMarathonAdSlot"));
     if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
     if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Reveal Answers', 'Reveal Answers', 'See the correct answer for every question you missed — free in the app, no limits.');
     const msInput = document.getElementById("mashupMarathonSearchInput");
@@ -1216,6 +1218,7 @@ const relatedThemesHtml = `
     </div>
     ${replayHtml}
     ${notifyHtml}
+    ${!isPremiumUser() ? '<div id="marathonNativeAdSlot"></div>' : ''}
 
       <div class="result-theme-search">
     <p class="result-theme-search-title">Try another theme</p>
@@ -1228,6 +1231,7 @@ const relatedThemesHtml = `
   `;
 
 
+  if (typeof injectNativeBannerAd === 'function') injectNativeBannerAd(document.getElementById("marathonNativeAdSlot"));
   if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
   if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Reveal Answers', 'Reveal Answers', 'See the correct answer for every question you missed — free in the app, no limits.');
 

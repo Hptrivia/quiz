@@ -314,6 +314,7 @@ async function renderWordleMashupMode(themesParam) {
     const revealBtn = document.getElementById("wordleRevealBtn");
     if (revealBtn) revealBtn.style.display = "none";
     feedbackEl.after(panel);
+    if (typeof injectNativeBannerAd === 'function') injectNativeBannerAd(panel);
 
     const nextFromPanel = document.getElementById("wordleNextFromPanel");
     if (nextFromPanel) {
@@ -879,6 +880,7 @@ async function renderWordlePage() {
     const revealBtn = document.getElementById("wordleRevealBtn");
     if (revealBtn) revealBtn.style.display = "none";
     feedbackEl.after(panel);
+    if (typeof injectNativeBannerAd === 'function') injectNativeBannerAd(panel);
 
     document.getElementById("wordleShareBtn").addEventListener("click", () => copyShare(solved));
 
