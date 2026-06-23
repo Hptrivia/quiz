@@ -20,6 +20,21 @@ label{display:block;font-size:10px;font-weight:700;letter-spacing:.07em;text-tra
 label:first-of-type{margin-top:0}
 select{width:100%;border:1.5px solid #e5e5e5;border-radius:8px;padding:9px 11px;font-size:13px;font-family:inherit;outline:none;color:#1a1a1a;background:#fff;cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 11px center;padding-right:30px}
 select:focus{border-color:#1a1a1a}
+.theme-search{width:100%;border:1.5px solid #e5e5e5;border-radius:8px;padding:9px 11px;font-size:13px;font-family:inherit;outline:none;color:#1a1a1a;margin-bottom:8px}
+.theme-search:focus{border-color:#1a1a1a}
+.theme-picker{max-height:260px;overflow-y:auto;border:1.5px solid #eee;border-radius:10px;padding:4px}
+.tp-empty{font-size:12px;color:#aaa;padding:10px}
+.tp-cat{border-radius:7px}
+.tp-head{display:flex;align-items:center;gap:7px;width:100%;border:none;background:none;font-family:inherit;font-size:12.5px;font-weight:700;color:#444;cursor:pointer;padding:8px 7px;text-align:left}
+.tp-head:hover{color:#1a1a1a}
+.tp-arrow{font-size:10px;color:#bbb;transition:transform .15s;display:inline-block}
+.tp-cat.open>.tp-head .tp-arrow{transform:rotate(90deg)}
+.tp-count{margin-left:auto;font-size:10px;font-weight:700;color:#bbb;background:#f3f3f3;border-radius:20px;padding:2px 8px}
+.tp-body{display:none;flex-direction:column;padding:0 4px 6px 22px}
+.tp-cat.open>.tp-body{display:flex}
+.tp-item{border:none;background:none;font-family:inherit;font-size:12.5px;color:#555;cursor:pointer;padding:6px 8px;border-radius:6px;text-align:left}
+.tp-item:hover{background:#f3f3f3;color:#1a1a1a}
+.tp-item.on{background:#efeefe;color:#4a3fd6;font-weight:700}
 .pal-lbl{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#999;margin:14px 0 7px;display:block}
 .pal{display:flex;gap:8px;flex-wrap:wrap}
 .dot{width:26px;height:26px;border-radius:50%;cursor:pointer;border:3px solid transparent;transition:all .15s;flex-shrink:0}
@@ -46,6 +61,7 @@ select:focus{border-color:#1a1a1a}
 .cards{display:flex;flex-wrap:wrap;gap:18px}
 .card-wrap{display:flex;flex-direction:column;align-items:center;gap:8px}
 .card{position:relative;width:236px;aspect-ratio:var(--ar,9/16);border-radius:18px;overflow:hidden;background:linear-gradient(158deg,var(--c1),var(--c2));color:var(--text);font-family:'DM Sans',sans-serif;box-shadow:0 8px 30px rgba(0,0,0,.22);flex:0 0 auto;--theme-size:34px;--q-size:16px;--opt-size:10.5px}
+.card-actions{display:flex;gap:6px;justify-content:center;flex-wrap:wrap}
 .card-dl{font-size:11px;font-weight:700;border:none;background:#efeefe;color:#4a3fd6;border-radius:7px;padding:6px 12px;cursor:pointer;font-family:inherit}
 .card-dl:hover{background:#e2e0fb}
 .card-inner{position:absolute;inset:0;display:flex;flex-direction:column;padding:20px 16px 18px}
@@ -78,12 +94,17 @@ select:focus{border-color:#1a1a1a}
 .card.revealed .opt{opacity:.4}
 .card.revealed .opt.correct{opacity:1;background:var(--correct);border-color:var(--correct);color:#04210f;font-weight:800}
 .card-cta{margin-top:12px;font-size:9px;font-weight:700;letter-spacing:.03em;text-align:center;opacity:.9}
+.hide-cta .card-cta{display:none}
 .card-cta b{color:var(--accent)}
 .cap-panel{background:#fff;border-radius:16px;padding:18px;box-shadow:0 2px 14px rgba(0,0,0,.07);margin-top:20px;display:none}
 .cap-panel.show{display:block}
 .cap-panel h3{font-size:13px;font-weight:800;margin-bottom:10px;display:flex;align-items:center;justify-content:space-between}
 .cap-panel textarea{width:100%;min-height:150px;border:1.5px solid #e5e5e5;border-radius:10px;padding:12px;font-size:13px;font-family:inherit;line-height:1.5;resize:vertical;color:#1a1a1a}
 .cap-copy{font-size:12px;font-weight:700;color:#6c63ff;cursor:pointer;background:none;border:none;font-family:inherit}
+.cfield-actions{display:flex;gap:10px;align-items:center}
+.cap-reset{font-size:12px;font-weight:700;color:#aaa;cursor:pointer;background:none;border:none;font-family:inherit}
+.cap-reset:hover{color:#777}
+.cap-edited{color:#6c63ff;font-weight:700;text-transform:none;letter-spacing:0}
 .copy-panel{background:#fff;border-radius:16px;padding:18px;box-shadow:0 2px 14px rgba(0,0,0,.07);margin-top:20px}
 .copy-panel>h3{font-size:13px;font-weight:800;margin-bottom:12px}
 .copy-tabs{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}
@@ -114,6 +135,25 @@ textarea.cinput{min-height:110px}
 .overlay .bar{width:240px;height:8px;border-radius:5px;background:rgba(255,255,255,.2);overflow:hidden}
 .overlay .bar i{display:block;height:100%;width:0;background:#6c63ff;transition:width .2s}
 .overlay .lbl{font-size:14px;font-weight:600}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;align-items:center;justify-content:center;z-index:10000;padding:20px}
+.modal.show{display:flex}
+.modal-card{background:#fff;border-radius:16px;padding:22px;width:100%;max-width:440px;max-height:86vh;overflow-y:auto;box-shadow:0 12px 50px rgba(0,0,0,.3)}
+.modal-head{display:flex;align-items:center;justify-content:space-between}
+.modal-head h3{font-size:16px;font-weight:800}
+.modal-x{border:none;background:none;font-size:16px;color:#aaa;cursor:pointer}
+.modal-sub{font-size:12px;color:#999;margin:4px 0 16px}
+.cal-row{display:flex;gap:10px}
+.cal-h4{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#999;margin:20px 0 8px}
+.cal-form input,.cal-form select{width:100%;border:1.5px solid #e5e5e5;border-radius:8px;padding:9px 11px;font-size:13px;font-family:inherit;outline:none;color:#1a1a1a;background:#fff}
+.cal-form .btn{margin-top:14px}
+.cal-list{display:flex;flex-direction:column;gap:6px}
+.cal-empty{font-size:12px;color:#bbb;padding:8px 0}
+.cal-item{display:flex;align-items:center;gap:10px;font-size:12.5px;background:#f7f7f7;border-radius:8px;padding:8px 10px}
+.cal-date-b{font-weight:700;color:#4a3fd6;white-space:nowrap}
+.cal-name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cal-plat{font-size:10px;font-weight:700;color:#888;background:#ececec;border-radius:20px;padding:2px 8px}
+.cal-del{border:none;background:none;color:#ccc;cursor:pointer;font-size:12px}
+.cal-del:hover{color:#e11}
 @media(max-width:760px){.layout{grid-template-columns:1fr}.side{position:static}}
 input[type=text]{width:100%;border:1.5px solid #e5e5e5;border-radius:8px;padding:9px 11px;font-size:13px;font-family:inherit;outline:none;color:#1a1a1a;background:#fff}
 input[type=text]:focus{border-color:#1a1a1a}
@@ -135,7 +175,9 @@ input[type=text]:focus{border-color:#1a1a1a}
   <div class="layout">
     <div class="side">
       <label>Theme</label>
-      <select id="theme"></select>
+      <input id="themeSearch" class="theme-search" type="text" placeholder="Search themes…" autocomplete="off" spellcheck="false" />
+      <div id="themePicker" class="theme-picker"></div>
+      <select id="theme" style="display:none"></select>
 
       <label>Make</label>
       <select id="ctype">
@@ -181,6 +223,7 @@ input[type=text]:focus{border-color:#1a1a1a}
       <button class="btn btn-primary" id="dl-img">↓ Download all (zip)</button>
       <button class="btn btn-accent" id="mk-vid">🎬 Make video (with reveal)</button>
       <button class="btn btn-soft" id="gen-cap">✨ Quick AI caption</button>
+      <button class="btn btn-soft" id="open-cal">📅 Posting calendar</button>
 
       <hr class="sep">
 
@@ -228,9 +271,36 @@ input[type=text]:focus{border-color:#1a1a1a}
 <canvas class="vcanvas" id="vcanvas"></canvas>
 <div class="overlay" id="overlay"><div class="lbl" id="ov-lbl">Working…</div><div class="bar"><i id="ov-bar"></i></div></div>
 
+<div class="modal" id="cal-modal">
+  <div class="modal-card">
+    <div class="modal-head"><h3>📅 Posting calendar</h3><button class="modal-x" id="cal-close">✕</button></div>
+    <p class="modal-sub">Log what you've posted and when. Saved on this device only.</p>
+    <div class="cal-form">
+      <label>Theme</label>
+      <select id="cal-theme"></select>
+      <div class="cal-row">
+        <div style="flex:1"><label>Date</label><input id="cal-date" type="date" /></div>
+        <div style="flex:1"><label>Platform</label>
+          <select id="cal-plat">
+            <option value="">Any / multiple</option>
+            <option>TikTok</option><option>Instagram</option><option>Pinterest</option>
+            <option>YouTube</option><option>Reddit</option><option>X / Twitter</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="cal-add">✓ Mark as posted</button>
+    </div>
+    <h4 class="cal-h4">Logged posts</h4>
+    <div id="cal-list" class="cal-list"></div>
+  </div>
+</div>
+
 <script>
 const MODEL='claude-sonnet-4-6';
 const SITE='triviagauntlet.app';
+// The shareable Challenge-mode deep link (same one used in the Reddit body),
+// per-theme. Used for Reddit body, Pinterest destination + YouTube description.
+const challengeLink=slug=>`https://hptrivia.github.io/quiz/challenge.html?theme=${slug||'theme'}&round=1`;
 const g=id=>document.getElementById(id);
 const wait=ms=>new Promise(r=>setTimeout(r,ms));
 
@@ -299,6 +369,8 @@ async function boot(){
   const sel=g('theme');
   THEMES.forEach(t=>{ const o=document.createElement('option'); o.value=t.slug; o.textContent=t.title; sel.appendChild(o); });
   sel.onchange=()=>loadTheme(sel.value);
+  buildThemePicker();
+  g('themeSearch').oninput=()=>buildThemePicker(g('themeSearch').value);
   g('numq').onchange=pick;
   g('format').onchange=()=>{ FMT=FORMATS[g('format').value]||FMT; render(); };
   g('ctype').onchange=()=>{ CTYPE=g('ctype').value; applyTypeUI(); render(); };
@@ -310,6 +382,10 @@ async function boot(){
   g('dl-img').onclick=downloadImages;
   g('mk-vid').onclick=makeVideo;
   g('gen-cap').onclick=()=>{ g('cap-panel').scrollIntoView({behavior:'smooth',block:'nearest'}); sendChat('Write a ready-to-paste caption with hashtags for this theme — give me a TikTok/Reels version and a Pinterest title + description.'); };
+  g('open-cal').onclick=openCalendar;
+  g('cal-close').onclick=()=>g('cal-modal').classList.remove('show');
+  g('cal-modal').onclick=e=>{ if(e.target===g('cal-modal')) g('cal-modal').classList.remove('show'); };
+  g('cal-add').onclick=addPostLog;
   document.querySelectorAll('.ctab').forEach(b=>b.onclick=()=>{
     curPlat=b.dataset.plat;
     document.querySelectorAll('.ctab').forEach(x=>x.classList.toggle('on',x===b));
@@ -321,7 +397,82 @@ async function boot(){
   document.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>window.open(b.dataset.open,'_blank'));
   applyTypeUI();
 
-  if(THEMES.length){ sel.value=THEMES[0].slug; loadTheme(THEMES[0].slug); }
+  if(THEMES.length){ sel.value=THEMES[0].slug; buildThemePicker(); loadTheme(THEMES[0].slug); }
+}
+
+// Group themes by their app category into a collapsible accordion. A search box
+// filters across all categories (and auto-expands matches).
+function buildThemePicker(filter){
+  const box=g('themePicker'); if(!box) return;
+  const q=(filter||'').trim().toLowerCase();
+  const cur=g('theme').value;
+  const groups={};
+  THEMES.forEach(t=>{
+    if(q && !t.title.toLowerCase().includes(q) && !(t.category||'').toLowerCase().includes(q)) return;
+    const cat=t.category||'Other';
+    (groups[cat]=groups[cat]||[]).push(t);
+  });
+  const cats=Object.keys(groups).sort((a,b)=>a.localeCompare(b));
+  box.innerHTML='';
+  if(!cats.length){ box.innerHTML='<div class="tp-empty">No themes match.</div>'; return; }
+  cats.forEach(cat=>{
+    const list=groups[cat];
+    const open = !!q || list.some(t=>t.slug===cur);
+    const wrap=document.createElement('div'); wrap.className='tp-cat'+(open?' open':'');
+    const head=document.createElement('button'); head.className='tp-head';
+    head.innerHTML=`<span class="tp-arrow">▸</span> ${cat} <span class="tp-count">${list.length}</span>`;
+    const body=document.createElement('div'); body.className='tp-body';
+    list.forEach(t=>{
+      const b=document.createElement('button');
+      b.className='tp-item'+(t.slug===cur?' on':'');
+      b.textContent=t.title;
+      b.onclick=()=>selectTheme(t.slug);
+      body.appendChild(b);
+    });
+    head.onclick=()=>wrap.classList.toggle('open');
+    wrap.appendChild(head); wrap.appendChild(body); box.appendChild(wrap);
+  });
+}
+
+function selectTheme(slug){
+  g('theme').value=slug;
+  g('themePicker').querySelectorAll('.tp-item').forEach(b=>b.classList.toggle('on',b.textContent===(THEMES.find(t=>t.slug===slug)||{}).title));
+  loadTheme(slug);
+}
+
+// ---------- posting calendar (localStorage, this-device-only) ----------
+const POSTLOG_KEY='tb_postlog';
+const loadPostLog=()=>{ try{ return JSON.parse(localStorage.getItem(POSTLOG_KEY))||[]; }catch(e){ return []; } };
+const savePostLog=l=>localStorage.setItem(POSTLOG_KEY,JSON.stringify(l));
+function openCalendar(){
+  const sel=g('cal-theme');
+  if(!sel.options.length){ THEMES.forEach(t=>{ const o=document.createElement('option'); o.value=t.slug; o.textContent=t.title; sel.appendChild(o); }); }
+  sel.value=g('theme').value;
+  g('cal-date').value=new Date().toISOString().slice(0,10);
+  renderPostLog();
+  g('cal-modal').classList.add('show');
+}
+function renderPostLog(){
+  const list=loadPostLog().slice().sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+  const box=g('cal-list');
+  if(!list.length){ box.innerHTML='<div class="cal-empty">Nothing logged yet.</div>'; return; }
+  box.innerHTML='';
+  list.forEach(e=>{
+    const row=document.createElement('div'); row.className='cal-item';
+    row.innerHTML=`<span class="cal-date-b">${e.date||'—'}</span><span class="cal-name">${esc(e.title||e.slug)}</span>${e.platform?`<span class="cal-plat">${esc(e.platform)}</span>`:''}`;
+    const del=document.createElement('button'); del.className='cal-del'; del.textContent='✕';
+    del.onclick=()=>{ savePostLog(loadPostLog().filter(x=>x.id!==e.id)); renderPostLog(); };
+    row.appendChild(del); box.appendChild(row);
+  });
+}
+function addPostLog(){
+  const slug=g('cal-theme').value;
+  const t=THEMES.find(x=>x.slug===slug)||{};
+  const log=loadPostLog();
+  log.push({ id:Date.now()+'-'+Math.random().toString(36).slice(2,7), slug, title:t.title||slug, date:g('cal-date').value||new Date().toISOString().slice(0,10), platform:g('cal-plat').value });
+  savePostLog(log);
+  const btn=g('cal-add'); btn.textContent='✓ Logged!'; setTimeout(()=>btn.textContent='✓ Mark as posted',1400);
+  renderPostLog();
 }
 
 async function loadTheme(slug){
@@ -349,6 +500,18 @@ function pick(){
   render();
 }
 
+// Swap a single card's question for another one from the pool that isn't already
+// on screen (falls back to any other question if the pool is small).
+function refreshCard(i){
+  if(!POOL.length||!CURRENT[i]) return;
+  const used=new Set(CURRENT.map(q=>q&&q.question));
+  let pool=POOL.filter(q=>!used.has(q.question));
+  if(!pool.length) pool=POOL.filter(q=>q.question!==CURRENT[i].question);
+  if(!pool.length) return;
+  CURRENT[i]=pool[Math.floor(Math.random()*pool.length)];
+  render();
+}
+
 function curTheme(){ return THEMES.find(x=>x.slug===g('theme').value)||{title:'',category:'General'}; }
 
 // ---------- ready-to-paste captions (no AI, auto-filled per platform) ----------
@@ -367,7 +530,7 @@ function captionData(){
 `${title} Trivia 🧠 How many can you actually get right?
 Be honest — could you score ${N}/${N}? 👀
 
-🎮 Play free + download the app → ${SITE}
+🎮 Play free at ${SITE} — or get the app on the App Store & Google Play
 
 #trivia #${th} #${ct} #triviachallenge #quiztime #triviatok #quiz #funfacts #fyp #foryou`},
     ],
@@ -376,22 +539,23 @@ Be honest — could you score ${N}/${N}? 👀
 `${title} Trivia 🧠 Can you get them all right?
 Tag a friend who thinks they know ${title} 👇
 
-🎮 200+ free trivia themes — play & download the app → ${SITE}
+🎮 200+ free trivia themes — play free at ${SITE}, or get the app on the App Store & Google Play
 
 #trivia #${th} #${ct} #triviaquiz #quiztime #quiznight #instatrivia #funfacts #triviachallenge #reels`},
     ],
     pinterest:[
       {label:'Title', multiline:false, hint:'max ~100 chars', value:`${title} Trivia Quiz – How Many Can You Answer?`},
       {label:'Description', multiline:true, value:
-`Think you know ${title}? Test yourself with this free ${cat} trivia quiz and see if you can score ${N}/${N}. Play hundreds more free trivia themes and download the Trivia Gauntlet app at ${SITE}. #trivia #${th} #${ct} #triviaquiz #quiznight #funfacts`},
-      {label:'Destination link', multiline:false, value:`https://${SITE}`},
+`Think you know ${title}? Test yourself with this free ${cat} trivia quiz and see if you can score ${N}/${N}. Play hundreds more free trivia themes at ${SITE}, or get the Trivia Gauntlet app on the App Store & Google Play. #trivia #${th} #${ct} #triviaquiz #quiznight #funfacts`},
+      {label:'Destination link', multiline:false, value:challengeLink(slug)},
     ],
     youtube:[
       {label:'Caption + hashtags', multiline:true, hint:'YouTube Shorts', value:
 `${title} Trivia 🧠 How many can you get right? #Shorts
 Could you score ${N}/${N}? Test yourself!
 
-🎮 Play free + download the app → ${SITE}
+🎮 Play this quiz free → ${challengeLink(slug)}
+📲 Or get the app — search "Trivia Gauntlet" on the App Store & Google Play
 
 #Shorts #trivia #${th} #${ct} #triviaquiz #quiz #triviachallenge #funfacts #quiztime`},
     ],
@@ -400,7 +564,7 @@ Could you score ${N}/${N}? Test yourself!
       {label:'Body (post text)', multiline:true, value:
 `I made a free quiz with about 100 questions
 
-https://hptrivia.github.io/quiz/challenge.html?theme=${slug}&round=1
+${challengeLink(slug)}
 
 Comment your score /30 below
 
@@ -408,24 +572,41 @@ Three rounds, 10 questions each.
 
 If you find any wrong questions in the quiz, let me know and I'll fix it asap.
 
-FYI there are more than 3 rounds overall — download the app for more questions.`},
+FYI there are more than 3 rounds overall — get the app (App Store / Google Play) for more questions.`},
     ],
   };
 }
+// Per-field caption edits are saved to localStorage so they survive re-renders,
+// theme switches and reloads. NOTE: localStorage is per-browser/per-device only —
+// edits made here won't appear on a different phone/computer.
+const capKey=(plat,idx)=>`tb_cap_${g('theme').value||'theme'}_${plat}_${idx}`;
 function renderCopyPanel(){
   const data=captionData();
   const fields=data[curPlat]||[];
   const box=g('copy-fields'); if(!box) return; box.innerHTML='';
-  fields.forEach(f=>{
+  fields.forEach((f,idx)=>{
+    const key=capKey(curPlat,idx);
+    const saved=localStorage.getItem(key);
     const w=document.createElement('div'); w.className='cfield';
     const head=document.createElement('div'); head.className='cfield-head';
-    head.innerHTML=`<label>${f.label}${f.hint?` <span class="hint">(${f.hint})</span>`:''}</label>`;
+    const left=document.createElement('label');
+    left.innerHTML=`${f.label}${f.hint?` <span class="hint">(${f.hint})</span>`:''}<span class="cap-edited"${saved!==null?'':' style="display:none"'}> · edited</span>`;
+    const right=document.createElement('div'); right.className='cfield-actions';
+    const rs=document.createElement('button'); rs.className='cap-reset'; rs.textContent='Reset';
+    rs.style.display=saved!==null?'inline':'none';
     const cp=document.createElement('button'); cp.className='cap-copy'; cp.textContent='Copy';
-    head.appendChild(cp); w.appendChild(head);
+    right.appendChild(rs); right.appendChild(cp);
+    head.appendChild(left); head.appendChild(right); w.appendChild(head);
     const el=document.createElement(f.multiline?'textarea':'input');
     if(!f.multiline) el.type='text';
-    el.className='cinput'; el.value=f.value; el.spellcheck=false;
+    el.className='cinput'; el.value=saved!==null?saved:f.value; el.spellcheck=false;
     w.appendChild(el); box.appendChild(w);
+    const badge=left.querySelector('.cap-edited');
+    el.oninput=()=>{
+      if(el.value===f.value){ localStorage.removeItem(key); rs.style.display='none'; badge.style.display='none'; }
+      else{ localStorage.setItem(key,el.value); rs.style.display='inline'; badge.style.display='inline'; }
+    };
+    rs.onclick=()=>{ localStorage.removeItem(key); el.value=f.value; rs.style.display='none'; badge.style.display='none'; };
     cp.onclick=()=>{ navigator.clipboard.writeText(el.value); cp.textContent='✓ Copied'; setTimeout(()=>cp.textContent='Copy',1500); };
   });
 }
@@ -454,14 +635,20 @@ function render(){
         <div class="qtext">${esc(q.question)}</div>
         <div class="card-opts">${opts}</div>
       </div>
-      <div class="card-cta">📲 Download <b>Trivia Gauntlet</b> for more trivia</div>
+      ${fmtv==='reddit'?'':`<div class="card-cta">📲 Download <b>Trivia Gauntlet</b> for more trivia</div>`}
     </div>`;
     wrap.appendChild(card);
+    const row=document.createElement('div'); row.className='card-actions';
+    const rf=document.createElement('button');
+    rf.className='card-dl'; rf.title='Swap in a different question';
+    rf.textContent='🔄 New question';
+    rf.onclick=()=>refreshCard(i);
     const dl=document.createElement('button');
     dl.className='card-dl';
     dl.textContent='↓ Save this card';
     dl.onclick=()=>downloadOneCard(i);
-    wrap.appendChild(dl);
+    row.appendChild(rf); row.appendChild(dl);
+    wrap.appendChild(row);
     box.appendChild(wrap);
   });
   // After layout, shrink question/option text on any card whose content would
@@ -609,6 +796,42 @@ function drawCountdown(ctx,n,leftMs){
   ctx.restore();
 }
 
+function rrect(ctx,x,y,w,h,r){ if(ctx.roundRect){ ctx.beginPath(); ctx.roundRect(x,y,w,h,r); } else { ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r); ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath(); } }
+
+// Persistent "Link in bio to play" pill at the bottom of the video frames.
+function drawFooterCaption(ctx,text){
+  const W=ctx.canvas.width,H=ctx.canvas.height;
+  ctx.save();
+  ctx.font=`800 ${Math.round(W*0.03)}px "DM Sans",sans-serif`;
+  const tw=ctx.measureText(text).width, padX=W*0.045, h=W*0.085, w=tw+padX*2, x=(W-w)/2, y=H-h-W*0.045;
+  ctx.globalAlpha=0.9; ctx.fillStyle='rgba(0,0,0,0.6)'; rrect(ctx,x,y,w,h,h/2); ctx.fill();
+  ctx.globalAlpha=1; ctx.fillStyle='#fff'; ctx.textAlign='center'; ctx.textBaseline='middle';
+  ctx.fillText(text,W/2,y+h/2);
+  ctx.restore();
+}
+
+// End-of-video outro frames (palette background + big call-to-action text).
+function drawOutro(ctx,p,variant){
+  const W=ctx.canvas.width,H=ctx.canvas.height;
+  const grd=ctx.createLinearGradient(0,0,W,H); grd.addColorStop(0,p.c1); grd.addColorStop(1,p.c2);
+  ctx.fillStyle=grd; ctx.fillRect(0,0,W,H);
+  ctx.textAlign='center'; ctx.textBaseline='middle';
+  const big=`800 ${Math.round(W*0.14)}px "Bebas Neue","DM Sans",sans-serif`;
+  if(variant==='play'){
+    ctx.fillStyle=p.accent; ctx.font=big;
+    ctx.fillText('LINK IN BIO',W/2,H*0.42); ctx.fillText('TO PLAY',W/2,H*0.54);
+    ctx.fillStyle=p.text; ctx.font=`700 ${Math.round(W*0.042)}px "DM Sans",sans-serif`;
+    ctx.fillText('Or play free at '+SITE,W/2,H*0.66);
+  } else {
+    ctx.fillStyle=p.text; ctx.font=`700 ${Math.round(W*0.045)}px "DM Sans",sans-serif`;
+    ctx.fillText('📲 Get the app',W/2,H*0.36);
+    ctx.fillStyle=p.accent; ctx.font=big;
+    ctx.fillText('TRIVIA',W/2,H*0.49); ctx.fillText('GAUNTLET',W/2,H*0.61);
+    ctx.fillStyle=p.text; ctx.font=`600 ${Math.round(W*0.038)}px "DM Sans",sans-serif`;
+    ctx.fillText('Search it on the App Store & Google Play',W/2,H*0.72);
+  }
+}
+
 // ---------- make video (question → answer reveal) ----------
 function pickMime(){
   const cands=['video/mp4;codecs=avc1.42E01E','video/mp4','video/webm;codecs=vp9','video/webm'];
@@ -624,6 +847,12 @@ async function makeVideo(){
   const ov=g('overlay'), bar=g('ov-bar'), lbl=g('ov-lbl');
   ov.classList.add('show');
 
+  const p=PALS[palIdx];
+
+  // Hide each card's own bottom CTA for the video — the footer caption + outro
+  // frames carry the "link in bio / download" message instead.
+  cards.forEach(c=>c.classList.add('hide-cta'));
+
   // Pre-render every card in both states (question / answer revealed).
   const frames=[];
   for(let i=0;i<cards.length;i++){
@@ -636,6 +865,7 @@ async function makeVideo(){
     cards[i].classList.remove('revealed');
     frames.push({q,a});
   }
+  cards.forEach(c=>c.classList.remove('hide-cta'));
 
   // Build a timeline: hold question, crossfade, hold answer.
   // HOLD_Q = reading time + countdown. The 3-2-1 ring only draws for the last
@@ -648,17 +878,54 @@ async function makeVideo(){
     segs.push({type:'fade',from:f.q,to:f.a,start:t,dur:FADE}); t+=FADE;
     segs.push({type:'hold',img:f.a,start:t,dur:HOLD_A}); t+=HOLD_A;
   });
+  // Outro: "link in bio to play" → "download the app".
+  const OUTRO=2600;
+  segs.push({type:'outro',variant:'play',start:t,dur:OUTRO}); t+=OUTRO;
+  segs.push({type:'outro',variant:'download',start:t,dur:OUTRO}); t+=OUTRO;
   const total=t+300;
 
   const cv=g('vcanvas'); cv.width=FMT.w; cv.height=FMT.h;
   const ctx=cv.getContext('2d');
   ctx.drawImage(frames[0].q,0,0,cv.width,cv.height); // prime first frame
 
-  const stream=cv.captureStream(30);
+  // Audio: WebAudio-generated countdown ticks + a reveal "ding", mixed into the
+  // recording via a MediaStreamDestination. No files/licensing needed.
+  let ac=null, audioDest=null;
+  try{
+    ac=new (window.AudioContext||window.webkitAudioContext)();
+    await ac.resume();
+    audioDest=ac.createMediaStreamDestination();
+  }catch(e){ ac=null; }
+  const tone=(freq,at,dur,type,peak)=>{
+    if(!ac) return;
+    const o=ac.createOscillator(), gn=ac.createGain();
+    o.type=type||'sine'; o.frequency.value=freq;
+    gn.gain.setValueAtTime(0.0001,at);
+    gn.gain.exponentialRampToValueAtTime(peak,at+0.012);
+    gn.gain.exponentialRampToValueAtTime(0.0001,at+dur);
+    o.connect(gn); gn.connect(audioDest); gn.connect(ac.destination);
+    o.start(at); o.stop(at+dur+0.02);
+  };
+  const tick=at=>tone(1200,at,0.07,'square',0.10);
+  const ding=at=>{ tone(784,at,0.18,'sine',0.22); tone(1175,at+0.09,0.34,'sine',0.22); };
+
+  const vstream=cv.captureStream(30);
+  const stream = audioDest
+    ? new MediaStream([...vstream.getVideoTracks(),...audioDest.stream.getAudioTracks()])
+    : vstream;
   const rec=new MediaRecorder(stream,{mimeType:mime,videoBitsPerSecond:6000000});
   const chunks=[]; rec.ondataavailable=e=>{ if(e.data&&e.data.size) chunks.push(e.data); };
   const stopped=new Promise(res=>rec.onstop=res);
   rec.start();
+
+  // Schedule all sounds up-front on the audio clock (precise, rAF-independent).
+  if(ac){
+    const a0=ac.currentTime+0.1;
+    segs.forEach(s=>{
+      if(s.type==='hold'&&s.count){ [3000,2000,1000].forEach(L=>tick(a0+(s.start+s.dur-L)/1000)); }
+      else if(s.type==='fade'){ ding(a0+s.start/1000); }
+    });
+  }
 
   lbl.textContent='Recording video…';
   const t0=performance.now();
@@ -670,17 +937,20 @@ async function makeVideo(){
       let seg=segs.find(s=>e>=s.start&&e<s.start+s.dur);
       if(!seg) seg=segs[segs.length-1];
       ctx.clearRect(0,0,cv.width,cv.height);
-      if(seg.type==='hold'){
+      if(seg.type==='outro'){ drawOutro(ctx,p,seg.variant); }
+      else if(seg.type==='hold'){
         ctx.drawImage(seg.img,0,0,cv.width,cv.height);
         if(seg.count){ const left=seg.start+seg.dur-e; if(left<=COUNTDOWN&&left>0) drawCountdown(ctx,Math.ceil(left/1000),left); }
+        drawFooterCaption(ctx,'🔗 Link in bio to play');
       }
-      else{ const pr=(e-seg.start)/seg.dur; ctx.drawImage(seg.from,0,0,cv.width,cv.height); ctx.globalAlpha=pr; ctx.drawImage(seg.to,0,0,cv.width,cv.height); ctx.globalAlpha=1; }
+      else{ const pr=(e-seg.start)/seg.dur; ctx.drawImage(seg.from,0,0,cv.width,cv.height); ctx.globalAlpha=pr; ctx.drawImage(seg.to,0,0,cv.width,cv.height); ctx.globalAlpha=1; drawFooterCaption(ctx,'🔗 Link in bio to play'); }
       requestAnimationFrame(frame);
     }
     requestAnimationFrame(frame);
   });
 
   rec.stop(); await stopped;
+  if(ac) try{ ac.close(); }catch(e){}
   const ext=mime.includes('mp4')?'mp4':'webm';
   let blob=new Blob(chunks,{type:mime});
   // MediaRecorder writes webm with no duration in the header, so many players stop
@@ -717,7 +987,7 @@ Current theme: ${t.title} (${t.category||'Trivia'}).
 The post uses these questions — NEVER reveal the answers in any caption:
 ${qlist}
 
-When asked for captions: punchy hook, a clear call to action to play free + download the app at ${SITE}, and relevant hashtags. Give copy-paste-ready output and adapt tone/length to whichever platform is named. Be concise.`;
+When asked for captions: punchy hook, a clear call to action, and relevant hashtags. IMPORTANT: ${SITE} is the WEBSITE to PLAY FREE in a browser — it is NOT an app download link. The app is downloaded from the App Store (iOS) and Google Play (Android). Never tell people to "download the app at ${SITE}"; say "play free at ${SITE}" and/or "get the app on the App Store & Google Play". Give copy-paste-ready output and adapt tone/length to whichever platform is named. Be concise.`;
 }
 
 function addBubble(role,content){
