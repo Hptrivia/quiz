@@ -64,6 +64,8 @@ select:focus{border-color:#1a1a1a}
 .card-actions{display:flex;gap:6px;justify-content:center;flex-wrap:wrap}
 .card-dl{font-size:11px;font-weight:700;border:none;background:#efeefe;color:#4a3fd6;border-radius:7px;padding:6px 12px;cursor:pointer;font-family:inherit}
 .card-dl:hover{background:#e2e0fb}
+.card-diff{font-size:11px;font-weight:700;border:none;background:#f3f3f3;color:#555;border-radius:7px;padding:6px 22px 6px 10px;cursor:pointer;font-family:inherit;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center}
+.card-diff:hover{background-color:#ececec}
 .card-inner{position:absolute;inset:0;display:flex;flex-direction:column;padding:20px 16px 18px}
 .card-top{display:flex;justify-content:space-between;align-items:center;font-size:8.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
 .brand{color:var(--accent)}
@@ -151,7 +153,6 @@ textarea.cinput{min-height:110px}
 .cal-item{display:flex;align-items:center;gap:10px;font-size:12.5px;background:#f7f7f7;border-radius:8px;padding:8px 10px}
 .cal-date-b{font-weight:700;color:#4a3fd6;white-space:nowrap}
 .cal-name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.cal-plat{font-size:10px;font-weight:700;color:#888;background:#ececec;border-radius:20px;padding:2px 8px}
 .cal-del{border:none;background:none;color:#ccc;cursor:pointer;font-size:12px}
 .cal-del:hover{color:#e11}
 @media(max-width:760px){.layout{grid-template-columns:1fr}.side{position:static}}
@@ -282,13 +283,6 @@ input[type=text]:focus{border-color:#1a1a1a}
       <select id="cal-theme"></select>
       <div class="cal-row">
         <div style="flex:1"><label>Date</label><input id="cal-date" type="date" /></div>
-        <div style="flex:1"><label>Platform</label>
-          <select id="cal-plat">
-            <option value="">Any / multiple</option>
-            <option>TikTok</option><option>Instagram</option><option>Pinterest</option>
-            <option>YouTube</option><option>Reddit</option><option>X / Twitter</option>
-          </select>
-        </div>
       </div>
       <button class="btn btn-primary" id="cal-add">✓ Mark as posted</button>
     </div>
@@ -461,7 +455,7 @@ function renderPostLog(){
   box.innerHTML='';
   list.forEach(e=>{
     const row=document.createElement('div'); row.className='cal-item';
-    row.innerHTML=`<span class="cal-date-b">${e.date||'—'}</span><span class="cal-name">${esc(e.title||e.slug)}</span>${e.platform?`<span class="cal-plat">${esc(e.platform)}</span>`:''}`;
+    row.innerHTML=`<span class="cal-date-b">${e.date||'—'}</span><span class="cal-name">${esc(e.title||e.slug)}</span>`;
     const del=document.createElement('button'); del.className='cal-del'; del.textContent='✕';
     del.onclick=()=>{ savePostLog(loadPostLog().filter(x=>x.id!==e.id)); renderPostLog(); };
     row.appendChild(del); box.appendChild(row);
@@ -471,7 +465,7 @@ function addPostLog(){
   const slug=g('cal-theme').value;
   const t=THEMES.find(x=>x.slug===slug)||{};
   const log=loadPostLog();
-  log.push({ id:Date.now()+'-'+Math.random().toString(36).slice(2,7), slug, title:t.title||slug, date:g('cal-date').value||new Date().toISOString().slice(0,10), platform:g('cal-plat').value });
+  log.push({ id:Date.now()+'-'+Math.random().toString(36).slice(2,7), slug, title:t.title||slug, date:g('cal-date').value||new Date().toISOString().slice(0,10) });
   savePostLog(log);
   const btn=g('cal-add'); btn.textContent='✓ Logged!'; setTimeout(()=>btn.textContent='✓ Mark as posted',1400);
   renderPostLog();
@@ -495,22 +489,60 @@ function sample(arr,n){
   return a.slice(0,Math.min(n,a.length));
 }
 
+const DIFF_LEVELS=['easy','medium','hard','expert'];
+// Difficulty spread per post size — each post is a deliberate mix that ramps up.
+// (Expert slots fall back to hard for themes with no expert questions.)
+const DIFF_MIX={
+  1:['hard'],
+  2:['medium','hard'],
+  3:['medium','hard','expert'],
+  5:['easy','medium','hard','hard','expert'],
+  7:['easy','easy','medium','medium','hard','hard','expert'],
+};
+
+// Resolve a wanted difficulty against what this theme actually has (expert→hard
+// when the theme has no expert questions).
+function effDiff(want){
+  if(want==='expert' && !POOL.some(q=>q.difficulty==='expert')) return 'hard';
+  return want;
+}
+
+// Grab a random question of a given difficulty, avoiding ones already on screen.
+// Falls back gracefully when a difficulty is scarce or absent.
+function pickByDiff(want,used){
+  const d=effDiff(want);
+  let cands=POOL.filter(q=>q.difficulty===d && !used.has(q.question));
+  if(!cands.length) cands=POOL.filter(q=>q.difficulty===d);
+  if(!cands.length) cands=POOL.filter(q=>!used.has(q.question));
+  if(!cands.length) cands=POOL.slice();
+  return cands.length?cands[Math.floor(Math.random()*cands.length)]:null;
+}
+
 function pick(){
   if(!POOL.length) return;
   const n=parseInt(g('numq').value,10);
-  CURRENT=sample(POOL,n);
+  const mix=(DIFF_MIX[n]||DIFF_MIX[5]).slice();
+  const used=new Set();
+  CURRENT=[];
+  mix.forEach(want=>{ const q=pickByDiff(want,used); if(q){ CURRENT.push(q); used.add(q.question); } });
+  while(CURRENT.length<n){ const q=pickByDiff('medium',used); if(!q||used.has(q.question)) break; CURRENT.push(q); used.add(q.question); }
   render();
 }
 
-// Swap a single card's question for another one from the pool that isn't already
-// on screen (falls back to any other question if the pool is small).
+// Swap a single card's question for another one of the SAME difficulty that
+// isn't already on screen (falls back to any other question if scarce).
 function refreshCard(i){
   if(!POOL.length||!CURRENT[i]) return;
-  const used=new Set(CURRENT.map(q=>q&&q.question));
-  let pool=POOL.filter(q=>!used.has(q.question));
-  if(!pool.length) pool=POOL.filter(q=>q.question!==CURRENT[i].question);
-  if(!pool.length) return;
-  CURRENT[i]=pool[Math.floor(Math.random()*pool.length)];
+  swapCardDiff(i, CURRENT[i].difficulty);
+}
+
+// Swap a card's question for one of a chosen difficulty.
+function swapCardDiff(i,want){
+  if(!POOL.length||!CURRENT[i]) return;
+  const used=new Set(CURRENT.map((q,k)=>k!==i&&q?q.question:null));
+  const q=pickByDiff(want,used);
+  if(!q) return;
+  CURRENT[i]=q;
   render();
 }
 
@@ -641,15 +673,20 @@ function render(){
     </div>`;
     wrap.appendChild(card);
     const row=document.createElement('div'); row.className='card-actions';
+    const diff=document.createElement('select');
+    diff.className='card-diff'; diff.title='Swap for a question of this difficulty';
+    DIFF_LEVELS.forEach(lv=>{ const o=document.createElement('option'); o.value=lv; o.textContent=lv[0].toUpperCase()+lv.slice(1); diff.appendChild(o); });
+    diff.value=q.difficulty||'medium';
+    diff.onchange=()=>swapCardDiff(i,diff.value);
     const rf=document.createElement('button');
-    rf.className='card-dl'; rf.title='Swap in a different question';
+    rf.className='card-dl'; rf.title='Swap in a different question (same difficulty)';
     rf.textContent='🔄 New question';
     rf.onclick=()=>refreshCard(i);
     const dl=document.createElement('button');
     dl.className='card-dl';
     dl.textContent='↓ Save this card';
     dl.onclick=()=>downloadOneCard(i);
-    row.appendChild(rf); row.appendChild(dl);
+    row.appendChild(diff); row.appendChild(rf); row.appendChild(dl);
     wrap.appendChild(row);
     box.appendChild(wrap);
   });
