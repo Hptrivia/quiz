@@ -27,20 +27,6 @@
     "description": "Carol Danvers finds the Benatar in deep space and personally tows it back to the Avengers compound."
   },
   {
-    "id": "endgame-medium-0003",
-    "context": "Back at the compound, the surviving Avengers question Nebula about Thanos’ plans and where he might have gone after wiping out half of all life.",
-    "question": "When Nebula recalls asking Thanos where they would go after he finished his plan, what does she say was his answer?",
-    "options": [
-      "“He would go to the garden.”",
-      "“He would return to Titan.”",
-      "“He would sit on the throne of the universe.”",
-      "“He would rest on Vormir.”"
-    ],
-    "answer": "“He would go to the garden.”",
-    "difficulty": "medium",
-    "description": "Nebula tells the team that when she once asked Thanos what he would do after, he said he would go to ‘the garden,’ which leads them to his final hideout."
-  },
-  {
     "id": "ave-endgame-007",
     "context": "The Garden — the confrontation ends abruptly when the Avengers realize there is no way to reverse the Snap with the Stones.",
     "question": "Which Avenger ultimately kills Thanos during the raid on the Garden planet at the start of the movie?",
@@ -68,15 +54,6 @@
     "description": "Community star Ken Jeong has a cameo as the mustached security guard who checks on Scott at the storage unit."
   },
   {
-    "id": "ave-endgame-010",
-    "context": "San Francisco memorial — Scott tries to understand what happened while he was gone.",
-    "question": "When Scott visits the memorial walls listing the vanished, whose name is he desperately searching for?",
-    "options": ["Cassie Lang", "Hope van Dyne", "Morgan Lang", "Marie Lang"],
-    "answer": "Cassie Lang",
-    "difficulty": "medium",
-    "description": "Seeing his own name among the vanished, Scott frantically checks the panels for his daughter Cassie’s name."
-  },
-  {
     "id": "ave-endgame-013",
     "context": "After escaping the Quantum Realm, Scott explains his experience to Steve and Natasha at the compound.",
     "question": "How much time does Scott Lang say passed for him in the Quantum Realm while five years passed in the real world?",
@@ -102,20 +79,6 @@
     "answer": "Back to the Future",
     "difficulty": "medium",
     "description": "Tony teases Scott that he’s basically using Back to the Future rules for his time-travel pitch."
-  },
-  {
-    "id": "endgame-medium-0008",
-    "context": "During the initial test of their homemade time-tunnel, Scott Lang gets yanked back and forth through time and returns thoroughly confused.",
-    "question": "What does Scott Lang say right after the botched time-travel experiment that leaves him unsure what happened to him?",
-    "options": [
-      "“Somebody peed my pants.”",
-      "“Time travel! Nailed it… I think.”",
-      "“Okay, that was terrifying.”",
-      "“Did I just meet my future self?”"
-    ],
-    "answer": "“Somebody peed my pants.”",
-    "difficulty": "medium",
-    "description": "Scott babbles, “Somebody peed my pants… but I don’t know if it was ‘baby’ me or ‘old’ me… or just ‘me’ me,” after being bounced through time."
   },
  {
     "id": "ave-endgame-014",
@@ -201,47 +164,6 @@
     "description": "Thor and Rocket go back to Asgard during the events of The Dark World to extract the Aether from Jane Foster."
   },
   {
-    "id": "ave-endgame-019",
-    "context": "Asgard 2013 — Thor panics and wanders the palace halls, confronting his grief and fear.",
-    "question": "Which family member does Thor have a heartfelt conversation with in Asgard before returning to the future?",
-    "options": ["Frigga", "Odin", "Loki", "Heimdall"],
-    "answer": "Frigga",
-    "difficulty": "easy",
-    "description": "Thor meets his mother Frigga on the day she is fated to die, and she urges him to be the man he is, not the one he’s supposed to be."
-  },
-  {
-    "id": "ave-endgame-021",
-    "context": "Morag 2014 — Rhodey and Nebula watch Peter Quill arrive to steal the Power Stone.",
-    "question": "What song is Peter Quill listening to on his Walkman when he dances across Morag before being knocked out?",
-    "options": [
-      "“Come and Get Your Love” by Redbone",
-      "“Hooked on a Feeling” by Blue Swede",
-      "“Mr. Blue Sky” by Electric Light Orchestra",
-      "“Spirit in the Sky” by Norman Greenbaum"
-    ],
-    "answer": "“Come and Get Your Love” by Redbone",
-    "difficulty": "medium",
-    "description": "Rhodey and Nebula see Quill’s ‘epic’ dance from an outside perspective while he listens to “Come and Get Your Love.”"
-  },
-  {
-    "id": "ave-endgame-022",
-    "context": "New York 2012 — Hulk visits the Sanctum, where someone else is protecting the Time Stone.",
-    "question": "Who knocks Bruce Banner’s astral form out of Hulk’s body on the rooftop of the Sanctum in 2012?",
-    "options": ["The Ancient One", "Doctor Strange", "Wong", "Kaecilius"],
-    "answer": "The Ancient One",
-    "difficulty": "medium",
-    "description": "The Ancient One separates Banner from the Hulk’s body with a single strike to negotiate over the Time Stone."
-  },
-  {
-    "id": "ave-endgame-023",
-    "context": "Camp Lehigh, 1970 — Steve and Tony travel further back to fix their failed New York mission.",
-    "question": "From which scientist does Steve secretly steal extra Pym Particles at Camp Lehigh in 1970?",
-    "options": ["Hank Pym", "Howard Stark", "Erskine", "Zola"],
-    "answer": "Hank Pym",
-    "difficulty": "medium",
-    "description": "Steve sneaks into Hank Pym’s lab and steals vials of Pym Particles to ensure they can return to the present."
-  },
-  {
     "id": "endgame-medium-0016",
     "context": "1970 — During Tony and Steve’s detour to Camp Lehigh, a familiar Marvel legend appears near base entrance.",
     "question": "What cameo role does Stan Lee play in Avengers: Endgame?",
@@ -254,20 +176,6 @@
     "answer": "A hippie driving a car",
     "difficulty": "medium",
     "description": "Stan Lee appears de-aged as a long-haired 1970s hippie shouting out the window as he drives past Camp Lehigh."
-  },
-  {
-    "id": "endgame-medium-0017",
-    "context": "Stan Lee speeds past Camp Lehigh in a 1970s muscle car decorated with bumper stickers as Tony and Steve prepare their infiltration.",
-    "question": "What line does Stan Lee shout during his cameo appearance?",
-    "options": [
-      "“Make love, not war!”",
-      "“Excelsior!”",
-      "“Hey, watch where you're going!”",
-      "“Peace and love, baby!”"
-    ],
-    "answer": "“Make love, not war!”",
-    "difficulty": "medium",
-    "description": "Stan Lee yells “Make love, not war!” while driving past the military base to match his hippie persona."
   },
   {
     "id": "endgame-medium-0018",
@@ -302,48 +210,6 @@
     "description": "Right after the snap, Clint’s phone rings and he sees its his wife calling. As Scott looks out the window, a barrage from Thanos’ ship slams into the compound, sending him flying"
   },
   {
-    "id": "endgame-prebattle-0005",
-    "context": "With the compound in ruins, Thanos and his daughters arrive.",
-    "question": "What does Thanos do after destroying the Avengers compound and before his army arrives?",
-    "options": [
-      "He sits and waits",
-      "He searches for the gauntlet",
-      "He walks into the rubble alone",
-      "He orders Nebula to follow him"
-    ],
-    "answer": "He sits and waits",
-    "difficulty": "easy",
-    "description": "Thanos plants his sword in the ground, sits, and waits silently for the Avengers to come to him."
-  },
-  {
-    "id": "endgame-hard-0301",
-    "context": "In the three-on-one fight against Thanos, Tony and Thor are overpowered until an iconic moment shifts the entire battle.",
-    "question": "What amazing thing happens when Tony, Thor, and Steve fight Thanos?",
-    "options": [
-      "Steve picks up Mjolnir",
-      "Tony activates a second Iron Gauntlet",
-      "Thor summons Stormbreaker and Mjolnir at the same time",
-      "Tony and Steve fuse their attacks into a combined blast"
-    ],
-    "answer": "Steve picks up Mjolnir",
-    "difficulty": "hard",
-    "description": "As Thanos nearly kills Thor, Steve summons Mjolnir, proving himself worthy and turning the tide of the battle."
-  },
-  {
-    "id": "endgame-medium-0302",
-    "context": "Right after Steve summons Mjolnir during the fight with Thanos, Thor reacts with excitement despite the chaos.",
-    "question": "What does Thor shout after Steve picks up Mjolnir?",
-    "options": [
-      "\"I knew it!\"",
-      "\"Finally!\"",
-      "\"Take him down!\"",
-      "\"About time!\""
-    ],
-    "answer": "\"I knew it!\"",
-    "difficulty": "medium",
-    "description": "Thor celebrates Steve’s worthiness with a triumphant “I knew it!” — a payoff from their earlier scene in Age of Ultron."
-  },
-  {
     "id": "ave-endgame-026",
     "context": "The portals open — heroes from across the galaxy arrive on the battlefield after Hulk’s snap.",
     "question": "Which group of heroes is the first to step through a portal to join Captain America on the battlefield?",
@@ -356,15 +222,6 @@
     "answer": "Black Panther, Shuri, and Okoye",
     "difficulty": "medium",
     "description": "After Sam’s “On your left,” the first portal opens and T’Challa, Shuri, and Okoye stride onto the field from Wakanda."
-  },
-  {
-    "id": "ave-endgame-025",
-    "context": "Before the final charge — Thanos’ army stands assembled while a wounded, alone Captain America tightens his shield strap.",
-    "question": "What iconic command does Steve Rogers finally give before leading the united heroes into battle against Thanos’ forces?",
-    "options": ["“Avengers… assemble.”", "“On your left.”", "“Whatever it takes.”", "“Hulk, smash.”"],
-    "answer": "“Avengers… assemble.”",
-    "difficulty": "easy",
-    "description": "With Mjolnir in hand and a repaired shield, Steve quietly says “Avengers… assemble” as the armies surge forward."
   },
 {
   "id": "endgame-medium-gauntletrelay-0001",
@@ -380,29 +237,6 @@
   "difficulty": "medium",
   "description": "The correct sequence is exactly as shown in the film: Hawkeye (Clint) escapes the tunnels with the gauntlet, passes it to T’Challa, who sprints it forward before handing it to Spider-Man, who carries it via instant-kill mode and Pegasus before Captain Marvel takes over."
 },
-  {
-    "id": "endgame-war-0003",
-    "context": "Thanos calls for an airstrike while being overwhelmed, triggering a chaotic battlefield aerial assault.",
-    "question": "Which event forces Thanos to order his ship to 'Rain fire!' during the final battle?",
-    "options": [
-      "Wanda nearly killing him",
-      "Captain Marvel approaching the battlefield",
-      "Hulk rejoining the fight",
-      "The Avengers surrounding him"
-    ],
-    "answer": "Wanda nearly killing him",
-    "difficulty": "hard",
-    "description": "Just as Wanda crushes Thanos’ armor, he panics and tells his general to rain fire, even though his troops are still on the ground."
-  },
-  {
-    "id": "endgame-war-0004",
-    "context": "The Sanctuary II opens fire, hitting everyone on the field until something unexpected interrupts the barrage.",
-    "question": "What stops Thanos’ ship from continuing its bombardment during the final battle?",
-    "options": ["Captain Marvel destroys it", "Thor destroys the cannons", "The Wakandan ships arrive", "A forcefield activates"],
-    "answer": "Captain Marvel destroys it",
-    "difficulty": "easy",
-    "description": "Captain Marvel streaks through the battlefield and obliterates the Sanctuary II with a straight-line impact."
-  },
   {
     "id": "ave-endgame-031",
     "context": "Final moments of the battle — Tony wrests the Stones away from Thanos and prepares to end the fight.",

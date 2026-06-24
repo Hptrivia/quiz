@@ -374,6 +374,20 @@ async function renderChallengePage() {
     affiliateProducts = null;
   }
 
+  const affiliateBoxHtml = () => (affiliateProducts && affiliateProducts.length ? `
+      <div class="affiliate-box">
+        <p class="affiliate-label">Recommended for Fans</p>
+        ${affiliateProducts.map(item => `
+          <a class="affiliate-card" href="${item.url}" target="_blank" rel="noopener noreferrer sponsored">
+            <strong>${item.title}</strong>
+          </a>
+        `).join("")}
+        <p class="affiliate-disclaimer">
+          Affiliate link — I may earn a commission from qualifying purchases.
+        </p>
+      </div>
+    ` : "");
+
   const ROUND_SIZE = 10;
   const rawRound = parseInt(getParam("round") || "1", 10);
   const currentRound = Number.isNaN(rawRound) || rawRound < 1 ? 1 : rawRound;
@@ -462,7 +476,8 @@ async function renderChallengePage() {
           ${resumeWalled ? webWallHTML("Yay! You've answered " + CHAL_WEB_LIMIT_Q + " questions", theme.title, null, CHAL_WEB_LIMIT_Q) : `<a class="primary-btn" id="continueRoundBtn" href="challenge.html?theme=${theme.slug}&round=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
           <button class="secondary-btn" id="startRound1Btn">Start from Round 1</button>
         </div>
-        ${replayHtml}`;
+        ${replayHtml}
+        ${affiliateBoxHtml()}`;
 
       const _contBtn = document.getElementById("continueRoundBtn");
       if (_contBtn) _contBtn.addEventListener("click", () => {
@@ -659,19 +674,7 @@ async function renderChallengePage() {
     const webWalled = hasNextRound && chalWebWalled(safeRound);
     const roundLink = `${window.location.origin}${window.location.pathname}?theme=${encodeURIComponent(theme.slug)}&round=${safeRound}`;
 
-    const affiliateHtml = affiliateProducts && affiliateProducts.length ? `
-      <div class="affiliate-box">
-        <p class="affiliate-label">Recommended for Fans</p>
-        ${affiliateProducts.map(item => `
-          <a class="affiliate-card" href="${item.url}" target="_blank" rel="noopener noreferrer sponsored">
-            <strong>${item.title}</strong>
-          </a>
-        `).join("")}
-        <p class="affiliate-disclaimer">
-          Affiliate link — I may earn a commission from qualifying purchases.
-        </p>
-      </div>
-    ` : "";
+    const affiliateHtml = affiliateBoxHtml();
 
     const relatedThemes = getRelatedThemes(themes, theme, 4);
 
