@@ -107,8 +107,13 @@ select:focus{border-color:#1a1a1a}
 .cap-reset{font-size:12px;font-weight:700;color:#aaa;cursor:pointer;background:none;border:none;font-family:inherit}
 .cap-reset:hover{color:#777}
 .cap-edited{color:#6c63ff;font-weight:700;text-transform:none;letter-spacing:0}
-.copy-panel{background:#fff;border-radius:16px;padding:18px;box-shadow:0 2px 14px rgba(0,0,0,.07);margin-top:20px}
+.copy-panel{background:#fff;border-radius:16px;padding:18px;box-shadow:0 2px 14px rgba(0,0,0,.07);margin-top:14px}
 .copy-panel>h3{font-size:13px;font-weight:800;margin-bottom:12px}
+/* Segmented switcher under the cards — only one text panel shows at a time so the
+   main column isn't a long stack of Cards + Captions + AI Chat all at once. */
+.view-tabs{display:flex;gap:8px;margin-top:20px}
+.vtab{flex:1;font-size:13px;font-weight:800;border:1.5px solid #e5e5e5;background:#fff;color:#777;border-radius:10px;padding:11px;cursor:pointer;font-family:inherit;transition:all .12s}
+.vtab.on{background:#1a1a1a;color:#fff;border-color:#1a1a1a}
 .copy-tabs{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}
 .ctab{font-size:12px;font-weight:700;border:1.5px solid #e5e5e5;background:#fff;color:#777;border-radius:8px;padding:7px 13px;cursor:pointer;font-family:inherit}
 .ctab.on{background:#1a1a1a;color:#fff;border-color:#1a1a1a}
@@ -256,6 +261,11 @@ input[type=text]:focus{border-color:#1a1a1a}
       <div class="main-head"><h2 id="m-title">Loading…</h2><span id="m-count"></span></div>
       <div class="cards" id="cards"><div class="empty">Pick a theme to generate cards.</div></div>
 
+      <div class="view-tabs" id="view-tabs">
+        <button class="vtab on" data-view="copy">📋 Captions to copy</button>
+        <button class="vtab" data-view="chat">🤖 Ask the AI</button>
+      </div>
+
       <div class="copy-panel" id="copy-panel">
         <h3>Captions to copy &amp; paste</h3>
         <div class="copy-tabs" id="copy-tabs">
@@ -268,7 +278,7 @@ input[type=text]:focus{border-color:#1a1a1a}
         <div id="copy-fields"></div>
       </div>
 
-      <div class="cap-panel show" id="cap-panel">
+      <div class="cap-panel" id="cap-panel">
         <h3>Ask the AI <span class="hint2">captions, hooks, video ideas, custom copy…</span></h3>
         <div class="chat" id="chat"></div>
         <div class="chat-row">
@@ -386,7 +396,7 @@ async function boot(){
   g('shuffle').onclick=pick;
   g('dl-img').onclick=downloadImages;
   g('mk-vid').onclick=makeVideo;
-  g('gen-cap').onclick=()=>{ g('cap-panel').scrollIntoView({behavior:'smooth',block:'nearest'}); sendChat('Write a ready-to-paste caption with hashtags for this theme — give me a TikTok/Reels version and a Pinterest title + description.'); };
+  g('gen-cap').onclick=()=>{ setView('chat'); g('cap-panel').scrollIntoView({behavior:'smooth',block:'nearest'}); sendChat('Write a ready-to-paste caption with hashtags for this theme — give me a TikTok/Reels version and a Pinterest title + description.'); };
   g('open-cal').onclick=openCalendar;
   g('cal-close').onclick=()=>g('cal-modal').classList.remove('show');
   g('cal-modal').onclick=e=>{ if(e.target===g('cal-modal')) g('cal-modal').classList.remove('show'); };
@@ -398,6 +408,9 @@ async function boot(){
   });
   // Video-platform chips: independent multi-select toggles (which named files to save).
   document.querySelectorAll('#vid-plat-chips .ctab').forEach(b=>b.onclick=()=>b.classList.toggle('on'));
+  // Main-column view switcher: show Captions OR Ask-AI, not both stacked.
+  document.querySelectorAll('#view-tabs .vtab').forEach(b=>b.onclick=()=>setView(b.dataset.view));
+  setView('copy');
   g('chat-send').onclick=()=>sendChat(g('chat-input').value);
   g('chat-input').onkeydown=e=>{ if(e.key==='Enter'&&!e.shiftKey){ e.preventDefault(); sendChat(g('chat-input').value); } };
   g('set-key').onclick=promptKey;
@@ -654,6 +667,13 @@ function renderCopyPanel(){
     rs.onclick=()=>{ localStorage.removeItem(key); el.value=f.value; rs.style.display='none'; badge.style.display='none'; };
     cp.onclick=()=>{ navigator.clipboard.writeText(el.value); cp.textContent='✓ Copied'; setTimeout(()=>cp.textContent='Copy',1500); };
   });
+}
+
+// Toggles the main-column text panels ('copy' = captions, 'chat' = Ask the AI).
+function setView(v){
+  g('copy-panel').style.display = v==='copy' ? 'block' : 'none';
+  g('cap-panel').style.display  = v==='chat' ? 'block' : 'none';
+  document.querySelectorAll('#view-tabs .vtab').forEach(b=>b.classList.toggle('on',b.dataset.view===v));
 }
 
 function render(){
