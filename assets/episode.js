@@ -41,7 +41,8 @@ async function renderEpisodePage() {
     const affiliateLinks = await fetchJSON("data/affiliate_links.json");
     const raw = affiliateLinks[theme.title];
     if (raw) {
-      affiliateProducts = Array.isArray(raw) ? raw : [raw];
+      const list = (Array.isArray(raw) ? raw : [raw]).filter(item => item && item.url && item.url.trim());
+      affiliateProducts = list.length ? list : null;
     }
   } catch (e) {
     affiliateProducts = null;
