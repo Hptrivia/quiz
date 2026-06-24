@@ -224,6 +224,15 @@ input[type=text]:focus{border-color:#1a1a1a}
       <hr class="sep">
 
       <button class="btn btn-primary" id="dl-img">↓ Download all (zip)</button>
+
+      <div id="vid-plats">
+        <label>Make videos for</label>
+        <div class="copy-tabs" id="vid-plat-chips">
+          <button class="ctab on" data-vplat="tiktok">TikTok</button>
+          <button class="ctab on" data-vplat="instagram">Instagram (Reels)</button>
+          <button class="ctab on" data-vplat="youtube">YouTube Shorts</button>
+        </div>
+      </div>
       <button class="btn btn-accent" id="mk-vid">🎬 Make video (with reveal)</button>
       <button class="btn btn-soft" id="gen-cap">✨ Quick AI caption</button>
       <button class="btn btn-soft" id="open-cal">📅 Posting calendar</button>
@@ -382,11 +391,13 @@ async function boot(){
   g('cal-close').onclick=()=>g('cal-modal').classList.remove('show');
   g('cal-modal').onclick=e=>{ if(e.target===g('cal-modal')) g('cal-modal').classList.remove('show'); };
   g('cal-add').onclick=addPostLog;
-  document.querySelectorAll('.ctab').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('#copy-tabs .ctab').forEach(b=>b.onclick=()=>{
     curPlat=b.dataset.plat;
-    document.querySelectorAll('.ctab').forEach(x=>x.classList.toggle('on',x===b));
+    document.querySelectorAll('#copy-tabs .ctab').forEach(x=>x.classList.toggle('on',x===b));
     renderCopyPanel();
   });
+  // Video-platform chips: independent multi-select toggles (which named files to save).
+  document.querySelectorAll('#vid-plat-chips .ctab').forEach(b=>b.onclick=()=>b.classList.toggle('on'));
   g('chat-send').onclick=()=>sendChat(g('chat-input').value);
   g('chat-input').onkeydown=e=>{ if(e.key==='Enter'&&!e.shiftKey){ e.preventDefault(); sendChat(g('chat-input').value); } };
   g('set-key').onclick=promptKey;
@@ -702,6 +713,7 @@ function applyTypeUI(){
   g('numqRow').style.display     = pin ? 'none'  : 'block';
   g('shuffle').style.display     = pin ? 'none'  : 'block';
   g('mk-vid').style.display      = pin ? 'none'  : 'block';   // reveal video is for question cards only
+  g('vid-plats').style.display   = pin ? 'none'  : 'block';
   g('dl-img').style.display      = pin ? 'none'  : 'block';   // pin uses its own per-pin Save button
 }
 
@@ -886,6 +898,18 @@ async function makeVideo(){
   const ov=g('overlay'), bar=g('ov-bar'), lbl=g('ov-lbl');
   ov.classList.add('show');
 
+  // Recording is real-time, so anything that backgrounds the page mid-record
+  // (screen dimming, app switch, a notification) throttles rAF and/or suspends
+  // the AudioContext — the two clocks drift and you get a frozen frame with
+  // sound still playing, or fresh frames with no sound. Keep the screen awake…
+  let wakeLock=null;
+  try{ if(navigator.wakeLock) wakeLock=await navigator.wakeLock.request('screen'); }catch(e){}
+  // …and if the page is hidden anyway, abort cleanly instead of saving a broken clip.
+  let aborted=false;
+  const onHidden=()=>{ if(document.hidden) aborted=true; };
+  document.addEventListener('visibilitychange',onHidden);
+  const cleanup=()=>{ document.removeEventListener('visibilitychange',onHidden); if(wakeLock){ try{ wakeLock.release(); }catch(e){} wakeLock=null; } };
+
   const p=PALS[palIdx];
 
   // Hide each card's own bottom CTA for the video — the footer caption + outro
@@ -970,6 +994,7 @@ async function makeVideo(){
   const t0=performance.now();
   await new Promise(resolve=>{
     function frame(now){
+      if(aborted){ resolve(); return; }
       const e=now-t0;
       bar.style.width=Math.min(100,60+Math.round((e/total)*40))+'%';
       if(e>=total){ resolve(); return; }
@@ -990,6 +1015,12 @@ async function makeVideo(){
 
   rec.stop(); await stopped;
   if(ac) try{ ac.close(); }catch(e){}
+  cleanup();
+  if(aborted){
+    ov.classList.remove('show'); bar.style.width='0';
+    alert('Video cancelled — the screen turned off or you switched away mid-recording. Keep this screen open and on while the video builds, then try again.');
+    return;
+  }
   const ext=mime.includes('mp4')?'mp4':'webm';
   let blob=new Blob(chunks,{type:mime});
   // MediaRecorder writes webm with no duration in the header, so many players stop
@@ -997,11 +1028,20 @@ async function makeVideo(){
   if(ext==='webm' && typeof window.ysFixWebmDuration==='function'){
     try{ blob=await window.ysFixWebmDuration(blob,total,{logger:false}); }catch(e){ console.warn('duration fix failed',e); }
   }
-  const a=document.createElement('a');
-  a.download=`triviagauntlet-${(curTheme().slug||'theme')}.${ext}`;
-  a.href=URL.createObjectURL(blob);
-  a.click();
-  setTimeout(()=>URL.revokeObjectURL(a.href),4000);
+  // TikTok / Instagram Reels / YouTube Shorts are all 9:16 — the SAME clip. Save
+  // one clearly-named copy per ticked platform so each is easy to drag into its
+  // uploader. (Falls back to a single generic file if no chips are selected.)
+  const slug=curTheme().slug||'theme';
+  const picked=[...document.querySelectorAll('#vid-plat-chips .ctab.on')].map(b=>b.dataset.vplat);
+  const targets=picked.length?picked:[null];
+  const url=URL.createObjectURL(blob);
+  targets.forEach((plat,i)=>{
+    const a=document.createElement('a');
+    a.download=`triviagauntlet-${slug}${plat?'-'+plat:''}.${ext}`;
+    a.href=url;
+    setTimeout(()=>a.click(),i*400); // stagger so the browser doesn't drop rapid downloads
+  });
+  setTimeout(()=>URL.revokeObjectURL(url),4000+targets.length*400);
 
   ov.classList.remove('show'); bar.style.width='0';
   if(ext==='webm') alert('Saved as .webm (your browser doesn’t support direct MP4). TikTok and Instagram still accept .webm uploads.');
