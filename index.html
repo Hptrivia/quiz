@@ -11,7 +11,9 @@
 <meta name="theme-color" content="#0f172a" />
 
   <!-- Grow.me — mobile web only (not the native app, not desktop). -->
-  <script>
+  <!-- data-grow-initializer="" is the marker Grow's site-health crawler looks for;
+       without it the dashboard reports "not connected" even though the script loads. -->
+  <script data-grow-initializer="">
   (function(){
     // Load Grow on all web (desktop + mobile); only skip the native Capacitor app.
     // NOTE: do NOT re-add a mobile-UA guard here — Grow's verification crawler uses
