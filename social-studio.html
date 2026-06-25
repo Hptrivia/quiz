@@ -1033,20 +1033,24 @@ async function makeVideo(){
     //    is flakier than video, so audio stays best-effort: if a check below fails
     //    we drop to a silent (but working) video and record WHY in audioNote.
     let audioPcm=synthAudioPCM(segs,total);
+    // STEREO: TikTok/YouTube (and the iOS Photos preview) routinely DROP a mono AAC
+    // track even though desktop players play it. Encoding 2 identical channels is
+    // the standard fix — the only change from the mono version.
+    const CH=2;
     let audioFmt='f32-planar', aacSupported='?';
     {
       // a) Can it encode AAC at all?
       try{
-        const sup=await AudioEncoder.isConfigSupported({codec:'mp4a.40.2',sampleRate:audioPcm.sampleRate,numberOfChannels:1,bitrate:128000});
+        const sup=await AudioEncoder.isConfigSupported({codec:'mp4a.40.2',sampleRate:audioPcm.sampleRate,numberOfChannels:CH,bitrate:160000});
         aacSupported=!!(sup&&sup.supported);
         if(!sup||!sup.supported){ audioPcm=null; audioNote='AAC audio encoding not supported here'; }
       }catch(e){ aacSupported='error'; audioPcm=null; audioNote='AAC support check failed ('+(e&&e.message||e)+')'; }
     }
     if(audioPcm){
       // b) Which AudioData sample format does it accept? (iOS can be picky.)
-      try{ new AudioData({format:'f32-planar',sampleRate:audioPcm.sampleRate,numberOfFrames:1,numberOfChannels:1,timestamp:0,data:new Float32Array(1)}).close(); }
+      try{ new AudioData({format:'f32-planar',sampleRate:audioPcm.sampleRate,numberOfFrames:1,numberOfChannels:CH,timestamp:0,data:new Float32Array(CH)}).close(); }
       catch(e){
-        try{ new AudioData({format:'f32',sampleRate:audioPcm.sampleRate,numberOfFrames:1,numberOfChannels:1,timestamp:0,data:new Float32Array(1)}).close(); audioFmt='f32'; }
+        try{ new AudioData({format:'f32',sampleRate:audioPcm.sampleRate,numberOfFrames:1,numberOfChannels:CH,timestamp:0,data:new Float32Array(CH)}).close(); audioFmt='f32'; }
         catch(e2){ audioPcm=null; audioNote='AudioData not supported here ('+(e&&e.message||e)+')'; }
       }
     }
@@ -1060,7 +1064,7 @@ async function makeVideo(){
       target:new ArrayBufferTarget(),
       fastStart:'in-memory', // moov atom up front → uploads/streams cleanly
       video:{codec:'avc',width:cv.width,height:cv.height},
-      audio:audioPcm?{codec:'aac',numberOfChannels:1,sampleRate:audioPcm.sampleRate}:undefined,
+      audio:audioPcm?{codec:'aac',numberOfChannels:CH,sampleRate:audioPcm.sampleRate}:undefined,
     });
     let encErr=null;
     videoEncoder=new VideoEncoder({
@@ -1076,7 +1080,7 @@ async function makeVideo(){
           output:(chunk,meta)=>{ audioChunks++; muxer.addAudioChunk(chunk,meta); },
           error:e=>{ console.error('audio encoder error',e); },
         });
-        audioEncoder.configure({codec:'mp4a.40.2',numberOfChannels:1,sampleRate:audioPcm.sampleRate,bitrate:128000});
+        audioEncoder.configure({codec:'mp4a.40.2',numberOfChannels:CH,sampleRate:audioPcm.sampleRate,bitrate:160000});
       }catch(e){ audioEncoder=null; audioPcm=null; audioNote='audio encoder setup failed ('+(e&&e.message||e)+')'; }
     }
 
@@ -1094,13 +1098,17 @@ async function makeVideo(){
       if(i%4===0){ bar.style.width=Math.round(15+(i/nFrames)*70)+'%'; await new Promise(r=>setTimeout(r,0)); }
     }
 
-    // 4) Feed the audio samples to the AAC encoder (mono, in ~1024-sample chunks).
+    // 4) Feed the audio to the AAC encoder in ~1024-frame chunks, duplicating the
+    //    mono samples into 2 channels (planar = L block then R block; interleaved = L,R,L,R).
     if(audioPcm&&audioEncoder){
       try{
         const chData=audioPcm.data, sr=audioPcm.sampleRate, CHUNK=1024;
         for(let off=0;off<chData.length;off+=CHUNK){
           const n=Math.min(CHUNK,chData.length-off);
-          const ad=new AudioData({format:audioFmt,sampleRate:sr,numberOfFrames:n,numberOfChannels:1,timestamp:Math.round(off/sr*1e6),data:chData.slice(off,off+n)});
+          const mono=chData.subarray(off,off+n), stereo=new Float32Array(n*CH);
+          if(audioFmt==='f32-planar'){ stereo.set(mono,0); stereo.set(mono,n); }
+          else { for(let k=0;k<n;k++){ stereo[2*k]=mono[k]; stereo[2*k+1]=mono[k]; } }
+          const ad=new AudioData({format:audioFmt,sampleRate:sr,numberOfFrames:n,numberOfChannels:CH,timestamp:Math.round(off/sr*1e6),data:stereo});
           audioEncoder.encode(ad); ad.close();
         }
       }catch(e){ audioNote='audio encode failed ('+(e&&e.message||e)+')'; }
@@ -1133,7 +1141,7 @@ async function makeVideo(){
     // write it into the page instead). Tells us exactly what the device did.
     const audioOk=!!(audioPcm&&audioChunks>0&&!audioNote);
     const st=g('vid-status');
-    if(st) st.textContent='✅ Saved · video '+codec+' · audio: '+(audioOk?('ON ('+audioChunks+' chunks, '+audioFmt+')'):('OFF — '+(audioNote||'no chunks')))+' · AAC-supported='+aacSupported;
+    if(st) st.textContent='✅ Saved · video '+codec+' · audio: '+(audioOk?('ON ('+audioChunks+' chunks, '+audioFmt+', '+CH+'ch)'):('OFF — '+(audioNote||'no chunks')))+' · AAC-supported='+aacSupported;
   }catch(e){
     console.error('video encode failed',e);
     const st=g('vid-status'); if(st) st.textContent='❌ '+(e&&e.message||e);
