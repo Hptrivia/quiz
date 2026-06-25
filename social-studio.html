@@ -933,7 +933,7 @@ async function pickVideoCodec(w,h){
 async function renderAudioBuffer(segs,totalMs){
   const OAC=window.OfflineAudioContext||window.webkitOfflineAudioContext;
   if(!OAC) return null;
-  const sr=44100, ac=new OAC(1,Math.ceil(sr*totalMs/1000),sr);
+  const sr=48000, ac=new OAC(1,Math.ceil(sr*totalMs/1000),sr); // 48k matches iOS hardware/AAC
   const tone=(freq,at,dur,type,peak)=>{
     const o=ac.createOscillator(), gn=ac.createGain();
     o.type=type||'sine'; o.frequency.value=freq;
@@ -1020,19 +1020,41 @@ async function makeVideo(){
   const cv=g('vcanvas'); cv.width=FMT.w; cv.height=FMT.h;
   const ctx=cv.getContext('2d');
 
-  let videoEncoder=null, audioEncoder=null;
+  let videoEncoder=null, audioEncoder=null, audioNote='';
   try{
-    // 1) Offline-render the audio (countdown ticks + reveal ding).
-    const audioBuf=await renderAudioBuffer(segs,total);
+    // 1) Offline-render the audio, then decide whether this browser can actually
+    //    encode it. iOS Safari's WebCodecs AUDIO support is flakier than its
+    //    video support, so audio is best-effort: if anything below fails we drop
+    //    to a silent (but working) video and record WHY in audioNote.
+    let audioBuf=await renderAudioBuffer(segs,total);
+    let audioFmt='f32-planar';
+    if(!audioBuf){ audioNote='offline audio render unavailable on this browser'; }
+    else{
+      // a) Can it encode AAC at all?
+      try{
+        const sup=await AudioEncoder.isConfigSupported({codec:'mp4a.40.2',sampleRate:audioBuf.sampleRate,numberOfChannels:1,bitrate:128000});
+        if(!sup||!sup.supported){ audioBuf=null; audioNote='AAC audio encoding not supported here'; }
+      }catch(e){ audioBuf=null; audioNote='AAC support check failed ('+(e&&e.message||e)+')'; }
+    }
+    if(audioBuf){
+      // b) Which AudioData sample format does it accept? (iOS can be picky.)
+      try{ new AudioData({format:'f32-planar',sampleRate:audioBuf.sampleRate,numberOfFrames:1,numberOfChannels:1,timestamp:0,data:new Float32Array(1)}).close(); }
+      catch(e){
+        try{ new AudioData({format:'f32',sampleRate:audioBuf.sampleRate,numberOfFrames:1,numberOfChannels:1,timestamp:0,data:new Float32Array(1)}).close(); audioFmt='f32'; }
+        catch(e2){ audioBuf=null; audioNote='AudioData not supported here ('+(e&&e.message||e)+')'; }
+      }
+    }
 
-    // 2) Set up the muxer + WebCodecs encoders.
+    // 2) Set up the muxer + WebCodecs encoders. Only declare an audio track if we
+    //    confirmed above that audio will actually encode.
     const {Muxer,ArrayBufferTarget}=window.Mp4Muxer;
     const codec=await pickVideoCodec(cv.width,cv.height);
+    let audioChunks=0;
     const muxer=new Muxer({
       target:new ArrayBufferTarget(),
       fastStart:'in-memory', // moov atom up front → uploads/streams cleanly
       video:{codec:'avc',width:cv.width,height:cv.height},
-      audio:audioBuf?{codec:'aac',numberOfChannels:1,sampleRate:44100}:undefined,
+      audio:audioBuf?{codec:'aac',numberOfChannels:1,sampleRate:audioBuf.sampleRate}:undefined,
     });
     let encErr=null;
     videoEncoder=new VideoEncoder({
@@ -1043,11 +1065,13 @@ async function makeVideo(){
     videoEncoder.configure({codec,width:cv.width,height:cv.height,bitrate:5000000,framerate:ENC_FPS,avc:{format:'avc'}});
 
     if(audioBuf){
-      audioEncoder=new AudioEncoder({
-        output:(chunk,meta)=>muxer.addAudioChunk(chunk,meta),
-        error:e=>{ encErr=e; console.error('audio encoder error',e); },
-      });
-      audioEncoder.configure({codec:'mp4a.40.2',numberOfChannels:1,sampleRate:44100,bitrate:128000});
+      try{
+        audioEncoder=new AudioEncoder({
+          output:(chunk,meta)=>{ audioChunks++; muxer.addAudioChunk(chunk,meta); },
+          error:e=>{ console.error('audio encoder error',e); },
+        });
+        audioEncoder.configure({codec:'mp4a.40.2',numberOfChannels:1,sampleRate:audioBuf.sampleRate,bitrate:128000});
+      }catch(e){ audioEncoder=null; audioBuf=null; audioNote='audio encoder setup failed ('+(e&&e.message||e)+')'; }
     }
 
     // 3) Render each frame deterministically → VideoFrame → encoder.
@@ -1065,20 +1089,22 @@ async function makeVideo(){
     }
 
     // 4) Feed the audio samples to the AAC encoder (mono, in ~1024-sample chunks).
-    if(audioBuf){
-      const ch=audioBuf.getChannelData(0), sr=audioBuf.sampleRate, CHUNK=1024;
-      for(let off=0;off<ch.length;off+=CHUNK){
-        const n=Math.min(CHUNK,ch.length-off);
-        const slice=ch.slice(off,off+n);
-        const ad=new AudioData({format:'f32-planar',sampleRate:sr,numberOfFrames:n,numberOfChannels:1,timestamp:Math.round(off/sr*1e6),data:slice});
-        audioEncoder.encode(ad); ad.close();
-      }
+    if(audioBuf&&audioEncoder){
+      try{
+        const chData=audioBuf.getChannelData(0), sr=audioBuf.sampleRate, CHUNK=1024;
+        for(let off=0;off<chData.length;off+=CHUNK){
+          const n=Math.min(CHUNK,chData.length-off);
+          const ad=new AudioData({format:audioFmt,sampleRate:sr,numberOfFrames:n,numberOfChannels:1,timestamp:Math.round(off/sr*1e6),data:chData.slice(off,off+n)});
+          audioEncoder.encode(ad); ad.close();
+        }
+      }catch(e){ audioNote='audio encode failed ('+(e&&e.message||e)+')'; }
     }
 
     lbl.textContent='Finishing MP4…';
     await videoEncoder.flush();
     if(audioEncoder) await audioEncoder.flush();
     if(encErr) throw encErr;
+    if(audioBuf&&audioChunks===0&&!audioNote) audioNote='audio encoder produced no output';
     muxer.finalize();
     const blob=new Blob([muxer.target.buffer],{type:'video/mp4'});
 
@@ -1097,6 +1123,11 @@ async function makeVideo(){
     });
     setTimeout(()=>URL.revokeObjectURL(url),4000+targets.length*400);
     bar.style.width='100%';
+    // Diagnostic: if we couldn't add sound on this device, say so (and why) rather
+    // than silently shipping a muted clip. Desktop Chrome encodes audio reliably.
+    if(audioNote){
+      setTimeout(()=>alert('Video saved — but WITHOUT sound on this device.\n\nReason: '+audioNote+'\n\nTip: make the video on a laptop in Chrome to get the ticking/ding sound, then upload that file.'),300);
+    }
   }catch(e){
     console.error('video encode failed',e);
     alert('Sorry — the video failed to make. ('+(e&&e.message||e)+')');
