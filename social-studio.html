@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Trivia Gauntlet – Social Studio</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fix-webm-duration@1.0.5/fix-webm-duration.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.11.6/dist/ffmpeg.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -904,31 +904,94 @@ function drawOutro(ctx,p,variant){
 }
 
 // ---------- make video (question → answer reveal) ----------
-function pickMime(){
-  const cands=['video/mp4;codecs=avc1.42E01E','video/mp4','video/webm;codecs=vp9','video/webm'];
-  for(const m of cands){ try{ if(window.MediaRecorder&&MediaRecorder.isTypeSupported(m)) return m; }catch(e){} }
-  return '';
+// We encode a REAL H.264 .mp4 (TikTok/Reels/Shorts all accept it; webm did not
+// upload to TikTok). Frames are rendered deterministically — not captured in
+// real time — so a slow phone just takes longer, it never drops/judders frames.
+const ENC_FPS=15; // slideshow-style content: 15fps looks fine and keeps mobile memory sane
+
+// Single cached ffmpeg.wasm instance (the core is ~25MB; load it once per session).
+// Single-threaded core → no SharedArrayBuffer / COOP-COEP headers needed (works on GitHub Pages).
+let _ffmpeg=null, _ffmpegLoading=null;
+async function getFFmpeg(onProgress){
+  if(_ffmpeg) return _ffmpeg;
+  if(_ffmpegLoading) return _ffmpegLoading;
+  if(!window.FFmpeg) throw new Error('encoder-unavailable');
+  const {createFFmpeg}=window.FFmpeg;
+  const ff=createFFmpeg({log:false,corePath:'https://unpkg.com/@ffmpeg/core@0.11.0/dist/ffmpeg-core.js'});
+  _ffmpegLoading=ff.load().then(()=>{ _ffmpeg=ff; _ffmpegLoading=null; return ff; })
+    .catch(e=>{ _ffmpegLoading=null; throw e; });
+  if(onProgress) onProgress();
+  return _ffmpegLoading;
 }
+
+// Render the WebAudio countdown ticks + reveal ding OFFLINE into a 16-bit PCM WAV,
+// so ffmpeg can mux it as the audio track (real-time capture is gone).
+function audioBufferToWav(buf){
+  const numCh=buf.numberOfChannels, len=buf.length, sr=buf.sampleRate;
+  const out=new DataView(new ArrayBuffer(44+len*numCh*2));
+  const wstr=(o,s)=>{ for(let i=0;i<s.length;i++) out.setUint8(o+i,s.charCodeAt(i)); };
+  wstr(0,'RIFF'); out.setUint32(4,36+len*numCh*2,true); wstr(8,'WAVE');
+  wstr(12,'fmt '); out.setUint32(16,16,true); out.setUint16(20,1,true); out.setUint16(22,numCh,true);
+  out.setUint32(24,sr,true); out.setUint32(28,sr*numCh*2,true); out.setUint16(32,numCh*2,true); out.setUint16(34,16,true);
+  wstr(36,'data'); out.setUint32(40,len*numCh*2,true);
+  const chans=[]; for(let c=0;c<numCh;c++) chans.push(buf.getChannelData(c));
+  let off=44;
+  for(let i=0;i<len;i++) for(let c=0;c<numCh;c++){ let s=Math.max(-1,Math.min(1,chans[c][i])); out.setInt16(off,s<0?s*0x8000:s*0x7FFF,true); off+=2; }
+  return new Uint8Array(out.buffer);
+}
+async function renderAudioWav(segs,COUNTDOWN,totalMs){
+  const OAC=window.OfflineAudioContext||window.webkitOfflineAudioContext;
+  if(!OAC) return null;
+  const sr=44100, ac=new OAC(1,Math.ceil(sr*totalMs/1000),sr);
+  const tone=(freq,at,dur,type,peak)=>{
+    const o=ac.createOscillator(), gn=ac.createGain();
+    o.type=type||'sine'; o.frequency.value=freq;
+    gn.gain.setValueAtTime(0.0001,at);
+    gn.gain.exponentialRampToValueAtTime(peak,at+0.012);
+    gn.gain.exponentialRampToValueAtTime(0.0001,at+dur);
+    o.connect(gn); gn.connect(ac.destination); o.start(at); o.stop(at+dur+0.02);
+  };
+  const tick=at=>tone(1200,at,0.07,'square',0.10);
+  const ding=at=>{ tone(784,at,0.18,'sine',0.22); tone(1175,at+0.09,0.34,'sine',0.22); };
+  segs.forEach(s=>{
+    if(s.type==='hold'&&s.count){ [3000,2000,1000].forEach(L=>tick((s.start+s.dur-L)/1000)); }
+    else if(s.type==='fade'){ ding(s.start/1000); }
+  });
+  try{ const rendered=await ac.startRendering(); return audioBufferToWav(rendered); }catch(e){ return null; }
+}
+
+// Draw the exact frame for elapsed-ms `e` (same logic the old real-time loop used).
+function drawVideoFrameAt(ctx,cv,segs,p,e,COUNTDOWN){
+  let seg=segs.find(s=>e>=s.start&&e<s.start+s.dur); if(!seg) seg=segs[segs.length-1];
+  ctx.clearRect(0,0,cv.width,cv.height);
+  if(seg.type==='outro'){ drawOutro(ctx,p,seg.variant); }
+  else if(seg.type==='hold'){
+    ctx.drawImage(seg.img,0,0,cv.width,cv.height);
+    if(seg.count){ const left=seg.start+seg.dur-e; if(left<=COUNTDOWN&&left>0) drawCountdown(ctx,Math.ceil(left/1000),left); }
+    drawFooterCaption(ctx,'🔗 Link in bio to play');
+  } else { const pr=(e-seg.start)/seg.dur; ctx.drawImage(seg.from,0,0,cv.width,cv.height); ctx.globalAlpha=pr; ctx.drawImage(seg.to,0,0,cv.width,cv.height); ctx.globalAlpha=1; drawFooterCaption(ctx,'🔗 Link in bio to play'); }
+}
+const canvasToJpeg=cv=>new Promise(res=>cv.toBlob(b=>res(b),'image/jpeg',0.82));
 
 async function makeVideo(){
   const cards=[...document.querySelectorAll('.card')];
   if(!cards.length) return;
-  const mime=pickMime();
-  if(!mime){ alert('Your browser can’t record video. Try Chrome or Safari.'); return; }
   const ov=g('overlay'), bar=g('ov-bar'), lbl=g('ov-lbl');
-  ov.classList.add('show');
+  ov.classList.add('show'); bar.style.width='0'; lbl.textContent='Loading video encoder…';
 
-  // Recording is real-time, so anything that backgrounds the page mid-record
-  // (screen dimming, app switch, a notification) throttles rAF and/or suspends
-  // the AudioContext — the two clocks drift and you get a frozen frame with
-  // sound still playing, or fresh frames with no sound. Keep the screen awake…
+  // Load ffmpeg.wasm (real H.264 .mp4). Best-effort wake-lock just keeps the
+  // screen on so the phone doesn't suspend the tab mid-encode; the encode itself
+  // is deterministic (frame-by-frame), so it can't drop or skip frames.
   let wakeLock=null;
   try{ if(navigator.wakeLock) wakeLock=await navigator.wakeLock.request('screen'); }catch(e){}
-  // …and if the page is hidden anyway, abort cleanly instead of saving a broken clip.
-  let aborted=false;
-  const onHidden=()=>{ if(document.hidden) aborted=true; };
-  document.addEventListener('visibilitychange',onHidden);
-  const cleanup=()=>{ document.removeEventListener('visibilitychange',onHidden); if(wakeLock){ try{ wakeLock.release(); }catch(e){} wakeLock=null; } };
+  const cleanup=()=>{ if(wakeLock){ try{ wakeLock.release(); }catch(e){} wakeLock=null; } };
+  let ff;
+  try{ ff=await getFFmpeg(); }
+  catch(e){
+    cleanup(); ov.classList.remove('show'); bar.style.width='0';
+    alert('Couldn’t load the video encoder (needs an internet connection the first time). Please check your connection and try again.');
+    return;
+  }
 
   const p=PALS[palIdx];
 
@@ -940,7 +1003,7 @@ async function makeVideo(){
   const frames=[];
   for(let i=0;i<cards.length;i++){
     lbl.textContent=`Preparing card ${i+1}/${cards.length}…`;
-    bar.style.width=Math.round((i/cards.length)*60)+'%';
+    bar.style.width=Math.round((i/cards.length)*15)+'%';
     cards[i].classList.remove('revealed');
     const q=await cardToCanvas(cards[i]);
     cards[i].classList.add('revealed');
@@ -969,102 +1032,63 @@ async function makeVideo(){
 
   const cv=g('vcanvas'); cv.width=FMT.w; cv.height=FMT.h;
   const ctx=cv.getContext('2d');
-  ctx.drawImage(frames[0].q,0,0,cv.width,cv.height); // prime first frame
 
-  // Audio: WebAudio-generated countdown ticks + a reveal "ding", mixed into the
-  // recording via a MediaStreamDestination. No files/licensing needed.
-  let ac=null, audioDest=null;
   try{
-    ac=new (window.AudioContext||window.webkitAudioContext)();
-    await ac.resume();
-    audioDest=ac.createMediaStreamDestination();
-  }catch(e){ ac=null; }
-  const tone=(freq,at,dur,type,peak)=>{
-    if(!ac) return;
-    const o=ac.createOscillator(), gn=ac.createGain();
-    o.type=type||'sine'; o.frequency.value=freq;
-    gn.gain.setValueAtTime(0.0001,at);
-    gn.gain.exponentialRampToValueAtTime(peak,at+0.012);
-    gn.gain.exponentialRampToValueAtTime(0.0001,at+dur);
-    o.connect(gn); gn.connect(audioDest); gn.connect(ac.destination);
-    o.start(at); o.stop(at+dur+0.02);
-  };
-  const tick=at=>tone(1200,at,0.07,'square',0.10);
-  const ding=at=>{ tone(784,at,0.18,'sine',0.22); tone(1175,at+0.09,0.34,'sine',0.22); };
+    // 1) Audio track → WAV (countdown ticks + reveal ding), rendered offline.
+    const wav=await renderAudioWav(segs,COUNTDOWN,total);
 
-  const vstream=cv.captureStream(30);
-  const stream = audioDest
-    ? new MediaStream([...vstream.getVideoTracks(),...audioDest.stream.getAudioTracks()])
-    : vstream;
-  const rec=new MediaRecorder(stream,{mimeType:mime,videoBitsPerSecond:6000000});
-  const chunks=[]; rec.ondataavailable=e=>{ if(e.data&&e.data.size) chunks.push(e.data); };
-  const stopped=new Promise(res=>rec.onstop=res);
-  rec.start();
-
-  // Schedule all sounds up-front on the audio clock (precise, rAF-independent).
-  if(ac){
-    const a0=ac.currentTime+0.1;
-    segs.forEach(s=>{
-      if(s.type==='hold'&&s.count){ [3000,2000,1000].forEach(L=>tick(a0+(s.start+s.dur-L)/1000)); }
-      else if(s.type==='fade'){ ding(a0+s.start/1000); }
-    });
-  }
-
-  lbl.textContent='Recording video…';
-  const t0=performance.now();
-  await new Promise(resolve=>{
-    function frame(now){
-      if(aborted){ resolve(); return; }
-      const e=now-t0;
-      bar.style.width=Math.min(100,60+Math.round((e/total)*40))+'%';
-      if(e>=total){ resolve(); return; }
-      let seg=segs.find(s=>e>=s.start&&e<s.start+s.dur);
-      if(!seg) seg=segs[segs.length-1];
-      ctx.clearRect(0,0,cv.width,cv.height);
-      if(seg.type==='outro'){ drawOutro(ctx,p,seg.variant); }
-      else if(seg.type==='hold'){
-        ctx.drawImage(seg.img,0,0,cv.width,cv.height);
-        if(seg.count){ const left=seg.start+seg.dur-e; if(left<=COUNTDOWN&&left>0) drawCountdown(ctx,Math.ceil(left/1000),left); }
-        drawFooterCaption(ctx,'🔗 Link in bio to play');
-      }
-      else{ const pr=(e-seg.start)/seg.dur; ctx.drawImage(seg.from,0,0,cv.width,cv.height); ctx.globalAlpha=pr; ctx.drawImage(seg.to,0,0,cv.width,cv.height); ctx.globalAlpha=1; drawFooterCaption(ctx,'🔗 Link in bio to play'); }
-      requestAnimationFrame(frame);
+    // 2) Render each frame deterministically and hand it to ffmpeg's filesystem.
+    const nFrames=Math.ceil(total/1000*ENC_FPS);
+    lbl.textContent='Rendering frames…';
+    for(let i=0;i<nFrames;i++){
+      drawVideoFrameAt(ctx,cv,segs,p,(i/ENC_FPS)*1000,COUNTDOWN);
+      const jpg=await canvasToJpeg(cv);
+      ff.FS('writeFile','f'+String(i).padStart(5,'0')+'.jpg',new Uint8Array(await jpg.arrayBuffer()));
+      if(i%4===0){ bar.style.width=Math.round(15+(i/nFrames)*55)+'%'; await new Promise(r=>setTimeout(r,0)); }
     }
-    requestAnimationFrame(frame);
-  });
+    if(wav) ff.FS('writeFile','audio.wav',wav);
 
-  rec.stop(); await stopped;
-  if(ac) try{ ac.close(); }catch(e){}
-  cleanup();
-  if(aborted){
+    // 3) Encode H.264 + AAC into a real .mp4.
+    lbl.textContent='Encoding MP4…';
+    ff.setProgress(({ratio})=>{ if(ratio>0&&ratio<=1) bar.style.width=Math.round(70+ratio*28)+'%'; });
+    const args=['-framerate',String(ENC_FPS),'-i','f%05d.jpg'];
+    if(wav) args.push('-i','audio.wav');
+    args.push('-c:v','libx264','-preset','veryfast','-pix_fmt','yuv420p','-movflags','+faststart');
+    if(wav) args.push('-c:a','aac','-b:a','128k','-shortest');
+    args.push('-r',String(ENC_FPS),'out.mp4');
+    await ff.run(...args);
+
+    const data=ff.FS('readFile','out.mp4');
+    const blob=new Blob([data.buffer],{type:'video/mp4'});
+
+    // 4) Free MEMFS so repeat runs don't pile up.
+    for(let i=0;i<nFrames;i++){ try{ ff.FS('unlink','f'+String(i).padStart(5,'0')+'.jpg'); }catch(e){} }
+    try{ ff.FS('unlink','out.mp4'); }catch(e){}
+    if(wav) try{ ff.FS('unlink','audio.wav'); }catch(e){}
+
+    // TikTok / Instagram Reels / YouTube Shorts are all 9:16 — the SAME clip. Save
+    // one clearly-named copy per ticked platform so each is easy to drag into its
+    // uploader. (Falls back to a single generic file if no chips are selected.)
+    const slug=curTheme().slug||'theme';
+    const picked=[...document.querySelectorAll('#vid-plat-chips .ctab.on')].map(b=>b.dataset.vplat);
+    const targets=picked.length?picked:[null];
+    const url=URL.createObjectURL(blob);
+    targets.forEach((plat,i)=>{
+      const a=document.createElement('a');
+      a.download=`triviagauntlet-${slug}${plat?'-'+plat:''}.mp4`;
+      a.href=url;
+      setTimeout(()=>a.click(),i*400); // stagger so the browser doesn't drop rapid downloads
+    });
+    setTimeout(()=>URL.revokeObjectURL(url),4000+targets.length*400);
+    bar.style.width='100%';
+  }catch(e){
+    console.error('video encode failed',e);
+    alert('Sorry — the video failed to encode'+(/memory|alloc|RangeError/i.test(String(e&&e.message))?' (the phone ran out of memory — try fewer cards).':'.'));
+  }finally{
+    try{ ff.setProgress(()=>{}); }catch(e){}
+    cleanup();
     ov.classList.remove('show'); bar.style.width='0';
-    alert('Video cancelled — the screen turned off or you switched away mid-recording. Keep this screen open and on while the video builds, then try again.');
-    return;
   }
-  const ext=mime.includes('mp4')?'mp4':'webm';
-  let blob=new Blob(chunks,{type:mime});
-  // MediaRecorder writes webm with no duration in the header, so many players stop
-  // after the first segment. Patch the real duration back in so it plays in full.
-  if(ext==='webm' && typeof window.ysFixWebmDuration==='function'){
-    try{ blob=await window.ysFixWebmDuration(blob,total,{logger:false}); }catch(e){ console.warn('duration fix failed',e); }
-  }
-  // TikTok / Instagram Reels / YouTube Shorts are all 9:16 — the SAME clip. Save
-  // one clearly-named copy per ticked platform so each is easy to drag into its
-  // uploader. (Falls back to a single generic file if no chips are selected.)
-  const slug=curTheme().slug||'theme';
-  const picked=[...document.querySelectorAll('#vid-plat-chips .ctab.on')].map(b=>b.dataset.vplat);
-  const targets=picked.length?picked:[null];
-  const url=URL.createObjectURL(blob);
-  targets.forEach((plat,i)=>{
-    const a=document.createElement('a');
-    a.download=`triviagauntlet-${slug}${plat?'-'+plat:''}.${ext}`;
-    a.href=url;
-    setTimeout(()=>a.click(),i*400); // stagger so the browser doesn't drop rapid downloads
-  });
-  setTimeout(()=>URL.revokeObjectURL(url),4000+targets.length*400);
-
-  ov.classList.remove('show'); bar.style.width='0';
-  if(ext==='webm') alert('Saved as .webm (your browser doesn’t support direct MP4). TikTok and Instagram still accept .webm uploads.');
 }
 
 // ---------- AI caption ----------
