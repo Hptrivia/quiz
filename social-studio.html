@@ -316,7 +316,7 @@ const MODEL='claude-sonnet-4-6';
 const SITE='triviagauntlet.app';
 // The shareable Challenge-mode deep link (same one used in the Reddit body),
 // per-theme. Used for Reddit body, Pinterest destination + YouTube description.
-const challengeLink=slug=>`https://hptrivia.github.io/quiz/challenge.html?theme=${slug||'theme'}&round=1`;
+const challengeLink=slug=>`https://${SITE}/challenge.html?theme=${slug||'theme'}&round=1`;
 const g=id=>document.getElementById(id);
 const wait=ms=>new Promise(r=>setTimeout(r,ms));
 
