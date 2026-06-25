@@ -239,6 +239,7 @@ input[type=text]:focus{border-color:#1a1a1a}
         </div>
       </div>
       <button class="btn btn-accent" id="mk-vid">🎬 Make video (with reveal)</button>
+      <div id="vid-status" style="font-size:12px;line-height:1.4;color:#475569;margin:6px 0 2px;word-break:break-word;"></div>
       <button class="btn btn-soft" id="gen-cap">✨ Quick AI caption</button>
       <button class="btn btn-soft" id="open-cal">📅 Posting calendar</button>
 
@@ -1032,13 +1033,14 @@ async function makeVideo(){
     //    is flakier than video, so audio stays best-effort: if a check below fails
     //    we drop to a silent (but working) video and record WHY in audioNote.
     let audioPcm=synthAudioPCM(segs,total);
-    let audioFmt='f32-planar';
+    let audioFmt='f32-planar', aacSupported='?';
     {
       // a) Can it encode AAC at all?
       try{
         const sup=await AudioEncoder.isConfigSupported({codec:'mp4a.40.2',sampleRate:audioPcm.sampleRate,numberOfChannels:1,bitrate:128000});
+        aacSupported=!!(sup&&sup.supported);
         if(!sup||!sup.supported){ audioPcm=null; audioNote='AAC audio encoding not supported here'; }
-      }catch(e){ audioPcm=null; audioNote='AAC support check failed ('+(e&&e.message||e)+')'; }
+      }catch(e){ aacSupported='error'; audioPcm=null; audioNote='AAC support check failed ('+(e&&e.message||e)+')'; }
     }
     if(audioPcm){
       // b) Which AudioData sample format does it accept? (iOS can be picky.)
@@ -1127,13 +1129,14 @@ async function makeVideo(){
     });
     setTimeout(()=>URL.revokeObjectURL(url),4000+targets.length*400);
     bar.style.width='100%';
-    // Diagnostic: if we couldn't add sound on this device, say so (and why) rather
-    // than silently shipping a muted clip. Desktop Chrome encodes audio reliably.
-    if(audioNote){
-      setTimeout(()=>alert('Video saved — but WITHOUT sound on this device.\n\nReason: '+audioNote+'\n\nTip: make the video on a laptop in Chrome to get the ticking/ding sound, then upload that file.'),300);
-    }
+    // Visible on-page diagnostic (iOS can suppress alert() after a download, so we
+    // write it into the page instead). Tells us exactly what the device did.
+    const audioOk=!!(audioPcm&&audioChunks>0&&!audioNote);
+    const st=g('vid-status');
+    if(st) st.textContent='✅ Saved · video '+codec+' · audio: '+(audioOk?('ON ('+audioChunks+' chunks, '+audioFmt+')'):('OFF — '+(audioNote||'no chunks')))+' · AAC-supported='+aacSupported;
   }catch(e){
     console.error('video encode failed',e);
+    const st=g('vid-status'); if(st) st.textContent='❌ '+(e&&e.message||e);
     alert('Sorry — the video failed to make. ('+(e&&e.message||e)+')');
   }finally{
     try{ if(videoEncoder&&videoEncoder.state!=='closed') videoEncoder.close(); }catch(e){}
