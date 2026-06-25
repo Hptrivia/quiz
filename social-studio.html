@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Trivia Gauntlet – Social Studio</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.11.6/dist/ffmpeg.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.10.1/dist/ffmpeg.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -917,7 +917,7 @@ async function getFFmpeg(onProgress){
   if(_ffmpegLoading) return _ffmpegLoading;
   if(!window.FFmpeg) throw new Error('encoder-unavailable');
   const {createFFmpeg}=window.FFmpeg;
-  const ff=createFFmpeg({log:false,corePath:'https://unpkg.com/@ffmpeg/core@0.11.0/dist/ffmpeg-core.js'});
+  const ff=createFFmpeg({log:false,corePath:'https://unpkg.com/@ffmpeg/core@0.10.0/dist/ffmpeg-core.js'});
   _ffmpegLoading=ff.load().then(()=>{ _ffmpeg=ff; _ffmpegLoading=null; return ff; })
     .catch(e=>{ _ffmpegLoading=null; throw e; });
   if(onProgress) onProgress();
@@ -988,8 +988,9 @@ async function makeVideo(){
   let ff;
   try{ ff=await getFFmpeg(); }
   catch(e){
+    console.error('encoder load failed',e);
     cleanup(); ov.classList.remove('show'); bar.style.width='0';
-    alert('Couldn’t load the video encoder (needs an internet connection the first time). Please check your connection and try again.');
+    alert('Couldn’t load the video encoder. It downloads ~25MB the first time — if you’re on a slow or restricted connection, try again on Wi-Fi. (Detail: '+(e&&e.message||e)+')');
     return;
   }
 
