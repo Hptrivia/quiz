@@ -149,6 +149,12 @@ textarea.cinput{min-height:110px}
 .modal-head h3{font-size:16px;font-weight:800}
 .modal-x{border:none;background:none;font-size:16px;color:#aaa;cursor:pointer}
 .modal-sub{font-size:12px;color:#999;margin:4px 0 16px}
+/* batch-video picker: multi-select theme list + actions */
+.vb-actions{display:flex;align-items:center;gap:8px;margin:8px 0}
+.vb-mini{border:1.5px solid #e5e5e5;background:#fafafa;border-radius:7px;font-family:inherit;font-size:11.5px;font-weight:600;color:#555;cursor:pointer;padding:5px 9px}
+.vb-mini:hover{border-color:#1a1a1a;color:#1a1a1a}
+.vb-count{margin-left:auto;font-size:12px;font-weight:700;color:#4a3fd6}
+.tp-item.on::before{content:'✓ ';font-weight:800}
 .cal-row{display:flex;gap:10px}
 .cal-h4{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#999;margin:20px 0 8px}
 .cal-form input,.cal-form select{width:100%;border:1.5px solid #e5e5e5;border-radius:8px;padding:9px 11px;font-size:13px;font-family:inherit;outline:none;color:#1a1a1a;background:#fff}
@@ -311,6 +317,21 @@ input[type=text]:focus{border-color:#1a1a1a}
   </div>
 </div>
 
+<div class="modal" id="vid-modal">
+  <div class="modal-card">
+    <div class="modal-head"><h3>🎬 Make videos</h3><button class="modal-x" id="vid-close">✕</button></div>
+    <p class="modal-sub">Tick one or more themes — each becomes its own reveal video. They download one after another.</p>
+    <input id="vid-search" class="theme-search" placeholder="Search themes…">
+    <div class="vb-actions">
+      <button class="vb-mini" id="vid-all">Select all shown</button>
+      <button class="vb-mini" id="vid-none">Clear</button>
+      <span class="vb-count" id="vid-count">0 selected</span>
+    </div>
+    <div id="vidPicker" class="theme-picker"></div>
+    <button class="btn btn-accent" id="vid-go">🎬 Make videos</button>
+  </div>
+</div>
+
 <script>
 const MODEL='claude-sonnet-4-6';
 const SITE='triviagauntlet.app';
@@ -396,7 +417,13 @@ async function boot(){
   g('pinResetImg').onclick=()=>{ pinImg=PIN_DEFAULT_IMG; render(); };
   g('shuffle').onclick=pick;
   g('dl-img').onclick=downloadImages;
-  g('mk-vid').onclick=makeVideo;
+  g('mk-vid').onclick=openVidModal;
+  g('vid-close').onclick=()=>g('vid-modal').classList.remove('show');
+  g('vid-modal').onclick=e=>{ if(e.target===g('vid-modal')) g('vid-modal').classList.remove('show'); };
+  g('vid-search').oninput=()=>buildVidPicker(g('vid-search').value);
+  g('vid-all').onclick=()=>{ shownVidSlugs(g('vid-search').value).forEach(s=>vidSel.add(s)); buildVidPicker(g('vid-search').value); updateVidCount(); };
+  g('vid-none').onclick=()=>{ vidSel.clear(); buildVidPicker(g('vid-search').value); updateVidCount(); };
+  g('vid-go').onclick=runVideoBatch;
   g('gen-cap').onclick=()=>{ setView('chat'); g('cap-panel').scrollIntoView({behavior:'smooth',block:'nearest'}); sendChat('Write a ready-to-paste caption with hashtags for this theme — give me a TikTok/Reels version and a Pinterest title + description.'); };
   g('open-cal').onclick=openCalendar;
   g('cal-close').onclick=()=>g('cal-modal').classList.remove('show');
@@ -969,22 +996,132 @@ function drawVideoFrameAt(ctx,cv,segs,p,e,COUNTDOWN){
   } else { const pr=(e-seg.start)/seg.dur; ctx.drawImage(seg.from,0,0,cv.width,cv.height); ctx.globalAlpha=pr; ctx.drawImage(seg.to,0,0,cv.width,cv.height); ctx.globalAlpha=1; drawFooterCaption(ctx,'🔗 Link in bio to play'); }
 }
 
-async function makeVideo(){
-  const cards=[...document.querySelectorAll('.card')];
-  if(!cards.length) return;
+// ---------- batch video: multi-theme picker ----------
+let vidSel=new Set();
+
+function shownVidSlugs(filter){
+  const q=(filter||'').trim().toLowerCase();
+  return THEMES.filter(t=>!q || t.title.toLowerCase().includes(q) || (t.category||'').toLowerCase().includes(q)).map(t=>t.slug);
+}
+function updateVidCount(){
+  const n=vidSel.size;
+  g('vid-count').textContent=n+' selected';
+  g('vid-go').textContent='🎬 Make '+(n||0)+' video'+(n===1?'':'s');
+  g('vid-go').disabled=!n;
+}
+// Multi-select sibling of buildThemePicker: same category accordion, but each
+// item toggles membership in vidSel instead of switching the live theme.
+function buildVidPicker(filter){
+  const box=g('vidPicker'); if(!box) return;
+  const q=(filter||'').trim().toLowerCase();
+  const groups={};
+  THEMES.forEach(t=>{
+    if(q && !t.title.toLowerCase().includes(q) && !(t.category||'').toLowerCase().includes(q)) return;
+    (groups[t.category||'Other']=groups[t.category||'Other']||[]).push(t);
+  });
+  const cats=Object.keys(groups).sort((a,b)=>a.localeCompare(b));
+  box.innerHTML='';
+  if(!cats.length){ box.innerHTML='<div class="tp-empty">No themes match.</div>'; return; }
+  cats.forEach(cat=>{
+    const list=groups[cat];
+    const open = !!q || list.some(t=>vidSel.has(t.slug));
+    const wrap=document.createElement('div'); wrap.className='tp-cat'+(open?' open':'');
+    const head=document.createElement('button'); head.className='tp-head';
+    head.innerHTML=`<span class="tp-arrow">▸</span> ${cat} <span class="tp-count">${list.length}</span>`;
+    const body=document.createElement('div'); body.className='tp-body';
+    list.forEach(t=>{
+      const b=document.createElement('button');
+      b.className='tp-item'+(vidSel.has(t.slug)?' on':'');
+      b.textContent=t.title;
+      b.onclick=()=>{ if(vidSel.has(t.slug)) vidSel.delete(t.slug); else vidSel.add(t.slug); b.classList.toggle('on'); updateVidCount(); };
+      body.appendChild(b);
+    });
+    head.onclick=()=>wrap.classList.toggle('open');
+    wrap.appendChild(head); wrap.appendChild(body); box.appendChild(wrap);
+  });
+}
+function openVidModal(){
+  const cur=g('theme').value;
+  vidSel=new Set(cur?[cur]:[]);
+  g('vid-search').value='';
+  buildVidPicker('');
+  updateVidCount();
+  g('vid-modal').classList.add('show');
+}
+
+// Drive the whole batch: for each ticked theme, load it, render its cards,
+// encode one MP4, and download it (one file per ticked platform). One overall
+// progress bar spans all themes.
+async function runVideoBatch(){
+  const slugs=[...vidSel];
+  if(!slugs.length){ alert('Pick at least one theme.'); return; }
   if(!videoSupported()){
     alert('Your browser can’t make videos yet. On iPhone, update to iOS 16.4 or newer and use Safari; on computer, use Chrome or Edge.');
     return;
   }
+  g('vid-modal').classList.remove('show');
+
   const ov=g('overlay'), bar=g('ov-bar'), lbl=g('ov-lbl');
   ov.classList.add('show'); bar.style.width='0'; lbl.textContent='Preparing…';
-
-  // Best-effort wake-lock keeps the screen on so the phone doesn't suspend the
-  // tab mid-encode; the encode itself is deterministic (frame-by-frame), so it
-  // can't drop or skip frames regardless.
+  // Best-effort wake-lock keeps the screen on across a long multi-theme encode.
   let wakeLock=null;
   try{ if(navigator.wakeLock) wakeLock=await navigator.wakeLock.request('screen'); }catch(e){}
-  const cleanup=()=>{ if(wakeLock){ try{ wakeLock.release(); }catch(e){} wakeLock=null; } };
+
+  const picked=[...document.querySelectorAll('#vid-plat-chips .ctab.on')].map(b=>b.dataset.vplat);
+  const targets=picked.length?picked:[null];
+  const notes=[];
+  try{
+    for(let n=0;n<slugs.length;n++){
+      const slug=slugs[n];
+      const t=THEMES.find(x=>x.slug===slug)||{title:slug,slug};
+      const base=n/slugs.length, span=1/slugs.length;
+      const head=slugs.length>1?`Theme ${n+1}/${slugs.length} (${t.title}) · `:'';
+      try{
+        lbl.textContent=head+'loading…';
+        await loadTheme(slug);   // fetch questions → pick → render the cards
+        await wait(60);          // let layout/fonts settle before snapshotting
+        if(!document.querySelectorAll('.card').length) throw new Error('no usable questions');
+        const {blob,status}=await encodeCurrentCards((f,msg)=>{
+          bar.style.width=Math.round((base+f*span)*100)+'%';
+          lbl.textContent=head+(msg||'building video');
+        });
+
+        // Download — one clearly-named copy per ticked platform (identical 9:16 clip).
+        const url=URL.createObjectURL(blob);
+        targets.forEach((plat,i)=>{
+          const a=document.createElement('a');
+          a.download=`triviagauntlet-${slug}${plat?'-'+plat:''}.mp4`;
+          a.href=url;
+          setTimeout(()=>a.click(), i*400);
+        });
+        setTimeout(()=>URL.revokeObjectURL(url),5000+targets.length*400);
+        if(n===0) g('vid-status').textContent='video '+status; // surface the audio diag from the first clip
+      }catch(e){
+        console.error('theme failed:',slug,e);
+        notes.push(t.title+': '+(e&&e.message||e));
+      }
+    }
+    bar.style.width='100%';
+    g('vid-status').textContent='✅ Made '+slugs.length+' video'+(slugs.length===1?'':'s')
+      + (notes.length?' · '+notes.join('; '):'');
+  }catch(e){
+    console.error('batch video failed',e);
+    g('vid-status').textContent='❌ '+(e&&e.message||e);
+    alert('Sorry — a video failed. ('+(e&&e.message||e)+')');
+  }finally{
+    if(wakeLock){ try{ wakeLock.release(); }catch(e){} }
+    ov.classList.remove('show'); bar.style.width='0';
+  }
+}
+
+// ---------- video encode (one theme's on-screen cards → MP4 blob) ----------
+// Pure: no theme loading, no download, no overlay. The caller drives progress via
+// onProgress(fraction0to1, label) and handles delivery, so the same pipeline
+// serves a single video and the batch above. Returns {blob, status}.
+async function encodeCurrentCards(onProgress){
+  onProgress = onProgress || function(){};
+  const cards=[...document.querySelectorAll('.card')];
+  if(!cards.length) throw new Error('no cards to render');
 
   const p=PALS[palIdx];
 
@@ -994,17 +1131,19 @@ async function makeVideo(){
 
   // Pre-render every card in both states (question / answer revealed).
   const frames=[];
-  for(let i=0;i<cards.length;i++){
-    lbl.textContent=`Preparing card ${i+1}/${cards.length}…`;
-    bar.style.width=Math.round((i/cards.length)*15)+'%';
-    cards[i].classList.remove('revealed');
-    const q=await cardToCanvas(cards[i]);
-    cards[i].classList.add('revealed');
-    const a=await cardToCanvas(cards[i]);
-    cards[i].classList.remove('revealed');
-    frames.push({q,a});
+  try{
+    for(let i=0;i<cards.length;i++){
+      onProgress(i/cards.length*0.15, `preparing card ${i+1}/${cards.length}…`);
+      cards[i].classList.remove('revealed');
+      const q=await cardToCanvas(cards[i]);
+      cards[i].classList.add('revealed');
+      const a=await cardToCanvas(cards[i]);
+      cards[i].classList.remove('revealed');
+      frames.push({q,a});
+    }
+  } finally {
+    cards.forEach(c=>c.classList.remove('hide-cta'));
   }
-  cards.forEach(c=>c.classList.remove('hide-cta'));
 
   // Build a timeline: hold question, crossfade, hold answer.
   // HOLD_Q = reading time + countdown. The 3-2-1 ring only draws for the last
@@ -1087,7 +1226,6 @@ async function makeVideo(){
     // 3) Render each frame deterministically → VideoFrame → encoder.
     const nFrames=Math.ceil(total/1000*ENC_FPS);
     const frameDurUs=Math.round(1e6/ENC_FPS);
-    lbl.textContent='Building video…';
     for(let i=0;i<nFrames;i++){
       drawVideoFrameAt(ctx,cv,segs,p,(i/ENC_FPS)*1000,COUNTDOWN);
       const vf=new VideoFrame(cv,{timestamp:Math.round(i*1e6/ENC_FPS),duration:frameDurUs});
@@ -1095,7 +1233,7 @@ async function makeVideo(){
       vf.close();
       // Don't let the encode queue grow unbounded on a phone.
       if(videoEncoder.encodeQueueSize>8) await new Promise(r=>setTimeout(r,8));
-      if(i%4===0){ bar.style.width=Math.round(15+(i/nFrames)*70)+'%'; await new Promise(r=>setTimeout(r,0)); }
+      if(i%4===0){ onProgress(0.15+(i/nFrames)*0.80,'building video…'); await new Promise(r=>setTimeout(r,0)); }
     }
 
     // 4) Feed the audio to the AAC encoder in ~1024-frame chunks, duplicating the
@@ -1114,7 +1252,7 @@ async function makeVideo(){
       }catch(e){ audioNote='audio encode failed ('+(e&&e.message||e)+')'; }
     }
 
-    lbl.textContent='Finishing MP4…';
+    onProgress(0.96,'finishing MP4…');
     await videoEncoder.flush();
     if(audioEncoder) await audioEncoder.flush();
     if(encErr) throw encErr;
@@ -1122,35 +1260,13 @@ async function makeVideo(){
     muxer.finalize();
     const blob=new Blob([muxer.target.buffer],{type:'video/mp4'});
 
-    // TikTok / Instagram Reels / YouTube Shorts are all 9:16 — the SAME clip. Save
-    // one clearly-named copy per ticked platform so each is easy to drag into its
-    // uploader. (Falls back to a single generic file if no chips are selected.)
-    const slug=curTheme().slug||'theme';
-    const picked=[...document.querySelectorAll('#vid-plat-chips .ctab.on')].map(b=>b.dataset.vplat);
-    const targets=picked.length?picked:[null];
-    const url=URL.createObjectURL(blob);
-    targets.forEach((plat,i)=>{
-      const a=document.createElement('a');
-      a.download=`triviagauntlet-${slug}${plat?'-'+plat:''}.mp4`;
-      a.href=url;
-      setTimeout(()=>a.click(),i*400); // stagger so the browser doesn't drop rapid downloads
-    });
-    setTimeout(()=>URL.revokeObjectURL(url),4000+targets.length*400);
-    bar.style.width='100%';
-    // Visible on-page diagnostic (iOS can suppress alert() after a download, so we
-    // write it into the page instead). Tells us exactly what the device did.
+    // Human diagnostic line (esp. the audio path, which is the flaky bit on iOS).
     const audioOk=!!(audioPcm&&audioChunks>0&&!audioNote);
-    const st=g('vid-status');
-    if(st) st.textContent='✅ Saved · video '+codec+' · audio: '+(audioOk?('ON ('+audioChunks+' chunks, '+audioFmt+', '+CH+'ch)'):('OFF — '+(audioNote||'no chunks')))+' · AAC-supported='+aacSupported;
-  }catch(e){
-    console.error('video encode failed',e);
-    const st=g('vid-status'); if(st) st.textContent='❌ '+(e&&e.message||e);
-    alert('Sorry — the video failed to make. ('+(e&&e.message||e)+')');
+    const status=codec+' · audio: '+(audioOk?('ON ('+audioChunks+' chunks, '+audioFmt+', '+CH+'ch)'):('OFF — '+(audioNote||'no chunks')))+' · AAC-supported='+aacSupported;
+    return {blob, status};
   }finally{
     try{ if(videoEncoder&&videoEncoder.state!=='closed') videoEncoder.close(); }catch(e){}
     try{ if(audioEncoder&&audioEncoder.state!=='closed') audioEncoder.close(); }catch(e){}
-    cleanup();
-    ov.classList.remove('show'); bar.style.width='0';
   }
 }
 
