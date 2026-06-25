@@ -239,8 +239,8 @@ input[type=text]:focus{border-color:#1a1a1a}
       <div id="vid-plats">
         <label>Make videos for</label>
         <div class="copy-tabs" id="vid-plat-chips">
-          <button class="ctab on" data-vplat="tiktok">TikTok</button>
-          <button class="ctab on" data-vplat="instagram">Instagram (Reels)</button>
+          <button class="ctab" data-vplat="tiktok">TikTok</button>
+          <button class="ctab" data-vplat="instagram">Instagram (Reels)</button>
           <button class="ctab on" data-vplat="youtube">YouTube Shorts</button>
         </div>
       </div>
@@ -525,6 +525,11 @@ function addPostLog(){
 
 async function loadTheme(slug){
   const t=THEMES.find(x=>x.slug===slug); if(!t) return;
+  // Keep the #theme dropdown in sync with what we're loading — curTheme()/render()
+  // read the card header + captions from it, so the batch path (which calls
+  // loadTheme directly, not via selectTheme) would otherwise stamp every video
+  // with the first theme's header.
+  g('theme').value=slug;
   g('m-title').textContent='Loading '+t.title+'…';
   try{
     const r=await fetch(t.questionFile);
