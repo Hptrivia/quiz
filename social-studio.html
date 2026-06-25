@@ -928,27 +928,32 @@ async function pickVideoCodec(w,h){
   return 'avc1.42001f';
 }
 
-// Render the WebAudio countdown ticks + reveal ding OFFLINE into an AudioBuffer
-// (mono 44.1k), which we then feed to the AAC AudioEncoder.
-async function renderAudioBuffer(segs,totalMs){
-  const OAC=window.OfflineAudioContext||window.webkitOfflineAudioContext;
-  if(!OAC) return null;
-  const sr=48000, ac=new OAC(1,Math.ceil(sr*totalMs/1000),sr); // 48k matches iOS hardware/AAC
-  const tone=(freq,at,dur,type,peak)=>{
-    const o=ac.createOscillator(), gn=ac.createGain();
-    o.type=type||'sine'; o.frequency.value=freq;
-    gn.gain.setValueAtTime(0.0001,at);
-    gn.gain.exponentialRampToValueAtTime(peak,at+0.012);
-    gn.gain.exponentialRampToValueAtTime(0.0001,at+dur);
-    o.connect(gn); gn.connect(ac.destination); o.start(at); o.stop(at+dur+0.02);
+// Synthesize the countdown ticks + reveal ding as raw PCM in plain JS — NO
+// OfflineAudioContext. iOS Safari renders OscillatorNodes as SILENCE inside an
+// OfflineAudioContext (that's why phone videos came out muted while laptop/Chrome
+// had sound); computing the samples by hand sidesteps WebAudio entirely and
+// behaves identically on every device. Returns {data:Float32Array, sampleRate}.
+function synthAudioPCM(segs,totalMs){
+  const sr=48000, len=Math.ceil(sr*totalMs/1000), data=new Float32Array(len);
+  const addTone=(freq,at,dur,type,peak)=>{
+    const start=Math.floor(at*sr), end=Math.min(len,Math.floor((at+dur)*sr));
+    const decay=Math.log(1000)/dur; // ~ -60dB by the end of the tone
+    for(let i=Math.max(0,start);i<end;i++){
+      const tt=(i-start)/sr;
+      const env=tt<0.012?(tt/0.012):Math.exp(-(tt-0.012)*decay);
+      const ph=2*Math.PI*freq*tt;
+      const w=type==='square'?(Math.sin(ph)>=0?1:-1):Math.sin(ph);
+      data[i]+=peak*env*w;
+    }
   };
-  const tick=at=>tone(1200,at,0.07,'square',0.10);
-  const ding=at=>{ tone(784,at,0.18,'sine',0.22); tone(1175,at+0.09,0.34,'sine',0.22); };
+  const tick=at=>addTone(1200,at,0.07,'square',0.10);
+  const ding=at=>{ addTone(784,at,0.18,'sine',0.22); addTone(1175,at+0.09,0.34,'sine',0.22); };
   segs.forEach(s=>{
     if(s.type==='hold'&&s.count){ [3000,2000,1000].forEach(L=>tick((s.start+s.dur-L)/1000)); }
     else if(s.type==='fade'){ ding(s.start/1000); }
   });
-  try{ return await ac.startRendering(); }catch(e){ return null; }
+  for(let i=0;i<len;i++){ if(data[i]>1)data[i]=1; else if(data[i]<-1)data[i]=-1; } // safety clamp
+  return {data,sampleRate:sr};
 }
 
 // Draw the exact frame for elapsed-ms `e` (same logic the old real-time loop used).
@@ -1022,26 +1027,25 @@ async function makeVideo(){
 
   let videoEncoder=null, audioEncoder=null, audioNote='';
   try{
-    // 1) Offline-render the audio, then decide whether this browser can actually
-    //    encode it. iOS Safari's WebCodecs AUDIO support is flakier than its
-    //    video support, so audio is best-effort: if anything below fails we drop
-    //    to a silent (but working) video and record WHY in audioNote.
-    let audioBuf=await renderAudioBuffer(segs,total);
+    // 1) Synthesize the audio as raw PCM (works on iOS, unlike OfflineAudioContext),
+    //    then decide whether this browser can actually encode it. WebCodecs AUDIO
+    //    is flakier than video, so audio stays best-effort: if a check below fails
+    //    we drop to a silent (but working) video and record WHY in audioNote.
+    let audioPcm=synthAudioPCM(segs,total);
     let audioFmt='f32-planar';
-    if(!audioBuf){ audioNote='offline audio render unavailable on this browser'; }
-    else{
+    {
       // a) Can it encode AAC at all?
       try{
-        const sup=await AudioEncoder.isConfigSupported({codec:'mp4a.40.2',sampleRate:audioBuf.sampleRate,numberOfChannels:1,bitrate:128000});
-        if(!sup||!sup.supported){ audioBuf=null; audioNote='AAC audio encoding not supported here'; }
-      }catch(e){ audioBuf=null; audioNote='AAC support check failed ('+(e&&e.message||e)+')'; }
+        const sup=await AudioEncoder.isConfigSupported({codec:'mp4a.40.2',sampleRate:audioPcm.sampleRate,numberOfChannels:1,bitrate:128000});
+        if(!sup||!sup.supported){ audioPcm=null; audioNote='AAC audio encoding not supported here'; }
+      }catch(e){ audioPcm=null; audioNote='AAC support check failed ('+(e&&e.message||e)+')'; }
     }
-    if(audioBuf){
+    if(audioPcm){
       // b) Which AudioData sample format does it accept? (iOS can be picky.)
-      try{ new AudioData({format:'f32-planar',sampleRate:audioBuf.sampleRate,numberOfFrames:1,numberOfChannels:1,timestamp:0,data:new Float32Array(1)}).close(); }
+      try{ new AudioData({format:'f32-planar',sampleRate:audioPcm.sampleRate,numberOfFrames:1,numberOfChannels:1,timestamp:0,data:new Float32Array(1)}).close(); }
       catch(e){
-        try{ new AudioData({format:'f32',sampleRate:audioBuf.sampleRate,numberOfFrames:1,numberOfChannels:1,timestamp:0,data:new Float32Array(1)}).close(); audioFmt='f32'; }
-        catch(e2){ audioBuf=null; audioNote='AudioData not supported here ('+(e&&e.message||e)+')'; }
+        try{ new AudioData({format:'f32',sampleRate:audioPcm.sampleRate,numberOfFrames:1,numberOfChannels:1,timestamp:0,data:new Float32Array(1)}).close(); audioFmt='f32'; }
+        catch(e2){ audioPcm=null; audioNote='AudioData not supported here ('+(e&&e.message||e)+')'; }
       }
     }
 
@@ -1054,7 +1058,7 @@ async function makeVideo(){
       target:new ArrayBufferTarget(),
       fastStart:'in-memory', // moov atom up front → uploads/streams cleanly
       video:{codec:'avc',width:cv.width,height:cv.height},
-      audio:audioBuf?{codec:'aac',numberOfChannels:1,sampleRate:audioBuf.sampleRate}:undefined,
+      audio:audioPcm?{codec:'aac',numberOfChannels:1,sampleRate:audioPcm.sampleRate}:undefined,
     });
     let encErr=null;
     videoEncoder=new VideoEncoder({
@@ -1064,14 +1068,14 @@ async function makeVideo(){
     // avc:{format:'avc'} → length-prefixed (avcC) chunks, which mp4-muxer needs.
     videoEncoder.configure({codec,width:cv.width,height:cv.height,bitrate:5000000,framerate:ENC_FPS,avc:{format:'avc'}});
 
-    if(audioBuf){
+    if(audioPcm){
       try{
         audioEncoder=new AudioEncoder({
           output:(chunk,meta)=>{ audioChunks++; muxer.addAudioChunk(chunk,meta); },
           error:e=>{ console.error('audio encoder error',e); },
         });
-        audioEncoder.configure({codec:'mp4a.40.2',numberOfChannels:1,sampleRate:audioBuf.sampleRate,bitrate:128000});
-      }catch(e){ audioEncoder=null; audioBuf=null; audioNote='audio encoder setup failed ('+(e&&e.message||e)+')'; }
+        audioEncoder.configure({codec:'mp4a.40.2',numberOfChannels:1,sampleRate:audioPcm.sampleRate,bitrate:128000});
+      }catch(e){ audioEncoder=null; audioPcm=null; audioNote='audio encoder setup failed ('+(e&&e.message||e)+')'; }
     }
 
     // 3) Render each frame deterministically → VideoFrame → encoder.
@@ -1089,9 +1093,9 @@ async function makeVideo(){
     }
 
     // 4) Feed the audio samples to the AAC encoder (mono, in ~1024-sample chunks).
-    if(audioBuf&&audioEncoder){
+    if(audioPcm&&audioEncoder){
       try{
-        const chData=audioBuf.getChannelData(0), sr=audioBuf.sampleRate, CHUNK=1024;
+        const chData=audioPcm.data, sr=audioPcm.sampleRate, CHUNK=1024;
         for(let off=0;off<chData.length;off+=CHUNK){
           const n=Math.min(CHUNK,chData.length-off);
           const ad=new AudioData({format:audioFmt,sampleRate:sr,numberOfFrames:n,numberOfChannels:1,timestamp:Math.round(off/sr*1e6),data:chData.slice(off,off+n)});
@@ -1104,7 +1108,7 @@ async function makeVideo(){
     await videoEncoder.flush();
     if(audioEncoder) await audioEncoder.flush();
     if(encErr) throw encErr;
-    if(audioBuf&&audioChunks===0&&!audioNote) audioNote='audio encoder produced no output';
+    if(audioPcm&&audioChunks===0&&!audioNote) audioNote='audio encoder produced no output';
     muxer.finalize();
     const blob=new Blob([muxer.target.buffer],{type:'video/mp4'});
 
