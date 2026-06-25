@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Trivia Gauntlet – Social Studio</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.10.1/dist/ffmpeg.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mp4-muxer@5.1.5/build/mp4-muxer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -608,9 +608,9 @@ Tag a friend who thinks they know ${title} 👇
       {label:'Destination link', multiline:false, value:challengeLink(slug)},
     ],
     youtube:[
-      {label:'Caption + hashtags', multiline:true, hint:'YouTube Shorts', value:
-`${title} Trivia 🧠 How many can you get right? #Shorts
-Could you score ${N}/${N}? Test yourself!
+      {label:'Title', multiline:false, hint:'YouTube Shorts · max ~100 chars', value:`${title} Trivia 🧠 Can You Score ${N}/${N}? #Shorts`},
+      {label:'Description', multiline:true, value:
+`How well do you know ${title}? Test yourself with this quick ${cat} trivia quiz — could you get them all right?
 
 🎮 Play this quiz free → ${challengeLink(slug)}
 📲 Or get the app — search "Trivia Gauntlet" on the App Store & Google Play
@@ -905,41 +905,32 @@ function drawOutro(ctx,p,variant){
 
 // ---------- make video (question → answer reveal) ----------
 // We encode a REAL H.264 .mp4 (TikTok/Reels/Shorts all accept it; webm did not
-// upload to TikTok). Frames are rendered deterministically — not captured in
-// real time — so a slow phone just takes longer, it never drops/judders frames.
-const ENC_FPS=15; // slideshow-style content: 15fps looks fine and keeps mobile memory sane
+// upload to TikTok) using the browser's native WebCodecs encoder + the pure-JS
+// mp4-muxer. No SharedArrayBuffer needed → works on GitHub Pages (ffmpeg.wasm
+// does NOT). Frames are rendered deterministically — not captured in real time —
+// so a slow phone just takes longer, it never drops/judders frames.
+// Requires WebCodecs: iOS 16.4+ Safari, modern Chrome/Edge/Android.
+const ENC_FPS=15; // slideshow-style content: 15fps looks fine and keeps memory sane
 
-// Single cached ffmpeg.wasm instance (the core is ~25MB; load it once per session).
-// Single-threaded core → no SharedArrayBuffer / COOP-COEP headers needed (works on GitHub Pages).
-let _ffmpeg=null, _ffmpegLoading=null;
-async function getFFmpeg(onProgress){
-  if(_ffmpeg) return _ffmpeg;
-  if(_ffmpegLoading) return _ffmpegLoading;
-  if(!window.FFmpeg) throw new Error('encoder-unavailable');
-  const {createFFmpeg}=window.FFmpeg;
-  const ff=createFFmpeg({log:false,corePath:'https://unpkg.com/@ffmpeg/core@0.10.0/dist/ffmpeg-core.js'});
-  _ffmpegLoading=ff.load().then(()=>{ _ffmpeg=ff; _ffmpegLoading=null; return ff; })
-    .catch(e=>{ _ffmpegLoading=null; throw e; });
-  if(onProgress) onProgress();
-  return _ffmpegLoading;
+function videoSupported(){
+  return typeof VideoEncoder!=='undefined' && typeof AudioEncoder!=='undefined'
+      && typeof VideoFrame!=='undefined' && typeof AudioData!=='undefined' && !!window.Mp4Muxer;
+}
+// Pick an H.264 codec string the encoder actually supports at our resolution.
+async function pickVideoCodec(w,h){
+  const cands=['avc1.640028','avc1.4D0028','avc1.42E01E','avc1.42001f'];
+  for(const codec of cands){
+    try{
+      const r=await VideoEncoder.isConfigSupported({codec,width:w,height:h,bitrate:5000000,framerate:ENC_FPS});
+      if(r&&r.supported) return codec;
+    }catch(e){}
+  }
+  return 'avc1.42001f';
 }
 
-// Render the WebAudio countdown ticks + reveal ding OFFLINE into a 16-bit PCM WAV,
-// so ffmpeg can mux it as the audio track (real-time capture is gone).
-function audioBufferToWav(buf){
-  const numCh=buf.numberOfChannels, len=buf.length, sr=buf.sampleRate;
-  const out=new DataView(new ArrayBuffer(44+len*numCh*2));
-  const wstr=(o,s)=>{ for(let i=0;i<s.length;i++) out.setUint8(o+i,s.charCodeAt(i)); };
-  wstr(0,'RIFF'); out.setUint32(4,36+len*numCh*2,true); wstr(8,'WAVE');
-  wstr(12,'fmt '); out.setUint32(16,16,true); out.setUint16(20,1,true); out.setUint16(22,numCh,true);
-  out.setUint32(24,sr,true); out.setUint32(28,sr*numCh*2,true); out.setUint16(32,numCh*2,true); out.setUint16(34,16,true);
-  wstr(36,'data'); out.setUint32(40,len*numCh*2,true);
-  const chans=[]; for(let c=0;c<numCh;c++) chans.push(buf.getChannelData(c));
-  let off=44;
-  for(let i=0;i<len;i++) for(let c=0;c<numCh;c++){ let s=Math.max(-1,Math.min(1,chans[c][i])); out.setInt16(off,s<0?s*0x8000:s*0x7FFF,true); off+=2; }
-  return new Uint8Array(out.buffer);
-}
-async function renderAudioWav(segs,COUNTDOWN,totalMs){
+// Render the WebAudio countdown ticks + reveal ding OFFLINE into an AudioBuffer
+// (mono 44.1k), which we then feed to the AAC AudioEncoder.
+async function renderAudioBuffer(segs,totalMs){
   const OAC=window.OfflineAudioContext||window.webkitOfflineAudioContext;
   if(!OAC) return null;
   const sr=44100, ac=new OAC(1,Math.ceil(sr*totalMs/1000),sr);
@@ -957,7 +948,7 @@ async function renderAudioWav(segs,COUNTDOWN,totalMs){
     if(s.type==='hold'&&s.count){ [3000,2000,1000].forEach(L=>tick((s.start+s.dur-L)/1000)); }
     else if(s.type==='fade'){ ding(s.start/1000); }
   });
-  try{ const rendered=await ac.startRendering(); return audioBufferToWav(rendered); }catch(e){ return null; }
+  try{ return await ac.startRendering(); }catch(e){ return null; }
 }
 
 // Draw the exact frame for elapsed-ms `e` (same logic the old real-time loop used).
@@ -971,28 +962,23 @@ function drawVideoFrameAt(ctx,cv,segs,p,e,COUNTDOWN){
     drawFooterCaption(ctx,'🔗 Link in bio to play');
   } else { const pr=(e-seg.start)/seg.dur; ctx.drawImage(seg.from,0,0,cv.width,cv.height); ctx.globalAlpha=pr; ctx.drawImage(seg.to,0,0,cv.width,cv.height); ctx.globalAlpha=1; drawFooterCaption(ctx,'🔗 Link in bio to play'); }
 }
-const canvasToJpeg=cv=>new Promise(res=>cv.toBlob(b=>res(b),'image/jpeg',0.82));
 
 async function makeVideo(){
   const cards=[...document.querySelectorAll('.card')];
   if(!cards.length) return;
+  if(!videoSupported()){
+    alert('Your browser can’t make videos yet. On iPhone, update to iOS 16.4 or newer and use Safari; on computer, use Chrome or Edge.');
+    return;
+  }
   const ov=g('overlay'), bar=g('ov-bar'), lbl=g('ov-lbl');
-  ov.classList.add('show'); bar.style.width='0'; lbl.textContent='Loading video encoder…';
+  ov.classList.add('show'); bar.style.width='0'; lbl.textContent='Preparing…';
 
-  // Load ffmpeg.wasm (real H.264 .mp4). Best-effort wake-lock just keeps the
-  // screen on so the phone doesn't suspend the tab mid-encode; the encode itself
-  // is deterministic (frame-by-frame), so it can't drop or skip frames.
+  // Best-effort wake-lock keeps the screen on so the phone doesn't suspend the
+  // tab mid-encode; the encode itself is deterministic (frame-by-frame), so it
+  // can't drop or skip frames regardless.
   let wakeLock=null;
   try{ if(navigator.wakeLock) wakeLock=await navigator.wakeLock.request('screen'); }catch(e){}
   const cleanup=()=>{ if(wakeLock){ try{ wakeLock.release(); }catch(e){} wakeLock=null; } };
-  let ff;
-  try{ ff=await getFFmpeg(); }
-  catch(e){
-    console.error('encoder load failed',e);
-    cleanup(); ov.classList.remove('show'); bar.style.width='0';
-    alert('Couldn’t load the video encoder. It downloads ~25MB the first time — if you’re on a slow or restricted connection, try again on Wi-Fi. (Detail: '+(e&&e.message||e)+')');
-    return;
-  }
 
   const p=PALS[palIdx];
 
@@ -1034,38 +1020,67 @@ async function makeVideo(){
   const cv=g('vcanvas'); cv.width=FMT.w; cv.height=FMT.h;
   const ctx=cv.getContext('2d');
 
+  let videoEncoder=null, audioEncoder=null;
   try{
-    // 1) Audio track → WAV (countdown ticks + reveal ding), rendered offline.
-    const wav=await renderAudioWav(segs,COUNTDOWN,total);
+    // 1) Offline-render the audio (countdown ticks + reveal ding).
+    const audioBuf=await renderAudioBuffer(segs,total);
 
-    // 2) Render each frame deterministically and hand it to ffmpeg's filesystem.
+    // 2) Set up the muxer + WebCodecs encoders.
+    const {Muxer,ArrayBufferTarget}=window.Mp4Muxer;
+    const codec=await pickVideoCodec(cv.width,cv.height);
+    const muxer=new Muxer({
+      target:new ArrayBufferTarget(),
+      fastStart:'in-memory', // moov atom up front → uploads/streams cleanly
+      video:{codec:'avc',width:cv.width,height:cv.height},
+      audio:audioBuf?{codec:'aac',numberOfChannels:1,sampleRate:44100}:undefined,
+    });
+    let encErr=null;
+    videoEncoder=new VideoEncoder({
+      output:(chunk,meta)=>muxer.addVideoChunk(chunk,meta),
+      error:e=>{ encErr=e; console.error('video encoder error',e); },
+    });
+    // avc:{format:'avc'} → length-prefixed (avcC) chunks, which mp4-muxer needs.
+    videoEncoder.configure({codec,width:cv.width,height:cv.height,bitrate:5000000,framerate:ENC_FPS,avc:{format:'avc'}});
+
+    if(audioBuf){
+      audioEncoder=new AudioEncoder({
+        output:(chunk,meta)=>muxer.addAudioChunk(chunk,meta),
+        error:e=>{ encErr=e; console.error('audio encoder error',e); },
+      });
+      audioEncoder.configure({codec:'mp4a.40.2',numberOfChannels:1,sampleRate:44100,bitrate:128000});
+    }
+
+    // 3) Render each frame deterministically → VideoFrame → encoder.
     const nFrames=Math.ceil(total/1000*ENC_FPS);
-    lbl.textContent='Rendering frames…';
+    const frameDurUs=Math.round(1e6/ENC_FPS);
+    lbl.textContent='Building video…';
     for(let i=0;i<nFrames;i++){
       drawVideoFrameAt(ctx,cv,segs,p,(i/ENC_FPS)*1000,COUNTDOWN);
-      const jpg=await canvasToJpeg(cv);
-      ff.FS('writeFile','f'+String(i).padStart(5,'0')+'.jpg',new Uint8Array(await jpg.arrayBuffer()));
-      if(i%4===0){ bar.style.width=Math.round(15+(i/nFrames)*55)+'%'; await new Promise(r=>setTimeout(r,0)); }
+      const vf=new VideoFrame(cv,{timestamp:Math.round(i*1e6/ENC_FPS),duration:frameDurUs});
+      videoEncoder.encode(vf,{keyFrame:i%(ENC_FPS*2)===0});
+      vf.close();
+      // Don't let the encode queue grow unbounded on a phone.
+      if(videoEncoder.encodeQueueSize>8) await new Promise(r=>setTimeout(r,8));
+      if(i%4===0){ bar.style.width=Math.round(15+(i/nFrames)*70)+'%'; await new Promise(r=>setTimeout(r,0)); }
     }
-    if(wav) ff.FS('writeFile','audio.wav',wav);
 
-    // 3) Encode H.264 + AAC into a real .mp4.
-    lbl.textContent='Encoding MP4…';
-    ff.setProgress(({ratio})=>{ if(ratio>0&&ratio<=1) bar.style.width=Math.round(70+ratio*28)+'%'; });
-    const args=['-framerate',String(ENC_FPS),'-i','f%05d.jpg'];
-    if(wav) args.push('-i','audio.wav');
-    args.push('-c:v','libx264','-preset','veryfast','-pix_fmt','yuv420p','-movflags','+faststart');
-    if(wav) args.push('-c:a','aac','-b:a','128k','-shortest');
-    args.push('-r',String(ENC_FPS),'out.mp4');
-    await ff.run(...args);
+    // 4) Feed the audio samples to the AAC encoder (mono, in ~1024-sample chunks).
+    if(audioBuf){
+      const ch=audioBuf.getChannelData(0), sr=audioBuf.sampleRate, CHUNK=1024;
+      for(let off=0;off<ch.length;off+=CHUNK){
+        const n=Math.min(CHUNK,ch.length-off);
+        const slice=ch.slice(off,off+n);
+        const ad=new AudioData({format:'f32-planar',sampleRate:sr,numberOfFrames:n,numberOfChannels:1,timestamp:Math.round(off/sr*1e6),data:slice});
+        audioEncoder.encode(ad); ad.close();
+      }
+    }
 
-    const data=ff.FS('readFile','out.mp4');
-    const blob=new Blob([data.buffer],{type:'video/mp4'});
-
-    // 4) Free MEMFS so repeat runs don't pile up.
-    for(let i=0;i<nFrames;i++){ try{ ff.FS('unlink','f'+String(i).padStart(5,'0')+'.jpg'); }catch(e){} }
-    try{ ff.FS('unlink','out.mp4'); }catch(e){}
-    if(wav) try{ ff.FS('unlink','audio.wav'); }catch(e){}
+    lbl.textContent='Finishing MP4…';
+    await videoEncoder.flush();
+    if(audioEncoder) await audioEncoder.flush();
+    if(encErr) throw encErr;
+    muxer.finalize();
+    const blob=new Blob([muxer.target.buffer],{type:'video/mp4'});
 
     // TikTok / Instagram Reels / YouTube Shorts are all 9:16 — the SAME clip. Save
     // one clearly-named copy per ticked platform so each is easy to drag into its
@@ -1084,9 +1099,10 @@ async function makeVideo(){
     bar.style.width='100%';
   }catch(e){
     console.error('video encode failed',e);
-    alert('Sorry — the video failed to encode'+(/memory|alloc|RangeError/i.test(String(e&&e.message))?' (the phone ran out of memory — try fewer cards).':'.'));
+    alert('Sorry — the video failed to make. ('+(e&&e.message||e)+')');
   }finally{
-    try{ ff.setProgress(()=>{}); }catch(e){}
+    try{ if(videoEncoder&&videoEncoder.state!=='closed') videoEncoder.close(); }catch(e){}
+    try{ if(audioEncoder&&audioEncoder.state!=='closed') audioEncoder.close(); }catch(e){}
     cleanup();
     ov.classList.remove('show'); bar.style.width='0';
   }
