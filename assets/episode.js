@@ -335,9 +335,6 @@ async function renderEpisodePage() {
   }
 
   showQuestion(currentIndex);
-
-  // Small 320×50 banner under the gameplay area (web-only, non-premium).
-  if (typeof injectAdsterraBanner === 'function') injectAdsterraBanner(document.getElementById("episodeGameAdSlot"));
 }
 
 document.addEventListener("DOMContentLoaded", () => {

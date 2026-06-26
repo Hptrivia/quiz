@@ -1808,5 +1808,111 @@
     "seoIntro": "This Is Us trivia works because it weaves together past and present to tell an emotional, interconnected story about one family across generations. Fans can be tested on the Pearsons, the timelines, and the show's heartbreaking twists.",
     "seoDetail": "A strong This Is Us quiz can include Jack and Rebecca Pearson, the Big Three Kevin, Kate and Randall, Beth, Toby, Miguel and Nicky, Randall's adoption and his birth father William, Kevin's acting career, Kate's journey, the multiple timelines and flashbacks, the crockpot and the cabin, the major reveals and losses, and the themes of family, memory and love that define the series.",
     "fanQuestions": true
+  },
+  {
+    "slug": "1990s",
+    "title": "1990s",
+    "category": "General",
+    "description": "A nostalgia trivia theme all about the 1990s, covering the music, movies, TV shows, technology, fashion, games and world events that defined the decade.",
+    "image": "",
+    "questionFile": "data/1990s.txt",
+    "seoDetail": "A strong 1990s quiz can include grunge and boy bands, hip-hop's golden era, blockbuster films and indie cinema, sitcoms and cartoons, the rise of the internet and dial-up, game consoles and arcade hits, toys and crazes, fashion trends, sports moments, and the major political and cultural events that shaped the decade. It works because it can move between pop culture, technology and history while tapping into strong nostalgia.",
+    "seoIntro": "1990s trivia works because the decade packed in unforgettable music, movies, TV, games and tech that millions still remember vividly. It blends nostalgia with broad pop-culture and historical knowledge that almost everyone can engage with."
+  },
+  {
+    "slug": "1980s",
+    "title": "1980s",
+    "category": "General",
+    "description": "A nostalgia trivia theme all about the 1980s, covering the music, movies, TV, fashion, technology, toys and world events that defined the decade.",
+    "image": "",
+    "questionFile": "data/1980s.txt",
+    "seoDetail": "A strong 1980s quiz can include synth-pop and hair metal, MTV and music videos, blockbuster films and cult classics, iconic sitcoms and cartoons, early home computers and video games, toys and fads, bold fashion and hairstyles, sporting moments, and the major political and cultural events of the decade. It works because it can move between pop culture, technology and history while drawing on powerful nostalgia.",
+    "seoIntro": "1980s trivia works because the decade gave us era-defining music, movies, TV and technology that still shape pop culture today. It mixes nostalgia with broad knowledge that appeals across generations."
+  },
+  {
+    "slug": "2000s",
+    "title": "2000s",
+    "category": "General",
+    "description": "A nostalgia trivia theme all about the 2000s, covering the music, movies, TV, internet culture, gadgets, games and world events that defined the decade.",
+    "image": "",
+    "questionFile": "data/2000s.txt",
+    "seoDetail": "A strong 2000s quiz can include pop and emo, reality TV and teen dramas, blockbuster franchises, early social media and viral internet culture, MP3 players and flip phones, game consoles and online gaming, fashion trends, celebrity moments, and the major news and cultural events of the decade. It works because it can move between pop culture, technology and history while tapping into millennial nostalgia.",
+    "seoIntro": "2000s trivia works because the decade combined a music and movie boom with the rise of the internet, social media and modern gadgets. It blends nostalgia with broad pop-culture and tech knowledge that resonates strongly with younger players."
+  },
+  {
+    "slug": "2010s",
+    "title": "2010s",
+    "category": "General",
+    "description": "A nostalgia trivia theme all about the 2010s, covering the music, movies, streaming TV, social media, viral moments, games and world events that defined the decade.",
+    "image": "",
+    "questionFile": "data/2010s.txt",
+    "seoDetail": "A strong 2010s quiz can include chart-topping pop and hip-hop, superhero blockbusters, the streaming boom and binge TV, the rise of Instagram, TikTok, YouTube and memes, smartphones and apps, esports and mobile games, viral trends, and the major political and cultural events of the decade. It works because it can move between pop culture, technology and recent history that players lived through.",
+    "seoIntro": "2010s trivia works because the decade was defined by streaming, social media, viral moments and a wave of hit music and movies that players remember firsthand. It blends recent nostalgia with broad pop-culture and tech knowledge."
+  },
+  {
+    "slug": "fallout",
+    "title": "Fallout",
+    "category": "TV",
+    "description": "A post-apocalyptic trivia theme built around the Fallout TV series, covering the wasteland, Vaults, factions, characters and the dark, retro-futuristic world adapted from the games.",
+    "image": "",
+    "questionFile": "data/fallout.txt",
+    "seoDetail": "A strong Fallout quiz can include Lucy, the Ghoul, Maximus and the Brotherhood of Steel, Vault 33 and the Vault-Tec system, the NCR and the wasteland factions, the bombs and the world before the war, the retro-futuristic technology, Nuka-Cola and Pip-Boys, and the connections between the show and the games. It works because it blends a rich post-apocalyptic setting with characters, lore and mystery.",
+    "seoIntro": "Fallout trivia works because the series brings the games' retro-futuristic wasteland to life with memorable characters, Vaults, factions and dark humour. Fans can be tested on the show's story, its world-building and its links to the wider Fallout universe.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "westworld",
+    "title": "Westworld",
+    "category": "TV",
+    "description": "A sci-fi trivia theme built around Westworld, covering the hosts, the parks, the timelines, the mysteries and the questions about consciousness and free will that drive the series.",
+    "image": "",
+    "questionFile": "data/westworld.txt",
+    "seoDetail": "A strong Westworld quiz can include Dolores, Maeve, Bernard, the Man in Black, Ford and Arnold, the host uprising, the maze and the multiple timelines, Delos and the parks, the Forge and the simulations, consciousness and the bicameral mind, and the major twists and reveals across the seasons. It works because it combines a complex puzzle-box narrative with deep characters and big philosophical ideas.",
+    "seoIntro": "Westworld trivia works because the series mixes a twisting puzzle-box story with hosts, timelines and questions about consciousness and control. Fans can be tested on the characters, the parks, the mysteries and the show's many reveals.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "doctor-who",
+    "title": "Doctor Who",
+    "category": "TV",
+    "description": "A sci-fi trivia theme built around Doctor Who, covering the Doctor's many regenerations, companions, the TARDIS, classic enemies and decades of time-travelling adventures.",
+    "image": "",
+    "questionFile": "data/who.txt",
+    "seoDetail": "A strong Doctor Who quiz can include the different incarnations of the Doctor, companions like Sarah Jane, Rose, Donna, Amy and Clara, the TARDIS and sonic screwdriver, Time Lords and Gallifrey, regeneration, classic enemies such as the Daleks, Cybermen, the Master and Weird Angels, iconic episodes and showrunners, and the long history across the classic and modern eras. It works because it spans decades of stories, characters and lore.",
+    "seoIntro": "Doctor Who trivia works because the show spans decades of regenerations, companions, monsters and time-travel adventures across the classic and modern eras. Fans can be tested on the Doctor, the TARDIS, the enemies and the show's rich history.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "spongebob-squarepants",
+    "title": "SpongeBob SquarePants",
+    "category": "TV",
+    "description": "A cartoon trivia theme built around SpongeBob SquarePants, covering Bikini Bottom, the Krusty Krab, the characters and the quotable, chaotic humour of the long-running series.",
+    "image": "",
+    "questionFile": "data/spongebob.txt",
+    "seoDetail": "A strong SpongeBob SquarePants quiz can include SpongeBob, Patrick, Squidward, Mr. Krabs, Sandy, Plankton and Gary, the Krusty Krab and the Krabby Patty secret formula, the Chum Bucket, Bikini Bottom, jellyfishing and the boating school, classic episodes and running gags, memorable quotes and memes, and the movies. It works because it blends beloved characters with endlessly quotable, absurd humour.",
+    "seoIntro": "SpongeBob SquarePants trivia works because the show's characters, Bikini Bottom setting and quotable humour are loved across generations. Fans can be tested on the Krusty Krab, the cast, the episodes and the endless memes.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "two-and-a-half-men",
+    "title": "Two and a Half Men",
+    "category": "Sitcoms",
+    "description": "A sitcom trivia theme built around Two and a Half Men, following Charlie, Alan and Jake in the Malibu beach house through the show's many seasons and cast changes.",
+    "image": "",
+    "questionFile": "data/half.txt",
+    "seoDetail": "A strong Two and a Half Men quiz can include Charlie Harper, Alan and Jake, Walden Schmidt, Berta, Evelyn, Judith, Rose and Charlie's many girlfriends, the Malibu beach house, Charlie's jingle-writing career, the running jokes and catchphrases, the major cast changes and the show's long run. It works because it combines well-known characters, sharp comedy and a famously eventful behind-the-scenes history.",
+    "seoIntro": "Two and a Half Men trivia works because the long-running sitcom is packed with memorable characters, running jokes and a famously dramatic cast history. Fans can be tested on the Harpers, the beach house and the show's many seasons.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "curb-your-enthusiasm",
+    "title": "Curb Your Enthusiasm",
+    "category": "Sitcoms",
+    "description": "A sitcom trivia theme built around Curb Your Enthusiasm, following Larry David's awkward social disasters, feuds and improvised cringe comedy across the series.",
+    "image": "",
+    "questionFile": "data/curb.txt",
+    "seoDetail": "A strong Curb Your Enthusiasm quiz can include Larry David, Cheryl, Jeff and Susie Greene, Leon, Richard Lewis and the celebrity guests, the social rules and faux pas Larry breaks, iconic episodes and storylines, catchphrases like 'pretty, pretty good', the improvised style, the Seinfeld reunion arc, and the running feuds that drive each season. It works because it blends a famous creator with sharp, cringe-inducing observational comedy.",
+    "seoIntro": "Curb Your Enthusiasm trivia works because Larry David's improvised social disasters, feuds and faux pas are endlessly quotable. Fans can be tested on the characters, the episodes and the cringe comedy that defines the show.",
+    "fanQuestions": true
   }
 ]
