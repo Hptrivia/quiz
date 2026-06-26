@@ -860,6 +860,11 @@ async function renderPlayPage() {
     return;
   }
 
+  // Map of which themes have Episode Mode, so the result screen can offer this
+  // theme's own Episode Mode as the first related card when available.
+  let episodeThemesMap = {};
+  try { episodeThemesMap = await fetchJSON("data/episode_themes.json"); } catch (e) { episodeThemesMap = {}; }
+
   if (typeof gtag === "function") {
   gtag("event", "page_view", {
     page_title: `Play Quiz - ${theme.title}`,
@@ -1127,10 +1132,20 @@ function renderResult() {
 
   const relatedThemes = getRelatedThemes(themes, theme, 4);
 
+  // If this theme has Episode Mode, show it as the FIRST related card (then the
+  // mashup, then the other themes). This adds one card to the total.
+  const hasEpisode = !!episodeThemesMap[theme.slug];
+  const episodeCardHtml = hasEpisode ? `
+      <a class="card card-mix" href="episode.html?theme=${theme.slug}&episode=1">
+        <h3>${theme.title} Episode Mode</h3>
+        <span class="card-mix-sub">Play episode by episode</span>
+      </a>` : "";
+
 const relatedThemesHtml = `
   <div class="theme-related-quizzes" data-reward-gate="1">
     <h3>Related Quizzes</h3>
     <div class="grid">
+      ${episodeCardHtml}
       <a class="card card-mix" href="mashup.html?preset=${theme.slug}&mode=marathon">
         <h3>${theme.title} + other themes</h3>
         <span class="card-mix-sub">Play as a mashup</span>
