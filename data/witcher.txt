@@ -83,6 +83,69 @@
     "options": ["Aard", "Yrden", "Igni", "Quen"],
     "answer": "Aard"
   },
+    {
+    "id": "tw3-hard-0001",
+    "question": "Who does Dudu Biberveldt NOT impersonate during the game?",
+    "options": ["Whoreson Junior", "Caleb Menge", "Geralt", "Ciri"],
+    "answer": "Ciri",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw3-hard-0002",
+    "question": "Which of these is NOT one of the Ladies of the Wood?",
+    "options": ["Brewess", "Whispess", "Creavess", "Weavess"],
+    "answer": "Creavess",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw3-hard-0003",
+    "question": "Where does Geralt first meet Yennefer in The Witcher 3?",
+    "options": ["White Orchard", "Crow's Perch", "Novigrad", "Kaer Trolde"],
+    "answer": "White Orchard",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw3-hard-0004",
+    "question": "Which potion completely cleanses Geralt's body of toxicity?",
+    "options": ["White Honey", "Swallow", "Thunderbolt", "Golden Oriole"],
+    "answer": "White Honey",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw3-hard-0005",
+    "question": "What level is required to equip Mastercrafted Witcher gear?",
+    "options": ["30", "32", "34", "36"],
+    "answer": "34",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw3-hard-0006",
+    "question": "Which animal symbolizes the Kingdom of Redania?",
+    "options": ["Eagle", "Lion", "Wolf", "Griffin"],
+    "answer": "Eagle",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw3-hard-0007",
+    "question": "Which type of creature is most vulnerable to the Yrden Sign?",
+    "options": ["Specters", "Draconids", "Necrophages", "Relicts"],
+    "answer": "Specters",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw3-hard-0008",
+    "question": "What is the strength value of the Geralt of Rivia and Ciri hero cards in Gwent?",
+    "options": ["10", "12", "15", "20"],
+    "answer": "15",
+    "difficulty": "hard"
+  },
+  {
+    "id": "tw3-hard-0009",
+    "question": "Which of these is NOT a Cursed One?",
+    "options": ["Botchling", "Werewolf", "Berserker", "Doppler"],
+    "answer": "Doppler",
+    "difficulty": "hard"
+  },
   {
     "id": "w3-012",
     "difficulty": "easy",
