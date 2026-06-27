@@ -261,8 +261,6 @@ async function renderMultiThemeChallenge() {
     `;
     document.getElementById("mashupChallengeBreakdown").appendChild(renderMashupThemeBreakdown(themeScores, selectedThemes, colorBySlug));
     injectMashupResultAd(document.getElementById("mashupChallengeAdSlot"));
-    if (safeRound < CHAL_WEB_FREE_ROUNDS && typeof injectMonetagVignette === 'function') injectMonetagVignette();
-    if (webWalled && typeof injectMonetagPopunder === 'function') injectMonetagPopunder();
     if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
     if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Reveal Answers', 'Reveal Answers', 'See the correct answer for every question you missed — free in the app, no limits.');
     const msInput = document.getElementById("mashupChallengeSearchInput");
@@ -745,8 +743,6 @@ async function renderChallengePage() {
     `;
 
 
-    if (safeRound < CHAL_WEB_FREE_ROUNDS && typeof injectMonetagVignette === 'function') injectMonetagVignette();
-    if (webWalled && typeof injectMonetagPopunder === 'function') injectMonetagPopunder();
     if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
     if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Reveal Answers', 'Reveal Answers', 'See the correct answer for every question you missed — free in the app, no limits.');
 

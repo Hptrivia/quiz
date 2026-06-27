@@ -435,36 +435,6 @@ function calcMashupTotalBatches(pools, batchSize) {
 }
 function injectMashupResultAd(container) {}
 
-// Monetag in-page VIGNETTE (full-screen dismissible overlay, NOT a window.open —
-// so it fires inside Reddit's in-app webview and never breaks the install tap).
-// Auto-shows ~3-5s after inject; frequency is capped in the Monetag dashboard
-// (1/user/hr), so it effectively fires once. Web-only, non-premium, no code cap.
-function injectMonetagVignette() {
-  if (isPremiumUser()) return;
-  if (typeof isLimitedWeb === 'function' ? !isLimitedWeb() : (window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative))) return;
-  const s = document.createElement('script');
-  s.dataset.zone = '10961427';
-  s.src = 'https://n6wxm.com/vignette.min.js';
-  ([document.documentElement, document.body].filter(Boolean).pop()).appendChild(s);
-}
-
-// Monetag POPUNDER (zone 10962017). Fires a window.open on the user's first
-// touch/click of the page. Used only on the Challenge round-3 install wall:
-// the wall auto-redirects to the store after 4s for passive users (the install
-// path), and that same touch which triggers the popunder also cancels the
-// redirect — so we only monetize people who interrupt the install flow anyway.
-// Web-only, non-premium. In Reddit's in-app webview it fires and covers the
-// app screen (confirmed), so a touch monetizes; track revenue via the Monetag
-// dashboard (zone 10962017), not user complaints (the format is silent/passive).
-function injectMonetagPopunder() {
-  if (isPremiumUser()) return;
-  if (typeof isLimitedWeb === 'function' ? !isLimitedWeb() : (window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative))) return;
-  const s = document.createElement('script');
-  s.dataset.zone = '10962017';
-  s.src = 'https://al5sm.com/tag.min.js';
-  ([document.documentElement, document.body].filter(Boolean).pop()).appendChild(s);
-}
-
 // ── Mid-quiz resume ──────────────────────────────────────────────────────────
 // Long rounds (marathon = 30 questions, episode = 30+) are easy to lose on a
 // reload or app-close. These helpers persist the in-progress question set,
