@@ -1,7 +1,7 @@
-// Challenge mode: on limited web (mobile + desktop), the first 3 rounds (30
-// questions) are free; finishing round 3 pops the app-install wall. This is
+// Challenge mode: on limited web (mobile + desktop), the first 2 rounds (20
+// questions) are free; finishing round 2 pops the app-install wall. This is
 // challenge-specific and independent of the global 30/day question limit.
-const CHAL_WEB_FREE_ROUNDS = 3;
+const CHAL_WEB_FREE_ROUNDS = 2;
 const CHAL_WEB_LIMIT_Q = CHAL_WEB_FREE_ROUNDS * 10;
 // True when this round's result screen should show the install wall instead of
 // a Next-Round button (web only — the native app never walls, it shows ads).
