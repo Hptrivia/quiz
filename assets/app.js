@@ -433,7 +433,67 @@ function calcMashupTotalBatches(pools, batchSize) {
     return Math.max(emPer > 0 ? Math.ceil(pool.em.length / emPer) : 0, hePer > 0 ? Math.ceil(pool.he.length / hePer) : 0);
   })));
 }
-function injectMashupResultAd(container) {}
+// ── Adcash banners (web-only, non-premium) ──────────────────────────────────
+// Single unified loader (acscdn.com/script/aclib.js) then per-zone runBanner.
+// Appearance/frequency are set in the Adcash DASHBOARD, not here. Adcash renders
+// the banner into the calling <script>'s parent element, so we drop an inline
+// script INSIDE a holder div and let it render there.
+const ADCASH_RESULT_BANNER_ZONE = '11539338';
+const ADCASH_QUIZ_BANNER_ZONE = '11539590'; // 300x100 quiz-page banner
+const ADCASH_INTERSTITIAL_ZONE_R2 = '11500390'; // round-2 start
+const ADCASH_INTERSTITIAL_ZONE_R3 = '11539486'; // round-3 start (separate zone so R2's long cap can't block R3)
+let _aclibLoading = false;
+function _loadAclib(cb) {
+  if (window.aclib) { cb(); return; }
+  const waitReady = () => { const t = setInterval(() => { if (window.aclib) { clearInterval(t); cb(); } }, 100); };
+  if (_aclibLoading) { waitReady(); return; }
+  _aclibLoading = true;
+  const s = document.createElement('script');
+  s.src = 'https://acscdn.com/script/aclib.js';
+  s.id = 'aclib';
+  document.head.appendChild(s);
+  waitReady();
+}
+function injectAdcashBanner(container, zoneId) {
+  if (!container || !zoneId) return;
+  if (typeof isLimitedWeb !== 'function' || !isLimitedWeb()) return;
+  _loadAclib(() => {
+    const holder = document.createElement('div');
+    holder.className = 'adcash-banner-slot';
+    holder.style.cssText = 'margin:16px auto;text-align:center;';
+    container.appendChild(holder);
+    const s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.text = `aclib.runBanner({ zoneId: '${zoneId}' });`;
+    holder.appendChild(s);
+  });
+}
+// Result-screen banner (shared by mashup + single-theme challenge results).
+function injectMashupResultAd(container) { injectAdcashBanner(container, ADCASH_RESULT_BANNER_ZONE); }
+// Full-page interstitial — fired at the START of challenge round 2 (page load),
+// a natural between-levels break that doesn't block the round-1 score reward.
+// Appearance/countdown/frequency-cap are all set in the Adcash dashboard.
+let _adcashInterstitialShown = false;
+function injectAdcashInterstitial(round) {
+  if (_adcashInterstitialShown) return;
+  const zoneId = round === 3 ? ADCASH_INTERSTITIAL_ZONE_R3 : ADCASH_INTERSTITIAL_ZONE_R2;
+  if (!zoneId) return;
+  if (typeof isLimitedWeb !== 'function' || !isLimitedWeb()) return;
+  _adcashInterstitialShown = true;
+  _loadAclib(() => { try { aclib.runInterstitial({ zoneId: zoneId }); } catch (e) {} });
+}
+// Popunder — opens the advertiser in a background tab on the next click. Reserved
+// for challenge round 3 only (the final round, before the install wall). Frequency
+// cap is set in the Adcash dashboard. Web-only, non-premium.
+const ADCASH_POP_ZONE = '11540770';
+let _adcashPopShown = false;
+function injectAdcashPop() {
+  if (_adcashPopShown) return;
+  if (!ADCASH_POP_ZONE) return;
+  if (typeof isLimitedWeb !== 'function' || !isLimitedWeb()) return;
+  _adcashPopShown = true;
+  _loadAclib(() => { try { aclib.runPop({ zoneId: ADCASH_POP_ZONE }); } catch (e) {} });
+}
 
 // ── Mid-quiz resume ──────────────────────────────────────────────────────────
 // Long rounds (marathon = 30 questions, episode = 30+) are easy to lose on a
@@ -807,6 +867,10 @@ async function renderMultiThemeMarathon() {
   }
 
   showQuestion(currentIndex);
+  const marathonSlot = document.getElementById("marathonGameAdSlot");
+  if (marathonSlot && typeof injectAdcashBanner === 'function') {
+    injectAdcashBanner(marathonSlot, typeof ADCASH_QUIZ_BANNER_ZONE !== 'undefined' ? ADCASH_QUIZ_BANNER_ZONE : '');
+  }
 }
 
 async function renderPlayPage() {
@@ -1217,6 +1281,10 @@ if (resultSearchInput && resultSearchResults) {
 }
 
   if (!showContinuePrompt) showQuestion(quizState.currentIndex);
+  const marathonSlot = document.getElementById("marathonGameAdSlot");
+  if (marathonSlot && typeof injectAdcashBanner === 'function') {
+    injectAdcashBanner(marathonSlot, typeof ADCASH_QUIZ_BANNER_ZONE !== 'undefined' ? ADCASH_QUIZ_BANNER_ZONE : '');
+  }
 }
 
 /* ---------------- NOTIFY CARD (inline, last round / new PB) ---------------- */

@@ -326,6 +326,12 @@ async function renderWordleMashupMode(themesParam) {
         else advance();
       });
     }
+
+    // 300×250 result banner (web-only, non-premium) — same zone as the challenge/marathon
+    // result screens. Torn down with the panel on the next word (per-word SPA reload).
+    if (typeof injectAdcashBanner === 'function') {
+      injectAdcashBanner(panel, typeof ADCASH_RESULT_BANNER_ZONE !== 'undefined' ? ADCASH_RESULT_BANNER_ZONE : '');
+    }
   }
 
   // ── Submit ────────────────────────────────────────────────────────────────
@@ -892,6 +898,12 @@ async function renderWordlePage() {
         if (useReward) { adMobShowBanner(); _offerRewardedLifeline('Next Word', advance); }
         else advance();
       });
+    }
+
+    // 300×250 result banner (web-only, non-premium) — same zone as the challenge/marathon
+    // result screens. Torn down with the panel on the next word (per-word SPA reload).
+    if (typeof injectAdcashBanner === 'function') {
+      injectAdcashBanner(panel, typeof ADCASH_RESULT_BANNER_ZONE !== 'undefined' ? ADCASH_RESULT_BANNER_ZONE : '');
     }
   }
 
