@@ -327,11 +327,6 @@ async function renderWordleMashupMode(themesParam) {
       });
     }
 
-    // 300×250 result banner (web-only, non-premium) — same zone as the challenge/marathon
-    // result screens. Torn down with the panel on the next word (per-word SPA reload).
-    if (typeof injectAdcashBanner === 'function') {
-      injectAdcashBanner(panel, typeof ADCASH_RESULT_BANNER_ZONE !== 'undefined' ? ADCASH_RESULT_BANNER_ZONE : '');
-    }
   }
 
   // ── Submit ────────────────────────────────────────────────────────────────
@@ -900,11 +895,6 @@ async function renderWordlePage() {
       });
     }
 
-    // 300×250 result banner (web-only, non-premium) — same zone as the challenge/marathon
-    // result screens. Torn down with the panel on the next word (per-word SPA reload).
-    if (typeof injectAdcashBanner === 'function') {
-      injectAdcashBanner(panel, typeof ADCASH_RESULT_BANNER_ZONE !== 'undefined' ? ADCASH_RESULT_BANNER_ZONE : '');
-    }
   }
 
   // ── Letter Reveals ────────────────────────────────────────────────────────

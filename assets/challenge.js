@@ -90,7 +90,6 @@ async function renderMultiThemeChallenge() {
   const nextRoundLink = document.getElementById("challengeNextRoundLink");
 
   if (roundEl) roundEl.textContent = `Round ${safeRound}`;
-  if ((safeRound === 2 || safeRound === 3) && typeof injectAdcashInterstitial === 'function') injectAdcashInterstitial(safeRound);
   if (nextRoundLink) {
     if (safeRound < totalRounds) {
       nextRoundLink.style.display = "inline-block";
@@ -244,7 +243,6 @@ async function renderMultiThemeChallenge() {
         <a class="secondary-btn" href="contact.html">Report a Question</a>
         ${!isPremiumUser() && (typeof isDesktopWeb === 'function' && isDesktopWeb()) ? `<a class="secondary-btn" href="remove-ads.html">Reveal Answers</a>` : ""}
       </div>
-      <div id="mashupChallengeAdSlot"></div>
       ${replayHtml}
       <div class="result-theme-search">
         <p class="result-theme-search-title">Try another theme</p>
@@ -261,8 +259,6 @@ async function renderMultiThemeChallenge() {
       </div>
     `;
     document.getElementById("mashupChallengeBreakdown").appendChild(renderMashupThemeBreakdown(themeScores, selectedThemes, colorBySlug));
-    injectMashupResultAd(document.getElementById("mashupChallengeAdSlot"));
-    if (safeRound === 3 && typeof injectAdcashPop === 'function') injectAdcashPop();
     if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
     if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Reveal Answers', 'Reveal Answers', 'See the correct answer for every question you missed — free in the app, no limits.');
     const msInput = document.getElementById("mashupChallengeSearchInput");
@@ -324,10 +320,6 @@ async function renderMultiThemeChallenge() {
   }
 
   showQuestion(0);
-  const gameSlot = document.getElementById("challengeGameAdSlot");
-  if (gameSlot && typeof injectAdcashBanner === 'function') {
-    injectAdcashBanner(gameSlot, typeof ADCASH_QUIZ_BANNER_ZONE !== 'undefined' ? ADCASH_QUIZ_BANNER_ZONE : '');
-  }
 }
 
 async function renderChallengePage() {
@@ -436,7 +428,6 @@ async function renderChallengePage() {
     shuffledQuestions = (allRounds[safeRound - 1] || []).map(q => shuffleQuestionOptions(q));
   }
 
-  if ((safeRound === 2 || safeRound === 3) && typeof injectAdcashInterstitial === 'function') injectAdcashInterstitial(safeRound);
 
   if (nextRoundLink) {
     if (!isReplay && safeRound < totalRounds) {
@@ -737,7 +728,6 @@ async function renderChallengePage() {
         <a class="secondary-btn" href="contact.html">Report a Question</a>
         ${!isPremiumUser() && (typeof isDesktopWeb === 'function' && isDesktopWeb()) ? `<a class="secondary-btn" href="remove-ads.html?theme=${theme.slug}">Reveal Answers</a>` : ""}
       </div>
-      <div id="challengeResultAdSlot"></div>
       ${replayHtml}
       ${notifyHtml}
     </div>
@@ -751,8 +741,6 @@ async function renderChallengePage() {
         ${relatedThemesHtml}
     `;
 
-    if (typeof injectMashupResultAd === 'function') injectMashupResultAd(document.getElementById("challengeResultAdSlot"));
-    if (safeRound === 3 && typeof injectAdcashPop === 'function') injectAdcashPop();
     if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
     if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Reveal Answers', 'Reveal Answers', 'See the correct answer for every question you missed — free in the app, no limits.');
 
@@ -796,10 +784,6 @@ async function renderChallengePage() {
   }
 
   if (!showContinuePrompt) showQuestion(0);
-  const gameSlot = document.getElementById("challengeGameAdSlot");
-  if (gameSlot && typeof injectAdcashBanner === 'function') {
-    injectAdcashBanner(gameSlot, typeof ADCASH_QUIZ_BANNER_ZONE !== 'undefined' ? ADCASH_QUIZ_BANNER_ZONE : '');
-  }
 }
 
 // Clickable "copy share link" pill on the challenge result screen — copies the

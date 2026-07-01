@@ -192,7 +192,6 @@ async function renderMultiThemeSurvival() {
           <div id="mashupSurvivalSearchResults" class="search-results"></div>
         </div>
       </div>
-      <div id="mashupSurvivalAdSlot"></div>
       <div class="theme-related-quizzes">
         <h3>Play these themes individually</h3>
         <div class="grid">
@@ -201,7 +200,6 @@ async function renderMultiThemeSurvival() {
       </div>
     `;
     document.getElementById("mashupSurvivalBreakdown").appendChild(renderMashupThemeBreakdown(themeScores, selectedThemes, colorBySlug));
-    injectMashupResultAd(document.getElementById("mashupSurvivalAdSlot"));
     if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Unlimited Lifelines', 'Unlimited Lifelines', 'Use 50-50 and Call a Friend as often as you like — free in the app, no limits.');
     const msInput = document.getElementById("mashupSurvivalSearchInput");
     const msResults = document.getElementById("mashupSurvivalSearchResults");
