@@ -259,13 +259,6 @@ async function renderMultiThemeChallenge() {
         </div>
       </div>
     `;
-    // Adsterra popunder on the round-2 result screen (web only, non-premium).
-    if (safeRound === 2 && typeof isLimitedWeb === 'function' && isLimitedWeb() && !window._chalPopunderDone) {
-      window._chalPopunderDone = true;
-      var _pop = document.createElement('script');
-      _pop.src = 'https://wraththreat.com/70/cb/2b/70cb2b8046084e4d2a20f7c4e8fe6dda.js';
-      document.head.appendChild(_pop);
-    }
     document.getElementById("mashupChallengeBreakdown").appendChild(renderMashupThemeBreakdown(themeScores, selectedThemes, colorBySlug));
     if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
     if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Reveal Answers', 'Reveal Answers', 'See the correct answer for every question you missed — free in the app, no limits.');
@@ -749,14 +742,6 @@ async function renderChallengePage() {
         </div>
         ${relatedThemesHtml}
     `;
-
-    // Adsterra popunder on the round-2 result screen (web only, non-premium).
-    if (safeRound === 2 && typeof isLimitedWeb === 'function' && isLimitedWeb() && !window._chalPopunderDone) {
-      window._chalPopunderDone = true;
-      var _pop = document.createElement('script');
-      _pop.src = 'https://wraththreat.com/70/cb/2b/70cb2b8046084e4d2a20f7c4e8fe6dda.js';
-      document.head.appendChild(_pop);
-    }
 
     if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
     if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Reveal Answers', 'Reveal Answers', 'See the correct answer for every question you missed — free in the app, no limits.');
