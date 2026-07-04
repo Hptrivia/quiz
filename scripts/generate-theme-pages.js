@@ -265,14 +265,14 @@ const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
 
       
       <div class="grid">
-        <a class="card" href="../play.html?theme=${slug}">
-          <h3>Marathon Mode</h3>
-          <p>30-question rounds</p>
-        </a>
-
         <a class="card" href="../challenge.html?theme=${slug}&round=1">
           <h3>Challenge Mode</h3>
           <p>10-question quick rounds</p>
+        </a>
+
+        <a class="card" href="../play.html?theme=${slug}">
+          <h3>Marathon Mode</h3>
+          <p>30-question rounds</p>
         </a>
 
         <a class="card" href="../survival.html?theme=${slug}">
