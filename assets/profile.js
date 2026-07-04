@@ -725,8 +725,10 @@ function _watchForWallRedirect() {
       countEl.textContent = n;
       if (n <= 0) {
         // Passive auto-redirect (nobody tapped) — log under its own id so it's
-        // distinguishable from an actual banner/button tap in the data.
-        trackPromoClick('wall_auto_redirect', null);
+        // distinguishable from an actual banner/button tap in the data. This fires
+        // for EVERY wall view, so sample 1-in-50 to keep the table small (multiply
+        // the count by 50 when reading); real taps are logged unsampled.
+        if (Math.random() < 0.02) trackPromoClick('wall_auto_redirect', null);
         window.location.href = url;
         return;
       }
