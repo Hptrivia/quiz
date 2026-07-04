@@ -2151,3 +2151,46 @@ body.in-app .homepage-intro,
 body.in-app .category-intro-panel .category-intro-text,
 body.in-app .theme-sample-questions,
 body.in-app .theme-sample-questions ~ p { display: none; }
+
+/* Rotating "more themes in the app" house-ad under the score (limited web only,
+   injected by assets/promo-banner.js). Styled to read as part of the quiz UI, not
+   an ad: subtle card, muted heading, theme names as soft chips. */
+.quiz-theme-promo {
+  margin: 14px auto 0;
+  max-width: 520px;
+  padding: 12px 14px;
+  border: 1.5px solid var(--card-hover-border, #3b82f6);
+  border-radius: 12px;
+  /* Tinted toward the accent so it lifts off the quiz background and reads as a
+     deliberate call-out, not part of the question card. */
+  background: rgba(59, 130, 246, 0.12);
+  text-align: center;
+}
+.quiz-theme-promo .qtp-head {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--card-hover-border, #3b82f6);
+  margin-bottom: 9px;
+}
+.quiz-theme-promo .qtp-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  justify-content: center;
+}
+.quiz-theme-promo .qtp-chip {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--card-hover-border, #3b82f6);
+  border: 1px solid var(--card-hover-border, #3b82f6);
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.quiz-theme-promo .qtp-chip:hover {
+  filter: brightness(1.12);
+}

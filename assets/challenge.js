@@ -110,6 +110,7 @@ async function renderMultiThemeChallenge() {
     const slide = slidesContainer.querySelector(`.question-slide[data-index="${index}"]`);
     if (slide) { slide.classList.add("active"); slide.style.display = "block"; slide.scrollIntoView({ behavior: "smooth", block: "start" }); }
     if (scoreEl) scoreEl.textContent = `Score: ${score}`;
+    if (window.TGPromo) TGPromo.render(slide, roundQuestions[index] && roundQuestions[index]._themeSlug);
   }
 
   if (isPremiumUser()) {
@@ -540,6 +541,7 @@ async function renderChallengePage() {
     }
     scoreEl.textContent = `Score: ${state.score}`;
     state.selectedAnswer = null;
+    if (window.TGPromo) TGPromo.render(slide, theme && theme.slug);
   }
 
   if (isPremiumUser()) {

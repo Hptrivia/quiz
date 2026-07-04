@@ -211,6 +211,7 @@ async function renderEpisodePage() {
       slide.scrollIntoView({ behavior: "smooth", block: "start" });
     }
     scoreEl.textContent = `Score: ${score}`;
+    if (window.TGPromo) TGPromo.render(slide, theme && theme.slug);
   }
 
   // Pre-render all question slides

@@ -590,6 +590,7 @@ async function renderMultiThemeMarathon() {
     if (prev) { prev.classList.remove("active"); prev.classList.add("answered"); prev.style.display = "none"; }
     const slide = slidesContainer.querySelector(`.question-slide[data-index="${index}"]`);
     if (slide) { slide.classList.add("active"); slide.style.display = "block"; slide.appendChild(scoreText); slide.scrollIntoView({ behavior: "smooth", block: "start" }); }
+    if (window.TGPromo) TGPromo.render(slide, pageQuestions[index] && pageQuestions[index]._themeSlug);
   }
 
   if (isPremiumUser()) {
@@ -965,6 +966,7 @@ async function renderPlayPage() {
       slide.scrollIntoView({ behavior: "smooth", block: "start" });
     }
     quizState.selectedAnswer = null;
+    if (window.TGPromo) TGPromo.render(slide, theme && theme.slug);
   }
 
   if (isPremiumUser()) {

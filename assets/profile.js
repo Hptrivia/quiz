@@ -462,6 +462,63 @@ function _storeUrl() {
   return '';
 }
 
+// ── House-ad click tracking ──────────────────────────────────────────────────
+// Logs every tap on an app-install banner / house-ad to Supabase so we can
+// compare which placement actually drives store visits. This tracks CLICKS, not
+// installs — the app store is a black box, so we measure intent (which banner
+// gets tapped, by how many unique sessions) and read installs/day separately
+// from the install table. Web-only: in-app users already installed. Reuses the
+// public anon key already shipped for leaderboards. Fire-and-forget with
+// `keepalive` so the request survives the navigation to the store.
+const _PROMO_TRACK_URL = 'https://avasbapxzgmpcosixgio.supabase.co/rest/v1/promo_clicks';
+const _PROMO_TRACK_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF2YXNiYXB4emdtcGNvc2l4Z2lvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk2NjM4MzUsImV4cCI6MjA5NTIzOTgzNX0.DLNnasmaQ1hdKXb2xqXrTBnBjISo0RxOiwy7TrlN9bg';
+// Stable random id per browser, so we can tell 100 taps from 1 person apart from
+// 100 people (unique sessions vs raw clicks). Lives in localStorage.
+function _promoSessionId() {
+  let s = localStorage.getItem('tg_sid');
+  if (!s) {
+    s = (window.crypto && crypto.randomUUID && crypto.randomUUID())
+      || (Date.now() + '-' + Math.random().toString(36).slice(2));
+    localStorage.setItem('tg_sid', s);
+  }
+  return s;
+}
+function _promoPlatform() {
+  if (isAndroidWeb()) return 'android';
+  if (isIosWeb())     return 'ios';
+  return 'desktop';
+}
+function trackPromoClick(bannerId, themeSlug) {
+  if (_isNative || !bannerId) return; // only browser taps matter
+  try {
+    fetch(_PROMO_TRACK_URL, {
+      method: 'POST',
+      keepalive: true,
+      headers: {
+        apikey: _PROMO_TRACK_KEY,
+        Authorization: 'Bearer ' + _PROMO_TRACK_KEY,
+        'Content-Type': 'application/json',
+        Prefer: 'return=minimal'
+      },
+      body: JSON.stringify({
+        banner_id: bannerId,
+        theme_slug: themeSlug || null,
+        platform: _promoPlatform(),
+        session_id: _promoSessionId()
+      })
+    }).catch(() => {});
+  } catch (e) {}
+}
+// One delegated CAPTURE-phase listener covers every current + future banner: tag
+// the clickable element with data-promo="<banner_id>" (and optionally
+// data-promo-theme="<slug>") and the tap is logged before navigation. Capture
+// phase so it still fires when a banner's own handler calls stopPropagation, and
+// we never preventDefault here so the normal store link / wall still works.
+document.addEventListener('click', (e) => {
+  const el = e.target.closest && e.target.closest('[data-promo]');
+  if (el) trackPromoClick(el.dataset.promo, el.dataset.promoTheme);
+}, true);
+
 function _webStoreLinksHTML() {
   // Secondary "pay to keep playing on web, ad-free" link — the SAME unlock page
   // desktop uses. Shown under the app button on every mobile wall so a visitor who
@@ -469,11 +526,11 @@ function _webStoreLinksHTML() {
   // subtle outlined link so the free app stays the primary call to action.
   const webUnlock = (WEB_PAY_OPTION && WEB_PAY_OPTION_MOBILE) ? `<div class="web-or"><span>or</span></div>
   <a href="/remove-ads.html" class="primary-btn web-unlock-btn">Keep playing on web</a>` : '';
-  if (isAndroidWeb()) return `<a href="${_PLAY_STORE}" class="primary-btn" target="_blank">Get the free app</a>${webUnlock}`;
-  if (isIosWeb())     return `<a href="${_APP_STORE}"  class="primary-btn" target="_blank">Get the free app</a>${webUnlock}`;
+  if (isAndroidWeb()) return `<a href="${_PLAY_STORE}" class="primary-btn" data-promo="wall_store_btn" target="_blank">Get the free app</a>${webUnlock}`;
+  if (isIosWeb())     return `<a href="${_APP_STORE}"  class="primary-btn" data-promo="wall_store_btn" target="_blank">Get the free app</a>${webUnlock}`;
   // Desktop / unknown: a compact button opens the QR in an overlay (keeps the
   // inline wall small), OR pay to unlock all questions right here on desktop.
-  return `<button type="button" class="primary-btn web-qr-trigger" data-qr="${_appUrl()}">📱 Get the free app</button>
+  return `<button type="button" class="primary-btn web-qr-trigger" data-promo="wall_store_btn" data-qr="${_appUrl()}">📱 Get the free app</button>
   <div class="web-or"><span>or</span></div>
   <a href="/remove-ads.html" class="primary-btn web-unlock-btn">Unlock all questions here</a>`;
 }
@@ -666,7 +723,13 @@ function _watchForWallRedirect() {
     const tick = () => {
       if (cancelled) return;
       countEl.textContent = n;
-      if (n <= 0) { window.location.href = url; return; }
+      if (n <= 0) {
+        // Passive auto-redirect (nobody tapped) — log under its own id so it's
+        // distinguishable from an actual banner/button tap in the data.
+        trackPromoClick('wall_auto_redirect', null);
+        window.location.href = url;
+        return;
+      }
       n--; timer = setTimeout(tick, 1000);
     };
     // The auto-redirect serves the passive majority who won't tap anything. But the
@@ -789,6 +852,7 @@ function _injectWebBanner() {
   // wired via the `.web-wall-trigger` listener in _watchForQr().
   const banner = document.createElement('a');
   banner.className = 'android-cta-banner';
+  banner.dataset.promo = 'lobby_banner';
   banner.textContent = '📱 Get 100+ questions for all themes — Click to download the free app →';
   // Navigate in the SAME tab (no target=_blank): more reliable than a new tab,
   // which strict private/incognito modes and in-app webviews often block.
@@ -874,11 +938,11 @@ function _injectProfileAppBanner() {
 function resultAppBannerHTML() {
   if (!isLimitedWeb()) return ''; // non-native, non-premium (covers mobile + desktop web)
   const label = '📱 Download the free app to save your progress &amp; play more questions and topics &rarr;';
-  if (isIosWeb())     return `<a class="android-cta-banner result-app-banner" href="${_APP_STORE}">${label}</a>`;
-  if (isAndroidWeb()) return `<a class="android-cta-banner result-app-banner" href="${_PLAY_STORE}">${label}</a>`;
+  if (isIosWeb())     return `<a class="android-cta-banner result-app-banner" data-promo="result_app_banner" href="${_APP_STORE}">${label}</a>`;
+  if (isAndroidWeb()) return `<a class="android-cta-banner result-app-banner" data-promo="result_app_banner" href="${_PLAY_STORE}">${label}</a>`;
   // Desktop can't install a phone app from a browser, so the click opens the QR /
   // app-promo wall (same as the homepage banner) via the delegated .web-wall-trigger listener.
-  return `<a class="android-cta-banner result-app-banner web-wall-trigger" href="#">${label}</a>`;
+  return `<a class="android-cta-banner result-app-banner web-wall-trigger" data-promo="result_app_banner" href="#">${label}</a>`;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
