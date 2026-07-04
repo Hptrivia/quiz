@@ -125,22 +125,21 @@
       `<span class="qtp-chips">${set.map(chip).join('')}</span>`;
   }
 
-  // Append the single promo node as the LAST child of the current question slide,
-  // so it sits under the question in every mode regardless of where that mode's
-  // score line lives (the old bug: anchoring to the score put it at the top in
-  // Episode, where the score is above the slides). Called once per question.
-  // No-op for native app / premium.
-  function render(slideEl, currentSlug) {
+  // Place the promo node at the BOTTOM of the quiz area — after the question, the
+  // buttons, and the score line. Each mode passes its slides container; we append
+  // the banner as the last child of that container's parent (the game box), so it's
+  // always the last thing on screen. Called once per question. No-op for app/premium.
+  function render(container, currentSlug) {
     if (typeof isLimitedWeb !== 'function' || !isLimitedWeb()) return;
-    if (!slideEl || !slideEl.appendChild) return;
+    if (!container) return;
+    const host = container.parentNode || container;
     let el = document.getElementById('tgQuizPromo');
     if (!el) {
       el = document.createElement('div');
       el.id = 'tgQuizPromo';
       el.className = 'quiz-theme-promo';
     }
-    // Move it into (and to the bottom of) whichever slide is now active.
-    if (el.parentNode !== slideEl || slideEl.lastChild !== el) slideEl.appendChild(el);
+    if (el.parentNode !== host || host.lastChild !== el) host.appendChild(el);
     if (ready) fill(el, currentSlug);
     else load().then(() => { if (document.getElementById('tgQuizPromo') === el) fill(el, currentSlug); });
   }
