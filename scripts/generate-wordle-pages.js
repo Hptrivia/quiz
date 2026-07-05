@@ -144,7 +144,7 @@ function buildWordlePage(theme, words, allThemes, wordleSet) {
       </div>
 
       <p style="text-align:center;margin-top:8px;">
-        <a href="../play.html?theme=${slug}" style="color:#94a3b8;font-size:0.9rem;">Also try ${title} Trivia &#8594;</a>
+        <a href="../challenge.html?theme=${slug}&round=1" style="color:#94a3b8;font-size:0.9rem;">Also try ${title} Trivia &#8594;</a>
       </p>
 
       ${relatedHtml}
