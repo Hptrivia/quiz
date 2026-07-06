@@ -8,6 +8,7 @@
 create or replace view install_report as
 select
   coalesce(best.game_mode, '(unknown)') as mode,
+  best.round                            as round,
   coalesce(best.theme_slug, '(none)')   as theme,
   coalesce(best.banner_id, '(none)')    as which_promo,
   count(*)                              as installs
@@ -21,5 +22,5 @@ left join lateral (
   order by pc.created_at desc
   limit 1
 ) best on true
-group by 1, 2, 3
+group by 1, 2, 3, 4
 order by installs desc;
