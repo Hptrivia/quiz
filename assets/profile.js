@@ -775,10 +775,10 @@ function _watchForWallRedirect() {
       countEl.textContent = n;
       if (n <= 0) {
         // Passive auto-redirect (nobody tapped) — log under its own id so it's
-        // distinguishable from an actual banner/button tap in the data. This fires
-        // for EVERY wall view, so sample 1-in-50 to keep the table small (multiply
-        // the count by 50 when reading); real taps are logged unsampled.
-        if (Math.random() < 0.02) trackPromoClick('wall_auto_redirect', null);
+        // distinguishable from an actual banner/button tap. Logged UNSAMPLED so
+        // install attribution can match these passive redirects to their install
+        // (sampling would leave the biggest passive channel mostly unattributed).
+        trackPromoClick('wall_auto_redirect', null);
         window.location.href = url;
         return;
       }
@@ -976,6 +976,7 @@ function _injectProfileAppBanner() {
   if (!slot || slot.querySelector('.android-cta-banner')) return;
   const banner = document.createElement('a');
   banner.className = 'android-cta-banner';
+  banner.dataset.promo = 'profile_app_banner'; // so its taps are attributed, not invisible
   banner.textContent = "📱 Don't lose your streak — save your stats & scores in the free app →";
   banner.href = isIosWeb() ? _APP_STORE : _PLAY_STORE;
   slot.appendChild(banner);
