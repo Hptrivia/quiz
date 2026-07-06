@@ -488,9 +488,55 @@ function _promoPlatform() {
   if (isIosWeb())     return 'ios';
   return 'desktop';
 }
+// Derive what the visitor was PLAYING at the moment they tapped an install promo,
+// straight from the page URL — so every banner is enriched with no per-banner
+// edits. `mode` comes from the page filename; `round` + `theme` from the query
+// string (challenge carries ?round=N and ?theme=/?themes=). Any banner that
+// already knows its theme still wins via the explicit arg in trackPromoClick.
+const _PROMO_MODE_MAP = {
+  'challenge': 'challenge', 'play': 'marathon', 'mashup-play': 'marathon-mashup',
+  'survival': 'survival', 'episode': 'episode', 'trivia-rush': 'trivia-rush',
+  'mashup-trivia-rush': 'trivia-rush-mashup', 'wordle': 'wordle',
+  'daily-wordle': 'daily-wordle', 'wordsearch': 'wordsearch',
+  'versus': 'versus', 'daily': 'daily'
+};
+function _promoGameContext() {
+  let mode = 'other', round = null, theme = null;
+  try {
+    const path = (location.pathname || '').toLowerCase();
+    const file = path.substring(path.lastIndexOf('/') + 1).replace(/\.html$/, '');
+    mode = _PROMO_MODE_MAP[file] || file || 'other';
+    const p = new URLSearchParams(location.search);
+    const r = parseInt(p.get('round') || '', 10);
+    if (!Number.isNaN(r) && r > 0) round = r;
+    theme = p.get('theme') || (p.get('themes') || '').split(',')[0].trim() || null;
+  } catch (e) {}
+  return { mode, round, theme };
+}
+// Where the visitor came FROM (traffic source), separate from what they played.
+// `utm_source` is the explicit tag on links you paste yourself (?utm_source=reddit);
+// `ref_host` is the referring domain (google.com, t.co, direct) for untagged
+// visitors. Together they separate "installed from my pasted challenge link" from
+// "found us via Google / organic".
+function _promoSource() {
+  let utm = null, refHost = null;
+  try {
+    utm = new URLSearchParams(location.search).get('utm_source') || null;
+    if (document.referrer) {
+      const rh = new URL(document.referrer).hostname.replace(/^www\./, '');
+      // Same-site navigation isn't a real "source" — treat as direct/in-app nav.
+      refHost = (rh && rh !== location.hostname.replace(/^www\./, '')) ? rh : 'direct';
+    } else {
+      refHost = 'direct';
+    }
+  } catch (e) {}
+  return { utm, refHost };
+}
 function trackPromoClick(bannerId, themeSlug) {
   if (_isNative || !bannerId) return; // only browser taps matter
   try {
+    const ctx = _promoGameContext();
+    const src = _promoSource();
     fetch(_PROMO_TRACK_URL, {
       method: 'POST',
       keepalive: true,
@@ -502,7 +548,11 @@ function trackPromoClick(bannerId, themeSlug) {
       },
       body: JSON.stringify({
         banner_id: bannerId,
-        theme_slug: themeSlug || null,
+        theme_slug: themeSlug || ctx.theme || null,
+        game_mode: ctx.mode,
+        round: ctx.round,
+        utm_source: src.utm,
+        ref_host: src.refHost,
         platform: _promoPlatform(),
         session_id: _promoSessionId()
       })
