@@ -28,6 +28,18 @@ function injectMonetagVignette() {
   ([document.documentElement, document.body].filter(Boolean).pop()).appendChild(s);
 }
 
+// Monetag POPUNDER (zone 10962017). Fires a window.open on the user's next
+// interaction, so a touch monetizes. Web-only, non-premium. Used on the
+// Challenge round-2 wall (the hard limit) alongside the vignette.
+function injectMonetagPopunder() {
+  if (isPremiumUser()) return;
+  if (typeof isLimitedWeb === 'function' ? !isLimitedWeb() : (window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative))) return;
+  const s = document.createElement('script');
+  s.dataset.zone = '10962017';
+  s.src = 'https://al5sm.com/tag.min.js';
+  ([document.documentElement, document.body].filter(Boolean).pop()).appendChild(s);
+}
+
 async function fetchJSON(path) {
   const res = await fetch(path);
   if (!res.ok) throw new Error(`Failed to load ${path}`);
