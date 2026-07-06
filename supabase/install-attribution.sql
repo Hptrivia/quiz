@@ -5,7 +5,8 @@
 -- For each install we take the most-recent web tap (same phone type) in the 30
 -- minutes before it. That tap tells us the mode, theme, and which promo they used.
 
-create or replace view install_report as
+drop view if exists install_report;
+create view install_report as
 select
   coalesce(best.game_mode, '(unknown)') as mode,
   best.round                            as round,
