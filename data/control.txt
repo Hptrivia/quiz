@@ -1,0 +1,915 @@
+[
+  {
+    "question": "Which studio developed Control?",
+    "options": [
+      "Remedy Entertainment",
+      "Housemarque",
+      "Naughty Dog",
+      "FromSoftware"
+    ],
+    "answer": "Remedy Entertainment",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which company published Control?",
+    "options": [
+      "505 Games",
+      "Sony",
+      "Electronic Arts",
+      "Ubisoft"
+    ],
+    "answer": "505 Games",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Who is the protagonist of Control?",
+    "options": [
+      "Jesse Faden",
+      "Maya Hollen",
+      "Claire Varden",
+      "Sara Maden"
+    ],
+    "answer": "Jesse Faden",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In what year was Control released?",
+    "options": [
+      "2019",
+      "2016",
+      "2021",
+      "2023"
+    ],
+    "answer": "2019",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does 'FBC' stand for in Control?",
+    "options": [
+      "Federal Bureau of Control",
+      "Federal Bureau of Containment",
+      "Federal Bureau of Clearance",
+      "Federal Bureau of Classification"
+    ],
+    "answer": "Federal Bureau of Control",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the name of the hostile entity that invades the FBC?",
+    "options": [
+      "The Hiss",
+      "The Flood",
+      "The Darkness",
+      "The Swarm"
+    ],
+    "answer": "The Hiss",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the name of the FBC's headquarters?",
+    "options": [
+      "The Oldest House",
+      "The Brutalist",
+      "The Federal Keep",
+      "The Anchor"
+    ],
+    "answer": "The Oldest House",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In which city is the Oldest House located?",
+    "options": [
+      "New York City",
+      "Washington, D.C.",
+      "Chicago",
+      "Los Angeles"
+    ],
+    "answer": "New York City",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What position does Jesse take on within the FBC?",
+    "options": [
+      "Director",
+      "Deputy Director",
+      "Head of Security",
+      "Senior Analyst"
+    ],
+    "answer": "Director",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is Jesse's shapeshifting firearm called?",
+    "options": [
+      "The Service Weapon",
+      "The Equalizer",
+      "The Peacemaker",
+      "The Regulator"
+    ],
+    "answer": "The Service Weapon",
+    "difficulty": "easy"
+  },
+  {
+    "question": "From which perspective is Control played?",
+    "options": [
+      "Third-person",
+      "First-person",
+      "Top-down",
+      "Side-scrolling"
+    ],
+    "answer": "Third-person",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Who is Jesse searching for at the start of the game?",
+    "options": [
+      "Her brother",
+      "Her sister",
+      "Her father",
+      "Her daughter"
+    ],
+    "answer": "Her brother",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the name of Jesse's brother?",
+    "options": [
+      "Dylan",
+      "Casper",
+      "Simon",
+      "Marshall"
+    ],
+    "answer": "Dylan",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the name of the entity that makes Jesse the new Director?",
+    "options": [
+      "The Board",
+      "The Council",
+      "The Panel",
+      "The Committee"
+    ],
+    "answer": "The Board",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Who was the FBC's Director before Jesse?",
+    "options": [
+      "Zachariah Trench",
+      "Marshall Sutton",
+      "Victor Nordström",
+      "Arthur Langley"
+    ],
+    "answer": "Zachariah Trench",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Jesse gains new abilities by binding what kind of items?",
+    "options": [
+      "Objects of Power",
+      "Ancient Relics",
+      "Power Cores",
+      "Sacred Stones"
+    ],
+    "answer": "Objects of Power",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the name of the entity that guides Jesse to the Oldest House?",
+    "options": [
+      "Polaris",
+      "Aurora",
+      "Nova",
+      "Lumen"
+    ],
+    "answer": "Polaris",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In Control's lore, what does 'AWE' stand for?",
+    "options": [
+      "Altered World Event",
+      "Anomalous Warp Effect",
+      "Active World Entity",
+      "Alternate World Existence"
+    ],
+    "answer": "Altered World Event",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the name of the helpful janitor in the Oldest House?",
+    "options": [
+      "Ahti",
+      "Ahto",
+      "Arti",
+      "Ahki"
+    ],
+    "answer": "Ahti",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What architectural style defines the Oldest House?",
+    "options": [
+      "Brutalist",
+      "Gothic",
+      "Art Deco",
+      "Victorian"
+    ],
+    "answer": "Brutalist",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the name of Control's first expansion?",
+    "options": [
+      "The Foundation",
+      "AWE",
+      "The Threshold",
+      "The Astral Plane"
+    ],
+    "answer": "The Foundation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which ability lets Jesse turn an enemy into a temporary ally?",
+    "options": [
+      "Seize",
+      "Charm",
+      "Recruit",
+      "Summon"
+    ],
+    "answer": "Seize",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Control was widely praised as an early showcase for which graphics technology?",
+    "options": [
+      "Ray tracing",
+      "Virtual reality",
+      "Motion controls",
+      "3D glasses"
+    ],
+    "answer": "Ray tracing",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What color is most strongly associated with the Hiss and their corruption?",
+    "options": [
+      "Red",
+      "Blue",
+      "Green",
+      "Yellow"
+    ],
+    "answer": "Red",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the starting form of the Service Weapon?",
+    "options": [
+      "Grip",
+      "Spin",
+      "Pierce",
+      "Charge"
+    ],
+    "answer": "Grip",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which Service Weapon form behaves like a shotgun?",
+    "options": [
+      "Shatter",
+      "Grip",
+      "Spin",
+      "Pierce"
+    ],
+    "answer": "Shatter",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which Service Weapon form fires rapidly like an automatic weapon?",
+    "options": [
+      "Spin",
+      "Grip",
+      "Shatter",
+      "Pierce"
+    ],
+    "answer": "Spin",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which Service Weapon form fires a single precise, armor-piercing shot?",
+    "options": [
+      "Pierce",
+      "Grip",
+      "Spin",
+      "Charge"
+    ],
+    "answer": "Pierce",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which Service Weapon form deals explosive damage?",
+    "options": [
+      "Charge",
+      "Spin",
+      "Pierce",
+      "Shatter"
+    ],
+    "answer": "Charge",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What resource does Jesse spend to craft and upgrade weapon forms and mods?",
+    "options": [
+      "Source",
+      "Souls",
+      "Credits",
+      "Ether"
+    ],
+    "answer": "Source",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Where does Jesse fast-travel, craft, and upgrade throughout the Oldest House?",
+    "options": [
+      "Control Points",
+      "Save Rooms",
+      "Bonfires",
+      "Waypoints"
+    ],
+    "answer": "Control Points",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Who is the FBC's Head of Research, encountered only through video recordings?",
+    "options": [
+      "Casper Darling",
+      "Victor Nordström",
+      "Arthur Langley",
+      "Marshall Sutton"
+    ],
+    "answer": "Casper Darling",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Who becomes the FBC's new Head of Research after Darling disappears?",
+    "options": [
+      "Emily Pope",
+      "Victor Nordström",
+      "Arthur Langley",
+      "Sandra Mäkinen"
+    ],
+    "answer": "Emily Pope",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Who serves as the FBC's Head of Operations?",
+    "options": [
+      "Helen Marshall",
+      "Emily Pope",
+      "Simon Arish",
+      "Frederick Langston"
+    ],
+    "answer": "Helen Marshall",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Who is the FBC's Security Chief?",
+    "options": [
+      "Simon Arish",
+      "Victor Strand",
+      "Marshall Cole",
+      "Daniel Hurst"
+    ],
+    "answer": "Simon Arish",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does Ahti give Jesse to help her navigate the Ashtray Maze?",
+    "options": [
+      "A cassette player",
+      "A paper map",
+      "A key card",
+      "A flashlight"
+    ],
+    "answer": "A cassette player",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the name of the shifting corridor set piece scored to a rock song?",
+    "options": [
+      "The Ashtray Maze",
+      "The Foundation",
+      "The Oceanview Motel",
+      "Slidescape-36"
+    ],
+    "answer": "The Ashtray Maze",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the name of the fictional in-universe band that performs 'Take Control'?",
+    "options": [
+      "Old Gods of Asgard",
+      "The Threshold",
+      "Balance and Control",
+      "Northlight"
+    ],
+    "answer": "Old Gods of Asgard",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which paranatural entity did Darling study to develop the HRAs?",
+    "options": [
+      "Hedron",
+      "The Hiss",
+      "The Anchor",
+      "FORMER"
+    ],
+    "answer": "Hedron",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What do Hedron Resonance Amplifiers (HRAs) protect Bureau staff from?",
+    "options": [
+      "Hiss corruption",
+      "Radiation",
+      "Astral spikes",
+      "Explosions"
+    ],
+    "answer": "Hiss corruption",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is Dylan's designation in the Bureau's Prime Candidate program?",
+    "options": [
+      "Prime Candidate 6",
+      "Prime Candidate 7",
+      "Prime Candidate 1",
+      "Prime Candidate 13"
+    ],
+    "answer": "Prime Candidate 6",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What was Jesse's own Prime Candidate number?",
+    "options": [
+      "7",
+      "6",
+      "1",
+      "13"
+    ],
+    "answer": "7",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Through which Object of Power did the Hiss enter the Oldest House?",
+    "options": [
+      "The Slide Projector",
+      "The Benicoff TV",
+      "The Hotline",
+      "The Merry-Go-Round Horse"
+    ],
+    "answer": "The Slide Projector",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Who used the slide projector to open a doorway for the Hiss?",
+    "options": [
+      "Zachariah Trench",
+      "Casper Darling",
+      "Dylan Faden",
+      "Emily Pope"
+    ],
+    "answer": "Zachariah Trench",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the name of the alternate dimension reached through the slide projector?",
+    "options": [
+      "Slidescape-36",
+      "Deadzone-7",
+      "The Oceanview Motel",
+      "Slidescape-12"
+    ],
+    "answer": "Slidescape-36",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which expansion takes Jesse deep beneath the Oldest House?",
+    "options": [
+      "The Foundation",
+      "AWE",
+      "Slidescape",
+      "Night Springs"
+    ],
+    "answer": "The Foundation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What shape and symbol is associated with the Board?",
+    "options": [
+      "An inverted black pyramid",
+      "A red sphere",
+      "A white cube",
+      "A golden ring"
+    ],
+    "answer": "An inverted black pyramid",
+    "difficulty": "medium"
+  },
+  {
+    "question": "In the AWE expansion, which Bright Falls antagonist does Jesse hunt down?",
+    "options": [
+      "Emil Hartman",
+      "Thomas Zane",
+      "Barry Wheeler",
+      "Frederick Langston"
+    ],
+    "answer": "Emil Hartman",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which new Service Weapon form is added in the AWE expansion?",
+    "options": [
+      "Surge",
+      "Grip",
+      "Charge",
+      "Pierce"
+    ],
+    "answer": "Surge",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which famous game designer cameos as Dr. Yoshimi Tokui in Control?",
+    "options": [
+      "Hideo Kojima",
+      "Shigeru Miyamoto",
+      "Cory Barlog",
+      "Sam Lake"
+    ],
+    "answer": "Hideo Kojima",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the name of the eerie in-game puppet show shown in video sequences?",
+    "options": [
+      "The Threshold Kids",
+      "The Bureau Buddies",
+      "The Ordinary Kids",
+      "The Oldest House Club"
+    ],
+    "answer": "The Threshold Kids",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which liminal location does Jesse enter by pulling on light cords?",
+    "options": [
+      "The Oceanview Motel",
+      "The Foundation",
+      "The Ashtray Maze",
+      "Slidescape-36"
+    ],
+    "answer": "The Oceanview Motel",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which proprietary game engine powers Control?",
+    "options": [
+      "Northlight Engine",
+      "Unreal Engine",
+      "RE Engine",
+      "Frostbite"
+    ],
+    "answer": "Northlight Engine",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the name of the Board's counterpart entity encountered in The Foundation?",
+    "options": [
+      "FORMER",
+      "Hedron",
+      "Polaris",
+      "The Hiss"
+    ],
+    "answer": "FORMER",
+    "difficulty": "medium"
+  },
+  {
+    "question": "In The Foundation, Jesse must repair the 'locks' of which structure?",
+    "options": [
+      "The Nail",
+      "The Spike",
+      "The Pillar",
+      "The Anchor"
+    ],
+    "answer": "The Nail",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Who is the first boss Jesse encounters in Control?",
+    "options": [
+      "Alberto Tommasi",
+      "Lin Salvador",
+      "Mold-1",
+      "Former"
+    ],
+    "answer": "Alberto Tommasi",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which giant plant-like boss is fought during the 'Old Growth' side mission?",
+    "options": [
+      "Mold-1",
+      "Former",
+      "Ocelot's Anchor",
+      "Lin Salvador"
+    ],
+    "answer": "Mold-1",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the name of the mirror-image boss version of Jesse?",
+    "options": [
+      "esseJ",
+      "Echo",
+      "Reflekt",
+      "Faux-Jesse"
+    ],
+    "answer": "esseJ",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which boss first appears after Jesse interacts with a fridge in the 'Fridge Duty' mission?",
+    "options": [
+      "Former",
+      "Mold-1",
+      "Alberto Tommasi",
+      "Ocelot's Anchor"
+    ],
+    "answer": "Former",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which boss does Jesse defeat during the 'My Brother's Keeper' mission?",
+    "options": [
+      "Lin Salvador",
+      "Alberto Tommasi",
+      "Mold-1",
+      "Former"
+    ],
+    "answer": "Lin Salvador",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Who was the earlier acting Director credited with first binding the Service Weapon?",
+    "options": [
+      "Broderick Northmoor",
+      "Zachariah Trench",
+      "Casper Darling",
+      "Simon Arish"
+    ],
+    "answer": "Broderick Northmoor",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In Control's lore, in what year was the Service Weapon first discovered?",
+    "options": [
+      "1964",
+      "1952",
+      "1977",
+      "1984"
+    ],
+    "answer": "1964",
+    "difficulty": "hard"
+  },
+  {
+    "question": "How many Objects of Power actually appear or are mentioned across Control?",
+    "options": [
+      "10",
+      "5",
+      "22",
+      "36"
+    ],
+    "answer": "10",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which classification category does Langston assign to the Benicoff TV?",
+    "options": [
+      "Category 5",
+      "Category 1",
+      "Category 3",
+      "Category 7"
+    ],
+    "answer": "Category 5",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which area does Langston warn the Benicoff TV could destroy if left uncontained?",
+    "options": [
+      "The Panopticon",
+      "The Foundation",
+      "The Containment Sector",
+      "The Oceanview Motel"
+    ],
+    "answer": "The Panopticon",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What form did the Service Weapon take for former Director Trench?",
+    "options": [
+      "A snub-nosed revolver",
+      "A pistol",
+      "A shotgun",
+      "A rifle"
+    ],
+    "answer": "A snub-nosed revolver",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is Jesse's direct line of communication with the Board called?",
+    "options": [
+      "The Hotline",
+      "The Switchboard",
+      "The Redline",
+      "The Uplink"
+    ],
+    "answer": "The Hotline",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In which Altered World Event was the Oceanview Motel originally discovered?",
+    "options": [
+      "The Butte AWE",
+      "The Ordinary AWE",
+      "The Bright Falls AWE",
+      "The Fra Mauro AWE"
+    ],
+    "answer": "The Butte AWE",
+    "difficulty": "hard"
+  },
+  {
+    "question": "How many slides did the Bureau recover from the Ordinary site?",
+    "options": [
+      "Five",
+      "Six",
+      "Seven",
+      "Eight"
+    ],
+    "answer": "Seven",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which slide from Ordinary remained intact and usable in the projector?",
+    "options": [
+      "Slide 36",
+      "Slide 12",
+      "Slide 7",
+      "Slide 1"
+    ],
+    "answer": "Slide 36",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What multiplayer spin-off in the Control universe did Remedy release in 2025?",
+    "options": [
+      "FBC: Firebreak",
+      "Control: Expeditions",
+      "AWE: Containment",
+      "Project Condor"
+    ],
+    "answer": "FBC: Firebreak",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the title of the Control sequel that stars Dylan Faden?",
+    "options": [
+      "Control Resonant",
+      "Control 2",
+      "Control: Foundation",
+      "Control: Slidescape"
+    ],
+    "answer": "Control Resonant",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What does the FBC call the doorway-like areas connected to other dimensions in the Oldest House?",
+    "options": [
+      "Thresholds",
+      "Rifts",
+      "Gateways",
+      "Breaches"
+    ],
+    "answer": "Thresholds",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What was Emil Hartman's profession before he became a Hiss-corrupted threat?",
+    "options": [
+      "A psychologist",
+      "A novelist",
+      "A police detective",
+      "A physicist"
+    ],
+    "answer": "A psychologist",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which contract specialist does Jesse search for in the 'Old Growth' mission?",
+    "options": [
+      "Raya Underhill",
+      "Dana Morrow",
+      "Helen Schaefer",
+      "Carla Voss"
+    ],
+    "answer": "Raya Underhill",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What term does the Bureau use for people like Jesse and Dylan with innate paranatural ability?",
+    "options": [
+      "Parautilitarians",
+      "Parapsychics",
+      "Resonants",
+      "Paranauts"
+    ],
+    "answer": "Parautilitarians",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In which month and year does Jesse arrive at the Oldest House?",
+    "options": [
+      "October 2019",
+      "August 2019",
+      "October 2002",
+      "June 2019"
+    ],
+    "answer": "October 2019",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Roughly how many years before the game did the Ordinary AWE take Dylan?",
+    "options": [
+      "Seventeen",
+      "Ten",
+      "Twenty-five",
+      "Five"
+    ],
+    "answer": "Seventeen",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which abandoned sector of the Oldest House does Jesse explore in the AWE expansion?",
+    "options": [
+      "The Investigations Sector",
+      "The Maintenance Sector",
+      "The Containment Sector",
+      "The Foundation"
+    ],
+    "answer": "The Investigations Sector",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the name of the arcade machine minigame found in the Oldest House?",
+    "options": [
+      "SHÜM",
+      "BLOK",
+      "ZORB",
+      "NEXUS"
+    ],
+    "answer": "SHÜM",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In which year is Control Resonant scheduled to release?",
+    "options": [
+      "2026",
+      "2025",
+      "2024",
+      "2027"
+    ],
+    "answer": "2026",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the name of the government agency at the center of the game?",
+    "options": [
+      "FBC",
+      "FBR",
+      "FBD",
+      "FBX"
+    ],
+    "answer": "FBC",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the name of Jesse Faden's hometown?",
+    "options": [
+      "Ordinary",
+      "Shepherd",
+      "Crestwood",
+      "Harlow"
+    ],
+    "answer": "Ordinary",
+    "difficulty": "hard"
+  }
+]
