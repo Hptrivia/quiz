@@ -336,6 +336,17 @@ async function renderEpisodePage() {
     });
   }
 
+  // In-page wall (no full-screen overlay): a web visitor who's used their free
+  // episode gets the download wall in the game area instead of a fresh episode.
+  // A resume of an in-progress episode is still allowed to finish. noRedirect —
+  // they came back to browse, don't auto-yank them to the store.
+  if (!_resume && typeof isWebEpLimit === 'function' && isWebEpLimit()) {
+    if (nextPageLink) nextPageLink.style.display = "none";
+    slidesContainer.innerHTML =
+      `<div class="cta-row" style="justify-content:center;">${typeof webWallHTML === 'function' ? webWallHTML("Yay! You've played an episode", theme.title, "episodes", null, true) : ""}</div>`;
+    return;
+  }
+
   showQuestion(currentIndex);
 }
 
