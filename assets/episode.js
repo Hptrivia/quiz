@@ -336,31 +336,6 @@ async function renderEpisodePage() {
     });
   }
 
-  // In-page wall (no full-screen overlay): a web visitor who's used their free
-  // episode gets the download wall in the game area instead of a fresh episode.
-  // A resume of an in-progress episode is still allowed to finish. noRedirect —
-  // they came back to browse, don't auto-yank them to the store. Affiliates go
-  // underneath (same box the result screen shows) so returners can still tap them.
-  if (!_resume && typeof isWebEpLimit === 'function' && isWebEpLimit()) {
-    if (nextPageLink) nextPageLink.style.display = "none";
-    const affiliateHtml = affiliateProducts && affiliateProducts.length ? `
-      <div class="affiliate-box">
-        <p class="affiliate-label">Recommended for Fans</p>
-        ${affiliateProducts.map(item => `
-          <a class="affiliate-card" href="${item.url}" target="_blank" rel="noopener noreferrer sponsored">
-            <strong>${item.title}</strong>
-          </a>
-        `).join("")}
-        <p class="affiliate-disclaimer">
-          Affiliate link — I may earn a commission from qualifying purchases.
-        </p>
-      </div>
-    ` : "";
-    slidesContainer.innerHTML =
-      `<div class="cta-row" style="justify-content:center;">${typeof webWallHTML === 'function' ? webWallHTML("Yay! You've played an episode", theme.title, "episodes", null, true) : ""}</div>${affiliateHtml}`;
-    return;
-  }
-
   showQuestion(currentIndex);
 }
 

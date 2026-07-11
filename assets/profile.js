@@ -856,11 +856,7 @@ function webWallHTML(msg, themeName, noun, countOverride, noRedirect, bodyOverri
     // result screen: _watchForWallRedirect arms it (skipping the .android-wall-overlay
     // page-load gate) and INJECTS the "Taking you to the app…" countdown itself, so
     // the note only ever shows where a redirect is genuinely happening.
-    // Resume/return screens pass noRedirect so a visitor coming BACK to a link
-    // isn't auto-shipped to the store — they can see their score and browse.
-    const qRd = noRedirect ? '' : ' web-wall-redirect';
-    const qStore = noRedirect ? '' : ` data-store="${_storeUrl()}"`;
-    return `<div class="android-wall${qRd}"${qStore}>
+    return `<div class="android-wall web-wall-redirect" data-store="${_storeUrl()}">
     <div class="android-wall-icon">📱</div>
     <h3>You've played your ${qCount} questions 🎉</h3>
     <p>${themeName ? `Download Trivia Gauntlet for more ${themeName} questions.` : `Download Trivia Gauntlet for more questions.`}</p>
@@ -925,14 +921,28 @@ function _injectWebBanner() {
   else if (anchor) anchor.prepend(banner);
 }
 
-// Historically this dropped a FULL-SCREEN overlay (.android-wall-overlay) onto any
-// game page loaded past its web limit — a hard block with no way out, which trapped
-// returning visitors (couldn't see their score, browse, or tap affiliates).
-// Removed (chat 2026-07-10): every mode now walls IN-PAGE instead — Challenge /
-// Marathon / Survival / Trivia-Rush / Wordle at their result/resume screens, and
-// Word Search + Episode via an inline entry gate — so a returner lands on a real,
-// scrollable page. Kept as a no-op so the boot call site stays valid.
-function _checkWebPageWall() {}
+function _checkWebPageWall() {
+  if (!isLimitedWeb()) return;
+  const path = window.location.pathname;
+  let msg = null;
+  let noun = 'questions';
+  if (/\/(play|challenge|survival|versus|trivia-rush|mashup-play)\.html$/.test(path) && isWebQLimit())
+    msg = "Yay! You've answered 30 questions";
+  else if (path.endsWith('/episode.html') && isWebEpLimit()) {
+    msg = "Yay! You've played an episode"; noun = 'episodes';
+  }
+  else if ((path.endsWith('/wordle.html') || /\/wordle\//.test(path)) && isWebWordleLimit()) {
+    msg = "Yay! You've played 2 Wordle words"; noun = 'Wordles';
+  }
+  else if ((path.endsWith('/wordsearch.html') || /\/wordsearch\//.test(path)) && isWebWSLimit()) {
+    msg = "Yay! You've finished the Word Search"; noun = 'Word Searches';
+  }
+  if (!msg) return;
+  const overlay = document.createElement('div');
+  overlay.className = 'android-wall-overlay';
+  overlay.innerHTML = webWallHTML(msg, null, noun);
+  document.body.appendChild(overlay);
+}
 
 // On theme pages, add a card as the last game-mode card — every web visitor
 // (desktop + mobile). Non-premium users get an "Unlock Full Access" upsell;

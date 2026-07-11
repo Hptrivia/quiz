@@ -417,14 +417,6 @@ async function renderWordSearchMashupMode(themesParam) {
 
   window._wsMashupKey = slugs.slice().sort().join(",");
 
-  // In-page wall (no full-screen overlay) — see renderWordSearchPage for rationale.
-  if (typeof isWebWSLimit === 'function' && isWebWSLimit()) {
-    const gameArea = document.querySelector('.ws-game-area');
-    if (gameArea) gameArea.innerHTML =
-      `<div class="cta-row" style="justify-content:center;">${typeof webWallHTML === 'function' ? webWallHTML("Yay! You've finished the Word Search", null, "Word Searches", null, true) : ""}</div>`;
-    return;
-  }
-
   wsBuildGrid(words);
   wsRenderGrid();
   wsUpdateStats();
@@ -521,18 +513,6 @@ async function renderWordSearchPage() {
       title: "Get word searches for every theme 🎉",
       body: "Download Trivia Gauntlet for more Word Searches."
     });
-  }
-
-  // In-page wall (no full-screen overlay): a web visitor who's used their free Word
-  // Search gets the download wall in the game area instead of a fresh playable grid.
-  // noRedirect — they came back to browse, don't auto-yank them to the store. Page
-  // content (related themes etc.) still renders below.
-  if (typeof isWebWSLimit === 'function' && isWebWSLimit()) {
-    const gameArea = document.querySelector('.ws-game-area');
-    if (gameArea) gameArea.innerHTML =
-      `<div class="cta-row" style="justify-content:center;">${typeof webWallHTML === 'function' ? webWallHTML("Yay! You've finished the Word Search", theme.title, "Word Searches", null, true) : ""}</div>`;
-    renderWsPageContent(theme, themes, safePage, themeWords);
-    return;
   }
 
   wsBuildGrid(words);

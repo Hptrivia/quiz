@@ -300,7 +300,7 @@ async function renderMultiThemeChallenge() {
         <h2>Round ${saved.round} Complete</h2>
         ${cumScoreLine(saved.score, saved.total, cumR)}
         <div class="cta-row">
-          ${resumeWalled ? webWallHTML("Yay! You've answered " + CHAL_WEB_LIMIT_Q + " questions", null, null, CHAL_WEB_LIMIT_Q, true) : `<a class="primary-btn" id="mashupContinueBtn" href="challenge.html?themes=${themesParam}&round=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
+          ${resumeWalled ? webWallHTML("Yay! You've answered " + CHAL_WEB_LIMIT_Q + " questions", null, null, CHAL_WEB_LIMIT_Q) : `<a class="primary-btn" id="mashupContinueBtn" href="challenge.html?themes=${themesParam}&round=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
           <button class="secondary-btn" id="mashupRound1Btn">Start from Round 1</button>
         </div>
         ${replayHtml}`;
@@ -475,7 +475,7 @@ async function renderChallengePage() {
         <h2>Round ${saved.round} Complete</h2>
         ${cumScoreLine(saved.score, saved.total, cumR)}
         <div class="cta-row">
-          ${resumeWalled ? webWallHTML("Yay! You've answered " + CHAL_WEB_LIMIT_Q + " questions", theme.title, null, CHAL_WEB_LIMIT_Q, true) : `<a class="primary-btn" id="continueRoundBtn" href="challenge.html?theme=${theme.slug}&round=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
+          ${resumeWalled ? webWallHTML("Yay! You've answered " + CHAL_WEB_LIMIT_Q + " questions", theme.title, null, CHAL_WEB_LIMIT_Q) : `<a class="primary-btn" id="continueRoundBtn" href="challenge.html?theme=${theme.slug}&round=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
           <button class="secondary-btn" id="startRound1Btn">Start from Round 1</button>
         </div>
         ${replayHtml}

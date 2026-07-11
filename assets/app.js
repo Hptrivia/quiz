@@ -807,7 +807,7 @@ async function renderMultiThemeMarathon() {
         <h2>Round ${saved.round} Complete</h2>
         ${cumScoreLine(saved.score, saved.total, _cumSum(_cumLoad('tg_mara_cum', mashupKey)))}
         <div class="cta-row">
-          ${resumeWalled ? (typeof webWallHTML === 'function' ? webWallHTML("Yay! You've answered 30 questions", null, null, null, true) : "") : `<a class="primary-btn" id="mashupMarathonContinueBtn" href="play.html?themes=${themesParam}&page=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
+          ${resumeWalled ? (typeof webWallHTML === 'function' ? webWallHTML("Yay! You've answered 30 questions") : "") : `<a class="primary-btn" id="mashupMarathonContinueBtn" href="play.html?themes=${themesParam}&page=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
           <button class="secondary-btn" id="mashupMarathonRound1Btn">Start from Round 1</button>
         </div>
         ${replayHtml}`;
@@ -937,7 +937,7 @@ async function renderPlayPage() {
         <h2>Round ${saved.round} Complete</h2>
         ${cumScoreLine(saved.score, saved.total, _cumSum(_cumLoad('tg_mara_cum', theme.slug)))}
         <div class="cta-row">
-          ${resumeWalled ? (typeof webWallHTML === 'function' ? webWallHTML("Yay! You've answered 30 questions", theme.title, null, null, true) : "") : `<a class="primary-btn" id="continueRoundBtn" href="play.html?theme=${theme.slug}&page=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
+          ${resumeWalled ? (typeof webWallHTML === 'function' ? webWallHTML("Yay! You've answered 30 questions", theme.title) : "") : `<a class="primary-btn" id="continueRoundBtn" href="play.html?theme=${theme.slug}&page=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
           <button class="secondary-btn" id="startRound1Btn">Start from Round 1</button>
         </div>
         ${replayHtml}`;
