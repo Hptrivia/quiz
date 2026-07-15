@@ -127,7 +127,6 @@ async function renderEpisodePage() {
   function renderResult() {
     if (typeof _clearMidQuiz === 'function') _clearMidQuiz("episode", theme.slug, safeEpisode);
     if (typeof webAddEp === 'function') webAddEp();
-    if (typeof injectMonetagVignette === 'function') injectMonetagVignette();
     gameBox.style.display = "none";
     resultBox.style.display = "block";
     resultBox.classList.remove("result-anim");

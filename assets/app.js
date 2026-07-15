@@ -15,31 +15,6 @@ function isPremiumUser() {
   return new Date(expiry) > new Date();
 }
 
-// Monetag in-page VIGNETTE (full-screen dismissible overlay, NOT a window.open —
-// so it fires inside Reddit's in-app webview and never breaks the install tap).
-// Auto-shows ~3-5s after inject; frequency is capped in the Monetag dashboard
-// (1/user/hr), so it effectively fires once. Web-only, non-premium, no code cap.
-function injectMonetagVignette() {
-  if (isPremiumUser()) return;
-  if (typeof isLimitedWeb === 'function' ? !isLimitedWeb() : (window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative))) return;
-  const s = document.createElement('script');
-  s.dataset.zone = '10961427';
-  s.src = 'https://n6wxm.com/vignette.min.js';
-  ([document.documentElement, document.body].filter(Boolean).pop()).appendChild(s);
-}
-
-// Monetag POPUNDER (zone 10962017). Fires a window.open on the user's next
-// interaction, so a touch monetizes. Web-only, non-premium. Used on the
-// Challenge round-2 wall (the hard limit) alongside the vignette.
-function injectMonetagPopunder() {
-  if (isPremiumUser()) return;
-  if (typeof isLimitedWeb === 'function' ? !isLimitedWeb() : (window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative))) return;
-  const s = document.createElement('script');
-  s.dataset.zone = '10962017';
-  s.src = 'https://al5sm.com/tag.min.js';
-  ([document.documentElement, document.body].filter(Boolean).pop()).appendChild(s);
-}
-
 async function fetchJSON(path) {
   const res = await fetch(path);
   if (!res.ok) throw new Error(`Failed to load ${path}`);

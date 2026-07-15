@@ -748,71 +748,11 @@ function _watchForQr() {
 // count down a few seconds so the player sees their score/rank, then send them to
 // the app store. Most cold Reddit traffic won't tap a button, so we flip the
 // default from opt-in to opt-out — they can still tap the button early, or leave.
-function _watchForWallRedirect() {
-  if (!isIosWeb() && !isAndroidWeb()) return;
-  const arm = (el) => {
-    if (el._redirectArmed) return;
-    // Only the end-of-game result wall auto-redirects. The same wall is also used
-    // as a full-screen gate when browsing INTO a locked page (_checkWebPageWall),
-    // wrapped in .android-wall-overlay — leave those a manual choice so exploring
-    // related quizzes doesn't fire you off to the store on every page load.
-    if (el.closest('.android-wall-overlay')) return;
-    el._redirectArmed = true;
-    const url = el.dataset.store;
-    if (!url) return;
-    // Inject the countdown line only now, so it never lingers on walls that don't
-    // actually redirect (e.g. the page-load gate, which bails out above).
-    const note = document.createElement('p');
-    note.className = 'wall-redirect-note';
-    note.innerHTML = 'Taking you to the app in <span class="wall-redirect-count">4</span>…';
-    el.appendChild(note);
-    const countEl = note.querySelector('.wall-redirect-count');
-    let n = 4;
-    let timer = null;
-    let cancelled = false;
-    const tick = () => {
-      if (cancelled) return;
-      countEl.textContent = n;
-      if (n <= 0) {
-        // Passive auto-redirect (nobody tapped) — log under its own id so it's
-        // distinguishable from an actual banner/button tap. Logged UNSAMPLED so
-        // install attribution can match these passive redirects to their install
-        // (sampling would leave the biggest passive channel mostly unattributed).
-        trackPromoClick('wall_auto_redirect', null);
-        window.location.href = url;
-        return;
-      }
-      n--; timer = setTimeout(tick, 1000);
-    };
-    // The auto-redirect serves the passive majority who won't tap anything. But the
-    // moment a visitor actually engages with the wall (taps it, or scrolls to read
-    // the "Keep playing on web" option), cancel the countdown — don't yank an
-    // intentful chooser off to the store mid-decision. The wall (and its web-unlock
-    // link) then stays put for as long as they're on the result screen.
-    if (WEB_PAY_OPTION && WEB_PAY_OPTION_MOBILE) {
-      const cancel = () => {
-        if (cancelled) return;
-        cancelled = true;
-        clearTimeout(timer);
-        note.remove();
-      };
-      el.addEventListener('pointerdown', cancel);
-      window.addEventListener('scroll', cancel, { once: true, passive: true });
-    }
-    tick();
-  };
-  const scan = (root) => root.querySelectorAll?.('.web-wall-redirect[data-store]').forEach(arm);
-  scan(document);
-  new MutationObserver((mutations) => {
-    for (const m of mutations) {
-      for (const n of m.addedNodes) {
-        if (n.nodeType !== 1) continue;
-        if (n.matches?.('.web-wall-redirect[data-store]')) arm(n);
-        else scan(n);
-      }
-    }
-  }).observe(document.body, { childList: true, subtree: true });
-}
+// Auto-redirect DISABLED. The end-of-game wall still shows its download banner and
+// store links (from webWallHTML / _webStoreLinksHTML), but we no longer force the
+// mobile-web visitor off to the store with a countdown — tapping the store buttons
+// is now entirely their choice. Kept as a no-op so existing callers stay valid.
+function _watchForWallRedirect() {}
 
 // Footer link — every web visitor (desktop + mobile), site-wide (lives here in
 // profile.js, which loads on every page, so every footer gets it). Non-premium
@@ -851,32 +791,25 @@ function webWallHTML(msg, themeName, noun, countOverride, noRedirect, bodyOverri
     ${_webStoreLinksHTML()}
   </div>`;
     }
-    // iOS / Android web: a one-time taster — get the free app to keep
-    // going. Auto-redirects to the store after a few seconds — but only on the
-    // result screen: _watchForWallRedirect arms it (skipping the .android-wall-overlay
-    // page-load gate) and INJECTS the "Taking you to the app…" countdown itself, so
-    // the note only ever shows where a redirect is genuinely happening.
-    return `<div class="android-wall web-wall-redirect" data-store="${_storeUrl()}">
+    // iOS / Android web: a one-time taster — get the free app to keep going. Shows
+    // the download banner + store links, but no longer auto-redirects (the store
+    // buttons are a manual choice now — _watchForWallRedirect is a no-op).
+    return `<div class="android-wall" data-store="${_storeUrl()}">
     <div class="android-wall-icon">📱</div>
     <h3>You've played your ${qCount} questions 🎉</h3>
     <p>${themeName ? `Download Trivia Gauntlet for more ${themeName} questions.` : `Download Trivia Gauntlet for more questions.`}</p>
     ${_webStoreLinksHTML()}
   </div>`;
   }
-  // Wordle / Word Search / Episode are lifetime limits — unchanged copy. Same
-  // mobile-web auto-redirect as the questions wall (armed + countdown injected by
-  // _watchForWallRedirect on the result screen; page-load gate stays manual).
+  // Wordle / Word Search / Episode are lifetime limits — unchanged copy. Shows the
+  // same download banner + store links as the questions wall; no auto-redirect.
   const moreLine = bodyOverride
     ? bodyOverride
     : (themeName
         ? `Download Trivia Gauntlet for more ${themeName} ${item}.`
         : `Download Trivia Gauntlet for more ${item}.`);
-  // Some callers want the wall present but WITHOUT the 4s store auto-redirect —
-  // e.g. the "no next episode" screen, where we keep the email-notify card as a
-  // real choice and don't want to yank the visitor off to the store.
-  const rdClass = noRedirect ? '' : ' web-wall-redirect';
   const rdStore = noRedirect ? '' : ` data-store="${_storeUrl()}"`;
-  return `<div class="android-wall${rdClass}"${rdStore}>
+  return `<div class="android-wall"${rdStore}>
     <div class="android-wall-icon">📱</div>
     <h3>${msg || "Yay! You've finished this one 🎉"}</h3>
     <p>${moreLine}</p>
