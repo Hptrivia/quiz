@@ -1,0 +1,379 @@
+[
+  {
+    "context": "The episode opens with a woman waking up confused and disoriented on a table in a bare room, unable to remember anything about herself.",
+    "question": "How many survey questions is she asked?",
+    "options": [
+      "Three",
+      "Five",
+      "Seven",
+      "Ten"
+    ],
+    "answer": "Five",
+    "difficulty": "easy",
+    "description": "The unseen voice insists on five questions before agreeing to chat, even as she asks to be let out of the room and what she gets at the end"
+  },
+  {
+    "context": "The unseen voice walks the disoriented woman through the five-question survey, and she struggles to answer each one.",
+    "question": "Which of these is NOT one of the five survey questions?",
+    "options": [
+      "Name any US state",
+      "Favorite color",
+      "Birthplace",
+      "Mr. Eagan's favorite breakfast"
+    ],
+    "answer": "Favorite color",
+    "difficulty": "medium",
+    "description": "The questions cover her name, her birth state, any US state, Mr. Eagan's favorite breakfast — favorite color is never asked."
+  },
+  {
+    "context": "The survey has reached question three, and the disoriented woman struggles to answer even a basic geography prompt.",
+    "question": "What state does she name when asked to name any US state?",
+    "options": [
+      "Delaware",
+      "Montana",
+      "Ohio",
+      "Vermont"
+    ],
+    "answer": "Delaware",
+    "difficulty": "easy",
+    "description": "When pressed to name any US state or territory, she blurts out 'Delaware' — the first thing that comes to mind — before asking in frustration what is happening to her."
+  },
+  {
+    "context": "The survey reaches its final question, asking the woman about a specific detail.",
+    "question": "What does the final survey question ask about?",
+    "options": [
+      "Name any US state",
+      "Her mother's eye color",
+      "Her birth place",
+      "Mr. Eagan's favorite breakfast"
+    ],
+    "answer": "Her mother's eye color",
+    "difficulty": "medium",
+    "description": "Question five asks 'to the best of your memory, what is or was the color of your mother's eyes?' — she answers unknown, completing the survey."
+  },
+  {
+    "context": "After all five answers come back as unknown except one, the voice declares the result surprising.",
+    "question": "What score does the voice announce?",
+    "options": [
+      "A passing grade",
+      "A perfect score",
+      "A failing score",
+      "An incomplete"
+    ],
+    "answer": "A perfect score",
+    "difficulty": "medium",
+    "description": "The voice cheerfully declares 'That's a perfect score,' implying that answering 'unknown' to everything was exactly the right result."
+  },
+  {
+    "context": "We cut to the severed floor of Lumon Industries. The team discusses coworker Petey being out sick and the downstream consequences for a file they need processed.",
+    "question": "What is the name of the file Dylan is about to finish?",
+    "options": [
+      "Rainwater",
+      "Tumwater",
+      "Clearwater",
+      "Coldwater"
+    ],
+    "answer": "Tumwater",
+    "difficulty": "hard",
+    "description": "Dylan is frustrated because he is 'about zero seconds from wrapping the Tumwater file' and needs Petey to process it or miss out on his waffle party."
+  },
+  {
+    "context": "Irving arrives and greets the team with his usual phrase, which the others have explicitly told him they hate.",
+    "question": "What is Irving's signature greeting?",
+    "options": [
+      "Good morning, sunshine",
+      "Hi, kids. What's for dinner?",
+      "Rise and shine, team",
+      "Hello, fellow refiners"
+    ],
+    "answer": "Hi, kids. What's for dinner?",
+    "difficulty": "medium",
+    "description": "Irving says 'Hi, kids. What's for dinner?' — the team reminds him they came up with eight reasons they hate it, chief among them the 'latent condescension.'"
+  },
+  {
+    "context": "The team debates the perks Lumon used to offer in earlier times versus today's incentives like waffle parties.",
+    "question": "What old-fashioned perk does Irving insist was once a real reward?",
+    "options": [
+      "A handshake from Kier",
+      "A filled creamer",
+      "A half-day Friday",
+      "A gift card"
+    ],
+    "answer": "A filled creamer",
+    "difficulty": "hard",
+    "description": "Irving insists 'back in the old days they'd shake our hand and fill up the creamer,' which Dylan finds disturbing and the others find hard to believe."
+  },
+  {
+    "context": "Mr. Milchick knocks on the team's office door after the creamer debate wraps up.",
+    "question": "Which department does Milchick address by name when he enters?",
+    "options": [
+      "Macrodata Refinement",
+      "Data Management",
+      "Output Processing",
+      "File Retention"
+    ],
+    "answer": "Macrodata Refinement",
+    "difficulty": "easy",
+    "description": "Milchick greets the team with 'Good morning, Macrodata Refinement,' confirming the department's full name before asking to speak with Mark."
+  },
+  {
+    "context": "Mr. Milchick summons Mark to Ms. Cobel's office and offers him a quiet tip before he goes in.",
+    "question": "What does Milchick suggest Mark compliment?",
+    "options": [
+      "Her new haircut",
+      "Her new office",
+      "Her leadership style",
+      "Her choice of carpet"
+    ],
+    "answer": "Her new office",
+    "difficulty": "medium",
+    "description": "Milchick tells Mark that Ms. Cobel would never say so, but a compliment about her new office would 'just make her day' — though she immediately calls it horrid."
+  },
+  {
+    "context": "Ms. Cobel formally promotes Mark to fill Petey's role in a brief ceremony at her desk.",
+    "question": "What role is Mark given?",
+    "options": [
+      "Senior data analyst",
+      "Department Chief",
+      "Floor supervisor",
+      "Compliance officer"
+    ],
+    "answer": "Department Chief",
+    "difficulty": "easy",
+    "description": "Ms. Cobel places his key card on the desk and confers upon Mark 'the freedom to serve Kier in the advanced role of Macrodata Refinement department chief.'"
+  },
+  {
+    "context": "After the promotion, Ms. Cobel offers Mark something optional as part of the brief ceremony.",
+    "question": "What does Mark request after being promoted?",
+    "options": [
+      "A hug",
+      "A handshake",
+      "A pay raise",
+      "A nameplate"
+    ],
+    "answer": "A handshake",
+    "difficulty": "medium",
+    "description": "Cobel notes 'a handshake is available upon request,' and Mark politely asks for one, receiving it."
+  },
+  {
+    "context": "With Petey absent, Mark has just been promoted to department chief and must prepare to run orientation for a new hire.",
+    "question": "What was the name of the previous refiner whose seat the new hire will take?",
+    "options": [
+      "Carol",
+      "Gemma",
+      "Patricia",
+      "Diane"
+    ],
+    "answer": "Carol",
+    "difficulty": "medium",
+    "description": "As Mark and Irving discuss the incoming hire, Mark notes she'll be sitting in Carol's old seat, referring to the previous refiner who once occupied it."
+  },
+  {
+    "context": "Irving walks Mark through the orientation flowchart, explaining the protocol for handling a trainee who demands to leave.",
+    "question": "How many times must the trainee ask to leave before Mark can release her?",
+    "options": [
+      "Once",
+      "Twice",
+      "Three times",
+      "Four times"
+    ],
+    "answer": "Three times",
+    "difficulty": "medium",
+    "description": "Irving tells Mark that if the trainee becomes agitated and demands to leave, she has to ask three times before he is permitted to let her go."
+  },
+  {
+    "context": "The new hire, disoriented after the survey, asks Mark a sharp question about her own existence.",
+    "question": "What does Helly ask if she is?",
+    "options": [
+      "A prisoner",
+      "Livestock",
+      "A clone",
+      "A test subject"
+    ],
+    "answer": "Livestock",
+    "difficulty": "easy",
+    "description": "Helly asks 'Am I livestock? Like, did you grow me as food?' — a darkly comic line that catches Mark off guard."
+  },
+  {
+    "context": "After confirming she is not livestock, Helly demands to know her name and Mark finally tells her.",
+    "question": "What is Helly's full name?",
+    "options": [
+      "Helly R.",
+      "Helly S.",
+      "Helly M.",
+      "Helly T."
+    ],
+    "answer": "Helly R.",
+    "difficulty": "easy",
+    "description": "Mark tells the new hire her name is 'Helly. Your name is Helly. Helly R.' — the last name reduced to a single initial, a detail that underscores the anonymising nature of severance."
+  },
+  {
+    "context": "Helly asks thrice to leave and Mark accompanies her to the stairwell but stops at the entrance, explaining he cannot accompany her further.",
+    "question": "Why can't Mark walk Helly to the elevator?",
+    "options": [
+      "It's against procedure",
+      "He's not allowed to see her leave",
+      "His keycard doesn't work there",
+      "He cannot leave the building"
+    ],
+    "answer": "He's not allowed to see her leave",
+    "difficulty": "medium",
+    "description": "Mark tells Helly 'once you leave, I just can't watch you leave' — part of the severed floor's rules about exits."
+  },
+  {
+    "context": "Helly walks up the stairwell alone but returns moments later, confused about what just happened.",
+    "question": "What does Helly discover she cannot do?",
+    "options": [
+      "Open the exit door",
+      "Remember what she wanted to do",
+      "Leave the building",
+      "Call for help"
+    ],
+    "answer": "Leave the building",
+    "difficulty": "easy",
+    "description": "Helly goes up the stairwell but comes back, and Mark explains she left and then returned — implying the severance procedure prevents her innie from truly exiting."
+  },
+  {
+    "context": "Ms. Cobel steps in after Helly's failed escape attempt and takes over the final stage of her orientation.",
+    "question": "What does Ms. Cobel say is the last part of Helly's orientation?",
+    "options": [
+      "A pre recorded video",
+      "A pledge",
+      "A tour",
+      "A wellness check"
+    ],
+    "answer": "A pre recorded video",
+    "difficulty": "easy",
+    "description": "Ms. Cobel tells Helly there is only one part of her orientation left, and that it's a video — one Mark can't possibly derail, she adds."
+  },
+  {
+    "context": "We follow Mark's outie as he returns home and settles in for the evening, receiving a note about a workplace injury.",
+    "question": "What did Mark's innie slip on at work?",
+    "options": [
+      "A wet floor mat",
+      "An overhead projector slide",
+      "A power cable",
+      "A stack of papers"
+    ],
+    "answer": "An overhead projector slide",
+    "difficulty": "hard",
+    "description": "Mark reads a note to himself: 'whilst carrying boxes in a room today, you slipped on an overhead projector slide and sustained a minor blow to the temple.'"
+  },
+  {
+    "context": "Mark is relaxing at home after work when his sister arrives unexpectedly for an impromptu visit, and the two catch up over drinks.",
+    "question": "Where is the gift card Lumon gave Mark for his injury redeemable?",
+    "options": [
+      "Pip's",
+      "Chili's",
+      "Outback Steakhouse",
+      "Olive Garden"
+    ],
+    "answer": "Pip's",
+    "difficulty": "medium",
+    "description": "Mark's sister asks where the gift card is good, and he tells her it's for Pip's — she laughs and says 'of course it's Pip's.'"
+  },
+  {
+    "context": "The two are relaxing together before heading to dinner with Ricken and his friends.",
+    "question": "What was Mark's former job?",
+    "options": [
+      "History professor",
+      "Literature professor",
+      "Civics professor",
+      "Museum curator"
+    ],
+    "answer": "History professor",
+    "difficulty": "easy",
+    "description": "When Ricken mentions Mark's background to the dinner guests, it comes out that Mark was formerly a history professor before joining Lumon Industries."
+  },
+  {
+    "context": "At dinner with his sister and Ricken's friends, Mark reveals he's a former history professor when the guests ask about his background.",
+    "question": "What war did Mark say he mostly taught about?",
+    "options": [
+      "World War I",
+      "World War II",
+      "The Civil War",
+      "The Vietnam War"
+    ],
+    "answer": "World War I",
+    "difficulty": "medium",
+    "description": "Mark tells the dinner guests he taught mostly about World War I, which leads one guest to bring up a think piece about how people at the time called it 'the Great War' — prompting Mark to explain that no one would have called it World War I because World War II hadn't happened yet."
+  },
+  {
+    "context": "One of the dinner guests mentions that Mark's late wife Gemma was also an educator, revealing her academic specialty.",
+    "question": "What subject did Gemma teach?",
+    "options": [
+      "Russian literature",
+      "American history",
+      "Classical philosophy",
+      "Medieval art"
+    ],
+    "answer": "Russian literature",
+    "difficulty": "medium",
+    "description": "A guest mentions that Mark's late wife Gemma was an educator who taught Russian literature, briefly humanizing Mark's loss before the conversation shifts to his work at Lumon."
+  },
+  {
+    "context": "Ricken reveals to the dinner guests that Mark works at Lumon and has undergone severance, prompting uncomfortable discussion.",
+    "question": "What division does Mark claim he works in at Lumon?",
+    "options": [
+      "Macrodata Refinement",
+      "Corporate archives",
+      "Technology development",
+      "Medical research"
+    ],
+    "answer": "Corporate archives",
+    "difficulty": "medium",
+    "description": "Mark tells the guests he's in the 'corporate archives division' — his cover story for his actual work in Macrodata Refinement on the severed floor."
+  },
+  {
+    "context": "Mark is talking with the dinner guests about his work at Lumon after Ricken reveals he has undergone severance.",
+    "question": "How many years has Mark been working at Lumon?",
+    "options": [
+      "About two years",
+      "About six months",
+      "Nearly five years",
+      "Over a decade"
+    ],
+    "answer": "About two years",
+    "difficulty": "easy",
+    "description": "Mark tells the guests he has been at Lumon for about two years, briefly confirming how long he has held his severed position."
+  },
+  {
+    "context": "After the dinner, Mark encounters a stranger at the bar who addresses him and reveals his identity.",
+    "question": "What name does the stranger give?",
+    "options": [
+      "Graner",
+      "Petey",
+      "Judd",
+      "Milchick"
+    ],
+    "answer": "Petey",
+    "difficulty": "easy",
+    "description": "The stranger tells Mark 'My name is Petey. I'm from work' — the first time Mark's outie has ever knowingly met a colleague from his severed floor."
+  },
+  {
+    "context": "Petey warns Mark about a specific person who may be watching them right now outside the bar.",
+    "question": "Who does Petey say is probably outside?",
+    "options": [
+      "Ms. Cobel",
+      "Mr. Milchick",
+      "Graner",
+      "The Board"
+    ],
+    "answer": "Graner",
+    "difficulty": "medium",
+    "description": "Petey warns Mark that 'Graner, who's probably out here right now' — establishing Graner as a threat both of them apparently know from the severed floor."
+  },
+  {
+    "context": "Petey hands Mark something physical before parting ways, explaining why it is inappropriate but necessary.",
+    "question": "What does Petey hand Mark?",
+    "options": [
+      "A flash drive",
+      "A photograph",
+      "A card",
+      "A keycard"
+    ],
+    "answer": "A card",
+    "difficulty": "medium",
+    "description": "Petey apologizes for the card, saying he had to grab something and knows it's not appropriate — on the back is an address Mark should visit alone."
+  }
+]

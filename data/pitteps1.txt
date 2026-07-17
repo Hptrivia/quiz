@@ -1,0 +1,379 @@
+[
+  {
+    "context": "The Pitt opens with a brief title card before any action begins, establishing the premise of the series.",
+    "question": "What is the title of the pilot episode of The Pitt?",
+    "options": [
+      "6:00 A.M.",
+      "7:00 A.M.",
+      "8:00 A.M.",
+      "7:30 A.M."
+    ],
+    "answer": "7:00 A.M.",
+    "difficulty": "easy",
+    "description": "Each episode of the season covers one hour of a single 15-hour ER shift, and the pilot is titled '7:00 A.M.,' marking the start of the day shift at Pittsburgh Trauma Medical Center."
+  },
+  {
+    "context": "The episode opens in the early morning as staff arrive for the day shift at Pittsburgh Trauma Medical Center, and two nurses are talking near the entrance.",
+    "question": "What rumor are Perlah and Princess discussing as the shift begins?",
+    "options": [
+      "The hospital is up for sale",
+      "The ER is getting a new chief",
+      "A nurse was caught stealing medications",
+      "Budget cuts are forcing layoffs in the department"
+    ],
+    "answer": "The hospital is up for sale",
+    "difficulty": "easy",
+    "description": "Perlah says Simi told Hector that Dr. Deranjian said the hospital might be sold and turned into an ortho center with no ER."
+  },
+  {
+    "context": "Dana pulls Robby aside before rounds to pass along a message from hospital administration.",
+    "question": "Who is looking for Robby at the start of the shift?",
+    "options": [
+      "Gloria",
+      "Dana",
+      "Dr. Garcia",
+      "Dr. Abbot"
+    ],
+    "answer": "Gloria",
+    "difficulty": "easy",
+    "description": "Dana tells Robby that Gloria is looking for him, and Robby jokes that it must be time for his weekly spanking."
+  },
+  {
+    "context": "Dana checks on a colleague who is in the bathroom shortly before the shift begins.",
+    "question": "Why is Dr. Collins in the bathroom before rounds?",
+    "options": [
+      "She is anxious about a difficult case",
+      "She has morning sickness",
+      "She took too much cold medicine",
+      "She ate something bad at the overnight"
+    ],
+    "answer": "She has morning sickness",
+    "difficulty": "easy",
+    "description": "Dana finds Collins retching in a stall and shares that she had morning sickness for six months with her second daughter."
+  },
+  {
+    "context": "Dana quietly advises Collins about something sensitive regarding the attending physician before the shift gets underway.",
+    "question": "How many years had Robby avoided working on the anniversary of Dr. Adamson's death before this episode?",
+    "options": [
+      "Four years",
+      "Two years",
+      "Three years",
+      "Five years"
+    ],
+    "answer": "Four years",
+    "difficulty": "medium",
+    "description": "Dana tells Collins that today is the day Doc Adamson died and that Robby hasn't worked it in four years."
+  },
+  {
+    "context": "Robby finds Dr. Abbot on the hospital rooftop before the shift officially begins.",
+    "question": "What happened to the patient Abbot spent the last two hours of his night shift trying to save?",
+    "options": [
+      "He was hit by a drunk driver in a crosswalk",
+      "He collapsed from a drug overdose on the street",
+      "He was brought in after a bar fight",
+      "He fell from a subway platform"
+    ],
+    "answer": "He was hit by a drunk driver in a crosswalk",
+    "difficulty": "medium",
+    "description": "Abbot describes a 39-year-old vet who survived three tours without a scratch but was killed by a drunk driver in a crosswalk."
+  },
+  {
+    "context": "Abbot briefs Robby in the elevator about what is waiting for him as he takes over the shift.",
+    "question": "What nickname does Abbot use for the difficult psychiatric patient who has been boarding in the behavioral health unit for a week?",
+    "options": [
+      "The Kraken",
+      "The Beast",
+      "The Hulk",
+      "The Monster"
+    ],
+    "answer": "The Kraken",
+    "difficulty": "easy",
+    "description": "Abbot warns Robby that the Kraken is still boarding in BH, has been there a week waiting on a psych ward bed, and is only getting worse."
+  },
+  {
+    "context": "Robby introduces the new arrivals to the most important person they will meet that day during the morning briefing.",
+    "question": "What role does Dana hold in the emergency department?",
+    "options": [
+      "Charge nurse",
+      "Head of triage",
+      "Department administrator",
+      "Senior resident"
+    ],
+    "answer": "Charge nurse",
+    "difficulty": "easy",
+    "description": "Robby introduces Dana as the charge nurse and calls her the ringleader of their circus, telling the new staff to do what she says when she says it."
+  },
+  {
+    "context": "During morning rounds, Robby and the team move through the boarded patients after introducing Dana as charge nurse, reviewing several cases on the board.",
+    "question": "Which of the following patients was NOT mentioned during morning rounds in this episode?",
+    "options": [
+      "Murphy Rottenstein",
+      "Louie Cloverfield",
+      "Charlie",
+      "Frank Deluca"
+    ],
+    "answer": "Frank Deluca",
+    "difficulty": "medium",
+    "description": "Rounds covered Virgil Straker,  Murphy Rottenstein,  Louie Cloverfield and Charlie — Frank Deluca is not a patient mentioned anywhere in the episode."
+  },
+  {
+    "context": "During morning rounds, Robby reviews a patient who came in with a gunshot wound to the left shoulder.",
+    "question": "What is the name of the gunshot wound patient Robby clears for discharge during rounds?",
+    "options": [
+      "Virgil Straker",
+      "Murphy Rottenstein",
+      "Louie Cloverfield",
+      "Charlie"
+    ],
+    "answer": "Virgil Straker",
+    "difficulty": "medium",
+    "description": "Virgil Straker had a 9mm GSW to the left shoulder with a negative CT angiogram, and Robby sends him home on Ceftin with a recheck the next day."
+  },
+  {
+    "context": "Rounds continue with a patient who is a familiar face in the department.",
+    "question": "What was Louie Cloverfield's blood alcohol level when he came in the night before?",
+    "options": [
+      ".420",
+      ".380",
+      ".310",
+      ".450"
+    ],
+    "answer": ".420",
+    "difficulty": "hard",
+    "description": "Louie's BAL of .420 is described as a lethal dose for a normal person but merely happy hour for the regular patient."
+  },
+  {
+    "context": "Rounds reach a bar-fight patient whose discharge Robby abruptly cancels.",
+    "question": "Which tooth number does Robby notice is missing, prompting him to order a chest X-ray?",
+    "options": [
+      "Tooth number 8",
+      "Tooth number 12",
+      "Tooth number 5",
+      "Tooth number 3"
+    ],
+    "answer": "Tooth number 8",
+    "difficulty": "medium",
+    "description": "Charlie can't account for tooth number eight, so Robby orders a chest X-ray to rule out aspiration — a call later confirmed correct when the tooth shows up on the film."
+  },
+  {
+    "context": "Two trauma patients arrive from the T subway line, and the team learns how the male patient was injured.",
+    "question": "What is the name and age of the male patient who jumped onto the subway tracks to save an elderly woman?",
+    "options": [
+      "Sam Wallace, 42",
+      "Sam Wallace, 29",
+      "Jake Mercer, 42",
+      "Jake Mercer, 29"
+    ],
+    "answer": "Sam Wallace, 42",
+    "difficulty": "medium",
+    "description": "Sam Wallace, 42, jumped down to pull the elderly woman off the tracks just as the train rolled in, then slipped and hit his head climbing back up."
+  },
+  {
+    "context": "The team works on the elderly female trauma patient who arrived from the subway incident.",
+    "question": "What type of nerve block does Collins use on the elderly woman's injured leg instead of morphine?",
+    "options": [
+      "Popliteal block",
+      "Femoral nerve block",
+      "Sciatic block",
+      "Epidural block"
+    ],
+    "answer": "Popliteal block",
+    "difficulty": "hard",
+    "description": "Collins insists on a popliteal block to numb the lower leg without side effects, overruling Garcia's request to push morphine."
+  },
+  {
+    "context": "Hospital administrator Gloria corners Robby for a tense conversation in the middle of the busy department.",
+    "question": "What patient satisfaction score is Robby's department actually achieving, against a hospital goal of 36%?",
+    "options": [
+      "8%",
+      "12%",
+      "15%",
+      "22%"
+    ],
+    "answer": "8%",
+    "difficulty": "hard",
+    "description": "Gloria tells Robby the department's Press Ganey 'very satisfied' score is just 8%, well below the hospital's 36% goal."
+  },
+  {
+    "context": "A med student faints during a procedure on the elderly female trauma patient.",
+    "question": "Which med student collapses while assisting with the ankle fracture reduction?",
+    "options": [
+      "Victoria Javadi",
+      "Trinity Santos",
+      "Dennis Whitaker",
+      "Melissa King"
+    ],
+    "answer": "Victoria Javadi",
+    "difficulty": "easy",
+    "description": "Javadi faints during the reduction, prompting Santos to call out 'Med student down' — and leading to a nickname ."
+  },
+  {
+    "context": "After Javadi recovers from fainting during the ankle fracture reduction, Santos checks in on her in the hallway.",
+    "question": "What nickname does Santos give Javadi after she faints during the procedure?",
+    "options": [
+      "Crash",
+      "Snap",
+      "Stumble",
+      "Ghost"
+    ],
+    "answer": "Crash",
+    "difficulty": "easy",
+    "description": "Santos calls Javadi 'Crash,' saying it's a cool nickname she earned and should own — though Javadi insists she doesn't like it."
+  },
+  {
+    "context": "A new patient, Otis Williams, is brought to triage by Dr. McKay after complaining of fatigue and shortness of breath following athletic activity.",
+    "question": "What athletic event did Otis Williams compete in approximately two weeks before arriving at the ER?",
+    "options": [
+      "The Rochester Marathon",
+      "The Pittsburgh Marathon",
+      "The Cleveland Half-Marathon",
+      "The Erie Ironman"
+    ],
+    "answer": "The Rochester Marathon",
+    "difficulty": "medium",
+    "description": "Otis tells McKay his problems started about two weeks ago after the Rochester Marathon, and that he regularly competes in triathlons every few months."
+  },
+  {
+    "context": "Otis Williams suddenly loses his pulse in the triage room while McKay is examining him.",
+    "question": "What dangerous heart rhythm does Otis go into during his first cardiac arrest?",
+    "options": [
+      "V-tach",
+      "V-fib",
+      "Atrial flutter",
+      "Complete heart block"
+    ],
+    "answer": "V-tach",
+    "difficulty": "medium",
+    "description": "Mateo identifies V-tach on the monitor and McKay delivers one shock at 200 joules, successfully restoring normal sinus rhythm."
+  },
+  {
+    "context": "After Otis is stabilized and Robby reviews the case, he makes a rapid diagnosis based on the monitor readings alone.",
+    "question": "What condition does Robby diagnose as the root cause of Otis's cardiac problems?",
+    "options": [
+      "Hyperkalemia from rhabdomyolysis",
+      "Hypertrophic cardiomyopathy",
+      "Brugada syndrome",
+      "Pulmonary embolism"
+    ],
+    "answer": "Hyperkalemia from rhabdomyolysis",
+    "difficulty": "medium",
+    "description": "Robby spots widened QRS and peaked T waves on the monitor and explains that intense exercise caused muscle breakdown, which knocked out Otis's kidneys and left them unable to clear potassium."
+  },
+  {
+    "context": "While treating the elderly subway patient, the team debates what language she speaks, and Robby heads off to find language services.",
+    "question": "How many languages does Princess say she speaks — none of which include the patient's language?",
+    "options": [
+      "Four",
+      "Five",
+      "Six",
+      "Seven"
+    ],
+    "answer": "Six",
+    "difficulty": "medium",
+    "description": "Princess clarifies she speaks six languages, but confirms the patient's language isn't among them, prompting Langdon to quip that he thought Collins was the smart one."
+  },
+  {
+    "context": "The elderly woman from the subway is being worked up, and the team is stumped by a communication barrier.",
+    "question": "What country does the elderly subway patient turn out to be from?",
+    "options": [
+      "Nepal",
+      "Pakistan",
+      "India",
+      "Tajikistan"
+    ],
+    "answer": "Nepal",
+    "difficulty": "easy",
+    "description": "Collins figures it out by pointing at a map on her phone, and the woman confirms she speaks Nepali — earning Collins the free lunch Langdon had offered."
+  },
+  {
+    "context": "A young med student's family connection is quietly revealed to Robby during the shift.",
+    "question": "Which department does Javadi's mother, Dr. Eileen Shamsi, work in at the hospital?",
+    "options": [
+      "Surgery",
+      "Internal medicine",
+      "Endocrinology",
+      "Radiology"
+    ],
+    "answer": "Surgery",
+    "difficulty": "medium",
+    "description": "Robby learns that the Dr. Shamsi who interrupted his conversation with Javadi is her mother and a surgeon at the hospital — a fact Dana had withheld for amusement."
+  },
+  {
+    "context": "Back on her feet after fainting, Javadi joins Dr. McKay in triage and is introduced to social worker Kiara Alfaro.",
+    "question": "Which two rotations had Javadi already completed before her current emergency medicine placement?",
+    "options": [
+      "Internal medicine and surgery",
+      "OB-GYN and pediatrics",
+      "Psychiatry and family medicine",
+      "Radiology and obstetrics"
+    ],
+    "answer": "OB-GYN and pediatrics",
+    "difficulty": "medium",
+    "description": "Javadi tells McKay this is her third rotation, having already done OB-GYN and peds — though she admits she hasn't found a clear favourite specialty yet."
+  },
+  {
+    "context": "Otis Williams crashes again, and an emergency bedside procedure becomes necessary to save his life.",
+    "question": "What life-threatening complication develops in Otis when his blood pressure suddenly crashes to 70 over 50?",
+    "options": [
+      "Cardiac tamponade from a uremic effusion",
+      "Massive pulmonary embolism",
+      "Aortic dissection",
+      "Tension pneumothorax"
+    ],
+    "answer": "Cardiac tamponade from a uremic effusion",
+    "difficulty": "medium",
+    "description": "Collins spots diastolic collapse of the right heart chambers on ultrasound, and Robby diagnoses tamponade caused by fluid around the heart from kidney failure."
+  },
+  {
+    "context": "A four-year-old boy named Tyler has been completely unresponsive and impossible to wake throughout the shift, and his father finally makes a confession that explains why.",
+    "question": "What substance caused Tyler's unresponsive state?",
+    "options": [
+      "Cannabis from pot gummies",
+      "Laundry pod residue",
+      "Prescription sedatives",
+      "Alcohol"
+    ],
+    "answer": "Cannabis from pot gummies",
+    "difficulty": "easy",
+    "description": "Tyler's father confesses that his brother had cannabis gummies in his coat pocket, and Tyler must have eaten them."
+  },
+  {
+    "context": "Robby is asked by Dr. McKay to assess the vomiting patient Theresa privately, and the truth of why she came to the ER emerges.",
+    "question": "What did Theresa use to deliberately make herself sick so her son would bring her to the hospital?",
+    "options": [
+      "Ipecac",
+      "Laxatives",
+      "Spoiled food",
+      "Excess alcohol"
+    ],
+    "answer": "Ipecac",
+    "difficulty": "medium",
+    "description": "Theresa confesses to Robby that she induced her own vomiting with ipecac to get her son David into the ER so he could receive professional help."
+  },
+  {
+    "context": "Robby and social worker Kiara approach David to try to engage him before he can leave.",
+    "question": "What alarming thing had Theresa found in David's writing that prompted her to fake her illness?",
+    "options": [
+      "Lists of girls he wanted to hurt",
+      "Suicide notes",
+      "A plan to bring a weapon to school",
+      "Violent fantasies about his classmates"
+    ],
+    "answer": "Lists of girls he wanted to hurt",
+    "difficulty": "easy",
+    "description": "Theresa tells Robby she found writing she thought was schoolwork but turned out to be lists of girls David wanted to eliminate."
+  },
+  {
+    "context": "Robby tries to stop David from leaving the department, but David bolts, and seconds later Robby gets an urgent call.",
+    "question": "What type of emergency patient does Dana tell Robby is coming in hot just as the David situation escalates?",
+    "options": [
+      "A college kid in respiratory arrest",
+      "A gunshot victim from downtown",
+      "A cardiac arrest from a nursing home",
+      "A child with anaphylaxis"
+    ],
+    "answer": "A college kid in respiratory arrest",
+    "difficulty": "medium",
+    "description": "Dana rushes to Robby and tells him a college kid in respiratory arrest is coming in hot, snapping him out of the David crisis and triggering a flashback to Dr. Adamson's death."
+  }
+]

@@ -1,0 +1,366 @@
+[
+  {
+    "context": "The Sheriff moves through town making sure residents are getting indoors before dark.",
+    "question": "What is the name of the young girl the Sheriff tells to listen to her mom?",
+    "options": [
+      "Lauren",
+      "Julie",
+      "Meagan",
+      "Gina"
+    ],
+    "answer": "Meagan",
+    "difficulty": "easy",
+    "description": "The Sheriff addresses the little girl as Meagan, telling her to go inside and calling her a 'good girl' when she complies."
+  },
+  {
+    "context": "Inside a home, an elderly man has just finished a game with someone.",
+    "question": "What game has Mr. Liu just finished playing?",
+    "options": [
+      "Checkers",
+      "Chess",
+      "Dominoes",
+      "Cards"
+    ],
+    "answer": "Chess",
+    "difficulty": "easy",
+    "description": "Mr. Liu's opponent says 'Checkmate' and tells him 'You beat me, Dad,' before Gina comes to take him downstairs."
+  },
+  {
+    "context": "After Mr. Liu is helped downstairs, a deputy lingers and compliments how well someone handles him, prompting a candid remark about the family's way of coping.",
+    "question": "When the deputy says his mom keeps insisting Mr. Liu will get better, what does he say is a branch in the family tree?",
+    "options": [
+      "Denial",
+      "Hope",
+      "Stubbornness",
+      "Optimism"
+    ],
+    "answer": "Denial",
+    "difficulty": "medium",
+    "description": "The deputy jokes that 'denial is a major branch of our family tree,' acknowledging his mother refuses to accept the reality of Mr. Liu's condition."
+  },
+  {
+    "context": "A woman is waiting anxiously at home for her husband Frank to return before dark.",
+    "question": "What is the name of Frank's wife who is waiting for him?",
+    "options": [
+      "Sara",
+      "Gina",
+      "Donna",
+      "Lauren"
+    ],
+    "answer": "Lauren",
+    "difficulty": "medium",
+    "description": "Another character references 'Lauren's gonna kill you' to Frank, establishing Lauren as his wife who is waiting at home."
+  },
+  {
+    "context": "A little girl says her bedtime prayers while waiting for her father to come home.",
+    "question": "Which prayer does the little girl recite?",
+    "options": [
+      "The Lord's Prayer",
+      "'Now I lay me down to sleep'",
+      "The Hail Mary",
+      "'God bless this house'"
+    ],
+    "answer": "'Now I lay me down to sleep'",
+    "difficulty": "easy",
+    "description": "The girl recites the classic children's prayer beginning 'Now I lay me down to sleep, I pray the Lord my soul to keep.'"
+  },
+  {
+    "context": "As the little girl prays by her window, a figure appears outside and tries to lure her.",
+    "question": "Who does the figure outside claim to be?",
+    "options": [
+      "Her mother",
+      "Her grandmother",
+      "Her aunt",
+      "Her neighbor"
+    ],
+    "answer": "Her grandmother",
+    "difficulty": "easy",
+    "description": "The figure calls out 'It's Grandma' and claims it misses her very much, trying to coax the child to open the window."
+  },
+  {
+    "context": "The child at the window grows suspicious of the figure outside.",
+    "question": "What does Meagan say that reveals she is not fooled by the creature?",
+    "options": [
+      "'You smell different'",
+      "'Your eyes are wrong'",
+      "'You don't look like my grandma'",
+      "'Grandma is dead'"
+    ],
+    "answer": "'You don't look like my grandma'",
+    "difficulty": "easy",
+    "description": "Meagan tells the figure 'You don't look like my grandma,' prompting her mother to shout that it is not her grandmother."
+  },
+  {
+    "context": "A teenage girl begins telling her little brother a bedtime story featuring a character who has been wounded by a monster.",
+    "question": "What is the name of the injured character at the center of Julie's story?",
+    "options": [
+      "Norman",
+      "Theodore",
+      "Jasper",
+      "Chester"
+    ],
+    "answer": "Norman",
+    "difficulty": "easy",
+    "description": "Julie's story centres on Norman, who has been wounded by a monster's claws — setting up the tale of the secret fairies coming to his rescue."
+  },
+  {
+    "context": "The tale involves magical creatures journeying to a specific place to save the injured Norman.",
+    "question": "Where are the secret fairies traveling from in Julie's story?",
+    "options": [
+      "The Lake of Tears",
+      "The Lake of Shadows",
+      "The Lake of Sorrow",
+      "The Lake of Dreams"
+    ],
+    "answer": "The Lake of Tears",
+    "difficulty": "medium",
+    "description": "Julie tells her brother that the secret fairies are on their way back from the Lake of Tears and will fix Norman, building his hopes before she delivers the crushing twist."
+  },
+  {
+    "context": "Julie ends Norman's story with a harsh conclusion that upsets her little brother.",
+    "question": "What does Julie tell the boy about what happens when someone is dead?",
+    "options": [
+      "'The fairies can bring them back'",
+      "'They go to heaven'",
+      "'When you're dead, you're gone'",
+      "'They come back as something else'"
+    ],
+    "answer": "'When you're dead, you're gone'",
+    "difficulty": "medium",
+    "description": "Julie bluntly says 'Norman's dead, and when you're dead, you're gone,' refusing to give the story a hopeful ending."
+  },
+  {
+    "context": "After the boy is upset about Norman's fate, the father steps in to calm him down.",
+    "question": "What logic does the father use to reassure his son that Norman is still alive?",
+    "options": [
+      "He says the fairies from the Lake of Tears will fix Norman",
+      "He says monsters aren't real, so Norman must still be alive",
+      "He says it was only a story and monsters aren´t real",
+      "He says Julie was just making up the ending"
+    ],
+    "answer": "He says monsters aren't real, so Norman must still be alive",
+    "difficulty": "medium",
+    "description": "The father tells his son that because there's no such thing as monsters, the monsters couldn't have killed Norman, meaning Norman is still alive."
+  },
+  {
+    "context": "The morning after, the Sheriff confronts Frank in a very intense and violent scene.",
+    "question": "What does the Sheriff repeatedly scold Frank for failing to do?",
+    "options": [
+      "Nail the window shut",
+      "Lock the front door",
+      "Stay home before dark",
+      "Put away his bottles"
+    ],
+    "answer": "Nail the window shut",
+    "difficulty": "hard",
+    "description": "The Sheriff shouts at Frank that if you have kids, 'you nail the window shut, you nail the m*therf*cking window shut,' making clear Frank's failure to secure the window had devastating consequences."
+  },
+  {
+    "context": "After the Sheriff's intense confrontation with Frank, a couple inside the town reflects quietly on their shared past together.",
+    "question": "What car did the man say he was driving on the first trip to meet his partner's parents?",
+    "options": [
+      "'83 Volvo",
+      "'79 Chevy pickup",
+      "'85 Ford Escort",
+      "'81 Honda Civic"
+    ],
+    "answer": "'83 Volvo",
+    "difficulty": "medium",
+    "description": "The man warmly recalls driving his '83 Volvo — with metal-on-metal brakes and a passenger door that wouldn't open — on that first nerve-wracking trip to meet her parents, calling the car 'a champ' despite it being a deathtrap."
+  },
+  {
+    "context": "The family traveling in an RV along a rural road and encounters a large obstacle blocking their path.",
+    "question": "What is blocking the road that brings the RV family to a stop?",
+    "options": [
+      "A rockslide",
+      "A fallen tree",
+      "A broken-down truck",
+      "A flooded section"
+    ],
+    "answer": "A fallen tree",
+    "difficulty": "easy",
+    "description": "The father notices a tree in the middle of the road and remarks it must have been knocked down in a storm, though the mother calls it 'a pretty selective storm.'"
+  },
+  {
+    "context": "The RV family discovers their vehicle has a serious problem after stopping near the fallen tree.",
+    "question": "What unexpected problem does the RV family find with their vehicle after stopping?",
+    "options": [
+      "The engine won't start",
+      "All the tires are flat",
+      "The fuel tank is empty",
+      "The doors are jammed"
+    ],
+    "answer": "All the tires are flat",
+    "difficulty": "easy",
+    "description": "The father asks 'Why are all the tires flat?' upon examining the RV, puzzled by what caused the damage."
+  },
+  {
+    "context": "The Sheriff visits a location outside the main town and is greeted unexpectedly.",
+    "question": "What is the name of the place the Sheriff goes to see his son?",
+    "options": [
+      "The Lodge",
+      "Colony House",
+      "Barney House",
+      "The Clearing"
+    ],
+    "answer": "Colony House",
+    "difficulty": "medium",
+    "description": "The Sheriff is greeted by a woman named Donna who says 'We have an arrangement, Sheriff — you don't come here,' confirming he has arrived at Colony House."
+  },
+  {
+    "context": "The RV family drives in an attempt to find the highway but cannot make sense of the road.",
+    "question": "What does the teenage girl Julie claim a group of crows gathering together is called?",
+    "options": [
+      "A flock",
+      "A plague",
+      "A murder",
+      "A siege"
+    ],
+    "answer": "A murder",
+    "difficulty": "medium",
+    "description": "Julie tells her brother that a group of crows gathered together is called a murder, and claims it means they are looking for a victim."
+  },
+  {
+    "context": "After Julie frightens her brother with the crow story, the mother tries to counter with a less frightening fact.",
+    "question": "What does the mother say a group of ravens is called?",
+    "options": [
+      "A quietness",
+      "A kindness",
+      "An unkindness",
+      "A soothing"
+    ],
+    "answer": "An unkindness",
+    "difficulty": "medium",
+    "description": "The mother tells her son that a group of ravens is called 'an unkindness,' trying to make it sound less frightening than a 'murder.'"
+  },
+  {
+    "context": "A terrible accident occurs on the road when the RV collides with another vehicle.",
+    "question": "What state's license plates does the car that collided with the RV have?",
+    "options": [
+      "New York",
+      "California",
+      "Texas",
+      "Arizona"
+    ],
+    "answer": "New York",
+    "difficulty": "hard",
+    "description": "A townsperson notes 'this one's got New York plates' when examining the other wrecked vehicle at the crash scene."
+  },
+  {
+    "context": "At the crash site, a townsperson examines the other wrecked vehicle while Kristi tends to the injured stranger nearby.",
+    "question": "Which two residents do the townspeople initially wonder might be connected to the car with New York plates?",
+    "options": [
+      "Sara and Nathan",
+      "Donna and Ellis",
+      "Kristi and Kenny",
+      "Fatima and Boyd"
+    ],
+    "answer": "Sara and Nathan",
+    "difficulty": "hard",
+    "description": "After spotting the New York plates, a townsperson asks if Sara and Nathan were from New York, though another corrects that they were actually from Boston."
+  },
+  {
+    "context": "After the crash, the Sheriff arrives at the scene and takes charge of the rescue.",
+    "question": "What is the Sheriff's first name, as he introduces himself to the trapped father?",
+    "options": [
+      "Frank",
+      "Boyd",
+      "Kenny",
+      "Ellis"
+    ],
+    "answer": "Boyd",
+    "difficulty": "easy",
+    "description": "The Sheriff climbs up to the RV door and introduces himself directly: 'my name is Boyd,' reassuring the father he will get them out."
+  },
+  {
+    "context": "Among the survivors pulled from the wreck, a disoriented young man is examined by Kristi.",
+    "question": "What is the name of the dazed young man from the other vehicle who keeps commenting on people's appearances?",
+    "options": [
+      "Tobey",
+      "Ellis",
+      "Nathan",
+      "Jade"
+    ],
+    "answer": "Jade",
+    "difficulty": "medium",
+    "description": "The young man gives his name as Jade and repeatedly says things like 'You have an amazing face' and 'you're all so beautiful,' clearly in a confused state."
+  },
+  {
+    "context": "After the crash victims are brought in, a dazed young man from the other vehicle has been looked over and the town's medical responder turns her attention to the overturned RV.",
+    "question": "What is the name of the town's doctor who examines the crash victims?",
+    "options": [
+      "Kristi",
+      "Donna",
+      "Fatima",
+      "Gina"
+    ],
+    "answer": "Kristi",
+    "difficulty": "easy",
+    "description": "Kristi is the town's doctor who tends to the injured at the scene, checking pulses, airways, and injuries throughout the rescue effort."
+  },
+  {
+    "context": "Inside the overturned RV, the doctor discovers the severity of the young boy Ethan's injury.",
+    "question": "What is lodged in Ethan's thigh?",
+    "options": [
+      "A metal rod",
+      "A table leg",
+      "A piece of glass",
+      "A door hinge"
+    ],
+    "answer": "A table leg",
+    "difficulty": "medium",
+    "description": "Kristi tells the Sheriff 'there's a table leg through his thigh' and warns they cannot simply yank it out."
+  },
+  {
+    "context": "The Sheriff and Kristi argue about how to treat Ethan given the time constraints.",
+    "question": "How much daylight does Kristi say they have left when deciding how to treat Ethan?",
+    "options": [
+      "About an hour",
+      "About 20 minutes",
+      "About 40 minutes",
+      "About two hours"
+    ],
+    "answer": "About 40 minutes",
+    "difficulty": "hard",
+    "description": "Kristi says she needs at least an hour to do it right, but the Sheriff notes they only have about 40 minutes of daylight left."
+  },
+  {
+    "context": "As darkness approaches, some members of the group realize a critical mistake has been made with the road.",
+    "question": "What device had been accidentally left down on the road, causing the earlier tire damage to the RV?",
+    "options": [
+      "A bear trap",
+      "A spike strip",
+      "A chain barrier",
+      "A cattle grid"
+    ],
+    "answer": "A spike strip",
+    "difficulty": "medium",
+    "description": "A character shouts 'You left the f*cking spike strip down!' realizing the strip had caused the RV's flat tires and contributed to the crash."
+  },
+  {
+    "context": "After the spike strip disaster, Boyd urgently shepherds the group toward Colony House as night fully closes in and dangers emerge outside the RV.",
+    "question": "Which of the following is NOT something Boyd says to the group during the frantic rush to get everyone inside?",
+    "options": [
+      "'I am trying to make the RV safe'",
+      "'The woods are not safe'",
+      "'It's very important that we get inside as soon as possible'",
+      "'No matter what you see, no matter what you hear, you do not stop'"
+    ],
+    "answer": "'I am trying to make the RV safe'",
+    "difficulty": "medium",
+    "description": "'I am trying to make the RV safe' is actually Jim's line when he is asked what he is doing inside the RV — Boyd is the one urging the group outside to run without stopping no matter what they see or hear."
+  },
+  {
+    "context": "As the episode ends, Boyd is alone with Jim and the injured Ethan inside the dark RV as unseen threats close in.",
+    "question": "What are the last words spoken in the episode as the creatures approach the RV?",
+    "options": [
+      "'They're here'",
+      "'They're comin''",
+      "'It's too late'",
+      "'God help us'"
+    ],
+    "answer": "'They're comin''",
+    "difficulty": "medium",
+    "description": "The episode ends on the chilling line 'They're comin'' as Boyd and Jim brace inside the RV, ending the pilot on a cliffhanger."
+  }
+]

@@ -1,0 +1,379 @@
+[
+  {
+    "context": "The episode opens with a young woman running late and rushing into a school, where she meets a colleague in the hallway.",
+    "question": "What reason does Rebecca give Melanie for being late?",
+    "options": [
+      "She missed the bus",
+      "Her car broke down",
+      "She overslept at home",
+      "She had a doctor's appointment"
+    ],
+    "answer": "She missed the bus",
+    "difficulty": "easy",
+    "description": "Rebecca insists she missed the bus, though Melanie is skeptical given that no bus stops near Brad's place."
+  },
+  {
+    "context": "Rebecca walks to the board to write something for her class, but something goes wrong.",
+    "question": "What words are written on the board just before Rebecca collapses?",
+    "options": [
+      "Call the nurse",
+      "Help me please",
+      "Get the doctor",
+      "Call for help"
+    ],
+    "answer": "Call the nurse",
+    "difficulty": "medium",
+    "description": "As Rebecca loses the ability to speak coherently, she manages to write 'call the nurse' on the board before collapsing."
+  },
+  {
+    "context": "House and Wilson are first introduced walking through the hospital hallway together.",
+    "question": "What visual detail distinguishes House from Wilson as they walk down the hallway?",
+    "options": [
+      "House uses a cane and limps",
+      "House wears no shoes",
+      "House carries a briefcase",
+      "House wears a surgical mask"
+    ],
+    "answer": "House uses a cane and limps",
+    "difficulty": "easy",
+    "description": "The camera shows only their hands and legs, revealing House's cane and limp while Wilson walks normally in a white lab coat."
+  },
+  {
+    "context": "Wilson describes House's specialty to explain why he is bringing him this unusual case.",
+    "question": "What specialty does House claim to hold when Wilson calls him a renowned diagnostician?",
+    "options": [
+      "Infectious disease",
+      "Neurology",
+      "Oncology",
+      "Internal medicine"
+    ],
+    "answer": "Infectious disease",
+    "difficulty": "medium",
+    "description": "House deflects Wilson's compliment by calling himself 'just a lowly infectious disease guy,' while Wilson is the oncologist."
+  },
+  {
+    "context": "House and Wilson are walking through the hospital hallway and Wilson is pitching the case, mentioning that he already has a diagnosis in mind for the patient.",
+    "question": "What diagnosis does Wilson say has already been suggested for the patient?",
+    "options": [
+      "Brain tumor",
+      "Aneurysm",
+      "Stroke",
+      "Vasculitis"
+    ],
+    "answer": "Brain tumor",
+    "difficulty": "easy",
+    "description": "Wilson mentions the brain tumor diagnosis, and House dismisses it as boring, noting that if it were correct the patient would simply die."
+  },
+  {
+    "context": "Wilson continues to pitch the unusual case to House in the hospital hallway, explaining more details about the patient to persuade him to take it on.",
+    "question": "How old is the patient Wilson is describing to House?",
+    "options": [
+      "24",
+      "29",
+      "32",
+      "35"
+    ],
+    "answer": "29",
+    "difficulty": "easy",
+    "description": "Wilson describes the patient as a 29-year-old female, and House immediately notes that whatever she has is 'highly unlikely' given her age."
+  },
+  {
+    "context": "House meets with his team in his office to look at an MRI of Rebecca's brain.",
+    "question": "What famous aphorism does House state when Foreman suggests they should speak to the patient first?",
+    "options": [
+      "Everybody lies",
+      "Trust no one",
+      "Patients always mislead",
+      "Truth is always hidden"
+    ],
+    "answer": "Everybody lies",
+    "difficulty": "easy",
+    "description": "House shuts down Foreman's suggestion by declaring 'Everybody lies,' establishing one of his core philosophies."
+  },
+  {
+    "context": "The team runs through a differential diagnosis, with each member offering a possible cause for Rebecca's inability to speak.",
+    "question": "What does Cameron suggest as a possible diagnosis, prompting Chase to call it 'Mad cow'?",
+    "options": [
+      "Creutzfeldt-Jakob disease",
+      "Wernicke's encephalopathy",
+      "Cerebral vasculitis",
+      "Viral encephalitis"
+    ],
+    "answer": "Creutzfeldt-Jakob disease",
+    "difficulty": "medium",
+    "description": "Cameron proposes Creutzfeldt-Jakob disease, Chase quips 'Mad cow?' and House fires back 'Mad zebra.'"
+  },
+  {
+    "context": "After the differential diagnosis meeting, House heads to the elevator and runs into his boss.",
+    "question": "How many years behind on his clinic obligation does Cuddy tell House he is?",
+    "options": [
+      "6 years",
+      "4 years",
+      "3 years",
+      "8 years"
+    ],
+    "answer": "6 years",
+    "difficulty": "medium",
+    "description": "Cuddy calculates that six years times three weeks means House owes her better than four months of clinic time."
+  },
+  {
+    "context": "House and Cuddy's elevator argument turns into a battle of philosophical quotes.",
+    "question": "Which philosopher does House quote when he tells Cuddy she can't always get what she wants?",
+    "options": [
+      "Jagger",
+      "Nietzsche",
+      "Socrates",
+      "Kant"
+    ],
+    "answer": "Jagger",
+    "difficulty": "easy",
+    "description": "House attributes the saying to 'the philosopher Jagger,' and Cuddy later uses the rest of the lyric against him."
+  },
+  {
+    "context": "Rebecca is introduced in the hospital hallway and asks the team who is treating her.",
+    "question": "When Rebecca asks to see the doctor in charge, what department is House identified as the head of?",
+    "options": [
+      "Diagnostic Medicine",
+      "Infectious Disease",
+      "Internal Medicine",
+      "Experimental Oncology"
+    ],
+    "answer": "Diagnostic Medicine",
+    "difficulty": "easy",
+    "description": "House is identified as the head of Diagnostic Medicine, though Rebecca quickly learns he is famously reluctant to interact with patients directly."
+  },
+  {
+    "context": "The team prepares Rebecca for a contrast MRI and explains the procedure to her.",
+    "question": "What substance is injected into Rebecca's vein to act as contrast material for the MRI?",
+    "options": [
+      "Gadolinium",
+      "Iodine dye",
+      "Barium sulfate",
+      "Technetium"
+    ],
+    "answer": "Gadolinium",
+    "difficulty": "medium",
+    "description": "Foreman explains that gadolinium distributes through the brain and makes abnormalities light up like a Christmas tree. However Rebecca stops breathing"
+  },
+  {
+    "context": "After the MRI crisis, House arrives at the clinic to begin making up his overdue hours.",
+    "question": "What TV show does House ask about watching in the clinic?",
+    "options": [
+      "Days of Our Lives",
+      "General Hospital",
+      "The Young and the Restless",
+      "Grey's Anatomy"
+    ],
+    "answer": "General Hospital",
+    "difficulty": "medium",
+    "description": "House tells the clinic staff that General Hospital starts in 8 minutes, clearly prioritising his soap opera over seeing patients."
+  },
+  {
+    "context": "House reluctantly enters the clinic to begin working off his owed hours and meets his first patient.",
+    "question": "What unusual physical quality does Cuddy tell House his first clinic patient has?",
+    "options": [
+      "The patient is orange",
+      "The patient is red",
+      "The patient is blue",
+      "The patient is yellow"
+    ],
+    "answer": "The patient is orange",
+    "difficulty": "easy",
+    "description": "Cuddy says the patient is orange — not yellow — and House is genuinely intrigued enough to see the patient."
+  },
+  {
+    "context": "House examines the orange patient and makes a surprising personal observation about his life.",
+    "question": "What combination of foods does House identify as the cause of the patient's orange skin?",
+    "options": [
+      "Carrots and niacin",
+      "Beets and vitamin C",
+      "Sweet potatoes and carrots",
+      "Tomatoes and iron supplements"
+    ],
+    "answer": "Carrots and niacin",
+    "difficulty": "medium",
+    "description": "House explains that carrots turn the patient yellow and niacin turns him red, telling him to 'get some finger-paints and do the math.'"
+  },
+  {
+    "context": "House presses Foreman to break into Rebecca's home to search for environmental contaminants, and Foreman pushes back by insisting he cannot simply break into someone's house.",
+    "question": "How old was Foreman when he broke into someone`s home?",
+    "options": [
+      "14",
+      "16",
+      "18",
+      "21"
+    ],
+    "answer": "16",
+    "difficulty": "medium",
+    "description": "House reveals he knows about Foreman's sealed juvenile record, telling him he was 16 at the time and that it was a stupid mistake — information he got from Foreman's old gym teacher."
+  },
+  {
+    "context": "Back at the clinic, House sees a patient who has self-diagnosed himself using the internet.",
+    "question": "What two conditions has the clinic patient decided he might have after researching online?",
+    "options": [
+      "Chronic Fatigue Syndrome and fibromyalgia",
+      "Lupus and multiple sclerosis",
+      "Lyme disease and chronic fatigue",
+      "Fibromyalgia and hypothyroidism"
+    ],
+    "answer": "Chronic Fatigue Syndrome and fibromyalgia",
+    "difficulty": "medium",
+    "description": "The patient lists CFS and fibromyalgia as his self-diagnoses, and House responds with heavy sarcasm before devising a plan."
+  },
+  {
+    "context": "Cameron and Foreman break into Rebecca's apartment to search for environmental clues about her illness.",
+    "question": "What food does Foreman find in Rebecca's refrigerator and eat during the break-in?",
+    "options": [
+      "Ham and mustard",
+      "Leftover pasta",
+      "Cheese and crackers",
+      "Cold chicken"
+    ],
+    "answer": "Ham and mustard",
+    "difficulty": "medium",
+    "description": "Foreman pulls out ham and mustard from the fridge and helps himself, joking that he doesn't respect her food more than her DVD player."
+  },
+  {
+    "context": "While searching Rebecca's apartment, Cameron and Foreman chat about their backgrounds as Foreman helps himself to food from the fridge.",
+    "question": "Which school did Foreman attend, and what was his GPA?",
+    "options": [
+      "Harvard, 3.8 GPA",
+      "Hopkins, 4.0 GPA",
+      "Yale, 3.9 GPA",
+      "Stanford, 4.0 GPA"
+    ],
+    "answer": "Hopkins, 4.0 GPA",
+    "difficulty": "medium",
+    "description": "Foreman tells Cameron he went to Hopkins and never got less than a 4.0 GPA, sarcastically noting the irony that his juvenile record may have helped him land one of the top jobs in the country."
+  },
+  {
+    "context": "Back at the hospital, the team reports their findings from Rebecca's apartment, and a key detail about Wilson's story is exposed.",
+    "question": "How does Foreman first argue that Rebecca is not Wilson's cousin?",
+    "options": [
+      "She was not Jewish",
+      "He found no family photos of Wilson",
+      "Her name is Rebecca not Rachel",
+      "Her medical records list no family connection"
+    ],
+    "answer": "She was not Jewish",
+    "difficulty": "medium",
+    "description": "Foreman argues that a Jewish cousin wouldn't have ham in the fridge, though Wilson quickly counters that most Jews don't keep kosher — but Foreman's real gotcha is that Wilson doesn't even know her first name."
+  },
+  {
+    "context": "The ham discovery triggers a rapid chain of reasoning in House's mind during the meeting.",
+    "question": "What disease does House diagnose Rebecca with after realising she eats pork?",
+    "options": [
+      "Neurocysticercosis",
+      "Trichinosis",
+      "Toxoplasmosis",
+      "Echinococcosis"
+    ],
+    "answer": "Neurocysticercosis",
+    "difficulty": "hard",
+    "description": "House leaps to neurocysticercosis — a tapeworm in the brain — explaining that where there is ham there is pork, and where there is pork there is the possibility of tapeworm larvae."
+  },
+  {
+    "context": "House explains the tapeworm theory to his team in detail, tracing how the parasite travels through the body.",
+    "question": "Approximately how many eggs can a tapeworm produce per day, according to House's explanation?",
+    "options": [
+      "20 to 30,000",
+      "1,000 to 5,000",
+      "500 to 1,000",
+      "50,000 to 100,000"
+    ],
+    "answer": "20 to 30,000",
+    "difficulty": "hard",
+    "description": "House explains that the tapeworm can produce 20 to 30,000 eggs a day, some of which pass through the intestinal walls into the bloodstream and travel to the brain."
+  },
+  {
+    "context": "House visits Rebecca's room alone at night to try to persuade her to accept treatment.",
+    "question": "What caused House's own leg injury, as he explains to Rebecca?",
+    "options": [
+      "An infarction in his thigh muscles",
+      "A motorcycle accident",
+      "A surgical complication",
+      "A bone infection"
+    ],
+    "answer": "An infarction in his thigh muscles",
+    "difficulty": "medium",
+    "description": "House tells Rebecca he had an infarction — a blockage of blood flow — in his thigh muscles, leading to muscle death and his permanent limp."
+  },
+  {
+    "context": "House delivers a blunt speech to Rebecca about dignity as she refuses further treatment.",
+    "question": "What does House say about dignity?",
+    "options": [
+      "You can die with dignity but you can't live with it",
+      "You can live with dignity but you can't die with it",
+      "Dignity in death requires accepting your fate",
+      "Everyone dies the same way — there is no dignity in it"
+    ],
+    "answer": "You can live with dignity but you can't die with it",
+    "difficulty": "medium",
+    "description": "House argues that death is always ugly regardless of circumstances, concluding that 'you can live with dignity, we can't die with it.'"
+  },
+  {
+    "context": "The team debates how to confirm the tapeworm diagnosis, since Rebecca has refused further treatment.",
+    "question": "Which team member proposes using a plain x-ray to find evidence of the tapeworm?",
+    "options": [
+      "Chase",
+      "Foreman",
+      "Cameron",
+      "Wilson"
+    ],
+    "answer": "Chase",
+    "difficulty": "medium",
+    "description": "Chase suggests that worm cysts show up on a plain x-ray like shotgun pellets, and House agrees — directing them to x-ray her leg rather than her brain."
+  },
+  {
+    "context": "After the x-ray of Rebecca's leg confirms the presence of a worm larva, Chase explains to Rebecca that she likely has the same parasite in her brain and that it has probably been there for years.",
+    "question": "What medication does Chase hand Rebecca to begin treating the tapeworm?",
+    "options": [
+      "Albendazole",
+      "Prednisone",
+      "Mebendazole",
+      "Metronidazole"
+    ],
+    "answer": "Albendazole",
+    "difficulty": "medium",
+    "description": "Chase hands Rebecca a cup with two pills of Albendazole, telling her she will need to take them every day for at least a month with a meal."
+  },
+  {
+    "context": "Cameron waits in House's office after Rebecca's treatment is underway and confronts him about his hiring decisions.",
+    "question": "According to House, why did he hire Cameron?",
+    "options": [
+      "Because she is extremely pretty",
+      "Because she had the best grades",
+      "Because she was a woman",
+      "Because she came highly recommended"
+    ],
+    "answer": "Because she is extremely pretty",
+    "difficulty": "easy",
+    "description": "House tells Cameron he hired her because she looks good, comparing her to 'a nice piece of art in the lobby,' before elaborating that her beauty combined with her hard work made her intriguing."
+  },
+  {
+    "context": "Cameron is in House's office confronting him about his hiring decisions, and House has just told her why he hired her.",
+    "question": "Where did Cameron mention she did an internship?",
+    "options": [
+      "The Mayo Clinic",
+      "Johns Hopkins",
+      "Massachusetts General",
+      "Cleveland Clinic"
+    ],
+    "answer": "The Mayo Clinic",
+    "difficulty": "medium",
+    "description": "Cameron cites her Mayo Clinic internship as evidence of her strong qualifications, to which House coolly acknowledges she was a very good applicant — just not the best."
+  },
+  {
+    "context": "Near the end of the episode, Rebecca's class visits her in the hospital and brings her a handmade card.",
+    "question": "What message is written inside the card that the kindergarten class gives Rebecca?",
+    "options": [
+      "'Miss Rebecca we're glad you're not dead'",
+      "'Miss Rebecca we miss you lots'",
+      "'Miss Rebecca get well soon'",
+      "'Miss Rebecca we love you always'"
+    ],
+    "answer": "'Miss Rebecca we're glad you're not dead'",
+    "difficulty": "easy",
+    "description": "The charming, brutally honest card from the five-year-olds reads 'Miss Rebecca we're glad you're not dead,' making Rebecca laugh with delight."
+  }
+]

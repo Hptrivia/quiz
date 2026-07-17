@@ -2038,7 +2038,7 @@
   },
   {
     "slug": "kingdom-come-deliverance",
-    "title": "Kingdom Come: Deliverance",
+    "title": "Kingdom Come",
     "category": "Games",
     "description": "A historical RPG trivia theme built around Kingdom Come: Deliverance, following Henry through a grounded, medieval Bohemia across the first game and its sequel.",
     "image": "",
@@ -2122,6 +2122,83 @@
     "questionFile": "data/heroes.txt",
     "seoIntro": "Heroes trivia works because the series follows ordinary people around the globe who discover they have superhuman abilities, their lives colliding as they try to stop a catastrophe. Fans can be tested on the powers, the characters and the interwoven storylines across its volumes.",
     "seoDetail": "A strong Heroes quiz can include Claire Bennet, Hiro Nakamura, Peter and Nathan Petrelli, Mohinder Suresh, Matt Parkman and the villain Sylar, the powers from regeneration to space-time manipulation, the Company and Primatech, the 'save the cheerleader, save the world' mission, the eclipse and the Godsend symbol, and the twists across seasons like Generations, Villains, Fugitives and Redemption. It works because it rewards fans who followed the show's sprawling web of heroes and villains.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "batman-arkham",
+    "title": "Batman: Arkham",
+    "category": "Games",
+    "description": "An action trivia theme built around the Batman: Arkham games, following the Dark Knight through Gotham's longest nights against the rogues galleries of Asylum, City and Knight.",
+    "image": "",
+    "questionFile": "data/batman.txt",
+    "seoIntro": "Batman: Arkham trivia works because the games drop the Dark Knight into a freeform Gotham packed with gadgets, predator takedowns and Batman's greatest villains. Fans can be tested on the story, the combat and the world across Asylum, City, Origins and Knight.",
+    "seoDetail": "A strong Batman: Arkham quiz can include Bruce Wayne and the Batman, the Joker and his schemes across the series, villains from Scarecrow and Bane to the Riddler and Two-Face, the gadgets and the Batmobile, the islands and districts of Gotham, the freeflow combat and predator sections, the side missions and Riddler trophies, and the twists that run from Arkham Asylum to Arkham Knight. It works because it rewards players who cleaned up every corner of Gotham.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "far-cry",
+    "title": "Far Cry",
+    "category": "Games",
+    "description": "An open-world FPS trivia theme built around the Far Cry series, dropping players into hostile frontiers ruled by unforgettable villains from Vaas to Pagan Min and Joseph Seed.",
+    "image": "",
+    "questionFile": "data/farcry.txt",
+    "seoIntro": "Far Cry trivia works because each game strands the player in a beautiful, hostile open world run by a charismatic tyrant. Fans can be tested on the villains, the regions and the chaos across Far Cry 3, 4, 5 and beyond.",
+    "seoDetail": "A strong Far Cry quiz can include Vaas Montenegro and the island of Rook, Pagan Min and Kyrat, Joseph Seed and Hope County, Anton Castillo and Yara, the player characters from Jason Brody to Dani Rojas, the outposts, wingsuits and takedowns, the animals and hunting, the weapons and vehicles, and the co-op and companions that define the series. It works because it rewards players who liberated every outpost.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "glee",
+    "title": "Glee",
+    "category": "TV",
+    "description": "A musical comedy-drama trivia theme built around Glee, following the McKinley High glee club as underdogs sing, feud and chase Nationals under Mr. Schuester and Sue Sylvester.",
+    "image": "",
+    "questionFile": "data/glee.txt",
+    "seoIntro": "Glee trivia works because the musical dramedy mixes big covers, high-school rivalries and the New Directions' road to Nationals. Fans can be tested on the characters, the songs and the storylines across the seasons.",
+    "seoDetail": "A strong Glee quiz can include Rachel Berry and Finn Hudson, Kurt, Blaine and the Warblers, Santana, Brittany, Quinn and Puck, Mr. Schuester and the ever-scheming Sue Sylvester, the New Directions and rival clubs, the show choir competitions from Sectionals to Nationals, the guest stars and tribute episodes, and the standout musical numbers that defined the show. It works because it rewards fans who knew every solo and slushie.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "sherlock",
+    "title": "Sherlock",
+    "category": "TV",
+    "description": "A modern mystery trivia theme built around the BBC's Sherlock, following Sherlock Holmes and John Watson through present-day London and their duel with Moriarty.",
+    "image": "",
+    "questionFile": "data/sherlock.txt",
+    "seoIntro": "Sherlock trivia works because the BBC series reinvents Holmes in modern London with dazzling deductions and a deadly game against Moriarty. Fans can be tested on the cases, the characters and the twists across its four series.",
+    "seoDetail": "A strong Sherlock quiz can include Sherlock Holmes and his deductions, John Watson and their partnership, Mycroft, Mrs Hudson and Molly Hooper, DI Lestrade and Scotland Yard, the villains from Moriarty to Magnussen, Irene Adler and Mary, the cases from A Study in Pink to The Reichenbach Fall, 221B Baker Street, and the mind palace and mysteries that define the show. It works because it rewards fans who followed every deduction.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "teen-wolf",
+    "title": "Teen Wolf",
+    "category": "TV",
+    "description": "A supernatural drama trivia theme built around Teen Wolf, following Scott McCall and his friends as a werewolf bite turns Beacon Hills into a battleground for the supernatural.",
+    "image": "",
+    "questionFile": "data/wolf.txt",
+    "seoIntro": "Teen Wolf trivia works because the series turns a werewolf bite into high-school drama, pack loyalty and escalating supernatural threats in Beacon Hills. Fans can be tested on the characters, the creatures and the storylines across its seasons.",
+    "seoDetail": "A strong Teen Wolf quiz can include Scott McCall and his transformation, Stiles, Derek Hale and the pack, Allison Argent and the hunters, Lydia the banshee, Kira, Malia and Peter Hale, the creatures from the Kanima to the Nogitsune, Beacon Hills and the Nemeton, the alphas and the hunts, and the lacrosse, romances and mysteries that define the show. It works because it rewards fans who ran with the pack.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "yakuza",
+    "title": "Yakuza",
+    "category": "Games",
+    "description": "A crime saga trivia theme built around the Yakuza (Like a Dragon) series, following Kazuma Kiryu and Ichiban Kasuga through the neon streets of Kamurocho and Japan's criminal underworld.",
+    "image": "",
+    "questionFile": "data/yakuza.txt",
+    "seoIntro": "Yakuza trivia works because the series blends a serious crime saga with over-the-top brawls, substories and the neon streets of Kamurocho. Fans can be tested on the characters, the story and the world across Kiryu's saga and Like a Dragon.",
+    "seoDetail": "A strong Yakuza quiz can include Kazuma Kiryu the Dragon of Dojima, Goro Majima, Ichiban Kasuga and the shift to turn-based combat, the Tojo Clan and rival families, Kamurocho and Sotenbori, the substories and minigames, Haruka and Kiryu's found family, the heat actions and fighting styles, and the twists across the mainline games and Kiwami remakes. It works because it rewards fans who walked every alley of Kamurocho.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "malcolm-in-the-middle",
+    "title": "Malcolm in the Middle",
+    "category": "Sitcoms",
+    "description": "A family sitcom trivia theme built around Malcolm in the Middle, following boy-genius Malcolm and his chaotic working-class family through school, schemes and sibling warfare.",
+    "image": "",
+    "questionFile": "data/malcolm.txt",
+    "seoIntro": "Malcolm in the Middle trivia works because the sitcom follows a genius kid trapped in a loud, dysfunctional family where every day turns into chaos. Fans can be tested on the brothers, the schemes and the standout moments across its seasons.",
+    "seoDetail": "A strong Malcolm in the Middle quiz can include Malcolm and his fourth-wall asides, his brothers Reese, Dewey and Francis, parents Hal and Lois, the Krelboyne class and school life, Francis at Marlin Academy, the family's endless schemes and punishments, the neighbours and recurring characters, and the standout episodes that defined the show. It works because it rewards fans who grew up with the family's chaos.",
     "fanQuestions": true
   }
 ]
