@@ -14,7 +14,7 @@
 //   2. change ios: 'off' → 'live' here.
 const ADMOB_MODE_BY_PLATFORM = {
   ios: 'live',
-  android: 'test', // TEMP diagnostic (2026-07-21): checking Android earnings vs iOS. REVERT to 'live'.
+  android: 'live',
 };
 const _ADMOB_PLATFORM = window.Capacitor?.getPlatform?.();
 const ADMOB_MODE = ADMOB_MODE_BY_PLATFORM[_ADMOB_PLATFORM] || 'off';
