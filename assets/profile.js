@@ -576,8 +576,12 @@ function _webStoreLinksHTML() {
   // subtle outlined link so the free app stays the primary call to action.
   const webUnlock = (WEB_PAY_OPTION && WEB_PAY_OPTION_MOBILE) ? `<div class="web-or"><span>or</span></div>
   <a href="/remove-ads.html" class="primary-btn web-unlock-btn">Keep playing on web</a>` : '';
+  // Same-tab (no target="_blank"): iOS Safari — especially Private Mode / in-app
+  // webviews — silently swallows _blank store links as blocked pop-ups, so the
+  // wall button "does nothing" on tap. Same-tab navigation to the store works
+  // reliably (matches the lobby/result banners), so we use it here too.
   if (isAndroidWeb()) return `<a href="${_PLAY_STORE}" class="primary-btn" data-promo="wall_store_btn" target="_blank">Get the free app</a>${webUnlock}`;
-  if (isIosWeb())     return `<a href="${_APP_STORE}"  class="primary-btn" data-promo="wall_store_btn" target="_blank">Get the free app</a>${webUnlock}`;
+  if (isIosWeb())     return `<a href="${_APP_STORE}"  class="primary-btn" data-promo="wall_store_btn">Get the free app</a>${webUnlock}`;
   // Desktop / unknown: a compact button opens the QR in an overlay (keeps the
   // inline wall small), OR pay to unlock all questions right here on desktop.
   return `<button type="button" class="primary-btn web-qr-trigger" data-promo="wall_store_btn" data-qr="${_appUrl()}">📱 Get the free app</button>
