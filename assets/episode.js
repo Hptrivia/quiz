@@ -244,12 +244,13 @@ async function renderEpisodePage() {
       const doFeedback = (msg) => { if (fb) { fb.textContent = msg; setTimeout(() => { if (fb) fb.textContent = ""; }, 3000); } };
       _copyText(text).then(ok => doFeedback(ok ? "Copied — now paste it!" : "Press Ctrl/Cmd+C to copy"));
     }
-    // Grid shown on screen wraps to fill the card WIDTH (wide + short) so it uses
-    // the side space instead of stacking tall — keeps the install wall high on web.
-    // Emoji stay full size. The COPIED text keeps its own 5-per-row chunking (reads
-    // well in a narrow Reddit comment), so pasted posts still look full.
+    // Classic vertical grid: 5 per row, full-size emoji (user prefers the look).
+    // It's tall, so the install wall is rendered ABOVE this card (see the resultBox
+    // order below) to keep the wall high. Copied text keeps its own 5-per-row grid.
     const _gridCells = qResults.map(r => r === true ? "🟩" : r === false ? "🟥" : "⬜");
-    const _gridHtml = `<div class="episode-share-grid">${_gridCells.map(c => `<span>${c}</span>`).join("")}</div>`;
+    const _gridRows = [];
+    for (let i = 0; i < _gridCells.length; i += 5) _gridRows.push(_gridCells.slice(i, i + 5).join(""));
+    const _gridHtml = `<div class="episode-share-grid">${_gridRows.map(r => `<div>${r}</div>`).join("")}</div>`;
     const _epLabel = foundAnyEpisodeMarkers ? `Episode ${safeEpisode}` : "Episode Mode";
     const shareHtml = `
       <div class="episode-share-card${_perfect ? " is-flawless" : ""}">
@@ -264,13 +265,13 @@ async function renderEpisodePage() {
       </div>`;
 
     resultBox.innerHTML = `
-      ${shareHtml}
       ${webQCounterHTML()}
       <div class="cta-row">
         ${hasNextEpisode && !isWebEpLimit() ? `<a class="primary-btn" href="episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}" data-rewarded-href="episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}">Next Episode</a>` : ""}
         ${hasNextEpisode && isWebEpLimit() ? webWallHTML("Yay! You've played an episode", theme.title, "episodes") : ""}
         ${!hasNextEpisode && isWebEpLimit() ? webWallHTML("Want more Episode Mode trivia?", null, "episodes", null, true, "Download Trivia Gauntlet.") : ""}
       </div>
+      ${shareHtml}
       ${notifyHtml}
       ${affiliateHtml}
       ${relatedHtml}

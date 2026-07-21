@@ -1959,7 +1959,7 @@ a.theme-stat-card:active,
   border-radius: 14px;
   padding: 16px 18px 14px;
   margin: 4px auto 18px;
-  max-width: 480px;
+  max-width: 340px;
   text-align: center;
 }
 .episode-share-card.is-flawless {
@@ -1999,15 +1999,12 @@ a.theme-stat-card:active,
   color: var(--text, #e5e7eb);
 }
 .episode-share-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2px 3px;
-  font-size: 1.4rem;
-  line-height: 1.1;
+  font-size: 1.5rem;
+  line-height: 1.35;
+  letter-spacing: 2px;
   margin: 0 0 10px;
 }
-.episode-share-grid > span { display: inline-block; }
+.episode-share-grid > div { white-space: nowrap; }
 .episode-share-row {
   display: flex;
   align-items: center;
