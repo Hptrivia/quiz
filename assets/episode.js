@@ -124,6 +124,12 @@ async function renderEpisodePage() {
   const renderQuestions = _resume ? _resume.questions : episodeQuestions.map(q => shuffleQuestionOptions(q));
   if (_resume) { score = _resume.score || 0; currentIndex = _resume.currentIndex; }
 
+  // Per-question correct/wrong, indexed by question, for the shareable result grid
+  // (🟩/🟥). Restored on resume so a mid-episode continue still builds a full grid.
+  const qResults = (_resume && Array.isArray(_resume.qResults))
+    ? _resume.qResults.slice()
+    : new Array(renderQuestions.length).fill(null);
+
   function renderResult() {
     if (typeof _clearMidQuiz === 'function') _clearMidQuiz("episode", theme.slug, safeEpisode);
     if (typeof webAddEp === 'function') webAddEp();
@@ -188,9 +194,78 @@ async function renderEpisodePage() {
       </div>
     ` : "";
 
+    // ── Shareable challenge card (v1: text + emoji grid, no spoilers) ──────────
+    // Episode Mode is the hardest mode, so a good run is worth flexing. Card is a
+    // Wordle-style copy/share: theme, episode, score, 🟩/🟥 grid, and a link back
+    // that drops the recipient into their free episode (the discovery funnel).
+    const _perfect = score === episodeQuestions.length;
+    // Every score gets a short adjective badge (not just a perfect run).
+    const _pct = episodeQuestions.length ? (score / episodeQuestions.length) * 100 : 0;
+    const _badgeText = _pct >= 100 ? "🧠 FLAWLESS"
+                     : _pct >= 80  ? "🔥 EXPERT"
+                     : _pct >= 60  ? "🎬 SOLID"
+                     : _pct >= 40  ? "📺 CASUAL"
+                     :               "👀 ROOKIE";
+    // includeLink: Reddit share omits it (the link is already in the post they're
+    // commenting on); "Challenge a friend" includes it so a friend can play.
+    function _episodeShareText(includeLink) {
+      const total = episodeQuestions.length;
+      const cells = qResults.map(r => r === true ? "🟩" : r === false ? "🟥" : "⬜");
+      const rows = [];
+      for (let i = 0; i < cells.length; i += 5) rows.push(cells.slice(i, i + 5).join(""));
+      const epLabel = foundAnyEpisodeMarkers ? `Episode ${safeEpisode}` : "Episode Mode";
+      // Reddit share (no link) drops the theme name too — the post is already about
+      // this theme. Friend share keeps the theme name (they need the context) + link.
+      const header = includeLink ? `🎬 ${theme.title} — ${epLabel}` : `🎬 ${epLabel}`;
+      let out = `${header}\nScore: ${score}/${total} ${_badgeText}\n\n${rows.join("\n")}`;
+      if (includeLink) out += `\n\ntriviagauntlet.app/episode.html?theme=${theme.slug}&episode=${safeEpisode}`;
+      return out;
+    }
+    function _legacyCopy(text) {
+      try {
+        const ta = document.createElement("textarea");
+        ta.value = text; ta.style.cssText = "position:fixed;top:0;left:0;opacity:0;";
+        document.body.appendChild(ta); ta.focus(); ta.select();
+        const ok = document.execCommand("copy"); ta.remove(); return ok;
+      } catch (e) { return false; }
+    }
+    function _copyText(text) {
+      // navigator.clipboard only works in a secure context; fall back to execCommand.
+      if (navigator.clipboard && window.isSecureContext) {
+        return navigator.clipboard.writeText(text).then(() => true).catch(() => _legacyCopy(text));
+      }
+      return Promise.resolve(_legacyCopy(text));
+    }
+    // Dead simple: copy the card text to the clipboard. Nothing opens. They paste
+    // it into their Reddit post/comment, or send it to a friend.
+    function _episodeShare(includeLink) {
+      const text = _episodeShareText(includeLink);
+      const fb = document.getElementById("episodeShareFeedback");
+      const doFeedback = (msg) => { if (fb) { fb.textContent = msg; setTimeout(() => { if (fb) fb.textContent = ""; }, 3000); } };
+      _copyText(text).then(ok => doFeedback(ok ? "Copied — now paste it!" : "Press Ctrl/Cmd+C to copy"));
+    }
+    // Render the shareable card VISIBLY on the result screen (not hidden behind a
+    // button) so the score/grid reads as a flex — the button just sends what they
+    // already see, Wordle-style.
+    const _gridCells = qResults.map(r => r === true ? "🟩" : r === false ? "🟥" : "⬜");
+    const _gridRows = [];
+    for (let i = 0; i < _gridCells.length; i += 5) _gridRows.push(_gridCells.slice(i, i + 5).join(""));
+    const _epLabel = foundAnyEpisodeMarkers ? `Episode ${safeEpisode}` : "Episode Mode";
+    const shareHtml = `
+      <div class="episode-share-card${_perfect ? " is-flawless" : ""}">
+        <p class="episode-share-title">🎬 ${theme.title} — ${_epLabel}</p>
+        <p class="episode-share-score">${score}<span class="episode-share-total">/${episodeQuestions.length}</span> <span class="flawless-badge${_perfect ? "" : " tier-plain"}">${_badgeText}</span></p>
+        <div class="episode-share-grid">${_gridRows.map(r => `<div>${r}</div>`).join("")}</div>
+        <div class="episode-share-row">
+          <button id="episodeShareRedditBtn" class="primary-btn">📢 Share to Reddit</button>
+          <button id="episodeShareFriendBtn" class="secondary-btn">🔗 Challenge a friend</button>
+        </div>
+        <span id="episodeShareFeedback" class="share-feedback" aria-live="polite"></span>
+      </div>`;
+
     resultBox.innerHTML = `
       <h2>${foundAnyEpisodeMarkers ? `Episode ${safeEpisode} Complete` : "Episode Mode Complete"}</h2>
-      <p>Your score: ${score} / ${episodeQuestions.length}</p>
+      ${shareHtml}
       ${webQCounterHTML()}
       ${notifyHtml}
       <div class="cta-row">
@@ -202,6 +277,10 @@ async function renderEpisodePage() {
       ${relatedHtml}
     `;
     if (notifyHtml && typeof wireNotifyCard === "function") wireNotifyCard(theme.title, "episode");
+    const _redditBtn = document.getElementById("episodeShareRedditBtn");
+    if (_redditBtn) _redditBtn.addEventListener("click", () => _episodeShare(false)); // no link
+    const _friendBtn = document.getElementById("episodeShareFriendBtn");
+    if (_friendBtn) _friendBtn.addEventListener("click", () => _episodeShare(true));  // with link
   }
 
   function showQuestion(index) {
@@ -283,6 +362,7 @@ async function renderEpisodePage() {
       if (answered || !selectedAnswer || currentIndex !== index) return;
 
       answered = true;
+      qResults[index] = selectedAnswer === q.answer;
 
       optsList.querySelectorAll(".option-btn").forEach(b => {
         b.disabled = true;
@@ -321,7 +401,7 @@ async function renderEpisodePage() {
       if (currentIndex >= episodeQuestions.length) {
         renderResult();
       } else {
-        if (typeof _saveMidQuiz === 'function') _saveMidQuiz("episode", theme.slug, safeEpisode, { questions: renderQuestions, currentIndex, score });
+        if (typeof _saveMidQuiz === 'function') _saveMidQuiz("episode", theme.slug, safeEpisode, { questions: renderQuestions, currentIndex, score, qResults });
         showQuestion(currentIndex);
       }
     });
