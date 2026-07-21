@@ -59,6 +59,16 @@ function shuffleQuestionOptions(question) {
   };
 }
 
+// Themes eligible for an "Episode Mode coming soon" lead-gen card: narrative shows
+// only (episodes make no sense for Games/Sports/etc). Shown on web + app (it's email
+// capture, not a gated free-play). Used by the theme page (episode button) and the
+// episode.html coming-soon landing.
+const EPISODE_SOON_CATEGORIES = ["TV", "Sitcoms"];
+function isEpisodeSoonTheme(theme, episodeMap) {
+  return !!theme && !!episodeMap && !episodeMap[theme.slug]
+    && EPISODE_SOON_CATEGORIES.includes(theme.category);
+}
+
 function groupByCategory(items) {
   const map = {};
   items.forEach(item => {
@@ -334,6 +344,13 @@ async function renderQuizPage() {
   if (episodeThemes[theme.slug]) {
     episodeBtn.style.display = "block";
     episodeBtn.href = `episode.html?theme=${theme.slug}`;
+  } else if (isEpisodeSoonTheme(theme, episodeThemes)) {
+    // No episode yet, but it's a show — offer a "coming soon · notify me" card that
+    // links to the episode.html coming-soon landing.
+    episodeBtn.style.display = "block";
+    episodeBtn.href = `episode.html?theme=${theme.slug}`;
+    const sub = episodeBtn.querySelector("p");
+    if (sub) sub.textContent = "🎬 Coming soon · Get notified";
   } else {
     episodeBtn.style.display = "none";
   }
