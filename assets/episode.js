@@ -141,14 +141,21 @@ async function renderEpisodePage() {
       : themes.filter(t => t.slug !== theme.slug && t.category === theme.category && episodeThemes[t.slug])
     ).slice(0, 4);
 
+    // App-only (and unlocked-web): free web visitors shouldn't discover regular /
+    // challenge trivia from the Episode result screen. Mirrors the Episode-card
+    // hides in app.js and challenge.js so cross-mode promo is blocked BOTH ways.
+    const showRegularCard = (typeof isLimitedWeb !== 'function') || !isLimitedWeb();
+    const regularCardHtml = showRegularCard ? `
+          <a class="card card-mix" href="challenge.html?theme=${theme.slug}&round=1">
+            <h3>${theme.title}</h3>
+            <span class="card-mix-sub">Regular trivia</span>
+          </a>` : "";
+
     const relatedHtml = `
       <div class="theme-related-quizzes" data-reward-gate="1">
         <h3>Related Trivia</h3>
         <div class="grid">
-          <a class="card card-mix" href="challenge.html?theme=${theme.slug}&round=1">
-            <h3>${theme.title}</h3>
-            <span class="card-mix-sub">Regular trivia</span>
-          </a>
+          ${regularCardHtml}
           ${relatedEpisodes.map(t => `
             <a class="card" href="episode.html?theme=${t.slug}&episode=1">
               <h3>${t.title}</h3>

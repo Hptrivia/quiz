@@ -1104,7 +1104,12 @@ function renderResult() {
 
   // If this theme has Episode Mode, show it as the FIRST related card (then the
   // mashup, then the other themes). This adds one card to the total.
-  const hasEpisode = !!episodeThemesMap[theme.slug];
+  // Cross-mode promo is APP-ONLY (and unlocked-web): free web visitors shouldn't
+  // discover Episode Mode from the regular-trivia result screen — the related
+  // card is the main way they'd find the alternate mode after using their free
+  // allowance. Hidden here + in challenge.js (Episode) and episode.js (Regular).
+  const hasEpisode = !!episodeThemesMap[theme.slug]
+    && ((typeof isLimitedWeb !== 'function') || !isLimitedWeb());
   const episodeCardHtml = hasEpisode ? `
       <a class="card card-mix" href="episode.html?theme=${theme.slug}&episode=1">
         <h3>${theme.title} Episode Mode</h3>

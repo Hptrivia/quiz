@@ -681,7 +681,11 @@ async function renderChallengePage() {
 
     // If this theme has Episode Mode, show it as the FIRST related card (then the
     // mashup, then the other themes). This adds one card to the total.
-    const hasEpisode = !!episodeThemesMap[theme.slug];
+    // App-only (and unlocked-web): free web visitors shouldn't discover Episode
+    // Mode from the challenge result screen. See app.js / episode.js for the
+    // matching cross-mode hides in the other directions.
+    const hasEpisode = !!episodeThemesMap[theme.slug]
+      && ((typeof isLimitedWeb !== 'function') || !isLimitedWeb());
     const episodeCardHtml = hasEpisode ? `
           <a class="card card-mix" href="episode.html?theme=${theme.slug}&episode=1">
             <h3>${theme.title} Episode Mode</h3>
