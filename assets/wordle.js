@@ -1238,6 +1238,33 @@ function injectWordleHead(theme, page) {
   document.head.appendChild(script);
 }
 
+async function injectWordleAffiliateBox(theme) {
+  const box = document.getElementById("wordleAffiliateBox");
+  if (!box || !theme || !theme.title) return;
+  let products = null;
+  try {
+    const affiliateLinks = await fetchJSON("data/affiliate_links.json");
+    const raw = affiliateLinks[theme.title];
+    const list = Array.isArray(raw) ? raw.filter(x => x && x.url && x.title) : [];
+    products = list.length ? list : null;
+  } catch { products = null; }
+  if (!products) return;
+  box.innerHTML = `
+    <section class="panel" style="margin-top:16px;">
+      <div class="affiliate-box">
+        <p class="affiliate-label">Recommended for Fans</p>
+        ${products.map(item => `
+          <a class="affiliate-card" href="${item.url}" target="_blank" rel="noopener noreferrer sponsored">
+            <strong>${item.title}</strong>
+          </a>
+        `).join("")}
+        <p class="affiliate-disclaimer">
+          Affiliate link — I may earn a commission from qualifying purchases.
+        </p>
+      </div>
+    </section>`;
+}
+
 function renderWordlePageContent(theme, themes, page, allWords = []) {
   const container = document.getElementById("wordlePageContent");
   if (!container) return;
@@ -1259,6 +1286,7 @@ function renderWordlePageContent(theme, themes, page, allWords = []) {
     </div>`;
 
   container.innerHTML = `
+    <div id="wordleAffiliateBox"></div>
     <section class="panel" style="margin-top:16px;">
       <div class="result-theme-search">
         <p class="result-theme-search-title">Try another Wordle theme</p>
@@ -1269,6 +1297,8 @@ function renderWordlePageContent(theme, themes, page, allWords = []) {
         ${relatedHtml}
       </div>
     </section>`;
+
+  injectWordleAffiliateBox(theme);
 
   const input = document.getElementById("wordleThemeSearchInput");
   const results = document.getElementById("wordleThemeSearchResults");
