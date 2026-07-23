@@ -935,6 +935,31 @@ function resultAppBannerHTML() {
   return `<a class="android-cta-banner result-app-banner web-wall-trigger" data-promo="result_app_banner" href="#">${label}</a>`;
 }
 
+// ── Printable pack test (Off Campus only) ────────────────────────────────────
+// One-theme experiment: does search traffic pay for a downloadable/printable
+// question pack? Sold off-site on Ko-fi (they host the file + take payment), so
+// there is no checkout code here — just a link. Replaces the "Report a Question"
+// link on Challenge/Marathon results for this theme ONLY, so the test can't
+// touch anything else; delete PACK_THEMES (or set it to {}) to end it.
+//
+// Web-only on purpose: linking to an external paid digital download from inside
+// the iOS/Android app is a store-policy problem, and native taps aren't tracked
+// anyway. Clicks are logged by the delegated data-promo tracker above, which
+// auto-attaches ref_host — that's what separates Google buyers from Reddit ones.
+const PACK_THEMES = {
+  'off-campus': {
+    url: 'https://ko-fi.com/s/614d86b885',
+    label: 'Print &amp; play offline'
+  }
+};
+function packPurchaseHTML(themeSlug) {
+  if (_isNative || !themeSlug) return '';
+  const pack = PACK_THEMES[themeSlug];
+  if (!pack || !pack.url || pack.url === 'KOFI_LINK_HERE') return ''; // fail closed until the link is live
+  return `<a class="secondary-btn pack-buy-btn" href="${pack.url}" target="_blank" rel="noopener"
+    data-promo="pack_buy" data-promo-theme="${themeSlug}">${pack.label}</a>`;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   _injectWebBanner();
   _checkWebPageWall();

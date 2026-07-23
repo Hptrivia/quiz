@@ -2296,3 +2296,19 @@ body.in-app .theme-sample-questions ~ p { display: none; }
 .quiz-theme-promo .qtp-chip:hover {
   filter: brightness(1.12);
 }
+
+/* Printable-pack buy button (Off Campus test). Sits in the result cta-row in
+   place of "Report a Question", so it inherits .secondary-btn sizing but gets a
+   warm outline + its own label wrapping — it's an offer, not a utility link. */
+.pack-buy-btn {
+  background: transparent;
+  border: 2px solid #f5a623;
+  color: #f5a623;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.35;
+}
+.pack-buy-btn:hover {
+  background: #f5a623;
+  color: #1b1b1b;
+}

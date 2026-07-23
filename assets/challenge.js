@@ -731,7 +731,7 @@ async function renderChallengePage() {
       <div class="cta-row">
         ${hasNextRound && !webWalled ? `<a class="primary-btn" href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}" ${safeRound % 2 === 0 ? `data-rewarded-href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}"` : ''}>Next Round</a>` : ""}
         ${webWalled ? webWallHTML("Yay! You've answered " + CHAL_WEB_LIMIT_Q + " questions", theme.title, null, CHAL_WEB_LIMIT_Q) : ""}
-        <a class="secondary-btn" href="contact.html">Report a Question</a>
+        ${(typeof packPurchaseHTML === 'function' && packPurchaseHTML(theme.slug)) || `<a class="secondary-btn" href="contact.html">Report a Question</a>`}
         ${!isPremiumUser() && (typeof isDesktopWeb === 'function' && isDesktopWeb()) ? `<a class="secondary-btn" href="remove-ads.html?theme=${theme.slug}">Reveal Answers</a>` : ""}
       </div>
       ${replayHtml}
