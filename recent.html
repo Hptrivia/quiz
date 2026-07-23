@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Recently Added — Trivia Gauntlet</title>
+  <meta name="description" content="The newest trivia themes and episodes added to Trivia Gauntlet." />
+  <link rel="icon" href="/favicon.ico.png" sizes="any">
+
+<link rel="apple-touch-icon" href="/assets/icon-192.png" />
+<meta name="theme-color" content="#0f172a" />
+
+  <!-- Grow.me — mobile web only (not the native app, not desktop). -->
+  <script data-grow-initializer="">
+  (function(){
+    var native = !!(window.Capacitor && (window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform() || window.Capacitor.isNative));
+    if (native) return;
+    window.growMe||((window.growMe=function(e){window.growMe._.push(e);}),(window.growMe._=[]));var e=document.createElement("script");(e.type="text/javascript"),(e.src="https://faves.grow.me/main.js"),(e.defer=!0),e.setAttribute("data-grow-faves-site-id","U2l0ZTowMmFjMDYwOC03YWNmLTQ4ZGItYTcxYS1iMjgxOTNmY2E2ZDQ=");var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);
+  })();
+  </script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E6BY9F2ZDT');
+</script>
+
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body data-page="recent">
+  <header class="site-header">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+    <h1 style="margin:0;"><a href="index.html" style="color:inherit;text-decoration:none;">Trivia Gauntlet</a></h1>
+    <span id="navAvatarSlot"></span>
+  </div>
+</header>
+
+<main class="container">
+  <section class="panel">
+    <h2 style="margin-top:0;">Recently Added</h2>
+    <p style="margin-bottom:0;">
+      The newest themes and episodes. Tap any of them to play straight away —
+      themes open a 10-question challenge round, episodes open Episode Mode.
+    </p>
+  </section>
+
+  <div id="recentList" class="recent-list">
+    <p class="recent-empty">Loading…</p>
+  </div>
+</main>
+
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+        <a href="about.html">About</a>
+      <a class="footer-highlight" href="how-it-works.html">How It Works</a>
+      <a class="footer-highlight" href="contact.html">Contact</a>
+      <a class="footer-highlight" href="blog.html">Blog</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Recently Added — reads the generated feed (scripts/generate-recent.js).
+   If the feed is missing or stale-broken we fall back to the tail of
+   themes.json, which is append-ordered, so the page never renders empty. */
+(function () {
+  const listEl = document.getElementById("recentList");
+
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  }
+
+  // "2026-07-17" -> "17 July 2026". Parsed as UTC so the day never shifts.
+  function prettyDate(iso) {
+    const [y, m, d] = String(iso).split("-").map(Number);
+    if (!y || !m || !d) return "";
+    return new Date(Date.UTC(y, m - 1, d))
+      .toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+  }
+
+  function render(entries) {
+    if (!entries.length) {
+      listEl.innerHTML = `<p class="recent-empty">Nothing here yet — check back soon.</p>`;
+      return;
+    }
+
+    let html = "";
+    let currentDate = null;
+
+    entries.forEach(e => {
+      if (e.date && e.date !== currentDate) {
+        currentDate = e.date;
+        html += `<h3 class="recent-date">Added ${esc(prettyDate(e.date))}</h3>`;
+      }
+      const isEpisode = e.type === "episode";
+      html += `
+        <a class="recent-row${isEpisode ? " is-episode" : ""}" href="${esc(e.url)}"
+           data-promo="recent_item" data-promo-theme="${esc(e.slug)}">
+          <span class="recent-row-title">${esc(e.title)}</span>
+          <span class="recent-row-label">${esc(e.label)}</span>
+        </a>`;
+    });
+
+    listEl.innerHTML = html;
+  }
+
+  fetch("data/recent.json")
+    .then(r => { if (!r.ok) throw new Error("no feed"); return r.json(); })
+    .then(data => render(Array.isArray(data) ? data : []))
+    .catch(() =>
+      fetch("data/themes.json")
+        .then(r => r.json())
+        .then(themes =>
+          render(
+            themes.slice(-20).reverse().map(t => ({
+              type: "theme",
+              slug: t.slug,
+              title: t.title,
+              label: t.category,
+              date: "",
+              url: `challenge.html?theme=${t.slug}&round=1`
+            }))
+          )
+        )
+        .catch(() => render([]))
+    );
+})();
+</script>
+
+  <script src="assets/admob.js"></script>
+  <script src="assets/app.js"></script>
+  <script src="assets/profile.js"></script>
+</body>
+</html>

@@ -286,14 +286,16 @@ async function renderEpisodePage() {
     // Episode Mode is the hardest mode, so a good run is worth flexing. Card is a
     // Wordle-style copy/share: theme, episode, score, 🟩/🟥 grid, and a link back
     // that drops the recipient into their free episode (the discovery funnel).
-    const _perfect = score === episodeQuestions.length;
     // Every score gets a short adjective badge (not just a perfect run).
     const _pct = episodeQuestions.length ? (score / episodeQuestions.length) * 100 : 0;
-    const _badgeText = _pct >= 100 ? "🧠 FLAWLESS"
-                     : _pct >= 80  ? "🔥 EXPERT"
-                     : _pct >= 60  ? "🎬 SOLID"
-                     : _pct >= 40  ? "📺 CASUAL"
-                     :               "👀 ROOKIE";
+    // Gold pill + card glow for the top tier (95%+), not just a flawless run.
+    const _perfect = _pct >= 95;
+    // Same wording/thresholds as Marathon's getMarathonTier() so a player sees
+    // one consistent set of tiers across modes.
+    const _badgeText = _pct >= 95 ? "🏆 SUPERFAN"
+                     : _pct >= 60 ? "🎬 TRUE FAN"
+                     : _pct >= 40 ? "📺 CASUAL VIEWER"
+                     :              "👀 REWATCH TIME";
     // includeLink: Reddit share omits it (the link is already in the post they're
     // commenting on); "Challenge a friend" includes it so a friend can play.
     function _episodeShareText(includeLink) {
