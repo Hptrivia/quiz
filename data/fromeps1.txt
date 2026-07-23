@@ -156,19 +156,6 @@
     "description": "The father notices a tree in the middle of the road and remarks it must have been knocked down in a storm, though the mother calls it 'a pretty selective storm.'"
   },
   {
-    "context": "The RV family discovers their vehicle has a serious problem after stopping near the fallen tree.",
-    "question": "What unexpected problem does the RV family find with their vehicle after stopping?",
-    "options": [
-      "The engine won't start",
-      "All the tires are flat",
-      "The fuel tank is empty",
-      "The doors are jammed"
-    ],
-    "answer": "All the tires are flat",
-    "difficulty": "easy",
-    "description": "The father asks 'Why are all the tires flat?' upon examining the RV, puzzled by what caused the damage."
-  },
-  {
     "context": "The Sheriff visits a location outside the main town and is greeted unexpectedly.",
     "question": "What is the name of the place the Sheriff goes to see his son?",
     "options": [
@@ -299,20 +286,7 @@
     "description": "Kristi says she needs at least an hour to do it right, but the Sheriff notes they only have about 40 minutes of daylight left."
   },
   {
-    "context": "As darkness approaches, some members of the group realize a critical mistake has been made with the road.",
-    "question": "What device had been accidentally left down on the road, causing the earlier tire damage to the RV?",
-    "options": [
-      "A bear trap",
-      "A spike strip",
-      "A chain barrier",
-      "A cattle grid"
-    ],
-    "answer": "A spike strip",
-    "difficulty": "medium",
-    "description": "A character shouts 'You left the f*cking spike strip down!' realizing the strip had caused the RV's flat tires and contributed to the crash."
-  },
-  {
-    "context": "After the spike strip disaster, Boyd urgently shepherds the group toward Colony House as night fully closes in and dangers emerge outside the RV.",
+    "context": "Boyd urgently shepherds the group toward Colony House as night fully closes in and dangers emerge outside the RV.",
     "question": "Which of the following is NOT something Boyd says to the group during the frantic rush to get everyone inside?",
     "options": [
       "'I am trying to make the RV safe'",
