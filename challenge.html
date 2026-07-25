@@ -2,6 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <!-- ── AdMaven interstitial test (2026-07-25) ─────────────────────────────
+       Site tag, mirrored from index.html. -->
+  <meta name="admaven-placement" content="BqTUHrjs6" />
+  <!-- Interstitial loader (placement 1471913), written inline at parse time the
+       way AdMaven supplies it. document.write keeps it parse-time while still
+       letting the guard below skip it.
+       SCOPE: live on the Finance & Investing challenge ONLY, so this can ship
+       without touching the other ~200 themes while the format is unproven.
+       Widen by adding slugs to AM_THEMES; empty array = every theme.
+       Also skips the native app (Capacitor loads these same pages over the
+       network, so AdMaven would otherwise run next to AdMob) and anyone who
+       unlocked ad removal with a code.
+       KILL SWITCH: delete this whole block. Nothing else references AdMaven. -->
+  <script>
+    (function () {
+      var AM_THEMES = ['finance-and-investing'];
+      var C = window.Capacitor;
+      var native = !!(C && ((C.isNativePlatform && C.isNativePlatform()) || C.isNative));
+      if (native) return;
+      var premium = false;
+      try {
+        var exp = localStorage.getItem('adsRemovedUntil');
+        premium = !!exp && new Date(exp) > new Date();
+      } catch (e) {}
+      if (premium) return;
+      // Single-theme challenges only — a mashup carries ?themes=a,b and gets nothing.
+      var theme = new URLSearchParams(location.search).get('theme');
+      if (AM_THEMES.length && AM_THEMES.indexOf(theme) === -1) return;
+      document.write('<script data-cfasync="false" src="//dcbbwymp1bhlf.cloudfront.net/?wbbcd=1471913"><\/script>');
+    })();
+  </script>
   <link rel="manifest" href="/manifest.json" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Challenge Mode</title>
