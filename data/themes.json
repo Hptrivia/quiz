@@ -2200,5 +2200,71 @@
     "seoIntro": "Malcolm in the Middle trivia works because the sitcom follows a genius kid trapped in a loud, dysfunctional family where every day turns into chaos. Fans can be tested on the brothers, the schemes and the standout moments across its seasons.",
     "seoDetail": "A strong Malcolm in the Middle quiz can include Malcolm and his fourth-wall asides, his brothers Reese, Dewey and Francis, parents Hal and Lois, the Krelboyne class and school life, Francis at Marlin Academy, the family's endless schemes and punishments, the neighbours and recurring characters, and the standout episodes that defined the show. It works because it rewards fans who grew up with the family's chaos.",
     "fanQuestions": true
+  },
+  {
+    "slug": "doom",
+    "title": "Doom",
+    "category": "Games",
+    "description": "A shooter trivia theme built around the Doom series, from the original UAC outbreak to the Slayer's rampages through Hell in Doom Eternal and The Dark Ages.",
+    "image": "",
+    "questionFile": "data/doom.txt",
+    "seoIntro": "Doom trivia works because the series turned demon-slaying into pure speed and spectacle across three decades of shooters. Fans can be tested on the weapons, the demons, the lore of the Slayer and the levels that made each game famous.",
+    "seoDetail": "A strong Doom quiz can include the classic UAC games on Mars, Doom 3's Delta Labs disaster, the 2016 reboot and Olivia Pierce's cult, Doom Eternal's Sentinel lore and Maykr hierarchy, Doom: The Dark Ages and its Sentinel war, the arsenal from the shotgun and chainsaw to the BFG and Crucible, glory kills and rune upgrades, the demon bestiary from imps to the Icon of Sin, and the id Software history behind it all. It works because it rewards fans who know both the lore and the level design.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "dune",
+    "title": "Dune",
+    "category": "TV",
+    "description": "A sci-fi trivia theme built around Dune, covering Paul Atreides' rise on Arrakis, the spice, the Fremen and the great houses of the Imperium.",
+    "image": "",
+    "questionFile": "data/dune.txt",
+    "seoIntro": "Dune trivia works because its desert world is packed with houses, prophecies and factions that fans love to argue about. Questions can cover Paul Atreides and Lady Jessica, the Fremen of Arrakis, the spice trade and the films that brought it all to screen.",
+    "seoDetail": "A strong Dune quiz can include House Atreides and House Harkonnen, Paul's journey from Caladan to the sietches of Arrakis, Lady Jessica and the Bene Gesserit with the Litany Against Fear, Chani and the Fremen and their terms like Lisan al-Gaib and Eyes of Ibad, sandworms and spice harvesting, the Spacing Guild and the Emperor's Sardaukar, ornithopters and crysknives, and the cast and filming of the Denis Villeneuve films. It works because it rewards fans of both the novels and the movies.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "mass-effect",
+    "title": "Mass Effect",
+    "category": "Games",
+    "description": "A sci-fi RPG trivia theme built around Mass Effect, following Commander Shepard, the Normandy crew and the galaxy-wide war against the Reapers.",
+    "image": "",
+    "questionFile": "data/mass.txt",
+    "seoIntro": "Mass Effect trivia works because the trilogy is built on squadmates, loyalty missions and choices that fans still debate. Questions can cover Commander Shepard and the Normandy, the alien species of the Citadel and the fight against the Reapers.",
+    "seoDetail": "A strong Mass Effect quiz can include Commander Shepard and the SSV Normandy, squadmates from Garrus and Tali to Liara, Wrex, Miranda and Zaeed, Saren and Sovereign in the first game, the Collectors and the suicide mission in Mass Effect 2, the genophage cure and the Krogan on Tuchanka, the Rachni and Prothean history, the Citadel Council and alien homeworlds like Palaven and Thessia, the endings of Mass Effect 3, and the Andromeda spin-off with its Heleus Cluster and strike teams. It works because it rewards fans who remember every dialogue choice.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "the-expanse",
+    "title": "The Expanse",
+    "category": "TV",
+    "description": "A space opera trivia theme built around The Expanse, following the Rocinante crew through the tensions between Earth, Mars and the Belt.",
+    "image": "",
+    "questionFile": "data/expanse.txt",
+    "seoIntro": "The Expanse trivia works because its solar system politics are as detailed as its characters, and fans track every ship, faction and Belter phrase. Questions can cover the Rocinante crew, the protomolecule and the war between Earth, Mars and the Belt.",
+    "seoDetail": "A strong Expanse quiz can include the Canterbury and the Scopuli in the pilot, Holden, Naomi, Amos and Alex aboard the Rocinante, Detective Miller on Ceres and Belter creole terms like welwala, Chrisjen Avasarala and UN politics, Fred Johnson and the OPA, Marco and Filip Inaros and the Free Navy, the protomolecule and Eros, the ring gate and Medina Station, Mars and the MCRN, the Laconia arc, and the cast behind the show. It works because it rewards fans who followed the whole six-season run.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "the-hunger-games",
+    "title": "The Hunger Games",
+    "category": "TV",
+    "description": "A dystopian trivia theme built around The Hunger Games, following Katniss Everdeen through the arenas, the districts and the rebellion against the Capitol.",
+    "image": "",
+    "questionFile": "data/hunger.txt",
+    "seoIntro": "The Hunger Games trivia works because Panem is full of tributes, districts and arena twists that fans know by heart. Questions can cover Katniss and Peeta, the Gamemakers and the Capitol, and the rebellion that runs through the whole series.",
+    "seoDetail": "A strong Hunger Games quiz can include Katniss Everdeen and the reaping of District 12, Peeta Mellark and their training scores, Haymitch and Effie, Cinna and the flaming costumes, the arena traps and the muttations, careers and victors like Finnick, Johanna, Beetee and Wiress, the Quarter Quell in Catching Fire, District 13 and Squad 451 in Mockingjay, Presidents Snow and Coin, the prequel era of The Ballad of Songbirds and Snakes, and the cast and directors of the films. It works because it rewards fans of both the books and the movies.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "tomb-raider",
+    "title": "Tomb Raider",
+    "category": "Games",
+    "description": "An action-adventure trivia theme built around Tomb Raider, following Lara Croft from the wreck of the Endurance through the hidden cities of the reboot trilogy.",
+    "image": "",
+    "questionFile": "data/raider.txt",
+    "seoIntro": "Tomb Raider trivia works because Lara Croft's adventures mix tombs, artefacts and survival set pieces that fans replay for years. Questions can cover the Endurance crew, the reboot trilogy's hidden cities and the gear that keeps Lara alive.",
+    "seoDetail": "A strong Tomb Raider quiz can include Lara Croft and the wreck of the Endurance on Yamatai, crew members like Sam, Roth and Whitman, the Sun Queen Himiko and the Oni, Rise of the Tomb Raider with Trinity, the Remnant and Kitezh, Shadow of the Tomb Raider with Paititi and Dominguez, Croft Manor and Lara's family history, the tools and gear from the climbing axe to the rebreather, optional tombs and relic hunting, and the wider history of the series and its films. It works because it rewards fans who explored every optional tomb.",
+    "fanQuestions": true
   }
 ]

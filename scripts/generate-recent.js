@@ -42,7 +42,7 @@ function addedDate(relFile) {
     // fall through to mtime
   }
 
-  return fs.statSync(abs).toISOString().slice(0, 10);
+  return fs.statSync(abs).mtime.toISOString().slice(0, 10);
 }
 
 const themes   = readJSON("data/themes.json");

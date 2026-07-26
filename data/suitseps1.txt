@@ -1,0 +1,314 @@
+[
+  {
+    "context": "The episode opens at Pearson Hardman, where a tense client meeting is underway and Louis has just stepped into Jessica's office to report on the situation.",
+    "question": "Which client does Louis claim he can handle?",
+    "options": [
+      "Gerald Tate",
+      "Daniel Reiser",
+      "Victor Hessler",
+      "Martin Coe"
+    ],
+    "answer": "Gerald Tate",
+    "difficulty": "easy",
+    "description": "Louis insists he can handle Gerald Tate, but Jessica dismisses him with a stern look and sends him to fetch Harvey instead."
+  },
+  {
+    "context": "Jessica sends Louis away and Harvey is found elsewhere in the building before being summoned.",
+    "question": "What game is Harvey playing when Jessica texts him?",
+    "options": [
+      "Poker",
+      "Chess",
+      "Blackjack",
+      "Billiards"
+    ],
+    "answer": "Poker",
+    "difficulty": "easy",
+    "description": "Harvey is mid-hand at a poker table — he's just gone all-in and revealed two aces — when Jessica's text arrives and he heads out to meet her."
+  },
+  {
+    "context": "Harvey forces Gerald Tate to back down by producing a piece of paper from inside his jacket as proof the firm has already been paid.",
+    "question": "What does the paper actually turn out to be?",
+    "options": [
+      "A fire drill memo",
+      "A blank contract",
+      "A wire transfer confirmation",
+      "A client invoice"
+    ],
+    "answer": "A fire drill memo",
+    "difficulty": "medium",
+    "description": "Harvey bluffed Tate entirely — the paper was just a memo about a fire drill on Tuesday, with Jessica assigned as blue team captain."
+  },
+  {
+    "context": "The episode cuts to a university examination hall, where we meet Mike for the first time.",
+    "question": "What exam is Mike secretly taking?",
+    "options": [
+      "Law School Entrance Exam",
+      "Bar Exam",
+      "Graduate Management Admission Test",
+      "Certified Law Admission Exam"
+    ],
+    "answer": "Law School Entrance Exam",
+    "difficulty": "easy",
+    "description": "The words 'Law School Entrance Exam' are written on the chalkboard, and Mike — wearing glasses and a cap — finishes well before time is called."
+  },
+  {
+    "context": "After the exam, Mike delivers a test score to the student who hired him.",
+    "question": "What score did Mike get the student?",
+    "options": [
+      "158",
+      "162",
+      "175",
+      "152"
+    ],
+    "answer": "158",
+    "difficulty": "medium",
+    "description": "Mike explains that only one in a hundred people can score a 175, and getting a B-minus student that score would make it obvious he cheated — a 158 is believable for him."
+  },
+  {
+    "context": "Mike visits his grandmother at the care home, where Dr. Schrager pulls him aside to explain that Edith's condition is worsening and she must be moved to full care.",
+    "question": "How much money does Dr. Schrager say Mike needs to come up with?",
+    "options": [
+      "$20,000",
+      "$25,000",
+      "$40,000",
+      "$30,000"
+    ],
+    "answer": "$25,000",
+    "difficulty": "easy",
+    "description": "Dr. Schrager tells Mike he'll need to come up with $25,000 to keep his grandmother in the facility and out of a state home — the exact sum that motivates Mike to take Trevor's drug deal."
+  },
+  {
+    "context": "Having agreed to make the drug drop, Mike calls Trevor to negotiate his price, then heads to Trevor's apartment to pick up the briefcase and get his instructions.",
+    "question": "What room number and hotel does Trevor tell Mike to deliver the briefcase to?",
+    "options": [
+      "Room 2412, Chilton Hotel",
+      "Room 2412, Plaza Hotel",
+      "Room 2142, Chilton Hotel",
+      "Room 2142, Plaza Hotel"
+    ],
+    "answer": "Room 2412, Chilton Hotel",
+    "difficulty": "medium",
+    "description": "Trevor tells Mike to take the briefcase to room 2412 at the Chilton Hotel on Park Avenue — the address that sets the rest of the pilot's plot in motion."
+  },
+  {
+    "context": "Mike arrives at the Chilton Hotel smartly dressed and carrying the briefcase, and notices that the law firm interviews are also being held there.",
+    "question": "Which law firm is conducting interviews at the Chilton Hotel?",
+    "options": [
+      "Pearson Hardman",
+      "Pearson Specter",
+      "Pearson and Hardman",
+      "Pearson Mitchell"
+    ],
+    "answer": "Pearson Hardman",
+    "difficulty": "easy",
+    "description": "A sign in the hotel lobby reads 'PEARSON HARDMAN HARVARD LAW INTERVIEWS — Room 2005,' which Mike notices and later uses to his advantage."
+  },
+  {
+    "context": "Mike flees down a stairwell to escape the undercover officers and bursts through a doorway near Harvey's interview suite.",
+    "question": "Whose name does Donna call out that Mike uses to bluff his way in?",
+    "options": [
+      "Rick Sorkin",
+      "Greg Fallow",
+      "Daniel Burch",
+      "Kevin Marlo"
+    ],
+    "answer": "Rick Sorkin",
+    "difficulty": "hard",
+    "description": "Donna calls out 'Rick Sorkin' for the next scheduled interview, and Mike — breathless and looking behind him — steps forward and is waved in, with Donna giving Harvey the agreed wink."
+  },
+  {
+    "context": "Harvey is convinced by Mike's abilities but explains the firm's strict hiring rule.",
+    "question": "Which law school does Pearson Hardman exclusively hire from?",
+    "options": [
+      "Harvard",
+      "Yale",
+      "Columbia",
+      "NYU"
+    ],
+    "answer": "Harvard",
+    "difficulty": "easy",
+    "description": "Harvey tells Mike that despite being impressed, the firm only hires from Harvard Law — and Mike has not attended any law school at all."
+  },
+  {
+    "context": "Harvey decides to demonstrate what a real Harvard lawyer can do, firing up a laptop and telling Mike to pick a topic.",
+    "question": "What topic does Mike pick?",
+    "options": [
+      "Stock option backdating",
+      "Civil Liabilites",
+      "Insider trading",
+      "Securities fraud"
+    ],
+    "answer": "Stock option backdating",
+    "difficulty": "medium",
+    "description": "Mike picks stock option backdating, then immediately outmanoeuvres Harvey by citing Sarbanes-Oxley and a Sixth Circuit case from May 2008 that Harvey had overlooked — all while the laptop turns out to be running a card game."
+  },
+  {
+    "context": "Mike explains to Harvey why he never went to law school despite having the talent for it.",
+    "question": "Why did Mike lose his college scholarship?",
+    "options": [
+      "He sold a memorised math test",
+      "He sold a memorized english test",
+      "He was expelled for drug possession",
+      "He was caught taking an exam for someone else"
+    ],
+    "answer": "He sold a memorised math test",
+    "difficulty": "medium",
+    "description": "Trevor convinced Mike to memorise a math test and sell it; they sold it to the dean's daughter, Mike lost his scholarship, got expelled, and never recovered his original path."
+  },
+  {
+    "context": "Harvey decides to hire Mike on the spot and begins laying out the conditions of the job.",
+    "question": "Which of these is NOT one of Harvey's conditions for the job?",
+    "options": [
+      "No more pot",
+      "Cut off Trevor",
+      "Get on a plane to Harvard",
+      "Get a Law certificate"
+    ],
+    "answer": "Get a Law certificate",
+    "difficulty": "medium",
+    "description": "Harvey's conditions are: no more pot, cut off Trevor, and go to Harvard to learn everything about attending law school there — getting a law certificate is not a condition Harvey sets."
+  },
+  {
+    "context": "Mike has just arrived at Pearson Hardman for his first day and is approached by paralegal Rachel Zane, who introduces herself and begins his orientation.",
+    "question": "How many years has Rachel been at the firm?",
+    "options": [
+      "5",
+      "3",
+      "7",
+      "4"
+    ],
+    "answer": "5",
+    "difficulty": "hard",
+    "description": "Mike rattles back everything Rachel told him during orientation — including that she has been at the firm for five years — proving he hadn't needed to take a single note."
+  },
+  {
+    "context": "Rachel leads Mike through the firm's corridors, explaining how the chain of command works for associates.",
+    "question": "Who would be Mike's commanding officer?",
+    "options": [
+      "Harvey Specter",
+      "Louis Litt",
+      "Jessica Pearson",
+      "Rachel Zane"
+    ],
+    "answer": "Harvey Specter",
+    "difficulty": "easy",
+    "description": "Rachel explains that Harvey Specter is Mike's commanding officer, though she also notes that Louis Litt oversees all associates, meaning Mike will answer to him as well."
+  },
+  {
+    "context": "Harvey uses his leverage over Jessica to demand his promotion back, threatening to leave and take his clients.",
+    "question": "What does Jessica ask Harvey to do in exchange for restoring his promotion?",
+    "options": [
+      "Handle a pro bono case",
+      "Personally apologise to Tate",
+      "Mentor a Harvard associate",
+      "Work with Louis"
+    ],
+    "answer": "Handle a pro bono case",
+    "difficulty": "easy",
+    "description": "Jessica agrees to give Harvey his promotion but insists he personally handle a pro bono case and not pass it off to anyone else."
+  },
+  {
+    "context": "Harvey immediately passes the pro bono file to Mike, framing it as his first case",
+    "question": "What's the probono case about?",
+    "options": [
+      "Tax fraud",
+      "Sexual harassment",
+      "Wrongful termination",
+      "Insider trading"
+    ],
+    "answer": "Sexual harassment",
+    "difficulty": "medium",
+    "description": "Harvey tells Mike the pro bono case involves sexual harassment, warning him not to tell anyone he passed it off and not to screw it up."
+  },
+  {
+    "context": "Harvey hands Mike a business card for his personal tailor after learning how little Mike spent on suits.",
+    "question": "What's the name of Harvey's tailor?",
+    "options": [
+      "Rene",
+      "Pierre",
+      "Andre",
+      "Louis"
+    ],
+    "answer": "Rene",
+    "difficulty": "medium",
+    "description": "Mike visits Rene's suit shop, where Rene initially dismisses him as a 'trainwreck' until Mike mentions Harvey Specter sent him."
+  },
+  {
+    "context": "Mike and Harvey are outside discussing the pro bono sexual harassment case, and Mike has been trying to get Harvey's input on next steps.",
+    "question": "What does Mike need Harvey's help with in the pro bono?",
+    "options": [
+      "Subpoena",
+      "Deposition",
+      "Filing a motion",
+      "Client interview"
+    ],
+    "answer": "Subpoena",
+    "difficulty": "medium",
+    "description": "Mike reveals he has figured out the right move — getting personnel records of women who left the firm — but admits he doesn't know how to fill out a subpoena, prompting Harvey to send him to Donna for help."
+  },
+  {
+    "context": "Louis calls an associate into his office while Mike watches, using the moment as a demonstration of what happens to underperforming associates at Pearson Hardman.",
+    "question": "What's the name of the person Louis fires in his demonstration?",
+    "options": [
+      "Gary Lipski",
+      "Dale Morrow",
+      "Seth Kagen",
+      "Brian Altman"
+    ],
+    "answer": "Gary Lipski",
+    "difficulty": "medium",
+    "description": "Louis calls Gary Lipski in, cites the incomplete Petrenko filing, and fires him on the spot — later revealing to Harvey it was all staged to show new associates what's expected of them."
+  },
+  {
+    "context": "Over sushi in the research room, Mike asks Rachel why she never became a lawyer instead of staying a paralegal.",
+    "question": "Why wasn't Rachel a lawyer?",
+    "options": [
+      "She doesn't test well",
+      "She didn`t go to Harvard",
+      "She preferred research",
+      "She failed the bar twice"
+    ],
+    "answer": "She doesn't test well",
+    "difficulty": "medium",
+    "description": "Rachel admits she bombed the LSATs and knows she'd never pass the bar, joking that she wishes someone could take the test for her — an irony not lost on Mike."
+  },
+  {
+    "context": "Mike mentions to Harvey a woman the company tried to hide from their discovery files in the sexual harassment case.",
+    "question": "What is the name of the woman the company tried to hide?",
+    "options": [
+      "Joanna Webster",
+      "Vanessa Liston",
+      "Rachel Pearson",
+      "Nancy Cooper"
+    ],
+    "answer": "Joanna Webster",
+    "difficulty": "medium",
+    "description": "Mike tells Harvey that the company tried to conceal Joanna Webster from them — confirming she's the key witness they need to find."
+  },
+  {
+    "context": "Mike and Harvey confront Mr. Hunt in the courtroom, presenting wire transfers, phone records, and an affidavit linking him to Joanna Webster's.",
+    "question": "What crime does Mike accuse Hunt of committing?",
+    "options": [
+      "Perjury",
+      "Witness tampering",
+      "Obstruction of justice",
+      "Sexual harassment"
+    ],
+    "answer": "Witness tampering",
+    "difficulty": "easy",
+    "description": "Mike lays out the evidence and tells Hunt that while harassment is merely a civil violation, witness tampering is a crime that will send him to prison."
+  },
+  {
+    "context": "Mike and Harvey confront Mr. Hunt in the courtroom with evidence of witness tampering, forcing his lawyer to ask what they want.",
+    "question": "How much extra must Hunt pay Nancy?",
+    "options": [
+      "$100,000",
+      "$250,000",
+      "$500,000",
+      "$1,000,000"
+    ],
+    "answer": "$250,000",
+    "difficulty": "medium",
+    "description": "After securing Nancy's reinstatement with back pay and a raise, Mike demands an additional $250,000 — enough to ensure her son can grow up without the burden of tuition hanging over his head."
+  }
+]

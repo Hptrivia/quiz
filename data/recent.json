@@ -1,6 +1,86 @@
 [
   {
     "type": "theme",
+    "slug": "doom",
+    "title": "Doom",
+    "label": "Games",
+    "date": "2026-07-26",
+    "url": "challenge.html?theme=doom&round=1"
+  },
+  {
+    "type": "episode",
+    "slug": "buffy-the-vampire-slayer",
+    "title": "Buffy the Vampire Slayer",
+    "label": "Episode Mode",
+    "date": "2026-07-26",
+    "url": "episode.html?theme=buffy-the-vampire-slayer"
+  },
+  {
+    "type": "theme",
+    "slug": "dune",
+    "title": "Dune",
+    "label": "TV",
+    "date": "2026-07-26",
+    "url": "challenge.html?theme=dune&round=1"
+  },
+  {
+    "type": "episode",
+    "slug": "gossip-girl",
+    "title": "Gossip Girl",
+    "label": "Episode Mode",
+    "date": "2026-07-26",
+    "url": "episode.html?theme=gossip-girl"
+  },
+  {
+    "type": "theme",
+    "slug": "mass-effect",
+    "title": "Mass Effect",
+    "label": "Games",
+    "date": "2026-07-26",
+    "url": "challenge.html?theme=mass-effect&round=1"
+  },
+  {
+    "type": "episode",
+    "slug": "greys-anatomy",
+    "title": "Greys Anatomy",
+    "label": "Episode Mode",
+    "date": "2026-07-26",
+    "url": "episode.html?theme=greys-anatomy"
+  },
+  {
+    "type": "theme",
+    "slug": "the-expanse",
+    "title": "The Expanse",
+    "label": "TV",
+    "date": "2026-07-26",
+    "url": "challenge.html?theme=the-expanse&round=1"
+  },
+  {
+    "type": "episode",
+    "slug": "suits",
+    "title": "Suits",
+    "label": "Episode Mode",
+    "date": "2026-07-26",
+    "url": "episode.html?theme=suits"
+  },
+  {
+    "type": "theme",
+    "slug": "the-hunger-games",
+    "title": "The Hunger Games",
+    "label": "TV",
+    "date": "2026-07-26",
+    "url": "challenge.html?theme=the-hunger-games&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "tomb-raider",
+    "title": "Tomb Raider",
+    "label": "Games",
+    "date": "2026-07-26",
+    "url": "challenge.html?theme=tomb-raider&round=1"
+  },
+  {
+    "type": "theme",
     "slug": "batman-arkham",
     "title": "Batman: Arkham",
     "label": "Games",
@@ -78,85 +158,5 @@
     "label": "Episode Mode",
     "date": "2026-07-17",
     "url": "episode.html?theme=house"
-  },
-  {
-    "type": "theme",
-    "slug": "teen-wolf",
-    "title": "Teen Wolf",
-    "label": "TV",
-    "date": "2026-07-17",
-    "url": "challenge.html?theme=teen-wolf&round=1"
-  },
-  {
-    "type": "episode",
-    "slug": "lost",
-    "title": "Lost",
-    "label": "Episode Mode",
-    "date": "2026-07-17",
-    "url": "episode.html?theme=lost"
-  },
-  {
-    "type": "theme",
-    "slug": "yakuza",
-    "title": "Yakuza",
-    "label": "Games",
-    "date": "2026-07-17",
-    "url": "challenge.html?theme=yakuza&round=1"
-  },
-  {
-    "type": "episode",
-    "slug": "new-girl",
-    "title": "New Girl",
-    "label": "Episode Mode",
-    "date": "2026-07-17",
-    "url": "episode.html?theme=new-girl"
-  },
-  {
-    "type": "episode",
-    "slug": "parks-and-recreation",
-    "title": "Parks and Recreation",
-    "label": "Episode Mode",
-    "date": "2026-07-17",
-    "url": "episode.html?theme=parks-and-recreation"
-  },
-  {
-    "type": "episode",
-    "slug": "scrubs",
-    "title": "Scrubs",
-    "label": "Episode Mode",
-    "date": "2026-07-17",
-    "url": "episode.html?theme=scrubs"
-  },
-  {
-    "type": "episode",
-    "slug": "severance",
-    "title": "Severance",
-    "label": "Episode Mode",
-    "date": "2026-07-17",
-    "url": "episode.html?theme=severance"
-  },
-  {
-    "type": "episode",
-    "slug": "superstore",
-    "title": "Superstore",
-    "label": "Episode Mode",
-    "date": "2026-07-17",
-    "url": "episode.html?theme=superstore"
-  },
-  {
-    "type": "episode",
-    "slug": "the-pitt",
-    "title": "The Pitt",
-    "label": "Episode Mode",
-    "date": "2026-07-17",
-    "url": "episode.html?theme=the-pitt"
-  },
-  {
-    "type": "episode",
-    "slug": "wednesday",
-    "title": "Wednesday",
-    "label": "Episode Mode",
-    "date": "2026-07-17",
-    "url": "episode.html?theme=wednesday"
   }
 ]
