@@ -37,7 +37,7 @@ function getRelatedThemes(allThemes, currentTheme, limit = 5) {
 }
 
 const CATEGORY_PAGE_MAP = {
-  "TV": "tv", "Anime": "anime", "Sitcoms": "sitcoms", "Games": "games",
+  "TV": "tv", "Movies": "movies", "Anime": "anime", "Sitcoms": "sitcoms", "Games": "games",
   "Sports": "sports", "General": "general", "Education": "education",
   "Books": "books", "Countries": "countries"
 };
@@ -85,6 +85,7 @@ function getThemeCoverageText(theme) {
 
   const map = {
     "TV":      `This quiz is built for fans who remember both the major moments and the smaller details from ${title}, including character dynamics, memorable scenes, recurring jokes, quotes, and storylines across the series.`,
+    "Movies":  `This quiz is built for fans who know ${title} beyond a single viewing, mixing characters, casting, story moments, locations, and the details that carry across the films.`,
     "Anime":   `This quiz is built for fans who know ${title} beyond the surface, mixing character knowledge, story arcs, power systems, key moments, and deeper lore across the series.`,
     "Sitcoms": `This quiz is built for fans who remember the characters, recurring jokes, quotes, standout episodes, and smaller details that make ${title} memorable.`,
     "Games": `This quiz is built for players who know more than just the basics of ${title}, mixing characters, story moments, bosses, gameplay details, locations, weapons, and stronger fan-level knowledge.`,
@@ -443,7 +444,10 @@ function main() {
     `${SITE_URL}/contact.html`,
     `${SITE_URL}/privacy.html`,
     `${SITE_URL}/terms.html`,
-    `${SITE_URL}/categories/tv-series.html`,
+    `${SITE_URL}/categories/tv.html`,
+    `${SITE_URL}/categories/movies.html`,
+    `${SITE_URL}/categories/anime.html`,
+    `${SITE_URL}/categories/sitcoms.html`,
     `${SITE_URL}/categories/games.html`,
     `${SITE_URL}/categories/sports.html`,
     `${SITE_URL}/categories/general.html`,
@@ -458,6 +462,16 @@ function main() {
   const onlySlugs = process.env.ONLY_SLUGS ? new Set(process.env.ONLY_SLUGS.split(',')) : null;
   themes.forEach((theme) => {
     if (!theme.slug || !theme.title || !theme.questionFile) return;
+
+    // Sitemap entries are collected for EVERY valid theme, before the ONLY_SLUGS
+    // filter. That filter only limits which HTML files get rewritten (to avoid
+    // churning hundreds of pages) — letting it reach this list would rebuild the
+    // sitemap from just those few slugs and drop every other URL on the site.
+    sitemapUrls.push(`${SITE_URL}/themes/${theme.slug}.html`);
+    sitemapUrls.push(`${SITE_URL}/wordsearch/${theme.slug}.html`);
+    sitemapUrls.push(`${SITE_URL}/wordle/${theme.slug}.html`);
+    sitemapUrls.push(`${SITE_URL}/trivia-rush.html?theme=${theme.slug}`);
+
     if (onlySlugs && !onlySlugs.has(theme.slug)) return;
 
     if (seen.has(theme.slug)) {
@@ -472,11 +486,6 @@ function main() {
 
     fs.writeFileSync(outPath, html, "utf8");
     console.log(`Generated themes/${theme.slug}.html`);
-
-    sitemapUrls.push(`${SITE_URL}/themes/${theme.slug}.html`);
-    sitemapUrls.push(`${SITE_URL}/wordsearch/${theme.slug}.html`);
-    sitemapUrls.push(`${SITE_URL}/wordle/${theme.slug}.html`);
-    sitemapUrls.push(`${SITE_URL}/trivia-rush.html?theme=${theme.slug}`);
   });
 
   fs.writeFileSync(sitemapPath, buildSitemap(sitemapUrls), "utf8");

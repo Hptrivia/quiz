@@ -1,10 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 
-const CATEGORY_ORDER = ['TV', 'Games', 'Anime', 'Sports', 'General', 'Sitcoms', 'Education', 'Books', 'Countries'];
+const CATEGORY_ORDER = ['TV', 'Games', 'Movies', 'Anime', 'Sports', 'General', 'Sitcoms', 'Education', 'Books', 'Countries'];
 
 const BOARD_MAP = {
   TV: 'PINTEREST_BOARD_TV_SERIES',
+  Movies: 'PINTEREST_BOARD_TV_SERIES',
   Anime: 'PINTEREST_BOARD_TV_SERIES',
   Sitcoms: 'PINTEREST_BOARD_TV_SERIES',
   Games: 'PINTEREST_BOARD_GAMES',
@@ -17,6 +18,7 @@ const BOARD_MAP = {
 
 const BOARD_NAMES = {
   TV: 'TV Series Trivia',
+  Movies: 'TV Series Trivia',
   Anime: 'TV Series Trivia',
   Sitcoms: 'TV Series Trivia',
   Games: 'Games Trivia',
@@ -29,6 +31,7 @@ const BOARD_NAMES = {
 
 const DESCRIPTIONS = {
   TV: t => `Test your knowledge of ${t} with this fan quiz. Play now on Trivia Gauntlet.`,
+  Movies: t => `Test your knowledge of ${t} with this fan quiz. Play now on Trivia Gauntlet.`,
   Anime: t => `Test your knowledge of ${t} with this fan quiz. Play now on Trivia Gauntlet.`,
   Sitcoms: t => `Test your knowledge of ${t} with this fan quiz. Play now on Trivia Gauntlet.`,
   Games: t => `Think you know ${t}? Take this gaming trivia quiz on Trivia Gauntlet.`,
@@ -54,6 +57,7 @@ const HOOKS = {
 // Color palette index per category (matches pin-builder.html PALS array)
 const PALETTE = {
   TV: 0,       // black
+  Movies: 0,   // black
   Anime: 5,    // purple
   Sitcoms: 0,  // black
   Games: 6,    // teal

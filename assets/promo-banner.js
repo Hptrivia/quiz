@@ -22,7 +22,7 @@
   // Preferred category walk order (played category is floated to the front at the
   // first exposure via the initial cursor seed). Matches the app's grouping with
   // the user's ask: TV → Sitcoms → General → Sports first, then the rest.
-  const CAT_ORDER = ['TV', 'Sitcoms', 'General', 'Sports', 'Games', 'Anime', 'Education', 'Books', 'Countries'];
+  const CAT_ORDER = ['TV', 'Sitcoms', 'Movies', 'General', 'Sports', 'Games', 'Anime', 'Education', 'Books', 'Countries'];
 
   let ALL = [];                   // themes.json
   let byCat = {};                 // category -> [themes], in file order

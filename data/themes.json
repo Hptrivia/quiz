@@ -705,7 +705,7 @@
   {
     "slug": "dc-movies",
     "title": "DC Movies",
-    "category": "TV",
+    "category": "Movies",
     "description": "A superhero movie trivia theme covering DC films through heroes, villains, major storylines, actors, powers, team-ups, and the different cinematic interpretations of the franchise.",
     "image": "",
     "questionFile": "data/DC.txt",
@@ -826,7 +826,7 @@
   {
     "slug": "lord-of-the-rings",
     "title": "Lord of The Rings",
-    "category": "TV",
+    "category": "Movies",
     "description": "A fantasy trivia theme built around The Lord of the Rings, covering the Fellowship, Middle-earth locations, races, rulers, battles, creatures, and the epic quest against Sauron.",
     "image": "",
     "questionFile": "data/LOTR.txt",
@@ -859,7 +859,7 @@
   {
     "slug": "marvel-movies",
     "title": "Marvel Movies",
-    "category": "TV",
+    "category": "Movies",
     "description": "A superhero movie trivia theme covering Marvel films through heroes, villains, phases, team-ups, powers, actors, and the major crossover moments that shaped the franchise.",
     "image": "",
     "questionFile": "data/avengers.txt",
@@ -1024,7 +1024,7 @@
   {
     "slug": "star-wars",
     "title": "Star Wars",
-    "category": "TV",
+    "category": "Movies",
     "description": "A sci-fi fantasy trivia theme focused on Star Wars, covering Jedi, Sith, the Force, rebels, empires, planets, battles, droids, and the characters and lore that made the saga world-famous.",
     "image": "",
     "questionFile": "data/starwars.txt",
@@ -1178,7 +1178,7 @@
   {
     "slug": "twilight",
     "title": "Twilight",
-    "category": "TV",
+    "category": "Movies",
     "description": "A supernatural romance trivia theme built around Twilight, covering Bella, Edward, Jacob, the Cullens, werewolves, romance, danger, and the franchise-defining love triangle at its centre.",
     "image": "",
     "questionFile": "data/twilight.txt",
@@ -2215,7 +2215,7 @@
   {
     "slug": "dune",
     "title": "Dune",
-    "category": "TV",
+    "category": "Movies",
     "description": "A sci-fi trivia theme built around Dune, covering Paul Atreides' rise on Arrakis, the spice, the Fremen and the great houses of the Imperium.",
     "image": "",
     "questionFile": "data/dune.txt",
@@ -2248,7 +2248,7 @@
   {
     "slug": "the-hunger-games",
     "title": "The Hunger Games",
-    "category": "TV",
+    "category": "Movies",
     "description": "A dystopian trivia theme built around The Hunger Games, following Katniss Everdeen through the arenas, the districts and the rebellion against the Capitol.",
     "image": "",
     "questionFile": "data/hunger.txt",
@@ -2265,6 +2265,39 @@
     "questionFile": "data/raider.txt",
     "seoIntro": "Tomb Raider trivia works because Lara Croft's adventures mix tombs, artefacts and survival set pieces that fans replay for years. Questions can cover the Endurance crew, the reboot trilogy's hidden cities and the gear that keeps Lara alive.",
     "seoDetail": "A strong Tomb Raider quiz can include Lara Croft and the wreck of the Endurance on Yamatai, crew members like Sam, Roth and Whitman, the Sun Queen Himiko and the Oni, Rise of the Tomb Raider with Trinity, the Remnant and Kitezh, Shadow of the Tomb Raider with Paititi and Dominguez, Croft Manor and Lara's family history, the tools and gear from the climbing axe to the rebreather, optional tombs and relic hunting, and the wider history of the series and its films. It works because it rewards fans who explored every optional tomb.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "sinners",
+    "title": "Sinners",
+    "category": "Movies",
+    "description": "A horror trivia theme built around Sinners, following twin brothers Smoke and Stack through one bloody night at their Mississippi juke joint in 1932.",
+    "image": "",
+    "questionFile": "data/sinners.txt",
+    "seoIntro": "Sinners trivia works because Ryan Coogler's 1932 Mississippi vampire story packs a huge amount of detail into a single night. Questions can cover the twins Smoke and Stack, the opening of Club Juke, Sammie's guitar and the vampires who come for them all.",
+    "seoDetail": "A strong Sinners quiz can include Elias and Elijah, the twins known as Smoke and Stack, their years with the Chicago Outfit and the sawmill they buy in Clarksdale, Sammie the preacherboy and his father Jedidiah, Delta Slim, Annie, Cornbread and Pearline, Grace and Bo Chow's store, the vampire Remmick and Wild Mountain Thyme, garlic and sunlight and the Klan led by Hogwood, the 1992 epilogue with Buddy Guy, plus the filmmaking side with Michael B. Jordan in a dual role, Ryan Coogler directing, Ludwig Goransson's score and the Oscar nominations for Delroy Lindo and Wunmi Mosaku. It works because it rewards fans who caught the history woven through the horror.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "project-hail-mary",
+    "title": "Project Hail Mary",
+    "category": "Movies",
+    "description": "A sci-fi trivia theme built around Project Hail Mary, following amnesiac Ryland Grace, the alien engineer Rocky and the fight to stop Astrophage from dimming the Sun.",
+    "image": "",
+    "questionFile": "data/mary.txt",
+    "seoIntro": "Project Hail Mary trivia works because the story runs on hard science, alien first contact and one desperate mission. Questions can cover Ryland Grace waking with amnesia, Astrophage and the Petrova Line, Tau Ceti and the friendship with Rocky.",
+    "seoDetail": "A strong Project Hail Mary quiz can include Ryland Grace and his amnesia aboard the ship, the AI voice Mary and the crew of Yao and Ilyukhina, Eva Stratt and the Petrova Task Force, Astrophage feeding on Venus and the spin drive engines, the journey to Tau Ceti and the planet Adrian, Rocky the Eridian from 40 Eridani A with his xenonite ship, echolocation and five legs, Taumoeba and the nitrogen problem, Grace's paper and the firing that preceded it, and the film itself with Ryan Gosling, Sandra Huller and directors Phil Lord and Christopher Miller adapting Andy Weir's novel. It works because it rewards readers of the book and viewers of the film alike.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "obsession",
+    "title": "Obsession",
+    "category": "Movies",
+    "description": "A horror trivia theme built around Obsession, following Bear, the One Wish Willow he breaks and the violent obsession it unleashes in Nikki.",
+    "image": "",
+    "questionFile": "data/obsession.txt",
+    "seoIntro": "Obsession trivia works because Curry Barker's horror debut hides a lot of setup in its friendship scenes before everything turns. Questions can cover Bear and Nikki at the music store, trivia night at the bar, the One Wish Willow and the wish that ruins everything.",
+    "seoDetail": "A strong Obsession quiz can include Baron 'Bear' Bailey and Nikki Freeman, the Cassells music store and their boss Carter Harper, Wednesday trivia night at Barker's Pub and the rival Rag Tags, the crystal shop The Green Man with Viola and Harry, the One Wish Willow, its tagline and its manufacturer, Bear's wish and the split personality it triggers in Nikki, Ian's secret and his own wish, Sarah and her art school rejection, Bear's cat Sandy, the Hansel and Gretel monologue, plus the cast and production with Michael Johnston, Inde Navarrette, Andy Richter and writer-director Curry Barker. It works because it rewards fans who noticed the small details before the horror kicked in.",
     "fanQuestions": true
   }
 ]

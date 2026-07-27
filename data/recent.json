@@ -1,6 +1,30 @@
 [
   {
     "type": "theme",
+    "slug": "obsession",
+    "title": "Obsession",
+    "label": "Movies",
+    "date": "2026-07-27",
+    "url": "challenge.html?theme=obsession&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "project-hail-mary",
+    "title": "Project Hail Mary",
+    "label": "Movies",
+    "date": "2026-07-27",
+    "url": "challenge.html?theme=project-hail-mary&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "sinners",
+    "title": "Sinners",
+    "label": "Movies",
+    "date": "2026-07-27",
+    "url": "challenge.html?theme=sinners&round=1"
+  },
+  {
+    "type": "theme",
     "slug": "doom",
     "title": "Doom",
     "label": "Games",
@@ -19,7 +43,7 @@
     "type": "theme",
     "slug": "dune",
     "title": "Dune",
-    "label": "TV",
+    "label": "Movies",
     "date": "2026-07-26",
     "url": "challenge.html?theme=dune&round=1"
   },
@@ -67,7 +91,7 @@
     "type": "theme",
     "slug": "the-hunger-games",
     "title": "The Hunger Games",
-    "label": "TV",
+    "label": "Movies",
     "date": "2026-07-26",
     "url": "challenge.html?theme=the-hunger-games&round=1"
   },
@@ -134,29 +158,5 @@
     "label": "Sitcoms",
     "date": "2026-07-17",
     "url": "challenge.html?theme=malcolm-in-the-middle&round=1"
-  },
-  {
-    "type": "episode",
-    "slug": "gilmore-girls",
-    "title": "Gilmore Girls",
-    "label": "Episode Mode",
-    "date": "2026-07-17",
-    "url": "episode.html?theme=gilmore-girls"
-  },
-  {
-    "type": "theme",
-    "slug": "sherlock",
-    "title": "Sherlock",
-    "label": "TV",
-    "date": "2026-07-17",
-    "url": "challenge.html?theme=sherlock&round=1"
-  },
-  {
-    "type": "episode",
-    "slug": "house",
-    "title": "House",
-    "label": "Episode Mode",
-    "date": "2026-07-17",
-    "url": "episode.html?theme=house"
   }
 ]

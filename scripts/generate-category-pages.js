@@ -24,6 +24,7 @@ function escapeHtml(str = "") {
 function categorySlug(name) {
   const map = {
     "TV": "tv",
+    "Movies": "movies",
     "Anime": "anime",
     "Sitcoms": "sitcoms",
     "Games": "games",
@@ -39,6 +40,7 @@ function categorySlug(name) {
 
 const categoryIntroMap = {
   "TV":      ["This category includes trivia quizzes based on fantasy dramas, crime thrillers, teen shows, sci-fi, and other popular TV series."],
+  "Movies":  ["This category includes trivia quizzes based on major film franchises covering superhero universes, fantasy epics, sci-fi sagas, and the characters, actors, and story moments fans remember."],
   "Anime":   ["This category includes trivia quizzes based on popular anime series covering shonen, action, and fan-favourite franchises."],
   "Sitcoms": ["This category includes trivia quizzes based on classic and modern sitcoms covering characters, quotes, running jokes, and memorable moments."],
   "Games":       ["This category focuses on video game trivia across action, RPG, horror, open-world, and classic franchises. Quizzes cover characters, bosses, weapons, lore, story moments, mechanics, and other fan knowledge from major game series."],
@@ -154,6 +156,7 @@ function main() {
 
   const categoryOrder = [
     "TV",
+    "Movies",
     "Anime",
     "Sitcoms",
     "Games",
