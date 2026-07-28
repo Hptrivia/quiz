@@ -129,22 +129,6 @@
     "description": "Select the finishing round."
   },
   {
-    "id": "ufc300-q018",
-    "question": "Who won the fight between Aljamain Sterling and Calvin Kattar?",
-    "options": ["Aljamain Sterling", "Calvin Kattar"],
-    "answer": "Aljamain Sterling",
-    "difficulty": "easy",
-    "description": "Result of Sterling vs Kattar."
-  },
-  {
-    "id": "ufc300-q017",
-    "question": "What was the method of victory in Aljamain Sterling vs Calvin Kattar?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
-    "answer": "Decision (Unanimous)",
-    "difficulty": "easy",
-    "description": "Identify how the bout was decided."
-  },
-  {
     "id": "ufc300-q016",
     "question": "Who won the fight between Jiri Prochazka and Aleksandar Rakić?",
     "options": ["Jiri Prochazka", "Aleksandar Rakić"],
