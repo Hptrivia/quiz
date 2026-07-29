@@ -1,6 +1,46 @@
 [
   {
     "type": "theme",
+    "slug": "avatar-movies",
+    "title": "Avatar Movies",
+    "label": "Movies",
+    "date": "2026-07-29",
+    "url": "challenge.html?theme=avatar-movies&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "marty-supreme",
+    "title": "Marty Supreme",
+    "label": "Movies",
+    "date": "2026-07-29",
+    "url": "challenge.html?theme=marty-supreme&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "one-battle-after-another",
+    "title": "One Battle After Another",
+    "label": "Movies",
+    "date": "2026-07-29",
+    "url": "challenge.html?theme=one-battle-after-another&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "shrek",
+    "title": "Shrek",
+    "label": "Movies",
+    "date": "2026-07-29",
+    "url": "challenge.html?theme=shrek&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "toy-story",
+    "title": "Toy Story",
+    "label": "Movies",
+    "date": "2026-07-29",
+    "url": "challenge.html?theme=toy-story&round=1"
+  },
+  {
+    "type": "theme",
     "slug": "obsession",
     "title": "Obsession",
     "label": "Movies",
@@ -118,45 +158,5 @@
     "label": "Episode Mode",
     "date": "2026-07-17",
     "url": "episode.html?theme=bridgerton"
-  },
-  {
-    "type": "theme",
-    "slug": "far-cry",
-    "title": "Far Cry",
-    "label": "Games",
-    "date": "2026-07-17",
-    "url": "challenge.html?theme=far-cry&round=1"
-  },
-  {
-    "type": "episode",
-    "slug": "dexter",
-    "title": "Dexter",
-    "label": "Episode Mode",
-    "date": "2026-07-17",
-    "url": "episode.html?theme=dexter"
-  },
-  {
-    "type": "theme",
-    "slug": "glee",
-    "title": "Glee",
-    "label": "TV",
-    "date": "2026-07-17",
-    "url": "challenge.html?theme=glee&round=1"
-  },
-  {
-    "type": "episode",
-    "slug": "from",
-    "title": "From",
-    "label": "Episode Mode",
-    "date": "2026-07-17",
-    "url": "episode.html?theme=from"
-  },
-  {
-    "type": "theme",
-    "slug": "malcolm-in-the-middle",
-    "title": "Malcolm in the Middle",
-    "label": "Sitcoms",
-    "date": "2026-07-17",
-    "url": "challenge.html?theme=malcolm-in-the-middle&round=1"
   }
 ]
