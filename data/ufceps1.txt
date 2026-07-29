@@ -11,7 +11,7 @@
   {
     "id": "ufc300-q033",
     "question": "What was the method of victory in Deiveson Figueiredo vs Cody Garbrandt?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
     "answer": "Submission",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
@@ -43,7 +43,7 @@
   {
     "id": "ufc300-q030",
     "question": "What was the method of victory in Bobby Green vs Jim Miller?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
     "answer": "Decision (Unanimous)",
     "difficulty": "easy",
     "description": "Identify how the bout was decided."
@@ -59,8 +59,8 @@
   {
     "id": "ufc300-q026",
     "question": "What was the method of victory in Renato Moicano vs Jalin Turner?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
-    "answer": "TKO",
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "answer": "KO/TKO",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
   },
@@ -83,8 +83,8 @@
   {
     "id": "ufc300-q023",
     "question": "What was the method of victory in Diego Lopes vs Sodiq Yusuff?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
-    "answer": "TKO",
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "answer": "KO/TKO",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
   },
@@ -107,7 +107,7 @@
   {
     "id": "ufc300-q020",
     "question": "What was the method of victory in Kayla Harrison vs Holly Holm?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
     "answer": "Submission",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
@@ -139,8 +139,8 @@
   {
     "id": "ufc300-q015",
     "question": "What was the method of victory in Jiri Prochazka vs Aleksandar Rakić?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
-    "answer": "TKO",
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "answer": "KO/TKO",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
   },
@@ -163,7 +163,7 @@
   {
     "id": "ufc300-q012",
     "question": "What was the method of victory in Bo Nickal vs Cody Brundage?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
     "answer": "Submission",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
@@ -195,7 +195,7 @@
   {
     "id": "ufc300-q009",
     "question": "What was the method of victory in Arman Tsarukyan vs Charles Oliveira?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
     "answer": "Decision (Split)",
     "difficulty": "easy",
     "description": "Identify how the bout was decided."
@@ -211,8 +211,8 @@
   {
     "id": "ufc300-q007",
     "question": "What was the method of victory in Max Holloway vs Justin Gaethje?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
-    "answer": "KO",
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "answer": "KO/TKO",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
   },
@@ -235,7 +235,7 @@
   {
     "id": "ufc300-q004",
     "question": "What was the method of victory in Zhang Weili vs Yan Xiaonan?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
     "answer": "Decision (Unanimous)",
     "difficulty": "easy",
     "description": "Identify how the bout was decided."
@@ -251,8 +251,8 @@
   {
     "id": "ufc300-q002",
     "question": "What was the method of victory in Alex Pereira vs Jamahal Hill?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
-    "answer": "KO",
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "answer": "KO/TKO",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
   },
@@ -276,8 +276,8 @@
   {
     "id": "ufcfreedom250-q020",
     "question": "What was the method of victory in Diego Lopes vs Steve Garcia?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
-    "answer": "KO",
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "answer": "KO/TKO",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
   },
@@ -300,8 +300,8 @@
   {
     "id": "ufcfreedom250-q017",
     "question": "What was the method of victory in Bo Nickal vs Kyle Daukaus?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
-    "answer": "TKO",
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "answer": "KO/TKO",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
   },
@@ -324,8 +324,8 @@
   {
     "id": "ufcfreedom250-q014",
     "question": "What was the method of victory in Mauricio Luffy vs Michael Chandler?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
-    "answer": "TKO",
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "answer": "KO/TKO",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
   },
@@ -348,8 +348,8 @@
   {
     "id": "ufcfreedom250-q011",
     "question": "What was the method of victory in Josh Hokit vs Derrick Lewis?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
-    "answer": "TKO",
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "answer": "KO/TKO",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
   },
@@ -372,8 +372,8 @@
   {
     "id": "ufcfreedom250-q008",
     "question": "What was the method of victory in Sean O'Malley vs Aiemann Zahabi?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
-    "answer": "KO",
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "answer": "KO/TKO",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
   },
@@ -396,8 +396,8 @@
   {
     "id": "ufcfreedom250-q005",
     "question": "What was the method of victory in Ciryl Gane vs Alex Pereira?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
-    "answer": "TKO",
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "answer": "KO/TKO",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
   },
@@ -420,8 +420,8 @@
   {
     "id": "ufcfreedom250-q002",
     "question": "What was the method of victory in Ilia Topuria vs Justin Gaethje?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
-    "answer": "TKO",
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "answer": "KO/TKO",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
   },
@@ -445,8 +445,8 @@
   {
     "id": "ufc200-q028",
     "question": "What was the method of victory in Jim Miller vs Takanori Gomi?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
-    "answer": "TKO",
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "answer": "KO/TKO",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
   },
@@ -469,8 +469,8 @@
   {
     "id": "ufc200-q025",
     "question": "What was the method of victory in Gegard Mousasi vs Thiago Santos?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
-    "answer": "TKO",
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "answer": "KO/TKO",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
   },
@@ -493,8 +493,8 @@
   {
     "id": "ufc200-q022",
     "question": "What was the method of victory in Joe Lauzon vs Diego Sanchez?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
-    "answer": "TKO",
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "answer": "KO/TKO",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
   },
@@ -517,7 +517,7 @@
   {
     "id": "ufc200-q019",
     "question": "What was the method of victory in Sage Northcutt vs Enrique Marin?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
     "answer": "Decision (Unanimous)",
     "difficulty": "easy",
     "description": "Identify how the bout was decided."
@@ -533,7 +533,7 @@
   {
     "id": "ufc200-q017",
     "question": "What was the method of victory in Kelvin Gastelum vs Johny Hendricks?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
     "answer": "Decision (Unanimous)",
     "difficulty": "easy",
     "description": "Identify how the bout was decided."
@@ -549,7 +549,7 @@
   {
     "id": "ufc200-q015",
     "question": "What was the method of victory in TJ Dillashaw vs Raphael Assuncao?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
     "answer": "Decision (Unanimous)",
     "difficulty": "easy",
     "description": "Identify how the bout was decided."
@@ -565,7 +565,7 @@
   {
     "id": "ufc200-q013",
     "question": "What was the method of victory in Julianna Pena vs Cat Zingano?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
     "answer": "Decision (Unanimous)",
     "difficulty": "easy",
     "description": "Identify how the bout was decided."
@@ -581,8 +581,8 @@
   {
     "id": "ufc200-q011",
     "question": "What was the method of victory in Cain Velasquez vs Travis Browne?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
-    "answer": "TKO",
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "answer": "KO/TKO",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
   },
@@ -605,7 +605,7 @@
   {
     "id": "ufc200-q008",
     "question": "What was the method of victory in Jose Aldo vs Frankie Edgar?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
     "answer": "Decision (Unanimous)",
     "difficulty": "easy",
     "description": "Identify how the bout was decided."
@@ -621,7 +621,7 @@
   {
     "id": "ufc200-q006",
     "question": "What was the method of victory in Daniel Cormier vs Anderson Silva?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
     "answer": "Decision (Unanimous)",
     "difficulty": "easy",
     "description": "Identify how the bout was decided."
@@ -637,7 +637,7 @@
   {
     "id": "ufc200-q004",
     "question": "What was the method of victory in Brock Lesnar vs Mark Hunt?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
     "answer": "Decision (Unanimous)",
     "difficulty": "easy",
     "description": "Identify how the bout was decided."
@@ -653,7 +653,7 @@
   {
     "id": "ufc200-q002",
     "question": "What was the method of victory in Amanda Nunes vs Miesha Tate?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
     "answer": "Submission",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
@@ -686,7 +686,7 @@
   {
     "id": "ufc319-q012",
     "question": "What was the method of victory in Tim Elliott vs Kai Asakura?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
     "answer": "Submission",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
@@ -718,7 +718,7 @@
   {
     "id": "ufc319-q009",
     "question": "What was the method of victory in Michael Page vs Jared Cannonier?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
     "answer": "Decision (Unanimous)",
     "difficulty": "easy",
     "description": "Identify how the bout was decided."
@@ -734,8 +734,8 @@
   {
     "id": "ufc319-q007",
     "question": "What was the method of victory in Carlos Prates vs Geoff Neal?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
-    "answer": "KO",
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "answer": "KO/TKO",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
   },
@@ -758,8 +758,8 @@
   {
     "id": "ufc319-q004",
     "question": "What was the method of victory in Lerone Murphy vs Aaron Pico?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
-    "answer": "KO",
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "answer": "KO/TKO",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
   },
@@ -782,7 +782,7 @@
   {
     "id": "ufc319-q001",
     "question": "What was the method of victory in Khamzat Chimaev vs Dricus Du Plessis?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
     "answer": "Decision (Unanimous)",
     "difficulty": "easy",
     "description": "Identify how the bout was decided."
@@ -799,7 +799,7 @@
   {
     "id": "ufc320-q015",
     "question": "What was the method of victory in Joe Pyfer vs Abus Magomedov?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
     "answer": "Submission",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
@@ -831,7 +831,7 @@
   {
     "id": "ufc320-q012",
     "question": "What was the method of victory in Youssef Zalal vs Josh Emmett?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
     "answer": "Submission",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
@@ -863,8 +863,8 @@
   {
     "id": "ufc320-q009",
     "question": "What was the method of victory in Jiří Procházka vs Khalil Rountree Jr.?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
-    "answer": "KO",
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "answer": "KO/TKO",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
   },
@@ -887,7 +887,7 @@
   {
     "id": "ufc320-q006",
     "question": "What was the method of victory in Merab Dvalishvili vs Cory Sandhagen?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
     "answer": "Decision (Unanimous)",
     "difficulty": "easy",
     "description": "Identify how the bout was decided."
@@ -903,8 +903,8 @@
   {
     "id": "ufc320-q004",
     "question": "What was the method of victory in Alex Pereira vs Magomed Ankalaev?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
-    "answer": "TKO",
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "answer": "KO/TKO",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
   },
@@ -928,7 +928,7 @@
   {
     "id": "ufc324-q010",
     "question": "What was the method of victory in Jean Silva vs Arnold Allen?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
     "answer": "Decision (Unanimous)",
     "difficulty": "easy",
     "description": "Identify how the bout was decided."
@@ -944,7 +944,7 @@
   {
     "id": "ufc324-q008",
     "question": "What was the method of victory in Natalia Silva vs Rose Namajunas?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
     "answer": "Decision (Unanimous)",
     "difficulty": "easy",
     "description": "Identify how the bout was decided."
@@ -960,8 +960,8 @@
   {
     "id": "ufc324-q006",
     "question": "What was the method of victory in Waldo Cortes-Acosta vs Derrick Lewis?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
-    "answer": "TKO",
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "answer": "KO/TKO",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
   },
@@ -984,7 +984,7 @@
   {
     "id": "ufc324-q003",
     "question": "What was the method of victory in Sean O'Malley vs Song Yadong?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
     "answer": "Decision (Unanimous)",
     "difficulty": "easy",
     "description": "Identify how the bout was decided."
@@ -1000,7 +1000,7 @@
   {
     "id": "ufc324-q001",
     "question": "What was the method of victory in Justin Gaethje vs Paddy Pimblett?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
     "answer": "Decision (Unanimous)",
     "difficulty": "easy",
     "description": "Identify how the bout was decided."
@@ -1017,7 +1017,7 @@
   {
     "id": "ufc325-q012",
     "question": "What was the method of victory in Quillan Salkilld vs Jamie Mullarkey?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
     "answer": "Submission",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
@@ -1049,7 +1049,7 @@
   {
     "id": "ufc325-q009",
     "question": "What was the method of victory in Tallison Teixeira vs Tai Tuivasa?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
     "answer": "Decision (Unanimous)",
     "difficulty": "easy",
     "description": "Identify how the bout was decided."
@@ -1065,8 +1065,8 @@
   {
     "id": "ufc325-q007",
     "question": "What was the method of victory in Mauricio Ruffy vs Rafael Fiziev?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
-    "answer": "TKO",
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "answer": "KO/TKO",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
   },
@@ -1089,8 +1089,8 @@
   {
     "id": "ufc325-q004",
     "question": "What was the method of victory in Benoît Saint Denis vs Dan Hooker?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
-    "answer": "TKO",
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "answer": "KO/TKO",
     "difficulty": "easy",
     "description": "Identify how the bout ended."
   },
@@ -1113,7 +1113,7 @@
   {
     "id": "ufc325-q001",
     "question": "What was the method of victory in Alexander Volkanovski vs Diego Lopes?",
-    "options": ["KO", "TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
+    "options": ["KO/TKO", "Submission", "Decision (Unanimous)", "Decision (Split)"],
     "answer": "Decision (Unanimous)",
     "difficulty": "easy",
     "description": "Identify how the bout was decided."
