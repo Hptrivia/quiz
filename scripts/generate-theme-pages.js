@@ -139,6 +139,30 @@ function getTotalQuestions(questionFilePath) {
   }
 }
 
+// ─── SEO A/B TEST: "Quiz" in the <title> (started 2026-07-29) ─────────────────
+// Search Console (Mar–Jul 2026) showed queries containing "quiz" averaged position
+// 11.34 vs 8.33 for "trivia" and 7.98 for "questions" — because the title said
+// "Trivia Questions" and never "Quiz". Same demand (2,416 vs 4,008 impressions),
+// three positions worse. "answers" (529 impressions, position 9.10) was also absent.
+//
+// Only the slugs below get the new title. Everything else — INCLUDING NEWLY ADDED
+// THEMES — keeps the original, so the control group stays clean.
+// Measuring across August 2026. If it wins, set QUIZ_TITLE_ALL = true and regenerate.
+// If it loses, empty this set and regenerate.
+const QUIZ_TITLE_ALL = false;
+const QUIZ_TITLE_TEST_SLUGS = new Set([
+  "half-man", "parks-and-recreation", "nigerian-music", "dexter", "prison-break",
+  "suits", "nigerian-football", "gta-v", "marketing-and-brands", "cyberpunk-2077",
+  "the-boys", "the-wire", "death-stranding", "elden-ring", "heroes", "the-witcher-3",
+  "dark-souls-3", "lies-of-p", "the-sopranos", "family-guy", "desperate-housewives",
+  "red-dead-redemption-2", "greys-anatomy", "world-facts", "ben-10", "rick-and-morty",
+  "ozark", "the-bear", "history", "house", "seinfeld", "yakuza", "succession",
+  "language", "the-crown", "daredevil", "clair-obscur-expedition-33", "food-drink",
+  "the-big-bang-theory", "modern-family", "mad-men", "the-last-of-us",
+  "health-and-medicine", "breaking-bad", "spartacus", "hollywood", "god-of-war",
+  "star-trek", "arrow", "bleach", "fun-facts", "bones",
+]);
+
 function buildThemePage(theme, allThemes, hasEpisodeMode, sampleQA = []) {
   const rawTitle = theme.title || "";
   const rawDescription = theme.description || "";
@@ -156,9 +180,19 @@ const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
   const totalQuestionsText = totalQuestions > 0
     ? `${totalQuestions} questions across multiple rounds`
     : "";
-  const metaDescription = totalQuestions > 0
-    ? `Play ${totalQuestions} ${rawTitle} trivia questions on Trivia Gauntlet. Test your knowledge in Marathon, Challenge, Survival, and more.`
-    : `Play ${rawTitle} trivia questions on Trivia Gauntlet. Test your knowledge in multiple quiz modes.`;
+  // See QUIZ_TITLE_TEST_SLUGS above. Purely ADDITIVE — "trivia" and "questions" both
+  // stay in the title, "quiz" and "answers" are added. The <h1> and body are untouched.
+  const useQuizTitle = QUIZ_TITLE_ALL || QUIZ_TITLE_TEST_SLUGS.has(rawSlug);
+  const pageTitle = useQuizTitle
+    ? `${title} Trivia Quiz &mdash; Questions &amp; Answers | Trivia Gauntlet`
+    : `${title} Trivia Questions | Trivia Gauntlet`;
+  const metaDescription = useQuizTitle
+    ? (totalQuestions > 0
+        ? `Play the ${rawTitle} trivia quiz — ${totalQuestions} questions with answers. Test your knowledge in Marathon, Challenge, Survival, and more.`
+        : `Play the ${rawTitle} trivia quiz — questions with answers. Test your knowledge in multiple quiz modes.`)
+    : (totalQuestions > 0
+        ? `Play ${totalQuestions} ${rawTitle} trivia questions on Trivia Gauntlet. Test your knowledge in Marathon, Challenge, Survival, and more.`
+        : `Play ${rawTitle} trivia questions on Trivia Gauntlet. Test your knowledge in multiple quiz modes.`);
 
   // Narrative shows without episodes yet get a "coming soon · notify me" card that
   // links to the episode.html coming-soon landing (email capture + related cards).
@@ -230,7 +264,7 @@ const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
   <meta charset="UTF-8" />
   <link rel="manifest" href="/manifest.json" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>${title} Trivia Questions | Trivia Gauntlet</title>
+<title>${pageTitle}</title>
 <meta name="description" content="${escapeHtml(metaDescription)}" />
   <link rel="canonical" href="${SITE_URL}/themes/${slug}.html" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
