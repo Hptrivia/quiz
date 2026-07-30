@@ -1,6 +1,30 @@
 [
   {
     "type": "theme",
+    "slug": "24",
+    "title": "24",
+    "label": "TV",
+    "date": "2026-07-30",
+    "url": "challenge.html?theme=24&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "merlin",
+    "title": "Merlin",
+    "label": "TV",
+    "date": "2026-07-30",
+    "url": "challenge.html?theme=merlin&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "one-tree-hill",
+    "title": "One Tree Hill",
+    "label": "TV",
+    "date": "2026-07-30",
+    "url": "challenge.html?theme=one-tree-hill&round=1"
+  },
+  {
+    "type": "theme",
     "slug": "avatar-movies",
     "title": "Avatar Movies",
     "label": "Movies",
@@ -134,29 +158,5 @@
     "label": "Movies",
     "date": "2026-07-26",
     "url": "challenge.html?theme=the-hunger-games&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "tomb-raider",
-    "title": "Tomb Raider",
-    "label": "Games",
-    "date": "2026-07-26",
-    "url": "challenge.html?theme=tomb-raider&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "batman-arkham",
-    "title": "Batman: Arkham",
-    "label": "Games",
-    "date": "2026-07-17",
-    "url": "challenge.html?theme=batman-arkham&round=1"
-  },
-  {
-    "type": "episode",
-    "slug": "bridgerton",
-    "title": "Bridgerton",
-    "label": "Episode Mode",
-    "date": "2026-07-17",
-    "url": "episode.html?theme=bridgerton"
   }
 ]
