@@ -1,6 +1,70 @@
 [
   {
     "type": "theme",
+    "slug": "homeland",
+    "title": "Homeland",
+    "label": "TV",
+    "date": "2026-08-02",
+    "url": "challenge.html?theme=homeland&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "orange-is-the-new-black",
+    "title": "Orange Is the New Black",
+    "label": "TV",
+    "date": "2026-08-02",
+    "url": "challenge.html?theme=orange-is-the-new-black&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "oz",
+    "title": "Oz",
+    "label": "TV",
+    "date": "2026-08-02",
+    "url": "challenge.html?theme=oz&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "the-hawk",
+    "title": "The Hawk",
+    "label": "Sitcoms",
+    "date": "2026-08-02",
+    "url": "challenge.html?theme=the-hawk&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "the-leftovers",
+    "title": "The Leftovers",
+    "label": "TV",
+    "date": "2026-08-02",
+    "url": "challenge.html?theme=the-leftovers&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "the-oc",
+    "title": "The O.C.",
+    "label": "TV",
+    "date": "2026-08-02",
+    "url": "challenge.html?theme=the-oc&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "the-shield",
+    "title": "The Shield",
+    "label": "TV",
+    "date": "2026-08-02",
+    "url": "challenge.html?theme=the-shield&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "veep",
+    "title": "Veep",
+    "label": "Sitcoms",
+    "date": "2026-08-02",
+    "url": "challenge.html?theme=veep&round=1"
+  },
+  {
+    "type": "theme",
     "slug": "24",
     "title": "24",
     "label": "TV",
@@ -94,69 +158,5 @@
     "label": "Games",
     "date": "2026-07-26",
     "url": "challenge.html?theme=doom&round=1"
-  },
-  {
-    "type": "episode",
-    "slug": "buffy-the-vampire-slayer",
-    "title": "Buffy the Vampire Slayer",
-    "label": "Episode Mode",
-    "date": "2026-07-26",
-    "url": "episode.html?theme=buffy-the-vampire-slayer"
-  },
-  {
-    "type": "theme",
-    "slug": "dune",
-    "title": "Dune",
-    "label": "Movies",
-    "date": "2026-07-26",
-    "url": "challenge.html?theme=dune&round=1"
-  },
-  {
-    "type": "episode",
-    "slug": "gossip-girl",
-    "title": "Gossip Girl",
-    "label": "Episode Mode",
-    "date": "2026-07-26",
-    "url": "episode.html?theme=gossip-girl"
-  },
-  {
-    "type": "theme",
-    "slug": "mass-effect",
-    "title": "Mass Effect",
-    "label": "Games",
-    "date": "2026-07-26",
-    "url": "challenge.html?theme=mass-effect&round=1"
-  },
-  {
-    "type": "episode",
-    "slug": "greys-anatomy",
-    "title": "Greys Anatomy",
-    "label": "Episode Mode",
-    "date": "2026-07-26",
-    "url": "episode.html?theme=greys-anatomy"
-  },
-  {
-    "type": "theme",
-    "slug": "the-expanse",
-    "title": "The Expanse",
-    "label": "TV",
-    "date": "2026-07-26",
-    "url": "challenge.html?theme=the-expanse&round=1"
-  },
-  {
-    "type": "episode",
-    "slug": "suits",
-    "title": "Suits",
-    "label": "Episode Mode",
-    "date": "2026-07-26",
-    "url": "episode.html?theme=suits"
-  },
-  {
-    "type": "theme",
-    "slug": "the-hunger-games",
-    "title": "The Hunger Games",
-    "label": "Movies",
-    "date": "2026-07-26",
-    "url": "challenge.html?theme=the-hunger-games&round=1"
   }
 ]
