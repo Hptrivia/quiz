@@ -217,7 +217,7 @@ function loadState(){
     const raw = localStorage.getItem(STORAGE_KEY);
     if(raw) return JSON.parse(raw);
   }catch(e){ console.warn("Failed to parse saved state, starting fresh.", e); }
-  return { apiKey:"", model:"claude-opus-5", projects:{} };
+  return { apiKey:"", model:"claude-sonnet-5", projects:{} };
 }
 function persist(){
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
@@ -316,7 +316,7 @@ function getClient(){
 async function askAI(systemPrompt, messages){
   const client = getClient();
   const response = await client.messages.create({
-    model: state.model || "claude-opus-5",
+    model: state.model || "claude-sonnet-5",
     max_tokens: 1536,
     system: systemPrompt,
     messages,
