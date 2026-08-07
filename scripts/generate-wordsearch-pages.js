@@ -171,10 +171,20 @@ function updateSitemap(slugs) {
   if (!fs.existsSync(sitemapPath)) return;
   let sitemap = fs.readFileSync(sitemapPath, "utf8");
 
+  // Preserve existing <lastmod> values so unchanged /wordsearch/ URLs keep
+  // their original date; only brand-new URLs get today's date. Without this,
+  // every run re-dates every wordsearch URL on the site, not just new ones.
+  const existing = {};
+  const lastmodRe = /<loc>([^<]+)<\/loc>\s*<lastmod>([^<]+)<\/lastmod>/g;
+  let m;
+  while ((m = lastmodRe.exec(sitemap))) existing[m[1]] = m[2];
+
   const today = new Date().toISOString().split("T")[0];
-  const newEntries = slugs.map(slug =>
-    `  <url>\n    <loc>${SITE_URL}/wordsearch/${slug}.html</loc>\n    <lastmod>${today}</lastmod>\n  </url>`
-  ).join("\n");
+  const newEntries = slugs.map(slug => {
+    const loc = `${SITE_URL}/wordsearch/${slug}.html`;
+    const lastmod = existing[loc] || today;
+    return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n  </url>`;
+  }).join("\n");
 
   // Remove any existing /wordsearch/ static entries to avoid duplicates
   sitemap = sitemap.replace(/\s*<url>\s*<loc>[^<]*\/wordsearch\/[^<]*<\/loc>[\s\S]*?<\/url>/g, "");

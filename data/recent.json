@@ -1,6 +1,70 @@
 [
   {
     "type": "theme",
+    "slug": "atlanta",
+    "title": "Atlanta",
+    "label": "Sitcoms",
+    "date": "2026-08-07",
+    "url": "challenge.html?theme=atlanta&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "house-of-cards",
+    "title": "House of Cards",
+    "label": "TV",
+    "date": "2026-08-07",
+    "url": "challenge.html?theme=house-of-cards&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "law-and-order-svu",
+    "title": "Law & Order: SVU",
+    "label": "TV",
+    "date": "2026-08-07",
+    "url": "challenge.html?theme=law-and-order-svu&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "riverdale",
+    "title": "Riverdale",
+    "label": "TV",
+    "date": "2026-08-07",
+    "url": "challenge.html?theme=riverdale&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "silo",
+    "title": "Silo",
+    "label": "TV",
+    "date": "2026-08-07",
+    "url": "challenge.html?theme=silo&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "that-70s-show",
+    "title": "That '70s Show",
+    "label": "Sitcoms",
+    "date": "2026-08-07",
+    "url": "challenge.html?theme=that-70s-show&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "the-100",
+    "title": "The 100",
+    "label": "TV",
+    "date": "2026-08-07",
+    "url": "challenge.html?theme=the-100&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "the-americans",
+    "title": "The Americans",
+    "label": "TV",
+    "date": "2026-08-07",
+    "url": "challenge.html?theme=the-americans&round=1"
+  },
+  {
+    "type": "theme",
     "slug": "homeland",
     "title": "Homeland",
     "label": "TV",
@@ -94,69 +158,5 @@
     "label": "Movies",
     "date": "2026-07-29",
     "url": "challenge.html?theme=avatar-movies&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "marty-supreme",
-    "title": "Marty Supreme",
-    "label": "Movies",
-    "date": "2026-07-29",
-    "url": "challenge.html?theme=marty-supreme&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "one-battle-after-another",
-    "title": "One Battle After Another",
-    "label": "Movies",
-    "date": "2026-07-29",
-    "url": "challenge.html?theme=one-battle-after-another&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "shrek",
-    "title": "Shrek",
-    "label": "Movies",
-    "date": "2026-07-29",
-    "url": "challenge.html?theme=shrek&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "toy-story",
-    "title": "Toy Story",
-    "label": "Movies",
-    "date": "2026-07-29",
-    "url": "challenge.html?theme=toy-story&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "obsession",
-    "title": "Obsession",
-    "label": "Movies",
-    "date": "2026-07-27",
-    "url": "challenge.html?theme=obsession&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "project-hail-mary",
-    "title": "Project Hail Mary",
-    "label": "Movies",
-    "date": "2026-07-27",
-    "url": "challenge.html?theme=project-hail-mary&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "sinners",
-    "title": "Sinners",
-    "label": "Movies",
-    "date": "2026-07-27",
-    "url": "challenge.html?theme=sinners&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "doom",
-    "title": "Doom",
-    "label": "Games",
-    "date": "2026-07-26",
-    "url": "challenge.html?theme=doom&round=1"
   }
 ]
