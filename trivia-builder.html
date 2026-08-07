@@ -99,6 +99,13 @@
   .import-msg.ok{color:var(--green);}
   .import-msg.err{color:var(--red);}
 
+  /* ---------- Search ---------- */
+  .search-row{display:flex; gap:8px; align-items:center; padding-top:14px;}
+  .search-input{
+    flex:1; padding:9px 12px; border-radius:var(--radius-sm); border:1px solid var(--border-light);
+    background:var(--bg-alt); color:var(--text); font-size:13.5px;
+  }
+
   /* ---------- Review toolbar ---------- */
   .review-toolbar{
     position:sticky; top:53px; z-index:15; display:flex; align-items:center; gap:8px; flex-wrap:wrap;
@@ -135,8 +142,7 @@
     display:flex; align-items:center; gap:8px; padding:8px 10px; border-radius:var(--radius-sm);
     background:var(--bg-alt); border:1px solid var(--border); font-size:13.5px;
   }
-  .opt.correct{border-color:var(--green); background:var(--green-dim); color:var(--green);}
-  .opt .check{color:var(--green); font-weight:900;}
+  .opt .check{color:var(--text); font-weight:900;}
 
   .qactions{display:flex; gap:8px; flex-wrap:wrap; border-top:1px solid var(--border); padding-top:12px;}
 
@@ -176,6 +182,7 @@
   .chat-input-row{display:flex; gap:8px;}
   .chat-input-row textarea{flex:1; min-height:52px; padding:9px 11px; border-radius:var(--radius-sm); border:1px solid var(--border-light); background:var(--bg-alt); color:var(--text); resize:vertical; font-size:13.5px;}
   .chat-context{font-size:12px; color:var(--text-faint); background:var(--bg-alt); border:1px solid var(--border); border-radius:var(--radius-sm); padding:10px 12px; margin-bottom:14px;}
+  .chat-panel{margin-top:12px; padding-top:12px; border-top:1px solid var(--border);}
   .spinner{display:inline-block; width:13px; height:13px; border:2px solid var(--text-faint); border-top-color:var(--accent); border-radius:50%; animation:spin .7s linear infinite; vertical-align:-2px; margin-right:6px;}
   @keyframes spin{to{transform:rotate(360deg);}}
 
@@ -211,33 +218,64 @@ import Anthropic from "https://esm.sh/@anthropic-ai/sdk";
    Storage
 --------------------------------------------------------------------- */
 const STORAGE_KEY = "triviaBuilderState_v1";
+const UI_STORAGE_KEY = "triviaBuilderUI_v1";
+
+function loadUiState(){
+  try{
+    const raw = localStorage.getItem(UI_STORAGE_KEY);
+    if(raw) return JSON.parse(raw);
+  }catch(e){ console.warn("Failed to parse saved UI state.", e); }
+  return null;
+}
+function saveUiState(){
+  localStorage.setItem(UI_STORAGE_KEY, JSON.stringify({
+    view: ui.view, projectId: ui.projectId, filter: ui.filter, editingId: ui.editingId
+  }));
+}
 
 function loadState(){
   try{
     const raw = localStorage.getItem(STORAGE_KEY);
     if(raw) return JSON.parse(raw);
   }catch(e){ console.warn("Failed to parse saved state, starting fresh.", e); }
-  return { apiKey:"", model:"claude-sonnet-5", projects:{} };
+  return { apiKey:"", projects:{} };
 }
 function persist(){
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
 }
 
+let draftSaveTimer = null;
+function scheduleDraftSave(){
+  clearTimeout(draftSaveTimer);
+  draftSaveTimer = setTimeout(persist, 400);
+}
+function flushDraftSave(){
+  clearTimeout(draftSaveTimer);
+  persist();
+}
+
 const state = loadState();
 
-// Ephemeral UI/nav state — not persisted.
+// Restore last screen (view/project/filter/editing) so navigating away and back doesn't dump you on the homepage.
+const savedUi = loadUiState();
+const restoredProjectId = savedUi && savedUi.projectId && state.projects[savedUi.projectId] ? savedUi.projectId : null;
+
 const ui = {
-  view: "home",            // 'home' | 'import' | 'review'
-  projectId: null,
-  filter: "pending",        // pending | approved | easy | medium | hard
-  editingId: null,          // question id currently in edit mode
-  chatQuestionId: null,     // question id whose AI Chat modal is open
+  view: restoredProjectId ? (savedUi.view || "review") : "home",
+  projectId: restoredProjectId,
+  filter: (savedUi && savedUi.filter) || "pending",        // pending | approved | easy | medium | hard
+  editingId: restoredProjectId ? (savedUi.editingId || null) : null,          // question id currently in edit mode
+  chatQuestionId: null,     // question id whose AI Chat panel is open — not persisted
   chatDraft: "",
   chatBusy: false,
   optionsBusyId: null,      // question id currently running "AI Options"
   rephraseBusyId: null,     // question id currently running "Rephrase"
   showTrash: false,
   showExport: false,
+  showStorage: false,
+  showManualAdd: false,
+  manualAddBusy: false,
+  searchQuery: "",
   newProjectOpen: false,
   toast: null,
 };
@@ -308,6 +346,29 @@ const UPDATE_SCHEMA = {
   additionalProperties: false
 };
 
+// Manual-add: turn rough freeform notes into a batch of full question objects.
+const MANUAL_ADD_SCHEMA = {
+  type: "object",
+  properties: {
+    questions: {
+      type: "array",
+      items: {
+        type: "object",
+        properties: {
+          question: { type: "string" },
+          options: { type: "array", items: { type: "string" }, description: "Exactly 4 answer options, including the correct one." },
+          answer: { type: "string", description: "Must exactly match one of the 4 options." },
+          difficulty: { type: "string", enum: ["easy","medium","hard"] }
+        },
+        required: ["question","options","answer","difficulty"],
+        additionalProperties: false
+      }
+    }
+  },
+  required: ["questions"],
+  additionalProperties: false
+};
+
 function getClient(){
   if(!state.apiKey) throw new Error("NO_KEY");
   return new Anthropic({ apiKey: state.apiKey, dangerouslyAllowBrowser: true });
@@ -316,8 +377,9 @@ function getClient(){
 async function askAI(systemPrompt, messages){
   const client = getClient();
   const response = await client.messages.create({
-    model: state.model || "claude-sonnet-5",
+    model: "claude-sonnet-5",
     max_tokens: 1536,
+    thinking: { type: "disabled" },
     system: systemPrompt,
     messages,
     output_config: { format: { type: "json_schema", schema: UPDATE_SCHEMA } }
@@ -359,18 +421,22 @@ Rules:
 - In "explanation", state which options you removed, what you replaced them with, and why the new set is an improvement.
 Context:
 ${questionContextBlock(project, q)}`;
+  q.chat = q.chat || [];
+  q.chat.push({ role:"user", text:"Generate improved distractor options." });
+  ui.chatQuestionId = q.id;
+  render();
   try{
     const { parsed } = await askAI(system, [{ role:"user", content:"Generate improved distractor options now." }]);
     if(!parsed.options || !parsed.options.includes(q.answer)){
-      showToast("AI response didn't preserve the correct answer — no changes applied.");
+      q.chat.push({ role:"error", text:"AI response didn't preserve the correct answer — no changes applied." });
       return;
     }
     pushUndo(project);
     q.options = parsed.options;
     persist();
-    showToast(parsed.explanation || "Options updated.");
+    q.chat.push({ role:"ai", text: parsed.explanation || "Options updated." });
   }catch(err){
-    showToast(aiErrorMessage(err));
+    q.chat.push({ role:"error", text: aiErrorMessage(err) });
   }finally{
     ui.optionsBusyId = null; render();
   }
@@ -387,15 +453,18 @@ Rules:
 - Only return the "question" field with the rewritten text, plus "explanation".
 Context:
 ${questionContextBlock(project, q)}`;
+  q.chat = q.chat || [];
+  q.chat.push({ role:"user", text:"Rephrase this question." });
+  ui.chatQuestionId = q.id;
   try{
     const { parsed } = await askAI(system, [{ role:"user", content:"Rephrase this question now." }]);
-    if(!parsed.question){ showToast("AI did not return a rephrased question."); return; }
+    if(!parsed.question){ q.chat.push({ role:"error", text:"AI did not return a rephrased question." }); return; }
     pushUndo(project);
     q.question = parsed.question;
     persist();
-    showToast(parsed.explanation || "Question rephrased.");
+    q.chat.push({ role:"ai", text: parsed.explanation || "Question rephrased." });
   }catch(err){
-    showToast(aiErrorMessage(err));
+    q.chat.push({ role:"error", text: aiErrorMessage(err) });
   }finally{
     ui.rephraseBusyId = null; render();
   }
@@ -542,6 +611,7 @@ function buildExportJson(project){
 const app = document.getElementById("app");
 
 function render(){
+  saveUiState();
   let html = "";
   if(ui.view === "home") html = renderHome();
   else if(ui.view === "import") html = renderImport();
@@ -563,6 +633,7 @@ function topbar(activeProjectName){
       <button class="btn btn-ghost" data-action="go-home">Home</button>
       ${pid ? `<button class="btn btn-ghost" data-action="go-import">Import</button>` : ""}
       ${pid ? `<button class="btn btn-ghost" data-action="go-review">Review</button>` : ""}
+      ${pid ? `<button class="btn btn-ghost" data-action="open-export">View / Export</button>` : ""}
     </nav>
   </div>`;
 }
@@ -577,11 +648,6 @@ function renderHome(){
       <h2>Claude API Key</h2>
       <div class="settings-row">
         <input type="password" id="apiKeyInput" placeholder="sk-ant-..." value="${esc(state.apiKey)}">
-        <select id="modelSelect">
-          <option value="claude-opus-5" ${state.model==="claude-opus-5"?"selected":""}>Claude Opus 5 (best quality)</option>
-          <option value="claude-sonnet-5" ${state.model==="claude-sonnet-5"?"selected":""}>Claude Sonnet 5 (faster/cheaper)</option>
-          <option value="claude-haiku-4-5" ${state.model==="claude-haiku-4-5"?"selected":""}>Claude Haiku 4.5 (fastest)</option>
-        </select>
         <button class="btn btn-primary" data-action="save-settings">Save</button>
         <span class="save-flash" id="saveFlash">Saved</span>
       </div>
@@ -590,7 +656,10 @@ function renderHome(){
 
     <div class="home-head">
       <h1>Projects</h1>
-      <button class="btn btn-primary" data-action="new-project">+ New Project</button>
+      <div style="display:flex; gap:8px;">
+        <button class="btn" data-action="open-storage">🗄 Storage</button>
+        <button class="btn btn-primary" data-action="new-project">+ New Project</button>
+      </div>
     </div>
 
     ${projects.length ? `<div class="project-grid">${projects.map(renderProjectCard).join("")}</div>`
@@ -647,11 +716,23 @@ const FILTERS = [
 ];
 
 function filteredQuestions(project){
+  const search = ui.searchQuery.trim().toLowerCase();
   return project.questions.filter(q=>{
-    if(ui.filter==="pending") return q.status==="pending";
-    if(ui.filter==="approved") return q.status==="approved";
-    return q.difficulty===ui.filter;
+    if(ui.filter==="pending" && q.status!=="pending") return false;
+    if(ui.filter==="approved" && q.status!=="approved") return false;
+    if(ui.filter!=="pending" && ui.filter!=="approved" && q.difficulty!==ui.filter) return false;
+    if(search){
+      const haystack = [q.question, ...q.options, q.answer].join(" ").toLowerCase();
+      if(!haystack.includes(search)) return false;
+    }
+    return true;
   });
+}
+
+function filterCount(project, key){
+  if(key==="pending") return project.questions.filter(q=>q.status==="pending").length;
+  if(key==="approved") return project.questions.filter(q=>q.status==="approved").length;
+  return project.questions.filter(q=>q.difficulty===key).length;
 }
 
 function renderReview(){
@@ -665,20 +746,24 @@ function renderReview(){
   return `
   ${topbar(project.name)}
   <div class="container">
+    <div class="search-row">
+      <input type="text" id="searchInput" class="search-input" placeholder="🔍 Search questions, options, or answers…" value="${esc(ui.searchQuery)}">
+      ${ui.searchQuery ? `<button class="btn btn-sm btn-ghost" data-action="clear-search">✕ Clear</button>` : ""}
+    </div>
     <div class="review-toolbar">
       <div class="filter-group">
-        ${FILTERS.map(f=>`<button class="btn btn-sm ${ui.filter===f.key?"active":""}" data-action="set-filter" data-filter="${f.key}">${f.label}</button>`).join("")}
+        ${FILTERS.map(f=>`<button class="btn btn-sm ${ui.filter===f.key?"active":""}" data-action="set-filter" data-filter="${f.key}">${f.label} (${filterCount(project,f.key)})</button>`).join("")}
       </div>
       <span class="count-pill">${pendingCount} pending · ${approvedCount} approved</span>
       <div class="toolbar-spacer"></div>
+      <button class="btn btn-sm" data-action="open-manual-add">➕ Add Questions Manually</button>
       <button class="btn btn-sm" data-action="undo" ${h.undo.length? "":"disabled"}>↶ Undo</button>
       <button class="btn btn-sm" data-action="redo" ${h.redo.length? "":"disabled"}>↷ Redo</button>
       <button class="btn btn-sm" data-action="open-trash">🗑 Trash (${project.trash.length})</button>
-      <button class="btn btn-sm btn-primary" data-action="open-export">View / Export</button>
     </div>
 
     <div class="qlist">
-      ${list.length ? list.map((q,i)=>renderQuestionCard(project, q, i)).join("") : `<div class="empty-state">No questions match this filter.</div>`}
+      ${list.length ? list.map((q,i)=>renderQuestionCard(project, q, i)).join("") : `<div class="empty-state">No questions match${ui.searchQuery?" your search":" this filter"}.</div>`}
     </div>
   </div>`;
 }
@@ -732,19 +817,37 @@ function renderQuestionCard(project, q, idx){
     <div class="qtext">${esc(q.question)}</div>
     <div class="options-grid">
       ${q.options.map(o=>`
-        <div class="opt ${o===q.answer?"correct":""}">
+        <div class="opt">
           ${o===q.answer?'<span class="check">✓</span>':""}
           <span>${esc(o)}</span>
         </div>`).join("")}
     </div>
     <div class="qactions">
+      ${q.status==="pending" ? `<button class="btn btn-sm btn-primary" data-action="approve" data-id="${q.id}">✓ Approve</button>` : ""}
       <button class="btn btn-sm" data-action="edit" data-id="${q.id}">✏️ Edit</button>
-      <button class="btn btn-sm" data-action="open-chat" data-id="${q.id}">💬 AI Chat</button>
+      <button class="btn btn-sm" data-action="open-chat" data-id="${q.id}">💬 ${ui.chatQuestionId===q.id?"Close Chat":"AI Chat"}</button>
       <button class="btn btn-sm" data-action="ai-options" data-id="${q.id}" ${busyOptions?"disabled":""}>${busyOptions?'<span class="spinner"></span>':"🎯"} AI Options</button>
       <button class="btn btn-sm" data-action="rephrase" data-id="${q.id}" ${busyRephrase?"disabled":""}>${busyRephrase?'<span class="spinner"></span>':"🪄"} Rephrase</button>
       <button class="btn btn-sm" data-action="google" data-id="${q.id}">🔎 Google</button>
       <button class="btn btn-sm btn-danger" data-action="delete" data-id="${q.id}">🗑 Delete</button>
-      ${q.status==="pending" ? `<button class="btn btn-sm btn-primary" data-action="approve" data-id="${q.id}">✓ Approve</button>` : ""}
+    </div>
+    ${ui.chatQuestionId===q.id ? renderInlineChat(q) : ""}
+  </div>`;
+}
+
+function renderInlineChat(q){
+  const chat = q.chat || [];
+  return `
+  <div class="chat-panel">
+    <div class="chat-log">
+      ${chat.length ? chat.map(m=>`
+        <div class="chat-msg ${m.role}">${esc(m.text)}</div>
+      `).join("") : `<div style="color:var(--text-faint); font-size:13px;">Ask for a rewrite, a new option, a difficulty change, or anything else about this question.</div>`}
+      ${ui.chatBusy ? `<div class="chat-msg ai"><span class="spinner"></span>Thinking…</div>` : ""}
+    </div>
+    <div class="chat-input-row">
+      <textarea id="chatInput" placeholder="e.g. Make this harder, and replace option C" ${ui.chatBusy?"disabled":""}>${esc(ui.chatDraft)}</textarea>
+      <button class="btn btn-primary" data-action="send-chat" ${ui.chatBusy?"disabled":""}>Send</button>
     </div>
   </div>`;
 }
@@ -755,7 +858,8 @@ function renderModals(){
   if(ui.newProjectOpen) out += renderNewProjectModal();
   if(ui.showTrash) out += renderTrashModal();
   if(ui.showExport) out += renderExportModal();
-  if(ui.chatQuestionId) out += renderChatModal();
+  if(ui.showStorage) out += renderStorageModal();
+  if(ui.showManualAdd) out += renderManualAddModal(getProject(ui.projectId));
   return out;
 }
 
@@ -818,33 +922,55 @@ function renderExportModal(){
   </div>`;
 }
 
-function renderChatModal(){
-  const project = getProject(ui.projectId);
-  const q = project.questions.find(x=>x.id===ui.chatQuestionId);
-  if(!q) return "";
-  const chat = q.chat || [];
+function renderStorageModal(){
+  const projects = Object.values(state.projects).sort((a,b)=>b.createdAt-a.createdAt);
+  const sizeOf = obj => new Blob([JSON.stringify(obj)]).size;
+  const fmt = bytes => bytes < 1024 ? `${bytes} B` : `${(bytes/1024).toFixed(1)} KB`;
+  const totalBytes = sizeOf(state);
   return `
   <div class="overlay" data-action="close-modal-bg">
-    <div class="modal wide">
-      <div class="modal-head"><h3>AI Chat — Question</h3><button class="btn btn-ghost btn-sm" data-action="close-chat">✕</button></div>
+    <div class="modal">
+      <div class="modal-head"><h3>Storage</h3><button class="btn btn-ghost btn-sm" data-action="close-storage">✕</button></div>
       <div class="modal-body">
-        <div class="chat-context"><b>${esc(project.name)}</b> — ${esc(q.question)}</div>
-        <div class="chat-log">
-          ${chat.length ? chat.map(m=>`
-            <div class="chat-msg ${m.role}">${esc(m.text)}</div>
-          `).join("") : `<div style="color:var(--text-faint); font-size:13px;">Ask for a rewrite, a new option, a difficulty change, or anything else about this question.</div>`}
-          ${ui.chatBusy ? `<div class="chat-msg ai"><span class="spinner"></span>Thinking…</div>` : ""}
-        </div>
+        <div class="chat-context">Total local storage used: <b>${fmt(totalBytes)}</b> across ${projects.length} project(s)</div>
+        ${projects.length ? `<div class="trash-list">
+          ${projects.map(p=>`
+            <div class="trash-item">
+              <span class="ttext"><b>${esc(p.name)}</b> — ${p.questions.length} question(s), ${p.trash.length} in trash · ${fmt(sizeOf(p))}</span>
+              <button class="btn btn-sm btn-danger" data-action="delete-project" data-id="${p.id}">🗑 Delete</button>
+            </div>`).join("")}
+        </div>` : `<div class="empty-state">No projects yet.</div>`}
       </div>
-      <div class="modal-foot" style="flex-direction:column; align-items:stretch;">
-        <div class="chat-input-row">
-          <textarea id="chatInput" placeholder="e.g. Make this harder, and replace option C" ${ui.chatBusy?"disabled":""}>${esc(ui.chatDraft)}</textarea>
-          <button class="btn btn-primary" data-action="send-chat" ${ui.chatBusy?"disabled":""}>Send</button>
-        </div>
+      <div class="modal-foot">
+        <button class="btn btn-primary" data-action="close-storage">Done</button>
       </div>
     </div>
   </div>`;
 }
+
+function renderManualAddModal(project){
+  if(!project) return "";
+  const draft = project.manualDraft || "";
+  return `
+  <div class="overlay" data-action="close-modal-bg">
+    <div class="modal wide">
+      <div class="modal-head"><h3>Add Questions Manually</h3><button class="btn btn-ghost btn-sm" data-action="close-manual-add">✕</button></div>
+      <div class="modal-body">
+        <div class="chat-context">Type as many questions as you want, however you want. Add the answer under a question if you have it, and a difficulty (easy/medium/hard) if you want one — leave either out and AI will figure it out. It always generates the 3 wrong-answer options for you. Your draft auto-saves, so it's safe to close this and come back later.</div>
+        <textarea id="manualAddText" rows="14" style="width:100%; padding:10px 12px; border-radius:var(--radius-sm); border:1px solid var(--border-light); background:var(--bg-alt); color:var(--text); font-size:13.5px; resize:vertical;" placeholder="Who created That '70s Show?
+Bonnie Turner, Terry Turner, and Mark Brazill
+easy
+
+What is the name of the town where the show is set?">${esc(draft)}</textarea>
+      </div>
+      <div class="modal-foot">
+        <button class="btn btn-primary" data-action="generate-manual" ${ui.manualAddBusy?"disabled":""}>${ui.manualAddBusy?'<span class="spinner"></span> Generating…':"✨ Generate"}</button>
+        <button class="btn" data-action="close-manual-add">Close</button>
+      </div>
+    </div>
+  </div>`;
+}
+
 
 /* ---------------------------------------------------------------------
    Event delegation
@@ -869,6 +995,24 @@ function bindEvents(){
   }
   const importText = document.getElementById("importText");
   if(importText) importText.addEventListener("input", e=>{ ui._importDraft = e.target.value; });
+  const searchInput = document.getElementById("searchInput");
+  if(searchInput){
+    searchInput.addEventListener("input", e=>{
+      ui.searchQuery = e.target.value;
+      render();
+      const el = document.getElementById("searchInput");
+      if(el){ el.focus(); el.setSelectionRange(el.value.length, el.value.length); }
+    });
+  }
+  const manualAddText = document.getElementById("manualAddText");
+  if(manualAddText){
+    manualAddText.addEventListener("input", e=>{
+      const project = getProject(ui.projectId);
+      if(project){ project.manualDraft = e.target.value; scheduleDraftSave(); }
+    });
+    manualAddText.focus();
+    manualAddText.setSelectionRange(manualAddText.value.length, manualAddText.value.length);
+  }
   const newProjName = document.getElementById("newProjectName");
   if(newProjName){
     newProjName.focus();
@@ -922,8 +1066,7 @@ function onAction(e){
       window.open(`https://www.google.com/search?q=${encodeURIComponent(q.question + " " + project.name)}`, "_blank", "noopener");
       break; }
 
-    case "open-chat": ui.chatQuestionId = id; ui.chatDraft = ""; render(); break;
-    case "close-chat": ui.chatQuestionId = null; render(); break;
+    case "open-chat": ui.chatQuestionId = (ui.chatQuestionId===id ? null : id); ui.chatDraft = ""; render(); break;
     case "send-chat": triggerSendChat(); break;
 
     case "open-trash": ui.showTrash = true; render(); break;
@@ -934,9 +1077,20 @@ function onAction(e){
     case "close-export": ui.showExport = false; render(); break;
     case "copy-export": doCopyExport(project); break;
 
+    case "open-storage": ui.showStorage = true; render(); break;
+    case "close-storage": ui.showStorage = false; render(); break;
+    case "delete-project": deleteProject(id); break;
+
+    case "clear-search": ui.searchQuery = ""; render(); break;
+
+    case "open-manual-add": ui.showManualAdd = true; render(); break;
+    case "close-manual-add": flushDraftSave(); ui.showManualAdd = false; render(); break;
+    case "generate-manual": generateManualQuestions(project); break;
+
     case "close-modal-bg":
       if(e.target === el){
-        ui.newProjectOpen = false; ui.showTrash = false; ui.showExport = false; ui.chatQuestionId = null;
+        if(ui.showManualAdd) flushDraftSave();
+        ui.newProjectOpen = false; ui.showTrash = false; ui.showExport = false; ui.showStorage = false; ui.showManualAdd = false;
         render();
       }
       break;
@@ -956,7 +1110,7 @@ function createProject(){
   const name = (input?.value || "").trim();
   if(!name) return;
   const id = uid();
-  state.projects[id] = { id, name, createdAt: Date.now(), questions: [], trash: [] };
+  state.projects[id] = { id, name, createdAt: Date.now(), questions: [], trash: [], manualDraft: "" };
   persist();
   ui.newProjectOpen = false;
   ui.projectId = id;
@@ -964,11 +1118,89 @@ function createProject(){
   render();
 }
 
+function deleteProject(id){
+  const project = state.projects[id];
+  if(!project) return;
+  if(!confirm(`Delete project "${project.name}" and all ${project.questions.length + project.trash.length} of its questions? This cannot be undone.`)) return;
+  delete state.projects[id];
+  delete historyMap[id];
+  persist();
+  if(ui.projectId === id){ ui.projectId = null; ui.view = "home"; }
+  render();
+}
+
+async function generateManualQuestions(project){
+  const textEl = document.getElementById("manualAddText");
+  const text = ((textEl ? textEl.value : project.manualDraft) || "").trim();
+  if(!text){ showToast("Nothing to generate — type some questions first."); return; }
+  project.manualDraft = text;
+  clearTimeout(draftSaveTimer);
+  persist();
+
+  ui.manualAddBusy = true; render();
+  const system = `You convert a person's rough notes into structured trivia questions about the show/movie/series "${project.name}".
+
+The user pastes freeform, messy text containing one or more trivia questions, loosely separated by blank lines or line breaks. Read it loosely — do not require any particular format. For each question you can identify:
+- The question text itself is whatever they wrote as the question.
+- They MAY also write the correct answer (often on the next line) — if present, use it exactly. If absent, figure out the correct answer yourself from your own knowledge of "${project.name}".
+- They MAY also write a difficulty (easy/medium/hard) — if present, use it. If absent, judge it yourself.
+- They will almost never write the 3 wrong-answer options — always generate 3 new, believable, contextually appropriate wrong options yourself (matching the style/culture/gender/setting of the correct answer), even if they gave one.
+
+Be lenient — this is rough freeform text, not a strict format. Do your best to split it into separate questions and don't reject anything just because it's messy or incomplete. Skip only text that isn't a trivia question at all.
+
+Return every question you can identify, each with "question", exactly 4 "options" (including the correct one, in any position), "answer" (must exactly match one of the 4 options), and "difficulty".`;
+
+  try{
+    const client = getClient();
+    const response = await client.messages.create({
+      model: "claude-sonnet-5",
+      max_tokens: 4096,
+      thinking: { type: "disabled" },
+      system,
+      messages: [{ role:"user", content: text }],
+      output_config: { format: { type:"json_schema", schema: MANUAL_ADD_SCHEMA } }
+    });
+    const textBlock = response.content.find(b=>b.type==="text");
+    if(!textBlock) throw new Error("No response from model.");
+    const parsed = JSON.parse(textBlock.text);
+    const items = Array.isArray(parsed.questions) ? parsed.questions : [];
+    const valid = items.filter(it => it && typeof it.question==="string" && Array.isArray(it.options) && it.options.length>=2 && typeof it.answer==="string");
+
+    if(!valid.length){
+      showToast("Couldn't find any questions in that text.");
+      ui.manualAddBusy = false; render();
+      return;
+    }
+
+    pushUndo(project);
+    for(const it of valid){
+      project.questions.push({
+        id: uid(),
+        question: it.question,
+        options: it.options.slice(0,4),
+        answer: it.answer,
+        difficulty: ["easy","medium","hard"].includes(it.difficulty) ? it.difficulty : "medium",
+        status: "pending",
+        chat: []
+      });
+    }
+    project.manualDraft = "";
+    ui.manualAddBusy = false;
+    ui.showManualAdd = false;
+    ui.filter = "pending";
+    persist();
+    showToast(`${valid.length} question${valid.length===1?"":"s"} added to Pending.`);
+    render();
+  }catch(err){
+    ui.manualAddBusy = false;
+    showToast(aiErrorMessage(err));
+    render();
+  }
+}
+
 function saveSettings(){
   const key = document.getElementById("apiKeyInput")?.value.trim() || "";
-  const model = document.getElementById("modelSelect")?.value || "claude-opus-5";
   state.apiKey = key;
-  state.model = model;
   persist();
   const flash = document.getElementById("saveFlash");
   if(flash){ flash.classList.add("show"); setTimeout(()=>flash.classList.remove("show"), 1500); }
