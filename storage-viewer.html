@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>localStorage viewer</title>
+<style>
+  body{font:14px/1.4 monospace;margin:20px;background:#111;color:#eee}
+  h1{font-size:16px}
+  #controls{position:sticky;top:0;background:#111;padding:8px 0;border-bottom:1px solid #444;margin-bottom:12px;z-index:1}
+  #search{width:300px;background:#000;color:#eee;border:1px solid #444;padding:6px;font:14px monospace}
+  #groups{margin-top:8px}
+  .group{margin:10px 0;border:1px solid #333;border-radius:6px}
+  .group-head{cursor:pointer;padding:8px 10px;background:#1a1a1a;display:flex;justify-content:space-between;color:#7fd;user-select:none}
+  .group-head:hover{background:#222}
+  .group-body{padding:0 10px}
+  .group.collapsed .group-body{display:none}
+  .key{margin:12px 0;border:1px solid #444;border-radius:6px;padding:10px}
+  .key h3{margin:0 0 6px;color:#eee;font-size:13px}
+  .meta{color:#999;font-size:12px;margin-bottom:6px}
+  textarea{width:100%;height:160px;background:#000;color:#0f0;border:1px solid #333;padding:6px;box-sizing:border-box}
+  button{margin-right:8px;margin-top:6px;cursor:pointer}
+  #empty{color:#f66}
+  .hidden{display:none}
+</style>
+</head>
+<body>
+<h1>localStorage on this origin: <span id="origin"></span></h1>
+<div id="controls">
+  <input id="search" placeholder="Filter by key or content…">
+  <button onclick="downloadAll()">Download all keys as one JSON file</button>
+  <button onclick="expandAll()">Expand all</button>
+  <button onclick="collapseAll()">Collapse all</button>
+</div>
+<div id="groups"></div>
+<script>
+document.getElementById('origin').textContent = location.origin || location.href;
+const groupsEl = document.getElementById('groups');
+const keys = Object.keys(localStorage).sort();
+
+function prefixOf(k) {
+  const m = k.match(/^([a-zA-Z]+)[_-]/);
+  return m ? m[1] : k;
+}
+
+if (keys.length === 0) {
+  groupsEl.innerHTML = '<p id="empty">No localStorage keys found on this origin in this browser. ' +
+    'Make sure you opened this file the same way (same folder / same URL scheme) as the tool you used, in the same browser profile.</p>';
+}
+
+const byGroup = {};
+keys.forEach(k => {
+  const g = prefixOf(k);
+  (byGroup[g] = byGroup[g] || []).push(k);
+});
+
+Object.keys(byGroup).sort((a,b) => byGroup[b].length - byGroup[a].length).forEach(g => {
+  const groupDiv = document.createElement('div');
+  groupDiv.className = 'group collapsed';
+  groupDiv.dataset.group = g.toLowerCase();
+  const head = document.createElement('div');
+  head.className = 'group-head';
+  head.innerHTML = `<span>${g} (${byGroup[g].length})</span><span>▸</span>`;
+  head.onclick = () => groupDiv.classList.toggle('collapsed');
+  const body = document.createElement('div');
+  body.className = 'group-body';
+
+  byGroup[g].forEach(k => {
+    const raw = localStorage.getItem(k);
+    let pretty = raw;
+    try { pretty = JSON.stringify(JSON.parse(raw), null, 2); } catch(e) {}
+    const div = document.createElement('div');
+    div.className = 'key';
+    div.dataset.key = k.toLowerCase();
+    div.dataset.content = pretty.toLowerCase();
+    div.innerHTML = `
+      <h3>${k}</h3>
+      <div class="meta">${raw.length.toLocaleString()} chars</div>
+      <textarea readonly>${pretty.replace(/</g,'&lt;')}</textarea>
+      <button data-k="${k}" class="copy">Copy</button>
+      <button data-k="${k}" class="dl">Download this key</button>
+    `;
+    body.appendChild(div);
+  });
+
+  groupDiv.appendChild(head);
+  groupDiv.appendChild(body);
+  groupsEl.appendChild(groupDiv);
+});
+
+groupsEl.addEventListener('click', e => {
+  const k = e.target.dataset.k;
+  if (!k) return;
+  const raw = localStorage.getItem(k);
+  if (e.target.classList.contains('copy')) {
+    navigator.clipboard.writeText(raw).then(()=> e.target.textContent='Copied!');
+  }
+  if (e.target.classList.contains('dl')) {
+    downloadText(k.replace(/[^a-z0-9_-]/gi,'_') + '.json', raw);
+  }
+});
+
+document.getElementById('search').addEventListener('input', e => {
+  const q = e.target.value.toLowerCase().trim();
+  document.querySelectorAll('.group').forEach(groupDiv => {
+    let anyVisible = false;
+    let anyMatch = false;
+    groupDiv.querySelectorAll('.key').forEach(div => {
+      const match = !q || div.dataset.key.includes(q) || div.dataset.content.includes(q);
+      div.classList.toggle('hidden', !match);
+      if (match) { anyVisible = true; if (div.dataset.key.includes(q)) anyMatch = true; }
+    });
+    groupDiv.classList.toggle('hidden', !anyVisible);
+    if (q) groupDiv.classList.remove('collapsed');
+    else groupDiv.classList.add('collapsed');
+  });
+});
+
+function expandAll() { document.querySelectorAll('.group').forEach(g => g.classList.remove('collapsed')); }
+function collapseAll() { document.querySelectorAll('.group').forEach(g => g.classList.add('collapsed')); }
+
+function downloadText(name, text) {
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([text], {type:'application/json'}));
+  a.download = name;
+  a.click();
+}
+
+function downloadAll() {
+  const all = {};
+  keys.forEach(k => { try { all[k] = JSON.parse(localStorage.getItem(k)); } catch(e) { all[k] = localStorage.getItem(k); } });
+  downloadText('localStorage-dump.json', JSON.stringify(all, null, 2));
+}
+</script>
+</body>
+</html>
