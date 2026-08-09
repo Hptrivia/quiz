@@ -114,6 +114,10 @@
   .filter-group{display:flex; gap:6px; flex-wrap:wrap;}
   .toolbar-spacer{flex:1;}
   .count-pill{font-size:12px; color:var(--text-faint); padding:4px 2px;}
+  .btn-dupe{border-color:var(--border-light);}
+  .btn-dupe.has-dupes{border-color:var(--orange); color:var(--orange);}
+  .btn-dupe.has-dupes:hover{background:var(--red-dim);}
+  .btn-dupe.active{background:var(--orange); border-color:var(--orange); color:#10131c;}
 
   /* ---------- Question cards ---------- */
   .qlist{display:flex; flex-direction:column; gap:12px;}
@@ -125,6 +129,10 @@
   .qcard-head{display:flex; justify-content:space-between; align-items:flex-start; gap:10px; margin-bottom:10px;}
   .qnum{font-size:12px; color:var(--text-faint); font-weight:700;}
   .qtext{font-size:15.5px; font-weight:600; line-height:1.4; margin:2px 0 10px;}
+  .dup-note{
+    display:flex; align-items:flex-start; gap:6px; margin:-2px 0 10px; padding:8px 10px;
+    border-radius:var(--radius-sm); background:var(--red-dim); color:#ffb4b4; font-size:12.5px; line-height:1.45;
+  }
   .badges{display:flex; gap:6px; align-items:center; flex-wrap:wrap;}
   .badge{font-size:11px; font-weight:700; padding:3px 8px; border-radius:20px; text-transform:uppercase; letter-spacing:.03em;}
   .badge.status-pending{background:#3a3320; color:var(--yellow);}
@@ -715,12 +723,16 @@ const FILTERS = [
   { key:"hard", label:"Hard" },
 ];
 
-function filteredQuestions(project){
+function filteredQuestions(project, dupMap){
   const search = ui.searchQuery.trim().toLowerCase();
   return project.questions.filter(q=>{
-    if(ui.filter==="pending" && q.status!=="pending") return false;
-    if(ui.filter==="approved" && q.status!=="approved") return false;
-    if(ui.filter!=="pending" && ui.filter!=="approved" && q.difficulty!==ui.filter) return false;
+    if(ui.filter==="duplicates"){
+      if(!dupMap.has(q.id)) return false;
+    }else{
+      if(ui.filter==="pending" && q.status!=="pending") return false;
+      if(ui.filter==="approved" && q.status!=="approved") return false;
+      if(ui.filter!=="pending" && ui.filter!=="approved" && q.difficulty!==ui.filter) return false;
+    }
     if(search){
       const haystack = [q.question, ...q.options, q.answer].join(" ").toLowerCase();
       if(!haystack.includes(search)) return false;
@@ -735,13 +747,31 @@ function filterCount(project, key){
   return project.questions.filter(q=>q.difficulty===key).length;
 }
 
+// Maps question id -> array of *other* questions in the project that share the same answer text.
+function getDuplicateAnswerMap(project){
+  const groups = {};
+  project.questions.forEach(q=>{
+    const key = (q.answer || "").trim().toLowerCase();
+    if(!key) return;
+    (groups[key] = groups[key] || []).push(q);
+  });
+  const map = new Map();
+  Object.values(groups).forEach(group=>{
+    if(group.length < 2) return;
+    group.forEach(q=> map.set(q.id, group.filter(o=>o.id!==q.id)));
+  });
+  return map;
+}
+
 function renderReview(){
   const project = getProject(ui.projectId);
   if(!project) return renderHome();
   const h = getHistory(project.id);
-  const list = filteredQuestions(project);
+  const dupMap = getDuplicateAnswerMap(project);
+  const list = filteredQuestions(project, dupMap);
   const pendingCount = project.questions.filter(q=>q.status==="pending").length;
   const approvedCount = project.questions.filter(q=>q.status==="approved").length;
+  const dupCount = dupMap.size;
 
   return `
   ${topbar(project.name)}
@@ -751,6 +781,7 @@ function renderReview(){
       ${ui.searchQuery ? `<button class="btn btn-sm btn-ghost" data-action="clear-search">✕ Clear</button>` : ""}
     </div>
     <div class="review-toolbar">
+      <button class="btn btn-sm btn-dupe ${dupCount?"has-dupes":""} ${ui.filter==="duplicates"?"active":""}" data-action="set-filter" data-filter="duplicates">⚠️ Duplicates (${dupCount})</button>
       <div class="filter-group">
         ${FILTERS.map(f=>`<button class="btn btn-sm ${ui.filter===f.key?"active":""}" data-action="set-filter" data-filter="${f.key}">${f.label} (${filterCount(project,f.key)})</button>`).join("")}
       </div>
@@ -763,15 +794,20 @@ function renderReview(){
     </div>
 
     <div class="qlist">
-      ${list.length ? list.map((q,i)=>renderQuestionCard(project, q, i)).join("") : `<div class="empty-state">No questions match${ui.searchQuery?" your search":" this filter"}.</div>`}
+      ${list.length ? list.map((q,i)=>renderQuestionCard(project, q, i, dupMap.get(q.id))).join("") : `<div class="empty-state">${ui.filter==="duplicates" ? "No duplicate answers found — nothing repeats across your questions." : `No questions match${ui.searchQuery?" your search":" this filter"}.`}</div>`}
     </div>
   </div>`;
 }
 
-function renderQuestionCard(project, q, idx){
+function renderQuestionCard(project, q, idx, dupOthers){
   const editing = ui.editingId === q.id;
   const busyOptions = ui.optionsBusyId === q.id;
   const busyRephrase = ui.rephraseBusyId === q.id;
+  const dupNote = (dupOthers && dupOthers.length) ? `
+    <div class="dup-note">⚠️ Same answer ("${esc(q.answer)}") as: ${dupOthers.map(o=>{
+      const oIdx = project.questions.indexOf(o) + 1;
+      return `#${oIdx} "${esc(o.question)}"`;
+    }).join("; ")}</div>` : "";
 
   if(editing){
     return `
@@ -815,6 +851,7 @@ function renderQuestionCard(project, q, idx){
       </div>
     </div>
     <div class="qtext">${esc(q.question)}</div>
+    ${dupNote}
     <div class="options-grid">
       ${q.options.map(o=>`
         <div class="opt">
