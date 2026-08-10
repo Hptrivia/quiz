@@ -621,7 +621,9 @@ function captionData(){
 `${title} Trivia 🧠 How many can you actually get right?
 Be honest — could you score ${N}/${N}? 👀
 
-🎮 Get the app on the App Store & Google Play
+🎮 Download Trivia Gauntlet on the App Store & Google Play
+
+LINK IN BIO
 
 #trivia #${th} #triviachallenge #fyp #foryou`},
     ],
@@ -630,23 +632,26 @@ Be honest — could you score ${N}/${N}? 👀
 `${title} Trivia 🧠 Can you get them all right?
 Tag a friend who thinks they know ${title} 👇
 
-🎮 200+ free trivia themes — get the app on the App Store & Google Play
+🎮 200+ free trivia themes — download Trivia Gauntlet on the App Store & Google Play
+
+LINK IN BIO
 
 #trivia #${th} #triviaquiz #quiztime #reels`},
     ],
     pinterest:[
       {label:'Title', multiline:false, hint:'max ~100 chars', value:`${title} Trivia Quiz – How Many Can You Answer?`},
       {label:'Description', multiline:true, value:
-`Think you know ${title}? Test yourself with this free ${cat} trivia quiz and see if you can score ${N}/${N}. Play hundreds more free trivia themes at ${SITE}, or get the Trivia Gauntlet app on the App Store & Google Play. #trivia #${th} #triviaquiz #quiznight #funfacts`},
-      {label:'Destination link', multiline:false, value:challengeLink(slug)},
+`Think you know ${title}? Test yourself with this free ${cat} trivia quiz and see if you can score ${N}/${N}. Download Trivia Gauntlet for hundreds more free trivia themes on the App Store & Google Play. #trivia #${th} #triviaquiz #quiznight #funfacts`},
+      {label:'Destination link', multiline:false, value:'https://hptrivia.github.io/Trivia-Gauntlet-Site/'},
     ],
     youtube:[
       {label:'Title', multiline:false, hint:'YouTube Shorts · max ~100 chars', value:`${title} Trivia 🧠 Can You Score ${N}/${N}? #Shorts`},
       {label:'Description', multiline:true, value:
 `How well do you know ${title}? Test yourself with this quick ${cat} trivia quiz — could you get them all right?
 
-🎮 Play this quiz free → ${challengeLink(slug)}
-📲 Or get the app — search "Trivia Gauntlet" on the App Store & Google Play
+📲 Download Trivia Gauntlet on the App Store & Google Play
+
+LINK IN BIO
 
 #Shorts #trivia #${th} #triviaquiz #quiz`},
     ],
@@ -924,8 +929,6 @@ function drawOutro(ctx,p,variant){
   if(variant==='play'){
     ctx.fillStyle=p.accent; ctx.font=big;
     ctx.fillText('LINK IN BIO',W/2,H*0.42); ctx.fillText('TO PLAY',W/2,H*0.54);
-    ctx.fillStyle=p.text; ctx.font=`700 ${Math.round(W*0.042)}px "DM Sans",sans-serif`;
-    ctx.fillText('Or play free at '+SITE,W/2,H*0.66);
   } else {
     ctx.fillStyle=p.text; ctx.font=`700 ${Math.round(W*0.045)}px "DM Sans",sans-serif`;
     ctx.fillText('📲 Get the app',W/2,H*0.36);
