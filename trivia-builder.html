@@ -85,6 +85,11 @@
   .project-card .pname{font-weight:700; font-size:15.5px;}
   .project-card .pstats{display:flex; gap:14px; font-size:12.5px; color:var(--text-dim);}
   .project-card .pstats b{color:var(--text);}
+  .project-card-main{
+    background:none; border:none; padding:0; margin:0; color:inherit; text-align:left;
+    display:flex; flex-direction:column; gap:10px; cursor:pointer; width:100%;
+  }
+  .project-card-actions{display:flex; justify-content:flex-end;}
   .empty-state{color:var(--text-faint); font-size:13.5px; padding:40px 0; text-align:center;}
 
   /* ---------- Import page ---------- */
@@ -118,6 +123,16 @@
   .btn-dupe.has-dupes{border-color:var(--orange); color:var(--orange);}
   .btn-dupe.has-dupes:hover{background:var(--red-dim);}
   .btn-dupe.active{background:var(--orange); border-color:var(--orange); color:#10131c;}
+  .select-checkbox{width:16px; height:16px; accent-color:var(--accent); margin-right:6px; vertical-align:-3px;}
+  .bulk-toolbar{
+    display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+    background:var(--panel-alt); border:1px solid var(--border-light); border-radius:var(--radius-sm);
+    padding:8px 12px; margin:-4px 0 14px;
+  }
+  .bulk-toolbar select{
+    padding:6px 10px; border-radius:var(--radius-sm); border:1px solid var(--border-light);
+    background:var(--bg-alt); color:var(--text); font-size:12.5px;
+  }
 
   /* ---------- Question cards ---------- */
   .qlist{display:flex; flex-direction:column; gap:12px;}
@@ -282,10 +297,13 @@ const ui = {
   showExport: false,
   showStorage: false,
   showManualAdd: false,
+  showArchived: false,
   manualAddBusy: false,
   searchQuery: "",
   newProjectOpen: false,
   toast: null,
+  selectMode: false,        // bulk-select mode in Review — not persisted
+  selectedIds: new Set(),   // ids currently selected in bulk-select mode
 };
 
 // Per-project undo/redo history — kept in memory only (last ~10 actions).
@@ -566,6 +584,29 @@ function saveEdit(project, id, fields){
   persist(); render();
 }
 
+/* Bulk actions on the current selection (Review screen "Select" mode). */
+function bulkApprove(project){
+  if(!ui.selectedIds.size) return;
+  pushUndo(project);
+  project.questions.forEach(q=>{ if(ui.selectedIds.has(q.id)) q.status = "approved"; });
+  persist(); render();
+}
+function bulkSetDifficulty(project, difficulty){
+  if(!ui.selectedIds.size || !["easy","medium","hard"].includes(difficulty)) return;
+  pushUndo(project);
+  project.questions.forEach(q=>{ if(ui.selectedIds.has(q.id)) q.difficulty = difficulty; });
+  persist(); render();
+}
+function bulkDeleteSelected(project){
+  if(!ui.selectedIds.size) return;
+  pushUndo(project);
+  const toTrash = project.questions.filter(q=>ui.selectedIds.has(q.id));
+  project.questions = project.questions.filter(q=>!ui.selectedIds.has(q.id));
+  project.trash.push(...toTrash);
+  ui.selectedIds = new Set();
+  persist(); render();
+}
+
 /* ---------------------------------------------------------------------
    Import
 --------------------------------------------------------------------- */
@@ -620,6 +661,8 @@ const app = document.getElementById("app");
 
 function render(){
   saveUiState();
+  const prevView = render._lastView;
+  const scrollY = window.scrollY;
   let html = "";
   if(ui.view === "home") html = renderHome();
   else if(ui.view === "import") html = renderImport();
@@ -630,6 +673,13 @@ function render(){
 
   app.innerHTML = html;
   bindEvents();
+
+  // Rebuilding the whole DOM on every state change (checkbox toggle, difficulty
+  // change, etc.) drops the browser's scroll position — restore it so in-place
+  // updates don't jump the page. Only skip this when the view actually changed
+  // (e.g. opening a project), where landing at the top is correct.
+  if(prevView === ui.view) window.scrollTo(0, scrollY);
+  render._lastView = ui.view;
 }
 
 function topbar(activeProjectName){
@@ -648,7 +698,8 @@ function topbar(activeProjectName){
 
 /* ---------- Home ---------- */
 function renderHome(){
-  const projects = Object.values(state.projects).sort((a,b)=>b.createdAt-a.createdAt);
+  const projects = Object.values(state.projects).filter(p=>!p.archived).sort((a,b)=>b.createdAt-a.createdAt);
+  const archivedCount = Object.values(state.projects).filter(p=>p.archived).length;
   return `
   ${topbar()}
   <div class="container">
@@ -665,6 +716,7 @@ function renderHome(){
     <div class="home-head">
       <h1>Projects</h1>
       <div style="display:flex; gap:8px;">
+        <button class="btn" data-action="open-archived">📦 Archived (${archivedCount})</button>
         <button class="btn" data-action="open-storage">🗄 Storage</button>
         <button class="btn btn-primary" data-action="new-project">+ New Project</button>
       </div>
@@ -679,13 +731,18 @@ function renderProjectCard(p){
   const total = p.questions.length;
   const approved = p.questions.filter(q=>q.status==="approved").length;
   return `
-  <button class="project-card" data-action="open-project" data-id="${p.id}">
-    <div class="pname">${esc(p.name)}</div>
-    <div class="pstats">
-      <span><b>${total}</b> uploaded</span>
-      <span><b>${approved}</b> approved</span>
+  <div class="project-card">
+    <button class="project-card-main" data-action="open-project" data-id="${p.id}">
+      <div class="pname">${esc(p.name)}</div>
+      <div class="pstats">
+        <span><b>${total}</b> uploaded</span>
+        <span><b>${approved}</b> approved</span>
+      </div>
+    </button>
+    <div class="project-card-actions">
+      <button class="btn btn-sm btn-ghost" data-action="archive-project" data-id="${p.id}">📦 Archive</button>
     </div>
-  </button>`;
+  </div>`;
 }
 
 /* ---------- Import ---------- */
@@ -787,11 +844,28 @@ function renderReview(){
       </div>
       <span class="count-pill">${pendingCount} pending · ${approvedCount} approved</span>
       <div class="toolbar-spacer"></div>
+      <button class="btn btn-sm ${ui.selectMode?"active":""}" data-action="toggle-select-mode">☑ Select</button>
       <button class="btn btn-sm" data-action="open-manual-add">➕ Add Questions Manually</button>
       <button class="btn btn-sm" data-action="undo" ${h.undo.length? "":"disabled"}>↶ Undo</button>
       <button class="btn btn-sm" data-action="redo" ${h.redo.length? "":"disabled"}>↷ Redo</button>
       <button class="btn btn-sm" data-action="open-trash">🗑 Trash (${project.trash.length})</button>
     </div>
+
+    ${ui.selectMode ? `
+    <div class="bulk-toolbar">
+      <button class="btn btn-sm" data-action="select-all">Select All (${list.length})</button>
+      <button class="btn btn-sm btn-ghost" data-action="clear-selection">Clear</button>
+      <span class="count-pill">${ui.selectedIds.size} selected</span>
+      <select id="bulkDiffSelect">
+        <option value="">Set difficulty…</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+      <button class="btn btn-sm" data-action="bulk-set-difficulty" ${ui.selectedIds.size?"":"disabled"}>Apply</button>
+      <button class="btn btn-sm btn-primary" data-action="bulk-approve" ${ui.selectedIds.size?"":"disabled"}>✓ Approve Selected</button>
+      <button class="btn btn-sm btn-danger" data-action="bulk-delete" ${ui.selectedIds.size?"":"disabled"}>🗑 Delete Selected</button>
+    </div>` : ""}
 
     <div class="qlist">
       ${list.length ? list.map((q,i)=>renderQuestionCard(project, q, i, dupMap.get(q.id))).join("") : `<div class="empty-state">${ui.filter==="duplicates" ? "No duplicate answers found — nothing repeats across your questions." : `No questions match${ui.searchQuery?" your search":" this filter"}.`}</div>`}
@@ -840,7 +914,7 @@ function renderQuestionCard(project, q, idx, dupOthers){
   return `
   <div class="qcard ${q.status}">
     <div class="qcard-head">
-      <span class="qnum">#${idx+1}</span>
+      <span class="qnum">${ui.selectMode ? `<input type="checkbox" class="select-checkbox" data-id="${q.id}" ${ui.selectedIds.has(q.id)?"checked":""}>` : ""}#${idx+1}</span>
       <div class="badges">
         <span class="badge status-${q.status}">${q.status}</span>
         <select class="diff-select" data-action="set-difficulty" data-id="${q.id}">
@@ -896,6 +970,7 @@ function renderModals(){
   if(ui.showTrash) out += renderTrashModal();
   if(ui.showExport) out += renderExportModal();
   if(ui.showStorage) out += renderStorageModal();
+  if(ui.showArchived) out += renderArchivedModal();
   if(ui.showManualAdd) out += renderManualAddModal(getProject(ui.projectId));
   return out;
 }
@@ -973,13 +1048,35 @@ function renderStorageModal(){
         ${projects.length ? `<div class="trash-list">
           ${projects.map(p=>`
             <div class="trash-item">
-              <span class="ttext"><b>${esc(p.name)}</b> — ${p.questions.length} question(s), ${p.trash.length} in trash · ${fmt(sizeOf(p))}</span>
+              <span class="ttext"><b>${esc(p.name)}</b>${p.archived ? ` <span style="color:var(--text-faint);">(archived)</span>` : ""} — ${p.questions.length} question(s), ${p.trash.length} in trash · ${fmt(sizeOf(p))}</span>
               <button class="btn btn-sm btn-danger" data-action="delete-project" data-id="${p.id}">🗑 Delete</button>
             </div>`).join("")}
         </div>` : `<div class="empty-state">No projects yet.</div>`}
       </div>
       <div class="modal-foot">
         <button class="btn btn-primary" data-action="close-storage">Done</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderArchivedModal(){
+  const projects = Object.values(state.projects).filter(p=>p.archived).sort((a,b)=>b.createdAt-a.createdAt);
+  return `
+  <div class="overlay" data-action="close-modal-bg">
+    <div class="modal">
+      <div class="modal-head"><h3>Archived Shows (${projects.length})</h3><button class="btn btn-ghost btn-sm" data-action="close-archived">✕</button></div>
+      <div class="modal-body">
+        ${projects.length ? `<div class="trash-list">
+          ${projects.map(p=>`
+            <div class="trash-item">
+              <span class="ttext"><b>${esc(p.name)}</b> — ${p.questions.length} question(s)</span>
+              <button class="btn btn-sm" data-action="unarchive-project" data-id="${p.id}">↩ Restore</button>
+            </div>`).join("")}
+        </div>` : `<div class="empty-state">No archived shows.</div>`}
+      </div>
+      <div class="modal-foot">
+        <button class="btn btn-primary" data-action="close-archived">Done</button>
       </div>
     </div>
   </div>`;
@@ -1062,6 +1159,14 @@ function bindEvents(){
       setDifficulty(project, sel.dataset.id, sel.value);
     });
   });
+  document.querySelectorAll(".select-checkbox").forEach(cb=>{
+    cb.addEventListener("click", e=>e.stopPropagation());
+    cb.addEventListener("change", ()=>{
+      if(cb.checked) ui.selectedIds.add(cb.dataset.id);
+      else ui.selectedIds.delete(cb.dataset.id);
+      render();
+    });
+  });
 }
 
 function onAction(e){
@@ -1074,7 +1179,7 @@ function onAction(e){
     case "go-home": ui.view="home"; ui.projectId=null; render(); break;
     case "go-import": ui.view="import"; render(); break;
     case "go-review": ui.view="review"; render(); break;
-    case "open-project": ui.projectId = id; ui.view="review"; ui.filter="pending"; render(); break;
+    case "open-project": ui.projectId = id; ui.view="review"; ui.filter="pending"; ui.selectMode=false; ui.selectedIds=new Set(); render(); break;
 
     case "new-project": ui.newProjectOpen = true; render(); break;
     case "close-new-project": ui.newProjectOpen = false; render(); break;
@@ -1117,8 +1222,27 @@ function onAction(e){
     case "open-storage": ui.showStorage = true; render(); break;
     case "close-storage": ui.showStorage = false; render(); break;
     case "delete-project": deleteProject(id); break;
+    case "archive-project": archiveProject(id); break;
+    case "unarchive-project": unarchiveProject(id); break;
+    case "open-archived": ui.showArchived = true; render(); break;
+    case "close-archived": ui.showArchived = false; render(); break;
 
     case "clear-search": ui.searchQuery = ""; render(); break;
+
+    case "toggle-select-mode": ui.selectMode = !ui.selectMode; if(!ui.selectMode) ui.selectedIds = new Set(); render(); break;
+    case "select-all": {
+      const dupMap = getDuplicateAnswerMap(project);
+      filteredQuestions(project, dupMap).forEach(q=>ui.selectedIds.add(q.id));
+      render(); break;
+    }
+    case "clear-selection": ui.selectedIds = new Set(); render(); break;
+    case "bulk-approve": bulkApprove(project); break;
+    case "bulk-delete": bulkDeleteSelected(project); break;
+    case "bulk-set-difficulty": {
+      const sel = document.getElementById("bulkDiffSelect");
+      bulkSetDifficulty(project, sel?.value);
+      break;
+    }
 
     case "open-manual-add": ui.showManualAdd = true; render(); break;
     case "close-manual-add": flushDraftSave(); ui.showManualAdd = false; render(); break;
@@ -1127,7 +1251,7 @@ function onAction(e){
     case "close-modal-bg":
       if(e.target === el){
         if(ui.showManualAdd) flushDraftSave();
-        ui.newProjectOpen = false; ui.showTrash = false; ui.showExport = false; ui.showStorage = false; ui.showManualAdd = false;
+        ui.newProjectOpen = false; ui.showTrash = false; ui.showExport = false; ui.showStorage = false; ui.showManualAdd = false; ui.showArchived = false;
         render();
       }
       break;
@@ -1147,7 +1271,7 @@ function createProject(){
   const name = (input?.value || "").trim();
   if(!name) return;
   const id = uid();
-  state.projects[id] = { id, name, createdAt: Date.now(), questions: [], trash: [], manualDraft: "" };
+  state.projects[id] = { id, name, createdAt: Date.now(), questions: [], trash: [], manualDraft: "", archived: false };
   persist();
   ui.newProjectOpen = false;
   ui.projectId = id;
@@ -1164,6 +1288,21 @@ function deleteProject(id){
   persist();
   if(ui.projectId === id){ ui.projectId = null; ui.view = "home"; }
   render();
+}
+
+function archiveProject(id){
+  const project = state.projects[id];
+  if(!project) return;
+  project.archived = true;
+  persist();
+  if(ui.projectId === id){ ui.projectId = null; ui.view = "home"; }
+  render();
+}
+function unarchiveProject(id){
+  const project = state.projects[id];
+  if(!project) return;
+  project.archived = false;
+  persist(); render();
 }
 
 async function generateManualQuestions(project){
