@@ -1,6 +1,70 @@
 [
   {
     "type": "theme",
+    "slug": "ginny-and-georgia",
+    "title": "Ginny & Georgia",
+    "label": "TV",
+    "date": "2026-08-11",
+    "url": "challenge.html?theme=ginny-and-georgia&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "the-boondocks",
+    "title": "The Boondocks",
+    "label": "Sitcoms",
+    "date": "2026-08-11",
+    "url": "challenge.html?theme=the-boondocks&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "the-wheel-of-time",
+    "title": "The Wheel of Time",
+    "label": "TV",
+    "date": "2026-08-11",
+    "url": "challenge.html?theme=the-wheel-of-time&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "black-mirror",
+    "title": "Black Mirror",
+    "label": "TV",
+    "date": "2026-08-10",
+    "url": "challenge.html?theme=black-mirror&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "the-x-files",
+    "title": "The X-Files",
+    "label": "TV",
+    "date": "2026-08-10",
+    "url": "challenge.html?theme=the-x-files&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "30-rock",
+    "title": "30 Rock",
+    "label": "Sitcoms",
+    "date": "2026-08-09",
+    "url": "challenge.html?theme=30-rock&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "frasier",
+    "title": "Frasier",
+    "label": "Sitcoms",
+    "date": "2026-08-09",
+    "url": "challenge.html?theme=frasier&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "jurassic-park",
+    "title": "Jurassic Park",
+    "label": "Movies",
+    "date": "2026-08-09",
+    "url": "challenge.html?theme=jurassic-park&round=1"
+  },
+  {
+    "type": "theme",
     "slug": "atlanta",
     "title": "Atlanta",
     "label": "Sitcoms",
@@ -94,69 +158,5 @@
     "label": "Sitcoms",
     "date": "2026-08-02",
     "url": "challenge.html?theme=the-hawk&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "the-leftovers",
-    "title": "The Leftovers",
-    "label": "TV",
-    "date": "2026-08-02",
-    "url": "challenge.html?theme=the-leftovers&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "the-oc",
-    "title": "The O.C.",
-    "label": "TV",
-    "date": "2026-08-02",
-    "url": "challenge.html?theme=the-oc&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "the-shield",
-    "title": "The Shield",
-    "label": "TV",
-    "date": "2026-08-02",
-    "url": "challenge.html?theme=the-shield&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "veep",
-    "title": "Veep",
-    "label": "Sitcoms",
-    "date": "2026-08-02",
-    "url": "challenge.html?theme=veep&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "24",
-    "title": "24",
-    "label": "TV",
-    "date": "2026-07-30",
-    "url": "challenge.html?theme=24&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "merlin",
-    "title": "Merlin",
-    "label": "TV",
-    "date": "2026-07-30",
-    "url": "challenge.html?theme=merlin&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "one-tree-hill",
-    "title": "One Tree Hill",
-    "label": "TV",
-    "date": "2026-07-30",
-    "url": "challenge.html?theme=one-tree-hill&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "avatar-movies",
-    "title": "Avatar Movies",
-    "label": "Movies",
-    "date": "2026-07-29",
-    "url": "challenge.html?theme=avatar-movies&round=1"
   }
 ]
