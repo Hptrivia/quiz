@@ -1,0 +1,974 @@
+[
+  {
+    "id": 1,
+    "question": "In what California city is Psych set?",
+    "options": [
+      "Santa Barbara",
+      "San Diego",
+      "Monterey",
+      "Ventura"
+    ],
+    "answer": "Santa Barbara",
+    "difficulty": "easy"
+  },
+  {
+    "id": 2,
+    "question": "On which network did Psych originally air?",
+    "options": [
+      "USA Network",
+      "TNT",
+      "FX",
+      "Bravo"
+    ],
+    "answer": "USA Network",
+    "difficulty": "easy"
+  },
+  {
+    "id": 3,
+    "question": "In what year did Psych premiere?",
+    "options": [
+      "2006",
+      "2004",
+      "2008",
+      "2010"
+    ],
+    "answer": "2006",
+    "difficulty": "easy"
+  },
+  {
+    "id": 4,
+    "question": "How many seasons of Psych were produced?",
+    "options": [
+      "8",
+      "6",
+      "10",
+      "12"
+    ],
+    "answer": "8",
+    "difficulty": "easy"
+  },
+  {
+    "id": 5,
+    "question": "Who created Psych?",
+    "options": [
+      "Steve Franks",
+      "Bill Lawrence",
+      "David Shore",
+      "Kevin Falls"
+    ],
+    "answer": "Steve Franks",
+    "difficulty": "hard"
+  },
+  {
+    "id": 6,
+    "question": "Roughly how many episodes of Psych were made across its run?",
+    "options": [
+      "120",
+      "90",
+      "150",
+      "75"
+    ],
+    "answer": "120",
+    "difficulty": "hard"
+  },
+  {
+    "id": 7,
+    "question": "What is the name of Shawn and Gus's detective agency?",
+    "options": [
+      "Psych",
+      "The Third Eye",
+      "Spencer & Guster",
+      "Blackthorn Investigations"
+    ],
+    "answer": "Psych",
+    "difficulty": "easy"
+  },
+  {
+    "id": 8,
+    "question": "What is Gus's day job outside of the detective agency?",
+    "options": [
+      "Pharmaceutical salesman",
+      "Insurance adjuster",
+      "Accountant",
+      "Real estate agent"
+    ],
+    "answer": "Pharmaceutical salesman",
+    "difficulty": "easy"
+  },
+  {
+    "id": 9,
+    "question": "What is the nickname of Gus's blue company car?",
+    "options": [
+      "The Blueberry",
+      "The Bluebird",
+      "The Blue Bomber",
+      "The Bluebell"
+    ],
+    "answer": "The Blueberry",
+    "difficulty": "easy"
+  },
+  {
+    "id": 10,
+    "question": "What kind of memory lets Shawn recall tiny details from a scene?",
+    "options": [
+      "Eidetic memory",
+      "Synesthesia",
+      "Hyperthymesia",
+      "Echoic memory"
+    ],
+    "answer": "Eidetic memory",
+    "difficulty": "easy"
+  },
+  {
+    "id": 11,
+    "question": "What fruit is famously hidden somewhere in nearly every episode?",
+    "options": [
+      "Pineapple",
+      "Banana",
+      "Watermelon",
+      "Mango"
+    ],
+    "answer": "Pineapple",
+    "difficulty": "easy"
+  },
+  {
+    "id": 12,
+    "question": "What is Shawn's catchphrase when he's corrected on a word or fact?",
+    "options": [
+      "\"I've heard it both ways\"",
+      "\"That's how I heard it\"",
+      "\"Both ways work\"",
+      "\"You say tomato\""
+    ],
+    "answer": "\"I've heard it both ways\"",
+    "difficulty": "easy"
+  },
+  {
+    "id": 13,
+    "question": "Who is Shawn's father, a former Santa Barbara police officer?",
+    "options": [
+      "Henry",
+      "Frank",
+      "Walter",
+      "Harold"
+    ],
+    "answer": "Henry",
+    "difficulty": "easy"
+  },
+  {
+    "id": 14,
+    "question": "What is Detective Lassiter's rank at the SBPD for most of the series?",
+    "options": [
+      "Head Detective",
+      "Sergeant",
+      "Captain",
+      "Lieutenant"
+    ],
+    "answer": "Head Detective",
+    "difficulty": "easy"
+  },
+  {
+    "id": 15,
+    "question": "What does Shawn ride to get around Santa Barbara?",
+    "options": [
+      "A motorcycle",
+      "A convertible",
+      "A bicycle",
+      "A scooter"
+    ],
+    "answer": "A motorcycle",
+    "difficulty": "easy"
+  },
+  {
+    "id": 16,
+    "question": "Which band performs the Psych theme song?",
+    "options": [
+      "The Friendly Indians",
+      "The Little Ones",
+      "The Silver Seas",
+      "Broken Bells"
+    ],
+    "answer": "The Friendly Indians",
+    "difficulty": "hard"
+  },
+  {
+    "id": 17,
+    "question": "What is the title of the Psych theme song?",
+    "options": [
+      "\"I Know, You Know\"",
+      "\"You Know It's True\"",
+      "\"Both Ways\"",
+      "\"Psychic Friend\""
+    ],
+    "answer": "\"I Know, You Know\"",
+    "difficulty": "easy"
+  },
+  {
+    "id": 18,
+    "question": "What is the job of Woody, a recurring character at the SBPD?",
+    "options": [
+      "Coroner",
+      "Forensic analyst",
+      "Desk sergeant",
+      "Crime photographer"
+    ],
+    "answer": "Coroner",
+    "difficulty": "easy"
+  },
+  {
+    "id": 19,
+    "question": "What position does Karen Vick hold at the Santa Barbara Police Department?",
+    "options": [
+      "Chief",
+      "Mayor",
+      "District Attorney",
+      "Deputy Chief"
+    ],
+    "answer": "Chief",
+    "difficulty": "easy"
+  },
+  {
+    "id": 20,
+    "question": "What pair of aliases do the two related serial killers who taunt Shawn use?",
+    "options": [
+      "Yin and Yang",
+      "Alpha and Omega",
+      "Salt and Pepper",
+      "Cain and Abel"
+    ],
+    "answer": "Yin and Yang",
+    "difficulty": "easy"
+  },
+  {
+    "id": 21,
+    "question": "Which actor plays Shawn Spencer?",
+    "options": [
+      "James Roday",
+      "Dulé Hill",
+      "Timothy Omundson",
+      "Zachary Levi"
+    ],
+    "answer": "James Roday",
+    "difficulty": "easy"
+  },
+  {
+    "id": 22,
+    "question": "Which actor plays Burton \"Gus\" Guster?",
+    "options": [
+      "Dulé Hill",
+      "Donald Faison",
+      "Columbus Short",
+      "Rockmond Dunbar"
+    ],
+    "answer": "Dulé Hill",
+    "difficulty": "hard"
+  },
+  {
+    "id": 23,
+    "question": "Which actress plays Detective Juliet O'Hara?",
+    "options": [
+      "Maggie Lawson",
+      "Anne Dudek",
+      "Kristen Bell",
+      "Sarah Chalke"
+    ],
+    "answer": "Maggie Lawson",
+    "difficulty": "easy"
+  },
+  {
+    "id": 24,
+    "question": "What is Shawn's official job title with the police department?",
+    "options": [
+      "Consultant",
+      "Deputy",
+      "Detective",
+      "Informant"
+    ],
+    "answer": "Consultant",
+    "difficulty": "easy"
+  },
+  {
+    "id": 25,
+    "question": "What is the profession of Madeleine, Shawn's mother?",
+    "options": [
+      "Psychologist",
+      "Lawyer",
+      "Professor",
+      "Doctor"
+    ],
+    "answer": "Psychologist",
+    "difficulty": "easy"
+  },
+  {
+    "id": 26,
+    "question": "What is the name of Lassiter's wife, introduced later in the series?",
+    "options": [
+      "Marlowe",
+      "Selene",
+      "Rachael",
+      "Emmanuelle"
+    ],
+    "answer": "Marlowe",
+    "difficulty": "easy"
+  },
+  {
+    "id": 27,
+    "question": "After the Blueberry is wrecked, what does Gus dub the maroon rental car?",
+    "options": [
+      "The Cranberry",
+      "The Raspberry",
+      "The Blackberry",
+      "The Strawberry"
+    ],
+    "answer": "The Cranberry",
+    "difficulty": "easy"
+  },
+  {
+    "id": 28,
+    "question": "What is the name of Gus's college a cappella group?",
+    "options": [
+      "Blackapella",
+      "Harmony Five",
+      "The Tone Rangers",
+      "Soul Chord"
+    ],
+    "answer": "Blackapella",
+    "difficulty": "medium"
+  },
+  {
+    "id": 29,
+    "question": "Which of these is one of the aliases Shawn gives Gus?",
+    "options": [
+      "Lavender Gooms",
+      "Cinnamon Boggs",
+      "Hazelnut Combs",
+      "Clover Dinkins"
+    ],
+    "answer": "Lavender Gooms",
+    "difficulty": "medium"
+  },
+  {
+    "id": 30,
+    "question": "From which relative did Shawn inherit his eidetic memory?",
+    "options": [
+      "His mother",
+      "His father",
+      "His grandfather",
+      "His uncle"
+    ],
+    "answer": "His mother",
+    "difficulty": "medium"
+  },
+  {
+    "id": 31,
+    "question": "What kind of criminal is the recurring character Pierre Despereaux?",
+    "options": [
+      "Art thief",
+      "Jewel smuggler",
+      "Forger",
+      "Cat burglar"
+    ],
+    "answer": "Art thief",
+    "difficulty": "medium"
+  },
+  {
+    "id": 32,
+    "question": "What is the profession of Declan Rand, the wealthy rival who briefly dates Juliet?",
+    "options": [
+      "Criminal profiler",
+      "Private investigator",
+      "Police captain",
+      "Defense lawyer"
+    ],
+    "answer": "Criminal profiler",
+    "difficulty": "medium"
+  },
+  {
+    "id": 33,
+    "question": "What is the occupation of Juliet's estranged brother, Ewan?",
+    "options": [
+      "A soldier",
+      "A firefighter",
+      "A federal agent",
+      "A sailor"
+    ],
+    "answer": "A soldier",
+    "difficulty": "medium"
+  },
+  {
+    "id": 34,
+    "question": "What is the name of Shawn's schoolteacher ex-girlfriend?",
+    "options": [
+      "Abigail Lytar",
+      "Rachel Dellum",
+      "Emily Barnes",
+      "Abby Talbot"
+    ],
+    "answer": "Abigail Lytar",
+    "difficulty": "medium"
+  },
+  {
+    "id": 35,
+    "question": "What is the name of the interim chief who fires the Psych team in Season 8?",
+    "options": [
+      "Harris Trout",
+      "Gerald Pruitt",
+      "Martin Vale",
+      "Dennis Kohler"
+    ],
+    "answer": "Harris Trout",
+    "difficulty": "medium"
+  },
+  {
+    "id": 36,
+    "question": "What role does Buzz McNab rise to by the series finale?",
+    "options": [
+      "Junior detective",
+      "Precinct captain",
+      "FBI liaison",
+      "Desk sergeant"
+    ],
+    "answer": "Junior detective",
+    "difficulty": "medium"
+  },
+  {
+    "id": 37,
+    "question": "The Blueberry is a company car belonging to which of Gus's employers?",
+    "options": [
+      "Central Coast Pharmaceuticals",
+      "Pacific Pharma Group",
+      "Coastal Health Partners",
+      "Bay Meridian Pharma"
+    ],
+    "answer": "Central Coast Pharmaceuticals",
+    "difficulty": "medium"
+  },
+  {
+    "id": 38,
+    "question": "To which city is Chief Vick offered a job, prompting her to leave the SBPD?",
+    "options": [
+      "San Francisco",
+      "Los Angeles",
+      "Sacramento",
+      "San Jose"
+    ],
+    "answer": "San Francisco",
+    "difficulty": "medium"
+  },
+  {
+    "id": 39,
+    "question": "What is the profession of Abigail Lytar, Shawn's ex-girlfriend?",
+    "options": [
+      "Teacher",
+      "Nurse",
+      "Librarian",
+      "Journalist"
+    ],
+    "answer": "Teacher",
+    "difficulty": "medium"
+  },
+  {
+    "id": 40,
+    "question": "How many Psych television movies were released after the series ended?",
+    "options": [
+      "Three",
+      "One",
+      "Two",
+      "Five"
+    ],
+    "answer": "Three",
+    "difficulty": "medium"
+  },
+  {
+    "id": 41,
+    "question": "The Yin and Yang confrontations play out across the finales of which seasons?",
+    "options": [
+      "Seasons 3, 4, and 5",
+      "Seasons 1, 2, and 3",
+      "Seasons 4, 5, and 6",
+      "Seasons 2, 3, and 4"
+    ],
+    "answer": "Seasons 3, 4, and 5",
+    "difficulty": "medium"
+  },
+  {
+    "id": 42,
+    "question": "What word does Yin vandalize the \"Psych\" office window to read?",
+    "options": [
+      "Psycho",
+      "Psychic",
+      "Psychout",
+      "Psyche"
+    ],
+    "answer": "Psycho",
+    "difficulty": "medium"
+  },
+  {
+    "id": 43,
+    "question": "What is the title of the first Psych movie, released in 2017?",
+    "options": [
+      "Psych: The Movie",
+      "Psych Returns",
+      "Psych: Reunited",
+      "Psych Forever"
+    ],
+    "answer": "Psych: The Movie",
+    "difficulty": "hard"
+  },
+  {
+    "id": 44,
+    "question": "What is the title of the second Psych movie, released in 2020?",
+    "options": [
+      "Psych 2: Lassie Come Home",
+      "Psych 2: Back in Business",
+      "Psych 2: Santa Barbara",
+      "Psych 2: The Reckoning"
+    ],
+    "answer": "Psych 2: Lassie Come Home",
+    "difficulty": "hard"
+  },
+  {
+    "id": 45,
+    "question": "Which of these is an alias Shawn gives Gus that sounds like a food brand?",
+    "options": [
+      "Ghee Buttersnaps",
+      "Land O' Biscuits",
+      "Butter McFlan",
+      "Cocoa Clarrison"
+    ],
+    "answer": "Ghee Buttersnaps",
+    "difficulty": "medium"
+  },
+  {
+    "id": 46,
+    "question": "What make and model is Gus's car, the Blueberry?",
+    "options": [
+      "Toyota Echo",
+      "Honda Fit",
+      "Nissan Versa",
+      "Ford Focus"
+    ],
+    "answer": "Toyota Echo",
+    "difficulty": "hard"
+  },
+  {
+    "id": 47,
+    "question": "What is the name of the harsh British judge Shawn is hired to protect on a singing competition?",
+    "options": [
+      "Nigel St. Nigel",
+      "Reginald Crewe",
+      "Nigel Ashford",
+      "Sir Miles Thorne"
+    ],
+    "answer": "Nigel St. Nigel",
+    "difficulty": "hard"
+  },
+  {
+    "id": 48,
+    "question": "What is the name of the singing-competition show Shawn and Gus go undercover on?",
+    "options": [
+      "American Duos",
+      "Star Ballad",
+      "Sing City",
+      "Duet Nation"
+    ],
+    "answer": "American Duos",
+    "difficulty": "hard"
+  },
+  {
+    "id": 49,
+    "question": "What undercover stage name does Shawn adopt in the music competition?",
+    "options": [
+      "Shawn Spenstar",
+      "Shawn Sizzle",
+      "Shawn Starr",
+      "Shawn Spinner"
+    ],
+    "answer": "Shawn Spenstar",
+    "difficulty": "hard"
+  },
+  {
+    "id": 50,
+    "question": "Where does Marlowe give birth to Lassiter's child?",
+    "options": [
+      "In the back of a food truck",
+      "In a police cruiser",
+      "At the SBPD station",
+      "In an elevator"
+    ],
+    "answer": "In the back of a food truck",
+    "difficulty": "hard"
+  },
+  {
+    "id": 51,
+    "question": "Before marrying Lassiter, Marlowe is jailed for helping her brother traffic what?",
+    "options": [
+      "Rare blood",
+      "Stolen art",
+      "Counterfeit cash",
+      "Smuggled diamonds"
+    ],
+    "answer": "Rare blood",
+    "difficulty": "hard"
+  },
+  {
+    "id": 52,
+    "question": "What is the name of Chief Vick's daughter?",
+    "options": [
+      "Iris",
+      "Lily",
+      "Grace",
+      "Ruby"
+    ],
+    "answer": "Iris",
+    "difficulty": "hard"
+  },
+  {
+    "id": 53,
+    "question": "Which former police friend, revealed to be corrupt, shoots Henry at point-blank range?",
+    "options": [
+      "Jerry Carp",
+      "Lou Gamble",
+      "Frank Dilby",
+      "Marty Kessler"
+    ],
+    "answer": "Jerry Carp",
+    "difficulty": "hard"
+  },
+  {
+    "id": 54,
+    "question": "In Psych: The Movie, to which city have Shawn, Gus, and Juliet relocated?",
+    "options": [
+      "San Francisco",
+      "Seattle",
+      "Sacramento",
+      "San Jose"
+    ],
+    "answer": "San Francisco",
+    "difficulty": "hard"
+  },
+  {
+    "id": 55,
+    "question": "Along with the pineapple, which word is slipped into nearly every episode?",
+    "options": [
+      "\"Delicious\"",
+      "\"Absolutely\"",
+      "\"Fantastic\"",
+      "\"Naturally\""
+    ],
+    "answer": "\"Delicious\"",
+    "difficulty": "hard"
+  },
+  {
+    "id": 56,
+    "question": "In the alias \"Gus T.T. Showbiz,\" what does the extra T stand for?",
+    "options": [
+      "Talent",
+      "Terrific",
+      "Trouble",
+      "Tenacity"
+    ],
+    "answer": "Talent",
+    "difficulty": "hard"
+  },
+  {
+    "id": 57,
+    "question": "Roughly how many times does Marlowe appear across the series?",
+    "options": [
+      "Six",
+      "Two",
+      "Ten",
+      "Fourteen"
+    ],
+    "answer": "Six",
+    "difficulty": "hard"
+  },
+  {
+    "id": 58,
+    "question": "In which season does the Blueberry first pick up its nickname?",
+    "options": [
+      "Season 2",
+      "Season 1",
+      "Season 3",
+      "Season 4"
+    ],
+    "answer": "Season 2",
+    "difficulty": "hard"
+  },
+  {
+    "id": 59,
+    "question": "Chief Vick's sister, who appears in one episode, serves in which branch?",
+    "options": [
+      "The Coast Guard",
+      "The Navy",
+      "The Air Force",
+      "The Marines"
+    ],
+    "answer": "The Coast Guard",
+    "difficulty": "hard"
+  },
+  {
+    "id": 60,
+    "question": "In which season's finale does the Yin and Yang saga finally conclude?",
+    "options": [
+      "Season 5",
+      "Season 6",
+      "Season 4",
+      "Season 7"
+    ],
+    "answer": "Season 5",
+    "difficulty": "hard"
+  },
+  {
+    "id": 61,
+    "question": "In one Season 2 episode, the theme song is performed in which language?",
+    "options": [
+      "Spanish",
+      "French",
+      "Italian",
+      "German"
+    ],
+    "answer": "Spanish",
+    "difficulty": "hard"
+  },
+  {
+    "id": 62,
+    "question": "Which of these is an alias Shawn gives Gus based on a computer command?",
+    "options": [
+      "Control Alt Delete",
+      "Caps Lock Jones",
+      "Escape Kelly",
+      "Function Fillmore"
+    ],
+    "answer": "Control Alt Delete",
+    "difficulty": "hard"
+  },
+  {
+    "id": 63,
+    "question": "How old did Shawn's father say he was when he started to have psychic visions?",
+    "options": [
+      "18",
+      "16",
+      "21",
+      "25"
+    ],
+    "answer": "18",
+    "difficulty": "hard"
+  },
+  {
+    "id": 64,
+    "question": "What is Carlton Lassiter's middle name?",
+    "options": [
+      "Jebediah",
+      "Nathaniel",
+      "Ezekiel",
+      "Cornelius"
+    ],
+    "answer": "Jebediah",
+    "difficulty": "hard"
+  },
+  {
+    "id": 65,
+    "question": "What song do Shawn and Gus sing for their audition in the undercover music show?",
+    "options": [
+      "Take on Me",
+      "Total Eclipse of the Heart",
+      "Don't Stop Believin'",
+      "Africa"
+    ],
+    "answer": "Take on Me",
+    "difficulty": "hard"
+  },
+  {
+    "id": 66,
+    "question": "In which season does Shawn's mother appear on screen?",
+    "options": [
+      "7",
+      "3",
+      "5",
+      "2"
+    ],
+    "answer": "3",
+    "difficulty": "medium"
+  },
+  {
+    "id": 67,
+    "question": "What year school reunion did Shawn and Gus attend?",
+    "options": [
+      "13th",
+      "10th",
+      "20th",
+      "15th"
+    ],
+    "answer": "13th",
+    "difficulty": "hard"
+  },
+  {
+    "id": 68,
+    "question": "Who guest stars as Ewan, the older brother of Juliet?",
+    "options": [
+      "John Cena",
+      "Dwayne Johnson",
+      "Randy Orton",
+      "Dave Bautista"
+    ],
+    "answer": "John Cena",
+    "difficulty": "medium"
+  },
+  {
+    "id": 69,
+    "question": "For what festival do Shawn and Gus travel to a remote mountain town in season 5?",
+    "options": [
+      "Cinnamon Festival",
+      "Blueberry Festival",
+      "Winter Frost Festival",
+      "Founders Day Festival"
+    ],
+    "answer": "Cinnamon Festival",
+    "difficulty": "medium"
+  },
+  {
+    "id": 70,
+    "question": "What's the name of the town Shawn and Gus travel to in season five after an email invite?",
+    "options": [
+      "Dual Spires",
+      "Twin Peaks",
+      "Silver Creek",
+      "Maple Falls"
+    ],
+    "answer": "Dual Spires",
+    "difficulty": "hard"
+  },
+  {
+    "id": 71,
+    "question": "Who was Shawn's first girlfriend in the series?",
+    "options": [
+      "Abigail",
+      "Juliet",
+      "Despereaux",
+      "Yang"
+    ],
+    "answer": "Abigail",
+    "difficulty": "medium"
+  },
+  {
+    "id": 72,
+    "question": "What ethnicity was the speed bump that broke the Blueberry in half?",
+    "options": [
+      "German",
+      "French",
+      "Italian",
+      "Dutch"
+    ],
+    "answer": "German",
+    "difficulty": "medium"
+  },
+  {
+    "id": 73,
+    "question": "In the fashion-themed episode, what was the professional name of Shawn and Gus's modeling duo?",
+    "options": [
+      "Black and Tan",
+      "Salt and Pepper",
+      "Sugar and Spice",
+      "Milk and Honey"
+    ],
+    "answer": "Black and Tan",
+    "difficulty": "medium"
+  },
+  {
+    "id": 74,
+    "question": "Shawn knocks on a man's door pretending to be what literary character?",
+    "options": [
+      "Willy Loman",
+      "Atticus Finch",
+      "Jay Gatsby",
+      "Holden Caulfield"
+    ],
+    "answer": "Willy Loman",
+    "difficulty": "hard"
+  },
+  {
+    "id": 75,
+    "question": "What did Lassiter's ex-wife collect?",
+    "options": [
+      "Porcelain figures",
+      "Antique clocks",
+      "Vintage stamps",
+      "Ceramic dolls"
+    ],
+    "answer": "Porcelain figures",
+    "difficulty": "hard"
+  },
+  {
+    "id": 76,
+    "question": "What did Gus drink that caused him to get married in Mexico?",
+    "options": [
+      "Goldschlager",
+      "Tequila Rose",
+      "Jose Cuervo",
+      "Mezcal Rojo"
+    ],
+    "answer": "Goldschlager",
+    "difficulty": "medium"
+  },
+  {
+    "id": 77,
+    "question": "Who does Gus marry during a drunken spring break trip?",
+    "options": [
+      "Mira",
+      "Rosa",
+      "Lucinda",
+      "Marisol"
+    ],
+    "answer": "Mira",
+    "difficulty": "medium"
+  },
+  {
+    "id": 78,
+    "question": "What's the name of the snitch that worked for Shawn's dad?",
+    "options": [
+      "Pooky Wigginton",
+      "Skeeter Malone",
+      "Buzzy Colton",
+      "Doodle Finch"
+    ],
+    "answer": "Pooky Wigginton",
+    "difficulty": "medium"
+  },
+  {
+    "id": 79,
+    "question": "According to Shawn and Gus, what smells like ginger blossoms and is only available 'down under'?",
+    "options": [
+      "Kangaroo paste",
+      "Koala balm",
+      "Wallaby wax",
+      "Outback musk"
+    ],
+    "answer": "Kangaroo paste",
+    "difficulty": "medium"
+  },
+  {
+    "id": 80,
+    "question": "What drink did Shawn find 'disgusting' in Season 2?",
+    "options": [
+      "Spanish sherry",
+      "French cognac",
+      "Irish whiskey",
+      "Italian vermouth"
+    ],
+    "answer": "Spanish sherry",
+    "difficulty": "hard"
+  },
+  {
+    "id": 81,
+    "question": "What is the name of the food truck that Shawn and Gus frequently visit?",
+    "options": [
+      "Macho Taco",
+      "El Loco Burrito",
+      "Amigo's Grill",
+      "Taco Fiesta"
+    ],
+    "answer": "Macho Taco",
+    "difficulty": "hard"
+  }
+]

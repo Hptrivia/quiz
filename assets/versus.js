@@ -4,10 +4,47 @@ const VS_DIFF_ORDER = ['easy', 'medium', 'hard', 'expert'];
 const VS_DIFF_POINTS = { easy: 1, medium: 2, hard: 3, expert: 4 };
 const VS_PLAYER_COLORS = ['#38bdf8', '#f59e0b', '#34d399', '#f472b6']; // sky, amber, green, pink
 
+// Bot skill presets: chance the computer answers correctly, by question difficulty.
+const VS_BOT_PRESETS = {
+  easy:   { easy: 0.55, medium: 0.40, hard: 0.25, expert: 0.15 },
+  medium: { easy: 0.80, medium: 0.60, hard: 0.40, expert: 0.25 },
+  hard:   { easy: 0.95, medium: 0.85, hard: 0.70, expert: 0.55 },
+};
+const VS_BOT_STEAL_FACTOR = 0.5; // stealing is a blind guess, harder than the first attempt
+
 let vsState = null;
 let vsRevealAnswers = false;
 let vsSessionUsedIds = new Set(); // persists across games within a tab session
 let vsLastPlayerNames = [];       // remember names for Play Again
+let vsLastAiMode = false;         // remember vs-AI setup for Play Again
+let vsLastBotLevel = 'medium';
+
+function vsBotAccuracy(player, diff, isSteal) {
+  const preset = VS_BOT_PRESETS[player.botLevel] || VS_BOT_PRESETS.medium;
+  const base = preset[diff] ?? 0.5;
+  return isSteal ? base * VS_BOT_STEAL_FACTOR : base;
+}
+
+// Simulates the computer's turn: waits a beat, picks an option weighted by
+// skill, then submits through the exact same path a human click would.
+function vsRunBotTurn(botPlayer, question, optionsEl, submitBtn, isSteal, feedbackEl) {
+  if (feedbackEl) {
+    feedbackEl.textContent = isSteal ? '🤖 Computer is trying to steal…' : '🤖 Computer is thinking…';
+    feedbackEl.className = 'vs-feedback-box vs-bot-thinking';
+    feedbackEl.style.display = '';
+  }
+  const delay = 2200 + Math.random() * 2000; // 2.2–4.2s, so it reads like the bot is actually thinking
+  setTimeout(() => {
+    const accuracy   = vsBotAccuracy(botPlayer, question._diff, isSteal);
+    const candidates = [...optionsEl.querySelectorAll('.option-btn:not(:disabled)')];
+    const correctBtn = candidates.find(b => b.textContent === question.answer);
+    const wrongBtns  = candidates.filter(b => b.textContent !== question.answer);
+    const willBeCorrect = Math.random() < accuracy && correctBtn;
+    const chosen = willBeCorrect ? correctBtn : (wrongBtns[Math.floor(Math.random() * wrongBtns.length)] || correctBtn);
+    if (chosen) chosen.classList.add('selected');
+    if (typeof submitBtn.onclick === 'function') submitBtn.onclick();
+  }, delay);
+}
 
 function vsShow(screenId) {
   document.querySelectorAll('.vs-screen').forEach(el => el.classList.remove('active'));
@@ -222,6 +259,16 @@ function vsShowQuestion(player, diff, round, numQuestions) {
 
     submitBtn.textContent = 'Steal';
     submitBtn.style.display = '';
+
+    if (stealPlayer.isBot) {
+      submitBtn.style.display = 'none';
+      vsRunBotTurn(stealPlayer, q, optionsEl, submitBtn, true, feedbackEl);
+    }
+  }
+
+  if (player.isBot) {
+    submitBtn.style.display = 'none';
+    vsRunBotTurn(player, q, optionsEl, submitBtn, false, feedbackEl);
   }
 
   vsShow('vsQuestion');
@@ -449,6 +496,11 @@ function vsNextTiebreakerTurn() {
     };
   };
 
+  if (player.isBot) {
+    submitBtn.style.display = 'none';
+    vsRunBotTurn(player, q, optionsEl, submitBtn, false, feedbackEl);
+  }
+
   vsShow('vsTiebreaker');
 }
 
@@ -553,15 +605,34 @@ async function vsInit() {
 
   let playerCount = 2;
   let bestOf = 5;
+  let aiMode = false;
+  let botLevel = 'medium';
 
   const playerSeg = document.getElementById('vsPlayerCountSeg');
+  const botDiffGroup = document.getElementById('vsBotDiffGroup');
+  const botDiffSeg = document.getElementById('vsBotDiffSeg');
+
   playerSeg.querySelectorAll('button').forEach(btn => {
-    if (parseInt(btn.dataset.val) === playerCount) btn.classList.add('selected');
+    const isAiBtn = btn.dataset.val === 'ai';
+    if ((isAiBtn && aiMode) || (!isAiBtn && !aiMode && parseInt(btn.dataset.val) === playerCount)) {
+      btn.classList.add('selected');
+    }
     btn.addEventListener('click', () => {
-      playerCount = parseInt(btn.dataset.val);
+      aiMode = isAiBtn;
+      playerCount = isAiBtn ? 2 : parseInt(btn.dataset.val);
       playerSeg.querySelectorAll('button').forEach(b => b.classList.remove('selected'));
       btn.classList.add('selected');
+      botDiffGroup.style.display = aiMode ? '' : 'none';
       renderNameInputs(playerCount);
+    });
+  });
+
+  botDiffSeg.querySelectorAll('button').forEach(btn => {
+    if (btn.dataset.val === botLevel) btn.classList.add('selected');
+    btn.addEventListener('click', () => {
+      botLevel = btn.dataset.val;
+      botDiffSeg.querySelectorAll('button').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
     });
   });
 
@@ -570,7 +641,8 @@ async function vsInit() {
     const existing = wrap.querySelectorAll('input');
     const vals = [...existing].map(i => i.value);
     wrap.innerHTML = '';
-    for (let i = 0; i < count; i++) {
+    const inputCount = aiMode ? 1 : count; // in AI mode, only the human needs a name field
+    for (let i = 0; i < inputCount; i++) {
       const inp = document.createElement('input');
       inp.type = 'text';
       inp.placeholder = `Player ${i + 1}`;
@@ -602,7 +674,8 @@ async function vsInit() {
   document.getElementById('vsStartBtn').addEventListener('click', async () => {
     const errorEl = document.getElementById('vsSetupError');
     const nameInputs = document.querySelectorAll('#vsNameInputs input');
-    const names = [...nameInputs].map(i => i.value.trim() || i.placeholder);
+    const humanNames = [...nameInputs].map(i => i.value.trim() || i.placeholder);
+    const names = aiMode ? [...humanNames, 'Computer'] : humanNames;
     const unique = new Set(names.map(n => n.toLowerCase()));
     if (unique.size < names.length) {
       errorEl.textContent = 'Player names must be unique.';
@@ -655,17 +728,33 @@ async function vsInit() {
     const themeName = resolvedThemes.map(t => t.title).join(' + ');
     const isMashup = resolvedThemes.length > 1;
     vsLastPlayerNames = names;
-    const players = names.map((name, i) => ({ name, score: 0, color: VS_PLAYER_COLORS[i % VS_PLAYER_COLORS.length] }));
+    vsLastAiMode = aiMode;
+    vsLastBotLevel = botLevel;
+    const players = names.map((name, i) => {
+      const isBot = aiMode && i === names.length - 1;
+      return {
+        name,
+        score: 0,
+        color: VS_PLAYER_COLORS[i % VS_PLAYER_COLORS.length],
+        isBot,
+        botLevel: isBot ? botLevel : undefined,
+      };
+    });
     vsStartGame(players, bestOf, pools, themeSlug, themeName, isMashup, themeQueues);
   });
 
   document.getElementById('vsPlayAgainBtn').addEventListener('click', () => {
     function vsGoSetup() {
       if (vsLastPlayerNames.length > 0) {
-        playerCount = vsLastPlayerNames.length;
+        aiMode = vsLastAiMode;
+        botLevel = vsLastBotLevel;
+        playerCount = aiMode ? 2 : vsLastPlayerNames.length;
         playerSeg.querySelectorAll('button').forEach(btn => {
-          btn.classList.toggle('selected', parseInt(btn.dataset.val) === playerCount);
+          const isAiBtn = btn.dataset.val === 'ai';
+          btn.classList.toggle('selected', isAiBtn ? aiMode : (!aiMode && parseInt(btn.dataset.val) === playerCount));
         });
+        botDiffGroup.style.display = aiMode ? '' : 'none';
+        botDiffSeg.querySelectorAll('button').forEach(b => b.classList.toggle('selected', b.dataset.val === botLevel));
         renderNameInputs(playerCount);
       }
       vsShow('vsSetup');

@@ -19,9 +19,13 @@ const DAILY_THEMES = [
   { name: "TV Series",       slug: "tv",          file: "data/tv.txt"          },
   { name: "Video Games",     slug: "games",       file: "data/games.txt"       },
   { name: "True Crime",      slug: "crime",       file: "data/crime.txt"       },
+  { name: "1980s",           slug: "1980s",       file: "data/1980s.txt"       },
+  { name: "1990s",           slug: "1990s",       file: "data/1990s.txt"       },
+  { name: "2000s",           slug: "2000s",       file: "data/2000s.txt"       },
+  { name: "2010s",           slug: "2010s",       file: "data/2010s.txt"       },
 ];
 
-const DC_NO_EXPERT = new Set(["sport", "tv", "food", "games"]);
+const DC_NO_EXPERT = new Set(["sport", "tv", "food", "games", "1980s", "1990s", "2000s", "2010s"]);
 
 /* ── PRNG ── */
 function dcRng(seed) {
@@ -70,10 +74,9 @@ async function getDailyQuestions() {
   const cached = localStorage.getItem(`dcQuestions_${dateKey}`);
   if (cached) return JSON.parse(cached);
 
-  const cycle = parseInt(localStorage.getItem("dcCycle") || "0", 10);
-  const rng   = dcRng(dcHash(`${dateKey}_c${cycle}`));
+  const rng = dcRng(dcHash(dateKey));
 
-  // Pick 10 themes from 18, seeded by date+cycle
+  // Pick 10 themes from 18, seeded by date
   const shuffledThemes = dcShuffle(DAILY_THEMES, rng);
   const todayThemes    = shuffledThemes.slice(0, 10);
 
@@ -103,10 +106,9 @@ async function getDailyQuestions() {
       continue;
     }
 
-    // Load used IDs for this theme+difficulty
+    // Load used IDs for this theme+difficulty — each bucket tracks its own history only
     const usedKey  = `dcUsed_${theme.slug}_${difficulty}`;
-    let usedData   = JSON.parse(localStorage.getItem(usedKey) || '{"ids":[],"cycle":0}');
-    if (usedData.cycle !== cycle) usedData = { ids: [], cycle };
+    let usedData   = JSON.parse(localStorage.getItem(usedKey) || '{"ids":[]}');
 
     const usedSet  = new Set(usedData.ids.map(String));
     let bucket     = allQs.filter(q => q.difficulty === difficulty);
@@ -122,15 +124,13 @@ async function getDailyQuestions() {
       }
     }
 
-    // If still empty, all questions exhausted — reset and bump cycle
+    // If still empty, this bucket alone has been fully seen — reset just this bucket
     if (!available.length) {
-      const newCycle = cycle + 1;
-      localStorage.setItem("dcCycle", newCycle);
-      usedData = { ids: [], cycle: newCycle };
+      usedData = { ids: [] };
       available = bucket.length ? bucket : allQs;
     }
 
-    const qRng   = dcRng(dcHash(`${dateKey}_${theme.slug}_${difficulty}_c${cycle}`));
+    const qRng   = dcRng(dcHash(`${dateKey}_${theme.slug}_${difficulty}`));
     const picked = dcShuffle(available, qRng)[0];
     if (!picked) continue;
 
@@ -148,7 +148,7 @@ async function getDailyQuestions() {
     });
   }
 
-  const finalRng = dcRng(dcHash(`${dateKey}_final_c${cycle}`));
+  const finalRng = dcRng(dcHash(`${dateKey}_final`));
   const finalQs  = dcShuffle(questions, finalRng);
 
   localStorage.setItem(`dcQuestions_${dateKey}`, JSON.stringify(finalQs));
