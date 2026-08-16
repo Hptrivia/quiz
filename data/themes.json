@@ -2651,5 +2651,126 @@
     "seoIntro": "The X-Files trivia works because the series mixes a sprawling conspiracy mythology with standalone case episodes, giving fans both a deep continuity to track and a wide range of individual stories to remember.",
     "seoDetail": "A strong X-Files quiz can include Fox Mulder, Dana Scully, the FBI's X-Files division, the Smoking Man, Walter Skinner, the alien colonization mythology, and standout monster-of-the-week episodes. The theme works because it rewards fans who followed the overarching conspiracy as closely as those who remember the show's stand-alone scares.",
     "fanQuestions": true
+  },
+  {
+    "slug": "abbott-elementary",
+    "title": "Abbott Elementary",
+    "category": "Sitcoms",
+    "description": "A mockumentary sitcom trivia theme built around Abbott Elementary, following Janine Teagues, Gregory Eddie, Ava Coleman and the underfunded Philadelphia public school where they work.",
+    "image": "",
+    "questionFile": "data/abbott.txt",
+    "seoIntro": "Abbott Elementary trivia works because the mockumentary format gives every character sharp, quotable moments, and the show's Philadelphia public-school setting grounds its jokes in specific, memorable running storylines.",
+    "seoDetail": "A strong Abbott Elementary quiz can include Janine Teagues, Gregory Eddie, Ava Coleman, Mr. Johnson, Melissa Schemmenti, Barbara Howard and Jacob Hill, the fictional Willard R. Abbott Elementary School, and the district politics and classroom chaos the show mines for comedy. The theme stays engaging because it spans the show's tight ensemble dynamics and its season-by-season storylines.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "stephen-king",
+    "title": "Stephen King",
+    "category": "Books",
+    "description": "A horror trivia theme built around Stephen King's most iconic novels and adaptations, spanning The Shining, It, Misery, Cujo, Christine, Carrie, The Green Mile, The Stand and The Dark Tower.",
+    "image": "",
+    "questionFile": "data/king.txt",
+    "seoIntro": "Stephen King trivia works because his novels share a recurring universe of Maine towns and recurring lore while each book offers its own distinct cast, villain and setting, giving fans a huge range of specific details to be tested on.",
+    "seoDetail": "A strong Stephen King quiz can include Jack Torrance and the Overlook Hotel, Pennywise and the Losers' Club of Derry, Annie Wilkes and Paul Sheldon, Cujo and the Camber family, Christine and Arnie Cunningham, Carrie White, John Coffey and the Green Mile, Mother Abagail and the superflu of The Stand, and Roland Deschain's quest in The Dark Tower. The theme works because it rewards deep familiarity with King's recurring towns, characters and cross-referenced lore.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "once-upon-a-time",
+    "title": "Once Upon a Time",
+    "category": "TV",
+    "description": "A fairy-tale trivia theme built around Once Upon a Time, following Emma Swan, Regina Mills and Storybrooke's cursed fairy-tale characters as they navigate life between the Enchanted Forest and the real world.",
+    "image": "",
+    "questionFile": "data/once.txt",
+    "seoIntro": "Once Upon a Time trivia works because it reimagines familiar fairy-tale characters with new identities and alliances, giving fans plenty of ground to cover between the Enchanted Forest backstories and the Storybrooke present.",
+    "seoDetail": "A strong Once Upon a Time quiz can include Emma Swan, Henry Mills, Regina Mills as the Evil Queen, Snow White and Prince Charming as Mary Margaret and David, Rumplestiltskin as Mr. Gold, Captain Hook, Storybrooke and the Enchanted Forest, and artifacts like Excalibur and Pandora's Box. The theme stays engaging because every character carries two identities and a web of crossed fairy-tale storylines to track.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "outer-banks",
+    "title": "Outer Banks",
+    "category": "TV",
+    "description": "A treasure-hunting trivia theme built around Outer Banks, following John B, Sarah, JJ, Pope and Kiara as the working-class Pogues chase buried gold against the wealthy Kooks.",
+    "image": "",
+    "questionFile": "data/outer.txt",
+    "seoIntro": "Outer Banks trivia works because each season centers on its own treasure hunt with new legends, locations and betrayals, giving fans a fresh set of specific clues and set pieces to be quizzed on every year.",
+    "seoDetail": "A strong Outer Banks quiz can include John B Routledge, Sarah Cameron, JJ, Pope Heyward, Kiara, Rafe Cameron and Ward Cameron, the Pogues-versus-Kooks class divide, the Twinkie van, and the hunt for the Royal Merchant's gold. The theme stays engaging because it spans multiple treasure hunts across different countries and legends.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "psych",
+    "title": "Psych",
+    "category": "TV",
+    "description": "A comedic detective trivia theme built around Psych, following Shawn Spencer as he fakes psychic powers to help the Santa Barbara Police solve cases alongside his best friend Gus.",
+    "image": "",
+    "questionFile": "data/psych.txt",
+    "seoIntro": "Psych trivia works because the show pairs case-of-the-week mysteries with constant pop-culture riffing and running gags, giving fans both plot details and a deep well of in-jokes to be tested on.",
+    "seoDetail": "A strong Psych quiz can include Shawn Spencer, Burton 'Gus' Guster, Carlton Lassiter, Juliet O'Hara, Henry Spencer, the Santa Barbara Police Department, the Blueberry car, and the pineapple hidden in nearly every episode. The theme stays engaging because it rewards fans who track both the mysteries and the show's constant running jokes.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "the-blacklist",
+    "title": "The Blacklist",
+    "category": "TV",
+    "description": "A crime thriller trivia theme built around The Blacklist, following criminal mastermind Raymond 'Red' Reddington as he partners with FBI profiler Elizabeth Keen to hunt down the world's most wanted fugitives.",
+    "image": "",
+    "questionFile": "data/blacklist.txt",
+    "seoIntro": "The Blacklist trivia works because each season introduces new blacklisters with their own criminal specialties, while a long-running mystery around Reddington's true identity keeps fans tracking clues across the whole series.",
+    "seoDetail": "A strong Blacklist quiz can include Raymond Reddington, Elizabeth Keen, Donald Ressler, Dembe Zuma, Aram Mojtabai, Harold Cooper, Tom Keen, the FBI task force run out of the Post Office, and the show's parade of named blacklisters. The theme works because it rewards fans who followed both the case-of-the-week format and the central mystery of who Reddington really is.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "the-good-doctor",
+    "title": "The Good Doctor",
+    "category": "TV",
+    "description": "A medical drama trivia theme built around The Good Doctor, following Dr. Shaun Murphy, a surgical resident with autism and savant syndrome, as he navigates life and surgery at San Jose's St. Bonaventure Hospital.",
+    "image": "",
+    "questionFile": "data/doctor.txt",
+    "seoIntro": "The Good Doctor trivia works because it combines detailed medical-case storylines with a close-knit hospital cast, giving fans plenty of specific procedures, relationships and season arcs to be quizzed on.",
+    "seoDetail": "A strong Good Doctor quiz can include Shaun Murphy, Aaron Glassman, Lea Dilallo, Neil Melendez, Claire Browne and Alex Park, St. Bonaventure Hospital, Shaun's savant syndrome, and the show's roots as a remake of a South Korean drama. The theme stays engaging because it spans both Shaun's personal growth and the hospital's changing cast and leadership.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "the-handmaids-tale",
+    "title": "The Handmaid's Tale",
+    "category": "TV",
+    "description": "A dystopian trivia theme built around The Handmaid's Tale, following June Osborne as a Handmaid forced into reproductive servitude under the totalitarian regime of Gilead.",
+    "image": "",
+    "questionFile": "data/handmaid.txt",
+    "seoIntro": "The Handmaid's Tale trivia works because Gilead's society runs on a dense set of invented ranks, rituals and terminology, giving fans a rich, specific vocabulary to be tested on alongside the show's central characters and plot.",
+    "seoDetail": "A strong Handmaid's Tale quiz can include June Osborne, Serena Joy Waterford, Commander Fred Waterford, Nick Blaine, Aunt Lydia and Moira, along with Gilead terms like the Colonies, Econowives, Particicution, Salvaging and the Mayday resistance network. The theme works because it rewards fans who track both the characters' fates and the show's dense invented world.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "the-last-kingdom",
+    "title": "The Last Kingdom",
+    "category": "TV",
+    "description": "A historical drama trivia theme built around The Last Kingdom, following Uhtred of Bebbanburg, a Saxon-born warrior raised by Danes, as he fights through the wars that forge a unified England.",
+    "image": "",
+    "questionFile": "data/lastking.txt",
+    "seoIntro": "The Last Kingdom trivia works because it blends real Anglo-Saxon history with a sprawling cast of Saxon and Dane characters, giving fans plenty of battles, alliances and betrayals to be quizzed on.",
+    "seoDetail": "A strong Last Kingdom quiz can include Uhtred of Bebbanburg, King Alfred the Great, Brida, Ragnar, Aethelflaed and Father Beocca, Uhtred's sword Serpent-Breath, his lost fortress of Bebbanburg, and the ongoing conflict between the Saxons and the Danes. The theme stays engaging because it spans the show's source novels through to the concluding film, Seven Kings Must Die.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "sitcoms",
+    "title": "Sitcoms",
+    "category": "General",
+    "description": "A broad trivia theme covering classic and modern sitcoms, spanning shows like Friends, The Office, Parks and Recreation, It's Always Sunny in Philadelphia, 30 Rock, Community, Scrubs, How I Met Your Mother and The Simpsons.",
+    "image": "",
+    "questionFile": "data/sitcoms.txt",
+    "seoIntro": "Sitcoms trivia works because decades of half-hour comedies have produced widely recognisable characters, catchphrases and running gags, giving players entry points across generations and networks.",
+    "seoDetail": "A strong Sitcoms quiz can include characters and moments from Friends, The Office, Parks and Recreation, It's Always Sunny in Philadelphia, 30 Rock, Community, Scrubs, How I Met Your Mother, That '70s Show and The Simpsons, along with the actors, catchphrases and iconic bits each show is known for. The theme works because it lets questions move freely between eras and formats while staying anchored in shows most players have seen.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "vikings",
+    "title": "Vikings",
+    "category": "TV",
+    "description": "A historical drama trivia theme built around Vikings, following Ragnar Lothbrok and his sons as they raid England and rule from the Norse settlement of Kattegat.",
+    "image": "",
+    "questionFile": "data/vikings.txt",
+    "seoIntro": "Vikings trivia works because it follows one family across generations, giving fans both Ragnar's rise and his sons' separate storylines to track alongside real Norse history and legend.",
+    "seoDetail": "A strong Vikings quiz can include Ragnar Lothbrok, Lagertha, Bjorn Ironside, Ivar the Boneless, Floki and Aslaug, the settlement of Kattegat, the raid on Lindisfarne, and the show's blend of historical fact and Norse legend. The theme stays engaging because it spans multiple generations of the same family across the full run of the series.",
+    "fanQuestions": true
   }
 ]

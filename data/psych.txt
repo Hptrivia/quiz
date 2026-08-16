@@ -1,89 +1,5 @@
 [
   {
-    "id": 1,
-    "question": "In what California city is Psych set?",
-    "options": [
-      "Santa Barbara",
-      "San Diego",
-      "Monterey",
-      "Ventura"
-    ],
-    "answer": "Santa Barbara",
-    "difficulty": "easy"
-  },
-  {
-    "id": 2,
-    "question": "On which network did Psych originally air?",
-    "options": [
-      "USA Network",
-      "TNT",
-      "FX",
-      "Bravo"
-    ],
-    "answer": "USA Network",
-    "difficulty": "easy"
-  },
-  {
-    "id": 3,
-    "question": "In what year did Psych premiere?",
-    "options": [
-      "2006",
-      "2004",
-      "2008",
-      "2010"
-    ],
-    "answer": "2006",
-    "difficulty": "easy"
-  },
-  {
-    "id": 4,
-    "question": "How many seasons of Psych were produced?",
-    "options": [
-      "8",
-      "6",
-      "10",
-      "12"
-    ],
-    "answer": "8",
-    "difficulty": "easy"
-  },
-  {
-    "id": 5,
-    "question": "Who created Psych?",
-    "options": [
-      "Steve Franks",
-      "Bill Lawrence",
-      "David Shore",
-      "Kevin Falls"
-    ],
-    "answer": "Steve Franks",
-    "difficulty": "hard"
-  },
-  {
-    "id": 6,
-    "question": "Roughly how many episodes of Psych were made across its run?",
-    "options": [
-      "120",
-      "90",
-      "150",
-      "75"
-    ],
-    "answer": "120",
-    "difficulty": "hard"
-  },
-  {
-    "id": 7,
-    "question": "What is the name of Shawn and Gus's detective agency?",
-    "options": [
-      "Psych",
-      "The Third Eye",
-      "Spencer & Guster",
-      "Blackthorn Investigations"
-    ],
-    "answer": "Psych",
-    "difficulty": "easy"
-  },
-  {
     "id": 8,
     "question": "What is Gus's day job outside of the detective agency?",
     "options": [
@@ -526,6 +442,90 @@
     ],
     "answer": "Psych 2: Lassie Come Home",
     "difficulty": "hard"
+  },
+    {
+    "id": 1,
+    "question": "In what California city is Psych set?",
+    "options": [
+      "Santa Barbara",
+      "San Diego",
+      "Monterey",
+      "Ventura"
+    ],
+    "answer": "Santa Barbara",
+    "difficulty": "easy"
+  },
+  {
+    "id": 2,
+    "question": "On which network did Psych originally air?",
+    "options": [
+      "USA Network",
+      "TNT",
+      "FX",
+      "Bravo"
+    ],
+    "answer": "USA Network",
+    "difficulty": "easy"
+  },
+  {
+    "id": 3,
+    "question": "In what year did Psych premiere?",
+    "options": [
+      "2006",
+      "2004",
+      "2008",
+      "2010"
+    ],
+    "answer": "2006",
+    "difficulty": "easy"
+  },
+  {
+    "id": 4,
+    "question": "How many seasons of Psych were produced?",
+    "options": [
+      "8",
+      "6",
+      "10",
+      "12"
+    ],
+    "answer": "8",
+    "difficulty": "easy"
+  },
+  {
+    "id": 5,
+    "question": "Who created Psych?",
+    "options": [
+      "Steve Franks",
+      "Bill Lawrence",
+      "David Shore",
+      "Kevin Falls"
+    ],
+    "answer": "Steve Franks",
+    "difficulty": "hard"
+  },
+  {
+    "id": 6,
+    "question": "Roughly how many episodes of Psych were made across its run?",
+    "options": [
+      "120",
+      "90",
+      "150",
+      "75"
+    ],
+    "answer": "120",
+    "difficulty": "hard"
+  },
+  {
+    "id": 7,
+    "question": "What is the name of Shawn and Gus's detective agency?",
+    "options": [
+      "Psych",
+      "The Third Eye",
+      "Spencer & Guster",
+      "Blackthorn Investigations"
+    ],
+    "answer": "Psych",
+    "difficulty": "easy"
   },
   {
     "id": 45,
