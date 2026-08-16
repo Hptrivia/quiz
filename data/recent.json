@@ -1,6 +1,94 @@
 [
   {
     "type": "theme",
+    "slug": "sitcoms",
+    "title": "Sitcoms",
+    "label": "General",
+    "date": "2026-08-16",
+    "url": "challenge.html?theme=sitcoms&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "the-blacklist",
+    "title": "The Blacklist",
+    "label": "TV",
+    "date": "2026-08-16",
+    "url": "challenge.html?theme=the-blacklist&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "the-good-doctor",
+    "title": "The Good Doctor",
+    "label": "TV",
+    "date": "2026-08-16",
+    "url": "challenge.html?theme=the-good-doctor&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "the-handmaids-tale",
+    "title": "The Handmaid's Tale",
+    "label": "TV",
+    "date": "2026-08-16",
+    "url": "challenge.html?theme=the-handmaids-tale&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "the-last-kingdom",
+    "title": "The Last Kingdom",
+    "label": "TV",
+    "date": "2026-08-16",
+    "url": "challenge.html?theme=the-last-kingdom&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "vikings",
+    "title": "Vikings",
+    "label": "TV",
+    "date": "2026-08-16",
+    "url": "challenge.html?theme=vikings&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "abbott-elementary",
+    "title": "Abbott Elementary",
+    "label": "Sitcoms",
+    "date": "2026-08-14",
+    "url": "challenge.html?theme=abbott-elementary&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "once-upon-a-time",
+    "title": "Once Upon a Time",
+    "label": "TV",
+    "date": "2026-08-14",
+    "url": "challenge.html?theme=once-upon-a-time&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "outer-banks",
+    "title": "Outer Banks",
+    "label": "TV",
+    "date": "2026-08-14",
+    "url": "challenge.html?theme=outer-banks&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "psych",
+    "title": "Psych",
+    "label": "TV",
+    "date": "2026-08-14",
+    "url": "challenge.html?theme=psych&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "stephen-king",
+    "title": "Stephen King",
+    "label": "Books",
+    "date": "2026-08-14",
+    "url": "challenge.html?theme=stephen-king&round=1"
+  },
+  {
+    "type": "theme",
     "slug": "ginny-and-georgia",
     "title": "Ginny & Georgia",
     "label": "TV",
@@ -70,93 +158,5 @@
     "label": "Sitcoms",
     "date": "2026-08-07",
     "url": "challenge.html?theme=atlanta&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "house-of-cards",
-    "title": "House of Cards",
-    "label": "TV",
-    "date": "2026-08-07",
-    "url": "challenge.html?theme=house-of-cards&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "law-and-order-svu",
-    "title": "Law & Order: SVU",
-    "label": "TV",
-    "date": "2026-08-07",
-    "url": "challenge.html?theme=law-and-order-svu&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "riverdale",
-    "title": "Riverdale",
-    "label": "TV",
-    "date": "2026-08-07",
-    "url": "challenge.html?theme=riverdale&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "silo",
-    "title": "Silo",
-    "label": "TV",
-    "date": "2026-08-07",
-    "url": "challenge.html?theme=silo&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "that-70s-show",
-    "title": "That '70s Show",
-    "label": "Sitcoms",
-    "date": "2026-08-07",
-    "url": "challenge.html?theme=that-70s-show&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "the-100",
-    "title": "The 100",
-    "label": "TV",
-    "date": "2026-08-07",
-    "url": "challenge.html?theme=the-100&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "the-americans",
-    "title": "The Americans",
-    "label": "TV",
-    "date": "2026-08-07",
-    "url": "challenge.html?theme=the-americans&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "homeland",
-    "title": "Homeland",
-    "label": "TV",
-    "date": "2026-08-02",
-    "url": "challenge.html?theme=homeland&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "orange-is-the-new-black",
-    "title": "Orange Is the New Black",
-    "label": "TV",
-    "date": "2026-08-02",
-    "url": "challenge.html?theme=orange-is-the-new-black&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "oz",
-    "title": "Oz",
-    "label": "TV",
-    "date": "2026-08-02",
-    "url": "challenge.html?theme=oz&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "the-hawk",
-    "title": "The Hawk",
-    "label": "Sitcoms",
-    "date": "2026-08-02",
-    "url": "challenge.html?theme=the-hawk&round=1"
   }
 ]
