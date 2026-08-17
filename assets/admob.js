@@ -13,7 +13,7 @@
 //   1. paste the real iOS ad unit IDs into _ADMOB_LIVE_IDS.ios below, then
 //   2. change ios: 'off' → 'live' here.
 const ADMOB_MODE_BY_PLATFORM = {
-  ios: 'live',
+  ios: 'test',
   android: 'live',
 };
 const _ADMOB_PLATFORM = window.Capacitor?.getPlatform?.();
@@ -148,9 +148,14 @@ async function adMobInit() {
     const m = p.match(/\/([^/]+)\.html$/);
     return m ? '_iad_' + m[1] : '_iad_other';
   })();
+  // Give brand-new installs one ad-free first open — no interstitial on the
+  // very first eligible moment ever, so new users aren't hit with an ad before
+  // they've seen the app work. Every open after this one behaves as before.
+  const isFirstEverOpen = !localStorage.getItem('_iadFirstOpenDone');
+  if (isFirstEverOpen) localStorage.setItem('_iadFirstOpenDone', '1');
   // Skip the interstitial-first if we're still inside the cooldown window — no
   // point preparing/showing one we'd be blocked from displaying anyway.
-  const showInterstitialFirst = getRoundStartParams() && !sessionStorage.getItem(_modeKey) && !_interstitialOnCooldown();
+  const showInterstitialFirst = getRoundStartParams() && !sessionStorage.getItem(_modeKey) && !_interstitialOnCooldown() && !isFirstEverOpen;
   const _removeLoader = () => {
     document.getElementById('_adLoader')?.remove();
     document.body.style.visibility = 'visible';
@@ -173,7 +178,11 @@ async function adMobInit() {
     // starts (initialize() triggers MobileAds.start()).
     await _requestATT();
     await _AdMob.initialize({
-      initializeForTesting: ADMOB_TEST_MODE,
+      // iOS only: must be true for `testingDevices` below to be applied (the
+      // plugin discards the list otherwise). This does NOT make real iOS
+      // users see test ads — only the device IDs listed get test ads, everyone
+      // else on iOS still gets real ads. Android is untouched (stays live).
+      initializeForTesting: _ADMOB_PLATFORM === 'ios' ? true : ADMOB_TEST_MODE,
       testingDevices: ['26D6708FEB5BC4BACECD99956C13350E', 'F8913AC8-ADD9-4288-9400-793D409E2C2B'],
     });
     _adMobReady = true;
