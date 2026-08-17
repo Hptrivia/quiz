@@ -13,7 +13,7 @@
 //   1. paste the real iOS ad unit IDs into _ADMOB_LIVE_IDS.ios below, then
 //   2. change ios: 'off' → 'live' here.
 const ADMOB_MODE_BY_PLATFORM = {
-  ios: 'test',
+  ios: 'live',
   android: 'live',
 };
 const _ADMOB_PLATFORM = window.Capacitor?.getPlatform?.();
@@ -148,14 +148,16 @@ async function adMobInit() {
     const m = p.match(/\/([^/]+)\.html$/);
     return m ? '_iad_' + m[1] : '_iad_other';
   })();
-  // Give brand-new installs one ad-free first open — no interstitial on the
-  // very first eligible moment ever, so new users aren't hit with an ad before
-  // they've seen the app work. Every open after this one behaves as before.
-  const isFirstEverOpen = !localStorage.getItem('_iadFirstOpenDone');
+  // Give brand-new installs one ad-free first open — no interstitial the very
+  // first time they hit a real game-start page. Gated on isGameStart so the
+  // flag is only consumed at an actual ad-eligible moment, not on non-game
+  // pages (home/menu) that would burn it before the user ever sees a game.
+  const isGameStart = getRoundStartParams();
+  const isFirstEverOpen = isGameStart && !localStorage.getItem('_iadFirstOpenDone');
   if (isFirstEverOpen) localStorage.setItem('_iadFirstOpenDone', '1');
   // Skip the interstitial-first if we're still inside the cooldown window — no
   // point preparing/showing one we'd be blocked from displaying anyway.
-  const showInterstitialFirst = getRoundStartParams() && !sessionStorage.getItem(_modeKey) && !_interstitialOnCooldown() && !isFirstEverOpen;
+  const showInterstitialFirst = isGameStart && !sessionStorage.getItem(_modeKey) && !_interstitialOnCooldown() && !isFirstEverOpen;
   const _removeLoader = () => {
     document.getElementById('_adLoader')?.remove();
     document.body.style.visibility = 'visible';
