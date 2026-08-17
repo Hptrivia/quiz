@@ -108,7 +108,10 @@ select:focus{border-color:#1a1a1a}
 .cap-reset:hover{color:#777}
 .cap-edited{color:#6c63ff;font-weight:700;text-transform:none;letter-spacing:0}
 .copy-panel{background:#fff;border-radius:16px;padding:18px;box-shadow:0 2px 14px rgba(0,0,0,.07);margin-top:14px}
-.copy-panel>h3{font-size:13px;font-weight:800;margin-bottom:12px}
+.cp-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.cp-head h3{font-size:13px;font-weight:800}
+.cap-bulk-title{font-size:12px;font-weight:800;color:#1a1a1a;margin:18px 0 8px;padding-top:14px;border-top:1px solid #eee}
+.cap-bulk-title:first-child{margin-top:0;padding-top:0;border-top:none}
 /* Segmented switcher under the cards — only one text panel shows at a time so the
    main column isn't a long stack of Cards + Captions + AI Chat all at once. */
 .view-tabs{display:flex;gap:8px;margin-top:20px}
@@ -235,6 +238,8 @@ input[type=text]:focus{border-color:#1a1a1a}
       <hr class="sep">
 
       <button class="btn btn-primary" id="dl-img">↓ Download all (zip)</button>
+      <button class="btn btn-soft" id="mk-pin-batch" style="display:none">🖼️ Download images for multiple themes</button>
+      <div id="pin-status" style="font-size:12px;line-height:1.4;color:#475569;margin:6px 0 2px;word-break:break-word;"></div>
 
       <div id="vid-plats">
         <label>Make videos for</label>
@@ -274,7 +279,10 @@ input[type=text]:focus{border-color:#1a1a1a}
       </div>
 
       <div class="copy-panel" id="copy-panel">
-        <h3>Captions to copy &amp; paste</h3>
+        <div class="cp-head">
+          <h3>Captions to copy &amp; paste</h3>
+          <button class="cap-copy" id="cap-bulk-btn">📋 Bulk themes</button>
+        </div>
         <div class="copy-tabs" id="copy-tabs">
           <button class="ctab on" data-plat="tiktok">TikTok</button>
           <button class="ctab" data-plat="instagram">Instagram</button>
@@ -329,6 +337,36 @@ input[type=text]:focus{border-color:#1a1a1a}
     </div>
     <div id="vidPicker" class="theme-picker"></div>
     <button class="btn btn-accent" id="vid-go">🎬 Make videos</button>
+  </div>
+</div>
+
+<div class="modal" id="pin-modal">
+  <div class="modal-card">
+    <div class="modal-head"><h3>🖼️ Download images</h3><button class="modal-x" id="pin-modal-close">✕</button></div>
+    <p class="modal-sub">Tick one or more themes — each downloads as its own single image, one after another.</p>
+    <input id="pin-search" class="theme-search" placeholder="Search themes…">
+    <div class="vb-actions">
+      <button class="vb-mini" id="pin-all">Select all shown</button>
+      <button class="vb-mini" id="pin-none">Clear</button>
+      <span class="vb-count" id="pin-count">0 selected</span>
+    </div>
+    <div id="pinPicker" class="theme-picker"></div>
+    <button class="btn btn-accent" id="pin-go">🖼️ Download images</button>
+  </div>
+</div>
+
+<div class="modal" id="cap-modal">
+  <div class="modal-card">
+    <div class="modal-head"><h3>📋 Bulk captions</h3><button class="modal-x" id="cap-modal-close">✕</button></div>
+    <p class="modal-sub">Tick the themes you want captions for — they'll all show at once for the current platform tab, each with its own copy buttons.</p>
+    <input id="cap-search" class="theme-search" placeholder="Search themes…">
+    <div class="vb-actions">
+      <button class="vb-mini" id="cap-all">Select all shown</button>
+      <button class="vb-mini" id="cap-none">Clear</button>
+      <span class="vb-count" id="cap-count">0 selected</span>
+    </div>
+    <div id="capPicker" class="theme-picker"></div>
+    <button class="btn btn-accent" id="cap-go">📋 Show captions</button>
   </div>
 </div>
 
@@ -409,7 +447,7 @@ async function boot(){
   buildThemePicker();
   g('themeSearch').oninput=()=>buildThemePicker(g('themeSearch').value);
   g('numq').onchange=pick;
-  g('format').onchange=()=>{ FMT=FORMATS[g('format').value]||FMT; render(); };
+  g('format').onchange=()=>{ FMT=FORMATS[g('format').value]||FMT; applyTypeUI(); render(); };
   g('ctype').onchange=()=>{ CTYPE=g('ctype').value; applyTypeUI(); render(); };
   g('pinHook').oninput=()=>{ if(CTYPE==='pin') render(); };
   g('pinUploadBtn').onclick=()=>g('pinUploadInput').click();
@@ -421,9 +459,25 @@ async function boot(){
   g('vid-close').onclick=()=>g('vid-modal').classList.remove('show');
   g('vid-modal').onclick=e=>{ if(e.target===g('vid-modal')) g('vid-modal').classList.remove('show'); };
   g('vid-search').oninput=()=>buildVidPicker(g('vid-search').value);
-  g('vid-all').onclick=()=>{ shownVidSlugs(g('vid-search').value).forEach(s=>vidSel.add(s)); buildVidPicker(g('vid-search').value); updateVidCount(); };
+  g('vid-all').onclick=()=>{ shownSlugs(g('vid-search').value).forEach(s=>vidSel.add(s)); buildVidPicker(g('vid-search').value); updateVidCount(); };
   g('vid-none').onclick=()=>{ vidSel.clear(); buildVidPicker(g('vid-search').value); updateVidCount(); };
   g('vid-go').onclick=runVideoBatch;
+
+  g('mk-pin-batch').onclick=openPinModal;
+  g('pin-modal-close').onclick=()=>g('pin-modal').classList.remove('show');
+  g('pin-modal').onclick=e=>{ if(e.target===g('pin-modal')) g('pin-modal').classList.remove('show'); };
+  g('pin-search').oninput=()=>buildPinPicker(g('pin-search').value);
+  g('pin-all').onclick=()=>{ shownSlugs(g('pin-search').value).forEach(s=>pinSel.add(s)); buildPinPicker(g('pin-search').value); updatePinCount(); };
+  g('pin-none').onclick=()=>{ pinSel.clear(); buildPinPicker(g('pin-search').value); updatePinCount(); };
+  g('pin-go').onclick=runPinBatch;
+
+  g('cap-bulk-btn').onclick=()=>{ capBulk?exitCapBulk():openCapModal(); };
+  g('cap-modal-close').onclick=()=>g('cap-modal').classList.remove('show');
+  g('cap-modal').onclick=e=>{ if(e.target===g('cap-modal')) g('cap-modal').classList.remove('show'); };
+  g('cap-search').oninput=()=>buildCapPicker(g('cap-search').value);
+  g('cap-all').onclick=()=>{ shownSlugs(g('cap-search').value).forEach(s=>capSel.add(s)); buildCapPicker(g('cap-search').value); updateCapCount(); };
+  g('cap-none').onclick=()=>{ capSel.clear(); buildCapPicker(g('cap-search').value); updateCapCount(); };
+  g('cap-go').onclick=confirmCapBulk;
   g('gen-cap').onclick=()=>{ setView('chat'); g('cap-panel').scrollIntoView({behavior:'smooth',block:'nearest'}); sendChat('Write a ready-to-paste caption with hashtags for this theme — give me a TikTok/Reels version and a Pinterest title + description.'); };
   g('open-cal').onclick=openCalendar;
   g('cal-close').onclick=()=>g('cal-modal').classList.remove('show');
@@ -586,6 +640,15 @@ function pick(){
   render();
 }
 
+// Collapse CURRENT down to exactly one question of a given difficulty — used by
+// the Pinterest bulk export, which downloads one image per theme (not the full mix).
+function pickSingle(want){
+  if(!POOL.length) return;
+  const q=pickByDiff(want,new Set());
+  CURRENT=q?[q]:[];
+  render();
+}
+
 // Swap a single card's question for another one of the SAME difficulty that
 // isn't already on screen (falls back to any other question if scarce).
 function refreshCard(i){
@@ -608,13 +671,16 @@ function curTheme(){ return THEMES.find(x=>x.slug===g('theme').value)||{title:''
 // ---------- ready-to-paste captions (no AI, auto-filled per platform) ----------
 let curPlat='tiktok';
 const tagify=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]+/g,'');
-function captionData(){
-  const t=curTheme();
+// themeOverride/nOverride let bulk mode generate captions for a theme other than
+// the currently-loaded one, without fetching its question file (N comes from the
+// "questions per post" setting instead of an actually-loaded pool).
+function captionData(themeOverride,nOverride){
+  const t=themeOverride||curTheme();
   const title=t.title||'Trivia';
   const cat=t.category||'Trivia';
   const th=tagify(title), ct=tagify(cat);
-  const N=CURRENT.length||5;
-  const slug=g('theme').value||t.slug||'theme';
+  const N=nOverride||CURRENT.length||5;
+  const slug=t.slug||g('theme').value||'theme';
   return {
     tiktok:[
       {label:'Caption + hashtags', multiline:true, value:
@@ -675,13 +741,13 @@ FYI there are more than 3 rounds overall — get the app (App Store / Google Pla
 // Per-field caption edits are saved to localStorage so they survive re-renders,
 // theme switches and reloads. NOTE: localStorage is per-browser/per-device only —
 // edits made here won't appear on a different phone/computer.
-const capKey=(plat,idx)=>`tb_cap_${g('theme').value||'theme'}_${plat}_${idx}`;
-function renderCopyPanel(){
-  const data=captionData();
-  const fields=data[curPlat]||[];
-  const box=g('copy-fields'); if(!box) return; box.innerHTML='';
+const capKey=(plat,idx,slug)=>`tb_cap_${slug||g('theme').value||'theme'}_${plat}_${idx}`;
+
+// Renders one theme's set of caption fields into container — shared by the normal
+// single-theme view and the bulk (multi-theme) view below.
+function renderCapFields(container,fields,keyOf){
   fields.forEach((f,idx)=>{
-    const key=capKey(curPlat,idx);
+    const key=keyOf(idx);
     const saved=localStorage.getItem(key);
     const w=document.createElement('div'); w.className='cfield';
     const head=document.createElement('div'); head.className='cfield-head';
@@ -696,7 +762,7 @@ function renderCopyPanel(){
     const el=document.createElement(f.multiline?'textarea':'input');
     if(!f.multiline) el.type='text';
     el.className='cinput'; el.value=saved!==null?saved:f.value; el.spellcheck=false;
-    w.appendChild(el); box.appendChild(w);
+    w.appendChild(el); container.appendChild(w);
     const badge=left.querySelector('.cap-edited');
     el.oninput=()=>{
       if(el.value===f.value){ localStorage.removeItem(key); rs.style.display='none'; badge.style.display='none'; }
@@ -705,6 +771,26 @@ function renderCopyPanel(){
     rs.onclick=()=>{ localStorage.removeItem(key); el.value=f.value; rs.style.display='none'; badge.style.display='none'; };
     cp.onclick=()=>{ navigator.clipboard.writeText(el.value); cp.textContent='✓ Copied'; setTimeout(()=>cp.textContent='Copy',1500); };
   });
+}
+
+// Bulk mode: captions for several themes at once, one block per theme, all for
+// the currently active platform tab. Set/cleared via the "Bulk themes" button.
+let capBulk=false, capBulkSlugs=[];
+function renderCopyPanel(){
+  const box=g('copy-fields'); if(!box) return; box.innerHTML='';
+  if(capBulk && capBulkSlugs.length){
+    const n=parseInt(g('numq').value,10)||5;
+    capBulkSlugs.forEach(slug=>{
+      const t=THEMES.find(x=>x.slug===slug); if(!t) return;
+      const fields=captionData(t,n)[curPlat]||[];
+      const heading=document.createElement('div'); heading.className='cap-bulk-title'; heading.textContent=t.title;
+      box.appendChild(heading);
+      renderCapFields(box,fields,idx=>capKey(curPlat,idx,slug));
+    });
+    return;
+  }
+  const fields=captionData()[curPlat]||[];
+  renderCapFields(box,fields,idx=>capKey(curPlat,idx));
 }
 
 // Toggles the main-column text panels ('copy' = captions, 'chat' = Ask the AI).
@@ -772,50 +858,44 @@ function applyTypeUI(){
   g('shuffle').style.display     = pin ? 'none'  : 'block';
   g('mk-vid').style.display      = pin ? 'none'  : 'block';   // reveal video is for question cards only
   g('vid-plats').style.display   = pin ? 'none'  : 'block';
-  g('dl-img').style.display      = pin ? 'none'  : 'block';   // pin uses its own per-pin Save button
+  g('dl-img').style.display      = pin ? 'none'  : 'block';   // pin uses its own Save-pin button
+  // Bulk single-image-per-theme download — works from either "Make" mode, as long
+  // as the Pinterest 2:3 format is selected (theme pin uses that ratio too).
+  g('mk-pin-batch').style.display = g('format').value==='2:3' ? 'block' : 'none';
 }
 
 // Theme pin — faithful clone of pin-builder.html: background photo + bottom
-// scrim + text overlay, three templates, EXACT inline styles + overlay palette.
-//   1) title + hook   2) category + title   3) title + sample question + hook + CTA
+// scrim + text overlay. One unified design: title + sample question + hook + CTA.
 function renderPins(){
   const t=curTheme();
   const p=PIN_PALS[palIdx%PIN_PALS.length];
   g('m-title').textContent=t.title;
-  g('m-count').textContent='3 theme pins';
+  g('m-count').textContent='1 theme pin';
   const box=g('cards'); box.innerHTML='';
   const hook=esc((g('pinHook').value||'').trim()||'Only real fans score 8/10');
-  const cat=esc((t.category||'General').toUpperCase());
   const sampleQ=esc((CURRENT[0]&&CURRENT[0].question)||'');
   const title=esc(t.title||'Theme Title')+' Trivia';
   const scrim=`linear-gradient(to top,rgba(${p.base},.97) 0%,rgba(${p.base},.93) 18%,rgba(${p.base},.4) 42%,rgba(${p.base},0) 60%)`;
 
   const titleCss=`font-family:'Bebas Neue',sans-serif;line-height:1.0;margin-bottom:6px;word-break:break-word;color:${p.accent}`;
   const hookCss =`font-weight:600;line-height:1.4;font-family:'DM Sans',sans-serif;color:${p.hook}`;
-  const T1=`<div style="font-size:32px;${titleCss}">${title}</div>
-            <div style="font-size:11px;${hookCss}">${hook}</div>`;
-  const T2=`<div style="font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;font-family:'DM Sans',sans-serif;color:${p.cat}">— ${cat} —</div>
-            <div style="font-size:32px;${titleCss}">${title}</div>
-            <div style="font-size:11px;${hookCss}">Hard trivia quiz</div>`;
-  const T3=`<div style="font-size:28px;${titleCss}">${title}</div>
+  const inner=`<div style="font-size:28px;${titleCss}">${title}</div>
             ${sampleQ?`<div style="font-size:10px;font-style:italic;line-height:1.4;margin-bottom:4px;font-family:'DM Sans',sans-serif;color:${p.hook};opacity:.88">"${sampleQ}"</div>`:''}
             <div style="font-size:10px;${hookCss}">${hook}</div>
             <div style="display:inline-block;align-self:flex-start;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 13px;border-radius:5px;margin-top:7px;font-family:'DM Sans',sans-serif;background:${p.cta};color:${p.ctaTxt}">Play free →</div>`;
 
-  [T1,T2,T3].forEach((inner,i)=>{
-    const wrap=document.createElement('div'); wrap.className='card-wrap';
-    const card=document.createElement('div');
-    card.className='card card-pin';
-    card.style.cssText=`--ar:${FMT.ratio}`;
-    card.innerHTML=`
-      <img class="pin-bg" src="${pinImg}" alt="">
-      <div class="pin-scrim" style="background:${scrim}"></div>
-      <div class="pin-content">${inner}</div>`;
-    wrap.appendChild(card);
-    const dl=document.createElement('button'); dl.className='card-dl'; dl.textContent='↓ Save pin '+(i+1); dl.onclick=()=>downloadOneCard(i);
-    wrap.appendChild(dl);
-    box.appendChild(wrap);
-  });
+  const wrap=document.createElement('div'); wrap.className='card-wrap';
+  const card=document.createElement('div');
+  card.className='card card-pin';
+  card.style.cssText=`--ar:${FMT.ratio}`;
+  card.innerHTML=`
+    <img class="pin-bg" src="${pinImg}" alt="">
+    <div class="pin-scrim" style="background:${scrim}"></div>
+    <div class="pin-content">${inner}</div>`;
+  wrap.appendChild(card);
+  const dl=document.createElement('button'); dl.className='card-dl'; dl.textContent='↓ Save pin'; dl.onclick=()=>downloadOneCard(0);
+  wrap.appendChild(dl);
+  box.appendChild(wrap);
 }
 
 // Shrinks a card's --cs (question/option scale) until its body content fits the
@@ -1004,23 +1084,15 @@ function drawVideoFrameAt(ctx,cv,segs,p,e,COUNTDOWN){
   } else { const pr=(e-seg.start)/seg.dur; ctx.drawImage(seg.from,0,0,cv.width,cv.height); ctx.globalAlpha=pr; ctx.drawImage(seg.to,0,0,cv.width,cv.height); ctx.globalAlpha=1; drawFooterCaption(ctx,'🔗 Link in bio to play'); }
 }
 
-// ---------- batch video: multi-theme picker ----------
-let vidSel=new Set();
-
-function shownVidSlugs(filter){
+// ---------- multi-theme picker (shared by video batch, Pinterest batch, bulk captions) ----------
+function shownSlugs(filter){
   const q=(filter||'').trim().toLowerCase();
   return THEMES.filter(t=>!q || t.title.toLowerCase().includes(q) || (t.category||'').toLowerCase().includes(q)).map(t=>t.slug);
 }
-function updateVidCount(){
-  const n=vidSel.size;
-  g('vid-count').textContent=n+' selected';
-  g('vid-go').textContent='🎬 Make '+(n||0)+' video'+(n===1?'':'s');
-  g('vid-go').disabled=!n;
-}
-// Multi-select sibling of buildThemePicker: same category accordion, but each
-// item toggles membership in vidSel instead of switching the live theme.
-function buildVidPicker(filter){
-  const box=g('vidPicker'); if(!box) return;
+// Category-accordion checklist toggling membership in `sel` (a Set of slugs).
+// onChange fires after every toggle so each caller can update its own count/label.
+function buildThemeChecklist(box,sel,filter,onChange){
+  if(!box) return;
   const q=(filter||'').trim().toLowerCase();
   const groups={};
   THEMES.forEach(t=>{
@@ -1032,22 +1104,32 @@ function buildVidPicker(filter){
   if(!cats.length){ box.innerHTML='<div class="tp-empty">No themes match.</div>'; return; }
   cats.forEach(cat=>{
     const list=groups[cat];
-    const open = !!q || list.some(t=>vidSel.has(t.slug));
+    const open = !!q || list.some(t=>sel.has(t.slug));
     const wrap=document.createElement('div'); wrap.className='tp-cat'+(open?' open':'');
     const head=document.createElement('button'); head.className='tp-head';
     head.innerHTML=`<span class="tp-arrow">▸</span> ${cat} <span class="tp-count">${list.length}</span>`;
     const body=document.createElement('div'); body.className='tp-body';
     list.forEach(t=>{
       const b=document.createElement('button');
-      b.className='tp-item'+(vidSel.has(t.slug)?' on':'');
+      b.className='tp-item'+(sel.has(t.slug)?' on':'');
       b.textContent=t.title;
-      b.onclick=()=>{ if(vidSel.has(t.slug)) vidSel.delete(t.slug); else vidSel.add(t.slug); b.classList.toggle('on'); updateVidCount(); };
+      b.onclick=()=>{ if(sel.has(t.slug)) sel.delete(t.slug); else sel.add(t.slug); b.classList.toggle('on'); onChange(); };
       body.appendChild(b);
     });
     head.onclick=()=>wrap.classList.toggle('open');
     wrap.appendChild(head); wrap.appendChild(body); box.appendChild(wrap);
   });
 }
+
+// ---- video batch ----
+let vidSel=new Set();
+function updateVidCount(){
+  const n=vidSel.size;
+  g('vid-count').textContent=n+' selected';
+  g('vid-go').textContent='🎬 Make '+(n||0)+' video'+(n===1?'':'s');
+  g('vid-go').disabled=!n;
+}
+function buildVidPicker(filter){ buildThemeChecklist(g('vidPicker'),vidSel,filter,updateVidCount); }
 function openVidModal(){
   const cur=g('theme').value;
   vidSel=new Set(cur?[cur]:[]);
@@ -1055,6 +1137,109 @@ function openVidModal(){
   buildVidPicker('');
   updateVidCount();
   g('vid-modal').classList.add('show');
+}
+
+// ---- Pinterest image batch ----
+let pinSel=new Set();
+function updatePinCount(){
+  const n=pinSel.size;
+  g('pin-count').textContent=n+' selected';
+  g('pin-go').textContent='🖼️ Download '+(n||0)+' image'+(n===1?'':'s');
+  g('pin-go').disabled=!n;
+}
+function buildPinPicker(filter){ buildThemeChecklist(g('pinPicker'),pinSel,filter,updatePinCount); }
+function openPinModal(){
+  const cur=g('theme').value;
+  pinSel=new Set(cur?[cur]:[]);
+  g('pin-search').value='';
+  buildPinPicker('');
+  updatePinCount();
+  g('pin-modal').classList.add('show');
+}
+
+// ---- bulk captions ----
+let capSel=new Set();
+function updateCapCount(){
+  const n=capSel.size;
+  g('cap-count').textContent=n+' selected';
+  g('cap-go').textContent='📋 Show '+(n||0)+' theme'+(n===1?'':'s')+"' captions";
+  g('cap-go').disabled=!n;
+}
+function buildCapPicker(filter){ buildThemeChecklist(g('capPicker'),capSel,filter,updateCapCount); }
+function openCapModal(){
+  const cur=g('theme').value;
+  capSel=new Set(cur?[cur]:[]);
+  g('cap-search').value='';
+  buildCapPicker('');
+  updateCapCount();
+  g('cap-modal').classList.add('show');
+}
+function confirmCapBulk(){
+  if(!capSel.size) return;
+  capBulkSlugs=[...capSel];
+  capBulk=true;
+  g('cap-modal').classList.remove('show');
+  g('cap-bulk-btn').textContent='✕ Exit bulk';
+  renderCopyPanel();
+}
+function exitCapBulk(){
+  capBulk=false; capBulkSlugs=[];
+  g('cap-bulk-btn').textContent='📋 Bulk themes';
+  renderCopyPanel();
+}
+
+// Drive the Pinterest image batch: for each ticked theme, load it, render its
+// single image (theme pin or the one medium-difficulty question card, depending
+// on the current "Make" mode), and download it. One overall progress bar spans
+// all themes — same pattern as the video batch, just images instead of MP4s.
+async function runPinBatch(){
+  const slugs=[...pinSel];
+  if(!slugs.length){ alert('Pick at least one theme.'); return; }
+  g('pin-modal').classList.remove('show');
+
+  const ov=g('overlay'), bar=g('ov-bar'), lbl=g('ov-lbl');
+  ov.classList.add('show'); bar.style.width='0'; lbl.textContent='Preparing…';
+
+  const notes=[];
+  try{
+    for(let n=0;n<slugs.length;n++){
+      const slug=slugs[n];
+      const t=THEMES.find(x=>x.slug===slug)||{title:slug,slug};
+      const base=n/slugs.length, span=1/slugs.length;
+      const head=slugs.length>1?`Theme ${n+1}/${slugs.length} (${t.title}) · `:'';
+      try{
+        lbl.textContent=head+'loading…';
+        await loadTheme(slug);              // renders theme pin automatically if CTYPE==='pin'
+        if(CTYPE!=='pin') pickSingle('medium'); // otherwise collapse to one question card
+        await wait(60);
+        const card=document.querySelector('.card');
+        if(!card) throw new Error('no image to export');
+        lbl.textContent=head+'rendering…';
+        const cv=await cardToCanvas(card);
+        const blob=await new Promise(r=>cv.toBlob(r,'image/png'));
+        const url=URL.createObjectURL(blob);
+        const a=document.createElement('a');
+        a.download=`triviagauntlet-${slug}-pin.png`;
+        a.href=url;
+        a.click();
+        setTimeout(()=>URL.revokeObjectURL(url),4000);
+        bar.style.width=Math.round((base+span)*100)+'%';
+        await wait(350); // space out sequential downloads so the browser doesn't block them
+      }catch(e){
+        console.error('pin batch theme failed:',slug,e);
+        notes.push(t.title+': '+(e&&e.message||e));
+      }
+    }
+    bar.style.width='100%';
+    g('pin-status').textContent='✅ Downloaded '+slugs.length+' image'+(slugs.length===1?'':'s')
+      + (notes.length?' · '+notes.join('; '):'');
+  }catch(e){
+    console.error('pin batch failed',e);
+    g('pin-status').textContent='❌ '+(e&&e.message||e);
+    alert('Sorry — something failed. ('+(e&&e.message||e)+')');
+  }finally{
+    ov.classList.remove('show'); bar.style.width='0';
+  }
 }
 
 // Drive the whole batch: for each ticked theme, load it, render its cards,
