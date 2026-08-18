@@ -13,7 +13,7 @@
 //   1. paste the real iOS ad unit IDs into _ADMOB_LIVE_IDS.ios below, then
 //   2. change ios: 'off' → 'live' here.
 const ADMOB_MODE_BY_PLATFORM = {
-  ios: 'live',
+  ios: 'test', // temporary: verifying first-open interstitial suppression before going back live
   android: 'live',
 };
 const _ADMOB_PLATFORM = window.Capacitor?.getPlatform?.();
@@ -150,7 +150,15 @@ async function adMobInit() {
   })();
   // Skip the interstitial-first if we're still inside the cooldown window — no
   // point preparing/showing one we'd be blocked from displaying anyway.
-  const showInterstitialFirst = getRoundStartParams() && !sessionStorage.getItem(_modeKey) && !_interstitialOnCooldown();
+  const isGameStart = getRoundStartParams();
+  // One-time grace period: give a brand-new install its first game with no
+  // interstitial (Reddit reports of users bouncing after the very first ad).
+  // Gated on isGameStart so the home/menu page can't consume the flag before
+  // the user ever reaches a game.
+  const isFirstEverOpen = isGameStart && !localStorage.getItem('_iadFirstOpenDone');
+  if (isFirstEverOpen) localStorage.setItem('_iadFirstOpenDone', '1');
+  const showInterstitialFirst = isGameStart && !sessionStorage.getItem(_modeKey)
+    && !_interstitialOnCooldown() && !isFirstEverOpen;
   const _removeLoader = () => {
     document.getElementById('_adLoader')?.remove();
     document.body.style.visibility = 'visible';
