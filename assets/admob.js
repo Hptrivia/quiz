@@ -397,7 +397,7 @@ async function adMobHideBanner() {
   document.body.classList.remove('has-banner');
 }
 
-function _offerRewardedLifeline(name, onEarned, promptHtml) {
+function _offerRewardedLifeline(name, onEarned, promptHtml, onCancel) {
   const overlay = document.createElement('div');
   overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.75);display:flex;align-items:center;justify-content:center;z-index:9999';
   overlay.innerHTML = `<div style="background:#1e1e2e;padding:24px;border-radius:12px;text-align:center;max-width:280px;color:#fff">
@@ -407,7 +407,7 @@ function _offerRewardedLifeline(name, onEarned, promptHtml) {
     <div style="margin-top:14px"><button id="_adRemoveAds" style="padding:8px 16px;border-radius:8px;background:none;border:1px solid #6c63ff;color:#6c63ff;cursor:pointer;font-size:0.85em">Remove Ads</button></div>
   </div>`;
   document.body.appendChild(overlay);
-  overlay.querySelector('#_adNo').onclick = () => overlay.remove();
+  overlay.querySelector('#_adNo').onclick = () => { overlay.remove(); if (onCancel) onCancel(); };
   overlay.querySelector('#_adYes').onclick = async () => {
     overlay.remove();
     const earned = await adMobShowRewarded();
