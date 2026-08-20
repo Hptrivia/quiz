@@ -162,6 +162,11 @@ async function initAppPaywall() {
     return;
   }
 
+  if (typeof REMOVE_ADS_LIVE !== 'undefined' && !REMOVE_ADS_LIVE) {
+    showComingSoon();
+    return;
+  }
+
   if (typeof rcInit === 'function') await rcInit();
   const offering = typeof rcGetOfferings === 'function' ? await rcGetOfferings() : null;
   const monthly = offering?.monthly;
@@ -196,6 +201,34 @@ async function initAppPaywall() {
     const ok = await rcRestorePurchases();
     if (ok) { showRemoved(); restoreMsg.textContent = ''; }
     else { restoreBtn.disabled = false; restoreMsg.textContent = 'No previous purchase found.'; }
+  });
+}
+
+// Purchase flow not live yet (REMOVE_ADS_LIVE = false in admob.js) — show a
+// placeholder instead of a dead-end pricing/purchase UI, with a one-tap
+// interest checkbox (logged via gtag) so we can gauge demand before finishing
+// the RevenueCat wiring.
+function showComingSoon() {
+  const optionsWrap = document.getElementById('raAppOptions');
+  const restoreBtn = document.getElementById('raRestoreBtn');
+  restoreBtn.style.display = 'none';
+
+  const interested = localStorage.getItem('_removeAdsInterest') === '1';
+  optionsWrap.innerHTML = `
+    <p>Coming soon — we're putting the finishing touches on this.</p>
+    <label style="display:flex;align-items:center;gap:8px;font-weight:normal;cursor:${interested ? 'default' : 'pointer'}">
+      <input type="checkbox" id="raInterestCheck" ${interested ? 'checked disabled' : ''} />
+      <span id="raInterestLabel">${interested ? "Thanks — we'll let you know!" : '🔔 Let me know when this is ready'}</span>
+    </label>
+  `;
+
+  if (interested) return;
+  document.getElementById('raInterestCheck').addEventListener('change', (e) => {
+    if (!e.target.checked) return;
+    localStorage.setItem('_removeAdsInterest', '1');
+    e.target.disabled = true;
+    document.getElementById('raInterestLabel').textContent = "Thanks — we'll let you know!";
+    if (typeof gtag === 'function') gtag('event', 'remove_ads_interest');
   });
 }
 

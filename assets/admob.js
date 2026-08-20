@@ -58,6 +58,13 @@ const RC_API_KEYS = {
 const RC_ENTITLEMENT_ID = 'no_ads';
 const RC_CACHE_KEY = '_rcAdsRemoved';
 
+// Purchase flow isn't tested on a real device build yet — keep the paywall
+// page showing "Coming Soon" (see remove-ads.js initAppPaywall) until a
+// build with the native RevenueCat plugin has been through a real purchase.
+// Entry points (theme card, "Remove Ads Instead" popup button) stay visible
+// either way so we can gauge interest before the flow goes live.
+const REMOVE_ADS_LIVE = false;
+
 let _Purchases = null;
 let _rcReady = false;
 
