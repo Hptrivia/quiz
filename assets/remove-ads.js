@@ -213,23 +213,38 @@ function showComingSoon() {
   const restoreBtn = document.getElementById('raRestoreBtn');
   restoreBtn.style.display = 'none';
 
-  const interested = localStorage.getItem('_removeAdsInterest') === '1';
+  const vote = localStorage.getItem('_removeAdsVote'); // 'yes' | 'no' | null
+
+  if (vote) {
+    optionsWrap.innerHTML = `
+      <p>Coming soon — we're putting the finishing touches on this.</p>
+      <p style="opacity:0.8;font-size:0.9em">Planned pricing: <strong>€2.00/month</strong> or <strong>€10.00 once</strong> (forever) — final price may vary by region.</p>
+      <p style="font-weight:600">${vote === 'yes' ? "✓ Thanks — we'll let you know!" : "Thanks for the feedback."}</p>
+    `;
+    return;
+  }
+
   optionsWrap.innerHTML = `
     <p>Coming soon — we're putting the finishing touches on this.</p>
     <p style="opacity:0.8;font-size:0.9em">Planned pricing: <strong>€2.00/month</strong> or <strong>€10.00 once</strong> (forever) — final price may vary by region.</p>
-    <label style="display:flex;align-items:center;gap:8px;font-weight:normal;cursor:${interested ? 'default' : 'pointer'}">
-      <input type="checkbox" id="raInterestCheck" ${interested ? 'checked disabled' : ''} />
-      <span id="raInterestLabel">${interested ? "Thanks — we'll let you know!" : '🔔 Let me know when this is ready'}</span>
+    <label style="display:flex;align-items:center;gap:8px;font-weight:normal;cursor:pointer">
+      <input type="checkbox" id="raInterestCheck" />
+      <span>🔔 I'm interested</span>
     </label>
+    <a href="#" id="raNotInterested" style="font-size:0.8em;opacity:0.6">Not interested</a>
   `;
 
-  if (interested) return;
   document.getElementById('raInterestCheck').addEventListener('change', (e) => {
     if (!e.target.checked) return;
-    localStorage.setItem('_removeAdsInterest', '1');
-    e.target.disabled = true;
-    document.getElementById('raInterestLabel').textContent = "Thanks — we'll let you know!";
+    localStorage.setItem('_removeAdsVote', 'yes');
     if (typeof gtag === 'function') gtag('event', 'remove_ads_interest');
+    showComingSoon();
+  });
+  document.getElementById('raNotInterested').addEventListener('click', (e) => {
+    e.preventDefault();
+    localStorage.setItem('_removeAdsVote', 'no');
+    if (typeof gtag === 'function') gtag('event', 'remove_ads_not_interested');
+    showComingSoon();
   });
 }
 
