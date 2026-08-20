@@ -1,0 +1,1778 @@
+[
+  {
+    "id": 1,
+    "question": "What is the capital of India?",
+    "options": [
+      "New Delhi",
+      "Mumbai",
+      "Bangalore",
+      "Kolkata"
+    ],
+    "answer": "New Delhi",
+    "difficulty": "easy"
+  },
+  {
+    "id": 2,
+    "question": "What is the official currency of India?",
+    "options": [
+      "Dinar",
+      "Rand",
+      "Rupee",
+      "Taka"
+    ],
+    "answer": "Rupee",
+    "difficulty": "easy"
+  },
+  {
+    "id": 3,
+    "question": "What is the national animal of India?",
+    "options": [
+      "Bengal Tiger",
+      "Asiatic Lion",
+      "Snow Leopard",
+      "Indian Elephant"
+    ],
+    "answer": "Bengal Tiger",
+    "difficulty": "easy"
+  },
+  {
+    "id": 4,
+    "question": "What is the national bird of India?",
+    "options": [
+      "Indian Roller",
+      "Sarus Crane",
+      "Indian Peacock",
+      "Great Indian Bustard"
+    ],
+    "answer": "Indian Peacock",
+    "difficulty": "easy"
+  },
+  {
+    "id": 5,
+    "question": "What is the national flower of India?",
+    "options": [
+      "Marigold",
+      "Jasmine",
+      "Lotus",
+      "Hibiscus"
+    ],
+    "answer": "Lotus",
+    "difficulty": "easy"
+  },
+  {
+    "id": 6,
+    "question": "Which river is the longest to flow entirely within India?",
+    "options": [
+      "Ganges",
+      "Yamuna",
+      "Brahmaputra",
+      "Godavari"
+    ],
+    "answer": "Ganges",
+    "difficulty": "easy"
+  },
+  {
+    "id": 7,
+    "question": "Which peak is the highest mountain located entirely within India?",
+    "options": [
+      "Kanchenjunga",
+      "K2",
+      "Nanda Devi",
+      "Annapurna"
+    ],
+    "answer": "Kanchenjunga",
+    "difficulty": "easy"
+  },
+  {
+    "id": 8,
+    "question": "Which ocean lies to the south of India?",
+    "options": [
+      "Pacific Ocean",
+      "Atlantic Ocean",
+      "Indian Ocean",
+      "Arabian Sea"
+    ],
+    "answer": "Indian Ocean",
+    "difficulty": "easy"
+  },
+  {
+    "id": 9,
+    "question": "Which desert covers much of the state of Rajasthan?",
+    "options": [
+      "Rann of Kutch",
+      "Sahara Desert",
+      "Gobi Desert",
+      "Thar Desert"
+    ],
+    "answer": "Thar Desert",
+    "difficulty": "easy"
+  },
+  {
+    "id": 10,
+    "question": "Which sea borders India's western coast?",
+    "options": [
+      "Arabian Sea",
+      "Andaman Sea",
+      "Red Sea",
+      "Bay of Bengal"
+    ],
+    "answer": "Arabian Sea",
+    "difficulty": "easy"
+  },
+  {
+    "id": 11,
+    "question": "Which bay borders India's eastern coast?",
+    "options": [
+      "Arabian Sea",
+      "Gulf of Mannar",
+      "Gulf of Khambhat",
+      "Bay of Bengal"
+    ],
+    "answer": "Bay of Bengal",
+    "difficulty": "easy"
+  },
+  {
+    "id": 12,
+    "question": "Which mountain range runs along India's northern border?",
+    "options": [
+      "Western Ghats",
+      "Aravalli Range",
+      "Eastern Ghats",
+      "Himalayas"
+    ],
+    "answer": "Himalayas",
+    "difficulty": "easy"
+  },
+  {
+    "id": 13,
+    "question": "Which famous white marble monument is located in Agra?",
+    "options": [
+      "Taj Mahal",
+      "Red Fort",
+      "Qutub Minar",
+      "Gateway of India"
+    ],
+    "answer": "Taj Mahal",
+    "difficulty": "easy"
+  },
+  {
+    "id": 14,
+    "question": "Which Mughal emperor commissioned the construction of the Taj Mahal?",
+    "options": [
+      "Aurangzeb",
+      "Shah Jahan",
+      "Humayun",
+      "Akbar"
+    ],
+    "answer": "Shah Jahan",
+    "difficulty": "easy"
+  },
+  {
+    "id": 15,
+    "question": "The Taj Mahal was built in memory of which royal wife?",
+    "options": [
+      "Mumtaz Mahal",
+      "Roshanara Begum",
+      "Nur Jahan",
+      "Jodha Bai"
+    ],
+    "answer": "Mumtaz Mahal",
+    "difficulty": "easy"
+  },
+  {
+    "id": 16,
+    "question": "In what year did India gain independence from British rule?",
+    "options": [
+      "1945",
+      "1947",
+      "1950",
+      "1952"
+    ],
+    "answer": "1947",
+    "difficulty": "easy"
+  },
+  {
+    "id": 17,
+    "question": "On what date does India celebrate Independence Day?",
+    "options": [
+      "January 26",
+      "November 14",
+      "October 2",
+      "August 15"
+    ],
+    "answer": "August 15",
+    "difficulty": "easy"
+  },
+  {
+    "id": 18,
+    "question": "On what date does India celebrate Republic Day?",
+    "options": [
+      "December 25",
+      "January 26",
+      "August 15",
+      "August 9"
+    ],
+    "answer": "January 26",
+    "difficulty": "easy"
+  },
+  {
+    "id": 19,
+    "question": "Who was India's first Prime Minister?",
+    "options": [
+      "Sardar Vallabhbhai Patel",
+      "Jawaharlal Nehru",
+      "Morarji Desai",
+      "Lal Bahadur Shastri"
+    ],
+    "answer": "Jawaharlal Nehru",
+    "difficulty": "easy"
+  },
+  {
+    "id": 20,
+    "question": "Which leader of India's independence movement is widely known as the \"Father of the Nation\"?",
+    "options": [
+      "Bhagat Singh",
+      "Jawaharlal Nehru",
+      "Mahatma Gandhi",
+      "Subhas Chandra Bose"
+    ],
+    "answer": "Mahatma Gandhi",
+    "difficulty": "easy"
+  },
+  {
+    "id": 21,
+    "question": "Who is regarded as the chief architect of the Indian Constitution?",
+    "options": [
+      "Jawaharlal Nehru",
+      "Rajendra Prasad",
+      "B.R. Ambedkar",
+      "Sardar Patel"
+    ],
+    "answer": "B.R. Ambedkar",
+    "difficulty": "easy"
+  },
+  {
+    "id": 22,
+    "question": "Who was the first President of India?",
+    "options": [
+      "Rajendra Prasad",
+      "V.V. Giri",
+      "Sarvepalli Radhakrishnan",
+      "Zakir Husain"
+    ],
+    "answer": "Rajendra Prasad",
+    "difficulty": "easy"
+  },
+  {
+    "id": 23,
+    "question": "Who wrote India's national anthem, \"Jana Gana Mana\"?",
+    "options": [
+      "Sarojini Naidu",
+      "Rabindranath Tagore",
+      "Bankim Chandra Chattopadhyay",
+      "Muhammad Iqbal"
+    ],
+    "answer": "Rabindranath Tagore",
+    "difficulty": "easy"
+  },
+  {
+    "id": 24,
+    "question": "Which Hindu festival is known as the \"festival of lights\"?",
+    "options": [
+      "Navratri",
+      "Holi",
+      "Onam",
+      "Diwali"
+    ],
+    "answer": "Diwali",
+    "difficulty": "easy"
+  },
+  {
+    "id": 25,
+    "question": "Which Hindu festival is known as the \"festival of colors\"?",
+    "options": [
+      "Pongal",
+      "Baisakhi",
+      "Diwali",
+      "Holi"
+    ],
+    "answer": "Holi",
+    "difficulty": "easy"
+  },
+  {
+    "id": 26,
+    "question": "Which Indian city is considered the country's financial capital?",
+    "options": [
+      "Mumbai",
+      "New Delhi",
+      "Hyderabad",
+      "Chennai"
+    ],
+    "answer": "Mumbai",
+    "difficulty": "easy"
+  },
+  {
+    "id": 27,
+    "question": "Which Indian city is the main hub of the Hindi film industry, nicknamed \"Bollywood\"?",
+    "options": [
+      "New Delhi",
+      "Kolkata",
+      "Pune",
+      "Mumbai"
+    ],
+    "answer": "Mumbai",
+    "difficulty": "easy"
+  },
+  {
+    "id": 28,
+    "question": "Which sport is followed most passionately across India?",
+    "options": [
+      "Football",
+      "Cricket",
+      "Badminton",
+      "Field Hockey"
+    ],
+    "answer": "Cricket",
+    "difficulty": "easy"
+  },
+  {
+    "id": 29,
+    "question": "What does the \"IPL\", India's major domestic cricket league, stand for?",
+    "options": [
+      "Indian Premier League",
+      "Indian Pro League",
+      "International Premier League",
+      "Indian Players League"
+    ],
+    "answer": "Indian Premier League",
+    "difficulty": "easy"
+  },
+  {
+    "id": 30,
+    "question": "What is the name of India's national space agency?",
+    "options": [
+      "NASA",
+      "DRDO",
+      "ISRO",
+      "BARC"
+    ],
+    "answer": "ISRO",
+    "difficulty": "easy"
+  },
+  {
+    "id": 31,
+    "question": "What was the name of India's 2023 mission that landed a spacecraft near the Moon's south pole?",
+    "options": [
+      "Gaganyaan",
+      "Chandrayaan-3",
+      "Aditya-L1",
+      "Mangalyaan"
+    ],
+    "answer": "Chandrayaan-3",
+    "difficulty": "easy"
+  },
+  {
+    "id": 32,
+    "question": "As of 2026, how many states make up India?",
+    "options": [
+      "30",
+      "32",
+      "28",
+      "25"
+    ],
+    "answer": "28",
+    "difficulty": "easy"
+  },
+  {
+    "id": 33,
+    "question": "Which language has the largest number of native speakers within India?",
+    "options": [
+      "Hindi",
+      "Bengali",
+      "Marathi",
+      "Telugu"
+    ],
+    "answer": "Hindi",
+    "difficulty": "easy"
+  },
+  {
+    "id": 34,
+    "question": "Which narrow strait separates India from the island nation of Sri Lanka?",
+    "options": [
+      "Gulf of Mannar",
+      "Strait of Malacca",
+      "Palk Strait",
+      "Ten Degree Channel"
+    ],
+    "answer": "Palk Strait",
+    "difficulty": "easy"
+  },
+  {
+    "id": 35,
+    "question": "Which northeastern Indian state is especially famous for its tea plantations?",
+    "options": [
+      "Assam",
+      "Sikkim",
+      "Meghalaya",
+      "Manipur"
+    ],
+    "answer": "Assam",
+    "difficulty": "easy"
+  },
+  {
+    "id": 36,
+    "question": "Which southern Indian state is famous for its scenic backwaters and houseboats?",
+    "options": [
+      "Karnataka",
+      "Kerala",
+      "Tamil Nadu",
+      "Andhra Pradesh"
+    ],
+    "answer": "Kerala",
+    "difficulty": "easy"
+  },
+  {
+    "id": 37,
+    "question": "Which Indian city is nicknamed the \"Pink City\"?",
+    "options": [
+      "Udaipur",
+      "Jaipur",
+      "Bikaner",
+      "Jodhpur"
+    ],
+    "answer": "Jaipur",
+    "difficulty": "easy"
+  },
+  {
+    "id": 38,
+    "question": "Which Indian city is nicknamed the \"City of Lakes\"?",
+    "options": [
+      "Srinagar",
+      "Jaipur",
+      "Bhopal",
+      "Udaipur"
+    ],
+    "answer": "Udaipur",
+    "difficulty": "easy"
+  },
+  {
+    "id": 39,
+    "question": "What is the national tree of India?",
+    "options": [
+      "Neem",
+      "Mango",
+      "Banyan",
+      "Peepal"
+    ],
+    "answer": "Banyan",
+    "difficulty": "easy"
+  },
+  {
+    "id": 40,
+    "question": "What is the name of the round flatbread traditionally baked in a tandoor oven?",
+    "options": [
+      "Paratha",
+      "Roti",
+      "Chapati",
+      "Naan"
+    ],
+    "answer": "Naan",
+    "difficulty": "easy"
+  },
+  {
+    "id": 41,
+    "question": "What is the name of the popular triangular fried snack filled with spiced potatoes?",
+    "options": [
+      "Vada",
+      "Pakora",
+      "Kachori",
+      "Samosa"
+    ],
+    "answer": "Samosa",
+    "difficulty": "easy"
+  },
+  {
+    "id": 42,
+    "question": "What is the name of the spiced rice dish layered with meat or vegetables?",
+    "options": [
+      "Pilaf",
+      "Khichdi",
+      "Biryani",
+      "Pulao"
+    ],
+    "answer": "Biryani",
+    "difficulty": "easy"
+  },
+  {
+    "id": 43,
+    "question": "Which union territory is a group of coral islands off India's southwestern coast?",
+    "options": [
+      "Puducherry",
+      "Lakshadweep",
+      "Daman and Diu",
+      "Andaman and Nicobar Islands"
+    ],
+    "answer": "Lakshadweep",
+    "difficulty": "easy"
+  },
+  {
+    "id": 44,
+    "question": "Which union territory consists of islands located in the Bay of Bengal?",
+    "options": [
+      "Puducherry",
+      "Lakshadweep",
+      "Daman and Diu",
+      "Andaman and Nicobar Islands"
+    ],
+    "answer": "Andaman and Nicobar Islands",
+    "difficulty": "easy"
+  },
+  {
+    "id": 45,
+    "question": "Which spiritual teacher founded the Sikh religion in Punjab?",
+    "options": [
+      "Guru Gobind Singh",
+      "Guru Nanak",
+      "Kabir",
+      "Ravidas"
+    ],
+    "answer": "Guru Nanak",
+    "difficulty": "easy"
+  },
+  {
+    "id": 46,
+    "question": "Which Gujarat wildlife sanctuary is the last wild home of the Asiatic lion?",
+    "options": [
+      "Sundarbans National Park",
+      "Gir National Park",
+      "Kaziranga National Park",
+      "Ranthambore National Park"
+    ],
+    "answer": "Gir National Park",
+    "difficulty": "easy"
+  },
+  {
+    "id": 47,
+    "question": "India's national emblem is based on a carving atop an ancient pillar built by which emperor?",
+    "options": [
+      "Ashoka",
+      "Akbar",
+      "Chandragupta Maurya",
+      "Harsha"
+    ],
+    "answer": "Ashoka",
+    "difficulty": "easy"
+  },
+  {
+    "id": 48,
+    "question": "What is the national fruit of India?",
+    "options": [
+      "Mango",
+      "Guava",
+      "Banana",
+      "Papaya"
+    ],
+    "answer": "Mango",
+    "difficulty": "easy"
+  },
+  {
+    "id": 49,
+    "question": "As of 2026, who is the President of India?",
+    "options": [
+      "Droupadi Murmu",
+      "Sushma Swaraj",
+      "Ram Nath Kovind",
+      "Pratibha Patil"
+    ],
+    "answer": "Droupadi Murmu",
+    "difficulty": "easy"
+  },
+  {
+    "id": 50,
+    "question": "As of 2026, who is the Prime Minister of India?",
+    "options": [
+      "Rahul Gandhi",
+      "Arvind Kejriwal",
+      "Amit Shah",
+      "Narendra Modi"
+    ],
+    "answer": "Narendra Modi",
+    "difficulty": "easy"
+  },
+  {
+    "id": 51,
+    "question": "Which 1757 battle marked the start of British political control in India?",
+    "options": [
+      "Battle of Panipat",
+      "Battle of Haldighati",
+      "Battle of Plassey",
+      "Battle of Buxar"
+    ],
+    "answer": "Battle of Plassey",
+    "difficulty": "medium"
+  },
+  {
+    "id": 52,
+    "question": "The 1857 uprising against British rule is also widely known by which name?",
+    "options": [
+      "Quit India Movement",
+      "Non-Cooperation Movement",
+      "Salt Satyagraha",
+      "Sepoy Mutiny"
+    ],
+    "answer": "Sepoy Mutiny",
+    "difficulty": "medium"
+  },
+  {
+    "id": 53,
+    "question": "Who led the 1930 Salt March (Dandi March) in protest of British salt taxes?",
+    "options": [
+      "Jawaharlal Nehru",
+      "Subhas Chandra Bose",
+      "Sardar Patel",
+      "Mahatma Gandhi"
+    ],
+    "answer": "Mahatma Gandhi",
+    "difficulty": "medium"
+  },
+  {
+    "id": 54,
+    "question": "Which revolutionary was executed in 1931 after bombing the Central Legislative Assembly to protest British rule?",
+    "options": [
+      "Udham Singh",
+      "Khudiram Bose",
+      "Chandrashekhar Azad",
+      "Bhagat Singh"
+    ],
+    "answer": "Bhagat Singh",
+    "difficulty": "medium"
+  },
+  {
+    "id": 55,
+    "question": "Which nationalist leader founded the Indian National Army (INA) to fight British colonial rule?",
+    "options": [
+      "Bhagat Singh",
+      "V.D. Savarkar",
+      "Lala Lajpat Rai",
+      "Subhas Chandra Bose"
+    ],
+    "answer": "Subhas Chandra Bose",
+    "difficulty": "medium"
+  },
+  {
+    "id": 56,
+    "question": "Who was known as the \"Iron Man of India\" for unifying the princely states after independence?",
+    "options": [
+      "B.R. Ambedkar",
+      "Sardar Vallabhbhai Patel",
+      "Jawaharlal Nehru",
+      "Rajendra Prasad"
+    ],
+    "answer": "Sardar Vallabhbhai Patel",
+    "difficulty": "medium"
+  },
+  {
+    "id": 57,
+    "question": "What is the name of the world's tallest statue, dedicated to Sardar Patel and located in Gujarat?",
+    "options": [
+      "Statue of Peace",
+      "Statue of Unity",
+      "Statue of Belief",
+      "Statue of Equality"
+    ],
+    "answer": "Statue of Unity",
+    "difficulty": "medium"
+  },
+  {
+    "id": 58,
+    "question": "Who became India's first woman Prime Minister?",
+    "options": [
+      "Sonia Gandhi",
+      "Sarojini Naidu",
+      "Pratibha Patil",
+      "Indira Gandhi"
+    ],
+    "answer": "Indira Gandhi",
+    "difficulty": "medium"
+  },
+  {
+    "id": 59,
+    "question": "Who became the first Indian to travel to space, in 1984?",
+    "options": [
+      "Rakesh Sharma",
+      "Kalpana Chawla",
+      "Vikram Sarabhai",
+      "Sunita Williams"
+    ],
+    "answer": "Rakesh Sharma",
+    "difficulty": "medium"
+  },
+  {
+    "id": 60,
+    "question": "Which scientist, known as the \"Missile Man of India,\" served as President from 2002 to 2007?",
+    "options": [
+      "A.P.J. Abdul Kalam",
+      "Homi Bhabha",
+      "Vikram Sarabhai",
+      "C.V. Raman"
+    ],
+    "answer": "A.P.J. Abdul Kalam",
+    "difficulty": "medium"
+  },
+  {
+    "id": 61,
+    "question": "Which Indian physicist won the 1930 Nobel Prize in Physics for his work on the scattering of light?",
+    "options": [
+      "Homi Bhabha",
+      "C.V. Raman",
+      "S. Chandrasekhar",
+      "Satyendra Nath Bose"
+    ],
+    "answer": "C.V. Raman",
+    "difficulty": "medium"
+  },
+  {
+    "id": 62,
+    "question": "Which Bengali poet became the first non-European to win the Nobel Prize in Literature, in 1913?",
+    "options": [
+      "Bankim Chandra Chattopadhyay",
+      "R.K. Narayan",
+      "Sarojini Naidu",
+      "Rabindranath Tagore"
+    ],
+    "answer": "Rabindranath Tagore",
+    "difficulty": "medium"
+  },
+  {
+    "id": 63,
+    "question": "Which economist won the 1998 Nobel Prize in Economics for his work on welfare economics?",
+    "options": [
+      "Jagdish Bhagwati",
+      "Abhijit Banerjee",
+      "Amartya Sen",
+      "Raghuram Rajan"
+    ],
+    "answer": "Amartya Sen",
+    "difficulty": "medium"
+  },
+  {
+    "id": 64,
+    "question": "What is the highest civilian award given in India?",
+    "options": [
+      "Bharat Ratna",
+      "Ashoka Chakra",
+      "Padma Bhushan",
+      "Padma Vibhushan"
+    ],
+    "answer": "Bharat Ratna",
+    "difficulty": "medium"
+  },
+  {
+    "id": 65,
+    "question": "What is the highest military decoration awarded in India?",
+    "options": [
+      "Ashoka Chakra",
+      "Maha Vir Chakra",
+      "Param Vir Chakra",
+      "Vir Chakra"
+    ],
+    "answer": "Param Vir Chakra",
+    "difficulty": "medium"
+  },
+  {
+    "id": 66,
+    "question": "How many seats make up the Lok Sabha, the lower house of India's Parliament?",
+    "options": [
+      "545",
+      "552",
+      "250",
+      "543"
+    ],
+    "answer": "543",
+    "difficulty": "medium"
+  },
+  {
+    "id": 67,
+    "question": "How many seats make up the Rajya Sabha, the upper house of India's Parliament?",
+    "options": [
+      "250",
+      "233",
+      "275",
+      "245"
+    ],
+    "answer": "245",
+    "difficulty": "medium"
+  },
+  {
+    "id": 68,
+    "question": "As of 2026, how many union territories does India have?",
+    "options": [
+      "9",
+      "8",
+      "7",
+      "6"
+    ],
+    "answer": "8",
+    "difficulty": "medium"
+  },
+  {
+    "id": 69,
+    "question": "Which classical dance form originated in the state of Tamil Nadu?",
+    "options": [
+      "Kathakali",
+      "Odissi",
+      "Bharatanatyam",
+      "Kathak"
+    ],
+    "answer": "Bharatanatyam",
+    "difficulty": "medium"
+  },
+  {
+    "id": 70,
+    "question": "Which classical dance form from Kerala is known for its elaborate costumes and painted faces?",
+    "options": [
+      "Kathakali",
+      "Bharatanatyam",
+      "Mohiniyattam",
+      "Manipuri"
+    ],
+    "answer": "Kathakali",
+    "difficulty": "medium"
+  },
+  {
+    "id": 71,
+    "question": "Which classical dance form developed in the royal courts of North India, especially Lucknow and Jaipur?",
+    "options": [
+      "Odissi",
+      "Sattriya",
+      "Kathak",
+      "Bharatanatyam"
+    ],
+    "answer": "Kathak",
+    "difficulty": "medium"
+  },
+  {
+    "id": 72,
+    "question": "Which script is used to write the Hindi language?",
+    "options": [
+      "Gurmukhi",
+      "Bengali script",
+      "Tamil script",
+      "Devanagari"
+    ],
+    "answer": "Devanagari",
+    "difficulty": "medium"
+  },
+  {
+    "id": 73,
+    "question": "Which Indian city is often nicknamed the \"Silicon Valley of India\" for its tech industry?",
+    "options": [
+      "Bangalore",
+      "Chennai",
+      "Pune",
+      "Hyderabad"
+    ],
+    "answer": "Bangalore",
+    "difficulty": "medium"
+  },
+  {
+    "id": 74,
+    "question": "Which Indian city, a historic textile hub, earned the nickname \"Manchester of India\"?",
+    "options": [
+      "Ahmedabad",
+      "Mumbai",
+      "Surat",
+      "Kanpur"
+    ],
+    "answer": "Ahmedabad",
+    "difficulty": "medium"
+  },
+  {
+    "id": 75,
+    "question": "The sacred Ganges river originates at which Himalayan glacier?",
+    "options": [
+      "Gangotri",
+      "Pindari",
+      "Rohtang",
+      "Siachen"
+    ],
+    "answer": "Gangotri",
+    "difficulty": "medium"
+  },
+  {
+    "id": 76,
+    "question": "In which city is the Golden Temple, Sikhism's holiest shrine, located?",
+    "options": [
+      "Ludhiana",
+      "Patiala",
+      "Amritsar",
+      "Chandigarh"
+    ],
+    "answer": "Amritsar",
+    "difficulty": "medium"
+  },
+  {
+    "id": 77,
+    "question": "Which ancient dome-shaped Buddhist monument is located in Sanchi, Madhya Pradesh?",
+    "options": [
+      "Mahabodhi Temple",
+      "Ajanta Caves",
+      "Nalanda Mahavihara",
+      "Great Stupa of Sanchi"
+    ],
+    "answer": "Great Stupa of Sanchi",
+    "difficulty": "medium"
+  },
+  {
+    "id": 78,
+    "question": "Which Maharashtra caves are famed for ancient Buddhist rock-cut paintings and sculptures?",
+    "options": [
+      "Elephanta Caves",
+      "Ellora Caves",
+      "Ajanta Caves",
+      "Badami Caves"
+    ],
+    "answer": "Ajanta Caves",
+    "difficulty": "medium"
+  },
+  {
+    "id": 79,
+    "question": "Which city on the banks of the Ganges is regarded as one of Hinduism's holiest cities?",
+    "options": [
+      "Prayagraj",
+      "Varanasi",
+      "Rishikesh",
+      "Haridwar"
+    ],
+    "answer": "Varanasi",
+    "difficulty": "medium"
+  },
+  {
+    "id": 80,
+    "question": "Which national park, established in 1936, was India's first and is famous for its tigers?",
+    "options": [
+      "Kanha National Park",
+      "Bandhavgarh National Park",
+      "Jim Corbett National Park",
+      "Ranthambore National Park"
+    ],
+    "answer": "Jim Corbett National Park",
+    "difficulty": "medium"
+  },
+  {
+    "id": 81,
+    "question": "Which Assam national park is renowned for its population of one-horned rhinoceroses?",
+    "options": [
+      "Manas National Park",
+      "Nameri National Park",
+      "Dibru-Saikhowa National Park",
+      "Kaziranga National Park"
+    ],
+    "answer": "Kaziranga National Park",
+    "difficulty": "medium"
+  },
+  {
+    "id": 82,
+    "question": "Which mangrove forest, shared with Bangladesh, is a habitat for the Royal Bengal Tiger?",
+    "options": [
+      "Bhitarkanika",
+      "Sundarbans",
+      "Coringa",
+      "Pichavaram"
+    ],
+    "answer": "Sundarbans",
+    "difficulty": "medium"
+  },
+  {
+    "id": 83,
+    "question": "Which ancient Indian dynasty, ruling around the 3rd century BCE, was led by Emperor Ashoka?",
+    "options": [
+      "Chola Empire",
+      "Maurya Empire",
+      "Maratha Empire",
+      "Gupta Empire"
+    ],
+    "answer": "Maurya Empire",
+    "difficulty": "medium"
+  },
+  {
+    "id": 84,
+    "question": "Which South Indian dynasty was renowned for its powerful navy and extensive maritime trade?",
+    "options": [
+      "Vijayanagara Empire",
+      "Pallava Empire",
+      "Pandya Empire",
+      "Chola Empire"
+    ],
+    "answer": "Chola Empire",
+    "difficulty": "medium"
+  },
+  {
+    "id": 85,
+    "question": "Which dynasty's rule, from roughly the 4th to 6th centuries CE, is often called India's \"Golden Age\"?",
+    "options": [
+      "Chola Empire",
+      "Maurya Empire",
+      "Mughal Empire",
+      "Gupta Empire"
+    ],
+    "answer": "Gupta Empire",
+    "difficulty": "medium"
+  },
+  {
+    "id": 86,
+    "question": "Which mountain pass, part of the ancient Silk Route, connects Sikkim in India to Tibet in China?",
+    "options": [
+      "Nathu La",
+      "Khardung La",
+      "Zoji La",
+      "Rohtang Pass"
+    ],
+    "answer": "Nathu La",
+    "difficulty": "medium"
+  },
+  {
+    "id": 87,
+    "question": "Which Indian state shares borders with China, Nepal, and Bhutan simultaneously?",
+    "options": [
+      "Uttarakhand",
+      "West Bengal",
+      "Sikkim",
+      "Arunachal Pradesh"
+    ],
+    "answer": "Sikkim",
+    "difficulty": "medium"
+  },
+  {
+    "id": 88,
+    "question": "Which Indian badminton player became the first Indian woman to win an Olympic silver medal, at Rio 2016?",
+    "options": [
+      "P.V. Sindhu",
+      "Mary Kom",
+      "Saina Nehwal",
+      "Sania Mirza"
+    ],
+    "answer": "P.V. Sindhu",
+    "difficulty": "medium"
+  },
+  {
+    "id": 89,
+    "question": "Which Indian chess player became the country's first Grandmaster, in 1988?",
+    "options": [
+      "Gukesh D",
+      "Viswanathan Anand",
+      "R Praggnanandhaa",
+      "Pentala Harikrishna"
+    ],
+    "answer": "Viswanathan Anand",
+    "difficulty": "medium"
+  },
+  {
+    "id": 90,
+    "question": "In what year did India win its first Cricket World Cup?",
+    "options": [
+      "2003",
+      "1992",
+      "1987",
+      "1983"
+    ],
+    "answer": "1983",
+    "difficulty": "medium"
+  },
+  {
+    "id": 91,
+    "question": "Which stock exchange, founded in 1875 in Mumbai, is Asia's oldest?",
+    "options": [
+      "Multi Commodity Exchange",
+      "Bombay Stock Exchange",
+      "National Stock Exchange",
+      "Calcutta Stock Exchange"
+    ],
+    "answer": "Bombay Stock Exchange",
+    "difficulty": "medium"
+  },
+  {
+    "id": 92,
+    "question": "What is India's top film honor for lifetime contribution to cinema, named after a pioneering filmmaker?",
+    "options": [
+      "Filmfare Award",
+      "Dadasaheb Phalke Award",
+      "National Film Award",
+      "Padma Shri"
+    ],
+    "answer": "Dadasaheb Phalke Award",
+    "difficulty": "medium"
+  },
+  {
+    "id": 93,
+    "question": "Which 1913 film, directed by Dadasaheb Phalke, is considered India's first full-length feature film?",
+    "options": [
+      "Alam Ara",
+      "Mother India",
+      "Raja Harishchandra",
+      "Pather Panchali"
+    ],
+    "answer": "Raja Harishchandra",
+    "difficulty": "medium"
+  },
+  {
+    "id": 94,
+    "question": "Which 1931 film is regarded as India's first sound (\"talkie\") film?",
+    "options": [
+      "Alam Ara",
+      "Devdas",
+      "Kismet",
+      "Raja Harishchandra"
+    ],
+    "answer": "Alam Ara",
+    "difficulty": "medium"
+  },
+  {
+    "id": 95,
+    "question": "Which acclaimed Bengali filmmaker directed the \"Apu Trilogy,\" beginning with Pather Panchali?",
+    "options": [
+      "Ritwik Ghatak",
+      "Mrinal Sen",
+      "Guru Dutt",
+      "Satyajit Ray"
+    ],
+    "answer": "Satyajit Ray",
+    "difficulty": "medium"
+  },
+  {
+    "id": 96,
+    "question": "What is the name of the smaller monetary unit, 100 of which make up one Indian Rupee?",
+    "options": [
+      "Paisa",
+      "Dinar",
+      "Cent",
+      "Anna"
+    ],
+    "answer": "Paisa",
+    "difficulty": "medium"
+  },
+  {
+    "id": 97,
+    "question": "Which Indian state declared Sanskrit as one of its official languages, alongside Hindi, in 2010?",
+    "options": [
+      "Uttarakhand",
+      "Himachal Pradesh",
+      "Uttar Pradesh",
+      "Madhya Pradesh"
+    ],
+    "answer": "Uttarakhand",
+    "difficulty": "medium"
+  },
+  {
+    "id": 98,
+    "question": "Which 2017 tax reform unified most of India's indirect taxes into a single nationwide system?",
+    "options": [
+      "Service Tax",
+      "Central Excise Duty",
+      "Value Added Tax",
+      "Goods and Services Tax"
+    ],
+    "answer": "Goods and Services Tax",
+    "difficulty": "medium"
+  },
+  {
+    "id": 99,
+    "question": "What is the name of the building that houses the Indian Parliament?",
+    "options": [
+      "Rashtrapati Bhavan",
+      "Red Fort",
+      "Sansad Bhavan",
+      "India Gate"
+    ],
+    "answer": "Sansad Bhavan",
+    "difficulty": "medium"
+  },
+  {
+    "id": 100,
+    "question": "Which ancient text, composed around 1500-1200 BCE, is considered the oldest of the four Vedas?",
+    "options": [
+      "Atharvaveda",
+      "Rigveda",
+      "Yajurveda",
+      "Samaveda"
+    ],
+    "answer": "Rigveda",
+    "difficulty": "hard"
+  },
+  {
+    "id": 101,
+    "question": "Which 4th-century BCE Sanskrit scholar wrote the Ashtadhyayi, a foundational treatise on Sanskrit grammar?",
+    "options": [
+      "Panini",
+      "Chanakya",
+      "Aryabhata",
+      "Kalidasa"
+    ],
+    "answer": "Panini",
+    "difficulty": "hard"
+  },
+  {
+    "id": 102,
+    "question": "Which mathematician-astronomer, born in 476 CE, calculated an early value of pi and worked with concepts related to zero?",
+    "options": [
+      "Bhaskara",
+      "Aryabhata",
+      "Varahamihira",
+      "Brahmagupta"
+    ],
+    "answer": "Aryabhata",
+    "difficulty": "hard"
+  },
+  {
+    "id": 103,
+    "question": "Which treatise on statecraft and economics, traditionally attributed to Chanakya, advised the Mauryan court?",
+    "options": [
+      "Panchatantra",
+      "Arthashastra",
+      "Rajatarangini",
+      "Manusmriti"
+    ],
+    "answer": "Arthashastra",
+    "difficulty": "hard"
+  },
+  {
+    "id": 104,
+    "question": "Which 12th-century text, written by Kalhana, chronicles the history of the kings of Kashmir?",
+    "options": [
+      "Manusmriti",
+      "Ain-i-Akbari",
+      "Arthashastra",
+      "Rajatarangini"
+    ],
+    "answer": "Rajatarangini",
+    "difficulty": "hard"
+  },
+  {
+    "id": 105,
+    "question": "Which Mughal emperor authored his own memoir, the Baburnama?",
+    "options": [
+      "Akbar",
+      "Jahangir",
+      "Humayun",
+      "Babur"
+    ],
+    "answer": "Babur",
+    "difficulty": "hard"
+  },
+  {
+    "id": 106,
+    "question": "Which 1526 battle established Mughal rule in India when Babur defeated Ibrahim Lodi?",
+    "options": [
+      "First Battle of Panipat",
+      "Second Battle of Panipat",
+      "Battle of Haldighati",
+      "Battle of Khanwa"
+    ],
+    "answer": "First Battle of Panipat",
+    "difficulty": "hard"
+  },
+  {
+    "id": 107,
+    "question": "Which Rajput ruler famously resisted Mughal emperor Akbar at the 1576 Battle of Haldighati?",
+    "options": [
+      "Rana Sanga",
+      "Maharana Pratap",
+      "Man Singh",
+      "Prithviraj Chauhan"
+    ],
+    "answer": "Maharana Pratap",
+    "difficulty": "hard"
+  },
+  {
+    "id": 108,
+    "question": "Which famous jeweled throne, seized by the Persian invader Nadir Shah in 1739, once belonged to the Mughal emperors?",
+    "options": [
+      "Sun Throne",
+      "Lion Throne",
+      "Peacock Throne",
+      "Diamond Throne"
+    ],
+    "answer": "Peacock Throne",
+    "difficulty": "hard"
+  },
+  {
+    "id": 109,
+    "question": "Which English trading company, chartered in 1600, later came to rule much of the Indian subcontinent?",
+    "options": [
+      "Dutch East India Company",
+      "French East India Company",
+      "East India Company",
+      "Portuguese East India Company"
+    ],
+    "answer": "East India Company",
+    "difficulty": "hard"
+  },
+  {
+    "id": 110,
+    "question": "Which 1765 treaty granted the British East India Company the right to collect revenue (Diwani) in Bengal, Bihar, and Odisha?",
+    "options": [
+      "Treaty of Amritsar",
+      "Treaty of Seringapatam",
+      "Treaty of Allahabad",
+      "Treaty of Bassein"
+    ],
+    "answer": "Treaty of Allahabad",
+    "difficulty": "hard"
+  },
+  {
+    "id": 111,
+    "question": "Which 1919 massacre in Amritsar, where British troops fired on unarmed civilians, galvanized India's independence movement?",
+    "options": [
+      "Jallianwala Bagh massacre",
+      "Moplah Rebellion",
+      "Champaran incident",
+      "Chauri Chaura incident"
+    ],
+    "answer": "Jallianwala Bagh massacre",
+    "difficulty": "hard"
+  },
+  {
+    "id": 112,
+    "question": "Which 1942 movement, launched by Gandhi with the slogan \"Do or Die,\" demanded an immediate end to British rule?",
+    "options": [
+      "Khilafat Movement",
+      "Civil Disobedience Movement",
+      "Non-Cooperation Movement",
+      "Quit India Movement"
+    ],
+    "answer": "Quit India Movement",
+    "difficulty": "hard"
+  },
+  {
+    "id": 113,
+    "question": "Which British lawyer chaired the boundary commission that drew the border used for the 1947 Partition of India?",
+    "options": [
+      "Louis Mountbatten",
+      "Stafford Cripps",
+      "Cyril Radcliffe",
+      "Lord Wavell"
+    ],
+    "answer": "Cyril Radcliffe",
+    "difficulty": "hard"
+  },
+  {
+    "id": 114,
+    "question": "Who was India's last Viceroy under British rule, overseeing the transition to independence in 1947?",
+    "options": [
+      "Lord Linlithgow",
+      "Louis Mountbatten",
+      "Lord Curzon",
+      "Lord Wavell"
+    ],
+    "answer": "Louis Mountbatten",
+    "difficulty": "hard"
+  },
+  {
+    "id": 115,
+    "question": "A princely state's disputed accession triggered the first Indo-Pakistani War of 1947-48. Which state was it?",
+    "options": [
+      "Hyderabad",
+      "Junagadh",
+      "Travancore",
+      "Jammu and Kashmir"
+    ],
+    "answer": "Jammu and Kashmir",
+    "difficulty": "hard"
+  },
+  {
+    "id": 116,
+    "question": "Which 1975-1977 period, declared by Indira Gandhi, saw civil liberties suspended and press censorship imposed nationwide?",
+    "options": [
+      "Operation Blue Star",
+      "Bangladesh Liberation crisis",
+      "The Emergency",
+      "Naxalite Movement"
+    ],
+    "answer": "The Emergency",
+    "difficulty": "hard"
+  },
+  {
+    "id": 117,
+    "question": "Which 1984 military operation, ordered by Indira Gandhi, targeted militants sheltering inside the Golden Temple in Amritsar?",
+    "options": [
+      "Operation Cactus",
+      "Operation Blue Star",
+      "Operation Vijay",
+      "Operation Meghdoot"
+    ],
+    "answer": "Operation Blue Star",
+    "difficulty": "hard"
+  },
+  {
+    "id": 118,
+    "question": "What was the codename for India's first nuclear test, conducted in 1974?",
+    "options": [
+      "Trinity",
+      "Smiling Buddha",
+      "Operation Shakti",
+      "Operation Chagai"
+    ],
+    "answer": "Smiling Buddha",
+    "difficulty": "hard"
+  },
+  {
+    "id": 119,
+    "question": "What was the codename for India's 1998 series of nuclear weapon tests that established it as a declared nuclear power?",
+    "options": [
+      "Smiling Buddha",
+      "Operation Shakti",
+      "Operation Parakram",
+      "Operation Brasstacks"
+    ],
+    "answer": "Operation Shakti",
+    "difficulty": "hard"
+  },
+  {
+    "id": 120,
+    "question": "Which 1971 war resulted in the creation of Bangladesh as an independent nation?",
+    "options": [
+      "Kargil War",
+      "Sino-Indian War",
+      "Indo-Pakistani War of 1965",
+      "Indo-Pakistani War of 1971"
+    ],
+    "answer": "Indo-Pakistani War of 1971",
+    "difficulty": "hard"
+  },
+  {
+    "id": 121,
+    "question": "Which 1962 conflict was fought between India and China over disputed Himalayan border territories?",
+    "options": [
+      "Indo-Pakistani War of 1965",
+      "Sino-Indian War",
+      "Kargil War",
+      "Doklam standoff"
+    ],
+    "answer": "Sino-Indian War",
+    "difficulty": "hard"
+  },
+  {
+    "id": 122,
+    "question": "Which 1999 conflict was fought between India and Pakistan in the mountainous Kargil district of Kashmir?",
+    "options": [
+      "Siachen conflict",
+      "Sino-Indian War",
+      "Operation Parakram",
+      "Kargil War"
+    ],
+    "answer": "Kargil War",
+    "difficulty": "hard"
+  },
+  {
+    "id": 123,
+    "question": "Which set of economic reforms, initiated under Finance Minister Manmohan Singh in 1991, liberalized India's economy?",
+    "options": [
+      "Garibi Hatao program",
+      "Bank Nationalization",
+      "Green Revolution",
+      "1991 Economic Reforms"
+    ],
+    "answer": "1991 Economic Reforms",
+    "difficulty": "hard"
+  },
+  {
+    "id": 124,
+    "question": "Which agricultural initiative, associated with scientist M.S. Swaminathan in the 1960s, dramatically boosted India's food grain output?",
+    "options": [
+      "Green Revolution",
+      "Blue Revolution",
+      "Yellow Revolution",
+      "White Revolution"
+    ],
+    "answer": "Green Revolution",
+    "difficulty": "hard"
+  },
+  {
+    "id": 125,
+    "question": "Which \"revolution,\" associated with Verghese Kurien, transformed India into the world's largest milk producer?",
+    "options": [
+      "Silver Revolution",
+      "White Revolution",
+      "Blue Revolution",
+      "Green Revolution"
+    ],
+    "answer": "White Revolution",
+    "difficulty": "hard"
+  },
+  {
+    "id": 126,
+    "question": "Which critically endangered big cat is found in the wild only in the Gir Forest of Gujarat?",
+    "options": [
+      "Indian Wolf",
+      "Asiatic Lion",
+      "Clouded Leopard",
+      "Snow Leopard"
+    ],
+    "answer": "Asiatic Lion",
+    "difficulty": "hard"
+  },
+  {
+    "id": 127,
+    "question": "Which endangered primate, native to the Western Ghats, is known for the distinctive white mane resembling a lion's?",
+    "options": [
+      "Bonnet Macaque",
+      "Lion-tailed Macaque",
+      "Nilgiri Langur",
+      "Hoolock Gibbon"
+    ],
+    "answer": "Lion-tailed Macaque",
+    "difficulty": "hard"
+  },
+  {
+    "id": 128,
+    "question": "Which critically endangered grassland bird, among the heaviest flying birds in the world, is native to India?",
+    "options": [
+      "Lesser Florican",
+      "Sarus Crane",
+      "Indian Peafowl",
+      "Great Indian Bustard"
+    ],
+    "answer": "Great Indian Bustard",
+    "difficulty": "hard"
+  },
+  {
+    "id": 129,
+    "question": "Which functionally blind river dolphin, found in the Ganges and Brahmaputra, is India's national aquatic animal?",
+    "options": [
+      "Irrawaddy Dolphin",
+      "Ganges River Dolphin",
+      "Indus River Dolphin",
+      "Finless Porpoise"
+    ],
+    "answer": "Ganges River Dolphin",
+    "difficulty": "hard"
+  },
+  {
+    "id": 130,
+    "question": "Which classical Sanskrit playwright, often called \"the Shakespeare of India,\" wrote Abhijnanasakuntalam?",
+    "options": [
+      "Bhasa",
+      "Vishakhadatta",
+      "Kalidasa",
+      "Bhavabhuti"
+    ],
+    "answer": "Kalidasa",
+    "difficulty": "hard"
+  },
+  {
+    "id": 131,
+    "question": "Which epic, traditionally attributed to the sage Valmiki, narrates the story of Prince Rama?",
+    "options": [
+      "Ramayana",
+      "Puranas",
+      "Vedas",
+      "Mahabharata"
+    ],
+    "answer": "Ramayana",
+    "difficulty": "hard"
+  },
+  {
+    "id": 132,
+    "question": "Which philosophical dialogue, embedded within the Mahabharata, records a conversation between Prince Arjuna and Lord Krishna?",
+    "options": [
+      "Puranas",
+      "Manusmriti",
+      "Upanishads",
+      "Bhagavad Gita"
+    ],
+    "answer": "Bhagavad Gita",
+    "difficulty": "hard"
+  },
+  {
+    "id": 133,
+    "question": "Which 8th-century philosopher is credited with consolidating the Hindu philosophical doctrine of Advaita Vedanta?",
+    "options": [
+      "Adi Shankaracharya",
+      "Chaitanya Mahaprabhu",
+      "Madhvacharya",
+      "Ramanuja"
+    ],
+    "answer": "Adi Shankaracharya",
+    "difficulty": "hard"
+  },
+  {
+    "id": 134,
+    "question": "Which medieval Bhakti-movement poet-saint is renowned for her devotional songs dedicated to Krishna?",
+    "options": [
+      "Lal Ded",
+      "Meera Bai",
+      "Andal",
+      "Akka Mahadevi"
+    ],
+    "answer": "Meera Bai",
+    "difficulty": "hard"
+  },
+  {
+    "id": 135,
+    "question": "Which 14th-century Sufi mystic of the Chishti order, buried at a widely visited Delhi dargah, is closely tied to that city's spiritual history?",
+    "options": [
+      "Nizamuddin Auliya",
+      "Amir Khusrau",
+      "Baba Farid",
+      "Moinuddin Chishti"
+    ],
+    "answer": "Nizamuddin Auliya",
+    "difficulty": "hard"
+  },
+  {
+    "id": 136,
+    "question": "Which largely self-taught Indian mathematician made major contributions to number theory while corresponding with G.H. Hardy at Cambridge?",
+    "options": [
+      "Harish-Chandra",
+      "C.R. Rao",
+      "Srinivasa Ramanujan",
+      "D.R. Kaprekar"
+    ],
+    "answer": "Srinivasa Ramanujan",
+    "difficulty": "hard"
+  },
+  {
+    "id": 137,
+    "question": "Which Indian physicist's collaboration with Albert Einstein led to a class of particles being named \"bosons\"?",
+    "options": [
+      "Homi Bhabha",
+      "Satyendra Nath Bose",
+      "Meghnad Saha",
+      "C.V. Raman"
+    ],
+    "answer": "Satyendra Nath Bose",
+    "difficulty": "hard"
+  },
+  {
+    "id": 138,
+    "question": "Which Indian-born astrophysicist won the 1983 Nobel Prize in Physics for work on the structure and evolution of stars?",
+    "options": [
+      "Venkatraman Ramakrishnan",
+      "Har Gobind Khorana",
+      "Abdus Salam",
+      "Subrahmanyan Chandrasekhar"
+    ],
+    "answer": "Subrahmanyan Chandrasekhar",
+    "difficulty": "hard"
+  },
+  {
+    "id": 139,
+    "question": "Which Indian-born economist won the 2019 Nobel Prize in Economics for experimental work on alleviating global poverty?",
+    "options": [
+      "Amartya Sen",
+      "Raghuram Rajan",
+      "Kaushik Basu",
+      "Abhijit Banerjee"
+    ],
+    "answer": "Abhijit Banerjee",
+    "difficulty": "hard"
+  },
+  {
+    "id": 140,
+    "question": "Which classical dance-drama form from Andhra Pradesh, historically performed by devadasis, blends dance, music, and storytelling?",
+    "options": [
+      "Kuchipudi",
+      "Mohiniyattam",
+      "Odissi",
+      "Bharatanatyam"
+    ],
+    "answer": "Kuchipudi",
+    "difficulty": "hard"
+  },
+  {
+    "id": 141,
+    "question": "Which Assamese classical dance form, tied to the Vaishnavite monasteries founded by Srimanta Sankardev, is performed largely by monks?",
+    "options": [
+      "Kathakali",
+      "Manipuri",
+      "Sattriya",
+      "Bihu"
+    ],
+    "answer": "Sattriya",
+    "difficulty": "hard"
+  },
+  {
+    "id": 142,
+    "question": "Which centuries-old martial art, originating in Kerala, is considered one of the oldest fighting systems in the world?",
+    "options": [
+      "Gatka",
+      "Silambam",
+      "Thang-Ta",
+      "Kalaripayattu"
+    ],
+    "answer": "Kalaripayattu",
+    "difficulty": "hard"
+  },
+  {
+    "id": 143,
+    "question": "Which princely state, ruled by the Nizam and holding immense wealth, was integrated into India by force in 1948 through \"Operation Polo\"?",
+    "options": [
+      "Hyderabad",
+      "Jammu and Kashmir",
+      "Travancore",
+      "Junagadh"
+    ],
+    "answer": "Hyderabad",
+    "difficulty": "hard"
+  },
+  {
+    "id": 144,
+    "question": "Which coastal territory remained a Portuguese colony until it was annexed by India in 1961?",
+    "options": [
+      "Dadra and Nagar Haveli",
+      "Puducherry",
+      "Goa",
+      "Daman and Diu"
+    ],
+    "answer": "Goa",
+    "difficulty": "hard"
+  },
+  {
+    "id": 145,
+    "question": "Which French colonial enclave on India's southeastern coast was transferred to Indian control in 1954?",
+    "options": [
+      "Goa",
+      "Daman",
+      "Chandannagar",
+      "Puducherry"
+    ],
+    "answer": "Puducherry",
+    "difficulty": "hard"
+  },
+  {
+    "id": 146,
+    "question": "Which Trinidadian writer of Indian origin won the 2001 Nobel Prize in Literature for works including \"A House for Mr Biswas\"?",
+    "options": [
+      "Jhumpa Lahiri",
+      "Salman Rushdie",
+      "V.S. Naipaul",
+      "Vikram Seth"
+    ],
+    "answer": "V.S. Naipaul",
+    "difficulty": "hard"
+  },
+  {
+    "id": 147,
+    "question": "Which Indian business conglomerate, founded by Jamsetji Tata in 1868, grew into one of the country's largest industrial groups?",
+    "options": [
+      "Tata Group",
+      "Reliance Industries",
+      "Birla Group",
+      "Godrej Group"
+    ],
+    "answer": "Tata Group",
+    "difficulty": "hard"
+  },
+  {
+    "id": 148,
+    "question": "Which constitutional article, abrogated in 2019, had granted special autonomous status to Jammu and Kashmir?",
+    "options": [
+      "Article 370",
+      "Article 371",
+      "Article 356",
+      "Article 35A"
+    ],
+    "answer": "Article 370",
+    "difficulty": "hard"
+  }
+]
