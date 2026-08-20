@@ -216,6 +216,7 @@ function showComingSoon() {
   const interested = localStorage.getItem('_removeAdsInterest') === '1';
   optionsWrap.innerHTML = `
     <p>Coming soon — we're putting the finishing touches on this.</p>
+    <p style="opacity:0.8;font-size:0.9em">Planned pricing: <strong>€2.00/month</strong> or <strong>€10.00 once</strong> (forever) — final price may vary by region.</p>
     <label style="display:flex;align-items:center;gap:8px;font-weight:normal;cursor:${interested ? 'default' : 'pointer'}">
       <input type="checkbox" id="raInterestCheck" ${interested ? 'checked disabled' : ''} />
       <span id="raInterestLabel">${interested ? "Thanks — we'll let you know!" : '🔔 Let me know when this is ready'}</span>

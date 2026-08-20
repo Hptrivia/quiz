@@ -61,7 +61,7 @@ const RC_CACHE_KEY = '_rcAdsRemoved';
 // Purchase flow isn't tested on a real device build yet — keep the paywall
 // page showing "Coming Soon" (see remove-ads.js initAppPaywall) until a
 // build with the native RevenueCat plugin has been through a real purchase.
-// Entry points (theme card, "Remove Ads Instead" popup button) stay visible
+// Entry points (theme card, "Remove Ads" popup button) stay visible
 // either way so we can gauge interest before the flow goes live.
 const REMOVE_ADS_LIVE = false;
 
@@ -404,7 +404,7 @@ function _offerRewardedLifeline(name, onEarned, promptHtml) {
     <p style="margin:0 0 16px;font-size:1.1em">${promptHtml || `Watch a short ad to use <strong>${name}</strong>?`}</p>
     <button id="_adYes" style="margin-right:8px;padding:10px 20px;border-radius:8px;background:#6c63ff;color:#fff;border:none;cursor:pointer;font-size:1em">Watch Ad</button>
     <button id="_adNo" style="padding:10px 20px;border-radius:8px;background:#444;color:#fff;border:none;cursor:pointer;font-size:1em">Cancel</button>
-    <div style="margin-top:14px"><button id="_adRemoveAds" style="padding:8px 16px;border-radius:8px;background:none;border:1px solid #6c63ff;color:#6c63ff;cursor:pointer;font-size:0.85em">Remove Ads Instead</button></div>
+    <div style="margin-top:14px"><button id="_adRemoveAds" style="padding:8px 16px;border-radius:8px;background:none;border:1px solid #6c63ff;color:#6c63ff;cursor:pointer;font-size:0.85em">Remove Ads</button></div>
   </div>`;
   document.body.appendChild(overlay);
   overlay.querySelector('#_adNo').onclick = () => overlay.remove();
