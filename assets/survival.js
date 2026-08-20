@@ -57,8 +57,9 @@ async function renderMultiThemeSurvival() {
     fiftyBtn.disabled = (inApp ? false : !state.fiftyAvailable) || state.answerLocked || state.gameOver;
     friendBtn.disabled = (inApp ? false : !state.friendAvailable) || state.answerLocked || state.gameOver;
     const _inApp = typeof isInApp === 'function' && isInApp();
-    fiftyBtn.textContent = state.fiftyAvailable ? "50-50" : (state.lifelineUsedThisQ ? "50-50 Used" : (_inApp ? "50-50 (Watch Ad)" : "50-50 Used"));
-    friendBtn.textContent = state.friendAvailable ? "Call a Friend" : (state.lifelineUsedThisQ ? "Friend Used" : (_inApp ? "Friend (Watch Ad)" : "Friend Used"));
+    const _adsGone = _inApp && typeof isAdsRemoved === 'function' && isAdsRemoved();
+    fiftyBtn.textContent = state.fiftyAvailable ? "50-50" : (state.lifelineUsedThisQ ? "50-50 Used" : (_adsGone ? "50-50" : (_inApp ? "50-50 (Watch Ad)" : "50-50 Used")));
+    friendBtn.textContent = state.friendAvailable ? "Call a Friend" : (state.lifelineUsedThisQ ? "Friend Used" : (_adsGone ? "Call a Friend" : (_inApp ? "Friend (Watch Ad)" : "Friend Used")));
     fiftyBtn.classList.toggle("used-lifeline", !state.fiftyAvailable);
     friendBtn.classList.toggle("used-lifeline", !state.friendAvailable);
   }
@@ -134,7 +135,8 @@ async function renderMultiThemeSurvival() {
   function useFiftyFifty() {
     if (state.answerLocked || state.gameOver) return;
     if (!state.fiftyAvailable) {
-      if (typeof isInApp === 'function' && isInApp()) _offerRewardedLifeline('50/50', () => { state.fiftyAvailable = true; useFiftyFifty(); });
+      if (typeof isAdsRemoved === 'function' && isAdsRemoved()) { state.fiftyAvailable = true; useFiftyFifty(); }
+      else if (typeof isInApp === 'function' && isInApp()) _offerRewardedLifeline('50/50', () => { state.fiftyAvailable = true; useFiftyFifty(); });
       return;
     }
     const q = getCurrentQuestion();
@@ -154,7 +156,8 @@ async function renderMultiThemeSurvival() {
   function useCallFriend() {
     if (state.answerLocked || state.gameOver) return;
     if (!state.friendAvailable) {
-      if (typeof isInApp === 'function' && isInApp()) _offerRewardedLifeline('Call a Friend', () => { state.friendAvailable = true; useCallFriend(); });
+      if (typeof isAdsRemoved === 'function' && isAdsRemoved()) { state.friendAvailable = true; useCallFriend(); }
+      else if (typeof isInApp === 'function' && isInApp()) _offerRewardedLifeline('Call a Friend', () => { state.friendAvailable = true; useCallFriend(); });
       return;
     }
     const q = getCurrentQuestion();
@@ -418,8 +421,9 @@ async function renderSurvivalPage() {
     friendBtn.disabled = (inApp ? false : !state.friendAvailable) || state.answerLocked || state.gameOver;
 
     const _inApp = typeof isInApp === 'function' && isInApp();
-    fiftyBtn.textContent = state.fiftyAvailable ? "50-50" : (state.lifelineUsedThisQ ? "50-50 Used" : (_inApp ? "50-50 (Watch Ad)" : "50-50 Used"));
-    friendBtn.textContent = state.friendAvailable ? "Call a Friend" : (state.lifelineUsedThisQ ? "Friend Used" : (_inApp ? "Friend (Watch Ad)" : "Friend Used"));
+    const _adsGone = _inApp && typeof isAdsRemoved === 'function' && isAdsRemoved();
+    fiftyBtn.textContent = state.fiftyAvailable ? "50-50" : (state.lifelineUsedThisQ ? "50-50 Used" : (_adsGone ? "50-50" : (_inApp ? "50-50 (Watch Ad)" : "50-50 Used")));
+    friendBtn.textContent = state.friendAvailable ? "Call a Friend" : (state.lifelineUsedThisQ ? "Friend Used" : (_adsGone ? "Call a Friend" : (_inApp ? "Friend (Watch Ad)" : "Friend Used")));
 
     fiftyBtn.classList.toggle("used-lifeline", !state.fiftyAvailable);
     friendBtn.classList.toggle("used-lifeline", !state.friendAvailable);
@@ -668,7 +672,8 @@ async function renderSurvivalPage() {
   function useFiftyFifty() {
     if (state.answerLocked || state.gameOver) return;
     if (!state.fiftyAvailable) {
-      if (typeof isInApp === 'function' && isInApp()) _offerRewardedLifeline('50/50', () => { state.fiftyAvailable = true; useFiftyFifty(); });
+      if (typeof isAdsRemoved === 'function' && isAdsRemoved()) { state.fiftyAvailable = true; useFiftyFifty(); }
+      else if (typeof isInApp === 'function' && isInApp()) _offerRewardedLifeline('50/50', () => { state.fiftyAvailable = true; useFiftyFifty(); });
       return;
     }
 
@@ -696,7 +701,8 @@ async function renderSurvivalPage() {
   function useCallFriend() {
     if (state.answerLocked || state.gameOver) return;
     if (!state.friendAvailable) {
-      if (typeof isInApp === 'function' && isInApp()) _offerRewardedLifeline('Call a Friend', () => { state.friendAvailable = true; useCallFriend(); });
+      if (typeof isAdsRemoved === 'function' && isAdsRemoved()) { state.friendAvailable = true; useCallFriend(); }
+      else if (typeof isInApp === 'function' && isInApp()) _offerRewardedLifeline('Call a Friend', () => { state.friendAvailable = true; useCallFriend(); });
       return;
     }
 

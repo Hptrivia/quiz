@@ -142,10 +142,73 @@ function initPwaInstall() {
   }
 }
 
+// Native app paywall — RevenueCat "Remove Ads" (monthly + one-time). Replaces
+// the web Ko-fi content entirely when running inside the Capacitor app.
+async function initAppPaywall() {
+  const optionsWrap = document.getElementById('raAppOptions');
+  const indicator = document.getElementById('raAppPremiumIndicator');
+  const restoreBtn = document.getElementById('raRestoreBtn');
+  const restoreMsg = document.getElementById('raRestoreMsg');
+
+  const showRemoved = () => {
+    optionsWrap.innerHTML = '';
+    restoreBtn.style.display = 'none';
+    indicator.textContent = '✓ Ads removed — enjoy!';
+    indicator.style.display = 'block';
+  };
+
+  if (typeof isAdsRemoved === 'function' && isAdsRemoved()) {
+    showRemoved();
+    return;
+  }
+
+  if (typeof rcInit === 'function') await rcInit();
+  const offering = typeof rcGetOfferings === 'function' ? await rcGetOfferings() : null;
+  const monthly = offering?.monthly;
+  const lifetime = offering?.lifetime;
+
+  if (!monthly && !lifetime) {
+    optionsWrap.innerHTML = '<p>Unable to load pricing. Check your connection and try again.</p>';
+    return;
+  }
+
+  optionsWrap.innerHTML = `
+    ${monthly ? `<button class="primary-btn" id="raMonthlyBtn" type="button">${monthly.product.priceString} / month — Remove Ads</button>` : ''}
+    ${lifetime ? `<button class="primary-btn" id="raLifetimeBtn" type="button">⭐ ${lifetime.product.priceString} once — Remove Ads Forever</button>` : ''}
+  `;
+
+  const handlePurchase = async (pkg, btn) => {
+    if (!pkg || !btn) return;
+    btn.disabled = true;
+    const original = btn.textContent;
+    btn.textContent = 'Processing...';
+    const ok = await rcPurchasePackage(pkg);
+    if (ok) showRemoved();
+    else { btn.disabled = false; btn.textContent = original; }
+  };
+
+  document.getElementById('raMonthlyBtn')?.addEventListener('click', (e) => handlePurchase(monthly, e.currentTarget));
+  document.getElementById('raLifetimeBtn')?.addEventListener('click', (e) => handlePurchase(lifetime, e.currentTarget));
+
+  restoreBtn.addEventListener('click', async () => {
+    restoreBtn.disabled = true;
+    restoreMsg.textContent = 'Checking...';
+    const ok = await rcRestorePurchases();
+    if (ok) { showRemoved(); restoreMsg.textContent = ''; }
+    else { restoreBtn.disabled = false; restoreMsg.textContent = 'No previous purchase found.'; }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   if (document.body.dataset.page === "remove-ads") {
-    initCoffeePage();
-    initAppQr();
-    initPwaInstall();
+    if (typeof isInApp === 'function' && isInApp()) {
+      document.getElementById('raWebContent').style.display = 'none';
+      document.getElementById('raAppContent').style.display = '';
+      initAppPaywall();
+    } else {
+      initCoffeePage();
+      initAppQr();
+      initPwaInstall();
+    }
   }
 });

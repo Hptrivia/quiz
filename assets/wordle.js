@@ -322,7 +322,10 @@ async function renderWordleMashupMode(themesParam) {
           if (currentWordInPage < pageWords.length - 1) loadWord(currentWordInPage + 1);
           else if (nextPageHref) window.location.href = nextPageHref;
         };
-        if (useReward) { adMobShowBanner(); _offerRewardedLifeline('Next Word', advance); }
+        if (useReward) {
+          if (typeof isAdsRemoved === 'function' && isAdsRemoved()) advance();
+          else { adMobShowBanner(); _offerRewardedLifeline('Next Word', advance); }
+        }
         else advance();
       });
     }
@@ -484,7 +487,10 @@ async function renderWordleMashupMode(themesParam) {
       if (currentWordInPage < pageWords.length - 1) loadWord(currentWordInPage + 1);
       else if (safePage < totalPages) window.location.href = `wordle.html?themes=${themesParam}&page=${safePage + 1}`;
     };
-    if (isInApp() && wordNum % 2 === 0 && hasNext) { adMobShowBanner(); _offerRewardedLifeline('Next Word', advance); }
+    if (isInApp() && wordNum % 2 === 0 && hasNext) {
+      if (typeof isAdsRemoved === 'function' && isAdsRemoved()) advance();
+      else { adMobShowBanner(); _offerRewardedLifeline('Next Word', advance); }
+    }
     else advance();
   });
 
@@ -890,7 +896,10 @@ async function renderWordlePage() {
           if (currentWordInPage < pageWords.length - 1) loadWord(currentWordInPage + 1);
           else if (nextPageHref) window.location.href = nextPageHref;
         };
-        if (useReward) { adMobShowBanner(); _offerRewardedLifeline('Next Word', advance); }
+        if (useReward) {
+          if (typeof isAdsRemoved === 'function' && isAdsRemoved()) advance();
+          else { adMobShowBanner(); _offerRewardedLifeline('Next Word', advance); }
+        }
         else advance();
       });
     }
@@ -1138,7 +1147,10 @@ async function renderWordlePage() {
         window.location.href = `wordle.html?theme=${theme.slug}&page=${safePage + 1}`;
       }
     };
-    if (isInApp() && wordNum % 2 === 0 && hasNext) { adMobShowBanner(); _offerRewardedLifeline('Next Word', advance); }
+    if (isInApp() && wordNum % 2 === 0 && hasNext) {
+      if (typeof isAdsRemoved === 'function' && isAdsRemoved()) advance();
+      else { adMobShowBanner(); _offerRewardedLifeline('Next Word', advance); }
+    }
     else advance();
   });
 

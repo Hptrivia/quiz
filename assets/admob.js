@@ -48,6 +48,86 @@ function isInApp() {
   return !!(window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative));
 }
 
+// RevenueCat — native in-app "Remove Ads" purchase (Android only for now; iOS key
+// pending until we set up App Store Connect). Cache-first: the last known
+// entitlement state is mirrored to localStorage so ad gating on boot doesn't have
+// to wait on a network round trip — only a fresh purchase/restore needs the SDK.
+const RC_API_KEYS = {
+  android: 'goog_ibOMKMipvgcZhewTvXnliZnxXsC',
+};
+const RC_ENTITLEMENT_ID = 'no_ads';
+const RC_CACHE_KEY = '_rcAdsRemoved';
+
+let _Purchases = null;
+let _rcReady = false;
+
+function isAdsRemoved() {
+  return localStorage.getItem(RC_CACHE_KEY) === '1';
+}
+
+function _rcApplyCustomerInfo(info) {
+  const active = !!(info && info.entitlements && info.entitlements.active && info.entitlements.active[RC_ENTITLEMENT_ID]);
+  if (active) localStorage.setItem(RC_CACHE_KEY, '1');
+  else localStorage.removeItem(RC_CACHE_KEY);
+  return active;
+}
+
+async function rcInit() {
+  if (!isInApp() || _rcReady) return;
+  const apiKey = RC_API_KEYS[window.Capacitor.getPlatform?.()];
+  if (!apiKey) return; // iOS not wired up yet
+  try {
+    _Purchases = window.Capacitor.Plugins.Purchases;
+    await _Purchases.configure({ apiKey });
+    _rcReady = true;
+    _Purchases.addCustomerInfoUpdateListener((customerInfo) => {
+      _rcApplyCustomerInfo(customerInfo);
+    });
+    const { customerInfo } = await _Purchases.getCustomerInfo();
+    _rcApplyCustomerInfo(customerInfo);
+  } catch (e) {
+    console.warn('[RevenueCat] init failed', e);
+  }
+}
+
+async function rcGetOfferings() {
+  if (!_rcReady) return null;
+  try {
+    const offerings = await _Purchases.getOfferings();
+    return offerings?.current || null;
+  } catch (e) {
+    console.warn('[RevenueCat] getOfferings failed', e);
+    return null;
+  }
+}
+
+async function rcPurchasePackage(pkg) {
+  if (!_rcReady) return false;
+  try {
+    const result = await _Purchases.purchasePackage({ aPackage: pkg });
+    const active = _rcApplyCustomerInfo(result?.customerInfo);
+    if (active) { adMobHideBanner(); }
+    return active;
+  } catch (e) {
+    if (e?.userCancelled) return false;
+    console.warn('[RevenueCat] purchase failed', e);
+    return false;
+  }
+}
+
+async function rcRestorePurchases() {
+  if (!_rcReady) return false;
+  try {
+    const { customerInfo } = await _Purchases.restorePurchases();
+    const active = _rcApplyCustomerInfo(customerInfo);
+    if (active) { adMobHideBanner(); }
+    return active;
+  } catch (e) {
+    console.warn('[RevenueCat] restore failed', e);
+    return false;
+  }
+}
+
 // Pings a Telegram bot the first time the app is ever opened on a device,
 // giving a near-real-time "new install" alert. Fires once per device (guarded
 // by localStorage), only inside the native app.
@@ -140,7 +220,7 @@ async function _requestATT() {
 }
 
 async function adMobInit() {
-  if (!isInApp() || !ADMOB_ADS_ENABLED || _adMobReady) return;
+  if (!isInApp() || !ADMOB_ADS_ENABLED || _adMobReady || isAdsRemoved()) return;
   const _modeKey = (() => {
     const p = window.location.pathname;
     if (/\/wordsearch\//.test(p)) return '_iad_wordsearch';
@@ -317,6 +397,7 @@ function _offerRewardedLifeline(name, onEarned, promptHtml) {
     <p style="margin:0 0 16px;font-size:1.1em">${promptHtml || `Watch a short ad to use <strong>${name}</strong>?`}</p>
     <button id="_adYes" style="margin-right:8px;padding:10px 20px;border-radius:8px;background:#6c63ff;color:#fff;border:none;cursor:pointer;font-size:1em">Watch Ad</button>
     <button id="_adNo" style="padding:10px 20px;border-radius:8px;background:#444;color:#fff;border:none;cursor:pointer;font-size:1em">Cancel</button>
+    <div style="margin-top:14px"><button id="_adRemoveAds" style="padding:8px 16px;border-radius:8px;background:none;border:1px solid #6c63ff;color:#6c63ff;cursor:pointer;font-size:0.85em">Remove Ads Instead</button></div>
   </div>`;
   document.body.appendChild(overlay);
   overlay.querySelector('#_adNo').onclick = () => overlay.remove();
@@ -324,6 +405,10 @@ function _offerRewardedLifeline(name, onEarned, promptHtml) {
     overlay.remove();
     const earned = await adMobShowRewarded();
     if (earned || !_rewardedLoaded) onEarned(); // proceed if earned OR ad failed to load
+  };
+  overlay.querySelector('#_adRemoveAds').onclick = () => {
+    overlay.remove();
+    window.location.href = '/remove-ads.html';
   };
 }
 
@@ -336,6 +421,7 @@ function injectRevealMissedButton(wrongQuestions, ctaRow) {
   if (typeof isInApp !== 'function' || !isInApp()) return;
   if (!ADMOB_ADS_ENABLED) return;
   if (typeof isPremiumUser === 'function' && isPremiumUser()) return;
+  if (isAdsRemoved()) return;
   if (ctaRow.querySelector('.reveal-missed-btn')) return;
 
   const btn = document.createElement('button');
@@ -399,7 +485,7 @@ document.addEventListener('click', async (e) => {
       promptHtml = `Watch a short ad to play <strong>${label}</strong>?`;
     }
   }
-  if (!href || !isInApp() || !ADMOB_ADS_ENABLED) return;
+  if (!href || !isInApp() || !ADMOB_ADS_ENABLED || isAdsRemoved()) return;
   e.preventDefault();
   _offerRewardedLifeline(label, () => {
     try {
@@ -414,7 +500,26 @@ document.addEventListener('click', async (e) => {
   }, promptHtml);
 });
 
+// App-only "Remove Ads" card appended to the mode grid on theme pages. Theme
+// pages are static HTML generated from one build template (hundreds of files),
+// so this is injected at runtime rather than baked into the template — the mode
+// grid is the .grid that's a direct child of .panel (theme pages also have a
+// second .grid nested inside .theme-related-quizzes, which we must not touch).
+function injectRemoveAdsThemeCard() {
+  if (!isInApp() || !ADMOB_ADS_ENABLED || isAdsRemoved()) return;
+  if (!/\/themes\//.test(window.location.pathname)) return;
+  const grid = document.querySelector('.panel > .grid');
+  if (!grid || grid.querySelector('.remove-ads-card')) return;
+  const card = document.createElement('a');
+  card.href = '/remove-ads.html';
+  card.className = 'card remove-ads-card';
+  card.innerHTML = `<h3>Remove Ads <span style="font-size:0.65rem;font-weight:700;background:#22c55e;color:#fff;padding:2px 7px;border-radius:4px;vertical-align:middle;margin-left:6px;">GO AD-FREE</span></h3><p>No ads, ever — one-time or monthly</p>`;
+  grid.appendChild(card);
+}
+
 async function _bootInApp() {
+  rcInit();
+  injectRemoveAdsThemeCard();
   if (ADMOB_ADS_ENABLED) {
     // ATT first: the prompt must appear before any data that could be used to
     // track the user is collected (ads SDK start, IP-geolocated install ping).
