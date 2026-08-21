@@ -404,7 +404,7 @@ function _offerRewardedLifeline(name, onEarned, promptHtml, onCancel) {
     <p style="margin:0 0 16px;font-size:1.1em">${promptHtml || `Watch a short ad to use <strong>${name}</strong>?`}</p>
     <button id="_adYes" style="margin-right:8px;padding:10px 20px;border-radius:8px;background:#6c63ff;color:#fff;border:none;cursor:pointer;font-size:1em">Watch Ad</button>
     <button id="_adNo" style="padding:10px 20px;border-radius:8px;background:#444;color:#fff;border:none;cursor:pointer;font-size:1em">Cancel</button>
-    <div style="margin-top:14px"><button id="_adRemoveAds" style="padding:8px 16px;border-radius:8px;background:none;border:1px solid #6c63ff;color:#6c63ff;cursor:pointer;font-size:0.85em">Remove Ads</button></div>
+    <div style="margin-top:14px"><button id="_adRemoveAds" style="padding:10px 20px;border-radius:8px;background:#22c55e;border:none;color:#0b1220;font-weight:700;cursor:pointer;font-size:0.95em">🚫 Remove Ads</button></div>
   </div>`;
   document.body.appendChild(overlay);
   overlay.querySelector('#_adNo').onclick = () => { overlay.remove(); if (onCancel) onCancel(); };
