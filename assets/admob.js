@@ -524,9 +524,24 @@ function injectRemoveAdsThemeCard() {
   grid.appendChild(card);
 }
 
+// App-only "Remove Ads" link appended to the standard site footer (present on
+// nearly every page, generated and static alike) so the option is reachable
+// from anywhere in the app, not just theme pages.
+function injectRemoveAdsFooterLink() {
+  if (!isInApp() || !ADMOB_ADS_ENABLED || isAdsRemoved()) return;
+  const footerLinks = document.querySelector('.footer-links');
+  if (!footerLinks || footerLinks.querySelector('.remove-ads-footer-link')) return;
+  const link = document.createElement('a');
+  link.href = '/remove-ads.html';
+  link.className = 'remove-ads-footer-link';
+  link.textContent = 'Remove Ads';
+  footerLinks.appendChild(link);
+}
+
 async function _bootInApp() {
   rcInit();
   injectRemoveAdsThemeCard();
+  injectRemoveAdsFooterLink();
   if (ADMOB_ADS_ENABLED) {
     // ATT first: the prompt must appear before any data that could be used to
     // track the user is collected (ads SDK start, IP-geolocated install ping).
