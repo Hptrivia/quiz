@@ -1,6 +1,134 @@
 [
   {
     "type": "theme",
+    "slug": "archer",
+    "title": "Archer",
+    "label": "Sitcoms",
+    "date": "2026-08-21",
+    "url": "challenge.html?theme=archer&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "bojack-horseman",
+    "title": "BoJack Horseman",
+    "label": "Sitcoms",
+    "date": "2026-08-21",
+    "url": "challenge.html?theme=bojack-horseman&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "china",
+    "title": "China",
+    "label": "Countries",
+    "date": "2026-08-21",
+    "url": "challenge.html?theme=china&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "russia",
+    "title": "Russia",
+    "label": "Countries",
+    "date": "2026-08-21",
+    "url": "challenge.html?theme=russia&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "x-men",
+    "title": "X-Men",
+    "label": "Movies",
+    "date": "2026-08-21",
+    "url": "challenge.html?theme=x-men&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "fast-and-furious",
+    "title": "Fast & Furious",
+    "label": "Movies",
+    "date": "2026-08-20",
+    "url": "challenge.html?theme=fast-and-furious&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "india",
+    "title": "India",
+    "label": "Countries",
+    "date": "2026-08-20",
+    "url": "challenge.html?theme=india&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "indiana-jones",
+    "title": "Indiana Jones",
+    "label": "Movies",
+    "date": "2026-08-20",
+    "url": "challenge.html?theme=indiana-jones&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "james-bond",
+    "title": "James Bond",
+    "label": "Movies",
+    "date": "2026-08-20",
+    "url": "challenge.html?theme=james-bond&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "john-wick",
+    "title": "John Wick",
+    "label": "Movies",
+    "date": "2026-08-20",
+    "url": "challenge.html?theme=john-wick&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "pirates-of-the-caribbean",
+    "title": "Pirates of the Caribbean",
+    "label": "Movies",
+    "date": "2026-08-20",
+    "url": "challenge.html?theme=pirates-of-the-caribbean&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "slow-horses",
+    "title": "Slow Horses",
+    "label": "TV",
+    "date": "2026-08-20",
+    "url": "challenge.html?theme=slow-horses&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "taylor-swift",
+    "title": "Taylor Swift",
+    "label": "General",
+    "date": "2026-08-20",
+    "url": "challenge.html?theme=taylor-swift&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "terminator",
+    "title": "Terminator",
+    "label": "Movies",
+    "date": "2026-08-20",
+    "url": "challenge.html?theme=terminator&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "the-matrix",
+    "title": "The Matrix",
+    "label": "Movies",
+    "date": "2026-08-20",
+    "url": "challenge.html?theme=the-matrix&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "transformers",
+    "title": "Transformers",
+    "label": "Movies",
+    "date": "2026-08-20",
+    "url": "challenge.html?theme=transformers&round=1"
+  },
+  {
+    "type": "theme",
     "slug": "sitcoms",
     "title": "Sitcoms",
     "label": "General",
@@ -30,133 +158,5 @@
     "label": "TV",
     "date": "2026-08-16",
     "url": "challenge.html?theme=the-handmaids-tale&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "the-last-kingdom",
-    "title": "The Last Kingdom",
-    "label": "TV",
-    "date": "2026-08-16",
-    "url": "challenge.html?theme=the-last-kingdom&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "vikings",
-    "title": "Vikings",
-    "label": "TV",
-    "date": "2026-08-16",
-    "url": "challenge.html?theme=vikings&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "abbott-elementary",
-    "title": "Abbott Elementary",
-    "label": "Sitcoms",
-    "date": "2026-08-14",
-    "url": "challenge.html?theme=abbott-elementary&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "once-upon-a-time",
-    "title": "Once Upon a Time",
-    "label": "TV",
-    "date": "2026-08-14",
-    "url": "challenge.html?theme=once-upon-a-time&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "outer-banks",
-    "title": "Outer Banks",
-    "label": "TV",
-    "date": "2026-08-14",
-    "url": "challenge.html?theme=outer-banks&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "psych",
-    "title": "Psych",
-    "label": "TV",
-    "date": "2026-08-14",
-    "url": "challenge.html?theme=psych&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "stephen-king",
-    "title": "Stephen King",
-    "label": "Books",
-    "date": "2026-08-14",
-    "url": "challenge.html?theme=stephen-king&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "ginny-and-georgia",
-    "title": "Ginny & Georgia",
-    "label": "TV",
-    "date": "2026-08-11",
-    "url": "challenge.html?theme=ginny-and-georgia&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "the-boondocks",
-    "title": "The Boondocks",
-    "label": "Sitcoms",
-    "date": "2026-08-11",
-    "url": "challenge.html?theme=the-boondocks&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "the-wheel-of-time",
-    "title": "The Wheel of Time",
-    "label": "TV",
-    "date": "2026-08-11",
-    "url": "challenge.html?theme=the-wheel-of-time&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "black-mirror",
-    "title": "Black Mirror",
-    "label": "TV",
-    "date": "2026-08-10",
-    "url": "challenge.html?theme=black-mirror&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "the-x-files",
-    "title": "The X-Files",
-    "label": "TV",
-    "date": "2026-08-10",
-    "url": "challenge.html?theme=the-x-files&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "30-rock",
-    "title": "30 Rock",
-    "label": "Sitcoms",
-    "date": "2026-08-09",
-    "url": "challenge.html?theme=30-rock&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "frasier",
-    "title": "Frasier",
-    "label": "Sitcoms",
-    "date": "2026-08-09",
-    "url": "challenge.html?theme=frasier&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "jurassic-park",
-    "title": "Jurassic Park",
-    "label": "Movies",
-    "date": "2026-08-09",
-    "url": "challenge.html?theme=jurassic-park&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "atlanta",
-    "title": "Atlanta",
-    "label": "Sitcoms",
-    "date": "2026-08-07",
-    "url": "challenge.html?theme=atlanta&round=1"
   }
 ]

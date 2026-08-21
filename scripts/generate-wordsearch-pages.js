@@ -211,6 +211,7 @@ if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
 let count = 0;
 const unmatched = [];
 const generatedSlugs = [];
+const onlySlugs = process.env.ONLY_SLUGS ? new Set(process.env.ONLY_SLUGS.split(',')) : null;
 
 for (const [wsTitle] of Object.entries(wordsearchWords)) {
   const theme = titleToTheme[normalizeTitle(wsTitle)];
@@ -219,10 +220,16 @@ for (const [wsTitle] of Object.entries(wordsearchWords)) {
     continue;
   }
 
+  // Every valid theme's slug goes into the sitemap list regardless of the
+  // ONLY_SLUGS filter below — that filter only limits which HTML files get
+  // rewritten (to avoid churning hundreds of pages via the Math.random()
+  // related-themes picker), not which URLs stay in the sitemap.
+  generatedSlugs.push(theme.slug);
+  if (onlySlugs && !onlySlugs.has(theme.slug)) continue;
+
   const html = buildWordsearchPage(theme, themes, wordsearchSet);
   const outPath = path.join(outputDir, `${theme.slug}.html`);
   fs.writeFileSync(outPath, html, "utf8");
-  generatedSlugs.push(theme.slug);
   count++;
 }
 

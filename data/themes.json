@@ -2772,5 +2772,181 @@
     "seoIntro": "Vikings trivia works because it follows one family across generations, giving fans both Ragnar's rise and his sons' separate storylines to track alongside real Norse history and legend.",
     "seoDetail": "A strong Vikings quiz can include Ragnar Lothbrok, Lagertha, Bjorn Ironside, Ivar the Boneless, Floki and Aslaug, the settlement of Kattegat, the raid on Lindisfarne, and the show's blend of historical fact and Norse legend. The theme stays engaging because it spans multiple generations of the same family across the full run of the series.",
     "fanQuestions": true
+  },
+  {
+    "slug": "archer",
+    "title": "Archer",
+    "category": "Sitcoms",
+    "description": "An animated spy-comedy trivia theme built around Archer, following Sterling Archer and the dysfunctional agents of ISIS as their missions collide with office rivalries and chaotic personal lives.",
+    "image": "",
+    "questionFile": "data/archer.txt",
+    "seoIntro": "Archer trivia works because the show pairs genuine spy-thriller plotting with rapid-fire running gags and a cast that never stops bickering, giving fans both mission details and years of in-jokes to be tested on.",
+    "seoDetail": "A strong Archer quiz can include Sterling Archer, Lana Kane, Malory Archer, Cyril Figgis, Cheryl Tunt, Pam Poovey and Dr. Krieger, the agency's various names across seasons, Archer's codename Duchess, and running bits like Danger Zone and Lana's exasperation. The theme stays engaging because it spans the agency's shifting identities, the noir and sci-fi themed seasons, and fourteen seasons of callbacks.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "bojack-horseman",
+    "title": "BoJack Horseman",
+    "category": "Sitcoms",
+    "description": "An animated tragicomedy trivia theme built around BoJack Horseman, following a washed-up '90s sitcom star navigating fame, addiction and relationships in an anthropomorphic version of Hollywoo.",
+    "image": "",
+    "questionFile": "data/bojack.txt",
+    "seoIntro": "BoJack Horseman trivia works because the show mixes absurdist animal-world jokes with genuinely heavy character arcs, giving fans both silly world-building details and real emotional plot beats to be quizzed on.",
+    "seoDetail": "A strong BoJack Horseman quiz can include BoJack Horseman, Princess Carolyn, Diane Nguyen, Mr. Peanutbutter, Todd Chavez, the renaming of Hollywood to Hollywoo, BoJack's old sitcom Horsin' Around, and the show's mix of celebrity cameos and animal puns. The theme stays engaging because it rewards fans who track both the running jokes and the show's long-form character histories.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "x-men",
+    "title": "X-Men",
+    "category": "Movies",
+    "description": "A superhero movie trivia theme built around the X-Men film franchise, covering mutant heroes and villains, their powers, key storylines, and the different eras of the series from the original trilogy through the reboots.",
+    "image": "",
+    "questionFile": "data/xmen.txt",
+    "seoIntro": "X-Men trivia works because the franchise spans decades of films, timelines and cast changes, giving fans a huge range of characters, powers and storylines to be tested on beyond just the core team.",
+    "seoDetail": "A strong X-Men quiz can include Wolverine, Professor X, Magneto, Mystique, Storm, Deadpool, the Weapon X program, adamantium, the Days of Future Past timeline reset, and villains like Apocalypse and William Stryker. The theme stays engaging because it can move between the original trilogy, the prequel era, and the standalone spinoffs without losing thread.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "james-bond",
+    "title": "James Bond",
+    "category": "Movies",
+    "description": "A spy movie trivia theme built around the James Bond franchise, covering Agent 007's missions, villains, gadgets and allies across decades of films and different actors in the role.",
+    "image": "",
+    "questionFile": "data/bond.txt",
+    "seoIntro": "James Bond trivia works because the franchise spans over sixty years of films, giving fans a huge spread of villains, gadgets, theme songs and plot twists to be tested on across every era of 007.",
+    "seoDetail": "A strong James Bond quiz can include Bond, M, Q, Moneypenny, villains like Blofeld and Safin, allies like Vesper Lynd and Felix Leiter, MI6, iconic gadgets, and plot beats from Casino Royale through No Time to Die. The theme stays engaging because it can move between classic Cold War-era Bond and the modern Daniel Craig films.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "fast-and-furious",
+    "title": "Fast & Furious",
+    "category": "Movies",
+    "description": "An action movie trivia theme built around the Fast & Furious franchise, following Dominic Toretto's crew through street racing, heists and increasingly outlandish missions across the globe.",
+    "image": "",
+    "questionFile": "data/furious.txt",
+    "seoIntro": "Fast & Furious trivia works because the franchise has grown from street-racing drama into a globe-hopping heist saga, giving fans plenty of crew history, stunts and callbacks to be tested on across the whole series.",
+    "seoDetail": "A strong Fast & Furious quiz can include Dominic Toretto, Brian O'Conner, Letty Ortiz, Roman, Tej, Luke Hobbs and Deckard Shaw, the crew's family-first philosophy, the heist in Fast Five, and the franchise's escalating set pieces. The theme stays engaging because it spans street racing, government missions, and reunions of characters thought dead.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "slow-horses",
+    "title": "Slow Horses",
+    "category": "TV",
+    "description": "A spy drama trivia theme built around Slow Horses, following the disgraced MI5 agents of Slough House under the command of the irascible Jackson Lamb.",
+    "image": "",
+    "questionFile": "data/horses.txt",
+    "seoIntro": "Slow Horses trivia works because it blends genuine espionage plotting with dry, cutting humor and a cast of exiled agents, giving fans both mission details and the show's sharp character dynamics to be quizzed on.",
+    "seoDetail": "A strong Slow Horses quiz can include Jackson Lamb, River Cartwright, Diana Taverner, Catherine Standish and the rest of the Slough House exiles, MI5's Regent's Park, the source Mick Herron novels, and the disasters that landed each agent in Slough House. The theme stays engaging because every season adapts a distinct spy plot while deepening the same core cast.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "india",
+    "title": "India",
+    "category": "Countries",
+    "description": "A country trivia theme covering Indian geography, states, cities, culture, politics, sport, landmarks, and notable people. It is broad enough to work for general knowledge players while still giving India-focused rounds real variety.",
+    "image": "",
+    "questionFile": "data/india.txt",
+    "seoIntro": "India trivia works well because it can move easily between states, capitals, major cities, national symbols, history, cricket, and cultural identity without feeling repetitive. It gives you more range than a narrow capitals-only or flag-only country quiz.",
+    "seoDetail": "A strong India quiz can draw from New Delhi, Mumbai, the Taj Mahal, the Ganges, the national animal and bird, independence history, cricket culture, Bollywood, religious diversity, and political institutions. That mix helps the theme feel more complete, because players are not only recalling geography but also wider cultural and historical knowledge tied to the country.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "indiana-jones",
+    "title": "Indiana Jones",
+    "category": "Movies",
+    "description": "An adventure movie trivia theme built around Indiana Jones, following the whip-cracking archaeologist through globe-trotting quests for lost relics and ancient treasures.",
+    "image": "",
+    "questionFile": "data/indiana.txt",
+    "seoIntro": "Indiana Jones trivia works because each film sends Indy chasing a different legendary artifact across a different corner of the world, giving fans a huge spread of relics, sidekicks and set pieces to be tested on.",
+    "seoDetail": "A strong Indiana Jones quiz can include Indiana Jones, Marion Ravenwood, Short Round, Henry Jones Sr. and Helena Shaw, artifacts like the Ark of the Covenant, the Holy Grail and the Crystal Skull, and locations from Cairo to Venice to Shanghai. The theme stays engaging because it spans four decades of films while following the same archaeologist-adventurer formula.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "the-matrix",
+    "title": "The Matrix",
+    "category": "Movies",
+    "description": "A sci-fi movie trivia theme built around The Matrix, following Neo and the crew of the Nebuchadnezzar as they fight to free humanity from a simulated reality controlled by machines.",
+    "image": "",
+    "questionFile": "data/matrix.txt",
+    "seoIntro": "The Matrix trivia works because the franchise built a dense, philosophical sci-fi world with its own rules and vocabulary, giving fans both action set pieces and deep lore to be tested on across the trilogy and Resurrections.",
+    "seoDetail": "A strong Matrix quiz can include Neo, Trinity, Morpheus, Agent Smith and the Oracle, the red pill and blue pill, the hovercraft Nebuchadnezzar, Zion, the Sentinels, and the nature of the simulated reality itself. The theme stays engaging because it can move between the original trilogy's mythology and the newer questions raised by Resurrections.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "pirates-of-the-caribbean",
+    "title": "Pirates of the Caribbean",
+    "category": "Movies",
+    "description": "A swashbuckling movie trivia theme built around Pirates of the Caribbean, following Captain Jack Sparrow through cursed treasure, supernatural sea monsters and battles for control of the seas.",
+    "image": "",
+    "questionFile": "data/pirates.txt",
+    "seoIntro": "Pirates of the Caribbean trivia works because the franchise mixes real pirate lore with supernatural curses and sprawling crews, giving fans plenty of ships, artifacts and legends to be tested on across five films.",
+    "seoDetail": "A strong Pirates of the Caribbean quiz can include Jack Sparrow, Will Turner, Elizabeth Swann, Davy Jones, Captain Barbossa and Blackbeard, ships like the Black Pearl and the Flying Dutchman, the Pirate Code, and curses tied to the Caribbean's supernatural legends. The theme stays engaging because it spans multiple generations of pirates and shifting alliances across the series.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "taylor-swift",
+    "title": "Taylor Swift",
+    "category": "General",
+    "description": "A music trivia theme built around Taylor Swift, covering her albums, songs, eras, re-recordings and career milestones from her country debut through global pop stardom.",
+    "image": "",
+    "questionFile": "data/swift.txt",
+    "seoIntro": "Taylor Swift trivia works because her career spans multiple musical eras and a huge, well-documented catalog, giving fans plenty of albums, lyrics and career milestones to be tested on.",
+    "seoDetail": "A strong Taylor Swift quiz can include albums like Fearless, 1989, Reputation and Evermore, her re-recorded 'Taylor's Version' releases, tours like the Eras Tour, and career milestones from her Nashville debut to her Billboard and Grammy history. The theme stays engaging because it can move between song-specific detail and the wider arc of her career.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "terminator",
+    "title": "Terminator",
+    "category": "Movies",
+    "description": "A sci-fi action movie trivia theme built around the Terminator franchise, following the war between humanity and the machines of Skynet across timelines and time-traveling assassins.",
+    "image": "",
+    "questionFile": "data/terminator.txt",
+    "seoIntro": "Terminator trivia works because the franchise's time-travel structure keeps rewriting its own future, giving fans multiple timelines, Terminator models and Judgment Day dates to keep track of and be tested on.",
+    "seoDetail": "A strong Terminator quiz can include Sarah Connor, John Connor, the T-800, T-1000 and other Terminator models, Skynet and Cyberdyne Systems, Judgment Day, and the shifting timelines introduced across the sequels. The theme stays engaging because each film reopens the question of whether the future can actually be changed.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "transformers",
+    "title": "Transformers",
+    "category": "Movies",
+    "description": "A sci-fi action movie trivia theme built around Transformers, following the war between the heroic Autobots and villainous Decepticons as it spills onto Earth.",
+    "image": "",
+    "questionFile": "data/transformers.txt",
+    "seoIntro": "Transformers trivia works because the franchise packs in a huge roster of named robots alongside human characters and escalating alien-tech plots, giving fans plenty of factions, artifacts and set pieces to be tested on.",
+    "seoDetail": "A strong Transformers quiz can include Optimus Prime, Bumblebee, Megatron and Starscream, the Autobots and Decepticons, the AllSpark, human characters like Sam Witwicky and Cade Yeager, and key artifacts and locations across the film series. The theme stays engaging because it spans the original live-action trilogy, its sequels, and the Beast-era prequels.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "john-wick",
+    "title": "John Wick",
+    "category": "Movies",
+    "description": "An action movie trivia theme built around John Wick, following the legendary assassin Baba Yaga as he's pulled back into the criminal underworld he tried to leave behind.",
+    "image": "",
+    "questionFile": "data/wick.txt",
+    "seoIntro": "John Wick trivia works because the franchise builds out an entire criminal underworld with its own rules and institutions, giving fans plenty of lore, allies and set pieces to be tested on across four films.",
+    "seoDetail": "A strong John Wick quiz can include John Wick, Winston, the Continental Hotel, the High Table, the Ruska Roma, John's marker and blood oath, and his reputation as Baba Yaga throughout the underworld. The theme stays engaging because it spans a tightly connected mythology of assassins, hotels and criminal governance across the whole series.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "china",
+    "title": "China",
+    "category": "Countries",
+    "description": "A country trivia theme covering Chinese geography, history, culture, politics, sport, landmarks, and notable people. It is broad enough to work for general knowledge players while still giving China-focused rounds real variety.",
+    "image": "",
+    "questionFile": "data/china.txt",
+    "seoIntro": "China trivia works well because it can move easily between provinces, capitals, major cities, national symbols, history, and cultural identity without feeling repetitive. It gives you more range than a narrow capitals-only or flag-only country quiz.",
+    "seoDetail": "A strong China quiz can draw from Beijing, Shanghai, the Great Wall, the Yangtze and Yellow rivers, the yuan, dynastic history, major cities, cuisine, and political and economic institutions. That mix helps the theme feel more complete, because players are not only recalling geography but also wider cultural and historical knowledge tied to the country.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "russia",
+    "title": "Russia",
+    "category": "Countries",
+    "description": "A country trivia theme covering Russian geography, history, culture, politics, sport, landmarks, and notable people. It is broad enough to work for general knowledge players while still giving Russia-focused rounds real variety.",
+    "image": "",
+    "questionFile": "data/russia.txt",
+    "seoIntro": "Russia trivia works well because it can move easily between regions, capitals, major cities, national symbols, history, and cultural identity without feeling repetitive. It gives you more range than a narrow capitals-only or flag-only country quiz.",
+    "seoDetail": "A strong Russia quiz can draw from Moscow, Saint Petersburg, the eleven time zones, Siberia and Lake Baikal, the ruble, Soviet-era history, literature, and political institutions. That mix helps the theme feel more complete, because players are not only recalling geography but also wider cultural and historical knowledge tied to the country.",
+    "fanQuestions": true
   }
 ]

@@ -1,1778 +1,1814 @@
 [
   {
     "id": 1,
-    "question": "What is the capital of India?",
+    "question": "What is the capital of Vietnam?",
     "options": [
-      "New Delhi",
-      "Mumbai",
-      "Bangalore",
-      "Kolkata"
+      "Hanoi",
+      "Ho Chi Minh City",
+      "Da Nang",
+      "Hue"
     ],
-    "answer": "New Delhi",
+    "answer": "Hanoi",
     "difficulty": "easy"
   },
   {
     "id": 2,
-    "question": "What is the official currency of India?",
+    "question": "What is the largest city in Vietnam by population?",
     "options": [
-      "Dinar",
-      "Rand",
-      "Rupee",
-      "Taka"
+      "Ho Chi Minh City",
+      "Hanoi",
+      "Hai Phong",
+      "Can Tho"
     ],
-    "answer": "Rupee",
+    "answer": "Ho Chi Minh City",
     "difficulty": "easy"
   },
   {
     "id": 3,
-    "question": "What is the national animal of India?",
+    "question": "Which sea borders Vietnam's eastern coastline?",
     "options": [
-      "Bengal Tiger",
-      "Asiatic Lion",
-      "Snow Leopard",
-      "Indian Elephant"
+      "South China Sea",
+      "Andaman Sea",
+      "Arabian Sea",
+      "Coral Sea"
     ],
-    "answer": "Bengal Tiger",
+    "answer": "South China Sea",
     "difficulty": "easy"
   },
   {
     "id": 4,
-    "question": "What is the national bird of India?",
+    "question": "Which UNESCO World Heritage site is famous for thousands of limestone karsts rising from emerald water?",
     "options": [
-      "Indian Roller",
-      "Sarus Crane",
-      "Indian Peacock",
-      "Great Indian Bustard"
+      "Ha Long Bay",
+      "Nha Trang Bay",
+      "Cam Ranh Bay",
+      "Da Nang Bay"
     ],
-    "answer": "Indian Peacock",
+    "answer": "Ha Long Bay",
     "difficulty": "easy"
   },
   {
     "id": 5,
-    "question": "What is the national flower of India?",
+    "question": "Which river delta in southern Vietnam is famous for its floating markets?",
     "options": [
-      "Marigold",
-      "Jasmine",
+      "Mekong Delta",
+      "Red River Delta",
+      "Irrawaddy Delta",
+      "Chao Phraya Delta"
+    ],
+    "answer": "Mekong Delta",
+    "difficulty": "easy"
+  },
+  {
+    "id": 6,
+    "question": "What was Ho Chi Minh City called before being renamed?",
+    "options": [
+      "Saigon",
+      "Hanoi",
+      "Hue",
+      "Da Nang"
+    ],
+    "answer": "Saigon",
+    "difficulty": "easy"
+  },
+  {
+    "id": 7,
+    "question": "Which of these countries does NOT share a land border with Vietnam?",
+    "options": [
+      "Thailand",
+      "China",
+      "Laos",
+      "Cambodia"
+    ],
+    "answer": "Thailand",
+    "difficulty": "easy"
+  },
+  {
+    "id": 8,
+    "question": "What is the official currency of Vietnam?",
+    "options": [
+      "Dong",
+      "Baht",
+      "Kip",
+      "Riel"
+    ],
+    "answer": "Dong",
+    "difficulty": "easy"
+  },
+  {
+    "id": 9,
+    "question": "What is Vietnam's highest mountain, nicknamed the 'Roof of Indochina'?",
+    "options": [
+      "Fansipan",
+      "Bach Ma",
+      "Lang Biang",
+      "Ba Vi"
+    ],
+    "answer": "Fansipan",
+    "difficulty": "easy"
+  },
+  {
+    "id": 10,
+    "question": "Which ancient trading-port town is known for its lantern-lit streets and preserved architecture?",
+    "options": [
+      "Hoi An",
+      "Hue",
+      "Da Lat",
+      "Sapa"
+    ],
+    "answer": "Hoi An",
+    "difficulty": "easy"
+  },
+  {
+    "id": 11,
+    "question": "What is the official language of Vietnam?",
+    "options": [
+      "Vietnamese",
+      "Khmer",
+      "Lao",
+      "Thai"
+    ],
+    "answer": "Vietnamese",
+    "difficulty": "easy"
+  },
+  {
+    "id": 12,
+    "question": "Which city served as the imperial capital under the Nguyen Dynasty?",
+    "options": [
+      "Hue",
+      "Hanoi",
+      "Saigon",
+      "Da Nang"
+    ],
+    "answer": "Hue",
+    "difficulty": "easy"
+  },
+  {
+    "id": 13,
+    "question": "What noodle soup, usually made with beef or chicken broth, is Vietnam's most famous dish?",
+    "options": [
+      "Pho",
+      "Ramen",
+      "Pad Thai",
+      "Laksa"
+    ],
+    "answer": "Pho",
+    "difficulty": "easy"
+  },
+  {
+    "id": 14,
+    "question": "What is the Vietnamese baguette sandwich filled with meat and pickled vegetables called?",
+    "options": [
+      "Banh mi",
+      "Banh xeo",
+      "Banh cuon",
+      "Banh trang"
+    ],
+    "answer": "Banh mi",
+    "difficulty": "easy"
+  },
+  {
+    "id": 15,
+    "question": "What popular drink combines strong coffee with sweetened condensed milk over ice?",
+    "options": [
+      "Ca phe sua da",
+      "Matcha latte",
+      "Bubble tea",
+      "Chai"
+    ],
+    "answer": "Ca phe sua da",
+    "difficulty": "easy"
+  },
+  {
+    "id": 16,
+    "question": "What sizzling savory crepe, filled with pork, shrimp, and bean sprouts, is named for the sound it makes while cooking?",
+    "options": [
+      "Banh xeo",
+      "Banh mi",
+      "Goi cuon",
+      "Cha gio"
+    ],
+    "answer": "Banh xeo",
+    "difficulty": "easy"
+  },
+  {
+    "id": 17,
+    "question": "What are fresh Vietnamese spring rolls wrapped in translucent rice paper called?",
+    "options": [
+      "Goi cuon",
+      "Cha gio",
+      "Banh bao",
+      "Nem nuong"
+    ],
+    "answer": "Goi cuon",
+    "difficulty": "easy"
+  },
+  {
+    "id": 18,
+    "question": "What fermented condiment made from anchovies is a staple flavoring in Vietnamese cooking?",
+    "options": [
+      "Fish sauce",
+      "Soy sauce",
+      "Oyster sauce",
+      "Hoisin sauce"
+    ],
+    "answer": "Fish sauce",
+    "difficulty": "easy"
+  },
+  {
+    "id": 19,
+    "question": "Vietnam is the world's second-largest producer of which crop, behind Brazil?",
+    "options": [
+      "Coffee",
+      "Cocoa",
+      "Tea",
+      "Sugar"
+    ],
+    "answer": "Coffee",
+    "difficulty": "easy"
+  },
+  {
+    "id": 20,
+    "question": "What is the crispy fried version of a Vietnamese spring roll called?",
+    "options": [
+      "Cha gio",
+      "Goi cuon",
+      "Banh cuon",
+      "Banh xeo"
+    ],
+    "answer": "Cha gio",
+    "difficulty": "easy"
+  },
+  {
+    "id": 21,
+    "question": "What Hanoi specialty coffee drink is topped with whipped egg yolk?",
+    "options": [
+      "Egg coffee",
+      "Bubble coffee",
+      "Coconut coffee",
+      "Salt coffee"
+    ],
+    "answer": "Egg coffee",
+    "difficulty": "easy"
+  },
+  {
+    "id": 22,
+    "question": "What tangy soup, made with tamarind, pineapple, and fish or shrimp, is a popular Vietnamese dish?",
+    "options": [
+      "Canh chua",
+      "Pho",
+      "Bun bo Hue",
+      "Mi quang"
+    ],
+    "answer": "Canh chua",
+    "difficulty": "easy"
+  },
+  {
+    "id": 23,
+    "question": "Which Vietnamese-born actor played Short Round in 'Indiana Jones and the Temple of Doom'?",
+    "options": [
+      "Ke Huy Quan",
+      "Hoang Nguyen",
+      "Tran Van Minh",
+      "Le Duc Anh"
+    ],
+    "answer": "Ke Huy Quan",
+    "difficulty": "easy"
+  },
+  {
+    "id": 24,
+    "question": "Which Vietnamese pop star, performing as 'M-TP,' is one of the country's biggest music icons?",
+    "options": [
+      "Son Tung",
+      "Den Vau",
+      "Soobin Hoang Son",
+      "Jack"
+    ],
+    "answer": "Son Tung",
+    "difficulty": "easy"
+  },
+  {
+    "id": 25,
+    "question": "Which Vietnamese-American entrepreneur and YouTuber built a global beauty and cosmetics brand?",
+    "options": [
+      "Michelle Phan",
+      "Ho Ngoc Ha",
+      "Khoi My",
+      "Dong Nhi"
+    ],
+    "answer": "Michelle Phan",
+    "difficulty": "easy"
+  },
+  {
+    "id": 26,
+    "question": "Which Vietnamese singer, nicknamed 'Mr. Dam,' is often called the King of V-pop?",
+    "options": [
+      "Dam Vinh Hung",
+      "Quang Dung",
+      "Lam Truong",
+      "Ngoc Son"
+    ],
+    "answer": "Dam Vinh Hung",
+    "difficulty": "easy"
+  },
+  {
+    "id": 27,
+    "question": "Which actress of Vietnamese and Chinese descent starred in 'The Newsroom' and 'X-Men: Apocalypse'?",
+    "options": [
+      "Olivia Munn",
+      "Maggie Q",
+      "Kristin Kreuk",
+      "Lucy Liu"
+    ],
+    "answer": "Olivia Munn",
+    "difficulty": "easy"
+  },
+  {
+    "id": 28,
+    "question": "What Vietnamese martial art combines striking, grappling, and weapons training?",
+    "options": [
+      "Vovinam",
+      "Taekwondo",
+      "Muay Thai",
+      "Krav Maga"
+    ],
+    "answer": "Vovinam",
+    "difficulty": "easy"
+  },
+  {
+    "id": 29,
+    "question": "Which Vietnamese TV host and comedian is one of the country's most-followed entertainers on social media?",
+    "options": [
+      "Tran Thanh",
+      "Truong Giang",
+      "Chi Tam",
+      "Duy Truong"
+    ],
+    "answer": "Tran Thanh",
+    "difficulty": "easy"
+  },
+  {
+    "id": 30,
+    "question": "What is the traditional palm-leaf conical hat worn across Vietnam called?",
+    "options": [
+      "Non la",
+      "Ao dai",
+      "Nam",
+      "Khan dong"
+    ],
+    "answer": "Non la",
+    "difficulty": "easy"
+  },
+  {
+    "id": 31,
+    "question": "What is the official name of Vietnam's government?",
+    "options": [
+      "Socialist Republic of Vietnam",
+      "Democratic Republic of Vietnam",
+      "People's Republic of Vietnam",
+      "Republic of Vietnam"
+    ],
+    "answer": "Socialist Republic of Vietnam",
+    "difficulty": "easy"
+  },
+  {
+    "id": 32,
+    "question": "Which political party is the sole ruling party of Vietnam?",
+    "options": [
+      "Communist Party of Vietnam",
+      "Nationalist Party",
+      "Socialist Party",
+      "Democratic Party"
+    ],
+    "answer": "Communist Party of Vietnam",
+    "difficulty": "easy"
+  },
+  {
+    "id": 33,
+    "question": "Who was the revolutionary leader regarded as the founding father of modern Vietnam?",
+    "options": [
+      "Ho Chi Minh",
+      "Vo Nguyen Giap",
+      "Le Duan",
+      "Pham Van Dong"
+    ],
+    "answer": "Ho Chi Minh",
+    "difficulty": "easy"
+  },
+  {
+    "id": 34,
+    "question": "What is the name of Vietnam's national legislative body?",
+    "options": [
+      "National Assembly",
+      "Parliament",
+      "Congress",
+      "Politburo"
+    ],
+    "answer": "National Assembly",
+    "difficulty": "easy"
+  },
+  {
+    "id": 35,
+    "question": "In which year did the Vietnam War end with the fall of Saigon?",
+    "options": [
+      "1975",
+      "1968",
+      "1973",
+      "1980"
+    ],
+    "answer": "1975",
+    "difficulty": "easy"
+  },
+  {
+    "id": 36,
+    "question": "Who has served as General Secretary of the Communist Party of Vietnam since 2024?",
+    "options": [
+      "To Lam",
+      "Nguyen Phu Trong",
+      "Luong Cuong",
+      "Pham Minh Chinh"
+    ],
+    "answer": "To Lam",
+    "difficulty": "easy"
+  },
+  {
+    "id": 37,
+    "question": "Which city was the capital of French Indochina?",
+    "options": [
+      "Hanoi",
+      "Saigon",
+      "Hue",
+      "Da Nang"
+    ],
+    "answer": "Hanoi",
+    "difficulty": "easy"
+  },
+  {
+    "id": 38,
+    "question": "Which dynasty was Vietnam's last royal dynasty, ending in 1945?",
+    "options": [
+      "Nguyen Dynasty",
+      "Ly Dynasty",
+      "Tran Dynasty",
+      "Le Dynasty"
+    ],
+    "answer": "Nguyen Dynasty",
+    "difficulty": "easy"
+  },
+  {
+    "id": 39,
+    "question": "Which 1954 battle ended French colonial rule in Vietnam?",
+    "options": [
+      "Battle of Dien Bien Phu",
+      "Battle of Hue",
+      "Tet Offensive",
+      "Battle of Khe Sanh"
+    ],
+    "answer": "Battle of Dien Bien Phu",
+    "difficulty": "easy"
+  },
+  {
+    "id": 40,
+    "question": "Along which line was Vietnam divided into North and South after 1954?",
+    "options": [
+      "17th parallel",
+      "38th parallel",
+      "20th parallel",
+      "Mekong River"
+    ],
+    "answer": "17th parallel",
+    "difficulty": "easy"
+  },
+  {
+    "id": 41,
+    "question": "Which general led Vietnamese forces to victory over the French and later the United States?",
+    "options": [
+      "Vo Nguyen Giap",
+      "Ho Chi Minh",
+      "Le Duan",
+      "Pham Van Dong"
+    ],
+    "answer": "Vo Nguyen Giap",
+    "difficulty": "easy"
+  },
+  {
+    "id": 42,
+    "question": "What is the name of Vietnam's most important holiday, marking the lunar new year?",
+    "options": [
+      "Tet",
+      "Trung Thu",
+      "Vu Lan",
+      "Doan Ngo"
+    ],
+    "answer": "Tet",
+    "difficulty": "easy"
+  },
+  {
+    "id": 43,
+    "question": "What is Vietnam's most popular spectator sport?",
+    "options": [
+      "Football",
+      "Basketball",
+      "Cricket",
+      "Baseball"
+    ],
+    "answer": "Football",
+    "difficulty": "easy"
+  },
+  {
+    "id": 44,
+    "question": "What rare mammal, nicknamed the 'Asian unicorn,' was discovered in Vietnam's forests in 1992?",
+    "options": [
+      "Saola",
+      "Pangolin",
+      "Clouded leopard",
+      "Sun bear"
+    ],
+    "answer": "Saola",
+    "difficulty": "easy"
+  },
+  {
+    "id": 45,
+    "question": "What flower is Vietnam's national flower?",
+    "options": [
       "Lotus",
+      "Orchid",
+      "Cherry blossom",
       "Hibiscus"
     ],
     "answer": "Lotus",
     "difficulty": "easy"
   },
   {
-    "id": 6,
-    "question": "Which river is the longest to flow entirely within India?",
-    "options": [
-      "Ganges",
-      "Yamuna",
-      "Brahmaputra",
-      "Godavari"
-    ],
-    "answer": "Ganges",
-    "difficulty": "easy"
-  },
-  {
-    "id": 7,
-    "question": "Which peak is the highest mountain located entirely within India?",
-    "options": [
-      "Kanchenjunga",
-      "K2",
-      "Nanda Devi",
-      "Annapurna"
-    ],
-    "answer": "Kanchenjunga",
-    "difficulty": "easy"
-  },
-  {
-    "id": 8,
-    "question": "Which ocean lies to the south of India?",
-    "options": [
-      "Pacific Ocean",
-      "Atlantic Ocean",
-      "Indian Ocean",
-      "Arabian Sea"
-    ],
-    "answer": "Indian Ocean",
-    "difficulty": "easy"
-  },
-  {
-    "id": 9,
-    "question": "Which desert covers much of the state of Rajasthan?",
-    "options": [
-      "Rann of Kutch",
-      "Sahara Desert",
-      "Gobi Desert",
-      "Thar Desert"
-    ],
-    "answer": "Thar Desert",
-    "difficulty": "easy"
-  },
-  {
-    "id": 10,
-    "question": "Which sea borders India's western coast?",
-    "options": [
-      "Arabian Sea",
-      "Andaman Sea",
-      "Red Sea",
-      "Bay of Bengal"
-    ],
-    "answer": "Arabian Sea",
-    "difficulty": "easy"
-  },
-  {
-    "id": 11,
-    "question": "Which bay borders India's eastern coast?",
-    "options": [
-      "Arabian Sea",
-      "Gulf of Mannar",
-      "Gulf of Khambhat",
-      "Bay of Bengal"
-    ],
-    "answer": "Bay of Bengal",
-    "difficulty": "easy"
-  },
-  {
-    "id": 12,
-    "question": "Which mountain range runs along India's northern border?",
-    "options": [
-      "Western Ghats",
-      "Aravalli Range",
-      "Eastern Ghats",
-      "Himalayas"
-    ],
-    "answer": "Himalayas",
-    "difficulty": "easy"
-  },
-  {
-    "id": 13,
-    "question": "Which famous white marble monument is located in Agra?",
-    "options": [
-      "Taj Mahal",
-      "Red Fort",
-      "Qutub Minar",
-      "Gateway of India"
-    ],
-    "answer": "Taj Mahal",
-    "difficulty": "easy"
-  },
-  {
-    "id": 14,
-    "question": "Which Mughal emperor commissioned the construction of the Taj Mahal?",
-    "options": [
-      "Aurangzeb",
-      "Shah Jahan",
-      "Humayun",
-      "Akbar"
-    ],
-    "answer": "Shah Jahan",
-    "difficulty": "easy"
-  },
-  {
-    "id": 15,
-    "question": "The Taj Mahal was built in memory of which royal wife?",
-    "options": [
-      "Mumtaz Mahal",
-      "Roshanara Begum",
-      "Nur Jahan",
-      "Jodha Bai"
-    ],
-    "answer": "Mumtaz Mahal",
-    "difficulty": "easy"
-  },
-  {
-    "id": 16,
-    "question": "In what year did India gain independence from British rule?",
-    "options": [
-      "1945",
-      "1947",
-      "1950",
-      "1952"
-    ],
-    "answer": "1947",
-    "difficulty": "easy"
-  },
-  {
-    "id": 17,
-    "question": "On what date does India celebrate Independence Day?",
-    "options": [
-      "January 26",
-      "November 14",
-      "October 2",
-      "August 15"
-    ],
-    "answer": "August 15",
-    "difficulty": "easy"
-  },
-  {
-    "id": 18,
-    "question": "On what date does India celebrate Republic Day?",
-    "options": [
-      "December 25",
-      "January 26",
-      "August 15",
-      "August 9"
-    ],
-    "answer": "January 26",
-    "difficulty": "easy"
-  },
-  {
-    "id": 19,
-    "question": "Who was India's first Prime Minister?",
-    "options": [
-      "Sardar Vallabhbhai Patel",
-      "Jawaharlal Nehru",
-      "Morarji Desai",
-      "Lal Bahadur Shastri"
-    ],
-    "answer": "Jawaharlal Nehru",
-    "difficulty": "easy"
-  },
-  {
-    "id": 20,
-    "question": "Which leader of India's independence movement is widely known as the \"Father of the Nation\"?",
-    "options": [
-      "Bhagat Singh",
-      "Jawaharlal Nehru",
-      "Mahatma Gandhi",
-      "Subhas Chandra Bose"
-    ],
-    "answer": "Mahatma Gandhi",
-    "difficulty": "easy"
-  },
-  {
-    "id": 21,
-    "question": "Who is regarded as the chief architect of the Indian Constitution?",
-    "options": [
-      "Jawaharlal Nehru",
-      "Rajendra Prasad",
-      "B.R. Ambedkar",
-      "Sardar Patel"
-    ],
-    "answer": "B.R. Ambedkar",
-    "difficulty": "easy"
-  },
-  {
-    "id": 22,
-    "question": "Who was the first President of India?",
-    "options": [
-      "Rajendra Prasad",
-      "V.V. Giri",
-      "Sarvepalli Radhakrishnan",
-      "Zakir Husain"
-    ],
-    "answer": "Rajendra Prasad",
-    "difficulty": "easy"
-  },
-  {
-    "id": 23,
-    "question": "Who wrote India's national anthem, \"Jana Gana Mana\"?",
-    "options": [
-      "Sarojini Naidu",
-      "Rabindranath Tagore",
-      "Bankim Chandra Chattopadhyay",
-      "Muhammad Iqbal"
-    ],
-    "answer": "Rabindranath Tagore",
-    "difficulty": "easy"
-  },
-  {
-    "id": 24,
-    "question": "Which Hindu festival is known as the \"festival of lights\"?",
-    "options": [
-      "Navratri",
-      "Holi",
-      "Onam",
-      "Diwali"
-    ],
-    "answer": "Diwali",
-    "difficulty": "easy"
-  },
-  {
-    "id": 25,
-    "question": "Which Hindu festival is known as the \"festival of colors\"?",
-    "options": [
-      "Pongal",
-      "Baisakhi",
-      "Diwali",
-      "Holi"
-    ],
-    "answer": "Holi",
-    "difficulty": "easy"
-  },
-  {
-    "id": 26,
-    "question": "Which Indian city is considered the country's financial capital?",
-    "options": [
-      "Mumbai",
-      "New Delhi",
-      "Hyderabad",
-      "Chennai"
-    ],
-    "answer": "Mumbai",
-    "difficulty": "easy"
-  },
-  {
-    "id": 27,
-    "question": "Which Indian city is the main hub of the Hindi film industry, nicknamed \"Bollywood\"?",
-    "options": [
-      "New Delhi",
-      "Kolkata",
-      "Pune",
-      "Mumbai"
-    ],
-    "answer": "Mumbai",
-    "difficulty": "easy"
-  },
-  {
-    "id": 28,
-    "question": "Which sport is followed most passionately across India?",
-    "options": [
-      "Football",
-      "Cricket",
-      "Badminton",
-      "Field Hockey"
-    ],
-    "answer": "Cricket",
-    "difficulty": "easy"
-  },
-  {
-    "id": 29,
-    "question": "What does the \"IPL\", India's major domestic cricket league, stand for?",
-    "options": [
-      "Indian Premier League",
-      "Indian Pro League",
-      "International Premier League",
-      "Indian Players League"
-    ],
-    "answer": "Indian Premier League",
-    "difficulty": "easy"
-  },
-  {
-    "id": 30,
-    "question": "What is the name of India's national space agency?",
-    "options": [
-      "NASA",
-      "DRDO",
-      "ISRO",
-      "BARC"
-    ],
-    "answer": "ISRO",
-    "difficulty": "easy"
-  },
-  {
-    "id": 31,
-    "question": "What was the name of India's 2023 mission that landed a spacecraft near the Moon's south pole?",
-    "options": [
-      "Gaganyaan",
-      "Chandrayaan-3",
-      "Aditya-L1",
-      "Mangalyaan"
-    ],
-    "answer": "Chandrayaan-3",
-    "difficulty": "easy"
-  },
-  {
-    "id": 32,
-    "question": "As of 2026, how many states make up India?",
-    "options": [
-      "30",
-      "32",
-      "28",
-      "25"
-    ],
-    "answer": "28",
-    "difficulty": "easy"
-  },
-  {
-    "id": 33,
-    "question": "Which language has the largest number of native speakers within India?",
-    "options": [
-      "Hindi",
-      "Bengali",
-      "Marathi",
-      "Telugu"
-    ],
-    "answer": "Hindi",
-    "difficulty": "easy"
-  },
-  {
-    "id": 34,
-    "question": "Which narrow strait separates India from the island nation of Sri Lanka?",
-    "options": [
-      "Gulf of Mannar",
-      "Strait of Malacca",
-      "Palk Strait",
-      "Ten Degree Channel"
-    ],
-    "answer": "Palk Strait",
-    "difficulty": "easy"
-  },
-  {
-    "id": 35,
-    "question": "Which northeastern Indian state is especially famous for its tea plantations?",
-    "options": [
-      "Assam",
-      "Sikkim",
-      "Meghalaya",
-      "Manipur"
-    ],
-    "answer": "Assam",
-    "difficulty": "easy"
-  },
-  {
-    "id": 36,
-    "question": "Which southern Indian state is famous for its scenic backwaters and houseboats?",
-    "options": [
-      "Karnataka",
-      "Kerala",
-      "Tamil Nadu",
-      "Andhra Pradesh"
-    ],
-    "answer": "Kerala",
-    "difficulty": "easy"
-  },
-  {
-    "id": 37,
-    "question": "Which Indian city is nicknamed the \"Pink City\"?",
-    "options": [
-      "Udaipur",
-      "Jaipur",
-      "Bikaner",
-      "Jodhpur"
-    ],
-    "answer": "Jaipur",
-    "difficulty": "easy"
-  },
-  {
-    "id": 38,
-    "question": "Which Indian city is nicknamed the \"City of Lakes\"?",
-    "options": [
-      "Srinagar",
-      "Jaipur",
-      "Bhopal",
-      "Udaipur"
-    ],
-    "answer": "Udaipur",
-    "difficulty": "easy"
-  },
-  {
-    "id": 39,
-    "question": "What is the national tree of India?",
-    "options": [
-      "Neem",
-      "Mango",
-      "Banyan",
-      "Peepal"
-    ],
-    "answer": "Banyan",
-    "difficulty": "easy"
-  },
-  {
-    "id": 40,
-    "question": "What is the name of the round flatbread traditionally baked in a tandoor oven?",
-    "options": [
-      "Paratha",
-      "Roti",
-      "Chapati",
-      "Naan"
-    ],
-    "answer": "Naan",
-    "difficulty": "easy"
-  },
-  {
-    "id": 41,
-    "question": "What is the name of the popular triangular fried snack filled with spiced potatoes?",
-    "options": [
-      "Vada",
-      "Pakora",
-      "Kachori",
-      "Samosa"
-    ],
-    "answer": "Samosa",
-    "difficulty": "easy"
-  },
-  {
-    "id": 42,
-    "question": "What is the name of the spiced rice dish layered with meat or vegetables?",
-    "options": [
-      "Pilaf",
-      "Khichdi",
-      "Biryani",
-      "Pulao"
-    ],
-    "answer": "Biryani",
-    "difficulty": "easy"
-  },
-  {
-    "id": 43,
-    "question": "Which union territory is a group of coral islands off India's southwestern coast?",
-    "options": [
-      "Puducherry",
-      "Lakshadweep",
-      "Daman and Diu",
-      "Andaman and Nicobar Islands"
-    ],
-    "answer": "Lakshadweep",
-    "difficulty": "easy"
-  },
-  {
-    "id": 44,
-    "question": "Which union territory consists of islands located in the Bay of Bengal?",
-    "options": [
-      "Puducherry",
-      "Lakshadweep",
-      "Daman and Diu",
-      "Andaman and Nicobar Islands"
-    ],
-    "answer": "Andaman and Nicobar Islands",
-    "difficulty": "easy"
-  },
-  {
-    "id": 45,
-    "question": "Which spiritual teacher founded the Sikh religion in Punjab?",
-    "options": [
-      "Guru Gobind Singh",
-      "Guru Nanak",
-      "Kabir",
-      "Ravidas"
-    ],
-    "answer": "Guru Nanak",
-    "difficulty": "easy"
-  },
-  {
     "id": 46,
-    "question": "Which Gujarat wildlife sanctuary is the last wild home of the Asiatic lion?",
+    "question": "What is the traditional Vietnamese long dress worn over trousers called?",
     "options": [
-      "Sundarbans National Park",
-      "Gir National Park",
-      "Kaziranga National Park",
-      "Ranthambore National Park"
+      "Ao dai",
+      "Hanbok",
+      "Kimono",
+      "Cheongsam"
     ],
-    "answer": "Gir National Park",
+    "answer": "Ao dai",
     "difficulty": "easy"
   },
   {
     "id": 47,
-    "question": "India's national emblem is based on a carving atop an ancient pillar built by which emperor?",
+    "question": "What letter is Vietnam's shape on a map often compared to?",
     "options": [
-      "Ashoka",
-      "Akbar",
-      "Chandragupta Maurya",
-      "Harsha"
+      "S",
+      "Z",
+      "C",
+      "J"
     ],
-    "answer": "Ashoka",
+    "answer": "S",
     "difficulty": "easy"
   },
   {
     "id": 48,
-    "question": "What is the national fruit of India?",
+    "question": "According to legend, which dragon father and fairy mother are said to be the ancestors of the Vietnamese people?",
     "options": [
-      "Mango",
-      "Guava",
-      "Banana",
-      "Papaya"
+      "Lac Long Quan and Au Co",
+      "Confucius and Mencius",
+      "Nu Wa and Fuxi",
+      "Izanagi and Izanami"
     ],
-    "answer": "Mango",
+    "answer": "Lac Long Quan and Au Co",
     "difficulty": "easy"
   },
   {
     "id": 49,
-    "question": "As of 2026, who is the President of India?",
+    "question": "What is the name of the Da Nang bridge held up by a giant pair of stone hands?",
     "options": [
-      "Droupadi Murmu",
-      "Sushma Swaraj",
-      "Ram Nath Kovind",
-      "Pratibha Patil"
+      "Golden Bridge",
+      "Dragon Bridge",
+      "Rainbow Bridge",
+      "Silver Bridge"
     ],
-    "answer": "Droupadi Murmu",
+    "answer": "Golden Bridge",
     "difficulty": "easy"
   },
   {
     "id": 50,
-    "question": "As of 2026, who is the Prime Minister of India?",
+    "question": "What traditional Vietnamese performing art features puppets that dance on the surface of water?",
     "options": [
-      "Rahul Gandhi",
-      "Arvind Kejriwal",
-      "Amit Shah",
-      "Narendra Modi"
+      "Water puppetry",
+      "Shadow puppetry",
+      "Bunraku",
+      "Marionette theater"
     ],
-    "answer": "Narendra Modi",
+    "answer": "Water puppetry",
     "difficulty": "easy"
   },
   {
     "id": 51,
-    "question": "Which 1757 battle marked the start of British political control in India?",
+    "question": "Which two animals does the Vietnamese zodiac use in place of the rabbit and the ox found in the Chinese zodiac?",
     "options": [
-      "Battle of Panipat",
-      "Battle of Haldighati",
-      "Battle of Plassey",
-      "Battle of Buxar"
+      "Cat and buffalo",
+      "Cat and horse",
+      "Dog and buffalo",
+      "Rabbit and ox"
     ],
-    "answer": "Battle of Plassey",
+    "answer": "Cat and buffalo",
     "difficulty": "medium"
   },
   {
     "id": 52,
-    "question": "The 1857 uprising against British rule is also widely known by which name?",
+    "question": "What is Vietnam's third-largest city, a major northern port?",
     "options": [
-      "Quit India Movement",
-      "Non-Cooperation Movement",
-      "Salt Satyagraha",
-      "Sepoy Mutiny"
+      "Hai Phong",
+      "Da Nang",
+      "Can Tho",
+      "Hue"
     ],
-    "answer": "Sepoy Mutiny",
+    "answer": "Hai Phong",
     "difficulty": "medium"
   },
   {
     "id": 53,
-    "question": "Who led the 1930 Salt March (Dandi March) in protest of British salt taxes?",
+    "question": "Which body of water separates northern Vietnam from Hainan Island, China?",
     "options": [
-      "Jawaharlal Nehru",
-      "Subhas Chandra Bose",
-      "Sardar Patel",
-      "Mahatma Gandhi"
+      "Gulf of Tonkin",
+      "Strait of Malacca",
+      "Taiwan Strait",
+      "Gulf of Thailand"
     ],
-    "answer": "Mahatma Gandhi",
+    "answer": "Gulf of Tonkin",
     "difficulty": "medium"
   },
   {
     "id": 54,
-    "question": "Which revolutionary was executed in 1931 after bombing the Central Legislative Assembly to protest British rule?",
+    "question": "What is Vietnam's longest river, also shared with China, Myanmar, Laos, Thailand, and Cambodia?",
     "options": [
-      "Udham Singh",
-      "Khudiram Bose",
-      "Chandrashekhar Azad",
-      "Bhagat Singh"
+      "Mekong River",
+      "Red River",
+      "Perfume River",
+      "Saigon River"
     ],
-    "answer": "Bhagat Singh",
+    "answer": "Mekong River",
     "difficulty": "medium"
   },
   {
     "id": 55,
-    "question": "Which nationalist leader founded the Indian National Army (INA) to fight British colonial rule?",
+    "question": "Which river flows through Hanoi and gives its name to a major northern delta region?",
     "options": [
-      "Bhagat Singh",
-      "V.D. Savarkar",
-      "Lala Lajpat Rai",
-      "Subhas Chandra Bose"
+      "Red River",
+      "Mekong River",
+      "Perfume River",
+      "Saigon River"
     ],
-    "answer": "Subhas Chandra Bose",
+    "answer": "Red River",
     "difficulty": "medium"
   },
   {
     "id": 56,
-    "question": "Who was known as the \"Iron Man of India\" for unifying the princely states after independence?",
+    "question": "Vietnam's population is closest to which figure, making it the world's 15th-most populous country?",
     "options": [
-      "B.R. Ambedkar",
-      "Sardar Vallabhbhai Patel",
-      "Jawaharlal Nehru",
-      "Rajendra Prasad"
+      "100 million",
+      "50 million",
+      "150 million",
+      "30 million"
     ],
-    "answer": "Sardar Vallabhbhai Patel",
+    "answer": "100 million",
     "difficulty": "medium"
   },
   {
     "id": 57,
-    "question": "What is the name of the world's tallest statue, dedicated to Sardar Patel and located in Gujarat?",
+    "question": "Which UNESCO-listed cave in Phong Nha-Ke Bang National Park is among the largest caves in the world?",
     "options": [
-      "Statue of Peace",
-      "Statue of Unity",
-      "Statue of Belief",
-      "Statue of Equality"
+      "Son Doong Cave",
+      "Marble Mountains",
+      "Cu Chi Tunnels",
+      "Perfume Pagoda"
     ],
-    "answer": "Statue of Unity",
+    "answer": "Son Doong Cave",
     "difficulty": "medium"
   },
   {
     "id": 58,
-    "question": "Who became India's first woman Prime Minister?",
+    "question": "Which underground tunnel network near Ho Chi Minh City was used by guerrilla fighters during the Vietnam War?",
     "options": [
-      "Sonia Gandhi",
-      "Sarojini Naidu",
-      "Pratibha Patil",
-      "Indira Gandhi"
+      "Cu Chi Tunnels",
+      "Son Doong Cave",
+      "Marble Mountains",
+      "Perfume Pagoda"
     ],
-    "answer": "Indira Gandhi",
+    "answer": "Cu Chi Tunnels",
     "difficulty": "medium"
   },
   {
     "id": 59,
-    "question": "Who became the first Indian to travel to space, in 1984?",
+    "question": "Which Central Highlands city is known for its cool climate, flower farms, and French colonial villas?",
     "options": [
-      "Rakesh Sharma",
-      "Kalpana Chawla",
-      "Vikram Sarabhai",
-      "Sunita Williams"
+      "Da Lat",
+      "Sapa",
+      "Hue",
+      "Nha Trang"
     ],
-    "answer": "Rakesh Sharma",
+    "answer": "Da Lat",
     "difficulty": "medium"
   },
   {
     "id": 60,
-    "question": "Which scientist, known as the \"Missile Man of India,\" served as President from 2002 to 2007?",
+    "question": "Which northern mountain town is famous for its rice terraces and trekking among ethnic minority villages?",
     "options": [
-      "A.P.J. Abdul Kalam",
-      "Homi Bhabha",
-      "Vikram Sarabhai",
-      "C.V. Raman"
+      "Sapa",
+      "Da Lat",
+      "Hoi An",
+      "Hue"
     ],
-    "answer": "A.P.J. Abdul Kalam",
+    "answer": "Sapa",
     "difficulty": "medium"
   },
   {
     "id": 61,
-    "question": "Which Indian physicist won the 1930 Nobel Prize in Physics for his work on the scattering of light?",
+    "question": "What spicy noodle soup, named after its home city, features beef, pork, and a rich lemongrass-chili broth?",
     "options": [
-      "Homi Bhabha",
-      "C.V. Raman",
-      "S. Chandrasekhar",
-      "Satyendra Nath Bose"
+      "Bun bo Hue",
+      "Pho",
+      "Mi quang",
+      "Bun cha"
     ],
-    "answer": "C.V. Raman",
+    "answer": "Bun bo Hue",
     "difficulty": "medium"
   },
   {
     "id": 62,
-    "question": "Which Bengali poet became the first non-European to win the Nobel Prize in Literature, in 1913?",
+    "question": "What Hanoi specialty features grilled pork patties served in a bowl of sweet-savory fish sauce with rice noodles?",
     "options": [
-      "Bankim Chandra Chattopadhyay",
-      "R.K. Narayan",
-      "Sarojini Naidu",
-      "Rabindranath Tagore"
+      "Bun cha",
+      "Pho",
+      "Cha ca",
+      "Banh cuon"
     ],
-    "answer": "Rabindranath Tagore",
+    "answer": "Bun cha",
     "difficulty": "medium"
   },
   {
     "id": 63,
-    "question": "Which economist won the 1998 Nobel Prize in Economics for his work on welfare economics?",
+    "question": "What steamed rice-flour dish, filled with minced pork and mushrooms, is rolled thin like a crepe?",
     "options": [
-      "Jagdish Bhagwati",
-      "Abhijit Banerjee",
-      "Amartya Sen",
-      "Raghuram Rajan"
+      "Banh cuon",
+      "Banh xeo",
+      "Banh bao",
+      "Banh trang"
     ],
-    "answer": "Amartya Sen",
+    "answer": "Banh cuon",
     "difficulty": "medium"
   },
   {
     "id": 64,
-    "question": "What is the highest civilian award given in India?",
+    "question": "What turmeric-marinated grilled fish dish is a Hanoi specialty, often served with dill and rice noodles?",
     "options": [
-      "Bharat Ratna",
-      "Ashoka Chakra",
-      "Padma Bhushan",
-      "Padma Vibhushan"
+      "Cha ca",
+      "Bun cha",
+      "Nem nuong",
+      "Mi quang"
     ],
-    "answer": "Bharat Ratna",
+    "answer": "Cha ca",
     "difficulty": "medium"
   },
   {
     "id": 65,
-    "question": "What is the highest military decoration awarded in India?",
+    "question": "What yellow-noodle dish from Quang Nam province is topped with turmeric broth, herbs, and rice crackers?",
     "options": [
-      "Ashoka Chakra",
-      "Maha Vir Chakra",
-      "Param Vir Chakra",
-      "Vir Chakra"
+      "Mi quang",
+      "Bun bo Hue",
+      "Pho",
+      "Hu tieu"
     ],
-    "answer": "Param Vir Chakra",
+    "answer": "Mi quang",
     "difficulty": "medium"
   },
   {
     "id": 66,
-    "question": "How many seats make up the Lok Sabha, the lower house of India's Parliament?",
+    "question": "What steamed or savory sticky rice dish is a common Vietnamese breakfast food?",
     "options": [
-      "545",
-      "552",
-      "250",
-      "543"
+      "Xoi",
+      "Chao",
+      "Chao long",
+      "Com tam"
     ],
-    "answer": "543",
+    "answer": "Xoi",
     "difficulty": "medium"
   },
   {
     "id": 67,
-    "question": "How many seats make up the Rajya Sabha, the upper house of India's Parliament?",
+    "question": "What is the name for broken rice, a Southern Vietnamese dish typically served with grilled pork and a fried egg?",
     "options": [
-      "250",
-      "233",
-      "275",
-      "245"
+      "Com tam",
+      "Chao",
+      "Bun rieu",
+      "Hu tieu"
     ],
-    "answer": "245",
+    "answer": "Com tam",
     "difficulty": "medium"
   },
   {
     "id": 68,
-    "question": "As of 2026, how many union territories does India have?",
+    "question": "What sour crab and tomato noodle soup is a popular Vietnamese comfort food?",
     "options": [
-      "9",
-      "8",
-      "7",
-      "6"
+      "Bun rieu",
+      "Bun bo Hue",
+      "Pho",
+      "Canh chua"
     ],
-    "answer": "8",
+    "answer": "Bun rieu",
     "difficulty": "medium"
   },
   {
     "id": 69,
-    "question": "Which classical dance form originated in the state of Tamil Nadu?",
+    "question": "What notoriously pungent tropical fruit, beloved across Vietnam, is nicknamed the 'king of fruits'?",
     "options": [
-      "Kathakali",
-      "Odissi",
-      "Bharatanatyam",
-      "Kathak"
+      "Durian",
+      "Dragon fruit",
+      "Jackfruit",
+      "Mangosteen"
     ],
-    "answer": "Bharatanatyam",
+    "answer": "Durian",
     "difficulty": "medium"
   },
   {
     "id": 70,
-    "question": "Which classical dance form from Kerala is known for its elaborate costumes and painted faces?",
+    "question": "What is the Vietnamese rice paper used to wrap fresh spring rolls called?",
     "options": [
-      "Kathakali",
-      "Bharatanatyam",
-      "Mohiniyattam",
-      "Manipuri"
+      "Banh trang",
+      "Banh da",
+      "Banh phong",
+      "Banh gio"
     ],
-    "answer": "Kathakali",
+    "answer": "Banh trang",
     "difficulty": "medium"
   },
   {
     "id": 71,
-    "question": "Which classical dance form developed in the royal courts of North India, especially Lucknow and Jaipur?",
+    "question": "Which Vietnamese author wrote 'The Tale of Kieu,' the country's most celebrated work of literature?",
     "options": [
-      "Odissi",
-      "Sattriya",
-      "Kathak",
-      "Bharatanatyam"
+      "Nguyen Du",
+      "Ho Xuan Huong",
+      "Nguyen Trai",
+      "To Huu"
     ],
-    "answer": "Kathak",
+    "answer": "Nguyen Du",
     "difficulty": "medium"
   },
   {
     "id": 72,
-    "question": "Which script is used to write the Hindi language?",
+    "question": "Which Vietnamese rapper, known for songs like 'Bai Nay Chill Phet,' blends folk instruments with hip-hop?",
     "options": [
-      "Gurmukhi",
-      "Bengali script",
-      "Tamil script",
-      "Devanagari"
+      "Den Vau",
+      "Son Tung",
+      "Jack",
+      "Binz"
     ],
-    "answer": "Devanagari",
+    "answer": "Den Vau",
     "difficulty": "medium"
   },
   {
     "id": 73,
-    "question": "Which Indian city is often nicknamed the \"Silicon Valley of India\" for its tech industry?",
+    "question": "Which Vietnamese-French director won acclaim for the film 'The Scent of Green Papaya'?",
     "options": [
-      "Bangalore",
-      "Chennai",
-      "Pune",
-      "Hyderabad"
+      "Tran Anh Hung",
+      "Victor Vu",
+      "Charlie Nguyen",
+      "Ham Tran"
     ],
-    "answer": "Bangalore",
+    "answer": "Tran Anh Hung",
     "difficulty": "medium"
   },
   {
     "id": 74,
-    "question": "Which Indian city, a historic textile hub, earned the nickname \"Manchester of India\"?",
+    "question": "Which Vietnamese beauty queen became the first Miss Universe Vietnam titleholder to place in the international Top 5?",
     "options": [
-      "Ahmedabad",
-      "Mumbai",
-      "Surat",
-      "Kanpur"
+      "H'Hen Nie",
+      "Khanh Van",
+      "Do Thi Ha",
+      "Luong Thuy Linh"
     ],
-    "answer": "Ahmedabad",
+    "answer": "H'Hen Nie",
     "difficulty": "medium"
   },
   {
     "id": 75,
-    "question": "The sacred Ganges river originates at which Himalayan glacier?",
+    "question": "Which legally blind Vietnamese-American chef won the U.S. cooking competition 'MasterChef'?",
     "options": [
-      "Gangotri",
-      "Pindari",
-      "Rohtang",
-      "Siachen"
+      "Christine Ha",
+      "Andrea Nguyen",
+      "Luke Nguyen",
+      "Helene An"
     ],
-    "answer": "Gangotri",
+    "answer": "Christine Ha",
     "difficulty": "medium"
   },
   {
     "id": 76,
-    "question": "In which city is the Golden Temple, Sikhism's holiest shrine, located?",
+    "question": "Which Vietnamese-Australian chef, born to refugee parents, hosts TV shows exploring Vietnamese street food?",
     "options": [
-      "Ludhiana",
-      "Patiala",
-      "Amritsar",
-      "Chandigarh"
+      "Luke Nguyen",
+      "Christine Ha",
+      "Uyen Thi",
+      "Danny Bowien"
     ],
-    "answer": "Amritsar",
+    "answer": "Luke Nguyen",
     "difficulty": "medium"
   },
   {
     "id": 77,
-    "question": "Which ancient dome-shaped Buddhist monument is located in Sanchi, Madhya Pradesh?",
+    "question": "Which Vietnamese singer scored a global viral hit with the song 'See Tinh'?",
     "options": [
-      "Mahabodhi Temple",
-      "Ajanta Caves",
-      "Nalanda Mahavihara",
-      "Great Stupa of Sanchi"
+      "Hoang Thuy Linh",
+      "Min",
+      "Amee",
+      "Bich Phuong"
     ],
-    "answer": "Great Stupa of Sanchi",
+    "answer": "Hoang Thuy Linh",
     "difficulty": "medium"
   },
   {
     "id": 78,
-    "question": "Which Maharashtra caves are famed for ancient Buddhist rock-cut paintings and sculptures?",
+    "question": "Which Vietnamese midfielder became one of the country's most recognizable football stars in the 2010s-2020s?",
     "options": [
-      "Elephanta Caves",
-      "Ellora Caves",
-      "Ajanta Caves",
-      "Badami Caves"
+      "Nguyen Quang Hai",
+      "Le Cong Vinh",
+      "Nguyen Van Quyet",
+      "Doan Van Hau"
     ],
-    "answer": "Ajanta Caves",
+    "answer": "Nguyen Quang Hai",
     "difficulty": "medium"
   },
   {
     "id": 79,
-    "question": "Which city on the banks of the Ganges is regarded as one of Hinduism's holiest cities?",
+    "question": "What title does Vietnam's most powerful political figure, who leads the Communist Party, hold?",
     "options": [
-      "Prayagraj",
-      "Varanasi",
-      "Rishikesh",
-      "Haridwar"
+      "General Secretary",
+      "President",
+      "Prime Minister",
+      "Chairman"
     ],
-    "answer": "Varanasi",
+    "answer": "General Secretary",
     "difficulty": "medium"
   },
   {
     "id": 80,
-    "question": "Which national park, established in 1936, was India's first and is famous for its tigers?",
+    "question": "Who became Vietnam's Prime Minister in April 2026, succeeding Pham Minh Chinh?",
     "options": [
-      "Kanha National Park",
-      "Bandhavgarh National Park",
-      "Jim Corbett National Park",
-      "Ranthambore National Park"
+      "Le Minh Hung",
+      "To Lam",
+      "Luong Cuong",
+      "Vuong Dinh Hue"
     ],
-    "answer": "Jim Corbett National Park",
+    "answer": "Le Minh Hung",
     "difficulty": "medium"
   },
   {
     "id": 81,
-    "question": "Which Assam national park is renowned for its population of one-horned rhinoceroses?",
+    "question": "What economic reform program, launched in 1986, transitioned Vietnam toward a market economy?",
     "options": [
-      "Manas National Park",
-      "Nameri National Park",
-      "Dibru-Saikhowa National Park",
-      "Kaziranga National Park"
+      "Doi Moi",
+      "Great Leap Forward",
+      "Perestroika",
+      "New Economic Policy"
     ],
-    "answer": "Kaziranga National Park",
+    "answer": "Doi Moi",
     "difficulty": "medium"
   },
   {
     "id": 82,
-    "question": "Which mangrove forest, shared with Bangladesh, is a habitat for the Royal Bengal Tiger?",
+    "question": "What is the term length for members of Vietnam's National Assembly?",
     "options": [
-      "Bhitarkanika",
-      "Sundarbans",
-      "Coringa",
-      "Pichavaram"
+      "5 years",
+      "4 years",
+      "6 years",
+      "3 years"
     ],
-    "answer": "Sundarbans",
+    "answer": "5 years",
     "difficulty": "medium"
   },
   {
     "id": 83,
-    "question": "Which ancient Indian dynasty, ruling around the 3rd century BCE, was led by Emperor Ashoka?",
+    "question": "Which regional bloc did Vietnam join in 1995, marking a major diplomatic opening?",
     "options": [
-      "Chola Empire",
-      "Maurya Empire",
-      "Maratha Empire",
-      "Gupta Empire"
+      "ASEAN",
+      "the EU",
+      "NATO",
+      "the OECD"
     ],
-    "answer": "Maurya Empire",
+    "answer": "ASEAN",
     "difficulty": "medium"
   },
   {
     "id": 84,
-    "question": "Which South Indian dynasty was renowned for its powerful navy and extensive maritime trade?",
+    "question": "In what year did Vietnam normalize diplomatic relations with the United States?",
     "options": [
-      "Vijayanagara Empire",
-      "Pallava Empire",
-      "Pandya Empire",
-      "Chola Empire"
+      "1995",
+      "1975",
+      "1986",
+      "2000"
     ],
-    "answer": "Chola Empire",
+    "answer": "1995",
     "difficulty": "medium"
   },
   {
     "id": 85,
-    "question": "Which dynasty's rule, from roughly the 4th to 6th centuries CE, is often called India's \"Golden Age\"?",
+    "question": "What was the name of the 1968 coordinated surprise attacks by North Vietnamese and Viet Cong forces during the Lunar New Year?",
     "options": [
-      "Chola Empire",
-      "Maurya Empire",
-      "Mughal Empire",
-      "Gupta Empire"
+      "Tet Offensive",
+      "Battle of Khe Sanh",
+      "Battle of Ia Drang",
+      "Easter Offensive"
     ],
-    "answer": "Gupta Empire",
+    "answer": "Tet Offensive",
     "difficulty": "medium"
   },
   {
     "id": 86,
-    "question": "Which mountain pass, part of the ancient Silk Route, connects Sikkim in India to Tibet in China?",
+    "question": "What was Hanoi's historical name during centuries as Vietnam's imperial capital?",
     "options": [
-      "Nathu La",
-      "Khardung La",
-      "Zoji La",
-      "Rohtang Pass"
+      "Thang Long",
+      "Hue",
+      "Phu Xuan",
+      "Co Loa"
     ],
-    "answer": "Nathu La",
+    "answer": "Thang Long",
     "difficulty": "medium"
   },
   {
     "id": 87,
-    "question": "Which Indian state shares borders with China, Nepal, and Bhutan simultaneously?",
+    "question": "Which ancient spiral-shaped citadel near Hanoi was the capital of the Au Lac kingdom?",
     "options": [
-      "Uttarakhand",
-      "West Bengal",
-      "Sikkim",
-      "Arunachal Pradesh"
+      "Co Loa Citadel",
+      "Hoa Lu",
+      "Thang Long",
+      "Cham towers"
     ],
-    "answer": "Sikkim",
+    "answer": "Co Loa Citadel",
     "difficulty": "medium"
   },
   {
     "id": 88,
-    "question": "Which Indian badminton player became the first Indian woman to win an Olympic silver medal, at Rio 2016?",
+    "question": "Which dynasty famously repelled three Mongol invasions in the 13th century?",
     "options": [
-      "P.V. Sindhu",
-      "Mary Kom",
-      "Saina Nehwal",
-      "Sania Mirza"
+      "Tran Dynasty",
+      "Ly Dynasty",
+      "Nguyen Dynasty",
+      "Le Dynasty"
     ],
-    "answer": "P.V. Sindhu",
+    "answer": "Tran Dynasty",
     "difficulty": "medium"
   },
   {
     "id": 89,
-    "question": "Which Indian chess player became the country's first Grandmaster, in 1988?",
+    "question": "Which emperor founded the Nguyen Dynasty in 1802 and named the country 'Vietnam'?",
     "options": [
-      "Gukesh D",
-      "Viswanathan Anand",
-      "R Praggnanandhaa",
-      "Pentala Harikrishna"
+      "Gia Long",
+      "Minh Mang",
+      "Tu Duc",
+      "Bao Dai"
     ],
-    "answer": "Viswanathan Anand",
+    "answer": "Gia Long",
     "difficulty": "medium"
   },
   {
     "id": 90,
-    "question": "In what year did India win its first Cricket World Cup?",
+    "question": "Who was the last emperor of Vietnam, who abdicated in 1945?",
     "options": [
-      "2003",
-      "1992",
-      "1987",
-      "1983"
+      "Bao Dai",
+      "Gia Long",
+      "Minh Mang",
+      "Khai Dinh"
     ],
-    "answer": "1983",
+    "answer": "Bao Dai",
     "difficulty": "medium"
   },
   {
     "id": 91,
-    "question": "Which stock exchange, founded in 1875 in Mumbai, is Asia's oldest?",
+    "question": "Which Vietnamese swimmer became a national hero after winning multiple gold medals at the SEA Games in the 2010s?",
     "options": [
-      "Multi Commodity Exchange",
-      "Bombay Stock Exchange",
-      "National Stock Exchange",
-      "Calcutta Stock Exchange"
+      "Nguyen Thi Anh Vien",
+      "Hoang Xuan Vinh",
+      "Thach Kim Tuan",
+      "Nguyen Van Lai"
     ],
-    "answer": "Bombay Stock Exchange",
+    "answer": "Nguyen Thi Anh Vien",
     "difficulty": "medium"
   },
   {
     "id": 92,
-    "question": "What is India's top film honor for lifetime contribution to cinema, named after a pioneering filmmaker?",
+    "question": "Which Vietnamese shooter won the country's first-ever Olympic gold medal, at Rio 2016?",
     "options": [
-      "Filmfare Award",
-      "Dadasaheb Phalke Award",
-      "National Film Award",
-      "Padma Shri"
+      "Hoang Xuan Vinh",
+      "Nguyen Thi Anh Vien",
+      "Le Van Cong",
+      "Thach Kim Tuan"
     ],
-    "answer": "Dadasaheb Phalke Award",
+    "answer": "Hoang Xuan Vinh",
     "difficulty": "medium"
   },
   {
     "id": 93,
-    "question": "Which 1913 film, directed by Dadasaheb Phalke, is considered India's first full-length feature film?",
+    "question": "In what year did Vietnam's men's football team first win the AFF Championship (ASEAN Cup)?",
     "options": [
-      "Alam Ara",
-      "Mother India",
-      "Raja Harishchandra",
-      "Pather Panchali"
+      "2008",
+      "2018",
+      "1998",
+      "2000"
     ],
-    "answer": "Raja Harishchandra",
+    "answer": "2008",
     "difficulty": "medium"
   },
   {
     "id": 94,
-    "question": "Which 1931 film is regarded as India's first sound (\"talkie\") film?",
+    "question": "Which critically endangered primate, found only in Vietnam's limestone forests, is one of the world's rarest mammals?",
     "options": [
-      "Alam Ara",
-      "Devdas",
-      "Kismet",
-      "Raja Harishchandra"
+      "Tonkin snub-nosed monkey",
+      "Douc langur",
+      "Saola",
+      "Sun bear"
     ],
-    "answer": "Alam Ara",
+    "answer": "Tonkin snub-nosed monkey",
     "difficulty": "medium"
   },
   {
     "id": 95,
-    "question": "Which acclaimed Bengali filmmaker directed the \"Apu Trilogy,\" beginning with Pather Panchali?",
+    "question": "Which colorful, long-tailed primate native to Vietnam's forests is nicknamed the 'costumed ape' for its vivid markings?",
     "options": [
-      "Ritwik Ghatak",
-      "Mrinal Sen",
-      "Guru Dutt",
-      "Satyajit Ray"
+      "Douc langur",
+      "Tonkin snub-nosed monkey",
+      "Saola",
+      "Clouded leopard"
     ],
-    "answer": "Satyajit Ray",
+    "answer": "Douc langur",
     "difficulty": "medium"
   },
   {
     "id": 96,
-    "question": "What is the name of the smaller monetary unit, 100 of which make up one Indian Rupee?",
+    "question": "What large central Vietnam national park is home to Son Doong Cave and dense limestone karst forest?",
     "options": [
-      "Paisa",
-      "Dinar",
-      "Cent",
-      "Anna"
+      "Phong Nha-Ke Bang National Park",
+      "Cat Ba National Park",
+      "Cuc Phuong National Park",
+      "Ba Be National Park"
     ],
-    "answer": "Paisa",
+    "answer": "Phong Nha-Ke Bang National Park",
     "difficulty": "medium"
   },
   {
     "id": 97,
-    "question": "Which Indian state declared Sanskrit as one of its official languages, alongside Hindi, in 2010?",
+    "question": "What is Vietnam's oldest national park, established in 1962?",
     "options": [
-      "Uttarakhand",
-      "Himachal Pradesh",
-      "Uttar Pradesh",
-      "Madhya Pradesh"
+      "Cuc Phuong National Park",
+      "Phong Nha-Ke Bang National Park",
+      "Cat Tien National Park",
+      "Yok Don National Park"
     ],
-    "answer": "Uttarakhand",
+    "answer": "Cuc Phuong National Park",
     "difficulty": "medium"
   },
   {
     "id": 98,
-    "question": "Which 2017 tax reform unified most of India's indirect taxes into a single nationwide system?",
+    "question": "Which Vietnamese Zen Buddhist monk became globally influential for popularizing mindfulness in the West?",
     "options": [
-      "Service Tax",
-      "Central Excise Duty",
-      "Value Added Tax",
-      "Goods and Services Tax"
+      "Thich Nhat Hanh",
+      "Thich Quang Duc",
+      "Thich Tri Quang",
+      "Thich Minh Chau"
     ],
-    "answer": "Goods and Services Tax",
+    "answer": "Thich Nhat Hanh",
     "difficulty": "medium"
   },
   {
     "id": 99,
-    "question": "What is the name of the building that houses the Indian Parliament?",
+    "question": "Which monk's 1963 self-immolation became one of the most iconic protest images of the 20th century?",
     "options": [
-      "Rashtrapati Bhavan",
-      "Red Fort",
-      "Sansad Bhavan",
-      "India Gate"
+      "Thich Quang Duc",
+      "Thich Nhat Hanh",
+      "Thich Tri Quang",
+      "Thich Minh Chau"
     ],
-    "answer": "Sansad Bhavan",
+    "answer": "Thich Quang Duc",
     "difficulty": "medium"
   },
   {
     "id": 100,
-    "question": "Which ancient text, composed around 1500-1200 BCE, is considered the oldest of the four Vedas?",
+    "question": "Which Tet flowering branch is traditionally displayed in northern Vietnamese homes, contrasting with the yellow apricot blossom favored in the south?",
     "options": [
-      "Atharvaveda",
-      "Rigveda",
-      "Yajurveda",
-      "Samaveda"
+      "Hoa dao",
+      "Hoa mai",
+      "Hoa sen",
+      "Hoa cuc"
     ],
-    "answer": "Rigveda",
-    "difficulty": "hard"
+    "answer": "Hoa dao",
+    "difficulty": "medium"
   },
   {
     "id": 101,
-    "question": "Which 4th-century BCE Sanskrit scholar wrote the Ashtadhyayi, a foundational treatise on Sanskrit grammar?",
+    "question": "Which ethnic group is Vietnam's largest minority after the majority Kinh people?",
     "options": [
-      "Panini",
-      "Chanakya",
-      "Aryabhata",
-      "Kalidasa"
+      "Tay",
+      "Thai",
+      "Muong",
+      "Hmong"
     ],
-    "answer": "Panini",
+    "answer": "Tay",
     "difficulty": "hard"
   },
   {
     "id": 102,
-    "question": "Which mathematician-astronomer, born in 476 CE, calculated an early value of pi and worked with concepts related to zero?",
+    "question": "How many ethnic groups does the Vietnamese government officially recognize?",
     "options": [
-      "Bhaskara",
-      "Aryabhata",
-      "Varahamihira",
-      "Brahmagupta"
+      "54",
+      "45",
+      "62",
+      "38"
     ],
-    "answer": "Aryabhata",
+    "answer": "54",
     "difficulty": "hard"
   },
   {
     "id": 103,
-    "question": "Which treatise on statecraft and economics, traditionally attributed to Chanakya, advised the Mauryan court?",
+    "question": "Which Ho Chi Minh City skyscraper became Vietnam's tallest building upon its completion in 2018?",
     "options": [
-      "Panchatantra",
-      "Arthashastra",
-      "Rajatarangini",
-      "Manusmriti"
+      "Landmark 81",
+      "Bitexco Financial Tower",
+      "Keangnam Hanoi Landmark Tower",
+      "Diamond Island Tower"
     ],
-    "answer": "Arthashastra",
+    "answer": "Landmark 81",
     "difficulty": "hard"
   },
   {
     "id": 104,
-    "question": "Which 12th-century text, written by Kalhana, chronicles the history of the kings of Kashmir?",
+    "question": "Which UNESCO World Heritage Cham temple complex in central Vietnam was built between the 4th and 14th centuries?",
     "options": [
-      "Manusmriti",
-      "Ain-i-Akbari",
-      "Arthashastra",
-      "Rajatarangini"
+      "My Son Sanctuary",
+      "Po Nagar",
+      "Hoi An Ancient Town",
+      "Trang An"
     ],
-    "answer": "Rajatarangini",
+    "answer": "My Son Sanctuary",
     "difficulty": "hard"
   },
   {
     "id": 105,
-    "question": "Which Mughal emperor authored his own memoir, the Baburnama?",
+    "question": "Which province is home to the Fansipan Legend cable car, a Guinness-recognized record holder for longest non-stop three-rope cable car?",
     "options": [
-      "Akbar",
-      "Jahangir",
-      "Humayun",
-      "Babur"
+      "Lao Cai",
+      "Quang Ninh",
+      "Khanh Hoa",
+      "Lam Dong"
     ],
-    "answer": "Babur",
+    "answer": "Lao Cai",
     "difficulty": "hard"
   },
   {
     "id": 106,
-    "question": "Which 1526 battle established Mughal rule in India when Babur defeated Ibrahim Lodi?",
+    "question": "Which mountain pass, nicknamed the 'Ocean Cloud Pass,' separates Hue and Da Nang along the central coast?",
     "options": [
-      "First Battle of Panipat",
-      "Second Battle of Panipat",
-      "Battle of Haldighati",
-      "Battle of Khanwa"
+      "Hai Van Pass",
+      "Ma Pi Leng Pass",
+      "Deo Ngoan Muc",
+      "Khau Pha Pass"
     ],
-    "answer": "First Battle of Panipat",
+    "answer": "Hai Van Pass",
     "difficulty": "hard"
   },
   {
     "id": 107,
-    "question": "Which Rajput ruler famously resisted Mughal emperor Akbar at the 1576 Battle of Haldighati?",
+    "question": "Which two river deltas dominate Vietnam's agricultural lowlands, in the north and south respectively?",
     "options": [
-      "Rana Sanga",
-      "Maharana Pratap",
-      "Man Singh",
-      "Prithviraj Chauhan"
+      "Red River Delta and Mekong Delta",
+      "Red River Delta and Irrawaddy Delta",
+      "Mekong Delta and Chao Phraya Delta",
+      "Red River Delta and Ganges Delta"
     ],
-    "answer": "Maharana Pratap",
+    "answer": "Red River Delta and Mekong Delta",
     "difficulty": "hard"
   },
   {
     "id": 108,
-    "question": "Which famous jeweled throne, seized by the Persian invader Nadir Shah in 1739, once belonged to the Mughal emperors?",
+    "question": "Which archipelago off Vietnam's central coast, known in Vietnamese as Hoang Sa, has been fully controlled by China since 1974?",
     "options": [
-      "Sun Throne",
-      "Lion Throne",
-      "Peacock Throne",
-      "Diamond Throne"
+      "Paracel Islands",
+      "Spratly Islands",
+      "Con Dao Islands",
+      "Phu Quoc Archipelago"
     ],
-    "answer": "Peacock Throne",
+    "answer": "Paracel Islands",
     "difficulty": "hard"
   },
   {
     "id": 109,
-    "question": "Which English trading company, chartered in 1600, later came to rule much of the Indian subcontinent?",
+    "question": "What is Vietnam's largest island, home to the resort town of Duong Dong?",
     "options": [
-      "Dutch East India Company",
-      "French East India Company",
-      "East India Company",
-      "Portuguese East India Company"
+      "Phu Quoc",
+      "Cat Ba",
+      "Con Son",
+      "Ly Son"
     ],
-    "answer": "East India Company",
+    "answer": "Phu Quoc",
     "difficulty": "hard"
   },
   {
     "id": 110,
-    "question": "Which 1765 treaty granted the British East India Company the right to collect revenue (Diwani) in Bengal, Bihar, and Odisha?",
+    "question": "Which UNESCO-listed limestone landscape near Ninh Binh is often nicknamed 'Ha Long Bay on land'?",
     "options": [
-      "Treaty of Amritsar",
-      "Treaty of Seringapatam",
-      "Treaty of Allahabad",
-      "Treaty of Bassein"
+      "Trang An",
+      "Tam Coc",
+      "Bai Tu Long",
+      "Cat Ba"
     ],
-    "answer": "Treaty of Allahabad",
+    "answer": "Trang An",
     "difficulty": "hard"
   },
   {
     "id": 111,
-    "question": "Which 1919 massacre in Amritsar, where British troops fired on unarmed civilians, galvanized India's independence movement?",
+    "question": "What pounded young green rice, a signature autumn treat originating from a Hanoi village, is called 'com'?",
     "options": [
-      "Jallianwala Bagh massacre",
-      "Moplah Rebellion",
-      "Champaran incident",
-      "Chauri Chaura incident"
+      "Com",
+      "Xoi",
+      "Che",
+      "Banh gio"
     ],
-    "answer": "Jallianwala Bagh massacre",
+    "answer": "Com",
     "difficulty": "hard"
   },
   {
     "id": 112,
-    "question": "Which 1942 movement, launched by Gandhi with the slogan \"Do or Die,\" demanded an immediate end to British rule?",
+    "question": "What fermented pork sausage, wrapped in banana leaves and eaten as a tangy snack, is a specialty of Thanh Hoa?",
     "options": [
-      "Khilafat Movement",
-      "Civil Disobedience Movement",
-      "Non-Cooperation Movement",
-      "Quit India Movement"
+      "Nem chua",
+      "Cha lua",
+      "Gio thu",
+      "Nem nuong"
     ],
-    "answer": "Quit India Movement",
+    "answer": "Nem chua",
     "difficulty": "hard"
   },
   {
     "id": 113,
-    "question": "Which British lawyer chaired the boundary commission that drew the border used for the 1947 Partition of India?",
+    "question": "What Hue specialty consists of small steamed rice cakes topped with shrimp, served in an imperial-style snack platter?",
     "options": [
-      "Louis Mountbatten",
-      "Stafford Cripps",
-      "Cyril Radcliffe",
-      "Lord Wavell"
+      "Banh beo",
+      "Banh cuon",
+      "Banh xeo",
+      "Banh gio"
     ],
-    "answer": "Cyril Radcliffe",
+    "answer": "Banh beo",
     "difficulty": "hard"
   },
   {
     "id": 114,
-    "question": "Who was India's last Viceroy under British rule, overseeing the transition to independence in 1947?",
+    "question": "What pungent fermented shrimp paste is a key condiment in the dish bun dau mam tom?",
     "options": [
-      "Lord Linlithgow",
-      "Louis Mountbatten",
-      "Lord Curzon",
-      "Lord Wavell"
+      "Mam tom",
+      "Nuoc mam",
+      "Tuong",
+      "Mien"
     ],
-    "answer": "Louis Mountbatten",
+    "answer": "Mam tom",
     "difficulty": "hard"
   },
   {
     "id": 115,
-    "question": "A princely state's disputed accession triggered the first Indo-Pakistani War of 1947-48. Which state was it?",
+    "question": "What Mekong Delta hot pot, made with fermented fish paste and an array of vegetables, is a beloved communal dish?",
     "options": [
-      "Hyderabad",
-      "Junagadh",
-      "Travancore",
-      "Jammu and Kashmir"
+      "Lau mam",
+      "Lau ca",
+      "Canh chua",
+      "Bun mam"
     ],
-    "answer": "Jammu and Kashmir",
+    "answer": "Lau mam",
     "difficulty": "hard"
   },
   {
     "id": 116,
-    "question": "Which 1975-1977 period, declared by Indira Gandhi, saw civil liberties suspended and press censorship imposed nationwide?",
+    "question": "Which coffee variety, prized for instant coffee and exports, makes up the vast majority of Vietnam's coffee production?",
     "options": [
-      "Operation Blue Star",
-      "Bangladesh Liberation crisis",
-      "The Emergency",
-      "Naxalite Movement"
+      "Robusta",
+      "Arabica",
+      "Liberica",
+      "Excelsa"
     ],
-    "answer": "The Emergency",
+    "answer": "Robusta",
     "difficulty": "hard"
   },
   {
     "id": 117,
-    "question": "Which 1984 military operation, ordered by Indira Gandhi, targeted militants sheltering inside the Golden Temple in Amritsar?",
+    "question": "Which delta produces roughly half of Vietnam's total rice output and the bulk of its rice exports?",
     "options": [
-      "Operation Cactus",
-      "Operation Blue Star",
-      "Operation Vijay",
-      "Operation Meghdoot"
+      "Mekong Delta",
+      "Red River Delta",
+      "Irrawaddy Delta",
+      "Chao Phraya Delta"
     ],
-    "answer": "Operation Blue Star",
+    "answer": "Mekong Delta",
     "difficulty": "hard"
   },
   {
     "id": 118,
-    "question": "What was the codename for India's first nuclear test, conducted in 1974?",
+    "question": "What communal fermented rice wine, traditionally sipped through long straws by highland ethnic groups, is called 'ruou can'?",
     "options": [
-      "Trinity",
-      "Smiling Buddha",
-      "Operation Shakti",
-      "Operation Chagai"
+      "Ruou can",
+      "Ruou nep",
+      "Ruou thuoc",
+      "Ruou de"
     ],
-    "answer": "Smiling Buddha",
+    "answer": "Ruou can",
     "difficulty": "hard"
   },
   {
     "id": 119,
-    "question": "What was the codename for India's 1998 series of nuclear weapon tests that established it as a declared nuclear power?",
+    "question": "What 1954 international agreement ended the First Indochina War and temporarily partitioned Vietnam?",
     "options": [
-      "Smiling Buddha",
-      "Operation Shakti",
-      "Operation Parakram",
-      "Operation Brasstacks"
+      "Geneva Accords",
+      "Paris Peace Accords",
+      "Treaty of Versailles",
+      "SEATO Treaty"
     ],
-    "answer": "Operation Shakti",
+    "answer": "Geneva Accords",
     "difficulty": "hard"
   },
   {
     "id": 120,
-    "question": "Which 1971 war resulted in the creation of Bangladesh as an independent nation?",
+    "question": "What 1973 agreement, signed in France, formally ended direct U.S. military involvement in the Vietnam War?",
     "options": [
-      "Kargil War",
-      "Sino-Indian War",
-      "Indo-Pakistani War of 1965",
-      "Indo-Pakistani War of 1971"
+      "Paris Peace Accords",
+      "Geneva Accords",
+      "Treaty of Hue",
+      "SEATO Treaty"
     ],
-    "answer": "Indo-Pakistani War of 1971",
+    "answer": "Paris Peace Accords",
     "difficulty": "hard"
   },
   {
     "id": 121,
-    "question": "Which 1962 conflict was fought between India and China over disputed Himalayan border territories?",
+    "question": "Which North Vietnamese negotiator was jointly awarded, but declined, the 1973 Nobel Peace Prize alongside Henry Kissinger?",
     "options": [
-      "Indo-Pakistani War of 1965",
-      "Sino-Indian War",
-      "Kargil War",
-      "Doklam standoff"
+      "Le Duc Tho",
+      "Pham Van Dong",
+      "Vo Nguyen Giap",
+      "Nguyen Co Thach"
     ],
-    "answer": "Sino-Indian War",
+    "answer": "Le Duc Tho",
     "difficulty": "hard"
   },
   {
     "id": 122,
-    "question": "Which 1999 conflict was fought between India and Pakistan in the mountainous Kargil district of Kashmir?",
+    "question": "What 1979 conflict saw China briefly invade northern Vietnam after Vietnam overthrew the Khmer Rouge?",
     "options": [
-      "Siachen conflict",
-      "Sino-Indian War",
-      "Operation Parakram",
-      "Kargil War"
+      "Sino-Vietnamese War",
+      "Cambodian-Vietnamese War",
+      "Second Indochina War",
+      "Border Clash of Lang Son"
     ],
-    "answer": "Kargil War",
+    "answer": "Sino-Vietnamese War",
     "difficulty": "hard"
   },
   {
     "id": 123,
-    "question": "Which set of economic reforms, initiated under Finance Minister Manmohan Singh in 1991, liberalized India's economy?",
+    "question": "Vietnam invaded and overthrew the Khmer Rouge regime of which neighboring country in 1978-79?",
     "options": [
-      "Garibi Hatao program",
-      "Bank Nationalization",
-      "Green Revolution",
-      "1991 Economic Reforms"
+      "Cambodia",
+      "Laos",
+      "Thailand",
+      "Myanmar"
     ],
-    "answer": "1991 Economic Reforms",
+    "answer": "Cambodia",
     "difficulty": "hard"
   },
   {
     "id": 124,
-    "question": "Which agricultural initiative, associated with scientist M.S. Swaminathan in the 1960s, dramatically boosted India's food grain output?",
+    "question": "Who was the first president of South Vietnam, ousted and killed in a 1963 coup?",
     "options": [
-      "Green Revolution",
-      "Blue Revolution",
-      "Yellow Revolution",
-      "White Revolution"
+      "Ngo Dinh Diem",
+      "Nguyen Van Thieu",
+      "Duong Van Minh",
+      "Bao Dai"
     ],
-    "answer": "Green Revolution",
+    "answer": "Ngo Dinh Diem",
     "difficulty": "hard"
   },
   {
     "id": 125,
-    "question": "Which \"revolution,\" associated with Verghese Kurien, transformed India into the world's largest milk producer?",
+    "question": "Who was the last president of South Vietnam, surrendering to North Vietnamese forces in April 1975?",
     "options": [
-      "Silver Revolution",
-      "White Revolution",
-      "Blue Revolution",
-      "Green Revolution"
+      "Duong Van Minh",
+      "Nguyen Van Thieu",
+      "Ngo Dinh Diem",
+      "Tran Van Huong"
     ],
-    "answer": "White Revolution",
+    "answer": "Duong Van Minh",
     "difficulty": "hard"
   },
   {
     "id": 126,
-    "question": "Which critically endangered big cat is found in the wild only in the Gir Forest of Gujarat?",
+    "question": "What was the name of the North Vietnamese supply route that ran partly through Laos and Cambodia to reinforce forces in the South?",
     "options": [
-      "Indian Wolf",
-      "Asiatic Lion",
-      "Clouded Leopard",
-      "Snow Leopard"
+      "Ho Chi Minh Trail",
+      "Rolling Thunder",
+      "Ia Drang Corridor",
+      "Demilitarized Zone"
     ],
-    "answer": "Asiatic Lion",
+    "answer": "Ho Chi Minh Trail",
     "difficulty": "hard"
   },
   {
     "id": 127,
-    "question": "Which endangered primate, native to the Western Ghats, is known for the distinctive white mane resembling a lion's?",
+    "question": "Which general, celebrated for his victory at Dien Bien Phu, is often ranked among history's greatest military strategists?",
     "options": [
-      "Bonnet Macaque",
-      "Lion-tailed Macaque",
-      "Nilgiri Langur",
-      "Hoolock Gibbon"
+      "Vo Nguyen Giap",
+      "Van Tien Dung",
+      "Le Trong Tan",
+      "Chu Huy Man"
     ],
-    "answer": "Lion-tailed Macaque",
+    "answer": "Vo Nguyen Giap",
     "difficulty": "hard"
   },
   {
     "id": 128,
-    "question": "Which critically endangered grassland bird, among the heaviest flying birds in the world, is native to India?",
+    "question": "Who became North Vietnam's top Communist Party leader following Ho Chi Minh's death in 1969?",
     "options": [
-      "Lesser Florican",
-      "Sarus Crane",
-      "Indian Peafowl",
-      "Great Indian Bustard"
+      "Le Duan",
+      "Truong Chinh",
+      "Pham Van Dong",
+      "Vo Nguyen Giap"
     ],
-    "answer": "Great Indian Bustard",
+    "answer": "Le Duan",
     "difficulty": "hard"
   },
   {
     "id": 129,
-    "question": "Which functionally blind river dolphin, found in the Ganges and Brahmaputra, is India's national aquatic animal?",
+    "question": "What is the name of the Latin-based writing system, developed with diacritics, used to write modern Vietnamese?",
     "options": [
-      "Irrawaddy Dolphin",
-      "Ganges River Dolphin",
-      "Indus River Dolphin",
-      "Finless Porpoise"
+      "Quoc ngu",
+      "Chu Nom",
+      "Han script",
+      "Sanskrit script"
     ],
-    "answer": "Ganges River Dolphin",
+    "answer": "Quoc ngu",
     "difficulty": "hard"
   },
   {
     "id": 130,
-    "question": "Which classical Sanskrit playwright, often called \"the Shakespeare of India,\" wrote Abhijnanasakuntalam?",
+    "question": "Which 17th-century Jesuit missionary is widely credited with helping systematize the Latin-based Vietnamese alphabet?",
     "options": [
-      "Bhasa",
-      "Vishakhadatta",
-      "Kalidasa",
-      "Bhavabhuti"
+      "Alexandre de Rhodes",
+      "Francis Xavier",
+      "Matteo Ricci",
+      "Alessandro Valignano"
     ],
-    "answer": "Kalidasa",
+    "answer": "Alexandre de Rhodes",
     "difficulty": "hard"
   },
   {
     "id": 131,
-    "question": "Which epic, traditionally attributed to the sage Valmiki, narrates the story of Prince Rama?",
+    "question": "Which Vietnamese-American author won the 2016 Pulitzer Prize for Fiction for his novel 'The Sympathizer'?",
     "options": [
-      "Ramayana",
-      "Puranas",
-      "Vedas",
-      "Mahabharata"
+      "Viet Thanh Nguyen",
+      "Ocean Vuong",
+      "Andrew Lam",
+      "Nam Le"
     ],
-    "answer": "Ramayana",
+    "answer": "Viet Thanh Nguyen",
     "difficulty": "hard"
   },
   {
     "id": 132,
-    "question": "Which philosophical dialogue, embedded within the Mahabharata, records a conversation between Prince Arjuna and Lord Krishna?",
+    "question": "Which Vietnamese-American poet won the T.S. Eliot Prize for his debut collection 'Night Sky with Exit Wounds'?",
     "options": [
-      "Puranas",
-      "Manusmriti",
-      "Upanishads",
-      "Bhagavad Gita"
+      "Ocean Vuong",
+      "Viet Thanh Nguyen",
+      "Andrew Lam",
+      "Bao Ninh"
     ],
-    "answer": "Bhagavad Gita",
+    "answer": "Ocean Vuong",
     "difficulty": "hard"
   },
   {
     "id": 133,
-    "question": "Which 8th-century philosopher is credited with consolidating the Hindu philosophical doctrine of Advaita Vedanta?",
+    "question": "Which Vietnamese author wrote the acclaimed war novel 'The Sorrow of War,' drawing on his own combat experience?",
     "options": [
-      "Adi Shankaracharya",
-      "Chaitanya Mahaprabhu",
-      "Madhvacharya",
-      "Ramanuja"
+      "Bao Ninh",
+      "Nguyen Huy Thiep",
+      "To Hoai",
+      "Nguyen Nhat Anh"
     ],
-    "answer": "Adi Shankaracharya",
+    "answer": "Bao Ninh",
     "difficulty": "hard"
   },
   {
     "id": 134,
-    "question": "Which medieval Bhakti-movement poet-saint is renowned for her devotional songs dedicated to Krishna?",
+    "question": "Which Vietnamese fashion designer, known for elaborate haute couture gowns, has dressed stars like Rihanna and Katy Perry?",
     "options": [
-      "Lal Ded",
-      "Meera Bai",
-      "Andal",
-      "Akka Mahadevi"
+      "Cong Tri",
+      "Le Thanh Hoa",
+      "Do Manh Cuong",
+      "Vu Ngoc va Son"
     ],
-    "answer": "Meera Bai",
+    "answer": "Cong Tri",
     "difficulty": "hard"
   },
   {
     "id": 135,
-    "question": "Which 14th-century Sufi mystic of the Chishti order, buried at a widely visited Delhi dargah, is closely tied to that city's spiritual history?",
+    "question": "What Vietnamese board game, a version of xiangqi played with 32 pieces representing a battlefield, remains a popular pastime?",
     "options": [
-      "Nizamuddin Auliya",
-      "Amir Khusrau",
-      "Baba Farid",
-      "Moinuddin Chishti"
+      "Co tuong",
+      "Co vua",
+      "Co caro",
+      "Co up"
     ],
-    "answer": "Nizamuddin Auliya",
+    "answer": "Co tuong",
     "difficulty": "hard"
   },
   {
     "id": 136,
-    "question": "Which largely self-taught Indian mathematician made major contributions to number theory while corresponding with G.H. Hardy at Cambridge?",
+    "question": "Which UNESCO-recognized traditional chamber music genre, performed by female singers with a distinctive vocal style, is called 'ca tru'?",
     "options": [
-      "Harish-Chandra",
-      "C.R. Rao",
-      "Srinivasa Ramanujan",
-      "D.R. Kaprekar"
+      "Ca tru",
+      "Quan ho",
+      "Cai luong",
+      "Nha nhac"
     ],
-    "answer": "Srinivasa Ramanujan",
+    "answer": "Ca tru",
     "difficulty": "hard"
   },
   {
     "id": 137,
-    "question": "Which Indian physicist's collaboration with Albert Einstein led to a class of particles being named \"bosons\"?",
+    "question": "Which reformed theater and opera style, popular in southern Vietnam, blends traditional and modern musical influences?",
     "options": [
-      "Homi Bhabha",
-      "Satyendra Nath Bose",
-      "Meghnad Saha",
-      "C.V. Raman"
+      "Cai luong",
+      "Ca tru",
+      "Quan ho",
+      "Nha nhac"
     ],
-    "answer": "Satyendra Nath Bose",
+    "answer": "Cai luong",
     "difficulty": "hard"
   },
   {
     "id": 138,
-    "question": "Which Indian-born astrophysicist won the 1983 Nobel Prize in Physics for work on the structure and evolution of stars?",
+    "question": "Which UNESCO-recognized folk singing tradition from Bac Ninh province features alternating male-female duet verses?",
     "options": [
-      "Venkatraman Ramakrishnan",
-      "Har Gobind Khorana",
-      "Abdus Salam",
-      "Subrahmanyan Chandrasekhar"
+      "Quan ho",
+      "Ca tru",
+      "Cai luong",
+      "Nha nhac"
     ],
-    "answer": "Subrahmanyan Chandrasekhar",
+    "answer": "Quan ho",
     "difficulty": "hard"
   },
   {
     "id": 139,
-    "question": "Which Indian-born economist won the 2019 Nobel Prize in Economics for experimental work on alleviating global poverty?",
+    "question": "Which Vietnamese powerlifter won the country's first-ever Paralympic gold medal, at Rio 2016?",
     "options": [
-      "Amartya Sen",
-      "Raghuram Rajan",
-      "Kaushik Basu",
-      "Abhijit Banerjee"
+      "Le Van Cong",
+      "Nguyen Thi Anh Vien",
+      "Hoang Xuan Vinh",
+      "Thach Kim Tuan"
     ],
-    "answer": "Abhijit Banerjee",
+    "answer": "Le Van Cong",
     "difficulty": "hard"
   },
   {
     "id": 140,
-    "question": "Which classical dance-drama form from Andhra Pradesh, historically performed by devadasis, blends dance, music, and storytelling?",
+    "question": "What is the name of Vietnam's largest football stadium, located in Hanoi?",
     "options": [
-      "Kuchipudi",
-      "Mohiniyattam",
-      "Odissi",
-      "Bharatanatyam"
+      "My Dinh National Stadium",
+      "Thong Nhat Stadium",
+      "Lach Tray Stadium",
+      "Cam Pha Stadium"
     ],
-    "answer": "Kuchipudi",
+    "answer": "My Dinh National Stadium",
     "difficulty": "hard"
   },
   {
     "id": 141,
-    "question": "Which Assamese classical dance form, tied to the Vaishnavite monasteries founded by Srimanta Sankardev, is performed largely by monks?",
+    "question": "Which Hanoi-based football club has won the most V.League 1 titles in Vietnamese football history?",
     "options": [
-      "Kathakali",
-      "Manipuri",
-      "Sattriya",
-      "Bihu"
+      "Hanoi FC",
+      "Becamex Binh Duong",
+      "Song Lam Nghe An",
+      "Viettel FC"
     ],
-    "answer": "Sattriya",
+    "answer": "Hanoi FC",
     "difficulty": "hard"
   },
   {
     "id": 142,
-    "question": "Which centuries-old martial art, originating in Kerala, is considered one of the oldest fighting systems in the world?",
+    "question": "Which Vietnamese chess grandmaster won the World Blitz Chess Championship in 2013?",
     "options": [
-      "Gatka",
-      "Silambam",
-      "Thang-Ta",
-      "Kalaripayattu"
+      "Le Quang Liem",
+      "Nguyen Ngoc Truong Son",
+      "Tran Tuan Minh",
+      "Nguyen Anh Khoi"
     ],
-    "answer": "Kalaripayattu",
+    "answer": "Le Quang Liem",
     "difficulty": "hard"
   },
   {
     "id": 143,
-    "question": "Which princely state, ruled by the Nizam and holding immense wealth, was integrated into India by force in 1948 through \"Operation Polo\"?",
+    "question": "Which endemic Vietnamese deer species, thought extinct, was rediscovered by scientists in the 1990s and remains critically endangered?",
     "options": [
-      "Hyderabad",
-      "Jammu and Kashmir",
-      "Travancore",
-      "Junagadh"
+      "Large-antlered muntjac",
+      "Sika deer",
+      "Sambar deer",
+      "Saola"
     ],
-    "answer": "Hyderabad",
+    "answer": "Large-antlered muntjac",
     "difficulty": "hard"
   },
   {
     "id": 144,
-    "question": "Which coastal territory remained a Portuguese colony until it was annexed by India in 1961?",
+    "question": "Which national park in the Annamite mountains is home to the rare Edwards's pheasant and other endemic bird species?",
     "options": [
-      "Dadra and Nagar Haveli",
-      "Puducherry",
-      "Goa",
-      "Daman and Diu"
+      "Bach Ma National Park",
+      "Cuc Phuong National Park",
+      "Phong Nha-Ke Bang National Park",
+      "Cat Tien National Park"
     ],
-    "answer": "Goa",
+    "answer": "Bach Ma National Park",
     "difficulty": "hard"
   },
   {
     "id": 145,
-    "question": "Which French colonial enclave on India's southeastern coast was transferred to Indian control in 1954?",
+    "question": "What mountain range, also called the Truong Son Range, runs along Vietnam's western border with Laos?",
     "options": [
-      "Goa",
-      "Daman",
-      "Chandannagar",
-      "Puducherry"
+      "Annamite Range",
+      "Hoang Lien Son Range",
+      "Da Lat Plateau",
+      "Central Highlands"
     ],
-    "answer": "Puducherry",
+    "answer": "Annamite Range",
     "difficulty": "hard"
   },
   {
     "id": 146,
-    "question": "Which Trinidadian writer of Indian origin won the 2001 Nobel Prize in Literature for works including \"A House for Mr Biswas\"?",
+    "question": "Vietnam is the world's largest exporter of which spice?",
     "options": [
-      "Jhumpa Lahiri",
-      "Salman Rushdie",
-      "V.S. Naipaul",
-      "Vikram Seth"
+      "Black pepper",
+      "Cinnamon",
+      "Star anise",
+      "Cardamom"
     ],
-    "answer": "V.S. Naipaul",
+    "answer": "Black pepper",
     "difficulty": "hard"
   },
   {
     "id": 147,
-    "question": "Which Indian business conglomerate, founded by Jamsetji Tata in 1868, grew into one of the country's largest industrial groups?",
+    "question": "Which province is Vietnam's largest grower and exporter of dragon fruit?",
     "options": [
-      "Tata Group",
-      "Reliance Industries",
-      "Birla Group",
-      "Godrej Group"
+      "Binh Thuan",
+      "Long An",
+      "Tien Giang",
+      "Dong Nai"
     ],
-    "answer": "Tata Group",
+    "answer": "Binh Thuan",
     "difficulty": "hard"
   },
   {
     "id": 148,
-    "question": "Which constitutional article, abrogated in 2019, had granted special autonomous status to Jammu and Kashmir?",
+    "question": "Which sea turtle species nests at Con Dao, Vietnam's most important sea turtle nesting site?",
     "options": [
-      "Article 370",
-      "Article 371",
-      "Article 356",
-      "Article 35A"
+      "Green sea turtle",
+      "Loggerhead turtle",
+      "Leatherback turtle",
+      "Hawksbill turtle"
     ],
-    "answer": "Article 370",
+    "answer": "Green sea turtle",
     "difficulty": "hard"
+  },
+  {
+    "id": 149,
+    "question": "Which island archipelago, once a notorious colonial and wartime prison site, is now a protected national park?",
+    "options": [
+      "Con Dao",
+      "Phu Quoc",
+      "Ly Son",
+      "Cat Ba"
+    ],
+    "answer": "Con Dao",
+    "difficulty": "hard"
+  },
+  {
+    "id": 150,
+    "question": "Which UNESCO Global Geopark in Ha Giang province, near the Chinese border, is known for its dramatic karst plateau?",
+    "options": [
+      "Dong Van Karst Plateau Geopark",
+      "Phong Nha-Ke Bang",
+      "Ha Long Bay",
+      "Trang An"
+    ],
+    "answer": "Dong Van Karst Plateau Geopark",
+    "difficulty": "hard"
+  },
+  {
+    "id": 151,
+    "question": "What is the most common surname in Vietnam?",
+    "options": [
+      "Nguyen",
+      "Tran",
+      "Le",
+      "Pham"
+    ],
+    "answer": "Nguyen",
+    "difficulty": "easy"
   }
 ]
