@@ -212,6 +212,8 @@ function showComingSoon() {
   const optionsWrap = document.getElementById('raAppOptions');
   const restoreBtn = document.getElementById('raRestoreBtn');
   restoreBtn.style.display = 'none';
+  const badge = document.getElementById('raComingSoonBadge');
+  if (badge) badge.style.display = '';
 
   const vote = localStorage.getItem('_removeAdsVote'); // 'yes' | 'no' | null
 
@@ -227,21 +229,19 @@ function showComingSoon() {
   optionsWrap.innerHTML = `
     <p>Coming soon — we're putting the finishing touches on this.</p>
     <p style="opacity:0.8;font-size:0.9em">Planned pricing: <strong>€2.00/month</strong> or <strong>€10.00 once</strong> (forever) — final price may vary by region.</p>
-    <label style="display:flex;align-items:center;gap:8px;font-weight:normal;cursor:pointer">
-      <input type="checkbox" id="raInterestCheck" />
-      <span>🔔 I'm interested</span>
-    </label>
-    <a href="#" id="raNotInterested" style="font-size:0.8em;opacity:0.6">Not interested</a>
+    <p style="font-weight:600;margin-bottom:2px">Want to know when it's ready?</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <button type="button" class="secondary-btn" id="raInterestBtn">🔔 I'm interested</button>
+      <button type="button" class="secondary-btn" id="raNotInterestedBtn" style="opacity:0.7">Not interested</button>
+    </div>
   `;
 
-  document.getElementById('raInterestCheck').addEventListener('change', (e) => {
-    if (!e.target.checked) return;
+  document.getElementById('raInterestBtn').addEventListener('click', () => {
     localStorage.setItem('_removeAdsVote', 'yes');
     if (typeof gtag === 'function') gtag('event', 'remove_ads_interest');
     showComingSoon();
   });
-  document.getElementById('raNotInterested').addEventListener('click', (e) => {
-    e.preventDefault();
+  document.getElementById('raNotInterestedBtn').addEventListener('click', () => {
     localStorage.setItem('_removeAdsVote', 'no');
     if (typeof gtag === 'function') gtag('event', 'remove_ads_not_interested');
     showComingSoon();
