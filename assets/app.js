@@ -11,8 +11,10 @@ function addNoIndex() {
 
 function isPremiumUser() {
   const expiry = localStorage.getItem('adsRemovedUntil');
-  if (!expiry) return false;
-  return new Date(expiry) > new Date();
+  if (expiry && new Date(expiry) > new Date()) return true;
+  // App purchasers (RevenueCat "Remove Ads") count as premium too — isAdsRemoved()
+  // only exists on pages that load admob.js, hence the typeof guard.
+  return typeof isAdsRemoved === 'function' && isAdsRemoved();
 }
 
 async function fetchJSON(path) {
