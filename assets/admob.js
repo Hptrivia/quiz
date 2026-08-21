@@ -13,7 +13,7 @@
 //   1. paste the real iOS ad unit IDs into _ADMOB_LIVE_IDS.ios below, then
 //   2. change ios: 'off' → 'live' here.
 const ADMOB_MODE_BY_PLATFORM = {
-  ios: 'test',
+  ios: 'live',
   android: 'live',
 };
 const _ADMOB_PLATFORM = window.Capacitor?.getPlatform?.();
@@ -533,9 +533,9 @@ function injectRemoveAdsFooterLink() {
   if (!footerLinks || footerLinks.querySelector('.remove-ads-footer-link')) return;
   const link = document.createElement('a');
   link.href = '/remove-ads.html';
-  link.className = 'remove-ads-footer-link';
+  link.className = 'remove-ads-footer-link footer-highlight';
   link.textContent = 'Remove Ads';
-  footerLinks.appendChild(link);
+  footerLinks.prepend(link);
 }
 
 async function _bootInApp() {
