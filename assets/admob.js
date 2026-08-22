@@ -85,6 +85,15 @@ function _rcApplyCustomerInfo(info) {
   return active;
 }
 
+// The Android native plugin doesn't consistently wrap CustomerInfo in a
+// `{ customerInfo }` envelope despite what the TS types declare (already hit
+// this once with addCustomerInfoUpdateListener, which hands back the
+// CustomerInfo object directly). Accept either shape here instead of trusting
+// the declared type.
+function _rcExtractCustomerInfo(result) {
+  return result?.entitlements ? result : (result?.customerInfo || null);
+}
+
 async function rcInit() {
   if (!isInApp() || _rcReady) return;
   const apiKey = RC_API_KEYS[window.Capacitor.getPlatform?.()];
@@ -93,11 +102,11 @@ async function rcInit() {
     _Purchases = window.Capacitor.Plugins.Purchases;
     await _Purchases.configure({ apiKey });
     _rcReady = true;
-    _Purchases.addCustomerInfoUpdateListener((customerInfo) => {
-      _rcApplyCustomerInfo(customerInfo);
+    _Purchases.addCustomerInfoUpdateListener((result) => {
+      _rcApplyCustomerInfo(_rcExtractCustomerInfo(result));
     });
-    const { customerInfo } = await _Purchases.getCustomerInfo();
-    _rcApplyCustomerInfo(customerInfo);
+    const result = await _Purchases.getCustomerInfo();
+    _rcApplyCustomerInfo(_rcExtractCustomerInfo(result));
   } catch (e) {
     console.warn('[RevenueCat] init failed', e);
   }
@@ -118,7 +127,7 @@ async function rcPurchasePackage(pkg) {
   if (!_rcReady) return false;
   try {
     const result = await _Purchases.purchasePackage({ aPackage: pkg });
-    const active = _rcApplyCustomerInfo(result?.customerInfo);
+    const active = _rcApplyCustomerInfo(_rcExtractCustomerInfo(result));
     if (active) { adMobHideBanner(); }
     return active;
   } catch (e) {
@@ -131,8 +140,8 @@ async function rcPurchasePackage(pkg) {
 async function rcRestorePurchases() {
   if (!_rcReady) return false;
   try {
-    const { customerInfo } = await _Purchases.restorePurchases();
-    const active = _rcApplyCustomerInfo(customerInfo);
+    const result = await _Purchases.restorePurchases();
+    const active = _rcApplyCustomerInfo(_rcExtractCustomerInfo(result));
     if (active) { adMobHideBanner(); }
     return active;
   } catch (e) {
