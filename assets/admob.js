@@ -48,123 +48,6 @@ function isInApp() {
   return !!(window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative));
 }
 
-// RevenueCat — native in-app "Remove Ads" purchase (Android only for now; iOS key
-// pending until we set up App Store Connect). Cache-first: the last known
-// entitlement state is mirrored to localStorage so ad gating on boot doesn't have
-// to wait on a network round trip — only a fresh purchase/restore needs the SDK.
-const RC_API_KEYS = {
-  android: 'goog_ibOMKMipvgcZhewTvXnliZnxXsC',
-};
-const RC_ENTITLEMENT_ID = 'no_ads';
-const RC_CACHE_KEY = '_rcAdsRemoved';
-
-// Purchase flow isn't tested on a real device build yet — keep the paywall
-// page showing "Coming Soon" (see remove-ads.js initAppPaywall) until a
-// build with the native RevenueCat plugin has been through a real purchase.
-// Entry points (theme card, "Remove Ads" popup button) stay visible
-// either way so we can gauge interest before the flow goes live.
-const REMOVE_ADS_LIVE = false;
-
-// Tester-only bypass so real purchases can be tested on one device before
-// REMOVE_ADS_LIVE goes true for everyone. Visiting remove-ads.html with
-// ?testpaywall=1 sets this flag (see remove-ads.js), which unlocks the real
-// purchase UI on that device only; everyone else still sees Coming Soon.
-const PAYWALL_TEST_OVERRIDE_KEY = '_paywallTestOverride';
-
-let _Purchases = null;
-let _rcReady = false;
-
-function isAdsRemoved() {
-  return localStorage.getItem(RC_CACHE_KEY) === '1';
-}
-
-function _rcApplyCustomerInfo(info) {
-  const active = !!(info && info.entitlements && info.entitlements.active && info.entitlements.active[RC_ENTITLEMENT_ID]);
-  if (active) localStorage.setItem(RC_CACHE_KEY, '1');
-  else localStorage.removeItem(RC_CACHE_KEY);
-  return active;
-}
-
-// The Android native plugin doesn't consistently wrap CustomerInfo in a
-// `{ customerInfo }` envelope despite what the TS types declare (already hit
-// this once with addCustomerInfoUpdateListener, which hands back the
-// CustomerInfo object directly). Accept either shape here instead of trusting
-// the declared type.
-function _rcExtractCustomerInfo(result) {
-  return result?.entitlements ? result : (result?.customerInfo || null);
-}
-
-// Callers (ad init on every page, the paywall page) previously fired this
-// without awaiting it, so isAdsRemoved() often got checked before the
-// RevenueCat entitlement check had actually come back — showing ads/prompts
-// to already-paying users, or the paywall page not recognizing its own
-// purchase, purely depending on network timing. Memoizing the in-flight
-// promise lets every caller safely `await rcInit()` and share one check.
-let _rcInitPromise = null;
-function rcInit() {
-  if (_rcInitPromise) return _rcInitPromise;
-  _rcInitPromise = (async () => {
-    if (!isInApp()) return;
-    const apiKey = RC_API_KEYS[window.Capacitor.getPlatform?.()];
-    if (!apiKey) return; // iOS not wired up yet
-    try {
-      _Purchases = window.Capacitor.Plugins.Purchases;
-      await _Purchases.configure({ apiKey });
-      _rcReady = true;
-      _Purchases.addCustomerInfoUpdateListener((result) => {
-        _rcApplyCustomerInfo(_rcExtractCustomerInfo(result));
-      });
-      const result = await _Purchases.getCustomerInfo();
-      _rcApplyCustomerInfo(_rcExtractCustomerInfo(result));
-    } catch (e) {
-      console.warn('[RevenueCat] init failed', e);
-    }
-  })();
-  return _rcInitPromise;
-}
-
-async function rcGetOfferings() {
-  if (!_rcReady) return null;
-  try {
-    const offerings = await _Purchases.getOfferings();
-    return offerings?.current || null;
-  } catch (e) {
-    console.warn('[RevenueCat] getOfferings failed', e);
-    return null;
-  }
-}
-
-async function rcPurchasePackage(pkg) {
-  if (!_rcReady) return false;
-  try {
-    const result = await _Purchases.purchasePackage({ aPackage: pkg });
-    const active = _rcApplyCustomerInfo(_rcExtractCustomerInfo(result));
-    if (active) { adMobHideBanner(); }
-    return active;
-  } catch (e) {
-    if (e?.userCancelled) return false;
-    console.warn('[RevenueCat] purchase failed', e);
-    return false;
-  }
-}
-
-// Returns { active, error } instead of a bare boolean so the UI can show why
-// a restore didn't grant the entitlement (genuinely nothing to restore vs. a
-// plugin/network error that was previously being swallowed into the same
-// generic "no purchase found" message).
-async function rcRestorePurchases() {
-  if (!_rcReady) return { active: false, error: 'not_ready' };
-  try {
-    const result = await _Purchases.restorePurchases();
-    const active = _rcApplyCustomerInfo(_rcExtractCustomerInfo(result));
-    if (active) { adMobHideBanner(); }
-    return { active, error: null };
-  } catch (e) {
-    console.warn('[RevenueCat] restore failed', e);
-    return { active: false, error: e?.message || e?.code || String(e) };
-  }
-}
-
 // Pings a Telegram bot the first time the app is ever opened on a device,
 // giving a near-real-time "new install" alert. Fires once per device (guarded
 // by localStorage), only inside the native app.
@@ -257,7 +140,7 @@ async function _requestATT() {
 }
 
 async function adMobInit() {
-  if (!isInApp() || !ADMOB_ADS_ENABLED || _adMobReady || isAdsRemoved()) return;
+  if (!isInApp() || !ADMOB_ADS_ENABLED || _adMobReady) return;
   const _modeKey = (() => {
     const p = window.location.pathname;
     if (/\/wordsearch\//.test(p)) return '_iad_wordsearch';
@@ -434,7 +317,6 @@ function _offerRewardedLifeline(name, onEarned, promptHtml, onCancel) {
     <p style="margin:0 0 16px;font-size:1.1em">${promptHtml || `Watch a short ad to use <strong>${name}</strong>?`}</p>
     <button id="_adYes" style="margin-right:8px;padding:10px 20px;border-radius:8px;background:#6c63ff;color:#fff;border:none;cursor:pointer;font-size:1em">Watch Ad</button>
     <button id="_adNo" style="padding:10px 20px;border-radius:8px;background:#444;color:#fff;border:none;cursor:pointer;font-size:1em">Cancel</button>
-    <div style="margin-top:14px"><button id="_adRemoveAds" style="padding:10px 20px;border-radius:8px;background:#22c55e;border:none;color:#0b1220;font-weight:700;cursor:pointer;font-size:0.95em">🚫 Remove Ads</button></div>
   </div>`;
   document.body.appendChild(overlay);
   overlay.querySelector('#_adNo').onclick = () => { overlay.remove(); if (onCancel) onCancel(); };
@@ -442,10 +324,6 @@ function _offerRewardedLifeline(name, onEarned, promptHtml, onCancel) {
     overlay.remove();
     const earned = await adMobShowRewarded();
     if (earned || !_rewardedLoaded) onEarned(); // proceed if earned OR ad failed to load
-  };
-  overlay.querySelector('#_adRemoveAds').onclick = () => {
-    overlay.remove();
-    window.location.href = '/remove-ads.html';
   };
 }
 
@@ -458,7 +336,6 @@ function injectRevealMissedButton(wrongQuestions, ctaRow) {
   if (typeof isInApp !== 'function' || !isInApp()) return;
   if (!ADMOB_ADS_ENABLED) return;
   if (typeof isPremiumUser === 'function' && isPremiumUser()) return;
-  if (isAdsRemoved()) return;
   if (ctaRow.querySelector('.reveal-missed-btn')) return;
 
   const btn = document.createElement('button');
@@ -522,7 +399,7 @@ document.addEventListener('click', async (e) => {
       promptHtml = `Watch a short ad to play <strong>${label}</strong>?`;
     }
   }
-  if (!href || !isInApp() || !ADMOB_ADS_ENABLED || isAdsRemoved()) return;
+  if (!href || !isInApp() || !ADMOB_ADS_ENABLED) return;
   e.preventDefault();
   _offerRewardedLifeline(label, () => {
     try {
@@ -537,41 +414,7 @@ document.addEventListener('click', async (e) => {
   }, promptHtml);
 });
 
-// App-only "Remove Ads" card appended to the mode grid on theme pages. Theme
-// pages are static HTML generated from one build template (hundreds of files),
-// so this is injected at runtime rather than baked into the template — the mode
-// grid is the .grid that's a direct child of .panel (theme pages also have a
-// second .grid nested inside .theme-related-quizzes, which we must not touch).
-function injectRemoveAdsThemeCard() {
-  if (!isInApp() || !ADMOB_ADS_ENABLED || isAdsRemoved()) return;
-  if (!/\/themes\//.test(window.location.pathname)) return;
-  const grid = document.querySelector('.panel > .grid');
-  if (!grid || grid.querySelector('.remove-ads-card')) return;
-  const card = document.createElement('a');
-  card.href = '/remove-ads.html';
-  card.className = 'card remove-ads-card';
-  card.innerHTML = `<h3>Remove Ads <span style="font-size:0.65rem;font-weight:700;background:#22c55e;color:#fff;padding:2px 7px;border-radius:4px;vertical-align:middle;margin-left:6px;">GO AD-FREE</span></h3><p>No ads, ever — one-time or monthly</p>`;
-  grid.appendChild(card);
-}
-
-// App-only "Remove Ads" link appended to the standard site footer (present on
-// nearly every page, generated and static alike) so the option is reachable
-// from anywhere in the app, not just theme pages.
-function injectRemoveAdsFooterLink() {
-  if (!isInApp() || !ADMOB_ADS_ENABLED || isAdsRemoved()) return;
-  const footerLinks = document.querySelector('.footer-links');
-  if (!footerLinks || footerLinks.querySelector('.remove-ads-footer-link')) return;
-  const link = document.createElement('a');
-  link.href = '/remove-ads.html';
-  link.className = 'remove-ads-footer-link footer-highlight';
-  link.textContent = 'Remove Ads';
-  footerLinks.prepend(link);
-}
-
 async function _bootInApp() {
-  const rcReady = rcInit();
-  injectRemoveAdsThemeCard();
-  injectRemoveAdsFooterLink();
   if (ADMOB_ADS_ENABLED) {
     // ATT first: the prompt must appear before any data that could be used to
     // track the user is collected (ads SDK start, IP-geolocated install ping).
@@ -579,10 +422,6 @@ async function _bootInApp() {
   }
   // Install ping always fires (it's our own install analytics, not ad tracking).
   _pingNewInstall();
-  // Wait for the entitlement check before deciding whether to init ads at all
-  // — otherwise isAdsRemoved() below can run before rcInit() has confirmed
-  // status, and ads flash in for an already-paying user.
-  await rcReady;
   // With ads off (platform pending approval) the app stays fully ad-free.
   if (ADMOB_ADS_ENABLED) {
     // The banner now shows from init on game pages (top) and browse pages
