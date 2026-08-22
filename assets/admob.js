@@ -94,22 +94,33 @@ function _rcExtractCustomerInfo(result) {
   return result?.entitlements ? result : (result?.customerInfo || null);
 }
 
-async function rcInit() {
-  if (!isInApp() || _rcReady) return;
-  const apiKey = RC_API_KEYS[window.Capacitor.getPlatform?.()];
-  if (!apiKey) return; // iOS not wired up yet
-  try {
-    _Purchases = window.Capacitor.Plugins.Purchases;
-    await _Purchases.configure({ apiKey });
-    _rcReady = true;
-    _Purchases.addCustomerInfoUpdateListener((result) => {
+// Callers (ad init on every page, the paywall page) previously fired this
+// without awaiting it, so isAdsRemoved() often got checked before the
+// RevenueCat entitlement check had actually come back — showing ads/prompts
+// to already-paying users, or the paywall page not recognizing its own
+// purchase, purely depending on network timing. Memoizing the in-flight
+// promise lets every caller safely `await rcInit()` and share one check.
+let _rcInitPromise = null;
+function rcInit() {
+  if (_rcInitPromise) return _rcInitPromise;
+  _rcInitPromise = (async () => {
+    if (!isInApp()) return;
+    const apiKey = RC_API_KEYS[window.Capacitor.getPlatform?.()];
+    if (!apiKey) return; // iOS not wired up yet
+    try {
+      _Purchases = window.Capacitor.Plugins.Purchases;
+      await _Purchases.configure({ apiKey });
+      _rcReady = true;
+      _Purchases.addCustomerInfoUpdateListener((result) => {
+        _rcApplyCustomerInfo(_rcExtractCustomerInfo(result));
+      });
+      const result = await _Purchases.getCustomerInfo();
       _rcApplyCustomerInfo(_rcExtractCustomerInfo(result));
-    });
-    const result = await _Purchases.getCustomerInfo();
-    _rcApplyCustomerInfo(_rcExtractCustomerInfo(result));
-  } catch (e) {
-    console.warn('[RevenueCat] init failed', e);
-  }
+    } catch (e) {
+      console.warn('[RevenueCat] init failed', e);
+    }
+  })();
+  return _rcInitPromise;
 }
 
 async function rcGetOfferings() {
@@ -554,7 +565,7 @@ function injectRemoveAdsFooterLink() {
 }
 
 async function _bootInApp() {
-  rcInit();
+  const rcReady = rcInit();
   injectRemoveAdsThemeCard();
   injectRemoveAdsFooterLink();
   if (ADMOB_ADS_ENABLED) {
@@ -564,6 +575,10 @@ async function _bootInApp() {
   }
   // Install ping always fires (it's our own install analytics, not ad tracking).
   _pingNewInstall();
+  // Wait for the entitlement check before deciding whether to init ads at all
+  // — otherwise isAdsRemoved() below can run before rcInit() has confirmed
+  // status, and ads flash in for an already-paying user.
+  await rcReady;
   // With ads off (platform pending approval) the app stays fully ad-free.
   if (ADMOB_ADS_ENABLED) {
     // The banner now shows from init on game pages (top) and browse pages

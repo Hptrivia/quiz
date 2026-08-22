@@ -157,6 +157,12 @@ async function initAppPaywall() {
     indicator.style.display = 'block';
   };
 
+  // Wait for the RevenueCat entitlement check before trusting isAdsRemoved()
+  // — otherwise this can run before rcInit() (fired from admob.js's own boot
+  // sequence) has confirmed status, and the page shows purchase buttons even
+  // for someone who already bought.
+  if (typeof rcInit === 'function') await rcInit();
+
   if (typeof isAdsRemoved === 'function' && isAdsRemoved()) {
     showRemoved();
     return;
