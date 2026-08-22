@@ -205,9 +205,12 @@ async function initAppPaywall() {
   restoreBtn.addEventListener('click', async () => {
     restoreBtn.disabled = true;
     restoreMsg.textContent = 'Checking...';
-    const ok = await rcRestorePurchases();
-    if (ok) { showRemoved(); restoreMsg.textContent = ''; }
-    else { restoreBtn.disabled = false; restoreMsg.textContent = 'No previous purchase found.'; }
+    const { active, error } = await rcRestorePurchases();
+    if (active) { showRemoved(); restoreMsg.textContent = ''; }
+    else {
+      restoreBtn.disabled = false;
+      restoreMsg.textContent = error ? `Restore failed: ${error}` : 'No previous purchase found.';
+    }
   });
 }
 

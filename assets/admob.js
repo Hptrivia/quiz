@@ -148,16 +148,20 @@ async function rcPurchasePackage(pkg) {
   }
 }
 
+// Returns { active, error } instead of a bare boolean so the UI can show why
+// a restore didn't grant the entitlement (genuinely nothing to restore vs. a
+// plugin/network error that was previously being swallowed into the same
+// generic "no purchase found" message).
 async function rcRestorePurchases() {
-  if (!_rcReady) return false;
+  if (!_rcReady) return { active: false, error: 'not_ready' };
   try {
     const result = await _Purchases.restorePurchases();
     const active = _rcApplyCustomerInfo(_rcExtractCustomerInfo(result));
     if (active) { adMobHideBanner(); }
-    return active;
+    return { active, error: null };
   } catch (e) {
     console.warn('[RevenueCat] restore failed', e);
-    return false;
+    return { active: false, error: e?.message || e?.code || String(e) };
   }
 }
 
