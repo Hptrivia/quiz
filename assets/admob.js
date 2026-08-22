@@ -14,7 +14,7 @@
 //   2. change ios: 'off' → 'live' here.
 const ADMOB_MODE_BY_PLATFORM = {
   ios: 'live',
-  android: 'live',
+  android: 'test',
 };
 const _ADMOB_PLATFORM = window.Capacitor?.getPlatform?.();
 const ADMOB_MODE = ADMOB_MODE_BY_PLATFORM[_ADMOB_PLATFORM] || 'off';
@@ -64,6 +64,12 @@ const RC_CACHE_KEY = '_rcAdsRemoved';
 // Entry points (theme card, "Remove Ads" popup button) stay visible
 // either way so we can gauge interest before the flow goes live.
 const REMOVE_ADS_LIVE = false;
+
+// Tester-only bypass so real purchases can be tested on one device before
+// REMOVE_ADS_LIVE goes true for everyone. Visiting remove-ads.html with
+// ?testpaywall=1 sets this flag (see remove-ads.js), which unlocks the real
+// purchase UI on that device only; everyone else still sees Coming Soon.
+const PAYWALL_TEST_OVERRIDE_KEY = '_paywallTestOverride';
 
 let _Purchases = null;
 let _rcReady = false;

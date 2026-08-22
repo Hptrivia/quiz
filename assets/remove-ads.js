@@ -162,7 +162,8 @@ async function initAppPaywall() {
     return;
   }
 
-  if (typeof REMOVE_ADS_LIVE !== 'undefined' && !REMOVE_ADS_LIVE) {
+  const testOverride = localStorage.getItem(PAYWALL_TEST_OVERRIDE_KEY) === '1';
+  if (typeof REMOVE_ADS_LIVE !== 'undefined' && !REMOVE_ADS_LIVE && !testOverride) {
     showComingSoon();
     return;
   }
@@ -250,6 +251,9 @@ function showComingSoon() {
 
 document.addEventListener("DOMContentLoaded", () => {
   if (document.body.dataset.page === "remove-ads") {
+    if (new URLSearchParams(location.search).get('testpaywall') === '1') {
+      localStorage.setItem(PAYWALL_TEST_OVERRIDE_KEY, '1');
+    }
     if (typeof isInApp === 'function' && isInApp()) {
       document.getElementById('raWebContent').style.display = 'none';
       document.getElementById('raAppContent').style.display = '';
