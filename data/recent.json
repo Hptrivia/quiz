@@ -129,6 +129,14 @@
   },
   {
     "type": "theme",
+    "slug": "vietnam",
+    "title": "Vietnam",
+    "label": "Countries",
+    "date": "2026-08-20",
+    "url": "challenge.html?theme=vietnam&round=1"
+  },
+  {
+    "type": "theme",
     "slug": "sitcoms",
     "title": "Sitcoms",
     "label": "General",
@@ -150,13 +158,5 @@
     "label": "TV",
     "date": "2026-08-16",
     "url": "challenge.html?theme=the-good-doctor&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "the-handmaids-tale",
-    "title": "The Handmaid's Tale",
-    "label": "TV",
-    "date": "2026-08-16",
-    "url": "challenge.html?theme=the-handmaids-tale&round=1"
   }
 ]
