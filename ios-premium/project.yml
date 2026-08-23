@@ -13,7 +13,7 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.Trivia.PremiumTriviaGauntlet
         PRODUCT_NAME: TriviaGauntletPremium
-        CURRENT_PROJECT_VERSION: "2"
+        CURRENT_PROJECT_VERSION: "3"
         MARKETING_VERSION: "1.0"
         GENERATE_INFOPLIST_FILE: YES
         INFOPLIST_KEY_CFBundleDisplayName: "Premium Trivia Gauntlet"
