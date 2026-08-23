@@ -71,6 +71,22 @@ Deno.serve(async (req) => {
     });
   }
 
+  // Also log this install as a DATED row so we have per-day install history —
+  // install_counter is only a reset-on-flush batch buffer and keeps no dates.
+  // Best-effort: a logging hiccup must never fail the install acknowledgement.
+  try {
+    await fetch(`${supaUrl}/rest/v1/installs_log`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        apikey: serviceKey,
+        Authorization: `Bearer ${serviceKey}`,
+        Prefer: "return=minimal",
+      },
+      body: JSON.stringify({ platform }),
+    });
+  } catch (_e) { /* ignore — the running tally + Telegram flow still work */ }
+
   // Not yet at the batch threshold — just acknowledge, no Telegram message.
   if (!counts || !counts.flushed) {
     return new Response(JSON.stringify({ ok: true, sent: false }), {
