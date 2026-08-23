@@ -19,74 +19,48 @@
     <a href="index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
 
     <section class="panel">
-      <div id="raWebContent">
-        <h1>Unlock Full Access</h1>
+      <h1>Unlock Full Access</h1>
 
-        <p id="premiumIndicator" style="display:none;color:#4ade80;font-weight:600;margin-bottom:14px;"></p>
+      <p id="premiumIndicator" style="display:none;color:#4ade80;font-weight:600;margin-bottom:14px;"></p>
 
-        <p>
-          Play without limits on this browser — just <strong>$2.99 for 30 days</strong>, or grab the free app instead and play unlimited there.
-        </p>
+      <p>
+        Play without limits on this browser — just <strong>$2.99 for 30 days</strong>, or grab the free app instead and play unlimited there.
+      </p>
 
-        <ul class="benefits-list">
-          <li>No ads — unlike the app</li>
-          <li>Every question in every theme &amp; category</li>
-          <li>Unlimited Wordle, Word Search &amp; Episodes</li>
-          <li>Unlimited lifelines + answers revealed in every mode</li>
-          <li>Works on any device — just enter your code</li>
-        </ul>
+      <ul class="benefits-list">
+        <li>No ads — unlike the app</li>
+        <li>Every question in every theme &amp; category</li>
+        <li>Unlimited Wordle, Word Search &amp; Episodes</li>
+        <li>Unlimited lifelines + answers revealed in every mode</li>
+        <li>Works on any device — just enter your code</li>
+      </ul>
 
-        <div class="cta-row">
-          <a class="primary-btn" href="https://ko-fi.com/s/d1c9104d3b" target="_blank" rel="noopener noreferrer">Subscribe</a>
-        </div>
-
-        <div id="raAppQr" class="web-qr ra-app-qr" style="display:none">
-          <div class="web-or"><span>or get the free app</span></div>
-          <div class="web-qr-box" data-qr="">…</div>
-          <p class="web-qr-cap">📱 Scan with your phone camera to download free</p>
-        </div>
-
-        <div id="raPwa" class="ra-pwa" style="display:none">
-          <p class="ra-pwa-line">Prefer an app-like feel? <a href="#" id="raPwaBtn" class="ra-pwa-link">Add it to your home screen →</a></p>
-          <ol class="pwa-steps" id="raPwaIosSteps" style="display:none">
-            <li>Tap the <strong>Share</strong> button in Safari</li>
-            <li>Choose <strong>Add to Home Screen</strong></li>
-            <li>Tap <strong>Add</strong></li>
-          </ol>
-        </div>
-
-        <div id="activationSection" class="already-have-code">
-          <p>Already subscribed? Enter your code:</p>
-          <div class="code-input-row">
-            <input type="text" id="adFreeCodeInput" placeholder="Enter your code" />
-            <button class="secondary-btn" id="adFreeActivateBtn">Activate</button>
-          </div>
-          <p id="activationMsg" class="activation-msg"></p>
-        </div>
+      <div class="cta-row">
+        <a class="primary-btn" href="https://ko-fi.com/s/d1c9104d3b" target="_blank" rel="noopener noreferrer">Subscribe</a>
       </div>
 
-      <div id="raAppContent" style="display:none">
-        <h1>Remove Ads <span id="raComingSoonBadge" style="display:none;color:#fbbf24;font-size:0.55em;font-weight:700;vertical-align:middle">(Coming Soon)</span></h1>
+      <div id="raAppQr" class="web-qr ra-app-qr" style="display:none">
+        <div class="web-or"><span>or get the free app</span></div>
+        <div class="web-qr-box" data-qr="">…</div>
+        <p class="web-qr-cap">📱 Scan with your phone camera to download free</p>
+      </div>
 
-        <p id="raAppPremiumIndicator" style="display:none;color:#4ade80;font-weight:600;margin-bottom:14px;"></p>
+      <div id="raPwa" class="ra-pwa" style="display:none">
+        <p class="ra-pwa-line">Prefer an app-like feel? <a href="#" id="raPwaBtn" class="ra-pwa-link">Add it to your home screen →</a></p>
+        <ol class="pwa-steps" id="raPwaIosSteps" style="display:none">
+          <li>Tap the <strong>Share</strong> button in Safari</li>
+          <li>Choose <strong>Add to Home Screen</strong></li>
+          <li>Tap <strong>Add</strong></li>
+        </ol>
+      </div>
 
-        <p>Reveal Answers toggle. No ads. No interruptions. Lifelines work instantly.</p>
-
-        <div id="raAppOptions" class="cta-row" style="flex-direction:column;align-items:stretch;gap:10px">
-          <p id="raAppLoading">Loading...</p>
+      <div id="activationSection" class="already-have-code">
+        <p>Already subscribed? Enter your code:</p>
+        <div class="code-input-row">
+          <input type="text" id="adFreeCodeInput" placeholder="Enter your code" />
+          <button class="secondary-btn" id="adFreeActivateBtn">Activate</button>
         </div>
-
-        <div class="already-have-code">
-          <button class="secondary-btn" id="raRestoreBtn" type="button">Restore Purchases</button>
-          <p id="raRestoreMsg" class="activation-msg"></p>
-        </div>
-
-        <p style="opacity:0.65;font-size:0.8em;margin-top:16px">
-          The monthly plan auto-renews until cancelled; cancel anytime from your App Store (iOS) or Google Play (Android) subscriptions.
-          The one-time purchase is a single charge with no renewal.
-          <a href="terms.html" target="_blank" rel="noopener noreferrer">Terms</a> ·
-          <a href="privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-        </p>
+        <p id="activationMsg" class="activation-msg"></p>
       </div>
     </section>
   </main>
@@ -105,7 +79,6 @@
   </footer>
 
   <script src="assets/app.js"></script>
-  <script src="assets/admob.js"></script>
   <script src="assets/remove-ads.js"></script>
 </body>
 </html>
