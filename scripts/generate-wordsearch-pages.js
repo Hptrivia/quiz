@@ -108,7 +108,7 @@ function buildWordsearchPage(theme, allThemes, wordsearchSet) {
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-E6BY9F2ZDT');
+    if(!/TriviaGauntletPremium/.test(navigator.userAgent||''))gtag('config', 'G-E6BY9F2ZDT');
   </script>
 
   <link rel="apple-touch-icon" href="/assets/icon-192.png" />
