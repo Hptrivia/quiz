@@ -3,6 +3,10 @@
 const PROFILE_KEY = "tg_profile";
 const REPLAY_KEY  = "tg_replay";
 
+// Checked here (top of file) because _defaultProfile() below needs it before
+// the general _isNative flag is defined further down.
+const _isPremiumApp = /TriviaGauntletPremium/.test(navigator.userAgent || '');
+
 const AVATAR_COLORS = [
   "#3b82f6","#8b5cf6","#ec4899","#10b981",
   "#f59e0b","#ef4444","#06b6d4","#84cc16"
@@ -12,7 +16,7 @@ function _defaultProfile() {
   return {
     name: "",
     email: "",
-    avatarColor: AVATAR_COLORS[0],
+    avatarColor: _isPremiumApp ? "#d4a72c" : AVATAR_COLORS[0],
     createdAt: new Date().toISOString().split("T")[0],
     stats: {
       marathon:   { roundsCompleted: 0, bestScore: 0, bestScoreTheme: null, totalCorrect: 0, totalAnswered: 0, themes: {} },
@@ -364,11 +368,11 @@ const _APP_STORE  = 'https://apps.apple.com/app/trivia-gauntlet/id6749189557';
 const _WEB_LIMITS = { Q: 30, Wordle: 2, WS: 1, Ep: 1 };
 
 const _isNative = !!(window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative))
-  || /TriviaGauntletPremium/.test(navigator.userAgent || '');
+  || _isPremiumApp;
 
 // Gold accent theme for the premium app only — see the .premium-app override
 // block in style.css. documentElement (not body) so it's set before <body> exists.
-if (/TriviaGauntletPremium/.test(navigator.userAgent || '')) {
+if (_isPremiumApp) {
   document.documentElement.classList.add('premium-app');
 }
 
