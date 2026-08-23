@@ -14,7 +14,7 @@
 //   2. change ios: 'off' → 'live' here.
 const ADMOB_MODE_BY_PLATFORM = {
   ios: 'live',
-  android: 'live',
+  android: 'test',
 };
 const _ADMOB_PLATFORM = window.Capacitor?.getPlatform?.();
 
