@@ -504,7 +504,9 @@ function main() {
     sitemapUrls.push(`${SITE_URL}/themes/${theme.slug}.html`);
     sitemapUrls.push(`${SITE_URL}/wordsearch/${theme.slug}.html`);
     sitemapUrls.push(`${SITE_URL}/wordle/${theme.slug}.html`);
-    sitemapUrls.push(`${SITE_URL}/trivia-rush.html?theme=${theme.slug}`);
+    // Not submitted: trivia-rush.html?theme=<slug> — trivia-rush.html carries a
+    // self-referencing canonical tag, so every one of these was just duplicate
+    // noise in the sitemap (see click-drop investigation, Aug 2026).
 
     if (onlySlugs && !onlySlugs.has(theme.slug)) return;
 
