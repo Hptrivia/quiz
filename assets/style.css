@@ -64,19 +64,61 @@
   --box-shadow-strong: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
-/* Gold accent theme for the premium app (assets/profile.js adds this class to
-   <html> when it detects the TriviaGauntletPremium user-agent tag). Same layout,
-   same everything else — just the accent color reads as premium. */
+/* Full "espresso & gold" theme for the premium app (assets/profile.js adds this
+   class to <html> when it detects the TriviaGauntletPremium user-agent tag).
+   Same layout, same structure — every dark neutral is warmed from flat gray
+   toward a bronze-black, and borders carry a visible gold tint at rest, not
+   just on hover, so the whole app reads differently, not just its buttons.
+   Semantic colors (correct/wrong feedback, Wordle tile states) are left alone —
+   changing those would break color meanings players already rely on. */
 :root.premium-app {
+  --bg: #14100a;
+  --text: #f5efe3;
+
+  --header-bg: #1c160d;
+  --header-border: #3a2f18;
+  --input-bg: #100c07;
+  --input-border: #4a3a1e;
+
+  --panel-bg: #1e1710;
+  --panel-border: #3a2f18;
+  --card-bg: #1e1710;
+  --card-border: #3a2f18;
+  --card-hover-border: #d4a72c;
+
+  --badge-bg: #3a2f18;
+
+  --link-accent: #f3cf6b;
+  --link-hover: #ffffff;
+
   --primary-btn-bg: #d4a72c;
   --primary-btn-hover: #b8891f;
   --primary-btn-text: #1a1200;
 
-  --card-hover-border: #d4a72c;
-  --option-selected-border: #d4a72c;
+  --secondary-btn-bg: #2a2214;
+  --secondary-btn-hover: #3d3220;
+  --secondary-btn-text: #f5efe3;
 
-  --link-accent: #f3cf6b;
+  --option-bg: #241d12;
+  --option-border: #4a3a1e;
+  --option-selected-bg: #332711;
+  --option-selected-border: #d4a72c;
+  --option-text: #f5efe3;
+
+  --search-bg: #1e1710;
+  --search-border: #4a3a1e;
+  --search-item-border: #3a2f18;
+  --search-item-hover: #3a2f18;
+
+  --footer-border: #3a2f18;
+  --footer-link: #cbb99a;
   --footer-link-hover: #f3cf6b;
+
+  --muted-text: #d9cdb8;
+  --context-bg: #1a140c;
+  --context-border: #3a2f18;
+  --context-text: #d4c7ae;
+  --description-text: #e3d7c0;
 }
 
 * {
