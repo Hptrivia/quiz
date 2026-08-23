@@ -37,6 +37,14 @@ jobs:
           security create-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
           security set-keychain-settings -lut 21600 "$KEYCHAIN_PATH"
           security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+
+          # Apple's intermediate cert(s) - needed to build a trusted chain for the leaf cert.
+          # Fetch whichever generations are currently live; ignore ones that 404.
+          for gen in G2 G3 G4 G5 G6; do
+            curl -sL -o "$RUNNER_TEMP/WWDR-$gen.cer" "https://www.apple.com/certificateauthority/AppleWWDRCA$gen.cer" || true
+            security import "$RUNNER_TEMP/WWDR-$gen.cer" -t cert -k "$KEYCHAIN_PATH" 2>/dev/null || true
+          done
+
           security import "$RUNNER_TEMP/certificate.p12" -P "$CERTIFICATE_PASSWORD" -A -t cert -f pkcs12 -k "$KEYCHAIN_PATH"
           security list-keychain -d user -s "$KEYCHAIN_PATH" $(security list-keychains -d user | sed 's/"//g')
           security set-key-partition-list -S apple-tool:,apple: -k "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
