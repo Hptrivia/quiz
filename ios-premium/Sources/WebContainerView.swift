@@ -5,6 +5,11 @@ private let siteURL = URL(string: "https://triviagauntlet.app/")!
 private let allowedHost = "triviagauntlet.app"
 private let uaTag = "TriviaGauntletPremium"
 
+// Fan-submitted/community trivia question pages - not exposed in the premium
+// app so it doesn't carry user-generated-content/social capabilities on iOS.
+// Site itself, the free app, and Android are unaffected.
+private let blockedPaths = ["/fan-create", "/fan-play", "/fan-questions"]
+
 struct WebContainerView: UIViewRepresentable {
     func makeCoordinator() -> Coordinator {
         Coordinator()
@@ -51,12 +56,15 @@ struct WebContainerView: UIViewRepresentable {
 
             let host = url.host ?? ""
             let isOnSite = host == allowedHost || host.hasSuffix(".\(allowedHost)")
-            if isOnSite {
-                decisionHandler(.allow)
-            } else {
+            guard isOnSite else {
                 decisionHandler(.cancel)
                 UIApplication.shared.open(url)
+                return
             }
+
+            let path = url.path.lowercased()
+            let isBlocked = blockedPaths.contains { path.hasPrefix($0) }
+            decisionHandler(isBlocked ? .cancel : .allow)
         }
     }
 }
