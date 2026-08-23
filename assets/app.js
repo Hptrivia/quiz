@@ -10,6 +10,7 @@ function addNoIndex() {
 }
 
 function isPremiumUser() {
+  if (/TriviaGauntletPremium/.test(navigator.userAgent || '')) return true;
   const expiry = localStorage.getItem('adsRemovedUntil');
   if (!expiry) return false;
   return new Date(expiry) > new Date();

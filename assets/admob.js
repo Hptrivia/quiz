@@ -17,7 +17,13 @@ const ADMOB_MODE_BY_PLATFORM = {
   android: 'live',
 };
 const _ADMOB_PLATFORM = window.Capacitor?.getPlatform?.();
-const ADMOB_MODE = ADMOB_MODE_BY_PLATFORM[_ADMOB_PLATFORM] || 'off';
+
+// The separate "Trivia Gauntlet - Premium" Android app (com.trivia.triviagauntlet_premium)
+// loads this same live site but tags its WebView user agent via Capacitor's
+// android.appendUserAgent config — no ads regardless of platform ad mode above.
+const _IS_PREMIUM_APP = /TriviaGauntletPremium/.test(navigator.userAgent || '');
+
+const ADMOB_MODE = _IS_PREMIUM_APP ? 'off' : (ADMOB_MODE_BY_PLATFORM[_ADMOB_PLATFORM] || 'off');
 const ADMOB_TEST_MODE = ADMOB_MODE === 'test';
 const ADMOB_ADS_ENABLED = ADMOB_MODE !== 'off';
 
@@ -310,6 +316,12 @@ async function adMobHideBanner() {
   document.body.classList.remove('has-banner');
 }
 
+// The premium ad-free app is Android-only for now — hide the Remove Ads entry
+// points on iOS rather than send users to a page that can't actually help them.
+function _showRemoveAdsEntryPoints() {
+  return _ADMOB_PLATFORM === 'android';
+}
+
 function _offerRewardedLifeline(name, onEarned, promptHtml, onCancel) {
   const overlay = document.createElement('div');
   overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.75);display:flex;align-items:center;justify-content:center;z-index:9999';
@@ -317,6 +329,7 @@ function _offerRewardedLifeline(name, onEarned, promptHtml, onCancel) {
     <p style="margin:0 0 16px;font-size:1.1em">${promptHtml || `Watch a short ad to use <strong>${name}</strong>?`}</p>
     <button id="_adYes" style="margin-right:8px;padding:10px 20px;border-radius:8px;background:#6c63ff;color:#fff;border:none;cursor:pointer;font-size:1em">Watch Ad</button>
     <button id="_adNo" style="padding:10px 20px;border-radius:8px;background:#444;color:#fff;border:none;cursor:pointer;font-size:1em">Cancel</button>
+    ${_showRemoveAdsEntryPoints() ? `<div style="margin-top:14px"><button id="_adRemoveAds" style="padding:10px 20px;border-radius:8px;background:#22c55e;border:none;color:#0b1220;font-weight:700;cursor:pointer;font-size:0.95em">🚫 Remove Ads</button></div>` : ''}
   </div>`;
   document.body.appendChild(overlay);
   overlay.querySelector('#_adNo').onclick = () => { overlay.remove(); if (onCancel) onCancel(); };
@@ -325,6 +338,10 @@ function _offerRewardedLifeline(name, onEarned, promptHtml, onCancel) {
     const earned = await adMobShowRewarded();
     if (earned || !_rewardedLoaded) onEarned(); // proceed if earned OR ad failed to load
   };
+  overlay.querySelector('#_adRemoveAds')?.addEventListener('click', () => {
+    overlay.remove();
+    window.location.href = '/remove-ads.html';
+  });
 }
 
 // App-only "Reveal Answers" button for marathon/challenge result screens: watch a
@@ -414,7 +431,40 @@ document.addEventListener('click', async (e) => {
   }, promptHtml);
 });
 
+// App-only "Remove Ads" card appended to the mode grid on theme pages. Theme
+// pages are static HTML generated from one build template (hundreds of files),
+// so this is injected at runtime rather than baked into the template — the mode
+// grid is the .grid that's a direct child of .panel (theme pages also have a
+// second .grid nested inside .theme-related-quizzes, which we must not touch).
+function injectRemoveAdsThemeCard() {
+  if (!isInApp() || !ADMOB_ADS_ENABLED || !_showRemoveAdsEntryPoints()) return;
+  if (!/\/themes\//.test(window.location.pathname)) return;
+  const grid = document.querySelector('.panel > .grid');
+  if (!grid || grid.querySelector('.remove-ads-card')) return;
+  const card = document.createElement('a');
+  card.href = '/remove-ads.html';
+  card.className = 'card remove-ads-card';
+  card.innerHTML = `<h3>Remove Ads <span style="font-size:0.65rem;font-weight:700;background:#22c55e;color:#fff;padding:2px 7px;border-radius:4px;vertical-align:middle;margin-left:6px;">GO AD-FREE</span></h3><p>No ads, ever — get the ad-free app</p>`;
+  grid.appendChild(card);
+}
+
+// App-only "Remove Ads" link appended to the standard site footer (present on
+// nearly every page, generated and static alike) so the option is reachable
+// from anywhere in the app, not just theme pages.
+function injectRemoveAdsFooterLink() {
+  if (!isInApp() || !ADMOB_ADS_ENABLED || !_showRemoveAdsEntryPoints()) return;
+  const footerLinks = document.querySelector('.footer-links');
+  if (!footerLinks || footerLinks.querySelector('.remove-ads-footer-link')) return;
+  const link = document.createElement('a');
+  link.href = '/remove-ads.html';
+  link.className = 'remove-ads-footer-link footer-highlight';
+  link.textContent = 'Remove Ads';
+  footerLinks.prepend(link);
+}
+
 async function _bootInApp() {
+  injectRemoveAdsThemeCard();
+  injectRemoveAdsFooterLink();
   if (ADMOB_ADS_ENABLED) {
     // ATT first: the prompt must appear before any data that could be used to
     // track the user is collected (ads SDK start, IP-geolocated install ping).

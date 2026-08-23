@@ -23,44 +23,53 @@
 
       <p id="premiumIndicator" style="display:none;color:#4ade80;font-weight:600;margin-bottom:14px;"></p>
 
-      <p>
-        Play without limits on this browser — just <strong>$2.99 for 30 days</strong>, or grab the free app instead and play unlimited there.
-      </p>
-
-      <ul class="benefits-list">
-        <li>No ads — unlike the app</li>
-        <li>Every question in every theme &amp; category</li>
-        <li>Unlimited Wordle, Word Search &amp; Episodes</li>
-        <li>Unlimited lifelines + answers revealed in every mode</li>
-        <li>Works on any device — just enter your code</li>
-      </ul>
-
-      <div class="cta-row">
-        <a class="primary-btn" href="https://ko-fi.com/s/d1c9104d3b" target="_blank" rel="noopener noreferrer">Subscribe</a>
-      </div>
-
-      <div id="raAppQr" class="web-qr ra-app-qr" style="display:none">
-        <div class="web-or"><span>or get the free app</span></div>
-        <div class="web-qr-box" data-qr="">…</div>
-        <p class="web-qr-cap">📱 Scan with your phone camera to download free</p>
-      </div>
-
-      <div id="raPwa" class="ra-pwa" style="display:none">
-        <p class="ra-pwa-line">Prefer an app-like feel? <a href="#" id="raPwaBtn" class="ra-pwa-link">Add it to your home screen →</a></p>
-        <ol class="pwa-steps" id="raPwaIosSteps" style="display:none">
-          <li>Tap the <strong>Share</strong> button in Safari</li>
-          <li>Choose <strong>Add to Home Screen</strong></li>
-          <li>Tap <strong>Add</strong></li>
-        </ol>
-      </div>
-
-      <div id="activationSection" class="already-have-code">
-        <p>Already subscribed? Enter your code:</p>
-        <div class="code-input-row">
-          <input type="text" id="adFreeCodeInput" placeholder="Enter your code" />
-          <button class="secondary-btn" id="adFreeActivateBtn">Activate</button>
+      <div id="raAppOffer" style="display:none">
+        <p>Get the ad-free version of Trivia Gauntlet — one-time purchase, no limits, nothing to watch.</p>
+        <div class="cta-row">
+          <a class="primary-btn" id="raAppOfferLink" target="_blank" rel="noopener noreferrer">Get the ad-free app</a>
         </div>
-        <p id="activationMsg" class="activation-msg"></p>
+      </div>
+
+      <div id="raWebOffer">
+        <p>
+          Play without limits on this browser — just <strong>$2.99 for 30 days</strong>, or grab the free app instead and play unlimited there.
+        </p>
+
+        <ul class="benefits-list">
+          <li>No ads — unlike the app</li>
+          <li>Every question in every theme &amp; category</li>
+          <li>Unlimited Wordle, Word Search &amp; Episodes</li>
+          <li>Unlimited lifelines + answers revealed in every mode</li>
+          <li>Works on any device — just enter your code</li>
+        </ul>
+
+        <div class="cta-row">
+          <a class="primary-btn" href="https://ko-fi.com/s/d1c9104d3b" target="_blank" rel="noopener noreferrer">Subscribe</a>
+        </div>
+
+        <div id="raAppQr" class="web-qr ra-app-qr" style="display:none">
+          <div class="web-or"><span>or get the free app</span></div>
+          <div class="web-qr-box" data-qr="">…</div>
+          <p class="web-qr-cap">📱 Scan with your phone camera to download free</p>
+        </div>
+
+        <div id="raPwa" class="ra-pwa" style="display:none">
+          <p class="ra-pwa-line">Prefer an app-like feel? <a href="#" id="raPwaBtn" class="ra-pwa-link">Add it to your home screen →</a></p>
+          <ol class="pwa-steps" id="raPwaIosSteps" style="display:none">
+            <li>Tap the <strong>Share</strong> button in Safari</li>
+            <li>Choose <strong>Add to Home Screen</strong></li>
+            <li>Tap <strong>Add</strong></li>
+          </ol>
+        </div>
+
+        <div id="activationSection" class="already-have-code">
+          <p>Already subscribed? Enter your code:</p>
+          <div class="code-input-row">
+            <input type="text" id="adFreeCodeInput" placeholder="Enter your code" />
+            <button class="secondary-btn" id="adFreeActivateBtn">Activate</button>
+          </div>
+          <p id="activationMsg" class="activation-msg"></p>
+        </div>
       </div>
     </section>
   </main>

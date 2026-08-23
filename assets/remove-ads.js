@@ -142,10 +142,29 @@ function initPwaInstall() {
   }
 }
 
+const _RA_PREMIUM_PLAY = "https://play.google.com/store/apps/details?id=com.trivia.triviagauntlet_premium";
+
+// Android app users: the web subscribe/code flow doesn't remove ads in the app
+// (adMobInit() never checks isPremiumUser()) and isn't relevant to someone
+// already in the app — the only thing that actually helps them is the
+// separate ad-free app. Replace the whole page with just that link.
+function initPremiumAppLink() {
+  if (!/android/i.test(navigator.userAgent || "")) return; // Play Store link only makes sense on Android
+  if (!_raIsNative()) return; // Android web visitors still get the full page
+  const appOffer = document.getElementById("raAppOffer");
+  const webOffer = document.getElementById("raWebOffer");
+  const link = document.getElementById("raAppOfferLink");
+  if (!appOffer || !webOffer || !link) return;
+  link.href = _RA_PREMIUM_PLAY;
+  webOffer.style.display = "none";
+  appOffer.style.display = "";
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   if (document.body.dataset.page === "remove-ads") {
     initCoffeePage();
     initAppQr();
     initPwaInstall();
+    initPremiumAppLink();
   }
 });

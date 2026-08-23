@@ -363,7 +363,8 @@ const _PLAY_STORE = 'https://play.google.com/store/apps/details?id=com.trivia.tr
 const _APP_STORE  = 'https://apps.apple.com/app/trivia-gauntlet/id6749189557';
 const _WEB_LIMITS = { Q: 30, Wordle: 2, WS: 1, Ep: 1 };
 
-const _isNative = !!(window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative));
+const _isNative = !!(window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative))
+  || /TriviaGauntletPremium/.test(navigator.userAgent || '');
 
 // ── KILL SWITCH: mobile-web "pay to keep playing on web" option (2026-06-17) ──
 // Master on/off for the whole mobile-web unlock experiment. Set to `false` to
