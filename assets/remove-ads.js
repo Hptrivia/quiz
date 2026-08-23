@@ -154,10 +154,12 @@ function initPremiumAppLink() {
   const appOffer = document.getElementById("raAppOffer");
   const webOffer = document.getElementById("raWebOffer");
   const link = document.getElementById("raAppOfferLink");
+  const title = document.getElementById("raTitle");
   if (!appOffer || !webOffer || !link) return;
   link.href = _RA_PREMIUM_PLAY;
   webOffer.style.display = "none";
   appOffer.style.display = "";
+  if (title) title.textContent = "Go Ad-Free";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
