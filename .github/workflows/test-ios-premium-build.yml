@@ -1,0 +1,33 @@
+name: Smoke Test iOS Premium Build
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - "ios-premium/**"
+      - ".github/workflows/test-ios-premium-build.yml"
+
+jobs:
+  build-for-simulator:
+    runs-on: macos-14
+    defaults:
+      run:
+        working-directory: ios-premium
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Generate Xcode project
+        run: xcodegen generate
+
+      - name: Build for iOS Simulator (no signing required)
+        run: |
+          xcodebuild build \
+            -project TriviaGauntletPremium.xcodeproj \
+            -scheme TriviaGauntletPremium \
+            -sdk iphonesimulator \
+            -destination "generic/platform=iOS Simulator" \
+            CODE_SIGNING_ALLOWED=NO
