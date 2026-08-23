@@ -96,6 +96,7 @@ function buildWordsearchPage(theme, allThemes, wordsearchSet) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
+<script>if(/TriviaGauntletPremium/.test(navigator.userAgent||''))document.documentElement.classList.add('premium-app');</script>
   <meta charset="UTF-8" />
   <link rel="manifest" href="/manifest.json" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
