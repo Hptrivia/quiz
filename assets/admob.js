@@ -19,8 +19,9 @@ const ADMOB_MODE_BY_PLATFORM = {
 const _ADMOB_PLATFORM = window.Capacitor?.getPlatform?.();
 
 // The separate "Trivia Gauntlet - Premium" Android app (com.trivia.triviagauntlet_premium)
-// loads this same live site but tags its WebView user agent via Capacitor's
-// android.appendUserAgent config — no ads regardless of platform ad mode above.
+// is a plain hand-written WebView wrapper (Kotlin, not Capacitor — no window.Capacitor
+// bridge at all) that loads this same live site and tags its WebView user agent
+// directly — no ads regardless of platform ad mode above.
 const _IS_PREMIUM_APP = /TriviaGauntletPremium/.test(navigator.userAgent || '');
 
 const ADMOB_MODE = _IS_PREMIUM_APP ? 'off' : (ADMOB_MODE_BY_PLATFORM[_ADMOB_PLATFORM] || 'off');
@@ -81,6 +82,30 @@ async function _pingNewInstall() {
     // Network hiccup on first open — clear the flag so the next launch retries.
     localStorage.removeItem('_installPinged');
     console.warn('[install-ping] failed', e);
+  }
+}
+
+// Same idea, for the premium apps (iOS WKWebView + Android WebView — neither
+// uses Capacitor, so isInApp() is always false for them and _pingNewInstall
+// above never fires). Detected off the UA tag alone, fires once per device.
+async function _pingPremiumInstall() {
+  if (!_IS_PREMIUM_APP) return;
+  if (localStorage.getItem('_premiumInstallPinged')) return;
+  localStorage.setItem('_premiumInstallPinged', '1');
+  const platform = /iPhone|iPad|iPod/.test(navigator.userAgent) ? 'ios' : 'android';
+  try {
+    await fetch(_INSTALL_PING.endpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        apikey: _INSTALL_PING.anonKey,
+        Authorization: `Bearer ${_INSTALL_PING.anonKey}`,
+      },
+      body: JSON.stringify({ platform, app: 'premium' }),
+    });
+  } catch (e) {
+    localStorage.removeItem('_premiumInstallPinged');
+    console.warn('[premium-install-ping] failed', e);
   }
 }
 
@@ -481,6 +506,7 @@ async function _bootInApp() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  _pingPremiumInstall();
   if (isInApp()) {
     _bootInApp();
   } else {
