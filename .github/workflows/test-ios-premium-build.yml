@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-for-simulator:
-    runs-on: macos-14
+    runs-on: macos-latest
     defaults:
       run:
         working-directory: ios-premium
