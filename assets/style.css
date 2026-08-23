@@ -127,7 +127,8 @@
 :root.premium-app #categoryList .card,
 :root.premium-app #newlyAddedList .card,
 :root.premium-app #categoryThemes .card,
-:root.premium-app .panel .grid .card {
+:root.premium-app .panel .grid .card,
+:root.premium-app .blog-list .card {
   border-top-color: rgba(212, 167, 44, 0.65);
 }
 
