@@ -366,6 +366,12 @@ const _WEB_LIMITS = { Q: 30, Wordle: 2, WS: 1, Ep: 1 };
 const _isNative = !!(window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative))
   || /TriviaGauntletPremium/.test(navigator.userAgent || '');
 
+// Gold accent theme for the premium app only — see the .premium-app override
+// block in style.css. documentElement (not body) so it's set before <body> exists.
+if (/TriviaGauntletPremium/.test(navigator.userAgent || '')) {
+  document.documentElement.classList.add('premium-app');
+}
+
 // ── KILL SWITCH: mobile-web "pay to keep playing on web" option (2026-06-17) ──
 // Master on/off for the whole mobile-web unlock experiment. Set to `false` to
 // instantly restore the OLD behaviour with no other edits:
