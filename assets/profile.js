@@ -376,6 +376,15 @@ if (_isPremiumApp) {
   document.documentElement.classList.add('premium-app');
 }
 
+// Hide the "Fan Section" card on theme pages for the premium app — those
+// pages (fan-create/fan-play/fan-questions) already redirect premium-app
+// visitors away, so leaving the card visible would just be a dead tap target.
+if (_isPremiumApp) {
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a[href*="fan-questions.html"]').forEach(el => el.remove());
+  });
+}
+
 // ── KILL SWITCH: mobile-web "pay to keep playing on web" option (2026-06-17) ──
 // Master on/off for the whole mobile-web unlock experiment. Set to `false` to
 // instantly restore the OLD behaviour with no other edits:
