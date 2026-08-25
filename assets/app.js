@@ -521,6 +521,522 @@ function cumScoreLine(roundScore, roundTotal, cum) {
   return main;
 }
 
+// ── Hard Mode (typed answers) ───────────────────────────────────────────────
+// Shared by Challenge (challenge.js) and Marathon (this file): one place for
+// answer-control rendering and normalize/compare so no mode duplicates it.
+// Rule-based only, no AI/API calls (an LLM-graded answer would need a
+// per-question backend call, adding real cost/latency vs. this). Currently
+// wired into Challenge and Marathon only -- Survival/Episode/Daily/Trivia
+// Rush/Versus still all-multiple-choice.
+// Master kill switch for the whole Hard Mode feature -- flip to false to
+// pull it from the site entirely (no ask prompt, no typed input regardless
+// of a player's saved preference, no settings row, no result-screen hint).
+// Same flag name duplicated in profile.html (no shared module system
+// between pages) -- keep both in sync if this ever changes.
+const HM_FEATURE_ENABLED = true;
+
+const HM_KEY = 'tg_hard_mode';
+const HM_ASKED_KEY = 'tg_hard_mode_asked';
+const HM_SEEN_KEY = 'tg_hard_mode_seen';
+const HM_HINT_KEY = 'tg_hard_mode_hint_shown';
+const HM_HINT_MAX = 3;
+const HM_ROUNDS_KEY = 'tg_hard_mode_rounds_completed';
+const HM_FEEDBACK_ASKED_KEY = 'tg_hard_mode_feedback_asked';
+const HM_FEEDBACK_ROUNDS_THRESHOLD = 1;
+const HM_FEEDBACK_FORMSPREE = 'https://formspree.io/f/mpqybwea';
+
+function hmIsEnabled() {
+  if (!HM_FEATURE_ENABLED) return false;
+  try { return localStorage.getItem(HM_KEY) === 'true'; } catch { return false; }
+}
+function hmAsked() {
+  try { return localStorage.getItem(HM_ASKED_KEY) === 'true'; } catch { return false; }
+}
+function hmSetChoice(on) {
+  try {
+    localStorage.setItem(HM_KEY, on ? 'true' : 'false');
+    localStorage.setItem(HM_ASKED_KEY, 'true');
+  } catch {}
+}
+
+// Lowercase/trim/collapse whitespace; curly quotes, non-breaking hyphens and
+// narrow no-break spaces fold to plain ASCII; trailing punctuation stripped.
+// Mid-word apostrophes/hyphens are kept (O'Malley, best-selling).
+// Spelled-out numbers <-> digits (one <-> 1) so either form matches -- a
+// player is just as likely to type "7" as "Seven".
+const HM_NUMBER_WORDS = {
+  one: '1', two: '2', three: '3', four: '4', five: '5', six: '6', seven: '7',
+  eight: '8', nine: '9', ten: '10', eleven: '11', twelve: '12', thirteen: '13',
+  fourteen: '14', fifteen: '15', sixteen: '16', seventeen: '17', eighteen: '18',
+  nineteen: '19', twenty: '20', thirty: '30', forty: '40', fifty: '50',
+  sixty: '60', seventy: '70', eighty: '80', ninety: '90', hundred: '100',
+};
+
+function hmNormalize(str) {
+  const base = String(str || '')
+    .replace(/[‘’ʼ]/g, "'")
+    .replace(/[“”]/g, '"')
+    .replace(/[‐-―]/g, '-')
+    .replace(/[  ]/g, ' ')
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, ' ')
+    .split(' ')
+    .map(w => HM_NUMBER_WORDS[w] || w)
+    .join(' ');
+  // Trailing-punctuation strip must never wipe an answer that's ENTIRELY
+  // punctuation (e.g. the literal answer "?") down to an empty, unmatchable
+  // string -- fall back to the un-stripped form in that case.
+  const stripped = base.replace(/["'.,!?;:]+$/g, '');
+  return stripped || base;
+}
+
+function hmWordCount(answer) {
+  return String(answer || '').trim().split(/\s+/).filter(Boolean).length;
+}
+
+// Hard Mode only offers a text box for answers with one predictable "right"
+// way to type them: a single word, or a name/title-shaped answer (2-4 words,
+// e.g. "Tom Riddle") where the existing partial-match forgiveness already
+// covers real variation. A short (<=3-word) but generic descriptive phrase
+// ("A giant gorilla", "Under the floorboards") does NOT qualify even though
+// it's short -- there's no single correct way to phrase it, so it always
+// falls back to multiple choice, same as an outright long answer does.
+function hmShouldOfferTyped(answer) {
+  const wc = hmWordCount(answer);
+  if (wc > 3) return false;
+  return wc === 1 || hmIsNameOrTitleShaped(answer);
+}
+
+const HM_LEAD_STOPWORDS = new Set(['the', 'a', 'an']);
+
+// Title prefixes dropped the same way as a leading article -- "Dr. Siebert"
+// typed as just "Siebert" should count, same as "The Addams Family" typed
+// as "Addams Family".
+const HM_TITLE_PREFIXES = new Set([
+  'dr', 'mr', 'mrs', 'ms', 'sir', 'lord', 'lady', 'captain', 'president',
+  'king', 'queen',
+]);
+
+// "The Addams Family" -> ["addams","family"] -- words with a leading article
+// or title stripped. Shared by the first-word and first+last-word shortcuts
+// below, and by the exact-after-stripping check in hmIsCorrect.
+function hmContentWords(answer) {
+  const words = hmNormalize(answer).split(' ').filter(Boolean);
+  if (words.length <= 1) return words;
+  const first = words[0].replace(/\.$/, '');
+  return (HM_LEAD_STOPWORDS.has(first) || HM_TITLE_PREFIXES.has(first)) ? words.slice(1) : words;
+}
+
+function hmFirstContentWord(answer) {
+  return hmContentWords(answer)[0] || '';
+}
+
+// 2-4 capitalized words, no punctuation beyond spaces/apostrophes/hyphens.
+// Covers real names ("Jaime Lannister") and title-shaped answers ("The Addams
+// Family") alike -- either way the first word is what a player who
+// half-remembers an answer actually types.
+// Common English title-case connectors that stay lowercase mid-title
+// ("Game of Thrones", "Back to the Future") without disqualifying the whole
+// answer from being name/title-shaped -- only checked for a MIDDLE word; the
+// first and last word must always be a real capitalized content word.
+const HM_TITLE_CONNECTORS = new Set(['of', 'the', 'a', 'an', 'and', 'in', 'to', 'on', 'for', 'with', 'at', 'by', 'from', 'or', 'as']);
+
+function hmIsNameOrTitleShaped(answer) {
+  const raw = String(answer || '').trim();
+  if (!raw || /[^A-Za-z0-9' -]/.test(raw)) return false;
+  const words = raw.split(/\s+/);
+  if (words.length < 2 || words.length > 4) return false;
+  return words.every((w, i) => {
+    if (i === 0 || i === words.length - 1) return /^[A-Z]/.test(w);
+    return /^[A-Z]/.test(w) || HM_TITLE_CONNECTORS.has(w.toLowerCase());
+  });
+}
+
+// Optimal string alignment distance: plain Levenshtein plus a swapped-pair
+// case costing 1 instead of 2, so a transposed-letter typo ("Akr" for "Ark")
+// gets the same tolerance as a substitution typo -- transposition is one of
+// the most common real typing mistakes.
+function hmEditDistance(a, b) {
+  const m = a.length, n = b.length;
+  const dp = [];
+  for (let i = 0; i <= m; i++) { dp.push(new Array(n + 1).fill(0)); dp[i][0] = i; }
+  for (let j = 0; j <= n; j++) dp[0][j] = j;
+  for (let i = 1; i <= m; i++) {
+    for (let j = 1; j <= n; j++) {
+      dp[i][j] = a[i - 1] === b[j - 1]
+        ? dp[i - 1][j - 1]
+        : 1 + Math.min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]);
+      if (i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) {
+        dp[i][j] = Math.min(dp[i][j], dp[i - 2][j - 2] + 1);
+      }
+    }
+  }
+  return dp[m][n];
+}
+
+// Starting numbers only -- needs tuning against real questions once this is
+// actually played against.
+function hmTypoThreshold(len) {
+  if (len <= 4) return 0;
+  if (len <= 7) return 1;
+  return 2;
+}
+
+// First AND last character must match exactly; typo tolerance only applies
+// in between. Typos happen mid-word (Cello -> Celo); a wrong first OR last
+// letter usually means a different real word (Cello -> Hello, Lumos ->
+// Lumon), so neither is ever forgiven -- except when the mismatched last
+// letter is explained by an adjacent-transposition of the final two
+// characters (Ark -> Akr), which is still a legitimate typo.
+function hmFuzzyMatch(typed, target) {
+  if (!typed || !target) return false;
+  if (typed === target) return true;
+  if (typed[0] !== target[0]) return false;
+  const lastTyped = typed[typed.length - 1];
+  const lastTarget = target[target.length - 1];
+  if (lastTyped !== lastTarget) {
+    const isEndTransposition = typed.length === target.length && typed.length >= 2 &&
+      typed[typed.length - 2] === lastTarget && lastTyped === target[target.length - 2] &&
+      typed.slice(0, -2) === target.slice(0, -2);
+    if (!isEndTransposition) return false;
+  }
+  return hmEditDistance(typed, target) <= hmTypoThreshold(target.length);
+}
+
+// Two answers count as the same underlying name at different lengths (not a
+// real ambiguity) when they share both their first AND last content word --
+// e.g. "Tom Riddle" / "Tom Marvolo Riddle" (same person, a middle name
+// dropped). Two truly different answers that happen to share a surname
+// ("John Smith" / "Jane Smith") only share the LAST word, so they still
+// count as a real collision below.
+function hmAreNameVariants(wordsA, wordsB) {
+  if (!wordsA.length || !wordsB.length) return false;
+  return wordsA[0] === wordsB[0] && wordsA[wordsA.length - 1] === wordsB[wordsB.length - 1];
+}
+
+// Per theme, once at load: first/last content words shared by two or more
+// distinct, genuinely different-entity answers in that theme's question
+// file, so the shortcut below never accepts a word that could mean more
+// than one thing -- checked against BOTH the first and last content word,
+// since a lone typed word can match either position (see hmIsCorrect).
+// Answers that are just longer/shorter forms of the same name (see
+// hmAreNameVariants) don't collide with each other. Mashup: computed per
+// theme in questionsByTheme, not per combined round.
+function hmBuildWordCollisions(questions) {
+  const distinctAnswers = Array.from(new Set((questions || []).map(q => q && q.answer).filter(Boolean)));
+  const shapedWords = distinctAnswers.filter(hmIsNameOrTitleShaped).map(hmContentWords);
+  const contributors = {};
+  shapedWords.forEach(words => {
+    const candidates = new Set([words[0], words[words.length - 1]]);
+    candidates.forEach(w => {
+      if (!w) return;
+      (contributors[w] || (contributors[w] = [])).push(words);
+    });
+  });
+  const collisions = new Set();
+  Object.keys(contributors).forEach(w => {
+    const lists = contributors[w];
+    for (let i = 0; i < lists.length && !collisions.has(w); i++) {
+      for (let j = i + 1; j < lists.length; j++) {
+        if (!hmAreNameVariants(lists[i], lists[j])) { collisions.add(w); break; }
+      }
+    }
+  });
+  return collisions;
+}
+
+// Generic trailing words that never count as a standalone answer even when
+// they're the last word of a name/title-shaped answer -- "Family" shouldn't
+// pass for "The Addams Family", "Medicine" shouldn't pass for "Emergency
+// Medicine". Small, hand-picked, low-maintenance; extend if a new one shows
+// up in testing.
+const HM_GENERIC_LAST_WORDS = new Set([
+  'family', 'medicine', 'academy', 'house', 'team', 'department', 'agency',
+  'service', 'club', 'group', 'company', 'squad', 'crew', 'gang', 'league',
+  'force', 'unit', 'division', 'hospital', 'school',
+]);
+
+// Full compare for the typed-answer path: exact match, then the name/title
+// shortcuts (name/title-shaped answers only) -- a single word (first OR last
+// content word, unless ambiguous in the theme or a generic trailing word
+// like "Family"/"Medicine" -- see HM_GENERIC_LAST_WORDS) or, for 3+ word
+// answers, first+last word together with any middle word(s) dropped ("Tom
+// Riddle" for "Tom Marvolo Riddle") -- then whole-phrase typo tolerance.
+// Quote/title/phrase answers that aren't name/title-shaped only get the
+// exact + typo-tolerance layers.
+function hmIsCorrect(typedRaw, question, wordCollisions) {
+  const typed = hmNormalize(typedRaw);
+  if (!typed) return false;
+  const answer = hmNormalize(question.answer);
+  if (typed === answer) return true;
+
+  // Dropped a leading article/title ("Dr. Siebert" -> "Siebert", "The O.C."
+  // -> "O.C.") -- exact match on the remainder only, no fuzzy tolerance
+  // stacked on top, so this stays safe for every answer shape, not just
+  // name/title-shaped ones.
+  const strippedAnswer = hmContentWords(question.answer).join(' ');
+  if (strippedAnswer && strippedAnswer !== answer && typed === strippedAnswer) return true;
+
+  // Singular/plural swap ("Grounder" for "Grounders") -- exact match on the
+  // trailing "s" difference only, no fuzzy tolerance stacked on top, so it's
+  // safe regardless of word length even though the first/last-letter rule
+  // above would otherwise block it (skip if the answer already ends in a
+  // double "s", e.g. "Chess", where dropping one "s" isn't a plural).
+  if (!answer.endsWith('ss')) {
+    if (typed === answer + 's' || answer === typed + 's') return true;
+  }
+
+  if (hmIsNameOrTitleShaped(question.answer)) {
+    const contentWords = hmContentWords(question.answer);
+    const typedWords = typed.split(' ').filter(Boolean);
+
+    if (typedWords.length === 1) {
+      const lastWord = contentWords[contentWords.length - 1];
+      // Try the first word, then (if it's not a generic trailing word like
+      // "Family"/"Medicine") the last word -- "Minerva" and "McGonagall"
+      // should both work for "Minerva McGonagall".
+      const candidates = contentWords.length > 1 && !HM_GENERIC_LAST_WORDS.has(lastWord)
+        ? [contentWords[0], lastWord]
+        : [contentWords[0]];
+      const matched = candidates.find(w => w && !(wordCollisions && wordCollisions.has(w)) && hmFuzzyMatch(typedWords[0], w));
+      if (matched) return true;
+    } else if (typedWords.length === 2 && contentWords.length >= 2) {
+      // Two words together are specific enough that this doesn't need the
+      // same ambiguity check as the lone-word shortcut above.
+      if (hmFuzzyMatch(typedWords[0], contentWords[0]) &&
+          hmFuzzyMatch(typedWords[1], contentWords[contentWords.length - 1])) {
+        return true;
+      }
+    }
+  }
+
+  return hmFuzzyMatch(typed, answer);
+}
+
+// Builds the multiple-choice buttons (Hard Mode off, or a long/phrase answer)
+// or a text input (Hard Mode on + short answer). Returns a handle so each
+// caller's submit logic stays in charge of scoring/feedback/animations, same
+// as before -- this only owns rendering the control and reading it back.
+function hmRenderAnswerControl(q, useTyped) {
+  if (useTyped) {
+    const wrap = document.createElement('div');
+    wrap.className = 'hm-answer-row';
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.className = 'form-input hm-answer-input';
+    input.placeholder = 'Type your answer...';
+    input.autocomplete = 'off';
+    input.setAttribute('autocapitalize', 'off');
+    input.setAttribute('autocorrect', 'off');
+    input.spellcheck = false;
+    wrap.appendChild(input);
+    return {
+      el: wrap,
+      isTyped: true,
+      getSelection: () => (input.value || '').trim() || null,
+      markCorrect: () => { input.classList.remove('wrong'); input.classList.add('correct'); },
+      markWrong: () => { input.classList.remove('correct'); input.classList.add('wrong'); },
+      disable: () => { input.disabled = true; },
+      onEnter: (fn) => input.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); fn(); } })
+    };
+  }
+  const optsList = document.createElement('div');
+  optsList.className = 'options';
+  q.options.forEach(option => {
+    const btn = document.createElement('button');
+    btn.className = 'option-btn';
+    btn.textContent = option;
+    btn.addEventListener('click', () => {
+      optsList.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected', 'correct-anim', 'wrong-anim'));
+      btn.classList.add('selected');
+    });
+    optsList.appendChild(btn);
+  });
+  return {
+    el: optsList,
+    isTyped: false,
+    getSelection: () => { const b = optsList.querySelector('.option-btn.selected'); return b ? b.textContent : null; },
+    markCorrect: () => { const b = optsList.querySelector('.option-btn.selected'); if (b) { b.classList.remove('wrong-anim'); void b.offsetWidth; b.classList.add('correct-anim'); } },
+    markWrong: () => { const b = optsList.querySelector('.option-btn.selected'); if (b) { b.classList.remove('correct-anim'); void b.offsetWidth; b.classList.add('wrong-anim'); } },
+    disable: () => {},
+    onEnter: () => {}
+  };
+}
+
+// One-time opt-in prompt: only ever called by a caller at round/page 1 (the
+// actual start of a playthrough) -- never between rounds/pages of the same
+// session, even though those are separate page loads too. Skipped on a
+// player's very first-ever playthrough (any of the four entry points --
+// Challenge single theme, Challenge mashup, Marathon single theme, Marathon
+// mashup), then fires at the start of every NEW playthrough from the second
+// one onward until answered -- shared localStorage state, so it's never
+// asked twice regardless of which entry point triggers it. Resolves
+// immediately once already asked. A page step (matching Survival's
+// difficulty picker), not an overlay -- this is a real gameplay choice, not
+// a nag. Each page (challenge.html, play.html) carries its own #hardModeAsk
+// markup since it renders in place of that page's own quiz box.
+function hmMaybeAskFirstTime(quizBox) {
+  return new Promise(resolve => {
+    if (!HM_FEATURE_ENABLED) { resolve(); return; }
+    const askBox = document.getElementById('hardModeAsk');
+    if (!askBox || hmAsked()) { resolve(); return; }
+    // Returning players (anyone with existing play history, in ANY mode --
+    // 'tg_profile' only gets saved once a round has actually been completed)
+    // skip the delay below and see the prompt right away on their first
+    // visit after this shipped -- they already know what Challenge/Marathon
+    // is, unlike a truly first-time player.
+    let hasPriorProfile = false;
+    try { hasPriorProfile = !!localStorage.getItem('tg_profile'); } catch {}
+    if (!hasPriorProfile) {
+      // Skip the ask on a player's very first-ever Challenge/Marathon entry --
+      // let them play one round before asking them to judge a difficulty
+      // tradeoff they haven't experienced yet. Fires at the start of every
+      // entry from the second one onward, same as before.
+      let seenBefore = false;
+      try { seenBefore = localStorage.getItem(HM_SEEN_KEY) === 'true'; } catch {}
+      if (!seenBefore) {
+        try { localStorage.setItem(HM_SEEN_KEY, 'true'); } catch {}
+        resolve();
+        return;
+      }
+    }
+    if (quizBox) quizBox.style.display = 'none';
+    askBox.style.display = 'block';
+    const btnRow = askBox.querySelector('.hm-ask-buttons');
+    const savedMsg = askBox.querySelector('.hm-ask-saved');
+    const choose = (on) => {
+      hmSetChoice(on);
+      if (typeof gtag === 'function') gtag('event', 'hard_mode_prompt', { choice: on ? 'yes' : 'no' });
+      if (btnRow) btnRow.style.display = 'none';
+      if (savedMsg) savedMsg.style.display = 'block';
+      setTimeout(() => {
+        askBox.style.display = 'none';
+        if (quizBox) quizBox.style.display = 'block';
+        resolve();
+      }, 900);
+    };
+    const yesBtn = askBox.querySelector('.hm-ask-yes');
+    const noBtn = askBox.querySelector('.hm-ask-no');
+    if (yesBtn) yesBtn.addEventListener('click', () => choose(true));
+    if (noBtn) noBtn.addEventListener('click', () => choose(false));
+  });
+}
+
+// Low-key nudge on the result screen reminding a player how to change their
+// Hard Mode setting -- shown a few times total, then it stops. Works both
+// directions: players who said "No" get reminded they can turn it on,
+// players who currently have it ON get reminded they can turn it back off
+// (the whole point being it should always be obvious/easy to reverse).
+// Never re-prompts with the full ask screen.
+function hmResultHintHtml() {
+  if (!HM_FEATURE_ENABLED || !hmAsked()) return '';
+  let count = 0;
+  try { count = parseInt(localStorage.getItem(HM_HINT_KEY) || '0', 10) || 0; } catch {}
+  if (count >= HM_HINT_MAX) return '';
+  const enabled = hmIsEnabled();
+  // Don't stack with the feedback box below -- if it's about to render on
+  // this same result screen, let it own the message this one time instead
+  // of showing both.
+  if (enabled) {
+    let feedbackAsked = false;
+    try { feedbackAsked = localStorage.getItem(HM_FEEDBACK_ASKED_KEY) === 'true'; } catch {}
+    let rounds = 0;
+    try { rounds = parseInt(localStorage.getItem(HM_ROUNDS_KEY) || '0', 10) || 0; } catch {}
+    if (!feedbackAsked && (rounds + 1) >= HM_FEEDBACK_ROUNDS_THRESHOLD) return '';
+  }
+  try { localStorage.setItem(HM_HINT_KEY, String(count + 1)); } catch {}
+  return enabled
+    ? `<p class="hm-hint-row">Not loving typed answers? Turn Hard Mode back off anytime in <a href="profile.html?tab=settings">Settings</a>.</p>`
+    : `<p class="hm-hint-row">Prefer typing your own answers? Turn on Hard Mode in <a href="profile.html?tab=settings">Settings</a>.</p>`;
+}
+
+// Beta feedback prompt: only for players who currently have Hard Mode ON
+// (never shown on the normal multiple-choice path). Counts completed
+// rounds played with it on and shows once, after HM_FEEDBACK_ROUNDS_THRESHOLD
+// rounds, on that round's result screen. Call this once per finished round
+// (it does the counting itself); it returns the HTML to splice into the
+// result screen template, or '' if not eligible yet/already shown. Pair
+// with hmBindFeedbackBox() called right after the result HTML is in the DOM.
+function hmFeedbackBoxHtml() {
+  if (!HM_FEATURE_ENABLED || !hmIsEnabled()) return '';
+  let asked = false;
+  try { asked = localStorage.getItem(HM_FEEDBACK_ASKED_KEY) === 'true'; } catch {}
+  if (asked) return '';
+  let rounds = 0;
+  try { rounds = parseInt(localStorage.getItem(HM_ROUNDS_KEY) || '0', 10) || 0; } catch {}
+  rounds += 1;
+  try { localStorage.setItem(HM_ROUNDS_KEY, String(rounds)); } catch {}
+  if (rounds < HM_FEEDBACK_ROUNDS_THRESHOLD) return '';
+  // Intentionally NOT marked as shown/asked here -- it stays eligible and
+  // re-renders on every result screen from here on (see hmBindFeedbackBox)
+  // until the player actually dismisses it or sends feedback, so it can't be
+  // missed by someone who just clicks past a single round without noticing.
+  return `
+    <div class="hm-feedback-box" id="hmFeedbackBox">
+      <p class="hm-feedback-title">Enjoying typing your own answers instead of picking?</p>
+      <div class="hm-feedback-vote-row">
+        <button type="button" class="secondary-btn hm-feedback-vote" data-vote="keep">Keep it</button>
+        <button type="button" class="secondary-btn hm-feedback-vote" data-vote="not_for_me">Not for me</button>
+        <button type="button" class="hm-feedback-dismiss" id="hmFeedbackDismiss">No thanks</button>
+      </div>
+      <div id="hmFeedbackDetail" style="display:none;">
+        <textarea id="hmFeedbackText" class="form-input" placeholder="Anything else? (optional)"></textarea>
+        <button type="button" class="primary-btn" id="hmFeedbackSend">Send feedback</button>
+      </div>
+      <p class="hm-feedback-sent" id="hmFeedbackSent" style="display:none;">Thanks for the feedback!</p>
+    </div>
+  `;
+}
+
+// Wires up the interactive bits of hmFeedbackBoxHtml() -- must be called
+// after that HTML is actually in the DOM (it's a plain string spliced into
+// a result-screen template, so it has no listeners of its own yet). No-ops
+// safely if the box wasn't rendered this time.
+function hmBindFeedbackBox() {
+  const box = document.getElementById('hmFeedbackBox');
+  if (!box) return;
+  let vote = '';
+  const detail = document.getElementById('hmFeedbackDetail');
+  const sendBtn = document.getElementById('hmFeedbackSend');
+  const dismissBtn = document.getElementById('hmFeedbackDismiss');
+  const sentMsg = document.getElementById('hmFeedbackSent');
+  const textArea = document.getElementById('hmFeedbackText');
+  const finish = () => { try { localStorage.setItem(HM_FEEDBACK_ASKED_KEY, 'true'); } catch {} };
+  box.querySelectorAll('.hm-feedback-vote').forEach(btn => {
+    btn.addEventListener('click', () => {
+      vote = btn.dataset.vote;
+      box.querySelectorAll('.hm-feedback-vote').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      if (detail) detail.style.display = 'block';
+      if (typeof gtag === 'function') gtag('event', 'hard_mode_feedback_vote', { vote });
+    });
+  });
+  if (dismissBtn) dismissBtn.addEventListener('click', () => { finish(); box.style.display = 'none'; });
+  if (sendBtn) sendBtn.addEventListener('click', async () => {
+    sendBtn.disabled = true;
+    sendBtn.textContent = 'Sending...';
+    try {
+      await fetch(HM_FEEDBACK_FORMSPREE, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          type: 'hard_mode_feedback',
+          vote: vote || 'no_vote',
+          message: textArea ? textArea.value.trim() : '',
+          _subject: 'Trivia Gauntlet Hard Mode Feedback',
+        }),
+      });
+    } catch {}
+    finish();
+    if (detail) detail.style.display = 'none';
+    box.querySelectorAll('.hm-feedback-vote, .hm-feedback-dismiss').forEach(el => el.style.display = 'none');
+    if (sentMsg) sentMsg.style.display = 'block';
+    if (typeof gtag === 'function') gtag('event', 'hard_mode_feedback_sent', { vote: vote || 'no_vote' });
+  });
+}
+
 async function renderMultiThemeMarathon() {
   const params = new URLSearchParams(window.location.search);
   const slugs = (params.get("themes") || "").split(",").map(s => s.trim()).filter(Boolean);
@@ -546,6 +1062,13 @@ async function renderMultiThemeMarathon() {
     catch(e) { questionsByTheme[theme.slug] = []; }
   }));
 
+  // Hard Mode name/title-shortcut collisions, checked once per theme (not per
+  // combined round).
+  const wordCollisionsByTheme = {};
+  selectedThemes.forEach(t => {
+    wordCollisionsByTheme[t.slug] = hmBuildWordCollisions(questionsByTheme[t.slug] || []);
+  });
+
   const PAGE_SIZE = 30;
   const slidesContainer = document.getElementById("playSlides");
   const resultBox = document.getElementById("resultBox");
@@ -554,6 +1077,11 @@ async function renderMultiThemeMarathon() {
   const scoreText = document.createElement("p");
   scoreText.className = "play-score-text";
   scoreText.textContent = "Score: 0";
+  const quizBox = document.getElementById("quizBox");
+
+  // Only the actual start of a playthrough (page 1) can trigger the ask --
+  // never between pages of the same session, even on a fresh page load.
+  if ((params.get("page") || "1") === "1") await hmMaybeAskFirstTime(quizBox);
 
   const rawPage = parseInt(params.get("page") || "1", 10);
   const currentPage = isNaN(rawPage) || rawPage < 1 ? 1 : rawPage;
@@ -638,19 +1166,8 @@ async function renderMultiThemeMarathon() {
     qNum.textContent = `Question ${index + 1} of ${pageQuestions.length}`;
     const qText = document.createElement("h2");
     qText.textContent = q.question;
-    const optsList = document.createElement("div");
-    optsList.className = "options";
-    q.options.forEach(option => {
-      const btn = document.createElement("button");
-      btn.className = "option-btn";
-      btn.textContent = option;
-      btn.addEventListener("click", () => {
-        if (currentIndex !== index) return;
-        optsList.querySelectorAll(".option-btn").forEach(b => b.classList.remove("selected", "correct-anim", "wrong-anim"));
-        btn.classList.add("selected");
-      });
-      optsList.appendChild(btn);
-    });
+    const useTyped = hmIsEnabled() && hmShouldOfferTyped(q.answer);
+    const control = hmRenderAnswerControl(q, useTyped);
     const feedbackP = document.createElement("p");
     feedbackP.className = "feedback";
     const submitBtn = document.createElement("button");
@@ -666,23 +1183,27 @@ async function renderMultiThemeMarathon() {
     ctaRow.appendChild(nextBtn);
     submitBtn.addEventListener("click", () => {
       if (currentIndex !== index) return;
-      const selBtn = optsList.querySelector(".option-btn.selected");
-      if (!selBtn) return;
-      if (selBtn.textContent === q.answer) {
+      const selected = control.getSelection();
+      if (!selected) return;
+      const correct = control.isTyped
+        ? hmIsCorrect(selected, q, wordCollisionsByTheme[slug])
+        : selected === q.answer;
+      if (correct) {
         score++; themeScores[slug].correct++;
         feedbackP.textContent = "Correct"; feedbackP.className = "feedback correct";
-        selBtn.classList.remove("wrong-anim"); void selBtn.offsetWidth; selBtn.classList.add("correct-anim");
+        control.markCorrect();
         if (typeof SoundFX !== 'undefined') SoundFX.play('correct');
       } else {
         feedbackP.textContent = revealAnswers ? `Wrong. The correct answer is ${q.answer}.` : "Wrong";
         feedbackP.className = "feedback wrong";
-        selBtn.classList.remove("correct-anim"); void selBtn.offsetWidth; selBtn.classList.add("wrong-anim");
+        control.markWrong();
         if (typeof SoundFX !== 'undefined') SoundFX.play('wrong');
         wrongQuestions.push(q);
       }
       if (scoreText) scoreText.textContent = `Score: ${score}`;
-      submitBtn.disabled = true; nextBtn.style.display = "inline-block";
+      submitBtn.disabled = true; control.disable(); nextBtn.style.display = "inline-block";
     });
+    control.onEnter(() => submitBtn.click());
     nextBtn.addEventListener("click", () => {
       currentIndex++;
       if (currentIndex >= pageQuestions.length) renderResult();
@@ -694,7 +1215,7 @@ async function renderMultiThemeMarathon() {
     slide.appendChild(qNum);
     slide.appendChild(makeMashupBadge(slug, colorBySlug, themeName));
     slide.appendChild(qText);
-    slide.appendChild(optsList);
+    slide.appendChild(control.el);
     slide.appendChild(feedbackP);
     slide.appendChild(ctaRow);
     slidesContainer.appendChild(slide);
@@ -740,6 +1261,8 @@ async function renderMultiThemeMarathon() {
     resultBox.innerHTML = `
       <h2>Quiz Complete</h2>
       ${cumScoreLine(score, pageQuestions.length, cum)}
+      ${hmResultHintHtml()}
+      ${hmFeedbackBoxHtml()}
       <p class="result-tier">${getMarathonTier(score, pageQuestions.length)}</p>
       <div id="mashupMarathonBreakdown"></div>
       ${typeof webQCounterHTML === 'function' ? webQCounterHTML() : ''}
@@ -765,6 +1288,7 @@ async function renderMultiThemeMarathon() {
       </div>
     `;
     document.getElementById("mashupMarathonBreakdown").appendChild(renderMashupThemeBreakdown(themeScores, selectedThemes, colorBySlug));
+    hmBindFeedbackBox();
     if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
     if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Reveal Answers', 'Reveal Answers', 'See the correct answer for every question you missed — free in the app, no limits.');
     const msInput = document.getElementById("mashupMarathonSearchInput");
@@ -850,6 +1374,11 @@ async function renderPlayPage() {
     return;
   }
 
+  const quizBox = document.getElementById("quizBox");
+  // Only the actual start of a playthrough (page 1) can trigger the ask --
+  // never between pages of the same session, even on a fresh page load.
+  if ((getParam("page") || "1") === "1") await hmMaybeAskFirstTime(quizBox);
+
   // Map of which themes have Episode Mode, so the result screen can offer this
   // theme's own Episode Mode as the first related card when available.
   let episodeThemesMap = {};
@@ -887,6 +1416,12 @@ async function renderPlayPage() {
     safePage = Math.min(currentPage, totalPages);
     quizState.questions = (allPages[safePage - 1] || []).map(q => shuffleQuestionOptions(q));
   }
+
+  // Hard Mode name/title-shortcut collisions, checked once per theme. On
+  // replay, computed from the replay bank itself rather than re-fetching the
+  // whole theme file (replay already skips that fetch on purpose).
+  const wordCollisions = hmBuildWordCollisions(isReplay ? quizState.questions : allQuestions);
+
   quizState.currentIndex = 0;
   quizState.score = 0;
   quizState.selectedAnswer = null;
@@ -1018,23 +1553,8 @@ async function renderPlayPage() {
     const qText = document.createElement("h2");
     qText.textContent = q.question;
 
-    const optsList = document.createElement("div");
-    optsList.className = "options";
-
-    q.options.forEach(option => {
-      const btn = document.createElement("button");
-      btn.className = "option-btn";
-      btn.textContent = option;
-      btn.addEventListener("click", () => {
-        if (quizState.currentIndex !== index) return;
-        quizState.selectedAnswer = option;
-        optsList.querySelectorAll(".option-btn").forEach(b => {
-          b.classList.remove("selected", "correct-anim", "wrong-anim");
-        });
-        btn.classList.add("selected");
-      });
-      optsList.appendChild(btn);
-    });
+    const useTyped = hmIsEnabled() && hmShouldOfferTyped(q.answer);
+    const control = hmRenderAnswerControl(q, useTyped);
 
     const feedbackP = document.createElement("p");
     feedbackP.className = "feedback";
@@ -1054,36 +1574,34 @@ async function renderPlayPage() {
     ctaRow.appendChild(nextBtn);
 
     submitBtn.addEventListener("click", () => {
-      if (quizState.currentIndex !== index || !quizState.selectedAnswer) return;
+      if (quizState.currentIndex !== index) return;
+      const selected = control.getSelection();
+      if (!selected) return;
 
-      const selectedBtn = optsList.querySelector(".option-btn.selected");
+      const correct = control.isTyped
+        ? hmIsCorrect(selected, q, wordCollisions)
+        : selected === q.answer;
 
-      if (quizState.selectedAnswer === q.answer) {
+      if (correct) {
         quizState.score += 1;
         if (typeof SoundFX !== 'undefined') SoundFX.play('correct');
         feedbackP.textContent = "Correct";
         feedbackP.className = "feedback correct";
-        if (selectedBtn) {
-          selectedBtn.classList.remove("wrong-anim");
-          void selectedBtn.offsetWidth;
-          selectedBtn.classList.add("correct-anim");
-        }
+        control.markCorrect();
       } else {
         wrongQuestions.push(q);
         if (typeof SoundFX !== 'undefined') SoundFX.play('wrong');
         feedbackP.textContent = revealAnswers ? `Wrong. The correct answer is ${q.answer}.` : "Wrong";
         feedbackP.className = "feedback wrong";
-        if (selectedBtn) {
-          selectedBtn.classList.remove("correct-anim");
-          void selectedBtn.offsetWidth;
-          selectedBtn.classList.add("wrong-anim");
-        }
+        control.markWrong();
       }
 
       if (scoreText) scoreText.textContent = `Score: ${quizState.score}`;
       submitBtn.disabled = true;
+      control.disable();
       nextBtn.style.display = "inline-block";
     });
+    control.onEnter(() => submitBtn.click());
 
     nextBtn.addEventListener("click", () => {
       quizState.currentIndex += 1;
@@ -1097,7 +1615,7 @@ async function renderPlayPage() {
 
     slide.appendChild(qNum);
     slide.appendChild(qText);
-    slide.appendChild(optsList);
+    slide.appendChild(control.el);
     slide.appendChild(feedbackP);
     slide.appendChild(ctaRow);
     slidesContainer.appendChild(slide);
@@ -1171,6 +1689,8 @@ const relatedThemesHtml = `
   resultBox.innerHTML = `
     <h2>Quiz Complete</h2>
     ${cumScoreLine(quizState.score, quizState.questions.length, cum)}
+    ${hmResultHintHtml()}
+    ${hmFeedbackBoxHtml()}
     <p class="result-tier">${tierText}</p>
     ${typeof webQCounterHTML === 'function' ? webQCounterHTML() : ''}
     <div class="cta-row">
@@ -1195,6 +1715,7 @@ const relatedThemesHtml = `
 
   if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
   if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Reveal Answers', 'Reveal Answers', 'See the correct answer for every question you missed — free in the app, no limits.');
+  hmBindFeedbackBox();
 
   const resultSearchInput = document.getElementById("resultThemeSearchInput");
 const resultSearchResults = document.getElementById("resultThemeSearchResults");

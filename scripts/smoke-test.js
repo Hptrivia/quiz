@@ -187,10 +187,14 @@ function buildModes(themes) {
   // which has no episode data, so the episode test could never reach the end).
   const ep = themes.includes('friends') ? 'friends' : a;
   return [
-    { name: 'marathon',        url: `play.html?theme=${a}`,            run: p => playQuiz(p, '#resultBox') },
-    { name: 'marathon-mashup', url: `play.html?themes=${a},${b}`,      run: p => playQuiz(p, '#resultBox') },
-    { name: 'challenge',       url: `challenge.html?theme=${a}&round=1`, run: p => playChallengeRounds(p, '#challengeResultBox') },
-    { name: 'challenge-mashup',url: `challenge.html?themes=${a},${b}`, run: p => playChallengeRounds(p, '#challengeResultBox') },
+    // Fresh browser context = empty localStorage = the one-time Hard Mode ask
+    // screen (`#hardModeAsk`) fires before the quiz box, same as a real
+    // first-time player — dismiss it with "No" (keep multiple choice) so the
+    // rest of the driver's option-btn/Submit/Next flow still applies.
+    { name: 'marathon',        url: `play.html?theme=${a}`,            start: '.hm-ask-no', run: p => playQuiz(p, '#resultBox') },
+    { name: 'marathon-mashup', url: `play.html?themes=${a},${b}`,      start: '.hm-ask-no', run: p => playQuiz(p, '#resultBox') },
+    { name: 'challenge',       url: `challenge.html?theme=${a}&round=1`, start: '.hm-ask-no', run: p => playChallengeRounds(p, '#challengeResultBox') },
+    { name: 'challenge-mashup',url: `challenge.html?themes=${a},${b}`, start: '.hm-ask-no', run: p => playChallengeRounds(p, '#challengeResultBox') },
     { name: 'survival',        url: `survival.html?theme=${a}`,        start: '[data-difficulty="mixed"]', run: p => playQuiz(p, '#survivalResultBox') },
     { name: 'survival-mashup', url: `survival.html?themes=${a},${b}`,  start: '[data-difficulty="mixed"]', run: p => playQuiz(p, '#survivalResultBox') },
     { name: 'episode',         url: `episode.html?theme=${ep}&episode=1`, run: p => playQuiz(p, '#episodeResultBox') },
@@ -264,7 +268,9 @@ async function runMode(browser, mode) {
   let reached = false, crashed = null;
   try {
     await page.goto(`${BASE}/${mode.url}`, { waitUntil: 'networkidle2', timeout: 30000 });
-    if (mode.start) { await wait(500); await clickFirst(page, mode.start); await wait(400); }
+    // 1000ms covers the Hard Mode ask screen's 900ms "Settings saved" beat
+    // before it hides itself and hands control back to the quiz box.
+    if (mode.start) { await wait(500); await clickFirst(page, mode.start); await wait(1000); }
     reached = await mode.run(page);
   } catch (e) {
     crashed = e.message;

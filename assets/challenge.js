@@ -41,6 +41,13 @@ async function renderMultiThemeChallenge() {
     catch(e) { questionsByTheme[theme.slug] = []; }
   }));
 
+  // Hard Mode name/title-shortcut collisions, checked once per theme (not per
+  // combined round).
+  const wordCollisionsByTheme = {};
+  selectedThemes.forEach(t => {
+    wordCollisionsByTheme[t.slug] = hmBuildWordCollisions(questionsByTheme[t.slug] || []);
+  });
+
   const ROUND_SIZE = 10;
   const rawRound = parseInt(params.get("round") || "1", 10);
   const currentRound = isNaN(rawRound) || rawRound < 1 ? 1 : rawRound;
@@ -89,6 +96,10 @@ async function renderMultiThemeChallenge() {
   const resultBox = document.getElementById("challengeResultBox");
   const nextRoundLink = document.getElementById("challengeNextRoundLink");
 
+  // Only the actual start of a playthrough (round 1) can trigger the ask --
+  // never between rounds of the same session, even on a fresh page load.
+  if ((params.get("round") || "1") === "1") await hmMaybeAskFirstTime(quizBox);
+
   if (roundEl) roundEl.textContent = `Round ${safeRound}`;
   if (nextRoundLink) {
     if (safeRound < totalRounds) {
@@ -136,19 +147,8 @@ async function renderMultiThemeChallenge() {
     qNum.textContent = `Question ${index + 1} of ${roundQuestions.length}`;
     const qText = document.createElement("h2");
     qText.textContent = q.question;
-    const optsList = document.createElement("div");
-    optsList.className = "options";
-    q.options.forEach(option => {
-      const btn = document.createElement("button");
-      btn.className = "option-btn";
-      btn.textContent = option;
-      btn.addEventListener("click", () => {
-        if (currentIndex !== index) return;
-        optsList.querySelectorAll(".option-btn").forEach(b => b.classList.remove("selected", "correct-anim", "wrong-anim"));
-        btn.classList.add("selected");
-      });
-      optsList.appendChild(btn);
-    });
+    const useTyped = hmIsEnabled() && hmShouldOfferTyped(q.answer);
+    const control = hmRenderAnswerControl(q, useTyped);
     const feedbackP = document.createElement("p");
     feedbackP.className = "feedback";
     const submitBtn = document.createElement("button");
@@ -164,23 +164,27 @@ async function renderMultiThemeChallenge() {
     ctaRow.appendChild(nextBtn);
     submitBtn.addEventListener("click", () => {
       if (currentIndex !== index) return;
-      const selBtn = optsList.querySelector(".option-btn.selected");
-      if (!selBtn) return;
-      if (selBtn.textContent === q.answer) {
+      const selected = control.getSelection();
+      if (!selected) return;
+      const correct = control.isTyped
+        ? hmIsCorrect(selected, q, wordCollisionsByTheme[slug])
+        : selected === q.answer;
+      if (correct) {
         score++; themeScores[slug].correct++;
         feedbackP.textContent = "Correct"; feedbackP.className = "feedback correct";
-        selBtn.classList.remove("wrong-anim"); void selBtn.offsetWidth; selBtn.classList.add("correct-anim");
+        control.markCorrect();
         if (typeof SoundFX !== 'undefined') SoundFX.play('correct');
       } else {
         feedbackP.textContent = revealAnswers ? `Wrong. The correct answer is ${q.answer}.` : "Wrong";
         feedbackP.className = "feedback wrong";
-        selBtn.classList.remove("correct-anim"); void selBtn.offsetWidth; selBtn.classList.add("wrong-anim");
+        control.markWrong();
         if (typeof SoundFX !== 'undefined') SoundFX.play('wrong');
         wrongQuestions.push(q);
       }
       if (scoreEl) scoreEl.textContent = `Score: ${score}`;
-      submitBtn.disabled = true; nextBtn.style.display = "inline-block";
+      submitBtn.disabled = true; control.disable(); nextBtn.style.display = "inline-block";
     });
+    control.onEnter(() => submitBtn.click());
     nextBtn.addEventListener("click", () => {
       currentIndex++;
       if (currentIndex >= roundQuestions.length) renderResult();
@@ -189,7 +193,7 @@ async function renderMultiThemeChallenge() {
     slide.appendChild(qNum);
     slide.appendChild(makeMashupBadge(slug, colorBySlug, themeName));
     slide.appendChild(qText);
-    slide.appendChild(optsList);
+    slide.appendChild(control.el);
     slide.appendChild(feedbackP);
     slide.appendChild(ctaRow);
     slidesContainer.appendChild(slide);
@@ -236,6 +240,8 @@ async function renderMultiThemeChallenge() {
       ${(safeRound < CHAL_WEB_FREE_ROUNDS && typeof resultAppBannerHTML === 'function') ? resultAppBannerHTML() : ''}
       <h2>Round ${safeRound} Complete</h2>
       ${cumScoreLine(score, roundQuestions.length, cum)}
+      ${hmResultHintHtml()}
+      ${hmFeedbackBoxHtml()}
       <div id="mashupChallengeBreakdown"></div>
       ${webQCounterHTML()}
       <div class="cta-row">
@@ -260,6 +266,7 @@ async function renderMultiThemeChallenge() {
       </div>
     `;
     document.getElementById("mashupChallengeBreakdown").appendChild(renderMashupThemeBreakdown(themeScores, selectedThemes, colorBySlug));
+    hmBindFeedbackBox();
     if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
     if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Reveal Answers', 'Reveal Answers', 'See the correct answer for every question you missed — free in the app, no limits.');
     const msInput = document.getElementById("mashupChallengeSearchInput");
@@ -342,6 +349,10 @@ async function renderChallengePage() {
     return;
   }
 
+  // Only the actual start of a playthrough (round 1) can trigger the ask --
+  // never between rounds of the same session, even on a fresh page load.
+  if ((getParam("round") || "1") === "1") await hmMaybeAskFirstTime(quizBox);
+
   // Map of which themes have Episode Mode, so the result screen can offer this
   // theme's own Episode Mode as the first related card when available.
   let episodeThemesMap = {};
@@ -392,7 +403,7 @@ async function renderChallengePage() {
   const currentRound = Number.isNaN(rawRound) || rawRound < 1 ? 1 : rawRound;
 
   let isReplay = getParam("replay") === "1";
-  let totalRounds, safeRound, shuffledQuestions;
+  let totalRounds, safeRound, shuffledQuestions, allQuestions;
 
   if (isReplay) {
     try {
@@ -407,7 +418,7 @@ async function renderChallengePage() {
   }
 
   if (!isReplay) {
-    const allQuestions = await fetchJSON(theme.questionFile);
+    allQuestions = await fetchJSON(theme.questionFile);
     const allRounds = buildBalancedBatches(allQuestions, ROUND_SIZE, 5, 5);
 
     const challengeSeen = new Set();
@@ -429,6 +440,10 @@ async function renderChallengePage() {
     shuffledQuestions = (allRounds[safeRound - 1] || []).map(q => shuffleQuestionOptions(q));
   }
 
+  // Hard Mode name/title-shortcut collisions, checked once per theme. On
+  // replay, computed from the replay bank itself rather than re-fetching the
+  // whole theme file (replay already skips that fetch on purpose).
+  const wordCollisions = hmBuildWordCollisions(isReplay ? shuffledQuestions : allQuestions);
 
   if (nextRoundLink) {
     if (!isReplay && safeRound < totalRounds) {
@@ -571,23 +586,8 @@ async function renderChallengePage() {
     const qText = document.createElement("h2");
     qText.textContent = q.question;
 
-    const optsList = document.createElement("div");
-    optsList.className = "options";
-
-    q.options.forEach(option => {
-      const btn = document.createElement("button");
-      btn.className = "option-btn";
-      btn.textContent = option;
-      btn.addEventListener("click", () => {
-        if (state.currentIndex !== index) return;
-        state.selectedAnswer = option;
-        optsList.querySelectorAll(".option-btn").forEach(b => {
-          b.classList.remove("selected", "correct-anim", "wrong-anim");
-        });
-        btn.classList.add("selected");
-      });
-      optsList.appendChild(btn);
-    });
+    const useTyped = hmIsEnabled() && hmShouldOfferTyped(q.answer);
+    const control = hmRenderAnswerControl(q, useTyped);
 
     const feedbackP = document.createElement("p");
     feedbackP.className = "feedback";
@@ -607,36 +607,34 @@ async function renderChallengePage() {
     ctaRow.appendChild(nextBtn);
 
     submitBtn.addEventListener("click", () => {
-      if (state.currentIndex !== index || !state.selectedAnswer) return;
+      if (state.currentIndex !== index) return;
+      const selected = control.getSelection();
+      if (!selected) return;
 
-      const selectedBtn = optsList.querySelector(".option-btn.selected");
+      const correct = control.isTyped
+        ? hmIsCorrect(selected, q, wordCollisions)
+        : selected === q.answer;
 
-      if (state.selectedAnswer === q.answer) {
+      if (correct) {
         state.score += 1;
         if (typeof SoundFX !== 'undefined') SoundFX.play('correct');
         feedbackP.textContent = "Correct";
         feedbackP.className = "feedback correct";
-        if (selectedBtn) {
-          selectedBtn.classList.remove("wrong-anim");
-          void selectedBtn.offsetWidth;
-          selectedBtn.classList.add("correct-anim");
-        }
+        control.markCorrect();
       } else {
         wrongQuestions.push(q);
         if (typeof SoundFX !== 'undefined') SoundFX.play('wrong');
         feedbackP.textContent = revealAnswers ? `Wrong. The correct answer is ${q.answer}.` : "Wrong";
         feedbackP.className = "feedback wrong";
-        if (selectedBtn) {
-          selectedBtn.classList.remove("correct-anim");
-          void selectedBtn.offsetWidth;
-          selectedBtn.classList.add("wrong-anim");
-        }
+        control.markWrong();
       }
 
       scoreEl.textContent = `Score: ${state.score}`;
       submitBtn.disabled = true;
+      control.disable();
       nextBtn.style.display = "inline-block";
     });
+    control.onEnter(() => submitBtn.click());
 
     nextBtn.addEventListener("click", () => {
       state.currentIndex += 1;
@@ -649,7 +647,7 @@ async function renderChallengePage() {
 
     slide.appendChild(qNum);
     slide.appendChild(qText);
-    slide.appendChild(optsList);
+    slide.appendChild(control.el);
     slide.appendChild(feedbackP);
     slide.appendChild(ctaRow);
     slidesContainer.appendChild(slide);
@@ -726,6 +724,8 @@ async function renderChallengePage() {
       ${(safeRound < CHAL_WEB_FREE_ROUNDS && typeof resultAppBannerHTML === 'function') ? resultAppBannerHTML() : ''}
       <h2>Round ${safeRound} Complete</h2>
       ${cumScoreLine(state.score, state.questions.length, cum)}
+      ${hmResultHintHtml()}
+      ${hmFeedbackBoxHtml()}
       <button type="button" class="challenge-share-link" data-share-link="${roundLink}">🔗 Copy link &mdash; challenge a friend to these 10 questions</button>
       ${webQCounterHTML()}
       <div class="cta-row">
@@ -749,6 +749,7 @@ async function renderChallengePage() {
 
     if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
     if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Reveal Answers', 'Reveal Answers', 'See the correct answer for every question you missed — free in the app, no limits.');
+    hmBindFeedbackBox();
 
     const resultSearchInput = document.getElementById("challengeResultThemeSearchInput");
     const resultSearchResults = document.getElementById("challengeResultThemeSearchResults");

@@ -2464,3 +2464,102 @@ body.in-app .theme-sample-questions ~ p { display: none; }
   background: #f5a623;
   color: #1b1b1b;
 }
+
+/* Hard Mode (typed answers) -------------------------------------------------
+   The one-time ask is a page step in #challengeQuizBox's place, styled like
+   Survival's #difficultyBox -- plain copy + cta-row buttons, not an overlay. */
+#hardModeAsk ul.hm-ask-list {
+  margin: 14px 0 20px;
+  padding-left: 20px;
+}
+#hardModeAsk ul.hm-ask-list li {
+  margin-bottom: 8px;
+}
+.hm-ask-saved {
+  margin-top: 16px;
+  font-weight: 600;
+  color: var(--feedback-correct);
+}
+
+.hm-answer-row {
+  margin: 18px 0;
+}
+.hm-answer-input.correct {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.18);
+}
+.hm-answer-input.wrong {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.15);
+}
+
+.hm-hint-row {
+  font-size: 0.8rem;
+  color: var(--muted-text);
+  margin-top: 10px;
+}
+.hm-hint-row a {
+  color: inherit;
+}
+
+.hm-settings-row-desc {
+  font-size: 0.8rem;
+  color: var(--muted-text);
+  margin: 4px 0 10px;
+}
+
+.hm-beta-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: rgba(245, 166, 35, 0.15);
+  color: #f5a623;
+  vertical-align: middle;
+}
+
+/* Post-round feedback prompt, shown once after two Hard Mode rounds -- see
+   hmFeedbackBoxHtml/hmBindFeedbackBox in app.js. */
+.hm-feedback-box {
+  margin: 20px 0;
+  padding: 16px;
+  border: 1px solid var(--border-color, rgba(255,255,255,0.12));
+  border-radius: 10px;
+}
+.hm-feedback-title {
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+.hm-feedback-vote-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.hm-feedback-vote.selected {
+  border-color: #f5a623;
+  color: #f5a623;
+}
+.hm-feedback-box textarea.form-input {
+  width: 100%;
+  min-height: 60px;
+  margin-bottom: 12px;
+  resize: vertical;
+}
+.hm-feedback-sent {
+  font-weight: 600;
+  color: var(--feedback-correct);
+}
+.hm-feedback-dismiss {
+  background: none;
+  border: none;
+  color: var(--muted-text);
+  font-size: 0.8rem;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 12px;
+}

@@ -55,6 +55,20 @@
     <div class="theme-top-links"><a href="index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a><span id="navAvatarSlot"></span></div>
 
     <section class="panel">
+      <div id="hardModeAsk" style="display:none;">
+        <h2>Want a harder challenge? <span class="hm-beta-tag">Beta</span></h2>
+        <ul class="hm-ask-list">
+          <li>Type your own answers instead of picking from options</li>
+          <li>Typing only works for single words and names — other answers still use multiple choice</li>
+          <li>You can change this anytime in <a href="profile.html?tab=settings">Profile → Settings</a></li>
+        </ul>
+        <div class="cta-row hm-ask-buttons">
+          <button type="button" class="primary-btn hm-ask-yes">Yes, turn it on</button>
+          <button type="button" class="secondary-btn hm-ask-no">No, keep multiple choice</button>
+        </div>
+        <p class="hm-ask-saved" style="display:none;">✓ Settings saved</p>
+      </div>
+
       <div id="challengeQuizBox">
         <div class="play-progress-row">
           <p id="challengeRoundText">Round 1</p>

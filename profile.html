@@ -83,6 +83,13 @@
           </div>
         </div>
 
+        <!-- Hard Mode -->
+        <div id="hardModeRow" style="margin-bottom:16px;">
+          <div class="form-label">Hard Mode <span class="hm-beta-tag">Beta</span></div>
+          <button class="secondary-btn" id="hardModeToggleBtn" onclick="toggleHardMode()"></button>
+          <p class="hm-settings-row-desc">Takes effect next quiz, not mid-round</p>
+        </div>
+
         <!-- Color picker -->
         <div style="margin-bottom:16px;">
           <div class="form-label">Avatar colour</div>
@@ -154,6 +161,7 @@
       // Pre-fill settings inputs
       document.getElementById("profileNameInputSettings").value = p.name || "";
       document.getElementById("profileEmail").value = p.email || "";
+      renderHardModeRow();
 
       // Color swatches
       const sw = document.getElementById("colorSwatches");
@@ -299,6 +307,34 @@
       if (name === "themes") loadLeaderboardRanks();
     }
 
+    // Master kill switch, duplicated from assets/app.js (no shared module
+    // system between pages) -- keep both in sync if this ever changes.
+    const HM_FEATURE_ENABLED = true;
+
+    // Hard Mode (typed answers, Challenge Mode only) -- same tg_hard_mode /
+    // tg_hard_mode_asked localStorage keys the one-time Challenge prompt uses,
+    // so flipping it here is exactly equivalent to answering that prompt.
+    function renderHardModeRow() {
+      const row = document.getElementById("hardModeRow");
+      if (!HM_FEATURE_ENABLED) { if (row) row.style.display = "none"; return; }
+      if (row) row.style.display = "";
+      let on = false;
+      try { on = localStorage.getItem("tg_hard_mode") === "true"; } catch {}
+      const btn = document.getElementById("hardModeToggleBtn");
+      if (btn) btn.textContent = on ? "Turn Off" : "Turn On";
+    }
+
+    function toggleHardMode() {
+      let on = false;
+      try { on = localStorage.getItem("tg_hard_mode") === "true"; } catch {}
+      try {
+        localStorage.setItem("tg_hard_mode", on ? "false" : "true");
+        localStorage.setItem("tg_hard_mode_asked", "true");
+      } catch {}
+      renderHardModeRow();
+      if (typeof gtag === "function") gtag("event", "hard_mode_settings_toggle", { enabled: !on });
+    }
+
     function pickColor(color) {
       const p = getProfile();
       p.avatarColor = color;
@@ -379,6 +415,9 @@
     }
 
     renderPage();
+    if (new URLSearchParams(window.location.search).get("tab") === "settings") {
+      switchTab("settings", document.querySelector(".profile-tab:last-child"));
+    }
   </script>
 </body>
 </html>
