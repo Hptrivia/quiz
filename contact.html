@@ -32,7 +32,7 @@
       <a class="upload-link" href="mailto:triviaking2025@gmail.com?subject=Trivia%20Gauntlet%20Feedback">triviaking2025@gmail.com</a>
     </p>
 
-    <form class="contact-form" action="https://formspree.io/f/mpqybwea" method="POST">
+    <form class="contact-form" id="contactForm">
       <label class="form-label" for="feedbackType">Type</label>
       <select id="feedbackType" name="type" class="form-input">
         <option value="general">General Feedback</option>
@@ -60,8 +60,9 @@
         placeholder="you@example.com"
       />
 
-      <button type="submit" class="primary-btn">Send Feedback</button>
+      <button type="submit" class="primary-btn" id="contactSendBtn">Send Feedback</button>
     </form>
+    <p id="contactSentMsg" style="display:none;color:#4ade80;font-weight:600;margin-top:12px;">✓ Feedback sent — thank you!</p>
   </section>
 </main>
 
@@ -88,6 +89,31 @@
     if (topic && subjectSelect) {
       subjectSelect.value = topic;
     }
+
+    const form = document.getElementById("contactForm");
+    form?.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById("contactSendBtn");
+      const message = document.getElementById("message").value.trim();
+      if (!message) return;
+      const type = document.getElementById("feedbackType").value;
+      const email = document.getElementById("email").value.trim();
+      btn.disabled = true;
+      btn.textContent = "Sending...";
+      try {
+        await fetch("https://formspree.io/f/mpqybwea", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body: JSON.stringify({ type, message, email, _subject: "Trivia Gauntlet Feedback" }),
+        });
+        form.style.display = "none";
+        document.getElementById("contactSentMsg").style.display = "block";
+        if (typeof gtag === "function") gtag("event", "contact_feedback_sent", { type });
+      } catch {
+        btn.textContent = "Failed — try again";
+        btn.disabled = false;
+      }
+    });
   });
 </script>
   <script src="assets/profile.js"></script>
