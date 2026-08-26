@@ -1813,6 +1813,22 @@ function wireNotifyCard(themeName, source = "trivia") {
   });
 }
 
+// One-time in-app-only announcement banner on the homepage. Shows once ever
+// (per device) then never again, even if never manually dismissed — the
+// localStorage flag is set the moment it's rendered, not on close.
+const FEEDBACK_FIXED_NOTICE_KEY = "_feedbackFixedNoticeSeen";
+function initFeedbackFixedBanner() {
+  const banner = document.getElementById("feedbackFixedBanner");
+  if (!banner) return;
+  if (typeof isInApp !== "function" || !isInApp()) return;
+  if (localStorage.getItem(FEEDBACK_FIXED_NOTICE_KEY)) return;
+  localStorage.setItem(FEEDBACK_FIXED_NOTICE_KEY, "1");
+  banner.style.display = "flex";
+  document.getElementById("feedbackFixedBannerClose")?.addEventListener("click", () => {
+    banner.style.display = "none";
+  });
+}
+
 async function submitEmailToMailchimp(email, themeName, source = "trivia") {
   try {
     const res = await fetch("https://formspree.io/f/mqewdrkn", {
@@ -1839,7 +1855,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const page = document.body.dataset.page;
 
-  if (page === "home") renderHomePage();
+  if (page === "home") { renderHomePage(); initFeedbackFixedBanner(); }
   if (page === "category") renderCategoryPage();
   if (page === "quiz") renderQuizPage();
   if (page === "play") renderPlayPage();
