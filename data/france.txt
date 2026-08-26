@@ -1,0 +1,1802 @@
+[
+  {
+    "id": 1,
+    "question": "Which city is the capital of France?",
+    "options": [
+      "Paris",
+      "Lyon",
+      "Marseille",
+      "Bordeaux"
+    ],
+    "answer": "Paris",
+    "difficulty": "easy"
+  },
+  {
+    "id": 2,
+    "question": "Which currency is used in France today?",
+    "options": [
+      "Euro",
+      "Franc",
+      "Peseta",
+      "Lira"
+    ],
+    "answer": "Euro",
+    "difficulty": "easy"
+  },
+  {
+    "id": 3,
+    "question": "Which river flows through the centre of Paris?",
+    "options": [
+      "Seine",
+      "Loire",
+      "Rhône",
+      "Garonne"
+    ],
+    "answer": "Seine",
+    "difficulty": "easy"
+  },
+  {
+    "id": 4,
+    "question": "Which river is the longest in France?",
+    "options": [
+      "Loire",
+      "Seine",
+      "Rhône",
+      "Dordogne"
+    ],
+    "answer": "Loire",
+    "difficulty": "easy"
+  },
+  {
+    "id": 5,
+    "question": "Which mountain is the highest in France?",
+    "options": [
+      "Mont Blanc",
+      "Mont Ventoux",
+      "Puy de Dôme",
+      "Pic du Midi"
+    ],
+    "answer": "Mont Blanc",
+    "difficulty": "easy"
+  },
+  {
+    "id": 6,
+    "question": "Which mountain range forms the border between France and Spain?",
+    "options": [
+      "Pyrenees",
+      "Alps",
+      "Jura",
+      "Vosges"
+    ],
+    "answer": "Pyrenees",
+    "difficulty": "easy"
+  },
+  {
+    "id": 7,
+    "question": "Which sea lies along the southern coast of France?",
+    "options": [
+      "Mediterranean Sea",
+      "Adriatic Sea",
+      "Baltic Sea",
+      "Aegean Sea"
+    ],
+    "answer": "Mediterranean Sea",
+    "difficulty": "easy"
+  },
+  {
+    "id": 8,
+    "question": "Which bay lies off the western coast of France?",
+    "options": [
+      "Bay of Biscay",
+      "Celtic Sea",
+      "Irish Sea",
+      "German Bight"
+    ],
+    "answer": "Bay of Biscay",
+    "difficulty": "easy"
+  },
+  {
+    "id": 9,
+    "question": "Which French island in the Mediterranean was the birthplace of Napoleon?",
+    "options": [
+      "Corsica",
+      "Sardinia",
+      "Sicily",
+      "Elba"
+    ],
+    "answer": "Corsica",
+    "difficulty": "easy"
+  },
+  {
+    "id": 10,
+    "question": "Which French city is the country's largest Mediterranean port?",
+    "options": [
+      "Marseille",
+      "Nice",
+      "Toulon",
+      "Montpellier"
+    ],
+    "answer": "Marseille",
+    "difficulty": "easy"
+  },
+  {
+    "id": 11,
+    "question": "The Channel Tunnel connects France to which country?",
+    "options": [
+      "United Kingdom",
+      "Belgium",
+      "Ireland",
+      "Netherlands"
+    ],
+    "answer": "United Kingdom",
+    "difficulty": "easy"
+  },
+  {
+    "id": 12,
+    "question": "Which Paris museum displays the Mona Lisa?",
+    "options": [
+      "The Louvre",
+      "Musée d'Orsay",
+      "Centre Pompidou",
+      "Petit Palais"
+    ],
+    "answer": "The Louvre",
+    "difficulty": "easy"
+  },
+  {
+    "id": 13,
+    "question": "Which Paris landmark was built as the entrance arch for the 1889 World's Fair?",
+    "options": [
+      "Eiffel Tower",
+      "Arc de Triomphe",
+      "Grand Palais",
+      "Tour Saint-Jacques"
+    ],
+    "answer": "Eiffel Tower",
+    "difficulty": "easy"
+  },
+  {
+    "id": 14,
+    "question": "Which famous Paris avenue leads up to the Arc de Triomphe?",
+    "options": [
+      "Champs-Élysées",
+      "Rue de Rivoli",
+      "Avenue Montaigne",
+      "Boulevard Haussmann"
+    ],
+    "answer": "Champs-Élysées",
+    "difficulty": "easy"
+  },
+  {
+    "id": 15,
+    "question": "Which palace did Louis XIV make the seat of his royal court?",
+    "options": [
+      "Versailles",
+      "Fontainebleau",
+      "Chambord",
+      "Chenonceau"
+    ],
+    "answer": "Versailles",
+    "difficulty": "easy"
+  },
+  {
+    "id": 16,
+    "question": "Which Paris cathedral was badly damaged by fire in 2019?",
+    "options": [
+      "Notre-Dame",
+      "Sainte-Chapelle",
+      "Sacré-Cœur",
+      "Saint-Sulpice"
+    ],
+    "answer": "Notre-Dame",
+    "difficulty": "easy"
+  },
+  {
+    "id": 17,
+    "question": "Which white basilica crowns the hill of Montmartre?",
+    "options": [
+      "Sacré-Cœur",
+      "La Madeleine",
+      "Saint-Eustache",
+      "Val-de-Grâce"
+    ],
+    "answer": "Sacré-Cœur",
+    "difficulty": "easy"
+  },
+  {
+    "id": 18,
+    "question": "Which Paris cabaret is famous for the red windmill on its roof?",
+    "options": [
+      "Moulin Rouge",
+      "Folies Bergère",
+      "Le Chat Noir",
+      "Le Lido"
+    ],
+    "answer": "Moulin Rouge",
+    "difficulty": "easy"
+  },
+  {
+    "id": 19,
+    "question": "Which national holiday does France celebrate on 14 July?",
+    "options": [
+      "Bastille Day",
+      "Republic Day",
+      "Liberation Day",
+      "Victory Day"
+    ],
+    "answer": "Bastille Day",
+    "difficulty": "easy"
+  },
+  {
+    "id": 20,
+    "question": "Which song is the national anthem of France?",
+    "options": [
+      "La Marseillaise",
+      "Le Chant du Départ",
+      "La Parisienne",
+      "Le Roi Triomphant"
+    ],
+    "answer": "La Marseillaise",
+    "difficulty": "easy"
+  },
+  {
+    "id": 21,
+    "question": "Which three words make up the national motto of France?",
+    "options": [
+      "Liberté, Égalité, Fraternité",
+      "Honneur, Patrie, Valeur",
+      "Travail, Famille, Patrie",
+      "Justice, Union, Paix"
+    ],
+    "answer": "Liberté, Égalité, Fraternité",
+    "difficulty": "easy"
+  },
+  {
+    "id": 22,
+    "question": "Which bird is used as a national emblem of France?",
+    "options": [
+      "Rooster",
+      "Eagle",
+      "Falcon",
+      "Swan"
+    ],
+    "answer": "Rooster",
+    "difficulty": "easy"
+  },
+  {
+    "id": 23,
+    "question": "Which female figure personifies the French Republic on stamps and coins?",
+    "options": [
+      "Marianne",
+      "Adrienne",
+      "Joséphine",
+      "Céleste"
+    ],
+    "answer": "Marianne",
+    "difficulty": "easy"
+  },
+  {
+    "id": 24,
+    "question": "Which monument did France give to the United States in 1886?",
+    "options": [
+      "Statue of Liberty",
+      "Washington Monument",
+      "Liberty Bell",
+      "Lincoln Memorial"
+    ],
+    "answer": "Statue of Liberty",
+    "difficulty": "easy"
+  },
+  {
+    "id": 25,
+    "question": "Which Paris prison was stormed by a crowd on 14 July 1789?",
+    "options": [
+      "The Bastille",
+      "The Conciergerie",
+      "Fort Vincennes",
+      "La Force"
+    ],
+    "answer": "The Bastille",
+    "difficulty": "easy"
+  },
+  {
+    "id": 26,
+    "question": "Which French king was executed during the Revolution in 1793?",
+    "options": [
+      "Louis XVI",
+      "Louis XIV",
+      "Louis XV",
+      "Charles X"
+    ],
+    "answer": "Louis XVI",
+    "difficulty": "easy"
+  },
+  {
+    "id": 27,
+    "question": "Which queen of France was executed by guillotine in 1793?",
+    "options": [
+      "Marie Antoinette",
+      "Anne of Austria",
+      "Catherine de' Medici",
+      "Blanche of Castile"
+    ],
+    "answer": "Marie Antoinette",
+    "difficulty": "easy"
+  },
+  {
+    "id": 28,
+    "question": "Which French general crowned himself Emperor in 1804?",
+    "options": [
+      "Napoleon Bonaparte",
+      "Lazare Carnot",
+      "Jean-Baptiste Bernadotte",
+      "Charles Dumouriez"
+    ],
+    "answer": "Napoleon Bonaparte",
+    "difficulty": "easy"
+  },
+  {
+    "id": 29,
+    "question": "At which 1815 battle did Napoleon suffer his final defeat?",
+    "options": [
+      "Waterloo",
+      "Austerlitz",
+      "Leipzig",
+      "Borodino"
+    ],
+    "answer": "Waterloo",
+    "difficulty": "easy"
+  },
+  {
+    "id": 30,
+    "question": "Which teenage heroine led French troops during the Hundred Years' War?",
+    "options": [
+      "Joan of Arc",
+      "Isabella of France",
+      "Blanche of Navarre",
+      "Geneviève of Paris"
+    ],
+    "answer": "Joan of Arc",
+    "difficulty": "easy"
+  },
+  {
+    "id": 31,
+    "question": "In which French region did the Allied D-Day landings take place in 1944?",
+    "options": [
+      "Normandy",
+      "Brittany",
+      "Picardy",
+      "Aquitaine"
+    ],
+    "answer": "Normandy",
+    "difficulty": "easy"
+  },
+  {
+    "id": 32,
+    "question": "Which republic is France currently governed under?",
+    "options": [
+      "Fifth Republic",
+      "Third Republic",
+      "Fourth Republic",
+      "Sixth Republic"
+    ],
+    "answer": "Fifth Republic",
+    "difficulty": "easy"
+  },
+  {
+    "id": 33,
+    "question": "Who has served as President of France since 2017?",
+    "options": [
+      "Emmanuel Macron",
+      "François Hollande",
+      "Nicolas Sarkozy",
+      "Édouard Philippe"
+    ],
+    "answer": "Emmanuel Macron",
+    "difficulty": "easy"
+  },
+  {
+    "id": 34,
+    "question": "Which French statesman gives his name to the main Paris airport?",
+    "options": [
+      "Charles de Gaulle",
+      "Georges Pompidou",
+      "Jean Moulin",
+      "Léon Blum"
+    ],
+    "answer": "Charles de Gaulle",
+    "difficulty": "easy"
+  },
+  {
+    "id": 35,
+    "question": "Which three letters name France's high-speed train service?",
+    "options": [
+      "TGV",
+      "RER",
+      "ICE",
+      "AVE"
+    ],
+    "answer": "TGV",
+    "difficulty": "easy"
+  },
+  {
+    "id": 36,
+    "question": "Which aircraft manufacturer has its main assembly plants in Toulouse?",
+    "options": [
+      "Airbus",
+      "Boeing",
+      "Embraer",
+      "Bombardier"
+    ],
+    "answer": "Airbus",
+    "difficulty": "easy"
+  },
+  {
+    "id": 37,
+    "question": "Which of these car manufacturers is French?",
+    "options": [
+      "Peugeot",
+      "Seat",
+      "Škoda",
+      "Opel"
+    ],
+    "answer": "Peugeot",
+    "difficulty": "easy"
+  },
+  {
+    "id": 38,
+    "question": "Which French region gives its name to a famous sparkling wine?",
+    "options": [
+      "Champagne",
+      "Burgundy",
+      "Bordeaux",
+      "Alsace"
+    ],
+    "answer": "Champagne",
+    "difficulty": "easy"
+  },
+  {
+    "id": 39,
+    "question": "Which southern French region is famous for its lavender fields?",
+    "options": [
+      "Provence",
+      "Brittany",
+      "Normandy",
+      "Picardy"
+    ],
+    "answer": "Provence",
+    "difficulty": "easy"
+  },
+  {
+    "id": 40,
+    "question": "Which French city is famous for its mustard?",
+    "options": [
+      "Dijon",
+      "Nantes",
+      "Rouen",
+      "Reims"
+    ],
+    "answer": "Dijon",
+    "difficulty": "easy"
+  },
+  {
+    "id": 41,
+    "question": "Which famous French cheese is a blue cheese made from sheep's milk?",
+    "options": [
+      "Roquefort",
+      "Camembert",
+      "Comté",
+      "Reblochon"
+    ],
+    "answer": "Roquefort",
+    "difficulty": "easy"
+  },
+  {
+    "id": 42,
+    "question": "Which French delicacy consists of cooked snails?",
+    "options": [
+      "Escargot",
+      "Bouillabaisse",
+      "Cassoulet",
+      "Ratatouille"
+    ],
+    "answer": "Escargot",
+    "difficulty": "easy"
+  },
+  {
+    "id": 43,
+    "question": "Which crescent-shaped pastry is a French breakfast staple?",
+    "options": [
+      "Croissant",
+      "Madeleine",
+      "Palmier",
+      "Financier"
+    ],
+    "answer": "Croissant",
+    "difficulty": "easy"
+  },
+  {
+    "id": 44,
+    "question": "Which long, thin loaf is the classic French bread?",
+    "options": [
+      "Baguette",
+      "Brioche",
+      "Ciabatta",
+      "Focaccia"
+    ],
+    "answer": "Baguette",
+    "difficulty": "easy"
+  },
+  {
+    "id": 45,
+    "question": "Which colour jersey is worn by the overall leader of the Tour de France?",
+    "options": [
+      "Yellow",
+      "Green",
+      "White",
+      "Polka dot"
+    ],
+    "answer": "Yellow",
+    "difficulty": "easy"
+  },
+  {
+    "id": 46,
+    "question": "Which French Riviera town hosts the world's most famous film festival?",
+    "options": [
+      "Cannes",
+      "Deauville",
+      "Biarritz",
+      "Antibes"
+    ],
+    "answer": "Cannes",
+    "difficulty": "easy"
+  },
+  {
+    "id": 47,
+    "question": "How many times has France won the men's FIFA World Cup as at 2026?",
+    "options": [
+      "Two",
+      "One",
+      "Three",
+      "Four"
+    ],
+    "answer": "Two",
+    "difficulty": "easy"
+  },
+  {
+    "id": 48,
+    "question": "Which nickname is used for the French national football team?",
+    "options": [
+      "Les Bleus",
+      "Les Verts",
+      "Les Lions",
+      "Les Aigles"
+    ],
+    "answer": "Les Bleus",
+    "difficulty": "easy"
+  },
+  {
+    "id": 49,
+    "question": "Which comic-book Gaulish warrior fights the Romans with a magic potion?",
+    "options": [
+      "Asterix",
+      "Obelix",
+      "Getafix",
+      "Vitalstatistix"
+    ],
+    "answer": "Asterix",
+    "difficulty": "easy"
+  },
+  {
+    "id": 50,
+    "question": "Which French author wrote The Little Prince?",
+    "options": [
+      "Antoine de Saint-Exupéry",
+      "Jules Verne",
+      "Marcel Proust",
+      "Alphonse Daudet"
+    ],
+    "answer": "Antoine de Saint-Exupéry",
+    "difficulty": "easy"
+  },
+  {
+    "id": 51,
+    "question": "Which French king was known as the Sun King?",
+    "options": [
+      "Louis XIV",
+      "Louis XIII",
+      "Louis XV",
+      "Henry IV"
+    ],
+    "answer": "Louis XIV",
+    "difficulty": "medium"
+  },
+  {
+    "id": 52,
+    "question": "Which Gaulish chieftain surrendered to Julius Caesar at Alesia?",
+    "options": [
+      "Vercingetorix",
+      "Ambiorix",
+      "Brennus",
+      "Divitiacus"
+    ],
+    "answer": "Vercingetorix",
+    "difficulty": "medium"
+  },
+  {
+    "id": 53,
+    "question": "Which 1598 edict granted religious freedoms to French Protestants?",
+    "options": [
+      "Edict of Nantes",
+      "Edict of Amboise",
+      "Edict of Fontainebleau",
+      "Edict of Saint-Germain"
+    ],
+    "answer": "Edict of Nantes",
+    "difficulty": "medium"
+  },
+  {
+    "id": 54,
+    "question": "Which revolutionary lawyer dominated the Committee of Public Safety during the Terror?",
+    "options": [
+      "Robespierre",
+      "Danton",
+      "Marat",
+      "Saint-Just"
+    ],
+    "answer": "Robespierre",
+    "difficulty": "medium"
+  },
+  {
+    "id": 55,
+    "question": "Which body of civil law introduced in 1804 still underpins the French legal system?",
+    "options": [
+      "Napoleonic Code",
+      "Salic Law",
+      "Code Louis",
+      "Civil Charter"
+    ],
+    "answer": "Napoleonic Code",
+    "difficulty": "medium"
+  },
+  {
+    "id": 56,
+    "question": "Which 1916 battle was the longest of the First World War, fought around a French fortress city?",
+    "options": [
+      "Verdun",
+      "The Somme",
+      "The Marne",
+      "Ypres"
+    ],
+    "answer": "Verdun",
+    "difficulty": "medium"
+  },
+  {
+    "id": 57,
+    "question": "Which First World War marshal later led the Vichy government?",
+    "options": [
+      "Philippe Pétain",
+      "Pierre Laval",
+      "Maxime Weygand",
+      "Paul Reynaud"
+    ],
+    "answer": "Philippe Pétain",
+    "difficulty": "medium"
+  },
+  {
+    "id": 58,
+    "question": "In which room at Versailles was the Treaty of Versailles signed in 1919?",
+    "options": [
+      "Hall of Mirrors",
+      "Salon of Apollo",
+      "Royal Chapel",
+      "Hall of Battles"
+    ],
+    "answer": "Hall of Mirrors",
+    "difficulty": "medium"
+  },
+  {
+    "id": 59,
+    "question": "In which year was the constitution of the Fifth Republic adopted?",
+    "options": [
+      "1958",
+      "1946",
+      "1962",
+      "1968"
+    ],
+    "answer": "1958",
+    "difficulty": "medium"
+  },
+  {
+    "id": 60,
+    "question": "Which Paris district was the centre of the student protests of May 1968?",
+    "options": [
+      "Latin Quarter",
+      "Montmartre",
+      "Le Marais",
+      "Belleville"
+    ],
+    "answer": "Latin Quarter",
+    "difficulty": "medium"
+  },
+  {
+    "id": 61,
+    "question": "Which chamber is the lower house of the French Parliament?",
+    "options": [
+      "National Assembly",
+      "Senate",
+      "Chamber of Deputies",
+      "Council of State"
+    ],
+    "answer": "National Assembly",
+    "difficulty": "medium"
+  },
+  {
+    "id": 62,
+    "question": "Which Paris palace is the official residence of the French president?",
+    "options": [
+      "Élysée Palace",
+      "Hôtel Matignon",
+      "Palais Bourbon",
+      "Luxembourg Palace"
+    ],
+    "answer": "Élysée Palace",
+    "difficulty": "medium"
+  },
+  {
+    "id": 63,
+    "question": "How long is a French presidential term today?",
+    "options": [
+      "Five years",
+      "Four years",
+      "Six years",
+      "Seven years"
+    ],
+    "answer": "Five years",
+    "difficulty": "medium"
+  },
+  {
+    "id": 64,
+    "question": "Which French city is the official seat of the European Parliament?",
+    "options": [
+      "Strasbourg",
+      "Lyon",
+      "Lille",
+      "Nancy"
+    ],
+    "answer": "Strasbourg",
+    "difficulty": "medium"
+  },
+  {
+    "id": 65,
+    "question": "Which 1957 treaty founded the European Economic Community with France as a member?",
+    "options": [
+      "Treaty of Rome",
+      "Treaty of Paris",
+      "Maastricht Treaty",
+      "Schengen Agreement"
+    ],
+    "answer": "Treaty of Rome",
+    "difficulty": "medium"
+  },
+  {
+    "id": 66,
+    "question": "Which institution founded in 1635 acts as guardian of the French language?",
+    "options": [
+      "Académie française",
+      "Collège de France",
+      "Institut Pasteur",
+      "École Normale"
+    ],
+    "answer": "Académie française",
+    "difficulty": "medium"
+  },
+  {
+    "id": 67,
+    "question": "Which Celtic language is still spoken in north-western France?",
+    "options": [
+      "Breton",
+      "Occitan",
+      "Basque",
+      "Alsatian"
+    ],
+    "answer": "Breton",
+    "difficulty": "medium"
+  },
+  {
+    "id": 68,
+    "question": "How many regions has metropolitan France had since the 2016 reform?",
+    "options": [
+      "Thirteen",
+      "Eighteen",
+      "Twenty-two",
+      "Twenty-six"
+    ],
+    "answer": "Thirteen",
+    "difficulty": "medium"
+  },
+  {
+    "id": 69,
+    "question": "Which French overseas department shares a border with Brazil?",
+    "options": [
+      "French Guiana",
+      "Martinique",
+      "Guadeloupe",
+      "Saint Martin"
+    ],
+    "answer": "French Guiana",
+    "difficulty": "medium"
+  },
+  {
+    "id": 70,
+    "question": "Which French overseas department lies east of Madagascar?",
+    "options": [
+      "Réunion",
+      "Guadeloupe",
+      "Martinique",
+      "French Polynesia"
+    ],
+    "answer": "Réunion",
+    "difficulty": "medium"
+  },
+  {
+    "id": 71,
+    "question": "Which island is the largest and most populous of French Polynesia?",
+    "options": [
+      "Tahiti",
+      "Bora Bora",
+      "Moorea",
+      "Raiatea"
+    ],
+    "answer": "Tahiti",
+    "difficulty": "medium"
+  },
+  {
+    "id": 72,
+    "question": "Which town in French Guiana hosts Europe's main spaceport?",
+    "options": [
+      "Kourou",
+      "Cayenne",
+      "Saint-Laurent",
+      "Sinnamary"
+    ],
+    "answer": "Kourou",
+    "difficulty": "medium"
+  },
+  {
+    "id": 73,
+    "question": "Which two rivers meet in the centre of Lyon?",
+    "options": [
+      "Rhône and Saône",
+      "Loire and Allier",
+      "Seine and Marne",
+      "Garonne and Dordogne"
+    ],
+    "answer": "Rhône and Saône",
+    "difficulty": "medium"
+  },
+  {
+    "id": 74,
+    "question": "Which tidal island off the Normandy coast is crowned by a medieval abbey?",
+    "options": [
+      "Mont-Saint-Michel",
+      "Belle-Île",
+      "Île de Ré",
+      "Île d'Yeu"
+    ],
+    "answer": "Mont-Saint-Michel",
+    "difficulty": "medium"
+  },
+  {
+    "id": 75,
+    "question": "Which walled medieval citadel in southern France is a UNESCO World Heritage Site?",
+    "options": [
+      "Carcassonne",
+      "Albi",
+      "Perpignan",
+      "Béziers"
+    ],
+    "answer": "Carcassonne",
+    "difficulty": "medium"
+  },
+  {
+    "id": 76,
+    "question": "Which wetland region of the Rhône delta is known for its white horses and flamingos?",
+    "options": [
+      "Camargue",
+      "Cévennes",
+      "Sologne",
+      "Landes"
+    ],
+    "answer": "Camargue",
+    "difficulty": "medium"
+  },
+  {
+    "id": 77,
+    "question": "Which Roman aqueduct bridge crosses the Gardon river in southern France?",
+    "options": [
+      "Pont du Gard",
+      "Pont Neuf",
+      "Pont d'Avignon",
+      "Pont Julien"
+    ],
+    "answer": "Pont du Gard",
+    "difficulty": "medium"
+  },
+  {
+    "id": 78,
+    "question": "Which French bridge is the tallest in the world?",
+    "options": [
+      "Millau Viaduct",
+      "Pont de Normandie",
+      "Garabit Viaduct",
+      "Pont de Saint-Nazaire"
+    ],
+    "answer": "Millau Viaduct",
+    "difficulty": "medium"
+  },
+  {
+    "id": 79,
+    "question": "Which cave complex in the Dordogne is famous for its prehistoric paintings?",
+    "options": [
+      "Lascaux",
+      "Chauvet",
+      "Niaux",
+      "Pech Merle"
+    ],
+    "answer": "Lascaux",
+    "difficulty": "medium"
+  },
+  {
+    "id": 80,
+    "question": "Which grape variety is used for almost all red Burgundy wine?",
+    "options": [
+      "Pinot Noir",
+      "Merlot",
+      "Syrah",
+      "Gamay"
+    ],
+    "answer": "Pinot Noir",
+    "difficulty": "medium"
+  },
+  {
+    "id": 81,
+    "question": "Which brandy takes its name from a town in the Charente region?",
+    "options": [
+      "Cognac",
+      "Armagnac",
+      "Calvados",
+      "Marc"
+    ],
+    "answer": "Cognac",
+    "difficulty": "medium"
+  },
+  {
+    "id": 82,
+    "question": "Which Normandy spirit is distilled from apples?",
+    "options": [
+      "Calvados",
+      "Kirsch",
+      "Poire Williams",
+      "Chartreuse"
+    ],
+    "answer": "Calvados",
+    "difficulty": "medium"
+  },
+  {
+    "id": 83,
+    "question": "Which aniseed-flavoured aperitif is strongly associated with Marseille?",
+    "options": [
+      "Pastis",
+      "Suze",
+      "Byrrh",
+      "Lillet"
+    ],
+    "answer": "Pastis",
+    "difficulty": "medium"
+  },
+  {
+    "id": 84,
+    "question": "Which fish stew is the signature dish of Marseille?",
+    "options": [
+      "Bouillabaisse",
+      "Pot-au-feu",
+      "Choucroute",
+      "Blanquette"
+    ],
+    "answer": "Bouillabaisse",
+    "difficulty": "medium"
+  },
+  {
+    "id": 85,
+    "question": "Which slow-cooked bean and meat casserole comes from the Toulouse region?",
+    "options": [
+      "Cassoulet",
+      "Ratatouille",
+      "Aligot",
+      "Garbure"
+    ],
+    "answer": "Cassoulet",
+    "difficulty": "medium"
+  },
+  {
+    "id": 86,
+    "question": "Which upside-down apple tart is named after the two sisters who created it?",
+    "options": [
+      "Tarte Tatin",
+      "Clafoutis",
+      "Paris-Brest",
+      "Mille-feuille"
+    ],
+    "answer": "Tarte Tatin",
+    "difficulty": "medium"
+  },
+  {
+    "id": 87,
+    "question": "Which Monet painting gave the Impressionist movement its name?",
+    "options": [
+      "Impression, Sunrise",
+      "Water Lilies",
+      "The Magpie",
+      "Poppy Field"
+    ],
+    "answer": "Impression, Sunrise",
+    "difficulty": "medium"
+  },
+  {
+    "id": 88,
+    "question": "In which Normandy village did Monet create his famous water-lily garden?",
+    "options": [
+      "Giverny",
+      "Honfleur",
+      "Barbizon",
+      "Auvers-sur-Oise"
+    ],
+    "answer": "Giverny",
+    "difficulty": "medium"
+  },
+  {
+    "id": 89,
+    "question": "Which French sculptor created The Thinker?",
+    "options": [
+      "Auguste Rodin",
+      "Camille Claudel",
+      "Aristide Maillol",
+      "Antoine Bourdelle"
+    ],
+    "answer": "Auguste Rodin",
+    "difficulty": "medium"
+  },
+  {
+    "id": 90,
+    "question": "Which French novelist wrote In Search of Lost Time?",
+    "options": [
+      "Marcel Proust",
+      "André Gide",
+      "Émile Zola",
+      "Honoré de Balzac"
+    ],
+    "answer": "Marcel Proust",
+    "difficulty": "medium"
+  },
+  {
+    "id": 91,
+    "question": "Which French writer refused the Nobel Prize in Literature in 1964?",
+    "options": [
+      "Jean-Paul Sartre",
+      "Albert Camus",
+      "André Malraux",
+      "Louis Aragon"
+    ],
+    "answer": "Jean-Paul Sartre",
+    "difficulty": "medium"
+  },
+  {
+    "id": 92,
+    "question": "Which scientist working in France won Nobel Prizes in two different sciences?",
+    "options": [
+      "Marie Curie",
+      "Irène Joliot-Curie",
+      "Henri Becquerel",
+      "Paul Langevin"
+    ],
+    "answer": "Marie Curie",
+    "difficulty": "medium"
+  },
+  {
+    "id": 93,
+    "question": "Which French chemist developed a vaccine against rabies?",
+    "options": [
+      "Louis Pasteur",
+      "Claude Bernard",
+      "Émile Roux",
+      "Alexandre Yersin"
+    ],
+    "answer": "Louis Pasteur",
+    "difficulty": "medium"
+  },
+  {
+    "id": 94,
+    "question": "Which French brothers held the first public film screening in 1895?",
+    "options": [
+      "Lumière brothers",
+      "Pathé brothers",
+      "Gaumont brothers",
+      "Méliès brothers"
+    ],
+    "answer": "Lumière brothers",
+    "difficulty": "medium"
+  },
+  {
+    "id": 95,
+    "question": "Which award is the top prize at the Cannes Film Festival?",
+    "options": [
+      "Palme d'Or",
+      "Golden Lion",
+      "Golden Bear",
+      "Grand Prix"
+    ],
+    "answer": "Palme d'Or",
+    "difficulty": "medium"
+  },
+  {
+    "id": 96,
+    "question": "Which Paris building serves as the resting place of national figures such as Voltaire and Rousseau?",
+    "options": [
+      "The Panthéon",
+      "Les Invalides",
+      "La Madeleine",
+      "Saint-Denis Basilica"
+    ],
+    "answer": "The Panthéon",
+    "difficulty": "medium"
+  },
+  {
+    "id": 97,
+    "question": "Which Paris tennis tournament is the clay-court Grand Slam?",
+    "options": [
+      "Roland-Garros",
+      "Paris Masters",
+      "Monte-Carlo Masters",
+      "Coupe Davis"
+    ],
+    "answer": "Roland-Garros",
+    "difficulty": "medium"
+  },
+  {
+    "id": 98,
+    "question": "Which French city gives its name to a famous 24-hour endurance motor race?",
+    "options": [
+      "Le Mans",
+      "Reims",
+      "Dijon",
+      "Magny-Cours"
+    ],
+    "answer": "Le Mans",
+    "difficulty": "medium"
+  },
+  {
+    "id": 99,
+    "question": "Which player scored twice with his head in the 1998 World Cup final?",
+    "options": [
+      "Zinedine Zidane",
+      "Emmanuel Petit",
+      "Thierry Henry",
+      "Didier Deschamps"
+    ],
+    "answer": "Zinedine Zidane",
+    "difficulty": "medium"
+  },
+  {
+    "id": 100,
+    "question": "Which rider was the last Frenchman to win the Tour de France?",
+    "options": [
+      "Bernard Hinault",
+      "Laurent Fignon",
+      "Raymond Poulidor",
+      "Richard Virenque"
+    ],
+    "answer": "Bernard Hinault",
+    "difficulty": "medium"
+  },
+  {
+    "id": 101,
+    "question": "Which 1539 ordinance made French the sole language of law and administration?",
+    "options": [
+      "Villers-Cotterêts",
+      "Ordinance of Blois",
+      "Ordinance of Moulins",
+      "Ordinance of Orléans"
+    ],
+    "answer": "Villers-Cotterêts",
+    "difficulty": "hard"
+  },
+  {
+    "id": 102,
+    "question": "Which historical term covers the southern speech varieties including Occitan?",
+    "options": [
+      "Langue d'oc",
+      "Langue d'oïl",
+      "Franco-Provençal",
+      "Langue d'ouest"
+    ],
+    "answer": "Langue d'oc",
+    "difficulty": "hard"
+  },
+  {
+    "id": 103,
+    "question": "How many seats does the Académie française have?",
+    "options": [
+      "Forty",
+      "Thirty",
+      "Fifty",
+      "Sixty"
+    ],
+    "answer": "Forty",
+    "difficulty": "hard"
+  },
+  {
+    "id": 104,
+    "question": "By which nickname are members of the Académie française known?",
+    "options": [
+      "The Immortals",
+      "The Forty Sages",
+      "The Guardians",
+      "The Eternals"
+    ],
+    "answer": "The Immortals",
+    "difficulty": "hard"
+  },
+  {
+    "id": 105,
+    "question": "Which 1994 law requires the use of French in advertising and the workplace?",
+    "options": [
+      "Toubon Law",
+      "Bas-Lauriol Law",
+      "Ferry Laws",
+      "Deixonne Law"
+    ],
+    "answer": "Toubon Law",
+    "difficulty": "hard"
+  },
+  {
+    "id": 106,
+    "question": "Which French territory is exempt from the 1905 separation law and still lives under the Concordat?",
+    "options": [
+      "Alsace-Moselle",
+      "Corsica",
+      "Savoy",
+      "Brittany"
+    ],
+    "answer": "Alsace-Moselle",
+    "difficulty": "hard"
+  },
+  {
+    "id": 107,
+    "question": "Which constitutional article lets a French government adopt a bill without a parliamentary vote?",
+    "options": [
+      "Article 49.3",
+      "Article 16",
+      "Article 11",
+      "Article 89"
+    ],
+    "answer": "Article 49.3",
+    "difficulty": "hard"
+  },
+  {
+    "id": 108,
+    "question": "Which body rules on whether French laws comply with the constitution?",
+    "options": [
+      "Constitutional Council",
+      "Council of State",
+      "Court of Cassation",
+      "Court of Audit"
+    ],
+    "answer": "Constitutional Council",
+    "difficulty": "hard"
+  },
+  {
+    "id": 109,
+    "question": "How many departments does France have in total today?",
+    "options": [
+      "101",
+      "96",
+      "89",
+      "110"
+    ],
+    "answer": "101",
+    "difficulty": "hard"
+  },
+  {
+    "id": 110,
+    "question": "Which territory became France's 101st department in 2011?",
+    "options": [
+      "Mayotte",
+      "Saint-Martin",
+      "Saint-Barthélemy",
+      "Wallis and Futuna"
+    ],
+    "answer": "Mayotte",
+    "difficulty": "hard"
+  },
+  {
+    "id": 111,
+    "question": "Which French archipelago off Newfoundland is the last remnant of New France in North America?",
+    "options": [
+      "Saint-Pierre-et-Miquelon",
+      "Saint-Barthélemy",
+      "Îles de la Madeleine",
+      "Anticosti"
+    ],
+    "answer": "Saint-Pierre-et-Miquelon",
+    "difficulty": "hard"
+  },
+  {
+    "id": 112,
+    "question": "Which French Pacific territory held three independence referendums between 2018 and 2021?",
+    "options": [
+      "New Caledonia",
+      "French Polynesia",
+      "Wallis and Futuna",
+      "Clipperton Island"
+    ],
+    "answer": "New Caledonia",
+    "difficulty": "hard"
+  },
+  {
+    "id": 113,
+    "question": "Which summit is the highest peak entirely within the French Pyrenees?",
+    "options": [
+      "Vignemale",
+      "Aneto",
+      "Canigou",
+      "Pic du Midi d'Ossau"
+    ],
+    "answer": "Vignemale",
+    "difficulty": "hard"
+  },
+  {
+    "id": 114,
+    "question": "Which is the largest natural lake lying entirely within France?",
+    "options": [
+      "Lac du Bourget",
+      "Lake Annecy",
+      "Lac de Grand-Lieu",
+      "Lac de Serre-Ponçon"
+    ],
+    "answer": "Lac du Bourget",
+    "difficulty": "hard"
+  },
+  {
+    "id": 115,
+    "question": "Which two-digit code identifies the department of Paris?",
+    "options": [
+      "75",
+      "01",
+      "13",
+      "92"
+    ],
+    "answer": "75",
+    "difficulty": "hard"
+  },
+  {
+    "id": 116,
+    "question": "Which department codes are used for the two halves of Corsica?",
+    "options": [
+      "2A and 2B",
+      "20A and 20B",
+      "19 and 20",
+      "96 and 97"
+    ],
+    "answer": "2A and 2B",
+    "difficulty": "hard"
+  },
+  {
+    "id": 117,
+    "question": "Which meridian did France use for longitude before adopting Greenwich in 1911?",
+    "options": [
+      "Paris Meridian",
+      "Rouen Meridian",
+      "Cassini Meridian",
+      "Toulon Meridian"
+    ],
+    "answer": "Paris Meridian",
+    "difficulty": "hard"
+  },
+  {
+    "id": 118,
+    "question": "Which Paris spot is marked as kilometre zero for all French roads?",
+    "options": [
+      "Notre-Dame parvis",
+      "Place de la Concorde",
+      "Place du Châtelet",
+      "Place Vendôme"
+    ],
+    "answer": "Notre-Dame parvis",
+    "difficulty": "hard"
+  },
+  {
+    "id": 119,
+    "question": "Which military engineer ringed the borders of Louis XIV's France with fortresses?",
+    "options": [
+      "Vauban",
+      "Turenne",
+      "Colbert",
+      "Louvois"
+    ],
+    "answer": "Vauban",
+    "difficulty": "hard"
+  },
+  {
+    "id": 120,
+    "question": "Which star-shaped fortress town near the Rhine is considered Vauban's finest work?",
+    "options": [
+      "Neuf-Brisach",
+      "Briançon",
+      "Mont-Dauphin",
+      "Blaye"
+    ],
+    "answer": "Neuf-Brisach",
+    "difficulty": "hard"
+  },
+  {
+    "id": 121,
+    "question": "Which 843 treaty split Charlemagne's empire and created West Francia?",
+    "options": [
+      "Treaty of Verdun",
+      "Treaty of Meerssen",
+      "Treaty of Ribemont",
+      "Treaty of Aachen"
+    ],
+    "answer": "Treaty of Verdun",
+    "difficulty": "hard"
+  },
+  {
+    "id": 122,
+    "question": "Which king founded the Capetian dynasty when he was elected in 987?",
+    "options": [
+      "Hugh Capet",
+      "Robert the Pious",
+      "Odo of Paris",
+      "Charles the Simple"
+    ],
+    "answer": "Hugh Capet",
+    "difficulty": "hard"
+  },
+  {
+    "id": 123,
+    "question": "Which 732 battle saw Charles Martel halt an Umayyad advance into Frankish lands?",
+    "options": [
+      "Battle of Tours",
+      "Battle of Toulouse",
+      "Battle of Roncevaux",
+      "Battle of Bouvines"
+    ],
+    "answer": "Battle of Tours",
+    "difficulty": "hard"
+  },
+  {
+    "id": 124,
+    "question": "Which oath did the Third Estate swear in an indoor court in June 1789?",
+    "options": [
+      "Tennis Court Oath",
+      "Oath of the Federation",
+      "Oath of Strasbourg",
+      "Oath of the Jeu Royal"
+    ],
+    "answer": "Tennis Court Oath",
+    "difficulty": "hard"
+  },
+  {
+    "id": 125,
+    "question": "Which month of the Revolutionary calendar gave its name to the fall of Robespierre?",
+    "options": [
+      "Thermidor",
+      "Brumaire",
+      "Fructidor",
+      "Germinal"
+    ],
+    "answer": "Thermidor",
+    "difficulty": "hard"
+  },
+  {
+    "id": 126,
+    "question": "Which coup of 1799 brought Napoleon Bonaparte to power?",
+    "options": [
+      "18 Brumaire",
+      "9 Thermidor",
+      "13 Vendémiaire",
+      "18 Fructidor"
+    ],
+    "answer": "18 Brumaire",
+    "difficulty": "hard"
+  },
+  {
+    "id": 127,
+    "question": "Which five-man regime governed France between 1795 and 1799?",
+    "options": [
+      "The Directory",
+      "The Consulate",
+      "The Convention",
+      "The Committee"
+    ],
+    "answer": "The Directory",
+    "difficulty": "hard"
+  },
+  {
+    "id": 128,
+    "question": "Which monarch took the throne after the July Revolution of 1830?",
+    "options": [
+      "Louis-Philippe",
+      "Charles X",
+      "Louis XVIII",
+      "Napoleon III"
+    ],
+    "answer": "Louis-Philippe",
+    "difficulty": "hard"
+  },
+  {
+    "id": 129,
+    "question": "At which 1870 battle was Napoleon III captured by Prussian forces?",
+    "options": [
+      "Sedan",
+      "Metz",
+      "Gravelotte",
+      "Wissembourg"
+    ],
+    "answer": "Sedan",
+    "difficulty": "hard"
+  },
+  {
+    "id": 130,
+    "question": "Which radical government controlled Paris for around two months in 1871?",
+    "options": [
+      "Paris Commune",
+      "Government of National Defence",
+      "National Convention",
+      "Committee of Thirty"
+    ],
+    "answer": "Paris Commune",
+    "difficulty": "hard"
+  },
+  {
+    "id": 131,
+    "question": "Which army officer was wrongly convicted of treason in 1894, splitting French society?",
+    "options": [
+      "Alfred Dreyfus",
+      "Ferdinand Esterhazy",
+      "Georges Picquart",
+      "Hubert Henry"
+    ],
+    "answer": "Alfred Dreyfus",
+    "difficulty": "hard"
+  },
+  {
+    "id": 132,
+    "question": "In which newspaper did Émile Zola publish his open letter J'Accuse…!?",
+    "options": [
+      "L'Aurore",
+      "Le Figaro",
+      "La Libre Parole",
+      "Le Petit Journal"
+    ],
+    "answer": "L'Aurore",
+    "difficulty": "hard"
+  },
+  {
+    "id": 133,
+    "question": "To which penal island off French Guiana was Dreyfus deported?",
+    "options": [
+      "Devil's Island",
+      "Île d'Yeu",
+      "Poulo Condore",
+      "Île Sainte-Marguerite"
+    ],
+    "answer": "Devil's Island",
+    "difficulty": "hard"
+  },
+  {
+    "id": 134,
+    "question": "Which line of fortifications did France build along its eastern border in the 1930s?",
+    "options": [
+      "Maginot Line",
+      "Weygand Line",
+      "Siegfried Line",
+      "Daladier Line"
+    ],
+    "answer": "Maginot Line",
+    "difficulty": "hard"
+  },
+  {
+    "id": 135,
+    "question": "Which Resistance leader united the movements under de Gaulle before dying in 1943?",
+    "options": [
+      "Jean Moulin",
+      "Pierre Brossolette",
+      "Henri Frenay",
+      "Jean Cavaillès"
+    ],
+    "answer": "Jean Moulin",
+    "difficulty": "hard"
+  },
+  {
+    "id": 136,
+    "question": "Which 1962 accords brought the Algerian War to an end?",
+    "options": [
+      "Evian Accords",
+      "Geneva Accords",
+      "Sèvres Protocol",
+      "Algiers Charter"
+    ],
+    "answer": "Evian Accords",
+    "difficulty": "hard"
+  },
+  {
+    "id": 137,
+    "question": "Which grape variety dominates the Left Bank blends of Bordeaux?",
+    "options": [
+      "Cabernet Sauvignon",
+      "Merlot",
+      "Cabernet Franc",
+      "Petit Verdot"
+    ],
+    "answer": "Cabernet Sauvignon",
+    "difficulty": "hard"
+  },
+  {
+    "id": 138,
+    "question": "Which of these Bordeaux appellations lies on the Right Bank?",
+    "options": [
+      "Pomerol",
+      "Pauillac",
+      "Margaux",
+      "Saint-Julien"
+    ],
+    "answer": "Pomerol",
+    "difficulty": "hard"
+  },
+  {
+    "id": 139,
+    "question": "Which château was promoted to first growth status in 1973?",
+    "options": [
+      "Mouton Rothschild",
+      "Palmer",
+      "Cos d'Estournel",
+      "Pichon Longueville"
+    ],
+    "answer": "Mouton Rothschild",
+    "difficulty": "hard"
+  },
+  {
+    "id": 140,
+    "question": "Which 1855 first growth lies outside the Médoc?",
+    "options": [
+      "Haut-Brion",
+      "Lafite",
+      "Latour",
+      "Margaux"
+    ],
+    "answer": "Haut-Brion",
+    "difficulty": "hard"
+  },
+  {
+    "id": 141,
+    "question": "Which Benedictine monk is traditionally credited with refining Champagne winemaking?",
+    "options": [
+      "Dom Pérignon",
+      "Dom Ruinart",
+      "Dom Grossard",
+      "Frère Oudart"
+    ],
+    "answer": "Dom Pérignon",
+    "difficulty": "hard"
+  },
+  {
+    "id": 142,
+    "question": "Which stage of Champagne production involves gradually turning and tilting the bottles?",
+    "options": [
+      "Remuage",
+      "Dégorgement",
+      "Assemblage",
+      "Élevage"
+    ],
+    "answer": "Remuage",
+    "difficulty": "hard"
+  },
+  {
+    "id": 143,
+    "question": "Which cognac grade designation stands for Extra Old?",
+    "options": [
+      "XO",
+      "VSOP",
+      "VS",
+      "Napoléon"
+    ],
+    "answer": "XO",
+    "difficulty": "hard"
+  },
+  {
+    "id": 144,
+    "question": "Which Michelin rating means a restaurant is worth a special journey?",
+    "options": [
+      "Three stars",
+      "Two stars",
+      "One star",
+      "Bib Gourmand"
+    ],
+    "answer": "Three stars",
+    "difficulty": "hard"
+  },
+  {
+    "id": 145,
+    "question": "Which sports newspaper created the Tour de France in 1903?",
+    "options": [
+      "L'Auto",
+      "Le Vélo",
+      "L'Équipe",
+      "Le Miroir des Sports"
+    ],
+    "answer": "L'Auto",
+    "difficulty": "hard"
+  },
+  {
+    "id": 146,
+    "question": "Which French magazine created and awards the Ballon d'Or?",
+    "options": [
+      "France Football",
+      "L'Équipe",
+      "Onze Mondial",
+      "But!"
+    ],
+    "answer": "France Football",
+    "difficulty": "hard"
+  },
+  {
+    "id": 147,
+    "question": "Which former railway terminus was converted into the Musée d'Orsay?",
+    "options": [
+      "Gare d'Orsay",
+      "Gare de Lyon",
+      "Gare Montparnasse",
+      "Gare des Invalides"
+    ],
+    "answer": "Gare d'Orsay",
+    "difficulty": "hard"
+  },
+  {
+    "id": 148,
+    "question": "Which prize, first awarded in 1903, is France's most prestigious literary honour?",
+    "options": [
+      "Prix Goncourt",
+      "Prix Femina",
+      "Prix Renaudot",
+      "Prix Médicis"
+    ],
+    "answer": "Prix Goncourt",
+    "difficulty": "hard"
+  },
+  {
+    "id": 149,
+    "question": "Which architect designed the glass pyramid at the Louvre?",
+    "options": [
+      "I. M. Pei",
+      "Jean Nouvel",
+      "Renzo Piano",
+      "Dominique Perrault"
+    ],
+    "answer": "I. M. Pei",
+    "difficulty": "hard"
+  },
+  {
+    "id": 150,
+    "question": "Which birth name lies behind the stage name Molière?",
+    "options": [
+      "Jean-Baptiste Poquelin",
+      "François-Marie Arouet",
+      "Henri Beyle",
+      "Pierre Chaptal"
+    ],
+    "answer": "Jean-Baptiste Poquelin",
+    "difficulty": "hard"
+  }
+]

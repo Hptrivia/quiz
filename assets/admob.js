@@ -9,11 +9,11 @@
 //   'live' — your real production ad units (earns revenue). Only flip a
 //            platform to 'live' AFTER AdMob has approved that platform.
 //
-// iOS is 'off' until AdMob approves it. To go live on iOS:
-//   1. paste the real iOS ad unit IDs into _ADMOB_LIVE_IDS.ios below, then
-//   2. change ios: 'off' → 'live' here.
+// iOS is 'test' for now (temporarily testing the Remove Ads → premium app
+// link on-device without risking real ad clicks). Flip back to 'live' after:
+//   change ios: 'test' → 'live' here.
 const ADMOB_MODE_BY_PLATFORM = {
-  ios: 'live',
+  ios: 'test',
   android: 'live',
 };
 const _ADMOB_PLATFORM = window.Capacitor?.getPlatform?.();
@@ -341,10 +341,9 @@ async function adMobHideBanner() {
   document.body.classList.remove('has-banner');
 }
 
-// The premium ad-free app is Android-only for now — hide the Remove Ads entry
-// points on iOS rather than send users to a page that can't actually help them.
+// The premium ad-free app now exists on both platforms.
 function _showRemoveAdsEntryPoints() {
-  return _ADMOB_PLATFORM === 'android';
+  return _ADMOB_PLATFORM === 'android' || _ADMOB_PLATFORM === 'ios';
 }
 
 function _offerRewardedLifeline(name, onEarned, promptHtml, onCancel) {

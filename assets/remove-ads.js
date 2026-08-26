@@ -143,20 +143,27 @@ function initPwaInstall() {
 }
 
 const _RA_PREMIUM_PLAY = "https://play.google.com/store/apps/details?id=com.trivia.triviagauntlet_premium";
+const _RA_PREMIUM_APP_STORE = "https://apps.apple.com/us/app/premium-trivia-gauntlet/id6804412870";
 
-// Android app users: the web subscribe/code flow doesn't remove ads in the app
+// Native app users: the web subscribe/code flow doesn't remove ads in the app
 // (adMobInit() never checks isPremiumUser()) and isn't relevant to someone
 // already in the app — the only thing that actually helps them is the
 // separate ad-free app. Replace the whole page with just that link.
 function initPremiumAppLink() {
-  if (!/android/i.test(navigator.userAgent || "")) return; // Play Store link only makes sense on Android
-  if (!_raIsNative()) return; // Android web visitors still get the full page
+  if (!_raIsNative()) return; // web visitors still get the full page
+  const ua = navigator.userAgent || "";
+  const storeLink = /android/i.test(ua)
+    ? _RA_PREMIUM_PLAY
+    : _raIsIosDevice()
+    ? _RA_PREMIUM_APP_STORE
+    : null;
+  if (!storeLink) return;
   const appOffer = document.getElementById("raAppOffer");
   const webOffer = document.getElementById("raWebOffer");
   const link = document.getElementById("raAppOfferLink");
   const title = document.getElementById("raTitle");
   if (!appOffer || !webOffer || !link) return;
-  link.href = _RA_PREMIUM_PLAY;
+  link.href = storeLink;
   webOffer.style.display = "none";
   appOffer.style.display = "";
   if (title) title.textContent = "Go Ad-Free";
