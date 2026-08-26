@@ -1816,7 +1816,7 @@ function wireNotifyCard(themeName, source = "trivia") {
 // One-time in-app-only announcement banner on the homepage. Shows once ever
 // (per device) then never again, even if never manually dismissed — the
 // localStorage flag is set the moment it's rendered, not on close.
-const FEEDBACK_FIXED_NOTICE_KEY = "_feedbackFixedNoticeSeen";
+const FEEDBACK_FIXED_NOTICE_KEY = "_feedbackFixedNoticeSeen_v2";
 function initFeedbackFixedBanner() {
   const banner = document.getElementById("feedbackFixedBanner");
   if (!banner) return;

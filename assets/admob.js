@@ -9,9 +9,6 @@
 //   'live' — your real production ad units (earns revenue). Only flip a
 //            platform to 'live' AFTER AdMob has approved that platform.
 //
-// iOS is 'test' for now (temporarily testing the Remove Ads → premium app
-// link on-device without risking real ad clicks). Flip back to 'live' after:
-//   change ios: 'test' → 'live' here.
 const ADMOB_MODE_BY_PLATFORM = {
   ios: 'test',
   android: 'live',
