@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if(/TriviaGauntletPremium/.test(navigator.userAgent||''))document.documentElement.classList.add('premium-app');</script>
+  <meta charset="UTF-8" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Category Blitz — Solo | Trivia Gauntlet</title>
+  <meta name="description" content="Spin a letter, name a Name/Animal/Place/Thing/Food before the clock runs out — play as many rounds as you like." />
+  <link rel="icon" href="/favicon.ico.png" sizes="any">
+
+  <link rel="apple-touch-icon" href="/assets/icon-192.png" />
+  <meta name="theme-color" content="#0f172a" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    if(!/TriviaGauntletPremium/.test(navigator.userAgent||''))gtag('config', 'G-E6BY9F2ZDT');
+  </script>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body data-page="catblitz-solo" data-defer-game-ad="1">
+  <main class="container narrow">
+    <div class="theme-top-links"><a href="category-blitz.html" class="back-link" onclick="if(history.length>1){history.back();return false;}">← Back</a><span id="navAvatarSlot"></span></div>
+
+    <section class="panel">
+
+      <div id="cbSoloSetup">
+        <div class="daily-header">
+          <h2>Category Blitz</h2>
+          <p class="daily-date">Solo — spin as many times as you like</p>
+        </div>
+
+        <div class="cb-versus-setup-row">
+          <label class="cb-input-label">Categories</label>
+          <div id="cbSoloCategoryList" class="cb-versus-category-list"></div>
+          <div class="cb-versus-add-category-row">
+            <input class="cb-input" id="cbSoloNewCategory" type="text" maxlength="24" placeholder="Add your own category…" autocomplete="off" />
+            <button type="button" class="secondary-btn" id="cbSoloAddCategoryBtn">Add</button>
+          </div>
+          <p class="cb-versus-hint">Custom categories aren't auto-checked — after each round, tap Correct on any word you're sure counts.</p>
+        </div>
+
+        <button type="button" class="primary-btn" id="cbSoloStartBtn" style="width:100%;margin-top:10px;">Start</button>
+      </div>
+
+      <div id="cbDailyIntro" style="display:none">
+        <div id="cbWheelContainer" class="cb-wheel-container"></div>
+      </div>
+
+      <div id="cbRoundContainer" style="display:none"></div>
+
+      <div id="cbResult" style="display:none">
+        <h2 style="margin-bottom:6px">Round Complete</h2>
+        <div id="cbResultContainer"></div>
+        <div id="cbSpinAgainBox" style="margin-top:14px"></div>
+        <div id="cbFeedbackBoxWrap"></div>
+        <a href="contact.html" class="secondary-btn" style="display:block;margin-top:14px;text-align:center;text-decoration:none;font-size:0.85rem;padding:8px 18px;">Leave Feedback</a>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a class="footer-highlight" href="how-it-works.html">How It Works</a>
+        <a class="footer-highlight" href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+  <script src="assets/admob.js"></script>
+  <script src="assets/leaderboard.js"></script>
+  <script src="assets/catblitz-check.js"></script>
+  <script src="assets/catblitz-engine.js"></script>
+  <script src="assets/catblitz-solo.js"></script>
+  <script src="assets/sound.js"></script>
+  <script src="assets/profile.js"></script>
+</body>
+</html>

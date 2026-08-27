@@ -908,7 +908,7 @@ function hmMaybeAskFirstTime(quizBox) {
     const savedMsg = askBox.querySelector('.hm-ask-saved');
     const choose = (on) => {
       hmSetChoice(on);
-      if (typeof gtag === 'function') gtag('event', 'hard_mode_prompt', { choice: on ? 'yes' : 'no' });
+      if (typeof gtag === 'function') gtag('event', on ? 'hard_mode_prompt_yes' : 'hard_mode_prompt_no');
       if (btnRow) btnRow.style.display = 'none';
       if (savedMsg) savedMsg.style.display = 'block';
       setTimeout(() => {
@@ -1010,10 +1010,14 @@ function hmBindFeedbackBox() {
       box.querySelectorAll('.hm-feedback-vote').forEach(b => b.classList.remove('selected'));
       btn.classList.add('selected');
       if (detail) detail.style.display = 'block';
-      if (typeof gtag === 'function') gtag('event', 'hard_mode_feedback_vote', { vote });
+      if (typeof gtag === 'function') gtag('event', 'hard_mode_feedback_vote_' + vote);
     });
   });
-  if (dismissBtn) dismissBtn.addEventListener('click', () => { finish(); box.style.display = 'none'; });
+  if (dismissBtn) dismissBtn.addEventListener('click', () => {
+    finish();
+    box.style.display = 'none';
+    if (typeof gtag === 'function') gtag('event', 'hard_mode_feedback_dismissed', {});
+  });
   if (sendBtn) sendBtn.addEventListener('click', async () => {
     sendBtn.disabled = true;
     sendBtn.textContent = 'Sending...';
@@ -1033,7 +1037,7 @@ function hmBindFeedbackBox() {
     if (detail) detail.style.display = 'none';
     box.querySelectorAll('.hm-feedback-vote, .hm-feedback-dismiss').forEach(el => el.style.display = 'none');
     if (sentMsg) sentMsg.style.display = 'block';
-    if (typeof gtag === 'function') gtag('event', 'hard_mode_feedback_sent', { vote: vote || 'no_vote' });
+    if (typeof gtag === 'function') gtag('event', 'hard_mode_feedback_sent_' + (vote || 'no_vote'));
   });
 }
 
@@ -1813,21 +1817,8 @@ function wireNotifyCard(themeName, source = "trivia") {
   });
 }
 
-// One-time in-app-only announcement banner on the homepage. Shows once ever
-// (per device) then never again, even if never manually dismissed — the
-// localStorage flag is set the moment it's rendered, not on close.
-const FEEDBACK_FIXED_NOTICE_KEY = "_feedbackFixedNoticeSeen_v2";
-function initFeedbackFixedBanner() {
-  const banner = document.getElementById("feedbackFixedBanner");
-  if (!banner) return;
-  if (typeof isInApp !== "function" || !isInApp()) return;
-  if (localStorage.getItem(FEEDBACK_FIXED_NOTICE_KEY)) return;
-  localStorage.setItem(FEEDBACK_FIXED_NOTICE_KEY, "1");
-  banner.style.display = "flex";
-  document.getElementById("feedbackFixedBannerClose")?.addEventListener("click", () => {
-    banner.style.display = "none";
-  });
-}
+// Superseded by assets/announcements.js, which boots itself via its own
+// DOMContentLoaded listener — nothing to call from here.
 
 async function submitEmailToMailchimp(email, themeName, source = "trivia") {
   try {
@@ -1855,7 +1846,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const page = document.body.dataset.page;
 
-  if (page === "home") { renderHomePage(); initFeedbackFixedBanner(); }
+  if (page === "home") renderHomePage();
   if (page === "category") renderCategoryPage();
   if (page === "quiz") renderQuizPage();
   if (page === "play") renderPlayPage();

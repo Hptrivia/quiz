@@ -307,7 +307,6 @@ function injectAvatarNav() {
   const slot = document.getElementById("navAvatarSlot");
   if (!slot) return;
   slot.innerHTML = `<a href="${_profilePath()}" class="avatar-nav-btn" title="My Profile">${getAvatarHtml(32)}</a>`;
-  setTimeout(maybeShowProfileOnboarding, 1200);
 }
 
 function _profilePath() {
@@ -315,49 +314,10 @@ function _profilePath() {
   return "../".repeat(Math.max(0, depth)) + "profile.html";
 }
 
-// ── Profile onboarding toast (one-time, returning users only) ─────────────────
-const _ONBOARD_KEY = "tg_profile_onboard_v1";
-
-function maybeShowProfileOnboarding() {
-  // Only show for returning users — fresh visitors have no localStorage data
-  if (localStorage.length === 0) return;
-  // Only show once
-  if (localStorage.getItem(_ONBOARD_KEY)) return;
-
-  const profilePath = _profilePath();
-  const avatarHtml  = getAvatarHtml(30);
-
-  const toast = document.createElement("div");
-  toast.className = "profile-onboard-toast";
-  toast.innerHTML = `
-    <div class="profile-onboard-body">
-      <div class="profile-onboard-icon">${avatarHtml}</div>
-      <div class="profile-onboard-text">
-        <strong>✨ Your stats are now live!</strong>
-        <span>Every theme you play is tracked — scores, streaks, wrong answers to replay, and survival leaderboards.</span>
-      </div>
-    </div>
-    <div class="profile-onboard-actions">
-      <a href="${profilePath}" class="profile-onboard-btn">View Profile</a>
-      <button class="profile-onboard-dismiss" aria-label="Dismiss">&#10005;</button>
-    </div>
-  `;
-
-  document.body.appendChild(toast);
-  requestAnimationFrame(() => requestAnimationFrame(() => toast.classList.add("profile-onboard-toast--in")));
-
-  function dismiss() {
-    localStorage.setItem(_ONBOARD_KEY, "1");
-    toast.classList.remove("profile-onboard-toast--in");
-    setTimeout(() => toast.remove(), 350);
-  }
-
-  toast.querySelector(".profile-onboard-dismiss").addEventListener("click", dismiss);
-  // Mark as seen when navigating to profile (won't show again on return)
-  toast.querySelector(".profile-onboard-btn").addEventListener("click", () => {
-    localStorage.setItem(_ONBOARD_KEY, "1");
-  });
-}
+// The one-time "Your stats are now live!" onboarding toast that used to live
+// here was removed 2026-08-26 — its design/placement (.app-toast* classes in
+// style.css) is now reused by the general-purpose announcement popup in
+// assets/announcements.js instead of being a single-purpose toast.
 
 document.addEventListener("DOMContentLoaded", injectAvatarNav);
 

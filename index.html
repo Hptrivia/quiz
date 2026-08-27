@@ -3,7 +3,6 @@
 <head>
 <script>if(/TriviaGauntletPremium/.test(navigator.userAgent||''))document.documentElement.classList.add('premium-app');</script>
   <meta charset="UTF-8" />
-  <meta name="admaven-placement" content="BqTUHrjs6" />
   <link rel="manifest" href="/manifest.json" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Trivia Gauntlet</title>
@@ -31,10 +30,6 @@
 </header>
 
 <main class="container">
-  <div id="feedbackFixedBanner" style="display:none;background:#1e293b;border:1px solid #22c55e;border-radius:10px;padding:10px 14px;margin:0 0 14px;align-items:center;justify-content:space-between;gap:10px;">
-    <span style="color:#4ade80;font-weight:600;font-size:0.92em;">✓ Feedback form fixed — sending works now!</span>
-    <button id="feedbackFixedBannerClose" aria-label="Dismiss" style="background:none;border:none;color:#94a3b8;font-size:1.1em;cursor:pointer;line-height:1;padding:2px 6px;">✕</button>
-  </div>
   <div class="search-wrap home-search-wrap">
   <input id="searchInput" class="theme-search-input" type="text" placeholder="Search themes..." autocomplete="off" />
   <div id="searchResults" class="search-results"></div>
@@ -49,7 +44,7 @@
 
 <section class="featured-section">
     <h2>Daily Challenges</h2>
-    <div class="featured-pair">
+    <div class="featured-trio">
       <a href="daily.html" class="featured-card daily-challenge-card">
         <h3>Daily Trivia</h3>
         <p class="daily-card-cta">Play today's trivia</p>
@@ -60,6 +55,11 @@
         <p class="daily-card-cta">Play Today's Word</p>
         <p class="daily-card-sub">One 5-letter word per day — 6 attempts</p>
       </a>
+      <a href="daily-blitz.html" class="featured-card daily-challenge-card catblitz-daily-card">
+        <h3>Daily Blitz</h3>
+        <p class="daily-card-cta">Play today's letter</p>
+        <p class="daily-card-sub">Name, Animal, Place, Thing, Food — 60 seconds</p>
+      </a>
     </div>
   </section>
 
@@ -68,6 +68,14 @@
     <a href="mashup.html" class="featured-card mashup-card">
       <h3>Mashup Mode</h3>
       <p>Mix up to 5 themes into one custom quiz</p>
+    </a>
+  </section>
+
+  <section class="featured-section" style="margin-top:18px;">
+    <h2>Category Blitz</h2>
+    <a href="category-blitz.html" class="featured-card catblitz-card">
+      <h3>Category Blitz</h3>
+      <p>Spin a letter, race the clock — Name, Animal, Place, Thing, Food</p>
     </a>
   </section>
 
@@ -112,8 +120,10 @@
 
   <script src="assets/admob.js"></script>
   <script src="assets/app.js"></script>
+  <script src="assets/announcements.js"></script>
   <script src="assets/profile.js"></script>
   <script src="assets/daily.js"></script>
   <script src="assets/daily-wordle.js"></script>
+  <script src="assets/catblitz-daily.js"></script>
 </body>
 </html>

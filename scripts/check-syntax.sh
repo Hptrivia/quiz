@@ -7,7 +7,13 @@ FAIL=0
 
 JS_FILES=(
   assets/admob.js
+  assets/announcements.js
   assets/app.js
+  assets/catblitz-check.js
+  assets/catblitz-daily.js
+  assets/catblitz-engine.js
+  assets/catblitz-solo.js
+  assets/catblitz-versus.js
   assets/challenge.js
   assets/daily.js
   assets/daily-wordle.js

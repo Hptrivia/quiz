@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if(/TriviaGauntletPremium/.test(navigator.userAgent||''))document.documentElement.classList.add('premium-app');</script>
+  <meta charset="UTF-8" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Daily Blitz | Trivia Gauntlet</title>
+  <meta name="description" content="Spin a letter, name a Name/Animal/Place/Thing/Food before the clock runs out — one round a day." />
+  <link rel="icon" href="/favicon.ico.png" sizes="any">
+
+  <link rel="apple-touch-icon" href="/assets/icon-192.png" />
+  <meta name="theme-color" content="#0f172a" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    if(!/TriviaGauntletPremium/.test(navigator.userAgent||''))gtag('config', 'G-E6BY9F2ZDT');
+  </script>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(async function(OneSignal) {
+      await OneSignal.init({
+        appId: "89878a14-2849-4de0-be1b-1d2f628219ed",
+      });
+    });
+  </script>
+</head>
+<body data-page="daily-catblitz">
+  <main class="container narrow">
+    <div class="theme-top-links"><a href="index.html" class="back-link" onclick="if(history.length>1){history.back();return false;}">← Back</a><span id="navAvatarSlot"></span></div>
+
+    <section class="panel">
+
+      <div id="cbLoading">
+        <p style="color:var(--muted-text)">Loading today's letter...</p>
+      </div>
+
+      <div id="cbDailyIntro" style="display:none">
+        <div class="daily-header">
+          <h2>Daily Blitz</h2>
+          <p class="daily-date">One round a day — Name, Animal, Place, Thing, Food — 60 seconds</p>
+        </div>
+        <div id="cbWheelContainer" class="cb-wheel-container"></div>
+      </div>
+
+      <div id="cbRoundContainer" style="display:none"></div>
+
+      <div id="cbResult" style="display:none">
+        <h2 style="margin-bottom:6px">Today's Blitz Complete</h2>
+        <div id="cbResultContainer"></div>
+        <div id="cbStreakBox" class="daily-streak-box"></div>
+        <div id="cbHistoryBox" class="daily-history-box"></div>
+        <p id="cbCountdown" class="daily-countdown"></p>
+        <a href="contact.html" class="secondary-btn" style="display:block;margin-top:14px;text-align:center;text-decoration:none;font-size:0.85rem;padding:8px 18px;">Leave Feedback</a>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a class="footer-highlight" href="how-it-works.html">How It Works</a>
+        <a class="footer-highlight" href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+  <script src="assets/admob.js"></script>
+  <script src="assets/leaderboard.js"></script>
+  <script src="assets/catblitz-check.js"></script>
+  <script src="assets/catblitz-engine.js"></script>
+  <script src="assets/catblitz-daily.js"></script>
+  <script src="assets/sound.js"></script>
+  <script src="assets/profile.js"></script>
+</body>
+</html>

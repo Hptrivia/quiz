@@ -102,8 +102,21 @@ Native app (iOS + Android) and premium web = **no limits at all.** Everything be
 | **Episode** | 1 | Lifetime | Episode |
 
 - **Daily reset is desktop-only** (`_maybeDailyReset` early-returns unless `isDesktopWeb()`).
-- **Do NOT count toward any limit / never walled:** Trivia Rush, Versus, Daily Trivia,
-  Daily Wordle.
+- **Do NOT count toward any limit / never walled:** Trivia Rush, Versus (local pass-and-play,
+  the pre-existing one — not Category Blitz Versus, which has its own gate below).
+- **Daily Trivia / Daily Wordle / Daily Blitz — REVISED 2026-08-26, no longer "never walled":**
+  one free play **ever** on non-native, non-premium web, not a daily reset. Tracked per mode via
+  a permanent `localStorage` flag (`cbWebDailyUsed_trivia` / `_wordle` / `_blitz`), set the
+  moment that one play completes. Every visit after that — any day — shows `webWallHTML()`
+  instead of a new game. The full result of that one free play is always shown in full first
+  (never hidden). Native app and premium are unaffected (still genuinely daily/unlimited).
+  Rationale: web engagement that doesn't convert to an app install has no standalone value in
+  this app's business model — see the "Category Blitz" project notes for the fuller discussion.
+- **Category Blitz (Daily/Solo/Versus)**: Daily Blitz follows the once-ever rule above. Solo:
+  1 free spin on web, then walled (native app: first 2 spins free, then a rewarded ad every 2).
+  Versus: 1 free round on web, then walled (native app: first round free, then a rewarded ad
+  every round). All three always show the full round/spin result before any wall — the wall
+  only ever blocks starting something new.
 - **Wall copy (questions), set in `webWallHTML`** — single-theme modes pass `theme.title`,
   so the wall names the theme; mashup modes pass none → generic fallback:
   - Desktop: *"You've used today's 30 free questions 🎉 — Come back tomorrow for more [theme] questions — or get unlimited access now."* + QR / "Unlock all questions here". (Mashup: "…for more questions…".)
@@ -128,8 +141,11 @@ the relevant limit is hit. Desktop adds an extra upsell CTA.
 | **Word Search** | Word Search | Next Grid | WS-limit → Word Searches wall | — | Try another Word Search theme |
 | **Trivia Rush** (single + mashup) | nothing | Play Again | never walled | — | Report a Question · Try another theme |
 | **Versus** (local 2–4 players) | nothing | Play Again | never walled | — | Reveal-answers toggle · tiebreaker |
-| **Daily Trivia** | nothing | See Results | never walled | — | Share · countdown to next · **Adsterra ad** (non-premium, all platforms) |
-| **Daily Wordle** | nothing | (board) | never walled | — | Share · countdown to next |
+| **Daily Trivia** | nothing | See Results | 1 free play **ever** (not daily) → wall | — | Share · countdown to next · **Adsterra ad** (non-premium, all platforms) |
+| **Daily Wordle** | nothing | (board) | 1 free play **ever** (not daily) → wall | — | Share · countdown to next |
+| **Daily Blitz** (Category Blitz) | nothing | See Results | 1 free play **ever** (not daily) → wall | — | Leave Feedback |
+| **Category Blitz — Solo** | Spins | Spin Again (rewarded every 2, Android) | 1 free spin → wall | — | Leave Feedback |
+| **Category Blitz — Versus** | Rounds | Continue to Round N (rewarded every round, Android) | 1 free round → wall | — | Leave Feedback |
 
 ---
 

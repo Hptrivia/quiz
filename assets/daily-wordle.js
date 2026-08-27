@@ -168,6 +168,19 @@ async function renderDailyWordlePage() {
     return;
   }
 
+  // Web (non-native, non-premium): one free Daily Wordle ever, not a daily
+  // reset — every visit after that first completed play shows the app wall
+  // instead of a new word. Doesn't affect native app or premium.
+  if (typeof isLimitedWeb === 'function' && isLimitedWeb() && localStorage.getItem('cbWebDailyUsed_wordle') === 'true') {
+    if (loadingEl) loadingEl.style.display = 'none';
+    if (gameEl) {
+      gameEl.style.display = 'block';
+      gameEl.innerHTML = typeof webWallHTML === 'function'
+        ? webWallHTML("You've played your free Daily Wordle 🎉", null, 'daily games', 1) : '';
+    }
+    return;
+  }
+
   if (loadingEl) loadingEl.style.display = 'none';
   if (gameEl)    gameEl.style.display    = 'block';
 
@@ -450,6 +463,7 @@ async function renderDailyWordlePage() {
           const streak = updateDWStreak(true);
           const result = { completed: true, solved: true, guesses, streak: streak.current, bestStreak: streak.best };
           saveDWState(result);
+          if (typeof isLimitedWeb === 'function' && isLimitedWeb()) localStorage.setItem('cbWebDailyUsed_wordle', 'true');
           setTimeout(() => {
             if (gameEl) gameEl.style.display = 'none';
             showDWResult(guesses, true, entry);
@@ -459,6 +473,7 @@ async function renderDailyWordlePage() {
           const streak = updateDWStreak(false);
           const result = { completed: true, solved: false, guesses, streak: streak.current, bestStreak: streak.best };
           saveDWState(result);
+          if (typeof isLimitedWeb === 'function' && isLimitedWeb()) localStorage.setItem('cbWebDailyUsed_wordle', 'true');
           setTimeout(() => {
             if (gameEl) gameEl.style.display = 'none';
             showDWResult(guesses, false, entry);

@@ -180,6 +180,54 @@ async function playVersus(page) {
   return true; // success = no pageerror (checked by runner)
 }
 
+// Category Blitz: spin, fill every category input with "<letter>x" (starts
+// with the round's letter so it clears the new submit-time letter-match
+// validation, but won't be in any wordlist — exercises the unrecognized/log
+// path too), submit, wait for the result.
+async function playCatBlitzTurn(page) {
+  await clickText(page, 'Spin');
+  await waitVisible(page, '.cb-inputs', 4000);
+  const letter = await page.evaluate(() => document.querySelector('.cb-round-letter')?.textContent?.trim() || 'A');
+  await page.evaluate((l) => {
+    document.querySelectorAll('.cb-input').forEach(el => {
+      el.value = l + 'x';
+      el.dispatchEvent(new Event('input', { bubbles: true }));
+    });
+  }, letter);
+  await clickText(page, 'Submit');
+  await wait(150);
+}
+
+async function playCatBlitzSingle(page, endSel, setup) {
+  if (typeof setup === 'function') await setup(page);
+  await playCatBlitzTurn(page);
+  return waitVisible(page, endSel, 5000);
+}
+
+// Versus: Best of 3 (fastest preset) so the smoke test doesn't play a full
+// 13-round match. Each round is 2 turns; grading is immediate (no per-word
+// prompt anymore), so each turn just needs a "Lock In Score" click on its
+// own result before the next player's turn. Loose success (like the
+// existing local Versus mode) since the full setup→round→continue chain is
+// too deep to assert a single end selector on reliably.
+async function playCatBlitzVersus(page) {
+  await clickFirst(page, '[data-len="3"]');
+  await clickFirst(page, '#cbVersusStartBtn');
+  await wait(300);
+  for (let round = 0; round < 3; round++) {
+    for (let turn = 0; turn < 2; turn++) {
+      await playCatBlitzTurn(page);
+      await waitVisible(page, '.cb-lockin-btn', 4000);
+      await clickFirst(page, '.cb-lockin-btn');
+      await wait(150);
+    }
+    await wait(150);
+    if (!(await clickFirst(page, '.cb-versus-continue-btn')) && !(await clickFirst(page, '#cbVersusSeeFinalBtn'))) break;
+    await wait(200);
+  }
+  return true; // success = no pageerror (checked by runner)
+}
+
 function buildModes(themes) {
   const a = themes[0], b = themes[1];
   // `themes` is an array of slug strings, so match the slug directly (the old
@@ -210,6 +258,9 @@ function buildModes(themes) {
         await wait(600);
         return p.evaluate(() => { const g = document.getElementById('wsGrid'); return !!g && g.children.length > 0; });
       } },
+    { name: 'daily-catblitz',  url: `daily-blitz.html`,             run: p => playCatBlitzSingle(p, '#cbResult') },
+    { name: 'catblitz-solo',   url: `category-blitz-solo.html`,              run: p => playCatBlitzSingle(p, '#cbResult', async (page) => { await clickFirst(page, '#cbSoloStartBtn'); await wait(300); }) },
+    { name: 'catblitz-versus', url: `category-blitz-versus.html`,            run: p => playCatBlitzVersus(p) },
   ];
 }
 

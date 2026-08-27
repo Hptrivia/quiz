@@ -6,3 +6,5 @@ daily-content/
 node_modules/
 ios-secrets-tmp/
 .ios-secrets/
+.env
+scripts/.catblitz-cache/

@@ -199,6 +199,9 @@ function saveDailyResult(score, total, missedQuestions) {
   const streak  = dcUpdateStreak();
   const result  = { completed: true, score, total, missedQuestions, streak: streak.current, bestStreak: streak.best };
   localStorage.setItem(`dcState_${dateKey}`, JSON.stringify(result));
+  if (typeof isLimitedWeb === "function" && isLimitedWeb()) {
+    localStorage.setItem("cbWebDailyUsed_trivia", "true");
+  }
   return result;
 }
 
@@ -270,6 +273,19 @@ async function renderDailyPage() {
   if (state.completed) {
     if (loadingEl) loadingEl.style.display = "none";
     showDailyResult(state);
+    return;
+  }
+
+  // Web (non-native, non-premium): one free Daily Trivia ever, not a daily
+  // reset — every visit after that first completed play shows the app wall
+  // instead of a new quiz. Doesn't affect native app or premium.
+  if (typeof isLimitedWeb === "function" && isLimitedWeb() && localStorage.getItem("cbWebDailyUsed_trivia") === "true") {
+    if (loadingEl) loadingEl.style.display = "none";
+    if (quizEl) {
+      quizEl.style.display = "block";
+      quizEl.innerHTML = typeof webWallHTML === "function"
+        ? webWallHTML("You've played your free Daily Trivia 🎉", null, "daily games", 1) : "";
+    }
     return;
   }
 

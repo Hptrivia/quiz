@@ -111,12 +111,22 @@ function isGamePage() {
   // Keep this list in sync with getRoundStartParams() below — both must cover every
   // in-game page so the banner stays hidden during play (mashup-* were missing,
   // which left a banner on the mashup trivia-rush / marathon gameplay screens).
-  return /\/(play|challenge|survival|episode|trivia-rush|mashup-trivia-rush|versus|wordle|wordsearch|mashup-play|daily|daily-wordle)\.html$/.test(path);
+  return /\/(play|challenge|survival|episode|trivia-rush|mashup-trivia-rush|versus|wordle|wordsearch|mashup-play|daily|daily-wordle|daily-blitz|category-blitz-solo|category-blitz-versus)\.html$/.test(path);
 }
 
 function getRoundStartParams() {
   const path = window.location.pathname;
-  return /\/(play|challenge|survival|episode|trivia-rush|mashup-trivia-rush|versus|wordle|wordsearch|mashup-play|daily|daily-wordle)\.html$/.test(path);
+  return /\/(play|challenge|survival|episode|trivia-rush|mashup-trivia-rush|versus|wordle|wordsearch|mashup-play|daily|daily-wordle|daily-blitz|category-blitz-solo|category-blitz-versus)\.html$/.test(path);
+}
+
+// Category Blitz is a brand-new mode — existing users hit it for the first
+// time too, often long after they've already burned the one-time whole-app
+// _iadFirstOpenDone grace on some other mode. This is a second, separate
+// "first ever" flag scoped only to Category Blitz's three pages, so everyone
+// gets one ad-free look at the new mode regardless of _iadFirstOpenDone.
+const _IAD_CATBLITZ_FIRST_OPEN_KEY = '_iadCatBlitzFirstOpenDone';
+function _isCatBlitzPath(path) {
+  return /\/(daily-blitz|category-blitz-solo|category-blitz-versus)\.html$/.test(path);
 }
 
 let _AdMob = null;
@@ -178,15 +188,27 @@ async function adMobInit() {
   })();
   // Skip the interstitial-first if we're still inside the cooldown window — no
   // point preparing/showing one we'd be blocked from displaying anyway.
-  const isGameStart = getRoundStartParams();
+  // data-defer-game-ad: pages with an in-page setup step before play actually
+  // starts (Category Blitz Versus's match setup screen) opt out of the
+  // automatic page-load interstitial and call adMobShowGameStartInterstitial()
+  // themselves once the user presses Start/Resume — "page load" isn't "game
+  // start" there the way it is for challenge/marathon/episode/daily/etc.
+  const isGameStart = getRoundStartParams() && document.body?.dataset.deferGameAd !== '1';
   // One-time grace period: give a brand-new install its first game with no
   // interstitial (Reddit reports of users bouncing after the very first ad).
   // Gated on isGameStart so the home/menu page can't consume the flag before
   // the user ever reaches a game.
   const isFirstEverOpen = isGameStart && !localStorage.getItem('_iadFirstOpenDone');
   if (isFirstEverOpen) localStorage.setItem('_iadFirstOpenDone', '1');
+  // Separate one-time grace for Category Blitz specifically — see
+  // _IAD_CATBLITZ_FIRST_OPEN_KEY above. Independent of isFirstEverOpen: a
+  // long-time user with that flag already consumed still gets one free look
+  // at this new mode.
+  const isFirstCatBlitzOpen = isGameStart && _isCatBlitzPath(window.location.pathname)
+    && !localStorage.getItem(_IAD_CATBLITZ_FIRST_OPEN_KEY);
+  if (isFirstCatBlitzOpen) localStorage.setItem(_IAD_CATBLITZ_FIRST_OPEN_KEY, '1');
   const showInterstitialFirst = isGameStart && !sessionStorage.getItem(_modeKey)
-    && !_interstitialOnCooldown() && !isFirstEverOpen;
+    && !_interstitialOnCooldown() && !isFirstEverOpen && !isFirstCatBlitzOpen;
   const _removeLoader = () => {
     document.getElementById('_adLoader')?.remove();
     document.body.style.visibility = 'visible';
@@ -235,6 +257,29 @@ async function adMobInit() {
     _removeLoader();
     console.warn('[AdMob] init failed', e);
   }
+}
+
+// Same "once per app session, skip on cooldown / first-ever-open" gate as the
+// automatic page-load interstitial-first above, exposed for pages that opted
+// out via data-defer-game-ad — call this when the user actually presses
+// Start/Resume, not on page load. No-op outside the app / with ads off.
+async function adMobShowGameStartInterstitial() {
+  if (!isInApp() || !ADMOB_ADS_ENABLED || !_adMobReady) return;
+  const _modeKey = (() => {
+    const p = window.location.pathname;
+    if (/\/wordsearch\//.test(p)) return '_iad_wordsearch';
+    if (/\/wordle\//.test(p)) return '_iad_wordle';
+    const m = p.match(/\/([^/]+)\.html$/);
+    return m ? '_iad_' + m[1] : '_iad_other';
+  })();
+  const isFirstEverOpen = !localStorage.getItem('_iadFirstOpenDone');
+  if (isFirstEverOpen) localStorage.setItem('_iadFirstOpenDone', '1');
+  const isFirstCatBlitzOpen = _isCatBlitzPath(window.location.pathname)
+    && !localStorage.getItem(_IAD_CATBLITZ_FIRST_OPEN_KEY);
+  if (isFirstCatBlitzOpen) localStorage.setItem(_IAD_CATBLITZ_FIRST_OPEN_KEY, '1');
+  if (sessionStorage.getItem(_modeKey) || _interstitialOnCooldown() || isFirstEverOpen || isFirstCatBlitzOpen) return;
+  sessionStorage.setItem(_modeKey, '1');
+  await adMobShowInterstitial();
 }
 
 async function _adMobPreloadRewarded() {

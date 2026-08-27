@@ -422,6 +422,7 @@ const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
   </script>
   <script src="../assets/profile.js"></script>
   <script src="../assets/admob.js"></script>
+  <script src="../assets/announcements.js"></script>
 </body>
 </html>`;
 }

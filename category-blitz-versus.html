@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if(/TriviaGauntletPremium/.test(navigator.userAgent||''))document.documentElement.classList.add('premium-app');</script>
+  <meta charset="UTF-8" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Category Blitz — Versus | Trivia Gauntlet</title>
+  <meta name="description" content="Pass-and-play Category Blitz — spin a letter, race the clock, take turns with a friend on one device." />
+  <link rel="icon" href="/favicon.ico.png" sizes="any">
+
+  <link rel="apple-touch-icon" href="/assets/icon-192.png" />
+  <meta name="theme-color" content="#0f172a" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    if(!/TriviaGauntletPremium/.test(navigator.userAgent||''))gtag('config', 'G-E6BY9F2ZDT');
+  </script>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body data-page="catblitz-versus" data-defer-game-ad="1">
+  <main class="container narrow">
+    <div class="theme-top-links"><a href="category-blitz.html" class="back-link" onclick="if(history.length>1){history.back();return false;}">← Back</a><span id="navAvatarSlot"></span></div>
+
+    <section class="panel">
+
+      <div id="cbVersusResumeChoice" style="display:none">
+        <div class="daily-header">
+          <h2>Category Blitz — Versus</h2>
+          <p class="daily-date">You have a match in progress</p>
+        </div>
+        <p id="cbVersusResumeSummary" class="cb-versus-hint"></p>
+        <button type="button" class="primary-btn" id="cbVersusResumeBtn" style="width:100%;margin-top:10px;">Resume Match</button>
+        <button type="button" class="secondary-btn" id="cbVersusNewMatchBtn" style="width:100%;margin-top:10px;">Start New Match</button>
+      </div>
+
+      <div id="cbVersusSetup">
+        <div class="daily-header">
+          <h2>Category Blitz — Versus</h2>
+          <p class="daily-date">Pass-and-play — one device, two players</p>
+        </div>
+
+        <div class="cb-versus-setup-row">
+          <label class="cb-input-label">Match length</label>
+          <div class="cb-versus-length-row" id="cbVersusLengthRow">
+            <button type="button" class="secondary-btn cb-versus-length-btn" data-len="3">Best of 3</button>
+            <button type="button" class="secondary-btn cb-versus-length-btn" data-len="5">Best of 5</button>
+            <button type="button" class="secondary-btn cb-versus-length-btn" data-len="13">Best of 13 (full game)</button>
+          </div>
+        </div>
+
+        <div class="cb-versus-setup-row">
+          <label class="cb-input-label" for="cbVersusP1Name">Player 1 name</label>
+          <input class="cb-input" id="cbVersusP1Name" type="text" maxlength="20" placeholder="Player 1" autocomplete="off" />
+        </div>
+        <div class="cb-versus-setup-row">
+          <label class="cb-input-label" for="cbVersusP2Name">Player 2 name</label>
+          <input class="cb-input" id="cbVersusP2Name" type="text" maxlength="20" placeholder="Player 2" autocomplete="off" />
+        </div>
+
+        <div class="cb-versus-setup-row">
+          <label class="cb-input-label">Categories</label>
+          <div id="cbVersusCategoryList" class="cb-versus-category-list"></div>
+          <div class="cb-versus-add-category-row">
+            <input class="cb-input" id="cbVersusNewCategory" type="text" maxlength="24" placeholder="Add your own category…" autocomplete="off" />
+            <button type="button" class="secondary-btn" id="cbVersusAddCategoryBtn">Add</button>
+          </div>
+          <p class="cb-versus-hint">Custom categories aren't auto-checked — after your turn, tap Correct on any word you're sure counts.</p>
+        </div>
+
+        <button type="button" class="primary-btn" id="cbVersusStartBtn" style="width:100%;margin-top:10px;">Start Match</button>
+      </div>
+
+      <div id="cbVersusPlay" style="display:none">
+        <p id="cbVersusStatus" class="daily-date"></p>
+        <div id="cbWheelContainer" class="cb-wheel-container"></div>
+        <div id="cbRoundContainer" style="display:none"></div>
+        <div class="cb-versus-howto">
+          <p class="cb-versus-howto-title">How scoring works</p>
+          <ul>
+            <li>Both players spin their own letter each round — 1 point per category you get right before time's up.</li>
+            <li>An answer we don't recognize shows as <strong>unmatched</strong>, not wrong.</li>
+            <li>Sure it should count? Tap <strong>Correct</strong> to add it to your score.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="cbVersusRoundResult" style="display:none">
+        <h2 style="margin-bottom:6px">Round Result</h2>
+        <div id="cbVersusRoundResultBox"></div>
+        <div id="cbVersusContinueBox" style="margin-top:14px"></div>
+        <a href="contact.html" class="secondary-btn" style="display:block;margin-top:14px;text-align:center;text-decoration:none;font-size:0.85rem;padding:8px 18px;">Leave Feedback</a>
+      </div>
+
+      <div id="cbVersusFinal" style="display:none">
+        <h2 style="margin-bottom:6px">Match Complete</h2>
+        <div id="cbVersusFinalBox"></div>
+        <a href="category-blitz-versus.html" class="primary-btn" id="cbVersusRematchBtn" style="display:block;margin-top:14px;text-align:center;text-decoration:none;">New Match</a>
+        <div id="cbFeedbackBoxWrap"></div>
+        <a href="contact.html" class="secondary-btn" style="display:block;margin-top:14px;text-align:center;text-decoration:none;font-size:0.85rem;padding:8px 18px;">Leave Feedback</a>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a class="footer-highlight" href="how-it-works.html">How It Works</a>
+        <a class="footer-highlight" href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+  <script src="assets/admob.js"></script>
+  <script src="assets/leaderboard.js"></script>
+  <script src="assets/catblitz-check.js"></script>
+  <script src="assets/catblitz-engine.js"></script>
+  <script src="assets/catblitz-versus.js"></script>
+  <script src="assets/sound.js"></script>
+  <script src="assets/profile.js"></script>
+</body>
+</html>
