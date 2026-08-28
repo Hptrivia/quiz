@@ -555,14 +555,13 @@ function vsStartGame(players, numQuestions, pools, themeSlug, themeName, isMashu
   vsRunNextTurn();
 }
 
-async function vsInit() {
-  if (!document.getElementById('vsSetup')) return;
-
+// Resolves the theme(s) for this Versus session from the URL (?theme= or
+// ?themes=) against the loaded theme list. Shared by hot-seat and online
+// multiplayer setup so both pick questions the same way.
+function vsResolveThemeContext(allThemes) {
   const slug = getParam('theme');
   const themesParam = getParam('themes');
-  const allThemes = await loadThemes();
 
-  // Resolve theme(s) and back link
   let resolvedThemes = [];
   let gameTitle = 'Versus Mode';
   let backHref = 'index.html';
@@ -583,9 +582,73 @@ async function vsInit() {
     }
   }
 
+  return { resolvedThemes, gameTitle, backHref };
+}
+
+// Fetches question files for the resolved theme(s) and builds shuffled
+// per-difficulty pools, same shape vsStartGame expects. Shared by hot-seat
+// and online multiplayer.
+async function vsBuildQuestionPools(resolvedThemes) {
+  const batches = await Promise.all(resolvedThemes.map(t => fetchJSON(t.questionFile)));
+  const questionsByTheme = batches.map((qs, i) => ({
+    title: resolvedThemes[i].title,
+    questions: Array.isArray(qs) ? qs : [],
+  }));
+
+  const pools = {};
+  let themeQueues = null;
+  if (resolvedThemes.length > 1) {
+    themeQueues = questionsByTheme.map(({ title, questions }) => {
+      const byDiff = {};
+      VS_DIFF_ORDER.forEach(d => {
+        byDiff[d] = shuffleArray(questions.filter(q => normalizeDifficulty(q.difficulty) === d))
+          .map(q => ({ ...q, _themeTitle: title }));
+      });
+      return byDiff;
+    });
+    VS_DIFF_ORDER.forEach(d => { pools[d] = []; });
+  } else {
+    const allQuestions = questionsByTheme[0]?.questions || [];
+    VS_DIFF_ORDER.forEach(d => {
+      pools[d] = shuffleArray(allQuestions.filter(q => normalizeDifficulty(q.difficulty) === d));
+    });
+  }
+
+  const themeSlug = resolvedThemes.length === 1 ? resolvedThemes[0].slug : null;
+  const themeName = resolvedThemes.map(t => t.title).join(' + ');
+  const isMashup = resolvedThemes.length > 1;
+  return { pools, themeQueues, themeSlug, themeName, isMashup };
+}
+
+async function vsInit() {
+  if (!document.getElementById('vsSetup')) return;
+
+  const allThemes = await loadThemes();
+  const { resolvedThemes, gameTitle, backHref } = vsResolveThemeContext(allThemes);
+
   const backLink = document.getElementById('vsBackLink');
   if (backLink) backLink.href = backHref;
   document.title = `${gameTitle} | Trivia Gauntlet`;
+
+  // Play mode toggle (online multiplayer vs local pass & play). The online
+  // fields/logic live in versus-multiplayer.js — this just switches views.
+  const modeSeg = document.getElementById('vsModeSeg');
+  const onlineFields = document.getElementById('vsOnlineFields');
+  const localFields = document.getElementById('vsLocalFields');
+  if (modeSeg) {
+    modeSeg.querySelectorAll('button').forEach(btn => {
+      if (btn.dataset.val === 'online') btn.classList.add('selected');
+      btn.addEventListener('click', () => {
+        modeSeg.querySelectorAll('button').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        const isOnline = btn.dataset.val === 'online';
+        onlineFields.style.display = isOnline ? '' : 'none';
+        localFields.style.display = isOnline ? 'none' : '';
+      });
+    });
+  }
+
+  if (typeof mpInit === 'function') mpInit(allThemes, resolvedThemes);
 
   let playerCount = 2;
   let bestOf = 5;
@@ -673,44 +736,15 @@ async function vsInit() {
     }
     errorEl.style.display = 'none';
 
-    // Load questions from all resolved themes
-    let questionsByTheme = [];
+    let pools, themeQueues, themeSlug, themeName, isMashup;
     try {
-      const batches = await Promise.all(resolvedThemes.map(t => fetchJSON(t.questionFile)));
-      questionsByTheme = batches.map((qs, i) => ({
-        title: resolvedThemes[i].title,
-        questions: Array.isArray(qs) ? qs : [],
-      }));
+      ({ pools, themeQueues, themeSlug, themeName, isMashup } = await vsBuildQuestionPools(resolvedThemes));
     } catch(e) {
       errorEl.textContent = 'Could not load questions. Please try again.';
       errorEl.style.display = '';
       return;
     }
 
-    const pools = {};
-    let themeQueues = null;
-    if (resolvedThemes.length > 1) {
-      // Mashup: build per-theme, per-difficulty queues for even rotation across questions
-      themeQueues = questionsByTheme.map(({ title, questions }) => {
-        const byDiff = {};
-        VS_DIFF_ORDER.forEach(d => {
-          byDiff[d] = shuffleArray(questions.filter(q => normalizeDifficulty(q.difficulty) === d))
-            .map(q => ({ ...q, _themeTitle: title }));
-        });
-        return byDiff;
-      });
-      VS_DIFF_ORDER.forEach(d => { pools[d] = []; });
-    } else {
-      // Single theme: flat shuffle as before
-      const allQuestions = questionsByTheme[0]?.questions || [];
-      VS_DIFF_ORDER.forEach(d => {
-        pools[d] = shuffleArray(allQuestions.filter(q => normalizeDifficulty(q.difficulty) === d));
-      });
-    }
-
-    const themeSlug = resolvedThemes.length === 1 ? resolvedThemes[0].slug : null;
-    const themeName = resolvedThemes.map(t => t.title).join(' + ');
-    const isMashup = resolvedThemes.length > 1;
     vsLastPlayerNames = names;
     vsLastAiMode = aiMode;
     vsLastBotLevel = botLevel;

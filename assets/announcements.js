@@ -33,6 +33,12 @@ const APP_ANNOUNCEMENTS = [
     text: "Cobra Kai, Loki, Hannibal, Scream, K-Dramas, Belgium, Spain, and more.",
     cta: { label: "See What's New", href: "recent.html" },
   },
+  {
+    icon: "🌐",
+    title: "Play online with a friend!",
+    text: "Trivia Versus and Category Blitz Versus now support real-time online multiplayer — create a room, share the code, and play live.",
+    cta: { label: "Play Now", href: "versus.html" },
+  },
 ];
 
 function _cbAnnouncementHash(str) {

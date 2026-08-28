@@ -228,6 +228,104 @@ async function playCatBlitzVersus(page) {
   return true; // success = no pageerror (checked by runner)
 }
 
+// ---- online multiplayer drivers (two browser contexts = two real players) --
+// These hit the live Supabase project (multiplayer_rooms/multiplayer_answers),
+// not just local state — requires supabase/multiplayer-rooms.sql and
+// multiplayer-category-blitz.sql to already be applied. Loose success (no
+// pageerror + both sides reach their result screen), same spirit as the
+// existing hot-seat `versus`/`catblitz-versus` drivers.
+async function playVersusOnline(host, guest, theme) {
+  await host.goto(`${BASE}/versus.html?theme=${theme}`, { waitUntil: 'networkidle2', timeout: 30000 });
+  await wait(500);
+  await clickFirst(host, '#vsMpBestOfSeg [data-val="3"]'); // fastest preset
+  await clickFirst(host, '#vsMpCreateBtn');
+  await waitVisible(host, '#vsMpRoomCode', 8000);
+  const code = await host.evaluate(() => (document.getElementById('vsMpRoomCode').textContent || '').trim());
+  if (!code) return false;
+
+  await guest.goto(`${BASE}/versus.html`, { waitUntil: 'networkidle2', timeout: 30000 });
+  await wait(400);
+  await clickFirst(guest, '#vsMpShowJoinBtn');
+  await guest.evaluate(c => { document.getElementById('vsMpCodeInput').value = c; }, code);
+  await clickFirst(guest, '#vsMpJoinBtn');
+  await wait(500);
+
+  const endSel = '#vsResultsTitle';
+  for (let i = 0; i < 80; i++) {
+    const hostDone = await isVisible(host, endSel);
+    const guestDone = await isVisible(guest, endSel);
+    if (hostDone && guestDone) break;
+    if (!hostDone) await clickFirst(host, '#vsMpOptions .option-btn');
+    if (!guestDone) await clickFirst(guest, '#vsMpOptions .option-btn');
+    await wait(500);
+  }
+  return (await isVisible(host, endSel)) && (await isVisible(guest, endSel));
+}
+
+async function fillAndSubmitCatBlitz(page) {
+  if (!(await isVisible(page, '.cb-inputs'))) return false;
+  const letter = await page.evaluate(() => document.querySelector('.cb-round-letter')?.textContent?.trim() || 'A');
+  await page.evaluate((l) => {
+    document.querySelectorAll('.cb-input').forEach(el => {
+      el.value = l + 'x';
+      el.dispatchEvent(new Event('input', { bubbles: true }));
+    });
+  }, letter);
+  await clickText(page, 'Submit');
+  return true;
+}
+
+async function playCatBlitzVersusOnline(host, guest) {
+  await host.goto(`${BASE}/category-blitz-versus.html`, { waitUntil: 'networkidle2', timeout: 30000 });
+  await wait(500);
+  await clickFirst(host, '#cbMpLengthRow [data-len="3"]');
+  await clickFirst(host, '#cbMpCreateBtn');
+  await waitVisible(host, '#cbMpRoomCode', 8000);
+  const code = await host.evaluate(() => (document.getElementById('cbMpRoomCode').textContent || '').trim());
+  if (!code) return false;
+
+  await guest.goto(`${BASE}/category-blitz-versus.html`, { waitUntil: 'networkidle2', timeout: 30000 });
+  await wait(400);
+  await clickFirst(guest, '#cbMpShowJoinBtn');
+  await guest.evaluate(c => { document.getElementById('cbMpCodeInput').value = c; }, code);
+  await clickFirst(guest, '#cbMpJoinBtn');
+  await wait(500);
+
+  for (let i = 0; i < 80; i++) {
+    const hostDone = await isVisible(host, '#cbVersusFinal');
+    const guestDone = await isVisible(guest, '#cbVersusFinal');
+    if (hostDone && guestDone) break;
+    await fillAndSubmitCatBlitz(host);
+    await fillAndSubmitCatBlitz(guest);
+    await clickFirst(host, '#cbMpContinueBtn');
+    await clickFirst(guest, '#cbMpContinueBtn');
+    await wait(500);
+  }
+  return (await isVisible(host, '#cbVersusFinal')) && (await isVisible(guest, '#cbVersusFinal'));
+}
+
+async function runMultiplayerMode(browser, mode) {
+  const hostCtx = await browser.createBrowserContext();
+  const guestCtx = await browser.createBrowserContext();
+  const host = await hostCtx.newPage();
+  const guest = await guestCtx.newPage();
+  const errors = [];
+  host.on('pageerror', e => errors.push('host: ' + String(e.message || e)));
+  guest.on('pageerror', e => errors.push('guest: ' + String(e.message || e)));
+
+  let reached = false, crashed = null;
+  try {
+    reached = await mode.run2(host, guest);
+  } catch (e) {
+    crashed = e.message;
+  }
+  await hostCtx.close();
+  await guestCtx.close();
+
+  const ok = errors.length === 0 && reached && !crashed;
+  return { name: mode.name, ok, reached, errors, crashed };
+}
+
 function buildModes(themes) {
   const a = themes[0], b = themes[1];
   // `themes` is an array of slug strings, so match the slug directly (the old
@@ -261,6 +359,8 @@ function buildModes(themes) {
     { name: 'daily-catblitz',  url: `daily-blitz.html`,             run: p => playCatBlitzSingle(p, '#cbResult') },
     { name: 'catblitz-solo',   url: `category-blitz-solo.html`,              run: p => playCatBlitzSingle(p, '#cbResult', async (page) => { await clickFirst(page, '#cbSoloStartBtn'); await wait(300); }) },
     { name: 'catblitz-versus', url: `category-blitz-versus.html`,            run: p => playCatBlitzVersus(p) },
+    { name: 'versus-online',         multi: true, run2: (h, g) => playVersusOnline(h, g, a) },
+    { name: 'catblitz-versus-online', multi: true, run2: (h, g) => playCatBlitzVersusOnline(h, g) },
   ];
 }
 
@@ -359,7 +459,7 @@ async function main() {
   console.log(`\nRunning ${modes.length} game-mode smoke tests...\n`);
   const results = [];
   for (const mode of modes) {
-    const r = await runMode(browser, mode);
+    const r = mode.multi ? await runMultiplayerMode(browser, mode) : await runMode(browser, mode);
     results.push(r);
     const mark = r.ok ? ' OK ' : 'FAIL';
     let line = `  ${mark}  ${mode.name}`;
