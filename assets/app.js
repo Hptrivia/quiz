@@ -370,15 +370,32 @@ let quizState = {
   score: 0,
   selectedAnswer: null
 };
-function getMarathonTier(score, total) {
+// Mashup results mix multiple categories, so callers there just omit
+// `category` and get the "these themes" default — everything else maps to
+// whatever phrase actually fits that category's content.
+const MARATHON_TIER_PHRASE_BY_CATEGORY = {
+  TV: "this show",
+  Sitcoms: "this show",
+  Anime: "this anime",
+  Movies: "this movie",
+  Games: "this game",
+  Sports: "this sport",
+  Books: "this book",
+  Countries: "this country",
+  General: "this topic",
+  Education: "this topic",
+};
+
+function getMarathonTier(score, total, category) {
   if (!total || total <= 0) return "";
 
   const pct = (score / total) * 100;
+  const phrase = MARATHON_TIER_PHRASE_BY_CATEGORY[category] || "these themes";
 
   if (pct >= 95) {
-    return "🏆 SUPERFAN! You basically know this show by heart.";
+    return `🏆 SUPERFAN! You basically know ${phrase} by heart.`;
   } else if (pct >= 60) {
-    return "🎬 True Fan. You know this show really well, but you are not a SUPERFAN.";
+    return `🎬 True Fan. You know ${phrase} really well, but you are not a SUPERFAN.`;
   } else if (pct >= 40) {
     return "📺 Casual Viewer. Not bad, but a rewatch wouldn’t hurt.";
   } else {
@@ -1641,7 +1658,7 @@ function renderResult() {
 
   if (typeof webAddQ === 'function') webAddQ(quizState.questions.length);
   const hasNextPage = safePage < totalPages;
-  const tierText = getMarathonTier(quizState.score, quizState.questions.length);
+  const tierText = getMarathonTier(quizState.score, quizState.questions.length, theme.category);
 
   const relatedThemes = getRelatedThemes(themes, theme, 4);
 

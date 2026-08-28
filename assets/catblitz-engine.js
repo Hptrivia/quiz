@@ -159,11 +159,31 @@ function cbRenderRound(container, { letter, categories, seconds = 60, onSubmit }
       <button class="primary-btn cb-submit-btn" id="cbSubmitBtn">Submit</button>
     </div>`;
 
+  const headerEl = container.querySelector(".cb-round-header");
   const timerEl = container.querySelector("#cbTimer");
   const submitBtn = container.querySelector("#cbSubmitBtn");
   const errorEl = container.querySelector("#cbRoundError");
   let remaining = seconds;
   let done = false;
+
+  // CSS `position: sticky` alone doesn't reliably track the on-screen
+  // keyboard on mobile — the browser scrolls the page to keep the focused
+  // input visible, but some mobile browsers don't recompute the sticky
+  // header's position against that keyboard-driven scroll. The
+  // VisualViewport API reports the actual visible area, so nudge the
+  // header down to match whenever it changes (keyboard open/close/resize).
+  let vvCleanup = null;
+  if (headerEl && window.visualViewport) {
+    const vv = window.visualViewport;
+    const syncHeaderOffset = () => { headerEl.style.top = `${Math.max(0, vv.offsetTop)}px`; };
+    vv.addEventListener("resize", syncHeaderOffset);
+    vv.addEventListener("scroll", syncHeaderOffset);
+    syncHeaderOffset();
+    vvCleanup = () => {
+      vv.removeEventListener("resize", syncHeaderOffset);
+      vv.removeEventListener("scroll", syncHeaderOffset);
+    };
+  }
 
   function inputEl(id) { return container.querySelector(`#cbInput_${CSS.escape(id)}`); }
 
@@ -209,6 +229,7 @@ function cbRenderRound(container, { letter, categories, seconds = 60, onSubmit }
     }
     done = true;
     clearInterval(tickInterval);
+    if (vvCleanup) vvCleanup();
     submitBtn.disabled = true;
     const elapsedMs = Date.now() - startedAt;
     if (typeof onSubmit === "function") onSubmit({ answers: collect(), elapsedMs });
