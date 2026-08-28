@@ -65,12 +65,14 @@ function cbRenderVersusSetup() {
     addBtnEl: document.getElementById("cbVersusAddCategoryBtn"),
     initialCategories: CB_VERSUS_DEFAULT_CATEGORIES,
   });
+  const getDifficulty = cbRenderDifficultyPicker(document.getElementById("cbVersusDifficultyRow"));
 
   document.getElementById("cbVersusStartBtn").addEventListener("click", async () => {
     const p1Name = (document.getElementById("cbVersusP1Name").value.trim() || "Player 1").slice(0, 20);
     const p2Name = (document.getElementById("cbVersusP2Name").value.trim() || "Player 2").slice(0, 20);
     const state = {
       matchLength,
+      seconds: CB_DIFFICULTY_SECONDS[getDifficulty()],
       p1Name, p2Name,
       categories: activeCategories,
       usedLetters: [],
@@ -112,7 +114,7 @@ function cbVersusStartRound(state) {
       wheelContainer.style.display = "none";
       roundEl.style.display = "block";
       cbRenderRound(roundEl, {
-        letter: p1Letter, categories: state.categories, seconds: 60,
+        letter: p1Letter, categories: state.categories, seconds: state.seconds || CB_DIFFICULTY_SECONDS.medium,
         onSubmit: async ({ answers, elapsedMs }) => {
           const grade = await cbGradeRound({ letter: p1Letter, categories: state.categories, answers, elapsedMs, mode: "versus" });
           cbVersusShowTurnResult(state, state.p1Name, p1Letter, grade, (finalScore) => {
@@ -140,7 +142,7 @@ function cbVersusPlaySecondTurn(state, p1Score, p1ElapsedMs) {
       wheelContainer.style.display = "none";
       roundEl.style.display = "block";
       cbRenderRound(roundEl, {
-        letter: p2Letter, categories: state.categories, seconds: 60,
+        letter: p2Letter, categories: state.categories, seconds: state.seconds || CB_DIFFICULTY_SECONDS.medium,
         onSubmit: async ({ answers, elapsedMs }) => {
           const grade = await cbGradeRound({ letter: p2Letter, categories: state.categories, answers, elapsedMs, mode: "versus" });
           cbVersusShowTurnResult(state, state.p2Name, p2Letter, grade, (finalScore) => {

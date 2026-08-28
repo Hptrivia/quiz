@@ -22,6 +22,44 @@ function cbSlugify(str) {
   return String(str).trim().toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "") || "category";
 }
 
+// Timer difficulty, shared by Solo and Versus (Daily always stays 60s — it's
+// meant to be a low-friction one-a-day, not tuned for challenge). The last
+// choice is remembered across visits so re-picking every round isn't
+// required, but the picker still shows (and can be changed) before every
+// game, same as the category picker.
+const CB_DIFFICULTY_SECONDS = { easy: 60, medium: 45, hard: 30 };
+const CB_DIFFICULTY_LABELS = { easy: "Easy · 60s", medium: "Medium · 45s", hard: "Hard · 30s" };
+const CB_DIFFICULTY_KEY = "cbDifficulty";
+
+function cbGetSavedDifficulty() {
+  try {
+    const saved = localStorage.getItem(CB_DIFFICULTY_KEY);
+    if (saved && CB_DIFFICULTY_SECONDS[saved]) return saved;
+  } catch {}
+  return "medium";
+}
+function cbSaveDifficulty(difficulty) {
+  try { localStorage.setItem(CB_DIFFICULTY_KEY, difficulty); } catch {}
+}
+
+// Renders the Easy/Medium/Hard picker into rowEl (same look/interaction as
+// the Best-of length picker). Returns a getter for the live selection.
+function cbRenderDifficultyPicker(rowEl) {
+  let selected = cbGetSavedDifficulty();
+  const order = ["easy", "medium", "hard"];
+  rowEl.innerHTML = order.map(key =>
+    `<button type="button" class="secondary-btn cb-difficulty-btn${key === selected ? " selected" : ""}" data-diff="${key}">${CB_DIFFICULTY_LABELS[key]}</button>`
+  ).join("");
+  rowEl.querySelectorAll(".cb-difficulty-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      selected = btn.dataset.diff;
+      cbSaveDifficulty(selected);
+      rowEl.querySelectorAll(".cb-difficulty-btn").forEach(b => b.classList.toggle("selected", b === btn));
+    });
+  });
+  return () => selected;
+}
+
 // Shared add/remove category picker used by both Solo and Versus setup
 // screens. Renders removable pills into listEl (guarded to never drop below
 // 1 category) and wires the free-text add row. Returns the live array —
@@ -209,21 +247,29 @@ async function cbGradeRound({ letter, categories, answers, elapsedMs, mode } = {
 
 // extra: optional HTML string or DOM Node appended into the result box, for
 // each mode's own bolt-on (streak line, spin-again CTA, versus scoreboard).
-// contestable: Solo and Versus both pass true — 'unrecognized' rows get a
-// "Correct" toggle button instead of a fixed icon; tapping it flips that
-// category between counted/not-counted, no confirmation dialog. Applies to
-// ANY unrecognized word, not just wordlist-less custom categories — a real
-// miss against an existing wordlist is contestable too, same as Versus.
-// letter/mode are only used to log a confirmed:true candidate when a
-// contest is accepted. Returns { getScore, getContested } so the caller can
-// read the live, post-contest score when ready to lock it in.
+// contestable: Solo and Versus both pass true — every row the wordlist
+// wasn't 100% sure about gets its own icon PLUS a separate "Mark as
+// Correct" / "Mark as Incorrect" toggle button next to it (not merged into
+// the icon or the answer text, so it reads as its own control, not part of
+// the answer): 'unrecognized' rows (right letter, non-blank, just not in
+// the wordlist) can be upgraded via "Mark as Correct"; 'correct' rows (the
+// wordlist matched) can be downgraded via "Mark as Incorrect", in case the
+// auto-match was wrong. Plain 'incorrect' rows (blank / wrong letter) are
+// never ambiguous, so they get no toggle. letter/mode are only used to log
+// a confirmed:true candidate when a row is upgraded to correct. Returns
+// { getScore, getContested } so the caller can read the live, post-toggle
+// score when ready to lock it in.
 function cbRenderResult(container, gradeResult, { extra, categories, contestable, letter, mode } = {}) {
   const cats = categories || [];
   const contested = {};
 
   function isAccepted(c) {
     const entry = gradeResult.perCategory[c.id];
-    return entry && (entry.status === "correct" || contested[c.id]);
+    if (!entry) return false;
+    const toggled = !!contested[c.id];
+    if (entry.status === "correct") return !toggled;
+    if (entry.status === "unrecognized") return toggled;
+    return false;
   }
   function computeScore() {
     return cats.reduce((sum, c) => sum + (isAccepted(c) ? 1 : 0), 0);
@@ -233,16 +279,19 @@ function cbRenderResult(container, gradeResult, { extra, categories, contestable
     const rows = cats.map(c => {
       const entry = gradeResult.perCategory[c.id] || { status: "incorrect", answer: "" };
       const accepted = isAccepted(c);
-      const showContest = contestable && entry.status === "unrecognized";
-      const rowStatus = accepted ? "correct" : (showContest ? "unrecognized" : "incorrect");
+      const toggleable = contestable && (entry.status === "unrecognized" || entry.status === "correct");
+      const toggled = !!contested[c.id];
+      const rowStatus = accepted ? "correct" : (toggleable ? "unrecognized" : "incorrect");
       const answerHtml = entry.answer ? _cbEscapeHtml(entry.answer) : `<span class="cb-result-blank">(blank)</span>`;
-      const rightCell = showContest
-        ? `<button type="button" class="cb-contest-btn${accepted ? " cb-contest-btn--accepted" : ""}" data-cat="${_cbEscapeHtml(c.id)}">${accepted ? "Accepted ✓" : "Correct"}</button>`
-        : `<span class="cb-result-icon">${accepted ? "✓" : "✗"}</span>`;
+      const icon = `<span class="cb-result-icon">${accepted ? "✓" : "✗"}</span>`;
+      const toggleLabel = entry.status === "correct" ? "Mark as Incorrect" : "Mark as Correct";
+      const toggleBtn = toggleable
+        ? `<button type="button" class="cb-contest-btn" data-cat="${_cbEscapeHtml(c.id)}">${toggled ? "Undo" : toggleLabel}</button>`
+        : "";
       return `<div class="cb-result-row cb-result-row--${rowStatus}">
         <span class="cb-result-label">${_cbEscapeHtml(c.label)}</span>
         <span class="cb-result-answer">${answerHtml}</span>
-        ${rightCell}
+        ${icon}${toggleBtn}
       </div>`;
     }).join("");
     scoreEl.textContent = `${computeScore()} / ${cats.length}`;
@@ -252,9 +301,12 @@ function cbRenderResult(container, gradeResult, { extra, categories, contestable
         btn.addEventListener("click", () => {
           const cid = btn.dataset.cat;
           contested[cid] = !contested[cid];
-          if (contested[cid]) {
-            const entry = gradeResult.perCategory[cid];
-            if (entry) cbLogCandidate(cid, letter, entry.answer.toLowerCase(), mode, true);
+          const entry = gradeResult.perCategory[cid];
+          // Only log an upgrade (unrecognized -> correct) as a review
+          // candidate — a downgrade flags a bad auto-match, not a wordlist
+          // gap, so there's nothing for the candidate table to review.
+          if (contested[cid] && entry && entry.status === "unrecognized") {
+            cbLogCandidate(cid, letter, entry.answer.toLowerCase(), mode, true);
           }
           render();
         });

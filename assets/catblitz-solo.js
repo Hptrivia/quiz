@@ -85,9 +85,11 @@ function cbRenderSoloPage() {
     addBtnEl: document.getElementById("cbSoloAddCategoryBtn"),
     initialCategories: cbGetSavedSoloCategories(),
   });
+  const getDifficulty = cbRenderDifficultyPicker(document.getElementById("cbSoloDifficultyRow"));
 
   document.getElementById("cbSoloStartBtn").addEventListener("click", async () => {
     cbSaveSoloCategories(activeCategories);
+    const seconds = CB_DIFFICULTY_SECONDS[getDifficulty()];
     setupEl.style.display = "none";
     introEl.style.display = "block";
     // Setup is a real step before play now (like Versus) — the automatic
@@ -95,11 +97,11 @@ function cbRenderSoloPage() {
     // so it fires here instead, once the player actually starts, not before
     // they've even chosen categories.
     if (typeof adMobShowGameStartInterstitial === "function") await adMobShowGameStartInterstitial();
-    cbStartSoloSpin(activeCategories);
+    cbStartSoloSpin(activeCategories, seconds);
   });
 }
 
-function cbStartSoloSpin(categories) {
+function cbStartSoloSpin(categories, seconds) {
   const introEl = document.getElementById("cbDailyIntro");
   const roundEl = document.getElementById("cbRoundContainer");
   const wheelContainer = document.getElementById("cbWheelContainer");
@@ -112,7 +114,7 @@ function cbStartSoloSpin(categories) {
       cbRenderRound(roundEl, {
         letter,
         categories,
-        seconds: 60,
+        seconds: seconds || CB_DIFFICULTY_SECONDS.medium,
         onSubmit: async ({ answers, elapsedMs }) => {
           const gradeResult = await cbGradeRound({ letter, categories, answers, elapsedMs, mode: "solo" });
           const spinsUsedNow = cbIncrementSoloSpinsUsed();

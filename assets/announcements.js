@@ -27,6 +27,12 @@ const APP_ANNOUNCEMENTS = [
     text: "Spin a letter, race the clock — Daily Blitz, Solo, and Versus.",
     cta: { label: "Play Now", href: "category-blitz.html" },
   },
+  {
+    icon: "🎬",
+    title: "16 new themes added!",
+    text: "Cobra Kai, Loki, Hannibal, Scream, K-Dramas, Belgium, Spain, and more.",
+    cta: { label: "See What's New", href: "recent.html" },
+  },
 ];
 
 function _cbAnnouncementHash(str) {
@@ -53,29 +59,34 @@ function initAppAnnouncementPopup() {
   try { seen = JSON.parse(localStorage.getItem(SEEN_KEY) || "[]"); } catch {}
 
   const isApp = typeof isInApp === "function" && isInApp();
-  const next = APP_ANNOUNCEMENTS.find(a => {
+  const unseen = APP_ANNOUNCEMENTS.filter(a => {
     if (a.appOnly && !isApp) return false;
     return !seen.includes(_cbAnnouncementHash(a.text));
   });
-  if (!next) return;
+  if (!unseen.length) return;
 
-  seen.push(_cbAnnouncementHash(next.text));
+  unseen.forEach(a => seen.push(_cbAnnouncementHash(a.text)));
   try { localStorage.setItem(SEEN_KEY, JSON.stringify(seen)); } catch {}
+
+  // Number entries only when several are catching someone up at once — a
+  // lone new announcement doesn't need a "3." nobody has context for.
+  const showNumbers = unseen.length > 1;
+  const itemsHtml = unseen.map((a, i) => `
+    <div class="app-toast-item">
+      <div class="app-toast-icon" style="font-size:28px;">${a.icon || "📣"}</div>
+      <div class="app-toast-text">
+        <strong>${showNumbers ? `${i + 1}. ` : ""}${a.title || ""}</strong>
+        <span>${a.text}</span>
+        ${a.cta ? `<a href="${_cbAnnouncementHrefFor(a.cta.href)}" class="app-toast-btn">${a.cta.label}</a>` : ""}
+      </div>
+    </div>
+  `).join("");
 
   const toast = document.createElement("div");
   toast.className = "app-toast";
   toast.innerHTML = `
-    <div class="app-toast-body">
-      <div class="app-toast-icon" style="font-size:28px;">${next.icon || "📣"}</div>
-      <div class="app-toast-text">
-        <strong>${next.title || ""}</strong>
-        <span>${next.text}</span>
-      </div>
-    </div>
-    <div class="app-toast-actions">
-      ${next.cta ? `<a href="${_cbAnnouncementHrefFor(next.cta.href)}" class="app-toast-btn">${next.cta.label}</a>` : ""}
-      <button class="app-toast-dismiss" aria-label="Dismiss">&#10005;</button>
-    </div>
+    <button class="app-toast-dismiss" aria-label="Dismiss">&#10005;</button>
+    <div class="app-toast-list">${itemsHtml}</div>
   `;
   document.body.appendChild(toast);
   requestAnimationFrame(() => requestAnimationFrame(() => toast.classList.add("app-toast--in")));
@@ -85,7 +96,7 @@ function initAppAnnouncementPopup() {
     setTimeout(() => toast.remove(), 350);
   }
   toast.querySelector(".app-toast-dismiss").addEventListener("click", dismiss);
-  if (next.cta) toast.querySelector(".app-toast-btn").addEventListener("click", dismiss);
+  toast.querySelectorAll(".app-toast-btn").forEach(btn => btn.addEventListener("click", dismiss));
 }
 
 document.addEventListener("DOMContentLoaded", () => setTimeout(initAppAnnouncementPopup, 1200));

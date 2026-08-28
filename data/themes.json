@@ -2959,5 +2959,181 @@
     "seoIntro": "Vietnam trivia works well because it can move easily between the Vietnam War era, geography, food, and modern culture without feeling repetitive. It gives you more range than a narrow capitals-only or flag-only country quiz.",
     "seoDetail": "A strong Vietnam quiz can draw from the Vietnam War and the fall of Saigon, the Mekong River, Hanoi and Ho Chi Minh City, the dong, iconic dishes like pho and spring rolls, coffee and pepper exports, and figures like Vo Nguyen Giap and Thich Nhat Hanh. That mix helps the theme feel more complete, because players are not only recalling geography but also wider cultural and historical knowledge tied to the country.",
     "fanQuestions": true
+  },
+  {
+    "slug": "belgium",
+    "title": "Belgium",
+    "category": "Countries",
+    "description": "A country trivia theme covering Belgian geography, history, culture, cuisine, and notable people. It is broad enough to work for general knowledge players while still giving Belgium-focused rounds real variety.",
+    "image": "",
+    "questionFile": "data/belgium.txt",
+    "seoIntro": "Belgium trivia works well because it can move easily between the country's language divide, EU and NATO institutions, food culture, and history without feeling repetitive. It gives you more range than a narrow capitals-only or flag-only country quiz.",
+    "seoDetail": "A strong Belgium quiz can draw from Brussels as home to the EU and NATO, the Flanders-Wallonia language split, Brussels sprouts, waffles, chocolate and beer, comic-strip icons like Tintin, artists such as Magritte, and figures like King Baudouin and jazz musician Toots Thielemans. That mix helps the theme feel more complete, because players are not only recalling geography but also wider cultural and historical knowledge tied to the country.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "france",
+    "title": "France",
+    "category": "Countries",
+    "description": "A country trivia theme covering French geography, history, culture, cuisine, and notable people. It is broad enough to work for general knowledge players while still giving France-focused rounds real variety.",
+    "image": "",
+    "questionFile": "data/france.txt",
+    "seoIntro": "France trivia works well because it can move easily between Paris landmarks, national history, food and wine culture, and politics without feeling repetitive. It gives you more range than a narrow capitals-only or flag-only country quiz.",
+    "seoDetail": "A strong France quiz can draw from Paris and the National Assembly, the motto Liberté, Égalité, Fraternité, regional foods like Roquefort and Cognac, the origins of Champagne, and history from the Treaty of Verdun through to the French Revolution. That mix helps the theme feel more complete, because players are not only recalling geography but also wider cultural and historical knowledge tied to the country.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "south-korea",
+    "title": "South Korea",
+    "category": "Countries",
+    "description": "A country trivia theme covering South Korean geography, history, culture, and notable people. It is broad enough to work for general knowledge players while still giving South Korea-focused rounds real variety.",
+    "image": "",
+    "questionFile": "data/skorea.txt",
+    "seoIntro": "South Korea trivia works well because it can move easily between the Korean War and the DMZ, K-pop and modern pop culture, and older history and landmarks without feeling repetitive. It gives you more range than a narrow capitals-only or flag-only country quiz.",
+    "seoDetail": "A strong South Korea quiz can draw from the border with North Korea and the Demilitarized Zone, the 1953 armistice, K-pop acts like BTS, ondol underfloor heating, temples such as Bulguksa, the April Revolution, and the 2002 World Cup run. That mix helps the theme feel more complete, because players are not only recalling geography but also wider cultural and historical knowledge tied to the country.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "spain",
+    "title": "Spain",
+    "category": "Countries",
+    "description": "A country trivia theme covering Spanish geography, history, culture, cuisine, and notable people. It is broad enough to work for general knowledge players while still giving Spain-focused rounds real variety.",
+    "image": "",
+    "questionFile": "data/spain.txt",
+    "seoIntro": "Spain trivia works well because it can move easily between Madrid and its regions, art and history, food culture, and modern sport without feeling repetitive. It gives you more range than a narrow capitals-only or flag-only country quiz.",
+    "seoDetail": "A strong Spain quiz can draw from Madrid, Pablo Picasso's Guernica, the Euro 2024 win over England, the Alborán Sea, Cava from Catalonia, the 1212 Battle of Las Navas de Tolosa, and regional dishes like cocido madrileño. That mix helps the theme feel more complete, because players are not only recalling geography but also wider cultural and historical knowledge tied to the country.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "cobra-kai",
+    "title": "Cobra Kai",
+    "category": "TV",
+    "description": "A martial-arts drama trivia theme focused on Cobra Kai, covering the rivalry between Johnny Lawrence and Daniel LaRusso, karate dojos, students, tournaments, and the show's ties back to the original Karate Kid films.",
+    "image": "",
+    "questionFile": "data/cobra.txt",
+    "seoIntro": "Cobra Kai trivia works because the series balances nostalgia for the original films with new characters, rivalries, and tournament storylines that fans follow closely across seasons.",
+    "seoDetail": "A strong Cobra Kai quiz can include Johnny Lawrence, Daniel LaRusso, the Cobra Kai creed, the San Fernando Valley setting, Chozen Toguchi, Master Kim and the Sekai Taikai tournament, and the show's long list of student rivalries. The theme works because it can move between dojo philosophy, tournament results, character backstories, and the franchise's deeper Karate Kid history.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "white-collar",
+    "title": "White Collar",
+    "category": "TV",
+    "description": "A con-artist crime drama trivia theme focused on White Collar, covering Neal Caffrey, his FBI partnership, cons, forgery, and the criminal world he still moves through.",
+    "image": "",
+    "questionFile": "data/collar.txt",
+    "seoIntro": "White Collar trivia works because it combines a slick con-artist lead, an unlikely FBI partnership, and a rotating cast of heists and schemes that give the show a lot of memorable detail to draw questions from.",
+    "seoDetail": "A strong White Collar quiz can include Neal Caffrey, his partner Mozzie, FBI agents Peter Burke, Jones and Diana, series creator Jeff Eastin, and storylines like Neal's run against the Pink Panthers crime syndicate. The theme works because it can move between con schemes, FBI procedure, character relationships, and the show's ongoing tension between crime and redemption.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "loki",
+    "title": "Loki",
+    "category": "TV",
+    "description": "A Marvel superhero trivia theme focused on Loki, covering the Time Variance Authority, timeline variants, Sylvie, and the multiversal stakes of the series.",
+    "image": "",
+    "questionFile": "data/loki.txt",
+    "seoIntro": "Loki trivia works because the show mixes a well-known Marvel character with time-travel bureaucracy, alternate variants, and season-spanning mysteries that reward close-watching fans.",
+    "seoDetail": "A strong Loki quiz can include the Time Variance Authority, Mobius, Hunter B-15, variants like Alligator Loki, Sylvie and her true identity, and the show's six-episode season structure. The theme works because it can move between Marvel lore, character relationships, and the show's own internal rules about time and timelines.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "call-the-midwife",
+    "title": "Call the Midwife",
+    "category": "TV",
+    "description": "A period drama trivia theme focused on Call the Midwife, covering the midwives and nuns of Nonnatus House, their patients, and life in postwar East London.",
+    "image": "",
+    "questionFile": "data/midwife.txt",
+    "seoIntro": "Call the Midwife trivia works because it combines a strong ensemble cast, real historical and medical detail, and emotional storylines that long-running fans remember clearly season to season.",
+    "seoDetail": "A strong Call the Midwife quiz can include Nonnatus House, the Poplar setting, characters like Barbara Gilbert and Sister Catherine, BBC One as the broadcaster, and storylines such as the Child Migrants Programme. The theme works because it can move between medical detail, character histories, and the wider social history the series is built around.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "how-to-get-away-with-murder",
+    "title": "How to Get Away with Murder",
+    "category": "TV",
+    "description": "A legal thriller trivia theme focused on How to Get Away with Murder, covering Professor Annalise Keating, her students, and the murders and cover-ups that drive the series.",
+    "image": "",
+    "questionFile": "data/murder.txt",
+    "seoIntro": "How to Get Away with Murder trivia works because the show is built around constant twists, a strong central professor-and-students dynamic, and cases that intertwine with the characters' own crimes.",
+    "seoDetail": "A strong How to Get Away with Murder quiz can include Annalise Keating, Middleton University, her Harvard law background, students interning at firms like Caplan & Gold, the Castillo family storyline, and Annalise's own habits and vices. The theme works because it can move between courtroom cases, character secrets, and the show's season-long mystery arcs.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "the-punisher",
+    "title": "The Punisher",
+    "category": "TV",
+    "description": "A Marvel crime-drama trivia theme focused on The Punisher, covering Frank Castle's vigilante war, his allies, and the conspiracies he uncovers.",
+    "image": "",
+    "questionFile": "data/punisher.txt",
+    "seoIntro": "The Punisher trivia works because it combines a very recognisable vigilante character with grounded crime-thriller plotting and a strong supporting cast across its two seasons.",
+    "seoDetail": "A strong Punisher quiz can include Frank Castle and his skull symbol, ally Curtis Hoyle, antagonists like O'Connor, and conspiracy threads involving figures like Carson Wolf. The theme works because it can move between Frank's military background, his war against organized crime, and the show's supporting characters.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "smallville",
+    "title": "Smallville",
+    "category": "TV",
+    "description": "A superhero origin-story trivia theme focused on Smallville, covering Clark Kent's teenage years in Kansas, his powers, allies, and enemies before he becomes Superman.",
+    "image": "",
+    "questionFile": "data/smallville.txt",
+    "seoIntro": "Smallville trivia works because it reframes a very familiar hero through a long-running high-school-to-adulthood arc, giving it more character and relationship detail than a typical superhero story.",
+    "seoDetail": "A strong Smallville quiz can include Clark Kent's origins on Krypton, the Kent family dog Shelby, The WB as the original network, Lana Lang and her nanotech suit storyline, Whitney Fordman, and Checkmate figures like Maxwell Lord. The theme works because it can move between Superman mythology, small-town relationships, and the show's own long-running storylines.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "married-with-children",
+    "title": "Married... with Children",
+    "category": "Sitcoms",
+    "description": "A classic sitcom trivia theme focused on Married... with Children, covering the Bundy family, Al's misfortunes, and the show's irreverent take on suburban family life.",
+    "image": "",
+    "questionFile": "data/married.txt",
+    "seoIntro": "Married... with Children trivia works because the show built such a distinct, exaggerated family dynamic that its running jokes and character quirks stay memorable long after it aired.",
+    "seoDetail": "A strong Married... with Children quiz can include Al Bundy's football glory days, his obsession with bowling a perfect 300 game, the show's Fox network debut, and Kelly Bundy's modeling ambitions. The theme works because it can move between the family's running jokes, character histories, and the show's satirical take on the American sitcom family.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "scream",
+    "title": "Scream",
+    "category": "Movies",
+    "description": "A slasher-movie trivia theme focused on the Scream film franchise, covering Ghostface, the Woodsboro murders, and the characters who survive across the series.",
+    "image": "",
+    "questionFile": "data/scream.txt",
+    "seoIntro": "Scream trivia works because the franchise is built on a recognisable killer identity, self-aware horror-movie rules, and a returning cast that gives long-time fans plenty to track across films.",
+    "seoDetail": "A strong Scream quiz can include the Woodsboro setting, the Ghostface identity, Dewey Riley, Sidney Prescott, Windsor College in Scream 2, and the newer films like Scream VI and the 2022 legacy sequel. The theme works because it can move between individual film plots, the killer's changing identities, and the franchise's long-running cast of survivors.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "k-dramas",
+    "title": "K-Dramas",
+    "category": "TV",
+    "description": "A mashup trivia theme spanning multiple hit Korean dramas, covering shows like Squid Game, Crash Landing on You, Goblin, Queen of Tears, Vincenzo, Kingdom, and more.",
+    "image": "",
+    "questionFile": "data/kdrama.txt",
+    "seoIntro": "K-Dramas trivia works because it lets players range across an entire genre's biggest hits rather than staying inside just one show, which suits both casual fans and people who follow Korean television closely.",
+    "seoDetail": "A strong K-Dramas quiz can include Squid Game's games and prize money, Crash Landing on You's border crossing, Goblin's immortal lead, the conglomerate and law-firm settings of Queen of Tears and Extraordinary Attorney Woo, Reply 1988's Seoul neighbourhood, and terms like chaebol and hallyu. The theme works because it can move between individual show plots and the wider culture and vocabulary that fans of Korean drama recognise.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "only-murders-in-the-building",
+    "title": "Only Murders in the Building",
+    "category": "TV",
+    "description": "A comedy-mystery trivia theme focused on Only Murders in the Building, covering the trio of amateur podcasters investigating deaths in their apartment building.",
+    "image": "",
+    "questionFile": "data/murders.txt",
+    "seoIntro": "Only Murders in the Building trivia works because it combines a true-crime podcast format with comedic character dynamics and season-long mysteries that reward close-following fans.",
+    "seoDetail": "A strong Only Murders in the Building quiz can include the show's streaming home, Charles's fictional detective show Brazzos, Teddy Dimas's business dealings, Sazz's disappearance, and Charles's unchanging daily breakfast routine. The theme works because it can move between the trio's investigations, running character jokes, and the mystery plots that unfold each season.",
+    "fanQuestions": true
+  },
+  {
+    "slug": "hannibal",
+    "title": "Hannibal",
+    "category": "TV",
+    "description": "A psychological horror trivia theme focused on Hannibal, covering Hannibal Lecter, Will Graham, the FBI profilers hunting serial killers, and the show's dark, elegant take on the world of Thomas Harris's novels.",
+    "image": "",
+    "questionFile": "data/hannibal.txt",
+    "seoIntro": "Hannibal trivia works because the show pairs one of fiction's most iconic villains with a distinctive visual style, a deep supporting cast, and case-of-the-week killers that give it a lot of specific, memorable detail to draw on.",
+    "seoDetail": "A strong Hannibal quiz can include Hannibal Lecter, Will Graham's isolated Wolf Trap farmhouse, Bedelia Du Maurier, Frederick Chilton, Jack Crawford, the Chesapeake Ripper, Francis Dolarhyde and the Tooth Fairy killings, and the show's grounding in Thomas Harris's Red Dragon. The theme works because it can move between Hannibal's own double life, the FBI's profiling work, and the show's parade of distinct serial-killer cases.",
+    "fanQuestions": true
   }
 ]

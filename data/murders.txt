@@ -1,1802 +1,1178 @@
 [
   {
     "id": 1,
-    "question": "What is the capital of Spain?",
+    "question": "On which streaming service did Only Murders in the Building originally premiere?",
     "options": [
-      "Madrid",
-      "Barcelona",
-      "Seville",
-      "Valencia"
+      "Hulu",
+      "Netflix",
+      "Max",
+      "Peacock"
     ],
-    "answer": "Madrid",
+    "answer": "Hulu",
     "difficulty": "easy"
   },
   {
     "id": 2,
-    "question": "Spain occupies most of which peninsula?",
+    "question": "In what year did Only Murders in the Building first premiere?",
     "options": [
-      "Iberian Peninsula",
-      "Apennine Peninsula",
-      "Balkan Peninsula",
-      "Anatolian Peninsula"
+      "2021",
+      "2019",
+      "2020",
+      "2022"
     ],
-    "answer": "Iberian Peninsula",
-    "difficulty": "easy"
+    "answer": "2021",
+    "difficulty": "hard"
   },
   {
     "id": 3,
-    "question": "Which country shares the Iberian Peninsula with Spain?",
+    "question": "Which pair created Only Murders in the Building?",
     "options": [
-      "Portugal",
-      "France",
-      "Morocco",
-      "Italy"
+      "Steve Martin and John Hoffman",
+      "Steve Martin and Martin Short",
+      "Dan Fogelman and John Hoffman",
+      "Steve Martin and Dan Fogelman"
     ],
-    "answer": "Portugal",
-    "difficulty": "easy"
+    "answer": "Steve Martin and John Hoffman",
+    "difficulty": "hard"
   },
   {
     "id": 4,
-    "question": "Which mountain range forms the border between Spain and France?",
+    "question": "In which U.S. city is the show set?",
     "options": [
-      "Pyrenees",
-      "Sierra Nevada",
-      "Cantabrian Mountains",
-      "Sierra de Guadarrama"
+      "New York City",
+      "Chicago",
+      "Boston",
+      "Los Angeles"
     ],
-    "answer": "Pyrenees",
+    "answer": "New York City",
     "difficulty": "easy"
   },
   {
     "id": 5,
-    "question": "Which tiny country sits between Spain and France in the Pyrenees?",
+    "question": "The Arconia is located in which Manhattan neighborhood?",
     "options": [
-      "Andorra",
-      "Monaco",
-      "San Marino",
-      "Liechtenstein"
+      "Upper West Side",
+      "Greenwich Village",
+      "Upper East Side",
+      "Chelsea"
     ],
-    "answer": "Andorra",
+    "answer": "Upper West Side",
     "difficulty": "easy"
   },
   {
     "id": 6,
-    "question": "Which strait separates southern Spain from Morocco?",
+    "question": "What is the name of the apartment building where the show takes place?",
     "options": [
-      "Strait of Gibraltar",
-      "Strait of Messina",
-      "Strait of Otranto",
-      "Strait of Dover"
+      "The Arconia",
+      "The Ansonia",
+      "The Wyndham",
+      "The Devonshire"
     ],
-    "answer": "Strait of Gibraltar",
+    "answer": "The Arconia",
     "difficulty": "easy"
   },
   {
     "id": 7,
-    "question": "Which British Overseas Territory borders Spain at its southern tip?",
+    "question": "What is the title of the podcast the trio records about their cases?",
     "options": [
-      "Gibraltar",
-      "Ceuta",
-      "Melilla",
-      "Menorca"
+      "Only Murders in the Building",
+      "Murder on the Upper West Side",
+      "The Arconia Files",
+      "Blood on Broadway"
     ],
-    "answer": "Gibraltar",
+    "answer": "Only Murders in the Building",
     "difficulty": "easy"
   },
   {
     "id": 8,
-    "question": "Which Spanish island group lies in the Atlantic off the coast of Africa?",
+    "question": "What was Charles-Haden Savage's profession before the events of the show?",
     "options": [
-      "Canary Islands",
-      "Balearic Islands",
-      "Azores",
-      "Madeira"
+      "Actor",
+      "Homicide detective",
+      "Novelist",
+      "Talk-show host"
     ],
-    "answer": "Canary Islands",
+    "answer": "Actor",
     "difficulty": "easy"
   },
   {
     "id": 9,
-    "question": "Ibiza belongs to which Spanish island group?",
+    "question": "What is Oliver Putnam's profession?",
     "options": [
-      "Balearic Islands",
-      "Canary Islands",
-      "Columbretes Islands",
-      "Cíes Islands"
+      "Broadway director",
+      "Theater critic",
+      "Nightclub owner",
+      "Film producer"
     ],
-    "answer": "Balearic Islands",
+    "answer": "Broadway director",
     "difficulty": "easy"
   },
   {
     "id": 10,
-    "question": "What is the highest mountain in Spain?",
+    "question": "Mabel Mora claims to be renovating whose apartment in the Arconia?",
     "options": [
-      "Teide",
-      "Mulhacén",
-      "Aneto",
-      "Veleta"
+      "Her aunt's",
+      "Her mother's",
+      "A friend's",
+      "Her employer's"
     ],
-    "answer": "Teide",
+    "answer": "Her aunt's",
     "difficulty": "easy"
   },
   {
     "id": 11,
-    "question": "Mount Teide stands on which Spanish island?",
+    "question": "Which actor plays Charles-Haden Savage?",
     "options": [
-      "Tenerife",
-      "Gran Canaria",
-      "Lanzarote",
-      "La Palma"
+      "Steve Martin",
+      "Martin Short",
+      "Nathan Lane",
+      "Kevin Kline"
     ],
-    "answer": "Tenerife",
+    "answer": "Steve Martin",
     "difficulty": "easy"
   },
   {
     "id": 12,
-    "question": "Which is the second-largest city in Spain by population?",
+    "question": "Which actor plays Oliver Putnam?",
     "options": [
-      "Barcelona",
-      "Valencia",
-      "Seville",
-      "Zaragoza"
+      "Martin Short",
+      "Steve Martin",
+      "Eugene Levy",
+      "Christopher Guest"
     ],
-    "answer": "Barcelona",
+    "answer": "Martin Short",
     "difficulty": "easy"
   },
   {
     "id": 13,
-    "question": "Barcelona is the capital of which autonomous community?",
+    "question": "Which actor plays Mabel Mora?",
     "options": [
-      "Catalonia",
-      "Aragon",
-      "Valencia",
-      "Navarre"
+      "Selena Gomez",
+      "Camila Cabello",
+      "Vanessa Hudgens",
+      "Demi Lovato"
     ],
-    "answer": "Catalonia",
+    "answer": "Selena Gomez",
     "difficulty": "easy"
   },
   {
     "id": 14,
-    "question": "Which language spoken in northern Spain is unrelated to any other known language?",
+    "question": "How many episodes does each season of the show contain?",
     "options": [
-      "Basque",
-      "Galician",
-      "Catalan",
-      "Asturian"
+      "10",
+      "6",
+      "8",
+      "13"
     ],
-    "answer": "Basque",
+    "answer": "10",
     "difficulty": "easy"
   },
   {
     "id": 15,
-    "question": "Which architect designed the Sagrada Família?",
+    "question": "The podcast's central rule is that it only covers murders that occur where?",
     "options": [
-      "Antoni Gaudí",
-      "Santiago Calatrava",
-      "Rafael Moneo",
-      "Ricardo Bofill"
+      "In their own building",
+      "In New York City",
+      "On the Upper West Side",
+      "In the neighborhood"
     ],
-    "answer": "Antoni Gaudí",
+    "answer": "In their own building",
     "difficulty": "easy"
   },
   {
     "id": 16,
-    "question": "What is the name of Barcelona's famous tree-lined pedestrian boulevard?",
+    "question": "Whose death does the trio investigate in Season 1?",
     "options": [
-      "La Rambla",
-      "Gran Vía",
-      "Paseo de la Castellana",
-      "Calle de Alcalá"
+      "Tim Kono",
+      "Marcus Feldman",
+      "Neil Kagan",
+      "Dennis Cho"
     ],
-    "answer": "La Rambla",
+    "answer": "Tim Kono",
     "difficulty": "easy"
   },
   {
     "id": 17,
-    "question": "Which city is home to the Alhambra palace complex?",
+    "question": "Which Arconia resident is murdered in Season 2?",
     "options": [
-      "Granada",
-      "Córdoba",
-      "Seville",
-      "Málaga"
+      "Bunny Folger",
+      "Edna Marsh",
+      "Millie Hargrove",
+      "Ruth Delgado"
     ],
-    "answer": "Granada",
+    "answer": "Bunny Folger",
     "difficulty": "easy"
   },
   {
     "id": 18,
-    "question": "The Mezquita, a great mosque turned cathedral, is in which city?",
+    "question": "What position did Bunny Folger hold at the Arconia?",
     "options": [
-      "Córdoba",
-      "Toledo",
-      "Zaragoza",
-      "Cádiz"
+      "Board president",
+      "Building superintendent",
+      "Head doorman",
+      "Chief of security"
     ],
-    "answer": "Córdoba",
+    "answer": "Board president",
     "difficulty": "easy"
   },
   {
     "id": 19,
-    "question": "Which Spanish city hosts the titanium-clad Guggenheim Museum?",
+    "question": "Season 3 centers on a production in which world?",
     "options": [
-      "Bilbao",
-      "Valencia",
-      "Málaga",
-      "San Sebastián"
+      "Broadway",
+      "A film set",
+      "A fashion magazine",
+      "A cruise ship"
     ],
-    "answer": "Bilbao",
+    "answer": "Broadway",
     "difficulty": "easy"
   },
   {
     "id": 20,
-    "question": "Which Madrid museum holds the painting Las Meninas?",
+    "question": "Which action star dies on opening night in Season 3?",
     "options": [
-      "Prado Museum",
-      "Reina Sofía Museum",
-      "Thyssen-Bornemisza Museum",
-      "Sorolla Museum"
+      "Ben Glenroy",
+      "Chad Beckett",
+      "Rex Halloway",
+      "Cole Ferris"
     ],
-    "answer": "Prado Museum",
+    "answer": "Ben Glenroy",
     "difficulty": "easy"
   },
   {
     "id": 21,
-    "question": "Which Spanish artist painted Guernica?",
+    "question": "What kind of celebrity is Ben Glenroy?",
     "options": [
-      "Pablo Picasso",
-      "Salvador Dalí",
-      "Joan Miró",
-      "Francisco Goya"
+      "A Hollywood action star",
+      "A pop singer",
+      "A late-night host",
+      "A celebrity chef"
     ],
-    "answer": "Pablo Picasso",
+    "answer": "A Hollywood action star",
     "difficulty": "easy"
   },
   {
     "id": 22,
-    "question": "Which Spanish painter is famous for the melting clocks of The Persistence of Memory?",
+    "question": "What is the title of the Broadway show Oliver directs in Season 3?",
     "options": [
-      "Salvador Dalí",
-      "Joan Miró",
-      "Diego Velázquez",
-      "Juan Gris"
+      "Death Rattle",
+      "Midnight Sonata",
+      "The Last Curtain",
+      "Bloody Mary"
     ],
-    "answer": "Salvador Dalí",
+    "answer": "Death Rattle",
     "difficulty": "easy"
   },
   {
     "id": 23,
-    "question": "Who wrote Don Quixote?",
+    "question": "Which of Charles's associates is killed at the start of Season 4?",
     "options": [
-      "Miguel de Cervantes",
-      "Lope de Vega",
-      "Benito Pérez Galdós",
-      "Federico García Lorca"
+      "Sazz Pataki",
+      "Trudy Lensky",
+      "Marnie Falco",
+      "Gail Ostrowski"
     ],
-    "answer": "Miguel de Cervantes",
+    "answer": "Sazz Pataki",
     "difficulty": "easy"
   },
   {
     "id": 24,
-    "question": "Which region of Spain gave rise to flamenco?",
+    "question": "What was Sazz Pataki's job?",
     "options": [
-      "Andalusia",
-      "Galicia",
-      "Catalonia",
-      "Asturias"
+      "Stunt double",
+      "Talent agent",
+      "Personal chef",
+      "Longtime co-star"
     ],
-    "answer": "Andalusia",
+    "answer": "Stunt double",
     "difficulty": "easy"
   },
   {
     "id": 25,
-    "question": "In which city does the Camino de Santiago pilgrimage end?",
+    "question": "In Season 4, what is the trio's podcast being adapted into?",
     "options": [
-      "Santiago de Compostela",
-      "Burgos",
-      "León",
-      "Oviedo"
+      "A movie",
+      "A TV series",
+      "A Broadway musical",
+      "A video game"
     ],
-    "answer": "Santiago de Compostela",
+    "answer": "A movie",
     "difficulty": "easy"
   },
   {
     "id": 26,
-    "question": "In which town is the tomato-throwing festival La Tomatina held?",
+    "question": "What job did the Season 5 victim hold at the Arconia?",
     "options": [
-      "Buñol",
-      "Alcoy",
-      "Sagunto",
-      "Requena"
+      "Doorman",
+      "Elevator operator",
+      "Building manager",
+      "Concierge"
     ],
-    "answer": "Buñol",
+    "answer": "Doorman",
     "difficulty": "easy"
   },
   {
     "id": 27,
-    "question": "Which city holds the running of the bulls during the San Fermín festival?",
+    "question": "Season 6 relocates the show to which city?",
     "options": [
-      "Pamplona",
-      "Logroño",
-      "Zaragoza",
-      "Vitoria-Gasteiz"
+      "London",
+      "Paris",
+      "Chicago",
+      "Rome"
     ],
-    "answer": "Pamplona",
+    "answer": "London",
     "difficulty": "easy"
   },
   {
     "id": 28,
-    "question": "Which city burns giant sculpted figures each March during Las Fallas?",
+    "question": "Which instrument does Jan play in the orchestra?",
     "options": [
-      "Valencia",
-      "Murcia",
-      "Alicante",
-      "Castellón"
+      "Bassoon",
+      "Cello",
+      "Oboe",
+      "Clarinet"
     ],
-    "answer": "Valencia",
+    "answer": "Bassoon",
     "difficulty": "easy"
   },
   {
     "id": 29,
-    "question": "What do Spaniards traditionally eat at the twelve strokes of midnight on New Year's Eve?",
+    "question": "What is the title of Cinda Canning's hit true-crime podcast within the show?",
     "options": [
-      "Grapes",
-      "Olives",
-      "Almonds",
-      "Figs"
+      "All Is Not OK in Oklahoma",
+      "Blood in the Bayou",
+      "Silence in Savannah",
+      "Gone in Georgia"
     ],
-    "answer": "Grapes",
+    "answer": "All Is Not OK in Oklahoma",
     "difficulty": "easy"
   },
   {
     "id": 30,
-    "question": "On which date do Spanish children traditionally receive gifts from the Three Kings?",
+    "question": "Which actor plays deli owner Teddy Dimas?",
     "options": [
-      "6 January",
-      "25 December",
-      "1 January",
-      "5 December"
+      "Nathan Lane",
+      "Danny DeVito",
+      "F. Murray Abraham",
+      "Richard Kind"
     ],
-    "answer": "6 January",
-    "difficulty": "easy"
+    "answer": "Nathan Lane",
+    "difficulty": "hard"
   },
   {
     "id": 31,
-    "question": "What is the Spanish tradition of an afternoon rest called?",
+    "question": "What kind of business does Teddy Dimas run?",
     "options": [
-      "Siesta",
-      "Sobremesa",
-      "Merienda",
-      "Tertulia"
+      "A gourmet food business",
+      "A funeral home",
+      "A jewelry store",
+      "A law firm"
     ],
-    "answer": "Siesta",
+    "answer": "A gourmet food business",
     "difficulty": "easy"
   },
   {
     "id": 32,
-    "question": "What name is given to the small savoury dishes served alongside drinks in Spanish bars?",
+    "question": "In Season 3, what does Oliver's stage play eventually get reworked into?",
     "options": [
-      "Tapas",
-      "Raciones",
-      "Entremeses",
-      "Aperitivos"
+      "A musical",
+      "An opera",
+      "A film",
+      "A radio drama"
     ],
-    "answer": "Tapas",
+    "answer": "A musical",
     "difficulty": "easy"
   },
   {
     "id": 33,
-    "question": "Which rice dish, cooked in a wide shallow pan, originated in Valencia?",
+    "question": "In Season 5, what do powerful figures scheme to turn the Arconia into?",
     "options": [
-      "Paella",
-      "Fabada",
-      "Cocido",
-      "Pisto"
+      "A casino",
+      "A hotel",
+      "A museum",
+      "A shopping mall"
     ],
-    "answer": "Paella",
+    "answer": "A casino",
     "difficulty": "easy"
   },
   {
     "id": 34,
-    "question": "Which chilled Andalusian soup is made from raw tomatoes and vegetables?",
+    "question": "In Season 1, what is the name of Teddy Dimas's deaf son?",
     "options": [
-      "Gazpacho",
-      "Sopa de ajo",
-      "Caldo gallego",
-      "Marmitako"
+      "Theo",
+      "Dylan",
+      "Hudson",
+      "Miles"
     ],
-    "answer": "Gazpacho",
+    "answer": "Theo",
     "difficulty": "easy"
   },
   {
     "id": 35,
-    "question": "Which Spanish omelette is made with eggs and potatoes?",
+    "question": "Which object of Mabel's was used to stab Bunny Folger?",
     "options": [
-      "Tortilla española",
-      "Revuelto",
-      "Migas",
-      "Escalivada"
+      "A knitting needle",
+      "A letter opener",
+      "A corkscrew",
+      "A screwdriver"
     ],
-    "answer": "Tortilla española",
-    "difficulty": "easy"
-  },
-  {
-    "id": 36,
-    "question": "Which fried dough snack is traditionally dipped in thick hot chocolate?",
-    "options": [
-      "Churros",
-      "Torrijas",
-      "Polvorones",
-      "Buñuelos"
-    ],
-    "answer": "Churros",
-    "difficulty": "easy"
-  },
-  {
-    "id": 37,
-    "question": "Which northern Spanish region is the country's best-known red wine area?",
-    "options": [
-      "Rioja",
-      "Priorat",
-      "Rías Baixas",
-      "Jumilla"
-    ],
-    "answer": "Rioja",
-    "difficulty": "easy"
-  },
-  {
-    "id": 38,
-    "question": "Which two clubs contest El Clásico?",
-    "options": [
-      "Real Madrid and Barcelona",
-      "Atlético Madrid and Barcelona",
-      "Real Madrid and Sevilla",
-      "Barcelona and Valencia"
-    ],
-    "answer": "Real Madrid and Barcelona",
-    "difficulty": "easy"
-  },
-  {
-    "id": 39,
-    "question": "What is the name of Real Madrid's home stadium?",
-    "options": [
-      "Santiago Bernabéu",
-      "Camp Nou",
-      "Mestalla",
-      "Metropolitano"
-    ],
-    "answer": "Santiago Bernabéu",
-    "difficulty": "easy"
-  },
-  {
-    "id": 40,
-    "question": "In which year did Spain win its first FIFA World Cup?",
-    "options": [
-      "2010",
-      "2006",
-      "2014",
-      "1998"
-    ],
-    "answer": "2010",
-    "difficulty": "easy"
-  },
-  {
-    "id": 41,
-    "question": "Which country did Spain beat in the final of Euro 2024?",
-    "options": [
-      "England",
-      "Germany",
-      "France",
-      "Netherlands"
-    ],
-    "answer": "England",
-    "difficulty": "easy"
-  },
-  {
-    "id": 42,
-    "question": "Which Spanish tennis player won 14 French Open titles?",
-    "options": [
-      "Rafael Nadal",
-      "Carlos Alcaraz",
-      "David Ferrer",
-      "Juan Carlos Ferrero"
-    ],
-    "answer": "Rafael Nadal",
-    "difficulty": "easy"
-  },
-  {
-    "id": 43,
-    "question": "Which Spanish driver won the Formula 1 world championship in 2005 and 2006?",
-    "options": [
-      "Fernando Alonso",
-      "Carlos Sainz Jr.",
-      "Pedro de la Rosa",
-      "Marc Gené"
-    ],
-    "answer": "Fernando Alonso",
-    "difficulty": "easy"
-  },
-  {
-    "id": 44,
-    "question": "Which Spanish tennis player won Wimbledon in both 2023 and 2024?",
-    "options": [
-      "Carlos Alcaraz",
-      "Pablo Carreño Busta",
-      "Roberto Bautista Agut",
-      "Alejandro Davidovich Fokina"
-    ],
-    "answer": "Carlos Alcaraz",
-    "difficulty": "easy"
-  },
-  {
-    "id": 45,
-    "question": "Which general ruled Spain as dictator until his death in 1975?",
-    "options": [
-      "Francisco Franco",
-      "Miguel Primo de Rivera",
-      "Manuel Azaña",
-      "Emilio Mola"
-    ],
-    "answer": "Francisco Franco",
-    "difficulty": "easy"
-  },
-  {
-    "id": 46,
-    "question": "Which explorer sailed west in 1492 under Spanish sponsorship?",
-    "options": [
-      "Christopher Columbus",
-      "Ferdinand Magellan",
-      "Hernán Cortés",
-      "Amerigo Vespucci"
-    ],
-    "answer": "Christopher Columbus",
-    "difficulty": "easy"
-  },
-  {
-    "id": 47,
-    "question": "Which Spanish series is known in Spanish as La Casa de Papel?",
-    "options": [
-      "Money Heist",
-      "Elite",
-      "Cable Girls",
-      "Sky Rojo"
-    ],
-    "answer": "Money Heist",
-    "difficulty": "easy"
-  },
-  {
-    "id": 48,
-    "question": "What is the official currency of Spain?",
-    "options": [
-      "Euro",
-      "Peseta",
-      "Escudo",
-      "Real"
-    ],
-    "answer": "Euro",
-    "difficulty": "easy"
-  },
-  {
-    "id": 49,
-    "question": "How many autonomous communities make up Spain?",
-    "options": [
-      "17",
-      "12",
-      "15",
-      "19"
-    ],
-    "answer": "17",
-    "difficulty": "easy"
-  },
-  {
-    "id": 50,
-    "question": "Who is the reigning King of Spain?",
-    "options": [
-      "Felipe VI",
-      "Juan Carlos I",
-      "Alfonso XIII",
-      "Carlos IV"
-    ],
-    "answer": "Felipe VI",
-    "difficulty": "easy"
-  },
-  {
-    "id": 51,
-    "question": "Which river is the longest flowing entirely within Spain?",
-    "options": [
-      "Ebro",
-      "Duero",
-      "Guadiana",
-      "Miño"
-    ],
-    "answer": "Ebro",
+    "answer": "A knitting needle",
     "difficulty": "medium"
   },
   {
-    "id": 52,
-    "question": "Which is the longest river on the Iberian Peninsula?",
+    "id": 36,
+    "question": "What did Bunny's dying words actually mean?",
     "options": [
-      "Tagus",
-      "Ebro",
-      "Duero",
-      "Guadalquivir"
+      "Fourteen Sandwich",
+      "Fourteen Special",
+      "Fortune Sandwich",
+      "Forty Sandwich"
     ],
-    "answer": "Tagus",
+    "answer": "Fourteen Sandwich",
+    "difficulty": "medium"
+  },
+  {
+    "id": 37,
+    "question": "What is the title of the priceless painting hidden in Bunny's apartment?",
+    "options": [
+      "The Savage",
+      "The Patron",
+      "The Widow",
+      "The Bloom"
+    ],
+    "answer": "The Savage",
+    "difficulty": "medium"
+  },
+  {
+    "id": 38,
+    "question": "The #14 sandwich Bunny loathed at the Pickle Diner pairs marmalade with which meat?",
+    "options": [
+      "Liverwurst",
+      "Pastrami",
+      "Bologna",
+      "Corned beef"
+    ],
+    "answer": "Liverwurst",
+    "difficulty": "medium"
+  },
+  {
+    "id": 39,
+    "question": "What nickname do the trio use for the crooked detective who helps the Season 2 killer?",
+    "options": [
+      "Glitter Guy",
+      "Sparkle Cop",
+      "Disco Dan",
+      "Neon Nick"
+    ],
+    "answer": "Glitter Guy",
+    "difficulty": "medium"
+  },
+  {
+    "id": 40,
+    "question": "Mabel's Season 2 love interest, a major red herring, works in which world?",
+    "options": [
+      "Art world",
+      "Fashion",
+      "Finance",
+      "Publishing"
+    ],
+    "answer": "Art world",
+    "difficulty": "medium"
+  },
+  {
+    "id": 41,
+    "question": "The Season 2 killer left a telltale clue while moving through the passageways. What did the killer do?",
+    "options": [
+      "Sneeze",
+      "Cough",
+      "Hum",
+      "Whistle"
+    ],
+    "answer": "Sneeze",
+    "difficulty": "medium"
+  },
+  {
+    "id": 42,
+    "question": "The painting hidden in Bunny's apartment is said to be worth how much?",
+    "options": [
+      "$14 million",
+      "$1.4 million",
+      "$4 million",
+      "$40 million"
+    ],
+    "answer": "$14 million",
+    "difficulty": "medium"
+  },
+  {
+    "id": 43,
+    "question": "What is the name of the Arconia's hidden internal passageways?",
+    "options": [
+      "Arcatacombs",
+      "Artacombs",
+      "Arconacombs",
+      "Arconiacatacombs"
+    ],
+    "answer": "Arcatacombs",
+    "difficulty": "medium"
+  },
+  {
+    "id": 44,
+    "question": "As teenagers, Mabel and her friends named their crime-solving group after which book-series sleuths?",
+    "options": [
+      "The Hardy Boys",
+      "The Bobbsey Twins",
+      "The Boxcar Children",
+      "Encyclopedia Brown"
+    ],
+    "answer": "The Hardy Boys",
+    "difficulty": "medium"
+  },
+  {
+    "id": 45,
+    "question": "Mabel and her teenage friends all got matching tattoos of which animal?",
+    "options": [
+      "A whale",
+      "A raven",
+      "A fox",
+      "A serpent"
+    ],
+    "answer": "A whale",
+    "difficulty": "medium"
+  },
+  {
+    "id": 46,
+    "question": "Charles eats the same breakfast every single morning. What is it?",
+    "options": [
+      "An omelette",
+      "A frittata",
+      "Poached eggs",
+      "Oatmeal"
+    ],
+    "answer": "An omelette",
+    "difficulty": "medium"
+  },
+  {
+    "id": 47,
+    "question": "In the show's world, on which network did Charles's detective series air?",
+    "options": [
+      "CBS",
+      "NBC",
+      "ABC",
+      "Fox"
+    ],
+    "answer": "CBS",
+    "difficulty": "medium"
+  },
+  {
+    "id": 48,
+    "question": "Before the trio start investigating, how is the death of their neighbor in Season 1 first ruled?",
+    "options": [
+      "A suicide",
+      "A heart attack",
+      "An accident",
+      "Natural causes"
+    ],
+    "answer": "A suicide",
+    "difficulty": "medium"
+  },
+  {
+    "id": 49,
+    "question": "Which item, mailed to the Season 1 victim and later found by Mabel, sends the investigation in a new direction?",
+    "options": [
+      "A ring",
+      "A watch",
+      "A necklace",
+      "A brooch"
+    ],
+    "answer": "A ring",
+    "difficulty": "medium"
+  },
+  {
+    "id": 50,
+    "question": "Which room of Oliver's apartment do the trio use to record their earliest podcast segments?",
+    "options": [
+      "The closet",
+      "The bathroom",
+      "The kitchen",
+      "The study"
+    ],
+    "answer": "The closet",
+    "difficulty": "medium"
+  },
+  {
+    "id": 51,
+    "question": "In Season 1, Charles admits he has lived alone for how many years?",
+    "options": [
+      "28",
+      "18",
+      "25",
+      "40"
+    ],
+    "answer": "28",
+    "difficulty": "hard"
+  },
+  {
+    "id": 52,
+    "question": "The Season 1 victim's death is tied to a hidden stash of which valuables?",
+    "options": [
+      "Jewelry",
+      "Cash",
+      "Bonds",
+      "Artwork"
+    ],
+    "answer": "Jewelry",
     "difficulty": "medium"
   },
   {
     "id": 53,
-    "question": "Which river flows through Seville to the Atlantic?",
+    "question": "Ben Glenroy was first poisoned by a treat laced with rat poison. Which treat?",
     "options": [
-      "Guadalquivir",
-      "Guadiana",
-      "Genil",
-      "Odiel"
+      "A cookie",
+      "A cupcake",
+      "A chocolate",
+      "A muffin"
     ],
-    "answer": "Guadalquivir",
+    "answer": "A cookie",
     "difficulty": "medium"
   },
   {
     "id": 54,
-    "question": "What is the highest peak in mainland Spain?",
+    "question": "After surviving the poisoning, Ben was pushed down which structure to his death?",
     "options": [
-      "Mulhacén",
-      "Aneto",
-      "Veleta",
-      "Torre de Cerredo"
+      "An elevator shaft",
+      "A stairwell",
+      "A fire escape",
+      "A laundry chute"
     ],
-    "answer": "Mulhacén",
+    "answer": "An elevator shaft",
     "difficulty": "medium"
   },
   {
     "id": 55,
-    "question": "Mulhacén rises in which mountain range?",
+    "question": "Oliver's play \"Death Rattle\" is reworked mid-season into a musical with what new title?",
     "options": [
-      "Sierra Nevada",
-      "Sierra Morena",
-      "Sierra de Gredos",
-      "Serranía de Ronda"
+      "Death Rattle Dazzle",
+      "Death Rattle Rhapsody",
+      "Rattle and Roll",
+      "Death Rattle Live"
     ],
-    "answer": "Sierra Nevada",
+    "answer": "Death Rattle Dazzle",
     "difficulty": "medium"
   },
   {
     "id": 56,
-    "question": "Which is Spain's largest autonomous community by land area?",
+    "question": "What is the title of the Season 3 musical's emotional duet?",
     "options": [
-      "Castile and León",
-      "Andalusia",
-      "Castilla-La Mancha",
-      "Aragon"
+      "For the Sake of the Child",
+      "For the Sake of a Song",
+      "For the Sake of a Dream",
+      "For the Sake of the Mother"
     ],
-    "answer": "Castile and León",
+    "answer": "For the Sake of the Child",
     "difficulty": "medium"
   },
   {
     "id": 57,
-    "question": "Which body of water lies off Spain's northern coast?",
+    "question": "Which illness does producer Donna claim to be dying of?",
     "options": [
-      "Bay of Biscay",
-      "Gulf of Lion",
-      "Celtic Sea",
-      "Alboran Sea"
+      "Cancer",
+      "Heart disease",
+      "Kidney failure",
+      "Emphysema"
     ],
-    "answer": "Bay of Biscay",
+    "answer": "Cancer",
     "difficulty": "medium"
   },
   {
     "id": 58,
-    "question": "Which Andalusian national park is one of Europe's most important wetland bird sanctuaries?",
+    "question": "What nickname is given to the working-class residents of the Arconia's West Tower?",
     "options": [
-      "Doñana",
-      "Cabañeros",
-      "Monfragüe",
-      "Tablas de Daimiel"
+      "The Westies",
+      "The Towers",
+      "The Westenders",
+      "The Backsiders"
     ],
-    "answer": "Doñana",
+    "answer": "The Westies",
     "difficulty": "medium"
   },
   {
     "id": 59,
-    "question": "Which town is the southernmost point of mainland Spain, closest to Africa?",
+    "question": "Sazz's killer murdered her to hide that he had stolen which work of hers?",
     "options": [
-      "Tarifa",
-      "Algeciras",
-      "Cádiz",
-      "Almería"
+      "Screenplay",
+      "Stunt reel",
+      "Memoir",
+      "Inheritance"
     ],
-    "answer": "Tarifa",
+    "answer": "Screenplay",
     "difficulty": "medium"
   },
   {
     "id": 60,
-    "question": "Which region in Spain's northwest has strong Celtic traditions and its own co-official language?",
+    "question": "In the show's world, the trio's podcast is being adapted into a film at which studio?",
     "options": [
-      "Galicia",
-      "Asturias",
-      "Cantabria",
-      "Navarre"
+      "Paramount",
+      "Universal",
+      "Warner Bros.",
+      "Sony"
     ],
-    "answer": "Galicia",
+    "answer": "Paramount",
     "difficulty": "medium"
   },
   {
     "id": 61,
-    "question": "Which Spanish autonomous city sits on the North African coast directly across from Gibraltar?",
+    "question": "Down which part of the building did the killer dispose of Sazz's body?",
     "options": [
-      "Ceuta",
-      "Melilla",
-      "Alhucemas",
-      "Chafarinas"
+      "Trash chute",
+      "Laundry chute",
+      "Elevator shaft",
+      "Fire escape"
     ],
-    "answer": "Ceuta",
+    "answer": "Trash chute",
     "difficulty": "medium"
   },
   {
     "id": 62,
-    "question": "Which name was given to the Muslim-ruled territory of medieval Spain?",
+    "question": "Where in the Arconia was Lester's body discovered?",
     "options": [
-      "Al-Andalus",
-      "Ifriqiya",
-      "Al-Maghrib",
-      "Al-Sham"
+      "The fountain",
+      "The elevator",
+      "The boiler room",
+      "The garden shed"
     ],
-    "answer": "Al-Andalus",
+    "answer": "The fountain",
     "difficulty": "medium"
   },
   {
     "id": 63,
-    "question": "Which Spanish king launched the Armada against England in 1588?",
+    "question": "What severed body part turns up in Oliver's shrimp cocktail?",
     "options": [
-      "Philip II",
-      "Charles V",
-      "Philip IV",
-      "Ferdinand II"
+      "A finger",
+      "An ear",
+      "A toe",
+      "A tooth"
     ],
-    "answer": "Philip II",
+    "answer": "A finger",
     "difficulty": "medium"
   },
   {
     "id": 64,
-    "question": "Which Spanish monarch, known at home as Carlos I, also ruled as Holy Roman Emperor?",
+    "question": "Lester's own killer is ultimately revealed to hold which public office?",
     "options": [
-      "Charles V",
-      "Philip III",
-      "Ferdinand VII",
-      "Charles III"
+      "Mayor",
+      "Senator",
+      "Governor",
+      "District attorney"
     ],
-    "answer": "Charles V",
+    "answer": "Mayor",
     "difficulty": "medium"
   },
   {
     "id": 65,
-    "question": "Which 1805 naval battle saw a combined Franco-Spanish fleet defeated off the Spanish coast?",
+    "question": "In which season does the trio investigate a murder tied to a Broadway production?",
     "options": [
-      "Trafalgar",
-      "Lepanto",
-      "Cape St Vincent",
-      "Cartagena"
+      "Season 3",
+      "Season 1",
+      "Season 2",
+      "Season 4"
     ],
-    "answer": "Trafalgar",
+    "answer": "Season 3",
     "difficulty": "medium"
   },
   {
     "id": 66,
-    "question": "Which years did the Spanish Civil War span?",
+    "question": "In which season is the podcast being adapted into a Hollywood movie?",
     "options": [
-      "1936–1939",
-      "1931–1936",
-      "1934–1938",
-      "1939–1945"
+      "Season 4",
+      "Season 2",
+      "Season 3",
+      "Season 5"
     ],
-    "answer": "1936–1939",
+    "answer": "Season 4",
     "difficulty": "medium"
   },
   {
     "id": 67,
-    "question": "In which year was Spain's current constitution approved?",
+    "question": "In which season is the murder victim the Arconia's board president?",
     "options": [
-      "1978",
-      "1975",
-      "1981",
-      "1986"
+      "Season 2",
+      "Season 1",
+      "Season 3",
+      "Season 4"
     ],
-    "answer": "1978",
+    "answer": "Season 2",
     "difficulty": "medium"
   },
   {
     "id": 68,
-    "question": "Who served as Spain's first prime minister after the return to democracy?",
+    "question": "By the end of 2025, how many seasons of the show had premiered?",
     "options": [
-      "Adolfo Suárez",
-      "Leopoldo Calvo-Sotelo",
-      "Felipe González",
-      "Carlos Arias Navarro"
+      "5",
+      "3",
+      "4",
+      "6"
     ],
-    "answer": "Adolfo Suárez",
+    "answer": "5",
     "difficulty": "medium"
   },
   {
     "id": 69,
-    "question": "In which year did Spain join the European Economic Community?",
+    "question": "What is the name of Oliver's beloved pet dog who gets poisoned in Season 1?",
     "options": [
-      "1986",
-      "1975",
-      "1992",
-      "1999"
+      "Winnie",
+      "Bandit",
+      "Rocky",
+      "Duke"
     ],
-    "answer": "1986",
-    "difficulty": "medium"
+    "answer": "Winnie",
+    "difficulty": "hard"
   },
   {
     "id": 70,
-    "question": "Which Spanish king abdicated the throne in 2014?",
+    "question": "Charles discovers Howard's dead cat stored inside which appliance?",
     "options": [
-      "Juan Carlos I",
-      "Alfonso XIII",
-      "Amadeo I",
-      "Alfonso XII"
+      "The freezer",
+      "The oven",
+      "The dishwasher",
+      "The dryer"
     ],
-    "answer": "Juan Carlos I",
-    "difficulty": "medium"
+    "answer": "The freezer",
+    "difficulty": "hard"
   },
   {
     "id": 71,
-    "question": "What is the collective name for Spain's two-chamber parliament?",
+    "question": "The black-market jewelry dealer in Season 1 is known only by which alias?",
     "options": [
-      "Cortes Generales",
-      "Consejo de Ministros",
-      "Consejo de Estado",
-      "Junta General"
+      "Angel",
+      "Saint",
+      "Ghost",
+      "Halo"
     ],
-    "answer": "Cortes Generales",
-    "difficulty": "medium"
+    "answer": "Angel",
+    "difficulty": "hard"
   },
   {
     "id": 72,
-    "question": "What is the lower house of the Spanish parliament called?",
+    "question": "Teddy Dimas is famous for producing which food product that sponsors the podcast?",
     "options": [
-      "Congress of Deputies",
-      "Senate",
-      "National Assembly",
-      "Chamber of Representatives"
+      "Dips",
+      "Pickles",
+      "Sausages",
+      "Cheeses"
     ],
-    "answer": "Congress of Deputies",
-    "difficulty": "medium"
+    "answer": "Dips",
+    "difficulty": "hard"
   },
   {
     "id": 73,
-    "question": "How many seats does the Congress of Deputies hold?",
+    "question": "During which occasion did Zoe fall to her death from the Arconia roof?",
     "options": [
-      "350",
-      "250",
-      "300",
-      "400"
+      "New Year's Eve",
+      "Halloween",
+      "The Fourth of July",
+      "Christmas Eve"
     ],
-    "answer": "350",
-    "difficulty": "medium"
+    "answer": "New Year's Eve",
+    "difficulty": "hard"
   },
   {
     "id": 74,
-    "question": "On which date is Spain's national day observed?",
+    "question": "For how many years was Oscar wrongly imprisoned over Zoe's death?",
     "options": [
-      "12 October",
-      "6 December",
-      "2 May",
-      "1 May"
+      "Ten years",
+      "Five years",
+      "Fifteen years",
+      "Twenty years"
     ],
-    "answer": "12 October",
-    "difficulty": "medium"
+    "answer": "Ten years",
+    "difficulty": "hard"
   },
   {
     "id": 75,
-    "question": "Which Spanish city is famous for its towering Roman aqueduct?",
+    "question": "Tim's cryptic notes referred to a secret contact by which initials?",
     "options": [
-      "Segovia",
-      "Mérida",
-      "Tarragona",
-      "Zaragoza"
+      "G.M.",
+      "J.K.",
+      "T.D.",
+      "R.C."
     ],
-    "answer": "Segovia",
-    "difficulty": "medium"
+    "answer": "G.M.",
+    "difficulty": "hard"
   },
   {
     "id": 76,
-    "question": "Which vast monastery-palace northwest of Madrid was built for Philip II?",
+    "question": "Which unusual prop does Brazzos use while making a point on his detective show?",
     "options": [
-      "El Escorial",
-      "Montserrat",
-      "Yuste",
-      "Poblet"
+      "A dental-floss toothpick",
+      "A pipe",
+      "A pocket watch",
+      "A monocle"
     ],
-    "answer": "El Escorial",
-    "difficulty": "medium"
+    "answer": "A dental-floss toothpick",
+    "difficulty": "hard"
   },
   {
     "id": 77,
-    "question": "Which architect designed Valencia's City of Arts and Sciences?",
+    "question": "In the show's world, how many seasons did the Brazzos detective series run?",
     "options": [
-      "Santiago Calatrava",
-      "Rafael Moneo",
-      "Ricardo Bofill",
-      "Enric Miralles"
+      "Nine",
+      "Five",
+      "Seven",
+      "Twelve"
     ],
-    "answer": "Santiago Calatrava",
-    "difficulty": "medium"
+    "answer": "Nine",
+    "difficulty": "hard"
   },
   {
     "id": 78,
-    "question": "Which city is home to the Giralda tower and the Royal Alcázar?",
+    "question": "In the Brazzos reboot, Charles returns billed as which version of the character?",
     "options": [
-      "Seville",
-      "Cádiz",
-      "Jerez de la Frontera",
-      "Málaga"
+      "Uncle Brazzos",
+      "Old Brazzos",
+      "Brazzos Sr.",
+      "Detective Brazzos"
     ],
-    "answer": "Seville",
-    "difficulty": "medium"
+    "answer": "Uncle Brazzos",
+    "difficulty": "hard"
   },
   {
     "id": 79,
-    "question": "Which Spanish cheese is made from sheep's milk in the La Mancha region?",
+    "question": "Which apartment number does Teddy Dimas live in?",
     "options": [
-      "Manchego",
-      "Cabrales",
-      "Idiazábal",
-      "Mahón"
+      "6B",
+      "14E",
+      "9C",
+      "12A"
     ],
-    "answer": "Manchego",
-    "difficulty": "medium"
+    "answer": "6B",
+    "difficulty": "hard"
   },
   {
     "id": 80,
-    "question": "Which fortified wine takes its name from the Andalusian town of Jerez?",
+    "question": "From which of Cinda's favorite foods did the Season 2 killer take her alias?",
     "options": [
-      "Sherry",
-      "Port",
-      "Madeira",
-      "Marsala"
+      "Bagel",
+      "Coffee",
+      "Croissant",
+      "Muffin"
     ],
-    "answer": "Sherry",
-    "difficulty": "medium"
+    "answer": "Bagel",
+    "difficulty": "hard"
   },
   {
     "id": 81,
-    "question": "Which Spanish sparkling wine is produced mainly in Catalonia?",
+    "question": "Ben took credit for his brother Adam's childhood creation, a comic book. What was it called?",
     "options": [
-      "Cava",
-      "Txakoli",
-      "Albariño",
-      "Orujo"
+      "CoBro",
+      "BroCo",
+      "DynaBro",
+      "Brothers United"
     ],
-    "answer": "Cava",
-    "difficulty": "medium"
+    "answer": "CoBro",
+    "difficulty": "hard"
   },
   {
     "id": 82,
-    "question": "Spain is the world's largest producer of which product?",
+    "question": "Meryl Streep's character is cast as which role in Oliver's play?",
     "options": [
-      "Olive oil",
-      "Sunflower oil",
-      "Rapeseed oil",
-      "Palm oil"
+      "The Nanny",
+      "The Widow",
+      "The Governess",
+      "The Nurse"
     ],
-    "answer": "Olive oil",
-    "difficulty": "medium"
+    "answer": "The Nanny",
+    "difficulty": "hard"
   },
   {
     "id": 83,
-    "question": "Which drink is Asturias best known for producing and pouring from a height?",
+    "question": "How many Pickwick siblings feature in Charles's tongue-twisting patter song?",
     "options": [
-      "Cider",
-      "Vermouth",
-      "Pacharán",
-      "Anís"
+      "Three",
+      "Two",
+      "Four",
+      "Five"
     ],
-    "answer": "Cider",
-    "difficulty": "medium"
+    "answer": "Three",
+    "difficulty": "hard"
   },
   {
     "id": 84,
-    "question": "What are the skewered bar snacks of the Basque Country called?",
+    "question": "Charles's girlfriend Joy previously worked with him on Brazzos in which job?",
     "options": [
-      "Pintxos",
-      "Croquetas",
-      "Bocadillos",
-      "Empanadillas"
+      "Makeup artist",
+      "Script supervisor",
+      "Stunt coordinator",
+      "Publicist"
     ],
-    "answer": "Pintxos",
-    "difficulty": "medium"
+    "answer": "Makeup artist",
+    "difficulty": "hard"
   },
   {
     "id": 85,
-    "question": "Which sweet Valencian drink is made from tiger nuts?",
+    "question": "What is the name for the rehearsal where the cast first sings with the full orchestra?",
     "options": [
-      "Horchata",
-      "Agua de Valencia",
-      "Sangría",
-      "Tinto de verano"
+      "Sitzprobe",
+      "Tech run",
+      "Table read",
+      "Put-in"
     ],
-    "answer": "Horchata",
-    "difficulty": "medium"
+    "answer": "Sitzprobe",
+    "difficulty": "hard"
   },
   {
     "id": 86,
-    "question": "Which Spanish court painter created Las Meninas?",
+    "question": "In what medium was a threatening message on Ben's dressing-room mirror written?",
     "options": [
-      "Diego Velázquez",
-      "Francisco Goya",
-      "Bartolomé Murillo",
-      "Juan de Valdés Leal"
+      "Lipstick",
+      "Blood",
+      "Marker",
+      "Spray paint"
     ],
-    "answer": "Diego Velázquez",
-    "difficulty": "medium"
+    "answer": "Lipstick",
+    "difficulty": "hard"
   },
   {
     "id": 87,
-    "question": "Who painted The Third of May 1808, depicting executions during the Peninsular War?",
+    "question": "What is the name for the Ron Howard project in Season 4?",
     "options": [
-      "Francisco Goya",
-      "Joaquín Sorolla",
-      "Francisco de Zurbarán",
-      "Mariano Fortuny"
+      "Project Ronkonkoma",
+      "Project Montauk",
+      "Project Babylon",
+      "Project Rononkoma"
     ],
-    "answer": "Francisco Goya",
-    "difficulty": "medium"
+    "answer": "Project Ronkonkoma",
+    "difficulty": "hard"
   },
   {
     "id": 88,
-    "question": "Which painter, born in Crete, spent most of his career in Toledo?",
+    "question": "The Season 5 mobster went by which nickname?",
     "options": [
-      "El Greco",
-      "José de Ribera",
-      "Bartolomé Murillo",
-      "Alonso Cano"
+      "The Neck",
+      "The Nose",
+      "The Chin",
+      "The Knuckle"
     ],
-    "answer": "El Greco",
-    "difficulty": "medium"
+    "answer": "The Neck",
+    "difficulty": "hard"
   },
   {
     "id": 89,
-    "question": "Which Madrid museum displays Guernica?",
+    "question": "Autocorrect jumbled Lester's dying attempt to text his killer's name into what word instead?",
     "options": [
-      "Reina Sofía Museum",
-      "Prado Museum",
-      "Thyssen-Bornemisza Museum",
-      "Lázaro Galdiano Museum"
+      "It's beautiful",
+      "It's bountiful",
+      "It's baffling",
+      "It's brutal"
     ],
-    "answer": "Reina Sofía Museum",
-    "difficulty": "medium"
+    "answer": "It's beautiful",
+    "difficulty": "hard"
   },
   {
     "id": 90,
-    "question": "Which Spanish director won an Oscar for All About My Mother?",
+    "question": "What's the name of Teddy Dimeo's black market business?",
     "options": [
-      "Pedro Almodóvar",
-      "Alejandro Amenábar",
-      "Luis Buñuel",
-      "Carlos Saura"
+      "Angel Inc.",
+      "Seraphim Holdings",
+      "Halo Enterprises",
+      "Cherub Capital"
     ],
-    "answer": "Pedro Almodóvar",
-    "difficulty": "medium"
+    "answer": "Angel Inc.",
+    "difficulty": "hard"
   },
   {
     "id": 91,
-    "question": "Which Spanish poet and playwright, author of Blood Wedding, was killed in 1936?",
+    "question": "What's the name of Charles's fictional detective series?",
     "options": [
-      "Federico García Lorca",
-      "Antonio Machado",
-      "Miguel Hernández",
-      "Rafael Alberti"
+      "Brazzos",
+      "Manzano",
+      "Voss",
+      "Kirkland"
     ],
-    "answer": "Federico García Lorca",
+    "answer": "Brazzos",
     "difficulty": "medium"
   },
   {
     "id": 92,
-    "question": "Which Spanish group owns the Zara clothing chain?",
+    "question": "What kind of cookie was laced with rat poison in season 3?",
     "options": [
-      "Inditex",
-      "Mango",
-      "Cortefiel",
-      "El Corte Inglés"
+      "Schmackary's",
+      "Balthazar's",
+      "Ovenly's",
+      "Doughlicious"
     ],
-    "answer": "Inditex",
-    "difficulty": "medium"
+    "answer": "Schmackary's",
+    "difficulty": "hard"
   },
   {
     "id": 93,
-    "question": "Which Spaniard won the 1906 Nobel Prize for his work on the structure of the nervous system?",
+    "question": "What is the name of the theater critic who gave a bad review to Ben?",
     "options": [
-      "Santiago Ramón y Cajal",
-      "Severo Ochoa",
-      "Gregorio Marañón",
-      "Juan de la Cierva"
+      "Maxine",
+      "Beatrice",
+      "Vivian",
+      "Constance"
     ],
-    "answer": "Santiago Ramón y Cajal",
-    "difficulty": "medium"
+    "answer": "Maxine",
+    "difficulty": "hard"
   },
   {
     "id": 94,
-    "question": "Which country did Spain beat in the 2026 World Cup final?",
+    "question": "What kind of cancer does Donna claim to have?",
     "options": [
-      "Argentina",
-      "Brazil",
-      "France",
-      "Germany"
+      "Lung",
+      "Breast",
+      "Pancreatic",
+      "Ovarian"
     ],
-    "answer": "Argentina",
-    "difficulty": "medium"
+    "answer": "Lung",
+    "difficulty": "easy"
   },
   {
     "id": 95,
-    "question": "Who scored Spain's extra-time winner in the 2026 World Cup final?",
+    "question": "What's the name of Howard's cat?",
     "options": [
-      "Ferran Torres",
-      "Lamine Yamal",
-      "Mikel Oyarzabal",
-      "Álvaro Morata"
+      "Evelyn",
+      "Winnie",
+      "Bunny",
+      "Rhonda"
     ],
-    "answer": "Ferran Torres",
-    "difficulty": "medium"
+    "answer": "Evelyn",
+    "difficulty": "easy"
   },
   {
     "id": 96,
-    "question": "What is the name of Spain's three-week Grand Tour cycling race?",
+    "question": "What number is Charles's apartment?",
     "options": [
-      "Vuelta a España",
-      "Volta a Catalunya",
-      "Itzulia Basque Country",
-      "Clásica San Sebastián"
+      "14C",
+      "12E",
+      "12A",
+      "9F"
     ],
-    "answer": "Vuelta a España",
-    "difficulty": "medium"
+    "answer": "14C",
+    "difficulty": "hard"
   },
   {
     "id": 97,
-    "question": "Which Spanish cyclist won five consecutive Tours de France in the 1990s?",
+    "question": "What number is Oliver's apartment?",
     "options": [
-      "Miguel Indurain",
-      "Alberto Contador",
-      "Pedro Delgado",
-      "Federico Bahamontes"
+      "12E",
+      "14C",
+      "12A",
+      "9F"
     ],
-    "answer": "Miguel Indurain",
-    "difficulty": "medium"
+    "answer": "12E",
+    "difficulty": "hard"
   },
   {
     "id": 98,
-    "question": "Which stadium is Atlético Madrid's home ground?",
+    "question": "What number is Mabel's apartment?",
     "options": [
-      "Metropolitano",
-      "Vicente Calderón",
-      "Mestalla",
-      "Benito Villamarín"
+      "12A",
+      "14C",
+      "12E",
+      "9F"
     ],
-    "answer": "Metropolitano",
-    "difficulty": "medium"
-  },
-  {
-    "id": 99,
-    "question": "Which Spanish golfer won the Masters in 1980 and 1983?",
-    "options": [
-      "Seve Ballesteros",
-      "José María Olazábal",
-      "Sergio García",
-      "Jon Rahm"
-    ],
-    "answer": "Seve Ballesteros",
-    "difficulty": "medium"
-  },
-  {
-    "id": 100,
-    "question": "Which Spanish basketball player won two NBA titles with the Los Angeles Lakers?",
-    "options": [
-      "Pau Gasol",
-      "Marc Gasol",
-      "Ricky Rubio",
-      "Juan Carlos Navarro"
-    ],
-    "answer": "Pau Gasol",
-    "difficulty": "medium"
-  },
-  {
-    "id": 101,
-    "question": "In which year did a Christian coalition defeat the Almohads at Las Navas de Tolosa?",
-    "options": [
-      "1212",
-      "1085",
-      "1248",
-      "1340"
-    ],
-    "answer": "1212",
-    "difficulty": "hard"
-  },
-  {
-    "id": 102,
-    "question": "The 1469 marriage of Isabella and Ferdinand united which two crowns?",
-    "options": [
-      "Castile and Aragon",
-      "Castile and Navarre",
-      "Aragon and Portugal",
-      "León and Navarre"
-    ],
-    "answer": "Castile and Aragon",
-    "difficulty": "hard"
-  },
-  {
-    "id": 103,
-    "question": "By what name is Muhammad XII, the last Nasrid ruler to surrender Granada in 1492, popularly known?",
-    "options": [
-      "Boabdil",
-      "Almanzor",
-      "Abd al-Rahman III",
-      "Muhammad V"
-    ],
-    "answer": "Boabdil",
-    "difficulty": "hard"
-  },
-  {
-    "id": 104,
-    "question": "Which Visigothic king converted from Arianism to Catholicism at the Third Council of Toledo in 589?",
-    "options": [
-      "Reccared I",
-      "Leovigild",
-      "Roderic",
-      "Wamba"
-    ],
-    "answer": "Reccared I",
-    "difficulty": "hard"
-  },
-  {
-    "id": 105,
-    "question": "Which 711 battle opened the Umayyad conquest of the Visigothic kingdom?",
-    "options": [
-      "Guadalete",
-      "Covadonga",
-      "Sagrajas",
-      "Alarcos"
-    ],
-    "answer": "Guadalete",
-    "difficulty": "hard"
-  },
-  {
-    "id": 106,
-    "question": "Which 1494 treaty divided newly discovered lands between Spain and Portugal?",
-    "options": [
-      "Tordesillas",
-      "Zaragoza",
-      "Alcáçovas",
-      "Utrecht"
-    ],
-    "answer": "Tordesillas",
-    "difficulty": "hard"
-  },
-  {
-    "id": 107,
-    "question": "Which conflict of 1701 to 1714 placed the Bourbon dynasty on the Spanish throne?",
-    "options": [
-      "War of the Spanish Succession",
-      "War of the Austrian Succession",
-      "Nine Years' War",
-      "Thirty Years' War"
-    ],
-    "answer": "War of the Spanish Succession",
-    "difficulty": "hard"
-  },
-  {
-    "id": 108,
-    "question": "Which 1808 to 1814 conflict against Napoleon is called the War of Independence in Spain?",
-    "options": [
-      "Peninsular War",
-      "First Carlist War",
-      "War of the Pyrenees",
-      "Rif War"
-    ],
-    "answer": "Peninsular War",
-    "difficulty": "hard"
-  },
-  {
-    "id": 109,
-    "question": "Which German air force unit bombed the Basque town of Gernika in April 1937?",
-    "options": [
-      "Condor Legion",
-      "Blue Division",
-      "Afrika Korps",
-      "Fallschirmjäger"
-    ],
-    "answer": "Condor Legion",
-    "difficulty": "hard"
-  },
-  {
-    "id": 110,
-    "question": "Which Civil Guard lieutenant colonel led the storming of the Congress of Deputies on 23 February 1981?",
-    "options": [
-      "Antonio Tejero",
-      "Jaime Milans del Bosch",
-      "Alfonso Armada",
-      "Luis Carrero Blanco"
-    ],
-    "answer": "Antonio Tejero",
-    "difficulty": "hard"
-  },
-  {
-    "id": 111,
-    "question": "In which year did Spain hold its first free general election after the Franco era?",
-    "options": [
-      "1977",
-      "1975",
-      "1979",
-      "1982"
-    ],
-    "answer": "1977",
-    "difficulty": "hard"
-  },
-  {
-    "id": 112,
-    "question": "Which military alliance did Spain join in 1982?",
-    "options": [
-      "NATO",
-      "Western European Union",
-      "Warsaw Pact",
-      "Baghdad Pact"
-    ],
-    "answer": "NATO",
-    "difficulty": "hard"
-  },
-  {
-    "id": 113,
-    "question": "Who was Spain's prime minister at the time of the March 2004 Madrid train bombings?",
-    "options": [
-      "José María Aznar",
-      "Felipe González",
-      "Mariano Rajoy",
-      "José Luis Rodríguez Zapatero"
-    ],
-    "answer": "José María Aznar",
-    "difficulty": "hard"
-  },
-  {
-    "id": 114,
-    "question": "Which Catalan president went into self-imposed exile in Belgium after the 2017 independence bid?",
-    "options": [
-      "Carles Puigdemont",
-      "Artur Mas",
-      "Quim Torra",
-      "Oriol Junqueras"
-    ],
-    "answer": "Carles Puigdemont",
-    "difficulty": "hard"
-  },
-  {
-    "id": 115,
-    "question": "Which countercultural movement swept Madrid in the years after Franco's death?",
-    "options": [
-      "La Movida Madrileña",
-      "Generation of '27",
-      "Generation of '98",
-      "Noucentisme"
-    ],
-    "answer": "La Movida Madrileña",
-    "difficulty": "hard"
-  },
-  {
-    "id": 116,
-    "question": "Which Spanish autonomous city lies on Morocco's Mediterranean coast, well to the east of Ceuta?",
-    "options": [
-      "Melilla",
-      "Alhucemas",
-      "Vélez de la Gomera",
-      "Perejil"
-    ],
-    "answer": "Melilla",
-    "difficulty": "hard"
-  },
-  {
-    "id": 117,
-    "question": "Which is the westernmost of the Canary Islands?",
-    "options": [
-      "El Hierro",
-      "La Gomera",
-      "La Palma",
-      "Fuerteventura"
-    ],
-    "answer": "El Hierro",
-    "difficulty": "hard"
-  },
-  {
-    "id": 118,
-    "question": "Which Spanish city, founded by the Phoenicians around 1100 BC, is often called the oldest continuously inhabited city in Western Europe?",
-    "options": [
-      "Cádiz",
-      "Tarragona",
-      "Málaga",
-      "Cartagena"
-    ],
-    "answer": "Cádiz",
-    "difficulty": "hard"
-  },
-  {
-    "id": 119,
-    "question": "Which arid region of Almería served as the backdrop for many spaghetti westerns?",
-    "options": [
-      "Tabernas",
-      "Bardenas Reales",
-      "Monegros",
-      "Cabo de Gata"
-    ],
-    "answer": "Tabernas",
-    "difficulty": "hard"
-  },
-  {
-    "id": 120,
-    "question": "Which Asturian mountain range gives its name to the national park declared around Covadonga in 1918?",
-    "options": [
-      "Picos de Europa",
-      "Ordesa y Monte Perdido",
-      "Sierra de Guadarrama",
-      "Aigüestortes"
-    ],
-    "answer": "Picos de Europa",
-    "difficulty": "hard"
-  },
-  {
-    "id": 121,
-    "question": "Which sea forms the westernmost basin of the Mediterranean, between Spain and Morocco?",
-    "options": [
-      "Alborán Sea",
-      "Balearic Sea",
-      "Ligurian Sea",
-      "Tyrrhenian Sea"
-    ],
-    "answer": "Alborán Sea",
-    "difficulty": "hard"
-  },
-  {
-    "id": 122,
-    "question": "Which river forms the northernmost stretch of the Spain–Portugal border, separating Galicia from Portugal?",
-    "options": [
-      "Miño",
-      "Duero",
-      "Tagus",
-      "Guadiana"
-    ],
-    "answer": "Miño",
-    "difficulty": "hard"
-  },
-  {
-    "id": 123,
-    "question": "Which Spanish town is an exclave entirely surrounded by French territory?",
-    "options": [
-      "Llívia",
-      "Olivenza",
-      "Rihonor",
-      "Valle de Arán"
-    ],
-    "answer": "Llívia",
-    "difficulty": "hard"
-  },
-  {
-    "id": 124,
-    "question": "Which ancient irrigation court, recognised by UNESCO, meets weekly outside Valencia Cathedral?",
-    "options": [
-      "Tribunal de las Aguas",
-      "Consejo de Hombres Buenos",
-      "Junta de Acequias",
-      "Cofradía de Regantes"
-    ],
-    "answer": "Tribunal de las Aguas",
-    "difficulty": "hard"
-  },
-  {
-    "id": 125,
-    "question": "Which language of the Val d'Aran, a variety of Occitan, is co-official across Catalonia?",
-    "options": [
-      "Aranese",
-      "Asturian",
-      "Aragonese",
-      "Leonese"
-    ],
-    "answer": "Aranese",
-    "difficulty": "hard"
-  },
-  {
-    "id": 126,
-    "question": "In which year was the Real Academia Española founded?",
-    "options": [
-      "1713",
-      "1635",
-      "1780",
-      "1808"
-    ],
-    "answer": "1713",
-    "difficulty": "hard"
-  },
-  {
-    "id": 127,
-    "question": "How many letters does the modern Spanish alphabet contain?",
-    "options": [
-      "27",
-      "26",
-      "28",
-      "29"
-    ],
-    "answer": "27",
-    "difficulty": "hard"
-  },
-  {
-    "id": 128,
-    "question": "Which Spanish university, founded in 1218, is the country's oldest?",
-    "options": [
-      "Salamanca",
-      "Alcalá de Henares",
-      "Valladolid",
-      "Zaragoza"
-    ],
-    "answer": "Salamanca",
-    "difficulty": "hard"
-  },
-  {
-    "id": 129,
-    "question": "Which Spanish novelist won the Nobel Prize in Literature in 1989?",
-    "options": [
-      "Camilo José Cela",
-      "Juan Ramón Jiménez",
-      "Vicente Aleixandre",
-      "Jacinto Benavente"
-    ],
-    "answer": "Camilo José Cela",
-    "difficulty": "hard"
-  },
-  {
-    "id": 130,
-    "question": "Which Spanish composer wrote the Concierto de Aranjuez?",
-    "options": [
-      "Joaquín Rodrigo",
-      "Manuel de Falla",
-      "Isaac Albéniz",
-      "Enrique Granados"
-    ],
-    "answer": "Joaquín Rodrigo",
-    "difficulty": "hard"
-  },
-  {
-    "id": 131,
-    "question": "Which Catalan musician, famed for his interpretations of the Bach cello suites, went into exile after the Civil War?",
-    "options": [
-      "Pablo Casals",
-      "Andrés Segovia",
-      "Alicia de Larrocha",
-      "Jordi Savall"
-    ],
-    "answer": "Pablo Casals",
-    "difficulty": "hard"
-  },
-  {
-    "id": 132,
-    "question": "Which Alejandro Amenábar film won the Oscar for Best Foreign Language Film in 2005?",
-    "options": [
-      "The Sea Inside",
-      "Volver",
-      "Belle Époque",
-      "Talk to Her"
-    ],
-    "answer": "The Sea Inside",
-    "difficulty": "hard"
-  },
-  {
-    "id": 133,
-    "question": "Which artist's foundation occupies a modernist building on Barcelona's Montjuïc hill?",
-    "options": [
-      "Joan Miró",
-      "Antoni Tàpies",
-      "Julio González",
-      "Josep Maria Sert"
-    ],
-    "answer": "Joan Miró",
-    "difficulty": "hard"
-  },
-  {
-    "id": 134,
-    "question": "Which Gaudí site in Barcelona is known for its serpentine mosaic bench overlooking the city?",
-    "options": [
-      "Park Güell",
-      "Casa Batlló",
-      "Palau Güell",
-      "Colònia Güell"
-    ],
-    "answer": "Park Güell",
-    "difficulty": "hard"
-  },
-  {
-    "id": 135,
-    "question": "Which Gaudí apartment building on Passeig de Gràcia is nicknamed La Pedrera?",
-    "options": [
-      "Casa Milà",
-      "Casa Batlló",
-      "Casa Vicens",
-      "Casa Calvet"
-    ],
-    "answer": "Casa Milà",
-    "difficulty": "hard"
-  },
-  {
-    "id": 136,
-    "question": "Which top wine classification, above Denominación de Origen, is held by only Rioja and Priorat?",
-    "options": [
-      "DOCa",
-      "DO Pago",
-      "Vino de la Tierra",
-      "IGP"
-    ],
-    "answer": "DOCa",
-    "difficulty": "hard"
-  },
-  {
-    "id": 137,
-    "question": "Which thick cold Córdoban tomato soup is typically topped with chopped ham and hard-boiled egg?",
-    "options": [
-      "Salmorejo",
-      "Ajoblanco",
-      "Porra antequerana",
-      "Pipirrana"
-    ],
-    "answer": "Salmorejo",
-    "difficulty": "hard"
-  },
-  {
-    "id": 138,
-    "question": "What is the Catalan winter feast of grilled young onions eaten with romesco sauce called?",
-    "options": [
-      "Calçotada",
-      "Escalivada",
-      "Esqueixada",
-      "Suquet"
-    ],
-    "answer": "Calçotada",
-    "difficulty": "hard"
-  },
-  {
-    "id": 139,
-    "question": "Which almond and honey nougat from Alicante is a Spanish Christmas staple?",
-    "options": [
-      "Turrón",
-      "Polvorones",
-      "Roscón",
-      "Mazapán"
-    ],
-    "answer": "Turrón",
-    "difficulty": "hard"
-  },
-  {
-    "id": 140,
-    "question": "Which Valencian dish replaces the rice of a paella with short noodles?",
-    "options": [
-      "Fideuà",
-      "Arroz negro",
-      "Arroz a banda",
-      "Caldero"
-    ],
-    "answer": "Fideuà",
-    "difficulty": "hard"
-  },
-  {
-    "id": 141,
-    "question": "Which chickpea stew from the capital is traditionally served in three separate courses?",
-    "options": [
-      "Cocido madrileño",
-      "Fabada asturiana",
-      "Escudella",
-      "Olla podrida"
-    ],
-    "answer": "Cocido madrileño",
-    "difficulty": "hard"
-  },
-  {
-    "id": 142,
-    "question": "Which grape variety dominates red wines from the Rioja region?",
-    "options": [
-      "Tempranillo",
-      "Garnacha",
-      "Monastrell",
-      "Mencía"
-    ],
-    "answer": "Tempranillo",
-    "difficulty": "hard"
-  },
-  {
-    "id": 143,
-    "question": "Which Spanish midfielder won the 2024 Ballon d'Or?",
-    "options": [
-      "Rodri",
-      "Pedri",
-      "Nico Williams",
-      "Dani Olmo"
-    ],
-    "answer": "Rodri",
-    "difficulty": "hard"
-  },
-  {
-    "id": 144,
-    "question": "Who scored Spain's winning goal in the 2010 World Cup final against the Netherlands?",
-    "options": [
-      "Andrés Iniesta",
-      "Xavi",
-      "David Villa",
-      "Carles Puyol"
-    ],
-    "answer": "Andrés Iniesta",
-    "difficulty": "hard"
-  },
-  {
-    "id": 145,
-    "question": "Which club won the 2026 Copa del Rey?",
-    "options": [
-      "Real Sociedad",
-      "Real Betis",
-      "Sevilla",
-      "Valencia"
-    ],
-    "answer": "Real Sociedad",
-    "difficulty": "hard"
-  },
-  {
-    "id": 146,
-    "question": "Which Spanish club maintains a long-standing policy of signing only players from the Basque Country?",
-    "options": [
-      "Athletic Club",
-      "Osasuna",
-      "Deportivo Alavés",
-      "Real Unión"
-    ],
-    "answer": "Athletic Club",
-    "difficulty": "hard"
-  },
-  {
-    "id": 147,
-    "question": "Which Basque ball game is played by hurling a ball against a wall using a long curved wicker basket?",
-    "options": [
-      "Jai alai",
-      "Bolos",
-      "Herri kirolak",
-      "Lucha canaria"
-    ],
-    "answer": "Jai alai",
-    "difficulty": "hard"
-  },
-  {
-    "id": 148,
-    "question": "Which Spanish carmaker, founded in 1950, has its main plant at Martorell?",
-    "options": [
-      "SEAT",
-      "Pegaso",
-      "Hispano-Suiza",
-      "Santana"
-    ],
-    "answer": "SEAT",
-    "difficulty": "hard"
-  },
-  {
-    "id": 149,
-    "question": "What is the brand name of Spain's high-speed rail service, launched between Madrid and Seville in 1992?",
-    "options": [
-      "AVE",
-      "Talgo",
-      "Alvia",
-      "Avant"
-    ],
-    "answer": "AVE",
-    "difficulty": "hard"
-  },
-  {
-    "id": 150,
-    "question": "In which year did Spain move its clocks forward to align with Central European Time?",
-    "options": [
-      "1940",
-      "1918",
-      "1936",
-      "1975"
-    ],
-    "answer": "1940",
+    "answer": "12A",
     "difficulty": "hard"
   }
 ]

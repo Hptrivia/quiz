@@ -1,6 +1,134 @@
 [
   {
     "type": "theme",
+    "slug": "hannibal",
+    "title": "Hannibal",
+    "label": "TV",
+    "date": "2026-08-28",
+    "url": "challenge.html?theme=hannibal&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "belgium",
+    "title": "Belgium",
+    "label": "Countries",
+    "date": "2026-08-27",
+    "url": "challenge.html?theme=belgium&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "cobra-kai",
+    "title": "Cobra Kai",
+    "label": "TV",
+    "date": "2026-08-27",
+    "url": "challenge.html?theme=cobra-kai&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "how-to-get-away-with-murder",
+    "title": "How to Get Away with Murder",
+    "label": "TV",
+    "date": "2026-08-27",
+    "url": "challenge.html?theme=how-to-get-away-with-murder&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "scream",
+    "title": "Scream",
+    "label": "Movies",
+    "date": "2026-08-27",
+    "url": "challenge.html?theme=scream&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "south-korea",
+    "title": "South Korea",
+    "label": "Countries",
+    "date": "2026-08-27",
+    "url": "challenge.html?theme=south-korea&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "the-punisher",
+    "title": "The Punisher",
+    "label": "TV",
+    "date": "2026-08-27",
+    "url": "challenge.html?theme=the-punisher&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "call-the-midwife",
+    "title": "Call the Midwife",
+    "label": "TV",
+    "date": "2026-08-26",
+    "url": "challenge.html?theme=call-the-midwife&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "france",
+    "title": "France",
+    "label": "Countries",
+    "date": "2026-08-26",
+    "url": "challenge.html?theme=france&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "k-dramas",
+    "title": "K-Dramas",
+    "label": "TV",
+    "date": "2026-08-26",
+    "url": "challenge.html?theme=k-dramas&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "loki",
+    "title": "Loki",
+    "label": "TV",
+    "date": "2026-08-26",
+    "url": "challenge.html?theme=loki&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "married-with-children",
+    "title": "Married... with Children",
+    "label": "Sitcoms",
+    "date": "2026-08-26",
+    "url": "challenge.html?theme=married-with-children&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "only-murders-in-the-building",
+    "title": "Only Murders in the Building",
+    "label": "TV",
+    "date": "2026-08-26",
+    "url": "challenge.html?theme=only-murders-in-the-building&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "smallville",
+    "title": "Smallville",
+    "label": "TV",
+    "date": "2026-08-26",
+    "url": "challenge.html?theme=smallville&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "spain",
+    "title": "Spain",
+    "label": "Countries",
+    "date": "2026-08-26",
+    "url": "challenge.html?theme=spain&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "white-collar",
+    "title": "White Collar",
+    "label": "TV",
+    "date": "2026-08-26",
+    "url": "challenge.html?theme=white-collar&round=1"
+  },
+  {
+    "type": "theme",
     "slug": "archer",
     "title": "Archer",
     "label": "Sitcoms",
@@ -30,133 +158,5 @@
     "label": "Countries",
     "date": "2026-08-21",
     "url": "challenge.html?theme=russia&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "x-men",
-    "title": "X-Men",
-    "label": "Movies",
-    "date": "2026-08-21",
-    "url": "challenge.html?theme=x-men&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "fast-and-furious",
-    "title": "Fast & Furious",
-    "label": "Movies",
-    "date": "2026-08-20",
-    "url": "challenge.html?theme=fast-and-furious&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "india",
-    "title": "India",
-    "label": "Countries",
-    "date": "2026-08-20",
-    "url": "challenge.html?theme=india&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "indiana-jones",
-    "title": "Indiana Jones",
-    "label": "Movies",
-    "date": "2026-08-20",
-    "url": "challenge.html?theme=indiana-jones&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "james-bond",
-    "title": "James Bond",
-    "label": "Movies",
-    "date": "2026-08-20",
-    "url": "challenge.html?theme=james-bond&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "john-wick",
-    "title": "John Wick",
-    "label": "Movies",
-    "date": "2026-08-20",
-    "url": "challenge.html?theme=john-wick&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "pirates-of-the-caribbean",
-    "title": "Pirates of the Caribbean",
-    "label": "Movies",
-    "date": "2026-08-20",
-    "url": "challenge.html?theme=pirates-of-the-caribbean&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "slow-horses",
-    "title": "Slow Horses",
-    "label": "TV",
-    "date": "2026-08-20",
-    "url": "challenge.html?theme=slow-horses&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "taylor-swift",
-    "title": "Taylor Swift",
-    "label": "General",
-    "date": "2026-08-20",
-    "url": "challenge.html?theme=taylor-swift&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "terminator",
-    "title": "Terminator",
-    "label": "Movies",
-    "date": "2026-08-20",
-    "url": "challenge.html?theme=terminator&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "the-matrix",
-    "title": "The Matrix",
-    "label": "Movies",
-    "date": "2026-08-20",
-    "url": "challenge.html?theme=the-matrix&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "transformers",
-    "title": "Transformers",
-    "label": "Movies",
-    "date": "2026-08-20",
-    "url": "challenge.html?theme=transformers&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "vietnam",
-    "title": "Vietnam",
-    "label": "Countries",
-    "date": "2026-08-20",
-    "url": "challenge.html?theme=vietnam&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "sitcoms",
-    "title": "Sitcoms",
-    "label": "General",
-    "date": "2026-08-16",
-    "url": "challenge.html?theme=sitcoms&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "the-blacklist",
-    "title": "The Blacklist",
-    "label": "TV",
-    "date": "2026-08-16",
-    "url": "challenge.html?theme=the-blacklist&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "the-good-doctor",
-    "title": "The Good Doctor",
-    "label": "TV",
-    "date": "2026-08-16",
-    "url": "challenge.html?theme=the-good-doctor&round=1"
   }
 ]
