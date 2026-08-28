@@ -147,7 +147,7 @@ async function cbRenderDailyPage() {
       cbRenderRound(roundEl, {
         letter,
         categories: CB_DAILY_CATEGORIES,
-        seconds: 60,
+        seconds: 45,
         onSubmit: async ({ answers, elapsedMs }) => {
           const gradeResult = await cbGradeRound({
             letter, categories: CB_DAILY_CATEGORIES, answers, elapsedMs, mode: "daily",

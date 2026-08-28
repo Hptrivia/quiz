@@ -22,7 +22,7 @@ function cbSlugify(str) {
   return String(str).trim().toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "") || "category";
 }
 
-// Timer difficulty, shared by Solo and Versus (Daily always stays 60s — it's
+// Timer difficulty, shared by Solo and Versus (Daily always stays 45s — it's
 // meant to be a low-friction one-a-day, not tuned for challenge). The last
 // choice is remembered across visits so re-picking every round isn't
 // required, but the picker still shows (and can be changed) before every
