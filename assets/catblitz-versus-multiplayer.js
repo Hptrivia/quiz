@@ -267,7 +267,7 @@ async function mpCreateRoom(name, bestOf, categories, seconds) {
     hostId: mpPlayerId(), guestId: null,
     myName: name, oppName: null,
     currentRound: 0, myScore: 0, oppScore: 0,
-    answeredThisRound: false, roundResolved: false, chatLog: [],
+    answeredThisRound: false, roundResolved: false, chatLog: [], rematchCount: 0,
   };
 
   document.getElementById('cbVersusSetup').style.display = 'none';
@@ -342,7 +342,7 @@ async function mpJoinRoom(code, name) {
     hostId: updated.host_id, guestId: mpPlayerId(),
     myName: name, oppName: updated.host_name,
     currentRound: 0, myScore: 0, oppScore: 0,
-    answeredThisRound: false, roundResolved: false, chatLog: [],
+    answeredThisRound: false, roundResolved: false, chatLog: [], rematchCount: 0,
   };
   document.getElementById('cbVersusSetup').style.display = 'none';
   mpBeginMatch();
@@ -841,7 +841,12 @@ function mpPlayAgain() {
   // rematch via mpBeginRematch (poll-detected) with no ad of their own; you
   // can't make a remote player watch an ad just because their opponent did.
   const proceed = () => mpPlayAgainConfirmed();
-  if (typeof _offerRewardedLifeline === 'function' && typeof isInApp === 'function'
+  // Best-of-3/5 matches are short, so the very first rematch after one of
+  // those ends is free — the ad only kicks in from the second rematch
+  // onward. Best-of-13 is long enough that the ad still applies from the start.
+  const isShortMatch = mpRoom.bestOf === 3 || mpRoom.bestOf === 5;
+  const skipAd = mpRoom.rematchCount === 0 && isShortMatch;
+  if (!skipAd && typeof _offerRewardedLifeline === 'function' && typeof isInApp === 'function'
       && isInApp() && typeof ADMOB_ADS_ENABLED !== 'undefined' && ADMOB_ADS_ENABLED) {
     _offerRewardedLifeline('Play Again', proceed, 'Watch a short ad to start a rematch?');
   } else {
@@ -879,6 +884,7 @@ async function mpPlayAgainConfirmed() {
 async function mpBeginRematch(newLetters) {
   if (!mpRoom || mpRoom.rematchStarted) return;
   mpRoom.rematchStarted = true;
+  mpRoom.rematchCount++;
   mpStopResultsPoll();
 
   mpRoom.letters = newLetters;
