@@ -262,6 +262,35 @@ async function playVersusOnline(host, guest, theme) {
   return (await isVisible(host, endSel)) && (await isVisible(guest, endSel));
 }
 
+// Plays a full match, then clicks "Play Again" (same room, no re-invite) and
+// plays a second match through to the end — covers the rematch flow added
+// on top of playVersusOnline (mpPlayAgain/mpBeginRematch in versus-multiplayer.js).
+async function playVersusOnlineRematch(host, guest, theme) {
+  const first = await playVersusOnline(host, guest, theme);
+  if (!first) return false;
+
+  await clickFirst(host, '#vsMpPlayAgainBtn');
+  await wait(1000);
+
+  const questionSel = '#vsMpQuestionText';
+  for (let i = 0; i < 20; i++) {
+    if ((await isVisible(host, questionSel)) && (await isVisible(guest, questionSel))) break;
+    await wait(500);
+  }
+  if (!(await isVisible(host, questionSel)) || !(await isVisible(guest, questionSel))) return false;
+
+  const endSel = '#vsResultsTitle';
+  for (let i = 0; i < 80; i++) {
+    const hostDone = await isVisible(host, endSel);
+    const guestDone = await isVisible(guest, endSel);
+    if (hostDone && guestDone) break;
+    if (!hostDone) await clickFirst(host, '#vsMpOptions .option-btn');
+    if (!guestDone) await clickFirst(guest, '#vsMpOptions .option-btn');
+    await wait(500);
+  }
+  return (await isVisible(host, endSel)) && (await isVisible(guest, endSel));
+}
+
 async function fillAndSubmitCatBlitz(page) {
   if (!(await isVisible(page, '.cb-inputs'))) return false;
   const letter = await page.evaluate(() => document.querySelector('.cb-round-letter')?.textContent?.trim() || 'A');
@@ -290,6 +319,30 @@ async function playCatBlitzVersusOnline(host, guest) {
   await guest.evaluate(c => { document.getElementById('cbMpCodeInput').value = c; }, code);
   await clickFirst(guest, '#cbMpJoinBtn');
   await wait(500);
+
+  for (let i = 0; i < 80; i++) {
+    const hostDone = await isVisible(host, '#cbVersusFinal');
+    const guestDone = await isVisible(guest, '#cbVersusFinal');
+    if (hostDone && guestDone) break;
+    await fillAndSubmitCatBlitz(host);
+    await fillAndSubmitCatBlitz(guest);
+    await clickFirst(host, '#cbMpContinueBtn');
+    await clickFirst(guest, '#cbMpContinueBtn');
+    await wait(500);
+  }
+  return (await isVisible(host, '#cbVersusFinal')) && (await isVisible(guest, '#cbVersusFinal'));
+}
+
+// Plays a full match, then clicks "Play Again" (same room, no re-invite) and
+// plays a second match through to the end — covers the rematch flow added
+// on top of playCatBlitzVersusOnline (mpPlayAgain/mpBeginRematch in
+// catblitz-versus-multiplayer.js).
+async function playCatBlitzVersusOnlineRematch(host, guest) {
+  const first = await playCatBlitzVersusOnline(host, guest);
+  if (!first) return false;
+
+  await clickFirst(host, '#cbVersusRematchBtn');
+  await wait(1000);
 
   for (let i = 0; i < 80; i++) {
     const hostDone = await isVisible(host, '#cbVersusFinal');
@@ -361,6 +414,8 @@ function buildModes(themes) {
     { name: 'catblitz-versus', url: `category-blitz-versus.html`,            run: p => playCatBlitzVersus(p) },
     { name: 'versus-online',         multi: true, run2: (h, g) => playVersusOnline(h, g, a) },
     { name: 'catblitz-versus-online', multi: true, run2: (h, g) => playCatBlitzVersusOnline(h, g) },
+    { name: 'versus-online-rematch',          multi: true, run2: (h, g) => playVersusOnlineRematch(h, g, a) },
+    { name: 'catblitz-versus-online-rematch', multi: true, run2: (h, g) => playCatBlitzVersusOnlineRematch(h, g) },
   ];
 }
 

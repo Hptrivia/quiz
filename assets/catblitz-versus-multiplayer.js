@@ -96,6 +96,14 @@ async function mpPatch(path, body) {
   return { ok: res.ok, status: res.status, data: res.ok ? await res.json() : [] };
 }
 
+async function mpDelete(path) {
+  const res = await fetch(`${MP_URL}/rest/v1/${path}`, {
+    method: 'DELETE',
+    headers: { apikey: MP_KEY, Authorization: `Bearer ${MP_KEY}` }
+  });
+  return res.ok;
+}
+
 // ── Setup screen wiring ──────────────────────────────────────────────────
 
 function mpInit() {
@@ -204,6 +212,13 @@ function mpInit() {
   document.getElementById('cbMpCancelBtn').addEventListener('click', mpCancelWaiting);
   document.getElementById('cbMpLeaveBtn').addEventListener('click', mpLeaveMatch);
 
+  // Shared with local hot-seat's "New Match" button — reload for local
+  // (mpRoom never got set), instant same-room rematch for an online match.
+  document.getElementById('cbVersusRematchBtn').addEventListener('click', () => {
+    if (mpRoom) mpPlayAgain();
+    else location.reload();
+  });
+
   // A shared invite link (?mpJoin=CODE) works regardless of local setup —
   // joining only depends on the room's own stored settings.
   const joinParam = getParam('mpJoin');
@@ -216,7 +231,10 @@ function mpInit() {
 
 // ── Create / join ────────────────────────────────────────────────────────
 
-async function mpCreateRoom(name, bestOf, categories, seconds) {
+// Draws a fresh letter sequence — used both for the initial room creation
+// and for a same-room rematch (mpPlayAgain), which just needs new letters
+// for the same categories/settings.
+function mpDrawLetters(bestOf) {
   const totalLetters = Math.min(26, bestOf + MP_TIEBREAK_BUFFER);
   const used = new Set();
   const letters = [];
@@ -225,6 +243,11 @@ async function mpCreateRoom(name, bestOf, categories, seconds) {
     used.add(l);
     letters.push(l);
   }
+  return letters;
+}
+
+async function mpCreateRoom(name, bestOf, categories, seconds) {
+  const letters = mpDrawLetters(bestOf);
 
   const catPayload = categories.map(c => ({ id: c.id, label: c.label }));
   let code, insertRes;
@@ -327,7 +350,9 @@ async function mpJoinRoom(code, name) {
 
 // ── Match loop ───────────────────────────────────────────────────────────
 
-function mpBeginMatch() {
+// isRematch: skips the game-start interstitial — a rematch is gated by a
+// rewarded ad instead (see mpPlayAgain), shown once before this is called.
+async function mpBeginMatch(isRematch) {
   document.getElementById('cbMpWaiting').style.display = 'none';
   document.getElementById('cbVersusPlay').style.display = 'block';
   // The hot-seat howto ("both players spin their own letter") doesn't apply
@@ -337,6 +362,7 @@ function mpBeginMatch() {
   mpGet(`multiplayer_reactions?room_code=eq.${mpRoom.code}&order=id.desc&limit=1`)
     .then(rows => { mpRoom.lastSeenReactionId = rows[0] ? rows[0].id : 0; })
     .catch(() => { mpRoom.lastSeenReactionId = 0; });
+  if (!isRematch && typeof adMobShowGameStartInterstitial === 'function') await adMobShowGameStartInterstitial();
   mpRenderRound();
   mpPollTimer = setInterval(mpPollActive, MP_POLL_MS);
 }
@@ -772,6 +798,100 @@ function mpShowResults() {
     feedbackWrap.innerHTML = cbFeedbackBoxHtml();
     cbBindFeedbackBox();
   }
+
+  mpRoom.rematchStarted = false;
+  mpStartResultsPoll();
+}
+
+// ── Same-room rematch ────────────────────────────────────────────────────
+// Both players are still sitting on the results screen with mpRoom intact —
+// a rematch resets the same room row with fresh letters (same categories/
+// difficulty) instead of reloading into setup and creating/joining again.
+// Whoever clicks "New Match" first wins a conditional PATCH (guarded on
+// status=eq.finished); the other side's results-poll picks it up.
+
+let mpResultsPollTimer = null;
+
+function mpStartResultsPoll() {
+  if (mpResultsPollTimer) clearInterval(mpResultsPollTimer);
+  mpResultsPollTimer = setInterval(mpPollForRematch, MP_POLL_MS);
+}
+
+function mpStopResultsPoll() {
+  if (mpResultsPollTimer) clearInterval(mpResultsPollTimer);
+  mpResultsPollTimer = null;
+}
+
+async function mpPollForRematch() {
+  if (!mpRoom || mpRoom.rematchStarted) return;
+  try {
+    const rows = await mpGet(`multiplayer_rooms?code=eq.${mpRoom.code}&select=status,current_round,question_ids`);
+    const row = rows[0];
+    if (!row) return;
+    if (row.status === 'abandoned') { mpStopResultsPoll(); return; }
+    if (row.status === 'active' && row.current_round === 0 && Array.isArray(row.question_ids)) {
+      await mpBeginRematch(row.question_ids);
+    }
+  } catch (e) { /* transient — next tick retries */ }
+}
+
+function mpPlayAgain() {
+  if (!mpRoom || mpRoom.rematchStarted) return;
+  // Only the clicking player is prompted — the opponent gets pulled into the
+  // rematch via mpBeginRematch (poll-detected) with no ad of their own; you
+  // can't make a remote player watch an ad just because their opponent did.
+  const proceed = () => mpPlayAgainConfirmed();
+  if (typeof _offerRewardedLifeline === 'function' && typeof isInApp === 'function'
+      && isInApp() && typeof ADMOB_ADS_ENABLED !== 'undefined' && ADMOB_ADS_ENABLED) {
+    _offerRewardedLifeline('Play Again', proceed, 'Watch a short ad to start a rematch?');
+  } else {
+    proceed();
+  }
+}
+
+async function mpPlayAgainConfirmed() {
+  if (!mpRoom || mpRoom.rematchStarted) return;
+  const btn = document.getElementById('cbVersusRematchBtn');
+  if (btn) { btn.disabled = true; btn.textContent = 'Starting…'; }
+  try {
+    const letters = mpDrawLetters(mpRoom.bestOf);
+    // Clear the previous match's answers — round numbers restart at 0 for
+    // the rematch and would otherwise collide with the old match's rows.
+    try { await mpDelete(`multiplayer_answers?room_code=eq.${mpRoom.code}`); } catch (e) {}
+    const patchRes = await mpPatch(
+      `multiplayer_rooms?code=eq.${mpRoom.code}&status=eq.finished`,
+      { status: 'active', current_round: 0, host_score: 0, guest_score: 0, question_ids: letters }
+    );
+    if (patchRes.ok && patchRes.data.length && mpRoom && !mpRoom.rematchStarted) {
+      await mpBeginRematch(letters);
+    } else if (mpRoom && !mpRoom.rematchStarted) {
+      // Our conditional PATCH didn't land — either the opponent already won
+      // the rematch race (mpPollForRematch will pick it up) or they've left
+      // the room entirely, in which case there's no one to rematch with.
+      const rows = await mpGet(`multiplayer_rooms?code=eq.${mpRoom.code}&select=status`).catch(() => []);
+      if (rows[0]?.status === 'abandoned' && btn) { btn.disabled = true; btn.textContent = 'Opponent left'; }
+    }
+  } catch (e) {
+    if (btn) { btn.disabled = false; btn.textContent = 'Play Again'; }
+  }
+}
+
+async function mpBeginRematch(newLetters) {
+  if (!mpRoom || mpRoom.rematchStarted) return;
+  mpRoom.rematchStarted = true;
+  mpStopResultsPoll();
+
+  mpRoom.letters = newLetters;
+  mpRoom.currentRound = 0;
+  mpRoom.myScore = 0;
+  mpRoom.oppScore = 0;
+  mpRoom.chatLog = [];
+
+  const btn = document.getElementById('cbVersusRematchBtn');
+  if (btn) { btn.disabled = false; btn.textContent = 'Play Again'; }
+  document.getElementById('cbVersusFinal').style.display = 'none';
+
+  await mpBeginMatch(true);
 }
 
 document.addEventListener('DOMContentLoaded', () => {

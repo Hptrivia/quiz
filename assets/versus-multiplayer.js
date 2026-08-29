@@ -75,6 +75,14 @@ async function mpPatch(path, body) {
   return { ok: res.ok, status: res.status, data: res.ok ? await res.json() : [] };
 }
 
+async function mpDelete(path) {
+  const res = await fetch(`${MP_URL}/rest/v1/${path}`, {
+    method: 'DELETE',
+    headers: { apikey: MP_KEY, Authorization: `Bearer ${MP_KEY}` }
+  });
+  return res.ok;
+}
+
 // ── Setup screen wiring ──────────────────────────────────────────────────
 
 function mpInit(allThemes, resolvedThemes) {
@@ -156,10 +164,7 @@ function mpInit(allThemes, resolvedThemes) {
   document.getElementById('vsMpCancelBtn').addEventListener('click', mpCancelWaiting);
   document.getElementById('vsMpLeaveBtn').addEventListener('click', mpLeaveMatch);
 
-  document.getElementById('vsMpPlayAgainBtn').addEventListener('click', () => {
-    mpTeardown();
-    vsShow('vsSetup');
-  });
+  document.getElementById('vsMpPlayAgainBtn').addEventListener('click', mpPlayAgain);
   document.getElementById('vsMpBackBtn').addEventListener('click', () => {
     mpTeardown();
     const backHref = document.getElementById('vsBackLink')?.href;
@@ -169,7 +174,10 @@ function mpInit(allThemes, resolvedThemes) {
 
 // ── Create / join ────────────────────────────────────────────────────────
 
-async function mpCreateRoom(resolvedThemes, bestOf, name) {
+// Draws a fresh question set for `resolvedThemes` — used both for the initial
+// room creation and for a same-room rematch (mpPlayAgain), which just needs a
+// new set of ids for the same theme(s).
+async function mpDrawQuestionSet(resolvedThemes, bestOf) {
   const { pools, themeQueues, isMashup } = await vsBuildQuestionPools(resolvedThemes);
 
   const hasExpert = isMashup
@@ -186,13 +194,18 @@ async function mpCreateRoom(resolvedThemes, bestOf, name) {
   for (const diff of [...schedule, ...bufferDiffs]) {
     const q = vsDrawQuestion(drawState, diff);
     if (!q) break;
-    const key = q.id || q.question;
+    const key = vsQKey(q);
     questionIds.push(key);
     questionMap.set(key, q);
   }
   if (questionIds.length < bestOf) {
     throw new Error("This theme doesn't have enough questions for online play.");
   }
+  return { questionIds, questionMap };
+}
+
+async function mpCreateRoom(resolvedThemes, bestOf, name) {
+  const { questionIds, questionMap } = await mpDrawQuestionSet(resolvedThemes, bestOf);
 
   const themeSlugs = resolvedThemes.map(t => t.slug).join(',');
   let code, insertRes;
@@ -207,7 +220,7 @@ async function mpCreateRoom(resolvedThemes, bestOf, name) {
   if (!insertRes.ok) throw new Error('Could not create a room right now — please try again.');
 
   mpRoom = {
-    code, role: 'host', bestOf, questionIds, questionMap,
+    code, role: 'host', bestOf, questionIds, questionMap, resolvedThemes,
     hostId: mpPlayerId(), guestId: null,
     myName: name, oppName: null,
     currentRound: 0, myScore: 0, oppScore: 0,
@@ -280,7 +293,7 @@ async function mpJoinRoom(code, name) {
   batches.forEach((qs, i) => {
     (Array.isArray(qs) ? qs : []).forEach(q => {
       const entry = themes.length > 1 ? { ...q, _themeTitle: themes[i].title } : q;
-      questionMap.set(q.id || q.question, entry);
+      questionMap.set(vsQKey(q), entry);
     });
   });
 
@@ -294,6 +307,7 @@ async function mpJoinRoom(code, name) {
   const updated = patchRes.data[0];
   mpRoom = {
     code, role: 'guest', bestOf: updated.best_of, questionIds: updated.question_ids, questionMap,
+    resolvedThemes: themes, hasFullMap: true, // built from the full theme batches above, so any future id resolves
     hostId: updated.host_id, guestId: mpPlayerId(),
     myName: name, oppName: updated.host_name,
     currentRound: 0, myScore: 0, oppScore: 0,
@@ -301,6 +315,23 @@ async function mpJoinRoom(code, name) {
     roundStartedAt: updated.round_started_at,
   };
   mpBeginMatch();
+}
+
+// A host's questionMap only ever holds the ids it personally drew. If the
+// opponent wins a rematch's redraw race, the host needs to resolve ids it
+// never drew itself — fetch the full theme batch(es) once, same as a guest
+// already gets at join time.
+async function mpEnsureFullQuestionMap() {
+  if (!mpRoom || mpRoom.hasFullMap) return;
+  const batches = await Promise.all(mpRoom.resolvedThemes.map(t => fetchJSON(t.questionFile)));
+  batches.forEach((qs, i) => {
+    (Array.isArray(qs) ? qs : []).forEach(q => {
+      const entry = mpRoom.resolvedThemes.length > 1 ? { ...q, _themeTitle: mpRoom.resolvedThemes[i].title } : q;
+      const key = vsQKey(q);
+      if (!mpRoom.questionMap.has(key)) mpRoom.questionMap.set(key, entry);
+    });
+  });
+  mpRoom.hasFullMap = true;
 }
 
 // ── Match loop ───────────────────────────────────────────────────────────
@@ -585,12 +616,120 @@ function mpShowResults() {
   document.getElementById('vsLocalResultsActions').style.display = 'none';
   document.getElementById('vsMpResultsActions').style.display = 'flex';
   vsShow('vsResults');
+
+  if (mpRoom) {
+    mpRoom.rematchStarted = false;
+    mpStartResultsPoll();
+  }
 }
 
 function mpTeardown() {
   if (mpPollTimer) clearInterval(mpPollTimer);
   if (mpRoom && mpRoom.tickTimer) clearInterval(mpRoom.tickTimer);
+  mpStopResultsPoll();
   mpRoom = null;
   document.getElementById('vsLocalResultsActions').style.display = 'flex';
   document.getElementById('vsMpResultsActions').style.display = 'none';
+}
+
+// ── Same-room rematch ────────────────────────────────────────────────────
+// Both players are already sitting on the results screen with mpRoom still
+// populated (mpTeardown hasn't run) — a rematch just resets the same room
+// row with a fresh question set instead of sending anyone back through
+// setup/create/join. Whoever clicks "Play Again" first wins a conditional
+// PATCH (guarded on status=eq.finished); the other side's results-poll picks
+// up the change and joins the same rematch within one poll tick.
+
+let mpResultsPollTimer = null;
+
+function mpStartResultsPoll() {
+  if (mpResultsPollTimer) clearInterval(mpResultsPollTimer);
+  mpResultsPollTimer = setInterval(mpPollForRematch, MP_POLL_MS);
+}
+
+function mpStopResultsPoll() {
+  if (mpResultsPollTimer) clearInterval(mpResultsPollTimer);
+  mpResultsPollTimer = null;
+}
+
+async function mpPollForRematch() {
+  if (!mpRoom || mpRoom.rematchStarted) return;
+  try {
+    const rows = await mpGet(`multiplayer_rooms?code=eq.${mpRoom.code}&select=status,current_round,question_ids`);
+    const row = rows[0];
+    if (!row) return;
+    if (row.status === 'abandoned') { mpStopResultsPoll(); return; }
+    if (row.status === 'active' && row.current_round === 0 && Array.isArray(row.question_ids)) {
+      await mpBeginRematch(row.question_ids);
+    }
+  } catch (e) { /* transient — next tick retries */ }
+}
+
+function mpPlayAgain() {
+  if (!mpRoom || mpRoom.rematchStarted) return;
+  // Only the clicking player is prompted — the opponent gets pulled into the
+  // rematch via mpBeginRematch (poll-detected) with no ad of their own; you
+  // can't make a remote player watch an ad just because their opponent did.
+  const proceed = () => mpPlayAgainConfirmed();
+  if (typeof _offerRewardedLifeline === 'function' && typeof isInApp === 'function'
+      && isInApp() && typeof ADMOB_ADS_ENABLED !== 'undefined' && ADMOB_ADS_ENABLED) {
+    _offerRewardedLifeline('Play Again', proceed, 'Watch a short ad to start a rematch?');
+  } else {
+    proceed();
+  }
+}
+
+async function mpPlayAgainConfirmed() {
+  if (!mpRoom || mpRoom.rematchStarted) return;
+  const btn = document.getElementById('vsMpPlayAgainBtn');
+  if (btn) { btn.disabled = true; btn.textContent = 'Starting…'; }
+  try {
+    const { questionIds, questionMap } = await mpDrawQuestionSet(mpRoom.resolvedThemes, mpRoom.bestOf);
+    if (!mpRoom || mpRoom.rematchStarted) return; // opponent's rematch already landed
+    // Clear the previous match's answers — round numbers restart at 0 for
+    // the rematch and would otherwise collide with the old match's rows.
+    try { await mpDelete(`multiplayer_answers?room_code=eq.${mpRoom.code}`); } catch (e) {}
+    const patchRes = await mpPatch(
+      `multiplayer_rooms?code=eq.${mpRoom.code}&status=eq.finished`,
+      {
+        status: 'active', current_round: 0, host_score: 0, guest_score: 0,
+        question_ids: questionIds, round_started_at: new Date().toISOString(),
+      }
+    );
+    if (patchRes.ok && patchRes.data.length && mpRoom && !mpRoom.rematchStarted) {
+      for (const [k, v] of questionMap) mpRoom.questionMap.set(k, v);
+      await mpBeginRematch(questionIds);
+    } else if (mpRoom && !mpRoom.rematchStarted) {
+      // Our conditional PATCH didn't land — either the opponent already won
+      // the rematch race (mpPollForRematch will pick it up) or they've left
+      // the room entirely, in which case there's no one to rematch with.
+      const rows = await mpGet(`multiplayer_rooms?code=eq.${mpRoom.code}&select=status`).catch(() => []);
+      if (rows[0]?.status === 'abandoned' && btn) { btn.disabled = true; btn.textContent = 'Opponent left'; }
+    }
+    // Otherwise the opponent won the race — mpPollForRematch (still running)
+    // will pick up their write and start the rematch on this side too.
+  } catch (e) {
+    if (btn) { btn.disabled = false; btn.textContent = 'Play Again'; }
+  }
+}
+
+async function mpBeginRematch(newQuestionIds) {
+  if (!mpRoom || mpRoom.rematchStarted) return;
+  mpRoom.rematchStarted = true;
+  mpStopResultsPoll();
+
+  if (newQuestionIds.some(id => !mpRoom.questionMap.has(id))) {
+    try { await mpEnsureFullQuestionMap(); } catch (e) { /* best effort */ }
+  }
+
+  mpRoom.questionIds = newQuestionIds;
+  mpRoom.currentRound = 0;
+  mpRoom.myScore = 0;
+  mpRoom.oppScore = 0;
+  mpRoom.roundStartedAt = null; // mpRenderRound falls back to "starts counting now"
+
+  const btn = document.getElementById('vsMpPlayAgainBtn');
+  if (btn) { btn.disabled = false; btn.textContent = 'Play Again'; }
+
+  mpBeginMatch();
 }

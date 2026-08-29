@@ -91,6 +91,17 @@ function vsBuildSchedule(n, hasExpert) {
   return schedules[n] || schedules[5];
 }
 
+// Some theme files have duplicate `id`s across genuinely different questions
+// (data-authoring bug, not this file's problem to fully fix) — `id` alone
+// isn't a safe unique key. Question text alone isn't fully safe either (a
+// handful of themes repeat wording). Combining both collapses virtually
+// every collision down to true duplicate records, which is fine to treat as
+// one question. Matters most for Versus Online, where host and guest build
+// their question lookup two different ways and must agree on every id.
+function vsQKey(q) {
+  return (q.id || '') + '||' + q.question;
+}
+
 function vsDrawQuestion(state, preferredDiff) {
   const diffIndex = VS_DIFF_ORDER.indexOf(preferredDiff);
 
@@ -105,7 +116,7 @@ function vsDrawQuestion(state, preferredDiff) {
         const pool = state.themeQueues[themeIdx][diff];
         while (pool.length > 0) {
           const q = pool.shift();
-          const key = q.id || q.question;
+          const key = vsQKey(q);
           if (!state.usedIds.has(key)) {
             state.usedIds.add(key);
             vsSessionUsedIds.add(key);
@@ -123,7 +134,7 @@ function vsDrawQuestion(state, preferredDiff) {
     const pool = state.pools[diff];
     while (pool.length > 0) {
       const q = pool.shift();
-      const key = q.id || q.question;
+      const key = vsQKey(q);
       if (!state.usedIds.has(key)) {
         state.usedIds.add(key);
         vsSessionUsedIds.add(key);
