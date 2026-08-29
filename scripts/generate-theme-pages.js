@@ -336,7 +336,7 @@ const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
 
         <a class="card" href="../versus.html?theme=${slug}">
           <h3>Versus Mode</h3>
-          <p>Play locally against friends or the computer</p>
+          <p>Play locally or online against friends</p>
         </a>
 
         <a class="card" href="../wordle/${rawSlug}.html">
