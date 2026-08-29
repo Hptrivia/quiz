@@ -18,7 +18,10 @@
 // cbRenderResult already has, just pointed at the opponent's column. Toggling
 // PATCHes the opponent's row directly (single writer per field, same as
 // everywhere else in this file); each side polls to see the other's verdict
-// land live, and "Continue" locks in whatever the scores are at that moment.
+// land live. "Continue" no longer advances immediately on click — it marks
+// your own row `ready` and waits; mpAdvanceRound only runs once BOTH rows
+// show ready=true (see mpClickContinue/mpSyncReveal), so neither player can
+// jump to the next letter while the other is still reviewing.
 // Reuses cbRenderRound, cbGradeRound, cbRenderResult, cbRenderCategoryPicker,
 // cbRenderDifficultyPicker from catblitz-engine.js unchanged.
 
@@ -30,6 +33,10 @@ const MP_DISCONNECT_MS = 15000;
 const MP_TIEBREAK_BUFFER = 5;
 const MP_CODE_CHARS = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';
 const MP_REACTIONS = ['😂', '🔥', '😭', '👏', '😮', '🎯'];
+// Fixed-vocabulary quick phrases, same anti-abuse reasoning as MP_REACTIONS
+// (no freeform chat). Stored in the same `multiplayer_reactions.emoji`
+// column as the emoji above — it's just a text column, no schema change.
+const MP_MESSAGES = ['Review my words? 👀', 'Nice one! 👍', 'So close!', 'Good game 🤝', 'Rematch?'];
 
 let mpRoom = null;
 let mpPollTimer = null;
@@ -164,7 +171,7 @@ function mpInit() {
   });
 
   const topBanner = document.getElementById('cbMpAppBanner');
-  if (topBanner && typeof resultAppBannerHTML === 'function') topBanner.innerHTML = resultAppBannerHTML();
+  if (topBanner && typeof lobbyAppBannerHTML === 'function') topBanner.innerHTML = lobbyAppBannerHTML();
 
   const joinBtn = document.getElementById('cbMpJoinBtn');
   joinBtn.addEventListener('click', async () => {
@@ -237,7 +244,7 @@ async function mpCreateRoom(name, bestOf, categories, seconds) {
     hostId: mpPlayerId(), guestId: null,
     myName: name, oppName: null,
     currentRound: 0, myScore: 0, oppScore: 0,
-    answeredThisRound: false, roundResolved: false,
+    answeredThisRound: false, roundResolved: false, chatLog: [],
   };
 
   document.getElementById('cbVersusSetup').style.display = 'none';
@@ -312,7 +319,7 @@ async function mpJoinRoom(code, name) {
     hostId: updated.host_id, guestId: mpPlayerId(),
     myName: name, oppName: updated.host_name,
     currentRound: 0, myScore: 0, oppScore: 0,
-    answeredThisRound: false, roundResolved: false,
+    answeredThisRound: false, roundResolved: false, chatLog: [],
   };
   document.getElementById('cbVersusSetup').style.display = 'none';
   mpBeginMatch();
@@ -422,7 +429,7 @@ async function mpMaybeResolveRound() {
 
   let rows;
   try {
-    rows = await mpGet(`multiplayer_answers?room_code=eq.${mpRoom.code}&round_num=eq.${mpRoom.currentRound}&select=player_id,score,payload`);
+    rows = await mpGet(`multiplayer_answers?room_code=eq.${mpRoom.code}&round_num=eq.${mpRoom.currentRound}&select=player_id,score,payload,ready`);
   } catch (e) { return; }
 
   const myRow = rows.find(r => r.player_id === mpMyId());
@@ -457,26 +464,58 @@ function mpRenderRevealColumn(container, name, answers, letter, score, categorie
   });
 }
 
+// Collapsed by default (a single "💬 Chat" toggle) — expanding straight to
+// 6 emoji + 5 phrases at once would just recreate the clutter problem the
+// chat log itself was built to avoid.
 function mpRenderReactionBar() {
   const row = document.getElementById('cbMpReactionsRow');
-  if (!row) return;
-  row.innerHTML = MP_REACTIONS.map(e => `<button type="button" class="secondary-btn cb-mp-reaction-btn" data-emoji="${e}">${e}</button>`).join('');
+  const toggleBtn = document.getElementById('cbMpChatToggleBtn');
+  if (!row || !toggleBtn) return;
+
+  row.style.display = 'none';
+  toggleBtn.onclick = () => {
+    row.style.display = row.style.display === 'none' ? 'flex' : 'none';
+  };
+
+  const emojiBtns = MP_REACTIONS.map(e =>
+    `<button type="button" class="secondary-btn cb-mp-reaction-btn" data-msg="${e}">${e}</button>`);
+  const phraseBtns = MP_MESSAGES.map(m =>
+    `<button type="button" class="secondary-btn cb-mp-reaction-btn cb-mp-reaction-btn--phrase" data-msg="${m}">${m}</button>`);
+  row.innerHTML = [...emojiBtns, ...phraseBtns].join('');
   row.querySelectorAll('.cb-mp-reaction-btn').forEach(btn => {
-    btn.addEventListener('click', () => mpSendReaction(btn.dataset.emoji));
+    btn.addEventListener('click', () => {
+      mpSendReaction(btn.dataset.msg);
+      row.style.display = 'none';
+    });
   });
 }
 
-async function mpSendReaction(emoji) {
+// Appends to my own log immediately (optimistic — don't wait on the round
+// trip) so the conversation reads naturally instead of only showing what
+// the other player sends.
+async function mpSendReaction(text) {
   if (!mpRoom) return;
-  try { await mpPost('multiplayer_reactions', { room_code: mpRoom.code, player_id: mpMyId(), emoji }); } catch (e) {}
+  mpRoom.chatLog.push({ text, mine: true });
+  mpRenderChatLog();
+  try { await mpPost('multiplayer_reactions', { room_code: mpRoom.code, player_id: mpMyId(), emoji: text }); } catch (e) {}
 }
 
-function mpShowReactionToast(emoji) {
-  const toast = document.createElement('div');
-  toast.className = 'cb-mp-reaction-toast';
-  toast.textContent = emoji;
-  document.body.appendChild(toast);
-  setTimeout(() => toast.remove(), 1800);
+function mpReceiveChatMessage(text) {
+  if (!mpRoom) return;
+  mpRoom.chatLog.push({ text, mine: false });
+  mpRenderChatLog();
+}
+
+// Re-renders the WHOLE match's chat history — called on every new message
+// and again each round when mpRenderReveal rebuilds the reveal screen's DOM
+// (mpRoom.chatLog itself is what persists across rounds, not the element).
+function mpRenderChatLog() {
+  const log = document.getElementById('cbMpChatLog');
+  if (!log || !mpRoom) return;
+  log.innerHTML = mpRoom.chatLog
+    .map(m => `<div class="cb-mp-chat-msg${m.mine ? ' mine' : ''}">${m.text}</div>`)
+    .join('');
+  log.scrollTop = log.scrollHeight;
 }
 
 function mpRenderReveal(myRow, oppRow) {
@@ -493,12 +532,19 @@ function mpRenderReveal(myRow, oppRow) {
       <div id="cbMpOppResult"></div>
     </div>
     <p class="daily-date" id="cbMpRevealSummary" style="text-align:center;margin:10px 0;"></p>
-    <div class="cb-mp-reactions" id="cbMpReactionsRow"></div>
+    <div class="cb-mp-chat">
+      <div class="cb-mp-chat-log" id="cbMpChatLog"></div>
+      <button type="button" class="secondary-btn cb-mp-chat-toggle" id="cbMpChatToggleBtn">💬 Chat</button>
+      <div class="cb-mp-reactions" id="cbMpReactionsRow"></div>
+    </div>
   `;
 
   mpRoom.liveMyScore = myRow.score;
   mpRoom.liveOppScore = oppRow.score;
   mpRoom.oppRevealApi = null;
+  mpRoom.iAmReady = false;
+  mpRoom.oppReady = !!oppRow.ready;
+  mpRoom.advancing = false;
 
   mpRenderRevealColumn(document.getElementById('cbMpMyResult'), mpRoom.myName, myRow.payload.answers, letter, myRow.score, mpRoom.categories);
 
@@ -518,11 +564,33 @@ function mpRenderReveal(myRow, oppRow) {
     });
 
   mpRenderReactionBar();
+  mpRenderChatLog();
   mpUpdateRevealSummary();
 
   const continueBox = document.getElementById('cbVersusContinueBox');
   continueBox.innerHTML = `<button type="button" class="primary-btn" id="cbMpContinueBtn" style="width:100%;">Continue</button>`;
-  document.getElementById('cbMpContinueBtn').addEventListener('click', mpAdvanceRound);
+  document.getElementById('cbMpContinueBtn').addEventListener('click', mpClickContinue);
+}
+
+// Marks me ready instead of advancing immediately — mpAdvanceRound only runs
+// once BOTH players have clicked Continue (checked every poll tick in
+// mpSyncReveal), so nobody can jump to the next letter while the other is
+// still reviewing/contesting words.
+async function mpClickContinue() {
+  if (!mpRoom || mpRoom.iAmReady) return;
+  mpRoom.iAmReady = true;
+
+  const btn = document.getElementById('cbMpContinueBtn');
+  if (btn) { btn.disabled = true; btn.textContent = 'Waiting for opponent…'; }
+
+  try {
+    await mpPatch(
+      `multiplayer_answers?room_code=eq.${mpRoom.code}&round_num=eq.${mpRoom.currentRound}&player_id=eq.${mpMyId()}`,
+      { ready: true }
+    );
+  } catch (e) { /* poll loop keeps checking regardless */ }
+
+  if (mpRoom.oppReady) mpAdvanceRound();
 }
 
 function mpUpdateRevealSummary() {
@@ -554,18 +622,33 @@ async function mpSyncReveal() {
   }
 
   try {
-    const rows = await mpGet(`multiplayer_answers?room_code=eq.${mpRoom.code}&round_num=eq.${mpRoom.currentRound}&select=player_id,score`);
+    const rows = await mpGet(`multiplayer_answers?room_code=eq.${mpRoom.code}&round_num=eq.${mpRoom.currentRound}&select=player_id,score,ready`);
     const myRow = rows.find(r => r.player_id === mpMyId());
+    const oppRow = rows.find(r => r.player_id === mpOppId());
     if (myRow && myRow.score !== mpRoom.liveMyScore) {
       mpRoom.liveMyScore = myRow.score;
       const scoreEl = document.querySelector('#cbMpMyResult .cb-result-score');
       if (scoreEl) scoreEl.textContent = `${myRow.score} / ${mpRoom.categories.length}`;
       mpUpdateRevealSummary();
     }
+    if (oppRow && oppRow.ready && !mpRoom.oppReady) {
+      mpRoom.oppReady = true;
+      if (mpRoom.iAmReady) mpAdvanceRound();
+      else {
+        const btn = document.getElementById('cbMpContinueBtn');
+        if (btn) btn.textContent = `${mpRoom.oppName || 'Opponent'} is ready — Continue`;
+      }
+    }
   } catch (e) {}
 }
 
 async function mpAdvanceRound() {
+  // Guards against this same client calling in twice for one round — e.g.
+  // mpClickContinue() sees the opponent already ready and calls this, then
+  // the next mpSyncReveal poll tick (still mid-flight) sees oppReady too.
+  if (!mpRoom || mpRoom.advancing) return;
+  mpRoom.advancing = true;
+
   // Burns the same one-time web allowance the Create/Join wall checks —
   // completing round 1 uses it up, same as hot-seat.
   if (mpRoom.currentRound === 0 && typeof isLimitedWeb === 'function' && isLimitedWeb() && typeof cbMarkWebPlayUsed === 'function') {
@@ -626,12 +709,11 @@ async function mpPollActive() {
   if (banner) banner.style.display = stale ? '' : 'none';
 
   try {
-    const reacts = await mpGet(`multiplayer_reactions?room_code=eq.${mpRoom.code}&order=id.desc&limit=1`);
-    const r = reacts[0];
-    if (r && r.id > (mpRoom.lastSeenReactionId || 0)) {
-      mpRoom.lastSeenReactionId = r.id;
-      if (r.player_id !== mpMyId()) mpShowReactionToast(r.emoji);
-    }
+    const reacts = await mpGet(`multiplayer_reactions?room_code=eq.${mpRoom.code}&id=gt.${mpRoom.lastSeenReactionId || 0}&order=id.asc`);
+    reacts.forEach(r => {
+      mpRoom.lastSeenReactionId = Math.max(mpRoom.lastSeenReactionId || 0, r.id);
+      if (r.player_id !== mpMyId()) mpReceiveChatMessage(r.emoji);
+    });
   } catch (e) {}
 
   if (mpRoom.roundResolved) {

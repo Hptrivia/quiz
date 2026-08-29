@@ -39,6 +39,12 @@ const APP_ANNOUNCEMENTS = [
     text: "Trivia Versus and Category Blitz Versus now support real-time online multiplayer — create a room, share the code, and play live.",
     cta: { label: "Play Now", href: "versus.html" },
   },
+  {
+    icon: "🎲",
+    title: "New: Random Trivia!",
+    text: "No picking required — jump straight into a quiz mixing all our general-knowledge topics.",
+    cta: { label: "Play Now", href: "random-trivia.html" },
+  },
 ];
 
 function _cbAnnouncementHash(str) {

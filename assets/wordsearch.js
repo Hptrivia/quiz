@@ -359,7 +359,7 @@ async function renderWordSearchMashupMode(themesParam) {
 
   const titleEl = document.getElementById('wsTitle');
   const backEl  = document.querySelector('.back-link');
-  if (backEl) backEl.href = `mashup-landing.html?themes=${themesParam}`;
+  if (backEl) backEl.href = slugs.length <= 5 ? `mashup-landing.html?themes=${themesParam}` : 'index.html';
 
   const allThemeMeta   = await fetchJSON("data/themes.json");
   const selectedThemes = slugs.map(slug => allThemeMeta.find(t => t.slug === slug)).filter(Boolean);

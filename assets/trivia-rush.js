@@ -720,7 +720,7 @@ async function trMashupInit() {
     if (metaDesc) metaDesc.setAttribute('content', `Play ${mashupTitle} Trivia Rush on Trivia Gauntlet. Answer fast, build streaks, chase the rush.`);
 
     const backLink = document.getElementById('trBackLink');
-    if (backLink) backLink.href = 'mashup-landing.html?themes=' + encodeURIComponent(mashupSlug);
+    if (backLink) backLink.href = slugs.length <= 5 ? 'mashup-landing.html?themes=' + encodeURIComponent(mashupSlug) : 'index.html';
 
     const openModal = () => document.getElementById('trHowToModal').classList.add('tr-modal-show');
     document.getElementById('trHowToBtn')?.addEventListener('click', openModal);

@@ -915,6 +915,18 @@ function resultAppBannerHTML() {
   return `<a class="android-cta-banner result-app-banner web-wall-trigger" data-promo="result_app_banner" href="#">${label}</a>`;
 }
 
+// Same banner as the homepage/theme-page lobby strip (_injectWebBanner's "Get
+// 100+ questions" banner), but returned as an HTML string so pages that need
+// to drop it into a specific slot (Versus Online lobbies) can do so, instead
+// of duplicating the copy/href logic.
+function lobbyAppBannerHTML() {
+  if (!isLimitedWeb()) return '';
+  const label = '📱 Get 100+ questions for all themes — Click to download the free app &rarr;';
+  if (isIosWeb())     return `<a class="android-cta-banner" data-promo="lobby_banner" href="${_APP_STORE}">${label}</a>`;
+  if (isAndroidWeb()) return `<a class="android-cta-banner" data-promo="lobby_banner" href="${_PLAY_STORE}">${label}</a>`;
+  return `<a class="android-cta-banner web-wall-trigger" data-promo="lobby_banner" href="#">${label}</a>`;
+}
+
 // ── Printable pack test (Off Campus only) ────────────────────────────────────
 // One-theme experiment: does search traffic pay for a downloadable/printable
 // question pack? Sold off-site on Ko-fi (they host the file + take payment), so

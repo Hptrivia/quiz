@@ -37,19 +37,28 @@
 
     .cb-mp-reveal-cols { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
     .cb-mp-reveal-cols > div { flex: 1; min-width: 220px; }
-    .cb-mp-reactions { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; margin: 10px 0; }
+
+    /* Chat: a small persistent log (not floating toasts, so it can't stack up
+       and cover the game) plus a single toggle that expands the picker —
+       keeps 6 emoji + 5 quick phrases from cluttering the screen at once. */
+    .cb-mp-chat { display: flex; flex-direction: column; align-items: center; gap: 8px; margin: 10px 0; }
+    .cb-mp-chat-log {
+      width: 100%; max-height: 96px; overflow-y: auto;
+      display: flex; flex-direction: column; gap: 4px;
+    }
+    .cb-mp-chat-msg {
+      align-self: flex-start; max-width: 80%;
+      padding: 4px 10px; border-radius: 12px;
+      background: var(--option-bg); font-size: 13px;
+    }
+    .cb-mp-chat-msg.mine {
+      align-self: flex-end;
+      background: var(--option-selected-bg); color: #fff;
+    }
+    .cb-mp-chat-toggle { padding: 6px 16px; font-size: 15px; }
+    .cb-mp-reactions { display: none; gap: 6px; flex-wrap: wrap; justify-content: center; }
     .cb-mp-reaction-btn { padding: 6px 10px; font-size: 18px; line-height: 1; min-width: 0; }
-    .cb-mp-reaction-toast {
-      position: fixed; bottom: 90px; left: 50%; transform: translateX(-50%);
-      font-size: 40px; z-index: 999; pointer-events: none;
-      animation: cbMpToastPop 1.8s ease-out forwards;
-    }
-    @keyframes cbMpToastPop {
-      0%   { opacity: 0; transform: translateX(-50%) translateY(10px) scale(0.8); }
-      15%  { opacity: 1; transform: translateX(-50%) translateY(0) scale(1.1); }
-      75%  { opacity: 1; transform: translateX(-50%) translateY(-10px) scale(1); }
-      100% { opacity: 0; transform: translateX(-50%) translateY(-20px) scale(0.9); }
-    }
+    .cb-mp-reaction-btn--phrase { font-size: 13px; padding: 6px 12px; }
   </style>
 </head>
 <body data-page="catblitz-versus" data-defer-game-ad="1">

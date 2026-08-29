@@ -595,7 +595,7 @@ document.addEventListener('DOMContentLoaded', () => {
       infoModal.addEventListener('click', e => { if (e.target === infoModal) infoModal.style.display = 'none'; });
     }
   }
-  if (document.body.dataset.page === 'home') {
+  if (document.body.dataset.page === 'home' || document.body.dataset.page === 'daily-challenges') {
     initDailyWordleHomepageCard();
   }
 });

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if(/TriviaGauntletPremium/.test(navigator.userAgent||''))document.documentElement.classList.add('premium-app');</script>
+  <meta charset="UTF-8" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Random Trivia | Trivia Gauntlet</title>
+  <meta name="description" content="A single quiz combining trivia from every general knowledge topic on Trivia Gauntlet — jump straight into a game without picking a theme." />
+  <link rel="icon" href="/favicon.ico.png" sizes="any">
+
+  <link rel="apple-touch-icon" href="/assets/icon-192.png" />
+  <meta name="theme-color" content="#0f172a" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    if(!/TriviaGauntletPremium/.test(navigator.userAgent||''))gtag('config', 'G-E6BY9F2ZDT');
+  </script>
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    .rt-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0 20px;
+    }
+
+    .rt-theme-badge {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 999px;
+      border: 1px solid;
+    }
+
+    .rt-sample-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid;
+      margin-right: 7px;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+
+    .theme-sample-questions ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .theme-sample-questions li {
+      display: flex;
+      align-items: baseline;
+      gap: 0;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <main class="container narrow">
+    <div class="theme-top-links">
+      <a href="index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+      <span id="navAvatarSlot"></span>
+    </div>
+
+    <section class="panel">
+      <h1>Random Trivia</h1>
+      <p class="theme-question-count" id="questionCount">Loading...</p>
+      <p>A single quiz combining trivia from every general knowledge topic on the site — perfect for when you just want to jump straight into a game without picking a theme.</p>
+
+      <div class="rt-badges" id="themeBadges"></div>
+
+      <div class="grid">
+        <a class="card" id="marathonLink" href="#">
+          <h3>Marathon Mode</h3>
+          <p>30-question rounds</p>
+        </a>
+
+        <a class="card" id="challengeLink" href="#">
+          <h3>Challenge Mode</h3>
+          <p>10-question quick rounds</p>
+        </a>
+
+        <a class="card" id="survivalLink" href="#">
+          <h3>Survival Mode</h3>
+          <p>One mistake and the run ends</p>
+        </a>
+
+        <a class="card" id="triviaRushLink" href="#">
+          <h3>Trivia Rush</h3>
+          <p>Timed arcade mode — build streaks, chase the heat</p>
+        </a>
+
+        <a class="card" id="versusLink" href="#">
+          <h3>Versus Mode</h3>
+          <p>Play locally against friends or the computer</p>
+        </a>
+
+        <a class="card" id="wordSearchLink" href="#">
+          <h3>Word Search</h3>
+          <p>Find hidden themed words</p>
+        </a>
+
+        <a class="card" id="wordleLink" href="#">
+          <h3>Wordle</h3>
+          <p>Guess themed words</p>
+        </a>
+      </div>
+
+      <div class="theme-sample-questions" id="sampleSection" style="display:none">
+        <h2>Sample Questions</h2>
+        <ul id="sampleList"></ul>
+      </div>
+
+      <div class="theme-related-quizzes" id="relatedSection" style="display:none">
+        <h2>Play Categories Individually</h2>
+        <div class="grid" id="relatedGrid"></div>
+      </div>
+
+      <p class="theme-seo-text" style="margin-top:20px;color:var(--muted-text);font-size:13px;line-height:1.6;">
+        Random Trivia is a free general knowledge quiz covering fun facts, geography, history, science, sports, music, movies, TV, video games, true crime, world capitals, spelling, word definitions, and pop culture from the 1980s through the 2010s — all mixed into one quiz so you can jump straight in without picking a category.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a class="footer-highlight" href="how-it-works.html">How It Works</a>
+        <a class="footer-highlight" href="contact.html">Contact</a>
+        <a class="footer-highlight" href="blog.html">Blog</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // The exact 22-theme mix behind Daily Trivia (see DAILY_THEMES in assets/daily.js).
+    const RANDOM_TRIVIA_SLUGS = [
+      "spelling", "word-definitions", "animals", "fun-facts", "geography",
+      "history", "hollywood", "music", "odd-one-out", "science",
+      "true-or-false", "world-capitals", "world-facts", "food-drink",
+      "sports", "tv-series", "video-games", "true-crime",
+      "1980s", "1990s", "2000s", "2010s"
+    ];
+
+    const BADGE_COLORS = [
+      { bg: "rgba(59,130,246,0.15)", border: "#3b82f6", text: "#93c5fd" },
+      { bg: "rgba(34,197,94,0.12)",  border: "#22c55e", text: "#86efac" },
+      { bg: "rgba(249,115,22,0.15)", border: "#f97316", text: "#fdba74" },
+      { bg: "rgba(168,85,247,0.15)", border: "#a855f7", text: "#d8b4fe" },
+      { bg: "rgba(236,72,153,0.15)", border: "#ec4899", text: "#f9a8d4" },
+    ];
+
+    (async function init() {
+      let allThemes;
+      try {
+        allThemes = await fetch("data/themes.json").then(r => r.json());
+      } catch (e) {
+        document.getElementById("questionCount").textContent = "Failed to load. Please try again.";
+        return;
+      }
+
+      const selectedThemes = RANDOM_TRIVIA_SLUGS
+        .map(slug => allThemes.find(t => t.slug === slug))
+        .filter(Boolean);
+
+      const themesParam = selectedThemes.map(t => t.slug).join(",");
+      const themeColors = selectedThemes.map((t, i) => BADGE_COLORS[i % BADGE_COLORS.length]);
+
+      if (typeof gtag === "function") {
+        gtag("event", "page_view", { page_title: "Random Trivia", page_location: window.location.href });
+      }
+
+      // Theme badges
+      const badgesEl = document.getElementById("themeBadges");
+      selectedThemes.forEach((theme, i) => {
+        const c = themeColors[i];
+        const badge = document.createElement("span");
+        badge.className = "rt-theme-badge";
+        badge.style.cssText = `background:${c.bg};border-color:${c.border};color:${c.text}`;
+        badge.textContent = theme.title;
+        badgesEl.appendChild(badge);
+      });
+
+      // Game mode links
+      document.getElementById("marathonLink").href   = `play.html?themes=${themesParam}`;
+      document.getElementById("challengeLink").href  = `challenge.html?themes=${themesParam}&round=1`;
+      document.getElementById("survivalLink").href   = `survival.html?themes=${themesParam}`;
+      document.getElementById("triviaRushLink").href = `mashup-trivia-rush.html?themes=${themesParam}`;
+      document.getElementById("versusLink").href     = `versus.html?themes=${themesParam}`;
+      document.getElementById("wordSearchLink").href = `wordsearch.html?themes=${themesParam}&page=1`;
+      document.getElementById("wordleLink").href     = `wordle.html?themes=${themesParam}&page=1`;
+
+      // Load questions from all 22 categories in parallel
+      const questionsByTheme = {};
+      let totalQuestions = 0;
+
+      await Promise.all(selectedThemes.map(async (theme) => {
+        try {
+          const qs = await fetch(theme.questionFile).then(r => r.json());
+          questionsByTheme[theme.slug] = Array.isArray(qs) ? qs : [];
+          totalQuestions += questionsByTheme[theme.slug].length;
+        } catch (e) {
+          questionsByTheme[theme.slug] = [];
+        }
+      }));
+
+      document.getElementById("questionCount").textContent =
+        `${totalQuestions} questions across ${selectedThemes.length} categories`;
+
+      // Sample questions — a handful pulled at random from across the pool
+      const SAMPLE_COUNT = 8;
+      const pooled = [];
+      selectedThemes.forEach((theme, i) => {
+        (questionsByTheme[theme.slug] || []).forEach(q => pooled.push({ q, theme, color: themeColors[i] }));
+      });
+      const samples = pooled.sort(() => Math.random() - 0.5).slice(0, SAMPLE_COUNT);
+
+      if (samples.length) {
+        const sampleList = document.getElementById("sampleList");
+        samples.forEach(({ q, theme, color }) => {
+          const li = document.createElement("li");
+          li.innerHTML =
+            `<span class="rt-sample-badge" style="background:${color.bg};border-color:${color.border};color:${color.text}">${theme.title}</span>` +
+            `${q.question}`;
+          sampleList.appendChild(li);
+        });
+        document.getElementById("sampleSection").style.display = "";
+      }
+
+      // Related quizzes — play any of the 22 categories on its own
+      const relatedGrid = document.getElementById("relatedGrid");
+      selectedThemes.forEach(theme => {
+        const a = document.createElement("a");
+        a.className = "card";
+        a.href = `themes/${theme.slug}.html`;
+        a.innerHTML = `<h3>${theme.title}</h3>`;
+        relatedGrid.appendChild(a);
+      });
+      document.getElementById("relatedSection").style.display = "";
+    })();
+  </script>
+  <script src="assets/profile.js"></script>
+  <script src="assets/admob.js"></script>
+</body>
+</html>

@@ -123,7 +123,7 @@ function mpInit(allThemes, resolvedThemes) {
   });
 
   const topBanner = document.getElementById('vsMpAppBanner');
-  if (topBanner && typeof resultAppBannerHTML === 'function') topBanner.innerHTML = resultAppBannerHTML();
+  if (topBanner && typeof lobbyAppBannerHTML === 'function') topBanner.innerHTML = lobbyAppBannerHTML();
 
   // A shared invite link (?mpJoin=CODE) works from any theme's Versus page —
   // joining doesn't depend on the theme resolved for this page load, only on

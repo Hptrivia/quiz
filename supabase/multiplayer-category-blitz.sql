@@ -15,6 +15,14 @@ alter table multiplayer_rooms add column if not exists payload jsonb;
 alter table multiplayer_answers add column if not exists score int;
 alter table multiplayer_answers add column if not exists payload jsonb;
 
+-- Continue-gate: each player sets their OWN row's `ready` to true when they
+-- click Continue on the reveal screen. mpAdvanceRound only fires once both
+-- rows for the round show ready=true, so one player can no longer jump to
+-- the next letter while the other is still reviewing/contesting words.
+-- Trivia Versus doesn't use this column (it already gates on both answer
+-- rows existing before reveal, and advances on a timer after that).
+alter table multiplayer_answers add column if not exists ready boolean not null default false;
+
 -- Fixed-vocabulary reactions (no freeform chat — see conversation notes).
 create table if not exists multiplayer_reactions (
   id           bigint generated always as identity primary key,

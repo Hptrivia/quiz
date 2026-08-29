@@ -239,5 +239,5 @@ function cbInitDailyHomepageCard() {
 
 document.addEventListener("DOMContentLoaded", () => {
   if (document.body.dataset.page === "daily-catblitz") cbRenderDailyPage();
-  if (document.body.dataset.page === "home") cbInitDailyHomepageCard();
+  if (document.body.dataset.page === "home" || document.body.dataset.page === "daily-challenges") cbInitDailyHomepageCard();
 });

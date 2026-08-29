@@ -250,6 +250,26 @@ a {
   color: rgba(252, 211, 77, 0.75);
 }
 
+/* Homepage entry point into daily-challenges.html — same amber family as
+   .daily-challenge-card, kept as its own class so daily.js's card-status
+   selector (which targets .daily-challenge-card exactly) doesn't match it. */
+.daily-hub-card {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.14), rgba(59, 130, 246, 0.1));
+  border: 1px solid #f59e0b;
+}
+
+.daily-hub-card h3 {
+  color: #fcd34d;
+}
+
+.daily-hub-card .daily-card-cta {
+  color: #fcd34d;
+}
+
+.daily-hub-card .daily-card-sub {
+  color: rgba(252, 211, 77, 0.75);
+}
+
 .mashup-card {
   background: rgba(168, 85, 247, 0.1);
   border: 1px solid #a855f7;
@@ -275,6 +295,20 @@ a {
 
 .catblitz-card p {
   color: rgba(147, 197, 253, 0.75);
+}
+
+/* "Random Trivia" — teal, its own lane apart from Daily (amber), Mashup (purple), Category Blitz (blue). */
+.random-trivia-card {
+  background: rgba(20, 184, 166, 0.1);
+  border: 1px solid #14b8a6;
+}
+
+.random-trivia-card h3 {
+  color: #5eead4;
+}
+
+.random-trivia-card p {
+  color: rgba(94, 234, 212, 0.75);
 }
 
 /* "Recently Added" — emerald, so it reads apart from Daily (amber) and Mashup (purple). */

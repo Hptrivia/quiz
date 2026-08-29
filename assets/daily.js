@@ -499,5 +499,5 @@ function startCountdown() {
 /* ── Boot ── */
 document.addEventListener("DOMContentLoaded", () => {
   if (document.body.dataset.page === "daily") renderDailyPage();
-  if (document.body.dataset.page === "home")  initDailyHomepageCard();
+  if (document.body.dataset.page === "home" || document.body.dataset.page === "daily-challenges") initDailyHomepageCard();
 });

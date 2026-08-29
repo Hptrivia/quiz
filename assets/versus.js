@@ -571,7 +571,7 @@ function vsResolveThemeContext(allThemes) {
     resolvedThemes = slugs.map(s => allThemes.find(t => t.slug === s)).filter(Boolean);
     if (resolvedThemes.length >= 2) {
       gameTitle = resolvedThemes.map(t => t.title).join(' + ') + ' — Versus';
-      backHref = `mashup-landing.html?themes=${themesParam}`;
+      backHref = slugs.length <= 5 ? `mashup-landing.html?themes=${themesParam}` : 'index.html';
     }
   } else if (slug) {
     const theme = allThemes.find(t => t.slug === slug);

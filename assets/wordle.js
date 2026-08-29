@@ -23,7 +23,7 @@ async function renderWordleMashupMode(themesParam) {
   const badgeEl    = document.getElementById("wordleThemeBadge");
   const backEl     = document.querySelector(".back-link");
 
-  if (backEl) backEl.href = `mashup-landing.html?themes=${themesParam}`;
+  if (backEl) backEl.href = slugs.length <= 5 ? `mashup-landing.html?themes=${themesParam}` : 'index.html';
 
   const allThemes      = await loadThemes();
   const selectedThemes = slugs.map(slug => allThemes.find(t => t.slug === slug)).filter(Boolean);
