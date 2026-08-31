@@ -428,6 +428,7 @@ function cbBindFeedbackBox() {
           type: "catblitz_feedback",
           vote: vote || "no_vote",
           message: textArea ? textArea.value.trim() : "",
+          page: location.pathname + location.search,
           _subject: "Trivia Gauntlet Category Blitz Feedback",
         }),
       });

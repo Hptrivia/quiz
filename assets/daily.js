@@ -140,7 +140,7 @@ async function getDailyQuestions() {
     questions.push({
       id:         picked.id,
       question:   picked.question,
-      options:    picked.options,
+      options:    dcShuffle(picked.options, qRng),
       answer:     picked.answer,
       difficulty: picked.difficulty,
       themeName:  theme.name,

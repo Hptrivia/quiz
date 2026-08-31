@@ -104,7 +104,7 @@
         await fetch("https://formspree.io/f/mpqybwea", {
           method: "POST",
           headers: { "Content-Type": "application/json", "Accept": "application/json" },
-          body: JSON.stringify({ type, message, email, _subject: "Trivia Gauntlet Feedback" }),
+          body: JSON.stringify({ type, message, email, page: document.referrer || "", _subject: "Trivia Gauntlet Feedback" }),
         });
         form.style.display = "none";
         document.getElementById("contactSentMsg").style.display = "block";

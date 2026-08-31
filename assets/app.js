@@ -1046,6 +1046,7 @@ function hmBindFeedbackBox() {
           type: 'hard_mode_feedback',
           vote: vote || 'no_vote',
           message: textArea ? textArea.value.trim() : '',
+          page: location.pathname + location.search,
           _subject: 'Trivia Gauntlet Hard Mode Feedback',
         }),
       });
