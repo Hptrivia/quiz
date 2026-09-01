@@ -158,12 +158,15 @@ function cbRenderCategoryPicker({ listEl, inputEl, addBtnEl, initialCategories }
 
   // Dropdown lives right below the add row, absolutely positioned (see
   // .cb-versus-suggest-dropdown) so opening it doesn't shove the rest of
-  // the setup screen down.
+  // the setup screen down. It's appended inside addRow (which is the
+  // positioned ancestor) rather than after it, so top:100% resolves
+  // against the add row's own bottom edge instead of the whole setup
+  // row's bottom edge (which would land it below the hint text underneath).
   const dropdownEl = document.createElement("div");
   dropdownEl.className = "cb-versus-suggest-dropdown";
   dropdownEl.style.display = "none";
   const addRow = addBtnEl.closest(".cb-versus-add-category-row") || inputEl.parentElement;
-  addRow.insertAdjacentElement("afterend", dropdownEl);
+  addRow.appendChild(dropdownEl);
 
   function renderSuggestions() {
     const usedIds = new Set(activeCategories.map(c => c.id));
