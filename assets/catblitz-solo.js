@@ -79,6 +79,23 @@ function cbRenderSoloPage() {
     return;
   }
 
+  // "Spin Again" (see cbShowSoloResult) links back here with ?again=1 — the
+  // real page navigation is still required for admob.js's rewarded-ad click
+  // listener and to re-arm the deferred interstitial, but the player already
+  // chose categories/difficulty for this sitting, so skip re-showing setup
+  // and jump straight into another spin instead of making them hit Start again.
+  if (new URLSearchParams(window.location.search).get("again") === "1") {
+    const categories = cbGetSavedSoloCategories();
+    const seconds = CB_DIFFICULTY_SECONDS[cbGetSavedDifficulty()];
+    if (setupEl) setupEl.style.display = "none";
+    if (introEl) introEl.style.display = "block";
+    (async () => {
+      if (typeof adMobShowGameStartInterstitial === "function") await adMobShowGameStartInterstitial();
+      cbStartSoloSpin(categories, seconds);
+    })();
+    return;
+  }
+
   const activeCategories = cbRenderCategoryPicker({
     listEl: document.getElementById("cbSoloCategoryList"),
     inputEl: document.getElementById("cbSoloNewCategory"),
@@ -167,7 +184,7 @@ function cbShowSoloResult(spinsUsed, gradeResult, categories, letter) {
 
   const isPremium = typeof isPremiumUser === "function" && isPremiumUser();
   const gateThisSpin = !isPremium && !limited && spinsUsed % 2 === 0;
-  const href = "category-blitz-solo.html";
+  const href = "category-blitz-solo.html?again=1";
   spinAgainBox.innerHTML = `<a class="primary-btn cb-spin-again-btn" href="${href}" style="display:block;text-align:center;text-decoration:none;"${gateThisSpin ? ` data-rewarded-href="${href}"` : ""}>Spin Again</a>`;
 }
 

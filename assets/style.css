@@ -142,6 +142,10 @@ body {
   font-family: Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
+  /* Kills the double-tap-to-zoom gesture (mistaken taps zooming the page in
+     the wrapped app and mobile browsers) without disabling pinch-zoom, which
+     accessibility guidelines want left available. */
+  touch-action: manipulation;
 }
 
 body.has-banner {
