@@ -23,6 +23,15 @@ alter table multiplayer_answers add column if not exists payload jsonb;
 -- rows existing before reveal, and advances on a timer after that).
 alter table multiplayer_answers add column if not exists ready boolean not null default false;
 
+-- Carries which of a player's categories the OTHER player has contested
+-- (toggled via "Mark as Correct"/"Mark as Incorrect" on the reveal screen),
+-- e.g. {"animal": true, "food": true} — keyed by category id, true meaning
+-- "toggled from the auto-grade." Previously only the resulting score number
+-- was synced, so the row-owner's own reveal column never re-painted the
+-- ✓/✗ icon for the categories that got corrected — see mpSyncReveal /
+-- mpApplyMyContested in catblitz-versus-multiplayer.js.
+alter table multiplayer_answers add column if not exists contested jsonb;
+
 -- Fixed-vocabulary reactions (no freeform chat — see conversation notes).
 create table if not exists multiplayer_reactions (
   id           bigint generated always as identity primary key,

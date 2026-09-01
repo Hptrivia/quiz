@@ -1063,6 +1063,10 @@ async function renderMultiThemeMarathon() {
   const params = new URLSearchParams(window.location.search);
   const slugs = (params.get("themes") || "").split(",").map(s => s.trim()).filter(Boolean);
   if (slugs.length < 2) { window.location.href = "mashup.html"; return; }
+  // Random Trivia links in with &rt=1 — it mixes ~22 themes, so the
+  // per-theme breakdown Mashup shows at the end would just be a long,
+  // not-very-fun list rather than a useful score summary.
+  const isRandomTrivia = params.get("rt") === "1";
 
   const allThemeMeta = await loadThemes();
   const selectedThemes = slugs.map(slug => allThemeMeta.find(t => t.slug === slug)).filter(Boolean);
@@ -1228,8 +1232,14 @@ async function renderMultiThemeMarathon() {
     control.onEnter(() => submitBtn.click());
     nextBtn.addEventListener("click", () => {
       currentIndex++;
-      if (currentIndex >= pageQuestions.length) renderResult();
-      else {
+      // Counted per-question (not once per round) so the free-question wall can
+      // actually interrupt a round in progress — see renderMidRoundWall.
+      if (typeof webAddQ === 'function') webAddQ(1);
+      if (currentIndex >= pageQuestions.length) {
+        renderResult();
+      } else if (typeof isWebQLimit === 'function' && isWebQLimit()) {
+        renderMidRoundWall();
+      } else {
         _saveMidQuiz("marathon", mashupKey, safePage, { questions: pageQuestions, currentIndex, score, wrongQuestions, themeScores });
         showQuestion(currentIndex);
       }
@@ -1245,9 +1255,23 @@ async function renderMultiThemeMarathon() {
 
   slidesContainer.querySelectorAll(".question-slide").forEach(s => { s.style.display = "none"; });
 
+  // Cuts the round short the moment the free-question wall is hit — instead
+  // of letting the rest of an oversized round (PAGE_SIZE 30) play out for
+  // free before the wall ever gets a chance to appear between rounds.
+  function renderMidRoundWall() {
+    _clearMidQuiz("marathon", mashupKey, safePage);
+    document.getElementById("quizBox").style.display = "none";
+    resultBox.style.display = "block";
+    resultBox.classList.remove("result-anim"); void resultBox.offsetWidth; resultBox.classList.add("result-anim");
+    resultBox.innerHTML = `
+      <h2>Nice run!</h2>
+      <p class="daily-date">You answered ${currentIndex} of ${pageQuestions.length} questions this round — ${score} correct.</p>
+      ${typeof webWallHTML === 'function' ? webWallHTML(null, null) : ''}
+    `;
+  }
+
   function renderResult() {
     _clearMidQuiz("marathon", mashupKey, safePage);
-    if (typeof webAddQ === 'function') webAddQ(pageQuestions.length);
     document.getElementById("quizBox").style.display = "none";
     resultBox.style.display = "block";
     resultBox.classList.remove("result-anim"); void resultBox.offsetWidth; resultBox.classList.add("result-anim");
@@ -1309,7 +1333,9 @@ async function renderMultiThemeMarathon() {
         </div>
       </div>
     `;
-    document.getElementById("mashupMarathonBreakdown").appendChild(renderMashupThemeBreakdown(themeScores, selectedThemes, colorBySlug));
+    if (!isRandomTrivia) {
+      document.getElementById("mashupMarathonBreakdown").appendChild(renderMashupThemeBreakdown(themeScores, selectedThemes, colorBySlug));
+    }
     hmBindFeedbackBox();
     if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
     if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Reveal Answers', 'Reveal Answers', 'See the correct answer for every question you missed — free in the app, no limits.');
@@ -1627,8 +1653,13 @@ async function renderPlayPage() {
 
     nextBtn.addEventListener("click", () => {
       quizState.currentIndex += 1;
+      // Counted per-question (not once per round) so the free-question wall can
+      // actually interrupt a round in progress — see renderMidRoundWall.
+      if (typeof webAddQ === 'function') webAddQ(1);
       if (quizState.currentIndex >= quizState.questions.length) {
         renderResult();
+      } else if (typeof isWebQLimit === 'function' && isWebQLimit()) {
+        renderMidRoundWall();
       } else {
         _saveMidQuiz("marathon", theme.slug, safePage, { questions: quizState.questions, currentIndex: quizState.currentIndex, score: quizState.score, wrongQuestions });
         showQuestion(quizState.currentIndex);
@@ -1649,6 +1680,23 @@ async function renderPlayPage() {
     });
   }
 
+// Cuts the round short the moment the free-question wall is hit — instead of
+// letting the rest of an oversized round (PAGE_SIZE 30) play out for free
+// before the wall ever gets a chance to appear between rounds.
+function renderMidRoundWall() {
+  _clearMidQuiz("marathon", theme.slug, safePage);
+  document.getElementById("quizBox").style.display = "none";
+  resultBox.style.display = "block";
+  resultBox.classList.remove("result-anim");
+  void resultBox.offsetWidth;
+  resultBox.classList.add("result-anim");
+  resultBox.innerHTML = `
+    <h2>Nice run!</h2>
+    <p class="daily-date">You answered ${quizState.currentIndex} of ${quizState.questions.length} questions this round — ${quizState.score} correct.</p>
+    ${typeof webWallHTML === 'function' ? webWallHTML(null, theme.title) : ''}
+  `;
+}
+
 function renderResult() {
   _clearMidQuiz("marathon", theme.slug, safePage);
   document.getElementById("quizBox").style.display = "none";
@@ -1657,7 +1705,6 @@ function renderResult() {
   void resultBox.offsetWidth;
   resultBox.classList.add("result-anim");
 
-  if (typeof webAddQ === 'function') webAddQ(quizState.questions.length);
   const hasNextPage = safePage < totalPages;
   const tierText = getMarathonTier(quizState.score, quizState.questions.length, theme.category);
 

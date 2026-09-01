@@ -60,10 +60,63 @@ function cbRenderDifficultyPicker(rowEl) {
   return () => selected;
 }
 
+// Suggested categories offered in the picker's dropdown — the 5
+// wordlist-graded defaults (so they can be re-added after being removed)
+// plus a broader set of common pick-list categories. None past the
+// original 5 have a wordlist file, so they're graded manually via the
+// "Mark as Correct" toggle after the round, same as any typed-in category.
+const CB_SUGGESTED_CATEGORIES = [
+  { id: "name", label: "Name" },
+  { id: "animal", label: "Animal" },
+  { id: "place", label: "Place" },
+  { id: "thing", label: "Thing" },
+  { id: "food", label: "Food" },
+  { id: "colors", label: "Colors" },
+  { id: "male-names", label: "Male Names" },
+  { id: "female-names", label: "Female Names" },
+  { id: "celebrities", label: "Celebrities" },
+  { id: "footballers", label: "Footballers" },
+  { id: "athletes", label: "Athletes" },
+  { id: "sports", label: "Sports" },
+  { id: "musical-instruments", label: "Musical Instruments" },
+  { id: "movie-stars", label: "Movie Stars" },
+  { id: "musicians", label: "Musicians" },
+  { id: "professions", label: "Professions" },
+  { id: "school-subjects", label: "School Subjects" },
+  { id: "human-body-parts", label: "Human Body Parts" },
+  { id: "famous-brands", label: "Famous Brands" },
+  { id: "video-games", label: "Video Games" },
+  { id: "languages", label: "Languages" },
+  { id: "countries", label: "Countries" },
+  { id: "cities", label: "Cities" },
+  { id: "movies-tv-shows", label: "Movies / TV Shows" },
+  { id: "things-in-the-house", label: "Things in the House" },
+  { id: "emotions-feelings", label: "Emotions / Feelings" },
+  { id: "superheroes-villains", label: "Superheroes / Villains" },
+  { id: "diseases", label: "Diseases" },
+  { id: "drinks", label: "Drinks" },
+  { id: "sports-teams", label: "Sports Teams" },
+  { id: "mobile-web-apps", label: "Mobile / Web Apps" },
+  { id: "books", label: "Books" },
+  { id: "songs", label: "Songs" },
+];
+
+// Draws `count` categories at random from the suggestion pool — used by the
+// optional "Randomize Categories" control on the letter-spin screen (see
+// cbRenderRandomizeCategoriesBox) and by online Versus's setup-screen
+// equivalent. A fresh shuffle every call, so re-rolling gives a different set.
+function cbRandomCategories(count = 5) {
+  const shuffled = [...CB_SUGGESTED_CATEGORIES].sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, count).map(c => ({ ...c }));
+}
+
 // Shared add/remove category picker used by both Solo and Versus setup
 // screens. Renders removable pills into listEl (guarded to never drop below
-// 1 category) and wires the free-text add row. Returns the live array —
-// read it whenever the caller's Start button fires, after editing is done.
+// 1 category) and wires the free-text add row, plus a click-to-browse
+// suggestion dropdown (CB_SUGGESTED_CATEGORIES, filtered as you type and
+// re-filtered after every add so already-picked ones drop out). Returns the
+// live array — read it whenever the caller's Start button fires, after
+// editing is done.
 function cbRenderCategoryPicker({ listEl, inputEl, addBtnEl, initialCategories }) {
   const activeCategories = initialCategories.map(c => ({ ...c }));
 
@@ -76,13 +129,14 @@ function cbRenderCategoryPicker({ listEl, inputEl, addBtnEl, initialCategories }
         if (activeCategories.length <= 1) return;
         activeCategories.splice(parseInt(btn.dataset.idx, 10), 1);
         render();
+        renderSuggestions();
       });
     });
   }
   render();
 
-  addBtnEl.addEventListener("click", () => {
-    const label = inputEl.value.trim();
+  function addCategory(rawLabel) {
+    const label = String(rawLabel).trim();
     if (!label) return;
     const usedIds = new Set(activeCategories.map(c => c.id));
     let id = cbSlugify(label);
@@ -91,7 +145,68 @@ function cbRenderCategoryPicker({ listEl, inputEl, addBtnEl, initialCategories }
     activeCategories.push({ id, label });
     inputEl.value = "";
     render();
+    renderSuggestions();
+  }
+
+  addBtnEl.addEventListener("click", () => addCategory(inputEl.value));
+  inputEl.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      addCategory(inputEl.value);
+    }
   });
+
+  // Dropdown lives right below the add row, absolutely positioned (see
+  // .cb-versus-suggest-dropdown) so opening it doesn't shove the rest of
+  // the setup screen down.
+  const dropdownEl = document.createElement("div");
+  dropdownEl.className = "cb-versus-suggest-dropdown";
+  dropdownEl.style.display = "none";
+  const addRow = addBtnEl.closest(".cb-versus-add-category-row") || inputEl.parentElement;
+  addRow.insertAdjacentElement("afterend", dropdownEl);
+
+  function renderSuggestions() {
+    const usedIds = new Set(activeCategories.map(c => c.id));
+    const query = inputEl.value.trim().toLowerCase();
+    const matches = CB_SUGGESTED_CATEGORIES.filter(s =>
+      !usedIds.has(s.id) && (!query || s.label.toLowerCase().includes(query))
+    );
+    if (!matches.length) {
+      dropdownEl.style.display = "none";
+      dropdownEl.innerHTML = "";
+      return;
+    }
+    dropdownEl.innerHTML = matches.map(s =>
+      `<button type="button" class="cb-versus-suggest-item" data-label="${_cbEscapeHtml(s.label)}">${_cbEscapeHtml(s.label)}</button>`
+    ).join("");
+    dropdownEl.querySelectorAll(".cb-versus-suggest-item").forEach(btn => {
+      // mousedown+preventDefault (not click) so the input never loses focus
+      // to the tap — a plain click would fire after blur already hid the
+      // dropdown, especially on mobile.
+      btn.addEventListener("mousedown", (e) => {
+        e.preventDefault();
+        addCategory(btn.dataset.label);
+      });
+    });
+    dropdownEl.style.display = "block";
+  }
+
+  inputEl.addEventListener("focus", renderSuggestions);
+  inputEl.addEventListener("input", renderSuggestions);
+  inputEl.addEventListener("blur", () => {
+    setTimeout(() => { dropdownEl.style.display = "none"; }, 150);
+  });
+
+  // Attached to the array itself (not a separate return shape) so every
+  // existing caller that treats the return value as a plain array of
+  // categories keeps working unchanged — only a caller that wants the
+  // "Randomize Categories" swap needs to know this exists.
+  activeCategories.replaceAll = (newList) => {
+    activeCategories.length = 0;
+    newList.forEach(c => activeCategories.push({ ...c }));
+    render();
+    renderSuggestions();
+  };
 
   return activeCategories;
 }
@@ -102,6 +217,36 @@ function _cbEscapeHtml(str) {
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
+}
+
+// Optional "Randomize Categories" control shown next to the letter wheel —
+// re-rolls a fresh 5-category set from CB_SUGGESTED_CATEGORIES as many times
+// as the player likes before they spin their letter. Never auto-applies: if
+// the player leaves it alone, whatever they picked on setup is used
+// unchanged — onRandomize only fires on an actual click. getCurrent() lets
+// the caller read back whichever set (setup's or a randomized one) is
+// active right now, at the moment the letter spin locks it in.
+function cbRenderRandomizeCategoriesBox(container, { onRandomize } = {}) {
+  let current = null;
+
+  function render() {
+    const previewText = current
+      ? `Using: ${current.map(c => c.label).join(", ")}`
+      : "Optional — leave as-is to keep the categories you picked, or roll a random set.";
+    container.innerHTML = `
+      <div class="cb-randomize-box">
+        <button type="button" class="secondary-btn" id="cbRandomizeCategoriesBtn">🎲 Randomize Categories (optional)</button>
+        <p class="cb-versus-hint">${_cbEscapeHtml(previewText)}</p>
+      </div>`;
+    container.querySelector("#cbRandomizeCategoriesBtn").addEventListener("click", () => {
+      current = cbRandomCategories(5);
+      if (typeof onRandomize === "function") onRandomize(current);
+      render();
+    });
+  }
+  render();
+
+  return { getCurrent: () => current };
 }
 
 function cbPickLetter(excludeLetters) {
@@ -205,13 +350,24 @@ function cbRenderRound(container, { letter, categories, seconds = 60, onSubmit }
     return null;
   }
 
+  // Every category needs a word before a manual submit — only the timer
+  // expiry path (force=true) may submit blanks, same as it already bypasses
+  // the mismatch check above.
+  function findBlank() {
+    for (const c of categories) {
+      const el = inputEl(c.id);
+      if (!el || !el.value.trim()) return c;
+    }
+    return null;
+  }
+
   categories.forEach(c => {
     const el = inputEl(c.id);
     if (el) el.addEventListener("input", () => {
       const val = el.value.trim();
       const mismatched = val && val[0].toUpperCase() !== String(letter).toUpperCase();
       el.classList.toggle("cb-input--invalid", !!mismatched);
-      if (errorEl.style.display !== "none" && !findMismatch()) errorEl.style.display = "none";
+      if (errorEl.style.display !== "none" && !findMismatch() && !findBlank()) errorEl.style.display = "none";
     });
   });
 
@@ -223,6 +379,12 @@ function cbRenderRound(container, { letter, categories, seconds = 60, onSubmit }
       const mismatch = findMismatch();
       if (mismatch) {
         errorEl.textContent = `"${mismatch.label}" needs to start with ${letter} — fix it or clear it to submit.`;
+        errorEl.style.display = "block";
+        return;
+      }
+      const blank = findBlank();
+      if (blank) {
+        errorEl.textContent = `Fill in "${blank.label}" before submitting — every category needs a word.`;
         errorEl.style.display = "block";
         return;
       }
@@ -242,6 +404,13 @@ function cbRenderRound(container, { letter, categories, seconds = 60, onSubmit }
   }, 1000);
 
   submitBtn.onclick = () => finish(false);
+
+  // Lets a caller end the round early from the outside — e.g. Category
+  // Blitz Versus Online force-submits your in-progress answers (blanks and
+  // all, same as a timeout) the moment your opponent submits theirs, so the
+  // round ends for both of you together instead of you finishing at your
+  // own pace while they wait.
+  return { forceSubmit: () => finish(true) };
 }
 
 // Pure, synchronous-feeling grading — no human-in-the-loop step, no blocking

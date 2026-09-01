@@ -3,6 +3,14 @@
 // leaderboard.js — no Realtime channels, no Edge Function). See
 // supabase/multiplayer-rooms.sql for the two tables this talks to.
 //
+// Both players share one deadline per question (round_started_at + 30s), but
+// moving to the NEXT question is gated on the opponent's answer row for the
+// current one actually existing in the DB — see mpTryAdvanceRound — so a
+// fast/well-connected player can't keep looping ahead on their own clock
+// while a stalled or backgrounded opponent falls further and further
+// behind. A genuinely stale opponent (mpRoom.oppStale) is treated as
+// forfeited so a real disconnect can't block the match forever.
+//
 // Reuses from versus.js: VS_PLAYER_COLORS, vsBuildSchedule, vsDrawQuestion,
 // vsBuildLeaderboard, vsShow, vsSessionUsedIds, vsBuildQuestionPools.
 
@@ -92,13 +100,41 @@ function mpInit(allThemes, resolvedThemes) {
   const savedName = localStorage.getItem('tg_mp_name');
   if (savedName) nameInput.value = savedName;
 
+  // Limited web: a match, once started, must be able to finish without being
+  // cut off mid-way — so instead of interrupting an in-progress match, only
+  // lengths that fully fit the remaining free-question allowance are
+  // selectable at all. 20 never fits (it alone exceeds the whole allowance),
+  // so it's always disabled on limited web regardless of remaining count.
+  const vsOnlineRemaining = (typeof isLimitedWeb === 'function' && isLimitedWeb() && typeof webVsOnlineRemaining === 'function')
+    ? webVsOnlineRemaining() : Infinity;
+
   let mpBestOf = 5;
   const bestOfSeg = document.getElementById('vsMpBestOfSeg');
-  bestOfSeg.querySelectorAll('button').forEach(btn => {
-    if (parseInt(btn.dataset.val) === mpBestOf) btn.classList.add('selected');
+  const bestOfBtns = [...bestOfSeg.querySelectorAll('button')];
+  let firstFitting = null;
+  bestOfBtns.forEach(btn => {
+    const val = parseInt(btn.dataset.val, 10);
+    const fits = val <= vsOnlineRemaining;
+    if (!fits) {
+      btn.disabled = true;
+      btn.style.opacity = '0.4';
+      btn.title = val === 20
+        ? 'Only available in the app'
+        : `Not enough free questions left today (${vsOnlineRemaining} left) — try a shorter match or get the app`;
+    } else if (firstFitting === null) {
+      firstFitting = val;
+    }
+  });
+  // Default selection: 5 if it fits (matches every other mode's default),
+  // otherwise whatever the shortest fitting length is, otherwise nothing
+  // fits and mpBestOf stays 5 but Create/Join get walled below anyway.
+  mpBestOf = bestOfBtns.some(b => parseInt(b.dataset.val, 10) === 5 && !b.disabled) ? 5 : (firstFitting || 5);
+  bestOfBtns.forEach(btn => {
+    if (parseInt(btn.dataset.val, 10) === mpBestOf && !btn.disabled) btn.classList.add('selected');
     btn.addEventListener('click', () => {
-      mpBestOf = parseInt(btn.dataset.val);
-      bestOfSeg.querySelectorAll('button').forEach(b => b.classList.remove('selected'));
+      if (btn.disabled) return;
+      mpBestOf = parseInt(btn.dataset.val, 10);
+      bestOfBtns.forEach(b => b.classList.remove('selected'));
       btn.classList.add('selected');
     });
   });
@@ -108,8 +144,16 @@ function mpInit(allThemes, resolvedThemes) {
   const clearMpError = () => { errorEl.style.display = 'none'; };
 
   const createBtn = document.getElementById('vsMpCreateBtn');
+  // Nothing fits (not even the shortest, Best of 5) — no length selection can
+  // save this, so block starting a new match at all rather than let Create
+  // succeed only to immediately hit the wall.
+  const noLengthFits = firstFitting === null;
   createBtn.addEventListener('click', async () => {
     clearMpError();
+    if (noLengthFits) {
+      showMpError("You've used your free online questions for now — get the app for unlimited online Versus.");
+      return;
+    }
     const name = nameInput.value.trim() || 'Player 1';
     localStorage.setItem('tg_mp_name', name);
     if (!resolvedThemes.length) {
@@ -185,8 +229,11 @@ async function mpDrawQuestionSet(resolvedThemes, bestOf) {
     : (pools.expert || []).length > 0;
   const schedule = vsBuildSchedule(bestOf, hasExpert);
   const bufferDiffs = Array(MP_TIEBREAK_BUFFER).fill(hasExpert ? 'expert' : 'hard');
+  // Shuffled so a Mashup/Random Trivia match doesn't visit themes in the
+  // same fixed order every single game (see the equivalent fix in
+  // versus.js's vsStartGame for local pass-and-play).
   const drawState = isMashup
-    ? { pools, usedIds: new Set(vsSessionUsedIds), isMashup: true, themeQueues, themeRotationIdx: 0 }
+    ? { pools, usedIds: new Set(vsSessionUsedIds), isMashup: true, themeQueues: shuffleArray(themeQueues), themeRotationIdx: 0 }
     : { pools, usedIds: new Set(vsSessionUsedIds) };
 
   const questionIds = [];
@@ -224,7 +271,7 @@ async function mpCreateRoom(resolvedThemes, bestOf, name) {
     hostId: mpPlayerId(), guestId: null,
     myName: name, oppName: null,
     currentRound: 0, myScore: 0, oppScore: 0,
-    answeredThisRound: false, roundResolved: false, rematchCount: 0,
+    answeredThisRound: false, roundResolved: false, rematchCount: 0, rematchReady: false,
   };
 
   document.getElementById('vsMpRoomCode').textContent = code;
@@ -284,6 +331,13 @@ async function mpJoinRoom(code, name) {
   if (!room) throw new Error('No room found with that code.');
   if (room.guest_id) throw new Error('That room is already full.');
   if (room.status !== 'waiting') throw new Error('That room is no longer accepting players.');
+  // Joining uses the HOST's match length (not something the guest picks), so
+  // it can't be pre-gated by length like Create's button-disabling — check
+  // it fits the guest's own remaining budget here instead, before joining.
+  if (typeof isLimitedWeb === 'function' && isLimitedWeb() && typeof webVsOnlineRemaining === 'function'
+      && room.best_of > webVsOnlineRemaining()) {
+    throw new Error(`Not enough free questions left to join this Best of ${room.best_of} match — try a shorter match or get the app.`);
+  }
 
   const slugs = room.theme_slugs.split(',').map(s => s.trim()).filter(Boolean);
   const themes = slugs.map(s => mpAllThemes.find(t => t.slug === s)).filter(Boolean);
@@ -311,7 +365,7 @@ async function mpJoinRoom(code, name) {
     hostId: updated.host_id, guestId: mpPlayerId(),
     myName: name, oppName: updated.host_name,
     currentRound: 0, myScore: 0, oppScore: 0,
-    answeredThisRound: false, roundResolved: false, rematchCount: 0,
+    answeredThisRound: false, roundResolved: false, rematchCount: 0, rematchReady: false,
     roundStartedAt: updated.round_started_at,
   };
   mpBeginMatch();
@@ -367,6 +421,7 @@ function mpRenderRound() {
 
   mpRoom.answeredThisRound = false;
   mpRoom.roundResolved = false;
+  mpRoom.waitingToAdvance = false;
   mpRoom.roundDeadline = mpRoom.roundStartedAt
     ? new Date(mpRoom.roundStartedAt).getTime() + MP_ROUND_SECONDS * 1000
     : Date.now() + MP_ROUND_SECONDS * 1000;
@@ -419,7 +474,10 @@ async function mpSubmitAnswer(choice) {
   if (!mpRoom || mpRoom.answeredThisRound) return;
   mpRoom.answeredThisRound = true;
   if (mpRoom.tickTimer) clearInterval(mpRoom.tickTimer);
-  if (typeof webAddQ === 'function') webAddQ(1);
+  // Own separate allowance (not the shared Q pool Marathon/Challenge/etc use)
+  // — see mpInit's length-gating, which already ensures a started match has
+  // enough of this budget left to finish without being cut short.
+  if (typeof webAddVsOnline === 'function') webAddVsOnline(1);
 
   document.querySelectorAll('#vsMpOptions .option-btn').forEach(b => {
     b.disabled = true;
@@ -467,6 +525,32 @@ async function mpMaybeResolveRound() {
   if (oppCorrect) mpRoom.oppScore++;
 
   mpRenderReveal(q, myChoice, iCorrect, oppChoice, oppCorrect);
+  // Don't advance yet — see mpTryAdvanceRound just below. Resolving MY OWN
+  // reveal can happen purely on my own clock (the `timeUp` fallback above),
+  // but actually MOVING to the next question waits for real confirmation
+  // that the opponent has finished this one too, so a fast/well-connected
+  // player can't keep looping ahead on their own timer while a stalled or
+  // backgrounded opponent falls further and further behind.
+  mpRoom.waitingToAdvance = true;
+  mpTryAdvanceRound();
+}
+
+// Gates the actual "move to the next question" step on the opponent's
+// answer row for THIS round genuinely existing in the DB — not just my own
+// local timeUp guess. A genuinely stale opponent (mpRoom.oppStale, the same
+// threshold the disconnect banner already uses — see mpPollActive) is
+// treated as forfeited so a real disconnect can't block the match forever;
+// short background/network hiccups just make the active player wait a
+// little longer for the same reveal they're already looking at.
+async function mpTryAdvanceRound() {
+  if (!mpRoom || !mpRoom.waitingToAdvance) return;
+  let oppHasAnswered = false;
+  try {
+    const rows = await mpGet(`multiplayer_answers?room_code=eq.${mpRoom.code}&round_num=eq.${mpRoom.currentRound}&player_id=eq.${mpOppId()}&select=player_id`);
+    oppHasAnswered = rows.length > 0;
+  } catch (e) { return; /* next poll tick retries */ }
+  if (!oppHasAnswered && !mpRoom.oppStale) return;
+  mpRoom.waitingToAdvance = false;
   mpAdvanceRound();
 }
 
@@ -488,6 +572,46 @@ function mpRenderReveal(q, myChoice, iCorrect, oppChoice, oppCorrect) {
 
   document.getElementById('vsMpTimer').textContent = '';
   mpRenderScoreboard();
+}
+
+// Reconstructs and shows the reveal for the round `room` says just ended
+// (mpRoom.currentRound, not yet updated) before catching up to it — used by
+// mpPollActive's safety-net branch when the opponent's client already
+// advanced current_round in the DB before this client resolved the round
+// locally. Mirrors mpMaybeResolveRound's grading, just from the DB's answer
+// rows instead of a fresh submit.
+async function mpCatchUpAndAdvance(room) {
+  const catchUpRound = mpRoom.currentRound;
+  let rows = [];
+  try {
+    rows = await mpGet(`multiplayer_answers?room_code=eq.${mpRoom.code}&round_num=eq.${catchUpRound}&select=player_id,choice`);
+  } catch (e) { /* best effort — reveal below just shows "(no answer)" for both */ }
+
+  const myRow = rows.find(r => r.player_id === mpMyId());
+  const oppRow = rows.find(r => r.player_id === mpOppId());
+  const q = mpRoom.questionMap.get(mpRoom.questionIds[catchUpRound]);
+  const myChoice = myRow ? myRow.choice : null;
+  const oppChoice = oppRow ? oppRow.choice : null;
+  const iCorrect = !!q && myChoice === q.answer;
+  const oppCorrect = !!q && oppChoice === q.answer;
+
+  mpRoom.myScore = mpRoom.role === 'host' ? room.host_score : room.guest_score;
+  mpRoom.oppScore = mpRoom.role === 'host' ? room.guest_score : room.host_score;
+  mpRoom.roundResolved = true;
+  mpRoom.answeredThisRound = true;
+  if (mpRoom.tickTimer) clearInterval(mpRoom.tickTimer);
+
+  if (q) mpRenderReveal(q, myChoice, iCorrect, oppChoice, oppCorrect);
+
+  mpRoom.currentRound = room.current_round;
+  mpRoom.roundStartedAt = room.round_started_at;
+
+  const delay = q ? MP_REVEAL_PAUSE_MS : 0;
+  setTimeout(() => {
+    if (!mpRoom) return;
+    if (room.status === 'finished') mpFinishMatch();
+    else mpRenderRound();
+  }, delay);
 }
 
 async function mpAdvanceRound() {
@@ -541,25 +665,26 @@ async function mpPollActive() {
   mpRoom.oppName = mpRoom.role === 'host' ? room.guest_name : room.host_name;
   const oppLastSeen = mpRoom.role === 'host' ? room.guest_last_seen : room.host_last_seen;
   const stale = oppLastSeen && (Date.now() - new Date(oppLastSeen).getTime() > MP_DISCONNECT_MS);
+  mpRoom.oppStale = stale; // read by mpTryAdvanceRound so a real disconnect can't block the match forever
   const banner = document.getElementById('vsMpDisconnectBanner');
   if (banner) banner.style.display = stale ? '' : 'none';
 
   // Safety net: if our own resolve logic stalled (e.g. backgrounded tab) but
-  // the other client already moved the match forward, catch up from the DB
-  // rather than recomputing locally.
+  // the other client already moved the match forward, catch up from the DB.
+  // Catching up used to skip straight to the next round with no ✅/❌ shown
+  // for the round that just finished — this fetches that round's answers and
+  // plays the same reveal every normal resolve gets, just delayed, before
+  // advancing.
   if (!mpRoom.roundResolved && room.current_round > mpRoom.currentRound) {
-    mpRoom.myScore = mpRoom.role === 'host' ? room.host_score : room.guest_score;
-    mpRoom.oppScore = mpRoom.role === 'host' ? room.guest_score : room.host_score;
-    mpRoom.roundResolved = true;
-    if (mpRoom.tickTimer) clearInterval(mpRoom.tickTimer);
-    mpRoom.currentRound = room.current_round;
-    mpRoom.roundStartedAt = room.round_started_at;
-    if (room.status === 'finished') mpFinishMatch();
-    else mpRenderRound();
+    await mpCatchUpAndAdvance(room);
     return;
   }
 
-  mpMaybeResolveRound();
+  if (mpRoom.waitingToAdvance) {
+    await mpTryAdvanceRound();
+  } else {
+    mpMaybeResolveRound();
+  }
 }
 
 function mpShowOpponentLeft() {
@@ -619,6 +744,7 @@ function mpShowResults() {
 
   if (mpRoom) {
     mpRoom.rematchStarted = false;
+    mpRoom.rematchReady = false;
     mpStartResultsPoll();
   }
 }
@@ -636,9 +762,15 @@ function mpTeardown() {
 // Both players are already sitting on the results screen with mpRoom still
 // populated (mpTeardown hasn't run) — a rematch just resets the same room
 // row with a fresh question set instead of sending anyone back through
-// setup/create/join. Whoever clicks "Play Again" first wins a conditional
-// PATCH (guarded on status=eq.finished); the other side's results-poll picks
-// up the change and joins the same rematch within one poll tick.
+// setup/create/join.
+//
+// Play Again waits for BOTH players before starting: clicking marks your own
+// readiness (a sentinel multiplayer_answers row, round_num -1, ready=true —
+// reuses the `ready` column already on this table, no new column needed)
+// instead of resetting the room immediately. Only once both sentinel rows
+// exist does the actual reset PATCH fire (guarded on status=eq.finished, so
+// only one of the two racing clients' PATCH lands); the other side's
+// results-poll picks up the winner's write within one tick.
 
 let mpResultsPollTimer = null;
 
@@ -661,20 +793,33 @@ async function mpPollForRematch() {
     if (row.status === 'abandoned') { mpStopResultsPoll(); return; }
     if (row.status === 'active' && row.current_round === 0 && Array.isArray(row.question_ids)) {
       await mpBeginRematch(row.question_ids);
+    } else if (mpRoom.rematchReady && row.status === 'finished') {
+      await mpTryStartRematchIfBothReady();
     }
   } catch (e) { /* transient — next tick retries */ }
 }
 
 function mpPlayAgain() {
-  if (!mpRoom || mpRoom.rematchStarted) return;
-  // Only the clicking player is prompted — the opponent gets pulled into the
-  // rematch via mpBeginRematch (poll-detected) with no ad of their own; you
-  // can't make a remote player watch an ad just because their opponent did.
-  const proceed = () => mpPlayAgainConfirmed();
-  // Best-of-3/5 matches are short, so the very first rematch after one of
+  if (!mpRoom || mpRoom.rematchStarted || mpRoom.rematchReady) return;
+  // A rematch reuses the same room/bestOf without going through mpInit's
+  // setup-screen length-gating, so re-check the budget here — otherwise
+  // someone could keep clicking Play Again past their free allowance and
+  // get cut off mid-match, which the setup-screen gating was built to avoid.
+  if (typeof isLimitedWeb === 'function' && isLimitedWeb() && typeof webVsOnlineRemaining === 'function'
+      && webVsOnlineRemaining() < mpRoom.bestOf) {
+    const btn = document.getElementById('vsMpPlayAgainBtn');
+    if (btn) { btn.disabled = true; btn.textContent = 'Get the app for more'; }
+    return;
+  }
+  // Only the clicking player is prompted — watching an ad only marks YOUR
+  // OWN readiness; the opponent isn't pulled in (or made to watch anything)
+  // until they click Play Again on their own side too. See
+  // mpMarkRematchReady/mpTryStartRematchIfBothReady for the both-ready gate.
+  const proceed = () => mpMarkRematchReady();
+  // Best-of-5/10 matches are short, so the very first rematch after one of
   // those ends is free — the ad only kicks in from the second rematch
-  // onward. Best-of-10 is long enough that the ad still applies from the start.
-  const isShortMatch = mpRoom.bestOf === 3 || mpRoom.bestOf === 5;
+  // onward. Best-of-20 is long enough that the ad still applies from the start.
+  const isShortMatch = mpRoom.bestOf === 5 || mpRoom.bestOf === 10;
   const skipAd = mpRoom.rematchCount === 0 && isShortMatch;
   if (!skipAd && typeof _offerRewardedLifeline === 'function' && typeof isInApp === 'function'
       && isInApp() && typeof ADMOB_ADS_ENABLED !== 'undefined' && ADMOB_ADS_ENABLED) {
@@ -682,6 +827,43 @@ function mpPlayAgain() {
   } else {
     proceed();
   }
+}
+
+// Marks me ready instead of resetting the room immediately (mirrors Category
+// Blitz's equivalent gate in catblitz-versus-multiplayer.js). Only once both
+// players' sentinel rows exist does mpTryStartRematchIfBothReady actually
+// reset the room.
+async function mpMarkRematchReady() {
+  if (!mpRoom || mpRoom.rematchStarted || mpRoom.rematchReady) return;
+  mpRoom.rematchReady = true;
+
+  const btn = document.getElementById('vsMpPlayAgainBtn');
+  if (btn) { btn.disabled = true; btn.textContent = 'Waiting for opponent…'; }
+
+  try {
+    await mpPost('multiplayer_answers', {
+      room_code: mpRoom.code, round_num: -1, player_id: mpMyId(), ready: true
+    });
+  } catch (e) { /* results-poll keeps checking regardless */ }
+
+  await mpTryStartRematchIfBothReady();
+}
+
+// round_num -1 is a sentinel outside any real round, reusing the `ready`
+// column already on multiplayer_answers (added for Category Blitz's
+// mid-match Continue gate — see supabase/multiplayer-category-blitz.sql —
+// but the column lives on the shared table, so Trivia can reuse it here
+// without its own migration).
+async function mpTryStartRematchIfBothReady() {
+  if (!mpRoom || mpRoom.rematchStarted) return;
+  let rows;
+  try {
+    rows = await mpGet(`multiplayer_answers?room_code=eq.${mpRoom.code}&round_num=eq.-1&select=player_id,ready`);
+  } catch (e) { return; }
+  const hostReady = rows.some(r => r.player_id === mpRoom.hostId && r.ready);
+  const guestReady = rows.some(r => r.player_id === mpRoom.guestId && r.ready);
+  if (!hostReady || !guestReady) return;
+  await mpPlayAgainConfirmed();
 }
 
 async function mpPlayAgainConfirmed() {
@@ -714,6 +896,7 @@ async function mpPlayAgainConfirmed() {
     // Otherwise the opponent won the race — mpPollForRematch (still running)
     // will pick up their write and start the rematch on this side too.
   } catch (e) {
+    if (mpRoom) mpRoom.rematchReady = false;
     if (btn) { btn.disabled = false; btn.textContent = 'Play Again'; }
   }
 }
@@ -721,6 +904,7 @@ async function mpPlayAgainConfirmed() {
 async function mpBeginRematch(newQuestionIds) {
   if (!mpRoom || mpRoom.rematchStarted) return;
   mpRoom.rematchStarted = true;
+  mpRoom.rematchReady = false;
   mpRoom.rematchCount++;
   mpStopResultsPoll();
 

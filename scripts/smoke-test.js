@@ -204,17 +204,17 @@ async function playCatBlitzSingle(page, endSel, setup) {
   return waitVisible(page, endSel, 5000);
 }
 
-// Versus: Best of 3 (fastest preset) so the smoke test doesn't play a full
-// 13-round match. Each round is 2 turns; grading is immediate (no per-word
+// Versus: Best of 5 (fastest preset) so the smoke test doesn't play a full
+// 20-round match. Each round is 2 turns; grading is immediate (no per-word
 // prompt anymore), so each turn just needs a "Lock In Score" click on its
 // own result before the next player's turn. Loose success (like the
 // existing local Versus mode) since the full setup→round→continue chain is
 // too deep to assert a single end selector on reliably.
 async function playCatBlitzVersus(page) {
-  await clickFirst(page, '[data-len="3"]');
+  await clickFirst(page, '[data-len="5"]');
   await clickFirst(page, '#cbVersusStartBtn');
   await wait(300);
-  for (let round = 0; round < 3; round++) {
+  for (let round = 0; round < 5; round++) {
     for (let turn = 0; turn < 2; turn++) {
       await playCatBlitzTurn(page);
       await waitVisible(page, '.cb-lockin-btn', 4000);
@@ -237,7 +237,7 @@ async function playCatBlitzVersus(page) {
 async function playVersusOnline(host, guest, theme) {
   await host.goto(`${BASE}/versus.html?theme=${theme}`, { waitUntil: 'networkidle2', timeout: 30000 });
   await wait(500);
-  await clickFirst(host, '#vsMpBestOfSeg [data-val="3"]'); // fastest preset
+  await clickFirst(host, '#vsMpBestOfSeg [data-val="5"]'); // fastest preset
   await clickFirst(host, '#vsMpCreateBtn');
   await waitVisible(host, '#vsMpRoomCode', 8000);
   const code = await host.evaluate(() => (document.getElementById('vsMpRoomCode').textContent || '').trim());
@@ -251,7 +251,7 @@ async function playVersusOnline(host, guest, theme) {
   await wait(500);
 
   const endSel = '#vsResultsTitle';
-  for (let i = 0; i < 80; i++) {
+  for (let i = 0; i < 120; i++) {  // was 80 — extra network round-trip per q now (mpTryAdvanceRound)
     const hostDone = await isVisible(host, endSel);
     const guestDone = await isVisible(guest, endSel);
     if (hostDone && guestDone) break;
@@ -269,7 +269,11 @@ async function playVersusOnlineRematch(host, guest, theme) {
   const first = await playVersusOnline(host, guest, theme);
   if (!first) return false;
 
+  // Play Again waits for BOTH sides (mpMarkRematchReady/
+  // mpTryStartRematchIfBothReady) — both host and guest must click before
+  // the rematch actually starts.
   await clickFirst(host, '#vsMpPlayAgainBtn');
+  await clickFirst(guest, '#vsMpPlayAgainBtn');
   await wait(1000);
 
   const questionSel = '#vsMpQuestionText';
@@ -280,7 +284,7 @@ async function playVersusOnlineRematch(host, guest, theme) {
   if (!(await isVisible(host, questionSel)) || !(await isVisible(guest, questionSel))) return false;
 
   const endSel = '#vsResultsTitle';
-  for (let i = 0; i < 80; i++) {
+  for (let i = 0; i < 120; i++) {  // was 80 — same reason as playVersusOnline
     const hostDone = await isVisible(host, endSel);
     const guestDone = await isVisible(guest, endSel);
     if (hostDone && guestDone) break;
@@ -307,7 +311,7 @@ async function fillAndSubmitCatBlitz(page) {
 async function playCatBlitzVersusOnline(host, guest) {
   await host.goto(`${BASE}/category-blitz-versus.html`, { waitUntil: 'networkidle2', timeout: 30000 });
   await wait(500);
-  await clickFirst(host, '#cbMpLengthRow [data-len="3"]');
+  await clickFirst(host, '#cbMpLengthRow [data-len="5"]');
   await clickFirst(host, '#cbMpCreateBtn');
   await waitVisible(host, '#cbMpRoomCode', 8000);
   const code = await host.evaluate(() => (document.getElementById('cbMpRoomCode').textContent || '').trim());
@@ -320,7 +324,12 @@ async function playCatBlitzVersusOnline(host, guest) {
   await clickFirst(guest, '#cbMpJoinBtn');
   await wait(500);
 
-  for (let i = 0; i < 80; i++) {
+  // 120 iterations @ 500ms (was 80): each round now does one extra real
+  // network round-trip (mpCheckOpponentFinishedFirst polls whether the other
+  // side has submitted yet before force-submitting), so a full Best-of-5
+  // match against the live Supabase backend occasionally needs more than the
+  // old 40s budget to finish all 5 rounds' worth of round-trips.
+  for (let i = 0; i < 120; i++) {
     const hostDone = await isVisible(host, '#cbVersusFinal');
     const guestDone = await isVisible(guest, '#cbVersusFinal');
     if (hostDone && guestDone) break;
@@ -341,10 +350,19 @@ async function playCatBlitzVersusOnlineRematch(host, guest) {
   const first = await playCatBlitzVersusOnline(host, guest);
   if (!first) return false;
 
+  // Play Again waits for BOTH sides (mpMarkRematchReady/
+  // mpTryStartRematchIfBothReady) — both host and guest must click before
+  // the rematch actually starts.
   await clickFirst(host, '#cbVersusRematchBtn');
+  await clickFirst(guest, '#cbVersusRematchBtn');
   await wait(1000);
 
-  for (let i = 0; i < 80; i++) {
+  // 120 iterations @ 500ms (was 80): each round now does one extra real
+  // network round-trip (mpCheckOpponentFinishedFirst polls whether the other
+  // side has submitted yet before force-submitting), so a full Best-of-5
+  // match against the live Supabase backend occasionally needs more than the
+  // old 40s budget to finish all 5 rounds' worth of round-trips.
+  for (let i = 0; i < 120; i++) {
     const hostDone = await isVisible(host, '#cbVersusFinal');
     const guestDone = await isVisible(guest, '#cbVersusFinal');
     if (hostDone && guestDone) break;
@@ -392,8 +410,12 @@ function buildModes(themes) {
     // rest of the driver's option-btn/Submit/Next flow still applies.
     { name: 'marathon',        url: `play.html?theme=${a}`,            start: '.hm-ask-no', run: p => playQuiz(p, '#resultBox') },
     { name: 'marathon-mashup', url: `play.html?themes=${a},${b}`,      start: '.hm-ask-no', run: p => playQuiz(p, '#resultBox') },
-    { name: 'challenge',       url: `challenge.html?theme=${a}&round=1`, start: '.hm-ask-no', run: p => playChallengeRounds(p, '#challengeResultBox') },
-    { name: 'challenge-mashup',url: `challenge.html?themes=${a},${b}`, start: '.hm-ask-no', run: p => playChallengeRounds(p, '#challengeResultBox') },
+    // targetRound 1 (was 2): Challenge's round size (10) now exactly matches
+    // the global free-question limit (10, see profile.js _WEB_LIMITS.Q), so a
+    // limited-web visitor (what this headless test simulates) only ever gets
+    // round 1 before the wall — round 2 is no longer reachable to test against.
+    { name: 'challenge',       url: `challenge.html?theme=${a}&round=1`, start: '.hm-ask-no', run: p => playChallengeRounds(p, '#challengeResultBox', 1) },
+    { name: 'challenge-mashup',url: `challenge.html?themes=${a},${b}`, start: '.hm-ask-no', run: p => playChallengeRounds(p, '#challengeResultBox', 1) },
     { name: 'survival',        url: `survival.html?theme=${a}`,        start: '[data-difficulty="mixed"]', run: p => playQuiz(p, '#survivalResultBox') },
     { name: 'survival-mashup', url: `survival.html?themes=${a},${b}`,  start: '[data-difficulty="mixed"]', run: p => playQuiz(p, '#survivalResultBox') },
     { name: 'episode',         url: `episode.html?theme=${ep}&episode=1`, run: p => playQuiz(p, '#episodeResultBox') },

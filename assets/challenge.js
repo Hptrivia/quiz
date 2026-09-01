@@ -1,13 +1,15 @@
-// Challenge mode: on limited web (mobile + desktop), the first round (10
-// questions) is free; finishing round 2 pops the app-install wall. This is
-// challenge-specific and independent of the global 30/day question limit.
-const CHAL_WEB_FREE_ROUNDS = 2;
-const CHAL_WEB_LIMIT_Q = CHAL_WEB_FREE_ROUNDS * 10;
+// Challenge mode shares the same global 10-question web allowance as every
+// other mode (Marathon, Episode, Survival) — it used to have its own more
+// generous 2-round (20-question) allowance, but that's now looser than the
+// global limit, so it was never actually reachable and just added a second
+// system to keep in sync. Each round is exactly 10 questions (ROUND_SIZE,
+// below), which happens to match the global limit exactly — finishing round
+// 1 already exhausts it, so no mid-round interruption is needed here the way
+// Marathon/Episode required (their rounds are bigger than the limit).
 // True when this round's result screen should show the install wall instead of
 // a Next-Round button (web only — the native app never walls, it shows ads).
-function chalWebWalled(safeRound) {
-  if (typeof isWebQLimit === 'function' && isWebQLimit()) return true;
-  return typeof isLimitedWeb === 'function' && isLimitedWeb() && safeRound >= CHAL_WEB_FREE_ROUNDS;
+function chalWebWalled() {
+  return typeof isWebQLimit === 'function' && isWebQLimit();
 }
 
 // Cumulative score across rounds (per session). Thin wrappers over the shared
@@ -22,6 +24,9 @@ async function renderMultiThemeChallenge() {
   const params = new URLSearchParams(window.location.search);
   const slugs = (params.get("themes") || "").split(",").map(s => s.trim()).filter(Boolean);
   if (slugs.length < 2) { window.location.href = "mashup.html"; return; }
+  // Random Trivia links in with &rt=1 — see app.js's renderMultiThemeMarathon
+  // for why the per-theme breakdown is skipped for it.
+  const isRandomTrivia = params.get("rt") === "1";
 
   const allThemeMeta = await loadThemes();
   const selectedThemes = slugs.map(slug => allThemeMeta.find(t => t.slug === slug)).filter(Boolean);
@@ -109,8 +114,9 @@ async function renderMultiThemeChallenge() {
       if (safeRound % 2 === 0) nextRoundLink.dataset.rewardedHref = `challenge.html?themes=${themesParam}&round=${safeRound + 1}`;
     } else { nextRoundLink.style.display = "none"; }
   }
-  // Limited web: round 1 free; skipping on round 2+ pops the app-download wall.
-  if (typeof gateWebSkip === 'function') gateWebSkip(nextRoundLink, safeRound >= CHAL_WEB_FREE_ROUNDS);
+  // Limited web: skipping always pops the app-download wall (mobile web
+  // only — see gateWebSkip), same as Marathon/Episode.
+  if (typeof gateWebSkip === 'function') gateWebSkip(nextRoundLink, true);
 
   let score = 0, currentIndex = 0, revealAnswers = false;
   const wrongQuestions = [];
@@ -209,7 +215,7 @@ async function renderMultiThemeChallenge() {
     const hasNextRound = safeRound < totalRounds;
     if (!isReplay && typeof saveSession === "function") saveSession("challenge", sessionKey, safeRound, score, roundQuestions.length);
     const cum = isReplay ? null : _chalCumRecord(sessionKey, safeRound, score, roundQuestions.length);
-    const webWalled = hasNextRound && chalWebWalled(safeRound);
+    const webWalled = hasNextRound && chalWebWalled();
     if (typeof recordMashupStats === "function") {
       recordMashupStats(sessionKey, "challenge", { correct: score, answered: roundQuestions.length, round: safeRound, totalRounds });
     }
@@ -237,7 +243,7 @@ async function renderMultiThemeChallenge() {
       ? `<div class="wrong-replay-row">You have ${wrongCount} wrong answer${wrongCount !== 1 ? "s" : ""} &mdash; <a href="challenge.html?themes=${themesParam}&replay=1"${safeRound % 2 === 0 ? ` data-rewarded-href="challenge.html?themes=${themesParam}&replay=1" data-rewarded-label="Replay"` : ''}>Replay them all</a></div>`
       : "";
     resultBox.innerHTML = `
-      ${(safeRound < CHAL_WEB_FREE_ROUNDS && typeof resultAppBannerHTML === 'function') ? resultAppBannerHTML() : ''}
+      ${(typeof isWebQLimit === 'function' && !isWebQLimit() && typeof resultAppBannerHTML === 'function') ? resultAppBannerHTML() : ''}
       <h2>Round ${safeRound} Complete</h2>
       ${cumScoreLine(score, roundQuestions.length, cum)}
       ${hmResultHintHtml()}
@@ -246,7 +252,7 @@ async function renderMultiThemeChallenge() {
       ${webQCounterHTML()}
       <div class="cta-row">
         ${hasNextRound && !webWalled ? `<a class="primary-btn" href="challenge.html?themes=${themesParam}&round=${safeRound + 1}" ${safeRound % 2 === 0 ? `data-rewarded-href="challenge.html?themes=${themesParam}&round=${safeRound + 1}"` : ''}>Next Round</a>` : ""}
-        ${webWalled ? webWallHTML("Yay! You've answered " + CHAL_WEB_LIMIT_Q + " questions", null, null, CHAL_WEB_LIMIT_Q) : ""}
+        ${webWalled ? webWallHTML(null, null) : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
         ${!isPremiumUser() && (typeof isDesktopWeb === 'function' && isDesktopWeb()) ? `<a class="secondary-btn" href="remove-ads.html">Reveal Answers</a>` : ""}
       </div>
@@ -265,7 +271,9 @@ async function renderMultiThemeChallenge() {
         </div>
       </div>
     `;
-    document.getElementById("mashupChallengeBreakdown").appendChild(renderMashupThemeBreakdown(themeScores, selectedThemes, colorBySlug));
+    if (!isRandomTrivia) {
+      document.getElementById("mashupChallengeBreakdown").appendChild(renderMashupThemeBreakdown(themeScores, selectedThemes, colorBySlug));
+    }
     hmBindFeedbackBox();
     if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
     if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Reveal Answers', 'Reveal Answers', 'See the correct answer for every question you missed — free in the app, no limits.');
@@ -300,12 +308,12 @@ async function renderMultiThemeChallenge() {
         : "";
       const cumR = _chalCumSum(_chalCumLoad(sessionKey));
       // Resuming would bypass the round-2 web wall, so gate Continue the same way.
-      const resumeWalled = chalWebWalled(saved.round);
+      const resumeWalled = chalWebWalled();
       resultBox.innerHTML = `
         <h2>Round ${saved.round} Complete</h2>
         ${cumScoreLine(saved.score, saved.total, cumR)}
         <div class="cta-row">
-          ${resumeWalled ? webWallHTML("Yay! You've answered " + CHAL_WEB_LIMIT_Q + " questions", null, null, CHAL_WEB_LIMIT_Q) : `<a class="primary-btn" id="mashupContinueBtn" href="challenge.html?themes=${themesParam}&round=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
+          ${resumeWalled ? webWallHTML(null, null) : `<a class="primary-btn" id="mashupContinueBtn" href="challenge.html?themes=${themesParam}&round=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
           <button class="secondary-btn" id="mashupRound1Btn">Start from Round 1</button>
         </div>
         ${replayHtml}`;
@@ -455,8 +463,9 @@ async function renderChallengePage() {
       nextRoundLink.style.display = "none";
     }
   }
-  // Limited web: round 1 free; skipping on round 2+ pops the app-download wall.
-  if (typeof gateWebSkip === 'function') gateWebSkip(nextRoundLink, safeRound >= CHAL_WEB_FREE_ROUNDS);
+  // Limited web: skipping always pops the app-download wall (mobile web
+  // only — see gateWebSkip), same as Marathon/Episode.
+  if (typeof gateWebSkip === 'function') gateWebSkip(nextRoundLink, true);
 
   let showContinuePrompt = false;
 
@@ -483,12 +492,12 @@ async function renderChallengePage() {
 
       const cumR = _chalCumSum(_chalCumLoad(theme.slug));
       // Resuming would bypass the round-2 web wall, so gate Continue the same way.
-      const resumeWalled = chalWebWalled(saved.round);
+      const resumeWalled = chalWebWalled();
       resultBox.innerHTML = `
         <h2>Round ${saved.round} Complete</h2>
         ${cumScoreLine(saved.score, saved.total, cumR)}
         <div class="cta-row">
-          ${resumeWalled ? webWallHTML("Yay! You've answered " + CHAL_WEB_LIMIT_Q + " questions", theme.title, null, CHAL_WEB_LIMIT_Q) : `<a class="primary-btn" id="continueRoundBtn" href="challenge.html?theme=${theme.slug}&round=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
+          ${resumeWalled ? webWallHTML(null, theme.title) : `<a class="primary-btn" id="continueRoundBtn" href="challenge.html?theme=${theme.slug}&round=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
           <button class="secondary-btn" id="startRound1Btn">Start from Round 1</button>
         </div>
         ${replayHtml}
@@ -670,7 +679,7 @@ async function renderChallengePage() {
 
     const hasNextRound = safeRound < totalRounds;
     const cum = isReplay ? null : _chalCumRecord(theme.slug, safeRound, state.score, state.questions.length);
-    const webWalled = hasNextRound && chalWebWalled(safeRound);
+    const webWalled = hasNextRound && chalWebWalled();
     const roundLink = `${window.location.origin}${window.location.pathname}?theme=${encodeURIComponent(theme.slug)}&round=${safeRound}`;
 
     const affiliateHtml = affiliateBoxHtml();
@@ -721,7 +730,7 @@ async function renderChallengePage() {
     const notifyHtml = (!hasNextRound && !isReplay) ? buildNotifyCard(theme.title, false, "challenge") : "";
 
     resultBox.innerHTML = `
-      ${(safeRound < CHAL_WEB_FREE_ROUNDS && typeof resultAppBannerHTML === 'function') ? resultAppBannerHTML() : ''}
+      ${(typeof isWebQLimit === 'function' && !isWebQLimit() && typeof resultAppBannerHTML === 'function') ? resultAppBannerHTML() : ''}
       <h2>Round ${safeRound} Complete</h2>
       ${cumScoreLine(state.score, state.questions.length, cum)}
       ${hmResultHintHtml()}
@@ -730,7 +739,7 @@ async function renderChallengePage() {
       ${webQCounterHTML()}
       <div class="cta-row">
         ${hasNextRound && !webWalled ? `<a class="primary-btn" href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}" ${safeRound % 2 === 0 ? `data-rewarded-href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}"` : ''}>Next Round</a>` : ""}
-        ${webWalled ? webWallHTML("Yay! You've answered " + CHAL_WEB_LIMIT_Q + " questions", theme.title, null, CHAL_WEB_LIMIT_Q) : ""}
+        ${webWalled ? webWallHTML(null, theme.title) : ""}
         ${(typeof packPurchaseHTML === 'function' && packPurchaseHTML(theme.slug)) || `<a class="secondary-btn" href="contact.html">Report a Question</a>`}
         ${!isPremiumUser() && (typeof isDesktopWeb === 'function' && isDesktopWeb()) ? `<a class="secondary-btn" href="remove-ads.html?theme=${theme.slug}">Reveal Answers</a>` : ""}
       </div>

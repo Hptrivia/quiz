@@ -1,6 +1,6 @@
 // ── Category Blitz — Versus (local pass-and-play) ───────────────────────────
-// Best of 3/5/13 (13 = a full game: 2 players × 13 rounds = all 26 letters).
-// Each round both players spin (match-scoped no-repeat letters), 60s each.
+// Best of 5/10/20. Each round both players spin (match-scoped no-repeat
+// letters, falling back to repeats once all 26 are used — see cbPickLetter).
 // Grading is immediate and non-blocking — no per-word yes/no interrupt.
 // Each player's full result (wordlist-matched categories already scored)
 // shows right after their own submit; any 'unrecognized' category gets a
@@ -102,16 +102,31 @@ function cbVersusStartRound(state) {
   const statusEl = document.getElementById("cbVersusStatus");
   const wheelContainer = document.getElementById("cbWheelContainer");
   const roundEl = document.getElementById("cbRoundContainer");
+  const randomizeBox = document.getElementById("cbVersusRandomizeBox");
   wheelContainer.style.display = "block";
   roundEl.style.display = "none";
 
   if (statusEl) statusEl.textContent = `Round ${state.round} of ${state.matchLength} — ${state.p1Name}'s turn`;
+
+  // Categories are a whole-match setting (every round reuses state.categories,
+  // only the letter changes) — offered only before the very first letter of
+  // the match is spun, never again once the match is underway.
+  if (randomizeBox) {
+    if (state.round === 1) {
+      cbRenderRandomizeCategoriesBox(randomizeBox, {
+        onRandomize: (picked) => { state.categories = picked; },
+      });
+    } else {
+      randomizeBox.innerHTML = "";
+    }
+  }
 
   cbSpinWheel(wheelContainer, {
     excludeLetters: new Set(state.usedLetters),
     onResult: (p1Letter) => {
       state.usedLetters.push(p1Letter);
       wheelContainer.style.display = "none";
+      if (randomizeBox) randomizeBox.innerHTML = ""; // locked in for the rest of the match
       roundEl.style.display = "block";
       cbRenderRound(roundEl, {
         letter: p1Letter, categories: state.categories, seconds: state.seconds || CB_DIFFICULTY_SECONDS.medium,

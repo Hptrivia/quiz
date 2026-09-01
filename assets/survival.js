@@ -2,6 +2,9 @@ async function renderMultiThemeSurvival() {
   const params = new URLSearchParams(window.location.search);
   const slugs = (params.get("themes") || "").split(",").map(s => s.trim()).filter(Boolean);
   if (slugs.length < 2) { window.location.href = "mashup.html"; return; }
+  // Random Trivia links in with &rt=1 — see app.js's renderMultiThemeMarathon
+  // for why the per-theme breakdown is skipped for it.
+  const isRandomTrivia = params.get("rt") === "1";
 
   const allThemeMeta = await loadThemes();
   const selectedThemes = slugs.map(slug => allThemeMeta.find(t => t.slug === slug)).filter(Boolean);
@@ -202,7 +205,9 @@ async function renderMultiThemeSurvival() {
         </div>
       </div>
     `;
-    document.getElementById("mashupSurvivalBreakdown").appendChild(renderMashupThemeBreakdown(themeScores, selectedThemes, colorBySlug));
+    if (!isRandomTrivia) {
+      document.getElementById("mashupSurvivalBreakdown").appendChild(renderMashupThemeBreakdown(themeScores, selectedThemes, colorBySlug));
+    }
     if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Unlimited Lifelines', 'Unlimited Lifelines', 'Use 50-50 and Call a Friend as often as you like — free in the app, no limits.');
     const msInput = document.getElementById("mashupSurvivalSearchInput");
     const msResults = document.getElementById("mashupSurvivalSearchResults");

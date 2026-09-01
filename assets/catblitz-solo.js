@@ -105,23 +105,35 @@ function cbStartSoloSpin(categories, seconds) {
   const introEl = document.getElementById("cbDailyIntro");
   const roundEl = document.getElementById("cbRoundContainer");
   const wheelContainer = document.getElementById("cbWheelContainer");
+  const randomizeBox = document.getElementById("cbSoloRandomizeBox");
+
+  // Entirely optional — if the player never touches the randomize button,
+  // this stays exactly what they picked on the setup screen.
+  let activeCategories = categories;
+  if (randomizeBox) {
+    cbRenderRandomizeCategoriesBox(randomizeBox, {
+      onRandomize: (picked) => { activeCategories = picked; },
+    });
+  }
+
   cbSpinWheel(wheelContainer, {
     excludeLetters: new Set(cbGetSoloUsedLettersForSpin()),
     onResult: (letter) => {
       cbRecordSoloUsedLetter(letter);
       if (introEl) introEl.style.display = "none";
+      if (randomizeBox) randomizeBox.innerHTML = ""; // locked in for this spin
       if (roundEl) roundEl.style.display = "block";
       cbRenderRound(roundEl, {
         letter,
-        categories,
+        categories: activeCategories,
         seconds: seconds || CB_DIFFICULTY_SECONDS.medium,
         onSubmit: async ({ answers, elapsedMs }) => {
-          const gradeResult = await cbGradeRound({ letter, categories, answers, elapsedMs, mode: "solo" });
+          const gradeResult = await cbGradeRound({ letter, categories: activeCategories, answers, elapsedMs, mode: "solo" });
           const spinsUsedNow = cbIncrementSoloSpinsUsed();
           const limitedNow = typeof isLimitedWeb === "function" && isLimitedWeb();
           if (limitedNow) cbMarkWebPlayUsed();
           roundEl.style.display = "none";
-          cbShowSoloResult(spinsUsedNow, gradeResult, categories, letter);
+          cbShowSoloResult(spinsUsedNow, gradeResult, activeCategories, letter);
         },
       });
     },

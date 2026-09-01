@@ -7,8 +7,11 @@
 // Unlike Trivia Versus, both players get the SAME letter each round (a
 // deliberate departure from hot-seat, which gives each player their own
 // letter) and each side's round timer runs independently via the existing
-// cbRenderRound — there's no shared deadline to keep in sync, only a
-// "wait for the other player's submitted row" gate.
+// cbRenderRound — there's no shared deadline to keep in sync. Instead, the
+// moment one player submits, the other gets force-submitted too (whatever
+// they've typed so far, same as their own timer running out) — see
+// mpCheckOpponentFinishedFirst — so the round always ends for both together
+// rather than the faster player waiting on the slower one's own pace.
 //
 // Contest works opposite of hot-seat: you can never mark your OWN unrecognized
 // word correct (nothing stops that from being self-serving online, unlike
@@ -141,6 +144,17 @@ function mpInit() {
     addBtnEl: document.getElementById('cbMpAddCategoryBtn'),
     initialCategories: CB_VERSUS_DEFAULT_CATEGORIES,
   });
+  // Online has no live "both spin together" moment the way local pass-and-
+  // play does (the letters are pre-drawn at room creation and each side just
+  // plays a local reveal animation) — and both players MUST end up with the
+  // identical category set, so randomizing has to happen here, before the
+  // room exists, rather than on a per-player wheel screen.
+  const mpRandomizeBox = document.getElementById('cbMpRandomizeBox');
+  if (mpRandomizeBox) {
+    cbRenderRandomizeCategoriesBox(mpRandomizeBox, {
+      onRandomize: (picked) => activeCategories.replaceAll(picked),
+    });
+  }
   const getDifficulty = cbRenderDifficultyPicker(document.getElementById('cbMpDifficultyRow'));
 
   const errorEl = document.getElementById('cbMpError');
@@ -267,7 +281,7 @@ async function mpCreateRoom(name, bestOf, categories, seconds) {
     hostId: mpPlayerId(), guestId: null,
     myName: name, oppName: null,
     currentRound: 0, myScore: 0, oppScore: 0,
-    answeredThisRound: false, roundResolved: false, chatLog: [], rematchCount: 0,
+    answeredThisRound: false, roundResolved: false, chatLog: [], rematchCount: 0, rematchReady: false,
   };
 
   document.getElementById('cbVersusSetup').style.display = 'none';
@@ -342,7 +356,7 @@ async function mpJoinRoom(code, name) {
     hostId: updated.host_id, guestId: mpPlayerId(),
     myName: name, oppName: updated.host_name,
     currentRound: 0, myScore: 0, oppScore: 0,
-    answeredThisRound: false, roundResolved: false, chatLog: [], rematchCount: 0,
+    answeredThisRound: false, roundResolved: false, chatLog: [], rematchCount: 0, rematchReady: false,
   };
   document.getElementById('cbVersusSetup').style.display = 'none';
   mpBeginMatch();
@@ -392,6 +406,7 @@ function mpRenderRound() {
 
   mpRoom.answeredThisRound = false;
   mpRoom.roundResolved = false;
+  mpRoom.roundControls = null;
 
   const statusEl = document.getElementById('cbVersusStatus');
   const wheelContainer = document.getElementById('cbWheelContainer');
@@ -408,7 +423,7 @@ function mpRenderRound() {
   cbMpSpinToLetter(wheelContainer, letter, () => {
     wheelContainer.style.display = 'none';
     roundEl.style.display = 'block';
-    cbRenderRound(roundEl, {
+    mpRoom.roundControls = cbRenderRound(roundEl, {
       letter, categories: mpRoom.categories, seconds: mpRoom.seconds,
       onSubmit: async ({ answers, elapsedMs }) => {
         if (typeof webAddQ === 'function') webAddQ(1);
@@ -417,6 +432,20 @@ function mpRenderRound() {
       },
     });
   });
+}
+
+// The moment the OTHER player submits, force MY round to end too — whatever
+// I've typed so far gets submitted, blanks and all, same as running out of
+// time. Without this, a fast player's submit only started a "waiting for
+// opponent" note on THEIR screen while the slower player kept playing at
+// their own pace; now the round ends for both together, matching how the
+// timer already force-submits on expiry.
+async function mpCheckOpponentFinishedFirst() {
+  if (!mpRoom || mpRoom.answeredThisRound || !mpRoom.roundControls) return;
+  try {
+    const rows = await mpGet(`multiplayer_answers?room_code=eq.${mpRoom.code}&round_num=eq.${mpRoom.currentRound}&player_id=eq.${mpOppId()}&select=player_id`);
+    if (rows.length) mpRoom.roundControls.forceSubmit();
+  } catch (e) { /* next poll tick retries */ }
 }
 
 // Submits the raw wordlist score immediately — no self-review. Your
@@ -455,7 +484,7 @@ async function mpMaybeResolveRound() {
 
   let rows;
   try {
-    rows = await mpGet(`multiplayer_answers?room_code=eq.${mpRoom.code}&round_num=eq.${mpRoom.currentRound}&select=player_id,score,payload,ready`);
+    rows = await mpGet(`multiplayer_answers?room_code=eq.${mpRoom.code}&round_num=eq.${mpRoom.currentRound}&select=player_id,score,payload,ready,contested`);
   } catch (e) { return; }
 
   const myRow = rows.find(r => r.player_id === mpMyId());
@@ -466,27 +495,47 @@ async function mpMaybeResolveRound() {
   mpRenderReveal(myRow, oppRow);
 }
 
-// Read-only column — used for MY OWN answers on the reveal screen (I can't
-// touch my own score; my opponent's toggles land here via polling instead).
+// Used for MY OWN answers on the reveal screen — I can't touch my own
+// score/verdicts myself, but my OPPONENT's contest toggles need to be able
+// to re-paint this column's icons live as they land via polling (see
+// mpSyncReveal), so this returns { applyContested(contestedMap) } instead of
+// being fully read-only. contestedMap is keyed by category id: toggled true
+// flips 'correct'->incorrect or 'unrecognized'->correct, same rule as
+// cbRenderResult's own isAccepted().
 function mpRenderRevealColumn(container, name, answers, letter, score, categories) {
   const rows = categories.map(c => ({ id: c.id, label: c.label, raw: (answers[c.id] || '').trim() }));
-  Promise.all(rows.map(r => cbCheckAnswer(r.id, letter, r.raw))).then(results => {
-    const rowsHtml = rows.map((r, i) => {
-      const correct = results[i].status === 'correct';
-      const icon = correct ? '✓' : (r.raw ? '✗' : '—');
-      const answerHtml = r.raw ? _cbEscapeHtml(r.raw) : `<span class="cb-result-blank">(blank)</span>`;
-      return `<div class="cb-result-row cb-result-row--${correct ? 'correct' : 'incorrect'}">
-        <span class="cb-result-label">${_cbEscapeHtml(r.label)}</span>
-        <span class="cb-result-answer">${answerHtml}</span>
-        <span class="cb-result-icon">${icon}</span>
-      </div>`;
-    }).join('');
+  return Promise.all(rows.map(r => cbCheckAnswer(r.id, letter, r.raw))).then(results => {
+    function accepted(i, contestedMap) {
+      const status = results[i].status;
+      const toggled = !!(contestedMap && contestedMap[rows[i].id]);
+      if (status === 'correct') return !toggled;
+      if (status === 'unrecognized') return toggled;
+      return false;
+    }
+    function rowsHtml(contestedMap) {
+      return rows.map((r, i) => {
+        const isAccepted = accepted(i, contestedMap);
+        const icon = isAccepted ? '✓' : (r.raw ? '✗' : '—');
+        const answerHtml = r.raw ? _cbEscapeHtml(r.raw) : `<span class="cb-result-blank">(blank)</span>`;
+        return `<div class="cb-result-row cb-result-row--${isAccepted ? 'correct' : 'incorrect'}" data-cat="${_cbEscapeHtml(r.id)}">
+          <span class="cb-result-label">${_cbEscapeHtml(r.label)}</span>
+          <span class="cb-result-answer">${answerHtml}</span>
+          <span class="cb-result-icon">${icon}</span>
+        </div>`;
+      }).join('');
+    }
     container.innerHTML = `
       <div class="cb-result">
         <p class="daily-date" style="text-align:center;font-weight:700;">${_cbEscapeHtml(name)}</p>
         <div class="cb-result-score">${score} / ${categories.length}</div>
-        <div class="cb-result-breakdown">${rowsHtml}</div>
+        <div class="cb-result-breakdown">${rowsHtml(null)}</div>
       </div>`;
+    return {
+      applyContested(contestedMap) {
+        const breakdownEl = container.querySelector('.cb-result-breakdown');
+        if (breakdownEl) breakdownEl.innerHTML = rowsHtml(contestedMap);
+      },
+    };
   });
 }
 
@@ -568,11 +617,18 @@ function mpRenderReveal(myRow, oppRow) {
   mpRoom.liveMyScore = myRow.score;
   mpRoom.liveOppScore = oppRow.score;
   mpRoom.oppRevealApi = null;
+  mpRoom.myRevealApi = null;
+  mpRoom.pendingMyContested = myRow.contested || null;
+  mpRoom.lastSentOppContested = null;
   mpRoom.iAmReady = false;
   mpRoom.oppReady = !!oppRow.ready;
   mpRoom.advancing = false;
 
-  mpRenderRevealColumn(document.getElementById('cbMpMyResult'), mpRoom.myName, myRow.payload.answers, letter, myRow.score, mpRoom.categories);
+  mpRenderRevealColumn(document.getElementById('cbMpMyResult'), mpRoom.myName, myRow.payload.answers, letter, myRow.score, mpRoom.categories)
+    .then(api => {
+      mpRoom.myRevealApi = api;
+      if (mpRoom.pendingMyContested) api.applyContested(mpRoom.pendingMyContested);
+    });
 
   const oppName = mpRoom.oppName || 'Opponent';
   cbGradeRound({ letter, categories: mpRoom.categories, answers: oppRow.payload.answers, elapsedMs: (oppRow.payload.elapsedMs || 0), mode: 'versus' })
@@ -635,12 +691,15 @@ function mpUpdateRevealSummary() {
 async function mpSyncReveal() {
   if (mpRoom.oppRevealApi) {
     const newOppScore = mpRoom.oppRevealApi.getScore();
-    if (newOppScore !== mpRoom.liveOppScore) {
+    const newOppContested = mpRoom.oppRevealApi.getContested();
+    const contestedChanged = JSON.stringify(newOppContested) !== JSON.stringify(mpRoom.lastSentOppContested || {});
+    if (newOppScore !== mpRoom.liveOppScore || contestedChanged) {
       mpRoom.liveOppScore = newOppScore;
+      mpRoom.lastSentOppContested = newOppContested;
       try {
         await mpPatch(
           `multiplayer_answers?room_code=eq.${mpRoom.code}&round_num=eq.${mpRoom.currentRound}&player_id=eq.${mpOppId()}`,
-          { score: newOppScore }
+          { score: newOppScore, contested: newOppContested }
         );
       } catch (e) {}
       mpUpdateRevealSummary();
@@ -648,7 +707,7 @@ async function mpSyncReveal() {
   }
 
   try {
-    const rows = await mpGet(`multiplayer_answers?room_code=eq.${mpRoom.code}&round_num=eq.${mpRoom.currentRound}&select=player_id,score,ready`);
+    const rows = await mpGet(`multiplayer_answers?room_code=eq.${mpRoom.code}&round_num=eq.${mpRoom.currentRound}&select=player_id,score,ready,contested`);
     const myRow = rows.find(r => r.player_id === mpMyId());
     const oppRow = rows.find(r => r.player_id === mpOppId());
     if (myRow && myRow.score !== mpRoom.liveMyScore) {
@@ -656,6 +715,10 @@ async function mpSyncReveal() {
       const scoreEl = document.querySelector('#cbMpMyResult .cb-result-score');
       if (scoreEl) scoreEl.textContent = `${myRow.score} / ${mpRoom.categories.length}`;
       mpUpdateRevealSummary();
+    }
+    if (myRow && myRow.contested) {
+      mpRoom.pendingMyContested = myRow.contested;
+      if (mpRoom.myRevealApi) mpRoom.myRevealApi.applyContested(myRow.contested);
     }
     if (oppRow && oppRow.ready && !mpRoom.oppReady) {
       mpRoom.oppReady = true;
@@ -702,6 +765,9 @@ async function mpAdvanceRound() {
   mpRoom.myScore = newMyScore;
   mpRoom.oppScore = newOppScore;
   mpRoom.oppRevealApi = null;
+  // Each round starts its own fresh conversation — carrying last round's
+  // chat into the next one reads as stale/confusing (see mpRenderChatLog).
+  mpRoom.chatLog = [];
 
   if (finished || nextRound >= mpRoom.letters.length) {
     mpFinishMatch();
@@ -746,6 +812,8 @@ async function mpPollActive() {
     await mpSyncReveal();
   } else if (mpRoom.answeredThisRound) {
     await mpMaybeResolveRound();
+  } else {
+    await mpCheckOpponentFinishedFirst();
   }
 }
 
@@ -800,6 +868,7 @@ function mpShowResults() {
   }
 
   mpRoom.rematchStarted = false;
+  mpRoom.rematchReady = false;
   mpStartResultsPoll();
 }
 
@@ -807,8 +876,15 @@ function mpShowResults() {
 // Both players are still sitting on the results screen with mpRoom intact —
 // a rematch resets the same room row with fresh letters (same categories/
 // difficulty) instead of reloading into setup and creating/joining again.
-// Whoever clicks "New Match" first wins a conditional PATCH (guarded on
-// status=eq.finished); the other side's results-poll picks it up.
+//
+// Play Again waits for BOTH players, same as the mid-match Continue gate:
+// clicking marks your own readiness (a sentinel multiplayer_answers row,
+// round_num -1, ready=true — reuses the existing `ready` column rather than
+// a new one) instead of resetting the room immediately. Only once both
+// sentinel rows show up does the actual reset PATCH fire (guarded on
+// status=eq.finished, so only one of the two racing clients' PATCH lands);
+// the loser's results-poll picks up the winner's write within one tick, same
+// as before.
 
 let mpResultsPollTimer = null;
 
@@ -831,20 +907,23 @@ async function mpPollForRematch() {
     if (row.status === 'abandoned') { mpStopResultsPoll(); return; }
     if (row.status === 'active' && row.current_round === 0 && Array.isArray(row.question_ids)) {
       await mpBeginRematch(row.question_ids);
+    } else if (mpRoom.rematchReady && row.status === 'finished') {
+      await mpTryStartRematchIfBothReady();
     }
   } catch (e) { /* transient — next tick retries */ }
 }
 
 function mpPlayAgain() {
-  if (!mpRoom || mpRoom.rematchStarted) return;
-  // Only the clicking player is prompted — the opponent gets pulled into the
-  // rematch via mpBeginRematch (poll-detected) with no ad of their own; you
-  // can't make a remote player watch an ad just because their opponent did.
-  const proceed = () => mpPlayAgainConfirmed();
-  // Best-of-3/5 matches are short, so the very first rematch after one of
+  if (!mpRoom || mpRoom.rematchStarted || mpRoom.rematchReady) return;
+  // Only the clicking player is prompted — watching an ad only marks YOUR
+  // OWN readiness; the opponent isn't pulled in (or made to watch anything)
+  // until they click Play Again on their own side too. See
+  // mpMarkRematchReady/mpTryStartRematchIfBothReady for the both-ready gate.
+  const proceed = () => mpMarkRematchReady();
+  // Best-of-5/10 matches are short, so the very first rematch after one of
   // those ends is free — the ad only kicks in from the second rematch
-  // onward. Best-of-13 is long enough that the ad still applies from the start.
-  const isShortMatch = mpRoom.bestOf === 3 || mpRoom.bestOf === 5;
+  // onward. Best-of-20 is long enough that the ad still applies from the start.
+  const isShortMatch = mpRoom.bestOf === 5 || mpRoom.bestOf === 10;
   const skipAd = mpRoom.rematchCount === 0 && isShortMatch;
   if (!skipAd && typeof _offerRewardedLifeline === 'function' && typeof isInApp === 'function'
       && isInApp() && typeof ADMOB_ADS_ENABLED !== 'undefined' && ADMOB_ADS_ENABLED) {
@@ -854,14 +933,51 @@ function mpPlayAgain() {
   }
 }
 
+// Marks me ready instead of resetting the room immediately — mirrors
+// mpClickContinue's mid-match ready gate. mpTryStartRematchIfBothReady only
+// actually resets the room once both players' sentinel rows are present.
+async function mpMarkRematchReady() {
+  if (!mpRoom || mpRoom.rematchStarted || mpRoom.rematchReady) return;
+  mpRoom.rematchReady = true;
+
+  const btn = document.getElementById('cbVersusRematchBtn');
+  if (btn) { btn.disabled = true; btn.textContent = 'Waiting for opponent…'; }
+
+  try {
+    await mpPost('multiplayer_answers', {
+      room_code: mpRoom.code, round_num: -1, player_id: mpMyId(), ready: true
+    });
+  } catch (e) { /* results-poll keeps checking regardless */ }
+
+  await mpTryStartRematchIfBothReady();
+}
+
+// round_num -1 is a sentinel outside any real round, reusing the `ready`
+// column that already exists for the mid-match Continue gate — no new
+// column needed. Whichever client sees both rows first wins the conditional
+// PATCH below (guarded on status=eq.finished); the other picks it up via
+// mpPollForRematch/mpBeginRematch like any other rematch race.
+async function mpTryStartRematchIfBothReady() {
+  if (!mpRoom || mpRoom.rematchStarted) return;
+  let rows;
+  try {
+    rows = await mpGet(`multiplayer_answers?room_code=eq.${mpRoom.code}&round_num=eq.-1&select=player_id,ready`);
+  } catch (e) { return; }
+  const hostReady = rows.some(r => r.player_id === mpRoom.hostId && r.ready);
+  const guestReady = rows.some(r => r.player_id === mpRoom.guestId && r.ready);
+  if (!hostReady || !guestReady) return;
+  await mpPlayAgainConfirmed();
+}
+
 async function mpPlayAgainConfirmed() {
   if (!mpRoom || mpRoom.rematchStarted) return;
   const btn = document.getElementById('cbVersusRematchBtn');
   if (btn) { btn.disabled = true; btn.textContent = 'Starting…'; }
   try {
     const letters = mpDrawLetters(mpRoom.bestOf);
-    // Clear the previous match's answers — round numbers restart at 0 for
-    // the rematch and would otherwise collide with the old match's rows.
+    // Clear the previous match's answers (including the round_num -1
+    // readiness sentinels) — round numbers restart at 0 for the rematch and
+    // would otherwise collide with the old match's rows.
     try { await mpDelete(`multiplayer_answers?room_code=eq.${mpRoom.code}`); } catch (e) {}
     const patchRes = await mpPatch(
       `multiplayer_rooms?code=eq.${mpRoom.code}&status=eq.finished`,
@@ -877,6 +993,7 @@ async function mpPlayAgainConfirmed() {
       if (rows[0]?.status === 'abandoned' && btn) { btn.disabled = true; btn.textContent = 'Opponent left'; }
     }
   } catch (e) {
+    if (mpRoom) mpRoom.rematchReady = false;
     if (btn) { btn.disabled = false; btn.textContent = 'Play Again'; }
   }
 }
@@ -884,6 +1001,7 @@ async function mpPlayAgainConfirmed() {
 async function mpBeginRematch(newLetters) {
   if (!mpRoom || mpRoom.rematchStarted) return;
   mpRoom.rematchStarted = true;
+  mpRoom.rematchReady = false;
   mpRoom.rematchCount++;
   mpStopResultsPoll();
 

@@ -325,7 +325,12 @@ document.addEventListener("DOMContentLoaded", injectAvatarNav);
 
 const _PLAY_STORE = 'https://play.google.com/store/apps/details?id=com.trivia.trivia_gauntlet';
 const _APP_STORE  = 'https://apps.apple.com/app/trivia-gauntlet/id6749189557';
-const _WEB_LIMITS = { Q: 30, Wordle: 2, WS: 1, Ep: 1 };
+// Ep and VsOnline are separate from Q (Marathon/Challenge/Survival/Trivia
+// Rush/hot-seat Versus) — Episode Mode is distinct show-specific content, and
+// Online Versus is gated additionally by its own match-length rule (see
+// versus-multiplayer.js) since one Best-of-20 match alone would blow the
+// whole allowance in a single match.
+const _WEB_LIMITS = { Q: 10, Ep: 10, VsOnline: 10, Wordle: 1, WS: 1 };
 
 const _isNative = !!(window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative))
   || _isPremiumApp;
@@ -395,11 +400,12 @@ if (_isNative) {
   document.body.classList.add('has-banner');
 }
 
-// On DESKTOP web, questions reset DAILY (build a return habit) — you can't
-// install a phone app from a browser, so "come back tomorrow" is the ask.
-// On iOS/Android web the 30 questions are a ONE-TIME taster (no reset) — the
-// wall pushes the free app instead. Wordle/Word Search/Episode stay lifetime.
-const _DAILY_KEYS = { Q: true };
+// All web limits (questions, Wordle, Word Search, Episode) are a ONE-TIME
+// taster now, same on desktop as mobile — no daily reset for anything. This
+// was previously daily on desktop only (questions reset each day, "come back
+// tomorrow"); _DAILY_KEYS is kept empty (not deleted) so a daily allowance
+// can be reintroduced for a specific key later without rebuilding this.
+const _DAILY_KEYS = {};
 function _todayStr() { return new Date().toISOString().split('T')[0]; }
 function _maybeDailyReset(key) {
   if (!_DAILY_KEYS[key]) return;
@@ -415,16 +421,23 @@ function _maybeDailyReset(key) {
 function _webCount(key)     { _maybeDailyReset(key); return parseInt(localStorage.getItem('tgWeb' + key) || '0'); }
 function _addWebCount(key, n) { if (isLimitedWeb()) localStorage.setItem('tgWeb' + key, _webCount(key) + (n || 1)); }
 
-function webAddQ(n)     { _addWebCount('Q', n); }
-function webAddWordle() { _addWebCount('Wordle', 1); }
-function webAddWS()     { _addWebCount('WS', 1); }
-function webAddEp()     { _addWebCount('Ep', 1); }
+function webAddQ(n)        { _addWebCount('Q', n); }
+function webAddEp(n)       { _addWebCount('Ep', n); }
+function webAddVsOnline(n) { _addWebCount('VsOnline', n); }
+function webAddWordle()    { _addWebCount('Wordle', 1); }
+function webAddWS()        { _addWebCount('WS', 1); }
 
-function isWebQLimit()      { return isLimitedWeb() && _webCount('Q')      >= _WEB_LIMITS.Q; }
-function isWebWordleLimit() { return isLimitedWeb() && _webCount('Wordle') >= _WEB_LIMITS.Wordle; }
-function isWebWSLimit()     { return isLimitedWeb() && _webCount('WS')     >= _WEB_LIMITS.WS; }
-function isWebEpLimit()     { return isLimitedWeb() && _webCount('Ep')     >= _WEB_LIMITS.Ep; }
+function isWebQLimit()        { return isLimitedWeb() && _webCount('Q')        >= _WEB_LIMITS.Q; }
+function isWebEpLimit()       { return isLimitedWeb() && _webCount('Ep')       >= _WEB_LIMITS.Ep; }
+function isWebVsOnlineLimit() { return isLimitedWeb() && _webCount('VsOnline') >= _WEB_LIMITS.VsOnline; }
+function isWebWordleLimit()   { return isLimitedWeb() && _webCount('Wordle')   >= _WEB_LIMITS.Wordle; }
+function isWebWSLimit()       { return isLimitedWeb() && _webCount('WS')       >= _WEB_LIMITS.WS; }
 function webQUsed()         { return _webCount('Q'); }
+// How many free online-Versus questions are left — used to gate which match
+// lengths are selectable on the setup screen (see mpInit in
+// versus-multiplayer.js) so a match, once started, always has room to finish
+// without needing to be cut off mid-match.
+function webVsOnlineRemaining() { return Math.max(0, _WEB_LIMITS.VsOnline - _webCount('VsOnline')); }
 
 // Store call-to-action for the paywall, tailored to the visitor's platform.
 // Mobile users (already on a phone) get a one-tap store button. Desktop users
@@ -671,10 +684,12 @@ function injectWebFeatureTease(ctaRow, label, title, body) {
 // unlimited free batches without ever finishing a round. Gate them positionally;
 // `blocked` is the caller's per-mode rule (e.g. challenge safeRound >= 3).
 //
-// MOBILE WEB ONLY. Desktop's 30 questions reset DAILY, so a positional "always
-// block page 1" would wrongly lock out a returning desktop visitor the next day;
-// desktop instead stays gated by the daily counter at the result/page-load walls.
-// (chat 2026-06-14)
+// MOBILE WEB ONLY today. This exclusion existed because desktop's questions
+// counter used to reset DAILY — a positional "always block page 1" would've
+// wrongly locked out a returning desktop visitor the next day. Desktop is now
+// a ONE-TIME allowance too (see _DAILY_KEYS), so that reasoning no longer
+// applies — left mobile-only pending a decision on whether to extend this
+// positional gate to desktop as well. (chat 2026-06-14, revisited later)
 function gateWebSkip(linkEl, blocked, opts) {
   if (!linkEl || !blocked || !isLimitedWeb()) return;
   if (isDesktopWeb()) return; // mobile web (iOS/Android) only
@@ -761,17 +776,17 @@ function _injectFooterUnlock() {
 function webWallHTML(msg, themeName, noun, countOverride, noRedirect, bodyOverride) {
   const item = noun || 'questions';
   // Some callers (e.g. Challenge mode's per-round wall) enforce a smaller free
-  // allowance than the global daily limit — let them say the right number.
+  // allowance than the global one-time limit — let them say the right number.
   const qCount = countOverride || _WEB_LIMITS.Q;
-  // Questions are a DAILY allowance — the wall reflects that they reset tomorrow.
-  // (All callers pass the same "questions" message, so we override it centrally.)
+  // Questions are a ONE-TIME allowance now on every web platform (no more daily
+  // reset on desktop) — both branches below say so; only the CTA buttons differ
+  // (desktop: QR + web unlock via _webStoreLinksHTML; mobile: direct store link).
   if (item === 'questions') {
-    // Desktop web: a DAILY allowance that resets tomorrow.
     if (isDesktopWeb()) {
       return `<div class="android-wall">
     <div class="android-wall-icon">📱</div>
-    <h3>You've used today's ${qCount} questions 🎉</h3>
-    <p>${themeName ? `Come back tomorrow for more ${themeName} questions — or get unlimited access now.` : `Come back tomorrow for more questions — or get unlimited access now.`}</p>
+    <h3>You've played your ${qCount} questions 🎉</h3>
+    <p>${themeName ? `Download Trivia Gauntlet for more ${themeName} questions — or get unlimited access now.` : `Download Trivia Gauntlet for more questions — or get unlimited access now.`}</p>
     ${_webStoreLinksHTML()}
   </div>`;
     }
@@ -843,13 +858,18 @@ function _checkWebPageWall() {
   const path = window.location.pathname;
   let msg = null;
   let noun = 'questions';
-  if (/\/(play|challenge|survival|versus|trivia-rush|mashup-play)\.html$/.test(path) && isWebQLimit())
-    msg = "Yay! You've answered 30 questions";
-  else if (path.endsWith('/episode.html') && isWebEpLimit()) {
-    msg = "Yay! You've played an episode"; noun = 'episodes';
-  }
+  // versus.html isn't checked here — it serves both hot-seat (shared Q pool)
+  // and online (separate VsOnline pool) and doesn't know which the visitor
+  // wants until they pick, so a single page-load overlay can't correctly
+  // reflect "am I walled" for both at once. Each mode enforces its own limit
+  // in-page instead once actually played — see vsRunNextTurn (hot-seat) and
+  // mpAdvanceRound/mpShowResults (online) in versus.js/versus-multiplayer.js.
+  if (/\/(play|challenge|survival|trivia-rush|mashup-play)\.html$/.test(path) && isWebQLimit())
+    msg = "Yay! You've answered your free questions";
+  else if (path.endsWith('/episode.html') && isWebEpLimit())
+    msg = "Yay! You've answered your free questions";
   else if ((path.endsWith('/wordle.html') || /\/wordle\//.test(path)) && isWebWordleLimit()) {
-    msg = "Yay! You've played 2 Wordle words"; noun = 'Wordles';
+    msg = "Yay! You've played your free Wordle word"; noun = 'Wordles';
   }
   else if ((path.endsWith('/wordsearch.html') || /\/wordsearch\//.test(path)) && isWebWSLimit()) {
     msg = "Yay! You've finished the Word Search"; noun = 'Word Searches';

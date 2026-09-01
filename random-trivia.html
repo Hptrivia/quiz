@@ -192,9 +192,12 @@
       });
 
       // Game mode links
-      document.getElementById("marathonLink").href   = `play.html?themes=${themesParam}`;
-      document.getElementById("challengeLink").href  = `challenge.html?themes=${themesParam}&round=1`;
-      document.getElementById("survivalLink").href   = `survival.html?themes=${themesParam}`;
+      // &rt=1 tells Marathon/Challenge/Survival to skip the per-theme score
+      // breakdown at the end — fine for a real Mashup of 2-5 themes, but not
+      // fun as a ~22-row list here.
+      document.getElementById("marathonLink").href   = `play.html?themes=${themesParam}&rt=1`;
+      document.getElementById("challengeLink").href  = `challenge.html?themes=${themesParam}&round=1&rt=1`;
+      document.getElementById("survivalLink").href   = `survival.html?themes=${themesParam}&rt=1`;
       document.getElementById("triviaRushLink").href = `mashup-trivia-rush.html?themes=${themesParam}`;
       document.getElementById("versusLink").href     = `versus.html?themes=${themesParam}`;
       document.getElementById("wordSearchLink").href = `wordsearch.html?themes=${themesParam}&page=1`;

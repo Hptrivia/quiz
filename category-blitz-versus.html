@@ -107,9 +107,9 @@
           <div class="cb-versus-setup-row">
             <label class="cb-input-label">Match length</label>
             <div class="cb-mp-seg" id="cbMpLengthRow">
-              <button type="button" data-len="3">Best of 3</button>
               <button type="button" data-len="5">Best of 5</button>
-              <button type="button" data-len="13">Best of 13</button>
+              <button type="button" data-len="10">Best of 10</button>
+              <button type="button" data-len="20">Best of 20</button>
             </div>
             <p class="cb-versus-hint">Used when you create a room. Joining a room uses the host's setting.</p>
           </div>
@@ -123,9 +123,10 @@
             <label class="cb-input-label">Categories</label>
             <div id="cbMpCategoryList" class="cb-versus-category-list"></div>
             <div class="cb-versus-add-category-row">
-              <input class="cb-input" id="cbMpNewCategory" type="text" maxlength="24" placeholder="Add your own category…" autocomplete="off" />
+              <input class="cb-input" id="cbMpNewCategory" type="text" maxlength="24" placeholder="Search categories or type your own…" autocomplete="off" />
               <button type="button" class="secondary-btn" id="cbMpAddCategoryBtn">Add</button>
             </div>
+            <div id="cbMpRandomizeBox"></div>
           </div>
 
           <p id="cbMpError" style="color:var(--feedback-wrong);font-size:14px;display:none;margin-bottom:12px;"></p>
@@ -149,9 +150,9 @@
           <div class="cb-versus-setup-row">
             <label class="cb-input-label">Match length</label>
             <div class="cb-versus-length-row" id="cbVersusLengthRow">
-              <button type="button" class="secondary-btn cb-versus-length-btn" data-len="3">Best of 3</button>
               <button type="button" class="secondary-btn cb-versus-length-btn" data-len="5">Best of 5</button>
-              <button type="button" class="secondary-btn cb-versus-length-btn" data-len="13">Best of 13</button>
+              <button type="button" class="secondary-btn cb-versus-length-btn" data-len="10">Best of 10</button>
+              <button type="button" class="secondary-btn cb-versus-length-btn" data-len="20">Best of 20</button>
             </div>
           </div>
 
@@ -173,10 +174,10 @@
             <label class="cb-input-label">Categories</label>
             <div id="cbVersusCategoryList" class="cb-versus-category-list"></div>
             <div class="cb-versus-add-category-row">
-              <input class="cb-input" id="cbVersusNewCategory" type="text" maxlength="24" placeholder="Add your own category…" autocomplete="off" />
+              <input class="cb-input" id="cbVersusNewCategory" type="text" maxlength="24" placeholder="Search categories or type your own…" autocomplete="off" />
               <button type="button" class="secondary-btn" id="cbVersusAddCategoryBtn">Add</button>
             </div>
-            <p class="cb-versus-hint">Custom categories aren't auto-checked — after your turn, tap Correct on any word you're sure counts.</p>
+            <p class="cb-versus-hint">Custom categories aren't auto-checked — after your turn, tap Correct on any word you're sure counts. Tip: you can also randomize your categories on the next screen (round 1 only).</p>
           </div>
 
           <button type="button" class="primary-btn" id="cbVersusStartBtn" style="width:100%;margin-top:10px;">Start Match</button>
@@ -198,6 +199,7 @@
       <div id="cbVersusPlay" style="display:none">
         <p id="cbVersusStatus" class="daily-date"></p>
         <div id="cbWheelContainer" class="cb-wheel-container"></div>
+        <div id="cbVersusRandomizeBox"></div>
         <div id="cbRoundContainer" style="display:none"></div>
         <div class="cb-versus-howto" id="cbVersusHowto">
           <p class="cb-versus-howto-title">How scoring works</p>

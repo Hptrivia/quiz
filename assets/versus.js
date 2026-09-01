@@ -84,9 +84,10 @@ function vsRenderScoreboard(elId, currentIdx) {
 function vsBuildSchedule(n, hasExpert) {
   const e = hasExpert ? 'expert' : 'hard';
   const schedules = {
-    3:  ['easy', 'medium', 'hard'],
     5:  ['easy', 'medium', 'hard', 'hard', e],
     10: ['easy', 'easy', 'medium', 'medium', 'hard', 'hard', 'hard', e, e, e],
+    20: ['easy', 'easy', 'easy', 'easy', 'medium', 'medium', 'medium', 'medium',
+         'hard', 'hard', 'hard', 'hard', 'hard', 'hard', e, e, e, e, e, e],
   };
   return schedules[n] || schedules[5];
 }
@@ -334,9 +335,41 @@ function vsRunNextTurn() {
     return;
   }
 
+  // Each question already counts toward the shared web allowance when it's
+  // answered (webAddQ(1) in vsShowQuestion's submit handler) — this is the
+  // other half: stop BEFORE showing the next one once that allowance is
+  // used up, instead of always letting the whole match play out for free.
+  if (typeof isWebQLimit === 'function' && isWebQLimit()) {
+    vsShowWebWall();
+    return;
+  }
+
   const player = state.players[currentPlayerIdx];
   const diff = schedule[currentRound] || 'medium';
   vsShowQuestion(player, diff, currentRound, numQuestions);
+}
+
+// Cuts the match short the moment the free-question wall is hit — shows
+// standings as they are (same leaderboard the real end-of-match screen
+// uses) with the download wall instead of Play Again/tiebreaker options.
+function vsShowWebWall() {
+  const players = vsState.players;
+  const maxScore = Math.max(...players.map(p => p.score));
+  const winnerIndexes = players
+    .map((p, i) => ({ score: p.score, i }))
+    .filter(p => p.score === maxScore)
+    .map(p => p.i);
+  vsBuildLeaderboard(players, winnerIndexes);
+
+  document.getElementById('vsResultsTitle').textContent = 'Nice game!';
+  document.getElementById('vsResultsSubtitle').textContent = "You've hit your free questions for now — here's how it stood.";
+  const tiebreakerOffer = document.getElementById('vsTiebreakerOffer');
+  if (tiebreakerOffer) tiebreakerOffer.style.display = 'none';
+
+  const actionsEl = document.getElementById('vsLocalResultsActions');
+  if (actionsEl) actionsEl.innerHTML = typeof webWallHTML === 'function' ? webWallHTML(null, null) : '';
+
+  vsShow('vsResults');
 }
 
 function vsBuildLeaderboard(players, winnerIndexes) {
@@ -553,7 +586,9 @@ function vsStartGame(players, numQuestions, pools, themeSlug, themeName, isMashu
     players,
     numQuestions,
     pools,
-    themeQueues: themeQueues || null,
+    // Shuffled so a Mashup/Random Trivia match doesn't visit themes in the
+    // same fixed order every single game.
+    themeQueues: themeQueues ? shuffleArray(themeQueues) : null,
     themeRotationIdx: 0,
     themeSlug,
     themeName,
