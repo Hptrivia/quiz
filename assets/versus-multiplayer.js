@@ -18,7 +18,7 @@ const MP_URL = "https://avasbapxzgmpcosixgio.supabase.co";
 const MP_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF2YXNiYXB4emdtcGNvc2l4Z2lvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk2NjM4MzUsImV4cCI6MjA5NTIzOTgzNX0.DLNnasmaQ1hdKXb2xqXrTBnBjISo0RxOiwy7TrlN9bg";
 
 const MP_POLL_MS = 1500;
-const MP_ROUND_SECONDS = 30;
+const MP_ROUND_SECONDS = 20;
 const MP_DISCONNECT_MS = 15000;
 const MP_TIEBREAK_BUFFER = 5;      // extra sudden-death questions drawn in case of a tie after regulation
 const MP_REVEAL_PAUSE_MS = 2500;

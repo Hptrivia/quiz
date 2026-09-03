@@ -375,6 +375,102 @@ async function playCatBlitzVersusOnlineRematch(host, guest) {
   return (await isVisible(host, '#cbVersusFinal')) && (await isVisible(guest, '#cbVersusFinal'));
 }
 
+// ---- party mode driver (N browser contexts = N real players) ---------------
+// Hits the live Supabase project (multiplayer_rooms/multiplayer_players/
+// multiplayer_answers) — requires supabase/multiplayer-party.sql to already
+// be applied. pages[0] is the host; the rest join in turn (staggered, like
+// real players trickling in off a shared link) before the host clicks Start.
+// Each player i clicks option index (i + round) % numOptions each round
+// instead of everyone hammering the same button — gives Score Attack real
+// score spread and Survival real eliminations to actually exercise, instead
+// of every player tying forever.
+async function playPartyMode(pages, theme, subMode, bestOf) {
+  const host = pages[0];
+  const guests = pages.slice(1);
+
+  await host.goto(`${BASE}/party.html?theme=${theme}`, { waitUntil: 'networkidle2', timeout: 30000 });
+  await wait(500);
+  await host.evaluate(() => { document.getElementById('ptyName').value = 'Host'; });
+  await clickFirst(host, `#ptySubModeSeg [data-val="${subMode}"]`);
+  await clickFirst(host, `#ptyBestOfSeg [data-val="${bestOf}"]`);
+  await clickFirst(host, '#ptyCreateBtn');
+  await waitVisible(host, '#ptyRoomCode', 8000);
+  const code = await host.evaluate(() => (document.getElementById('ptyRoomCode').textContent || '').trim());
+  if (!code) return false;
+
+  for (let i = 0; i < guests.length; i++) {
+    const guest = guests[i];
+    await guest.goto(`${BASE}/party.html`, { waitUntil: 'networkidle2', timeout: 30000 });
+    await wait(200);
+    // Distinct names both make the printed scoreboard legible AND regression-check
+    // that the app doesn't collide/misassign rows when players share no name —
+    // real guests defaulting to a blank name all show as the literal string
+    // "Player" with no distinguishing number (see ptyInit's join handler), which
+    // this driver deliberately avoids to keep results readable.
+    await guest.evaluate(n => { document.getElementById('ptyName').value = n; }, `Guest${i + 1}`);
+    await clickFirst(guest, '#ptyShowJoinBtn');
+    await guest.evaluate(c => { document.getElementById('ptyCodeInput').value = c; }, code);
+    await clickFirst(guest, '#ptyJoinBtn');
+    await wait(300);
+  }
+
+  // Host's lobby poll (1.5s) needs a beat to pick up the last joiner before
+  // the player-count-gated Start button is actually clickable.
+  await wait(2000);
+  await clickFirst(host, '#ptyStartBtn');
+
+  const endSel = '#ptyResultsTitle';
+  const optSel = '#ptyOptions .option-btn';
+  for (let round = 0; round < 200; round++) {
+    const done = await Promise.all(pages.map(p => isVisible(p, endSel)));
+    if (done.every(Boolean)) break;
+    await Promise.all(pages.map(async (p, i) => {
+      if (done[i]) return;
+      // no-op on a page still in the lobby, or an eliminated player's
+      // disabled options — querySelectorAll finds them but .click() on a
+      // disabled <button> is a browser no-op, no extra guard needed here.
+      const n = await p.evaluate(sel => document.querySelectorAll(sel).length, optSel);
+      if (n > 0) {
+        const idx = (i + round) % n;
+        await p.evaluate((sel, ix) => document.querySelectorAll(sel)[ix]?.click(), optSel, idx);
+      }
+    }));
+    await wait(600);
+  }
+
+  const allDone = (await Promise.all(pages.map(p => isVisible(p, endSel)))).every(Boolean);
+  if (allDone) {
+    const title = await host.evaluate(() => document.getElementById('ptyResultsTitle').textContent.trim());
+    const scoreboard = await host.evaluate(() =>
+      [...document.querySelectorAll('#ptyResultsScoreboard .pty-score-row')].map(r => {
+        const name = r.querySelector('.pty-score-name')?.textContent.trim() || '?';
+        const score = r.querySelector('.pty-score-val')?.textContent.trim() || '?';
+        return `${name} — ${score}`;
+      }));
+    console.log(`    → ${title}`);
+    scoreboard.forEach(row => console.log(`      ${row}`));
+  }
+  return allDone;
+}
+
+async function runMultiplayerModeN(browser, mode) {
+  const contexts = await Promise.all(Array.from({ length: mode.players }, () => browser.createBrowserContext()));
+  const pages = await Promise.all(contexts.map(c => c.newPage()));
+  const errors = [];
+  pages.forEach((p, i) => p.on('pageerror', e => errors.push(`p${i}: ` + String(e.message || e))));
+
+  let reached = false, crashed = null;
+  try {
+    reached = await mode.runN(pages);
+  } catch (e) {
+    crashed = e.message;
+  }
+  await Promise.all(contexts.map(c => c.close()));
+
+  const ok = errors.length === 0 && reached && !crashed;
+  return { name: mode.name, ok, reached, errors, crashed };
+}
+
 async function runMultiplayerMode(browser, mode) {
   const hostCtx = await browser.createBrowserContext();
   const guestCtx = await browser.createBrowserContext();
@@ -438,6 +534,8 @@ function buildModes(themes) {
     { name: 'catblitz-versus-online', multi: true, run2: (h, g) => playCatBlitzVersusOnline(h, g) },
     { name: 'versus-online-rematch',          multi: true, run2: (h, g) => playVersusOnlineRematch(h, g, a) },
     { name: 'catblitz-versus-online-rematch', multi: true, run2: (h, g) => playCatBlitzVersusOnlineRematch(h, g) },
+    { name: 'party-score-10p',    players: 10, runN: pages => playPartyMode(pages, a, 'score', 5) },
+    { name: 'party-survival-10p', players: 10, runN: pages => playPartyMode(pages, a, 'survival', 10) },
   ];
 }
 
@@ -536,7 +634,9 @@ async function main() {
   console.log(`\nRunning ${modes.length} game-mode smoke tests...\n`);
   const results = [];
   for (const mode of modes) {
-    const r = mode.multi ? await runMultiplayerMode(browser, mode) : await runMode(browser, mode);
+    const r = mode.runN ? await runMultiplayerModeN(browser, mode)
+      : mode.multi ? await runMultiplayerMode(browser, mode)
+      : await runMode(browser, mode);
     results.push(r);
     const mark = r.ok ? ' OK ' : 'FAIL';
     let line = `  ${mark}  ${mode.name}`;
