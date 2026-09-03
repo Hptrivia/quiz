@@ -4,6 +4,7 @@ const path = require("path");
 const rootDir = path.resolve(__dirname, "..");
 const themesPath = path.join(rootDir, "data", "themes.json");
 const wordleWordsPath = path.join(rootDir, "data", "wordle_words.txt");
+const wordleIntrosPath = path.join(rootDir, "data", "wordle_intros.json");
 const outputDir = path.join(rootDir, "wordle");
 const sitemapPath = path.join(rootDir, "sitemap.xml");
 const SITE_URL = "https://triviagauntlet.app";
@@ -57,12 +58,25 @@ function getRelatedThemes(allThemes, currentTheme, wordleSet, limit = 4) {
   return sameCategory.sort(() => Math.random() - 0.5).slice(0, limit);
 }
 
-function buildWordlePage(theme, words, allThemes, wordleSet) {
+function buildWordlePage(theme, words, allThemes, wordleSet, wordleIntros) {
   const title = escapeHtml(theme.title);
   const slug = escapeHtml(theme.slug);
   const ctx = getThemeContext(theme.category);
 
-  const descParagraph = `The ${theme.title} Wordle pulls words from across ${ctx} and challenges you to guess each one a letter at a time. Words span characters, locations, and key terms that define ${theme.title}. Green tiles mean the letter is in the right position, yellow means it appears somewhere else in the word, and grey means it is not in the word at all. Each page covers a new set of words, working through the theme from familiar names to more specific terms.`;
+  // wordleIntros[slug] is a unique, per-theme paragraph about the theme itself
+  // (not the word list — the generator never sees the words, so it can't spoil
+  // anything). Falls back to the old generic sentence for any theme it hasn't
+  // been generated for yet, so pages never go blank.
+  const introParagraph = wordleIntros[theme.slug]
+    ? escapeHtml(wordleIntros[theme.slug])
+    : `The ${theme.title} Wordle pulls words from across ${ctx} and challenges you to guess each one a letter at a time.`;
+
+  const mechanicsParagraph = `Guess each word one letter at a time: green tiles mean the letter is in the right position, yellow means it appears somewhere else in the word, and grey means it is not in the word at all. Each page covers a new word, working through ${title} from familiar names to more specific terms.`;
+
+  // Only the newly-added intro paragraph is hidden in-app/premium-app (kept
+  // for web/SEO) — the original mechanics paragraph stays visible everywhere,
+  // same as before this change.
+  const descParagraph = `<p class="wordle-theme-intro">${introParagraph}</p>\n      <p>${mechanicsParagraph}</p>`;
 
   const relatedThemes = getRelatedThemes(allThemes, theme, wordleSet);
   const relatedHtml = relatedThemes.length
@@ -136,7 +150,7 @@ function buildWordlePage(theme, words, allThemes, wordleSet) {
 
     <section class="panel">
       <h1>${title} Wordle</h1>
-      <p>${escapeHtml(descParagraph)}</p>
+      ${descParagraph}
 
       <div style="margin:24px 0 12px;">
         <a href="../wordle.html?theme=${slug}&page=1" class="primary-btn" style="display:block;text-align:center;text-decoration:none;font-size:1.1rem;padding:14px;">
@@ -200,6 +214,9 @@ function updateSitemap(slugs) {
 // --- Main ---
 const themes = JSON.parse(fs.readFileSync(themesPath, "utf8"));
 const wordleWords = JSON.parse(fs.readFileSync(wordleWordsPath, "utf8"));
+const wordleIntros = fs.existsSync(wordleIntrosPath)
+  ? JSON.parse(fs.readFileSync(wordleIntrosPath, "utf8"))
+  : {};
 
 const titleToTheme = {};
 for (const theme of themes) {
@@ -230,7 +247,7 @@ for (const [wordleTitle, words] of Object.entries(wordleWords)) {
   generatedSlugs.push(theme.slug);
   if (onlySlugs && !onlySlugs.has(theme.slug)) continue;
 
-  const html = buildWordlePage(theme, words, themes, wordleSet);
+  const html = buildWordlePage(theme, words, themes, wordleSet, wordleIntros);
   const outPath = path.join(outputDir, `${theme.slug}.html`);
   fs.writeFileSync(outPath, html, "utf8");
   count++;

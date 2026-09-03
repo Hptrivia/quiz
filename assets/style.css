@@ -2606,7 +2606,9 @@ a.theme-stat-card:active,
 body.in-app .homepage-intro,
 body.in-app .category-intro-panel .category-intro-text,
 body.in-app .theme-sample-questions,
-body.in-app .theme-sample-questions ~ p { display: none; }
+body.in-app .theme-sample-questions ~ p,
+body.in-app .wordle-theme-intro,
+:root.premium-app .wordle-theme-intro { display: none; }
 
 /* Rotating "more themes in the app" house-ad under the score (limited web only,
    injected by assets/promo-banner.js). Styled to read as part of the quiz UI, not

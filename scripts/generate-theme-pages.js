@@ -145,11 +145,10 @@ function getTotalQuestions(questionFilePath) {
 // "Trivia Questions" and never "Quiz". Same demand (2,416 vs 4,008 impressions),
 // three positions worse. "answers" (529 impressions, position 9.10) was also absent.
 //
-// Only the slugs below get the new title. Everything else — INCLUDING NEWLY ADDED
-// THEMES — keeps the original, so the control group stays clean.
-// Measuring across August 2026. If it wins, set QUIZ_TITLE_ALL = true and regenerate.
-// If it loses, empty this set and regenerate.
-const QUIZ_TITLE_ALL = false;
+// Test concluded 2026-09-03: test group beat control (position -2.01 vs +0.71,
+// CTR +1.75pp vs -3.87pp over 7/29-9/2 vs 7/1-7/28, control decline held even
+// excluding top-5 earner pages). Rolled out to all themes below.
+const QUIZ_TITLE_ALL = true;
 const QUIZ_TITLE_TEST_SLUGS = new Set([
   "half-man", "parks-and-recreation", "nigerian-music", "dexter", "prison-break",
   "suits", "nigerian-football", "gta-v", "marketing-and-brands", "cyberpunk-2077",
