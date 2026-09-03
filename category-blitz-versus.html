@@ -38,27 +38,8 @@
     .cb-mp-reveal-cols { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
     .cb-mp-reveal-cols > div { flex: 1; min-width: 220px; }
 
-    /* Chat: a small persistent log (not floating toasts, so it can't stack up
-       and cover the game) plus a single toggle that expands the picker —
-       keeps 6 emoji + 5 quick phrases from cluttering the screen at once. */
-    .cb-mp-chat { display: flex; flex-direction: column; align-items: center; gap: 8px; margin: 10px 0; }
-    .cb-mp-chat-log {
-      width: 100%; max-height: 96px; overflow-y: auto;
-      display: flex; flex-direction: column; gap: 4px;
-    }
-    .cb-mp-chat-msg {
-      align-self: flex-start; max-width: 80%;
-      padding: 4px 10px; border-radius: 12px;
-      background: var(--option-bg); font-size: 13px;
-    }
-    .cb-mp-chat-msg.mine {
-      align-self: flex-end;
-      background: var(--option-selected-bg); color: #fff;
-    }
-    .cb-mp-chat-toggle { padding: 6px 16px; font-size: 15px; }
-    .cb-mp-reactions { display: none; gap: 6px; flex-wrap: wrap; justify-content: center; }
-    .cb-mp-reaction-btn { padding: 6px 10px; font-size: 18px; line-height: 1; min-width: 0; }
-    .cb-mp-reaction-btn--phrase { font-size: 13px; padding: 6px 12px; }
+    /* Free-text chat between rounds — see .tg-chat* in assets/style.css for
+       the shared log/bubble/input styling this reuses. */
   </style>
 </head>
 <body data-page="catblitz-versus" data-defer-game-ad="1">

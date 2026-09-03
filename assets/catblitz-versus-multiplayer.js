@@ -35,11 +35,6 @@ const MP_POLL_MS = 1500;
 const MP_DISCONNECT_MS = 15000;
 const MP_TIEBREAK_BUFFER = 5;
 const MP_CODE_CHARS = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';
-const MP_REACTIONS = ['😂', '🔥', '😭', '👏', '😮', '🎯'];
-// Fixed-vocabulary quick phrases, same anti-abuse reasoning as MP_REACTIONS
-// (no freeform chat). Stored in the same `multiplayer_reactions.emoji`
-// column as the emoji above — it's just a text column, no schema change.
-const MP_MESSAGES = ['Review my words? 👀', 'Nice one! 👍', 'So close!', 'Good game 🤝', 'Rematch?'];
 
 let mpRoom = null;
 let mpPollTimer = null;
@@ -539,40 +534,30 @@ function mpRenderRevealColumn(container, name, answers, letter, score, categorie
   });
 }
 
-// Collapsed by default (a single "💬 Chat" toggle) — expanding straight to
-// 6 emoji + 5 phrases at once would just recreate the clutter problem the
-// chat log itself was built to avoid.
-function mpRenderReactionBar() {
-  const row = document.getElementById('cbMpReactionsRow');
-  const toggleBtn = document.getElementById('cbMpChatToggleBtn');
-  if (!row || !toggleBtn) return;
-
-  row.style.display = 'none';
-  toggleBtn.onclick = () => {
-    row.style.display = row.style.display === 'none' ? 'flex' : 'none';
-  };
-
-  const emojiBtns = MP_REACTIONS.map(e =>
-    `<button type="button" class="secondary-btn cb-mp-reaction-btn" data-msg="${e}">${e}</button>`);
-  const phraseBtns = MP_MESSAGES.map(m =>
-    `<button type="button" class="secondary-btn cb-mp-reaction-btn cb-mp-reaction-btn--phrase" data-msg="${m}">${m}</button>`);
-  row.innerHTML = [...emojiBtns, ...phraseBtns].join('');
-  row.querySelectorAll('.cb-mp-reaction-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      mpSendReaction(btn.dataset.msg);
-      row.style.display = 'none';
-    });
+// Wires the always-visible text input on the reveal screen — the box's
+// innerHTML (and this input) is rebuilt fresh every round by mpRenderReveal,
+// so this just needs to attach one submit handler per render.
+function mpWireChatForm() {
+  const form = document.getElementById('cbMpChatForm');
+  const input = document.getElementById('cbMpChatInput');
+  if (!form || !input) return;
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    mpSendChatMessage(input.value);
+    input.value = '';
   });
 }
 
 // Appends to my own log immediately (optimistic — don't wait on the round
 // trip) so the conversation reads naturally instead of only showing what
 // the other player sends.
-async function mpSendReaction(text) {
+async function mpSendChatMessage(raw) {
   if (!mpRoom) return;
+  const text = chatSanitize(raw);
+  if (!text || !chatCanSend(mpRoom)) return;
   mpRoom.chatLog.push({ text, mine: true });
   mpRenderChatLog();
-  try { await mpPost('multiplayer_reactions', { room_code: mpRoom.code, player_id: mpMyId(), emoji: text }); } catch (e) {}
+  try { await mpPost('multiplayer_reactions', { room_code: mpRoom.code, player_id: mpMyId(), message: text }); } catch (e) {}
 }
 
 function mpReceiveChatMessage(text) {
@@ -588,7 +573,7 @@ function mpRenderChatLog() {
   const log = document.getElementById('cbMpChatLog');
   if (!log || !mpRoom) return;
   log.innerHTML = mpRoom.chatLog
-    .map(m => `<div class="cb-mp-chat-msg${m.mine ? ' mine' : ''}">${m.text}</div>`)
+    .map(m => `<div class="tg-chat-msg${m.mine ? ' mine' : ''}">${m.text}</div>`)
     .join('');
   log.scrollTop = log.scrollHeight;
 }
@@ -607,10 +592,12 @@ function mpRenderReveal(myRow, oppRow) {
       <div id="cbMpOppResult"></div>
     </div>
     <p class="daily-date" id="cbMpRevealSummary" style="text-align:center;margin:10px 0;"></p>
-    <div class="cb-mp-chat">
-      <div class="cb-mp-chat-log" id="cbMpChatLog"></div>
-      <button type="button" class="secondary-btn cb-mp-chat-toggle" id="cbMpChatToggleBtn">💬 Chat</button>
-      <div class="cb-mp-reactions" id="cbMpReactionsRow"></div>
+    <div class="tg-chat">
+      <div class="tg-chat-log" id="cbMpChatLog"></div>
+      <form class="tg-chat-form" id="cbMpChatForm">
+        <input type="text" class="tg-chat-input" id="cbMpChatInput" placeholder="Say something…" maxlength="140" autocomplete="off">
+        <button type="submit" class="primary-btn tg-chat-send">Send</button>
+      </form>
     </div>
   `;
 
@@ -645,7 +632,7 @@ function mpRenderReveal(myRow, oppRow) {
       });
     });
 
-  mpRenderReactionBar();
+  mpWireChatForm();
   mpRenderChatLog();
   mpUpdateRevealSummary();
 
@@ -804,7 +791,7 @@ async function mpPollActive() {
     const reacts = await mpGet(`multiplayer_reactions?room_code=eq.${mpRoom.code}&id=gt.${mpRoom.lastSeenReactionId || 0}&order=id.asc`);
     reacts.forEach(r => {
       mpRoom.lastSeenReactionId = Math.max(mpRoom.lastSeenReactionId || 0, r.id);
-      if (r.player_id !== mpMyId()) mpReceiveChatMessage(r.emoji);
+      if (r.player_id !== mpMyId()) mpReceiveChatMessage(r.message);
     });
   } catch (e) {}
 

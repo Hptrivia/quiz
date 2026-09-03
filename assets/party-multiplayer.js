@@ -204,6 +204,19 @@ function ptyInit(allThemes, resolvedThemes) {
   const topBanner = document.getElementById('ptyAppBanner');
   if (topBanner && typeof lobbyAppBannerHTML === 'function') topBanner.innerHTML = lobbyAppBannerHTML();
 
+  // Same "get the app" nudge as lobbyAppBannerHTML above, folded into the
+  // waiting-for-the-timer copy itself — appended once here rather than
+  // baked into the static HTML, since which store link applies depends on
+  // the visitor's platform.
+  const browseNoteEl = document.getElementById('ptyBrowseNote');
+  if (browseNoteEl && typeof isLimitedWeb === 'function' && isLimitedWeb()) {
+    const href = (typeof isIosWeb === 'function' && isIosWeb()) ? _APP_STORE
+      : (typeof isAndroidWeb === 'function' && isAndroidWeb()) ? _PLAY_STORE : '#';
+    const cls = href === '#' ? 'tg-inline-link web-wall-trigger' : 'tg-inline-link';
+    const promo = href === '#' ? ' data-promo="pty_browse_note"' : '';
+    browseNoteEl.innerHTML += ` Or <a href="${href}" class="${cls}"${promo}>download the app</a> to play without limits.`;
+  }
+
   // Arriving via a shared invite link — this person is joining an already
   // host-configured room, so the game-type/question-count pickers and the
   // Create/Join toggle buttons are all noise (those decisions were already
@@ -254,6 +267,16 @@ function ptyInit(allThemes, resolvedThemes) {
   document.getElementById('ptyCancelBtn').addEventListener('click', ptyCancelWaiting);
   document.getElementById('ptyStartBtn').addEventListener('click', ptyStartMatch);
   document.getElementById('ptyLeaveBtn').addEventListener('click', ptyLeaveMatch);
+
+  document.querySelectorAll('#ptyScheduleSeg button').forEach(btn => {
+    btn.addEventListener('click', () => ptySetSchedule(parseInt(btn.dataset.mins, 10)));
+  });
+  document.getElementById('ptyAdd30Btn').addEventListener('click', () => ptyAdjustSchedule(30));
+  document.getElementById('ptyAdd60Btn').addEventListener('click', () => ptyAdjustSchedule(60));
+  document.getElementById('ptyClearScheduleBtn').addEventListener('click', () => ptySetSchedule(0));
+
+  ptyWireChatForm('ptyLobbyChatForm', 'ptyLobbyChatInput');
+  ptyWireChatForm('ptyResultsChatForm', 'ptyResultsChatInput');
 
   // Tap the compact status line to open the full ranking as an overlay
   // (absolutely positioned — see .pty-live-score-panel) instead of a
@@ -339,11 +362,13 @@ async function ptyCreateRoom(resolvedThemes, subMode, bestOf, name) {
     scores: new Map([[myId, 0]]),
     eliminatedAtRound: new Map(),
     knownPlayerIds: new Set([myId]),
+    chatLog: [], lastSeenChatId: 0, scheduledStartAt: null,
   };
 
   document.getElementById('ptyRoomCode').textContent = code;
   ptyRenderLobby();
   vsShow('ptyLobby');
+  ptyStartCountdownTicker();
   ptyPollTimer = setInterval(ptyPollLobby, PTY_POLL_MS);
 }
 
@@ -352,8 +377,23 @@ async function ptyJoinRoom(code, name) {
   const room = rows[0];
   if (!room) throw new Error('No room found with that code.');
   if (room.game_mode !== 'party') throw new Error('That code is for a different game mode.');
-  if (room.status !== 'waiting') throw new Error('That game has already started.');
-  if (typeof isLimitedWeb === 'function' && isLimitedWeb() && typeof webVsOnlineRemaining === 'function'
+  if (room.status === 'abandoned') throw new Error('The host closed this room.');
+
+  const myId = ptyPlayerId();
+  // Someone who already joined this room's lobby before it started (or
+  // before they wandered off) gets to rejoin mid-match or after it's
+  // finished — a brand-new player_id with just the code does not, since
+  // they'd have no scores/answers for the rounds already played.
+  let existingMembership = [];
+  try {
+    existingMembership = await ptyGet(`multiplayer_players?room_code=eq.${code}&player_id=eq.${myId}&select=player_id,banned`);
+  } catch (e) {}
+  if (existingMembership.length && existingMembership[0].banned) throw new Error('You were removed from this room by the host.');
+  const alreadyInRoom = existingMembership.length > 0;
+  if (room.status !== 'waiting' && !alreadyInRoom) throw new Error('That game has already started.');
+
+  if (room.status === 'waiting' && !alreadyInRoom
+      && typeof isLimitedWeb === 'function' && isLimitedWeb() && typeof webVsOnlineRemaining === 'function'
       && room.best_of > webVsOnlineRemaining()) {
     throw new Error(`Not enough free questions left to join this game — try a shorter one or get the app.`);
   }
@@ -370,8 +410,11 @@ async function ptyJoinRoom(code, name) {
     });
   });
 
-  const myId = ptyPlayerId();
-  const upsertRes = await ptyUpsert('multiplayer_players', { room_code: code, player_id: myId, name, is_host: false });
+  // Omit is_host on a rejoin so this upsert (which only touches the columns
+  // it sends) can't accidentally clobber an existing roster row's host flag.
+  const upsertBody = { room_code: code, player_id: myId, name };
+  if (!alreadyInRoom) upsertBody.is_host = false;
+  const upsertRes = await ptyUpsert('multiplayer_players', upsertBody);
   if (!upsertRes.ok) throw new Error('Could not join that room — please try again.');
 
   const subMode = (room.payload && room.payload.subMode) || 'score';
@@ -379,17 +422,61 @@ async function ptyJoinRoom(code, name) {
     code, role: 'guest', isHost: false, subMode, bestOf: room.best_of,
     questionIds: room.question_ids, questionMap, resolvedThemes: themes, hasFullMap: true,
     myId, myName: name,
-    currentRound: 0, eliminated: false,
+    currentRound: room.current_round || 0, eliminated: false,
     players: new Map(),
     scores: new Map([[myId, 0]]),
     eliminatedAtRound: new Map(),
     knownPlayerIds: new Set([myId]),
+    chatLog: [], lastSeenChatId: 0, scheduledStartAt: room.scheduled_start_at || null,
   };
 
   document.getElementById('ptyRoomCode').textContent = code;
-  ptyRenderLobby();
-  vsShow('ptyLobby');
-  ptyPollTimer = setInterval(ptyPollLobby, PTY_POLL_MS);
+
+  if (room.status === 'waiting') {
+    ptyRenderLobby();
+    vsShow('ptyLobby');
+    ptyStartCountdownTicker();
+    ptyPollTimer = setInterval(ptyPollLobby, PTY_POLL_MS);
+    ptyLoadChatHistory();
+  } else {
+    await ptyResumeIntoMatch(room);
+  }
+}
+
+// Reconnect path for someone who left (or got dropped) after the host
+// started the match, or who's coming back after it already finished — see
+// the alreadyInRoom check in ptyJoinRoom above. Rebuilds the roster and each
+// player's cumulative score from the server instead of the blank slate a
+// normal join starts with, since this player already has answers on record.
+async function ptyResumeIntoMatch(room) {
+  const [players, answers] = await Promise.all([
+    ptyGet(`multiplayer_players?room_code=eq.${ptyRoom.code}&banned=eq.false&select=player_id,name,is_host,eliminated&order=joined_at.asc`),
+    ptyGet(`multiplayer_answers?room_code=eq.${ptyRoom.code}&select=player_id,score`),
+  ]);
+  players.forEach(p => {
+    ptyRoom.players.set(p.player_id, { name: p.name, isHost: p.is_host, eliminated: p.eliminated, lastSeen: Date.now() });
+    ptyRoom.knownPlayerIds.add(p.player_id);
+    if (!ptyRoom.scores.has(p.player_id)) ptyRoom.scores.set(p.player_id, 0);
+  });
+  answers.forEach(a => {
+    ptyRoom.scores.set(a.player_id, (ptyRoom.scores.get(a.player_id) || 0) + (a.score || 0));
+  });
+
+  await ptyLoadChatHistory();
+
+  if (room.status === 'finished') {
+    ptyRoom.matchEnded = true;
+    ptyShowResults();
+    ptyPollTimer = setInterval(ptyPollChat, PTY_POLL_MS);
+    return;
+  }
+
+  ptyRoom.currentRound = room.current_round;
+  ptyRoom.roundStartedAt = room.round_started_at;
+  ptyRoom.matchEnded = false;
+  vsShow('ptyQuestion');
+  ptyRenderRound();
+  ptyPollTimer = setInterval(ptyPollActive, PTY_POLL_MS);
 }
 
 async function ptyEnsureFullQuestionMap() {
@@ -432,29 +519,222 @@ function ptyRenderLobby() {
   const listEl = document.getElementById('ptyPlayerList');
   const countEl = document.getElementById('ptyPlayerCount');
   const startBtn = document.getElementById('ptyStartBtn');
-  const names = [...ptyRoom.players.values()];
-  countEl.textContent = `${names.length} joined`;
+  const entries = [...ptyRoom.players.entries()];
+  countEl.textContent = `${entries.length} joined`;
   listEl.innerHTML = '';
-  names.forEach((p, i) => {
+  entries.forEach(([id, p], i) => {
     const row = document.createElement('div');
     row.className = 'pty-lobby-row' + (p._justJoined ? ' pty-just-joined' : '');
     row.style.borderColor = PTY_COLORS[i % PTY_COLORS.length];
-    row.innerHTML = `<span style="color:${PTY_COLORS[i % PTY_COLORS.length]}">${p.name}</span>${p.isHost ? '<span class="pty-host-tag">Host</span>' : ''}`;
+    const kickBtn = (ptyRoom.isHost && id !== ptyRoom.myId)
+      ? `<button type="button" class="pty-kick-btn" data-id="${id}" title="Remove ${p.name}">✕</button>` : '';
+    row.innerHTML = `<span style="color:${PTY_COLORS[i % PTY_COLORS.length]}">${p.name}</span><span style="display:flex;align-items:center;gap:8px;">${p.isHost ? '<span class="pty-host-tag">Host</span>' : ''}${kickBtn}</span>`;
     listEl.appendChild(row);
+  });
+  listEl.querySelectorAll('.pty-kick-btn').forEach(btn => {
+    btn.addEventListener('click', () => ptyKickPlayer(btn.dataset.id));
   });
   document.getElementById('ptySubModeNote').textContent =
     ptyRoom.subMode === 'survival' ? 'Survival — miss a question and you\'re out' : 'Score Attack — most correct wins';
 
   if (ptyRoom.isHost) {
     startBtn.style.display = '';
-    startBtn.disabled = names.length < 2;
-    startBtn.textContent = names.length < 2 ? 'Waiting for players…' : `Start (${names.length} players)`;
+    startBtn.disabled = entries.length < 2;
+    startBtn.textContent = entries.length < 2 ? 'Waiting for players…' : `Start (${entries.length} players)`;
   } else {
     startBtn.style.display = 'none';
   }
   document.getElementById('ptyWaitingStatus').textContent = ptyRoom.isHost
     ? 'Share the code or link — start whenever you\'re ready.'
     : 'Waiting for the host to start…';
+
+  ptyRenderCountdown();
+}
+
+// ── Scheduled start ──────────────────────────────────────────────────────
+// Host-only controls to schedule a start time; everyone in the lobby (host
+// included) sees the live countdown. There's no server/cron here — whichever
+// lobby tab (host's or a guest's) is polling when the countdown hits zero is
+// the one that flips the room to active (see ptyTryAutoStart), so the game
+// still auto-starts even if the host's own tab isn't open at that moment.
+// The host's manual Start button always works too, timer or not.
+
+function ptyStartCountdownTicker() {
+  if (!ptyRoom) return;
+  if (ptyRoom.countdownTicker) clearInterval(ptyRoom.countdownTicker);
+  ptyRoom.countdownTicker = setInterval(ptyRenderCountdown, 1000);
+  ptyRenderCountdown();
+}
+
+function ptyStopCountdownTicker() {
+  if (ptyRoom && ptyRoom.countdownTicker) clearInterval(ptyRoom.countdownTicker);
+}
+
+function ptyFormatCountdown(ms) {
+  const totalSec = Math.ceil(ms / 1000);
+  const h = Math.floor(totalSec / 3600);
+  const m = Math.floor((totalSec % 3600) / 60);
+  const s = totalSec % 60;
+  return h > 0 ? `${h}h ${String(m).padStart(2, '0')}m` : `${m}:${String(s).padStart(2, '0')}`;
+}
+
+function ptyRenderCountdown() {
+  if (!ptyRoom) return;
+  const scheduleGroup = document.getElementById('ptyScheduleGroup');
+  const activeBlock = document.getElementById('ptyScheduleActive');
+  const countdownEl = document.getElementById('ptyCountdownText');
+  const browseNoteEl = document.getElementById('ptyBrowseNote');
+  const segBtns = document.querySelectorAll('#ptyScheduleSeg button');
+  if (!scheduleGroup || !countdownEl) return;
+
+  scheduleGroup.style.display = ptyRoom.isHost ? '' : 'none';
+
+  if (!ptyRoom.scheduledStartAt) {
+    countdownEl.style.display = 'none';
+    browseNoteEl.style.display = 'none';
+    activeBlock.style.display = 'none';
+    segBtns.forEach(b => b.classList.toggle('selected', b.dataset.mins === '0'));
+    return;
+  }
+
+  segBtns.forEach(b => b.classList.remove('selected'));
+  activeBlock.style.display = '';
+
+  const remaining = new Date(ptyRoom.scheduledStartAt).getTime() - Date.now();
+  let label;
+  if (remaining > 0) {
+    label = `Game starts in ${ptyFormatCountdown(remaining)}`;
+  } else if (ptyRoom.players.size < 2) {
+    label = 'Ready to start — waiting for at least one more player…';
+  } else {
+    label = 'Starting…';
+  }
+  countdownEl.textContent = label;
+  countdownEl.style.display = '';
+  browseNoteEl.style.display = ptyRoom.isHost ? 'none' : '';
+}
+
+async function ptySetSchedule(mins) {
+  if (!ptyRoom || !ptyRoom.isHost) return;
+  const iso = mins > 0 ? new Date(Date.now() + mins * 60000).toISOString() : null;
+  ptyRoom.scheduledStartAt = iso;
+  ptyRenderCountdown();
+  try { await ptyPatch(`multiplayer_rooms?code=eq.${ptyRoom.code}`, { scheduled_start_at: iso }); } catch (e) {}
+}
+
+async function ptyAdjustSchedule(mins) {
+  if (!ptyRoom || !ptyRoom.isHost || !ptyRoom.scheduledStartAt) return;
+  const iso = new Date(new Date(ptyRoom.scheduledStartAt).getTime() + mins * 60000).toISOString();
+  ptyRoom.scheduledStartAt = iso;
+  ptyRenderCountdown();
+  try { await ptyPatch(`multiplayer_rooms?code=eq.${ptyRoom.code}`, { scheduled_start_at: iso }); } catch (e) {}
+}
+
+// First lobby tab (host or guest) to notice the scheduled time has passed
+// tries the same conditional PATCH the manual Start button uses — only one
+// of them can win it (status=eq.waiting), so a race between multiple tabs
+// just means the loser's PATCH matches zero rows and does nothing.
+async function ptyTryAutoStart() {
+  if (!ptyRoom || ptyRoom.autoStartAttempted) return;
+  ptyRoom.autoStartAttempted = true;
+  const startAt = new Date(Date.now() + 300).toISOString();
+  try {
+    const res = await ptyPatch(`multiplayer_rooms?code=eq.${ptyRoom.code}&status=eq.waiting`, {
+      status: 'active', current_round: 0, round_started_at: startAt
+    });
+    if (res.ok && res.data.length) {
+      clearInterval(ptyPollTimer);
+      ptyStopCountdownTicker();
+      ptyRoom.roundStartedAt = startAt;
+      ptyBeginMatch();
+      return;
+    }
+  } catch (e) {}
+  ptyRoom.autoStartAttempted = false;
+}
+
+// ── Chat (lobby + results) ───────────────────────────────────────────────
+// Shared multiplayer_reactions table (chatSanitize/chatCanSend live in
+// app.js) — one continuous log for the room's whole lifetime, shown on the
+// lobby and results screens. There's no chat during the live question
+// rounds themselves; that screen moves too fast for it to be worth the
+// clutter.
+
+function ptyChatName(playerId) {
+  if (playerId === ptyRoom.myId) return ptyRoom.myName;
+  const p = ptyRoom.players.get(playerId);
+  return p ? p.name : 'Player';
+}
+
+function ptyRenderChatInto(elId) {
+  const el = document.getElementById(elId);
+  if (!el || !ptyRoom) return;
+  el.innerHTML = (ptyRoom.chatLog || []).map(m =>
+    `<div class="tg-chat-msg${m.mine ? ' mine' : ''}">${!m.mine ? `<span class="tg-chat-name">${m.name}:</span>` : ''}${m.text}</div>`
+  ).join('');
+  el.scrollTop = el.scrollHeight;
+}
+
+function ptyRenderChat() {
+  ptyRenderChatInto('ptyLobbyChatLog');
+  ptyRenderChatInto('ptyResultsChatLog');
+}
+
+async function ptySendChatMessage(raw) {
+  if (!ptyRoom) return;
+  const text = chatSanitize(raw);
+  if (!text || !chatCanSend(ptyRoom)) return;
+  ptyRoom.chatLog.push({ text, name: ptyRoom.myName, mine: true });
+  ptyRenderChat();
+  try { await ptyPost('multiplayer_reactions', { room_code: ptyRoom.code, player_id: ptyRoom.myId, message: text }); } catch (e) {}
+}
+
+function ptyWireChatForm(formId, inputId) {
+  const form = document.getElementById(formId);
+  const input = document.getElementById(inputId);
+  if (!form || !input) return;
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    ptySendChatMessage(input.value);
+    input.value = '';
+  });
+}
+
+async function ptyLoadChatHistory() {
+  if (!ptyRoom) return;
+  try {
+    const rows = await ptyGet(`multiplayer_reactions?room_code=eq.${ptyRoom.code}&order=id.asc`);
+    ptyRoom.chatLog = rows.map(r => ({
+      text: r.message, name: ptyChatName(r.player_id), mine: r.player_id === ptyRoom.myId,
+    }));
+    ptyRoom.lastSeenChatId = rows.length ? rows[rows.length - 1].id : 0;
+    ptyRenderChat();
+  } catch (e) {}
+}
+
+async function ptyPollChat() {
+  if (!ptyRoom) return;
+  try {
+    const rows = await ptyGet(`multiplayer_reactions?room_code=eq.${ptyRoom.code}&id=gt.${ptyRoom.lastSeenChatId || 0}&order=id.asc`);
+    rows.forEach(r => {
+      ptyRoom.lastSeenChatId = Math.max(ptyRoom.lastSeenChatId || 0, r.id);
+      if (r.player_id !== ptyRoom.myId) {
+        ptyRoom.chatLog.push({ text: r.message, name: ptyChatName(r.player_id), mine: false });
+        ptyRenderChat();
+      }
+    });
+  } catch (e) {}
+}
+
+// Host-only, lobby-only. Bans (rather than deletes) the roster row so the
+// same browser can't just rejoin — see the banned check in ptyJoinRoom.
+async function ptyKickPlayer(playerId) {
+  if (!ptyRoom || !ptyRoom.isHost) return;
+  if (!confirm('Remove this player from the room?')) return;
+  try { await ptyPatch(`multiplayer_players?room_code=eq.${ptyRoom.code}&player_id=eq.${playerId}`, { banned: true }); } catch (e) {}
+  ptyRoom.players.delete(playerId);
+  ptyRoom.knownPlayerIds.delete(playerId);
+  ptyRenderLobby();
 }
 
 async function ptyPollLobby() {
@@ -466,16 +746,27 @@ async function ptyPollLobby() {
   let room, players;
   try {
     [room, players] = await Promise.all([
-      ptyGet(`multiplayer_rooms?code=eq.${ptyRoom.code}&select=status`).then(r => r[0]),
-      ptyGet(`multiplayer_players?room_code=eq.${ptyRoom.code}&select=player_id,name,is_host,eliminated,last_seen&order=joined_at.asc`),
+      ptyGet(`multiplayer_rooms?code=eq.${ptyRoom.code}&select=status,scheduled_start_at`).then(r => r[0]),
+      ptyGet(`multiplayer_players?room_code=eq.${ptyRoom.code}&banned=eq.false&select=player_id,name,is_host,eliminated,last_seen&order=joined_at.asc`),
     ]);
   } catch (e) { return; }
   if (!ptyRoom || !room) return;
 
   if (room.status === 'abandoned') {
     clearInterval(ptyPollTimer);
+    ptyStopCountdownTicker();
     document.getElementById('ptyWaitingStatus').textContent = 'The host closed this room.';
     document.getElementById('ptyStartBtn').style.display = 'none';
+    return;
+  }
+
+  if (!ptyRoom.isHost && !players.some(p => p.player_id === ptyRoom.myId)) {
+    clearInterval(ptyPollTimer);
+    ptyStopCountdownTicker();
+    ptyRoom = null;
+    vsShow('ptySetup');
+    const err = document.getElementById('ptyError');
+    if (err) { err.textContent = 'You were removed from this room by the host.'; err.style.display = ''; }
     return;
   }
 
@@ -491,10 +782,18 @@ async function ptyPollLobby() {
   ptyRoom.players = nextPlayers;
   ptyRoom.knownPlayerIds = new Set(players.map(p => p.player_id));
   players.forEach(p => { if (!ptyRoom.scores.has(p.player_id)) ptyRoom.scores.set(p.player_id, 0); });
+  ptyRoom.scheduledStartAt = room.scheduled_start_at || null;
   ptyRenderLobby();
+  ptyPollChat();
+
+  if (room.status === 'waiting' && ptyRoom.scheduledStartAt && ptyRoom.players.size >= 2
+      && Date.now() >= new Date(ptyRoom.scheduledStartAt).getTime()) {
+    ptyTryAutoStart();
+  }
 
   if (room.status === 'active') {
     clearInterval(ptyPollTimer);
+    ptyStopCountdownTicker();
     ptyBeginMatch();
   }
 }
@@ -512,12 +811,14 @@ async function ptyStartMatch() {
     if (!res.ok || !res.data.length) { btn.disabled = false; return; }
   } catch (e) { btn.disabled = false; return; }
   clearInterval(ptyPollTimer);
+  ptyStopCountdownTicker();
   ptyRoom.roundStartedAt = startAt;
   ptyBeginMatch();
 }
 
 async function ptyCancelWaiting() {
   if (ptyPollTimer) clearInterval(ptyPollTimer);
+  ptyStopCountdownTicker();
   if (ptyRoom) {
     try {
       if (ptyRoom.isHost) {
@@ -852,6 +1153,7 @@ async function ptyFinishMatch() {
   if (ptyRoom.tickTimer) clearInterval(ptyRoom.tickTimer);
   try { await ptyPatch(`multiplayer_rooms?code=eq.${ptyRoom.code}`, { status: 'finished' }); } catch (e) {}
   ptyShowResults();
+  ptyPollTimer = setInterval(ptyPollChat, PTY_POLL_MS);
 }
 
 function ptyShowResults() {
@@ -894,6 +1196,7 @@ function ptyNewGame() {
 function ptyTeardown() {
   if (ptyPollTimer) clearInterval(ptyPollTimer);
   if (ptyRoom && ptyRoom.tickTimer) clearInterval(ptyRoom.tickTimer);
+  ptyStopCountdownTicker();
   ptyRoom = null;
 }
 

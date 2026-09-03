@@ -125,6 +125,16 @@
       0%   { background: var(--option-selected-bg); }
       100% { background: var(--option-bg); }
     }
+    .pty-kick-btn {
+      background: none;
+      border: none;
+      color: var(--feedback-wrong);
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 2px 6px;
+      line-height: 1;
+    }
     .pty-host-tag {
       font-size: 11px;
       font-weight: 700;
@@ -265,9 +275,37 @@
           <div class="pty-count" id="ptyPlayerCount"></div>
           <div class="pty-list-wrap" id="ptyPlayerList" style="text-align:left;"></div>
 
+          <div id="ptyScheduleGroup" style="display:none;text-align:left;margin-bottom:16px;">
+            <label style="display:block;font-size:13px;font-weight:600;color:var(--muted-text);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.04em;">Start time</label>
+            <div class="vs-seg" id="ptyScheduleSeg">
+              <button type="button" data-mins="0">Now</button>
+              <button type="button" data-mins="60">1h</button>
+              <button type="button" data-mins="120">2h</button>
+              <button type="button" data-mins="180">3h</button>
+            </div>
+            <div id="ptyScheduleActive" style="display:none;margin-top:10px;">
+              <div style="display:flex;gap:6px;flex-wrap:wrap;">
+                <button type="button" id="ptyAdd30Btn" class="secondary-btn" style="flex:1;">+30m</button>
+                <button type="button" id="ptyAdd60Btn" class="secondary-btn" style="flex:1;">+1h</button>
+                <button type="button" id="ptyClearScheduleBtn" class="secondary-btn" style="flex:1;">Clear</button>
+              </div>
+            </div>
+          </div>
+          <p id="ptyCountdownText" style="font-weight:700;display:none;"></p>
+          <p id="ptyBrowseNote" style="color:var(--muted-text);font-size:13px;margin-top:4px;display:none;">Nothing to do yet — tap <a href="index.html" class="tg-inline-link">🏠 Home</a> above to browse the site while you wait, then come back to this link when it's time.</p>
+
           <button id="ptyStartBtn" class="primary-btn" style="min-width:200px;">Start</button>
           <p id="ptyWaitingStatus" style="color:var(--muted-text);margin-top:14px;"></p>
           <button id="ptyCancelBtn" class="secondary-btn" style="min-width:160px;margin-top:10px;">Cancel</button>
+
+          <div class="tg-chat" style="text-align:left;margin-top:20px;">
+            <div class="tg-chat-log" id="ptyLobbyChatLog"></div>
+            <form class="tg-chat-form" id="ptyLobbyChatForm">
+              <input type="text" class="tg-chat-input" id="ptyLobbyChatInput" placeholder="Say hi to the group…" maxlength="140" autocomplete="off">
+              <button type="submit" class="primary-btn tg-chat-send">Send</button>
+            </form>
+          </div>
+
           <div style="margin-top:14px;">
             <a href="contact.html" class="secondary-btn" style="font-size:0.85rem;padding:8px 18px;text-decoration:none;">Leave Feedback</a>
           </div>
@@ -301,6 +339,15 @@
         <h2 id="ptyResultsTitle" style="margin-bottom:4px;"></h2>
         <p id="ptyResultsSubtitle" style="color:var(--muted-text);margin-bottom:16px;"></p>
         <div class="pty-list-wrap" id="ptyResultsScoreboard"></div>
+
+        <div class="tg-chat" style="margin-top:12px;">
+          <div class="tg-chat-log" id="ptyResultsChatLog"></div>
+          <form class="tg-chat-form" id="ptyResultsChatForm">
+            <input type="text" class="tg-chat-input" id="ptyResultsChatInput" placeholder="Say something…" maxlength="140" autocomplete="off">
+            <button type="submit" class="primary-btn tg-chat-send">Send</button>
+          </form>
+        </div>
+
         <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;">
           <button id="ptyNewGameBtn" class="primary-btn" style="flex:1;">New Game</button>
           <button id="ptyBackBtn" class="secondary-btn" style="flex:1;">Back</button>

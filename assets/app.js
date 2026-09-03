@@ -1885,6 +1885,34 @@ function wireNotifyCard(themeName, source = "trivia") {
 // Superseded by assets/announcements.js, which boots itself via its own
 // DOMContentLoaded listener — nothing to call from here.
 
+/* ---------------- SHARED MULTIPLAYER CHAT ---------------- */
+// Used by Category Blitz Versus's between-round chat and Party mode's
+// lobby/results chat (both write into multiplayer_reactions — see
+// supabase/multiplayer-chat.sql). Same client-trusted model as the rest of
+// these tables: this is a courtesy filter/rate-limit, not a security wall.
+const CHAT_MAX_LEN = 140;
+const CHAT_BLOCKLIST = ['fuck','shit','bitch','asshole','bastard','cunt','dick','piss','slut','whore','nigger','faggot'];
+function chatCensor(text) {
+  return text.replace(/[A-Za-z]+/g, word => {
+    const bare = word.toLowerCase();
+    // Substring match, not exact — catches plurals/suffixes ("cunts",
+    // "fucking") that an exact-word check would let straight through.
+    const hit = CHAT_BLOCKLIST.some(bad => bare.includes(bad));
+    return hit ? word[0] + '*'.repeat(word.length - 1) : word;
+  });
+}
+function chatSanitize(raw) {
+  const trimmed = (raw || '').trim().slice(0, CHAT_MAX_LEN);
+  return trimmed ? chatCensor(trimmed) : '';
+}
+// Pass the room/match state object so the cooldown is per-room, not global.
+function chatCanSend(state, minGapMs = 2000) {
+  const now = Date.now();
+  if (state.lastChatSentAt && now - state.lastChatSentAt < minGapMs) return false;
+  state.lastChatSentAt = now;
+  return true;
+}
+
 async function submitEmailToMailchimp(email, themeName, source = "trivia") {
   try {
     const res = await fetch("https://formspree.io/f/mqewdrkn", {

@@ -2767,3 +2767,39 @@ body.in-app .wordle-theme-intro,
   padding: 0;
   margin-left: 12px;
 }
+
+/* Shared free-text chat — Category Blitz Versus's between-round chat and
+   Party mode's lobby/results chat both render into these same classes. */
+.tg-chat { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+.tg-chat-log {
+  max-height: 140px; overflow-y: auto;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.tg-chat-msg {
+  align-self: flex-start; max-width: 80%;
+  padding: 4px 10px; border-radius: 12px;
+  background: var(--option-bg); font-size: 13px; text-align: left;
+}
+.tg-chat-name { font-weight: 700; margin-right: 4px; }
+.tg-chat-msg.mine {
+  align-self: flex-end;
+  background: var(--option-selected-bg); color: #fff;
+}
+.tg-chat-form { display: flex; gap: 6px; }
+.tg-chat-input {
+  flex: 1; padding: 8px 12px; border-radius: 8px;
+  border: 1px solid var(--option-border); background: var(--option-bg);
+  color: var(--option-text); font-size: 14px; outline: none;
+}
+.tg-chat-input:focus { border-color: var(--option-selected-border); }
+.tg-chat-send { padding: 8px 14px; font-size: 14px; }
+
+/* Inline text links that need to actually look clickable — the site-wide
+   `a { color: inherit; text-decoration: none; }` default makes plain <a>
+   tags inside body copy invisible as links otherwise. */
+.tg-inline-link {
+  color: #7cc6ff;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
