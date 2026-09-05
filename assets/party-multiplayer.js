@@ -1166,6 +1166,7 @@ async function ptyAdvanceRound() {
   const nextRound = ptyRoom.currentRound + 1;
   let finished;
   let cutIds = [];
+  let tiedIds = [];
 
   if (ptyRoom.subMode === 'survival') {
     const remainingActive = ptyActivePlayers().length;
@@ -1180,7 +1181,7 @@ async function ptyAdvanceRound() {
     // from here (reuses the same `eliminated`/spectate machinery as Survival).
     const active = ptyActivePlayers();
     const maxScore = active.length ? Math.max(...active.map(([id]) => ptyRoom.scores.get(id) || 0)) : 0;
-    const tiedIds = active.filter(([id]) => (ptyRoom.scores.get(id) || 0) === maxScore).map(([id]) => id);
+    tiedIds = active.filter(([id]) => (ptyRoom.scores.get(id) || 0) === maxScore).map(([id]) => id);
     const bufferAvailable = nextRound < ptyRoom.questionIds.length;
     if (tiedIds.length > 1 && bufferAvailable) {
       finished = false;
@@ -1201,7 +1202,13 @@ async function ptyAdvanceRound() {
     } catch (e) {}
   }
 
-  const nextRoundStartedAt = new Date(Date.now() + 300).toISOString();
+  // Regulation (or a prior decider) just ended level and the field narrowed —
+  // announce it. Without this, everyone but the still-tied leaders just had
+  // their answer buttons silently disabled going into the next round, which
+  // reads as the game "skipping through" questions with no way to answer.
+  const announceCut = cutIds.length > 0;
+  const pauseMs = announceCut ? PTY_REVEAL_PAUSE_MS * 2 : 300;
+  const nextRoundStartedAt = new Date(Date.now() + pauseMs).toISOString();
 
   try {
     await ptyPatch(`multiplayer_rooms?code=eq.${ptyRoom.code}&current_round=eq.${ptyRoom.currentRound}`, {
@@ -1212,11 +1219,27 @@ async function ptyAdvanceRound() {
 
   if (finished) {
     ptyFinishMatch();
-  } else {
+    return;
+  }
+
+  if (announceCut) {
+    if (ptyRoom.tickTimer) clearInterval(ptyRoom.tickTimer);
+    const feedbackEl = document.getElementById('ptyFeedback');
+    if (feedbackEl) {
+      const tiedNames = tiedIds.map(id => ptyRoom.players.get(id)?.name).filter(Boolean).join(' & ');
+      const cutNames = cutIds.map(id => ptyRoom.players.get(id)?.name).filter(Boolean).join(', ');
+      feedbackEl.innerHTML = `<strong>Tied! Sudden death: ${tiedNames}</strong>` + (cutNames ? `<br>${cutNames} eliminated` : '');
+      feedbackEl.className = 'vs-feedback-box';
+      feedbackEl.style.display = '';
+    }
+  }
+
+  setTimeout(() => {
+    if (!ptyRoom) return;
     ptyRoom.currentRound = nextRound;
     ptyRoom.roundStartedAt = nextRoundStartedAt;
     ptyRenderRound();
-  }
+  }, pauseMs);
 }
 
 async function ptyPollActive() {

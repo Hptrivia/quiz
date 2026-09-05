@@ -598,7 +598,14 @@ function mpRenderReveal(q, myChoice, iCorrect, oppChoice, oppCorrect) {
   const feedbackEl = document.getElementById('vsMpFeedback');
   const myLine = `You: ${myChoice || '(no answer)'} ${iCorrect ? '✅' : '❌'}`;
   const oppLine = `${mpRoom.oppName || 'Opponent'}: ${oppChoice || '(no answer)'} ${oppCorrect ? '✅' : '❌'}`;
-  feedbackEl.innerHTML = `${myLine}<br>${oppLine}`;
+  let html = `${myLine}<br>${oppLine}`;
+  // Regulation just ended level — call this out explicitly instead of
+  // silently sliding into a sudden-death question with only the small
+  // "Tied — decider round" progress label as a clue.
+  if (mpRoom.currentRound + 1 === mpRoom.bestOf && mpRoom.myScore === mpRoom.oppScore) {
+    html += `<br><strong>Final score: ${mpRoom.myScore}–${mpRoom.oppScore} — tied! Sudden death…</strong>`;
+  }
+  feedbackEl.innerHTML = html;
   feedbackEl.className = 'vs-feedback-box ' + (iCorrect ? 'correct' : 'wrong');
   feedbackEl.style.display = '';
 
@@ -651,7 +658,10 @@ async function mpAdvanceRound() {
   const regulationDone = nextRound >= mpRoom.bestOf;
   const tied = mpRoom.myScore === mpRoom.oppScore;
   const finished = regulationDone && !tied;
-  const nextRoundStartedAt = new Date(Date.now() + MP_REVEAL_PAUSE_MS).toISOString();
+  // Give the "tied! sudden death" message (see mpRenderReveal) time to
+  // actually be read instead of vanishing after the normal reveal pause.
+  const pauseMs = (regulationDone && tied) ? MP_REVEAL_PAUSE_MS * 2 : MP_REVEAL_PAUSE_MS;
+  const nextRoundStartedAt = new Date(Date.now() + pauseMs).toISOString();
 
   const scoreFields = mpRoom.role === 'host'
     ? { host_score: mpRoom.myScore, guest_score: mpRoom.oppScore }
@@ -674,7 +684,7 @@ async function mpAdvanceRound() {
       mpRoom.roundStartedAt = nextRoundStartedAt;
       mpRenderRound();
     }
-  }, MP_REVEAL_PAUSE_MS);
+  }, pauseMs);
 }
 
 async function mpPollActive() {
