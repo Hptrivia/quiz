@@ -146,9 +146,74 @@ function vsDrawQuestion(state, preferredDiff) {
   return null;
 }
 
+// Host-picked difficulty filter (e.g. Medium+Hard+Expert): splits `n`
+// questions evenly across the ticked tiers, with any remainder handed to
+// randomly chosen tiers so no one tier always gets the "extra" question.
+// The resulting order is shuffled so questions aren't grouped by difficulty.
+// Shared by Party, Versus Online, and local pass-and-play Versus.
+function vsBuildDifficultySchedule(n, diffs) {
+  const counts = {};
+  diffs.forEach(d => { counts[d] = Math.floor(n / diffs.length); });
+  let remainder = n - Object.values(counts).reduce((a, b) => a + b, 0);
+  shuffleArray([...diffs]).slice(0, remainder).forEach(d => { counts[d]++; });
+  const schedule = [];
+  diffs.forEach(d => { for (let i = 0; i < counts[d]; i++) schedule.push(d); });
+  return shuffleArray(schedule);
+}
+
+// A ticked tier running dry (or empty from the start) falls back to the next
+// tier down toward Easy — e.g. Expert exhausted draws from Hard next, never
+// from something harder than what was asked for.
+function vsCascadeDiffs(diff) {
+  const idx = VS_DIFF_ORDER.indexOf(diff);
+  const order = [diff];
+  for (let i = idx - 1; i >= 0; i--) order.push(VS_DIFF_ORDER[i]);
+  return order;
+}
+
+// Same draw shape/state as vsDrawQuestion, but cascades only toward easier
+// tiers instead of cycling through all four — used whenever the host filtered
+// to specific difficulties instead of taking the default easy-to-expert ramp.
+function vsDrawQuestionCascade(state, diff) {
+  if (state.isMashup && state.themeQueues) {
+    const numThemes = state.themeQueues.length;
+    for (const d of vsCascadeDiffs(diff)) {
+      for (let t = 0; t < numThemes; t++) {
+        const themeIdx = (state.themeRotationIdx + t) % numThemes;
+        const pool = state.themeQueues[themeIdx][d];
+        while (pool.length > 0) {
+          const q = pool.shift();
+          const key = vsQKey(q);
+          if (!state.usedIds.has(key)) {
+            state.usedIds.add(key);
+            vsSessionUsedIds.add(key);
+            state.themeRotationIdx = (themeIdx + 1) % numThemes;
+            return { ...q, _diff: d };
+          }
+        }
+      }
+    }
+    return null;
+  }
+
+  for (const d of vsCascadeDiffs(diff)) {
+    const pool = state.pools[d];
+    while (pool.length > 0) {
+      const q = pool.shift();
+      const key = vsQKey(q);
+      if (!state.usedIds.has(key)) {
+        state.usedIds.add(key);
+        vsSessionUsedIds.add(key);
+        return { ...q, _diff: d };
+      }
+    }
+  }
+  return null;
+}
+
 function vsShowQuestion(player, diff, round, numQuestions) {
   const state = vsState;
-  const q = vsDrawQuestion(state, diff);
+  const q = (state.useCascade ? vsDrawQuestionCascade : vsDrawQuestion)(state, diff);
   if (!q) {
     vsAdvanceTurn(player, 0, null);
     return;
@@ -578,10 +643,11 @@ function vsDeclareDraw() {
   vsShow('vsResults');
 }
 
-function vsStartGame(players, numQuestions, pools, themeSlug, themeName, isMashup, themeQueues) {
+function vsStartGame(players, numQuestions, pools, themeSlug, themeName, isMashup, themeQueues, diffs) {
   const hasExpert = themeQueues
     ? themeQueues.some(tq => (tq.expert || []).length > 0)
     : (pools.expert || []).length > 0;
+  const useCascade = !!(diffs && diffs.length);
   vsState = {
     players,
     numQuestions,
@@ -594,7 +660,8 @@ function vsStartGame(players, numQuestions, pools, themeSlug, themeName, isMashu
     themeName,
     isMashup: !!isMashup,
     usedIds: new Set(vsSessionUsedIds),
-    schedule: vsBuildSchedule(numQuestions, hasExpert),
+    schedule: useCascade ? vsBuildDifficultySchedule(numQuestions, diffs) : vsBuildSchedule(numQuestions, hasExpert),
+    useCascade,
     currentRound: 0,
     currentPlayerIdx: 0,
   };
@@ -764,6 +831,21 @@ async function vsInit() {
   });
   updateBestOfNote(bestOf);
 
+  const vsDiffs = new Set();
+  const vsDiffSeg = document.getElementById('vsDifficultySeg');
+  vsDiffSeg.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const val = btn.dataset.val;
+      if (vsDiffs.has(val)) {
+        vsDiffs.delete(val);
+        btn.classList.remove('selected');
+      } else {
+        vsDiffs.add(val);
+        btn.classList.add('selected');
+      }
+    });
+  });
+
   document.getElementById('vsStartBtn').addEventListener('click', async () => {
     const errorEl = document.getElementById('vsSetupError');
     const nameInputs = document.querySelectorAll('#vsNameInputs input');
@@ -804,7 +886,7 @@ async function vsInit() {
         botLevel: isBot ? botLevel : undefined,
       };
     });
-    vsStartGame(players, bestOf, pools, themeSlug, themeName, isMashup, themeQueues);
+    vsStartGame(players, bestOf, pools, themeSlug, themeName, isMashup, themeQueues, [...vsDiffs]);
   });
 
   document.getElementById('vsPlayAgainBtn').addEventListener('click', () => {

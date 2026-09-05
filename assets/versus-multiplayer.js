@@ -139,6 +139,21 @@ function mpInit(allThemes, resolvedThemes) {
     });
   });
 
+  const mpDiffs = new Set();
+  const mpDiffSeg = document.getElementById('vsMpDifficultySeg');
+  mpDiffSeg.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const val = btn.dataset.val;
+      if (mpDiffs.has(val)) {
+        mpDiffs.delete(val);
+        btn.classList.remove('selected');
+      } else {
+        mpDiffs.add(val);
+        btn.classList.add('selected');
+      }
+    });
+  });
+
   const errorEl = document.getElementById('vsMpError');
   const showMpError = (msg) => { errorEl.textContent = msg; errorEl.style.display = ''; };
   const clearMpError = () => { errorEl.style.display = 'none'; };
@@ -162,7 +177,7 @@ function mpInit(allThemes, resolvedThemes) {
     }
     createBtn.disabled = true;
     try {
-      await mpCreateRoom(resolvedThemes, mpBestOf, name);
+      await mpCreateRoom(resolvedThemes, mpBestOf, name, [...mpDiffs]);
     } catch (e) {
       showMpError(e.message || 'Could not create a room. Please try again.');
     } finally {
@@ -222,14 +237,12 @@ function mpInit(allThemes, resolvedThemes) {
 // Draws a fresh question set for `resolvedThemes` — used both for the initial
 // room creation and for a same-room rematch (mpPlayAgain), which just needs a
 // new set of ids for the same theme(s).
-async function mpDrawQuestionSet(resolvedThemes, bestOf) {
+async function mpDrawQuestionSet(resolvedThemes, bestOf, diffs) {
   const { pools, themeQueues, isMashup } = await vsBuildQuestionPools(resolvedThemes);
 
   const hasExpert = isMashup
     ? themeQueues.some(tq => (tq.expert || []).length > 0)
     : (pools.expert || []).length > 0;
-  const schedule = vsBuildSchedule(bestOf, hasExpert);
-  const bufferDiffs = Array(MP_TIEBREAK_BUFFER).fill(hasExpert ? 'expert' : 'hard');
   // Shuffled so a Mashup/Random Trivia match doesn't visit themes in the
   // same fixed order every single game (see the equivalent fix in
   // versus.js's vsStartGame for local pass-and-play).
@@ -237,10 +250,22 @@ async function mpDrawQuestionSet(resolvedThemes, bestOf) {
     ? { pools, usedIds: new Set(vsSessionUsedIds), isMashup: true, themeQueues: shuffleArray(themeQueues), themeRotationIdx: 0 }
     : { pools, usedIds: new Set(vsSessionUsedIds) };
 
+  let schedule, bufferDiffs, drawFn;
+  if (diffs && diffs.length) {
+    schedule = vsBuildDifficultySchedule(bestOf, diffs);
+    const bufferDiff = diffs.includes('expert') ? 'expert' : diffs.includes('hard') ? 'hard' : diffs[diffs.length - 1];
+    bufferDiffs = Array(MP_TIEBREAK_BUFFER).fill(bufferDiff);
+    drawFn = vsDrawQuestionCascade;
+  } else {
+    schedule = vsBuildSchedule(bestOf, hasExpert);
+    bufferDiffs = Array(MP_TIEBREAK_BUFFER).fill(hasExpert ? 'expert' : 'hard');
+    drawFn = vsDrawQuestion;
+  }
+
   const questionIds = [];
   const questionMap = new Map();
   for (const diff of [...schedule, ...bufferDiffs]) {
-    const q = vsDrawQuestion(drawState, diff);
+    const q = drawFn(drawState, diff);
     if (!q) break;
     const key = vsQKey(q);
     questionIds.push(key);
@@ -252,8 +277,8 @@ async function mpDrawQuestionSet(resolvedThemes, bestOf) {
   return { questionIds, questionMap };
 }
 
-async function mpCreateRoom(resolvedThemes, bestOf, name) {
-  const { questionIds, questionMap } = await mpDrawQuestionSet(resolvedThemes, bestOf);
+async function mpCreateRoom(resolvedThemes, bestOf, name, diffs) {
+  const { questionIds, questionMap } = await mpDrawQuestionSet(resolvedThemes, bestOf, diffs);
 
   const themeSlugs = resolvedThemes.map(t => t.slug).join(',');
   let code, insertRes;
@@ -268,7 +293,7 @@ async function mpCreateRoom(resolvedThemes, bestOf, name) {
   if (!insertRes.ok) throw new Error('Could not create a room right now — please try again.');
 
   mpRoom = {
-    code, role: 'host', bestOf, questionIds, questionMap, resolvedThemes,
+    code, role: 'host', bestOf, questionIds, questionMap, resolvedThemes, diffs,
     hostId: mpPlayerId(), guestId: null,
     myName: name, oppName: null,
     currentRound: 0, myScore: 0, oppScore: 0,
@@ -878,7 +903,7 @@ async function mpPlayAgainConfirmed() {
   const btn = document.getElementById('vsMpPlayAgainBtn');
   if (btn) { btn.disabled = true; btn.textContent = 'Starting…'; }
   try {
-    const { questionIds, questionMap } = await mpDrawQuestionSet(mpRoom.resolvedThemes, mpRoom.bestOf);
+    const { questionIds, questionMap } = await mpDrawQuestionSet(mpRoom.resolvedThemes, mpRoom.bestOf, mpRoom.diffs);
     if (!mpRoom || mpRoom.rematchStarted) return; // opponent's rematch already landed
     // Clear the previous match's answers — round numbers restart at 0 for
     // the rematch and would otherwise collide with the old match's rows.

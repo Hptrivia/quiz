@@ -334,102 +334,41 @@ function ptyInit(allThemes, resolvedThemes) {
 
 // ── Create / join ────────────────────────────────────────────────────────
 
-// Host-picked difficulty filter (e.g. Medium+Hard+Expert): splits `n`
-// questions evenly across the ticked tiers, with any remainder handed to
-// randomly chosen tiers so no one tier always gets the "extra" question.
-// The resulting order is shuffled so questions aren't grouped by difficulty.
-function ptyBuildDifficultySchedule(n, diffs) {
-  const counts = {};
-  diffs.forEach(d => { counts[d] = Math.floor(n / diffs.length); });
-  let remainder = n - Object.values(counts).reduce((a, b) => a + b, 0);
-  shuffleArray([...diffs]).slice(0, remainder).forEach(d => { counts[d]++; });
-  const schedule = [];
-  diffs.forEach(d => { for (let i = 0; i < counts[d]; i++) schedule.push(d); });
-  return shuffleArray(schedule);
-}
-
-// A ticked tier running dry (or empty from the start) falls back to the
-// next tier down toward Easy — e.g. Expert exhausted draws from Hard next,
-// never from something harder than what the host asked for.
-function ptyCascadeDiffs(diff) {
-  const idx = VS_DIFF_ORDER.indexOf(diff);
-  const order = [diff];
-  for (let i = idx - 1; i >= 0; i--) order.push(VS_DIFF_ORDER[i]);
-  return order;
-}
-
-function ptyDrawWithCascade(diff, pools, themeQueues, rotationState, usedIds) {
-  for (const d of ptyCascadeDiffs(diff)) {
-    if (themeQueues) {
-      const numThemes = themeQueues.length;
-      for (let t = 0; t < numThemes; t++) {
-        const themeIdx = (rotationState.idx + t) % numThemes;
-        const pool = themeQueues[themeIdx][d];
-        while (pool.length > 0) {
-          const q = pool.shift();
-          const key = vsQKey(q);
-          if (!usedIds.has(key)) {
-            usedIds.add(key);
-            vsSessionUsedIds.add(key);
-            rotationState.idx = (themeIdx + 1) % numThemes;
-            return { ...q, _diff: d };
-          }
-        }
-      }
-    } else {
-      const pool = pools[d];
-      while (pool.length > 0) {
-        const q = pool.shift();
-        const key = vsQKey(q);
-        if (!usedIds.has(key)) {
-          usedIds.add(key);
-          vsSessionUsedIds.add(key);
-          return { ...q, _diff: d };
-        }
-      }
-    }
-  }
-  return null;
-}
-
+// diffs/bufferDiffs/cascade helpers now live in versus.js
+// (vsBuildDifficultySchedule / vsCascadeDiffs / vsDrawQuestionCascade) so
+// Party, Versus Online, and local pass-and-play Versus all share one copy.
 async function ptyDrawQuestionSet(resolvedThemes, bestOf, diffs) {
   const { pools, themeQueues, isMashup } = await vsBuildQuestionPools(resolvedThemes);
 
-  const questionIds = [];
-  const questionMap = new Map();
+  const hasExpert = isMashup
+    ? themeQueues.some(tq => (tq.expert || []).length > 0)
+    : (pools.expert || []).length > 0;
+  const drawState = isMashup
+    ? { pools, usedIds: new Set(vsSessionUsedIds), isMashup: true, themeQueues: shuffleArray(themeQueues), themeRotationIdx: 0 }
+    : { pools, usedIds: new Set(vsSessionUsedIds) };
 
+  let schedule, bufferDiffs, drawFn;
   if (diffs && diffs.length) {
-    const schedule = ptyBuildDifficultySchedule(bestOf, diffs);
+    schedule = vsBuildDifficultySchedule(bestOf, diffs);
     // Sudden-death buffer draws from the hardest ticked tier (cascading down
     // the same way as the main draw), same idea as Versus's tiebreak buffer.
     const bufferDiff = diffs.includes('expert') ? 'expert' : diffs.includes('hard') ? 'hard' : diffs[diffs.length - 1];
-    const bufferDiffs = Array(PTY_TIEBREAK_BUFFER).fill(bufferDiff);
-    const usedIds = new Set(vsSessionUsedIds);
-    const rotationState = { idx: 0 };
-    const shuffledQueues = isMashup ? shuffleArray(themeQueues) : null;
-    for (const diff of [...schedule, ...bufferDiffs]) {
-      const q = ptyDrawWithCascade(diff, pools, shuffledQueues, rotationState, usedIds);
-      if (!q) break;
-      const key = vsQKey(q);
-      questionIds.push(key);
-      questionMap.set(key, q);
-    }
+    bufferDiffs = Array(PTY_TIEBREAK_BUFFER).fill(bufferDiff);
+    drawFn = vsDrawQuestionCascade;
   } else {
-    const hasExpert = isMashup
-      ? themeQueues.some(tq => (tq.expert || []).length > 0)
-      : (pools.expert || []).length > 0;
-    const schedule = vsBuildSchedule(bestOf, hasExpert);
-    const bufferDiffs = Array(PTY_TIEBREAK_BUFFER).fill(hasExpert ? 'expert' : 'hard');
-    const drawState = isMashup
-      ? { pools, usedIds: new Set(vsSessionUsedIds), isMashup: true, themeQueues: shuffleArray(themeQueues), themeRotationIdx: 0 }
-      : { pools, usedIds: new Set(vsSessionUsedIds) };
-    for (const diff of [...schedule, ...bufferDiffs]) {
-      const q = vsDrawQuestion(drawState, diff);
-      if (!q) break;
-      const key = vsQKey(q);
-      questionIds.push(key);
-      questionMap.set(key, q);
-    }
+    schedule = vsBuildSchedule(bestOf, hasExpert);
+    bufferDiffs = Array(PTY_TIEBREAK_BUFFER).fill(hasExpert ? 'expert' : 'hard');
+    drawFn = vsDrawQuestion;
+  }
+
+  const questionIds = [];
+  const questionMap = new Map();
+  for (const diff of [...schedule, ...bufferDiffs]) {
+    const q = drawFn(drawState, diff);
+    if (!q) break;
+    const key = vsQKey(q);
+    questionIds.push(key);
+    questionMap.set(key, q);
   }
 
   if (questionIds.length < bestOf) {
