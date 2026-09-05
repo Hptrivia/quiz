@@ -223,7 +223,10 @@
 </head>
 <body>
   <main class="container narrow" style="padding-top: 16px;">
-    <a id="vsBackLink" href="index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+    <div class="theme-top-links" style="display:flex;justify-content:space-between;align-items:center;">
+      <a id="vsBackLink" href="index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+      <a href="index.html" class="back-link">&#127968; Home</a>
+    </div>
     <div id="vsMpAppBanner"></div>
 
     <section class="panel">
