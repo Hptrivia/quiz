@@ -26,6 +26,7 @@ const PTY_POLL_MS = 1500;
 const PTY_ROUND_SECONDS = 15;
 const PTY_DISCONNECT_MS = 15000;
 const PTY_REVEAL_PAUSE_MS = 2500;
+const PTY_TIEBREAK_BUFFER = 5; // extra sudden-death questions drawn in case Score Attack ends in a tie
 const PTY_CODE_CHARS = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789'; // no 0/O/1/I/L — easy to read aloud
 const PTY_COLORS = ['#38bdf8', '#f59e0b', '#34d399', '#f472b6', '#a78bfa', '#fb7185', '#2dd4bf', '#facc15'];
 
@@ -161,6 +162,21 @@ function ptyInit(allThemes, resolvedThemes) {
     });
   });
 
+  const ptyDiffs = new Set();
+  const diffSeg = document.getElementById('ptyDifficultySeg');
+  diffSeg.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const val = btn.dataset.val;
+      if (ptyDiffs.has(val)) {
+        ptyDiffs.delete(val);
+        btn.classList.remove('selected');
+      } else {
+        ptyDiffs.add(val);
+        btn.classList.add('selected');
+      }
+    });
+  });
+
   let ptySubMode = 'score';
   const subModeSeg = document.getElementById('ptySubModeSeg');
   const subModeSetupNote = document.getElementById('ptySubModeSetupNote');
@@ -199,7 +215,7 @@ function ptyInit(allThemes, resolvedThemes) {
     }
     createBtn.disabled = true;
     try {
-      await ptyCreateRoom(resolvedThemes, ptySubMode, ptyBestOf, name);
+      await ptyCreateRoom(resolvedThemes, ptySubMode, ptyBestOf, name, [...ptyDiffs]);
     } catch (e) {
       showError(e.message || 'Could not create a room. Please try again.');
     } finally {
@@ -236,6 +252,7 @@ function ptyInit(allThemes, resolvedThemes) {
   if (joinParam) {
     document.getElementById('ptySubModeGroup').style.display = 'none';
     document.getElementById('ptyBestOfGroup').style.display = 'none';
+    document.getElementById('ptyDifficultyGroup').style.display = 'none';
     document.getElementById('ptyCreateJoinRow').style.display = 'none';
     document.getElementById('ptySetupTitle').textContent = 'Join the Party';
     document.getElementById('ptySetupSubtitle').textContent = 'Enter your name to join this room.';
@@ -317,34 +334,112 @@ function ptyInit(allThemes, resolvedThemes) {
 
 // ── Create / join ────────────────────────────────────────────────────────
 
-async function ptyDrawQuestionSet(resolvedThemes, bestOf) {
-  const { pools, themeQueues, isMashup } = await vsBuildQuestionPools(resolvedThemes);
+// Host-picked difficulty filter (e.g. Medium+Hard+Expert): splits `n`
+// questions evenly across the ticked tiers, with any remainder handed to
+// randomly chosen tiers so no one tier always gets the "extra" question.
+// The resulting order is shuffled so questions aren't grouped by difficulty.
+function ptyBuildDifficultySchedule(n, diffs) {
+  const counts = {};
+  diffs.forEach(d => { counts[d] = Math.floor(n / diffs.length); });
+  let remainder = n - Object.values(counts).reduce((a, b) => a + b, 0);
+  shuffleArray([...diffs]).slice(0, remainder).forEach(d => { counts[d]++; });
+  const schedule = [];
+  diffs.forEach(d => { for (let i = 0; i < counts[d]; i++) schedule.push(d); });
+  return shuffleArray(schedule);
+}
 
-  const hasExpert = isMashup
-    ? themeQueues.some(tq => (tq.expert || []).length > 0)
-    : (pools.expert || []).length > 0;
-  const schedule = vsBuildSchedule(bestOf, hasExpert);
-  const drawState = isMashup
-    ? { pools, usedIds: new Set(vsSessionUsedIds), isMashup: true, themeQueues: shuffleArray(themeQueues), themeRotationIdx: 0 }
-    : { pools, usedIds: new Set(vsSessionUsedIds) };
+// A ticked tier running dry (or empty from the start) falls back to the
+// next tier down toward Easy — e.g. Expert exhausted draws from Hard next,
+// never from something harder than what the host asked for.
+function ptyCascadeDiffs(diff) {
+  const idx = VS_DIFF_ORDER.indexOf(diff);
+  const order = [diff];
+  for (let i = idx - 1; i >= 0; i--) order.push(VS_DIFF_ORDER[i]);
+  return order;
+}
+
+function ptyDrawWithCascade(diff, pools, themeQueues, rotationState, usedIds) {
+  for (const d of ptyCascadeDiffs(diff)) {
+    if (themeQueues) {
+      const numThemes = themeQueues.length;
+      for (let t = 0; t < numThemes; t++) {
+        const themeIdx = (rotationState.idx + t) % numThemes;
+        const pool = themeQueues[themeIdx][d];
+        while (pool.length > 0) {
+          const q = pool.shift();
+          const key = vsQKey(q);
+          if (!usedIds.has(key)) {
+            usedIds.add(key);
+            vsSessionUsedIds.add(key);
+            rotationState.idx = (themeIdx + 1) % numThemes;
+            return { ...q, _diff: d };
+          }
+        }
+      }
+    } else {
+      const pool = pools[d];
+      while (pool.length > 0) {
+        const q = pool.shift();
+        const key = vsQKey(q);
+        if (!usedIds.has(key)) {
+          usedIds.add(key);
+          vsSessionUsedIds.add(key);
+          return { ...q, _diff: d };
+        }
+      }
+    }
+  }
+  return null;
+}
+
+async function ptyDrawQuestionSet(resolvedThemes, bestOf, diffs) {
+  const { pools, themeQueues, isMashup } = await vsBuildQuestionPools(resolvedThemes);
 
   const questionIds = [];
   const questionMap = new Map();
-  for (const diff of schedule) {
-    const q = vsDrawQuestion(drawState, diff);
-    if (!q) break;
-    const key = vsQKey(q);
-    questionIds.push(key);
-    questionMap.set(key, q);
+
+  if (diffs && diffs.length) {
+    const schedule = ptyBuildDifficultySchedule(bestOf, diffs);
+    // Sudden-death buffer draws from the hardest ticked tier (cascading down
+    // the same way as the main draw), same idea as Versus's tiebreak buffer.
+    const bufferDiff = diffs.includes('expert') ? 'expert' : diffs.includes('hard') ? 'hard' : diffs[diffs.length - 1];
+    const bufferDiffs = Array(PTY_TIEBREAK_BUFFER).fill(bufferDiff);
+    const usedIds = new Set(vsSessionUsedIds);
+    const rotationState = { idx: 0 };
+    const shuffledQueues = isMashup ? shuffleArray(themeQueues) : null;
+    for (const diff of [...schedule, ...bufferDiffs]) {
+      const q = ptyDrawWithCascade(diff, pools, shuffledQueues, rotationState, usedIds);
+      if (!q) break;
+      const key = vsQKey(q);
+      questionIds.push(key);
+      questionMap.set(key, q);
+    }
+  } else {
+    const hasExpert = isMashup
+      ? themeQueues.some(tq => (tq.expert || []).length > 0)
+      : (pools.expert || []).length > 0;
+    const schedule = vsBuildSchedule(bestOf, hasExpert);
+    const bufferDiffs = Array(PTY_TIEBREAK_BUFFER).fill(hasExpert ? 'expert' : 'hard');
+    const drawState = isMashup
+      ? { pools, usedIds: new Set(vsSessionUsedIds), isMashup: true, themeQueues: shuffleArray(themeQueues), themeRotationIdx: 0 }
+      : { pools, usedIds: new Set(vsSessionUsedIds) };
+    for (const diff of [...schedule, ...bufferDiffs]) {
+      const q = vsDrawQuestion(drawState, diff);
+      if (!q) break;
+      const key = vsQKey(q);
+      questionIds.push(key);
+      questionMap.set(key, q);
+    }
   }
+
   if (questionIds.length < bestOf) {
     throw new Error("This theme doesn't have enough questions for online play.");
   }
   return { questionIds, questionMap };
 }
 
-async function ptyCreateRoom(resolvedThemes, subMode, bestOf, name) {
-  const { questionIds, questionMap } = await ptyDrawQuestionSet(resolvedThemes, bestOf);
+async function ptyCreateRoom(resolvedThemes, subMode, bestOf, name, diffs) {
+  const { questionIds, questionMap } = await ptyDrawQuestionSet(resolvedThemes, bestOf, diffs);
 
   const themeSlugs = resolvedThemes.map(t => t.slug).join(',');
   const myId = ptyPlayerId();
@@ -944,7 +1039,9 @@ function ptyRenderRound() {
     : Date.now() + PTY_ROUND_SECONDS * 1000;
 
   document.getElementById('ptyDisconnectBanner').style.display = 'none';
-  document.getElementById('ptyProgress').textContent = `Question ${round + 1} of ${ptyRoom.bestOf}`;
+  document.getElementById('ptyProgress').textContent = round >= ptyRoom.bestOf
+    ? `Tied — decider round ${round - ptyRoom.bestOf + 1}`
+    : `Question ${round + 1} of ${ptyRoom.bestOf}`;
   ptyRenderLiveStatus();
 
   const textEl = document.getElementById('ptyQuestionText');
@@ -1043,10 +1140,14 @@ async function ptyMaybeResolveRound() {
 
   const q = ptyRoom.questionMap.get(ptyRoom.questionIds[ptyRoom.currentRound]);
   const newlyEliminated = [];
+  const correctIds = [];
   active.forEach(([id]) => {
     const row = rows.find(r => r.player_id === id);
     const gotPoint = !!row && row.score === 1;
-    if (gotPoint) ptyRoom.scores.set(id, (ptyRoom.scores.get(id) || 0) + 1);
+    if (gotPoint) {
+      ptyRoom.scores.set(id, (ptyRoom.scores.get(id) || 0) + 1);
+      correctIds.push(id);
+    }
     if (ptyRoom.subMode === 'survival' && !gotPoint) {
       const p = ptyRoom.players.get(id);
       if (p) p.eliminated = true;
@@ -1055,6 +1156,22 @@ async function ptyMaybeResolveRound() {
     }
   });
 
+  // Score Attack sudden death: once past the regular bestOf rounds, each
+  // decider question eliminates only the players who got it wrong — unless
+  // the whole tied group answered the same way (all right or all wrong),
+  // in which case nobody's cut and the next decider question decides instead.
+  if (ptyRoom.subMode !== 'survival' && ptyRoom.currentRound >= ptyRoom.bestOf && active.length > 1) {
+    const wrongIds = active.map(([id]) => id).filter(id => !correctIds.includes(id));
+    if (wrongIds.length > 0 && wrongIds.length < active.length) {
+      wrongIds.forEach(id => {
+        const p = ptyRoom.players.get(id);
+        if (p) p.eliminated = true;
+        ptyRoom.eliminatedAtRound.set(id, ptyRoom.currentRound);
+        newlyEliminated.push(id);
+      });
+    }
+  }
+
   if (newlyEliminated.length) {
     const list = newlyEliminated.join(',');
     try { await ptyPatch(`multiplayer_players?room_code=eq.${ptyRoom.code}&player_id=in.(${list})`, { eliminated: true }); } catch (e) {}
@@ -1062,12 +1179,20 @@ async function ptyMaybeResolveRound() {
 
   const myRow = rows.find(r => r.player_id === ptyRoom.myId);
   const myCorrect = !!myRow && myRow.score === 1;
-  ptyRenderReveal(q, myRow ? myRow.choice : null, myCorrect);
+  const iWasEliminated = newlyEliminated.includes(ptyRoom.myId);
+  const eliminatedOthers = newlyEliminated
+    .filter(id => id !== ptyRoom.myId)
+    .map(id => ptyRoom.players.get(id)?.name)
+    .filter(Boolean);
+  ptyRenderReveal(q, myRow ? myRow.choice : null, myCorrect, eliminatedOthers, iWasEliminated);
 
   setTimeout(ptyAdvanceRound, PTY_REVEAL_PAUSE_MS);
 }
 
-function ptyRenderReveal(q, myChoice, myCorrect) {
+// eliminatedOthers/iWasEliminated cover both Survival's per-round elimination
+// and the Score Attack sudden-death cut — same announcement either way, since
+// both funnel through the same `newlyEliminated` list in ptyMaybeResolveRound.
+function ptyRenderReveal(q, myChoice, myCorrect, eliminatedOthers, iWasEliminated) {
   const optionsEl = document.getElementById('ptyOptions');
   optionsEl.querySelectorAll('.option-btn').forEach(b => {
     b.disabled = true;
@@ -1076,12 +1201,19 @@ function ptyRenderReveal(q, myChoice, myCorrect) {
   if (!ptyRoom.eliminated && typeof SoundFX !== 'undefined') SoundFX.play(myCorrect ? 'correct' : 'wrong');
 
   const feedbackEl = document.getElementById('ptyFeedback');
-  if (ptyRoom.eliminated) {
-    feedbackEl.textContent = '';
+  const othersText = eliminatedOthers && eliminatedOthers.length ? `${eliminatedOthers.join(' & ')} eliminated!` : '';
+
+  if (ptyRoom.eliminated && !iWasEliminated) {
+    // Already out before this round started — no personal result to show,
+    // but still surface who else just went out.
+    feedbackEl.textContent = othersText;
     feedbackEl.className = 'vs-feedback-box';
-    feedbackEl.style.display = 'none';
+    feedbackEl.style.display = othersText ? '' : 'none';
   } else {
-    feedbackEl.textContent = `You: ${myChoice || '(no answer)'} ${myCorrect ? '✅' : '❌'}`;
+    let text = `You: ${myChoice || '(no answer)'} ${myCorrect ? '✅' : '❌'}`;
+    if (iWasEliminated) text += ` — you're out`;
+    if (othersText) text += ` · ${othersText}`;
+    feedbackEl.textContent = text;
     feedbackEl.className = 'vs-feedback-box ' + (myCorrect ? 'correct' : 'wrong');
     feedbackEl.style.display = '';
   }
@@ -1093,10 +1225,43 @@ function ptyRenderReveal(q, myChoice, myCorrect) {
 async function ptyAdvanceRound() {
   if (!ptyRoom || ptyRoom.matchEnded) return;
   const nextRound = ptyRoom.currentRound + 1;
-  const remainingActive = ptyActivePlayers().length;
-  const regulationDone = nextRound >= ptyRoom.bestOf;
-  const survivalDone = ptyRoom.subMode === 'survival' && remainingActive <= 1;
-  const finished = regulationDone || survivalDone;
+  let finished;
+  let cutIds = [];
+
+  if (ptyRoom.subMode === 'survival') {
+    const remainingActive = ptyActivePlayers().length;
+    finished = nextRound >= ptyRoom.bestOf || remainingActive <= 1;
+  } else if (nextRound < ptyRoom.bestOf) {
+    finished = false;
+  } else {
+    // Regulation (or a decider round) just ended — check whether the
+    // active players are still tied for the lead. If so and a sudden-death
+    // buffer question is left, keep going with just that tied group;
+    // everyone else who was still active but not tied for first spectates
+    // from here (reuses the same `eliminated`/spectate machinery as Survival).
+    const active = ptyActivePlayers();
+    const maxScore = active.length ? Math.max(...active.map(([id]) => ptyRoom.scores.get(id) || 0)) : 0;
+    const tiedIds = active.filter(([id]) => (ptyRoom.scores.get(id) || 0) === maxScore).map(([id]) => id);
+    const bufferAvailable = nextRound < ptyRoom.questionIds.length;
+    if (tiedIds.length > 1 && bufferAvailable) {
+      finished = false;
+      cutIds = active.map(([id]) => id).filter(id => !tiedIds.includes(id));
+    } else {
+      finished = true; // sole leader, or buffer exhausted with a tie still standing
+    }
+  }
+
+  if (cutIds.length) {
+    cutIds.forEach(id => {
+      const p = ptyRoom.players.get(id);
+      if (p) p.eliminated = true;
+      ptyRoom.eliminatedAtRound.set(id, ptyRoom.currentRound);
+    });
+    try {
+      await ptyPatch(`multiplayer_players?room_code=eq.${ptyRoom.code}&player_id=in.(${cutIds.join(',')})`, { eliminated: true });
+    } catch (e) {}
+  }
+
   const nextRoundStartedAt = new Date(Date.now() + 300).toISOString();
 
   try {
