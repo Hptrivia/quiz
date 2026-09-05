@@ -566,8 +566,7 @@ function mpRenderReveal(q, myChoice, iCorrect, oppChoice, oppCorrect) {
   const optionsEl = document.getElementById('vsMpOptions');
   optionsEl.querySelectorAll('.option-btn').forEach(b => {
     b.disabled = true;
-    if (b.textContent === q.answer) b.classList.add('correct-anim');
-    else if (b.textContent === myChoice) b.classList.add('wrong-anim');
+    if (b.textContent === myChoice) b.classList.add(iCorrect ? 'correct-anim' : 'wrong-anim');
   });
   if (typeof SoundFX !== 'undefined') SoundFX.play(iCorrect ? 'correct' : 'wrong');
 

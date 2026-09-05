@@ -33,6 +33,16 @@ let ptyAllThemes = [];
 let ptyRoom = null;
 let ptyPollTimer = null;
 
+// A backgrounded/locked phone stops polling, so its last_seen goes stale and
+// other players' clients stop waiting on it after PTY_DISCONNECT_MS — which
+// can let the round advance (or several rounds, if it's away long enough)
+// without this player ever seeing the question. Re-syncing the instant the
+// tab comes back to the foreground shrinks that window so brief backgrounding
+// (a lock screen, a quick app switch) doesn't tip over into a missed round.
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible' && ptyRoom && !ptyRoom.matchEnded) ptyPollActive();
+});
+
 function ptyPlayerId() {
   let id = localStorage.getItem('tg_player_id');
   if (!id) {
@@ -1061,20 +1071,20 @@ function ptyRenderReveal(q, myChoice, myCorrect) {
   const optionsEl = document.getElementById('ptyOptions');
   optionsEl.querySelectorAll('.option-btn').forEach(b => {
     b.disabled = true;
-    if (q && b.textContent === q.answer) b.classList.add('correct-anim');
-    else if (b.textContent === myChoice) b.classList.add('wrong-anim');
+    if (b.textContent === myChoice) b.classList.add(myCorrect ? 'correct-anim' : 'wrong-anim');
   });
   if (!ptyRoom.eliminated && typeof SoundFX !== 'undefined') SoundFX.play(myCorrect ? 'correct' : 'wrong');
 
   const feedbackEl = document.getElementById('ptyFeedback');
   if (ptyRoom.eliminated) {
-    feedbackEl.textContent = q ? `Correct answer: ${q.answer}` : '';
+    feedbackEl.textContent = '';
     feedbackEl.className = 'vs-feedback-box';
+    feedbackEl.style.display = 'none';
   } else {
     feedbackEl.textContent = `You: ${myChoice || '(no answer)'} ${myCorrect ? '✅' : '❌'}`;
     feedbackEl.className = 'vs-feedback-box ' + (myCorrect ? 'correct' : 'wrong');
+    feedbackEl.style.display = '';
   }
-  feedbackEl.style.display = '';
 
   document.getElementById('ptyTimer').textContent = '';
   ptyRenderLiveStatus();
@@ -1139,6 +1149,9 @@ async function ptyPollActive() {
   // Versus's full catch-up-with-reveal, since Party can have many players
   // and a missed reveal here is much lower-stakes than in a 1v1 match).
   if (!ptyRoom.roundResolved && room.current_round > ptyRoom.currentRound) {
+    if (room.current_round - ptyRoom.currentRound > 1) {
+      console.warn(`[party] round jumped ${ptyRoom.currentRound} -> ${room.current_round} on this client without resolving locally`, { code: ptyRoom.code, myId: ptyRoom.myId });
+    }
     if (ptyRoom.tickTimer) clearInterval(ptyRoom.tickTimer);
     ptyRoom.currentRound = room.current_round;
     ptyRoom.roundStartedAt = room.round_started_at;
