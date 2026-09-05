@@ -45,6 +45,12 @@ const APP_ANNOUNCEMENTS = [
     text: "No picking required — jump straight into a quiz mixing all our general-knowledge topics.",
     cta: { label: "Play Now", href: "random-trivia.html" },
   },
+  {
+    icon: "🆕",
+    title: "15 new themes added!",
+    text: "Mission: Impossible, Saw, Peacemaker, Young Sheldon, How to Train Your Dragon, and more.",
+    cta: { label: "See What's New", href: "recent.html" },
+  },
 ];
 
 function _cbAnnouncementHash(str) {

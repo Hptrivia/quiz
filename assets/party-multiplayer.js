@@ -528,15 +528,25 @@ function ptyRenderLobby() {
   const countEl = document.getElementById('ptyPlayerCount');
   const startBtn = document.getElementById('ptyStartBtn');
   const entries = [...ptyRoom.players.entries()];
-  countEl.textContent = `${entries.length} joined`;
+  // Someone who wandered off (no beforeunload signal on a plain navigation)
+  // otherwise just sits in the roster forever looking present — reuse the
+  // same lastSeen/PTY_DISCONNECT_MS staleness check the mid-match banner
+  // already relies on, so the host sees who's actually here before hitting
+  // Start instead of finding out mid-game.
+  const isStale = ([id, p]) => id !== ptyRoom.myId && (Date.now() - p.lastSeen > PTY_DISCONNECT_MS);
+  const activeEntries = entries.filter(e => !isStale(e));
+  countEl.textContent = activeEntries.length === entries.length
+    ? `${entries.length} joined`
+    : `${activeEntries.length} joined (${entries.length - activeEntries.length} away)`;
   listEl.innerHTML = '';
   entries.forEach(([id, p], i) => {
+    const away = isStale([id, p]);
     const row = document.createElement('div');
-    row.className = 'pty-lobby-row' + (p._justJoined ? ' pty-just-joined' : '');
+    row.className = 'pty-lobby-row' + (p._justJoined ? ' pty-just-joined' : '') + (away ? ' pty-away' : '');
     row.style.borderColor = PTY_COLORS[i % PTY_COLORS.length];
     const kickBtn = (ptyRoom.isHost && id !== ptyRoom.myId)
       ? `<button type="button" class="pty-kick-btn" data-id="${id}" title="Remove ${p.name}">✕</button>` : '';
-    row.innerHTML = `<span style="color:${PTY_COLORS[i % PTY_COLORS.length]}">${p.name}</span><span style="display:flex;align-items:center;gap:8px;">${p.isHost ? '<span class="pty-host-tag">Host</span>' : ''}${kickBtn}</span>`;
+    row.innerHTML = `<span style="color:${PTY_COLORS[i % PTY_COLORS.length]}">${p.name}</span><span style="display:flex;align-items:center;gap:8px;">${away ? '<span class="pty-away-tag">Away</span>' : ''}${p.isHost ? '<span class="pty-host-tag">Host</span>' : ''}${kickBtn}</span>`;
     listEl.appendChild(row);
   });
   listEl.querySelectorAll('.pty-kick-btn').forEach(btn => {
@@ -547,8 +557,8 @@ function ptyRenderLobby() {
 
   if (ptyRoom.isHost) {
     startBtn.style.display = '';
-    startBtn.disabled = entries.length < 2;
-    startBtn.textContent = entries.length < 2 ? 'Waiting for players…' : `Start (${entries.length} players)`;
+    startBtn.disabled = activeEntries.length < 2;
+    startBtn.textContent = activeEntries.length < 2 ? 'Waiting for players…' : `Start (${activeEntries.length} players)`;
   } else {
     startBtn.style.display = 'none';
   }
