@@ -329,8 +329,12 @@
       <div id="vsMpWaiting" class="vs-screen">
         <div class="vs-between-box">
           <p style="color:var(--muted-text);margin-bottom:6px;">Share this code with your friend</p>
-          <h2 id="vsMpRoomCode" style="font-size:40px;letter-spacing:0.08em;margin-bottom:14px;"></h2>
-          <button id="vsMpCopyLinkBtn" class="secondary-btn" style="min-width:200px;">Copy Invite Link</button>
+          <h2 id="vsMpRoomCode" style="font-size:40px;letter-spacing:0.08em;margin-bottom:6px;"></h2>
+          <p style="color:var(--muted-text);font-size:12px;margin-bottom:14px;">On the app? Copy the code. On the web? Send the link.</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;">
+            <button id="vsMpCopyCodeBtn" class="secondary-btn" style="flex:1;min-width:150px;">📋 Copy Code (App)</button>
+            <button id="vsMpCopyLinkBtn" class="secondary-btn" style="flex:1;min-width:150px;">🔗 Copy Invite Link (Web)</button>
+          </div>
           <p id="vsMpWaitingStatus" style="color:var(--muted-text);margin-top:14px;">Waiting for them to join…</p>
           <button id="vsMpCancelBtn" class="secondary-btn" style="min-width:160px;margin-top:16px;">Cancel</button>
           <div style="margin-top:14px;">

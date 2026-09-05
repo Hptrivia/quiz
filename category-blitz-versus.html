@@ -170,9 +170,13 @@
       <div id="cbMpWaiting" style="display:none">
         <div class="daily-header" style="text-align:center;">
           <p class="daily-date">Share this code with your friend</p>
-          <h2 id="cbMpRoomCode" style="font-size:40px;letter-spacing:0.08em;margin-bottom:10px;"></h2>
+          <h2 id="cbMpRoomCode" style="font-size:40px;letter-spacing:0.08em;margin-bottom:4px;"></h2>
+          <p style="color:var(--muted-text);font-size:12px;margin-bottom:10px;">On the app? Copy the code. On the web? Send the link.</p>
         </div>
-        <button type="button" class="secondary-btn" id="cbMpCopyLinkBtn" style="width:100%;">Copy Invite Link</button>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <button type="button" class="secondary-btn" id="cbMpCopyCodeBtn" style="flex:1;min-width:150px;">📋 Copy Code (App)</button>
+          <button type="button" class="secondary-btn" id="cbMpCopyLinkBtn" style="flex:1;min-width:150px;">🔗 Copy Invite Link (Web)</button>
+        </div>
         <p id="cbMpWaitingStatus" class="daily-date" style="text-align:center;margin-top:14px;">Waiting for them to join…</p>
         <button type="button" class="secondary-btn" id="cbMpCancelBtn" style="width:100%;margin-top:10px;">Cancel</button>
         <a href="contact.html" class="secondary-btn" style="display:block;margin-top:14px;text-align:center;text-decoration:none;font-size:0.85rem;padding:8px 18px;">Leave Feedback</a>

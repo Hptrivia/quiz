@@ -268,8 +268,12 @@
       <div id="ptyLobby" class="vs-screen">
         <div class="vs-between-box">
           <p style="color:var(--muted-text);margin-bottom:6px;">Share this code with your group</p>
-          <h2 id="ptyRoomCode" style="font-size:40px;letter-spacing:0.08em;margin-bottom:14px;"></h2>
-          <button id="ptyCopyLinkBtn" class="secondary-btn" style="min-width:200px;">Copy Invite Link</button>
+          <h2 id="ptyRoomCode" style="font-size:40px;letter-spacing:0.08em;margin-bottom:6px;"></h2>
+          <p style="color:var(--muted-text);font-size:12px;margin-bottom:14px;">On the app? Copy the code. On the web? Send the link.</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;">
+            <button id="ptyCopyCodeBtn" class="secondary-btn" style="flex:1;min-width:150px;">📋 Copy Code (App)</button>
+            <button id="ptyCopyLinkBtn" class="secondary-btn" style="flex:1;min-width:150px;">🔗 Copy Invite Link (Web)</button>
+          </div>
           <p class="pty-submode-note" id="ptySubModeNote" style="margin-top:14px;"></p>
 
           <div class="pty-count" id="ptyPlayerCount"></div>

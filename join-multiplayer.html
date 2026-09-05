@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if(/TriviaGauntletPremium/.test(navigator.userAgent||''))document.documentElement.classList.add('premium-app');</script>
+  <meta charset="UTF-8" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Join Multiplayer | Trivia Gauntlet</title>
+  <meta name="description" content="Enter a room code to jump straight into a Versus, Category Blitz, or Party game." />
+  <link rel="icon" href="/favicon.ico.png" sizes="any">
+
+  <link rel="apple-touch-icon" href="/assets/icon-192.png" />
+  <meta name="theme-color" content="#0f172a" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    if(!/TriviaGauntletPremium/.test(navigator.userAgent||''))gtag('config', 'G-E6BY9F2ZDT');
+  </script>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <main class="container narrow">
+    <div class="theme-top-links">
+      <a href="index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+      <span id="navAvatarSlot"></span>
+    </div>
+
+    <section class="panel">
+      <h1>Join Multiplayer</h1>
+      <p style="color:var(--muted-text);margin-bottom:18px;">Enter the room code your friend shared with you. We'll figure out whether it's a Versus, Category Blitz, or Party game and take you straight there.</p>
+
+      <input
+        id="jmpCodeInput"
+        class="theme-search-input"
+        type="text"
+        inputmode="text"
+        placeholder="e.g. 7F3KQP"
+        maxlength="6"
+        autocomplete="off"
+        autocapitalize="characters"
+        style="text-align:center;font-size:28px;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:14px;"
+      />
+
+      <p id="jmpError" style="color:var(--feedback-wrong);font-size:14px;display:none;margin-bottom:14px;"></p>
+
+      <button id="jmpJoinBtn" class="primary-btn" style="width:100%;">Join Game</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a class="footer-highlight" href="how-it-works.html">How It Works</a>
+        <a class="footer-highlight" href="contact.html">Contact</a>
+        <a class="footer-highlight" href="blog.html">Blog</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const JMP_URL = "https://avasbapxzgmpcosixgio.supabase.co";
+    const JMP_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF2YXNiYXB4emdtcGNvc2l4Z2lvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk2NjM4MzUsImV4cCI6MjA5NTIzOTgzNX0.DLNnasmaQ1hdKXb2xqXrTBnBjISo0RxOiwy7TrlN9bg";
+
+    const codeInput = document.getElementById('jmpCodeInput');
+    const joinBtn = document.getElementById('jmpJoinBtn');
+    const errorEl = document.getElementById('jmpError');
+    const showError = (msg) => { errorEl.textContent = msg; errorEl.style.display = ''; };
+    const clearError = () => { errorEl.style.display = 'none'; };
+
+    if (typeof gtag === "function") {
+      gtag("event", "page_view", { page_title: "Join Multiplayer", page_location: window.location.href });
+    }
+
+    // Every mode (Versus, Category Blitz Versus, Party) writes its rooms to
+    // the same multiplayer_rooms table, tagged by game_mode ('category-blitz'
+    // / 'party' / untagged for plain Versus) — see versus-multiplayer.js,
+    // catblitz-versus-multiplayer.js, party-multiplayer.js. Looking that up
+    // here means a player only ever needs one code field, not three.
+    async function jmpRouteForCode(code) {
+      const res = await fetch(`${JMP_URL}/rest/v1/multiplayer_rooms?code=eq.${code}&select=game_mode,status`, {
+        headers: { apikey: JMP_KEY, Authorization: `Bearer ${JMP_KEY}` }
+      });
+      if (!res.ok) throw new Error('Something went wrong looking up that code. Please try again.');
+      const rows = await res.json();
+      const room = rows[0];
+      if (!room) throw new Error('No game found with that code. Double-check it and try again.');
+      if (room.status !== 'waiting') throw new Error('That game has already started or ended.');
+      if (room.game_mode === 'party') return `party.html?ptyJoin=${code}`;
+      if (room.game_mode === 'category-blitz') return `category-blitz-versus.html?mpJoin=${code}`;
+      return `versus.html?mpJoin=${code}`;
+    }
+
+    async function jmpSubmit() {
+      clearError();
+      const code = codeInput.value.trim().toUpperCase();
+      if (code.length !== 6) { showError('Enter the 6-character room code.'); return; }
+      joinBtn.disabled = true;
+      joinBtn.textContent = 'Looking up game…';
+      try {
+        location.href = await jmpRouteForCode(code);
+      } catch (e) {
+        showError(e.message || 'Could not join that game.');
+        joinBtn.disabled = false;
+        joinBtn.textContent = 'Join Game';
+      }
+    }
+
+    codeInput.addEventListener('input', () => { codeInput.value = codeInput.value.toUpperCase(); });
+    codeInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') jmpSubmit(); });
+    joinBtn.addEventListener('click', jmpSubmit);
+
+    const prefill = new URLSearchParams(location.search).get('code');
+    if (prefill) { codeInput.value = prefill.toUpperCase(); }
+    codeInput.focus();
+  </script>
+  <script src="assets/profile.js"></script>
+  <script src="assets/admob.js"></script>
+</body>
+</html>

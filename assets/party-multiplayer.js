@@ -264,6 +264,7 @@ function ptyInit(allThemes, resolvedThemes) {
   });
 
   document.getElementById('ptyCopyLinkBtn').addEventListener('click', ptyCopyInviteLink);
+  document.getElementById('ptyCopyCodeBtn').addEventListener('click', ptyCopyCode);
   document.getElementById('ptyCancelBtn').addEventListener('click', ptyCancelWaiting);
   document.getElementById('ptyStartBtn').addEventListener('click', ptyStartMatch);
   document.getElementById('ptyLeaveBtn').addEventListener('click', ptyLeaveMatch);
@@ -498,20 +499,27 @@ function ptyInviteLink(code) {
   return `${location.origin}${location.pathname}?ptyJoin=${code}`;
 }
 
-async function ptyCopyInviteLink() {
-  if (!ptyRoom) return;
-  const link = ptyInviteLink(ptyRoom.code);
-  const btn = document.getElementById('ptyCopyLinkBtn');
+function ptyCopyText(text, btn) {
   const original = btn.textContent;
   const done = () => { btn.textContent = 'Copied!'; setTimeout(() => { btn.textContent = original; }, 1800); };
   if (navigator.clipboard) {
-    navigator.clipboard.writeText(link).then(done).catch(() => {
+    navigator.clipboard.writeText(text).then(done).catch(() => {
       const ta = document.createElement('textarea');
-      ta.value = link; ta.style.cssText = 'position:fixed;opacity:0;';
+      ta.value = text; ta.style.cssText = 'position:fixed;opacity:0;';
       document.body.appendChild(ta); ta.select();
       document.execCommand('copy'); ta.remove(); done();
     });
   }
+}
+
+async function ptyCopyInviteLink() {
+  if (!ptyRoom) return;
+  ptyCopyText(ptyInviteLink(ptyRoom.code), document.getElementById('ptyCopyLinkBtn'));
+}
+
+async function ptyCopyCode() {
+  if (!ptyRoom) return;
+  ptyCopyText(ptyRoom.code, document.getElementById('ptyCopyCodeBtn'));
 }
 
 function ptyRenderLobby() {

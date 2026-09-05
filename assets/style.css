@@ -329,6 +329,22 @@ a {
   color: rgba(110, 231, 183, 0.75);
 }
 
+/* "Join Multiplayer" — rose, homepage-only shortcut for app users (see
+   .join-mp-entry gating below), so it reads apart from every other card. */
+.join-mp-card {
+  background: rgba(236, 72, 153, 0.1);
+  border: 1px solid #ec4899;
+  margin-bottom: 20px;
+}
+
+.join-mp-card h3 {
+  color: #f9a8d4;
+}
+
+.join-mp-card p {
+  color: rgba(249, 168, 212, 0.75);
+}
+
 /* Recently Added page */
 .recent-list {
   margin-top: 14px;
@@ -2609,6 +2625,12 @@ body.in-app .theme-sample-questions,
 body.in-app .theme-sample-questions ~ p,
 body.in-app .wordle-theme-intro,
 :root.premium-app .wordle-theme-intro { display: none; }
+
+/* "Join Multiplayer" homepage shortcut is app-only — it fills the same slot
+   .homepage-intro vacates in-app above, so it adds no extra height for
+   anyone: web visitors never see it, app visitors never see the intro. */
+.join-mp-entry { display: none; }
+body.in-app .join-mp-entry { display: block; }
 
 /* Rotating "more themes in the app" house-ad under the score (limited web only,
    injected by assets/promo-banner.js). Styled to read as part of the quiz UI, not
