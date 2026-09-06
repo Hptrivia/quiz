@@ -948,15 +948,26 @@ function ptyRenderLiveStatus() {
   const me = rows.find(r => r.id === ptyRoom.myId);
   if (ptyRoom.subMode === 'survival') {
     const aliveCount = rows.filter(r => !r.eliminated).length;
-    el.textContent = ptyRoom.eliminated
+    const mainLine = ptyRoom.eliminated
       ? `You're out — ${aliveCount} player${aliveCount !== 1 ? 's' : ''} still in`
       : `${aliveCount} player${aliveCount !== 1 ? 's' : ''} still in`;
+    el.innerHTML = `<span class="pty-live-status-main">${mainLine}</span>`;
   } else {
     const leader = rows[0];
     const myScore = me ? me.score : 0;
-    el.textContent = (me && leader && me.id === leader.id)
+    const mainLine = (me && leader && me.id === leader.id)
       ? `You're in the lead — ${myScore} pt${myScore !== 1 ? 's' : ''}`
       : `You: ${myScore} pt${myScore !== 1 ? 's' : ''} · ${leader.name} leads with ${leader.score}`;
+    // Top-of-screen scoreboard is intentionally one line (see note above on
+    // ptyRenderScoreboardInto) but a bare leader/you comparison buries how
+    // tight the race actually is in a bigger room — so show the top 3 (or
+    // top 2 if the room's that small) right under it.
+    const topN = rows.slice(0, rows.length > 3 ? 3 : 2);
+    const topLine = topN.length > 1
+      ? topN.map((r, i) => `${i + 1}. ${r.isMe ? 'You' : r.name} ${r.score}`).join('  ')
+      : '';
+    el.innerHTML = `<span class="pty-live-status-main">${mainLine}</span>` +
+      (topLine ? `<span class="pty-live-status-top">${topLine}</span>` : '');
   }
   // Keep the panel current if the player left it open across a round.
   const panel = document.getElementById('ptyLiveScorePanel');

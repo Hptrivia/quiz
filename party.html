@@ -190,8 +190,23 @@
       padding: 4px 0;
       cursor: pointer;
     }
-    .pty-live-status::after { content: ' \25BE'; font-size: 10px; }
-    .pty-live-status[aria-expanded="true"]::after { content: ' \25B4'; }
+    .pty-live-status-main {
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .pty-live-status-main::after { content: ' \25BE'; font-size: 10px; }
+    .pty-live-status[aria-expanded="true"] .pty-live-status-main::after { content: ' \25B4'; }
+    .pty-live-status-top {
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 2px;
+    }
     .pty-live-score-panel {
       position: absolute;
       top: 100%;
@@ -324,6 +339,7 @@
           <button id="ptyCancelBtn" class="secondary-btn" style="min-width:160px;margin-top:10px;">Cancel</button>
 
           <div class="tg-chat" style="text-align:left;margin-top:20px;">
+            <p class="tg-chat-rules">Keep it friendly — insults or bad language can get you kicked from the room.</p>
             <div class="tg-chat-log" id="ptyLobbyChatLog"></div>
             <form class="tg-chat-form" id="ptyLobbyChatForm">
               <input type="text" class="tg-chat-input" id="ptyLobbyChatInput" placeholder="Say hi to the group…" maxlength="140" autocomplete="off">
@@ -366,6 +382,7 @@
         <div class="pty-list-wrap" id="ptyResultsScoreboard"></div>
 
         <div class="tg-chat" style="margin-top:12px;">
+          <p class="tg-chat-rules">Keep it friendly — insults or bad language can get you kicked from the room.</p>
           <div class="tg-chat-log" id="ptyResultsChatLog"></div>
           <form class="tg-chat-form" id="ptyResultsChatForm">
             <input type="text" class="tg-chat-input" id="ptyResultsChatInput" placeholder="Say something…" maxlength="140" autocomplete="off">
