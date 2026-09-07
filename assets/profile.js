@@ -325,6 +325,55 @@ document.addEventListener("DOMContentLoaded", injectAvatarNav);
 
 const _PLAY_STORE = 'https://play.google.com/store/apps/details?id=com.trivia.trivia_gauntlet';
 const _APP_STORE  = 'https://apps.apple.com/app/trivia-gauntlet/id6749189557';
+const _APPLE_PROVIDER_TOKEN = '128013415'; // must match app.html if this ever rotates
+
+// ── Store-link attribution ───────────────────────────────────────────────────
+// A ?utm_source= tag on the landing URL is only readable via location.search on
+// that first page — the moment a visitor clicks into a quiz it's gone from the
+// URL. sessionStorage carries it forward so it's still there when they hit a
+// paywall several pages later. Falls back to a fixed "web_limit" tag (not
+// "direct") so paywall conversions with no external campaign are still
+// distinguishable in GA4/Play Console/App Analytics from a real direct visit.
+(function persistUtm() {
+  try {
+    const p = new URLSearchParams(location.search);
+    const source = p.get('utm_source');
+    if (source) {
+      sessionStorage.setItem('tg_utm', JSON.stringify({
+        source,
+        medium: p.get('utm_medium') || 'social',
+        campaign: p.get('utm_campaign') || source
+      }));
+    }
+  } catch (e) {}
+})();
+function _utmTag() {
+  try {
+    const p = new URLSearchParams(location.search);
+    const source = p.get('utm_source');
+    if (source) return { source, medium: p.get('utm_medium') || 'social', campaign: p.get('utm_campaign') || source };
+    const saved = sessionStorage.getItem('tg_utm');
+    if (saved) return JSON.parse(saved);
+  } catch (e) {}
+  return { source: 'web_limit', medium: 'web', campaign: 'paywall' };
+}
+// Store URLs, tagged with whatever campaign brought this visitor in (or the
+// web_limit fallback above). Use these everywhere instead of the bare
+// _APP_STORE / _PLAY_STORE constants so every tap is attributable.
+function _taggedAppStoreUrl() {
+  const t = _utmTag();
+  const u = new URL(_APP_STORE);
+  u.searchParams.set('pt', _APPLE_PROVIDER_TOKEN);
+  u.searchParams.set('ct', t.campaign);
+  u.searchParams.set('mt', '8');
+  return u.toString();
+}
+function _taggedPlayStoreUrl() {
+  const t = _utmTag();
+  const u = new URL(_PLAY_STORE);
+  u.searchParams.set('referrer', 'utm_source=' + t.source + '&utm_medium=' + t.medium + '&utm_campaign=' + t.campaign);
+  return u.toString();
+}
 // Ep and VsOnline are separate from Q (Marathon/Challenge/Survival/Trivia
 // Rush/hot-seat Versus) — Episode Mode is distinct show-specific content, and
 // Online Versus is gated additionally by its own match-length rule (see
@@ -445,7 +494,17 @@ function webVsOnlineRemaining() { return Math.max(0, _WEB_LIMITS.VsOnline - _web
 // they scan it with their phone and land on the right store. The QR points at
 // /app.html, which redirects iPhones → App Store and Android → Play Store.
 const _APP_REDIRECT = '/app.html';
-function _appUrl() { return location.origin + _APP_REDIRECT; }
+// The QR is scanned by a DIFFERENT device (phone) than the one showing it
+// (desktop) — sessionStorage can't cross that gap, so the tag has to be baked
+// into the URL itself for app.html to pick up on the phone.
+function _appUrl() {
+  const t = _utmTag();
+  const u = new URL(location.origin + _APP_REDIRECT);
+  u.searchParams.set('utm_source', t.source);
+  u.searchParams.set('utm_medium', t.medium);
+  u.searchParams.set('utm_campaign', t.campaign);
+  return u.toString();
+}
 
 // The visitor's store URL on mobile web (empty elsewhere — desktop can't install
 // a phone app, so it never auto-redirects).
@@ -573,8 +632,8 @@ function _webStoreLinksHTML() {
   // webviews — silently swallows _blank store links as blocked pop-ups, so the
   // wall button "does nothing" on tap. Same-tab navigation to the store works
   // reliably (matches the lobby/result banners), so we use it here too.
-  if (isAndroidWeb()) return `<a href="${_PLAY_STORE}" class="primary-btn" data-promo="wall_store_btn" target="_blank">Get the free app</a>${webUnlock}`;
-  if (isIosWeb())     return `<a href="${_APP_STORE}"  class="primary-btn" data-promo="wall_store_btn">Get the free app</a>${webUnlock}`;
+  if (isAndroidWeb()) return `<a href="${_taggedPlayStoreUrl()}" class="primary-btn" data-promo="wall_store_btn" target="_blank">Get the free app</a>${webUnlock}`;
+  if (isIosWeb())     return `<a href="${_taggedAppStoreUrl()}"  class="primary-btn" data-promo="wall_store_btn">Get the free app</a>${webUnlock}`;
   // Desktop / unknown: a compact button opens the QR in an overlay (keeps the
   // inline wall small), OR pay to unlock all questions right here on desktop.
   return `<button type="button" class="primary-btn web-qr-trigger" data-promo="wall_store_btn" data-qr="${_appUrl()}">📱 Get the free app</button>
@@ -603,7 +662,7 @@ function _renderQr(box) {
   box._qrDone = true;
   const url = box.dataset.qr;
   const fallback = () => {
-    box.innerHTML = `<a href="${_APP_STORE}" target="_blank">App Store</a> · <a href="${_PLAY_STORE}" target="_blank">Google Play</a>`;
+    box.innerHTML = `<a href="${_taggedAppStoreUrl()}" target="_blank">App Store</a> · <a href="${_taggedPlayStoreUrl()}" target="_blank">Google Play</a>`;
   };
   _loadQrLib().then(() => {
     try {
@@ -841,9 +900,9 @@ function _injectWebBanner() {
   // Navigate in the SAME tab (no target=_blank): more reliable than a new tab,
   // which strict private/incognito modes and in-app webviews often block.
   if (isIosWeb()) {
-    banner.href = _APP_STORE;
+    banner.href = _taggedAppStoreUrl();
   } else if (isAndroidWeb()) {
-    banner.href = _PLAY_STORE;
+    banner.href = _taggedPlayStoreUrl();
   } else {
     banner.href = '#';
     banner.classList.add('web-wall-trigger');
@@ -915,7 +974,7 @@ function _injectProfileAppBanner() {
   banner.className = 'android-cta-banner';
   banner.dataset.promo = 'profile_app_banner'; // so its taps are attributed, not invisible
   banner.textContent = "📱 Don't lose your streak — save your stats & scores in the free app →";
-  banner.href = isIosWeb() ? _APP_STORE : _PLAY_STORE;
+  banner.href = isIosWeb() ? _taggedAppStoreUrl() : _taggedPlayStoreUrl();
   slot.appendChild(banner);
 }
 
@@ -928,8 +987,8 @@ function _injectProfileAppBanner() {
 function resultAppBannerHTML() {
   if (!isLimitedWeb()) return ''; // non-native, non-premium (covers mobile + desktop web)
   const label = '📱 Download the free app to save your progress &amp; play more questions and topics &rarr;';
-  if (isIosWeb())     return `<a class="android-cta-banner result-app-banner" data-promo="result_app_banner" href="${_APP_STORE}">${label}</a>`;
-  if (isAndroidWeb()) return `<a class="android-cta-banner result-app-banner" data-promo="result_app_banner" href="${_PLAY_STORE}">${label}</a>`;
+  if (isIosWeb())     return `<a class="android-cta-banner result-app-banner" data-promo="result_app_banner" href="${_taggedAppStoreUrl()}">${label}</a>`;
+  if (isAndroidWeb()) return `<a class="android-cta-banner result-app-banner" data-promo="result_app_banner" href="${_taggedPlayStoreUrl()}">${label}</a>`;
   // Desktop can't install a phone app from a browser, so the click opens the QR /
   // app-promo wall (same as the homepage banner) via the delegated .web-wall-trigger listener.
   return `<a class="android-cta-banner result-app-banner web-wall-trigger" data-promo="result_app_banner" href="#">${label}</a>`;
@@ -942,8 +1001,8 @@ function resultAppBannerHTML() {
 function lobbyAppBannerHTML() {
   if (!isLimitedWeb()) return '';
   const label = '📱 Get 100+ questions for all themes — Click to download the free app &rarr;';
-  if (isIosWeb())     return `<a class="android-cta-banner" data-promo="lobby_banner" href="${_APP_STORE}">${label}</a>`;
-  if (isAndroidWeb()) return `<a class="android-cta-banner" data-promo="lobby_banner" href="${_PLAY_STORE}">${label}</a>`;
+  if (isIosWeb())     return `<a class="android-cta-banner" data-promo="lobby_banner" href="${_taggedAppStoreUrl()}">${label}</a>`;
+  if (isAndroidWeb()) return `<a class="android-cta-banner" data-promo="lobby_banner" href="${_taggedPlayStoreUrl()}">${label}</a>`;
   return `<a class="android-cta-banner web-wall-trigger" data-promo="lobby_banner" href="#">${label}</a>`;
 }
 

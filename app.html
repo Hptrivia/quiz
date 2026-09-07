@@ -36,16 +36,19 @@
   </div>
   <script>
     (function () {
-      var APPLE_PROVIDER_TOKEN = 'YOUR_PT_TOKEN'; // same value used on the bio-link page
-      var source = new URLSearchParams(location.search).get('utm_source') || 'direct';
+      var APPLE_PROVIDER_TOKEN = '128013415';
+      var qp = new URLSearchParams(location.search);
+      var source   = qp.get('utm_source')   || 'direct';
+      var medium   = qp.get('utm_medium')   || 'none';
+      var campaign = qp.get('utm_campaign') || source;
 
       var iosUrl = new URL('https://apps.apple.com/app/trivia-gauntlet/id6749189557');
       iosUrl.searchParams.set('pt', APPLE_PROVIDER_TOKEN);
-      iosUrl.searchParams.set('ct', source);
+      iosUrl.searchParams.set('ct', campaign);
       iosUrl.searchParams.set('mt', '8');
 
       var androidUrl = new URL('https://play.google.com/store/apps/details?id=com.trivia.trivia_gauntlet');
-      androidUrl.searchParams.set('referrer', 'utm_source=' + source + '&utm_medium=social&utm_campaign=' + source);
+      androidUrl.searchParams.set('referrer', 'utm_source=' + source + '&utm_medium=' + medium + '&utm_campaign=' + campaign);
 
       document.getElementById('ios').href = iosUrl.toString();
       document.getElementById('android').href = androidUrl.toString();
@@ -56,7 +59,7 @@
       var target = isIos ? iosUrl.toString() : isAndroid ? androidUrl.toString() : null;
 
       if (target) {
-        gtag('event', 'store_redirect', { store_platform: isIos ? 'ios' : 'android', utm_source: source });
+        gtag('event', 'store_redirect', { store_platform: isIos ? 'ios' : 'android', utm_source: source, utm_medium: medium, utm_campaign: campaign });
         // Small delay so the GA4 beacon has time to send before we navigate away.
         setTimeout(function () { window.location.replace(target); }, 400);
       } else {
