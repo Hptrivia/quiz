@@ -46,7 +46,20 @@ Deno.serve(async (req) => {
     });
   }
 
+  let platform = "unknown";
+  let isPremium = false;
+  try {
+    const body = await req.json();
+    if (typeof body.platform === "string") platform = body.platform.slice(0, 20);
+    isPremium = body.app === "premium";
+  } catch { /* ignore malformed body, still count it */ }
+
+  // Keyed by IP *and* which app pinged, so a free-app ping and a premium-app
+  // ping from the same WiFi/IP (e.g. someone opens the free app, then installs
+  // the premium one minutes later) don't share a bucket and wrongly swallow a
+  // real premium install.
   const ip = req.headers.get("x-forwarded-for")?.split(",")[0].trim() || "unknown";
+  const rateLimitKey = `${ip}:${isPremium ? "premium" : "free"}`;
   try {
     const rl = await fetch(`${supaUrl}/rest/v1/rpc/check_install_rate_limit`, {
       method: "POST",
@@ -55,7 +68,7 @@ Deno.serve(async (req) => {
         apikey: serviceKey,
         Authorization: `Bearer ${serviceKey}`,
       },
-      body: JSON.stringify({ p_ip: ip, p_window_seconds: RATE_LIMIT_WINDOW_SECONDS }),
+      body: JSON.stringify({ p_ip: rateLimitKey, p_window_seconds: RATE_LIMIT_WINDOW_SECONDS }),
     });
     if (rl.ok && (await rl.json()) !== true) {
       return new Response(JSON.stringify({ ok: true, sent: false, rateLimited: true }), {
@@ -65,14 +78,6 @@ Deno.serve(async (req) => {
   } catch (_e) {
     // Rate-limit check itself failing shouldn't block a real install — fail open.
   }
-
-  let platform = "unknown";
-  let isPremium = false;
-  try {
-    const body = await req.json();
-    if (typeof body.platform === "string") platform = body.platform.slice(0, 20);
-    isPremium = body.app === "premium";
-  } catch { /* ignore malformed body, still count it */ }
 
   async function sendTelegram(text: string) {
     const tg = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
