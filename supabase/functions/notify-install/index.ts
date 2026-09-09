@@ -11,10 +11,17 @@
 // TELEGRAM_CHAT_ID) so they never appear in the public repo or client code.
 // SUPABASE_URL + SUPABASE_SERVICE_ROLE_KEY are auto-injected into Edge Functions.
 //
-// One-time DB setup: run install-counter.sql (free app, batched) and
-// premium-install-counter.sql (premium apps, unbatched) in the Supabase SQL editor.
+// The endpoint URL + anon key are visible to anyone who views the site's public
+// JS (assets/admob.js), so this also rate-limits: at most one accepted ping per
+// source IP per RATE_LIMIT_WINDOW_SECONDS, so a curl loop can't spam fake
+// installs into the counters or Telegram (see install-rate-limit.sql).
+//
+// One-time DB setup: run install-counter.sql (free app, batched),
+// premium-install-counter.sql (premium apps, unbatched), and
+// install-rate-limit.sql (abuse guard) in the Supabase SQL editor.
 
 const BATCH_SIZE = 10; // notify once per this many installs
+const RATE_LIMIT_WINDOW_SECONDS = 120; // one accepted ping per IP per this many seconds
 
 const CORS = {
   "Access-Control-Allow-Origin": "*",
@@ -37,6 +44,26 @@ Deno.serve(async (req) => {
       status: 500,
       headers: { ...CORS, "Content-Type": "application/json" },
     });
+  }
+
+  const ip = req.headers.get("x-forwarded-for")?.split(",")[0].trim() || "unknown";
+  try {
+    const rl = await fetch(`${supaUrl}/rest/v1/rpc/check_install_rate_limit`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        apikey: serviceKey,
+        Authorization: `Bearer ${serviceKey}`,
+      },
+      body: JSON.stringify({ p_ip: ip, p_window_seconds: RATE_LIMIT_WINDOW_SECONDS }),
+    });
+    if (rl.ok && (await rl.json()) !== true) {
+      return new Response(JSON.stringify({ ok: true, sent: false, rateLimited: true }), {
+        headers: { ...CORS, "Content-Type": "application/json" },
+      });
+    }
+  } catch (_e) {
+    // Rate-limit check itself failing shouldn't block a real install — fail open.
   }
 
   let platform = "unknown";
