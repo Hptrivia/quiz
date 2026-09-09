@@ -452,7 +452,7 @@ async function cbGradeRound({ letter, categories, answers, elapsedMs, mode } = {
 // a confirmed:true candidate when a row is upgraded to correct. Returns
 // { getScore, getContested } so the caller can read the live, post-toggle
 // score when ready to lock it in.
-function cbRenderResult(container, gradeResult, { extra, categories, contestable, letter, mode } = {}) {
+function cbRenderResult(container, gradeResult, { extra, categories, contestable, letter, mode, onChange } = {}) {
   const cats = categories || [];
   const contested = {};
 
@@ -502,6 +502,7 @@ function cbRenderResult(container, gradeResult, { extra, categories, contestable
             cbLogCandidate(cid, letter, entry.answer.toLowerCase(), mode, true);
           }
           render();
+          if (typeof onChange === "function") onChange(computeScore(), { ...contested });
         });
       });
     }

@@ -105,6 +105,34 @@ function cbSaveDailyResult(letter, gradeResult) {
   return result;
 }
 
+// Called when a player uses the "Mark as Correct/Incorrect" toggle on
+// today's result — flips the affected category's status (against the
+// original, untouched grade) and rewrites both the saved day state and its
+// history entry, so the corrected score actually counts toward streak
+// history/personal-best instead of just changing the on-screen number.
+function cbApplyDailyCorrection(originalPerCategory, contested, score) {
+  const dateKey = cbTodayKey();
+  const stored = JSON.parse(localStorage.getItem(`cbState_daily_${dateKey}`) || "null");
+  if (!stored) return;
+
+  const perCategory = {};
+  for (const cid of Object.keys(originalPerCategory)) {
+    const entry = { ...originalPerCategory[cid] };
+    if (contested[cid]) entry.status = entry.status === "correct" ? "incorrect" : "correct";
+    perCategory[cid] = entry;
+  }
+  stored.perCategory = perCategory;
+  stored.score = score;
+  localStorage.setItem(`cbState_daily_${dateKey}`, JSON.stringify(stored));
+
+  const history = JSON.parse(localStorage.getItem("cbHistory_daily") || "[]");
+  const todayEntry = history.find(e => e.date === dateKey);
+  if (todayEntry) {
+    todayEntry.score = score;
+    localStorage.setItem("cbHistory_daily", JSON.stringify(history));
+  }
+}
+
 function cbGetDailyState() {
   const dateKey = cbTodayKey();
   const state = JSON.parse(localStorage.getItem(`cbState_daily_${dateKey}`) || "null");
@@ -170,7 +198,12 @@ function cbShowDailyResult(state) {
   resultEl.style.display = "block";
 
   const containerEl = document.getElementById("cbResultContainer");
-  if (containerEl) cbRenderResult(containerEl, state, { categories: CB_DAILY_CATEGORIES });
+  if (containerEl) {
+    cbRenderResult(containerEl, state, {
+      categories: CB_DAILY_CATEGORIES, contestable: true, letter: state.letter, mode: "daily",
+      onChange: (score, contested) => cbApplyDailyCorrection(state.perCategory, contested, score),
+    });
+  }
 
   const streakEl = document.getElementById("cbStreakBox");
   if (streakEl) {
