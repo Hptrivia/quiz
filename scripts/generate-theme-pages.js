@@ -193,8 +193,8 @@ const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
         ? `Play ${totalQuestions} ${rawTitle} trivia questions on Trivia Gauntlet. Test your knowledge in Marathon, Challenge, Survival, and more.`
         : `Play ${rawTitle} trivia questions on Trivia Gauntlet. Test your knowledge in multiple quiz modes.`);
 
-  // Narrative shows without episodes yet get a "coming soon · notify me" card that
-  // links to the episode.html coming-soon landing (email capture + related cards).
+  // Narrative shows without episodes yet get a card linking to the episode.html
+  // landing, which offers it as a paid custom request (+ related cards).
   const EPISODE_SOON_CATEGORIES = ["TV", "Sitcoms"];
   const episodeSoon = !hasEpisodeMode && EPISODE_SOON_CATEGORIES.includes(theme.category);
   const episodeButton = hasEpisodeMode
@@ -208,7 +208,7 @@ const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
     ? `
         <a class="card" href="../episode.html?theme=${slug}">
           <h3>Episode Mode</h3>
-          <p>🎬 Coming soon · Get notified</p>
+          <p>🎬 Available by request</p>
         </a>
       `
     : "";

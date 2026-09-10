@@ -101,14 +101,11 @@
           &#9888; Stats are saved on this device only. Clearing your browser cache will erase them. Export regularly to keep a backup.
         </div>
 
-        <!-- Email -->
+        <!-- Custom Requests -->
         <div style="margin-bottom:20px;">
-          <label class="form-label" for="profileEmail">Get notified when new questions arrive</label>
-          <div style="display:flex;gap:8px;">
-            <input id="profileEmail" class="form-input" type="email" placeholder="your@email.com" style="flex:1;" />
-            <button class="secondary-btn" id="emailSaveBtn" onclick="saveEmail()" style="white-space:nowrap;">Save</button>
-          </div>
-          <p style="font-size:0.78rem;color:var(--muted-text);margin-top:5px;">New questions are coming soon for every theme. We'll email you when they drop — nothing else.</p>
+          <div class="form-label">Want more than what's here?</div>
+          <p style="font-size:0.78rem;color:var(--muted-text);margin:4px 0 8px;">A new show, more questions for a theme, or a completely different topic — available as a paid custom request.</p>
+          <a href="custom-requests.html" class="secondary-btn" style="display:inline-block;text-decoration:none;">Request Custom Trivia →</a>
         </div>
 
         <!-- Export / Import -->
@@ -145,8 +142,6 @@
   <script src="assets/profile.js"></script>
   <script src="assets/leaderboard.js"></script>
   <script>
-    const FORMSPREE = "https://formspree.io/f/mpqybwea";
-
     function renderPage() {
       const p = getProfile();
 
@@ -160,7 +155,6 @@
 
       // Pre-fill settings inputs
       document.getElementById("profileNameInputSettings").value = p.name || "";
-      document.getElementById("profileEmail").value = p.email || "";
       renderHardModeRow();
 
       // Color swatches
@@ -365,30 +359,6 @@
       // Stay on settings tab after save
       switchTab("settings", document.querySelector(".profile-tab:last-child"));
       if (typeof gtag === "function") gtag("event", "profile_name_saved");
-    }
-
-    async function saveEmail() {
-      const email = document.getElementById("profileEmail").value.trim();
-      if (!email) return;
-      const p = getProfile();
-      p.email = email;
-      saveProfile(p);
-
-      const btn = document.getElementById("emailSaveBtn");
-      btn.textContent = "Saving...";
-      btn.disabled = true;
-      try {
-        await fetch(FORMSPREE, {
-          method: "POST",
-          headers: { "Content-Type": "application/json", "Accept": "application/json" },
-          body: JSON.stringify({ type: "profile-registration", email, name: p.name || "", _subject: "Trivia Gauntlet Profile Email" })
-        });
-        btn.textContent = "Saved ✓";
-        if (typeof gtag === "function") gtag("event", "profile_email_submitted");
-      } catch {
-        btn.textContent = "Saved locally";
-      }
-      setTimeout(() => { btn.textContent = "Save"; btn.disabled = false; }, 2500);
     }
 
     function doExport() {

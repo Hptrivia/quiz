@@ -329,6 +329,20 @@ a {
   color: rgba(110, 231, 183, 0.75);
 }
 
+/* "Custom Requests" — slate, deliberately muted since this is a paid ask, not a free mode. */
+.custom-requests-card {
+  background: rgba(100, 116, 139, 0.1);
+  border: 1px solid #64748b;
+}
+
+.custom-requests-card h3 {
+  color: #cbd5e1;
+}
+
+.custom-requests-card p {
+  color: rgba(203, 213, 225, 0.75);
+}
+
 /* "Join Multiplayer" — rose, homepage-only shortcut for app users (see
    .join-mp-entry gating below), so it reads apart from every other card. */
 .join-mp-card {

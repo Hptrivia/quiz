@@ -54,18 +54,10 @@ async function renderEpisodePage() {
     // What Episode Mode is (for people who've never seen it). Theme-agnostic.
     const explainer = "Episode Mode walks you through a show one episode at a time — a set of trivia questions that follow the story of each episode in order, starting from the very first.";
 
-    const soonKey = `epSoon_${soonTheme.slug}`;
-    const alreadyIn = !!localStorage.getItem(soonKey);
-    const notifyHtml = eligible ? (alreadyIn
-      ? `<p class="notify-card-done">✓ You're on the list for ${soonTheme.title}! We'll email you when it drops.</p>`
-      : `
+    const notifyHtml = eligible ? `
         <div class="notify-card" id="epSoonCard">
-          <div class="notify-card-form">
-            <input class="notify-card-input" type="email" placeholder="you@example.com" autocomplete="email" id="epSoonEmail" />
-            <button class="notify-card-btn" id="epSoonBtn">Notify me</button>
-          </div>
-          <p class="notify-card-status" id="epSoonStatus"></p>
-        </div>`) : "";
+          <a class="notify-card-btn" style="display:inline-block;text-decoration:none;" href="custom-requests.html">Request Custom Trivia →</a>
+        </div>` : "";
 
     if (gameBox) gameBox.style.display = "none";
     resultBox.style.display = "block";
@@ -75,49 +67,20 @@ async function renderEpisodePage() {
     resultBox.innerHTML = `
       <div class="episode-soon">
         <h2>🎬 ${soonTheme.title} Episode Mode</h2>
-        <p class="episode-soon-badge">Coming soon</p>
+        <p class="episode-soon-badge">${eligible ? "Available by request" : "Not available"}</p>
         <p class="episode-soon-explainer">${explainer}</p>
-        ${eligible
-          ? `<p class="episode-soon-sub">Episode-by-episode trivia for <strong>${soonTheme.title}</strong> is on the way. Be first to play — drop your email and we'll tell you the moment it drops.</p>`
-          : `<p class="episode-soon-sub">Episode Mode isn't available for <strong>${soonTheme.title}</strong> yet.</p>`}
+        ${eligible ? "" : `<p class="episode-soon-sub">Episode Mode isn't available for <strong>${soonTheme.title}</strong>.</p>`}
         ${notifyHtml}
       </div>
       ${relatedHtml}
     `;
-
-    const btn = document.getElementById("epSoonBtn");
-    if (btn) {
-      btn.addEventListener("click", async () => {
-        const input = document.getElementById("epSoonEmail");
-        const status = document.getElementById("epSoonStatus");
-        const email = (input.value || "").trim();
-        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-          status.textContent = "Please enter a valid email.";
-          status.style.color = "var(--feedback-wrong)";
-          return;
-        }
-        btn.disabled = true; status.textContent = "Saving..."; status.style.color = "";
-        const ok = (typeof submitEmailToMailchimp === "function")
-          ? await submitEmailToMailchimp(email, soonTheme.title, "episode_coming_soon")
-          : false;
-        if (ok) {
-          localStorage.setItem(soonKey, "1");
-          const card = document.getElementById("epSoonCard");
-          if (card) card.innerHTML = `<p class="notify-card-done">✓ You're on the list for ${soonTheme.title}! We'll email you when it drops.</p>`;
-        } else {
-          btn.disabled = false;
-          status.textContent = "Something went wrong. Try again.";
-          status.style.color = "var(--feedback-wrong)";
-        }
-      });
-    }
   }
 
   if (!episodeFile) {
     // No episode for this theme yet. For narrative shows, render a "Coming Soon"
-    // lead-gen landing: what-is-Episode-Mode explainer + per-theme email notify
-    // (so users can sign up for several shows) + related cards for same-category
-    // themes that DO have Episode Mode (cross-sell). Shown on web + app.
+    // landing: what-is-Episode-Mode explainer + a link to request it as a paid
+    // custom job + related cards for same-category themes that DO have Episode
+    // Mode (cross-sell). Shown on web + app.
     renderEpisodeComingSoon(theme, themes, episodeThemes);
     return;
   }

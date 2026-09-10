@@ -60,10 +60,10 @@ function shuffleQuestionOptions(question) {
   };
 }
 
-// Themes eligible for an "Episode Mode coming soon" lead-gen card: narrative shows
-// only (episodes make no sense for Games/Sports/etc). Shown on web + app (it's email
-// capture, not a gated free-play). Used by the theme page (episode button) and the
-// episode.html coming-soon landing.
+// Themes eligible for an "Episode Mode coming soon" card: narrative shows
+// only (episodes make no sense for Games/Sports/etc). Shown on web + app —
+// links to a paid custom-request, not a gated free-play. Used by the theme
+// page (episode button) and the episode.html coming-soon landing.
 const EPISODE_SOON_CATEGORIES = ["TV", "Sitcoms"];
 function isEpisodeSoonTheme(theme, episodeMap) {
   return !!theme && !!episodeMap && !episodeMap[theme.slug]
@@ -349,12 +349,12 @@ async function renderQuizPage() {
     episodeBtn.style.display = "block";
     episodeBtn.href = `episode.html?theme=${theme.slug}`;
   } else if (isEpisodeSoonTheme(theme, episodeThemes)) {
-    // No episode yet, but it's a show — offer a "coming soon · notify me" card that
-    // links to the episode.html coming-soon landing.
+    // No episode yet, but it's a show — link to the episode.html coming-soon
+    // landing, which offers it as a paid custom request.
     episodeBtn.style.display = "block";
     episodeBtn.href = `episode.html?theme=${theme.slug}`;
     const sub = episodeBtn.querySelector("p");
-    if (sub) sub.textContent = "🎬 Coming soon · Get notified";
+    if (sub) sub.textContent = "🎬 Available by request";
   } else {
     episodeBtn.style.display = "none";
   }
@@ -1837,50 +1837,21 @@ if (resultSearchInput && resultSearchResults) {
 
 /* ---------------- NOTIFY CARD (inline, last round / new PB) ---------------- */
 function buildNotifyCard(themeName, isPB = false, source = "trivia", opts = {}) {
-  if (localStorage.getItem("epDone")) return "";
   const heading = opts.heading || (isPB
     ? `🏆 New personal best for <strong>${themeName}</strong>`
     : `🎉 You've answered every question for <strong>${themeName}</strong>`);
-  const sub = opts.sub || "New questions are on the way. Want to know when they drop?";
+  const sub = opts.sub || "Want more questions for this theme? That's available as a paid custom request.";
   return `
     <div class="notify-card" id="notifyCard" data-source="${source}" data-theme="${themeName}">
       <div class="notify-card-heading">${heading}</div>
       <p class="notify-card-sub">${sub}</p>
-      <div class="notify-card-form">
-        <input class="notify-card-input" type="email" placeholder="you@example.com" autocomplete="email" id="notifyEmailInput" />
-        <button class="notify-card-btn" id="notifySubmitBtn">Notify me</button>
-      </div>
-      <p class="notify-card-status" id="notifyStatus"></p>
+      <a class="notify-card-btn" style="display:inline-block;text-decoration:none;" href="custom-requests.html">Request Custom Trivia →</a>
     </div>`;
 }
 
-function wireNotifyCard(themeName, source = "trivia") {
-  const card = document.getElementById("notifyCard");
-  if (!card) return;
-  const input = document.getElementById("notifyEmailInput");
-  const btn = document.getElementById("notifySubmitBtn");
-  const status = document.getElementById("notifyStatus");
-  btn.addEventListener("click", async () => {
-    const email = input.value.trim();
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      status.textContent = "Please enter a valid email.";
-      status.style.color = "var(--feedback-wrong)";
-      return;
-    }
-    btn.disabled = true;
-    status.textContent = "Saving...";
-    status.style.color = "";
-    const ok = await submitEmailToMailchimp(email, themeName, source);
-    if (ok) {
-      localStorage.setItem("epDone", "1");
-      card.innerHTML = `<p class="notify-card-done">✓ You're in! We'll let you know when new questions drop.</p>`;
-    } else {
-      btn.disabled = false;
-      status.textContent = "Something went wrong. Try again.";
-      status.style.color = "var(--feedback-wrong)";
-    }
-  });
-}
+// No-op kept so existing call sites (marathon/challenge/survival/episode
+// results) don't need touching now that the card is a plain link.
+function wireNotifyCard() {}
 
 // Superseded by assets/announcements.js, which boots itself via its own
 // DOMContentLoaded listener — nothing to call from here.
@@ -1911,19 +1882,6 @@ function chatCanSend(state, minGapMs = 2000) {
   if (state.lastChatSentAt && now - state.lastChatSentAt < minGapMs) return false;
   state.lastChatSentAt = now;
   return true;
-}
-
-async function submitEmailToMailchimp(email, themeName, source = "trivia") {
-  try {
-    const res = await fetch("https://formspree.io/f/mqewdrkn", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, theme: themeName, source, _subject: `New questions notify — ${source} — ${themeName}` })
-    });
-    return res.ok;
-  } catch {
-    return false;
-  }
 }
 
 /* ---------------- PWA SESSION TRACKING ---------------- */
