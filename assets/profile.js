@@ -632,11 +632,13 @@ function _webStoreLinksHTML() {
   // webviews — silently swallows _blank store links as blocked pop-ups, so the
   // wall button "does nothing" on tap. Same-tab navigation to the store works
   // reliably (matches the lobby/result banners), so we use it here too.
-  if (isAndroidWeb()) return `<a href="${_taggedPlayStoreUrl()}" class="primary-btn" data-promo="wall_store_btn" target="_blank">Get the free app</a>${webUnlock}`;
-  if (isIosWeb())     return `<a href="${_taggedAppStoreUrl()}"  class="primary-btn" data-promo="wall_store_btn">Get the free app</a>${webUnlock}`;
+  const noLogin = `<div class="wall-cta-sub">No login or accounts required</div>`;
+  if (isAndroidWeb()) return `<a href="${_taggedPlayStoreUrl()}" class="primary-btn" data-promo="wall_store_btn" target="_blank">Get the free app</a>${noLogin}${webUnlock}`;
+  if (isIosWeb())     return `<a href="${_taggedAppStoreUrl()}"  class="primary-btn" data-promo="wall_store_btn">Get the free app</a>${noLogin}${webUnlock}`;
   // Desktop / unknown: a compact button opens the QR in an overlay (keeps the
   // inline wall small), OR pay to unlock all questions right here on desktop.
   return `<button type="button" class="primary-btn web-qr-trigger" data-promo="wall_store_btn" data-qr="${_appUrl()}">📱 Get the free app</button>
+  ${noLogin}
   <div class="web-or"><span>or</span></div>
   <a href="/remove-ads.html" class="primary-btn web-unlock-btn">Unlock all questions here</a>`;
 }
@@ -896,7 +898,7 @@ function _injectWebBanner() {
   const banner = document.createElement('a');
   banner.className = 'android-cta-banner';
   banner.dataset.promo = 'lobby_banner';
-  banner.textContent = '📱 Get 100+ questions for all themes — Click to download the free app →';
+  banner.innerHTML = '📱 Get 100+ questions for all themes — Click to download the free app →<span class="cta-sub">No login or accounts required</span>';
   // Navigate in the SAME tab (no target=_blank): more reliable than a new tab,
   // which strict private/incognito modes and in-app webviews often block.
   if (isIosWeb()) {
@@ -973,7 +975,7 @@ function _injectProfileAppBanner() {
   const banner = document.createElement('a');
   banner.className = 'android-cta-banner';
   banner.dataset.promo = 'profile_app_banner'; // so its taps are attributed, not invisible
-  banner.textContent = "📱 Don't lose your streak — save your stats & scores in the free app →";
+  banner.innerHTML = "📱 Don't lose your streak — save your stats &amp; scores in the free app →<span class=\"cta-sub\">No login or accounts required</span>";
   banner.href = isIosWeb() ? _taggedAppStoreUrl() : _taggedPlayStoreUrl();
   slot.appendChild(banner);
 }
@@ -986,7 +988,8 @@ function _injectProfileAppBanner() {
 // the round gate (rounds 1-2 only) lives at the call site in challenge.js.
 function resultAppBannerHTML() {
   if (!isLimitedWeb()) return ''; // non-native, non-premium (covers mobile + desktop web)
-  const label = '📱 Download the free app to save your progress &amp; play more questions and topics &rarr;';
+  const label = '📱 Download the free app to save your progress &amp; play more questions and topics &rarr;' +
+    '<span class="cta-sub">No login or accounts required</span>';
   if (isIosWeb())     return `<a class="android-cta-banner result-app-banner" data-promo="result_app_banner" href="${_taggedAppStoreUrl()}">${label}</a>`;
   if (isAndroidWeb()) return `<a class="android-cta-banner result-app-banner" data-promo="result_app_banner" href="${_taggedPlayStoreUrl()}">${label}</a>`;
   // Desktop can't install a phone app from a browser, so the click opens the QR /
@@ -1000,7 +1003,8 @@ function resultAppBannerHTML() {
 // of duplicating the copy/href logic.
 function lobbyAppBannerHTML() {
   if (!isLimitedWeb()) return '';
-  const label = '📱 Get 100+ questions for all themes — Click to download the free app &rarr;';
+  const label = '📱 Get 100+ questions for all themes — Click to download the free app &rarr;' +
+    '<span class="cta-sub">No login or accounts required</span>';
   if (isIosWeb())     return `<a class="android-cta-banner" data-promo="lobby_banner" href="${_taggedAppStoreUrl()}">${label}</a>`;
   if (isAndroidWeb()) return `<a class="android-cta-banner" data-promo="lobby_banner" href="${_taggedPlayStoreUrl()}">${label}</a>`;
   return `<a class="android-cta-banner web-wall-trigger" data-promo="lobby_banner" href="#">${label}</a>`;
