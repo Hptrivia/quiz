@@ -51,6 +51,12 @@ const APP_ANNOUNCEMENTS = [
     text: "Mission: Impossible, Saw, Peacemaker, Young Sheldon, How to Train Your Dragon, and more.",
     cta: { label: "See What's New", href: "recent.html" },
   },
+  {
+    icon: "🎯",
+    title: "Get trivia made just for you!",
+    text: "Missing show, more questions on an existing theme, Episode Mode for something specific, or trivia for an event — request custom trivia and we'll build it.",
+    cta: { label: "Learn More", href: "custom-requests.html" },
+  },
 ];
 
 function _cbAnnouncementHash(str) {
@@ -73,6 +79,7 @@ function _cbAnnouncementHrefFor(href) {
 function initAppAnnouncementPopup() {
   if (!_cbAnnouncementEligiblePage()) return;
   const SEEN_KEY = "_appAnnouncementsSeen";
+  const isFirstVisit = localStorage.getItem(SEEN_KEY) === null;
   let seen = [];
   try { seen = JSON.parse(localStorage.getItem(SEEN_KEY) || "[]"); } catch {}
 
@@ -81,10 +88,17 @@ function initAppAnnouncementPopup() {
     if (a.appOnly && !isApp) return false;
     return !seen.includes(_cbAnnouncementHash(a.text));
   });
-  if (!unseen.length) return;
 
   unseen.forEach(a => seen.push(_cbAnnouncementHash(a.text)));
   try { localStorage.setItem(SEEN_KEY, JSON.stringify(seen)); } catch {}
+
+  // Someone's very first visit has no history to catch up on — the whole
+  // backlog would read as unearned ("New game mode!" to someone who's never
+  // seen the old one). Mark it all caught-up silently; they start seeing
+  // announcements normally from their next visit on, same one-time-each
+  // behavior as everyone else.
+  if (isFirstVisit) return;
+  if (!unseen.length) return;
 
   // Number entries only when several are catching someone up at once — a
   // lone new announcement doesn't need a "3." nobody has context for.
