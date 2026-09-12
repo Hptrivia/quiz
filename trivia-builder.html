@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script>if(/TriviaGauntletPremium/.test(navigator.userAgent||''))document.documentElement.classList.add('premium-app');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Trivia Builder (Local)</title>
@@ -259,9 +260,13 @@ function saveUiState(){
 function loadState(){
   try{
     const raw = localStorage.getItem(STORAGE_KEY);
-    if(raw) return JSON.parse(raw);
+    if(raw){
+      const parsed = JSON.parse(raw);
+      if(!Array.isArray(parsed.styleNotes)) parsed.styleNotes = [];
+      return parsed;
+    }
   }catch(e){ console.warn("Failed to parse saved state, starting fresh.", e); }
-  return { apiKey:"", projects:{} };
+  return { apiKey:"", projects:{}, styleNotes:[] };
 }
 function persist(){
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
@@ -298,7 +303,11 @@ const ui = {
   showStorage: false,
   showManualAdd: false,
   showArchived: false,
+  showStyleNotes: false,
   manualAddBusy: false,
+  transcriptCount: 20,   // 10 | 20 | 50 — not persisted
+  transcriptBusy: false,
+  transcriptMsg: null,   // { ok, text } — not persisted
   searchQuery: "",
   newProjectOpen: false,
   toast: null,
@@ -366,11 +375,27 @@ const UPDATE_SCHEMA = {
     question: { type: "string", description: "New question text, only if it changed." },
     options: { type: "array", items: { type: "string" }, description: "The full new set of 4 options, only if any changed." },
     answer: { type: "string", description: "The correct answer, only if it changed. Must exactly match one of the returned/kept options." },
-    difficulty: { type: "string", enum: ["easy","medium","hard"], description: "Only if it changed." }
+    difficulty: { type: "string", enum: ["easy","medium","hard"], description: "Only if it changed." },
+    learnedRule: { type: "string", description: "Only set this if the user's message expresses a durable, general preference or correction that should apply to ALL future questions across ALL projects — not a one-off edit specific to this single question. State it as a short, standalone imperative rule (e.g. \"Prefer obscure/deep-cut distractors over obvious ones\"). Leave empty/omit for one-off edits." }
   },
   required: ["explanation"],
   additionalProperties: false
 };
+
+// Global, cross-project style rules the AI infers from user corrections during chat.
+function styleNotesBlock(){
+  if(!state.styleNotes || !state.styleNotes.length) return "";
+  return `\n\nLearned style preferences (inferred from your past corrections — apply to every question unless they conflict with the rules above):\n${state.styleNotes.map(r=>`- ${r}`).join("\n")}`;
+}
+function addLearnedRule(rule){
+  const clean = rule.trim();
+  if(!clean) return;
+  state.styleNotes = state.styleNotes || [];
+  if(state.styleNotes.some(r => r.toLowerCase() === clean.toLowerCase())) return;
+  state.styleNotes.push(clean);
+  if(state.styleNotes.length > 40) state.styleNotes.shift();
+  persist();
+}
 
 // Manual-add: turn rough freeform notes into a batch of full question objects.
 const MANUAL_ADD_SCHEMA = {
@@ -394,6 +419,16 @@ const MANUAL_ADD_SCHEMA = {
   required: ["questions"],
   additionalProperties: false
 };
+
+// Baseline quality bar for anything that MINTS new questions from raw source
+// material (transcript generation) rather than editing something the user
+// already wrote — this is where an AI is most tempted to invent filler.
+const QUESTION_QUALITY_RULES = `Trivia question quality rules — every question you produce must follow ALL of these:
+- The correct answer must be a short, concrete, nameable thing: a person's name, a place, a specific object/item/title, a rank or role, a number or date, or similar — the kind of fact you could state in a few words.
+- NEVER write a question whose correct answer would have to be a full sentence, a quote, a description of what someone said/thought/felt, an adjective, an emotion, or an opinion. If the only accurate answer to something interesting in the text would be phrased that way, skip it rather than forcing it.
+- Only ask about things a viewer/player who actually watched or read the finished work would know. A raw transcript/script often contains artifacts that never reach the audience — speaker-label names, stage/camera directions, scene-setting descriptions, writer's notes, "[laughs]"-style annotations. Never base a question on one of those; only use them to figure out what a viewer would have seen or heard on screen, and ask about that instead.
+- Do not invent filler questions just to hit a target count. Only write questions the source material clearly and directly supports. Returning fewer questions than the max is correct and expected if the material runs out of good material — never pad with guesses, trivial restatements, or invented details.
+- Each question must stand alone and make sense to someone who has seen/read the finished work, without needing the original text in front of them.`;
 
 function getClient(){
   if(!state.apiKey) throw new Error("NO_KEY");
@@ -446,7 +481,7 @@ Rules:
 - Return the FULL new set of 4 options (including the unchanged correct answer, in any position) in the "options" field.
 - In "explanation", state which options you removed, what you replaced them with, and why the new set is an improvement.
 Context:
-${questionContextBlock(project, q)}`;
+${questionContextBlock(project, q)}${styleNotesBlock()}`;
   q.chat = q.chat || [];
   q.chat.push({ role:"user", text:"Generate improved distractor options." });
   ui.chatQuestionId = q.id;
@@ -478,7 +513,7 @@ Rules:
 - Do NOT change the options.
 - Only return the "question" field with the rewritten text, plus "explanation".
 Context:
-${questionContextBlock(project, q)}`;
+${questionContextBlock(project, q)}${styleNotesBlock()}`;
   q.chat = q.chat || [];
   q.chat.push({ role:"user", text:"Rephrase this question." });
   ui.chatQuestionId = q.id;
@@ -500,8 +535,10 @@ ${questionContextBlock(project, q)}`;
 function chatSystemPrompt(project, q){
   return `You are helping refine ONE trivia question for the show/movie/series "${project.name}". You are not aware of any other questions in the project — only this one.
 Current state:
-${questionContextBlock(project, q)}
-The user will ask for changes (rewrite the question, replace an option, change the correct answer, make it harder/easier, rewrite all options, etc.). Apply the change immediately by including only the field(s) that changed in your JSON response (question / options / answer / difficulty). If options are returned, return the full set of 4. Always fill "explanation" with a short note on what you changed. If the user is just asking a question or chatting without requesting a change, leave the edit fields out and just answer in "explanation".`;
+${questionContextBlock(project, q)}${styleNotesBlock()}
+The user will ask for changes (rewrite the question, replace an option, change the correct answer, make it harder/easier, rewrite all options, etc.). Apply the change immediately by including only the field(s) that changed in your JSON response (question / options / answer / difficulty). If options are returned, return the full set of 4. Always fill "explanation" with a short note on what you changed. If the user is just asking a question or chatting without requesting a change, leave the edit fields out and just answer in "explanation".
+
+Also watch for durable preferences: if this correction reveals something you should do differently on EVERY question from now on (not just this one) — a formatting habit, a tone/difficulty calibration, a rule about distractor style, a pet peeve — capture it in "learnedRule" so it's remembered for future questions and future projects. Don't set it for edits that only make sense for this specific question.`;
 }
 
 async function sendChatMessage(project, q, userText){
@@ -526,7 +563,8 @@ async function sendChatMessage(project, q, userText){
     if(parsed.difficulty){ q.difficulty = parsed.difficulty; applied.difficulty = parsed.difficulty; }
     persist();
 
-    q.chat.push({ role:"ai", text: parsed.explanation || "Done.", applied });
+    if(parsed.learnedRule) addLearnedRule(parsed.learnedRule);
+    q.chat.push({ role:"ai", text: parsed.explanation || "Done.", applied, learnedRule: parsed.learnedRule || null });
   }catch(err){
     q.chat.push({ role:"error", text: aiErrorMessage(err) });
     // Undo the speculative user push's paired state push isn't needed — nothing was applied.
@@ -666,6 +704,7 @@ function render(){
   let html = "";
   if(ui.view === "home") html = renderHome();
   else if(ui.view === "import") html = renderImport();
+  else if(ui.view === "transcript") html = renderTranscript();
   else if(ui.view === "review") html = renderReview();
 
   html += renderModals();
@@ -690,6 +729,7 @@ function topbar(activeProjectName){
     <nav>
       <button class="btn btn-ghost" data-action="go-home">Home</button>
       ${pid ? `<button class="btn btn-ghost" data-action="go-import">Import</button>` : ""}
+      ${pid ? `<button class="btn btn-ghost" data-action="go-transcript">From Transcript</button>` : ""}
       ${pid ? `<button class="btn btn-ghost" data-action="go-review">Review</button>` : ""}
       ${pid ? `<button class="btn btn-ghost" data-action="open-export">View / Export</button>` : ""}
     </nav>
@@ -716,6 +756,7 @@ function renderHome(){
     <div class="home-head">
       <h1>Projects</h1>
       <div style="display:flex; gap:8px;">
+        <button class="btn" data-action="open-style-notes">🧠 Style Notes (${state.styleNotes ? state.styleNotes.length : 0})</button>
         <button class="btn" data-action="open-archived">📦 Archived (${archivedCount})</button>
         <button class="btn" data-action="open-storage">🗄 Storage</button>
         <button class="btn btn-primary" data-action="new-project">+ New Project</button>
@@ -768,6 +809,29 @@ function renderImport(){
       <button class="btn btn-ghost" data-action="go-home">Back to Homepage</button>
     </div>
     <div id="importMsg"></div>
+  </div>`;
+}
+
+/* ---------- From Transcript ---------- */
+function renderTranscript(){
+  const project = getProject(ui.projectId);
+  if(!project) return renderHome();
+  const count = ui.transcriptCount || 20;
+  return `
+  ${topbar(project.name)}
+  <div class="container import-wrap">
+    <h1 style="margin:0;">Generate From Transcript</h1>
+    <p style="color:var(--text-dim); font-size:13.5px; margin:0;">Paste a transcript, script, article, or any raw text about "${esc(project.name)}". AI pulls out real, nameable facts — people, places, things, titles, ranks, numbers — and turns each one into a trivia question with plausible wrong answers, in the same format as a JSON upload. It only writes questions the text actually supports, so you may get fewer than you asked for — that's expected, not a bug.</p>
+    <textarea class="json-input" id="transcriptText" placeholder="Paste transcript, script, or article text here…">${esc(project.transcriptDraft || "")}</textarea>
+    <div class="import-actions">
+      <span style="font-size:12.5px; color:var(--text-dim);">Generate up to:</span>
+      <div class="filter-group">
+        ${[10,20,50].map(n=>`<button class="btn btn-sm ${count===n?"active":""}" data-action="set-transcript-count" data-count="${n}">${n}</button>`).join("")}
+      </div>
+      <button class="btn btn-primary" data-action="generate-transcript" ${ui.transcriptBusy?"disabled":""}>${ui.transcriptBusy?'<span class="spinner"></span> Generating…':"✨ Generate Questions"}</button>
+      <button class="btn btn-ghost" data-action="go-home">Back to Homepage</button>
+    </div>
+    ${ui.transcriptMsg ? `<div class="import-msg ${ui.transcriptMsg.ok?"ok":"err"}">${esc(ui.transcriptMsg.text)}</div>` : ""}
   </div>`;
 }
 
@@ -953,6 +1017,7 @@ function renderInlineChat(q){
     <div class="chat-log">
       ${chat.length ? chat.map(m=>`
         <div class="chat-msg ${m.role}">${esc(m.text)}</div>
+        ${m.learnedRule ? `<div class="chat-msg ai" style="font-size:12px; color:var(--text-faint); border-style:dashed;">🧠 Learned for future questions: "${esc(m.learnedRule)}"</div>` : ""}
       `).join("") : `<div style="color:var(--text-faint); font-size:13px;">Ask for a rewrite, a new option, a difficulty change, or anything else about this question.</div>`}
       ${ui.chatBusy ? `<div class="chat-msg ai"><span class="spinner"></span>Thinking…</div>` : ""}
     </div>
@@ -972,7 +1037,31 @@ function renderModals(){
   if(ui.showStorage) out += renderStorageModal();
   if(ui.showArchived) out += renderArchivedModal();
   if(ui.showManualAdd) out += renderManualAddModal(getProject(ui.projectId));
+  if(ui.showStyleNotes) out += renderStyleNotesModal();
   return out;
+}
+
+function renderStyleNotesModal(){
+  const notes = state.styleNotes || [];
+  return `
+  <div class="overlay" data-action="close-modal-bg">
+    <div class="modal">
+      <div class="modal-head"><h3>🧠 AI Style Notes (${notes.length})</h3><button class="btn btn-ghost btn-sm" data-action="close-style-notes">✕</button></div>
+      <div class="modal-body">
+        <div class="chat-context">Auto-learned from your chat corrections and applied to every question, in every project, from now on. Remove any that were picked up wrong.</div>
+        ${notes.length ? `<div style="display:flex; flex-direction:column; gap:8px;">
+          ${notes.map((r,i)=>`
+            <div class="trash-item">
+              <span class="ttext" style="white-space:normal;">${esc(r)}</span>
+              <button class="btn btn-sm btn-danger" data-action="delete-style-note" data-idx="${i}">Remove</button>
+            </div>`).join("")}
+        </div>` : `<div class="empty-state">No style notes learned yet.</div>`}
+      </div>
+      <div class="modal-foot">
+        <button class="btn btn-primary" data-action="close-style-notes">Done</button>
+      </div>
+    </div>
+  </div>`;
 }
 
 function renderNewProjectModal(){
@@ -1129,6 +1218,13 @@ function bindEvents(){
   }
   const importText = document.getElementById("importText");
   if(importText) importText.addEventListener("input", e=>{ ui._importDraft = e.target.value; });
+  const transcriptText = document.getElementById("transcriptText");
+  if(transcriptText){
+    transcriptText.addEventListener("input", e=>{
+      const project = getProject(ui.projectId);
+      if(project){ project.transcriptDraft = e.target.value; scheduleDraftSave(); }
+    });
+  }
   const searchInput = document.getElementById("searchInput");
   if(searchInput){
     searchInput.addEventListener("input", e=>{
@@ -1178,6 +1274,7 @@ function onAction(e){
   switch(action){
     case "go-home": ui.view="home"; ui.projectId=null; render(); break;
     case "go-import": ui.view="import"; render(); break;
+    case "go-transcript": ui.view="transcript"; ui.transcriptMsg = null; render(); break;
     case "go-review": ui.view="review"; render(); break;
     case "open-project": ui.projectId = id; ui.view="review"; ui.filter="pending"; ui.selectMode=false; ui.selectedIds=new Set(); render(); break;
 
@@ -1186,8 +1283,11 @@ function onAction(e){
     case "create-project": createProject(); break;
 
     case "save-settings": saveSettings(); break;
+    case "delete-style-note": state.styleNotes.splice(Number(el.dataset.idx),1); persist(); render(); break;
 
     case "upload": doUpload(project); break;
+    case "set-transcript-count": ui.transcriptCount = Number(el.dataset.count); render(); break;
+    case "generate-transcript": generateTranscriptQuestions(project); break;
 
     case "set-filter": ui.filter = el.dataset.filter; render(); break;
     case "undo": undo(project); render(); break;
@@ -1221,6 +1321,8 @@ function onAction(e){
 
     case "open-storage": ui.showStorage = true; render(); break;
     case "close-storage": ui.showStorage = false; render(); break;
+    case "open-style-notes": ui.showStyleNotes = true; render(); break;
+    case "close-style-notes": ui.showStyleNotes = false; render(); break;
     case "delete-project": deleteProject(id); break;
     case "archive-project": archiveProject(id); break;
     case "unarchive-project": unarchiveProject(id); break;
@@ -1251,7 +1353,7 @@ function onAction(e){
     case "close-modal-bg":
       if(e.target === el){
         if(ui.showManualAdd) flushDraftSave();
-        ui.newProjectOpen = false; ui.showTrash = false; ui.showExport = false; ui.showStorage = false; ui.showManualAdd = false; ui.showArchived = false;
+        ui.newProjectOpen = false; ui.showTrash = false; ui.showExport = false; ui.showStorage = false; ui.showManualAdd = false; ui.showArchived = false; ui.showStyleNotes = false;
         render();
       }
       break;
@@ -1271,7 +1373,7 @@ function createProject(){
   const name = (input?.value || "").trim();
   if(!name) return;
   const id = uid();
-  state.projects[id] = { id, name, createdAt: Date.now(), questions: [], trash: [], manualDraft: "", archived: false };
+  state.projects[id] = { id, name, createdAt: Date.now(), questions: [], trash: [], manualDraft: "", transcriptDraft: "", archived: false };
   persist();
   ui.newProjectOpen = false;
   ui.projectId = id;
@@ -1324,7 +1426,7 @@ The user pastes freeform, messy text containing one or more trivia questions, lo
 
 Be lenient — this is rough freeform text, not a strict format. Do your best to split it into separate questions and don't reject anything just because it's messy or incomplete. Skip only text that isn't a trivia question at all.
 
-Return every question you can identify, each with "question", exactly 4 "options" (including the correct one, in any position), "answer" (must exactly match one of the 4 options), and "difficulty".`;
+Return every question you can identify, each with "question", exactly 4 "options" (including the correct one, in any position), "answer" (must exactly match one of the 4 options), and "difficulty".${styleNotesBlock()}`;
 
   try{
     const client = getClient();
@@ -1374,6 +1476,88 @@ Return every question you can identify, each with "question", exactly 4 "options
   }
 }
 
+async function generateTranscriptQuestions(project){
+  const textEl = document.getElementById("transcriptText");
+  const text = ((textEl ? textEl.value : project.transcriptDraft) || "").trim();
+  if(!text){
+    ui.transcriptMsg = { ok:false, text:"Paste some transcript text first." };
+    render();
+    return;
+  }
+  project.transcriptDraft = text;
+  clearTimeout(draftSaveTimer);
+  persist();
+
+  const count = ui.transcriptCount || 20;
+  ui.transcriptBusy = true; ui.transcriptMsg = null; render();
+
+  const system = `You extract trivia questions from a raw transcript, script, or article about the show/movie/series "${project.name}".
+
+${QUESTION_QUALITY_RULES}
+
+Extract AT MOST ${count} questions from the text below — return fewer if the text doesn't clearly support that many good ones. Every question needs exactly 4 options (the correct answer plus 3 wrong answers you invent) and a difficulty (easy/medium/hard).
+
+Distractor rules for the 3 wrong options:
+- Match the style, language/culture of origin, gender, and setting of the correct answer (e.g. other plausible Chinese names if the answer is a Chinese character's name; other male characters if the answer is male; plausible fantasy names in a fantasy setting).
+- They should be believable enough to require real knowledge of "${project.name}" to rule out — not obviously wrong.
+- May mix real other characters/entities from the source with convincing invented ones.
+
+Transcript:
+"""
+${text}
+"""${styleNotesBlock()}`;
+
+  try{
+    const client = getClient();
+    const response = await client.messages.create({
+      model: "claude-sonnet-5",
+      max_tokens: 8192,
+      thinking: { type: "disabled" },
+      system,
+      messages: [{ role:"user", content: "Extract the trivia questions now." }],
+      output_config: { format: { type:"json_schema", schema: MANUAL_ADD_SCHEMA } }
+    });
+    const textBlock = response.content.find(b=>b.type==="text");
+    if(!textBlock) throw new Error("No response from model.");
+    const parsed = JSON.parse(textBlock.text);
+    const items = Array.isArray(parsed.questions) ? parsed.questions : [];
+    const valid = items
+      .filter(it => it && typeof it.question==="string" && Array.isArray(it.options) && it.options.length>=2 && typeof it.answer==="string")
+      .slice(0, count);
+
+    if(!valid.length){
+      ui.transcriptBusy = false;
+      ui.transcriptMsg = { ok:false, text:"Couldn't find any solid trivia questions in that text." };
+      render();
+      return;
+    }
+
+    pushUndo(project);
+    for(const it of valid){
+      project.questions.push({
+        id: uid(),
+        question: it.question,
+        options: it.options.slice(0,4),
+        answer: it.answer,
+        difficulty: ["easy","medium","hard"].includes(it.difficulty) ? it.difficulty : "medium",
+        status: "pending",
+        chat: []
+      });
+    }
+    project.transcriptDraft = "";
+    ui.transcriptBusy = false;
+    ui.view = "review";
+    ui.filter = "pending";
+    persist();
+    showToast(`${valid.length} question${valid.length===1?"":"s"} added to Pending.`);
+    render();
+  }catch(err){
+    ui.transcriptBusy = false;
+    ui.transcriptMsg = { ok:false, text: aiErrorMessage(err) };
+    render();
+  }
+}
+
 function saveSettings(){
   const key = document.getElementById("apiKeyInput")?.value.trim() || "";
   state.apiKey = key;
@@ -1383,12 +1567,14 @@ function saveSettings(){
 }
 
 function doUpload(project){
-  const text = document.getElementById("importText")?.value || "";
+  const textEl = document.getElementById("importText");
+  const text = textEl?.value || "";
   const result = importQuestions(project, text);
   const msgEl = document.getElementById("importMsg");
   if(msgEl){
     msgEl.innerHTML = `<div class="import-msg ${result.ok?"ok":"err"}">${esc(result.message)}</div>`;
   }
+  if(result.ok && textEl) textEl.value = "";
 }
 
 function doSaveEdit(project, id){
