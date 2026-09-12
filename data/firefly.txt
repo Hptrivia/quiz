@@ -1,0 +1,1130 @@
+[
+  {
+    "id": 1,
+    "question": "What is the name of Malcolm Reynolds's ship?",
+    "options": [
+      "Odyssey",
+      "Serenity",
+      "Redemption",
+      "Persistence"
+    ],
+    "answer": "Serenity",
+    "difficulty": "easy"
+  },
+  {
+    "id": 2,
+    "question": "What class of vessel is Serenity?",
+    "options": [
+      "Osprey-class",
+      "Kestrel-class",
+      "Firefly-class",
+      "Corvette-class"
+    ],
+    "answer": "Firefly-class",
+    "difficulty": "easy"
+  },
+  {
+    "id": 3,
+    "question": "What side did Mal and Zoe fight for during the war against the Alliance?",
+    "options": [
+      "The Loyalists",
+      "The Independents",
+      "The Coalition",
+      "The Vanguard"
+    ],
+    "answer": "The Independents",
+    "difficulty": "easy"
+  },
+  {
+    "id": 4,
+    "question": "What nickname were soldiers who fought for the Independents commonly known by?",
+    "options": [
+      "Redshirts",
+      "Ironclads",
+      "Graycoats",
+      "Browncoats"
+    ],
+    "answer": "Browncoats",
+    "difficulty": "easy"
+  },
+  {
+    "id": 5,
+    "question": "What is the name of the decisive battle where Mal's side was crushed?",
+    "options": [
+      "Serenity Valley",
+      "Du-Khang Ridge",
+      "Hera Pass",
+      "Sturges Canyon"
+    ],
+    "answer": "Serenity Valley",
+    "difficulty": "easy"
+  },
+  {
+    "id": 6,
+    "question": "What is the name of the government that rules the core planets?",
+    "options": [
+      "The Commonwealth",
+      "The Directorate",
+      "The Alliance",
+      "The Concordat"
+    ],
+    "answer": "The Alliance",
+    "difficulty": "easy"
+  },
+  {
+    "id": 7,
+    "question": "What term is used for the savage, cannibalistic humans living beyond civilized space?",
+    "options": [
+      "Marauders",
+      "Scavvers",
+      "Reavers",
+      "Blighters"
+    ],
+    "answer": "Reavers",
+    "difficulty": "easy"
+  },
+  {
+    "id": 8,
+    "question": "What is Inara Serra's registered profession aboard Serenity?",
+    "options": [
+      "Consort",
+      "Companion",
+      "Attaché",
+      "Chaperone"
+    ],
+    "answer": "Companion",
+    "difficulty": "easy"
+  },
+  {
+    "id": 9,
+    "question": "What was Jayne Cobb's job before he joined Serenity's crew?",
+    "options": [
+      "Bounty hunter",
+      "Bandit",
+      "Mercenary",
+      "Smuggler"
+    ],
+    "answer": "Mercenary",
+    "difficulty": "easy"
+  },
+  {
+    "id": 10,
+    "question": "What is Kaylee Frye's role on Serenity?",
+    "options": [
+      "Navigator",
+      "Mechanic",
+      "Quartermaster",
+      "Cargo master"
+    ],
+    "answer": "Mechanic",
+    "difficulty": "easy"
+  },
+  {
+    "id": 11,
+    "question": "What is Wash's primary role on the ship?",
+    "options": [
+      "Navigator",
+      "Gunner",
+      "Engineer",
+      "Pilot"
+    ],
+    "answer": "Pilot",
+    "difficulty": "easy"
+  },
+  {
+    "id": 12,
+    "question": "What military rank did Zoe hold at the Battle of Serenity Valley?",
+    "options": [
+      "Sergeant",
+      "Corporal",
+      "Lieutenant",
+      "Private"
+    ],
+    "answer": "Corporal",
+    "difficulty": "easy"
+  },
+  {
+    "id": 13,
+    "question": "What is Simon Tam's medical specialty?",
+    "options": [
+      "General practitioner",
+      "Pediatrician",
+      "Trauma surgeon",
+      "Psychiatrist"
+    ],
+    "answer": "Trauma surgeon",
+    "difficulty": "easy"
+  },
+  {
+    "id": 14,
+    "question": "What is Shepherd Book's occupation?",
+    "options": [
+      "Missionary",
+      "Preacher",
+      "Monk",
+      "Chaplain"
+    ],
+    "answer": "Preacher",
+    "difficulty": "easy"
+  },
+  {
+    "id": 15,
+    "question": "What planet do Simon and River Tam come from?",
+    "options": [
+      "Ariel",
+      "Sihnon",
+      "Osiris",
+      "Persephone"
+    ],
+    "answer": "Osiris",
+    "difficulty": "easy"
+  },
+  {
+    "id": 16,
+    "question": "On what planet does the rancher Patience betray Mal?",
+    "options": [
+      "Boros",
+      "Regina",
+      "Persephone",
+      "Whitefall"
+    ],
+    "answer": "Whitefall",
+    "difficulty": "easy"
+  },
+  {
+    "id": 17,
+    "question": "What is the name of the crime lord who tortures Mal after a botched job?",
+    "options": [
+      "Nikolai Reznik",
+      "Aldous Krane",
+      "Adelai Niska",
+      "Adelai Vex"
+    ],
+    "answer": "Adelai Niska",
+    "difficulty": "easy"
+  },
+  {
+    "id": 18,
+    "question": "What is the name of the fence Mal deals with on Persephone?",
+    "options": [
+      "Weasel",
+      "Badger",
+      "Ferret",
+      "Magpie"
+    ],
+    "answer": "Badger",
+    "difficulty": "easy"
+  },
+  {
+    "id": 19,
+    "question": "What is the name of the town where Jayne is worshipped as a folk hero?",
+    "options": [
+      "Newhall",
+      "Deadwood",
+      "Canton",
+      "Ezra"
+    ],
+    "answer": "Canton",
+    "difficulty": "easy"
+  },
+  {
+    "id": 20,
+    "question": "What official title does Higgins hold in the town where Jayne is a folk hero?",
+    "options": [
+      "Governor",
+      "Magistrate",
+      "Sheriff",
+      "Overseer"
+    ],
+    "answer": "Magistrate",
+    "difficulty": "easy"
+  },
+  {
+    "id": 21,
+    "question": "What name does the con artist who tricks Mal into marriage go by?",
+    "options": [
+      "Marigold",
+      "Rosalind",
+      "Saffron",
+      "Juniper"
+    ],
+    "answer": "Saffron",
+    "difficulty": "easy"
+  },
+  {
+    "id": 22,
+    "question": "What is the name of the professional bounty hunter who nearly captures River?",
+    "options": [
+      "Silas Roan",
+      "Marshal Dean",
+      "Jubal Early",
+      "Jubal Crane"
+    ],
+    "answer": "Jubal Early",
+    "difficulty": "easy"
+  },
+  {
+    "id": 23,
+    "question": "What is the name of Jayne's favorite gun?",
+    "options": [
+      "Delilah",
+      "Vera",
+      "Bertha",
+      "Rosalind"
+    ],
+    "answer": "Vera",
+    "difficulty": "easy"
+  },
+  {
+    "id": 24,
+    "question": "What is the name of the secret facility where River was experimented on?",
+    "options": [
+      "The Institute",
+      "The Foundry",
+      "The Academy",
+      "The Cradle"
+    ],
+    "answer": "The Academy",
+    "difficulty": "easy"
+  },
+  {
+    "id": 25,
+    "question": "What other language, besides English, is commonly spoken by characters throughout the show?",
+    "options": [
+      "Cantonese",
+      "Japanese",
+      "Mandarin Chinese",
+      "Korean"
+    ],
+    "answer": "Mandarin Chinese",
+    "difficulty": "easy"
+  },
+  {
+    "id": 26,
+    "question": "What term is used for the collection of worlds and moons where the series takes place?",
+    "options": [
+      "The Expanse",
+      "The 'verse",
+      "The Reach",
+      "The Sprawl"
+    ],
+    "answer": "The 'verse",
+    "difficulty": "easy"
+  },
+  {
+    "id": 27,
+    "question": "What is the name of the war fought between the Alliance and the Independents?",
+    "options": [
+      "Sovereignty War",
+      "Unification War",
+      "Consolidation War",
+      "Frontier War"
+    ],
+    "answer": "Unification War",
+    "difficulty": "easy"
+  },
+  {
+    "id": 28,
+    "question": "What term is used in \"Jaynestown\" for the laborers who work the local mud fields?",
+    "options": [
+      "Diggers",
+      "Mudders",
+      "Tillers",
+      "Sowers"
+    ],
+    "answer": "Mudders",
+    "difficulty": "easy"
+  },
+  {
+    "id": 29,
+    "question": "How many main crew members live aboard Serenity at the start of the series?",
+    "options": [
+      "Seven",
+      "Eight",
+      "Nine",
+      "Ten"
+    ],
+    "answer": "Nine",
+    "difficulty": "easy"
+  },
+  {
+    "id": 30,
+    "question": "What is the name of the guild that trains and licenses Companions?",
+    "options": [
+      "Sisterhood of Serenity",
+      "Order of Grace",
+      "Companions' Guild",
+      "Guild of Consorts"
+    ],
+    "answer": "Companions' Guild",
+    "difficulty": "easy"
+  },
+  {
+    "id": 31,
+    "question": "What personal item does Wash keep at his piloting station?",
+    "options": [
+      "Model ships",
+      "Plastic dinosaurs",
+      "Wind chimes",
+      "Snow globes"
+    ],
+    "answer": "Plastic dinosaurs",
+    "difficulty": "easy"
+  },
+  {
+    "id": 32,
+    "question": "What network originally aired Firefly?",
+    "options": [
+      "NBC",
+      "The WB",
+      "Fox",
+      "UPN"
+    ],
+    "answer": "Fox",
+    "difficulty": "easy"
+  },
+  {
+    "id": 33,
+    "question": "In what year did Firefly first premiere?",
+    "options": [
+      "2000",
+      "2001",
+      "2002",
+      "2003"
+    ],
+    "answer": "2002",
+    "difficulty": "hard"
+  },
+  {
+    "id": 34,
+    "question": "Who created Firefly?",
+    "options": [
+      "Tim Minear",
+      "Joss Whedon",
+      "David Solomon",
+      "Jed Whedon"
+    ],
+    "answer": "Joss Whedon",
+    "difficulty": "hard"
+  },
+  {
+    "id": 35,
+    "question": "How many episodes of Firefly were produced in total?",
+    "options": [
+      "11",
+      "13",
+      "14",
+      "22"
+    ],
+    "answer": "14",
+    "difficulty": "hard"
+  },
+  {
+    "id": 36,
+    "question": "Which actor plays Captain Malcolm Reynolds?",
+    "options": [
+      "Jensen Ackles",
+      "Nathan Fillion",
+      "Josh Holloway",
+      "Matthew Fox"
+    ],
+    "answer": "Nathan Fillion",
+    "difficulty": "easy"
+  },
+  {
+    "id": 37,
+    "question": "Which actress plays Zoe Washburne?",
+    "options": [
+      "Rosario Dawson",
+      "Sanaa Lathan",
+      "Gina Torres",
+      "Nia Long"
+    ],
+    "answer": "Gina Torres",
+    "difficulty": "easy"
+  },
+  {
+    "id": 38,
+    "question": "What is the name of Niska's assistant who alerts him that Serenity is nearby?",
+    "options": [
+      "Petrov",
+      "Viktor",
+      "Anton",
+      "Yuri"
+    ],
+    "answer": "Viktor",
+    "difficulty": "medium"
+  },
+  {
+    "id": 39,
+    "question": "What does Niska send back with Zoe as a 'refund' after she can only afford to free one man?",
+    "options": [
+      "A finger",
+      "A thumb",
+      "An ear",
+      "A tooth"
+    ],
+    "answer": "An ear",
+    "difficulty": "medium"
+  },
+  {
+    "id": 40,
+    "question": "What term does the show use for Niska's orbital base where he conducts business and torture?",
+    "options": [
+      "Docking ring",
+      "Skyplex",
+      "Orbital hub",
+      "Waystation"
+    ],
+    "answer": "Skyplex",
+    "difficulty": "medium"
+  },
+  {
+    "id": 41,
+    "question": "What historical figure's philosophy on torture does Niska cite while working on Mal?",
+    "options": [
+      "Sun Tzu",
+      "Confucius",
+      "Shan Yu",
+      "Laozi"
+    ],
+    "answer": "Shan Yu",
+    "difficulty": "medium"
+  },
+  {
+    "id": 42,
+    "question": "What renowned swordsman does Mal accidentally challenge to a duel after punching him at a ball?",
+    "options": [
+      "Desmond Cray",
+      "Percival Vance",
+      "Atherton Wing",
+      "Warrick Harrow"
+    ],
+    "answer": "Atherton Wing",
+    "difficulty": "medium"
+  },
+  {
+    "id": 43,
+    "question": "What does Sir Warwick Harrow's mysterious 'property' turn out to be, once Mal proves himself trustworthy in 'Shindig'?",
+    "options": [
+      "Horses",
+      "Cattle",
+      "Sheep",
+      "Grain"
+    ],
+    "answer": "Cattle",
+    "difficulty": "medium"
+  },
+  {
+    "id": 44,
+    "question": "What is the title of the folk song the residents of Canton sing in Jayne's honor?",
+    "options": [
+      "The Robber's Reprieve",
+      "Ballad of the Mudders",
+      "The Hero of Canton",
+      "Song of the Skyplex"
+    ],
+    "answer": "The Hero of Canton",
+    "difficulty": "medium"
+  },
+  {
+    "id": 45,
+    "question": "What is the name of the brothel owner and old friend of Inara's who calls for help'?",
+    "options": [
+      "Chari",
+      "Nandi",
+      "Lucy",
+      "Petaline"
+    ],
+    "answer": "Nandi",
+    "difficulty": "medium"
+  },
+  {
+    "id": 46,
+    "question": "What ship part fails and strands Serenity dead in space in?",
+    "options": [
+      "The stabilizer",
+      "The regulator",
+      "The catalyzer",
+      "The manifold"
+    ],
+    "answer": "The catalyzer",
+    "difficulty": "medium"
+  },
+  {
+    "id": 47,
+    "question": "What was the name of the incompetent mechanic Mal fires and replaces with Kaylee?",
+    "options": [
+      "Bester",
+      "Marcus",
+      "Finch",
+      "Dobbs"
+    ],
+    "answer": "Bester",
+    "difficulty": "medium"
+  },
+  {
+    "id": 48,
+    "question": "What discount does Inara negotiate on her shuttle rent, as shown in her introductory flashback?",
+    "options": [
+      "10%",
+      "40%",
+      "25%",
+      "15%"
+    ],
+    "answer": "25%",
+    "difficulty": "hard"
+  },
+  {
+    "id": 49,
+    "question": "What military rank did Tracey Smith hold as a young soldier serving under Mal and Zoe?",
+    "options": [
+      "Corporal",
+      "Sergeant",
+      "Private",
+      "Lieutenant"
+    ],
+    "answer": "Private",
+    "difficulty": "medium"
+  },
+  {
+    "id": 50,
+    "question": "At what battle does a flashback show Tracey serving alongside Mal and Zoe?",
+    "options": [
+      "Sturges",
+      "Du-Khang",
+      "Silverhold",
+      "Hallelujah"
+    ],
+    "answer": "Du-Khang",
+    "difficulty": "medium"
+  },
+  {
+    "id": 51,
+    "question": "What winter campaign does Zoe recall fighting in alongside Mal, as recounted in 'War Stories'?",
+    "options": [
+      "Sturges",
+      "Du-Khang",
+      "New Kashmir",
+      "Silverhold"
+    ],
+    "answer": "New Kashmir",
+    "difficulty": "medium"
+  },
+  {
+    "id": 52,
+    "question": "On what planet is Saffron arrested by Alliance Feds?",
+    "options": [
+      "Persephone",
+      "Bellerophon",
+      "Regina",
+      "Boros"
+    ],
+    "answer": "Bellerophon",
+    "difficulty": "medium"
+  },
+  {
+    "id": 53,
+    "question": "What alias does Saffron give herself when Mal first encounters her again?",
+    "options": [
+      "Marigold",
+      "Rosalind",
+      "Bridget",
+      "Juniper"
+    ],
+    "answer": "Bridget",
+    "difficulty": "medium"
+  },
+  {
+    "id": 54,
+    "question": "What is the name of the priceless antique weapon Saffron convinces the crew to steal?",
+    "options": [
+      "The Widowmaker",
+      "The Lassiter",
+      "The Peacekeeper",
+      "The Reliant"
+    ],
+    "answer": "The Lassiter",
+    "difficulty": "medium"
+  },
+  {
+    "id": 55,
+    "question": "What is the name of the Alliance hospital the crew infiltrates?",
+    "options": [
+      "Mercy General",
+      "St. Lucy's",
+      "St. Michael's",
+      "Alliance Central"
+    ],
+    "answer": "St. Lucy's",
+    "difficulty": "medium"
+  },
+  {
+    "id": 56,
+    "question": "What do Simon and River pretend to be in order to be smuggled into the Ariel hospital?",
+    "options": [
+      "Patients",
+      "Corpses",
+      "Staff members",
+      "Federal agents"
+    ],
+    "answer": "Corpses",
+    "difficulty": "medium"
+  },
+  {
+    "id": 57,
+    "question": "What disguise does the crew wear during their heist inside the Ariel hospital?",
+    "options": [
+      "Security guard uniforms",
+      "EMT uniforms",
+      "Alliance military uniforms",
+      "Janitorial uniforms"
+    ],
+    "answer": "EMT uniforms",
+    "difficulty": "medium"
+  },
+  {
+    "id": 58,
+    "question": "In what year is Firefly's story set?",
+    "options": [
+      "2506",
+      "2517",
+      "2529",
+      "2540"
+    ],
+    "answer": "2517",
+    "difficulty": "medium"
+  },
+  {
+    "id": 59,
+    "question": "What is the show's term for the interstellar data and communications network?",
+    "options": [
+      "The Grid",
+      "The Relay",
+      "Cortex",
+      "The Net"
+    ],
+    "answer": "Cortex",
+    "difficulty": "medium"
+  },
+  {
+    "id": 60,
+    "question": "What is the title of Firefly's opening theme song?",
+    "options": [
+      "Anthem of the Black",
+      "The Ballad of Serenity",
+      "Song of the Verse",
+      "Ballad of the Rim"
+    ],
+    "answer": "The Ballad of Serenity",
+    "difficulty": "hard"
+  },
+  {
+    "id": 61,
+    "question": "What model of rifle does Zoe carry as her signature weapon?",
+    "options": [
+      "Winchester Model 1873",
+      "Winchester Model 1892",
+      "Remington Model 700",
+      "Springfield Model 1903"
+    ],
+    "answer": "Winchester Model 1892",
+    "difficulty": "hard"
+  },
+  {
+    "id": 62,
+    "question": "What planet did Malcolm Reynolds grow up on, working a ranch?",
+    "options": [
+      "Regina",
+      "Boros",
+      "Shadow",
+      "Hera"
+    ],
+    "answer": "Shadow",
+    "difficulty": "medium"
+  },
+  {
+    "id": 63,
+    "question": "On what planet did the Battle of Serenity Valley take place?",
+    "options": [
+      "Shadow",
+      "Regina",
+      "Hera",
+      "Boros"
+    ],
+    "answer": "Hera",
+    "difficulty": "medium"
+  },
+  {
+    "id": 64,
+    "question": "What term describes the remote frontier worlds far from Alliance control?",
+    "options": [
+      "The Border",
+      "The Fringe",
+      "The Rim",
+      "The Outlands"
+    ],
+    "answer": "The Rim",
+    "difficulty": "medium"
+  },
+  {
+    "id": 65,
+    "question": "How many years after the war's end does the series begin?",
+    "options": [
+      "Three years",
+      "Ten years",
+      "Six years",
+      "Two years"
+    ],
+    "answer": "Six years",
+    "difficulty": "hard"
+  },
+  {
+    "id": 66,
+    "question": "How many years does Stitch Hessian spend in solitary confinement before being released?",
+    "options": [
+      "Two years",
+      "Four years",
+      "Six years",
+      "Ten years"
+    ],
+    "answer": "Four years",
+    "difficulty": "medium"
+  },
+  {
+    "id": 67,
+    "question": "Which actor plays Jayne Cobb?",
+    "options": [
+      "Michael Rooker",
+      "Ron Perlman",
+      "Adam Baldwin",
+      "Clancy Brown"
+    ],
+    "answer": "Adam Baldwin",
+    "difficulty": "medium"
+  },
+  {
+    "id": 68,
+    "question": "What is the name of the undercover Alliance agent posing as a passenger in the pilot episode?",
+    "options": [
+      "Dobson",
+      "Harken",
+      "Womack",
+      "Bester"
+    ],
+    "answer": "Dobson",
+    "difficulty": "hard"
+  },
+  {
+    "id": 69,
+    "question": "Where is Kaylee accidentally wounded when the undercover agent's gun discharges in the pilot?",
+    "options": [
+      "In the leg",
+      "In the stomach",
+      "In the shoulder",
+      "In the arm"
+    ],
+    "answer": "In the stomach",
+    "difficulty": "hard"
+  },
+  {
+    "id": 70,
+    "question": "What is the name of Serenity's ground vehicle, used for hauling cargo across a planet's surface?",
+    "options": [
+      "The Rover",
+      "The Hauler",
+      "The Mule",
+      "The Bronco"
+    ],
+    "answer": "The Mule",
+    "difficulty": "hard"
+  },
+  {
+    "id": 71,
+    "question": "The moon Whitefall is described as orbiting what planet?",
+    "options": [
+      "Boros",
+      "Athens",
+      "Regina",
+      "Persephone"
+    ],
+    "answer": "Athens",
+    "difficulty": "hard"
+  },
+  {
+    "id": 72,
+    "question": "What is the name of the mysterious mega-corporation whose logo recurs throughout the series?",
+    "options": [
+      "Alliance Dynamics",
+      "Red Sun Corp",
+      "Blue Sun",
+      "Ubiquisoft"
+    ],
+    "answer": "Blue Sun",
+    "difficulty": "hard"
+  },
+  {
+    "id": 73,
+    "question": "At what age was River sent away to the Alliance's Academy, according to Simon?",
+    "options": [
+      "Twelve",
+      "Sixteen",
+      "Fourteen",
+      "Ten"
+    ],
+    "answer": "Fourteen",
+    "difficulty": "hard"
+  },
+  {
+    "id": 74,
+    "question": "What is the name of the Alliance cruiser that intercepts Serenity in the pilot episode?",
+    "options": [
+      "The Magellan",
+      "The Perseus",
+      "The Dortmunder",
+      "The Valiant"
+    ],
+    "answer": "The Dortmunder",
+    "difficulty": "hard"
+  },
+  {
+    "id": 75,
+    "question": "What is the name of Persephone's central trading port, frequently visited by the crew?",
+    "options": [
+      "Silverhold Port",
+      "Meridian Docks",
+      "Eavesdown Docks",
+      "Newhall Port"
+    ],
+    "answer": "Eavesdown Docks",
+    "difficulty": "hard"
+  },
+  {
+    "id": 76,
+    "question": "What is the name of the abbey connected to Shepherd Book's mysterious past?",
+    "options": [
+      "Ashford Abbey",
+      "Southdown Abbey",
+      "Blackwood Abbey",
+      "Kingswell Abbey"
+    ],
+    "answer": "Southdown Abbey",
+    "difficulty": "hard"
+  },
+  {
+    "id": 77,
+    "question": "What class of Alliance cruiser intercepts Serenity in 'Bushwhacked'?",
+    "options": [
+      "Kestrel-class",
+      "Tohoku-class",
+      "Osprey-class",
+      "Falcon-class"
+    ],
+    "answer": "Tohoku-class",
+    "difficulty": "hard"
+  },
+  {
+    "id": 78,
+    "question": "What was the derelict ship's intended destination before it was attacked by Reavers, in 'Bushwhacked'?",
+    "options": [
+      "Persephone",
+      "Boros",
+      "Newhall",
+      "Regina"
+    ],
+    "answer": "Newhall",
+    "difficulty": "hard"
+  },
+  {
+    "id": 79,
+    "question": "For what category did Firefly win its sole Emmy Award in 2003?",
+    "options": [
+      "Outstanding Writing",
+      "Special Visual Effects",
+      "Outstanding Sound Editing",
+      "Outstanding Cinematography"
+    ],
+    "answer": "Special Visual Effects",
+    "difficulty": "hard"
+  },
+  {
+    "id": 80,
+    "question": "What gift does Jayne receive from grateful townsfolk in 'Our Mrs. Reynolds'?",
+    "options": [
+      "A harmonica",
+      "A pocket watch",
+      "A rainstick",
+      "A ceremonial dagger"
+    ],
+    "answer": "A rainstick",
+    "difficulty": "hard"
+  },
+  {
+    "id": 81,
+    "question": "What is the name of the frontier planet where colonists nearly burn River as a witch?",
+    "options": [
+      "Bernadette",
+      "Jiangyin",
+      "Regina",
+      "Boros"
+    ],
+    "answer": "Jiangyin",
+    "difficulty": "hard"
+  },
+  {
+    "id": 82,
+    "question": "What is the name of the Alliance cruiser that treats Shepherd Book after he's shot, in 'Safe'?",
+    "options": [
+      "The Perseus",
+      "The Valiant",
+      "The Magellan",
+      "The Odyssey"
+    ],
+    "answer": "The Magellan",
+    "difficulty": "hard"
+  },
+  {
+    "id": 83,
+    "question": "What is the name of Tracey's hometown, where the crew intends to deliver his body in 'The Message'?",
+    "options": [
+      "St. Lucy's",
+      "New Halcyon",
+      "St. Albans",
+      "Millbrook"
+    ],
+    "answer": "St. Albans",
+    "difficulty": "hard"
+  },
+  {
+    "id": 84,
+    "question": "What kind of stolen cargo does the crew try to sell to Patience in the pilot?",
+    "options": [
+      "Medical supplies",
+      "Ration bars",
+      "Machine parts",
+      "Ammunition"
+    ],
+    "answer": "Ration bars",
+    "difficulty": "hard"
+  },
+  {
+    "id": 85,
+    "question": "What is the name of the world where Companions like Inara receive their training?",
+    "options": [
+      "Ariel",
+      "Persephone",
+      "Sihnon",
+      "Londinium"
+    ],
+    "answer": "Sihnon",
+    "difficulty": "hard"
+  },
+  {
+    "id": 86,
+    "question": "What is the name of the Alliance's capital planet, seat of Parliament?",
+    "options": [
+      "Osiris",
+      "Sihnon",
+      "Ariel",
+      "Londinium"
+    ],
+    "answer": "Londinium",
+    "difficulty": "hard"
+  },
+  {
+    "id": 87,
+    "question": "How many shuttles does Serenity have attached to her hull?",
+    "options": [
+      "One",
+      "Three",
+      "Two",
+      "Four"
+    ],
+    "answer": "Two",
+    "difficulty": "hard"
+  },
+  {
+    "id": 88,
+    "question": "What is the full official name of the Alliance government?",
+    "options": [
+      "United Planetary Alliance",
+      "Union of Allied Planets",
+      "Confederated Systems Authority",
+      "Central Planetary Union"
+    ],
+    "answer": "Union of Allied Planets",
+    "difficulty": "hard"
+  },
+  {
+    "id": 89,
+    "question": "How often must Companions renew their license and undergo a physical, according to 'Ariel'?",
+    "options": [
+      "Monthly",
+      "Biannually",
+      "Annually",
+      "Every five years"
+    ],
+    "answer": "Annually",
+    "difficulty": "hard"
+  },
+  {
+    "id": 90,
+    "question": "What was the name of the production company Joss Whedon founded, which produced Firefly?",
+    "options": [
+      "Bad Robot",
+      "Mutant Enemy Productions",
+      "Dark Horse Entertainment",
+      "Bonanza Productions"
+    ],
+    "answer": "Mutant Enemy Productions",
+    "difficulty": "hard"
+  },
+  {
+    "id": 91,
+    "question": "What future movie star made his television debut playing a young Simon Tam in a childhood flashback in 'Safe'?",
+    "options": [
+      "Shia LaBeouf",
+      "Chris Pine",
+      "Zac Efron",
+      "Aaron Paul"
+    ],
+    "answer": "Zac Efron",
+    "difficulty": "hard"
+  },
+  {
+    "id": 92,
+    "question": "Which actress plays Kaylee Frye?",
+    "options": [
+      "Amy Acker",
+      "Charisma Carpenter",
+      "Jewel Staite",
+      "Eliza Dushku"
+    ],
+    "answer": "Jewel Staite",
+    "difficulty": "hard"
+  },
+  {
+    "id": 93,
+    "question": "Which actress plays Inara Serra?",
+    "options": [
+      "Sarah Michelle Gellar",
+      "Jennifer Garner",
+      "Morena Baccarin",
+      "Piper Perabo"
+    ],
+    "answer": "Morena Baccarin",
+    "difficulty": "hard"
+  },
+  {
+    "id": 94,
+    "question": "What sport do the crew improvise a version of in Serenity's cargo bay at the start of 'Bushwhacked'?",
+    "options": [
+      "Volleyball",
+      "Handball",
+      "Basketball",
+      "Dodgeball"
+    ],
+    "answer": "Basketball",
+    "difficulty": "hard"
+  }
+]
