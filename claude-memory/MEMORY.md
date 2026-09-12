@@ -1,0 +1,26 @@
+- [User: Trivia Gauntlet owner](user_trivia_gauntlet_owner.md) — solo owner/operator of triviagauntlet.app, focus on content pipeline + growth
+- [Reference: quiz repo docs](reference_quiz_docs.md) — PLATFORM-BEHAVIOR.md, SEO-TITLE-TEST.md, build-site.js pipeline, QA scripts
+- [Project: memory not persisted](project_memory_not_persisted.md) — Claude Code memory was empty this session; ~/.claude doesn't survive codespace rebuilds
+- [Feedback: tools branch sync](feedback_tools_branch_sync.md) — trivia-builder.html/storage-viewer.html live on `tools` branch; batch edits locally, push only when user says the round is done
+- [Feedback: cost-conscious AI calls](feedback_cost_conscious_ai_calls.md) — default to cheap/fast models and disable thinking on simple AI calls in user's own tools; don't offer model-picker UIs unasked
+- [Feedback: new show protocol](feedback_new_show_protocol.md) — full 8-step checklist for adding a show to triviagauntlet.app (themes.json, wordle/wordsearch words, build scripts, sitemap rules); append-only, never touch existing shows
+- [Project: interstitial first-open fix](project_interstitial_first_open_fix.md) — deferred admob.js change to spare new installs the first interstitial, plus the bug that broke attempt #1
+- [Feedback: verify before asserting](feedback_verify_before_asserting.md) — read this repo's files before stating facts, don't relay unverified subagent claims, never push unasked
+- [Project: RevenueCat remove ads](project_revenuecat_remove_ads.md) — ABANDONED 2026-08-22 (async entitlement race caused ad flicker); superseded by premium-adfree-app
+- [Feedback: stepwise terse guidance](feedback_stepwise_terse_guidance.md) — one dashboard step at a time, avoid nano in browser terminals, don't mention Ko-fi in app context
+- [Project: bio-link landing page analytics](project_bio_link_landing_page_analytics.md) — GA4 added, store_click event, Apple ct/pt + Google Play referrer deep links, why not merged with Supabase install system
+- [Project: premium ad-free app](project_premium_adfree_app.md) — separate paid Play app (plain WebView, UA-tag gating), web-side code done & held uncommitted, native build in progress
+- [Feedback: direct plain answers](feedback_direct_plain_answers.md) — lead with plain-English effect not jargon; avoid multi-choice questions when a default exists
+- [Project: iOS premium app](project_ios_premium_app.md) — WKWebView wrapper built+signed+shipped to TestFlight via GitHub Actions, no Mac rented; not yet device-tested or submitted
+- [Feedback: GitHub Actions dispatch vs re-run](feedback_github_actions_dispatch_vs_rerun.md) — "Re-run" replays the old commit's workflow code, only secrets refresh; use fresh "Run workflow" after code fixes
+- [Feedback: confirm before wide changes](feedback_confirm_before_wide_changes.md) — stop and wait for explicit yes before executing a site-wide/many-file edit, even if scope was narrated first
+- [Project: install tracking in Supabase](project_install_tracking_supabase.md) — install_counter/installs_log/daily_promo_dashboard map, install_report removed, new premium-app tracking
+- [Project: Hard Mode typed answers](project_hard_mode_typed_answers.md) — Challenge+Marathon typed-answer feature, matching rules, uncommitted, smoke-tested, 1,444-word review paused (continue on request)
+- [Project: Hard Mode accuracy eval](project_hard_mode_accuracy_eval.md) — 97.2% accuracy, kill switch + beta UI + feedback flow built, about to be committed 2026-08-25
+- [Project: NAPT game mode](project_napt_game_mode.md) — Name/Animal/Place/Thing feature spec decisions (2026-08-26), design phase, nothing implemented yet
+- [Project: online multiplayer Versus/Blitz](project_online_multiplayer_versus_catblitz.md) — real-time online mode; 2026-08-29: Continue-gate fix (SQL pending), open Q3 feedback bug, deferred dispute feature
+- [Project: Random Trivia mode](project_random_trivia_mode.md) — no-picking-required quiz, all 22 Daily Trivia themes, own page/lane, zero new game code needed
+- [Project: Daily Challenges hub](project_daily_challenges_hub.md) — homepage trio collapsed into one button + daily-challenges.html; homepage cards now 1 subtext line only
+- [Project: party mode multiplayer](project_party_mode_multiplayer.md) — 2026-09-03: scheduled start/countdown, mid-match rejoin, host-kick, free-text chat (shared w/ Blitz); uncommitted
+- [Feedback: no test during iteration](feedback_no_test_during_iteration.md) — don't re-run slow smoke tests after every small tweak; only at real checkpoints or when asked
+- [Feedback: surface migration steps](feedback_surface_migration_steps.md) — announce a required Supabase SQL migration immediately, don't wait to be asked
