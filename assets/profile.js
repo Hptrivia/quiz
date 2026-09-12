@@ -379,7 +379,7 @@ function _taggedPlayStoreUrl() {
 // Online Versus is gated additionally by its own match-length rule (see
 // versus-multiplayer.js) since one Best-of-20 match alone would blow the
 // whole allowance in a single match.
-const _WEB_LIMITS = { Q: 20, Ep: 10, VsOnline: 10, Wordle: 1, WS: 1 };
+const _WEB_LIMITS = { Q: 20, Ep: 1, VsOnline: 10, Wordle: 1, WS: 1 };
 
 const _isNative = !!(window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative))
   || _isPremiumApp;

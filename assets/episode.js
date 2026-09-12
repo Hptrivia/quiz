@@ -183,24 +183,9 @@ async function renderEpisodePage() {
     ? _resume.qResults.slice()
     : new Array(renderQuestions.length).fill(null);
 
-  // Cuts the episode short the moment the free-question wall is hit — instead
-  // of always letting the full episode play out for free first.
-  function renderMidRoundWall() {
-    if (typeof _clearMidQuiz === 'function') _clearMidQuiz("episode", theme.slug, safeEpisode);
-    gameBox.style.display = "none";
-    resultBox.style.display = "block";
-    resultBox.classList.remove("result-anim");
-    void resultBox.offsetWidth;
-    resultBox.classList.add("result-anim");
-    resultBox.innerHTML = `
-      <h2>Nice run!</h2>
-      <p class="daily-date">You answered ${currentIndex} of ${episodeQuestions.length} questions this episode — ${score} correct.</p>
-      ${typeof webWallHTML === 'function' ? webWallHTML(null, theme.title) : ''}
-    `;
-  }
-
   function renderResult() {
     if (typeof _clearMidQuiz === 'function') _clearMidQuiz("episode", theme.slug, safeEpisode);
+    if (typeof webAddEp === 'function') webAddEp();
     gameBox.style.display = "none";
     resultBox.style.display = "block";
     resultBox.classList.remove("result-anim");
@@ -338,7 +323,7 @@ async function renderEpisodePage() {
       ${webQCounterHTML()}
       <div class="cta-row">
         ${hasNextEpisode && !isWebEpLimit() ? `<a class="primary-btn" href="episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}" data-rewarded-href="episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}">Next Episode</a>` : ""}
-        ${hasNextEpisode && isWebEpLimit() ? webWallHTML(null, theme.title) : ""}
+        ${hasNextEpisode && isWebEpLimit() ? webWallHTML("Yay! You've played an episode", theme.title, "episodes") : ""}
         ${!hasNextEpisode && isWebEpLimit() ? webWallHTML("Want more Episode Mode trivia?", null, "episodes", null, true, "Download Trivia Gauntlet.") : ""}
       </div>
       ${shareHtml}
@@ -468,15 +453,8 @@ async function renderEpisodePage() {
 
     nextBtn.addEventListener("click", () => {
       currentIndex += 1;
-      // Counted per-question (not once per episode) so the free-question wall
-      // can interrupt an episode in progress — see renderMidRoundWall. Episode
-      // Mode shares the same 10-question web allowance as Marathon/Challenge/
-      // Survival now, not its own separate "1 free episode" budget.
-      if (typeof webAddEp === 'function') webAddEp(1);
       if (currentIndex >= episodeQuestions.length) {
         renderResult();
-      } else if (typeof isWebEpLimit === 'function' && isWebEpLimit()) {
-        renderMidRoundWall();
       } else {
         if (typeof _saveMidQuiz === 'function') _saveMidQuiz("episode", theme.slug, safeEpisode, { questions: renderQuestions, currentIndex, score, qResults });
         showQuestion(currentIndex);
