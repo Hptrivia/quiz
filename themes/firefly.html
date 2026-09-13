@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if(/TriviaGauntletPremium/.test(navigator.userAgent||''))document.documentElement.classList.add('premium-app');</script>
+  <meta charset="UTF-8" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Firefly Trivia Quiz &mdash; Questions &amp; Answers | Trivia Gauntlet</title>
+<meta name="description" content="Play the Firefly trivia quiz — 94 questions with answers. Test your knowledge in Marathon, Challenge, Survival, and more." />
+  <link rel="canonical" href="https://triviagauntlet.app/themes/firefly.html" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    if(!/TriviaGauntletPremium/.test(navigator.userAgent||''))gtag('config', 'G-E6BY9F2ZDT');
+  </script>
+
+  <link rel="apple-touch-icon" href="/assets/icon-192.png" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <meta property="og:title" content="Firefly Trivia Questions | Trivia Gauntlet" />
+  <meta property="og:description" content="Play the Firefly trivia quiz — 94 questions with answers. Test your knowledge in Marathon, Challenge, Survival, and more." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://triviagauntlet.app/themes/firefly.html" />
+  <meta property="og:image" content="https://triviagauntlet.app/assets/icon-192.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Firefly Trivia Questions | Trivia Gauntlet" />
+  <meta name="twitter:description" content="Play the Firefly trivia quiz — 94 questions with answers. Test your knowledge in Marathon, Challenge, Survival, and more." />
+  <meta name="twitter:image" content="https://triviagauntlet.app/assets/icon-192.png" />
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://triviagauntlet.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "TV",
+          "item": "https://triviagauntlet.app/categories/tv.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Firefly Trivia",
+          "item": "https://triviagauntlet.app/themes/firefly.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the name of the secret facility where River was experimented on?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Academy"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the name of Tracey's hometown, where the crew intends to deliver his body in 'The Message'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "St. Albans"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "At what battle does a flashback show Tracey serving alongside Mal and Zoe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Du-Khang"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What gift does Jayne receive from grateful townsfolk in 'Our Mrs. Reynolds'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A rainstick"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What was Jayne Cobb's job before he joined Serenity's crew?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mercenary"
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+</head>
+<body>
+  <main class="container narrow">
+    <div class="theme-top-links">
+      <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+      <span id="navAvatarSlot"></span>
+      <a href="../index.html" class="back-link">⌂ Home</a>
+    </div>
+
+    <div class="theme-search-wrap">
+      <div class="search-wrap">
+        <input id="themeSearchInput" class="theme-search-input" type="text" placeholder="Search themes..." autocomplete="off" />
+        <div id="themeSearchResults" class="search-results"></div>
+      </div>
+    </div>
+
+    <section class="panel">
+      <h1>Firefly Trivia Questions</h1>
+      <p class="theme-question-count">94 questions across multiple rounds</p>
+<p>A space-western trivia theme built around Firefly, following the crew of the ship Serenity as they take on jobs on the edges of a post-war solar system.</p>
+
+      
+      <div class="grid">
+        <a class="card" href="../challenge.html?theme=firefly&round=1">
+          <h3>Challenge Mode</h3>
+          <p>10-question quick rounds</p>
+        </a>
+
+        <a class="card" href="../play.html?theme=firefly">
+          <h3>Marathon Mode</h3>
+          <p>30-question rounds</p>
+        </a>
+
+        <a class="card" href="../survival.html?theme=firefly">
+          <h3>Survival Mode</h3>
+          <p>One mistake and the run ends</p>
+        </a>
+
+        <a class="card" href="../trivia-rush.html?theme=firefly">
+          <h3>Trivia Rush</h3>
+          <p>Score, streak, and multiplier run</p>
+        </a>
+
+        
+        <a class="card" href="../episode.html?theme=firefly">
+          <h3>Episode Mode</h3>
+          <p>🎬 Available by request</p>
+        </a>
+      
+
+        <a class="card" href="../versus.html?theme=firefly">
+          <h3>Versus Mode</h3>
+          <p>Play locally or online against friends</p>
+        </a>
+
+        <a class="card" href="../wordle/firefly.html">
+          <h3>Wordle</h3>
+          <p>Guess themed words</p>
+        </a>
+
+        <a class="card" href="../wordsearch/firefly.html">
+          <h3>Word Search</h3>
+          <p>Find hidden themed words</p>
+        </a>
+
+        
+        <a class="card" href="../fan-questions.html?theme=firefly">
+          <h3>Fan Section <span style="font-size:0.65rem;font-weight:700;background:#f97316;color:#fff;padding:2px 7px;border-radius:4px;vertical-align:middle;margin-left:6px;">BETA</span></h3>
+          <p>Community-created questions. Quality and difficulty may vary.</p>
+        </a>
+      
+
+      </div>
+
+      
+        <div class="theme-sample-questions">
+          <h2>Sample Questions</h2>
+          <p class="sq-hint">Tap an answer to reveal it.</p>
+          <ul>
+            <li>What is the name of the secret facility where River was experimented on? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">The Academy</span></li><li>What is the name of Tracey&#39;s hometown, where the crew intends to deliver his body in &#39;The Message&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">St. Albans</span></li><li>At what battle does a flashback show Tracey serving alongside Mal and Zoe? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Du-Khang</span></li><li>What gift does Jayne receive from grateful townsfolk in &#39;Our Mrs. Reynolds&#39;? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">A rainstick</span></li><li>What was Jayne Cobb&#39;s job before he joined Serenity&#39;s crew? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Mercenary</span></li><li>What is the title of Firefly&#39;s opening theme song? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">The Ballad of Serenity</span></li><li>Which actress plays Inara Serra? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Morena Baccarin</span></li><li>What do Simon and River pretend to be in order to be smuggled into the Ariel hospital? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Corpses</span></li><li>What alias does Saffron give herself when Mal first encounters her again? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Bridget</span></li><li>What military rank did Zoe hold at the Battle of Serenity Valley? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Corporal</span></li>
+          </ul>
+        </div>
+      
+      <p>Firefly trivia works because the show built a vivid crew and a lived-in space-western universe in just one season, and fans have kept its details alive ever since. Questions can be tested on Serenity&#39;s crew, their jobs, and the world of the Alliance and the Reavers.</p>
+      <p>A strong Firefly quiz can include Captain Malcolm Reynolds, Zoe and Wash, Inara, Jayne Cobb, Kaylee Frye, Simon and River Tam, the ship Serenity, the Alliance and the Unification War, the Reavers, and the crew&#39;s various jobs and close calls. It works because the short-lived series still packed in a distinct crew, a lived-in universe, and a devoted fanbase.</p>
+      <p>If you enjoy Firefly trivia, also try <a href="../themes/psych.html">Psych</a> and <a href="../themes/the-pitt.html">The Pitt</a> on Trivia Gauntlet.</p>
+      
+        <div class="theme-related-quizzes">
+          <h2>Related Quizzes</h2>
+          <div class="grid">
+            
+              <a class="card" href="../themes/psych.html">
+                <h3>Psych</h3>
+              </a>
+            
+              <a class="card" href="../themes/the-pitt.html">
+                <h3>The Pitt</h3>
+              </a>
+            
+              <a class="card" href="../themes/outlander.html">
+                <h3>Outlander</h3>
+              </a>
+            
+              <a class="card" href="../themes/wednesday.html">
+                <h3>Wednesday</h3>
+              </a>
+            
+              <a class="card" href="../themes/the-walking-dead.html">
+                <h3>The Walking Dead</h3>
+              </a>
+            
+          </div>
+        </div>
+      
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="../about.html">About</a>
+        <a class="footer-highlight" href="../how-it-works.html">How It Works</a>
+        <a class="footer-highlight" href="../contact.html">Contact</a>
+        <a href="../privacy.html">Privacy Policy</a>
+        <a href="../terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    async function setupThemePageSearch() {
+      const input = document.getElementById("themeSearchInput");
+      const results = document.getElementById("themeSearchResults");
+      if (!input || !results) return;
+
+      try {
+        const res = await fetch("../data/themes.json");
+        const themes = await res.json();
+
+        function render(items) {
+          if (!items.length) {
+            results.innerHTML = '<div class="search-item">No results found</div>';
+            return;
+          }
+
+          results.innerHTML = items.map(theme => `
+            <a class="search-item" href="../themes/${theme.slug}.html">${theme.title}</a>
+          `).join("");
+        }
+
+        input.addEventListener("focus", () => {
+          render(themes);
+          results.style.display = "block";
+        });
+
+        input.addEventListener("input", (e) => {
+          const value = e.target.value.trim().toLowerCase();
+          const filtered = themes.filter(theme =>
+            theme.title.toLowerCase().includes(value)
+          );
+          render(filtered);
+          results.style.display = "block";
+        });
+
+        document.addEventListener("click", (e) => {
+          if (!input.contains(e.target) && !results.contains(e.target)) {
+            results.style.display = "none";
+          }
+        });
+      } catch (err) {
+        console.error("Theme search failed", err);
+      }
+    }
+
+    setupThemePageSearch();
+  </script>
+  <script src="../assets/profile.js"></script>
+  <script src="../assets/admob.js"></script>
+  <script src="../assets/announcements.js"></script>
+</body>
+</html>

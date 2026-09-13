@@ -1,6 +1,142 @@
 [
   {
     "type": "theme",
+    "slug": "riddles",
+    "title": "Riddles",
+    "label": "General",
+    "date": "2026-09-13",
+    "url": "challenge.html?theme=riddles&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "the-gentlemen",
+    "title": "The Gentlemen",
+    "label": "TV",
+    "date": "2026-09-13",
+    "url": "challenge.html?theme=the-gentlemen&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "babylon-5",
+    "title": "Babylon 5",
+    "label": "TV",
+    "date": "2026-09-12",
+    "url": "challenge.html?theme=babylon-5&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "er",
+    "title": "ER",
+    "label": "TV",
+    "date": "2026-09-12",
+    "url": "challenge.html?theme=er&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "firefly",
+    "title": "Firefly",
+    "label": "TV",
+    "date": "2026-09-12",
+    "url": "challenge.html?theme=firefly&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "love-death-and-robots",
+    "title": "Love, Death & Robots",
+    "label": "TV",
+    "date": "2026-09-12",
+    "url": "challenge.html?theme=love-death-and-robots&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "teen-titans",
+    "title": "Teen Titans",
+    "label": "TV",
+    "date": "2026-09-12",
+    "url": "challenge.html?theme=teen-titans&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "the-marvelous-mrs-maisel",
+    "title": "The Marvelous Mrs. Maisel",
+    "label": "TV",
+    "date": "2026-09-12",
+    "url": "challenge.html?theme=the-marvelous-mrs-maisel&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "the-west-wing",
+    "title": "The West Wing",
+    "label": "TV",
+    "date": "2026-09-12",
+    "url": "challenge.html?theme=the-west-wing&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "barry",
+    "title": "Barry",
+    "label": "TV",
+    "date": "2026-09-09",
+    "url": "challenge.html?theme=barry&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "fringe",
+    "title": "Fringe",
+    "label": "TV",
+    "date": "2026-09-09",
+    "url": "challenge.html?theme=fringe&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "killing-eve",
+    "title": "Killing Eve",
+    "label": "TV",
+    "date": "2026-09-09",
+    "url": "challenge.html?theme=killing-eve&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "narcos",
+    "title": "Narcos",
+    "label": "TV",
+    "date": "2026-09-09",
+    "url": "challenge.html?theme=narcos&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "reacher",
+    "title": "Reacher",
+    "label": "TV",
+    "date": "2026-09-09",
+    "url": "challenge.html?theme=reacher&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "scandal",
+    "title": "Scandal",
+    "label": "TV",
+    "date": "2026-09-09",
+    "url": "challenge.html?theme=scandal&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "the-orville",
+    "title": "The Orville",
+    "label": "TV",
+    "date": "2026-09-09",
+    "url": "challenge.html?theme=the-orville&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "the-summer-i-turned-pretty",
+    "title": "The Summer I Turned Pretty",
+    "label": "TV",
+    "date": "2026-09-09",
+    "url": "challenge.html?theme=the-summer-i-turned-pretty&round=1"
+  },
+  {
+    "type": "theme",
     "slug": "28-days-later",
     "title": "28 Days Later",
     "label": "Movies",
@@ -22,141 +158,5 @@
     "label": "Sitcoms",
     "date": "2026-09-05",
     "url": "challenge.html?theme=american-dad&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "beauty-in-black",
-    "title": "Beauty in Black",
-    "label": "TV",
-    "date": "2026-09-05",
-    "url": "challenge.html?theme=beauty-in-black&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "billions",
-    "title": "Billions",
-    "label": "TV",
-    "date": "2026-09-05",
-    "url": "challenge.html?theme=billions&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "everybody-loves-raymond",
-    "title": "Everybody Loves Raymond",
-    "label": "Sitcoms",
-    "date": "2026-09-05",
-    "url": "challenge.html?theme=everybody-loves-raymond&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "how-to-train-your-dragon",
-    "title": "How to Train Your Dragon",
-    "label": "Movies",
-    "date": "2026-09-05",
-    "url": "challenge.html?theme=how-to-train-your-dragon&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "kung-fu-panda",
-    "title": "Kung Fu Panda",
-    "label": "Movies",
-    "date": "2026-09-05",
-    "url": "challenge.html?theme=kung-fu-panda&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "mission-impossible",
-    "title": "Mission: Impossible",
-    "label": "Movies",
-    "date": "2026-09-05",
-    "url": "challenge.html?theme=mission-impossible&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "peacemaker",
-    "title": "Peacemaker",
-    "label": "TV",
-    "date": "2026-09-05",
-    "url": "challenge.html?theme=peacemaker&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "person-of-interest",
-    "title": "Person of Interest",
-    "label": "TV",
-    "date": "2026-09-05",
-    "url": "challenge.html?theme=person-of-interest&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "saw",
-    "title": "Saw",
-    "label": "Movies",
-    "date": "2026-09-05",
-    "url": "challenge.html?theme=saw&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "six-feet-under",
-    "title": "Six Feet Under",
-    "label": "TV",
-    "date": "2026-09-05",
-    "url": "challenge.html?theme=six-feet-under&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "the-middle",
-    "title": "The Middle",
-    "label": "Sitcoms",
-    "date": "2026-09-05",
-    "url": "challenge.html?theme=the-middle&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "young-sheldon",
-    "title": "Young Sheldon",
-    "label": "Sitcoms",
-    "date": "2026-09-05",
-    "url": "challenge.html?theme=young-sheldon&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "hannibal",
-    "title": "Hannibal",
-    "label": "TV",
-    "date": "2026-08-28",
-    "url": "challenge.html?theme=hannibal&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "belgium",
-    "title": "Belgium",
-    "label": "Countries",
-    "date": "2026-08-27",
-    "url": "challenge.html?theme=belgium&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "cobra-kai",
-    "title": "Cobra Kai",
-    "label": "TV",
-    "date": "2026-08-27",
-    "url": "challenge.html?theme=cobra-kai&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "how-to-get-away-with-murder",
-    "title": "How to Get Away with Murder",
-    "label": "TV",
-    "date": "2026-08-27",
-    "url": "challenge.html?theme=how-to-get-away-with-murder&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "scream",
-    "title": "Scream",
-    "label": "Movies",
-    "date": "2026-08-27",
-    "url": "challenge.html?theme=scream&round=1"
   }
 ]

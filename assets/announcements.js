@@ -57,6 +57,12 @@ const APP_ANNOUNCEMENTS = [
     text: "Missing show, more questions on an existing theme, Episode Mode for something specific, or trivia for an event — request custom trivia and we'll build it.",
     cta: { label: "Learn More", href: "custom-requests.html" },
   },
+  {
+    icon: "🆕",
+    title: "17 new themes added!",
+    text: "Babylon 5, Barry, Firefly, ER, Killing Eve, Narcos, Reacher, The West Wing, Teen Titans, Riddles, and more.",
+    cta: { label: "See What's New", href: "recent.html" },
+  },
 ];
 
 function _cbAnnouncementHash(str) {

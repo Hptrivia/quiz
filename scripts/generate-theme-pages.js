@@ -491,7 +491,10 @@ function main() {
     `${SITE_URL}/categories/countries.html`,
     `${SITE_URL}/categories/newly-added.html`,
     `${SITE_URL}/remove-ads.html`,
-    `${SITE_URL}/trivia-rush.html`
+    `${SITE_URL}/trivia-rush.html`,
+    `${SITE_URL}/custom-requests.html`,
+    `${SITE_URL}/daily-challenges.html`,
+    `${SITE_URL}/random-trivia.html`
   ];
 
   const onlySlugs = process.env.ONLY_SLUGS ? new Set(process.env.ONLY_SLUGS.split(',')) : null;
