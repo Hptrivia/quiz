@@ -424,8 +424,10 @@ const MANUAL_ADD_SCHEMA = {
 // material (transcript generation) rather than editing something the user
 // already wrote — this is where an AI is most tempted to invent filler.
 const QUESTION_QUALITY_RULES = `Trivia question quality rules — every question you produce must follow ALL of these:
-- The correct answer must be a short, concrete, nameable thing: a person's name, a place, a specific object/item/title, a rank or role, a number or date, or similar — the kind of fact you could state in a few words.
+- HARD LIMIT: the correct answer must be 3 WORDS OR FEWER — a person's name, a place, a specific object/item/title, a rank or role, a number or date, or similar. Count the words before you finalize each answer. If it's 4+ words, cut it down to the shortest form that still identifies the fact (e.g. "the Chrysler Building" not "the tall silver building on the corner of Lexington") — and if it truly can't be shortened, skip the question.
 - NEVER write a question whose correct answer would have to be a full sentence, a quote, a description of what someone said/thought/felt, an adjective, an emotion, or an opinion. If the only accurate answer to something interesting in the text would be phrased that way, skip it rather than forcing it.
+- The 3 wrong options must also be 3 words or fewer each, matching the length and style of the correct answer.
+- Keep the question itself concise — one clear sentence. Do not embed long quotes, multi-sentence scene descriptions, or run-on setups into the question text.
 - Only ask about things a viewer/player who actually watched or read the finished work would know. A raw transcript/script often contains artifacts that never reach the audience — speaker-label names, stage/camera directions, scene-setting descriptions, writer's notes, "[laughs]"-style annotations. Never base a question on one of those; only use them to figure out what a viewer would have seen or heard on screen, and ask about that instead.
 - Do not invent filler questions just to hit a target count. Only write questions the source material clearly and directly supports. Returning fewer questions than the max is correct and expected if the material runs out of good material — never pad with guesses, trivial restatements, or invented details.
 - Each question must stand alone and make sense to someone who has seen/read the finished work, without needing the original text in front of them.`;
@@ -1521,8 +1523,14 @@ ${text}
     if(!textBlock) throw new Error("No response from model.");
     const parsed = JSON.parse(textBlock.text);
     const items = Array.isArray(parsed.questions) ? parsed.questions : [];
+    const MAX_ANSWER_WORDS = 3;
+    const MAX_QUESTION_CHARS = 200;
+    const wordCount = s => String(s).trim().split(/\s+/).filter(Boolean).length;
     const valid = items
       .filter(it => it && typeof it.question==="string" && Array.isArray(it.options) && it.options.length>=2 && typeof it.answer==="string")
+      .filter(it => it.question.length <= MAX_QUESTION_CHARS)
+      .filter(it => wordCount(it.answer) <= MAX_ANSWER_WORDS)
+      .filter(it => it.options.every(o => typeof o==="string" && wordCount(o) <= MAX_ANSWER_WORDS))
       .slice(0, count);
 
     if(!valid.length){
