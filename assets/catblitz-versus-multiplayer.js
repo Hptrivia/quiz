@@ -856,12 +856,6 @@ function mpShowResults() {
     <p class="cb-versus-winner">${winnerLine}</p>
   `;
 
-  const feedbackWrap = document.getElementById('cbFeedbackBoxWrap');
-  if (feedbackWrap) {
-    feedbackWrap.innerHTML = cbFeedbackBoxHtml();
-    cbBindFeedbackBox();
-  }
-
   mpRoom.rematchStarted = false;
   mpRoom.rematchReady = false;
   mpStartResultsPoll();

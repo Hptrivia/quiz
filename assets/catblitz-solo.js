@@ -166,12 +166,6 @@ function cbShowSoloResult(spinsUsed, gradeResult, categories, letter) {
   const spinAgainBox = document.getElementById("cbSpinAgainBox");
   if (containerEl) cbRenderResult(containerEl, gradeResult, { categories, contestable: true, letter, mode: "solo" });
 
-  const feedbackWrap = document.getElementById("cbFeedbackBoxWrap");
-  if (feedbackWrap) {
-    feedbackWrap.innerHTML = cbFeedbackBoxHtml();
-    cbBindFeedbackBox();
-  }
-
   if (!spinAgainBox) return;
 
   const limited = typeof isLimitedWeb === "function" && isLimitedWeb();

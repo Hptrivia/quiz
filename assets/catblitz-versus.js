@@ -255,12 +255,6 @@ function cbVersusShowFinal(state) {
     <p class="cb-versus-winner">🏆 ${_cbEscapeHtml(winner)} wins!</p>
   `;
 
-  const feedbackWrap = document.getElementById("cbFeedbackBoxWrap");
-  if (feedbackWrap) {
-    feedbackWrap.innerHTML = cbFeedbackBoxHtml();
-    cbBindFeedbackBox();
-  }
-
   cbVersusClearMatch();
 }
 

@@ -557,10 +557,6 @@ const HM_ASKED_KEY = 'tg_hard_mode_asked';
 const HM_SEEN_KEY = 'tg_hard_mode_seen';
 const HM_HINT_KEY = 'tg_hard_mode_hint_shown';
 const HM_HINT_MAX = 3;
-const HM_ROUNDS_KEY = 'tg_hard_mode_rounds_completed';
-const HM_FEEDBACK_ASKED_KEY = 'tg_hard_mode_feedback_asked';
-const HM_FEEDBACK_ROUNDS_THRESHOLD = 1;
-const HM_FEEDBACK_FORMSPREE = 'https://formspree.io/f/mpqybwea';
 
 function hmIsEnabled() {
   if (!HM_FEATURE_ENABLED) return false;
@@ -953,110 +949,10 @@ function hmResultHintHtml() {
   try { count = parseInt(localStorage.getItem(HM_HINT_KEY) || '0', 10) || 0; } catch {}
   if (count >= HM_HINT_MAX) return '';
   const enabled = hmIsEnabled();
-  // Don't stack with the feedback box below -- if it's about to render on
-  // this same result screen, let it own the message this one time instead
-  // of showing both.
-  if (enabled) {
-    let feedbackAsked = false;
-    try { feedbackAsked = localStorage.getItem(HM_FEEDBACK_ASKED_KEY) === 'true'; } catch {}
-    let rounds = 0;
-    try { rounds = parseInt(localStorage.getItem(HM_ROUNDS_KEY) || '0', 10) || 0; } catch {}
-    if (!feedbackAsked && (rounds + 1) >= HM_FEEDBACK_ROUNDS_THRESHOLD) return '';
-  }
   try { localStorage.setItem(HM_HINT_KEY, String(count + 1)); } catch {}
   return enabled
     ? `<p class="hm-hint-row">Not loving typed answers? Turn Hard Mode back off anytime in <a href="profile.html?tab=settings">Settings</a>.</p>`
     : `<p class="hm-hint-row">Prefer typing your own answers? Turn on Hard Mode in <a href="profile.html?tab=settings">Settings</a>.</p>`;
-}
-
-// Beta feedback prompt: only for players who currently have Hard Mode ON
-// (never shown on the normal multiple-choice path). Counts completed
-// rounds played with it on and shows once, after HM_FEEDBACK_ROUNDS_THRESHOLD
-// rounds, on that round's result screen. Call this once per finished round
-// (it does the counting itself); it returns the HTML to splice into the
-// result screen template, or '' if not eligible yet/already shown. Pair
-// with hmBindFeedbackBox() called right after the result HTML is in the DOM.
-function hmFeedbackBoxHtml() {
-  if (!HM_FEATURE_ENABLED || !hmIsEnabled()) return '';
-  let asked = false;
-  try { asked = localStorage.getItem(HM_FEEDBACK_ASKED_KEY) === 'true'; } catch {}
-  if (asked) return '';
-  let rounds = 0;
-  try { rounds = parseInt(localStorage.getItem(HM_ROUNDS_KEY) || '0', 10) || 0; } catch {}
-  rounds += 1;
-  try { localStorage.setItem(HM_ROUNDS_KEY, String(rounds)); } catch {}
-  if (rounds < HM_FEEDBACK_ROUNDS_THRESHOLD) return '';
-  // Intentionally NOT marked as shown/asked here -- it stays eligible and
-  // re-renders on every result screen from here on (see hmBindFeedbackBox)
-  // until the player actually dismisses it or sends feedback, so it can't be
-  // missed by someone who just clicks past a single round without noticing.
-  return `
-    <div class="hm-feedback-box" id="hmFeedbackBox">
-      <p class="hm-feedback-title">Enjoying typing your own answers instead of picking?</p>
-      <div class="hm-feedback-vote-row">
-        <button type="button" class="secondary-btn hm-feedback-vote" data-vote="keep">Keep it</button>
-        <button type="button" class="secondary-btn hm-feedback-vote" data-vote="not_for_me">Not for me</button>
-        <button type="button" class="hm-feedback-dismiss" id="hmFeedbackDismiss">No thanks</button>
-      </div>
-      <div id="hmFeedbackDetail" style="display:none;">
-        <textarea id="hmFeedbackText" class="form-input" placeholder="Anything else? (optional)"></textarea>
-        <button type="button" class="primary-btn" id="hmFeedbackSend">Send feedback</button>
-      </div>
-      <p class="hm-feedback-sent" id="hmFeedbackSent" style="display:none;">Thanks for the feedback!</p>
-    </div>
-  `;
-}
-
-// Wires up the interactive bits of hmFeedbackBoxHtml() -- must be called
-// after that HTML is actually in the DOM (it's a plain string spliced into
-// a result-screen template, so it has no listeners of its own yet). No-ops
-// safely if the box wasn't rendered this time.
-function hmBindFeedbackBox() {
-  const box = document.getElementById('hmFeedbackBox');
-  if (!box) return;
-  let vote = '';
-  const detail = document.getElementById('hmFeedbackDetail');
-  const sendBtn = document.getElementById('hmFeedbackSend');
-  const dismissBtn = document.getElementById('hmFeedbackDismiss');
-  const sentMsg = document.getElementById('hmFeedbackSent');
-  const textArea = document.getElementById('hmFeedbackText');
-  const finish = () => { try { localStorage.setItem(HM_FEEDBACK_ASKED_KEY, 'true'); } catch {} };
-  box.querySelectorAll('.hm-feedback-vote').forEach(btn => {
-    btn.addEventListener('click', () => {
-      vote = btn.dataset.vote;
-      box.querySelectorAll('.hm-feedback-vote').forEach(b => b.classList.remove('selected'));
-      btn.classList.add('selected');
-      if (detail) detail.style.display = 'block';
-      if (typeof gtag === 'function') gtag('event', 'hard_mode_feedback_vote_' + vote);
-    });
-  });
-  if (dismissBtn) dismissBtn.addEventListener('click', () => {
-    finish();
-    box.style.display = 'none';
-    if (typeof gtag === 'function') gtag('event', 'hard_mode_feedback_dismissed', {});
-  });
-  if (sendBtn) sendBtn.addEventListener('click', async () => {
-    sendBtn.disabled = true;
-    sendBtn.textContent = 'Sending...';
-    try {
-      await fetch(HM_FEEDBACK_FORMSPREE, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({
-          type: 'hard_mode_feedback',
-          vote: vote || 'no_vote',
-          message: textArea ? textArea.value.trim() : '',
-          page: location.pathname + location.search,
-          _subject: 'Trivia Gauntlet Hard Mode Feedback',
-        }),
-      });
-    } catch {}
-    finish();
-    if (detail) detail.style.display = 'none';
-    box.querySelectorAll('.hm-feedback-vote, .hm-feedback-dismiss').forEach(el => el.style.display = 'none');
-    if (sentMsg) sentMsg.style.display = 'block';
-    if (typeof gtag === 'function') gtag('event', 'hard_mode_feedback_sent_' + (vote || 'no_vote'));
-  });
 }
 
 async function renderMultiThemeMarathon() {
@@ -1308,7 +1204,6 @@ async function renderMultiThemeMarathon() {
       <h2>Quiz Complete</h2>
       ${cumScoreLine(score, pageQuestions.length, cum)}
       ${hmResultHintHtml()}
-      ${hmFeedbackBoxHtml()}
       <p class="result-tier">${getMarathonTier(score, pageQuestions.length)}</p>
       <div id="mashupMarathonBreakdown"></div>
       ${typeof webQCounterHTML === 'function' ? webQCounterHTML() : ''}
@@ -1336,7 +1231,6 @@ async function renderMultiThemeMarathon() {
     if (!isRandomTrivia) {
       document.getElementById("mashupMarathonBreakdown").appendChild(renderMashupThemeBreakdown(themeScores, selectedThemes, colorBySlug));
     }
-    hmBindFeedbackBox();
     if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
     if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Reveal Answers', 'Reveal Answers', 'See the correct answer for every question you missed — free in the app, no limits.');
     const msInput = document.getElementById("mashupMarathonSearchInput");
@@ -1759,7 +1653,6 @@ const relatedThemesHtml = `
     <h2>Quiz Complete</h2>
     ${cumScoreLine(quizState.score, quizState.questions.length, cum)}
     ${hmResultHintHtml()}
-    ${hmFeedbackBoxHtml()}
     <p class="result-tier">${tierText}</p>
     ${typeof webQCounterHTML === 'function' ? webQCounterHTML() : ''}
     <div class="cta-row">
@@ -1784,7 +1677,6 @@ const relatedThemesHtml = `
 
   if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
   if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Reveal Answers', 'Reveal Answers', 'See the correct answer for every question you missed — free in the app, no limits.');
-  hmBindFeedbackBox();
 
   const resultSearchInput = document.getElementById("resultThemeSearchInput");
 const resultSearchResults = document.getElementById("resultThemeSearchResults");

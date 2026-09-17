@@ -247,7 +247,6 @@ async function renderMultiThemeChallenge() {
       <h2>Round ${safeRound} Complete</h2>
       ${cumScoreLine(score, roundQuestions.length, cum)}
       ${hmResultHintHtml()}
-      ${hmFeedbackBoxHtml()}
       <div id="mashupChallengeBreakdown"></div>
       ${webQCounterHTML()}
       <div class="cta-row">
@@ -274,7 +273,6 @@ async function renderMultiThemeChallenge() {
     if (!isRandomTrivia) {
       document.getElementById("mashupChallengeBreakdown").appendChild(renderMashupThemeBreakdown(themeScores, selectedThemes, colorBySlug));
     }
-    hmBindFeedbackBox();
     if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
     if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Reveal Answers', 'Reveal Answers', 'See the correct answer for every question you missed — free in the app, no limits.');
     const msInput = document.getElementById("mashupChallengeSearchInput");
@@ -734,7 +732,6 @@ async function renderChallengePage() {
       <h2>Round ${safeRound} Complete</h2>
       ${cumScoreLine(state.score, state.questions.length, cum)}
       ${hmResultHintHtml()}
-      ${hmFeedbackBoxHtml()}
       <button type="button" class="challenge-share-link" data-share-link="${roundLink}">🔗 Copy link &mdash; challenge a friend to these 10 questions</button>
       ${webQCounterHTML()}
       <div class="cta-row">
@@ -758,7 +755,6 @@ async function renderChallengePage() {
 
     if (typeof injectRevealMissedButton === 'function') injectRevealMissedButton(wrongQuestions, resultBox.querySelector('.cta-row'));
     if (typeof injectWebFeatureTease === 'function') injectWebFeatureTease(resultBox.querySelector('.cta-row'), 'Reveal Answers', 'Reveal Answers', 'See the correct answer for every question you missed — free in the app, no limits.');
-    hmBindFeedbackBox();
 
     const resultSearchInput = document.getElementById("challengeResultThemeSearchInput");
     const resultSearchResults = document.getElementById("challengeResultThemeSearchResults");

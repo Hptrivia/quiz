@@ -2108,7 +2108,7 @@ a.theme-stat-card:active,
   left: 50%;
   transform: translateX(-50%) translateY(-16px);
   opacity: 0;
-  z-index: 9990;
+  z-index: 10001; /* above .as-modal-overlay (10000) so it stays visible/tappable if both show at once */
   width: min(420px, calc(100vw - 24px));
   background: #1e293b;
   border: 1px solid #334155;
@@ -2762,47 +2762,77 @@ body.in-app .join-mp-entry { display: block; }
   vertical-align: middle;
 }
 
-/* Post-round feedback prompt, shown once after two Hard Mode rounds -- see
-   hmFeedbackBoxHtml/hmBindFeedbackBox in app.js. */
-.hm-feedback-box {
-  margin: 20px 0;
-  padding: 16px;
-  border: 1px solid var(--border-color, rgba(255,255,255,0.12));
-  border-radius: 10px;
-}
-.hm-feedback-title {
-  font-weight: 600;
-  margin: 0 0 12px;
-}
-.hm-feedback-vote-row {
+/* "Where did you find us?" attribution survey -- see initAttributionSurvey
+   in assets/attribution-survey.js. Centered modal, not a corner toast, since
+   it's asking something rather than just announcing something. */
+.as-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
   display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 12px;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 16px;
 }
-.hm-feedback-vote.selected {
+.as-modal {
+  background: var(--card-bg, #1e293b);
+  border: 1px solid var(--border, rgba(255,255,255,0.08));
+  border-radius: 14px;
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+  text-align: center;
+}
+.as-modal-title {
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin: 0 0 6px;
+}
+.as-modal-sub {
+  color: var(--muted-text, #94a3b8);
+  font-size: 0.84rem;
+  margin: 0 0 16px;
+}
+.as-option-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.as-option {
+  width: 100%;
+  text-align: left;
+}
+.as-option.selected {
   border-color: #f5a623;
   color: #f5a623;
 }
-.hm-feedback-box textarea.form-input {
+.as-detail {
+  margin-top: 14px;
+  text-align: left;
+}
+.as-detail textarea.form-input {
   width: 100%;
-  min-height: 60px;
-  margin-bottom: 12px;
+  min-height: 56px;
+  margin-bottom: 10px;
   resize: vertical;
 }
-.hm-feedback-sent {
+.as-detail .primary-btn { width: 100%; }
+.as-thanks {
   font-weight: 600;
   color: var(--feedback-correct);
+  margin: 8px 0 0;
 }
-.hm-feedback-dismiss {
+.as-skip {
   background: none;
   border: none;
   color: var(--muted-text);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   text-decoration: underline;
   cursor: pointer;
   padding: 0;
-  margin-left: 12px;
+  margin-top: 14px;
 }
 
 /* Shared free-text chat — Category Blitz Versus's between-round chat and
