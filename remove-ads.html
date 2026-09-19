@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <script>if(/TriviaGauntletPremium/.test(navigator.userAgent||''))document.documentElement.classList.add('premium-app');</script>
+<script>if(window.Capacitor&&(window.Capacitor.isNativePlatform?.()||window.Capacitor.isNative))document.documentElement.classList.add('native-app');</script>
+<style>#raAppOffer{display:none}.native-app #raWebOffer{display:none}.native-app #raAppOffer{display:block}</style>
   <meta charset="UTF-8" />
   <link rel="manifest" href="/manifest.json" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
@@ -24,7 +26,7 @@
 
       <p id="premiumIndicator" style="display:none;color:#4ade80;font-weight:600;margin-bottom:14px;"></p>
 
-      <div id="raAppOffer" style="display:none">
+      <div id="raAppOffer">
         <p>One purchase, unlocked for good — no subscription, nothing to watch.</p>
 
         <ul class="benefits-list">
