@@ -1,6 +1,150 @@
 [
   {
     "type": "theme",
+    "slug": "my-hero-academia",
+    "title": "My Hero Academia",
+    "label": "Anime",
+    "date": "2026-09-20",
+    "url": "challenge.html?theme=my-hero-academia&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "planet-of-the-apes",
+    "title": "Planet of the Apes",
+    "label": "Movies",
+    "date": "2026-09-20",
+    "url": "challenge.html?theme=planet-of-the-apes&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "pluribus",
+    "title": "Pluribus",
+    "label": "TV",
+    "date": "2026-09-20",
+    "url": "challenge.html?theme=pluribus&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "titanic",
+    "title": "Titanic",
+    "label": "Movies",
+    "date": "2026-09-20",
+    "url": "challenge.html?theme=titanic&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "adults",
+    "title": "Adults",
+    "label": "Sitcoms",
+    "date": "2026-09-19",
+    "url": "challenge.html?theme=adults&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "american-gods",
+    "title": "American Gods",
+    "label": "TV",
+    "date": "2026-09-19",
+    "url": "challenge.html?theme=american-gods&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "back-to-the-future",
+    "title": "Back to the Future",
+    "label": "Movies",
+    "date": "2026-09-19",
+    "url": "challenge.html?theme=back-to-the-future&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "better-call-saul",
+    "title": "Better Call Saul",
+    "label": "TV",
+    "date": "2026-09-19",
+    "url": "challenge.html?theme=better-call-saul&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "cowboy-bebop",
+    "title": "Cowboy Bebop",
+    "label": "Anime",
+    "date": "2026-09-19",
+    "url": "challenge.html?theme=cowboy-bebop&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "godzilla-x-kong",
+    "title": "Godzilla x Kong",
+    "label": "Movies",
+    "date": "2026-09-19",
+    "url": "challenge.html?theme=godzilla-x-kong&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "hunter-x-hunter",
+    "title": "Hunter x Hunter",
+    "label": "Anime",
+    "date": "2026-09-19",
+    "url": "challenge.html?theme=hunter-x-hunter&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "k-pop",
+    "title": "K-Pop",
+    "label": "General",
+    "date": "2026-09-19",
+    "url": "challenge.html?theme=k-pop&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "key-and-peele",
+    "title": "Key & Peele",
+    "label": "TV",
+    "date": "2026-09-19",
+    "url": "challenge.html?theme=key-and-peele&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "kpop-demon-hunters",
+    "title": "KPop Demon Hunters",
+    "label": "Movies",
+    "date": "2026-09-19",
+    "url": "challenge.html?theme=kpop-demon-hunters&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "lioness",
+    "title": "Lioness",
+    "label": "TV",
+    "date": "2026-09-19",
+    "url": "challenge.html?theme=lioness&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "monster",
+    "title": "Monster",
+    "label": "Anime",
+    "date": "2026-09-19",
+    "url": "challenge.html?theme=monster&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "one-punch-man",
+    "title": "One Punch Man",
+    "label": "Anime",
+    "date": "2026-09-19",
+    "url": "challenge.html?theme=one-punch-man&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "vinland-saga",
+    "title": "Vinland Saga",
+    "label": "Anime",
+    "date": "2026-09-19",
+    "url": "challenge.html?theme=vinland-saga&round=1"
+  },
+  {
+    "type": "theme",
     "slug": "riddles",
     "title": "Riddles",
     "label": "General",
@@ -14,149 +158,5 @@
     "label": "TV",
     "date": "2026-09-13",
     "url": "challenge.html?theme=the-gentlemen&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "babylon-5",
-    "title": "Babylon 5",
-    "label": "TV",
-    "date": "2026-09-12",
-    "url": "challenge.html?theme=babylon-5&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "er",
-    "title": "ER",
-    "label": "TV",
-    "date": "2026-09-12",
-    "url": "challenge.html?theme=er&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "firefly",
-    "title": "Firefly",
-    "label": "TV",
-    "date": "2026-09-12",
-    "url": "challenge.html?theme=firefly&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "love-death-and-robots",
-    "title": "Love, Death & Robots",
-    "label": "TV",
-    "date": "2026-09-12",
-    "url": "challenge.html?theme=love-death-and-robots&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "teen-titans",
-    "title": "Teen Titans",
-    "label": "TV",
-    "date": "2026-09-12",
-    "url": "challenge.html?theme=teen-titans&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "the-marvelous-mrs-maisel",
-    "title": "The Marvelous Mrs. Maisel",
-    "label": "TV",
-    "date": "2026-09-12",
-    "url": "challenge.html?theme=the-marvelous-mrs-maisel&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "the-west-wing",
-    "title": "The West Wing",
-    "label": "TV",
-    "date": "2026-09-12",
-    "url": "challenge.html?theme=the-west-wing&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "barry",
-    "title": "Barry",
-    "label": "TV",
-    "date": "2026-09-09",
-    "url": "challenge.html?theme=barry&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "fringe",
-    "title": "Fringe",
-    "label": "TV",
-    "date": "2026-09-09",
-    "url": "challenge.html?theme=fringe&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "killing-eve",
-    "title": "Killing Eve",
-    "label": "TV",
-    "date": "2026-09-09",
-    "url": "challenge.html?theme=killing-eve&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "narcos",
-    "title": "Narcos",
-    "label": "TV",
-    "date": "2026-09-09",
-    "url": "challenge.html?theme=narcos&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "reacher",
-    "title": "Reacher",
-    "label": "TV",
-    "date": "2026-09-09",
-    "url": "challenge.html?theme=reacher&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "scandal",
-    "title": "Scandal",
-    "label": "TV",
-    "date": "2026-09-09",
-    "url": "challenge.html?theme=scandal&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "the-orville",
-    "title": "The Orville",
-    "label": "TV",
-    "date": "2026-09-09",
-    "url": "challenge.html?theme=the-orville&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "the-summer-i-turned-pretty",
-    "title": "The Summer I Turned Pretty",
-    "label": "TV",
-    "date": "2026-09-09",
-    "url": "challenge.html?theme=the-summer-i-turned-pretty&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "28-days-later",
-    "title": "28 Days Later",
-    "label": "Movies",
-    "date": "2026-09-05",
-    "url": "challenge.html?theme=28-days-later&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "agents-of-shield",
-    "title": "Agents of S.H.I.E.L.D.",
-    "label": "TV",
-    "date": "2026-09-05",
-    "url": "challenge.html?theme=agents-of-shield&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "american-dad",
-    "title": "American Dad",
-    "label": "Sitcoms",
-    "date": "2026-09-05",
-    "url": "challenge.html?theme=american-dad&round=1"
   }
 ]

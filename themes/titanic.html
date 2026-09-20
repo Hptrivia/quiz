@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if(/TriviaGauntletPremium/.test(navigator.userAgent||''))document.documentElement.classList.add('premium-app');</script>
+  <meta charset="UTF-8" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Titanic Trivia Quiz &mdash; Questions &amp; Answers | Trivia Gauntlet</title>
+<meta name="description" content="Play the Titanic trivia quiz — 90 questions with answers. Test your knowledge in Marathon, Challenge, Survival, and more." />
+  <link rel="canonical" href="https://triviagauntlet.app/themes/titanic.html" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    if(!/TriviaGauntletPremium/.test(navigator.userAgent||''))gtag('config', 'G-E6BY9F2ZDT');
+  </script>
+
+  <link rel="apple-touch-icon" href="/assets/icon-192.png" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <meta property="og:title" content="Titanic Trivia Questions | Trivia Gauntlet" />
+  <meta property="og:description" content="Play the Titanic trivia quiz — 90 questions with answers. Test your knowledge in Marathon, Challenge, Survival, and more." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://triviagauntlet.app/themes/titanic.html" />
+  <meta property="og:image" content="https://triviagauntlet.app/assets/icon-192.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Titanic Trivia Questions | Trivia Gauntlet" />
+  <meta name="twitter:description" content="Play the Titanic trivia quiz — 90 questions with answers. Test your knowledge in Marathon, Challenge, Survival, and more." />
+  <meta name="twitter:image" content="https://triviagauntlet.app/assets/icon-192.png" />
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://triviagauntlet.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Movies",
+          "item": "https://triviagauntlet.app/categories/movies.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Titanic Trivia",
+          "item": "https://triviagauntlet.app/themes/titanic.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does old Rose say everyone called the Titanic?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Ship of Dreams"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who composed the film's score?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "James Horner"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What was Lovett best known for finding before he went after the Titanic?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Spanish gold"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many minutes before the ship sails does Jack win his ticket?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Five"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the expedition's deep-sea submersibles called?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mir"
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+</head>
+<body>
+  <main class="container narrow">
+    <div class="theme-top-links">
+      <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+      <span id="navAvatarSlot"></span>
+      <a href="../index.html" class="back-link">⌂ Home</a>
+    </div>
+
+    <div class="theme-search-wrap">
+      <div class="search-wrap">
+        <input id="themeSearchInput" class="theme-search-input" type="text" placeholder="Search themes..." autocomplete="off" />
+        <div id="themeSearchResults" class="search-results"></div>
+      </div>
+    </div>
+
+    <section class="panel">
+      <h1>Titanic Trivia Questions</h1>
+      <p class="theme-question-count">90 questions across multiple rounds</p>
+<p>A romance and disaster movie trivia theme focused on Titanic, following Jack and Rose aboard the doomed ship and the treasure hunters who search the wreck.</p>
+
+      
+      <div class="grid">
+        <a class="card" href="../challenge.html?theme=titanic&round=1">
+          <h3>Challenge Mode</h3>
+          <p>10-question quick rounds</p>
+        </a>
+
+        <a class="card" href="../play.html?theme=titanic">
+          <h3>Marathon Mode</h3>
+          <p>30-question rounds</p>
+        </a>
+
+        <a class="card" href="../survival.html?theme=titanic">
+          <h3>Survival Mode</h3>
+          <p>One mistake and the run ends</p>
+        </a>
+
+        <a class="card" href="../trivia-rush.html?theme=titanic">
+          <h3>Trivia Rush</h3>
+          <p>Score, streak, and multiplier run</p>
+        </a>
+
+        
+
+        <a class="card" href="../versus.html?theme=titanic">
+          <h3>Versus Mode</h3>
+          <p>Play locally or online against friends</p>
+        </a>
+
+        <a class="card" href="../wordle/titanic.html">
+          <h3>Wordle</h3>
+          <p>Guess themed words</p>
+        </a>
+
+        <a class="card" href="../wordsearch/titanic.html">
+          <h3>Word Search</h3>
+          <p>Find hidden themed words</p>
+        </a>
+
+        
+        <a class="card" href="../fan-questions.html?theme=titanic">
+          <h3>Fan Section <span style="font-size:0.65rem;font-weight:700;background:#f97316;color:#fff;padding:2px 7px;border-radius:4px;vertical-align:middle;margin-left:6px;">BETA</span></h3>
+          <p>Community-created questions. Quality and difficulty may vary.</p>
+        </a>
+      
+
+      </div>
+
+      
+        <div class="theme-sample-questions">
+          <h2>Sample Questions</h2>
+          <p class="sq-hint">Tap an answer to reveal it.</p>
+          <ul>
+            <li>What does old Rose say everyone called the Titanic? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">The Ship of Dreams</span></li><li>Who composed the film&#39;s score? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">James Horner</span></li><li>What was Lovett best known for finding before he went after the Titanic? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Spanish gold</span></li><li>How many minutes before the ship sails does Jack win his ticket? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Five</span></li><li>What are the expedition&#39;s deep-sea submersibles called? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Mir</span></li><li>Which ride does Jack promise Rose they will go on at the pier? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">The roller coaster</span></li><li>How much money does Cal tell Lovejoy to give Jack for saving Rose? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Twenty dollars</span></li><li>What job does Ruth fear ending up in if Rose does not marry Cal? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">A seamstress</span></li><li>What is the name of the research ship Lovett&#39;s team works from? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Keldysh</span></li><li>According to the treasure hunters&#39; research, where did Rose move after marrying? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Cedar Rapids</span></li>
+          </ul>
+        </div>
+      
+      <p>Titanic trivia works because the film is full of memorable characters, quotable lines, and precise details about the ship, the passengers, and the night of the sinking. Fans can be tested on both the love story and the disaster.</p>
+      <p>A strong Titanic quiz can include Jack Dawson, Rose, Cal Hockley, Ruth, Brock Lovett, Fabrizio, Tommy, Molly Brown, the Heart of the Ocean, the Mir submersibles, and the Irish mother&#39;s Tir na nOg bedtime story. It works because it mixes romance, real history, and a well-known disaster into a film fans know scene by scene.</p>
+      <p>If you enjoy Titanic trivia, also try <a href="../themes/dc-movies.html">DC Movies</a> and <a href="../themes/pirates-of-the-caribbean.html">Pirates of the Caribbean</a> on Trivia Gauntlet.</p>
+      
+        <div class="theme-related-quizzes">
+          <h2>Related Quizzes</h2>
+          <div class="grid">
+            
+              <a class="card" href="../themes/dc-movies.html">
+                <h3>DC Movies</h3>
+              </a>
+            
+              <a class="card" href="../themes/pirates-of-the-caribbean.html">
+                <h3>Pirates of the Caribbean</h3>
+              </a>
+            
+              <a class="card" href="../themes/godzilla-x-kong.html">
+                <h3>Godzilla x Kong</h3>
+              </a>
+            
+              <a class="card" href="../themes/one-battle-after-another.html">
+                <h3>One Battle After Another</h3>
+              </a>
+            
+              <a class="card" href="../themes/lord-of-the-rings.html">
+                <h3>Lord of The Rings</h3>
+              </a>
+            
+          </div>
+        </div>
+      
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="../about.html">About</a>
+        <a class="footer-highlight" href="../how-it-works.html">How It Works</a>
+        <a class="footer-highlight" href="../contact.html">Contact</a>
+        <a href="../privacy.html">Privacy Policy</a>
+        <a href="../terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    async function setupThemePageSearch() {
+      const input = document.getElementById("themeSearchInput");
+      const results = document.getElementById("themeSearchResults");
+      if (!input || !results) return;
+
+      try {
+        const res = await fetch("../data/themes.json");
+        const themes = await res.json();
+
+        function render(items) {
+          if (!items.length) {
+            results.innerHTML = '<div class="search-item">No results found</div>';
+            return;
+          }
+
+          results.innerHTML = items.map(theme => `
+            <a class="search-item" href="../themes/${theme.slug}.html">${theme.title}</a>
+          `).join("");
+        }
+
+        input.addEventListener("focus", () => {
+          render(themes);
+          results.style.display = "block";
+        });
+
+        input.addEventListener("input", (e) => {
+          const value = e.target.value.trim().toLowerCase();
+          const filtered = themes.filter(theme =>
+            theme.title.toLowerCase().includes(value)
+          );
+          render(filtered);
+          results.style.display = "block";
+        });
+
+        document.addEventListener("click", (e) => {
+          if (!input.contains(e.target) && !results.contains(e.target)) {
+            results.style.display = "none";
+          }
+        });
+      } catch (err) {
+        console.error("Theme search failed", err);
+      }
+    }
+
+    setupThemePageSearch();
+  </script>
+  <script src="../assets/profile.js"></script>
+  <script src="../assets/admob.js"></script>
+  <script src="../assets/announcements.js"></script>
+</body>
+</html>

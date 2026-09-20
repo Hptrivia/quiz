@@ -63,6 +63,12 @@ const APP_ANNOUNCEMENTS = [
     text: "Babylon 5, Barry, Firefly, ER, Killing Eve, Narcos, Reacher, The West Wing, Teen Titans, Riddles, and more.",
     cta: { label: "See What's New", href: "recent.html" },
   },
+  {
+    icon: "🆕",
+    title: "18 new themes added!",
+    text: "Back to the Future, Better Call Saul, Titanic, Hunter x Hunter, K-Pop, Planet of the Apes, Pluribus, Vinland Saga, and more.",
+    cta: { label: "See What's New", href: "recent.html" },
+  },
 ];
 
 function _cbAnnouncementHash(str) {
