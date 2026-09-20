@@ -9,8 +9,8 @@
 create table if not exists attribution_survey (
   id          bigint generated always as identity primary key,
   created_at  timestamptz not null default now(),
-  source      text not null,   -- google_search / reddit_web / reddit_app / other
-  detail      text,            -- optional free text: search term / show or theme (for Reddit) / wherever
+  source      text not null,   -- google_search / reddit / other (older rows may hold reddit_web_link / reddit_app_link)
+  detail      text,            -- optional free text: search term / show or subreddit (for Reddit) / wherever
   platform    text,            -- android / ios (Capacitor.getPlatform())
   session_id  text             -- tg_sid, same stable per-device id used elsewhere
 );

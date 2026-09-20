@@ -22,10 +22,9 @@ const AS_SHOW_ON_OPENS = [1, 2, 4];
 const AS_MAX_OPENS = 4; // once we're past this open, stop counting/checking entirely
 
 const AS_OPTIONS = [
-  { id: 'google_search',    label: 'Google Search',                    placeholder: 'What did you search for? (optional)' },
-  { id: 'reddit_web_link',  label: 'Reddit (via website link)',        placeholder: 'Which show or theme? (optional)' },
-  { id: 'reddit_app_link',  label: 'Reddit (via direct app install link)', placeholder: 'Which show or theme? (optional)' },
-  { id: 'other',            label: 'Other',                            placeholder: 'Where did you find us? (optional)' },
+  { id: 'google_search',    label: 'Google Search',                    placeholder: 'What did you search for?' },
+  { id: 'reddit',           label: 'Reddit',                           placeholder: 'Which show or subreddit did you find us on?' },
+  { id: 'other',            label: 'Other',                            placeholder: 'Where did you find us?' },
 ];
 
 function _asNative() {
