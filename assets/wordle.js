@@ -241,7 +241,7 @@ async function renderWordleMashupMode(themesParam) {
       btn.className = "secondary-btn wordle-reveal-btn";
       progressEl.appendChild(btn);
       progressEl.style.position = "relative";
-      btn.addEventListener("click", useReveal);
+      btn.addEventListener("click", requestReveal);
     }
     const left = 2 - revealsUsed;
     if (left <= 0 || gameOver) {
@@ -276,6 +276,19 @@ async function renderWordleMashupMode(themesParam) {
     renderBoard();
     renderKeyboard();
     saveMidGame();
+  }
+
+  // Non-premium in-app: a reveal costs a rewarded ad, same treatment as
+  // Marathon/Challenge's "Reveal Answers" (injectRevealMissedButton in
+  // admob.js). Free on web and for premium users — this only gates the
+  // ad prompt, useReveal() still enforces the real 2-per-game cap itself.
+  function requestReveal() {
+    if (revealsUsed >= 2 || revealUsedThisRow || gameOver) return;
+    if (isInApp() && ADMOB_ADS_ENABLED && !(typeof isPremiumUser === "function" && isPremiumUser())) {
+      _offerRewardedLifeline("Reveal", useReveal, "Watch a short ad to <strong>reveal a letter</strong>?");
+    } else {
+      useReveal();
+    }
   }
 
   // ── Result panel ─────────────────────────────────────────────────────────
@@ -916,7 +929,7 @@ async function renderWordlePage() {
       btn.className = "secondary-btn wordle-reveal-btn";
       progressEl.appendChild(btn);
       progressEl.style.position = "relative";
-      btn.addEventListener("click", useReveal);
+      btn.addEventListener("click", requestReveal);
     }
     const left = 2 - revealsUsed;
     if (left <= 0 || gameOver) {
@@ -963,6 +976,19 @@ async function renderWordlePage() {
     renderBoard();
     renderKeyboard();
     saveMidGame();
+  }
+
+  // Non-premium in-app: a reveal costs a rewarded ad, same treatment as
+  // Marathon/Challenge's "Reveal Answers" (injectRevealMissedButton in
+  // admob.js). Free on web and for premium users — this only gates the
+  // ad prompt, useReveal() still enforces the real 2-per-game cap itself.
+  function requestReveal() {
+    if (revealsUsed >= 2 || revealUsedThisRow || gameOver) return;
+    if (isInApp() && ADMOB_ADS_ENABLED && !(typeof isPremiumUser === "function" && isPremiumUser())) {
+      _offerRewardedLifeline("Reveal", useReveal, "Watch a short ad to <strong>reveal a letter</strong>?");
+    } else {
+      useReveal();
+    }
   }
 
   // ── Submit ────────────────────────────────────────────────────────────────

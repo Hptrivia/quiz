@@ -34,7 +34,7 @@
           <li><span class="wordle-tile correct" style="display:inline-flex;width:22px;height:22px;font-size:0.7rem;align-items:center;justify-content:center;border-radius:3px;">A</span> Right letter, right spot.</li>
           <li><span class="wordle-tile present" style="display:inline-flex;width:22px;height:22px;font-size:0.7rem;align-items:center;justify-content:center;border-radius:3px;">A</span> Right letter, wrong spot.</li>
           <li><span class="wordle-tile absent" style="display:inline-flex;width:22px;height:22px;font-size:0.7rem;align-items:center;justify-content:center;border-radius:3px;">A</span> Letter not in the word.</li>
-          <li>💡 <strong>Reveal</strong> — shows one correct letter in its position. You get 2 per game.</li>
+          <li>💡 <strong>Reveal</strong> — shows one correct letter in its position. You get 2 per game. Using it excludes you from today's leaderboard.</li>
         </ul>
         <p style="margin-top:10px;color:var(--muted-text);font-size:0.85rem;">A new word every day at midnight UTC.</p>
       </div>
@@ -68,6 +68,10 @@
         </div>
         <p id="dwResultStatus" style="text-align:center;margin:6px 0 14px;font-size:1rem;"></p>
         <pre id="dwResultGrid" class="wordle-result-grid" style="text-align:center;font-size:1.4rem;line-height:1.4;margin:0 0 16px;"></pre>
+        <div id="dwStreakBox" class="daily-streak-box"></div>
+        <div id="dwLbPlaceholder"></div>
+        <button id="dwTodayLbBtn" class="secondary-btn" style="width:100%;margin-top:8px;">🏆 Leaderboard</button>
+        <p class="daily-streak-note">Only hint-free solves count towards today's board.</p>
         <p id="dwCountdown" class="daily-countdown"></p>
         <button id="dwShareBtn" class="secondary-btn" style="width:100%;margin-top:12px;">Share Results</button>
         <div id="dwRelated" style="margin-top:20px;"></div>
@@ -93,5 +97,6 @@
   <script src="assets/admob.js"></script>
   <script src="assets/daily-wordle.js"></script>
   <script src="assets/profile.js"></script>
+  <script src="assets/leaderboard.js"></script>
 </body>
 </html>

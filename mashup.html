@@ -243,6 +243,7 @@
       'trivia-rush': s => `mashup-trivia-rush.html?themes=${s}`,
       'wordle':      s => `wordle.html?themes=${s}&page=1`,
       'wordsearch':  s => `wordsearch.html?themes=${s}&page=1`,
+      'daily-mashup': s => `daily-mashup.html?themes=${s}`,
     };
 
     let allThemes = [];
@@ -258,6 +259,14 @@
     const searchInput = document.getElementById("mashupSearch");
 
     if (returnMode) startBtn.textContent = 'Play Mashup';
+    if (returnMode === 'daily-mashup') {
+      startBtn.textContent = 'Save & Start';
+      const hintEl = document.getElementById('mashupHint');
+      if (hintEl) {
+        hintEl.textContent = "These become your Daily Mashup shows — you'll get 10 new questions from this mix every day. Come back here anytime to change them.";
+        hintEl.style.display = '';
+      }
+    }
 
     async function init() {
       try {

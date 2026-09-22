@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if(/TriviaGauntletPremium/.test(navigator.userAgent||''))document.documentElement.classList.add('premium-app');</script>
+  <meta charset="UTF-8" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Daily Mashup | Trivia Gauntlet</title>
+  <meta name="description" content="Pick your own shows and get 10 fresh Mashup questions every day, built just for your combo." />
+  <link rel="icon" href="/favicon.ico.png" sizes="any">
+
+  <link rel="apple-touch-icon" href="/assets/icon-192.png" />
+  <meta name="theme-color" content="#0f172a" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    if(!/TriviaGauntletPremium/.test(navigator.userAgent||''))gtag('config', 'G-E6BY9F2ZDT');
+  </script>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body data-page="daily-mashup" data-defer-game-ad="1">
+  <main class="container narrow">
+    <div class="theme-top-links"><a href="daily-challenges.html" class="back-link" onclick="if(history.length>1){history.back();return false;}">← Back</a><span id="navAvatarSlot"></span></div>
+
+    <section class="panel">
+
+      <div id="dmLoading">
+        <p style="color:var(--muted-text)">Loading today's mashup...</p>
+      </div>
+
+      <div id="dmQuiz" style="display:none">
+        <div class="daily-header">
+          <h2>Daily Mashup</h2>
+          <p id="dmDateLabel" class="daily-date"></p>
+        </div>
+        <p id="dmProgress" class="daily-progress"></p>
+        <div id="dmThemeBadge" class="daily-badge-row"></div>
+        <p id="dmQuestion" class="daily-question"></p>
+        <div id="dmOptions" class="daily-options"></div>
+        <p id="dmFeedback" class="feedback"></p>
+        <button id="dmNextBtn" class="primary-btn" style="display:none;margin-top:10px">Next →</button>
+      </div>
+
+      <div id="dmResult" style="display:none">
+        <h2 style="margin-bottom:6px">Daily Mashup Complete</h2>
+        <div class="daily-score-box">
+          <span id="dmScoreText"></span>
+        </div>
+        <div id="dmStreakBox" class="daily-streak-box"></div>
+        <p id="dmCountdown" class="daily-countdown"></p>
+        <button id="dmShareBtn" class="secondary-btn" style="margin-top:16px;width:100%">Share Results</button>
+        <button id="revealDmMissedBtn" class="secondary-btn" style="margin-top:8px;width:100%">Show Missed Answers</button>
+        <div id="dmMissed" style="display:none;margin-top:14px"></div>
+        <a id="dmChangeShowsLink" href="mashup.html?mode=daily-mashup" class="secondary-btn" style="display:block;margin-top:14px;text-align:center;text-decoration:none;">Change Your Shows</a>
+        <a href="contact.html" class="secondary-btn" style="display:block;margin-top:14px;text-align:center;text-decoration:none;font-size:0.85rem;padding:8px 18px;">Leave Feedback</a>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a class="footer-highlight" href="how-it-works.html">How It Works</a>
+        <a class="footer-highlight" href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+  <script src="assets/admob.js"></script><script src="assets/daily-mashup.js"></script>
+  <script src="assets/sound.js"></script>
+  <script src="assets/profile.js"></script>
+</body>
+</html>

@@ -15,6 +15,7 @@ let wsGrid       = [];
 let wsPlacements = [];
 let wsWordsFound = 0;
 let wsIsRevealed = false;
+let wsRevealUnlocked = false; // true once the rewarded ad's been watched — toggling hide/show after that stays free
 
 let wsIsDragging    = false;
 let wsDragStartCell = null;
@@ -285,6 +286,26 @@ function wsShowCompletion() {
   }
 }
 
+function wsToggleReveal() {
+  wsIsRevealed = !wsIsRevealed;
+  const btn = document.getElementById('wsRevealBtn');
+  const wl  = document.getElementById('wsWordList');
+  const fl  = document.getElementById('wsFoundList');
+
+  btn.textContent = wsIsRevealed ? '🙈 Hide Words' : '👁 Reveal Words';
+  btn.classList.toggle('ws-btn-active', wsIsRevealed);
+
+  if (wsIsRevealed) {
+    wsRenderWordList();
+    wl.classList.add('ws-visible');
+    fl.style.display = 'none';
+    wl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  } else {
+    wl.classList.remove('ws-visible');
+    fl.style.display = '';
+  }
+}
+
 // ─── Event wiring ─────────────────────────────────────────────────────────────
 
 function wsWireEvents() {
@@ -294,23 +315,18 @@ function wsWireEvents() {
     document.getElementById('wsHowToModal').classList.add('ws-modal-show'));
 
   document.getElementById('wsRevealBtn').addEventListener('click', () => {
-    wsIsRevealed = !wsIsRevealed;
-    const btn = document.getElementById('wsRevealBtn');
-    const wl  = document.getElementById('wsWordList');
-    const fl  = document.getElementById('wsFoundList');
-
-    btn.textContent = wsIsRevealed ? '🙈 Hide Words' : '👁 Reveal Words';
-    btn.classList.toggle('ws-btn-active', wsIsRevealed);
-
-    if (wsIsRevealed) {
-      wsRenderWordList();
-      wl.classList.add('ws-visible');
-      fl.style.display = 'none';
-      wl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    } else {
-      wl.classList.remove('ws-visible');
-      fl.style.display = '';
+    // Non-premium in-app: the first reveal costs a rewarded ad, same
+    // treatment as Wordle's letter-reveal and Marathon/Challenge's "Reveal
+    // Answers" (injectRevealMissedButton in admob.js). Once unlocked,
+    // hiding/re-showing the list for the rest of this puzzle stays free —
+    // it's an unlock, not a pay-per-toggle.
+    if (!wsIsRevealed && !wsRevealUnlocked &&
+        isInApp() && ADMOB_ADS_ENABLED && !(typeof isPremiumUser === 'function' && isPremiumUser())) {
+      _offerRewardedLifeline('Reveal Words', () => { wsRevealUnlocked = true; wsToggleReveal(); },
+        'Watch a short ad to <strong>reveal all the words</strong>?');
+      return;
     }
+    wsToggleReveal();
   });
 
   gridEl.addEventListener('mousedown', e => {

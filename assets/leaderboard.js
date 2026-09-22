@@ -121,7 +121,8 @@ async function lbSubmit(slug, playerName, score) {
 
 // ── Modal ─────────────────────────────────────────────────────────────────────
 
-function lbOpenModal(slug, title) {
+function lbOpenModal(slug, title, formatScore) {
+  formatScore = formatScore || (s => s);
   let modal = document.getElementById("lbModal");
   if (!modal) {
     modal = document.createElement("div");
@@ -165,7 +166,7 @@ function lbOpenModal(slug, title) {
       return `<div class="lb-row${mine ? " lb-row--me" : ""}">
         <span class="lb-rank${medalClass}">${i + 1}</span>
         <span class="lb-name">${lbEscapeHtml(r.player_name)}${mine ? " 👤" : ""}</span>
-        <span class="lb-score">${r.score}</span>
+        <span class="lb-score">${formatScore(r.score)}</span>
         <span class="lb-date">${date}</span>
       </div>`;
     }).join("");
@@ -186,7 +187,7 @@ function lbCloseModal() {
 
 // ── Submit section (injected into result box on new PB) ───────────────────────
 
-function lbShowSubmit(slug, themeTitle, score, container) {
+function lbShowSubmit(slug, themeTitle, score, container, onSuccess, formatScore, hideViewBoardBtn) {
   if (!LB_READY) return;
 
   const profileName = (typeof getProfile === "function") ? getProfile().name : "";
@@ -227,14 +228,17 @@ function lbShowSubmit(slug, themeTitle, score, container) {
       }
 
       const [rank, total] = await Promise.all([lbRank(slug, score), lbTotal(slug)]);
+      if (typeof onSuccess === "function") onSuccess(name);
 
       section.innerHTML = `
         <p class="lb-submitted-rank">
           You're <strong>#${rank !== null ? rank : "?"}</strong>${total ? ` of ${total}` : ""} on this theme!
         </p>
-        <button class="secondary-btn lb-view-board-btn" style="margin-top:8px;">View Leaderboard</button>
+        ${hideViewBoardBtn ? "" : `<button class="secondary-btn lb-view-board-btn" style="margin-top:8px;">View Leaderboard</button>`}
       `;
-      section.querySelector(".lb-view-board-btn").onclick = () => lbOpenModal(slug, themeTitle);
+      if (!hideViewBoardBtn) {
+        section.querySelector(".lb-view-board-btn").onclick = () => lbOpenModal(slug, themeTitle, formatScore);
+      }
     } catch {
       btn.disabled = false;
       btn.textContent = "Submit";

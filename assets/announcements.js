@@ -69,6 +69,18 @@ const APP_ANNOUNCEMENTS = [
     text: "Back to the Future, Better Call Saul, Titanic, Hunter x Hunter, K-Pop, Planet of the Apes, Pluribus, Vinland Saga, and more.",
     cta: { label: "See What's New", href: "recent.html" },
   },
+  {
+    icon: "🏆",
+    title: "Leaderboards added to your daily challenges!",
+    text: "See how you stack up against others on Daily Trivia and Daily Wordle — climb the board and defend your spot.",
+    cta: { label: "Play Now", href: "daily-challenges.html" },
+  },
+  {
+    icon: "🧩",
+    title: "New: Daily Mashup!",
+    text: "Pick your own shows and get 10 fresh questions from your mix, every day.",
+    cta: { label: "Play Now", href: "daily-mashup.html" },
+  },
 ];
 
 function _cbAnnouncementHash(str) {

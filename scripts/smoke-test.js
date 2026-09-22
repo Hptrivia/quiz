@@ -85,7 +85,9 @@ async function waitVisible(page, sel, ms = 4000) {
 }
 
 // Standard quiz: pick an option, Submit, Next, repeat until the result box shows.
-async function playQuiz(page, endSel, maxQ = 120) {
+// `nextSel` is the fallback "Next →"/"See Results" button id for modes whose
+// next button doesn't have the literal text "Next" (Daily Trivia/Mashup).
+async function playQuiz(page, endSel, maxQ = 120, nextSel = '#dailyNextBtn') {
   const OPTS = '.option-btn, .daily-option-btn';
   for (let i = 0; i < maxQ; i++) {
     if (await isVisible(page, endSel)) return true;
@@ -94,7 +96,7 @@ async function playQuiz(page, endSel, maxQ = 120) {
     await clickText(page, 'Submit'); // submit (no-op for modes that auto-grade)
     await wait(60);
     // advance: standard "Next", or Daily's "Next →"/"See Results" button by id
-    if (!(await clickText(page, 'Next'))) await clickFirst(page, '#dailyNextBtn');
+    if (!(await clickText(page, 'Next'))) await clickFirst(page, nextSel);
     await wait(80);
   }
   return isVisible(page, endSel);
@@ -516,6 +518,9 @@ function buildModes(themes) {
     { name: 'survival-mashup', url: `survival.html?themes=${a},${b}`,  start: '[data-difficulty="mixed"]', run: p => playQuiz(p, '#survivalResultBox') },
     { name: 'episode',         url: `episode.html?theme=${ep}&episode=1`, run: p => playQuiz(p, '#episodeResultBox') },
     { name: 'daily-trivia',    url: `daily.html`,                      run: p => playQuiz(p, '#dailyResult') },
+    // Pre-seed the show pick so the driver skips the one-time picker redirect
+    // (mashup.html?mode=daily-mashup) and lands straight on the quiz.
+    { name: 'daily-mashup',    url: `daily-mashup.html`,               seedLocalStorage: { dmSelectedThemes: JSON.stringify([a, b]) }, run: p => playQuiz(p, '#dmResult', 120, '#dmNextBtn') },
     { name: 'trivia-rush',     url: `trivia-rush.html?theme=${a}`,     run: p => playTriviaRush(p, '#trGameOverBox') },
     { name: 'trivia-rush-mashup', url: `mashup-trivia-rush.html?themes=${a},${b}`, run: p => playTriviaRush(p, '#trGameOverBox') },
     { name: 'versus',          url: `versus.html`,                     run: p => playVersus(p) },
@@ -590,6 +595,15 @@ async function runMode(browser, mode) {
   const page = await context.newPage();
   const errors = [];
   page.on('pageerror', e => errors.push(String(e.message || e)));
+
+  // Seed localStorage before any page script runs — used to skip one-time
+  // pickers (e.g. Daily Mashup's show picker) so the driver lands straight
+  // on the quiz, same as a returning player who already picked.
+  if (mode.seedLocalStorage) {
+    await page.evaluateOnNewDocument((data) => {
+      for (const [k, v] of Object.entries(data)) localStorage.setItem(k, v);
+    }, mode.seedLocalStorage);
+  }
 
   let reached = false, crashed = null;
   try {

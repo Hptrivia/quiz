@@ -66,6 +66,35 @@ function saveDWState(data) {
   localStorage.setItem(`dwState_${dwTodayKey()}`, JSON.stringify(data));
 }
 
+/* ── Leaderboard ── */
+// Just one board: today's fewest guesses (hint-free solves only). Streak
+// stays a personal-only stat shown on the result screen — same as Daily
+// Trivia's day-streak display, never submitted anywhere.
+function dwTodayLbSlug() {
+  return `wordle-daily-${dwTodayKey()}`;
+}
+
+// Converts the stored inverted score back to "Solved in N" for display.
+function dwFormatGuessScore(invertedScore) {
+  return `Solved in ${(DW_MAX_GUESSES + 1) - invertedScore}`;
+}
+
+function dwMaybeSubmitTodayGuesses(solved, guessCount, revealsUsed) {
+  if (!solved || revealsUsed > 0 || typeof lbSubmit !== "function") return;
+  const slug = dwTodayLbSlug();
+  const invertedScore = (DW_MAX_GUESSES + 1) - guessCount;
+
+  const profileName = (typeof getProfile === "function") ? getProfile().name : "";
+  if (profileName) {
+    lbSubmit(slug, profileName, invertedScore).catch(() => {});
+  } else {
+    const box = document.getElementById("dwLbPlaceholder");
+    if (box && typeof lbShowSubmit === "function") {
+      lbShowSubmit(slug, "Today's Wordle", invertedScore, box, null, dwFormatGuessScore, true);
+    }
+  }
+}
+
 /* ── Streak ── */
 function getDWStreak() {
   return JSON.parse(localStorage.getItem('dwStreak') || '{"current":0,"best":0,"lastCompleted":""}');
@@ -164,7 +193,7 @@ async function renderDailyWordlePage() {
   const existing = getDWState();
   if (existing && existing.completed) {
     if (loadingEl) loadingEl.style.display = 'none';
-    showDWResult(existing.guesses, existing.solved, entry);
+    showDWResult(existing.guesses, existing.solved, entry, existing.revealsUsed || 0);
     return;
   }
 
@@ -384,6 +413,9 @@ async function renderDailyWordlePage() {
 
   function useReveal() {
     if (revealsUsed >= 2 || revealUsedThisRow || gameOver) return;
+    // Ask BEFORE the first reveal actually happens, while they can still
+    // back out — warning them after the letter's already shown is pointless.
+    if (revealsUsed === 0 && !confirm("Using a hint excludes you from today's leaderboard. Use it anyway?")) return;
     const alreadyKnown = new Set();
     for (const g of guesses) g.states.forEach((s, i) => { if (s === 'correct') alreadyKnown.add(i); });
     for (const i of Object.keys(revealedPositions)) alreadyKnown.add(parseInt(i));
@@ -461,22 +493,22 @@ async function renderDailyWordlePage() {
           bounceRow(rowIndex);
           gameOver = true;
           const streak = updateDWStreak(true);
-          const result = { completed: true, solved: true, guesses, streak: streak.current, bestStreak: streak.best };
+          const result = { completed: true, solved: true, guesses, revealsUsed, streak: streak.current, bestStreak: streak.best };
           saveDWState(result);
           if (typeof isLimitedWeb === 'function' && isLimitedWeb()) localStorage.setItem('cbWebDailyUsed_wordle', 'true');
           setTimeout(() => {
             if (gameEl) gameEl.style.display = 'none';
-            showDWResult(guesses, true, entry);
+            showDWResult(guesses, true, entry, revealsUsed);
           }, 1600);
         } else if (guesses.length >= DW_MAX_GUESSES) {
           gameOver = true;
           const streak = updateDWStreak(false);
-          const result = { completed: true, solved: false, guesses, streak: streak.current, bestStreak: streak.best };
+          const result = { completed: true, solved: false, guesses, revealsUsed, streak: streak.current, bestStreak: streak.best };
           saveDWState(result);
           if (typeof isLimitedWeb === 'function' && isLimitedWeb()) localStorage.setItem('cbWebDailyUsed_wordle', 'true');
           setTimeout(() => {
             if (gameEl) gameEl.style.display = 'none';
-            showDWResult(guesses, false, entry);
+            showDWResult(guesses, false, entry, revealsUsed);
           }, 1000);
         } else {
           saveDWState({ completed: false, guesses, revealsUsed, revealedPositions, revealedAtRow });
@@ -503,7 +535,7 @@ async function renderDailyWordlePage() {
 
   if (gameOver) {
     if (gameEl) gameEl.style.display = 'none';
-    showDWResult(guesses, guesses.some(g => g.word === target), entry);
+    showDWResult(guesses, guesses.some(g => g.word === target), entry, revealsUsed);
   } else {
     renderBoard();
     renderKeyboard();
@@ -512,7 +544,7 @@ async function renderDailyWordlePage() {
 }
 
 /* ── Result screen ── */
-async function showDWResult(guesses, solved, entry) {
+async function showDWResult(guesses, solved, entry, revealsUsed) {
   const resultEl = document.getElementById('dwResult');
   if (!resultEl) return;
   resultEl.style.display = 'block';
@@ -536,6 +568,22 @@ async function showDWResult(guesses, solved, entry) {
 
   const gridEl = document.getElementById('dwResultGrid');
   if (gridEl) gridEl.textContent = emojiGrid;
+
+  const streakEl = document.getElementById('dwStreakBox');
+  if (streakEl) {
+    const streak = getDWStreak();
+    streakEl.innerHTML = `
+      <div class="streak-current">🔥 ${streak.current} day streak</div>
+      <div class="streak-best">Best: ${streak.best} days</div>
+    `;
+  }
+
+  const lbBtn = document.getElementById('dwTodayLbBtn');
+  if (lbBtn && typeof lbOpenModal === 'function') {
+    lbBtn.addEventListener('click', () => lbOpenModal(dwTodayLbSlug(), "Today's Wordle", dwFormatGuessScore));
+  }
+
+  dwMaybeSubmitTodayGuesses(solved, guesses.length, revealsUsed || 0);
 
   const countdownEl = document.getElementById('dwCountdown');
   if (countdownEl) startDWCountdown(countdownEl);

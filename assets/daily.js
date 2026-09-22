@@ -155,6 +155,61 @@ async function getDailyQuestions() {
   return finalQs;
 }
 
+/* ── Cumulative score leaderboard ── */
+// Continuous, never resets: every correct answer you've ever gotten on Daily
+// Trivia adds to one running lifetime total, and the leaderboard ranks by
+// that total — play today, +10; play tomorrow, +7; running total is 17, and
+// so on. This is separate from the personal day-streak shown on the result
+// screen (that one's just for you, nothing to do with the leaderboard).
+const DC_SCORE_LB_SLUG = "daily-score";
+
+function dcGetLifetimeScore() {
+  const raw = localStorage.getItem("dcLifetimeScore");
+  if (raw !== null) return parseInt(raw, 10);
+
+  // First time this counter's ever been read — backfill it from whatever
+  // play history already exists (dcHistory keeps the last 30 days) instead
+  // of starting at 0 and silently dropping everything played before this
+  // leaderboard existed.
+  const history = JSON.parse(localStorage.getItem("dcHistory") || "[]");
+  const backfilled = history.reduce((sum, e) => sum + (e.score || 0), 0);
+  localStorage.setItem("dcLifetimeScore", String(backfilled));
+  return backfilled;
+}
+
+function dcAddToLifetimeScore(score) {
+  const total = dcGetLifetimeScore() + score;
+  localStorage.setItem("dcLifetimeScore", String(total));
+  return total;
+}
+
+// Submits the running total to the public leaderboard whenever it's grown
+// since the last submission — it only ever grows (one play per day, always
+// >= 0 correct), so this fires at most once per completed day.
+//
+// First-ever submission asks for a name once (reusing the same box Survival
+// uses); every submission after that goes up silently in the background —
+// nothing shown to the player, no daily prompt.
+function dcMaybeSubmitLifetimeScore(lifetimeScore) {
+  if (!lifetimeScore || typeof lbSubmit !== "function") return;
+  const lastSubmitted = parseInt(localStorage.getItem("dcScoreLbSubmitted") || "0", 10);
+  if (lifetimeScore <= lastSubmitted) return;
+
+  const profileName = (typeof getProfile === "function") ? getProfile().name : "";
+  if (profileName) {
+    lbSubmit(DC_SCORE_LB_SLUG, profileName, lifetimeScore)
+      .then(() => localStorage.setItem("dcScoreLbSubmitted", String(lifetimeScore)))
+      .catch(() => {}); // silent — retried automatically next time it grows
+  } else {
+    const box = document.getElementById("dailyStreakLbPlaceholder");
+    if (box && typeof lbShowSubmit === "function") {
+      lbShowSubmit(DC_SCORE_LB_SLUG, "Daily Trivia", lifetimeScore, box, () => {
+        localStorage.setItem("dcScoreLbSubmitted", String(lifetimeScore));
+      }, null, true);
+    }
+  }
+}
+
 /* ── Streak ── */
 function dcGetStreak() {
   return JSON.parse(localStorage.getItem("dcStreak") || '{"current":0,"best":0,"lastCompleted":""}');
@@ -196,8 +251,9 @@ function dcGetHistoryStats(todayDate, todayScore, total) {
 function saveDailyResult(score, total, missedQuestions) {
   const dateKey = dcTodayKey();
   dcSaveHistory(dateKey, score, total);
-  const streak  = dcUpdateStreak();
-  const result  = { completed: true, score, total, missedQuestions, streak: streak.current, bestStreak: streak.best };
+  const streak        = dcUpdateStreak();
+  const lifetimeScore = dcAddToLifetimeScore(score);
+  const result  = { completed: true, score, total, missedQuestions, streak: streak.current, bestStreak: streak.best, lifetimeScore };
   localStorage.setItem(`dcState_${dateKey}`, JSON.stringify(result));
   if (typeof isLimitedWeb === "function" && isLimitedWeb()) {
     localStorage.setItem("cbWebDailyUsed_trivia", "true");
@@ -209,8 +265,9 @@ function getDailyState() {
   const dateKey = dcTodayKey();
   const state   = JSON.parse(localStorage.getItem(`dcState_${dateKey}`) || "null");
   const streak  = dcGetStreak();
-  if (!state) return { completed: false, streak: streak.current, bestStreak: streak.best };
-  return { ...state, streak: streak.current, bestStreak: streak.best };
+  const lifetimeScore = dcGetLifetimeScore();
+  if (!state) return { completed: false, streak: streak.current, bestStreak: streak.best, lifetimeScore };
+  return { ...state, streak: streak.current, bestStreak: streak.best, lifetimeScore };
 }
 
 /* ── Homepage status ── */
@@ -406,6 +463,12 @@ function showDailyResult(state) {
       <div class="streak-best">Best: ${state.bestStreak} days</div>
     `;
   }
+
+  const lbBtn = document.getElementById("dailyStreakLbBtn");
+  if (lbBtn && typeof lbOpenModal === "function") {
+    lbBtn.addEventListener("click", () => lbOpenModal(DC_SCORE_LB_SLUG, "Daily Trivia"));
+  }
+  dcMaybeSubmitLifetimeScore(state.lifetimeScore);
 
   const historyEl = document.getElementById("dailyHistoryBox");
   if (historyEl) {
