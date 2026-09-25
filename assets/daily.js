@@ -163,18 +163,31 @@ async function getDailyQuestions() {
 // screen (that one's just for you, nothing to do with the leaderboard).
 const DC_SCORE_LB_SLUG = "daily-score";
 
-function dcGetLifetimeScore() {
-  const raw = localStorage.getItem("dcLifetimeScore");
-  if (raw !== null) return parseInt(raw, 10);
+// Only plays from the day the leaderboard launched count toward the total.
+const DC_SCORE_LB_START = "2026-09-22";
 
-  // First time this counter's ever been read — backfill it from whatever
-  // play history already exists (dcHistory keeps the last 30 days) instead
-  // of starting at 0 and silently dropping everything played before this
-  // leaderboard existed.
+function dcScoreSinceLaunch() {
   const history = JSON.parse(localStorage.getItem("dcHistory") || "[]");
-  const backfilled = history.reduce((sum, e) => sum + (e.score || 0), 0);
-  localStorage.setItem("dcLifetimeScore", String(backfilled));
-  return backfilled;
+  return history
+    .filter(e => e.date >= DC_SCORE_LB_START)
+    .reduce((sum, e) => sum + (e.score || 0), 0);
+}
+
+function dcGetLifetimeScore() {
+  // One-time correction: the first version backfilled from the whole 30-day
+  // dcHistory, so long-time players started with weeks of pre-launch points.
+  // Recompute from launch day onward (all of which is still inside the
+  // 30-day history), and clear the submitted marker so the corrected —
+  // possibly lower — total is re-sent to the leaderboard.
+  if (localStorage.getItem("dcLifetimeScoreV2") !== "1") {
+    const hadCounter = localStorage.getItem("dcLifetimeScore") !== null;
+    const corrected = dcScoreSinceLaunch();
+    localStorage.setItem("dcLifetimeScore", String(corrected));
+    localStorage.setItem("dcLifetimeScoreV2", "1");
+    if (hadCounter) localStorage.removeItem("dcScoreLbSubmitted");
+    return corrected;
+  }
+  return parseInt(localStorage.getItem("dcLifetimeScore") || "0", 10);
 }
 
 function dcAddToLifetimeScore(score) {
@@ -250,6 +263,7 @@ function dcGetHistoryStats(todayDate, todayScore, total) {
 /* ── Save / read result ── */
 function saveDailyResult(score, total, missedQuestions) {
   const dateKey = dcTodayKey();
+  dcGetLifetimeScore(); // initialise before today's entry lands in dcHistory, so it isn't counted twice
   dcSaveHistory(dateKey, score, total);
   const streak        = dcUpdateStreak();
   const lifetimeScore = dcAddToLifetimeScore(score);

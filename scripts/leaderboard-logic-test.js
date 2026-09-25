@@ -122,14 +122,14 @@ async function main() {
     const context = await browser.createBrowserContext();
     const page = await context.newPage();
     await installFakeDateClass(page);
-    await setFakeDateForNextNav(page, '2026-09-10T12:00:00Z');
+    await setFakeDateForNextNav(page, '2026-09-23T12:00:00Z');
     await page.goto(`${BASE}/daily.html`, { waitUntil: 'networkidle2', timeout: 30000 });
 
     const day1Total = await page.evaluate(() => window.saveDailyResult(7, 10, []).lifetimeScore);
     assertEqual(day1Total, 7, 'day 1: lifetimeScore after first play');
     assertEqual(await page.evaluate(() => window.dcGetLifetimeScore()), 7, 'day 1: dcGetLifetimeScore()');
 
-    await setFakeDateForNextNav(page, '2026-09-11T12:00:00Z'); // next day
+    await setFakeDateForNextNav(page, '2026-09-24T12:00:00Z'); // next day
     await page.reload({ waitUntil: 'networkidle2', timeout: 30000 });
 
     const day2Total = await page.evaluate(() => window.saveDailyResult(5, 10, []).lifetimeScore);
@@ -139,23 +139,50 @@ async function main() {
     await context.close();
   });
 
-  // ── Test 2: backfill from dcHistory when dcLifetimeScore was never set ──
-  await test('daily-trivia lifetime score backfills from existing dcHistory', async () => {
+  // ── Test 2: backfill only counts plays from launch day (2026-09-22) on ──
+  await test('daily-trivia lifetime score backfills only post-launch dcHistory', async () => {
     const context = await browser.createBrowserContext();
     const page = await context.newPage();
     const history = JSON.stringify([
-      { date: '2026-09-01', score: 5, total: 10 },
-      { date: '2026-09-02', score: 3, total: 10 },
-      { date: '2026-09-03', score: 7, total: 10 },
-    ]); // sums to 15
+      { date: '2026-09-01', score: 9, total: 10 }, // pre-launch, ignored
+      { date: '2026-09-21', score: 8, total: 10 }, // pre-launch, ignored
+      { date: '2026-09-22', score: 3, total: 10 },
+      { date: '2026-09-23', score: 7, total: 10 },
+    ]); // post-launch sums to 10
     await page.evaluateOnNewDocument((h) => { window.localStorage.setItem('dcHistory', h); }, history);
     await page.goto(`${BASE}/daily.html`, { waitUntil: 'networkidle2', timeout: 30000 });
 
-    assertEqual(await page.evaluate(() => window.dcGetLifetimeScore()), 15, 'backfilled lifetime score');
+    assertEqual(await page.evaluate(() => window.dcGetLifetimeScore()), 10, 'backfilled lifetime score');
     assertEqual(
       await page.evaluate(() => window.localStorage.getItem('dcLifetimeScore')),
-      '15',
+      '10',
       'dcLifetimeScore should now be persisted, not recomputed every read'
+    );
+
+    await context.close();
+  });
+
+  // ── Test 2b: an already-inflated counter is corrected once and resubmitted ──
+  await test('daily-trivia inflated lifetime score is corrected and re-flagged for submit', async () => {
+    const context = await browser.createBrowserContext();
+    const page = await context.newPage();
+    const history = JSON.stringify([
+      { date: '2026-09-10', score: 9, total: 10 },
+      { date: '2026-09-22', score: 4, total: 10 },
+    ]);
+    await page.evaluateOnNewDocument((h) => {
+      if (window.localStorage.getItem('dcLifetimeScoreV2')) return; // only seed the first load
+      window.localStorage.setItem('dcHistory', h);
+      window.localStorage.setItem('dcLifetimeScore', '13');
+      window.localStorage.setItem('dcScoreLbSubmitted', '13');
+    }, history);
+    await page.goto(`${BASE}/daily.html`, { waitUntil: 'networkidle2', timeout: 30000 });
+
+    assertEqual(await page.evaluate(() => window.dcGetLifetimeScore()), 4, 'corrected lifetime score');
+    assertEqual(
+      await page.evaluate(() => window.localStorage.getItem('dcScoreLbSubmitted')),
+      null,
+      'submitted marker cleared so the lower total gets re-sent'
     );
 
     await context.close();
@@ -183,8 +210,10 @@ async function main() {
     dialogAccept = true; // OK
     await page.click('#dwRevealBtn');
     await wait(300);
-    const afterAccept = await page.evaluate(() => document.getElementById('dwRevealBtn').textContent);
-    assertTrue(afterAccept.includes('1 left'), `OK should consume one reveal, got "${afterAccept}"`);
+    // One reveal per row, so after using one the button reads "(guess first)"
+    // rather than "1 left" — check the saved state for the actual count.
+    const used = await page.evaluate(() => (window.getDWState() || {}).revealsUsed);
+    assertEqual(used, 1, 'OK should consume one reveal');
 
     await context.close();
   });
@@ -215,7 +244,7 @@ async function main() {
     const context = await browser.createBrowserContext();
     const page = await context.newPage();
     await installFakeDateClass(page);
-    await setFakeDateForNextNav(page, '2026-09-10T12:00:00Z');
+    await setFakeDateForNextNav(page, '2026-09-23T12:00:00Z');
     await page.goto(`${BASE}/daily-wordle.html`, { waitUntil: 'networkidle2', timeout: 30000 });
 
     // Pretend they had a 5-day streak that last completed 2026-09-05 —
