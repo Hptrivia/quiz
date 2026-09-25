@@ -430,7 +430,8 @@ const QUESTION_QUALITY_RULES = `Trivia question quality rules — every question
 - Keep the question itself concise — one clear sentence. Do not embed long quotes, multi-sentence scene descriptions, or run-on setups into the question text.
 - Only ask about things a viewer/player who actually watched or read the finished work would know. A raw transcript/script often contains artifacts that never reach the audience — speaker-label names, stage/camera directions, scene-setting descriptions, writer's notes, "[laughs]"-style annotations. Never base a question on one of those; only use them to figure out what a viewer would have seen or heard on screen, and ask about that instead.
 - Do not invent filler questions just to hit a target count. Only write questions the source material clearly and directly supports. Returning fewer questions than the max is correct and expected if the material runs out of good material — never pad with guesses, trivial restatements, or invented details.
-- Each question must stand alone and make sense to someone who has seen/read the finished work, without needing the original text in front of them.`;
+- Each question must stand alone and make sense to someone who has seen/read the finished work, without needing the original text in front of them.
+- Vary WHAT is being asked for across the batch — don't let "who is/said/did this" (a person's name) questions dominate. Mix in questions whose answer is a place, an object/item, a number or date, a title, a rank/role, or similar, whenever the source material supports it. As a rough guide, no more than about a third of the batch should have a person's name as the answer.`;
 
 function getClient(){
   if(!state.apiKey) throw new Error("NO_KEY");
@@ -1493,11 +1494,16 @@ async function generateTranscriptQuestions(project){
   const count = ui.transcriptCount || 20;
   ui.transcriptBusy = true; ui.transcriptMsg = null; render();
 
+  const existingAnswers = [...new Set(project.questions.map(q => (q.answer||"").trim().toLowerCase()).filter(Boolean))];
+  const existingAnswersBlock = existingAnswers.length
+    ? `\n\nAnswers already used in this project (from earlier transcripts/batches) — do NOT reuse any of these as the correct answer for a new question, even if this transcript supports them again. Find a different fact or angle instead, or skip it if there's no other angle:\n${existingAnswers.map(a=>`- ${a}`).join("\n")}`
+    : "";
+
   const system = `You extract trivia questions from a raw transcript, script, or article about the show/movie/series "${project.name}".
 
 ${QUESTION_QUALITY_RULES}
 
-Extract AT MOST ${count} questions from the text below — return fewer if the text doesn't clearly support that many good ones. Every question needs exactly 4 options (the correct answer plus 3 wrong answers you invent) and a difficulty (easy/medium/hard).
+Extract AT MOST ${count} questions from the text below — return fewer if the text doesn't clearly support that many good ones. Every question needs exactly 4 options (the correct answer plus 3 wrong answers you invent) and a difficulty (easy/medium/hard). Every question's correct answer must also be different from every other question's correct answer in this batch — never ask two questions with the same answer.
 
 Distractor rules for the 3 wrong options:
 - Match the style, language/culture of origin, gender, and setting of the correct answer (e.g. other plausible Chinese names if the answer is a Chinese character's name; other male characters if the answer is male; plausible fantasy names in a fantasy setting).
@@ -1507,7 +1513,7 @@ Distractor rules for the 3 wrong options:
 Transcript:
 """
 ${text}
-"""${styleNotesBlock()}`;
+"""${existingAnswersBlock}${styleNotesBlock()}`;
 
   try{
     const client = getClient();
@@ -1526,11 +1532,19 @@ ${text}
     const MAX_ANSWER_WORDS = 3;
     const MAX_QUESTION_CHARS = 200;
     const wordCount = s => String(s).trim().split(/\s+/).filter(Boolean).length;
+    const existingAnswerSet = new Set(existingAnswers);
+    const seenInBatch = new Set();
     const valid = items
       .filter(it => it && typeof it.question==="string" && Array.isArray(it.options) && it.options.length>=2 && typeof it.answer==="string")
       .filter(it => it.question.length <= MAX_QUESTION_CHARS)
       .filter(it => wordCount(it.answer) <= MAX_ANSWER_WORDS)
       .filter(it => it.options.every(o => typeof o==="string" && wordCount(o) <= MAX_ANSWER_WORDS))
+      .filter(it => {
+        const key = it.answer.trim().toLowerCase();
+        if(!key || existingAnswerSet.has(key) || seenInBatch.has(key)) return false;
+        seenInBatch.add(key);
+        return true;
+      })
       .slice(0, count);
 
     if(!valid.length){
@@ -1554,9 +1568,9 @@ ${text}
     }
     project.transcriptDraft = "";
     ui.transcriptBusy = false;
-    ui.view = "review";
     ui.filter = "pending";
     persist();
+    ui.transcriptMsg = { ok:true, text:`${valid.length} question${valid.length===1?"":"s"} added to Pending. Paste another transcript, or head to Review when you're done.` };
     showToast(`${valid.length} question${valid.length===1?"":"s"} added to Pending.`);
     render();
   }catch(err){
