@@ -1,0 +1,530 @@
+{
+  "slug": "greys-anatomy",
+  "show": "Grey's Anatomy",
+  "shortName": "Grey's",
+  "seoTitle": "Grey's Anatomy Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the Grey's Anatomy test: 12 everyday questions reveal whether you're Meredith, Cristina, Derek, Bailey, Alex, Izzie, George or Mark. Get your full character breakdown.",
+  "intro": "Are you the dark and twisty one, the one who'd choose the career every time, or the one baking at 3am? Answer 12 everyday questions about work, love and friendship, and find out which Grey's Anatomy character you are.",
+  "characters": [
+    {
+      "id": "meredith",
+      "name": "Meredith Grey",
+      "emoji": "🩺",
+      "color": "#1d4ed8",
+      "title": "The Survivor",
+      "summary": "Complicated, resilient and brilliant. Life keeps knocking you down, and you keep getting back up.",
+      "description": [
+        "Like Meredith, you've got a complicated relationship with your past. She's the daughter of the legendary surgeon Ellis Grey, and she spent years trying to live up to her, and get away from her.",
+        "You're a little dark and twisty, and proud of it. Meredith deals with pain by shutting down, drinking tequila and dancing it out with her person, Cristina.",
+        "But you're unbreakable. Meredith survived loss after loss, raised three children and became one of the best surgeons in the country."
+      ],
+      "strengths": [
+        "Resilient",
+        "Brilliant",
+        "Loyal to her person"
+      ],
+      "flaw": "You push people away before they can leave you.",
+      "signature": "A tequila, an on-call room dance party and a voiceover about life.",
+      "clashReason": "they'd go quiet and shut you out when things got hard"
+    },
+    {
+      "id": "cristina",
+      "name": "Cristina Yang",
+      "emoji": "❤️",
+      "color": "#b91c1c",
+      "title": "The Ambitious Genius",
+      "summary": "Brilliant, blunt and driven. You want to be the best, and you won't apologise for it.",
+      "description": [
+        "Like Cristina, you want to be the best, not just good. She fought her way to the top of cardiothoracic surgery and ended up running her own research institute in Switzerland.",
+        "You don't do feelings, at least not in front of people. Cristina is blunt, competitive and happiest in an operating room.",
+        "But you love your person fiercely. Cristina and Meredith's friendship is the heart of the show, and they'd do anything for each other."
+      ],
+      "strengths": [
+        "Brilliant",
+        "Driven",
+        "Fiercely loyal"
+      ],
+      "flaw": "Your career comes first, even when it shouldn't.",
+      "signature": "Scrubs, a heart in her hands and zero patience for small talk.",
+      "clashReason": "they'd always put their career ahead of you"
+    },
+    {
+      "id": "derek",
+      "name": "Derek Shepherd",
+      "emoji": "🎣",
+      "color": "#0d9488",
+      "title": "The Romantic",
+      "summary": "Charming, driven and a hopeless romantic. You believe in grand gestures and big dreams.",
+      "description": [
+        "Like Derek, you've got charm to spare. The brilliant neurosurgeon earned the nickname McDreamy the moment he walked into Seattle Grace.",
+        "You love a grand gesture. Derek built Meredith a house on a hill, with candles marking out where their future home would stand.",
+        "You're driven, sometimes too driven. Derek is ambitious and sure of himself, and he takes failure very hard."
+      ],
+      "strengths": [
+        "Charming",
+        "Talented",
+        "Romantic"
+      ],
+      "flaw": "You chase your own ambitions and assume everyone will follow.",
+      "signature": "Perfect hair, a fishing rod and a trailer in the woods.",
+      "clashReason": "they'd be a little too sure they're right"
+    },
+    {
+      "id": "bailey",
+      "name": "Miranda Bailey",
+      "emoji": "📣",
+      "color": "#7c3aed",
+      "title": "The Boss",
+      "summary": "Tough, fair and fiercely protective. You scare people, but everyone knows you've got their back.",
+      "description": [
+        "Like Bailey, you're in charge and everyone knows it. As the resident supervising the new interns, she was so strict they nicknamed her \"The Nazi\".",
+        "But you care enormously. Bailey is tough because she wants her people to be great, and she protects them fiercely.",
+        "You've earned your authority. Bailey worked her way up to become Chief of Surgery, doing things the right way all along."
+      ],
+      "strengths": [
+        "Strong leader",
+        "Fair",
+        "Protective"
+      ],
+      "flaw": "You're so tough on others that you forget to be kind to yourself.",
+      "signature": "Arms folded, one eyebrow up and a speech nobody will forget.",
+      "clashReason": "they'd make you follow every rule, and let you know about it"
+    },
+    {
+      "id": "alex",
+      "name": "Alex Karev",
+      "emoji": "🧸",
+      "color": "#475569",
+      "title": "The Softie in Disguise",
+      "summary": "Rude on the outside, soft on the inside. You act tough, but you'd do anything for the people you love.",
+      "description": [
+        "Like Alex, you started out as the jerk. He was the arrogant, smart-mouthed intern who said whatever he wanted.",
+        "But you grew up. Alex became a brilliant paediatric surgeon, gentle with kids and fiercely protective of his friends.",
+        "You feel things deeply, even if you won't admit it. In the end, Alex left Seattle to be with Izzie and the family he never knew he had."
+      ],
+      "strengths": [
+        "Loyal",
+        "Great with kids",
+        "Honest"
+      ],
+      "flaw": "You'd rather be rude than admit you care.",
+      "signature": "A scowl, a crying kid who suddenly stops crying and a hidden heart of gold.",
+      "clashReason": "they'd tease you mercilessly"
+    },
+    {
+      "id": "izzie",
+      "name": "Izzie Stevens",
+      "emoji": "🧁",
+      "color": "#db2777",
+      "title": "The Big Heart",
+      "summary": "Warm, emotional and follows her heart, sometimes right off a cliff. You love hard and you never stop hoping.",
+      "description": [
+        "Like Izzie, you're not what people expect. She paid for medical school by working as a model, and she's far smarter than people assumed.",
+        "When you're stressed, you bake. When Izzie is upset, the house fills up with muffins and cupcakes.",
+        "You follow your heart, even when it breaks the rules. Izzie risked her career for a patient she loved, because she couldn't not."
+      ],
+      "strengths": [
+        "Big-hearted",
+        "Emotionally honest",
+        "Never gives up on people"
+      ],
+      "flaw": "Your heart makes the decision before your head gets a vote.",
+      "signature": "A batch of muffins at 3am and a heart on her sleeve.",
+      "clashReason": "they'd make everything about feelings"
+    },
+    {
+      "id": "george",
+      "name": "George O'Malley",
+      "emoji": "🎖️",
+      "color": "#ca8a04",
+      "title": "The Nice Guy",
+      "summary": "Kind, loyal and underestimated. You're the sweet one, and you're braver than anyone gives you credit for.",
+      "description": [
+        "Like George, you're the nice one. He was the sweet, awkward intern who got off to a rough start and earned the nickname \"007\".",
+        "You love people loyally, sometimes too loyally. George spent a long time in love with his best friend, Meredith.",
+        "You're braver than people think. George decided to join the Army as a trauma surgeon, and in his last act he pushed a stranger out of the way of a bus."
+      ],
+      "strengths": [
+        "Kind",
+        "Loyal",
+        "Quietly brave"
+      ],
+      "flaw": "You let people underestimate you, including yourself.",
+      "signature": "A nervous smile, a best friend he'd do anything for and a heroic moment nobody saw coming.",
+      "clashReason": "they'd be too nice to tell you the truth"
+    },
+    {
+      "id": "mark",
+      "name": "Mark Sloan",
+      "emoji": "😏",
+      "color": "#ea580c",
+      "title": "The Charmer",
+      "summary": "Confident, flirty and fun, with a much bigger heart than people expect.",
+      "description": [
+        "Like Mark, you know you look good. The top plastic surgeon was nicknamed McSteamy, and he never had any trouble with confidence.",
+        "You've made mistakes with friends. Mark was Derek Shepherd's childhood best friend, and their friendship fell apart before it slowly healed.",
+        "But when you finally commit, you're all in. Mark fell hard for Lexie Grey, and becoming a dad changed him completely."
+      ],
+      "strengths": [
+        "Confident",
+        "Great teacher",
+        "Surprisingly loyal"
+      ],
+      "flaw": "You flirt first and think later.",
+      "signature": "A towel, a smirk and a very good line.",
+      "clashReason": "they'd flirt with everyone, including people you were interested in"
+    }
+  ],
+  "questions": [
+    {
+      "text": "Everything went wrong today, from start to finish. Tonight you...",
+      "options": [
+        {
+          "text": "Pour a tequila and talk it through with your best friend",
+          "points": {
+            "meredith": 3
+          }
+        },
+        {
+          "text": "Throw yourself into work. Feelings can wait",
+          "points": {
+            "cristina": 3
+          }
+        },
+        {
+          "text": "Bake. A lot. At 3am",
+          "points": {
+            "izzie": 3
+          }
+        },
+        {
+          "text": "Act like you don't care, then quietly check on someone else",
+          "points": {
+            "alex": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend gets the credit you really wanted. You...",
+      "options": [
+        {
+          "text": "Congratulate them through gritted teeth, then work twice as hard",
+          "points": {
+            "cristina": 3
+          }
+        },
+        {
+          "text": "Remind everyone it was a team effort",
+          "points": {
+            "bailey": 3
+          }
+        },
+        {
+          "text": "Laugh it off. There's plenty of glory to go round",
+          "points": {
+            "mark": 3
+          }
+        },
+        {
+          "text": "Feel happy for them. Mostly",
+          "points": {
+            "george": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A nervous new trainee is assigned to you. You...",
+      "options": [
+        {
+          "text": "Scare them a little, then look after them properly",
+          "points": {
+            "bailey": 3
+          }
+        },
+        {
+          "text": "Hand them the boring jobs so you get the good cases",
+          "points": {
+            "cristina": 3
+          }
+        },
+        {
+          "text": "Tease them non-stop, then quietly help",
+          "points": {
+            "alex": 3
+          }
+        },
+        {
+          "text": "Take them under your wing and show them how it's done, in style",
+          "points": {
+            "mark": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Sunday morning, no alarm, nothing booked. You end up...",
+      "options": [
+        {
+          "text": "Fishing by a quiet lake",
+          "points": {
+            "derek": 3
+          }
+        },
+        {
+          "text": "Dancing around the kitchen in your pyjamas",
+          "points": {
+            "meredith": 3
+          }
+        },
+        {
+          "text": "At a long, expensive brunch, looking great",
+          "points": {
+            "mark": 3
+          }
+        },
+        {
+          "text": "Asleep. Anyone who wakes you will regret it",
+          "points": {
+            "alex": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "In relationships, you tend to...",
+      "options": [
+        {
+          "text": "Go for grand gestures and big dreams",
+          "points": {
+            "derek": 3
+          }
+        },
+        {
+          "text": "Push them away, then pull them back",
+          "points": {
+            "meredith": 3
+          }
+        },
+        {
+          "text": "Fall for someone who only sees you as a friend",
+          "points": {
+            "george": 3
+          }
+        },
+        {
+          "text": "Avoid commitment, until the right person changes everything",
+          "points": {
+            "mark": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A coworker breaks the rules, and it saves the day. You...",
+      "options": [
+        {
+          "text": "Still write them up. Rules exist for a reason",
+          "points": {
+            "bailey": 3
+          }
+        },
+        {
+          "text": "Defend them. Sometimes you have to follow your heart",
+          "points": {
+            "izzie": 3
+          }
+        },
+        {
+          "text": "Wish you'd thought of it first",
+          "points": {
+            "cristina": 3
+          }
+        },
+        {
+          "text": "Back them up. You've bent a few rules yourself",
+          "points": {
+            "derek": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You've got a week's holiday. You spend it...",
+      "options": [
+        {
+          "text": "At a conference in your field. Honestly",
+          "points": {
+            "cristina": 3
+          }
+        },
+        {
+          "text": "Somewhere cheap and cheerful with your best mates",
+          "points": {
+            "george": 3
+          }
+        },
+        {
+          "text": "In a luxury hotel. You've earned it",
+          "points": {
+            "mark": 3
+          }
+        },
+        {
+          "text": "Camping, miles from anyone",
+          "points": {
+            "derek": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "The person you're closest to lets you down in a big way. You...",
+      "options": [
+        {
+          "text": "Shut everyone out and go quiet for a while",
+          "points": {
+            "meredith": 3
+          }
+        },
+        {
+          "text": "Lash out, then regret it",
+          "points": {
+            "alex": 3
+          }
+        },
+        {
+          "text": "Forgive them. You believe in second chances",
+          "points": {
+            "izzie": 3
+          }
+        },
+        {
+          "text": "Tell them exactly how disappointed you are",
+          "points": {
+            "bailey": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend is struggling but won't ask for help. You...",
+      "options": [
+        {
+          "text": "Sit with them without saying a word. That's enough",
+          "points": {
+            "cristina": 3
+          }
+        },
+        {
+          "text": "Help out without them even noticing",
+          "points": {
+            "george": 3
+          }
+        },
+        {
+          "text": "Tell them to stop being an idiot, then help",
+          "points": {
+            "alex": 3
+          }
+        },
+        {
+          "text": "Take charge. You're not asking permission",
+          "points": {
+            "bailey": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You can have the dream career or the dream relationship, but not both. You...",
+      "options": [
+        {
+          "text": "Choose the career. Every single time",
+          "points": {
+            "cristina": 3
+          }
+        },
+        {
+          "text": "Pick one, then spend years fighting for the other too",
+          "points": {
+            "meredith": 3
+          }
+        },
+        {
+          "text": "Follow your heart. What's the point otherwise?",
+          "points": {
+            "izzie": 3
+          }
+        },
+        {
+          "text": "Go wherever the career takes you, and expect love to follow",
+          "points": {
+            "derek": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're a surgeon. Your close friend has fallen for a patient who needs a new heart, and wants to bend the rules to get one faster. You...",
+      "options": [
+        {
+          "text": "Help them. Love is worth the risk",
+          "points": {
+            "izzie": 3
+          }
+        },
+        {
+          "text": "Absolutely not, and you'll stop anyone who tries",
+          "points": {
+            "bailey": 3
+          }
+        },
+        {
+          "text": "Stand by them, whatever happens",
+          "points": {
+            "meredith": 3
+          }
+        },
+        {
+          "text": "Try to talk them out of it, then keep their secret",
+          "points": {
+            "george": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You're a new surgical intern, about to be left alone with a patient for the first time. You...",
+      "options": [
+        {
+          "text": "Finally. You've been waiting for this moment for years",
+          "points": {
+            "cristina": 3
+          }
+        },
+        {
+          "text": "Freeze, panic, then pull it off",
+          "points": {
+            "george": 3
+          }
+        },
+        {
+          "text": "Act like you've got it, whether you have or not",
+          "points": {
+            "alex": 3
+          }
+        },
+        {
+          "text": "Get on with it quietly. You can panic later",
+          "points": {
+            "meredith": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

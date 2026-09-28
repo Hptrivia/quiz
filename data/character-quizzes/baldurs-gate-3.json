@@ -1,0 +1,530 @@
+{
+  "slug": "baldurs-gate-3",
+  "show": "Baldur's Gate 3",
+  "shortName": "BG3",
+  "seoTitle": "Baldur's Gate 3 Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the Baldur's Gate 3 test: 12 everyday questions reveal whether you're Astarion, Shadowheart, Lae'zel, Gale, Karlach, Wyll, Halsin or Jaheira. Get your full character breakdown.",
+  "intro": "Are you the sarcastic one with a dark past, the one who charges in grinning, or the one who talks for ten minutes before answering? Answer 12 everyday questions about loyalty, power and friendship, and find out which Baldur's Gate 3 companion you are.",
+  "characters": [
+    {
+      "id": "astarion",
+      "name": "Astarion",
+      "emoji": "🧛",
+      "color": "#b91c1c",
+      "title": "The Charming Survivor",
+      "summary": "Witty, vain and always looking out for number one. Your sharp tongue hides a lot more hurt than you let anyone see.",
+      "description": [
+        "Like Astarion, you're funny, fabulous and very hard to pin down. The high elf rogue has a comment for everything and a very high opinion of his own cheekbones.",
+        "Your sarcasm protects something painful. Astarion spent around 200 years as a vampire spawn, controlled and abused by his master, Cazador.",
+        "Now you'll never let anyone control you again. Astarion wants power and freedom above all, although the right friends might just change what he does with them."
+      ],
+      "strengths": [
+        "Quick-witted",
+        "Resourceful",
+        "Impossible to bore"
+      ],
+      "flaw": "You'd rather make a joke than let anyone see you're hurting.",
+      "signature": "A dramatic sigh, a perfectly timed insult and a hungry look at your neck.",
+      "clashReason": "they'd make fun of everything you care about"
+    },
+    {
+      "id": "shadowheart",
+      "name": "Shadowheart",
+      "emoji": "🌙",
+      "color": "#6d28d9",
+      "title": "The Keeper of Secrets",
+      "summary": "Guarded, dry and more loyal than she lets on. You keep your cards close, but once you trust someone, you're theirs.",
+      "description": [
+        "Like Shadowheart, you're private. The half-elf cleric keeps her past to herself and answers personal questions with a raised eyebrow.",
+        "Some of that isn't her fault. Shadowheart's memories were wiped by the priesthood of her goddess, Shar, so even she doesn't know the whole truth about who she is.",
+        "What makes you who you are is what you choose, not what you were told. Shadowheart's story is about deciding for herself what she believes."
+      ],
+      "strengths": [
+        "Calm and composed",
+        "Loyal once trusted",
+        "Dry sense of humour"
+      ],
+      "flaw": "You keep people at arm's length, even the ones who want to help.",
+      "signature": "A raised eyebrow, a secret she won't share and a quiet moment alone under the night sky.",
+      "clashReason": "they'd never tell you what they're really thinking"
+    },
+    {
+      "id": "laezel",
+      "name": "Lae'zel",
+      "emoji": "⚔️",
+      "color": "#65a30d",
+      "title": "The Uncompromising Warrior",
+      "summary": "Blunt, fierce and relentlessly driven. You say exactly what you mean, and you have no patience for weakness.",
+      "description": [
+        "Like Lae'zel, you don't sugar-coat anything. The githyanki warrior tells everyone exactly what she thinks of them, and it's rarely a compliment.",
+        "You were raised to be tough. Lae'zel was trained from birth to fight and to serve her queen, Vlaakith, without question.",
+        "But you're more loyal than you seem. Once Lae'zel decides you're worth fighting beside, she'll stand with you against anything, even the people who raised her."
+      ],
+      "strengths": [
+        "Fearless",
+        "Brutally honest",
+        "Driven"
+      ],
+      "flaw": "You treat every conversation like a battle you need to win.",
+      "signature": "A drawn sword, a sneer and a verdict on everyone's fighting skills.",
+      "clashReason": "they'd tell you you're weak, to your face, every day"
+    },
+    {
+      "id": "gale",
+      "name": "Gale",
+      "emoji": "📚",
+      "color": "#2563eb",
+      "title": "The Brilliant Talker",
+      "summary": "Clever, charming and a little bit too ambitious. You love knowledge, a good conversation and the sound of your own voice.",
+      "description": [
+        "Like Gale, you're bright and you know it. The wizard of Waterdeep could talk about magic for hours, and he usually does.",
+        "You dream big, sometimes too big. Gale was once the Chosen of Mystra, the goddess of magic, until his ambition went too far and left a dangerous magic orb inside his chest.",
+        "You're a romantic at heart. Gale is warm, polite and devoted, and as a boy he conjured his beloved tressym, Tara, because his parents wouldn't get him a kitten."
+      ],
+      "strengths": [
+        "Brilliant mind",
+        "Warm and polite",
+        "Great conversationalist"
+      ],
+      "flaw": "Your ambition sometimes outruns your common sense.",
+      "signature": "A pile of books, a long explanation and a small winged cat waiting at home.",
+      "clashReason": "they'd explain everything to you, at length, whether you asked or not"
+    },
+    {
+      "id": "karlach",
+      "name": "Karlach",
+      "emoji": "🔥",
+      "color": "#ea580c",
+      "title": "The Big-Hearted Brawler",
+      "summary": "Loud, joyful and fiercely kind. You throw yourself into life, and into fights, with a huge grin.",
+      "description": [
+        "Like Karlach, you're pure enthusiasm. The tiefling barbarian loves food, friends and a good scrap, and she's excited about almost everything.",
+        "You've been through something awful and come out kinder. Karlach was sold to the archdevil Zariel and forced to fight in the wars of Avernus for years.",
+        "What you want most is simple: to be close to people. Karlach's infernal engine heart burns so hot that she can't touch anyone without hurting them."
+      ],
+      "strengths": [
+        "Joyful",
+        "Fiercely loyal",
+        "Brave to the core"
+      ],
+      "flaw": "You charge in first and think about it afterwards.",
+      "signature": "A giant axe, a burning heart and the biggest smile in the camp.",
+      "clashReason": "they'd be far too loud and cheerful before you've had your coffee"
+    },
+    {
+      "id": "wyll",
+      "name": "Wyll",
+      "emoji": "🗡️",
+      "color": "#0891b2",
+      "title": "The Hero",
+      "summary": "Noble, charming and always ready to help. You believe in doing the right thing, whatever it costs you.",
+      "description": [
+        "Like Wyll, you want to be a hero, and you mean it. Known as the Blade of Frontiers, he travels the land protecting ordinary people from monsters.",
+        "You'll pay a high price to help others. Wyll made a pact with the devil Mizora for the power to protect people, and it cost him far more than he expected.",
+        "You come from somewhere comfortable but you chose a harder road. Wyll is the son of Ulder Ravengard, one of the most important men in Baldur's Gate."
+      ],
+      "strengths": [
+        "Brave",
+        "Charming",
+        "Selfless"
+      ],
+      "flaw": "You'd sacrifice yourself before you'd ask for help.",
+      "signature": "A rapier, a dashing smile and a speech about doing the right thing.",
+      "clashReason": "they'd make you feel bad for not being a hero"
+    },
+    {
+      "id": "halsin",
+      "name": "Halsin",
+      "emoji": "🐻",
+      "color": "#15803d",
+      "title": "The Gentle Giant",
+      "summary": "Calm, kind and at peace with the world. You take life slowly and you're the one everyone comes to for advice.",
+      "description": [
+        "Like Halsin, you're easy-going and wise. The wood elf archdruid is centuries old, and very little rattles him.",
+        "You care about the bigger picture. Halsin has spent a long time trying to lift the Shadow Curse from the land he loves and to keep nature and people in balance.",
+        "You're warm, open and honest about what you want. Halsin says what he feels, and he's happiest out in the wild, sometimes in the shape of a bear."
+      ],
+      "strengths": [
+        "Patient and wise",
+        "Kind",
+        "Honest"
+      ],
+      "flaw": "You're so relaxed that people mistake it for not caring.",
+      "signature": "A quiet walk in the woods and a very large bear-shaped surprise.",
+      "clashReason": "they'd tell you to slow down and breathe when you're in a hurry"
+    },
+    {
+      "id": "jaheira",
+      "name": "Jaheira",
+      "emoji": "🌿",
+      "color": "#a16207",
+      "title": "The Battle-Hardened Mentor",
+      "summary": "Sharp, tough and seen it all. You're the experienced one who doesn't suffer fools, but secretly looks after everyone.",
+      "description": [
+        "Like Jaheira, you've been around. The half-elf druid is a veteran of the Harpers, a secret network that fights to protect the innocent, and she has survived more adventures than anyone else in the party.",
+        "You don't trust easily and you don't waste words. Jaheira's dry humour and sharp tongue keep younger adventurers in line.",
+        "But you're a mentor at heart. Under the gruff exterior, Jaheira cares deeply and treats the people she trusts like family."
+      ],
+      "strengths": [
+        "Experienced",
+        "Sharp-witted",
+        "Protective"
+      ],
+      "flaw": "You assume the worst about new people until they prove otherwise.",
+      "signature": "A scimitar, a sigh and a lecture about how it was done in her day.",
+      "clashReason": "they'd treat you like a clueless beginner"
+    }
+  ],
+  "questions": [
+    {
+      "text": "You share a house with friends. What are you known for?",
+      "options": [
+        {
+          "text": "Talking for twenty minutes when someone asks a yes-or-no question",
+          "points": {
+            "gale": 3
+          }
+        },
+        {
+          "text": "Being the loudest, happiest person in the kitchen",
+          "points": {
+            "karlach": 3
+          }
+        },
+        {
+          "text": "A cleaning rota, enforced like military orders",
+          "points": {
+            "laezel": 3
+          }
+        },
+        {
+          "text": "Never, ever doing the dishes",
+          "points": {
+            "astarion": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone offers you a lot of power, but there's a catch. You...",
+      "options": [
+        {
+          "text": "Accept, if it means you can protect people",
+          "points": {
+            "wyll": 3
+          }
+        },
+        {
+          "text": "Say yes. You always knew you were meant for more",
+          "points": {
+            "gale": 3
+          }
+        },
+        {
+          "text": "Grab it. Nobody will ever control you again",
+          "points": {
+            "astarion": 3
+          }
+        },
+        {
+          "text": "Ask what the catch is. There's always a catch",
+          "points": {
+            "jaheira": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend asks for a hug after a rough day. You...",
+      "options": [
+        {
+          "text": "Hug them so tight they can't breathe",
+          "points": {
+            "karlach": 3
+          }
+        },
+        {
+          "text": "Make a joke about it, then hug them. Briefly",
+          "points": {
+            "astarion": 3
+          }
+        },
+        {
+          "text": "Tell them a hug won't fix it, and give them a plan instead",
+          "points": {
+            "laezel": 3
+          }
+        },
+        {
+          "text": "Give them one, a bit awkwardly. You're not a hugger",
+          "points": {
+            "shadowheart": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your calendar is completely empty this Saturday. You...",
+      "options": [
+        {
+          "text": "Read in a big armchair with a cat on your lap",
+          "points": {
+            "gale": 3
+          }
+        },
+        {
+          "text": "Head outdoors to hike and nap under a tree",
+          "points": {
+            "halsin": 3
+          }
+        },
+        {
+          "text": "Try every food stall in the city",
+          "points": {
+            "karlach": 3
+          }
+        },
+        {
+          "text": "Sleep until sunset, then go out in something fabulous",
+          "points": {
+            "astarion": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone mocks you loudly at a party. You...",
+      "options": [
+        {
+          "text": "Challenge them, right here, right now",
+          "points": {
+            "laezel": 3
+          }
+        },
+        {
+          "text": "Insult them back, better and louder",
+          "points": {
+            "astarion": 3
+          }
+        },
+        {
+          "text": "Stay polite. You won't lower yourself",
+          "points": {
+            "wyll": 3
+          }
+        },
+        {
+          "text": "Laugh. You've been insulted by much worse",
+          "points": {
+            "jaheira": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You find out something you believed your whole life was a lie. You...",
+      "options": [
+        {
+          "text": "Feel lost for a while, then decide for yourself what to believe",
+          "points": {
+            "shadowheart": 3
+          }
+        },
+        {
+          "text": "Get angry, then go after whoever lied to you",
+          "points": {
+            "laezel": 3
+          }
+        },
+        {
+          "text": "Keep doing what's right, whatever the truth turns out to be",
+          "points": {
+            "wyll": 3
+          }
+        },
+        {
+          "text": "Take it calmly. Life is long, and you'll make sense of it",
+          "points": {
+            "halsin": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your friends have all fallen for a charming newcomer. You...",
+      "options": [
+        {
+          "text": "Keep an eye on them. Trust is earned",
+          "points": {
+            "jaheira": 3
+          }
+        },
+        {
+          "text": "Love them too. More friends!",
+          "points": {
+            "karlach": 3
+          }
+        },
+        {
+          "text": "Stay polite, but tell them nothing about yourself",
+          "points": {
+            "shadowheart": 3
+          }
+        },
+        {
+          "text": "Work out what they could do for you",
+          "points": {
+            "astarion": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You win a free place on any weekend workshop. You pick...",
+      "options": [
+        {
+          "text": "A philosophy lecture series. You'll have opinions",
+          "points": {
+            "gale": 3
+          }
+        },
+        {
+          "text": "Sword fighting. With real swords",
+          "points": {
+            "laezel": 3
+          }
+        },
+        {
+          "text": "Foraging and wild camping in the woods",
+          "points": {
+            "halsin": 3
+          }
+        },
+        {
+          "text": "First aid and rescue skills. You want to be useful when it counts",
+          "points": {
+            "wyll": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Something dangerous needs doing and someone has to volunteer. You...",
+      "options": [
+        {
+          "text": "Step forward first. That's what you're here for",
+          "points": {
+            "wyll": 3
+          }
+        },
+        {
+          "text": "Charge at it before anyone else can, grinning",
+          "points": {
+            "karlach": 3
+          }
+        },
+        {
+          "text": "Offer to go, calmly. You've faced worse",
+          "points": {
+            "halsin": 3
+          }
+        },
+        {
+          "text": "Wait to see if anyone else will, then sigh and go",
+          "points": {
+            "shadowheart": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're travelling with a group who don't really trust each other yet. How do you fit in?",
+      "options": [
+        {
+          "text": "You end up as the one keeping everyone in line",
+          "points": {
+            "jaheira": 3
+          }
+        },
+        {
+          "text": "You talk. A lot. Someone has to fill the silence",
+          "points": {
+            "gale": 3
+          }
+        },
+        {
+          "text": "You keep your secrets, and quietly learn everyone else's",
+          "points": {
+            "shadowheart": 3
+          }
+        },
+        {
+          "text": "You tell them they're all weak, then fight beside them anyway",
+          "points": {
+            "laezel": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're an adventurer. On the road you find refugees being attacked by raiders. Helping means a long detour and a real fight. You...",
+      "options": [
+        {
+          "text": "Help them. There's no question",
+          "points": {
+            "wyll": 3
+          }
+        },
+        {
+          "text": "Help, and enjoy smashing the raiders a bit too much",
+          "points": {
+            "karlach": 3
+          }
+        },
+        {
+          "text": "Help, as long as someone makes it worth your while",
+          "points": {
+            "astarion": 3
+          }
+        },
+        {
+          "text": "Keep moving. The mission comes first",
+          "points": {
+            "laezel": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You're an adventurer with a parasite in your head that will slowly turn you into a monster. A mysterious stranger offers to keep it under control, for now. You...",
+      "options": [
+        {
+          "text": "Study it yourself first. You don't trust what you don't understand",
+          "points": {
+            "gale": 3
+          }
+        },
+        {
+          "text": "Accept. Honestly, the new powers are quite fun",
+          "points": {
+            "astarion": 3
+          }
+        },
+        {
+          "text": "Refuse. Some powers aren't worth the price",
+          "points": {
+            "halsin": 3
+          }
+        },
+        {
+          "text": "Say yes, and quietly plan for when they betray you",
+          "points": {
+            "jaheira": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}
