@@ -116,7 +116,7 @@ function buildWordlePage(theme, words, allThemes, wordleSet, wordleIntros) {
   <meta charset="UTF-8" />
   <link rel="manifest" href="/manifest.json" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>${title} Wordle | Trivia Gauntlet</title>
+  <title>${title} Wordle: Free Word Guessing Game | Trivia Gauntlet</title>
   <meta name="description" content="${escapeHtml(metaDesc)}" />
   <link rel="canonical" href="${SITE_URL}/wordle/${theme.slug}.html" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>

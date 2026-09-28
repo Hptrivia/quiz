@@ -576,7 +576,7 @@ async function renderWordlePage() {
     return;
   }
 
-  document.title = `${theme.title} Wordle - Trivia Gauntlet`;
+  document.title = `${theme.title} Wordle: Free Word Guessing Game | Trivia Gauntlet`;
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.setAttribute('content', `Play the ${theme.title} Wordle on Trivia Gauntlet. Guess hidden words from the ${theme.title} universe one letter at a time.`);
 

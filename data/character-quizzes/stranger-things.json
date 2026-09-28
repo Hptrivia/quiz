@@ -1,0 +1,534 @@
+{
+  "slug": "stranger-things",
+  "show": "Stranger Things",
+  "shortName": "Stranger Things",
+  "seoTitle": "Which Stranger Things Character Are You? Stranger Things Test (12 Questions)",
+  "metaDescription": "Take the Stranger Things test: 12 everyday questions reveal whether you're Eleven, Mike, Dustin, Lucas, Will, Max, Steve or Hopper — with your full character breakdown.",
+  "intro": "Are you the fighter who'd do anything for the family she chose, the babysitter who'd take on anything to keep the kids safe, or the gruff one with a soft heart? Answer 12 questions about how you really handle friends, fear and trouble, and find out which Stranger Things character you are.",
+  "characters": [
+    {
+      "id": "eleven",
+      "name": "Eleven",
+      "emoji": "🧇",
+      "color": "#ec4899",
+      "title": "The Powerful Survivor",
+      "summary": "Quiet, strong and more powerful than anyone knows. You've been through a lot — and you'll fight for the family you chose.",
+      "description": [
+        "Like Eleven, you're a survivor. She escaped a lab where she was raised as an experiment, and she's been fighting ever since.",
+        "You say little, but you feel deeply. Eleven's friends became her family, and she'd do anything to protect them.",
+        "You're still figuring out who you are — and you love simple joys, like a stack of Eggos."
+      ],
+      "strengths": [
+        "Powerful",
+        "Loyal",
+        "Resilient"
+      ],
+      "flaw": "You carry everything alone and struggle to trust.",
+      "signature": "A box of Eggo waffles, a nosebleed and a very determined stare.",
+      "clashReason": "they'd barely say a word"
+    },
+    {
+      "id": "mike",
+      "name": "Mike Wheeler",
+      "emoji": "🎲",
+      "color": "#1e40af",
+      "title": "The Loyal Leader",
+      "summary": "Passionate, stubborn and fiercely loyal. You lead the Party — and you'd never, ever abandon a friend.",
+      "description": [
+        "Like Mike, you're the leader. He's the heart of the Party and the Dungeon Master of their campaigns.",
+        "You're passionate and a bit stubborn. When Mike believes in something, he doesn't let go.",
+        "Above all, you're loyal. Friends don't lie — and they don't give up on each other."
+      ],
+      "strengths": [
+        "Loyal",
+        "Passionate",
+        "Leader"
+      ],
+      "flaw": "You're stubborn, and you can be a little self-centred.",
+      "signature": "A Dungeons & Dragons rulebook and a walkie-talkie.",
+      "clashReason": "they'd boss everyone around"
+    },
+    {
+      "id": "dustin",
+      "name": "Dustin Henderson",
+      "emoji": "🧢",
+      "color": "#f59e0b",
+      "title": "The Brilliant Optimist",
+      "summary": "Smart, funny and endlessly curious. You bring the science — and the snacks — to every adventure.",
+      "description": [
+        "Like Dustin, you're a science brain. He builds radios, studies strange creatures and always has a theory.",
+        "You're upbeat and funny, and you make friends with just about anyone — even the popular kid, Steve.",
+        "You're loyal and brave, and you never lose your sense of wonder."
+      ],
+      "strengths": [
+        "Curious",
+        "Funny",
+        "Loyal"
+      ],
+      "flaw": "You can get a little too attached to strange pets.",
+      "signature": "A trucker hat, a big grin and a homemade radio.",
+      "clashReason": "they'd never stop talking about science"
+    },
+    {
+      "id": "lucas",
+      "name": "Lucas Sinclair",
+      "emoji": "🏹",
+      "color": "#22c55e",
+      "title": "The Practical Realist",
+      "summary": "Sensible, brave and grounded. You're the one who asks the obvious question everyone else is ignoring.",
+      "description": [
+        "Like Lucas, you're practical. He's the sensible one in the Party — the realist when everyone else gets carried away.",
+        "You're brave and quick to act. Lucas isn't afraid to charge in with his wrist rocket.",
+        "You care about fitting in and about your friends, and learning to balance both is your big challenge."
+      ],
+      "strengths": [
+        "Sensible",
+        "Brave",
+        "Honest"
+      ],
+      "flaw": "You're sceptical, and you can be slow to trust new people.",
+      "signature": "A camouflage bandana and a slingshot.",
+      "clashReason": "they'd doubt every plan you make"
+    },
+    {
+      "id": "will",
+      "name": "Will Byers",
+      "emoji": "🎨",
+      "color": "#0ea5e9",
+      "title": "The Sensitive Soul",
+      "summary": "Gentle, creative and tougher than anyone realises. You've been through the worst — and you're still kind.",
+      "description": [
+        "Like Will, you're creative. He's an artist who draws his friends and their adventures.",
+        "You've been through terrible things. Will vanished into the Upside Down and was haunted by what he found there.",
+        "You're gentle and sensitive, and you feel things others miss — but you're stronger than anyone gives you credit for."
+      ],
+      "strengths": [
+        "Kind",
+        "Creative",
+        "Resilient"
+      ],
+      "flaw": "You keep your feelings hidden and feel like you don't fit in.",
+      "signature": "A sketchbook and a bowl haircut.",
+      "clashReason": "they'd keep everything to themselves"
+    },
+    {
+      "id": "max",
+      "name": "Max Mayfield",
+      "emoji": "🛹",
+      "color": "#dc2626",
+      "title": "The Tough New Girl",
+      "summary": "Tough, sarcastic and fiercely independent. You don't let anyone push you around — even when you're hurting.",
+      "description": [
+        "Like Max, you're tough. She skated into Hawkins as the new girl and refused to be treated like one.",
+        "You're sarcastic and independent, and you hide your pain behind a tough exterior.",
+        "When things got darkest, Max found strength in her friends — and in her favourite song, Kate Bush's \"Running Up That Hill.\""
+      ],
+      "strengths": [
+        "Tough",
+        "Independent",
+        "Brave"
+      ],
+      "flaw": "You shut people out when you're hurting.",
+      "signature": "A skateboard, red hair and a Walkman playing Kate Bush.",
+      "clashReason": "they'd push you away"
+    },
+    {
+      "id": "steve",
+      "name": "Steve Harrington",
+      "emoji": "🏏",
+      "color": "#7c3aed",
+      "title": "The Reformed Cool Guy",
+      "summary": "Charming, protective and way better than you first seemed. You went from popular kid to everyone's favourite babysitter.",
+      "description": [
+        "Like Steve, you've grown. He started out as the popular jock — and became the fiercely protective 'babysitter' of the younger kids.",
+        "You're brave and you'll put yourself between your friends and danger — usually with a nail-studded bat.",
+        "You've got great hair, a big heart and a surprisingly good friendship with Dustin."
+      ],
+      "strengths": [
+        "Protective",
+        "Brave",
+        "Grew up"
+      ],
+      "flaw": "You're not always the smartest person in the room — and you know it.",
+      "signature": "Perfect hair, a Scoops Ahoy uniform and a bat with nails in it.",
+      "clashReason": "they'd treat you like a kid"
+    },
+    {
+      "id": "hopper",
+      "name": "Jim Hopper",
+      "emoji": "🚔",
+      "color": "#78716c",
+      "title": "The Gruff Protector",
+      "summary": "Grumpy, tough and secretly soft. You've lost a lot — and you'd go through anything for the people you love now.",
+      "description": [
+        "Like Hopper, you're gruff on the outside. He's the town's police chief — and he's not much of a morning person.",
+        "You carry grief. Hopper lost his daughter, Sara, and it changed everything about him.",
+        "But you open your heart again. Hopper took in Eleven and became the dad she never had."
+      ],
+      "strengths": [
+        "Protective",
+        "Tough",
+        "Loves deeply"
+      ],
+      "flaw": "You bottle up your feelings and hide behind grumpiness.",
+      "signature": "A police hat, a cup of coffee and a very strict curfew.",
+      "clashReason": "they'd set rules, then break their own"
+    }
+  ],
+  "questions": [
+    {
+      "text": "A friend hasn't replied to your messages in two days. You...",
+      "options": [
+        {
+          "text": "Go round to their house. Right now",
+          "points": {
+            "mike": 3
+          }
+        },
+        {
+          "text": "Come up with a theory about what happened",
+          "points": {
+            "dustin": 3
+          }
+        },
+        {
+          "text": "Assume they're fine. People get busy",
+          "points": {
+            "lucas": 3
+          }
+        },
+        {
+          "text": "Worry quietly, and draw to take your mind off it",
+          "points": {
+            "will": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone new joins your friend group. You...",
+      "options": [
+        {
+          "text": "Welcome them straight away",
+          "points": {
+            "dustin": 3
+          }
+        },
+        {
+          "text": "Stay suspicious until they prove themselves",
+          "points": {
+            "lucas": 2,
+            "mike": 1
+          }
+        },
+        {
+          "text": "Act like you don't care — then slowly warm up",
+          "points": {
+            "max": 3
+          }
+        },
+        {
+          "text": "Look out for them, without making it weird",
+          "points": {
+            "steve": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're genuinely scared. You...",
+      "options": [
+        {
+          "text": "Push through. Your friends need you",
+          "points": {
+            "eleven": 3
+          }
+        },
+        {
+          "text": "Crack a joke to calm everyone down",
+          "points": {
+            "steve": 2,
+            "dustin": 1
+          }
+        },
+        {
+          "text": "Get angry",
+          "points": {
+            "hopper": 3
+          }
+        },
+        {
+          "text": "Freeze — then find your courage",
+          "points": {
+            "will": 2,
+            "lucas": 1
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone you love is making a choice you think is dangerous. You...",
+      "options": [
+        {
+          "text": "Set strict rules. For their own good",
+          "points": {
+            "hopper": 3
+          }
+        },
+        {
+          "text": "Argue until they listen",
+          "points": {
+            "mike": 3
+          }
+        },
+        {
+          "text": "Back them — but stay close in case it goes wrong",
+          "points": {
+            "steve": 3
+          }
+        },
+        {
+          "text": "Respect it. You'd hate anyone telling you what to do",
+          "points": {
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're going through something really hard. You...",
+      "options": [
+        {
+          "text": "Shut everyone out. You'll deal with it alone",
+          "points": {
+            "max": 3
+          }
+        },
+        {
+          "text": "Keep it inside and act normal",
+          "points": {
+            "will": 3
+          }
+        },
+        {
+          "text": "Bury it under a lot of grumpiness",
+          "points": {
+            "hopper": 3
+          }
+        },
+        {
+          "text": "Say very little — but let one person in",
+          "points": {
+            "eleven": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your friends want to do something risky. You...",
+      "options": [
+        {
+          "text": "Point out that this is a terrible idea. Then go anyway",
+          "points": {
+            "lucas": 3
+          }
+        },
+        {
+          "text": "Lead the way",
+          "points": {
+            "mike": 3
+          }
+        },
+        {
+          "text": "Go. Someone has to keep these kids alive",
+          "points": {
+            "steve": 3
+          }
+        },
+        {
+          "text": "Bring gadgets and a backup plan",
+          "points": {
+            "dustin": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your perfect evening is...",
+      "options": [
+        {
+          "text": "Pyjamas, a TV show and your favourite snack",
+          "points": {
+            "eleven": 3
+          }
+        },
+        {
+          "text": "Drawing in your room with music on",
+          "points": {
+            "will": 3
+          }
+        },
+        {
+          "text": "Swapping nerdy facts with friends until 2am",
+          "points": {
+            "dustin": 3
+          }
+        },
+        {
+          "text": "Out with friends, hair looking perfect",
+          "points": {
+            "steve": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone breaks a promise to you. You...",
+      "options": [
+        {
+          "text": "Tell them how much it hurt. Honesty matters",
+          "points": {
+            "mike": 2,
+            "eleven": 1
+          }
+        },
+        {
+          "text": "Pull away and stop letting them in",
+          "points": {
+            "max": 3
+          }
+        },
+        {
+          "text": "Grumble for a day — then quietly let it go",
+          "points": {
+            "hopper": 3
+          }
+        },
+        {
+          "text": "Want an explanation. A good one",
+          "points": {
+            "lucas": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're babysitting kids who refuse to listen. You...",
+      "options": [
+        {
+          "text": "Forget the rules. Just make sure everyone survives the night",
+          "points": {
+            "steve": 3
+          }
+        },
+        {
+          "text": "Bribe them with a ridiculously big breakfast",
+          "points": {
+            "hopper": 3
+          }
+        },
+        {
+          "text": "Run a game so good they forget to misbehave",
+          "points": {
+            "mike": 3
+          }
+        },
+        {
+          "text": "Sit down and draw with them until everyone calms down",
+          "points": {
+            "will": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your favourite song comes on. You...",
+      "options": [
+        {
+          "text": "Put your headphones on and disappear into it",
+          "points": {
+            "max": 3
+          }
+        },
+        {
+          "text": "Send it to someone you miss",
+          "points": {
+            "dustin": 3
+          }
+        },
+        {
+          "text": "Dance. Badly. You don't care",
+          "points": {
+            "eleven": 3
+          }
+        },
+        {
+          "text": "Turn it all the way up to get pumped for something big",
+          "points": {
+            "lucas": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your friend has powers the government wants. Hiding them means lying to everyone — even your own family. You...",
+      "options": [
+        {
+          "text": "Hide them. Friends protect each other",
+          "points": {
+            "mike": 3
+          }
+        },
+        {
+          "text": "Take them in yourself. You'll deal with the rules later",
+          "points": {
+            "hopper": 3
+          }
+        },
+        {
+          "text": "Help — and set up a very secret way to stay in contact",
+          "points": {
+            "dustin": 3
+          }
+        },
+        {
+          "text": "Worry it's putting everyone in danger — but help anyway",
+          "points": {
+            "lucas": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "Something dangerous is coming for your town. You can run with your family, or stay and fight with your friends. You...",
+      "options": [
+        {
+          "text": "Fight. You're not leaving anyone behind",
+          "points": {
+            "eleven": 3
+          }
+        },
+        {
+          "text": "Get the younger kids out first. Then come back",
+          "points": {
+            "steve": 3
+          }
+        },
+        {
+          "text": "Stick around — even though you're scared out of your mind",
+          "points": {
+            "max": 3
+          }
+        },
+        {
+          "text": "Stay, and try to understand what it actually wants",
+          "points": {
+            "will": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

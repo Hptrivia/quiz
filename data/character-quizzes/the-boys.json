@@ -1,0 +1,534 @@
+{
+  "slug": "the-boys",
+  "show": "The Boys",
+  "shortName": "The Boys",
+  "seoTitle": "Which The Boys Character Are You? The Boys Test (12 Questions)",
+  "metaDescription": "Take The Boys test: 12 everyday questions reveal whether you're Butcher, Hughie, Homelander, Starlight, Kimiko, Frenchie, Mother's Milk or Queen Maeve — with your full character breakdown.",
+  "intro": "Are you the one with a grudge you'll never let go, the nice guy dragged into a war, or the hero everyone loves — who isn't really a hero at all? Answer 12 questions about how you really handle power, truth and the people you love, and find out which character from The Boys you are.",
+  "characters": [
+    {
+      "id": "butcher",
+      "name": "Billy Butcher",
+      "emoji": "🧥",
+      "color": "#111827",
+      "title": "The Relentless Avenger",
+      "summary": "Ruthless, charismatic and driven by a grudge you'll never let go. You'll do whatever it takes — and it usually takes a lot.",
+      "description": [
+        "Like Butcher, you're on a mission. He's a former British special forces soldier who hates Supes with every fibre of his being.",
+        "You're charismatic and funny in a dark way, and people follow you even when they know they shouldn't.",
+        "But your need for revenge can make you the very thing you hate."
+      ],
+      "strengths": [
+        "Relentless",
+        "Tactical",
+        "Charismatic"
+      ],
+      "flaw": "You'll sacrifice anyone to win.",
+      "signature": "A long black coat, a crowbar and a very British insult.",
+      "clashReason": "they'd do anything to win — and drag you along"
+    },
+    {
+      "id": "hughie",
+      "name": "Hughie Campbell",
+      "emoji": "🎧",
+      "color": "#0ea5e9",
+      "title": "The Decent Everyman",
+      "summary": "Kind, anxious and thrown into something way bigger than you. You never wanted to fight — but you won't back down.",
+      "description": [
+        "Like Hughie, you're a regular person. He was working at an electronics store until a Supe tragedy changed his life.",
+        "You're kind and a bit awkward, and you're out of your depth more often than not.",
+        "But you're braver than you look, and you hold on to your decency when everyone around you loses theirs."
+      ],
+      "strengths": [
+        "Decent",
+        "Brave when it counts",
+        "Loyal"
+      ],
+      "flaw": "You doubt yourself and get pulled along by stronger personalities.",
+      "signature": "Headphones playing Billy Joel and a very nervous face.",
+      "clashReason": "they'd freak out when you need them calm"
+    },
+    {
+      "id": "homelander",
+      "name": "Homelander",
+      "emoji": "🦅",
+      "color": "#1d4ed8",
+      "title": "The All-Powerful Narcissist",
+      "summary": "Powerful, charming on camera and desperate to be adored. You are, frankly, the villain — but what a villain.",
+      "description": [
+        "Well, this is awkward. Like Homelander, you're the most powerful person in the room, and everyone knows it.",
+        "You need to be loved. Homelander's public image is perfect — behind the scenes, he's terrifying.",
+        "Relax: in real life this probably just means you're confident and love a bit of attention. Probably."
+      ],
+      "strengths": [
+        "Powerful",
+        "Charismatic",
+        "Confident"
+      ],
+      "flaw": "You need everyone to love you — and you punish them when they don't.",
+      "signature": "A cape made from an American flag and a glass of milk.",
+      "clashReason": "they'd need you to worship them"
+    },
+    {
+      "id": "starlight",
+      "name": "Starlight",
+      "emoji": "⭐",
+      "color": "#eab308",
+      "title": "The Idealist Who Fights Back",
+      "summary": "Principled, brave and determined to do real good. You believed in heroes — and when they let you down, you became one.",
+      "description": [
+        "Like Annie, you believed in the dream. She joined The Seven thinking she'd finally get to help people.",
+        "The reality broke her heart — so she fought back, from the inside.",
+        "You're principled and brave, and you're willing to risk your career to tell the truth."
+      ],
+      "strengths": [
+        "Principled",
+        "Brave",
+        "Honest"
+      ],
+      "flaw": "You take on too much and feel responsible for everything.",
+      "signature": "A glowing light and a microphone she uses to tell the truth.",
+      "clashReason": "they'd tell the truth no matter who it hurts"
+    },
+    {
+      "id": "kimiko",
+      "name": "Kimiko",
+      "emoji": "🩸",
+      "color": "#be123c",
+      "title": "The Silent Fighter",
+      "summary": "Quiet, fierce and more expressive than words could ever be. You've been through hell — and you still have a gentle heart.",
+      "description": [
+        "Like Kimiko, you don't need words to be understood. She barely speaks, communicating mostly in sign language — and everyone knows exactly how she feels.",
+        "You're a ferocious fighter when you have to be.",
+        "Underneath, you're gentle and playful, and you want a peaceful life you've never been allowed to have."
+      ],
+      "strengths": [
+        "Fierce",
+        "Loyal",
+        "Gentle underneath"
+      ],
+      "flaw": "You carry deep pain you rarely let anyone see.",
+      "signature": "A quiet smile, a sign-language joke and a terrifying fight.",
+      "clashReason": "they'd never tell you what they're thinking"
+    },
+    {
+      "id": "frenchie",
+      "name": "Frenchie",
+      "emoji": "🧨",
+      "color": "#7c3aed",
+      "title": "The Soulful Tinkerer",
+      "summary": "Romantic, creative and full of feeling. You can build anything — and you love with your whole heart.",
+      "description": [
+        "Like Frenchie, you're a creative problem-solver. He's the team's chemist, explosives expert and gadget-maker.",
+        "You're a romantic and a poet at heart, and you feel everything deeply.",
+        "You carry guilt from your past, but you're fiercely devoted to the people you love — especially Kimiko."
+      ],
+      "strengths": [
+        "Inventive",
+        "Romantic",
+        "Loyal"
+      ],
+      "flaw": "Your past and your guilt drag you down.",
+      "signature": "A homemade gadget, a French curse and a very big heart.",
+      "clashReason": "they're chaos in human form"
+    },
+    {
+      "id": "mm",
+      "name": "Mother's Milk",
+      "emoji": "📋",
+      "color": "#15803d",
+      "title": "The Moral Compass",
+      "summary": "Organised, principled and the voice of reason. You keep the team together — and you want to get home to your family.",
+      "description": [
+        "Like MM, you're the grown-up in the room. He's the most sensible member of The Boys.",
+        "You like order and you like a plan. Chaos makes you deeply uncomfortable.",
+        "Everything you do is for your family. MM wants to make the world safe for his daughter."
+      ],
+      "strengths": [
+        "Responsible",
+        "Principled",
+        "Level-headed"
+      ],
+      "flaw": "You carry the stress of everyone else's bad choices.",
+      "signature": "A tidy notebook, a strict plan and a photo of his daughter.",
+      "clashReason": "they need a plan for everything"
+    },
+    {
+      "id": "maeve",
+      "name": "Queen Maeve",
+      "emoji": "🛡️",
+      "color": "#b45309",
+      "title": "The Jaded Warrior",
+      "summary": "Tough, cynical and tired of pretending. You've seen behind the curtain — and you've still got a hero somewhere inside you.",
+      "description": [
+        "Like Maeve, you've been in the game a long time. She's one of the original members of The Seven — and she knows how rotten it is.",
+        "You're cynical and blunt, and you've numbed yourself to cope.",
+        "But when the moment comes, you remember who you wanted to be — and you step up."
+      ],
+      "strengths": [
+        "Tough",
+        "Honest",
+        "Heroic when it counts"
+      ],
+      "flaw": "You give up on yourself too easily.",
+      "signature": "A sword, a shield and a drink she probably shouldn't be having.",
+      "clashReason": "they'd act like they don't care about anything"
+    }
+  ],
+  "questions": [
+    {
+      "text": "You find out someone you really admired has been faking it all along. You...",
+      "options": [
+        {
+          "text": "Make it your mission to take them down",
+          "points": {
+            "butcher": 3
+          }
+        },
+        {
+          "text": "Feel crushed — then decide to tell the truth about them",
+          "points": {
+            "starlight": 3
+          }
+        },
+        {
+          "text": "Not surprised. Everyone's faking something",
+          "points": {
+            "maeve": 3
+          }
+        },
+        {
+          "text": "Freak out, then somehow get dragged into doing something about it",
+          "points": {
+            "hughie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your group comes up with a plan you think is reckless. You...",
+      "options": [
+        {
+          "text": "Object loudly — with a better plan",
+          "points": {
+            "mm": 3
+          }
+        },
+        {
+          "text": "Go along with it. You'll improvise something",
+          "points": {
+            "frenchie": 3
+          }
+        },
+        {
+          "text": "Back it. Reckless is how things get done",
+          "points": {
+            "butcher": 3
+          }
+        },
+        {
+          "text": "Stay next to the people you love and see it through",
+          "points": {
+            "kimiko": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You suddenly get a lot of attention online. You...",
+      "options": [
+        {
+          "text": "Love it. You want more",
+          "points": {
+            "homelander": 3
+          }
+        },
+        {
+          "text": "Use it to say something that actually matters",
+          "points": {
+            "starlight": 3
+          }
+        },
+        {
+          "text": "Hate it. You just want to be left alone",
+          "points": {
+            "hughie": 2,
+            "kimiko": 1
+          }
+        },
+        {
+          "text": "Roll your eyes. You know how fake it all is",
+          "points": {
+            "maeve": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You've had a really bad day. You...",
+      "options": [
+        {
+          "text": "Put your headphones on and play something soft and old",
+          "points": {
+            "hughie": 3
+          }
+        },
+        {
+          "text": "Tidy the whole flat until everything's perfect",
+          "points": {
+            "mm": 3
+          }
+        },
+        {
+          "text": "Pour yourself a stiff drink",
+          "points": {
+            "maeve": 3
+          }
+        },
+        {
+          "text": "Throw yourself into making something with your hands",
+          "points": {
+            "frenchie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone insults you to your face. You...",
+      "options": [
+        {
+          "text": "Smile — and quietly make sure they regret it",
+          "points": {
+            "homelander": 3
+          }
+        },
+        {
+          "text": "Insult them back. Much, much worse",
+          "points": {
+            "butcher": 3
+          }
+        },
+        {
+          "text": "Count to ten. Then count again",
+          "points": {
+            "mm": 3
+          }
+        },
+        {
+          "text": "Say nothing. Your face says it all",
+          "points": {
+            "kimiko": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone you love is in danger. You...",
+      "options": [
+        {
+          "text": "Fight like hell",
+          "points": {
+            "kimiko": 3
+          }
+        },
+        {
+          "text": "Build something to get them out",
+          "points": {
+            "frenchie": 3
+          }
+        },
+        {
+          "text": "Risk everything to save them — your career included",
+          "points": {
+            "starlight": 3
+          }
+        },
+        {
+          "text": "Get them out first, then deal with whoever did it",
+          "points": {
+            "mm": 2,
+            "butcher": 1
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone powerful asks you to do something you know is wrong. You...",
+      "options": [
+        {
+          "text": "Do it. Then hate yourself for it",
+          "points": {
+            "maeve": 3
+          }
+        },
+        {
+          "text": "Refuse — publicly",
+          "points": {
+            "starlight": 3
+          }
+        },
+        {
+          "text": "Pretend to go along, then quietly work against them",
+          "points": {
+            "hughie": 3
+          }
+        },
+        {
+          "text": "Happily — as long as it makes you look good",
+          "points": {
+            "homelander": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "It's a rare night off. You...",
+      "options": [
+        {
+          "text": "Stay out of trouble. Mostly",
+          "points": {
+            "maeve": 3
+          }
+        },
+        {
+          "text": "Organise everything first. Then relax",
+          "points": {
+            "mm": 3
+          }
+        },
+        {
+          "text": "Watch a film with your person. No words needed",
+          "points": {
+            "kimiko": 2,
+            "frenchie": 1
+          }
+        },
+        {
+          "text": "Read what people are saying about you online",
+          "points": {
+            "homelander": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You get the chance to walk away from everything and live a quiet, normal life. You...",
+      "options": [
+        {
+          "text": "Take it. Finally",
+          "points": {
+            "kimiko": 3
+          }
+        },
+        {
+          "text": "You can't. Not until the job's done",
+          "points": {
+            "butcher": 3
+          }
+        },
+        {
+          "text": "Only if the person you love comes with you",
+          "points": {
+            "frenchie": 3
+          }
+        },
+        {
+          "text": "Disappear completely, if that's what it takes",
+          "points": {
+            "maeve": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You can finally take down the person who ruined your life — but innocent people could get hurt. You...",
+      "options": [
+        {
+          "text": "Do it. Whatever it costs",
+          "points": {
+            "butcher": 3
+          }
+        },
+        {
+          "text": "Stop. Innocent people come first",
+          "points": {
+            "starlight": 3
+          }
+        },
+        {
+          "text": "Find another way, even if it takes years",
+          "points": {
+            "mm": 3
+          }
+        },
+        {
+          "text": "Hesitate — then do what your friends need you to do",
+          "points": {
+            "hughie": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You're offered a drug that gives you superpowers for 24 hours. It might have side effects. You...",
+      "options": [
+        {
+          "text": "Take it. You'd finally be on equal footing",
+          "points": {
+            "butcher": 3
+          }
+        },
+        {
+          "text": "Yes — if it means protecting the people you love",
+          "points": {
+            "hughie": 3
+          }
+        },
+        {
+          "text": "Never. You've seen what powers do to people",
+          "points": {
+            "mm": 3
+          }
+        },
+        {
+          "text": "Test what's in it first. You know your chemistry",
+          "points": {
+            "frenchie": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You work for a huge company that's lying to the public. Going public could destroy you. You...",
+      "options": [
+        {
+          "text": "Blow the whistle. The truth matters",
+          "points": {
+            "starlight": 3
+          }
+        },
+        {
+          "text": "Keep quiet. You've made your peace with it",
+          "points": {
+            "maeve": 3
+          }
+        },
+        {
+          "text": "Leak it anonymously and hope for the best",
+          "points": {
+            "hughie": 3
+          }
+        },
+        {
+          "text": "Make sure anyone who talks regrets it",
+          "points": {
+            "homelander": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

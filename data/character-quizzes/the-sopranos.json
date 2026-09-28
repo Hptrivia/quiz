@@ -1,0 +1,534 @@
+{
+  "slug": "the-sopranos",
+  "show": "The Sopranos",
+  "shortName": "Sopranos",
+  "seoTitle": "Which Sopranos Character Are You? The Sopranos Test (12 Questions)",
+  "metaDescription": "Take The Sopranos test: 12 everyday questions reveal whether you're Tony, Carmela, Christopher, Paulie, Silvio, Meadow, AJ or Dr. Melfi — with your full character breakdown.",
+  "intro": "Are you the boss who runs everything except his own head, the one who knows more than she lets on, or the superstitious old-timer with a story for everything? Answer 12 questions about how you really handle family, loyalty and trouble, and find out which Sopranos character you are.",
+  "characters": [
+    {
+      "id": "tony",
+      "name": "Tony Soprano",
+      "emoji": "🦆",
+      "color": "#1e3a8a",
+      "title": "The Conflicted Boss",
+      "summary": "Charismatic, powerful and full of contradictions. You run everything — but you can't quite run your own head.",
+      "description": [
+        "Like Tony, you're in charge. He runs a New Jersey crime family and a household, and both are exhausting.",
+        "You feel things more deeply than people think. Tony started therapy after a panic attack — triggered by a family of ducks leaving his pool.",
+        "You're charming, funny and generous, and you can turn frightening in a heartbeat."
+      ],
+      "strengths": [
+        "Charismatic",
+        "Commanding",
+        "Surprisingly self-aware"
+      ],
+      "flaw": "Your temper and your appetite — for everything — get the better of you.",
+      "signature": "A bathrobe, a morning newspaper and a plate of gabagool.",
+      "clashReason": "they'd make every decision about themselves"
+    },
+    {
+      "id": "carmela",
+      "name": "Carmela Soprano",
+      "emoji": "💍",
+      "color": "#be185d",
+      "title": "The Knowing Matriarch",
+      "summary": "Sharp, devout and determined to protect your family. You know more than you let on — and you've made your peace with it. Mostly.",
+      "description": [
+        "Like Carmela, you run the home and you run it well. Nothing happens in that house without her knowing.",
+        "You're smarter than people assume. Carmela sees exactly what her life is built on — and wrestles with it constantly.",
+        "You want security for your kids, respect for yourself and, occasionally, a very nice new house."
+      ],
+      "strengths": [
+        "Sharp",
+        "Protective",
+        "Resilient"
+      ],
+      "flaw": "You look the other way when it suits you.",
+      "signature": "A fur coat, a baked ziti and a very knowing look.",
+      "clashReason": "they'd look the other way when it suits them"
+    },
+    {
+      "id": "christopher",
+      "name": "Christopher Moltisanti",
+      "emoji": "🎬",
+      "color": "#dc2626",
+      "title": "The Restless Dreamer",
+      "summary": "Impulsive, ambitious and hungry for more. You want a bigger life — you're just not sure which one.",
+      "description": [
+        "Like Christopher, you've got big dreams. He wanted to rise in the family — and to become a Hollywood screenwriter.",
+        "You're impulsive and emotional. Chris acts fast and thinks later.",
+        "You want the respect of the people you look up to more than anything, and it tears you apart."
+      ],
+      "strengths": [
+        "Ambitious",
+        "Passionate",
+        "Loyal"
+      ],
+      "flaw": "You act on impulse, and you struggle with your vices.",
+      "signature": "A screenplay, a leather jacket and a very short fuse.",
+      "clashReason": "they'd be reckless and blame everyone else"
+    },
+    {
+      "id": "paulie",
+      "name": "Paulie Walnuts",
+      "emoji": "🦅",
+      "color": "#64748b",
+      "title": "The Superstitious Old-Timer",
+      "summary": "Loyal, vain and hilariously set in your ways. You've got a story for everything — and a superstition for the rest.",
+      "description": [
+        "Like Paulie, you're old-school. The hair, the tracksuits, the rules — everything done the way it's always been done.",
+        "You're superstitious and a little paranoid. Paulie sees omens everywhere.",
+        "You're loyal to the bone, and you've got some of the best stories in the whole show — including a very long night lost in the Pine Barrens."
+      ],
+      "strengths": [
+        "Loyal",
+        "Funny",
+        "Survivor"
+      ],
+      "flaw": "You're petty, vain and cheap.",
+      "signature": "Silver-winged hair, a tracksuit and a story nobody asked for.",
+      "clashReason": "they'd never stop complaining"
+    },
+    {
+      "id": "silvio",
+      "name": "Silvio Dante",
+      "emoji": "🎤",
+      "color": "#7c3aed",
+      "title": "The Loyal Consigliere",
+      "summary": "Calm, loyal and the steady voice in the room. You're the right-hand man everyone trusts.",
+      "description": [
+        "Like Silvio, you're the adviser. He's Tony's consigliere and one of his oldest friends.",
+        "You're calm and loyal, and you keep your head when everyone else loses theirs.",
+        "You've got a showman side too. Silvio runs the Bada Bing club and loves doing his famous movie impressions."
+      ],
+      "strengths": [
+        "Loyal",
+        "Level-headed",
+        "Wise"
+      ],
+      "flaw": "You'd rather advise than lead — even when you need to step up.",
+      "signature": "A sharp suit, a big pompadour and an Al Pacino impression.",
+      "clashReason": "they'd stay loyal even when they shouldn't"
+    },
+    {
+      "id": "meadow",
+      "name": "Meadow Soprano",
+      "emoji": "🎓",
+      "color": "#22c55e",
+      "title": "The Smart Rebel",
+      "summary": "Intelligent, independent and questioning everything. You're going places — and you're not sure how you feel about where you came from.",
+      "description": [
+        "Like Meadow, you're smart and ambitious. She went to Columbia and set her sights on a big career.",
+        "You question everything, especially your family. Meadow sees through a lot of what her parents try to hide.",
+        "But family is complicated, and loyalty keeps pulling you back."
+      ],
+      "strengths": [
+        "Smart",
+        "Independent",
+        "Driven"
+      ],
+      "flaw": "You justify things you know aren't right when it's your family.",
+      "signature": "A college acceptance letter and a pointed question at the dinner table.",
+      "clashReason": "they'd tell you exactly what's wrong with you"
+    },
+    {
+      "id": "aj",
+      "name": "AJ Soprano",
+      "emoji": "🎮",
+      "color": "#f59e0b",
+      "title": "The Lost Soul",
+      "summary": "Sensitive, restless and still figuring it all out. You feel the weight of the world — and you're not sure what to do with it.",
+      "description": [
+        "Like AJ, you're a deep feeler. He struggles to find direction and feels the world's problems very personally.",
+        "You don't love expectations. AJ never quite fit the path his father imagined for him.",
+        "You're funnier and more thoughtful than people give you credit for, and you're still searching for where you belong."
+      ],
+      "strengths": [
+        "Sensitive",
+        "Honest",
+        "Thoughtful"
+      ],
+      "flaw": "You drift, and you avoid responsibility.",
+      "signature": "A video game controller and a very big existential question.",
+      "clashReason": "they'd never take anything seriously"
+    },
+    {
+      "id": "melfi",
+      "name": "Dr. Jennifer Melfi",
+      "emoji": "🛋️",
+      "color": "#0ea5e9",
+      "title": "The Principled Observer",
+      "summary": "Calm, perceptive and principled. You see through people — even the most dangerous ones.",
+      "description": [
+        "Like Dr. Melfi, you understand people. She's Tony's psychiatrist and probably the person who understands him best.",
+        "You're principled. Melfi holds a line even when it would be easier — or more satisfying — not to.",
+        "You're fascinated by what makes people tick, and you know when you're being manipulated."
+      ],
+      "strengths": [
+        "Perceptive",
+        "Principled",
+        "Composed"
+      ],
+      "flaw": "You get drawn in by people you know you should walk away from.",
+      "signature": "A notebook, a calm voice and a long, meaningful silence.",
+      "clashReason": "they'd see straight through you"
+    }
+  ],
+  "questions": [
+    {
+      "text": "It's a big family dinner at your place. You...",
+      "options": [
+        {
+          "text": "Sit at the head of the table and hold court",
+          "points": {
+            "tony": 3
+          }
+        },
+        {
+          "text": "Cook everything and quietly run the whole room",
+          "points": {
+            "carmela": 3
+          }
+        },
+        {
+          "text": "Bring up the one thing nobody wants to talk about",
+          "points": {
+            "meadow": 3
+          }
+        },
+        {
+          "text": "Turn up late and stare at your phone",
+          "points": {
+            "aj": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone disrespects you in public. You...",
+      "options": [
+        {
+          "text": "Handle it. Personally",
+          "points": {
+            "tony": 2,
+            "christopher": 1
+          }
+        },
+        {
+          "text": "Never forget it. You'll bring it up for twenty years",
+          "points": {
+            "paulie": 3
+          }
+        },
+        {
+          "text": "Stay calm and work out the smartest response",
+          "points": {
+            "silvio": 3
+          }
+        },
+        {
+          "text": "Wonder what's going on with them that they needed to do that",
+          "points": {
+            "melfi": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You get a big, unexpected pile of cash. You...",
+      "options": [
+        {
+          "text": "Put it towards a new house. A really nice one",
+          "points": {
+            "carmela": 3
+          }
+        },
+        {
+          "text": "Spend it on something flashy before anyone asks for a cut",
+          "points": {
+            "christopher": 3
+          }
+        },
+        {
+          "text": "Hide it somewhere nobody would ever think to look",
+          "points": {
+            "paulie": 3
+          }
+        },
+        {
+          "text": "Treat everyone to dinner. Loudly",
+          "points": {
+            "tony": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Something feels off, and you can't explain why. You...",
+      "options": [
+        {
+          "text": "Take it as an omen and change your plans immediately",
+          "points": {
+            "paulie": 3
+          }
+        },
+        {
+          "text": "Trust your gut and act fast",
+          "points": {
+            "christopher": 2,
+            "tony": 1
+          }
+        },
+        {
+          "text": "Sit with the feeling and try to understand it",
+          "points": {
+            "melfi": 3
+          }
+        },
+        {
+          "text": "Ask the question everyone's avoiding",
+          "points": {
+            "meadow": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're feeling low and can't shake it. You...",
+      "options": [
+        {
+          "text": "Finally see a therapist. Don't tell anyone",
+          "points": {
+            "tony": 3
+          }
+        },
+        {
+          "text": "Keep busy and act like everything's fine",
+          "points": {
+            "carmela": 3
+          }
+        },
+        {
+          "text": "Sink into it. The world's a terrible place anyway",
+          "points": {
+            "aj": 3
+          }
+        },
+        {
+          "text": "Pour it into something creative",
+          "points": {
+            "christopher": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend wants you to do something you know is wrong. You...",
+      "options": [
+        {
+          "text": "Refuse. There are lines you won't cross",
+          "points": {
+            "melfi": 3
+          }
+        },
+        {
+          "text": "Do it. Loyalty comes first",
+          "points": {
+            "silvio": 2,
+            "paulie": 2
+          }
+        },
+        {
+          "text": "Go along with it, then feel terrible about it",
+          "points": {
+            "christopher": 3
+          }
+        },
+        {
+          "text": "Argue about it — then go along anyway",
+          "points": {
+            "meadow": 2,
+            "carmela": 1
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone you've always looked up to lets you down. You...",
+      "options": [
+        {
+          "text": "Feel it deeply — and act out",
+          "points": {
+            "christopher": 3
+          }
+        },
+        {
+          "text": "Stay loyal. Keep the disappointment to yourself",
+          "points": {
+            "silvio": 3
+          }
+        },
+        {
+          "text": "Call it out. They should know better",
+          "points": {
+            "meadow": 3
+          }
+        },
+        {
+          "text": "Blame them for everything that's wrong in your life",
+          "points": {
+            "aj": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're getting dressed for a normal day. You...",
+      "options": [
+        {
+          "text": "Tracksuit. Hair perfect",
+          "points": {
+            "paulie": 3
+          }
+        },
+        {
+          "text": "Bathrobe until noon",
+          "points": {
+            "tony": 3
+          }
+        },
+        {
+          "text": "Something expensive and classy",
+          "points": {
+            "carmela": 3
+          }
+        },
+        {
+          "text": "A smart blazer. Professional, always",
+          "points": {
+            "melfi": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A perfect Sunday. You...",
+      "options": [
+        {
+          "text": "Big family lunch, then a nap in front of the TV",
+          "points": {
+            "tony": 3
+          }
+        },
+        {
+          "text": "Church in the morning, the racetrack in the afternoon",
+          "points": {
+            "paulie": 3
+          }
+        },
+        {
+          "text": "Old records, loud, all afternoon",
+          "points": {
+            "silvio": 3
+          }
+        },
+        {
+          "text": "Video games until the sun goes down",
+          "points": {
+            "aj": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your family expects you to go into the family business. You...",
+      "options": [
+        {
+          "text": "Of course. You've wanted in since you were a kid",
+          "points": {
+            "christopher": 3
+          }
+        },
+        {
+          "text": "Try it, hate it, and quit",
+          "points": {
+            "aj": 3
+          }
+        },
+        {
+          "text": "No. You're building your own life",
+          "points": {
+            "meadow": 3
+          }
+        },
+        {
+          "text": "Take it over and run it better than they ever did",
+          "points": {
+            "tony": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You find out your partner's money comes from something illegal. It pays for your home and your kids' school. You...",
+      "options": [
+        {
+          "text": "Stay, and look the other way. The kids come first",
+          "points": {
+            "carmela": 3
+          }
+        },
+        {
+          "text": "Leave. You couldn't live with it",
+          "points": {
+            "melfi": 3
+          }
+        },
+        {
+          "text": "Tell yourself it's more complicated than it looks",
+          "points": {
+            "meadow": 3
+          }
+        },
+        {
+          "text": "Ask how you can get a piece of it",
+          "points": {
+            "paulie": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You're a therapist. Your charming, funny new patient slowly turns out to be dangerous. You...",
+      "options": [
+        {
+          "text": "Keep treating them. Everyone deserves help",
+          "points": {
+            "melfi": 3
+          }
+        },
+        {
+          "text": "Refer them on. Why take the risk?",
+          "points": {
+            "silvio": 3
+          }
+        },
+        {
+          "text": "Carry on. You can handle anyone",
+          "points": {
+            "tony": 3
+          }
+        },
+        {
+          "text": "Report them. There are rules for this",
+          "points": {
+            "meadow": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

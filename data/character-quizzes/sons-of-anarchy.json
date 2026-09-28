@@ -1,0 +1,533 @@
+{
+  "slug": "sons-of-anarchy",
+  "show": "Sons of Anarchy",
+  "shortName": "Sons of Anarchy",
+  "seoTitle": "Which Sons of Anarchy Character Are You? SAMCRO Test (12 Questions)",
+  "metaDescription": "Take the Sons of Anarchy test: 12 everyday questions reveal whether you're Jax, Clay, Gemma, Tara, Opie, Chibs, Tig or Juice — with your full character breakdown.",
+  "intro": "Are you the conflicted leader trying to steer everyone somewhere better, the one quietly running things from behind the scenes, or the loyal friend who'd give everything for the people they love? Answer 12 questions about how you really handle family, loyalty and trouble, and find out which Sons of Anarchy character you are.",
+  "characters": [
+    {
+      "id": "jax",
+      "name": "Jax Teller",
+      "emoji": "🏍️",
+      "color": "#3b82f6",
+      "title": "The Conflicted Leader",
+      "summary": "Charismatic, thoughtful and torn between who you are and who you want to be. People follow you — even when you're not sure where you're going.",
+      "description": [
+        "Like Jax, you're a natural leader. You were born into something bigger than you, and people look to you whether you want them to or not.",
+        "You think deeply about who you are. Jax found his father's manuscript about how the club lost its way, and it changed how he saw everything.",
+        "You want to do the right thing for your family. The trouble is, the right thing and the necessary thing aren't always the same."
+      ],
+      "strengths": [
+        "Charismatic",
+        "Loyal",
+        "Thoughtful"
+      ],
+      "flaw": "When people you love get hurt, you let anger make your decisions.",
+      "signature": "A leather cut, a hoodie underneath and a notebook he writes in at night.",
+      "clashReason": "they'd want to change everything you built"
+    },
+    {
+      "id": "clay",
+      "name": "Clay Morrow",
+      "emoji": "👊",
+      "color": "#78350f",
+      "title": "The Ruthless Old Guard",
+      "summary": "Powerful, calculating and determined to stay on top. You'll do whatever it takes to keep control.",
+      "description": [
+        "Like Clay, you like being in charge. He was the president of SAMCRO, and he fought hard to keep the gavel in his hand.",
+        "You're pragmatic to the point of ruthlessness. You'll make the ugly decisions nobody else wants to make.",
+        "But power comes at a price, and you've made enemies — some of them very close to home."
+      ],
+      "strengths": [
+        "Commanding",
+        "Decisive",
+        "Strategic"
+      ],
+      "flaw": "You'll betray anyone to hold on to power.",
+      "signature": "The president's patch, a cigar and a very long memory.",
+      "clashReason": "they'd do anything to keep their power"
+    },
+    {
+      "id": "gemma",
+      "name": "Gemma Teller Morrow",
+      "emoji": "👑",
+      "color": "#7c2d12",
+      "title": "The Queen of Charming",
+      "summary": "Fierce, protective and always in control — even when it looks like you're not. You run things from behind the scenes.",
+      "description": [
+        "Like Gemma, you're the real power in the room. She's the matriarch of the club, and nothing happens without her knowing about it.",
+        "You'd do anything for your family. Absolutely anything. That's both your greatest strength and the most dangerous thing about you.",
+        "You're a master of reading people and pulling strings, and you always, always protect your own."
+      ],
+      "strengths": [
+        "Fiercely protective",
+        "Shrewd",
+        "Unbreakable"
+      ],
+      "flaw": "You manipulate the people you love — and you cross lines you can't come back from.",
+      "signature": "Big hair, sunglasses and a smile that means she's already won.",
+      "clashReason": "they'd control everyone around them"
+    },
+    {
+      "id": "tara",
+      "name": "Tara Knowles",
+      "emoji": "🩺",
+      "color": "#ec4899",
+      "title": "The Outsider Pulled In",
+      "summary": "Smart, principled and determined to build a better life. You tried to get out — but love pulled you back in.",
+      "description": [
+        "Like Tara, you're ambitious and capable. She left Charming, became a surgeon and came back to work at the local hospital.",
+        "You've got a strong moral compass, but love makes things complicated. Tara was Jax's high school girlfriend, and the pull of that life was stronger than she expected.",
+        "You fight for your kids and for a way out — and you're tougher than people give you credit for."
+      ],
+      "strengths": [
+        "Brilliant",
+        "Principled",
+        "Protective parent"
+      ],
+      "flaw": "You stay in situations long after you know you should leave.",
+      "signature": "Surgical scrubs, a steady hand and a plan to get her boys out.",
+      "clashReason": "they'd want you out of the life"
+    },
+    {
+      "id": "opie",
+      "name": "Opie Winston",
+      "emoji": "🧔",
+      "color": "#22c55e",
+      "title": "The Loyal Brother",
+      "summary": "Quiet, steady and loyal beyond words. You don't talk much, but when it counts, you'd give everything for your friends.",
+      "description": [
+        "Like Opie, you're the loyal one. Jax's best friend since childhood, Opie was the person everyone could count on.",
+        "You're a family person at heart. Opie tried to step back from the club for his wife and kids — but the loyalty ran too deep.",
+        "In the end, Opie sacrificed himself so his best friend could live. That's the kind of loyalty you have."
+      ],
+      "strengths": [
+        "Loyal",
+        "Steady",
+        "Selfless"
+      ],
+      "flaw": "You carry pain silently until it breaks you.",
+      "signature": "A big beard, a quiet nod and an unbreakable friendship.",
+      "clashReason": "they'd walk away from everything to protect their family"
+    },
+    {
+      "id": "chibs",
+      "name": "Chibs Telford",
+      "emoji": "🏴",
+      "color": "#0ea5e9",
+      "title": "The Steady Veteran",
+      "summary": "Loyal, wise and steady under pressure. You've been through a lot — and you're the one people lean on.",
+      "description": [
+        "Like Chibs, you've lived a lot of life. He's a Scottish-born former army medic with the scars to prove he's survived worse.",
+        "You're steady and dependable. When things fall apart, people look to you to keep them together.",
+        "You're warm and funny too, and you care deeply about the younger ones in the club."
+      ],
+      "strengths": [
+        "Dependable",
+        "Experienced",
+        "Warm"
+      ],
+      "flaw": "Your loyalty sometimes stops you questioning people you should.",
+      "signature": "A Scottish accent, a knowing smile and a medic's kit.",
+      "clashReason": "they'd always put the club first"
+    },
+    {
+      "id": "tig",
+      "name": "Tig Trager",
+      "emoji": "🔪",
+      "color": "#dc2626",
+      "title": "The Wild Card Enforcer",
+      "summary": "Intense, dark and deeply loyal. You'd follow your leader anywhere — and you've got the weirdest sense of humour in the room.",
+      "description": [
+        "Like Tig, you're all in. He's the club's enforcer, and his loyalty is absolute.",
+        "You're unpredictable and a bit unhinged, with a dark sense of humour that makes people nervous.",
+        "But underneath it, you feel things deeply, and you'd go through fire for your brothers."
+      ],
+      "strengths": [
+        "Fiercely loyal",
+        "Fearless",
+        "Funny (darkly)"
+      ],
+      "flaw": "You act on impulse, and it has terrible consequences.",
+      "signature": "Wild hair, intense eyes and a comment nobody else would dare make.",
+      "clashReason": "they'd do something unhinged and call it a joke"
+    },
+    {
+      "id": "juice",
+      "name": "Juice Ortiz",
+      "emoji": "💻",
+      "color": "#a855f7",
+      "title": "The Anxious Tech Guy",
+      "summary": "Sweet, eager and desperate to belong. You're the tech brain of the group — and you worry more than anyone knows.",
+      "description": [
+        "Like Juice, you're the one with the gadgets and the know-how. He handles the club's tech and intelligence work.",
+        "You want to belong more than anything. Being part of the club is Juice's whole identity.",
+        "That fear of losing everything makes you vulnerable — Juice made choices under pressure that haunted him."
+      ],
+      "strengths": [
+        "Tech-savvy",
+        "Eager",
+        "Loyal at heart"
+      ],
+      "flaw": "You panic under pressure and make choices you regret.",
+      "signature": "A laptop, a mohawk and a nervous laugh.",
+      "clashReason": "they'd crack under pressure"
+    }
+  ],
+  "questions": [
+    {
+      "text": "First week at a new job. You...",
+      "options": [
+        {
+          "text": "Work out who has the real power and get close to them",
+          "points": {
+            "gemma": 3
+          }
+        },
+        {
+          "text": "Keep your head down and do solid work",
+          "points": {
+            "opie": 3
+          }
+        },
+        {
+          "text": "Fix everyone's laptop so they like you",
+          "points": {
+            "juice": 3
+          }
+        },
+        {
+          "text": "Crack a wildly inappropriate joke on day one",
+          "points": {
+            "tig": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're offered a promotion that would make you your friends' boss. You...",
+      "options": [
+        {
+          "text": "Take it, even though you know it'll change things between you",
+          "points": {
+            "jax": 3
+          }
+        },
+        {
+          "text": "Finally. You've wanted this for years",
+          "points": {
+            "clay": 3
+          }
+        },
+        {
+          "text": "Say no — then accept when they insist you're the right person",
+          "points": {
+            "chibs": 3
+          }
+        },
+        {
+          "text": "Panic. What if they stop liking you?",
+          "points": {
+            "juice": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A free weekend. You...",
+      "options": [
+        {
+          "text": "A long ride with no destination",
+          "points": {
+            "jax": 3
+          }
+        },
+        {
+          "text": "Poker night with the old crew",
+          "points": {
+            "clay": 3
+          }
+        },
+        {
+          "text": "Time with family. Phone off",
+          "points": {
+            "opie": 3
+          }
+        },
+        {
+          "text": "Something you'd rather not explain on Monday",
+          "points": {
+            "tig": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone is rude to a member of your family in public. You...",
+      "options": [
+        {
+          "text": "Smile sweetly. They'll regret it later",
+          "points": {
+            "gemma": 3
+          }
+        },
+        {
+          "text": "Step in immediately, fists ready",
+          "points": {
+            "tig": 2,
+            "jax": 1
+          }
+        },
+        {
+          "text": "Calmly get your family out of there",
+          "points": {
+            "tara": 3
+          }
+        },
+        {
+          "text": "Just stand there and stare until they leave",
+          "points": {
+            "opie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A younger colleague is struggling. You...",
+      "options": [
+        {
+          "text": "Take them under your wing",
+          "points": {
+            "chibs": 3
+          }
+        },
+        {
+          "text": "Give them a real chance to prove themselves",
+          "points": {
+            "jax": 3
+          }
+        },
+        {
+          "text": "Tell them to toughen up",
+          "points": {
+            "clay": 3
+          }
+        },
+        {
+          "text": "Relate way too much. That was you last year",
+          "points": {
+            "juice": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A kid you look out for gets into a fight at school. You...",
+      "options": [
+        {
+          "text": "Storm into the school and sort it out yourself",
+          "points": {
+            "gemma": 3
+          }
+        },
+        {
+          "text": "Sit them down and explain why fighting isn't the answer",
+          "points": {
+            "tara": 3
+          }
+        },
+        {
+          "text": "Pick them up and just listen on the drive home",
+          "points": {
+            "opie": 3
+          }
+        },
+        {
+          "text": "Tell them you get it — but they can be better than that",
+          "points": {
+            "jax": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone you trusted breaks that trust. You...",
+      "options": [
+        {
+          "text": "Never forget it. Wait for the right moment",
+          "points": {
+            "clay": 3
+          }
+        },
+        {
+          "text": "Lose it. Loudly, and in public",
+          "points": {
+            "tig": 3
+          }
+        },
+        {
+          "text": "Spiral. What if it was somehow your fault?",
+          "points": {
+            "juice": 3
+          }
+        },
+        {
+          "text": "Give them one chance to explain",
+          "points": {
+            "chibs": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend asks you to lie for them. You...",
+      "options": [
+        {
+          "text": "No questions asked. That's what friends do",
+          "points": {
+            "opie": 2,
+            "tig": 1
+          }
+        },
+        {
+          "text": "Sure — and your version will be better than theirs",
+          "points": {
+            "gemma": 3
+          }
+        },
+        {
+          "text": "Refuse. You're not lying for anyone",
+          "points": {
+            "tara": 3
+          }
+        },
+        {
+          "text": "Agree, then panic about getting caught",
+          "points": {
+            "juice": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're throwing a party. You...",
+      "options": [
+        {
+          "text": "Cook for everyone and run the whole thing",
+          "points": {
+            "gemma": 3
+          }
+        },
+        {
+          "text": "Bring the whisky and the good stories",
+          "points": {
+            "chibs": 3
+          }
+        },
+        {
+          "text": "Keep it small. Big parties aren't really you",
+          "points": {
+            "tara": 3
+          }
+        },
+        {
+          "text": "Invite some very questionable people",
+          "points": {
+            "tig": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your partner wants to move far away for a fresh start. You...",
+      "options": [
+        {
+          "text": "Think about it — but you can't leave the people who depend on you",
+          "points": {
+            "jax": 2,
+            "gemma": 1
+          }
+        },
+        {
+          "text": "Talk them out of it. Nobody's leaving",
+          "points": {
+            "gemma": 3
+          }
+        },
+        {
+          "text": "Go. You've wanted out for years",
+          "points": {
+            "tara": 3
+          }
+        },
+        {
+          "text": "Panic. Everyone you belong with is here",
+          "points": {
+            "juice": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're in a motorcycle club. One of the members — your friend — has been caught talking to the police, and the club wants him dealt with. You...",
+      "options": [
+        {
+          "text": "Tell him to take his family and leave tonight",
+          "points": {
+            "tara": 3
+          }
+        },
+        {
+          "text": "Hear him out first. Everyone gets a chance to explain",
+          "points": {
+            "chibs": 3
+          }
+        },
+        {
+          "text": "Do what the club decides. He knew the rules",
+          "points": {
+            "tig": 3
+          }
+        },
+        {
+          "text": "Handle it yourself, quietly, before anyone else can",
+          "points": {
+            "clay": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You're in a motorcycle club. The club votes on a job that pays big money but could hurt innocent people. You...",
+      "options": [
+        {
+          "text": "Argue against it, then find a cleaner way to get the money",
+          "points": {
+            "jax": 3
+          }
+        },
+        {
+          "text": "Back it. The club needs the money",
+          "points": {
+            "clay": 3
+          }
+        },
+        {
+          "text": "Go with whatever your best friend decides",
+          "points": {
+            "opie": 3
+          }
+        },
+        {
+          "text": "Agree — then make sure nobody innocent gets hurt",
+          "points": {
+            "chibs": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

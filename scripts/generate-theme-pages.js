@@ -7,6 +7,24 @@ const episodeThemesPath = path.join(rootDir, "data", "episode_themes.json");
 const outputDir = path.join(rootDir, "themes");
 const sitemapPath = path.join(rootDir, "sitemap.xml");
 const SITE_URL = "https://triviagauntlet.app";
+const characterQuizDir = path.join(rootDir, "data", "character-quizzes");
+
+// Themes with a "Which Character Are You?" quiz (data/character-quizzes/<slug>.json)
+// get a game-mode card (2nd, after Challenge) on their theme page + the quiz URL in the sitemap.
+function hasCharacterQuiz(slug) {
+  return fs.existsSync(path.join(characterQuizDir, `${slug}.json`));
+}
+
+function characterQuizCard(theme) {
+  if (!hasCharacterQuiz(theme.slug)) return "";
+  const quiz = JSON.parse(fs.readFileSync(path.join(characterQuizDir, `${theme.slug}.json`), "utf8"));
+  return `
+        <a class="card cq-mode-card" href="../character-quiz/${escapeHtml(theme.slug)}.html">
+          <h3>Which Character Are You?</h3>
+          <p>${quiz.questions.length}-question personality test</p>
+        </a>
+`;
+}
 
 
 function escapeHtml(str = "") {
@@ -315,7 +333,7 @@ const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
           <h3>Challenge Mode</h3>
           <p>10-question quick rounds</p>
         </a>
-
+${characterQuizCard(theme)}
         <a class="card" href="../play.html?theme=${slug}">
           <h3>Marathon Mode</h3>
           <p>30-question rounds</p>
@@ -496,6 +514,9 @@ function main() {
     `${SITE_URL}/daily-challenges.html`,
     `${SITE_URL}/random-trivia.html`
   ];
+  if (fs.existsSync(characterQuizDir) && fs.readdirSync(characterQuizDir).some(f => f.endsWith(".json") && !f.endsWith(".stats.json"))) {
+    sitemapUrls.push(`${SITE_URL}/character-quiz/`);
+  }
 
   const onlySlugs = process.env.ONLY_SLUGS ? new Set(process.env.ONLY_SLUGS.split(',')) : null;
   themes.forEach((theme) => {
@@ -508,6 +529,7 @@ function main() {
     sitemapUrls.push(`${SITE_URL}/themes/${theme.slug}.html`);
     sitemapUrls.push(`${SITE_URL}/wordsearch/${theme.slug}.html`);
     sitemapUrls.push(`${SITE_URL}/wordle/${theme.slug}.html`);
+    if (hasCharacterQuiz(theme.slug)) sitemapUrls.push(`${SITE_URL}/character-quiz/${theme.slug}.html`);
     // Not submitted: trivia-rush.html?theme=<slug> — trivia-rush.html carries a
     // self-referencing canonical tag, so every one of these was just duplicate
     // noise in the sitemap (see click-drop investigation, Aug 2026).

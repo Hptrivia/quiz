@@ -1,0 +1,530 @@
+{
+  "slug": "modern-family",
+  "show": "Modern Family",
+  "shortName": "Modern Family",
+  "seoTitle": "Which Modern Family Character Are You? Modern Family Test (12 Questions)",
+  "metaDescription": "Take the Modern Family test: 12 everyday questions reveal whether you're Phil, Claire, Jay, Gloria, Mitchell, Cam, Haley or Alex — with your full character breakdown.",
+  "intro": "Are you the dad who thinks he's the cool dad, the mom holding the whole family together, or the grandpa who just wants some peace and quiet? Answer 12 questions about how you really handle family, friends and everyday chaos, and find out which Modern Family character you are.",
+  "characters": [
+    {
+      "id": "phil",
+      "name": "Phil Dunphy",
+      "emoji": "🎩",
+      "color": "#f59e0b",
+      "title": "The Cool Dad (He Thinks)",
+      "summary": "Endlessly upbeat, a little goofy and genuinely sweet. You think you're the cool one — and honestly, sometimes you are.",
+      "description": [
+        "Like Phil, you see the best in everything and everyone. He's a real estate agent who could sell anybody a house, mostly because he's so enthusiastic about it.",
+        "You've got hobbies. So many hobbies. Phil loves magic tricks, gadgets and his own life philosophy, and he was a college cheerleader — which he'll mention.",
+        "You might embarrass your family, but they'd never want you any other way."
+      ],
+      "strengths": [
+        "Endlessly positive",
+        "Big heart",
+        "Surprisingly wise"
+      ],
+      "flaw": "You try so hard to be liked that you sometimes miss what's actually going on.",
+      "signature": "A magic trick nobody asked for and a proud \"Phil's-osophy\".",
+      "clashReason": "they'd make terrible jokes and be proud of them"
+    },
+    {
+      "id": "claire",
+      "name": "Claire Dunphy",
+      "emoji": "📋",
+      "color": "#3b82f6",
+      "title": "The Controlled Chaos Manager",
+      "summary": "Organised, competitive and quietly running everything. Nothing happens in this family without you knowing about it.",
+      "description": [
+        "Like Claire, you're the one holding it all together. Three kids, a husband who is basically a fourth kid, and a plan for every situation.",
+        "You're competitive — very competitive — and you were a wild one when you were younger, even if you'd rather nobody mentioned it.",
+        "You're ambitious, too. Claire went from stay-at-home mom to running her father's closet company, and she proved she could do it."
+      ],
+      "strengths": [
+        "Organised",
+        "Driven",
+        "Protective"
+      ],
+      "flaw": "You need control so badly that you struggle to just let things happen.",
+      "signature": "A schedule, a firm voice and the one look that stops everyone in their tracks.",
+      "clashReason": "they have to win at everything"
+    },
+    {
+      "id": "jay",
+      "name": "Jay Pritchett",
+      "emoji": "🐕",
+      "color": "#78716c",
+      "title": "The Gruff Patriarch",
+      "summary": "Old-school, blunt and not a big talker about feelings. But when it counts, you show up for your family.",
+      "description": [
+        "Like Jay, you built something. He started his own closet business and he's proud of it — rightly so.",
+        "You're not great at feelings. You'd rather give someone a gruff nod than a speech. But you love your family, and you're softer than you let on — especially with your dog, Stella.",
+        "You just want a little peace and quiet. You rarely get it."
+      ],
+      "strengths": [
+        "Self-made",
+        "Straight talker",
+        "Secretly soft"
+      ],
+      "flaw": "You can be stubborn and a bit stuck in your ways.",
+      "signature": "A recliner, a quiet afternoon and a small dog who's clearly the favourite.",
+      "clashReason": "they'd never want to talk about feelings"
+    },
+    {
+      "id": "gloria",
+      "name": "Gloria Pritchett",
+      "emoji": "💃",
+      "color": "#dc2626",
+      "title": "The Fierce Force of Nature",
+      "summary": "Passionate, loud and fiercely protective. You say exactly what you think — and you're usually right.",
+      "description": [
+        "Like Gloria, you're big energy. You feel things strongly and you don't hide it, whether it's joy, anger or love.",
+        "You're fiercely protective of your family. Gloria would do anything for Manny and Joe, and heaven help anyone who comes after them.",
+        "People underestimate you. That's their mistake — you're sharper and tougher than anyone expects."
+      ],
+      "strengths": [
+        "Passionate",
+        "Protective",
+        "Sharper than people think"
+      ],
+      "flaw": "Your temper is quick, and you can be very, very dramatic.",
+      "signature": "A big entrance, a big laugh and a threat nobody's sure is a joke.",
+      "clashReason": "they'd tell you exactly what they think. Loudly"
+    },
+    {
+      "id": "mitchell",
+      "name": "Mitchell Pritchett",
+      "emoji": "⚖️",
+      "color": "#0ea5e9",
+      "title": "The Anxious Overthinker",
+      "summary": "Smart, responsible and a little tightly wound. You worry so everybody else doesn't have to.",
+      "description": [
+        "Like Mitchell, you're the sensible one. He's a lawyer, and he approaches life like a case: careful, logical and prepared for every worst outcome.",
+        "You're dry and quietly funny, and you're the calm (well, calmer) half of any partnership — especially next to a big personality.",
+        "You'd rather avoid a scene. Unfortunately, scenes seem to find you."
+      ],
+      "strengths": [
+        "Responsible",
+        "Dry wit",
+        "Loyal partner"
+      ],
+      "flaw": "You overthink everything and struggle to relax.",
+      "signature": "A careful sigh, a sensible plan and a partner doing the exact opposite.",
+      "clashReason": "they'd worry about everything"
+    },
+    {
+      "id": "cam",
+      "name": "Cam Tucker",
+      "emoji": "🎭",
+      "color": "#d946ef",
+      "title": "The Big-Hearted Showman",
+      "summary": "Dramatic, warm and full of surprises. Every moment is an event, and every event needs a theme.",
+      "description": [
+        "Like Cam, you were born for the spotlight. He's been a clown (Fizbo!), a music teacher and a football coach — and he brings the same big energy to all of them.",
+        "You feel everything in capital letters. When you're happy, the whole room knows. When you're upset, the whole block knows.",
+        "But you're the warmest person in any room, and your friends and family always know how loved they are."
+      ],
+      "strengths": [
+        "Warm",
+        "Creative",
+        "Brings the fun"
+      ],
+      "flaw": "You make everything about the moment — and occasionally about you.",
+      "signature": "A grand gesture, a costume change and a speech with a dramatic pause.",
+      "clashReason": "they'd turn every little thing into a big production"
+    },
+    {
+      "id": "haley",
+      "name": "Haley Dunphy",
+      "emoji": "📱",
+      "color": "#f472b6",
+      "title": "The Social Butterfly",
+      "summary": "Fun, stylish and smarter about people than anyone gives you credit for. School was never your thing — life is.",
+      "description": [
+        "Like Haley, you know people. You might not ace exams, but you can read a room, pick an outfit and handle a social situation better than anyone in your family.",
+        "You had a messy start figuring out what you wanted. Haley did too — and she found her own path her own way.",
+        "You're more thoughtful than you look, and you're fiercely protective of your siblings, even if you'd never admit it."
+      ],
+      "strengths": [
+        "Socially brilliant",
+        "Stylish",
+        "Adaptable"
+      ],
+      "flaw": "You can be a bit self-absorbed and avoid anything that feels like work.",
+      "signature": "A phone in hand, a perfect outfit and a comeback for her little sister.",
+      "clashReason": "they'd never take anything seriously"
+    },
+    {
+      "id": "alex",
+      "name": "Alex Dunphy",
+      "emoji": "🎓",
+      "color": "#22c55e",
+      "title": "The Sarcastic Genius",
+      "summary": "Brilliant, driven and dry as a desert. You're the smartest person in the room, and slightly exhausted by everyone else.",
+      "description": [
+        "Like Alex, you work hard and it shows. Top grades, big ambitions, and a place at Caltech.",
+        "Your sense of humour is sharp and sarcastic. You're often the only person noticing how ridiculous everyone is being.",
+        "Underneath, you feel more than you let on. You just wish people saw you for more than your brain."
+      ],
+      "strengths": [
+        "Brilliant",
+        "Hardworking",
+        "Honest"
+      ],
+      "flaw": "You put so much pressure on yourself that you forget to have fun.",
+      "signature": "A stack of books, a perfect report card and an eye-roll.",
+      "clashReason": "they'd make you feel like the least clever person in the room"
+    }
+  ],
+  "questions": [
+    {
+      "text": "You're in charge of planning a family trip. You...",
+      "options": [
+        {
+          "text": "Plan every hour. Colour-coded",
+          "points": {
+            "claire": 3
+          }
+        },
+        {
+          "text": "Plan the fun bits. Someone else can do the boring stuff",
+          "points": {
+            "phil": 3
+          }
+        },
+        {
+          "text": "Pay for it, then complain about the price the whole time",
+          "points": {
+            "jay": 3
+          }
+        },
+        {
+          "text": "Pack three suitcases. For a weekend",
+          "points": {
+            "haley": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone insults your family at a party. You...",
+      "options": [
+        {
+          "text": "Get in their face. Nobody talks about your family like that",
+          "points": {
+            "gloria": 3
+          }
+        },
+        {
+          "text": "Deliver a speech the whole party will remember",
+          "points": {
+            "cam": 3
+          }
+        },
+        {
+          "text": "Say something cutting and walk away",
+          "points": {
+            "alex": 3
+          }
+        },
+        {
+          "text": "Try to smooth it over before there's a scene",
+          "points": {
+            "mitchell": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You get a whole Saturday to yourself. You...",
+      "options": [
+        {
+          "text": "Recliner, a quiet house and nobody asking for anything",
+          "points": {
+            "jay": 3
+          }
+        },
+        {
+          "text": "Brunch and shopping with friends",
+          "points": {
+            "haley": 3
+          }
+        },
+        {
+          "text": "Get ahead on work. It's relaxing, honestly",
+          "points": {
+            "alex": 3
+          }
+        },
+        {
+          "text": "The salon, then dancing all night",
+          "points": {
+            "gloria": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A family board game gets heated. You...",
+      "options": [
+        {
+          "text": "Play to win. Winning is the only thing",
+          "points": {
+            "claire": 3
+          }
+        },
+        {
+          "text": "Enjoy it. You're just happy everyone's together",
+          "points": {
+            "phil": 3
+          }
+        },
+        {
+          "text": "You'll win. You've already done the maths",
+          "points": {
+            "alex": 3
+          }
+        },
+        {
+          "text": "Accuse someone of cheating. Loudly",
+          "points": {
+            "gloria": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're helping a kid with their homework, and they keep getting it wrong. You...",
+      "options": [
+        {
+          "text": "Make a study plan on the spot",
+          "points": {
+            "claire": 3
+          }
+        },
+        {
+          "text": "Tell them it's fine, then turn it into a game",
+          "points": {
+            "phil": 3
+          }
+        },
+        {
+          "text": "\"Just do it again.\" That's the whole lesson",
+          "points": {
+            "jay": 3
+          }
+        },
+        {
+          "text": "Worry that you're the one explaining it wrong",
+          "points": {
+            "mitchell": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You take up a new hobby. It's...",
+      "options": [
+        {
+          "text": "Magic. You've got a whole act",
+          "points": {
+            "phil": 3
+          }
+        },
+        {
+          "text": "Fashion blogging. You've already got the followers",
+          "points": {
+            "haley": 3
+          }
+        },
+        {
+          "text": "Golf. And you don't want tips",
+          "points": {
+            "jay": 3
+          }
+        },
+        {
+          "text": "Anything competitive. You'll be winning by week two",
+          "points": {
+            "claire": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone asks you for life advice. You give them...",
+      "options": [
+        {
+          "text": "A carefully weighed list of pros and cons",
+          "points": {
+            "mitchell": 3
+          }
+        },
+        {
+          "text": "A big, dramatic pep talk",
+          "points": {
+            "cam": 3
+          }
+        },
+        {
+          "text": "Your own personal life philosophy",
+          "points": {
+            "phil": 3
+          }
+        },
+        {
+          "text": "The brutal truth, with love",
+          "points": {
+            "gloria": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You and your partner have a big argument. You...",
+      "options": [
+        {
+          "text": "Talk it through calmly — and a little passive-aggressively",
+          "points": {
+            "mitchell": 3
+          }
+        },
+        {
+          "text": "Tears, a slammed door and a big making-up",
+          "points": {
+            "cam": 3
+          }
+        },
+        {
+          "text": "Calmly point out exactly where their logic falls apart",
+          "points": {
+            "alex": 3
+          }
+        },
+        {
+          "text": "Be right. Then wait for them to come around",
+          "points": {
+            "claire": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're asked to give a speech at a big family birthday. It's...",
+      "options": [
+        {
+          "text": "Twenty minutes long, with a slideshow and a song",
+          "points": {
+            "cam": 3
+          }
+        },
+        {
+          "text": "Clever — possibly too clever for the room",
+          "points": {
+            "alex": 3
+          }
+        },
+        {
+          "text": "Short, gruff, and somehow the one that makes everyone cry",
+          "points": {
+            "jay": 3
+          }
+        },
+        {
+          "text": "Totally unprepared, and somehow perfect",
+          "points": {
+            "haley": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're looking after a friend's teenager for the weekend, and they want to go to a party. You...",
+      "options": [
+        {
+          "text": "Say no. Then drive past the party anyway, just to check",
+          "points": {
+            "claire": 3
+          }
+        },
+        {
+          "text": "Say yes, then try to be the cool adult at pickup",
+          "points": {
+            "phil": 3
+          }
+        },
+        {
+          "text": "Absolutely not. There is no discussion",
+          "points": {
+            "gloria": 3
+          }
+        },
+        {
+          "text": "Turn it into a big, emotional heart-to-heart",
+          "points": {
+            "cam": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "At family dinner, your brother and his partner announce they're adopting a baby. You...",
+      "options": [
+        {
+          "text": "Volunteer to babysit. For money",
+          "points": {
+            "haley": 3
+          }
+        },
+        {
+          "text": "Start a list of everything they're going to need",
+          "points": {
+            "claire": 3
+          }
+        },
+        {
+          "text": "Say something gruff but supportive, then change the subject",
+          "points": {
+            "jay": 3
+          }
+        },
+        {
+          "text": "Plan the christening on the spot",
+          "points": {
+            "gloria": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "Your dad marries someone much younger than him. At the wedding, you...",
+      "options": [
+        {
+          "text": "Worry it's a midlife crisis — then smile for every photo anyway",
+          "points": {
+            "mitchell": 3
+          }
+        },
+        {
+          "text": "Ask where they got that dress",
+          "points": {
+            "haley": 3
+          }
+        },
+        {
+          "text": "Quietly look up the statistics on age-gap marriages",
+          "points": {
+            "alex": 3
+          }
+        },
+        {
+          "text": "Cry harder than anyone at the ceremony",
+          "points": {
+            "cam": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

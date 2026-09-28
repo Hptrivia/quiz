@@ -106,8 +106,16 @@ async function _pingPremiumInstall() {
   }
 }
 
+// "Which Character Are You?" quiz pages (character-quiz/<slug>.html, not the
+// index hub). They opt out of the page-load interstitial via data-defer-game-ad
+// and call adMobShowGameStartInterstitial() when Start is pressed.
+function _isCharacterQuizPage(path) {
+  return /\/character-quiz\/(?!index\.html$)[^/]+\.html$/.test(path);
+}
+
 function isGamePage() {
   const path = window.location.pathname;
+  if (_isCharacterQuizPage(path)) return true;
   // Keep this list in sync with getRoundStartParams() below — both must cover every
   // in-game page so the banner stays hidden during play (mashup-* were missing,
   // which left a banner on the mashup trivia-rush / marathon gameplay screens).
@@ -116,6 +124,7 @@ function isGamePage() {
 
 function getRoundStartParams() {
   const path = window.location.pathname;
+  if (_isCharacterQuizPage(path)) return true;
   return /\/(play|challenge|survival|episode|trivia-rush|mashup-trivia-rush|versus|wordle|wordsearch|mashup-play|daily|daily-wordle|daily-blitz|category-blitz-solo|category-blitz-versus)\.html$/.test(path);
 }
 
@@ -333,7 +342,7 @@ async function adMobShowRewarded() {
   });
 }
 
-const _IAD_COOLDOWN_MS = 5 * 60 * 1000;
+const _IAD_COOLDOWN_MS = 3 * 60 * 1000;
 function _interstitialOnCooldown() {
   const last = parseInt(localStorage.getItem('_iadLastShown') || '0');
   return Date.now() - last < _IAD_COOLDOWN_MS;

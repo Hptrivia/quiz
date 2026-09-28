@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if(/TriviaGauntletPremium/.test(navigator.userAgent||''))document.documentElement.classList.add('premium-app');</script>
+  <meta charset="UTF-8" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>MobLand Trivia Quiz &mdash; Questions &amp; Answers | Trivia Gauntlet</title>
+<meta name="description" content="Play the MobLand trivia quiz — 75 questions with answers. Test your knowledge in Marathon, Challenge, Survival, and more." />
+  <link rel="canonical" href="https://triviagauntlet.app/themes/mobland.html" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    if(!/TriviaGauntletPremium/.test(navigator.userAgent||''))gtag('config', 'G-E6BY9F2ZDT');
+  </script>
+
+  <link rel="apple-touch-icon" href="/assets/icon-192.png" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <meta property="og:title" content="MobLand Trivia Questions | Trivia Gauntlet" />
+  <meta property="og:description" content="Play the MobLand trivia quiz — 75 questions with answers. Test your knowledge in Marathon, Challenge, Survival, and more." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://triviagauntlet.app/themes/mobland.html" />
+  <meta property="og:image" content="https://triviagauntlet.app/assets/icon-192.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="MobLand Trivia Questions | Trivia Gauntlet" />
+  <meta name="twitter:description" content="Play the MobLand trivia quiz — 75 questions with answers. Test your knowledge in Marathon, Challenge, Survival, and more." />
+  <meta name="twitter:image" content="https://triviagauntlet.app/assets/icon-192.png" />
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://triviagauntlet.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "TV",
+          "item": "https://triviagauntlet.app/categories/tv.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "MobLand Trivia",
+          "item": "https://triviagauntlet.app/themes/mobland.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which other old nickname does Conrad recall from his days as a feared boss?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Conrad the Dread"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "According to Freddie, what does a kilo of fentanyl cost wholesale?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "15,000 pounds"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "In which city is MobLand set?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "London"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Brendan killed with?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A chainsaw"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which actor plays Conrad Harrigan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pierce Brosnan"
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+</head>
+<body>
+  <main class="container narrow">
+    <div class="theme-top-links">
+      <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+      <span id="navAvatarSlot"></span>
+      <a href="../index.html" class="back-link">⌂ Home</a>
+    </div>
+
+    <div class="theme-search-wrap">
+      <div class="search-wrap">
+        <input id="themeSearchInput" class="theme-search-input" type="text" placeholder="Search themes..." autocomplete="off" />
+        <div id="themeSearchResults" class="search-results"></div>
+      </div>
+    </div>
+
+    <section class="panel">
+      <h1>MobLand Trivia Questions</h1>
+      <p class="theme-question-count">75 questions across multiple rounds</p>
+<p>A crime drama trivia theme built around MobLand, following fixer Harry Da Souza as the Harrigan crime family goes to war with the rival Stevensons across London and beyond.</p>
+
+      
+      <div class="grid">
+        <a class="card" href="../challenge.html?theme=mobland&round=1">
+          <h3>Challenge Mode</h3>
+          <p>10-question quick rounds</p>
+        </a>
+
+        <a class="card" href="../play.html?theme=mobland">
+          <h3>Marathon Mode</h3>
+          <p>30-question rounds</p>
+        </a>
+
+        <a class="card" href="../survival.html?theme=mobland">
+          <h3>Survival Mode</h3>
+          <p>One mistake and the run ends</p>
+        </a>
+
+        <a class="card" href="../trivia-rush.html?theme=mobland">
+          <h3>Trivia Rush</h3>
+          <p>Score, streak, and multiplier run</p>
+        </a>
+
+        
+        <a class="card" href="../episode.html?theme=mobland">
+          <h3>Episode Mode</h3>
+          <p>🎬 Available by request</p>
+        </a>
+      
+
+        <a class="card" href="../versus.html?theme=mobland">
+          <h3>Versus Mode</h3>
+          <p>Play locally or online against friends</p>
+        </a>
+
+        <a class="card" href="../wordle/mobland.html">
+          <h3>Wordle</h3>
+          <p>Guess themed words</p>
+        </a>
+
+        <a class="card" href="../wordsearch/mobland.html">
+          <h3>Word Search</h3>
+          <p>Find hidden themed words</p>
+        </a>
+
+        
+        <a class="card" href="../fan-questions.html?theme=mobland">
+          <h3>Fan Section <span style="font-size:0.65rem;font-weight:700;background:#f97316;color:#fff;padding:2px 7px;border-radius:4px;vertical-align:middle;margin-left:6px;">BETA</span></h3>
+          <p>Community-created questions. Quality and difficulty may vary.</p>
+        </a>
+      
+
+      </div>
+
+      
+        <div class="theme-sample-questions">
+          <h2>Sample Questions</h2>
+          <p class="sq-hint">Tap an answer to reveal it.</p>
+          <ul>
+            <li>Which other old nickname does Conrad recall from his days as a feared boss? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Conrad the Dread</span></li><li>According to Freddie, what does a kilo of fentanyl cost wholesale? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">15,000 pounds</span></li><li>In which city is MobLand set? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">London</span></li><li>What is Brendan killed with? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">A chainsaw</span></li><li>Which actor plays Conrad Harrigan? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Pierce Brosnan</span></li><li>Which rival crime family do the Harrigans go to war with across season one? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">The Stevensons</span></li><li>What insult did Jaime Lopez say Conrad used against his father decades earlier? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Greasy Mexican</span></li><li>Which drug trade do Conrad and Maeve set out to take over from their rivals? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Fentanyl</span></li><li>Which street does Bella say her appointment is on? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Harley Street</span></li><li>Which hospital is Hughie Campbell taken to in the pilot? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Homerton Memorial</span></li>
+          </ul>
+        </div>
+      
+      <p>MobLand trivia works because the series packs family betrayal, gang warfare and a heavyweight cast into a tight first season. Questions can cover Harry and the Harrigans, the feud with the Stevensons and the deals that go wrong from Antwerp to the Cotswolds.</p>
+      <p>A strong MobLand quiz can include Harry Da Souza and his wife Jan, Conrad and Maeve Harrigan, Kevin, Brendan and Eddie Harrigan, Bella and Seraphina, Richie and Tommy Stevenson and the Sinful Monkey, the fentanyl known as The Fire, the boxing gym sit-downs, the Cotswolds estate, the Antwerp diamond deal and Jaime Lopez&#39;s cartel, retired officer Colin Tattersall and undercover Alice, and Conrad&#39;s old nicknames like 100 Guns. It works because the show rewards viewers who kept track of every deal, double-cross and body.</p>
+      <p>If you enjoy MobLand trivia, also try <a href="../themes/the-handmaids-tale.html">The Handmaid&#39;s Tale</a> and <a href="../themes/24.html">24</a> on Trivia Gauntlet.</p>
+      
+        <div class="theme-related-quizzes">
+          <h2>Related Quizzes</h2>
+          <div class="grid">
+            
+              <a class="card" href="../themes/the-handmaids-tale.html">
+                <h3>The Handmaid&#39;s Tale</h3>
+              </a>
+            
+              <a class="card" href="../themes/24.html">
+                <h3>24</h3>
+              </a>
+            
+              <a class="card" href="../themes/orange-is-the-new-black.html">
+                <h3>Orange Is the New Black</h3>
+              </a>
+            
+              <a class="card" href="../themes/firefly.html">
+                <h3>Firefly</h3>
+              </a>
+            
+              <a class="card" href="../themes/house.html">
+                <h3>House</h3>
+              </a>
+            
+          </div>
+        </div>
+      
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="../about.html">About</a>
+        <a class="footer-highlight" href="../how-it-works.html">How It Works</a>
+        <a class="footer-highlight" href="../contact.html">Contact</a>
+        <a href="../privacy.html">Privacy Policy</a>
+        <a href="../terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    async function setupThemePageSearch() {
+      const input = document.getElementById("themeSearchInput");
+      const results = document.getElementById("themeSearchResults");
+      if (!input || !results) return;
+
+      try {
+        const res = await fetch("../data/themes.json");
+        const themes = await res.json();
+
+        function render(items) {
+          if (!items.length) {
+            results.innerHTML = '<div class="search-item">No results found</div>';
+            return;
+          }
+
+          results.innerHTML = items.map(theme => `
+            <a class="search-item" href="../themes/${theme.slug}.html">${theme.title}</a>
+          `).join("");
+        }
+
+        input.addEventListener("focus", () => {
+          render(themes);
+          results.style.display = "block";
+        });
+
+        input.addEventListener("input", (e) => {
+          const value = e.target.value.trim().toLowerCase();
+          const filtered = themes.filter(theme =>
+            theme.title.toLowerCase().includes(value)
+          );
+          render(filtered);
+          results.style.display = "block";
+        });
+
+        document.addEventListener("click", (e) => {
+          if (!input.contains(e.target) && !results.contains(e.target)) {
+            results.style.display = "none";
+          }
+        });
+      } catch (err) {
+        console.error("Theme search failed", err);
+      }
+    }
+
+    setupThemePageSearch();
+  </script>
+  <script src="../assets/profile.js"></script>
+  <script src="../assets/admob.js"></script>
+  <script src="../assets/announcements.js"></script>
+</body>
+</html>
