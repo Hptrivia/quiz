@@ -205,6 +205,9 @@
   .chat-msg.error{background:var(--red-dim); color:var(--red); align-self:stretch;}
   .chat-input-row{display:flex; gap:8px;}
   .chat-input-row textarea{flex:1; min-height:52px; padding:9px 11px; border-radius:var(--radius-sm); border:1px solid var(--border-light); background:var(--bg-alt); color:var(--text); resize:vertical; font-size:13.5px;}
+  .ep-context{font-size:12.5px; color:var(--text-dim); font-style:italic; margin:2px 0 6px;}
+  .ep-desc{font-size:12.5px; color:var(--text-dim); margin-top:8px; padding:8px 10px; background:var(--bg-alt); border-radius:var(--radius-sm);}
+  .ep-label{display:block; font-size:12px; color:var(--text-faint); margin:6px 0 2px;}
   .chat-context{font-size:12px; color:var(--text-faint); background:var(--bg-alt); border:1px solid var(--border); border-radius:var(--radius-sm); padding:10px 12px; margin-bottom:14px;}
   .chat-panel{margin-top:12px; padding-top:12px; border-top:1px solid var(--border);}
   .spinner{display:inline-block; width:13px; height:13px; border:2px solid var(--text-faint); border-top-color:var(--accent); border-radius:50%; animation:spin .7s linear infinite; vertical-align:-2px; margin-right:6px;}
@@ -253,7 +256,8 @@ function loadUiState(){
 }
 function saveUiState(){
   localStorage.setItem(UI_STORAGE_KEY, JSON.stringify({
-    view: ui.view, projectId: ui.projectId, filter: ui.filter, editingId: ui.editingId
+    view: ui.view, projectId: ui.projectId, filter: ui.filter, editingId: ui.editingId,
+    reviewEpisode: ui.reviewEpisode, transcriptMode: ui.transcriptMode
   }));
 }
 
@@ -263,10 +267,11 @@ function loadState(){
     if(raw){
       const parsed = JSON.parse(raw);
       if(!Array.isArray(parsed.styleNotes)) parsed.styleNotes = [];
+      if(!parsed.episodeModel) parsed.episodeModel = "sonnet";
       return parsed;
     }
   }catch(e){ console.warn("Failed to parse saved state, starting fresh.", e); }
-  return { apiKey:"", projects:{}, styleNotes:[] };
+  return { apiKey:"", projects:{}, styleNotes:[], episodeModel:"sonnet" };
 }
 function persist(){
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
@@ -313,6 +318,15 @@ const ui = {
   toast: null,
   selectMode: false,        // bulk-select mode in Review — not persisted
   selectedIds: new Set(),   // ids currently selected in bulk-select mode
+  // Episode Mode
+  transcriptMode: (savedUi && savedUi.transcriptMode) || "regular", // regular | episode
+  episodeNumberDraft: "",   // Episode # box on the transcript screen — not persisted
+  reviewEpisode: restoredProjectId && savedUi && typeof savedUi.reviewEpisode === "number" ? savedUi.reviewEpisode : null, // null = regular questions
+  addAfterId: null,         // question id whose "Add after" panel is open
+  addAfterDraft: "",
+  addAfterBusy: false,
+  exportTab: "regular",     // regular | episodes
+  exportEpisodes: null,     // Set of episode numbers ticked in the export modal (null = all)
 };
 
 // Per-project undo/redo history — kept in memory only (last ~10 actions).
@@ -376,6 +390,8 @@ const UPDATE_SCHEMA = {
     options: { type: "array", items: { type: "string" }, description: "The full new set of 4 options, only if any changed." },
     answer: { type: "string", description: "The correct answer, only if it changed. Must exactly match one of the returned/kept options." },
     difficulty: { type: "string", enum: ["easy","medium","hard"], description: "Only if it changed." },
+    context: { type: "string", description: "Episode Mode only: new scene-setting context line, only if it changed." },
+    description: { type: "string", description: "Episode Mode only: new explanation shown after answering, only if it changed." },
     learnedRule: { type: "string", description: "Only set this if the user's message expresses a durable, general preference or correction that should apply to ALL future questions across ALL projects — not a one-off edit specific to this single question. State it as a short, standalone imperative rule (e.g. \"Prefer obscure/deep-cut distractors over obvious ones\"). Leave empty/omit for one-off edits." }
   },
   required: ["explanation"],
@@ -395,6 +411,115 @@ function addLearnedRule(rule){
   state.styleNotes.push(clean);
   if(state.styleNotes.length > 40) state.styleNotes.shift();
   persist();
+}
+
+/* ---------------------------------------------------------------------
+   Episode Mode helpers
+   Episode questions live in project.questions like any other, tagged with
+   q.episode (a number) and carrying q.context + q.description. Their ORDER in
+   project.questions is the order they're played in on the site.
+--------------------------------------------------------------------- */
+function isEp(q){ return typeof q.episode === "number"; }
+function projectEpisodes(project){
+  return [...new Set(project.questions.filter(isEp).map(q=>q.episode))].sort((a,b)=>a-b);
+}
+// Questions in the review scope: one episode, or (null) the regular non-episode questions.
+function scopeQuestions(project, ep = ui.reviewEpisode){
+  return project.questions.filter(q => ep === null ? !isEp(q) : q.episode === ep);
+}
+function episodeTranscript(project, ep){
+  return (project.episodeTranscripts && project.episodeTranscripts[ep]) || "";
+}
+// The site splits a show's file into episodes wherever a context contains
+// "episode <number>" (assets/episode.js) — so only the first question of each
+// episode may say it; anywhere else it would start a bogus new episode.
+const EP_MARKER_RE = /episode\s+\d+/i;
+function stripEpisodeMarker(context){
+  return String(context || "").replace(/^\s*'?\*\*EPISODE\s+\d+\*\*:?\s*/i, "");
+}
+function epQuestionBlock(q, label){
+  return `${label}\n  Context: ${q.context || "(none)"}\n  Question: ${q.question}\n  Options: ${q.options.join(" | ")}\n  Answer: ${q.answer}\n  Explanation: ${q.description || "(none)"}`;
+}
+// The questions right before/after q in its episode, so edits stay spoiler-free.
+function episodeNeighboursBlock(project, q, n = 3){
+  const list = scopeQuestions(project, q.episode);
+  const i = list.indexOf(q);
+  const before = list.slice(Math.max(0, i - n), i);
+  const after = list.slice(i + 1, i + 1 + n);
+  const parts = [];
+  if(before.length) parts.push(`Questions that come BEFORE this one (the player has already seen these):\n${before.map((o,k)=>epQuestionBlock(o, `#${i - before.length + k + 1}`)).join("\n")}`);
+  if(after.length) parts.push(`Questions that come AFTER this one (the player has NOT seen these yet — nothing in this question may give their answers away):\n${after.map((o,k)=>epQuestionBlock(o, `#${i + k + 2}`)).join("\n")}`);
+  return parts.join("\n\n");
+}
+
+const EPISODE_RULES = `Episode Mode rules — the questions are played in order and retell the episode's story as the player goes:
+- ORDER: questions follow the episode chronologically, from the opening scene to the final scene.
+- WHAT TO ASK: meaningful, recognisable things from the episode — names, places, events, relationships, objects, key decisions and reveals. Not insignificant actions or throwaway details. Only things a viewer actually saw or heard; a transcript's speaker labels, stage directions and "[laughs]"-style notes never reach the audience, so never base a question on them.
+- CONTEXT: one short sentence setting the scene so the player knows which moment the question is about (e.g. "At Central Perk, Monica downplays a dinner with a coworker while the gang probes."). It must NOT reveal or hint at the answer. Never write the word "episode" followed by a number in a context.
+- QUESTION: one clear, concise sentence.
+- ANSWER: prefer a short answer (a name, place, object, number, title). A longer phrase is fine when that is genuinely the natural answer (e.g. "Two people going out to dinner and not having sex"). Avoid emotions, opinions and vague adjectives as answers.
+- WRONG OPTIONS: 3 believable wrong options matching the correct answer's style, length and setting, so the player needs to have watched to rule them out.
+- EXPLANATION: 1–2 sentences explaining the answer, shown after the player answers. It may refer to what has already happened, but must NOT reveal anything asked in a later question.
+- NO SPOILERS FORWARD: no context, question, answer or explanation may give away the answer to a later question in the episode.
+- No two questions in the same episode may have the same correct answer.
+- Never pad: only write questions the episode clearly supports.`;
+
+const EPISODE_ITEM_SCHEMA = {
+  type: "object",
+  properties: {
+    context: { type: "string", description: "One short scene-setting sentence that does not reveal the answer." },
+    question: { type: "string" },
+    options: { type: "array", items: { type: "string" }, description: "Exactly 4 options, including the correct one." },
+    answer: { type: "string", description: "Must exactly match one of the 4 options." },
+    difficulty: { type: "string", enum: ["easy","medium","hard"] },
+    description: { type: "string", description: "1-2 sentence explanation shown after answering; no spoilers for later questions." }
+  },
+  required: ["context","question","options","answer","difficulty","description"],
+  additionalProperties: false
+};
+const EPISODE_BATCH_SCHEMA = {
+  type: "object",
+  properties: { questions: { type: "array", items: EPISODE_ITEM_SCHEMA } },
+  required: ["questions"],
+  additionalProperties: false
+};
+
+// Main episode generation is the one call worth a stronger setting: keeping
+// 20-30 questions in order and spoiler-free needs the model to think across the
+// whole episode. Toggle (Episode Mode only) lives on the transcript screen.
+const EPISODE_MODELS = {
+  sonnet: { label: "Sonnet 5 + reasoning", note: "default, cheaper" },
+  opus:   { label: "Opus 5 + reasoning", note: "stronger, costs more" },
+};
+async function callEpisodeModel(system, userText, schema){
+  const client = getClient();
+  const base = {
+    max_tokens: 32000,
+    thinking: { type: "adaptive" },
+    system,
+    messages: [{ role:"user", content: userText }],
+  };
+  // Streamed + finalMessage(): a long, reasoning-on generation can outlast a
+  // plain request's HTTP timeout.
+  const response = state.episodeModel === "opus"
+    ? await client.beta.messages.stream({
+        ...base,
+        model: "claude-opus-5",
+        output_config: { effort: "high", format: { type:"json_schema", schema } },
+        // If Opus declines a request, the API re-runs it on Anthropic's recommended backup model.
+        betas: ["server-side-fallback-2026-07-01"],
+        fallbacks: "default",
+      }).finalMessage()
+    : await client.messages.stream({
+        ...base,
+        model: "claude-sonnet-5",
+        output_config: { format: { type:"json_schema", schema } },
+      }).finalMessage();
+  if(response.stop_reason === "refusal") throw new Error("The model declined this request.");
+  if(response.stop_reason === "max_tokens") throw new Error("The response ran out of room before finishing — try a shorter transcript.");
+  const textBlock = response.content.find(b => b.type === "text");
+  if(!textBlock) throw new Error("No response from model.");
+  return JSON.parse(textBlock.text);
 }
 
 // Manual-add: turn rough freeform notes into a batch of full question objects.
@@ -467,8 +592,18 @@ function questionContextBlock(project, q){
     `Question: ${q.question}`,
     `Options: ${q.options.map((o,i)=>`${i+1}. ${o}`).join(" | ")}`,
     `Correct answer: ${q.answer}`,
-    `Difficulty: ${q.difficulty}`
+    `Difficulty: ${q.difficulty}`,
+    ...(isEp(q) ? [`Episode: ${q.episode}`, `Context (scene setup shown above the question): ${q.context || "(none)"}`, `Explanation (shown after answering): ${q.description || "(none)"}`] : [])
   ].join("\n");
+}
+
+// Episode questions: the neighbouring questions (+ the transcript when asked),
+// so an AI edit can't spoil what comes next.
+function episodeAiBlock(project, q, withTranscript){
+  if(!isEp(q)) return "";
+  const neighbours = episodeNeighboursBlock(project, q);
+  const transcript = withTranscript ? episodeTranscript(project, q.episode) : "";
+  return `\n\nThis is an Episode Mode question (episode ${q.episode}).\n${EPISODE_RULES}${neighbours ? `\n\n${neighbours}` : ""}${transcript ? `\n\nEpisode transcript:\n\"\"\"\n${transcript}\n\"\"\"` : ""}`;
 }
 
 /* AI Options — regenerate believable distractors, keep question + answer fixed. */
@@ -484,7 +619,7 @@ Rules:
 - Return the FULL new set of 4 options (including the unchanged correct answer, in any position) in the "options" field.
 - In "explanation", state which options you removed, what you replaced them with, and why the new set is an improvement.
 Context:
-${questionContextBlock(project, q)}${styleNotesBlock()}`;
+${questionContextBlock(project, q)}${episodeAiBlock(project, q, false)}${styleNotesBlock()}`;
   q.chat = q.chat || [];
   q.chat.push({ role:"user", text:"Generate improved distractor options." });
   ui.chatQuestionId = q.id;
@@ -516,7 +651,7 @@ Rules:
 - Do NOT change the options.
 - Only return the "question" field with the rewritten text, plus "explanation".
 Context:
-${questionContextBlock(project, q)}${styleNotesBlock()}`;
+${questionContextBlock(project, q)}${episodeAiBlock(project, q, true)}${styleNotesBlock()}`;
   q.chat = q.chat || [];
   q.chat.push({ role:"user", text:"Rephrase this question." });
   ui.chatQuestionId = q.id;
@@ -536,10 +671,12 @@ ${questionContextBlock(project, q)}${styleNotesBlock()}`;
 
 /* AI Chat — free-form multi-turn editing of a single question. */
 function chatSystemPrompt(project, q){
-  return `You are helping refine ONE trivia question for the show/movie/series "${project.name}". You are not aware of any other questions in the project — only this one.
+  return `You are helping refine ONE trivia question for the show/movie/series "${project.name}".${isEp(q) ? "" : " You are not aware of any other questions in the project — only this one."}
 Current state:
-${questionContextBlock(project, q)}${styleNotesBlock()}
-The user will ask for changes (rewrite the question, replace an option, change the correct answer, make it harder/easier, rewrite all options, etc.). Apply the change immediately by including only the field(s) that changed in your JSON response (question / options / answer / difficulty). If options are returned, return the full set of 4. Always fill "explanation" with a short note on what you changed. If the user is just asking a question or chatting without requesting a change, leave the edit fields out and just answer in "explanation".
+${questionContextBlock(project, q)}${episodeAiBlock(project, q, true)}${styleNotesBlock()}
+The user will ask for changes (rewrite the question, replace an option, change the correct answer, make it harder/easier, rewrite all options${isEp(q) ? ", rewrite the context or the explanation" : ""}, etc.). Apply the change immediately by including only the field(s) that changed in your JSON response (question / options / answer / difficulty${isEp(q) ? " / context / description" : ""}). If options are returned, return the full set of 4.
+
+The user's instructions in this chat OVERRIDE every rule above and every learned style preference. If they ask for something a rule would normally forbid (e.g. a longer answer, a longer question), do exactly what they ask. Always fill "explanation" with a short note on what you changed. If the user is just asking a question or chatting without requesting a change, leave the edit fields out and just answer in "explanation".
 
 Also watch for durable preferences: if this correction reveals something you should do differently on EVERY question from now on (not just this one) — a formatting habit, a tone/difficulty calibration, a rule about distractor style, a pet peeve — capture it in "learnedRule" so it's remembered for future questions and future projects. Don't set it for edits that only make sense for this specific question.`;
 }
@@ -564,6 +701,8 @@ async function sendChatMessage(project, q, userText){
     if(parsed.options){ q.options = parsed.options; applied.options = parsed.options; }
     if(parsed.answer){ q.answer = parsed.answer; applied.answer = parsed.answer; }
     if(parsed.difficulty){ q.difficulty = parsed.difficulty; applied.difficulty = parsed.difficulty; }
+    if(isEp(q) && parsed.context){ q.context = parsed.context; applied.context = parsed.context; }
+    if(isEp(q) && parsed.description){ q.description = parsed.description; applied.description = parsed.description; }
     persist();
 
     if(parsed.learnedRule) addLearnedRule(parsed.learnedRule);
@@ -684,7 +823,7 @@ function importQuestions(project, rawText){
    Export
 --------------------------------------------------------------------- */
 function buildExportJson(project){
-  const approved = project.questions.filter(q => q.status === "approved");
+  const approved = project.questions.filter(q => q.status === "approved" && !isEp(q));
   const out = approved.map((q,i) => ({
     id: i+1,
     question: q.question,
@@ -693,6 +832,32 @@ function buildExportJson(project){
     difficulty: q.difficulty
   }));
   return JSON.stringify(out, null, 2);
+}
+
+// Episode export in the site's episode-file format (data/<show>eps1.txt).
+// Episode 1 included -> a complete new file. Otherwise -> a block to paste
+// over the final "]" of the show's existing file.
+function buildEpisodeExport(project, episodes){
+  const eps = [...episodes].sort((a,b)=>a-b);
+  const items = [];
+  for(const ep of eps){
+    scopeQuestions(project, ep).filter(q=>q.status==="approved").forEach((q, i)=>{
+      const ctx = stripEpisodeMarker(q.context);
+      items.push({
+        context: i === 0 ? `**EPISODE ${ep}**: ${ctx}` : ctx,
+        question: q.question,
+        options: q.options,
+        answer: q.answer,
+        difficulty: q.difficulty,
+        episode: ep,
+        description: q.description || ""
+      });
+    });
+  }
+  if(!items.length) return { text:"", fullFile:false, count:0 };
+  const json = JSON.stringify(items, null, 2);
+  const fullFile = eps[0] === 1;
+  return { text: fullFile ? json : json.replace(/^\[\n/, ",\n"), fullFile, count: items.length };
 }
 
 /* ---------------------------------------------------------------------
@@ -820,10 +985,44 @@ function renderTranscript(){
   const project = getProject(ui.projectId);
   if(!project) return renderHome();
   const count = ui.transcriptCount || 20;
+  const epMode = ui.transcriptMode === "episode";
+  const eps = projectEpisodes(project);
+  const suggestedEp = eps.length ? eps[eps.length-1] + 1 : 1;
+  const modeToggle = `
+    <div class="filter-group">
+      <button class="btn btn-sm ${!epMode?"active":""}" data-action="set-transcript-mode" data-mode="regular">Regular trivia</button>
+      <button class="btn btn-sm ${epMode?"active":""}" data-action="set-transcript-mode" data-mode="episode">🎬 Episode Mode</button>
+    </div>`;
+  if(epMode){
+    return `
+  ${topbar(project.name)}
+  <div class="container import-wrap">
+    <h1 style="margin:0;">Episode Mode — From Transcript</h1>
+    ${modeToggle}
+    <p style="color:var(--text-dim); font-size:13.5px; margin:0;">Paste one episode's transcript of "${esc(project.name)}". AI writes about 20–30 questions that follow the episode in order, each with a scene-setting context and an explanation, without spoiling later questions. Fewer if the episode doesn't support that many good ones. You'll land straight on the review screen for that episode.</p>
+    <div class="import-actions">
+      <label style="font-size:12.5px; color:var(--text-dim);">Episode #
+        <input type="number" min="1" id="episodeNumberInput" value="${esc(ui.episodeNumberDraft || suggestedEp)}" style="width:70px; margin-left:6px; padding:6px 8px; border-radius:6px; border:1px solid var(--border-light); background:var(--bg-alt); color:var(--text);">
+      </label>
+      ${eps.length ? `<span style="font-size:12px; color:var(--text-faint);">Already in this project: episode ${eps.join(", ")}</span>` : ""}
+    </div>
+    <textarea class="json-input" id="transcriptText" placeholder="Paste the episode transcript here…">${esc(project.transcriptDraft || "")}</textarea>
+    <div class="import-actions">
+      <span style="font-size:12.5px; color:var(--text-dim);">Model:</span>
+      <div class="filter-group">
+        ${Object.entries(EPISODE_MODELS).map(([k,m])=>`<button class="btn btn-sm ${state.episodeModel===k?"active":""}" data-action="set-episode-model" data-model="${k}" title="${esc(m.note)}">${esc(m.label)}</button>`).join("")}
+      </div>
+      <button class="btn btn-primary" data-action="generate-episode" ${ui.transcriptBusy?"disabled":""}>${ui.transcriptBusy?'<span class="spinner"></span> Generating… (can take a minute or two)':"✨ Generate Episode Questions"}</button>
+      <button class="btn btn-ghost" data-action="go-home">Back to Homepage</button>
+    </div>
+    ${ui.transcriptMsg ? `<div class="import-msg ${ui.transcriptMsg.ok?"ok":"err"}">${esc(ui.transcriptMsg.text)}</div>` : ""}
+  </div>`;
+  }
   return `
   ${topbar(project.name)}
   <div class="container import-wrap">
     <h1 style="margin:0;">Generate From Transcript</h1>
+    ${modeToggle}
     <p style="color:var(--text-dim); font-size:13.5px; margin:0;">Paste a transcript, script, article, or any raw text about "${esc(project.name)}". AI pulls out real, nameable facts — people, places, things, titles, ranks, numbers — and turns each one into a trivia question with plausible wrong answers, in the same format as a JSON upload. It only writes questions the text actually supports, so you may get fewer than you asked for — that's expected, not a bug.</p>
     <textarea class="json-input" id="transcriptText" placeholder="Paste transcript, script, or article text here…">${esc(project.transcriptDraft || "")}</textarea>
     <div class="import-actions">
@@ -847,18 +1046,25 @@ const FILTERS = [
   { key:"hard", label:"Hard" },
 ];
 
+const EPISODE_FILTERS = [
+  { key:"all", label:"All (play order)" },
+  { key:"pending", label:"Pending" },
+  { key:"approved", label:"Approved" },
+];
+function activeFilters(){ return ui.reviewEpisode === null ? FILTERS : EPISODE_FILTERS; }
+
 function filteredQuestions(project, dupMap){
   const search = ui.searchQuery.trim().toLowerCase();
-  return project.questions.filter(q=>{
+  return scopeQuestions(project).filter(q=>{
     if(ui.filter==="duplicates"){
       if(!dupMap.has(q.id)) return false;
-    }else{
+    }else if(ui.filter!=="all"){
       if(ui.filter==="pending" && q.status!=="pending") return false;
       if(ui.filter==="approved" && q.status!=="approved") return false;
       if(ui.filter!=="pending" && ui.filter!=="approved" && q.difficulty!==ui.filter) return false;
     }
     if(search){
-      const haystack = [q.question, ...q.options, q.answer].join(" ").toLowerCase();
+      const haystack = [q.question, ...q.options, q.answer, q.context || "", q.description || ""].join(" ").toLowerCase();
       if(!haystack.includes(search)) return false;
     }
     return true;
@@ -866,15 +1072,19 @@ function filteredQuestions(project, dupMap){
 }
 
 function filterCount(project, key){
-  if(key==="pending") return project.questions.filter(q=>q.status==="pending").length;
-  if(key==="approved") return project.questions.filter(q=>q.status==="approved").length;
-  return project.questions.filter(q=>q.difficulty===key).length;
+  const list = scopeQuestions(project);
+  if(key==="all") return list.length;
+  if(key==="pending") return list.filter(q=>q.status==="pending").length;
+  if(key==="approved") return list.filter(q=>q.status==="approved").length;
+  return list.filter(q=>q.difficulty===key).length;
 }
 
 // Maps question id -> array of *other* questions in the project that share the same answer text.
+// Scoped to the current review scope — for episodes that's one episode, so the
+// same answer in two different episodes isn't flagged.
 function getDuplicateAnswerMap(project){
   const groups = {};
-  project.questions.forEach(q=>{
+  scopeQuestions(project).forEach(q=>{
     const key = (q.answer || "").trim().toLowerCase();
     if(!key) return;
     (groups[key] = groups[key] || []).push(q);
@@ -892,10 +1102,26 @@ function renderReview(){
   if(!project) return renderHome();
   const h = getHistory(project.id);
   const dupMap = getDuplicateAnswerMap(project);
+  // A remembered episode that no longer exists falls back to regular questions.
+  if(ui.reviewEpisode !== null && !projectEpisodes(project).includes(ui.reviewEpisode)){ ui.reviewEpisode = null; }
+  const epScope = ui.reviewEpisode !== null;
+  if(!activeFilters().some(f=>f.key===ui.filter) && ui.filter!=="duplicates") ui.filter = epScope ? "all" : "pending";
   const list = filteredQuestions(project, dupMap);
-  const pendingCount = project.questions.filter(q=>q.status==="pending").length;
-  const approvedCount = project.questions.filter(q=>q.status==="approved").length;
+  const scoped = scopeQuestions(project);
+  const pendingCount = scoped.filter(q=>q.status==="pending").length;
+  const approvedCount = scoped.filter(q=>q.status==="approved").length;
   const dupCount = dupMap.size;
+  // Arrows only when the whole episode is on screen, so a move can't jump past hidden questions.
+  const canReorder = epScope && ui.filter==="all" && !ui.searchQuery.trim() && !ui.selectMode;
+  const eps = projectEpisodes(project);
+  const scopeBar = eps.length ? `
+    <div class="review-toolbar">
+      <span style="font-size:12.5px; color:var(--text-dim);">Showing:</span>
+      <div class="filter-group">
+        <button class="btn btn-sm ${!epScope?"active":""}" data-action="set-review-episode" data-ep="">Regular (${project.questions.filter(q=>!isEp(q)).length})</button>
+        ${eps.map(ep=>`<button class="btn btn-sm ${ui.reviewEpisode===ep?"active":""}" data-action="set-review-episode" data-ep="${ep}">🎬 Ep ${ep} (${scopeQuestions(project, ep).length})</button>`).join("")}
+      </div>
+    </div>` : "";
 
   return `
   ${topbar(project.name)}
@@ -904,15 +1130,16 @@ function renderReview(){
       <input type="text" id="searchInput" class="search-input" placeholder="🔍 Search questions, options, or answers…" value="${esc(ui.searchQuery)}">
       ${ui.searchQuery ? `<button class="btn btn-sm btn-ghost" data-action="clear-search">✕ Clear</button>` : ""}
     </div>
+    ${scopeBar}
     <div class="review-toolbar">
       <button class="btn btn-sm btn-dupe ${dupCount?"has-dupes":""} ${ui.filter==="duplicates"?"active":""}" data-action="set-filter" data-filter="duplicates">⚠️ Duplicates (${dupCount})</button>
       <div class="filter-group">
-        ${FILTERS.map(f=>`<button class="btn btn-sm ${ui.filter===f.key?"active":""}" data-action="set-filter" data-filter="${f.key}">${f.label} (${filterCount(project,f.key)})</button>`).join("")}
+        ${activeFilters().map(f=>`<button class="btn btn-sm ${ui.filter===f.key?"active":""}" data-action="set-filter" data-filter="${f.key}">${f.label} (${filterCount(project,f.key)})</button>`).join("")}
       </div>
       <span class="count-pill">${pendingCount} pending · ${approvedCount} approved</span>
       <div class="toolbar-spacer"></div>
       <button class="btn btn-sm ${ui.selectMode?"active":""}" data-action="toggle-select-mode">☑ Select</button>
-      <button class="btn btn-sm" data-action="open-manual-add">➕ Add Questions Manually</button>
+      ${epScope ? "" : `<button class="btn btn-sm" data-action="open-manual-add">➕ Add Questions Manually</button>`}
       <button class="btn btn-sm" data-action="undo" ${h.undo.length? "":"disabled"}>↶ Undo</button>
       <button class="btn btn-sm" data-action="redo" ${h.redo.length? "":"disabled"}>↷ Redo</button>
       <button class="btn btn-sm" data-action="open-trash">🗑 Trash (${project.trash.length})</button>
@@ -923,30 +1150,32 @@ function renderReview(){
       <button class="btn btn-sm" data-action="select-all">Select All (${list.length})</button>
       <button class="btn btn-sm btn-ghost" data-action="clear-selection">Clear</button>
       <span class="count-pill">${ui.selectedIds.size} selected</span>
-      <select id="bulkDiffSelect">
+      ${epScope ? "" : `<select id="bulkDiffSelect">
         <option value="">Set difficulty…</option>
         <option value="easy">Easy</option>
         <option value="medium">Medium</option>
         <option value="hard">Hard</option>
       </select>
-      <button class="btn btn-sm" data-action="bulk-set-difficulty" ${ui.selectedIds.size?"":"disabled"}>Apply</button>
+      <button class="btn btn-sm" data-action="bulk-set-difficulty" ${ui.selectedIds.size?"":"disabled"}>Apply</button>`}
       <button class="btn btn-sm btn-primary" data-action="bulk-approve" ${ui.selectedIds.size?"":"disabled"}>✓ Approve Selected</button>
       <button class="btn btn-sm btn-danger" data-action="bulk-delete" ${ui.selectedIds.size?"":"disabled"}>🗑 Delete Selected</button>
     </div>` : ""}
 
     <div class="qlist">
-      ${list.length ? list.map((q,i)=>renderQuestionCard(project, q, i, dupMap.get(q.id))).join("") : `<div class="empty-state">${ui.filter==="duplicates" ? "No duplicate answers found — nothing repeats across your questions." : `No questions match${ui.searchQuery?" your search":" this filter"}.`}</div>`}
+      ${epScope && !canReorder && list.length ? `<div class="chat-context">↑↓ reorder arrows appear under "All (play order)" with no search or selection active, so a move can't skip past hidden questions.</div>` : ""}
+      ${list.length ? list.map((q,i)=>renderQuestionCard(project, q, scoped.indexOf(q), dupMap.get(q.id), canReorder, scoped)).join("") : `<div class="empty-state">${ui.filter==="duplicates" ? "No duplicate answers found — nothing repeats across your questions." : `No questions match${ui.searchQuery?" your search":" this filter"}.`}</div>`}
     </div>
   </div>`;
 }
 
-function renderQuestionCard(project, q, idx, dupOthers){
+function renderQuestionCard(project, q, idx, dupOthers, canReorder, scoped){
   const editing = ui.editingId === q.id;
   const busyOptions = ui.optionsBusyId === q.id;
   const busyRephrase = ui.rephraseBusyId === q.id;
+  const ep = isEp(q);
   const dupNote = (dupOthers && dupOthers.length) ? `
     <div class="dup-note">⚠️ Same answer ("${esc(q.answer)}") as: ${dupOthers.map(o=>{
-      const oIdx = project.questions.indexOf(o) + 1;
+      const oIdx = scoped.indexOf(o) + 1;
       return `#${oIdx} "${esc(o.question)}"`;
     }).join("; ")}</div>` : "";
 
@@ -955,13 +1184,18 @@ function renderQuestionCard(project, q, idx, dupOthers){
     <div class="qcard ${q.status}">
       <div class="qcard-head"><span class="qnum">#${idx+1}</span></div>
       <div class="edit-block">
+        ${ep ? `<label class="ep-label">Context (scene setup — must not give the answer away)</label>
+        <textarea rows="2" id="edit-ctx-${q.id}">${esc(q.context || "")}</textarea>
+        <label class="ep-label">Question</label>` : ""}
         <textarea rows="2" id="edit-q-${q.id}">${esc(q.question)}</textarea>
         ${q.options.map((o,i)=>`
           <div class="edit-opt-row">
             <input type="radio" name="edit-answer-${q.id}" value="${i}" ${o===q.answer?"checked":""}>
             <input type="text" id="edit-opt-${q.id}-${i}" value="${esc(o)}">
           </div>`).join("")}
-        <div class="edit-meta-row">
+        ${ep ? `<label class="ep-label">Explanation (shown after answering — must not spoil later questions)</label>
+        <textarea rows="2" id="edit-desc-${q.id}">${esc(q.description || "")}</textarea>` : ""}
+        <div class="edit-meta-row" ${ep ? 'style="display:none;"' : ""}>
           <label style="font-size:12.5px; color:var(--text-dim);">Difficulty
             <select id="edit-diff-${q.id}">
               <option value="easy" ${q.difficulty==="easy"?"selected":""}>Easy</option>
@@ -983,14 +1217,17 @@ function renderQuestionCard(project, q, idx, dupOthers){
     <div class="qcard-head">
       <span class="qnum">${ui.selectMode ? `<input type="checkbox" class="select-checkbox" data-id="${q.id}" ${ui.selectedIds.has(q.id)?"checked":""}>` : ""}#${idx+1}</span>
       <div class="badges">
+        ${canReorder ? `<button class="btn btn-sm btn-ghost" data-action="move-up" data-id="${q.id}" ${idx===0?"disabled":""} title="Move earlier">↑</button><button class="btn btn-sm btn-ghost" data-action="move-down" data-id="${q.id}" ${idx===scoped.length-1?"disabled":""} title="Move later">↓</button>` : ""}
         <span class="badge status-${q.status}">${q.status}</span>
-        <select class="diff-select" data-action="set-difficulty" data-id="${q.id}">
+        ${ep ? "" : `<select class="diff-select" data-action="set-difficulty" data-id="${q.id}">
           <option value="easy" ${q.difficulty==="easy"?"selected":""}>EASY</option>
           <option value="medium" ${q.difficulty==="medium"?"selected":""}>MEDIUM</option>
           <option value="hard" ${q.difficulty==="hard"?"selected":""}>HARD</option>
-        </select>
+        </select>`}
       </div>
     </div>
+    ${ep ? `<div class="ep-context">${esc(q.context || "")}</div>` : ""}
+    ${ep && EP_MARKER_RE.test(q.context || "") ? `<div class="dup-note">⚠️ This context contains "${esc((q.context.match(EP_MARKER_RE)||[""])[0])}" — the website would treat that as the start of a new episode. Reword it (the export adds the real episode label to question #1 itself).</div>` : ""}
     <div class="qtext">${esc(q.question)}</div>
     ${dupNote}
     <div class="options-grid">
@@ -1000,6 +1237,7 @@ function renderQuestionCard(project, q, idx, dupOthers){
           <span>${esc(o)}</span>
         </div>`).join("")}
     </div>
+    ${ep ? `<div class="ep-desc"><b>Explanation:</b> ${esc(q.description || "(none)")}</div>` : ""}
     <div class="qactions">
       ${q.status==="pending" ? `<button class="btn btn-sm btn-primary" data-action="approve" data-id="${q.id}">✓ Approve</button>` : ""}
       <button class="btn btn-sm" data-action="edit" data-id="${q.id}">✏️ Edit</button>
@@ -1007,9 +1245,22 @@ function renderQuestionCard(project, q, idx, dupOthers){
       <button class="btn btn-sm" data-action="ai-options" data-id="${q.id}" ${busyOptions?"disabled":""}>${busyOptions?'<span class="spinner"></span>':"🎯"} AI Options</button>
       <button class="btn btn-sm" data-action="rephrase" data-id="${q.id}" ${busyRephrase?"disabled":""}>${busyRephrase?'<span class="spinner"></span>':"🪄"} Rephrase</button>
       <button class="btn btn-sm" data-action="google" data-id="${q.id}">🔎 Google</button>
+      ${ep ? `<button class="btn btn-sm" data-action="open-add-after" data-id="${q.id}">➕ ${ui.addAfterId===q.id?"Close":"Add after"}</button>` : ""}
       <button class="btn btn-sm btn-danger" data-action="delete" data-id="${q.id}">🗑 Delete</button>
     </div>
     ${ui.chatQuestionId===q.id ? renderInlineChat(q) : ""}
+    ${ui.addAfterId===q.id ? renderAddAfter(q) : ""}
+  </div>`;
+}
+
+function renderAddAfter(q){
+  return `
+  <div class="chat-panel">
+    <div class="chat-context">Describe the moment the AI missed. It finds it in the episode transcript and writes one question that goes right after this one, checking the questions around it so nothing gets spoiled or repeated.</div>
+    <div class="chat-input-row">
+      <textarea id="addAfterInput" placeholder="e.g. Create a question about the dog barking at Locke" ${ui.addAfterBusy?"disabled":""}>${esc(ui.addAfterDraft)}</textarea>
+      <button class="btn btn-primary" data-action="send-add-after" data-id="${q.id}" ${ui.addAfterBusy?"disabled":""}>${ui.addAfterBusy?'<span class="spinner"></span>':"Create"}</button>
+    </div>
   </div>`;
 }
 
@@ -1107,15 +1358,67 @@ function renderTrashModal(){
   </div>`;
 }
 
+function selectedExportEpisodes(project){
+  const eps = projectEpisodes(project);
+  return ui.exportEpisodes ? eps.filter(e=>ui.exportEpisodes.has(e)) : eps;
+}
+function renderEpisodeExport(project){
+  const eps = projectEpisodes(project);
+  const chosen = selectedExportEpisodes(project);
+  const out = buildEpisodeExport(project, chosen);
+  const pendingLeft = chosen.reduce((n,ep)=>n + scopeQuestions(project, ep).filter(q=>q.status!=="approved").length, 0);
+  const badCtx = chosen.flatMap(ep=>scopeQuestions(project, ep).filter(q=>q.status==="approved" && EP_MARKER_RE.test(stripEpisodeMarker(q.context))).map(q=>`Ep ${ep}: "${q.question}"`));
+  const how = out.fullFile
+    ? `Includes episode 1, so this is a <b>complete new file</b>: save it as <code>data/&lt;show&gt;eps1.txt</code> and add the show to <code>data/episode_themes.json</code>.`
+    : `Open the show's existing file (<code>data/&lt;show&gt;eps1.txt</code>), select the very last <code>]</code> and paste this over it.`;
+  return `
+    <div class="filter-group" style="margin-bottom:10px; flex-wrap:wrap;">
+      ${eps.map(ep=>{
+        const all = scopeQuestions(project, ep); const ok = all.filter(q=>q.status==="approved").length;
+        return `<label class="btn btn-sm ${chosen.includes(ep)?"active":""}" style="cursor:pointer;"><input type="checkbox" class="export-ep-cb" data-ep="${ep}" ${chosen.includes(ep)?"checked":""} style="margin-right:6px;">Ep ${ep} (${ok}/${all.length} approved)</label>`;
+      }).join("")}
+    </div>
+    ${out.count ? `<div class="chat-context">${how}</div>` : ""}
+    ${pendingLeft ? `<div class="dup-note">${pendingLeft} question(s) in the selected episodes aren't approved yet and are left out.</div>` : ""}
+    ${badCtx.length ? `<div class="dup-note">⚠️ These contexts say "episode + number", which the website reads as a new episode starting — reword them first: ${esc(badCtx.join("; "))}</div>` : ""}
+    ${out.count ? `<textarea class="export-json" readonly>${esc(out.text)}</textarea>` : `<div class="empty-state">No approved questions in the selected episodes yet.</div>`}`;
+}
+
 function renderExportModal(){
   const project = getProject(ui.projectId);
   const json = buildExportJson(project);
-  const approvedCount = project.questions.filter(q=>q.status==="approved").length;
+  const approvedCount = project.questions.filter(q=>q.status==="approved" && !isEp(q)).length;
+  const hasEps = projectEpisodes(project).length > 0;
+  const tab = hasEps ? ui.exportTab : "regular";
+  const epOut = tab === "episodes" ? buildEpisodeExport(project, selectedExportEpisodes(project)) : null;
+  if(tab === "episodes"){
+    return `
+  <div class="overlay" data-action="close-modal-bg">
+    <div class="modal wide">
+      <div class="modal-head"><h3>Export</h3><button class="btn btn-ghost btn-sm" data-action="close-export">✕</button></div>
+      <div class="modal-body">
+        <div class="filter-group" style="margin-bottom:12px;">
+          <button class="btn btn-sm" data-action="set-export-tab" data-tab="regular">Regular (${approvedCount})</button>
+          <button class="btn btn-sm active" data-action="set-export-tab" data-tab="episodes">🎬 Episodes</button>
+        </div>
+        ${renderEpisodeExport(project)}
+      </div>
+      <div class="modal-foot">
+        <button class="btn btn-primary" data-action="copy-export" ${epOut.count? "":"disabled"}>📋 Copy</button>
+        <button class="btn" data-action="close-export">Close</button>
+      </div>
+    </div>
+  </div>`;
+  }
   return `
   <div class="overlay" data-action="close-modal-bg">
     <div class="modal wide">
       <div class="modal-head"><h3>Export (${approvedCount} approved)</h3><button class="btn btn-ghost btn-sm" data-action="close-export">✕</button></div>
       <div class="modal-body">
+        ${hasEps ? `<div class="filter-group" style="margin-bottom:12px;">
+          <button class="btn btn-sm active" data-action="set-export-tab" data-tab="regular">Regular (${approvedCount})</button>
+          <button class="btn btn-sm" data-action="set-export-tab" data-tab="episodes">🎬 Episodes</button>
+        </div>` : ""}
         ${approvedCount ? `<textarea class="export-json" readonly>${esc(json)}</textarea>` : `<div class="empty-state">No approved questions yet.</div>`}
       </div>
       <div class="modal-foot">
@@ -1228,6 +1531,26 @@ function bindEvents(){
       if(project){ project.transcriptDraft = e.target.value; scheduleDraftSave(); }
     });
   }
+  const episodeNumberInput = document.getElementById("episodeNumberInput");
+  if(episodeNumberInput) episodeNumberInput.addEventListener("input", e=>{ ui.episodeNumberDraft = e.target.value; });
+  const addAfterInput = document.getElementById("addAfterInput");
+  if(addAfterInput){
+    addAfterInput.addEventListener("input", e=>{ ui.addAfterDraft = e.target.value; });
+    addAfterInput.addEventListener("keydown", e=>{
+      if(e.key==="Enter" && !e.shiftKey){ e.preventDefault(); document.querySelector('[data-action="send-add-after"]')?.click(); }
+    });
+    addAfterInput.focus();
+  }
+  document.querySelectorAll(".export-ep-cb").forEach(cb=>{
+    cb.addEventListener("click", e=>e.stopPropagation());
+    cb.addEventListener("change", ()=>{
+      const project = getProject(ui.projectId);
+      if(!ui.exportEpisodes) ui.exportEpisodes = new Set(projectEpisodes(project));
+      const ep = Number(cb.dataset.ep);
+      if(cb.checked) ui.exportEpisodes.add(ep); else ui.exportEpisodes.delete(ep);
+      render();
+    });
+  });
   const searchInput = document.getElementById("searchInput");
   if(searchInput){
     searchInput.addEventListener("input", e=>{
@@ -1279,7 +1602,7 @@ function onAction(e){
     case "go-import": ui.view="import"; render(); break;
     case "go-transcript": ui.view="transcript"; ui.transcriptMsg = null; render(); break;
     case "go-review": ui.view="review"; render(); break;
-    case "open-project": ui.projectId = id; ui.view="review"; ui.filter="pending"; ui.selectMode=false; ui.selectedIds=new Set(); render(); break;
+    case "open-project": ui.projectId = id; ui.view="review"; ui.filter="pending"; ui.reviewEpisode=null; ui.addAfterId=null; ui.selectMode=false; ui.selectedIds=new Set(); render(); break;
 
     case "new-project": ui.newProjectOpen = true; render(); break;
     case "close-new-project": ui.newProjectOpen = false; render(); break;
@@ -1291,6 +1614,24 @@ function onAction(e){
     case "upload": doUpload(project); break;
     case "set-transcript-count": ui.transcriptCount = Number(el.dataset.count); render(); break;
     case "generate-transcript": generateTranscriptQuestions(project); break;
+    case "set-transcript-mode": ui.transcriptMode = el.dataset.mode; ui.transcriptMsg = null; render(); break;
+    case "set-episode-model": state.episodeModel = el.dataset.model; persist(); render(); break;
+    case "generate-episode": generateEpisodeQuestions(project); break;
+    case "set-review-episode":
+      ui.reviewEpisode = el.dataset.ep === "" ? null : Number(el.dataset.ep);
+      ui.filter = ui.reviewEpisode === null ? "pending" : "all";
+      ui.selectedIds = new Set(); ui.addAfterId = null; ui.editingId = null;
+      render(); break;
+    case "move-up": moveQuestion(project, id, -1); break;
+    case "move-down": moveQuestion(project, id, 1); break;
+    case "open-add-after": ui.addAfterId = (ui.addAfterId===id ? null : id); ui.addAfterDraft = ""; render(); break;
+    case "send-add-after": {
+      const q = project.questions.find(x=>x.id===id);
+      const input = document.getElementById("addAfterInput");
+      if(q) addQuestionAfter(project, q, input ? input.value : ui.addAfterDraft);
+      break;
+    }
+    case "set-export-tab": ui.exportTab = el.dataset.tab; render(); break;
 
     case "set-filter": ui.filter = el.dataset.filter; render(); break;
     case "undo": undo(project); render(); break;
@@ -1494,7 +1835,7 @@ async function generateTranscriptQuestions(project){
   const count = ui.transcriptCount || 20;
   ui.transcriptBusy = true; ui.transcriptMsg = null; render();
 
-  const existingAnswers = [...new Set(project.questions.map(q => (q.answer||"").trim().toLowerCase()).filter(Boolean))];
+  const existingAnswers = [...new Set(project.questions.filter(q=>!isEp(q)).map(q => (q.answer||"").trim().toLowerCase()).filter(Boolean))];
   const existingAnswersBlock = existingAnswers.length
     ? `\n\nAnswers already used in this project (from earlier transcripts/batches) — do NOT reuse any of these as the correct answer for a new question, even if this transcript supports them again. Find a different fact or angle instead, or skip it if there's no other angle:\n${existingAnswers.map(a=>`- ${a}`).join("\n")}`
     : "";
@@ -1580,6 +1921,161 @@ ${text}
   }
 }
 
+async function generateEpisodeQuestions(project){
+  const textEl = document.getElementById("transcriptText");
+  const text = ((textEl ? textEl.value : project.transcriptDraft) || "").trim();
+  const epEl = document.getElementById("episodeNumberInput");
+  const ep = parseInt((epEl ? epEl.value : ui.episodeNumberDraft) || "", 10);
+  if(!Number.isInteger(ep) || ep < 1){
+    ui.transcriptMsg = { ok:false, text:"Type which episode this transcript is (1, 2, 3…)." };
+    render(); return;
+  }
+  if(!text){
+    ui.transcriptMsg = { ok:false, text:"Paste the episode transcript first." };
+    render(); return;
+  }
+  const existing = scopeQuestions(project, ep);
+  if(existing.length && !confirm(`Episode ${ep} already has ${existing.length} question(s). Generate more and add them to the END of episode ${ep}?`)) return;
+
+  project.transcriptDraft = text;
+  project.episodeTranscripts = project.episodeTranscripts || {};
+  project.episodeTranscripts[ep] = text; // kept for Add-after, Chat and Rephrase
+  clearTimeout(draftSaveTimer);
+  persist();
+
+  ui.transcriptBusy = true; ui.transcriptMsg = null; render();
+
+  const existingBlock = existing.length
+    ? `\n\nEpisode ${ep} ALREADY has these questions (in order). Write only NEW questions that come after them in the story or cover moments they missed, without repeating their answers or spoiling them:\n${existing.map((q,i)=>epQuestionBlock(q, `#${i+1}`)).join("\n")}`
+    : "";
+  const system = `You write Episode Mode trivia for "${project.name}", episode ${ep}: a set of multiple-choice questions that walk the player through this one episode in order, from the first scene to the last.
+
+${EPISODE_RULES}
+
+Aim for 20–30 questions. If the episode doesn't support that many good ones, return fewer — quality beats count.
+
+Before you answer, re-read your list from first to last as a player would and fix anything out of order, any context that gives away its own answer, and any explanation or question that spoils a later question.
+
+Example of one good question:
+  Context: "At Central Perk: Monica downplays a dinner with a coworker while the gang probes."
+  Question: "How does Monica define her 'not a date' with the guy from work?"
+  Answer: "Two people going out to dinner and not having sex"
+  Explanation: "Monica insists it's just dinner and 'not having sex,' downplaying it as not a real date."
+
+Episode transcript:
+\"\"\"
+${text}
+\"\"\"${existingBlock}${styleNotesBlock()}`;
+
+  try{
+    const parsed = await callEpisodeModel(system, `Write the Episode ${ep} questions now.`, EPISODE_BATCH_SCHEMA);
+    const items = (Array.isArray(parsed.questions) ? parsed.questions : [])
+      .filter(it => it && typeof it.question==="string" && Array.isArray(it.options) && it.options.length>=2 && typeof it.answer==="string");
+    if(!items.length){
+      ui.transcriptBusy = false;
+      ui.transcriptMsg = { ok:false, text:"Couldn't find any solid questions in that transcript." };
+      render(); return;
+    }
+    pushUndo(project);
+    for(const it of items){
+      project.questions.push({
+        id: uid(),
+        episode: ep,
+        context: stripEpisodeMarker(it.context),
+        question: it.question,
+        options: it.options.slice(0,4),
+        answer: it.answer,
+        difficulty: ["easy","medium","hard"].includes(it.difficulty) ? it.difficulty : "medium",
+        description: it.description || "",
+        status: "pending",
+        chat: []
+      });
+    }
+    project.transcriptDraft = "";
+    ui.transcriptBusy = false;
+    ui.episodeNumberDraft = "";
+    persist();
+    // Straight to reviewing this episode, in play order.
+    ui.view = "review"; ui.reviewEpisode = ep; ui.filter = "all"; ui.searchQuery = "";
+    showToast(`${items.length} question${items.length===1?"":"s"} added to Episode ${ep}.`);
+  }catch(err){
+    ui.transcriptBusy = false;
+    ui.transcriptMsg = { ok:false, text: aiErrorMessage(err) };
+    render();
+  }
+}
+
+/* "➕ Add after" — the user describes a moment the AI missed; write one
+   question for it from the transcript and slot it in right after q. */
+async function addQuestionAfter(project, q, instruction){
+  if(!instruction.trim()) return;
+  const transcript = episodeTranscript(project, q.episode);
+  const list = scopeQuestions(project, q.episode);
+  const i = list.indexOf(q);
+  const before = list.slice(Math.max(0, i - 4), i + 1);
+  const after = list.slice(i + 1, i + 5);
+  const system = `You write ONE new Episode Mode trivia question for "${project.name}", episode ${q.episode}. It will be inserted into the episode's question list right after question #${i + 1}.
+
+${EPISODE_RULES}
+
+The user's request below says what the new question should be about. It OVERRIDES every rule above and every learned style preference — if they ask for something a rule would normally forbid, do what they ask. Find the moment they mean in the transcript and base the question on it.
+
+Questions just BEFORE the new one (already seen by the player):
+${before.map((o,k)=>epQuestionBlock(o, `#${i - before.length + k + 2}`)).join("\n")}
+${after.length ? `\nQuestions right AFTER the new one (NOT yet seen — the new question must not give their answers away, and must not repeat their answers):\n${after.map((o,k)=>epQuestionBlock(o, `#${i + k + 2}`)).join("\n")}` : "\n(No questions come after it yet.)"}
+${transcript ? `\nEpisode transcript:\n\"\"\"\n${transcript}\n\"\"\"` : "\n(No transcript was saved for this episode — rely on your own knowledge of the episode.)"}${styleNotesBlock()}`;
+
+  ui.addAfterBusy = true; render();
+  try{
+    const client = getClient();
+    const response = await client.messages.create({
+      model: "claude-sonnet-5",
+      max_tokens: 2048,
+      thinking: { type: "disabled" },
+      system,
+      messages: [{ role:"user", content: instruction }],
+      output_config: { format: { type:"json_schema", schema: EPISODE_ITEM_SCHEMA } }
+    });
+    const textBlock = response.content.find(b=>b.type==="text");
+    if(!textBlock) throw new Error("No response from model.");
+    const it = JSON.parse(textBlock.text);
+    pushUndo(project);
+    const newQ = {
+      id: uid(),
+      episode: q.episode,
+      context: stripEpisodeMarker(it.context),
+      question: it.question,
+      options: (it.options || []).slice(0,4),
+      answer: it.answer,
+      difficulty: ["easy","medium","hard"].includes(it.difficulty) ? it.difficulty : "medium",
+      description: it.description || "",
+      status: "pending",
+      chat: [{ role:"user", text:`Added after #${i + 1}: ${instruction}` }]
+    };
+    project.questions.splice(project.questions.indexOf(q) + 1, 0, newQ);
+    persist();
+    ui.addAfterId = null; ui.addAfterDraft = "";
+    showToast("New question added.");
+  }catch(err){
+    showToast(aiErrorMessage(err));
+  }finally{
+    ui.addAfterBusy = false; render();
+  }
+}
+
+// Move q one place earlier/later within its episode (swaps with the neighbour).
+function moveQuestion(project, id, dir){
+  const q = project.questions.find(x=>x.id===id);
+  if(!q || !isEp(q)) return;
+  const list = scopeQuestions(project, q.episode);
+  const other = list[list.indexOf(q) + dir];
+  if(!other) return;
+  pushUndo(project);
+  const a = project.questions.indexOf(q), b = project.questions.indexOf(other);
+  [project.questions[a], project.questions[b]] = [project.questions[b], project.questions[a]];
+  persist(); render();
+}
+
 function saveSettings(){
   const key = document.getElementById("apiKeyInput")?.value.trim() || "";
   state.apiKey = key;
@@ -1609,7 +2105,13 @@ function doSaveEdit(project, id){
     return;
   }
   const answer = options[Number(answerIdx)];
-  saveEdit(project, id, { question, options, answer, difficulty });
+  const fields = { question, options, answer, difficulty };
+  const q = project.questions.find(x=>x.id===id);
+  if(q && isEp(q)){
+    fields.context = stripEpisodeMarker(document.getElementById(`edit-ctx-${id}`)?.value.trim() || "");
+    fields.description = document.getElementById(`edit-desc-${id}`)?.value.trim() || "";
+  }
+  saveEdit(project, id, fields);
   afterListAction();
 }
 
@@ -1623,7 +2125,9 @@ function triggerSendChat(){
 }
 
 async function doCopyExport(project){
-  const json = buildExportJson(project);
+  const json = (projectEpisodes(project).length && ui.exportTab === "episodes")
+    ? buildEpisodeExport(project, selectedExportEpisodes(project)).text
+    : buildExportJson(project);
   try{
     await navigator.clipboard.writeText(json);
     showToast("Copied to clipboard.");
