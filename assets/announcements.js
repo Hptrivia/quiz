@@ -87,7 +87,7 @@ const APP_ANNOUNCEMENTS = [
   {
     icon: "🎭",
     title: "New: Which Character Are You?",
-    text: "Answer a few quick questions about how you really handle life and find out which character you are — with your full character breakdown. Now live for 30 shows, from Friends, The Office and Parks and Rec to Game of Thrones, Breaking Bad, Lost, The Walking Dead and Harry Potter.",
+    text: "Answer a few quick questions about how you really handle life and find out which character you are — with your full character breakdown. Now live for 44 shows, from Friends, The Office and Parks and Rec to Game of Thrones, Breaking Bad, Money Heist, Squid Game and Harry Potter.",
     cta: { label: "Take a Test", href: "character-quiz/index.html" },
   },
   {

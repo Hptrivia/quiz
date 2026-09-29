@@ -332,28 +332,28 @@
       ]
     },
     {
-      "text": "Your family needs something big from you. You...",
+      "text": "A close family member calls you at 2am. They're in serious trouble and need you right now. You...",
       "options": [
         {
-          "text": "Drop everything. No questions asked",
+          "text": "Get in the car. You'll ask questions on the way",
           "points": {
             "lincoln": 3
           }
         },
         {
-          "text": "Quietly work out a plan they don't even know about",
+          "text": "Stay calm, get every detail, then work out a plan",
           "points": {
             "michael": 3
           }
         },
         {
-          "text": "Help — but tell them honestly how you feel about it",
+          "text": "Help, but tell them honestly this can't keep happening",
           "points": {
             "sara": 3
           }
         },
         {
-          "text": "Say yes — and make sure they never see what it costs you",
+          "text": "Sort it out, and don't let them see you're struggling too",
           "points": {
             "mahone": 3
           }
@@ -412,7 +412,7 @@
           }
         },
         {
-          "text": "Refuse. Then turn up and help anyway",
+          "text": "Say no. They should have thought of that before",
           "points": {
             "bellick": 2,
             "lincoln": 1
@@ -484,7 +484,7 @@
       "text": "You've broken out of prison with a group. There's only enough money to get half of you across the border. You...",
       "options": [
         {
-          "text": "Give your share to someone with a family waiting",
+          "text": "Give up your share so someone else can go",
           "points": {
             "sucre": 3
           }
