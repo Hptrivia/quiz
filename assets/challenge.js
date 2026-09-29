@@ -1,11 +1,8 @@
-// Challenge mode shares the same global 10-question web allowance as every
-// other mode (Marathon, Episode, Survival) — it used to have its own more
-// generous 2-round (20-question) allowance, but that's now looser than the
-// global limit, so it was never actually reachable and just added a second
-// system to keep in sync. Each round is exactly 10 questions (ROUND_SIZE,
-// below), which happens to match the global limit exactly — finishing round
-// 1 already exhausts it, so no mid-round interruption is needed here the way
-// Marathon/Episode required (their rounds are bigger than the limit).
+// Challenge mode shares the global web question allowance (_WEB_LIMITS.Q in
+// profile.js, currently 20) with Marathon, Episode and Survival. Each round is
+// exactly 10 questions (ROUND_SIZE, below), so rounds 1-2 are free on web;
+// round 3+ is walled — by the result-screen wall once the count is spent, and
+// by _checkWebPageWall's URL-position check if the URL is edited or skipped to.
 // True when this round's result screen should show the install wall instead of
 // a Next-Round button (web only — the native app never walls, it shows ads).
 function chalWebWalled() {

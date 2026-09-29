@@ -858,12 +858,9 @@ function mpPlayAgain() {
   // until they click Play Again on their own side too. See
   // mpMarkRematchReady/mpTryStartRematchIfBothReady for the both-ready gate.
   const proceed = () => mpMarkRematchReady();
-  // Best-of-5/10 matches are short, so the very first rematch after one of
-  // those ends is free — the ad only kicks in from the second rematch
-  // onward. Best-of-20 is long enough that the ad still applies from the start.
-  const isShortMatch = mpRoom.bestOf === 5 || mpRoom.bestOf === 10;
-  const skipAd = mpRoom.rematchCount === 0 && isShortMatch;
-  if (!skipAd && typeof _offerRewardedLifeline === 'function' && typeof isInApp === 'function'
+  // Every rematch is ad-gated (app only), whatever the match length — the old
+  // "first rematch free after best-of-5/10" exemption was removed 2026-09-29.
+  if (typeof _offerRewardedLifeline === 'function' && typeof isInApp === 'function'
       && isInApp() && typeof ADMOB_ADS_ENABLED !== 'undefined' && ADMOB_ADS_ENABLED) {
     _offerRewardedLifeline('Play Again', proceed, 'Watch a short ad to start a rematch?');
   } else {

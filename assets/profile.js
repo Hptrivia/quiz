@@ -740,30 +740,14 @@ function injectWebFeatureTease(ctaRow, label, title, body) {
   else ctaRow.appendChild(btn);
 }
 
-// In-quiz "Skip"/"Next batch" links (Marathon page, Challenge round, Episode)
-// bypass the answered-question counter — without this a tapper could farm
-// unlimited free batches without ever finishing a round. Gate them positionally;
-// `blocked` is the caller's per-mode rule (e.g. challenge safeRound >= 3).
-//
-// MOBILE WEB ONLY today. This exclusion existed because desktop's questions
-// counter used to reset DAILY — a positional "always block page 1" would've
-// wrongly locked out a returning desktop visitor the next day. Desktop is now
-// a ONE-TIME allowance too (see _DAILY_KEYS), so that reasoning no longer
-// applies — left mobile-only pending a decision on whether to extend this
-// positional gate to desktop as well. (chat 2026-06-14, revisited later)
-function gateWebSkip(linkEl, blocked, opts) {
-  if (!linkEl || !blocked || !isLimitedWeb()) return;
-  if (isDesktopWeb()) return; // mobile web (iOS/Android) only
-  linkEl.addEventListener('click', (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    _openWebWallOverlay({
-      title: (opts && opts.title) || "Get 100+ questions for every theme 🎉",
-      body: (opts && opts.body) ||
-        "Download Trivia Gauntlet to keep playing — it's free."
-    });
-  });
-}
+// In-quiz "Skip"/"Next batch" links (Marathon page, Challenge round, Episode,
+// Word Search) used to ALWAYS pop the app wall on mobile web, whatever the
+// position — which blocked Challenge round 1 → 2 even though round 2 is inside
+// the free allowance. The URL-position check in _checkWebPageWall now walls
+// anything past the free allowance on load (every web platform, incognito
+// included), so skip links just navigate and land on that wall when needed.
+// No-op kept so existing call sites don't need touching.
+function gateWebSkip() {}
 
 // "Replay them all" (replaying your missed questions) is reserved for the app on
 // web — one global capture listener covers every Challenge + Marathon result and
@@ -919,26 +903,44 @@ function _checkWebPageWall() {
   const path = window.location.pathname;
   let msg = null;
   let noun = 'questions';
+  let body = null;
   // versus.html isn't checked here — it serves both hot-seat (shared Q pool)
   // and online (separate VsOnline pool) and doesn't know which the visitor
   // wants until they pick, so a single page-load overlay can't correctly
   // reflect "am I walled" for both at once. Each mode enforces its own limit
   // in-page instead once actually played — see vsRunNextTurn (hot-seat) and
   // mpAdvanceRound/mpShowResults (online) in versus.js/versus-multiplayer.js.
-  if (/\/(play|challenge|survival|trivia-rush|mashup-play)\.html$/.test(path) && isWebQLimit())
+  // Positional check: the counts above live in localStorage, which incognito
+  // (or clearing site data) wipes — so hand-editing the URL to a later
+  // episode/round/word would otherwise play free. Anything past the free
+  // allowance's position is walled from the URL alone, whatever the count says.
+  // Challenge: 10-Q rounds, so the 20-Q budget = rounds 1-2. Marathon's first
+  // page (30 Qs) already exceeds it, so only page 1 is ever reachable.
+  const params = new URLSearchParams(window.location.search);
+  const num = k => parseInt(params.get(k) || '1', 10) || 1;
+  const isMashupPlay = path.endsWith('/mashup-play.html');
+  const mashupMode = (params.get('mode') || 'marathon').toLowerCase();
+  const pastFreeQ =
+    (path.endsWith('/play.html') && num('page') > 1) ||
+    (path.endsWith('/challenge.html') && num('round') > 2) ||
+    (isMashupPlay && mashupMode === 'marathon' && num('page') > 1) ||
+    (isMashupPlay && mashupMode === 'challenge' && num('round') > 2);
+  if (/\/(play|challenge|survival|trivia-rush|mashup-play)\.html$/.test(path) && (isWebQLimit() || pastFreeQ))
     msg = "Yay! You've answered your free questions";
-  else if (path.endsWith('/episode.html') && isWebEpLimit())
-    msg = "Yay! You've answered your free questions";
-  else if ((path.endsWith('/wordle.html') || /\/wordle\//.test(path)) && isWebWordleLimit()) {
+  else if (path.endsWith('/episode.html') && (isWebEpLimit() || num('episode') > 1)) {
+    msg = "Yay! You've played your free episode"; noun = 'episodes';
+    if (num('episode') > 1) body = `Download Trivia Gauntlet free to play Episode ${num('episode')}.`;
+  }
+  else if ((path.endsWith('/wordle.html') || /\/wordle\//.test(path)) && (isWebWordleLimit() || num('page') > 1)) {
     msg = "Yay! You've played your free Wordle word"; noun = 'Wordles';
   }
-  else if ((path.endsWith('/wordsearch.html') || /\/wordsearch\//.test(path)) && isWebWSLimit()) {
+  else if ((path.endsWith('/wordsearch.html') || /\/wordsearch\//.test(path)) && (isWebWSLimit() || num('page') > 1)) {
     msg = "Yay! You've finished the Word Search"; noun = 'Word Searches';
   }
   if (!msg) return;
   const overlay = document.createElement('div');
   overlay.className = 'android-wall-overlay';
-  overlay.innerHTML = webWallHTML(msg, null, noun);
+  overlay.innerHTML = webWallHTML(msg, null, noun, null, false, body);
   document.body.appendChild(overlay);
 }
 

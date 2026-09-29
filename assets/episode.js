@@ -111,7 +111,10 @@ async function renderEpisodePage() {
   }
 
   const episodeMap = new Map();
-  let currentMarker = null;
+  // Questions before the first "EPISODE N" marker belong to episode 1 — most
+  // single-episode files were written without a marker, and without this they'd
+  // be dropped as soon as a marked episode 2 block is appended after them.
+  let currentMarker = 1;
   let foundAnyEpisodeMarkers = false;
 
   allQuestions.forEach(q => {
@@ -160,6 +163,7 @@ async function renderEpisodePage() {
       nextPageLink.textContent = "Skip to next episode";
       nextPageLink.href = `episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}`;
       nextPageLink.dataset.rewardedHref = `episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}`;
+      nextPageLink.dataset.rewardedLabel = "next episode"; // ad prompt: "…continue to the next episode?"
     } else {
       nextPageLink.style.display = "none";
     }
@@ -224,14 +228,23 @@ async function renderEpisodePage() {
       </div>
     `;
 
-    // When they've finished the newest available episode, offer to be notified
-    // when the next one drops (email + theme via the shared Formspree card).
-    const notifyHtml = (!hasNextEpisode && typeof buildNotifyCard === "function")
-      ? buildNotifyCard(theme.title, false, "episode", {
-          heading: `🎬 You're caught up on <strong>${theme.title}</strong> episodes`,
-          sub: "Want to know when the next episode drops?",
-        })
-      : "";
+    // When they've finished the newest available episode, offer to be emailed
+    // when the next one drops — sent to the same Formspree form as contact.html,
+    // tagged type "episode-notify" + theme slug. Remembers a signup per show on this device
+    // so the card shows "you're on the list" instead of the form next time.
+    const _notifyDone = (() => { try { return localStorage.getItem(`tg_ep_notify_${theme.slug}`) === "1"; } catch (e) { return false; } })();
+    const notifyHtml = !hasNextEpisode ? `
+      <div class="notify-card" id="epNotifyCard">
+        <div class="notify-card-heading">🎬 You're caught up on <strong>${theme.title}</strong> episodes</div>
+        ${_notifyDone
+          ? `<div class="notify-card-done">✅ You're on the list — we'll email you when the next episode drops.</div>`
+          : `<p class="notify-card-sub">Want to know when the next episode drops? Leave your email and we'll let you know.</p>
+        <form class="notify-card-form" id="epNotifyForm" novalidate>
+          <input class="notify-card-input" id="epNotifyEmail" type="email" inputmode="email" autocomplete="email" placeholder="you@email.com" required />
+          <button class="notify-card-btn" id="epNotifyBtn" type="submit">Notify me</button>
+        </form>
+        <div class="notify-card-status" id="epNotifyStatus" aria-live="polite"></div>`}
+      </div>` : "";
 
     const affiliateHtml = affiliateProducts && affiliateProducts.length ? `
       <div class="affiliate-box">
@@ -323,7 +336,7 @@ async function renderEpisodePage() {
       ${webQCounterHTML()}
       <div class="cta-row">
         ${hasNextEpisode && !isWebEpLimit() ? `<a class="primary-btn" href="episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}" data-rewarded-href="episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}">Next Episode</a>` : ""}
-        ${hasNextEpisode && isWebEpLimit() ? webWallHTML("Yay! You've played an episode", theme.title, "episodes") : ""}
+        ${hasNextEpisode && isWebEpLimit() ? webWallHTML("Yay! You've played an episode", theme.title, "episodes", null, false, `Download Trivia Gauntlet free to play Episode ${nextEpisodeNumber} of ${theme.title}.`) : ""}
         ${!hasNextEpisode && isWebEpLimit() ? webWallHTML("Want more Episode Mode trivia?", null, "episodes", null, true, "Download Trivia Gauntlet.") : ""}
       </div>
       ${shareHtml}
@@ -331,7 +344,7 @@ async function renderEpisodePage() {
       ${affiliateHtml}
       ${relatedHtml}
     `;
-    if (notifyHtml && typeof wireNotifyCard === "function") wireNotifyCard(theme.title, "episode");
+    _wireEpisodeNotify(theme.slug, safeEpisode);
     const _redditBtn = document.getElementById("episodeShareRedditBtn");
     if (_redditBtn) _redditBtn.addEventListener("click", () => _episodeShare(false)); // no link
     const _friendBtn = document.getElementById("episodeShareFriendBtn");
@@ -485,3 +498,56 @@ document.addEventListener("DOMContentLoaded", () => {
     renderEpisodePage();
   }
 });
+
+/* ---------------- NEXT-EPISODE EMAIL SIGNUP ---------------- */
+const EP_NOTIFY_URL = 'https://formspree.io/f/mpqybwea'; // same form as contact.html
+
+function _wireEpisodeNotify(themeSlug, episodeNum) {
+  const form = document.getElementById("epNotifyForm");
+  if (!form) return;
+  const input = document.getElementById("epNotifyEmail");
+  const btn = document.getElementById("epNotifyBtn");
+  const status = document.getElementById("epNotifyStatus");
+  const done = () => {
+    try { localStorage.setItem(`tg_ep_notify_${themeSlug}`, "1"); } catch (e) {}
+    const card = document.getElementById("epNotifyCard");
+    form.remove(); status.remove();
+    const sub = card && card.querySelector(".notify-card-sub");
+    if (sub) sub.outerHTML = `<div class="notify-card-done">✅ You're on the list — we'll email you when the next episode drops.</div>`;
+  };
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const email = (input.value || "").trim().toLowerCase();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 254) {
+      status.textContent = "Please enter a valid email.";
+      input.focus();
+      return;
+    }
+    btn.disabled = true;
+    btn.textContent = "Saving…";
+    status.textContent = "";
+    const platform = (window.Capacitor && window.Capacitor.getPlatform)
+      ? window.Capacitor.getPlatform() : "web";
+    try {
+      const res = await fetch(EP_NOTIFY_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({
+          type: "episode-notify",
+          email,
+          theme: themeSlug,
+          last_episode: episodeNum,
+          platform,
+          _subject: `Episode notify: ${themeSlug}`,
+        }),
+      });
+      if (!res.ok) throw new Error(res.status);
+      if (typeof gtag === "function") gtag("event", "episode_notify_signup", { theme: themeSlug });
+      done();
+    } catch (err) {
+      btn.disabled = false;
+      btn.textContent = "Notify me";
+      status.textContent = "Couldn't save that — please try again.";
+    }
+  });
+}

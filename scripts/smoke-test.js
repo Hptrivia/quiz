@@ -164,22 +164,22 @@ async function playTriviaRush(page, endSel) {
 // Versus: start with default player names, play turns. End detection is loose,
 // so this mode passes primarily on "no JS error during real play".
 async function playVersus(page) {
-  await clickFirst(page, '#vsStartBtn');
-  await wait(400);
-  for (let i = 0; i < 40; i++) {
+  // #vsStartBtn fails clickFirst's offsetParent visibility test, so click it
+  // directly — otherwise the match never starts and this "passes" on the setup
+  // screen without playing anything (it did, until 2026-09-29). Needs a
+  // ?theme= in the URL too, or Start has nothing to play.
+  await page.evaluate(() => document.getElementById('vsStartBtn')?.click());
+  await wait(500);
+  for (let i = 0; i < 150; i++) {
+    if (await isVisible(page, '#vsResults')) break;
     await clickFirst(page, '.option-btn');
-    await wait(40);
-    await clickFirst(page, '#vsSubmitBtn');
     await wait(60);
+    await clickFirst(page, '#vsSubmitBtn');
+    await wait(120);
     await clickFirst(page, '#vsNextBtn');
-    await wait(80);
-    // stop once the steal/next flow stalls (no more visible play buttons)
-    const playing = await isVisible(page, '.option-btn') ||
-                    await isVisible(page, '#vsNextBtn') ||
-                    await isVisible(page, '#vsSubmitBtn');
-    if (!playing) break;
+    await wait(120);
   }
-  return true; // success = no pageerror (checked by runner)
+  return isVisible(page, '#vsResults');
 }
 
 // Category Blitz: spin, fill every category input with "<letter>x" (starts
@@ -523,7 +523,7 @@ function buildModes(themes) {
     { name: 'daily-mashup',    url: `daily-mashup.html`,               seedLocalStorage: { dmSelectedThemes: JSON.stringify([a, b]) }, run: p => playQuiz(p, '#dmResult', 120, '#dmNextBtn') },
     { name: 'trivia-rush',     url: `trivia-rush.html?theme=${a}`,     run: p => playTriviaRush(p, '#trGameOverBox') },
     { name: 'trivia-rush-mashup', url: `mashup-trivia-rush.html?themes=${a},${b}`, run: p => playTriviaRush(p, '#trGameOverBox') },
-    { name: 'versus',          url: `versus.html`,                     run: p => playVersus(p) },
+    { name: 'versus',          url: `versus.html?theme=${a}`,          run: p => playVersus(p) },
     { name: 'wordle',          url: `wordle.html?theme=${ep}`,         run: p => playWordle(p, '#wordleResultPanel') },
     { name: 'wordle-mashup',   url: `wordle.html?themes=${a},${b}`,    run: p => playWordle(p, '#wordleResultPanel') },
     { name: 'daily-wordle',    url: `daily-wordle.html`,               run: p => playWordle(p, '#dwResult', ['CRANE','SLATE','MOUNT','BRICK','PLUMB','GHOST']) },

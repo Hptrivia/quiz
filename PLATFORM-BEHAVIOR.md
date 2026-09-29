@@ -61,7 +61,7 @@ All gating lives behind `isLimitedWeb()`. Unlocking full access (a valid code) f
 
 | Platform | AdMob mode | Meaning |
 |---|---|---|
-| **iOS app** | `off` | Fully ad-free. No banner/interstitial/rewarded. Set while iOS is pending AdMob approval. To go live: fill `_ADMOB_LIVE_IDS.ios` + set `ios: 'live'`. |
+| **iOS app** | `live` | Real production units (`_ADMOB_LIVE_IDS.ios`) — same ads as Android, plus the ATT prompt before the SDK starts. |
 | **Android app** | `live` | Real production units (`_ADMOB_LIVE_IDS.android`) — earns revenue. |
 | **iOS / Android / desktop web** | n/a | AdMob only runs inside the native app (`isInApp()`); web never loads it. |
 
@@ -71,14 +71,12 @@ All gating lives behind `isLimitedWeb()`. Unlocking full access (a valid code) f
 
 | Ad | iOS app | Android app | iOS web | Android web | Desktop web |
 |---|---|---|---|---|---|
-| **AdMob banner** (lobby/result screens) | ❌ | ✅ | ❌ | ❌ | ❌ |
-| **AdMob interstitial** (on game start) | ❌ | ✅ once/mode/session, 20-min cooldown | ❌ | ❌ | ❌ |
-| **AdMob rewarded** (Next Round / lifelines) | ❌ (proceeds free) | ✅ | ❌ | ❌ | ❌ |
+| **AdMob banner** (lobby/result screens) | ✅ | ✅ | ❌ | ❌ | ❌ |
+| **AdMob interstitial** (on game start) | ✅ once/mode/session, 20-min cooldown | ✅ once/mode/session, 20-min cooldown | ❌ | ❌ | ❌ |
+| **AdMob rewarded** (Next Round / lifelines) | ✅ | ✅ | ❌ | ❌ | ❌ |
 | **Adsterra 300×250** (Daily Trivia result only) | ⚠️ ✅ | ⚠️ ✅ | ✅ | ✅ | ✅ |
 
-- **iOS app = fully ad-free** (`ADMOB_MODE_BY_PLATFORM.ios = 'off'`, pending AdMob
-  approval). `data-rewarded-href` buttons just navigate (no ad gate).
-- **Android app = `'live'`** (real units). Banner hidden on game pages, shown on lobby
+- **iOS app + Android app = `'live'`** (real units, `ADMOB_MODE_BY_PLATFORM`). Banner hidden on game pages, shown on lobby
   + result screens. Interstitial fires once per mode per session (sessionStorage key)
   with a 20-min cross-app cooldown. Rewarded gates "Next Round" (marathon: every round;
   challenge: every 3rd round) and "Next Word" (wordle: every 2nd) and lifelines.
@@ -96,12 +94,19 @@ Native app (iOS + Android) and premium web = **no limits at all.** Everything be
 
 | Limit | Amount | Reset | Which modes count |
 |---|---|---|---|
-| **Questions** | 30 | **Desktop web: per-day** · **iOS/Android web: one-time (no reset)** | Marathon, Challenge, Survival (counted at round/game end) |
-| **Wordle** | 2 words | Lifetime | Wordle (single + mashup) |
+| **Questions** | 20 | One-time on all web platforms (no reset; daily reset code kept but disabled) | Marathon, Challenge, Survival (counted at round/game end) |
+| **Wordle** | 1 word | Lifetime | Wordle (single + mashup) |
 | **Word Search** | 1 | Lifetime | Word Search |
 | **Episode** | 1 | Lifetime | Episode |
 
-- **Daily reset is desktop-only** (`_maybeDailyReset` early-returns unless `isDesktopWeb()`).
+- **No daily reset anywhere** — `_DAILY_KEYS` is empty, so `_maybeDailyReset` is a no-op.
+- **URL-position wall (anti-incognito):** counts live in localStorage, which incognito wipes, so
+  `_checkWebPageWall()` also walls on the URL alone: `episode.html` episode ≥ 2, `play.html` /
+  mashup marathon page ≥ 2, `challenge.html` / mashup challenge round ≥ 3, Wordle page ≥ 2,
+  Word Search page ≥ 2. Only the first episode/round/word/grid of any theme is reachable on
+  non-premium web; switching themes in a fresh private window still gets that first taste.
+  In-game "Skip to next …" links just navigate — they hit this same wall if past the free
+  position (no separate always-block on skip anymore).
 - **Do NOT count toward any limit / never walled:** Trivia Rush, Versus (local pass-and-play,
   the pre-existing one — not Category Blitz Versus, which has its own gate below).
 - **Daily Trivia / Daily Wordle / Daily Blitz — REVISED 2026-08-26, no longer "never walled":**
@@ -119,16 +124,16 @@ Native app (iOS + Android) and premium web = **no limits at all.** Everything be
   only ever blocks starting something new.
 - **Wall copy (questions), set in `webWallHTML`** — single-theme modes pass `theme.title`,
   so the wall names the theme; mashup modes pass none → generic fallback:
-  - Desktop: *"You've used today's 30 free questions 🎉 — Come back tomorrow for more [theme] questions — or get unlimited access now."* + QR / "Unlock all questions here". (Mashup: "…for more questions…".)
-  - iOS/Android web: *"You've played your 30 free questions 🎉 — Download Trivia Gauntlet free for more [theme] questions."* + their store button. (Mashup: "…for more questions.")
-  - **Entry block:** opening a 2nd theme's game page while already over the limit triggers `_checkWebPageWall()` on load — a full-screen blocking overlay with the **generic** message (no theme name; passes `null`). The 30 is a single global budget across all themes — switching themes does NOT refill it.
+  - Desktop: *"You've played your 20 questions 🎉 — Download Trivia Gauntlet for more [theme] questions — or get unlimited access now."* + QR / "Unlock all questions here". (Mashup: "…for more questions…".)
+  - iOS/Android web: *"You've played your 20 questions 🎉 — Download Trivia Gauntlet for more [theme] questions."* + their store button. (Mashup: "…for more questions.")
+  - **Entry block:** opening a 2nd theme's game page while already over the limit triggers `_checkWebPageWall()` on load — a full-screen blocking overlay with the **generic** message (no theme name; passes `null`). The 20 is a single global budget across all themes — switching themes does NOT refill it.
 
 ---
 
 ## 6. End-of-game buttons (per mode)
 
-App (iOS/Android) = unlimited, so the "next" button always shows (Android wraps it in a
-rewarded ad; iOS proceeds free). Web non-premium swaps the next button for a wall once
+App (iOS/Android) = unlimited, so the "next" button always shows (both apps wrap it in a
+rewarded ad on the cadence below). Web non-premium swaps the next button for a wall once
 the relevant limit is hit. Desktop adds an extra upsell CTA.
 
 | Mode | Counts toward | Primary next button | Web wall when limited | Desktop-only extra CTA | Other buttons |
@@ -140,7 +145,7 @@ the relevant limit is hit. Desktop adds an extra upsell CTA.
 | **Wordle** (single + mashup) | Wordle | Next Word (rewarded **every 2nd**, Android) | Wordle-limit → Wordles wall | — | 📋 Share · resume/continue |
 | **Word Search** | Word Search | Next Grid | WS-limit → Word Searches wall | — | Try another Word Search theme |
 | **Trivia Rush** (single + mashup) | nothing | Play Again | never walled | — | Report a Question · Try another theme |
-| **Versus** (local 2–4 players) | nothing | Play Again | never walled | — | Reveal-answers toggle · tiebreaker |
+| **Versus** (local 2–4 players) | nothing | Play Again (full-screen ad in app, 3-min cooldown) | never walled | — | Reveal-answers toggle · tiebreaker (rewarded ad in app) · halfway "continue" rewarded ad (app) |
 | **Daily Trivia** | nothing | See Results | 1 free play **ever** (not daily) → wall | — | Share · countdown to next · **Adsterra ad** (non-premium, all platforms) |
 | **Daily Wordle** | nothing | (board) | 1 free play **ever** (not daily) → wall | — | Share · countdown to next |
 | **Daily Blitz** (Category Blitz) | nothing | See Results | 1 free play **ever** (not daily) → wall | — | Leave Feedback |
@@ -151,10 +156,9 @@ the relevant limit is hit. Desktop adds an extra upsell CTA.
 
 ## 7. Quick "what's different" summary
 
-- **iOS app vs Android app:** identical *except ads* — iOS is fully ad-free (AdMob off,
-  pending approval); Android serves live AdMob (banner + interstitial + rewarded). Both
-  are unlimited and show no web banner/walls. (Both still render the Daily Trivia Adsterra ad.)
-- **iOS web vs Android web:** identical behavior — same one-time 30-question limit, same
+- **iOS app vs Android app:** identical — both serve live AdMob (banner + interstitial +
+  rewarded); only the premium ad-free apps skip ads. Both are unlimited and show no web banner/walls. (Both still render the Daily Trivia Adsterra ad.)
+- **iOS web vs Android web:** identical behavior — same one-time 20-question limit, same
   walls; only the store link differs (App Store vs Google Play).
 - **Mobile web vs desktop web:** desktop gets *daily-reset* questions (vs one-time on
   mobile), the inline *paid* unlock option + QR, the theme-page Unlock card, the footer

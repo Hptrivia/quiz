@@ -906,7 +906,15 @@ async function vsInit() {
       vsShow('vsSetup');
     }
 
-    vsGoSetup();
+    // Between back-to-back matches: a full-screen ad (app only). Respects the
+    // shared 3-min interstitial cooldown, so a quick rematch right after the
+    // page-load ad or another interstitial just goes straight to setup.
+    if (typeof isInApp === 'function' && isInApp() && typeof ADMOB_ADS_ENABLED !== 'undefined'
+        && ADMOB_ADS_ENABLED && typeof adMobShowInterstitial === 'function') {
+      adMobShowInterstitial().finally(vsGoSetup);
+    } else {
+      vsGoSetup();
+    }
   });
 
   if (isPremiumUser()) {
@@ -921,7 +929,16 @@ async function vsInit() {
     }
   }
 
-  document.getElementById('vsTiebreakerYes').addEventListener('click', vsStartTiebreaker);
+  // Tiebreaker is opt-in, so it's a rewarded ad (app only). Cancel just closes
+  // the prompt — the Yes/No tiebreaker offer stays on screen.
+  document.getElementById('vsTiebreakerYes').addEventListener('click', () => {
+    if (typeof _offerRewardedLifeline === 'function' && typeof isInApp === 'function' && isInApp()
+        && typeof ADMOB_ADS_ENABLED !== 'undefined' && ADMOB_ADS_ENABLED) {
+      _offerRewardedLifeline('Tiebreaker', vsStartTiebreaker, 'Watch a short ad for a <strong>tiebreaker question</strong>?');
+    } else {
+      vsStartTiebreaker();
+    }
+  });
   document.getElementById('vsTiebreakerNo').addEventListener('click', vsDeclareDraw);
 }
 
