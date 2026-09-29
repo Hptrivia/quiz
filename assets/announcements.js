@@ -86,8 +86,8 @@ const APP_ANNOUNCEMENTS = [
   // batch gets announced). Point the CTA at a hub page once there are several.
   {
     icon: "🎭",
-    title: "New: Which Character Are You?",
-    text: "Answer a few quick questions about how you really handle life and find out which character you are — with your full character breakdown. Now live for 44 shows, from Friends, The Office and Parks and Rec to Game of Thrones, Breaking Bad, Money Heist, Squid Game and Harry Potter.",
+    title: "New Character Tests: Money Heist & Squid Game",
+    text: "Which Money Heist or Squid Game character are you? Answer 12 quick questions and find out.",
     cta: { label: "Take a Test", href: "character-quiz/index.html" },
   },
   {
