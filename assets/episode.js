@@ -475,7 +475,8 @@ async function renderEpisodePage() {
     });
 
     slide.appendChild(qNum);
-    slide.appendChild(contextP);
+    // Empty context = question continues the previous scene; no box.
+    if (contextP.textContent) slide.appendChild(contextP);
     slide.appendChild(qText);
     slide.appendChild(optsList);
     slide.appendChild(feedbackP);
