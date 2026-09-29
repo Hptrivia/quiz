@@ -455,10 +455,11 @@ function episodeNeighboursBlock(project, q, n = 3){
 const EPISODE_RULES = `Episode Mode rules — the questions are played in order and retell the episode's story as the player goes:
 - ORDER: questions follow the episode chronologically, from the opening scene to the final scene.
 - WHAT TO ASK: meaningful, recognisable things from the episode — names, places, events, relationships, objects, key decisions and reveals. Not insignificant actions or throwaway details. Only things a viewer actually saw or heard; a transcript's speaker labels, stage directions and "[laughs]"-style notes never reach the audience, so never base a question on them.
-- CONTEXT: one short sentence setting the scene so the player knows which moment the question is about (e.g. "At Central Perk, Monica downplays a dinner with a coworker while the gang probes."). It must NOT reveal or hint at the answer. Never write the word "episode" followed by a number in a context.
+- CONTEXT: shown above the question. It tells the player what has just happened in the story leading up to this moment, so they know exactly which part of the episode the question is about. Aim for about 12–25 words (one or two sentences): say where we are, who is involved and what just happened, e.g. "At Central Perk, Monica insists her dinner with a coworker is not a date, but the gang keeps teasing her about it." or "Back at Ross's apartment, the guys are assembling his new furniture while Joey lists everything Carol took in the divorce." Never a bare 5–8 word label like "Ross talks about his marriage." — that tells the player nothing. Never a long paragraph either. It must NOT reveal or hint at the answer. Never write the word "episode" followed by a number in a context.
+- EMPTY CONTEXT: when a question directly continues the same moment as the question before it (same scene, same conversation, no time jump), leave the context as an empty string "" — the player has just seen that scene, and repeating or rephrasing it adds nothing. Any new scene, new location or jump in time needs a context. The first question of the episode always needs one.
 - QUESTION: one clear, concise sentence.
-- ANSWER: prefer a short answer (a name, place, object, number, title). A longer phrase is fine when that is genuinely the natural answer (e.g. "Two people going out to dinner and not having sex"). Avoid emotions, opinions and vague adjectives as answers.
-- WRONG OPTIONS: 3 believable wrong options matching the correct answer's style, length and setting, so the player needs to have watched to rule them out.
+- ANSWER: the answer should almost always be short: a name, place, object, number or title of 1–4 words. Choose questions whose answer is a thing, not an action. Do NOT write sentence-style answers describing what someone does (bad: "Tries to send a note up the elevator", "She turns around and heads back in", "Time deducted from his outie's paycheck"); ask about the thing instead (e.g. "What does Helly try to send up the elevator?" → "A note"). A longer phrase is allowed only rarely, when a famous line or idea genuinely cannot be shortened (e.g. "Two people going out to dinner and not having sex") — at most one or two per episode. Avoid emotions, opinions and vague adjectives as answers.
+- WRONG OPTIONS: 3 believable wrong options matching the correct answer's style, length and setting, so the player needs to have watched to rule them out. Keep them as short as the correct answer.
 - EXPLANATION: 1–2 sentences explaining the answer, shown after the player answers. It may refer to what has already happened, but must NOT reveal anything asked in a later question.
 - NO SPOILERS FORWARD: no context, question, answer or explanation may give away the answer to a later question in the episode.
 - No two questions in the same episode may have the same correct answer.
@@ -467,14 +468,15 @@ const EPISODE_RULES = `Episode Mode rules — the questions are played in order 
 const EPISODE_ITEM_SCHEMA = {
   type: "object",
   properties: {
-    context: { type: "string", description: "One short scene-setting sentence that does not reveal the answer." },
+    context: { type: "string", description: "About 12-25 words (1-2 sentences) recapping what just happened leading into this moment: where, who, what. Never a bare 5-8 word label, never a paragraph. Does not reveal the answer. Empty string \"\" when the question directly continues the previous question's scene (never for the first question)." },
     question: { type: "string" },
     options: { type: "array", items: { type: "string" }, description: "Exactly 4 options, including the correct one." },
     answer: { type: "string", description: "Must exactly match one of the 4 options." },
     difficulty: { type: "string", enum: ["easy","medium","hard"] },
-    description: { type: "string", description: "1-2 sentence explanation shown after answering; no spoilers for later questions." }
+    description: { type: "string", description: "1-2 sentence explanation shown after answering; no spoilers for later questions." },
+    speakerGuessed: { type: "boolean", description: "true if the context, question, answer or explanation says WHO said or did something, and the transcript does not make that person clear (no name label on the line, not addressed by name, not obvious from the scene) so you had to guess. Still write the question; this only flags it for a human check. false otherwise." }
   },
-  required: ["context","question","options","answer","difficulty","description"],
+  required: ["context","question","options","answer","difficulty","description","speakerGuessed"],
   additionalProperties: false
 };
 const EPISODE_BATCH_SCHEMA = {
@@ -1226,7 +1228,7 @@ function renderQuestionCard(project, q, idx, dupOthers, canReorder, scoped){
         </select>`}
       </div>
     </div>
-    ${ep ? `<div class="ep-context">${esc(q.context || "")}</div>` : ""}
+    ${ep ? (String(q.context || "").trim() ? `<div class="ep-context">${esc(q.context)}</div>` : `<div class="ep-context" style="opacity:.6;font-style:italic">↪ continues previous scene (no context shown)</div>`) : ""}
     ${ep && EP_MARKER_RE.test(q.context || "") ? `<div class="dup-note">⚠️ This context contains "${esc((q.context.match(EP_MARKER_RE)||[""])[0])}" — the website would treat that as the start of a new episode. Reword it (the export adds the real episode label to question #1 itself).</div>` : ""}
     <div class="qtext">${esc(q.question)}</div>
     ${dupNote}
@@ -1238,6 +1240,7 @@ function renderQuestionCard(project, q, idx, dupOthers, canReorder, scoped){
         </div>`).join("")}
     </div>
     ${ep ? `<div class="ep-desc"><b>Explanation:</b> ${esc(q.description || "(none)")}</div>` : ""}
+    ${ep && q.speakerGuessed && q.status !== "approved" ? `<div class="dup-note">⚠️ Speaker guessed: the transcript doesn't say clearly who said or did this. Check who it was before approving.</div>` : ""}
     <div class="qactions">
       ${q.status==="pending" ? `<button class="btn btn-sm btn-primary" data-action="approve" data-id="${q.id}">✓ Approve</button>` : ""}
       <button class="btn btn-sm" data-action="edit" data-id="${q.id}">✏️ Edit</button>
@@ -1987,6 +1990,7 @@ ${text}
         answer: it.answer,
         difficulty: ["easy","medium","hard"].includes(it.difficulty) ? it.difficulty : "medium",
         description: it.description || "",
+        speakerGuessed: !!it.speakerGuessed,
         status: "pending",
         chat: []
       });
@@ -2049,6 +2053,7 @@ ${transcript ? `\nEpisode transcript:\n\"\"\"\n${transcript}\n\"\"\"` : "\n(No t
       answer: it.answer,
       difficulty: ["easy","medium","hard"].includes(it.difficulty) ? it.difficulty : "medium",
       description: it.description || "",
+      speakerGuessed: !!it.speakerGuessed,
       status: "pending",
       chat: [{ role:"user", text:`Added after #${i + 1}: ${instruction}` }]
     };
