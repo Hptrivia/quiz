@@ -96,6 +96,12 @@ const APP_ANNOUNCEMENTS = [
     text: "The Simpsons, South Park, Bob's Burgers, Love Island USA & UK, Love Is Blind, Survivor, Emily in Paris, Hazbin Hotel, MobLand, and more.",
     cta: { label: "See What's New", href: "recent.html" },
   },
+  {
+    icon: "🎬",
+    title: "New episodes: Wednesday & Severance!",
+    text: "Episode 2 is now in Episode Mode for both Wednesday and Severance — relive them scene by scene.",
+    cta: { label: "Play Wednesday Ep 2", href: "episode.html?theme=wednesday&episode=2" },
+  },
 ];
 
 function _cbAnnouncementHash(str) {
