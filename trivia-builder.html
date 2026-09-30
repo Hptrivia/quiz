@@ -455,6 +455,9 @@ function episodeNeighboursBlock(project, q, n = 3){
 const EPISODE_RULES = `Episode Mode rules — the questions are played in order and retell the episode's story as the player goes:
 - ORDER: questions follow the episode chronologically, from the opening scene to the final scene.
 - WHAT TO ASK: meaningful, recognisable things from the episode — names, places, events, relationships, objects, key decisions and reveals. Not insignificant actions or throwaway details. Only things a viewer actually saw or heard; a transcript's speaker labels, stage directions and "[laughs]"-style notes never reach the audience, so never base a question on them.
+- STORY, NOT WORD RECALL: ask about what happens in the story (who did it, what was revealed, what they decided, what object/place/person was involved), not which word a character used in a line. Bad: "What does Lady Danbury say she made herself?" → "Frightening"; "What does Violet say the women will do?" → "Talk"; "What reason did the maid give?" → "Love". Those test memory of one line and the answer is a common word. Ask for an exact word or phrase only when the line itself is famous, a running joke or a key plot point. Better versions of the same moments: "Who is the father of Marina's baby?" → "Sir George Crane"; "What does Berbrooke get so he can marry Daphne within three days?" → "A special license"; "What secret about Berbrooke does Violet uncover through the maids' gossip?" → "A child with a maid".
+- GUESSABILITY TEST: someone who never watched must not be able to pick the answer from the question's wording, the context or common sense (e.g. context "they can't just accuse him outright" + "what will they do?" → "Talk" is a giveaway). Someone who watched should remember it. If a question fails either test, rewrite it around a more concrete story fact or drop it.
+- The context and the question must be about the same moment: never set the scene at one point (e.g. the picnic) and then ask about something that happened in an earlier scene.
 - CONTEXT: shown above the question. It tells the player what has just happened in the story leading up to this moment, so they know exactly which part of the episode the question is about. Aim for about 12–25 words (one or two sentences): say where we are, who is involved and what just happened, e.g. "At Central Perk, Monica insists her dinner with a coworker is not a date, but the gang keeps teasing her about it." or "Back at Ross's apartment, the guys are assembling his new furniture while Joey lists everything Carol took in the divorce." Never a bare 5–8 word label like "Ross talks about his marriage." — that tells the player nothing. Never a long paragraph either. It must NOT reveal or hint at the answer. Never write the word "episode" followed by a number in a context.
 - EMPTY CONTEXT: when a question directly continues the same moment as the question before it (same scene, same conversation, no time jump), leave the context as an empty string "" — the player has just seen that scene, and repeating or rephrasing it adds nothing. Any new scene, new location or jump in time needs a context. The first question of the episode always needs one.
 - QUESTION: one clear, concise sentence.
@@ -565,15 +568,16 @@ function getClient(){
   return new Anthropic({ apiKey: state.apiKey, dangerouslyAllowBrowser: true });
 }
 
-async function askAI(systemPrompt, messages){
+// reason: true (AI Chat) turns on light reasoning so free-form edits get done precisely.
+async function askAI(systemPrompt, messages, { reason = false } = {}){
   const client = getClient();
   const response = await client.messages.create({
     model: "claude-sonnet-5",
-    max_tokens: 1536,
-    thinking: { type: "disabled" },
+    max_tokens: reason ? 8000 : 1536,
+    thinking: reason ? { type: "adaptive" } : { type: "disabled" },
     system: systemPrompt,
     messages,
-    output_config: { format: { type: "json_schema", schema: UPDATE_SCHEMA } }
+    output_config: { ...(reason ? { effort: "low" } : {}), format: { type: "json_schema", schema: UPDATE_SCHEMA } }
   });
   const textBlock = response.content.find(b => b.type === "text");
   if(!textBlock) throw new Error("No text response from model.");
@@ -678,7 +682,12 @@ Current state:
 ${questionContextBlock(project, q)}${episodeAiBlock(project, q, true)}${styleNotesBlock()}
 The user will ask for changes (rewrite the question, replace an option, change the correct answer, make it harder/easier, rewrite all options${isEp(q) ? ", rewrite the context or the explanation" : ""}, etc.). Apply the change immediately by including only the field(s) that changed in your JSON response (question / options / answer / difficulty${isEp(q) ? " / context / description" : ""}). If options are returned, return the full set of 4.
 
-The user's instructions in this chat OVERRIDE every rule above and every learned style preference. If they ask for something a rule would normally forbid (e.g. a longer answer, a longer question), do exactly what they ask. Always fill "explanation" with a short note on what you changed. If the user is just asking a question or chatting without requesting a change, leave the edit fields out and just answer in "explanation".
+The user's instructions in this chat OVERRIDE every rule above and every learned style preference. Do EXACTLY what they say — no more, no less, no reinterpreting it:
+- If they give you exact wording, use that wording word for word.
+- If they name a field (context, question, options, answer, explanation), change that field.
+- If they correct a fact, name or detail, fix it in EVERY field where it appears (context, question, options, answer, explanation), not just the question.
+- Don't change anything they didn't ask you to change.
+- If they ask for something a rule would normally forbid (e.g. a longer answer, a longer question), do it anyway. Always fill "explanation" with a short note on what you changed. If the user is just asking a question or chatting without requesting a change, leave the edit fields out and just answer in "explanation".
 
 Also watch for durable preferences: if this correction reveals something you should do differently on EVERY question from now on (not just this one) — a formatting habit, a tone/difficulty calibration, a rule about distractor style, a pet peeve — capture it in "learnedRule" so it's remembered for future questions and future projects. Don't set it for edits that only make sense for this specific question.`;
 }
@@ -695,7 +704,7 @@ async function sendChatMessage(project, q, userText){
       content: m.role === "user" ? m.text : JSON.stringify({ explanation: m.text, ...(m.applied||{}) })
     }));
     const messages = [...history, { role:"user", content:userText }];
-    const { parsed } = await askAI(chatSystemPrompt(project, q), messages);
+    const { parsed } = await askAI(chatSystemPrompt(project, q), messages, { reason: true });
 
     const applied = {};
     pushUndo(project);
@@ -787,6 +796,46 @@ function bulkDeleteSelected(project){
   project.trash.push(...toTrash);
   ui.selectedIds = new Set();
   persist(); render();
+}
+
+/* Move questions to another episode number (fixes a wrong Episode # after generating).
+   Moved questions go to the end of the target episode, in their current order.
+   The transcript is copied (not moved) so Undo still leaves the old episode working. */
+function askEpisodeNumber(label){
+  const raw = prompt(label);
+  if(raw === null) return null;
+  const n = Number(raw.trim());
+  if(!Number.isInteger(n) || n < 1){ showToast("Episode number must be a whole number, 1 or higher."); return null; }
+  return n;
+}
+function moveQuestionsToEpisode(project, moving, fromEp, toEp){
+  if(!moving.length || toEp === fromEp) return;
+  const target = scopeQuestions(project, toEp);
+  if(target.length && !confirm(`Episode ${toEp} already has ${target.length} question(s). Add these ${moving.length} to the END of episode ${toEp}?`)) return;
+  pushUndo(project);
+  const movingSet = new Set(moving);
+  project.questions = project.questions.filter(q => !movingSet.has(q));
+  const lastTarget = target.length ? project.questions.lastIndexOf(target[target.length - 1]) : project.questions.length - 1;
+  moving.forEach(q => { q.episode = toEp; q.context = stripEpisodeMarker(q.context); });
+  project.questions.splice(lastTarget + 1, 0, ...moving);
+  project.episodeTranscripts = project.episodeTranscripts || {};
+  if(!project.episodeTranscripts[toEp] && project.episodeTranscripts[fromEp]) project.episodeTranscripts[toEp] = project.episodeTranscripts[fromEp];
+  ui.reviewEpisode = toEp; ui.filter = "all"; ui.selectedIds = new Set(); ui.addAfterId = null; ui.editingId = null;
+  persist();
+  showToast(`${moving.length} question${moving.length===1?"":"s"} moved to Episode ${toEp}.`);
+}
+function renumberEpisode(project){
+  const fromEp = ui.reviewEpisode;
+  const toEp = askEpisodeNumber(`Change Episode ${fromEp} to which episode number?`);
+  if(toEp === null) return;
+  moveQuestionsToEpisode(project, scopeQuestions(project, fromEp), fromEp, toEp);
+}
+function bulkMoveToEpisode(project){
+  if(!ui.selectedIds.size) return;
+  const fromEp = ui.reviewEpisode;
+  const toEp = askEpisodeNumber(`Move ${ui.selectedIds.size} selected question(s) to which episode number?`);
+  if(toEp === null) return;
+  moveQuestionsToEpisode(project, scopeQuestions(project, fromEp).filter(q => ui.selectedIds.has(q.id)), fromEp, toEp);
 }
 
 /* ---------------------------------------------------------------------
@@ -1123,6 +1172,7 @@ function renderReview(){
         <button class="btn btn-sm ${!epScope?"active":""}" data-action="set-review-episode" data-ep="">Regular (${project.questions.filter(q=>!isEp(q)).length})</button>
         ${eps.map(ep=>`<button class="btn btn-sm ${ui.reviewEpisode===ep?"active":""}" data-action="set-review-episode" data-ep="${ep}">🎬 Ep ${ep} (${scopeQuestions(project, ep).length})</button>`).join("")}
       </div>
+      ${epScope ? `<button class="btn btn-sm" data-action="renumber-episode" title="Fix a wrong episode number">✏️ Change Ep ${ui.reviewEpisode} number</button>` : ""}
     </div>` : "";
 
   return `
@@ -1159,6 +1209,7 @@ function renderReview(){
         <option value="hard">Hard</option>
       </select>
       <button class="btn btn-sm" data-action="bulk-set-difficulty" ${ui.selectedIds.size?"":"disabled"}>Apply</button>`}
+      ${epScope ? `<button class="btn btn-sm" data-action="bulk-move-episode" ${ui.selectedIds.size?"":"disabled"}>🎬 Move to Episode…</button>` : ""}
       <button class="btn btn-sm btn-primary" data-action="bulk-approve" ${ui.selectedIds.size?"":"disabled"}>✓ Approve Selected</button>
       <button class="btn btn-sm btn-danger" data-action="bulk-delete" ${ui.selectedIds.size?"":"disabled"}>🗑 Delete Selected</button>
     </div>` : ""}
@@ -1686,6 +1737,8 @@ function onAction(e){
     }
     case "clear-selection": ui.selectedIds = new Set(); render(); break;
     case "bulk-approve": bulkApprove(project); break;
+    case "renumber-episode": renumberEpisode(project); break;
+    case "bulk-move-episode": bulkMoveToEpisode(project); break;
     case "bulk-delete": bulkDeleteSelected(project); break;
     case "bulk-set-difficulty": {
       const sel = document.getElementById("bulkDiffSelect");
@@ -1957,7 +2010,7 @@ ${EPISODE_RULES}
 
 Aim for 20–30 questions. If the episode doesn't support that many good ones, return fewer — quality beats count.
 
-Before you answer, re-read your list from first to last as a player would and fix anything out of order, any context that gives away its own answer, and any explanation or question that spoils a later question.
+Before you answer, re-read your list from first to last as a player would and fix anything out of order, any context that gives away its own answer, any question a non-viewer could guess or that just asks which word someone said, and any explanation or question that spoils a later question.
 
 Example of one good question:
   Context: "At Central Perk: Monica downplays a dinner with a coworker while the gang probes."
