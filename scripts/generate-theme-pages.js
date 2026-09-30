@@ -41,8 +41,23 @@ function ensureDir(dir) {
     fs.mkdirSync(dir, { recursive: true });
   }
 }
-function shuffleArray(array) {
-  return [...array].sort(() => Math.random() - 0.5);
+// Stable "shuffle": orders items by a hash of seed + item key, so every build
+// picks the same items for a page (no page churn on rebuilds). Adding a new
+// item only changes a page if the new item happens to rank into its picks.
+function hashString(str) {
+  let h = 2166136261;
+  for (let i = 0; i < str.length; i++) {
+    h ^= str.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return h >>> 0;
+}
+
+function stableShuffle(array, seed, keyFn) {
+  return array
+    .map(item => ({ item, rank: hashString(`${seed}|${keyFn(item)}`) }))
+    .sort((a, b) => a.rank - b.rank)
+    .map(x => x.item);
 }
 
 function getRelatedThemes(allThemes, currentTheme, limit = 5) {
@@ -51,7 +66,7 @@ function getRelatedThemes(allThemes, currentTheme, limit = 5) {
     t.category === currentTheme.category
   );
 
-  return shuffleArray(sameCategory).slice(0, limit);
+  return stableShuffle(sameCategory, currentTheme.slug, t => t.slug).slice(0, limit);
 }
 
 const CATEGORY_PAGE_MAP = {
@@ -133,11 +148,10 @@ function getSampleQuestionsWithAnswers(questionFilePath) {
     const questions = JSON.parse(fs.readFileSync(fullPath, "utf8"));
     if (!Array.isArray(questions)) return [];
 
-    return questions
+    const valid = questions
       .filter((q) => q && q.question && q.answer)
-      .map((q) => ({ question: String(q.question).trim(), answer: String(q.answer).trim() }))
-      .sort(() => Math.random() - 0.5)
-      .slice(0, 10);
+      .map((q) => ({ question: String(q.question).trim(), answer: String(q.answer).trim() }));
+    return stableShuffle(valid, questionFilePath, (q) => q.question).slice(0, 10);
   } catch (err) {
     return [];
   }
@@ -339,6 +353,8 @@ ${characterQuizCard(theme)}
           <p>30-question rounds</p>
         </a>
 
+        ${hasEpisodeMode ? episodeButton : ""}
+
         <a class="card" href="../survival.html?theme=${slug}">
           <h3>Survival Mode</h3>
           <p>One mistake and the run ends</p>
@@ -349,7 +365,7 @@ ${characterQuizCard(theme)}
           <p>Score, streak, and multiplier run</p>
         </a>
 
-        ${episodeButton}
+        ${hasEpisodeMode ? "" : episodeButton}
 
         <a class="card" href="../versus.html?theme=${slug}">
           <h3>Versus Mode</h3>

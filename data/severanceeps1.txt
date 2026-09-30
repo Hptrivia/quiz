@@ -375,5 +375,411 @@
     "answer": "A card",
     "difficulty": "medium",
     "description": "Petey apologizes for the card, saying he had to grab something and knows it's not appropriate — on the back is an address Mark should visit alone."
+  },
+  {
+    "context": "**EPISODE 2**: The episode opens with Helly reciting a formal statement to Lumon before her chip is activated,",
+    "question": "According to Helly's oath, how will her memory access be affected on the severed floor?",
+    "options": [
+      "It will be spatially dictated",
+      "It will be time delayed",
+      "It will be emotionally regulated",
+      "It will be randomly triggered"
+    ],
+    "answer": "It will be spatially dictated",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Helly states that her access to memories will be 'spatially dictated,' meaning tied to her physical location at Lumon."
+  },
+  {
+    "context": "Newly awakened and disoriented, Helly repeatedly tries to leave the severed floor.",
+    "question": "Where does Mr. Milchick take Helly to help her 'viscerally' experience that she can't leave?",
+    "options": [
+      "The stairwell",
+      "The elevator lobby",
+      "The break room",
+      "The cafeteria"
+    ],
+    "answer": "The stairwell",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Milchick brings Helly to the stairwell, where she keeps ending up back on the severed floor no matter how hard she tries to leave."
+  },
+  {
+    "context": "Dylan proudly shows Helly around his cluttered workstation.",
+    "question": "What is the name of the nearly-finished file Dylan has been working on for eleven weeks?",
+    "options": [
+      "Tumwater",
+      "Drumlin",
+      "Fenwood",
+      "Ashcombe"
+    ],
+    "answer": "Tumwater",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Dylan boasts about his file called 'Tumwater,' which he has been sorting earning him several tier incentives."
+  },
+  {
+    "context": "",
+    "question": "What percentage does Dylan say he has already gotten his file sorted to?",
+    "options": [
+      "96%",
+      "88%",
+      "92%",
+      "99%"
+    ],
+    "answer": "96%",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Dylan tells Helly he's gotten Tumwater to 96% sorted, earning him four of the five tier incentives on display at his desk."
+  },
+  {
+    "context": "Dylan explains the reward system tied to finishing files.",
+    "question": "What prize does Dylan say comes with reaching 100%, the fifth and final tier?",
+    "options": [
+      "A caricature portrait",
+      "A melon bar",
+      "A finger trap",
+      "An eraser bundle"
+    ],
+    "answer": "A caricature portrait",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Dylan explains that hitting tier five gets a refiner a caricature portrait, the top percentage-based reward."
+  },
+  {
+    "context": "",
+    "question": "What title is Dylan confident he'll be awarded this quarter?",
+    "options": [
+      "Refiner of the Quarter",
+      "Refiner of the Year",
+      "Tumwater Champion",
+      "Department Head"
+    ],
+    "answer": "Refiner of the Quarter",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Dylan tells Helly he's a 'dead lock' to be named Refiner of the Quarter, a title tied to hitting departmental numbers."
+  },
+  {
+    "context": "",
+    "question": "What reward does Dylan say goes to whoever is named 'Refiner of the Quarter'?",
+    "options": [
+      "A waffle party",
+      "A crystal head cube",
+      "An extra melon bar",
+      "A team trophy"
+    ],
+    "answer": "A waffle party",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Dylan tells Helly that hitting quarterly numbers earns the whole department a 'waffle party,' and he's confident he'll be the one named refiner of the quarter."
+  },
+  {
+    "context": "While Mark trains Helly, a colleague repeatedly interrupts to complain that the group photos have been taken off the desks.",
+    "question": "Which file does Mark open to demonstrate refining to Helly?",
+    "options": [
+      "The Siena file",
+      "The Tumwater file",
+      "The Allentown file",
+      "The Ganz file"
+    ],
+    "answer": "The Siena file",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Mark pulls up the Siena file to walk Helly through the four categories and five digital buckets used in refining."
+  },
+  {
+    "context": "Mark begins teaching Helly how to sort spreadsheet numbers into categories.",
+    "question": "What sensation is Mark's Cat 1 numbers supposed to give a refiner?",
+    "options": [
+      "Scary",
+      "Joyful",
+      "Calming",
+      "Confusing"
+    ],
+    "answer": "Scary",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Mark explains that each category of numbers should elicit a specific feeling, and Cat 1 numbers are meant to feel scary or disconcerting."
+  },
+  {
+    "context": "Helly asks Mark point-blank whether she's trapped at Lumon and if quitting is even an option for her.",
+    "question": "What does Mark say Helly can do if she's really unhappy?",
+    "options": [
+      "Submit a resignation request to her outside self",
+      "File a grievance with Ms. Cobel",
+      "Request a transfer to another department",
+      "Ask Mr. Milchick for a wellness session"
+    ],
+    "answer": "Submit a resignation request to her outside self",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Mark explains resignation requests go to the outie for review — and, as Dylan notes, they tend to be rejected."
+  },
+  {
+    "context": "",
+    "question": "What does Mark say would effectively happen if Helly's resignation request were approved?",
+    "options": [
+      "It would effectively end her life",
+      "She'd be transferred to another department",
+      "She'd lose her severance benefits",
+      "She'd become fully outie permanently"
+    ],
+    "answer": "It would effectively end her life",
+    "difficulty": "hard",
+    "episode": 2,
+    "description": "Mark explains that since Helly's innie only exists at Lumon, approving her resignation would effectively end that version of her life."
+  },
+  {
+    "context": "At Helly's welcome party, Irving introduces himself with pride.",
+    "question": "How many core Lumon principles does Irving claim to know?",
+    "options": [
+      "Nine",
+      "Seven",
+      "Twelve",
+      "Five"
+    ],
+    "answer": "Nine",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Irving tells the group he knows all nine core Lumon principles, though he singles out one as his favorite that day."
+  },
+  {
+    "context": "",
+    "question": "Which core Lumon principle does Irving name as his favorite that day?",
+    "options": [
+      "Cheer",
+      "Wit",
+      "Verve",
+      "Diligence"
+    ],
+    "answer": "Cheer",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Irving says he knows all the core Lumon principles, and names 'cheer' as his favorite that day."
+  },
+  {
+    "context": "During the icebreaker game, Milchick rattles off facts about the new hire.",
+    "question": "According to Milchick, how tall is Helly?",
+    "options": [
+      "5'6\"",
+      "5'4\"",
+      "5'8\"",
+      "5'2\""
+    ],
+    "answer": "5'6\"",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Milchick describes Helly as 5'6\", making her the fourth tallest person in the office."
+  },
+  {
+    "context": "",
+    "question": "What food is Helly allergic to, according to Milchick?",
+    "options": [
+      "Almonds",
+      "Peanuts",
+      "Shellfish",
+      "Dairy"
+    ],
+    "answer": "Almonds",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Milchick reveals that Helly is allergic to almonds as part of his rundown of facts about her."
+  },
+  {
+    "context": "When it's his turn in the game, Mark admits to breaking protocol earlier.",
+    "question": "Where did Mark admit to hiding the old group photos that included Petey?",
+    "options": [
+      "The storage closet",
+      "The break room",
+      "His own desk drawer",
+      "The stairwell"
+    ],
+    "answer": "The storage closet",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Mark confesses he took the photos featuring Petey and hid them in the storage closet, which isn't allowed."
+  },
+  {
+    "context": "During the icebreaker game, Mark contrasts Petey's mysterious disappearance with a colleague who left on better terms.",
+    "question": "What is the name of the former coworker whose departure was expected, unlike Petey's?",
+    "options": [
+      "Carol D.",
+      "Danny R.",
+      "Fields S.",
+      "Wendy G."
+    ],
+    "answer": "Carol D.",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Milchick points out that Carol D.'s exit was known beforehand, since her outie even filmed a thank-you message, unlike Petey's abrupt disappearance."
+  },
+  {
+    "context": "Outside Lumon, Mark is on a dinner date arranged by his sister.",
+    "question": "What is the profession of the woman Mark is on a date with?",
+    "options": [
+      "Doula/midwife",
+      "Nurse",
+      "Obstetrician",
+      "Pediatrician"
+    ],
+    "answer": "Doula/midwife",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Mark's date is a doula, or midwife, who has assisted with over 300 deliveries back in Montana."
+  },
+  {
+    "context": "While joking about regional cold weather during the date.",
+    "question": "Which town does Mark actually say he's from?",
+    "options": [
+      "Ganz",
+      "Baird Creek",
+      "Tumwater",
+      "Delaware"
+    ],
+    "answer": "Ganz",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Mark clarifies that he's technically from Ganz, distinct from where his date lives."
+  },
+  {
+    "context": "During the date, Mark's companion asks whether he lives in company-provided housing near Lumon.",
+    "question": "What town does Mark say he lives in?",
+    "options": [
+      "Baird Creek",
+      "Millbrook Hollow",
+      "Kier's Landing",
+      "Wexford Falls"
+    ],
+    "answer": "Baird Creek",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Mark tells his date he lives in Baird Creek, in housing subsidized by Lumon."
+  },
+  {
+    "context": "Walking home, Mark and his date are approached by street petitioners.",
+    "question": "What group are the activists petitioning against severance identified as?",
+    "options": [
+      "The Whole Mind Collective",
+      "The Severance Awareness Project",
+      "The Free Minds Coalition",
+      "The Lumon Ethics Board"
+    ],
+    "answer": "The Whole Mind Collective",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "The petitioners are members of the Whole Mind Collective, campaigning to keep companies like Lumon from forcing severance."
+  },
+  {
+    "context": "On the MDR floor, Irving nods off at his terminal and wakes with a jolt, startling Mark and Dylan before Milchick arrives.",
+    "question": "What punishment does Milchick announce for Irving's dozing?",
+    "options": [
+      "Time deducted from his outie's paycheck",
+      "A week of reduced incentives",
+      "Immediate demotion from MDR",
+      "Loss of his handbook privileges"
+    ],
+    "answer": "Time deducted from his outie's paycheck",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Milchick says the dozing time will be deducted from Irving's outie's paycheck, and sends him for a wellness check."
+  },
+  {
+    "context": "Dylan shares his personal theory about the true purpose of MDR's work.",
+    "question": "According to Dylan's theory, what are the severed workers ultimately helping to clean up?",
+    "options": [
+      "The sea",
+      "The atmosphere",
+      "The soil",
+      "The internet"
+    ],
+    "answer": "The sea",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Dylan theorizes that their data work is somehow connected to clearing dangerous eels from the sea so humanity can populate it."
+  },
+  {
+    "context": "Mark is forced by Milchick to repeat a scripted statement of contrition over and over until he says it convincingly.",
+    "question": "Which of these is NOT part of the statement Mark is made to repeat in the break room?",
+    "options": [
+      "Forgive me for the harm I have caused this world",
+      "None may atone for my actions but me",
+      "I am thankful to have been caught, my fall cut short by those with wizened hands",
+      "I submit myself fully to the judgment of the wellness process"
+    ],
+    "answer": "I submit myself fully to the judgment of the wellness process",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Mark's actual statement includes lines about atoning alone, being thankful for being caught by 'wizened hands,' and being sorry; the wellness process line is invented."
+  },
+  {
+    "context": "Irving strikes up a conversation with a stranger admiring art near the break room.",
+    "question": "Which department does Irving's new acquaintance, Burt, lead?",
+    "options": [
+      "Optics and Design",
+      "Perpetuity Wing",
+      "B & D Testing",
+      "Choreography and Merriment"
+    ],
+    "answer": "Optics and Design",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Irving meets Burt, head of the two-person Optics and Design department, while admiring artwork outside the wellness room."
+  },
+  {
+    "context": "During his wellness session, Ms. Casey shares curated facts about Irving's outie.",
+    "question": "What hobby does Ms. Casey mention about Irving's outie?",
+    "options": [
+      "Collecting records",
+      "Collecting stamps",
+      "Painting",
+      "Gardening"
+    ],
+    "answer": "Collecting records",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Ms. Casey tells Irving that his outie is fond of music and owns many records, one of several curated 'facts' meant to please him."
+  },
+  {
+    "context": "",
+    "question": "Which of these is NOT one of the facts Ms. Casey shares about Irving's outie?",
+    "options": [
+      "Is a friend to children and the elderly",
+      "Can swim gracefully and well",
+      "Won a game two weeks ago",
+      "Speaks three languages fluently"
+    ],
+    "answer": "Speaks three languages fluently",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Ms. Casey's curated facts include swimming gracefully, being a friend to children and the elderly, and having won a game two weeks ago, but nothing about languages."
+  },
+  {
+    "context": "Back on the MDR floor, Dylan helps Helly push through a difficult moment with the data.",
+    "question": "What technique does Dylan teach Helly for handling numbers that unsettle her?",
+    "options": [
+      "Fence off the bad data and bin it",
+      "Sort the scary numbers into a separate bin",
+      "Isolate the numbers and let them dissolve",
+      "Group the unsettling numbers and release them"
+    ],
+    "answer": "Fence off the bad data and bin it",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Dylan coaches Helly to fence off the unsettling data and bin it, helping her complete her first successful refinement."
+  },
+  {
+    "context": "As the episode closes, Petey admits to Mark he's been secretly reintegrated and can't go home.",
+    "question": "Where had Petey been living before Mark took him in?",
+    "options": [
+      "A greenhouse",
+      "A motel by the highway",
+      "His sister's basement",
+      "An abandoned Lumon dormitory"
+    ],
+    "answer": "A greenhouse",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Petey complains that living in a cold greenhouse hasn't helped his sickness, and Mark says his work self would be angry if he left him there."
   }
 ]
