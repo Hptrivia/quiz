@@ -1,0 +1,530 @@
+{
+  "slug": "ted-lasso",
+  "show": "Ted Lasso",
+  "shortName": "Ted Lasso",
+  "seoTitle": "Ted Lasso Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the Ted Lasso test: 12 everyday questions reveal whether you're Ted, Rebecca, Roy, Keeley, Jamie, Nate, Higgins or Coach Beard — with your full character breakdown.",
+  "intro": "Are you the relentless optimist, the grumpy legend, or the boss who owns every room? Answer 12 everyday questions about work, friends and second chances, and find out which Ted Lasso character you are.",
+  "characters": [
+    {
+      "id": "ted",
+      "name": "Ted Lasso",
+      "emoji": "🍪",
+      "color": "#ca8a04",
+      "title": "The Believer",
+      "summary": "Kind, funny and relentlessly positive. You believe in people, sometimes more than they believe in themselves.",
+      "description": [
+        "Like Ted, you believe in people. The American college football coach was hired to manage an English football team, despite knowing almost nothing about the sport.",
+        "You're kind, funny and relentlessly positive. He won over his boss by baking her biscuits every morning, and hung a sign that just said 'Believe' in the locker room.",
+        "Your weakness is looking after yourself. Ted helped everyone else with their problems while hiding his own panic attacks, until he finally learned to ask for help."
+      ],
+      "strengths": [
+        "Kind",
+        "Optimistic",
+        "Brings out the best in people"
+      ],
+      "flaw": "You look after everyone except yourself.",
+      "signature": "A box of homemade biscuits, a moustache and a terrible pun.",
+      "clashReason": "they're so relentlessly positive that you can't have a bad day in peace"
+    },
+    {
+      "id": "rebecca",
+      "name": "Rebecca Welton",
+      "emoji": "👠",
+      "color": "#1e3a8a",
+      "title": "The Boss",
+      "summary": "Sharp, elegant and in charge. You own every room you walk into.",
+      "description": [
+        "Like Rebecca, you walk into a room and own it. She took AFC Richmond from her ex-husband in their divorce, and at first she hired Ted hoping he'd ruin it.",
+        "You're sharp, stylish and very funny once your guard comes down. Under the power suits, you're more vulnerable than you let people see.",
+        "Your weakness is holding a grudge. But when you finally let people in, you're one of the most loyal friends anyone could have."
+      ],
+      "strengths": [
+        "Confident",
+        "Witty",
+        "Loyal once you're in"
+      ],
+      "flaw": "It takes you a very long time to let anyone in.",
+      "signature": "A perfect suit, a sharp one-liner and a box of biscuits you pretend not to love.",
+      "clashReason": "they're cool and sharp, and never let you see what they're really thinking"
+    },
+    {
+      "id": "roy",
+      "name": "Roy Kent",
+      "emoji": "😤",
+      "color": "#374151",
+      "title": "The Grumpy Heart",
+      "summary": "Blunt, honest and fiercely loyal. Grumpy on the outside, soft on the inside.",
+      "description": [
+        "Like Roy, you're grumpy on the outside and soft on the inside. The legendary Richmond captain retired, became a coach, and never once pretended to be happy about anything.",
+        "You're blunt, honest and fiercely loyal. You'll tell people exactly what you think, and you'll turn up for them every single time.",
+        "Your soft side is well hidden. Roy is at his gentlest with his young niece, Phoebe, and with the few people who've earned it."
+      ],
+      "strengths": [
+        "Honest",
+        "Loyal",
+        "Tough"
+      ],
+      "flaw": "You'd rather grunt than say how you feel.",
+      "signature": "A scowl, a growl and a very short answer.",
+      "clashReason": "they're grumpy, blunt and never pretend to be happy"
+    },
+    {
+      "id": "keeley",
+      "name": "Keeley Jones",
+      "emoji": "💖",
+      "color": "#db2777",
+      "title": "The People Person",
+      "summary": "Bubbly, smart and brilliant with people. You help everyone become their best self.",
+      "description": [
+        "Like Keeley, you're bubbly, smart and brilliant with people. She went from being known as a model to running Richmond's marketing, then launched her own PR firm.",
+        "You're confident, warm and emotionally switched on. You notice how everyone's feeling, and you're not shy about asking.",
+        "Your weakness is doubting yourself when things get serious. But you always back your friends, and you help people become their best selves."
+      ],
+      "strengths": [
+        "Warm",
+        "Emotionally smart",
+        "Great with people"
+      ],
+      "flaw": "You doubt yourself when the stakes get high.",
+      "signature": "A great outfit, a big smile and a pep talk nobody saw coming.",
+      "clashReason": "they always want to know how you're really feeling"
+    },
+    {
+      "id": "jamie",
+      "name": "Jamie Tartt",
+      "emoji": "⚽",
+      "color": "#dc2626",
+      "title": "The Show-Off",
+      "summary": "Talented, competitive and a bit full of yourself. You want everyone to know you're the best.",
+      "description": [
+        "Like Jamie, you're talented and you know it. Richmond's young star arrived on loan from Manchester City and thought the whole game revolved around him.",
+        "You're confident, competitive and a bit of a show-off. You love the spotlight, and you want everyone to know you're the best.",
+        "But you can grow. Jamie learned to pass the ball, stand up to his father and become a real teammate."
+      ],
+      "strengths": [
+        "Talented",
+        "Driven",
+        "Braver than he looks"
+      ],
+      "flaw": "You need everyone to know how good you are.",
+      "signature": "Perfect hair, a big ego and the ball at your feet.",
+      "clashReason": "they're cocky, loud and think everything is about them"
+    },
+    {
+      "id": "nate",
+      "name": "Nate Shelley",
+      "emoji": "📓",
+      "color": "#7c3aed",
+      "title": "The Overlooked Genius",
+      "summary": "Sharp, hard-working and desperate to be taken seriously.",
+      "description": [
+        "Like Nate, you've got a brilliant mind that people keep overlooking. Richmond's shy kit man became a coach after Ted noticed his clever tactical ideas.",
+        "You're sharp, hard-working and desperate to be taken seriously. But when you finally get respect, it can go straight to your head.",
+        "Your weakness is insecurity. Nate turned his back on the people who believed in him, and had to find his way home again."
+      ],
+      "strengths": [
+        "Clever",
+        "Hard-working",
+        "Sees what others miss"
+      ],
+      "flaw": "You need respect so badly that you forget who gave it to you first.",
+      "signature": "A notebook full of tactics and a chip on your shoulder.",
+      "clashReason": "they're insecure, touchy and take everything personally"
+    },
+    {
+      "id": "higgins",
+      "name": "Leslie Higgins",
+      "emoji": "🎻",
+      "color": "#65a30d",
+      "title": "The Nicest Man in the Room",
+      "summary": "Kind, reliable and family-first. You're much cooler than people realise.",
+      "description": [
+        "Like Higgins, you're one of the nicest people in any room. Richmond's director of football operations spent years doing what he was told, before finding the courage to stand up for what's right.",
+        "You're kind, reliable and happiest with your family. Every Christmas, he invites the players who are far from home to join his family for dinner.",
+        "You're also cooler than people think. Higgins plays jazz on the double bass, and nobody at the club saw that coming."
+      ],
+      "strengths": [
+        "Kind",
+        "Reliable",
+        "Generous"
+      ],
+      "flaw": "You go along with things for far too long before speaking up.",
+      "signature": "A cardigan, a double bass and a spare seat at the dinner table.",
+      "clashReason": "they're so eager to please that you never know what they really want"
+    },
+    {
+      "id": "beard",
+      "name": "Coach Beard",
+      "emoji": "📚",
+      "color": "#0f766e",
+      "title": "The Mysterious Sidekick",
+      "summary": "Clever, loyal and a bit of an oddball. Nobody knows what you get up to after dark.",
+      "description": [
+        "Like Coach Beard, you're the loyal sidekick with a mysterious side. Ted's assistant coach and best friend followed him all the way from Kansas to London.",
+        "You're clever, well-read and a bit of an oddball. Beard always has his nose in a book, and knows a surprising amount about almost everything.",
+        "Nobody quite knows what you get up to after dark. One of his nights out in London became a whole episode, and it was very strange."
+      ],
+      "strengths": [
+        "Clever",
+        "Loyal",
+        "Full of surprises"
+      ],
+      "flaw": "You're so private that even your friends barely know you.",
+      "signature": "A whistle, a book nobody else has read and a night out nobody would believe.",
+      "clashReason": "they're so strange and mysterious that you never know what they'll say next"
+    }
+  ],
+  "questions": [
+    {
+      "text": "A new colleague is obviously nervous on their first day. You...",
+      "options": [
+        {
+          "text": "Learn their name and make them laugh",
+          "points": {
+            "ted": 3
+          }
+        },
+        {
+          "text": "Give them one blunt tip, then leave them to it",
+          "points": {
+            "roy": 3
+          }
+        },
+        {
+          "text": "Show them where everything is. Twice",
+          "points": {
+            "higgins": 3
+          }
+        },
+        {
+          "text": "Make sure they know who the star is round here",
+          "points": {
+            "jamie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your manager picks your work apart in a meeting. You...",
+      "options": [
+        {
+          "text": "Replay it for weeks and plan the perfect comeback",
+          "points": {
+            "nate": 3
+          }
+        },
+        {
+          "text": "Stay perfectly calm, then answer with one cutting line",
+          "points": {
+            "rebecca": 3
+          }
+        },
+        {
+          "text": "Stare at them in silence until it gets awkward",
+          "points": {
+            "beard": 3
+          }
+        },
+        {
+          "text": "Argue back. Nobody talks to you like that",
+          "points": {
+            "jamie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend sings you a song they wrote. It's not good. You...",
+      "options": [
+        {
+          "text": "Tell them. It's not good",
+          "points": {
+            "roy": 3
+          }
+        },
+        {
+          "text": "Be honest, then tell them which bit actually works",
+          "points": {
+            "keeley": 3
+          }
+        },
+        {
+          "text": "Clap enthusiastically and change the subject",
+          "points": {
+            "higgins": 3
+          }
+        },
+        {
+          "text": "Say something so odd they can't tell if it was a compliment",
+          "points": {
+            "beard": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You've got a quiet evening at home. You spend it...",
+      "options": [
+        {
+          "text": "Reading something nobody else has heard of",
+          "points": {
+            "beard": 3
+          }
+        },
+        {
+          "text": "Playing an instrument",
+          "points": {
+            "higgins": 3
+          }
+        },
+        {
+          "text": "With a face mask, a rom-com and a lot of snacks",
+          "points": {
+            "keeley": 3
+          }
+        },
+        {
+          "text": "With a glass of wine and a very long bath",
+          "points": {
+            "rebecca": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your team at work misses a big target. You...",
+      "options": [
+        {
+          "text": "Remind everyone it's about the people, not the numbers",
+          "points": {
+            "ted": 3
+          }
+        },
+        {
+          "text": "Point out exactly whose fault it was",
+          "points": {
+            "nate": 3
+          }
+        },
+        {
+          "text": "Take responsibility. Fixing it is your job",
+          "points": {
+            "rebecca": 3
+          }
+        },
+        {
+          "text": "Quietly draw up a new plan while everyone else talks",
+          "points": {
+            "beard": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "An old friend who let you down years ago gets in touch to say sorry. You...",
+      "options": [
+        {
+          "text": "Thank them, but you're not ready to forgive",
+          "points": {
+            "rebecca": 3
+          }
+        },
+        {
+          "text": "Grunt, then forgive them without ever saying so",
+          "points": {
+            "roy": 3
+          }
+        },
+        {
+          "text": "Forgive them. Holding on only hurts you",
+          "points": {
+            "ted": 3
+          }
+        },
+        {
+          "text": "Meet for a coffee and hear them out properly",
+          "points": {
+            "keeley": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your boss offers you the job above yours, and you've only been there six months. You...",
+      "options": [
+        {
+          "text": "Take it, and act like you always deserved it",
+          "points": {
+            "nate": 3
+          }
+        },
+        {
+          "text": "Say you're not ready yet. Maybe next year",
+          "points": {
+            "higgins": 3
+          }
+        },
+        {
+          "text": "About time. You're brilliant",
+          "points": {
+            "jamie": 3
+          }
+        },
+        {
+          "text": "Say yes, and ask for training straight away",
+          "points": {
+            "keeley": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend is in a bad mood and won't talk about it. You...",
+      "options": [
+        {
+          "text": "Keep gently asking until they open up",
+          "points": {
+            "keeley": 3
+          }
+        },
+        {
+          "text": "Make terrible jokes until they crack a smile",
+          "points": {
+            "ted": 3
+          }
+        },
+        {
+          "text": "Sit next to them in silence. That's enough",
+          "points": {
+            "roy": 3
+          }
+        },
+        {
+          "text": "Take them out for a night they'll never forget",
+          "points": {
+            "beard": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "There's a fancy dress party on Saturday. You...",
+      "options": [
+        {
+          "text": "Go all out. You'll have the best costume there",
+          "points": {
+            "keeley": 3
+          }
+        },
+        {
+          "text": "Wear something elegant and call it a costume",
+          "points": {
+            "rebecca": 3
+          }
+        },
+        {
+          "text": "Go as something that shows off your arms",
+          "points": {
+            "jamie": 3
+          }
+        },
+        {
+          "text": "Turn up in your normal clothes",
+          "points": {
+            "roy": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your pub quiz team keeps losing. You...",
+      "options": [
+        {
+          "text": "Keep it fun. Winning isn't the point",
+          "points": {
+            "ted": 3
+          }
+        },
+        {
+          "text": "Study the other teams and work out how to beat them",
+          "points": {
+            "nate": 3
+          }
+        },
+        {
+          "text": "Answer every question yourself",
+          "points": {
+            "jamie": 3
+          }
+        },
+        {
+          "text": "Bring snacks and cheer everyone on",
+          "points": {
+            "higgins": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You manage a struggling football team. Your star player is brilliant, but completely selfish. You...",
+      "options": [
+        {
+          "text": "Believe in them, and help them grow up",
+          "points": {
+            "ted": 3
+          }
+        },
+        {
+          "text": "Tell them exactly how selfish they are, loudly",
+          "points": {
+            "roy": 3
+          }
+        },
+        {
+          "text": "Bench them until they learn their place",
+          "points": {
+            "nate": 3
+          }
+        },
+        {
+          "text": "Sell them for as much money as you can",
+          "points": {
+            "rebecca": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You work at a football club. A bigger rival offers you a great job, but it means leaving the people who gave you your first chance. You...",
+      "options": [
+        {
+          "text": "Take it. You've waited long enough to be respected",
+          "points": {
+            "nate": 3
+          }
+        },
+        {
+          "text": "Say no. Loyalty matters more than money",
+          "points": {
+            "higgins": 3
+          }
+        },
+        {
+          "text": "Stay. You'd follow your best friend anywhere",
+          "points": {
+            "beard": 3
+          }
+        },
+        {
+          "text": "Go. Bigger club, bigger stage",
+          "points": {
+            "jamie": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

@@ -1,0 +1,445 @@
+{
+  "slug": "sex-and-the-city",
+  "show": "Sex and the City",
+  "shortName": "Sex and the City",
+  "seoTitle": "Sex and the City Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the Sex and the City test: 12 everyday questions reveal whether you're a Carrie, Samantha, Charlotte or Miranda — with your full character breakdown.",
+  "intro": "Are you a Carrie, a Samantha, a Charlotte or a Miranda? Answer 12 everyday questions about love, friends and money, and find out which Sex and the City character you really are.",
+  "characters": [
+    {
+      "id": "carrie",
+      "name": "Carrie Bradshaw",
+      "emoji": "👠",
+      "color": "#db2777",
+      "title": "The Romantic Overthinker",
+      "summary": "Stylish, curious and a hopeless romantic. You can't help but wonder... about everything.",
+      "description": [
+        "Like Carrie, you think about love a lot, and write about it even more. She wrote a dating column for the New York Star and turned her friends' love lives into material.",
+        "You love fashion, New York and a good pair of shoes, even when your bank balance doesn't. Carrie once worked out she'd spent about $40,000 on shoes and couldn't afford to buy her own apartment.",
+        "Your weakness is overthinking. You'll analyse a relationship until there's nothing left of it, and you keep going back to the one who hurts you."
+      ],
+      "strengths": [
+        "Creative",
+        "Great style",
+        "Loyal to her friends"
+      ],
+      "flaw": "You keep going back to the thing that hurts you.",
+      "signature": "A cosmopolitan, a laptop by the window and a pair of Manolos.",
+      "clashReason": "they overthink everything and turn every chat into a talk about their love life"
+    },
+    {
+      "id": "samantha",
+      "name": "Samantha Jones",
+      "emoji": "💋",
+      "color": "#dc2626",
+      "title": "The Unapologetic One",
+      "summary": "Confident, bold and totally yourself. You love your life, and you don't apologise for it.",
+      "description": [
+        "Like Samantha, you live exactly how you want. She ran her own PR firm in New York and never let anyone tell her how to live.",
+        "You're confident, funny and fiercely independent. You say what everyone else is thinking, usually louder.",
+        "Underneath it all, you're the most loyal friend in the group. When things got hard, Samantha always turned up."
+      ],
+      "strengths": [
+        "Confident",
+        "Fun",
+        "Fiercely loyal"
+      ],
+      "flaw": "You'd rather walk away than admit you've got feelings.",
+      "signature": "A power suit, a cocktail and a line nobody else would dare to say.",
+      "clashReason": "they're loud, shameless and never care what anyone thinks"
+    },
+    {
+      "id": "charlotte",
+      "name": "Charlotte York",
+      "emoji": "🌷",
+      "color": "#a855f7",
+      "title": "The Hopeful Romantic",
+      "summary": "Sweet, optimistic and polite to a fault. You believe in true love, and you're not embarrassed about it.",
+      "description": [
+        "Like Charlotte, you believe in true love. The art dealer always dreamed of the perfect husband, the perfect home and the perfect family.",
+        "You're polite, optimistic and you like things done properly. Charlotte had a rule for everything, from dating to dinner parties.",
+        "But life didn't go to plan, and you're tougher than you look. Her first marriage fell apart, and she found real happiness with Harry, a man she'd never have picked on paper."
+      ],
+      "strengths": [
+        "Optimistic",
+        "Kind",
+        "Never gives up on love"
+      ],
+      "flaw": "You care too much about doing things the 'right' way.",
+      "signature": "Pearls, fresh flowers and a thank-you card for everything.",
+      "clashReason": "they believe in fairy tales and take the rules far too seriously"
+    },
+    {
+      "id": "miranda",
+      "name": "Miranda Hobbes",
+      "emoji": "💼",
+      "color": "#0f766e",
+      "title": "The Realist",
+      "summary": "Smart, direct and a bit cynical. You tell people what they need to hear.",
+      "description": [
+        "Like Miranda, you're the realist of the group. The Harvard-educated lawyer worked her way to partner and had no patience for fairy tales.",
+        "You're smart, direct and a little cynical. You tell your friends what they need to hear, not what they want to hear.",
+        "Your weakness is letting people in. But when Steve came along, Miranda found out that even the most practical person can fall hard."
+      ],
+      "strengths": [
+        "Smart",
+        "Honest",
+        "Hard-working"
+      ],
+      "flaw": "You'd rather be right than be happy.",
+      "signature": "A briefcase, takeaway for one and a very honest opinion.",
+      "clashReason": "they're blunt, practical and have no time for your romantic drama"
+    }
+  ],
+  "questions": [
+    {
+      "text": "Your tax refund finally comes through. You...",
+      "options": [
+        {
+          "text": "Blow it on the shoes you've wanted for months",
+          "points": {
+            "carrie": 3
+          }
+        },
+        {
+          "text": "Book a trip somewhere hot and fabulous",
+          "points": {
+            "samantha": 3
+          }
+        },
+        {
+          "text": "Spend it on something lovely for your home",
+          "points": {
+            "charlotte": 3
+          }
+        },
+        {
+          "text": "Put it straight into savings",
+          "points": {
+            "miranda": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone you're dating hasn't texted back in two days. You...",
+      "options": [
+        {
+          "text": "Go over every word of your last chat with your friends",
+          "points": {
+            "carrie": 3
+          }
+        },
+        {
+          "text": "Their loss. You've got other options",
+          "points": {
+            "samantha": 3
+          }
+        },
+        {
+          "text": "Wait patiently. If it's right, they'll call",
+          "points": {
+            "charlotte": 3
+          }
+        },
+        {
+          "text": "Decide they're not interested and delete their number",
+          "points": {
+            "miranda": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your friends want a big night out on a Tuesday. You...",
+      "options": [
+        {
+          "text": "Go, as long as you can wear the new outfit nobody's seen yet",
+          "points": {
+            "carrie": 3
+          }
+        },
+        {
+          "text": "You're in. You'll pick the place",
+          "points": {
+            "samantha": 3
+          }
+        },
+        {
+          "text": "Come along, but leave at a sensible hour",
+          "points": {
+            "charlotte": 3
+          }
+        },
+        {
+          "text": "Can't. You've got an early start",
+          "points": {
+            "miranda": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your Sunday brunch plans fall through. You...",
+      "options": [
+        {
+          "text": "Wander round shops you can't really afford",
+          "points": {
+            "carrie": 3
+          }
+        },
+        {
+          "text": "Make better plans with someone new",
+          "points": {
+            "samantha": 3
+          }
+        },
+        {
+          "text": "Spend the afternoon at a gallery",
+          "points": {
+            "charlotte": 3
+          }
+        },
+        {
+          "text": "Finally catch up on work and laundry",
+          "points": {
+            "miranda": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend gives you advice you never asked for. You...",
+      "options": [
+        {
+          "text": "Ignore it, then realise weeks later they were right",
+          "points": {
+            "carrie": 3
+          }
+        },
+        {
+          "text": "Laugh it off. You know what you're doing",
+          "points": {
+            "samantha": 3
+          }
+        },
+        {
+          "text": "Thank them politely and feel a little hurt",
+          "points": {
+            "charlotte": 3
+          }
+        },
+        {
+          "text": "Tell them, nicely, to mind their own business",
+          "points": {
+            "miranda": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your ex turns up at the same party. You...",
+      "options": [
+        {
+          "text": "Spend the whole night trying not to look at them",
+          "points": {
+            "carrie": 3
+          }
+        },
+        {
+          "text": "Look amazing, and leave with someone else",
+          "points": {
+            "samantha": 3
+          }
+        },
+        {
+          "text": "Say a polite hello, then find your friends",
+          "points": {
+            "charlotte": 3
+          }
+        },
+        {
+          "text": "Nod, then go and talk to someone interesting",
+          "points": {
+            "miranda": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A relative asks, again, when you're going to settle down. You...",
+      "options": [
+        {
+          "text": "Make a joke, then think about it all night",
+          "points": {
+            "carrie": 3
+          }
+        },
+        {
+          "text": "Tell them you like your life exactly as it is",
+          "points": {
+            "samantha": 3
+          }
+        },
+        {
+          "text": "Say you're hoping it's soon",
+          "points": {
+            "charlotte": 3
+          }
+        },
+        {
+          "text": "Ask why they think it's any of their business",
+          "points": {
+            "miranda": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're in charge of a friend's birthday. You...",
+      "options": [
+        {
+          "text": "Write a toast that has everyone in tears",
+          "points": {
+            "carrie": 3
+          }
+        },
+        {
+          "text": "Book the hottest place in town. You know the owner",
+          "points": {
+            "samantha": 3
+          }
+        },
+        {
+          "text": "Plan every detail, down to the flowers",
+          "points": {
+            "charlotte": 3
+          }
+        },
+        {
+          "text": "Book a table and send a group text. Done",
+          "points": {
+            "miranda": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Friends are coming over in an hour and your place is a mess. You...",
+      "options": [
+        {
+          "text": "Tidy what they'll see and hope nobody opens the wardrobe",
+          "points": {
+            "carrie": 3
+          }
+        },
+        {
+          "text": "Text them to meet you at a bar instead",
+          "points": {
+            "samantha": 3
+          }
+        },
+        {
+          "text": "Clean it top to bottom. It has to be perfect",
+          "points": {
+            "charlotte": 3
+          }
+        },
+        {
+          "text": "Leave it. They're your friends, not inspectors",
+          "points": {
+            "miranda": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend got dumped weeks ago and still wants to talk about it every night. You...",
+      "options": [
+        {
+          "text": "Talk it through for hours. You've been there",
+          "points": {
+            "carrie": 3
+          }
+        },
+        {
+          "text": "Drag them out. The best cure is a night out",
+          "points": {
+            "samantha": 3
+          }
+        },
+        {
+          "text": "Bring round ice cream and promise the right one is out there",
+          "points": {
+            "charlotte": 3
+          }
+        },
+        {
+          "text": "Tell them, kindly, it's time to move on",
+          "points": {
+            "miranda": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your on-off ex, who's broken your heart twice, says they've changed and wants you back. You...",
+      "options": [
+        {
+          "text": "Take them back. You never really stopped loving them",
+          "points": {
+            "carrie": 3
+          }
+        },
+        {
+          "text": "Laugh. You don't do third chances",
+          "points": {
+            "samantha": 3
+          }
+        },
+        {
+          "text": "Give them a chance, if they can prove they've changed",
+          "points": {
+            "charlotte": 3
+          }
+        },
+        {
+          "text": "Say no. People don't change that much",
+          "points": {
+            "miranda": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You write a popular dating column in New York. Your friend's disastrous date would make the perfect story, but they'd hate it. You...",
+      "options": [
+        {
+          "text": "Write it, but change the names",
+          "points": {
+            "carrie": 3
+          }
+        },
+        {
+          "text": "Write it. It's a great story, and they'll get over it",
+          "points": {
+            "samantha": 3
+          }
+        },
+        {
+          "text": "Don't. Some things should stay private",
+          "points": {
+            "charlotte": 3
+          }
+        },
+        {
+          "text": "Ask them first, and accept whatever they say",
+          "points": {
+            "miranda": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

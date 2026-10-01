@@ -1,0 +1,530 @@
+{
+  "slug": "the-hunger-games",
+  "show": "The Hunger Games",
+  "shortName": "Hunger Games",
+  "seoTitle": "Hunger Games Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the Hunger Games test: 12 everyday questions reveal whether you're Katniss, Peeta, Gale, Haymitch, Effie, Finnick, Johanna or President Snow — with your full character breakdown.",
+  "intro": "Are you the reluctant hero, the charming victor, or the one quietly pulling all the strings? Answer 12 everyday questions about trust, pressure and standing up for people, and find out which Hunger Games character you are.",
+  "characters": [
+    {
+      "id": "katniss",
+      "name": "Katniss Everdeen",
+      "emoji": "🏹",
+      "color": "#b45309",
+      "title": "The Reluctant Hero",
+      "summary": "Practical, protective and slow to trust. You'd do anything for the people you love.",
+      "description": [
+        "Like Katniss, you'd do anything for your family. She volunteered to take her little sister Prim's place in the Hunger Games, and survived by hunting, hiding and outthinking everyone.",
+        "You're practical, independent and slow to trust. You'd much rather be out in the woods than in front of a camera.",
+        "Your weakness is pretending. You're terrible at playing a part, yet a whole country ended up following you as the Mockingjay."
+      ],
+      "strengths": [
+        "Protective",
+        "Resourceful",
+        "Brave"
+      ],
+      "flaw": "You push people away because trusting them feels dangerous.",
+      "signature": "A bow, a mockingjay pin and the people you'd protect with your life.",
+      "clashReason": "they don't trust anyone, and they'll never pretend to like you"
+    },
+    {
+      "id": "peeta",
+      "name": "Peeta Mellark",
+      "emoji": "🍞",
+      "color": "#ca8a04",
+      "title": "The Kind Heart",
+      "summary": "Warm, patient and brilliant with words. Your kindness is your strength.",
+      "description": [
+        "Like Peeta, you're kind to your core. As a boy, the baker's son took a beating from his mother so he could throw a starving Katniss a loaf of bread.",
+        "You're warm, patient and great with words. His interviews won over the whole Capitol, and he paints and bakes to calm his mind.",
+        "Your weakness is putting everyone else first. But people never forget your kindness, and it's a kind of strength most people don't have."
+      ],
+      "strengths": [
+        "Kind",
+        "Great with words",
+        "Patient"
+      ],
+      "flaw": "You'd give away your last loaf, even when you need it yourself.",
+      "signature": "Flour on your hands, paint on your sleeve and the right words at the right time.",
+      "clashReason": "they're so nice and so good with words that you can never win an argument"
+    },
+    {
+      "id": "gale",
+      "name": "Gale Hawthorne",
+      "emoji": "🔥",
+      "color": "#b91c1c",
+      "title": "The Rebel",
+      "summary": "Strong, passionate and furious at unfairness. You fight for what's right, whatever it takes.",
+      "description": [
+        "Like Gale, you can't stand unfairness. Katniss's hunting partner grew up in District 12 feeding his family and hating the Capitol for making life so hard.",
+        "You're strong, passionate and quick to act. When the rebellion came, Gale threw himself into it and helped design its weapons.",
+        "Your weakness is how far you'll go. You believe the end can justify the means, and that can cost you the people you love."
+      ],
+      "strengths": [
+        "Passionate",
+        "Strong",
+        "Loyal to his family"
+      ],
+      "flaw": "Your anger can make you forget who gets hurt.",
+      "signature": "A hunting snare, a clenched jaw and a cause worth fighting for.",
+      "clashReason": "they're angry at the world and want you to be angry too"
+    },
+    {
+      "id": "haymitch",
+      "name": "Haymitch Abernathy",
+      "emoji": "🥃",
+      "color": "#57534e",
+      "title": "The Cynical Mentor",
+      "summary": "Sarcastic, tired and much smarter than you let on. You've seen it all.",
+      "description": [
+        "Like Haymitch, you've seen it all and you're not impressed. District 12's only living victor was a drunken mess when he became Katniss and Peeta's mentor.",
+        "You're sarcastic, cynical and far smarter than you let on. Behind the scenes, Haymitch was playing the long game against the Capitol.",
+        "Your weakness is giving up on yourself. But when someone's worth fighting for, you show up."
+      ],
+      "strengths": [
+        "Sharp",
+        "Honest",
+        "Plays the long game"
+      ],
+      "flaw": "You hide behind sarcasm so nobody sees how much you care.",
+      "signature": "A bottle, a sharp comment and a plan nobody else knows about.",
+      "clashReason": "they're sarcastic about everything and never give you a straight answer"
+    },
+    {
+      "id": "effie",
+      "name": "Effie Trinket",
+      "emoji": "🎀",
+      "color": "#db2777",
+      "title": "The Perfect Host",
+      "summary": "Cheerful, organised and always on time. Manners matter, and so does a good outfit.",
+      "description": [
+        "Like Effie, you believe in manners, schedules and looking fabulous. The Capitol escort drew District 12's names at the reaping and got her tributes everywhere on time.",
+        "You're cheerful, organised and a little dramatic. People laugh at your standards until they need someone to get everything done.",
+        "Under the wigs and rules, you're more loyal than anyone expects. Effie grew to truly care about Katniss and Peeta, and stood by them when it counted."
+      ],
+      "strengths": [
+        "Organised",
+        "Upbeat",
+        "Surprisingly loyal"
+      ],
+      "flaw": "You care a little too much about how things look.",
+      "signature": "A perfect outfit, a packed schedule and a very cheerful \"Good luck!\"",
+      "clashReason": "they're fussy about manners and turn up to everything far too early"
+    },
+    {
+      "id": "finnick",
+      "name": "Finnick Odair",
+      "emoji": "🔱",
+      "color": "#0891b2",
+      "title": "The Charmer",
+      "summary": "Confident, playful and effortlessly likeable, with a lot more under the surface.",
+      "description": [
+        "Like Finnick, you know exactly how charming you are. The golden boy from District 4 won his Hunger Games at just 14, the youngest victor ever.",
+        "You're confident, playful and easy to like. He'd offer you a sugar cube and a grin before you'd even said hello.",
+        "But there's a lot more under the surface. Finnick is fiercely loyal, deeply in love with Annie, and will risk everything for the people who matter."
+      ],
+      "strengths": [
+        "Charming",
+        "Confident",
+        "Deeply loyal"
+      ],
+      "flaw": "You hide your real feelings behind the charm.",
+      "signature": "A sugar cube, a trident and a very easy smile.",
+      "clashReason": "they're flirty, charming and always the centre of attention"
+    },
+    {
+      "id": "johanna",
+      "name": "Johanna Mason",
+      "emoji": "🪓",
+      "color": "#15803d",
+      "title": "The No-Filter Fighter",
+      "summary": "Blunt, fearless and not here to be liked. You say what everyone else is thinking.",
+      "description": [
+        "Like Johanna, you say exactly what you think and don't care who hears it. The victor from District 7 won her Games by pretending to be weak, then turned out to be deadly.",
+        "You're sarcastic, fearless and not here to be liked. She was rude to almost everyone, and proud of it.",
+        "But there's loyalty under the attitude. In the arena she dug the tracker out of Katniss's arm to hide her from the Capitol, even if she'd never say it was a favour."
+      ],
+      "strengths": [
+        "Fearless",
+        "Honest",
+        "Tougher than anyone"
+      ],
+      "flaw": "You're so busy being tough that nobody gets to see you hurt.",
+      "signature": "An axe, a smirk and an insult ready for anyone.",
+      "clashReason": "they're rude, blunt and couldn't care less what you think"
+    },
+    {
+      "id": "snow",
+      "name": "President Snow",
+      "emoji": "🌹",
+      "color": "#7c3aed",
+      "title": "The Puppet Master",
+      "summary": "Polished, patient and always in control. You're three steps ahead of everyone.",
+      "description": [
+        "Like President Snow, you're always in control. The ruler of Panem held power for decades with charm, patience and ruthless calculation.",
+        "You're polished, calm and always three steps ahead. He stayed perfectly polite, even while making a threat.",
+        "Your weakness is that you trust nobody. Power is everything to you, and in the end even that isn't enough to hold on to."
+      ],
+      "strengths": [
+        "Strategic",
+        "Patient",
+        "Calm under pressure"
+      ],
+      "flaw": "You'd sacrifice anyone to stay in control.",
+      "signature": "A white rose in your buttonhole and a very polite threat.",
+      "clashReason": "they're polite and calm, and always working out how to use you"
+    }
+  ],
+  "questions": [
+    {
+      "text": "Your alarm doesn't go off and you're running late. You...",
+      "options": [
+        {
+          "text": "Panic. Your whole day was planned to the minute",
+          "points": {
+            "effie": 3
+          }
+        },
+        {
+          "text": "Roll over. They can start without you",
+          "points": {
+            "haymitch": 3
+          }
+        },
+        {
+          "text": "Turn up late and don't apologise",
+          "points": {
+            "johanna": 3
+          }
+        },
+        {
+          "text": "Walk in with a grin and charm your way out of it",
+          "points": {
+            "finnick": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone at a party starts flirting with you. You...",
+      "options": [
+        {
+          "text": "Flirt right back. You're good at this",
+          "points": {
+            "finnick": 3
+          }
+        },
+        {
+          "text": "Look confused. Wait, are they flirting?",
+          "points": {
+            "katniss": 3
+          }
+        },
+        {
+          "text": "Say something so blunt they walk away",
+          "points": {
+            "johanna": 3
+          }
+        },
+        {
+          "text": "Blush, then say something sweet",
+          "points": {
+            "peeta": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend's boss is treating them badly. You...",
+      "options": [
+        {
+          "text": "Tell them to fight it. Rules like that need breaking",
+          "points": {
+            "gale": 3
+          }
+        },
+        {
+          "text": "Go and have a word yourself. Nobody treats your people like that",
+          "points": {
+            "katniss": 3
+          }
+        },
+        {
+          "text": "Teach them how to play the boss at their own game",
+          "points": {
+            "haymitch": 3
+          }
+        },
+        {
+          "text": "Side with the boss. Someone has to keep order",
+          "points": {
+            "snow": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Everyone you live with is away for the weekend. You...",
+      "options": [
+        {
+          "text": "Head out for a long walk in the woods",
+          "points": {
+            "katniss": 3
+          }
+        },
+        {
+          "text": "Bake something and paint for hours",
+          "points": {
+            "peeta": 3
+          }
+        },
+        {
+          "text": "Redecorate. Everything could look nicer",
+          "points": {
+            "effie": 3
+          }
+        },
+        {
+          "text": "Order takeaway and don't speak to anyone for two days",
+          "points": {
+            "haymitch": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're asked to give a speech at a friend's wedding. You...",
+      "options": [
+        {
+          "text": "Easy. You'll have them in tears within five minutes",
+          "points": {
+            "peeta": 3
+          }
+        },
+        {
+          "text": "Wing it. You're at your best with an audience",
+          "points": {
+            "finnick": 3
+          }
+        },
+        {
+          "text": "Plan it to the second and practise in the mirror",
+          "points": {
+            "effie": 3
+          }
+        },
+        {
+          "text": "Say no. Nobody wants to hear what you'd really say",
+          "points": {
+            "johanna": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You overhear a friend telling someone a secret you trusted them with. You...",
+      "options": [
+        {
+          "text": "Cut them off. You don't do second chances",
+          "points": {
+            "johanna": 3
+          }
+        },
+        {
+          "text": "Confront them, angrily, right there",
+          "points": {
+            "gale": 3
+          }
+        },
+        {
+          "text": "Say nothing, and remember it for later",
+          "points": {
+            "snow": 3
+          }
+        },
+        {
+          "text": "Ask them why. Maybe they had a good reason",
+          "points": {
+            "finnick": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A new colleague assumes you're the weakest person on the team. You...",
+      "options": [
+        {
+          "text": "Laugh. Their opinion means nothing to you",
+          "points": {
+            "johanna": 3
+          }
+        },
+        {
+          "text": "Smile politely and outwork them",
+          "points": {
+            "effie": 3
+          }
+        },
+        {
+          "text": "Tell them to their face that they're wrong",
+          "points": {
+            "gale": 3
+          }
+        },
+        {
+          "text": "Stay perfectly polite, and make sure the boss hears about their mistakes",
+          "points": {
+            "snow": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your rent goes up with no warning. You...",
+      "options": [
+        {
+          "text": "Cut back quietly, but keep up appearances",
+          "points": {
+            "effie": 3
+          }
+        },
+        {
+          "text": "Get angry at a landlord who can get away with it",
+          "points": {
+            "gale": 3
+          }
+        },
+        {
+          "text": "Worry about it next month",
+          "points": {
+            "haymitch": 3
+          }
+        },
+        {
+          "text": "Still help out a neighbour who's worse off",
+          "points": {
+            "peeta": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You get the chance to be famous. You...",
+      "options": [
+        {
+          "text": "Say yes. The cameras love you, and you love them back",
+          "points": {
+            "finnick": 3
+          }
+        },
+        {
+          "text": "No thanks. You'd hate every minute",
+          "points": {
+            "katniss": 3
+          }
+        },
+        {
+          "text": "Yes! Think of the outfits",
+          "points": {
+            "effie": 3
+          }
+        },
+        {
+          "text": "Only if you control the story",
+          "points": {
+            "snow": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your town is voting on something that really matters. You...",
+      "options": [
+        {
+          "text": "Campaign hard. Change doesn't happen by itself",
+          "points": {
+            "gale": 3
+          }
+        },
+        {
+          "text": "Find out who's counting the votes",
+          "points": {
+            "snow": 3
+          }
+        },
+        {
+          "text": "Stay home. Nothing ever changes",
+          "points": {
+            "haymitch": 3
+          }
+        },
+        {
+          "text": "Talk to both sides and try to find a middle ground",
+          "points": {
+            "peeta": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're forced into a televised fight to the death with 23 strangers. The first thing you do is...",
+      "options": [
+        {
+          "text": "Run for the trees and stay away from everyone",
+          "points": {
+            "katniss": 3
+          }
+        },
+        {
+          "text": "Team up with the strongest people there",
+          "points": {
+            "finnick": 3
+          }
+        },
+        {
+          "text": "Act weak so nobody bothers with you",
+          "points": {
+            "johanna": 3
+          }
+        },
+        {
+          "text": "Win the audience over before it even starts",
+          "points": {
+            "peeta": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You're one of the leaders of a rebellion. You could end the war tonight, but innocent people would die. You...",
+      "options": [
+        {
+          "text": "Do it. Ending the war saves more lives in the end",
+          "points": {
+            "gale": 3
+          }
+        },
+        {
+          "text": "Refuse. That would make you no better than them",
+          "points": {
+            "katniss": 3
+          }
+        },
+        {
+          "text": "Do it, and make sure the other side gets the blame",
+          "points": {
+            "snow": 3
+          }
+        },
+        {
+          "text": "Walk away. You never wanted to lead anything",
+          "points": {
+            "haymitch": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

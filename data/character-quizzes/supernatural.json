@@ -1,0 +1,530 @@
+{
+  "slug": "supernatural",
+  "show": "Supernatural",
+  "shortName": "Supernatural",
+  "seoTitle": "Supernatural Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the Supernatural test: 12 everyday questions reveal whether you're Dean, Sam, Castiel, Bobby, Crowley, Rowena, Charlie or Jack — with your full character breakdown.",
+  "intro": "Are you the loyal older brother, the angel who never gets the joke, or the witch who always looks out for herself? Answer 12 everyday questions about how you handle family, danger and doing the right thing, and find out which Supernatural character you are.",
+  "characters": [
+    {
+      "id": "dean",
+      "name": "Dean Winchester",
+      "emoji": "🚗",
+      "color": "#92400e",
+      "title": "The Loyal Protector",
+      "summary": "Tough, funny and loyal to the bone. You'd do anything for the people you love.",
+      "description": [
+        "Like Dean, family comes first. He was four when he carried baby Sam out of the fire that killed their mother, and he's been looking out for his little brother ever since.",
+        "You love the simple things: loud classic rock, a greasy burger, a slice of pie and his 1967 Chevy Impala. You'd rather act than sit around making plans.",
+        "Your weakness is feelings. You'd rather crack a joke than admit you're hurting, and you'd rather pay the price yourself than let anyone you love get hurt."
+      ],
+      "strengths": [
+        "Fiercely loyal",
+        "Brave",
+        "Great in a crisis"
+      ],
+      "flaw": "You bottle everything up and call it being fine.",
+      "signature": "Classic rock on full blast and a slice of pie on the dashboard.",
+      "clashReason": "they won't talk about their feelings and act first, think later"
+    },
+    {
+      "id": "sam",
+      "name": "Sam Winchester",
+      "emoji": "📚",
+      "color": "#2563eb",
+      "title": "The Thinker",
+      "summary": "Smart, caring and principled. You research first and you believe people can change.",
+      "description": [
+        "Like Sam, you're the brains of the operation. He escaped the hunting life for Stanford and was about to go to law school when Dean turned up asking for help.",
+        "You think before you act and you'd rather talk things through than bottle them up. You look for the reason behind what people do, and you give second chances.",
+        "But you're more stubborn than you look. Once Sam decides something is right, not even his brother can talk him out of it."
+      ],
+      "strengths": [
+        "Clever",
+        "Compassionate",
+        "Does the homework"
+      ],
+      "flaw": "You're sure you can fix anything if you just try hard enough.",
+      "signature": "A pile of old books, a laptop and a very long night of research.",
+      "clashReason": "they want to talk everything through and research it to death"
+    },
+    {
+      "id": "castiel",
+      "name": "Castiel",
+      "emoji": "🕊️",
+      "color": "#a16207",
+      "title": "The Honest Outsider",
+      "summary": "Earnest, loyal and completely literal. You say what you mean and stand by who you love.",
+      "description": [
+        "Like Castiel, you're honest to a fault. The angel who pulled Dean out of Hell arrived knowing almost nothing about human life, and took everything completely literally.",
+        "You're loyal in a way that changes everything. Castiel turned against Heaven itself to stand with the Winchesters, because he came to believe people should be free to choose.",
+        "Your weakness is carrying things alone. More than once, he tried to fix a huge problem by himself, kept it secret, and made it much worse."
+      ],
+      "strengths": [
+        "Honest",
+        "Loyal",
+        "Stands up to authority"
+      ],
+      "flaw": "You try to fix everything alone, and keep secrets to do it.",
+      "signature": "A tan trench coat, a serious stare and no idea why everyone's laughing.",
+      "clashReason": "they say exactly what they think and never get the joke"
+    },
+    {
+      "id": "bobby",
+      "name": "Bobby Singer",
+      "emoji": "🧢",
+      "color": "#4d7c0f",
+      "title": "The Grumpy Guardian",
+      "summary": "Gruff on the outside, all heart underneath. You fix things and you look after your people.",
+      "description": [
+        "Like Bobby, you complain about everyone and would still do anything for them. He ran a salvage yard in South Dakota and became the father figure Sam and Dean needed.",
+        "You're practical and you know a little about everything. Whatever the problem, Bobby had a book on it, a tool for it, or someone to call.",
+        "You're not one for hugs or big speeches. You show you care by turning up, grumbling, and sorting it out."
+      ],
+      "strengths": [
+        "Practical",
+        "Knows a bit of everything",
+        "Always shows up"
+      ],
+      "flaw": "You'd rather grumble than admit how much people mean to you.",
+      "signature": "A trucker cap, a cold beer and a house full of old books.",
+      "clashReason": "they'll grumble about everything you do, even while they're helping you"
+    },
+    {
+      "id": "crowley",
+      "name": "Crowley",
+      "emoji": "👑",
+      "color": "#7f1d1d",
+      "title": "The Dealmaker",
+      "summary": "Sharp, sarcastic and always working an angle. Everything's negotiable.",
+      "description": [
+        "Like Crowley, you know how to make a deal. The King of Hell started out as a Scottish tailor called Fergus MacLeod and worked his way to the top from the crossroads.",
+        "You're clever, cutting and always three moves ahead. You'll work with anyone, as long as you're getting something out of it.",
+        "Deep down, you'd quite like to be liked. Over the years Crowley grew a strange soft spot for the Winchesters, even if he'd never say so."
+      ],
+      "strengths": [
+        "Quick-witted",
+        "Great negotiator",
+        "Always has a plan"
+      ],
+      "flaw": "Every favour comes with a price tag.",
+      "signature": "A sharp black suit, a glass of good whisky and a deal sealed with a kiss.",
+      "clashReason": "they're charming, but they're always working an angle"
+    },
+    {
+      "id": "rowena",
+      "name": "Rowena",
+      "emoji": "🔮",
+      "color": "#be123c",
+      "title": "The Stylish Survivor",
+      "summary": "Glamorous, clever and hard to kill. You look after number one, and look great doing it.",
+      "description": [
+        "Like Rowena, you're a survivor with style. The centuries-old Scottish witch, who also happens to be Crowley's mother, has talked and spelled her way out of more tight spots than anyone can count.",
+        "You're dramatic, confident and you put yourself first. For a long time Rowena only helped the Winchesters when it suited her.",
+        "But you're braver than people expect. In the end she gave her own life to send the souls that escaped Hell back where they belonged, and ended up ruling it."
+      ],
+      "strengths": [
+        "Resourceful",
+        "Confident",
+        "Braver than people think"
+      ],
+      "flaw": "You look out for number one, and everyone knows it.",
+      "signature": "A killer dress, a dramatic entrance and a spell up your sleeve.",
+      "clashReason": "they always look after themselves first"
+    },
+    {
+      "id": "charlie",
+      "name": "Charlie Bradbury",
+      "emoji": "💻",
+      "color": "#ea580c",
+      "title": "The Brave Geek",
+      "summary": "Funny, nerdy and braver than you look. You make every group more fun.",
+      "description": [
+        "Like Charlie, you're a proud geek with a big heart. The hacker first met the Winchesters while ruling as Queen of Moondoor, a live-action fantasy role-playing game.",
+        "You're clever, playful and loyal. Charlie hacked her way into places she had no business being, just to help the people she cared about.",
+        "Your weakness is that you dive into danger because it feels like an adventure. But the Winchesters treated her like a little sister, and every group you join is better with you in it."
+      ],
+      "strengths": [
+        "Clever",
+        "Fun to be around",
+        "Brave when it counts"
+      ],
+      "flaw": "You treat danger like a quest, and forget it can really hurt you.",
+      "signature": "A laptop, a costume crown and a fantasy reference for every occasion.",
+      "clashReason": "they turn everything into a game, even the serious stuff"
+    },
+    {
+      "id": "jack",
+      "name": "Jack Kline",
+      "emoji": "⭐",
+      "color": "#ca8a04",
+      "title": "The Good Heart",
+      "summary": "Curious, sweet and trying so hard to do the right thing.",
+      "description": [
+        "Like Jack, you want to be good, and you're still working out how. The son of Lucifer was born into a world that feared him, but he chose to be a hunter and a part of the family.",
+        "You're curious, kind and eager to learn. He loved nougat, asked endless questions and wanted Sam, Dean and Castiel to be proud of him.",
+        "Your weakness is trying too hard. When you get it wrong, you take it very hard. But in the end, Jack's good heart is what saved the world."
+      ],
+      "strengths": [
+        "Kind",
+        "Curious",
+        "Wants to do right"
+      ],
+      "flaw": "You try so hard to be good that every mistake crushes you.",
+      "signature": "A bag of nougat and a hundred questions about how people work.",
+      "clashReason": "they ask a hundred questions and take every mistake to heart"
+    }
+  ],
+  "questions": [
+    {
+      "text": "Your friends want to go on a long road trip together. You...",
+      "options": [
+        {
+          "text": "Offer to drive. Your car, your music",
+          "points": {
+            "dean": 3
+          }
+        },
+        {
+          "text": "Plan the route, the stops and a back-up plan",
+          "points": {
+            "sam": 3
+          }
+        },
+        {
+          "text": "Pack snacks and games for the back seat",
+          "points": {
+            "charlie": 3
+          }
+        },
+        {
+          "text": "Pass. You'll fly and meet them there",
+          "points": {
+            "crowley": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend can tell you're upset and asks what's wrong. You...",
+      "options": [
+        {
+          "text": "Say nothing's wrong and change the subject",
+          "points": {
+            "dean": 3
+          }
+        },
+        {
+          "text": "Tell them everything. Bottling it up never helps",
+          "points": {
+            "sam": 3
+          }
+        },
+        {
+          "text": "Tell them bluntly, in one sentence, then go quiet",
+          "points": {
+            "castiel": 3
+          }
+        },
+        {
+          "text": "Admit you're struggling and ask what they would do",
+          "points": {
+            "jack": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend ignored your advice and it's gone badly wrong. You...",
+      "options": [
+        {
+          "text": "Tell them off, then roll up your sleeves and help",
+          "points": {
+            "bobby": 3
+          }
+        },
+        {
+          "text": "Help them out. They'll owe you one",
+          "points": {
+            "crowley": 3
+          }
+        },
+        {
+          "text": "Say \"I told you so\" and leave them to it",
+          "points": {
+            "rowena": 3
+          }
+        },
+        {
+          "text": "Stand by them. Everyone gets to make their own mistakes",
+          "points": {
+            "castiel": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Nothing on your calendar this Sunday. By the evening you've...",
+      "options": [
+        {
+          "text": "Had a big breakfast and watched three action movies",
+          "points": {
+            "dean": 3
+          }
+        },
+        {
+          "text": "Been to a fantasy fair in costume, or gamed all day",
+          "points": {
+            "charlie": 3
+          }
+        },
+        {
+          "text": "Gone for a long run and finished a book",
+          "points": {
+            "sam": 3
+          }
+        },
+        {
+          "text": "Had a spa day and a very expensive dinner",
+          "points": {
+            "rowena": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're asked to redo a week's work because someone higher up changed their mind. You...",
+      "options": [
+        {
+          "text": "Ask them to explain why. If they can't, you won't redo it",
+          "points": {
+            "castiel": 3
+          }
+        },
+        {
+          "text": "Redo it, and build a shortcut so it takes half the time",
+          "points": {
+            "charlie": 3
+          }
+        },
+        {
+          "text": "Redo it even better than before",
+          "points": {
+            "jack": 3
+          }
+        },
+        {
+          "text": "Sweet-talk someone else into doing it for you",
+          "points": {
+            "rowena": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Something breaks at home. You...",
+      "options": [
+        {
+          "text": "Fix it yourself. You've got the tools and you know how",
+          "points": {
+            "bobby": 3
+          }
+        },
+        {
+          "text": "Find a clever fix online that nobody else would think of",
+          "points": {
+            "charlie": 3
+          }
+        },
+        {
+          "text": "Have a go, even though you've never done it before",
+          "points": {
+            "jack": 3
+          }
+        },
+        {
+          "text": "Pay someone. Your time is worth more than that",
+          "points": {
+            "crowley": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend of your roommate is crashing on your couch for a week. You...",
+      "options": [
+        {
+          "text": "Plan a fun night in so they feel welcome",
+          "points": {
+            "charlie": 3
+          }
+        },
+        {
+          "text": "Act like it's a hassle, but make sure they've got a blanket",
+          "points": {
+            "bobby": 3
+          }
+        },
+        {
+          "text": "Keep an eye on them until you know what they're about",
+          "points": {
+            "dean": 3
+          }
+        },
+        {
+          "text": "Ask them loads of questions about their life",
+          "points": {
+            "jack": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You broke something that meant a lot to a friend. You...",
+      "options": [
+        {
+          "text": "Apologise over and over, and try to make it up to them",
+          "points": {
+            "jack": 3
+          }
+        },
+        {
+          "text": "Try to fix it quietly before they notice",
+          "points": {
+            "castiel": 3
+          }
+        },
+        {
+          "text": "Point out it was already a bit wobbly",
+          "points": {
+            "crowley": 3
+          }
+        },
+        {
+          "text": "Replace it with something much nicer and call it even",
+          "points": {
+            "rowena": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're home alone and hear a loud bang downstairs at 3am. You...",
+      "options": [
+        {
+          "text": "Grab something heavy and go down making plenty of noise",
+          "points": {
+            "bobby": 3
+          }
+        },
+        {
+          "text": "Lie still and listen, working out what it could be",
+          "points": {
+            "sam": 3
+          }
+        },
+        {
+          "text": "Creep down to see. You're more curious than scared",
+          "points": {
+            "charlie": 3
+          }
+        },
+        {
+          "text": "Stay in bed. If it's a burglar, they can have the TV",
+          "points": {
+            "rowena": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A relative you haven't heard from in years calls asking for help. You...",
+      "options": [
+        {
+          "text": "Drop everything. Family is family",
+          "points": {
+            "dean": 3
+          }
+        },
+        {
+          "text": "Help, but make it clear you have your own life now",
+          "points": {
+            "sam": 3
+          }
+        },
+        {
+          "text": "Help, but skip the big emotional reunion",
+          "points": {
+            "bobby": 3
+          }
+        },
+        {
+          "text": "Say no. You haven't heard from them in years for a reason",
+          "points": {
+            "crowley": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're a monster hunter. The creature you've tracked down begs for its life and swears it has never hurt anyone. You...",
+      "options": [
+        {
+          "text": "Check if it's telling the truth before you decide",
+          "points": {
+            "sam": 3
+          }
+        },
+        {
+          "text": "Finish the job. You can't take the risk",
+          "points": {
+            "dean": 3
+          }
+        },
+        {
+          "text": "Let it go. Being feared isn't the same as being evil",
+          "points": {
+            "jack": 3
+          }
+        },
+        {
+          "text": "Spare it, even if the other hunters will be furious",
+          "points": {
+            "castiel": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You're trying to stop the end of the world. A powerful stranger offers to help, but only if someone pays a terrible price. You...",
+      "options": [
+        {
+          "text": "Take the deal, then start looking for a loophole",
+          "points": {
+            "rowena": 3
+          }
+        },
+        {
+          "text": "Refuse. Nothing good ever comes from those deals",
+          "points": {
+            "bobby": 3
+          }
+        },
+        {
+          "text": "Agree, as long as you're the one who pays",
+          "points": {
+            "castiel": 3
+          }
+        },
+        {
+          "text": "Walk away. Saving the world isn't your problem",
+          "points": {
+            "crowley": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

@@ -1,0 +1,429 @@
+{
+  "slug": "desperate-housewives",
+  "show": "Desperate Housewives",
+  "shortName": "Desperate Housewives",
+  "seoTitle": "Desperate Housewives Test: Which Character Are You? (10 Questions)",
+  "metaDescription": "Take the Desperate Housewives test: 10 everyday questions reveal whether you're Susan, Lynette, Bree, Gabrielle, Edie or Katherine — with your full character breakdown.",
+  "intro": "Are you the lovable disaster, the perfect homemaker, or the one who knows everyone's secrets? Answer 10 everyday questions about neighbours, gossip and keeping it together, and find out which Desperate Housewives character you are.",
+  "characters": [
+    {
+      "id": "susan",
+      "name": "Susan Mayer",
+      "emoji": "✏️",
+      "color": "#e11d48",
+      "title": "The Lovable Disaster",
+      "summary": "Sweet, romantic and a little clumsy. Your heart's always in the right place, even when your plans aren't.",
+      "description": [
+        "Like Susan, you're a hopeless romantic with a talent for chaos. The children's book illustrator fell for Mike the plumber as soon as he moved onto Wisteria Lane.",
+        "You're sweet, funny and a little clumsy. Susan once burned down a neighbour's house by accident while snooping on her crush.",
+        "Your weakness is acting before you think. But your heart is always in the right place, and your friends love you for it."
+      ],
+      "strengths": [
+        "Sweet",
+        "Romantic",
+        "Funny"
+      ],
+      "flaw": "You leap first and look for somewhere to land later.",
+      "signature": "A sketchbook, a messy kitchen and a plan that's about to go wrong.",
+      "clashReason": "they're sweet but clumsy, and somebody always has to rescue them"
+    },
+    {
+      "id": "lynette",
+      "name": "Lynette Scavo",
+      "emoji": "📋",
+      "color": "#2563eb",
+      "title": "The Woman Who Does It All",
+      "summary": "Smart, blunt and incredibly capable. You can handle anything, and you will.",
+      "description": [
+        "Like Lynette, you can handle anything, and you'll tell everyone so. She gave up a high-flying advertising career to raise her kids, then went back to work when the family needed it.",
+        "You're smart, blunt and extremely competitive. You'd rather run yourself into the ground than admit you need help.",
+        "Your weakness is control. But nobody works harder for their family than you."
+      ],
+      "strengths": [
+        "Capable",
+        "Honest",
+        "Hard-working"
+      ],
+      "flaw": "You won't ask for help, even when you're drowning.",
+      "signature": "A to-do list, a strong coffee and a very firm \"No.\"",
+      "clashReason": "they're bossy, blunt and always sure they know best"
+    },
+    {
+      "id": "bree",
+      "name": "Bree Van de Kamp",
+      "emoji": "🥧",
+      "color": "#b91c1c",
+      "title": "The Perfectionist",
+      "summary": "Polished, polite and in control. There's a right way to do everything.",
+      "description": [
+        "Like Bree, you believe there's a right way to do everything. The perfect homemaker of Wisteria Lane irons, bakes and hosts like it's an art form.",
+        "You're polished, polite and fiercely loyal to your family. She kept smiling through a marriage falling apart and a teenage son who tested her at every turn.",
+        "Your weakness is hiding how you really feel. Behind the perfect front, you're struggling more than anyone knows. But Bree turned her talents into a catering business and a cookbook."
+      ],
+      "strengths": [
+        "Organised",
+        "Loyal",
+        "Brilliant host"
+      ],
+      "flaw": "You'd rather look perfect than admit anything is wrong.",
+      "signature": "Pearls, a perfect roast and not a hair out of place.",
+      "clashReason": "they're so perfect and polite that you never know what they really think"
+    },
+    {
+      "id": "gabrielle",
+      "name": "Gabrielle Solis",
+      "emoji": "💄",
+      "color": "#9333ea",
+      "title": "The Glamorous One",
+      "summary": "Witty, stylish and brutally honest. You like the finer things, and you don't apologise for it.",
+      "description": [
+        "Like Gabrielle, you like the finer things and you don't apologise for it. The former model married into money and loves shopping, glamour and a little drama.",
+        "You're witty, fearless and brutally honest. Gaby says exactly what she thinks, usually with a very sharp line.",
+        "Your weakness is vanity. But when life gets hard, you're tougher than anyone expects, and your friends know you'll always have their back."
+      ],
+      "strengths": [
+        "Witty",
+        "Honest",
+        "Tougher than she looks"
+      ],
+      "flaw": "You can be a little spoilt, and a little selfish.",
+      "signature": "Designer heels, big sunglasses and the perfect comeback.",
+      "clashReason": "they're vain, spoilt and never let you forget it"
+    },
+    {
+      "id": "edie",
+      "name": "Edie Britt",
+      "emoji": "🏡",
+      "color": "#ea580c",
+      "title": "The Bold One",
+      "summary": "Flirty, fearless and never boring. You don't care what the neighbours think.",
+      "description": [
+        "Like Edie, you never apologise for who you are. The Wisteria Lane estate agent was bold, flirty and always at the centre of the street's gossip.",
+        "You're confident, fun and totally unbothered by what the neighbours think. Edie did what she wanted and wore what she wanted.",
+        "Your weakness is keeping people at a distance. Under the attitude, you want real friends more than you let on."
+      ],
+      "strengths": [
+        "Confident",
+        "Fun",
+        "Says what she wants"
+      ],
+      "flaw": "You push people away before they can reject you.",
+      "signature": "A low-cut dress, a 'For Sale' sign and the latest gossip.",
+      "clashReason": "they're flirty, nosy and always stirring things up"
+    },
+    {
+      "id": "katherine",
+      "name": "Katherine Mayfair",
+      "emoji": "🍰",
+      "color": "#0f766e",
+      "title": "The Guarded One",
+      "summary": "Cool, capable and very private. People have to earn their way in.",
+      "description": [
+        "Like Katherine, you're cool, capable and very private. She came back to Wisteria Lane after years away, with a past she was determined to keep buried.",
+        "You're organised, competitive and a brilliant cook. Katherine went into business with Bree, and the two were rivals as much as partners.",
+        "Your weakness is keeping your guard up. People think you're cold, but you're just very careful about who you let in."
+      ],
+      "strengths": [
+        "Capable",
+        "Composed",
+        "Protective"
+      ],
+      "flaw": "You put up so many walls that people give up trying.",
+      "signature": "A spotless kitchen, a perfect cake and a secret you'll never tell.",
+      "clashReason": "they're cool, guarded and always competing with you"
+    }
+  ],
+  "questions": [
+    {
+      "text": "Someone new moves in across the street. You...",
+      "options": [
+        {
+          "text": "Bake something and take it round with a card",
+          "points": {
+            "bree": 3
+          }
+        },
+        {
+          "text": "Check them out. Are they single?",
+          "points": {
+            "edie": 3
+          }
+        },
+        {
+          "text": "Go over to say hi and end up embarrassing yourself",
+          "points": {
+            "susan": 3
+          }
+        },
+        {
+          "text": "Keep your distance until you know what they're about",
+          "points": {
+            "katherine": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "It's a chaotic morning and everyone needs something from you at once. You...",
+      "options": [
+        {
+          "text": "Juggle it all, loudly, and get everyone out the door",
+          "points": {
+            "lynette": 3
+          }
+        },
+        {
+          "text": "Put your sunglasses on and let someone else deal with it",
+          "points": {
+            "gabrielle": 3
+          }
+        },
+        {
+          "text": "Forget something important and only realise halfway there",
+          "points": {
+            "susan": 3
+          }
+        },
+        {
+          "text": "Stay calm. You planned for this last night",
+          "points": {
+            "katherine": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend's cooking is awful, and they ask what you think. You...",
+      "options": [
+        {
+          "text": "Offer some gentle tips for next time",
+          "points": {
+            "bree": 3
+          }
+        },
+        {
+          "text": "Tell them it's awful. Kindly. Sort of",
+          "points": {
+            "gabrielle": 3
+          }
+        },
+        {
+          "text": "Say it's lovely. Yours is worse",
+          "points": {
+            "susan": 3
+          }
+        },
+        {
+          "text": "Say it's nice, then quietly make a better version",
+          "points": {
+            "katherine": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You finally get a day where nobody needs anything from you. You...",
+      "options": [
+        {
+          "text": "Go shopping, then to a spa. You've earned it",
+          "points": {
+            "gabrielle": 3
+          }
+        },
+        {
+          "text": "Sketch or paint for hours",
+          "points": {
+            "susan": 3
+          }
+        },
+        {
+          "text": "Work in the garden, then try a new recipe",
+          "points": {
+            "bree": 3
+          }
+        },
+        {
+          "text": "Dress up and go somewhere you'll be noticed",
+          "points": {
+            "edie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A neighbour tells you something scandalous about another neighbour. You...",
+      "options": [
+        {
+          "text": "Tell everyone. It's too good not to",
+          "points": {
+            "edie": 3
+          }
+        },
+        {
+          "text": "Keep it to yourself. It isn't polite",
+          "points": {
+            "bree": 3
+          }
+        },
+        {
+          "text": "Roll your eyes. You don't have time for this",
+          "points": {
+            "lynette": 3
+          }
+        },
+        {
+          "text": "Promise not to tell, then accidentally let it slip",
+          "points": {
+            "susan": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your partner forgets your anniversary. You...",
+      "options": [
+        {
+          "text": "Make them pay for it. Preferably with jewellery",
+          "points": {
+            "gabrielle": 3
+          }
+        },
+        {
+          "text": "Say nothing, and let the silence do the talking",
+          "points": {
+            "bree": 3
+          }
+        },
+        {
+          "text": "Tell them straight how annoyed you are, then move on",
+          "points": {
+            "lynette": 3
+          }
+        },
+        {
+          "text": "Remind them plenty of people would remember",
+          "points": {
+            "edie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "The promotion you wanted goes to someone less qualified. You...",
+      "options": [
+        {
+          "text": "March in and ask your boss to explain",
+          "points": {
+            "lynette": 3
+          }
+        },
+        {
+          "text": "Say nothing now, and make sure you're impossible to ignore next time",
+          "points": {
+            "katherine": 3
+          }
+        },
+        {
+          "text": "Find out how they got it, and use that",
+          "points": {
+            "edie": 3
+          }
+        },
+        {
+          "text": "Shrug. You never loved that job anyway",
+          "points": {
+            "gabrielle": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You make a mistake that could get you in real trouble. You...",
+      "options": [
+        {
+          "text": "Cover it up perfectly and keep smiling",
+          "points": {
+            "bree": 3
+          }
+        },
+        {
+          "text": "Panic, and make it worse trying to fix it",
+          "points": {
+            "susan": 3
+          }
+        },
+        {
+          "text": "Lie your way out of it",
+          "points": {
+            "gabrielle": 3
+          }
+        },
+        {
+          "text": "Find a way to make it someone else's fault",
+          "points": {
+            "edie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You find out the 'perfect' family next door is hiding something. You...",
+      "options": [
+        {
+          "text": "Snoop around, and get caught snooping",
+          "points": {
+            "susan": 3
+          }
+        },
+        {
+          "text": "Stay out of it. Your own family keeps you busy enough",
+          "points": {
+            "lynette": 3
+          }
+        },
+        {
+          "text": "Quietly find out more, without anyone knowing you're looking",
+          "points": {
+            "katherine": 3
+          }
+        },
+        {
+          "text": "Invite your friends round to talk about it over drinks",
+          "points": {
+            "gabrielle": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You live on a quiet suburban street. Your best friend confesses she's done something terrible, and asks you to help her hide it. You...",
+      "options": [
+        {
+          "text": "Help, and make sure nobody ever finds out",
+          "points": {
+            "bree": 3
+          }
+        },
+        {
+          "text": "Tell her to own up. You won't lie for her",
+          "points": {
+            "lynette": 3
+          }
+        },
+        {
+          "text": "Help, but remember you've got something on her now",
+          "points": {
+            "edie": 3
+          }
+        },
+        {
+          "text": "Help, but ask no questions. It's safer not to know",
+          "points": {
+            "katherine": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

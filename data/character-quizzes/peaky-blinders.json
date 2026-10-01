@@ -1,0 +1,530 @@
+{
+  "slug": "peaky-blinders",
+  "show": "Peaky Blinders",
+  "shortName": "Peaky Blinders",
+  "seoTitle": "Peaky Blinders Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the Peaky Blinders test: 12 everyday questions reveal whether you're Tommy, Arthur, Polly, John, Ada, Michael, Alfie or Grace — with your full character breakdown.",
+  "intro": "Are you the mastermind, the loose cannon, or the matriarch who sees through everyone? Answer 12 everyday questions about family, loyalty and ambition, and find out which Peaky Blinders character you are.",
+  "characters": [
+    {
+      "id": "tommy",
+      "name": "Tommy Shelby",
+      "emoji": "🐎",
+      "color": "#64748b",
+      "title": "The Mastermind",
+      "summary": "Cool, calculating and always three steps ahead. Nobody knows your plan until it's already worked.",
+      "description": [
+        "Like Tommy, you're always three steps ahead. He leads the Peaky Blinders, running the family's business from the Garrison pub in Birmingham.",
+        "You're calm under pressure and hard to read. Tommy came back from digging tunnels under enemy lines in France during the war, and nothing seems to frighten him now.",
+        "You aim high. Tommy turned a street gang into a company, and went on to become the Labour MP for Small Heath. But the higher he climbs, the fewer people he trusts."
+      ],
+      "strengths": [
+        "Strategic",
+        "Fearless",
+        "Ambitious"
+      ],
+      "flaw": "You trust nobody, not even the people who love you.",
+      "signature": "A flat cap, a cigarette and a plan you haven't told anyone about.",
+      "clashReason": "they'd always be three steps ahead of you, and never tell you the plan"
+    },
+    {
+      "id": "arthur",
+      "name": "Arthur Shelby",
+      "emoji": "🥊",
+      "color": "#991b1b",
+      "title": "The Loose Cannon",
+      "summary": "Loud, loyal and ruled by your heart. You'd do anything for the people you love, often with your fists.",
+      "description": [
+        "Like Arthur, you feel everything at full volume. The eldest Shelby brother is fiercely loyal, and quick to throw the first punch.",
+        "You carry more than you let on. Arthur served at Gallipoli and in France, and the war left scars that drink and fighting never fixed.",
+        "You really do want to be better. Arthur's marriage to Linda was his chance at a quieter, more decent life, even if the old Arthur kept coming back."
+      ],
+      "strengths": [
+        "Loyal",
+        "Brave",
+        "Big-hearted"
+      ],
+      "flaw": "Your temper gets there before your brain does.",
+      "signature": "A moustache, a bloodied fist and a heart the size of Birmingham.",
+      "clashReason": "they'd start a fight you'd have to finish"
+    },
+    {
+      "id": "polly",
+      "name": "Polly Gray",
+      "emoji": "🎩",
+      "color": "#6b21a8",
+      "title": "The Matriarch",
+      "summary": "Sharp, stylish and nobody's fool. You hold the whole family together, and you see straight through people.",
+      "description": [
+        "Like Polly, you're the one holding everything together. Aunt Polly is the matriarch of the Shelby family and the only person who can put Tommy in his place.",
+        "You've survived a lot. Polly's children were taken from her when they were small, and years later her son Michael found his way back to her.",
+        "You read people instantly. Polly can tell when someone's lying before they've finished the sentence, and she's rarely wrong."
+      ],
+      "strengths": [
+        "Wise",
+        "Protective",
+        "Unshakeable"
+      ],
+      "flaw": "You'll never forgive anyone who threatens your family.",
+      "signature": "A sharp hat, a sharper tongue and a glass of gin.",
+      "clashReason": "they'd see straight through every excuse you make"
+    },
+    {
+      "id": "john",
+      "name": "John Shelby",
+      "emoji": "🃏",
+      "color": "#ea580c",
+      "title": "The Wild Card",
+      "summary": "Cheeky, reckless and always up for it. You act first and ask questions much, much later.",
+      "description": [
+        "Like John, you're the fun one. The middle Shelby brother is cheeky, impulsive and always ready for a laugh, or a fight.",
+        "You don't overthink it. John was a widower with four children when Tommy arranged his marriage to Esme Lee to end a feud with the Lee family, and he went along with it.",
+        "You're braver than you are careful. John is always first through the door, which is brilliant right up until it isn't."
+      ],
+      "strengths": [
+        "Fun",
+        "Fearless",
+        "Loyal"
+      ],
+      "flaw": "You act first and think about it never.",
+      "signature": "A cheeky grin, a flat cap and a punch already on its way.",
+      "clashReason": "they'd never take anything seriously"
+    },
+    {
+      "id": "ada",
+      "name": "Ada Shelby",
+      "emoji": "✊",
+      "color": "#be123c",
+      "title": "The Rebel",
+      "summary": "Independent, outspoken and nobody's little sister. You make your own choices, and you'll tell anyone who disagrees.",
+      "description": [
+        "Like Ada, you refuse to be told what to do. The only Shelby sister wants a life of her own, away from the family business.",
+        "You follow your heart. Ada fell for Freddie Thorne, a communist union organiser, and married him even though Tommy was dead against it.",
+        "You speak your mind. Ada is the one Shelby who'll tell her brothers exactly what she thinks of them, to their faces."
+      ],
+      "strengths": [
+        "Independent",
+        "Principled",
+        "Brave"
+      ],
+      "flaw": "You'd rather lose everything than be told what to do.",
+      "signature": "A political pamphlet and a withering look at her brothers.",
+      "clashReason": "they'd tell you exactly what's wrong with your life, to your face"
+    },
+    {
+      "id": "michael",
+      "name": "Michael Gray",
+      "emoji": "📒",
+      "color": "#0f766e",
+      "title": "The Ambitious Heir",
+      "summary": "Clever, hungry and impatient. You want a seat at the top table, and you want it now.",
+      "description": [
+        "Like Michael, you're hungry for more. Polly's son was raised by another family, then came back to Birmingham and wanted in on the Shelby business straight away.",
+        "You're good with numbers. Michael started out as the company's accountant, and later ran the family's business in New York.",
+        "Your ambition can get ahead of you. Michael wants to prove himself so badly that he starts to clash with Tommy over who should be in charge."
+      ],
+      "strengths": [
+        "Clever",
+        "Driven",
+        "Good with money"
+      ],
+      "flaw": "You want it all, and you want it now.",
+      "signature": "A ledger, a sharp suit and one eye on the top job.",
+      "clashReason": "they'd be after your job before you'd noticed"
+    },
+    {
+      "id": "alfie",
+      "name": "Alfie Solomons",
+      "emoji": "🍞",
+      "color": "#92400e",
+      "title": "The Wild Genius",
+      "summary": "Brilliant, unpredictable and impossible to read. You talk a lot, and every word could mean anything.",
+      "description": [
+        "Like Alfie, you're completely unpredictable. He leads a Jewish gang in Camden Town, and runs it from a bakery that isn't really a bakery.",
+        "You love to talk. Alfie's long, rambling speeches can be funny, philosophical or terrifying, often all three at once.",
+        "Nobody knows whose side you're on. Alfie has been Tommy's partner, his enemy and his friend, and Tommy is never quite sure which it'll be next."
+      ],
+      "strengths": [
+        "Clever",
+        "Entertaining",
+        "Fearless"
+      ],
+      "flaw": "Nobody, including you, knows whose side you're on.",
+      "signature": "A big beard, a bakery and a speech that goes somewhere very dark.",
+      "clashReason": "they'd talk for twenty minutes and you'd still have no idea whose side they're on"
+    },
+    {
+      "id": "grace",
+      "name": "Grace Burgess",
+      "emoji": "🎤",
+      "color": "#1d4ed8",
+      "title": "The Secret Keeper",
+      "summary": "Elegant, private and torn between your head and your heart. There's more to you than anyone knows.",
+      "description": [
+        "Like Grace, there's more to you than meets the eye. She arrived in Birmingham as an undercover agent, sent to help the police bring down the Peaky Blinders.",
+        "You've got a quiet talent. Grace got her job behind the bar at the Garrison by impressing the landlord with her singing.",
+        "Your heart gets in the way of the plan. Grace fell in love with Tommy, the man she'd been sent to spy on, and eventually married him."
+      ],
+      "strengths": [
+        "Composed",
+        "Talented",
+        "Loyal to her heart"
+      ],
+      "flaw": "You keep your real self hidden until it's almost too late.",
+      "signature": "A song in a smoky pub, and a secret she can't tell anyone.",
+      "clashReason": "they'd be keeping secrets from you, and you'd never guess which"
+    }
+  ],
+  "questions": [
+    {
+      "text": "A stranger in the pub starts mouthing off at your friend. You...",
+      "options": [
+        {
+          "text": "Smile, say nothing, and deal with it later",
+          "points": {
+            "tommy": 3
+          }
+        },
+        {
+          "text": "You're across the room before they've finished the sentence",
+          "points": {
+            "arthur": 3
+          }
+        },
+        {
+          "text": "Start a long, calm speech that gets scarier the longer it goes on",
+          "points": {
+            "alfie": 3
+          }
+        },
+        {
+          "text": "Leave it. A scene in the pub isn't worth it",
+          "points": {
+            "grace": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your friends are planning a trip, and nobody's organising it. You...",
+      "options": [
+        {
+          "text": "Take over quietly. By tomorrow everything's booked",
+          "points": {
+            "tommy": 3
+          }
+        },
+        {
+          "text": "Work out the costs and tell everyone what they owe by Friday",
+          "points": {
+            "michael": 3
+          }
+        },
+        {
+          "text": "Offer to sort the music and the drinks. The fun part",
+          "points": {
+            "john": 3
+          }
+        },
+        {
+          "text": "Tell them to let you know where to be",
+          "points": {
+            "arthur": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend asks what you think of their new partner, and you don't like them. You...",
+      "options": [
+        {
+          "text": "Tell them straight. You've never been good at pretending",
+          "points": {
+            "ada": 3
+          }
+        },
+        {
+          "text": "Say nothing yet, but watch that partner very closely",
+          "points": {
+            "polly": 3
+          }
+        },
+        {
+          "text": "Say they seem lovely. It's not your business",
+          "points": {
+            "grace": 3
+          }
+        },
+        {
+          "text": "Ask a lot of strange questions and never give a straight answer",
+          "points": {
+            "alfie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your ideal Saturday night is...",
+      "options": [
+        {
+          "text": "A packed pub, too many drinks and a sing-along",
+          "points": {
+            "john": 3
+          }
+        },
+        {
+          "text": "Working. Nobody bothers you on a Saturday",
+          "points": {
+            "tommy": 3
+          }
+        },
+        {
+          "text": "A smart party full of interesting people with strong opinions",
+          "points": {
+            "ada": 3
+          }
+        },
+        {
+          "text": "Somewhere with live music, where you might sing a song yourself",
+          "points": {
+            "grace": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You lose a lot of money on a bet that seemed like a sure thing. You...",
+      "options": [
+        {
+          "text": "Hide it, and hope nobody ever checks the accounts",
+          "points": {
+            "michael": 3
+          }
+        },
+        {
+          "text": "Laugh it off. Easy come, easy go",
+          "points": {
+            "john": 3
+          }
+        },
+        {
+          "text": "Blame the bookie. It was obviously rigged",
+          "points": {
+            "alfie": 3
+          }
+        },
+        {
+          "text": "Win it back quietly. You've cleaned up worse messes than this",
+          "points": {
+            "polly": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone younger at work keeps asking how you got where you are. You...",
+      "options": [
+        {
+          "text": "Give them one piece of advice, and it's a very good one",
+          "points": {
+            "polly": 3
+          }
+        },
+        {
+          "text": "Tell them a rambling story that may or may not be true",
+          "points": {
+            "alfie": 3
+          }
+        },
+        {
+          "text": "Shrug. Mostly luck and a bit of cheek",
+          "points": {
+            "john": 3
+          }
+        },
+        {
+          "text": "Get nostalgic about the old days, before everything got complicated",
+          "points": {
+            "arthur": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're offered a promotion, but you'd be working for someone you don't trust. You...",
+      "options": [
+        {
+          "text": "Take it. You'll be running the place within a year",
+          "points": {
+            "michael": 3
+          }
+        },
+        {
+          "text": "Take it, and quietly start keeping notes on them",
+          "points": {
+            "tommy": 3
+          }
+        },
+        {
+          "text": "Turn it down. You'd rather make your own way",
+          "points": {
+            "ada": 3
+          }
+        },
+        {
+          "text": "Turn it down. Some things matter more than money",
+          "points": {
+            "grace": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend admits they can't sleep because of nightmares about something they went through. You...",
+      "options": [
+        {
+          "text": "Take them out and make sure they forget about it for one night",
+          "points": {
+            "john": 3
+          }
+        },
+        {
+          "text": "Admit you've been there too. It helps to say it out loud",
+          "points": {
+            "arthur": 3
+          }
+        },
+        {
+          "text": "Take charge, and keep everyone else off their back",
+          "points": {
+            "polly": 3
+          }
+        },
+        {
+          "text": "Sit with them. You don't need to say anything",
+          "points": {
+            "grace": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone pays you back money you'd forgotten they owed you. You...",
+      "options": [
+        {
+          "text": "Spend it at the stables. Horses make more sense than people",
+          "points": {
+            "tommy": 3
+          }
+        },
+        {
+          "text": "Invest it. Money should make more money",
+          "points": {
+            "michael": 3
+          }
+        },
+        {
+          "text": "Treat yourself to something very stylish to wear",
+          "points": {
+            "polly": 3
+          }
+        },
+        {
+          "text": "Buy a bottle of something old and strong, and take your time with it",
+          "points": {
+            "alfie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your relatives offer you a job, but you don't like how they make their money. You...",
+      "options": [
+        {
+          "text": "Say no, and tell them exactly why",
+          "points": {
+            "ada": 3
+          }
+        },
+        {
+          "text": "Take it. Family comes first, even when it hurts",
+          "points": {
+            "arthur": 3
+          }
+        },
+        {
+          "text": "Agree, as long as you get a proper say in how it's run",
+          "points": {
+            "michael": 3
+          }
+        },
+        {
+          "text": "Go along with it. Asking questions just slows things down",
+          "points": {
+            "john": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "It's the 1920s, and you run a small family business in a rough city. A powerful gang from London offers a partnership. You'd get rich, but you'd owe them. You...",
+      "options": [
+        {
+          "text": "Shake hands, then quietly plan to take over their business too",
+          "points": {
+            "tommy": 3
+          }
+        },
+        {
+          "text": "Say yes, then change the deal whenever it suits you",
+          "points": {
+            "alfie": 3
+          }
+        },
+        {
+          "text": "Push for an even bigger deal before you sign",
+          "points": {
+            "michael": 3
+          }
+        },
+        {
+          "text": "Refuse. You want no part of it",
+          "points": {
+            "ada": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "It's 1919, and your brother has come home from the war a different person. He's drinking and getting into fights. You...",
+      "options": [
+        {
+          "text": "Tell him to his face that he's scaring everyone",
+          "points": {
+            "ada": 3
+          }
+        },
+        {
+          "text": "Sit him down and tell him the family needs him sober",
+          "points": {
+            "polly": 3
+          }
+        },
+        {
+          "text": "Tell him you saw the same things out there, and you're not okay either",
+          "points": {
+            "arthur": 3
+          }
+        },
+        {
+          "text": "Help him find someone he can talk to, and go with him",
+          "points": {
+            "grace": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

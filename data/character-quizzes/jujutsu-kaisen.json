@@ -1,0 +1,530 @@
+{
+  "slug": "jujutsu-kaisen",
+  "show": "Jujutsu Kaisen",
+  "shortName": "Jujutsu Kaisen",
+  "seoTitle": "Jujutsu Kaisen Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the Jujutsu Kaisen test: 12 everyday questions reveal whether you're Yuji, Megumi, Nobara, Gojo, Nanami, Maki, Toge or Sukuna — with your full character breakdown.",
+  "intro": "Are you the big-hearted hero, the untouchable teacher, or the King of Curses himself? Answer 12 everyday questions about work, friends and pressure, and find out which Jujutsu Kaisen character you are.",
+  "characters": [
+    {
+      "id": "yuji",
+      "name": "Yuji Itadori",
+      "emoji": "👊",
+      "color": "#dc2626",
+      "title": "The Big-Hearted Hero",
+      "summary": "Warm, fearless and always ready to help. You'd take a hit for a stranger.",
+      "description": [
+        "Like Yuji, you help people without thinking twice. The high-schooler swallowed a cursed finger to save his friends, and ended up sharing his body with the King of Curses.",
+        "You're friendly, upbeat and easy to like. Before Jujutsu High he spent his time in his school's Occult Club instead of on the track team, and he'll happily watch any movie you put on.",
+        "You carry your grandfather's last words with you: help people, and die surrounded by people. Your weakness is blaming yourself for every loss."
+      ],
+      "strengths": [
+        "Kind",
+        "Fearless",
+        "Easy to get along with"
+      ],
+      "flaw": "You blame yourself for everything that goes wrong.",
+      "signature": "A big grin, a red hood and a movie marathon.",
+      "clashReason": "they'd throw themselves in front of danger for anyone, and expect you to keep up"
+    },
+    {
+      "id": "megumi",
+      "name": "Megumi Fushiguro",
+      "emoji": "🐺",
+      "color": "#1e3a8a",
+      "title": "The Quiet Guardian",
+      "summary": "Serious, sensible and hard to impress. You keep your circle small and protect it fiercely.",
+      "description": [
+        "Like Megumi, you don't let many people in. The quiet first-year summons creatures from his own shadow, including his loyal Divine Dogs.",
+        "You're level-headed and hard to rattle. Where Yuji wants to save everyone, Megumi admits he saves people unequally: he chooses who he fights for.",
+        "Your weakness is keeping everything in. You'd rather take the hit yourself than ask anyone for help."
+      ],
+      "strengths": [
+        "Level-headed",
+        "Protective",
+        "Reliable"
+      ],
+      "flaw": "You'd sacrifice yourself before you'd ask for help.",
+      "signature": "A frown, a sensible plan and two dogs made of shadow.",
+      "clashReason": "they keep to themselves and decide who's worth their time"
+    },
+    {
+      "id": "nobara",
+      "name": "Nobara Kugisaki",
+      "emoji": "🔨",
+      "color": "#ea580c",
+      "title": "The Unapologetic One",
+      "summary": "Bold, loud and completely yourself. Nobody underestimates you twice.",
+      "description": [
+        "Like Nobara, you know exactly who you are. She left her small country village for Tokyo because she couldn't stand how narrow-minded it was.",
+        "You're confident and you hate being underestimated. She fights curses with a hammer, nails and a straw doll, and she loves shopping almost as much.",
+        "Your weakness is your mouth. But you're a loyal friend, and you never pretend to be someone you're not."
+      ],
+      "strengths": [
+        "Confident",
+        "Loyal",
+        "Brave"
+      ],
+      "flaw": "You say exactly what you think, even when you really shouldn't.",
+      "signature": "A hammer in one hand and shopping bags in the other.",
+      "clashReason": "they say exactly what they think, loudly, and never back down"
+    },
+    {
+      "id": "gojo",
+      "name": "Satoru Gojo",
+      "emoji": "🕶️",
+      "color": "#0ea5e9",
+      "title": "The Untouchable",
+      "summary": "Playful, brilliant and supremely confident. You're the best, and you know it.",
+      "description": [
+        "Like Gojo, you're the strongest in the room and you know it. The blindfolded teacher is the most powerful sorcerer alive, and he treats almost everything like a joke.",
+        "You're playful, generous and allergic to rules you think are stupid. He loves sweets, teases his students and ignores the elders, but he'd do anything to give his students a better future.",
+        "Your weakness is arrogance. You're so sure you'll win that you forget to plan for what happens if you don't."
+      ],
+      "strengths": [
+        "Brilliant",
+        "Generous",
+        "Fun to be around"
+      ],
+      "flaw": "You're so sure you'll win that you never plan for losing.",
+      "signature": "A blindfold, a cocky grin and a box of sweets.",
+      "clashReason": "they know they're the best, and they never let you forget it"
+    },
+    {
+      "id": "nanami",
+      "name": "Kento Nanami",
+      "emoji": "👔",
+      "color": "#a16207",
+      "title": "The Reluctant Professional",
+      "summary": "Calm, reliable and firm about boundaries. You're the only proper adult in the room.",
+      "description": [
+        "Like Nanami, you take work seriously, just not more seriously than it deserves. He quit being a sorcerer to work in an office, found that just as pointless, and came back on his own terms.",
+        "You're calm, dependable and firm about your time. Nanami hates overtime, loves good bread and dreamed of retiring to a quiet beach in Malaysia.",
+        "Your weakness is how tired you are of it all. But when things get serious, you're the one everyone can count on."
+      ],
+      "strengths": [
+        "Dependable",
+        "Calm",
+        "Sets boundaries"
+      ],
+      "flaw": "You treat life like a job to get through, not something to enjoy.",
+      "signature": "A neat suit, a patterned tie and a watch that says it's time to go home.",
+      "clashReason": "they do exactly what they signed up for, and not a minute more"
+    },
+    {
+      "id": "maki",
+      "name": "Maki Zen'in",
+      "emoji": "🥢",
+      "color": "#15803d",
+      "title": "The Self-Made Fighter",
+      "summary": "Tough, blunt and driven. You've spent your life proving people wrong.",
+      "description": [
+        "Like Maki, you've had to fight for every bit of respect. Born into a powerful sorcerer family, she was looked down on because she had almost no cursed energy.",
+        "You're tough, blunt and you train harder than anyone. She makes up for what she lacks with weapons, strength and pure determination.",
+        "Your weakness is pride. You hate needing help. But you look out for your friends, even if you'd never say it nicely."
+      ],
+      "strengths": [
+        "Determined",
+        "Tough",
+        "Honest"
+      ],
+      "flaw": "You'd rather struggle alone than admit you need help.",
+      "signature": "Glasses, a ponytail and a weapon taller than you.",
+      "clashReason": "they're tough on everyone and never let you take the easy way out"
+    },
+    {
+      "id": "toge",
+      "name": "Toge Inumaki",
+      "emoji": "🍙",
+      "color": "#7c3aed",
+      "title": "The Quiet Friend",
+      "summary": "Kind, playful and quietly dependable. You don't need many words.",
+      "description": [
+        "Like Toge, you say a lot with very little. His voice is so powerful that anything he says can become a command, so he only speaks in rice ball ingredients.",
+        "You're kind, playful and always there when it counts. His friends Maki and Panda understand him perfectly, and he'd do anything for them.",
+        "People sometimes mistake you for shy or distant, but you care deeply about the people around you."
+      ],
+      "strengths": [
+        "Kind",
+        "Dependable",
+        "Playful"
+      ],
+      "flaw": "You keep so much to yourself that people can't tell what you're thinking.",
+      "signature": "A high collar and a single word: \"Salmon.\"",
+      "clashReason": "they say so little that you never know what they're thinking"
+    },
+    {
+      "id": "sukuna",
+      "name": "Ryomen Sukuna",
+      "emoji": "👹",
+      "color": "#7f1d1d",
+      "title": "The King of Curses",
+      "summary": "Arrogant, ruthless and totally unbothered. You do exactly what you want.",
+      "description": [
+        "Like Sukuna, you answer to nobody. The King of Curses was a sorcerer a thousand years ago, so feared that his remains became cursed objects.",
+        "You're confident, cutting and completely unbothered by what anyone thinks. He finds almost everyone weak and boring.",
+        "Your weakness is that you care about nobody but yourself. People fear you, but nobody would call you a friend."
+      ],
+      "strengths": [
+        "Fearless",
+        "Confident",
+        "Never pretends"
+      ],
+      "flaw": "You only care about what entertains you.",
+      "signature": "Extra eyes, a cruel smile and absolutely no manners.",
+      "clashReason": "they look down on everyone and only care about themselves"
+    }
+  ],
+  "questions": [
+    {
+      "text": "It's your friend's birthday tomorrow and you haven't got them anything. You...",
+      "options": [
+        {
+          "text": "Hit the shops. You know exactly what would look good on them",
+          "points": {
+            "nobara": 3
+          }
+        },
+        {
+          "text": "Turn up with the biggest cake from the fanciest bakery",
+          "points": {
+            "gojo": 3
+          }
+        },
+        {
+          "text": "Write them a short card. A few words can say a lot",
+          "points": {
+            "toge": 3
+          }
+        },
+        {
+          "text": "Nothing. Birthdays are a waste of time",
+          "points": {
+            "sukuna": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your boss asks you to stay late again, unpaid. You...",
+      "options": [
+        {
+          "text": "Leave on time. That's not what you signed up for",
+          "points": {
+            "nanami": 3
+          }
+        },
+        {
+          "text": "Stay. The team needs the help",
+          "points": {
+            "yuji": 3
+          }
+        },
+        {
+          "text": "Stay and outwork everyone. Let them see what you can do",
+          "points": {
+            "maki": 3
+          }
+        },
+        {
+          "text": "Say yes, then quietly slip out anyway",
+          "points": {
+            "gojo": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone says you'll never be good enough at the thing you want most. You...",
+      "options": [
+        {
+          "text": "Train twice as hard and prove them wrong",
+          "points": {
+            "maki": 3
+          }
+        },
+        {
+          "text": "Tell them exactly where they can stick their opinion",
+          "points": {
+            "nobara": 3
+          }
+        },
+        {
+          "text": "Make them regret ever saying it",
+          "points": {
+            "sukuna": 3
+          }
+        },
+        {
+          "text": "Shrug. You don't need their approval",
+          "points": {
+            "megumi": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your plans get cancelled and you're already out in town. You head for...",
+      "options": [
+        {
+          "text": "The shops. You're coming home with bags",
+          "points": {
+            "nobara": 3
+          }
+        },
+        {
+          "text": "The best dessert place around",
+          "points": {
+            "gojo": 3
+          }
+        },
+        {
+          "text": "A long walk somewhere quiet, on your own",
+          "points": {
+            "megumi": 3
+          }
+        },
+        {
+          "text": "The cinema. You'll watch whatever's on",
+          "points": {
+            "yuji": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A group project is way behind schedule. You...",
+      "options": [
+        {
+          "text": "Work out what actually matters and focus on that",
+          "points": {
+            "megumi": 3
+          }
+        },
+        {
+          "text": "Do your share properly. The rest isn't your job",
+          "points": {
+            "nanami": 3
+          }
+        },
+        {
+          "text": "Help whoever's struggling, without making a fuss",
+          "points": {
+            "toge": 3
+          }
+        },
+        {
+          "text": "Push everyone harder. Excuses won't finish it",
+          "points": {
+            "maki": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend asks you to help them move house on your day off. You...",
+      "options": [
+        {
+          "text": "Say yes before they've even finished asking",
+          "points": {
+            "yuji": 3
+          }
+        },
+        {
+          "text": "Turn up on time with a proper plan for the van",
+          "points": {
+            "nanami": 3
+          }
+        },
+        {
+          "text": "Carry the heaviest boxes. It's a good workout",
+          "points": {
+            "maki": 3
+          }
+        },
+        {
+          "text": "Ignore the message",
+          "points": {
+            "sukuna": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend drags you to a house party, then disappears. You...",
+      "options": [
+        {
+          "text": "Chat to everyone. You'll have new friends by midnight",
+          "points": {
+            "yuji": 3
+          }
+        },
+        {
+          "text": "Find a quiet corner and count down until you can leave",
+          "points": {
+            "megumi": 3
+          }
+        },
+        {
+          "text": "Become the centre of attention within ten minutes",
+          "points": {
+            "gojo": 3
+          }
+        },
+        {
+          "text": "Help the host tidy up. It's easier than small talk",
+          "points": {
+            "toge": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A stranger on the bus is being hassled by a group of people. You...",
+      "options": [
+        {
+          "text": "Step in straight away, whatever happens",
+          "points": {
+            "yuji": 3
+          }
+        },
+        {
+          "text": "Tell them loudly exactly what you think of them",
+          "points": {
+            "nobara": 3
+          }
+        },
+        {
+          "text": "Calmly stand between them and tell the driver",
+          "points": {
+            "nanami": 3
+          }
+        },
+        {
+          "text": "Keep scrolling on your phone. Not your problem",
+          "points": {
+            "sukuna": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You win $500 on a scratch card. You...",
+      "options": [
+        {
+          "text": "Save every cent. Early retirement won't pay for itself",
+          "points": {
+            "nanami": 3
+          }
+        },
+        {
+          "text": "Treat yourself to something expensive you don't need",
+          "points": {
+            "nobara": 3
+          }
+        },
+        {
+          "text": "Take everyone out and pay for the lot",
+          "points": {
+            "gojo": 3
+          }
+        },
+        {
+          "text": "Quietly help out a friend who's short on money",
+          "points": {
+            "toge": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're watching a horror movie alone late at night. You...",
+      "options": [
+        {
+          "text": "Put on another one straight after. That was great",
+          "points": {
+            "yuji": 3
+          }
+        },
+        {
+          "text": "Root for the monster",
+          "points": {
+            "sukuna": 3
+          }
+        },
+        {
+          "text": "Turn it off halfway. You've got work in the morning",
+          "points": {
+            "nanami": 3
+          }
+        },
+        {
+          "text": "Laugh at the bad effects the whole way through",
+          "points": {
+            "nobara": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You and your friends fight monsters for a living. One of them insists on facing a deadly one alone. You...",
+      "options": [
+        {
+          "text": "Take the most dangerous part yourself so they don't have to",
+          "points": {
+            "megumi": 3
+          }
+        },
+        {
+          "text": "Let them. They deserve the chance to prove themselves",
+          "points": {
+            "maki": 3
+          }
+        },
+        {
+          "text": "Go with them and watch their back. No discussion needed",
+          "points": {
+            "toge": 3
+          }
+        },
+        {
+          "text": "Tell them to relax. You'll deal with it yourself",
+          "points": {
+            "gojo": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You're a sorcerer who fights monsters. One has taken over a crowded building, and help is an hour away. You...",
+      "options": [
+        {
+          "text": "Get out the people you can reach. You can't save everyone",
+          "points": {
+            "megumi": 3
+          }
+        },
+        {
+          "text": "Grab a weapon and go straight in",
+          "points": {
+            "maki": 3
+          }
+        },
+        {
+          "text": "Keep people calm and get them moving out",
+          "points": {
+            "toge": 3
+          }
+        },
+        {
+          "text": "Watch from across the street. This should be fun",
+          "points": {
+            "sukuna": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

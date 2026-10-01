@@ -86,8 +86,8 @@ const APP_ANNOUNCEMENTS = [
   // batch gets announced). Point the CTA at a hub page once there are several.
   {
     icon: "🎭",
-    title: "New Character Tests: Money Heist & Squid Game",
-    text: "Which Money Heist or Squid Game character are you? Answer 12 quick questions and find out.",
+    title: "8 New Character Tests",
+    text: "Which Peaky Blinders, Supernatural, Ted Lasso or Lord of the Rings character are you? Plus Jujutsu Kaisen, The Hunger Games, Sex and the City and Desperate Housewives.",
     cta: { label: "Take a Test", href: "character-quiz/index.html" },
   },
   {
