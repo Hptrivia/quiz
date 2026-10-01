@@ -425,7 +425,7 @@
           (typeof webQCounterHTML === 'function' ? webQCounterHTML() : '') +
           "<div class=\"cta-row\">" +
           (hasNextPage && !atLimit ? "<a class=\"primary-btn\" href=\"mashup-play.html?themes=" + themesParam + "&mode=marathon&page=" + (safePage + 1) + "\" data-rewarded-href=\"mashup-play.html?themes=" + themesParam + "&mode=marathon&page=" + (safePage + 1) + "\">Next Round</a>" : "") +
-          (hasNextPage && atLimit ? wallHtml : "") +
+          (hasNextPage && atLimit ? webNextGateHTML("Next Round", wallHtml) : "") +
           "<a class=\"secondary-btn\" href=\"contact.html\">Report a Question</a>" +
           "</div>";
 
@@ -613,7 +613,7 @@
           "<div class=\"challenge-link-box\" id=\"shareUrlBox\" style=\"cursor:pointer\" title=\"Click to copy\">" + shareUrl + "</div>" +
           "<div class=\"cta-row\">" +
           (hasNextRound && !atLimit ? "<a class=\"primary-btn\" href=\"mashup-play.html?themes=" + themesParam + "&mode=challenge&round=" + (safeRound + 1) + "\"" + (safeRound % 3 === 0 ? " data-rewarded-href=\"mashup-play.html?themes=" + themesParam + "&mode=challenge&round=" + (safeRound + 1) + "\"" : "") + ">Next Round</a>" : "") +
-          (hasNextRound && atLimit ? wallHtml : "") +
+          (hasNextRound && atLimit ? webNextGateHTML("Next Round", wallHtml) : "") +
           "<button class=\"secondary-btn\" id=\"copyShareBtn\">Copy Link</button>" +
           "<a class=\"secondary-btn\" href=\"contact.html\">Report a Question</a>" +
           "</div>";

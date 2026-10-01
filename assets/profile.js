@@ -740,6 +740,35 @@ function injectWebFeatureTease(ctaRow, label, title, body) {
   else ctaRow.appendChild(btn);
 }
 
+// Once a web visitor's free allowance is spent, result screens keep the normal
+// "Next Round" / "Next Episode" / "Continue" button; tapping it opens the install
+// wall as a dismissible pop-up (same overlay as the Reveal Answers tease) instead
+// of the wall sitting inline in place of the button. The wall copy rides along in
+// a <template> so each call site keeps its own webWallHTML(...) message. Taps are
+// logged as next_gate_open, and the pop-up's store buttons as next_gate_store_btn
+// (instead of the generic wall_store_btn) so this placement can be measured alone.
+function webNextGateHTML(label, wallHtml) {
+  return `<a href="#" class="primary-btn web-next-gate" data-promo="next_gate_open">${label}</a><template class="web-next-gate-tpl">${wallHtml}</template>`;
+}
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest && e.target.closest('.web-next-gate');
+  if (!btn) return;
+  e.preventDefault();
+  if (document.querySelector('.android-wall-overlay')) return;
+  const tpl = btn.nextElementSibling;
+  if (!tpl || !tpl.content) return;
+  const overlay = document.createElement('div');
+  overlay.className = 'android-wall-overlay';
+  overlay.appendChild(tpl.content.cloneNode(true));
+  const card = overlay.querySelector('.android-wall');
+  if (card) card.insertAdjacentHTML('afterbegin', '<button type="button" class="qr-overlay-close" aria-label="Close">✕</button>');
+  overlay.querySelectorAll('[data-promo="wall_store_btn"]').forEach(el => { el.dataset.promo = 'next_gate_store_btn'; });
+  overlay.addEventListener('click', (ev) => {
+    if (ev.target === overlay || ev.target.closest('.qr-overlay-close')) overlay.remove();
+  });
+  document.body.appendChild(overlay);
+});
+
 // In-quiz "Skip"/"Next batch" links (Marathon page, Challenge round, Episode,
 // Word Search) used to ALWAYS pop the app wall on mobile web, whatever the
 // position — which blocked Challenge round 1 → 2 even though round 2 is inside

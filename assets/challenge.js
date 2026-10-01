@@ -1,10 +1,10 @@
 // Challenge mode shares the global web question allowance (_WEB_LIMITS.Q in
 // profile.js, currently 20) with Marathon, Episode and Survival. Each round is
 // exactly 10 questions (ROUND_SIZE, below), so rounds 1-2 are free on web;
-// round 3+ is walled — by the result-screen wall once the count is spent, and
+// round 3+ is walled — by the Next Round install pop-up once the count is spent, and
 // by _checkWebPageWall's URL-position check if the URL is edited or skipped to.
-// True when this round's result screen should show the install wall instead of
-// a Next-Round button (web only — the native app never walls, it shows ads).
+// True when this round's Next Round button should open the install pop-up instead
+// of navigating (web only — the native app never walls, it shows ads).
 function chalWebWalled() {
   return typeof isWebQLimit === 'function' && isWebQLimit();
 }
@@ -248,7 +248,7 @@ async function renderMultiThemeChallenge() {
       ${webQCounterHTML()}
       <div class="cta-row">
         ${hasNextRound && !webWalled ? `<a class="primary-btn" href="challenge.html?themes=${themesParam}&round=${safeRound + 1}" ${safeRound % 2 === 0 ? `data-rewarded-href="challenge.html?themes=${themesParam}&round=${safeRound + 1}"` : ''}>Next Round</a>` : ""}
-        ${webWalled ? webWallHTML(null, null) : ""}
+        ${webWalled ? webNextGateHTML("Next Round", webWallHTML(null, null)) : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
         ${!isPremiumUser() && (typeof isDesktopWeb === 'function' && isDesktopWeb()) ? `<a class="secondary-btn" href="remove-ads.html">Reveal Answers</a>` : ""}
       </div>
@@ -308,7 +308,7 @@ async function renderMultiThemeChallenge() {
         <h2>Round ${saved.round} Complete</h2>
         ${cumScoreLine(saved.score, saved.total, cumR)}
         <div class="cta-row">
-          ${resumeWalled ? webWallHTML(null, null) : `<a class="primary-btn" id="mashupContinueBtn" href="challenge.html?themes=${themesParam}&round=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
+          ${resumeWalled ? webNextGateHTML(`Continue to Round ${saved.round + 1}`, webWallHTML(null, null)) : `<a class="primary-btn" id="mashupContinueBtn" href="challenge.html?themes=${themesParam}&round=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
           <button class="secondary-btn" id="mashupRound1Btn">Start from Round 1</button>
         </div>
         ${replayHtml}`;
@@ -492,7 +492,7 @@ async function renderChallengePage() {
         <h2>Round ${saved.round} Complete</h2>
         ${cumScoreLine(saved.score, saved.total, cumR)}
         <div class="cta-row">
-          ${resumeWalled ? webWallHTML(null, theme.title) : `<a class="primary-btn" id="continueRoundBtn" href="challenge.html?theme=${theme.slug}&round=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
+          ${resumeWalled ? webNextGateHTML(`Continue to Round ${saved.round + 1}`, webWallHTML(null, theme.title)) : `<a class="primary-btn" id="continueRoundBtn" href="challenge.html?theme=${theme.slug}&round=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
           <button class="secondary-btn" id="startRound1Btn">Start from Round 1</button>
         </div>
         ${replayHtml}
@@ -733,7 +733,7 @@ async function renderChallengePage() {
       ${webQCounterHTML()}
       <div class="cta-row">
         ${hasNextRound && !webWalled ? `<a class="primary-btn" href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}" ${safeRound % 2 === 0 ? `data-rewarded-href="challenge.html?theme=${theme.slug}&round=${safeRound + 1}"` : ''}>Next Round</a>` : ""}
-        ${webWalled ? webWallHTML(null, theme.title) : ""}
+        ${webWalled ? webNextGateHTML("Next Round", webWallHTML(null, theme.title)) : ""}
         ${(typeof packPurchaseHTML === 'function' && packPurchaseHTML(theme.slug)) || `<a class="secondary-btn" href="contact.html">Report a Question</a>`}
         ${!isPremiumUser() && (typeof isDesktopWeb === 'function' && isDesktopWeb()) ? `<a class="secondary-btn" href="remove-ads.html?theme=${theme.slug}">Reveal Answers</a>` : ""}
       </div>

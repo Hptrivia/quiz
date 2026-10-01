@@ -313,8 +313,9 @@ async function renderEpisodePage() {
       _copyText(text).then(ok => doFeedback(ok ? "Copied — now paste it!" : "Press Ctrl/Cmd+C to copy"));
     }
     // Classic vertical grid: 5 per row, full-size emoji (user prefers the look).
-    // It's tall, so the install wall is rendered ABOVE this card (see the resultBox
-    // order below) to keep the wall high. Copied text keeps its own 5-per-row grid.
+    // The score grid sits at the top of the result screen, with Next Episode below
+    // it (on web past the free episode, Next Episode opens the install pop-up —
+    // see webNextGateHTML in profile.js). Copied text keeps its own 5-per-row grid.
     const _gridCells = qResults.map(r => r === true ? "🟩" : r === false ? "🟥" : "⬜");
     const _gridRows = [];
     for (let i = 0; i < _gridCells.length; i += 5) _gridRows.push(_gridCells.slice(i, i + 5).join(""));
@@ -333,13 +334,13 @@ async function renderEpisodePage() {
       </div>`;
 
     resultBox.innerHTML = `
+      ${shareHtml}
       ${webQCounterHTML()}
       <div class="cta-row">
         ${hasNextEpisode && !isWebEpLimit() ? `<a class="primary-btn" href="episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}" data-rewarded-href="episode.html?theme=${theme.slug}&episode=${nextEpisodeNumber}">Next Episode</a>` : ""}
-        ${hasNextEpisode && isWebEpLimit() ? webWallHTML("Yay! You've played an episode", theme.title, "episodes", null, false, `Download Trivia Gauntlet free to play Episode ${nextEpisodeNumber} of ${theme.title}.`) : ""}
+        ${hasNextEpisode && isWebEpLimit() ? webNextGateHTML("Next Episode", webWallHTML("Yay! You've played an episode", theme.title, "episodes", null, false, `Download Trivia Gauntlet free to play Episode ${nextEpisodeNumber} of ${theme.title}.`)) : ""}
         ${!hasNextEpisode && isWebEpLimit() ? webWallHTML("Want more Episode Mode trivia?", null, "episodes", null, true, "Download Trivia Gauntlet.") : ""}
       </div>
-      ${shareHtml}
       ${notifyHtml}
       ${affiliateHtml}
       ${relatedHtml}

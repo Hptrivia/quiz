@@ -1209,7 +1209,7 @@ async function renderMultiThemeMarathon() {
       ${typeof webQCounterHTML === 'function' ? webQCounterHTML() : ''}
       <div class="cta-row">
         ${hasNextPage && !(typeof isWebQLimit === 'function' && isWebQLimit()) ? `<a class="primary-btn" href="play.html?themes=${themesParam}&page=${safePage + 1}" data-rewarded-href="play.html?themes=${themesParam}&page=${safePage + 1}">Next Round</a>` : ""}
-        ${hasNextPage && (typeof isWebQLimit === 'function' && isWebQLimit()) ? (typeof webWallHTML === 'function' ? webWallHTML("Yay! You've answered 30 questions") : "") : ""}
+        ${hasNextPage && (typeof isWebQLimit === 'function' && isWebQLimit()) ? (typeof webWallHTML === 'function' ? webNextGateHTML("Next Round", webWallHTML("Yay! You've answered 30 questions")) : "") : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
         ${!isPremiumUser() && (typeof isDesktopWeb === 'function' && isDesktopWeb()) && !(hasNextPage && (typeof isWebQLimit === 'function' && isWebQLimit())) ? `<a class="secondary-btn" href="remove-ads.html">Unlock Full Access</a>` : ""}
       </div>
@@ -1269,7 +1269,7 @@ async function renderMultiThemeMarathon() {
         <h2>Round ${saved.round} Complete</h2>
         ${cumScoreLine(saved.score, saved.total, _cumSum(_cumLoad('tg_mara_cum', mashupKey)))}
         <div class="cta-row">
-          ${resumeWalled ? (typeof webWallHTML === 'function' ? webWallHTML("Yay! You've answered 30 questions") : "") : `<a class="primary-btn" id="mashupMarathonContinueBtn" href="play.html?themes=${themesParam}&page=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
+          ${resumeWalled ? (typeof webWallHTML === 'function' ? webNextGateHTML(`Continue to Round ${saved.round + 1}`, webWallHTML("Yay! You've answered 30 questions")) : "") : `<a class="primary-btn" id="mashupMarathonContinueBtn" href="play.html?themes=${themesParam}&page=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
           <button class="secondary-btn" id="mashupMarathonRound1Btn">Start from Round 1</button>
         </div>
         ${replayHtml}`;
@@ -1410,7 +1410,7 @@ async function renderPlayPage() {
         <h2>Round ${saved.round} Complete</h2>
         ${cumScoreLine(saved.score, saved.total, _cumSum(_cumLoad('tg_mara_cum', theme.slug)))}
         <div class="cta-row">
-          ${resumeWalled ? (typeof webWallHTML === 'function' ? webWallHTML("Yay! You've answered 30 questions", theme.title) : "") : `<a class="primary-btn" id="continueRoundBtn" href="play.html?theme=${theme.slug}&page=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
+          ${resumeWalled ? (typeof webWallHTML === 'function' ? webNextGateHTML(`Continue to Round ${saved.round + 1}`, webWallHTML("Yay! You've answered 30 questions", theme.title)) : "") : `<a class="primary-btn" id="continueRoundBtn" href="play.html?theme=${theme.slug}&page=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
           <button class="secondary-btn" id="startRound1Btn">Start from Round 1</button>
         </div>
         ${replayHtml}`;
@@ -1657,7 +1657,7 @@ const relatedThemesHtml = `
     ${typeof webQCounterHTML === 'function' ? webQCounterHTML() : ''}
     <div class="cta-row">
       ${hasNextPage && !(typeof isWebQLimit === 'function' && isWebQLimit()) ? `<a class="primary-btn" href="play.html?theme=${theme.slug}&page=${safePage + 1}" data-rewarded-href="play.html?theme=${theme.slug}&page=${safePage + 1}">Next Round</a>` : ""}
-      ${hasNextPage && (typeof isWebQLimit === 'function' && isWebQLimit()) ? (typeof webWallHTML === 'function' ? webWallHTML("Yay! You've answered 30 questions", theme.title) : "") : ""}
+      ${hasNextPage && (typeof isWebQLimit === 'function' && isWebQLimit()) ? (typeof webWallHTML === 'function' ? webNextGateHTML("Next Round", webWallHTML("Yay! You've answered 30 questions", theme.title)) : "") : ""}
       ${(typeof packPurchaseHTML === 'function' && packPurchaseHTML(theme.slug)) || `<a class="secondary-btn" href="contact.html">Report a Question</a>`}
       ${!isPremiumUser() && (typeof isDesktopWeb === 'function' && isDesktopWeb()) && !(hasNextPage && (typeof isWebQLimit === 'function' && isWebQLimit())) ? `<a class="secondary-btn" href="remove-ads.html">Unlock Full Access</a>` : ""}
     </div>
