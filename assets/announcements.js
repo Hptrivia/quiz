@@ -102,6 +102,12 @@ const APP_ANNOUNCEMENTS = [
     text: "Episode 2 is now in Episode Mode for both Wednesday and Severance — relive them scene by scene.",
     cta: { label: "Play Wednesday Ep 2", href: "episode.html?theme=wednesday&episode=2" },
   },
+  {
+    icon: "🆕",
+    title: "12 new themes added!",
+    text: "NCIS, Boardwalk Empire, The King of Queens, Entourage, Grimm, Orphan Black, Sword Art Online, Steins;Gate, Castlevania, and more.",
+    cta: { label: "See What's New", href: "recent.html" },
+  },
 ];
 
 function _cbAnnouncementHash(str) {

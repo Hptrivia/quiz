@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if(/TriviaGauntletPremium/.test(navigator.userAgent||''))document.documentElement.classList.add('premium-app');</script>
+  <meta charset="UTF-8" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>NCIS Trivia Quiz &mdash; Questions &amp; Answers | Trivia Gauntlet</title>
+<meta name="description" content="Play the NCIS trivia quiz — 119 questions with answers. Test your knowledge in Marathon, Challenge, Survival, and more." />
+  <link rel="canonical" href="https://triviagauntlet.app/themes/ncis.html" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    if(!/TriviaGauntletPremium/.test(navigator.userAgent||''))gtag('config', 'G-E6BY9F2ZDT');
+  </script>
+
+  <link rel="apple-touch-icon" href="/assets/icon-192.png" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <meta property="og:title" content="NCIS Trivia Questions | Trivia Gauntlet" />
+  <meta property="og:description" content="Play the NCIS trivia quiz — 119 questions with answers. Test your knowledge in Marathon, Challenge, Survival, and more." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://triviagauntlet.app/themes/ncis.html" />
+  <meta property="og:image" content="https://triviagauntlet.app/assets/icon-192.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="NCIS Trivia Questions | Trivia Gauntlet" />
+  <meta name="twitter:description" content="Play the NCIS trivia quiz — 119 questions with answers. Test your knowledge in Marathon, Challenge, Survival, and more." />
+  <meta name="twitter:image" content="https://triviagauntlet.app/assets/icon-192.png" />
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://triviagauntlet.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "TV",
+          "item": "https://triviagauntlet.app/categories/tv.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "NCIS Trivia",
+          "item": "https://triviagauntlet.app/themes/ncis.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "At which base was Gibbs stationed when Shannon witnessed a murder?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Camp Pendleton"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "In which city did Ziva save Jenny Shepard's life?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cairo"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "In which year did NCIS premiere?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "2003"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Jessica Knight transfers to the team from which NCIS unit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "REACT"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Under what surname does Tony go undercover to win Jeanne Benoit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DiNardo"
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+</head>
+<body>
+  <main class="container narrow">
+    <div class="theme-top-links">
+      <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+      <span id="navAvatarSlot"></span>
+      <a href="../index.html" class="back-link">⌂ Home</a>
+    </div>
+
+    <div class="theme-search-wrap">
+      <div class="search-wrap">
+        <input id="themeSearchInput" class="theme-search-input" type="text" placeholder="Search themes..." autocomplete="off" />
+        <div id="themeSearchResults" class="search-results"></div>
+      </div>
+    </div>
+
+    <section class="panel">
+      <h1>NCIS Trivia Questions</h1>
+      <p class="theme-question-count">119 questions across multiple rounds</p>
+<p>A crime procedural trivia theme built around NCIS, following Special Agent Leroy Jethro Gibbs and his Major Case Response Team as they investigate crimes involving the Navy and Marine Corps.</p>
+
+      
+      <div class="grid">
+        <a class="card" href="../challenge.html?theme=ncis&round=1">
+          <h3>Challenge Mode</h3>
+          <p>10-question quick rounds</p>
+        </a>
+
+        <a class="card" href="../play.html?theme=ncis">
+          <h3>Marathon Mode</h3>
+          <p>30-question rounds</p>
+        </a>
+
+        
+
+        <a class="card" href="../survival.html?theme=ncis">
+          <h3>Survival Mode</h3>
+          <p>One mistake and the run ends</p>
+        </a>
+
+        <a class="card" href="../trivia-rush.html?theme=ncis">
+          <h3>Trivia Rush</h3>
+          <p>Score, streak, and multiplier run</p>
+        </a>
+
+        
+        <a class="card" href="../episode.html?theme=ncis">
+          <h3>Episode Mode</h3>
+          <p>🎬 Available by request</p>
+        </a>
+      
+
+        <a class="card" href="../versus.html?theme=ncis">
+          <h3>Versus Mode</h3>
+          <p>Play locally or online against friends</p>
+        </a>
+
+        <a class="card" href="../wordle/ncis.html">
+          <h3>Wordle</h3>
+          <p>Guess themed words</p>
+        </a>
+
+        <a class="card" href="../wordsearch/ncis.html">
+          <h3>Word Search</h3>
+          <p>Find hidden themed words</p>
+        </a>
+
+        
+        <a class="card" href="../fan-questions.html?theme=ncis">
+          <h3>Fan Section <span style="font-size:0.65rem;font-weight:700;background:#f97316;color:#fff;padding:2px 7px;border-radius:4px;vertical-align:middle;margin-left:6px;">BETA</span></h3>
+          <p>Community-created questions. Quality and difficulty may vary.</p>
+        </a>
+      
+
+      </div>
+
+      
+        <div class="theme-sample-questions">
+          <h2>Sample Questions</h2>
+          <p class="sq-hint">Tap an answer to reveal it.</p>
+          <ul>
+            <li>At which base was Gibbs stationed when Shannon witnessed a murder? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Camp Pendleton</span></li><li>In which city did Ziva save Jenny Shepard&#39;s life? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Cairo</span></li><li>In which year did NCIS premiere? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">2003</span></li><li>Jessica Knight transfers to the team from which NCIS unit? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">REACT</span></li><li>Under what surname does Tony go undercover to win Jeanne Benoit? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">DiNardo</span></li><li>Aboard which aircraft does Gibbs first meet Kate? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Air Force One</span></li><li>Where did Abby earn her master&#39;s degree? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Georgia State</span></li><li>Where is Ziva held captive when the team rescues her at the start of season seven? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Somalia</span></li><li>What kind of vehicle did Abby drive before her Ford Model A? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">A hearse</span></li><li>Which English boarding school did Ducky attend? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Eton</span></li>
+          </ul>
+        </div>
+      
+      <p>NCIS trivia works because more than twenty seasons have built one of TV&#39;s most recognisable teams, packed with rules, nicknames and running gags. Questions can cover Gibbs and his rules, Tony, Ziva and McGee, Abby&#39;s lab and Ducky&#39;s autopsy room.</p>
+      <p>A strong NCIS quiz can include Gibbs and his boat in the basement, Gibbs&#39;s rules, Tony DiNozzo and his movie references, Ziva David and Mossad, Timothy McGee and Thom E. Gemcity, Abby Sciuto and Caf-Pow, Ducky Mallard and Jimmy Palmer, Director Jenny Shepard and Leon Vance, Tobias Fornell, Mike Franks, Kasie Hines, Ari Haswari, the Port-to-Port Killer and the Washington Navy Yard. It works because long-time fans know the team&#39;s catchphrases and history by heart.</p>
+      <p>If you enjoy NCIS trivia, also try <a href="../themes/from.html">From</a> and <a href="../themes/the-handmaids-tale.html">The Handmaid&#39;s Tale</a> on Trivia Gauntlet.</p>
+      
+        <div class="theme-related-quizzes">
+          <h2>Related Quizzes</h2>
+          <div class="grid">
+            
+              <a class="card" href="../themes/from.html">
+                <h3>From</h3>
+              </a>
+            
+              <a class="card" href="../themes/the-handmaids-tale.html">
+                <h3>The Handmaid&#39;s Tale</h3>
+              </a>
+            
+              <a class="card" href="../themes/spider-noir.html">
+                <h3>Spider-Noir</h3>
+              </a>
+            
+              <a class="card" href="../themes/succession.html">
+                <h3>Succession</h3>
+              </a>
+            
+              <a class="card" href="../themes/key-and-peele.html">
+                <h3>Key &amp; Peele</h3>
+              </a>
+            
+          </div>
+        </div>
+      
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="../about.html">About</a>
+        <a class="footer-highlight" href="../how-it-works.html">How It Works</a>
+        <a class="footer-highlight" href="../contact.html">Contact</a>
+        <a href="../privacy.html">Privacy Policy</a>
+        <a href="../terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    async function setupThemePageSearch() {
+      const input = document.getElementById("themeSearchInput");
+      const results = document.getElementById("themeSearchResults");
+      if (!input || !results) return;
+
+      try {
+        const res = await fetch("../data/themes.json");
+        const themes = await res.json();
+
+        function render(items) {
+          if (!items.length) {
+            results.innerHTML = '<div class="search-item">No results found</div>';
+            return;
+          }
+
+          results.innerHTML = items.map(theme => `
+            <a class="search-item" href="../themes/${theme.slug}.html">${theme.title}</a>
+          `).join("");
+        }
+
+        input.addEventListener("focus", () => {
+          render(themes);
+          results.style.display = "block";
+        });
+
+        input.addEventListener("input", (e) => {
+          const value = e.target.value.trim().toLowerCase();
+          const filtered = themes.filter(theme =>
+            theme.title.toLowerCase().includes(value)
+          );
+          render(filtered);
+          results.style.display = "block";
+        });
+
+        document.addEventListener("click", (e) => {
+          if (!input.contains(e.target) && !results.contains(e.target)) {
+            results.style.display = "none";
+          }
+        });
+      } catch (err) {
+        console.error("Theme search failed", err);
+      }
+    }
+
+    setupThemePageSearch();
+  </script>
+  <script src="../assets/profile.js"></script>
+  <script src="../assets/admob.js"></script>
+  <script src="../assets/announcements.js"></script>
+</body>
+</html>
