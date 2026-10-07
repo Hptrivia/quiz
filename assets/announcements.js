@@ -108,6 +108,12 @@ const APP_ANNOUNCEMENTS = [
     text: "NCIS, Boardwalk Empire, The King of Queens, Entourage, Grimm, Orphan Black, Sword Art Online, Steins;Gate, Castlevania, and more.",
     cta: { label: "See What's New", href: "recent.html" },
   },
+  {
+    icon: "🎬",
+    title: "New episodes: Off Campus & Bridgerton!",
+    text: "Off Campus is now in Episode Mode with episodes 1 and 2, and Bridgerton episode 2 is here — relive them scene by scene.",
+    cta: { label: "Play Off Campus Ep 1", href: "episode.html?theme=off-campus&episode=1" },
+  },
 ];
 
 function _cbAnnouncementHash(str) {

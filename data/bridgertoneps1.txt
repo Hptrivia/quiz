@@ -323,5 +323,341 @@
     "answer": "How Daphne secured the duke",
     "difficulty": "medium",
     "description": "Whistledown signs off by noting that how Daphne secured the Duke of Hastings is yet to be determined — but if anyone shall reveal the circumstances of this match, it is she."
+  },
+  {
+    "context": "**EPISODE 2**: The episode opens years in the past, with a duchess in agonising labour while her husband waits impatiently for news of an heir.",
+    "question": "What is the full name given to the newborn heir to Hastings?",
+    "options": [
+      "Simon Arthur Henry Fitzranulph Basset",
+      "Simon Edmund Gregory Fitzwilliam Basset",
+      "Simon Arthur Reginald Fitzhugh Basset",
+      "Simon Henry Charles Fitzranulph Bassington"
+    ],
+    "answer": "Simon Arthur Henry Fitzranulph Basset",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "The doctor announces the boy as Simon Arthur Henry Fitzranulph Basset, the next Duke of Hastings, while his mother lies dying."
+  },
+  {
+    "context": "After the baby is born, the duchess bleeds heavily and the duke is asked about her chamber.",
+    "question": "What is the name of Simon's mother, the duchess?",
+    "options": [
+      "Sarah",
+      "Agatha",
+      "Marina",
+      "Araminta"
+    ],
+    "answer": "Sarah",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "The duke calls his wife Sarah as she dies shortly after giving birth to his long-awaited son."
+  },
+  {
+    "context": "Lady Whistledown's latest paper arrives, recounting the previous night's soiree at Vauxhall.",
+    "question": "Which two words does Lady Whistledown say come to mind the morning after any good party?",
+    "options": [
+      "\"Shock\" and \"delight\"",
+      "\"Scandal\" and \"ruin\"",
+      "\"Gossip\" and \"glory\"",
+      "\"Wonder\" and \"woe\""
+    ],
+    "answer": "\"Shock\" and \"delight\"",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Whistledown opens with \"shock\" and \"delight,\" which also gives the episode its title."
+  },
+  {
+    "context": "Daphne and Simon promenade in the park, negotiating the terms of their fake courtship while onlookers watch.",
+    "question": "How many balls do Daphne and Simon finally agree he must attend with her?",
+    "options": [
+      "Six",
+      "Four",
+      "Five",
+      "Eight"
+    ],
+    "answer": "Six",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "After haggling from eight down and up from four, they settle on six balls — plus something expensive, sent today."
+  },
+  {
+    "context": "",
+    "question": "What does Daphne insist Simon must send her that very day to sell the courtship?",
+    "options": [
+      "Flowers",
+      "Jewels",
+      "Letters",
+      "Sweets"
+    ],
+    "answer": "Flowers",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Daphne demands expensive flowers, arguing a true suitor would buy out every florist in town."
+  },
+  {
+    "context": "At the Featherington house, Prudence and Philippa gossip while Penelope presses her mother about their houseguest.",
+    "question": "Which houseguest's 'condition' are the Featherington girls whispering about?",
+    "options": [
+      "Miss Thompson",
+      "Miss Crane",
+      "Miss Wilson",
+      "Miss Ramsbury"
+    ],
+    "answer": "Miss Thompson",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "The girls have discovered Marina Thompson is with child, and Lady Featherington tells them her condition is 'catching.'"
+  },
+  {
+    "context": "Eloise rants to Penelope on the roof about her sister's supposed triumph and her own thwarted ambitions.",
+    "question": "What does Eloise say she could do if she were a man?",
+    "options": [
+      "Attend university",
+      "Join the army",
+      "Inherit the title",
+      "Write for the papers"
+    ],
+    "answer": "Attend university",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Eloise complains that a pretty face is no accomplishment, while a man could go to university."
+  },
+  {
+    "context": "At the Bridgerton breakfast table, the family discusses Daphne's two dances with the duke.",
+    "question": "Where has Francesca gone for the season?",
+    "options": [
+      "Bath",
+      "Somerset",
+      "Brighton",
+      "Spain"
+    ],
+    "answer": "Bath",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Francesca is away in Bath practising pianoforte with Aunt Winnie and will miss the season's events."
+  },
+  {
+    "context": "Alone with Penelope at the Featherington house, Marina finally opens up about how her condition came to be, recalling home in Somerset.",
+    "question": "What is the name of the young man Marina fell in love with during long church sermons?",
+    "options": [
+      "Sir George Crane",
+      "Sir Edmund Crane",
+      "Sir Henry Crane",
+      "Sir Arthur Crane"
+    ],
+    "answer": "Sir George Crane",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Marina describes how George Crane used to sneak her cake and notes during the vicar's endless sermons."
+  },
+  {
+    "context": "",
+    "question": "Where has Sir George Crane gone to fight with Wellington?",
+    "options": [
+      "Spain",
+      "Portugal",
+      "France",
+      "Belgium"
+    ],
+    "answer": "Spain",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Marina explains George went off to Spain to fight with Wellington but continued to write to her."
+  },
+  {
+    "context": "At Bridgerton House, Daphne and her mother are choosing jewels when Mrs. Wilson interrupts with news.",
+    "question": "What has the queen invited Lady Bridgerton to in two days' time?",
+    "options": [
+      "A private tea",
+      "A masked ball",
+      "A garden concert",
+      "A royal luncheon"
+    ],
+    "answer": "A private tea",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "The queen's letter is an invitation to a private tea, prompting Violet to prepare Daphne."
+  },
+  {
+    "context": "",
+    "question": "What jewelry does Violet decide Daphne shall wear that evening after receiving the Queen's letter?",
+    "options": [
+      "Diamonds",
+      "Pearls",
+      "Rubies",
+      "Sapphires"
+    ],
+    "answer": "Diamonds",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Excited by the Queen's invitation to tea, Violet insists Daphne wear the family diamonds instead of pearls."
+  },
+  {
+    "context": "In a flashback, a young Simon struggles in front of his father, the old Duke of Hastings, during a lesson.",
+    "question": "What impediment does young Simon struggle with, infuriating his father?",
+    "options": [
+      "A stammer",
+      "A lisp",
+      "Slurred speech",
+      "Mumbling"
+    ],
+    "answer": "A stammer",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Young Simon's stammer enrages his father, who calls him an idiot and disowns him on the spot."
+  },
+  {
+    "context": "",
+    "question": "Who takes the stammering boy under her wing and promises to help him?",
+    "options": [
+      "Lady Danbury",
+      "Lady Featherington",
+      "Lady Whistledown",
+      "Lady Berbrooke"
+    ],
+    "answer": "Lady Danbury",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Lady Danbury, his mother's dearest friend, vows to help Simon overcome his stammer if he proves worthy of attention."
+  },
+  {
+    "context": "At the ball, Berbrooke confronts Anthony and Simon, still insisting on his claim to Daphne.",
+    "question": "What excuse does Berbrooke give for his black eye?",
+    "options": [
+      "A cabinet door",
+      "A riding fall",
+      "A boxing match",
+      "A carriage step"
+    ],
+    "answer": "A cabinet door",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Berbrooke claims he was careless with a cabinet door, but Simon reveals Daphne punched him at Vauxhall."
+  },
+  {
+    "context": "Later, Lord Berbrooke corners Anthony at the picnic, hinting he saw something scandalous involving Daphne at Vauxhall.",
+    "question": "Where does Berbrooke claim he saw Daphne behaving improperly with him?",
+    "options": [
+      "The Dark Walk",
+      "The Rose Garden",
+      "The Orangery",
+      "The Boat House"
+    ],
+    "answer": "The Dark Walk",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Berbrooke threatens the Bridgertons by claiming Daphne was alone with him on Vauxhall's infamous Dark Walk."
+  },
+  {
+    "context": "At the picnic, Berbrooke interrupts Daphne and Simon's promenade with an announcement.",
+    "question": "What has Berbrooke obtained for his wedding to Daphne?",
+    "options": [
+      "A special license",
+      "A royal blessing",
+      "A signed contract",
+      "A church date"
+    ],
+    "answer": "A special license",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Berbrooke boasts of a special license and threatens to spread the Vauxhall scandal if crossed."
+  },
+  {
+    "context": "At the picnic, Berbrooke reveals his special license and threatens to expose the Vauxhall scandal unless he weds Daphne.",
+    "question": "How soon does Berbrooke declare he will marry Daphne with his special license?",
+    "options": [
+      "Three days",
+      "One week",
+      "Five days",
+      "Two days"
+    ],
+    "answer": "Three days",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Berbrooke shocks the Bridgertons by announcing the wedding will take place in just three days."
+  },
+  {
+    "context": "At the private tea, the queen speaks of a child prodigy she once accompanied as she sang an aria.",
+    "question": "Which composer does the queen claim to have known before he was ten years old?",
+    "options": [
+      "Mozart",
+      "Haydn",
+      "Handel",
+      "Clementi"
+    ],
+    "answer": "Mozart",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "The queen recounts meeting Mozart as a boy and hints she expects a duke for Daphne."
+  },
+  {
+    "context": "Violet invites Berbrooke's mother to tea while Rose talks with her lady's maid below stairs.",
+    "question": "What secret about Berbrooke do the women uncover through the servants?",
+    "options": [
+      "A child by a maid",
+      "Gambling debts",
+      "A first wife",
+      "A ruined estate"
+    ],
+    "answer": "A child by a maid",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "The Berbrooke servant reveals Nigel fathered a boy by a maid and sent them away with nothing."
+  },
+  {
+    "context": "Violet hands Anthony a piece of embroidered fabric intended for Daphne's future wedding gown.",
+    "question": "Which flowers, symbolising passion, are embroidered on the hem for Daphne?",
+    "options": [
+      "Tulips",
+      "Roses",
+      "Lilies",
+      "Violets"
+    ],
+    "answer": "Tulips",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Violet explains the tulips symbolise passion, an apt hem for Daphne's wedding gown."
+  },
+  {
+    "context": "In Daphne's bedroom, Eloise confesses her fears about marriage and childbirth to her sister.",
+    "question": "Whose birth does Daphne remind Eloise came at dawn after their mother's perilous night?",
+    "options": [
+      "Hyacinth",
+      "Gregory",
+      "Francesca",
+      "Colin"
+    ],
+    "answer": "Hyacinth",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Daphne recalls that after Violet's terrifying labour, the world gained Hyacinth, born mere months after their father's death."
+  },
+  {
+    "context": "At a ball, Daphne tells Simon their ruse must continue because she still needs a husband.",
+    "question": "What one condition does Simon set for continuing their arrangement?",
+    "options": [
+      "That she call him Simon",
+      "That she dance only with him",
+      "That she tell no one",
+      "That she stop mentioning marriage"
+    ],
+    "answer": "That she call him Simon",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Simon insists that if their courtship is to seem real, Daphne must use his first name."
+  },
+  {
+    "context": "The episode closes with the final flashback at the old duke's deathbed, where he praises the duke his son has become.",
+    "question": "What vow does Simon swear to his dying father?",
+    "options": [
+      "Never to sire an heir",
+      "Never to return to Hastings",
+      "Never to speak his name",
+      "Never to forgive him"
+    ],
+    "answer": "Never to sire an heir",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Simon vows he will never marry or father an heir, so that the Hastings line dies with him."
   }
 ]

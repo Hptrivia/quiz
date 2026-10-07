@@ -1,5 +1,13 @@
 [
   {
+    "type": "episode",
+    "slug": "off-campus",
+    "title": "Off Campus",
+    "label": "Episode Mode",
+    "date": "2026-10-07",
+    "url": "episode.html?theme=off-campus"
+  },
+  {
     "type": "theme",
     "slug": "boardwalk-empire",
     "title": "Boardwalk Empire",
@@ -150,13 +158,5 @@
     "label": "TV",
     "date": "2026-09-28",
     "url": "challenge.html?theme=love-island-usa&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "mobland",
-    "title": "MobLand",
-    "label": "TV",
-    "date": "2026-09-28",
-    "url": "challenge.html?theme=mobland&round=1"
   }
 ]
