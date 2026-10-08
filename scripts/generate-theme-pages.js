@@ -320,6 +320,20 @@ const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
   <meta name="twitter:description" content="${escapeHtml(metaDescription)}" />
   <meta name="twitter:image" content="${SITE_URL}/assets/icon-192.png" />
   <script type="application/ld+json">${jsonLd}</script>
+  <!-- Mediavine ad script — website only. Skipped in the native app (AdMob handles ads there),
+       the premium ad-free app, and for web users who unlocked ad-free access. -->
+  <script data-mediavine-loader="">
+  (function(){
+    if (/TriviaGauntletPremium/.test(navigator.userAgent || '')) return;
+    if (window.Capacitor && (window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform() || window.Capacitor.isNative)) return;
+    try { var until = localStorage.getItem('adsRemovedUntil'); if (until && new Date(until) > new Date()) return; } catch (e) {}
+    var s = document.createElement('script');
+    s.type = 'text/javascript'; s.async = true;
+    s.setAttribute('data-noptimize', '1'); s.setAttribute('data-cfasync', 'false');
+    s.src = '//scripts.mediavine.com/tags/5434c4f7-f50b-4d0f-a795-071f1a1f055e.js';
+    document.head.appendChild(s);
+  })();
+  </script>
 </head>
 <body>
   <main class="container narrow">

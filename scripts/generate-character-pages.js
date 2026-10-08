@@ -168,6 +168,20 @@ function buildPage(quiz, stats, theme, allQuizzes) {
   <meta name="twitter:title" content="${esc(h1)} — ${show} Test" />
   <meta name="twitter:description" content="${esc(quiz.metaDescription)}" />
   <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
+  <!-- Mediavine ad script — website only. Skipped in the native app (AdMob handles ads there),
+       the premium ad-free app, and for web users who unlocked ad-free access. -->
+  <script data-mediavine-loader="">
+  (function(){
+    if (/TriviaGauntletPremium/.test(navigator.userAgent || '')) return;
+    if (window.Capacitor && (window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform() || window.Capacitor.isNative)) return;
+    try { var until = localStorage.getItem('adsRemovedUntil'); if (until && new Date(until) > new Date()) return; } catch (e) {}
+    var s = document.createElement('script');
+    s.type = 'text/javascript'; s.async = true;
+    s.setAttribute('data-noptimize', '1'); s.setAttribute('data-cfasync', 'false');
+    s.src = '//scripts.mediavine.com/tags/5434c4f7-f50b-4d0f-a795-071f1a1f055e.js';
+    document.head.appendChild(s);
+  })();
+  </script>
 </head>
 <body data-defer-game-ad="1">
   <main class="container narrow">
@@ -258,6 +272,20 @@ function buildHub(allQuizzes) {
   <meta property="og:type" content="website" />
   <meta property="og:url" content="${url}" />
   <meta property="og:image" content="${SITE_URL}/assets/icon-192.png" />
+  <!-- Mediavine ad script — website only. Skipped in the native app (AdMob handles ads there),
+       the premium ad-free app, and for web users who unlocked ad-free access. -->
+  <script data-mediavine-loader="">
+  (function(){
+    if (/TriviaGauntletPremium/.test(navigator.userAgent || '')) return;
+    if (window.Capacitor && (window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform() || window.Capacitor.isNative)) return;
+    try { var until = localStorage.getItem('adsRemovedUntil'); if (until && new Date(until) > new Date()) return; } catch (e) {}
+    var s = document.createElement('script');
+    s.type = 'text/javascript'; s.async = true;
+    s.setAttribute('data-noptimize', '1'); s.setAttribute('data-cfasync', 'false');
+    s.src = '//scripts.mediavine.com/tags/5434c4f7-f50b-4d0f-a795-071f1a1f055e.js';
+    document.head.appendChild(s);
+  })();
+  </script>
 </head>
 <body>
   <main class="container narrow">
