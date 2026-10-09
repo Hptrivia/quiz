@@ -81,6 +81,13 @@ ul.rows>li:first-child{border-top:0}
 .post-edit{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:6px;width:100%}
 .confirm{border:1px solid var(--bad);border-radius:8px;padding:10px;display:flex;flex-direction:column;gap:8px}
 #login{max-width:380px;margin:12vh auto 0}
+details>summary{cursor:pointer}
+details.post>summary{font-size:14px;list-style:none}
+details.post>summary::-webkit-details-marker{display:none}
+details.post>summary::after{content:" ›";color:var(--muted)}
+details.post[open]>summary::after{content:" ⌄"}
+details.post[open] .post-edit{margin-top:8px}
+.stack{display:flex;flex-direction:column;gap:10px;margin-top:8px}
 </style>
 </head>
 <body>
@@ -260,18 +267,19 @@ function subAvailable(s, onDate){
 // How long this sub must rest, based on its status.
 function restDays(s){ return s.status==="mod_removed"?retryDays():cooldown(); }
 
-// Which formats this show has, and which this sub has already had.
-async function formatOptions(slug, sub){
-  const s=S.subs[sub]||{}; const hist=postsForSub(sub);
+// Which formats this show has, and which it has already had. A show posts the same thing to all its subs, so history is per show.
+async function formatOptions(slug, subs){
+  const hist=postsForShow(slug);
   const used=new Set(hist.map(p=>p.format).filter(Boolean));
   const epPosts=hist.filter(p=>p.format==="episode");
-  const epMax=Math.max(epPosts.length, ...epPosts.map(p=>p.episode||0), 0);
+  const epMax=Math.max(...epPosts.map(p=>p.episode||0), 0);
   const epTotal=await episodeCount(slug);
+  const big=subs.some(k=>((S.subs[k]||{}).members||0)>=MULTI_MIN_MEMBERS), known=subs.some(k=>(S.subs[k]||{}).members);
   const opts=[];
   for (const f of FORMATS){
     let ok=true, why="", episode=null;
-    if (f.id==="episode"){ ok=epTotal>epMax; episode=ok?epMax+1:null; why=!epTotal?"no episode mode":ok?"episode "+(epMax+1)+" of "+epTotal:"all "+epTotal+" posted here"; }
-    if (f.id==="multiplayer"){ ok=(s.members||0)>=MULTI_MIN_MEMBERS; why=s.members?(ok?"big sub":"sub under 150k"):"members unknown"; }
+    if (f.id==="episode"){ ok=epTotal>epMax; episode=ok?epMax+1:null; why=!epTotal?"no episode mode":ok?"episode "+(epMax+1)+" of "+epTotal:"all "+epTotal+" posted"; }
+    if (f.id==="multiplayer"){ ok=big; why=known?(ok?"big sub":"no sub over 150k"):"members unknown"; }
     if (f.id==="character"){ ok=S.chars.has(slug); if(!ok) why="no character quiz"; }
     opts.push({id:f.id, ok, used:used.has(f.id)&&f.id!=="episode", why, episode});
   }
@@ -280,29 +288,33 @@ async function formatOptions(slug, sub){
   const pick = fresh || opts.find(o=>o.ok && (!last||o.id!==last.format)) || opts[0];
   return {opts, pick:pick.id, episode:pick.id==="episode"?pick.episode:null, novel:!!fresh && fresh.id!=="trivia"};
 }
-function suggestLink(sub){
-  const s=S.subs[sub]||{};
-  if (s.members>=100000) return "web";
-  if (s.members) return "app";
-  const last=[...postsForSub(sub)].reverse().find(p=>p.link&&p.outcome!=="removed"&&p.outcome!=="deleted");
+function suggestLink(subs, slug){
+  const m=subs.map(k=>(S.subs[k]||{}).members||0);
+  if (m.some(x=>x>=100000)) return "web";
+  if (m.some(x=>x)) return "app";
+  const last=[...postsForShow(slug)].reverse().find(p=>p.link&&p.outcome!=="removed"&&p.outcome!=="deleted");
   return last?last.link:"app";
 }
-// Returning subs that are rested, ranked: a new format to offer first, then longest since a post.
+// The subs a show gets posted to: every linked sub that isn't banned, never-allows or snoozed.
+function showSubs(slug, onDate){ return subsForShow(slug).filter(s=>subAvailable(s,onDate)).map(s=>s.sub).sort(); }
+function subLabel(k){ return "r/"+((S.subs[k]||{}).display||k); }
+// Returning shows that are rested, longest since posted first. One show = one slot, whatever number of subs.
 function returnCandidates(onDate, extraLast){
-  const recentShows=new Set(S.posts.filter(p=>daysBetween(p.posted_on,onDate)<14&&daysBetween(p.posted_on,onDate)>=0).map(p=>p.show_slug));
   const out=[];
-  for (const s of Object.values(S.subs)){
-    if (!s.show_slug || !postable(s.show_slug) || !subAvailable(s,onDate)) continue;
-    const hist=postsForSub(s.sub); if(!hist.length) continue;
-    const last=(extraLast&&extraLast[s.sub])||lastPost(hist).posted_on;
+  for (const slug of new Set(Object.values(S.subs).map(s=>s.show_slug).filter(Boolean))){
+    if (!postable(slug)) continue;
+    const hist=postsForShow(slug); if(!hist.length) continue;
+    const subs=showSubs(slug,onDate); if(!subs.length) continue;
+    const last=(extraLast&&extraLast[slug])||lastPost(hist).posted_on;
     const since=daysBetween(last,onDate);
-    if (since<restDays(s)) continue;
-    // Subs where nothing has ever stayed up go after the rest, or the oldest failures would always top the list.
+    // Only shows whose every sub had mods remove the post use the shorter retry wait.
+    const rest=subs.every(k=>S.subs[k].status==="mod_removed")?retryDays():cooldown();
+    if (since<rest) continue;
+    // Shows where nothing has ever stayed up go after the rest, or the oldest failures would always top the list.
     const neverStuck=!hist.some(p=>p.outcome==="stayed"||p.outcome==="unknown");
-    out.push({s, since, recentShow:recentShows.has(s.show_slug), neverStuck});
+    out.push({slug, subs, since, neverStuck});
   }
-  // Round robin: the sub that has waited longest goes first, so every sub gets a turn before any repeats.
-  out.sort((a,b)=>(a.recentShow-b.recentShow)||(a.neverStuck-b.neverStuck)||(b.since-a.since));
+  out.sort((a,b)=>(a.neverStuck-b.neverStuck)||(b.since-a.since));
   return out;
 }
 function newShowCandidates(){
@@ -352,12 +364,14 @@ async function renderLog(){
   const slug=slugFromTitle(d.show);
   const form=el("div",{class:"card"},el("h2",{},"Log a post"));
   const showIn=el("input",{id:"f-show",list:"dl-shows",placeholder:"Start typing a show",value:d.show,autocomplete:"off"});
-  showIn.addEventListener("change",()=>{ d.show=showIn.value; renderLog(); });
+  // A show is posted to all its subs at once, so picking it fills them all in. Delete any you skipped.
+  showIn.addEventListener("change",()=>{ d.show=showIn.value; const sl=slugFromTitle(d.show);
+    if(sl) d.subs=showSubs(sl,todayISO()).map(k=>(S.subs[k]||{}).display||k).join(", "); renderLog(); });
   form.append(el("div",{},el("label",{for:"f-show"},"Show"),showIn,showDatalist()));
 
   const subIn=el("input",{id:"f-subs",placeholder:"e.g. howyoudoin, friends_tv_show",value:d.subs,autocomplete:"off"});
   subIn.addEventListener("input",()=>{ d.subs=subIn.value; });
-  form.append(el("div",{},el("label",{for:"f-subs"},"Subreddits (comma between several)"),subIn));
+  form.append(el("div",{},el("label",{for:"f-subs"},"Subreddits (all of this show's subs are filled in; comma between them)"),subIn));
   if (slug){
     const known=subsForShow(slug);
     if (known.length){
@@ -403,19 +417,28 @@ async function renderLog(){
   form.append(el("div",{class:"actions"},save));
   box.append(form);
 
-  const recent=[...S.posts].sort((a,b)=>(b.posted_on.localeCompare(a.posted_on))||(b.id-a.id)).slice(0,15);
-  const card=el("div",{class:"card"},el("h2",{},"Recent posts"),el("p",{class:"muted small"},"Set the outcome once you know whether it stayed up."));
+  // Every post still missing its outcome, newest first. Setting the outcome finishes it and it leaves the list.
+  const todo=S.posts.filter(p=>p.outcome==="unknown").sort((a,b)=>(b.posted_on.localeCompare(a.posted_on))||(b.id-a.id));
+  const count=el("span",{class:"num"},String(todo.length));
+  const card=el("div",{class:"card"},el("h2",{},"To fill in (",count,")"),
+    el("p",{class:"muted small"},"Add a rating or views if you have them, then pick whether it stayed up. That finishes the post and it leaves this list."));
   const ul=el("ul",{class:"rows"});
-  for (const p of recent){
-    ul.append(el("li",{},el("div",{class:"grow"},
+  const OUT_PICK=Object.assign({},OUTCOMES,{unknown:"Did it stay up?"});
+  for (const p of todo){
+    const li=el("li",{},el("div",{class:"grow"},
       el("div",{},el("strong",{},"r/"+((S.subs[p.sub]||{}).display||p.sub))," · ",showTitle(p.show_slug)),
-      el("div",{class:"muted small"},niceDate(p.posted_on)+" · "+(FMT[p.format]||"Format unknown")+(p.episode?" "+p.episode:"")+(p.link?" · "+p.link+" link":"")),
+      el("div",{class:"muted small"},niceDate(p.posted_on)+" · "+ago(p.posted_on)+" · "+(FMT[p.format]||"Format unknown")+(p.episode?" "+p.episode:"")+(p.link?" · "+p.link+" link":"")),
       el("div",{class:"post-edit"},
-        selectEl("o-"+p.id,OUTCOMES,p.outcome,async v=>{await updatePost(p.id,{outcome:v}); await applyOutcomeToSub(p.sub,v); toast("Updated");}),
-        selectEl("r-"+p.id,RATINGS,p.rating||"",v=>updatePost(p.id,{rating:v||null}).then(()=>toast("Updated"))),
-        viewsInput(p)))));
+        selectEl("r-"+p.id,RATINGS,p.rating||"",v=>updatePost(p.id,{rating:v||null}).then(()=>toast("Saved"))),
+        viewsInput(p),
+        selectEl("o-"+p.id,OUT_PICK,"unknown",async v=>{
+          if(v==="unknown") return;
+          await updatePost(p.id,{outcome:v}); await applyOutcomeToSub(p.sub,v);
+          li.remove(); count.textContent=String(Number(count.textContent)-1); toast("Done");
+        }))));
+    ul.append(li);
   }
-  card.append(recent.length?ul:el("p",{class:"muted"},"Nothing logged yet."));
+  card.append(todo.length?ul:el("p",{class:"muted"},"All caught up."));
   box.append(card);
 }
 function viewsInput(p){
@@ -435,37 +458,38 @@ async function applyOutcomeToSub(sub, outcome){
 /* ---------- SUGGEST ---------- */
 async function nextSuggestion(){
   const today=todayISO();
-  if (S.suggestion) S.suggestSkip.add(S.suggestion.kind==="return"?S.suggestion.sub:"show:"+S.suggestion.slug);
+  if (S.suggestion) S.suggestSkip.add("show:"+S.suggestion.slug);
   S.suggestion=null;
   if (S.suggestMode==="return"){
-    const c=returnCandidates(today).filter(x=>x.s.skip_on!==today && !S.suggestSkip.has(x.s.sub));
-    // Prefer subs that have a format they haven't had yet, among the 15 most overdue.
+    const c=returnCandidates(today).filter(x=>!x.subs.every(k=>S.subs[k].skip_on===today) && !S.suggestSkip.has("show:"+x.slug));
+    // Prefer shows that have a format they haven't had yet, among the 15 most overdue.
     const top=c.slice(0,15); let best=null;
-    for (const x of top){ const f=await formatOptions(x.s.show_slug,x.s.sub); x.f=f; if(!best || (f.novel && !best.f.novel)) best=x; if(best.f.novel) break; }
-    if(!best && c.length){ best=c[0]; best.f=await formatOptions(best.s.show_slug,best.s.sub); }
-    if(best) S.suggestion={kind:"return", sub:best.s.sub, slug:best.s.show_slug, since:best.since, f:best.f, format:best.f.pick, episode:best.f.episode, link:suggestLink(best.s.sub)};
+    for (const x of top){ const f=await formatOptions(x.slug,x.subs); x.f=f; if(!best || (f.novel && !best.f.novel)) best=x; if(best.f.novel) break; }
+    if(best) S.suggestion={kind:"return", slug:best.slug, subs:best.subs, since:best.since, f:best.f, format:best.f.pick, episode:best.f.episode, link:suggestLink(best.subs,best.slug)};
   } else {
     const c=newShowCandidates().filter(sl=>!S.suggestSkip.has("show:"+sl));
-    if(c.length){ const sl=c[0]; const f=await formatOptions(sl,"__none__"); S.suggestion={kind:"new", slug:sl, f, format:"trivia", episode:null, link:"app", subs:""}; }
+    if(c.length){ const sl=c[0]; const f=await formatOptions(sl,[]); S.suggestion={kind:"new", slug:sl, f, format:"trivia", episode:null, link:"app", subs:""}; }
   }
   renderSuggest();
 }
 function renderSuggest(){
   const box=$("tab-suggest"); box.replaceChildren();
   box.append(el("div",{class:"card"},el("h2",{},"What should I post?"),
-    chipGroup([["return","Return to a sub"],["new","New show"]],S.suggestMode,v=>{S.suggestMode=v;S.suggestion=null;renderSuggest();}),
+    chipGroup([["return","Return to a show"],["new","New show"]],S.suggestMode,v=>{S.suggestMode=v;S.suggestion=null;renderSuggest();}),
     el("div",{class:"actions"},el("button",{class:"btn primary",type:"button",onclick:nextSuggestion},S.suggestion?"Next suggestion":"Suggest"))));
   const g=S.suggestion; if(!g) return;
   const card=el("div",{class:"card"});
   if (g.kind==="return"){
-    const s=S.subs[g.sub]; const hist=postsForSub(g.sub); const last=lastPost(hist);
-    card.append(el("div",{},el("span",{class:"pill ret"},"Return")),
-      el("div",{class:"big"},"r/"+(s.display||s.sub)), el("div",{},showTitle(g.slug)));
+    const hist=postsForShow(g.slug); const last=lastPost(hist);
+    g.on=g.on||new Set(g.subs);
+    card.append(el("div",{},el("span",{class:"pill ret"},"Return")), el("div",{class:"big"},showTitle(g.slug)));
+    card.append(el("div",{},el("label",{},"Post to all of these (tap one to leave it out today)"),
+      el("div",{class:"chips"},g.subs.map(k=>el("button",{type:"button",class:"chip","aria-pressed":String(g.on.has(k)),
+        onclick:()=>{ g.on.has(k)?g.on.delete(k):g.on.add(k); renderSuggest(); }},subLabel(k)+(S.subs[k].status==="mod_removed"?" (mods removed before)":""))))));
     const reason=el("div",{class:"reason"},
-      el("span",{},"Last post here "+ago(last.posted_on)+": "+(FMT[last.format]||"format unknown")+", "+OUTCOMES[last.outcome].toLowerCase()+(perfText(last)?", "+perfText(last):"")+"."),
-      el("span",{},"Formats already posted here: "+([...new Set(hist.map(p=>FMT[p.format]).filter(Boolean))].join(", ")||"unknown")+"."));
-    if(s.status==="mod_removed") reason.append(el("span",{class:"pill warn"},"Mod removed before"));
-    if(s.notes) reason.append(el("span",{},"Your note: "+s.notes));
+      el("span",{},"Last posted "+ago(last.posted_on)+": "+(FMT[last.format]||"format unknown")+(perfText(last)?", "+perfText(last):"")+"."),
+      el("span",{},"Formats already posted: "+([...new Set(hist.map(p=>FMT[p.format]).filter(Boolean))].join(", ")||"unknown")+"."));
+    for (const k of g.subs) if(S.subs[k].notes) reason.append(el("span",{},subLabel(k)+": "+S.subs[k].notes));
     if(!(S.shows[g.slug]||{}).reviewed) reason.append(el("span",{class:"small"},"This show's history is unchecked. Fix it on the Shows tab if it looks wrong."));
     card.append(reason);
   } else {
@@ -477,7 +501,7 @@ function renderSuggest(){
   card.append(el("div",{},el("label",{},"Format"),chipGroup(g.f.opts.map(o=>[o.id,FMT[o.id]+(o.id==="episode"&&o.episode?" "+o.episode:"")+(o.used?" ✓":"")]),g.format,
     v=>{g.format=v; g.episode=v==="episode"?(g.f.opts.find(o=>o.id==="episode")||{}).episode:null; renderSuggest();},
     id=>{const o=g.f.opts.find(x=>x.id===id); return o&&!o.ok?o.why:"";})),
-    el("p",{class:"muted small"},"✓ = already posted in this sub. Faded = not available ("+g.f.opts.filter(o=>!o.ok).map(o=>FMT[o.id].toLowerCase()+": "+o.why).join("; ")+")."));
+    el("p",{class:"muted small"},"✓ = already posted for this show. Faded = not available ("+g.f.opts.filter(o=>!o.ok).map(o=>FMT[o.id].toLowerCase()+": "+o.why).join("; ")+")."));
   card.append(el("div",{},el("label",{},"Link"),chipGroup([["app","App link"],["web","Web link"]],g.link,v=>{g.link=v;renderSuggest();})));
 
   const used=el("button",{class:"btn primary",type:"button"},"Used it");
@@ -485,7 +509,8 @@ function renderSuggest(){
     used.disabled=true;
     try{
       if(g.kind==="return"){
-        await addPost({posted_on:todayISO(),sub:g.sub,show_slug:g.slug,format:g.format,episode:g.format==="episode"?g.episode:null,link:g.link,source:"suggest"});
+        if(!g.on.size){ toast("Pick at least one sub"); used.disabled=false; return; }
+        for (const k of g.on) await addPost({posted_on:todayISO(),sub:k,show_slug:g.slug,format:g.format,episode:g.format==="episode"?g.episode:null,link:g.link,source:"suggest"});
       } else {
         const subs=(g.subs||"").split(",").map(cleanSub).filter(Boolean);
         if(!subs.length){ toast("Add the subreddit you used"); used.disabled=false; return; }
@@ -497,13 +522,15 @@ function renderSuggest(){
   });
   const acts=el("div",{class:"actions"},used);
   if(g.kind==="return"){
-    acts.append(el("button",{class:"btn",type:"button",onclick:async()=>{ await saveSub(g.sub,{skip_on:todayISO()}); toast("Skipped for today. It stays near the top."); nextSuggestion(); }},"Not today"));
+    const eachSub=async patch=>{ for (const k of g.subs) await saveSub(k,patch); };
+    acts.append(el("button",{class:"btn",type:"button",onclick:async()=>{ await eachSub({skip_on:todayISO()}); toast("Skipped for today. It stays near the top."); nextSuggestion(); }},"Not today"));
     const snooze=el("div",{class:"chips"},el("span",{class:"muted small"},"Come back in"),
-      ...[2,4,8].map(w=>el("button",{type:"button",class:"chip",onclick:async()=>{ await saveSub(g.sub,{snooze_until:addDays(todayISO(),w*7)}); toast("Back in "+w+" weeks"); nextSuggestion(); }},w+" weeks")));
+      ...[2,4,8].map(w=>el("button",{type:"button",class:"chip",onclick:async()=>{ await eachSub({snooze_until:addDays(todayISO(),w*7)}); toast("Back in "+w+" weeks"); nextSuggestion(); }},w+" weeks")));
     card.append(acts,snooze);
-    const bad=el("div",{class:"chips"},el("span",{class:"muted small"},"Bad idea:"),
-      ...[["never","Never allows posts"],["banned","I'm banned"],["mod_removed","Mods removed it"]].map(([st,l])=>el("button",{type:"button",class:"chip",onclick:async()=>{ await saveSub(g.sub,{status:st}); toast("Saved"); nextSuggestion(); }},l)),
-      el("button",{type:"button",class:"chip",onclick:()=>{ S.suggestSkip.add(g.sub); nextSuggestion(); }},"Just skip"));
+    // Applies to the subs still ticked above, so one bad sub can be marked without touching the others.
+    const bad=el("div",{class:"chips"},el("span",{class:"muted small"},"Bad idea for the ticked subs:"),
+      ...[["never","Never allows posts"],["banned","I'm banned"],["mod_removed","Mods removed it"]].map(([st,l])=>el("button",{type:"button",class:"chip",onclick:async()=>{ for (const k of g.on) await saveSub(k,{status:st}); toast("Saved"); nextSuggestion(); }},l)),
+      el("button",{type:"button",class:"chip",onclick:()=>nextSuggestion()},"Just skip"));
     card.append(bad);
   } else {
     // Already tried it and the mods didn't let it through: log that, and the sub comes back after the retry period.
@@ -560,18 +587,18 @@ async function generatePlan(start){
     if(season&&season.shows) returns=Math.max(returns,1);
     // Multiplayer: every other Sunday, in a big sub that's rested.
     if (wd===6 && (multiWeek++%2===0)){
-      const c=returnCandidates(date,simLast).find(x=>(x.s.members||0)>=MULTI_MIN_MEMBERS);
-      items.push(c?{date,kind:"return",sub:c.s.sub,slug:c.s.show_slug,format:"multiplayer",link:"web",note:"~21:00 Berlin (US afternoon)"}
+      const c=returnCandidates(date,simLast).find(x=>x.subs.some(k=>(S.subs[k].members||0)>=MULTI_MIN_MEMBERS));
+      items.push(c?{date,kind:"return",slug:c.slug,subs:c.subs,format:"multiplayer",link:"web",note:"~21:00 Berlin (US afternoon)"}
                   :{date,kind:"multi",format:"multiplayer",link:"web",note:"~21:00 Berlin. Add member counts on the Shows tab so I can pick a 150k+ sub."});
-      if(c) simLast[c.s.sub]=date; slots--;
+      if(c) simLast[c.slug]=date; slots--;
     }
     for (let r=0;r<returns&&slots>0;r++){
       let c=returnCandidates(date,simLast);
-      if(season&&season.shows){ const pref=c.filter(x=>season.shows.includes(x.s.show_slug)); if(pref.length) c=pref; }
+      if(season&&season.shows){ const pref=c.filter(x=>season.shows.includes(x.slug)); if(pref.length) c=pref; }
       const x=c[0]; if(!x) break;
-      const f=await formatOptions(x.s.show_slug,x.s.sub);
-      items.push({date,kind:"return",sub:x.s.sub,slug:x.s.show_slug,format:f.pick,episode:f.episode,link:(season&&season.link)||suggestLink(x.s.sub),note:season?season.label:""});
-      simLast[x.s.sub]=date; slots--;
+      const f=await formatOptions(x.slug,x.subs);
+      items.push({date,kind:"return",slug:x.slug,subs:x.subs,format:f.pick,episode:f.episode,link:(season&&season.link)||suggestLink(x.subs,x.slug),note:season?season.label:""});
+      simLast[x.slug]=date; slots--;
     }
     while(slots-->0){
       let sl=null;
@@ -585,7 +612,7 @@ async function generatePlan(start){
   setStatus(""); renderPlan();
 }
 function slotDone(it){
-  return S.posts.some(p=>Math.abs(daysBetween(p.posted_on,it.date))<=1 && (it.sub?p.sub===it.sub:(it.slug&&p.show_slug===it.slug)));
+  return S.posts.some(p=>Math.abs(daysBetween(p.posted_on,it.date))<=1 && !!it.slug&&p.show_slug===it.slug);
 }
 function renderPlan(){
   const box=$("tab-plan"); box.replaceChildren();
@@ -616,13 +643,14 @@ function renderPlan(){
     const day=el("div",{class:"day"},el("div",{class:"dayhead"},el("span",{},niceDate(d)+(d===today?" · today":"")),el("span",{class:"muted small num"},byDate[d].length+" posts")));
     for (const it of byDate[d]){
       const isDone=slotDone(it);
-      const label = it.kind==="return" ? ["r/"+((S.subs[it.sub]||{}).display||it.sub)+" · "+showTitle(it.slug)]
+      const subs=it.subs||(it.sub?[it.sub]:[]);
+      const label = it.kind==="return" ? [showTitle(it.slug)+" · "+subs.map(subLabel).join(", ")]
         : it.kind==="new" ? [showTitle(it.slug)+" · find a sub"] : it.kind==="multi" ? ["Multiplayer game"] : ["New show"];
       day.append(el("div",{class:"slot"+(isDone?" done":"")},
         el("span",{class:"pill "+(it.kind==="return"?"ret":"new")},it.kind==="return"?"Return":"New"),
         el("div",{class:"grow"},el("div",{},label[0]),
           el("div",{class:"muted small"},(FMT[it.format]||"")+(it.episode?" "+it.episode:"")+" · "+it.link+" link"+(it.note?" · "+it.note:""))),
-        !isDone&&it.slug?el("button",{class:"btn ghost",type:"button",onclick:()=>{ S.logDraft={show:showTitle(it.slug),subs:it.sub?((S.subs[it.sub]||{}).display||it.sub):"",date:todayISO(),format:it.format,episode:it.episode||"",link:it.link,note:"",source:"plan"}; switchTab("log"); }},"Log"):null));
+        !isDone&&it.slug?el("button",{class:"btn ghost",type:"button",onclick:()=>{ S.logDraft={show:showTitle(it.slug),subs:subs.map(k=>(S.subs[k]||{}).display||k).join(", "),date:todayISO(),format:it.format,episode:it.episode||"",link:it.link,note:"",source:"plan"}; switchTab("log"); }},"Log"):null));
     }
     weekCard.append(day);
   }
@@ -641,7 +669,7 @@ function settingsCard(){
 /* ---------- SHOWS ---------- */
 function showSummaries(){
   const slugs=new Set([...S.posts.map(p=>p.show_slug),...Object.values(S.subs).map(s=>s.show_slug)].filter(Boolean));
-  return [...slugs].filter(postable).map(sl=>{ const ps=postsForShow(sl); const last=lastPost(ps); return {sl, subs:subsForShow(sl).length, last, reviewed:!!(S.shows[sl]||{}).reviewed}; })
+  return [...slugs].filter(postable).map(sl=>{ const ps=postsForShow(sl); const last=lastPost(ps); return {sl, subs:new Set([...ps.map(p=>p.sub),...subsForShow(sl).map(s=>s.sub)]).size, last, reviewed:!!(S.shows[sl]||{}).reviewed}; })
     .sort((a,b)=>showTitle(a.sl).localeCompare(showTitle(b.sl)));
 }
 function renderShows(){
@@ -677,59 +705,83 @@ function renderShows(){
 async function renderShowDetail(box, slug){
   const epTotal=await episodeCount(slug);
   const sh=S.shows[slug]||{};
+  const posts=postsForShow(slug);
+  // Built from this show's posts (the same rows the Log shows), plus any linked sub with no posts yet.
+  const subKeys=[...new Set([...posts.map(p=>p.sub), ...subsForShow(slug).map(s=>s.sub)])]
+    .sort((a,b)=>{ const la=lastPost(posts.filter(p=>p.sub===a)), lb=lastPost(posts.filter(p=>p.sub===b));
+      return ((lb&&lb.posted_on)||"").localeCompare((la&&la.posted_on)||"")||a.localeCompare(b); });
   const back=el("button",{class:"btn ghost",type:"button",onclick:()=>{S.showDetail=null;renderShows();}},"‹ All shows");
   const rev=el("button",{class:"btn"+(sh.reviewed?"":" primary"),type:"button",onclick:async()=>{await saveShow(slug,{reviewed:!sh.reviewed});renderShows();}},sh.reviewed?"Mark unchecked":"Mark as checked");
   const notes=el("textarea",{id:"sh-notes",placeholder:"Notes about this show"}); notes.value=sh.notes||"";
   notes.addEventListener("change",()=>saveShow(slug,{notes:notes.value}).then(()=>toast("Saved")));
   box.append(el("div",{class:"actions"},back),
     el("div",{class:"card"},el("h2",{},showTitle(slug)),
-      el("div",{class:"muted small"},"Formats: regular trivia"+(epTotal?" · episode mode ("+epTotal+" episode"+(epTotal>1?"s":"")+")":"")+(S.chars.has(slug)?" · character quiz":"")+" · multiplayer · fan questions"),
-      notes, el("div",{class:"actions"},rev)));
-  for (const s of subsForShow(slug).sort((a,b)=>a.sub.localeCompare(b.sub))) box.append(subCard(s, slug));
-  // Add a sub that isn't linked yet.
-  const addIn=el("input",{id:"sh-addsub",placeholder:"subreddit name",autocomplete:"off"});
-  box.append(el("div",{class:"card"},el("h3",{},"Add a subreddit to this show"),addIn,
-    el("div",{class:"actions"},el("button",{class:"btn",type:"button",onclick:async()=>{ const raw=cleanSub(addIn.value); if(!raw) return; const k=raw.toLowerCase();
-      await saveSub(k,{display:(S.subs[k]||{}).display||raw,show_slug:slug}); toast("Added"); renderShows(); }},"Add"))));
+      el("div",{class:"muted small"},posts.length+" post"+(posts.length===1?"":"s")+" in "+subKeys.length+" sub"+(subKeys.length===1?"":"s")+
+        (epTotal?" · has episode mode ("+epTotal+")":"")+(S.chars.has(slug)?" · has character quiz":"")),
+      el("div",{class:"actions"},rev),
+      el("details",{},el("summary",{class:"small"},sh.notes?"Show notes (1)":"Show notes"),notes)));
+  for (const k of subKeys) box.append(subCard(k, slug));
+  box.append(addPostCard(slug, subKeys));
 }
-function subCard(s, slug){
+function postLine(p){
+  return [niceDate(p.posted_on), FMT[p.format]?FMT[p.format]+(p.episode?" "+p.episode:""):"Format unknown", p.link?p.link+" link":"",
+    p.outcome==="unknown"?"Stayed up? not set":OUTCOMES[p.outcome], perfText(p)].filter(Boolean).join(" · ");
+}
+// One subreddit: its posts for this show as one line each. Tap a line to edit it. Sub settings tucked away.
+function subCard(key, slug){
+  const s=S.subs[key]||{sub:key,status:"works"};
+  const hist=postsForSub(key).filter(p=>p.show_slug===slug).reverse();
   const card=el("div",{class:"card"});
-  const hist=postsForSub(s.sub).slice().reverse();
-  card.append(el("div",{},el("h3",{},"r/"+(s.display||s.sub)),
-    el("div",{class:"muted small"},hist.length+" post"+(hist.length===1?"":"s")+" · last "+(hist[0]?ago(hist[0].posted_on):"never")+(s.snooze_until&&s.snooze_until>todayISO()?" · snoozed until "+niceDate(s.snooze_until):""))));
-  const members=el("input",{id:"m-"+s.sub,type:"number",min:"0",placeholder:"e.g. 250000",value:s.members||""});
-  members.addEventListener("change",()=>saveSub(s.sub,{members:members.value?Number(members.value):null}).then(()=>toast("Saved")));
-  const moveIn=el("input",{id:"mv-"+s.sub,list:"dl-shows",placeholder:"Move to another show",autocomplete:"off"});
-  moveIn.addEventListener("change",async()=>{ const to=slugFromTitle(moveIn.value); if(!to){toast("Pick a show from the list");return;}
-    await saveSub(s.sub,{show_slug:to}); for (const p of postsForSub(s.sub)) await updatePost(p.id,{show_slug:to}); toast("Moved to "+showTitle(to)); renderShows(); });
-  const notes=el("textarea",{id:"n-"+s.sub,placeholder:"Notes, e.g. only allows posts on weekends"}); notes.value=s.notes||"";
-  notes.addEventListener("change",()=>saveSub(s.sub,{notes:notes.value}).then(()=>toast("Saved")));
-  card.append(el("div",{class:"grid2"},
-    el("div",{},el("label",{for:"st-"+s.sub},"Status"),selectEl("st-"+s.sub,STATUSES,s.status,v=>saveSub(s.sub,{status:v}).then(()=>toast("Saved")))),
-    el("div",{},el("label",{for:"m-"+s.sub},"Members"),members)),
-    el("div",{},el("label",{for:"n-"+s.sub},"Notes"),notes),
-    el("div",{},el("label",{for:"mv-"+s.sub},"Wrong show?"),moveIn,showDatalist()));
+  card.append(el("div",{},el("h3",{},"r/"+(s.display||key)," ",s.status!=="works"?el("span",{class:"pill warn"},STATUSES[s.status]):null),
+    el("div",{class:"muted small"},hist.length+" post"+(hist.length===1?"":"s")+(s.snooze_until&&s.snooze_until>todayISO()?" · snoozed until "+niceDate(s.snooze_until):"")+
+      (s.show_slug&&s.show_slug!==slug?" · this sub is linked to "+showTitle(s.show_slug):""))));
   const ul=el("ul",{class:"rows"});
   for (const p of hist){
-    const fmtSel=selectEl("pf-"+p.id,Object.assign({"":"Format unknown"},FMT),p.format||"",v=>updatePost(p.id,{format:v}).then(()=>toast("Saved")));
-    const linkSel=selectEl("pl-"+p.id,{"":"Link unknown",app:"App link",web:"Web link"},p.link||"",v=>updatePost(p.id,{link:v}).then(()=>toast("Saved")));
-    const outSel=selectEl("po-"+p.id,OUTCOMES,p.outcome,async v=>{await updatePost(p.id,{outcome:v}); toast("Saved");});
-    const rateSel=selectEl("pr-"+p.id,RATINGS,p.rating||"",v=>updatePost(p.id,{rating:v||null}).then(()=>toast("Saved")));
-    const ep=el("input",{id:"pe-"+p.id,type:"number",min:"1",placeholder:"Ep #",value:p.episode||""});
-    ep.addEventListener("change",()=>updatePost(p.id,{episode:ep.value?Number(ep.value):null}).then(()=>toast("Saved")));
-    const del=el("button",{class:"btn ghost danger",type:"button"},"Delete");
+    const sum=el("summary",{},postLine(p));
+    const saved=d=>{ sum.textContent=postLine(d); toast("Saved"); };
+    const fmtSel=selectEl("pf-"+p.id,Object.assign({"":"Format unknown"},FMT),p.format||"",v=>updatePost(p.id,{format:v}).then(saved));
+    const linkSel=selectEl("pl-"+p.id,{"":"Link unknown",app:"App link",web:"Web link"},p.link||"",v=>updatePost(p.id,{link:v}).then(saved));
+    const outSel=selectEl("po-"+p.id,OUTCOMES,p.outcome,async v=>{const d=await updatePost(p.id,{outcome:v}); await applyOutcomeToSub(key,v); saved(d);});
+    const rateSel=selectEl("pr-"+p.id,RATINGS,p.rating||"",v=>updatePost(p.id,{rating:v||null}).then(saved));
+    const ep=el("input",{id:"pe-"+p.id,type:"number",min:"1",placeholder:"Episode #",value:p.episode||""});
+    ep.addEventListener("change",()=>updatePost(p.id,{episode:ep.value?Number(ep.value):null}).then(saved));
+    const views=el("input",{id:"pv-"+p.id,type:"number",min:"0",placeholder:"Views",value:p.views||""});
+    views.addEventListener("change",()=>updatePost(p.id,{views:views.value?Number(views.value):null}).then(saved));
+    const del=el("button",{class:"btn ghost danger",type:"button"},"Delete post");
     del.addEventListener("click",async()=>{ if(del.dataset.armed){ await deletePost(p.id); toast("Deleted"); renderShows(); } else { del.dataset.armed="1"; del.textContent="Tap again to delete"; } });
-    ul.append(el("li",{},el("div",{class:"grow"},
-      el("div",{},el("strong",{class:"num"},niceDate(p.posted_on)),el("span",{class:"muted small"}," · "+ago(p.posted_on)+(p.source==="import"?" · imported":""))),
-      el("div",{class:"post-edit"},fmtSel,ep,linkSel,outSel,rateSel,viewsInput(p),del))));
+    ul.append(el("li",{},el("details",{class:"grow post"},sum,
+      el("div",{class:"post-edit"},outSel,rateSel,views,fmtSel,linkSel,p.format==="episode"?ep:null,del))));
   }
-  card.append(hist.length?ul:el("p",{class:"muted small"},"No posts yet."));
-  // Add a post that's missing from the history.
-  const dIn=el("input",{id:"ad-"+s.sub,type:"date",value:todayISO()});
-  const fSel=selectEl("af-"+s.sub,FMT,"trivia",()=>{});
-  card.append(el("details",{},el("summary",{class:"small"},"Add a missing post"),el("div",{class:"post-edit",style:"margin-top:8px"},dIn,fSel,
-    el("button",{class:"btn",type:"button",onclick:async()=>{ await addPost({posted_on:dIn.value,sub:s.sub,show_slug:slug,format:fSel.value}); toast("Added"); renderShows(); }},"Add"))));
+  card.append(hist.length?ul:el("p",{class:"muted small"},"No posts for this show here yet."));
+
+  const members=el("input",{id:"m-"+key,type:"number",min:"0",placeholder:"e.g. 250000",value:s.members||""});
+  members.addEventListener("change",()=>saveSub(key,{members:members.value?Number(members.value):null}).then(()=>toast("Saved")));
+  const moveIn=el("input",{id:"mv-"+key,list:"dl-shows",placeholder:"Pick the right show",autocomplete:"off"});
+  moveIn.addEventListener("change",async()=>{ const to=slugFromTitle(moveIn.value); if(!to){toast("Pick a show from the list");return;}
+    await saveSub(key,{show_slug:to}); for (const p of hist) await updatePost(p.id,{show_slug:to}); toast("Moved to "+showTitle(to)); renderShows(); });
+  const subNotes=el("textarea",{id:"n-"+key,placeholder:"e.g. only allows posts on weekends"}); subNotes.value=s.notes||"";
+  subNotes.addEventListener("change",()=>saveSub(key,{notes:subNotes.value}).then(()=>toast("Saved")));
+  card.append(el("details",{},el("summary",{class:"small muted"},"Sub settings (status, members, notes)"),
+    el("div",{class:"stack"},
+      el("div",{class:"grid2"},
+        el("div",{},el("label",{for:"st-"+key},"Status"),selectEl("st-"+key,STATUSES,s.status,v=>saveSub(key,{status:v}).then(()=>{toast("Saved");renderShows();}))),
+        el("div",{},el("label",{for:"m-"+key},"Members"),members)),
+      el("div",{},el("label",{for:"n-"+key},"Notes"),subNotes),
+      el("div",{},el("label",{for:"mv-"+key},"Wrong show? Move these posts"),moveIn,showDatalist()))));
   return card;
+}
+function addPostCard(slug, subKeys){
+  const subIn=el("input",{id:"ap-sub",placeholder:"subreddit",autocomplete:"off",value:subKeys[0]?((S.subs[subKeys[0]]||{}).display||subKeys[0]):""});
+  const dIn=el("input",{id:"ap-date",type:"date",value:todayISO()});
+  const fSel=selectEl("ap-fmt",FMT,"trivia",()=>{});
+  const btn=el("button",{class:"btn",type:"button"},"Add");
+  btn.addEventListener("click",async()=>{
+    const raw=cleanSub(subIn.value); if(!raw){ toast("Type the subreddit"); return; } const k=raw.toLowerCase();
+    if(!S.subs[k]) await saveSub(k,{display:raw,show_slug:slug,status:"works"});
+    await addPost({posted_on:dIn.value,sub:k,show_slug:slug,format:fSel.value}); toast("Added"); renderShows();
+  });
+  return el("div",{class:"card"},el("details",{},el("summary",{class:"small"},"Add a missing post"),
+    el("div",{class:"post-edit",style:"margin-top:8px"},subIn,dIn,fSel,btn)));
 }
 
 /* ---------- boot ---------- */
