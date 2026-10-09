@@ -164,6 +164,7 @@ function el(tag, attrs, ...kids){
 }
 function todayISO(){ const d=new Date(); return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
 function addDays(iso,n){ const d=new Date(iso+"T12:00:00"); d.setDate(d.getDate()+n); return d.toISOString().slice(0,10); }
+function addMonths(iso,n){ const d=new Date(iso+"T12:00:00"); d.setMonth(d.getMonth()+n); return d.toISOString().slice(0,10); }
 function daysBetween(a,b){ return Math.round((new Date(b+"T12:00:00")-new Date(a+"T12:00:00"))/864e5); }
 function ago(iso, ref){ if(!iso) return "never"; const d=daysBetween(iso, ref||todayISO()); return d<=0?"today":d===1?"yesterday":d+" days ago"; }
 function niceDate(iso){ return new Date(iso+"T12:00:00").toLocaleDateString(undefined,{weekday:"short",day:"numeric",month:"short"}); }
@@ -238,6 +239,30 @@ async function deletePost(id){
   const {error}=await sb.from("rp_posts").delete().eq("id",id);
   if(error){ toast("Couldn't delete: "+error.message); throw error; }
   S.posts=S.posts.filter(p=>p.id!==id);
+}
+// "Try again in N months": pauses every sub of the show until then (0 clears it). Suggest and Plan skip paused subs.
+function allSubsOfShow(slug){ return [...new Set([...subsForShow(slug).map(s=>s.sub), ...postsForShow(slug).map(p=>p.sub)])]; }
+async function pauseShow(slug, months){
+  const until=months?addMonths(todayISO(),months):null;
+  for (const k of allSubsOfShow(slug)) await saveSub(k,{snooze_until:until});
+  toast(until?showTitle(slug)+" paused until "+niceDate(until):showTitle(slug)+" can come back anytime");
+}
+function showPausedUntil(slug){
+  const d=allSubsOfShow(slug).map(k=>(S.subs[k]||{}).snooze_until).filter(x=>x&&x>todayISO()).sort();
+  return d.length?d[d.length-1]:null;
+}
+// Keys are "m<months>" so the options keep this order (number-like keys would sort first).
+const PAUSE_OPTS={"":"Try again in…",m1:"1 month",m2:"2 months",m3:"3 months",m6:"6 months"};
+// Removes a sub and its posts for this show. Logged history for it is gone too.
+async function deleteSub(key, slug){
+  const {error:e1}=await sb.from("rp_posts").delete().eq("sub",key).eq("show_slug",slug);
+  if(e1){ toast("Couldn't delete: "+e1.message); throw e1; }
+  S.posts=S.posts.filter(p=>!(p.sub===key&&p.show_slug===slug));
+  if (!S.posts.some(p=>p.sub===key)){
+    const {error:e2}=await sb.from("rp_subs").delete().eq("sub",key);
+    if(e2){ toast("Couldn't delete: "+e2.message); throw e2; }
+    delete S.subs[key];
+  }
 }
 async function saveShow(slug, patch){
   const row=Object.assign({slug, reviewed:false}, S.shows[slug]||{}, patch); delete row.owner;
@@ -421,7 +446,7 @@ async function renderLog(){
   const todo=S.posts.filter(p=>p.outcome==="unknown").sort((a,b)=>(b.posted_on.localeCompare(a.posted_on))||(b.id-a.id));
   const count=el("span",{class:"num"},String(todo.length));
   const card=el("div",{class:"card"},el("h2",{},"To fill in (",count,")"),
-    el("p",{class:"muted small"},"Add a rating or views if you have them, then pick whether it stayed up. That finishes the post and it leaves this list."));
+    el("p",{class:"muted small"},"Add a rating or views if you have them. If the show flopped or got removed, use 'Try again in…' to pause the whole show. Then pick whether it stayed up: that finishes the post and it leaves this list."));
   const ul=el("ul",{class:"rows"});
   const OUT_PICK=Object.assign({},OUTCOMES,{unknown:"Did it stay up?"});
   for (const p of todo){
@@ -431,6 +456,7 @@ async function renderLog(){
       el("div",{class:"post-edit"},
         selectEl("r-"+p.id,RATINGS,p.rating||"",v=>updatePost(p.id,{rating:v||null}).then(()=>toast("Saved"))),
         viewsInput(p),
+        selectEl("tp-"+p.id,PAUSE_OPTS,"",v=>{ if(v) pauseShow(p.show_slug,Number(v.slice(1))); }),
         selectEl("o-"+p.id,OUT_PICK,"unknown",async v=>{
           if(v==="unknown") return;
           await updatePost(p.id,{outcome:v}); await applyOutcomeToSub(p.sub,v);
@@ -718,6 +744,8 @@ async function renderShowDetail(box, slug){
     el("div",{class:"card"},el("h2",{},showTitle(slug)),
       el("div",{class:"muted small"},posts.length+" post"+(posts.length===1?"":"s")+" in "+subKeys.length+" sub"+(subKeys.length===1?"":"s")+
         (epTotal?" · has episode mode ("+epTotal+")":"")+(S.chars.has(slug)?" · has character quiz":"")),
+      el("div",{},el("label",{for:"sh-pause"},(()=>{ const u=showPausedUntil(slug); return u?"Paused until "+niceDate(u):"Try again"; })()),
+        selectEl("sh-pause",Object.assign({"":showPausedUntil(slug)?"Change…":"Anytime (normal rest)"},showPausedUntil(slug)?{m0:"Unpause: anytime"}:{},PAUSE_OPTS,{"":showPausedUntil(slug)?"Change…":"Anytime (normal rest)"}),"",async v=>{ if(v==="") return; await pauseShow(slug,Number(v.slice(1))); renderShows(); })),
       el("div",{class:"actions"},rev),
       el("details",{},el("summary",{class:"small"},sh.notes?"Show notes (1)":"Show notes"),notes)));
   for (const k of subKeys) box.append(subCard(k, slug));
@@ -761,13 +789,17 @@ function subCard(key, slug){
     await saveSub(key,{show_slug:to}); for (const p of hist) await updatePost(p.id,{show_slug:to}); toast("Moved to "+showTitle(to)); renderShows(); });
   const subNotes=el("textarea",{id:"n-"+key,placeholder:"e.g. only allows posts on weekends"}); subNotes.value=s.notes||"";
   subNotes.addEventListener("change",()=>saveSub(key,{notes:subNotes.value}).then(()=>toast("Saved")));
+  const delSub=el("button",{class:"btn ghost danger",type:"button"},"Delete this sub");
+  delSub.addEventListener("click",async()=>{ if(delSub.dataset.armed){ await deleteSub(key,slug); toast("Deleted "+subLabel(key)); renderShows(); }
+    else { delSub.dataset.armed="1"; delSub.textContent="Tap again: deletes r/"+(s.display||key)+(hist.length?" and its "+hist.length+" post"+(hist.length===1?"":"s"):""); } });
   card.append(el("details",{},el("summary",{class:"small muted"},"Sub settings (status, members, notes)"),
     el("div",{class:"stack"},
       el("div",{class:"grid2"},
         el("div",{},el("label",{for:"st-"+key},"Status"),selectEl("st-"+key,STATUSES,s.status,v=>saveSub(key,{status:v}).then(()=>{toast("Saved");renderShows();}))),
         el("div",{},el("label",{for:"m-"+key},"Members"),members)),
       el("div",{},el("label",{for:"n-"+key},"Notes"),subNotes),
-      el("div",{},el("label",{for:"mv-"+key},"Wrong show? Move these posts"),moveIn,showDatalist()))));
+      el("div",{},el("label",{for:"mv-"+key},"Wrong show? Move these posts"),moveIn,showDatalist()),
+      el("div",{class:"actions"},delSub))));
   return card;
 }
 function addPostCard(slug, subKeys){
