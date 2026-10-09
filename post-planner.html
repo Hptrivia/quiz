@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Post Planner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<style>
+/* Layout: one narrow phone column, sticky tab bar on top, cards only for the thing you act on. */
+:root{
+  --bg:#f4f5f7; --surface:#ffffff; --fg:#15171c; --muted:#5d6370; --line:#dde0e6;
+  --accent:#d9481f; --accent-ink:#ffffff; --new:#11766a; --warn:#a15c00; --bad:#b3261e; --chip:#eceef2;
+  --display:"Archivo",system-ui,sans-serif; --body:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121418; --surface:#1b1e24; --fg:#eceef2; --muted:#9aa0ab; --line:#2c3038;
+  --accent:#ff6a3d; --accent-ink:#15171c; --new:#3cc4b1; --warn:#e3a33b; --bad:#ff7a70; --chip:#262a32; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121418; --surface:#1b1e24; --fg:#eceef2; --muted:#9aa0ab; --line:#2c3038;
+  --accent:#ff6a3d; --accent-ink:#15171c; --new:#3cc4b1; --warn:#e3a33b; --bad:#ff7a70; --chip:#262a32; color-scheme:dark}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0}
+body{background:var(--bg);color:var(--fg);font:15px/1.45 var(--body)}
+.wrap{max-width:640px;margin:0 auto;padding:0 16px 80px}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance}
+h1{font-size:20px;font-weight:800;letter-spacing:-.01em}
+h2{font-size:17px;font-weight:800}
+h3{font-size:15px;font-weight:600}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+header.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header.bar .row{max-width:640px;margin:0 auto;padding:12px 16px 0;display:flex;justify-content:space-between;align-items:center;gap:12px}
+nav.tabs{max-width:640px;margin:0 auto;padding:0 8px;display:flex;overflow-x:auto}
+nav.tabs button{flex:1;background:none;border:0;border-bottom:3px solid transparent;color:var(--muted);font:600 14px var(--body);padding:10px 8px;cursor:pointer;white-space:nowrap}
+nav.tabs button[aria-selected="true"]{color:var(--fg);border-color:var(--accent)}
+section{display:flex;flex-direction:column;gap:14px;padding-block:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:10px;min-width:0}
+label{font-size:13px;font-weight:600;color:var(--muted);display:block;margin-bottom:4px}
+input,select,textarea{width:100%;font:15px var(--body);color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:9px 10px}
+textarea{min-height:60px;resize:vertical}
+input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:420px){.grid2{grid-template-columns:1fr}}
+button.btn{font:600 14px var(--body);border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:9px 14px;cursor:pointer}
+button.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+button.btn.ghost{background:none}
+button.btn.danger{color:var(--bad)}
+button.btn:disabled{opacity:.5;cursor:default}
+.actions{display:flex;flex-wrap:wrap;gap:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:500 13px var(--body);border:1px solid var(--line);background:var(--chip);color:var(--fg);border-radius:999px;padding:5px 11px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.chip.off{opacity:.45}
+.pill{display:inline-block;font:600 11px var(--body);letter-spacing:.04em;text-transform:uppercase;border-radius:4px;padding:2px 6px;background:var(--chip);color:var(--muted)}
+.pill.new{background:color-mix(in srgb,var(--new) 18%,transparent);color:var(--new)}
+.pill.ret{background:color-mix(in srgb,var(--accent) 16%,transparent);color:var(--accent)}
+.pill.warn{background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn)}
+.pill.bad{background:color-mix(in srgb,var(--bad) 16%,transparent);color:var(--bad)}
+.pill.ok{background:color-mix(in srgb,var(--new) 18%,transparent);color:var(--new)}
+ul.rows{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+ul.rows>li{border-top:1px solid var(--line);padding:10px 0;display:flex;gap:10px;align-items:flex-start;min-width:0}
+ul.rows>li:first-child{border-top:0}
+.grow{flex:1;min-width:0;overflow-wrap:anywhere}
+.big{font:800 22px/1.2 var(--display)}
+.reason{font-size:14px;color:var(--muted);display:flex;flex-direction:column;gap:3px}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:9px 16px;border-radius:999px;font-weight:600;font-size:14px;z-index:20}
+.listbtn{all:unset;display:flex;gap:10px;align-items:center;width:100%;cursor:pointer}
+.listbtn:focus-visible{outline:2px solid var(--accent)}
+.day{display:flex;flex-direction:column;gap:6px}
+.dayhead{display:flex;justify-content:space-between;align-items:baseline;font-weight:600}
+.slot{display:flex;gap:8px;align-items:flex-start;padding:8px 10px;border-radius:8px;background:var(--bg);border:1px solid var(--line)}
+.slot.done{opacity:.55}
+.slot.done .grow{text-decoration:line-through}
+.post-edit{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:6px;width:100%}
+.confirm{border:1px solid var(--bad);border-radius:8px;padding:10px;display:flex;flex-direction:column;gap:8px}
+#login{max-width:380px;margin:12vh auto 0}
+</style>
+</head>
+<body>
+<div id="login" class="wrap" hidden>
+  <div class="card">
+    <h1>Post Planner</h1>
+    <p class="muted small">Private. Sign in with the Supabase user you created.</p>
+    <form id="loginForm" class="card" style="border:0;padding:0">
+      <div id="lEmailRow"><label for="lEmail">Email</label><input id="lEmail" type="email" autocomplete="username" required></div>
+      <div><label for="lPass">Password</label><input id="lPass" type="password" autocomplete="current-password" required></div>
+      <button class="btn primary" type="submit">Sign in</button>
+      <p id="lErr" class="small" style="color:var(--bad)"></p>
+    </form>
+  </div>
+</div>
+
+<div id="app" hidden>
+  <header class="bar">
+    <div class="row"><h1>Post Planner</h1><span id="status" class="muted small"></span></div>
+    <nav class="tabs" role="tablist">
+      <button role="tab" data-tab="log" aria-selected="true">Log</button>
+      <button role="tab" data-tab="suggest" aria-selected="false">Suggest</button>
+      <button role="tab" data-tab="plan" aria-selected="false">Plan</button>
+      <button role="tab" data-tab="shows" aria-selected="false">Shows</button>
+    </nav>
+  </header>
+  <main class="wrap">
+    <section id="tab-log"></section>
+    <section id="tab-suggest" hidden></section>
+    <section id="tab-plan" hidden></section>
+    <section id="tab-shows" hidden></section>
+  </main>
+</div>
+
+<script>
+(function(){
+"use strict";
+const SB_URL = "https://avasbapxzgmpcosixgio.supabase.co";
+const SB_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF2YXNiYXB4emdtcGNvc2l4Z2lvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk2NjM4MzUsImV4cCI6MjA5NTIzOTgzNX0.DLNnasmaQ1hdKXb2xqXrTBnBjISo0RxOiwy7TrlN9bg";
+const sb = window.supabase.createClient(SB_URL, SB_KEY);
+
+// Your order of preference. Not a quota: the first one the sub hasn't had wins.
+const FORMATS = [
+  {id:"trivia", label:"Regular trivia"},
+  {id:"episode", label:"Episode mode"},
+  {id:"multiplayer", label:"Multiplayer"},
+  {id:"character", label:"Character quiz"},
+  {id:"fan", label:"Fan questions"}
+];
+const FMT = Object.fromEntries(FORMATS.map(f=>[f.id,f.label]));
+const RATINGS = {"":"Not rated", flop:"Flop", ok:"OK", great:"Great"};
+const OUTCOMES = {unknown:"Not set", stayed:"Stayed up", removed_instant:"Removed instantly", removed_later:"Removed later", removed:"Removed (timing unknown)", banned:"Banned", deleted:"Deleted by you"};
+const STATUSES = {works:"Works", mod_removed:"Mod removed before", never:"Never allows posts", banned:"Banned", temp_ban:"Temporary ban"};
+// The only kinds of show you post: TV, sitcoms, anime, movies, games, and MMA as the one sport.
+const POST_CATS = new Set(["TV","Sitcoms","Anime","Movies","Games"]);
+const POST_EXTRA = new Set(["mma"]);
+function postable(slug){ return POST_EXTRA.has(slug) || POST_CATS.has((S.themes[slug]||{}).category); }
+const MULTI_MIN_MEMBERS = 150000;
+
+const S = {themes:{}, themeList:[], epFiles:{}, epCount:{}, chars:new Set(), subs:{}, posts:[], shows:{}, settings:{}, tab:"log",
+  showDetail:null, showFilter:"all", showQuery:"", suggestMode:"return", suggestSkip:new Set(), suggestion:null, logDraft:null};
+
+/* ---------- small helpers ---------- */
+const $ = id => document.getElementById(id);
+function el(tag, attrs, ...kids){
+  const n = document.createElement(tag);
+  for (const [k,v] of Object.entries(attrs||{})){
+    if (v===undefined||v===null||v===false) continue;
+    if (k==="class") n.className=v; else if (k.startsWith("on")) n.addEventListener(k.slice(2),v);
+    else if (k==="text") n.textContent=v; else n.setAttribute(k, v===true?"":v);
+  }
+  for (const k of kids.flat()) if (k!==null&&k!==undefined&&k!==false) n.append(k.nodeType?k:document.createTextNode(String(k)));
+  return n;
+}
+function todayISO(){ const d=new Date(); return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
+function addDays(iso,n){ const d=new Date(iso+"T12:00:00"); d.setDate(d.getDate()+n); return d.toISOString().slice(0,10); }
+function daysBetween(a,b){ return Math.round((new Date(b+"T12:00:00")-new Date(a+"T12:00:00"))/864e5); }
+function ago(iso, ref){ if(!iso) return "never"; const d=daysBetween(iso, ref||todayISO()); return d<=0?"today":d===1?"yesterday":d+" days ago"; }
+function niceDate(iso){ return new Date(iso+"T12:00:00").toLocaleDateString(undefined,{weekday:"short",day:"numeric",month:"short"}); }
+function cleanSub(s){ return String(s||"").trim().replace(/^\/?r\//i,"").replace(/\/+$/,""); }
+function showTitle(slug){ return (S.themes[slug]&&S.themes[slug].title) || slug || "No show"; }
+function toast(msg){ const t=el("div",{class:"toast",role:"status",text:msg}); document.body.append(t); setTimeout(()=>t.remove(),2200); }
+function setStatus(m){ $("status").textContent=m||""; }
+function cooldown(){ return Number(S.settings.cooldownDays)||60; }
+function retryDays(){ return Number(S.settings.retryDays)||30; }
+
+/* ---------- site data: themes and which formats exist ---------- */
+async function loadSiteData(){
+  const [themes, eps, charHtml] = await Promise.all([
+    fetch("data/themes.json",{cache:"no-cache"}).then(r=>r.json()),
+    fetch("data/episode_themes.json",{cache:"no-cache"}).then(r=>r.json()),
+    fetch("character-quiz/index.html",{cache:"no-cache"}).then(r=>r.text()).catch(()=>"")
+  ]);
+  for (const t of themes) S.themes[t.slug] = {title:t.title, category:t.category};
+  S.themeList = themes.map(t=>t.slug).sort((a,b)=>showTitle(a).localeCompare(showTitle(b)));
+  S.epFiles = eps;
+  for (const m of charHtml.matchAll(/href="([a-z0-9-]+)\.html"/g)) if (m[1]!=="index" && S.themes[m[1]]) S.chars.add(m[1]);
+}
+// Episodes are split the same way assets/episode.js does: "EPISODE N" in the question context.
+async function episodeCount(slug){
+  if (!S.epFiles[slug]) return 0;
+  if (S.epCount[slug]!==undefined) return S.epCount[slug];
+  try{
+    const qs = await fetch("data/"+S.epFiles[slug],{cache:"no-cache"}).then(r=>r.json());
+    let cur=1; const set=new Set();
+    for (const q of qs){ const m=String(q.context||"").match(/episode\s+(\d+)/i); if(m) cur=parseInt(m[1],10); set.add(cur); }
+    S.epCount[slug]=set.size;
+  }catch(e){ S.epCount[slug]=1; }
+  return S.epCount[slug];
+}
+
+/* ---------- database ---------- */
+async function fetchAll(table, order){
+  const out=[]; const step=1000;
+  for (let from=0;;from+=step){
+    let q=sb.from(table).select("*").range(from,from+step-1);
+    if (order) q=q.order(order,{ascending:true});
+    const {data,error}=await q; if(error) throw error;
+    out.push(...data); if(data.length<step) break;
+  }
+  return out;
+}
+async function loadDB(){
+  const [subs,posts,shows,settings]=await Promise.all([fetchAll("rp_subs"),fetchAll("rp_posts","posted_on"),fetchAll("rp_shows"),fetchAll("rp_settings")]);
+  S.subs={}; for (const s of subs) S.subs[s.sub]=s;
+  S.posts=posts; S.shows={}; for (const s of shows) S.shows[s.slug]=s;
+  S.settings=(settings[0]&&settings[0].data)||{};
+}
+async function saveSub(sub, patch){
+  const row = Object.assign({}, S.subs[sub]||{sub, status:"works"}, patch, {updated_at:new Date().toISOString()});
+  delete row.owner;
+  const {data,error}=await sb.from("rp_subs").upsert(row,{onConflict:"owner,sub"}).select().single();
+  if(error){ toast("Couldn't save: "+error.message); throw error; }
+  S.subs[sub]=data; return data;
+}
+async function addPost(p){
+  const row=Object.assign({outcome:"unknown",source:"manual",format:"",link:""},p);
+  const {data,error}=await sb.from("rp_posts").insert(row).select().single();
+  if(error){ toast("Couldn't save: "+error.message); throw error; }
+  S.posts.push(data); S.posts.sort((a,b)=>a.posted_on<b.posted_on?-1:1); return data;
+}
+async function updatePost(id, patch){
+  const {data,error}=await sb.from("rp_posts").update(patch).eq("id",id).select().single();
+  if(error){ toast("Couldn't save: "+error.message); throw error; }
+  const i=S.posts.findIndex(p=>p.id===id); if(i>=0) S.posts[i]=data; return data;
+}
+async function deletePost(id){
+  const {error}=await sb.from("rp_posts").delete().eq("id",id);
+  if(error){ toast("Couldn't delete: "+error.message); throw error; }
+  S.posts=S.posts.filter(p=>p.id!==id);
+}
+async function saveShow(slug, patch){
+  const row=Object.assign({slug, reviewed:false}, S.shows[slug]||{}, patch); delete row.owner;
+  const {data,error}=await sb.from("rp_shows").upsert(row,{onConflict:"owner,slug"}).select().single();
+  if(error){ toast("Couldn't save: "+error.message); throw error; }
+  S.shows[slug]=data;
+}
+async function saveSettings(patch){
+  S.settings=Object.assign({},S.settings,patch);
+  const {data:{user}}=await sb.auth.getUser();
+  const {error}=await sb.from("rp_settings").upsert({owner:user.id,data:S.settings},{onConflict:"owner"});
+  if(error){ toast("Couldn't save: "+error.message); throw error; }
+}
+
+/* ---------- the rules ---------- */
+function postsForSub(sub){ return S.posts.filter(p=>p.sub===sub); }
+function postsForShow(slug){ return S.posts.filter(p=>p.show_slug===slug); }
+function subsForShow(slug){ return Object.values(S.subs).filter(s=>s.show_slug===slug); }
+function lastPost(list){ return list.length?list[list.length-1]:null; }
+
+function subAvailable(s, onDate){
+  if (s.status==="never"||s.status==="banned") return false;
+  if (s.status==="temp_ban" && s.status_until && s.status_until>onDate) return false;
+  if (s.snooze_until && s.snooze_until>onDate) return false;
+  return true;
+}
+// How long this sub must rest, based on its status.
+function restDays(s){ return s.status==="mod_removed"?retryDays():cooldown(); }
+
+// Which formats this show has, and which this sub has already had.
+async function formatOptions(slug, sub){
+  const s=S.subs[sub]||{}; const hist=postsForSub(sub);
+  const used=new Set(hist.map(p=>p.format).filter(Boolean));
+  const epPosts=hist.filter(p=>p.format==="episode");
+  const epMax=Math.max(epPosts.length, ...epPosts.map(p=>p.episode||0), 0);
+  const epTotal=await episodeCount(slug);
+  const opts=[];
+  for (const f of FORMATS){
+    let ok=true, why="", episode=null;
+    if (f.id==="episode"){ ok=epTotal>epMax; episode=ok?epMax+1:null; why=!epTotal?"no episode mode":ok?"episode "+(epMax+1)+" of "+epTotal:"all "+epTotal+" posted here"; }
+    if (f.id==="multiplayer"){ ok=(s.members||0)>=MULTI_MIN_MEMBERS; why=s.members?(ok?"big sub":"sub under 150k"):"members unknown"; }
+    if (f.id==="character"){ ok=S.chars.has(slug); if(!ok) why="no character quiz"; }
+    opts.push({id:f.id, ok, used:used.has(f.id)&&f.id!=="episode", why, episode});
+  }
+  const last=lastPost(hist);
+  const fresh=opts.find(o=>o.ok&&!o.used);
+  const pick = fresh || opts.find(o=>o.ok && (!last||o.id!==last.format)) || opts[0];
+  return {opts, pick:pick.id, episode:pick.id==="episode"?pick.episode:null, novel:!!fresh && fresh.id!=="trivia"};
+}
+function suggestLink(sub){
+  const s=S.subs[sub]||{};
+  if (s.members>=100000) return "web";
+  if (s.members) return "app";
+  const last=[...postsForSub(sub)].reverse().find(p=>p.link&&p.outcome!=="removed"&&p.outcome!=="deleted");
+  return last?last.link:"app";
+}
+// Returning subs that are rested, ranked: a new format to offer first, then longest since a post.
+function returnCandidates(onDate, extraLast){
+  const recentShows=new Set(S.posts.filter(p=>daysBetween(p.posted_on,onDate)<14&&daysBetween(p.posted_on,onDate)>=0).map(p=>p.show_slug));
+  const out=[];
+  for (const s of Object.values(S.subs)){
+    if (!s.show_slug || !postable(s.show_slug) || !subAvailable(s,onDate)) continue;
+    const hist=postsForSub(s.sub); if(!hist.length) continue;
+    const last=(extraLast&&extraLast[s.sub])||lastPost(hist).posted_on;
+    const since=daysBetween(last,onDate);
+    if (since<restDays(s)) continue;
+    // Subs where nothing has ever stayed up go after the rest, or the oldest failures would always top the list.
+    const neverStuck=!hist.some(p=>p.outcome==="stayed"||p.outcome==="unknown");
+    out.push({s, since, recentShow:recentShows.has(s.show_slug), neverStuck});
+  }
+  // Round robin: the sub that has waited longest goes first, so every sub gets a turn before any repeats.
+  out.sort((a,b)=>(a.recentShow-b.recentShow)||(a.neverStuck-b.neverStuck)||(b.since-a.since));
+  return out;
+}
+function newShowCandidates(){
+  const hidden=new Set(S.settings.hiddenShows||[]);
+  const posted=new Set([...S.posts.map(p=>p.show_slug), ...Object.values(S.subs).map(s=>s.show_slug)]);
+  const pool=S.themeList.filter(sl=>!posted.has(sl)&&!hidden.has(sl)&&postable(sl));
+  // Alternate categories (TV, Sitcoms, Games…) so a week isn't all one kind of show.
+  const byCat={}; for (const sl of pool) (byCat[S.themes[sl].category]=byCat[S.themes[sl].category]||[]).push(sl);
+  const cats=Object.keys(byCat).sort((a,b)=>byCat[b].length-byCat[a].length); const out=[];
+  for (let i=0; out.length<pool.length; i++) for (const c of cats) if (byCat[c][i]) out.push(byCat[c][i]);
+  return out;
+}
+
+/* ---------- tabs ---------- */
+function switchTab(t){
+  S.tab=t;
+  document.querySelectorAll("nav.tabs button").forEach(b=>b.setAttribute("aria-selected",String(b.dataset.tab===t)));
+  ["log","suggest","plan","shows"].forEach(x=>$("tab-"+x).hidden=x!==t);
+  render();
+}
+function render(){ ({log:renderLog,suggest:renderSuggest,plan:renderPlan,shows:renderShows})[S.tab](); }
+
+function chipGroup(options, value, onPick, disabledFn){
+  const wrap=el("div",{class:"chips",role:"group"});
+  for (const [id,label] of options){
+    const dis=disabledFn&&disabledFn(id);
+    wrap.append(el("button",{type:"button",class:"chip"+(dis?" off":""),"aria-pressed":String(id===value),title:dis||undefined,onclick:()=>onPick(id)},label));
+  }
+  return wrap;
+}
+function selectEl(id, options, value, onChange){
+  const s=el("select",{id});
+  for (const [v,l] of Object.entries(options)) s.append(el("option",{value:v,selected:v===value},l));
+  s.addEventListener("change",()=>onChange(s.value)); return s;
+}
+function showDatalist(){
+  const dl=el("datalist",{id:"dl-shows"});
+  for (const sl of S.themeList) if (postable(sl)) dl.append(el("option",{value:showTitle(sl)}));
+  return dl;
+}
+function slugFromTitle(t){ t=String(t||"").trim().toLowerCase(); return S.themeList.find(sl=>showTitle(sl).toLowerCase()===t) || (S.themes[t]?t:null); }
+
+/* ---------- LOG ---------- */
+async function renderLog(){
+  const box=$("tab-log"); box.replaceChildren();
+  const d=S.logDraft||(S.logDraft={show:"",subs:"",date:todayISO(),format:"trivia",episode:"",link:"app",note:""});
+  const slug=slugFromTitle(d.show);
+  const form=el("div",{class:"card"},el("h2",{},"Log a post"));
+  const showIn=el("input",{id:"f-show",list:"dl-shows",placeholder:"Start typing a show",value:d.show,autocomplete:"off"});
+  showIn.addEventListener("change",()=>{ d.show=showIn.value; renderLog(); });
+  form.append(el("div",{},el("label",{for:"f-show"},"Show"),showIn,showDatalist()));
+
+  const subIn=el("input",{id:"f-subs",placeholder:"e.g. howyoudoin, friends_tv_show",value:d.subs,autocomplete:"off"});
+  subIn.addEventListener("input",()=>{ d.subs=subIn.value; });
+  form.append(el("div",{},el("label",{for:"f-subs"},"Subreddits (comma between several)"),subIn));
+  if (slug){
+    const known=subsForShow(slug);
+    if (known.length){
+      form.append(el("div",{class:"chips"},known.map(s=>el("button",{type:"button",class:"chip",onclick:()=>{
+        const list=d.subs.split(",").map(cleanSub).filter(Boolean); if(!list.includes(s.display||s.sub)) list.push(s.display||s.sub);
+        d.subs=list.join(", "); renderLog(); }},"+ r/"+(s.display||s.sub)+(s.status!=="works"?" ("+STATUSES[s.status].toLowerCase()+")":"")))));
+    }
+  }
+  const dateIn=el("input",{id:"f-date",type:"date",value:d.date}); dateIn.addEventListener("change",()=>d.date=dateIn.value);
+  form.append(el("div",{},el("label",{for:"f-date"},"Date"),dateIn));
+
+  let epTotal=0; if (slug) epTotal=await episodeCount(slug);
+  const avail={trivia:true, episode:epTotal>0, multiplayer:true, character:slug?S.chars.has(slug):true, fan:true};
+  form.append(el("div",{},el("label",{},"Format"),chipGroup(FORMATS.map(f=>[f.id,f.label]),d.format,v=>{d.format=v;renderLog();},id=>avail[id]?"":"This show doesn't have it")));
+  if (d.format==="episode"){
+    const epIn=el("input",{id:"f-ep",type:"number",min:"1",max:String(epTotal||99),value:d.episode,placeholder:epTotal?("1 to "+epTotal):"Episode number"});
+    epIn.addEventListener("input",()=>d.episode=epIn.value);
+    form.append(el("div",{},el("label",{for:"f-ep"},"Episode number"),epIn));
+  }
+  form.append(el("div",{},el("label",{},"Link"),chipGroup([["app","App link"],["web","Web link"]],d.link,v=>{d.link=v;renderLog();})));
+  form.append(el("div",{},el("label",{},"How did it do? (optional, add later if you don't know yet)"),chipGroup(Object.entries(RATINGS).filter(([k])=>k),d.rating||"",v=>{d.rating=d.rating===v?"":v;renderLog();})));
+  const viewsIn=el("input",{id:"f-views",type:"number",min:"0",placeholder:"Views, if you know them",value:d.views||""}); viewsIn.addEventListener("input",()=>d.views=viewsIn.value);
+  form.append(el("div",{},el("label",{for:"f-views"},"Views"),viewsIn));
+  const noteIn=el("textarea",{id:"f-note",placeholder:"Optional"}); noteIn.value=d.note; noteIn.addEventListener("input",()=>d.note=noteIn.value);
+  form.append(el("div",{},el("label",{for:"f-note"},"Note"),noteIn));
+  const save=el("button",{class:"btn primary",type:"button"},"Save post");
+  save.addEventListener("click",async()=>{
+    const subs=d.subs.split(",").map(cleanSub).filter(Boolean);
+    if(!slug){ toast("Pick a show from the list"); return; }
+    if(!subs.length){ toast("Add at least one subreddit"); return; }
+    save.disabled=true;
+    try{
+      for (const raw of subs){
+        const key=raw.toLowerCase();
+        if(!S.subs[key]) await saveSub(key,{display:raw,show_slug:slug,status:"works"});
+        else if(!S.subs[key].show_slug) await saveSub(key,{show_slug:slug});
+        await addPost({posted_on:d.date,sub:key,show_slug:slug,format:d.format,episode:d.format==="episode"&&d.episode?Number(d.episode):null,link:d.link,rating:d.rating||null,views:d.views?Number(d.views):null,note:d.note||null,source:d.source||"manual"});
+      }
+      toast(subs.length>1?"Saved "+subs.length+" posts":"Saved");
+      S.logDraft=null; renderLog();
+    }finally{ save.disabled=false; }
+  });
+  form.append(el("div",{class:"actions"},save));
+  box.append(form);
+
+  const recent=[...S.posts].sort((a,b)=>(b.posted_on.localeCompare(a.posted_on))||(b.id-a.id)).slice(0,15);
+  const card=el("div",{class:"card"},el("h2",{},"Recent posts"),el("p",{class:"muted small"},"Set the outcome once you know whether it stayed up."));
+  const ul=el("ul",{class:"rows"});
+  for (const p of recent){
+    ul.append(el("li",{},el("div",{class:"grow"},
+      el("div",{},el("strong",{},"r/"+((S.subs[p.sub]||{}).display||p.sub))," · ",showTitle(p.show_slug)),
+      el("div",{class:"muted small"},niceDate(p.posted_on)+" · "+(FMT[p.format]||"Format unknown")+(p.episode?" "+p.episode:"")+(p.link?" · "+p.link+" link":"")),
+      el("div",{class:"post-edit"},
+        selectEl("o-"+p.id,OUTCOMES,p.outcome,async v=>{await updatePost(p.id,{outcome:v}); await applyOutcomeToSub(p.sub,v); toast("Updated");}),
+        selectEl("r-"+p.id,RATINGS,p.rating||"",v=>updatePost(p.id,{rating:v||null}).then(()=>toast("Updated"))),
+        viewsInput(p)))));
+  }
+  card.append(recent.length?ul:el("p",{class:"muted"},"Nothing logged yet."));
+  box.append(card);
+}
+function viewsInput(p){
+  const v=el("input",{id:"v-"+p.id,type:"number",min:"0",placeholder:"Views",value:p.views||""});
+  v.addEventListener("change",()=>updatePost(p.id,{views:v.value?Number(v.value):null}).then(()=>toast("Saved")));
+  return v;
+}
+function perfText(p){ return [p.rating?RATINGS[p.rating]:"", p.views?Number(p.views).toLocaleString()+" views":""].filter(Boolean).join(", "); }
+// A logged outcome updates the sub's status, so suggestions respect it.
+async function applyOutcomeToSub(sub, outcome){
+  const s=S.subs[sub]; if(!s) return;
+  if (outcome==="banned" && s.status!=="banned") await saveSub(sub,{status:"banned"});
+  else if (outcome==="removed_instant" && s.status==="works") await saveSub(sub,{status:"never",notes:[s.notes,"Removed instantly on "+todayISO()].filter(Boolean).join("\n")});
+  else if ((outcome==="removed_later"||outcome==="removed") && s.status==="works") await saveSub(sub,{status:"mod_removed"});
+}
+
+/* ---------- SUGGEST ---------- */
+async function nextSuggestion(){
+  const today=todayISO();
+  if (S.suggestion) S.suggestSkip.add(S.suggestion.kind==="return"?S.suggestion.sub:"show:"+S.suggestion.slug);
+  S.suggestion=null;
+  if (S.suggestMode==="return"){
+    const c=returnCandidates(today).filter(x=>x.s.skip_on!==today && !S.suggestSkip.has(x.s.sub));
+    // Prefer subs that have a format they haven't had yet, among the 15 most overdue.
+    const top=c.slice(0,15); let best=null;
+    for (const x of top){ const f=await formatOptions(x.s.show_slug,x.s.sub); x.f=f; if(!best || (f.novel && !best.f.novel)) best=x; if(best.f.novel) break; }
+    if(!best && c.length){ best=c[0]; best.f=await formatOptions(best.s.show_slug,best.s.sub); }
+    if(best) S.suggestion={kind:"return", sub:best.s.sub, slug:best.s.show_slug, since:best.since, f:best.f, format:best.f.pick, episode:best.f.episode, link:suggestLink(best.s.sub)};
+  } else {
+    const c=newShowCandidates().filter(sl=>!S.suggestSkip.has("show:"+sl));
+    if(c.length){ const sl=c[0]; const f=await formatOptions(sl,"__none__"); S.suggestion={kind:"new", slug:sl, f, format:"trivia", episode:null, link:"app", subs:""}; }
+  }
+  renderSuggest();
+}
+function renderSuggest(){
+  const box=$("tab-suggest"); box.replaceChildren();
+  box.append(el("div",{class:"card"},el("h2",{},"What should I post?"),
+    chipGroup([["return","Return to a sub"],["new","New show"]],S.suggestMode,v=>{S.suggestMode=v;S.suggestion=null;renderSuggest();}),
+    el("div",{class:"actions"},el("button",{class:"btn primary",type:"button",onclick:nextSuggestion},S.suggestion?"Next suggestion":"Suggest"))));
+  const g=S.suggestion; if(!g) return;
+  const card=el("div",{class:"card"});
+  if (g.kind==="return"){
+    const s=S.subs[g.sub]; const hist=postsForSub(g.sub); const last=lastPost(hist);
+    card.append(el("div",{},el("span",{class:"pill ret"},"Return")),
+      el("div",{class:"big"},"r/"+(s.display||s.sub)), el("div",{},showTitle(g.slug)));
+    const reason=el("div",{class:"reason"},
+      el("span",{},"Last post here "+ago(last.posted_on)+": "+(FMT[last.format]||"format unknown")+", "+OUTCOMES[last.outcome].toLowerCase()+(perfText(last)?", "+perfText(last):"")+"."),
+      el("span",{},"Formats already posted here: "+([...new Set(hist.map(p=>FMT[p.format]).filter(Boolean))].join(", ")||"unknown")+"."));
+    if(s.status==="mod_removed") reason.append(el("span",{class:"pill warn"},"Mod removed before"));
+    if(s.notes) reason.append(el("span",{},"Your note: "+s.notes));
+    if(!(S.shows[g.slug]||{}).reviewed) reason.append(el("span",{class:"small"},"This show's history is unchecked. Fix it on the Shows tab if it looks wrong."));
+    card.append(reason);
+  } else {
+    card.append(el("div",{},el("span",{class:"pill new"},"New show")), el("div",{class:"big"},showTitle(g.slug)),
+      el("div",{class:"reason"},el("span",{},"You've never posted this show. "+(S.themes[g.slug]||{}).category+".")));
+    const subIn=el("input",{id:"s-subs",placeholder:"Which subreddit(s)?",value:g.subs||"",autocomplete:"off"}); subIn.addEventListener("input",()=>g.subs=subIn.value);
+    card.append(el("div",{},el("label",{for:"s-subs"},"Subreddits"),subIn));
+  }
+  card.append(el("div",{},el("label",{},"Format"),chipGroup(g.f.opts.map(o=>[o.id,FMT[o.id]+(o.id==="episode"&&o.episode?" "+o.episode:"")+(o.used?" ✓":"")]),g.format,
+    v=>{g.format=v; g.episode=v==="episode"?(g.f.opts.find(o=>o.id==="episode")||{}).episode:null; renderSuggest();},
+    id=>{const o=g.f.opts.find(x=>x.id===id); return o&&!o.ok?o.why:"";})),
+    el("p",{class:"muted small"},"✓ = already posted in this sub. Faded = not available ("+g.f.opts.filter(o=>!o.ok).map(o=>FMT[o.id].toLowerCase()+": "+o.why).join("; ")+")."));
+  card.append(el("div",{},el("label",{},"Link"),chipGroup([["app","App link"],["web","Web link"]],g.link,v=>{g.link=v;renderSuggest();})));
+
+  const used=el("button",{class:"btn primary",type:"button"},"Used it");
+  used.addEventListener("click",async()=>{
+    used.disabled=true;
+    try{
+      if(g.kind==="return"){
+        await addPost({posted_on:todayISO(),sub:g.sub,show_slug:g.slug,format:g.format,episode:g.format==="episode"?g.episode:null,link:g.link,source:"suggest"});
+      } else {
+        const subs=(g.subs||"").split(",").map(cleanSub).filter(Boolean);
+        if(!subs.length){ toast("Add the subreddit you used"); used.disabled=false; return; }
+        for (const raw of subs){ const k=raw.toLowerCase(); if(!S.subs[k]) await saveSub(k,{display:raw,show_slug:g.slug,status:"works"});
+          await addPost({posted_on:todayISO(),sub:k,show_slug:g.slug,format:g.format,link:g.link,source:"suggest"}); }
+      }
+      toast("Logged. It goes to the back of the queue."); S.suggestion=null; renderSuggest();
+    }finally{ used.disabled=false; }
+  });
+  const acts=el("div",{class:"actions"},used);
+  if(g.kind==="return"){
+    acts.append(el("button",{class:"btn",type:"button",onclick:async()=>{ await saveSub(g.sub,{skip_on:todayISO()}); toast("Skipped for today. It stays near the top."); nextSuggestion(); }},"Not today"));
+    const snooze=el("div",{class:"chips"},el("span",{class:"muted small"},"Come back in"),
+      ...[2,4,8].map(w=>el("button",{type:"button",class:"chip",onclick:async()=>{ await saveSub(g.sub,{snooze_until:addDays(todayISO(),w*7)}); toast("Back in "+w+" weeks"); nextSuggestion(); }},w+" weeks")));
+    card.append(acts,snooze);
+    const bad=el("div",{class:"chips"},el("span",{class:"muted small"},"Bad idea:"),
+      ...[["never","Never allows posts"],["banned","I'm banned"],["mod_removed","Mods removed it"]].map(([st,l])=>el("button",{type:"button",class:"chip",onclick:async()=>{ await saveSub(g.sub,{status:st}); toast("Saved"); nextSuggestion(); }},l)),
+      el("button",{type:"button",class:"chip",onclick:()=>{ S.suggestSkip.add(g.sub); nextSuggestion(); }},"Just skip"));
+    card.append(bad);
+  } else {
+    // Already tried it and the mods didn't let it through: log that, and the sub comes back after the retry period.
+    const removed=el("button",{class:"btn",type:"button"},"I posted it, mods removed it");
+    removed.addEventListener("click",async()=>{
+      const subs=(g.subs||"").split(",").map(cleanSub).filter(Boolean);
+      if(!subs.length){ toast("Type the subreddit above first"); return; }
+      removed.disabled=true;
+      try{
+        for (const raw of subs){ const k=raw.toLowerCase();
+          await saveSub(k,{display:(S.subs[k]||{}).display||raw,show_slug:g.slug,status:"mod_removed"});
+          await addPost({posted_on:todayISO(),sub:k,show_slug:g.slug,format:g.format,link:g.link,outcome:"removed",source:"suggest"}); }
+        toast("Saved. It'll come back to try again in about "+retryDays()+" days."); nextSuggestion();
+      }finally{ removed.disabled=false; }
+    });
+    const never=el("button",{class:"btn",type:"button"},"That sub never allows it");
+    never.addEventListener("click",async()=>{
+      const subs=(g.subs||"").split(",").map(cleanSub).filter(Boolean);
+      if(!subs.length){ toast("Type the subreddit above first"); return; }
+      never.disabled=true;
+      try{
+        for (const raw of subs){ const k=raw.toLowerCase();
+          await saveSub(k,{display:(S.subs[k]||{}).display||raw,show_slug:g.slug,status:"never"});
+          await addPost({posted_on:todayISO(),sub:k,show_slug:g.slug,format:g.format,link:g.link,outcome:"removed_instant",source:"suggest"}); }
+        toast("Saved. That sub won't be suggested again."); nextSuggestion();
+      }finally{ never.disabled=false; }
+    });
+    acts.append(removed, never,
+      el("button",{class:"btn",type:"button",onclick:()=>{ S.suggestSkip.add("show:"+g.slug); nextSuggestion(); }},"Not today"),
+      el("button",{class:"btn ghost",type:"button",onclick:async()=>{ await saveSettings({hiddenShows:[...(S.settings.hiddenShows||[]),g.slug]}); toast("Won't suggest it again"); nextSuggestion(); }},"Not a Reddit show"));
+    card.append(acts);
+  }
+  box.append(card);
+}
+
+/* ---------- PLAN ---------- */
+// Slots per weekday (Mon..Sun). Mon–Thu: one evening session. Fri–Sun: your strongest stretch.
+const DAY_SLOTS=[2,2,2,2,3,4,4];
+const RETURN_DAYS=new Set([0,2,4,5,6]); // one returning sub on these days, the rest are new
+const SEASONS=[
+  {from:"10-24",to:"10-31",shows:["american-horror-story","stephen-king","scream","saw","28-days-later"],label:"Halloween"},
+  {from:"11-26",to:"11-29",extra:1,label:"US Thanksgiving weekend"},
+  {from:"12-24",to:"12-31",min:3,link:"app",label:"Holiday phones"},
+  {from:"01-01",to:"01-01",min:3,link:"app",label:"Holiday phones"}
+];
+function seasonFor(iso){ const md=iso.slice(5); return SEASONS.find(s=>md>=s.from&&md<=s.to); }
+async function generatePlan(start){
+  setStatus("Building plan…");
+  const items=[]; const simLast={}; const usedNew=new Set(); let newPool=newShowCandidates(); let multiWeek=0;
+  for (let i=0;i<91;i++){
+    const date=addDays(start,i); const wd=(new Date(date+"T12:00:00").getDay()+6)%7; const season=seasonFor(date);
+    let slots=DAY_SLOTS[wd]+((season&&season.extra)||0); if(season&&season.min) slots=Math.max(slots,season.min);
+    let returns=RETURN_DAYS.has(wd)?1:0;
+    if(season&&season.shows) returns=Math.max(returns,1);
+    // Multiplayer: every other Sunday, in a big sub that's rested.
+    if (wd===6 && (multiWeek++%2===0)){
+      const c=returnCandidates(date,simLast).find(x=>(x.s.members||0)>=MULTI_MIN_MEMBERS);
+      items.push(c?{date,kind:"return",sub:c.s.sub,slug:c.s.show_slug,format:"multiplayer",link:"web",note:"~21:00 Berlin (US afternoon)"}
+                  :{date,kind:"multi",format:"multiplayer",link:"web",note:"~21:00 Berlin. Add member counts on the Shows tab so I can pick a 150k+ sub."});
+      if(c) simLast[c.s.sub]=date; slots--;
+    }
+    for (let r=0;r<returns&&slots>0;r++){
+      let c=returnCandidates(date,simLast);
+      if(season&&season.shows){ const pref=c.filter(x=>season.shows.includes(x.s.show_slug)); if(pref.length) c=pref; }
+      const x=c[0]; if(!x) break;
+      const f=await formatOptions(x.s.show_slug,x.s.sub);
+      items.push({date,kind:"return",sub:x.s.sub,slug:x.s.show_slug,format:f.pick,episode:f.episode,link:(season&&season.link)||suggestLink(x.s.sub),note:season?season.label:""});
+      simLast[x.s.sub]=date; slots--;
+    }
+    while(slots-->0){
+      let sl=null;
+      if(season&&season.shows) sl=newPool.find(s=>season.shows.includes(s)&&!usedNew.has(s));
+      if(!sl) sl=newPool.find(s=>!usedNew.has(s));
+      if(sl){ usedNew.add(sl); items.push({date,kind:"new",slug:sl,format:"trivia",link:(season&&season.link)||"app",note:season?season.label:""}); }
+      else items.push({date,kind:"build",format:"trivia",link:(season&&season.link)||"app",note:"New show: build one, or post an existing show to a sub it's never been in"});
+    }
+  }
+  await saveSettings({plan:{start,created:todayISO(),items}});
+  setStatus(""); renderPlan();
+}
+function slotDone(it){
+  return S.posts.some(p=>Math.abs(daysBetween(p.posted_on,it.date))<=1 && (it.sub?p.sub===it.sub:(it.slug&&p.show_slug===it.slug)));
+}
+function renderPlan(){
+  const box=$("tab-plan"); box.replaceChildren();
+  const plan=S.settings.plan;
+  const head=el("div",{class:"card"},el("h2",{},"3-month plan"));
+  if(!plan){
+    head.append(el("p",{class:"muted"},"Builds 13 weeks from today: about ¾ new shows, ¼ returning subs with a format they haven't had, multiplayer every other Sunday, plus Halloween, Thanksgiving and Christmas. It's a starting point you can ignore day to day."),
+      el("div",{class:"actions"},el("button",{class:"btn primary",type:"button",onclick:()=>generatePlan(todayISO())},"Generate plan")));
+    box.append(head,settingsCard()); return;
+  }
+  const done=plan.items.filter(slotDone).length;
+  head.append(el("p",{class:"muted small"},"Started "+niceDate(plan.start)+" · "+done+" of "+plan.items.length+" slots done. Done slots tick off from your Log."));
+  const restart=el("button",{class:"btn",type:"button"},"Start over from today");
+  const confirmBox=el("div",{class:"confirm",hidden:true},el("span",{},"Replace the plan with a fresh one from today? Your logged posts are kept."),
+    el("div",{class:"actions"},el("button",{class:"btn danger",type:"button",onclick:()=>generatePlan(todayISO())},"Yes, start over"),
+      el("button",{class:"btn ghost",type:"button",onclick:()=>{confirmBox.hidden=true;}},"Cancel")));
+  restart.addEventListener("click",()=>confirmBox.hidden=false);
+  head.append(el("div",{class:"actions"},restart),confirmBox);
+  box.append(head);
+
+  const today=todayISO(); const byDate={};
+  for (const it of plan.items) (byDate[it.date]=byDate[it.date]||[]).push(it);
+  const dates=Object.keys(byDate).sort().filter(d=>d>=addDays(today,-2));
+  let weekCard=null, weekKey="";
+  for (const d of dates){
+    const wk=addDays(d,-((new Date(d+"T12:00:00").getDay()+6)%7));
+    if(wk!==weekKey){ weekKey=wk; weekCard=el("div",{class:"card"},el("h3",{},"Week of "+niceDate(wk))); box.append(weekCard); }
+    const day=el("div",{class:"day"},el("div",{class:"dayhead"},el("span",{},niceDate(d)+(d===today?" · today":"")),el("span",{class:"muted small num"},byDate[d].length+" posts")));
+    for (const it of byDate[d]){
+      const isDone=slotDone(it);
+      const label = it.kind==="return" ? ["r/"+((S.subs[it.sub]||{}).display||it.sub)+" · "+showTitle(it.slug)]
+        : it.kind==="new" ? [showTitle(it.slug)+" · find a sub"] : it.kind==="multi" ? ["Multiplayer game"] : ["New show"];
+      day.append(el("div",{class:"slot"+(isDone?" done":"")},
+        el("span",{class:"pill "+(it.kind==="return"?"ret":"new")},it.kind==="return"?"Return":"New"),
+        el("div",{class:"grow"},el("div",{},label[0]),
+          el("div",{class:"muted small"},(FMT[it.format]||"")+(it.episode?" "+it.episode:"")+" · "+it.link+" link"+(it.note?" · "+it.note:""))),
+        !isDone&&it.slug?el("button",{class:"btn ghost",type:"button",onclick:()=>{ S.logDraft={show:showTitle(it.slug),subs:it.sub?((S.subs[it.sub]||{}).display||it.sub):"",date:todayISO(),format:it.format,episode:it.episode||"",link:it.link,note:"",source:"plan"}; switchTab("log"); }},"Log"):null));
+    }
+    weekCard.append(day);
+  }
+  box.append(settingsCard());
+}
+function settingsCard(){
+  const c=el("input",{id:"set-cool",type:"number",min:"7",value:String(cooldown())});
+  const r=el("input",{id:"set-retry",type:"number",min:"7",value:String(retryDays())});
+  c.addEventListener("change",()=>saveSettings({cooldownDays:Number(c.value)}).then(()=>toast("Saved")));
+  r.addEventListener("change",()=>saveSettings({retryDays:Number(r.value)}).then(()=>toast("Saved")));
+  return el("div",{class:"card"},el("h3",{},"Rest periods"),el("div",{class:"grid2"},
+    el("div",{},el("label",{for:"set-cool"},"Days before returning to a sub"),c),
+    el("div",{},el("label",{for:"set-retry"},"Days before retrying a sub where mods removed a post"),r)));
+}
+
+/* ---------- SHOWS ---------- */
+function showSummaries(){
+  const slugs=new Set([...S.posts.map(p=>p.show_slug),...Object.values(S.subs).map(s=>s.show_slug)].filter(Boolean));
+  return [...slugs].filter(postable).map(sl=>{ const ps=postsForShow(sl); const last=lastPost(ps); return {sl, subs:subsForShow(sl).length, last, reviewed:!!(S.shows[sl]||{}).reviewed}; })
+    .sort((a,b)=>showTitle(a.sl).localeCompare(showTitle(b.sl)));
+}
+function renderShows(){
+  const box=$("tab-shows"); box.replaceChildren();
+  if (S.showDetail) return renderShowDetail(box, S.showDetail);
+  const all=showSummaries(); const nRev=all.filter(x=>x.reviewed).length;
+  const q=el("input",{id:"sh-q",placeholder:"Search shows or subs",value:S.showQuery,autocomplete:"off"});
+  q.addEventListener("input",()=>{ S.showQuery=q.value; drawList(); });
+  box.append(el("div",{class:"card"},el("h2",{},"Your shows"),el("p",{class:"muted small"},nRev+" of "+all.length+" checked. Your edits here override the imported history."),
+    q, chipGroup([["all","All"],["unchecked","Unchecked"],["reviewed","Checked"]],S.showFilter,v=>{S.showFilter=v;renderShows();})));
+  const listCard=el("div",{class:"card"}); box.append(listCard);
+  function drawList(){
+    const qq=S.showQuery.trim().toLowerCase();
+    const rows=all.filter(x=>(S.showFilter==="all"||(S.showFilter==="reviewed")===x.reviewed) &&
+      (!qq||showTitle(x.sl).toLowerCase().includes(qq)||subsForShow(x.sl).some(s=>s.sub.includes(qq))));
+    const ul=el("ul",{class:"rows"});
+    for (const x of rows){
+      ul.append(el("li",{},el("button",{class:"listbtn",type:"button",onclick:()=>{S.showDetail=x.sl;renderShows();window.scrollTo(0,0);}},
+        el("div",{class:"grow"},el("div",{},el("strong",{},showTitle(x.sl))," ",x.reviewed?el("span",{class:"pill ok"},"checked"):null),
+          postsForShow(x.sl).some(p=>p.rating==="great")?el("div",{class:"small",style:"color:var(--new)"},"Did great before"):null,
+          el("div",{class:"muted small"},x.subs+" sub"+(x.subs===1?"":"s")+" · last post "+(x.last?ago(x.last.posted_on)+" · "+(FMT[x.last.format]||"format unknown"):"never"))),
+        el("span",{class:"muted","aria-hidden":"true"},"›"))));
+    }
+    listCard.replaceChildren(rows.length?ul:el("p",{class:"muted"},"No shows match."));
+  }
+  drawList();
+}
+async function renderShowDetail(box, slug){
+  const epTotal=await episodeCount(slug);
+  const sh=S.shows[slug]||{};
+  const back=el("button",{class:"btn ghost",type:"button",onclick:()=>{S.showDetail=null;renderShows();}},"‹ All shows");
+  const rev=el("button",{class:"btn"+(sh.reviewed?"":" primary"),type:"button",onclick:async()=>{await saveShow(slug,{reviewed:!sh.reviewed});renderShows();}},sh.reviewed?"Mark unchecked":"Mark as checked");
+  const notes=el("textarea",{id:"sh-notes",placeholder:"Notes about this show"}); notes.value=sh.notes||"";
+  notes.addEventListener("change",()=>saveShow(slug,{notes:notes.value}).then(()=>toast("Saved")));
+  box.append(el("div",{class:"actions"},back),
+    el("div",{class:"card"},el("h2",{},showTitle(slug)),
+      el("div",{class:"muted small"},"Formats: regular trivia"+(epTotal?" · episode mode ("+epTotal+" episode"+(epTotal>1?"s":"")+")":"")+(S.chars.has(slug)?" · character quiz":"")+" · multiplayer · fan questions"),
+      notes, el("div",{class:"actions"},rev)));
+  for (const s of subsForShow(slug).sort((a,b)=>a.sub.localeCompare(b.sub))) box.append(subCard(s, slug));
+  // Add a sub that isn't linked yet.
+  const addIn=el("input",{id:"sh-addsub",placeholder:"subreddit name",autocomplete:"off"});
+  box.append(el("div",{class:"card"},el("h3",{},"Add a subreddit to this show"),addIn,
+    el("div",{class:"actions"},el("button",{class:"btn",type:"button",onclick:async()=>{ const raw=cleanSub(addIn.value); if(!raw) return; const k=raw.toLowerCase();
+      await saveSub(k,{display:(S.subs[k]||{}).display||raw,show_slug:slug}); toast("Added"); renderShows(); }},"Add"))));
+}
+function subCard(s, slug){
+  const card=el("div",{class:"card"});
+  const hist=postsForSub(s.sub).slice().reverse();
+  card.append(el("div",{},el("h3",{},"r/"+(s.display||s.sub)),
+    el("div",{class:"muted small"},hist.length+" post"+(hist.length===1?"":"s")+" · last "+(hist[0]?ago(hist[0].posted_on):"never")+(s.snooze_until&&s.snooze_until>todayISO()?" · snoozed until "+niceDate(s.snooze_until):""))));
+  const members=el("input",{id:"m-"+s.sub,type:"number",min:"0",placeholder:"e.g. 250000",value:s.members||""});
+  members.addEventListener("change",()=>saveSub(s.sub,{members:members.value?Number(members.value):null}).then(()=>toast("Saved")));
+  const moveIn=el("input",{id:"mv-"+s.sub,list:"dl-shows",placeholder:"Move to another show",autocomplete:"off"});
+  moveIn.addEventListener("change",async()=>{ const to=slugFromTitle(moveIn.value); if(!to){toast("Pick a show from the list");return;}
+    await saveSub(s.sub,{show_slug:to}); for (const p of postsForSub(s.sub)) await updatePost(p.id,{show_slug:to}); toast("Moved to "+showTitle(to)); renderShows(); });
+  const notes=el("textarea",{id:"n-"+s.sub,placeholder:"Notes, e.g. only allows posts on weekends"}); notes.value=s.notes||"";
+  notes.addEventListener("change",()=>saveSub(s.sub,{notes:notes.value}).then(()=>toast("Saved")));
+  card.append(el("div",{class:"grid2"},
+    el("div",{},el("label",{for:"st-"+s.sub},"Status"),selectEl("st-"+s.sub,STATUSES,s.status,v=>saveSub(s.sub,{status:v}).then(()=>toast("Saved")))),
+    el("div",{},el("label",{for:"m-"+s.sub},"Members"),members)),
+    el("div",{},el("label",{for:"n-"+s.sub},"Notes"),notes),
+    el("div",{},el("label",{for:"mv-"+s.sub},"Wrong show?"),moveIn,showDatalist()));
+  const ul=el("ul",{class:"rows"});
+  for (const p of hist){
+    const fmtSel=selectEl("pf-"+p.id,Object.assign({"":"Format unknown"},FMT),p.format||"",v=>updatePost(p.id,{format:v}).then(()=>toast("Saved")));
+    const linkSel=selectEl("pl-"+p.id,{"":"Link unknown",app:"App link",web:"Web link"},p.link||"",v=>updatePost(p.id,{link:v}).then(()=>toast("Saved")));
+    const outSel=selectEl("po-"+p.id,OUTCOMES,p.outcome,async v=>{await updatePost(p.id,{outcome:v}); toast("Saved");});
+    const rateSel=selectEl("pr-"+p.id,RATINGS,p.rating||"",v=>updatePost(p.id,{rating:v||null}).then(()=>toast("Saved")));
+    const ep=el("input",{id:"pe-"+p.id,type:"number",min:"1",placeholder:"Ep #",value:p.episode||""});
+    ep.addEventListener("change",()=>updatePost(p.id,{episode:ep.value?Number(ep.value):null}).then(()=>toast("Saved")));
+    const del=el("button",{class:"btn ghost danger",type:"button"},"Delete");
+    del.addEventListener("click",async()=>{ if(del.dataset.armed){ await deletePost(p.id); toast("Deleted"); renderShows(); } else { del.dataset.armed="1"; del.textContent="Tap again to delete"; } });
+    ul.append(el("li",{},el("div",{class:"grow"},
+      el("div",{},el("strong",{class:"num"},niceDate(p.posted_on)),el("span",{class:"muted small"}," · "+ago(p.posted_on)+(p.source==="import"?" · imported":""))),
+      el("div",{class:"post-edit"},fmtSel,ep,linkSel,outSel,rateSel,viewsInput(p),del))));
+  }
+  card.append(hist.length?ul:el("p",{class:"muted small"},"No posts yet."));
+  // Add a post that's missing from the history.
+  const dIn=el("input",{id:"ad-"+s.sub,type:"date",value:todayISO()});
+  const fSel=selectEl("af-"+s.sub,FMT,"trivia",()=>{});
+  card.append(el("details",{},el("summary",{class:"small"},"Add a missing post"),el("div",{class:"post-edit",style:"margin-top:8px"},dIn,fSel,
+    el("button",{class:"btn",type:"button",onclick:async()=>{ await addPost({posted_on:dIn.value,sub:s.sub,show_slug:slug,format:fSel.value}); toast("Added"); renderShows(); }},"Add"))));
+  return card;
+}
+
+/* ---------- boot ---------- */
+async function start(){
+  $("login").hidden=true; $("app").hidden=false; setStatus("Loading…");
+  try{ await Promise.all([loadSiteData(), loadDB()]); setStatus(""); render(); }
+  catch(e){ setStatus(""); $("tab-log").replaceChildren(el("div",{class:"card"},el("h2",{},"Couldn't load your data"),el("p",{class:"muted"},String(e.message||e)+". Check that supabase/reddit-planner.sql has been run."))); }
+}
+document.querySelectorAll("nav.tabs button").forEach(b=>b.addEventListener("click",()=>switchTab(b.dataset.tab)));
+$("loginForm").addEventListener("submit",async e=>{
+  e.preventDefault(); $("lErr").textContent="";
+  const email=$("lEmail").value.trim();
+  const {error}=await sb.auth.signInWithPassword({email,password:$("lPass").value});
+  if(error){ $("lErr").textContent="Sign-in failed: "+error.message; $("lEmailRow").hidden=false; return; }
+  try{ localStorage.setItem("pp_email",email); }catch(e){}
+  start();
+});
+// Stays signed in on each device. After the first sign-in only the password is asked for.
+try{ const saved=localStorage.getItem("pp_email"); if(saved){ $("lEmail").value=saved; $("lEmailRow").hidden=true; } }catch(e){}
+sb.auth.getSession().then(({data})=>{ if(data.session) start(); else $("login").hidden=false; });
+})();
+</script>
+</body>
+</html>
