@@ -141,7 +141,7 @@ function postable(slug){ return POST_EXTRA.has(slug) || POST_CATS.has((S.themes[
 const MULTI_MIN_MEMBERS = 150000;
 
 const S = {themes:{}, themeList:[], epFiles:{}, epCount:{}, chars:new Set(), subs:{}, posts:[], shows:{}, settings:{}, tab:"log",
-  showDetail:null, showFilter:"all", showQuery:"", suggestMode:"return", suggestSkip:new Set(), suggestion:null, logDraft:null};
+  showDetail:null, showFilter:"all", showSort:"oldest", showQuery:"", suggestMode:"return", suggestSkip:new Set(), suggestion:null, logDraft:null};
 
 /* ---------- small helpers ---------- */
 const $ = id => document.getElementById(id);
@@ -651,12 +651,17 @@ function renderShows(){
   const q=el("input",{id:"sh-q",placeholder:"Search shows or subs",value:S.showQuery,autocomplete:"off"});
   q.addEventListener("input",()=>{ S.showQuery=q.value; drawList(); });
   box.append(el("div",{class:"card"},el("h2",{},"Your shows"),el("p",{class:"muted small"},nRev+" of "+all.length+" checked. Your edits here override the imported history."),
-    q, chipGroup([["all","All"],["unchecked","Unchecked"],["reviewed","Checked"]],S.showFilter,v=>{S.showFilter=v;renderShows();})));
+    q, chipGroup([["all","All"],["unchecked","Unchecked"],["reviewed","Checked"]],S.showFilter,v=>{S.showFilter=v;renderShows();}),
+    chipGroup([["oldest","Longest since posted"],["newest","Most recent"],["az","A–Z"]],S.showSort,v=>{S.showSort=v;renderShows();})));
   const listCard=el("div",{class:"card"}); box.append(listCard);
   function drawList(){
     const qq=S.showQuery.trim().toLowerCase();
     const rows=all.filter(x=>(S.showFilter==="all"||(S.showFilter==="reviewed")===x.reviewed) &&
       (!qq||showTitle(x.sl).toLowerCase().includes(qq)||subsForShow(x.sl).some(s=>s.sub.includes(qq))));
+    // Shows never posted count as the oldest. Ties fall back to A–Z (showSummaries order).
+    const lastOn=x=>x.last?x.last.posted_on:"";
+    if (S.showSort==="oldest") rows.sort((a,b)=>lastOn(a).localeCompare(lastOn(b)));
+    else if (S.showSort==="newest") rows.sort((a,b)=>lastOn(b).localeCompare(lastOn(a)));
     const ul=el("ul",{class:"rows"});
     for (const x of rows){
       ul.append(el("li",{},el("button",{class:"listbtn",type:"button",onclick:()=>{S.showDetail=x.sl;renderShows();window.scrollTo(0,0);}},
