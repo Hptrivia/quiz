@@ -299,8 +299,7 @@ function ptyInit(allThemes, resolvedThemes) {
   document.querySelectorAll('#ptyScheduleSeg button').forEach(btn => {
     btn.addEventListener('click', () => ptySetSchedule(parseInt(btn.dataset.mins, 10)));
   });
-  document.getElementById('ptyAdd30Btn').addEventListener('click', () => ptyAdjustSchedule(30));
-  document.getElementById('ptyAdd60Btn').addEventListener('click', () => ptyAdjustSchedule(60));
+  document.getElementById('ptyAdd15Btn').addEventListener('click', () => ptyAdjustSchedule(15));
   document.getElementById('ptyClearScheduleBtn').addEventListener('click', () => ptySetSchedule(0));
 
   ptyWireChatForm('ptyLobbyChatForm', 'ptyLobbyChatInput');

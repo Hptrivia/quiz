@@ -324,9 +324,16 @@
   },
   {
     "id": "pandr-medium-0041",
-    "question": "What was Mouse Rat formerly called when Ann first met Andy?",
-    "options": ["Scarecrow Boat", "Just the Tip", "Rat Mouse", "Menace Beach"],
+    "question": "What was Mouse Rat formerly called in the first episode?",
+    "options": ["Scarecrow Boat", "Just the Tip", "Teddy Bear Suicide", "Menace Beach"],
     "answer": "Scarecrow Boat",
+    "difficulty": "medium"
+  },
+    {
+    "id": "pandr-medium-0041",
+    "question": "What was Mouse Rat formerly called when Ann first met Andy?",
+    "options": ["Scarecrow Boat", "Just the Tip", "Teddy Bear Suicide", "Menace Beach"],
+    "answer": "Teddy Bear Suicide",
     "difficulty": "medium"
   },
   {
@@ -713,5 +720,145 @@
     "options": ["Sullivan Street", "Jump Street", "Mockingbird Lane", "Pawnee Way"],
     "answer": "Sullivan Street",
     "difficulty": "expert"
+  },
+  {
+    "id": "pandr-medium-0051",
+    "question": "What is the girls' wilderness group Leslie runs to rival Ron's boys' troop?",
+    "options": ["The Pawnee Wildflowers", "The Pawnee Goddesses", "The Pawnee Sunbeams", "The Pawnee Valkyries"],
+    "answer": "The Pawnee Goddesses",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0052",
+    "question": "What is Ben's job when he first arrives in Pawnee?",
+    "options": ["Tax assessor", "Budget consultant", "State auditor", "Insurance adjuster"],
+    "answer": "State auditor",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0053",
+    "question": "Which division does April take charge of as deputy director in season five?",
+    "options": ["Animal Control", "Sanitation", "Public Works", "Parking Enforcement"],
+    "answer": "Animal Control",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0054",
+    "question": "In Jerry's painting for the community art show, what mythical creature is Leslie depicted as?",
+    "options": ["A mermaid", "A sphinx", "A centaur", "A harpy"],
+    "answer": "A centaur",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0055",
+    "question": "In which season does Leslie win her seat on the city council?",
+    "options": ["Season 3", "Season 4", "Season 5", "Season 6"],
+    "answer": "Season 4",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0056",
+    "question": "In which season do Ann and Chris leave Pawnee for good?",
+    "options": ["Season 4", "Season 5", "Season 6", "Season 7"],
+    "answer": "Season 6",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-medium-0057",
+    "question": "Who created the series?",
+    "options": ["Alan Yang and Norm Hiscock", "Greg Daniels and Michael Schur", "Dan Goor and Harris Wittels", "Morgan Sackett and Katie Dippold"],
+    "answer": "Greg Daniels and Michael Schur",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pandr-hard-0075",
+    "question": "What is Ron's favourite steakhouse in Indianapolis?",
+    "options": ["Henry Fulton's", "Walter Brennan's", "Charles Mulligan's", "Frank McCready's"],
+    "answer": "Charles Mulligan's",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-hard-0076",
+    "question": "In which city do Donna and Joe live in the finale's flash-forward?",
+    "options": ["Portland", "Seattle", "Denver", "Chicago"],
+    "answer": "Seattle",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-hard-0077",
+    "question": "In which city does Andy spend months working for a charity in season six?",
+    "options": ["Dublin", "Edinburgh", "London", "Toronto"],
+    "answer": "London",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-hard-0078",
+    "question": "To which year does the final season jump forward?",
+    "options": ["2016", "2017", "2018", "2019"],
+    "answer": "2017",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-hard-0079",
+    "question": "What role does Leslie offer Ron at the new national park in the finale?",
+    "options": ["Superintendent", "Head ranger", "Chief warden", "Trail foreman"],
+    "answer": "Superintendent",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-hard-0080",
+    "question": "What office does Leslie hold for two terms in the finale's flash-forward?",
+    "options": ["U.S. Senator", "Mayor of Pawnee", "Governor of Indiana", "Secretary of the Interior"],
+    "answer": "Governor of Indiana",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-hard-0081",
+    "question": "In which season do Andy and April get married?",
+    "options": ["Season 2", "Season 3", "Season 4", "Season 5"],
+    "answer": "Season 3",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-hard-0082",
+    "question": "Ron's first ex-wife comes to Pawnee working as an agent for which organisation?",
+    "options": ["The FBI", "The IRS", "The DEA", "The ATF"],
+    "answer": "The IRS",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-hard-0083",
+    "question": "On Andy's children's TV show, what character does Jerry play?",
+    "options": ["A milkman", "A crossing guard", "A mailman", "A janitor"],
+    "answer": "A mailman",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-hard-0084",
+    "question": "What is the name of Ron's chart of the qualities that make a man?",
+    "options": ["Ladder of Manhood", "Pyramid of Greatness", "Tower of Fortitude", "Wheel of Honor"],
+    "answer": "Pyramid of Greatness",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-hard-0085",
+    "question": "Why was Leslie born outside Pawnee rather than in the town's own hospital?",
+    "options": ["A power outage", "A raccoon infestation", "A flooded ward", "A staff strike"],
+    "answer": "A raccoon infestation",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-hard-0086",
+    "question": "On which floor of City Hall do Ron and Diane get married?",
+    "options": ["Second floor", "Third floor", "Fourth floor", "Fifth floor"],
+    "answer": "Fourth floor",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pandr-hard-0087",
+    "question": "How many episodes did the series run in total?",
+    "options": ["110", "125", "138", "144"],
+    "answer": "125",
+    "difficulty": "hard"
   }
 ]
