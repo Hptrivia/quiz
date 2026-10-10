@@ -108,17 +108,19 @@ details.post[open] .post-edit{margin-top:8px}
   <header class="bar">
     <div class="row"><h1>Post Planner</h1><span id="status" class="muted small"></span></div>
     <nav class="tabs" role="tablist">
-      <button role="tab" data-tab="log" aria-selected="true">Log</button>
+      <button role="tab" data-tab="post" aria-selected="true">Post</button>
+      <button role="tab" data-tab="log" aria-selected="false">Log</button>
       <button role="tab" data-tab="suggest" aria-selected="false">Suggest</button>
-      <button role="tab" data-tab="plan" aria-selected="false">Plan</button>
       <button role="tab" data-tab="shows" aria-selected="false">Shows</button>
+      <button role="tab" data-tab="plan" aria-selected="false">Plan</button>
     </nav>
   </header>
   <main class="wrap">
-    <section id="tab-log"></section>
+    <section id="tab-post"></section>
+    <section id="tab-log" hidden></section>
     <section id="tab-suggest" hidden></section>
-    <section id="tab-plan" hidden></section>
     <section id="tab-shows" hidden></section>
+    <section id="tab-plan" hidden></section>
   </main>
 </div>
 
@@ -147,8 +149,8 @@ const POST_EXTRA = new Set(["mma"]);
 function postable(slug){ return POST_EXTRA.has(slug) || POST_CATS.has((S.themes[slug]||{}).category); }
 const MULTI_MIN_MEMBERS = 150000;
 
-const S = {themes:{}, themeList:[], epFiles:{}, epCount:{}, chars:new Set(), subs:{}, posts:[], shows:{}, settings:{}, tab:"log",
-  showDetail:null, showFilter:"all", showSort:"oldest", showQuery:"", suggestMode:"return", suggestSkip:new Set(), suggestion:null, logDraft:null};
+const S = {themes:{}, themeList:[], epFiles:{}, epCount:{}, chars:new Set(), subs:{}, posts:[], shows:{}, settings:{}, tab:"post",
+  showDetail:null, postDraft:null, showFilter:"all", showSort:"oldest", showQuery:"", suggestMode:"return", suggestSkip:new Set(), suggestion:null, logDraft:null};
 
 /* ---------- small helpers ---------- */
 const $ = id => document.getElementById(id);
@@ -357,10 +359,10 @@ function newShowCandidates(){
 function switchTab(t){
   S.tab=t;
   document.querySelectorAll("nav.tabs button").forEach(b=>b.setAttribute("aria-selected",String(b.dataset.tab===t)));
-  ["log","suggest","plan","shows"].forEach(x=>$("tab-"+x).hidden=x!==t);
+  ["post","log","suggest","shows","plan"].forEach(x=>$("tab-"+x).hidden=x!==t);
   render();
 }
-function render(){ ({log:renderLog,suggest:renderSuggest,plan:renderPlan,shows:renderShows})[S.tab](); }
+function render(){ ({log:renderLog,suggest:renderSuggest,plan:renderPlan,shows:renderShows,post:renderPost})[S.tab](); }
 
 function chipGroup(options, value, onPick, disabledFn){
   const wrap=el("div",{class:"chips",role:"group"});
@@ -816,11 +818,164 @@ function addPostCard(slug, subKeys){
     el("div",{class:"post-edit",style:"margin-top:8px"},subIn,dIn,fSel,btn)));
 }
 
+/* ---------- POST: ready-made Reddit heading + body ---------- */
+// Wording is one template per format × link type. Placeholders are filled per show (see postVars).
+// {ifchar:…} is kept only for shows that have a character quiz. [text](url) becomes a real link when pasted into Reddit's editor.
+// Edits are saved as the wording for all shows (settings.postTemplates, synced across devices). One-off changes are made on Reddit itself.
+const SITE_URL = "https://triviagauntlet.app";
+const POST_FORMATS = [["trivia","Regular trivia"],["episode","Episode mode"],["multiplayer","Multiplayer"],["character","Which character are you?"]];
+const POST_LINKS = [["web","Regular link"],["app","App link"]];
+const MULTI_BODY = "10 questions. Highest scores wins . Anyone can join\n\nI should start the game as soon as there are about 7-10 people in the lobby . So keep an eye out\n\nThere is a countdown in the lobby so you can know when the game is about to begin . And I will send a message in there 5-10 minutes before I start …. Feel free to roam around the app and play other trivia games while you wait but keep an eye on the link and the lobby cause the game will start when there is at least 10 people\n\nThis is a new game mode I am trying out so there might be some hiccups at first but should be fun and if it works well then I might do another round immediately\n\nI will share the link to Game 1 in the comments";
+const CHAR_INTRO = "Hi everyone\n\nI am testing out this character quizzes for the show and I would appreciate if some of you can check it out and let me know what you think. What’s currently lacking , what you liked and what can be improved .\n\n{charQs} questions, {charCount} possible characters";
+const DEFAULT_POSTS = {
+  "trivia|web":{head:"Trivia. How well do you remember {show}? Comment your score /20",
+    body:"I built a trivia app with about a 100 questions and so I wanted to share it with fans\n\n{link}\n\nComment your score /20 below\n\nIf you find any wrong questions in the quiz .. let me know and I ll fix it asap\n\nP.S the app also has multiplayer , {ifchar:which character are you , }Wordle and word search games for people into that\n\nMore questions are available in the app\n\nFYI : If you want more of a challenge you can click on Profile icon on the top right and then settings and turn off the options so you type the answers"},
+  "trivia|app":{head:"Trivia. How well do you remember {show}?",
+    body:"I built a trivia app with about a 100 questions for this {kind} and lots of others and so I wanted to share it with fans\n\nI know not everyone likes downloading and app so for anyone who wants to check it out.\n\n[{show} Trivia]({link})\n\nNo Logins\nNo accounts\nJust Download and use the search at the top\n\nAlso Let me know if there is a problem with any of the questions either via the app or here and I will fix it asap\n\nP.S also contains themed multiplayer , {ifchar:Which {show} Character Are You , }Wordle and word search games for people in the app"},
+  "episode|web":{head:"Pilot. How well do you remember the pilot of {show}? Share your score below",
+    body:"I made an episode style quiz about {episodeName}\n\n{link}\n\nShare your score below\n\nIf you find any wrong questions in the quiz .. let me know and I ll fix it asap\n\nP.S the app also has regular trivia , multiplayer , {ifchar:which character are you , }Wordle and word search games for people into that"},
+  "episode|app":{head:"Pilot. How well do you remember the pilot of {show}?",
+    body:"I made an episode style quiz about {episodeName}\n\nI know not everyone likes downloading and app so for anyone who wants to check it out.\n\n[{show} Trivia]({link})\n\nNo Logins\nNo accounts\nJust scroll down to categories and choose {show} and episode mode\n\nP.S also contains regular trivia , {ifchar:which character are you , }Wordle and word search games for people into that\n\nShare your score below\n\nIf you find any wrong questions in the quiz .. let me know and I ll fix it asap"},
+  "character|web":{head:"Which {show} Character are you? {charQs} questions {charCount} characters",
+    body:CHAR_INTRO+"\n\n{link}\n\nThanks"},
+  "character|app":{mine:true, head:"Which {show} Character are you? {charQs} questions {charCount} characters",
+    body:CHAR_INTRO+"\n\nI know not everyone likes downloading and app so for anyone who wants to check it out.\n\n[Which {show} Character Are You]({link})\n\nNo Logins\nNo accounts\nJust Download and use the search at the top\n\nThanks"},
+  "multiplayer|web":{head:"Who wants to Play {show} Trivia Multiplayer Tournament today?", body:MULTI_BODY},
+  "multiplayer|app":{mine:true, head:"Who wants to Play {show} Trivia Multiplayer Tournament today?", body:MULTI_BODY}
+};
+function postLinkUrl(slug, fmt, link, ep){
+  if (link==="app") return SITE_URL+"/app";
+  if (fmt==="episode") return SITE_URL+"/episode.html?theme="+slug+"&episode="+(ep||1);
+  if (fmt==="character") return SITE_URL+"/character-quiz/"+slug+".html";
+  if (fmt==="multiplayer") return SITE_URL+"/party.html";
+  return SITE_URL+"/challenge.html?theme="+slug+"&round=1";
+}
+async function charInfo(slug){
+  if (!S.chars.has(slug)) return null;
+  S.charInfo=S.charInfo||{};
+  if (!S.charInfo[slug]){
+    try{ const q=await fetch("data/character-quizzes/"+slug+".json",{cache:"no-cache"}).then(r=>r.json());
+      S.charInfo[slug]={qs:(q.questions||[]).length, count:(q.characters||[]).length}; }
+    catch(e){ S.charInfo[slug]={qs:"?", count:"?"}; }
+  }
+  return S.charInfo[slug];
+}
+// Drops or keeps each {ifchar:…} (braces inside it may nest), then fills the placeholders.
+function fillTpl(str, v){
+  let s=String(str||""), i;
+  while ((i=s.indexOf("{ifchar:"))>=0){
+    let depth=1, j=i+8;
+    for (; j<s.length && depth; j++){ if(s[j]==="{") depth++; else if(s[j]==="}") depth--; }
+    s=s.slice(0,i)+(v.hasChar?s.slice(i+8,j-1):"")+s.slice(j);
+  }
+  for (const [k,val] of Object.entries(v.map)) s=s.split(k).join(val);
+  return s.replace(/\n{3,}/g,"\n\n");
+}
+function postVars(d, ci){
+  const cat=(S.themes[d.slug]||{}).category, ep=d.episode||1;
+  return {hasChar:!!ci, link:postLinkUrl(d.slug,d.format,d.link,ep), map:{
+    "{show}":showTitle(d.slug), "{link}":postLinkUrl(d.slug,d.format,d.link,ep),
+    "{kind}":cat==="Games"?"game":cat==="Movies"?"movie":d.slug==="mma"?"sport":"show",
+    "{episodeName}":ep===1?"the pilot":"episode "+ep, "{episode}":String(ep),
+    "{charQs}":ci?String(ci.qs):"", "{charCount}":ci?String(ci.count):"", "{charLink}":SITE_URL+"/character-quiz/"+d.slug+".html"}};
+}
+function postKey(d){ return d.format+"|"+d.link; }
+function postTemplate(key){ return (S.settings.postTemplates||{})[key] || DEFAULT_POSTS[key]; }
+function postText(d, ci){
+  const key=postKey(d), t=postTemplate(key), v=postVars(d,ci);
+  return {head:fillTpl(t.head,v), body:fillTpl(t.body,v), source:(S.settings.postTemplates||{})[key]?"tpl":DEFAULT_POSTS[key].mine?"mine":"default"};
+}
+// Turns text edited for one show back into wording for all shows: the show name, link, counts and
+// "this game" become placeholders again, and the {ifchar:…} parts are kept (re-inserted when this show has no character quiz).
+function generalize(edited, raw, v){
+  const segs=[]; let i, out=edited, r=raw, prev=0, lastAnchorEnd=0;
+  // Split the raw template into plain text and {ifchar:…} segments.
+  const parts=[];
+  while ((i=r.indexOf("{ifchar:",prev))>=0){
+    let depth=1, j=i+8; for (; j<r.length && depth; j++){ if(r[j]==="{") depth++; else if(r[j]==="}") depth--; }
+    parts.push({plain:r.slice(prev,i), seg:r.slice(i,j)}); prev=j;
+  }
+  for (const pt of parts){
+    const token="\u0000"+segs.length+"\u0000"; segs.push(pt.seg);
+    if (v.hasChar){
+      const filled=fillTpl(pt.seg,v); const at=filled?out.indexOf(filled,lastAnchorEnd):-1;
+      if (at>=0){ out=out.slice(0,at)+token+out.slice(at+filled.length); lastAnchorEnd=at+token.length; }
+    } else {
+      // Put it back right after the text that came before it in the template.
+      const anchor=fillTpl(pt.plain,v).slice(-25); const at=anchor?out.indexOf(anchor,lastAnchorEnd):lastAnchorEnd;
+      if (at>=0){ const pos=at+anchor.length; out=out.slice(0,pos)+token+out.slice(pos); lastAnchorEnd=pos+token.length; }
+    }
+  }
+  const m=v.map, sw=(a,b)=>{ if(a) out=out.split(a).join(b); };
+  sw(m["{link}"],"{link}"); sw(m["{charQs}"]&&m["{charQs}"]+" questions","{charQs} questions");
+  sw(m["{charCount}"]&&m["{charCount}"]+" possible characters","{charCount} possible characters"); sw(m["{charCount}"]&&m["{charCount}"]+" characters","{charCount} characters");
+  sw("this "+m["{kind}"],"this {kind}"); sw(m["{show}"],"{show}");
+  return out.replace(/\u0000(\d+)\u0000/g,(_,n)=>segs[n]);
+}
+// [text](url) → a real link for Reddit's normal editor (HTML), and stays as Markdown for the Markdown editor (plain text).
+function postHtml(txt){
+  const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  return txt.split(/\n{2,}/).map(par=>"<p>"+esc(par).replace(/\[([^\]]+)\]\((https?:[^)\s]+)\)/g,'<a href="$2">$1</a>').replace(/\n/g,"<br>")+"</p>").join("");
+}
+async function copyText(txt, btn){
+  try{
+    if (/\[[^\]]+\]\(https?:/.test(txt) && window.ClipboardItem)
+      await navigator.clipboard.write([new ClipboardItem({"text/html":new Blob([postHtml(txt)],{type:"text/html"}),"text/plain":new Blob([txt],{type:"text/plain"})})]);
+    else await navigator.clipboard.writeText(txt);
+  }catch(e){ const t=el("textarea",{style:"position:fixed;opacity:0"}); t.value=txt; document.body.append(t); t.select(); document.execCommand("copy"); t.remove(); }
+  const was=btn.textContent; btn.textContent="✓ Copied"; setTimeout(()=>btn.textContent=was,1500);
+}
+function postField(id, label, input, withCopy){
+  const cp=withCopy?el("button",{class:"btn",type:"button",onclick:()=>copyText(input.value,cp)},"Copy"):null;
+  return el("div",{},el("div",{style:"display:flex;justify-content:space-between;align-items:end;gap:8px;margin-bottom:4px"},el("label",{for:id,style:"margin:0"},label),cp),input);
+}
+async function renderPost(){
+  const box=$("tab-post"); box.replaceChildren();
+  const d=S.postDraft||(S.postDraft={show:"",slug:null,link:"web",format:"trivia",episode:null});
+  const pick=el("div",{class:"card"},el("h2",{},"Ready-made post"),el("p",{class:"muted small"},"Pick a show, the link and the format. Copy the heading and body into Reddit."));
+  const showIn=el("input",{id:"p-show",list:"dl-shows",placeholder:"Search a show",value:d.show,autocomplete:"off"});
+  showIn.addEventListener("change",()=>{ d.show=showIn.value; d.slug=slugFromTitle(d.show); d.episode=null; renderPost(); });
+  pick.append(el("div",{},el("label",{for:"p-show"},"Show"),showIn,showDatalist()));
+  box.append(pick);
+  if (!d.slug){ if (d.show) pick.append(el("p",{class:"small",style:"color:var(--bad)"},"No show with that name. Pick one from the list.")); return; }
+
+  const [epTotal, ci]=await Promise.all([episodeCount(d.slug), charInfo(d.slug)]);
+  const missing={episode:epTotal?null:"No episode mode for this show", character:ci?null:"No character quiz for this show"};
+  if (missing[d.format]) d.format="trivia";
+  // Episode posts always promote episode 1 (the pilot).
+  d.episode=1;
+  pick.append(el("div",{},el("label",{},"Link"),chipGroup(POST_LINKS,d.link,v=>{d.link=v;renderPost();})));
+  pick.append(el("div",{},el("label",{},"Format"),chipGroup(POST_FORMATS,d.format,v=>{ if(missing[v]){toast(missing[v]);return;} d.format=v; renderPost(); },id=>missing[id])));
+
+  const txt=postText(d,ci), key=postKey(d), v=postVars(d,ci);
+  const SRC={tpl:["Your edited wording","ok"], default:["Your wording",""], mine:["My wording, change it if you like","warn"]};
+  const out=el("div",{class:"card"});
+  const head=el("textarea",{id:"p-head",rows:"2",spellcheck:"true"}); head.value=txt.head;
+  const body=el("textarea",{id:"p-body",rows:"14",spellcheck:"true"}); body.value=txt.body;
+  const dirty=el("span",{class:"pill warn",hidden:true},"Not saved");
+  const save=el("button",{class:"btn primary",type:"button",disabled:true},"Save for all shows");
+  const onEdit=()=>{ const ch=head.value!==txt.head||body.value!==txt.body; dirty.hidden=!ch; save.disabled=!ch; };
+  head.addEventListener("input",onEdit); body.addEventListener("input",onEdit);
+  save.addEventListener("click",async()=>{
+    const t=postTemplate(key);
+    await saveSettings({postTemplates:Object.assign({},S.settings.postTemplates,{[key]:{head:generalize(head.value,t.head,v),body:generalize(body.value,t.body,v)}})});
+    toast("Saved for all shows"); renderPost();
+  });
+  const actions=el("div",{class:"actions"},save);
+  if (txt.source==="tpl") actions.append(el("button",{class:"btn ghost",type:"button",onclick:async()=>{
+    const tp=Object.assign({},S.settings.postTemplates); delete tp[key]; await saveSettings({postTemplates:tp}); toast("Back to the original wording"); renderPost(); }},"Back to original wording"));
+  out.append(el("div",{style:"display:flex;justify-content:space-between;gap:8px;align-items:center"},el("span",{class:"pill "+SRC[txt.source][1]},SRC[txt.source][0]),dirty),
+    postField("p-head","Heading",head,true), postField("p-body","Body",body,true), actions,
+    /\[[^\]]+\]\(https?:/.test(body.value)?el("p",{class:"muted small"},"The [text](link) part pastes as a clickable link in Reddit's normal editor (and works as-is in Markdown mode)."):null,
+    d.format==="multiplayer"?el("p",{class:"muted small"},"No link in the body: drop the game link in the comments when you host."):null);
+  box.append(out);
+}
+
 /* ---------- boot ---------- */
 async function start(){
   $("login").hidden=true; $("app").hidden=false; setStatus("Loading…");
   try{ await Promise.all([loadSiteData(), loadDB()]); setStatus(""); render(); }
-  catch(e){ setStatus(""); $("tab-log").replaceChildren(el("div",{class:"card"},el("h2",{},"Couldn't load your data"),el("p",{class:"muted"},String(e.message||e)+". Check that supabase/reddit-planner.sql has been run."))); }
+  catch(e){ setStatus(""); $("tab-post").replaceChildren(el("div",{class:"card"},el("h2",{},"Couldn't load your data"),el("p",{class:"muted"},String(e.message||e)+". Check that supabase/reddit-planner.sql has been run."))); }
 }
 document.querySelectorAll("nav.tabs button").forEach(b=>b.addEventListener("click",()=>switchTab(b.dataset.tab)));
 $("loginForm").addEventListener("submit",async e=>{
