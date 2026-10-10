@@ -3,7 +3,7 @@
   "show": "The Summer I Turned Pretty",
   "shortName": "TSITP",
   "seoTitle": "The Summer I Turned Pretty Test: Which Character Are You? (12 Questions)",
-  "metaDescription": "Take The Summer I Turned Pretty test: 12 everyday questions reveal whether you're Belly, Conrad, Jeremiah, Steven, Taylor, Laurel or Susannah — with your full character breakdown.",
+  "metaDescription": "Take The Summer I Turned Pretty test: 12 everyday questions reveal whether you're Belly, Conrad, Jeremiah, Steven, Taylor, Laurel, Susannah or Cam — with your full character breakdown.",
   "intro": "Are you the hopeless romantic, the brooding one, or the golden retriever? Answer 12 everyday questions about love, family and summers that change everything, and find out which character from The Summer I Turned Pretty you are.",
   "characters": [
     {
@@ -152,6 +152,27 @@
       "flaw": "You hide your own pain so you don't worry the people you love.",
       "signature": "A house full of people, music playing and a big hug for whoever walks in.",
       "clashReason": "they'd keep smiling and never tell you something was wrong"
+    },
+    {
+      "id": "cam",
+      "name": "Cam Cameron",
+      "emoji": "🐋",
+      "color": "#84cc16",
+      "title": "The Sweet Nerd",
+      "summary": "Kind, curious and happily yourself. You'd rather talk about something fascinating than be cool.",
+      "description": [
+        "Like Cam, you march to your own beat. He's a Cousins Beach local whose mum works at the country club.",
+        "You love learning. Cam is passionate about marine biology, and he's not shy about sharing what he knows.",
+        "You're honest and kind, even when it hurts. Cam dates Belly in season one, until she realises her heart is somewhere else."
+      ],
+      "strengths": [
+        "Kind",
+        "Curious",
+        "Honest"
+      ],
+      "flaw": "You're so nice that people forget to take you seriously.",
+      "signature": "A book about whales, a kind smile and a fact for every occasion.",
+      "clashReason": "they'd be so kind about it that you couldn't even be angry"
     }
   ],
   "questions": [
@@ -177,9 +198,9 @@
           }
         },
         {
-          "text": "Announce it's going to be the best summer of your life, and mean it",
+          "text": "Start a new project, like learning a language or tracking the local wildlife",
           "points": {
-            "taylor": 3
+            "cam": 3
           }
         }
       ]
@@ -264,9 +285,9 @@
           }
         },
         {
-          "text": "Go for it this time. You're tired of always coming second",
+          "text": "Be honest with both of them, straight away",
           "points": {
-            "jeremiah": 3
+            "cam": 3
           }
         }
       ]
@@ -293,9 +314,9 @@
           }
         },
         {
-          "text": "Spend the whole night watching one person across the room",
+          "text": "Suggest stargazing on the beach instead",
           "points": {
-            "belly": 3
+            "cam": 3
           }
         }
       ]
@@ -409,9 +430,9 @@
           }
         },
         {
-          "text": "Be glad for them, then go after something of your own",
+          "text": "Be genuinely happy for them",
           "points": {
-            "laurel": 3
+            "cam": 3
           }
         }
       ]
@@ -432,15 +453,15 @@
           }
         },
         {
-          "text": "Be honest about what it's costing you, and work it out together",
+          "text": "Talk it through, and find a sensible middle ground",
           "points": {
             "laurel": 3
           }
         },
         {
-          "text": "Hide how much it's hurting you, and keep smiling",
+          "text": "Explain kindly why you can't keep it any more",
           "points": {
-            "susannah": 3
+            "cam": 3
           }
         }
       ]
