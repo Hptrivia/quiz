@@ -141,7 +141,7 @@ const FORMATS = [
 ];
 const FMT = Object.fromEntries(FORMATS.map(f=>[f.id,f.label]));
 const RATINGS = {"":"Not rated", flop:"Flop", ok:"OK", great:"Great"};
-const OUTCOMES = {unknown:"Not set", stayed:"Stayed up", removed_instant:"Removed instantly", removed_later:"Removed later", removed:"Removed (timing unknown)", banned:"Banned", deleted:"Deleted by you"};
+const OUTCOMES = {unknown:"Not set", stayed:"Stayed up", removed_instant:"Removed instantly", removed_later:"Removed later", removed:"Removed (timing unknown)", pending:"Stuck awaiting mod approval", banned:"Banned", deleted:"Deleted by you"};
 const STATUSES = {works:"Works", mod_removed:"Mod removed before", never:"Never allows posts", banned:"Banned", temp_ban:"Temporary ban"};
 // The only kinds of show you post: TV, sitcoms, anime, movies, games, and MMA as the one sport.
 const POST_CATS = new Set(["TV","Sitcoms","Anime","Movies","Games"]);
@@ -338,7 +338,9 @@ function returnCandidates(onDate, extraLast){
     const rest=subs.every(k=>S.subs[k].status==="mod_removed")?retryDays():cooldown();
     if (since<rest) continue;
     // Shows where nothing has ever stayed up go after the rest, or the oldest failures would always top the list.
-    const neverStuck=!hist.some(p=>p.outcome==="stayed"||p.outcome==="unknown");
+    // Same for shows whose latest posts sat in the mod queue and never went live: retry once better shows are used up.
+    const lastDay=lastPost(hist).posted_on, latest=hist.filter(p=>p.posted_on===lastDay);
+    const neverStuck=!hist.some(p=>p.outcome==="stayed"||p.outcome==="unknown") || latest.every(p=>p.outcome==="pending");
     out.push({slug, subs, since, neverStuck});
   }
   out.sort((a,b)=>(a.neverStuck-b.neverStuck)||(b.since-a.since));

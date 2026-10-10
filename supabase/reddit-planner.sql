@@ -33,7 +33,7 @@ create table if not exists rp_posts (
   format     text,                         -- trivia | episode | multiplayer | character | fan | '' (unknown)
   episode    integer,                      -- episode number for episode posts
   link       text,                         -- web | app | '' (unknown)
-  outcome    text not null default 'unknown', -- unknown | stayed | removed_instant | removed_later | removed | banned | deleted
+  outcome    text not null default 'unknown', -- unknown | stayed | removed_instant | removed_later | removed | pending | banned | deleted
   rating     text,                         -- flop | ok | great (for your reference; never changes timing)
   views      integer,
   note       text,
