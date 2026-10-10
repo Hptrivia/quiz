@@ -1,0 +1,530 @@
+{
+  "slug": "emily-in-paris",
+  "show": "Emily in Paris",
+  "shortName": "Emily in Paris",
+  "seoTitle": "Emily in Paris Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the Emily in Paris test: 12 everyday questions reveal whether you're Emily, Mindy, Sylvie, Gabriel, Camille, Alfie, Julien or Luc — with your full character breakdown.",
+  "intro": "Are you the eternal optimist, the effortlessly chic boss, or the lovable eccentric? Answer 12 everyday questions about work, love and living your best life, and find out which Emily in Paris character you are.",
+  "characters": [
+    {
+      "id": "emily",
+      "name": "Emily Cooper",
+      "emoji": "📱",
+      "color": "#ec4899",
+      "title": "The Eternal Optimist",
+      "summary": "Enthusiastic, hard-working and relentlessly upbeat. You see every problem as a chance to come up with a brilliant idea.",
+      "description": [
+        "Like Emily, you throw yourself into everything. She's a marketing executive from Chicago who moves to Paris for a job at the French agency Savoir.",
+        "You're always 'on'. Emily is optimistic and outspoken, and she never stops thinking up new campaigns.",
+        "You don't always fit in, and that's fine. Emily often clashes with French work culture, but she wins people over in the end."
+      ],
+      "strengths": [
+        "Optimistic",
+        "Creative",
+        "Hard-working"
+      ],
+      "flaw": "You try so hard to fix everything that you forget to just enjoy it.",
+      "signature": "A bold outfit, a phone full of content and a plan B for your plan B.",
+      "clashReason": "they'd turn your quiet weekend into a brand activation"
+    },
+    {
+      "id": "mindy",
+      "name": "Mindy Chen",
+      "emoji": "🎤",
+      "color": "#a855f7",
+      "title": "The Free Spirit",
+      "summary": "Bold, fun and fearless. You walked away from the safe option to chase what you love.",
+      "description": [
+        "Like Mindy, you do things your own way. She's Emily's first friend in Paris, a nanny who dreams of being a singer.",
+        "You chose your own path. Mindy is estranged from her wealthy family in Shanghai, and she'd rather struggle doing what she loves.",
+        "You're the life of every night out. Mindy is bold, loyal and always up for an adventure."
+      ],
+      "strengths": [
+        "Fearless",
+        "Fun",
+        "Loyal"
+      ],
+      "flaw": "You leap first and look later, every single time.",
+      "signature": "A microphone, a sparkly jacket and absolutely no plan.",
+      "clashReason": "they'd drag you to karaoke at 2am on a school night"
+    },
+    {
+      "id": "sylvie",
+      "name": "Sylvie Grateau",
+      "emoji": "🍷",
+      "color": "#475569",
+      "title": "The Icon",
+      "summary": "Chic, sharp and utterly unbothered. You don't explain yourself, and you don't need to.",
+      "description": [
+        "Like Sylvie, you've got effortless style. She's Emily's boss: tough, glamorous and not easily impressed.",
+        "You do things on your own terms. Sylvie lives her life exactly how she wants, and makes no apologies for it.",
+        "You build your own empire. Sylvie goes on to run her own firm, Agence Grateau."
+      ],
+      "strengths": [
+        "Confident",
+        "Elegant",
+        "Shrewd"
+      ],
+      "flaw": "You can be so cool that people think you don't care at all.",
+      "signature": "A perfect outfit, a glass of wine and a raised eyebrow.",
+      "clashReason": "they'd make you feel underdressed, under-prepared and very American"
+    },
+    {
+      "id": "gabriel",
+      "name": "Gabriel",
+      "emoji": "🍳",
+      "color": "#ea580c",
+      "title": "The Romantic Chef",
+      "summary": "Passionate, warm and a hopeless romantic. You put your heart into everything, especially the food.",
+      "description": [
+        "Like Gabriel, you're a creative at heart. He's a talented head chef who lives just downstairs from Emily.",
+        "You lead with your heart. Gabriel is warm and passionate, and he's at the centre of the show's biggest 'will they, won't they'.",
+        "But you struggle to choose. Gabriel's love life is complicated, because he can never quite make up his mind."
+      ],
+      "strengths": [
+        "Passionate",
+        "Talented",
+        "Kind"
+      ],
+      "flaw": "You can't make a decision about love to save your life.",
+      "signature": "A chef's jacket, a perfect omelette and a very complicated love life.",
+      "clashReason": "they'd never be able to make up their mind about you"
+    },
+    {
+      "id": "camille",
+      "name": "Camille",
+      "emoji": "🥂",
+      "color": "#eab308",
+      "title": "The Art Lover",
+      "summary": "Warm, generous and effortlessly elegant. You love beautiful things, and the people closest to you.",
+      "description": [
+        "Like Camille, you have an eye for beauty. She works at an art gallery, and she comes from a champagne family with a château.",
+        "You're generous and welcoming. Camille is the one who brings people together, and she's quick to include a newcomer.",
+        "But you feel things deeply. Camille's warmth comes with a jealous streak when someone gets too close to what's hers."
+      ],
+      "strengths": [
+        "Warm",
+        "Generous",
+        "Creative"
+      ],
+      "flaw": "Your jealousy can sneak up on you, and on everyone else.",
+      "signature": "A glass of champagne, a gallery opening and a family château.",
+      "clashReason": "they'd be lovely to you, right up until they got jealous"
+    },
+    {
+      "id": "alfie",
+      "name": "Alfie",
+      "emoji": "🍺",
+      "color": "#2563eb",
+      "title": "The Grumpy Brit",
+      "summary": "Sarcastic, grounded and not easily charmed. Underneath the dry humour, you're softer than you let on.",
+      "description": [
+        "Like Alfie, you've got a dry sense of humour. He's a British banker Emily meets in her French class.",
+        "You're not here to be impressed. Alfie would much rather be back home in the UK than in Paris.",
+        "But you've got a soft side. Behind the sarcasm, Alfie is warmer and more romantic than he lets anyone see."
+      ],
+      "strengths": [
+        "Funny",
+        "Grounded",
+        "Honest"
+      ],
+      "flaw": "You'd rather make a sarcastic joke than admit you're enjoying yourself.",
+      "signature": "A pint, a football shirt and a sarcastic comment about the French.",
+      "clashReason": "they'd make fun of everything you love about where you live"
+    },
+    {
+      "id": "julien",
+      "name": "Julien",
+      "emoji": "💼",
+      "color": "#16a34a",
+      "title": "The Stylish One",
+      "summary": "Stylish, dramatic and ambitious. You know exactly how good you look, and how good you are at your job.",
+      "description": [
+        "Like Julien, you've got impeccable style. He's one of Emily's co-workers, and he always looks incredible.",
+        "You've got a flair for drama. Julien never just says something when he can make a moment of it.",
+        "You know your worth. Julien is ambitious, and he isn't afraid to go after what he wants at work."
+      ],
+      "strengths": [
+        "Stylish",
+        "Ambitious",
+        "Sharp"
+      ],
+      "flaw": "You judge people's outfits before you've learned their names.",
+      "signature": "A perfectly tailored suit, a dramatic pause and a one-liner.",
+      "clashReason": "they'd judge your outfit, out loud"
+    },
+    {
+      "id": "luc",
+      "name": "Luc",
+      "emoji": "🥐",
+      "color": "#0d9488",
+      "title": "The Lovable Eccentric",
+      "summary": "Warm, blunt and wonderfully strange. You say exactly what you think, and you enjoy life to the full.",
+      "description": [
+        "Like Luc, you're one of a kind. He's Emily's eccentric co-worker, and the show's comic relief.",
+        "You've got no filter. Luc is sweetly blunt, and his thoughts come out exactly as he thinks them.",
+        "You're kind underneath it all. Luc is the first of Emily's French colleagues to warm up to her, and he loves introducing her to French life, and its pleasures."
+      ],
+      "strengths": [
+        "Kind",
+        "Funny",
+        "Honest"
+      ],
+      "flaw": "You say things out loud that really should have stayed in your head.",
+      "signature": "A very long lunch, a glass of wine and an opinion nobody asked for.",
+      "clashReason": "they'd say something wildly inappropriate in front of your boss"
+    }
+  ],
+  "questions": [
+    {
+      "text": "A new colleague starts at your office. You...",
+      "options": [
+        {
+          "text": "Ignore them until they've proved themselves",
+          "points": {
+            "sylvie": 3
+          }
+        },
+        {
+          "text": "Welcome them, then tell them something wildly inappropriate about the office",
+          "points": {
+            "luc": 3
+          }
+        },
+        {
+          "text": "Judge their outfit first, their work second",
+          "points": {
+            "julien": 3
+          }
+        },
+        {
+          "text": "Introduce yourself with far too much enthusiasm",
+          "points": {
+            "emily": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your weekend plans fall through. You...",
+      "options": [
+        {
+          "text": "Grab the mic at a karaoke bar",
+          "points": {
+            "mindy": 3
+          }
+        },
+        {
+          "text": "Cook a five-course meal for whoever's around",
+          "points": {
+            "gabriel": 3
+          }
+        },
+        {
+          "text": "Find a pub and watch the football",
+          "points": {
+            "alfie": 3
+          }
+        },
+        {
+          "text": "Wander round a gallery, then have a long lunch with wine",
+          "points": {
+            "camille": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your boss shoots down your idea. You...",
+      "options": [
+        {
+          "text": "Come back tomorrow with three new ideas and a slideshow",
+          "points": {
+            "emily": 3
+          }
+        },
+        {
+          "text": "Pitch it again next week, as if it's brand new",
+          "points": {
+            "julien": 3
+          }
+        },
+        {
+          "text": "Shrug. Ideas are like lovers. There's always another one",
+          "points": {
+            "luc": 3
+          }
+        },
+        {
+          "text": "Clock off at five. Work isn't everything",
+          "points": {
+            "alfie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You fall for someone who's already taken. You...",
+      "options": [
+        {
+          "text": "Try to stay away from them, and fail completely",
+          "points": {
+            "gabriel": 3
+          }
+        },
+        {
+          "text": "Pretend you're fine with it, then let it slip at dinner",
+          "points": {
+            "camille": 3
+          }
+        },
+        {
+          "text": "Keep it elegant, discreet and entirely on your terms",
+          "points": {
+            "sylvie": 3
+          }
+        },
+        {
+          "text": "Overthink it for months, and post a lot of vague captions",
+          "points": {
+            "emily": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend's big chance falls through at the last minute. You...",
+      "options": [
+        {
+          "text": "Put on a pop-up show in the park. The show must go on",
+          "points": {
+            "mindy": 3
+          }
+        },
+        {
+          "text": "Take them out for a very long lunch. Life is short",
+          "points": {
+            "luc": 3
+          }
+        },
+        {
+          "text": "Come up with a social media campaign to save it",
+          "points": {
+            "emily": 3
+          }
+        },
+        {
+          "text": "Throw them a party at your family's place in the country",
+          "points": {
+            "camille": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone criticises your style. You...",
+      "options": [
+        {
+          "text": "Look them up and down, and say nothing. Your outfit speaks for itself",
+          "points": {
+            "julien": 3
+          }
+        },
+        {
+          "text": "Laugh. You've never needed anyone's approval",
+          "points": {
+            "sylvie": 3
+          }
+        },
+        {
+          "text": "Wear something even louder tomorrow",
+          "points": {
+            "mindy": 3
+          }
+        },
+        {
+          "text": "Take the note, then wear it anyway, proudly",
+          "points": {
+            "emily": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're at a fancy party where half the guests don't speak your language. You...",
+      "options": [
+        {
+          "text": "Smile, nod and run everything through a translation app",
+          "points": {
+            "emily": 3
+          }
+        },
+        {
+          "text": "Stand at the bar making sarcastic comments to anyone who speaks English",
+          "points": {
+            "alfie": 3
+          }
+        },
+        {
+          "text": "Translate for everyone, and make sure they're all having fun",
+          "points": {
+            "camille": 3
+          }
+        },
+        {
+          "text": "Chat to everyone anyway. Language is just a detail",
+          "points": {
+            "luc": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your partner wants you to move to another country with them. You...",
+      "options": [
+        {
+          "text": "Say yes, then freeze when it's time to actually decide",
+          "points": {
+            "gabriel": 3
+          }
+        },
+        {
+          "text": "Ask if they've ever considered London",
+          "points": {
+            "alfie": 3
+          }
+        },
+        {
+          "text": "Pack your bags. Adventure first, details later",
+          "points": {
+            "mindy": 3
+          }
+        },
+        {
+          "text": "Agree, as long as you're home for every holiday",
+          "points": {
+            "camille": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone takes credit for your work. You...",
+      "options": [
+        {
+          "text": "Make sure everyone in the room knows whose idea it really was",
+          "points": {
+            "julien": 3
+          }
+        },
+        {
+          "text": "Smile, then make sure it never happens again",
+          "points": {
+            "sylvie": 3
+          }
+        },
+        {
+          "text": "Let it go. As long as people enjoyed it, that's what matters",
+          "points": {
+            "gabriel": 3
+          }
+        },
+        {
+          "text": "Say exactly what you think, very loudly, in the next meeting",
+          "points": {
+            "luc": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You've got one free evening in Paris. You spend it...",
+      "options": [
+        {
+          "text": "Cooking dinner on a rooftop, just for two",
+          "points": {
+            "gabriel": 3
+          }
+        },
+        {
+          "text": "Dancing on a boat on the Seine until 3am",
+          "points": {
+            "mindy": 3
+          }
+        },
+        {
+          "text": "With a glass of wine on a terrace, alone, and perfect",
+          "points": {
+            "sylvie": 3
+          }
+        },
+        {
+          "text": "Somewhere exclusive, where everyone who matters will see you",
+          "points": {
+            "julien": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You've moved to Paris for a year-long job, and nobody at work seems to like you. You...",
+      "options": [
+        {
+          "text": "Win them over, one ridiculous idea at a time",
+          "points": {
+            "emily": 3
+          }
+        },
+        {
+          "text": "Decide you don't need them to like you, and count the days until you go home",
+          "points": {
+            "alfie": 3
+          }
+        },
+        {
+          "text": "Forget work. Make your friends somewhere else",
+          "points": {
+            "mindy": 3
+          }
+        },
+        {
+          "text": "Find one person who gets you, and build from there",
+          "points": {
+            "camille": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You work at a marketing agency, and your biggest client wants something you think is tacky. You...",
+      "options": [
+        {
+          "text": "Tell them no. Elegantly",
+          "points": {
+            "sylvie": 3
+          }
+        },
+        {
+          "text": "Find a way to make it work, and make it go viral",
+          "points": {
+            "emily": 3
+          }
+        },
+        {
+          "text": "Make it chic, whether they like it or not",
+          "points": {
+            "julien": 3
+          }
+        },
+        {
+          "text": "Make it sexier. Everything is better a little sexier",
+          "points": {
+            "luc": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

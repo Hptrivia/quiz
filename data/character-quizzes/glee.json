@@ -1,0 +1,530 @@
+{
+  "slug": "glee",
+  "show": "Glee",
+  "shortName": "Glee",
+  "seoTitle": "Glee Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the Glee test: 12 everyday questions reveal whether you're Rachel, Kurt, Finn, Santana, Brittany, Quinn, Puck or Sue — with your full character breakdown.",
+  "intro": "Are you the star, the queen of comebacks, or the villain with a megaphone? Answer 12 everyday questions about ambition, friendship and standing out, and find out which Glee character you are.",
+  "characters": [
+    {
+      "id": "rachel",
+      "name": "Rachel Berry",
+      "emoji": "⭐",
+      "color": "#dc2626",
+      "title": "The Star",
+      "summary": "Driven, dramatic and incredibly talented. You know exactly what you want, and you'll work harder than anyone to get it.",
+      "description": [
+        "Like Rachel, you've always known you were meant for more. She's the most driven member of the glee club, and often misunderstood by everyone else.",
+        "You never stop working. Rachel is talented and ambitious, and she's been preparing for stardom her whole life.",
+        "You make it. Rachel becomes a Broadway star in Funny Girl, and goes on to win a Tony."
+      ],
+      "strengths": [
+        "Driven",
+        "Talented",
+        "Determined"
+      ],
+      "flaw": "You can be so focused on your dream that you forget other people have them too.",
+      "signature": "A gold star sticker, an argyle sweater and a solo you've already rehearsed.",
+      "clashReason": "they'd make every moment about their big solo"
+    },
+    {
+      "id": "kurt",
+      "name": "Kurt Hummel",
+      "emoji": "🎩",
+      "color": "#7c3aed",
+      "title": "The Fabulous One",
+      "summary": "Witty, stylish and braver than anyone knows. You look fearless, even when you're terrified inside.",
+      "description": [
+        "Like Kurt, you have impeccable taste. He's been described as 'a tough guy in designer clothes'.",
+        "You're braver than you look. Kurt faces bullying at school with a confident front, even though he's anxious underneath.",
+        "You find your happy ending. Kurt marries Blaine, and years later they're working actors who teach acceptance in schools."
+      ],
+      "strengths": [
+        "Stylish",
+        "Witty",
+        "Brave"
+      ],
+      "flaw": "You can be a little bit of a snob, and you know it.",
+      "signature": "A perfectly tailored outfit, a raised eyebrow and a high note nobody else can hit.",
+      "clashReason": "they'd judge your outfit before they said hello"
+    },
+    {
+      "id": "finn",
+      "name": "Finn Hudson",
+      "emoji": "🏈",
+      "color": "#ea580c",
+      "title": "The Big-Hearted Leader",
+      "summary": "Warm, goofy and loyal. You're not always sure what you're doing, but your heart is always in the right place.",
+      "description": [
+        "Like Finn, you're the nice guy everyone likes. He's the school's popular quarterback.",
+        "You risk it all for what you love. Finn joins the glee club, even though it could cost him his popularity.",
+        "You lead with your heart. Finn is warm, often conflicted, and he means the world to the people around him."
+      ],
+      "strengths": [
+        "Warm",
+        "Loyal",
+        "Brave"
+      ],
+      "flaw": "You can't make up your mind, and you hate letting anyone down.",
+      "signature": "A letterman jacket, a goofy grin and two left feet.",
+      "clashReason": "they'd never be able to make up their mind"
+    },
+    {
+      "id": "santana",
+      "name": "Santana Lopez",
+      "emoji": "🔥",
+      "color": "#be123c",
+      "title": "The Queen of Comebacks",
+      "summary": "Sharp, savage and fiercely protective of the few people you let in.",
+      "description": [
+        "Like Santana, you've got a comeback for everything. She's a cheerleader with the sharpest tongue at McKinley.",
+        "You keep your guard up. Santana is a bit of a bad girl, and she rarely lets anyone see what she's really feeling.",
+        "But you love fiercely. Santana's loyalty to Brittany never wavers, and the two of them end up married."
+      ],
+      "strengths": [
+        "Witty",
+        "Bold",
+        "Loyal"
+      ],
+      "flaw": "You'd rather insult someone than admit you care about them.",
+      "signature": "A cheerleading uniform, a razor-sharp comeback and a soft spot for one person.",
+      "clashReason": "they'd roast you in front of everyone"
+    },
+    {
+      "id": "brittany",
+      "name": "Brittany Pierce",
+      "emoji": "🦄",
+      "color": "#f472b6",
+      "title": "The Free Spirit",
+      "summary": "Sweet, surprising and completely unique. You see the world in a way nobody else does.",
+      "description": [
+        "Like Brittany, you're one of a kind. She's a cheerleader with an unpredictable, often wonderfully nonsensical way of seeing the world.",
+        "You're smarter than people think. Brittany finds out her biological father is Stephen Hawking.",
+        "You love openly. Brittany marries Santana, and even convinces Kurt and Blaine to make it a double wedding."
+      ],
+      "strengths": [
+        "Kind",
+        "Creative",
+        "Fearless"
+      ],
+      "flaw": "You drift off into your own world, sometimes at the worst possible moment.",
+      "signature": "A cat with a lot of opinions, a killer dance move and a thought nobody saw coming.",
+      "clashReason": "they'd change the subject to something completely random mid-argument"
+    },
+    {
+      "id": "quinn",
+      "name": "Quinn Fabray",
+      "emoji": "💛",
+      "color": "#eab308",
+      "title": "The Perfectionist",
+      "summary": "Polished, ambitious and more complicated than you look. You want to be perfect, and it's exhausting.",
+      "description": [
+        "Like Quinn, you know how to look like you've got it all together. She's the head cheerleader, and popularity matters to her.",
+        "But you want more than that. Quinn is torn between wanting to be popular and wanting to be truly accepted.",
+        "You come back stronger. Quinn gives up her daughter, Beth, gets into Yale and recovers from a serious injury."
+      ],
+      "strengths": [
+        "Driven",
+        "Smart",
+        "Resilient"
+      ],
+      "flaw": "You care so much about what people think that you lose track of what you think.",
+      "signature": "A perfect smile, a Yale acceptance letter and a past you'd rather not talk about.",
+      "clashReason": "they'd care more about how things look than how they feel"
+    },
+    {
+      "id": "puck",
+      "name": "Noah Puckerman",
+      "emoji": "😎",
+      "color": "#475569",
+      "title": "The Bad Boy",
+      "summary": "Cocky, rebellious and a lot softer than you look. You break the rules, but you show up when it counts.",
+      "description": [
+        "Like Puck, you like to break the rules. He's Finn's best friend, a former bully with a famous mohawk.",
+        "You're softer than you seem. Puck becomes a father to Beth, and it changes him.",
+        "You get there in the end. After a rocky few years, Puck graduates and gets back together with Quinn."
+      ],
+      "strengths": [
+        "Confident",
+        "Loyal",
+        "Fun"
+      ],
+      "flaw": "You act tough so nobody sees how much you care.",
+      "signature": "A mohawk, a guitar and a smirk.",
+      "clashReason": "they'd break every rule you care about, just for fun"
+    },
+    {
+      "id": "sue",
+      "name": "Sue Sylvester",
+      "emoji": "📣",
+      "color": "#16a34a",
+      "title": "The Villain",
+      "summary": "Ruthless, scheming and hilariously savage. You don't do second place, and you definitely don't do nice.",
+      "description": [
+        "Like Sue, you play to win. She's the ruthless cheerleading coach and the glee club's biggest rival.",
+        "You've got an insult for everyone. Sue's sharp, scheming personality makes her one of the show's most memorable characters.",
+        "You aim high. By the series finale, Sue has become Vice-President of the United States."
+      ],
+      "strengths": [
+        "Driven",
+        "Fearless",
+        "Strategic"
+      ],
+      "flaw": "You'd rather destroy the competition than share the spotlight.",
+      "signature": "A tracksuit, a megaphone and a plan to ruin someone's day.",
+      "clashReason": "they'd try to destroy you, just because you were in the way"
+    }
+  ],
+  "questions": [
+    {
+      "text": "Your school is putting on a big show. You...",
+      "options": [
+        {
+          "text": "Demand the solo. You've been preparing since you were four",
+          "points": {
+            "rachel": 3
+          }
+        },
+        {
+          "text": "Design the costumes. They'll be fabulous",
+          "points": {
+            "kurt": 3
+          }
+        },
+        {
+          "text": "Volunteer, then remember you can't dance",
+          "points": {
+            "finn": 3
+          }
+        },
+        {
+          "text": "Sabotage it. Then deny everything",
+          "points": {
+            "sue": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone insults your outfit. You...",
+      "options": [
+        {
+          "text": "Hit back with a comeback they'll hear in their sleep",
+          "points": {
+            "santana": 3
+          }
+        },
+        {
+          "text": "Raise an eyebrow. Clearly, they know nothing about fashion",
+          "points": {
+            "kurt": 3
+          }
+        },
+        {
+          "text": "Thank them. You thought they were complimenting your shoes",
+          "points": {
+            "brittany": 3
+          }
+        },
+        {
+          "text": "Shrug. You look good, and you know it",
+          "points": {
+            "puck": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You've got a free afternoon. You...",
+      "options": [
+        {
+          "text": "Have a long, serious chat with your cat",
+          "points": {
+            "brittany": 3
+          }
+        },
+        {
+          "text": "Rehearse. Talent doesn't practise itself",
+          "points": {
+            "rachel": 3
+          }
+        },
+        {
+          "text": "Skip whatever you were meant to be doing and have some fun",
+          "points": {
+            "puck": 3
+          }
+        },
+        {
+          "text": "Work on becoming the best version of yourself",
+          "points": {
+            "quinn": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone new joins your group, and they're better than you at the thing you love. You...",
+      "options": [
+        {
+          "text": "Panic, then challenge them to a sing-off",
+          "points": {
+            "rachel": 3
+          }
+        },
+        {
+          "text": "Make sure they know their place",
+          "points": {
+            "santana": 3
+          }
+        },
+        {
+          "text": "Welcome them. More talent is good for everyone",
+          "points": {
+            "finn": 3
+          }
+        },
+        {
+          "text": "Smile sweetly, then quietly compete",
+          "points": {
+            "quinn": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You make a really embarrassing mistake in public. You...",
+      "options": [
+        {
+          "text": "Laugh at yourself. It happens a lot",
+          "points": {
+            "finn": 3
+          }
+        },
+        {
+          "text": "Hold your head high. Confidence fixes everything",
+          "points": {
+            "kurt": 3
+          }
+        },
+        {
+          "text": "Insist you did it on purpose, and that it was genius",
+          "points": {
+            "sue": 3
+          }
+        },
+        {
+          "text": "Don't notice. Wait, was it a mistake?",
+          "points": {
+            "brittany": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're up against your biggest rivals. You...",
+      "options": [
+        {
+          "text": "Win at any cost. Rules are for losers",
+          "points": {
+            "sue": 3
+          }
+        },
+        {
+          "text": "Give the performance of your life",
+          "points": {
+            "rachel": 3
+          }
+        },
+        {
+          "text": "Trash-talk them, then actually show up for your team",
+          "points": {
+            "puck": 3
+          }
+        },
+        {
+          "text": "Psych them out before it even starts",
+          "points": {
+            "santana": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone you love is being bullied. You...",
+      "options": [
+        {
+          "text": "Have a word with the bully. A firm one",
+          "points": {
+            "puck": 3
+          }
+        },
+        {
+          "text": "Stand up to them, even though you're terrified",
+          "points": {
+            "kurt": 3
+          }
+        },
+        {
+          "text": "Get the whole group to stand with them",
+          "points": {
+            "finn": 3
+          }
+        },
+        {
+          "text": "Pull some strings behind the scenes to make it stop",
+          "points": {
+            "quinn": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your love life gets complicated. You...",
+      "options": [
+        {
+          "text": "Pick whoever looks best on paper, then regret it",
+          "points": {
+            "quinn": 3
+          }
+        },
+        {
+          "text": "Turn it into a song",
+          "points": {
+            "rachel": 3
+          }
+        },
+        {
+          "text": "Pretend you don't care, while caring a lot",
+          "points": {
+            "santana": 3
+          }
+        },
+        {
+          "text": "Tell everyone exactly how you feel, very sweetly",
+          "points": {
+            "brittany": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone gives you advice you didn't ask for. You...",
+      "options": [
+        {
+          "text": "Tell them you don't take advice from people with their haircut",
+          "points": {
+            "sue": 3
+          }
+        },
+        {
+          "text": "Smile politely, then do it your way",
+          "points": {
+            "kurt": 3
+          }
+        },
+        {
+          "text": "Actually listen. They might be right",
+          "points": {
+            "finn": 3
+          }
+        },
+        {
+          "text": "Ignore it completely",
+          "points": {
+            "puck": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your big dream suddenly seems out of reach. You...",
+      "options": [
+        {
+          "text": "Never give up. You've wanted this your whole life",
+          "points": {
+            "rachel": 3
+          }
+        },
+        {
+          "text": "Reinvent yourself completely, and start again",
+          "points": {
+            "quinn": 3
+          }
+        },
+        {
+          "text": "Pick a new dream. You've got lots",
+          "points": {
+            "brittany": 3
+          }
+        },
+        {
+          "text": "Bully the universe until it gives in",
+          "points": {
+            "sue": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're in a high school glee club, and the rest of the school thinks you're all losers. You...",
+      "options": [
+        {
+          "text": "Stay, even if it costs you your popularity",
+          "points": {
+            "finn": 3
+          }
+        },
+        {
+          "text": "Act like you're above it, then sing your heart out anyway",
+          "points": {
+            "santana": 3
+          }
+        },
+        {
+          "text": "Wear it like a badge of honour",
+          "points": {
+            "kurt": 3
+          }
+        },
+        {
+          "text": "Admit you only joined for a girl, then stay for the music",
+          "points": {
+            "puck": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "The glee club keeps stealing the spotlight from your cheerleading squad. You...",
+      "options": [
+        {
+          "text": "Declare war",
+          "points": {
+            "sue": 3
+          }
+        },
+        {
+          "text": "Join them as a spy, then accidentally start to like them",
+          "points": {
+            "quinn": 3
+          }
+        },
+        {
+          "text": "Cheer for both. You like singing and dancing",
+          "points": {
+            "brittany": 3
+          }
+        },
+        {
+          "text": "Mock them relentlessly, while secretly wanting a solo",
+          "points": {
+            "santana": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

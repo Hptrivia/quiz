@@ -1,0 +1,551 @@
+{
+  "slug": "demon-slayer",
+  "show": "Demon Slayer",
+  "shortName": "Demon Slayer",
+  "seoTitle": "Demon Slayer Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the Demon Slayer test: 12 everyday questions reveal whether you're Tanjiro, Nezuko, Zenitsu, Inosuke, Giyu, Shinobu, Rengoku, Mitsuri or Tengen — with your full character breakdown.",
+  "intro": "Are you the kind heart, the lovable coward, or the wild one who charges in first? Answer 12 everyday questions about courage, friendship and keeping your cool, and find out which Demon Slayer character you are.",
+  "characters": [
+    {
+      "id": "tanjiro",
+      "name": "Tanjiro Kamado",
+      "emoji": "🎴",
+      "color": "#0d9488",
+      "title": "The Kind Heart",
+      "summary": "Kind, determined and impossible to discourage. You keep going for the people you love, and you see the good in everyone.",
+      "description": [
+        "Like Tanjiro, you're a hard worker with a big heart. He's the eldest son of a family of charcoal sellers, and he became a Demon Slayer to find a cure for his sister, Nezuko.",
+        "You give people a second chance. Tanjiro shows compassion even to the demons he has to fight.",
+        "You never give up. Tanjiro can take a beating and keep getting back up, and his sense of smell is so sharp he can sniff out what people are feeling."
+      ],
+      "strengths": [
+        "Kind",
+        "Determined",
+        "Hard-working"
+      ],
+      "flaw": "You take everyone else's burdens on yourself.",
+      "signature": "A green and black checked haori, a box on your back and a sister you'd do anything for.",
+      "clashReason": "they'd keep forgiving people you think don't deserve it"
+    },
+    {
+      "id": "nezuko",
+      "name": "Nezuko Kamado",
+      "emoji": "🎋",
+      "color": "#be123c",
+      "title": "The Gentle Protector",
+      "summary": "Gentle, quiet and fiercely protective. You don't need words to show people you care.",
+      "description": [
+        "Like Nezuko, you're warm and quietly strong. She was turned into a demon in the attack that killed her family, but she still sees humans as family.",
+        "You protect the people you love. Nezuko fights to defend her brother and the humans around her, and she's much stronger than she looks.",
+        "You know the value of a good rest. Instead of eating people, Nezuko gets her strength back by sleeping."
+      ],
+      "strengths": [
+        "Protective",
+        "Gentle",
+        "Strong"
+      ],
+      "flaw": "You'd put yourself in harm's way before you'd let anyone else get hurt.",
+      "signature": "A bamboo muzzle, a pink kimono and a very long nap.",
+      "clashReason": "they'd throw themselves in front of you, whether you wanted them to or not"
+    },
+    {
+      "id": "zenitsu",
+      "name": "Zenitsu Agatsuma",
+      "emoji": "⚡",
+      "color": "#eab308",
+      "title": "The Lovable Coward",
+      "summary": "Anxious, dramatic and secretly brilliant. You panic first, but when it really counts, you come through.",
+      "description": [
+        "Like Zenitsu, you feel everything loudly. He's nervous, fearful and quick to burst into tears, and he's sure every mission will be the one that kills him.",
+        "You're better than you think. Zenitsu only ever mastered one move, the first form of Thunder Breathing, but it's lightning-fast, and he fights best when he's passed out.",
+        "You read people well. Zenitsu's hearing is so sharp that he can tell what someone really intends from the sounds they make."
+      ],
+      "strengths": [
+        "Brave when it counts",
+        "Perceptive",
+        "Loyal"
+      ],
+      "flaw": "You complain so loudly that people forget how good you actually are.",
+      "signature": "A yellow haori, a lot of screaming and one perfect move.",
+      "clashReason": "they'd scream, complain and cry at every tiny problem"
+    },
+    {
+      "id": "inosuke",
+      "name": "Inosuke Hashibira",
+      "emoji": "🐗",
+      "color": "#92400e",
+      "title": "The Wild One",
+      "summary": "Loud, wild and competitive about absolutely everything. You charge in first and think later, if at all.",
+      "description": [
+        "Like Inosuke, you do things your own way. He was raised by boars in the mountains, and he wears a boar's head as a mask.",
+        "You're competitive about everything. Inosuke treats new people as rivals, and he's desperate to prove he's stronger than Tanjiro.",
+        "You're self-made. Inosuke invented his own fighting style, Beast Breathing, and he fights with two swords at once."
+      ],
+      "strengths": [
+        "Fearless",
+        "Energetic",
+        "Self-taught"
+      ],
+      "flaw": "You turn everything into a fight, even when nobody else is fighting.",
+      "signature": "A boar's head, two jagged swords and a challenge for whoever's nearest.",
+      "clashReason": "they'd challenge you to a contest over absolutely everything"
+    },
+    {
+      "id": "giyu",
+      "name": "Giyu Tomioka",
+      "emoji": "🌊",
+      "color": "#2563eb",
+      "title": "The Silent Loner",
+      "summary": "Calm, quiet and much kinder than you seem. You keep your feelings to yourself, and people often get you wrong.",
+      "description": [
+        "Like Giyu, you're hard to read. He's the Water Hashira, and his calm, unemotional face makes people think he doesn't care.",
+        "But you care a lot. Giyu was the first Demon Slayer Tanjiro ever met, and he chose to spare Nezuko instead of killing her.",
+        "You're hard on yourself. Giyu still carries guilt over the death of his friend Sabito, and he doubts whether he really deserves his place."
+      ],
+      "strengths": [
+        "Calm",
+        "Loyal",
+        "Skilled"
+      ],
+      "flaw": "You explain yourself so little that people assume the worst.",
+      "signature": "A two-patterned haori and as few words as possible.",
+      "clashReason": "they'd barely say a word, and never explain anything"
+    },
+    {
+      "id": "shinobu",
+      "name": "Shinobu Kocho",
+      "emoji": "🦋",
+      "color": "#a855f7",
+      "title": "The Smiling Storm",
+      "summary": "Polite, clever and always smiling, even when you're furious inside.",
+      "description": [
+        "Like Shinobu, you're all smiles on the outside. She's the Insect Hashira, and her cheerful manner hides a deep anger towards the demons who killed her family.",
+        "You use your brain. Shinobu fights with a poison she makes from wisteria, and she's always calculating.",
+        "You look after your people. Shinobu is caring towards the younger slayers in her care, and towards Tanjiro and Nezuko."
+      ],
+      "strengths": [
+        "Clever",
+        "Composed",
+        "Caring"
+      ],
+      "flaw": "You bottle up your anger until it comes out sideways.",
+      "signature": "Butterfly hair clips, a sweet smile and a very sharp comment.",
+      "clashReason": "they'd smile sweetly at you while being absolutely furious"
+    },
+    {
+      "id": "rengoku",
+      "name": "Kyojuro Rengoku",
+      "emoji": "🔥",
+      "color": "#ea580c",
+      "title": "The Burning Heart",
+      "summary": "Loud, warm and endlessly enthusiastic. You protect the people around you with everything you've got.",
+      "description": [
+        "Like Rengoku, you light up any room. He's the Flame Hashira: boisterous, a little eccentric, and completely pure-hearted.",
+        "You live by a code. Rengoku's mother taught him that the strong must protect the weak, and he never forgets it.",
+        "You inspire people. Facing an enemy far stronger than him, Rengoku held his ground to protect everyone on the train."
+      ],
+      "strengths": [
+        "Passionate",
+        "Brave",
+        "Encouraging"
+      ],
+      "flaw": "You'd give up everything for other people without a second thought for yourself.",
+      "signature": "A flame-patterned cape, a booming voice and a huge smile.",
+      "clashReason": "they'd stay loud and cheerful even when you desperately want some quiet"
+    },
+    {
+      "id": "mitsuri",
+      "name": "Mitsuri Kanroji",
+      "emoji": "💗",
+      "color": "#f472b6",
+      "title": "The Romantic",
+      "summary": "Warm, emotional and full of love. You wear your heart on your sleeve, and you're proud of who you are.",
+      "description": [
+        "Like Mitsuri, you feel everything deeply. She's the Love Hashira: passionate, affectionate and a little scatterbrained.",
+        "You want to be yourself. Unlike most Demon Slayers, Mitsuri didn't join because of a tragedy. She joined to find a place where she'd be accepted for who she is.",
+        "You're stronger than you look. Mitsuri has incredible strength and flexibility, eats as much as several grown men, and fights with a sword as thin and bendy as a whip."
+      ],
+      "strengths": [
+        "Loving",
+        "Open",
+        "Strong"
+      ],
+      "flaw": "You get flustered so easily that people don't take you seriously.",
+      "signature": "Pink and green hair, a ribbon-like sword and a heart that's always racing.",
+      "clashReason": "they'd get emotional about absolutely everything"
+    },
+    {
+      "id": "tengen",
+      "name": "Tengen Uzui",
+      "emoji": "💎",
+      "color": "#84cc16",
+      "title": "The Flamboyant One",
+      "summary": "Flashy, proud and impossible to ignore. If you're going to do something, you'll do it in style.",
+      "description": [
+        "Like Tengen, you love to make an entrance. He's the Sound Hashira, and he wants everything he does to be as flashy as possible.",
+        "You're proud, and you've earned it. Tengen is a former shinobi, and he's supremely confident in his own abilities.",
+        "You're loyal to your people. Tengen has three wives who fight alongside him, and he's fiercely protective of all of them."
+      ],
+      "strengths": [
+        "Confident",
+        "Charismatic",
+        "Protective"
+      ],
+      "flaw": "You can't do anything quietly, even when quiet is what's needed.",
+      "signature": "Jewels, face paint and two giant swords joined by a chain.",
+      "clashReason": "they'd make everything about how flashy they are"
+    }
+  ],
+  "questions": [
+    {
+      "text": "A friend invites you to a karaoke night. You...",
+      "options": [
+        {
+          "text": "Pick the flashiest song there is and give it a full performance",
+          "points": {
+            "tengen": 3
+          }
+        },
+        {
+          "text": "Make up an excuse. The thought of singing in public makes you want to cry",
+          "points": {
+            "zenitsu": 3
+          }
+        },
+        {
+          "text": "Sing a love song with your whole heart, and get emotional halfway through",
+          "points": {
+            "mitsuri": 3
+          }
+        },
+        {
+          "text": "Go, sit in the corner, and say about four words all night",
+          "points": {
+            "giyu": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone challenges you to an arm-wrestle in front of everyone. You...",
+      "options": [
+        {
+          "text": "Slam your arm on the table before they've finished asking",
+          "points": {
+            "inosuke": 3
+          }
+        },
+        {
+          "text": "Accept with a huge grin, and praise them loudly whether you win or lose",
+          "points": {
+            "rengoku": 3
+          }
+        },
+        {
+          "text": "Refuse. You'd definitely break your arm",
+          "points": {
+            "zenitsu": 3
+          }
+        },
+        {
+          "text": "Suggest a different contest instead, one you know you'll win",
+          "points": {
+            "shinobu": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A younger friend gets into trouble and comes to you for help. You...",
+      "options": [
+        {
+          "text": "Go with them, apologise alongside them, and help them put it right",
+          "points": {
+            "tanjiro": 3
+          }
+        },
+        {
+          "text": "Stick right by their side. Nobody's picking on them while you're there",
+          "points": {
+            "nezuko": 3
+          }
+        },
+        {
+          "text": "Quietly fix it behind the scenes. They don't need to know it was you",
+          "points": {
+            "giyu": 3
+          }
+        },
+        {
+          "text": "Tell them to hold their head high and do better tomorrow",
+          "points": {
+            "rengoku": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're starving, and there's one slice of cake left. You...",
+      "options": [
+        {
+          "text": "Grab it. Whoever's fastest wins",
+          "points": {
+            "inosuke": 3
+          }
+        },
+        {
+          "text": "Eat it. It's your fourth slice, and you're still hungry",
+          "points": {
+            "mitsuri": 3
+          }
+        },
+        {
+          "text": "Cut it into tiny pieces so everyone gets some",
+          "points": {
+            "tanjiro": 3
+          }
+        },
+        {
+          "text": "Skip it. You'd honestly rather have a nap",
+          "points": {
+            "nezuko": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone is rude to you, but you're expected to stay polite. You...",
+      "options": [
+        {
+          "text": "Keep smiling. Inside, you're furious",
+          "points": {
+            "shinobu": 3
+          }
+        },
+        {
+          "text": "Shout right back. Polite is for other people",
+          "points": {
+            "inosuke": 3
+          }
+        },
+        {
+          "text": "Stay kind. They're probably going through something",
+          "points": {
+            "tanjiro": 3
+          }
+        },
+        {
+          "text": "Laugh it off. Someone that dull can't really bother you",
+          "points": {
+            "tengen": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You have to give a presentation at work. You...",
+      "options": [
+        {
+          "text": "Turn it into a show. Music, props, the lot",
+          "points": {
+            "tengen": 3
+          }
+        },
+        {
+          "text": "Panic about it for a week, then somehow nail it",
+          "points": {
+            "zenitsu": 3
+          }
+        },
+        {
+          "text": "Say the bare minimum, and leave everyone a bit confused",
+          "points": {
+            "giyu": 3
+          }
+        },
+        {
+          "text": "Speak with so much passion that nobody forgets it",
+          "points": {
+            "rengoku": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend has messed up badly and feels terrible about it. You...",
+      "options": [
+        {
+          "text": "Tell them you believe in them, and help them try again",
+          "points": {
+            "tanjiro": 3
+          }
+        },
+        {
+          "text": "Comfort them, then quietly deal with whoever made it worse",
+          "points": {
+            "shinobu": 3
+          }
+        },
+        {
+          "text": "Cry with them. Their feelings are your feelings",
+          "points": {
+            "mitsuri": 3
+          }
+        },
+        {
+          "text": "Blame yourself. You should have seen it coming and stopped it",
+          "points": {
+            "giyu": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're walking home with a friend late at night when you hear a strange noise. You...",
+      "options": [
+        {
+          "text": "Scream, and run home faster than you've ever run",
+          "points": {
+            "zenitsu": 3
+          }
+        },
+        {
+          "text": "Run towards it. Finally, something interesting",
+          "points": {
+            "inosuke": 3
+          }
+        },
+        {
+          "text": "Grab your friend's hand and don't let go",
+          "points": {
+            "nezuko": 3
+          }
+        },
+        {
+          "text": "Calmly work out exactly what it is before you do anything",
+          "points": {
+            "shinobu": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You've got a crush on someone. You...",
+      "options": [
+        {
+          "text": "Fall head over heels, and tell everyone except them",
+          "points": {
+            "mitsuri": 3
+          }
+        },
+        {
+          "text": "Confess your feelings within five minutes, loudly and dramatically",
+          "points": {
+            "zenitsu": 3
+          }
+        },
+        {
+          "text": "Never say a word. They'll never know",
+          "points": {
+            "giyu": 3
+          }
+        },
+        {
+          "text": "Let them know they'd be lucky to have someone as dazzling as you",
+          "points": {
+            "tengen": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're going away for the weekend with friends. You...",
+      "options": [
+        {
+          "text": "Take the lead. You'll keep everyone safe and in good spirits",
+          "points": {
+            "rengoku": 3
+          }
+        },
+        {
+          "text": "Insist on somewhere so extravagant people will talk about it for years",
+          "points": {
+            "tengen": 3
+          }
+        },
+        {
+          "text": "Sleep the whole way there, then make sure nobody gets left behind",
+          "points": {
+            "nezuko": 3
+          }
+        },
+        {
+          "text": "Pack matching outfits and find a cute café for every day",
+          "points": {
+            "mitsuri": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're a demon slayer, and you find a demon who has never hurt anyone. You...",
+      "options": [
+        {
+          "text": "Protect it. Not every demon is evil",
+          "points": {
+            "tanjiro": 3
+          }
+        },
+        {
+          "text": "Smile, chat to it politely, and keep your hand on your sword",
+          "points": {
+            "shinobu": 3
+          }
+        },
+        {
+          "text": "Let it go, and quietly take the blame if anyone finds out",
+          "points": {
+            "giyu": 3
+          }
+        },
+        {
+          "text": "Faint. Then somehow wake up and handle it perfectly",
+          "points": {
+            "zenitsu": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You're a demon slayer facing a demon far stronger than you, and your friends are behind you. You...",
+      "options": [
+        {
+          "text": "Stand your ground. Nobody behind you gets hurt tonight",
+          "points": {
+            "rengoku": 3
+          }
+        },
+        {
+          "text": "Charge in yelling. Strong opponents are the best kind",
+          "points": {
+            "inosuke": 3
+          }
+        },
+        {
+          "text": "Throw yourself between the demon and your friends",
+          "points": {
+            "nezuko": 3
+          }
+        },
+        {
+          "text": "Keep getting back up, however many times it knocks you down",
+          "points": {
+            "tanjiro": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

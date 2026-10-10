@@ -1,0 +1,530 @@
+{
+  "slug": "house-of-the-dragon",
+  "show": "House of the Dragon",
+  "shortName": "HOTD",
+  "seoTitle": "House of the Dragon Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the House of the Dragon test: 12 everyday questions reveal whether you're Rhaenyra, Daemon, Alicent, Aemond, Viserys, Otto, Rhaenys or Criston — with your full character breakdown.",
+  "intro": "Are you the rightful heir, the rogue prince, or the schemer quietly running everything? Answer 12 everyday questions about loyalty, ambition and family, and find out which House of the Dragon character you are.",
+  "characters": [
+    {
+      "id": "rhaenyra",
+      "name": "Rhaenyra Targaryen",
+      "emoji": "👑",
+      "color": "#dc2626",
+      "title": "The Rightful Heir",
+      "summary": "Proud, stubborn and certain of what you're owed. You won't be pushed aside, by anyone.",
+      "description": [
+        "Like Rhaenyra, you know your worth. Her father, King Viserys, named her his heir, and she's never let anyone forget it.",
+        "You don't do what's expected. Rhaenyra grew up pushing back against every rule meant to keep her in her place.",
+        "You fight for what's yours. When others try to take the throne she was promised, Rhaenyra refuses to back down."
+      ],
+      "strengths": [
+        "Proud",
+        "Determined",
+        "Brave"
+      ],
+      "flaw": "You think the rules apply to everyone except you.",
+      "signature": "A crown you were promised, and a dragon called Syrax.",
+      "clashReason": "they'd remind you, constantly, of what they're owed"
+    },
+    {
+      "id": "daemon",
+      "name": "Daemon Targaryen",
+      "emoji": "🗡️",
+      "color": "#7c3aed",
+      "title": "The Rogue Prince",
+      "summary": "Reckless, charming and completely unpredictable. You do what you want, and you dare anyone to stop you.",
+      "description": [
+        "Like Daemon, you're impossible to control. They don't call him the Rogue Prince for nothing.",
+        "You'd rather act than wait. Judged unfit to rule, Daemon went off and found his own wars to fight.",
+        "You know how to make an entrance. Daemon rides the dragon Caraxes and carries the Valyrian steel sword Dark Sister."
+      ],
+      "strengths": [
+        "Fearless",
+        "Charismatic",
+        "Bold"
+      ],
+      "flaw": "You act on impulse, and other people pay for it.",
+      "signature": "Dark Sister at your hip and a dragon who answers to nobody else.",
+      "clashReason": "they'd do something reckless and leave you to deal with it"
+    },
+    {
+      "id": "alicent",
+      "name": "Alicent Hightower",
+      "emoji": "🕯️",
+      "color": "#15803d",
+      "title": "The Dutiful Queen",
+      "summary": "Polite, dutiful and much tougher than you look. You do what's expected of you, until you decide what you want.",
+      "description": [
+        "Like Alicent, you were raised to do the right thing. She's Otto Hightower's daughter, and she became King Viserys's second wife.",
+        "You care deeply. Alicent and Rhaenyra were best friends as girls, and their falling-out is what tears the realm apart.",
+        "You find your own ambition. Pushed at first by her father's plans, Alicent turns out to be just as ambitious as he is."
+      ],
+      "strengths": [
+        "Dutiful",
+        "Caring",
+        "Resilient"
+      ],
+      "flaw": "You keep everything inside until it all comes out at once.",
+      "signature": "A green dress, a perfect smile and a lot left unsaid.",
+      "clashReason": "they'd smile politely at you and resent you for years"
+    },
+    {
+      "id": "aemond",
+      "name": "Aemond Targaryen",
+      "emoji": "👁️",
+      "color": "#1d4ed8",
+      "title": "The Cold Avenger",
+      "summary": "Cold, calculating and never, ever forgets. You turn every setback into fuel.",
+      "description": [
+        "Like Aemond, you remember everything. As a boy, he was mocked for being the only one without a dragon.",
+        "You take what you're denied. Aemond claimed Vhagar, the biggest dragon alive, and lost an eye to his nephew Lucerys in the fight that followed.",
+        "You never let it go. Losing that eye made Aemond colder, and more dangerous, than anyone expected."
+      ],
+      "strengths": [
+        "Disciplined",
+        "Fearless",
+        "Determined"
+      ],
+      "flaw": "You hold a grudge so long it becomes part of who you are.",
+      "signature": "An eye patch, a sapphire underneath it and the biggest dragon in the sky.",
+      "clashReason": "they'd remember every wrong you ever did them"
+    },
+    {
+      "id": "viserys",
+      "name": "Viserys Targaryen",
+      "emoji": "🕊️",
+      "color": "#ca8a04",
+      "title": "The Peacemaker",
+      "summary": "Kind, warm and desperate for everyone to get along. You'll do almost anything to avoid a fight.",
+      "description": [
+        "Like Viserys, you're kind and generous. He's the king, and he'll be remembered as Viserys the Peaceful.",
+        "You hate conflict. Viserys spends his reign trying to stop his family from tearing itself apart.",
+        "But you avoid the hard choices. Viserys named Rhaenyra his heir, then let the question of who would really follow him simmer for years."
+      ],
+      "strengths": [
+        "Kind",
+        "Generous",
+        "Loving"
+      ],
+      "flaw": "You put off difficult conversations until it's too late to have them.",
+      "signature": "A crown, a kind word for everyone and a family that won't stop fighting.",
+      "clashReason": "they'd avoid every hard conversation you needed to have"
+    },
+    {
+      "id": "otto",
+      "name": "Otto Hightower",
+      "emoji": "📜",
+      "color": "#64748b",
+      "title": "The Schemer",
+      "summary": "Patient, clever and always playing the long game. You rarely raise your voice, because you rarely need to.",
+      "description": [
+        "Like Otto, you're the one quietly running things. He serves as Hand of the King, the most powerful adviser in the realm.",
+        "You play the long game. Otto spends years quietly building support for his grandson Aegon to take the throne.",
+        "You use what you've got. Otto pushes his own daughter, Alicent, towards the king to bring his family closer to the crown."
+      ],
+      "strengths": [
+        "Patient",
+        "Strategic",
+        "Composed"
+      ],
+      "flaw": "You treat the people closest to you like pieces in a game.",
+      "signature": "The Hand of the King's badge and a plan years in the making.",
+      "clashReason": "they'd quietly use you to get what they want"
+    },
+    {
+      "id": "rhaenys",
+      "name": "Rhaenys Targaryen",
+      "emoji": "⚖️",
+      "color": "#ea580c",
+      "title": "The Queen Who Never Was",
+      "summary": "Proud, calm and refreshingly honest. You've seen it all, and you're not afraid to say so.",
+      "description": [
+        "Like Rhaenys, you know you were the best choice, even when nobody chose you. She was passed over for the throne because she's a woman, and she's known as the Queen Who Never Was.",
+        "You give people a reality check. Rhaenys is often the calmest, wisest voice in the room.",
+        "You don't need to prove yourself. Rhaenys is a fierce dragonrider, and she rides Meleys, the Red Queen."
+      ],
+      "strengths": [
+        "Wise",
+        "Honest",
+        "Dignified"
+      ],
+      "flaw": "You're so proud that you'd rather lose than ask for help.",
+      "signature": "A crimson dragon and the throne that should have been yours.",
+      "clashReason": "they'd tell you exactly how foolish you're being"
+    },
+    {
+      "id": "criston",
+      "name": "Criston Cole",
+      "emoji": "⚔️",
+      "color": "#0891b2",
+      "title": "The Fallen Knight",
+      "summary": "Loyal, dutiful and quick to take things personally. Hurt you once, and you won't let it go.",
+      "description": [
+        "Like Criston, you've worked for everything you have. He's a common-born knight from the Dornish Marches who earned his place in the Kingsguard.",
+        "You take your duty seriously, until it hurts you. Criston broke his vows for Rhaenyra, and he never forgave her, or himself.",
+        "You let resentment drive you. Criston switches his loyalty to Alicent's side and rises to Lord Commander of the Kingsguard."
+      ],
+      "strengths": [
+        "Loyal",
+        "Disciplined",
+        "Hard-working"
+      ],
+      "flaw": "Once you feel betrayed, nothing will change your mind.",
+      "signature": "A white cloak, a short temper and a long memory.",
+      "clashReason": "they'd take everything you said personally"
+    }
+  ],
+  "questions": [
+    {
+      "text": "You're stuck in a long meeting that's going nowhere. You...",
+      "options": [
+        {
+          "text": "Point out, politely, that you've all been going round in circles",
+          "points": {
+            "rhaenys": 3
+          }
+        },
+        {
+          "text": "Say something outrageous, just to wake everyone up",
+          "points": {
+            "daemon": 3
+          }
+        },
+        {
+          "text": "Wait. Once everyone's tired, you'll get your way",
+          "points": {
+            "otto": 3
+          }
+        },
+        {
+          "text": "Sit through it in silence, getting more and more irritated",
+          "points": {
+            "criston": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Two of your friends are fighting, and both want you on their side. You...",
+      "options": [
+        {
+          "text": "Try to make peace. Can't everyone just get along?",
+          "points": {
+            "viserys": 3
+          }
+        },
+        {
+          "text": "Pick the side that'll be more useful to you later",
+          "points": {
+            "otto": 3
+          }
+        },
+        {
+          "text": "Try to stay loyal to both, and end up feeling awful",
+          "points": {
+            "alicent": 3
+          }
+        },
+        {
+          "text": "Tell them both exactly how ridiculous they're being",
+          "points": {
+            "rhaenys": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your family starts arguing at a big holiday dinner. You...",
+      "options": [
+        {
+          "text": "Make one quiet, cutting remark that ruins the whole evening",
+          "points": {
+            "aemond": 3
+          }
+        },
+        {
+          "text": "Stir it up. This is the most fun you've had all year",
+          "points": {
+            "daemon": 3
+          }
+        },
+        {
+          "text": "Stand up and beg everyone to just enjoy the meal together",
+          "points": {
+            "viserys": 3
+          }
+        },
+        {
+          "text": "Refuse to be the one who apologises first",
+          "points": {
+            "rhaenyra": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone you can't stand gets promoted to be your boss. You...",
+      "options": [
+        {
+          "text": "Stay perfectly polite, even though it's killing you",
+          "points": {
+            "alicent": 3
+          }
+        },
+        {
+          "text": "Make a sharp joke about it, to their face",
+          "points": {
+            "daemon": 3
+          }
+        },
+        {
+          "text": "Stare at them in silence until they get uncomfortable",
+          "points": {
+            "aemond": 3
+          }
+        },
+        {
+          "text": "Make it clear you don't take orders from them",
+          "points": {
+            "rhaenyra": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're told to follow a rule you think is stupid. You...",
+      "options": [
+        {
+          "text": "Argue until they make an exception for you",
+          "points": {
+            "rhaenyra": 3
+          }
+        },
+        {
+          "text": "Follow it. Rules are there for a reason",
+          "points": {
+            "alicent": 3
+          }
+        },
+        {
+          "text": "Explain calmly why it makes no sense, then do it your way",
+          "points": {
+            "rhaenys": 3
+          }
+        },
+        {
+          "text": "Find the loophole and use it",
+          "points": {
+            "otto": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend makes a big decision you think is a mistake. You...",
+      "options": [
+        {
+          "text": "Go along with it. You'd rather not fall out",
+          "points": {
+            "viserys": 3
+          }
+        },
+        {
+          "text": "Warn them once, then let them learn the hard way",
+          "points": {
+            "rhaenys": 3
+          }
+        },
+        {
+          "text": "Say nothing, and be ready to step in when it goes wrong",
+          "points": {
+            "otto": 3
+          }
+        },
+        {
+          "text": "Decide they're not worth your time anymore",
+          "points": {
+            "aemond": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone embarrasses you in front of everyone. You...",
+      "options": [
+        {
+          "text": "Lose your temper completely",
+          "points": {
+            "criston": 3
+          }
+        },
+        {
+          "text": "Smile coldly. You'll get even, however long it takes",
+          "points": {
+            "aemond": 3
+          }
+        },
+        {
+          "text": "Hold your head high and act like it never touched you",
+          "points": {
+            "rhaenyra": 3
+          }
+        },
+        {
+          "text": "Laugh it off. It's not worth making a scene",
+          "points": {
+            "viserys": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're given a big responsibility you never asked for. You...",
+      "options": [
+        {
+          "text": "Do it perfectly, even if it means you never get to be yourself",
+          "points": {
+            "alicent": 3
+          }
+        },
+        {
+          "text": "Throw yourself into it. Duty comes first",
+          "points": {
+            "criston": 3
+          }
+        },
+        {
+          "text": "Get bored within a week and go off to find something more exciting",
+          "points": {
+            "daemon": 3
+          }
+        },
+        {
+          "text": "Take it on, and start doing it your way",
+          "points": {
+            "rhaenyra": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend betrays your trust. You...",
+      "options": [
+        {
+          "text": "Never forgive them. You'd have done anything for them",
+          "points": {
+            "criston": 3
+          }
+        },
+        {
+          "text": "Feel hurt, then spend years trying to prove you were the one in the right",
+          "points": {
+            "alicent": 3
+          }
+        },
+        {
+          "text": "Forgive them. Life's too short for grudges",
+          "points": {
+            "viserys": 3
+          }
+        },
+        {
+          "text": "Act like nothing happened, and remember it forever",
+          "points": {
+            "otto": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone challenges you in front of the people you're in charge of. You...",
+      "options": [
+        {
+          "text": "Put them in their place, loudly and dramatically",
+          "points": {
+            "daemon": 3
+          }
+        },
+        {
+          "text": "Look them in the eye and remind them who they're talking to",
+          "points": {
+            "rhaenys": 3
+          }
+        },
+        {
+          "text": "Thank them for their input, then quietly make sure they never get promoted",
+          "points": {
+            "otto": 3
+          }
+        },
+        {
+          "text": "Accept the challenge. You've been training for this your whole life",
+          "points": {
+            "aemond": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're a royal, and the king has just named someone else heir to a throne you thought was yours. You...",
+      "options": [
+        {
+          "text": "Accept it with dignity. Everyone knows who should have had it",
+          "points": {
+            "rhaenys": 3
+          }
+        },
+        {
+          "text": "Storm off to a war far away and make a name for yourself",
+          "points": {
+            "daemon": 3
+          }
+        },
+        {
+          "text": "Bide your time. One day you'll take what you're owed",
+          "points": {
+            "aemond": 3
+          }
+        },
+        {
+          "text": "Swear yourself to whoever will actually reward your loyalty",
+          "points": {
+            "criston": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You ride a dragon, and war has just broken out inside your own family. You...",
+      "options": [
+        {
+          "text": "Fight for what's yours. You were promised that throne",
+          "points": {
+            "rhaenyra": 3
+          }
+        },
+        {
+          "text": "Do anything to stop it. Family shouldn't fight family",
+          "points": {
+            "viserys": 3
+          }
+        },
+        {
+          "text": "Secretly try to make peace with your old friend on the other side",
+          "points": {
+            "alicent": 3
+          }
+        },
+        {
+          "text": "Ride out first. Someone has to show them you mean it",
+          "points": {
+            "criston": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

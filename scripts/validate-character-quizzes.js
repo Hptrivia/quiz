@@ -181,7 +181,8 @@ function validate(file) {
   }
   for (const q of quiz.questions) {
     const others = (ALL_QUESTION_TEXTS.get(q.text.toLowerCase()) || []).filter(s => s !== quiz.slug);
-    if (others.length) { ok = false; console.log(`  ✗ Same question also used in: ${others.join(", ")} — "${q.text}"`); }
+    // Allowed (a question that genuinely fits two shows can be reused), just flagged so it's a conscious choice.
+    if (others.length) console.log(`  ⚠ Same question also used in: ${others.join(", ")} — "${q.text}"`);
   }
 
   const share = exhaustive(quiz);

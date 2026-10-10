@@ -1,0 +1,530 @@
+{
+  "slug": "riverdale",
+  "show": "Riverdale",
+  "shortName": "Riverdale",
+  "seoTitle": "Riverdale Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the Riverdale test: 12 everyday questions reveal whether you're Archie, Betty, Veronica, Jughead, Cheryl, Toni, Reggie or Hiram — with your full character breakdown.",
+  "intro": "Are you the hero, the girl next door with a dark side, or the queen bee? Answer 12 everyday questions about loyalty, secrets and small-town drama, and find out which Riverdale character you are.",
+  "characters": [
+    {
+      "id": "archie",
+      "name": "Archie Andrews",
+      "emoji": "🎸",
+      "color": "#dc2626",
+      "title": "The Hero",
+      "summary": "Earnest, loyal and always trying to save the day. You throw yourself into everything with your whole heart.",
+      "description": [
+        "Like Archie, you wear your heart on your sleeve. He's torn between football and music, and between what everyone wants for him and what he wants for himself.",
+        "You try to fix everything. Archie can't walk away when someone needs help, even when it gets him into serious trouble.",
+        "You keep reinventing yourself. Over the years, Archie becomes a boxer, then a contractor and an amateur writer."
+      ],
+      "strengths": [
+        "Loyal",
+        "Brave",
+        "Passionate"
+      ],
+      "flaw": "You charge in to save everyone before you've thought it through.",
+      "signature": "Red hair, a guitar and a serious hero complex.",
+      "clashReason": "they'd try to fix your problems for you, whether you asked or not"
+    },
+    {
+      "id": "betty",
+      "name": "Betty Cooper",
+      "emoji": "🔍",
+      "color": "#eab308",
+      "title": "The Girl Next Door, With a Dark Side",
+      "summary": "Sweet, smart and driven, with a darker side nobody sees coming. You won't stop until you've found the truth.",
+      "description": [
+        "Like Betty, you seem like the perfect girl next door. She's sweet, studious and eager to please.",
+        "You're a natural detective. Betty can't leave a mystery alone, and she grows up to work as an investigator.",
+        "But there's more to you than people think. Betty has a dark side she fights to control, and she's been pushed into situations nobody should ever face."
+      ],
+      "strengths": [
+        "Smart",
+        "Determined",
+        "Loyal"
+      ],
+      "flaw": "You hold everything in until it explodes.",
+      "signature": "A high ponytail, a notebook full of clues and a darker side than anyone guesses.",
+      "clashReason": "they'd investigate you without telling you"
+    },
+    {
+      "id": "veronica",
+      "name": "Veronica Lodge",
+      "emoji": "💎",
+      "color": "#7c3aed",
+      "title": "The Heiress",
+      "summary": "Glamorous, sharp and braver than people expect. You were born rich, but you're determined to be better.",
+      "description": [
+        "Like Veronica, you've got style and confidence to spare. She moves to Riverdale from New York after her father's arrest.",
+        "You're trying to be better. Veronica used to be a New York mean girl, and she's determined not to be that person any more.",
+        "You stand up for what's right, even against your own family. Veronica eventually turns against her father, Hiram."
+      ],
+      "strengths": [
+        "Stylish",
+        "Clever",
+        "Loyal"
+      ],
+      "flaw": "You can't resist the drama, even when you swear you're done with it.",
+      "signature": "Pearls, a cocktail dress and a business plan.",
+      "clashReason": "they'd outclass you at everything"
+    },
+    {
+      "id": "jughead",
+      "name": "Jughead Jones",
+      "emoji": "👑",
+      "color": "#475569",
+      "title": "The Outsider",
+      "summary": "Brooding, sarcastic and always on the outside looking in. You notice everything, and you write it all down.",
+      "description": [
+        "Like Jughead, you're happiest on the outside. He's a writer and the editor of the school newspaper.",
+        "You find your own people. After his father's arrest, Jughead joins the Southside Serpents.",
+        "You see the story in everything. Jughead narrates the show, and almost nothing gets past him."
+      ],
+      "strengths": [
+        "Observant",
+        "Loyal",
+        "Independent"
+      ],
+      "flaw": "You assume the worst about people before they've had a chance.",
+      "signature": "A crown-shaped beanie, a laptop and a booth at Pop's.",
+      "clashReason": "they'd make a sarcastic comment about everything you love"
+    },
+    {
+      "id": "cheryl",
+      "name": "Cheryl Blossom",
+      "emoji": "🍒",
+      "color": "#be123c",
+      "title": "The Queen Bee",
+      "summary": "Dramatic, icy and absolutely fabulous. You hide your heart behind a perfect entrance.",
+      "description": [
+        "Like Cheryl, you rule the room. She's Riverdale High's queen bee and head cheerleader.",
+        "You're tougher than anyone knows. Behind Cheryl's icy exterior is a painful family life she's had to survive.",
+        "You become yourself. Over time, Cheryl embraces who she really is, and finds love with Toni."
+      ],
+      "strengths": [
+        "Fierce",
+        "Confident",
+        "Dramatic"
+      ],
+      "flaw": "You'd rather make a scene than admit you're hurt.",
+      "signature": "Red lipstick, a red outfit and a dramatic exit line.",
+      "clashReason": "they'd turn every disagreement into a performance"
+    },
+    {
+      "id": "toni",
+      "name": "Toni Topaz",
+      "emoji": "📷",
+      "color": "#0d9488",
+      "title": "The Cool Rebel",
+      "summary": "Laid-back, loyal and nobody's fool. You don't need drama to make your point.",
+      "description": [
+        "Like Toni, you're effortlessly cool. She's a photographer for the school newspaper, and she comes from one of the founding families of the Southside Serpents.",
+        "You're loyal to your people. Toni stands by the Serpents, and by the people she loves.",
+        "You take charge when it counts. Toni eventually becomes the leader of the Serpents."
+      ],
+      "strengths": [
+        "Loyal",
+        "Calm",
+        "Brave"
+      ],
+      "flaw": "You keep your guard up so high that people think you don't care.",
+      "signature": "A camera, a Serpent jacket and pink hair.",
+      "clashReason": "they'd shrug off something that really matters to you"
+    },
+    {
+      "id": "reggie",
+      "name": "Reggie Mantle",
+      "emoji": "🏈",
+      "color": "#ea580c",
+      "title": "The Rival",
+      "summary": "Cocky, competitive and always up for a laugh. You love a rivalry, and you love winning it even more.",
+      "description": [
+        "Like Reggie, you're never short of confidence. He's a football player, and Archie's longtime friend and rival.",
+        "You love a good prank. Reggie is the town's biggest joker, and nobody is safe.",
+        "But you're more loyal than you look. Under all the swagger, Reggie has stuck with Archie for years."
+      ],
+      "strengths": [
+        "Confident",
+        "Funny",
+        "Competitive"
+      ],
+      "flaw": "You'd rather win than be right.",
+      "signature": "A letterman jacket, a smirk and a prank already in motion.",
+      "clashReason": "they'd turn everything into a competition, then gloat"
+    },
+    {
+      "id": "hiram",
+      "name": "Hiram Lodge",
+      "emoji": "🎩",
+      "color": "#64748b",
+      "title": "The Kingpin",
+      "summary": "Charming, calculating and always in control. You build empires, and you don't care who gets crushed.",
+      "description": [
+        "Like Hiram, you think big. He's Veronica's father, a wealthy CEO with a polished public image.",
+        "But you play by your own rules. Behind the charm, Hiram is a crime boss who keeps running his empire, even from prison.",
+        "You never let go of control. Hiram wants to own Riverdale, and he'll use anyone, even his own daughter, to do it."
+      ],
+      "strengths": [
+        "Strategic",
+        "Charming",
+        "Ambitious"
+      ],
+      "flaw": "You'd sacrifice anyone, even family, to stay in control.",
+      "signature": "A tailored suit, a cold smile and half the town in your pocket.",
+      "clashReason": "they'd buy everything you love, just to prove they could"
+    }
+  ],
+  "questions": [
+    {
+      "text": "Your town is throwing a big summer festival. You...",
+      "options": [
+        {
+          "text": "Sign up to play a song on the main stage",
+          "points": {
+            "archie": 3
+          }
+        },
+        {
+          "text": "Make an entrance so dramatic nobody remembers the festival",
+          "points": {
+            "cheryl": 3
+          }
+        },
+        {
+          "text": "Write a scathing piece about what the festival is really covering up",
+          "points": {
+            "jughead": 3
+          }
+        },
+        {
+          "text": "Quietly fund the whole thing. Now the town is in your debt",
+          "points": {
+            "hiram": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend is clearly hiding something from you. You...",
+      "options": [
+        {
+          "text": "Quietly piece it together from the clues",
+          "points": {
+            "betty": 3
+          }
+        },
+        {
+          "text": "Leave it. They'll tell you when they're ready",
+          "points": {
+            "toni": 3
+          }
+        },
+        {
+          "text": "Take them out for a fancy dinner and get it out of them",
+          "points": {
+            "veronica": 3
+          }
+        },
+        {
+          "text": "Tease them about it until they crack",
+          "points": {
+            "reggie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone at school is being bullied. You...",
+      "options": [
+        {
+          "text": "Step in, even if it means a fight",
+          "points": {
+            "archie": 3
+          }
+        },
+        {
+          "text": "Stand next to them, so they know they're not alone",
+          "points": {
+            "toni": 3
+          }
+        },
+        {
+          "text": "Humiliate the bully in public. They'll never try it again",
+          "points": {
+            "cheryl": 3
+          }
+        },
+        {
+          "text": "Laugh along at first, then feel bad about it later",
+          "points": {
+            "reggie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You need money, fast. You...",
+      "options": [
+        {
+          "text": "Start a business. You've always had a head for it",
+          "points": {
+            "veronica": 3
+          }
+        },
+        {
+          "text": "Take any job going, even the back-breaking ones",
+          "points": {
+            "archie": 3
+          }
+        },
+        {
+          "text": "Call in a favour from someone who owes you",
+          "points": {
+            "hiram": 3
+          }
+        },
+        {
+          "text": "Get by on almost nothing. You've done it before",
+          "points": {
+            "jughead": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone powerful has done you wrong. You...",
+      "options": [
+        {
+          "text": "Dig up everything on them, and expose it all",
+          "points": {
+            "betty": 3
+          }
+        },
+        {
+          "text": "Use your own connections to beat them at their own game",
+          "points": {
+            "veronica": 3
+          }
+        },
+        {
+          "text": "Rally the outcasts and take them on together",
+          "points": {
+            "jughead": 3
+          }
+        },
+        {
+          "text": "Plot an elaborate, theatrical revenge",
+          "points": {
+            "cheryl": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "It's your turn to host the end-of-year party the whole town will be talking about. You...",
+      "options": [
+        {
+          "text": "Make it black tie, with a theme people will talk about for years",
+          "points": {
+            "cheryl": 3
+          }
+        },
+        {
+          "text": "Make sure there's a prank nobody will ever forget",
+          "points": {
+            "reggie": 3
+          }
+        },
+        {
+          "text": "Plan everything, right down to the snacks",
+          "points": {
+            "betty": 3
+          }
+        },
+        {
+          "text": "Turn it into a business opportunity",
+          "points": {
+            "hiram": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You get dumped. You...",
+      "options": [
+        {
+          "text": "Go straight to your best friend's house and talk it all out",
+          "points": {
+            "archie": 3
+          }
+        },
+        {
+          "text": "Get dressed up and go somewhere fabulous. Their loss",
+          "points": {
+            "veronica": 3
+          }
+        },
+        {
+          "text": "Make sure everyone knows they'll regret it",
+          "points": {
+            "cheryl": 3
+          }
+        },
+        {
+          "text": "Shrug it off. You've got bigger things going on",
+          "points": {
+            "toni": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your family asks you to keep a dark secret. You...",
+      "options": [
+        {
+          "text": "Keep it, but it eats away at you",
+          "points": {
+            "betty": 3
+          }
+        },
+        {
+          "text": "Of course. Family secrets are what keep a family on top",
+          "points": {
+            "hiram": 3
+          }
+        },
+        {
+          "text": "Go along with it, until it hurts someone you love. Then all bets are off",
+          "points": {
+            "veronica": 3
+          }
+        },
+        {
+          "text": "Say nothing, and trust nobody with it",
+          "points": {
+            "jughead": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone challenges you to a competition. You...",
+      "options": [
+        {
+          "text": "Accept, and talk trash the whole way through",
+          "points": {
+            "reggie": 3
+          }
+        },
+        {
+          "text": "Accept, and train harder than you've ever trained",
+          "points": {
+            "archie": 3
+          }
+        },
+        {
+          "text": "Only if it's worth your time",
+          "points": {
+            "toni": 3
+          }
+        },
+        {
+          "text": "Make sure you've won before it even starts",
+          "points": {
+            "hiram": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your crush starts dating your best friend. You...",
+      "options": [
+        {
+          "text": "Smile, say you're happy for them, and quietly fall apart",
+          "points": {
+            "betty": 3
+          }
+        },
+        {
+          "text": "Find someone new by Friday",
+          "points": {
+            "reggie": 3
+          }
+        },
+        {
+          "text": "Throw a fit worthy of an awards show, then date someone even better",
+          "points": {
+            "cheryl": 3
+          }
+        },
+        {
+          "text": "Be honest with both of them, then move on",
+          "points": {
+            "toni": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You live in a small town where something dark happens every week. You...",
+      "options": [
+        {
+          "text": "Start investigating before the police do",
+          "points": {
+            "betty": 3
+          }
+        },
+        {
+          "text": "Narrate the whole thing like it's a novel",
+          "points": {
+            "jughead": 3
+          }
+        },
+        {
+          "text": "Try to fix it all yourself, one problem at a time",
+          "points": {
+            "archie": 3
+          }
+        },
+        {
+          "text": "Work out how to profit from it",
+          "points": {
+            "hiram": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You're in a gang, and your leader wants you to do something you think is wrong. You...",
+      "options": [
+        {
+          "text": "Refuse. Then take over the gang yourself",
+          "points": {
+            "toni": 3
+          }
+        },
+        {
+          "text": "Question it out loud, even if it costs you",
+          "points": {
+            "jughead": 3
+          }
+        },
+        {
+          "text": "Do it, but make it look like someone else's idea",
+          "points": {
+            "reggie": 3
+          }
+        },
+        {
+          "text": "Strike a deal that gets everyone what they want",
+          "points": {
+            "veronica": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

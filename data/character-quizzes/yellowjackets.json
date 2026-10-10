@@ -1,0 +1,509 @@
+{
+  "slug": "yellowjackets",
+  "show": "Yellowjackets",
+  "shortName": "Yellowjackets",
+  "seoTitle": "Yellowjackets Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the Yellowjackets test: 12 everyday questions reveal whether you're Shauna, Taissa, Natalie, Misty, Lottie, Jackie or Van — with your full character breakdown.",
+  "intro": "Are you the quiet one with a dangerous edge, the competitor, or the wild card nobody saw coming? Answer 12 everyday questions about friendship, survival and secrets, and find out which Yellowjackets character you are.",
+  "characters": [
+    {
+      "id": "shauna",
+      "name": "Shauna Shipman",
+      "emoji": "🔪",
+      "color": "#64748b",
+      "title": "The Quiet One",
+      "summary": "Quiet, overlooked and far more dangerous than anyone realises. You've spent years in someone else's shadow.",
+      "description": [
+        "Like Shauna, you're the one people overlook. As a teenager, she was best friends with Jackie, the team captain.",
+        "You keep big secrets. Shauna was secretly pregnant by Jackie's boyfriend, Jeff, and it tore their friendship apart.",
+        "You're stronger than you look. As an adult, Shauna is married to Jeff with a teenage daughter, and still haunted by what happened in the wilderness."
+      ],
+      "strengths": [
+        "Resourceful",
+        "Determined",
+        "Loyal"
+      ],
+      "flaw": "You bottle everything up until it comes out all at once.",
+      "signature": "A quiet smile, a sharp mind and a lot of resentment.",
+      "clashReason": "they'd smile at you and quietly resent you for years"
+    },
+    {
+      "id": "taissa",
+      "name": "Taissa Turner",
+      "emoji": "🏆",
+      "color": "#2563eb",
+      "title": "The Competitor",
+      "summary": "Driven, ambitious and a natural leader. You'll do whatever it takes to win, and to keep everyone alive.",
+      "description": [
+        "Like Taissa, you're built to compete. She was a star of the soccer team, and after the crash she emerges as a natural leader.",
+        "You aim high. As an adult, Taissa runs for the New Jersey Senate.",
+        "But you have a darker side. In the wilderness, Taissa suffers strange blackouts, and they follow her into adult life."
+      ],
+      "strengths": [
+        "Driven",
+        "Decisive",
+        "Brave"
+      ],
+      "flaw": "You'd sacrifice almost anything to win, and sometimes you do.",
+      "signature": "Muddy soccer cleats, a campaign poster and a side of you nobody's met.",
+      "clashReason": "they'd treat everything as a competition, including you"
+    },
+    {
+      "id": "natalie",
+      "name": "Natalie Scatorccio",
+      "emoji": "🖤",
+      "color": "#be123c",
+      "title": "The Rebel",
+      "summary": "Tough, blunt and nobody's fool. You've got a rebellious streak, and a heart you don't show off.",
+      "description": [
+        "Like Natalie, you do things your own way. She's the rebel of the team, volatile and never afraid to speak her mind.",
+        "You see through people. In the wilderness, Natalie often clashes with Lottie and refuses to just go along with the group.",
+        "You've had a hard road. As an adult, Natalie has been in and out of rehab, but she's still fiercely loyal to the people who matter."
+      ],
+      "strengths": [
+        "Tough",
+        "Honest",
+        "Loyal"
+      ],
+      "flaw": "You're harder on yourself than anyone else ever could be.",
+      "signature": "A leather jacket, a cassette tape and a very short temper.",
+      "clashReason": "they'd tell you exactly where to go"
+    },
+    {
+      "id": "misty",
+      "name": "Misty Quigley",
+      "emoji": "🩹",
+      "color": "#db2777",
+      "title": "The Wild Card",
+      "summary": "Eager, clever and a little bit terrifying. You want to be needed, and you'll make sure you are.",
+      "description": [
+        "Like Misty, you've been underestimated your whole life. She was the team's nerdy equipment manager, and the players often bullied her.",
+        "Then you become essential. After the crash, Misty's first aid skills make her one of the most valuable people in the group.",
+        "You're a lot more than you seem. As an adult, Misty works in a nursing home and moonlights as a citizen detective, and she's genuinely unsettling."
+      ],
+      "strengths": [
+        "Resourceful",
+        "Clever",
+        "Determined"
+      ],
+      "flaw": "You'll do things nobody else would, just to be needed.",
+      "signature": "A first aid kit, a true-crime habit and a smile that's slightly too wide.",
+      "clashReason": "they'd keep you close in a way that's honestly a bit scary"
+    },
+    {
+      "id": "lottie",
+      "name": "Lottie Matthews",
+      "emoji": "🌲",
+      "color": "#16a34a",
+      "title": "The Visionary",
+      "summary": "Calm, intense and deeply spiritual. You sense things other people miss, and people follow you because of it.",
+      "description": [
+        "Like Lottie, you see the world differently. She's prone to strange visions and prophecies, and nobody knows quite what to make of them.",
+        "You become a leader without trying. In the wilderness, Lottie's influence grows until much of the group follows her.",
+        "You've been through a lot. As an adult, Lottie leads a mysterious group of her own."
+      ],
+      "strengths": [
+        "Calm",
+        "Intuitive",
+        "Inspiring"
+      ],
+      "flaw": "You believe so completely that it can lead people somewhere dark.",
+      "signature": "A calm voice, a strange feeling and a following you never asked for.",
+      "clashReason": "they'd find deep meaning in everything, even your bad day"
+    },
+    {
+      "id": "jackie",
+      "name": "Jackie Taylor",
+      "emoji": "⭐",
+      "color": "#f59e0b",
+      "title": "The Captain",
+      "summary": "Popular, warm and used to everything going your way. You want everyone to get along, and everyone to like you.",
+      "description": [
+        "Like Jackie, you're the one everyone looks up to. She's the team captain and the most popular girl at school.",
+        "You keep the peace. Jackie wants everyone to be friends, and she hates conflict.",
+        "But you struggle when the rules change. After the crash, Jackie's popularity counts for nothing, and she doesn't pull her weight."
+      ],
+      "strengths": [
+        "Warm",
+        "Popular",
+        "Optimistic"
+      ],
+      "flaw": "You'd rather be liked than be useful.",
+      "signature": "A captain's smile, a perfect ponytail and a boyfriend everyone envies.",
+      "clashReason": "they'd want everyone to get along, even when someone's clearly in the wrong"
+    },
+    {
+      "id": "van",
+      "name": "Van Palmer",
+      "emoji": "🐺",
+      "color": "#ea580c",
+      "title": "The Loyal One",
+      "summary": "Tough, warm and loyal to the end. You'd follow the people you love anywhere, and you'd make them laugh on the way.",
+      "description": [
+        "Like Van, you're the friend everyone wants on their side. She's one of the team, and Taissa's girlfriend.",
+        "You're tougher than anyone. Van is seriously injured in the wilderness, and survives it.",
+        "You're loyal to your core. Van and Taissa come out as a couple, and her loyalty to the people she loves never wavers."
+      ],
+      "strengths": [
+        "Loyal",
+        "Brave",
+        "Upbeat"
+      ],
+      "flaw": "You follow the people you love even when they're heading somewhere bad.",
+      "signature": "A battle scar and a terrible joke for a terrible moment.",
+      "clashReason": "they'd follow someone else's lead even when it's clearly a bad idea"
+    }
+  ],
+  "questions": [
+    {
+      "text": "Your friends are planning a camping trip. You...",
+      "options": [
+        {
+          "text": "Pack a full first aid kit. You're ready for anything",
+          "points": {
+            "misty": 3
+          }
+        },
+        {
+          "text": "Bring the snacks and the good vibes, but forget the tent",
+          "points": {
+            "jackie": 3
+          }
+        },
+        {
+          "text": "Pack the music, and something you're definitely not supposed to",
+          "points": {
+            "natalie": 3
+          }
+        },
+        {
+          "text": "Plan the route, and make sure you get there first",
+          "points": {
+            "taissa": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your best friend gets something you've always wanted. You...",
+      "options": [
+        {
+          "text": "Congratulate them, then quietly resent it for years",
+          "points": {
+            "shauna": 3
+          }
+        },
+        {
+          "text": "Assume it'll come to you too. It usually does",
+          "points": {
+            "jackie": 3
+          }
+        },
+        {
+          "text": "Work twice as hard, so next time it's yours",
+          "points": {
+            "taissa": 3
+          }
+        },
+        {
+          "text": "Be genuinely happy for them",
+          "points": {
+            "van": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're put in charge of a group project. You...",
+      "options": [
+        {
+          "text": "Set the targets and push everyone to win",
+          "points": {
+            "taissa": 3
+          }
+        },
+        {
+          "text": "Volunteer to do everything, then remind everyone you did",
+          "points": {
+            "misty": 3
+          }
+        },
+        {
+          "text": "Make sure everyone gets along, even if nothing gets done",
+          "points": {
+            "jackie": 3
+          }
+        },
+        {
+          "text": "Do your part, and call out anyone who isn't doing theirs",
+          "points": {
+            "natalie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone in your group starts acting really strangely. You...",
+      "options": [
+        {
+          "text": "Wonder if it's a sign. Something bigger is going on",
+          "points": {
+            "lottie": 3
+          }
+        },
+        {
+          "text": "Start a case file. You love a mystery",
+          "points": {
+            "misty": 3
+          }
+        },
+        {
+          "text": "Ask them straight out what's going on",
+          "points": {
+            "natalie": 3
+          }
+        },
+        {
+          "text": "Watch them quietly, and keep your thoughts to yourself",
+          "points": {
+            "shauna": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're stuck somewhere with no phone signal for a whole week. You...",
+      "options": [
+        {
+          "text": "Find peace. Maybe this was meant to happen",
+          "points": {
+            "lottie": 3
+          }
+        },
+        {
+          "text": "Make the best of it. At least the company's good",
+          "points": {
+            "van": 3
+          }
+        },
+        {
+          "text": "Panic. How is anyone supposed to live like this?",
+          "points": {
+            "jackie": 3
+          }
+        },
+        {
+          "text": "Start walking. You'll find a signal before anyone else does",
+          "points": {
+            "taissa": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone keeps underestimating you. You...",
+      "options": [
+        {
+          "text": "Smile sweetly, and make them regret it later",
+          "points": {
+            "misty": 3
+          }
+        },
+        {
+          "text": "Let them. They'll find out what you're capable of soon enough",
+          "points": {
+            "shauna": 3
+          }
+        },
+        {
+          "text": "Tell them exactly where they can go",
+          "points": {
+            "natalie": 3
+          }
+        },
+        {
+          "text": "Shrug. They'll work it out eventually",
+          "points": {
+            "van": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your friends are fighting, and it's getting nasty. You...",
+      "options": [
+        {
+          "text": "Try to make everyone friends again",
+          "points": {
+            "jackie": 3
+          }
+        },
+        {
+          "text": "Calm everyone down and bring them back together",
+          "points": {
+            "lottie": 3
+          }
+        },
+        {
+          "text": "Crack a joke to break the tension",
+          "points": {
+            "van": 3
+          }
+        },
+        {
+          "text": "Stay out of it, but remember everything",
+          "points": {
+            "shauna": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You make a big mistake that hurts someone. You...",
+      "options": [
+        {
+          "text": "Beat yourself up about it for years",
+          "points": {
+            "natalie": 3
+          }
+        },
+        {
+          "text": "Never tell anyone, and carry it alone",
+          "points": {
+            "shauna": 3
+          }
+        },
+        {
+          "text": "Find a way to make it look like someone else's fault",
+          "points": {
+            "misty": 3
+          }
+        },
+        {
+          "text": "Push it out of your mind and keep moving",
+          "points": {
+            "taissa": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You meet someone who believes in something you really don't. You...",
+      "options": [
+        {
+          "text": "Gently show them a different way of seeing things",
+          "points": {
+            "lottie": 3
+          }
+        },
+        {
+          "text": "Say flat out that you think it's nonsense",
+          "points": {
+            "natalie": 3
+          }
+        },
+        {
+          "text": "Respect it, as long as they don't push it on you",
+          "points": {
+            "van": 3
+          }
+        },
+        {
+          "text": "Agree with them, so things don't get awkward",
+          "points": {
+            "jackie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You get one big shot at something you've always wanted. You...",
+      "options": [
+        {
+          "text": "Go for it, and let nothing get in your way",
+          "points": {
+            "taissa": 3
+          }
+        },
+        {
+          "text": "Hesitate, then grab it before anyone else can",
+          "points": {
+            "shauna": 3
+          }
+        },
+        {
+          "text": "Make sure everyone knows how much you deserve it",
+          "points": {
+            "misty": 3
+          }
+        },
+        {
+          "text": "Take it, and bring your friends along for the ride",
+          "points": {
+            "van": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your team's plane crashes in the wilderness, and nobody's coming to rescue you. You...",
+      "options": [
+        {
+          "text": "Take charge. Someone has to keep everyone alive",
+          "points": {
+            "taissa": 3
+          }
+        },
+        {
+          "text": "Feel a tiny thrill. For once, they really need you",
+          "points": {
+            "misty": 3
+          }
+        },
+        {
+          "text": "Refuse to believe it. Someone will come for you",
+          "points": {
+            "jackie": 3
+          }
+        },
+        {
+          "text": "Listen to the wilderness. It's trying to tell you something",
+          "points": {
+            "lottie": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You survived something terrible with your friends, and you all swore never to talk about it. Years later, someone starts sending threats. You...",
+      "options": [
+        {
+          "text": "Go after whoever's doing it, yourself",
+          "points": {
+            "natalie": 3
+          }
+        },
+        {
+          "text": "Stay calm, and protect your family whatever it takes",
+          "points": {
+            "shauna": 3
+          }
+        },
+        {
+          "text": "Investigate. This is the most exciting thing in years",
+          "points": {
+            "misty": 3
+          }
+        },
+        {
+          "text": "Feel it in your bones. It isn't over yet",
+          "points": {
+            "lottie": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

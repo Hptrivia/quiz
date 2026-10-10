@@ -1,0 +1,530 @@
+{
+  "slug": "euphoria",
+  "show": "Euphoria",
+  "shortName": "Euphoria",
+  "seoTitle": "Euphoria Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the Euphoria test: 12 everyday questions reveal whether you're Rue, Jules, Cassie, Maddy, Lexi, Kat, Nate or Fez — with your full character breakdown.",
+  "intro": "Are you the narrator who sees through everyone, the romantic who falls too hard, or the queen who never backs down? Answer 12 everyday questions about friendship, love and finding yourself, and find out which Euphoria character you are.",
+  "characters": [
+    {
+      "id": "rue",
+      "name": "Rue Bennett",
+      "emoji": "🌙",
+      "color": "#6366f1",
+      "title": "The Narrator",
+      "summary": "Sarcastic, self-aware and sharper than you let on. You see straight through everyone, including yourself.",
+      "description": [
+        "Like Rue, you see everything. She narrates the whole show, with a dry, sarcastic eye on everyone around her.",
+        "You're honest about your struggles, eventually. Rue is a recovering addict, and the show follows her ups and downs with brutal honesty.",
+        "You love hard. Rue's bond with Jules, and her brother-sister friendship with Fez, mean everything to her."
+      ],
+      "strengths": [
+        "Funny",
+        "Perceptive",
+        "Honest"
+      ],
+      "flaw": "You push away the people who are trying hardest to help.",
+      "signature": "An oversized hoodie, a dry joke and a voiceover running in your head.",
+      "clashReason": "they'd make a joke instead of letting you in"
+    },
+    {
+      "id": "jules",
+      "name": "Jules Vaughn",
+      "emoji": "🦋",
+      "color": "#ec4899",
+      "title": "The Free Spirit",
+      "summary": "Creative, kind and full of feeling. You follow your heart, wherever it takes you.",
+      "description": [
+        "Like Jules, you're a breath of fresh air. She moves to town with her dad and is instantly the most interesting person there.",
+        "You express yourself. Jules's bold, colourful style is one of the most recognisable things about the show.",
+        "You feel everything. Jules is kind and free-spirited, but she can also be emotional and impulsive."
+      ],
+      "strengths": [
+        "Creative",
+        "Kind",
+        "Open"
+      ],
+      "flaw": "You follow your feelings so fast that your head can't keep up.",
+      "signature": "Pastel hair, a bold outfit and a different plan every week.",
+      "clashReason": "they'd change their mind about you overnight"
+    },
+    {
+      "id": "cassie",
+      "name": "Cassie Howard",
+      "emoji": "💔",
+      "color": "#f472b6",
+      "title": "The Romantic",
+      "summary": "Sweet, romantic and desperate to be loved. When you fall, you fall completely.",
+      "description": [
+        "Like Cassie, you're a romantic at heart. She's Lexi's older sister, and she wants nothing more than to be loved.",
+        "You put in the effort. Cassie famously gets up before dawn to get ready, just to make sure she looks perfect.",
+        "But love makes you lose your head. Cassie secretly gets together with Maddy's ex, Nate, and it blows up her closest friendship."
+      ],
+      "strengths": [
+        "Sweet",
+        "Loving",
+        "Devoted"
+      ],
+      "flaw": "You'd change everything about yourself to make someone love you.",
+      "signature": "A perfect outfit, a 4am alarm and your heart on your sleeve.",
+      "clashReason": "they'd fall apart over someone who isn't worth it"
+    },
+    {
+      "id": "maddy",
+      "name": "Maddy Perez",
+      "emoji": "💅",
+      "color": "#a855f7",
+      "title": "The Queen",
+      "summary": "Confident, glamorous and fiercely loyal. You know your worth, and you're not afraid to remind people.",
+      "description": [
+        "Like Maddy, you walk into a room like you own it. She's one of the most popular girls at school, and her style is legendary.",
+        "You're loyal to your people. Maddy can be kind, and she's fiercely protective of the friends she's close to.",
+        "But cross you and you'll know it. Maddy is hot-tempered and cutting, and her on-off relationship with Nate brings out both sides of her."
+      ],
+      "strengths": [
+        "Confident",
+        "Loyal",
+        "Fearless"
+      ],
+      "flaw": "Your temper gets there before your common sense does.",
+      "signature": "Perfect nails, rhinestone eyeliner and a comeback for everything.",
+      "clashReason": "they'd tear you apart with one sentence"
+    },
+    {
+      "id": "lexi",
+      "name": "Lexi Howard",
+      "emoji": "🎭",
+      "color": "#0ea5e9",
+      "title": "The Observer",
+      "summary": "Quiet, thoughtful and always watching. You've been overlooked, but you notice everything.",
+      "description": [
+        "Like Lexi, you're often in the background. She's Cassie's younger sister and Rue's childhood best friend, and she's used to being overlooked.",
+        "You notice what everyone else misses. Lexi has spent years quietly watching the people around her.",
+        "Then you step into the spotlight. Lexi writes and directs a school play, 'Our Life', about the people she knows, and it changes everything."
+      ],
+      "strengths": [
+        "Thoughtful",
+        "Creative",
+        "Loyal"
+      ],
+      "flaw": "You keep so quiet that people forget you have something to say.",
+      "signature": "A notebook, a front-row view of everyone's drama and a play you're secretly writing.",
+      "clashReason": "they'd quietly turn your life into material"
+    },
+    {
+      "id": "kat",
+      "name": "Kat Hernandez",
+      "emoji": "🖤",
+      "color": "#be123c",
+      "title": "The Reinvention",
+      "summary": "Sharp, bold and done apologising. You decided who you wanted to be, and became her.",
+      "description": [
+        "Like Kat, you've had to find your confidence. She starts the show insecure, and grows bolder as it goes on.",
+        "You reinvent yourself. Kat swaps her old image for a bold new look and attitude, practically overnight.",
+        "You've got a sharp tongue. Kat can be hard on the people around her, especially when she's being hardest on herself."
+      ],
+      "strengths": [
+        "Bold",
+        "Witty",
+        "Unapologetic"
+      ],
+      "flaw": "You're harder on yourself than anyone, and it spills onto everyone else.",
+      "signature": "Dark lipstick, a leather jacket and zero apologies.",
+      "clashReason": "they'd roast you, then say they were just being honest"
+    },
+    {
+      "id": "nate",
+      "name": "Nate Jacobs",
+      "emoji": "🏈",
+      "color": "#475569",
+      "title": "The Control Freak",
+      "summary": "Intense, controlling and hiding more than anyone knows. You keep everything, and everyone, in line.",
+      "description": [
+        "Like Nate, you like to be in control. He's the school's star football player, and the son of Cal Jacobs.",
+        "You hide what you're really feeling. Nate's anger covers up deep insecurities.",
+        "You're dangerous when you're crossed. Nate is the show's most manipulative character, and his relationships with Maddy and Cassie are anything but healthy."
+      ],
+      "strengths": [
+        "Driven",
+        "Disciplined",
+        "Strategic"
+      ],
+      "flaw": "You'd rather control people than trust them.",
+      "signature": "A football jersey, a perfect smile and a temper you keep well hidden.",
+      "clashReason": "they'd try to control everything you do"
+    },
+    {
+      "id": "fez",
+      "name": "Fezco",
+      "emoji": "🏪",
+      "color": "#b45309",
+      "title": "The Gentle Giant",
+      "summary": "Calm, kind and fiercely protective. You might not say much, but you'd do anything for the people you love.",
+      "description": [
+        "Like Fez, you look after your people. He was raised by his grandmother, he still takes care of her, and he looks out for Ashtray like a little brother.",
+        "You're like family to your friends. Fez's bond with Rue is like a brother and sister's, and he'd do anything to keep her safe.",
+        "You're softer than you look. Fez is a local drug dealer, but he's one of the kindest people in the whole show, and his slow-burn romance with Lexi is a fan favourite."
+      ],
+      "strengths": [
+        "Kind",
+        "Loyal",
+        "Protective"
+      ],
+      "flaw": "You take on everyone else's problems and never ask for help with yours.",
+      "signature": "A corner shop, a calm voice and a soft spot for the people you love.",
+      "clashReason": "they'd protect you so hard you'd never get to fight your own battles"
+    }
+  ],
+  "questions": [
+    {
+      "text": "You're invited to a huge party. You...",
+      "options": [
+        {
+          "text": "Spend three hours on your look. You're making an entrance",
+          "points": {
+            "maddy": 3
+          }
+        },
+        {
+          "text": "Say you'll go, then cancel an hour before",
+          "points": {
+            "rue": 3
+          }
+        },
+        {
+          "text": "Go, and quietly take mental notes on everyone. Great material",
+          "points": {
+            "lexi": 3
+          }
+        },
+        {
+          "text": "Turn up in something nobody else would dare to wear",
+          "points": {
+            "jules": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone you're dating stops texting back. You...",
+      "options": [
+        {
+          "text": "Spiral. Write ten messages, delete them, then send all ten",
+          "points": {
+            "cassie": 3
+          }
+        },
+        {
+          "text": "Delete their number. Their loss",
+          "points": {
+            "maddy": 3
+          }
+        },
+        {
+          "text": "Turn up at their place to find out what's going on",
+          "points": {
+            "nate": 3
+          }
+        },
+        {
+          "text": "Pretend you don't care, then post something to prove it",
+          "points": {
+            "kat": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend tells you a secret that would make great gossip. You...",
+      "options": [
+        {
+          "text": "Take it to the grave. That's what friends do",
+          "points": {
+            "fez": 3
+          }
+        },
+        {
+          "text": "Promise to keep it. But you might write about it one day",
+          "points": {
+            "lexi": 3
+          }
+        },
+        {
+          "text": "Keep it, and heaven help anyone who tries to use it against them",
+          "points": {
+            "maddy": 3
+          }
+        },
+        {
+          "text": "Let it slip by accident, then feel awful for days",
+          "points": {
+            "cassie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You've got a big day tomorrow. You...",
+      "options": [
+        {
+          "text": "Set your alarm for 4am so you have time to look perfect",
+          "points": {
+            "cassie": 3
+          }
+        },
+        {
+          "text": "Stay up all night anyway, then wing it",
+          "points": {
+            "rue": 3
+          }
+        },
+        {
+          "text": "Plan every move, right down to the minute",
+          "points": {
+            "nate": 3
+          }
+        },
+        {
+          "text": "Make sure everyone you care about is sorted first, then worry about you",
+          "points": {
+            "fez": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "At a party, someone says something nasty about your best friend, loud enough for everyone to hear. You...",
+      "options": [
+        {
+          "text": "Destroy them with one sentence, then walk off",
+          "points": {
+            "maddy": 3
+          }
+        },
+        {
+          "text": "Step in quietly. They'll back down once they see you",
+          "points": {
+            "fez": 3
+          }
+        },
+        {
+          "text": "Laugh in their face. Their opinion doesn't matter",
+          "points": {
+            "kat": 3
+          }
+        },
+        {
+          "text": "Hug your friend and tell them not to listen to a word of it",
+          "points": {
+            "jules": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You want to completely change your look. You...",
+      "options": [
+        {
+          "text": "Go bold. Colour, glitter, whatever feels like you today",
+          "points": {
+            "jules": 3
+          }
+        },
+        {
+          "text": "Do it overnight, and walk in like you've always looked this way",
+          "points": {
+            "kat": 3
+          }
+        },
+        {
+          "text": "Think about it for a year, then change one small thing",
+          "points": {
+            "lexi": 3
+          }
+        },
+        {
+          "text": "Only if it gets you the right kind of attention",
+          "points": {
+            "nate": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your friend starts dating your ex. You...",
+      "options": [
+        {
+          "text": "Make it very, very clear the friendship is over",
+          "points": {
+            "maddy": 3
+          }
+        },
+        {
+          "text": "Get hurt, then forgive them faster than you should",
+          "points": {
+            "jules": 3
+          }
+        },
+        {
+          "text": "Shrug and say you saw it coming",
+          "points": {
+            "rue": 3
+          }
+        },
+        {
+          "text": "Act like you don't care, then make sure they both regret it",
+          "points": {
+            "nate": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Things at home are really rough right now. You...",
+      "options": [
+        {
+          "text": "Hold everything together. Someone has to",
+          "points": {
+            "fez": 3
+          }
+        },
+        {
+          "text": "Stay quiet and keep the peace, like always",
+          "points": {
+            "lexi": 3
+          }
+        },
+        {
+          "text": "Pull away and deal with it on your own",
+          "points": {
+            "rue": 3
+          }
+        },
+        {
+          "text": "Throw yourself into a new relationship to feel better",
+          "points": {
+            "cassie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone tells you you're not good enough for something. You...",
+      "options": [
+        {
+          "text": "Prove them wrong, loudly and unapologetically",
+          "points": {
+            "kat": 3
+          }
+        },
+        {
+          "text": "Push yourself harder, until nobody could ever say it again",
+          "points": {
+            "nate": 3
+          }
+        },
+        {
+          "text": "Work at it in secret until you're better than all of them",
+          "points": {
+            "lexi": 3
+          }
+        },
+        {
+          "text": "Feel crushed, then go and do it your own way anyway",
+          "points": {
+            "jules": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your friends are fighting, and you're stuck in the middle. You...",
+      "options": [
+        {
+          "text": "Try to keep both of them happy, and end up making it worse",
+          "points": {
+            "cassie": 3
+          }
+        },
+        {
+          "text": "Crack jokes until somebody laughs",
+          "points": {
+            "rue": 3
+          }
+        },
+        {
+          "text": "Sit them both down and tell them to sort it out",
+          "points": {
+            "fez": 3
+          }
+        },
+        {
+          "text": "Stay out of it. Not your circus",
+          "points": {
+            "kat": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone has turned your friend group's drama into a school play, and it's opening night. You...",
+      "options": [
+        {
+          "text": "Watch everyone's faces instead of the stage",
+          "points": {
+            "lexi": 3
+          }
+        },
+        {
+          "text": "Storm the stage the second you see yourself in it",
+          "points": {
+            "cassie": 3
+          }
+        },
+        {
+          "text": "Sit in the front row and enjoy every minute",
+          "points": {
+            "maddy": 3
+          }
+        },
+        {
+          "text": "Walk out the moment it gets too close to home",
+          "points": {
+            "nate": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "Your town is small, everyone knows your business, and you just want out. You...",
+      "options": [
+        {
+          "text": "Pack a bag and head for the city. You'll figure out the rest",
+          "points": {
+            "jules": 3
+          }
+        },
+        {
+          "text": "Dream about leaving, but never actually go",
+          "points": {
+            "rue": 3
+          }
+        },
+        {
+          "text": "Reinvent yourself right here, and let them talk",
+          "points": {
+            "kat": 3
+          }
+        },
+        {
+          "text": "Stay. Your family needs you here",
+          "points": {
+            "fez": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

@@ -1,0 +1,530 @@
+{
+  "slug": "teen-wolf",
+  "show": "Teen Wolf",
+  "shortName": "Teen Wolf",
+  "seoTitle": "Teen Wolf Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the Teen Wolf test: 12 everyday questions reveal whether you're Scott, Stiles, Lydia, Derek, Allison, Malia, Peter or Jackson — with your full character breakdown.",
+  "intro": "Are you the true alpha, the sarcastic sidekick, or the genius queen? Answer 12 everyday questions about loyalty, power and protecting your pack, and find out which Teen Wolf character you are.",
+  "characters": [
+    {
+      "id": "scott",
+      "name": "Scott McCall",
+      "emoji": "🐺",
+      "color": "#b45309",
+      "title": "The True Alpha",
+      "summary": "Kind, brave and fiercely protective. You lead with your heart, and you'd do anything to keep your people safe.",
+      "description": [
+        "Like Scott, you see the good in people. He's an ordinary teenager who gets bitten by a werewolf and becomes a True Alpha.",
+        "You lead by example. Scott is optimistic, protective and driven by a sense of duty, and he always looks for a way to save everyone.",
+        "You put others first. Years later, Scott is running an animal shelter and still looking out for everyone."
+      ],
+      "strengths": [
+        "Kind",
+        "Brave",
+        "Loyal"
+      ],
+      "flaw": "You take responsibility for everyone, even when it isn't yours to carry.",
+      "signature": "Glowing red eyes, a lacrosse stick and a pack that would follow you anywhere.",
+      "clashReason": "they'd risk everything to save someone you think doesn't deserve it"
+    },
+    {
+      "id": "stiles",
+      "name": "Stiles Stilinski",
+      "emoji": "🧠",
+      "color": "#2563eb",
+      "title": "The Sarcastic Sidekick",
+      "summary": "Fast-talking, sarcastic and smarter than anyone gives you credit for. You're the glue holding everything together.",
+      "description": [
+        "Like Stiles, you've always got a comeback. He's Scott's best friend, the funniest person in Beacon Hills, and fiercely loyal.",
+        "You figure things out. Stiles is quick-minded, and he's often the one who solves the mystery, without any powers at all.",
+        "You've been through the worst and come out the other side. Stiles was once possessed by the Nogitsune, and he goes on to work with the FBI."
+      ],
+      "strengths": [
+        "Smart",
+        "Funny",
+        "Loyal"
+      ],
+      "flaw": "You talk your way into trouble as fast as you talk your way out of it.",
+      "signature": "A beat-up Jeep, a conspiracy board and a sarcastic comeback.",
+      "clashReason": "they'd never stop talking, especially when you need quiet"
+    },
+    {
+      "id": "lydia",
+      "name": "Lydia Martin",
+      "emoji": "💄",
+      "color": "#db2777",
+      "title": "The Genius Queen",
+      "summary": "Brilliant, stylish and far more caring than you let on. You're always the smartest person in the room.",
+      "description": [
+        "Like Lydia, people underestimate you. She seems like the typical queen bee at first, but she's actually a genius.",
+        "You trust your instincts. Lydia is a banshee, and she can sense when death is near.",
+        "You care more than you show. Underneath it all, Lydia is a loyal friend, and she goes on to work in green energy."
+      ],
+      "strengths": [
+        "Brilliant",
+        "Confident",
+        "Loyal"
+      ],
+      "flaw": "You hide how much you care behind a perfect, unbothered face.",
+      "signature": "Strawberry-blonde hair, a designer bag and a scream that could shatter glass.",
+      "clashReason": "they'd make you feel like the least clever person alive"
+    },
+    {
+      "id": "derek",
+      "name": "Derek Hale",
+      "emoji": "🖤",
+      "color": "#57534e",
+      "title": "The Brooding Protector",
+      "summary": "Grumpy, guarded and more loyal than you'd ever admit. You've been hurt, and you don't trust easily.",
+      "description": [
+        "Like Derek, you've been through a lot. He was born a werewolf, and a tragic past left him angry, sullen and slow to trust.",
+        "You protect people, even if you grumble about it. Derek becomes one of the people Scott can count on.",
+        "You find peace in the end. Years later, Derek is a father, and helping to keep Beacon Hills safe."
+      ],
+      "strengths": [
+        "Loyal",
+        "Protective",
+        "Strong"
+      ],
+      "flaw": "You expect the worst from people, so you rarely give them a chance.",
+      "signature": "A leather jacket, a permanent scowl and a soft heart nobody's allowed to see.",
+      "clashReason": "they'd glare at you instead of saying what's wrong"
+    },
+    {
+      "id": "allison",
+      "name": "Allison Argent",
+      "emoji": "🏹",
+      "color": "#16a34a",
+      "title": "The Hunter",
+      "summary": "Brave, loyal and nobody's damsel. You're sweet, but you can absolutely take care of yourself.",
+      "description": [
+        "Like Allison, you're tougher than you look. She's a skilled archer from a family of hunters.",
+        "You're loyal, with a rebellious streak. Allison falls for Scott, a werewolf, even though her family hunts them.",
+        "You choose your own path. Allison stands up for what she believes is right, even when it means defying her family."
+      ],
+      "strengths": [
+        "Brave",
+        "Loyal",
+        "Focused"
+      ],
+      "flaw": "You throw yourself into danger to protect people, without a second thought for yourself.",
+      "signature": "A bow, a steady aim and a family full of secrets.",
+      "clashReason": "they'd go into danger alone, and expect you to understand"
+    },
+    {
+      "id": "malia",
+      "name": "Malia Tate",
+      "emoji": "🐾",
+      "color": "#ca8a04",
+      "title": "The Wild One",
+      "summary": "Blunt, fierce and completely unfiltered. You say what you think, usually right away.",
+      "description": [
+        "Like Malia, you do things your own way. She spent years living in the wild as a coyote, and it shows.",
+        "You've got no filter. Malia is brash, outspoken and often ignores social rules entirely.",
+        "You fight for your people. Malia is a fierce member of Scott's pack, even after finding out that Peter Hale is her biological father."
+      ],
+      "strengths": [
+        "Fierce",
+        "Honest",
+        "Loyal"
+      ],
+      "flaw": "You say exactly what you're thinking, even when you really shouldn't.",
+      "signature": "Glowing blue eyes, zero patience for small talk and even less for rules.",
+      "clashReason": "they'd tell you exactly what they think of you, instantly"
+    },
+    {
+      "id": "peter",
+      "name": "Peter Hale",
+      "emoji": "🐍",
+      "color": "#7c3aed",
+      "title": "The Schemer",
+      "summary": "Witty, charming and always plotting. You look out for yourself first, and you're very good at it.",
+      "description": [
+        "Like Peter, you've always got an angle. He's Derek's uncle, and the werewolf who bit Scott in the first place.",
+        "You'll do whatever it takes. Peter is manipulative and ruthless, and he'll use anyone to get more power.",
+        "But you're impossible not to enjoy. Peter's sharp sense of humour makes him one of the show's most entertaining villains."
+      ],
+      "strengths": [
+        "Clever",
+        "Witty",
+        "Ambitious"
+      ],
+      "flaw": "You'd betray anyone, even family, if the price was right.",
+      "signature": "A smug smile, a sarcastic remark and a plan you're not sharing.",
+      "clashReason": "they'd turn on you the second it suited them"
+    },
+    {
+      "id": "jackson",
+      "name": "Jackson Whittemore",
+      "emoji": "🏆",
+      "color": "#0ea5e9",
+      "title": "The Golden Boy",
+      "summary": "Competitive, confident and desperate to be the best. Underneath the arrogance, you care more than you show.",
+      "description": [
+        "Like Jackson, you want to be the best at everything. He's the star of the lacrosse team, and he's used to being on top.",
+        "You're competitive, maybe too competitive. Jackson is self-absorbed and aggressive, and he even wanted the bite so he could be stronger.",
+        "But you care about your people. For all his attitude, Jackson really does care about his friends, and he comes back to help Lydia when it counts."
+      ],
+      "strengths": [
+        "Driven",
+        "Confident",
+        "Competitive"
+      ],
+      "flaw": "You care so much about being the best that you forget to be nice.",
+      "signature": "A Porsche, a lacrosse trophy and a lot of hair gel.",
+      "clashReason": "they'd turn everything into a competition, and sulk if they lost"
+    }
+  ],
+  "questions": [
+    {
+      "text": "It's your first day at a new school. You...",
+      "options": [
+        {
+          "text": "Make friends with whoever's sitting on their own",
+          "points": {
+            "scott": 3
+          }
+        },
+        {
+          "text": "Walk in like you already run the place",
+          "points": {
+            "lydia": 3
+          }
+        },
+        {
+          "text": "Find out who's the most popular person there, and beat them",
+          "points": {
+            "jackson": 3
+          }
+        },
+        {
+          "text": "Talk at a hundred miles an hour to the first person who'll listen",
+          "points": {
+            "stiles": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your friend is in trouble, but won't tell you why. You...",
+      "options": [
+        {
+          "text": "Follow them, very badly, to find out",
+          "points": {
+            "stiles": 3
+          }
+        },
+        {
+          "text": "Stay by their side until they're ready to tell you",
+          "points": {
+            "scott": 3
+          }
+        },
+        {
+          "text": "Warn them that whatever it is, it'll only get worse if they ignore it",
+          "points": {
+            "derek": 3
+          }
+        },
+        {
+          "text": "Dig up the secret, then decide how useful it is",
+          "points": {
+            "peter": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone challenges you in front of everyone. You...",
+      "options": [
+        {
+          "text": "Prove you're better. Immediately",
+          "points": {
+            "jackson": 3
+          }
+        },
+        {
+          "text": "Punch first, ask questions never",
+          "points": {
+            "malia": 3
+          }
+        },
+        {
+          "text": "Stay calm, take your time, and win",
+          "points": {
+            "allison": 3
+          }
+        },
+        {
+          "text": "Outsmart them so badly they forget why they started",
+          "points": {
+            "lydia": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You've got a huge exam tomorrow. You...",
+      "options": [
+        {
+          "text": "Relax. You'll finish early and still get top marks",
+          "points": {
+            "lydia": 3
+          }
+        },
+        {
+          "text": "Pull an all-nighter fuelled by energy drinks and panic",
+          "points": {
+            "stiles": 3
+          }
+        },
+        {
+          "text": "Borrow someone else's notes and act like you didn't need them",
+          "points": {
+            "jackson": 3
+          }
+        },
+        {
+          "text": "Ask someone to explain it like you've never been to school",
+          "points": {
+            "malia": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A stranger needs help, but helping them is risky. You...",
+      "options": [
+        {
+          "text": "Help. You always do",
+          "points": {
+            "scott": 3
+          }
+        },
+        {
+          "text": "Do it, but grumble the whole time",
+          "points": {
+            "derek": 3
+          }
+        },
+        {
+          "text": "Ask what's in it for you first",
+          "points": {
+            "peter": 3
+          }
+        },
+        {
+          "text": "Make a plan, then step in",
+          "points": {
+            "allison": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your best friend makes a terrible decision. You...",
+      "options": [
+        {
+          "text": "Tell them honestly, then stand by them anyway",
+          "points": {
+            "allison": 3
+          }
+        },
+        {
+          "text": "Support them, and help clean up the mess afterwards",
+          "points": {
+            "scott": 3
+          }
+        },
+        {
+          "text": "Tell them it's stupid. Bluntly",
+          "points": {
+            "malia": 3
+          }
+        },
+        {
+          "text": "Roll your eyes, then quietly fix it for them",
+          "points": {
+            "lydia": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're offered a lot of power, but it comes at a cost. You...",
+      "options": [
+        {
+          "text": "Take it. Power is all that matters",
+          "points": {
+            "peter": 3
+          }
+        },
+        {
+          "text": "Turn it down. It's not worth hurting anyone",
+          "points": {
+            "scott": 3
+          }
+        },
+        {
+          "text": "Yes. You've always wanted to be the best",
+          "points": {
+            "jackson": 3
+          }
+        },
+        {
+          "text": "No way. You've seen what power does to people",
+          "points": {
+            "derek": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone you love is in danger. You...",
+      "options": [
+        {
+          "text": "Grab whatever you've got and go after them",
+          "points": {
+            "allison": 3
+          }
+        },
+        {
+          "text": "Come up with a ridiculous plan that somehow works",
+          "points": {
+            "stiles": 3
+          }
+        },
+        {
+          "text": "Go alone. You don't want anyone else getting hurt",
+          "points": {
+            "derek": 3
+          }
+        },
+        {
+          "text": "Get a feeling about where they are, and trust it",
+          "points": {
+            "lydia": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You meet someone new who's clearly hiding something. You...",
+      "options": [
+        {
+          "text": "Smile. You've got secrets of your own",
+          "points": {
+            "peter": 3
+          }
+        },
+        {
+          "text": "Start a full investigation, conspiracy board and all",
+          "points": {
+            "stiles": 3
+          }
+        },
+        {
+          "text": "Ask them straight out what they're hiding",
+          "points": {
+            "malia": 3
+          }
+        },
+        {
+          "text": "Watch them closely before you decide anything",
+          "points": {
+            "allison": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "The person you're dating is getting a lot of attention. You...",
+      "options": [
+        {
+          "text": "Make sure everyone knows you're the better catch",
+          "points": {
+            "jackson": 3
+          }
+        },
+        {
+          "text": "Brood about it, but say nothing",
+          "points": {
+            "derek": 3
+          }
+        },
+        {
+          "text": "Stand right next to them and glare at everyone",
+          "points": {
+            "malia": 3
+          }
+        },
+        {
+          "text": "Work out how to use it to your advantage",
+          "points": {
+            "peter": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You've just been bitten by a werewolf, and the full moon is tomorrow. You...",
+      "options": [
+        {
+          "text": "Try to keep living a normal life, and protect everyone from yourself",
+          "points": {
+            "scott": 3
+          }
+        },
+        {
+          "text": "Brilliant. Finally, some real power",
+          "points": {
+            "jackson": 3
+          }
+        },
+        {
+          "text": "Run off into the woods and see what happens",
+          "points": {
+            "malia": 3
+          }
+        },
+        {
+          "text": "Lock yourself away. You don't trust yourself around anyone",
+          "points": {
+            "derek": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "Your town is full of supernatural creatures, and you're the only human in your friend group. You...",
+      "options": [
+        {
+          "text": "Make up for it by being the smartest one in the room",
+          "points": {
+            "stiles": 3
+          }
+        },
+        {
+          "text": "Train harder than any of them",
+          "points": {
+            "allison": 3
+          }
+        },
+        {
+          "text": "Discover you're not quite as human as you thought",
+          "points": {
+            "lydia": 3
+          }
+        },
+        {
+          "text": "Quietly work out which of them is the weakest",
+          "points": {
+            "peter": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

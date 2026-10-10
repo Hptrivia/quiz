@@ -86,8 +86,8 @@ const APP_ANNOUNCEMENTS = [
   // batch gets announced). Point the CTA at a hub page once there are several.
   {
     icon: "🎭",
-    title: "8 New Character Tests",
-    text: "Which Peaky Blinders, Supernatural, Ted Lasso or Lord of the Rings character are you? Plus Jujutsu Kaisen, The Hunger Games, Sex and the City and Desperate Housewives.",
+    title: "18 New Character Tests",
+    text: "Which Pretty Little Liars, Euphoria, House of the Dragon or Twilight character are you? Plus Glee, The O.C., One Tree Hill, Teen Wolf, Riverdale, The 100, Yellowjackets, Emily in Paris, Demon Slayer, Red Dead Redemption 2 and more.",
     cta: { label: "Take a Test", href: "character-quiz/index.html" },
   },
   {

@@ -1,0 +1,467 @@
+{
+  "slug": "the-sex-lives-of-college-girls",
+  "show": "The Sex Lives of College Girls",
+  "shortName": "Sex Lives of College Girls",
+  "seoTitle": "The Sex Lives of College Girls Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take The Sex Lives of College Girls test: 12 everyday questions reveal whether you're Kimberly, Bela, Leighton, Whitney or Kacey — with your full character breakdown.",
+  "intro": "Are you the hard worker, the comedian, or the ice queen with a secret? Answer 12 everyday questions about college, friendship and finding yourself, and find out which character from The Sex Lives of College Girls you are.",
+  "characters": [
+    {
+      "id": "kimberly",
+      "name": "Kimberly Finkle",
+      "emoji": "📚",
+      "color": "#16a34a",
+      "title": "The Hard Worker",
+      "summary": "Book-smart, earnest and determined. You worked hard to get here, and you're not wasting a minute of it.",
+      "description": [
+        "Like Kimberly, you've earned your place. She's a working-class student from Gilbert, Arizona, who's at Essex on a scholarship.",
+        "You've got big dreams. Kimberly wants to become a Supreme Court Justice one day.",
+        "You're still figuring out the rest. Kimberly is the most innocent of the four roommates, and college teaches her a lot, fast."
+      ],
+      "strengths": [
+        "Hard-working",
+        "Kind",
+        "Determined"
+      ],
+      "flaw": "You overthink everything, especially the fun stuff.",
+      "signature": "A library card, a part-time job and a five-year plan.",
+      "clashReason": "they'd turn a fun night into a study session"
+    },
+    {
+      "id": "bela",
+      "name": "Bela Malhotra",
+      "emoji": "🎤",
+      "color": "#f97316",
+      "title": "The Comedian",
+      "summary": "Bold, confident and a little bit crass. You want to be famous, and you're not shy about saying so.",
+      "description": [
+        "Like Bela, you've got big ambitions. She's from Nutley, New Jersey, and she's desperate to become a comedy writer.",
+        "You say what everyone else is thinking. Bela is confident, sex-positive and unapologetically crass.",
+        "You make your own opportunities. Bela starts an all-female comedy group, and later runs an all-women comedy magazine."
+      ],
+      "strengths": [
+        "Bold",
+        "Funny",
+        "Ambitious"
+      ],
+      "flaw": "You'd do almost anything for recognition, even when it backfires.",
+      "signature": "A notebook of jokes, a lot of confidence and a plan to be famous.",
+      "clashReason": "they'd turn your private life into their next bit"
+    },
+    {
+      "id": "leighton",
+      "name": "Leighton Murray",
+      "emoji": "💅",
+      "color": "#7c3aed",
+      "title": "The Ice Queen",
+      "summary": "Polished, private and sharper than you let on. You keep your guard up, and your real self to yourself.",
+      "description": [
+        "Like Leighton, you come from money. She's a wealthy legacy student from New York City with an old-money background.",
+        "You keep your secrets close. Leighton spent her first year hiding that she's a lesbian, even from her roommates, before coming out.",
+        "You're smarter than you seem. Leighton eventually leaves Essex for a maths programme at MIT."
+      ],
+      "strengths": [
+        "Smart",
+        "Stylish",
+        "Sharp-witted"
+      ],
+      "flaw": "You'd rather seem cold than let anyone see you care.",
+      "signature": "Designer everything, a cutting comment and a secret you're not ready to share.",
+      "clashReason": "they'd make you feel underdressed with one look"
+    },
+    {
+      "id": "whitney",
+      "name": "Whitney Chase",
+      "emoji": "⚽",
+      "color": "#0ea5e9",
+      "title": "The Athlete",
+      "summary": "Driven, grounded and steady under pressure. You've always known what you want, until college made you wonder.",
+      "description": [
+        "Like Whitney, you're a natural competitor. She's a soccer star from Seattle and the daughter of a US senator.",
+        "You keep a cool head. Whitney is focused and level-headed, even when her life gets messy.",
+        "You're more than one thing. As college goes on, Whitney starts to explore who she is beyond soccer."
+      ],
+      "strengths": [
+        "Driven",
+        "Grounded",
+        "Loyal"
+      ],
+      "flaw": "You put your goals ahead of everything, sometimes even your friends.",
+      "signature": "Soccer cleats, a packed schedule and a senator for a parent.",
+      "clashReason": "they'd always pick practice over your plans"
+    },
+    {
+      "id": "kacey",
+      "name": "Kacey",
+      "emoji": "👑",
+      "color": "#ec4899",
+      "title": "The Pageant Girl",
+      "summary": "Polished, put-together and always performing. You care a lot about how things look, and it takes a while to let people in.",
+      "description": [
+        "Like Kacey, you're a perfectionist about appearances. She's a former pageant girl who transfers to Essex from Duke.",
+        "You keep people at arm's length at first. Kacey arrives focused on her long-term boyfriend, and isn't in a hurry to make new friends.",
+        "You're a performer at heart. Kacey joins the theatre department, and there's more to her than the perfect smile."
+      ],
+      "strengths": [
+        "Polished",
+        "Driven",
+        "Loyal"
+      ],
+      "flaw": "You can be passive-aggressive instead of just saying what's wrong.",
+      "signature": "A perfect smile, a pageant sash and a boyfriend you mention a lot.",
+      "clashReason": "they'd leave you a polite note instead of just talking to you"
+    }
+  ],
+  "questions": [
+    {
+      "text": "It's your first week at college. You...",
+      "options": [
+        {
+          "text": "Find the library and read every course outline twice",
+          "points": {
+            "kimberly": 3
+          }
+        },
+        {
+          "text": "Sign up for every club that might get you noticed",
+          "points": {
+            "bela": 3
+          }
+        },
+        {
+          "text": "Stick with people from your old circle",
+          "points": {
+            "leighton": 3
+          }
+        },
+        {
+          "text": "Head straight to practice. Everything else can wait",
+          "points": {
+            "whitney": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your roommate keeps leaving dirty dishes in the sink. You...",
+      "options": [
+        {
+          "text": "Leave a very polite note. With a smiley face. A sharp one",
+          "points": {
+            "kacey": 3
+          }
+        },
+        {
+          "text": "Say something cutting and go back to your phone",
+          "points": {
+            "leighton": 3
+          }
+        },
+        {
+          "text": "Wash them yourself, then worry for days about bringing it up",
+          "points": {
+            "kimberly": 3
+          }
+        },
+        {
+          "text": "Make a joke about it in front of everyone",
+          "points": {
+            "bela": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Money's tight this month. You...",
+      "options": [
+        {
+          "text": "Pick up an extra shift and live on instant noodles",
+          "points": {
+            "kimberly": 3
+          }
+        },
+        {
+          "text": "Wait. What does 'tight' mean?",
+          "points": {
+            "leighton": 3
+          }
+        },
+        {
+          "text": "Stick to your budget. You've got it handled",
+          "points": {
+            "whitney": 3
+          }
+        },
+        {
+          "text": "Pitch a money-making scheme that's definitely going to work",
+          "points": {
+            "bela": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You've got a crush on someone. You...",
+      "options": [
+        {
+          "text": "Make the first move, loudly",
+          "points": {
+            "bela": 3
+          }
+        },
+        {
+          "text": "Overthink every text for a week",
+          "points": {
+            "kimberly": 3
+          }
+        },
+        {
+          "text": "Keep it completely to yourself",
+          "points": {
+            "leighton": 3
+          }
+        },
+        {
+          "text": "Remind yourself you've got a boyfriend back home. Mostly",
+          "points": {
+            "kacey": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone embarrasses you at a party. You...",
+      "options": [
+        {
+          "text": "Turn it into a bit, and own the room",
+          "points": {
+            "bela": 3
+          }
+        },
+        {
+          "text": "Leave. You will not be seen like this",
+          "points": {
+            "leighton": 3
+          }
+        },
+        {
+          "text": "Shrug it off. You've got bigger things to worry about",
+          "points": {
+            "whitney": 3
+          }
+        },
+        {
+          "text": "Smile through it, fix your make-up, then make a comeback",
+          "points": {
+            "kacey": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You've got a big exam tomorrow. You...",
+      "options": [
+        {
+          "text": "Study all night. Your scholarship depends on it",
+          "points": {
+            "kimberly": 3
+          }
+        },
+        {
+          "text": "Skim it once. You'll still ace it",
+          "points": {
+            "leighton": 3
+          }
+        },
+        {
+          "text": "Revise properly, then get a solid eight hours",
+          "points": {
+            "whitney": 3
+          }
+        },
+        {
+          "text": "Cram, then spend the exam thinking about your comedy set",
+          "points": {
+            "bela": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your mum or dad comes to visit you at college. You...",
+      "options": [
+        {
+          "text": "Spend hours making sure you look perfect for them",
+          "points": {
+            "kacey": 3
+          }
+        },
+        {
+          "text": "Brace yourself. Their expectations are impossible",
+          "points": {
+            "leighton": 3
+          }
+        },
+        {
+          "text": "Keep it low-key, so nobody makes a fuss about who they are",
+          "points": {
+            "whitney": 3
+          }
+        },
+        {
+          "text": "Show them everything, so proud you could cry",
+          "points": {
+            "kimberly": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're offered a spot in a big campus show. You...",
+      "options": [
+        {
+          "text": "Yes! You've been waiting your whole life for this",
+          "points": {
+            "bela": 3
+          }
+        },
+        {
+          "text": "Only if you get a solo",
+          "points": {
+            "kacey": 3
+          }
+        },
+        {
+          "text": "Agree, then panic about it for a week",
+          "points": {
+            "kimberly": 3
+          }
+        },
+        {
+          "text": "Absolutely not",
+          "points": {
+            "leighton": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your friends need you on the same night as your big event. You...",
+      "options": [
+        {
+          "text": "Choose the event. You can't let your team down",
+          "points": {
+            "whitney": 3
+          }
+        },
+        {
+          "text": "Try to do both, and end up exhausted",
+          "points": {
+            "kimberly": 3
+          }
+        },
+        {
+          "text": "Choose whichever gets you more attention",
+          "points": {
+            "bela": 3
+          }
+        },
+        {
+          "text": "Go wherever you'll look best in the photos",
+          "points": {
+            "kacey": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone finds out a secret about you. You...",
+      "options": [
+        {
+          "text": "Deny everything, calmly and convincingly",
+          "points": {
+            "leighton": 3
+          }
+        },
+        {
+          "text": "Deal with it head-on. Hiding it never works",
+          "points": {
+            "whitney": 3
+          }
+        },
+        {
+          "text": "Laugh about it, loudly, before anyone else can",
+          "points": {
+            "bela": 3
+          }
+        },
+        {
+          "text": "Act like you don't care, then cry in the bathroom",
+          "points": {
+            "kacey": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You've just moved into a college dorm with three total strangers. You...",
+      "options": [
+        {
+          "text": "Make a chore chart and a group chat before they've even unpacked",
+          "points": {
+            "kimberly": 3
+          }
+        },
+        {
+          "text": "Plan a party for tonight",
+          "points": {
+            "bela": 3
+          }
+        },
+        {
+          "text": "Ask if there's any way at all to get a single room",
+          "points": {
+            "leighton": 3
+          }
+        },
+        {
+          "text": "Be friendly, but keep your focus on your own goals",
+          "points": {
+            "whitney": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You transfer to a new college halfway through the year, and your new roommates are already best friends. You...",
+      "options": [
+        {
+          "text": "Keep your distance, and focus on your boyfriend",
+          "points": {
+            "kacey": 3
+          }
+        },
+        {
+          "text": "Try way too hard to make them like you",
+          "points": {
+            "kimberly": 3
+          }
+        },
+        {
+          "text": "Find your own people through a team or a club",
+          "points": {
+            "whitney": 3
+          }
+        },
+        {
+          "text": "Act like you don't need them, while secretly hoping they'll invite you out",
+          "points": {
+            "leighton": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

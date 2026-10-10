@@ -1,0 +1,530 @@
+{
+  "slug": "outer-banks",
+  "show": "Outer Banks",
+  "shortName": "Outer Banks",
+  "seoTitle": "Outer Banks Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the Outer Banks test: 12 everyday questions reveal whether you're John B, Sarah, JJ, Kiara, Pope, Cleo, Rafe or Ward — with your full character breakdown.",
+  "intro": "Are you the treasure hunter, the reckless loyalist, or the brains who sees it all going wrong? Answer 12 everyday questions about friendship, money and taking risks, and find out which Outer Banks character you are.",
+  "characters": [
+    {
+      "id": "johnb",
+      "name": "John B Routledge",
+      "emoji": "🧭",
+      "color": "#0ea5e9",
+      "title": "The Treasure Hunter",
+      "summary": "Adventurous, impulsive and impossible to stop once you've set your mind on something. Life's a treasure hunt, and you're leading it.",
+      "description": [
+        "Like John B, you're the one who gets everyone moving. He's the ringleader of the Pogues, the working-class kids from the Cut on Kildare Island.",
+        "You chase big dreams. John B is determined to find the gold his missing father was hunting for, whatever it costs.",
+        "You go all in. John B drags his friends, and Sarah, into one dangerous adventure after another."
+      ],
+      "strengths": [
+        "Adventurous",
+        "Loyal",
+        "Determined"
+      ],
+      "flaw": "You chase the dream so hard that you forget what it's costing everyone else.",
+      "signature": "A compass, an old van and a plan that starts with 'trust me'.",
+      "clashReason": "they'd drag you into danger and call it an adventure"
+    },
+    {
+      "id": "sarah",
+      "name": "Sarah Cameron",
+      "emoji": "🌅",
+      "color": "#f59e0b",
+      "title": "The Rebel Princess",
+      "summary": "Brave, romantic and ready to give it all up for what feels right. You'd rather have real friends than a perfect life.",
+      "description": [
+        "Like Sarah, you grew up with more than most. She's Ward Cameron's daughter, the so-called princess of the Kooks, the rich families of Figure Eight.",
+        "But you choose your own people. Sarah keeps turning her back on the Kook life and choosing the Pogues instead.",
+        "You follow your heart. Sarah falls for John B, a Pogue, and sticks by him through everything that follows."
+      ],
+      "strengths": [
+        "Brave",
+        "Loyal",
+        "Romantic"
+      ],
+      "flaw": "You follow your heart even when it's leading you straight into trouble.",
+      "signature": "Sunglasses, a sunset on the water and the boy your dad warned you about.",
+      "clashReason": "they'd throw everything away on a feeling"
+    },
+    {
+      "id": "jj",
+      "name": "JJ Maybank",
+      "emoji": "🏄",
+      "color": "#16a34a",
+      "title": "The Reckless Loyalist",
+      "summary": "Funny, reckless and loyal to the bone. You make the jokes, take the risks and always have your friends' backs.",
+      "description": [
+        "Like JJ, you're the life of the group. He's John B's best friend, always first with a joke and first to do something reckless.",
+        "You'd do anything for your people. JJ is fiercely loyal to the Pogues, and he'd take the fall for them without thinking twice.",
+        "You hide the hard stuff. Behind the jokes, JJ has a rough, abusive home life with Luke, the man who raised him."
+      ],
+      "strengths": [
+        "Loyal",
+        "Funny",
+        "Fearless"
+      ],
+      "flaw": "You act first and think about the consequences, well, never.",
+      "signature": "A surfboard, a terrible idea and a grin that says it'll be fine.",
+      "clashReason": "they'd talk you into something reckless before you could say no"
+    },
+    {
+      "id": "kiara",
+      "name": "Kiara Carrera",
+      "emoji": "🌊",
+      "color": "#d946ef",
+      "title": "The Outspoken One",
+      "summary": "Bold, principled and never afraid to speak up. You know who you are, and you won't pretend otherwise.",
+      "description": [
+        "Like Kiara, you don't let other people decide where you belong. She's technically a Kook from Figure Eight, but she chose the Pogues instead.",
+        "You'd swap comfort for adventure. Kiara's family could give her everything she wants, but she'd rather be out on the water with her friends.",
+        "You're at your best in a crisis. Kiara is resourceful and bold when things get tight."
+      ],
+      "strengths": [
+        "Bold",
+        "Principled",
+        "Resourceful"
+      ],
+      "flaw": "Once you've taken a side, you won't budge an inch.",
+      "signature": "Bare feet on a boat deck and an opinion you're about to share.",
+      "clashReason": "they'd call you out in front of everyone"
+    },
+    {
+      "id": "pope",
+      "name": "Pope Heyward",
+      "emoji": "🧠",
+      "color": "#0d9488",
+      "title": "The Brains",
+      "summary": "Smart, careful and the responsible one in the group. You think it all through, then do it anyway for your friends.",
+      "description": [
+        "Like Pope, you're the brains of the operation. He's the Pogue who cracks the puzzles everyone else is stuck on.",
+        "You like to do things properly. Pope is the most responsible of his friends, and he always wants the safe and legal option.",
+        "But you'll break the rules for the people you love. Pope keeps getting pulled into trouble because he won't let his friends face it alone."
+      ],
+      "strengths": [
+        "Smart",
+        "Responsible",
+        "Loyal"
+      ],
+      "flaw": "You worry so much about what could go wrong that you forget to enjoy what's going right.",
+      "signature": "A notebook full of answers and a list of reasons this is a terrible idea.",
+      "clashReason": "they'd list every reason your plan won't work"
+    },
+    {
+      "id": "cleo",
+      "name": "Cleo",
+      "emoji": "⚓",
+      "color": "#f97316",
+      "title": "The Fearless Survivor",
+      "summary": "Confident, clever and up for anything. You've had to look after yourself, and it shows.",
+      "description": [
+        "Like Cleo, you can handle yourself. She grew up in Nassau and worked as a crew member on a ship before she met the Pogues.",
+        "You're tough, but you're fun too. Cleo is fearless and clever, and she's playful once she lets her guard down.",
+        "You find your people. Cleo goes from a stranger to a full Pogue, and she ends up with Pope."
+      ],
+      "strengths": [
+        "Fearless",
+        "Clever",
+        "Fun"
+      ],
+      "flaw": "You're so used to looking after yourself that letting people help feels strange.",
+      "signature": "Sea legs, a sharp tongue and a joke at the ready.",
+      "clashReason": "they'd see straight through you, and say so with a smile"
+    },
+    {
+      "id": "rafe",
+      "name": "Rafe Cameron",
+      "emoji": "💢",
+      "color": "#dc2626",
+      "title": "The Loose Cannon",
+      "summary": "Intense, hot-headed and desperate to be taken seriously. When things go wrong, you don't so much react as explode.",
+      "description": [
+        "Like Rafe, you feel things at full volume. He's Ward Cameron's son and Sarah's older brother, and he has a serious temper.",
+        "You want to be taken seriously. Rafe spends the show trying to prove himself, most of all to his own family.",
+        "You can spiral. Rafe's anger problems and drug use make him the most unpredictable person on the island."
+      ],
+      "strengths": [
+        "Intense",
+        "Driven",
+        "Fearless"
+      ],
+      "flaw": "Your temper makes your decisions for you.",
+      "signature": "A polo shirt, a short fuse and a family name to live up to.",
+      "clashReason": "they'd lose it at you over something tiny"
+    },
+    {
+      "id": "ward",
+      "name": "Ward Cameron",
+      "emoji": "💼",
+      "color": "#64748b",
+      "title": "The Charming Schemer",
+      "summary": "Charming, calculating and always in control. You smile, shake hands, and you've already got what you came for.",
+      "description": [
+        "Like Ward, you know how to work a room. He's a wealthy businessman on Figure Eight, and the father of Sarah and Rafe.",
+        "You always have an angle. Behind the charm, Ward is manipulative, and he's at the centre of the fight over the treasure.",
+        "You protect your family, in your own way. Whatever Ward does, he tells himself it's for his kids."
+      ],
+      "strengths": [
+        "Charming",
+        "Strategic",
+        "Ambitious"
+      ],
+      "flaw": "You'll bend any rule, and any person, to get what you want.",
+      "signature": "A firm handshake, a nice boat and a secret or two.",
+      "clashReason": "they'd charm you first, then use you"
+    }
+  ],
+  "questions": [
+    {
+      "text": "Your summer plans fall through at the last minute. You...",
+      "options": [
+        {
+          "text": "Find a new adventure by lunchtime. The weirder, the better",
+          "points": {
+            "johnb": 3
+          }
+        },
+        {
+          "text": "Fine by you. More time to get ahead on work",
+          "points": {
+            "pope": 3
+          }
+        },
+        {
+          "text": "Grab your board and head to the beach. Sorted",
+          "points": {
+            "jj": 3
+          }
+        },
+        {
+          "text": "Make a few calls. You'll have something better lined up within the hour",
+          "points": {
+            "ward": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend has a wild plan that could get you all in trouble. You...",
+      "options": [
+        {
+          "text": "You're in. You didn't even need to hear the plan",
+          "points": {
+            "jj": 3
+          }
+        },
+        {
+          "text": "List every way it could go wrong, then go along anyway",
+          "points": {
+            "pope": 3
+          }
+        },
+        {
+          "text": "Ask what's in it for you before you agree to anything",
+          "points": {
+            "cleo": 3
+          }
+        },
+        {
+          "text": "Get annoyed it wasn't your idea",
+          "points": {
+            "rafe": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone at a party makes fun of where you're from. You...",
+      "options": [
+        {
+          "text": "Call them out in front of everyone",
+          "points": {
+            "kiara": 3
+          }
+        },
+        {
+          "text": "Throw a punch before anyone can stop you",
+          "points": {
+            "jj": 3
+          }
+        },
+        {
+          "text": "Laugh, then make them look stupid with one line",
+          "points": {
+            "cleo": 3
+          }
+        },
+        {
+          "text": "Leave with the people who actually like you",
+          "points": {
+            "sarah": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You suddenly get a big chunk of money out of nowhere. You...",
+      "options": [
+        {
+          "text": "Invest it. Money should make more money",
+          "points": {
+            "ward": 3
+          }
+        },
+        {
+          "text": "Spend it all on your friends in one weekend",
+          "points": {
+            "jj": 3
+          }
+        },
+        {
+          "text": "Put it away for your future. You've got plans",
+          "points": {
+            "pope": 3
+          }
+        },
+        {
+          "text": "Put every penny into chasing the thing you've always dreamed about",
+          "points": {
+            "johnb": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You and your partner have a huge fight. You...",
+      "options": [
+        {
+          "text": "Make up within the hour. You can't stay mad at them",
+          "points": {
+            "sarah": 3
+          }
+        },
+        {
+          "text": "Say something cruel you'll regret later",
+          "points": {
+            "rafe": 3
+          }
+        },
+        {
+          "text": "Stand your ground. You're not apologising when you're right",
+          "points": {
+            "kiara": 3
+          }
+        },
+        {
+          "text": "Tell them straight what's bothering you, then move on",
+          "points": {
+            "cleo": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your family can't stand the person you're dating. You...",
+      "options": [
+        {
+          "text": "Keep dating them. Love's worth the fallout",
+          "points": {
+            "sarah": 3
+          }
+        },
+        {
+          "text": "Try really hard to win them over",
+          "points": {
+            "pope": 3
+          }
+        },
+        {
+          "text": "Tell your family they're the ones being snobs",
+          "points": {
+            "kiara": 3
+          }
+        },
+        {
+          "text": "Suggest the two of you just run off somewhere together. Problem solved",
+          "points": {
+            "johnb": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone in your group breaks something valuable, and the owner wants answers. You...",
+      "options": [
+        {
+          "text": "Smooth it over with a smile and a good story",
+          "points": {
+            "ward": 3
+          }
+        },
+        {
+          "text": "Take the blame for your friend without thinking twice",
+          "points": {
+            "jj": 3
+          }
+        },
+        {
+          "text": "Tell the truth. Lying will only make it worse",
+          "points": {
+            "pope": 3
+          }
+        },
+        {
+          "text": "Make sure it doesn't come back on you, whatever it takes",
+          "points": {
+            "rafe": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're stuck on a really hard puzzle. You...",
+      "options": [
+        {
+          "text": "Stay up all night until you've cracked it",
+          "points": {
+            "pope": 3
+          }
+        },
+        {
+          "text": "Go with your gut and try the craziest idea first",
+          "points": {
+            "johnb": 3
+          }
+        },
+        {
+          "text": "Find a shortcut nobody else thought of",
+          "points": {
+            "cleo": 3
+          }
+        },
+        {
+          "text": "Pay someone else to solve it for you",
+          "points": {
+            "ward": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're out on a boat when the weather suddenly turns. You...",
+      "options": [
+        {
+          "text": "Take the wheel and get everyone home",
+          "points": {
+            "kiara": 3
+          }
+        },
+        {
+          "text": "Stay calm. You've seen far worse at sea",
+          "points": {
+            "cleo": 3
+          }
+        },
+        {
+          "text": "Push on. You're so close to where you wanted to go",
+          "points": {
+            "johnb": 3
+          }
+        },
+        {
+          "text": "Blame whoever said this trip was a good idea",
+          "points": {
+            "rafe": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone more powerful than you is treating your friend unfairly. You...",
+      "options": [
+        {
+          "text": "Tell them exactly what you think of them, however rich they are",
+          "points": {
+            "kiara": 3
+          }
+        },
+        {
+          "text": "Use your family's name to fix it, just this once",
+          "points": {
+            "sarah": 3
+          }
+        },
+        {
+          "text": "Get back at them cleverly, when they least expect it",
+          "points": {
+            "cleo": 3
+          }
+        },
+        {
+          "text": "Have a quiet word with someone even more powerful",
+          "points": {
+            "ward": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're a teenager, and you've just found a map that might lead to millions in lost gold. You...",
+      "options": [
+        {
+          "text": "Go after it right now. Nothing else matters",
+          "points": {
+            "johnb": 3
+          }
+        },
+        {
+          "text": "Keep it secret, and work out how to keep it all for yourself",
+          "points": {
+            "ward": 3
+          }
+        },
+        {
+          "text": "Tell the person you love, and go after it together",
+          "points": {
+            "sarah": 3
+          }
+        },
+        {
+          "text": "Show your dad. Maybe now he'll finally take you seriously",
+          "points": {
+            "rafe": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "On your island, the rich kids always get away with everything. This time, it's something terrible. You...",
+      "options": [
+        {
+          "text": "Turn on your own side, if that's what doing the right thing takes",
+          "points": {
+            "sarah": 3
+          }
+        },
+        {
+          "text": "Help cover it up. That's what family does",
+          "points": {
+            "rafe": 3
+          }
+        },
+        {
+          "text": "Get revenge, the reckless way",
+          "points": {
+            "jj": 3
+          }
+        },
+        {
+          "text": "Refuse to let it go. You'll fight it for as long as it takes",
+          "points": {
+            "kiara": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

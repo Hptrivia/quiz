@@ -1,0 +1,530 @@
+{
+  "slug": "twilight",
+  "show": "Twilight",
+  "shortName": "Twilight",
+  "seoTitle": "Twilight Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the Twilight test: 12 everyday questions reveal whether you're Bella, Edward, Jacob, Alice, Rosalie, Emmett, Carlisle or Charlie — with your full character breakdown.",
+  "intro": "Are you the quiet outsider, the brooding romantic, or the warm-hearted wolf? Answer 12 everyday questions about love, loyalty and fitting in, and find out which Twilight character you are.",
+  "characters": [
+    {
+      "id": "bella",
+      "name": "Bella Swan",
+      "emoji": "📖",
+      "color": "#3b82f6",
+      "title": "The Quiet Outsider",
+      "summary": "Shy, stubborn and selfless. You'd rather disappear than be the centre of attention, until someone you love needs you.",
+      "description": [
+        "Like Bella, you're happiest out of the spotlight. She moved from sunny Phoenix to rainy Forks to live with her dad, Charlie, and dreaded being the new girl.",
+        "You notice what other people miss. Bella was the one who worked out the Cullens' secret.",
+        "You put other people first, sometimes too far. Bella would walk straight into danger to protect the people she loves, and as a vampire her gift turned out to be a shield that protects others."
+      ],
+      "strengths": [
+        "Loyal",
+        "Observant",
+        "Selfless"
+      ],
+      "flaw": "You'd sacrifice yourself before you'd ask anyone for help.",
+      "signature": "An old pickup truck and a well-worn book.",
+      "clashReason": "they'd refuse every bit of help you offered, then walk straight into danger anyway"
+    },
+    {
+      "id": "edward",
+      "name": "Edward Cullen",
+      "emoji": "🎹",
+      "color": "#a855f7",
+      "title": "The Brooding Romantic",
+      "summary": "Intense, old-fashioned and fiercely protective. You feel everything deeply, and overthink all of it.",
+      "description": [
+        "Like Edward, you're a romantic with old-fashioned values. He was born in Chicago in 1901, and Carlisle turned him at 17, as he lay dying of Spanish flu.",
+        "You read people better than anyone. Edward can literally read minds, except Bella's.",
+        "You'd do anything to protect the people you love, even leave them. Edward walked away from Bella to keep her safe, and it nearly broke them both."
+      ],
+      "strengths": [
+        "Devoted",
+        "Perceptive",
+        "Principled"
+      ],
+      "flaw": "You decide what's best for people without asking them.",
+      "signature": "A piano, a song you wrote for someone, and a lot of brooding.",
+      "clashReason": "they'd decide what's best for you without ever asking"
+    },
+    {
+      "id": "jacob",
+      "name": "Jacob Black",
+      "emoji": "🐺",
+      "color": "#d97706",
+      "title": "The Warm Heart",
+      "summary": "Sunny, loyal and quick to anger. You love hard and wear your heart on your sleeve.",
+      "description": [
+        "Like Jacob, you're warm company and easy to be around. He's part of the Quileute tribe at La Push, and the son of Charlie's fishing buddy, Billy Black.",
+        "You're good with your hands. Jacob was rebuilding his own car, an old Volkswagen Rabbit, when he helped Bella fix up a pair of old motorbikes.",
+        "Your temper runs hot. Jacob turned out to be a shape-shifter who becomes a giant wolf, and anger is what sets it off."
+      ],
+      "strengths": [
+        "Loyal",
+        "Fun",
+        "Honest"
+      ],
+      "flaw": "You act first and think later, especially when you're angry.",
+      "signature": "A big grin, a toolbox and no shirt.",
+      "clashReason": "they'd lose their temper before you'd finished your sentence"
+    },
+    {
+      "id": "alice",
+      "name": "Alice Cullen",
+      "emoji": "🔮",
+      "color": "#ec4899",
+      "title": "The Optimistic Planner",
+      "summary": "Bubbly, stylish and always one step ahead. You've planned the party before anyone knows there is one.",
+      "description": [
+        "Like Alice, you light up a room. She's the most cheerful of the Cullens, and she loves shopping, makeovers and throwing parties.",
+        "You can see where things are heading. Alice can see the future, but only once someone has made a decision, so when people change their minds, her visions change too.",
+        "You make things happen. Alice threw Bella's 18th birthday party and planned her wedding, whether Bella wanted it or not."
+      ],
+      "strengths": [
+        "Upbeat",
+        "Organised",
+        "Generous"
+      ],
+      "flaw": "You'll plan someone's life for them if they let you, and sometimes if they don't.",
+      "signature": "A shopping bag in each hand and the whole night already planned.",
+      "clashReason": "they'd plan every minute of your weekend without asking"
+    },
+    {
+      "id": "rosalie",
+      "name": "Rosalie Hale",
+      "emoji": "🌹",
+      "color": "#dc2626",
+      "title": "The Fierce Realist",
+      "summary": "Blunt, guarded and fiercely loyal once you've let someone in. You say what other people won't.",
+      "description": [
+        "Like Rosalie, you don't let people in easily. She's the most beautiful of the Cullens, and the coldest towards Bella at first.",
+        "Your toughness comes from somewhere. Rosalie was turned in the 1930s after a brutal attack by her fiancé, Royce King, and she made sure he and his friends paid for it.",
+        "You want the life you can't have. Rosalie would trade everything to be human and have a family, which is why she fought so hard for Bella's baby."
+      ],
+      "strengths": [
+        "Honest",
+        "Protective",
+        "Determined"
+      ],
+      "flaw": "You hold a grudge for a very, very long time.",
+      "signature": "A red convertible and a look that could freeze you.",
+      "clashReason": "they'd tell you exactly what they think of you, to your face"
+    },
+    {
+      "id": "emmett",
+      "name": "Emmett Cullen",
+      "emoji": "🐻",
+      "color": "#16a34a",
+      "title": "The Big Kid",
+      "summary": "Fun, competitive and impossible to dislike. Life's a game, and you're playing to win.",
+      "description": [
+        "Like Emmett, you're the life of the house. He's the biggest of the Cullens and the one who's always joking, betting and picking fights for fun.",
+        "You'll take on anything. Emmett was mauled by a bear in Tennessee in 1935, and Rosalie carried him more than 100 miles to Carlisle to save him.",
+        "You hate losing. When Bella became a vampire, she beat Emmett at arm wrestling, and he took it very badly."
+      ],
+      "strengths": [
+        "Fun",
+        "Brave",
+        "Easygoing"
+      ],
+      "flaw": "You can't turn down a bet, even when you should.",
+      "signature": "A big Jeep, a bigger laugh and a bet on the side.",
+      "clashReason": "they'd turn every single thing into a competition"
+    },
+    {
+      "id": "carlisle",
+      "name": "Carlisle Cullen",
+      "emoji": "🩺",
+      "color": "#0ea5e9",
+      "title": "The Compassionate Leader",
+      "summary": "Calm, kind and endlessly patient. You see the best in people, even when they can't.",
+      "description": [
+        "Like Carlisle, you're the one people turn to. He's the head of the Cullen family and a doctor at the hospital in Forks.",
+        "You've learned a lot from life. Carlisle was born in London in the 1640s, the son of a pastor, and was turned after being attacked by a vampire.",
+        "You choose to be good. Carlisle taught himself to live on animal blood so he'd never have to kill a person, and he's spent centuries saving lives."
+      ],
+      "strengths": [
+        "Kind",
+        "Patient",
+        "Wise"
+      ],
+      "flaw": "You give second chances to people who don't deserve them.",
+      "signature": "A doctor's bag and a calm voice in a crisis.",
+      "clashReason": "they'd stay calm and forgiving while you're furious"
+    },
+    {
+      "id": "charlie",
+      "name": "Charlie Swan",
+      "emoji": "🎣",
+      "color": "#78716c",
+      "title": "The Man of Few Words",
+      "summary": "Low-key, steady and awkward with feelings. You show you care by being there, not by talking about it.",
+      "description": [
+        "Like Charlie, you keep it simple. He's the police chief of Forks, and his idea of a great weekend is fishing with his friends.",
+        "You're not one for big speeches. Charlie and Bella can get through a whole dinner barely saying a word, and they're both fine with that.",
+        "You protect people quietly. Charlie never really trusted Edward again after he left Bella, but he'd do anything to keep his daughter safe."
+      ],
+      "strengths": [
+        "Steady",
+        "Reliable",
+        "Protective"
+      ],
+      "flaw": "You'd rather fix a leaky tap than talk about your feelings.",
+      "signature": "A police cruiser, a fishing rod and the game on TV.",
+      "clashReason": "they'd answer every big conversation with a nod and an 'okay'"
+    }
+  ],
+  "questions": [
+    {
+      "text": "It's your birthday, and your friends want to throw you a party. You...",
+      "options": [
+        {
+          "text": "Beg them not to. You hate being the centre of attention",
+          "points": {
+            "bella": 3
+          }
+        },
+        {
+          "text": "Tell them it's too late. You've already planned it: theme, outfits, the lot",
+          "points": {
+            "alice": 3
+          }
+        },
+        {
+          "text": "Agree, as long as there's a competition you can win",
+          "points": {
+            "emmett": 3
+          }
+        },
+        {
+          "text": "Ask for a quiet dinner and the game on TV instead",
+          "points": {
+            "charlie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone you like texts you: \"We need to talk.\" You...",
+      "options": [
+        {
+          "text": "Assume it's bad news, and that it's probably your fault",
+          "points": {
+            "edward": 3
+          }
+        },
+        {
+          "text": "Call them straight away. You can't wait to find out",
+          "points": {
+            "jacob": 3
+          }
+        },
+        {
+          "text": "Reply \"ok\" and hope it's not about feelings",
+          "points": {
+            "charlie": 3
+          }
+        },
+        {
+          "text": "Stay calm. You'll hear them out before you worry",
+          "points": {
+            "carlisle": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend asks you to help them move house on Saturday. You...",
+      "options": [
+        {
+          "text": "Bring a couple of mates and turn it into a fun day",
+          "points": {
+            "jacob": 3
+          }
+        },
+        {
+          "text": "Carry the heaviest things and race everyone up the stairs",
+          "points": {
+            "emmett": 3
+          }
+        },
+        {
+          "text": "Make a colour-coded plan for every box",
+          "points": {
+            "alice": 3
+          }
+        },
+        {
+          "text": "Say you're busy. Carrying boxes isn't your thing",
+          "points": {
+            "rosalie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You've just moved to a new town and don't know anyone. On your first day, you...",
+      "options": [
+        {
+          "text": "Keep your head down and hope nobody notices you",
+          "points": {
+            "bella": 3
+          }
+        },
+        {
+          "text": "Introduce yourself to everyone. You'll have friends by lunch",
+          "points": {
+            "alice": 3
+          }
+        },
+        {
+          "text": "Look out for anyone else who seems lonely",
+          "points": {
+            "carlisle": 3
+          }
+        },
+        {
+          "text": "Keep to yourself. If people want to know you, they can make the effort",
+          "points": {
+            "rosalie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone cuts in right in front of you at the coffee shop. You...",
+      "options": [
+        {
+          "text": "Tell them, loudly, where the back of the line is",
+          "points": {
+            "rosalie": 3
+          }
+        },
+        {
+          "text": "Lose your temper and get in their face before you can stop yourself",
+          "points": {
+            "jacob": 3
+          }
+        },
+        {
+          "text": "Make a joke about it loud enough that everyone laughs at them",
+          "points": {
+            "emmett": 3
+          }
+        },
+        {
+          "text": "Let it go. Maybe they're having a bad day",
+          "points": {
+            "carlisle": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "It's pouring with rain all weekend, and your plans are cancelled. You...",
+      "options": [
+        {
+          "text": "Curl up with a book you've already read ten times",
+          "points": {
+            "bella": 3
+          }
+        },
+        {
+          "text": "Put on some old music and get lost in your thoughts",
+          "points": {
+            "edward": 3
+          }
+        },
+        {
+          "text": "Spend the whole day in the garage fixing up an old car",
+          "points": {
+            "jacob": 3
+          }
+        },
+        {
+          "text": "Go fishing anyway. A bit of rain never stopped anyone",
+          "points": {
+            "charlie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your friend is dating someone you think is bad news. You...",
+      "options": [
+        {
+          "text": "Tell them straight. They won't like it, but they need to hear it",
+          "points": {
+            "rosalie": 3
+          }
+        },
+        {
+          "text": "Quietly ask around about them. You have your ways",
+          "points": {
+            "charlie": 3
+          }
+        },
+        {
+          "text": "Get to know them first. Everyone deserves a fair chance",
+          "points": {
+            "carlisle": 3
+          }
+        },
+        {
+          "text": "Keep checking in on your friend to make sure they're safe",
+          "points": {
+            "edward": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You've hurt someone you care about, badly. You...",
+      "options": [
+        {
+          "text": "Decide they're better off without you, and step back",
+          "points": {
+            "edward": 3
+          }
+        },
+        {
+          "text": "Apologise right there and then, and tell them exactly how you feel",
+          "points": {
+            "jacob": 3
+          }
+        },
+        {
+          "text": "Make it up to them with a big, perfectly planned surprise",
+          "points": {
+            "alice": 3
+          }
+        },
+        {
+          "text": "Take all the blame, even for the parts that weren't your fault",
+          "points": {
+            "bella": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend asks to borrow money you know they won't pay back. You...",
+      "options": [
+        {
+          "text": "Lend it anyway. Maybe they'll surprise you",
+          "points": {
+            "carlisle": 3
+          }
+        },
+        {
+          "text": "Say no. You've been burned before, and you haven't forgotten",
+          "points": {
+            "rosalie": 3
+          }
+        },
+        {
+          "text": "Offer them double or nothing on a game of pool",
+          "points": {
+            "emmett": 3
+          }
+        },
+        {
+          "text": "Hand it over and never mention it again, even though you're short yourself",
+          "points": {
+            "bella": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your group can't decide what to do on Friday night. You...",
+      "options": [
+        {
+          "text": "Book something fun. You just know everyone's going to love it",
+          "points": {
+            "alice": 3
+          }
+        },
+        {
+          "text": "Push for bowling or paintball. Anything with a winner",
+          "points": {
+            "emmett": 3
+          }
+        },
+        {
+          "text": "Suggest the same diner as always. Why change a good thing?",
+          "points": {
+            "charlie": 3
+          }
+        },
+        {
+          "text": "Vote for a quiet night in. Big crowds aren't your thing",
+          "points": {
+            "edward": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're a vampire who's lived for a hundred years, and you've just fallen for a human. You...",
+      "whatIf": true,
+      "options": [
+        {
+          "text": "Stay away from them. You're too dangerous",
+          "points": {
+            "edward": 3
+          }
+        },
+        {
+          "text": "Warn them what they'd be giving up. You'd never wish this life on anyone",
+          "points": {
+            "rosalie": 3
+          }
+        },
+        {
+          "text": "Don't worry about it. You've got a good feeling about this one",
+          "points": {
+            "alice": 3
+          }
+        },
+        {
+          "text": "Go for it. You've got forever, so why not have some fun?",
+          "points": {
+            "emmett": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your small town is in danger, and only you and a few friends know about it. You...",
+      "whatIf": true,
+      "options": [
+        {
+          "text": "Try to talk to the other side before anyone gets hurt",
+          "points": {
+            "carlisle": 3
+          }
+        },
+        {
+          "text": "Get your friends together and get ready to fight",
+          "points": {
+            "jacob": 3
+          }
+        },
+        {
+          "text": "Keep everyone safe without telling them more than they need to know",
+          "points": {
+            "charlie": 3
+          }
+        },
+        {
+          "text": "Offer yourself up, if it means everyone else is safe",
+          "points": {
+            "bella": 3
+          }
+        }
+      ]
+    }
+  ]
+}

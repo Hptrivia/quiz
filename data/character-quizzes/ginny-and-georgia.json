@@ -1,0 +1,509 @@
+{
+  "slug": "ginny-and-georgia",
+  "show": "Ginny & Georgia",
+  "shortName": "Ginny & Georgia",
+  "seoTitle": "Ginny & Georgia Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the Ginny & Georgia test: 12 everyday questions reveal whether you're Georgia, Ginny, Marcus, Max, Abby, Paul or Joe — with your full character breakdown.",
+  "intro": "Are you the fierce mama with a secret, the guarded poet, or the drama queen? Answer 12 everyday questions about family, friendship and secrets, and find out which Ginny & Georgia character you are.",
+  "characters": [
+    {
+      "id": "georgia",
+      "name": "Georgia Miller",
+      "emoji": "🍑",
+      "color": "#f97316",
+      "title": "The Fierce Mama",
+      "summary": "Charming, resourceful and fiercely protective. There's nothing you wouldn't do for your kids. Nothing.",
+      "description": [
+        "Like Georgia, you're a survivor. She had her first child as a teenager and has fought for everything she's got ever since.",
+        "You can charm anyone. Georgia is free-spirited and resourceful, and she can talk her way into, or out of, almost anything.",
+        "You keep your secrets close. Georgia is very protective of her children, and her past hides more than anyone in town suspects."
+      ],
+      "strengths": [
+        "Resourceful",
+        "Charming",
+        "Protective"
+      ],
+      "flaw": "You'd bend any rule, or break it, to protect the people you love.",
+      "signature": "A big smile, a bigger secret and a plan for every emergency.",
+      "clashReason": "they'd lie to your face and call it protecting you"
+    },
+    {
+      "id": "ginny",
+      "name": "Ginny Miller",
+      "emoji": "📝",
+      "color": "#7c3aed",
+      "title": "The Guarded Poet",
+      "summary": "Smart, guarded and figuring it all out. You feel everything deeply, and you're still working out where you fit.",
+      "description": [
+        "Like Ginny, you're always a little bit on the outside. She's Georgia's teenage daughter, and she's struggled to fit in everywhere they've moved.",
+        "You put your feelings into words. Ginny copes by writing poetry.",
+        "You and your family are complicated. Ginny loves her mum fiercely, and fights with her just as fiercely."
+      ],
+      "strengths": [
+        "Smart",
+        "Honest",
+        "Thoughtful"
+      ],
+      "flaw": "You get defensive the moment anyone gets too close.",
+      "signature": "A notebook of poems, a guarded look and a mum who drives you up the wall.",
+      "clashReason": "they'd shut you out the moment you said the wrong thing"
+    },
+    {
+      "id": "marcus",
+      "name": "Marcus Baker",
+      "emoji": "🎨",
+      "color": "#475569",
+      "title": "The Quiet Artist",
+      "summary": "Quiet, deep and more caring than you let on. You don't say much, but you notice everything.",
+      "description": [
+        "Like Marcus, you keep to yourself. He's the talented, introverted artist who lives next door to the Millers.",
+        "You've been through a lot. Marcus struggles with depression after the death of his best friend.",
+        "You care, even when it's hard to show. Marcus becomes Ginny's love interest, and one of the people who understands her best."
+      ],
+      "strengths": [
+        "Creative",
+        "Loyal",
+        "Perceptive"
+      ],
+      "flaw": "You pull away from people when they need you most.",
+      "signature": "A sketchbook, a hoodie and a window that faces the house next door.",
+      "clashReason": "they'd disappear for days without telling you why"
+    },
+    {
+      "id": "max",
+      "name": "Max Baker",
+      "emoji": "🎭",
+      "color": "#db2777",
+      "title": "The Drama Queen",
+      "summary": "Loud, loving and gloriously dramatic. You feel everything at full volume, and you want everyone to know it.",
+      "description": [
+        "Like Max, you're the life of the group. She's Marcus's twin sister and one of Ginny's closest friends.",
+        "You love your friends fiercely. Max is warm and caring, and she's at the heart of the MANG friend group.",
+        "But you can blow up. When Max is hurt, she can lash out at the people she loves most."
+      ],
+      "strengths": [
+        "Loving",
+        "Fun",
+        "Passionate"
+      ],
+      "flaw": "You overreact first and apologise later.",
+      "signature": "A dramatic entrance, a group chat on fire and a heart on your sleeve.",
+      "clashReason": "they'd turn your problem into their drama"
+    },
+    {
+      "id": "abby",
+      "name": "Abby Littman",
+      "emoji": "🙄",
+      "color": "#0ea5e9",
+      "title": "The Sarcastic One",
+      "summary": "Sharp, funny and quietly struggling. You hide behind jokes, so nobody gets too close.",
+      "description": [
+        "Like Abby, you've always got a sarcastic comment ready. She's one of the MANG friend group.",
+        "You're more vulnerable than you let on. Abby is insecure about her body, and she's dealing with her parents' divorce.",
+        "You hide it with humour. Abby's jokes are her armour, and sometimes they cut deeper than she means them to."
+      ],
+      "strengths": [
+        "Funny",
+        "Honest",
+        "Loyal"
+      ],
+      "flaw": "You make a joke of everything, especially the things that hurt.",
+      "signature": "An eye roll, a sarcastic comment and a lot you're not saying.",
+      "clashReason": "they'd make a joke out of something that really matters to you"
+    },
+    {
+      "id": "paul",
+      "name": "Paul Randolph",
+      "emoji": "🏛️",
+      "color": "#16a34a",
+      "title": "The Good Guy",
+      "summary": "Earnest, principled and steady. You believe in doing things properly, and doing the right thing.",
+      "description": [
+        "Like Paul, you're the dependable one. He's the mayor of Wellsbury and the town's most eligible bachelor.",
+        "You believe in the rules. Paul is a by-the-book politician who wants to do right by his town.",
+        "You fall hard. Paul falls for Georgia, marries her, and builds a close bond with her son, Austin."
+      ],
+      "strengths": [
+        "Honest",
+        "Principled",
+        "Kind"
+      ],
+      "flaw": "You trust that everyone plays by the rules, even when they clearly don't.",
+      "signature": "A perfect suit, a campaign smile and a very honest heart.",
+      "clashReason": "they'd follow every rule, even the pointless ones"
+    },
+    {
+      "id": "joe",
+      "name": "Joe",
+      "emoji": "☕",
+      "color": "#b45309",
+      "title": "The Steady Heart",
+      "summary": "Kind, patient and quietly loyal. You don't make a fuss, you just show up for people.",
+      "description": [
+        "Like Joe, you're the calm in the storm. He owns the Blue Farm Café in Wellsbury.",
+        "You're kind and generous. Joe gives Ginny a job, and he's always there when the Millers need him.",
+        "You know people's pasts, and you keep them to yourself. Joe knew Georgia when they were teenagers."
+      ],
+      "strengths": [
+        "Kind",
+        "Patient",
+        "Loyal"
+      ],
+      "flaw": "You keep your own feelings so quiet that you miss your chance to say them.",
+      "signature": "A coffee machine, a calm voice and a door that's always open.",
+      "clashReason": "they'd stay calm and quiet when you wanted them to fight for you"
+    }
+  ],
+  "questions": [
+    {
+      "text": "You've just moved to a new town. You...",
+      "options": [
+        {
+          "text": "Charm the neighbours, and have the whole street on your side by Friday",
+          "points": {
+            "georgia": 3
+          }
+        },
+        {
+          "text": "Keep your head down and hope it's better than the last place",
+          "points": {
+            "ginny": 3
+          }
+        },
+        {
+          "text": "Make three best friends on day one",
+          "points": {
+            "max": 3
+          }
+        },
+        {
+          "text": "Find a quiet café and become a regular",
+          "points": {
+            "joe": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone you love asks you to stop lying to them. You...",
+      "options": [
+        {
+          "text": "Promise. Then do whatever it takes to protect them anyway",
+          "points": {
+            "georgia": 3
+          }
+        },
+        {
+          "text": "Point out that they're the one who started it",
+          "points": {
+            "ginny": 3
+          }
+        },
+        {
+          "text": "Mean it. Honesty is everything",
+          "points": {
+            "paul": 3
+          }
+        },
+        {
+          "text": "Tell them the truth, even the bits that hurt",
+          "points": {
+            "marcus": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're having a really bad day. You...",
+      "options": [
+        {
+          "text": "Write it all down in a poem nobody will ever read",
+          "points": {
+            "ginny": 3
+          }
+        },
+        {
+          "text": "Disappear for a while and draw",
+          "points": {
+            "marcus": 3
+          }
+        },
+        {
+          "text": "Laugh it off in public, then go quiet when you get home",
+          "points": {
+            "abby": 3
+          }
+        },
+        {
+          "text": "Send the group chat a full, dramatic breakdown",
+          "points": {
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your friends are planning a night in. You...",
+      "options": [
+        {
+          "text": "Sort the snacks, the playlist and the drama",
+          "points": {
+            "max": 3
+          }
+        },
+        {
+          "text": "Bring the sarcasm and the gossip",
+          "points": {
+            "abby": 3
+          }
+        },
+        {
+          "text": "Go, but end up having a deep chat with one person all night",
+          "points": {
+            "ginny": 3
+          }
+        },
+        {
+          "text": "Offer to cook for everyone",
+          "points": {
+            "joe": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone threatens your family. You...",
+      "options": [
+        {
+          "text": "Handle it yourself. They'll never bother you again",
+          "points": {
+            "georgia": 3
+          }
+        },
+        {
+          "text": "Go through the proper channels and make sure they're stopped",
+          "points": {
+            "paul": 3
+          }
+        },
+        {
+          "text": "Stand between them and your family, calmly",
+          "points": {
+            "joe": 3
+          }
+        },
+        {
+          "text": "Face them, even though you're scared",
+          "points": {
+            "ginny": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're invited to a fancy fundraiser. You...",
+      "options": [
+        {
+          "text": "Work the room and leave with three useful new friends",
+          "points": {
+            "georgia": 3
+          }
+        },
+        {
+          "text": "Give a speech. You've been practising",
+          "points": {
+            "paul": 3
+          }
+        },
+        {
+          "text": "Stand by the snacks and make fun of everyone's outfits",
+          "points": {
+            "abby": 3
+          }
+        },
+        {
+          "text": "Not going. Absolutely not",
+          "points": {
+            "marcus": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend is upset with you, and you're not sure why. You...",
+      "options": [
+        {
+          "text": "Panic and send fifteen messages",
+          "points": {
+            "max": 3
+          }
+        },
+        {
+          "text": "Wait until they're ready to talk",
+          "points": {
+            "marcus": 3
+          }
+        },
+        {
+          "text": "Get defensive, then apologise later",
+          "points": {
+            "ginny": 3
+          }
+        },
+        {
+          "text": "Bring them a coffee and listen",
+          "points": {
+            "joe": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "There's something in your past you'd rather nobody knew. You...",
+      "options": [
+        {
+          "text": "Bury it so deep nobody will ever find it",
+          "points": {
+            "georgia": 3
+          }
+        },
+        {
+          "text": "Keep it quietly, the same way you keep other people's secrets",
+          "points": {
+            "joe": 3
+          }
+        },
+        {
+          "text": "Make a joke about it before anyone else can",
+          "points": {
+            "abby": 3
+          }
+        },
+        {
+          "text": "Come clean. Secrets always come out",
+          "points": {
+            "paul": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your crush is dating someone else. You...",
+      "options": [
+        {
+          "text": "Announce you're over it, then bring it up every five minutes",
+          "points": {
+            "max": 3
+          }
+        },
+        {
+          "text": "Pretend you don't care, very unconvincingly",
+          "points": {
+            "ginny": 3
+          }
+        },
+        {
+          "text": "Say nothing, and quietly hope",
+          "points": {
+            "marcus": 3
+          }
+        },
+        {
+          "text": "Roll your eyes and say they've got terrible taste",
+          "points": {
+            "abby": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You need money, fast. You...",
+      "options": [
+        {
+          "text": "Come up with a creative scheme. Questions can come later",
+          "points": {
+            "georgia": 3
+          }
+        },
+        {
+          "text": "Pick up extra shifts",
+          "points": {
+            "joe": 3
+          }
+        },
+        {
+          "text": "Make a budget and stick to it",
+          "points": {
+            "paul": 3
+          }
+        },
+        {
+          "text": "Sell tickets to a show you haven't written yet",
+          "points": {
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You became a parent at fifteen, and you've had to fight for everything since. You...",
+      "options": [
+        {
+          "text": "Never let anyone see you sweat. Smile, and keep going",
+          "points": {
+            "georgia": 3
+          }
+        },
+        {
+          "text": "Accept every bit of help offered, and pay it back one day",
+          "points": {
+            "joe": 3
+          }
+        },
+        {
+          "text": "Build a steady, stable life, and never look back",
+          "points": {
+            "paul": 3
+          }
+        },
+        {
+          "text": "Act like you don't care what anyone thinks, even though you do",
+          "points": {
+            "abby": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "Your mum is keeping something big from you, and you're starting to suspect what it is. You...",
+      "options": [
+        {
+          "text": "Investigate, then confront her",
+          "points": {
+            "ginny": 3
+          }
+        },
+        {
+          "text": "Talk it through with someone you trust",
+          "points": {
+            "marcus": 3
+          }
+        },
+        {
+          "text": "Tell absolutely everyone your theory",
+          "points": {
+            "max": 3
+          }
+        },
+        {
+          "text": "Ask her directly, calmly, and trust her answer",
+          "points": {
+            "paul": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

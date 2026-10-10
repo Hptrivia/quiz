@@ -1,0 +1,530 @@
+{
+  "slug": "red-dead-redemption-2",
+  "show": "Red Dead Redemption 2",
+  "shortName": "RDR2",
+  "seoTitle": "Red Dead Redemption 2 Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the Red Dead Redemption 2 test: 12 everyday questions reveal whether you're Arthur, Dutch, John, Sadie, Charles, Hosea, Micah or Abigail — with your full character breakdown.",
+  "intro": "Are you the loyal outlaw, the silver-tongued dreamer, or the one who'd sell everyone out? Answer 12 everyday questions about loyalty, money and doing the right thing, and find out which Red Dead Redemption 2 character you are.",
+  "characters": [
+    {
+      "id": "arthur",
+      "name": "Arthur Morgan",
+      "emoji": "🤠",
+      "color": "#b45309",
+      "title": "The Loyal Outlaw",
+      "summary": "Gruff, loyal and tougher than anyone, with a softer side you rarely show. You do what has to be done.",
+      "description": [
+        "Like Arthur, you're the one people rely on when things get hard. He joined Dutch van der Linde's gang at 14 and grew up to be its most trusted enforcer.",
+        "You think more than you let on. Arthur keeps a journal full of sketches and private thoughts that nobody in the gang ever sees.",
+        "You can change. After catching tuberculosis while collecting a debt, Arthur starts questioning everything he's done, and tries to do some good while he still can."
+      ],
+      "strengths": [
+        "Loyal",
+        "Tough",
+        "Self-aware"
+      ],
+      "flaw": "You follow orders long after you should have started asking questions.",
+      "signature": "A worn hat, a battered journal and a horse that would follow you anywhere.",
+      "clashReason": "they'd go quiet and brood instead of telling you what's wrong"
+    },
+    {
+      "id": "dutch",
+      "name": "Dutch van der Linde",
+      "emoji": "📜",
+      "color": "#7c3aed",
+      "title": "The Silver-Tongued Dreamer",
+      "summary": "Charismatic, idealistic and full of big ideas. You can talk anyone into anything, including yourself.",
+      "description": [
+        "Like Dutch, you're a natural leader. He built his gang around one big idea: freedom from the rules of a changing world.",
+        "You love big ideas. Dutch is a keen reader and a bit of a philosopher, and he can give a speech that makes people follow him anywhere.",
+        "But you hate being wrong. As the law closes in, Dutch's plans get wilder, and he trusts fewer and fewer people."
+      ],
+      "strengths": [
+        "Charismatic",
+        "Visionary",
+        "Persuasive"
+      ],
+      "flaw": "You'd rather double down than admit a plan has failed.",
+      "signature": "A fine waistcoat, a book of philosophy and a plan. There's always a plan.",
+      "clashReason": "they'd talk you into something you'd regret, and make it sound like your idea"
+    },
+    {
+      "id": "john",
+      "name": "John Marston",
+      "emoji": "🐺",
+      "color": "#0369a1",
+      "title": "The Reluctant Family Man",
+      "summary": "Rough around the edges, stubborn and trying hard to be better. You want a quiet life, if you can just get out of your own way.",
+      "description": [
+        "Like John, you've got more heart than you show. He grew up in the gang, and he's the father of Abigail's son, Jack, even if he isn't always sure how to be one.",
+        "You're not great at taking advice. John hates being told what to do, and he's even worse at admitting he needs help.",
+        "But you keep trying. By 1907, John has borrowed money to buy a ranch, and he's doing his best to live an honest life with his family."
+      ],
+      "strengths": [
+        "Stubborn",
+        "Resilient",
+        "Devoted"
+      ],
+      "flaw": "You get defensive the moment anyone suggests you're wrong.",
+      "signature": "A ranch you're still paying off, and a family you'd do anything for.",
+      "clashReason": "they'd get defensive the moment you pointed out a mistake"
+    },
+    {
+      "id": "sadie",
+      "name": "Sadie Adler",
+      "emoji": "🔫",
+      "color": "#be123c",
+      "title": "The Fearless Avenger",
+      "summary": "Fierce, blunt and first into every fight. You've been through the worst, and you came out swinging.",
+      "description": [
+        "Like Sadie, you're tougher than anyone expects. The O'Driscoll gang killed her husband, Jake, and she hid in her cellar for days before Dutch's gang found her.",
+        "You don't sit on the sidelines. Sadie joined the gang to get revenge, and she's soon riding into every fight.",
+        "You make your own way. Sadie ends up as a bounty hunter, and she's one of the few who stood by Arthur when the gang fell apart."
+      ],
+      "strengths": [
+        "Fearless",
+        "Loyal",
+        "Direct"
+      ],
+      "flaw": "Once you want revenge, nothing and nobody will talk you down.",
+      "signature": "A rifle, a pair of trousers and no patience for being underestimated.",
+      "clashReason": "they'd charge into every argument all guns blazing"
+    },
+    {
+      "id": "charles",
+      "name": "Charles Smith",
+      "emoji": "🏹",
+      "color": "#15803d",
+      "title": "The Quiet Moral Compass",
+      "summary": "Calm, capable and quietly principled. You don't say much, but when you do, people listen.",
+      "description": [
+        "Like Charles, you're quiet and very good at what you do. He's a skilled hunter, and he's at his happiest out in the wild.",
+        "You do the right thing even when it's hard. Charles is one of the most honest men in the gang, and he joined because he believed in its code.",
+        "You show up for people. After everything falls apart, Charles helps John build a new home for his family."
+      ],
+      "strengths": [
+        "Principled",
+        "Calm",
+        "Capable"
+      ],
+      "flaw": "You keep so much to yourself that people don't realise you're struggling.",
+      "signature": "A bow, a quiet campfire and an honest answer.",
+      "clashReason": "they'd say nothing at all, and you'd never know what they thought"
+    },
+    {
+      "id": "hosea",
+      "name": "Hosea Matthews",
+      "emoji": "🎩",
+      "color": "#ca8a04",
+      "title": "The Wise Con Man",
+      "summary": "Witty, patient and impossible to fool. You'd rather talk your way out of trouble than fight.",
+      "description": [
+        "Like Hosea, you're the wise one. He's Dutch's oldest friend: they met in 1878, when each of them tried to rob the other.",
+        "You're a smooth talker. Hosea is a master con artist who'd always choose a clever scheme over a shoot-out.",
+        "People lean on you more than they realise. The gang is never the same after the Pinkertons kill Hosea in Saint Denis."
+      ],
+      "strengths": [
+        "Witty",
+        "Wise",
+        "Patient"
+      ],
+      "flaw": "You can't resist one more clever scheme, even when you know you should quit.",
+      "signature": "A good con, a dry joke and an old friend you'd do anything for.",
+      "clashReason": "they'd see straight through every excuse you made"
+    },
+    {
+      "id": "micah",
+      "name": "Micah Bell",
+      "emoji": "🐀",
+      "color": "#65a30d",
+      "title": "Out for Number One",
+      "summary": "Brash, selfish and always looking out for yourself first. As far as you're concerned, loyalty is for suckers.",
+      "description": [
+        "Like Micah, you're bold and you don't care who you upset. He's loud, crude and quick to pick a fight.",
+        "You always have a risky idea. Micah pushes the gang into the Blackwater ferry job that goes so badly wrong.",
+        "And you look out for yourself. Micah turns out to be secretly working with the Pinkertons, which makes him the most hated man in the gang, and among fans."
+      ],
+      "strengths": [
+        "Bold",
+        "Resourceful",
+        "Thick-skinned"
+      ],
+      "flaw": "You'd sell out anyone, including your friends, to save yourself.",
+      "signature": "Two revolvers, a big mouth and no loyalty to anyone.",
+      "clashReason": "they'd sell you out the moment it suited them"
+    },
+    {
+      "id": "abigail",
+      "name": "Abigail Roberts",
+      "emoji": "🏡",
+      "color": "#db2777",
+      "title": "The Tough Protector",
+      "summary": "Sharp-tongued, practical and fiercely protective. You've had a hard life, and you're determined your family won't.",
+      "description": [
+        "Like Abigail, you've had to be tough. She grew up with nothing before she found a home with the gang, and with John.",
+        "You put your family first. Abigail is determined to give her son, Jack, a better childhood than she ever had.",
+        "You don't wait around to be rescued, and you won't stay where you're not happy. Abigail shot Pinkerton agent Milton, and she later walked out on John when he wouldn't leave his old life behind."
+      ],
+      "strengths": [
+        "Protective",
+        "Practical",
+        "Resilient"
+      ],
+      "flaw": "You nag the people you love until they stop listening.",
+      "signature": "A sharp tongue, a little boy at your side and a list of things John still hasn't done.",
+      "clashReason": "they'd tell you exactly what you're doing wrong, again"
+    }
+  ],
+  "questions": [
+    {
+      "text": "Your friends are arguing about where to go on holiday. You...",
+      "options": [
+        {
+          "text": "Describe your idea so well that everyone ends up agreeing with you",
+          "points": {
+            "dutch": 3
+          }
+        },
+        {
+          "text": "Let them argue, then quietly steer them to the place you wanted all along",
+          "points": {
+            "hosea": 3
+          }
+        },
+        {
+          "text": "Pick somewhere quiet and cheap. You've got responsibilities now",
+          "points": {
+            "john": 3
+          }
+        },
+        {
+          "text": "Say you'll go anywhere, as long as there's a lake and some peace and quiet",
+          "points": {
+            "charles": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A stranger by the road asks you to help change a tyre in the rain. You...",
+      "options": [
+        {
+          "text": "Grumble the whole time, but stop and help",
+          "points": {
+            "arthur": 3
+          }
+        },
+        {
+          "text": "Keep driving. Not your problem",
+          "points": {
+            "micah": 3
+          }
+        },
+        {
+          "text": "Take over and do it yourself in half the time",
+          "points": {
+            "sadie": 3
+          }
+        },
+        {
+          "text": "Help, but keep an eye on them. You've met enough liars",
+          "points": {
+            "abigail": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone at work takes credit for your idea. You...",
+      "options": [
+        {
+          "text": "Call them out in front of everyone",
+          "points": {
+            "sadie": 3
+          }
+        },
+        {
+          "text": "Take credit for one of theirs. Fair's fair",
+          "points": {
+            "micah": 3
+          }
+        },
+        {
+          "text": "Let it slide for now. The truth always comes out in the end",
+          "points": {
+            "hosea": 3
+          }
+        },
+        {
+          "text": "Complain about it to anyone who'll listen",
+          "points": {
+            "john": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're on a long drive across the country. You spend it...",
+      "options": [
+        {
+          "text": "Staring out of the window, sketching in a notebook",
+          "points": {
+            "arthur": 3
+          }
+        },
+        {
+          "text": "Watching for wildlife the whole way, and naming every animal you spot",
+          "points": {
+            "charles": 3
+          }
+        },
+        {
+          "text": "Talking non-stop about how good life will be once your plans come together",
+          "points": {
+            "dutch": 3
+          }
+        },
+        {
+          "text": "Making sure everyone's fed, comfortable and not at each other's throats",
+          "points": {
+            "abigail": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend owes you money and keeps dodging you. You...",
+      "options": [
+        {
+          "text": "Turn up at their door and make them nervous",
+          "points": {
+            "micah": 3
+          }
+        },
+        {
+          "text": "Go and collect it yourself, even though you hate doing it",
+          "points": {
+            "arthur": 3
+          }
+        },
+        {
+          "text": "Talk them into paying without them even noticing",
+          "points": {
+            "hosea": 3
+          }
+        },
+        {
+          "text": "Let it go. Money isn't worth losing a friend over",
+          "points": {
+            "charles": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your partner says they want to settle down somewhere quiet. You...",
+      "options": [
+        {
+          "text": "Say yes, then panic about whether you can actually do it",
+          "points": {
+            "john": 3
+          }
+        },
+        {
+          "text": "Finally! You've been asking for that for years",
+          "points": {
+            "abigail": 3
+          }
+        },
+        {
+          "text": "Tell them that's not living. A life like that would bore you to death",
+          "points": {
+            "dutch": 3
+          }
+        },
+        {
+          "text": "Tell them settling down isn't for you anymore. You need to keep moving",
+          "points": {
+            "sadie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone in your group keeps making cruel jokes about a newcomer. You...",
+      "options": [
+        {
+          "text": "Quietly go and sit with the newcomer",
+          "points": {
+            "charles": 3
+          }
+        },
+        {
+          "text": "Tell them to shut their mouth, or you'll shut it for them",
+          "points": {
+            "sadie": 3
+          }
+        },
+        {
+          "text": "Tell them they should be ashamed of themselves",
+          "points": {
+            "abigail": 3
+          }
+        },
+        {
+          "text": "Make a joke at their expense, so they know how it feels",
+          "points": {
+            "hosea": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You've made a mistake that cost your team. You...",
+      "options": [
+        {
+          "text": "Explain why it was actually part of a bigger plan",
+          "points": {
+            "dutch": 3
+          }
+        },
+        {
+          "text": "Get defensive. It wasn't all your fault",
+          "points": {
+            "john": 3
+          }
+        },
+        {
+          "text": "Own it, and quietly work twice as hard to fix it",
+          "points": {
+            "arthur": 3
+          }
+        },
+        {
+          "text": "Find someone else to blame",
+          "points": {
+            "micah": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're offered a deal that could make you rich, but it's risky. You...",
+      "options": [
+        {
+          "text": "Take it. Big risk, big money",
+          "points": {
+            "micah": 3
+          }
+        },
+        {
+          "text": "Go for it. One last score, and then you're free for good",
+          "points": {
+            "dutch": 3
+          }
+        },
+        {
+          "text": "Ask what happens to your family if it goes wrong",
+          "points": {
+            "abigail": 3
+          }
+        },
+        {
+          "text": "Walk away. Easy money always costs something",
+          "points": {
+            "charles": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A shop gives you far too much change. You...",
+      "options": [
+        {
+          "text": "Only notice an hour later, then drive all the way back with it",
+          "points": {
+            "arthur": 3
+          }
+        },
+        {
+          "text": "Hand it back with a smile. Now they'll always remember you kindly",
+          "points": {
+            "hosea": 3
+          }
+        },
+        {
+          "text": "Point it out, loudly, and tell them to be more careful",
+          "points": {
+            "sadie": 3
+          }
+        },
+        {
+          "text": "Keep it. Life owes you one",
+          "points": {
+            "john": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "It's 1899, and you're in an outlaw gang on the run from the law. Your leader's latest plan sounds crazy. You...",
+      "options": [
+        {
+          "text": "Go along with it. You owe them everything",
+          "points": {
+            "arthur": 3
+          }
+        },
+        {
+          "text": "Back the plan loudly, and quietly look out for yourself",
+          "points": {
+            "micah": 3
+          }
+        },
+        {
+          "text": "Do it, but make it clear you think it's a terrible idea",
+          "points": {
+            "john": 3
+          }
+        },
+        {
+          "text": "Refuse to bring your family anywhere near it",
+          "points": {
+            "abigail": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "Your gang has been run out of town, and you're setting up camp in the wild with a dozen people. You take charge of...",
+      "options": [
+        {
+          "text": "Hunting, and keeping everyone fed",
+          "points": {
+            "charles": 3
+          }
+        },
+        {
+          "text": "The rousing speech that keeps everyone believing",
+          "points": {
+            "dutch": 3
+          }
+        },
+        {
+          "text": "Finding the next easy mark in the nearest town",
+          "points": {
+            "hosea": 3
+          }
+        },
+        {
+          "text": "Guard duty. Nobody's getting near this camp",
+          "points": {
+            "sadie": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

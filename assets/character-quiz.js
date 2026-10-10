@@ -26,7 +26,7 @@
   function saveResult(res) {
     try {
       const all = loadResults();
-      all[data.slug] = { character: res.primary, secondary: res.secondary, breakdown: res.breakdown, show: data.show, date: new Date().toISOString().slice(0, 10) };
+      all[data.slug] = { character: res.primary, name: chars[res.primary] && chars[res.primary].name, secondary: res.secondary, breakdown: res.breakdown, show: data.show, date: new Date().toISOString().slice(0, 10) };
       localStorage.setItem(STORE_KEY, JSON.stringify(all));
     } catch (e) { /* storage blocked: result still shows, just isn't remembered */ }
   }

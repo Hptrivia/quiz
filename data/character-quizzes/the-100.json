@@ -1,0 +1,530 @@
+{
+  "slug": "the-100",
+  "show": "The 100",
+  "shortName": "The 100",
+  "seoTitle": "The 100 Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take The 100 test: 12 everyday questions reveal whether you're Clarke, Bellamy, Octavia, Raven, Murphy, Jasper, Monty or Lexa — with your full character breakdown.",
+  "intro": "Are you the reluctant leader, the fearless warrior, or the survivor who always finds a way? Answer 12 everyday questions about loyalty, survival and impossible choices, and find out which character from The 100 you are.",
+  "characters": [
+    {
+      "id": "clarke",
+      "name": "Clarke Griffin",
+      "emoji": "🩺",
+      "color": "#2563eb",
+      "title": "The Reluctant Leader",
+      "summary": "Compassionate, clever and willing to make the hard calls. You carry the weight so other people don't have to.",
+      "description": [
+        "Like Clarke, you step up when nobody else will. She's the effective leader of the 100 and their main medic.",
+        "You'll do what has to be done. Clarke is caring at heart, but she can be ruthless to protect her people.",
+        "You carry the weight. After the battle of Mount Weather, Clarke becomes known as Wanheda, the Commander of Death."
+      ],
+      "strengths": [
+        "Brave",
+        "Smart",
+        "Selfless"
+      ],
+      "flaw": "You make the impossible choices yourself, then never forgive yourself for them.",
+      "signature": "A medical kit, a heavy heart and a decision nobody else could make.",
+      "clashReason": "they'd make the big decision without asking you"
+    },
+    {
+      "id": "bellamy",
+      "name": "Bellamy Blake",
+      "emoji": "🛡️",
+      "color": "#b45309",
+      "title": "The Protector",
+      "summary": "Passionate, protective and driven by your heart. You'd go to war for the people you love.",
+      "description": [
+        "Like Bellamy, you'd do anything for your family. He's fiercely protective of his younger sister, Octavia.",
+        "You lead with your heart. Bellamy is co-leader of the 100, and he grows from a hot-headed rebel into a real leader.",
+        "You feel your mistakes deeply. Bellamy often carries guilt over choices he's made, and tries hard to make up for them."
+      ],
+      "strengths": [
+        "Protective",
+        "Loyal",
+        "Passionate"
+      ],
+      "flaw": "You act on emotion first and deal with the guilt later.",
+      "signature": "A jacket, a gun you'd rather not use and a sister you'd die for.",
+      "clashReason": "they'd protect you so hard you'd never get to make your own choices"
+    },
+    {
+      "id": "octavia",
+      "name": "Octavia Blake",
+      "emoji": "⚔️",
+      "color": "#be123c",
+      "title": "The Warrior",
+      "summary": "Wild, independent and fierce. You've been told your whole life to hide, and you're done hiding.",
+      "description": [
+        "Like Octavia, you refuse to be kept down. She grew up hidden under the floor on the Ark, because second children were forbidden.",
+        "You find your own way. On the ground, Octavia trains as a Grounder warrior and becomes one of the fiercest fighters there is.",
+        "You've gone dark, and come back. Octavia rules ruthlessly as Blodreina, the Red Queen, before fighting for her own redemption."
+      ],
+      "strengths": [
+        "Fearless",
+        "Independent",
+        "Strong"
+      ],
+      "flaw": "When you're angry, you can become someone you don't recognise.",
+      "signature": "A sword, war paint and a life nobody else gets to control.",
+      "clashReason": "they'd fight you on everything, just because they could"
+    },
+    {
+      "id": "raven",
+      "name": "Raven Reyes",
+      "emoji": "🔧",
+      "color": "#7c3aed",
+      "title": "The Genius Mechanic",
+      "summary": "Brilliant, stubborn and fearless. If it's broken, you'll fix it, and if it's impossible, you'll do it anyway.",
+      "description": [
+        "Like Raven, you're the smartest person in the room, and you know it. She's a zero-gravity mechanic and engineer.",
+        "You don't give up. Raven is brave, ambitious and stubborn, and nothing has ever stopped her for long.",
+        "You keep everyone alive. Raven handles communications and builds whatever the group needs, from radios to bombs."
+      ],
+      "strengths": [
+        "Brilliant",
+        "Fearless",
+        "Determined"
+      ],
+      "flaw": "You're so stubborn that you'd rather struggle alone than accept help.",
+      "signature": "A toolbelt, a radio you built yourself and a solution nobody else saw.",
+      "clashReason": "they'd take apart everything you own to see how it works"
+    },
+    {
+      "id": "murphy",
+      "name": "John Murphy",
+      "emoji": "🪳",
+      "color": "#64748b",
+      "title": "The Survivor",
+      "summary": "Sarcastic, cynical and always looking out for number one. But you're more loyal than you let on.",
+      "description": [
+        "Like Murphy, you always survive. He's a former troublemaker who's pragmatic about everything, especially staying alive.",
+        "You switch sides when you have to. Murphy shifts his loyalties to protect himself, and the people he loves.",
+        "You're better than people think. For all his sarcasm, Murphy turns out to be a lot more loyal than anyone expected."
+      ],
+      "strengths": [
+        "Resourceful",
+        "Witty",
+        "Survivor"
+      ],
+      "flaw": "You'd sell anyone out to save yourself, at least at first.",
+      "signature": "A sarcastic comment, an escape route and a soft spot you'd never admit to.",
+      "clashReason": "they'd switch sides the second it suited them"
+    },
+    {
+      "id": "jasper",
+      "name": "Jasper Jordan",
+      "emoji": "🧪",
+      "color": "#16a34a",
+      "title": "The Joker",
+      "summary": "Goofy, fun-loving and the life of the camp. You make people laugh, even when things are falling apart.",
+      "description": [
+        "Like Jasper, you're the fun one. He's a goofy, geeky chemist and Monty's best friend.",
+        "You keep spirits up. Jasper is the one throwing parties and cracking jokes, even on a dangerous planet.",
+        "You feel things deeply. Underneath the jokes, Jasper struggles badly with everything he's been through."
+      ],
+      "strengths": [
+        "Funny",
+        "Creative",
+        "Loyal"
+      ],
+      "flaw": "You hide real pain behind jokes until nobody can see it.",
+      "signature": "Goggles, a homemade brew and a joke for every disaster.",
+      "clashReason": "they'd turn everything into a joke, even when it's serious"
+    },
+    {
+      "id": "monty",
+      "name": "Monty Green",
+      "emoji": "🌱",
+      "color": "#0d9488",
+      "title": "The Quiet Heart",
+      "summary": "Gentle, clever and loyal. You'd rather find a better way than take the easy one.",
+      "description": [
+        "Like Monty, you're smart and steady. He's a tech-savvy teen with a talent for science and engineering.",
+        "You're valued by everyone. Monty's skills keep the group going, and his calm keeps them together.",
+        "You're the moral centre. Monty always looks for the kinder way through, even when everyone else has given up on it."
+      ],
+      "strengths": [
+        "Smart",
+        "Kind",
+        "Loyal"
+      ],
+      "flaw": "You hold onto hope for so long that it hurts you.",
+      "signature": "A laptop, a handful of seeds and a better plan.",
+      "clashReason": "they'd refuse to give up on people you've already written off"
+    },
+    {
+      "id": "lexa",
+      "name": "Lexa",
+      "emoji": "🗡️",
+      "color": "#475569",
+      "title": "The Commander",
+      "summary": "Calm, strategic and fiercely disciplined. You put duty above everything, even your own heart.",
+      "description": [
+        "Like Lexa, you lead from the front. She's the Commander of the Grounders, the leader of all the clans.",
+        "You think strategically. Lexa is calm, controlled and always thinking several moves ahead.",
+        "You keep your feelings in check, mostly. Lexa believes feelings are a weakness, but her bond with Clarke changes her, and helps bring their people closer."
+      ],
+      "strengths": [
+        "Disciplined",
+        "Strategic",
+        "Strong"
+      ],
+      "flaw": "You'd sacrifice your own happiness for your duty without a second thought.",
+      "signature": "War paint, a throne and a heart you keep under lock and key.",
+      "clashReason": "they'd put the mission before you, every time"
+    }
+  ],
+  "questions": [
+    {
+      "text": "You start a new job with no training at all. You...",
+      "options": [
+        {
+          "text": "Take charge. Somebody has to",
+          "points": {
+            "clarke": 3
+          }
+        },
+        {
+          "text": "Work out how everything works by taking it apart",
+          "points": {
+            "raven": 3
+          }
+        },
+        {
+          "text": "Look busy and do as little as possible",
+          "points": {
+            "murphy": 3
+          }
+        },
+        {
+          "text": "Make friends with everyone and hope it all works out",
+          "points": {
+            "jasper": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone younger you look out for gets into serious trouble. You...",
+      "options": [
+        {
+          "text": "Drop everything. Protecting them is your whole job",
+          "points": {
+            "bellamy": 3
+          }
+        },
+        {
+          "text": "Tell them to fight their own battles. You had to",
+          "points": {
+            "octavia": 3
+          }
+        },
+        {
+          "text": "Calmly help them work out how to fix it",
+          "points": {
+            "monty": 3
+          }
+        },
+        {
+          "text": "Let them face the consequences. It's how they'll learn",
+          "points": {
+            "lexa": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your group has to make an impossible choice. You...",
+      "options": [
+        {
+          "text": "Make the call yourself, so nobody else has to carry it",
+          "points": {
+            "clarke": 3
+          }
+        },
+        {
+          "text": "Choose what's best for the most people, and don't look back",
+          "points": {
+            "lexa": 3
+          }
+        },
+        {
+          "text": "Look for a third option nobody's thought of",
+          "points": {
+            "monty": 3
+          }
+        },
+        {
+          "text": "Go with your gut, then wrestle with it afterwards",
+          "points": {
+            "bellamy": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Something breaks right before a big trip. You...",
+      "options": [
+        {
+          "text": "Fix it in ten minutes with a paperclip and some tape",
+          "points": {
+            "raven": 3
+          }
+        },
+        {
+          "text": "Turn the broken bits into something that goes bang",
+          "points": {
+            "jasper": 3
+          }
+        },
+        {
+          "text": "Say it's not your problem, and pack lighter",
+          "points": {
+            "murphy": 3
+          }
+        },
+        {
+          "text": "Go without it. You don't need it",
+          "points": {
+            "octavia": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone you trusted betrays you. You...",
+      "options": [
+        {
+          "text": "Get even. Brutally",
+          "points": {
+            "octavia": 3
+          }
+        },
+        {
+          "text": "Shrug. You'd probably have done the same",
+          "points": {
+            "murphy": 3
+          }
+        },
+        {
+          "text": "Feel it deeply, then try to understand why they did it",
+          "points": {
+            "bellamy": 3
+          }
+        },
+        {
+          "text": "Cut them off. You should never have trusted them",
+          "points": {
+            "lexa": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "It's Friday night with your friends. You...",
+      "options": [
+        {
+          "text": "Throw a party with a drink you brewed yourself",
+          "points": {
+            "jasper": 3
+          }
+        },
+        {
+          "text": "Keep everyone out of trouble. Mostly",
+          "points": {
+            "monty": 3
+          }
+        },
+        {
+          "text": "Spend it worrying about tomorrow",
+          "points": {
+            "clarke": 3
+          }
+        },
+        {
+          "text": "Head somewhere nobody's ever been",
+          "points": {
+            "octavia": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You make a mistake that hurts people. You...",
+      "options": [
+        {
+          "text": "Own it, and use it to do better next time",
+          "points": {
+            "clarke": 3
+          }
+        },
+        {
+          "text": "Make it right, whatever it costs you",
+          "points": {
+            "bellamy": 3
+          }
+        },
+        {
+          "text": "Struggle to forgive yourself, and hide it behind jokes",
+          "points": {
+            "jasper": 3
+          }
+        },
+        {
+          "text": "Explain why it wasn't really your fault",
+          "points": {
+            "murphy": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone says you can't do something because of who you are. You...",
+      "options": [
+        {
+          "text": "Prove them wrong, then rub it in",
+          "points": {
+            "raven": 3
+          }
+        },
+        {
+          "text": "Get angry, and use it",
+          "points": {
+            "octavia": 3
+          }
+        },
+        {
+          "text": "Agree, then do it anyway when nobody's looking",
+          "points": {
+            "murphy": 3
+          }
+        },
+        {
+          "text": "Let it go. You know what you're worth",
+          "points": {
+            "monty": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You fall for someone from the other side. You...",
+      "options": [
+        {
+          "text": "Hide it. Feelings get in the way of duty",
+          "points": {
+            "lexa": 3
+          }
+        },
+        {
+          "text": "Follow your heart, but never forget your people",
+          "points": {
+            "clarke": 3
+          }
+        },
+        {
+          "text": "Go for it, whatever anyone thinks",
+          "points": {
+            "octavia": 3
+          }
+        },
+        {
+          "text": "Keep it to yourself and throw yourself into work",
+          "points": {
+            "raven": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your group is arguing over who should be in charge. You...",
+      "options": [
+        {
+          "text": "Step up, even if half of them hate you for it",
+          "points": {
+            "bellamy": 3
+          }
+        },
+        {
+          "text": "Back whoever's most likely to keep you alive",
+          "points": {
+            "murphy": 3
+          }
+        },
+        {
+          "text": "Suggest you all lead together",
+          "points": {
+            "monty": 3
+          }
+        },
+        {
+          "text": "Say you'll follow anyone, as long as you don't have to make the decisions",
+          "points": {
+            "jasper": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're one of 100 teenagers sent down to a dangerous, abandoned Earth. The first thing you do is...",
+      "options": [
+        {
+          "text": "Tell everyone the old rules don't apply down here",
+          "points": {
+            "bellamy": 3
+          }
+        },
+        {
+          "text": "Find water, food and shelter, in that order",
+          "points": {
+            "clarke": 3
+          }
+        },
+        {
+          "text": "Run straight into the river. You're finally free",
+          "points": {
+            "octavia": 3
+          }
+        },
+        {
+          "text": "Start rigging up a way to contact home",
+          "points": {
+            "raven": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You lead your people, and the only way to save them is to sacrifice another group. You...",
+      "options": [
+        {
+          "text": "Make the sacrifice. That's what leading means",
+          "points": {
+            "lexa": 3
+          }
+        },
+        {
+          "text": "Do it, and live with what you've done",
+          "points": {
+            "clarke": 3
+          }
+        },
+        {
+          "text": "Refuse to believe there's no other way",
+          "points": {
+            "monty": 3
+          }
+        },
+        {
+          "text": "Make sure you end up on the side that survives",
+          "points": {
+            "murphy": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

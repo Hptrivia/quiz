@@ -1,0 +1,530 @@
+{
+  "slug": "the-oc",
+  "show": "The O.C.",
+  "shortName": "The O.C.",
+  "seoTitle": "The O.C. Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take The O.C. test: 12 everyday questions reveal whether you're Ryan, Seth, Marissa, Summer, Sandy, Kirsten, Julie or Taylor — with your full character breakdown.",
+  "intro": "Are you the brooding outsider, the lovable nerd, or the social climber with a secret? Answer 12 everyday questions about friendship, family and fitting in, and find out which character from The O.C. you are.",
+  "characters": [
+    {
+      "id": "ryan",
+      "name": "Ryan Atwood",
+      "emoji": "👊",
+      "color": "#475569",
+      "title": "The Outsider",
+      "summary": "Quiet, tough and fiercely protective. You don't say much, but you'll always have someone's back.",
+      "description": [
+        "Like Ryan, you've had to be tough. He's a troubled kid from Chino who gets taken in by the Cohens in Newport Beach.",
+        "You protect people. When someone Ryan cares about is in trouble, his first instinct is to step in, with his fists if he has to.",
+        "You beat the odds. Ryan finishes high school and goes on to university, a long way from where he started."
+      ],
+      "strengths": [
+        "Loyal",
+        "Brave",
+        "Resourceful"
+      ],
+      "flaw": "You'd rather brood in silence than tell anyone what's wrong.",
+      "signature": "A white vest, a furrowed brow and a punch you'd rather not throw.",
+      "clashReason": "they'd go quiet and brood instead of talking"
+    },
+    {
+      "id": "seth",
+      "name": "Seth Cohen",
+      "emoji": "📚",
+      "color": "#f59e0b",
+      "title": "The Lovable Nerd",
+      "summary": "Funny, awkward and full of opinions. You talk too much, and that's part of your charm.",
+      "description": [
+        "Like Seth, you're the quick-witted one. Sandy and Kirsten's son is awkward, funny and full of pop-culture references.",
+        "You love what you love. Seth is obsessed with comic books, and he isn't embarrassed about it.",
+        "You play the long game in love. Seth had a crush on Summer from third grade, and the show ends with their wedding."
+      ],
+      "strengths": [
+        "Funny",
+        "Smart",
+        "Loyal"
+      ],
+      "flaw": "You overthink and overtalk everything, especially when it matters.",
+      "signature": "A comic book, a sarcastic comeback and a crush you've had since third grade.",
+      "clashReason": "they'd turn every serious talk into a joke"
+    },
+    {
+      "id": "marissa",
+      "name": "Marissa Cooper",
+      "emoji": "🌊",
+      "color": "#0ea5e9",
+      "title": "The Troubled Heart",
+      "summary": "Beautiful, loyal and always on the edge of something. You feel everything, and you're drawn to trouble.",
+      "description": [
+        "Like Marissa, you're the one everyone notices. She's Summer's best friend, and the girl next door Ryan falls for.",
+        "You're drawn to the edge. Marissa struggles with drink and drugs, and her relationships are often turbulent.",
+        "Your story is a bittersweet one. Marissa's ends in tragedy, in the season three finale."
+      ],
+      "strengths": [
+        "Loyal",
+        "Brave",
+        "Passionate"
+      ],
+      "flaw": "You run towards danger when you should be running away from it.",
+      "signature": "A pretty dress, a sad song and a lot of drama.",
+      "clashReason": "they'd drag you into their latest crisis"
+    },
+    {
+      "id": "summer",
+      "name": "Summer Roberts",
+      "emoji": "💋",
+      "color": "#ec4899",
+      "title": "The Firecracker",
+      "summary": "Fierce, funny and fiercely loyal. You've got a temper, and a much bigger heart than you let on.",
+      "description": [
+        "Like Summer, you're tougher than you look. She starts out as one of Newport's sharpest-tongued gossips.",
+        "You don't hold back. Summer is outspoken, and her temper is legendary.",
+        "You grow into yourself. Summer becomes more thoughtful, starts caring deeply about the environment, and marries Seth in the end."
+      ],
+      "strengths": [
+        "Fierce",
+        "Funny",
+        "Loyal"
+      ],
+      "flaw": "Your temper goes from zero to a hundred in seconds.",
+      "signature": "A designer bag, a cutting comeback and a soft spot for a nerd.",
+      "clashReason": "they'd lose their temper at you over nothing"
+    },
+    {
+      "id": "sandy",
+      "name": "Sandy Cohen",
+      "emoji": "⚖️",
+      "color": "#16a34a",
+      "title": "The Idealist",
+      "summary": "Warm, principled and always fighting for the underdog. You believe everyone deserves a chance.",
+      "description": [
+        "Like Sandy, you see the best in people. He's an idealistic public defender who took Ryan in when nobody else would.",
+        "You stick to your principles. Sandy is a left-leaning guy from the Bronx who never quite fits in with Newport's rich crowd.",
+        "You're the heart of your family. Sandy holds the Cohens together with warmth and good advice."
+      ],
+      "strengths": [
+        "Principled",
+        "Warm",
+        "Generous"
+      ],
+      "flaw": "You take on everyone else's problems, even when your own family needs you.",
+      "signature": "A surfboard, a briefcase and a spare room for whoever needs it.",
+      "clashReason": "they'd take in every lost cause they met"
+    },
+    {
+      "id": "kirsten",
+      "name": "Kirsten Cohen",
+      "emoji": "🏡",
+      "color": "#7c3aed",
+      "title": "The Composed One",
+      "summary": "Calm, capable and quietly strong. You hold it together for everyone, even when it's hard.",
+      "description": [
+        "Like Kirsten, you're the sensible one. She's Sandy's wife and Seth's mum, and she was once the CFO of her father's company.",
+        "You're more careful than the people around you. Kirsten is more conservative than Sandy, and she thinks before she leaps.",
+        "You carry more than you show. Kirsten privately struggled with alcohol, and she faced it head on."
+      ],
+      "strengths": [
+        "Capable",
+        "Calm",
+        "Loyal"
+      ],
+      "flaw": "You keep your struggles so private that nobody knows to help.",
+      "signature": "A crisp blazer, a calm voice and a plan for everything.",
+      "clashReason": "they'd stay perfectly calm while you're falling apart"
+    },
+    {
+      "id": "julie",
+      "name": "Julie Cooper",
+      "emoji": "💎",
+      "color": "#be123c",
+      "title": "The Social Climber",
+      "summary": "Glamorous, scheming and always one step ahead. You know what you want, and you go and get it.",
+      "description": [
+        "Like Julie, you know how the world works. She's Marissa's mum, and she's always looking for her next step up.",
+        "You put yourself first. Julie can be devious, selfish and shallow, and all of Newport knows it.",
+        "But you're a survivor. Underneath it all, Julie has a vulnerable side, and by the end she's turned her life around and finished college."
+      ],
+      "strengths": [
+        "Ambitious",
+        "Resourceful",
+        "Resilient"
+      ],
+      "flaw": "You'd use anyone to get ahead, even the people you love.",
+      "signature": "Designer heels, a rich new husband and a secret or three.",
+      "clashReason": "they'd use you to climb, then forget your name"
+    },
+    {
+      "id": "taylor",
+      "name": "Taylor Townsend",
+      "emoji": "✏️",
+      "color": "#84cc16",
+      "title": "The Overachiever",
+      "summary": "Intense, ambitious and completely extra. You want to be the best at everything, and you're not shy about it.",
+      "description": [
+        "Like Taylor, you go all in. She's a neurotic perfectionist who throws herself into everything she does.",
+        "You're intense, and you know it. Taylor starts out as a rival to the gang before becoming one of them.",
+        "You find your people in the end. Taylor's surprising connection with Ryan is one of the best things about the final season."
+      ],
+      "strengths": [
+        "Ambitious",
+        "Organised",
+        "Loyal"
+      ],
+      "flaw": "You try so hard that you wear everyone out, including yourself.",
+      "signature": "A clipboard, a sign-up sheet and far too much enthusiasm.",
+      "clashReason": "they'd sign you up for everything without asking"
+    }
+  ],
+  "questions": [
+    {
+      "text": "You get dragged to a charity gala full of rich people you don't know. You...",
+      "options": [
+        {
+          "text": "Find someone else who hates this too, and hide in the kitchen cracking jokes",
+          "points": {
+            "sandy": 3
+          }
+        },
+        {
+          "text": "Talk far too much to the first person who looks friendly",
+          "points": {
+            "seth": 3
+          }
+        },
+        {
+          "text": "Work the room. Everyone here could be useful",
+          "points": {
+            "julie": 3
+          }
+        },
+        {
+          "text": "Introduce yourself to everyone, with a fun fact you prepared earlier",
+          "points": {
+            "taylor": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your partner completely forgets your anniversary. You...",
+      "options": [
+        {
+          "text": "Lose it. Loudly. Then let them make it up to you",
+          "points": {
+            "summer": 3
+          }
+        },
+        {
+          "text": "Realise you forgot too, and panic-plan something at the last minute",
+          "points": {
+            "seth": 3
+          }
+        },
+        {
+          "text": "Mention it calmly, and let them feel bad on their own",
+          "points": {
+            "kirsten": 3
+          }
+        },
+        {
+          "text": "Decide it's a sign, and start wondering if this is even working",
+          "points": {
+            "marissa": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone you barely know needs somewhere to stay. You...",
+      "options": [
+        {
+          "text": "Offer them your spare room. Everyone deserves a chance",
+          "points": {
+            "sandy": 3
+          }
+        },
+        {
+          "text": "Say yes, but quietly lock away the valuables",
+          "points": {
+            "kirsten": 3
+          }
+        },
+        {
+          "text": "Absolutely not. What would the neighbours think?",
+          "points": {
+            "julie": 3
+          }
+        },
+        {
+          "text": "Help them out. You know exactly how that feels",
+          "points": {
+            "ryan": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're stuck in a really boring class. You...",
+      "options": [
+        {
+          "text": "Draw a comic strip in the margins",
+          "points": {
+            "seth": 3
+          }
+        },
+        {
+          "text": "Ask fourteen questions and volunteer for extra credit",
+          "points": {
+            "taylor": 3
+          }
+        },
+        {
+          "text": "Text your best friend a running commentary",
+          "points": {
+            "summer": 3
+          }
+        },
+        {
+          "text": "Stare out of the window and wish you were anywhere else",
+          "points": {
+            "marissa": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone is picking on a friend of yours. You...",
+      "options": [
+        {
+          "text": "Step in. If it turns into a fight, so be it",
+          "points": {
+            "ryan": 3
+          }
+        },
+        {
+          "text": "Tell them off so viciously they never try it again",
+          "points": {
+            "summer": 3
+          }
+        },
+        {
+          "text": "Make a sarcastic comment from a safe distance",
+          "points": {
+            "seth": 3
+          }
+        },
+        {
+          "text": "Calmly explain exactly why they're in the wrong",
+          "points": {
+            "sandy": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're offered money to do something a bit shady. You...",
+      "options": [
+        {
+          "text": "Take it. You have to look out for yourself",
+          "points": {
+            "julie": 3
+          }
+        },
+        {
+          "text": "Refuse. Some things aren't for sale",
+          "points": {
+            "sandy": 3
+          }
+        },
+        {
+          "text": "Do it, then regret it immediately",
+          "points": {
+            "marissa": 3
+          }
+        },
+        {
+          "text": "Read the small print, then say no",
+          "points": {
+            "kirsten": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're going through a rough patch. You...",
+      "options": [
+        {
+          "text": "Run away from it, as far as you can",
+          "points": {
+            "marissa": 3
+          }
+        },
+        {
+          "text": "Keep it to yourself and brood",
+          "points": {
+            "ryan": 3
+          }
+        },
+        {
+          "text": "Hold it together in public, and fall apart in private",
+          "points": {
+            "kirsten": 3
+          }
+        },
+        {
+          "text": "Go surfing at dawn until your head is clear",
+          "points": {
+            "sandy": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You've got a big project due. You...",
+      "options": [
+        {
+          "text": "Finish it weeks early, then do an extra one for fun",
+          "points": {
+            "taylor": 3
+          }
+        },
+        {
+          "text": "Leave it until the night before, then pull an all-nighter on snacks alone",
+          "points": {
+            "seth": 3
+          }
+        },
+        {
+          "text": "Make a plan, stick to it, done",
+          "points": {
+            "kirsten": 3
+          }
+        },
+        {
+          "text": "Quietly build the whole thing yourself, and it turns out brilliant",
+          "points": {
+            "ryan": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your mum or dad embarrasses you in front of your friends. You...",
+      "options": [
+        {
+          "text": "Storm out and slam the door",
+          "points": {
+            "marissa": 3
+          }
+        },
+        {
+          "text": "Roll your eyes so hard it hurts",
+          "points": {
+            "summer": 3
+          }
+        },
+        {
+          "text": "Apologise to everyone on their behalf",
+          "points": {
+            "taylor": 3
+          }
+        },
+        {
+          "text": "Shrug. You've seen far worse",
+          "points": {
+            "ryan": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You want to get to know someone you like. You...",
+      "options": [
+        {
+          "text": "Ramble nervously, make an obscure joke, and hope for the best",
+          "points": {
+            "seth": 3
+          }
+        },
+        {
+          "text": "Pretend you can't stand them for as long as possible",
+          "points": {
+            "summer": 3
+          }
+        },
+        {
+          "text": "Find out what they're worth first",
+          "points": {
+            "julie": 3
+          }
+        },
+        {
+          "text": "Make a plan with a timeline, and follow it to the letter",
+          "points": {
+            "taylor": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're a teenager from a rough town, and a rich family takes you in. You...",
+      "options": [
+        {
+          "text": "Wait for it all to go wrong. It always does",
+          "points": {
+            "ryan": 3
+          }
+        },
+        {
+          "text": "See exactly how far this can take you",
+          "points": {
+            "julie": 3
+          }
+        },
+        {
+          "text": "Fall for the one person here who seems just as lost",
+          "points": {
+            "marissa": 3
+          }
+        },
+        {
+          "text": "Make it very clear you're not impressed by their money",
+          "points": {
+            "summer": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You live in a gated community where everyone has a secret. You...",
+      "options": [
+        {
+          "text": "Collect everyone's secrets and use them when you need to",
+          "points": {
+            "julie": 3
+          }
+        },
+        {
+          "text": "Stand up for the people who don't have anyone on their side",
+          "points": {
+            "sandy": 3
+          }
+        },
+        {
+          "text": "Keep the peace, keep your own secrets and keep your head up",
+          "points": {
+            "kirsten": 3
+          }
+        },
+        {
+          "text": "Run for the social committee and fix everything yourself",
+          "points": {
+            "taylor": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

@@ -88,6 +88,12 @@ details.post>summary::after{content:" ›";color:var(--muted)}
 details.post[open]>summary::after{content:" ⌄"}
 details.post[open] .post-edit{margin-top:8px}
 .stack{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+ul.rows>li.swipe{position:relative;overflow:hidden;padding:0;display:block}
+.swipe-act{position:absolute;inset:0;display:flex;align-items:center;justify-content:flex-end;padding-right:16px;background:var(--warn);color:#000;font-weight:600;font-size:14px}
+li.swipe.armed .swipe-act{background:var(--bad);color:#fff}
+.swipe-front{position:relative;background:var(--surface);padding:10px 0;touch-action:pan-y}
+.toast-act{all:unset;cursor:pointer;font-weight:700;text-decoration:underline;margin-left:6px}
+.bulk{border:1px solid var(--line);border-radius:8px;padding:10px;background:var(--bg);display:flex;flex-direction:column;gap:6px}
 </style>
 </head>
 <body>
@@ -147,6 +153,17 @@ const STATUSES = {works:"Works", mod_removed:"Mod removed before", never:"Never 
 const POST_CATS = new Set(["TV","Sitcoms","Anime","Movies","Games"]);
 const POST_EXTRA = new Set(["mma"]);
 function postable(slug){ return POST_EXTRA.has(slug) || POST_CATS.has((S.themes[slug]||{}).category); }
+// Archived shows (e.g. banned, nowhere left to post) drop out of Shows, To fill in, Suggest and Plan. Shows → Archived brings them back.
+function isArchived(slug){ return (S.settings.archivedShows||[]).includes(slug); }
+async function setArchived(slug, on){
+  const list=(S.settings.archivedShows||[]).filter(x=>x!==slug);
+  if (on) list.push(slug);
+  await saveSettings({archivedShows:list});
+}
+async function archiveShow(slug, on){
+  await setArchived(slug,on);
+  toast(on?showTitle(slug)+" archived":showTitle(slug)+" is back", "Undo", async()=>{ await setArchived(slug,!on); render(); });
+}
 const MULTI_MIN_MEMBERS = 150000;
 
 const S = {themes:{}, themeList:[], epFiles:{}, epCount:{}, chars:new Set(), subs:{}, posts:[], shows:{}, settings:{}, tab:"post",
@@ -172,7 +189,11 @@ function ago(iso, ref){ if(!iso) return "never"; const d=daysBetween(iso, ref||t
 function niceDate(iso){ return new Date(iso+"T12:00:00").toLocaleDateString(undefined,{weekday:"short",day:"numeric",month:"short"}); }
 function cleanSub(s){ return String(s||"").trim().replace(/^\/?r\//i,"").replace(/\/+$/,""); }
 function showTitle(slug){ return (S.themes[slug]&&S.themes[slug].title) || slug || "No show"; }
-function toast(msg){ const t=el("div",{class:"toast",role:"status",text:msg}); document.body.append(t); setTimeout(()=>t.remove(),2200); }
+function toast(msg, actionLabel, action){
+  const t=el("div",{class:"toast",role:"status"},msg);
+  if (actionLabel) t.append(" ",el("button",{type:"button",class:"toast-act",onclick:()=>{ t.remove(); action(); }},actionLabel));
+  document.body.append(t); setTimeout(()=>t.remove(),actionLabel?5000:2200);
+}
 function setStatus(m){ $("status").textContent=m||""; }
 function cooldown(){ return Number(S.settings.cooldownDays)||60; }
 function retryDays(){ return Number(S.settings.retryDays)||30; }
@@ -283,7 +304,8 @@ async function saveSettings(patch){
 function postsForSub(sub){ return S.posts.filter(p=>p.sub===sub); }
 function postsForShow(slug){ return S.posts.filter(p=>p.show_slug===slug); }
 function subsForShow(slug){ return Object.values(S.subs).filter(s=>s.show_slug===slug); }
-function lastPost(list){ return list.length?list[list.length-1]:null; }
+// The most recent post in the list, whatever order the list is in.
+function lastPost(list){ let best=null; for (const p of list) if(!best||p.posted_on>=best.posted_on) best=p; return best; }
 
 function subAvailable(s, onDate){
   if (s.status==="never"||s.status==="banned") return false;
@@ -329,7 +351,7 @@ function subLabel(k){ return "r/"+((S.subs[k]||{}).display||k); }
 function returnCandidates(onDate, extraLast){
   const out=[];
   for (const slug of new Set(Object.values(S.subs).map(s=>s.show_slug).filter(Boolean))){
-    if (!postable(slug)) continue;
+    if (!postable(slug) || isArchived(slug)) continue;
     const hist=postsForShow(slug); if(!hist.length) continue;
     const subs=showSubs(slug,onDate); if(!subs.length) continue;
     const last=(extraLast&&extraLast[slug])||lastPost(hist).posted_on;
@@ -349,7 +371,7 @@ function returnCandidates(onDate, extraLast){
 function newShowCandidates(){
   const hidden=new Set(S.settings.hiddenShows||[]);
   const posted=new Set([...S.posts.map(p=>p.show_slug), ...Object.values(S.subs).map(s=>s.show_slug)]);
-  const pool=S.themeList.filter(sl=>!posted.has(sl)&&!hidden.has(sl)&&postable(sl));
+  const pool=S.themeList.filter(sl=>!posted.has(sl)&&!hidden.has(sl)&&!isArchived(sl)&&postable(sl));
   // Alternate categories (TV, Sitcoms, Games…) so a week isn't all one kind of show.
   const byCat={}; for (const sl of pool) (byCat[S.themes[sl].category]=byCat[S.themes[sl].category]||[]).push(sl);
   const cats=Object.keys(byCat).sort((a,b)=>byCat[b].length-byCat[a].length); const out=[];
@@ -447,7 +469,7 @@ async function renderLog(){
   box.append(form);
 
   // Every post still missing its outcome, newest first. Setting the outcome finishes it and it leaves the list.
-  const todo=S.posts.filter(p=>p.outcome==="unknown").sort((a,b)=>(b.posted_on.localeCompare(a.posted_on))||(b.id-a.id));
+  const todo=S.posts.filter(p=>p.outcome==="unknown"&&!isArchived(p.show_slug)).sort((a,b)=>(b.posted_on.localeCompare(a.posted_on))||(b.id-a.id));
   const count=el("span",{class:"num"},String(todo.length));
   const card=el("div",{class:"card"},el("h2",{},"To fill in (",count,")"),
     el("p",{class:"muted small"},"Add a rating or views if you have them. If the show flopped or got removed, use 'Try again in…' to pause the whole show. Then pick whether it stayed up: that finishes the post and it leaves this list."));
@@ -702,27 +724,46 @@ function showSummaries(){
   return [...slugs].filter(postable).map(sl=>{ const ps=postsForShow(sl); const last=lastPost(ps); return {sl, subs:new Set([...ps.map(p=>p.sub),...subsForShow(sl).map(s=>s.sub)]).size, last, reviewed:!!(S.shows[sl]||{}).reviewed}; })
     .sort((a,b)=>showTitle(a.sl).localeCompare(showTitle(b.sl)));
 }
+// A list row you can swipe left to reveal and trigger one action (archive / restore). Taps still open the row.
+function swipeRow(label, onSwipe, content){
+  const li=el("li",{class:"swipe"},el("div",{class:"swipe-act","aria-hidden":"true"},label));
+  const front=el("div",{class:"swipe-front"},content); li.append(front);
+  let x0=null, y0=0, dx=0, horiz=null;
+  front.addEventListener("touchstart",e=>{ x0=e.touches[0].clientX; y0=e.touches[0].clientY; dx=0; horiz=null; front.style.transition="none"; },{passive:true});
+  front.addEventListener("touchmove",e=>{ if(x0===null) return;
+    const mx=e.touches[0].clientX-x0, my=e.touches[0].clientY-y0;
+    if (horiz===null && (Math.abs(mx)>8||Math.abs(my)>8)) horiz=Math.abs(mx)>Math.abs(my);
+    if (!horiz) return;
+    dx=Math.min(0,mx); front.style.transform="translateX("+dx+"px)"; li.classList.toggle("armed",dx<-90); },{passive:true});
+  front.addEventListener("touchend",()=>{ front.style.transition="transform .2s";
+    if (dx<-90){ front.style.transform="translateX(-100%)"; setTimeout(onSwipe,180); } else front.style.transform="";
+    x0=null; });
+  // A swipe must not also count as a tap.
+  front.addEventListener("click",e=>{ if (horiz && dx<-8){ e.stopPropagation(); e.preventDefault(); } },true);
+  return li;
+}
 function renderShows(){
   const box=$("tab-shows"); box.replaceChildren();
   if (S.showDetail) return renderShowDetail(box, S.showDetail);
-  const all=showSummaries(); const nRev=all.filter(x=>x.reviewed).length;
+  const allShows=showSummaries(); const all=allShows; const active=allShows.filter(x=>!isArchived(x.sl)); const nRev=active.filter(x=>x.reviewed).length;
   const q=el("input",{id:"sh-q",placeholder:"Search shows or subs",value:S.showQuery,autocomplete:"off"});
   q.addEventListener("input",()=>{ S.showQuery=q.value; drawList(); });
-  box.append(el("div",{class:"card"},el("h2",{},"Your shows"),el("p",{class:"muted small"},nRev+" of "+all.length+" checked. Your edits here override the imported history."),
-    q, chipGroup([["all","All"],["unchecked","Unchecked"],["reviewed","Checked"]],S.showFilter,v=>{S.showFilter=v;renderShows();}),
+  box.append(el("div",{class:"card"},el("h2",{},"Your shows"),el("p",{class:"muted small"},nRev+" of "+active.length+" checked. Your edits here override the imported history. Swipe a show left to archive it."),
+    q, chipGroup([["all","All"],["unchecked","Unchecked"],["reviewed","Checked"],["archived","Archived"]],S.showFilter,v=>{S.showFilter=v;renderShows();}),
     chipGroup([["oldest","Longest since posted"],["newest","Most recent"],["az","A–Z"]],S.showSort,v=>{S.showSort=v;renderShows();})));
   const listCard=el("div",{class:"card"}); box.append(listCard);
   function drawList(){
     const qq=S.showQuery.trim().toLowerCase();
-    const rows=all.filter(x=>(S.showFilter==="all"||(S.showFilter==="reviewed")===x.reviewed) &&
+    const rows=all.filter(x=>(S.showFilter==="archived"?isArchived(x.sl):!isArchived(x.sl)&&(S.showFilter==="all"||(S.showFilter==="reviewed")===x.reviewed)) &&
       (!qq||showTitle(x.sl).toLowerCase().includes(qq)||subsForShow(x.sl).some(s=>s.sub.includes(qq))));
-    // Shows never posted count as the oldest. Ties fall back to A–Z (showSummaries order).
+    // Oldest real post first; shows never posted go to the bottom. Ties fall back to A–Z (showSummaries order).
     const lastOn=x=>x.last?x.last.posted_on:"";
-    if (S.showSort==="oldest") rows.sort((a,b)=>lastOn(a).localeCompare(lastOn(b)));
+    if (S.showSort==="oldest") rows.sort((a,b)=>(!a.last)-(!b.last)||lastOn(a).localeCompare(lastOn(b)));
     else if (S.showSort==="newest") rows.sort((a,b)=>lastOn(b).localeCompare(lastOn(a)));
     const ul=el("ul",{class:"rows"});
     for (const x of rows){
-      ul.append(el("li",{},el("button",{class:"listbtn",type:"button",onclick:()=>{S.showDetail=x.sl;renderShows();window.scrollTo(0,0);}},
+      const arch=isArchived(x.sl);
+      ul.append(swipeRow(arch?"Restore":"Archive", async()=>{ await archiveShow(x.sl,!arch); drawList(); }, el("button",{class:"listbtn",type:"button",onclick:()=>{S.showDetail=x.sl;renderShows();window.scrollTo(0,0);}},
         el("div",{class:"grow"},el("div",{},el("strong",{},showTitle(x.sl))," ",x.reviewed?el("span",{class:"pill ok"},"checked"):null),
           postsForShow(x.sl).some(p=>p.rating==="great")?el("div",{class:"small",style:"color:var(--new)"},"Did great before"):null,
           el("div",{class:"muted small"},x.subs+" sub"+(x.subs===1?"":"s")+" · last post "+(x.last?ago(x.last.posted_on)+" · "+(FMT[x.last.format]||"format unknown"):"never"))),
@@ -750,10 +791,30 @@ async function renderShowDetail(box, slug){
         (epTotal?" · has episode mode ("+epTotal+")":"")+(S.chars.has(slug)?" · has character quiz":"")),
       el("div",{},el("label",{for:"sh-pause"},(()=>{ const u=showPausedUntil(slug); return u?"Paused until "+niceDate(u):"Try again"; })()),
         selectEl("sh-pause",Object.assign({"":showPausedUntil(slug)?"Change…":"Anytime (normal rest)"},showPausedUntil(slug)?{m0:"Unpause: anytime"}:{},PAUSE_OPTS,{"":showPausedUntil(slug)?"Change…":"Anytime (normal rest)"}),"",async v=>{ if(v==="") return; await pauseShow(slug,Number(v.slice(1))); renderShows(); })),
-      el("div",{class:"actions"},rev),
+      bulkFill(slug, posts),
+      el("div",{class:"actions"},rev,
+        el("button",{class:"btn ghost",type:"button",onclick:async()=>{ const on=!isArchived(slug); await archiveShow(slug,on); if(on){S.showDetail=null;} renderShows(); }},isArchived(slug)?"Restore from archive":"Archive show")),
       el("details",{},el("summary",{class:"small"},sh.notes?"Show notes (1)":"Show notes"),notes)));
   for (const k of subKeys) box.append(subCard(k, slug));
   box.append(addPostCard(slug, subKeys));
+}
+// One tap for every post of this show that's still waiting in the Log's "To fill in" list. Setting the outcome
+// finishes them all (they leave that list); posts you've already filled in are left alone.
+function bulkFill(slug, posts){
+  const todo=posts.filter(p=>p.outcome==="unknown");
+  if (!todo.length) return null;
+  const n=todo.length+" post"+(todo.length===1?"":"s");
+  return el("div",{class:"bulk"},
+    el("div",{class:"small"},el("strong",{},"All at once")," ",el("span",{class:"muted"},"("+n+" still to fill in)")),
+    el("div",{class:"post-edit"},
+      selectEl("sb-r",Object.assign({},RATINGS,{"":"Rate all…"}),"",async v=>{
+        for (const p of todo) await updatePost(p.id,{rating:v||null});
+        toast("Rated "+n); renderShows(); }),
+      selectEl("sb-o",Object.assign({},OUTCOMES,{unknown:"Did they stay up?"}),"unknown",async v=>{
+        if(v==="unknown") return;
+        for (const p of todo) await updatePost(p.id,{outcome:v});
+        for (const k of new Set(todo.map(p=>p.sub))) await applyOutcomeToSub(k,v);
+        toast("Done: "+n); renderShows(); })));
 }
 function postLine(p){
   return [niceDate(p.posted_on), FMT[p.format]?FMT[p.format]+(p.episode?" "+p.episode:""):"Format unknown", p.link?p.link+" link":"",
