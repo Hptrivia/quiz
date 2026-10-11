@@ -470,9 +470,18 @@ async function playPartyMode(pages, theme, subMode, bestOf) {
   return allDone;
 }
 
+// Abort requests to ad/tracking hosts (see BLOCKED_HOSTS) on a test page.
+async function blockLiveHosts(page) {
+  await page.setRequestInterception(true);
+  page.on('request', req => {
+    if (BLOCKED_HOSTS.test(req.url())) req.abort(); else req.continue();
+  });
+}
+
 async function runMultiplayerModeN(browser, mode) {
   const contexts = await Promise.all(Array.from({ length: mode.players }, () => browser.createBrowserContext()));
   const pages = await Promise.all(contexts.map(c => c.newPage()));
+  await Promise.all(pages.map(blockLiveHosts));
   const errors = [];
   pages.forEach((p, i) => p.on('pageerror', e => errors.push(`p${i}: ` + String(e.message || e))));
 
@@ -493,6 +502,8 @@ async function runMultiplayerMode(browser, mode) {
   const guestCtx = await browser.createBrowserContext();
   const host = await hostCtx.newPage();
   const guest = await guestCtx.newPage();
+  await blockLiveHosts(host);
+  await blockLiveHosts(guest);
   const errors = [];
   host.on('pageerror', e => errors.push('host: ' + String(e.message || e)));
   guest.on('pageerror', e => errors.push('guest: ' + String(e.message || e)));
@@ -614,10 +625,7 @@ async function runMode(browser, mode) {
   // Never let a test run hit live ads or tracking: ad scripts (Grow/Mediavine
   // throws "mcmNetworkCode is required" off the real domain), GA, Formspree,
   // and Supabase edge functions (install pings etc.).
-  await page.setRequestInterception(true);
-  page.on('request', req => {
-    if (BLOCKED_HOSTS.test(req.url())) req.abort(); else req.continue();
-  });
+  await blockLiveHosts(page);
 
   // Seed localStorage before any page script runs — used to skip one-time
   // pickers (e.g. Daily Mashup's show picker) so the driver lands straight

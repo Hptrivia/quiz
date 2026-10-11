@@ -1,5 +1,117 @@
 [
   {
+    "type": "theme",
+    "slug": "alan-wake-2",
+    "title": "Alan Wake 2",
+    "label": "Games",
+    "date": "2026-10-11",
+    "url": "challenge.html?theme=alan-wake-2&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "formula-1",
+    "title": "Formula 1",
+    "label": "Sports",
+    "date": "2026-10-11",
+    "url": "challenge.html?theme=formula-1&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "ghost-of-yotei",
+    "title": "Ghost of Yotei",
+    "label": "Games",
+    "date": "2026-10-11",
+    "url": "challenge.html?theme=ghost-of-yotei&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "gotham",
+    "title": "Gotham",
+    "label": "TV",
+    "date": "2026-10-11",
+    "url": "challenge.html?theme=gotham&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "king-of-the-hill",
+    "title": "King of the Hill",
+    "label": "Sitcoms",
+    "date": "2026-10-11",
+    "url": "challenge.html?theme=king-of-the-hill&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "mlb",
+    "title": "MLB",
+    "label": "Sports",
+    "date": "2026-10-11",
+    "url": "challenge.html?theme=mlb&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "percy-jackson-and-the-olympians",
+    "title": "Percy Jackson and the Olympians",
+    "label": "TV",
+    "date": "2026-10-11",
+    "url": "challenge.html?theme=percy-jackson-and-the-olympians&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "rupauls-drag-race",
+    "title": "RuPaul's Drag Race",
+    "label": "TV",
+    "date": "2026-10-11",
+    "url": "challenge.html?theme=rupauls-drag-race&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "tennis",
+    "title": "Tennis",
+    "label": "Sports",
+    "date": "2026-10-11",
+    "url": "challenge.html?theme=tennis&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "the-fresh-prince-of-bel-air",
+    "title": "The Fresh Prince of Bel-Air",
+    "label": "Sitcoms",
+    "date": "2026-10-11",
+    "url": "challenge.html?theme=the-fresh-prince-of-bel-air&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "the-godfather",
+    "title": "The Godfather",
+    "label": "Movies",
+    "date": "2026-10-11",
+    "url": "challenge.html?theme=the-godfather&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "the-good-place",
+    "title": "The Good Place",
+    "label": "Sitcoms",
+    "date": "2026-10-11",
+    "url": "challenge.html?theme=the-good-place&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "the-secret-lives-of-mormon-wives",
+    "title": "The Secret Lives of Mormon Wives",
+    "label": "TV",
+    "date": "2026-10-11",
+    "url": "challenge.html?theme=the-secret-lives-of-mormon-wives&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "veronica-mars",
+    "title": "Veronica Mars",
+    "label": "TV",
+    "date": "2026-10-11",
+    "url": "challenge.html?theme=veronica-mars&round=1"
+  },
+  {
     "type": "episode",
     "slug": "off-campus",
     "title": "Off Campus",
@@ -46,117 +158,5 @@
     "label": "TV",
     "date": "2026-10-04",
     "url": "challenge.html?theme=interview-with-the-vampire&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "lanterns",
-    "title": "Lanterns",
-    "label": "TV",
-    "date": "2026-10-04",
-    "url": "challenge.html?theme=lanterns&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "ncis",
-    "title": "NCIS",
-    "label": "TV",
-    "date": "2026-10-04",
-    "url": "challenge.html?theme=ncis&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "orphan-black",
-    "title": "Orphan Black",
-    "label": "TV",
-    "date": "2026-10-04",
-    "url": "challenge.html?theme=orphan-black&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "steins-gate",
-    "title": "Steins;Gate",
-    "label": "Anime",
-    "date": "2026-10-04",
-    "url": "challenge.html?theme=steins-gate&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "sword-art-online",
-    "title": "Sword Art Online",
-    "label": "Anime",
-    "date": "2026-10-04",
-    "url": "challenge.html?theme=sword-art-online&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "the-king-of-queens",
-    "title": "The King of Queens",
-    "label": "Sitcoms",
-    "date": "2026-10-04",
-    "url": "challenge.html?theme=the-king-of-queens&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "the-sex-lives-of-college-girls",
-    "title": "The Sex Lives of College Girls",
-    "label": "Sitcoms",
-    "date": "2026-10-04",
-    "url": "challenge.html?theme=the-sex-lives-of-college-girls&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "bachelor-nation",
-    "title": "Bachelor Nation",
-    "label": "TV",
-    "date": "2026-09-28",
-    "url": "challenge.html?theme=bachelor-nation&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "bobs-burgers",
-    "title": "Bob's Burgers",
-    "label": "Sitcoms",
-    "date": "2026-09-28",
-    "url": "challenge.html?theme=bobs-burgers&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "emily-in-paris",
-    "title": "Emily in Paris",
-    "label": "TV",
-    "date": "2026-09-28",
-    "url": "challenge.html?theme=emily-in-paris&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "hazbin-hotel",
-    "title": "Hazbin Hotel",
-    "label": "TV",
-    "date": "2026-09-28",
-    "url": "challenge.html?theme=hazbin-hotel&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "love-is-blind",
-    "title": "Love Is Blind",
-    "label": "TV",
-    "date": "2026-09-28",
-    "url": "challenge.html?theme=love-is-blind&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "love-island-uk",
-    "title": "Love Island UK",
-    "label": "TV",
-    "date": "2026-09-28",
-    "url": "challenge.html?theme=love-island-uk&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "love-island-usa",
-    "title": "Love Island USA",
-    "label": "TV",
-    "date": "2026-09-28",
-    "url": "challenge.html?theme=love-island-usa&round=1"
   }
 ]

@@ -114,6 +114,12 @@ const APP_ANNOUNCEMENTS = [
     text: "Off Campus is now in Episode Mode with episodes 1 and 2, and Bridgerton episode 2 is here — relive them scene by scene.",
     cta: { label: "Play Off Campus Ep 1", href: "episode.html?theme=off-campus&episode=1" },
   },
+  {
+    icon: "🆕",
+    title: "14 new themes added!",
+    text: "The Godfather, The Fresh Prince of Bel-Air, The Good Place, King of the Hill, Gotham, Veronica Mars, RuPaul's Drag Race, Formula 1, Tennis, MLB, Ghost of Yotei, and more.",
+    cta: { label: "See What's New", href: "recent.html" },
+  },
 ];
 
 function _cbAnnouncementHash(str) {
