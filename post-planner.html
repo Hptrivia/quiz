@@ -742,6 +742,21 @@ function swipeRow(label, onSwipe, content){
   front.addEventListener("click",e=>{ if (horiz && dx<-8){ e.stopPropagation(); e.preventDefault(); } },true);
   return li;
 }
+// Extra Shows filters, kept in a dropdown so the chip row stays short. Each returns a short "why it's here" line, or null.
+// Banned includes archived shows (banned ones live here, not under Archived); the rest skip archived shows.
+function subsWhere(slug, fn){ return [...new Set(postsForShow(slug).filter(fn).map(p=>"r/"+((S.subs[p.sub]||{}).display||p.sub)))]; }
+function outcomeFilter(outcome){ return slug=>{ const ps=postsForShow(slug).filter(p=>p.outcome===outcome); if(!ps.length) return null;
+  const last=lastPost(ps); return subsWhere(slug,p=>p.outcome===outcome).join(", ")+" · last "+ago(last.posted_on); }; }
+const MORE_FILTERS = {
+  banned:{label:"Banned", why:slug=>{ const subs=[...new Set([...allSubsOfShow(slug).filter(k=>["banned","temp_ban"].includes((S.subs[k]||{}).status)).map(k=>"r/"+((S.subs[k]||{}).display||k)),
+    ...subsWhere(slug,p=>p.outcome==="banned")])]; return subs.length?"Banned in "+subs.join(", "):null; }},
+  remind:{label:"Remind me later", why:slug=>{ const u=showPausedUntil(slug); return u?"Remind me "+niceDate(u)+" ("+Math.max(0,daysBetween(todayISO(),u))+" days)":null; }},
+  removed_instant:{label:"Removed instantly", why:outcomeFilter("removed_instant")},
+  removed_later:{label:"Removed later", why:outcomeFilter("removed_later")},
+  removed:{label:"Removed (timing unknown)", why:outcomeFilter("removed")},
+  pending:{label:"Stuck awaiting mod approval", why:outcomeFilter("pending")},
+  never:{label:"Sub never allows posts", why:slug=>{ const subs=allSubsOfShow(slug).filter(k=>(S.subs[k]||{}).status==="never").map(k=>"r/"+((S.subs[k]||{}).display||k)); return subs.length?"Never allows: "+subs.join(", "):null; }}
+};
 function renderShows(){
   const box=$("tab-shows"); box.replaceChildren();
   if (S.showDetail) return renderShowDetail(box, S.showDetail);
@@ -750,21 +765,30 @@ function renderShows(){
   q.addEventListener("input",()=>{ S.showQuery=q.value; drawList(); });
   box.append(el("div",{class:"card"},el("h2",{},"Your shows"),el("p",{class:"muted small"},nRev+" of "+active.length+" checked. Your edits here override the imported history. Swipe a show left to archive it."),
     q, chipGroup([["all","All"],["unchecked","Unchecked"],["reviewed","Checked"],["archived","Archived"]],S.showFilter,v=>{S.showFilter=v;renderShows();}),
+    selectEl("sh-more",Object.assign({"":"More filters…"},Object.fromEntries(Object.entries(MORE_FILTERS).map(([k,f])=>
+      [k,f.label+" ("+all.filter(x=>(k==="banned"||!isArchived(x.sl))&&f.why(x.sl)).length+")"]))),MORE_FILTERS[S.showFilter]?S.showFilter:"",v=>{S.showFilter=v||"all";renderShows();}),
     chipGroup([["oldest","Longest since posted"],["newest","Most recent"],["az","A–Z"]],S.showSort,v=>{S.showSort=v;renderShows();})));
   const listCard=el("div",{class:"card"}); box.append(listCard);
   function drawList(){
     const qq=S.showQuery.trim().toLowerCase();
-    const rows=all.filter(x=>(S.showFilter==="archived"?isArchived(x.sl):!isArchived(x.sl)&&(S.showFilter==="all"||(S.showFilter==="reviewed")===x.reviewed)) &&
+    const more=MORE_FILTERS[S.showFilter];
+    const inFilter=x=> more ? (S.showFilter==="banned"||!isArchived(x.sl)) && !!more.why(x.sl)
+      : S.showFilter==="archived" ? isArchived(x.sl) && !MORE_FILTERS.banned.why(x.sl)
+      : !isArchived(x.sl)&&(S.showFilter==="all"||(S.showFilter==="reviewed")===x.reviewed);
+    const rows=all.filter(x=>inFilter(x) &&
       (!qq||showTitle(x.sl).toLowerCase().includes(qq)||subsForShow(x.sl).some(s=>s.sub.includes(qq))));
     // Oldest real post first; shows never posted go to the bottom. Ties fall back to A–Z (showSummaries order).
     const lastOn=x=>x.last?x.last.posted_on:"";
     if (S.showSort==="oldest") rows.sort((a,b)=>(!a.last)-(!b.last)||lastOn(a).localeCompare(lastOn(b)));
     else if (S.showSort==="newest") rows.sort((a,b)=>lastOn(b).localeCompare(lastOn(a)));
+    // Remind me: the one coming back soonest goes first, whatever the sort.
+    if (S.showFilter==="remind") rows.sort((a,b)=>showPausedUntil(a.sl).localeCompare(showPausedUntil(b.sl)));
     const ul=el("ul",{class:"rows"});
     for (const x of rows){
       const arch=isArchived(x.sl);
       ul.append(swipeRow(arch?"Restore":"Archive", async()=>{ await archiveShow(x.sl,!arch); drawList(); }, el("button",{class:"listbtn",type:"button",onclick:()=>{S.showDetail=x.sl;renderShows();window.scrollTo(0,0);}},
-        el("div",{class:"grow"},el("div",{},el("strong",{},showTitle(x.sl))," ",x.reviewed?el("span",{class:"pill ok"},"checked"):null),
+        el("div",{class:"grow"},el("div",{},el("strong",{},showTitle(x.sl))," ",x.reviewed?el("span",{class:"pill ok"},"checked"):null," ",more&&arch?el("span",{class:"pill"},"archived"):null),
+          more?el("div",{class:"small",style:"color:var(--"+(S.showFilter==="remind"?"warn":"bad")+")"},more.why(x.sl)):null,
           postsForShow(x.sl).some(p=>p.rating==="great")?el("div",{class:"small",style:"color:var(--new)"},"Did great before"):null,
           el("div",{class:"muted small"},x.subs+" sub"+(x.subs===1?"":"s")+" · last post "+(x.last?ago(x.last.posted_on)+" · "+(FMT[x.last.format]||"format unknown"):"never"))),
         el("span",{class:"muted","aria-hidden":"true"},"›"))));
