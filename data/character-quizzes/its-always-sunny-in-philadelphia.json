@@ -1,0 +1,530 @@
+{
+  "slug": "its-always-sunny-in-philadelphia",
+  "show": "It's Always Sunny in Philadelphia",
+  "shortName": "Always Sunny",
+  "seoTitle": "It's Always Sunny Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the It's Always Sunny in Philadelphia test: 12 everyday questions reveal whether you're Charlie, Dennis, Mac, Dee, Frank, the Waitress, Cricket or Artemis — with your full character breakdown.",
+  "intro": "Are you the wild card, the golden god, or the one funding every bad idea? Answer 12 everyday questions about schemes, friends and bad decisions, and find out which It's Always Sunny character you are.",
+  "characters": [
+    {
+      "id": "charlie",
+      "name": "Charlie Kelly",
+      "emoji": "🐀",
+      "color": "#16a34a",
+      "title": "The Wild Card",
+      "summary": "Sweet, chaotic and full of ideas nobody else would ever have. You're a lot smarter than you look, in very specific ways.",
+      "description": [
+        "Like Charlie, you do the jobs nobody else will. He's Paddy's Pub's janitor, and the gang calls the worst tasks 'Charlie work'.",
+        "You're secretly talented. Charlie can barely read, but he plays piano, sings and even wrote his own musical, The Nightman Cometh.",
+        "You're loyal to a fault. Charlie has loved the Waitress for years, no matter how many times she turns him down."
+      ],
+      "strengths": [
+        "Creative",
+        "Loyal",
+        "Fearless"
+      ],
+      "flaw": "You commit to a terrible plan completely, and nobody can talk you out of it.",
+      "signature": "A rat stick, a notebook of song ideas and a bed you share with Frank.",
+      "clashReason": "they'd come up with a plan so strange you couldn't even argue with it"
+    },
+    {
+      "id": "dennis",
+      "name": "Dennis Reynolds",
+      "emoji": "💅",
+      "color": "#2563eb",
+      "title": "The Golden God",
+      "summary": "Vain, clever and very sure of himself. You think you're the smartest person in the room, and you'd like everyone to admit it.",
+      "description": [
+        "Like Dennis, you think you're above all this. He went to the University of Pennsylvania, and he never lets the gang forget it.",
+        "You've always got a system. Dennis has a step-by-step method for winning people over, which he calls the D.E.N.N.I.S. System.",
+        "You don't take criticism well. Dennis likes to think he's the voice of reason, but he snaps the moment anyone makes him feel insecure."
+      ],
+      "strengths": [
+        "Confident",
+        "Clever",
+        "Persuasive"
+      ],
+      "flaw": "One small insult and the whole calm, superior act falls apart.",
+      "signature": "A perfect hairline, a mirror nearby and a five-step plan for everything.",
+      "clashReason": "they'd explain, very slowly, why you're wrong about everything"
+    },
+    {
+      "id": "mac",
+      "name": "Mac",
+      "emoji": "🥋",
+      "color": "#b91c1c",
+      "title": "The Wannabe Tough Guy",
+      "summary": "Proud, loyal and desperate to look like a badass. You want respect, and you'd really like everyone to see your moves.",
+      "description": [
+        "Like Mac, you want people to think you're tough. He's Paddy's 'bouncer', and he's always bragging about his martial arts skills.",
+        "You care what people think more than you'd admit. Mac has spent his whole life trying to impress his dad, Luther.",
+        "You get there in the end. It takes him years, but Mac finally comes out and gets comfortable being himself."
+      ],
+      "strengths": [
+        "Loyal",
+        "Determined",
+        "Enthusiastic"
+      ],
+      "flaw": "You talk a much bigger game than you can actually play.",
+      "signature": "Cut-off sleeves, a karate stance and a lot of talk about being a badass.",
+      "clashReason": "they'd show off in front of you, then insist they meant to fall over"
+    },
+    {
+      "id": "dee",
+      "name": "Dee Reynolds",
+      "emoji": "🐦",
+      "color": "#db2777",
+      "title": "The Aspiring Star",
+      "summary": "Ambitious, dramatic and tougher than anyone gives you credit for. You were born for the spotlight, even if the spotlight disagrees.",
+      "description": [
+        "Like Dee, you dream big. She's a bartender at Paddy's who desperately wants to be an actress or a comedian.",
+        "You're your own worst enemy on stage. Dee has terrible stage fright, which doesn't help her acting career.",
+        "You can take a lot. The gang calls Dee a 'bird' and makes fun of her constantly, and she keeps coming back for more."
+      ],
+      "strengths": [
+        "Ambitious",
+        "Resilient",
+        "Bold"
+      ],
+      "flaw": "You want the attention so badly that you'll take any kind you can get.",
+      "signature": "A headshot nobody asked for, an audition outfit and a lot of comebacks.",
+      "clashReason": "they'd turn your big moment into their big moment"
+    },
+    {
+      "id": "frank",
+      "name": "Frank Reynolds",
+      "emoji": "🥚",
+      "color": "#a16207",
+      "title": "The Rich Lunatic",
+      "summary": "Rich, gross and up for absolutely anything. You've got the money to fund any bad idea, and you usually do.",
+      "description": [
+        "Like Frank, you love a scheme. He bought most of Paddy's Pub, and he pays for most of the gang's terrible plans.",
+        "You don't care how things look. Frank has plenty of money, but he chooses to live in a filthy apartment with Charlie.",
+        "You've given up on being respectable. Frank divorced his wife, Barbara, and moved in with Charlie to relive his misspent youth, however disgusting it gets."
+      ],
+      "strengths": [
+        "Generous",
+        "Fearless",
+        "Unashamed"
+      ],
+      "flaw": "You think anything is fine as long as you can pay your way out of it.",
+      "signature": "A wad of cash, a shady business deal and a toe knife.",
+      "clashReason": "they'd fund your idea, then make it much, much worse"
+    },
+    {
+      "id": "waitress",
+      "name": "The Waitress",
+      "emoji": "☕",
+      "color": "#7c3aed",
+      "title": "The Hopeless Romantic",
+      "summary": "Hard-working, bitter and trying to keep it all together. You keep falling for exactly the wrong person.",
+      "description": [
+        "Like the Waitress, you know how to work hard. She waits tables at a coffee shop near Paddy's Pub.",
+        "You fall for the wrong people. She's had a crush on Dennis for years, even though he treats her terribly.",
+        "You're trying to get your life on track. She's a recovering alcoholic, and she even becomes Charlie's sponsor. Nobody ever learns her name."
+      ],
+      "strengths": [
+        "Hard-working",
+        "Determined",
+        "Honest"
+      ],
+      "flaw": "You keep giving second chances to people who've earned none.",
+      "signature": "A coffee pot, a sigh and a crush you know is a terrible idea.",
+      "clashReason": "they'd be sick of your nonsense before you'd even said hello"
+    },
+    {
+      "id": "cricket",
+      "name": "Rickety Cricket",
+      "emoji": "🦗",
+      "color": "#64748b",
+      "title": "The Survivor",
+      "summary": "Long-suffering, unlucky and impossible to get rid of. Life keeps knocking you down, and you keep getting back up.",
+      "description": [
+        "Like Cricket, you used to have it all together. Matthew Mara was a priest before he got caught up with the gang.",
+        "You've had terrible luck. After the gang got involved in his life, Cricket lost his job and his home, and he's been in some truly awful situations.",
+        "You hold a grudge, but you keep turning up anyway. Cricket hates the gang for what they did to him, and he still keeps crossing paths with them."
+      ],
+      "strengths": [
+        "Resilient",
+        "Tough",
+        "Persistent"
+      ],
+      "flaw": "You keep trusting the people who've hurt you before.",
+      "signature": "A battered face, a long list of grudges and an old priest's collar.",
+      "clashReason": "they'd remind you of every bad thing you've ever done to them"
+    },
+    {
+      "id": "artemis",
+      "name": "Artemis",
+      "emoji": "🎭",
+      "color": "#0d9488",
+      "title": "The Free Spirit",
+      "summary": "Eccentric, fearless and totally shameless. You take your art very seriously, and you never apologise for being yourself.",
+      "description": [
+        "Like Artemis, you take your craft seriously. She's Dee's friend from acting class, and she gives every scene everything she's got.",
+        "You've got your own way of doing things. Artemis has some very strange habits, and she isn't embarrassed by any of them.",
+        "You're the closest thing to a normal friend the gang has. Artemis gets dragged into their schemes, and she somehow always goes along with it."
+      ],
+      "strengths": [
+        "Fearless",
+        "Committed",
+        "Open-minded"
+      ],
+      "flaw": "You overshare, and then you overshare some more.",
+      "signature": "A dramatic scarf, an acting exercise and absolutely no shame.",
+      "clashReason": "they'd tell you something about themselves you could never unhear"
+    }
+  ],
+  "questions": [
+    {
+      "text": "Your boss asks for a volunteer to clean up a disgusting mess. You...",
+      "options": [
+        {
+          "text": "Do it. Someone has to, and you don't mind getting your hands dirty",
+          "points": {
+            "charlie": 3
+          }
+        },
+        {
+          "text": "Point out that this is clearly beneath you",
+          "points": {
+            "dennis": 3
+          }
+        },
+        {
+          "text": "Volunteer someone else before anyone can volunteer you",
+          "points": {
+            "dee": 3
+          }
+        },
+        {
+          "text": "Do it, and keep anything valuable you find",
+          "points": {
+            "frank": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone leaves a harsh review of something you made. You...",
+      "options": [
+        {
+          "text": "Write a long reply explaining why they're wrong, then another one",
+          "points": {
+            "dee": 3
+          }
+        },
+        {
+          "text": "Decide they're jealous. Your work speaks for itself",
+          "points": {
+            "dennis": 3
+          }
+        },
+        {
+          "text": "Take it as a good sign. Real art always upsets someone",
+          "points": {
+            "artemis": 3
+          }
+        },
+        {
+          "text": "Shrug. You've had much worse days than this",
+          "points": {
+            "cricket": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your perfect Saturday night is...",
+      "options": [
+        {
+          "text": "The gym, then the bar, so everyone can see how hard you trained",
+          "points": {
+            "mac": 3
+          }
+        },
+        {
+          "text": "Staying in with something weird to eat and a half-finished craft project",
+          "points": {
+            "charlie": 3
+          }
+        },
+        {
+          "text": "Something experimental that most people would find too strange",
+          "points": {
+            "artemis": 3
+          }
+        },
+        {
+          "text": "A big night out that you don't remember the end of",
+          "points": {
+            "frank": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your friends come up with a plan to make some quick cash. You...",
+      "options": [
+        {
+          "text": "Put the money in, as long as you get a cut of everything",
+          "points": {
+            "frank": 3
+          }
+        },
+        {
+          "text": "Put yourself in charge. You're the only one with a brain",
+          "points": {
+            "dennis": 3
+          }
+        },
+        {
+          "text": "Insist on a part where you get to perform",
+          "points": {
+            "dee": 3
+          }
+        },
+        {
+          "text": "Say no. These things always end with someone getting hurt",
+          "points": {
+            "cricket": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone you like hasn't noticed you exist. You...",
+      "options": [
+        {
+          "text": "Keep showing up wherever they are, just in case",
+          "points": {
+            "charlie": 3
+          }
+        },
+        {
+          "text": "Keep hoping, even though you know they're bad news",
+          "points": {
+            "waitress": 3
+          }
+        },
+        {
+          "text": "Assume it's never going to happen. It never does",
+          "points": {
+            "cricket": 3
+          }
+        },
+        {
+          "text": "Just tell them. Directly. Possibly too directly",
+          "points": {
+            "artemis": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're asked to stand up and say a few words at a party. You...",
+      "options": [
+        {
+          "text": "Freeze, then say something you'll replay in your head for years",
+          "points": {
+            "dee": 3
+          }
+        },
+        {
+          "text": "Turn it into a full performance, with a song",
+          "points": {
+            "charlie": 3
+          }
+        },
+        {
+          "text": "Show everyone a few of your moves while you've got their attention",
+          "points": {
+            "mac": 3
+          }
+        },
+        {
+          "text": "Keep it short. The last thing you need is people looking at you",
+          "points": {
+            "cricket": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You find a wallet on the street. You...",
+      "options": [
+        {
+          "text": "Keep the cash, and get rid of the wallet",
+          "points": {
+            "frank": 3
+          }
+        },
+        {
+          "text": "Hand it in, then tell everyone what a good person you are",
+          "points": {
+            "mac": 3
+          }
+        },
+        {
+          "text": "Give it back, and quietly hope there's a reward",
+          "points": {
+            "cricket": 3
+          }
+        },
+        {
+          "text": "Hand it straight in. It's not worth the guilt",
+          "points": {
+            "waitress": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend asks what you honestly think of their new haircut. It's bad. You...",
+      "options": [
+        {
+          "text": "Tell them it's awful, and that you're worried about them as a person",
+          "points": {
+            "dennis": 3
+          }
+        },
+        {
+          "text": "Tell them the truth, then offer to cut it again yourself",
+          "points": {
+            "artemis": 3
+          }
+        },
+        {
+          "text": "Laugh, then go and tell everyone else",
+          "points": {
+            "mac": 3
+          }
+        },
+        {
+          "text": "Tell them it looks great. You'd hate to upset them",
+          "points": {
+            "charlie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You make a mistake at work, and someone else gets the blame. You...",
+      "options": [
+        {
+          "text": "Let them take it, and offer to buy them a drink later",
+          "points": {
+            "frank": 3
+          }
+        },
+        {
+          "text": "Join in blaming them. Loudly",
+          "points": {
+            "dennis": 3
+          }
+        },
+        {
+          "text": "Feel awful, and quietly try to make it up to them",
+          "points": {
+            "waitress": 3
+          }
+        },
+        {
+          "text": "Deny everything. You'd never make a mistake like that",
+          "points": {
+            "mac": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You sign up for an evening class. On the first night, you...",
+      "options": [
+        {
+          "text": "Sit at the front and treat it like the most important thing in the world",
+          "points": {
+            "artemis": 3
+          }
+        },
+        {
+          "text": "Get nervous, then try way too hard to be the best",
+          "points": {
+            "dee": 3
+          }
+        },
+        {
+          "text": "Work out who in the room you could date",
+          "points": {
+            "dennis": 3
+          }
+        },
+        {
+          "text": "Leave at the break. You knew you'd hate it",
+          "points": {
+            "waitress": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You own a bar with your friends, and it never has any customers. You...",
+      "options": [
+        {
+          "text": "Come up with a big, insane plan to fix it by Friday",
+          "points": {
+            "charlie": 3
+          }
+        },
+        {
+          "text": "Remind everyone whose money is keeping the place open",
+          "points": {
+            "frank": 3
+          }
+        },
+        {
+          "text": "Turn it into a stage and put on a show",
+          "points": {
+            "dee": 3
+          }
+        },
+        {
+          "text": "Make yourself head of security and wait for trouble",
+          "points": {
+            "mac": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "Your group of friends are, honestly, terrible people, and they've let you down again. You...",
+      "options": [
+        {
+          "text": "Keep hanging around. They're the only friends you've got",
+          "points": {
+            "charlie": 3
+          }
+        },
+        {
+          "text": "Swear you'll get them back for it, one day",
+          "points": {
+            "cricket": 3
+          }
+        },
+        {
+          "text": "Tell yourself this is the last time. Again",
+          "points": {
+            "waitress": 3
+          }
+        },
+        {
+          "text": "Go along with whatever they're doing next. Why fight it?",
+          "points": {
+            "artemis": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

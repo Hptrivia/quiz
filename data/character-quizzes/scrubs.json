@@ -1,0 +1,530 @@
+{
+  "slug": "scrubs",
+  "show": "Scrubs",
+  "shortName": "Scrubs",
+  "seoTitle": "Scrubs Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the Scrubs test: 12 everyday questions reveal whether you're J.D., Turk, Elliot, Carla, Dr. Cox, Dr. Kelso, the Janitor or Ted — with your full character breakdown.",
+  "intro": "Are you the daydreamer, the grumpy mentor, or the one plotting revenge with a mop? Answer 12 everyday questions about work, friends and bad days, and find out which Scrubs character you are.",
+  "characters": [
+    {
+      "id": "jd",
+      "name": "J.D.",
+      "emoji": "💭",
+      "color": "#2563eb",
+      "title": "The Daydreamer",
+      "summary": "Sweet, sensitive and lost in your own head. You feel everything, and you'd really like someone to tell you you're doing great.",
+      "description": [
+        "Like J.D., you live half in your imagination. He narrates the show, and he's always drifting off into wild daydreams.",
+        "You want a mentor's approval more than anything. J.D. looks up to Dr. Cox, who calls him 'Newbie' or a girl's name instead of his real one.",
+        "You're a big softie. Carla calls J.D. 'Bambi', and his best friend Turk shares custody of a stuffed dog called Rowdy with him."
+      ],
+      "strengths": [
+        "Kind",
+        "Imaginative",
+        "Loyal"
+      ],
+      "flaw": "You overthink everything, especially things that haven't happened yet.",
+      "signature": "A daydream mid-conversation, a best friend on speed dial and a stuffed dog called Rowdy.",
+      "clashReason": "they'd need you to tell them they did a good job, every single day"
+    },
+    {
+      "id": "turk",
+      "name": "Turk",
+      "emoji": "😎",
+      "color": "#0d9488",
+      "title": "The Cool Best Friend",
+      "summary": "Confident, funny and loyal to the end. You take your work seriously and yourself not at all.",
+      "description": [
+        "Like Turk, you're good at what you do, and you know it. He's a surgeon at Sacred Heart, and he works his way up to chief of surgery.",
+        "You're the best friend everyone wants. Turk and J.D. have been inseparable since college, and J.D. is his best man.",
+        "You're a family man at heart. Turk marries Carla, and they have a daughter, Izzy."
+      ],
+      "strengths": [
+        "Confident",
+        "Loyal",
+        "Fun"
+      ],
+      "flaw": "You're so relaxed that you sometimes miss when things are actually serious.",
+      "signature": "A pair of scrubs, a big grin and a best friend who's basically family.",
+      "clashReason": "they'd laugh it off when you wanted them to take it seriously"
+    },
+    {
+      "id": "elliot",
+      "name": "Elliot Reid",
+      "emoji": "😬",
+      "color": "#db2777",
+      "title": "The Neurotic Overachiever",
+      "summary": "Smart, driven and wonderfully awkward. You work harder than anyone, and worry harder too.",
+      "description": [
+        "Like Elliot, you're desperate to prove yourself. She comes from a wealthy family, and she works incredibly hard to be taken seriously as a doctor.",
+        "You get flustered. When Elliot is stressed or ignored, her voice gets higher and higher.",
+        "You make your own way. Elliot has a difficult relationship with her mother, and she goes on to run her own private practice."
+      ],
+      "strengths": [
+        "Smart",
+        "Driven",
+        "Honest"
+      ],
+      "flaw": "You say exactly the wrong thing at exactly the wrong moment, then keep talking.",
+      "signature": "A colour-coded study plan, an awkward laugh and a voice that goes up an octave under pressure.",
+      "clashReason": "they'd panic out loud about things you hadn't even thought to worry about"
+    },
+    {
+      "id": "carla",
+      "name": "Carla Espinosa",
+      "emoji": "💉",
+      "color": "#b91c1c",
+      "title": "The Mother Hen",
+      "summary": "Caring, fierce and in charge. You look after everyone, and you know everybody's business.",
+      "description": [
+        "Like Carla, you look after people. She's the head nurse at Sacred Heart, and she's a mother figure to the young doctors.",
+        "You cover for the people you love. Carla often fixes the interns' mistakes before anyone else notices them.",
+        "You give everyone a nickname. Carla calls J.D. 'Bambi', and she marries his best friend, Turk."
+      ],
+      "strengths": [
+        "Caring",
+        "Fierce",
+        "Wise"
+      ],
+      "flaw": "You can't stay out of other people's business, even when they ask you to.",
+      "signature": "A clipboard, a stern look and a nickname for everyone you love.",
+      "clashReason": "they'd fix your life for you, whether you asked them to or not"
+    },
+    {
+      "id": "cox",
+      "name": "Dr. Cox",
+      "emoji": "🏀",
+      "color": "#c2410c",
+      "title": "The Grumpy Mentor",
+      "summary": "Brilliant, sarcastic and secretly soft. You'd rather give a ten-minute rant than admit you care.",
+      "description": [
+        "Like Dr. Cox, you're famous for your rants. He's a brilliant, bitter senior doctor who can tear anyone apart with words.",
+        "You care more than you let on. Dr. Cox is J.D.'s mentor, but he'd never admit it, and he calls him 'Newbie' or a girl's name instead.",
+        "You work out your feelings on your own. Dr. Cox plays basketball alone in the parking lot, and he eventually becomes chief of medicine."
+      ],
+      "strengths": [
+        "Brilliant",
+        "Honest",
+        "Protective"
+      ],
+      "flaw": "You'd rather push people away than let them see you care.",
+      "signature": "A basketball, a ten-minute rant and a nickname you'll never live down.",
+      "clashReason": "they'd tear your idea apart in a five-minute speech, then help you fix it"
+    },
+    {
+      "id": "kelso",
+      "name": "Dr. Kelso",
+      "emoji": "💼",
+      "color": "#475569",
+      "title": "The Bottom-Line Boss",
+      "summary": "Calm, practical and very hard to impress. You run things your way, and you don't lose sleep over it.",
+      "description": [
+        "Like Dr. Kelso, you're all about the bottom line. He's Sacred Heart's chief of medicine for most of the show, and money always comes first.",
+        "You keep your soft side well hidden. Kelso is cold and blunt most of the time, but there are hints that he cares more than he shows.",
+        "You stay in the game. Kelso retires, then comes back to the hospital as a professor."
+      ],
+      "strengths": [
+        "Practical",
+        "Calm",
+        "Decisive"
+      ],
+      "flaw": "You'd cut almost anything if it saved a bit of money.",
+      "signature": "A budget sheet, a firm handshake and a pat on the shoulder that means 'no'.",
+      "clashReason": "they'd turn down your big idea because it costs too much"
+    },
+    {
+      "id": "janitor",
+      "name": "The Janitor",
+      "emoji": "🔧",
+      "color": "#65a30d",
+      "title": "The Prankster",
+      "summary": "Mysterious, mischievous and impossible to read. You hold a grudge, and you have a lot of free time.",
+      "description": [
+        "Like the Janitor, you never forget a slight. He decided early on that J.D. was his enemy, and he's been pranking him ever since.",
+        "You have your own little crew. The Janitor runs the Brain Trust, a group of hospital staff who spend their time scheming.",
+        "Nobody really knows who you are. The Janitor's own name is a mystery for most of the show, and he tells so many stories that nobody can tell which are true."
+      ],
+      "strengths": [
+        "Clever",
+        "Patient",
+        "Mysterious"
+      ],
+      "flaw": "Once someone's on your list, there's no getting off it.",
+      "signature": "A mop, a grudge and a story that may or may not be true.",
+      "clashReason": "they'd decide you were their enemy over something tiny, and mean it"
+    },
+    {
+      "id": "ted",
+      "name": "Ted Buckland",
+      "emoji": "🎵",
+      "color": "#7c3aed",
+      "title": "The Sad Sack",
+      "summary": "Nervous, gloomy and quietly lovable. Things never seem to go your way, but you keep showing up.",
+      "description": [
+        "Like Ted, you expect the worst. He's the hospital's lawyer, and he has never won a case.",
+        "You do whatever the boss says. Ted spends most of the show being bossed around by Dr. Kelso.",
+        "You've got a hidden talent. Ted leads the Worthless Peons, the hospital's a cappella group, and he finally finds love with Stephanie Gooch."
+      ],
+      "strengths": [
+        "Loyal",
+        "Musical",
+        "Gentle"
+      ],
+      "flaw": "You give up before you've even started.",
+      "signature": "A briefcase, a nervous sweat and a four-part harmony.",
+      "clashReason": "they'd find the bad side of every good news story you told them"
+    }
+  ],
+  "questions": [
+    {
+      "text": "It's your first day at a new job. You...",
+      "options": [
+        {
+          "text": "Daydream about how great you'll be, and miss half the instructions",
+          "points": {
+            "jd": 3
+          }
+        },
+        {
+          "text": "Know everyone's name, and most of their business, by lunch",
+          "points": {
+            "carla": 3
+          }
+        },
+        {
+          "text": "Over-prepare, then say something weird to your new boss",
+          "points": {
+            "elliot": 3
+          }
+        },
+        {
+          "text": "Keep your head down and hope nobody notices you",
+          "points": {
+            "ted": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A coworker asks you for advice. You...",
+      "options": [
+        {
+          "text": "Give it to them straight, in a ten-minute rant they didn't ask for",
+          "points": {
+            "cox": 3
+          }
+        },
+        {
+          "text": "Tell them what they want to hear. Arguing isn't worth it",
+          "points": {
+            "ted": 3
+          }
+        },
+        {
+          "text": "Make up some terrible advice, just to see what happens",
+          "points": {
+            "janitor": 3
+          }
+        },
+        {
+          "text": "Hug them, then deliver a long, heartfelt speech",
+          "points": {
+            "jd": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your perfect day off is...",
+      "options": [
+        {
+          "text": "Hanging out with your best friend, doing absolutely nothing",
+          "points": {
+            "turk": 3
+          }
+        },
+        {
+          "text": "Shooting hoops on your own, with nobody trying to talk to you",
+          "points": {
+            "cox": 3
+          }
+        },
+        {
+          "text": "A long lunch somewhere nice, on someone else's money",
+          "points": {
+            "kelso": 3
+          }
+        },
+        {
+          "text": "Building something strange in the garage that nobody's allowed to see",
+          "points": {
+            "janitor": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone at work keeps getting on your nerves. You...",
+      "options": [
+        {
+          "text": "Make their life a tiny bit worse every day, for as long as it takes",
+          "points": {
+            "janitor": 3
+          }
+        },
+        {
+          "text": "Give them a nickname they'll never shake off",
+          "points": {
+            "cox": 3
+          }
+        },
+        {
+          "text": "Laugh it off. Life's too short",
+          "points": {
+            "turk": 3
+          }
+        },
+        {
+          "text": "Have a quiet word with them. Then a less quiet one",
+          "points": {
+            "carla": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You've made a mistake at work that could get you in trouble. You...",
+      "options": [
+        {
+          "text": "Admit it straight away, then apologise far too many times",
+          "points": {
+            "elliot": 3
+          }
+        },
+        {
+          "text": "Picture the worst thing that could happen, in vivid detail",
+          "points": {
+            "jd": 3
+          }
+        },
+        {
+          "text": "Make sure the paperwork shows it wasn't your fault",
+          "points": {
+            "kelso": 3
+          }
+        },
+        {
+          "text": "Panic, and assume you'll get the blame either way",
+          "points": {
+            "ted": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your friends want to throw you a surprise party. You...",
+      "options": [
+        {
+          "text": "Ask them not to. You hate being the centre of attention",
+          "points": {
+            "ted": 3
+          }
+        },
+        {
+          "text": "Act grumpy about the whole thing, then enjoy every second",
+          "points": {
+            "cox": 3
+          }
+        },
+        {
+          "text": "Turn up in your best outfit and own the dance floor",
+          "points": {
+            "turk": 3
+          }
+        },
+        {
+          "text": "Help plan it yourself. You don't trust anyone else to get it right",
+          "points": {
+            "carla": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your boss offers you a raise if you take on the jobs nobody else wants. You...",
+      "options": [
+        {
+          "text": "Take the money, then quietly find ways to skip the jobs",
+          "points": {
+            "janitor": 3
+          }
+        },
+        {
+          "text": "Say yes before they've finished the sentence. You'd love them to be proud of you",
+          "points": {
+            "jd": 3
+          }
+        },
+        {
+          "text": "Negotiate hard. They clearly need you more than you need them",
+          "points": {
+            "kelso": 3
+          }
+        },
+        {
+          "text": "Turn it down. Your free time is worth more than that",
+          "points": {
+            "turk": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your friend has just been through a bad breakup. You...",
+      "options": [
+        {
+          "text": "Bring snacks and let them cry on your shoulder all night",
+          "points": {
+            "carla": 3
+          }
+        },
+        {
+          "text": "Try to cheer them up, and somehow end up talking about yourself",
+          "points": {
+            "elliot": 3
+          }
+        },
+        {
+          "text": "Turn up with ice cream and a sad film, and cry more than they do",
+          "points": {
+            "jd": 3
+          }
+        },
+        {
+          "text": "Send a text. Feelings aren't really your area",
+          "points": {
+            "kelso": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone tells you a story that sounds totally made up. You...",
+      "options": [
+        {
+          "text": "Tell an even bigger one back, and swear it's true",
+          "points": {
+            "janitor": 3
+          }
+        },
+        {
+          "text": "Believe it, then start worrying about what it means for you",
+          "points": {
+            "ted": 3
+          }
+        },
+        {
+          "text": "Fact-check it on your phone while they're still talking",
+          "points": {
+            "elliot": 3
+          }
+        },
+        {
+          "text": "Nod, smile and stop listening",
+          "points": {
+            "kelso": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're put in charge of training the new person at work. You...",
+      "options": [
+        {
+          "text": "Go hard on them. They'll thank you for it one day",
+          "points": {
+            "cox": 3
+          }
+        },
+        {
+          "text": "Look after them like they're your own kid",
+          "points": {
+            "carla": 3
+          }
+        },
+        {
+          "text": "Give them all the jobs you hate doing",
+          "points": {
+            "janitor": 3
+          }
+        },
+        {
+          "text": "Try a bit too hard to be the cool, fun mentor",
+          "points": {
+            "jd": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You work at a busy hospital that's short of money, and your boss tells you to cut corners. You...",
+      "options": [
+        {
+          "text": "Refuse, and tell your boss exactly what they can do with the budget",
+          "points": {
+            "cox": 3
+          }
+        },
+        {
+          "text": "Agree, then feel terrible about it all night",
+          "points": {
+            "ted": 3
+          }
+        },
+        {
+          "text": "Make the cuts. Somebody has to keep the lights on",
+          "points": {
+            "kelso": 3
+          }
+        },
+        {
+          "text": "Quietly find a way round it so nobody gets hurt",
+          "points": {
+            "elliot": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You've just finished a brutal 30-hour shift at the hospital. You...",
+      "options": [
+        {
+          "text": "Head straight home. Family time beats everything",
+          "points": {
+            "turk": 3
+          }
+        },
+        {
+          "text": "Feel so proud you need to tell someone, anyone, about your day",
+          "points": {
+            "jd": 3
+          }
+        },
+        {
+          "text": "Stay a bit longer to make sure everyone else is okay",
+          "points": {
+            "carla": 3
+          }
+        },
+        {
+          "text": "Cry in the car, then call your mum and regret it",
+          "points": {
+            "elliot": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

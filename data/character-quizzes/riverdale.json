@@ -2,9 +2,9 @@
   "slug": "riverdale",
   "show": "Riverdale",
   "shortName": "Riverdale",
-  "seoTitle": "Riverdale Test: Which Character Are You? (12 Questions)",
-  "metaDescription": "Take the Riverdale test: 12 everyday questions reveal whether you're Archie, Betty, Veronica, Jughead, Cheryl, Toni, Reggie or Hiram — with your full character breakdown.",
-  "intro": "Are you the hero, the girl next door with a dark side, or the queen bee? Answer 12 everyday questions about loyalty, secrets and small-town drama, and find out which Riverdale character you are.",
+  "seoTitle": "Riverdale Test: Which Character Are You? (11 Questions)",
+  "metaDescription": "Take the Riverdale test: 11 everyday questions reveal whether you're Archie, Betty, Veronica, Jughead, Cheryl, Toni, Reggie or Hiram — with your full character breakdown.",
+  "intro": "Are you the hero, the girl next door with a dark side, or the queen bee? Answer 11 everyday questions about loyalty, secrets and small-town drama, and find out which Riverdale character you are.",
   "characters": [
     {
       "id": "archie",
@@ -176,35 +176,6 @@
     }
   ],
   "questions": [
-    {
-      "text": "Your town is throwing a big summer festival. You...",
-      "options": [
-        {
-          "text": "Sign up to play a song on the main stage",
-          "points": {
-            "archie": 3
-          }
-        },
-        {
-          "text": "Make an entrance so dramatic nobody remembers the festival",
-          "points": {
-            "cheryl": 3
-          }
-        },
-        {
-          "text": "Write a scathing piece about what the festival is really covering up",
-          "points": {
-            "jughead": 3
-          }
-        },
-        {
-          "text": "Quietly fund the whole thing. Now the town is in your debt",
-          "points": {
-            "hiram": 3
-          }
-        }
-      ]
-    },
     {
       "text": "A friend is clearly hiding something from you. You...",
       "options": [

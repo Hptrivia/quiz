@@ -1,0 +1,551 @@
+{
+  "slug": "arrested-development",
+  "show": "Arrested Development",
+  "shortName": "Arrested Development",
+  "seoTitle": "Arrested Development Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the Arrested Development test: 12 everyday questions reveal whether you're Michael, George Michael, Lindsay, Tobias, Gob, Buster, Lucille, George Sr. or Maeby — with your full character breakdown.",
+  "intro": "Are you the responsible one, the showman, or the one who always has money hidden somewhere? Answer 12 everyday questions about family, work and bad decisions, and find out which Arrested Development character you are.",
+  "characters": [
+    {
+      "id": "michael",
+      "name": "Michael Bluth",
+      "emoji": "🧭",
+      "color": "#2563eb",
+      "title": "The Responsible One",
+      "summary": "Sensible, hard-working and holding everything together. You're the only adult in the room, and you'd like a little credit for it.",
+      "description": [
+        "Like Michael, you're the one who keeps things running. When his father is arrested, Michael takes over the Bluth Company and tries to keep the family afloat.",
+        "You're the sane one in a very strange family. Michael is the show's straight man, surrounded by people who make terrible decisions.",
+        "You're a devoted parent. Michael is a widower raising his son, George Michael, and he wants to set a good example."
+      ],
+      "strengths": [
+        "Responsible",
+        "Hard-working",
+        "Loyal"
+      ],
+      "flaw": "You're so sure you're the good one that you miss your own mistakes.",
+      "signature": "A sensible suit, a disappointed sigh and a family that won't let you leave.",
+      "clashReason": "they'd remind you, again, that they're the only responsible one"
+    },
+    {
+      "id": "georgemichael",
+      "name": "George Michael Bluth",
+      "emoji": "🍌",
+      "color": "#ca8a04",
+      "title": "The Awkward Good Kid",
+      "summary": "Sweet, honest and painfully awkward. You try to do the right thing, and you worry about it constantly.",
+      "description": [
+        "Like George Michael, you're a hard worker. He works at the family's frozen banana stand.",
+        "You get flustered easily. George Michael is quiet, obedient and very, very awkward, especially around his cousin Maeby.",
+        "One small lie can get out of hand. In season 4, George Michael's college software idea, FakeBlock, turns into a much bigger story than he planned."
+      ],
+      "strengths": [
+        "Honest",
+        "Hard-working",
+        "Kind"
+      ],
+      "flaw": "You'd rather say nothing than risk saying the wrong thing.",
+      "signature": "A banana stand apron, a nervous stammer and a crush you'll never mention.",
+      "clashReason": "they'd get so awkward around you that you'd start feeling awkward too"
+    },
+    {
+      "id": "lindsay",
+      "name": "Lindsay Bluth Fünke",
+      "emoji": "👜",
+      "color": "#db2777",
+      "title": "The Socialite",
+      "summary": "Glamorous, vain and very fond of a good cause, as long as people are watching.",
+      "description": [
+        "Like Lindsay, you like the finer things. She's vain and materialistic, and she spends money the family doesn't have.",
+        "You care about causes, at least in public. Lindsay backs whatever charity is trendy, mostly for the social standing.",
+        "You're full of surprises. In season 3, Lindsay finds out she was adopted, and that she's older than she thought."
+      ],
+      "strengths": [
+        "Stylish",
+        "Confident",
+        "Social"
+      ],
+      "flaw": "You care more about how something looks than what it actually does.",
+      "signature": "A designer bag, a charity gala and a protest sign that matches your outfit.",
+      "clashReason": "they'd turn up to help you, mainly for the photos"
+    },
+    {
+      "id": "tobias",
+      "name": "Tobias Fünke",
+      "emoji": "💙",
+      "color": "#0ea5e9",
+      "title": "The Hopeful Actor",
+      "summary": "Cheerful, clueless and endlessly hopeful. You never notice how your words sound, and you never stop chasing your dream.",
+      "description": [
+        "Like Tobias, you're always reinventing yourself. He's a former psychiatrist who lost his licence and decided to become an actor.",
+        "You never give up on a dream. Tobias paints himself blue just in case the Blue Man Group ever calls him.",
+        "You have no idea how you come across. Tobias is a 'never-nude', and almost everything he says comes out sounding wrong."
+      ],
+      "strengths": [
+        "Optimistic",
+        "Persistent",
+        "Enthusiastic"
+      ],
+      "flaw": "You don't notice when everyone in the room is cringing at you.",
+      "signature": "Blue paint, a headshot and a dream you'll never give up.",
+      "clashReason": "they'd say something so awkward you'd have to leave the room"
+    },
+    {
+      "id": "gob",
+      "name": "Gob Bluth",
+      "emoji": "🎩",
+      "color": "#7c3aed",
+      "title": "The Showman",
+      "summary": "Flashy, desperate and full of bad ideas. You want everyone to be impressed, especially your dad.",
+      "description": [
+        "Like Gob, you love an audience. He's a magician, and he insists you call them illusions, not tricks. They usually go wrong.",
+        "You make a big entrance. 'The Final Countdown' plays during Gob's biggest illusions.",
+        "You know when you've messed up, eventually. Gob's line 'I've made a huge mistake' becomes the family's catchphrase. All he really wants is his father's approval."
+      ],
+      "strengths": [
+        "Confident",
+        "Bold",
+        "Entertaining"
+      ],
+      "flaw": "You'd rather do something spectacular and wrong than something boring and right.",
+      "signature": "A Segway, an illusion that's about to go wrong and a very dramatic soundtrack.",
+      "clashReason": "they'd turn your quiet evening into a magic show nobody asked for"
+    },
+    {
+      "id": "buster",
+      "name": "Buster Bluth",
+      "emoji": "🪝",
+      "color": "#16a34a",
+      "title": "The Mummy's Boy",
+      "summary": "Sweet, anxious and a bit sheltered. You find the world a lot, and you'd really like your mum to sort it out.",
+      "description": [
+        "Like Buster, you're close to your mother. Buster depends on his mother, Lucille, for almost everything.",
+        "You get nervous easily. Buster is childlike and anxious, and new situations can be overwhelming for him.",
+        "You keep going, whatever happens. Buster loses his left hand to a seal, and he carries on, hook and all."
+      ],
+      "strengths": [
+        "Sweet",
+        "Loyal",
+        "Curious"
+      ],
+      "flaw": "You'd rather someone else made the decision, every time.",
+      "signature": "A hook for a hand and a phone with only one number in it.",
+      "clashReason": "they'd ask their mum before agreeing to anything with you"
+    },
+    {
+      "id": "lucille",
+      "name": "Lucille Bluth",
+      "emoji": "🍸",
+      "color": "#991b1b",
+      "title": "The Matriarch",
+      "summary": "Sharp, controlling and devastatingly cutting. You run the family, and you never let anyone forget it.",
+      "description": [
+        "Like Lucille, you're in charge. She's the Bluth family's domineering mother, and she manipulates all of her children.",
+        "You've got expensive tastes. Lucille keeps up a lavish lifestyle with money the company doesn't really have.",
+        "You can end a conversation with one look. Lucille is famous for her cutting one-liners, usually with a drink in her hand."
+      ],
+      "strengths": [
+        "Commanding",
+        "Witty",
+        "Strategic"
+      ],
+      "flaw": "You'd rather control people than trust them.",
+      "signature": "A cocktail, a raised eyebrow and a remark nobody recovers from.",
+      "clashReason": "they'd find your weakest spot and comment on it, beautifully"
+    },
+    {
+      "id": "georgesr",
+      "name": "George Bluth Sr.",
+      "emoji": "💰",
+      "color": "#475569",
+      "title": "The Schemer",
+      "summary": "Shady, crafty and always working an angle. You've always got a plan, and there's always money hidden somewhere.",
+      "description": [
+        "Like George Sr., you always have a scheme. He founded the Bluth Company, and he spends much of the show in prison or in hiding.",
+        "You plan ahead, in your own way. 'There's always money in the banana stand,' he tells Michael, and he means it: he hid $250,000 inside it.",
+        "You'll do whatever it takes to get out of trouble. George Sr. escapes, fakes his death and keeps trying to control the family business."
+      ],
+      "strengths": [
+        "Cunning",
+        "Resourceful",
+        "Persuasive"
+      ],
+      "flaw": "You can't help turning every situation into a deal.",
+      "signature": "A hidden stash of cash, a secret plan and a very confusing lesson.",
+      "clashReason": "they'd teach you a lesson you didn't understand until years later"
+    },
+    {
+      "id": "maeby",
+      "name": "Maeby Fünke",
+      "emoji": "🎬",
+      "color": "#0d9488",
+      "title": "The Hustler",
+      "summary": "Sarcastic, clever and always running a scheme. Nobody's watching you, so you might as well make it pay.",
+      "description": [
+        "Like Maeby, you've learned to look after yourself. Her parents barely notice her, so she's turned scheming into a skill.",
+        "You can bluff your way into anything. As a teenager, Maeby briefly becomes a movie studio executive.",
+        "You keep your cool. Maeby is sarcastic, crafty and almost impossible to fool, even by her own family."
+      ],
+      "strengths": [
+        "Clever",
+        "Confident",
+        "Resourceful"
+      ],
+      "flaw": "You'd rather run a scam than ask anyone for help.",
+      "signature": "A fake job title, a straight face and a scheme already in motion.",
+      "clashReason": "they'd talk you into something before you'd noticed what was happening"
+    }
+  ],
+  "questions": [
+    {
+      "text": "Your family is in the middle of a crisis. You...",
+      "options": [
+        {
+          "text": "Take charge and fix it, then make sure everyone knows you did",
+          "points": {
+            "michael": 3
+          }
+        },
+        {
+          "text": "Blame someone else, preferably someone in the room",
+          "points": {
+            "lucille": 3
+          }
+        },
+        {
+          "text": "Call a family meeting, and teach everyone a very confusing lesson",
+          "points": {
+            "georgesr": 3
+          }
+        },
+        {
+          "text": "Put on a big show to distract everyone",
+          "points": {
+            "gob": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend asks for help with something you know nothing about. You...",
+      "options": [
+        {
+          "text": "Say yes, and fake it with total confidence",
+          "points": {
+            "maeby": 3
+          }
+        },
+        {
+          "text": "Jump in, misunderstand all of it, and stay cheerful throughout",
+          "points": {
+            "tobias": 3
+          }
+        },
+        {
+          "text": "Agree, then lie awake worrying about it",
+          "points": {
+            "georgemichael": 3
+          }
+        },
+        {
+          "text": "Say no. You'd only embarrass yourself",
+          "points": {
+            "buster": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your perfect afternoon is...",
+      "options": [
+        {
+          "text": "Shopping for something you definitely don't need",
+          "points": {
+            "lindsay": 3
+          }
+        },
+        {
+          "text": "Lunch with your mother, who orders for you",
+          "points": {
+            "buster": 3
+          }
+        },
+        {
+          "text": "Performing for anyone who'll watch",
+          "points": {
+            "gob": 3
+          }
+        },
+        {
+          "text": "Rehearsing for an audition you haven't even got yet",
+          "points": {
+            "tobias": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone at a party says something you think is ridiculous. You...",
+      "options": [
+        {
+          "text": "Make one cutting remark, then sip your drink",
+          "points": {
+            "lucille": 3
+          }
+        },
+        {
+          "text": "Play along, and see what you can get out of them",
+          "points": {
+            "maeby": 3
+          }
+        },
+        {
+          "text": "Nod politely and try very hard not to be awkward",
+          "points": {
+            "georgemichael": 3
+          }
+        },
+        {
+          "text": "Calmly explain why they're wrong",
+          "points": {
+            "michael": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You make a big mistake at work. You...",
+      "options": [
+        {
+          "text": "Realise straight away that you've messed up, badly",
+          "points": {
+            "gob": 3
+          }
+        },
+        {
+          "text": "Cover it up, then find someone else to take the fall",
+          "points": {
+            "georgesr": 3
+          }
+        },
+        {
+          "text": "Own up straight away, and expect a bit of credit for your honesty",
+          "points": {
+            "michael": 3
+          }
+        },
+        {
+          "text": "Panic, and hide somewhere until it blows over",
+          "points": {
+            "buster": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "There's a big charity event coming up. You...",
+      "options": [
+        {
+          "text": "Turn up mainly to be photographed looking generous",
+          "points": {
+            "lindsay": 3
+          }
+        },
+        {
+          "text": "Donate, as long as your name goes on something",
+          "points": {
+            "lucille": 3
+          }
+        },
+        {
+          "text": "Offer free therapy sessions to everyone there",
+          "points": {
+            "tobias": 3
+          }
+        },
+        {
+          "text": "Skip it. Nobody's checking whether you went",
+          "points": {
+            "maeby": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your boss offers you a promotion with a lot of responsibility. You...",
+      "options": [
+        {
+          "text": "Take it. Somebody sensible has to",
+          "points": {
+            "michael": 3
+          }
+        },
+        {
+          "text": "Accept, then hand all the actual work to someone else",
+          "points": {
+            "lindsay": 3
+          }
+        },
+        {
+          "text": "Turn it down. Responsibility makes you nervous",
+          "points": {
+            "buster": 3
+          }
+        },
+        {
+          "text": "Say yes, and immediately ask for a bigger office",
+          "points": {
+            "gob": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone asks you to keep a secret. You...",
+      "options": [
+        {
+          "text": "Keep it, but it eats away at you",
+          "points": {
+            "georgemichael": 3
+          }
+        },
+        {
+          "text": "Keep it, and save it for when it's useful",
+          "points": {
+            "georgesr": 3
+          }
+        },
+        {
+          "text": "Accidentally let it slip within the hour",
+          "points": {
+            "tobias": 3
+          }
+        },
+        {
+          "text": "Work out who'd pay the most to hear it",
+          "points": {
+            "maeby": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You find out a family member has been lying to you. You...",
+      "options": [
+        {
+          "text": "Threaten to walk away from the whole family. Again",
+          "points": {
+            "michael": 3
+          }
+        },
+        {
+          "text": "Get upset, then let your mum decide how you should feel",
+          "points": {
+            "buster": 3
+          }
+        },
+        {
+          "text": "Lie right back, and do it better",
+          "points": {
+            "lucille": 3
+          }
+        },
+        {
+          "text": "Shrug. Honestly, who doesn't lie?",
+          "points": {
+            "lindsay": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone pays you a compliment. You...",
+      "options": [
+        {
+          "text": "Wonder what they're after",
+          "points": {
+            "georgesr": 3
+          }
+        },
+        {
+          "text": "Blush, and say something deeply awkward",
+          "points": {
+            "georgemichael": 3
+          }
+        },
+        {
+          "text": "Agree with them. You do look great",
+          "points": {
+            "lindsay": 3
+          }
+        },
+        {
+          "text": "Hug them. For slightly too long",
+          "points": {
+            "buster": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your family's business is under investigation, and a family member has just been arrested. You...",
+      "options": [
+        {
+          "text": "Keep the company running and the family out of trouble",
+          "points": {
+            "michael": 3
+          }
+        },
+        {
+          "text": "Quietly start moving money around before the auditors arrive",
+          "points": {
+            "georgesr": 3
+          }
+        },
+        {
+          "text": "Carry on living exactly as before. Appearances matter",
+          "points": {
+            "lucille": 3
+          }
+        },
+        {
+          "text": "See it as your big chance to finally prove yourself to the family",
+          "points": {
+            "gob": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "Your family has lost all its money, but nobody will admit it. You...",
+      "options": [
+        {
+          "text": "Start a little side hustle and tell nobody",
+          "points": {
+            "maeby": 3
+          }
+        },
+        {
+          "text": "Take any job you can get, and work every shift",
+          "points": {
+            "georgemichael": 3
+          }
+        },
+        {
+          "text": "Find a rich new friend, fast",
+          "points": {
+            "lindsay": 3
+          }
+        },
+        {
+          "text": "Throw yourself into acting. Your big break is coming",
+          "points": {
+            "tobias": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

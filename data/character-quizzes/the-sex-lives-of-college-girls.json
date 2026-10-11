@@ -2,9 +2,9 @@
   "slug": "the-sex-lives-of-college-girls",
   "show": "The Sex Lives of College Girls",
   "shortName": "Sex Lives of College Girls",
-  "seoTitle": "The Sex Lives of College Girls Test: Which Character Are You? (12 Questions)",
-  "metaDescription": "Take The Sex Lives of College Girls test: 12 everyday questions reveal whether you're Kimberly, Bela, Leighton, Whitney or Kacey — with your full character breakdown.",
-  "intro": "Are you the hard worker, the comedian, or the ice queen with a secret? Answer 12 everyday questions about college, friendship and finding yourself, and find out which character from The Sex Lives of College Girls you are.",
+  "seoTitle": "The Sex Lives of College Girls Test: Which Character Are You? (10 Questions)",
+  "metaDescription": "Take The Sex Lives of College Girls test: 10 everyday questions reveal whether you're Kimberly, Bela, Leighton, Whitney or Kacey — with your full character breakdown.",
+  "intro": "Are you the hard worker, the comedian, or the ice queen with a secret? Answer 10 everyday questions about college, friendship and finding yourself, and find out which character from The Sex Lives of College Girls you are.",
   "characters": [
     {
       "id": "kimberly",
@@ -172,35 +172,6 @@
       ]
     },
     {
-      "text": "Money's tight this month. You...",
-      "options": [
-        {
-          "text": "Pick up an extra shift and live on instant noodles",
-          "points": {
-            "kimberly": 3
-          }
-        },
-        {
-          "text": "Wait. What does 'tight' mean?",
-          "points": {
-            "leighton": 3
-          }
-        },
-        {
-          "text": "Stick to your budget. You've got it handled",
-          "points": {
-            "whitney": 3
-          }
-        },
-        {
-          "text": "Pitch a money-making scheme that's definitely going to work",
-          "points": {
-            "bela": 3
-          }
-        }
-      ]
-    },
-    {
       "text": "You've got a crush on someone. You...",
       "options": [
         {
@@ -254,35 +225,6 @@
           "text": "Smile through it, fix your make-up, then make a comeback",
           "points": {
             "kacey": 3
-          }
-        }
-      ]
-    },
-    {
-      "text": "You've got a big exam tomorrow. You...",
-      "options": [
-        {
-          "text": "Study all night. Your scholarship depends on it",
-          "points": {
-            "kimberly": 3
-          }
-        },
-        {
-          "text": "Skim it once. You'll still ace it",
-          "points": {
-            "leighton": 3
-          }
-        },
-        {
-          "text": "Revise properly, then get a solid eight hours",
-          "points": {
-            "whitney": 3
-          }
-        },
-        {
-          "text": "Cram, then spend the exam thinking about your comedy set",
-          "points": {
-            "bela": 3
           }
         }
       ]

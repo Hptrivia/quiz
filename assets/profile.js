@@ -894,6 +894,38 @@ function webQCounterHTML() {
   return '';
 }
 
+// A tappable "get the app" strip (same look as the lobby banner). Mobile web taps
+// straight to the visitor's store; desktop opens the QR wall card. Returns null
+// in the app / premium. Optional slug + makeText swap in the theme's real name
+// once themes.json loads (e.g. "Get 100+ The Office questions…").
+let _themeNamesP = null;
+function appPromoLink(promo, text, slug, makeText) {
+  if (!isLimitedWeb()) return null;
+  const a = document.createElement('a');
+  a.className = 'android-cta-banner';
+  a.dataset.promo = promo;
+  if (slug) a.dataset.promoTheme = slug;
+  a.textContent = text;
+  // Navigate in the SAME tab (no target=_blank): more reliable than a new tab,
+  // which strict private/incognito modes and in-app webviews often block.
+  if (isIosWeb()) {
+    a.href = _taggedAppStoreUrl();
+  } else if (isAndroidWeb()) {
+    a.href = _taggedPlayStoreUrl();
+  } else {
+    a.href = '#';
+    a.classList.add('web-wall-trigger');
+  }
+  if (slug && makeText) {
+    _themeNamesP = _themeNamesP || fetch('/data/themes.json').then(r => r.json()).catch(() => []);
+    _themeNamesP.then(list => {
+      const t = (Array.isArray(list) ? list : []).find(x => x.slug === slug);
+      if (t && t.title) a.textContent = makeText(t.title);
+    });
+  }
+  return a;
+}
+
 function _injectWebBanner() {
   if (!isLimitedWeb()) return;
   const path = window.location.pathname;
@@ -901,27 +933,15 @@ function _injectWebBanner() {
     || path.endsWith('/category.html')
     || /\/categories\//.test(path)
     || /\/themes\//.test(path)
-    || /\/(wordle|wordsearch)\//.test(path);
+    || /\/(wordle|wordsearch)\//.test(path)
+    || path.endsWith('/fan-questions.html');
   if (!isLobby) return;
   // The WHOLE banner is one clickable element. Mobile web taps straight to the
   // visitor's store. Desktop can't install a phone app from a browser, so its
   // click opens the same wall card the end-of-game screens show (QR to grab the
   // app + the desktop "unlock all questions" option) — see _openWebWallOverlay,
   // wired via the `.web-wall-trigger` listener in _watchForQr().
-  const banner = document.createElement('a');
-  banner.className = 'android-cta-banner';
-  banner.dataset.promo = 'lobby_banner';
-  banner.textContent = '📱 Get 100+ questions for all themes — Click to download the free app →';
-  // Navigate in the SAME tab (no target=_blank): more reliable than a new tab,
-  // which strict private/incognito modes and in-app webviews often block.
-  if (isIosWeb()) {
-    banner.href = _taggedAppStoreUrl();
-  } else if (isAndroidWeb()) {
-    banner.href = _taggedPlayStoreUrl();
-  } else {
-    banner.href = '#';
-    banner.classList.add('web-wall-trigger');
-  }
+  const banner = appPromoLink('lobby_banner', '📱 Get 100+ questions for all themes — Click to download the free app →');
   const anchor = document.querySelector('.homepage-intro') || document.querySelector('main');
   if (anchor && anchor.classList.contains('homepage-intro')) anchor.before(banner);
   else if (anchor) anchor.prepend(banner);

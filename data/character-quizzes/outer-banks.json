@@ -2,9 +2,9 @@
   "slug": "outer-banks",
   "show": "Outer Banks",
   "shortName": "Outer Banks",
-  "seoTitle": "Outer Banks Test: Which Character Are You? (12 Questions)",
-  "metaDescription": "Take the Outer Banks test: 12 everyday questions reveal whether you're John B, Sarah, JJ, Kiara, Pope, Cleo, Rafe or Ward — with your full character breakdown.",
-  "intro": "Are you the treasure hunter, the reckless loyalist, or the brains who sees it all going wrong? Answer 12 everyday questions about friendship, money and taking risks, and find out which Outer Banks character you are.",
+  "seoTitle": "Outer Banks Test: Which Character Are You? (11 Questions)",
+  "metaDescription": "Take the Outer Banks test: 11 everyday questions reveal whether you're John B, Sarah, JJ, Kiara, Pope, Cleo, Rafe or Ward — with your full character breakdown.",
+  "intro": "Are you the treasure hunter, the reckless loyalist, or the brains who sees it all going wrong? Answer 11 everyday questions about friendship, money and taking risks, and find out which Outer Banks character you are.",
   "characters": [
     {
       "id": "johnb",
@@ -375,35 +375,6 @@
           "text": "Make sure it doesn't come back on you, whatever it takes",
           "points": {
             "rafe": 3
-          }
-        }
-      ]
-    },
-    {
-      "text": "You're stuck on a really hard puzzle. You...",
-      "options": [
-        {
-          "text": "Stay up all night until you've cracked it",
-          "points": {
-            "pope": 3
-          }
-        },
-        {
-          "text": "Go with your gut and try the craziest idea first",
-          "points": {
-            "johnb": 3
-          }
-        },
-        {
-          "text": "Find a shortcut nobody else thought of",
-          "points": {
-            "cleo": 3
-          }
-        },
-        {
-          "text": "Pay someone else to solve it for you",
-          "points": {
-            "ward": 3
           }
         }
       ]

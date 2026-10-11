@@ -87,6 +87,8 @@ function _asHtml() {
         </div>
         <div class="as-detail" id="asDetail" style="display:none;">
           <textarea id="asDetailText" class="form-input" placeholder=""></textarea>
+          <input type="text" id="asShowInput" class="form-input" autocomplete="off" style="display:none;" />
+          <div id="asShowList" class="as-show-list"></div>
           <button type="button" class="primary-btn" id="asSubmitBtn">Submit</button>
         </div>
         <p class="as-thanks" id="asThanks" style="display:none;">Thanks for letting us know! 🎉</p>
@@ -95,6 +97,18 @@ function _asHtml() {
     </div>
   `;
 }
+
+// Reddit answers must name the show (or sub): free text, with matching show
+// names from themes.json offered as one-tap suggestions so most people don't
+// have to type the whole thing, and the answers come back as clean titles.
+let _asTitlesP = null;
+function _asTitles() {
+  _asTitlesP = _asTitlesP || fetch('/data/themes.json').then(r => r.json())
+    .then(list => (Array.isArray(list) ? list : []).map(t => t.title).filter(Boolean))
+    .catch(() => []);
+  return _asTitlesP;
+}
+function _asEsc(s) { return String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
 
 function _asBind() {
   const overlay = document.getElementById('asModalOverlay');
@@ -106,8 +120,33 @@ function _asBind() {
   const submitBtn  = document.getElementById('asSubmitBtn');
   const thanks     = document.getElementById('asThanks');
   const skipBtn    = document.getElementById('asSkip');
+  const showInput  = document.getElementById('asShowInput');
+  const showList   = document.getElementById('asShowList');
 
   const close = () => overlay.remove();
+  const needsShow = () => source === 'reddit';
+  const updateSubmit = () => {
+    if (submitBtn) submitBtn.disabled = needsShow() && (showInput.value.trim().length < 2);
+  };
+  const drawShows = async () => {
+    const q = showInput.value.trim().toLowerCase();
+    if (q.length < 2) { showList.innerHTML = ''; return; }
+    const titles = await _asTitles();
+    if (showInput.value.trim().toLowerCase() !== q) return; // typed more while loading
+    const starts = titles.filter(t => t.toLowerCase().split(/[\s:'-]+/).some(w => w.startsWith(q)) || t.toLowerCase().startsWith(q));
+    const rest = titles.filter(t => !starts.includes(t) && t.toLowerCase().includes(q));
+    const hits = starts.concat(rest).slice(0, 5);
+    // Already picked an exact title: no need to keep suggesting it.
+    if (hits.length === 1 && hits[0].toLowerCase() === q) { showList.innerHTML = ''; return; }
+    showList.innerHTML = hits.map(t => `<button type="button" class="as-show-item">${_asEsc(t)}</button>`).join('');
+  };
+  if (showInput) {
+    showInput.addEventListener('input', () => { updateSubmit(); drawShows(); });
+    showList.addEventListener('click', e => {
+      const b = e.target.closest('.as-show-item'); if (!b) return;
+      showInput.value = b.textContent; showList.innerHTML = ''; updateSubmit();
+    });
+  }
 
   optRow.querySelectorAll('.as-option').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -116,16 +155,24 @@ function _asBind() {
       btn.classList.add('selected');
       const opt = AS_OPTIONS.find(o => o.id === source);
       if (detailText) detailText.placeholder = opt ? opt.placeholder : '';
+      if (showInput) showInput.placeholder = opt ? opt.placeholder : '';
+      // Reddit: required show box with suggestions. Others: the optional free-text box.
+      if (detailText) detailText.style.display = needsShow() ? 'none' : '';
+      if (showInput) showInput.style.display = needsShow() ? '' : 'none';
+      if (showList && !needsShow()) showList.innerHTML = '';
       if (detailWrap) detailWrap.style.display = 'block';
+      updateSubmit();
+      if (needsShow()) { _asTitles(); showInput.focus(); }
       if (typeof gtag === 'function') gtag('event', 'attribution_survey_select_' + source);
     });
   });
 
   if (submitBtn) submitBtn.addEventListener('click', () => {
     if (!source) return;
+    const detail = needsShow() ? showInput.value.trim() : (detailText ? detailText.value.trim() : '');
+    if (needsShow() && detail.length < 2) { showInput.focus(); return; }
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending...';
-    const detail = detailText ? detailText.value.trim() : '';
     _asSubmit(source, detail);
     try { localStorage.setItem(AS_ANSWERED_KEY, 'true'); } catch {}
     if (typeof gtag === 'function') gtag('event', 'attribution_survey_submitted_' + source);

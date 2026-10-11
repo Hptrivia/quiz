@@ -2,9 +2,9 @@
   "slug": "twilight",
   "show": "Twilight",
   "shortName": "Twilight",
-  "seoTitle": "Twilight Test: Which Character Are You? (12 Questions)",
-  "metaDescription": "Take the Twilight test: 12 everyday questions reveal whether you're Bella, Edward, Jacob, Alice, Rosalie, Emmett, Carlisle or Charlie — with your full character breakdown.",
-  "intro": "Are you the quiet outsider, the brooding romantic, or the warm-hearted wolf? Answer 12 everyday questions about love, loyalty and fitting in, and find out which Twilight character you are.",
+  "seoTitle": "Twilight Test: Which Character Are You? (11 Questions)",
+  "metaDescription": "Take the Twilight test: 11 everyday questions reveal whether you're Bella, Edward, Jacob, Alice, Rosalie, Emmett, Carlisle or Charlie — with your full character breakdown.",
+  "intro": "Are you the quiet outsider, the brooding romantic, or the warm-hearted wolf? Answer 11 everyday questions about love, loyalty and fitting in, and find out which Twilight character you are.",
   "characters": [
     {
       "id": "bella",
@@ -433,35 +433,6 @@
           "text": "Hand it over and never mention it again, even though you're short yourself",
           "points": {
             "bella": 3
-          }
-        }
-      ]
-    },
-    {
-      "text": "Your group can't decide what to do on Friday night. You...",
-      "options": [
-        {
-          "text": "Book something fun. You just know everyone's going to love it",
-          "points": {
-            "alice": 3
-          }
-        },
-        {
-          "text": "Push for bowling or paintball. Anything with a winner",
-          "points": {
-            "emmett": 3
-          }
-        },
-        {
-          "text": "Suggest the same diner as always. Why change a good thing?",
-          "points": {
-            "charlie": 3
-          }
-        },
-        {
-          "text": "Vote for a quiet night in. Big crowds aren't your thing",
-          "points": {
-            "edward": 3
           }
         }
       ]

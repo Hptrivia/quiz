@@ -2,9 +2,9 @@
   "slug": "the-pitt",
   "show": "The Pitt",
   "shortName": "The Pitt",
-  "seoTitle": "The Pitt Test: Which Character Are You? (12 Questions)",
-  "metaDescription": "Take The Pitt test: 12 everyday questions reveal whether you're Robby, Dana, Langdon, Santos, Mohan, Mel King, Whitaker or McKay. Get your full character breakdown.",
-  "intro": "Are you the one who always stays late, the one who takes charge when everyone panics, or the one who gets it right but takes their time? Answer 12 everyday questions about work, pressure and the people you look after, and find out which Pitt character you are.",
+  "seoTitle": "The Pitt Test: Which Character Are You? (11 Questions)",
+  "metaDescription": "Take The Pitt test: 11 everyday questions reveal whether you're Robby, Dana, Langdon, Santos, Mohan, Mel King, Whitaker or McKay. Get your full character breakdown.",
+  "intro": "Are you the one who always stays late, the one who takes charge when everyone panics, or the one who gets it right but takes their time? Answer 11 everyday questions about work, pressure and the people you look after, and find out which Pitt character you are.",
   "characters": [
     {
       "id": "robby",
@@ -257,35 +257,6 @@
         },
         {
           "text": "Hand it to the next shift. Nobody works well exhausted",
-          "points": {
-            "dana": 3
-          }
-        }
-      ]
-    },
-    {
-      "text": "After a brutal week, how do you recharge?",
-      "options": [
-        {
-          "text": "Out with friends, cracking jokes all night",
-          "points": {
-            "langdon": 3
-          }
-        },
-        {
-          "text": "A quiet evening with someone you love and a long chat",
-          "points": {
-            "king": 3
-          }
-        },
-        {
-          "text": "Loud music, drinks and zero feelings",
-          "points": {
-            "santos": 3
-          }
-        },
-        {
-          "text": "A glass of wine, feet up, phone off",
           "points": {
             "dana": 3
           }

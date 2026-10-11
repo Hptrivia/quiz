@@ -110,7 +110,7 @@
 <body>
 
   <main class="container narrow" style="padding-top:16px;">
-    <a href="#" class="back-link" onclick="history.back(); return false;">← Back</a>
+    <div class="theme-top-links"><a href="index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a><span id="navAvatarSlot"></span></div>
 
     <section class="panel">
       <div id="loadingMsg">Loading community questions...</div>
@@ -136,6 +136,7 @@
         <h2>Round Complete</h2>
         <div class="result-score"><span id="finalScore">0</span> / <span id="finalTotal">0</span></div>
         <p class="result-tier" id="resultTier"></p>
+        <div id="appPromo" style="margin-top:20px;"></div>
         <div style="margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
           <button class="primary-btn" id="playAgainBtn">Play Again</button>
           <a class="secondary-btn" id="backToFanLink" href="#">Back to Fan Questions</a>
@@ -206,6 +207,15 @@
       return arr;
     }
 
+    // Once the round is over (never during play): an app pitch on limited web.
+    function showAppPromo() {
+      const box = document.getElementById('appPromo');
+      if (box.firstChild || typeof appPromoLink !== 'function') return;
+      const link = appPromoLink('fan_play_result', '📱 Get 100+ questions for this theme in the free app →', theme,
+        name => `📱 Get 100+ ${name} questions in the free app →`);
+      if (link) box.append(link);
+    }
+
     function getTier(score, total) {
       const pct = (score / total) * 100;
       if (pct === 100) return 'Perfect score!';
@@ -245,6 +255,7 @@
             document.getElementById('finalTotal').textContent = cached.total;
             document.getElementById('resultTier').textContent = getTier(cached.score, cached.total);
             document.getElementById('resultArea').style.display = 'block';
+            showAppPromo();
             return;
           } else {
             // New questions available — clear cache and start fresh, note shown in quiz header
@@ -391,6 +402,7 @@
       document.getElementById('finalTotal').textContent = total;
       document.getElementById('resultTier').textContent = getTier(score, total);
       document.getElementById('resultArea').style.display = 'block';
+      showAppPromo();
       saveCachedResult(score, total, questions.map(q => q.id));
     }
 

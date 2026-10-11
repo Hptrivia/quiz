@@ -2,9 +2,9 @@
   "slug": "ted-lasso",
   "show": "Ted Lasso",
   "shortName": "Ted Lasso",
-  "seoTitle": "Ted Lasso Test: Which Character Are You? (12 Questions)",
-  "metaDescription": "Take the Ted Lasso test: 12 everyday questions reveal whether you're Ted, Rebecca, Roy, Keeley, Jamie, Nate, Higgins or Coach Beard — with your full character breakdown.",
-  "intro": "Are you the relentless optimist, the grumpy legend, or the boss who owns every room? Answer 12 everyday questions about work, friends and second chances, and find out which Ted Lasso character you are.",
+  "seoTitle": "Ted Lasso Test: Which Character Are You? (11 Questions)",
+  "metaDescription": "Take the Ted Lasso test: 11 everyday questions reveal whether you're Ted, Rebecca, Roy, Keeley, Jamie, Nate, Higgins or Coach Beard — with your full character breakdown.",
+  "intro": "Are you the relentless optimist, the grumpy legend, or the boss who owns every room? Answer 11 everyday questions about work, friends and second chances, and find out which Ted Lasso character you are.",
   "characters": [
     {
       "id": "ted",
@@ -259,35 +259,6 @@
           "text": "Say something so odd they can't tell if it was a compliment",
           "points": {
             "beard": 3
-          }
-        }
-      ]
-    },
-    {
-      "text": "You've got a quiet evening at home. You spend it...",
-      "options": [
-        {
-          "text": "Reading something nobody else has heard of",
-          "points": {
-            "beard": 3
-          }
-        },
-        {
-          "text": "Playing an instrument",
-          "points": {
-            "higgins": 3
-          }
-        },
-        {
-          "text": "With a face mask, a rom-com and a lot of snacks",
-          "points": {
-            "keeley": 3
-          }
-        },
-        {
-          "text": "With a glass of wine and a very long bath",
-          "points": {
-            "rebecca": 3
           }
         }
       ]

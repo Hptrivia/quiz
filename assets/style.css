@@ -2826,6 +2826,12 @@ body.in-app .join-mp-entry { display: block; }
   resize: vertical;
 }
 .as-detail .primary-btn { width: 100%; }
+.as-detail input.form-input { width: 100%; margin-bottom: 8px; box-sizing: border-box; }
+.as-show-list { display: grid; gap: 6px; margin-bottom: 10px; }
+.as-show-list:empty { display: none; }
+.as-show-item { display: block; width: 100%; text-align: left; padding: 9px 12px; border-radius: 10px; background: var(--option-bg); border: 1px solid var(--option-border); color: var(--text); font: inherit; cursor: pointer; }
+.as-show-item:hover { border-color: #f5a623; }
+.as-detail .primary-btn:disabled { opacity: 0.5; cursor: default; }
 .as-thanks {
   font-weight: 600;
   color: var(--feedback-correct);

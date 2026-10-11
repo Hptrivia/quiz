@@ -2,8 +2,8 @@
   "slug": "superstore",
   "show": "Superstore",
   "shortName": "Superstore",
-  "seoTitle": "Which Superstore Character Are You? Cloud 9 Superstore Test (12 Questions)",
-  "metaDescription": "Take the Superstore test: 12 everyday questions reveal whether you're Amy, Jonah, Dina, Glenn, Garrett, Mateo or Cheyenne — with your full character breakdown.",
+  "seoTitle": "Which Superstore Character Are You? Cloud 9 Superstore Test (11 Questions)",
+  "metaDescription": "Take the Superstore test: 11 everyday questions reveal whether you're Amy, Jonah, Dina, Glenn, Garrett, Mateo or Cheyenne — with your full character breakdown.",
   "intro": "Are you the tired realist holding the whole place together, the idealist who wants to fix the system, or the rule-enforcer with a passion for birds? Answer 12 questions about how you really handle work, customers and coworkers and find out which Superstore character you are.",
   "characters": [
     {
@@ -331,35 +331,6 @@
           "points": {
             "mateo": 2,
             "amy": 1
-          }
-        }
-      ]
-    },
-    {
-      "text": "Money's tight this month. You...",
-      "options": [
-        {
-          "text": "Budget carefully. You've done this before",
-          "points": {
-            "amy": 3
-          }
-        },
-        {
-          "text": "Still buy the nice skincare. Priorities",
-          "points": {
-            "mateo": 3
-          }
-        },
-        {
-          "text": "Budget? What's a budget?",
-          "points": {
-            "cheyenne": 3
-          }
-        },
-        {
-          "text": "Give some away anyway, to someone who needs it more",
-          "points": {
-            "glenn": 3
           }
         }
       ]

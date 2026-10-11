@@ -109,7 +109,7 @@
 <body>
 
   <main class="container narrow">
-    <a href="#" class="back-link" onclick="history.back(); return false;">← Back</a>
+    <div class="theme-top-links"><a href="index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a><span id="navAvatarSlot"></span></div>
 
     <section class="panel">
       <h1>Create a Fan Question</h1>
@@ -130,6 +130,7 @@
 
         <div id="formError"></div>
         <div id="formSuccess"></div>
+        <div id="appPromo"></div>
 
         <button type="submit" id="submitBtn" class="primary-btn">Submit Question</button>
       </form>
@@ -247,6 +248,13 @@
       recordSubmission();
       successEl.textContent = 'Question submitted! It\'ll be available to play soon after review.';
       successEl.style.display = 'block';
+      // After a submit (never mid-form): an app pitch on limited web.
+      const promoBox = document.getElementById('appPromo');
+      if (!promoBox.firstChild && typeof appPromoLink === 'function') {
+        const link = appPromoLink('fan_create_done', '📱 Play 100+ questions for this theme in the free app →', theme,
+          name => `📱 Play 100+ ${name} questions in the free app →`);
+        if (link) promoBox.append(link);
+      }
       document.getElementById('fanForm').reset();
       document.getElementById('qCount').textContent = '0';
       submitBtn.disabled = false;

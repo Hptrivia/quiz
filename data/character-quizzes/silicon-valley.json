@@ -1,0 +1,551 @@
+{
+  "slug": "silicon-valley",
+  "show": "Silicon Valley",
+  "shortName": "Silicon Valley",
+  "seoTitle": "Silicon Valley Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the Silicon Valley test: 12 everyday questions reveal whether you're Richard, Erlich, Gilfoyle, Dinesh, Jared, Big Head, Gavin, Jian-Yang or Russ — with your full character breakdown.",
+  "intro": "Are you the anxious genius, the deadpan cynic, or the billionaire with three commas? Answer 12 everyday questions about work, money and rivals, and find out which Silicon Valley character you are.",
+  "characters": [
+    {
+      "id": "richard",
+      "name": "Richard Hendricks",
+      "emoji": "💻",
+      "color": "#2563eb",
+      "title": "The Anxious Genius",
+      "summary": "Brilliant, awkward and painfully nervous. You've got a world-changing idea, and no idea how to sell it.",
+      "description": [
+        "Like Richard, you're a brilliant builder. He quits his job to start Pied Piper, a company built around his compression app.",
+        "You're shy, until you're not. Richard is nervous and easily pushed around, but he's prone to sudden angry outbursts.",
+        "You care about doing the right thing. Years after Pied Piper, Richard ends up teaching technology ethics at Stanford."
+      ],
+      "strengths": [
+        "Brilliant",
+        "Principled",
+        "Determined"
+      ],
+      "flaw": "You panic over every decision, then make the big one at the worst possible moment.",
+      "signature": "A hoodie, a laptop and a speech you're too nervous to give.",
+      "clashReason": "they'd overthink a simple plan until it fell apart"
+    },
+    {
+      "id": "erlich",
+      "name": "Erlich Bachman",
+      "emoji": "🌿",
+      "color": "#7c3aed",
+      "title": "The Self-Proclaimed Visionary",
+      "summary": "Loud, arrogant and endlessly confident. You're the face of every project, even the ones you didn't work on.",
+      "description": [
+        "Like Erlich, you've got big ideas about yourself. He runs a start-up incubator out of his own house.",
+        "You know how to sell. Erlich is arrogant and charismatic, and he sees himself as the face of Pied Piper.",
+        "You always land somewhere strange. By the end of the show, Erlich has ended up in Tibet."
+      ],
+      "strengths": [
+        "Charismatic",
+        "Confident",
+        "Bold"
+      ],
+      "flaw": "You take credit for everything, including things that went badly.",
+      "signature": "A loud shirt, a big entrance and a speech about your own genius.",
+      "clashReason": "they'd tell everyone your idea was theirs"
+    },
+    {
+      "id": "gilfoyle",
+      "name": "Gilfoyle",
+      "emoji": "🖤",
+      "color": "#334155",
+      "title": "The Deadpan Cynic",
+      "summary": "Brutally honest, completely unbothered and very good at your job. You say what everyone's thinking, in the flattest voice possible.",
+      "description": [
+        "Like Gilfoyle, you don't sugarcoat anything. He's sardonic, apathetic and brutally honest with everyone.",
+        "You're a little bit dark. Gilfoyle is a LaVeyan Satanist, and he's proud of it.",
+        "You have a favourite person to mock. Gilfoyle and Dinesh are frenemies, and by the end they run a big cybersecurity firm together."
+      ],
+      "strengths": [
+        "Honest",
+        "Skilled",
+        "Unflappable"
+      ],
+      "flaw": "You'd rather be cutting than kind, even when kind would work better.",
+      "signature": "A server rack, a flat stare and an insult for every occasion.",
+      "clashReason": "they'd point out your worst mistake in one calm sentence"
+    },
+    {
+      "id": "dinesh",
+      "name": "Dinesh Chugtai",
+      "emoji": "🎰",
+      "color": "#ca8a04",
+      "title": "The Unlucky Show-Off",
+      "summary": "Quick-witted, competitive and a little bit vain. You want to be impressive, and the universe keeps getting in the way.",
+      "description": [
+        "Like Dinesh, you're quick and funny. He's a talented programmer with a sharp tongue.",
+        "You like nice things, and people seeing them. Dinesh is materialistic, and he loves to show off.",
+        "Luck is never on your side. Dinesh is constantly unlucky, and Gilfoyle insists it's karma. He even gets a short run as CEO."
+      ],
+      "strengths": [
+        "Quick-witted",
+        "Talented",
+        "Competitive"
+      ],
+      "flaw": "You care so much about looking good that you forget to be good.",
+      "signature": "Something shiny you can't afford, and a rival who'll mock it.",
+      "clashReason": "they'd turn everything you did into a competition, then lose"
+    },
+    {
+      "id": "jared",
+      "name": "Jared Dunn",
+      "emoji": "🤝",
+      "color": "#0d9488",
+      "title": "The Kindest Person in the Room",
+      "summary": "Kind, loyal and quietly odd. You'd do anything for the people you believe in, and you'll organise it all on a spreadsheet.",
+      "description": [
+        "Like Jared, you're endlessly supportive. He leaves a top job at Hooli to help Richard run Pied Piper.",
+        "You're the heart of the team. Jared is anxious, optimistic and the most caring person in the group.",
+        "You'll answer to anything. His real name is Donald, but Gavin called him 'Jared' and it stuck. He ends up working at a nursing home."
+      ],
+      "strengths": [
+        "Kind",
+        "Loyal",
+        "Organised"
+      ],
+      "flaw": "You put everyone else first, even when they're taking advantage of you.",
+      "signature": "A neat spreadsheet, a warm smile and a lot of quiet loyalty.",
+      "clashReason": "they'd be so kind to you that you'd feel guilty for being annoyed"
+    },
+    {
+      "id": "bighead",
+      "name": "Big Head",
+      "emoji": "🛋️",
+      "color": "#ea580c",
+      "title": "The Accidental Success",
+      "summary": "Relaxed, friendly and not too fussed about anything. Things just seem to work out for you.",
+      "description": [
+        "Like Big Head, you go with the flow. Nelson 'Big Head' Bighetti is Richard's best friend, and nothing seems to stress him out.",
+        "You fail upwards. Big Head isn't the sharpest, but he keeps rising, and Gavin even promotes him at Hooli to spite Richard.",
+        "Luck is on your side. By the end of the show, Big Head is the president of Stanford University."
+      ],
+      "strengths": [
+        "Easygoing",
+        "Loyal",
+        "Lucky"
+      ],
+      "flaw": "You let things happen to you instead of deciding anything.",
+      "signature": "A comfy hoodie, a big smile and a job title you don't quite understand.",
+      "clashReason": "they'd stay completely relaxed while you did all the worrying"
+    },
+    {
+      "id": "gavin",
+      "name": "Gavin Belson",
+      "emoji": "🧘",
+      "color": "#991b1b",
+      "title": "The Tech Overlord",
+      "summary": "Powerful, pompous and secretly petty. You talk about changing the world, and you mean ruling it.",
+      "description": [
+        "Like Gavin, you run things. He's the CEO and founder of Hooli, the giant tech company.",
+        "You love a deep-sounding speech. Gavin is pseudo-philosophical, and very fond of his own ideas.",
+        "You never forget a rival. Gavin spends the show trying to crush Pied Piper, and he ends up as a best-selling novelist."
+      ],
+      "strengths": [
+        "Ambitious",
+        "Visionary",
+        "Persistent"
+      ],
+      "flaw": "You'd rather destroy a rival than admit they beat you.",
+      "signature": "A giant campus, a speech about changing the world and a grudge against a tiny start-up.",
+      "clashReason": "they'd give a speech about kindness, then try to crush you"
+    },
+    {
+      "id": "jianyang",
+      "name": "Jian-Yang",
+      "emoji": "🌭",
+      "color": "#16a34a",
+      "title": "The Quiet Schemer",
+      "summary": "Deadpan, sneaky and much smarter than people think. You let everyone underestimate you, then you win.",
+      "description": [
+        "Like Jian-Yang, you play it cool. He's a tenant in Erlich's incubator, and he seems naive, but he isn't.",
+        "You get your own back. Jian-Yang loves tormenting Erlich, who treats him badly.",
+        "You've got some surprising ideas. Jian-Yang builds SeeFood, an app that can recognise a hot dog and calls everything else 'not hotdog'. By the end, he's taken over Erlich's identity."
+      ],
+      "strengths": [
+        "Clever",
+        "Patient",
+        "Unbothered"
+      ],
+      "flaw": "You'd rather outsmart people quietly than work with them.",
+      "signature": "A straight face, a secret plan and an app that only knows hot dogs.",
+      "clashReason": "they'd pretend not to understand you, then do exactly what they wanted"
+    },
+    {
+      "id": "russ",
+      "name": "Russ Hanneman",
+      "emoji": "💸",
+      "color": "#db2777",
+      "title": "The Flashy Billionaire",
+      "summary": "Loud, brash and very, very rich. You want everyone to know you've made it, and you're not quiet about it.",
+      "description": [
+        "Like Russ, you live large. He's a loud, brash billionaire investor who funds Pied Piper's Series A.",
+        "You care about your status. Russ is obsessed with being a billionaire, which he describes as having three commas.",
+        "You always bounce back. Russ loses his fortune, then makes it back by investing in hair transplants."
+      ],
+      "strengths": [
+        "Bold",
+        "Generous",
+        "Fearless"
+      ],
+      "flaw": "You think loud and expensive is the same thing as impressive.",
+      "signature": "A bottle of Tres Comas tequila, a very loud car and three commas.",
+      "clashReason": "they'd turn your quiet dinner into a party you didn't want"
+    }
+  ],
+  "questions": [
+    {
+      "text": "A coworker takes credit for your work in a meeting. You...",
+      "options": [
+        {
+          "text": "Say nothing, then rant about it for an hour afterwards",
+          "points": {
+            "richard": 3
+          }
+        },
+        {
+          "text": "Quietly take credit for something of theirs next week",
+          "points": {
+            "jianyang": 3
+          }
+        },
+        {
+          "text": "Point out, very flatly, that they couldn't have done it",
+          "points": {
+            "gilfoyle": 3
+          }
+        },
+        {
+          "text": "Give a long speech about integrity, and make everyone listen",
+          "points": {
+            "gavin": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You get a big bonus at work. You...",
+      "options": [
+        {
+          "text": "Buy something loud and expensive so everybody knows",
+          "points": {
+            "russ": 3
+          }
+        },
+        {
+          "text": "Buy something flashy, then sulk when nobody notices",
+          "points": {
+            "dinesh": 3
+          }
+        },
+        {
+          "text": "Forget to check your bank account for a month",
+          "points": {
+            "bighead": 3
+          }
+        },
+        {
+          "text": "Throw a party in your own honour",
+          "points": {
+            "erlich": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend shows you their new app idea. It's terrible. You...",
+      "options": [
+        {
+          "text": "Tell them it's terrible. They asked",
+          "points": {
+            "gilfoyle": 3
+          }
+        },
+        {
+          "text": "Find something nice to say, then help them make it better",
+          "points": {
+            "jared": 3
+          }
+        },
+        {
+          "text": "Say it's great. You don't really get it, but sure",
+          "points": {
+            "bighead": 3
+          }
+        },
+        {
+          "text": "Offer to help, as long as you get a cut",
+          "points": {
+            "erlich": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You have to give a big presentation. You...",
+      "options": [
+        {
+          "text": "Rehearse obsessively, then get so nervous you can barely speak",
+          "points": {
+            "richard": 3
+          }
+        },
+        {
+          "text": "Turn up late, loud and completely sure of yourself",
+          "points": {
+            "russ": 3
+          }
+        },
+        {
+          "text": "Give a grand speech that sounds deep but doesn't really say anything",
+          "points": {
+            "gavin": 3
+          }
+        },
+        {
+          "text": "Pretend you don't understand the question when anyone asks one",
+          "points": {
+            "jianyang": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your housemate leaves a mess everywhere. You...",
+      "options": [
+        {
+          "text": "Make a quiet, devastating comment about it every single day",
+          "points": {
+            "gilfoyle": 3
+          }
+        },
+        {
+          "text": "Clean it up yourself and leave them a kind note",
+          "points": {
+            "jared": 3
+          }
+        },
+        {
+          "text": "Add it to their rent. You're keeping a list",
+          "points": {
+            "erlich": 3
+          }
+        },
+        {
+          "text": "Don't notice. Mess doesn't really bother you",
+          "points": {
+            "bighead": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone you can't stand gets something you really wanted. You...",
+      "options": [
+        {
+          "text": "Pretend not to care, while caring enormously",
+          "points": {
+            "dinesh": 3
+          }
+        },
+        {
+          "text": "Start planning your revenge, however long it takes",
+          "points": {
+            "gavin": 3
+          }
+        },
+        {
+          "text": "Throw yourself into work to prove you deserved it",
+          "points": {
+            "richard": 3
+          }
+        },
+        {
+          "text": "Feel happy for them. Mostly",
+          "points": {
+            "jared": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your perfect weekend is...",
+      "options": [
+        {
+          "text": "A party on a yacht with the music turned all the way up",
+          "points": {
+            "russ": 3
+          }
+        },
+        {
+          "text": "Building something in the garage on your own, with very loud music",
+          "points": {
+            "gilfoyle": 3
+          }
+        },
+        {
+          "text": "A meditation retreat you'll talk about for months",
+          "points": {
+            "gavin": 3
+          }
+        },
+        {
+          "text": "Gaming online and trash-talking everyone",
+          "points": {
+            "dinesh": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your friends are splitting the bill after dinner. You...",
+      "options": [
+        {
+          "text": "Pay for everyone, loudly",
+          "points": {
+            "russ": 3
+          }
+        },
+        {
+          "text": "Work out exactly who owes what, down to the cent",
+          "points": {
+            "jared": 3
+          }
+        },
+        {
+          "text": "Realise you've 'forgotten' your wallet",
+          "points": {
+            "erlich": 3
+          }
+        },
+        {
+          "text": "Check nobody ordered more than you, then pay your exact share",
+          "points": {
+            "dinesh": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your boss asks you to do something you think is wrong. You...",
+      "options": [
+        {
+          "text": "Refuse, then worry for weeks that you've ruined your career",
+          "points": {
+            "richard": 3
+          }
+        },
+        {
+          "text": "Do it, then tell everyone it was your vision all along",
+          "points": {
+            "erlich": 3
+          }
+        },
+        {
+          "text": "Agree, then do something else entirely",
+          "points": {
+            "jianyang": 3
+          }
+        },
+        {
+          "text": "Do it. You didn't really think about it",
+          "points": {
+            "bighead": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your biggest rival is going through a hard time. You...",
+      "options": [
+        {
+          "text": "Mock them, then feel a bit guilty about it",
+          "points": {
+            "dinesh": 3
+          }
+        },
+        {
+          "text": "Send them a genuinely kind message",
+          "points": {
+            "jared": 3
+          }
+        },
+        {
+          "text": "Use it to get ahead",
+          "points": {
+            "gavin": 3
+          }
+        },
+        {
+          "text": "Throw money at the problem, and make sure they know it was you",
+          "points": {
+            "russ": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You run a tiny tech start-up out of a shared house, and a billionaire offers to invest if you do things their way. You...",
+      "options": [
+        {
+          "text": "Turn them down. It's your idea, and you'll build it properly",
+          "points": {
+            "richard": 3
+          }
+        },
+        {
+          "text": "Accept, and start spending it immediately",
+          "points": {
+            "erlich": 3
+          }
+        },
+        {
+          "text": "Say yes, then build something completely different with it",
+          "points": {
+            "jianyang": 3
+          }
+        },
+        {
+          "text": "Tell them exactly what you think of billionaires",
+          "points": {
+            "gilfoyle": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You run a huge tech company, and a tiny start-up has just beaten you. You...",
+      "options": [
+        {
+          "text": "Copy their product, and announce it as your own idea",
+          "points": {
+            "gavin": 3
+          }
+        },
+        {
+          "text": "Try to buy them out with money you don't really have",
+          "points": {
+            "russ": 3
+          }
+        },
+        {
+          "text": "Offer them all jobs. They seem nice",
+          "points": {
+            "bighead": 3
+          }
+        },
+        {
+          "text": "Hire one of their team, and learn all their secrets",
+          "points": {
+            "jianyang": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

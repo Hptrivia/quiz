@@ -137,13 +137,13 @@ const SB_URL = "https://avasbapxzgmpcosixgio.supabase.co";
 const SB_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF2YXNiYXB4emdtcGNvc2l4Z2lvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk2NjM4MzUsImV4cCI6MjA5NTIzOTgzNX0.DLNnasmaQ1hdKXb2xqXrTBnBjISo0RxOiwy7TrlN9bg";
 const sb = window.supabase.createClient(SB_URL, SB_KEY);
 
-// Your order of preference. Not a quota: the first one the sub hasn't had wins.
+// Your order of preference. Not a quota: the first one the show hasn't had wins (multiplayer excluded, see formatOptions).
 const FORMATS = [
   {id:"trivia", label:"Regular trivia"},
   {id:"episode", label:"Episode mode"},
   {id:"multiplayer", label:"Multiplayer"},
-  {id:"character", label:"Character quiz"},
-  {id:"fan", label:"Fan questions"}
+  {id:"fan", label:"Fan questions"},
+  {id:"character", label:"Character quiz"}
 ];
 const FMT = Object.fromEntries(FORMATS.map(f=>[f.id,f.label]));
 const RATINGS = {"":"Not rated", flop:"Flop", ok:"OK", great:"Great"};
@@ -320,21 +320,23 @@ function restDays(s){ return s.status==="mod_removed"?retryDays():cooldown(); }
 async function formatOptions(slug, subs){
   const hist=postsForShow(slug);
   const used=new Set(hist.map(p=>p.format).filter(Boolean));
-  const epPosts=hist.filter(p=>p.format==="episode");
-  const epMax=Math.max(...epPosts.map(p=>p.episode||0), 0);
   const epTotal=await episodeCount(slug);
   const big=subs.some(k=>((S.subs[k]||{}).members||0)>=MULTI_MIN_MEMBERS), known=subs.some(k=>(S.subs[k]||{}).members);
   const opts=[];
   for (const f of FORMATS){
     let ok=true, why="", episode=null;
-    if (f.id==="episode"){ ok=epTotal>epMax; episode=ok?epMax+1:null; why=!epTotal?"no episode mode":ok?"episode "+(epMax+1)+" of "+epTotal:"all "+epTotal+" posted"; }
+    // You always post the pilot, so episode mode is simply "has it or not".
+    if (f.id==="episode"){ ok=epTotal>0; episode=ok?1:null; why=ok?"the pilot":"no episode mode"; }
     if (f.id==="multiplayer"){ ok=big; why=known?(ok?"big sub":"no sub over 150k"):"members unknown"; }
     if (f.id==="character"){ ok=S.chars.has(slug); if(!ok) why="no character quiz"; }
-    opts.push({id:f.id, ok, used:used.has(f.id)&&f.id!=="episode", why, episode});
+    // Episode mode counts as one format: once any episode is posted, it's used and the next format gets its turn.
+    opts.push({id:f.id, ok, used:used.has(f.id), why, episode});
   }
   const last=lastPost(hist);
-  const fresh=opts.find(o=>o.ok&&!o.used);
-  const pick = fresh || opts.find(o=>o.ok && (!last||o.id!==last.format)) || opts[0];
+  // Multiplayer is never suggested automatically (you run it when you decide); it stays pickable by hand.
+  const auto=o=>o.ok && o.id!=="multiplayer";
+  const fresh=opts.find(o=>auto(o)&&!o.used);
+  const pick = fresh || opts.find(o=>auto(o) && (!last||o.id!==last.format)) || opts[0];
   return {opts, pick:pick.id, episode:pick.id==="episode"?pick.episode:null, novel:!!fresh && fresh.id!=="trivia"};
 }
 function suggestLink(subs, slug){
@@ -446,6 +448,8 @@ async function renderLog(){
   form.append(el("div",{},el("label",{},"How did it do? (optional, add later if you don't know yet)"),chipGroup(Object.entries(RATINGS).filter(([k])=>k),d.rating||"",v=>{d.rating=d.rating===v?"":v;renderLog();})));
   const viewsIn=el("input",{id:"f-views",type:"number",min:"0",placeholder:"Views, if you know them",value:d.views||""}); viewsIn.addEventListener("input",()=>d.views=viewsIn.value);
   form.append(el("div",{},el("label",{for:"f-views"},"Views"),viewsIn));
+  form.append(el("div",{},el("label",{},"Next time, maybe… (optional note for yourself)"),
+    chipGroup(FORMATS.map(f=>[f.id,f.label]),d.nextFmt||"",v=>{d.nextFmt=d.nextFmt===v?"":v;renderLog();},id=>avail[id]?"":"This show doesn't have it")));
   const noteIn=el("textarea",{id:"f-note",placeholder:"Optional"}); noteIn.value=d.note; noteIn.addEventListener("input",()=>d.note=noteIn.value);
   form.append(el("div",{},el("label",{for:"f-note"},"Note"),noteIn));
   const save=el("button",{class:"btn primary",type:"button"},"Save post");
@@ -461,6 +465,7 @@ async function renderLog(){
         else if(!S.subs[key].show_slug) await saveSub(key,{show_slug:slug});
         await addPost({posted_on:d.date,sub:key,show_slug:slug,format:d.format,episode:d.format==="episode"&&d.episode?Number(d.episode):null,link:d.link,rating:d.rating||null,views:d.views?Number(d.views):null,note:d.note||null,source:d.source||"manual"});
       }
+      if (d.nextFmt) await setNextNote(slug, d.nextFmt, d.date);
       toast(subs.length>1?"Saved "+subs.length+" posts":"Saved");
       S.logDraft=null; renderLog();
     }finally{ save.disabled=false; }
@@ -524,12 +529,100 @@ async function nextSuggestion(){
   }
   renderSuggest();
 }
+// The next few shows coming due, from the log: each show's last post + its rest period (60 days, or
+// the retry wait when every sub had mods remove it), pushed later by any pause/snooze or temp ban.
+function showDue(slug, today){
+  const hist=postsForShow(slug); if(!hist.length) return null;
+  const last=lastPost(hist).posted_on;
+  const subs=subsForShow(slug).filter(s=>s.status!=="never"&&s.status!=="banned"); if(!subs.length) return null;
+  const base=addDays(last, subs.every(s=>s.status==="mod_removed")?retryDays():cooldown());
+  const ready=s=>[base, s.snooze_until||"", s.status==="temp_ban"?(s.status_until||""):""].sort().pop();
+  let due=subs.map(ready).sort()[0];
+  if (due<today) due=today;
+  const on=subs.filter(x=>subAvailable(x,due)).map(x=>x.sub).sort();
+  if (due===today && on.every(k=>S.subs[k].skip_on===today)) due=addDays(today,1);
+  const latest=hist.filter(p=>p.posted_on===last);
+  const neverStuck=!hist.some(p=>p.outcome==="stayed"||p.outcome==="unknown") || latest.every(p=>p.outcome==="pending");
+  return {slug, due, subs:on, last, since:daysBetween(last,today), neverStuck};
+}
+// Your own "next time, maybe…" format note from the Log. Just a reminder next to the tool's pick, never forced.
+// Stored per show with the show's newest post id at the time, so it goes away once the next post is logged.
+function nextNote(slug){ const n=(S.settings.nextNotes||{})[slug]; return n && !postsForShow(slug).some(p=>p.id>n.after) ? n : null; }
+async function setNextNote(slug, format, on){
+  const all=Object.assign({},S.settings.nextNotes);
+  all[slug]={format, on, after:Math.max(0,...postsForShow(slug).map(p=>p.id||0))};
+  await saveSettings({nextNotes:all});
+}
+function nextNoteEl(slug){ const n=nextNote(slug); return n?el("div",{class:"small",style:"color:var(--accent)"},"Your note: next time maybe "+FMT[n.format]+" (from "+niceDate(n.on)+")"):null; }
+// Kept shows stay pinned in Coming up until a post for them is logged (from anywhere). Stored as
+// slug -> the show's highest post id at the time, so any newer post clears it.
+function keptShows(){ const k=S.settings.keptShows||{}; return Object.keys(k).filter(sl=>!postsForShow(sl).some(p=>p.id>k[sl])); }
+async function setKept(slug, on){
+  const k=Object.assign({},S.settings.keptShows);
+  for (const sl of Object.keys(k)) if (!keptShows().includes(sl)) delete k[sl];
+  if (on) k[slug]=Math.max(0,...postsForShow(slug).map(p=>p.id||0)); else delete k[slug];
+  await saveSettings({keptShows:k});
+}
+async function upcomingShows(limit, skip){
+  const today=todayISO(), out=[], kept=new Set(keptShows());
+  for (const slug of new Set(Object.values(S.subs).map(s=>s.show_slug).filter(Boolean))){
+    if (!postable(slug) || isArchived(slug) || (skip.has(slug) && !kept.has(slug))) continue;
+    const d=showDue(slug,today); if(d && d.subs.length){ d.kept=kept.has(slug); out.push(d); }
+  }
+  // Kept shows first. Then the same order as the main suggestion: soonest first; among shows already due,
+  // the ones that have stuck before, longest rested first.
+  out.sort((a,b)=>(b.kept-a.kept)||a.due.localeCompare(b.due)||(a.neverStuck-b.neverStuck)||(b.since-a.since));
+  const top=out.filter(x=>x.kept).concat(out.filter(x=>!x.kept).slice(0,limit));
+  for (const x of top){ x.f=await formatOptions(x.slug,x.subs); x.link=suggestLink(x.subs,x.slug); }
+  return top;
+}
+async function snoozeShowDays(slug, days){
+  const until=addDays(todayISO(),days);
+  for (const k of allSubsOfShow(slug)) await saveSub(k,{snooze_until:until});
+  toast(showTitle(slug)+" comes back "+niceDate(until));
+}
+const LATER_OPTS={"":"Later…",d0:"Not today",d14:"In 2 weeks",d30:"In 1 month",d61:"In 2 months",d91:"In 3 months"};
+async function drawUpcoming(card){
+  const skip=new Set([...S.suggestSkip].map(x=>x.replace(/^show:/,"")));
+  if (S.suggestion && S.suggestion.kind==="return") skip.add(S.suggestion.slug);
+  const list=await upcomingShows(5, skip), today=todayISO();
+  card.replaceChildren(el("h2",{},"Coming up"),
+    el("p",{class:"muted small"},"From your log: each show is due 2 months after its last post. Open one to change the subs, format or link first."));
+  if (!list.length){ card.append(el("p",{class:"muted"},"Nothing coming up. Log some posts first.")); return; }
+  const ul=el("ul",{class:"rows"});
+  for (const x of list){
+    const lp=lastPost(postsForShow(x.slug));
+    const when=x.due<=today?el("span",{class:"pill ok"},"Due now"):el("span",{class:"pill"},"Due "+niceDate(x.due)+" ("+daysBetween(today,x.due)+" days)");
+    const used=el("button",{class:"btn primary",type:"button"},"Used it");
+    used.addEventListener("click",async()=>{ used.disabled=true;
+      try{ for (const k of x.subs) await addPost({posted_on:today,sub:k,show_slug:x.slug,format:x.f.pick,episode:x.f.pick==="episode"?x.f.episode:null,link:x.link,source:"suggest"});
+        toast("Logged "+showTitle(x.slug)+" ("+FMT[x.f.pick]+")"); drawUpcoming(card); }
+      finally{ used.disabled=false; } });
+    const open=el("button",{class:"btn",type:"button",onclick:()=>{
+      S.suggestMode="return"; S.suggestion={kind:"return", slug:x.slug, subs:x.subs, since:x.since, f:x.f, format:x.f.pick, episode:x.f.episode, link:x.link};
+      renderSuggest(); window.scrollTo(0,0); }},"Open");
+    const keep=el("button",{class:"btn"+(x.kept?" primary":""),type:"button","aria-pressed":String(!!x.kept),onclick:async()=>{
+      await setKept(x.slug,!x.kept); toast(x.kept?showTitle(x.slug)+" no longer kept":"Kept. It stays here until you use it"); drawUpcoming(card); }},x.kept?"Kept ✓":"Keep");
+    const later=selectEl("up-later-"+x.slug,LATER_OPTS,"",async v=>{ if(!v) return; const n=Number(v.slice(1)); if (x.kept) await setKept(x.slug,false);
+      if (n===0){ for (const k of x.subs) await saveSub(k,{skip_on:today}); toast("Skipped for today"); } else await snoozeShowDays(x.slug,n);
+      drawUpcoming(card); });
+    const nope=el("button",{class:"btn ghost",type:"button",onclick:async()=>{ if (x.kept) await setKept(x.slug,false); await archiveShow(x.slug,true); drawUpcoming(card); }},"Not viable");
+    ul.append(el("li",{style:"display:block;padding:10px 0"},
+      el("div",{style:"display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap"},el("strong",{},showTitle(x.slug)),el("span",{},x.kept?el("span",{class:"pill ret"},"Kept"):null," ",when)),
+      el("div",{class:"small"},"Next: "+FMT[x.f.pick]+" · "+(x.link==="web"?"web link":"app link")+" · "+x.subs.map(subLabel).join(", ")),
+      el("div",{class:"muted small"},"Last post "+ago(lp.posted_on)+": "+(FMT[lp.format]||"format unknown")), nextNoteEl(x.slug),
+      el("div",{class:"actions",style:"margin-top:6px"},used,keep,open,later,nope)));
+  }
+  card.append(ul,el("p",{class:"muted small"},"Keep pins a show here until you log a post for it. Not viable archives the show (it stops being suggested). Shows → Archived brings it back."));
+}
 function renderSuggest(){
   const box=$("tab-suggest"); box.replaceChildren();
+  const upcoming=el("div",{class:"card"},el("p",{class:"muted"},"Loading what's coming up…"));
   box.append(el("div",{class:"card"},el("h2",{},"What should I post?"),
     chipGroup([["return","Return to a show"],["new","New show"]],S.suggestMode,v=>{S.suggestMode=v;S.suggestion=null;renderSuggest();}),
     el("div",{class:"actions"},el("button",{class:"btn primary",type:"button",onclick:nextSuggestion},S.suggestion?"Next suggestion":"Suggest"))));
-  const g=S.suggestion; if(!g) return;
+  const g=S.suggestion;
+  if(!g){ box.append(upcoming); drawUpcoming(upcoming); return; }
   const card=el("div",{class:"card"});
   if (g.kind==="return"){
     const hist=postsForShow(g.slug); const last=lastPost(hist);
@@ -541,6 +634,7 @@ function renderSuggest(){
     const reason=el("div",{class:"reason"},
       el("span",{},"Last posted "+ago(last.posted_on)+": "+(FMT[last.format]||"format unknown")+(perfText(last)?", "+perfText(last):"")+"."),
       el("span",{},"Formats already posted: "+([...new Set(hist.map(p=>FMT[p.format]).filter(Boolean))].join(", ")||"unknown")+"."));
+    const nn=nextNoteEl(g.slug); if (nn) reason.append(nn);
     for (const k of g.subs) if(S.subs[k].notes) reason.append(el("span",{},subLabel(k)+": "+S.subs[k].notes));
     if(!(S.shows[g.slug]||{}).reviewed) reason.append(el("span",{class:"small"},"This show's history is unchecked. Fix it on the Shows tab if it looks wrong."));
     card.append(reason);
@@ -550,7 +644,7 @@ function renderSuggest(){
     const subIn=el("input",{id:"s-subs",placeholder:"Which subreddit(s)?",value:g.subs||"",autocomplete:"off"}); subIn.addEventListener("input",()=>g.subs=subIn.value);
     card.append(el("div",{},el("label",{for:"s-subs"},"Subreddits"),subIn));
   }
-  card.append(el("div",{},el("label",{},"Format"),chipGroup(g.f.opts.map(o=>[o.id,FMT[o.id]+(o.id==="episode"&&o.episode?" "+o.episode:"")+(o.used?" ✓":"")]),g.format,
+  card.append(el("div",{},el("label",{},"Format"),chipGroup(g.f.opts.map(o=>[o.id,FMT[o.id]+(o.used?" ✓":"")]),g.format,
     v=>{g.format=v; g.episode=v==="episode"?(g.f.opts.find(o=>o.id==="episode")||{}).episode:null; renderSuggest();},
     id=>{const o=g.f.opts.find(x=>x.id===id); return o&&!o.ok?o.why:"";})),
     el("p",{class:"muted small"},"✓ = already posted for this show. Faded = not available ("+g.f.opts.filter(o=>!o.ok).map(o=>FMT[o.id].toLowerCase()+": "+o.why).join("; ")+")."));
@@ -615,7 +709,7 @@ function renderSuggest(){
       el("button",{class:"btn ghost",type:"button",onclick:async()=>{ await saveSettings({hiddenShows:[...(S.settings.hiddenShows||[]),g.slug]}); toast("Won't suggest it again"); nextSuggestion(); }},"Not a Reddit show"));
     card.append(acts);
   }
-  box.append(card);
+  box.append(card, upcoming); drawUpcoming(upcoming);
 }
 
 /* ---------- PLAN ---------- */
@@ -790,7 +884,7 @@ function renderShows(){
         el("div",{class:"grow"},el("div",{},el("strong",{},showTitle(x.sl))," ",x.reviewed?el("span",{class:"pill ok"},"checked"):null," ",more&&arch?el("span",{class:"pill"},"archived"):null),
           more?el("div",{class:"small",style:"color:var(--"+(S.showFilter==="remind"?"warn":"bad")+")"},more.why(x.sl)):null,
           postsForShow(x.sl).some(p=>p.rating==="great")?el("div",{class:"small",style:"color:var(--new)"},"Did great before"):null,
-          el("div",{class:"muted small"},x.subs+" sub"+(x.subs===1?"":"s")+" · last post "+(x.last?ago(x.last.posted_on)+" · "+(FMT[x.last.format]||"format unknown"):"never"))),
+          el("div",{class:"muted small"},x.subs+" sub"+(x.subs===1?"":"s")+" · last post "+(x.last?ago(x.last.posted_on)+" · "+(FMT[x.last.format]||"format unknown"):"never")), nextNoteEl(x.sl)),
         el("span",{class:"muted","aria-hidden":"true"},"›"))));
     }
     listCard.replaceChildren(rows.length?ul:el("p",{class:"muted"},"No shows match."));
@@ -813,6 +907,7 @@ async function renderShowDetail(box, slug){
     el("div",{class:"card"},el("h2",{},showTitle(slug)),
       el("div",{class:"muted small"},posts.length+" post"+(posts.length===1?"":"s")+" in "+subKeys.length+" sub"+(subKeys.length===1?"":"s")+
         (epTotal?" · has episode mode ("+epTotal+")":"")+(S.chars.has(slug)?" · has character quiz":"")),
+      nextNoteEl(slug),
       el("div",{},el("label",{for:"sh-pause"},(()=>{ const u=showPausedUntil(slug); return u?"Paused until "+niceDate(u):"Try again"; })()),
         selectEl("sh-pause",Object.assign({"":showPausedUntil(slug)?"Change…":"Anytime (normal rest)"},showPausedUntil(slug)?{m0:"Unpause: anytime"}:{},PAUSE_OPTS,{"":showPausedUntil(slug)?"Change…":"Anytime (normal rest)"}),"",async v=>{ if(v==="") return; await pauseShow(slug,Number(v.slice(1))); renderShows(); })),
       bulkFill(slug, posts),
@@ -910,7 +1005,7 @@ function addPostCard(slug, subKeys){
 // {ifchar:…} is kept only for shows that have a character quiz. [text](url) becomes a real link when pasted into Reddit's editor.
 // Edits are saved as the wording for all shows (settings.postTemplates, synced across devices). One-off changes are made on Reddit itself.
 const SITE_URL = "https://triviagauntlet.app";
-const POST_FORMATS = [["trivia","Regular trivia"],["episode","Episode mode"],["multiplayer","Multiplayer"],["character","Which character are you?"]];
+const POST_FORMATS = [["trivia","Regular trivia"],["episode","Episode mode"],["multiplayer","Multiplayer"],["character","Which character are you?"],["fan","Fan questions"]];
 const POST_LINKS = [["web","Regular link"],["app","App link"]];
 const MULTI_BODY = "10 questions. Highest scores wins . Anyone can join\n\nI should start the game as soon as there are about 7-10 people in the lobby . So keep an eye out\n\nThere is a countdown in the lobby so you can know when the game is about to begin . And I will send a message in there 5-10 minutes before I start …. Feel free to roam around the app and play other trivia games while you wait but keep an eye on the link and the lobby cause the game will start when there is at least 10 people\n\nThis is a new game mode I am trying out so there might be some hiccups at first but should be fun and if it works well then I might do another round immediately\n\nI will share the link to Game 1 in the comments";
 const CHAR_INTRO = "Hi everyone\n\nI am testing out this character quizzes for the show and I would appreciate if some of you can check it out and let me know what you think. What’s currently lacking , what you liked and what can be improved .\n\n{charQs} questions, {charCount} possible characters";
@@ -928,13 +1023,17 @@ const DEFAULT_POSTS = {
   "character|app":{mine:true, head:"Which {show} Character are you? {charQs} questions {charCount} characters",
     body:CHAR_INTRO+"\n\nI know not everyone likes downloading and app so for anyone who wants to check it out.\n\n[Which {show} Character Are You]({link})\n\nNo Logins\nNo accounts\nJust Download and use the search at the top\n\nThanks"},
   "multiplayer|web":{head:"Who wants to Play {show} Trivia Multiplayer Tournament today?", body:MULTI_BODY},
-  "multiplayer|app":{mine:true, head:"Who wants to Play {show} Trivia Multiplayer Tournament today?", body:MULTI_BODY}
+  "multiplayer|app":{mine:true, head:"Who wants to Play {show} Trivia Multiplayer Tournament today?", body:MULTI_BODY},
+  // Fan questions posts only exist with the regular links (fan-questions page + the show's page).
+  "fan|web":{head:"What are some of the most obscure facts only you remember from the show",
+    body:"I have made a post here a while back about my trivia game for the show with Tons of questions that I curated and researched .. \n\nSo I added a feature where everyone can add their own questions and you can play each others questions as well .\n\nStill a work in progress so feel free to leave any feedback\nThanks\n\n{link}\n\nIf you just want to play my questions you can do so here:\n\n{themeLink}"}
 };
 function postLinkUrl(slug, fmt, link, ep){
   if (link==="app") return SITE_URL+"/app";
   if (fmt==="episode") return SITE_URL+"/episode.html?theme="+slug+"&episode="+(ep||1);
   if (fmt==="character") return SITE_URL+"/character-quiz/"+slug+".html";
   if (fmt==="multiplayer") return SITE_URL+"/party.html";
+  if (fmt==="fan") return SITE_URL+"/fan-questions.html?theme="+slug;
   return SITE_URL+"/challenge.html?theme="+slug+"&round=1";
 }
 async function charInfo(slug){
@@ -964,7 +1063,8 @@ function postVars(d, ci){
     "{show}":showTitle(d.slug), "{link}":postLinkUrl(d.slug,d.format,d.link,ep),
     "{kind}":cat==="Games"?"game":cat==="Movies"?"movie":d.slug==="mma"?"sport":"show",
     "{episodeName}":ep===1?"the pilot":"episode "+ep, "{episode}":String(ep),
-    "{charQs}":ci?String(ci.qs):"", "{charCount}":ci?String(ci.count):"", "{charLink}":SITE_URL+"/character-quiz/"+d.slug+".html"}};
+    "{charQs}":ci?String(ci.qs):"", "{charCount}":ci?String(ci.count):"", "{charLink}":SITE_URL+"/character-quiz/"+d.slug+".html",
+    "{themeLink}":SITE_URL+"/themes/"+d.slug}};
 }
 function postKey(d){ return d.format+"|"+d.link; }
 function postTemplate(key){ return (S.settings.postTemplates||{})[key] || DEFAULT_POSTS[key]; }
@@ -994,7 +1094,7 @@ function generalize(edited, raw, v){
     }
   }
   const m=v.map, sw=(a,b)=>{ if(a) out=out.split(a).join(b); };
-  sw(m["{link}"],"{link}"); sw(m["{charQs}"]&&m["{charQs}"]+" questions","{charQs} questions");
+  sw(m["{link}"],"{link}"); sw(m["{themeLink}"],"{themeLink}"); sw(m["{charQs}"]&&m["{charQs}"]+" questions","{charQs} questions");
   sw(m["{charCount}"]&&m["{charCount}"]+" possible characters","{charCount} possible characters"); sw(m["{charCount}"]&&m["{charCount}"]+" characters","{charCount} characters");
   sw("this "+m["{kind}"],"this {kind}"); sw(m["{show}"],"{show}");
   return out.replace(/\u0000(\d+)\u0000/g,(_,n)=>segs[n]);
@@ -1029,9 +1129,10 @@ async function renderPost(){
   const [epTotal, ci]=await Promise.all([episodeCount(d.slug), charInfo(d.slug)]);
   const missing={episode:epTotal?null:"No episode mode for this show", character:ci?null:"No character quiz for this show"};
   if (missing[d.format]) d.format="trivia";
+  if (d.format==="fan") d.link="web";
   // Episode posts always promote episode 1 (the pilot).
   d.episode=1;
-  pick.append(el("div",{},el("label",{},"Link"),chipGroup(POST_LINKS,d.link,v=>{d.link=v;renderPost();})));
+  pick.append(el("div",{},el("label",{},"Link"),chipGroup(POST_LINKS,d.link,v=>{ if(d.format==="fan"&&v==="app"){toast("Fan questions posts use the regular links");return;} d.link=v;renderPost();},id=>d.format==="fan"&&id==="app"?"Fan questions posts use the regular links":"")));
   pick.append(el("div",{},el("label",{},"Format"),chipGroup(POST_FORMATS,d.format,v=>{ if(missing[v]){toast(missing[v]);return;} d.format=v; renderPost(); },id=>missing[id])));
 
   const txt=postText(d,ci), key=postKey(d), v=postVars(d,ci);

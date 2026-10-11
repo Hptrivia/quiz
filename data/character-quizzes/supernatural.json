@@ -2,9 +2,9 @@
   "slug": "supernatural",
   "show": "Supernatural",
   "shortName": "Supernatural",
-  "seoTitle": "Supernatural Test: Which Character Are You? (12 Questions)",
-  "metaDescription": "Take the Supernatural test: 12 everyday questions reveal whether you're Dean, Sam, Castiel, Bobby, Crowley, Rowena, Charlie or Jack — with your full character breakdown.",
-  "intro": "Are you the loyal older brother, the angel who never gets the joke, or the witch who always looks out for herself? Answer 12 everyday questions about how you handle family, danger and doing the right thing, and find out which Supernatural character you are.",
+  "seoTitle": "Supernatural Test: Which Character Are You? (11 Questions)",
+  "metaDescription": "Take the Supernatural test: 11 everyday questions reveal whether you're Dean, Sam, Castiel, Bobby, Crowley, Rowena, Charlie or Jack — with your full character breakdown.",
+  "intro": "Are you the loyal older brother, the angel who never gets the joke, or the witch who always looks out for herself? Answer 11 everyday questions about how you handle family, danger and doing the right thing, and find out which Supernatural character you are.",
   "characters": [
     {
       "id": "dean",
@@ -259,35 +259,6 @@
           "text": "Stand by them. Everyone gets to make their own mistakes",
           "points": {
             "castiel": 3
-          }
-        }
-      ]
-    },
-    {
-      "text": "Nothing on your calendar this Sunday. By the evening you've...",
-      "options": [
-        {
-          "text": "Had a big breakfast and watched three action movies",
-          "points": {
-            "dean": 3
-          }
-        },
-        {
-          "text": "Been to a fantasy fair in costume, or gamed all day",
-          "points": {
-            "charlie": 3
-          }
-        },
-        {
-          "text": "Gone for a long run and finished a book",
-          "points": {
-            "sam": 3
-          }
-        },
-        {
-          "text": "Had a spa day and a very expensive dinner",
-          "points": {
-            "rowena": 3
           }
         }
       ]

@@ -2,9 +2,9 @@
   "slug": "the-oc",
   "show": "The O.C.",
   "shortName": "The O.C.",
-  "seoTitle": "The O.C. Test: Which Character Are You? (12 Questions)",
-  "metaDescription": "Take The O.C. test: 12 everyday questions reveal whether you're Ryan, Seth, Marissa, Summer, Sandy, Kirsten, Julie or Taylor — with your full character breakdown.",
-  "intro": "Are you the brooding outsider, the lovable nerd, or the social climber with a secret? Answer 12 everyday questions about friendship, family and fitting in, and find out which character from The O.C. you are.",
+  "seoTitle": "The O.C. Test: Which Character Are You? (11 Questions)",
+  "metaDescription": "Take The O.C. test: 11 everyday questions reveal whether you're Ryan, Seth, Marissa, Summer, Sandy, Kirsten, Julie or Taylor — with your full character breakdown.",
+  "intro": "Are you the brooding outsider, the lovable nerd, or the social climber with a secret? Answer 11 everyday questions about friendship, family and fitting in, and find out which character from The O.C. you are.",
   "characters": [
     {
       "id": "ryan",
@@ -259,35 +259,6 @@
           "text": "Help them out. You know exactly how that feels",
           "points": {
             "ryan": 3
-          }
-        }
-      ]
-    },
-    {
-      "text": "You're stuck in a really boring class. You...",
-      "options": [
-        {
-          "text": "Draw a comic strip in the margins",
-          "points": {
-            "seth": 3
-          }
-        },
-        {
-          "text": "Ask fourteen questions and volunteer for extra credit",
-          "points": {
-            "taylor": 3
-          }
-        },
-        {
-          "text": "Text your best friend a running commentary",
-          "points": {
-            "summer": 3
-          }
-        },
-        {
-          "text": "Stare out of the window and wish you were anywhere else",
-          "points": {
-            "marissa": 3
           }
         }
       ]

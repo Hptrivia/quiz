@@ -2,8 +2,8 @@
   "slug": "the-rookie",
   "show": "The Rookie",
   "shortName": "Rookie",
-  "seoTitle": "The Rookie Test: Which Rookie Character Are You? (12 Questions)",
-  "metaDescription": "Take The Rookie test: 12 everyday questions reveal whether you're Nolan, Bradford, Lucy Chen, Lopez, Sergeant Grey, Harper or Jackson West — with your full character breakdown.",
+  "seoTitle": "The Rookie Test: Which Rookie Character Are You? (11 Questions)",
+  "metaDescription": "Take The Rookie test: 11 everyday questions reveal whether you're Nolan, Bradford, Lucy Chen, Lopez, Sergeant Grey, Harper or Jackson West — with your full character breakdown.",
   "intro": "Are you the one who started over when everyone said it was too late, the tough mentor who secretly cares, or the ambitious one with something to prove? Answer 12 questions about how you really handle work, pressure and doing the right thing, and find out which Rookie character you are.",
   "characters": [
     {
@@ -355,37 +355,6 @@
           "text": "Volunteering at a youth centre",
           "points": {
             "west": 3
-          }
-        }
-      ]
-    },
-    {
-      "text": "A whole weekend with no work. You...",
-      "options": [
-        {
-          "text": "Family time. That's what you work for",
-          "points": {
-            "harper": 2,
-            "lopez": 1
-          }
-        },
-        {
-          "text": "Say yes to whatever a friend's planning",
-          "points": {
-            "nolan": 3
-          }
-        },
-        {
-          "text": "Still end up thinking about work",
-          "points": {
-            "west": 2,
-            "chen": 1
-          }
-        },
-        {
-          "text": "Gym. Then peace and quiet",
-          "points": {
-            "bradford": 3
           }
         }
       ]

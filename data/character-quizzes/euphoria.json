@@ -2,9 +2,9 @@
   "slug": "euphoria",
   "show": "Euphoria",
   "shortName": "Euphoria",
-  "seoTitle": "Euphoria Test: Which Character Are You? (12 Questions)",
-  "metaDescription": "Take the Euphoria test: 12 everyday questions reveal whether you're Rue, Jules, Cassie, Maddy, Lexi, Kat, Nate or Fez — with your full character breakdown.",
-  "intro": "Are you the narrator who sees through everyone, the romantic who falls too hard, or the queen who never backs down? Answer 12 everyday questions about friendship, love and finding yourself, and find out which Euphoria character you are.",
+  "seoTitle": "Euphoria Test: Which Character Are You? (11 Questions)",
+  "metaDescription": "Take the Euphoria test: 11 everyday questions reveal whether you're Rue, Jules, Cassie, Maddy, Lexi, Kat, Nate or Fez — with your full character breakdown.",
+  "intro": "Are you the narrator who sees through everyone, the romantic who falls too hard, or the queen who never backs down? Answer 11 everyday questions about friendship, love and finding yourself, and find out which Euphoria character you are.",
   "characters": [
     {
       "id": "rue",
@@ -259,35 +259,6 @@
           "text": "Let it slip by accident, then feel awful for days",
           "points": {
             "cassie": 3
-          }
-        }
-      ]
-    },
-    {
-      "text": "You've got a big day tomorrow. You...",
-      "options": [
-        {
-          "text": "Set your alarm for 4am so you have time to look perfect",
-          "points": {
-            "cassie": 3
-          }
-        },
-        {
-          "text": "Stay up all night anyway, then wing it",
-          "points": {
-            "rue": 3
-          }
-        },
-        {
-          "text": "Plan every move, right down to the minute",
-          "points": {
-            "nate": 3
-          }
-        },
-        {
-          "text": "Make sure everyone you care about is sorted first, then worry about you",
-          "points": {
-            "fez": 3
           }
         }
       ]

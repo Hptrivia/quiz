@@ -2,9 +2,9 @@
   "slug": "the-hunger-games",
   "show": "The Hunger Games",
   "shortName": "Hunger Games",
-  "seoTitle": "Hunger Games Test: Which Character Are You? (12 Questions)",
-  "metaDescription": "Take the Hunger Games test: 12 everyday questions reveal whether you're Katniss, Peeta, Gale, Haymitch, Effie, Finnick, Johanna or President Snow — with your full character breakdown.",
-  "intro": "Are you the reluctant hero, the charming victor, or the one quietly pulling all the strings? Answer 12 everyday questions about trust, pressure and standing up for people, and find out which Hunger Games character you are.",
+  "seoTitle": "Hunger Games Test: Which Character Are You? (11 Questions)",
+  "metaDescription": "Take the Hunger Games test: 11 everyday questions reveal whether you're Katniss, Peeta, Gale, Haymitch, Effie, Finnick, Johanna or President Snow — with your full character breakdown.",
+  "intro": "Are you the reluctant hero, the charming victor, or the one quietly pulling all the strings? Answer 11 everyday questions about trust, pressure and standing up for people, and find out which Hunger Games character you are.",
   "characters": [
     {
       "id": "katniss",
@@ -259,35 +259,6 @@
           "text": "Side with the boss. Someone has to keep order",
           "points": {
             "snow": 3
-          }
-        }
-      ]
-    },
-    {
-      "text": "Everyone you live with is away for the weekend. You...",
-      "options": [
-        {
-          "text": "Head out for a long walk in the woods",
-          "points": {
-            "katniss": 3
-          }
-        },
-        {
-          "text": "Bake something and paint for hours",
-          "points": {
-            "peeta": 3
-          }
-        },
-        {
-          "text": "Redecorate. Everything could look nicer",
-          "points": {
-            "effie": 3
-          }
-        },
-        {
-          "text": "Order takeaway and don't speak to anyone for two days",
-          "points": {
-            "haymitch": 3
           }
         }
       ]

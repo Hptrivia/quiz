@@ -2,9 +2,9 @@
   "slug": "red-dead-redemption-2",
   "show": "Red Dead Redemption 2",
   "shortName": "RDR2",
-  "seoTitle": "Red Dead Redemption 2 Test: Which Character Are You? (12 Questions)",
-  "metaDescription": "Take the Red Dead Redemption 2 test: 12 everyday questions reveal whether you're Arthur, Dutch, John, Sadie, Charles, Hosea, Micah or Abigail — with your full character breakdown.",
-  "intro": "Are you the loyal outlaw, the silver-tongued dreamer, or the one who'd sell everyone out? Answer 12 everyday questions about loyalty, money and doing the right thing, and find out which Red Dead Redemption 2 character you are.",
+  "seoTitle": "Red Dead Redemption 2 Test: Which Character Are You? (11 Questions)",
+  "metaDescription": "Take the Red Dead Redemption 2 test: 11 everyday questions reveal whether you're Arthur, Dutch, John, Sadie, Charles, Hosea, Micah or Abigail — with your full character breakdown.",
+  "intro": "Are you the loyal outlaw, the silver-tongued dreamer, or the one who'd sell everyone out? Answer 11 everyday questions about loyalty, money and doing the right thing, and find out which Red Dead Redemption 2 character you are.",
   "characters": [
     {
       "id": "arthur",
@@ -176,35 +176,6 @@
     }
   ],
   "questions": [
-    {
-      "text": "Your friends are arguing about where to go on holiday. You...",
-      "options": [
-        {
-          "text": "Describe your idea so well that everyone ends up agreeing with you",
-          "points": {
-            "dutch": 3
-          }
-        },
-        {
-          "text": "Let them argue, then quietly steer them to the place you wanted all along",
-          "points": {
-            "hosea": 3
-          }
-        },
-        {
-          "text": "Pick somewhere quiet and cheap. You've got responsibilities now",
-          "points": {
-            "john": 3
-          }
-        },
-        {
-          "text": "Say you'll go anywhere, as long as there's a lake and some peace and quiet",
-          "points": {
-            "charles": 3
-          }
-        }
-      ]
-    },
     {
       "text": "A stranger by the road asks you to help change a tyre in the rain. You...",
       "options": [

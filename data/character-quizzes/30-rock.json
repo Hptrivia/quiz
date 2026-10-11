@@ -1,0 +1,551 @@
+{
+  "slug": "30-rock",
+  "show": "30 Rock",
+  "shortName": "30 Rock",
+  "seoTitle": "30 Rock Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the 30 Rock test: 12 everyday questions reveal whether you're Liz, Jack, Tracy, Jenna, Kenneth, Pete, Frank, Toofer or Cerie — with your full character breakdown.",
+  "intro": "Are you the stressed-out boss, the executive, or the one who lives for television? Answer 12 everyday questions about work, ambition and the office fridge, and find out which 30 Rock character you are.",
+  "characters": [
+    {
+      "id": "liz",
+      "name": "Liz Lemon",
+      "emoji": "🧀",
+      "color": "#2563eb",
+      "title": "The Stressed-Out Boss",
+      "summary": "Smart, nerdy and holding it all together, barely. You're the only one doing any work, and you'd like a sandwich.",
+      "description": [
+        "Like Liz, you're the one keeping the show on the road. She's the head writer of TGS, surrounded by people who make her job impossible.",
+        "You're a proud nerd. Liz is a self-described geek who stress-eats, calls her late-night snacking 'night cheese' and says 'blerg' when it all goes wrong.",
+        "You get your happy ending, eventually. After a lot of terrible boyfriends, Liz meets Criss, and in the finale they adopt two children."
+      ],
+      "strengths": [
+        "Smart",
+        "Hard-working",
+        "Funny"
+      ],
+      "flaw": "You try to control everything, then eat your feelings when you can't.",
+      "signature": "A sandwich, a clipboard and a very loud 'blerg'.",
+      "clashReason": "they'd tell you how to do your job, then do it themselves"
+    },
+    {
+      "id": "jack",
+      "name": "Jack Donaghy",
+      "emoji": "🥃",
+      "color": "#1e3a8a",
+      "title": "The Executive",
+      "summary": "Suave, ambitious and always three steps ahead. You know exactly what you want, and you're happy to explain how to get it.",
+      "description": [
+        "Like Jack, you were born to run things. He's a smooth, controlling network executive who loves business more than almost anything.",
+        "You've reinvented yourself. Jack is an Irish Catholic from Boston who got rid of his accent on his way to the top.",
+        "You give advice whether people want it or not. 'Good God, Lemon' is one of his favourite lines, and by the finale he's chairman of Kabletown."
+      ],
+      "strengths": [
+        "Ambitious",
+        "Confident",
+        "Strategic"
+      ],
+      "flaw": "You treat every relationship like a business deal.",
+      "signature": "A perfect suit, a corner office and a lecture for every occasion.",
+      "clashReason": "they'd turn your problem into a lesson about business"
+    },
+    {
+      "id": "tracy",
+      "name": "Tracy Jordan",
+      "emoji": "🌟",
+      "color": "#ea580c",
+      "title": "The Wild Star",
+      "summary": "Chaotic, larger than life and impossible to predict. You do whatever you want, and somehow get away with it.",
+      "description": [
+        "Like Tracy, you're unpredictable. He's a movie star who joins TGS and turns the whole show upside down.",
+        "You know how to play to a crowd. Tracy's 'crazy' reputation is partly an act he keeps up for the media.",
+        "You dream big. Tracy wants to win an EGOT: an Emmy, a Grammy, an Oscar and a Tony."
+      ],
+      "strengths": [
+        "Bold",
+        "Funny",
+        "Confident"
+      ],
+      "flaw": "You make every situation about you, and you never read the room.",
+      "signature": "An entourage, a wild idea and a plan to win every award there is.",
+      "clashReason": "they'd turn your quiet plan into total chaos, then call it genius"
+    },
+    {
+      "id": "jenna",
+      "name": "Jenna Maroney",
+      "emoji": "🎤",
+      "color": "#db2777",
+      "title": "The Diva",
+      "summary": "Talented, dramatic and desperate for the spotlight. You'll do absolutely anything to be famous.",
+      "description": [
+        "Like Jenna, you want to be a star. She's a singer and actor on TGS who chases fame through every bad project going.",
+        "You're more insecure than you let on. Jenna constantly worries about her looks and her career, and she lies about her age.",
+        "You never miss a chance to perform. Jenna even releases a song called 'Muffin Top'."
+      ],
+      "strengths": [
+        "Talented",
+        "Ambitious",
+        "Fearless"
+      ],
+      "flaw": "You'll take any attention, even the bad kind.",
+      "signature": "A spotlight, a dramatic exit and a song nobody asked for.",
+      "clashReason": "they'd make your big moment about their career"
+    },
+    {
+      "id": "kenneth",
+      "name": "Kenneth Parcell",
+      "emoji": "📺",
+      "color": "#16a34a",
+      "title": "The Eternal Optimist",
+      "summary": "Cheerful, polite and endlessly helpful. You love your job, you love television, and you love everyone.",
+      "description": [
+        "Like Kenneth, you're always happy to help. He's a cheerful, polite NBC page from the South who lives for television.",
+        "You follow the rules. Kenneth is obedient and loyal, and he works as Tracy's assistant.",
+        "You're a bit of a mystery. The show hints that Kenneth may be immortal, and by the finale he's president of NBC."
+      ],
+      "strengths": [
+        "Kind",
+        "Loyal",
+        "Positive"
+      ],
+      "flaw": "You see the good in people even when there isn't any.",
+      "signature": "A page uniform, a big smile and a deep love of television.",
+      "clashReason": "they'd be so cheerful about your bad day that you'd feel worse"
+    },
+    {
+      "id": "pete",
+      "name": "Pete Hornberger",
+      "emoji": "😩",
+      "color": "#64748b",
+      "title": "The Exhausted One",
+      "summary": "Calm, tired and quietly holding on. You're the straight man in a world of chaos, and you're very, very tired.",
+      "description": [
+        "Like Pete, you keep things moving. He's the TGS producer, and he's usually the calmest person in the room.",
+        "You had big dreams once. Pete was a hopeful for the Olympic archery team before life got in the way.",
+        "Sometimes you'd like to disappear. After TGS ends, Pete fakes his own death and starts a new life in North Carolina, until his wife finds him."
+      ],
+      "strengths": [
+        "Calm",
+        "Steady",
+        "Patient"
+      ],
+      "flaw": "You go along with things for so long that you forget what you wanted.",
+      "signature": "A tired sigh, a coffee and a dream you've quietly given up on.",
+      "clashReason": "they'd sigh at your big idea before you'd finished explaining it"
+    },
+    {
+      "id": "frank",
+      "name": "Frank Rossitano",
+      "emoji": "🧢",
+      "color": "#7c3aed",
+      "title": "The Slacker",
+      "summary": "Lazy, childish and very funny. You do the bare minimum, and you're proud of it.",
+      "description": [
+        "Like Frank, you're not big on effort. He's a TGS writer who's messy, childish and allergic to hard work.",
+        "You say things with a straight face. Frank delivers his jokes completely deadpan.",
+        "You let your clothes do the talking. Frank wears a different joke trucker hat almost every day."
+      ],
+      "strengths": [
+        "Funny",
+        "Relaxed",
+        "Creative"
+      ],
+      "flaw": "You'd rather make a joke than do any actual work.",
+      "signature": "A joke trucker hat, a pile of snacks and absolutely no plans.",
+      "clashReason": "they'd make a joke while you were trying to get something done"
+    },
+    {
+      "id": "toofer",
+      "name": "Toofer",
+      "emoji": "🎓",
+      "color": "#92400e",
+      "title": "The Intellectual",
+      "summary": "Smart, proper and easily offended. You have high standards, and you'll explain them to anyone who'll listen.",
+      "description": [
+        "Like Toofer, you're very well educated. He's a Harvard graduate and a writer on TGS.",
+        "You stand up for what's right, sometimes too loudly. Toofer hates stereotypes, and he's always ready to point out when something's wrong.",
+        "You're the opposite of chaos. Toofer is uptight and proper, which makes him the perfect foil for Tracy."
+      ],
+      "strengths": [
+        "Smart",
+        "Principled",
+        "Articulate"
+      ],
+      "flaw": "You'd rather be right than be fun.",
+      "signature": "A Harvard degree, a strong opinion and a correction ready to go.",
+      "clashReason": "they'd correct your grammar in the middle of an argument"
+    },
+    {
+      "id": "cerie",
+      "name": "Cerie",
+      "emoji": "👛",
+      "color": "#f59e0b",
+      "title": "The Carefree Beauty",
+      "summary": "Gorgeous, carefree and blissfully unbothered. Life's easy for you, and you don't see why it shouldn't be.",
+      "description": [
+        "Like Cerie, you don't sweat the small stuff. She's Liz's young, beautiful assistant, and she often gets Liz's instructions wrong.",
+        "You've got a plan for life, and it's a simple one. Cerie, an heiress to the Xerox family, plans to marry rich and design handbags.",
+        "You come through in the end. In the finale, Cerie packs up the writers' room and orders everyone their last lunch."
+      ],
+      "strengths": [
+        "Relaxed",
+        "Confident",
+        "Charming"
+      ],
+      "flaw": "You don't notice when other people are struggling.",
+      "signature": "A designer handbag, a perfect outfit and a very relaxed attitude to work.",
+      "clashReason": "they'd have an easy answer for your problem, and it would involve money"
+    }
+  ],
+  "questions": [
+    {
+      "text": "Your boss asks you to work all weekend. You...",
+      "options": [
+        {
+          "text": "Say yes with a huge smile. You love it here",
+          "points": {
+            "kenneth": 3
+          }
+        },
+        {
+          "text": "Agree, then stress-eat your way through the whole thing",
+          "points": {
+            "liz": 3
+          }
+        },
+        {
+          "text": "Disappear. They'll manage without you",
+          "points": {
+            "tracy": 3
+          }
+        },
+        {
+          "text": "Sigh, and cancel your plans. Again",
+          "points": {
+            "pete": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your perfect night in is...",
+      "options": [
+        {
+          "text": "Pyjamas, a sandwich and a block of cheese",
+          "points": {
+            "liz": 3
+          }
+        },
+        {
+          "text": "A good drink and a book about building an empire",
+          "points": {
+            "jack": 3
+          }
+        },
+        {
+          "text": "Video games and junk food with the TV on in the background",
+          "points": {
+            "frank": 3
+          }
+        },
+        {
+          "text": "Watching your favourite shows live, the way TV is meant to be watched",
+          "points": {
+            "kenneth": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone makes a comment about how you look. You...",
+      "options": [
+        {
+          "text": "Fall apart, then reinvent yourself by Friday",
+          "points": {
+            "jenna": 3
+          }
+        },
+        {
+          "text": "Don't even notice. You look great",
+          "points": {
+            "cerie": 3
+          }
+        },
+        {
+          "text": "Casually mention that you went to Harvard",
+          "points": {
+            "toofer": 3
+          }
+        },
+        {
+          "text": "Make a joke about yourself before they can",
+          "points": {
+            "liz": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A coworker suggests a ridiculous idea in a meeting. You...",
+      "options": [
+        {
+          "text": "Love it. Let's do it right now",
+          "points": {
+            "tracy": 3
+          }
+        },
+        {
+          "text": "Explain, at length, every reason it won't work",
+          "points": {
+            "toofer": 3
+          }
+        },
+        {
+          "text": "Say nothing. Meetings are for resting your eyes",
+          "points": {
+            "frank": 3
+          }
+        },
+        {
+          "text": "Work out how to make money from it",
+          "points": {
+            "jack": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're offered a big opportunity, but it's slightly embarrassing. You...",
+      "options": [
+        {
+          "text": "Take it. Any spotlight is a good spotlight",
+          "points": {
+            "jenna": 3
+          }
+        },
+        {
+          "text": "Turn it down. You have standards",
+          "points": {
+            "toofer": 3
+          }
+        },
+        {
+          "text": "Ask someone you look up to what they'd do",
+          "points": {
+            "liz": 3
+          }
+        },
+        {
+          "text": "Take it, as long as you don't have to get up early",
+          "points": {
+            "frank": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your friend is having a terrible week. You...",
+      "options": [
+        {
+          "text": "Bring them a homemade treat and a handwritten note",
+          "points": {
+            "kenneth": 3
+          }
+        },
+        {
+          "text": "Give them a pep talk about winning at life",
+          "points": {
+            "jack": 3
+          }
+        },
+        {
+          "text": "Tell them all about your own, much worse, week",
+          "points": {
+            "jenna": 3
+          }
+        },
+        {
+          "text": "Send a sweet message, then get distracted by something shiny",
+          "points": {
+            "cerie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "When you think about your future, you...",
+      "options": [
+        {
+          "text": "Plan to marry rich and do something fun",
+          "points": {
+            "cerie": 3
+          }
+        },
+        {
+          "text": "Aim for the top job, and work out who's in your way",
+          "points": {
+            "jack": 3
+          }
+        },
+        {
+          "text": "Daydream about quitting and starting a quiet new life somewhere",
+          "points": {
+            "pete": 3
+          }
+        },
+        {
+          "text": "Don't. Tomorrow is tomorrow's problem",
+          "points": {
+            "tracy": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone eats the lunch you left in the office fridge. You...",
+      "options": [
+        {
+          "text": "Investigate. Someone is going to pay for this",
+          "points": {
+            "liz": 3
+          }
+        },
+        {
+          "text": "Assume it was a mix-up, and offer to make them lunch tomorrow too",
+          "points": {
+            "kenneth": 3
+          }
+        },
+        {
+          "text": "Shrug, and eat someone else's",
+          "points": {
+            "frank": 3
+          }
+        },
+        {
+          "text": "Label everything you own from now on, in perfect handwriting",
+          "points": {
+            "toofer": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're at a party where you don't know anyone. You...",
+      "options": [
+        {
+          "text": "Make sure everyone knows who you are within ten minutes",
+          "points": {
+            "jenna": 3
+          }
+        },
+        {
+          "text": "Find the most important person in the room and win them over",
+          "points": {
+            "jack": 3
+          }
+        },
+        {
+          "text": "Stand in a corner and wonder when you can leave",
+          "points": {
+            "pete": 3
+          }
+        },
+        {
+          "text": "Get invited to three other parties by the end of the night",
+          "points": {
+            "cerie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone breaks a rule at work. You...",
+      "options": [
+        {
+          "text": "Report it straight away. Rules are rules",
+          "points": {
+            "kenneth": 3
+          }
+        },
+        {
+          "text": "Bring it up at the next meeting, with notes",
+          "points": {
+            "toofer": 3
+          }
+        },
+        {
+          "text": "Break three more. Rules are for other people",
+          "points": {
+            "tracy": 3
+          }
+        },
+        {
+          "text": "Quietly fix it before anyone gets in trouble",
+          "points": {
+            "pete": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You work on a live TV comedy show, and the star has vanished an hour before it starts. You...",
+      "options": [
+        {
+          "text": "Panic, then come up with a brilliant plan at the last second",
+          "points": {
+            "liz": 3
+          }
+        },
+        {
+          "text": "Calmly call in favours until it's sorted",
+          "points": {
+            "jack": 3
+          }
+        },
+        {
+          "text": "Offer to go on instead. This is your moment",
+          "points": {
+            "jenna": 3
+          }
+        },
+        {
+          "text": "Go and find them. You know all their hiding places",
+          "points": {
+            "kenneth": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You work on a TV show that's just been cancelled. You...",
+      "options": [
+        {
+          "text": "Throw the biggest farewell party anyone's ever seen",
+          "points": {
+            "tracy": 3
+          }
+        },
+        {
+          "text": "Feel relieved. Finally, some sleep",
+          "points": {
+            "pete": 3
+          }
+        },
+        {
+          "text": "Pack up the office, then order everyone a nice last lunch",
+          "points": {
+            "cerie": 3
+          }
+        },
+        {
+          "text": "Pitch a terrible idea for a new show on your way out",
+          "points": {
+            "frank": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

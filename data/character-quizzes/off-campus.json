@@ -2,9 +2,9 @@
   "slug": "off-campus",
   "show": "Off Campus",
   "shortName": "Off Campus",
-  "seoTitle": "Off Campus Test: Which Character Are You? (12 Questions)",
-  "metaDescription": "Take the Off Campus test: 12 everyday questions reveal whether you're Hannah, Garrett, Allie, Dean, Logan, Tucker or Jules. Get your full character breakdown.",
-  "intro": "Are you the one with a plan for everything, the one who keeps the whole house fed, or the one who always knows the gossip first? Answer 12 everyday questions about friends, love and college life, and find out which Off Campus character you are.",
+  "seoTitle": "Off Campus Test: Which Character Are You? (11 Questions)",
+  "metaDescription": "Take the Off Campus test: 11 everyday questions reveal whether you're Hannah, Garrett, Allie, Dean, Logan, Tucker or Jules. Get your full character breakdown.",
+  "intro": "Are you the one with a plan for everything, the one who keeps the whole house fed, or the one who always knows the gossip first? Answer 11 everyday questions about friends, love and college life, and find out which Off Campus character you are.",
   "characters": [
     {
       "id": "hannah",
@@ -209,35 +209,6 @@
           "text": "Have a quiet word with the partner yourself",
           "points": {
             "logan": 3
-          }
-        }
-      ]
-    },
-    {
-      "text": "It's Sunday and you've got nowhere to be. You...",
-      "options": [
-        {
-          "text": "Cook a massive brunch for the whole house",
-          "points": {
-            "tucker": 3
-          }
-        },
-        {
-          "text": "Write songs with your headphones on",
-          "points": {
-            "hannah": 3
-          }
-        },
-        {
-          "text": "Belt out show tunes while you clean",
-          "points": {
-            "allie": 3
-          }
-        },
-        {
-          "text": "Sleep till noon, then go wherever the fun is",
-          "points": {
-            "dean": 3
           }
         }
       ]

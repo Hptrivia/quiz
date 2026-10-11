@@ -1,0 +1,551 @@
+{
+  "slug": "true-blood",
+  "show": "True Blood",
+  "shortName": "True Blood",
+  "seoTitle": "True Blood Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the True Blood test: 12 everyday questions reveal whether you're Sookie, Bill, Eric, Jason, Lafayette, Tara, Sam, Pam or Jessica — with your full character breakdown.",
+  "intro": "Are you the mind reader, the Viking boss, or the one with a comeback for everything? Answer 12 everyday questions about loyalty, secrets and small-town life, and find out which True Blood character you are.",
+  "characters": [
+    {
+      "id": "sookie",
+      "name": "Sookie Stackhouse",
+      "emoji": "🧚",
+      "color": "#db2777",
+      "title": "The Mind Reader",
+      "summary": "Kind, stubborn and never as innocent as people assume. Trouble finds you, and you don't back down from it.",
+      "description": [
+        "Like Sookie, you always seem to know what people are really thinking. She's a waitress at Merlotte's who can read minds, which makes dating very complicated.",
+        "You're sweeter than you look until someone crosses you. Sookie is polite and kind, but she won't be pushed around by anyone, vampires included.",
+        "You're more than people expect. Sookie finds out she's part faerie, and she ends up at the centre of almost everything supernatural in Bon Temps."
+      ],
+      "strengths": [
+        "Kind",
+        "Brave",
+        "Stubborn"
+      ],
+      "flaw": "You can't leave a mystery alone, even when it's clearly going to get you hurt.",
+      "signature": "A Merlotte's uniform, a sweet smile and a very good idea of what you're thinking.",
+      "clashReason": "they'd know what you were thinking before you'd said a word"
+    },
+    {
+      "id": "bill",
+      "name": "Bill Compton",
+      "emoji": "🌹",
+      "color": "#4c1d95",
+      "title": "The Old-Fashioned Romantic",
+      "summary": "Polite, serious and a little bit haunted. You do things properly, and you love with your whole heart.",
+      "description": [
+        "Like Bill, you've got old-fashioned manners. He was turned into a vampire during the Civil War, and he still acts like a Southern gentleman.",
+        "You hold on to who you used to be. Unlike most vampires, Bill still cares about his human life and the family he lost.",
+        "You take your responsibilities seriously. Bill was forced to turn Jessica into a vampire as a punishment, then found himself having to raise her."
+      ],
+      "strengths": [
+        "Devoted",
+        "Polite",
+        "Principled"
+      ],
+      "flaw": "You brood about the past when you could be enjoying the present.",
+      "signature": "A pressed shirt, a family house full of history and a very long memory.",
+      "clashReason": "they'd take everything so seriously that you couldn't relax around them"
+    },
+    {
+      "id": "eric",
+      "name": "Eric Northman",
+      "emoji": "👑",
+      "color": "#0f766e",
+      "title": "The Viking Boss",
+      "summary": "Confident, charming and always in charge. You know what you want, and you usually get it.",
+      "description": [
+        "Like Eric, you walk into a room like you own it. He's a Viking who has been a vampire for over a thousand years.",
+        "You've got a head for business. Eric owns Fangtasia, the vampire bar in Shreveport, and he's the vampire sheriff of the area.",
+        "You've got a wicked sense of humour. Eric can be ruthless, but he's also playful, and he and Pam are fiercely loyal to each other."
+      ],
+      "strengths": [
+        "Confident",
+        "Clever",
+        "Charming"
+      ],
+      "flaw": "You assume the rules were written for other people.",
+      "signature": "A throne at the back of your own club and a smirk that means trouble.",
+      "clashReason": "they'd act like they owned the place, even when it's yours"
+    },
+    {
+      "id": "jason",
+      "name": "Jason Stackhouse",
+      "emoji": "🏈",
+      "color": "#2563eb",
+      "title": "The Lovable Hothead",
+      "summary": "Big-hearted, impulsive and up for anything. You don't always think it through, but you always mean well.",
+      "description": [
+        "Like Jason, you act first and think later. Sookie's older brother works on the road crew, and he's a lot better at charm than at planning.",
+        "You get swept up in things. Jason joined the Fellowship of the Sun, an anti-vampire church, before working out he didn't believe in it.",
+        "You've got a good heart. Jason makes plenty of mistakes, but he'd do anything to protect his sister."
+      ],
+      "strengths": [
+        "Loyal",
+        "Fun",
+        "Brave"
+      ],
+      "flaw": "You jump in with both feet and then ask where you landed.",
+      "signature": "A pickup truck, a cold beer and a plan you came up with thirty seconds ago.",
+      "clashReason": "they'd agree to something huge without asking you first"
+    },
+    {
+      "id": "lafayette",
+      "name": "Lafayette Reynolds",
+      "emoji": "💄",
+      "color": "#c026d3",
+      "title": "The Fearless One",
+      "summary": "Bold, funny and completely unapologetic. You say exactly what you think, and you look fabulous saying it.",
+      "description": [
+        "Like Lafayette, you're proudly yourself. He's the cook at Merlotte's and one of the boldest people in Bon Temps.",
+        "You've always got a side hustle. Lafayette sells vampire blood on the side, and he knows everybody's business.",
+        "You're tougher than anyone. Lafayette lives through being kidnapped and possessed, and he still never loses his sense of humour."
+      ],
+      "strengths": [
+        "Fearless",
+        "Funny",
+        "Honest"
+      ],
+      "flaw": "You'd rather hide your pain behind a joke than admit you're scared.",
+      "signature": "Perfect eyeliner, a headscarf and a comeback for every occasion.",
+      "clashReason": "they'd tell you the truth about yourself, loudly, in front of everyone"
+    },
+    {
+      "id": "tara",
+      "name": "Tara Thornton",
+      "emoji": "🔥",
+      "color": "#b91c1c",
+      "title": "The Fighter",
+      "summary": "Blunt, fierce and fiercely loyal. You don't trust easily, but once you're on someone's side, you never leave it.",
+      "description": [
+        "Like Tara, you've had to be tough. She had a hard, abusive childhood, and she doesn't let anyone push her around.",
+        "You say what you think. Tara is Sookie's best friend and a bartender at Merlotte's, and she has no patience for nonsense.",
+        "You survive things that would break other people. Tara is shot, and Pam turns her into a vampire to save her life."
+      ],
+      "strengths": [
+        "Loyal",
+        "Honest",
+        "Tough"
+      ],
+      "flaw": "You get angry first and let yourself feel hurt much, much later.",
+      "signature": "A sharp tongue, a short temper and your best friend's back, always.",
+      "clashReason": "they'd say exactly what they thought of you, to your face"
+    },
+    {
+      "id": "sam",
+      "name": "Sam Merlotte",
+      "emoji": "🐕",
+      "color": "#92400e",
+      "title": "The Steady One",
+      "summary": "Decent, loyal and reliable. You keep things running, even when you've got problems of your own.",
+      "description": [
+        "Like Sam, you're the dependable one. He owns Merlotte's, the bar where half of Bon Temps works or drinks.",
+        "You keep some things to yourself. Sam is a shapeshifter, and for a long time almost nobody knows his secret.",
+        "You care about your community. Sam looks out for Sookie through everything, and he ends up as mayor of Bon Temps."
+      ],
+      "strengths": [
+        "Reliable",
+        "Loyal",
+        "Kind"
+      ],
+      "flaw": "You keep your own problems quiet until they turn into a much bigger problem.",
+      "signature": "A bar that always opens on time, a pickup truck and a secret or two.",
+      "clashReason": "they'd keep their secrets from you, then ask you to trust them"
+    },
+    {
+      "id": "pam",
+      "name": "Pam",
+      "emoji": "🖤",
+      "color": "#475569",
+      "title": "The Deadpan Queen",
+      "summary": "Cynical, stylish and devastatingly honest. You care about very few people, but you'd do anything for them.",
+      "description": [
+        "Like Pam, you have very little patience for anyone. She runs Fangtasia with Eric, and her deadpan put-downs are some of the show's best lines.",
+        "You've always known how to run a business. Before Pam became a vampire, she was a brothel madam in San Francisco.",
+        "You're loyal where it counts. Pam is Eric's vampire child, and she'd follow him anywhere, even while complaining the whole way."
+      ],
+      "strengths": [
+        "Stylish",
+        "Loyal",
+        "Witty"
+      ],
+      "flaw": "You'd rather be thought heartless than admit how much you care.",
+      "signature": "A perfect outfit, a bored expression and a one-liner that ends the conversation.",
+      "clashReason": "they'd roll their eyes at everything you got excited about"
+    },
+    {
+      "id": "jessica",
+      "name": "Jessica Hamby",
+      "emoji": "🍒",
+      "color": "#e11d48",
+      "title": "The Wild Child",
+      "summary": "Dramatic, emotional and hungry for life. You've got a lot of living to catch up on.",
+      "description": [
+        "Like Jessica, you're making up for lost time. She grew up in a very strict home, and becoming a vampire felt like freedom.",
+        "You feel everything at full volume. Bill turned Jessica as a punishment, and she spent her first months as a vampire as a moody, impulsive teenager.",
+        "You grow up a lot. Jessica learns from her mistakes, and in the final episode she marries Hoyt."
+      ],
+      "strengths": [
+        "Passionate",
+        "Fun",
+        "Honest"
+      ],
+      "flaw": "You act on every feeling the second you have it.",
+      "signature": "Red hair, big feelings and a lot of firsts to get through.",
+      "clashReason": "they'd make everything a drama, including your drama"
+    }
+  ],
+  "questions": [
+    {
+      "text": "On your first day at a new job, a coworker tells you their whole life story. You...",
+      "options": [
+        {
+          "text": "Listen and take it all in. You're good at getting people to open up",
+          "points": {
+            "sookie": 3
+          }
+        },
+        {
+          "text": "Listen politely, and tell them nothing about yourself",
+          "points": {
+            "bill": 3
+          }
+        },
+        {
+          "text": "Tell them your whole life story back. You're friends now",
+          "points": {
+            "jason": 3
+          }
+        },
+        {
+          "text": "Give them some honest advice they didn't ask for",
+          "points": {
+            "lafayette": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your perfect night is...",
+      "options": [
+        {
+          "text": "A candlelit dinner at home with slow music",
+          "points": {
+            "bill": 3
+          }
+        },
+        {
+          "text": "A packed club where you know the owner",
+          "points": {
+            "eric": 3
+          }
+        },
+        {
+          "text": "A bonfire, a cooler of beer and whoever turns up",
+          "points": {
+            "jason": 3
+          }
+        },
+        {
+          "text": "Trying something you've never done before, then telling everyone about it",
+          "points": {
+            "jessica": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your friend is dating someone you're sure is bad news. You...",
+      "options": [
+        {
+          "text": "Tell them straight. You don't like this person and you won't pretend",
+          "points": {
+            "tara": 3
+          }
+        },
+        {
+          "text": "Keep quiet, and be there for them when it goes wrong",
+          "points": {
+            "sam": 3
+          }
+        },
+        {
+          "text": "Find out what this person is hiding before anyone gets hurt",
+          "points": {
+            "sookie": 3
+          }
+        },
+        {
+          "text": "Stay out of it. Their love life isn't your problem",
+          "points": {
+            "pam": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're running late for work. You...",
+      "options": [
+        {
+          "text": "Call ahead and apologise properly. Being on time matters",
+          "points": {
+            "bill": 3
+          }
+        },
+        {
+          "text": "Stroll in with a coffee. They'll live",
+          "points": {
+            "eric": 3
+          }
+        },
+        {
+          "text": "Drive too fast, then come up with a wild story about why you're late",
+          "points": {
+            "jason": 3
+          }
+        },
+        {
+          "text": "Take time over your outfit. If you're late, you might as well look good",
+          "points": {
+            "pam": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone insults you in front of a crowd. You...",
+      "options": [
+        {
+          "text": "Insult them back, louder and funnier",
+          "points": {
+            "lafayette": 3
+          }
+        },
+        {
+          "text": "Get in their face. Nobody talks to you like that",
+          "points": {
+            "tara": 3
+          }
+        },
+        {
+          "text": "Ignore them. You don't argue with people beneath you",
+          "points": {
+            "eric": 3
+          }
+        },
+        {
+          "text": "Tell them, very sweetly, exactly what you think of them",
+          "points": {
+            "sookie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend asks you to help them move house on Saturday. You...",
+      "options": [
+        {
+          "text": "Turn up early with a truck and a plan",
+          "points": {
+            "sam": 3
+          }
+        },
+        {
+          "text": "Say yes, forget, then turn up at the end in time for pizza",
+          "points": {
+            "jason": 3
+          }
+        },
+        {
+          "text": "Say no. You don't do lifting",
+          "points": {
+            "pam": 3
+          }
+        },
+        {
+          "text": "Turn up late, but with snacks and a playlist that gets everyone going",
+          "points": {
+            "lafayette": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You get landed with a big responsibility you never asked for. You...",
+      "options": [
+        {
+          "text": "Take it on. Once it's yours, it's your duty",
+          "points": {
+            "bill": 3
+          }
+        },
+        {
+          "text": "Hand most of it to your most capable friend, and check in now and then",
+          "points": {
+            "eric": 3
+          }
+        },
+        {
+          "text": "Complain about it nonstop, then do a brilliant job",
+          "points": {
+            "pam": 3
+          }
+        },
+        {
+          "text": "Say no. You never signed up for this",
+          "points": {
+            "tara": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your ideal holiday is...",
+      "options": [
+        {
+          "text": "A party island where the music never stops",
+          "points": {
+            "jessica": 3
+          }
+        },
+        {
+          "text": "A quiet cabin by a lake with a fishing rod",
+          "points": {
+            "sam": 3
+          }
+        },
+        {
+          "text": "New Orleans, for the food, the music and the people-watching",
+          "points": {
+            "lafayette": 3
+          }
+        },
+        {
+          "text": "Somewhere historic, with old houses and older stories",
+          "points": {
+            "bill": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You find out a friend has been keeping a big secret from you. You...",
+      "options": [
+        {
+          "text": "Feel hurt, but you get it. You've got secrets of your own",
+          "points": {
+            "sam": 3
+          }
+        },
+        {
+          "text": "Blow up at them, then forgive them a week later",
+          "points": {
+            "tara": 3
+          }
+        },
+        {
+          "text": "Aren't surprised. You'd already guessed",
+          "points": {
+            "sookie": 3
+          }
+        },
+        {
+          "text": "Feel betrayed, and make sure they know exactly how betrayed",
+          "points": {
+            "jessica": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone tells you to tone yourself down to fit in. You...",
+      "options": [
+        {
+          "text": "Turn it up even more",
+          "points": {
+            "lafayette": 3
+          }
+        },
+        {
+          "text": "Smile, nod, and carry on doing exactly what you want",
+          "points": {
+            "jessica": 3
+          }
+        },
+        {
+          "text": "Be polite about it, then ignore them completely",
+          "points": {
+            "sookie": 3
+          }
+        },
+        {
+          "text": "Go along with it. Life's easier when you fit in",
+          "points": {
+            "jason": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Vampires have just come out to the world, and one moves into your small town. You...",
+      "options": [
+        {
+          "text": "Go and say hello. Everyone deserves a fair chance",
+          "points": {
+            "sookie": 3
+          }
+        },
+        {
+          "text": "Keep your distance until you know what they want",
+          "points": {
+            "sam": 3
+          }
+        },
+        {
+          "text": "Join the locals protesting about it, then change your mind a week later",
+          "points": {
+            "jason": 3
+          }
+        },
+        {
+          "text": "Warn your best friend to stay well away from them",
+          "points": {
+            "tara": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You're a vampire who has been alive for centuries. You spend your nights...",
+      "options": [
+        {
+          "text": "Running a business, and quietly running the town",
+          "points": {
+            "eric": 3
+          }
+        },
+        {
+          "text": "Trying to hold on to the person you were when you were alive",
+          "points": {
+            "bill": 3
+          }
+        },
+        {
+          "text": "Shopping. Eternity is long, and so is your wardrobe",
+          "points": {
+            "pam": 3
+          }
+        },
+        {
+          "text": "Making up for everything you missed out on as a human",
+          "points": {
+            "jessica": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}
