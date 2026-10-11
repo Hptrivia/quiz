@@ -22,6 +22,7 @@
     // as "not installed" even though it loads fine on real phones.
     var native = !!(window.Capacitor && (window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform() || window.Capacitor.isNative));
     if (native) return;
+    if (/TriviaGauntletPremium/.test(navigator.userAgent || '')) return;
     window.growMe||((window.growMe=function(e){window.growMe._.push(e);}),(window.growMe._=[]));var e=document.createElement("script");(e.type="text/javascript"),(e.src="https://faves.grow.me/main.js"),(e.defer=!0),e.setAttribute("data-grow-faves-site-id","U2l0ZTowMmFjMDYwOC03YWNmLTQ4ZGItYTcxYS1iMjgxOTNmY2E2ZDQ=");var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);
   })();
   </script>
