@@ -364,7 +364,7 @@ const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
 ${characterQuizCard(theme)}
         <a class="card" href="../play.html?theme=${slug}">
           <h3>Marathon Mode</h3>
-          <p>30-question rounds</p>
+          <p>20-question rounds</p>
         </a>
 
         ${hasEpisodeMode ? episodeButton : ""}

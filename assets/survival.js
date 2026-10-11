@@ -107,7 +107,7 @@ async function renderMultiThemeSurvival() {
   function handleWrongAnswer() {
     const slide = getCurrentSlide();
     const selectedBtn = slide ? slide.querySelector(".option-btn.selected") : null;
-    if (typeof webAddQ === 'function') webAddQ(1); // counts toward the 30-question web limit
+    if (typeof webAddQ === 'function') webAddQ(1); // counts toward the 20-question web limit
     state.gameOver = true; state.answerLocked = true;
     if (currentSubmitBtn) currentSubmitBtn.disabled = true;
     if (typeof SoundFX !== 'undefined') SoundFX.play('wrong');
@@ -124,7 +124,7 @@ async function renderMultiThemeSurvival() {
     const selectedBtn = slide ? slide.querySelector(".option-btn.selected") : null;
     const slug = q._themeSlug;
     state.score += points;
-    if (typeof webAddQ === 'function') webAddQ(1); // counts toward the 30-question web limit
+    if (typeof webAddQ === 'function') webAddQ(1); // counts toward the 20-question web limit
     if (themeScores[slug]) themeScores[slug].correct++;
     state.answerLocked = true;
     if (currentSubmitBtn) currentSubmitBtn.disabled = true;
@@ -171,7 +171,7 @@ async function renderMultiThemeSurvival() {
   }
   function renderResult() {
     // (Questions are counted per-answer in handleCorrectAnswer/handleWrongAnswer
-    // so the 30-question web limit can hard-stop a run mid-game.)
+    // so the 20-question web limit can hard-stop a run mid-game.)
     adMobShowInterstitial();
     gameBox.style.display = "none";
     resultBox.style.display = "block";
@@ -187,7 +187,7 @@ async function renderMultiThemeSurvival() {
       <div id="mashupSurvivalBreakdown"></div>
       ${typeof webQCounterHTML === 'function' ? webQCounterHTML() : ''}
       <div class="cta-row">
-        ${_survMashupAtLimit ? (typeof webWallHTML === 'function' ? webWallHTML("Yay! You've answered 30 questions") : '') : `<a class="primary-btn" href="survival.html?themes=${themesParam}">Play Again</a>`}
+        ${_survMashupAtLimit ? (typeof webWallHTML === 'function' ? webWallHTML("Yay! You've answered 20 questions") : '') : `<a class="primary-btn" href="survival.html?themes=${themesParam}">Play Again</a>`}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
         ${!isPremiumUser() && (typeof isDesktopWeb === 'function' && isDesktopWeb()) ? `<a class="secondary-btn" href="remove-ads.html">Unlimited Lifelines</a>` : ""}
       </div>
@@ -282,7 +282,7 @@ async function renderMultiThemeSurvival() {
         });
         nextBtn.addEventListener("click", () => {
           if (state.gameOver) { renderResult(); return; }
-          // Limited web: end the run once the 30-question limit is reached.
+          // Limited web: end the run once the 20-question limit is reached.
           if (typeof isWebQLimit === 'function' && isWebQLimit()) { renderResult(); return; }
           state.currentIndex += 1;
           if (state.currentIndex >= state.questions.length) renderResult();
@@ -440,7 +440,7 @@ async function renderSurvivalPage() {
 
   function renderResult() {
     // (Questions are counted per-answer in handleCorrectAnswer/handleWrongAnswer
-    // so the 30-question web limit can hard-stop a run mid-game.)
+    // so the 20-question web limit can hard-stop a run mid-game.)
     adMobShowInterstitial();
     gameBox.style.display = "none";
     resultBox.style.display = "block";
@@ -483,7 +483,7 @@ async function renderSurvivalPage() {
       <div id="lbSubmitPlaceholder"></div>
       ${typeof webQCounterHTML === 'function' ? webQCounterHTML() : ''}
       <div class="cta-row">
-        ${_survAtLimit ? (typeof webWallHTML === 'function' ? webWallHTML("Yay! You've answered 30 questions", theme.title) : '') : `<a class="primary-btn" href="survival.html?theme=${theme.slug}">Play Again</a>`}
+        ${_survAtLimit ? (typeof webWallHTML === 'function' ? webWallHTML("Yay! You've answered 20 questions", theme.title) : '') : `<a class="primary-btn" href="survival.html?theme=${theme.slug}">Play Again</a>`}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
         ${!isPremiumUser() && (typeof isDesktopWeb === 'function' && isDesktopWeb()) ? `<a class="secondary-btn" href="remove-ads.html?theme=${theme.slug}">Unlimited Lifelines</a>` : ""}
       </div>
@@ -625,7 +625,7 @@ async function renderSurvivalPage() {
     const slide = getCurrentSlide();
     const selectedBtn = slide ? slide.querySelector(".option-btn.selected") : null;
 
-    if (typeof webAddQ === 'function') webAddQ(1); // counts toward the 30-question web limit
+    if (typeof webAddQ === 'function') webAddQ(1); // counts toward the 20-question web limit
     state.gameOver = true;
     state.answerLocked = true;
     if (currentSubmitBtn) currentSubmitBtn.disabled = true;
@@ -651,7 +651,7 @@ async function renderSurvivalPage() {
     const selectedBtn = slide ? slide.querySelector(".option-btn.selected") : null;
 
     state.score += points;
-    if (typeof webAddQ === 'function') webAddQ(1); // counts toward the 30-question web limit
+    if (typeof webAddQ === 'function') webAddQ(1); // counts toward the 20-question web limit
     state.answerLocked = true;
     if (currentSubmitBtn) currentSubmitBtn.disabled = true;
     if (currentNextBtn) currentNextBtn.style.display = "inline-block";
@@ -804,7 +804,7 @@ async function renderSurvivalPage() {
 
         nextBtn.addEventListener("click", () => {
           if (state.gameOver) { renderResult(); return; }
-          // Limited web: end the run once the 30-question limit is reached.
+          // Limited web: end the run once the 20-question limit is reached.
           if (typeof isWebQLimit === 'function' && isWebQLimit()) { renderResult(); return; }
           state.currentIndex += 1;
           if (state.currentIndex >= state.questions.length) {

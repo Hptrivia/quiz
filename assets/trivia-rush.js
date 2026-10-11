@@ -144,7 +144,7 @@ function trPeekNext() {
 }
 
 function trNext() {
-  // Limited web: stop the run once the shared 30-question limit is reached.
+  // Limited web: stop the run once the shared 20-question limit is reached.
   if (typeof isWebQLimit === 'function' && isWebQLimit()) { trEnd(true); return; }
   if (trState.totalAnswered > 0 && trState.totalAnswered % 20 === 0) {
     trMidBreak();
@@ -220,7 +220,7 @@ function trSelect(chosen) {
   if (trState.locked || trState.gameOver) return;
   trState.locked = true;
   trState.totalAnswered++;
-  if (typeof webAddQ === 'function') webAddQ(1); // counts toward the 30-question web limit
+  if (typeof webAddQ === 'function') webAddQ(1); // counts toward the 20-question web limit
   trTimerStop();
 
   const correct = chosen === trState.currentQ.answer;
@@ -240,7 +240,7 @@ function trTimerOut() {
   if (trState.locked || trState.gameOver) return;
   trState.locked = true;
   trState.totalAnswered++;
-  if (typeof webAddQ === 'function') webAddQ(1); // counts toward the 30-question web limit
+  if (typeof webAddQ === 'function') webAddQ(1); // counts toward the 20-question web limit
 
   trMarkButtons(null, false);
   trFx('combo', "TIME'S UP", 'tr-times-up');
@@ -607,7 +607,7 @@ function trEnd(completed) {
       ${pbTile}
       <div class="cta-row" style="margin-top:1.5rem">
         ${(typeof isWebQLimit === 'function' && isWebQLimit())
-          ? (typeof webWallHTML === 'function' ? webWallHTML("Yay! You've played 30 questions") : '')
+          ? (typeof webWallHTML === 'function' ? webWallHTML("Yay! You've played 20 questions") : '')
           : `<a class="primary-btn" href="${playAgainHref}">Play Again</a>`}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
       </div>

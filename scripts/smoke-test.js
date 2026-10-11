@@ -29,6 +29,8 @@ const MIME = {
   '.ico': 'image/x-icon', '.webp': 'image/webp', '.woff2': 'font/woff2',
 };
 
+const BLOCKED_HOSTS = /mediavine\.com|googlesyndication\.com|doubleclick\.net|googletagmanager\.com|google-analytics\.com|formspree\.io|supabase\.co\/functions\//;
+
 const wait = ms => new Promise(r => setTimeout(r, ms));
 
 // ---- tiny static server -----------------------------------------------------
@@ -100,6 +102,19 @@ async function playQuiz(page, endSel, maxQ = 120, nextSel = '#dailyNextBtn') {
     await wait(80);
   }
   return isVisible(page, endSel);
+}
+
+// Marathon: one round must be exactly MARATHON_ROUND_SIZE questions and end on
+// the normal round result -- not the mid-round "Nice run!" web wall, which is
+// what a too-long round hits once the free-question limit (also 20) runs out.
+const MARATHON_ROUND_SIZE = 20;
+async function playMarathonRound(page) {
+  const count = await page.evaluate(() => document.querySelectorAll('#playSlides .question-slide').length);
+  if (count !== MARATHON_ROUND_SIZE) { console.log(`    round has ${count} questions, expected ${MARATHON_ROUND_SIZE}`); return false; }
+  if (!await playQuiz(page, '#resultBox')) return false;
+  const cutShort = await page.evaluate(() => /Nice run!/.test(document.getElementById('resultBox').textContent));
+  if (cutShort) { console.log('    round was cut short by the mid-round web wall'); return false; }
+  return true;
 }
 
 // Challenge: play through to `targetRound`, clicking "Next Round" between rounds.
@@ -506,8 +521,8 @@ function buildModes(themes) {
     // screen (`#hardModeAsk`) fires before the quiz box, same as a real
     // first-time player — dismiss it with "No" (keep multiple choice) so the
     // rest of the driver's option-btn/Submit/Next flow still applies.
-    { name: 'marathon',        url: `play.html?theme=${a}`,            start: '.hm-ask-no', run: p => playQuiz(p, '#resultBox') },
-    { name: 'marathon-mashup', url: `play.html?themes=${a},${b}`,      start: '.hm-ask-no', run: p => playQuiz(p, '#resultBox') },
+    { name: 'marathon',        url: `play.html?theme=${a}`,            start: '.hm-ask-no', run: p => playMarathonRound(p) },
+    { name: 'marathon-mashup', url: `play.html?themes=${a},${b}`,      start: '.hm-ask-no', run: p => playMarathonRound(p) },
     // targetRound 1 (was 2): Challenge's round size (10) now exactly matches
     // the global free-question limit (10, see profile.js _WEB_LIMITS.Q), so a
     // limited-web visitor (what this headless test simulates) only ever gets
@@ -595,6 +610,14 @@ async function runMode(browser, mode) {
   const page = await context.newPage();
   const errors = [];
   page.on('pageerror', e => errors.push(String(e.message || e)));
+
+  // Never let a test run hit live ads or tracking: ad scripts (Grow/Mediavine
+  // throws "mcmNetworkCode is required" off the real domain), GA, Formspree,
+  // and Supabase edge functions (install pings etc.).
+  await page.setRequestInterception(true);
+  page.on('request', req => {
+    if (BLOCKED_HOSTS.test(req.url())) req.abort(); else req.continue();
+  });
 
   // Seed localStorage before any page script runs — used to skip one-time
   // pickers (e.g. Daily Mashup's show picker) so the driver lands straight

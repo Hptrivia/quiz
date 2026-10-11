@@ -61,6 +61,15 @@ function _ensureTheme(modeObj, slug) {
   return modeObj.themes[slug];
 }
 
+// Marathon rounds went from 30 to 20 questions. Best scores saved before that
+// have no bestOf and are out of 30 -- they keep showing as /30 until beaten,
+// and a new score beats one only if it's a better percentage.
+const MARATHON_ROUND_SIZE = 20;
+function _beatsMarathonBest(score, obj) {
+  if (!obj.bestScore) return true;
+  return score / MARATHON_ROUND_SIZE > obj.bestScore / (obj.bestOf || 30);
+}
+
 function recordMarathon(themeSlug, score, total, wrongQuestions, isReplaySession, round, totalRoundsArg) {
   const p = getProfile();
   const m = p.stats.marathon;
@@ -69,12 +78,12 @@ function recordMarathon(themeSlug, score, total, wrongQuestions, isReplaySession
   m.roundsCompleted++;
   m.totalCorrect   += score;
   m.totalAnswered  += total;
-  if (score > m.bestScore) { m.bestScore = score; m.bestScoreTheme = themeSlug; }
+  if (_beatsMarathonBest(score, m)) { m.bestScore = score; m.bestOf = MARATHON_ROUND_SIZE; m.bestScoreTheme = themeSlug; }
 
   t.rounds    = (t.rounds    || 0) + 1;
   t.correct   = (t.correct   || 0) + score;
   t.answered  = (t.answered  || 0) + total;
-  if (!t.bestScore || score > t.bestScore) t.bestScore = score;
+  if (_beatsMarathonBest(score, t)) { t.bestScore = score; t.bestOf = MARATHON_ROUND_SIZE; }
   if (!isReplaySession && round && round > (t.highestRound || 0)) {
     t.highestRound = round;
     if (totalRoundsArg) t.totalRounds = totalRoundsArg;
@@ -228,7 +237,9 @@ function recordMashupStats(sessionKey, mode, data) {
     m.rounds   = (m.rounds   || 0) + 1;
     m.correct  = (m.correct  || 0) + (data.correct  || 0);
     m.answered = (m.answered || 0) + (data.answered || 0);
-    if (!m.bestScore || (data.correct || 0) > m.bestScore) m.bestScore = data.correct || 0;
+    if (mode === "marathon") {
+      if (_beatsMarathonBest(data.correct || 0, m)) { m.bestScore = data.correct || 0; m.bestOf = MARATHON_ROUND_SIZE; }
+    } else if (!m.bestScore || (data.correct || 0) > m.bestScore) m.bestScore = data.correct || 0;
     if (data.round && data.round > (m.highestRound || 0)) {
       m.highestRound = data.round;
       if (data.totalRounds) m.totalRounds = data.totalRounds;
@@ -817,7 +828,7 @@ function _watchForQr() {
   });
 }
 
-// Mobile web only: when a question-limit wall mounts (e.g. end of marathon at 30),
+// Mobile web only: when a question-limit wall mounts (e.g. end of marathon round 1 at 20),
 // count down a few seconds so the player sees their score/rank, then send them to
 // the app store. Most cold Reddit traffic won't tap a button, so we flip the
 // default from opt-in to opt-out — they can still tap the button early, or leave.
@@ -963,7 +974,7 @@ function _checkWebPageWall() {
   // (or clearing site data) wipes — so hand-editing the URL to a later
   // episode/round/word would otherwise play free. Anything past the free
   // allowance's position is walled from the URL alone, whatever the count says.
-  // Challenge: 10-Q rounds, so the 20-Q budget = rounds 1-2. Marathon's first
+  // Challenge: 10-Q rounds, so the 20-Q budget = rounds 1-2. Marathon: 20-Q
   // page (30 Qs) already exceeds it, so only page 1 is ever reachable.
   const params = new URLSearchParams(window.location.search);
   const num = k => parseInt(params.get(k) || '1', 10) || 1;

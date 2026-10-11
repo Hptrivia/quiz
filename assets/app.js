@@ -472,7 +472,7 @@ function calcMashupTotalBatches(pools, batchSize) {
   })));
 }
 // ── Mid-quiz resume ──────────────────────────────────────────────────────────
-// Long rounds (marathon = 30 questions, episode = 30+) are easy to lose on a
+// Long rounds (marathon = 20 questions, episode = 30+) are easy to lose on a
 // reload or app-close. These helpers persist the in-progress question set,
 // index and score so the round resumes where it stopped. Platform-agnostic
 // (works on web AND the native app — it's a UX feature, not a paywall).
@@ -493,6 +493,13 @@ function _loadMidQuiz(mode, key, page) {
     if (d.ts && Date.now() - d.ts > 7 * 864e5) { localStorage.removeItem(_MIDQUIZ_KEY); return null; } // expire after 7 days
     if (!Array.isArray(d.questions) || !d.questions.length) return null;
     if (!(d.currentIndex > 0 && d.currentIndex < d.questions.length)) return null;
+    // A marathon round left half-played from before rounds shrank from 30 to
+    // 20 Qs: under 20 answered, resume it trimmed to 20; otherwise they've
+    // already played a full round, so the caller moves them to the next one.
+    if (mode === "marathon" && d.questions.length > 20) {
+      if (d.currentIndex < 20) d.questions = d.questions.slice(0, 20);
+      else { localStorage.removeItem(_MIDQUIZ_KEY); return { skipRound: true }; }
+    }
     return d;
   } catch (e) { return null; }
 }
@@ -991,7 +998,7 @@ async function renderMultiThemeMarathon() {
     wordCollisionsByTheme[t.slug] = hmBuildWordCollisions(questionsByTheme[t.slug] || []);
   });
 
-  const PAGE_SIZE = 30;
+  const PAGE_SIZE = 20;
   const slidesContainer = document.getElementById("playSlides");
   const resultBox = document.getElementById("resultBox");
   const nextPageLink = document.getElementById("nextPageLink");
@@ -1027,6 +1034,12 @@ async function renderMultiThemeMarathon() {
 
   // Resume an in-progress round (reuse the exact saved question set/order).
   let _resume = isReplay ? null : _loadMidQuiz("marathon", mashupKey, safePage);
+  if (_resume && _resume.skipRound) {
+    const next = new URLSearchParams(window.location.search);
+    next.set("page", String(safePage + 1));
+    window.location.replace(`play.html?${next.toString()}`);
+    return;
+  }
   if (_resume) pageQuestions = _resume.questions;
 
   const themeScores = {};
@@ -1152,7 +1165,7 @@ async function renderMultiThemeMarathon() {
   slidesContainer.querySelectorAll(".question-slide").forEach(s => { s.style.display = "none"; });
 
   // Cuts the round short the moment the free-question wall is hit — instead
-  // of letting the rest of an oversized round (PAGE_SIZE 30) play out for
+  // of letting the rest of an oversized round (PAGE_SIZE 20) play out for
   // free before the wall ever gets a chance to appear between rounds.
   function renderMidRoundWall() {
     _clearMidQuiz("marathon", mashupKey, safePage);
@@ -1209,7 +1222,7 @@ async function renderMultiThemeMarathon() {
       ${typeof webQCounterHTML === 'function' ? webQCounterHTML() : ''}
       <div class="cta-row">
         ${hasNextPage && !(typeof isWebQLimit === 'function' && isWebQLimit()) ? `<a class="primary-btn" href="play.html?themes=${themesParam}&page=${safePage + 1}" data-rewarded-href="play.html?themes=${themesParam}&page=${safePage + 1}">Next Round</a>` : ""}
-        ${hasNextPage && (typeof isWebQLimit === 'function' && isWebQLimit()) ? (typeof webWallHTML === 'function' ? webNextGateHTML("Next Round", webWallHTML("Yay! You've answered 30 questions")) : "") : ""}
+        ${hasNextPage && (typeof isWebQLimit === 'function' && isWebQLimit()) ? (typeof webWallHTML === 'function' ? webNextGateHTML("Next Round", webWallHTML("Yay! You've answered 20 questions")) : "") : ""}
         <a class="secondary-btn" href="contact.html">Report a Question</a>
         ${!isPremiumUser() && (typeof isDesktopWeb === 'function' && isDesktopWeb()) && !(hasNextPage && (typeof isWebQLimit === 'function' && isWebQLimit())) ? `<a class="secondary-btn" href="remove-ads.html">Unlock Full Access</a>` : ""}
       </div>
@@ -1269,7 +1282,7 @@ async function renderMultiThemeMarathon() {
         <h2>Round ${saved.round} Complete</h2>
         ${cumScoreLine(saved.score, saved.total, _cumSum(_cumLoad('tg_mara_cum', mashupKey)))}
         <div class="cta-row">
-          ${resumeWalled ? (typeof webWallHTML === 'function' ? webNextGateHTML(`Continue to Round ${saved.round + 1}`, webWallHTML("Yay! You've answered 30 questions")) : "") : `<a class="primary-btn" id="mashupMarathonContinueBtn" href="play.html?themes=${themesParam}&page=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
+          ${resumeWalled ? (typeof webWallHTML === 'function' ? webNextGateHTML(`Continue to Round ${saved.round + 1}`, webWallHTML("Yay! You've answered 20 questions")) : "") : `<a class="primary-btn" id="mashupMarathonContinueBtn" href="play.html?themes=${themesParam}&page=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
           <button class="secondary-btn" id="mashupMarathonRound1Btn">Start from Round 1</button>
         </div>
         ${replayHtml}`;
@@ -1301,7 +1314,7 @@ async function renderPlayPage() {
   const themes = await loadThemes();
   const theme = themes.find(t => t.slug === slug);
 
-  const PAGE_SIZE = 30; // later change 10 -> 30
+  const PAGE_SIZE = 20;
 
   const slidesContainer = document.getElementById("playSlides");
   const resultBox = document.getElementById("resultBox");
@@ -1353,7 +1366,7 @@ async function renderPlayPage() {
 
   if (!isReplay) {
     allQuestions = await fetchJSON(theme.questionFile);
-    allPages = buildBalancedBatches(allQuestions, PAGE_SIZE, 15, 15);
+    allPages = buildBalancedBatches(allQuestions, PAGE_SIZE, PAGE_SIZE / 2, PAGE_SIZE / 2);
     totalPages = allPages.length;
     safePage = Math.min(currentPage, totalPages);
     quizState.questions = (allPages[safePage - 1] || []).map(q => shuffleQuestionOptions(q));
@@ -1371,6 +1384,12 @@ async function renderPlayPage() {
 
   // Resume an in-progress round (reuse the exact saved question set/order).
   let _resume = isReplay ? null : _loadMidQuiz("marathon", theme.slug, safePage);
+  if (_resume && _resume.skipRound) {
+    const next = new URLSearchParams(window.location.search);
+    next.set("page", String(safePage + 1));
+    window.location.replace(`play.html?${next.toString()}`);
+    return;
+  }
   if (_resume) {
     quizState.questions = _resume.questions;
     quizState.score = _resume.score || 0;
@@ -1410,7 +1429,7 @@ async function renderPlayPage() {
         <h2>Round ${saved.round} Complete</h2>
         ${cumScoreLine(saved.score, saved.total, _cumSum(_cumLoad('tg_mara_cum', theme.slug)))}
         <div class="cta-row">
-          ${resumeWalled ? (typeof webWallHTML === 'function' ? webNextGateHTML(`Continue to Round ${saved.round + 1}`, webWallHTML("Yay! You've answered 30 questions", theme.title)) : "") : `<a class="primary-btn" id="continueRoundBtn" href="play.html?theme=${theme.slug}&page=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
+          ${resumeWalled ? (typeof webWallHTML === 'function' ? webNextGateHTML(`Continue to Round ${saved.round + 1}`, webWallHTML("Yay! You've answered 20 questions", theme.title)) : "") : `<a class="primary-btn" id="continueRoundBtn" href="play.html?theme=${theme.slug}&page=${saved.round + 1}">Continue to Round ${saved.round + 1}</a>`}
           <button class="secondary-btn" id="startRound1Btn">Start from Round 1</button>
         </div>
         ${replayHtml}`;
@@ -1575,7 +1594,7 @@ async function renderPlayPage() {
   }
 
 // Cuts the round short the moment the free-question wall is hit — instead of
-// letting the rest of an oversized round (PAGE_SIZE 30) play out for free
+// letting the rest of an oversized round (PAGE_SIZE 20) play out for free
 // before the wall ever gets a chance to appear between rounds.
 function renderMidRoundWall() {
   _clearMidQuiz("marathon", theme.slug, safePage);
@@ -1657,7 +1676,7 @@ const relatedThemesHtml = `
     ${typeof webQCounterHTML === 'function' ? webQCounterHTML() : ''}
     <div class="cta-row">
       ${hasNextPage && !(typeof isWebQLimit === 'function' && isWebQLimit()) ? `<a class="primary-btn" href="play.html?theme=${theme.slug}&page=${safePage + 1}" data-rewarded-href="play.html?theme=${theme.slug}&page=${safePage + 1}">Next Round</a>` : ""}
-      ${hasNextPage && (typeof isWebQLimit === 'function' && isWebQLimit()) ? (typeof webWallHTML === 'function' ? webNextGateHTML("Next Round", webWallHTML("Yay! You've answered 30 questions", theme.title)) : "") : ""}
+      ${hasNextPage && (typeof isWebQLimit === 'function' && isWebQLimit()) ? (typeof webWallHTML === 'function' ? webNextGateHTML("Next Round", webWallHTML("Yay! You've answered 20 questions", theme.title)) : "") : ""}
       ${(typeof packPurchaseHTML === 'function' && packPurchaseHTML(theme.slug)) || `<a class="secondary-btn" href="contact.html">Report a Question</a>`}
       ${!isPremiumUser() && (typeof isDesktopWeb === 'function' && isDesktopWeb()) && !(hasNextPage && (typeof isWebQLimit === 'function' && isWebQLimit())) ? `<a class="secondary-btn" href="remove-ads.html">Unlock Full Access</a>` : ""}
     </div>

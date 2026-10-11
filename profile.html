@@ -232,7 +232,7 @@
           let val = "";
           if (mode === "Marathon") {
             const pct = (d.highestRound && d.totalRounds) ? `${Math.round(d.highestRound / d.totalRounds * 100)}% completed` : null;
-            val = `${pct ? pct + " · " : ""}best score ${d.bestScore || 0}/30`;
+            val = `${pct ? pct + " · " : ""}best score ${d.bestScore || 0}/${d.bestOf || 30}`;
           }
           if (mode === "Challenge") {
             const pct = (d.highestRound && d.totalRounds) ? `${Math.round(d.highestRound / d.totalRounds * 100)}% completed` : null;
@@ -281,7 +281,7 @@
         const statRows = [];
         if (ms.marathon?.rounds) {
           const pct = (ms.marathon.highestRound && ms.marathon.totalRounds) ? `${Math.round(ms.marathon.highestRound / ms.marathon.totalRounds * 100)}% completed · ` : "";
-          statRows.push(`Marathon: ${pct}best score ${ms.marathon.bestScore || 0}/30`);
+          statRows.push(`Marathon: ${pct}best score ${ms.marathon.bestScore || 0}/${ms.marathon.bestOf || 30}`);
         }
         if (ms.challenge?.rounds) {
           const pct = (ms.challenge.highestRound && ms.challenge.totalRounds) ? `${Math.round(ms.challenge.highestRound / ms.challenge.totalRounds * 100)}% completed · ` : "";
