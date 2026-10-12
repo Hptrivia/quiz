@@ -565,8 +565,9 @@ async function setKept(slug, on){
 }
 async function upcomingShows(limit, skip){
   const today=todayISO(), out=[], kept=new Set(keptShows());
+  const picked=new Set(myPicks().map(p=>p.slug));
   for (const slug of new Set(Object.values(S.subs).map(s=>s.show_slug).filter(Boolean))){
-    if (!postable(slug) || isArchived(slug) || (skip.has(slug) && !kept.has(slug))) continue;
+    if (!postable(slug) || isArchived(slug) || (skip.has(slug) && !kept.has(slug)) || picked.has(slug)) continue;
     const d=showDue(slug,today); if(d && d.subs.length){ d.kept=kept.has(slug); out.push(d); }
   }
   // Kept shows first. Then the same order as the main suggestion: soonest first; among shows already due,
@@ -580,6 +581,49 @@ async function snoozeShowDays(slug, days){
   const until=addDays(todayISO(),days);
   for (const k of allSubsOfShow(slug)) await saveSub(k,{snooze_until:until});
   toast(showTitle(slug)+" comes back "+niceDate(until));
+}
+// Your own picks: a show + format you add by hand. They sit at the top of Coming up until a post for
+// that show is logged (from anywhere). Stored as slug -> {format, on, after: the show's highest post id then}.
+function myPicks(){ const m=S.settings.myPicks||{}; return Object.keys(m).filter(sl=>!postsForShow(sl).some(p=>p.id>m[sl].after)).map(sl=>Object.assign({slug:sl},m[sl])); }
+async function setPick(slug, format){
+  const m={}; for (const p of myPicks()) m[p.slug]={format:p.format,on:p.on,after:p.after};
+  if (format) m[slug]={format, on:todayISO(), after:Math.max(0,...postsForShow(slug).map(p=>p.id||0))}; else delete m[slug];
+  await saveSettings({myPicks:m});
+}
+function drawPicks(card, refresh){
+  const d=S.pickDraft||(S.pickDraft={show:"",format:"trivia"}), today=todayISO();
+  const showIn=el("input",{id:"pick-show",list:"dl-shows",placeholder:"Start typing a show",value:d.show,autocomplete:"off"});
+  showIn.addEventListener("input",()=>{ d.show=showIn.value; });
+  // Format chips only restyle themselves, so the Coming up list isn't reloaded on every tap.
+  const fmt=chipGroup(FORMATS.map(f=>[f.id,f.label]),d.format,v=>{ d.format=v;
+    fmt.querySelectorAll(".chip").forEach((b,i)=>b.setAttribute("aria-pressed",String(FORMATS[i].id===v))); });
+  const add=el("button",{class:"btn primary",type:"button",onclick:async()=>{
+    const sl=slugFromTitle(d.show); if(!sl){ toast("Pick a show from the list"); return; }
+    await setPick(sl,d.format); toast(showTitle(sl)+" added. It stays here until you post it"); S.pickDraft=null; refresh(); }},"Add");
+  card.append(el("h2",{},"My picks"),
+    el("div",{},el("label",{for:"pick-show"},"Add a show you want to post"),showIn,showDatalist()),
+    el("div",{},el("label",{},"Format"),fmt),
+    el("div",{class:"actions"},add));
+  const picks=myPicks(); if(!picks.length) return;
+  const ul=el("ul",{class:"rows"});
+  for (const p of picks){
+    const subs=showSubs(p.slug,today), link=suggestLink(subs,p.slug), ep=p.format==="episode"?1:null;
+    const used=el("button",{class:"btn primary",type:"button"},"Used it");
+    used.addEventListener("click",async()=>{
+      // No subs on file yet: fill in the Log form instead so you can type them.
+      if(!subs.length){ S.logDraft={show:showTitle(p.slug),subs:"",date:today,format:p.format,episode:ep?"1":"",link,note:""}; switchTab("log"); return; }
+      used.disabled=true;
+      try{ for (const k of subs) await addPost({posted_on:today,sub:k,show_slug:p.slug,format:p.format,episode:ep,link,source:"suggest"});
+        toast("Logged "+showTitle(p.slug)+" ("+FMT[p.format]+")"); refresh(); }
+      finally{ used.disabled=false; } });
+    const remove=el("button",{class:"btn ghost",type:"button",onclick:async()=>{ await setPick(p.slug,null); refresh(); }},"Remove");
+    ul.append(el("li",{style:"display:block;padding:10px 0"},
+      el("div",{style:"display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap"},el("strong",{},showTitle(p.slug)),el("span",{class:"pill ret"},"My pick")),
+      el("div",{class:"small"},FMT[p.format]+" · "+(link==="web"?"web link":"app link")+" · "+(subs.length?subs.map(subLabel).join(", "):"no subs on file yet")),
+      el("div",{class:"muted small"},"Added "+ago(p.on)), nextNoteEl(p.slug),
+      el("div",{class:"actions",style:"margin-top:6px"},used,remove)));
+  }
+  card.append(ul);
 }
 const LATER_OPTS={"":"Later…",d0:"Not today",d14:"In 2 weeks",d30:"In 1 month",d61:"In 2 months",d91:"In 3 months"};
 async function drawUpcoming(card){
@@ -622,7 +666,9 @@ function renderSuggest(){
     chipGroup([["return","Return to a show"],["new","New show"]],S.suggestMode,v=>{S.suggestMode=v;S.suggestion=null;renderSuggest();}),
     el("div",{class:"actions"},el("button",{class:"btn primary",type:"button",onclick:nextSuggestion},S.suggestion?"Next suggestion":"Suggest"))));
   const g=S.suggestion;
-  if(!g){ box.append(upcoming); drawUpcoming(upcoming); return; }
+  if(!g){ const picks=el("div",{class:"card"});
+    const refresh=()=>{ picks.replaceChildren(); drawPicks(picks,refresh); drawUpcoming(upcoming); };
+    box.append(picks,upcoming); refresh(); return; }
   const card=el("div",{class:"card"});
   if (g.kind==="return"){
     const hist=postsForShow(g.slug); const last=lastPost(hist);
