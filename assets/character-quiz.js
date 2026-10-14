@@ -99,7 +99,7 @@
   function showWall() {
     track('character_quiz_wall');
     root.innerHTML = typeof webWallHTML === 'function'
-      ? webWallHTML(null, null, 'character tests', null, true)
+      ? webWallHTML("You've finished your free character quiz 🎉", null, 'character quizzes', null, true)
       : '';
   }
 
@@ -126,6 +126,8 @@
     });
     const back = document.getElementById('cqBack');
     if (back) back.onclick = () => showQuestion(i - 1);
+    // Same rotating "more themes in the app" strip as the trivia modes (limited web only).
+    if (window.TGPromo) TGPromo.render(root.querySelector('.cq-q'), data.slug);
   }
 
   function finish() {

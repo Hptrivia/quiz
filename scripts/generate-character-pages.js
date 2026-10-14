@@ -233,6 +233,7 @@ ${(() => { const t = otherTestsHtml(quiz, theme, allQuizzes); return t ? `    <s
   <script type="application/json" id="cqData">${dataJson}</script>
   <script src="../assets/profile.js"></script>
   <script src="../assets/character-quiz-score.js"></script>
+  <script src="../assets/promo-banner.js"></script>
   <script src="../assets/character-quiz.js"></script>
   <script src="../assets/admob.js"></script>
 </body>

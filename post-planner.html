@@ -667,8 +667,16 @@ function renderSuggest(){
     el("div",{class:"actions"},el("button",{class:"btn primary",type:"button",onclick:nextSuggestion},S.suggestion?"Next suggestion":"Suggest"))));
   const g=S.suggestion;
   if(!g){ const picks=el("div",{class:"card"});
-    const refresh=()=>{ picks.replaceChildren(); drawPicks(picks,refresh); drawUpcoming(upcoming); };
-    box.append(picks,upcoming); refresh(); return; }
+    // My picks / Coming up stay folded behind two buttons so the tab doesn't need scrolling.
+    const open=S.suggestOpen||(S.suggestOpen={picks:false,upcoming:false});
+    const toggle=(k,label)=>el("button",{class:"btn"+(open[k]?" primary":""),type:"button","aria-expanded":String(open[k]),
+      onclick:()=>{ open[k]=!open[k]; renderSuggest(); }},label+(open[k]?" ⌄":" ›"));
+    const n=myPicks().length;
+    box.append(el("div",{class:"actions"},toggle("picks","My picks"+(n?" ("+n+")":"")),toggle("upcoming","Coming up")));
+    // Redraw the whole tab after a pick changes so the count on the button stays right.
+    if(open.picks){ drawPicks(picks,renderSuggest); box.append(picks); }
+    if(open.upcoming){ box.append(upcoming); drawUpcoming(upcoming); }
+    return; }
   const card=el("div",{class:"card"});
   if (g.kind==="return"){
     const hist=postsForShow(g.slug); const last=lastPost(hist);
