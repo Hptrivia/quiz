@@ -945,8 +945,11 @@ function _injectWebBanner() {
     || /\/categories\//.test(path)
     || /\/themes\//.test(path)
     || /\/(wordle|wordsearch)\//.test(path)
-    || path.endsWith('/fan-questions.html');
+    || path.endsWith('/fan-questions.html')
+    || path.endsWith('/remove-ads.html');
   if (!isLobby) return;
+  // remove-ads.html already shows its own QR on desktop — banner is mobile-only there.
+  if (path.endsWith('/remove-ads.html') && !isIosWeb() && !isAndroidWeb()) return;
   // The WHOLE banner is one clickable element. Mobile web taps straight to the
   // visitor's store. Desktop can't install a phone app from a browser, so its
   // click opens the same wall card the end-of-game screens show (QR to grab the
