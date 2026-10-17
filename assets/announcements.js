@@ -86,8 +86,8 @@ const APP_ANNOUNCEMENTS = [
   // batch gets announced). Point the CTA at a hub page once there are several.
   {
     icon: "🎭",
-    title: "12 New Character Tests",
-    text: "Which Seinfeld, Scrubs, Abbott Elementary or Once Upon a Time character are you? Plus It's Always Sunny, 30 Rock, Arrested Development, Silicon Valley, That '70s Show, True Blood, This Is Us and What We Do in the Shadows.",
+    title: "17 New Character Tests",
+    text: "Which Succession, Better Call Saul, Yellowstone or Criminal Minds character are you? Plus Young Sheldon, Malcolm in the Middle, Shameless, Psych, Entourage, Frasier, Veep, Two and a Half Men, The Middle, Mad Men, House, NCIS and How to Get Away with Murder.",
     cta: { label: "Take a Test", href: "character-quiz/index.html" },
   },
   {
