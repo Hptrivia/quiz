@@ -81,13 +81,18 @@ const APP_ANNOUNCEMENTS = [
     text: "Pick your own shows and get 10 fresh questions from your mix, every day.",
     cta: { label: "Play Now", href: "daily-mashup.html" },
   },
-  // Character quizzes: keep this ONE entry and update its text as shows are
-  // added (editing the text re-shows it to everyone — intended, so each new
-  // batch gets announced). Point the CTA at a hub page once there are several.
+  // Character quizzes: each batch gets its own entry naming only that batch's
+  // shows (user 2026-10-17: add new batches alongside, don't replace older ones).
   {
     icon: "🎭",
     title: "17 New Character Tests",
     text: "Which Succession, Better Call Saul, Yellowstone or Criminal Minds character are you? Plus Young Sheldon, Malcolm in the Middle, Shameless, Psych, Entourage, Frasier, Veep, Two and a Half Men, The Middle, Mad Men, House, NCIS and How to Get Away with Murder.",
+    cta: { label: "Take a Test", href: "character-quiz/index.html" },
+  },
+  {
+    icon: "🎭",
+    title: "18 More Character Tests",
+    text: "Which Simpsons, South Park, Severance or Hazbin Hotel character are you? Plus Lucifer, The Bear, Cobra Kai, Vikings, Downton Abbey, Orange Is the New Black, The West Wing, Buffy, Firefly, Orphan Black, Family Guy, SpongeBob, Bob's Burgers and Teen Titans.",
     cta: { label: "Take a Test", href: "character-quiz/index.html" },
   },
   {

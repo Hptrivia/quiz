@@ -1,0 +1,500 @@
+{
+  "slug": "lucifer",
+  "show": "Lucifer",
+  "shortName": "Lucifer",
+  "seoTitle": "Lucifer Test: Which Character Are You? (11 Questions)",
+  "metaDescription": "Take the Lucifer test: 11 everyday questions reveal whether you're Lucifer, Chloe, Maze, Amenadiel, Linda, Dan, Ella or Eve — with your full character breakdown.",
+  "intro": "Are you the Devil himself, the detective who can't be charmed, or the demon with a heart of gold? Answer 11 everyday questions about friends, secrets and doing the right thing, and find out which Lucifer character you are.",
+  "characters": [
+    {
+      "id": "lucifer",
+      "name": "Lucifer Morningstar",
+      "emoji": "😈",
+      "color": "#b91c1c",
+      "title": "The Devil Himself",
+      "summary": "Charming, honest and always up for a good time. You do what you want, and you make it look effortless.",
+      "description": [
+        "Like Lucifer, you know how to have a good time. Bored and unhappy with his life in Hell, he left his throne to run Lux, a high-end nightclub in Los Angeles.",
+        "You don't lie. Lucifer never lies, which is why he openly tells everyone he's the Devil.",
+        "You find your real purpose in the end. In the finale, Lucifer returns to Hell to help lost souls move on to Heaven."
+      ],
+      "strengths": [
+        "Charming",
+        "Honest",
+        "Fun"
+      ],
+      "flaw": "You'd rather throw a party than talk about your feelings.",
+      "signature": "A drink in hand, a wicked grin and a question about what you truly desire.",
+      "clashReason": "they'd make everything about themselves, and somehow get away with it"
+    },
+    {
+      "id": "chloe",
+      "name": "Chloe Decker",
+      "emoji": "🔍",
+      "color": "#2563eb",
+      "title": "The Detective",
+      "summary": "Practical, determined and very hard to fool. You get the job done, and you don't fall for anyone's charm.",
+      "description": [
+        "Like Chloe, you're determined and practical. She's an LAPD homicide detective, and a former actress.",
+        "You're hard to fool. Chloe is the only human who's immune to Lucifer's charm and his power to draw out people's desires.",
+        "You follow in your family's footsteps. Chloe's late father was also an LAPD officer."
+      ],
+      "strengths": [
+        "Determined",
+        "Practical",
+        "Fair"
+      ],
+      "flaw": "You find it hard to switch off, even when everyone tells you to.",
+      "signature": "A badge, a case file and a very sceptical look.",
+      "clashReason": "they'd ask for proof of everything you say"
+    },
+    {
+      "id": "maze",
+      "name": "Mazikeen",
+      "emoji": "🗡️",
+      "color": "#6d28d9",
+      "title": "The Demon",
+      "summary": "Blunt, fearless and fiercely loyal. You say exactly what you think, and you'd fight anyone for your people.",
+      "description": [
+        "Like Maze, you say exactly what you think. She's a demon who served as Lucifer's head torturer in Hell, then followed him to Los Angeles.",
+        "You're loyal to the people you let in. Maze becomes close friends with Linda, and with Chloe's daughter Trixie.",
+        "You find where you belong. Maze becomes a bounty hunter, and she marries Eve."
+      ],
+      "strengths": [
+        "Loyal",
+        "Fearless",
+        "Blunt"
+      ],
+      "flaw": "You'd rather pick a fight than admit you're hurt.",
+      "signature": "A pair of blades, a bounty to collect and zero patience for small talk.",
+      "clashReason": "they'd tell you exactly what they think of you, to your face"
+    },
+    {
+      "id": "amenadiel",
+      "name": "Amenadiel",
+      "emoji": "⏳",
+      "color": "#ca8a04",
+      "title": "The Dutiful Brother",
+      "summary": "Calm, patient and serious about doing the right thing. You keep your promises, even while you work out what you really want.",
+      "description": [
+        "Like Amenadiel, you take your duty seriously. He's Lucifer's older brother, and the eldest of all the angels.",
+        "You're still working out who you are. When Amenadiel loses his powers and his wings, he starts to question his choices.",
+        "You become what others need. Amenadiel has a son, Charlie, with Linda, joins the LAPD, and finally becomes God."
+      ],
+      "strengths": [
+        "Dutiful",
+        "Patient",
+        "Wise"
+      ],
+      "flaw": "You follow the rules so closely that you forget to ask what you want.",
+      "signature": "A calm voice, a long view of things and the power to slow down time.",
+      "clashReason": "they'd lecture you about doing the right thing"
+    },
+    {
+      "id": "linda",
+      "name": "Linda Martin",
+      "emoji": "💬",
+      "color": "#0d9488",
+      "title": "The Therapist",
+      "summary": "Wise, caring and impossible to shock. You're the one everyone opens up to, and you always know what to ask.",
+      "description": [
+        "Like Linda, you're the one people open up to. She's a Stanford-educated psychotherapist, and Lucifer's therapist.",
+        "You stay, even when it's hard. Linda is visibly shaken when Lucifer shows her his true face, but she becomes his friend.",
+        "You make room for everyone. Linda has a son with Amenadiel, and she becomes good friends with Maze."
+      ],
+      "strengths": [
+        "Caring",
+        "Wise",
+        "Grounded"
+      ],
+      "flaw": "You're so busy looking after everyone else that nobody asks how you are.",
+      "signature": "A notepad, a patient smile and a question that gets right to the point.",
+      "clashReason": "they'd analyse everything you say"
+    },
+    {
+      "id": "dan",
+      "name": "Dan Espinoza",
+      "emoji": "👮",
+      "color": "#15803d",
+      "title": "The Underdog",
+      "summary": "Hard-working, devoted and more sensitive than you let on. You try harder than anyone gives you credit for.",
+      "description": [
+        "Like Dan, you try harder than people give you credit for. He's an LAPD homicide detective, and Chloe's ex-husband.",
+        "You get underestimated. Lucifer keeps calling him \"Detective Douche.\"",
+        "You hold on to guilt, until you finally let it go. After his death, Dan's ghost works through his guilt and moves on to Heaven."
+      ],
+      "strengths": [
+        "Hard-working",
+        "Devoted",
+        "Resilient"
+      ],
+      "flaw": "You take things personally, and you hold on to guilt for far too long.",
+      "signature": "A badge, a bruised ego and a lot of heart.",
+      "clashReason": "they'd take it personally, and sulk about it for days"
+    },
+    {
+      "id": "ella",
+      "name": "Ella Lopez",
+      "emoji": "🔬",
+      "color": "#db2777",
+      "title": "The Ray of Sunshine",
+      "summary": "Upbeat, brilliant and full of surprises. You light up every room, and you hug first and ask questions later.",
+      "description": [
+        "Like Ella, you light up every room. She's an upbeat forensic scientist for the LAPD, from Detroit.",
+        "You're full of surprises. Ella grew up with four brothers, and has a past involving stolen cars.",
+        "You keep the faith, even when it's tested. Ella is a devout Catholic who starts to question her faith after a friend dies."
+      ],
+      "strengths": [
+        "Upbeat",
+        "Brilliant",
+        "Warm"
+      ],
+      "flaw": "You put on a brave face, even when you're struggling.",
+      "signature": "A lab coat, a big hug and a fun fact nobody asked for.",
+      "clashReason": "they'd be cheerful at you when you just want to be grumpy"
+    },
+    {
+      "id": "eve",
+      "name": "Eve",
+      "emoji": "🍎",
+      "color": "#ea580c",
+      "title": "The Thrill-Seeker",
+      "summary": "Passionate, impulsive and always chasing the next thrill. You throw yourself into everything, and everyone, all at once.",
+      "description": [
+        "Like Eve, you crave excitement. She's the world's first woman, and Lucifer's former lover.",
+        "You go after the life you want. After an eternity with Adam, Eve grows restless and leaves Heaven to find Lucifer again.",
+        "You find yourself in the end. Eve becomes a bounty hunter with Maze, and the two of them get married."
+      ],
+      "strengths": [
+        "Passionate",
+        "Fun",
+        "Brave"
+      ],
+      "flaw": "You throw yourself into things, and people, far too fast.",
+      "signature": "A bright smile, a wild idea and an apple you probably shouldn't eat.",
+      "clashReason": "they'd want to be with you all the time, and take it personally if you said no"
+    }
+  ],
+  "questions": [
+    {
+      "text": "A friend says something's wrong, but won't tell you what. You...",
+      "options": [
+        {
+          "text": "Let them know you're there, and wait for them to come to you",
+          "points": {
+            "linda": 3
+          }
+        },
+        {
+          "text": "Hug them first, and ask questions later",
+          "points": {
+            "ella": 3
+          }
+        },
+        {
+          "text": "Drop everything and spend the whole day with them",
+          "points": {
+            "eve": 3
+          }
+        },
+        {
+          "text": "Ask who's behind it, and offer to deal with them",
+          "points": {
+            "maze": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your perfect Saturday looks like...",
+      "options": [
+        {
+          "text": "Sleeping till noon, a long lunch and a party that goes until sunrise",
+          "points": {
+            "lucifer": 3
+          }
+        },
+        {
+          "text": "Something you've never tried before. The wilder, the better",
+          "points": {
+            "eve": 3
+          }
+        },
+        {
+          "text": "Helping someone out, then a quiet dinner at home",
+          "points": {
+            "amenadiel": 3
+          }
+        },
+        {
+          "text": "Catching up on errands, and an early night",
+          "points": {
+            "chloe": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your boss gives you an order you disagree with. You...",
+      "options": [
+        {
+          "text": "Follow it. Doing your job is what matters",
+          "points": {
+            "amenadiel": 3
+          }
+        },
+        {
+          "text": "Follow it, but quietly gather proof that you're right",
+          "points": {
+            "chloe": 3
+          }
+        },
+        {
+          "text": "Ignore it. Nobody tells you what to do",
+          "points": {
+            "lucifer": 3
+          }
+        },
+        {
+          "text": "Grumble about it to anyone who'll listen, then do it anyway",
+          "points": {
+            "dan": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You catch a friend lying to you. You...",
+      "options": [
+        {
+          "text": "Look them in the eye until they admit the truth",
+          "points": {
+            "lucifer": 3
+          }
+        },
+        {
+          "text": "Tell them exactly what you think, and stay angry for a long time",
+          "points": {
+            "maze": 3
+          }
+        },
+        {
+          "text": "Ask why they felt they had to lie",
+          "points": {
+            "linda": 3
+          }
+        },
+        {
+          "text": "Forgive them fast. You'd hate to lose them",
+          "points": {
+            "eve": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You make a mistake that really hurts someone. You...",
+      "options": [
+        {
+          "text": "Carry the guilt around for months",
+          "points": {
+            "dan": 3
+          }
+        },
+        {
+          "text": "Own it, apologise, and fix it properly",
+          "points": {
+            "chloe": 3
+          }
+        },
+        {
+          "text": "Go somewhere quiet, and think about what it says about you",
+          "points": {
+            "amenadiel": 3
+          }
+        },
+        {
+          "text": "Insist it wasn't your fault, then secretly beat yourself up",
+          "points": {
+            "lucifer": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your friends throw you a surprise party. You...",
+      "options": [
+        {
+          "text": "Scream, laugh and maybe cry a little",
+          "points": {
+            "ella": 3
+          }
+        },
+        {
+          "text": "Act annoyed, then secretly have the best time",
+          "points": {
+            "maze": 3
+          }
+        },
+        {
+          "text": "Feel touched. You didn't know people cared that much",
+          "points": {
+            "dan": 3
+          }
+        },
+        {
+          "text": "Thank everyone, then stay behind to help clean up",
+          "points": {
+            "amenadiel": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone suggests you pick up a new hobby. You...",
+      "options": [
+        {
+          "text": "Learn the piano, so you can play at parties",
+          "points": {
+            "lucifer": 3
+          }
+        },
+        {
+          "text": "Take up kickboxing, and spar with anyone brave enough",
+          "points": {
+            "maze": 3
+          }
+        },
+        {
+          "text": "Try five new things at once, and stick with whichever is most fun",
+          "points": {
+            "eve": 3
+          }
+        },
+        {
+          "text": "Laugh. You barely have time to sleep",
+          "points": {
+            "chloe": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend tells you a big secret that affects someone else you love. You...",
+      "options": [
+        {
+          "text": "Tell the person it affects. Keeping quiet would be a lie",
+          "points": {
+            "lucifer": 3
+          }
+        },
+        {
+          "text": "Help your friend find the courage to tell them",
+          "points": {
+            "linda": 3
+          }
+        },
+        {
+          "text": "Keep it, and dread the day it comes out",
+          "points": {
+            "dan": 3
+          }
+        },
+        {
+          "text": "Try to keep it, and blurt it out within a week",
+          "points": {
+            "ella": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your partner says they need some space. You...",
+      "options": [
+        {
+          "text": "Give it, but text a few times a day, just to check in",
+          "points": {
+            "eve": 3
+          }
+        },
+        {
+          "text": "Give it, and wonder what you did wrong",
+          "points": {
+            "dan": 3
+          }
+        },
+        {
+          "text": "Tell them to take all the time they want. You don't need anyone",
+          "points": {
+            "maze": 3
+          }
+        },
+        {
+          "text": "Talk it through calmly, so you both know where you stand",
+          "points": {
+            "linda": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You find out your family kept a big secret from you for years. You...",
+      "options": [
+        {
+          "text": "Bring it up every chance you get, for years",
+          "points": {
+            "lucifer": 3
+          }
+        },
+        {
+          "text": "Look into it yourself before deciding how to feel",
+          "points": {
+            "chloe": 3
+          }
+        },
+        {
+          "text": "Trust they had their reasons, even if it hurts",
+          "points": {
+            "amenadiel": 3
+          }
+        },
+        {
+          "text": "Call your best friend straight away, and tell them everything",
+          "points": {
+            "ella": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A charming new coworker insists he's literally the Devil. You...",
+      "options": [
+        {
+          "text": "Roll your eyes, but keep him around. He gets results",
+          "points": {
+            "chloe": 3
+          }
+        },
+        {
+          "text": "Don't trust him, and keep a very close eye on him",
+          "points": {
+            "dan": 3
+          }
+        },
+        {
+          "text": "Assume it's a metaphor, and want to hear more",
+          "points": {
+            "linda": 3
+          }
+        },
+        {
+          "text": "Decide he's quirky, and like him anyway",
+          "points": {
+            "ella": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

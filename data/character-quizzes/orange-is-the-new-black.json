@@ -1,0 +1,551 @@
+{
+  "slug": "orange-is-the-new-black",
+  "show": "Orange Is the New Black",
+  "shortName": "Orange Is the New Black",
+  "seoTitle": "Orange Is the New Black Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the Orange Is the New Black test: 12 everyday questions reveal whether you're Piper, Alex, Red, Suzanne, Taystee, Nicky, Poussey, Cindy or Frieda — with your full character breakdown.",
+  "intro": "Are you the newcomer learning the ropes, the kitchen boss, or the one with a comeback for everything? Answer 12 everyday questions about friends, rules and surviving the day, and find out which Orange Is the New Black character you are.",
+  "characters": [
+    {
+      "id": "piper",
+      "name": "Piper Chapman",
+      "emoji": "🧡",
+      "color": "#ea580c",
+      "title": "The Newcomer",
+      "summary": "Smart, determined and a little bit self-involved. You throw yourself into everything, and you're always learning how to play the game.",
+      "description": [
+        "Like Piper, you can be a bit wrapped up in yourself. She's often accused of being self-obsessed.",
+        "You've got a lot to learn, fast. Piper is sentenced to 15 months at Litchfield for carrying drug money for her ex, Alex.",
+        "You find your feet. Piper works in the electrical shop, sits on the inmates' advisory council, and is released early in season 6."
+      ],
+      "strengths": [
+        "Determined",
+        "Smart",
+        "Adaptable"
+      ],
+      "flaw": "You make everything about you, even when it really isn't.",
+      "signature": "A big plan, a long speech and a lot of feelings about it.",
+      "clashReason": "they'd make your problem about them"
+    },
+    {
+      "id": "alex",
+      "name": "Alex Vause",
+      "emoji": "🕶️",
+      "color": "#1e40af",
+      "title": "The Cool One",
+      "summary": "Cool, sharp and very good at reading people. You know what's going on before anyone else does, and you never let them see you sweat.",
+      "description": [
+        "Like Alex, you can read people. She's perceptive, and often senses what Piper is really feeling.",
+        "You've got a past. Alex used to smuggle drugs for an international cartel.",
+        "You end up with the one you want. Nicky arranges a surprise wedding for Alex and Piper in the season 6 finale."
+      ],
+      "strengths": [
+        "Perceptive",
+        "Confident",
+        "Sharp"
+      ],
+      "flaw": "You keep people guessing, even the ones you love.",
+      "signature": "A knowing look, a dry comment and the upper hand.",
+      "clashReason": "they'd see right through you, and tell you so"
+    },
+    {
+      "id": "red",
+      "name": "Red",
+      "emoji": "🍳",
+      "color": "#dc2626",
+      "title": "The Boss",
+      "summary": "Tough, proud and fiercely protective. You feed the people you love, and you expect respect in return.",
+      "description": [
+        "Like Red, you run the show. She's the prison's head chef, and she's feared and respected by most of the inmates.",
+        "You've always got something going on. Red runs a smuggling business out of the kitchen, but she refuses to bring in drugs.",
+        "You've got pull. Red has a strong influence over Healy, one of the prison's officers."
+      ],
+      "strengths": [
+        "Tough",
+        "Protective",
+        "Proud"
+      ],
+      "flaw": "You hold a grudge, and you never forget an insult.",
+      "signature": "A hot stove, a steely glare and a family you'd do anything for.",
+      "clashReason": "they'd never forgive you for insulting their cooking"
+    },
+    {
+      "id": "suzanne",
+      "name": "Suzanne",
+      "emoji": "✨",
+      "color": "#7c3aed",
+      "title": "The Big Heart",
+      "summary": "Earnest, imaginative and full of feeling. You love with your whole heart, and you see the world in your own unique way.",
+      "description": [
+        "Like Suzanne, you feel everything deeply. She can be intense, but she's generally gentle and friendly.",
+        "You've got hidden talents. Suzanne becomes a star kickball player.",
+        "You're braver than you think. Suzanne helps stop a knife fight."
+      ],
+      "strengths": [
+        "Loving",
+        "Imaginative",
+        "Honest"
+      ],
+      "flaw": "You take things so literally that you sometimes miss the joke.",
+      "signature": "A heartfelt poem, a wide-eyed stare and a friend for life.",
+      "clashReason": "they'd take everything you say very, very seriously"
+    },
+    {
+      "id": "taystee",
+      "name": "Taystee",
+      "emoji": "📚",
+      "color": "#16a34a",
+      "title": "The Brains",
+      "summary": "Smart, funny and ready to fight for what's right. You've got a head for business, and you never stop believing things can get better.",
+      "description": [
+        "Like Taystee, you're smart and well-read. She has a strong memory, and a head for business and maths.",
+        "You work your way up. Taystee works in the prison library, and later becomes Caputo's secretary.",
+        "You turn pain into purpose. Taystee starts the Poussey Washington Fund, giving loans to women leaving prison."
+      ],
+      "strengths": [
+        "Smart",
+        "Funny",
+        "Determined"
+      ],
+      "flaw": "You carry everyone's fight on your shoulders.",
+      "signature": "A good book, a big laugh and a plan to change things.",
+      "clashReason": "they'd out-argue you, and quote a book while doing it"
+    },
+    {
+      "id": "nicky",
+      "name": "Nicky Nichols",
+      "emoji": "😏",
+      "color": "#ca8a04",
+      "title": "The Wisecracker",
+      "summary": "Witty, blunt and fiercely loyal. You've always got a comeback, and you'd do anything for the people you love.",
+      "description": [
+        "Like Nicky, you've always got a comeback. She's witty, acerbic and loud.",
+        "You're loyal to the people who look after you. Nicky is Red's most trusted helper.",
+        "You've got a romantic side. Nicky arranges a surprise wedding for Piper and Alex."
+      ],
+      "strengths": [
+        "Witty",
+        "Loyal",
+        "Honest"
+      ],
+      "flaw": "You hide your real feelings behind a joke.",
+      "signature": "A smart mouth, a loyal streak and a soft heart.",
+      "clashReason": "they'd make a joke at your expense, every single time"
+    },
+    {
+      "id": "poussey",
+      "name": "Poussey",
+      "emoji": "🎵",
+      "color": "#0d9488",
+      "title": "The Loyal Friend",
+      "summary": "Kind, funny and loyal to the end. You make everyone laugh, and you'd stand by your best friend no matter what.",
+      "description": [
+        "Like Poussey, you're good-natured and you love a joke. She's always joking around.",
+        "You've got a voice. Poussey is a talented singer.",
+        "You're loyal to your best friend. Poussey is fiercely devoted to Taystee."
+      ],
+      "strengths": [
+        "Kind",
+        "Funny",
+        "Loyal"
+      ],
+      "flaw": "You give your heart away too easily.",
+      "signature": "A big grin, a song in your head and a best friend by your side.",
+      "clashReason": "they'd always take their best friend's side over yours"
+    },
+    {
+      "id": "cindy",
+      "name": "Cindy",
+      "emoji": "😎",
+      "color": "#db2777",
+      "title": "The Easygoing One",
+      "summary": "Bubbly, laid-back and always cheerful. You find the fun in everything, and the shortcut too.",
+      "description": [
+        "Like Cindy, you're bubbly and laid-back. She's always cheerful, and she often avoids responsibility.",
+        "You know how to work the system. Cindy pretends to be Jewish to get better food, and later converts for real.",
+        "You've got something to say. In season 6, Cindy co-hosts a radio show."
+      ],
+      "strengths": [
+        "Cheerful",
+        "Funny",
+        "Easygoing"
+      ],
+      "flaw": "You'll do almost anything to get out of doing something.",
+      "signature": "A big laugh, a good shortcut and the best seat in the house.",
+      "clashReason": "they'd leave you to do all the work"
+    },
+    {
+      "id": "frieda",
+      "name": "Frieda",
+      "emoji": "🌱",
+      "color": "#64748b",
+      "title": "The Survivor",
+      "summary": "Blunt, tough and always prepared. You keep to yourself, and when things go wrong, you're the one who saw it coming.",
+      "description": [
+        "Like Frieda, you're blunt and tough. She's a curmudgeonly survivalist.",
+        "You're good at growing things. Frieda looks after the prison greenhouse and garden.",
+        "You're always ready for the worst. Frieda builds a secret bunker in an abandoned pool, and hides other inmates there during the riot."
+      ],
+      "strengths": [
+        "Prepared",
+        "Tough",
+        "Resourceful"
+      ],
+      "flaw": "You trust nobody, and you'd rather be alone than be let down.",
+      "signature": "Muddy gloves, a secret stash and a plan for the end of the world.",
+      "clashReason": "they'd tell you, bluntly, that you're not ready"
+    }
+  ],
+  "questions": [
+    {
+      "text": "It's your first day at a new job, and you don't know anyone. You...",
+      "options": [
+        {
+          "text": "Try way too hard to get everyone to like you",
+          "points": {
+            "piper": 3
+          }
+        },
+        {
+          "text": "Hang back, and watch how everyone behaves",
+          "points": {
+            "alex": 3
+          }
+        },
+        {
+          "text": "Pick one person, and decide they're your new best friend",
+          "points": {
+            "suzanne": 3
+          }
+        },
+        {
+          "text": "Find the exits, and work out who you can trust",
+          "points": {
+            "frieda": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're invited to a potluck. You bring...",
+      "options": [
+        {
+          "text": "A homemade dish that puts everyone else's to shame",
+          "points": {
+            "red": 3
+          }
+        },
+        {
+          "text": "Something from the shop, in a homemade-looking dish",
+          "points": {
+            "cindy": 3
+          }
+        },
+        {
+          "text": "A board game, and you're keeping score",
+          "points": {
+            "taystee": 3
+          }
+        },
+        {
+          "text": "Yourself, and a lot of very good one-liners",
+          "points": {
+            "nicky": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You've got a whole day to yourself. You spend it...",
+      "options": [
+        {
+          "text": "Curled up with a good book",
+          "points": {
+            "taystee": 3
+          }
+        },
+        {
+          "text": "Working in the garden",
+          "points": {
+            "frieda": 3
+          }
+        },
+        {
+          "text": "Singing along to your favourite songs, loudly",
+          "points": {
+            "poussey": 3
+          }
+        },
+        {
+          "text": "Planning a new side business",
+          "points": {
+            "piper": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone takes credit for your idea. You...",
+      "options": [
+        {
+          "text": "Call it out, with proof",
+          "points": {
+            "taystee": 3
+          }
+        },
+        {
+          "text": "Make sure they understand it won't happen twice",
+          "points": {
+            "red": 3
+          }
+        },
+        {
+          "text": "Stew about it, then tell everyone who'll listen",
+          "points": {
+            "piper": 3
+          }
+        },
+        {
+          "text": "Shrug. Less work for you",
+          "points": {
+            "cindy": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend is going through a hard time. You...",
+      "options": [
+        {
+          "text": "Make them laugh until they forget about it",
+          "points": {
+            "poussey": 3
+          }
+        },
+        {
+          "text": "Tell them the hard truth, as nicely as you can manage",
+          "points": {
+            "nicky": 3
+          }
+        },
+        {
+          "text": "Cook them something, and make them eat it",
+          "points": {
+            "red": 3
+          }
+        },
+        {
+          "text": "Leave them be. They'll come to you when they're ready",
+          "points": {
+            "frieda": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend is about to make a big mistake. You...",
+      "options": [
+        {
+          "text": "Read the situation, and say exactly what they don't want to hear",
+          "points": {
+            "alex": 3
+          }
+        },
+        {
+          "text": "Make a sarcastic joke about it, then help clean up the mess",
+          "points": {
+            "nicky": 3
+          }
+        },
+        {
+          "text": "Give them a long speech about what they should do instead",
+          "points": {
+            "piper": 3
+          }
+        },
+        {
+          "text": "Tell them gently, because you'd want the same",
+          "points": {
+            "poussey": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your workplace brings in an unfair new rule. You...",
+      "options": [
+        {
+          "text": "Start a petition, and get everyone to sign it",
+          "points": {
+            "taystee": 3
+          }
+        },
+        {
+          "text": "Find a way around it, quietly",
+          "points": {
+            "red": 3
+          }
+        },
+        {
+          "text": "Complain, then find a way to do even less",
+          "points": {
+            "cindy": 3
+          }
+        },
+        {
+          "text": "Follow it exactly, even when it makes no sense",
+          "points": {
+            "suzanne": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone you're dating gives you mixed signals. You...",
+      "options": [
+        {
+          "text": "Overthink every message, and ask all your friends",
+          "points": {
+            "piper": 3
+          }
+        },
+        {
+          "text": "Play it cool. You know exactly what's going on",
+          "points": {
+            "alex": 3
+          }
+        },
+        {
+          "text": "Write them a poem, and read it out loud",
+          "points": {
+            "suzanne": 3
+          }
+        },
+        {
+          "text": "Flirt with someone else, just to see what happens",
+          "points": {
+            "nicky": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You hear a rumour about a friend. You...",
+      "options": [
+        {
+          "text": "Defend them, no question",
+          "points": {
+            "poussey": 3
+          }
+        },
+        {
+          "text": "Pass it on. It's too good not to",
+          "points": {
+            "cindy": 3
+          }
+        },
+        {
+          "text": "Ask them directly. You'd rather hear it from them",
+          "points": {
+            "alex": 3
+          }
+        },
+        {
+          "text": "Ignore it. Gossip is how people get hurt",
+          "points": {
+            "frieda": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A big storm is forecast. You...",
+      "options": [
+        {
+          "text": "Relax. You've had supplies ready for months",
+          "points": {
+            "frieda": 3
+          }
+        },
+        {
+          "text": "Hope it means work gets cancelled",
+          "points": {
+            "cindy": 3
+          }
+        },
+        {
+          "text": "Take charge, and give everyone a job",
+          "points": {
+            "red": 3
+          }
+        },
+        {
+          "text": "Check on your best friend first",
+          "points": {
+            "poussey": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're new in prison, and the most powerful inmate expects respect. You...",
+      "options": [
+        {
+          "text": "Say exactly what you think of her, and regret it instantly",
+          "points": {
+            "piper": 3
+          }
+        },
+        {
+          "text": "Keep your head down, and choose your allies carefully",
+          "points": {
+            "alex": 3
+          }
+        },
+        {
+          "text": "Make yourself useful, until she trusts you",
+          "points": {
+            "nicky": 3
+          }
+        },
+        {
+          "text": "Decide, right away, that she's amazing",
+          "points": {
+            "suzanne": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You're in prison, and the inmates take over during a riot. You...",
+      "options": [
+        {
+          "text": "Write a list of demands, and fight for real change",
+          "points": {
+            "taystee": 3
+          }
+        },
+        {
+          "text": "Disappear to your secret hideout",
+          "points": {
+            "frieda": 3
+          }
+        },
+        {
+          "text": "Grab the best snacks before anyone else does",
+          "points": {
+            "cindy": 3
+          }
+        },
+        {
+          "text": "Get swept up in it, then worry you've done something wrong",
+          "points": {
+            "suzanne": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

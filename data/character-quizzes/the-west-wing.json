@@ -1,0 +1,501 @@
+{
+  "slug": "the-west-wing",
+  "show": "The West Wing",
+  "shortName": "The West Wing",
+  "seoTitle": "The West Wing Test: Which Character Are You? (11 Questions)",
+  "metaDescription": "Take The West Wing test: 11 everyday questions reveal whether you're Bartlet, Leo, Josh, Toby, C.J., Sam, Donna or Charlie — with your full character breakdown.",
+  "intro": "Are you the brilliant President, the loyal chief of staff, or the press secretary with the perfect comeback? Answer 11 everyday questions about work, loyalty and doing the right thing, and find out which West Wing character you are.",
+  "characters": [
+    {
+      "id": "bartlet",
+      "name": "President Bartlet",
+      "emoji": "🇺🇸",
+      "color": "#1d4ed8",
+      "title": "The President",
+      "summary": "Brilliant, principled and always ready with a lecture. You know a lot, and you can't help sharing it.",
+      "description": [
+        "Like Bartlet, you're brilliant, and you know it. He's the President, a former Governor of New Hampshire, and a Nobel Prize-winning economist.",
+        "You don't suffer fools. Bartlet can be impatient with people he thinks are less capable.",
+        "You carry a lot. Bartlet has multiple sclerosis, and keeping it hidden turns into a public scandal."
+      ],
+      "strengths": [
+        "Brilliant",
+        "Principled",
+        "Inspiring"
+      ],
+      "flaw": "You'll give a lecture to someone who only asked a simple question.",
+      "signature": "A stack of books, a long story and a fact nobody else knew.",
+      "clashReason": "they'd correct you, then explain the history of why you're wrong"
+    },
+    {
+      "id": "leo",
+      "name": "Leo McGarry",
+      "emoji": "🎖️",
+      "color": "#92400e",
+      "title": "The Chief of Staff",
+      "summary": "Loyal, steady and the one who holds it all together. You protect the people you believe in, whatever it costs you.",
+      "description": [
+        "Like Leo, you're loyal to the end. He's the President's Chief of Staff, and a Vietnam veteran.",
+        "You hold everything together. Leo is devoted to the President and to his staff.",
+        "You're always ready to serve. Leo was Secretary of Labor, and later becomes the Democratic nominee for vice president."
+      ],
+      "strengths": [
+        "Loyal",
+        "Steady",
+        "Protective"
+      ],
+      "flaw": "You take on so much that you forget to look after yourself.",
+      "signature": "A steady voice, a closed door and a plan for every crisis.",
+      "clashReason": "they'd make the call without asking you"
+    },
+    {
+      "id": "josh",
+      "name": "Josh Lyman",
+      "emoji": "📈",
+      "color": "#dc2626",
+      "title": "The Strategist",
+      "summary": "Sharp, driven and a little bit cocky. You thrive under pressure, and you're usually the smartest person in the room.",
+      "description": [
+        "Like Josh, you've got one of the sharpest minds in the room. He's Deputy Chief of Staff, and a witty, slightly cocky know-it-all.",
+        "You bounce back. Josh is critically wounded in a shooting at the end of season 1, and fights his way back.",
+        "You back the long shot. Josh persuades Matt Santos to run for president, and becomes his campaign manager."
+      ],
+      "strengths": [
+        "Sharp",
+        "Driven",
+        "Loyal"
+      ],
+      "flaw": "You act first, and only sometimes think about it after.",
+      "signature": "Rolled-up sleeves, a big idea and a victory you saw coming.",
+      "clashReason": "they'd tell you they were right, then tell you again"
+    },
+    {
+      "id": "toby",
+      "name": "Toby Ziegler",
+      "emoji": "✒️",
+      "color": "#4b5563",
+      "title": "The Conscience",
+      "summary": "Principled, honest and famously grumpy. You care deeply about doing the right thing, even if you never smile about it.",
+      "description": [
+        "Like Toby, you've got strong principles. He's the White House Communications Director, and he's often prickly.",
+        "You care more than you show. Toby is protective of his family, and becomes a father to twins.",
+        "You follow your conscience, whatever it costs. Toby leaks classified information about a military shuttle, and confesses."
+      ],
+      "strengths": [
+        "Principled",
+        "Honest",
+        "Brilliant"
+      ],
+      "flaw": "You're so grumpy that people miss how much you care.",
+      "signature": "A furrowed brow, a blank page and a speech you rewrote at 2am.",
+      "clashReason": "they'd tell you exactly what's wrong with your idea, and not smile once"
+    },
+    {
+      "id": "cj",
+      "name": "C.J. Cregg",
+      "emoji": "🎤",
+      "color": "#db2777",
+      "title": "The Press Secretary",
+      "summary": "Witty, confident and composed. You can handle any crowd, even when you're full of nerves on the inside.",
+      "description": [
+        "Like C.J., you can handle a tough crowd. She's the White House Press Secretary, and she's witty, confident and composed.",
+        "You grow into the job. C.J. starts out politically inexperienced, becomes one of the sharpest people in the building, and later serves as Chief of Staff.",
+        "You choose your own happy ending. In the finale, C.J. leaves the White House to be with Danny Concannon."
+      ],
+      "strengths": [
+        "Witty",
+        "Confident",
+        "Composed"
+      ],
+      "flaw": "You look calm on the outside, even when you're full of self-doubt.",
+      "signature": "A podium, a perfect comeback and a briefing that goes your way.",
+      "clashReason": "they'd shut you down with one perfect line"
+    },
+    {
+      "id": "sam",
+      "name": "Sam Seaborn",
+      "emoji": "📝",
+      "color": "#16a34a",
+      "title": "The Idealist",
+      "summary": "Idealistic, eloquent and endlessly optimistic. You believe words can change the world, and you want to write them.",
+      "description": [
+        "Like Sam, you're an idealist. He's the Deputy Communications Director, and an eloquent speechwriter.",
+        "You chase big dreams. Sam leaves the White House to run for Congress in California.",
+        "You come back when you're needed. Sam returns as Deputy Chief of Staff in the final season."
+      ],
+      "strengths": [
+        "Idealistic",
+        "Eloquent",
+        "Optimistic"
+      ],
+      "flaw": "You see the best in people, even when you shouldn't.",
+      "signature": "A well-chosen word, a big idea and a speech that could change minds.",
+      "clashReason": "they'd talk about how things should be, while you're dealing with how they are"
+    },
+    {
+      "id": "donna",
+      "name": "Donna Moss",
+      "emoji": "🗂️",
+      "color": "#ca8a04",
+      "title": "The Secret Weapon",
+      "summary": "Resourceful, clever and quietly brilliant. You're the one who actually gets things done, and you're going further than anyone expects.",
+      "description": [
+        "Like Donna, you're capable and resourceful. She starts out as Josh's assistant, and she's valued across the whole staff.",
+        "You're tougher than you look. Donna is badly injured in a bombing in season 5, and comes back from it.",
+        "You rise higher than anyone expected. Donna becomes a campaign spokesperson, then Chief of Staff to the First Lady."
+      ],
+      "strengths": [
+        "Resourceful",
+        "Dedicated",
+        "Clever"
+      ],
+      "flaw": "You put your own ambitions on hold for other people.",
+      "signature": "A to-do list, a quick fix and a fact you looked up for someone else.",
+      "clashReason": "they'd remind you of every time they saved you"
+    },
+    {
+      "id": "charlie",
+      "name": "Charlie Young",
+      "emoji": "🧑‍💼",
+      "color": "#0d9488",
+      "title": "The Right-Hand Man",
+      "summary": "Calm, loyal and dignified. You keep your head when everyone else is losing theirs, and people know they can count on you.",
+      "description": [
+        "Like Charlie, you're calm under pressure. He's the President's personal aide.",
+        "You're loyal and earnest. Charlie stays steady when everything around him is chaos.",
+        "You've had to grow up fast. Charlie's mother was killed in the line of duty before the series begins."
+      ],
+      "strengths": [
+        "Calm",
+        "Loyal",
+        "Dignified"
+      ],
+      "flaw": "You keep your feelings to yourself, even when they need saying.",
+      "signature": "A quiet nod, a steady hand and a schedule you know by heart.",
+      "clashReason": "they'd stay calm and polite while you're losing it"
+    }
+  ],
+  "questions": [
+    {
+      "text": "Someone at a dinner party gets a fact completely wrong. You...",
+      "options": [
+        {
+          "text": "Correct them, then give a ten-minute history lesson",
+          "points": {
+            "bartlet": 3
+          }
+        },
+        {
+          "text": "Sigh, loudly, and say nothing",
+          "points": {
+            "toby": 3
+          }
+        },
+        {
+          "text": "Correct them with a joke, so nobody's embarrassed",
+          "points": {
+            "cj": 3
+          }
+        },
+        {
+          "text": "Let it go. It's not worth making them feel bad",
+          "points": {
+            "charlie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You've got a big presentation tomorrow. Tonight you...",
+      "options": [
+        {
+          "text": "Polish every line until it sings",
+          "points": {
+            "sam": 3
+          }
+        },
+        {
+          "text": "Throw the whole draft out, and start again at 2am",
+          "points": {
+            "toby": 3
+          }
+        },
+        {
+          "text": "Practise in front of the mirror, then panic quietly",
+          "points": {
+            "cj": 3
+          }
+        },
+        {
+          "text": "Relax. You're at your best under pressure",
+          "points": {
+            "josh": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your perfect evening off is...",
+      "options": [
+        {
+          "text": "A game of chess with someone who can keep up",
+          "points": {
+            "bartlet": 3
+          }
+        },
+        {
+          "text": "Dinner and drinks with your friends from work",
+          "points": {
+            "donna": 3
+          }
+        },
+        {
+          "text": "A quiet night in, and an early start tomorrow",
+          "points": {
+            "leo": 3
+          }
+        },
+        {
+          "text": "Arguing about big ideas until midnight",
+          "points": {
+            "sam": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A coworker makes a big mistake that could cost the whole team. You...",
+      "options": [
+        {
+          "text": "Take the blame yourself, so they don't have to",
+          "points": {
+            "leo": 3
+          }
+        },
+        {
+          "text": "Tell them, bluntly, exactly how bad it is",
+          "points": {
+            "toby": 3
+          }
+        },
+        {
+          "text": "Quietly fix it before anyone notices",
+          "points": {
+            "donna": 3
+          }
+        },
+        {
+          "text": "Stay calm, and help them work out what to do next",
+          "points": {
+            "charlie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your boss makes a decision you think is wrong. You...",
+      "options": [
+        {
+          "text": "Argue with them, loudly, behind closed doors",
+          "points": {
+            "toby": 3
+          }
+        },
+        {
+          "text": "Back them all the way. That's what loyalty means",
+          "points": {
+            "leo": 3
+          }
+        },
+        {
+          "text": "Try to win them over with a better idea",
+          "points": {
+            "sam": 3
+          }
+        },
+        {
+          "text": "Respectfully say your piece, once",
+          "points": {
+            "charlie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend has an obvious crush, and won't admit it. You...",
+      "options": [
+        {
+          "text": "Tease them about it, mercilessly",
+          "points": {
+            "cj": 3
+          }
+        },
+        {
+          "text": "Drop hints, and wait for them to work it out",
+          "points": {
+            "donna": 3
+          }
+        },
+        {
+          "text": "Bet someone on how long it'll take them to admit it",
+          "points": {
+            "josh": 3
+          }
+        },
+        {
+          "text": "Stay out of it. It's their business",
+          "points": {
+            "charlie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're asked to keep a secret at work that you think people deserve to know. You...",
+      "options": [
+        {
+          "text": "Struggle with it, and maybe let it slip to the right person",
+          "points": {
+            "toby": 3
+          }
+        },
+        {
+          "text": "Protect it, but refuse to tell an outright lie",
+          "points": {
+            "cj": 3
+          }
+        },
+        {
+          "text": "Keep it. Some things are bigger than you",
+          "points": {
+            "leo": 3
+          }
+        },
+        {
+          "text": "Hide it, and wrestle with the guilt",
+          "points": {
+            "bartlet": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're asked to mentor someone new. You...",
+      "options": [
+        {
+          "text": "Give them a reading list, and expect them to finish it",
+          "points": {
+            "bartlet": 3
+          }
+        },
+        {
+          "text": "Look out for them, and make sure they don't fall",
+          "points": {
+            "leo": 3
+          }
+        },
+        {
+          "text": "Show them all the shortcuts nobody told you",
+          "points": {
+            "donna": 3
+          }
+        },
+        {
+          "text": "Agree, grumpily, and secretly do a great job",
+          "points": {
+            "toby": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You win a big argument. You...",
+      "options": [
+        {
+          "text": "Celebrate. Loudly. Possibly with a victory dance",
+          "points": {
+            "josh": 3
+          }
+        },
+        {
+          "text": "Feel a bit bad for them, honestly",
+          "points": {
+            "sam": 3
+          }
+        },
+        {
+          "text": "Shake their hand, and move on",
+          "points": {
+            "charlie": 3
+          }
+        },
+        {
+          "text": "Remind them about it later. Much later. Repeatedly",
+          "points": {
+            "donna": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're the President, and a serious illness you've kept from the public is about to come out. You...",
+      "options": [
+        {
+          "text": "Tell the truth, take the hit and run again",
+          "points": {
+            "bartlet": 3
+          }
+        },
+        {
+          "text": "Get ahead of the story, and tell it your way",
+          "points": {
+            "cj": 3
+          }
+        },
+        {
+          "text": "Fight it out, and spin it as hard as you can",
+          "points": {
+            "josh": 3
+          }
+        },
+        {
+          "text": "Give the speech of your life about honesty",
+          "points": {
+            "sam": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You work at the White House, and a candidate nobody's heard of asks you to run his campaign. You...",
+      "options": [
+        {
+          "text": "Quit your job and go for it. You believe in him",
+          "points": {
+            "josh": 3
+          }
+        },
+        {
+          "text": "Join, and work your way to the top",
+          "points": {
+            "donna": 3
+          }
+        },
+        {
+          "text": "Stay. Your loyalty is to the President",
+          "points": {
+            "charlie": 3
+          }
+        },
+        {
+          "text": "Ask what he actually stands for first",
+          "points": {
+            "sam": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

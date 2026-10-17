@@ -1,0 +1,551 @@
+{
+  "slug": "downton-abbey",
+  "show": "Downton Abbey",
+  "shortName": "Downton Abbey",
+  "seoTitle": "Downton Abbey Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the Downton Abbey test: 12 everyday questions reveal whether you're Violet, Mary, Edith, Isobel, Tom, Carson, Mrs Hughes, Thomas or Anna — with your full character breakdown.",
+  "intro": "Are you the Dowager with the perfect comeback, the proud heiress, or the loyal one everyone can trust? Answer 12 everyday questions about family, secrets and doing things properly, and find out which Downton Abbey character you are.",
+  "characters": [
+    {
+      "id": "violet",
+      "name": "Violet Crawley",
+      "emoji": "💎",
+      "color": "#7c3aed",
+      "title": "The Dowager",
+      "summary": "Witty, sharp and fiercely traditional. You always have the perfect line, and you're far softer than you'd ever admit.",
+      "description": [
+        "Like Violet, you've always got the perfect line. She's the quick-witted Dowager Countess, and the matriarch of the family.",
+        "You're not a fan of change. Violet represents the old, pre-war world, and she resents modern technology.",
+        "You soften with time. Violet's long rivalry with Isobel turns into a real friendship."
+      ],
+      "strengths": [
+        "Witty",
+        "Sharp",
+        "Loyal"
+      ],
+      "flaw": "You'd rather win the argument than admit you care.",
+      "signature": "A raised eyebrow, a cutting remark and a soft spot you'll never admit to.",
+      "clashReason": "they'd win every argument with one line, and enjoy it"
+    },
+    {
+      "id": "mary",
+      "name": "Lady Mary",
+      "emoji": "🏛️",
+      "color": "#1d4ed8",
+      "title": "The Heiress",
+      "summary": "Proud, decisive and devoted to what matters. You can seem cold at first, but you love deeply once you let someone in.",
+      "description": [
+        "Like Mary, you're proud and you know your own mind. She's the eldest Crawley daughter, and a lot like her grandmother Violet.",
+        "You love deeply, even if you don't show it. Mary marries Matthew Crawley, who dies in a car crash shortly after their son George is born.",
+        "You're devoted to what matters. Mary is devoted to Downton, and she helps run the estate."
+      ],
+      "strengths": [
+        "Proud",
+        "Decisive",
+        "Devoted"
+      ],
+      "flaw": "You can be cold to people before you let them in.",
+      "signature": "A cool stare, a straight back and an estate to run.",
+      "clashReason": "they'd look down on you, very politely"
+    },
+    {
+      "id": "edith",
+      "name": "Lady Edith",
+      "emoji": "✍️",
+      "color": "#16a34a",
+      "title": "The Underdog",
+      "summary": "Determined, kind and tougher than anyone thinks. You've been overlooked before, and you've made your own way anyway.",
+      "description": [
+        "Like Edith, you know what it's like to be overlooked. She's the middle Crawley sister, often seen as the forgotten one.",
+        "You make your own way. Edith builds a career in journalism, and inherits a publishing company.",
+        "You get your happy ending. Edith marries Bertie Pelham, and becomes Marchioness of Hexham."
+      ],
+      "strengths": [
+        "Determined",
+        "Kind",
+        "Resilient"
+      ],
+      "flaw": "You wait too long for other people to notice you.",
+      "signature": "A notebook, a quiet smile and a story that's finally going your way.",
+      "clashReason": "they'd remember every time you overlooked them"
+    },
+    {
+      "id": "isobel",
+      "name": "Isobel Crawley",
+      "emoji": "🩺",
+      "color": "#0d9488",
+      "title": "The Crusader",
+      "summary": "Principled, caring and always fighting for something. You can't stand an injustice, and you're not shy about saying so.",
+      "description": [
+        "Like Isobel, you fight for what's right. She's a former nurse with modern, liberal values.",
+        "You always have a cause. Isobel takes up charitable causes, and her moral zeal sometimes irritates others.",
+        "You make friends with your rivals. Isobel's long feud with Violet turns into a real friendship, and she later marries Lord Merton."
+      ],
+      "strengths": [
+        "Principled",
+        "Caring",
+        "Brave"
+      ],
+      "flaw": "You're so sure you're right that you forget to ask.",
+      "signature": "A cause to fight for, a firm opinion and a big heart.",
+      "clashReason": "they'd lecture you about how you could be a better person"
+    },
+    {
+      "id": "tom",
+      "name": "Tom Branson",
+      "emoji": "🚗",
+      "color": "#ea580c",
+      "title": "The Outsider",
+      "summary": "Honest, down-to-earth and never afraid to speak up. You came from outside, and you made a place for yourself on your own terms.",
+      "description": [
+        "Like Tom, you're never afraid to speak your mind. He starts out as the family's chauffeur, and he's an outspoken Irish nationalist.",
+        "You follow your heart. Tom falls for Lady Sybil, and marries her after the war.",
+        "You find your place. Tom becomes the estate's land agent, and in the first film he saves King George V's life."
+      ],
+      "strengths": [
+        "Honest",
+        "Down-to-earth",
+        "Loyal"
+      ],
+      "flaw": "You can't resist starting a debate, even at dinner.",
+      "signature": "A strong opinion, an open mind and a seat at a table you never expected.",
+      "clashReason": "they'd challenge everything you believe, right in the middle of dinner"
+    },
+    {
+      "id": "carson",
+      "name": "Mr Carson",
+      "emoji": "🛎️",
+      "color": "#92400e",
+      "title": "The Butler",
+      "summary": "Loyal, proper and very set in your ways. You take pride in doing things the right way, and you don't like anyone changing them.",
+      "description": [
+        "Like Carson, you take pride in doing things properly. He rose from junior footman to butler.",
+        "You're not a fan of change. Carson tends towards nostalgia, and he's fiercely loyal to the Crawleys.",
+        "You find love when you least expect it. Carson proposes to Mrs Hughes, and they marry."
+      ],
+      "strengths": [
+        "Loyal",
+        "Proper",
+        "Dependable"
+      ],
+      "flaw": "You hold on to the old ways, even when they stop working.",
+      "signature": "A perfectly set table, a stern look and very high standards.",
+      "clashReason": "they'd tell you there's a right way to do this, and it isn't yours"
+    },
+    {
+      "id": "hughes",
+      "name": "Mrs Hughes",
+      "emoji": "🏠",
+      "color": "#db2777",
+      "title": "The Housekeeper",
+      "summary": "Firm, fair and kind underneath. You keep everything running, and you quietly look after everyone who needs it.",
+      "description": [
+        "Like Mrs Hughes, you're firm but fair. She's Downton's housekeeper, outwardly strict but kind and generous underneath.",
+        "You look after people quietly. Mrs Hughes helps Ethel and her baby, and supports Thomas when others won't.",
+        "You take your time with love. Mrs Hughes turns down a farmer's proposal, and later marries Carson."
+      ],
+      "strengths": [
+        "Kind",
+        "Sensible",
+        "Fair"
+      ],
+      "flaw": "You look after everyone else, and forget to look after yourself.",
+      "signature": "A firm voice, a warm heart and a solution for everything.",
+      "clashReason": "they'd see straight through your excuses"
+    },
+    {
+      "id": "thomas",
+      "name": "Thomas Barrow",
+      "emoji": "🦊",
+      "color": "#0891b2",
+      "title": "The Schemer",
+      "summary": "Ambitious, clever and always looking for a way up. You've had to fight for your place, and underneath it all you want to belong.",
+      "description": [
+        "Like Thomas, you're ambitious. He starts out as a scheming footman at Downton.",
+        "You've had to fight for your place. Thomas is a closeted gay man in a world that doesn't accept him.",
+        "You come good in the end. Thomas becomes one of the most loved members of the staff, and is invited back as butler."
+      ],
+      "strengths": [
+        "Ambitious",
+        "Clever",
+        "Resilient"
+      ],
+      "flaw": "You'd rather scheme your way up than ask for help.",
+      "signature": "A sharp remark, a clever plan and a better job in your sights.",
+      "clashReason": "they'd use what they know about you, if it helped them"
+    },
+    {
+      "id": "anna",
+      "name": "Anna Bates",
+      "emoji": "💛",
+      "color": "#ca8a04",
+      "title": "The Loyal One",
+      "summary": "Loyal, kind and completely trustworthy. You stand by the people you love, whatever happens.",
+      "description": [
+        "Like Anna, you're loyal to the core. She's trustworthy and polite, and loyal to everyone, upstairs and down.",
+        "You stand by the people you love. Anna marries Bates, stands by him while he's in prison, and helps prove his innocence.",
+        "You get your happy ending. Anna gives birth to a son, Johnny, on New Year's Eve."
+      ],
+      "strengths": [
+        "Loyal",
+        "Kind",
+        "Trustworthy"
+      ],
+      "flaw": "You keep your own troubles to yourself, even when you shouldn't.",
+      "signature": "A kind word, a steady hand and a secret you'll never tell.",
+      "clashReason": "they'd stay so loyal to someone else that they'd never take your side"
+    }
+  ],
+  "questions": [
+    {
+      "text": "A friend turns up wearing something you think is a terrible choice. You...",
+      "options": [
+        {
+          "text": "Make one cutting remark, and enjoy it",
+          "points": {
+            "violet": 3
+          }
+        },
+        {
+          "text": "Raise an eyebrow, and say nothing",
+          "points": {
+            "mary": 3
+          }
+        },
+        {
+          "text": "Tell them they look lovely. It's not worth hurting them",
+          "points": {
+            "anna": 3
+          }
+        },
+        {
+          "text": "Couldn't care less. Wear what you like",
+          "points": {
+            "tom": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your workplace brings in new technology. You...",
+      "options": [
+        {
+          "text": "Distrust it, and keep doing things the proper way",
+          "points": {
+            "carson": 3
+          }
+        },
+        {
+          "text": "Complain about it to anyone who'll listen",
+          "points": {
+            "violet": 3
+          }
+        },
+        {
+          "text": "Love it. Things need to move with the times",
+          "points": {
+            "tom": 3
+          }
+        },
+        {
+          "text": "Learn it quickly, and use it to get ahead",
+          "points": {
+            "edith": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "For you, a perfect day off means...",
+      "options": [
+        {
+          "text": "Afternoon tea, and some delicious gossip",
+          "points": {
+            "violet": 3
+          }
+        },
+        {
+          "text": "Volunteering for a cause you care about",
+          "points": {
+            "isobel": 3
+          }
+        },
+        {
+          "text": "A long drive in the country, with you at the wheel",
+          "points": {
+            "edith": 3
+          }
+        },
+        {
+          "text": "A quiet evening with your feet up, finally",
+          "points": {
+            "hughes": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone close to you always gets more attention than you. You...",
+      "options": [
+        {
+          "text": "Try even harder, and quietly hope someone notices",
+          "points": {
+            "edith": 3
+          }
+        },
+        {
+          "text": "Make sure you're still the one people talk about",
+          "points": {
+            "mary": 3
+          }
+        },
+        {
+          "text": "Find a way to take them down a peg",
+          "points": {
+            "thomas": 3
+          }
+        },
+        {
+          "text": "Get on with your own work. You've got enough to think about",
+          "points": {
+            "anna": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend tells you a secret that could get them in serious trouble. You...",
+      "options": [
+        {
+          "text": "Take it to your grave",
+          "points": {
+            "anna": 3
+          }
+        },
+        {
+          "text": "Keep it, in case it comes in useful one day",
+          "points": {
+            "thomas": 3
+          }
+        },
+        {
+          "text": "Urge them to do the right thing",
+          "points": {
+            "isobel": 3
+          }
+        },
+        {
+          "text": "Help them quietly, and never tell a soul",
+          "points": {
+            "hughes": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone at work isn't pulling their weight. You...",
+      "options": [
+        {
+          "text": "Remind them, firmly, of the standards expected",
+          "points": {
+            "carson": 3
+          }
+        },
+        {
+          "text": "Have a quiet, kind word with them",
+          "points": {
+            "hughes": 3
+          }
+        },
+        {
+          "text": "Do their work yourself, and make sure everyone knows",
+          "points": {
+            "thomas": 3
+          }
+        },
+        {
+          "text": "Ask if something's wrong. Maybe they need a hand",
+          "points": {
+            "tom": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You get a shot at a career nobody expected you to have. You...",
+      "options": [
+        {
+          "text": "Grab it, and prove everyone wrong",
+          "points": {
+            "edith": 3
+          }
+        },
+        {
+          "text": "Take it, and don't look back",
+          "points": {
+            "thomas": 3
+          }
+        },
+        {
+          "text": "Turn it down. You're loyal to where you are",
+          "points": {
+            "carson": 3
+          }
+        },
+        {
+          "text": "Run it better than anyone thought you could",
+          "points": {
+            "mary": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You disagree with your family about something important. You...",
+      "options": [
+        {
+          "text": "Say so, openly, even if it causes a row",
+          "points": {
+            "tom": 3
+          }
+        },
+        {
+          "text": "Let them think they've won, then get your way anyway",
+          "points": {
+            "violet": 3
+          }
+        },
+        {
+          "text": "Argue your case for hours, on principle",
+          "points": {
+            "isobel": 3
+          }
+        },
+        {
+          "text": "Quietly do what you think is right",
+          "points": {
+            "edith": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A neighbour falls on hard times. You...",
+      "options": [
+        {
+          "text": "Organise help for them straight away",
+          "points": {
+            "isobel": 3
+          }
+        },
+        {
+          "text": "Help them, but insist nobody finds out it was you",
+          "points": {
+            "violet": 3
+          }
+        },
+        {
+          "text": "Send round some food, and a bit of sensible advice",
+          "points": {
+            "hughes": 3
+          }
+        },
+        {
+          "text": "Sympathise. You know what it's like",
+          "points": {
+            "thomas": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone you love is accused of something terrible. You...",
+      "options": [
+        {
+          "text": "Stand by them, and fight to prove they're innocent",
+          "points": {
+            "anna": 3
+          }
+        },
+        {
+          "text": "Stand by them, but worry about what people will say",
+          "points": {
+            "carson": 3
+          }
+        },
+        {
+          "text": "Pull every string you can to fix it",
+          "points": {
+            "mary": 3
+          }
+        },
+        {
+          "text": "Make sure they get a fair hearing",
+          "points": {
+            "isobel": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You run a grand country house, and the money is running out. You...",
+      "options": [
+        {
+          "text": "Make tough changes now, so the house survives",
+          "points": {
+            "mary": 3
+          }
+        },
+        {
+          "text": "Cut back, but keep up appearances at all costs",
+          "points": {
+            "carson": 3
+          }
+        },
+        {
+          "text": "Modernise everything, and find new ways to make money",
+          "points": {
+            "tom": 3
+          }
+        },
+        {
+          "text": "Find a rich match for someone in the family",
+          "points": {
+            "violet": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You work below stairs in a grand house, and a new servant arrives who everyone dislikes. You...",
+      "options": [
+        {
+          "text": "Give them a fair chance, and set the others straight",
+          "points": {
+            "hughes": 3
+          }
+        },
+        {
+          "text": "Make their life as hard as you can",
+          "points": {
+            "thomas": 3
+          }
+        },
+        {
+          "text": "Be kind to them, even if nobody else is",
+          "points": {
+            "anna": 3
+          }
+        },
+        {
+          "text": "Judge them by their work, and nothing else",
+          "points": {
+            "carson": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

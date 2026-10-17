@@ -1,0 +1,551 @@
+{
+  "slug": "family-guy",
+  "show": "Family Guy",
+  "shortName": "Family Guy",
+  "seoTitle": "Family Guy Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the Family Guy test: 12 everyday questions reveal whether you're Peter, Lois, Meg, Chris, Stewie, Brian, Quagmire, Cleveland or Joe — with your full character breakdown.",
+  "intro": "Are you the impulsive dad, the evil-genius baby, or the dog who thinks he's the smartest one in the house? Answer 12 everyday questions about family, friends and bad ideas, and find out which Family Guy character you are.",
+  "characters": [
+    {
+      "id": "peter",
+      "name": "Peter Griffin",
+      "emoji": "📺",
+      "color": "#16a34a",
+      "title": "The Wild Card",
+      "summary": "Fun, fearless and completely impulsive. You do whatever pops into your head, and somehow life is never boring.",
+      "description": [
+        "Like Peter, you live in the moment. He's the boisterous, impulsive head of the Griffin family.",
+        "You never think things through. Peter's ridiculous antics drive most of the show's chaos.",
+        "You've got a job, technically. Peter works at the Pawtucket Brewery."
+      ],
+      "strengths": [
+        "Fun",
+        "Fearless",
+        "Loyal"
+      ],
+      "flaw": "You act first, and you don't think about it afterwards either.",
+      "signature": "A big laugh, a terrible idea and absolutely no plan.",
+      "clashReason": "they'd drag you into a ridiculous scheme, then blame you for it"
+    },
+    {
+      "id": "lois",
+      "name": "Lois Griffin",
+      "emoji": "🎹",
+      "color": "#dc2626",
+      "title": "The Voice of Reason",
+      "summary": "Smart, patient and tougher than you look. You hold everything together, until you finally snap.",
+      "description": [
+        "Like Lois, you're the voice of reason. She's the sharp-witted mum of the Griffin family.",
+        "You've got hidden talents. Lois is a former piano teacher, and she has a black belt.",
+        "You've got a wild side. Lois can be volatile, and she's not always as sensible as she looks."
+      ],
+      "strengths": [
+        "Smart",
+        "Patient",
+        "Tough"
+      ],
+      "flaw": "You keep the peace for so long that you eventually explode.",
+      "signature": "A raised eyebrow, a piano and a very long list of chores.",
+      "clashReason": "they'd give you the look, and you'd know you were in trouble"
+    },
+    {
+      "id": "meg",
+      "name": "Meg Griffin",
+      "emoji": "💭",
+      "color": "#db2777",
+      "title": "The Underdog",
+      "summary": "Kind, resilient and hugely underrated. People don't always notice you, but you've got more going for you than they know.",
+      "description": [
+        "Like Meg, you know what it's like to feel overlooked. She's the eldest Griffin kid, and her family often treats her badly.",
+        "You're a bit awkward, and that's fine. Meg is socially awkward and insecure at school.",
+        "You're more talented than people realise. Meg occasionally shows real confidence and talent."
+      ],
+      "strengths": [
+        "Resilient",
+        "Kind",
+        "Underrated"
+      ],
+      "flaw": "You wait for people to notice you, instead of making them.",
+      "signature": "A hopeful smile, a quiet sigh and a whole lot of untapped potential.",
+      "clashReason": "they'd tell you, at length, how unfair everything is"
+    },
+    {
+      "id": "chris",
+      "name": "Chris Griffin",
+      "emoji": "😄",
+      "color": "#ca8a04",
+      "title": "The Sweetheart",
+      "summary": "Friendly, laid-back and easy to please. You don't sweat the small stuff, and you're nicer than almost anyone.",
+      "description": [
+        "Like Chris, you're friendly and laid-back. He's the Griffins' teenage son.",
+        "You're a chip off the old block. Chris looks a lot like a younger Peter.",
+        "You're smarter than people think. Chris sometimes shows more potential than anyone expects."
+      ],
+      "strengths": [
+        "Friendly",
+        "Easygoing",
+        "Sweet"
+      ],
+      "flaw": "You get distracted by the smallest things.",
+      "signature": "A big smile, a snack and not a care in the world.",
+      "clashReason": "they'd forget what you were talking about halfway through"
+    },
+    {
+      "id": "stewie",
+      "name": "Stewie Griffin",
+      "emoji": "🧪",
+      "color": "#7c3aed",
+      "title": "The Mastermind",
+      "summary": "Brilliant, ambitious and very sharp-tongued. You've always got a scheme on the go, and you're usually the smartest one in the room.",
+      "description": [
+        "Like Stewie, you've always got a plan. He's the Griffins' baby, with a British accent and very grown-up manners.",
+        "You think big. Stewie started out plotting world domination.",
+        "You're an inventor. Stewie builds his own gadgets, and even travels through time."
+      ],
+      "strengths": [
+        "Brilliant",
+        "Ambitious",
+        "Witty"
+      ],
+      "flaw": "You'd rather scheme than just ask nicely.",
+      "signature": "A gadget, a clever plan and a very sharp tongue.",
+      "clashReason": "they'd outsmart you, then mock you for it"
+    },
+    {
+      "id": "brian",
+      "name": "Brian Griffin",
+      "emoji": "🐶",
+      "color": "#1d4ed8",
+      "title": "The Intellectual",
+      "summary": "Smart, cultured and full of opinions. You love a good book and a good argument, and you're not shy about sharing either.",
+      "description": [
+        "Like Brian, you're cultured. He's the family dog, and he loves a martini.",
+        "You've got big creative dreams. Brian is an aspiring writer who went to Brown University.",
+        "You've got opinions, lots of them. Brian is sardonic, and never shy about saying what he thinks."
+      ],
+      "strengths": [
+        "Smart",
+        "Cultured",
+        "Witty"
+      ],
+      "flaw": "You can be a bit of a know-it-all.",
+      "signature": "A martini, a half-finished novel and an opinion on everything.",
+      "clashReason": "they'd correct your grammar, then quote a book about it"
+    },
+    {
+      "id": "quagmire",
+      "name": "Quagmire",
+      "emoji": "✈️",
+      "color": "#ea580c",
+      "title": "The Charmer",
+      "summary": "Confident, charming and always up for adventure. You love to travel, and you never miss a chance to flirt.",
+      "description": [
+        "Like Quagmire, you're confident and smooth. He's the Griffins' next-door neighbour, and one of Peter's friends.",
+        "You love to travel. Quagmire is an airline pilot, and a former Navy man.",
+        "You're a famous charmer. Quagmire is known for his flirting, and his catchphrases."
+      ],
+      "strengths": [
+        "Confident",
+        "Charming",
+        "Adventurous"
+      ],
+      "flaw": "You flirt first and think later.",
+      "signature": "A pilot's uniform, a cheeky wink and a catchphrase ready to go.",
+      "clashReason": "they'd flirt with everyone you know"
+    },
+    {
+      "id": "cleveland",
+      "name": "Cleveland Brown",
+      "emoji": "📬",
+      "color": "#0891b2",
+      "title": "The Gentleman",
+      "summary": "Polite, calm and kind. You're the easiest person to be around, and you never make a fuss.",
+      "description": [
+        "Like Cleveland, you're polite and gentle. He's one of Peter's friends.",
+        "You've had a few careers. Cleveland owned a deli, and later becomes a mailman.",
+        "You're a star in your own right. Cleveland even gets his own spin-off, The Cleveland Show."
+      ],
+      "strengths": [
+        "Polite",
+        "Calm",
+        "Kind"
+      ],
+      "flaw": "You're so polite that you never say what you really think.",
+      "signature": "A gentle smile, a friendly wave and very good manners.",
+      "clashReason": "they'd be so polite that you'd never know what they really thought"
+    },
+    {
+      "id": "joe",
+      "name": "Joe Swanson",
+      "emoji": "🚨",
+      "color": "#475569",
+      "title": "The Tough Guy",
+      "summary": "Tough, determined and honest. You never give up, and you always do things by the book.",
+      "description": [
+        "Like Joe, you're tough. He's a police officer in the Quahog Police Department.",
+        "Nothing stops you. Joe uses a wheelchair, and he's still one of the most skilled officers on the force.",
+        "You play it by the book. Joe will even arrest his own friends if they break the law."
+      ],
+      "strengths": [
+        "Tough",
+        "Determined",
+        "Honest"
+      ],
+      "flaw": "You're a little too competitive, about everything.",
+      "signature": "A badge, a loud voice and a never-give-up attitude.",
+      "clashReason": "they'd turn everything into a competition, and win"
+    }
+  ],
+  "questions": [
+    {
+      "text": "You get a sudden urge to do something completely ridiculous. You...",
+      "options": [
+        {
+          "text": "Do it, immediately, without thinking",
+          "points": {
+            "peter": 3
+          }
+        },
+        {
+          "text": "Talk yourself out of it, then secretly wish you hadn't",
+          "points": {
+            "lois": 3
+          }
+        },
+        {
+          "text": "Let someone else go first, and watch",
+          "points": {
+            "cleveland": 3
+          }
+        },
+        {
+          "text": "Plan it carefully first, with diagrams",
+          "points": {
+            "stewie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're new at a party, and you don't know anyone. You...",
+      "options": [
+        {
+          "text": "Introduce yourself to everyone, with a wink",
+          "points": {
+            "quagmire": 3
+          }
+        },
+        {
+          "text": "Hover near the door, hoping someone talks to you",
+          "points": {
+            "meg": 3
+          }
+        },
+        {
+          "text": "Find the smartest person there, and start a debate",
+          "points": {
+            "brian": 3
+          }
+        },
+        {
+          "text": "Wander around happily, making friends with the dog",
+          "points": {
+            "chris": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your ideal lazy day involves...",
+      "options": [
+        {
+          "text": "TV, snacks and a very long nap",
+          "points": {
+            "peter": 3
+          }
+        },
+        {
+          "text": "A good novel, and a martini in hand",
+          "points": {
+            "brian": 3
+          }
+        },
+        {
+          "text": "Working on your latest invention",
+          "points": {
+            "stewie": 3
+          }
+        },
+        {
+          "text": "A long workout, then a barbecue",
+          "points": {
+            "joe": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone breaks the rules right in front of you. You...",
+      "options": [
+        {
+          "text": "Deal with it on the spot. Rules are rules, even for friends",
+          "points": {
+            "joe": 3
+          }
+        },
+        {
+          "text": "Give them a look that stops them cold",
+          "points": {
+            "lois": 3
+          }
+        },
+        {
+          "text": "Shrug. Rules are more like suggestions",
+          "points": {
+            "quagmire": 3
+          }
+        },
+        {
+          "text": "Tell them off, then immediately regret it",
+          "points": {
+            "meg": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend asks for your honest opinion on something they made. You...",
+      "options": [
+        {
+          "text": "Give a long, slightly smug critique",
+          "points": {
+            "brian": 3
+          }
+        },
+        {
+          "text": "Tear it apart, wittily",
+          "points": {
+            "stewie": 3
+          }
+        },
+        {
+          "text": "Say something kind, and very gentle",
+          "points": {
+            "cleveland": 3
+          }
+        },
+        {
+          "text": "Say it's great, and really mean it",
+          "points": {
+            "chris": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You lose a friendly competition. You...",
+      "options": [
+        {
+          "text": "Demand a rematch. Right now",
+          "points": {
+            "joe": 3
+          }
+        },
+        {
+          "text": "Throw a tantrum, then forget all about it",
+          "points": {
+            "peter": 3
+          }
+        },
+        {
+          "text": "Congratulate the winner, warmly, and mean it",
+          "points": {
+            "cleveland": 3
+          }
+        },
+        {
+          "text": "Assume nobody noticed you were there anyway",
+          "points": {
+            "meg": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're asked to write a speech for a big occasion. You...",
+      "options": [
+        {
+          "text": "Spend weeks on it, and tell everyone you're working on something important",
+          "points": {
+            "brian": 3
+          }
+        },
+        {
+          "text": "Make it up on the spot",
+          "points": {
+            "peter": 3
+          }
+        },
+        {
+          "text": "Write something brilliant and slightly evil",
+          "points": {
+            "stewie": 3
+          }
+        },
+        {
+          "text": "Keep it short and sweet. Nobody likes a long speech",
+          "points": {
+            "cleveland": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your family embarrasses you in public. You...",
+      "options": [
+        {
+          "text": "Wish the ground would swallow you up",
+          "points": {
+            "meg": 3
+          }
+        },
+        {
+          "text": "Don't notice. You were probably part of it",
+          "points": {
+            "chris": 3
+          }
+        },
+        {
+          "text": "Apologise to everyone, then lose it at home",
+          "points": {
+            "lois": 3
+          }
+        },
+        {
+          "text": "Pretend you've never met them",
+          "points": {
+            "stewie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend asks you to help them move house. You...",
+      "options": [
+        {
+          "text": "Turn up first, and work the hardest",
+          "points": {
+            "joe": 3
+          }
+        },
+        {
+          "text": "Help, and bring snacks for everyone",
+          "points": {
+            "cleveland": 3
+          }
+        },
+        {
+          "text": "Say yes, then spend the day chatting up the neighbours",
+          "points": {
+            "quagmire": 3
+          }
+        },
+        {
+          "text": "Turn up, break something valuable, then leave",
+          "points": {
+            "peter": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You get some unexpected money. You...",
+      "options": [
+        {
+          "text": "Spend it all on something ridiculous, today",
+          "points": {
+            "peter": 3
+          }
+        },
+        {
+          "text": "Put it away for the family",
+          "points": {
+            "lois": 3
+          }
+        },
+        {
+          "text": "Book a trip somewhere with a beach",
+          "points": {
+            "quagmire": 3
+          }
+        },
+        {
+          "text": "Lose it within the hour",
+          "points": {
+            "chris": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You find out you can build a time machine. You...",
+      "options": [
+        {
+          "text": "Build one this afternoon. Obviously",
+          "points": {
+            "stewie": 3
+          }
+        },
+        {
+          "text": "Meet all the great writers, and impress them",
+          "points": {
+            "brian": 3
+          }
+        },
+        {
+          "text": "Go back and redo every awkward moment of your life",
+          "points": {
+            "meg": 3
+          }
+        },
+        {
+          "text": "Relive your favourite dinner, again and again",
+          "points": {
+            "chris": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You're a police officer, and you catch your best friend breaking the law. You...",
+      "options": [
+        {
+          "text": "Arrest them. A crime's a crime",
+          "points": {
+            "joe": 3
+          }
+        },
+        {
+          "text": "Let them off with a polite warning",
+          "points": {
+            "cleveland": 3
+          }
+        },
+        {
+          "text": "Look the other way, and buy them a drink later",
+          "points": {
+            "quagmire": 3
+          }
+        },
+        {
+          "text": "Make them turn themselves in",
+          "points": {
+            "lois": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

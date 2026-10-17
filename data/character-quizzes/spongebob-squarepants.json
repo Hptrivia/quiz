@@ -1,0 +1,501 @@
+{
+  "slug": "spongebob-squarepants",
+  "show": "SpongeBob SquarePants",
+  "shortName": "SpongeBob",
+  "seoTitle": "SpongeBob Test: Which Character Are You? (11 Questions)",
+  "metaDescription": "Take the SpongeBob test: 11 everyday questions reveal whether you're SpongeBob, Patrick, Squidward, Mr. Krabs, Sandy, Plankton, Mrs. Puff or Pearl — with your full character breakdown.",
+  "intro": "Are you the endless optimist, the grumpy artist, or the tiny schemer with a giant plan? Answer 11 everyday questions about work, friends and days off, and find out which SpongeBob character you are.",
+  "characters": [
+    {
+      "id": "spongebob",
+      "name": "SpongeBob",
+      "emoji": "🧽",
+      "color": "#ca8a04",
+      "title": "The Optimist",
+      "summary": "Cheerful, enthusiastic and endlessly positive. You love your friends, you love your job, and you love every single day.",
+      "description": [
+        "Like SpongeBob, you're relentlessly optimistic. He's enthusiastic about his job and his friends.",
+        "You love what you do. SpongeBob is the fry cook at the Krusty Krab.",
+        "You've got your own style. SpongeBob lives in a pineapple under the sea."
+      ],
+      "strengths": [
+        "Cheerful",
+        "Loyal",
+        "Hard-working"
+      ],
+      "flaw": "You're so enthusiastic that you can wear people out.",
+      "signature": "A big grin, a spatula and a never-ending supply of enthusiasm.",
+      "clashReason": "they'd be cheerful at you when you just want some peace"
+    },
+    {
+      "id": "patrick",
+      "name": "Patrick Star",
+      "emoji": "⭐",
+      "color": "#db2777",
+      "title": "The Best Friend",
+      "summary": "Laid-back, loyal and easy to please. You don't overthink anything, and you're always up for hanging out.",
+      "description": [
+        "Like Patrick, you're a loyal best friend. He's SpongeBob's best friend.",
+        "You keep life simple. Patrick lives under a rock.",
+        "You don't sweat the small stuff. Patrick is usually unemployed, and perfectly happy about it."
+      ],
+      "strengths": [
+        "Loyal",
+        "Easygoing",
+        "Fun"
+      ],
+      "flaw": "You'd rather nap than think about anything too hard.",
+      "signature": "A big smile, a comfy rock and absolutely no plans.",
+      "clashReason": "they'd forget what you asked them to do, instantly"
+    },
+    {
+      "id": "squidward",
+      "name": "Squidward",
+      "emoji": "🎨",
+      "color": "#0d9488",
+      "title": "The Grump",
+      "summary": "Artistic, sophisticated and deeply unimpressed. You believe you were meant for better things, and you'd like some peace and quiet, please.",
+      "description": [
+        "Like Squidward, you're a misunderstood artist. He sees himself as a gifted artist and musician.",
+        "You're not a fan of your job. Squidward is the cashier at the Krusty Krab, and he despises working there.",
+        "You want more from life. Squidward dreams of a much better life."
+      ],
+      "strengths": [
+        "Artistic",
+        "Honest",
+        "Refined"
+      ],
+      "flaw": "You complain so much that people stop listening.",
+      "signature": "A sigh, a half-finished painting and a strong wish to be left alone.",
+      "clashReason": "they'd sigh loudly every time you spoke"
+    },
+    {
+      "id": "krabs",
+      "name": "Mr. Krabs",
+      "emoji": "🦀",
+      "color": "#dc2626",
+      "title": "The Boss",
+      "summary": "Cunning, hard-working and very careful with money. You run a tight ship, and you love your family.",
+      "description": [
+        "Like Mr. Krabs, you know the value of a penny. He's obsessed with money.",
+        "You're the boss. Mr. Krabs owns the Krusty Krab.",
+        "You've got a soft spot. Mr. Krabs loves his daughter, Pearl."
+      ],
+      "strengths": [
+        "Cunning",
+        "Hard-working",
+        "Protective"
+      ],
+      "flaw": "You'll pinch a penny even when you really shouldn't.",
+      "signature": "A cash register, a sharp eye and a secret recipe locked away.",
+      "clashReason": "they'd charge you for the advice they just gave you"
+    },
+    {
+      "id": "sandy",
+      "name": "Sandy Cheeks",
+      "emoji": "🐿️",
+      "color": "#ea580c",
+      "title": "The Scientist",
+      "summary": "Smart, adventurous and fearless. You love science, sport and a challenge, and you're not one to back down.",
+      "description": [
+        "Like Sandy, you're brilliant. She's a scientist squirrel from Texas.",
+        "You love a challenge. Sandy is into extreme sports and karate.",
+        "You make it work, wherever you are. Sandy lives under the sea in a glass dome, and wears a diving suit to breathe."
+      ],
+      "strengths": [
+        "Smart",
+        "Adventurous",
+        "Confident"
+      ],
+      "flaw": "You can't resist a challenge, even when you really should.",
+      "signature": "A diving helmet, a karate chop and a big Texas grin.",
+      "clashReason": "they'd challenge you to a contest, and win"
+    },
+    {
+      "id": "plankton",
+      "name": "Plankton",
+      "emoji": "🦠",
+      "color": "#16a34a",
+      "title": "The Schemer",
+      "summary": "Ambitious, determined and always plotting. You never give up on a plan, even when it fails for the hundredth time.",
+      "description": [
+        "Like Plankton, you've always got a scheme. He's always trying to steal the Krabby Patty secret formula.",
+        "You don't give up. Plankton runs the Chum Bucket, and keeps going even though it fails.",
+        "You've got backup. Plankton's wife, Karen, is a supercomputer who's often behind his plans."
+      ],
+      "strengths": [
+        "Ambitious",
+        "Determined",
+        "Inventive"
+      ],
+      "flaw": "You want to win so badly that you never enjoy anything.",
+      "signature": "An evil laugh, a big plan and a backup plan for the backup plan.",
+      "clashReason": "they'd see you as part of their next scheme"
+    },
+    {
+      "id": "puff",
+      "name": "Mrs. Puff",
+      "emoji": "🐡",
+      "color": "#7c3aed",
+      "title": "The Worrier",
+      "summary": "Kind, patient and very easily stressed. You try your best, but life keeps giving you reasons to panic.",
+      "description": [
+        "Like Mrs. Puff, you're a bit of a worrier. She's a paranoid pufferfish who puffs up when she's scared.",
+        "You're patient with people. Mrs. Puff is SpongeBob's boating-school teacher.",
+        "You've had a rough time. Mrs. Puff is often arrested because of SpongeBob's terrible driving."
+      ],
+      "strengths": [
+        "Patient",
+        "Kind",
+        "Dedicated"
+      ],
+      "flaw": "You panic at the first sign of trouble.",
+      "signature": "A nervous smile, a deep breath and a very stressful day.",
+      "clashReason": "they'd panic about something you weren't even worried about"
+    },
+    {
+      "id": "pearl",
+      "name": "Pearl",
+      "emoji": "🛍️",
+      "color": "#1d4ed8",
+      "title": "The Teen",
+      "summary": "Stylish, dramatic and desperate to fit in. You know what's cool, and you'll make sure everyone knows it.",
+      "description": [
+        "Like Pearl, you want to fit in. She's Mr. Krabs' teenage daughter.",
+        "You know what's in. Pearl loves shopping and pop music.",
+        "You stand out, whether you like it or not. Pearl is a sperm whale, and much bigger than all of her friends."
+      ],
+      "strengths": [
+        "Stylish",
+        "Expressive",
+        "Social"
+      ],
+      "flaw": "You care a little too much about what everyone else thinks.",
+      "signature": "A shopping bag, a pop song and a very dramatic sigh.",
+      "clashReason": "they'd be embarrassed to be seen with you"
+    }
+  ],
+  "questions": [
+    {
+      "text": "It's Monday morning, and it's time for work. You...",
+      "options": [
+        {
+          "text": "Jump out of bed. You love your job!",
+          "points": {
+            "spongebob": 3
+          }
+        },
+        {
+          "text": "Groan, and count the hours until home time",
+          "points": {
+            "squidward": 3
+          }
+        },
+        {
+          "text": "Roll over. You don't have a job anyway",
+          "points": {
+            "patrick": 3
+          }
+        },
+        {
+          "text": "Get in early, and make sure everyone else is on time",
+          "points": {
+            "krabs": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A whole free day is yours. You fill it with...",
+      "options": [
+        {
+          "text": "Practising your music, with nobody bothering you",
+          "points": {
+            "squidward": 3
+          }
+        },
+        {
+          "text": "Karate, then an extreme sport, then a science experiment",
+          "points": {
+            "sandy": 3
+          }
+        },
+        {
+          "text": "Shopping with your friends, all afternoon",
+          "points": {
+            "pearl": 3
+          }
+        },
+        {
+          "text": "Lying perfectly still, doing absolutely nothing",
+          "points": {
+            "patrick": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You find some money on the floor. You...",
+      "options": [
+        {
+          "text": "Pocket it, and check for more",
+          "points": {
+            "krabs": 3
+          }
+        },
+        {
+          "text": "Hand it in straight away",
+          "points": {
+            "spongebob": 3
+          }
+        },
+        {
+          "text": "Use it to fund your next big plan",
+          "points": {
+            "plankton": 3
+          }
+        },
+        {
+          "text": "Spend it on something cute, immediately",
+          "points": {
+            "pearl": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're taking your driving test. You...",
+      "options": [
+        {
+          "text": "Ace the written part, then crash the car",
+          "points": {
+            "spongebob": 3
+          }
+        },
+        {
+          "text": "Feel so nervous you can barely breathe",
+          "points": {
+            "puff": 3
+          }
+        },
+        {
+          "text": "Pass first time, no problem",
+          "points": {
+            "sandy": 3
+          }
+        },
+        {
+          "text": "Forget which one is the brake",
+          "points": {
+            "patrick": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone at work is way too cheerful. You...",
+      "options": [
+        {
+          "text": "Shut your door, and wait for it to stop",
+          "points": {
+            "squidward": 3
+          }
+        },
+        {
+          "text": "Wish you could be that relaxed",
+          "points": {
+            "puff": 3
+          }
+        },
+        {
+          "text": "Don't mind, as long as they're working",
+          "points": {
+            "krabs": 3
+          }
+        },
+        {
+          "text": "Find it suspicious. What are they up to?",
+          "points": {
+            "plankton": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your plan fails. Again. You...",
+      "options": [
+        {
+          "text": "Swear revenge, and start a new plan immediately",
+          "points": {
+            "plankton": 3
+          }
+        },
+        {
+          "text": "Work out what went wrong, scientifically",
+          "points": {
+            "sandy": 3
+          }
+        },
+        {
+          "text": "Cry dramatically, then call your friends",
+          "points": {
+            "pearl": 3
+          }
+        },
+        {
+          "text": "Lie down. You need a minute",
+          "points": {
+            "puff": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your friends invite you to a party. You...",
+      "options": [
+        {
+          "text": "Spend three hours deciding what to wear",
+          "points": {
+            "pearl": 3
+          }
+        },
+        {
+          "text": "Go, and fall asleep on the sofa",
+          "points": {
+            "patrick": 3
+          }
+        },
+        {
+          "text": "Stay home. Parties are beneath you",
+          "points": {
+            "squidward": 3
+          }
+        },
+        {
+          "text": "Arrive first, and help set everything up",
+          "points": {
+            "spongebob": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A neighbour asks you for a small loan. You...",
+      "options": [
+        {
+          "text": "Charge interest. Obviously",
+          "points": {
+            "krabs": 3
+          }
+        },
+        {
+          "text": "Give them whatever's in your pockets",
+          "points": {
+            "patrick": 3
+          }
+        },
+        {
+          "text": "Lend it, then worry about it constantly",
+          "points": {
+            "puff": 3
+          }
+        },
+        {
+          "text": "Ask what they'll give you in return",
+          "points": {
+            "plankton": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone challenges you to a contest. You...",
+      "options": [
+        {
+          "text": "Accept. You've never lost",
+          "points": {
+            "sandy": 3
+          }
+        },
+        {
+          "text": "Accept, then quietly bend the rules",
+          "points": {
+            "krabs": 3
+          }
+        },
+        {
+          "text": "Agree, then lose on purpose so it ends faster",
+          "points": {
+            "squidward": 3
+          }
+        },
+        {
+          "text": "Only if it's a dance contest",
+          "points": {
+            "pearl": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You run a restaurant with a top-secret recipe, and your rival keeps trying to steal it. You...",
+      "options": [
+        {
+          "text": "Hire a guard, as long as they're cheap",
+          "points": {
+            "krabs": 3
+          }
+        },
+        {
+          "text": "Defend it, proudly, with a spatula",
+          "points": {
+            "spongebob": 3
+          }
+        },
+        {
+          "text": "Panic, and tell someone you really shouldn't have",
+          "points": {
+            "puff": 3
+          }
+        },
+        {
+          "text": "Ask if you can taste it first",
+          "points": {
+            "patrick": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You're tiny, and everyone underestimates you. You...",
+      "options": [
+        {
+          "text": "Build a giant robot, and show them",
+          "points": {
+            "plankton": 3
+          }
+        },
+        {
+          "text": "Wish you could just blend in",
+          "points": {
+            "pearl": 3
+          }
+        },
+        {
+          "text": "Prove them wrong with your brains",
+          "points": {
+            "sandy": 3
+          }
+        },
+        {
+          "text": "Remind everyone you're a misunderstood genius",
+          "points": {
+            "squidward": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

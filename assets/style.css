@@ -2128,6 +2128,13 @@ a.theme-stat-card:active,
 .app-toast-list {
   display: flex;
   flex-direction: column;
+  /* Several unseen announcements at once used to run off the bottom of the
+     screen (the toast is position:fixed, so the page can't scroll to them). */
+  max-height: calc(100vh - 110px);
+  max-height: calc(100dvh - 110px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 .app-toast-item {
   display: flex;

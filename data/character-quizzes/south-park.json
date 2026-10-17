@@ -1,0 +1,551 @@
+{
+  "slug": "south-park",
+  "show": "South Park",
+  "shortName": "South Park",
+  "seoTitle": "South Park Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the South Park test: 12 everyday questions reveal whether you're Stan, Kyle, Cartman, Kenny, Butters, Randy, Wendy, Craig or Jimmy — with your full character breakdown.",
+  "intro": "Are you the normal kid, the schemer, or the sweet one who believes everything? Answer 12 everyday questions about friends, trends and terrible ideas, and find out which South Park character you are.",
+  "characters": [
+    {
+      "id": "stan",
+      "name": "Stan Marsh",
+      "emoji": "🤷",
+      "color": "#1d4ed8",
+      "title": "The Average Kid",
+      "summary": "Sensible, loyal and fair. You're the normal one in a very weird town, and you usually work out the lesson in the end.",
+      "description": [
+        "Like Stan, you're a normal kid at heart. The show calls him \"a normal, average, American, mixed-up kid.\"",
+        "You end up leading. Stan is the group's de facto leader.",
+        "You learn from things. Stan usually learns a lesson by the end of an episode."
+      ],
+      "strengths": [
+        "Sensible",
+        "Loyal",
+        "Fair"
+      ],
+      "flaw": "You go along with things until it's far too late.",
+      "signature": "A sigh, a sensible thought and a lesson learned the hard way.",
+      "clashReason": "they'd make a big speech about what everyone learned today"
+    },
+    {
+      "id": "kyle",
+      "name": "Kyle Broflovski",
+      "emoji": "📣",
+      "color": "#16a34a",
+      "title": "The Moral Compass",
+      "summary": "Principled, smart and honest. You know right from wrong, and you'll argue about it with anyone.",
+      "description": [
+        "Like Kyle, you've got strong morals. He usually has the highest moral standards of the boys.",
+        "You're the smart one. Kyle is usually the most intelligent of the group.",
+        "You know what it's like to stand out. Kyle often feels like an outsider."
+      ],
+      "strengths": [
+        "Principled",
+        "Smart",
+        "Honest"
+      ],
+      "flaw": "You can't let an argument go, especially when you're right.",
+      "signature": "A raised voice, a strong point and a speech about what's right.",
+      "clashReason": "they'd argue with you until you gave up"
+    },
+    {
+      "id": "cartman",
+      "name": "Eric Cartman",
+      "emoji": "💸",
+      "color": "#dc2626",
+      "title": "The Schemer",
+      "summary": "Clever, bold and always scheming. You want things your way, and you'll go to wild lengths to get them.",
+      "description": [
+        "Like Cartman, you're clever and you've always got a scheme. He's highly intelligent, and very manipulative.",
+        "You like to stir things up. Cartman is often the troublemaker of the group.",
+        "Your plans don't always work out. Cartman's schemes often backfire on him."
+      ],
+      "strengths": [
+        "Clever",
+        "Bold",
+        "Persuasive"
+      ],
+      "flaw": "You'll do absolutely anything to get your own way.",
+      "signature": "A big scheme, a loud voice and a plan that's about to backfire.",
+      "clashReason": "they'd talk you into doing all the work, then take the credit"
+    },
+    {
+      "id": "kenny",
+      "name": "Kenny McCormick",
+      "emoji": "🧥",
+      "color": "#ea580c",
+      "title": "The Daredevil",
+      "summary": "Fearless, loyal and up for anything. You don't say much, but you're always first in line for a dare.",
+      "description": [
+        "Like Kenny, you don't say much, and when you do, nobody quite hears it. His parka hood muffles everything he says.",
+        "You're fearless. Before season 6, Kenny died in nearly every episode.",
+        "You always bounce back. Kenny can come back from the dead."
+      ],
+      "strengths": [
+        "Fearless",
+        "Loyal",
+        "Fun"
+      ],
+      "flaw": "You take risks without thinking twice.",
+      "signature": "A big hood, a muffled laugh and a dare you'll definitely take.",
+      "clashReason": "they'd say something important, and you'd miss every word"
+    },
+    {
+      "id": "butters",
+      "name": "Butters Stotch",
+      "emoji": "😇",
+      "color": "#ca8a04",
+      "title": "The Sweetheart",
+      "summary": "Sweet, optimistic and very trusting. You see the best in everyone, even the people who don't deserve it.",
+      "description": [
+        "Like Butters, you're sweet and optimistic. He's naive, trusting and easily fooled.",
+        "You hate getting in trouble. Butters is terrified of being grounded.",
+        "You've got a secret dark side. Butters has a supervillain alter ego, Professor Chaos."
+      ],
+      "strengths": [
+        "Sweet",
+        "Optimistic",
+        "Kind"
+      ],
+      "flaw": "You believe almost anything anyone tells you.",
+      "signature": "A big smile, a nervous giggle and a secret supervillain plan.",
+      "clashReason": "they'd agree with you, then accidentally tell everyone your secret"
+    },
+    {
+      "id": "randy",
+      "name": "Randy Marsh",
+      "emoji": "🪨",
+      "color": "#7c3aed",
+      "title": "The Overreactor",
+      "summary": "Passionate, enthusiastic and completely over the top. You go all in on everything, and you never do anything halfway.",
+      "description": [
+        "Like Randy, you go all in. He's Stan's dad, a geologist who overreacts to just about everything.",
+        "You love a new trend. Randy chases every fad he can find.",
+        "You've got a secret talent. Randy secretly performs as the singer Lorde."
+      ],
+      "strengths": [
+        "Passionate",
+        "Enthusiastic",
+        "Fun"
+      ],
+      "flaw": "You throw yourself into things without a single thought.",
+      "signature": "A wild new hobby, a big overreaction and a secret identity.",
+      "clashReason": "they'd embarrass you in public, then do it again"
+    },
+    {
+      "id": "wendy",
+      "name": "Wendy Testaburger",
+      "emoji": "✊",
+      "color": "#db2777",
+      "title": "The Activist",
+      "summary": "Confident, principled and mature beyond your years. You stand up for what you believe in, and you've got no time for nonsense.",
+      "description": [
+        "Like Wendy, you're mature beyond your years. She's critical of popular trends.",
+        "You stand up for what you believe in. Wendy campaigns for causes she cares about.",
+        "You don't back down. Wendy often goes head to head with Cartman."
+      ],
+      "strengths": [
+        "Confident",
+        "Principled",
+        "Mature"
+      ],
+      "flaw": "You can't help rolling your eyes at things.",
+      "signature": "A protest sign, a sharp comeback and zero patience for nonsense.",
+      "clashReason": "they'd roll their eyes at you, then start a petition"
+    },
+    {
+      "id": "craig",
+      "name": "Craig Tucker",
+      "emoji": "🧢",
+      "color": "#0891b2",
+      "title": "The Deadpan",
+      "summary": "Calm, practical and completely unbothered. You don't do drama, and you're very hard to impress.",
+      "description": [
+        "Like Craig, you're a pragmatist. He's known for his deadpan voice and his blue hat.",
+        "You don't do drama. Craig can't stand the four main boys.",
+        "You'll go along with things, if they're worth it. Craig often ends up joining Cartman's schemes anyway."
+      ],
+      "strengths": [
+        "Calm",
+        "Practical",
+        "Honest"
+      ],
+      "flaw": "You care so little that people think you don't care at all.",
+      "signature": "A blue hat, a flat voice and absolutely no interest.",
+      "clashReason": "they'd stare at you, completely unimpressed"
+    },
+    {
+      "id": "jimmy",
+      "name": "Jimmy Valmer",
+      "emoji": "🥁",
+      "color": "#65a30d",
+      "title": "The Comedian",
+      "summary": "Funny, confident and always performing. You love making people laugh, and you're never far from your next bit.",
+      "description": [
+        "Like Jimmy, you love making people laugh. He's an aspiring stand-up comedian.",
+        "You've got rhythm. Jimmy is an accomplished drummer.",
+        "You love an audience. Jimmy is always ready with a joke."
+      ],
+      "strengths": [
+        "Funny",
+        "Confident",
+        "Upbeat"
+      ],
+      "flaw": "You'll turn anything into a comedy bit, even when it isn't the time.",
+      "signature": "A drum kit, a microphone and a joke that's still being written.",
+      "clashReason": "they'd turn your problem into their next joke"
+    }
+  ],
+  "questions": [
+    {
+      "text": "A new trend is taking over the internet. You...",
+      "options": [
+        {
+          "text": "Throw yourself into it completely, then quit when it gets weird",
+          "points": {
+            "randy": 3
+          }
+        },
+        {
+          "text": "Roll your eyes. It'll be gone in a week",
+          "points": {
+            "wendy": 3
+          }
+        },
+        {
+          "text": "Find a way to make money out of it",
+          "points": {
+            "cartman": 3
+          }
+        },
+        {
+          "text": "Don't care. At all",
+          "points": {
+            "craig": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your friends want to do something really dangerous. You...",
+      "options": [
+        {
+          "text": "Volunteer to go first",
+          "points": {
+            "kenny": 3
+          }
+        },
+        {
+          "text": "Say yes, then panic the whole time",
+          "points": {
+            "butters": 3
+          }
+        },
+        {
+          "text": "Go along, then realise halfway that it's a terrible idea",
+          "points": {
+            "stan": 3
+          }
+        },
+        {
+          "text": "Refuse, and try to stop everyone else",
+          "points": {
+            "kyle": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your idea of a perfect Saturday is...",
+      "options": [
+        {
+          "text": "Junk food, video games and nobody telling you what to do",
+          "points": {
+            "cartman": 3
+          }
+        },
+        {
+          "text": "Performing for anyone who'll watch",
+          "points": {
+            "jimmy": 3
+          }
+        },
+        {
+          "text": "Staying home, alone, doing absolutely nothing",
+          "points": {
+            "craig": 3
+          }
+        },
+        {
+          "text": "Getting obsessed with a brand-new hobby",
+          "points": {
+            "randy": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You get blamed for something you didn't do. You...",
+      "options": [
+        {
+          "text": "Argue until everyone admits you're right",
+          "points": {
+            "kyle": 3
+          }
+        },
+        {
+          "text": "Accept it, and ground yourself",
+          "points": {
+            "butters": 3
+          }
+        },
+        {
+          "text": "Blame someone else, loudly and convincingly",
+          "points": {
+            "cartman": 3
+          }
+        },
+        {
+          "text": "Calmly point out it obviously wasn't you, and leave",
+          "points": {
+            "craig": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "There's a cause you really care about. You...",
+      "options": [
+        {
+          "text": "Organise a protest, and lead it",
+          "points": {
+            "wendy": 3
+          }
+        },
+        {
+          "text": "Write a heartfelt speech, and deliver it to everyone",
+          "points": {
+            "kyle": 3
+          }
+        },
+        {
+          "text": "Care a lot, but feel a bit overwhelmed by it all",
+          "points": {
+            "stan": 3
+          }
+        },
+        {
+          "text": "Raise money with a comedy show",
+          "points": {
+            "jimmy": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone pulls a prank on you. You...",
+      "options": [
+        {
+          "text": "Plot a revenge so elaborate it takes months",
+          "points": {
+            "cartman": 3
+          }
+        },
+        {
+          "text": "Laugh. Honestly, it was pretty good",
+          "points": {
+            "kenny": 3
+          }
+        },
+        {
+          "text": "Fall for the same one again the next day",
+          "points": {
+            "butters": 3
+          }
+        },
+        {
+          "text": "Admit it was funny, then top it",
+          "points": {
+            "jimmy": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone in your family embarrasses you in public. You...",
+      "options": [
+        {
+          "text": "Sigh. This happens a lot",
+          "points": {
+            "stan": 3
+          }
+        },
+        {
+          "text": "Embarrass them right back, twice as hard",
+          "points": {
+            "randy": 3
+          }
+        },
+        {
+          "text": "Walk away, and pretend you've never met them",
+          "points": {
+            "wendy": 3
+          }
+        },
+        {
+          "text": "Stay completely deadpan until it's over",
+          "points": {
+            "craig": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're stuck leading a school project. You...",
+      "options": [
+        {
+          "text": "Delegate everything, then take all the credit",
+          "points": {
+            "cartman": 3
+          }
+        },
+        {
+          "text": "Make a detailed plan, and keep everyone on track",
+          "points": {
+            "wendy": 3
+          }
+        },
+        {
+          "text": "Do your best, and hope it works out",
+          "points": {
+            "stan": 3
+          }
+        },
+        {
+          "text": "Do the bit nobody else wants, without complaining",
+          "points": {
+            "kenny": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend gets into a fight with you. You...",
+      "options": [
+        {
+          "text": "Have a big argument, then make up by the end of the day",
+          "points": {
+            "kyle": 3
+          }
+        },
+        {
+          "text": "Feel terrible until you've sorted it out",
+          "points": {
+            "stan": 3
+          }
+        },
+        {
+          "text": "Apologise, even though it was their fault",
+          "points": {
+            "butters": 3
+          }
+        },
+        {
+          "text": "Don't say much. Just show up for them later",
+          "points": {
+            "kenny": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You win a talent show. You...",
+      "options": [
+        {
+          "text": "Thank the audience, then do an encore nobody asked for",
+          "points": {
+            "jimmy": 3
+          }
+        },
+        {
+          "text": "Decide this is your new career",
+          "points": {
+            "randy": 3
+          }
+        },
+        {
+          "text": "Can't believe it, and call your parents straight away",
+          "points": {
+            "butters": 3
+          }
+        },
+        {
+          "text": "Leave before they hand out the trophy",
+          "points": {
+            "craig": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You get a secret alter ego. You...",
+      "options": [
+        {
+          "text": "Become a supervillain, and try very hard to be evil",
+          "points": {
+            "butters": 3
+          }
+        },
+        {
+          "text": "Give yourself a cool name, and make everyone obey you",
+          "points": {
+            "cartman": 3
+          }
+        },
+        {
+          "text": "Keep it secret. Nobody would believe you anyway",
+          "points": {
+            "kenny": 3
+          }
+        },
+        {
+          "text": "Use it to stand up for what's right",
+          "points": {
+            "kyle": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "Your whole town starts panicking about something ridiculous. You...",
+      "options": [
+        {
+          "text": "Panic the loudest, and lead the march",
+          "points": {
+            "randy": 3
+          }
+        },
+        {
+          "text": "Calmly explain what's actually going on",
+          "points": {
+            "wendy": 3
+          }
+        },
+        {
+          "text": "Make jokes about it",
+          "points": {
+            "jimmy": 3
+          }
+        },
+        {
+          "text": "Wait it out. It'll all blow over by next week",
+          "points": {
+            "stan": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

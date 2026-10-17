@@ -1,0 +1,551 @@
+{
+  "slug": "the-simpsons",
+  "show": "The Simpsons",
+  "shortName": "The Simpsons",
+  "seoTitle": "The Simpsons Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take The Simpsons test: 12 everyday questions reveal whether you're Homer, Marge, Bart, Lisa, Grampa, Mr. Burns, Ned, Moe or Milhouse — with your full character breakdown.",
+  "intro": "Are you the donut-loving dad, the brilliant saxophonist, or the neighbour who's way too nice? Answer 12 everyday questions about work, family and Monday mornings, and find out which Simpsons character you are.",
+  "characters": [
+    {
+      "id": "homer",
+      "name": "Homer Simpson",
+      "emoji": "🍩",
+      "color": "#ca8a04",
+      "title": "The Dad",
+      "summary": "Easygoing, impulsive and big-hearted. You love food, naps and your family, not always in that order.",
+      "description": [
+        "Like Homer, you know how to relax. He's lazy, impulsive and especially fond of donuts.",
+        "You're not always qualified, but you show up. Homer is the safety inspector at the Springfield Nuclear Power Plant.",
+        "You'd do anything for your family. Underneath it all, Homer is kind-hearted and fiercely protective of the people he loves."
+      ],
+      "strengths": [
+        "Fun",
+        "Loving",
+        "Easygoing"
+      ],
+      "flaw": "You act on impulse, then say \"D'oh!\" when it goes wrong.",
+      "signature": "A donut, the couch and a big hug for your family.",
+      "clashReason": "they'd eat your lunch, then forget they ever did"
+    },
+    {
+      "id": "marge",
+      "name": "Marge Simpson",
+      "emoji": "💙",
+      "color": "#2563eb",
+      "title": "The Rock",
+      "summary": "Kind, patient and the one who holds it all together. You keep everyone grounded, even when they drive you up the wall.",
+      "description": [
+        "Like Marge, you hold everything together. She's the family's kind-hearted, moral voice.",
+        "You're patient. Very, very patient. Marge is Homer's long-suffering wife.",
+        "You've got a look all your own. Marge is known for her tall blue beehive hair."
+      ],
+      "strengths": [
+        "Kind",
+        "Patient",
+        "Dependable"
+      ],
+      "flaw": "You worry about everyone, all the time.",
+      "signature": "A packed lunch, a patient sigh and a very tall hairdo.",
+      "clashReason": "they'd give you a disappointed look you'd never forget"
+    },
+    {
+      "id": "bart",
+      "name": "Bart Simpson",
+      "emoji": "🧨",
+      "color": "#ea580c",
+      "title": "The Troublemaker",
+      "summary": "Cheeky, fearless and always up to something. You'd rather have fun than follow the rules, and you usually get away with it.",
+      "description": [
+        "Like Bart, you love a bit of mischief. He's the Simpsons' oldest child, and he sees himself as a bad boy.",
+        "You can't resist a prank. Bart is always pulling one on somebody.",
+        "You've got a favourite target. Bart keeps prank-calling Moe's Tavern with fake names."
+      ],
+      "strengths": [
+        "Fun",
+        "Fearless",
+        "Clever"
+      ],
+      "flaw": "You'd rather cause trouble than do your homework.",
+      "signature": "A cheeky grin, a phone and a prank already in motion.",
+      "clashReason": "they'd prank you, then deny everything"
+    },
+    {
+      "id": "lisa",
+      "name": "Lisa Simpson",
+      "emoji": "🎷",
+      "color": "#db2777",
+      "title": "The Brain",
+      "summary": "Brilliant, principled and passionate about making the world better. You're often the smartest person in the room, and you know it.",
+      "description": [
+        "Like Lisa, you're brilliant. She's eight years old with an IQ of 159, and she joins Springfield's chapter of Mensa.",
+        "You stand by your principles. Lisa is passionate about the environment and social causes, and she's been a vegetarian since season 7.",
+        "You've got soul. Lisa plays the baritone saxophone, and jazz is her favourite music."
+      ],
+      "strengths": [
+        "Smart",
+        "Principled",
+        "Compassionate"
+      ],
+      "flaw": "You can be a little self-righteous about being right.",
+      "signature": "A saxophone, a stack of books and a cause to fight for.",
+      "clashReason": "they'd explain, at length, exactly why you're wrong"
+    },
+    {
+      "id": "grampa",
+      "name": "Grampa Simpson",
+      "emoji": "👴",
+      "color": "#64748b",
+      "title": "The Storyteller",
+      "summary": "Cranky, stubborn and full of stories. You've seen it all, and you'll tell anyone who'll listen, and plenty who won't.",
+      "description": [
+        "Like Grampa, you've got a story for everything. He tells long, winding tales that often go nowhere.",
+        "You've lived a life. Grampa is a World War II veteran who served with the Flying Hellfish.",
+        "You say what you think, even when nobody's listening. Grampa is famously cranky, and often ignored by his family."
+      ],
+      "strengths": [
+        "Experienced",
+        "Honest",
+        "Tough"
+      ],
+      "flaw": "You complain about everything new, and tell the same story twice.",
+      "signature": "A long story, a comfy chair and strong opinions about the old days.",
+      "clashReason": "they'd tell you a story that never, ever ends"
+    },
+    {
+      "id": "burns",
+      "name": "Mr. Burns",
+      "emoji": "🏭",
+      "color": "#6d28d9",
+      "title": "The Tycoon",
+      "summary": "Ambitious, ruthless and very, very rich. You like being in charge, and you're not too worried about who gets hurt along the way.",
+      "description": [
+        "Like Mr. Burns, you're the boss. He owns the Springfield Nuclear Power Plant, and he's the richest man in town.",
+        "You don't do names. Mr. Burns keeps forgetting who his employees are, including Homer.",
+        "You've got a signature move. Mr. Burns steeples his fingers, and slowly says, \"Excellent...\""
+      ],
+      "strengths": [
+        "Ambitious",
+        "Determined",
+        "Powerful"
+      ],
+      "flaw": "You care about money a lot more than people.",
+      "signature": "Steepled fingers, a sinister smile and a very large bank account.",
+      "clashReason": "they'd forget your name, then cut your pay"
+    },
+    {
+      "id": "ned",
+      "name": "Ned Flanders",
+      "emoji": "👋",
+      "color": "#16a34a",
+      "title": "The Good Neighbour",
+      "summary": "Cheerful, generous and relentlessly nice. You're always ready to help, even when people don't quite know what to do with you.",
+      "description": [
+        "Like Ned, you're nice. Really, really nice. He's the Simpsons' next-door neighbour, and a devout churchgoer.",
+        "You've found your niche. Ned runs the Leftorium, a shop for left-handed people.",
+        "You're always ready to help. Ned later becomes Bart's teacher."
+      ],
+      "strengths": [
+        "Kind",
+        "Cheerful",
+        "Generous"
+      ],
+      "flaw": "You're so nice that it drives people a little bit mad.",
+      "signature": "A big moustache, a cheerful wave and a hand always ready to help.",
+      "clashReason": "they'd be so nice that you'd feel bad for being grumpy"
+    },
+    {
+      "id": "moe",
+      "name": "Moe Szyslak",
+      "emoji": "🍺",
+      "color": "#92400e",
+      "title": "The Grump",
+      "summary": "Blunt, grumpy and secretly soft. You expect the worst, but there's a good heart under all that grumbling.",
+      "description": [
+        "Like Moe, you don't sugar-coat things. He owns Moe's Tavern, and he's short-tempered, stingy and blunt.",
+        "You fall for it every time. Moe keeps answering Bart's prank calls, and gets furious every single time.",
+        "You've got a softer side. Moe reads to sick children."
+      ],
+      "strengths": [
+        "Blunt",
+        "Hard-working",
+        "Secretly kind"
+      ],
+      "flaw": "You expect the worst, and you're usually grumpy about it.",
+      "signature": "A grumpy face, a short temper and a soft heart nobody sees.",
+      "clashReason": "they'd snap at you, then feel bad about it later"
+    },
+    {
+      "id": "milhouse",
+      "name": "Milhouse Van Houten",
+      "emoji": "👓",
+      "color": "#0891b2",
+      "title": "The Sidekick",
+      "summary": "Loyal, hopeful and a little bit anxious. You'd follow your best friend anywhere, even when you know it's a bad idea.",
+      "description": [
+        "Like Milhouse, you're loyal. He's Bart's best friend.",
+        "You trust people, maybe a bit too much. Bart often drags Milhouse into trouble.",
+        "You never stop hoping. Milhouse has a long-running crush on Lisa."
+      ],
+      "strengths": [
+        "Loyal",
+        "Hopeful",
+        "Sweet"
+      ],
+      "flaw": "You get talked into things far too easily.",
+      "signature": "Thick glasses, a nervous laugh and a best friend who's always getting you into trouble.",
+      "clashReason": "they'd follow you everywhere, then blame you when it went wrong"
+    }
+  ],
+  "questions": [
+    {
+      "text": "Your alarm goes off on a Monday morning. You...",
+      "options": [
+        {
+          "text": "Hit snooze. Then hit it again. Then call in sick",
+          "points": {
+            "homer": 3
+          }
+        },
+        {
+          "text": "Get up straight away, and start making everyone's lunch",
+          "points": {
+            "marge": 3
+          }
+        },
+        {
+          "text": "Leap out of bed, ready to make it a wonderful day",
+          "points": {
+            "ned": 3
+          }
+        },
+        {
+          "text": "Turn it off. You've been awake since 4am anyway",
+          "points": {
+            "grampa": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You've got a big assignment due tomorrow. You...",
+      "options": [
+        {
+          "text": "Finished it last week, and did the extra credit",
+          "points": {
+            "lisa": 3
+          }
+        },
+        {
+          "text": "Come up with a brilliant excuse instead",
+          "points": {
+            "bart": 3
+          }
+        },
+        {
+          "text": "Copy your best friend's, and hope you don't get caught",
+          "points": {
+            "milhouse": 3
+          }
+        },
+        {
+          "text": "Start it, then fall asleep halfway through",
+          "points": {
+            "grampa": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A lazy Sunday, done your way, looks like...",
+      "options": [
+        {
+          "text": "Donuts, the couch and absolutely nothing else",
+          "points": {
+            "homer": 3
+          }
+        },
+        {
+          "text": "A jazz record and a stack of books",
+          "points": {
+            "lisa": 3
+          }
+        },
+        {
+          "text": "Church, then a big barbecue for the neighbours",
+          "points": {
+            "ned": 3
+          }
+        },
+        {
+          "text": "A quiet day at work, grumbling to anyone who'll listen",
+          "points": {
+            "moe": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend asks to borrow cash. Again. You...",
+      "options": [
+        {
+          "text": "Offer it, at a ruinous interest rate",
+          "points": {
+            "burns": 3
+          }
+        },
+        {
+          "text": "Give it to them, and tell them not to worry about paying it back",
+          "points": {
+            "ned": 3
+          }
+        },
+        {
+          "text": "Lend it, then remind them about it every day",
+          "points": {
+            "moe": 3
+          }
+        },
+        {
+          "text": "Help them, then quietly worry about it for weeks",
+          "points": {
+            "marge": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A new rule at work makes no sense. You...",
+      "options": [
+        {
+          "text": "Write a strongly worded letter, and start a petition",
+          "points": {
+            "lisa": 3
+          }
+        },
+        {
+          "text": "Find a way to break it, just to see what happens",
+          "points": {
+            "bart": 3
+          }
+        },
+        {
+          "text": "Complain that things were better in your day",
+          "points": {
+            "grampa": 3
+          }
+        },
+        {
+          "text": "Follow it, nervously, in case you get in trouble",
+          "points": {
+            "milhouse": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone at a party is telling a very long story. You...",
+      "options": [
+        {
+          "text": "Interrupt with an even longer story of your own",
+          "points": {
+            "grampa": 3
+          }
+        },
+        {
+          "text": "Listen politely, even though it's dull",
+          "points": {
+            "marge": 3
+          }
+        },
+        {
+          "text": "Pull faces behind their back",
+          "points": {
+            "bart": 3
+          }
+        },
+        {
+          "text": "Forget their name before they've even finished",
+          "points": {
+            "burns": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You get a big promotion. You...",
+      "options": [
+        {
+          "text": "Take all the credit, and none of the blame",
+          "points": {
+            "burns": 3
+          }
+        },
+        {
+          "text": "Celebrate with a huge meal, then forget what the job actually is",
+          "points": {
+            "homer": 3
+          }
+        },
+        {
+          "text": "Hope they finally take you seriously",
+          "points": {
+            "lisa": 3
+          }
+        },
+        {
+          "text": "Panic. Everyone's going to find out you have no idea what you're doing",
+          "points": {
+            "milhouse": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your crush doesn't seem to notice you. You...",
+      "options": [
+        {
+          "text": "Keep trying. One day they'll notice",
+          "points": {
+            "milhouse": 3
+          }
+        },
+        {
+          "text": "Assume it's because of your face, and sulk",
+          "points": {
+            "moe": 3
+          }
+        },
+        {
+          "text": "Pull a prank to get their attention",
+          "points": {
+            "bart": 3
+          }
+        },
+        {
+          "text": "Wait patiently. Good things take time",
+          "points": {
+            "marge": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your neighbour keeps borrowing your things. You...",
+      "options": [
+        {
+          "text": "Let them. That's what neighbours are for",
+          "points": {
+            "ned": 3
+          }
+        },
+        {
+          "text": "Borrow some of theirs back, and never return it",
+          "points": {
+            "homer": 3
+          }
+        },
+        {
+          "text": "Sue them",
+          "points": {
+            "burns": 3
+          }
+        },
+        {
+          "text": "Yell at them about it from your porch",
+          "points": {
+            "grampa": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your family plans a holiday. You...",
+      "options": [
+        {
+          "text": "Plan every detail, and pack snacks for everyone",
+          "points": {
+            "marge": 3
+          }
+        },
+        {
+          "text": "Count down the days until you can cause chaos somewhere new",
+          "points": {
+            "bart": 3
+          }
+        },
+        {
+          "text": "Research the history of where you're going",
+          "points": {
+            "lisa": 3
+          }
+        },
+        {
+          "text": "Ask if you really have to come",
+          "points": {
+            "moe": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You own the town's power plant, and the town wants you to pay for safety upgrades. You...",
+      "options": [
+        {
+          "text": "Refuse. Safety is expensive",
+          "points": {
+            "burns": 3
+          }
+        },
+        {
+          "text": "Switch to clean energy while you're at it",
+          "points": {
+            "lisa": 3
+          }
+        },
+        {
+          "text": "Do it, once someone explains what a safety upgrade is",
+          "points": {
+            "homer": 3
+          }
+        },
+        {
+          "text": "Pay up straight away. It's the right thing to do",
+          "points": {
+            "ned": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You're a kid, and you've been sent to the principal's office again. You...",
+      "options": [
+        {
+          "text": "Wave hello. You practically have your own chair in there",
+          "points": {
+            "bart": 3
+          }
+        },
+        {
+          "text": "Blame your best friend",
+          "points": {
+            "milhouse": 3
+          }
+        },
+        {
+          "text": "Feel terrible, and apologise to everyone",
+          "points": {
+            "marge": 3
+          }
+        },
+        {
+          "text": "Threaten to fight anyone who laughs",
+          "points": {
+            "moe": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}
