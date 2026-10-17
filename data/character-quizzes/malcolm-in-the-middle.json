@@ -1,0 +1,430 @@
+{
+  "slug": "malcolm-in-the-middle",
+  "show": "Malcolm in the Middle",
+  "shortName": "Malcolm in the Middle",
+  "seoTitle": "Malcolm in the Middle Test: Which Character Are You? (10 Questions)",
+  "metaDescription": "Take the Malcolm in the Middle test: 10 everyday questions reveal whether you're Malcolm, Lois, Hal, Francis, Reese or Dewey — with your full character breakdown.",
+  "intro": "Are you the genius, the rebel, or the one who's always in charge? Answer 10 everyday questions about family, work and getting into trouble, and find out which Malcolm in the Middle character you are.",
+  "characters": [
+    {
+      "id": "malcolm",
+      "name": "Malcolm",
+      "emoji": "🧠",
+      "color": "#2563eb",
+      "title": "The Reluctant Genius",
+      "summary": "Brilliant, sarcastic and sure that life is unfair. You see the problem before anyone else, and you'll tell everyone about it.",
+      "description": [
+        "Like Malcolm, you're smarter than you'd like people to notice. He has an IQ of 165, and he's moved into the Krelboynes, a class for gifted students.",
+        "You're the one with the plan. Malcolm is usually the ringleader of his brothers' schemes, even when they go badly wrong.",
+        "You're going places, whether you like it or not. By the finale, Malcolm is taking classes at Harvard, and Lois wants him to become President."
+      ],
+      "strengths": [
+        "Brilliant",
+        "Quick-witted",
+        "Resourceful"
+      ],
+      "flaw": "You're right so often that you stop listening to anyone else.",
+      "signature": "A sarcastic comment, a clever plan and a look that says 'Why me?'",
+      "clashReason": "they'd point out every flaw in your plan, out loud"
+    },
+    {
+      "id": "lois",
+      "name": "Lois",
+      "emoji": "📣",
+      "color": "#b91c1c",
+      "title": "The Boss of the House",
+      "summary": "Fierce, sharp and always in charge. Nothing gets past you, and you don't back down.",
+      "description": [
+        "Like Lois, you run a tight ship. She's the strict, hot-tempered mother of five boys, and she almost never admits she's wrong.",
+        "You work hard. Lois works at the Lucky Aide drugstore alongside Craig, who has a huge crush on her.",
+        "You had other dreams once. Before she married Hal, Lois planned to go to music school and become a concert violinist."
+      ],
+      "strengths": [
+        "Strong",
+        "Sharp",
+        "Protective"
+      ],
+      "flaw": "You'd rather win the argument than admit you got it wrong.",
+      "signature": "A raised voice, a sixth sense for lies and the final word.",
+      "clashReason": "they'd catch you in a lie before you'd finished telling it"
+    },
+    {
+      "id": "hal",
+      "name": "Hal",
+      "emoji": "🛼",
+      "color": "#ca8a04",
+      "title": "The Big Kid",
+      "summary": "Loving, excitable and a little chaotic. You throw yourself into everything, until the next thing comes along.",
+      "description": [
+        "Like Hal, you're a big kid at heart. He's the boys' laid-back dad, and he usually lets Lois make the big decisions.",
+        "You go all in. Hal gets hooked on one hobby after another, from roller skating to competitive speed walking.",
+        "You put up with a lot. Hal works in lower management at a company he's always hated."
+      ],
+      "strengths": [
+        "Fun",
+        "Loving",
+        "Enthusiastic"
+      ],
+      "flaw": "You go all in on a new obsession, then drop it a month later.",
+      "signature": "A brand-new hobby, a nervous laugh and far too much enthusiasm.",
+      "clashReason": "they'd rope you into their latest obsession whether you wanted in or not"
+    },
+    {
+      "id": "francis",
+      "name": "Francis",
+      "emoji": "🏔️",
+      "color": "#15803d",
+      "title": "The Rebel",
+      "summary": "Independent, defiant and never one for rules. You'd rather do things your own way, a long way from home.",
+      "description": [
+        "Like Francis, you were born to push back. He's the oldest brother, and Lois sends him away to Marlin Academy, a military school.",
+        "You'll go a long way to be free. Francis runs away from the academy, goes to work in Alaska and marries Piama there.",
+        "You hate being told what to do. Francis is always fighting with Lois, and in the finale he even hides from her that he's taken an office job."
+      ],
+      "strengths": [
+        "Independent",
+        "Brave",
+        "Charming"
+      ],
+      "flaw": "You'd rather rebel than admit someone else had a point.",
+      "signature": "A road out of town, a grudge against authority and a story about the time you got away with it.",
+      "clashReason": "they'd talk you into breaking the rules, then leave you to take the blame"
+    },
+    {
+      "id": "reese",
+      "name": "Reese",
+      "emoji": "👊",
+      "color": "#ea580c",
+      "title": "The Wild Card",
+      "summary": "Tough, impulsive and secretly talented. You act first and think later, if at all.",
+      "description": [
+        "Like Reese, you act first and think later. He's the school's top bully, and he's the brother who gets punished most.",
+        "You have a hidden talent. Reese is a brilliant cook, and he's put in charge of the family's holiday meals.",
+        "You don't always see trouble coming. Reese once tries to join the army using a fake ID."
+      ],
+      "strengths": [
+        "Tough",
+        "Bold",
+        "Talented"
+      ],
+      "flaw": "You leap before you look, every single time.",
+      "signature": "A clenched fist, a big grin and a perfect homemade dinner.",
+      "clashReason": "they'd start a fight and drag you into it"
+    },
+    {
+      "id": "dewey",
+      "name": "Dewey",
+      "emoji": "🎵",
+      "color": "#7c3aed",
+      "title": "The Quiet Prodigy",
+      "summary": "Quiet, creative and much smarter than people realize. You notice everything, and you remember it.",
+      "description": [
+        "Like Dewey, people underestimate you. He starts out as the quiet, picked-on youngest brother, and grows up to be as sneaky as the rest of them.",
+        "You have a gift. Dewey is a musical prodigy, and he even writes an opera about his parents' fight over a new bed.",
+        "You look out for others. Dewey is put in a class for troubled students by mistake, and he ends up as its unofficial teacher."
+      ],
+      "strengths": [
+        "Creative",
+        "Patient",
+        "Observant"
+      ],
+      "flaw": "You never forget a slight, and you get even when nobody expects it.",
+      "signature": "A song in your head, a quiet smile and a very long memory.",
+      "clashReason": "they'd say nothing, then get you back weeks later"
+    }
+  ],
+  "questions": [
+    {
+      "text": "At a family barbecue, the grill catches fire. You...",
+      "options": [
+        {
+          "text": "Explain, at length, why it isn't your fault",
+          "points": {
+            "malcolm": 3
+          }
+        },
+        {
+          "text": "Take charge and tell everyone exactly what to do",
+          "points": {
+            "lois": 3
+          }
+        },
+        {
+          "text": "Panic, then make it worse trying to fix it",
+          "points": {
+            "hal": 3
+          }
+        },
+        {
+          "text": "Quietly put it out while everyone else argues",
+          "points": {
+            "dewey": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your boss brings in a new rule that makes no sense. You...",
+      "options": [
+        {
+          "text": "Ignore it, and see if anyone notices",
+          "points": {
+            "francis": 3
+          }
+        },
+        {
+          "text": "Follow it, but complain to anyone who'll listen",
+          "points": {
+            "malcolm": 3
+          }
+        },
+        {
+          "text": "March into their office and tell them why it's wrong",
+          "points": {
+            "lois": 3
+          }
+        },
+        {
+          "text": "Go along with it. It's not worth the fight",
+          "points": {
+            "hal": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You have a free Sunday with no plans. You...",
+      "options": [
+        {
+          "text": "Have a few friends over for a long game of poker",
+          "points": {
+            "hal": 3
+          }
+        },
+        {
+          "text": "Cook something big and impressive for everyone",
+          "points": {
+            "reese": 3
+          }
+        },
+        {
+          "text": "Get out of the house, as far away as you can",
+          "points": {
+            "francis": 3
+          }
+        },
+        {
+          "text": "Stay in with your headphones and make something of your own",
+          "points": {
+            "dewey": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone in your family has clearly lied to you. You...",
+      "options": [
+        {
+          "text": "Know it straight away, and get the truth out of them",
+          "points": {
+            "lois": 3
+          }
+        },
+        {
+          "text": "Pretend you believe them, and save it for later",
+          "points": {
+            "dewey": 3
+          }
+        },
+        {
+          "text": "Poke holes in their story, out loud",
+          "points": {
+            "malcolm": 3
+          }
+        },
+        {
+          "text": "Let it go. You'd rather not know",
+          "points": {
+            "hal": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A stranger is rude to you in a store. You...",
+      "options": [
+        {
+          "text": "Square up to them before you've thought it through",
+          "points": {
+            "reese": 3
+          }
+        },
+        {
+          "text": "Hit back with a comment that leaves them speechless",
+          "points": {
+            "malcolm": 3
+          }
+        },
+        {
+          "text": "Make a scene they'll never forget",
+          "points": {
+            "lois": 3
+          }
+        },
+        {
+          "text": "Walk away. They're not worth it",
+          "points": {
+            "dewey": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend asks you to help them move on Saturday. You...",
+      "options": [
+        {
+          "text": "Say yes, and turn up with far too much enthusiasm and a plan",
+          "points": {
+            "hal": 3
+          }
+        },
+        {
+          "text": "Say yes, and carry the heaviest things because you can",
+          "points": {
+            "reese": 3
+          }
+        },
+        {
+          "text": "Tell them you're busy. You're always busy",
+          "points": {
+            "francis": 3
+          }
+        },
+        {
+          "text": "Turn up, then tell them they're packing it all wrong",
+          "points": {
+            "lois": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your town starts offering free evening classes. You...",
+      "options": [
+        {
+          "text": "Sign up for music lessons, and practice every night",
+          "points": {
+            "dewey": 3
+          }
+        },
+        {
+          "text": "Sign up for something unusual, and be obsessed with it for a month",
+          "points": {
+            "hal": 3
+          }
+        },
+        {
+          "text": "Take self-defense, mostly to try it out on people",
+          "points": {
+            "reese": 3
+          }
+        },
+        {
+          "text": "Go to one class, then never go back",
+          "points": {
+            "francis": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your manager gives you a bad review at work. You...",
+      "options": [
+        {
+          "text": "Argue every single point until they back down",
+          "points": {
+            "malcolm": 3
+          }
+        },
+        {
+          "text": "Take it, then work twice as hard to prove them wrong",
+          "points": {
+            "lois": 3
+          }
+        },
+        {
+          "text": "Decide the whole system is rigged and stop trying",
+          "points": {
+            "francis": 3
+          }
+        },
+        {
+          "text": "Don't really notice until someone points it out",
+          "points": {
+            "reese": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're one of five brothers, and Mom catches you all doing something you shouldn't. You...",
+      "options": [
+        {
+          "text": "Come up with a cover story on the spot",
+          "points": {
+            "malcolm": 3
+          }
+        },
+        {
+          "text": "Take the punishment. You're used to it",
+          "points": {
+            "reese": 3
+          }
+        },
+        {
+          "text": "Calmly point out that you were only watching",
+          "points": {
+            "dewey": 3
+          }
+        },
+        {
+          "text": "Admit it proudly. You'd do it again",
+          "points": {
+            "francis": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You're raising boys who keep wrecking the house. You...",
+      "options": [
+        {
+          "text": "Lay down the law, so they know exactly who's boss",
+          "points": {
+            "lois": 3
+          }
+        },
+        {
+          "text": "Secretly find it a bit funny, then back up your partner",
+          "points": {
+            "hal": 3
+          }
+        },
+        {
+          "text": "Work out a system so it can't happen again",
+          "points": {
+            "malcolm": 3
+          }
+        },
+        {
+          "text": "Remember you were worse, and go easy on them",
+          "points": {
+            "francis": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

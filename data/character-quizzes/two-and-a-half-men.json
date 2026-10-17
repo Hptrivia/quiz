@@ -1,0 +1,480 @@
+{
+  "slug": "two-and-a-half-men",
+  "show": "Two and a Half Men",
+  "shortName": "Two and a Half Men",
+  "seoTitle": "Two and a Half Men Test: Which Character Are You? (11 Questions)",
+  "metaDescription": "Take the Two and a Half Men test: 11 everyday questions reveal whether you're Charlie, Alan, Jake, Walden, Berta, Evelyn or Judith — with your full character breakdown.",
+  "intro": "Are you the bachelor, the moocher, or the one who ain't cleaning that up? Answer 11 everyday questions about money, family and life at home, and find out which Two and a Half Men character you are.",
+  "characters": [
+    {
+      "id": "charlie",
+      "name": "Charlie Harper",
+      "emoji": "🎹",
+      "color": "#b91c1c",
+      "title": "The Bachelor",
+      "summary": "Charming, carefree and allergic to responsibility. You live for a good time, and you make it look easy.",
+      "description": [
+        "Like Charlie, you know how to enjoy life. He's a wealthy, charming bachelor who lives in a Malibu beach house.",
+        "You've got a talent you don't take too seriously. Charlie makes his money writing advertising jingles, and later children's songs as \"Charlie Waffles.\"",
+        "You're kinder than you let on. Charlie mocks his brother Alan constantly, but he lets Alan and Jake live with him for years."
+      ],
+      "strengths": [
+        "Charming",
+        "Funny",
+        "Easygoing"
+      ],
+      "flaw": "You'd rather have fun than deal with anything serious.",
+      "signature": "A piano, a drink in hand and a new phone number every weekend.",
+      "clashReason": "they'd make fun of you to your face, then ask you to grab them a drink"
+    },
+    {
+      "id": "alan",
+      "name": "Alan Harper",
+      "emoji": "💸",
+      "color": "#0369a1",
+      "title": "The Moocher",
+      "summary": "Well-meaning, anxious and always a little unlucky. You try hard, but things rarely go your way.",
+      "description": [
+        "Like Alan, you mean well. He's a chiropractor who moves in with his brother Charlie after his divorce from Judith.",
+        "You don't always choose wisely. Alan's marriage to Kandi lasts four months, and he ends up paying alimony to two ex-wives.",
+        "You always find a place to land. Alan becomes Walden's best friend, and he's still living at the beach house when the series ends."
+      ],
+      "strengths": [
+        "Well-meaning",
+        "Loyal",
+        "Persistent"
+      ],
+      "flaw": "You let everyone walk all over you, then complain about it.",
+      "signature": "A borrowed couch, an empty wallet and a long list of complaints.",
+      "clashReason": "they'd borrow money from you and somehow make you feel guilty about it"
+    },
+    {
+      "id": "jake",
+      "name": "Jake Harper",
+      "emoji": "🍕",
+      "color": "#ea580c",
+      "title": "The Slacker",
+      "summary": "Lazy, hungry and happily clueless. You take life slow, and you're sharper than people think.",
+      "description": [
+        "Like Jake, you take life at your own pace. He's Alan's son, and he's laid-back about pretty much everything.",
+        "You're smarter than you look. Jake comes across as dim, but he's surprisingly good at poker, and at spotting what's going on.",
+        "Things work out for you. After high school, Jake joins the Army, and he later marries a Japanese dancer."
+      ],
+      "strengths": [
+        "Easygoing",
+        "Honest",
+        "Surprisingly sharp"
+      ],
+      "flaw": "You'd rather nap than lift a finger.",
+      "signature": "A video game, a giant snack and zero plans.",
+      "clashReason": "they'd eat your leftovers and not even notice they were yours"
+    },
+    {
+      "id": "walden",
+      "name": "Walden Schmidt",
+      "emoji": "💻",
+      "color": "#16a34a",
+      "title": "The Sweet Billionaire",
+      "summary": "Kind, generous and a big kid at heart. You've got plenty to give, and you give it freely.",
+      "description": [
+        "Like Walden, you've done well for yourself. He's an internet billionaire who sold his website to Microsoft.",
+        "You wear your heart on your sleeve. After his divorce from Bridget, Walden buys Charlie's beach house, and Alan comes with it.",
+        "You'd do anything for a family. Walden and Alan even marry so that they can adopt a little boy, Louis."
+      ],
+      "strengths": [
+        "Kind",
+        "Generous",
+        "Sincere"
+      ],
+      "flaw": "You're so trusting that people take advantage of you.",
+      "signature": "A heart of gold, far too much money and a habit of falling in love too fast.",
+      "clashReason": "they'd get emotional over something you thought was no big deal"
+    },
+    {
+      "id": "berta",
+      "name": "Berta",
+      "emoji": "🧹",
+      "color": "#7c3aed",
+      "title": "The Housekeeper",
+      "summary": "Blunt, sarcastic and impossible to fool. You do your job your way, and you say exactly what you think.",
+      "description": [
+        "Like Berta, you say what everyone's thinking. She's the Harpers' sarcastic, blunt housekeeper.",
+        "You've lived a little. Berta's colorful past includes time in prison and following the Grateful Dead.",
+        "You know where you stand. Berta's catchphrase says it all: \"I ain't cleaning that up.\""
+      ],
+      "strengths": [
+        "Honest",
+        "Tough",
+        "Funny"
+      ],
+      "flaw": "You'd rather make a sarcastic comment than lend a hand.",
+      "signature": "A mop you barely use, a sharp tongue and a story you probably shouldn't tell.",
+      "clashReason": "they'd roast you to your face, and refuse to clean up after you"
+    },
+    {
+      "id": "evelyn",
+      "name": "Evelyn Harper",
+      "emoji": "💎",
+      "color": "#be185d",
+      "title": "The Ice Queen",
+      "summary": "Glamorous, ambitious and just a little bit cold. You always look out for number one.",
+      "description": [
+        "Like Evelyn, you like the finer things. She's Charlie and Alan's mother, and she sells real estate in Beverly Hills and Malibu.",
+        "You don't do warm and fuzzy. Evelyn is vain and self-centered, and her own family calls her \"the devil.\"",
+        "You've had quite a love life. Evelyn has been widowed five times, and in season 11 she marries Marty Pepper."
+      ],
+      "strengths": [
+        "Confident",
+        "Ambitious",
+        "Persuasive"
+      ],
+      "flaw": "You care more about how things look than how people feel.",
+      "signature": "Expensive jewelry, a sweet smile and a cutting remark.",
+      "clashReason": "they'd compliment you and insult you in the same sentence"
+    },
+    {
+      "id": "judith",
+      "name": "Judith Harper-Melnick",
+      "emoji": "🧊",
+      "color": "#334155",
+      "title": "The Ex",
+      "summary": "Cold, controlling and impossible to please. You know what you want, and you make sure you get it.",
+      "description": [
+        "Like Judith, you don't let people off easy. She's Alan's ex-wife, and she's cold, vindictive and humorless.",
+        "You make sure you're looked after. Judith hasn't worked since she divorced Alan, and she lives on his alimony.",
+        "You keep people guessing. Judith marries Herb Melnick, and in season 11 she's briefly engaged to Alan again, before calling it off."
+      ],
+      "strengths": [
+        "Determined",
+        "Organized",
+        "Self-sufficient"
+      ],
+      "flaw": "You hold grudges for longer than anyone can remember.",
+      "signature": "A cold stare, a strict schedule and an alimony check.",
+      "clashReason": "they'd bring up every mistake you've ever made, in order"
+    }
+  ],
+  "questions": [
+    {
+      "text": "A friend needs to borrow $200 until payday. You...",
+      "options": [
+        {
+          "text": "Hand it over. You've got plenty",
+          "points": {
+            "walden": 3
+          }
+        },
+        {
+          "text": "Lend it, then joke about it for months",
+          "points": {
+            "charlie": 3
+          }
+        },
+        {
+          "text": "Ask for a detailed repayment plan, in writing",
+          "points": {
+            "judith": 3
+          }
+        },
+        {
+          "text": "Explain that you're a little short yourself right now",
+          "points": {
+            "alan": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your weekend is wide open. You...",
+      "options": [
+        {
+          "text": "Sleep till noon, raid the fridge and play video games",
+          "points": {
+            "jake": 3
+          }
+        },
+        {
+          "text": "Head out with your friends, and don't ask what happens",
+          "points": {
+            "berta": 3
+          }
+        },
+        {
+          "text": "Spend it at a spa, being pampered",
+          "points": {
+            "evelyn": 3
+          }
+        },
+        {
+          "text": "Plan something romantic, if you can find someone to share it with",
+          "points": {
+            "walden": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone leaves a huge mess in the kitchen. You...",
+      "options": [
+        {
+          "text": "Make it very clear you're not cleaning it up",
+          "points": {
+            "berta": 3
+          }
+        },
+        {
+          "text": "Clean it, muttering about how nobody appreciates you",
+          "points": {
+            "alan": 3
+          }
+        },
+        {
+          "text": "Don't notice. You probably made it",
+          "points": {
+            "jake": 3
+          }
+        },
+        {
+          "text": "Leave a cold, passive-aggressive note",
+          "points": {
+            "judith": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're at a party and don't know anyone. You...",
+      "options": [
+        {
+          "text": "Work the room until you find someone rich and important",
+          "points": {
+            "evelyn": 3
+          }
+        },
+        {
+          "text": "Head straight for the bar, and leave with a phone number",
+          "points": {
+            "charlie": 3
+          }
+        },
+        {
+          "text": "Find the snacks, and stay there",
+          "points": {
+            "jake": 3
+          }
+        },
+        {
+          "text": "Nervously introduce yourself, then overshare",
+          "points": {
+            "alan": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone hurts your feelings. You...",
+      "options": [
+        {
+          "text": "Tell everyone how much it hurt, in detail",
+          "points": {
+            "alan": 3
+          }
+        },
+        {
+          "text": "Make a cutting joke and move on",
+          "points": {
+            "berta": 3
+          }
+        },
+        {
+          "text": "Pretend you're fine, then make them pay for it later",
+          "points": {
+            "judith": 3
+          }
+        },
+        {
+          "text": "Cry a little, then forgive them",
+          "points": {
+            "walden": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You get a big surprise bonus at work. You...",
+      "options": [
+        {
+          "text": "Spend it all on a weekend in Vegas",
+          "points": {
+            "charlie": 3
+          }
+        },
+        {
+          "text": "Buy something expensive that people will notice",
+          "points": {
+            "evelyn": 3
+          }
+        },
+        {
+          "text": "Buy the biggest TV you can find",
+          "points": {
+            "jake": 3
+          }
+        },
+        {
+          "text": "Keep it quiet, so nobody asks to borrow any",
+          "points": {
+            "alan": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend is going through a breakup. You...",
+      "options": [
+        {
+          "text": "Take them out, buy the drinks and introduce them to someone new",
+          "points": {
+            "charlie": 3
+          }
+        },
+        {
+          "text": "Listen for hours. You know exactly how it feels",
+          "points": {
+            "walden": 3
+          }
+        },
+        {
+          "text": "Tell them they're better off, and that you saw it coming",
+          "points": {
+            "berta": 3
+          }
+        },
+        {
+          "text": "Tell them to look on the bright side: next time, get a better deal",
+          "points": {
+            "evelyn": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your boss asks you to stay late. You...",
+      "options": [
+        {
+          "text": "Do the bare minimum, then leave on time",
+          "points": {
+            "berta": 3
+          }
+        },
+        {
+          "text": "Agree, then ask if they're ordering dinner for everyone",
+          "points": {
+            "alan": 3
+          }
+        },
+        {
+          "text": "Forget, and wander off at five",
+          "points": {
+            "jake": 3
+          }
+        },
+        {
+          "text": "Agree, if it gets you closer to a promotion",
+          "points": {
+            "evelyn": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're redecorating your home. You...",
+      "options": [
+        {
+          "text": "Go big, with every gadget money can buy",
+          "points": {
+            "walden": 3
+          }
+        },
+        {
+          "text": "Choose everything yourself. Nobody else's opinion counts",
+          "points": {
+            "judith": 3
+          }
+        },
+        {
+          "text": "Put in a piano, and leave the rest exactly as it is",
+          "points": {
+            "charlie": 3
+          }
+        },
+        {
+          "text": "Pick whatever's easiest to keep clean",
+          "points": {
+            "berta": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You let your newly divorced brother move in \"for a few weeks.\" Years later, he's still there. You...",
+      "options": [
+        {
+          "text": "Mock him every day, but never actually kick him out",
+          "points": {
+            "charlie": 3
+          }
+        },
+        {
+          "text": "Tell him to his face that he's a mooch",
+          "points": {
+            "berta": 3
+          }
+        },
+        {
+          "text": "Charge him rent, backdated to the day he arrived",
+          "points": {
+            "judith": 3
+          }
+        },
+        {
+          "text": "Remind him that's what happens when you marry the wrong person",
+          "points": {
+            "evelyn": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You buy a beach house, and the last owner's brother and nephew come with it. You...",
+      "options": [
+        {
+          "text": "Let them stay. You could use the company",
+          "points": {
+            "walden": 3
+          }
+        },
+        {
+          "text": "Get a lawyer and have them out by Friday",
+          "points": {
+            "judith": 3
+          }
+        },
+        {
+          "text": "Throw a housewarming party, the louder the better",
+          "points": {
+            "charlie": 3
+          }
+        },
+        {
+          "text": "Claim the biggest bedroom, and take a nap in it",
+          "points": {
+            "jake": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

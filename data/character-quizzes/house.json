@@ -1,0 +1,501 @@
+{
+  "slug": "house",
+  "show": "House",
+  "shortName": "House",
+  "seoTitle": "House Test: Which Character Are You? (11 Questions)",
+  "metaDescription": "Take the House test: 11 everyday questions reveal whether you're House, Wilson, Cuddy, Foreman, Chase, Cameron, Thirteen or Taub — with your full character breakdown.",
+  "intro": "Are you the genius, the best friend, or the boss who keeps it all together? Answer 11 everyday questions about work, friends and doing the right thing, and find out which House character you are.",
+  "characters": [
+    {
+      "id": "house",
+      "name": "Gregory House",
+      "emoji": "🧩",
+      "color": "#1e293b",
+      "title": "The Genius",
+      "summary": "Brilliant, sarcastic and allergic to small talk. You solve the puzzles nobody else can, and you don't care who you annoy.",
+      "description": [
+        "Like House, you're brilliant at solving puzzles. He's the hospital's head of diagnostic medicine, with a double specialty in infectious disease and nephrology.",
+        "You don't do small talk. House avoids his patients, and he completely lacks a bedside manner.",
+        "You make your own exit. In the finale, House fakes his own death."
+      ],
+      "strengths": [
+        "Brilliant",
+        "Honest",
+        "Relentless"
+      ],
+      "flaw": "You'd rather be right than be kind.",
+      "signature": "A sarcastic comment, a whiteboard full of ideas and a puzzle you can't put down.",
+      "clashReason": "they'd tell you you're wrong, explain why, and enjoy it"
+    },
+    {
+      "id": "wilson",
+      "name": "James Wilson",
+      "emoji": "🤝",
+      "color": "#2563eb",
+      "title": "The Best Friend",
+      "summary": "Kind, loyal and liked by everyone. You're the nice one, maybe a little too nice.",
+      "description": [
+        "Like Wilson, you're the nice one. He's the head of oncology, and he's popular with patients and colleagues.",
+        "You're loyal, maybe too loyal. Wilson is House's best friend, and he often helps House get away with things.",
+        "You stick by your friends. In the finale, Wilson knows House has faked his death, and they leave medicine behind together."
+      ],
+      "strengths": [
+        "Kind",
+        "Loyal",
+        "Patient"
+      ],
+      "flaw": "You can't say no, even when you really should.",
+      "signature": "A warm smile, a patient ear and a friend you'd do anything for.",
+      "clashReason": "they'd agree with you to keep the peace, then do the opposite"
+    },
+    {
+      "id": "cuddy",
+      "name": "Lisa Cuddy",
+      "emoji": "🏥",
+      "color": "#be185d",
+      "title": "The Boss",
+      "summary": "Strong, smart and juggling everything at once. You're in charge, and you're the only one who can keep the chaos in check.",
+      "description": [
+        "Like Cuddy, you're the one in charge. She's the hospital's dean of medicine, and an endocrinologist.",
+        "You can hold your own. Cuddy is one of the few people who can match wits with House.",
+        "You clean up other people's messes. Cuddy often fixes the trouble House causes, because she trusts he's doing it for his patients."
+      ],
+      "strengths": [
+        "Strong",
+        "Smart",
+        "Resilient"
+      ],
+      "flaw": "You take on so much that you never get a moment for yourself.",
+      "signature": "A stack of paperwork, a firm voice and a fire you're already putting out.",
+      "clashReason": "they'd overrule you, and be right about it"
+    },
+    {
+      "id": "foreman",
+      "name": "Eric Foreman",
+      "emoji": "🧠",
+      "color": "#15803d",
+      "title": "The Ambitious One",
+      "summary": "Confident, driven and determined to do it your way. You're going places, and you know it.",
+      "description": [
+        "Like Foreman, you're smart and ambitious. He's a neurologist who trained at Johns Hopkins.",
+        "You've come a long way. Foreman has street smarts from a past as a juvenile delinquent.",
+        "You rise to the top. Foreman eventually becomes the hospital's dean of medicine."
+      ],
+      "strengths": [
+        "Ambitious",
+        "Confident",
+        "Principled"
+      ],
+      "flaw": "You're so worried about becoming like someone that you can't admit you already are.",
+      "signature": "A pressed white coat, a clear plan and a promotion in sight.",
+      "clashReason": "they'd tell you, very calmly, that they could do your job better"
+    },
+    {
+      "id": "chase",
+      "name": "Robert Chase",
+      "emoji": "🩺",
+      "color": "#ca8a04",
+      "title": "The Adaptable One",
+      "summary": "Charming, creative and quick to adapt. You go along with things, and somehow you always land on your feet.",
+      "description": [
+        "Like Chase, you're more creative than people realize. He's a surgeon and intensive care specialist on House's team.",
+        "You pick things up fast. Chase adopts many of House's habits, including his motto that \"everybody lies.\"",
+        "You end up in charge. When House fakes his death, Chase takes over as head of diagnostic medicine."
+      ],
+      "strengths": [
+        "Creative",
+        "Adaptable",
+        "Charming"
+      ],
+      "flaw": "You carry your guilt around long after everyone else has forgotten.",
+      "signature": "An easy smile, a creative idea and a few things you'd rather not talk about.",
+      "clashReason": "they'd agree with whoever's in charge, even when it's not you"
+    },
+    {
+      "id": "cameron",
+      "name": "Allison Cameron",
+      "emoji": "💗",
+      "color": "#db2777",
+      "title": "The Idealist",
+      "summary": "Honest, caring and full of principles. You feel everything deeply, and you always try to do the right thing.",
+      "description": [
+        "Like Cameron, you care deeply. She's an immunologist, and the most empathetic member of House's team.",
+        "You've been through a lot. Cameron's first husband died of thyroid cancer.",
+        "You follow your heart. Cameron has an on-and-off relationship with Chase, and they eventually marry."
+      ],
+      "strengths": [
+        "Caring",
+        "Honest",
+        "Idealistic"
+      ],
+      "flaw": "You care so much that it hurts you when things go wrong.",
+      "signature": "A kind word, an open heart and a principle you won't give up.",
+      "clashReason": "they'd make you feel guilty for not caring as much as they do"
+    },
+    {
+      "id": "thirteen",
+      "name": "Remy \"Thirteen\" Hadley",
+      "emoji": "🎲",
+      "color": "#7c3aed",
+      "title": "The Mystery",
+      "summary": "Private, cool and impossible to figure out. You keep people guessing, and you like it that way.",
+      "description": [
+        "Like Thirteen, you keep people guessing. She's an internist, and her nickname comes from the number she was given when she applied to House's team.",
+        "You earn your place. Thirteen wins a spot on the team after House's months-long competition to hire new doctors.",
+        "You always come back. Thirteen is fired from the team, and later returns."
+      ],
+      "strengths": [
+        "Calm",
+        "Independent",
+        "Smart"
+      ],
+      "flaw": "You keep so much to yourself that nobody can help you.",
+      "signature": "A calm face, a closed book and a risk nobody knows you took.",
+      "clashReason": "they'd tell you nothing, then act surprised you didn't understand"
+    },
+    {
+      "id": "taub",
+      "name": "Chris Taub",
+      "emoji": "💼",
+      "color": "#64748b",
+      "title": "The Competitor",
+      "summary": "Pragmatic, competitive and always thinking about number one. You know how to play the game.",
+      "description": [
+        "Like Taub, you know how to play the game. He's a plastic surgeon who joins House's team.",
+        "You're not afraid of a fight. Cuddy suggests Taub for the team partly because his combative nature could keep House focused.",
+        "You've made some messy choices. Taub cheats on his wife, Rachel, and after they divorce he has two children outside the marriage."
+      ],
+      "strengths": [
+        "Competitive",
+        "Practical",
+        "Sharp"
+      ],
+      "flaw": "You look out for yourself first, and it shows.",
+      "signature": "A cynical comment, a calculated move and an eye on the prize.",
+      "clashReason": "they'd take the credit and call it good business"
+    }
+  ],
+  "questions": [
+    {
+      "text": "A friend tells you a long story about their problems. You...",
+      "options": [
+        {
+          "text": "Listen patiently, and say exactly the right thing",
+          "points": {
+            "wilson": 3
+          }
+        },
+        {
+          "text": "Interrupt halfway through, because you've already worked out the answer",
+          "points": {
+            "house": 3
+          }
+        },
+        {
+          "text": "Feel it as if it were happening to you",
+          "points": {
+            "cameron": 3
+          }
+        },
+        {
+          "text": "Nod, and share very little about yourself in return",
+          "points": {
+            "thirteen": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're off work all weekend, with nothing planned. You...",
+      "options": [
+        {
+          "text": "Watch TV, play video games and avoid every human being",
+          "points": {
+            "house": 3
+          }
+        },
+        {
+          "text": "Go out, meet someone new and see where the night goes",
+          "points": {
+            "chase": 3
+          }
+        },
+        {
+          "text": "Catch up on work, so Monday's under control",
+          "points": {
+            "cuddy": 3
+          }
+        },
+        {
+          "text": "Do something a bit risky that you won't tell anyone about",
+          "points": {
+            "thirteen": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your boss gives you an order you disagree with. You...",
+      "options": [
+        {
+          "text": "Ignore it, and do what you know is right",
+          "points": {
+            "house": 3
+          }
+        },
+        {
+          "text": "Follow it, but argue your case first",
+          "points": {
+            "foreman": 3
+          }
+        },
+        {
+          "text": "Go along with it, and quietly do it your way",
+          "points": {
+            "chase": 3
+          }
+        },
+        {
+          "text": "Follow it if it helps you, and fight it if it doesn't",
+          "points": {
+            "taub": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You have to tell someone something they really don't want to hear. You...",
+      "options": [
+        {
+          "text": "Say it bluntly. Sugarcoating wastes time",
+          "points": {
+            "house": 3
+          }
+        },
+        {
+          "text": "Break it gently, and stay with them as long as they need",
+          "points": {
+            "cameron": 3
+          }
+        },
+        {
+          "text": "Find the kindest possible way, however long it takes",
+          "points": {
+            "wilson": 3
+          }
+        },
+        {
+          "text": "Explain it clearly and professionally, then talk about what happens next",
+          "points": {
+            "foreman": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're juggling far too much at work. You...",
+      "options": [
+        {
+          "text": "Keep every plate spinning, and never let them see you sweat",
+          "points": {
+            "cuddy": 3
+          }
+        },
+        {
+          "text": "Do whatever gets you noticed, and drop the rest",
+          "points": {
+            "taub": 3
+          }
+        },
+        {
+          "text": "Work twice as hard, and prove you could run the place",
+          "points": {
+            "foreman": 3
+          }
+        },
+        {
+          "text": "Say yes to everything, then quietly fall behind",
+          "points": {
+            "wilson": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A coworker is clearly struggling. You...",
+      "options": [
+        {
+          "text": "Notice, and help without being asked",
+          "points": {
+            "cameron": 3
+          }
+        },
+        {
+          "text": "Quietly take some of their work, without saying a word",
+          "points": {
+            "thirteen": 3
+          }
+        },
+        {
+          "text": "Remind them everyone struggles, then get back to your own work",
+          "points": {
+            "taub": 3
+          }
+        },
+        {
+          "text": "Give them a clear plan to get back on track",
+          "points": {
+            "cuddy": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend wants to go into business with you. You...",
+      "options": [
+        {
+          "text": "Agree, as long as you get the bigger share",
+          "points": {
+            "taub": 3
+          }
+        },
+        {
+          "text": "Say yes, because you can never say no to them",
+          "points": {
+            "wilson": 3
+          }
+        },
+        {
+          "text": "Agree, as long as you're the one in charge",
+          "points": {
+            "cuddy": 3
+          }
+        },
+        {
+          "text": "Say no. You don't do partners",
+          "points": {
+            "house": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You make a big mistake. You...",
+      "options": [
+        {
+          "text": "Own it, and lose sleep over it for months",
+          "points": {
+            "chase": 3
+          }
+        },
+        {
+          "text": "Admit it, and fix it yourself",
+          "points": {
+            "foreman": 3
+          }
+        },
+        {
+          "text": "Blame the system, and move on",
+          "points": {
+            "taub": 3
+          }
+        },
+        {
+          "text": "Tell nobody, and handle it alone",
+          "points": {
+            "thirteen": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your love life gets complicated. You...",
+      "options": [
+        {
+          "text": "Make a sarcastic comment, and pretend you don't care",
+          "points": {
+            "house": 3
+          }
+        },
+        {
+          "text": "Wear your heart on your sleeve, even if you get hurt",
+          "points": {
+            "cameron": 3
+          }
+        },
+        {
+          "text": "Keep things casual, and see what happens",
+          "points": {
+            "thirteen": 3
+          }
+        },
+        {
+          "text": "Fall hard and fast, every single time",
+          "points": {
+            "wilson": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You run a hospital, and your star doctor keeps breaking every rule. You...",
+      "options": [
+        {
+          "text": "Keep him. His results are worth the chaos",
+          "points": {
+            "cuddy": 3
+          }
+        },
+        {
+          "text": "Push for real consequences. Nobody is above the rules",
+          "points": {
+            "foreman": 3
+          }
+        },
+        {
+          "text": "Cover for him. He's your best friend",
+          "points": {
+            "wilson": 3
+          }
+        },
+        {
+          "text": "Watch him closely, and start picking up his habits",
+          "points": {
+            "chase": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You're competing with dozens of other doctors for a spot on a famous genius's team. You...",
+      "options": [
+        {
+          "text": "Play it cool, and keep your secrets",
+          "points": {
+            "thirteen": 3
+          }
+        },
+        {
+          "text": "Play the game, and make sure you're the one left standing",
+          "points": {
+            "taub": 3
+          }
+        },
+        {
+          "text": "Be honest, and hope that's enough",
+          "points": {
+            "cameron": 3
+          }
+        },
+        {
+          "text": "Charm everyone, and stay out of trouble",
+          "points": {
+            "chase": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

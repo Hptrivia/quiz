@@ -1,0 +1,430 @@
+{
+  "slug": "psych",
+  "show": "Psych",
+  "shortName": "Psych",
+  "seoTitle": "Psych Test: Which Character Are You? (10 Questions)",
+  "metaDescription": "Take the Psych test: 10 everyday questions reveal whether you're Shawn, Gus, Lassiter, Juliet, Henry or Chief Vick — with your full character breakdown.",
+  "intro": "Are you the fake psychic, the reluctant sidekick, or the one who goes by the book? Answer 10 everyday questions about work, friends and bending the rules, and find out which Psych character you are.",
+  "characters": [
+    {
+      "id": "shawn",
+      "name": "Shawn Spencer",
+      "emoji": "🔮",
+      "color": "#16a34a",
+      "title": "The Fake Psychic",
+      "summary": "Quick, funny and impossible to take seriously. You notice everything, and you'd rather make it look like magic than hard work.",
+      "description": [
+        "Like Shawn, you notice things nobody else does. He tells the Santa Barbara police he's psychic, but really he just has an incredible eye for detail.",
+        "You were trained for this, whether you liked it or not. Shawn's dad, Henry, drilled him in observation from childhood so he'd follow him into police work.",
+        "You do grow up, eventually. In the series finale, Shawn follows Juliet to San Francisco and proposes to her."
+      ],
+      "strengths": [
+        "Observant",
+        "Funny",
+        "Quick-thinking"
+      ],
+      "flaw": "You'd rather make a joke than take anything seriously.",
+      "signature": "A wild guess that's somehow right, a pop-culture reference and no plan at all.",
+      "clashReason": "they'd turn your serious moment into a joke"
+    },
+    {
+      "id": "gus",
+      "name": "Burton \"Gus\" Guster",
+      "emoji": "💼",
+      "color": "#1d4ed8",
+      "title": "The Reluctant Sidekick",
+      "summary": "Smart, proper and dragged into everything. You say no, then you show up anyway, because that's what friends do.",
+      "description": [
+        "Like Gus, you're the sensible one. He's Shawn's best friend, and he keeps a steady job as a pharmaceutical salesman.",
+        "You put up with a lot. Every time Shawn introduces Gus, he gives him a new, ridiculous name, like \"Bighead Burton.\"",
+        "You're loyal to the end. When Shawn moves to San Francisco in the finale, Gus follows him there."
+      ],
+      "strengths": [
+        "Smart",
+        "Loyal",
+        "Dependable"
+      ],
+      "flaw": "You complain about every plan, then go along with it anyway.",
+      "signature": "A pressed shirt, a big sigh and a 'Shawn, no.'",
+      "clashReason": "they'd say no to your idea, then complain all the way through it"
+    },
+    {
+      "id": "lassiter",
+      "name": "Carlton Lassiter",
+      "emoji": "🚔",
+      "color": "#334155",
+      "title": "The By-the-Book Cop",
+      "summary": "Intense, serious and loyal to the rules. You do things properly, and you don't trust anyone who doesn't.",
+      "description": [
+        "Like Lassiter, you do things by the book. He's the head detective at the Santa Barbara police department.",
+        "You don't trust shortcuts. Lassiter is suspicious of Shawn's 'psychic' methods from the very start.",
+        "You're softer than you let on. Lassiter marries Marlowe and has a daughter, Lily, and he ends the series as police chief."
+      ],
+      "strengths": [
+        "Dedicated",
+        "Loyal",
+        "Disciplined"
+      ],
+      "flaw": "You'd rather follow the rules than admit they don't always work.",
+      "signature": "A badge, a stern look and absolutely no patience for nonsense.",
+      "clashReason": "they'd quote the rulebook at you, word for word"
+    },
+    {
+      "id": "juliet",
+      "name": "Juliet O'Hara",
+      "emoji": "🌟",
+      "color": "#db2777",
+      "title": "The Smart One",
+      "summary": "Kind, sharp and tougher than people expect. You see the best in people, but nobody fools you for long.",
+      "description": [
+        "Like Juliet, you're tougher than you look. She joins the Santa Barbara police as a detective, and she more than holds her own.",
+        "You've got a family who keeps you on your toes. Juliet's brother, Ewan, is played by John Cena.",
+        "You go where your career takes you. In the final season, Juliet moves to San Francisco with Chief Vick to become a head detective."
+      ],
+      "strengths": [
+        "Smart",
+        "Kind",
+        "Brave"
+      ],
+      "flaw": "You give people more chances than they've earned.",
+      "signature": "A warm smile, a sharp mind and a case file you've read twice.",
+      "clashReason": "they'd see straight through you, and tell you so with a smile"
+    },
+    {
+      "id": "henry",
+      "name": "Henry Spencer",
+      "emoji": "🔍",
+      "color": "#b45309",
+      "title": "The Tough-Love Dad",
+      "summary": "Gruff, practical and always right, at least in your own mind. You give tough love, and you give it whether people want it or not.",
+      "description": [
+        "Like Henry, you've seen it all. He's a retired Santa Barbara police detective.",
+        "You believe in doing things the hard way. Henry trained Shawn to notice everything when he was a kid.",
+        "You disapprove, but you still help. Henry doesn't like Shawn's psychic act, but he helps with cases anyway, and he even takes a job consulting for the police."
+      ],
+      "strengths": [
+        "Practical",
+        "Wise",
+        "Protective"
+      ],
+      "flaw": "You'd rather give a lecture than say 'I'm proud of you.'",
+      "signature": "A lecture, a raised eyebrow and an 'I told you so.'",
+      "clashReason": "they'd lecture you about what you did wrong, and they'd be right"
+    },
+    {
+      "id": "vick",
+      "name": "Karen Vick",
+      "emoji": "⭐",
+      "color": "#7c3aed",
+      "title": "The Chief",
+      "summary": "Calm, firm and always in control. You keep everyone in line, and you know when to look the other way.",
+      "description": [
+        "Like Chief Vick, you're the one in charge. She starts as interim chief of the Santa Barbara police and is later made chief for real.",
+        "You know when to bend the rules. Vick often turns a blind eye when Shawn breaks the law, as long as he gets results.",
+        "You're always moving up. In the final season, Vick takes a job in San Francisco, and she takes Juliet with her."
+      ],
+      "strengths": [
+        "Calm",
+        "Decisive",
+        "Fair"
+      ],
+      "flaw": "You keep so much under control that people forget you're human too.",
+      "signature": "A calm voice, a firm decision and a look that ends the argument.",
+      "clashReason": "they'd cut your excuse off halfway through and tell you to fix it"
+    }
+  ],
+  "questions": [
+    {
+      "text": "You're running late for an important meeting. You...",
+      "options": [
+        {
+          "text": "Walk in anyway, with a story so good nobody minds",
+          "points": {
+            "shawn": 3
+          }
+        },
+        {
+          "text": "Feel awful about it. You're never late",
+          "points": {
+            "gus": 3
+          }
+        },
+        {
+          "text": "Text your apologies, then use the drive to prepare",
+          "points": {
+            "juliet": 3
+          }
+        },
+        {
+          "text": "Start the meeting by phone from the car",
+          "points": {
+            "vick": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend wants you to join a crazy last-minute plan. You...",
+      "options": [
+        {
+          "text": "Say yes before they've finished explaining",
+          "points": {
+            "shawn": 3
+          }
+        },
+        {
+          "text": "Say absolutely not, then go along with it anyway",
+          "points": {
+            "gus": 3
+          }
+        },
+        {
+          "text": "Ask exactly how legal it is",
+          "points": {
+            "lassiter": 3
+          }
+        },
+        {
+          "text": "Go, as long as someone has a backup plan",
+          "points": {
+            "juliet": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You've got a long weekend with nothing planned. You...",
+      "options": [
+        {
+          "text": "Fill it with snacks, movies and zero responsibilities",
+          "points": {
+            "shawn": 3
+          }
+        },
+        {
+          "text": "Turn your phone off and spend it with your family",
+          "points": {
+            "vick": 3
+          }
+        },
+        {
+          "text": "Spend a morning at the shooting range, then clean your gear",
+          "points": {
+            "lassiter": 3
+          }
+        },
+        {
+          "text": "Finally get to the jobs around the house you've been putting off",
+          "points": {
+            "henry": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Two coworkers are arguing, and it's getting out of hand. You...",
+      "options": [
+        {
+          "text": "Step in, calm them down and get everyone back to work",
+          "points": {
+            "vick": 3
+          }
+        },
+        {
+          "text": "Back up whoever's right, even if it gets awkward",
+          "points": {
+            "juliet": 3
+          }
+        },
+        {
+          "text": "Tell them to take it outside, and mean it",
+          "points": {
+            "lassiter": 3
+          }
+        },
+        {
+          "text": "Quietly leave the room before it gets worse",
+          "points": {
+            "gus": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You get a parking ticket you think is unfair. You...",
+      "options": [
+        {
+          "text": "Write a strongly worded letter, then pay it",
+          "points": {
+            "gus": 3
+          }
+        },
+        {
+          "text": "Pay it on the spot, and respect the officer for doing their job",
+          "points": {
+            "lassiter": 3
+          }
+        },
+        {
+          "text": "Ignore it, and hope it goes away",
+          "points": {
+            "shawn": 3
+          }
+        },
+        {
+          "text": "Grumble about it for a week, then pay it",
+          "points": {
+            "henry": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone new at work asks you to show them the ropes. You...",
+      "options": [
+        {
+          "text": "Teach them properly, the hard way, the way you learned",
+          "points": {
+            "henry": 3
+          }
+        },
+        {
+          "text": "Show them all the shortcuts, including a few that aren't allowed",
+          "points": {
+            "shawn": 3
+          }
+        },
+        {
+          "text": "Be patient and kind, and check in on them all week",
+          "points": {
+            "juliet": 3
+          }
+        },
+        {
+          "text": "Help, but make it clear you've got your own work to do",
+          "points": {
+            "vick": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your friends are planning a group trip. You...",
+      "options": [
+        {
+          "text": "Take over the planning, and have it all booked by lunch",
+          "points": {
+            "vick": 3
+          }
+        },
+        {
+          "text": "Ask for the full itinerary, in writing",
+          "points": {
+            "lassiter": 3
+          }
+        },
+        {
+          "text": "Make a shared playlist and a list of fun stops",
+          "points": {
+            "juliet": 3
+          }
+        },
+        {
+          "text": "Pass. You'd rather have the house to yourself",
+          "points": {
+            "henry": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're asked to give a toast at a friend's wedding. You...",
+      "options": [
+        {
+          "text": "Make it up on the spot, and nail it",
+          "points": {
+            "shawn": 3
+          }
+        },
+        {
+          "text": "Write it weeks ahead and practice it in the mirror",
+          "points": {
+            "gus": 3
+          }
+        },
+        {
+          "text": "Say a few gruff words, then sit down fast",
+          "points": {
+            "henry": 3
+          }
+        },
+        {
+          "text": "Surprise everyone with how romantic you turn out to be",
+          "points": {
+            "lassiter": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're a detective, and a man who claims to be psychic keeps solving your cases. You...",
+      "options": [
+        {
+          "text": "Refuse to believe it, and try to prove he's a fraud",
+          "points": {
+            "lassiter": 3
+          }
+        },
+        {
+          "text": "Give him a chance, as long as he gets results",
+          "points": {
+            "vick": 3
+          }
+        },
+        {
+          "text": "Work with him, but keep a close eye on him",
+          "points": {
+            "juliet": 3
+          }
+        },
+        {
+          "text": "Work out how he's really doing it within a week",
+          "points": {
+            "henry": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You start pretending to be psychic to help the police, and it works. You...",
+      "options": [
+        {
+          "text": "Keep the act going. Why stop now?",
+          "points": {
+            "shawn": 3
+          }
+        },
+        {
+          "text": "Worry the whole time that someone will find out",
+          "points": {
+            "gus": 3
+          }
+        },
+        {
+          "text": "Tell the police the truth before it goes too far",
+          "points": {
+            "juliet": 3
+          }
+        },
+        {
+          "text": "Stop right away. Someone's going to get hurt",
+          "points": {
+            "henry": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

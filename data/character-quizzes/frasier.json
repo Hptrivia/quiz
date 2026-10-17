@@ -1,0 +1,409 @@
+{
+  "slug": "frasier",
+  "show": "Frasier",
+  "shortName": "Frasier",
+  "seoTitle": "Frasier Test: Which Character Are You? (10 Questions)",
+  "metaDescription": "Take the Frasier test: 10 everyday questions reveal whether you're Frasier, Niles, Martin, Daphne or Roz — with your full character breakdown.",
+  "intro": "Are you the snob, the regular guy, or the one who's always on a date? Answer 10 everyday questions about food, family and friends, and find out which Frasier character you are.",
+  "characters": [
+    {
+      "id": "frasier",
+      "name": "Frasier Crane",
+      "emoji": "🎙️",
+      "color": "#7c2d12",
+      "title": "The Snob With a Heart",
+      "summary": "Cultured, opinionated and a little pompous. You love the finer things, but deep down you mean well.",
+      "description": [
+        "Like Frasier, you have refined taste. He's a psychiatrist who hosts a call-in radio show on KACL in Seattle.",
+        "There's a good heart under all that polish. Frasier can be fussy and pompous, but he has a strong moral compass.",
+        "You follow your heart in the end. In the finale, Frasier is meant to start a new job in San Francisco, but his plane lands in Chicago, where Charlotte lives."
+      ],
+      "strengths": [
+        "Cultured",
+        "Caring",
+        "Principled"
+      ],
+      "flaw": "You overthink everything until it falls apart.",
+      "signature": "A glass of sherry, a strong opinion and a dinner party that goes wrong.",
+      "clashReason": "they'd give you a long lecture when you only wanted a quick answer"
+    },
+    {
+      "id": "niles",
+      "name": "Niles Crane",
+      "emoji": "🧴",
+      "color": "#4338ca",
+      "title": "The Even Bigger Snob",
+      "summary": "Refined, fastidious and hopelessly romantic. Your standards are sky-high, and so is your heart.",
+      "description": [
+        "Like Niles, your standards are very high. He's Frasier's younger brother, also a psychiatrist, and somehow even fussier.",
+        "You like things clean. Niles is famously germ-phobic, and he wipes down chairs before he sits on them.",
+        "You're a romantic at heart. Niles falls for Daphne the moment he meets her, and years later they marry and have a son, David."
+      ],
+      "strengths": [
+        "Refined",
+        "Loyal",
+        "Romantic"
+      ],
+      "flaw": "You worry about everything, especially germs.",
+      "signature": "A pocket square, a hand wipe and a secret crush you've had for years.",
+      "clashReason": "they'd quietly judge your taste in everything"
+    },
+    {
+      "id": "martin",
+      "name": "Martin Crane",
+      "emoji": "🍺",
+      "color": "#15803d",
+      "title": "The Regular Guy",
+      "summary": "Down-to-earth, honest and allergic to fuss. You like simple things, and you say it like it is.",
+      "description": [
+        "Like Martin, you keep it simple. He's a retired Seattle police detective who had to stop working after he was shot in the hip.",
+        "You love your comforts. Martin is a beer drinker, and nobody is getting him out of his battered old recliner.",
+        "You get closer to your family over time. Martin's relationship with his sons deepens over the years, and in the finale he marries Ronee."
+      ],
+      "strengths": [
+        "Honest",
+        "Down-to-earth",
+        "Loyal"
+      ],
+      "flaw": "You'd rather make a joke than talk about your feelings.",
+      "signature": "A cold beer, a ballgame on TV and the comfiest chair in the room.",
+      "clashReason": "they'd roll their eyes at anything that costs more than a burger"
+    },
+    {
+      "id": "daphne",
+      "name": "Daphne Moon",
+      "emoji": "🔮",
+      "color": "#db2777",
+      "title": "The Intuitive One",
+      "summary": "Warm, chatty and a little bit mystical. You look after everyone, and you always have a story about your family.",
+      "description": [
+        "Like Daphne, you look after people. She's Martin's physical therapist, and she moves in to help him at home.",
+        "You trust your gut. Daphne believes she's a little bit psychic, and she's often right.",
+        "You come from a big, chaotic family. Daphne grew up in Manchester, England, with a difficult mother and a houseful of brothers."
+      ],
+      "strengths": [
+        "Caring",
+        "Warm",
+        "Intuitive"
+      ],
+      "flaw": "You overshare about your family to anyone who'll listen.",
+      "signature": "A pot of tea, a strange feeling about today and a story about one of your brothers.",
+      "clashReason": "they'd tell you they had a feeling about you, and it wouldn't be a good one"
+    },
+    {
+      "id": "roz",
+      "name": "Roz Doyle",
+      "emoji": "📻",
+      "color": "#c026d3",
+      "title": "The Confident One",
+      "summary": "Bold, funny and comfortable in your own skin. You say what you want, and you don't apologize for it.",
+      "description": [
+        "Like Roz, you're comfortable in your own skin. She's Frasier's radio producer, originally from Bloomer, Wisconsin.",
+        "You live life your way. Roz loves dating, and she makes no apologies for it.",
+        "You can handle anything. Roz decides to raise her daughter, Alice, on her own, and by the finale she's been made station manager."
+      ],
+      "strengths": [
+        "Confident",
+        "Funny",
+        "Independent"
+      ],
+      "flaw": "You'd rather make a sharp comment than admit you're hurt.",
+      "signature": "A headset, a sarcastic comeback and a date on Friday night.",
+      "clashReason": "they'd make fun of you to your face, and get a laugh out of everyone"
+    }
+  ],
+  "questions": [
+    {
+      "text": "Friends invite you to a new restaurant. You...",
+      "options": [
+        {
+          "text": "Study the wine list before you even get there",
+          "points": {
+            "frasier": 3
+          }
+        },
+        {
+          "text": "Ask whether the chef trained in Paris",
+          "points": {
+            "niles": 3
+          }
+        },
+        {
+          "text": "Ask if they do a decent burger",
+          "points": {
+            "martin": 3
+          }
+        },
+        {
+          "text": "Go, and send back anything that isn't right",
+          "points": {
+            "roz": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend comes to you with a problem. You...",
+      "options": [
+        {
+          "text": "Diagnose them on the spot, whether they asked or not",
+          "points": {
+            "frasier": 3
+          }
+        },
+        {
+          "text": "Listen, then tell them a story about one of your relatives",
+          "points": {
+            "daphne": 3
+          }
+        },
+        {
+          "text": "Tell them what you'd do, in one sentence",
+          "points": {
+            "martin": 3
+          }
+        },
+        {
+          "text": "Pour them a drink and tell them the hard truth",
+          "points": {
+            "roz": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "It's Saturday night, and you're free. You'd choose...",
+      "options": [
+        {
+          "text": "A beer, the game and your favorite chair",
+          "points": {
+            "martin": 3
+          }
+        },
+        {
+          "text": "A night out with someone new, wherever it leads",
+          "points": {
+            "roz": 3
+          }
+        },
+        {
+          "text": "The opera, in the best seats, then a nightcap",
+          "points": {
+            "niles": 3
+          }
+        },
+        {
+          "text": "Hosting an elegant dinner party for people you'd like to impress",
+          "points": {
+            "frasier": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're stuck at home with a cold. You...",
+      "options": [
+        {
+          "text": "Disinfect everything you've touched and call your doctor twice",
+          "points": {
+            "niles": 3
+          }
+        },
+        {
+          "text": "Tough it out. It's just a cold",
+          "points": {
+            "martin": 3
+          }
+        },
+        {
+          "text": "Make a pot of soup from an old family recipe",
+          "points": {
+            "daphne": 3
+          }
+        },
+        {
+          "text": "Go to work anyway. Nobody else can do your job",
+          "points": {
+            "roz": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone gives you a gift you really don't like. You...",
+      "options": [
+        {
+          "text": "Smile politely, then hide it somewhere they'll never see",
+          "points": {
+            "niles": 3
+          }
+        },
+        {
+          "text": "Thank them graciously, then quietly exchange it",
+          "points": {
+            "frasier": 3
+          }
+        },
+        {
+          "text": "Say thanks. It's the thought that counts",
+          "points": {
+            "martin": 3
+          }
+        },
+        {
+          "text": "Find a use for it. Waste not, want not",
+          "points": {
+            "daphne": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend gets all the praise for something you did together. You...",
+      "options": [
+        {
+          "text": "Mention your part at every opportunity",
+          "points": {
+            "frasier": 3
+          }
+        },
+        {
+          "text": "Seethe quietly, and plan a very subtle revenge",
+          "points": {
+            "niles": 3
+          }
+        },
+        {
+          "text": "Feel hurt, then forgive them over a cup of tea",
+          "points": {
+            "daphne": 3
+          }
+        },
+        {
+          "text": "Point it out once, in front of everyone",
+          "points": {
+            "roz": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You meet someone you really like. You...",
+      "options": [
+        {
+          "text": "Fall instantly, then spend years too nervous to say so",
+          "points": {
+            "niles": 3
+          }
+        },
+        {
+          "text": "Ask them out the same night",
+          "points": {
+            "roz": 3
+          }
+        },
+        {
+          "text": "Plan the perfect first date, and overthink it until it goes wrong",
+          "points": {
+            "frasier": 3
+          }
+        },
+        {
+          "text": "Let it happen naturally. If it's meant to be, you'll know",
+          "points": {
+            "daphne": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your neighbor is having a loud party on a weeknight. You...",
+      "options": [
+        {
+          "text": "Go over to object, and end up staying for the party",
+          "points": {
+            "frasier": 3
+          }
+        },
+        {
+          "text": "Call building management. Twice",
+          "points": {
+            "niles": 3
+          }
+        },
+        {
+          "text": "Turn the TV up louder",
+          "points": {
+            "martin": 3
+          }
+        },
+        {
+          "text": "Pop round with a smile, and ask nicely if they'll keep it down",
+          "points": {
+            "daphne": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You work on a radio call-in show, and today's caller has a ridiculous problem. You...",
+      "options": [
+        {
+          "text": "Give them a long, thoughtful answer anyway",
+          "points": {
+            "frasier": 3
+          }
+        },
+        {
+          "text": "Cut them off and go to an ad break",
+          "points": {
+            "roz": 3
+          }
+        },
+        {
+          "text": "Get a feeling about what's really going on with them",
+          "points": {
+            "daphne": 3
+          }
+        },
+        {
+          "text": "Ask them the questions a good detective would",
+          "points": {
+            "martin": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "Your dad moves in with you, along with his ugly old recliner. You...",
+      "options": [
+        {
+          "text": "Complain constantly, but secretly love having him there",
+          "points": {
+            "frasier": 3
+          }
+        },
+        {
+          "text": "Buy him a far nicer chair, and quietly get rid of the old one",
+          "points": {
+            "niles": 3
+          }
+        },
+        {
+          "text": "Make everyone feel at home, chair and all",
+          "points": {
+            "daphne": 3
+          }
+        },
+        {
+          "text": "Tell him the chair has to go, to his face",
+          "points": {
+            "roz": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

@@ -1,0 +1,501 @@
+{
+  "slug": "shameless",
+  "show": "Shameless",
+  "shortName": "Shameless",
+  "seoTitle": "Shameless Test: Which Character Are You? (11 Questions)",
+  "metaDescription": "Take the Shameless test: 11 everyday questions reveal whether you're Frank, Fiona, Lip, Ian, Debbie, Mickey, Kev or Veronica — with your full character breakdown.",
+  "intro": "Are you the one holding it together, the con artist, or the one who throws the first punch? Answer 11 everyday questions about money, family and getting by, and find out which Shameless character you are.",
+  "characters": [
+    {
+      "id": "frank",
+      "name": "Frank Gallagher",
+      "emoji": "🍺",
+      "color": "#92400e",
+      "title": "The Con Artist",
+      "summary": "Charming, shameless and always working an angle. You can talk your way out of anything, usually at someone else's expense.",
+      "description": [
+        "Like Frank, you could talk your way out of anything. He refuses to hold a steady job, and he spends his time swindling the state welfare system.",
+        "You always have a scheme. Frank's plans range from small cons to running a former congressman for office as a scam.",
+        "There's more to you than people think. Frank does try to change: in season 8 he gets sober, takes a job at a hardware store and starts calling himself Francis."
+      ],
+      "strengths": [
+        "Persuasive",
+        "Resourceful",
+        "Never boring"
+      ],
+      "flaw": "You'll always look after yourself first, and find a speech to explain why.",
+      "signature": "A long speech, a borrowed twenty and a drink in hand.",
+      "clashReason": "they'd borrow money from you and give you a speech instead of paying it back"
+    },
+    {
+      "id": "fiona",
+      "name": "Fiona Gallagher",
+      "emoji": "🥧",
+      "color": "#be185d",
+      "title": "The One Holding It Together",
+      "summary": "Tough, hard-working and the person everyone leans on. You keep everything running, even when it's falling apart.",
+      "description": [
+        "Like Fiona, you're the one everyone depends on. She's the eldest Gallagher, and she raises her younger brothers and sisters herself.",
+        "You'll work any job to keep things going. Fiona leaves high school early, earns her GED and goes from waitress to manager at Patsy's Pies.",
+        "You take big risks. Fiona puts the family home up as collateral for a laundromat, makes it a success and buys an apartment building."
+      ],
+      "strengths": [
+        "Strong",
+        "Hard-working",
+        "Devoted"
+      ],
+      "flaw": "You look after everyone else so hard that you forget about yourself.",
+      "signature": "A double shift, a pile of bills and a plan to make it all work.",
+      "clashReason": "they'd take over and fix your life without asking"
+    },
+    {
+      "id": "lip",
+      "name": "Lip Gallagher",
+      "emoji": "🔧",
+      "color": "#1d4ed8",
+      "title": "The Wasted Genius",
+      "summary": "Brilliant, sarcastic and your own worst enemy. You can solve anyone's problem except your own.",
+      "description": [
+        "Like Lip, you're smarter than almost everyone around you. He's a straight-A student, and MIT accepts him after Mandy secretly applies for him.",
+        "You'll find a way to make it pay. As a teenager, Lip makes money by sitting the SAT for other students.",
+        "You're good with your hands, too. After college falls apart, Lip gets sober and becomes a motorcycle mechanic."
+      ],
+      "strengths": [
+        "Brilliant",
+        "Quick-witted",
+        "Practical"
+      ],
+      "flaw": "You talk yourself out of good things before they can go wrong.",
+      "signature": "A sarcastic comeback, oil on your hands and a big brain you won't use.",
+      "clashReason": "they'd tell you exactly why your plan won't work"
+    },
+    {
+      "id": "ian",
+      "name": "Ian Gallagher",
+      "emoji": "🔥",
+      "color": "#ea580c",
+      "title": "The Passionate One",
+      "summary": "Big-hearted, impulsive and all in. When you care about something, you go further than anyone else would.",
+      "description": [
+        "Like Ian, you throw yourself into things. He enlists in the Army while he's still underage, using Lip's identity.",
+        "You fight for what you believe in. Ian campaigns against conversion camps and becomes the face of a movement known as \"Gay Jesus.\"",
+        "You've been through a lot. Ian is diagnosed with bipolar disorder, and over time he learns to accept it."
+      ],
+      "strengths": [
+        "Passionate",
+        "Brave",
+        "Loyal"
+      ],
+      "flaw": "Once you've made up your mind, you don't stop to think.",
+      "signature": "A big cause, a bigger heart and no plan B.",
+      "clashReason": "they'd drag you into their latest big cause"
+    },
+    {
+      "id": "debbie",
+      "name": "Debbie Gallagher",
+      "emoji": "🛠️",
+      "color": "#7c3aed",
+      "title": "The Stubborn One",
+      "summary": "Determined, independent and impossible to talk out of anything. Once you've decided, it's happening.",
+      "description": [
+        "Like Debbie, you grew up fast. As a kid she runs a daycare out of the Gallagher house.",
+        "You go your own way. Debbie decides to have a baby young, and she raises her daughter, Franny, as a single mom.",
+        "You're tougher than anyone expected. Debbie trains as a welder, and she fights for equal pay at work."
+      ],
+      "strengths": [
+        "Determined",
+        "Hard-working",
+        "Independent"
+      ],
+      "flaw": "You'd rather be stubborn than admit someone else was right.",
+      "signature": "A welding mask, a plan nobody agreed to and zero backing down.",
+      "clashReason": "they'd decide what's happening and not take no for an answer"
+    },
+    {
+      "id": "mickey",
+      "name": "Mickey Milkovich",
+      "emoji": "👊",
+      "color": "#334155",
+      "title": "The Tough Guy",
+      "summary": "Hot-headed, rough around the edges and loyal to the end. You don't let many people in, but the ones you do, you'd fight for.",
+      "description": [
+        "Like Mickey, you're tougher than everyone around you. He grows up in the rough Milkovich family, and he ends up in prison more than once.",
+        "You hide your soft side. Mickey's father, Terry, is violent and hateful, and it takes Mickey years to be open about his relationship with Ian.",
+        "When you love someone, you go all the way. Mickey even commits armed robberies to pay for his wedding to Ian."
+      ],
+      "strengths": [
+        "Tough",
+        "Loyal",
+        "Honest"
+      ],
+      "flaw": "You throw a punch before you've worked out what you're angry about.",
+      "signature": "Tattooed knuckles, a short temper and one person you'd do anything for.",
+      "clashReason": "they'd start a fight on your behalf that you didn't want"
+    },
+    {
+      "id": "kev",
+      "name": "Kevin Ball",
+      "emoji": "🍻",
+      "color": "#15803d",
+      "title": "The Big-Hearted Friend",
+      "summary": "Kind, goofy and the best friend anyone could have. You'd do anything for the people you love.",
+      "description": [
+        "Like Kev, you've got the biggest heart around. He grew up in foster care, and he finds the family he never had with Veronica and the Gallaghers.",
+        "You're the good time. Kev runs the Alibi Room, the neighborhood bar he takes over from its old owner, Stan.",
+        "You're a softie at heart. Kev and Veronica have twin daughters, and Kev turns out to be a devoted dad."
+      ],
+      "strengths": [
+        "Kind",
+        "Loyal",
+        "Fun"
+      ],
+      "flaw": "You trust people too easily, and they take advantage.",
+      "signature": "A big grin, a cold beer and a hug nobody asked for.",
+      "clashReason": "they'd tell the whole bar your business without meaning to"
+    },
+    {
+      "id": "veronica",
+      "name": "Veronica Fisher",
+      "emoji": "💅",
+      "color": "#c026d3",
+      "title": "The Boss",
+      "summary": "Bold, blunt and the brains of any plan. You say what you think, and you always find a way to make money.",
+      "description": [
+        "Like Veronica, you always find a way to make money. When the show starts, she works at a nursing home and has side jobs too.",
+        "You can juggle a lot. V runs the Alibi with Kev while raising a family.",
+        "You get what you want. Unable to have children herself, Veronica has her twins with her mother, Carol, as the surrogate."
+      ],
+      "strengths": [
+        "Bold",
+        "Smart",
+        "Loyal"
+      ],
+      "flaw": "You'd rather be in charge than let someone else try.",
+      "signature": "A sharp tongue, a side hustle and the final word.",
+      "clashReason": "they'd tell you exactly what they think of your outfit, out loud"
+    }
+  ],
+  "questions": [
+    {
+      "text": "Rent is due on Friday, and you're short. You...",
+      "options": [
+        {
+          "text": "Juggle the bills, sell what you can and somehow make it work",
+          "points": {
+            "fiona": 3
+          }
+        },
+        {
+          "text": "Think up a quick side hustle, legal or not",
+          "points": {
+            "veronica": 3
+          }
+        },
+        {
+          "text": "Talk your landlord into waiting, with a very long story",
+          "points": {
+            "frank": 3
+          }
+        },
+        {
+          "text": "Charge people for something you're good at, like tutoring",
+          "points": {
+            "lip": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone at a bar insults your friend. You...",
+      "options": [
+        {
+          "text": "Throw the first punch",
+          "points": {
+            "mickey": 3
+          }
+        },
+        {
+          "text": "Step in between them and calm everyone down",
+          "points": {
+            "kev": 3
+          }
+        },
+        {
+          "text": "Tell them exactly where they can go",
+          "points": {
+            "veronica": 3
+          }
+        },
+        {
+          "text": "Slip out before anyone asks who's paying the tab",
+          "points": {
+            "frank": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your weekend suddenly opens up. You...",
+      "options": [
+        {
+          "text": "Go out dancing and don't come home until morning",
+          "points": {
+            "ian": 3
+          }
+        },
+        {
+          "text": "Catch up on sleep for the first time in weeks",
+          "points": {
+            "fiona": 3
+          }
+        },
+        {
+          "text": "Stay in, read and avoid everyone",
+          "points": {
+            "lip": 3
+          }
+        },
+        {
+          "text": "Plan a full family day out, whether they want one or not",
+          "points": {
+            "debbie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend is about to make a huge mistake. You...",
+      "options": [
+        {
+          "text": "Tell them they're an idiot, then help them anyway",
+          "points": {
+            "lip": 3
+          }
+        },
+        {
+          "text": "Throw yourself in to rescue them, whatever it costs you",
+          "points": {
+            "fiona": 3
+          }
+        },
+        {
+          "text": "Tell them what to do instead, and keep telling them",
+          "points": {
+            "debbie": 3
+          }
+        },
+        {
+          "text": "Stay out of it. They'll learn the hard way",
+          "points": {
+            "mickey": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your car breaks down on the way to work. You...",
+      "options": [
+        {
+          "text": "Get out and fix it yourself. You don't need help",
+          "points": {
+            "debbie": 3
+          }
+        },
+        {
+          "text": "Call in a favor from someone who owes you",
+          "points": {
+            "veronica": 3
+          }
+        },
+        {
+          "text": "Get there on foot. You're not missing a shift",
+          "points": {
+            "fiona": 3
+          }
+        },
+        {
+          "text": "Take it as a sign, and take the day off",
+          "points": {
+            "frank": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend admits they've been hiding something big from you. You...",
+      "options": [
+        {
+          "text": "Say you don't care, even though you clearly do",
+          "points": {
+            "mickey": 3
+          }
+        },
+        {
+          "text": "Feel hurt, but forgive them by the end of the day",
+          "points": {
+            "kev": 3
+          }
+        },
+        {
+          "text": "Demand every detail, right now",
+          "points": {
+            "veronica": 3
+          }
+        },
+        {
+          "text": "Understand. You've kept a few yourself",
+          "points": {
+            "ian": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "People in your neighborhood are being treated unfairly, and nobody's doing anything. You...",
+      "options": [
+        {
+          "text": "Start a protest and get everyone involved",
+          "points": {
+            "ian": 3
+          }
+        },
+        {
+          "text": "Go straight to whoever's in charge, and refuse to back down",
+          "points": {
+            "debbie": 3
+          }
+        },
+        {
+          "text": "Give a long, passionate speech about it, then go home",
+          "points": {
+            "frank": 3
+          }
+        },
+        {
+          "text": "Have them over, and listen to them vent",
+          "points": {
+            "kev": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A neighbor asks you to watch their kids for an evening. You...",
+      "options": [
+        {
+          "text": "Say yes, and have them fed and in bed by eight",
+          "points": {
+            "fiona": 3
+          }
+        },
+        {
+          "text": "Happily agree, then have more fun than the kids",
+          "points": {
+            "kev": 3
+          }
+        },
+        {
+          "text": "Turn it into a little paid business",
+          "points": {
+            "debbie": 3
+          }
+        },
+        {
+          "text": "Make an excuse. Kids aren't your thing",
+          "points": {
+            "mickey": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone hands you $1,000, no strings attached. You...",
+      "options": [
+        {
+          "text": "Spend it all in one big night, and regret nothing",
+          "points": {
+            "frank": 3
+          }
+        },
+        {
+          "text": "Book a last-minute trip and leave tonight",
+          "points": {
+            "ian": 3
+          }
+        },
+        {
+          "text": "Hide it, and don't tell a soul",
+          "points": {
+            "lip": 3
+          }
+        },
+        {
+          "text": "Buy something big and ridiculous you don't need",
+          "points": {
+            "kev": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You grow up with a dad who's always drunk and never around. You...",
+      "options": [
+        {
+          "text": "Raise your brothers and sisters yourself, even if it costs you your own plans",
+          "points": {
+            "fiona": 3
+          }
+        },
+        {
+          "text": "Get out the first chance you get, with a scholarship",
+          "points": {
+            "lip": 3
+          }
+        },
+        {
+          "text": "Keep hoping he'll change, and give him one more chance",
+          "points": {
+            "debbie": 3
+          }
+        },
+        {
+          "text": "Join the Army as soon as you can, or a bit sooner",
+          "points": {
+            "ian": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You run a bar on the South Side, and business is slow. You...",
+      "options": [
+        {
+          "text": "Throw a theme night and hope people show up",
+          "points": {
+            "kev": 3
+          }
+        },
+        {
+          "text": "Run something on the side upstairs, and don't ask questions",
+          "points": {
+            "mickey": 3
+          }
+        },
+        {
+          "text": "Become the bar's best customer, on credit",
+          "points": {
+            "frank": 3
+          }
+        },
+        {
+          "text": "Cut costs, work the bar yourself and chase every unpaid tab",
+          "points": {
+            "veronica": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

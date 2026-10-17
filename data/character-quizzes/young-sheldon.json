@@ -1,0 +1,509 @@
+{
+  "slug": "young-sheldon",
+  "show": "Young Sheldon",
+  "shortName": "Young Sheldon",
+  "seoTitle": "Young Sheldon Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the Young Sheldon test: 12 everyday questions reveal whether you're Sheldon, Mary, George, Georgie, Missy, Meemaw or Mandy — with your full character breakdown.",
+  "intro": "Are you the genius, the hustler, or the one with a deck of cards? Answer 12 everyday questions about family, money and getting by, and find out which Young Sheldon character you are.",
+  "characters": [
+    {
+      "id": "sheldon",
+      "name": "Sheldon Cooper",
+      "emoji": "🧠",
+      "color": "#2563eb",
+      "title": "The Boy Genius",
+      "summary": "Brilliant, rule-bound and completely honest. You know exactly how things should be done, and you'll happily explain it.",
+      "description": [
+        "Like Sheldon, you're usually the smartest person in the room. He's a child prodigy who joins his older brother Georgie's high school class at just nine.",
+        "You love what you love. Sheldon is obsessed with science, trains, comic books and Spock from Star Trek.",
+        "You aim high. Sheldon starts college at East Texas Tech at 11, graduates at 14 and heads off to Caltech."
+      ],
+      "strengths": [
+        "Brilliant",
+        "Honest",
+        "Determined"
+      ],
+      "flaw": "You say exactly what you think, even when nobody asked.",
+      "signature": "A strict schedule, a head full of facts and an opinion on everything.",
+      "clashReason": "they'd correct you in front of everyone, and they'd be right"
+    },
+    {
+      "id": "mary",
+      "name": "Mary Cooper",
+      "emoji": "🙏",
+      "color": "#be185d",
+      "title": "The Protective Mom",
+      "summary": "Loving, devoted and fierce when it counts. You'd do anything for your family, whether they like it or not.",
+      "description": [
+        "Like Mary, you'd do anything for your family. She's a loving, overprotective mother, and she worries about Sheldon most of all.",
+        "Faith matters to you. Mary is a devout Southern Baptist, and she takes a job as the secretary at her church.",
+        "You don't hold back. Mary has a short temper and a sharp tongue, but she's kind at heart."
+      ],
+      "strengths": [
+        "Loving",
+        "Devoted",
+        "Strong"
+      ],
+      "flaw": "You worry so much that you smother the people you love.",
+      "signature": "A Bible by the bed, dinner on the table and a worried look.",
+      "clashReason": "they'd tell you how to live your life, for your own good"
+    },
+    {
+      "id": "george",
+      "name": "George Cooper Sr.",
+      "emoji": "🏈",
+      "color": "#b45309",
+      "title": "The Tired Dad",
+      "summary": "Easygoing, hard-working and quietly loyal. You'd rather keep the peace than make a fuss.",
+      "description": [
+        "Like George, you work hard for the people you love. He's the head football coach at Medford High.",
+        "You don't always say how you feel. George is easygoing on the surface, and he tries his best with a son who's nothing like him.",
+        "You dream big, quietly. Late in the series, George is offered his dream job coaching college football at Rice University."
+      ],
+      "strengths": [
+        "Hard-working",
+        "Loyal",
+        "Easygoing"
+      ],
+      "flaw": "You'd rather keep the peace than say what's really bothering you.",
+      "signature": "A whistle round your neck, a long day behind you and the game on TV.",
+      "clashReason": "they'd shrug and say 'leave it' when you wanted to talk it out"
+    },
+    {
+      "id": "georgie",
+      "name": "Georgie Cooper",
+      "emoji": "💵",
+      "color": "#15803d",
+      "title": "The Hustler",
+      "summary": "Street-smart, charming and always working an angle. You may not love school, but you understand money.",
+      "description": [
+        "Like Georgie, you've always got a money-making plan. He's laid-back about school but sharp whenever there's cash involved.",
+        "You start working early. Georgie gets a job at the sports store run by Meemaw's boyfriend, Dale.",
+        "You step up when it counts. When Mandy, who's older than him, gets pregnant, Georgie decides to marry her, and they name their daughter CeeCee after Meemaw."
+      ],
+      "strengths": [
+        "Street-smart",
+        "Hard-working",
+        "Charming"
+      ],
+      "flaw": "You're always one scheme away from trouble.",
+      "signature": "A side hustle, a smooth line and cash in your back pocket.",
+      "clashReason": "they'd try to sell you something you didn't need"
+    },
+    {
+      "id": "missy",
+      "name": "Missy Cooper",
+      "emoji": "⚾",
+      "color": "#7c3aed",
+      "title": "The Overlooked Twin",
+      "summary": "Sharp, sarcastic and great with people. You notice everything, especially when you're being ignored.",
+      "description": [
+        "Like Missy, you read people better than anyone. She's Sheldon's twin, and her social skills are far better than his.",
+        "You're tougher than you look. Missy joins the town's baseball team.",
+        "You won't be ignored. Fed up with her parents always putting Sheldon first, Missy packs a bag, takes her dad's pickup and runs away in the middle of the night."
+      ],
+      "strengths": [
+        "Sharp",
+        "Funny",
+        "Socially savvy"
+      ],
+      "flaw": "You keep score of every time someone else got the attention.",
+      "signature": "A sarcastic comeback, an eye-roll and a baseball glove.",
+      "clashReason": "they'd roll their eyes and say what everyone else was thinking"
+    },
+    {
+      "id": "meemaw",
+      "name": "Meemaw",
+      "emoji": "🃏",
+      "color": "#dc2626",
+      "title": "The Free Spirit",
+      "summary": "Fun, bold and nobody's idea of a sweet little grandma. You live life on your own terms.",
+      "description": [
+        "Like Meemaw, you live life on your own terms. She's Sheldon's free-spirited, outspoken grandmother, and she lives right nearby.",
+        "You like a bit of risk. Meemaw loves to gamble, and she even runs an illegal casino in the back room of the laundromat she buys.",
+        "You're a softie underneath. Meemaw calls Sheldon \"Moonpie,\" and he's sure he's her favorite grandchild."
+      ],
+      "strengths": [
+        "Fun",
+        "Bold",
+        "Generous"
+      ],
+      "flaw": "You'd rather take the risk than think about what happens next.",
+      "signature": "A deck of cards, a quick comeback and a date on Saturday night.",
+      "clashReason": "they'd talk you into a bet you were always going to lose"
+    },
+    {
+      "id": "mandy",
+      "name": "Mandy McAllister",
+      "emoji": "🌤️",
+      "color": "#0891b2",
+      "title": "The Grown-Up",
+      "summary": "Grounded, independent and honest. You've seen a bit of life, and you don't need anyone's permission.",
+      "description": [
+        "Like Mandy, you've seen a bit of life. She's more than ten years older than Georgie, and their fling leads to a baby.",
+        "You can stand on your own. When Mandy finds out she's pregnant, she first plans to raise the baby by herself.",
+        "You want something for yourself too. Soon after CeeCee is born, Mandy goes for a job as the local TV weather girl."
+      ],
+      "strengths": [
+        "Independent",
+        "Honest",
+        "Grounded"
+      ],
+      "flaw": "You keep people at arm's length until they've proved themselves.",
+      "signature": "A clear head, a straight answer and a plan B.",
+      "clashReason": "they'd tell you to grow up, and they'd mean it"
+    }
+  ],
+  "questions": [
+    {
+      "text": "A neighbor invites you to a backyard barbecue. You...",
+      "options": [
+        {
+          "text": "Help the host, and keep an eye on who's drinking too much",
+          "points": {
+            "mary": 3
+          }
+        },
+        {
+          "text": "Grab a cold drink and find whoever's talking football",
+          "points": {
+            "george": 3
+          }
+        },
+        {
+          "text": "Work out which guests are worth getting to know",
+          "points": {
+            "georgie": 3
+          }
+        },
+        {
+          "text": "Ask exactly how long you're expected to stay",
+          "points": {
+            "sheldon": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your phone bill is much higher than usual. You...",
+      "options": [
+        {
+          "text": "Go through it line by line until you find the mistake",
+          "points": {
+            "sheldon": 3
+          }
+        },
+        {
+          "text": "Call them up and talk your way into a discount",
+          "points": {
+            "georgie": 3
+          }
+        },
+        {
+          "text": "Pay it, and grumble about it all evening",
+          "points": {
+            "george": 3
+          }
+        },
+        {
+          "text": "Laugh it off. Money comes and goes",
+          "points": {
+            "meemaw": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You have a whole Saturday with nothing planned. You spend it...",
+      "options": [
+        {
+          "text": "Sleeping in, then the game on TV with nobody needing anything",
+          "points": {
+            "george": 3
+          }
+        },
+        {
+          "text": "On a road trip with friends, in no hurry to get home",
+          "points": {
+            "meemaw": 3
+          }
+        },
+        {
+          "text": "Getting the house in order, then cooking a big family dinner",
+          "points": {
+            "mary": 3
+          }
+        },
+        {
+          "text": "At the mall with friends, catching up on all the gossip",
+          "points": {
+            "missy": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend asks you to keep a big secret. You...",
+      "options": [
+        {
+          "text": "Warn them you're terrible at keeping secrets",
+          "points": {
+            "sheldon": 3
+          }
+        },
+        {
+          "text": "Promise you will, then quietly start worrying about them",
+          "points": {
+            "mary": 3
+          }
+        },
+        {
+          "text": "Agree, then ask what they're actually going to do about it",
+          "points": {
+            "mandy": 3
+          }
+        },
+        {
+          "text": "Keep it, and never bring it up again",
+          "points": {
+            "george": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A coworker presents your idea in a meeting as if it were theirs. You...",
+      "options": [
+        {
+          "text": "Correct them on the spot, in detail, in front of everyone",
+          "points": {
+            "sheldon": 3
+          }
+        },
+        {
+          "text": "Smile, say nothing and get even later",
+          "points": {
+            "missy": 3
+          }
+        },
+        {
+          "text": "Pull them aside and calmly tell them you noticed",
+          "points": {
+            "mandy": 3
+          }
+        },
+        {
+          "text": "Let it slide. It's not worth the fight",
+          "points": {
+            "george": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend says you should take up a new hobby. You...",
+      "options": [
+        {
+          "text": "Say thanks, but you like your evenings exactly as they are",
+          "points": {
+            "sheldon": 3
+          }
+        },
+        {
+          "text": "Try dance lessons. You might meet someone",
+          "points": {
+            "meemaw": 3
+          }
+        },
+        {
+          "text": "Start a side hustle instead. Hobbies don't pay",
+          "points": {
+            "georgie": 3
+          }
+        },
+        {
+          "text": "Join something at church, so it does some good",
+          "points": {
+            "mary": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A family member makes a decision you think is a big mistake. You...",
+      "options": [
+        {
+          "text": "Keep telling them until they change their mind",
+          "points": {
+            "mary": 3
+          }
+        },
+        {
+          "text": "Tell them once, honestly, then let them get on with it",
+          "points": {
+            "mandy": 3
+          }
+        },
+        {
+          "text": "Remind them you made worse ones and turned out fine",
+          "points": {
+            "meemaw": 3
+          }
+        },
+        {
+          "text": "Stay out of it, and get ready to say 'I told you so'",
+          "points": {
+            "missy": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "At a family dinner, everyone's talking about someone else's big news. You...",
+      "options": [
+        {
+          "text": "Join in. You're proud of them",
+          "points": {
+            "mary": 3
+          }
+        },
+        {
+          "text": "Point out, sarcastically, that you're here too",
+          "points": {
+            "missy": 3
+          }
+        },
+        {
+          "text": "Wait for a gap, then change the subject to something interesting",
+          "points": {
+            "sheldon": 3
+          }
+        },
+        {
+          "text": "Eat, nod along and slip off early",
+          "points": {
+            "georgie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You win $500 in a raffle. You...",
+      "options": [
+        {
+          "text": "Put it straight into something that'll make more",
+          "points": {
+            "georgie": 3
+          }
+        },
+        {
+          "text": "Head to the casino. You're feeling lucky",
+          "points": {
+            "meemaw": 3
+          }
+        },
+        {
+          "text": "Put it toward something the family actually needs",
+          "points": {
+            "mary": 3
+          }
+        },
+        {
+          "text": "Treat yourself to one nice thing, then save the rest",
+          "points": {
+            "mandy": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A new person joins your group of friends. You...",
+      "options": [
+        {
+          "text": "Work out within five minutes whether they're trouble",
+          "points": {
+            "missy": 3
+          }
+        },
+        {
+          "text": "Make them laugh, and have them feeling at home by the end of the night",
+          "points": {
+            "meemaw": 3
+          }
+        },
+        {
+          "text": "Be friendly, but make up your mind about them in your own time",
+          "points": {
+            "mandy": 3
+          }
+        },
+        {
+          "text": "Nod hello and let them come to you",
+          "points": {
+            "george": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're raising three very different kids in a small Texas town, and one of them is a genius. You...",
+      "options": [
+        {
+          "text": "Pray on it, and protect that child from the world",
+          "points": {
+            "mary": 3
+          }
+        },
+        {
+          "text": "Make sure the other two get some attention too",
+          "points": {
+            "george": 3
+          }
+        },
+        {
+          "text": "Let them all be who they are, and spoil them on weekends",
+          "points": {
+            "meemaw": 3
+          }
+        },
+        {
+          "text": "Take it one day at a time. Nobody gets a manual",
+          "points": {
+            "mandy": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "Your family runs a little shop in a small town, and business is bad. You...",
+      "options": [
+        {
+          "text": "Open a back room for card games. What's the harm?",
+          "points": {
+            "meemaw": 3
+          }
+        },
+        {
+          "text": "Work every hour you can to keep it going",
+          "points": {
+            "georgie": 3
+          }
+        },
+        {
+          "text": "Draw up a proper business plan, with charts",
+          "points": {
+            "sheldon": 3
+          }
+        },
+        {
+          "text": "Make it clear you're not giving up your weekends for it",
+          "points": {
+            "missy": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

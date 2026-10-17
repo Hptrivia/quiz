@@ -1,0 +1,480 @@
+{
+  "slug": "criminal-minds",
+  "show": "Criminal Minds",
+  "shortName": "Criminal Minds",
+  "seoTitle": "Criminal Minds Test: Which Character Are You? (11 Questions)",
+  "metaDescription": "Take the Criminal Minds test: 11 everyday questions reveal whether you're Hotch, Reid, Morgan, Garcia, Prentiss, JJ or Rossi — with your full character breakdown.",
+  "intro": "Are you the leader, the genius, or the heart of the team? Answer 11 everyday questions about friends, pressure and the people you love, and find out which Criminal Minds character you are.",
+  "characters": [
+    {
+      "id": "hotch",
+      "name": "Aaron Hotchner",
+      "emoji": "🕴️",
+      "color": "#1e293b",
+      "title": "The Leader",
+      "summary": "Serious, steady and responsible to the core. You carry the weight so other people don't have to.",
+      "description": [
+        "Like Hotch, you take responsibility. He's the unit chief of the FBI's Behavioral Analysis Unit, and a former prosecutor.",
+        "You don't show much. Hotch is stoic and reserved, and he rarely smiles, except around his son, Jack.",
+        "You'd do anything to protect your family. After his wife, Haley, is killed by the serial killer known as the Reaper, Hotch raises Jack on his own."
+      ],
+      "strengths": [
+        "Responsible",
+        "Principled",
+        "Protective"
+      ],
+      "flaw": "You carry everything yourself and never let anyone help.",
+      "signature": "A dark suit, a straight face and a decision nobody else wanted to make.",
+      "clashReason": "they'd give you one stern look, and you'd know exactly what you did"
+    },
+    {
+      "id": "reid",
+      "name": "Spencer Reid",
+      "emoji": "🧠",
+      "color": "#7c3aed",
+      "title": "The Genius",
+      "summary": "Brilliant, curious and a little awkward. You know a fact about everything, and you'll share it.",
+      "description": [
+        "Like Reid, you're the smartest person in the room. He finished high school at 12, and he has an IQ of 187 and an eidetic memory.",
+        "You've got a fact for everything. Reid often interrupts people with facts, and he's almost always introduced as Dr. Reid.",
+        "You're tougher than you look. Reid survives being kidnapped and tortured, and later being framed for murder."
+      ],
+      "strengths": [
+        "Brilliant",
+        "Curious",
+        "Honest"
+      ],
+      "flaw": "You'd rather share a statistic than talk about how you feel.",
+      "signature": "A stack of books, a memory like a hard drive and a fact nobody asked for.",
+      "clashReason": "they'd correct your facts mid-sentence, with a statistic"
+    },
+    {
+      "id": "morgan",
+      "name": "Derek Morgan",
+      "emoji": "💪",
+      "color": "#b91c1c",
+      "title": "The Protector",
+      "summary": "Strong, confident and fiercely loyal. You run toward trouble, and you look out for your people.",
+      "description": [
+        "Like Morgan, you're strong and confident. He's a former Chicago police officer and bomb squad member with a judo black belt.",
+        "You look out for your people. Morgan has a famously close friendship with Garcia, and he calls her \"Baby Girl.\"",
+        "You know what matters most. Morgan eventually leaves the BAU to look after his family."
+      ],
+      "strengths": [
+        "Brave",
+        "Loyal",
+        "Confident"
+      ],
+      "flaw": "You charge in first and think about the danger later.",
+      "signature": "A big grin, a gym bag and a door you're about to kick down.",
+      "clashReason": "they'd jump in to protect you when you could handle it yourself"
+    },
+    {
+      "id": "garcia",
+      "name": "Penelope Garcia",
+      "emoji": "💻",
+      "color": "#db2777",
+      "title": "The Heart",
+      "summary": "Bubbly, kind and endlessly colorful. You bring the light to even the darkest days.",
+      "description": [
+        "Like Garcia, you bring the color. She's the team's bubbly, kind technical analyst.",
+        "You've got a rebellious side. Garcia taught herself to hack, and when the FBI caught her, they offered her a choice: prison or a job with the BAU.",
+        "You're stronger than you look. Garcia survives being shot, and she never loses her warmth."
+      ],
+      "strengths": [
+        "Kind",
+        "Optimistic",
+        "Clever"
+      ],
+      "flaw": "You feel everything so deeply that the bad days hit you hard.",
+      "signature": "Bright glasses, statement jewelry and the answer in under ten seconds.",
+      "clashReason": "they'd hug you when you just wanted to be left alone"
+    },
+    {
+      "id": "prentiss",
+      "name": "Emily Prentiss",
+      "emoji": "🌍",
+      "color": "#0f766e",
+      "title": "The Cool Head",
+      "summary": "Worldly, sharp and calm under pressure. You keep your cards close, and you're always one step ahead.",
+      "description": [
+        "Like Prentiss, you've seen the world. She's the daughter of a U.S. ambassador, and she speaks several languages.",
+        "You keep your secrets. When an old enemy, Ian Doyle, comes after her, Prentiss fakes her own death.",
+        "You rise to the top. Prentiss later returns as unit chief, and she's eventually promoted to FBI section chief."
+      ],
+      "strengths": [
+        "Calm",
+        "Worldly",
+        "Independent"
+      ],
+      "flaw": "You keep so much to yourself that people don't really know you.",
+      "signature": "A passport full of stamps, a dry joke and a past nobody knows about.",
+      "clashReason": "they'd keep a big secret from you, for your own good"
+    },
+    {
+      "id": "jj",
+      "name": "Jennifer \"JJ\" Jareau",
+      "emoji": "🤝",
+      "color": "#2563eb",
+      "title": "The Steady One",
+      "summary": "Warm, tough and great with people. You know what to say, and you hold it together for everyone.",
+      "description": [
+        "Like JJ, you're good with people. She starts as the team's media liaison and becomes a profiler.",
+        "You balance a lot. JJ marries Detective Will LaMontagne Jr., and they raise their children while she works one of the toughest jobs there is.",
+        "You're tougher than you look. JJ is shot on the job, and she recovers and keeps going."
+      ],
+      "strengths": [
+        "Empathetic",
+        "Strong",
+        "Steady"
+      ],
+      "flaw": "You hold it together for everyone else and forget to look after yourself.",
+      "signature": "A calm voice, a family photo on your desk and a steady hand.",
+      "clashReason": "they'd see straight through your brave face and make you talk about it"
+    },
+    {
+      "id": "rossi",
+      "name": "David Rossi",
+      "emoji": "📖",
+      "color": "#92400e",
+      "title": "The Veteran",
+      "summary": "Experienced, relaxed and full of stories. You've seen it all, and you know what really matters.",
+      "description": [
+        "Like Rossi, you've been around. He's one of the founding fathers of the BAU, and a former Marine.",
+        "You know when to come back. Rossi retires from the BAU, then returns years later.",
+        "You've lived a full life. Rossi is a best-selling true crime author, and he's been married three times."
+      ],
+      "strengths": [
+        "Wise",
+        "Experienced",
+        "Laid-back"
+      ],
+      "flaw": "You trust your gut so much that you skip the paperwork.",
+      "signature": "A great story, a best-selling book and three ex-wives.",
+      "clashReason": "they'd tell you a long story about the old days instead of answering your question"
+    }
+  ],
+  "questions": [
+    {
+      "text": "A friend calls you late at night, really upset. You...",
+      "options": [
+        {
+          "text": "Drive over right away. Nobody messes with your people",
+          "points": {
+            "morgan": 3
+          }
+        },
+        {
+          "text": "Stay on the phone and cheer them up, however long it takes",
+          "points": {
+            "garcia": 3
+          }
+        },
+        {
+          "text": "Listen calmly, then help them work out what to do next",
+          "points": {
+            "jj": 3
+          }
+        },
+        {
+          "text": "Share a story from your own life that puts it in perspective",
+          "points": {
+            "rossi": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your weekend is free. You...",
+      "options": [
+        {
+          "text": "Get a workout in, then head out with friends",
+          "points": {
+            "morgan": 3
+          }
+        },
+        {
+          "text": "Read three books and visit a museum",
+          "points": {
+            "reid": 3
+          }
+        },
+        {
+          "text": "Spend it with your family. Work can wait, for once",
+          "points": {
+            "hotch": 3
+          }
+        },
+        {
+          "text": "Redecorate your place with something bright and fun",
+          "points": {
+            "garcia": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A coworker makes a mistake that lands on you. You...",
+      "options": [
+        {
+          "text": "Have a quiet word, and expect better next time",
+          "points": {
+            "hotch": 3
+          }
+        },
+        {
+          "text": "Tell them exactly how common that mistake is, statistically",
+          "points": {
+            "reid": 3
+          }
+        },
+        {
+          "text": "Handle it privately, with one dry comment",
+          "points": {
+            "prentiss": 3
+          }
+        },
+        {
+          "text": "Let it go. You've made bigger ones",
+          "points": {
+            "rossi": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend drags you to a party full of strangers. You...",
+      "options": [
+        {
+          "text": "Compliment everyone's outfit, and make five new friends",
+          "points": {
+            "garcia": 3
+          }
+        },
+        {
+          "text": "Share a fascinating fact, then notice they've wandered off",
+          "points": {
+            "reid": 3
+          }
+        },
+        {
+          "text": "Find the most interesting person there and swap travel stories",
+          "points": {
+            "prentiss": 3
+          }
+        },
+        {
+          "text": "Find a quiet corner, and people-watch",
+          "points": {
+            "rossi": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You have to make a big decision at work, fast. You...",
+      "options": [
+        {
+          "text": "Make the call, and own whatever happens",
+          "points": {
+            "hotch": 3
+          }
+        },
+        {
+          "text": "Trust your gut. It's rarely wrong",
+          "points": {
+            "rossi": 3
+          }
+        },
+        {
+          "text": "Stay ice-cool, and pick the option nobody else thought of",
+          "points": {
+            "prentiss": 3
+          }
+        },
+        {
+          "text": "Think about who it will affect, then decide",
+          "points": {
+            "jj": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend asks you for dating advice. You...",
+      "options": [
+        {
+          "text": "Tell them to be confident, and just ask them out",
+          "points": {
+            "morgan": 3
+          }
+        },
+        {
+          "text": "Warn them what not to do, from experience",
+          "points": {
+            "rossi": 3
+          }
+        },
+        {
+          "text": "Get excited, and help them plan the perfect date",
+          "points": {
+            "garcia": 3
+          }
+        },
+        {
+          "text": "Suggest they keep a few things to themselves until they're sure",
+          "points": {
+            "prentiss": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You have to give someone bad news. You...",
+      "options": [
+        {
+          "text": "Do it gently, face to face, and stay with them afterwards",
+          "points": {
+            "jj": 3
+          }
+        },
+        {
+          "text": "Be direct, and take responsibility",
+          "points": {
+            "hotch": 3
+          }
+        },
+        {
+          "text": "Rehearse it in your head, then still say it awkwardly",
+          "points": {
+            "reid": 3
+          }
+        },
+        {
+          "text": "Be honest, then cry right along with them",
+          "points": {
+            "garcia": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're planning a vacation. You...",
+      "options": [
+        {
+          "text": "Go somewhere new, and live like a local",
+          "points": {
+            "prentiss": 3
+          }
+        },
+        {
+          "text": "Book it on a whim, and figure out the rest when you get there",
+          "points": {
+            "morgan": 3
+          }
+        },
+        {
+          "text": "Plan every detail, then cancel because of work",
+          "points": {
+            "hotch": 3
+          }
+        },
+        {
+          "text": "Memorize the map before you even get there",
+          "points": {
+            "reid": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone you love is in trouble. You...",
+      "options": [
+        {
+          "text": "Run in first, and ask questions later",
+          "points": {
+            "morgan": 3
+          }
+        },
+        {
+          "text": "Drop everything, and do whatever it takes to protect them",
+          "points": {
+            "hotch": 3
+          }
+        },
+        {
+          "text": "Find out everything you can, as fast as you can",
+          "points": {
+            "garcia": 3
+          }
+        },
+        {
+          "text": "Stay strong for everyone else, and hold it together",
+          "points": {
+            "jj": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're an FBI profiler, and the team is stuck on a case. You...",
+      "options": [
+        {
+          "text": "Notice the tiny detail everyone else missed",
+          "points": {
+            "reid": 3
+          }
+        },
+        {
+          "text": "Step back, and look at it the old-fashioned way",
+          "points": {
+            "rossi": 3
+          }
+        },
+        {
+          "text": "Calmly take charge and give everyone a job",
+          "points": {
+            "hotch": 3
+          }
+        },
+        {
+          "text": "Talk to the victims' families, and see what they know",
+          "points": {
+            "jj": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You join an elite FBI unit that hunts serial killers. You...",
+      "options": [
+        {
+          "text": "Bring color and snacks to the darkest office in the building",
+          "points": {
+            "garcia": 3
+          }
+        },
+        {
+          "text": "Keep your past to yourself, and let your work speak",
+          "points": {
+            "prentiss": 3
+          }
+        },
+        {
+          "text": "Make sure you always get home to your family",
+          "points": {
+            "jj": 3
+          }
+        },
+        {
+          "text": "Volunteer for the most dangerous jobs",
+          "points": {
+            "morgan": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

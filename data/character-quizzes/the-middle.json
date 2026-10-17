@@ -1,0 +1,409 @@
+{
+  "slug": "the-middle",
+  "show": "The Middle",
+  "shortName": "The Middle",
+  "seoTitle": "The Middle Test: Which Character Are You? (10 Questions)",
+  "metaDescription": "Take The Middle test: 10 everyday questions reveal whether you're Frankie, Mike, Axl, Sue or Brick — with your full character breakdown.",
+  "intro": "Are you the frazzled mom, the man of few words, or the eternal optimist? Answer 10 everyday questions about family, food and getting by, and find out which Heck you are.",
+  "characters": [
+    {
+      "id": "frankie",
+      "name": "Frankie Heck",
+      "emoji": "🛋️",
+      "color": "#be185d",
+      "title": "The Frazzled Mom",
+      "summary": "Loving, tired and always running late. You hold your family together with whatever you've got.",
+      "description": [
+        "Like Frankie, you'd do anything for your family. Her motto is \"You do for family.\"",
+        "You're always juggling. Frankie sells cars at Ehlert Motors until she's fired, then goes back to school and becomes a dental assistant.",
+        "You can't remember everything. Frankie often forgets birthdays, especially Brick's, and she always forgets the bag of food on family trips."
+      ],
+      "strengths": [
+        "Devoted",
+        "Resourceful",
+        "Funny"
+      ],
+      "flaw": "You cut corners, then feel guilty about it.",
+      "signature": "Fast food in the car, a messy house and a family you'd do anything for.",
+      "clashReason": "they'd forget your plans, then make you feel bad for being upset"
+    },
+    {
+      "id": "mike",
+      "name": "Mike Heck",
+      "emoji": "🏈",
+      "color": "#334155",
+      "title": "The Man of Few Words",
+      "summary": "Calm, steady and allergic to drama. You don't say much, but you're always there.",
+      "description": [
+        "Like Mike, you keep it simple. He's the manager at a limestone quarry, and he's later made regional manager.",
+        "You don't make a fuss. Mike is straightforward and unemotional, but he's a devoted, understanding husband and father.",
+        "You've got simple pleasures. Mike loves sports, and his dream is to see the Colts play in the Super Bowl."
+      ],
+      "strengths": [
+        "Steady",
+        "Dependable",
+        "Calm"
+      ],
+      "flaw": "You keep your feelings so quiet that nobody knows what they are.",
+      "signature": "A ballgame on TV, a shrug and a one-word answer.",
+      "clashReason": "they'd answer your big emotional speech with a single word"
+    },
+    {
+      "id": "axl",
+      "name": "Axl Heck",
+      "emoji": "😴",
+      "color": "#ea580c",
+      "title": "The Lazy Big Brother",
+      "summary": "Sarcastic, lazy and somehow popular. You do as little as possible, but you come through when it counts.",
+      "description": [
+        "Like Axl, you're effortlessly popular. He's the eldest Heck kid, and he's a star running back in high school.",
+        "You'd rather not try too hard. Axl is sarcastic and lazy, but he means well when his family or friends need help.",
+        "You figure it out eventually. Axl graduates with a business degree and lands his first real job, selling plumbing fixtures."
+      ],
+      "strengths": [
+        "Confident",
+        "Charming",
+        "Loyal (eventually)"
+      ],
+      "flaw": "You'd rather sleep than do anything you don't have to.",
+      "signature": "An empty fridge, a sarcastic comment and a nap at noon.",
+      "clashReason": "they'd make fun of you, then eat all your food"
+    },
+    {
+      "id": "sue",
+      "name": "Sue Heck",
+      "emoji": "🎉",
+      "color": "#7c3aed",
+      "title": "The Eternal Optimist",
+      "summary": "Sunny, determined and impossible to discourage. You keep trying, no matter how many times it goes wrong.",
+      "description": [
+        "Like Sue, you never give up. She tries out for team after team, and she rarely gets picked.",
+        "You see the bright side. Sue is so upbeat that people tease her for it, and she's often overlooked.",
+        "You keep at it. Sue works at Spudsy's, a baked potato place at the mall, and later studies hospitality management in college."
+      ],
+      "strengths": [
+        "Optimistic",
+        "Determined",
+        "Kind"
+      ],
+      "flaw": "You get so excited that you forget to check whether anyone else is.",
+      "signature": "A homemade banner, a big smile and a sign-up sheet.",
+      "clashReason": "they'd sign you up for something without asking"
+    },
+    {
+      "id": "brick",
+      "name": "Brick Heck",
+      "emoji": "📚",
+      "color": "#15803d",
+      "title": "The Bookworm",
+      "summary": "Brilliant, quirky and in your own little world. You'd rather read than do almost anything else.",
+      "description": [
+        "Like Brick, you love to read. He's bookish and extremely smart, with a near-photographic memory.",
+        "You march to your own beat. Brick whispers words to himself, is fascinated by fonts and finds it hard to make friends.",
+        "You'll make your mark. In the finale's flash-forward, Brick is a successful author of a series of teen books."
+      ],
+      "strengths": [
+        "Brilliant",
+        "Curious",
+        "Original"
+      ],
+      "flaw": "You get so distracted that you forget what you were meant to be doing.",
+      "signature": "A book under your arm, a fact nobody asked for and a quiet whisper.",
+      "clashReason": "they'd correct your facts mid-sentence, then wander off"
+    }
+  ],
+  "questions": [
+    {
+      "text": "A friend invites you to a last-minute party tonight. You...",
+      "options": [
+        {
+          "text": "Say yes before they've finished asking, and start planning your outfit",
+          "points": {
+            "sue": 3
+          }
+        },
+        {
+          "text": "Say you'll go, then fall asleep on the couch",
+          "points": {
+            "frankie": 3
+          }
+        },
+        {
+          "text": "Show up late, and somehow be the most popular person there",
+          "points": {
+            "axl": 3
+          }
+        },
+        {
+          "text": "Ask exactly who'll be there, and whether you have to talk to them",
+          "points": {
+            "brick": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your car starts making a strange noise. You...",
+      "options": [
+        {
+          "text": "Turn the radio up and hope it goes away",
+          "points": {
+            "frankie": 3
+          }
+        },
+        {
+          "text": "Pop the hood and fix it yourself, without saying a word",
+          "points": {
+            "mike": 3
+          }
+        },
+        {
+          "text": "Start looking into it, then get distracted halfway through",
+          "points": {
+            "brick": 3
+          }
+        },
+        {
+          "text": "Rev the engine to see if it gets louder",
+          "points": {
+            "axl": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You have a free Saturday. You...",
+      "options": [
+        {
+          "text": "Watch the game, and don't talk to anyone",
+          "points": {
+            "mike": 3
+          }
+        },
+        {
+          "text": "Sleep until the afternoon, then eat whatever's in the fridge",
+          "points": {
+            "axl": 3
+          }
+        },
+        {
+          "text": "Plan a fun day out and invite everyone, even if most say no",
+          "points": {
+            "sue": 3
+          }
+        },
+        {
+          "text": "Spend the whole day reading in a quiet corner",
+          "points": {
+            "brick": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone forgets your birthday. You...",
+      "options": [
+        {
+          "text": "Throw yourself a party anyway, with a homemade banner",
+          "points": {
+            "sue": 3
+          }
+        },
+        {
+          "text": "Laugh it off, then bring it up at every family dinner for a year",
+          "points": {
+            "frankie": 3
+          }
+        },
+        {
+          "text": "Don't care. Birthdays are overrated",
+          "points": {
+            "mike": 3
+          }
+        },
+        {
+          "text": "Whisper 'happy birthday' to yourself, and carry on",
+          "points": {
+            "brick": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're asked to help organize a work event. You...",
+      "options": [
+        {
+          "text": "Volunteer for everything, with far too much enthusiasm",
+          "points": {
+            "sue": 3
+          }
+        },
+        {
+          "text": "Agree, then pull it together at the last minute with whatever's around",
+          "points": {
+            "frankie": 3
+          }
+        },
+        {
+          "text": "Find a way to get someone else to do it",
+          "points": {
+            "axl": 3
+          }
+        },
+        {
+          "text": "Set up the chairs, quietly and efficiently, then leave",
+          "points": {
+            "mike": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "It's your turn to make dinner. You...",
+      "options": [
+        {
+          "text": "Pick up fast food on the way home. Again",
+          "points": {
+            "frankie": 3
+          }
+        },
+        {
+          "text": "Throw something on the grill. Done",
+          "points": {
+            "mike": 3
+          }
+        },
+        {
+          "text": "Make a big themed dinner that nobody asked for",
+          "points": {
+            "sue": 3
+          }
+        },
+        {
+          "text": "Make the exact same meal you always make, the exact same way",
+          "points": {
+            "brick": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Something you were counting on falls through. You...",
+      "options": [
+        {
+          "text": "Shrug and move on. No point dwelling",
+          "points": {
+            "mike": 3
+          }
+        },
+        {
+          "text": "Stay positive, and try again next time",
+          "points": {
+            "sue": 3
+          }
+        },
+        {
+          "text": "Sulk for a while, then make it someone else's problem",
+          "points": {
+            "axl": 3
+          }
+        },
+        {
+          "text": "Vent to anyone who'll listen, then get on with it",
+          "points": {
+            "frankie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone new at work wants to be friends. You...",
+      "options": [
+        {
+          "text": "Act cool, but let them tag along",
+          "points": {
+            "axl": 3
+          }
+        },
+        {
+          "text": "Be thrilled. You've been waiting for this",
+          "points": {
+            "sue": 3
+          }
+        },
+        {
+          "text": "Tell them an interesting fact, then go back to your book",
+          "points": {
+            "brick": 3
+          }
+        },
+        {
+          "text": "Say yes, then forget their name by Friday",
+          "points": {
+            "frankie": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're raising three very different kids on not much money in a small Indiana town. You...",
+      "options": [
+        {
+          "text": "Get through each day however you can. You do for family",
+          "points": {
+            "frankie": 3
+          }
+        },
+        {
+          "text": "Stay calm, keep it simple and let them figure it out",
+          "points": {
+            "mike": 3
+          }
+        },
+        {
+          "text": "Do as little as possible, and hope they turn out fine",
+          "points": {
+            "axl": 3
+          }
+        },
+        {
+          "text": "Remember everything they've ever said, word for word",
+          "points": {
+            "brick": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You're the middle child, and nobody ever seems to notice you. You...",
+      "options": [
+        {
+          "text": "Try out for everything until somebody does",
+          "points": {
+            "sue": 3
+          }
+        },
+        {
+          "text": "Enjoy it. You can get away with anything",
+          "points": {
+            "axl": 3
+          }
+        },
+        {
+          "text": "Don't mind. You're happy in your own little world",
+          "points": {
+            "brick": 3
+          }
+        },
+        {
+          "text": "Accept it. Being quiet suits you fine",
+          "points": {
+            "mike": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

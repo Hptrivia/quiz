@@ -1,0 +1,430 @@
+{
+  "slug": "mad-men",
+  "show": "Mad Men",
+  "shortName": "Mad Men",
+  "seoTitle": "Mad Men Test: Which Character Are You? (10 Questions)",
+  "metaDescription": "Take the Mad Men test: 10 everyday questions reveal whether you're Don, Peggy, Joan, Roger, Pete or Betty — with your full character breakdown.",
+  "intro": "Are you the mystery, the self-made woman, or the one who runs everything? Answer 10 everyday questions about work, ambition and keeping up appearances, and find out which Mad Men character you are.",
+  "characters": [
+    {
+      "id": "don",
+      "name": "Don Draper",
+      "emoji": "🌄",
+      "color": "#111827",
+      "title": "The Mystery",
+      "summary": "Brilliant, charming and impossible to read. You've got a gift, and a few secrets you'll never share.",
+      "description": [
+        "Like Don, you've got a gift. He's the brilliant creative director at the advertising agency Sterling Cooper, and later a founding partner of his own firm.",
+        "You've got a secret. Don was born Dick Whitman, and he took on the identity of another man, Donald Draper.",
+        "You keep searching. In the finale, Don ends up at a retreat in California, and the show cuts to the famous 1971 \"Hilltop\" Coca-Cola ad."
+      ],
+      "strengths": [
+        "Creative",
+        "Charming",
+        "Persuasive"
+      ],
+      "flaw": "When things get hard, you disappear.",
+      "signature": "A sharp suit, a long silence and an idea that changes everything.",
+      "clashReason": "they'd vanish for days and act like nothing happened"
+    },
+    {
+      "id": "peggy",
+      "name": "Peggy Olson",
+      "emoji": "✍️",
+      "color": "#b45309",
+      "title": "The Self-Made Woman",
+      "summary": "Talented, determined and underestimated. You work harder than anyone, and you prove them all wrong.",
+      "description": [
+        "Like Peggy, you're more talented than people expect. She starts at Sterling Cooper as Don's secretary.",
+        "You work your way up. Peggy becomes a copywriter, and later a chief copywriter.",
+        "You learn from the best. Peggy's creative partnership with Don is one of the most important relationships in her life."
+      ],
+      "strengths": [
+        "Talented",
+        "Determined",
+        "Honest"
+      ],
+      "flaw": "You work so hard that you forget to have a life outside the office.",
+      "signature": "A notepad full of ideas, a late night at the office and a point to prove.",
+      "clashReason": "they'd keep working through every plan you made"
+    },
+    {
+      "id": "joan",
+      "name": "Joan Holloway",
+      "emoji": "💄",
+      "color": "#be123c",
+      "title": "The One Who Runs Everything",
+      "summary": "Poised, sharp and always in control. You know how everything works, and nothing gets past you.",
+      "description": [
+        "Like Joan, you know how everything works. She starts as the office manager at Sterling Cooper.",
+        "You rise to the top. Joan becomes a partner in the firm.",
+        "You make your own way. When the agency is absorbed by McCann Erickson, Joan starts her own company."
+      ],
+      "strengths": [
+        "Poised",
+        "Capable",
+        "Sharp"
+      ],
+      "flaw": "You'd rather handle everything yourself than let anyone see you struggle.",
+      "signature": "A perfect outfit, a sharp eye and a plan for everything.",
+      "clashReason": "they'd fix your mistake before you'd noticed it, and let you know"
+    },
+    {
+      "id": "roger",
+      "name": "Roger Sterling",
+      "emoji": "🎩",
+      "color": "#0369a1",
+      "title": "The Charmer",
+      "summary": "Witty, carefree and born lucky. You make everything look effortless, and you always have a line ready.",
+      "description": [
+        "Like Roger, you were born into it. He's one of the managing partners of Sterling Cooper, the agency his father co-founded.",
+        "You know how to keep people happy. Roger looks after Lucky Strike, one of the agency's most valuable clients.",
+        "You like a little drama. Roger has a long, on-and-off affair with Joan."
+      ],
+      "strengths": [
+        "Witty",
+        "Charming",
+        "Easygoing"
+      ],
+      "flaw": "You've never had to try very hard, and it shows.",
+      "signature": "A silver tongue, a long lunch and a joke for every occasion.",
+      "clashReason": "they'd make a joke when you wanted them to take it seriously"
+    },
+    {
+      "id": "pete",
+      "name": "Pete Campbell",
+      "emoji": "📈",
+      "color": "#15803d",
+      "title": "The Ambitious One",
+      "summary": "Driven, competitive and desperate for respect. You want to get ahead, and you want everyone to know it.",
+      "description": [
+        "Like Pete, you want to get ahead. He's an account executive at Sterling Cooper, and he was born into money.",
+        "You're competitive. Pete grows more and more competitive with Don over the years.",
+        "You get there in the end. Pete becomes a partner at the agency."
+      ],
+      "strengths": [
+        "Ambitious",
+        "Persistent",
+        "Driven"
+      ],
+      "flaw": "You want credit so badly that you complain when you don't get it.",
+      "signature": "A new suit, a big account and a chip on your shoulder.",
+      "clashReason": "they'd sulk for a week because you got the credit"
+    },
+    {
+      "id": "betty",
+      "name": "Betty Draper",
+      "emoji": "💐",
+      "color": "#7c3aed",
+      "title": "The Perfect Housewife",
+      "summary": "Elegant, proud and not as content as you look. You keep up appearances, whatever's going on inside.",
+      "description": [
+        "Like Betty, you look the part. She's a former model who went to Bryn Mawr, and she gives up her career to raise her family.",
+        "You're not as content as you look. Betty is the classic dissatisfied 1960s housewife.",
+        "You start over. Betty divorces Don and marries Henry Francis."
+      ],
+      "strengths": [
+        "Elegant",
+        "Proud",
+        "Strong-willed"
+      ],
+      "flaw": "You'd rather look perfect than admit you're unhappy.",
+      "signature": "Perfect hair, a cool stare and a lot left unsaid.",
+      "clashReason": "they'd give you the silent treatment and look flawless doing it"
+    }
+  ],
+  "questions": [
+    {
+      "text": "You're asked to pitch an idea with no time to prepare. You...",
+      "options": [
+        {
+          "text": "Go quiet, then deliver something brilliant and moving",
+          "points": {
+            "don": 3
+          }
+        },
+        {
+          "text": "Pitch it anyway, and prove you belong in the room",
+          "points": {
+            "peggy": 3
+          }
+        },
+        {
+          "text": "Make a joke, and charm them into giving you more time",
+          "points": {
+            "roger": 3
+          }
+        },
+        {
+          "text": "Wing it, then blame the client if it flops",
+          "points": {
+            "pete": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You've got a free Saturday. You...",
+      "options": [
+        {
+          "text": "Finally get an afternoon to yourself, and curl up with a book",
+          "points": {
+            "betty": 3
+          }
+        },
+        {
+          "text": "Have a very long lunch, full of good stories",
+          "points": {
+            "roger": 3
+          }
+        },
+        {
+          "text": "Work. You've got something to prove",
+          "points": {
+            "peggy": 3
+          }
+        },
+        {
+          "text": "Go for a long drive, alone, with no destination",
+          "points": {
+            "don": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "The office is in chaos. You...",
+      "options": [
+        {
+          "text": "Calmly take control, and have it running by lunch",
+          "points": {
+            "joan": 3
+          }
+        },
+        {
+          "text": "Make a witty remark, and leave someone else to deal with it",
+          "points": {
+            "roger": 3
+          }
+        },
+        {
+          "text": "See it as a chance to make yourself look good",
+          "points": {
+            "pete": 3
+          }
+        },
+        {
+          "text": "Find your work buddy, and get through it together",
+          "points": {
+            "peggy": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your boss praises someone else for your idea. You...",
+      "options": [
+        {
+          "text": "Speak up. You earned it, and you're not staying quiet",
+          "points": {
+            "peggy": 3
+          }
+        },
+        {
+          "text": "Make sure everyone knows how unfair it is",
+          "points": {
+            "pete": 3
+          }
+        },
+        {
+          "text": "Say nothing, and quietly make yourself impossible to ignore",
+          "points": {
+            "joan": 3
+          }
+        },
+        {
+          "text": "Shrug. Ideas are the one thing you'll never run out of",
+          "points": {
+            "don": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're unhappy in your relationship. You...",
+      "options": [
+        {
+          "text": "Act like everything's perfect, and keep it to yourself",
+          "points": {
+            "betty": 3
+          }
+        },
+        {
+          "text": "Disappear for a while, then come back like nothing happened",
+          "points": {
+            "don": 3
+          }
+        },
+        {
+          "text": "Find a new romance. Life's too short",
+          "points": {
+            "roger": 3
+          }
+        },
+        {
+          "text": "Stay practical, and make your own plan",
+          "points": {
+            "joan": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're at a party. You...",
+      "options": [
+        {
+          "text": "Stand in the corner looking mysterious, and let people come to you",
+          "points": {
+            "don": 3
+          }
+        },
+        {
+          "text": "Charm the host, and leave with a new client",
+          "points": {
+            "roger": 3
+          }
+        },
+        {
+          "text": "Find the most important person there, and get in with them",
+          "points": {
+            "pete": 3
+          }
+        },
+        {
+          "text": "Look flawless, and quietly judge everyone",
+          "points": {
+            "betty": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend asks for honest feedback on their work. You...",
+      "options": [
+        {
+          "text": "Tell them the truth, kindly but clearly",
+          "points": {
+            "peggy": 3
+          }
+        },
+        {
+          "text": "Tell them what you really think, and not gently",
+          "points": {
+            "betty": 3
+          }
+        },
+        {
+          "text": "Give them one sentence that changes everything",
+          "points": {
+            "don": 3
+          }
+        },
+        {
+          "text": "Point out exactly what's wrong, and how to fix it",
+          "points": {
+            "joan": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You get a big raise. You...",
+      "options": [
+        {
+          "text": "Buy a bigger house, so everyone can see you've made it",
+          "points": {
+            "pete": 3
+          }
+        },
+        {
+          "text": "Spend it on a beautiful new wardrobe",
+          "points": {
+            "betty": 3
+          }
+        },
+        {
+          "text": "Put it toward being your own boss one day",
+          "points": {
+            "joan": 3
+          }
+        },
+        {
+          "text": "Celebrate in style, and pick up the check",
+          "points": {
+            "roger": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You work at a 1960s ad agency where nobody takes women seriously. You...",
+      "options": [
+        {
+          "text": "Outwork everyone until they have no choice",
+          "points": {
+            "peggy": 3
+          }
+        },
+        {
+          "text": "Run the whole place from behind the scenes",
+          "points": {
+            "joan": 3
+          }
+        },
+        {
+          "text": "Smile, then go home and quietly resent it",
+          "points": {
+            "betty": 3
+          }
+        },
+        {
+          "text": "Don't notice the problem. It's never affected you",
+          "points": {
+            "roger": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You're living under a stolen identity, and nobody knows. You...",
+      "options": [
+        {
+          "text": "Keep the secret forever, and become the best version of the new you",
+          "points": {
+            "don": 3
+          }
+        },
+        {
+          "text": "Tell the one person you trust most",
+          "points": {
+            "peggy": 3
+          }
+        },
+        {
+          "text": "Use it to get ahead, and hope nobody digs",
+          "points": {
+            "pete": 3
+          }
+        },
+        {
+          "text": "Help keep it hidden, and make sure you're owed a favor",
+          "points": {
+            "joan": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}
