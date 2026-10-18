@@ -125,6 +125,12 @@ const APP_ANNOUNCEMENTS = [
     text: "The Godfather, The Fresh Prince of Bel-Air, The Good Place, King of the Hill, Gotham, Veronica Mars, RuPaul's Drag Race, Formula 1, Tennis, MLB, Ghost of Yotei, and more.",
     cta: { label: "See What's New", href: "recent.html" },
   },
+  {
+    icon: "🆕",
+    title: "18 new themes added!",
+    text: "Derry Girls, Good Omens, Battlestar Galactica, Landman, The Good Wife, Vanderpump Rules, The Real Housewives, 90 Day Fiancé, Everybody Hates Chris, Carrie, The Olympics, NHL, Golf, and more.",
+    cta: { label: "See What's New", href: "recent.html" },
+  },
 ];
 
 function _cbAnnouncementHash(str) {
