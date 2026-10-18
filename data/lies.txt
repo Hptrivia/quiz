@@ -1,5 +1,194 @@
 [
   {
+    "id": "lop-top-001",
+    "difficulty": "medium",
+    "question": "What is the lamp P carries, which houses Gemini, called?",
+    "options": ["Frangelico Lamp", "Venigni's Lamp", "Monad's Lamp", "Stargazer's Lamp"],
+    "answer": "Monad's Lamp"
+  },
+  {
+    "id": "lop-top-002",
+    "difficulty": "medium",
+    "question": "Which starting Combat Memory focuses on Dexterity?",
+    "options": ["Path of the Cricket", "Path of the Sweeper", "Path of the Stalker", "Path of the Bastard"],
+    "answer": "Path of the Bastard"
+  },
+  {
+    "id": "lop-top-003",
+    "difficulty": "hard",
+    "question": "Behind which character's portrait in Hotel Krat is the hidden lift down to the Relic of Trismegistus?",
+    "options": ["Geppetto", "Antonia", "Sophia", "Venigni"],
+    "answer": "Antonia"
+  },
+  {
+    "id": "lop-top-004",
+    "difficulty": "hard",
+    "question": "What is the name of the submarine that carries P to the Isle of the Alchemists?",
+    "options": ["Balena", "Squalo", "Pistris", "Murena"],
+    "answer": "Pistris"
+  },
+  {
+    "id": "lop-top-005",
+    "difficulty": "hard",
+    "question": "What is the answer to Arlecchino's riddle on the Malum District phone?",
+    "options": ["Shadow", "Candle", "Egg", "Clock"],
+    "answer": "Candle"
+  },
+  {
+    "id": "lop-top-007",
+    "difficulty": "medium",
+    "question": "How many ringing phones carry Arlecchino's calls in the main game?",
+    "options": ["3", "6", "4", "5"],
+    "answer": "5"
+  },
+  {
+    "id": "lop-top-008",
+    "difficulty": "hard",
+    "question": "Which clothing item does Arlecchino give P when they finally meet face to face?",
+    "options": ["Jester's Tailcoat", "Alchemist's Cape", "King's Cloak", "Harlequin's Mask"],
+    "answer": "Alchemist's Cape"
+  },
+  {
+    "id": "lop-top-009",
+    "difficulty": "hard",
+    "question": "Which key does the Mad Donkey drop when defeated?",
+    "options": ["Alchemist Bridge Key", "Elysion Boulevard Key", "Krat City Hall Key", "Workshop Union Key"],
+    "answer": "Krat City Hall Key"
+  },
+  {
+    "id": "lop-top-010",
+    "difficulty": "hard",
+    "question": "Which boss weapon is exchanged for Broken Hero's Ergo?",
+    "options": ["Noblesse Oblige", "Seven-Coil Spring Sword", "Frozen Feast", "Etiquette"],
+    "answer": "Etiquette"
+  },
+  {
+    "id": "lop-top-011",
+    "difficulty": "medium",
+    "question": "Which amulet is exchanged for Burnt-White King's Ergo?",
+    "options": ["Hunter's Amulet", "Triumvirate Amulet", "Nameless One's Amulet", "Conquering Amulet"],
+    "answer": "Triumvirate Amulet"
+  },
+  {
+    "id": "lop-top-014",
+    "difficulty": "medium",
+    "question": "According to its description, the Aegis Legion Arm is a creation of which organization?",
+    "options": ["Puppet Guild", "League of Puppeteers", "Arm of God", "Workshop Union"],
+    "answer": "Workshop Union"
+  },
+  {
+    "id": "lop-top-017",
+    "difficulty": "hard",
+    "question": "Which wine does the Old Lady at the Window ask P to fetch?",
+    "options": ["Frangelico Rouge", "La Bleiwies", "Vin de Monad", "Rosso di Krat"],
+    "answer": "La Bleiwies"
+  },
+  {
+    "id": "lop-top-018",
+    "difficulty": "hard",
+    "question": "What does the Old Lady at the Window give P for fetching her wine?",
+    "options": ["Charity House Medal", "Gold Coin Fruit", "Krat Festival Token", "Venigni Commemorative Coin"],
+    "answer": "Venigni Commemorative Coin"
+  },
+  {
+    "id": "lop-top-019",
+    "difficulty": "hard",
+    "question": "Which record does the Weeping Woman give P for returning her lost baby?",
+    "options": ["Feel", "Farewell", "Rainfall", "Little Prince"],
+    "answer": "Feel"
+  },
+  {
+    "id": "lop-top-021",
+    "difficulty": "hard",
+    "question": "How is Black Cat supposedly related to Red Fox?",
+    "options": ["Older sister", "Older brother", "Younger sister", "Younger brother"],
+    "answer": "Younger brother"
+  },
+  {
+    "id": "lop-top-022",
+    "difficulty": "medium",
+    "question": "Which Stalker codename did the impostor Alidoro use before taking that name?",
+    "options": ["Magpie", "Parrot", "Crow", "Raven"],
+    "answer": "Parrot"
+  },
+  {
+    "id": "lop-top-023",
+    "difficulty": "hard",
+    "question": "Which gesture does P earn by defeating the Survivor?",
+    "options": ["Stalker's Creed", "Stalker's Oath", "Hunter's Vow", "Stalker's Promise"],
+    "answer": "Stalker's Promise"
+  },
+  {
+    "id": "lop-top-024",
+    "difficulty": "hard",
+    "question": "In which chapter is Champion Victor fought?",
+    "options": ["Chapter 8", "Chapter 6", "Chapter 9", "Chapter 7"],
+    "answer": "Chapter 7"
+  },
+  {
+    "id": "lop-top-025",
+    "difficulty": "hard",
+    "question": "Which optional boss waits in a shack in the Barren Swamp?",
+    "options": ["Owl Doctor", "Crow Physician", "Raven Surgeon", "Heron Apothecary"],
+    "answer": "Owl Doctor"
+  },
+  {
+    "id": "lop-top-026",
+    "difficulty": "hard",
+    "question": "Which gesture does Test Subject 826 give P?",
+    "options": ["Taunt", "Bow", "Happy", "Salute"],
+    "answer": "Happy"
+  },
+  {
+    "id": "lop-top-027",
+    "difficulty": "hard",
+    "question": "Reading which note on Elysion Boulevard earns P the Remembrance gesture?",
+    "options": ["Passenger's Note", "Bloody Letter", "Frozen Man's Letter", "Miracle Cure"],
+    "answer": "Frozen Man's Letter"
+  },
+  {
+    "id": "lop-top-028",
+    "difficulty": "hard",
+    "question": "What does the Door Guardian drop when defeated?",
+    "options": ["Arche Abbey Gate Key", "Abbey Crest", "High-level Alchemist Badge", "Alchemist's Seal"],
+    "answer": "High-level Alchemist Badge"
+  },
+  {
+    "id": "lop-top-029",
+    "difficulty": "hard",
+    "question": "Which ending requires refusing Geppetto after giving Sophia peace and earning high humanity?",
+    "options": ["Free from the Puppet String", "Real Boy", "Puppet's Lament", "Rise of P"],
+    "answer": "Rise of P"
+  },
+  {
+    "id": "lop-top-030",
+    "difficulty": "hard",
+    "question": "What is Giangio's true name, revealed in the post-credits scene?",
+    "options": ["Philippus Paracelsus", "Hermes Trismegistus", "Nicolas Flamel", "Albertus Magnus"],
+    "answer": "Philippus Paracelsus"
+  },
+  {
+    "id": "lop-top-031",
+    "difficulty": "hard",
+    "question": "Which key item lets P begin the Overture expansion?",
+    "options": ["Star's Chrysalis", "Blue Butterfly Cocoon", "Star's Cradle", "Moon's Chrysalis"],
+    "answer": "Star's Chrysalis"
+  },
+  {
+    "id": "lop-top-032",
+    "difficulty": "hard",
+    "question": "In Overture, what animal is the Tyrannical Predator?",
+    "options": ["Crocodile", "Gorilla", "Lion", "Tiger"],
+    "answer": "Crocodile"
+  },
+  {
+    "id": "lop-top-034",
+    "difficulty": "hard",
+    "question": "Who directed Lies of P?",
+    "options": ["Choi Ji-won", "Park Kwang-suk", "Kim Hyung-tae", "Lee Dong-hoon"],
+    "answer": "Choi Ji-won"
+  },
+  {
     "id": "lop-001",
     "difficulty": "easy",
     "question": "What is the name of the city where Lies of P takes place?",
