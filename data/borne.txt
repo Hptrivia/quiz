@@ -820,5 +820,201 @@
     "question": "Which boss is the final boss of The Old Hunters DLC?",
     "options": ["Orphan of Kos", "Lady Maria", "Laurence", "Gehrman"],
     "answer": "Orphan of Kos"
+  },
+  {
+    "id": "bb-x001",
+    "difficulty": "hard",
+    "question": "Which group of workshop heretics did the retired hunter Djura belong to?",
+    "options": ["Powder Kegs", "Iron Bellows", "Ember Guild", "Grave Wardens"],
+    "answer": "Powder Kegs"
+  },
+  {
+    "id": "bb-x002",
+    "difficulty": "hard",
+    "question": "Which item can the hunter give to the Doll in the Hunter's Dream?",
+    "options": ["Tarnished Locket", "Small Hair Ornament", "Faded Ribbon", "Silver Brooch"],
+    "answer": "Small Hair Ornament"
+  },
+  {
+    "id": "bb-x003",
+    "difficulty": "hard",
+    "question": "Which item does the Maneater Boar in the Central Yharnam sewers drop once Gascoigne's young daughter has left home?",
+    "options": ["White Messenger Ribbon", "Tiny Music Box", "Red Messenger Ribbon", "Red Jeweled Brooch"],
+    "answer": "Red Messenger Ribbon"
+  },
+  {
+    "id": "bb-x004",
+    "difficulty": "hard",
+    "question": "Which badge does Darkbeast Paarl drop?",
+    "options": ["Sword Hunter Badge", "Saw Hunter Badge", "Wheel Hunter Badge", "Spark Hunter Badge"],
+    "answer": "Spark Hunter Badge"
+  },
+  {
+    "id": "bb-x005",
+    "difficulty": "hard",
+    "question": "Which badge unlocks Ludwig's Holy Blade in the Messenger shop?",
+    "options": ["Powder Keg Hunter Badge", "Radiant Sword Hunter Badge", "Crow Hunter Badge", "Cosmic Eye Watcher Badge"],
+    "answer": "Radiant Sword Hunter Badge"
+  },
+  {
+    "id": "bb-x006",
+    "difficulty": "hard",
+    "question": "Which key does Father Gascoigne drop?",
+    "options": ["Oedon Chapel Key", "Ossuary Gate Key", "Oedon Tomb Key", "Ward Gate Key"],
+    "answer": "Oedon Tomb Key"
+  },
+  {
+    "id": "bb-x007",
+    "difficulty": "hard",
+    "question": "Which password opens the gate leading to the Forbidden Woods?",
+    "options": ["Seek the Old Blood", "Grant Us Eyes", "Praise the Good Blood", "Fear the Old Blood"],
+    "answer": "Fear the Old Blood"
+  },
+  {
+    "id": "bb-x008",
+    "difficulty": "hard",
+    "question": "Which item, handed out by messengers in the Hunter's Dream, grants access to the Hunter's Nightmare?",
+    "options": ["Eye of a Blood-drunk Hunter", "Tonsil Stone", "Old Hunter Bone", "Bloodshot Eyeball"],
+    "answer": "Eye of a Blood-drunk Hunter"
+  },
+  {
+    "id": "bb-x009",
+    "difficulty": "medium",
+    "question": "Where does the hunter wake up after being killed by a Snatcher?",
+    "options": ["Lower Gaol of Mensis", "Hypogean Gaol", "Hemwick Undercroft", "Old Yharnam Stockade"],
+    "answer": "Hypogean Gaol"
+  },
+  {
+    "id": "bb-x010",
+    "difficulty": "hard",
+    "question": "Where is Ebrietas, Daughter of the Cosmos fought?",
+    "options": ["Altar of Lament", "Chapel of Sorrow", "Altar of Despair", "Shrine of Mourning"],
+    "answer": "Altar of Despair"
+  },
+  {
+    "id": "bb-x011",
+    "difficulty": "hard",
+    "question": "Where is the Celestial Emissary fought?",
+    "options": ["Moonbloom Terrace", "Starlit Gardens", "Orphanage Courtyard", "Lumenflower Gardens"],
+    "answer": "Lumenflower Gardens"
+  },
+  {
+    "id": "bb-x012",
+    "difficulty": "hard",
+    "question": "In which church is the Blood-starved Beast fought?",
+    "options": ["Church of the Holy Vial", "Church of the Good Chalice", "Chapel of the Old Blood", "Church of Pale Ash"],
+    "answer": "Church of the Good Chalice"
+  },
+  {
+    "id": "bb-x013",
+    "difficulty": "hard",
+    "question": "In which area is the Upper Cathedral Key found?",
+    "options": ["Yahar'gul Unseen Village", "Hemwick Charnel Lane", "Old Yharnam", "Forbidden Woods"],
+    "answer": "Yahar'gul Unseen Village"
+  },
+  {
+    "id": "bb-x014",
+    "difficulty": "hard",
+    "question": "In which area is the Orphan of Kos fought?",
+    "options": ["Drowned Village", "Tidewater Hamlet", "Saltmarsh Wharf", "Fishing Hamlet"],
+    "answer": "Fishing Hamlet"
+  },
+  {
+    "id": "bb-x015",
+    "difficulty": "hard",
+    "question": "Which item does Lady Maria leave behind when defeated?",
+    "options": ["Celestial Dial", "Astral Gear", "Clockwork Moon", "Tower Pendulum"],
+    "answer": "Celestial Dial"
+  },
+  {
+    "id": "bb-x016",
+    "difficulty": "hard",
+    "question": "Which weapon does Brador, Church Assassin wield?",
+    "options": ["Beast Cutter", "Whirligig Saw", "Bloodletter", "Kirkhammer"],
+    "answer": "Bloodletter"
+  },
+  {
+    "id": "bb-x017",
+    "difficulty": "hard",
+    "question": "Which weapon does Gilbert give the hunter?",
+    "options": ["Hunter's Torch", "Cannon", "Flamesprayer", "Repeating Pistol"],
+    "answer": "Flamesprayer"
+  },
+  {
+    "id": "bb-x018",
+    "difficulty": "hard",
+    "question": "What does Saint Adeline ask the hunter to bring her?",
+    "options": ["Brain Fluid", "Blood Dregs", "Clear Deep Sea", "Sage's Wrist"],
+    "answer": "Brain Fluid"
+  },
+  {
+    "id": "bb-x019",
+    "difficulty": "hard",
+    "question": "Which title does Laurence carry as an Old Hunters boss?",
+    "options": ["The First Vicar", "The Blood Saint", "The Beast Cleric", "The Last Provost"],
+    "answer": "The First Vicar"
+  },
+  {
+    "id": "bb-x020",
+    "difficulty": "hard",
+    "question": "What is the ending called when the hunter accepts Gehrman's offer?",
+    "options": ["Honoring Wishes", "Childhood's Beginning", "Hunter's Dawn", "Yharnam Sunrise"],
+    "answer": "Yharnam Sunrise"
+  },
+  {
+    "id": "bb-x021",
+    "difficulty": "hard",
+    "question": "Which message appears on screen after defeating Father Gascoigne?",
+    "options": ["Beast Vanquished", "Prey Slaughtered", "Hunt Concluded", "Blood Spilled"],
+    "answer": "Prey Slaughtered"
+  },
+  {
+    "id": "bb-x022",
+    "difficulty": "medium",
+    "question": "Which blood does the note in the opening clinic tell the hunter to seek?",
+    "options": ["Paleblood", "Moonblood", "Sacred Blood", "Ashen Blood"],
+    "answer": "Paleblood"
+  },
+  {
+    "id": "bb-x023",
+    "difficulty": "hard",
+    "question": "Which Caryll Rune raises the maximum number of Quicksilver Bullets the hunter can hold?",
+    "options": ["Clockwise Metamorphosis", "Blood Rapture", "Lake", "Formless Oedon"],
+    "answer": "Formless Oedon"
+  },
+  {
+    "id": "bb-x024",
+    "difficulty": "hard",
+    "question": "Which consumable cures Frenzy build-up?",
+    "options": ["Sedative", "Antidote", "Blue Elixir", "Pungent Blood Cocktail"],
+    "answer": "Sedative"
+  },
+  {
+    "id": "bb-x025",
+    "difficulty": "hard",
+    "question": "Which hunter does Eileen the Crow fight at the Tomb of Oedon?",
+    "options": ["Valtr", "Henryk", "Djura", "Alfred"],
+    "answer": "Henryk"
+  },
+  {
+    "id": "bb-x026",
+    "difficulty": "hard",
+    "question": "Which Old Hunters boss is fought at the Nightmare Church?",
+    "options": ["Ludwig", "Laurence", "Living Failures", "Lady Maria"],
+    "answer": "Ludwig"
+  },
+  {
+    "id": "bb-x027",
+    "difficulty": "hard",
+    "question": "Who directed Bloodborne?",
+    "options": ["Masaaki Yamagiwa", "Yui Tanimura", "Hidetaka Miyazaki", "Naotoshi Zin"],
+    "answer": "Hidetaka Miyazaki"
+  },
+  {
+    "id": "bb-x028",
+    "difficulty": "hard",
+    "question": "How many One Third of Umbilical Cord items can be obtained in the base game?",
+    "options": ["3", "5", "6", "4"],
+    "answer": "4"
   }
 ]
