@@ -1,0 +1,530 @@
+{
+  "slug": "rick-and-morty",
+  "show": "Rick and Morty",
+  "shortName": "Rick and Morty",
+  "seoTitle": "Rick and Morty Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the Rick and Morty test: 12 everyday questions reveal whether you're Rick, Morty, Summer, Beth, Jerry, Birdperson, Mr. Poopybutthole or Mr. Meeseeks — with your full character breakdown.",
+  "intro": "Are you the cynical genius, the nervous sidekick or the eager helper who just wants to get it done? Answer 12 everyday questions about family, friends and big risks, and find out which Rick and Morty character you are.",
+  "characters": [
+    {
+      "id": "rick",
+      "name": "Rick",
+      "emoji": "🧪",
+      "color": "#0d9488",
+      "title": "The Genius",
+      "summary": "Brilliant, cynical and allergic to rules. You do things your way, and you're usually right, annoyingly.",
+      "description": [
+        "Like Rick, you trust your own brain over anyone else's. He calls himself the Smartest Man in the Universe.",
+        "You'd rather be out doing something wild than sitting still. Rick drags his grandson Morty along on adventures across the universe.",
+        "You care more than you let on. For all his cynicism, Rick shows real affection for his daughter and grandkids."
+      ],
+      "strengths": [
+        "Brilliant",
+        "Fearless",
+        "Resourceful"
+      ],
+      "flaw": "You push people away before they can get close enough to matter.",
+      "signature": "A shortcut nobody else would think of, and zero interest in the rules.",
+      "clashReason": "they'd make you feel slow, then ignore you when you're right"
+    },
+    {
+      "id": "morty",
+      "name": "Morty",
+      "emoji": "😰",
+      "color": "#eab308",
+      "title": "The Reluctant Hero",
+      "summary": "Anxious, kind and braver than you think. You worry about everything, then do the right thing anyway.",
+      "description": [
+        "Like Morty, you get rattled easily. He's a nervous, easily stressed 14-year-old.",
+        "You're more capable than people expect. Morty is resourceful, and brave when it really counts.",
+        "Life keeps throwing surprises at you. Morty even has a half-alien son, Morty Jr."
+      ],
+      "strengths": [
+        "Kind",
+        "Big-hearted",
+        "Brave when it counts"
+      ],
+      "flaw": "You doubt yourself so much that you stop yourself before you start.",
+      "signature": "A nervous laugh, a bad feeling and the right call in the end.",
+      "clashReason": "they'd worry out loud about every single plan you make"
+    },
+    {
+      "id": "summer",
+      "name": "Summer",
+      "emoji": "🌟",
+      "color": "#ec4899",
+      "title": "The Cool One",
+      "summary": "Smart, funny and up for anything. You care how things look, but you're never boring.",
+      "description": [
+        "Like Summer, you know how to fit in. She's status-conscious, but sharper and funnier than she gets credit for.",
+        "You're up for adventure. Summer looks up to her grandpa Rick and loves joining in.",
+        "You're more than a typical teenager. At 17, Summer has survived plenty of out-of-this-world chaos."
+      ],
+      "strengths": [
+        "Quick-witted",
+        "Adventurous",
+        "Socially savvy"
+      ],
+      "flaw": "You care a little too much about what everyone else thinks.",
+      "signature": "An eye-roll, a perfect comeback and a yes to anything exciting.",
+      "clashReason": "they'd act like your plans are way too uncool"
+    },
+    {
+      "id": "beth",
+      "name": "Beth",
+      "emoji": "🐴",
+      "color": "#dc2626",
+      "title": "The High Achiever",
+      "summary": "Confident, capable and quietly restless. You're great at what you do, and you know it.",
+      "description": [
+        "Like Beth, you're highly skilled. She works as a veterinarian specialising in horse surgery.",
+        "You've handled a lot from a young age. Beth had Summer when she was just 17.",
+        "You're assertive and funny, but not always satisfied. Beth is often unhappy with where her life has ended up."
+      ],
+      "strengths": [
+        "Confident",
+        "Skilled",
+        "Assertive"
+      ],
+      "flaw": "You need to win, even when there's nothing to win.",
+      "signature": "A steady hand, a sharp remark and something to prove.",
+      "clashReason": "they'd turn a friendly game into a competition they have to win"
+    },
+    {
+      "id": "jerry",
+      "name": "Jerry",
+      "emoji": "🏌️",
+      "color": "#16a34a",
+      "title": "The Trier",
+      "summary": "Well-meaning, insecure and always trying a little too hard. You don't give up, even when maybe you should.",
+      "description": [
+        "Like Jerry, you mean well, even when you're out of your depth. He's insecure, but he never stops trying.",
+        "Work doesn't always go your way. Jerry was fired from his advertising job.",
+        "You keep at it. Jerry's golf game was so bad that a whole crowd of Meeseeks couldn't fix it, but he finally made one good swing."
+      ],
+      "strengths": [
+        "Persistent",
+        "Loyal to his family",
+        "Well-meaning"
+      ],
+      "flaw": "You try so hard to look impressive that you forget to just be yourself.",
+      "signature": "A big idea, a nervous smile and a plan that almost works.",
+      "clashReason": "they'd keep trying to impress you, and it would get awkward"
+    },
+    {
+      "id": "birdperson",
+      "name": "Birdperson",
+      "emoji": "🦅",
+      "color": "#92400e",
+      "title": "The Loyal Warrior",
+      "summary": "Calm, serious and deeply loyal. You don't say much, but every word counts.",
+      "description": [
+        "Like Birdperson, you're the friend people can rely on. He's Rick's best friend.",
+        "You stand up for what's right. Birdperson fought as a freedom fighter against the Galactic Federation.",
+        "You don't stay down. Birdperson was rebuilt as the cyborg Phoenixperson."
+      ],
+      "strengths": [
+        "Loyal",
+        "Wise",
+        "Calm"
+      ],
+      "flaw": "You keep your feelings so private that people can't tell what you're thinking.",
+      "signature": "A few well-chosen words and a friend you'd never abandon.",
+      "clashReason": "they'd take your jokes far too seriously"
+    },
+    {
+      "id": "poopybutthole",
+      "name": "Mr. Poopybutthole",
+      "emoji": "🎉",
+      "color": "#a855f7",
+      "title": "The Sunshine Friend",
+      "summary": "Cheerful, quirky and always happy to see people. You bring good vibes everywhere you go.",
+      "description": [
+        "Like Mr. Poopybutthole, you're everyone's upbeat friend. His catchphrase is a delighted 'Oo-wee!'",
+        "You stay cheerful through a lot. Beth badly injured him after mistaking him for an alien parasite.",
+        "You've built a happy life of your own. Mr. Poopybutthole has a wife, Amy, and a son."
+      ],
+      "strengths": [
+        "Cheerful",
+        "Friendly",
+        "Forgiving"
+      ],
+      "flaw": "You're so upbeat that people don't notice when you're actually struggling.",
+      "signature": "A big wave, a happy 'Oo-wee!' and snacks for everyone.",
+      "clashReason": "they'd stay relentlessly cheerful on your worst day"
+    },
+    {
+      "id": "meeseeks",
+      "name": "Mr. Meeseeks",
+      "emoji": "🙋",
+      "color": "#3b82f6",
+      "title": "The Eager Helper",
+      "summary": "Helpful, energetic and laser-focused on the task. You love being useful, but you hate when things drag on.",
+      "description": [
+        "Like Mr. Meeseeks, you're ready to help the moment someone asks. He greets everyone with 'I'm Mr. Meeseeks, look at me!'",
+        "You live for getting things done. Each Meeseeks is created to complete one task, then vanish.",
+        "Your patience runs out fast. The longer a task takes, the more unhinged a Meeseeks gets."
+      ],
+      "strengths": [
+        "Helpful",
+        "Energetic",
+        "Focused"
+      ],
+      "flaw": "When something drags on, your patience snaps.",
+      "signature": "A big cheerful hello, and a task you won't drop until it's done.",
+      "clashReason": "they'd rush you to finish everything right now"
+    }
+  ],
+  "questions": [
+    {
+      "text": "A friend asks you to help with a simple task. You...",
+      "options": [
+        {
+          "text": "Jump straight in. Let's get it done right now",
+          "points": {
+            "meeseeks": 3
+          }
+        },
+        {
+          "text": "Do it in five minutes, and make them feel slow",
+          "points": {
+            "rick": 3
+          }
+        },
+        {
+          "text": "Help, but worry the whole time you're doing it wrong",
+          "points": {
+            "morty": 3
+          }
+        },
+        {
+          "text": "Say you're busy, even though you really aren't",
+          "points": {
+            "summer": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A coworker takes credit for your idea. You...",
+      "options": [
+        {
+          "text": "Say nothing, then rehearse what you should have said all week",
+          "points": {
+            "jerry": 3
+          }
+        },
+        {
+          "text": "Make sure the boss knows exactly whose idea it was",
+          "points": {
+            "beth": 3
+          }
+        },
+        {
+          "text": "Calmly talk to them in private",
+          "points": {
+            "birdperson": 3
+          }
+        },
+        {
+          "text": "Come up with a better idea by lunch, just to prove a point",
+          "points": {
+            "rick": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your Saturday night plans fall through. You...",
+      "options": [
+        {
+          "text": "Find a party anyway, through a friend of a friend",
+          "points": {
+            "summer": 3
+          }
+        },
+        {
+          "text": "Stay home, and feel weirdly relieved",
+          "points": {
+            "morty": 3
+          }
+        },
+        {
+          "text": "Throw a last-minute get-together for everyone you know",
+          "points": {
+            "poopybutthole": 3
+          }
+        },
+        {
+          "text": "Find a job to do around the house. You can't sit still",
+          "points": {
+            "meeseeks": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A close friend admits they're really struggling. You...",
+      "options": [
+        {
+          "text": "Sit with them quietly, and listen",
+          "points": {
+            "birdperson": 3
+          }
+        },
+        {
+          "text": "Cheer them up with your silliest story",
+          "points": {
+            "poopybutthole": 3
+          }
+        },
+        {
+          "text": "Change the subject. Feelings aren't really your thing",
+          "points": {
+            "rick": 3
+          }
+        },
+        {
+          "text": "Give them advice from a self-help book you half read",
+          "points": {
+            "jerry": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're stuck in a really long queue. You...",
+      "options": [
+        {
+          "text": "Get more frustrated with every passing minute",
+          "points": {
+            "meeseeks": 3
+          }
+        },
+        {
+          "text": "Ask to speak to the manager",
+          "points": {
+            "beth": 3
+          }
+        },
+        {
+          "text": "Start chatting with the people around you",
+          "points": {
+            "poopybutthole": 3
+          }
+        },
+        {
+          "text": "Put your headphones in, completely unbothered",
+          "points": {
+            "summer": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your boss praises something you made in front of everyone. You...",
+      "options": [
+        {
+          "text": "Say 'I know', and move on",
+          "points": {
+            "beth": 3
+          }
+        },
+        {
+          "text": "Bring it up at dinner for a week",
+          "points": {
+            "jerry": 3
+          }
+        },
+        {
+          "text": "Go red, and say it was nothing",
+          "points": {
+            "morty": 3
+          }
+        },
+        {
+          "text": "Thank them sincerely, and mean it",
+          "points": {
+            "birdperson": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your family starts arguing at dinner. You...",
+      "options": [
+        {
+          "text": "Roll your eyes, and text a friend under the table",
+          "points": {
+            "summer": 3
+          }
+        },
+        {
+          "text": "Try to calm everyone down, and make it worse",
+          "points": {
+            "jerry": 3
+          }
+        },
+        {
+          "text": "Take a side, and win the argument",
+          "points": {
+            "beth": 3
+          }
+        },
+        {
+          "text": "Get dragged into it, and somehow end up the one in trouble",
+          "points": {
+            "morty": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You need to learn a new skill fast. You...",
+      "options": [
+        {
+          "text": "Teach yourself overnight, and act like it was nothing",
+          "points": {
+            "rick": 3
+          }
+        },
+        {
+          "text": "Practise nonstop. You can't relax until you've got it",
+          "points": {
+            "meeseeks": 3
+          }
+        },
+        {
+          "text": "Watch a few videos, then wing it with confidence",
+          "points": {
+            "summer": 3
+          }
+        },
+        {
+          "text": "Buy all the gear, then give up after the first lesson",
+          "points": {
+            "jerry": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're offered an exciting but risky opportunity. You...",
+      "options": [
+        {
+          "text": "Say yes before they've finished asking",
+          "points": {
+            "summer": 3
+          }
+        },
+        {
+          "text": "Take it. You know you're the best person for it",
+          "points": {
+            "beth": 3
+          }
+        },
+        {
+          "text": "Ask a hundred questions, then nervously say yes",
+          "points": {
+            "morty": 3
+          }
+        },
+        {
+          "text": "Politely turn it down. You've seen how these things end",
+          "points": {
+            "birdperson": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A neighbour asks you for a favour. You...",
+      "options": [
+        {
+          "text": "Say 'Absolutely!', and turn up with snacks",
+          "points": {
+            "poopybutthole": 3
+          }
+        },
+        {
+          "text": "Do it immediately, so it's off your list",
+          "points": {
+            "meeseeks": 3
+          }
+        },
+        {
+          "text": "Agree to everything, and promise way more than you can deliver",
+          "points": {
+            "jerry": 3
+          }
+        },
+        {
+          "text": "Pretend you didn't hear them",
+          "points": {
+            "rick": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You can travel to any world you like, but your family wants you home for dinner. You...",
+      "options": [
+        {
+          "text": "Go anyway. You'll be back, probably",
+          "points": {
+            "rick": 3
+          }
+        },
+        {
+          "text": "Head off, but keep checking you're not missing anything at home",
+          "points": {
+            "summer": 3
+          }
+        },
+        {
+          "text": "Promise to be back on time, and actually make it",
+          "points": {
+            "beth": 3
+          }
+        },
+        {
+          "text": "Say no. Other worlds sound terrifying",
+          "points": {
+            "morty": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You're part of a rebellion against an evil galactic government, and you're losing. You...",
+      "options": [
+        {
+          "text": "Stand beside your friends until the very end",
+          "points": {
+            "birdperson": 3
+          }
+        },
+        {
+          "text": "Come up with a wild plan nobody else understands",
+          "points": {
+            "rick": 3
+          }
+        },
+        {
+          "text": "Look for a way out, and feel terrible about it",
+          "points": {
+            "morty": 3
+          }
+        },
+        {
+          "text": "Keep everyone's spirits up, no matter what",
+          "points": {
+            "poopybutthole": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

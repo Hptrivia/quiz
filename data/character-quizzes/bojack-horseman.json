@@ -1,0 +1,509 @@
+{
+  "slug": "bojack-horseman",
+  "show": "BoJack Horseman",
+  "shortName": "BoJack Horseman",
+  "seoTitle": "BoJack Horseman Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the BoJack Horseman test: 12 everyday questions reveal whether you're BoJack, Princess Carolyn, Diane, Todd, Mr. Peanutbutter, Hollyhock or Judah — with your full character breakdown.",
+  "intro": "Are you the charming mess, the unstoppable fixer or the overthinker? Answer 12 everyday questions about work, friends and big decisions, and find out which BoJack Horseman character you are.",
+  "characters": [
+    {
+      "id": "bojack",
+      "name": "BoJack",
+      "emoji": "🐴",
+      "color": "#8b5a2b",
+      "title": "The Charming Mess",
+      "summary": "Funny, sharp and secretly desperate to be liked. You want to be better, you just keep getting in your own way.",
+      "description": [
+        "Like BoJack, you've got real charm. He was the star of the 1990s family sitcom Horsin' Around.",
+        "You chase the big win, hoping it'll finally fix how you feel. BoJack pinned his comeback on starring in the Secretariat movie.",
+        "You do try to change. BoJack went to rehab and later took a teaching job at Wesleyan."
+      ],
+      "strengths": [
+        "Quick-witted",
+        "Charismatic",
+        "Ambitious"
+      ],
+      "flaw": "You put off the hard stuff, then wonder why it got harder.",
+      "signature": "A sad, funny one-liner and a phone call you keep putting off.",
+      "clashReason": "they'd cancel on you last minute, then make it about their own bad day"
+    },
+    {
+      "id": "princesscarolyn",
+      "name": "Princess Carolyn",
+      "emoji": "🐱",
+      "color": "#db2777",
+      "title": "The Fixer",
+      "summary": "Driven, capable and always three moves ahead. You can handle anything, except slowing down.",
+      "description": [
+        "Like Princess Carolyn, you get things done. She worked as a talent agent before starting her own agency, VIM.",
+        "You don't quit when things fall apart. When VIM closed, she reopened it as a management company.",
+        "You want it all, and you'll fight for it. She adopted a baby porcupine, Ruthie, while still running her business."
+      ],
+      "strengths": [
+        "Determined",
+        "Resourceful",
+        "Loyal to her people"
+      ],
+      "flaw": "You take on everyone's problems and forget to look after yourself.",
+      "signature": "A packed calendar and a backup plan for your backup plan.",
+      "clashReason": "they'd turn your relaxing day off into a to-do list"
+    },
+    {
+      "id": "diane",
+      "name": "Diane",
+      "emoji": "📝",
+      "color": "#0f766e",
+      "title": "The Overthinker",
+      "summary": "Thoughtful, principled and always asking what it all means. You'd rather be right than comfortable.",
+      "description": [
+        "Like Diane, you think deeply about everything. She ghostwrote BoJack's memoir, One Trick Pony.",
+        "You want your work to matter. Diane wrote for the feminist blog Girl Croosh, and travelled to war-torn Cordovia hoping to help.",
+        "You find your own way in the end. After struggling with her memoir, she started a teen detective series, Ivy Tran: Food Court Detective."
+      ],
+      "strengths": [
+        "Principled",
+        "Insightful",
+        "Honest"
+      ],
+      "flaw": "You can overthink a good thing until it stops feeling good.",
+      "signature": "A notebook full of half-finished essays and strong opinions.",
+      "clashReason": "they'd question every choice you make, out loud"
+    },
+    {
+      "id": "todd",
+      "name": "Todd",
+      "emoji": "🎸",
+      "color": "#0ea5e9",
+      "title": "The Free Spirit",
+      "summary": "Cheerful, kind and full of wonderfully strange ideas. Life happens to you, and you're mostly fine with it.",
+      "description": [
+        "Like Todd, you go with the flow. He turned up at BoJack's house for a party and simply never left.",
+        "Your ideas are big and a little bit odd. Todd wrote a rock opera, and co-ran a Halloween store that was only open in January.",
+        "You're kinder than people expect. Todd ended up running a daycare in the VIM building."
+      ],
+      "strengths": [
+        "Easygoing",
+        "Creative",
+        "Kind"
+      ],
+      "flaw": "You start ten things and finish maybe one.",
+      "signature": "A wildly ambitious idea and absolutely no plan.",
+      "clashReason": "they'd drag you into a strange scheme and leave you to finish it"
+    },
+    {
+      "id": "mrpeanutbutter",
+      "name": "Mr. Peanutbutter",
+      "emoji": "🐶",
+      "color": "#f59e0b",
+      "title": "The Ray of Sunshine",
+      "summary": "Upbeat, friendly and up for anything. You say yes first and think about it later.",
+      "description": [
+        "Like Mr. Peanutbutter, everyone seems to like you. He starred in his own sitcom, Mr. Peanutbutter's House.",
+        "You throw yourself into new things. He hosted a game show and even ran for Governor of California.",
+        "You stay positive, sometimes too positive. His cheerful, people-pleasing nature can make him miss what others are really feeling."
+      ],
+      "strengths": [
+        "Enthusiastic",
+        "Generous",
+        "Friendly"
+      ],
+      "flaw": "You're so busy keeping things fun that you skip the hard conversations.",
+      "signature": "A huge grin and a yes before anyone's finished asking.",
+      "clashReason": "they'd stay cheerful even when you really need them to be serious"
+    },
+    {
+      "id": "hollyhock",
+      "name": "Hollyhock",
+      "emoji": "🌻",
+      "color": "#16a34a",
+      "title": "The Open Heart",
+      "summary": "Warm, curious and honest about how you feel. You give people a chance, but you know when to step back.",
+      "description": [
+        "Like Hollyhock, you grew up with plenty of love. She was raised by eight dads.",
+        "You're curious about the world and the people in it. She went off to Wesleyan University as a freshman.",
+        "You know where your limits are. When BoJack pushed too hard, Hollyhock told him to give her space."
+      ],
+      "strengths": [
+        "Warm",
+        "Curious",
+        "Self-aware"
+      ],
+      "flaw": "You trust people quickly, and it hurts when they let you down.",
+      "signature": "A long list of questions and your heart on your sleeve.",
+      "clashReason": "they'd want to talk about how everyone's feeling, right now"
+    },
+    {
+      "id": "judah",
+      "name": "Judah",
+      "emoji": "📋",
+      "color": "#4f46e5",
+      "title": "The Straight Face",
+      "summary": "Calm, efficient and completely literal. You don't do drama. You do the job.",
+      "description": [
+        "Like Judah, you're quietly reliable. He became a part-owner of VIM, and was later brought back to run it.",
+        "You say exactly what you mean. Judah is famously deadpan and struggles with jokes and sarcasm.",
+        "Your loyalty runs deeper than it looks. Judah eventually married Princess Carolyn."
+      ],
+      "strengths": [
+        "Dependable",
+        "Organised",
+        "Direct"
+      ],
+      "flaw": "You can come across as cold when you're just being clear.",
+      "signature": "A spreadsheet, a straight face and zero small talk.",
+      "clashReason": "they'd take your jokes literally and answer them seriously"
+    }
+  ],
+  "questions": [
+    {
+      "text": "A friend invites you to a party where you won't know anyone. You...",
+      "options": [
+        {
+          "text": "Say yes, then cancel an hour before because you're not feeling it",
+          "points": {
+            "bojack": 3
+          }
+        },
+        {
+          "text": "Go, and chat with literally everyone there",
+          "points": {
+            "mrpeanutbutter": 3
+          }
+        },
+        {
+          "text": "Find the one quiet person, and have a deep conversation all night",
+          "points": {
+            "diane": 3
+          }
+        },
+        {
+          "text": "Bring a strange party game nobody's ever heard of",
+          "points": {
+            "todd": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your workload suddenly doubles. You...",
+      "options": [
+        {
+          "text": "Make a colour-coded plan, and take on even more",
+          "points": {
+            "princesscarolyn": 3
+          }
+        },
+        {
+          "text": "Work through it one task at a time, and still leave on time",
+          "points": {
+            "judah": 3
+          }
+        },
+        {
+          "text": "Complain that nobody appreciates you, then do the bare minimum",
+          "points": {
+            "bojack": 3
+          }
+        },
+        {
+          "text": "Start wondering whether this job means anything at all",
+          "points": {
+            "diane": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend tells you about a big personal problem. You...",
+      "options": [
+        {
+          "text": "Listen, then ask a lot of gentle questions",
+          "points": {
+            "hollyhock": 3
+          }
+        },
+        {
+          "text": "Nod along, then change the subject when it gets heavy",
+          "points": {
+            "bojack": 3
+          }
+        },
+        {
+          "text": "Suggest three practical next steps",
+          "points": {
+            "judah": 3
+          }
+        },
+        {
+          "text": "Try to cheer them up with something completely random",
+          "points": {
+            "todd": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You've got a whole Sunday with nothing planned. You...",
+      "options": [
+        {
+          "text": "Wander around and see where the day takes you",
+          "points": {
+            "todd": 3
+          }
+        },
+        {
+          "text": "Sign up for a class to learn something new",
+          "points": {
+            "hollyhock": 3
+          }
+        },
+        {
+          "text": "Catch up on work emails, just for an hour (it's never an hour)",
+          "points": {
+            "princesscarolyn": 3
+          }
+        },
+        {
+          "text": "Stay in with a book and your own thoughts",
+          "points": {
+            "diane": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone gives you honest criticism. You...",
+      "options": [
+        {
+          "text": "Thank them, and write it down",
+          "points": {
+            "judah": 3
+          }
+        },
+        {
+          "text": "Get defensive, and lie awake replaying it all night",
+          "points": {
+            "bojack": 3
+          }
+        },
+        {
+          "text": "Laugh it off. You can't stay down for long",
+          "points": {
+            "mrpeanutbutter": 3
+          }
+        },
+        {
+          "text": "Argue the point, because you're pretty sure you're right",
+          "points": {
+            "diane": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You have a big decision to make. You...",
+      "options": [
+        {
+          "text": "Research it properly, then decide by the date you set",
+          "points": {
+            "judah": 3
+          }
+        },
+        {
+          "text": "Go with your gut, and say yes before you can change your mind",
+          "points": {
+            "mrpeanutbutter": 3
+          }
+        },
+        {
+          "text": "Put it off for as long as humanly possible",
+          "points": {
+            "bojack": 3
+          }
+        },
+        {
+          "text": "Decide fast, and deal with the fallout later",
+          "points": {
+            "princesscarolyn": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You get some unexpectedly good news. You...",
+      "options": [
+        {
+          "text": "Tell everyone you've ever met",
+          "points": {
+            "mrpeanutbutter": 3
+          }
+        },
+        {
+          "text": "Wait for the catch. Good things never last",
+          "points": {
+            "bojack": 3
+          }
+        },
+        {
+          "text": "Call the people you love first",
+          "points": {
+            "hollyhock": 3
+          }
+        },
+        {
+          "text": "Celebrate in the most ridiculous way you can think of",
+          "points": {
+            "todd": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone you love keeps letting you down. You...",
+      "options": [
+        {
+          "text": "Tell them honestly that it hurts, and take a step back",
+          "points": {
+            "hollyhock": 3
+          }
+        },
+        {
+          "text": "Give them another chance. And another",
+          "points": {
+            "princesscarolyn": 3
+          }
+        },
+        {
+          "text": "Write them a long message you never send",
+          "points": {
+            "diane": 3
+          }
+        },
+        {
+          "text": "Calmly stop counting on them",
+          "points": {
+            "judah": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're asked to plan a friend's birthday. You...",
+      "options": [
+        {
+          "text": "Book everything weeks ahead, with backups",
+          "points": {
+            "princesscarolyn": 3
+          }
+        },
+        {
+          "text": "Throw a huge surprise party with a theme nobody asked for",
+          "points": {
+            "mrpeanutbutter": 3
+          }
+        },
+        {
+          "text": "Come up with a wild idea that somehow works",
+          "points": {
+            "todd": 3
+          }
+        },
+        {
+          "text": "Admit you're not really a party person, and suggest a small dinner",
+          "points": {
+            "diane": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A new neighbour moves in next door. You...",
+      "options": [
+        {
+          "text": "Bring something over, and make them feel welcome",
+          "points": {
+            "hollyhock": 3
+          }
+        },
+        {
+          "text": "Introduce yourself briefly, and remember their name",
+          "points": {
+            "judah": 3
+          }
+        },
+        {
+          "text": "Wave, then feel oddly hurt they didn't come over first",
+          "points": {
+            "bojack": 3
+          }
+        },
+        {
+          "text": "Say hello, and somehow end up hanging out for six hours",
+          "points": {
+            "todd": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're a famous actor, and an old co-star is about to tell the press about something bad you did years ago. You...",
+      "options": [
+        {
+          "text": "Hire someone to get ahead of the story before it breaks",
+          "points": {
+            "princesscarolyn": 3
+          }
+        },
+        {
+          "text": "Tell the truth yourself, in your own words, first",
+          "points": {
+            "diane": 3
+          }
+        },
+        {
+          "text": "Try to charm your way out of it, and panic when that fails",
+          "points": {
+            "bojack": 3
+          }
+        },
+        {
+          "text": "Hold a cheerful press conference about something else entirely",
+          "points": {
+            "mrpeanutbutter": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You run a small talent agency, and your biggest client wants to leave. You...",
+      "options": [
+        {
+          "text": "Pull an all-nighter to win them back",
+          "points": {
+            "princesscarolyn": 3
+          }
+        },
+        {
+          "text": "Let them go, and update the client list",
+          "points": {
+            "judah": 3
+          }
+        },
+        {
+          "text": "Offer them a perk nobody has ever thought of",
+          "points": {
+            "todd": 3
+          }
+        },
+        {
+          "text": "Tell them you'll miss working with them, and mean it",
+          "points": {
+            "hollyhock": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

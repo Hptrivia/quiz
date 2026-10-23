@@ -1,0 +1,551 @@
+{
+  "slug": "my-hero-academia",
+  "show": "My Hero Academia",
+  "shortName": "My Hero Academia",
+  "seoTitle": "My Hero Academia Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the My Hero Academia test: 12 everyday questions reveal whether you're Deku, Bakugo, Uraraka, Todoroki, Iida, Kirishima, Tsuyu, Kaminari or Aizawa — with your full character breakdown.",
+  "intro": "Are you the hard worker, the fierce competitor or the tired mentor? Answer 12 everyday questions about friends, rivals and responsibilities, and find out which My Hero Academia character you are.",
+  "characters": [
+    {
+      "id": "deku",
+      "name": "Deku",
+      "emoji": "📓",
+      "color": "#16a34a",
+      "title": "The Hard Worker",
+      "summary": "Earnest, analytical and always ready to help. You make up for any doubts with sheer effort.",
+      "description": [
+        "Like Deku, you weren't handed anything. Izuku Midoriya was born Quirkless, until he inherited One For All from All Might.",
+        "You love to study and analyse. Deku is diligent and obsessed with understanding how heroes' powers work.",
+        "You can't walk past someone in trouble. Deku is always helping people with their problems."
+      ],
+      "strengths": [
+        "Diligent",
+        "Analytical",
+        "Selfless"
+      ],
+      "flaw": "You doubt yourself so much that you push yourself way too hard.",
+      "signature": "A notebook full of notes and a run towards trouble, not away from it.",
+      "clashReason": "they'd analyse your every move out loud"
+    },
+    {
+      "id": "bakugo",
+      "name": "Bakugo",
+      "emoji": "💥",
+      "color": "#ea580c",
+      "title": "The Fierce Competitor",
+      "summary": "Proud, driven and explosive. You're out to be the best, and you want everyone to know it.",
+      "description": [
+        "Like Bakugo, you've got huge confidence. He's proud and aggressive, with a Quirk to match: Explosion.",
+        "You've always had a rival. Bakugo and Deku have been rivals since they were kids.",
+        "You don't bend easily. Even Best Jeanist struggled to change Bakugo's stubborn attitude."
+      ],
+      "strengths": [
+        "Driven",
+        "Confident",
+        "Talented"
+      ],
+      "flaw": "Your temper goes off before your brain catches up.",
+      "signature": "A loud declaration and a refusal to come second.",
+      "clashReason": "they'd turn every little thing into a competition and then yell about it"
+    },
+    {
+      "id": "uraraka",
+      "name": "Uraraka",
+      "emoji": "🌸",
+      "color": "#ec4899",
+      "title": "The Determined Optimist",
+      "summary": "Cheerful, warm and tougher than you look. You stay positive, and you work hard for the people you love.",
+      "description": [
+        "Like Uraraka, you're warm and cheerful. She brings a positive energy wherever she goes.",
+        "You're doing it for your family. Uraraka wants to become a hero to earn money so her parents can live an easier life.",
+        "You've got a determined streak. Under the smiles, Uraraka never stops pushing herself."
+      ],
+      "strengths": [
+        "Cheerful",
+        "Determined",
+        "Practical"
+      ],
+      "flaw": "You hide your own worries so you don't burden anyone.",
+      "signature": "A big smile and a quiet plan to make things better for everyone.",
+      "clashReason": "they'd stay sunny when you just want to complain"
+    },
+    {
+      "id": "todoroki",
+      "name": "Todoroki",
+      "emoji": "❄️",
+      "color": "#0284c7",
+      "title": "The Quiet One",
+      "summary": "Calm, reserved and quietly powerful. You keep to yourself, but you open up to the right people.",
+      "description": [
+        "Like Todoroki, you're hard to read at first. He starts out aloof, shaped by a difficult upbringing.",
+        "You've got two sides. Todoroki's Quirk lets him create ice with his right side and fire with his left.",
+        "You warm up over time. Todoroki gradually becomes more sociable with his classmates."
+      ],
+      "strengths": [
+        "Composed",
+        "Capable",
+        "Sincere"
+      ],
+      "flaw": "You keep so much inside that people think you don't care.",
+      "signature": "A straight face, a quiet 'thanks' and surprising depths.",
+      "clashReason": "they'd answer your big emotional speech with one word"
+    },
+    {
+      "id": "iida",
+      "name": "Iida",
+      "emoji": "📏",
+      "color": "#1d4ed8",
+      "title": "The Rule Keeper",
+      "summary": "Formal, disciplined and endlessly responsible. You believe in doing things properly, and on time.",
+      "description": [
+        "Like Iida, you're a natural organiser. He's the class president of Class 1-A.",
+        "You take things seriously. Iida is earnest, disciplined and very formal.",
+        "Family inspires you. Iida's older brother was the Pro Hero Ingenium, and Tenya follows in his footsteps."
+      ],
+      "strengths": [
+        "Responsible",
+        "Disciplined",
+        "Earnest"
+      ],
+      "flaw": "You can be so strict about the rules that you forget to relax.",
+      "signature": "A colour-coded schedule and arriving ten minutes early.",
+      "clashReason": "they'd remind you of the rules, every single time"
+    },
+    {
+      "id": "kirishima",
+      "name": "Kirishima",
+      "emoji": "🪨",
+      "color": "#dc2626",
+      "title": "The Loyal Friend",
+      "summary": "Loyal, big-hearted and impossible to knock down. You're everyone's biggest supporter.",
+      "description": [
+        "Like Kirishima, you've got your friends' backs. He's loyal, chivalrous and selfless.",
+        "You stand firm. Kirishima's Quirk, Hardening, lets him make his body rock-hard.",
+        "You believe in being a wall for others. Kirishima's goal is to protect people and never fall."
+      ],
+      "strengths": [
+        "Loyal",
+        "Supportive",
+        "Brave"
+      ],
+      "flaw": "You'd throw yourself in front of anything for a friend, even when you shouldn't.",
+      "signature": "A huge grin, a fist bump and total belief in your friends.",
+      "clashReason": "they'd hype you up even when you want to be left alone"
+    },
+    {
+      "id": "tsuyu",
+      "name": "Tsuyu",
+      "emoji": "🐸",
+      "color": "#65a30d",
+      "title": "The Straight Talker",
+      "summary": "Calm, blunt and honest to a fault. You say what you think, and people trust you for it.",
+      "description": [
+        "Like Tsuyu, you keep a cool head. She's calm and composed, even in a crisis.",
+        "You don't sugar-coat things. Tsuyu is known for being blunt and saying exactly what she thinks.",
+        "You've got a style all your own. Her Frog Quirk lets her swim, climb walls and use her long tongue."
+      ],
+      "strengths": [
+        "Honest",
+        "Calm",
+        "Reliable"
+      ],
+      "flaw": "Your honesty can land harder than you meant it to.",
+      "signature": "A calm stare and an honest answer nobody else would give.",
+      "clashReason": "they'd tell you an uncomfortable truth with a totally straight face"
+    },
+    {
+      "id": "kaminari",
+      "name": "Kaminari",
+      "emoji": "⚡",
+      "color": "#eab308",
+      "title": "The Fun One",
+      "summary": "Laid-back, friendly and always up for a laugh. You don't take life too seriously.",
+      "description": [
+        "Like Kaminari, you're easy to get along with. He's laid-back and friendly.",
+        "You panic under pressure, sometimes. Kaminari is known for losing his cool in a fight.",
+        "You've got limits. When Kaminari overuses his electric Quirk, his brain short-circuits."
+      ],
+      "strengths": [
+        "Friendly",
+        "Easygoing",
+        "Funny"
+      ],
+      "flaw": "You go blank when the pressure's on.",
+      "signature": "A joke at the worst possible moment and a big friendly grin.",
+      "clashReason": "they'd make a joke while you're trying to be serious"
+    },
+    {
+      "id": "aizawa",
+      "name": "Aizawa",
+      "emoji": "😴",
+      "color": "#64748b",
+      "title": "The Tired Mentor",
+      "summary": "Logical, no-nonsense and permanently exhausted. You care more than you let anyone see.",
+      "description": [
+        "Like Aizawa, you don't waste energy. He's Class 1-A's homeroom teacher, and he'd often rather nap in his sleeping bag.",
+        "You use tough love. Aizawa has a reputation for expelling students, but he quietly re-enrols them.",
+        "You're cleverer than you let on. Aizawa uses 'rational deceptions' to test his students, and grins when they fall for them."
+      ],
+      "strengths": [
+        "Logical",
+        "Efficient",
+        "Quietly caring"
+      ],
+      "flaw": "You come across as cold when you're really just tired.",
+      "signature": "A sleeping bag, a deadpan stare and a test you didn't see coming.",
+      "clashReason": "they'd call your big idea irrational and go back to sleep"
+    }
+  ],
+  "questions": [
+    {
+      "text": "A group project kicks off. You...",
+      "options": [
+        {
+          "text": "Draw up a plan with everyone's roles and deadlines",
+          "points": {
+            "iida": 3
+          }
+        },
+        {
+          "text": "Take charge. You'll do it better yourself anyway",
+          "points": {
+            "bakugo": 3
+          }
+        },
+        {
+          "text": "Fill a notebook with research nobody asked for",
+          "points": {
+            "deku": 3
+          }
+        },
+        {
+          "text": "Do exactly what's needed, and not one thing more",
+          "points": {
+            "aizawa": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend shares an idea that's clearly not going to work. You...",
+      "options": [
+        {
+          "text": "Tell them straight. It won't work",
+          "points": {
+            "tsuyu": 3
+          }
+        },
+        {
+          "text": "Hype them up anyway. You believe in them",
+          "points": {
+            "kirishima": 3
+          }
+        },
+        {
+          "text": "Help them figure out a cheaper version that might work",
+          "points": {
+            "uraraka": 3
+          }
+        },
+        {
+          "text": "Say 'interesting', and leave it there",
+          "points": {
+            "todoroki": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your evening plans get cancelled. You...",
+      "options": [
+        {
+          "text": "Nap. Anywhere. Immediately",
+          "points": {
+            "aizawa": 3
+          }
+        },
+        {
+          "text": "Play video games and message everyone you know",
+          "points": {
+            "kaminari": 3
+          }
+        },
+        {
+          "text": "Train until you're better than everyone",
+          "points": {
+            "bakugo": 3
+          }
+        },
+        {
+          "text": "Help a friend with something they've been struggling with",
+          "points": {
+            "uraraka": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone breaks a rule right in front of you. You...",
+      "options": [
+        {
+          "text": "Point it out, politely but very firmly",
+          "points": {
+            "iida": 3
+          }
+        },
+        {
+          "text": "Say it's not a smart move, and leave it at that",
+          "points": {
+            "tsuyu": 3
+          }
+        },
+        {
+          "text": "Don't notice. You were looking at your phone",
+          "points": {
+            "kaminari": 3
+          }
+        },
+        {
+          "text": "Make them redo it properly, with an explanation of why",
+          "points": {
+            "aizawa": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You lose at something you really care about. You...",
+      "options": [
+        {
+          "text": "Get furious, and demand a rematch",
+          "points": {
+            "bakugo": 3
+          }
+        },
+        {
+          "text": "Work out exactly what went wrong, in detail",
+          "points": {
+            "deku": 3
+          }
+        },
+        {
+          "text": "Congratulate them, then train twice as hard in private",
+          "points": {
+            "uraraka": 3
+          }
+        },
+        {
+          "text": "Shrug. There's always next time",
+          "points": {
+            "kaminari": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone's picking on your friend. You...",
+      "options": [
+        {
+          "text": "Stand right next to your friend. Nobody messes with them",
+          "points": {
+            "kirishima": 3
+          }
+        },
+        {
+          "text": "Stay out of it, then quietly check on your friend afterwards",
+          "points": {
+            "todoroki": 3
+          }
+        },
+        {
+          "text": "Jump in before you've even thought about it",
+          "points": {
+            "deku": 3
+          }
+        },
+        {
+          "text": "Calmly point out to the bullies that they're being pathetic",
+          "points": {
+            "tsuyu": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're asked to give a toast at a party. You...",
+      "options": [
+        {
+          "text": "Panic, then accidentally say something charming",
+          "points": {
+            "kaminari": 3
+          }
+        },
+        {
+          "text": "Keep it to one sentence, and sit down",
+          "points": {
+            "todoroki": 3
+          }
+        },
+        {
+          "text": "Give a formal, well-rehearsed speech",
+          "points": {
+            "iida": 3
+          }
+        },
+        {
+          "text": "Make it all about how awesome your friends are",
+          "points": {
+            "kirishima": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your family is short on money. You...",
+      "options": [
+        {
+          "text": "Pick up extra work straight away",
+          "points": {
+            "uraraka": 3
+          }
+        },
+        {
+          "text": "Make a careful family budget, and stick to it",
+          "points": {
+            "iida": 3
+          }
+        },
+        {
+          "text": "Offer to help however you can, even if it's too much",
+          "points": {
+            "deku": 3
+          }
+        },
+        {
+          "text": "Ask them plainly what they need",
+          "points": {
+            "tsuyu": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone gives you a compliment. You...",
+      "options": [
+        {
+          "text": "Say 'obviously'",
+          "points": {
+            "bakugo": 3
+          }
+        },
+        {
+          "text": "Go red, and start mumbling",
+          "points": {
+            "deku": 3
+          }
+        },
+        {
+          "text": "Say 'thanks' with a completely straight face",
+          "points": {
+            "todoroki": 3
+          }
+        },
+        {
+          "text": "Give them an even bigger compliment back",
+          "points": {
+            "kirishima": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You've got an important interview in the morning. You...",
+      "options": [
+        {
+          "text": "Lay out your clothes, set three alarms and go to bed at nine",
+          "points": {
+            "iida": 3
+          }
+        },
+        {
+          "text": "Practise your answers, and psych yourself up",
+          "points": {
+            "uraraka": 3
+          }
+        },
+        {
+          "text": "Get a full night's sleep. Over-preparing is irrational",
+          "points": {
+            "aizawa": 3
+          }
+        },
+        {
+          "text": "Forget about it until you're brushing your teeth",
+          "points": {
+            "kaminari": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're training to be a hero, and a villain attacks your class trip. You...",
+      "options": [
+        {
+          "text": "Go at them head-on. You don't lose",
+          "points": {
+            "bakugo": 3
+          }
+        },
+        {
+          "text": "Study their power, and come up with a plan",
+          "points": {
+            "deku": 3
+          }
+        },
+        {
+          "text": "Get your classmates to safety first",
+          "points": {
+            "iida": 3
+          }
+        },
+        {
+          "text": "Stand in front of everyone, and refuse to move",
+          "points": {
+            "kirishima": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "You're a teacher, and one of your students is failing. You...",
+      "options": [
+        {
+          "text": "Threaten to expel them, then quietly give them another chance",
+          "points": {
+            "aizawa": 3
+          }
+        },
+        {
+          "text": "Be honest with them about exactly where they stand",
+          "points": {
+            "tsuyu": 3
+          }
+        },
+        {
+          "text": "Show them how it's done, without many words",
+          "points": {
+            "todoroki": 3
+          }
+        },
+        {
+          "text": "Turn the lesson into a game, and hope it sticks",
+          "points": {
+            "kaminari": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

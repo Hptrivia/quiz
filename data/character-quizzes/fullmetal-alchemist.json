@@ -1,0 +1,551 @@
+{
+  "slug": "fullmetal-alchemist",
+  "show": "Fullmetal Alchemist",
+  "shortName": "Fullmetal Alchemist",
+  "seoTitle": "Fullmetal Alchemist Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the Fullmetal Alchemist test: 12 everyday questions reveal whether you're Edward, Alphonse, Roy Mustang, Riza Hawkeye, Winry, Hughes, Armstrong, Izumi or Ling — with your full character breakdown.",
+  "intro": "Are you the prodigy, the gentle soul or the big softie? Answer 12 everyday questions about family, work and friendship, and find out which Fullmetal Alchemist character you are.",
+  "characters": [
+    {
+      "id": "edward",
+      "name": "Edward",
+      "emoji": "⚙️",
+      "color": "#dc2626",
+      "title": "The Prodigy",
+      "summary": "Brilliant, bold and stubborn as anything. You'll take on the world, just don't comment on your height.",
+      "description": [
+        "Like Edward, you're seriously gifted. He became the youngest State Alchemist in history, at just 12.",
+        "You've got a temper. Ed is famously sensitive about his height, and overreacts every time someone calls him short.",
+        "You don't let setbacks stop you. Ed lost his left leg and right arm, and carries on with automail limbs."
+      ],
+      "strengths": [
+        "Brilliant",
+        "Bold",
+        "Determined"
+      ],
+      "flaw": "Your pride makes you take on far more than you should alone.",
+      "signature": "A clenched fist, a clever idea and a very loud objection.",
+      "clashReason": "they'd argue with you just to prove a point"
+    },
+    {
+      "id": "alphonse",
+      "name": "Alphonse",
+      "emoji": "🛡️",
+      "color": "#78716c",
+      "title": "The Gentle Soul",
+      "summary": "Kind, patient and big-hearted. You stay calm when everyone else is shouting.",
+      "description": [
+        "Like Alphonse, you're kind and compassionate. He's Ed's gentle younger brother.",
+        "You keep going through the strangest situations. After a failed transmutation, Al's soul was bound to a suit of armour.",
+        "You appreciate the little things. Inside the armour, Al can't eat, sleep or feel anything, and he longs to again."
+      ],
+      "strengths": [
+        "Kind",
+        "Patient",
+        "Compassionate"
+      ],
+      "flaw": "You put everyone else's needs before your own.",
+      "signature": "A calm voice, a big heart and endless patience.",
+      "clashReason": "they'd stay calm when you want them to be angry with you"
+    },
+    {
+      "id": "roy",
+      "name": "Roy Mustang",
+      "emoji": "🔥",
+      "color": "#1d4ed8",
+      "title": "The Ambitious Leader",
+      "summary": "Cool, strategic and quietly ambitious. You've got a plan, and you're playing the long game.",
+      "description": [
+        "Like Roy, you've got big ambitions. The Flame Alchemist is working his way up to become Führer.",
+        "You're a natural leader. Roy is Edward's commanding officer, and rises to General by the end.",
+        "You're kinder than you look. Under the cool exterior, Roy wants a fairer, more peaceful government."
+      ],
+      "strengths": [
+        "Strategic",
+        "Ambitious",
+        "Composed"
+      ],
+      "flaw": "You play your cards so close that people can't tell whose side you're on.",
+      "signature": "A confident smirk and a plan five steps ahead.",
+      "clashReason": "they'd always be working an angle you can't see"
+    },
+    {
+      "id": "riza",
+      "name": "Riza Hawkeye",
+      "emoji": "🎯",
+      "color": "#ca8a04",
+      "title": "The Steady Hand",
+      "summary": "Disciplined, calm and completely reliable. You're the voice of reason everyone needs.",
+      "description": [
+        "Like Riza, you're the one people trust most. She's Roy Mustang's most trusted officer and his voice of reason.",
+        "You're precise and focused. Riza is a specialist sniper.",
+        "You believe in discipline. Riza raises her dog, Black Hayate, with stern but loving training."
+      ],
+      "strengths": [
+        "Disciplined",
+        "Loyal",
+        "Level-headed"
+      ],
+      "flaw": "You keep your own feelings locked away behind duty.",
+      "signature": "A calm stare, a steady aim and a quiet 'that's enough'.",
+      "clashReason": "they'd keep you on schedule whether you like it or not"
+    },
+    {
+      "id": "winry",
+      "name": "Winry",
+      "emoji": "🔧",
+      "color": "#0ea5e9",
+      "title": "The Mechanic",
+      "summary": "Warm, emotional and brilliant with your hands. You fix things, and people.",
+      "description": [
+        "Like Winry, you're seriously skilled. She's a gifted automail mechanic from Resembool.",
+        "You care deeply. Winry is compassionate and understanding towards the Elric brothers.",
+        "You're the heart of home. Winry was raised by her grandmother, Pinako, and eventually marries Edward."
+      ],
+      "strengths": [
+        "Skilled",
+        "Warm",
+        "Hands-on"
+      ],
+      "flaw": "You wear your heart so openly that you get hurt easily.",
+      "signature": "A toolbox, a smudge of oil and a big, warm hug.",
+      "clashReason": "they'd take apart your stuff to see how it works"
+    },
+    {
+      "id": "hughes",
+      "name": "Hughes",
+      "emoji": "📸",
+      "color": "#16a34a",
+      "title": "The Proud Family Man",
+      "summary": "Cheerful, loyal and completely devoted to your family. Everyone's seen the photos.",
+      "description": [
+        "Like Hughes, you love your people. He's a Lieutenant Colonel in military intelligence and Roy's best friend.",
+        "You can't stop talking about your family. Hughes spends hours bragging about them down the phone to Roy.",
+        "Everyone's seen the pictures. Hughes shows photos of his daughter, Elicia, to anyone who'll look."
+      ],
+      "strengths": [
+        "Devoted",
+        "Cheerful",
+        "Sociable"
+      ],
+      "flaw": "You talk about the people you love so much that others tune out.",
+      "signature": "A wallet stuffed with photos and a story about your family.",
+      "clashReason": "they'd show you their photos for the fifth time today"
+    },
+    {
+      "id": "armstrong",
+      "name": "Armstrong",
+      "emoji": "💪",
+      "color": "#db2777",
+      "title": "The Big Softie",
+      "summary": "Strong, emotional and enormously warm-hearted. You feel everything, and you're proud of it.",
+      "description": [
+        "Like Armstrong, you're stronger than you look, and you look very strong. He's the Strong Arm Alchemist.",
+        "You wear your heart on your sleeve. Armstrong bursts into tears or loud praise depending on the moment.",
+        "You're proud of where you come from. Armstrong loves to show off talents 'passed down the Armstrong line for generations', often while flexing."
+      ],
+      "strengths": [
+        "Big-hearted",
+        "Strong",
+        "Generous"
+      ],
+      "flaw": "You get carried away by your feelings, loudly.",
+      "signature": "Tears of joy, a dramatic speech and a flex for good measure.",
+      "clashReason": "they'd turn every moment into an emotional event"
+    },
+    {
+      "id": "izumi",
+      "name": "Izumi",
+      "emoji": "🥩",
+      "color": "#7c3aed",
+      "title": "The Tough Teacher",
+      "summary": "Fierce, practical and secretly soft. Your love comes with a very firm hand.",
+      "description": [
+        "Like Izumi, you teach the hard way. She was the Elric brothers' alchemy teacher.",
+        "You keep life practical. Izumi runs the family butcher shop.",
+        "You don't care for titles. Izumi likes to insist, 'I'm a housewife!'"
+      ],
+      "strengths": [
+        "Tough",
+        "Practical",
+        "Caring"
+      ],
+      "flaw": "Your temper flares before your patience gets a chance.",
+      "signature": "A sharp word, a firm lesson and a pride you'll never admit to.",
+      "clashReason": "they'd teach you a lesson you didn't ask for"
+    },
+    {
+      "id": "ling",
+      "name": "Ling",
+      "emoji": "🍜",
+      "color": "#ea580c",
+      "title": "The Easygoing Prince",
+      "summary": "Laid-back, goofy and sharper than you look. You make it look easy, even when it isn't.",
+      "description": [
+        "Like Ling, you've got big plans behind the grin. He's the twelfth prince of Xing.",
+        "You don't take yourself too seriously. Ling is laid-back, goofy and happily undignified.",
+        "You're cooler than you let on. Ling is also a skilled, cool-headed swordsman, though he once collapsed from sheer hunger."
+      ],
+      "strengths": [
+        "Charming",
+        "Easygoing",
+        "Capable"
+      ],
+      "flaw": "You act so relaxed that people underestimate how much you care.",
+      "signature": "A huge grin, an empty bowl and a plan nobody saw coming.",
+      "clashReason": "they'd eat your food and then charm their way out of it"
+    }
+  ],
+  "questions": [
+    {
+      "text": "Someone makes a joke at your expense. You...",
+      "options": [
+        {
+          "text": "Explode. How dare they",
+          "points": {
+            "edward": 3
+          }
+        },
+        {
+          "text": "Laugh along, then quietly let it go",
+          "points": {
+            "alphonse": 3
+          }
+        },
+        {
+          "text": "Fire back a smooth comeback",
+          "points": {
+            "roy": 3
+          }
+        },
+        {
+          "text": "Laugh harder than anyone",
+          "points": {
+            "ling": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Something wonderful happens in your family. You...",
+      "options": [
+        {
+          "text": "Show the photos to literally everyone, including strangers",
+          "points": {
+            "hughes": 3
+          }
+        },
+        {
+          "text": "Burst into happy tears",
+          "points": {
+            "armstrong": 3
+          }
+        },
+        {
+          "text": "Celebrate quietly with the people who matter",
+          "points": {
+            "riza": 3
+          }
+        },
+        {
+          "text": "Throw a party, and invite half the town",
+          "points": {
+            "ling": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend's bike breaks down. You...",
+      "options": [
+        {
+          "text": "Grab your tools, and fix it on the spot",
+          "points": {
+            "winry": 3
+          }
+        },
+        {
+          "text": "Explain exactly why it broke, in detail",
+          "points": {
+            "edward": 3
+          }
+        },
+        {
+          "text": "Tell them to fix it themselves. That's how you learn",
+          "points": {
+            "izumi": 3
+          }
+        },
+        {
+          "text": "Offer to help, and stay until it's done",
+          "points": {
+            "alphonse": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your boss gives you a boring task. You...",
+      "options": [
+        {
+          "text": "Do it perfectly, without complaint",
+          "points": {
+            "riza": 3
+          }
+        },
+        {
+          "text": "Do it, and think about how it gets you closer to the top",
+          "points": {
+            "roy": 3
+          }
+        },
+        {
+          "text": "Get it done in half the time, then grumble about the wasted morning",
+          "points": {
+            "izumi": 3
+          }
+        },
+        {
+          "text": "Complain loudly, then do it brilliantly",
+          "points": {
+            "edward": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A long weekend arrives. You...",
+      "options": [
+        {
+          "text": "Spend it in your workshop",
+          "points": {
+            "winry": 3
+          }
+        },
+        {
+          "text": "Call everyone you know to tell them about your family",
+          "points": {
+            "hughes": 3
+          }
+        },
+        {
+          "text": "Eat your way through every food stall in town",
+          "points": {
+            "ling": 3
+          }
+        },
+        {
+          "text": "Train hard, then get stuck into the jobs you've been putting off",
+          "points": {
+            "izumi": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend turns up at your door in tears. You...",
+      "options": [
+        {
+          "text": "Sit with them, and listen for as long as they need",
+          "points": {
+            "alphonse": 3
+          }
+        },
+        {
+          "text": "Cry with them. Openly",
+          "points": {
+            "armstrong": 3
+          }
+        },
+        {
+          "text": "Hug them, then help fix the problem",
+          "points": {
+            "winry": 3
+          }
+        },
+        {
+          "text": "Make them a cup of tea, then help them think it through",
+          "points": {
+            "riza": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're given a tight deadline. You...",
+      "options": [
+        {
+          "text": "Finish it early, exactly on schedule",
+          "points": {
+            "riza": 3
+          }
+        },
+        {
+          "text": "Delegate, and focus on the big picture",
+          "points": {
+            "roy": 3
+          }
+        },
+        {
+          "text": "Push through without sleep, out of sheer stubbornness",
+          "points": {
+            "edward": 3
+          }
+        },
+        {
+          "text": "Stay relaxed, then pull it off at the last minute",
+          "points": {
+            "ling": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone lectures you about how to live your life. You...",
+      "options": [
+        {
+          "text": "Tell them, sharply, to mind their own business",
+          "points": {
+            "izumi": 3
+          }
+        },
+        {
+          "text": "Smile, agree, and do exactly what you'd planned anyway",
+          "points": {
+            "roy": 3
+          }
+        },
+        {
+          "text": "Laugh, and cheerfully change the subject",
+          "points": {
+            "ling": 3
+          }
+        },
+        {
+          "text": "Thank them, and actually think about it",
+          "points": {
+            "alphonse": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're invited to a dinner party. You...",
+      "options": [
+        {
+          "text": "Keep everyone laughing, and the conversation flowing",
+          "points": {
+            "hughes": 3
+          }
+        },
+        {
+          "text": "Give an emotional toast, and maybe flex a little",
+          "points": {
+            "armstrong": 3
+          }
+        },
+        {
+          "text": "Bring a proper home-cooked dish, no shortcuts",
+          "points": {
+            "izumi": 3
+          }
+        },
+        {
+          "text": "End up spending the evening fixing your host's oven",
+          "points": {
+            "winry": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You disagree with your boss. You...",
+      "options": [
+        {
+          "text": "Tell them to their face",
+          "points": {
+            "edward": 3
+          }
+        },
+        {
+          "text": "Say nothing for now, and plan to have their job one day",
+          "points": {
+            "roy": 3
+          }
+        },
+        {
+          "text": "Back them in public, and give honest advice in private",
+          "points": {
+            "riza": 3
+          }
+        },
+        {
+          "text": "Phone your best friend and complain for an hour",
+          "points": {
+            "hughes": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're a soldier, and your commanding officer is about to make a reckless call. You...",
+      "options": [
+        {
+          "text": "Calmly remind them exactly what's at stake",
+          "points": {
+            "riza": 3
+          }
+        },
+        {
+          "text": "Lighten the mood, and talk them round",
+          "points": {
+            "hughes": 3
+          }
+        },
+        {
+          "text": "Follow them in anyway. Loyalty runs in your family",
+          "points": {
+            "armstrong": 3
+          }
+        },
+        {
+          "text": "Ignore the order, and do it your own way",
+          "points": {
+            "edward": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "Your teacher leaves you on an island for a month as a training test. You...",
+      "options": [
+        {
+          "text": "Learn everything you can from the island itself",
+          "points": {
+            "alphonse": 3
+          }
+        },
+        {
+          "text": "Get hungry immediately, and complain about it",
+          "points": {
+            "ling": 3
+          }
+        },
+        {
+          "text": "Have a little cry, then roll up your sleeves",
+          "points": {
+            "winry": 3
+          }
+        },
+        {
+          "text": "Somehow thrive, and flex at the sea",
+          "points": {
+            "armstrong": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

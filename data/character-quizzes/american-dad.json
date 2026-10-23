@@ -1,0 +1,530 @@
+{
+  "slug": "american-dad",
+  "show": "American Dad",
+  "shortName": "American Dad",
+  "seoTitle": "American Dad Test: Which Character Are You? (12 Questions)",
+  "metaDescription": "Take the American Dad test: 12 everyday questions reveal whether you're Stan, Francine, Hayley, Steve, Roger, Klaus, Jeff or Bullock — with your full character breakdown.",
+  "intro": "Are you the all-or-nothing patriot, the master of disguise or the laid-back one who just goes with it? Answer 12 everyday questions about family, work and weekends, and find out which American Dad character you are.",
+  "characters": [
+    {
+      "id": "stan",
+      "name": "Stan",
+      "emoji": "🇺🇸",
+      "color": "#1d4ed8",
+      "title": "The All-or-Nothing Patriot",
+      "summary": "Loud, proud and always going one step too far. You throw yourself into everything, then deal with the mess.",
+      "description": [
+        "Like Stan, you're fiercely loyal to your cause. He's a CIA agent and a proud patriot.",
+        "You don't do anything halfway. Stan is known for taking extreme measures, whatever the damage.",
+        "Underneath it all, you just want to be a good dad. Stan never got much fatherly love from his own absent father, Jack."
+      ],
+      "strengths": [
+        "Committed",
+        "Fearless",
+        "Loyal"
+      ],
+      "flaw": "You go all in before you've stopped to think.",
+      "signature": "A firm handshake, a bold plan and absolutely no half-measures.",
+      "clashReason": "they'd turn every small problem into a full-scale operation"
+    },
+    {
+      "id": "francine",
+      "name": "Francine",
+      "emoji": "🏡",
+      "color": "#db2777",
+      "title": "The Wild Card Mum",
+      "summary": "Proper on the outside, wonderfully wacky underneath. You tell everyone how to behave, then do something unhinged.",
+      "description": [
+        "Like Francine, you've always got an opinion on how people should behave. She constantly nags her family about doing the right thing.",
+        "Your own methods are a bit less proper. Francine's ways of getting what she wants are often far from virtuous.",
+        "You've come a long way. Francine was abandoned as a baby, raised by her Chinese-American adoptive parents, and later became the CIA secretary."
+      ],
+      "strengths": [
+        "Determined",
+        "Spirited",
+        "Caring"
+      ],
+      "flaw": "You preach good behaviour, then quietly bend every rule.",
+      "signature": "A sweet smile and a scheme nobody saw coming.",
+      "clashReason": "they'd lecture you about manners, then break every rule themselves"
+    },
+    {
+      "id": "hayley",
+      "name": "Hayley",
+      "emoji": "✌️",
+      "color": "#16a34a",
+      "title": "The Outspoken Idealist",
+      "summary": "Passionate, sharp and never afraid to speak up. You read people quickly, and you tell them what you see.",
+      "description": [
+        "Like Hayley, you've got strong convictions. She's a passionate, liberal free spirit.",
+        "You can read people. Hayley is intuitive and good at spotting what someone is really up to.",
+        "Home is still home. Hayley married Jeff, and the two of them still live with her parents."
+      ],
+      "strengths": [
+        "Passionate",
+        "Perceptive",
+        "Outspoken"
+      ],
+      "flaw": "You can be blunt to the point of rude, especially with family.",
+      "signature": "A strong opinion, a cause and a raised eyebrow.",
+      "clashReason": "they'd argue with you about everything, on principle"
+    },
+    {
+      "id": "steve",
+      "name": "Steve",
+      "emoji": "🎻",
+      "color": "#f59e0b",
+      "title": "The Eager Performer",
+      "summary": "Nerdy, enthusiastic and desperate to impress. You'll try anything to be noticed, and you never stop trying.",
+      "description": [
+        "Like Steve, you love an audience. He's a natural showman who's always performing and singing.",
+        "You'll go to great lengths to impress someone. Steve learned the cello to win over a girl.",
+        "You've got your crew. Steve's best friends are Snot, Toshi and Barry, and he even plays in a band."
+      ],
+      "strengths": [
+        "Enthusiastic",
+        "Musical",
+        "Persistent"
+      ],
+      "flaw": "You try so hard to impress people that you forget to relax.",
+      "signature": "A big performance and a hope that someone's watching.",
+      "clashReason": "they'd try way too hard to impress you, every single time"
+    },
+    {
+      "id": "roger",
+      "name": "Roger",
+      "emoji": "🎭",
+      "color": "#7c3aed",
+      "title": "The Master of Disguise",
+      "summary": "Chaotic, unpredictable and endlessly entertaining. You're a different person every day, and you love it.",
+      "description": [
+        "Like Roger, you're never boring. He's an alien who lives in the Smiths' attic.",
+        "You reinvent yourself constantly. Roger has a huge collection of disguises and personas, like the infamous Ricky Spanish.",
+        "You can talk your way into anything. Almost everyone falls for Roger's disguises."
+      ],
+      "strengths": [
+        "Creative",
+        "Bold",
+        "Hilarious"
+      ],
+      "flaw": "Your mischief doesn't always know where to stop.",
+      "signature": "A new wig, a new name and a plan that's already out of control.",
+      "clashReason": "they'd drag you into a scheme and blame you when it goes wrong"
+    },
+    {
+      "id": "klaus",
+      "name": "Klaus",
+      "emoji": "🐟",
+      "color": "#ea580c",
+      "title": "The Underappreciated Genius",
+      "summary": "Clever, cultured and a little bit gloomy. You've got a lot to offer, if only someone would listen.",
+      "description": [
+        "Like Klaus, you've had a strange journey. He's a former East German ski-jumper.",
+        "Life hasn't gone the way you planned. In 1986, the CIA transferred Klaus's mind into a goldfish.",
+        "You feel taken for granted. The Smith family often overlooks Klaus, even though he's wise and scholarly."
+      ],
+      "strengths": [
+        "Clever",
+        "Cultured",
+        "Observant"
+      ],
+      "flaw": "You spend so much time feeling overlooked that you forget to speak up.",
+      "signature": "A deep sigh and a clever remark that nobody hears.",
+      "clashReason": "they'd complain that nobody appreciates them, again"
+    },
+    {
+      "id": "jeff",
+      "name": "Jeff",
+      "emoji": "😌",
+      "color": "#0891b2",
+      "title": "The Laid-Back One",
+      "summary": "Mellow, sweet and happy to go wherever life takes you. Nothing really fazes you.",
+      "description": [
+        "Like Jeff, you're easygoing. He's a mellow, laid-back guy who goes with the flow.",
+        "You don't need a fancy career to be happy. Jeff is a high school dropout who's mostly between jobs.",
+        "You come through the strangest situations. Jeff once ended up trapped on an alien spaceship, and found his way home."
+      ],
+      "strengths": [
+        "Easygoing",
+        "Kind",
+        "Adaptable"
+      ],
+      "flaw": "You're so relaxed that people walk all over you.",
+      "signature": "A sleepy smile and a 'sure, why not'.",
+      "clashReason": "they'd never take anything seriously, even when you need them to"
+    },
+    {
+      "id": "bullock",
+      "name": "Bullock",
+      "emoji": "🍪",
+      "color": "#92400e",
+      "title": "The Eccentric Boss",
+      "summary": "Grand, unpredictable and fully in charge. You run things your own way, and it somehow works.",
+      "description": [
+        "Like Bullock, you're the boss. He's the Deputy Director of the CIA.",
+        "Your management style is unique. Bullock runs the CIA like a kindergarten, with time-outs and snack time.",
+        "You stand firm. Bullock famously does not negotiate with terrorists."
+      ],
+      "strengths": [
+        "Confident",
+        "Commanding",
+        "Unpredictable"
+      ],
+      "flaw": "Your rules make sense to you, and nobody else.",
+      "signature": "A grand speech, a strange new rule and a plate of biscuits.",
+      "clashReason": "they'd introduce a rule that only makes sense to them"
+    }
+  ],
+  "questions": [
+    {
+      "text": "You're invited to a fancy dress party. You...",
+      "options": [
+        {
+          "text": "Arrive as a full character, with a backstory and an accent",
+          "points": {
+            "roger": 3
+          }
+        },
+        {
+          "text": "Wear something simple, and spend all night near the snacks",
+          "points": {
+            "jeff": 3
+          }
+        },
+        {
+          "text": "Dress as something wholesome, then act wildly out of character",
+          "points": {
+            "francine": 3
+          }
+        },
+        {
+          "text": "Skip it, and spend the evening with a good book",
+          "points": {
+            "klaus": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your neighbour's hedge creeps over onto your side. You...",
+      "options": [
+        {
+          "text": "Get up at dawn and trim it yourself, measuring every inch",
+          "points": {
+            "stan": 3
+          }
+        },
+        {
+          "text": "Leave a polite note, then gossip about them for a month",
+          "points": {
+            "francine": 3
+          }
+        },
+        {
+          "text": "Go over and talk to them about it directly",
+          "points": {
+            "hayley": 3
+          }
+        },
+        {
+          "text": "Grumble about it to anyone who'll listen",
+          "points": {
+            "klaus": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone at a party is confidently talking nonsense. You...",
+      "options": [
+        {
+          "text": "Call them out in front of everyone",
+          "points": {
+            "hayley": 3
+          }
+        },
+        {
+          "text": "Nod along. It's not worth the argument",
+          "points": {
+            "jeff": 3
+          }
+        },
+        {
+          "text": "Correct them with a long lecture nobody asked for",
+          "points": {
+            "klaus": 3
+          }
+        },
+        {
+          "text": "Agree, then push it further to see how far they'll go",
+          "points": {
+            "roger": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You want to impress someone you like. You...",
+      "options": [
+        {
+          "text": "Learn a new instrument, just for them",
+          "points": {
+            "steve": 3
+          }
+        },
+        {
+          "text": "Pull out all the stops, and act like it was effortless",
+          "points": {
+            "francine": 3
+          }
+        },
+        {
+          "text": "Plan an outrageous grand gesture that could easily backfire",
+          "points": {
+            "roger": 3
+          }
+        },
+        {
+          "text": "Just be yourself, and hope for the best",
+          "points": {
+            "jeff": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your workplace brings in a bunch of new rules. You...",
+      "options": [
+        {
+          "text": "Follow every one to the letter, and expect everyone else to as well",
+          "points": {
+            "stan": 3
+          }
+        },
+        {
+          "text": "Suggest adding a compulsory afternoon nap",
+          "points": {
+            "bullock": 3
+          }
+        },
+        {
+          "text": "Quietly complain that nobody asked for your opinion",
+          "points": {
+            "klaus": 3
+          }
+        },
+        {
+          "text": "Point out exactly why half of them are unfair",
+          "points": {
+            "hayley": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Your family forgets your birthday. You...",
+      "options": [
+        {
+          "text": "Act like it's fine, then make everyone feel guilty for a week",
+          "points": {
+            "francine": 3
+          }
+        },
+        {
+          "text": "Sigh. Of course they did",
+          "points": {
+            "klaus": 3
+          }
+        },
+        {
+          "text": "Declare it a holiday anyway, and make everyone celebrate",
+          "points": {
+            "bullock": 3
+          }
+        },
+        {
+          "text": "Don't mind at all. Birthdays are just another day",
+          "points": {
+            "jeff": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "Someone asks you to take part in a talent show. You...",
+      "options": [
+        {
+          "text": "Sign up straight away. You've been practising for this",
+          "points": {
+            "steve": 3
+          }
+        },
+        {
+          "text": "Offer to organise it instead, and quietly judge every act",
+          "points": {
+            "francine": 3
+          }
+        },
+        {
+          "text": "Deliver a grand, dramatic speech nobody saw coming",
+          "points": {
+            "bullock": 3
+          }
+        },
+        {
+          "text": "Say no, unless the money goes to a good cause",
+          "points": {
+            "hayley": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You've got a whole weekend with nothing planned. You...",
+      "options": [
+        {
+          "text": "Lie in a hammock all day, completely content",
+          "points": {
+            "jeff": 3
+          }
+        },
+        {
+          "text": "Go to a protest or a music festival",
+          "points": {
+            "hayley": 3
+          }
+        },
+        {
+          "text": "Practise a song you're definitely going to perform for someone",
+          "points": {
+            "steve": 3
+          }
+        },
+        {
+          "text": "Fix things around the house that weren't actually broken",
+          "points": {
+            "stan": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're put in charge of a team for a week. You...",
+      "options": [
+        {
+          "text": "Bring in snack time, and give out time-outs",
+          "points": {
+            "bullock": 3
+          }
+        },
+        {
+          "text": "Run it like a military operation",
+          "points": {
+            "stan": 3
+          }
+        },
+        {
+          "text": "Let everyone vote on everything",
+          "points": {
+            "hayley": 3
+          }
+        },
+        {
+          "text": "Hand it to someone else, and hope nobody notices",
+          "points": {
+            "jeff": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "A friend tells you a big secret. You...",
+      "options": [
+        {
+          "text": "Keep it, and give them a gentle lecture about it",
+          "points": {
+            "francine": 3
+          }
+        },
+        {
+          "text": "Use it in one of your schemes",
+          "points": {
+            "roger": 3
+          }
+        },
+        {
+          "text": "Keep it forever. Who would you even tell?",
+          "points": {
+            "klaus": 3
+          }
+        },
+        {
+          "text": "Accidentally let it slip while trying to sound cool",
+          "points": {
+            "steve": 3
+          }
+        }
+      ]
+    },
+    {
+      "text": "You're a CIA agent, a mission goes badly wrong, and the bad guys offer you a deal. You...",
+      "options": [
+        {
+          "text": "Blow something up, and call it a win",
+          "points": {
+            "stan": 3
+          }
+        },
+        {
+          "text": "Refuse to negotiate, on principle",
+          "points": {
+            "bullock": 3
+          }
+        },
+        {
+          "text": "Make a sarcastic remark about how you saw this coming",
+          "points": {
+            "klaus": 3
+          }
+        },
+        {
+          "text": "Slip into a disguise, and walk out as someone else",
+          "points": {
+            "roger": 3
+          }
+        }
+      ],
+      "whatIf": true
+    },
+    {
+      "text": "An alien moves into your attic and refuses to leave. You...",
+      "options": [
+        {
+          "text": "Hide them, and make sure nobody at work ever finds out",
+          "points": {
+            "stan": 3
+          }
+        },
+        {
+          "text": "Tell them to leave. You've got enough going on",
+          "points": {
+            "hayley": 3
+          }
+        },
+        {
+          "text": "Become best friends almost immediately",
+          "points": {
+            "jeff": 3
+          }
+        },
+        {
+          "text": "Ask them a hundred questions about their planet",
+          "points": {
+            "steve": 3
+          }
+        }
+      ],
+      "whatIf": true
+    }
+  ]
+}

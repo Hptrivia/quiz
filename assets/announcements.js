@@ -131,6 +131,12 @@ const APP_ANNOUNCEMENTS = [
     text: "Derry Girls, Good Omens, Battlestar Galactica, Landman, The Good Wife, Vanderpump Rules, The Real Housewives, 90 Day Fiancé, Everybody Hates Chris, Carrie, The Olympics, NHL, Golf, and more.",
     cta: { label: "See What's New", href: "recent.html" },
   },
+  {
+    icon: "🎭",
+    title: "10 New Character Tests",
+    text: "Which Attack on Titan, Dragon Ball Z, Rick and Morty or My Hero Academia character are you? Plus Fullmetal Alchemist, BoJack Horseman, Archer, American Dad, The Boondocks and The Legend of Korra.",
+    cta: { label: "Take a Test", href: "character-quiz/index.html" },
+  },
 ];
 
 function _cbAnnouncementHash(str) {
