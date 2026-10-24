@@ -56,11 +56,11 @@
 
     <section class="panel">
 
-      <div id="dwLoading">
+      <div id="dwLoading" data-da-hide>
         <p style="color:var(--muted-text)">Loading today's word...</p>
       </div>
 
-      <div id="dwGame" style="display:none;">
+      <div id="dwGame" style="display:none;" data-da-hide>
         <h2 style="margin:0 0 4px;">Daily Wordle</h2>
         <div id="dwDateRow" style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;margin-bottom:10px;">
           <span id="dwDateLabel" style="font-size:0.8rem;color:var(--muted-text);"></span>
@@ -75,6 +75,8 @@
         <div id="dwKeyboard" class="wordle-keyboard"></div>
       </div>
 
+      <div id="dwArchiveResult" style="display:none;"></div>
+
       <div id="dwResult" style="display:none;">
         <h2 style="margin-bottom:6px;">Daily Wordle</h2>
         <div class="daily-score-box">
@@ -83,6 +85,7 @@
         <p id="dwResultStatus" style="text-align:center;margin:6px 0 14px;font-size:1rem;"></p>
         <pre id="dwResultGrid" class="wordle-result-grid" style="text-align:center;font-size:1.4rem;line-height:1.4;margin:0 0 16px;"></pre>
         <div id="dwStreakBox" class="daily-streak-box"></div>
+        <button id="dwArchiveBtn" class="primary-btn" style="width:100%;margin-bottom:6px;">📅 Your calendar</button>
         <div id="dwLbPlaceholder"></div>
         <button id="dwTodayLbBtn" class="secondary-btn" style="width:100%;margin-top:8px;">🏆 Leaderboard</button>
         <p class="daily-streak-note">Only hint-free solves count towards today's board.</p>
@@ -109,6 +112,7 @@
 
   <script src="assets/app.js"></script>
   <script src="assets/admob.js"></script>
+  <script src="assets/daily-archive.js"></script>
   <script src="assets/daily-wordle.js"></script>
   <script src="assets/profile.js"></script>
   <script src="assets/leaderboard.js"></script>

@@ -570,3 +570,94 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 200);
   }
 });
+
+// ── Daily streak repair (shared by Daily Trivia / Wordle / Mashup / Blitz) ──
+// Missed only yesterday with a streak worth keeping → offer to save it.
+// Non-premium in-app: costs a rewarded ad. Premium: saved automatically.
+// Web (no rewarded ads there): not offered, streak resets as before.
+// Repairing just marks yesterday as played, so today's play continues the
+// count via each mode's own update-streak function. Never touches score
+// history or leaderboards. Max once per 7 days per mode.
+//
+// Test switch: add ?testmissed=1 to any daily page — fakes a 12-day streak
+// last played two days ago and offers the repair on web too (the "ad"
+// auto-completes there). Stays on for the rest of that tab's session and
+// keeps leaderboard submissions off. Overwrites that mode's streak on this
+// device, so use a private window.
+const SR_MIN_STREAK = 3;
+const SR_COOLDOWN_DAYS = 7;
+
+function srDaysAgoKey(n) {
+  const d = new Date();
+  d.setUTCDate(d.getUTCDate() - n);
+  return `${d.getUTCFullYear()}-${String(d.getUTCMonth()+1).padStart(2,'0')}-${String(d.getUTCDate()).padStart(2,'0')}`;
+}
+
+function srIsTest() {
+  if (new URLSearchParams(window.location.search).get('testmissed') === '1') return true;
+  try { return sessionStorage.getItem('srRepairTest') === '1'; } catch { return false; }
+}
+
+// stateKeys: that mode's "already played today" / web-limit keys to clear.
+function srSetupTestIfRequested(streakKey, stateKeys) {
+  if (new URLSearchParams(window.location.search).get('testmissed') !== '1') return;
+  localStorage.setItem(streakKey, JSON.stringify({ current: 12, best: 12, lastCompleted: srDaysAgoKey(2) }));
+  localStorage.removeItem(`${streakKey}RepairAt`);
+  localStorage.removeItem(`${streakKey}RepairDeclined_${srDaysAgoKey(0)}`);
+  (stateKeys || []).forEach(k => localStorage.removeItem(k));
+  try { sessionStorage.setItem('srRepairTest', '1'); } catch {}
+}
+
+function srCanRepair(streakKey) {
+  const streak = JSON.parse(localStorage.getItem(streakKey) || '{"current":0,"best":0,"lastCompleted":""}');
+  if (streak.lastCompleted !== srDaysAgoKey(2)) return false;
+  if (streak.current < SR_MIN_STREAK) return false;
+  if (localStorage.getItem(`${streakKey}RepairDeclined_${srDaysAgoKey(0)}`)) return false;
+  const lastRepair = localStorage.getItem(`${streakKey}RepairAt`);
+  if (lastRepair && lastRepair > srDaysAgoKey(SR_COOLDOWN_DAYS)) return false;
+  return true;
+}
+
+// Same check as app.js's isPremiumUser() — daily-challenges.html doesn't load
+// app.js, so its cards need this copy.
+function srIsPremium() {
+  if (typeof isPremiumUser === 'function') return isPremiumUser();
+  if (/TriviaGauntletPremium/.test(navigator.userAgent || '')) return true;
+  const expiry = localStorage.getItem('adsRemovedUntil');
+  return !!expiry && new Date(expiry) > new Date();
+}
+
+function srOfferedHere() {
+  return srIsPremium() || (isInApp() && ADMOB_ADS_ENABLED);
+}
+
+function srRepair(streakKey) {
+  const streak = JSON.parse(localStorage.getItem(streakKey) || '{"current":0,"best":0,"lastCompleted":""}');
+  streak.lastCompleted = srDaysAgoKey(1);
+  localStorage.setItem(streakKey, JSON.stringify(streak));
+  localStorage.setItem(`${streakKey}RepairAt`, srDaysAgoKey(0));
+}
+
+// Call on page load, only when today's game hasn't been played yet.
+function srMaybeOfferRepair(streakKey) {
+  if (!srCanRepair(streakKey)) return;
+  if (srIsPremium()) { srRepair(streakKey); return; }
+  if (!srOfferedHere() && !srIsTest()) return;
+  const streak = JSON.parse(localStorage.getItem(streakKey));
+  _offerRewardedLifeline(
+    'Save Streak',
+    () => {
+      if (typeof gtag === 'function' && !srIsTest()) gtag('event', 'streak_save_ad', { mode: { dcStreak: 'trivia', dwStreak: 'wordle', dmStreak: 'mashup', cbStreak_daily: 'blitz' }[streakKey] });
+      srRepair(streakKey);
+    },
+    `🔥 Your <strong>${streak.current}-day streak</strong> is about to end!<br>Watch a short ad to save it?`,
+    () => localStorage.setItem(`${streakKey}RepairDeclined_${srDaysAgoKey(0)}`, '1')
+  );
+}
+
+// Homepage / Daily Challenges card subtext, or null if nothing to save.
+function srCardText(streakKey) {
+  if (!srCanRepair(streakKey) || !srOfferedHere()) return null;
+  const streak = JSON.parse(localStorage.getItem(streakKey));
+  return `🔥 ${streak.current}-day streak at risk — tap to save it`;
+}

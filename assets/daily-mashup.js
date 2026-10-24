@@ -58,8 +58,7 @@ function dmSaveSelectedThemes(slugs) {
 }
 
 /* ── Question generation ── */
-async function getDailyMashupQuestions(selectedSlugs) {
-  const dateKey = dmTodayKey();
+async function getDailyMashupQuestions(selectedSlugs, dateKey = dmTodayKey()) {
   const cacheKey = `dmQuestions_${dateKey}`;
   const cached = localStorage.getItem(cacheKey);
   if (cached) return JSON.parse(cached);
@@ -180,6 +179,31 @@ function getDailyMashupState() {
   return { ...state, streak: streak.current, bestStreak: streak.best };
 }
 
+/* ── Missed-days archive (calendar lives in daily-archive.js) ── */
+const DM_ARCHIVE = {
+  prefix: "dm",
+  name: "Daily Mashup",
+  page: "daily-mashup.html",
+  resultId: "dmArchiveResult",
+  playedOnDay(dateKey) {
+    const st = JSON.parse(localStorage.getItem(`dmState_${dateKey}`) || "null");
+    return st && st.completed ? `${st.score}/${st.total}` : null;
+  },
+  seedPlayed(dateKey, i) {
+    localStorage.setItem(`dmState_${dateKey}`, JSON.stringify({ completed: true, score: (i * 7) % 6 + 4, total: 10, missedQuestions: [] }));
+  },
+};
+
+function dmSaveArchiveResult(dateKey, score, total, missedQuestions) {
+  localStorage.removeItem(`dmQuestions_${dateKey}`);
+  return daSaveLate(DM_ARCHIVE, dateKey, {
+    label: `${score}/${total}`,
+    scoreHtml: `<div class="daily-score-box"><span>${score} / ${total}</span></div>`,
+    detailsLabel: "Show Missed Answers",
+    detailsHtml: daMissedAnswersHtml(missedQuestions),
+  });
+}
+
 /* ── Homepage status ── */
 function getDailyMashupStatus() {
   const dateKey = dmTodayKey();
@@ -225,7 +249,10 @@ function initDailyMashupHomepageCard() {
     const missedDay = streak.lastCompleted &&
                       streak.lastCompleted !== dmTodayKey() &&
                       streak.lastCompleted !== dmYesterdayKey();
-    if (missedDay) {
+    const saveText = srCardText("dmStreak");
+    if (saveText) {
+      subEl.textContent = saveText;
+    } else if (missedDay) {
       subEl.textContent = "Streak lost — play today to start a new one";
     } else if (status.currentStreak > 0) {
       subEl.textContent = `🔥 ${status.currentStreak} day streak`;
@@ -253,6 +280,9 @@ async function renderDailyMashupPage() {
   const quizEl    = document.getElementById("dmQuiz");
   const resultEl  = document.getElementById("dmResult");
 
+  srSetupTestIfRequested("dmStreak", [`dmState_${dmTodayKey()}`, "cbWebDailyUsed_mashup"]);
+  daSeedTest(DM_ARCHIVE);
+
   // Coming back from the show picker with a fresh (or changed) selection —
   // save it and clean the URL, this becomes their standing pick from now on.
   const params    = new URLSearchParams(window.location.search);
@@ -268,16 +298,21 @@ async function renderDailyMashupPage() {
     return;
   }
 
+  // ?date=YYYY-MM-DD → a missed day from the calendar, not today's mashup.
+  const archiveDate = daResolveDateParam(DM_ARCHIVE);
+  if (archiveDate === false) return;
+
   const state = getDailyMashupState();
-  if (state.completed) {
+  if (!archiveDate && state.completed) {
     if (loadingEl) loadingEl.style.display = "none";
     showDmResult(state);
     return;
   }
+  if (!archiveDate) srMaybeOfferRepair("dmStreak");
 
   // Web (non-native, non-premium): one free Daily Mashup ever, same limit
   // Daily Trivia uses — doesn't affect native app or premium.
-  if (typeof isLimitedWeb === "function" && isLimitedWeb() && localStorage.getItem("cbWebDailyUsed_mashup") === "true") {
+  if (!archiveDate && typeof isLimitedWeb === "function" && isLimitedWeb() && localStorage.getItem("cbWebDailyUsed_mashup") === "true") {
     if (loadingEl) loadingEl.style.display = "none";
     if (quizEl) {
       quizEl.style.display = "block";
@@ -289,7 +324,7 @@ async function renderDailyMashupPage() {
 
   let questions;
   try {
-    questions = await getDailyMashupQuestions(selectedSlugs);
+    questions = await getDailyMashupQuestions(selectedSlugs, archiveDate || dmTodayKey());
   } catch {
     if (loadingEl) loadingEl.textContent = "Failed to load today's mashup. Please try again.";
     return;
@@ -305,12 +340,12 @@ async function renderDailyMashupPage() {
 
   dmMaybeShowGameStartAd();
 
+  daAddHeaderButton(DM_ARCHIVE, document.querySelector("#dmQuiz .daily-header h2"));
+
   const dateLabel = document.getElementById("dmDateLabel");
   if (dateLabel) {
-    const now = new Date();
-    dateLabel.textContent = now.toLocaleDateString("en-US", {
-      weekday: "long", month: "long", day: "numeric", timeZone: "UTC"
-    });
+    dateLabel.textContent = daFormatDay(archiveDate || dmTodayKey(), { weekday: "long", month: "long", day: "numeric" }) +
+                            (archiveDate ? " · Missed day" : "");
   }
 
   let currentIdx = 0;
@@ -353,6 +388,7 @@ async function renderDailyMashupPage() {
     answered = true;
 
     const correct = selected === q.answer;
+    daRemoveHeaderButton();
     if (typeof SoundFX !== "undefined") SoundFX.play(correct ? "correct" : "wrong");
 
     document.querySelectorAll(".daily-option-btn").forEach(b => { b.disabled = true; });
@@ -377,6 +413,10 @@ async function renderDailyMashupPage() {
     if (currentIdx < questions.length) {
       showQuestion(currentIdx);
     } else {
+      if (archiveDate) {
+        daShowLateResult(DM_ARCHIVE, archiveDate, dmSaveArchiveResult(archiveDate, score, questions.length, missed));
+        return;
+      }
       const result = saveDailyMashupResult(score, questions.length, missed);
       if (quizEl) quizEl.style.display = "none";
       showDmResult(result);
@@ -403,6 +443,8 @@ function showDmResult(state) {
       <div class="streak-best">Best: ${state.bestStreak} days</div>
     `;
   }
+
+  daInitButton(DM_ARCHIVE, document.getElementById("dmArchiveBtn"));
 
   startDmCountdown();
 

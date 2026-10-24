@@ -146,12 +146,15 @@ async function cbRenderDailyPage() {
   const introEl = document.getElementById("cbDailyIntro");
   const roundEl = document.getElementById("cbRoundContainer");
 
+  srSetupTestIfRequested("cbStreak_daily", [`cbState_daily_${cbTodayKey()}`, "cbWebDailyUsed_blitz"]);
+
   const state = cbGetDailyState();
   if (loadingEl) loadingEl.style.display = "none";
   if (state.completed) {
     cbShowDailyResult(state);
     return;
   }
+  srMaybeOfferRepair("cbStreak_daily");
 
   // Web (non-native, non-premium): one free Daily Blitz ever, not a daily
   // reset — every visit after that first completed play shows the app wall
@@ -265,7 +268,9 @@ function cbInitDailyHomepageCard() {
   if (ctaEl) ctaEl.textContent = state.completed ? "Come back tomorrow" : "Play today's letter";
   if (subEl) {
     const missedDay = streak.lastCompleted && streak.lastCompleted !== cbTodayKey() && streak.lastCompleted !== cbYesterdayKey();
-    if (missedDay) subEl.textContent = "Streak lost — play today to start a new one";
+    const saveText = srCardText("cbStreak_daily");
+    if (saveText) subEl.textContent = saveText;
+    else if (missedDay) subEl.textContent = "Streak lost — play today to start a new one";
     else if (streak.current > 0) subEl.textContent = `🔥 ${streak.current} day streak`;
   }
 }

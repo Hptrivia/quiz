@@ -137,6 +137,15 @@ const APP_ANNOUNCEMENTS = [
     text: "Which Attack on Titan, Dragon Ball Z, Rick and Morty or My Hero Academia character are you? Plus Fullmetal Alchemist, BoJack Horseman, Archer, American Dad, The Boondocks and The Legend of Korra.",
     cta: { label: "Take a Test", href: "character-quiz/index.html" },
   },
+  // App-only: streak saves are rewarded ads, and on web the calendar's days
+  // are behind the app wall.
+  {
+    icon: "📅",
+    title: "Missed a day? Catch up now!",
+    text: "Play any Daily Trivia, Wordle or Mashup from the last 30 days in the new calendar. And if you miss a day, you can now save your streak in every daily challenge.",
+    cta: { label: "Open Calendar", href: "daily.html?calendar=1" },
+    appOnly: true,
+  },
 ];
 
 function _cbAnnouncementHash(str) {

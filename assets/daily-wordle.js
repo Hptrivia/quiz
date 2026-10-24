@@ -35,9 +35,8 @@ function dwYesterdayKey() {
 }
 
 /* ── Word selection ── */
-async function getDailyWordEntry() {
+async function getDailyWordEntry(dateKey = dwTodayKey()) {
   const entries = await fetchJSON('data/daily_wordle_words.json');
-  const dateKey = dwTodayKey();
   const cycle   = parseInt(localStorage.getItem('dwCycle') || '0', 10);
   const rng     = dwRng(dwHash(`${dateKey}_dw_c${cycle}`));
   const idx     = Math.floor(rng() * entries.length);
@@ -81,6 +80,7 @@ function dwFormatGuessScore(invertedScore) {
 
 function dwMaybeSubmitTodayGuesses(solved, guessCount, revealsUsed) {
   if (!solved || revealsUsed > 0 || typeof lbSubmit !== "function") return;
+  if (srIsTest()) return; // ?testmissed=1 plays stay off the leaderboard
   const slug = dwTodayLbSlug();
   const invertedScore = (DW_MAX_GUESSES + 1) - guessCount;
 
@@ -93,6 +93,39 @@ function dwMaybeSubmitTodayGuesses(solved, guessCount, revealsUsed) {
       lbShowSubmit(slug, "Today's Wordle", invertedScore, box, null, dwFormatGuessScore, true);
     }
   }
+}
+
+/* ── Missed-days archive (calendar lives in daily-archive.js) ── */
+const DW_ARCHIVE = {
+  prefix: 'dw',
+  name: 'Daily Wordle',
+  page: 'daily-wordle.html',
+  resultId: 'dwArchiveResult',
+  playedOnDay(dateKey) {
+    const st = JSON.parse(localStorage.getItem(`dwState_${dateKey}`) || 'null');
+    if (!st || !st.completed) return null;
+    return st.solved ? `${st.guesses.length}/${DW_MAX_GUESSES}` : `X/${DW_MAX_GUESSES}`;
+  },
+  seedPlayed(dateKey, i) {
+    const n = (i % 5) + 2;
+    const guesses = Array.from({ length: n }, () => ({ word: '', states: [] }));
+    localStorage.setItem(`dwState_${dateKey}`, JSON.stringify({ completed: true, solved: true, guesses, revealsUsed: 0 }));
+  },
+};
+
+function dwSaveArchiveResult(dateKey, guesses, solved, word) {
+  localStorage.removeItem(`dwArchiveProgress_${dateKey}`);
+  const grid = guesses.map(g =>
+    g.states.map(s => s === 'correct' ? '🟩' : s === 'present' ? '🟨' : '⬛').join('')
+  ).join('\n');
+  const attempts = solved ? `${guesses.length}/${DW_MAX_GUESSES}` : `X/${DW_MAX_GUESSES}`;
+  return daSaveLate(DW_ARCHIVE, dateKey, {
+    label: attempts,
+    scoreHtml: `
+      <div class="daily-score-box"><span style="font-size:1.5rem;font-weight:800;letter-spacing:0.1em;">${word}</span></div>
+      <p style="text-align:center;margin:6px 0 10px;font-size:1rem;">${solved ? `Solved in ${attempts}` : 'Not solved'}</p>
+      <pre class="wordle-result-grid" style="text-align:center;font-size:1.4rem;line-height:1.4;margin:0 0 12px;">${grid}</pre>`,
+  });
 }
 
 /* ── Streak ── */
@@ -151,7 +184,10 @@ function initDailyWordleHomepageCard() {
     const missedDay = streak.lastCompleted &&
                       streak.lastCompleted !== dwTodayKey() &&
                       streak.lastCompleted !== dwYesterdayKey();
-    if (missedDay) {
+    const saveText = srCardText('dwStreak');
+    if (saveText) {
+      subEl.textContent = saveText;
+    } else if (missedDay) {
       subEl.textContent = "Streak lost — play today to start a new one";
     } else if (streak.current > 0) {
       subEl.textContent = `🔥 ${streak.current} day streak`;
@@ -180,8 +216,22 @@ async function renderDailyWordlePage() {
   const gameEl    = document.getElementById('dwGame');
   const resultEl  = document.getElementById('dwResult');
 
+  srSetupTestIfRequested('dwStreak', [`dwState_${dwTodayKey()}`, 'cbWebDailyUsed_wordle']);
+  daSeedTest(DW_ARCHIVE);
+
+  // ?date=YYYY-MM-DD → a missed day from the calendar, not today's word.
+  // Its in-progress guesses live under their own key, never dwState_.
+  const archiveDate = daResolveDateParam(DW_ARCHIVE);
+  if (archiveDate === false) return;
+  const loadState = () => archiveDate
+    ? JSON.parse(localStorage.getItem(`dwArchiveProgress_${archiveDate}`) || 'null')
+    : getDWState();
+  const saveState = data => archiveDate
+    ? localStorage.setItem(`dwArchiveProgress_${archiveDate}`, JSON.stringify(data))
+    : saveDWState(data);
+
   let entry;
-  try { entry = await getDailyWordEntry(); }
+  try { entry = await getDailyWordEntry(archiveDate || dwTodayKey()); }
   catch {
     if (loadingEl) loadingEl.textContent = 'Failed to load today\'s word. Please try again.';
     return;
@@ -190,17 +240,18 @@ async function renderDailyWordlePage() {
   const target = entry.word;
 
   // Already completed today?
-  const existing = getDWState();
-  if (existing && existing.completed) {
+  const existing = loadState();
+  if (!archiveDate && existing && existing.completed) {
     if (loadingEl) loadingEl.style.display = 'none';
     showDWResult(existing.guesses, existing.solved, entry, existing.revealsUsed || 0);
     return;
   }
+  if (!archiveDate) srMaybeOfferRepair('dwStreak');
 
   // Web (non-native, non-premium): one free Daily Wordle ever, not a daily
   // reset — every visit after that first completed play shows the app wall
   // instead of a new word. Doesn't affect native app or premium.
-  if (typeof isLimitedWeb === 'function' && isLimitedWeb() && localStorage.getItem('cbWebDailyUsed_wordle') === 'true') {
+  if (!archiveDate && typeof isLimitedWeb === 'function' && isLimitedWeb() && localStorage.getItem('cbWebDailyUsed_wordle') === 'true') {
     if (loadingEl) loadingEl.style.display = 'none';
     if (gameEl) {
       gameEl.style.display = 'block';
@@ -213,11 +264,13 @@ async function renderDailyWordlePage() {
   if (loadingEl) loadingEl.style.display = 'none';
   if (gameEl)    gameEl.style.display    = 'block';
 
+  // Only before the first guess — a restored mid-game shouldn't get it back.
+  if (!(existing && existing.guesses && existing.guesses.length)) daAddHeaderButton(DW_ARCHIVE, document.querySelector('#dwGame h2'));
+
   const dateLabel = document.getElementById('dwDateLabel');
   if (dateLabel) {
-    dateLabel.textContent = new Date().toLocaleDateString('en-US', {
-      weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC'
-    });
+    dateLabel.textContent = daFormatDay(archiveDate || dwTodayKey(), { weekday: archiveDate ? 'short' : 'long', month: 'long', day: 'numeric' }) +
+                            (archiveDate ? ' · Missed day' : '');
   }
 
   // Game state
@@ -415,7 +468,7 @@ async function renderDailyWordlePage() {
     if (revealsUsed >= 2 || revealUsedThisRow || gameOver) return;
     // Ask BEFORE the first reveal actually happens, while they can still
     // back out — warning them after the letter's already shown is pointless.
-    if (revealsUsed === 0 && !confirm("Using a hint excludes you from today's leaderboard. Use it anyway?")) return;
+    if (revealsUsed === 0 && !archiveDate && !confirm("Using a hint excludes you from today's leaderboard. Use it anyway?")) return;
     const alreadyKnown = new Set();
     for (const g of guesses) g.states.forEach((s, i) => { if (s === 'correct') alreadyKnown.add(i); });
     for (const i of Object.keys(revealedPositions)) alreadyKnown.add(parseInt(i));
@@ -434,7 +487,7 @@ async function renderDailyWordlePage() {
     updateRevealBtn();
     renderBoard();
     renderKeyboard();
-    saveDWState({ completed: false, guesses, revealsUsed, revealedPositions, revealedAtRow });
+    saveState({ completed: false, guesses, revealsUsed, revealedPositions, revealedAtRow });
   }
 
   async function handleKey(key) {
@@ -478,6 +531,7 @@ async function renderDailyWordlePage() {
       });
 
       guesses.push({ word, states });
+      daRemoveHeaderButton();
       currentGuess      = Array(DW_WORD_LENGTH).fill(null);
       revealUsedThisRow = false;
       _animatingRow     = rowIndex;
@@ -489,7 +543,12 @@ async function renderDailyWordlePage() {
         renderKeyboard();
         updateRevealBtn();
 
-        if (solved) {
+        if (archiveDate && (solved || guesses.length >= DW_MAX_GUESSES)) {
+          if (solved) bounceRow(rowIndex);
+          gameOver = true;
+          const result = dwSaveArchiveResult(archiveDate, guesses, solved, target);
+          setTimeout(() => daShowLateResult(DW_ARCHIVE, archiveDate, result), solved ? 1600 : 1000);
+        } else if (solved) {
           bounceRow(rowIndex);
           gameOver = true;
           const streak = updateDWStreak(true);
@@ -511,7 +570,7 @@ async function renderDailyWordlePage() {
             showDWResult(guesses, false, entry, revealsUsed);
           }, 1000);
         } else {
-          saveDWState({ completed: false, guesses, revealsUsed, revealedPositions, revealedAtRow });
+          saveState({ completed: false, guesses, revealsUsed, revealedPositions, revealedAtRow });
         }
       });
 
@@ -584,6 +643,8 @@ async function showDWResult(guesses, solved, entry, revealsUsed) {
   }
 
   dwMaybeSubmitTodayGuesses(solved, guesses.length, revealsUsed || 0);
+
+  daInitButton(DW_ARCHIVE, document.getElementById('dwArchiveBtn'));
 
   const countdownEl = document.getElementById('dwCountdown');
   if (countdownEl) startDWCountdown(countdownEl);

@@ -40,11 +40,11 @@
 
     <section class="panel">
 
-      <div id="dmLoading">
+      <div id="dmLoading" data-da-hide>
         <p style="color:var(--muted-text)">Loading today's mashup...</p>
       </div>
 
-      <div id="dmQuiz" style="display:none">
+      <div id="dmQuiz" style="display:none" data-da-hide>
         <div class="daily-header">
           <h2>Daily Mashup</h2>
           <p id="dmDateLabel" class="daily-date"></p>
@@ -57,12 +57,15 @@
         <button id="dmNextBtn" class="primary-btn" style="display:none;margin-top:10px">Next →</button>
       </div>
 
+      <div id="dmArchiveResult" style="display:none"></div>
+
       <div id="dmResult" style="display:none">
         <h2 style="margin-bottom:6px">Daily Mashup Complete</h2>
         <div class="daily-score-box">
           <span id="dmScoreText"></span>
         </div>
         <div id="dmStreakBox" class="daily-streak-box"></div>
+        <button id="dmArchiveBtn" class="primary-btn" style="width:100%;margin-bottom:6px;">📅 Your calendar</button>
         <p id="dmCountdown" class="daily-countdown"></p>
         <button id="dmShareBtn" class="secondary-btn" style="margin-top:16px;width:100%">Share Results</button>
         <button id="revealDmMissedBtn" class="secondary-btn" style="margin-top:8px;width:100%">Show Missed Answers</button>
@@ -87,7 +90,7 @@
   </footer>
 
   <script src="assets/app.js"></script>
-  <script src="assets/admob.js"></script><script src="assets/daily-mashup.js"></script>
+  <script src="assets/admob.js"></script><script src="assets/daily-archive.js"></script><script src="assets/daily-mashup.js"></script>
   <script src="assets/sound.js"></script>
   <script src="assets/profile.js"></script>
 </body>

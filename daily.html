@@ -49,11 +49,11 @@
 
     <section class="panel">
 
-      <div id="dailyLoading">
+      <div id="dailyLoading" data-da-hide>
         <p style="color:var(--muted-text)">Loading today's challenge...</p>
       </div>
 
-      <div id="dailyQuiz" style="display:none">
+      <div id="dailyQuiz" style="display:none" data-da-hide>
         <div class="daily-header">
           <h2>Daily Trivia</h2>
           <p id="dailyDateLabel" class="daily-date"></p>
@@ -66,12 +66,15 @@
         <button id="dailyNextBtn" class="primary-btn" style="display:none;margin-top:10px">Next →</button>
       </div>
 
+      <div id="dailyArchiveResult" style="display:none"></div>
+
       <div id="dailyResult" style="display:none">
         <h2 style="margin-bottom:6px">Daily Trivia Complete</h2>
         <div class="daily-score-box">
           <span id="dailyScoreText"></span>
         </div>
         <div id="dailyStreakBox" class="daily-streak-box"></div>
+        <button id="dailyArchiveBtn" class="primary-btn" style="width:100%;margin-bottom:6px;">📅 Your calendar</button>
         <div id="dailyStreakLbPlaceholder"></div>
         <button id="dailyStreakLbBtn" class="secondary-btn" style="width:100%;margin-bottom:6px;">🏆 Leaderboard</button>
         <p class="daily-streak-note">Miss a day and you'll start slipping down the board — come back daily to keep climbing.</p>
@@ -101,7 +104,7 @@
   </footer>
 
   <script src="assets/app.js"></script>
-  <script src="assets/admob.js"></script><script src="assets/daily.js"></script>
+  <script src="assets/admob.js"></script><script src="assets/daily-archive.js"></script><script src="assets/daily.js"></script>
   <script src="assets/sound.js"></script>
   <script src="assets/profile.js"></script>
   <script src="assets/leaderboard.js"></script>

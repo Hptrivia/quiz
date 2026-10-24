@@ -69,8 +69,7 @@ function dcYesterdayKey() {
 }
 
 /* ── Question generation ── */
-async function getDailyQuestions() {
-  const dateKey = dcTodayKey();
+async function getDailyQuestions(dateKey = dcTodayKey()) {
   const cached = localStorage.getItem(`dcQuestions_${dateKey}`);
   if (cached) return JSON.parse(cached);
 
@@ -205,6 +204,7 @@ function dcAddToLifetimeScore(score) {
 // nothing shown to the player, no daily prompt.
 function dcMaybeSubmitLifetimeScore(lifetimeScore) {
   if (!lifetimeScore || typeof lbSubmit !== "function") return;
+  if (srIsTest()) return; // ?testmissed=1 plays stay off the leaderboard
   const lastSubmitted = parseInt(localStorage.getItem("dcScoreLbSubmitted") || "0", 10);
   if (lifetimeScore <= lastSubmitted) return;
 
@@ -266,7 +266,7 @@ function saveDailyResult(score, total, missedQuestions) {
   dcGetLifetimeScore(); // initialise before today's entry lands in dcHistory, so it isn't counted twice
   dcSaveHistory(dateKey, score, total);
   const streak        = dcUpdateStreak();
-  const lifetimeScore = dcAddToLifetimeScore(score);
+  const lifetimeScore = srIsTest() ? dcGetLifetimeScore() : dcAddToLifetimeScore(score);
   const result  = { completed: true, score, total, missedQuestions, streak: streak.current, bestStreak: streak.best, lifetimeScore };
   localStorage.setItem(`dcState_${dateKey}`, JSON.stringify(result));
   if (typeof isLimitedWeb === "function" && isLimitedWeb()) {
@@ -326,12 +326,46 @@ function initDailyHomepageCard() {
     const missedDay = streak.lastCompleted &&
                       streak.lastCompleted !== dcTodayKey() &&
                       streak.lastCompleted !== dcYesterdayKey();
-    if (missedDay) {
+    const saveText = srCardText("dcStreak");
+    if (saveText) {
+      subEl.textContent = saveText;
+    } else if (missedDay) {
       subEl.textContent = "Streak lost — play today to start a new one";
     } else if (status.currentStreak > 0) {
       subEl.textContent = `🔥 ${status.currentStreak} day streak`;
     }
   }
+}
+
+/* ── Missed-days archive (calendar lives in daily-archive.js) ── */
+const DC_ARCHIVE = {
+  prefix: "dc",
+  name: "Daily Trivia",
+  page: "daily.html",
+  resultId: "dailyArchiveResult",
+  playedOnDay(dateKey) {
+    const history = JSON.parse(localStorage.getItem("dcHistory") || "[]");
+    const e = history.find(h => h.date === dateKey) ||
+              JSON.parse(localStorage.getItem(`dcState_${dateKey}`) || "null");
+    return e ? `${e.score}/${e.total}` : null;
+  },
+  seedPlayed(dateKey, i) {
+    const history = JSON.parse(localStorage.getItem("dcHistory") || "[]").filter(h => h.date !== dateKey);
+    history.push({ date: dateKey, score: (i * 7) % 6 + 4, total: 10 });
+    history.sort((x, y) => x.date.localeCompare(y.date));
+    localStorage.setItem("dcHistory", JSON.stringify(history));
+    localStorage.setItem("dcLifetimeScoreV2", "1"); // don't let the fake history feed the lifetime total
+  },
+};
+
+function dcSaveArchiveResult(dateKey, score, total, missedQuestions) {
+  localStorage.removeItem(`dcQuestions_${dateKey}`);
+  return daSaveLate(DC_ARCHIVE, dateKey, {
+    label: `${score}/${total}`,
+    scoreHtml: `<div class="daily-score-box"><span>${score} / ${total}</span></div>`,
+    detailsLabel: "Show Missed Answers",
+    detailsHtml: daMissedAnswersHtml(missedQuestions),
+  });
 }
 
 /* ── Daily page renderer ── */
@@ -340,8 +374,16 @@ async function renderDailyPage() {
   const quizEl    = document.getElementById("dailyQuiz");
   const resultEl  = document.getElementById("dailyResult");
 
+  srSetupTestIfRequested("dcStreak", [`dcState_${dcTodayKey()}`, "cbWebDailyUsed_trivia"]);
+  daSeedTest(DC_ARCHIVE);
+
+  // ?date=YYYY-MM-DD → a missed day from the calendar, not today's daily.
+  const archiveDate = daResolveDateParam(DC_ARCHIVE);
+  if (archiveDate === false) return;
+
   const state = getDailyState();
-  if (state.completed) {
+  if (!archiveDate && !state.completed) srMaybeOfferRepair("dcStreak");
+  if (!archiveDate && state.completed) {
     if (loadingEl) loadingEl.style.display = "none";
     showDailyResult(state);
     return;
@@ -350,7 +392,7 @@ async function renderDailyPage() {
   // Web (non-native, non-premium): one free Daily Trivia ever, not a daily
   // reset — every visit after that first completed play shows the app wall
   // instead of a new quiz. Doesn't affect native app or premium.
-  if (typeof isLimitedWeb === "function" && isLimitedWeb() && localStorage.getItem("cbWebDailyUsed_trivia") === "true") {
+  if (!archiveDate && typeof isLimitedWeb === "function" && isLimitedWeb() && localStorage.getItem("cbWebDailyUsed_trivia") === "true") {
     if (loadingEl) loadingEl.style.display = "none";
     if (quizEl) {
       quizEl.style.display = "block";
@@ -362,7 +404,7 @@ async function renderDailyPage() {
 
   let questions;
   try {
-    questions = await getDailyQuestions();
+    questions = await getDailyQuestions(archiveDate || dcTodayKey());
   } catch {
     if (loadingEl) loadingEl.textContent = "Failed to load today's challenge. Please try again.";
     return;
@@ -376,13 +418,13 @@ async function renderDailyPage() {
   if (loadingEl) loadingEl.style.display = "none";
   if (quizEl)    quizEl.style.display    = "block";
 
-  // Show today's date
+  daAddHeaderButton(DC_ARCHIVE, document.querySelector("#dailyQuiz .daily-header h2"));
+
+  // Show the date being played
   const dateLabel = document.getElementById("dailyDateLabel");
   if (dateLabel) {
-    const now = new Date();
-    dateLabel.textContent = now.toLocaleDateString("en-US", {
-      weekday: "long", month: "long", day: "numeric", timeZone: "UTC"
-    });
+    dateLabel.textContent = daFormatDay(archiveDate || dcTodayKey(), { weekday: "long", month: "long", day: "numeric" }) +
+                            (archiveDate ? " · Missed day" : "");
   }
 
   let currentIdx    = 0;
@@ -427,6 +469,7 @@ async function renderDailyPage() {
     answered = true;
 
     const correct = selected === q.answer;
+    daRemoveHeaderButton();
     if (typeof SoundFX !== 'undefined') SoundFX.play(correct ? 'correct' : 'wrong');
 
     document.querySelectorAll(".daily-option-btn").forEach(b => { b.disabled = true; });
@@ -451,6 +494,10 @@ async function renderDailyPage() {
     if (currentIdx < questions.length) {
       showQuestion(currentIdx);
     } else {
+      if (archiveDate) {
+        daShowLateResult(DC_ARCHIVE, archiveDate, dcSaveArchiveResult(archiveDate, score, questions.length, missed));
+        return;
+      }
       const result = saveDailyResult(score, questions.length, missed);
       if (quizEl) quizEl.style.display = "none";
       showDailyResult(result);
@@ -477,6 +524,8 @@ function showDailyResult(state) {
       <div class="streak-best">Best: ${state.bestStreak} days</div>
     `;
   }
+
+  daInitButton(DC_ARCHIVE, document.getElementById("dailyArchiveBtn"));
 
   const lbBtn = document.getElementById("dailyStreakLbBtn");
   if (lbBtn && typeof lbOpenModal === "function") {
