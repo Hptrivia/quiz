@@ -172,7 +172,9 @@ function initAppAnnouncementPopup() {
   let seen = [];
   try { seen = JSON.parse(localStorage.getItem(SEEN_KEY) || "[]"); } catch {}
 
-  const isApp = typeof isInApp === "function" && isInApp();
+  // Free app (Capacitor) or the premium apps (plain WebViews tagged in the UA).
+  const isApp = (typeof isInApp === "function" && isInApp()) ||
+                /TriviaGauntletPremium/.test(navigator.userAgent || "");
   const unseen = APP_ANNOUNCEMENTS.filter(a => {
     if (a.appOnly && !isApp) return false;
     return !seen.includes(_cbAnnouncementHash(a.text));
