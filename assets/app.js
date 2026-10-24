@@ -206,7 +206,7 @@ card.href = `categories/${categoryPageMap[category]}.html`;
     items.forEach(theme => {
       const item = document.createElement("a");
       item.className = "search-item";
-      item.href = `challenge.html?theme=${theme.slug}&round=1`;
+      item.href = `themes/${theme.slug}.html`; // theme page shows every mode for the show
       item.textContent = theme.title;
       searchResults.appendChild(item);
     });
