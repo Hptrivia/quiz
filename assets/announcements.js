@@ -16,12 +16,6 @@
 // saw the old wording, nothing extra to remember.
 const APP_ANNOUNCEMENTS = [
   {
-    icon: "✓",
-    title: "Feedback form fixed!",
-    text: "Sending feedback works properly now — thanks for your patience.",
-    appOnly: true,
-  },
-  {
     icon: "🆕",
     title: "New game mode: Category Blitz!",
     text: "Spin a letter, race the clock — Daily Blitz, Solo, and Versus.",
