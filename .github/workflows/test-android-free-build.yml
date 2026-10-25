@@ -1,0 +1,32 @@
+name: Test Android Free App Build
+
+# Unsigned debug build of the free Capacitor app — checks the native project
+# compiles (e.g. after adding a plugin) before a signed release run.
+
+on:
+  workflow_dispatch: {}
+  push:
+    paths:
+      - 'android/**'
+      - 'package.json'
+      - '.github/workflows/test-android-free-build.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - name: Install npm packages + sync Capacitor
+        run: |
+          npm ci
+          npx cap sync android
+      - name: Build debug APK
+        working-directory: android
+        run: ./gradlew assembleDebug --no-daemon

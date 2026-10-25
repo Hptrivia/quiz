@@ -4,6 +4,10 @@
 		"classpath": "com.getcapacitor.community.admob.AdMob"
 	},
 	{
+		"pkg": "@capacitor/local-notifications",
+		"classpath": "com.capacitorjs.plugins.localnotifications.LocalNotificationsPlugin"
+	},
+	{
 		"pkg": "@revenuecat/purchases-capacitor",
 		"classpath": "com.revenuecat.purchases.capacitor.PurchasesPlugin"
 	}
