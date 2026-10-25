@@ -17,8 +17,12 @@ if (_isPremiumApp || (window.Capacitor && (window.Capacitor.isNativePlatform?.()
   const st = document.createElement('style');
   st.textContent = 'html{touch-action:manipulation;-webkit-tap-highlight-color:transparent}'
     + '*{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}'
-    + 'input,textarea,[contenteditable]{-webkit-user-select:text;user-select:text}';
+    + 'input,textarea,[contenteditable]{-webkit-user-select:text;user-select:text}'
+    + 'a,img{-webkit-user-drag:none}';
   document.head.appendChild(st);
+  // iOS long-press-and-drag lifts links/images as drag items ("Movies" +
+  // triviagauntlet.app floating under your finger) — block the drag itself.
+  document.addEventListener('dragstart', e => e.preventDefault());
 }
 
 const AVATAR_COLORS = [
