@@ -13,12 +13,20 @@
 //   resultId     id of the empty container the "played late" screen renders into
 //   playedOnDay  dateKey → score label ("7/10") if played on the day, else null
 //   seedPlayed   dateKey → fakes an on-the-day play, for ?testmissed=1
+//   gaMode       optional GA "mode" label (default: name minus "Daily ")
+//   launch       optional "YYYY-MM-DD" the mode went live — days before it
+//                aren't "missed" (nobody could have played them). New modes
+//                set it from their data file's start date once it's loaded.
 // Needs srDaysAgoKey / srIsTest / srIsPremium from admob.js.
 const DA_DAYS = 30;
 const DA_FREE_USED_KEY = "daFreeCatchUpUsed";
 
-function daDates() {
-  return Array.from({ length: DA_DAYS }, (_, i) => srDaysAgoKey(i + 1));
+// The last 30 days; with a cfg, only those on/after its launch day
+// (test mode ignores launch so the fake calendar has something to show).
+function daDates(cfg) {
+  const all = Array.from({ length: DA_DAYS }, (_, i) => srDaysAgoKey(i + 1));
+  if (!cfg || !cfg.launch || srIsTest()) return all;
+  return all.filter(d => d >= cfg.launch);
 }
 
 function daFormatDay(dateKey, opts) {
@@ -38,7 +46,7 @@ function daStatus(cfg, dateKey) {
 }
 
 function daMissedCount(cfg) {
-  return daDates().filter(d => daStatus(cfg, d).status === "missed").length;
+  return daDates(cfg).filter(d => daStatus(cfg, d).status === "missed").length;
 }
 
 function daHasFreeCatchUp() {
@@ -84,7 +92,7 @@ function daResolveDateParam(cfg) {
   const params = new URLSearchParams(window.location.search);
   if (params.get("calendar") === "1") daOpenCalendar(cfg);
   const d = params.get("date");
-  if (!d || !daDates().includes(d)) return null;
+  if (!d || !daDates(cfg).includes(d)) return null;
   const st = daStatus(cfg, d);
   if (st.status === "late") { daShowLateResult(cfg, d, daLateResult(cfg, d)); return false; }
   if (st.status === "played" || !daIsFree(cfg, d)) {
@@ -107,7 +115,7 @@ function daPlayDay(cfg, dateKey) {
 
   if ((isInApp() && ADMOB_ADS_ENABLED) || srIsTest()) {
     _offerRewardedLifeline("Play", () => {
-      if (typeof gtag === "function" && !srIsTest()) gtag("event", "missed_day_ad", { mode: cfg.name.replace(/^Daily /, "").toLowerCase() });
+      if (typeof gtag === "function" && !srIsTest()) gtag("event", "missed_day_ad", { mode: cfg.gaMode || cfg.name.replace(/^Daily /, "").toLowerCase() });
       go();
     },
       `Watch a short ad to play <strong>${daFormatDay(dateKey, { weekday: "long", month: "short", day: "numeric" })}</strong>?`);
@@ -125,8 +133,9 @@ function daPlayDay(cfg, dateKey) {
 function daOpenCalendar(cfg) {
   document.getElementById("daCalendarModal")?.remove();
   const today = srDaysAgoKey(0);
-  const dates = daDates();
-  const start = new Date(`${dates[dates.length - 1]}T00:00:00Z`);
+  const all   = daDates();          // the grid always spans 30 days...
+  const dates = daDates(cfg);       // ...but only these are playable
+  const start = new Date(`${all[all.length - 1]}T00:00:00Z`);
   start.setUTCDate(start.getUTCDate() - start.getUTCDay()); // back to Sunday
 
   const cells = [];
@@ -151,7 +160,7 @@ function daOpenCalendar(cfg) {
 
   const missed = daMissedCount(cfg);
   const freeNote = !srIsPremium() && daHasFreeCatchUp() ? " Your first one's free! 🎁" : "";
-  const range  = `${daFormatDay(dates[dates.length - 1], { month: "short", day: "numeric" })} – ${daFormatDay(today, { month: "short", day: "numeric" })}`;
+  const range  = `${daFormatDay(all[all.length - 1], { month: "short", day: "numeric" })} – ${daFormatDay(today, { month: "short", day: "numeric" })}`;
   const overlay = document.createElement("div");
   overlay.id = "daCalendarModal";
   overlay.className = "lb-modal-overlay";
@@ -191,7 +200,9 @@ function daInitButton(cfg, btn) {
 // Small "📅 Missed days (N)" pill floated beside the game's title, so the
 // calendar is reachable before today's game is played. Removed on the first
 // answer/guess (daRemoveHeaderButton) — nothing extra on screen during play.
-function daAddHeaderButton(cfg, titleEl) {
+// container (optional): put the pill there (e.g. a header's button group)
+// instead of floating it beside the title.
+function daAddHeaderButton(cfg, titleEl, container) {
   if (!titleEl || document.getElementById("daHeaderBtn")) return;
   const n = daMissedCount(cfg);
   const btn = document.createElement("button");
@@ -201,7 +212,16 @@ function daAddHeaderButton(cfg, titleEl) {
   btn.style.cssText = "float:right;font-size:0.78rem;padding:4px 10px;margin:2px 0 0 8px;white-space:nowrap;";
   btn.textContent = n ? `📅 Missed days (${n})` : "📅 Calendar";
   btn.addEventListener("click", () => daOpenCalendar(cfg));
-  titleEl.parentNode.insertBefore(btn, titleEl);
+  if (container) {
+    // compact form for tight header lines: just the icon and the count
+    btn.textContent = n ? `📅 ${n}` : "📅";
+    btn.title = n ? `Missed days (${n})` : "Calendar";
+    btn.setAttribute("aria-label", btn.title);
+    btn.style.cssText = "font-size:0.85rem;padding:5px 12px;white-space:nowrap;";
+    container.prepend(btn);
+  } else {
+    titleEl.parentNode.insertBefore(btn, titleEl);
+  }
 }
 
 function daRemoveHeaderButton() {
@@ -219,7 +239,7 @@ function daShowLateResult(cfg, dateKey, result) {
     ${result.scoreHtml}
     <p class="daily-streak-note">🕓 Played late — doesn't count toward your streak or the leaderboard.</p>
     <button type="button" class="primary-btn da-late-cal" style="width:100%;margin-top:6px">${daButtonLabel(cfg)}</button>
-    <a href="${cfg.page}" class="secondary-btn" style="display:block;margin-top:8px;text-align:center;text-decoration:none">Today's ${cfg.name.replace(/^Daily /, "")} →</a>
+    <a href="${cfg.page}" class="secondary-btn" style="display:block;margin-top:8px;text-align:center;text-decoration:none">Today's ${cfg.name.replace(/^Daily /, "").replace(/\?$/, "")} →</a>
     ${result.detailsHtml ? `
       <button type="button" class="secondary-btn da-late-reveal" style="margin-top:8px;width:100%">${result.detailsLabel}</button>
       <div class="da-late-details" style="display:none;margin-top:14px">${result.detailsHtml}</div>` : ""}`;

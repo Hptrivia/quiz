@@ -499,6 +499,7 @@ async function renderDailyPage() {
         return;
       }
       const result = saveDailyResult(score, questions.length, missed);
+      if (typeof gtag === "function" && !srIsTest()) gtag("event", "daily_finished", { mode: "trivia", solved: true, score });
       if (quizEl) quizEl.style.display = "none";
       showDailyResult(result);
     }

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if(/TriviaGauntletPremium/.test(navigator.userAgent||''))document.documentElement.classList.add('premium-app');</script>
+  <meta charset="UTF-8" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Who Am I? Daily | Trivia Gauntlet</title>
+  <meta name="description" content="Guess today's famous person from hints on Trivia Gauntlet. One new person every day — fewer hints, higher score." />
+  <link rel="icon" href="/favicon.ico.png" sizes="any">
+  <link rel="apple-touch-icon" href="/assets/icon-192.png" />
+  <meta name="theme-color" content="#0f172a" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    if(!/TriviaGauntletPremium/.test(navigator.userAgent||''))gtag('config', 'G-E6BY9F2ZDT');
+  </script>
+  <link rel="stylesheet" href="assets/style.css" />
+  <!-- Mediavine ad script — website only. Skipped in the native app (AdMob handles ads there),
+       the premium ad-free app, and for web users who unlocked ad-free access. -->
+  <script data-mediavine-loader="">
+  (function(){
+    if (/TriviaGauntletPremium/.test(navigator.userAgent || '')) return;
+    if (window.Capacitor && (window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform() || window.Capacitor.isNative)) return;
+    try { var until = localStorage.getItem('adsRemovedUntil'); if (until && new Date(until) > new Date()) return; } catch (e) {}
+    var s = document.createElement('script');
+    s.type = 'text/javascript'; s.async = true;
+    s.setAttribute('data-noptimize', '1'); s.setAttribute('data-cfasync', 'false');
+    s.src = '//scripts.mediavine.com/tags/5434c4f7-f50b-4d0f-a795-071f1a1f055e.js';
+    document.head.appendChild(s);
+  })();
+  </script>
+</head>
+<body data-page="daily-whoami">
+  <main class="container narrow" style="padding-top:8px;">
+    <div class="theme-top-links"><a href="index.html" class="back-link" onclick="if(history.length>1){history.back();return false;}">← Back</a><span id="navAvatarSlot"></span></div>
+
+    <section class="panel">
+
+      <div id="waLoading" data-da-hide>
+        <p style="color:var(--muted-text)">Loading today's person...</p>
+      </div>
+
+      <div id="waHowTo" class="dw-info-modal" style="display:none;">
+        <div class="dw-info-box">
+          <button type="button" class="dw-info-close" aria-label="Close">✕</button>
+          <h3>How to Play</h3>
+          <p><strong>Guess today's famous person in 5 tries.</strong> Type a name and pick anyone from the list.</p>
+          <p style="margin-top:8px;">Each guess shows how close you are:</p>
+          <ul style="margin:6px 0 0;padding-left:18px;line-height:1.8;">
+            <li><span class="wa-key wa-hit">🟩</span> <strong>Match</strong></li>
+            <li><span class="wa-key wa-near">🟨</span> <strong>Close</strong> — same continent, same field but a different job (e.g. footballer vs tennis player), or born within 5 years</li>
+            <li><span class="wa-key wa-miss">⬛</span> <strong>No match</strong></li>
+            <li>⬆️⬇️ <strong>Born</strong> — the answer was born later ⬆️ or earlier ⬇️</li>
+          </ul>
+          <p style="margin-top:10px;"><em>Example:</em> the answer is Rihanna and you guess <strong>Beyoncé</strong> → 🟩 Female · 🟨 USA (same continent) · 🟩 Singer / musician · ⬆️ born 1981.</p>
+          <p style="margin-top:10px;color:var(--muted-text);font-size:0.85rem;">A new person every day at midnight UTC.<br><span class="wa-credit"></span></p>
+        </div>
+      </div>
+
+      <div id="waGame" style="display:none;" data-da-hide>
+        <div class="wa-title-row">
+          <h2>Who Am I?</h2>
+          <div class="wa-title-mid"></div>
+          <div class="wa-title-actions">
+            <button id="waHowToBtn" type="button" class="wordle-info-btn" aria-label="How to play">?</button>
+          </div>
+        </div>
+        <div class="wa-date-row">
+          <p id="waDateLabel" class="daily-date"></p>
+          <p id="waGuessesLeft" class="wa-left"></p>
+        </div>
+        <div class="wa-guess-row">
+          <input id="waInput" type="text" class="wa-input" placeholder="Tap to browse, or type a name..." autocomplete="off" autocorrect="off" autocapitalize="words" spellcheck="false" />
+          <button id="waHintBtn" type="button" class="secondary-btn wa-hint-btn">💡 Hint</button>
+        </div>
+        <div id="waSuggest" class="wa-suggest"></div>
+        <div id="waHint" class="wa-hint-box" style="display:none;"></div>
+        <p id="waFeedback" class="feedback"></p>
+        <div class="wa-head"><div>Gender</div><div>Born in</div><div>Field</div><div>Born</div><div>Alive</div></div>
+        <div id="waRows" class="wa-rows"></div>
+      </div>
+
+      <div id="waArchiveResult" style="display:none;"></div>
+
+      <div id="waResult" style="display:none;">
+        <h2 style="margin-bottom:6px;">Who Am I?</h2>
+        <div class="daily-score-box">
+          <span id="waResultName" style="font-size:1.4rem;font-weight:800;"></span>
+        </div>
+        <p id="waResultStatus" style="text-align:center;margin:6px 0 2px;font-size:1.05rem;font-weight:600;"></p>
+        <p id="waResultSummary" style="text-align:center;margin:0 0 10px;font-size:0.85rem;color:var(--muted-text);"></p>
+        <pre id="waResultGrid" style="text-align:center;font-size:1.1rem;line-height:1.4;margin:0 0 14px;"></pre>
+        <div id="waStreakBox" class="daily-streak-box"></div>
+        <button id="waArchiveBtn" class="primary-btn" style="width:100%;margin-bottom:6px;">📅 Your calendar</button>
+        <p id="waCountdown" class="daily-countdown"></p>
+        <button id="waShareBtn" class="secondary-btn" style="width:100%;margin-top:12px;">Share Results</button>
+        <div class="mode-vote" data-mode="whoami" data-name="Who Am I?"></div>
+        <a href="contact.html" class="secondary-btn" style="display:block;margin-top:14px;text-align:center;text-decoration:none;font-size:0.85rem;padding:8px 18px;">Leave Feedback</a>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+  <script src="assets/admob.js"></script>
+  <script src="assets/daily-archive.js"></script>
+  <script src="assets/daily-whoami.js"></script>
+  <script src="assets/sound.js"></script>
+  <script src="assets/profile.js"></script>
+</body>
+</html>

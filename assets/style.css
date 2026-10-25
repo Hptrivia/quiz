@@ -2984,3 +2984,67 @@ body.in-app .join-mp-entry { display: block; }
 .da-cal-today small { color: var(--link-accent); }
 .da-cal-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 12px; margin-top: 12px; font-size: 11px; color: var(--muted-text); }
 .da-cal-note { margin: 10px 0 0; font-size: 11px; color: var(--muted-text); text-align: center; }
+
+/* ── Daily Who Am I? (daily-whoami.js) ── */
+body[data-page="daily-whoami"] main { padding-top: 16px; }
+.wa-title-row { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.wa-title-mid { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+.wa-title-row h2 { margin: 0; }
+.wa-title-actions { display: flex; align-items: center; gap: 8px; }
+/* Which Came First?: title too long for an absolutely centred 📅 (it covered
+   the title on phones), so the 📅 sits in flow, centred in the gap between
+   the title and the ? button; title shrinks a little on narrow screens. */
+body[data-page="daily-order"] .wa-title-row h2 { font-size: clamp(1.2rem, 6.4vw, 1.5rem); white-space: nowrap; }
+body[data-page="daily-order"] .wa-title-mid { position: static; transform: none; flex: 1; display: flex; justify-content: center; }
+.wa-guess-row { display: flex; gap: 8px; margin-top: 12px; }
+.wa-input { flex: 1; min-width: 0; padding: 12px; border-radius: 10px; border: 1px solid var(--input-border); background: var(--input-bg); color: var(--text); font-size: 1rem; }
+.wa-hint-btn { flex: 0 0 auto; padding: 0 14px; border-radius: 10px; font-size: 0.85rem; white-space: nowrap; }
+.wa-hint-btn:disabled { opacity: 0.5; }
+.wa-hint-box { margin-top: 8px; padding: 10px 12px; border-radius: 10px; background: rgba(245, 158, 11, 0.12); border: 1px solid rgba(245, 158, 11, 0.4); font-size: 0.9rem; font-weight: 600; }
+.wa-suggest { display: flex; flex-direction: column; margin-top: 4px; max-height: 300px; overflow-y: auto; border-radius: 10px; }
+.wa-suggest-item { text-align: left; padding: 10px 12px; background: var(--search-bg); border: 1px solid var(--search-item-border); color: var(--text); font: inherit; cursor: pointer; }
+.wa-suggest-item:hover { background: var(--search-item-hover); }
+.wa-suggest-empty { padding: 10px 12px; font-size: 0.85rem; color: var(--muted-text); }
+.wa-intro { font-size: 0.85rem; color: var(--muted-text); margin: 4px 0 12px; }
+.wa-left { font-size: 0.85rem; color: var(--muted-text); margin: 6px 0; }
+.wa-date-row { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.wa-date-row .wa-left { margin: 0; font-weight: 700; color: var(--text); }
+body[data-page="daily-whoami"] .wa-head { margin-top: 10px; }
+.wa-head, .wa-cells { display: grid; grid-template-columns: repeat(5, 1fr); gap: 5px; }
+.wa-head div { font-size: 0.66rem; color: var(--muted-text); text-align: center; text-transform: uppercase; letter-spacing: 0.03em; }
+.wa-rows { display: flex; flex-direction: column; gap: 14px; margin-top: 12px; }
+.wa-row-name { font-size: 0.85rem; font-weight: 700; margin-bottom: 6px; }
+.wa-cell { min-height: 46px; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 3px 2px;
+  font-size: 0.72rem; line-height: 1.15; text-align: center; color: #fff; word-break: break-word; }
+.wa-cell b { font-size: 0.8rem; font-weight: 400; }
+.wa-hit { background: var(--wordle-correct); }
+.wa-near { background: var(--wordle-present); }
+.wa-miss { background: var(--wordle-absent); }
+.wa-key { display: inline-block; }
+.wa-key.wa-hit, .wa-key.wa-near, .wa-key.wa-miss { background: none; }
+.wa-new-badge { font-size: 0.6rem; vertical-align: middle; padding: 2px 6px; border-radius: 999px; background: #22c55e; color: #0b1220; font-weight: 800; }
+
+/* ── Daily Which Came First? (daily-order.js) ── */
+body[data-page="daily-order"] main { padding-top: 16px; }
+.wf-list { display: flex; flex-direction: column; gap: 6px; }
+.wf-item { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 10px; background: var(--option-bg); border: 1px solid var(--option-border); font-size: 0.92rem; }
+.wf-item-locked { border-color: var(--wordle-correct); }
+.wf-pos { flex: 0 0 auto; width: 20px; text-align: center; color: var(--muted-text); font-weight: 700; }
+.wf-name { flex: 1; min-width: 0; }
+.wf-year, .wf-lock { flex: 0 0 auto; font-weight: 700; }
+.wf-moves { flex: 0 0 auto; display: flex; gap: 4px; }
+.wf-move { width: 36px; height: 34px; border-radius: 8px; border: 1px solid var(--option-border); background: var(--secondary-btn-bg); color: var(--text); font-size: 0.9rem; cursor: pointer; }
+.wf-move:disabled { opacity: 0.3; cursor: default; }
+.wf-end-label { margin: 2px 0 4px; font-size: 0.75rem; color: var(--muted-text); }
+
+/* ── "Enjoying this mode?" vote (app.js) ── */
+.mode-vote:empty { display: none; }
+.mode-vote { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 16px; padding: 10px; border-radius: 10px; background: var(--option-bg); border: 1px solid var(--option-border); font-size: 0.9rem; }
+.mode-vote-btn { font-size: 1.3rem; padding: 4px 12px; border-radius: 8px; border: 1px solid var(--option-border); background: var(--secondary-btn-bg); cursor: pointer; }
+body[data-page="daily-whoami"] #waFeedback:empty { display: none; }
+
+.wf-actions { display: flex; gap: 8px; margin-top: 10px; }
+.wf-actions .primary-btn { flex: 1; }
+.wf-year-badge { display: inline-block; margin-left: 4px; padding: 1px 7px; border-radius: 999px; background: rgba(245, 158, 11, 0.18); border: 1px solid rgba(245, 158, 11, 0.5); font-size: 0.78rem; font-weight: 700; }
+body[data-page="daily-order"] #wfFeedback:empty { display: none; }
+body[data-page="daily-order"] .wa-date-row { align-items: center; margin-bottom: 6px; }

@@ -1,0 +1,6176 @@
+{
+  "start": "2026-10-25",
+  "sources": {
+    "watchmojo-top100": "https://www.watchmojo.com/articles/top-100-pop-culture-moments-of-all-time",
+    "hilton-poll": "https://stories.hilton.com/releases/revealed-100-moments-that-shaped-the-world",
+    "2010s-roundups": "https://www.marieclaire.com/culture/g30188667/biggest-pop-culture-moments-of-the-2010s/ + aarp.org/events-history/news-culture-moments-of-decade-2019/ + theceomagazine.com/business/world-news/historical-moments-decade",
+    "britannica": "https://www.edinformatics.com/inventions_inventors/index.html",
+    "stacker-music": "https://stacker.com/stories/music/100-iconic-moments-music-history",
+    "mentalfloss-internet": "https://www.mentalfloss.com/culture/internet/most-important-moments-internet-history",
+    "nbc-science": "https://www.nbcnews.com/science/cosmic-log/50-years-science-sagas-flna6c10404128",
+    "afi-100": "https://en.wikipedia.org/wiki/AFI%27s_100_Years...100_Movies",
+    "tvguide-50": "https://en.wikipedia.org/wiki/TV_Guide%27s_50_Greatest_TV_Shows_of_All_Time",
+    "rollingstone-100": "https://www.rollingstone.com/tv-movies/tv-movie-lists/best-tv-shows-of-all-time-1234598313/",
+    "time-50-games": "https://www.levelup.com/noticias/revista-time-elige-a-los-50-mejores-videojuegos-de-la-historia/ (TIME 50 Best Video Games, 2016)",
+    "ringer-100": "https://www.theringer.com/project/100-best-sports-moments-of-the-century/",
+    "topendsports": "https://www.topendsports.com/resources/polls/sport/highlights-years.htm",
+    "espn-si": "https://www.si.com/more-sports/2016/03/08/100-greatest-moments-sports-history + ESPN greatest US women's sports moments",
+    "fortune-2024": "https://fortune.com/2024/12/03/biggest-pop-culture-moments-2024",
+    "highest-grossing-by-year": "https://en.wikipedia.org/wiki/List_of_highest-grossing_films (by year of release)",
+    "oscar-best-picture": "https://en.wikipedia.org/wiki/Academy_Award_for_Best_Picture",
+    "bond-films": "https://en.wikipedia.org/wiki/James_Bond_in_film",
+    "disney-animation": "https://en.wikipedia.org/wiki/List_of_Walt_Disney_Animation_Studios_films",
+    "pixar": "https://en.wikipedia.org/wiki/List_of_Pixar_films",
+    "spotify-most-streamed": "https://en.wikipedia.org/wiki/List_of_Spotify_streaming_records",
+    "best-selling-video-games": "https://en.wikipedia.org/wiki/List_of_best-selling_video_games",
+    "best-selling-consoles": "https://en.wikipedia.org/wiki/List_of_best-selling_game_consoles",
+    "best-selling-books": "https://en.wikipedia.org/wiki/List_of_best-selling_books",
+    "world-cup-finals": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals",
+    "olympic-hosts": "https://en.wikipedia.org/wiki/List_of_Olympic_Games_host_cities",
+    "ballon-dor": "https://en.wikipedia.org/wiki/Ballon_d%27Or",
+    "space-100-milestones": "https://newspaceeconomy.ca/2025/06/29/100-milestones-that-took-us-to-the-stars/",
+    "247-landmarks": "https://247wallst.com/special-report/2021/08/20/early-photographs-of-the-worlds-most-famous-landmarks/",
+    "f1-champions": "https://en.wikipedia.org/wiki/List_of_Formula_One_World_Drivers%27_Champions",
+    "wimbledon-champions": "https://en.wikipedia.org/wiki/List_of_Wimbledon_gentlemen%27s_singles_champions + https://en.wikipedia.org/wiki/List_of_Wimbledon_ladies%27_singles_champions",
+    "emmy-best-comedy": "https://en.wikipedia.org/wiki/Primetime_Emmy_Award_for_Outstanding_Comedy_Series",
+    "emmy-best-drama": "https://en.wikipedia.org/wiki/Primetime_Emmy_Award_for_Outstanding_Drama_Series",
+    "best-selling-singles": "https://en.wikipedia.org/wiki/List_of_best-selling_singles",
+    "best-selling-albums": "https://en.wikipedia.org/wiki/List_of_best-selling_albums",
+    "timeline-of-social-media": "https://en.wikipedia.org/wiki/Timeline_of_social_media",
+    "tallest-buildings-history": "https://en.wikipedia.org/wiki/History_of_the_world%27s_tallest_buildings",
+    "cricket-world-cup": "https://en.wikipedia.org/wiki/Cricket_World_Cup",
+    "rugby-world-cup": "https://en.wikipedia.org/wiki/Rugby_World_Cup",
+    "best-selling-franchises": "https://en.wikipedia.org/wiki/List_of_best-selling_video_game_franchises",
+    "nobel-peace-prize": "https://en.wikipedia.org/wiki/List_of_Nobel_Peace_Prize_laureates",
+    "time-person-of-the-year": "https://en.wikipedia.org/wiki/Time_Person_of_the_Year",
+    "best-selling-manga": "https://en.wikipedia.org/wiki/List_of_best-selling_manga",
+    "champions-league-finals": "https://en.wikipedia.org/wiki/List_of_UEFA_Champions_League_finals",
+    "super-bowl-halftime": "https://en.wikipedia.org/wiki/List_of_Super_Bowl_halftime_shows",
+    "netflix-most-watched": "https://en.wikipedia.org/wiki/List_of_most-watched_Netflix_original_programming",
+    "best-selling-toys": "https://www.livescience.com/17555-top-selling-toys-time.html",
+    "eurovision-winners": "https://en.wikipedia.org/wiki/List_of_Eurovision_Song_Contest_winners",
+    "apple-products-timeline": "https://en.wikipedia.org/wiki/Timeline_of_Apple_Inc._products"
+  },
+  "puzzles": [
+    {
+      "items": [
+        {
+          "name": "World War II ends",
+          "emoji": "🕊️",
+          "year": 1945,
+          "source": "hilton-poll"
+        },
+        {
+          "name": "Sputnik becomes the first satellite in space",
+          "emoji": "🛰️",
+          "year": 1957,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "The Live Aid concert",
+          "emoji": "🎤",
+          "year": 1985,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Google is founded",
+          "emoji": "🔍",
+          "year": 1998,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "\"Barbenheimer\" summer at the cinema",
+          "emoji": "🎬",
+          "year": 2023,
+          "source": "watchmojo-top100"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Superman first appears in a comic",
+          "emoji": "🦸",
+          "year": 1938,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Elvis Presley appears on The Ed Sullivan Show",
+          "emoji": "🎸",
+          "year": 1956,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "The Berlin Wall falls",
+          "emoji": "🧱",
+          "year": 1989,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Iron Man is released",
+          "emoji": "🤖",
+          "year": 2008,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Will Smith slaps Chris Rock at the Oscars",
+          "emoji": "👋",
+          "year": 2022,
+          "source": "watchmojo-top100"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Atomic bombs are dropped on Hiroshima and Nagasaki",
+          "emoji": "☢️",
+          "year": 1945,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "I Love Lucy first airs",
+          "emoji": "📺",
+          "year": 1951,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Pac-Man is released",
+          "emoji": "👾",
+          "year": 1980,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Titanic (the film) is released",
+          "emoji": "🚢",
+          "year": 1997,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Taylor Swift's Eras Tour begins",
+          "emoji": "✨",
+          "year": 2023,
+          "source": "watchmojo-top100"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The first James Bond novel is published",
+          "emoji": "🍸",
+          "year": 1953,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "The Beatles appear on The Ed Sullivan Show",
+          "emoji": "🎶",
+          "year": 1964,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Maradona's \"Hand of God\" goal",
+          "emoji": "✋",
+          "year": 1986,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Avatar is released",
+          "emoji": "🌿",
+          "year": 2009,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "ChatGPT launches",
+          "emoji": "🤖",
+          "year": 2022,
+          "source": "watchmojo-top100"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The Wright brothers make the first powered flight",
+          "emoji": "✈️",
+          "year": 1903,
+          "source": "britannica"
+        },
+        {
+          "name": "Spider-Man first appears in a comic",
+          "emoji": "🕷️",
+          "year": 1962,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "The Woodstock festival",
+          "emoji": "✌️",
+          "year": 1969,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Toy Story is released",
+          "emoji": "🤠",
+          "year": 1995,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Donald Trump is elected president for a second time",
+          "emoji": "🗳️",
+          "year": 2024,
+          "source": "watchmojo-top100"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Star Wars is released",
+          "emoji": "⭐",
+          "year": 1977,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Pink Floyd release The Wall",
+          "emoji": "🧱",
+          "year": 1979,
+          "source": "best-selling-albums"
+        },
+        {
+          "name": "The Petronas Towers become the world's tallest buildings",
+          "emoji": "🏙️",
+          "year": 1999,
+          "source": "tallest-buildings-history"
+        },
+        {
+          "name": "Pokémon Go is released",
+          "emoji": "📍",
+          "year": 2016,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Taylor Swift is TIME Person of the Year",
+          "emoji": "📰",
+          "year": 2023,
+          "source": "time-person-of-the-year"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "President John F. Kennedy is assassinated",
+          "emoji": "🇺🇸",
+          "year": 1963,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Pink Floyd release The Dark Side of the Moon",
+          "emoji": "🌈",
+          "year": 1973,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Friends first airs",
+          "emoji": "☕",
+          "year": 1994,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "The Dark Knight is released",
+          "emoji": "🦇",
+          "year": 2008,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "A private company lands on the Moon for the first time",
+          "emoji": "🌕",
+          "year": 2024,
+          "source": "space-100-milestones"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Winnie-the-Pooh is published",
+          "emoji": "🍯",
+          "year": 1926,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "The Cuban Missile Crisis",
+          "emoji": "🚀",
+          "year": 1962,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Michael Jackson releases Thriller",
+          "emoji": "🕺",
+          "year": 1982,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "The first iPhone goes on sale",
+          "emoji": "📱",
+          "year": 2007,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "The Ice Bucket Challenge goes viral",
+          "emoji": "🧊",
+          "year": 2014,
+          "source": "2010s-roundups"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Bill Haley releases \"Rock Around the Clock\"",
+          "emoji": "🕰️",
+          "year": 1954,
+          "source": "best-selling-singles"
+        },
+        {
+          "name": "Apollo 17, the last crewed Moon landing",
+          "emoji": "🌕",
+          "year": 1972,
+          "source": "space-100-milestones"
+        },
+        {
+          "name": "The Simpsons first airs",
+          "emoji": "🍩",
+          "year": 1989,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "The Matrix is released",
+          "emoji": "🕶️",
+          "year": 1999,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Rio de Janeiro hosts the Olympics",
+          "emoji": "🇧🇷",
+          "year": 2016,
+          "source": "olympic-hosts"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Martin Luther King Jr.'s \"I Have a Dream\" speech",
+          "emoji": "🗣️",
+          "year": 1963,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "First Moon landing",
+          "emoji": "🌕",
+          "year": 1969,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Nintendo's Famicom (NES) launches in Japan",
+          "emoji": "🎮",
+          "year": 1983,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "\"Gangnam Style\" is released",
+          "emoji": "🕺",
+          "year": 2012,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Black Panther is released",
+          "emoji": "🐾",
+          "year": 2018,
+          "source": "watchmojo-top100"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The first human heart transplant",
+          "emoji": "❤️",
+          "year": 1967,
+          "source": "hilton-poll"
+        },
+        {
+          "name": "Jaws is released",
+          "emoji": "🦈",
+          "year": 1975,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Moscow hosts the Olympics",
+          "emoji": "🇷🇺",
+          "year": 1980,
+          "source": "olympic-hosts"
+        },
+        {
+          "name": "The Soviet Union collapses",
+          "emoji": "🚩",
+          "year": 1991,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Beyoncé releases Lemonade",
+          "emoji": "🍋",
+          "year": 2016,
+          "source": "watchmojo-top100"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The first spacewalk",
+          "emoji": "🧑‍🚀",
+          "year": 1965,
+          "source": "space-100-milestones"
+        },
+        {
+          "name": "The first mobile phone call",
+          "emoji": "📞",
+          "year": 1973,
+          "source": "hilton-poll"
+        },
+        {
+          "name": "President Nixon resigns over Watergate",
+          "emoji": "🏛️",
+          "year": 1974,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "The Pokémon cartoon first airs",
+          "emoji": "⚡",
+          "year": 1997,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Coco is released",
+          "emoji": "💀",
+          "year": 2017,
+          "source": "pixar"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Star Trek first airs",
+          "emoji": "🖖",
+          "year": 1966,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "The Chernobyl nuclear disaster",
+          "emoji": "☢️",
+          "year": 1986,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "The \"Y2K\" millennium bug panic",
+          "emoji": "💻",
+          "year": 1999,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Donald Trump is elected president for the first time",
+          "emoji": "🗳️",
+          "year": 2016,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Prince Harry marries Meghan Markle",
+          "emoji": "💒",
+          "year": 2018,
+          "source": "2010s-roundups"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The first Narnia book is published",
+          "emoji": "🦁",
+          "year": 1950,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "The AIDS crisis begins",
+          "emoji": "🎗️",
+          "year": 1981,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Nelson Mandela is released from prison",
+          "emoji": "✊",
+          "year": 1990,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "MySpace launches",
+          "emoji": "👥",
+          "year": 2003,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Parasite is released",
+          "emoji": "🏠",
+          "year": 2019,
+          "source": "watchmojo-top100"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The car shoulder seat belt is invented",
+          "emoji": "🚘",
+          "year": 1959,
+          "source": "britannica"
+        },
+        {
+          "name": "The Clinton–Lewinsky scandal",
+          "emoji": "🏛️",
+          "year": 1998,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Avril Lavigne releases \"Girlfriend\"",
+          "emoji": "🎸",
+          "year": 2007,
+          "source": "best-selling-singles"
+        },
+        {
+          "name": "Prince William marries Kate Middleton",
+          "emoji": "💍",
+          "year": 2011,
+          "source": "2010s-roundups"
+        },
+        {
+          "name": "Frozen is released",
+          "emoji": "❄️",
+          "year": 2013,
+          "source": "watchmojo-top100"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The Godfather is released",
+          "emoji": "🌹",
+          "year": 1972,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "YouTube launches",
+          "emoji": "▶️",
+          "year": 2005,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "The global financial crisis",
+          "emoji": "📉",
+          "year": 2008,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Lady Gaga wears her meat dress",
+          "emoji": "🥩",
+          "year": 2010,
+          "source": "2010s-roundups"
+        },
+        {
+          "name": "The UK votes for Brexit",
+          "emoji": "🇬🇧",
+          "year": 2016,
+          "source": "watchmojo-top100"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Penicillin is first used to treat a patient",
+          "emoji": "💊",
+          "year": 1942,
+          "source": "hilton-poll"
+        },
+        {
+          "name": "The Jungle Book is released",
+          "emoji": "🐻",
+          "year": 1967,
+          "source": "disney-animation"
+        },
+        {
+          "name": "Walt Disney World opens",
+          "emoji": "🎢",
+          "year": 1971,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Facebook launches",
+          "emoji": "👍",
+          "year": 2004,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Beyoncé headlines Coachella (\"Beychella\")",
+          "emoji": "🐝",
+          "year": 2018,
+          "source": "2010s-roundups"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Yuri Gagarin becomes the first person in space",
+          "emoji": "🚀",
+          "year": 1961,
+          "source": "hilton-poll"
+        },
+        {
+          "name": "MTV goes on air",
+          "emoji": "📺",
+          "year": 1981,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "\"We Are the World\" is released",
+          "emoji": "🌍",
+          "year": 1985,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "Barack Obama is elected president",
+          "emoji": "🗳️",
+          "year": 2008,
+          "source": "watchmojo-top100"
+        },
+        {
+          "name": "The Thai cave rescue of a boys' football team",
+          "emoji": "🕳️",
+          "year": 2018,
+          "source": "watchmojo-top100"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The telephone is patented",
+          "emoji": "☎️",
+          "year": 1876,
+          "source": "britannica"
+        },
+        {
+          "name": "Citizen Kane is released",
+          "emoji": "🎬",
+          "year": 1941,
+          "source": "afi-100"
+        },
+        {
+          "name": "The Beatles release Sgt. Pepper's Lonely Hearts Club Band",
+          "emoji": "🥁",
+          "year": 1967,
+          "source": "stacker-music"
+        },
+        {
+          "name": "Tetris is created",
+          "emoji": "🟦",
+          "year": 1984,
+          "source": "time-50-games"
+        },
+        {
+          "name": "The Paris Olympics open with a boat parade on the Seine",
+          "emoji": "🚤",
+          "year": 2024,
+          "source": "fortune-2024"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Thomas Edison invents the phonograph",
+          "emoji": "📯",
+          "year": 1877,
+          "source": "stacker-music"
+        },
+        {
+          "name": "King Kong is released",
+          "emoji": "🦍",
+          "year": 1933,
+          "source": "afi-100"
+        },
+        {
+          "name": "Anne Frank's diary is published",
+          "emoji": "📔",
+          "year": 1947,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "The World Wide Web goes live",
+          "emoji": "🌐",
+          "year": 1991,
+          "source": "mentalfloss-internet"
+        },
+        {
+          "name": "Oasis announce their reunion",
+          "emoji": "🎸",
+          "year": 2024,
+          "source": "fortune-2024"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The light bulb is invented",
+          "emoji": "💡",
+          "year": 1879,
+          "source": "britannica"
+        },
+        {
+          "name": "The Wizard of Oz is released",
+          "emoji": "🌈",
+          "year": 1939,
+          "source": "afi-100"
+        },
+        {
+          "name": "Chicago's Sears Tower becomes the world's tallest building",
+          "emoji": "🏙️",
+          "year": 1973,
+          "source": "tallest-buildings-history"
+        },
+        {
+          "name": "Super Mario 64 is released",
+          "emoji": "🍄",
+          "year": 1996,
+          "source": "time-50-games"
+        },
+        {
+          "name": "\"Brat summer\" takes over",
+          "emoji": "💚",
+          "year": 2024,
+          "source": "fortune-2024"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "X-rays are discovered",
+          "emoji": "🦴",
+          "year": 1895,
+          "source": "britannica"
+        },
+        {
+          "name": "Casablanca is released",
+          "emoji": "🎬",
+          "year": 1942,
+          "source": "afi-100"
+        },
+        {
+          "name": "Elvis Presley releases \"It's Now or Never\"",
+          "emoji": "🎙️",
+          "year": 1960,
+          "source": "best-selling-singles"
+        },
+        {
+          "name": "Doom is released",
+          "emoji": "👹",
+          "year": 1993,
+          "source": "time-50-games"
+        },
+        {
+          "name": "Simone Biles wins all-around gold in Paris",
+          "emoji": "🤸",
+          "year": 2024,
+          "source": "ringer-100"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The teddy bear is invented",
+          "emoji": "🧸",
+          "year": 1902,
+          "source": "britannica"
+        },
+        {
+          "name": "Gone with the Wind is released",
+          "emoji": "🌪️",
+          "year": 1939,
+          "source": "afi-100"
+        },
+        {
+          "name": "The first Grammy Awards are held",
+          "emoji": "🏆",
+          "year": 1959,
+          "source": "stacker-music"
+        },
+        {
+          "name": "The Legend of Zelda: Ocarina of Time is released",
+          "emoji": "🗡️",
+          "year": 1998,
+          "source": "time-50-games"
+        },
+        {
+          "name": "Moo Deng the baby hippo goes viral",
+          "emoji": "🦛",
+          "year": 2024,
+          "source": "fortune-2024"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The crossword puzzle is invented",
+          "emoji": "✏️",
+          "year": 1913,
+          "source": "britannica"
+        },
+        {
+          "name": "Singin' in the Rain is released",
+          "emoji": "☔",
+          "year": 1952,
+          "source": "afi-100"
+        },
+        {
+          "name": "The cassette tape is introduced",
+          "emoji": "📼",
+          "year": 1963,
+          "source": "stacker-music"
+        },
+        {
+          "name": "World of Warcraft is released",
+          "emoji": "⚔️",
+          "year": 2004,
+          "source": "time-50-games"
+        },
+        {
+          "name": "Steph Curry leads the USA to Olympic basketball gold",
+          "emoji": "🏀",
+          "year": 2024,
+          "source": "ringer-100"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Sliced bread goes on sale",
+          "emoji": "🍞",
+          "year": 1928,
+          "source": "britannica"
+        },
+        {
+          "name": "It's a Wonderful Life is released",
+          "emoji": "🔔",
+          "year": 1946,
+          "source": "afi-100"
+        },
+        {
+          "name": "The Beatles play their last live show, on a rooftop",
+          "emoji": "🏢",
+          "year": 1969,
+          "source": "stacker-music"
+        },
+        {
+          "name": "Minecraft is released",
+          "emoji": "⛏️",
+          "year": 2011,
+          "source": "time-50-games"
+        },
+        {
+          "name": "Spain win the Women's World Cup",
+          "emoji": "⚽",
+          "year": 2023,
+          "source": "topendsports"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The ballpoint pen is invented",
+          "emoji": "🖊️",
+          "year": 1938,
+          "source": "britannica"
+        },
+        {
+          "name": "Psycho is released",
+          "emoji": "🔪",
+          "year": 1960,
+          "source": "afi-100"
+        },
+        {
+          "name": "Dolly Parton releases \"Jolene\"",
+          "emoji": "🎤",
+          "year": 1973,
+          "source": "stacker-music"
+        },
+        {
+          "name": "Grand Theft Auto III is released",
+          "emoji": "🚗",
+          "year": 2001,
+          "source": "time-50-games"
+        },
+        {
+          "name": "Messi wins his eighth Ballon d'Or",
+          "emoji": "⚽",
+          "year": 2023,
+          "source": "ballon-dor"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The microwave oven is invented",
+          "emoji": "🍿",
+          "year": 1945,
+          "source": "britannica"
+        },
+        {
+          "name": "The Sound of Music is released",
+          "emoji": "🎶",
+          "year": 1965,
+          "source": "afi-100"
+        },
+        {
+          "name": "Saturday Night Live first airs",
+          "emoji": "🎭",
+          "year": 1975,
+          "source": "tvguide-50"
+        },
+        {
+          "name": "Mortal Kombat is released",
+          "emoji": "🥋",
+          "year": 1992,
+          "source": "time-50-games"
+        },
+        {
+          "name": "The Last Dance documentary about Michael Jordan",
+          "emoji": "🏀",
+          "year": 2020,
+          "source": "ringer-100"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The bikini is invented",
+          "emoji": "👙",
+          "year": 1946,
+          "source": "britannica"
+        },
+        {
+          "name": "2001: A Space Odyssey is released",
+          "emoji": "🪐",
+          "year": 1968,
+          "source": "afi-100"
+        },
+        {
+          "name": "The Saturday Night Fever soundtrack becomes a smash hit",
+          "emoji": "🕺",
+          "year": 1977,
+          "source": "stacker-music"
+        },
+        {
+          "name": "The Sims is released",
+          "emoji": "🏡",
+          "year": 2000,
+          "source": "time-50-games"
+        },
+        {
+          "name": "Skateboarding and surfing debut at the Olympics",
+          "emoji": "🛹",
+          "year": 2021,
+          "source": "topendsports"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Velcro is invented",
+          "emoji": "🩹",
+          "year": 1948,
+          "source": "britannica"
+        },
+        {
+          "name": "Rocky is released",
+          "emoji": "🥊",
+          "year": 1976,
+          "source": "afi-100"
+        },
+        {
+          "name": "CDs go on sale",
+          "emoji": "💿",
+          "year": 1982,
+          "source": "stacker-music"
+        },
+        {
+          "name": "Zidane headbutts Materazzi in the World Cup final",
+          "emoji": "⚽",
+          "year": 2006,
+          "source": "ringer-100"
+        },
+        {
+          "name": "\"The Dress\" divides the internet",
+          "emoji": "👗",
+          "year": 2015,
+          "source": "mentalfloss-internet"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The credit card is invented",
+          "emoji": "💳",
+          "year": 1950,
+          "source": "britannica"
+        },
+        {
+          "name": "Raiders of the Lost Ark is released",
+          "emoji": "🤠",
+          "year": 1981,
+          "source": "afi-100"
+        },
+        {
+          "name": "Michael Jackson first does the moonwalk on TV",
+          "emoji": "🌙",
+          "year": 1983,
+          "source": "stacker-music"
+        },
+        {
+          "name": "Hotmail launches",
+          "emoji": "📧",
+          "year": 1996,
+          "source": "mentalfloss-internet"
+        },
+        {
+          "name": "Usain Bolt wins the 100m and 200m again in London",
+          "emoji": "⚡",
+          "year": 2012,
+          "source": "topendsports"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The bar code is invented",
+          "emoji": "🏷️",
+          "year": 1952,
+          "source": "britannica"
+        },
+        {
+          "name": "E.T. the Extra-Terrestrial is released",
+          "emoji": "👽",
+          "year": 1982,
+          "source": "afi-100"
+        },
+        {
+          "name": "Madonna performs \"Like a Virgin\" at the VMAs",
+          "emoji": "👰",
+          "year": 1984,
+          "source": "stacker-music"
+        },
+        {
+          "name": "Wikipedia launches",
+          "emoji": "📚",
+          "year": 2001,
+          "source": "mentalfloss-internet"
+        },
+        {
+          "name": "Germany beat Brazil 7–1 at the World Cup",
+          "emoji": "⚽",
+          "year": 2014,
+          "source": "ringer-100"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Play-Doh goes on sale",
+          "emoji": "🟣",
+          "year": 1956,
+          "source": "britannica"
+        },
+        {
+          "name": "The Legend of Zelda is released",
+          "emoji": "🛡️",
+          "year": 1986,
+          "source": "time-50-games"
+        },
+        {
+          "name": "The Silence of the Lambs is released",
+          "emoji": "🦋",
+          "year": 1991,
+          "source": "afi-100"
+        },
+        {
+          "name": "Whitney Houston releases \"I Will Always Love You\"",
+          "emoji": "🎤",
+          "year": 1992,
+          "source": "stacker-music"
+        },
+        {
+          "name": "The first-ever tweet is sent",
+          "emoji": "🐦",
+          "year": 2006,
+          "source": "mentalfloss-internet"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The birth control pill is approved",
+          "emoji": "💊",
+          "year": 1960,
+          "source": "nbc-science"
+        },
+        {
+          "name": "Donkey Kong is released",
+          "emoji": "🦍",
+          "year": 1981,
+          "source": "time-50-games"
+        },
+        {
+          "name": "Schindler's List is released",
+          "emoji": "🎬",
+          "year": 1993,
+          "source": "afi-100"
+        },
+        {
+          "name": "Mariah Carey releases \"All I Want for Christmas Is You\"",
+          "emoji": "🎄",
+          "year": 1994,
+          "source": "stacker-music"
+        },
+        {
+          "name": "Leicester City win the Premier League as huge outsiders",
+          "emoji": "🦊",
+          "year": 2016,
+          "source": "topendsports"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Blue jeans are patented",
+          "emoji": "👖",
+          "year": 1873,
+          "source": "britannica"
+        },
+        {
+          "name": "Seinfeld first airs",
+          "emoji": "🥨",
+          "year": 1989,
+          "source": "tvguide-50"
+        },
+        {
+          "name": "Forrest Gump is released",
+          "emoji": "🏃",
+          "year": 1994,
+          "source": "afi-100"
+        },
+        {
+          "name": "The Spice Girls release \"Wannabe\"",
+          "emoji": "🌶️",
+          "year": 1996,
+          "source": "stacker-music"
+        },
+        {
+          "name": "France win the World Cup in Russia",
+          "emoji": "🇫🇷",
+          "year": 2018,
+          "source": "world-cup-finals"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The first email is sent",
+          "emoji": "📨",
+          "year": 1971,
+          "source": "britannica"
+        },
+        {
+          "name": "Space Invaders is released",
+          "emoji": "👾",
+          "year": 1978,
+          "source": "time-50-games"
+        },
+        {
+          "name": "Pulp Fiction is released",
+          "emoji": "🍔",
+          "year": 1994,
+          "source": "afi-100"
+        },
+        {
+          "name": "Britney Spears releases \"...Baby One More Time\"",
+          "emoji": "🎀",
+          "year": 1998,
+          "source": "stacker-music"
+        },
+        {
+          "name": "The Cricket World Cup final ends in a tie",
+          "emoji": "🏏",
+          "year": 2019,
+          "source": "topendsports"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The laser is invented",
+          "emoji": "🔦",
+          "year": 1960,
+          "source": "nbc-science"
+        },
+        {
+          "name": "Super Mario Bros. is released",
+          "emoji": "🍄",
+          "year": 1985,
+          "source": "time-50-games"
+        },
+        {
+          "name": "The Shawshank Redemption is released",
+          "emoji": "🔨",
+          "year": 1994,
+          "source": "afi-100"
+        },
+        {
+          "name": "American Idol first airs",
+          "emoji": "🎙️",
+          "year": 2002,
+          "source": "stacker-music"
+        },
+        {
+          "name": "Kanye West interrupts Taylor Swift at the VMAs",
+          "emoji": "🎤",
+          "year": 2009,
+          "source": "stacker-music"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Roger Bannister runs the first 4-minute mile",
+          "emoji": "⏱️",
+          "year": 1954,
+          "source": "topendsports"
+        },
+        {
+          "name": "Ben-Hur is released",
+          "emoji": "🏇",
+          "year": 1959,
+          "source": "afi-100"
+        },
+        {
+          "name": "Yahoo! launches",
+          "emoji": "🔎",
+          "year": 1994,
+          "source": "mentalfloss-internet"
+        },
+        {
+          "name": "The first Pokémon games are released",
+          "emoji": "⚡",
+          "year": 1996,
+          "source": "time-50-games"
+        },
+        {
+          "name": "Rebecca Black's \"Friday\" goes viral",
+          "emoji": "📅",
+          "year": 2011,
+          "source": "stacker-music"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Pong is released",
+          "emoji": "🏓",
+          "year": 1972,
+          "source": "time-50-games"
+        },
+        {
+          "name": "The Sopranos first airs",
+          "emoji": "🍝",
+          "year": 1999,
+          "source": "rollingstone-100"
+        },
+        {
+          "name": "The Lord of the Rings: The Fellowship of the Ring is released",
+          "emoji": "💍",
+          "year": 2001,
+          "source": "afi-100"
+        },
+        {
+          "name": "Fernando Alonso wins his first F1 title",
+          "emoji": "🏎️",
+          "year": 2005,
+          "source": "f1-champions"
+        },
+        {
+          "name": "Instagram launches",
+          "emoji": "📸",
+          "year": 2010,
+          "source": "mentalfloss-internet"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The DVD is invented",
+          "emoji": "📀",
+          "year": 1995,
+          "source": "britannica"
+        },
+        {
+          "name": "The Sixth Sense is released",
+          "emoji": "👻",
+          "year": 1999,
+          "source": "afi-100"
+        },
+        {
+          "name": "Halo is released",
+          "emoji": "🪖",
+          "year": 2001,
+          "source": "time-50-games"
+        },
+        {
+          "name": "Kobe Bryant scores 81 points in one game",
+          "emoji": "🏀",
+          "year": 2006,
+          "source": "ringer-100"
+        },
+        {
+          "name": "Netflix starts streaming",
+          "emoji": "🍿",
+          "year": 2007,
+          "source": "mentalfloss-internet"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Wi-Fi is introduced",
+          "emoji": "📶",
+          "year": 1997,
+          "source": "mentalfloss-internet"
+        },
+        {
+          "name": "Guitar Hero is released",
+          "emoji": "🎸",
+          "year": 2005,
+          "source": "time-50-games"
+        },
+        {
+          "name": "Breaking Bad first airs",
+          "emoji": "⚗️",
+          "year": 2008,
+          "source": "rollingstone-100"
+        },
+        {
+          "name": "Agüero's last-minute goal wins Man City the league",
+          "emoji": "⚽",
+          "year": 2012,
+          "source": "ringer-100"
+        },
+        {
+          "name": "Lady Gaga & Bradley Cooper release \"Shallow\"",
+          "emoji": "⭐",
+          "year": 2018,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The typewriter is invented",
+          "emoji": "⌨️",
+          "year": 1868,
+          "source": "britannica"
+        },
+        {
+          "name": "Berlin hosts the Olympics",
+          "emoji": "🇩🇪",
+          "year": 1936,
+          "source": "olympic-hosts"
+        },
+        {
+          "name": "To Kill a Mockingbird is published",
+          "emoji": "🐦",
+          "year": 1960,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Ghost (with Patrick Swayze) is released",
+          "emoji": "🏺",
+          "year": 1990,
+          "source": "highest-grossing-by-year"
+        },
+        {
+          "name": "Justin Bieber releases \"Sorry\"",
+          "emoji": "🙏",
+          "year": 2015,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The motorcycle is invented",
+          "emoji": "🏍️",
+          "year": 1885,
+          "source": "britannica"
+        },
+        {
+          "name": "Top Gun is released",
+          "emoji": "✈️",
+          "year": 1986,
+          "source": "highest-grossing-by-year"
+        },
+        {
+          "name": "A Series of Unfortunate Events begins",
+          "emoji": "📕",
+          "year": 1999,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Beyoncé wins six Grammys in one night",
+          "emoji": "🏆",
+          "year": 2010,
+          "source": "stacker-music"
+        },
+        {
+          "name": "PSG win their first Champions League",
+          "emoji": "🔵",
+          "year": 2025,
+          "source": "champions-league-finals"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The drinking straw is invented",
+          "emoji": "🥤",
+          "year": 1888,
+          "source": "britannica"
+        },
+        {
+          "name": "Catch-22 is published",
+          "emoji": "✈️",
+          "year": 1961,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "AC/DC release Back in Black",
+          "emoji": "⚡",
+          "year": 1980,
+          "source": "best-selling-albums"
+        },
+        {
+          "name": "Toy Story 2 is released",
+          "emoji": "🤠",
+          "year": 1999,
+          "source": "pixar"
+        },
+        {
+          "name": "South Africa win the Rugby World Cup in Japan",
+          "emoji": "🏉",
+          "year": 2019,
+          "source": "rugby-world-cup"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The jukebox is invented",
+          "emoji": "📻",
+          "year": 1889,
+          "source": "britannica"
+        },
+        {
+          "name": "Peter Pan is released",
+          "emoji": "🧚",
+          "year": 1953,
+          "source": "disney-animation"
+        },
+        {
+          "name": "Seoul hosts the Olympics",
+          "emoji": "🇰🇷",
+          "year": 1988,
+          "source": "olympic-hosts"
+        },
+        {
+          "name": "The Gruffalo is published",
+          "emoji": "👹",
+          "year": 1999,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "The Weeknd releases \"Blinding Lights\"",
+          "emoji": "💡",
+          "year": 2019,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The radio is invented",
+          "emoji": "📻",
+          "year": 1896,
+          "source": "britannica"
+        },
+        {
+          "name": "Queen's Greatest Hits is released",
+          "emoji": "👑",
+          "year": 1981,
+          "source": "best-selling-albums"
+        },
+        {
+          "name": "His Dark Materials begins",
+          "emoji": "🧭",
+          "year": 1995,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Finding Nemo is released",
+          "emoji": "🐠",
+          "year": 2003,
+          "source": "pixar"
+        },
+        {
+          "name": "Barcelona win the Champions League with Messi, Suárez and Neymar",
+          "emoji": "🔵🔴",
+          "year": 2015,
+          "source": "champions-league-finals"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Potato chips are invented",
+          "emoji": "🥔",
+          "year": 1853,
+          "source": "britannica"
+        },
+        {
+          "name": "Mexico City hosts the Olympics",
+          "emoji": "🇲🇽",
+          "year": 1968,
+          "source": "olympic-hosts"
+        },
+        {
+          "name": "The Police release \"Every Breath You Take\"",
+          "emoji": "👀",
+          "year": 1983,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "Bridget Jones's Diary is published",
+          "emoji": "📔",
+          "year": 1996,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Inside Out is released",
+          "emoji": "😢",
+          "year": 2015,
+          "source": "pixar"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Alice's Adventures in Wonderland is published",
+          "emoji": "🐇",
+          "year": 1865,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "The zipper is invented",
+          "emoji": "🤐",
+          "year": 1893,
+          "source": "britannica"
+        },
+        {
+          "name": "Guns N' Roses release \"Sweet Child O' Mine\"",
+          "emoji": "🎸",
+          "year": 1987,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "The Departed is released",
+          "emoji": "🕵️",
+          "year": 2006,
+          "source": "oscar-best-picture"
+        },
+        {
+          "name": "Sochi hosts the Winter Olympics",
+          "emoji": "⛷️",
+          "year": 2014,
+          "source": "olympic-hosts"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Contact lenses are invented",
+          "emoji": "👁️",
+          "year": 1887,
+          "source": "britannica"
+        },
+        {
+          "name": "Eagles release Hotel California",
+          "emoji": "🏨",
+          "year": 1976,
+          "source": "best-selling-albums"
+        },
+        {
+          "name": "Michael Schumacher wins his first F1 title",
+          "emoji": "🏎️",
+          "year": 1994,
+          "source": "f1-champions"
+        },
+        {
+          "name": "The Lovely Bones is published",
+          "emoji": "📖",
+          "year": 2002,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Harry Potter and the Deathly Hallows – Part 2 is released",
+          "emoji": "🪄",
+          "year": 2011,
+          "source": "highest-grossing-by-year"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The paper clip is invented",
+          "emoji": "📎",
+          "year": 1899,
+          "source": "britannica"
+        },
+        {
+          "name": "The Hitchhiker's Guide to the Galaxy is published",
+          "emoji": "🌌",
+          "year": 1979,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Shrek 2 is released",
+          "emoji": "🟢",
+          "year": 2004,
+          "source": "highest-grossing-by-year"
+        },
+        {
+          "name": "Cristiano Ronaldo wins back-to-back Ballons d'Or",
+          "emoji": "⚽",
+          "year": 2014,
+          "source": "ballon-dor"
+        },
+        {
+          "name": "Sabrina Carpenter releases \"Espresso\"",
+          "emoji": "☕",
+          "year": 2024,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Pride and Prejudice is published",
+          "emoji": "📖",
+          "year": 1813,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "The periodic table is created",
+          "emoji": "🧪",
+          "year": 1871,
+          "source": "britannica"
+        },
+        {
+          "name": "West Germany win their first World Cup",
+          "emoji": "🇩🇪",
+          "year": 1954,
+          "source": "world-cup-finals"
+        },
+        {
+          "name": "The first Harry Potter film is released",
+          "emoji": "⚡",
+          "year": 2001,
+          "source": "highest-grossing-by-year"
+        },
+        {
+          "name": "Tones and I release \"Dance Monkey\"",
+          "emoji": "🐒",
+          "year": 2019,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The first Christmas card is sent",
+          "emoji": "🎄",
+          "year": 1843,
+          "source": "britannica"
+        },
+        {
+          "name": "Gone with the Wind (the novel) is published",
+          "emoji": "📖",
+          "year": 1936,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Lady and the Tramp is released",
+          "emoji": "🍝",
+          "year": 1955,
+          "source": "disney-animation"
+        },
+        {
+          "name": "Sydney hosts the Olympics",
+          "emoji": "🇦🇺",
+          "year": 2000,
+          "source": "olympic-hosts"
+        },
+        {
+          "name": "Post Malone & 21 Savage release \"Rockstar\"",
+          "emoji": "🎸",
+          "year": 2017,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The dishwasher is invented",
+          "emoji": "🍽️",
+          "year": 1886,
+          "source": "britannica"
+        },
+        {
+          "name": "Bob Marley's Legend is released",
+          "emoji": "🇯🇲",
+          "year": 1984,
+          "source": "best-selling-albums"
+        },
+        {
+          "name": "Ronaldinho wins the Ballon d'Or",
+          "emoji": "⚽",
+          "year": 2005,
+          "source": "ballon-dor"
+        },
+        {
+          "name": "Grand Theft Auto V is released",
+          "emoji": "💰",
+          "year": 2013,
+          "source": "best-selling-video-games"
+        },
+        {
+          "name": "Zootopia 2 is released",
+          "emoji": "🦊",
+          "year": 2025,
+          "source": "disney-animation"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The electric washing machine is invented",
+          "emoji": "🧺",
+          "year": 1907,
+          "source": "britannica"
+        },
+        {
+          "name": "Disney's Robin Hood is released",
+          "emoji": "🦊",
+          "year": 1973,
+          "source": "disney-animation"
+        },
+        {
+          "name": "Where's Wally? is published",
+          "emoji": "🔍",
+          "year": 1987,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Roger Federer wins his first Wimbledon",
+          "emoji": "🎾",
+          "year": 2003,
+          "source": "wimbledon-champions"
+        },
+        {
+          "name": "Ed Sheeran releases \"Shape of You\"",
+          "emoji": "🔷",
+          "year": 2017,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The passenger elevator is invented",
+          "emoji": "🛗",
+          "year": 1852,
+          "source": "britannica"
+        },
+        {
+          "name": "Blade Runner is released",
+          "emoji": "🌃",
+          "year": 1982,
+          "source": "afi-100"
+        },
+        {
+          "name": "Venus Williams wins her first Wimbledon",
+          "emoji": "🎾",
+          "year": 2000,
+          "source": "wimbledon-champions"
+        },
+        {
+          "name": "The first Just Dance is released",
+          "emoji": "💃",
+          "year": 2009,
+          "source": "best-selling-franchises"
+        },
+        {
+          "name": "Lewis Capaldi releases \"Someone You Loved\"",
+          "emoji": "💔",
+          "year": 2018,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The Catcher in the Rye is published",
+          "emoji": "🧢",
+          "year": 1951,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "The Dirty Dancing soundtrack is released",
+          "emoji": "💃",
+          "year": 1987,
+          "source": "best-selling-albums"
+        },
+        {
+          "name": "Liverpool come back from 3–0 down to win the Champions League in Istanbul",
+          "emoji": "🔴",
+          "year": 2005,
+          "source": "champions-league-finals"
+        },
+        {
+          "name": "The PlayStation 4 goes on sale",
+          "emoji": "🎮",
+          "year": 2013,
+          "source": "best-selling-consoles"
+        },
+        {
+          "name": "Moana 2 is released",
+          "emoji": "🌊",
+          "year": 2024,
+          "source": "disney-animation"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Chamonix hosts the first Winter Olympics",
+          "emoji": "⛷️",
+          "year": 1924,
+          "source": "olympic-hosts"
+        },
+        {
+          "name": "Charlie and the Chocolate Factory is published",
+          "emoji": "🍫",
+          "year": 1964,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Nirvana release \"Smells Like Teen Spirit\"",
+          "emoji": "🎸",
+          "year": 1991,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "The first God of War is released",
+          "emoji": "🪓",
+          "year": 2005,
+          "source": "best-selling-franchises"
+        },
+        {
+          "name": "Incredibles 2 is released",
+          "emoji": "🦸",
+          "year": 2018,
+          "source": "pixar"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Crayons are invented",
+          "emoji": "🖍️",
+          "year": 1903,
+          "source": "britannica"
+        },
+        {
+          "name": "Fantasia is released",
+          "emoji": "🎼",
+          "year": 1940,
+          "source": "disney-animation"
+        },
+        {
+          "name": "The Super Nintendo goes on sale",
+          "emoji": "🎮",
+          "year": 1990,
+          "source": "best-selling-consoles"
+        },
+        {
+          "name": "England win the Rugby World Cup",
+          "emoji": "🏉",
+          "year": 2003,
+          "source": "rugby-world-cup"
+        },
+        {
+          "name": "Taylor Swift releases \"Cruel Summer\"",
+          "emoji": "☀️",
+          "year": 2019,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Insulin is first extracted to treat diabetes",
+          "emoji": "💉",
+          "year": 1921,
+          "source": "britannica"
+        },
+        {
+          "name": "Norwegian Wood is published",
+          "emoji": "🌲",
+          "year": 1987,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Nirvana play MTV Unplugged",
+          "emoji": "🌻",
+          "year": 1993,
+          "source": "stacker-music"
+        },
+        {
+          "name": "Lewis Hamilton wins his first F1 title",
+          "emoji": "🏎️",
+          "year": 2008,
+          "source": "f1-champions"
+        },
+        {
+          "name": "Ralph Breaks the Internet is released",
+          "emoji": "💻",
+          "year": 2018,
+          "source": "disney-animation"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Taxi Driver is released",
+          "emoji": "🚕",
+          "year": 1976,
+          "source": "afi-100"
+        },
+        {
+          "name": "Super Mario Kart is released",
+          "emoji": "🏁",
+          "year": 1992,
+          "source": "time-50-games"
+        },
+        {
+          "name": "Brazil win the World Cup in Japan and South Korea",
+          "emoji": "🇧🇷",
+          "year": 2002,
+          "source": "world-cup-finals"
+        },
+        {
+          "name": "Gone Girl is published",
+          "emoji": "📖",
+          "year": 2012,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Rosé & Bruno Mars release \"APT.\"",
+          "emoji": "🏢",
+          "year": 2024,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Pinocchio is released",
+          "emoji": "🤥",
+          "year": 1940,
+          "source": "disney-animation"
+        },
+        {
+          "name": "The LED light is invented",
+          "emoji": "💡",
+          "year": 1962,
+          "source": "britannica"
+        },
+        {
+          "name": "Ayrton Senna wins his first F1 title",
+          "emoji": "🏎️",
+          "year": 1988,
+          "source": "f1-champions"
+        },
+        {
+          "name": "The Kite Runner is published",
+          "emoji": "🪁",
+          "year": 2003,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Ariana Grande releases \"7 Rings\"",
+          "emoji": "💍",
+          "year": 2019,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Scotch tape is invented",
+          "emoji": "📎",
+          "year": 1930,
+          "source": "britannica"
+        },
+        {
+          "name": "Tokyo hosts its first Olympics",
+          "emoji": "🇯🇵",
+          "year": 1964,
+          "source": "olympic-hosts"
+        },
+        {
+          "name": "Beauty and the Beast is released",
+          "emoji": "🌹",
+          "year": 1991,
+          "source": "disney-animation"
+        },
+        {
+          "name": "Bruno Mars releases \"Locked Out of Heaven\"",
+          "emoji": "🔒",
+          "year": 2012,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "The PlayStation 5 goes on sale",
+          "emoji": "🎮",
+          "year": 2020,
+          "source": "best-selling-consoles"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The Little Prince is published",
+          "emoji": "🌹",
+          "year": 1943,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Mario stars in his own game for the first time (Mario Bros.)",
+          "emoji": "🍄",
+          "year": 1983,
+          "source": "best-selling-franchises"
+        },
+        {
+          "name": "Tarzan is released",
+          "emoji": "🦍",
+          "year": 1999,
+          "source": "disney-animation"
+        },
+        {
+          "name": "New Zealand win the Rugby World Cup at home",
+          "emoji": "🏉",
+          "year": 2011,
+          "source": "rugby-world-cup"
+        },
+        {
+          "name": "Miley Cyrus releases \"Flowers\"",
+          "emoji": "🌸",
+          "year": 2023,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The pneumatic tyre is invented",
+          "emoji": "🛞",
+          "year": 1888,
+          "source": "britannica"
+        },
+        {
+          "name": "Michael Jackson releases Bad",
+          "emoji": "🕶️",
+          "year": 1987,
+          "source": "best-selling-albums"
+        },
+        {
+          "name": "The first Tomb Raider (Lara Croft) is released",
+          "emoji": "🏺",
+          "year": 1996,
+          "source": "best-selling-franchises"
+        },
+        {
+          "name": "The Lord of the Rings: The Return of the King is released",
+          "emoji": "👑",
+          "year": 2003,
+          "source": "highest-grossing-by-year"
+        },
+        {
+          "name": "Beijing hosts the Winter Olympics",
+          "emoji": "⛷️",
+          "year": 2022,
+          "source": "olympic-hosts"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The bra is invented",
+          "emoji": "👙",
+          "year": 1913,
+          "source": "britannica"
+        },
+        {
+          "name": "Paddington Bear first appears in a book",
+          "emoji": "🧸",
+          "year": 1958,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "West Germany win the World Cup at home",
+          "emoji": "🇩🇪",
+          "year": 1974,
+          "source": "world-cup-finals"
+        },
+        {
+          "name": "Woodstock '99 descends into chaos",
+          "emoji": "🔥",
+          "year": 1999,
+          "source": "stacker-music"
+        },
+        {
+          "name": "Tangled is released",
+          "emoji": "👱‍♀️",
+          "year": 2010,
+          "source": "disney-animation"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Grease is released",
+          "emoji": "🕺",
+          "year": 1978,
+          "source": "highest-grossing-by-year"
+        },
+        {
+          "name": "Matilda is published",
+          "emoji": "📚",
+          "year": 1988,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Salt Lake City hosts the Winter Olympics",
+          "emoji": "🏔️",
+          "year": 2002,
+          "source": "olympic-hosts"
+        },
+        {
+          "name": "Angry Birds is released",
+          "emoji": "🐦",
+          "year": 2009,
+          "source": "time-50-games"
+        },
+        {
+          "name": "Måneskin win Eurovision",
+          "emoji": "🇮🇹",
+          "year": 2021,
+          "source": "eurovision-winners"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The first supermarket opens",
+          "emoji": "🛒",
+          "year": 1930,
+          "source": "britannica"
+        },
+        {
+          "name": "The first PlayStation goes on sale",
+          "emoji": "🎮",
+          "year": 1994,
+          "source": "best-selling-consoles"
+        },
+        {
+          "name": "Santana release Supernatural",
+          "emoji": "🎸",
+          "year": 1999,
+          "source": "best-selling-albums"
+        },
+        {
+          "name": "Sebastian Vettel wins his first F1 title",
+          "emoji": "🏎️",
+          "year": 2010,
+          "source": "f1-champions"
+        },
+        {
+          "name": "Soul is released",
+          "emoji": "🎹",
+          "year": 2020,
+          "source": "pixar"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Nylon is invented",
+          "emoji": "🧵",
+          "year": 1937,
+          "source": "britannica"
+        },
+        {
+          "name": "From Russia with Love is released",
+          "emoji": "🚂",
+          "year": 1963,
+          "source": "bond-films"
+        },
+        {
+          "name": "Martina Navratilova wins a record ninth Wimbledon",
+          "emoji": "🎾",
+          "year": 1990,
+          "source": "wimbledon-champions"
+        },
+        {
+          "name": "The Girl with the Dragon Tattoo is published",
+          "emoji": "🐉",
+          "year": 2005,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "The Weeknd & Daft Punk release \"Starboy\"",
+          "emoji": "⭐",
+          "year": 2016,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Martina Navratilova wins her first Wimbledon",
+          "emoji": "🎾",
+          "year": 1978,
+          "source": "wimbledon-champions"
+        },
+        {
+          "name": "A Brief History of Time is published",
+          "emoji": "⏳",
+          "year": 1988,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Coldplay release \"Yellow\"",
+          "emoji": "💛",
+          "year": 2000,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "Mario Kart 8 is released",
+          "emoji": "🏎️",
+          "year": 2014,
+          "source": "best-selling-video-games"
+        },
+        {
+          "name": "Everything Everywhere All at Once is released",
+          "emoji": "🥯",
+          "year": 2022,
+          "source": "oscar-best-picture"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The jet engine is invented",
+          "emoji": "✈️",
+          "year": 1930,
+          "source": "britannica"
+        },
+        {
+          "name": "Live and Let Die (Roger Moore's first Bond film) is released",
+          "emoji": "🐊",
+          "year": 1973,
+          "source": "bond-films"
+        },
+        {
+          "name": "Brazil's Ronaldo wins his first Ballon d'Or",
+          "emoji": "⚽",
+          "year": 1997,
+          "source": "ballon-dor"
+        },
+        {
+          "name": "The Secret is published",
+          "emoji": "🤫",
+          "year": 2006,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Harry Styles releases \"Watermelon Sugar\"",
+          "emoji": "🍉",
+          "year": 2019,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The photocopier is invented",
+          "emoji": "🖨️",
+          "year": 1937,
+          "source": "britannica"
+        },
+        {
+          "name": "The Exorcist is released",
+          "emoji": "😱",
+          "year": 1973,
+          "source": "highest-grossing-by-year"
+        },
+        {
+          "name": "India win their first Cricket World Cup",
+          "emoji": "🏏",
+          "year": 1983,
+          "source": "cricket-world-cup"
+        },
+        {
+          "name": "Super Smash Bros. is released",
+          "emoji": "👊",
+          "year": 1999,
+          "source": "time-50-games"
+        },
+        {
+          "name": "Justin Bieber releases \"Love Yourself\"",
+          "emoji": "💔",
+          "year": 2015,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The Hobbit is published",
+          "emoji": "💍",
+          "year": 1937,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "London hosts the first post-war Olympics",
+          "emoji": "🇬🇧",
+          "year": 1948,
+          "source": "olympic-hosts"
+        },
+        {
+          "name": "Bon Jovi release Slippery When Wet",
+          "emoji": "🎸",
+          "year": 1986,
+          "source": "best-selling-albums"
+        },
+        {
+          "name": "The first Animal Crossing is released",
+          "emoji": "🍃",
+          "year": 2001,
+          "source": "best-selling-franchises"
+        },
+        {
+          "name": "Avengers: Infinity War is released",
+          "emoji": "💎",
+          "year": 2018,
+          "source": "highest-grossing-by-year"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The instant camera is invented",
+          "emoji": "📸",
+          "year": 1947,
+          "source": "britannica"
+        },
+        {
+          "name": "The Very Hungry Caterpillar is published",
+          "emoji": "🐛",
+          "year": 1969,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Eminem releases \"Lose Yourself\"",
+          "emoji": "🎤",
+          "year": 2002,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "Up is released",
+          "emoji": "🎈",
+          "year": 2009,
+          "source": "pixar"
+        },
+        {
+          "name": "Pyeongchang hosts the Winter Olympics",
+          "emoji": "🇰🇷",
+          "year": 2018,
+          "source": "olympic-hosts"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The vinyl LP record is invented",
+          "emoji": "💿",
+          "year": 1948,
+          "source": "britannica"
+        },
+        {
+          "name": "Moonraker is released",
+          "emoji": "🚀",
+          "year": 1979,
+          "source": "bond-films"
+        },
+        {
+          "name": "Brazil win the World Cup in the USA",
+          "emoji": "🇧🇷",
+          "year": 1994,
+          "source": "world-cup-finals"
+        },
+        {
+          "name": "The Nintendo Wii goes on sale",
+          "emoji": "🎮",
+          "year": 2006,
+          "source": "best-selling-consoles"
+        },
+        {
+          "name": "Post Malone releases \"Circles\"",
+          "emoji": "⭕",
+          "year": 2019,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Disposable nappies (diapers) are invented",
+          "emoji": "👶",
+          "year": 1950,
+          "source": "britannica"
+        },
+        {
+          "name": "West Indies win the first Cricket World Cup",
+          "emoji": "🏏",
+          "year": 1975,
+          "source": "cricket-world-cup"
+        },
+        {
+          "name": "Norah Jones releases Come Away with Me",
+          "emoji": "🎹",
+          "year": 2002,
+          "source": "best-selling-albums"
+        },
+        {
+          "name": "Fifty Shades of Grey is published",
+          "emoji": "🩶",
+          "year": 2011,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Bird Box is released on Netflix",
+          "emoji": "🙈",
+          "year": 2018,
+          "source": "netflix-most-watched"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The hair dryer is invented",
+          "emoji": "💨",
+          "year": 1920,
+          "source": "britannica"
+        },
+        {
+          "name": "The Atari 2600 goes on sale",
+          "emoji": "🕹️",
+          "year": 1977,
+          "source": "best-selling-consoles"
+        },
+        {
+          "name": "Star Wars: The Phantom Menace is released",
+          "emoji": "⚔️",
+          "year": 1999,
+          "source": "highest-grossing-by-year"
+        },
+        {
+          "name": "Inter Milan win the treble under José Mourinho",
+          "emoji": "⚫🔵",
+          "year": 2010,
+          "source": "champions-league-finals"
+        },
+        {
+          "name": "Elton John & Dua Lipa release \"Cold Heart\"",
+          "emoji": "❄️",
+          "year": 2021,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The first Mr. Men book is published",
+          "emoji": "🙂",
+          "year": 1971,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Duck Hunt is released",
+          "emoji": "🦆",
+          "year": 1984,
+          "source": "best-selling-video-games"
+        },
+        {
+          "name": "Metallica sue Napster",
+          "emoji": "⚖️",
+          "year": 2000,
+          "source": "stacker-music"
+        },
+        {
+          "name": "Kaká wins the Ballon d'Or",
+          "emoji": "⚽",
+          "year": 2007,
+          "source": "ballon-dor"
+        },
+        {
+          "name": "Big Hero 6 is released",
+          "emoji": "🤖",
+          "year": 2014,
+          "source": "disney-animation"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Bambi is released",
+          "emoji": "🦌",
+          "year": 1942,
+          "source": "disney-animation"
+        },
+        {
+          "name": "The personal computer is invented",
+          "emoji": "🖥️",
+          "year": 1974,
+          "source": "britannica"
+        },
+        {
+          "name": "Sonic the Hedgehog is released",
+          "emoji": "🦔",
+          "year": 1991,
+          "source": "best-selling-video-games"
+        },
+        {
+          "name": "Barcelona win the Champions League under Pep Guardiola",
+          "emoji": "🔵🔴",
+          "year": 2009,
+          "source": "champions-league-finals"
+        },
+        {
+          "name": "The Chainsmokers release \"Closer\"",
+          "emoji": "🚗",
+          "year": 2016,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Bing Crosby releases \"White Christmas\"",
+          "emoji": "🎄",
+          "year": 1942,
+          "source": "best-selling-singles"
+        },
+        {
+          "name": "The first FIFA video game is released",
+          "emoji": "⚽",
+          "year": 1993,
+          "source": "best-selling-franchises"
+        },
+        {
+          "name": "Lilo & Stitch is released",
+          "emoji": "🌺",
+          "year": 2002,
+          "source": "disney-animation"
+        },
+        {
+          "name": "Me Before You is published",
+          "emoji": "💛",
+          "year": 2012,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Karim Benzema wins the Ballon d'Or",
+          "emoji": "⚽",
+          "year": 2022,
+          "source": "ballon-dor"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Sunscreen is invented",
+          "emoji": "🧴",
+          "year": 1944,
+          "source": "britannica"
+        },
+        {
+          "name": "Rome hosts the Olympics",
+          "emoji": "🇮🇹",
+          "year": 1960,
+          "source": "olympic-hosts"
+        },
+        {
+          "name": "Cyndi Lauper releases \"Girls Just Want to Have Fun\"",
+          "emoji": "💃",
+          "year": 1983,
+          "source": "stacker-music"
+        },
+        {
+          "name": "The West Wing wins the Emmy for best drama",
+          "emoji": "🏛️",
+          "year": 2000,
+          "source": "emmy-best-drama"
+        },
+        {
+          "name": "Demon Slayer: Mugen Train becomes the year's top film",
+          "emoji": "🚂",
+          "year": 2020,
+          "source": "highest-grossing-by-year"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "War and Peace is published",
+          "emoji": "📖",
+          "year": 1869,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Cinderella is released",
+          "emoji": "👠",
+          "year": 1950,
+          "source": "disney-animation"
+        },
+        {
+          "name": "Porto, managed by José Mourinho, win the Champions League",
+          "emoji": "🔵",
+          "year": 2004,
+          "source": "champions-league-finals"
+        },
+        {
+          "name": "Avicii releases \"Wake Me Up\"",
+          "emoji": "🌅",
+          "year": 2013,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "Hogwarts Legacy is released",
+          "emoji": "🏰",
+          "year": 2023,
+          "source": "best-selling-video-games"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Scuba gear is invented",
+          "emoji": "🤿",
+          "year": 1943,
+          "source": "britannica"
+        },
+        {
+          "name": "Where the Wild Things Are is published",
+          "emoji": "👾",
+          "year": 1963,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Dire Straits release Brothers in Arms",
+          "emoji": "🎸",
+          "year": 1985,
+          "source": "best-selling-albums"
+        },
+        {
+          "name": "Monsters University is released",
+          "emoji": "🎓",
+          "year": 2013,
+          "source": "pixar"
+        },
+        {
+          "name": "Argentina and Messi win the World Cup in Qatar",
+          "emoji": "🏆",
+          "year": 2022,
+          "source": "world-cup-finals"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Ultrasound baby scans are invented",
+          "emoji": "🤰",
+          "year": 1958,
+          "source": "britannica"
+        },
+        {
+          "name": "Saving Private Ryan is released",
+          "emoji": "🪖",
+          "year": 1998,
+          "source": "afi-100"
+        },
+        {
+          "name": "The Sopranos wins the Emmy for best drama",
+          "emoji": "🍝",
+          "year": 2004,
+          "source": "emmy-best-drama"
+        },
+        {
+          "name": "Spain win their first World Cup",
+          "emoji": "🇪🇸",
+          "year": 2010,
+          "source": "world-cup-finals"
+        },
+        {
+          "name": "Post Malone releases \"Sunflower\"",
+          "emoji": "🌻",
+          "year": 2018,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Agatha Christie's And Then There Were None is published",
+          "emoji": "🔪",
+          "year": 1939,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Alanis Morissette releases Jagged Little Pill",
+          "emoji": "💊",
+          "year": 1995,
+          "source": "best-selling-albums"
+        },
+        {
+          "name": "Lost wins the Emmy for best drama",
+          "emoji": "🏝️",
+          "year": 2005,
+          "source": "emmy-best-drama"
+        },
+        {
+          "name": "India win the Cricket World Cup at home",
+          "emoji": "🏏",
+          "year": 2011,
+          "source": "cricket-world-cup"
+        },
+        {
+          "name": "Wish is released",
+          "emoji": "⭐",
+          "year": 2023,
+          "source": "disney-animation"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Curious George is published",
+          "emoji": "🐵",
+          "year": 1941,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Roberto Baggio wins the Ballon d'Or",
+          "emoji": "⚽",
+          "year": 1993,
+          "source": "ballon-dor"
+        },
+        {
+          "name": "Coldplay release \"The Scientist\"",
+          "emoji": "🔬",
+          "year": 2002,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "Finding Dory is released",
+          "emoji": "🐟",
+          "year": 2016,
+          "source": "pixar"
+        },
+        {
+          "name": "Elden Ring is released",
+          "emoji": "💍",
+          "year": 2022,
+          "source": "best-selling-video-games"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The car airbag is invented",
+          "emoji": "🚗",
+          "year": 1952,
+          "source": "britannica"
+        },
+        {
+          "name": "England win the World Cup",
+          "emoji": "🏴",
+          "year": 1966,
+          "source": "world-cup-finals"
+        },
+        {
+          "name": "Snoop Dogg makes West Coast hip-hop mainstream",
+          "emoji": "🎤",
+          "year": 1993,
+          "source": "stacker-music"
+        },
+        {
+          "name": "The King's Speech is released",
+          "emoji": "🎙️",
+          "year": 2010,
+          "source": "oscar-best-picture"
+        },
+        {
+          "name": "Red Dead Redemption 2 is released",
+          "emoji": "🐎",
+          "year": 2018,
+          "source": "best-selling-video-games"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Argentina win their first World Cup",
+          "emoji": "🇦🇷",
+          "year": 1978,
+          "source": "world-cup-finals"
+        },
+        {
+          "name": "The Tamagotchi goes on sale",
+          "emoji": "🥚",
+          "year": 1996,
+          "source": "best-selling-franchises"
+        },
+        {
+          "name": "Pirates of the Caribbean: At World's End is released",
+          "emoji": "🏴‍☠️",
+          "year": 2007,
+          "source": "highest-grossing-by-year"
+        },
+        {
+          "name": "U2 put their album on everyone's iTunes",
+          "emoji": "🍏",
+          "year": 2014,
+          "source": "stacker-music"
+        },
+        {
+          "name": "Kendrick Lamar headlines the Super Bowl halftime show",
+          "emoji": "👑",
+          "year": 2025,
+          "source": "super-bowl-halftime"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Goldfinger is released",
+          "emoji": "🥇",
+          "year": 1964,
+          "source": "bond-films"
+        },
+        {
+          "name": "The first IVF baby is born",
+          "emoji": "👶",
+          "year": 1978,
+          "source": "britannica"
+        },
+        {
+          "name": "Pakistan win the Cricket World Cup",
+          "emoji": "🏏",
+          "year": 1992,
+          "source": "cricket-world-cup"
+        },
+        {
+          "name": "The Black Eyed Peas headline the Super Bowl halftime show",
+          "emoji": "🏈",
+          "year": 2011,
+          "source": "super-bowl-halftime"
+        },
+        {
+          "name": "SZA releases \"Kill Bill\"",
+          "emoji": "🗡️",
+          "year": 2022,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The Thermos flask is invented",
+          "emoji": "🫖",
+          "year": 1892,
+          "source": "britannica"
+        },
+        {
+          "name": "Dune is published",
+          "emoji": "🏜️",
+          "year": 1965,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Hercules is released",
+          "emoji": "💪",
+          "year": 1997,
+          "source": "disney-animation"
+        },
+        {
+          "name": "Lionel Messi wins his first Ballon d'Or",
+          "emoji": "⚽",
+          "year": 2009,
+          "source": "ballon-dor"
+        },
+        {
+          "name": "Drake releases \"God's Plan\"",
+          "emoji": "🙏",
+          "year": 2018,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Bob Marley releases \"No Woman, No Cry\"",
+          "emoji": "🇯🇲",
+          "year": 1975,
+          "source": "stacker-music"
+        },
+        {
+          "name": "The first Game of Thrones book is published",
+          "emoji": "🐺",
+          "year": 1996,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Vancouver hosts the Winter Olympics",
+          "emoji": "🇨🇦",
+          "year": 2010,
+          "source": "olympic-hosts"
+        },
+        {
+          "name": "Lady Gaga jumps from the stadium roof at the Super Bowl",
+          "emoji": "🏈",
+          "year": 2017,
+          "source": "super-bowl-halftime"
+        },
+        {
+          "name": "Ne Zha 2 becomes the year's top film",
+          "emoji": "🐉",
+          "year": 2025,
+          "source": "highest-grossing-by-year"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The steel-frame skyscraper is invented",
+          "emoji": "🏙️",
+          "year": 1884,
+          "source": "britannica"
+        },
+        {
+          "name": "Mulan is released",
+          "emoji": "🗡️",
+          "year": 1998,
+          "source": "disney-animation"
+        },
+        {
+          "name": "The PlayStation 3 goes on sale",
+          "emoji": "🎮",
+          "year": 2006,
+          "source": "best-selling-consoles"
+        },
+        {
+          "name": "Pharrell Williams releases \"Happy\"",
+          "emoji": "😊",
+          "year": 2014,
+          "source": "best-selling-singles"
+        },
+        {
+          "name": "Real Madrid win the Champions League with a late comeback run",
+          "emoji": "⚪",
+          "year": 2022,
+          "source": "champions-league-finals"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Italy win the World Cup in Spain",
+          "emoji": "🇮🇹",
+          "year": 1982,
+          "source": "world-cup-finals"
+        },
+        {
+          "name": "GoldenEye (Pierce Brosnan's first Bond film) is released",
+          "emoji": "🕶️",
+          "year": 1995,
+          "source": "bond-films"
+        },
+        {
+          "name": "Diary of a Wimpy Kid is published",
+          "emoji": "📓",
+          "year": 2004,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "OneRepublic release \"Counting Stars\"",
+          "emoji": "⭐",
+          "year": 2013,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "The Crown wins the Emmy for best drama",
+          "emoji": "👑",
+          "year": 2021,
+          "source": "emmy-best-drama"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Mother Teresa wins the Nobel Peace Prize",
+          "emoji": "🕊️",
+          "year": 1979,
+          "source": "nobel-peace-prize"
+        },
+        {
+          "name": "Metallica release their \"Black Album\"",
+          "emoji": "🖤",
+          "year": 1991,
+          "source": "best-selling-albums"
+        },
+        {
+          "name": "Grand Theft Auto: San Andreas is released",
+          "emoji": "🚗",
+          "year": 2004,
+          "source": "best-selling-video-games"
+        },
+        {
+          "name": "Chelsea win their first Champions League",
+          "emoji": "🔵",
+          "year": 2012,
+          "source": "champions-league-finals"
+        },
+        {
+          "name": "KPop Demon Hunters becomes Netflix's most-watched film",
+          "emoji": "🎤",
+          "year": 2025,
+          "source": "netflix-most-watched"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Fahrenheit 451 is published",
+          "emoji": "🔥",
+          "year": 1953,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Madonna's The Immaculate Collection is released",
+          "emoji": "💿",
+          "year": 1990,
+          "source": "best-selling-albums"
+        },
+        {
+          "name": "Serena Williams wins her first Wimbledon",
+          "emoji": "🎾",
+          "year": 2002,
+          "source": "wimbledon-champions"
+        },
+        {
+          "name": "The Avengers is released",
+          "emoji": "🛡️",
+          "year": 2012,
+          "source": "highest-grossing-by-year"
+        },
+        {
+          "name": "PUBG is released",
+          "emoji": "🍳",
+          "year": 2017,
+          "source": "best-selling-video-games"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The skateboard is invented",
+          "emoji": "🛹",
+          "year": 1958,
+          "source": "britannica"
+        },
+        {
+          "name": "Ronald Reagan is TIME Person of the Year",
+          "emoji": "📰",
+          "year": 1980,
+          "source": "time-person-of-the-year"
+        },
+        {
+          "name": "Michael Jackson releases Dangerous",
+          "emoji": "🎭",
+          "year": 1991,
+          "source": "best-selling-albums"
+        },
+        {
+          "name": "France win the World Cup at home",
+          "emoji": "🇫🇷",
+          "year": 1998,
+          "source": "world-cup-finals"
+        },
+        {
+          "name": "Zootopia is released",
+          "emoji": "🐰",
+          "year": 2016,
+          "source": "disney-animation"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Cheers wins the Emmy for best comedy",
+          "emoji": "🍺",
+          "year": 1983,
+          "source": "emmy-best-comedy"
+        },
+        {
+          "name": "Tomorrow Never Dies is released",
+          "emoji": "📰",
+          "year": 1997,
+          "source": "bond-films"
+        },
+        {
+          "name": "The Xbox 360 goes on sale",
+          "emoji": "❎",
+          "year": 2005,
+          "source": "best-selling-consoles"
+        },
+        {
+          "name": "John Legend releases \"All of Me\"",
+          "emoji": "💍",
+          "year": 2013,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "Real Madrid win three Champions Leagues in a row",
+          "emoji": "⚪",
+          "year": 2018,
+          "source": "champions-league-finals"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "John F. Kennedy is TIME Person of the Year",
+          "emoji": "📰",
+          "year": 1961,
+          "source": "time-person-of-the-year"
+        },
+        {
+          "name": "A-ha release \"Take On Me\"",
+          "emoji": "✏️",
+          "year": 1984,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "Sri Lanka win the Cricket World Cup",
+          "emoji": "🏏",
+          "year": 1996,
+          "source": "cricket-world-cup"
+        },
+        {
+          "name": "The Rolling Stones headline the Super Bowl halftime show",
+          "emoji": "🏈",
+          "year": 2006,
+          "source": "super-bowl-halftime"
+        },
+        {
+          "name": "Star Wars: The Force Awakens is released",
+          "emoji": "🌟",
+          "year": 2015,
+          "source": "highest-grossing-by-year"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The electric iron is invented",
+          "emoji": "🧺",
+          "year": 1882,
+          "source": "britannica"
+        },
+        {
+          "name": "The Tale of Peter Rabbit is published",
+          "emoji": "🐰",
+          "year": 1902,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Laika becomes the first animal to orbit Earth",
+          "emoji": "🐕",
+          "year": 1957,
+          "source": "space-100-milestones"
+        },
+        {
+          "name": "Mariah Carey releases Music Box",
+          "emoji": "🎶",
+          "year": 1993,
+          "source": "best-selling-albums"
+        },
+        {
+          "name": "Luca is released",
+          "emoji": "🌊",
+          "year": 2021,
+          "source": "pixar"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Dr. No, the first James Bond film, is released",
+          "emoji": "🍸",
+          "year": 1962,
+          "source": "bond-films"
+        },
+        {
+          "name": "The first space station is launched",
+          "emoji": "🛰️",
+          "year": 1971,
+          "source": "space-100-milestones"
+        },
+        {
+          "name": "Barcelona hosts the Olympics",
+          "emoji": "🇪🇸",
+          "year": 1992,
+          "source": "olympic-hosts"
+        },
+        {
+          "name": "The first Percy Jackson book is published",
+          "emoji": "🔱",
+          "year": 2005,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "The Weeknd releases \"Save Your Tears\"",
+          "emoji": "😢",
+          "year": 2020,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Mikhail Gorbachev wins the Nobel Peace Prize",
+          "emoji": "🕊️",
+          "year": 1990,
+          "source": "nobel-peace-prize"
+        },
+        {
+          "name": "Linkin Park release \"In the End\"",
+          "emoji": "🎧",
+          "year": 2000,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "Wii Fit is released",
+          "emoji": "🧘",
+          "year": 2007,
+          "source": "best-selling-video-games"
+        },
+        {
+          "name": "Beyoncé headlines the Super Bowl halftime show",
+          "emoji": "🐝",
+          "year": 2013,
+          "source": "super-bowl-halftime"
+        },
+        {
+          "name": "Frozen 2 is released",
+          "emoji": "❄️",
+          "year": 2019,
+          "source": "disney-animation"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The bicycle is invented",
+          "emoji": "🚲",
+          "year": 1818,
+          "source": "britannica"
+        },
+        {
+          "name": "The Great Gatsby is published",
+          "emoji": "🥂",
+          "year": 1925,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "The Bodyguard soundtrack is released",
+          "emoji": "🎤",
+          "year": 1992,
+          "source": "best-selling-albums"
+        },
+        {
+          "name": "Bolt is released",
+          "emoji": "🐕",
+          "year": 2008,
+          "source": "disney-animation"
+        },
+        {
+          "name": "Elon Musk is TIME Person of the Year",
+          "emoji": "📰",
+          "year": 2021,
+          "source": "time-person-of-the-year"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Alan Shepard becomes the first American in space",
+          "emoji": "🇺🇸",
+          "year": 1961,
+          "source": "space-100-milestones"
+        },
+        {
+          "name": "Radiohead release \"Creep\"",
+          "emoji": "🎸",
+          "year": 1992,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "The first Call of Duty is released",
+          "emoji": "🪖",
+          "year": 2003,
+          "source": "best-selling-franchises"
+        },
+        {
+          "name": "Messi wins his fourth Ballon d'Or in a row",
+          "emoji": "⚽",
+          "year": 2012,
+          "source": "ballon-dor"
+        },
+        {
+          "name": "Elemental is released",
+          "emoji": "🔥",
+          "year": 2023,
+          "source": "pixar"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The sewing machine is invented",
+          "emoji": "🧵",
+          "year": 1841,
+          "source": "britannica"
+        },
+        {
+          "name": "Desmond Tutu wins the Nobel Peace Prize",
+          "emoji": "🕊️",
+          "year": 1984,
+          "source": "nobel-peace-prize"
+        },
+        {
+          "name": "Linkin Park release \"Numb\"",
+          "emoji": "🎧",
+          "year": 2003,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "Homeland wins the Emmy for best drama",
+          "emoji": "🕵️",
+          "year": 2012,
+          "source": "emmy-best-drama"
+        },
+        {
+          "name": "Red Notice is released on Netflix",
+          "emoji": "🎨",
+          "year": 2021,
+          "source": "netflix-most-watched"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Braille is invented",
+          "emoji": "⠃",
+          "year": 1824,
+          "source": "britannica"
+        },
+        {
+          "name": "The Cat in the Hat is published",
+          "emoji": "🎩",
+          "year": 1957,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "The Little Mermaid is released",
+          "emoji": "🧜‍♀️",
+          "year": 1989,
+          "source": "disney-animation"
+        },
+        {
+          "name": "Andy Murray wins Wimbledon",
+          "emoji": "🎾",
+          "year": 2013,
+          "source": "wimbledon-champions"
+        },
+        {
+          "name": "Lady Gaga & Bruno Mars release \"Die With a Smile\"",
+          "emoji": "😊",
+          "year": 2024,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Apollo 13's crew returns safely",
+          "emoji": "🆘",
+          "year": 1970,
+          "source": "space-100-milestones"
+        },
+        {
+          "name": "Monsters, Inc. is released",
+          "emoji": "👹",
+          "year": 2001,
+          "source": "pixar"
+        },
+        {
+          "name": "Wii Sports is released",
+          "emoji": "🎳",
+          "year": 2006,
+          "source": "best-selling-video-games"
+        },
+        {
+          "name": "Bruno Mars headlines the Super Bowl halftime show",
+          "emoji": "🏈",
+          "year": 2014,
+          "source": "super-bowl-halftime"
+        },
+        {
+          "name": "Billie Eilish releases \"Bad Guy\"",
+          "emoji": "😈",
+          "year": 2019,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Martin Luther King Jr. wins the Nobel Peace Prize",
+          "emoji": "🕊️",
+          "year": 1964,
+          "source": "nobel-peace-prize"
+        },
+        {
+          "name": "Toto release \"Africa\"",
+          "emoji": "🌍",
+          "year": 1982,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "The first Harry Potter book is published",
+          "emoji": "⚡",
+          "year": 1997,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Toy Story 3 is released",
+          "emoji": "🧸",
+          "year": 2010,
+          "source": "pixar"
+        },
+        {
+          "name": "NASA's Perseverance rover lands on Mars",
+          "emoji": "🔴",
+          "year": 2021,
+          "source": "space-100-milestones"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Air conditioning is invented",
+          "emoji": "❄️",
+          "year": 1902,
+          "source": "britannica"
+        },
+        {
+          "name": "The Spy Who Loved Me is released",
+          "emoji": "🏔️",
+          "year": 1977,
+          "source": "bond-films"
+        },
+        {
+          "name": "West Germany win the World Cup in Italy",
+          "emoji": "🇩🇪",
+          "year": 1990,
+          "source": "world-cup-finals"
+        },
+        {
+          "name": "Janet Jackson's Super Bowl \"wardrobe malfunction\"",
+          "emoji": "🏈",
+          "year": 2004,
+          "source": "super-bowl-halftime"
+        },
+        {
+          "name": "Imagine Dragons release \"Thunder\"",
+          "emoji": "⚡",
+          "year": 2017,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Prince releases Purple Rain",
+          "emoji": "☔",
+          "year": 1984,
+          "source": "best-selling-albums"
+        },
+        {
+          "name": "Pope John Paul II is TIME Person of the Year",
+          "emoji": "📰",
+          "year": 1994,
+          "source": "time-person-of-the-year"
+        },
+        {
+          "name": "Die Another Day is released",
+          "emoji": "💎",
+          "year": 2002,
+          "source": "bond-films"
+        },
+        {
+          "name": "Mad Men wins the Emmy for best drama",
+          "emoji": "🥃",
+          "year": 2008,
+          "source": "emmy-best-drama"
+        },
+        {
+          "name": "Animal Crossing: New Horizons is released",
+          "emoji": "🏝️",
+          "year": 2020,
+          "source": "best-selling-video-games"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The electric vacuum cleaner is invented",
+          "emoji": "🧹",
+          "year": 1901,
+          "source": "britannica"
+        },
+        {
+          "name": "The Rolling Stones release \"(I Can't Get No) Satisfaction\"",
+          "emoji": "👅",
+          "year": 1965,
+          "source": "stacker-music"
+        },
+        {
+          "name": "The first Space Shuttle launches",
+          "emoji": "🚀",
+          "year": 1981,
+          "source": "space-100-milestones"
+        },
+        {
+          "name": "GoldenEye 007 is released for the Nintendo 64",
+          "emoji": "🔫",
+          "year": 1997,
+          "source": "time-50-games"
+        },
+        {
+          "name": "Inside Out 2 is released",
+          "emoji": "😰",
+          "year": 2024,
+          "source": "pixar"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Charlotte's Web is published",
+          "emoji": "🕷️",
+          "year": 1952,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Niki Lauda wins his first F1 title",
+          "emoji": "🏎️",
+          "year": 1975,
+          "source": "f1-champions"
+        },
+        {
+          "name": "Indiana Jones and the Last Crusade is released",
+          "emoji": "🏺",
+          "year": 1989,
+          "source": "highest-grossing-by-year"
+        },
+        {
+          "name": "The Nintendo DS goes on sale",
+          "emoji": "📱",
+          "year": 2004,
+          "source": "best-selling-consoles"
+        },
+        {
+          "name": "Ed Sheeran releases \"Perfect\"",
+          "emoji": "💍",
+          "year": 2017,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Led Zeppelin release their fourth album (\"Stairway to Heaven\")",
+          "emoji": "🪜",
+          "year": 1971,
+          "source": "best-selling-albums"
+        },
+        {
+          "name": "The Hubble Space Telescope is launched",
+          "emoji": "🔭",
+          "year": 1990,
+          "source": "space-100-milestones"
+        },
+        {
+          "name": "Skype launches",
+          "emoji": "📞",
+          "year": 2003,
+          "source": "timeline-of-social-media"
+        },
+        {
+          "name": "Captain America: Civil War is released",
+          "emoji": "🛡️",
+          "year": 2016,
+          "source": "highest-grossing-by-year"
+        },
+        {
+          "name": "Adolescence premieres on Netflix",
+          "emoji": "🧑",
+          "year": 2025,
+          "source": "netflix-most-watched"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The Adventures of Pinocchio is published",
+          "emoji": "🤥",
+          "year": 1881,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Snow White and the Seven Dwarfs is released",
+          "emoji": "🍎",
+          "year": 1937,
+          "source": "disney-animation"
+        },
+        {
+          "name": "Björn Borg wins his first Wimbledon",
+          "emoji": "🎾",
+          "year": 1976,
+          "source": "wimbledon-champions"
+        },
+        {
+          "name": "Jeff Bezos is TIME Person of the Year",
+          "emoji": "📰",
+          "year": 1999,
+          "source": "time-person-of-the-year"
+        },
+        {
+          "name": "Shawn Mendes & Camila Cabello release \"Señorita\"",
+          "emoji": "💃",
+          "year": 2019,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Dynamite is invented",
+          "emoji": "🧨",
+          "year": 1867,
+          "source": "britannica"
+        },
+        {
+          "name": "Whitney Houston releases her debut album",
+          "emoji": "🎤",
+          "year": 1985,
+          "source": "best-selling-albums"
+        },
+        {
+          "name": "The first Grand Theft Auto is released",
+          "emoji": "🚗",
+          "year": 1997,
+          "source": "best-selling-franchises"
+        },
+        {
+          "name": "Slumdog Millionaire is released",
+          "emoji": "💰",
+          "year": 2008,
+          "source": "oscar-best-picture"
+        },
+        {
+          "name": "Bluesky opens to everyone",
+          "emoji": "🦋",
+          "year": 2024,
+          "source": "timeline-of-social-media"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "ABBA Gold is released",
+          "emoji": "🥇",
+          "year": 1992,
+          "source": "best-selling-albums"
+        },
+        {
+          "name": "Manchester United win the Champions League to complete the treble",
+          "emoji": "🔴",
+          "year": 1999,
+          "source": "champions-league-finals"
+        },
+        {
+          "name": "Vladimir Putin is TIME Person of the Year",
+          "emoji": "📰",
+          "year": 2007,
+          "source": "time-person-of-the-year"
+        },
+        {
+          "name": "Game of Thrones wins the Emmy for best drama",
+          "emoji": "🐉",
+          "year": 2015,
+          "source": "emmy-best-drama"
+        },
+        {
+          "name": "Raya and the Last Dragon is released",
+          "emoji": "🐉",
+          "year": 2021,
+          "source": "disney-animation"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The microchip (integrated circuit) is invented",
+          "emoji": "🔲",
+          "year": 1958,
+          "source": "britannica"
+        },
+        {
+          "name": "The Skylab space station is launched",
+          "emoji": "🛰️",
+          "year": 1973,
+          "source": "space-100-milestones"
+        },
+        {
+          "name": "Terminator 2: Judgment Day is released",
+          "emoji": "🤖",
+          "year": 1991,
+          "source": "highest-grossing-by-year"
+        },
+        {
+          "name": "Twilight is published",
+          "emoji": "🧛",
+          "year": 2005,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Bruno Mars releases \"That's What I Like\"",
+          "emoji": "💸",
+          "year": 2017,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The Aristocats is released",
+          "emoji": "🐱",
+          "year": 1970,
+          "source": "disney-animation"
+        },
+        {
+          "name": "The Golden Girls wins the Emmy for best comedy",
+          "emoji": "👵",
+          "year": 1986,
+          "source": "emmy-best-comedy"
+        },
+        {
+          "name": "Life of Pi is published",
+          "emoji": "🐯",
+          "year": 2001,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Cristiano Ronaldo wins his first Ballon d'Or",
+          "emoji": "⚽",
+          "year": 2008,
+          "source": "ballon-dor"
+        },
+        {
+          "name": "Imagine Dragons release \"Believer\"",
+          "emoji": "⚡",
+          "year": 2017,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The Voyager probes are launched",
+          "emoji": "🛰️",
+          "year": 1977,
+          "source": "space-100-milestones"
+        },
+        {
+          "name": "Aung San Suu Kyi wins the Nobel Peace Prize",
+          "emoji": "🕊️",
+          "year": 1991,
+          "source": "nobel-peace-prize"
+        },
+        {
+          "name": "Mission: Impossible 2 is released",
+          "emoji": "🕶️",
+          "year": 2000,
+          "source": "highest-grossing-by-year"
+        },
+        {
+          "name": "Passenger release \"Let Her Go\"",
+          "emoji": "🎻",
+          "year": 2012,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "BeReal launches",
+          "emoji": "📸",
+          "year": 2020,
+          "source": "timeline-of-social-media"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The postage stamp is invented",
+          "emoji": "✉️",
+          "year": 1840,
+          "source": "britannica"
+        },
+        {
+          "name": "Uruguay shock Brazil to win the World Cup in Rio",
+          "emoji": "🇺🇾",
+          "year": 1950,
+          "source": "world-cup-finals"
+        },
+        {
+          "name": "Whitney Houston sings the US national anthem at the Super Bowl",
+          "emoji": "🇺🇸",
+          "year": 1991,
+          "source": "stacker-music"
+        },
+        {
+          "name": "The Incredibles is released",
+          "emoji": "🦸",
+          "year": 2004,
+          "source": "pixar"
+        },
+        {
+          "name": "Cyberpunk 2077 is released",
+          "emoji": "🌆",
+          "year": 2020,
+          "source": "best-selling-video-games"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Bob Dylan releases \"Like a Rolling Stone\"",
+          "emoji": "🎸",
+          "year": 1965,
+          "source": "stacker-music"
+        },
+        {
+          "name": "Ms. Pac-Man is released",
+          "emoji": "🎀",
+          "year": 1982,
+          "source": "time-50-games"
+        },
+        {
+          "name": "The Lion King is released",
+          "emoji": "🦁",
+          "year": 1994,
+          "source": "disney-animation"
+        },
+        {
+          "name": "Bill Gates, Melinda Gates and Bono are TIME Persons of the Year",
+          "emoji": "📰",
+          "year": 2005,
+          "source": "time-person-of-the-year"
+        },
+        {
+          "name": "TikTok launches",
+          "emoji": "🎵",
+          "year": 2017,
+          "source": "timeline-of-social-media"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The escalator is invented",
+          "emoji": "🛗",
+          "year": 1891,
+          "source": "britannica"
+        },
+        {
+          "name": "Ghostbusters is released",
+          "emoji": "👻",
+          "year": 1984,
+          "source": "highest-grossing-by-year"
+        },
+        {
+          "name": "The first rover lands on Mars (Sojourner)",
+          "emoji": "🔴",
+          "year": 1997,
+          "source": "space-100-milestones"
+        },
+        {
+          "name": "Sapiens is published",
+          "emoji": "🧠",
+          "year": 2011,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Billie Eilish releases \"Birds of a Feather\"",
+          "emoji": "🐦",
+          "year": 2024,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "TIME names \"The Computer\" its Machine of the Year",
+          "emoji": "🖥️",
+          "year": 1982,
+          "source": "time-person-of-the-year"
+        },
+        {
+          "name": "Goodfellas is released",
+          "emoji": "🍝",
+          "year": 1990,
+          "source": "afi-100"
+        },
+        {
+          "name": "Paul McCartney headlines the Super Bowl halftime show",
+          "emoji": "🎸",
+          "year": 2005,
+          "source": "super-bowl-halftime"
+        },
+        {
+          "name": "DJ Snake & Justin Bieber release \"Let Me Love You\"",
+          "emoji": "💞",
+          "year": 2016,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "Artemis I flies around the Moon",
+          "emoji": "🌕",
+          "year": 2022,
+          "source": "space-100-milestones"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The TV remote control is invented",
+          "emoji": "📺",
+          "year": 1950,
+          "source": "britannica"
+        },
+        {
+          "name": "Doraemon manga begins",
+          "emoji": "🐱",
+          "year": 1969,
+          "source": "best-selling-manga"
+        },
+        {
+          "name": "Octopussy is released",
+          "emoji": "🐙",
+          "year": 1983,
+          "source": "bond-films"
+        },
+        {
+          "name": "Apple launches the colourful iMac",
+          "emoji": "🖥️",
+          "year": 1998,
+          "source": "apple-products-timeline"
+        },
+        {
+          "name": "Tupac appears as a hologram at Coachella",
+          "emoji": "👻",
+          "year": 2012,
+          "source": "stacker-music"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The first Thomas the Tank Engine book is published",
+          "emoji": "🚂",
+          "year": 1945,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "New Zealand win the first Rugby World Cup",
+          "emoji": "🏉",
+          "year": 1987,
+          "source": "rugby-world-cup"
+        },
+        {
+          "name": "The first Need for Speed is released",
+          "emoji": "🏎️",
+          "year": 1994,
+          "source": "best-selling-franchises"
+        },
+        {
+          "name": "The Killers release \"Mr. Brightside\"",
+          "emoji": "🎸",
+          "year": 2003,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "Skyfall is released",
+          "emoji": "🍸",
+          "year": 2012,
+          "source": "bond-films"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Dragon Ball manga begins",
+          "emoji": "🐉",
+          "year": 1984,
+          "source": "best-selling-manga"
+        },
+        {
+          "name": "U2 play the Super Bowl halftime show",
+          "emoji": "🎸",
+          "year": 2002,
+          "source": "super-bowl-halftime"
+        },
+        {
+          "name": "Lady Gaga releases her first album, The Fame",
+          "emoji": "🌟",
+          "year": 2008,
+          "source": "stacker-music"
+        },
+        {
+          "name": "Malala Yousafzai wins the Nobel Peace Prize",
+          "emoji": "🕊️",
+          "year": 2014,
+          "source": "nobel-peace-prize"
+        },
+        {
+          "name": "No Time to Die is released",
+          "emoji": "🔫",
+          "year": 2021,
+          "source": "bond-films"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The first message is sent over ARPANET, the internet's ancestor",
+          "emoji": "🖧",
+          "year": 1969,
+          "source": "mentalfloss-internet"
+        },
+        {
+          "name": "Independence Day is released",
+          "emoji": "🛸",
+          "year": 1996,
+          "source": "highest-grossing-by-year"
+        },
+        {
+          "name": "Divergent is published",
+          "emoji": "📕",
+          "year": 2011,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Kendrick Lamar releases \"Humble\"",
+          "emoji": "🙇",
+          "year": 2017,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "Usher headlines the Super Bowl halftime show",
+          "emoji": "🎤",
+          "year": 2024,
+          "source": "super-bowl-halftime"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Dumbo is released",
+          "emoji": "🐘",
+          "year": 1941,
+          "source": "disney-animation"
+        },
+        {
+          "name": "The first woman goes to space",
+          "emoji": "👩‍🚀",
+          "year": 1963,
+          "source": "space-100-milestones"
+        },
+        {
+          "name": "The camcorder is invented",
+          "emoji": "📹",
+          "year": 1982,
+          "source": "britannica"
+        },
+        {
+          "name": "Athens hosts the Olympics",
+          "emoji": "🇬🇷",
+          "year": 2004,
+          "source": "olympic-hosts"
+        },
+        {
+          "name": "The Kid Laroi & Justin Bieber release \"Stay\"",
+          "emoji": "⏳",
+          "year": 2021,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The Beatles release Abbey Road",
+          "emoji": "🚶",
+          "year": 1969,
+          "source": "best-selling-albums"
+        },
+        {
+          "name": "The Sega Mega Drive / Genesis goes on sale",
+          "emoji": "🦔",
+          "year": 1988,
+          "source": "best-selling-consoles"
+        },
+        {
+          "name": "Apple launches the first iPod",
+          "emoji": "🎧",
+          "year": 2001,
+          "source": "stacker-music"
+        },
+        {
+          "name": "The Help is published",
+          "emoji": "📖",
+          "year": 2009,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Spectre is released",
+          "emoji": "🐙",
+          "year": 2015,
+          "source": "bond-films"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The military tank is invented",
+          "emoji": "🪖",
+          "year": 1915,
+          "source": "britannica"
+        },
+        {
+          "name": "Captain Tsubasa manga begins",
+          "emoji": "⚽",
+          "year": 1981,
+          "source": "best-selling-manga"
+        },
+        {
+          "name": "The Hunchback of Notre Dame is released",
+          "emoji": "🔔",
+          "year": 1996,
+          "source": "disney-animation"
+        },
+        {
+          "name": "Italy win the World Cup on penalties in Germany",
+          "emoji": "🇮🇹",
+          "year": 2006,
+          "source": "world-cup-finals"
+        },
+        {
+          "name": "Drake releases \"One Dance\"",
+          "emoji": "💃",
+          "year": 2016,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Thunderball is released",
+          "emoji": "🌊",
+          "year": 1965,
+          "source": "bond-films"
+        },
+        {
+          "name": "Voyager 2 flies past Neptune",
+          "emoji": "🔵",
+          "year": 1989,
+          "source": "space-100-milestones"
+        },
+        {
+          "name": "Counter-Strike is released",
+          "emoji": "🔫",
+          "year": 2000,
+          "source": "time-50-games"
+        },
+        {
+          "name": "Carly Rae Jepsen releases \"Call Me Maybe\"",
+          "emoji": "📞",
+          "year": 2012,
+          "source": "best-selling-singles"
+        },
+        {
+          "name": "Shōgun wins the Emmy for best drama",
+          "emoji": "⚔️",
+          "year": 2024,
+          "source": "emmy-best-drama"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Queen release \"Don't Stop Me Now\"",
+          "emoji": "🎤",
+          "year": 1979,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "Rurouni Kenshin manga begins",
+          "emoji": "🗡️",
+          "year": 1994,
+          "source": "best-selling-manga"
+        },
+        {
+          "name": "Quantum of Solace is released",
+          "emoji": "💧",
+          "year": 2008,
+          "source": "bond-films"
+        },
+        {
+          "name": "Discord launches",
+          "emoji": "🎧",
+          "year": 2015,
+          "source": "timeline-of-social-media"
+        },
+        {
+          "name": "Volodymyr Zelenskyy is TIME Person of the Year",
+          "emoji": "📰",
+          "year": 2022,
+          "source": "time-person-of-the-year"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Los Angeles hosts the Olympics",
+          "emoji": "🇺🇸",
+          "year": 1984,
+          "source": "olympic-hosts"
+        },
+        {
+          "name": "Captain Underpants is published",
+          "emoji": "🩲",
+          "year": 1997,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Star Wars: Revenge of the Sith is released",
+          "emoji": "🔴",
+          "year": 2005,
+          "source": "highest-grossing-by-year"
+        },
+        {
+          "name": "Ed Sheeran releases \"Photograph\"",
+          "emoji": "📷",
+          "year": 2014,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "NASA deliberately crashes a spacecraft into an asteroid",
+          "emoji": "☄️",
+          "year": 2022,
+          "source": "space-100-milestones"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The sticking plaster (Band-Aid) is invented",
+          "emoji": "🩹",
+          "year": 1921,
+          "source": "britannica"
+        },
+        {
+          "name": "The first Final Fantasy is released",
+          "emoji": "⚔️",
+          "year": 1987,
+          "source": "best-selling-franchises"
+        },
+        {
+          "name": "Shania Twain releases Come On Over",
+          "emoji": "🤠",
+          "year": 1997,
+          "source": "best-selling-albums"
+        },
+        {
+          "name": "Brave is released",
+          "emoji": "🏹",
+          "year": 2012,
+          "source": "pixar"
+        },
+        {
+          "name": "Dr. Dre, Snoop Dogg and Eminem play the Super Bowl halftime show",
+          "emoji": "🏈",
+          "year": 2022,
+          "source": "super-bowl-halftime"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The helicopter is invented",
+          "emoji": "🚁",
+          "year": 1939,
+          "source": "britannica"
+        },
+        {
+          "name": "Martin Luther King Jr. is TIME Person of the Year",
+          "emoji": "📰",
+          "year": 1963,
+          "source": "time-person-of-the-year"
+        },
+        {
+          "name": "Apple launches the first Macintosh",
+          "emoji": "🖥️",
+          "year": 1984,
+          "source": "apple-products-timeline"
+        },
+        {
+          "name": "Casino Royale (Daniel Craig's first Bond film) is released",
+          "emoji": "🃏",
+          "year": 2006,
+          "source": "bond-films"
+        },
+        {
+          "name": "Bruno Mars releases \"When I Was Your Man\"",
+          "emoji": "🌹",
+          "year": 2012,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The Apollo 8 astronauts are TIME Persons of the Year",
+          "emoji": "📰",
+          "year": 1968,
+          "source": "time-person-of-the-year"
+        },
+        {
+          "name": "The first Pro Evolution Soccer is released",
+          "emoji": "⚽",
+          "year": 1995,
+          "source": "best-selling-franchises"
+        },
+        {
+          "name": "China sends its first astronaut to space",
+          "emoji": "🇨🇳",
+          "year": 2003,
+          "source": "space-100-milestones"
+        },
+        {
+          "name": "12 Years a Slave is released",
+          "emoji": "⛓️",
+          "year": 2013,
+          "source": "oscar-best-picture"
+        },
+        {
+          "name": "Jung Kook releases \"Seven\"",
+          "emoji": "7️⃣",
+          "year": 2023,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "\"Rapper's Delight\" becomes the first hip-hop Top 40 hit",
+          "emoji": "🎤",
+          "year": 1980,
+          "source": "stacker-music"
+        },
+        {
+          "name": "Michael Jackson headlines the Super Bowl halftime show",
+          "emoji": "🧤",
+          "year": 1993,
+          "source": "super-bowl-halftime"
+        },
+        {
+          "name": "Fullmetal Alchemist manga begins",
+          "emoji": "⚗️",
+          "year": 2001,
+          "source": "best-selling-manga"
+        },
+        {
+          "name": "Bayern Munich beat Dortmund in an all-German Champions League final",
+          "emoji": "🔴",
+          "year": 2013,
+          "source": "champions-league-finals"
+        },
+        {
+          "name": "Elio is released",
+          "emoji": "👽",
+          "year": 2025,
+          "source": "pixar"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Sonny & Cher release \"I Got You Babe\"",
+          "emoji": "💑",
+          "year": 1965,
+          "source": "stacker-music"
+        },
+        {
+          "name": "Goosebumps book series begins",
+          "emoji": "👻",
+          "year": 1992,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Pirates of the Caribbean: Dead Man's Chest is released",
+          "emoji": "🏴‍☠️",
+          "year": 2006,
+          "source": "highest-grossing-by-year"
+        },
+        {
+          "name": "Telegram launches",
+          "emoji": "✈️",
+          "year": 2013,
+          "source": "timeline-of-social-media"
+        },
+        {
+          "name": "Greta Thunberg is TIME Person of the Year",
+          "emoji": "📰",
+          "year": 2019,
+          "source": "time-person-of-the-year"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Frankenstein is released",
+          "emoji": "🧟",
+          "year": 1931,
+          "source": "highest-grossing-by-year"
+        },
+        {
+          "name": "The digital watch is invented",
+          "emoji": "⌚",
+          "year": 1970,
+          "source": "britannica"
+        },
+        {
+          "name": "The Wonder Years wins the Emmy for best comedy",
+          "emoji": "🧒",
+          "year": 1988,
+          "source": "emmy-best-comedy"
+        },
+        {
+          "name": "Naruto manga begins",
+          "emoji": "🍥",
+          "year": 1999,
+          "source": "best-selling-manga"
+        },
+        {
+          "name": "Imagine Dragons release \"Demons\"",
+          "emoji": "😈",
+          "year": 2012,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Tarzan of the Apes is published",
+          "emoji": "🌴",
+          "year": 1914,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Civilization is released",
+          "emoji": "🏛️",
+          "year": 1991,
+          "source": "best-selling-franchises"
+        },
+        {
+          "name": "Gladiator is released",
+          "emoji": "🛡️",
+          "year": 2000,
+          "source": "oscar-best-picture"
+        },
+        {
+          "name": "The Curiosity rover lands on Mars",
+          "emoji": "🔴",
+          "year": 2012,
+          "source": "space-100-milestones"
+        },
+        {
+          "name": "Harry Styles releases \"As It Was\"",
+          "emoji": "🎠",
+          "year": 2022,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "West Side Story is released",
+          "emoji": "💃",
+          "year": 1961,
+          "source": "afi-100"
+        },
+        {
+          "name": "Shōgun (the novel) is published",
+          "emoji": "⚔️",
+          "year": 1975,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "South Africa win the Rugby World Cup with Mandela watching",
+          "emoji": "🏉",
+          "year": 1995,
+          "source": "rugby-world-cup"
+        },
+        {
+          "name": "TIME names \"You\" its Person of the Year",
+          "emoji": "🪞",
+          "year": 2006,
+          "source": "time-person-of-the-year"
+        },
+        {
+          "name": "Macklemore & Ryan Lewis release \"Can't Hold Us\"",
+          "emoji": "🙌",
+          "year": 2011,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Sally Ride becomes the first American woman in space",
+          "emoji": "👩‍🚀",
+          "year": 1983,
+          "source": "space-100-milestones"
+        },
+        {
+          "name": "Aladdin is released",
+          "emoji": "🧞",
+          "year": 1992,
+          "source": "disney-animation"
+        },
+        {
+          "name": "Fairy Tail manga begins",
+          "emoji": "🧚",
+          "year": 2006,
+          "source": "best-selling-manga"
+        },
+        {
+          "name": "Madonna headlines the Super Bowl halftime show",
+          "emoji": "👑",
+          "year": 2012,
+          "source": "super-bowl-halftime"
+        },
+        {
+          "name": "Kendrick Lamar & SZA release \"All the Stars\"",
+          "emoji": "✨",
+          "year": 2018,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "ABBA win Eurovision with \"Waterloo\"",
+          "emoji": "🇸🇪",
+          "year": 1974,
+          "source": "eurovision-winners"
+        },
+        {
+          "name": "The Nintendo 64 goes on sale",
+          "emoji": "🎮",
+          "year": 1996,
+          "source": "best-selling-consoles"
+        },
+        {
+          "name": "The Princess and the Frog is released",
+          "emoji": "🐸",
+          "year": 2009,
+          "source": "disney-animation"
+        },
+        {
+          "name": "Germany win the World Cup in Brazil",
+          "emoji": "🇩🇪",
+          "year": 2014,
+          "source": "world-cup-finals"
+        },
+        {
+          "name": "Clubhouse launches",
+          "emoji": "🎙️",
+          "year": 2020,
+          "source": "timeline-of-social-media"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The battery flashlight is invented",
+          "emoji": "🔦",
+          "year": 1899,
+          "source": "britannica"
+        },
+        {
+          "name": "Sleeping Beauty is released",
+          "emoji": "👸",
+          "year": 1959,
+          "source": "disney-animation"
+        },
+        {
+          "name": "Montreal hosts the Olympics",
+          "emoji": "🇨🇦",
+          "year": 1976,
+          "source": "olympic-hosts"
+        },
+        {
+          "name": "Nelson Mandela wins the Nobel Peace Prize",
+          "emoji": "🕊️",
+          "year": 1993,
+          "source": "nobel-peace-prize"
+        },
+        {
+          "name": "Adele releases her album 21",
+          "emoji": "2️⃣",
+          "year": 2011,
+          "source": "best-selling-albums"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Automatic traffic lights are invented",
+          "emoji": "🚦",
+          "year": 1923,
+          "source": "britannica"
+        },
+        {
+          "name": "Rain Man is released",
+          "emoji": "🃏",
+          "year": 1988,
+          "source": "highest-grossing-by-year"
+        },
+        {
+          "name": "The first Tekken is released",
+          "emoji": "👊",
+          "year": 1994,
+          "source": "best-selling-franchises"
+        },
+        {
+          "name": "Bleach manga begins",
+          "emoji": "⚔️",
+          "year": 2001,
+          "source": "best-selling-manga"
+        },
+        {
+          "name": "Wiz Khalifa & Charlie Puth release \"See You Again\"",
+          "emoji": "🚗",
+          "year": 2015,
+          "source": "best-selling-singles"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Adventures of Huckleberry Finn is published",
+          "emoji": "🛶",
+          "year": 1885,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Meat Loaf releases Bat Out of Hell",
+          "emoji": "🦇",
+          "year": 1977,
+          "source": "best-selling-albums"
+        },
+        {
+          "name": "The first planets outside our solar system are discovered",
+          "emoji": "🪐",
+          "year": 1992,
+          "source": "space-100-milestones"
+        },
+        {
+          "name": "LinkedIn launches",
+          "emoji": "💼",
+          "year": 2003,
+          "source": "timeline-of-social-media"
+        },
+        {
+          "name": "Wreck-It Ralph is released",
+          "emoji": "🍬",
+          "year": 2012,
+          "source": "disney-animation"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Alice in Wonderland (Disney) is released",
+          "emoji": "🐇",
+          "year": 1951,
+          "source": "disney-animation"
+        },
+        {
+          "name": "Brazil win the World Cup in Mexico",
+          "emoji": "🇧🇷",
+          "year": 1970,
+          "source": "world-cup-finals"
+        },
+        {
+          "name": "The Giver is published",
+          "emoji": "📕",
+          "year": 1993,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Adele releases \"Rolling in the Deep\"",
+          "emoji": "🎤",
+          "year": 2010,
+          "source": "best-selling-singles"
+        },
+        {
+          "name": "The Weeknd headlines the Super Bowl halftime show",
+          "emoji": "🏈",
+          "year": 2021,
+          "source": "super-bowl-halftime"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The roller coaster is invented",
+          "emoji": "🎢",
+          "year": 1884,
+          "source": "britannica"
+        },
+        {
+          "name": "Astro Boy manga begins",
+          "emoji": "🤖",
+          "year": 1952,
+          "source": "best-selling-manga"
+        },
+        {
+          "name": "Journey release \"Don't Stop Believin'\"",
+          "emoji": "🎹",
+          "year": 1981,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "Reddit launches",
+          "emoji": "👽",
+          "year": 2005,
+          "source": "timeline-of-social-media"
+        },
+        {
+          "name": "Moana is released",
+          "emoji": "🌊",
+          "year": 2016,
+          "source": "disney-animation"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Bruce Springsteen releases Born in the U.S.A.",
+          "emoji": "🇺🇸",
+          "year": 1984,
+          "source": "best-selling-albums"
+        },
+        {
+          "name": "Frasier wins the Emmy for best comedy",
+          "emoji": "🛋️",
+          "year": 1994,
+          "source": "emmy-best-comedy"
+        },
+        {
+          "name": "The first crew moves into the International Space Station",
+          "emoji": "🛰️",
+          "year": 2000,
+          "source": "space-100-milestones"
+        },
+        {
+          "name": "Al Gore wins the Nobel Peace Prize",
+          "emoji": "🕊️",
+          "year": 2007,
+          "source": "nobel-peace-prize"
+        },
+        {
+          "name": "Star Wars: The Last Jedi is released",
+          "emoji": "⚔️",
+          "year": 2017,
+          "source": "highest-grossing-by-year"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Teflon is invented",
+          "emoji": "🍳",
+          "year": 1938,
+          "source": "britannica"
+        },
+        {
+          "name": "Céline Dion wins Eurovision for Switzerland",
+          "emoji": "🇨🇭",
+          "year": 1988,
+          "source": "eurovision-winners"
+        },
+        {
+          "name": "Final Fantasy VII is released",
+          "emoji": "⚔️",
+          "year": 1997,
+          "source": "time-50-games"
+        },
+        {
+          "name": "WALL-E is released",
+          "emoji": "🤖",
+          "year": 2008,
+          "source": "pixar"
+        },
+        {
+          "name": "Skype shuts down for good",
+          "emoji": "📴",
+          "year": 2025,
+          "source": "timeline-of-social-media"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The Godfather Part II is released",
+          "emoji": "🌹",
+          "year": 1974,
+          "source": "oscar-best-picture"
+        },
+        {
+          "name": "Detective Conan (Case Closed) manga begins",
+          "emoji": "🔍",
+          "year": 1994,
+          "source": "best-selling-manga"
+        },
+        {
+          "name": "Bruce Springsteen headlines the Super Bowl halftime show",
+          "emoji": "🏈",
+          "year": 2009,
+          "source": "super-bowl-halftime"
+        },
+        {
+          "name": "The Witcher 3 is released",
+          "emoji": "🐺",
+          "year": 2015,
+          "source": "best-selling-video-games"
+        },
+        {
+          "name": "Olivia Rodrigo releases \"drivers license\"",
+          "emoji": "🚘",
+          "year": 2021,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "St. Basil's Cathedral in Moscow is completed",
+          "emoji": "⛪",
+          "year": 1561,
+          "source": "247-landmarks"
+        },
+        {
+          "name": "A Wrinkle in Time is published",
+          "emoji": "🌌",
+          "year": 1962,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "The Mir space station is launched",
+          "emoji": "🛰️",
+          "year": 1986,
+          "source": "space-100-milestones"
+        },
+        {
+          "name": "Eminem releases The Marshall Mathers LP",
+          "emoji": "🎤",
+          "year": 2000,
+          "source": "best-selling-albums"
+        },
+        {
+          "name": "Turning Red is released",
+          "emoji": "🐼",
+          "year": 2022,
+          "source": "pixar"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "A 17-year-old Pelé helps Brazil win the World Cup",
+          "emoji": "🇧🇷",
+          "year": 1958,
+          "source": "world-cup-finals"
+        },
+        {
+          "name": "Lech Wałęsa wins the Nobel Peace Prize",
+          "emoji": "🕊️",
+          "year": 1983,
+          "source": "nobel-peace-prize"
+        },
+        {
+          "name": "The Titanic soundtrack is released",
+          "emoji": "🚢",
+          "year": 1997,
+          "source": "best-selling-albums"
+        },
+        {
+          "name": "24 wins the Emmy for best drama",
+          "emoji": "⏱️",
+          "year": 2006,
+          "source": "emmy-best-drama"
+        },
+        {
+          "name": "Encanto is released",
+          "emoji": "🦋",
+          "year": 2021,
+          "source": "disney-animation"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Fleetwood Mac release \"Dreams\"",
+          "emoji": "🌙",
+          "year": 1977,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "Rich Dad Poor Dad is published",
+          "emoji": "💵",
+          "year": 1997,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Attack on Titan manga begins",
+          "emoji": "🧱",
+          "year": 2009,
+          "source": "best-selling-manga"
+        },
+        {
+          "name": "Real Madrid win \"La Décima\", their 10th European Cup",
+          "emoji": "⚪",
+          "year": 2014,
+          "source": "champions-league-finals"
+        },
+        {
+          "name": "Avatar: The Way of Water is released",
+          "emoji": "🌊",
+          "year": 2022,
+          "source": "highest-grossing-by-year"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The Blue Mosque in Istanbul is completed",
+          "emoji": "🕌",
+          "year": 1616,
+          "source": "247-landmarks"
+        },
+        {
+          "name": "Photography is invented",
+          "emoji": "📷",
+          "year": 1837,
+          "source": "britannica"
+        },
+        {
+          "name": "Oasis release \"Wonderwall\"",
+          "emoji": "🎸",
+          "year": 1995,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "Tumblr launches",
+          "emoji": "📝",
+          "year": 2007,
+          "source": "timeline-of-social-media"
+        },
+        {
+          "name": "Avengers: Endgame is released",
+          "emoji": "🦸",
+          "year": 2019,
+          "source": "highest-grossing-by-year"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The Ten Commandments is released",
+          "emoji": "📜",
+          "year": 1956,
+          "source": "highest-grossing-by-year"
+        },
+        {
+          "name": "Astronauts drive a rover on the Moon (Apollo 15)",
+          "emoji": "🚙",
+          "year": 1971,
+          "source": "space-100-milestones"
+        },
+        {
+          "name": "The first Resident Evil is released",
+          "emoji": "🧟",
+          "year": 1996,
+          "source": "best-selling-franchises"
+        },
+        {
+          "name": "Barack Obama is TIME Person of the Year",
+          "emoji": "📰",
+          "year": 2008,
+          "source": "time-person-of-the-year"
+        },
+        {
+          "name": "Dua Lipa releases \"Don't Start Now\"",
+          "emoji": "🪩",
+          "year": 2019,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The electric toaster is invented",
+          "emoji": "🍞",
+          "year": 1893,
+          "source": "britannica"
+        },
+        {
+          "name": "The Old Man and the Sea is published",
+          "emoji": "🎣",
+          "year": 1952,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "The Empire Strikes Back is released",
+          "emoji": "🌌",
+          "year": 1980,
+          "source": "highest-grossing-by-year"
+        },
+        {
+          "name": "Katy Perry's Super Bowl show (and the \"Left Shark\")",
+          "emoji": "🦈",
+          "year": 2015,
+          "source": "super-bowl-halftime"
+        },
+        {
+          "name": "Taylor Swift releases \"The Fate of Ophelia\"",
+          "emoji": "🌊",
+          "year": 2025,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Return of the Jedi is released",
+          "emoji": "🌲",
+          "year": 1983,
+          "source": "highest-grossing-by-year"
+        },
+        {
+          "name": "Pete Sampras wins his first Wimbledon",
+          "emoji": "🎾",
+          "year": 1993,
+          "source": "wimbledon-champions"
+        },
+        {
+          "name": "The PlayStation 2 goes on sale",
+          "emoji": "🎮",
+          "year": 2000,
+          "source": "best-selling-consoles"
+        },
+        {
+          "name": "Haikyu!! manga begins",
+          "emoji": "🏐",
+          "year": 2012,
+          "source": "best-selling-manga"
+        },
+        {
+          "name": "Calvin Harris & Dua Lipa release \"One Kiss\"",
+          "emoji": "💋",
+          "year": 2018,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "St. Peter's Basilica in Rome is completed",
+          "emoji": "⛪",
+          "year": 1626,
+          "source": "247-landmarks"
+        },
+        {
+          "name": "One Hundred and One Dalmatians is released",
+          "emoji": "🐶",
+          "year": 1961,
+          "source": "disney-animation"
+        },
+        {
+          "name": "Apollo 8 orbits the Moon and takes the \"Earthrise\" photo",
+          "emoji": "🌍",
+          "year": 1968,
+          "source": "space-100-milestones"
+        },
+        {
+          "name": "Apple launches the MacBook Air (out of an envelope)",
+          "emoji": "✉️",
+          "year": 2008,
+          "source": "apple-products-timeline"
+        },
+        {
+          "name": "Major Lazer & DJ Snake release \"Lean On\"",
+          "emoji": "💃",
+          "year": 2015,
+          "source": "spotify-most-streamed"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The Taj Mahal is completed",
+          "emoji": "🕌",
+          "year": 1653,
+          "source": "247-landmarks"
+        },
+        {
+          "name": "U2 release The Joshua Tree",
+          "emoji": "🌵",
+          "year": 1987,
+          "source": "best-selling-albums"
+        },
+        {
+          "name": "The Da Vinci Code is published",
+          "emoji": "🔐",
+          "year": 2003,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Barack Obama wins the Nobel Peace Prize",
+          "emoji": "🕊️",
+          "year": 2009,
+          "source": "nobel-peace-prize"
+        },
+        {
+          "name": "Toy Story 4 is released",
+          "emoji": "🍴",
+          "year": 2019,
+          "source": "pixar"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Jurassic Park is released",
+          "emoji": "🦖",
+          "year": 1993,
+          "source": "highest-grossing-by-year"
+        },
+        {
+          "name": "The PSP goes on sale",
+          "emoji": "🎮",
+          "year": 2004,
+          "source": "best-selling-consoles"
+        },
+        {
+          "name": "Ed Sheeran releases \"Thinking Out Loud\"",
+          "emoji": "💭",
+          "year": 2014,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "Bayern Munich win the Champions League in an empty stadium",
+          "emoji": "🔴",
+          "year": 2020,
+          "source": "champions-league-finals"
+        },
+        {
+          "name": "TIME names \"The Architects of AI\" its Person of the Year",
+          "emoji": "🤖",
+          "year": 2025,
+          "source": "time-person-of-the-year"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The electric guitar is invented",
+          "emoji": "🎸",
+          "year": 1941,
+          "source": "britannica"
+        },
+        {
+          "name": "Elton John releases \"Candle in the Wind 1997\"",
+          "emoji": "🕯️",
+          "year": 1997,
+          "source": "best-selling-singles"
+        },
+        {
+          "name": "Cars is released",
+          "emoji": "🏎️",
+          "year": 2006,
+          "source": "pixar"
+        },
+        {
+          "name": "Musical.ly (later TikTok) launches",
+          "emoji": "🎵",
+          "year": 2014,
+          "source": "timeline-of-social-media"
+        },
+        {
+          "name": "The James Webb Space Telescope begins science operations",
+          "emoji": "🔭",
+          "year": 2022,
+          "source": "space-100-milestones"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "M*A*S*H wins the Emmy for best comedy",
+          "emoji": "🏥",
+          "year": 1974,
+          "source": "emmy-best-comedy"
+        },
+        {
+          "name": "Chicago (the musical film) is released",
+          "emoji": "🎭",
+          "year": 2002,
+          "source": "oscar-best-picture"
+        },
+        {
+          "name": "Bruno Mars releases \"Just the Way You Are\"",
+          "emoji": "💐",
+          "year": 2010,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "India reaches Mars on its first try",
+          "emoji": "🇮🇳",
+          "year": 2014,
+          "source": "space-100-milestones"
+        },
+        {
+          "name": "Blue Lock manga begins",
+          "emoji": "⚽",
+          "year": 2018,
+          "source": "best-selling-manga"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Begin and Sadat share the Nobel Peace Prize",
+          "emoji": "🕊️",
+          "year": 1978,
+          "source": "nobel-peace-prize"
+        },
+        {
+          "name": "JoJo's Bizarre Adventure manga begins",
+          "emoji": "🕴️",
+          "year": 1987,
+          "source": "best-selling-manga"
+        },
+        {
+          "name": "The Emperor's New Groove is released",
+          "emoji": "🦙",
+          "year": 2000,
+          "source": "disney-animation"
+        },
+        {
+          "name": "Pinterest launches",
+          "emoji": "📌",
+          "year": 2010,
+          "source": "timeline-of-social-media"
+        },
+        {
+          "name": "The Legend of Zelda: Breath of the Wild is released",
+          "emoji": "🏔️",
+          "year": 2017,
+          "source": "best-selling-video-games"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The Hollywood sign goes up",
+          "emoji": "🎬",
+          "year": 1923,
+          "source": "247-landmarks"
+        },
+        {
+          "name": "Pocahontas is released",
+          "emoji": "🍃",
+          "year": 1995,
+          "source": "disney-animation"
+        },
+        {
+          "name": "Eminem releases \"Without Me\"",
+          "emoji": "🎤",
+          "year": 2002,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "Beijing hosts the Summer Olympics",
+          "emoji": "🇨🇳",
+          "year": 2008,
+          "source": "olympic-hosts"
+        },
+        {
+          "name": "Where the Crawdads Sing is published",
+          "emoji": "🦀",
+          "year": 2018,
+          "source": "best-selling-books"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Laser eye surgery is invented",
+          "emoji": "👁️",
+          "year": 1987,
+          "source": "britannica"
+        },
+        {
+          "name": "Hunter × Hunter manga begins",
+          "emoji": "🎣",
+          "year": 1998,
+          "source": "best-selling-manga"
+        },
+        {
+          "name": "Mark Zuckerberg is TIME Person of the Year",
+          "emoji": "📰",
+          "year": 2010,
+          "source": "time-person-of-the-year"
+        },
+        {
+          "name": "Coldplay, Beyoncé and Bruno Mars play the Super Bowl halftime show",
+          "emoji": "🏈",
+          "year": 2016,
+          "source": "super-bowl-halftime"
+        },
+        {
+          "name": "Don't Look Up is released on Netflix",
+          "emoji": "☄️",
+          "year": 2021,
+          "source": "netflix-most-watched"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The Chrysler Building is completed",
+          "emoji": "🏙️",
+          "year": 1930,
+          "source": "tallest-buildings-history"
+        },
+        {
+          "name": "The Alchemist is published",
+          "emoji": "🏜️",
+          "year": 1988,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "The first space tourist flies",
+          "emoji": "🧳",
+          "year": 2001,
+          "source": "space-100-milestones"
+        },
+        {
+          "name": "Snapchat launches",
+          "emoji": "👻",
+          "year": 2011,
+          "source": "timeline-of-social-media"
+        },
+        {
+          "name": "Rihanna headlines the Super Bowl halftime show while pregnant",
+          "emoji": "🏈",
+          "year": 2023,
+          "source": "super-bowl-halftime"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Aspirin is invented",
+          "emoji": "💊",
+          "year": 1897,
+          "source": "britannica"
+        },
+        {
+          "name": "Apocalypse Now is released",
+          "emoji": "🚁",
+          "year": 1979,
+          "source": "afi-100"
+        },
+        {
+          "name": "George Weah wins the Ballon d'Or",
+          "emoji": "⚽",
+          "year": 1995,
+          "source": "ballon-dor"
+        },
+        {
+          "name": "Coldplay release \"Viva La Vida\"",
+          "emoji": "👑",
+          "year": 2008,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "Overwatch is released",
+          "emoji": "🎯",
+          "year": 2016,
+          "source": "best-selling-video-games"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The heart pacemaker is invented",
+          "emoji": "❤️",
+          "year": 1952,
+          "source": "britannica"
+        },
+        {
+          "name": "Back to the Future is released",
+          "emoji": "⏰",
+          "year": 1985,
+          "source": "highest-grossing-by-year"
+        },
+        {
+          "name": "The Book Thief is published",
+          "emoji": "📚",
+          "year": 2005,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Lady Gaga releases \"Poker Face\"",
+          "emoji": "🃏",
+          "year": 2009,
+          "source": "best-selling-singles"
+        },
+        {
+          "name": "The Nintendo Switch goes on sale",
+          "emoji": "🎮",
+          "year": 2017,
+          "source": "best-selling-consoles"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The Empire State Building is completed",
+          "emoji": "🏙️",
+          "year": 1931,
+          "source": "247-landmarks"
+        },
+        {
+          "name": "The Dalai Lama wins the Nobel Peace Prize",
+          "emoji": "🕊️",
+          "year": 1989,
+          "source": "nobel-peace-prize"
+        },
+        {
+          "name": "One Piece manga begins",
+          "emoji": "🏴‍☠️",
+          "year": 1997,
+          "source": "best-selling-manga"
+        },
+        {
+          "name": "A spacecraft lands on a comet for the first time",
+          "emoji": "☄️",
+          "year": 2014,
+          "source": "space-100-milestones"
+        },
+        {
+          "name": "Shakira and Jennifer Lopez headline the Super Bowl halftime show",
+          "emoji": "💃",
+          "year": 2020,
+          "source": "super-bowl-halftime"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Slam Dunk manga begins",
+          "emoji": "🏀",
+          "year": 1990,
+          "source": "best-selling-manga"
+        },
+        {
+          "name": "MSN Messenger launches",
+          "emoji": "💬",
+          "year": 1999,
+          "source": "timeline-of-social-media"
+        },
+        {
+          "name": "The European Union wins the Nobel Peace Prize",
+          "emoji": "🇪🇺",
+          "year": 2012,
+          "source": "nobel-peace-prize"
+        },
+        {
+          "name": "New Horizons flies past Pluto",
+          "emoji": "🪐",
+          "year": 2015,
+          "source": "space-100-milestones"
+        },
+        {
+          "name": "Luka Modrić wins the Ballon d'Or",
+          "emoji": "⚽",
+          "year": 2018,
+          "source": "ballon-dor"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The pocket calculator is invented",
+          "emoji": "🧮",
+          "year": 1967,
+          "source": "britannica"
+        },
+        {
+          "name": "Atlanta hosts the Olympics",
+          "emoji": "🇺🇸",
+          "year": 1996,
+          "source": "olympic-hosts"
+        },
+        {
+          "name": "The Elder Scrolls V: Skyrim is released",
+          "emoji": "🐉",
+          "year": 2011,
+          "source": "best-selling-video-games"
+        },
+        {
+          "name": "James Corden's Carpool Karaoke launches with Mariah Carey",
+          "emoji": "🚗",
+          "year": 2015,
+          "source": "stacker-music"
+        },
+        {
+          "name": "Bridgerton premieres on Netflix",
+          "emoji": "💍",
+          "year": 2020,
+          "source": "netflix-most-watched"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Christ the Redeemer statue in Rio is completed",
+          "emoji": "✝️",
+          "year": 1931,
+          "source": "247-landmarks"
+        },
+        {
+          "name": "Armageddon is released",
+          "emoji": "☄️",
+          "year": 1998,
+          "source": "highest-grossing-by-year"
+        },
+        {
+          "name": "Apple launches the first iPad",
+          "emoji": "📲",
+          "year": 2010,
+          "source": "apple-products-timeline"
+        },
+        {
+          "name": "It Ends with Us is published",
+          "emoji": "🌸",
+          "year": 2016,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Joe Biden and Kamala Harris are TIME Persons of the Year",
+          "emoji": "📰",
+          "year": 2020,
+          "source": "time-person-of-the-year"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The home smoke detector is invented",
+          "emoji": "🚨",
+          "year": 1969,
+          "source": "britannica"
+        },
+        {
+          "name": "A Bug's Life is released",
+          "emoji": "🐜",
+          "year": 1998,
+          "source": "pixar"
+        },
+        {
+          "name": "The Hunger Games is published",
+          "emoji": "🏹",
+          "year": 2008,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "The Handmaid's Tale wins the Emmy for best drama",
+          "emoji": "🔴",
+          "year": 2017,
+          "source": "emmy-best-drama"
+        },
+        {
+          "name": "SpaceX flies the first commercial crewed spaceflight",
+          "emoji": "🚀",
+          "year": 2020,
+          "source": "space-100-milestones"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The Sydney Harbour Bridge is completed",
+          "emoji": "🌉",
+          "year": 1932,
+          "source": "247-landmarks"
+        },
+        {
+          "name": "The first Street Fighter is released",
+          "emoji": "🥋",
+          "year": 1987,
+          "source": "best-selling-franchises"
+        },
+        {
+          "name": "Don Omar releases \"Danza Kuduro\"",
+          "emoji": "💃",
+          "year": 2010,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "Vine launches",
+          "emoji": "🎬",
+          "year": 2013,
+          "source": "timeline-of-social-media"
+        },
+        {
+          "name": "Jujutsu Kaisen manga begins",
+          "emoji": "👁️",
+          "year": 2018,
+          "source": "best-selling-manga"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Alcatraz opens as a prison",
+          "emoji": "⛓️",
+          "year": 1934,
+          "source": "247-landmarks"
+        },
+        {
+          "name": "The Game Boy goes on sale",
+          "emoji": "🎮",
+          "year": 1989,
+          "source": "best-selling-consoles"
+        },
+        {
+          "name": "Zinedine Zidane wins the Ballon d'Or",
+          "emoji": "⚽",
+          "year": 1998,
+          "source": "ballon-dor"
+        },
+        {
+          "name": "The Fault in Our Stars is published",
+          "emoji": "⭐",
+          "year": 2012,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Donald Trump is TIME Person of the Year",
+          "emoji": "📰",
+          "year": 2016,
+          "source": "time-person-of-the-year"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Mr. Potato Head becomes the first toy advertised on TV",
+          "emoji": "🥔",
+          "year": 1952,
+          "source": "best-selling-toys"
+        },
+        {
+          "name": "The Lord of the Rings: The Two Towers is released",
+          "emoji": "🗼",
+          "year": 2002,
+          "source": "highest-grossing-by-year"
+        },
+        {
+          "name": "Maroon 5 release \"Payphone\"",
+          "emoji": "☎️",
+          "year": 2012,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "Tokyo Revengers manga begins",
+          "emoji": "🏍️",
+          "year": 2017,
+          "source": "best-selling-manga"
+        },
+        {
+          "name": "Succession wins the Emmy for best drama",
+          "emoji": "💼",
+          "year": 2020,
+          "source": "emmy-best-drama"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The laptop computer is invented",
+          "emoji": "💻",
+          "year": 1983,
+          "source": "britannica"
+        },
+        {
+          "name": "Ratatouille is released",
+          "emoji": "🐀",
+          "year": 2007,
+          "source": "pixar"
+        },
+        {
+          "name": "Twitch launches",
+          "emoji": "🎮",
+          "year": 2011,
+          "source": "timeline-of-social-media"
+        },
+        {
+          "name": "SpaceX lands an orbital rocket booster for the first time",
+          "emoji": "🚀",
+          "year": 2015,
+          "source": "space-100-milestones"
+        },
+        {
+          "name": "Manchester City win their first Champions League",
+          "emoji": "🩵",
+          "year": 2023,
+          "source": "champions-league-finals"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The hula hoop craze sweeps the world",
+          "emoji": "⭕",
+          "year": 1958,
+          "source": "best-selling-toys"
+        },
+        {
+          "name": "Taipei 101 becomes the world's tallest building",
+          "emoji": "🏙️",
+          "year": 2004,
+          "source": "tallest-buildings-history"
+        },
+        {
+          "name": "Demon Slayer manga begins",
+          "emoji": "🗡️",
+          "year": 2016,
+          "source": "best-selling-manga"
+        },
+        {
+          "name": "Michelle Obama's Becoming is published",
+          "emoji": "📕",
+          "year": 2018,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Maroon 5 headline the Super Bowl halftime show",
+          "emoji": "🏈",
+          "year": 2019,
+          "source": "super-bowl-halftime"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "DNA fingerprinting is invented",
+          "emoji": "🧬",
+          "year": 1984,
+          "source": "britannica"
+        },
+        {
+          "name": "The first Xbox goes on sale",
+          "emoji": "❎",
+          "year": 2001,
+          "source": "best-selling-consoles"
+        },
+        {
+          "name": "Tinder launches",
+          "emoji": "🔥",
+          "year": 2012,
+          "source": "timeline-of-social-media"
+        },
+        {
+          "name": "Pope Francis is TIME Person of the Year",
+          "emoji": "📰",
+          "year": 2013,
+          "source": "time-person-of-the-year"
+        },
+        {
+          "name": "Australia win the Cricket World Cup in India",
+          "emoji": "🏏",
+          "year": 2023,
+          "source": "cricket-world-cup"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "Cabbage Patch Kids cause a shopping frenzy",
+          "emoji": "🧸",
+          "year": 1983,
+          "source": "best-selling-toys"
+        },
+        {
+          "name": "Virtual reality is invented",
+          "emoji": "🥽",
+          "year": 1989,
+          "source": "britannica"
+        },
+        {
+          "name": "Facebook goes public on the stock market",
+          "emoji": "📈",
+          "year": 2012,
+          "source": "timeline-of-social-media"
+        },
+        {
+          "name": "Mark Ronson & Bruno Mars release \"Uptown Funk\"",
+          "emoji": "🕺",
+          "year": 2014,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "China lands on the far side of the Moon",
+          "emoji": "🌑",
+          "year": 2019,
+          "source": "space-100-milestones"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "My Hero Academia manga begins",
+          "emoji": "🦸",
+          "year": 2014,
+          "source": "best-selling-manga"
+        },
+        {
+          "name": "Angela Merkel is TIME Person of the Year",
+          "emoji": "📰",
+          "year": 2015,
+          "source": "time-person-of-the-year"
+        },
+        {
+          "name": "Justin Timberlake headlines the Super Bowl halftime show",
+          "emoji": "🏈",
+          "year": 2018,
+          "source": "super-bowl-halftime"
+        },
+        {
+          "name": "The first photo of a black hole is revealed",
+          "emoji": "🕳️",
+          "year": 2019,
+          "source": "space-100-milestones"
+        },
+        {
+          "name": "Spider-Man: No Way Home is released",
+          "emoji": "🕷️",
+          "year": 2021,
+          "source": "highest-grossing-by-year"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "name": "The first Assassin's Creed is released",
+          "emoji": "🗡️",
+          "year": 2007,
+          "source": "best-selling-franchises"
+        },
+        {
+          "name": "Dubai's Burj Khalifa becomes the world's tallest building",
+          "emoji": "🏙️",
+          "year": 2010,
+          "source": "tallest-buildings-history"
+        },
+        {
+          "name": "Hozier releases \"Take Me to Church\"",
+          "emoji": "⛪",
+          "year": 2013,
+          "source": "spotify-most-streamed"
+        },
+        {
+          "name": "The Girl on the Train is published",
+          "emoji": "🚆",
+          "year": 2015,
+          "source": "best-selling-books"
+        },
+        {
+          "name": "Liverpool win the Champions League under Jürgen Klopp",
+          "emoji": "🔴",
+          "year": 2019,
+          "source": "champions-league-finals"
+        }
+      ]
+    }
+  ]
+}

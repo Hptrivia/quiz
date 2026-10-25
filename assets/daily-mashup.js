@@ -418,6 +418,7 @@ async function renderDailyMashupPage() {
         return;
       }
       const result = saveDailyMashupResult(score, questions.length, missed);
+      if (typeof gtag === "function" && !srIsTest()) gtag("event", "daily_finished", { mode: "mashup", solved: true, score });
       if (quizEl) quizEl.style.display = "none";
       showDmResult(result);
     }

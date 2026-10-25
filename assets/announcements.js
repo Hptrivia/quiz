@@ -140,6 +140,12 @@ const APP_ANNOUNCEMENTS = [
     cta: { label: "Open Calendar", href: "daily.html?calendar=1" },
     appOnly: true,
   },
+  {
+    icon: "🆕",
+    title: "Two new daily games!",
+    text: "Who Am I? — guess today's famous person from clues. Which Came First? — put 5 moments from history and pop culture in order.",
+    cta: { label: "Play Now", href: "daily-challenges.html" },
+  },
 ];
 
 function _cbAnnouncementHash(str) {

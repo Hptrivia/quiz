@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if(/TriviaGauntletPremium/.test(navigator.userAgent||''))document.documentElement.classList.add('premium-app');</script>
+  <meta charset="UTF-8" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Which Came First? Daily | Trivia Gauntlet</title>
+  <meta name="description" content="Put five things in order from oldest to newest on Trivia Gauntlet. A new puzzle every day — 3 tries to get it right." />
+  <link rel="icon" href="/favicon.ico.png" sizes="any">
+  <link rel="apple-touch-icon" href="/assets/icon-192.png" />
+  <meta name="theme-color" content="#0f172a" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    if(!/TriviaGauntletPremium/.test(navigator.userAgent||''))gtag('config', 'G-E6BY9F2ZDT');
+  </script>
+  <link rel="stylesheet" href="assets/style.css" />
+  <!-- Mediavine ad script — website only. Skipped in the native app (AdMob handles ads there),
+       the premium ad-free app, and for web users who unlocked ad-free access. -->
+  <script data-mediavine-loader="">
+  (function(){
+    if (/TriviaGauntletPremium/.test(navigator.userAgent || '')) return;
+    if (window.Capacitor && (window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform() || window.Capacitor.isNative)) return;
+    try { var until = localStorage.getItem('adsRemovedUntil'); if (until && new Date(until) > new Date()) return; } catch (e) {}
+    var s = document.createElement('script');
+    s.type = 'text/javascript'; s.async = true;
+    s.setAttribute('data-noptimize', '1'); s.setAttribute('data-cfasync', 'false');
+    s.src = '//scripts.mediavine.com/tags/5434c4f7-f50b-4d0f-a795-071f1a1f055e.js';
+    document.head.appendChild(s);
+  })();
+  </script>
+</head>
+<body data-page="daily-order">
+  <main class="container narrow" style="padding-top:8px;">
+    <div class="theme-top-links"><a href="index.html" class="back-link" onclick="if(history.length>1){history.back();return false;}">← Back</a><span id="navAvatarSlot"></span></div>
+
+    <section class="panel">
+
+      <div id="wfLoading" data-da-hide>
+        <p style="color:var(--muted-text)">Loading today's puzzle...</p>
+      </div>
+
+      <div id="wfHowTo" class="dw-info-modal" style="display:none;">
+        <div class="dw-info-box">
+          <button type="button" class="dw-info-close" aria-label="Close">✕</button>
+          <h3>How to Play</h3>
+          <p><strong>Put the 5 events in order — oldest at the top, newest at the bottom.</strong></p>
+          <ul style="margin:8px 0 0;padding-left:18px;line-height:1.8;">
+            <li>Use ▲▼ to move them, then tap <strong>Check Order</strong>.</li>
+            <li>Items in the right place turn 🟩 and lock.</li>
+            <li>You get 3 tries.</li>
+            <li>💡 Stuck? A hint reveals the year of one event.</li>
+          </ul>
+          <p style="margin-top:10px;color:var(--muted-text);font-size:0.85rem;">A new puzzle every day at midnight UTC.</p>
+        </div>
+      </div>
+
+      <div id="wfGame" style="display:none;" data-da-hide>
+        <div class="wa-title-row">
+          <h2>Which Came First?</h2>
+          <div class="wa-title-mid"></div>
+          <div class="wa-title-actions">
+            <button id="wfHowToBtn" type="button" class="wordle-info-btn" aria-label="How to play">?</button>
+          </div>
+        </div>
+        <div class="wa-date-row">
+          <p id="wfDateLabel" class="daily-date"></p>
+        </div>
+        <p class="wf-end-label">⬆ Oldest</p>
+        <div id="wfList" class="wf-list"></div>
+        <p class="wf-end-label">⬇ Newest</p>
+        <div class="wf-actions">
+          <button id="wfCheckBtn" type="button" class="primary-btn">Check Order</button>
+          <button id="wfHintBtn" type="button" class="secondary-btn wa-hint-btn">💡 Hint</button>
+        </div>
+        <p id="wfFeedback" class="feedback"></p>
+        <p id="wfTriesLeft" class="wa-left"></p>
+      </div>
+
+      <div id="wfArchiveResult" style="display:none;"></div>
+
+      <div id="wfResult" style="display:none;">
+        <h2 style="margin-bottom:6px;">Which Came First?</h2>
+        <p id="wfResultStatus" style="text-align:center;margin:6px 0 8px;font-size:1.05rem;font-weight:600;"></p>
+        <pre id="wfResultGrid" style="text-align:center;font-size:1.3rem;line-height:1.4;margin:0 0 12px;"></pre>
+        <div id="wfAnswer" class="wf-list" style="margin-bottom:12px;"></div>
+        <div id="wfStreakBox" class="daily-streak-box"></div>
+        <button id="wfArchiveBtn" class="primary-btn" style="width:100%;margin-bottom:6px;">📅 Your calendar</button>
+        <p id="wfCountdown" class="daily-countdown"></p>
+        <button id="wfShareBtn" class="secondary-btn" style="width:100%;margin-top:12px;">Share Results</button>
+        <div class="mode-vote" data-mode="order" data-name="Which Came First?"></div>
+        <a href="contact.html" class="secondary-btn" style="display:block;margin-top:14px;text-align:center;text-decoration:none;font-size:0.85rem;padding:8px 18px;">Leave Feedback</a>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+  <script src="assets/admob.js"></script>
+  <script src="assets/daily-archive.js"></script>
+  <script src="assets/daily-order.js"></script>
+  <script src="assets/sound.js"></script>
+  <script src="assets/profile.js"></script>
+</body>
+</html>

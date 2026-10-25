@@ -119,13 +119,13 @@ function isGamePage() {
   // Keep this list in sync with getRoundStartParams() below — both must cover every
   // in-game page so the banner stays hidden during play (mashup-* were missing,
   // which left a banner on the mashup trivia-rush / marathon gameplay screens).
-  return /\/(play|challenge|survival|episode|trivia-rush|mashup-trivia-rush|versus|wordle|wordsearch|mashup-play|daily|daily-wordle|daily-blitz|category-blitz-solo|category-blitz-versus)\.html$/.test(path);
+  return /\/(play|challenge|survival|episode|trivia-rush|mashup-trivia-rush|versus|wordle|wordsearch|mashup-play|daily|daily-wordle|daily-whoami|daily-order|daily-blitz|category-blitz-solo|category-blitz-versus)\.html$/.test(path);
 }
 
 function getRoundStartParams() {
   const path = window.location.pathname;
   if (_isCharacterQuizPage(path)) return true;
-  return /\/(play|challenge|survival|episode|trivia-rush|mashup-trivia-rush|versus|wordle|wordsearch|mashup-play|daily|daily-wordle|daily-blitz|category-blitz-solo|category-blitz-versus)\.html$/.test(path);
+  return /\/(play|challenge|survival|episode|trivia-rush|mashup-trivia-rush|versus|wordle|wordsearch|mashup-play|daily|daily-wordle|daily-whoami|daily-order|daily-blitz|category-blitz-solo|category-blitz-versus)\.html$/.test(path);
 }
 
 // Category Blitz is a brand-new mode — existing users hit it for the first
@@ -137,6 +137,21 @@ const _IAD_CATBLITZ_FIRST_OPEN_KEY = '_iadCatBlitzFirstOpenDone';
 function _isCatBlitzPath(path) {
   return /\/(daily-blitz|category-blitz-solo|category-blitz-versus)\.html$/.test(path);
 }
+
+// Same one-time grace for each newer daily mode, one flag per mode so a user
+// gets a free first game in every new mode they try.
+const _IAD_NEW_MODE_FIRST_OPEN_KEYS = {
+  'daily-whoami': '_iadWhoAmIFirstOpenDone',
+  'daily-order': '_iadOrderFirstOpenDone',
+};
+function _newModeFirstOpenKey(path) {
+  const m = path.match(/\/([^/]+)\.html$/);
+  return m ? _IAD_NEW_MODE_FIRST_OPEN_KEYS[m[1]] || null : null;
+}
+// True on the page load that used up a first-open grace — game scripts check
+// this to skip their end-of-game interstitial too, so the first game is fully ad-free.
+let _iadFirstGameGrace = false;
+function adMobIsFirstGameGrace() { return _iadFirstGameGrace; }
 
 let _AdMob = null;
 let _adMobReady = false;
@@ -216,8 +231,12 @@ async function adMobInit() {
   const isFirstCatBlitzOpen = isGameStart && _isCatBlitzPath(window.location.pathname)
     && !localStorage.getItem(_IAD_CATBLITZ_FIRST_OPEN_KEY);
   if (isFirstCatBlitzOpen) localStorage.setItem(_IAD_CATBLITZ_FIRST_OPEN_KEY, '1');
+  const _newModeKey = _newModeFirstOpenKey(window.location.pathname);
+  const isFirstNewModeOpen = isGameStart && !!_newModeKey && !localStorage.getItem(_newModeKey);
+  if (isFirstNewModeOpen) localStorage.setItem(_newModeKey, '1');
+  _iadFirstGameGrace = isFirstEverOpen || isFirstCatBlitzOpen || isFirstNewModeOpen;
   const showInterstitialFirst = isGameStart && !sessionStorage.getItem(_modeKey)
-    && !_interstitialOnCooldown() && !isFirstEverOpen && !isFirstCatBlitzOpen;
+    && !_interstitialOnCooldown() && !_iadFirstGameGrace;
   const _removeLoader = () => {
     document.getElementById('_adLoader')?.remove();
     document.body.style.visibility = 'visible';
@@ -647,7 +666,7 @@ function srMaybeOfferRepair(streakKey) {
   _offerRewardedLifeline(
     'Save Streak',
     () => {
-      if (typeof gtag === 'function' && !srIsTest()) gtag('event', 'streak_save_ad', { mode: { dcStreak: 'trivia', dwStreak: 'wordle', dmStreak: 'mashup', cbStreak_daily: 'blitz' }[streakKey] });
+      if (typeof gtag === 'function' && !srIsTest()) gtag('event', 'streak_save_ad', { mode: { dcStreak: 'trivia', dwStreak: 'wordle', dmStreak: 'mashup', cbStreak_daily: 'blitz', wfStreak: 'order', waStreak: 'whoami' }[streakKey] });
       srRepair(streakKey);
     },
     `🔥 Your <strong>${streak.current}-day streak</strong> is about to end!<br>Watch a short ad to save it?`,

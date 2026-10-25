@@ -1814,3 +1814,25 @@ document.addEventListener("DOMContentLoaded", () => {
   if (page === "play") renderPlayPage();
   // (Footer "Unlock Full Access" link is injected site-wide from profile.js.)
 });
+
+// ── "Enjoying this mode? 👍 👎" ──────────────────────────────────────────
+// For new modes being trialled: any <div class="mode-vote" data-mode
+// data-name> gets a one-tap vote, asked once per person per mode, sent to
+// GA as mode_vote { mode, vote: "up" | "down" }.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".mode-vote").forEach(box => {
+    const key = `modeVoted_${box.dataset.mode}`;
+    if (localStorage.getItem(key)) return;
+    box.innerHTML = `
+      <span>Enjoying ${box.dataset.name.replace(/\?$/, "")}?</span>
+      <button type="button" class="mode-vote-btn" data-vote="up" aria-label="Yes">👍</button>
+      <button type="button" class="mode-vote-btn" data-vote="down" aria-label="No">👎</button>`;
+    box.addEventListener("click", e => {
+      const btn = e.target.closest(".mode-vote-btn");
+      if (!btn) return;
+      localStorage.setItem(key, btn.dataset.vote);
+      if (typeof gtag === "function") gtag("event", "mode_vote", { mode: box.dataset.mode, vote: btn.dataset.vote });
+      box.innerHTML = `<span>Thanks for letting us know!</span>`;
+    });
+  });
+});
