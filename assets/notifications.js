@@ -187,6 +187,20 @@ function tgnWireSettings() {
   document.getElementById('notifyReminderBtn').onclick = () => tgnSettingsChange({ reminder: !tgnSettings().reminder });
   document.getElementById('notifyStreakBtn').onclick = () => tgnSettingsChange({ streak: !tgnSettings().streak });
   document.querySelectorAll('#notifyHourRow [data-hour]').forEach(b => { b.onclick = () => tgnSettingsChange({ hour: +b.dataset.hour }); });
+  const testBtn = document.getElementById('notifyTestBtn');
+  if (testBtn) testBtn.onclick = async () => {
+    const LN = tgnPlugin();
+    try {
+      if ((await LN.checkPermissions()).display !== 'granted') await LN.requestPermissions();
+      await LN.schedule({ notifications: [{
+        id: 199, title: 'Trivia Gauntlet', body: "Notifications are working 🎉 We'll remind you before your streak runs out.",
+        schedule: { at: new Date(Date.now() + 5000), allowWhileIdle: true }, extra: { url: 'daily-challenges.html' },
+      }] });
+      document.getElementById('notifyTestMsg').style.display = '';
+      if (typeof gtag === 'function') gtag('event', 'notify_test');
+    } catch (e) { console.warn('[notify] test failed', e); }
+    tgnRenderSettings();
+  };
   tgnRenderSettings();
 }
 
