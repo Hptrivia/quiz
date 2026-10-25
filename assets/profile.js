@@ -7,13 +7,13 @@ const REPLAY_KEY  = "tg_replay";
 // the general _isNative flag is defined further down.
 const _isPremiumApp = /TriviaGauntletPremium/.test(navigator.userAgent || '');
 
-// The premium apps are plain WebViews (no Capacitor), so they miss the free
-// app's native no-zoom / no-link-preview setup. Make the page itself behave
-// like an app there: no pinch or double-tap zoom, no long-press link menu,
-// no long-press text selection (inputs still selectable).
-if (_isPremiumApp) {
+// Make pages behave like an app inside both apps: no long-press link menu
+// ("Open Link" etc.) and no long-press text selection (inputs still
+// selectable). The premium apps are plain WebViews without the free
+// Capacitor app's native no-zoom setup, so they also get zoom locked here.
+if (_isPremiumApp || (window.Capacitor && (window.Capacitor.isNativePlatform?.() || window.Capacitor.isNative))) {
   const vp = document.querySelector('meta[name="viewport"]');
-  if (vp && !/user-scalable/.test(vp.content)) vp.content += ', maximum-scale=1, user-scalable=no';
+  if (_isPremiumApp && vp && !/user-scalable/.test(vp.content)) vp.content += ', maximum-scale=1, user-scalable=no';
   const st = document.createElement('style');
   st.textContent = 'html{touch-action:manipulation;-webkit-tap-highlight-color:transparent}'
     + '*{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}'
