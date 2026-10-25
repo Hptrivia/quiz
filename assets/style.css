@@ -1947,6 +1947,8 @@ body[data-page="wordsearch"].premium-mode .ws-game-area {
   grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
+/* Homepage "More Ways to Play": 3 cards, one row on desktop. */
+.more-ways-grid { grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 520px) {
   .featured-trio { grid-template-columns: 1fr; }
 }
