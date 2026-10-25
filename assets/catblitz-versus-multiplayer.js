@@ -379,7 +379,7 @@ async function mpBeginMatch(isRematch) {
   mpGet(`multiplayer_reactions?room_code=eq.${mpRoom.code}&order=id.desc&limit=1`)
     .then(rows => { mpRoom.lastSeenReactionId = rows[0] ? rows[0].id : 0; })
     .catch(() => { mpRoom.lastSeenReactionId = 0; });
-  if (!isRematch && typeof adMobShowGameStartInterstitial === 'function') await adMobShowGameStartInterstitial();
+  if (!isRematch && typeof adMobShowMultiplayerInterstitial === 'function') await adMobShowMultiplayerInterstitial();
   mpRenderRound();
   mpPollTimer = setInterval(mpPollActive, MP_POLL_MS);
 }

@@ -686,8 +686,6 @@ async function showDWResult(guesses, solved, entry, revealsUsed) {
         </div>
       </div>`;
   }
-
-  if (typeof adMobShowInterstitial === 'function') adMobShowInterstitial();
 }
 
 /* ── Boot ── */

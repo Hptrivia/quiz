@@ -177,6 +177,7 @@ function mpInit(allThemes, resolvedThemes) {
     }
     createBtn.disabled = true;
     try {
+      if (typeof adMobShowMultiplayerInterstitial === 'function') await adMobShowMultiplayerInterstitial();
       await mpCreateRoom(resolvedThemes, mpBestOf, name, [...mpDiffs]);
     } catch (e) {
       showMpError(e.message || 'Could not create a room. Please try again.');
@@ -185,7 +186,8 @@ function mpInit(allThemes, resolvedThemes) {
     }
   });
 
-  document.getElementById('vsMpShowJoinBtn').addEventListener('click', () => {
+  document.getElementById('vsMpShowJoinBtn').addEventListener('click', async () => {
+    if (typeof adMobShowMultiplayerInterstitial === 'function') await adMobShowMultiplayerInterstitial();
     document.getElementById('vsMpJoinFields').style.display = '';
   });
 

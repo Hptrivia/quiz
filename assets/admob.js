@@ -148,10 +148,6 @@ function _newModeFirstOpenKey(path) {
   const m = path.match(/\/([^/]+)\.html$/);
   return m ? _IAD_NEW_MODE_FIRST_OPEN_KEYS[m[1]] || null : null;
 }
-// True on the page load that used up a first-open grace — game scripts check
-// this to skip their end-of-game interstitial too, so the first game is fully ad-free.
-let _iadFirstGameGrace = false;
-function adMobIsFirstGameGrace() { return _iadFirstGameGrace; }
 
 let _AdMob = null;
 let _adMobReady = false;
@@ -201,15 +197,22 @@ async function _requestATT() {
   }
 }
 
+// sessionStorage key for the start-of-game interstitial: mode + show, so a new
+// show is a new game (another start ad, cooldown permitting) while later
+// rounds/episodes of the same show aren't. Pages with no show (dailies,
+// Category Blitz) stay once per mode per session. `url`: Location or URL.
+function _iadGameKey(url) {
+  const perShowPath = url.pathname.match(/\/(wordsearch|wordle)\/([^/]+)\.html$/);
+  if (perShowPath) return `_iad_${perShowPath[1]}_${perShowPath[2]}`;
+  const m = url.pathname.match(/\/([^/]+)\.html$/);
+  const params = new URLSearchParams(url.search);
+  const show = params.get('theme') || params.get('themes');
+  return '_iad_' + (m ? m[1] : 'other') + (show ? '_' + show : '');
+}
+
 async function adMobInit() {
   if (!isInApp() || !ADMOB_ADS_ENABLED || _adMobReady) return;
-  const _modeKey = (() => {
-    const p = window.location.pathname;
-    if (/\/wordsearch\//.test(p)) return '_iad_wordsearch';
-    if (/\/wordle\//.test(p)) return '_iad_wordle';
-    const m = p.match(/\/([^/]+)\.html$/);
-    return m ? '_iad_' + m[1] : '_iad_other';
-  })();
+  const _modeKey = _iadGameKey(window.location);
   // Skip the interstitial-first if we're still inside the cooldown window — no
   // point preparing/showing one we'd be blocked from displaying anyway.
   // data-defer-game-ad: pages with an in-page setup step before play actually
@@ -222,7 +225,7 @@ async function adMobInit() {
   // interstitial (Reddit reports of users bouncing after the very first ad).
   // Gated on isGameStart so the home/menu page can't consume the flag before
   // the user ever reaches a game.
-  const isFirstEverOpen = isGameStart && !localStorage.getItem('_iadFirstOpenDone');
+  const isFirstEverOpen = (isGameStart || _isMpJoinLink()) && !localStorage.getItem('_iadFirstOpenDone');
   if (isFirstEverOpen) localStorage.setItem('_iadFirstOpenDone', '1');
   // Separate one-time grace for Category Blitz specifically — see
   // _IAD_CATBLITZ_FIRST_OPEN_KEY above. Independent of isFirstEverOpen: a
@@ -234,8 +237,9 @@ async function adMobInit() {
   const _newModeKey = _newModeFirstOpenKey(window.location.pathname);
   const isFirstNewModeOpen = isGameStart && !!_newModeKey && !localStorage.getItem(_newModeKey);
   if (isFirstNewModeOpen) localStorage.setItem(_newModeKey, '1');
-  _iadFirstGameGrace = isFirstEverOpen || isFirstCatBlitzOpen || isFirstNewModeOpen;
-  const showInterstitialFirst = isGameStart && !sessionStorage.getItem(_modeKey)
+  const _iadFirstGameGrace = isFirstEverOpen || isFirstCatBlitzOpen || isFirstNewModeOpen;
+  const isMpJoinLink = _isMpJoinLink();
+  const showInterstitialFirst = ((isGameStart && !sessionStorage.getItem(_modeKey)) || isMpJoinLink)
     && !_interstitialOnCooldown() && !_iadFirstGameGrace;
   const _removeLoader = () => {
     document.getElementById('_adLoader')?.remove();
@@ -293,13 +297,7 @@ async function adMobInit() {
 // Start/Resume, not on page load. No-op outside the app / with ads off.
 async function adMobShowGameStartInterstitial() {
   if (!isInApp() || !ADMOB_ADS_ENABLED || !_adMobReady) return;
-  const _modeKey = (() => {
-    const p = window.location.pathname;
-    if (/\/wordsearch\//.test(p)) return '_iad_wordsearch';
-    if (/\/wordle\//.test(p)) return '_iad_wordle';
-    const m = p.match(/\/([^/]+)\.html$/);
-    return m ? '_iad_' + m[1] : '_iad_other';
-  })();
+  const _modeKey = _iadGameKey(window.location);
   const isFirstEverOpen = !localStorage.getItem('_iadFirstOpenDone');
   if (isFirstEverOpen) localStorage.setItem('_iadFirstOpenDone', '1');
   const isFirstCatBlitzOpen = _isCatBlitzPath(window.location.pathname)
@@ -361,10 +359,37 @@ async function adMobShowRewarded() {
   });
 }
 
+// Minimum gap between full-screen ads: 3 min, except 60s on the multiplayer
+// pages (games there are often 1-2 min, so 3 min skipped every other game).
+// Decided by the page here, in one place, so every show/preload path agrees.
 const _IAD_COOLDOWN_MS = 3 * 60 * 1000;
+const _IAD_MP_COOLDOWN_MS = 60 * 1000;
 function _interstitialOnCooldown() {
+  const isMpPage = /\/(versus|party|category-blitz-versus)\.html$/.test(window.location.pathname);
   const last = parseInt(localStorage.getItem('_iadLastShown') || '0');
-  return Date.now() - last < _IAD_COOLDOWN_MS;
+  return Date.now() - last < (isMpPage ? _IAD_MP_COOLDOWN_MS : _IAD_COOLDOWN_MS);
+}
+
+// Online multiplayer (Versus / Category Blitz Versus / Party): an ad every time
+// a player creates or joins a room, not once per session — the session flag let
+// players start new rooms ad-free all session. Always shown before the player
+// is in a live match, so nobody misses questions: on Create Room (the host then
+// waits in the lobby), on opening a join link / tapping Join Room (before the
+// name + Join tap that starts the match), and at Category Blitz's match start
+// (each side runs its own round timer there).
+function _isMpJoinLink() {
+  return /\/(versus|party)\.html$/.test(window.location.pathname)
+    && /[?&](mpJoin|ptyJoin)=/.test(window.location.search);
+}
+async function adMobShowMultiplayerInterstitial() {
+  if (!isInApp() || !ADMOB_ADS_ENABLED || !_adMobReady) return;
+  // Same one-time first-game graces as everywhere else.
+  if (!localStorage.getItem('_iadFirstOpenDone')) { localStorage.setItem('_iadFirstOpenDone', '1'); return; }
+  if (_isCatBlitzPath(window.location.pathname) && !localStorage.getItem(_IAD_CATBLITZ_FIRST_OPEN_KEY)) {
+    localStorage.setItem(_IAD_CATBLITZ_FIRST_OPEN_KEY, '1');
+    return;
+  }
+  await adMobShowInterstitial();
 }
 
 // Shows interstitial ad (no reward, auto-dismissed).
@@ -515,11 +540,7 @@ document.addEventListener('click', async (e) => {
   _offerRewardedLifeline(label, () => {
     try {
       const dest = new URL(href, window.location.href);
-      const dp = dest.pathname;
-      const dk = /\/wordsearch\//.test(dp) ? '_iad_wordsearch'
-               : /\/wordle\//.test(dp) ? '_iad_wordle'
-               : (dp.match(/\/([^/]+)\.html$/) || [])[1] ? '_iad_' + (dp.match(/\/([^/]+)\.html$/) || [])[1] : '_iad_other';
-      sessionStorage.setItem(dk, '1');
+      sessionStorage.setItem(_iadGameKey(dest), '1');
     } catch {}
     window.location.href = href;
   }, promptHtml);

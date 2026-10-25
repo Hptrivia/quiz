@@ -172,7 +172,6 @@ async function renderMultiThemeSurvival() {
   function renderResult() {
     // (Questions are counted per-answer in handleCorrectAnswer/handleWrongAnswer
     // so the 20-question web limit can hard-stop a run mid-game.)
-    adMobShowInterstitial();
     gameBox.style.display = "none";
     resultBox.style.display = "block";
     resultBox.classList.remove("result-anim"); void resultBox.offsetWidth; resultBox.classList.add("result-anim");
@@ -441,7 +440,6 @@ async function renderSurvivalPage() {
   function renderResult() {
     // (Questions are counted per-answer in handleCorrectAnswer/handleWrongAnswer
     // so the 20-question web limit can hard-stop a run mid-game.)
-    adMobShowInterstitial();
     gameBox.style.display = "none";
     resultBox.style.display = "block";
     resultBox.classList.remove("result-anim");

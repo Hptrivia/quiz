@@ -402,9 +402,6 @@ function wfShowResult(state, items) {
       }
     });
   }
-
-  // First-ever game in this mode stays ad-free (see adMobIsFirstGameGrace in admob.js).
-  if (typeof adMobShowInterstitial === 'function' && !(typeof adMobIsFirstGameGrace === 'function' && adMobIsFirstGameGrace())) adMobShowInterstitial();
 }
 
 /* ── Boot ── */
