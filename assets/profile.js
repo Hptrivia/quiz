@@ -7,6 +7,20 @@ const REPLAY_KEY  = "tg_replay";
 // the general _isNative flag is defined further down.
 const _isPremiumApp = /TriviaGauntletPremium/.test(navigator.userAgent || '');
 
+// The premium apps are plain WebViews (no Capacitor), so they miss the free
+// app's native no-zoom / no-link-preview setup. Make the page itself behave
+// like an app there: no pinch or double-tap zoom, no long-press link menu,
+// no long-press text selection (inputs still selectable).
+if (_isPremiumApp) {
+  const vp = document.querySelector('meta[name="viewport"]');
+  if (vp && !/user-scalable/.test(vp.content)) vp.content += ', maximum-scale=1, user-scalable=no';
+  const st = document.createElement('style');
+  st.textContent = 'html{touch-action:manipulation;-webkit-tap-highlight-color:transparent}'
+    + '*{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}'
+    + 'input,textarea,[contenteditable]{-webkit-user-select:text;user-select:text}';
+  document.head.appendChild(st);
+}
+
 const AVATAR_COLORS = [
   "#3b82f6","#8b5cf6","#ec4899","#10b981",
   "#f59e0b","#ef4444","#06b6d4","#84cc16"
