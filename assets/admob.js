@@ -709,3 +709,38 @@ if (isInApp() && window.Capacitor.isPluginAvailable?.('LocalNotifications')) {
   s.src = '/assets/notifications.js';
   document.head.appendChild(s);
 }
+
+// "Update the app" nudge for iPhone users still on a build without
+// notifications (4.0 and older). Shown on the Daily Challenges page and after
+// finishing a daily; "Not now" hides it for 7 days.
+// OFF until 4.1 is live in the App Store — set to true then (otherwise
+// "Update" opens a store page with nothing new to install).
+const TG_UPDATE_NUDGE_IOS = false;
+const _TG_NUDGE_KEY = 'tg_update_nudge_hidden_until';
+function tgMaybeShowUpdateNudge() {
+  if (!TG_UPDATE_NUDGE_IOS || !isInApp() || _ADMOB_PLATFORM !== 'ios') return;
+  if (window.Capacitor.isPluginAvailable?.('LocalNotifications')) return; // already updated
+  try { if (Date.now() < parseInt(localStorage.getItem(_TG_NUDGE_KEY) || '0', 10)) return; } catch { return; }
+  if (document.getElementById('_tgUpdateNudge')) return;
+  const box = document.createElement('div');
+  box.id = '_tgUpdateNudge';
+  box.style.cssText = 'position:fixed;left:12px;right:12px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:9998;background:#1e1e2e;color:#fff;border:1px solid #6c63ff;border-radius:12px;padding:14px 16px;box-shadow:0 6px 24px rgba(0,0,0,.5);max-width:420px;margin:0 auto';
+  box.innerHTML = `<p style="margin:0 0 4px;font-weight:700">New: streak reminders 🔥</p>
+    <p style="margin:0 0 12px;font-size:.9em;opacity:.85">Update the app to get a heads-up before your streak runs out — and pick when your daily reminder arrives.</p>
+    <div style="display:flex;gap:8px">
+      <a id="_tgNudgeUpdate" href="https://apps.apple.com/app/trivia-gauntlet/id6749189557" style="flex:1;text-align:center;padding:10px;border-radius:8px;background:#6c63ff;color:#fff;text-decoration:none;font-weight:600">Update</a>
+      <button id="_tgNudgeLater" style="flex:1;padding:10px;border-radius:8px;background:#444;color:#fff;border:none">Not now</button>
+    </div>`;
+  document.body.appendChild(box);
+  if (typeof gtag === 'function') gtag('event', 'update_nudge', { action: 'shown' });
+  const hide = () => { box.remove(); try { localStorage.setItem(_TG_NUDGE_KEY, String(Date.now() + 7 * 86400000)); } catch {} };
+  box.querySelector('#_tgNudgeLater').onclick = () => { hide(); if (typeof gtag === 'function') gtag('event', 'update_nudge', { action: 'later' }); };
+  box.querySelector('#_tgNudgeUpdate').onclick = () => { hide(); if (typeof gtag === 'function') gtag('event', 'update_nudge', { action: 'update' }); };
+}
+// Old builds never load notifications.js, so the dailies' finish hook lands here instead.
+if (isInApp() && !window.Capacitor.isPluginAvailable?.('LocalNotifications')) {
+  window.tgNotifyDailyFinished = () => setTimeout(tgMaybeShowUpdateNudge, 2500);
+  if (/\/daily-challenges\.html$/.test(window.location.pathname)) {
+    document.addEventListener('DOMContentLoaded', () => setTimeout(tgMaybeShowUpdateNudge, 1500));
+  }
+}
