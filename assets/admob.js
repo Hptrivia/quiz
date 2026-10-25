@@ -11,7 +11,7 @@
 //
 const ADMOB_MODE_BY_PLATFORM = {
   ios: 'live',
-  android: 'test',
+  android: 'live',
 };
 const _ADMOB_PLATFORM = window.Capacitor?.getPlatform?.();
 
