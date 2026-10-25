@@ -1,0 +1,37 @@
+name: Test iOS Free App Build
+
+# Signing-free simulator build of the free Capacitor app — checks the native
+# project compiles (e.g. after adding a plugin) before spending a signed run.
+
+on:
+  workflow_dispatch: {}
+  push:
+    paths:
+      - 'ios/App/**'
+      - 'package.json'
+      - '.github/workflows/test-ios-free-build.yml'
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install npm packages + sync Capacitor
+        run: |
+          npm ci
+          npx cap sync ios
+
+      - name: Build for simulator (no signing)
+        working-directory: ios/App
+        run: |
+          xcodebuild build \
+            -project App.xcodeproj \
+            -scheme App \
+            -configuration Debug \
+            -destination "generic/platform=iOS Simulator" \
+            CODE_SIGNING_ALLOWED=NO
