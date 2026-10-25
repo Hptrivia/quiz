@@ -26,7 +26,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       # Capacitor's Swift packages point into node_modules, and `cap sync`
       # writes the generated config/public files the app target expects.
