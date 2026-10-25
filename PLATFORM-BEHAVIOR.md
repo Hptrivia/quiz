@@ -72,14 +72,20 @@ All gating lives behind `isLimitedWeb()`. Unlocking full access (a valid code) f
 | Ad | iOS app | Android app | iOS web | Android web | Desktop web |
 |---|---|---|---|---|---|
 | **AdMob banner** (lobby/result screens) | ✅ | ✅ | ❌ | ❌ | ❌ |
-| **AdMob interstitial** (on game start) | ✅ once/mode/session, 20-min cooldown | ✅ once/mode/session, 20-min cooldown | ❌ | ❌ | ❌ |
+| **AdMob interstitial** (on game start only) | ✅ once/mode+show/session, 3-min gap (60s multiplayer) | ✅ once/mode+show/session, 3-min gap (60s multiplayer) | ❌ | ❌ | ❌ |
 | **AdMob rewarded** (Next Round / lifelines) | ✅ | ✅ | ❌ | ❌ | ❌ |
 | **Adsterra 300×250** (Daily Trivia result only) | ⚠️ ✅ | ⚠️ ✅ | ✅ | ✅ | ✅ |
 
 - **iOS app + Android app = `'live'`** (real units, `ADMOB_MODE_BY_PLATFORM`). Banner hidden on game pages, shown on lobby
-  + result screens. Interstitial fires once per mode per session (sessionStorage key)
-  with a 20-min cross-app cooldown. Rewarded gates "Next Round" (marathon: every round;
-  challenge: every 3rd round) and "Next Word" (wordle: every 2nd) and lifelines.
+  + result screens. Interstitial fires only at the START of a game, once per mode + show per
+  session (sessionStorage key `_iadGameKey`: a new show = a new game; later rounds/words of the
+  same show get none), with a 3-min cross-app gap. No end-of-game interstitials anywhere (removed
+  from Survival, Wordle, Daily Wordle, Who Am I, Which Came First on 2026-10-25). Online
+  multiplayer: an ad on every Create Room / Join Room / join link (Category Blitz: match start),
+  60s gap on the versus/party/category-blitz-versus pages. Pass-and-play Versus: ad on Play Again.
+  First game ever (and first look at Category Blitz / Who Am I / Which Came First) is ad-free.
+  Rewarded gates "Next Round" (marathon: every round; challenge: every 2nd round) and
+  "Next Word" (wordle: every 2nd) and lifelines.
 - **Web = no AdMob at all.**
 - ⚠️ **Quirk:** the Daily Trivia result Adsterra ad (daily.js) is gated only by
   `!isPremiumUser()`, **not** by platform — so it also renders inside the native
