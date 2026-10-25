@@ -1,9 +1,9 @@
 name: Build iOS Free App
 
-# Signed build of the free Capacitor app (com.trivia.trivia_gauntlet) → TestFlight.
+# Signed build of the free Capacitor app (iOS bundle ID com.Trivia.Trivia-Gauntlet) → TestFlight.
 # Same pipeline as build-ios-premium.yml; reuses its team / certificate /
 # App Store Connect secrets. Needs two of its own:
-#   IOS_FREE_PROVISIONING_PROFILE_BASE64  (App Store profile for com.trivia.trivia_gauntlet)
+#   IOS_FREE_PROVISIONING_PROFILE_BASE64  (App Store profile for com.Trivia.Trivia-Gauntlet)
 #   IOS_FREE_PROVISIONING_PROFILE_NAME    (that profile's name as shown in the Developer portal)
 
 on:
@@ -20,7 +20,7 @@ jobs:
     env:
       DEVELOPMENT_TEAM: ${{ secrets.APPLE_TEAM_ID }}
       PROVISIONING_PROFILE_SPECIFIER: ${{ secrets.IOS_FREE_PROVISIONING_PROFILE_NAME }}
-      BUNDLE_ID: com.trivia.trivia_gauntlet
+      BUNDLE_ID: com.Trivia.Trivia-Gauntlet
     steps:
       - uses: actions/checkout@v4
 
