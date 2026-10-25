@@ -2074,6 +2074,10 @@ body[data-page="daily"].premium-mode main { padding-top: 20px; }
   transition: color 0.15s;
 }
 .profile-tab.active { color: var(--primary-btn-bg); border-bottom-color: var(--primary-btn-bg); }
+/* Small phones: the 4 tabs share the row so they never push the page sideways. */
+@media (max-width: 420px) {
+  .profile-tab { flex: 1 1 0; min-width: 0; padding: 10px 4px; font-size: 0.82rem; text-align: center; }
+}
 
 .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
 .stat-card {
