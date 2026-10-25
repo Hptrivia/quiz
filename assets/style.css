@@ -1889,7 +1889,23 @@ body[data-page="wordsearch"].premium-mode .ws-game-area {
 .cb-versus-length-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
 .cb-versus-length-btn.selected { background: var(--primary-btn-bg); border-color: var(--primary-btn-bg); color: var(--primary-btn-text); }
 .cb-difficulty-btn.selected { background: var(--primary-btn-bg); border-color: var(--primary-btn-bg); color: var(--primary-btn-text); }
-#notifyHourRow .selected { background: var(--primary-btn-bg); border-color: var(--primary-btn-bg); color: var(--primary-btn-text); }
+/* Profile → Settings → Notifications card (assets/notifications.js) */
+.tgn-card { margin: 4px 0 18px; padding: 14px 16px; border-radius: 12px; background: var(--card-bg); border: 1px solid var(--border-color, #334155); }
+.tgn-title { font-weight: 700; margin-bottom: 4px; }
+.tgn-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 0; }
+.tgn-row + .tgn-seg + .tgn-row, .tgn-seg + .tgn-row { border-top: 1px solid var(--border-color, #334155); }
+.tgn-label { font-size: 0.95rem; }
+.tgn-sub { font-size: 0.78rem; color: var(--muted-text); margin-top: 2px; }
+.tgn-switch { flex: none; position: relative; width: 50px; height: 30px; border-radius: 15px; border: none; padding: 0; background: #4b5563; cursor: pointer; transition: background .2s; }
+.tgn-switch::after { content: ""; position: absolute; top: 3px; left: 3px; width: 24px; height: 24px; border-radius: 50%; background: #fff; transition: transform .2s; }
+.tgn-switch[aria-checked="true"] { background: #22c55e; }
+.tgn-switch[aria-checked="true"]::after { transform: translateX(20px); }
+.tgn-seg { display: flex; padding: 3px; margin: 0 0 10px; border-radius: 9px; background: rgba(255,255,255,0.06); }
+.tgn-seg button { flex: 1; padding: 7px 0; border: none; border-radius: 7px; background: none; color: var(--muted-text); font-size: 0.85rem; cursor: pointer; }
+.tgn-seg button.selected { background: var(--primary-btn-bg); color: var(--primary-btn-text, #fff); font-weight: 600; }
+.tgn-note { font-size: 0.78rem; color: var(--muted-text); margin: 6px 0 0; }
+.tgn-warn { color: #f59e0b; }
+.tgn-link { margin-top: 8px; padding: 0; border: none; background: none; color: var(--primary-btn-bg); font-size: 0.85rem; text-decoration: underline; cursor: pointer; }
 .cb-versus-category-list { display: flex; gap: 8px; flex-wrap: wrap; margin: 6px 0 10px; }
 .cb-versus-category-pill {
   display: inline-flex; align-items: center; gap: 6px;

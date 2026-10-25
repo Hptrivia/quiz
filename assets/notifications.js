@@ -122,7 +122,7 @@ function tgnAskOnce() {
   overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.75);display:flex;align-items:center;justify-content:center;z-index:9999';
   overlay.innerHTML = `<div style="background:#1e1e2e;padding:24px;border-radius:12px;text-align:center;max-width:290px;color:#fff">
     <p style="margin:0 0 6px;font-size:1.1em"><strong>Never lose a streak 🔥</strong></p>
-    <p style="margin:0 0 16px;font-size:.95em;opacity:.85">Get a reminder when new puzzles drop and before your streak runs out. Max one a day.</p>
+    <p style="margin:0 0 16px;font-size:.95em;opacity:.85">Get a reminder when new puzzles drop and before your streak runs out. Max one a day.<br><span style="font-size:.85em;opacity:.8">You can change this anytime in Profile → Settings.</span></p>
     <button id="_tgnYes" style="margin-right:8px;padding:10px 18px;border-radius:8px;background:#6c63ff;color:#fff;border:none;font-size:1em">Yes please</button>
     <button id="_tgnNo" style="padding:10px 18px;border-radius:8px;background:#444;color:#fff;border:none;font-size:1em">No thanks</button>
   </div>`;
@@ -174,7 +174,7 @@ async function tgnRenderSettings() {
   const set = tgnSettings();
   let blocked = false;
   try { blocked = (await tgnPlugin().checkPermissions()).display === 'denied'; } catch {}
-  const btn = (id, on) => { const b = document.getElementById(id); if (b) b.textContent = on ? 'Turn Off' : 'Turn On'; };
+  const btn = (id, on) => { const b = document.getElementById(id); if (b) b.setAttribute('aria-checked', on ? 'true' : 'false'); };
   btn('notifyReminderBtn', set.reminder);
   btn('notifyStreakBtn', set.streak);
   document.getElementById('notifyHourRow').style.display = set.reminder ? '' : 'none';
