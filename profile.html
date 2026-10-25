@@ -88,72 +88,68 @@
       <!-- Settings tab -->
       <div id="tab-settings" style="display:none;">
 
-        <!-- Edit name -->
-        <div style="margin-bottom:16px;margin-top:16px;">
-          <label class="form-label" for="profileNameInputSettings">Display name</label>
-          <div style="display:flex;gap:8px;">
-            <input id="profileNameInputSettings" class="form-input" type="text" maxlength="30" placeholder="Enter your name" style="flex:1;" />
-            <button class="secondary-btn" onclick="saveNameSettings()" style="white-space:nowrap;">Save</button>
+        <!-- Profile -->
+        <div class="set-card">
+          <div class="set-title">Profile</div>
+          <label class="set-label" for="profileNameInputSettings">Display name</label>
+          <div class="set-name-row">
+            <input id="profileNameInputSettings" class="form-input" type="text" maxlength="30" placeholder="Enter your name" />
+            <button type="button" class="set-btn" onclick="saveNameSettings()">Save</button>
           </div>
+          <div class="set-label" style="margin-top:14px;">Avatar colour</div>
+          <div id="colorSwatches" class="profile-color-picker"></div>
         </div>
 
-        <!-- Hard Mode -->
-        <div id="hardModeRow" style="margin-bottom:16px;">
-          <div class="form-label">Hard Mode <span class="hm-beta-tag">Beta</span></div>
-          <button class="secondary-btn" id="hardModeToggleBtn" onclick="toggleHardMode()"></button>
-          <p class="hm-settings-row-desc">Takes effect next quiz, not mid-round</p>
+        <!-- Gameplay -->
+        <div id="hardModeRow" class="set-card">
+          <div class="set-title">Gameplay</div>
+          <div class="set-row">
+            <div><div class="set-label">Hard Mode <span class="hm-beta-tag">Beta</span></div><div class="set-sub">Type your answers instead of picking · takes effect next quiz</div></div>
+            <button type="button" class="set-switch" id="hardModeToggleBtn" role="switch" aria-label="Hard Mode" onclick="toggleHardMode()"></button>
+          </div>
         </div>
 
         <!-- Notifications (app builds with notifications only — shown by assets/notifications.js) -->
-        <div id="notifyRow" class="tgn-card" style="display:none;">
-          <div class="tgn-title">Notifications</div>
-          <div class="tgn-row">
-            <div><div class="tgn-label">Daily reminder</div><div class="tgn-sub">Only on days you haven't played</div></div>
-            <button type="button" class="tgn-switch" id="notifyReminderBtn" role="switch" aria-label="Daily reminder"></button>
+        <div id="notifyRow" class="set-card" style="display:none;">
+          <div class="set-title">Notifications</div>
+          <div class="set-row">
+            <div><div class="set-label">Daily reminder</div><div class="set-sub">Only on days you haven't played</div></div>
+            <button type="button" class="set-switch" id="notifyReminderBtn" role="switch" aria-label="Daily reminder"></button>
           </div>
-          <div id="notifyHourRow" class="tgn-seg">
+          <div id="notifyHourRow" class="set-seg">
             <button type="button" data-hour="9">Morning</button>
             <button type="button" data-hour="13">Afternoon</button>
             <button type="button" data-hour="18">Evening</button>
           </div>
-          <div class="tgn-row">
-            <div><div class="tgn-label">Streak warnings</div><div class="tgn-sub">Before a daily streak runs out</div></div>
-            <button type="button" class="tgn-switch" id="notifyStreakBtn" role="switch" aria-label="Streak warnings"></button>
+          <div class="set-row set-divider">
+            <div><div class="set-label">Streak warnings</div><div class="set-sub">Before a daily streak runs out</div></div>
+            <button type="button" class="set-switch" id="notifyStreakBtn" role="switch" aria-label="Streak warnings"></button>
           </div>
-          <p id="notifyBlocked" class="tgn-note tgn-warn" style="display:none;">Notifications are off for this app in your iPhone settings — turn them on there to get these.</p>
-          <button type="button" class="tgn-link" id="notifyTestBtn">Send a test notification</button>
-          <p id="notifyTestMsg" class="tgn-note" style="display:none;">Sent — go to your home screen, it arrives in about 5 seconds.</p>
+          <p id="notifyBlocked" class="set-note set-warn" style="display:none;">Notifications are off for this app in your iPhone settings — turn them on there to get these.</p>
+          <button type="button" class="set-link" id="notifyTestBtn">Send a test notification</button>
+          <p id="notifyTestMsg" class="set-note" style="display:none;">Sent — go to your home screen, it arrives in about 5 seconds.</p>
         </div>
 
-        <!-- Color picker -->
-        <div style="margin-bottom:16px;">
-          <div class="form-label">Avatar colour</div>
-          <div id="colorSwatches" class="profile-color-picker"></div>
-        </div>
-
-        <!-- Warning -->
-        <div class="profile-warning">
-          &#9888; Stats are saved on this device only. Clearing your browser cache will erase them. Export regularly to keep a backup.
+        <!-- Your data -->
+        <div class="set-card">
+          <div class="set-title">Your stats</div>
+          <p class="set-note set-warn" style="margin:0 0 12px;">&#9888; Saved on this device only — clearing your browser data erases them. Export now and then to keep a backup.</p>
+          <div class="set-name-row">
+            <button type="button" class="set-btn" style="flex:1;" onclick="doExport()">&#8595; Export</button>
+            <label class="set-btn" style="flex:1;text-align:center;cursor:pointer;">
+              &#8593; Import
+              <input type="file" accept=".json" style="display:none;" onchange="doImport(this)" />
+            </label>
+          </div>
         </div>
 
         <!-- Custom Requests -->
-        <div style="margin-bottom:20px;">
-          <div class="form-label">Want more than what's here?</div>
-          <p style="font-size:0.78rem;color:var(--muted-text);margin:4px 0 8px;">A new show, more questions for a theme, or a completely different topic — available as a paid custom request.</p>
-          <a href="custom-requests.html" class="secondary-btn" style="display:inline-block;text-decoration:none;">Request Custom Trivia →</a>
+        <div class="set-card">
+          <div class="set-title">Want more than what's here?</div>
+          <p class="set-note" style="margin:0 0 8px;">A new show, more questions for a theme, or a completely different topic — available as a paid custom request.</p>
+          <a href="custom-requests.html" class="set-link" style="text-decoration:underline;">Request Custom Trivia →</a>
         </div>
-
-        <!-- Export / Import -->
-        <div style="display:flex;gap:10px;margin-bottom:8px;">
-          <button class="secondary-btn" style="flex:1;" onclick="doExport()">&#8595; Export Stats</button>
-          <label class="secondary-btn" style="flex:1;text-align:center;cursor:pointer;">
-            &#8593; Import Stats
-            <input type="file" accept=".json" style="display:none;" onchange="doImport(this)" />
-          </label>
-        </div>
-
       </div>
-
     </section>
 
     <div style="text-align:center;margin:16px 0 24px;">
@@ -368,7 +364,7 @@
       let on = false;
       try { on = localStorage.getItem("tg_hard_mode") === "true"; } catch {}
       const btn = document.getElementById("hardModeToggleBtn");
-      if (btn) btn.textContent = on ? "Turn Off" : "Turn On";
+      if (btn) btn.setAttribute("aria-checked", on ? "true" : "false");
     }
 
     function toggleHardMode() {
@@ -387,7 +383,6 @@
       p.avatarColor = color;
       saveProfile(p);
       renderPage();
-      document.getElementById("colorPickerSection").style.display = "block";
     }
 
     function saveName() {
