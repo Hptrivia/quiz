@@ -1,9 +1,1148 @@
 [
   {
+    "context": "**EPISODE 1**: In the opening scene at the tattoo parlour, a tattoo artist is seen finishing part of the elaborate design covering Michael's torso and arms before he returns home.",
+    "question": "What part of Michael's tattoo is shown being completed in the tattoo parlour?",
+    "options": [
+      "English, Fitz & Percy",
+      "Cute Poison",
+      "Bolshoi Booze",
+      "Barcode 38121037"
+    ],
+    "answer": "English, Fitz & Percy",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "The opening scene shows the artist finishing English, Fitzg and Percy, one of many hidden clues within Michael's elaborate full-body tattoo."
+  },
+  {
+    "context": "After leaving the tattoo parlour, Michael returns to his Chicago apartment and tears down a wall covered in newspaper clippings.",
+    "question": "What does Michael throw into the river from his balcony?",
+    "options": [
+      "A hard drive",
+      "A handgun",
+      "His computer",
+      "His Laptop"
+    ],
+    "answer": "A hard drive",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "He takes the drive out of his computer, boxes up the clippings and hurls the drive into the river."
+  },
+  {
+    "context": "Michael holds up a Chicago savings bank, firing shots into the air and demanding that the clerk open the vault.",
+    "question": "Where does the clerk say the branch manager is having lunch?",
+    "options": [
+      "White Castle",
+      "McDonald's",
+      "Subway",
+      "Wendy's"
+    ],
+    "answer": "White Castle",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "She can't open the vault without the manager, who is out eating the little square burgers."
+  },
+  {
+    "context": "In court, Michael sits before the judge as his lawyer Veronica reacts with alarm to the unusual plea he has just entered.",
+    "question": "What plea does Michael enter for the armed robbery charge?",
+    "options": [
+      "No contest",
+      "Not guilty",
+      "Guilty",
+      "Guilty by reason of insanity"
+    ],
+    "answer": "No contest",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "The judge notes that a plea of no contest is rare in armed robbery cases, and Veronica tries to get a recess because she believes Michael is confused."
+  },
+  {
+    "context": "Back in court, the judge rules out probation because Michael fired a gun, and agrees to his request to stay near Chicago.",
+    "question": "How long is Michael's prison sentence?",
+    "options": [
+      "Five years",
+      "Three years",
+      "Eight years",
+      "Ten years"
+    ],
+    "answer": "Five years",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "He's sent to Fox River, a level one maximum security prison, and will be eligible for parole in half that time."
+  },
+  {
+    "context": "After Michael enters his plea and is sentenced, he arrives at Fox River where Captain Bellick processes him during intake.",
+    "question": "What number does Michael have during intake at Fox River?",
+    "options": [
+      "94941",
+      "49914",
+      "91449",
+      "94419"
+    ],
+    "answer": "94941",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "During processing, Michael states his name and number: \"Scofield, Michael. 94941.\""
+  },
+  {
+    "context": "During intake at Fox River, Captain Bellick asks Michael if he's religious and lays down the only rules that matter inside.",
+    "question": "What is Bellick's first commandment?",
+    "options": [
+      "You've got nothing coming",
+      "Respect the badge",
+      "Keep your head down",
+      "Never rat out a con"
+    ],
+    "answer": "You've got nothing coming",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "When Michael asks for the second commandment, Bellick tells him to see commandment number one."
+  },
+  {
+    "context": "",
+    "question": "What medical condition is listed on Michael's intake sheet?",
+    "options": [
+      "Type 1 diabetes",
+      "Asthma",
+      "Type 2 diabetes",
+      "A heart murmur"
+    ],
+    "answer": "Type 1 diabetes",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "The close-up of his medical sheet shows Type 1 diabetes."
+  },
+  {
+    "context": "Michael walks into the noisy cell block for the first time, where inmates jeer at the new arrival and a prisoner is stabbed.",
+    "question": "What do the inmates keep calling Michael as a newcomer?",
+    "options": [
+      "Fish",
+      "Rookie",
+      "Fresh meat",
+      "Pretty boy"
+    ],
+    "answer": "Fish",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "His new cellmate Sucre welcomes him with \"Welcome to Prisonyland, fish.\""
+  },
+  {
+    "context": "In the yard, Sucre points out to Michael who controls each area of the prison, naming the inmates who run different turf.",
+    "question": "According to Sucre, which of these does NOT control part of the prison yard?",
+    "options": [
+      "Berendo's got the hoops",
+      "Artenio's got the bleachers",
+      "Woods got the weight pile",
+      "Whites got the laundry"
+    ],
+    "answer": "Whites got the laundry",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Sucre tells Michael that Berendo has the hoops, Artenio has the bleachers, Woods has the weight pile, and the CEO (guard tower) has the rest."
+  },
+  {
+    "context": "Sucre points out an old inmate sitting with a cat.",
+    "question": "According to Sucre, how much cash did the old man with the cat parachute out of a plane with?",
+    "options": [
+      "$1.5 million",
+      "$2 million",
+      "$1 million",
+      "$2.5 million"
+    ],
+    "answer": "$1.5 million",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Sucre says DB cooper parachuted out of a plane thirty years ago with a million and a half in cash, though he'll deny it."
+  },
+  {
+    "context": "Sucre introduces Michael to a passing inmate while boasting about his new cellmate's connections in the yard.",
+    "question": "What nickname does Sucre use for the inmate he greets in the yard?",
+    "options": [
+      "Wholesale",
+      "Discount",
+      "Commisary",
+      "Surplus"
+    ],
+    "answer": "Wholesale",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Sucre calls out to the passing inmate as \"Wholesale\" while bragging that he can get anything from the prison commissary."
+  },
+  {
+    "context": "In the yard, Michael asks a fellow inmate where to find Lincoln Burrows, and the man reacts to the name with a mocking grin.",
+    "question": "What nickname does the inmate give Lincoln Burrows when Michael asks about him?",
+    "options": [
+      "Link the Sink",
+      "Link the Stink",
+      "Link the Brink",
+      "Link the Clink"
+    ],
+    "answer": "Link the Sink",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "The inmate calls him 'Link the Sink,' joking that he'll come at you with everything but the kitchen sink."
+  },
+  {
+    "context": "Michael and Sucre lean on a fence, watching Lincoln Burrows crouched alone on the other side.",
+    "question": "Whose brother is Lincoln convicted of killing?",
+    "options": [
+      "The Vice President's",
+      "The Governor's",
+      "The Senator's",
+      "The President's"
+    ],
+    "answer": "The Vice President's",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "He gets the chair in a month, so Sucre says no one is more dangerous because he has nothing to lose."
+  },
+  {
+    "context": "Sucre explains the yard's hierarchy and tells Michael he has no shot at getting into a certain work program.",
+    "question": "What does Sucre say the abbreviation P.I. stands for?",
+    "options": [
+      "Prison Industry",
+      "Parole Industry",
+      "Prison Inspection",
+      "Parole Initiative"
+    ],
+    "answer": "Prison Industry",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Sucre tells Michael that P.I. stands for Prison Industry, where inmates who get along are allowed to work painting, scrapping, and making mattresses."
+  },
+  {
+    "context": "",
+    "question": "Who runs Prison Industries?",
+    "options": [
+      "John Abruzzi",
+      "Captain Bellick",
+      "Mark Wanton",
+      "Charles Westmoreland"
+    ],
+    "answer": "John Abruzzi",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Lincoln only gets out for chapel and P.I., and Abruzzi controls who works P.I."
+  },
+  {
+    "context": "In a flashback, Lincoln tells Michael that the motion has been denied and the state has set a date.",
+    "question": "What date is Lincoln's execution scheduled for?",
+    "options": [
+      "May 11",
+      "May 1",
+      "June 11",
+      "April 11"
+    ],
+    "answer": "May 11",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Lincoln swears he didn't kill the man and believes he was set up by someone who wants him dead quickly."
+  },
+  {
+    "context": "Back in their cell, Sucre asks Michael to help him find a classy way to say love in a letter proposing to his girlfriend.",
+    "question": "Where does Sucre want his girlfriend to be when she opens the letter?",
+    "options": [
+      "The Staten Island Ferry",
+      "The Empire State Building",
+      "Central Park",
+      "The Brooklyn Bridge"
+    ],
+    "answer": "The Staten Island Ferry",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "She's to open it as the ferry passes near the Empire State Building, which Sucre says is almost like being there."
+  },
+  {
+    "context": "In the yard, Michael interrupts Abruzzi's card game to ask for a job in Prison Industries, and Abruzzi tells him to beat it.",
+    "question": "What does Michael leave in front of Abruzzi?",
+    "options": [
+      "An origami duck",
+      "A playing card",
+      "A folded note",
+      "A photogaph"
+    ],
+    "answer": "An origami duck",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Abruzzi laughs it off as just what he needs, and Michael tells him to come find him when he's ready to talk."
+  },
+  {
+    "context": "At a Chicago butcher shop, Abruzzi's man Maggio is shown a photo of someone he thought was long gone.",
+    "question": "What is the name of the man who informed on Abruzzi?",
+    "options": [
+      "Fibonacci",
+      "Fiorello",
+      "Falzone",
+      "Fabrizio"
+    ],
+    "answer": "Fibonacci",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "Maggio thought he had disappeared for good, but somebody has found him and sent them the evidence."
+  },
+  {
+    "context": "In the infirmary, Michael mentions his doctor's famous father while she applies pressure to his arm after a shot.",
+    "question": "What nickname does Michael use for Dr. Tancredi's father?",
+    "options": [
+      "Frontier Frank",
+      "Hangman Harry",
+      "Iron Fist Frank",
+      "Warden Frank"
+    ],
+    "answer": "Frontier Frank",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Michael remarks that he wouldn't expect the daughter of \"Frontier Frank\" to be working as a doctor in a prison."
+  },
+  {
+    "context": "",
+    "question": "What phrase does Dr. Tancredi reveal was her senior yearbook quote?",
+    "options": [
+      "Be the change you want to see in the world",
+      "Justice delayed is justice denied",
+      "Be a part of the solution not the problem",
+      "Actions speak louder than words"
+    ],
+    "answer": "Be the change you want to see in the world",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Michael recites the line to her and Sara remarks that it was her yearbook quote."
+  },
+  {
+    "context": "",
+    "question": "Who does Michael jokingly say he thought came up with Dr. Tancredi's senior yearbook quote?",
+    "options": [
+      "Gandhi",
+      "Martin Luther King",
+      "Mother Teresa",
+      "Abraham Lincoln"
+    ],
+    "answer": "Gandhi",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Micheal jokes, That was you? This whole time I was thinking it was Ghandi.."
+  },
+  {
+    "context": "In the infirmary, Dr. Tancredi warns Michael she won't give him certain medication unless she administers it herself during his visits.",
+    "question": "What does Michael ask Dr. Tancredi to supply him with a three-week stash of?",
+    "options": [
+      "Insulin",
+      "Antibiotics",
+      "Painkillers",
+      "Sedatives"
+    ],
+    "answer": "Insulin",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Michael jokingly asks if she'll just hook him up with a three-week supply, but Sara refuses to allow hypos on the floor and insists on administering it herself."
+  },
+  {
+    "context": "In Washington, D.C., Agent Hale tells Kellerman everything is clear for the Burrows execution except for one man.",
+    "question": "Who is not \"in the fold\" and has influence with the governor?",
+    "options": [
+      "Bishop McMurrow",
+      "Father Kearney",
+      "Senator Hale",
+      "The prison chaplain"
+    ],
+    "answer": "Bishop McMurrow",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "He went to prep school with the governor, so Kellerman decides to pay him a visit."
+  },
+  {
+    "context": "Kellerman and Hale visit Bishop McMurrow at home, and the Bishop refuses to drop his opposition to Lincoln's execution.",
+    "question": "What crime does Kellerman suggest he could expose the Bishop for?",
+    "options": [
+      "Tax fraud",
+      "Embezzlement",
+      "Bribery",
+      "Perjury"
+    ],
+    "answer": "Tax fraud",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Kellerman hints at personal capital gains hidden under the church's tax shelter, but the Bishop won't be cowed."
+  },
+  {
+    "context": "Michael is summoned by Warden Pope, who has read his file and noticed Michael lied about his occupation.",
+    "question": "What does Pope know Michael really works as?",
+    "options": [
+      "A structural engineer",
+      "An architect",
+      "A civil engineer",
+      "A building contractor"
+    ],
+    "answer": "A structural engineer",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Michael listed himself as unemployed, but Pope knows he was top of his class."
+  },
+  {
+    "context": "",
+    "question": "What university does Pope note Michael graduated from, top of his class?",
+    "options": [
+      "Loyola",
+      "Northwestern",
+      "DePaul",
+      "Marquette"
+    ],
+    "answer": "Loyola",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Pope tells Michael he knows he graduated Magna Cum Laude from Loyola, despite Michael listing his occupation as unemployed."
+  },
+  {
+    "context": "",
+    "question": "What model is Pope building as an anniversary gift for his wife?",
+    "options": [
+      "The Taj Mahal",
+      "The Eiffel Tower",
+      "The Parthenon",
+      "St. Peter's Basilica"
+    ],
+    "answer": "The Taj Mahal",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "It's a monument to his love for his wife, but it'll collapse if he builds any more. He offers Michael work in exchange for help, and Michael refuses."
+  },
+  {
+    "context": "In the yard, Michael approaches C-Note, whom Sucre calls the local pharmacy, with an unusual request.",
+    "question": "What drug does Michael ask C-Note to get for him?",
+    "options": [
+      "Pugnac",
+      "Metformin",
+      "Glucagon",
+      "Lagnac"
+    ],
+    "answer": "Pugnac",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "It's an insulin blocker. Michael can't get it at medical because they're already giving him insulin shots."
+  },
+  {
+    "context": "**EPISODE 2**: In the yard, Michael plays checkers with Westmoreland, who says Michael is anticipating every one of his moves three moves in advance.",
+    "question": "Which city does Michael ask Westmoreland if he ever thinks about?",
+    "options": [
+      "Boston",
+      "Chicago",
+      "New York",
+      "Philadelphia"
+    ],
+    "answer": "Boston",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Westmoreland, sixty years old with sixty years left to serve, doubts he'll ever see it again, and Michael hints that he's thinking of going."
+  },
+  {
+    "context": "",
+    "question": "What does Westmoreland warn is about to break out among the inmates?",
+    "options": [
+      "A race riot",
+      "A gang war",
+      "An escape attempt",
+      "A lockdown protest"
+    ],
+    "answer": "A race riot",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "He calls it the calm before the storm: the whites and blacks will go at each other soon, everybody picks a side and a lot of guys bleed."
+  },
+  {
+    "context": "Back in his cell, Michael angles a mirror shard to read part of the tattoo on his forearm while Sucre hums a Spanish song.",
+    "question": "What name does Michael read in his tattoo?",
+    "options": [
+      "Allen Schweitzer",
+      "Albert Schweitzer",
+      "Allen Schneider",
+      "Albert Schneider"
+    ],
+    "answer": "Allen Schweitzer",
+    "difficulty": "hard",
+    "episode": 2,
+    "description": "The mirror reveals \"1112 1147 Allen Schweitzer\", and Michael writes the name down on a notepad."
+  },
+  {
+    "context": "",
+    "question": "When the toilet won't flush ahead of a guards' search, what does Sucre tell Michael is hidden under their table?",
+    "options": [
+      "A shank",
+      "A cell phone",
+      "A bag of pills",
+      "A roll of cash"
+    ],
+    "answer": "A shank",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "The guards have shut off the water so nobody can flush contraband, and Sucre calls the knife insurance."
+  },
+  {
+    "context": "",
+    "question": "After Bellick finds the knife, who does Warden Pope send to the shoe?",
+    "options": [
+      "Sucre",
+      "Michael",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Sucre",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Michael stays silent, but Pope decides the knife is Sucre's and then orders Bellick to move along before he can finish searching the cell."
+  },
+  {
+    "context": "In the chapel, Lincoln sits one pew in front of Michael and demands to know how the escape plan is going.",
+    "question": "Which part of the prison does Michael call the weakest link in the security chain?",
+    "options": [
+      "The infirmary",
+      "The chapel",
+      "The laundry",
+      "The kitchen"
+    ],
+    "answer": "The infirmary",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "As long as he gets the Pugnac and the doctor thinks he's diabetic, he'll have plenty of time in there to prepare for Lincoln's arrival."
+  },
+  {
+    "context": "In the yard, Michael runs his fingers along the empty bleachers until he finds the one bolt stamped with a number from his tattoo.",
+    "question": "What does Michael use to start loosening the bolt?",
+    "options": [
+      "A nickel",
+      "A spoon",
+      "A paperclip",
+      "A belt buckle"
+    ],
+    "answer": "A nickel",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "He sits on the bleachers and slowly turns the bolt with the coin while trying not to draw attention."
+  },
+  {
+    "context": "",
+    "question": "What is the nickname of the inmate who claims the bleachers as his territory?",
+    "options": [
+      "T-Bag",
+      "C-Note",
+      "Tank",
+      "Gator"
+    ],
+    "answer": "T-Bag",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "An inmate warns Michael that the man kidnapped, raped and killed children in Alabama, and T-Bag insists it's his real name."
+  },
+  {
+    "context": "",
+    "question": "What does T-Bag want Michael to hold onto in return for his protection?",
+    "options": [
+      "His pocket",
+      "His belt",
+      "His hand",
+      "His sleeve"
+    ],
+    "answer": "His pocket",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Michael jokes that T-Bag already has a girlfriend holding one and refuses, so T-Bag orders him off the bleachers."
+  },
+  {
+    "context": "At the courthouse, Veronica catches up to a man exiting security and explains she knew Lincoln personally, hoping he can help her.",
+    "question": "What is the name of Lincoln's former trial lawyer that Veronica tracks down at the courthouse?",
+    "options": [
+      "Tim Giles",
+      "Ray Shuman",
+      "Walter Driscoll",
+      "Frank Delgado"
+    ],
+    "answer": "Tim Giles",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Tim Giles insists the case against Lincoln was a slam dunk, but later gives Veronica a copy of the surveillance tape from the garage."
+  },
+  {
+    "context": "",
+    "question": "What was the name of the murder victim, who had fired Lincoln two weeks earlier?",
+    "options": [
+      "Terrence",
+      "Preston",
+      "Andrew",
+      "Marcus"
+    ],
+    "answer": "Terrence",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Lincoln worked for Steadman's company and was fired after a public altercation. The murder weapon turned up in Lincoln's house and the victim's blood on his clothes."
+  },
+  {
+    "context": "",
+    "question": "Which man did Lincoln say could clear him, though his lawyer never put him on the stand?",
+    "options": [
+      "Crab",
+      "Snake",
+      "Tiny",
+      "Gator"
+    ],
+    "answer": "Crab",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "The lawyer says he was a five-time felon with no credibility, but tells Veronica she's welcome to pay him a visit."
+  },
+  {
+    "context": "After T-Bag's crew takes the bolt from Michael, Bellick sneaks into Michael's empty cell and searches the mattresses and the desk.",
+    "question": "What item in the cell gives Bellick the name Michael wrote down?",
+    "options": [
+      "A notepad",
+      "A letter",
+      "A photograph",
+      "A Bible"
+    ],
+    "answer": "A notepad",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Bellick shades over the indentations with a pencil until \"Allen Schweitzer\" appears."
+  },
+  {
+    "context": "In the visiting room, Abruzzi is surprised by a visit from an old associate and a man who used to pick up his laundry.",
+    "question": "Who is the mob boss who comes to pressure Abruzzi?",
+    "options": [
+      "Phil Falzone",
+      "Phil Maggio",
+      "Sal Fontana",
+      "Tony Fabrizio"
+    ],
+    "answer": "Phil Falzone",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "He warns that Fibonacci will testify at a congressional hearing next month and makes a veiled threat against Abruzzi's children."
+  },
+  {
+    "context": "During free time, T-Bag catches Michael searching his cell, and Michael says he wants in and is ready to fight.",
+    "question": "When does T-Bag say his crew will go at the other side?",
+    "options": [
+      "At next count",
+      "At breakfast",
+      "In the chapel",
+      "During yard time"
+    ],
+    "answer": "At next count",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Michael asks if he means tonight, and T-Bag says they're going straight at them."
+  },
+  {
+    "context": "Lincoln's trial lawyer drops by Veronica's office to apologise for being short with her and hands her an envelope.",
+    "question": "What is inside the envelope?",
+    "options": [
+      "A surveillance tape",
+      "Crime scene photos",
+      "The trial transcript",
+      "A police report"
+    ],
+    "answer": "A surveillance tape",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "It shows Lincoln walking up to a car in a parking garage and firing a single shot. The lawyer says it might help her find closure."
+  },
+  {
+    "context": "Veronica visits Lincoln to say she's seen the tape, and he insists that what's on it isn't how it went down.",
+    "question": "How much money did Lincoln owe Crab Simmons?",
+    "options": [
+      "$90,000",
+      "$50,000",
+      "$9,000",
+      "$100,000"
+    ],
+    "answer": "$90,000",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Crab told him the mark was a drug dealer and the debt would be cleared, but Lincoln says the man was already dead when he got there."
+  },
+  {
+    "context": "While Sucre is stuck in the shoe, unable to call, his girlfriend hesitates in a limo outside a Chicago nightclub as her friends pile out.",
+    "question": "What is the name of Sucre's girlfriend?",
+    "options": [
+      "Maricruz",
+      "Marisol",
+      "Maria",
+      "Lucía"
+    ],
+    "answer": "Maricruz",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Hector notices she wants to go home and tells her Fernando is a deadbeat and she has to move on."
+  },
+  {
+    "context": "At courthouse security, two men stop Lincoln's lawyer and want to know why he made a copy of the Burrows surveillance tape.",
+    "question": "Which agency's badge does Kellerman show the lawyer?",
+    "options": [
+      "Secret Service",
+      "FBI",
+      "CIA",
+      "DEA"
+    ],
+    "answer": "Secret Service",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "The lawyer says he gave it to one of Lincoln's old girlfriends for closure, and Kellerman asks for her name."
+  },
+  {
+    "context": "Veronica finds the Simmons house in the rain and speaks to a woman collecting her mail, who turns out to be Crab's mother.",
+    "question": "What does she tell Veronica about Crab?",
+    "options": [
+      "He's dead",
+      "He's in prison",
+      "He moved away",
+      "He's in hiding"
+    ],
+    "answer": "He's dead",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "She tells Veronica that Crab can't help anybody. A boy watches the conversation from an upstairs window, then closes the curtains."
+  },
+  {
+    "context": "At the evening count, the race riot erupts and one of T-Bag's men rushes at Michael with the bolt raised.",
+    "question": "Who stabs Michael's attacker after Michael wrestles the bolt back?",
+    "options": [
+      "C-Note",
+      "Lincoln",
+      "Abruzzi",
+      "Sucre"
+    ],
+    "answer": "C-Note",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "The man dies in Michael's arms begging for help, and T-Bag screams that Michael is a dead man."
+  },
+  {
+    "context": "After the riot, Warden Pope walks the silent cell block and tells the inmates they can't respect themselves.",
+    "question": "How long is the lockdown Pope announces?",
+    "options": [
+      "48 hours",
+      "24 hours",
+      "One week",
+      "72 hours"
+    ],
+    "answer": "48 hours",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "No showers and no visits, and he warns that next time it'll be a week, then a month."
+  },
+  {
+    "context": "Veronica's secretary takes a call from a woman who says she used to date Crab Simmons and insists on meeting somewhere public and safe.",
+    "question": "What is the name of the woman who calls Veronica's office about Crab Simmons?",
+    "options": [
+      "Leticia Barris",
+      "Renata Barris",
+      "Leticia Simmons",
+      "Renata Simmons"
+    ],
+    "answer": "Leticia Barris",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Leticia identifies herself as Crab's ex-girlfriend and agrees to meet Veronica only out in the open where, she says, 'they' can't get to them."
+  },
+  {
+    "context": "Crab's ex-girlfriend Leticia meets Veronica out in the open, rejecting the coroner's finding that Crab died of an overdose.",
+    "question": "What health problem does Leticia say meant Crab could never have used drugs?",
+    "options": [
+      "A bad heart",
+      "Diabetes",
+      "Asthma",
+      "Epilepsy"
+    ],
+    "answer": "A bad heart",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "She says he died a week after Lincoln's crime because he knew who was really behind the killing, and that Crab and Lincoln were just pawns."
+  },
+  {
+    "context": "Kellerman phones a woman chopping garlic in a secluded house to report that a lawyer is poking around.",
+    "question": "Which law school does the woman say Veronica graduated from?",
+    "options": [
+      "Baylor",
+      "Northwestern",
+      "Loyola",
+      "Georgetown"
+    ],
+    "answer": "Baylor",
+    "difficulty": "hard",
+    "episode": 2,
+    "description": "She mocks Veronica as a middle-of-the-class student and tells Kellerman anyone who threatens them is expendable."
+  },
+  {
+    "context": "As T-Bag taunts him from across the tier, Michael finishes filing down the bolt and remembers studying blueprints in his apartment.",
+    "question": "What does Michael unscrew with the reshaped bolt?",
+    "options": [
+      "His toilet",
+      "His cell door",
+      "An air vent",
+      "His bunk"
+    ],
+    "answer": "His toilet",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "The bolt works as an Allen key. The camera follows the pipes through the tunnels up to a grate in the infirmary."
+  },
+  {
+    "context": "In the infirmary, Dr. Tancredi tests Michael's blood sugar and warns that a normal reading would mean he's been misdiagnosed.",
+    "question": "What reading does Michael's glucose test show?",
+    "options": [
+      "180",
+      "100",
+      "120",
+      "250"
+    ],
+    "answer": "180",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "At 180 milligrams per deciliter he's definitely diabetic, and his obvious relief strikes Tancredi as strange."
+  },
+  {
+    "context": "On the walk back, Bellick leaves Michael alone, and Abruzzi's men drag him to the shed to demand where Fibonacci is.",
+    "question": "What do Abruzzi's men cut off when Michael refuses to talk?",
+    "options": [
+      "Left toe",
+      "Left finger",
+      "Right toe",
+      "Right finger"
+    ],
+    "answer": "Left toe",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Michael says he'll only tell once they're outside the walls, so on the count of three they cut off his lefttoe."
+  },
+  {
+    "context": "**EPISODE 3**: In the infirmary, Michael refuses to tell Dr. Tancredi how he was hurt, so she goes to Bellick for an explanation.",
+    "question": "What does Bellick claim Michael stepped on?",
+    "options": [
+      "Gardening shears",
+      "A rake",
+      "A shovel",
+      "A hedge trimmer"
+    ],
+    "answer": "Gardening shears",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Bellick says a pair of shears was left on the shed floor and the blade went through Michael's foot."
+  },
+  {
+    "context": "At the yard fence, Lincoln wants to kill Abruzzi for what he did, but Michael explains why they need the mobster alive.",
+    "question": "Which company does Michael say Abruzzi secretly owns through a shell company?",
+    "options": [
+      "Top Flight Charters",
+      "Midwest Air Express",
+      "Blue Sky Aviation",
+      "Prairie Wings Charters"
+    ],
+    "answer": "Top Flight Charters",
+    "difficulty": "hard",
+    "episode": 3,
+    "description": "The company runs flights from small airfields across the Midwest, including one ten miles from the prison, so Abruzzi could have a plane waiting for them."
+  },
+  {
+    "context": "",
+    "question": "Who does Michael say holds the key to the entire escape?",
+    "options": [
+      "Sucre",
+      "Westmoreland",
+      "Abruzzi",
+      "Bellick"
+    ],
+    "answer": "Sucre",
+    "difficulty": "easy",
+    "episode": 3,
+    "description": "As Michael's cellmate, Sucre has to be on board: without him there's no digging in the cell, and without the digging there's no escape."
+  },
+  {
+    "context": "Fresh out of the shoe, Sucre calls Maricruz from the yard phone, but her disapproving mother answers instead.",
+    "question": "Who does Mrs. Delgado say Maricruz is out with?",
+    "options": [
+      "Hector",
+      "Raul",
+      "Miguel",
+      "Carlos"
+    ],
+    "answer": "Hector",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "She says they're at the mall and tells Sucre that if he really loved her daughter he'd let her live her life."
+  },
+  {
+    "context": "In the metal shop, T-Bag tells a fellow inmate he wants to do damage slowly, inflicting the maximum amount of pain.",
+    "question": "What does the inmate call the hooked blade he gives T-Bag?",
+    "options": [
+      "The gutter",
+      "The ripper",
+      "The fishhook",
+      "The corkscrew"
+    ],
+    "answer": "The gutter",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Its five barbs hook onto the intestines when pulled out, a wound that isn't fatal until infection sets in."
+  },
+  {
+    "context": "At his probation meeting, LJ insists his arrest for intent to sell has nothing to do with 'that guy at Fox River'.",
+    "question": "Which program does the probation officer sign LJ up for at Fox River?",
+    "options": [
+      "Scared Straight",
+      "Second Chance",
+      "Boys Town",
+      "Youth Outreach"
+    ],
+    "answer": "Scared Straight",
+    "difficulty": "easy",
+    "episode": 3,
+    "description": "She wants him to see where his anger could land him, on top of weekly Friday check-ins and spotless grades."
+  },
+  {
+    "context": "In P.I., Sucre watches Michael pull a wrapped package from a paint bucket and stash it inside a power box on a pillar.",
+    "question": "What does the package appear to be?",
+    "options": [
+      "A cell phone",
+      "A radio",
+      "A credit card",
+      "A watch"
+    ],
+    "answer": "A cell phone",
+    "difficulty": "easy",
+    "episode": 3,
+    "description": "Sucre calls it 'cardinal sin number one', since getting caught can add two years to a sentence, and Michael tells him he never saw it."
+  },
+  {
+    "context": "Warden Pope stops by Lincoln's cell with the form listing who will witness his execution.",
+    "question": "Who has Lincoln chosen to be there?",
+    "options": [
+      "No one",
+      "Michael",
+      "LJ",
+      "Veronica"
+    ],
+    "answer": "No one",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Lincoln asks why he'd want anyone to watch him die, but Pope leaves the form blank and tells him to think about it."
+  },
+  {
+    "context": "At the projects, Veronica walks into apartment five and Leticia bursts in pointing a gun, accusing her of working for 'them'.",
+    "question": "Where is Leticia packing to run away to?",
+    "options": [
+      "Ireland",
+      "Mexico",
+      "Canada",
+      "Jamaica"
+    ],
+    "answer": "Ireland",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Leticia hears clicks on her phone and sees cars on the street, and believes never testifying is why she's still alive."
+  },
+  {
+    "context": "Lincoln spots Sucre bragging to his friends in the yard, then stops Bellick in the death row hallway with a proposition.",
+    "question": "What does Lincoln ask for?",
+    "options": [
+      "Extra time outside and a couple of cigarettes",
+      "Extra time outside and a phone call",
+      "A cell transfer and a couple of cigarettes",
+      "More visiting hours and a couple of cigarettes"
+    ],
+    "answer": "Extra time outside and a couple of cigarettes",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "In return he tips Bellick off about a cell phone and Sucre's name. Bellick haggles him down to half an hour and one cigarette."
+  },
+  {
+    "context": "Bellick takes Sucre into a holding cell and demands to know where the cell phone is hidden.",
+    "question": "What does Bellick threaten to take away for good if Sucre lies?",
+    "options": [
+      "His conjugal visits",
+      "His yard time",
+      "His phone privileges",
+      "His job in P.I."
+    ],
+    "answer": "His conjugal visits",
+    "difficulty": "easy",
+    "episode": 3,
+    "description": "Bellick points out that conjugals are meant for married couples, and Sucre begs to keep his visits with Maricruz."
+  },
+  {
+    "context": "Back in P.I., Sucre, who kept quiet, demands all the free calls he wants, so Michael hands him the phone.",
+    "question": "What is the 'cell phone' actually made of?",
+    "options": [
+      "Soap",
+      "Wood",
+      "Plastic",
+      "Cardboard"
+    ],
+    "answer": "Soap",
+    "difficulty": "easy",
+    "episode": 3,
+    "description": "Sucre snaps it in half and is furious he lost his conjugals over soap, and Michael admits he had to test whether Sucre could keep a secret."
+  },
+  {
+    "context": "In her office, Leticia tells Veronica that Lincoln's huge debt to her boyfriend Crab was suddenly paid after a stranger visited.",
+    "question": "Who does Leticia believe paid off Lincoln's debt?",
+    "options": [
+      "The Government",
+      "The DEA",
+      "The IRS",
+      "The Secret Service"
+    ],
+    "answer": "The Government",
+    "difficulty": "easy",
+    "episode": 3,
+    "description": "The man and his partners had 'the look' of people who think they're untouchable, like they're government."
+  },
+  {
+    "context": "In the infirmary, Sara warns she must report any misconduct, and Michael shares a childhood memory.",
+    "question": "What did Lincoln tell young Michael was really hiding in his closet?",
+    "options": [
+      "Fear",
+      "Monsters",
+      "Nothing at all",
+      "His imagination"
+    ],
+    "answer": "Fear",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Lincoln told him there was nothing in there but fear, but Michael says in prison every door hides a hundred more, and those monsters are real."
+  },
+  {
+    "context": "",
+    "question": "Where does Sara offer to have Michael transferred to for his safety?",
+    "options": [
+      "Ad. Seg",
+      "Minimum security Prison",
+      "Solitary block",
+      "The infirmary wing"
+    ],
+    "answer": "Ad. Seg",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Sara offers to recommend Michael be sent to Ad. Seg, but he refuses, saying he'd rather face the monsters on his own."
+  },
+  {
+    "context": "Later, two Secret Service agents take a bound Leticia into the woods. She runs, but one of the agent shoots her in the leg and catches up.",
+    "question": "Who fires the shot that kills Leticia?",
+    "options": [
+      "Kellerman",
+      "Hale",
+      "Dale",
+      "Donovan"
+    ],
+    "answer": "Kellerman",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Hale can't go through with it, so Kellerman does it himself and tells Hale to pick up the casings."
+  },
+  {
+    "context": "From his cell, Abruzzi watches Michael walk by as his cellmate suggests taking the whole foot next time.",
+    "question": "Which band does Abruzzi quote when he decides pain isn't the answer?",
+    "options": [
+      "The Beatles",
+      "The Rolling Stones",
+      "The Doors",
+      "The Beach Boys"
+    ],
+    "answer": "The Beatles",
+    "difficulty": "easy",
+    "episode": 3,
+    "description": "Abruzzi says maybe the Beatles were right: all you need is love."
+  },
+  {
+    "context": "In the prison cafeteria, T-Bag rises to shank Michael, but Abruzzi shoves him back down and demands to know why he wants Michael dead.",
+    "question": "Who does T-Bag say is 'in the ground' because of Michael?",
+    "options": [
+      "Maytag",
+      "Boxcar",
+      "Tinman",
+      "Preacher"
+    ],
+    "answer": "Maytag",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "T-Bag blames Michael for Maytag's death, revealing he wants Michael for the rest of his sentence as payback."
+  },
+  {
+    "context": "T-Bag corners Michael with a knife and threatens him, but Abruzzi suddenly attacks T-Bag instead.",
+    "question": "What does Abruzzi do to T-Bag to stop him from attacking Michael?",
+    "options": [
+      "Punches him in the face",
+      "Shanks him with the gutter",
+      "Chokes him unconscious",
+      "Breaks his arm"
+    ],
+    "answer": "Punches him in the face",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Abruzzi elbows and punches T-Bag down, then leaves him for his boys to beat up before turning to make peace with Michael."
+  },
+  {
+    "context": "In the prison yard, Abruzzi agrees to help Michael escape in exchange for Fibonacci's location, but presses him for an exact date.",
+    "question": "According to Abruzzi, when is Fibonacci set to testify?",
+    "options": [
+      "One month",
+      "Two weeks",
+      "Three months",
+      "Six weeks"
+    ],
+    "answer": "One month",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "Abruzzi warns Michael that Fibonacci testifies in one month, so Michael must get him out before then or face deadly consequences."
+  },
+  {
+    "context": "At night in Michael's cell, Bellick barges in with a scrawny new cellmate just as Michael is working on the toilet.",
+    "question": "Where did Bellick find Michael's new cellmate?",
+    "options": [
+      "The psych ward",
+      "The shoe",
+      "Death row",
+      "The infirmary"
+    ],
+    "answer": "The psych ward",
+    "difficulty": "easy",
+    "episode": 3,
+    "description": "Bellick says Michael is the only one with an empty bunk, and warns him not to make eye contact."
+  },
+  {
+    "context": "In the yard, Michael tells Lincoln about his new cellmate and plans to dig only at night.",
+    "question": "How many days behind schedule does Michael say they are?",
+    "options": [
+      "Three",
+      "One",
+      "Seven",
+      "Ten"
+    ],
+    "answer": "Three",
+    "difficulty": "medium",
+    "episode": 3,
+    "description": "That's a problem, since Michael had said the margin for error was zero days."
+  },
+  {
+    "context": "That night, Michael waits until he thinks Haywire is asleep before quietly getting to work on the toilet.",
+    "question": "Why does Haywire say he never sleeps?",
+    "options": [
+      "A neural lesion",
+      "A pineal gland cyst",
+      "A cortical dysfunction",
+      "A thalamic disorder"
+    ],
+    "answer": "A neural lesion",
+    "difficulty": "easy",
+    "episode": 3,
+    "description": "Haywire says a brain lesion means he doesn't sleep at all, which wrecks Michael's plan to dig at night."
+  },
+  {
     "id": "pb-s1e20-medium-0001",
-    "context": "**FOX RIVER ESCAPE**: In the guards' break room, Bellick discovers the hole and brawls violently with Westmoreland until one final blow knocks him out.",
+    "context": "**EPISODE 4 — FOX RIVER ESCAPE**: In the guards' break room, Bellick discovers the hole and brawls violently with Westmoreland until one final blow knocks him out.",
     "question": "What does Westmoreland ultimately use to knock Bellick unconscious during their fight in the break room?",
-    "options": ["A metal thermos", "The shovel", "A chair", "A coffee pot"],
+    "options": [
+      "A metal thermos",
+      "The shovel",
+      "A chair",
+      "A coffee pot"
+    ],
     "answer": "A metal thermos",
     "difficulty": "medium",
     "episode": 20,
@@ -13,312 +1152,362 @@
     "id": "pb-s1e20-medium-0002",
     "context": "Out in the yard, T-Bag warns the crew about what usually dooms escape attempts, while Westmoreland pushes a trash can, hiding a serious injury.",
     "question": "According to T-Bag, what has always led to him being caught when trying to escape the authorities?",
-    "options": ["The dogs", "Roadblocks", "Helicopters", "Snitches"],
+    "options": [
+      "The dogs",
+      "Roadblocks",
+      "Helicopters",
+      "Snitches"
+    ],
     "answer": "The dogs",
     "difficulty": "medium",
     "episode": 20,
     "description": "T-Bag tells the others that the numerous times he’s been apprehended while trying to elude the authorities, it’s \"always because of the damn dogs.\" Turns out you can run from just about everything in your life, 'cept your own particular stink"
   },
-{
-  "id": "pb-s1e20-medium-0017",
-  "context": "In the chow room, Stolte and Patterson talk about Bellick not showing up while Michael listens from the food line.",
-  "question": "According to Stolte, for how many years has he not beaten Bellick to work?",
-  "options": ["Eight years", "Five years", "Ten years", "Twelve years"],
-  "answer": "Eight years",
-  "difficulty": "medium",
-  "episode": 20,
-  "description": "While wondering where Bellick is, Stolte says he hasn't beaten that guy to work in eight years, emphasizing how unusual Bellick's absence is."
-},
-{
-  "id": "pb-s1e20-hard-0018",
-  "context": "As the escape draws near, different members of the crew prepare their cells and bunks in various ways so the dogs won’t easily track their scent.",
-  "question": "Which of the following is NOT something the prisoners use to help disguise or alter their scent before the escape?",
-  "options": ["Brussels sprouts", "Peroxide", "Soap", "Fertilizer", "Garlic"],
-  "answer": "Garlic",
-  "difficulty": "hard",
-  "episode": 20,
-  "description": "Brussel Sprouts, Soap, Fertilizer were used and C-Note provided peroxide from the kitchen fpr disguises, but no one uses garlic."
-},
-{
-  "id": "pb-s1e20-hard-0020",
-  "context": "From the prison yard, Abruzzi calls his outside contact to accelerate the escape plan and confirms the exact location of the getaway van.",
-  "question": "In Abruzzi's phone call about the accelerated escape, what is the name of his contact, on which street is the van waiting, how many yards away, and behind what landmark?",
-  "options": [
-    "Maggio / Fitz Street / 200 yards / behind the old mill",
-    "Franco / Percy Street / 100 yards / behind the train station",
-    "Rizzo / English Street / 150 yards / behind the warehouse",
-    "Carlo / Main Street / 300 yards / behind the church"
-  ],
-  "answer": "Maggio / Fitz Street / 200 yards / behind the old mill",
-  "difficulty": "expert",
-  "episode": 20,
-  "description": "On the call, Abruzzi tells Maggio there’s been an acceleration and confirms the van is waiting on Fitz Street, 200 yards behind the old mill."
-},
-{
-  "id": "pb-s1e20-medium-0024",
-  "context": "On A-Wing, Stolte brings a package to Tweener, explains it’s Avocado’s gear, and calls to the guard booth to open and then close the same cell.",
-  "question": "What is the cell number that Tweener and Avocado share?",
-  "options": ["88", "42", "23", "19"],
-  "answer": "88",
-  "difficulty": "hard",
-  "episode": 20,
-  "description": "Stolte arrives with Avocado’s gear and calls out, \"Open on 88!\" before leaving and saying, \"Close on 88,\" confirming that 88 is Tweener and Avocado’s cell."
-},
-{
-  "id": "pb-s1e20-hard-0025",
-  "context": "As night falls, different members of the escape crew prepare their cells in their own way so the dogs won’t easily track their scent.",
-  "question": "Which combination correctly matches each inmate to what they use to help mask their scent before the escape?",
-  "options": [
-    "Westmoreland – soap / T-Bag – Brussels sprouts / Abruzzi – fertilizer",
-    "Westmoreland – fertilizer / T-Bag – soap / Abruzzi – Brussels sprouts",
-    "Westmoreland – Brussels sprouts / T-Bag – fertilizer / Abruzzi – soap",
-    "Westmoreland – soap / T-Bag – fertilizer / Abruzzi – Brussels sprouts"
-  ],
-  "answer": "Westmoreland – soap / T-Bag – Brussels sprouts / Abruzzi – fertilizer",
-  "difficulty": "hard",
-  "episode": 20,
-  "description": "T-Bag crushes and spreads Brussels sprouts over his bed, Abruzzi covers his mattress with fertilizer, and Westmoreland scrubs his cell walls with a bar of soap to alter his scent."
-},
-{
-  "id": "pb-s1e20-easy-0026",
-  "context": "In Michael’s cell, he explains to Sucre how they’ll blend in with the inmates from the Psych Ward by bleaching their jumpsuits.",
-  "question": "What color uniforms do the inmates in the Psych Ward wear, prompting Michael to bleach their clothes for camouflage?",
-  "options": ["White", "Blue", "Orange", "Grey"],
-  "answer": "White",
-  "difficulty": "easy",
-  "episode": 20,
-  "description": "Michael explains that a bunch of cons in prison blues would stand out, but the inmates in the Psych Ward all wear white, so he uses peroxide to bleach their jumpsuits as camouflage."
-},
-{
-  "id": "pb-s1e21-medium-0029",
-  "context": "As Michael finalizes the escape crew, Sucre’s cousin—already involved in getting extra uniforms—joins them and has to squeeze nervously through the hole behind the toilet.",
-  "question": "What is the name of Sucre's cousin who takes part in the escape with Michael’s crew?",
-  "options": ["Manche", "Chuy", "Luis", "Jorge"],
-  "answer": "Manche",
-  "difficulty": "medium",
-  "episode": 21,
-  "description": "Sucre’s cousin Manche is the overweight inmate who helped arrange extra suits; during the escape he nervously climbs into the hole behind Michael’s toilet and T-Bag has to kick him through."
-},
-{
-  "id": "pb-s1e21-medium-0028",
-  "context": "During tier time, the escape crew casually gather around Michael's cell to pass jumpsuits down the hole, and Sucre´s cousin Manche nervously steps up to join them.",
-  "question": "What does T-Bag say to Manche when he comes into Michael's cell just before the escape?",
-  "options": [
-    "\"If you get stuck in one of them pipes, boy...\"",
-    "\"If you slow us down, you're stayin' behind, boy.\"",
-    "\"If you get stuck in that hole, you're dead, boy.\"",
-    "\"If you mess this up, you're dead, boy.\""
-  ],
-  "answer": "\"If you get stuck in one of them pipes, boy...\"",
-  "difficulty": "medium",
-  "episode": 21,
-  "description": "As Manche arrives at Michael's cell looking nervous, T-Bag eyes him and taunts, \"If you get stuck in one of them pipes, boy...\" before Michael cuts him off with a curt, \"Bull.\""
-},
-{
-  "id": "pb-s1e21-hard-0031",
-  "context": "In the pipes, Michael uses foot powder on the keypad to reveal which four digits have been pressed before trying several sequences to open the secured door.",
-  "question": "Which of the following is the correct code Michael ultimately needs to enter on the keypad to get the door open?",
-  "options": ["1358", "3581", "5813", "8135"],
-  "answer": "8135",
-  "difficulty": "hard",
-  "episode": 21,
-  "description": "After the powder shows that 1, 3, 5, and 8 have been used, Michael tries 1358, then 3581, then 8135. The sequence 8135 finally works and unlocks the door."
-},
-{
-  "id": "pb-s1e21-medium-0032",
-  "context": "In the tunnels, an alarm suddenly blares and the crew panics, thinking the escape is blown, until Michael explains the real source of the noise.",
-  "question": "What specific move does Michael make to create the diversion that allows the crew to move from the pipes into the psych ward and continue the escape?",
-  "options": [
-    "He triggers the fire alarm in the psych ward",
-    "He cuts power to A-Wing",
-    "He starts a small fire in the psych ward",
-    "He overloads the infirmary security system"
-  ],
-  "answer": "He triggers the fire alarm in the psych ward",
-  "difficulty": "medium",
-  "episode": 21,
-  "description": "When the alarm sounds and everyone starts to panic, Michael says it's the fire alarm in the psych ward. When Sucre asks how he knows, Michael calmly replies that he set it off, using it as a planned diversion."
-},
-{
-  "id": "pb-s1e22-medium-0036",
-  "context": "As the escape progresses and the crew think their group is set, an unexpected figure suddenly appears with a radio and demands to be included.",
-  "question": "At what point does Haywire actually join and force his way into Michael’s escape?",
-  "options": [
-    "Inside the psych ward",
-    "In the infirmary",
-    "In the tunnels",
-    "Outside the psych ward"
-  ],
-  "answer": "In the infirmary",
-  "difficulty": "medium",
-  "episode": 22,
-  "description": "Haywire reveals himself in the infirmary doorway with a radio, saying he knew it as soon as he saw them go into Psych Ward and insisting he comes along, effectively joining the escape right there."
-},
-{
-  "id": "pb-s1e21-medium-0035",
-  "context": "In the infirmary, the crew tie the fire hose to the window bars and run it through the elevator, but the doors keep bouncing back open when they try to send it down.",
-  "question": "Which inmate steps into the elevator and finally gets it to close so the hose can yank the window bars out?",
-  "options": ["Tweener", "Sucre", "C-Note", "Micheal"],
-  "answer": "Tweener",
-  "difficulty": "medium",
-  "episode": 21,
-  "description": "When the elevator doors keep reopening on the hose, T-Bag mocks Michael about the time left, but it’s Tweener who slips inside the elevator, hits the button, and lets the doors shut properly so the hose can rip the bars free."
-},
-{
-  "id": "pb-s1e22-medium-0037",
-  "context": "At the infirmary window, the escape crew start crossing the cable strung over the yard toward the outer wall, lining up to decide who goes first across.",
-  "question": "During the escape, which two inmates are the first and second to make it over the wall?",
-  "options": [
-    "Lincoln and Abruzzi",
-    "Abruzzi and Lincoln",
-    "Sucre and Lincoln",
-    "Sucre and Abruzzi"
-  ],
-  "answer": "Lincoln and Abruzzi",
-  "difficulty": "medium",
-  "episode": 22,
-  "description": "Lincoln goes out first across the cable, with Abruzzi following right after. Before climbing out, Abruzzi says, \"Okay, after Lincoln, we go alphabetically,\" and C-Note fires back, \"Whoa, hold on, A-bruzzi!\""
-},
-{
-  "id": "pb-s1e22-hard-0039",
-  "context": "Mortally wounded in the infirmary during the escape, Westmoreland finally tells Michael exactly where he hid the stolen money years ago.",
-  "question": "According to Westmoreland, where is the stolen money hidden?",
-  "options": [
-    "Under a silo at the Double K Ranch just outside Tooele, Utah",
-    "Under a silo at the  Blackfoot Ranch just outside Salt lake, Utah",
-    "Buried under the barn at Blackfoot Ranch near Helena, Arizona",
-    "Buried under the barn at Double K Ranch near Helena, Montana"
-  ],
-  "answer": "Under a silo at the Double K Ranch just outside Tooele, Utah",
-  "difficulty": "hard",
-  "episode": 22,
-  "description": "As he’s bleeding out, Westmoreland tells Michael the cash is buried under a silo at the Double K Ranch just outside Tooele, Utah, giving him the exact ranch and location of the hidden stash."
-},
-{
-  "id": "pb-s1e22-medium-0040",
-  "context": "While dying from his wound, Westmoreland corrects the official story about the size of the stash he stole, saying the government downplayed the real figure.",
-  "question": "How much money does Westmoreland say is actually buried at the Double K Ranch?",
-  "options": [
-    "$1 million",
-    "$2 million",
-    "$3 million",
-    "$5 million"
-  ],
-  "answer": "$5 million",
-  "difficulty": "medium",
-  "episode": 22,
-  "description": "Westmoreland explains that the government \"lowballed it to the papers\" and that the truth is it’s not one million under that silo but five million dollars hidden there."
-},
-{
-  "id": "pb-s1e22-medium-0041",
-  "context": "As Westmoreland lies dying in the infirmary during the escape, he makes Michael promise to look after his family and pass on a final message to his child.",
-  "question": "What is the name of Westmoreland’s daughter that he asks Michael to send his love to?",
-  "options": ["Anna", "Emily", "Sarah", "Claire"],
-  "answer": "Anna",
-  "difficulty": "medium",
-  "episode": 22,
-  "description": "With his last strength, Westmoreland tells Michael to \"give Anna her Papa's love,\" revealing his daughter’s name as Anna while he passes on the location of the hidden money."
-},
-{
-  "id": "pb-s1e22-hard-0038",
-  "context": "At the infirmary window, Lincoln crosses the cable first and Abruzzi follows. One by one, the rest of the crew climb across toward the outer wall while the alarms begin to blare.",
-  "question": "After Abruzzi, in what order do the remaining successful escapees make it over the wall?",
-  "options": [
-    "Sucre – Haywire – Tweener – T-Bag – C-Note – Michael",
-    "Sucre – Tweener – Haywire – C-Note – T-Bag – Michael",
-    "Sucre – C-Note – T-Bag – Haywire – Tweener – Michael",
-    "Sucre – T-Bag – C-Note – Tweener – Haywire – Michael"
-  ],
-  "answer": "Sucre – Haywire – Tweener – T-Bag – C-Note – Michael",
-  "difficulty": "hard",
-  "episode": 22,
-  "description": "Lincoln goes first and Abruzzi second. After them, Sucre crosses, then Haywire seizes his chance and climbs out, followed by Tweener, then T-Bag, then C-Note. Michael is the last of the successful escapees to go over the wall, while Manche falls when the cable rips free."
-},
-{
-  "id": "pb-s1e22-medium-0042",
-  "context": "As the escape crew are crossing the cable strung from the infirmary window to the outer wall, the alarms blare, the floodlights come on, and one more inmate tries to grab on at the last second.",
-  "question": "Which inmate’s attempt to grab onto the cable causes it to rip free from the infirmary wall and come crashing down?",
-  "options": [
-    "Manche",
-    "Tweener",
-    "C-Note",
-    "T-Bag"
-  ],
-  "answer": "Manche",
-  "difficulty": "easy",
-  "episode": 22,
-  "description": "After the others have gone ahead, Manche clambers out of the infirmary window and grabs the cable; his added weight makes the attachment tear out of the wall, the line rips free, he falls to the ground, and the whole setup collapses while Michael barely makes it over."
-},
-{
-  "id": "pb-s1e22-easy-0043",
-  "context": "After the alarms blare and the spotlights sweep the yard, Fox River goes into full lockdown while the guards realize multiple inmates have made it over the wall.",
-  "question": "By the end of the escape, how many inmates have successfully broken out of Fox River?",
-  "options": ["5", "6", "8", "10"],
-  "answer": "8",
-  "difficulty": "easy",
-  "episode": 22,
-  "description": "Manche is caught at the wall and Westmoreland dies inside, but eight convicts make it out: Michael, Lincoln, Sucre, C-Note, Abruzzi, T-Bag, Tweener, and Haywire."
-},
-{
-  "id": "pb-s1e23-easy-0044",
-  "context": "After guards haul Bellick up out of the hole beneath the guards’ break room, filthy and furious, he immediately barks an order before heading into the manhunt.",
-  "question": "Right after being rescued from the hole under the break room, what are Bellick’s first words?",
-  "options": [
-    "Get me my shotgun",
-    "Where are they?",
-    "I'm going to kill them",
-    "Did they make it out?",
-    "Get me my rifle"
-  ],
-  "answer": "Get me my shotgun",
-  "difficulty": "easy",
-  "episode": 23,
-  "description": "As soon as Stolte and another CO drag him out of the tunnel, Bellick snarls, \"Get me my shotgun!\" before the other officer even finishes mentioning Pope’s orders, making it his very first line after being pulled out."
-},
-{
-  "id": "pb-s1e23-medium-0046",
-  "context": "In the blue van on the way to the airstrip, tensions explode when Abruzzi finally gets a gun on T-Bag and is ready to settle their score for good.",
-  "question": "When Abruzzi draws a gun on him in the van, how does T-Bag protect himself from being killed on the spot?",
-  "options": [
-    "He handcuffs himself to Michael",
-    "He grabs the steering wheel and forces the van off the road",
-    "He threatens to shout and alert nearby police cars",
-    "He handcuffs himself to Sucre"
-  ],
-  "answer": "He handcuffs himself to Michael",
-  "difficulty": "medium",
-  "episode": 23,
-  "description": "As Abruzzi pulls a gun, T-Bag snaps one side of a handcuff onto his own wrist and the other onto Michael’s, forcing Abruzzi to hesitate because shooting T-Bag would leave Michael chained to a dead body he still needs for the escape."
-},
-{
-  "id": "pb-s1e23-hard-0049",
-  "context": "Later that night, the escape crew take shelter in a barn near a farm after running from the quarry and the roadblocks, still chained together by the handcuffs that T-Bag locked onto himself and Michael in the van.",
-  "question": "How do the escapees finally separate Michael and T-Bag from the handcuffs in the barn?",
-  "options": [
-    "Abruzzi chops off T-Bag’s hand with an axe",
-    "Sucre manages to pry the cuffs open with rusty shears",
-    "C-Note uses a hammer and chisel to break the chain",
-    "Michael picks the lock using a piece of wire"
-  ],
-  "answer": "Abruzzi chops off T-Bag’s hand with an axe",
-  "difficulty": "hard",
-  "episode": 23,
-  "description": "In the barn, Sucre’s attempt with rusty shears fails, and while T-Bag mocks them, Abruzzi steps up behind him and brings an axe down on his wrist, severing T-Bag’s hand so Michael is no longer chained to him."
-},
-{
-  "id": "pb-s1e23-easy-0050",
-  "context": "During the post-escape manhunt near Fox River, Tweener gets separated from the main group and has to improvise his own way past road construction and tracking dogs.",
-  "question": "How does Tweener ultimately get away from the immediate Fox River manhunt on his own?",
-  "options": [
-    "He hides in the back of a horse trailer that drives away",
-    "He steals a young girl's bicycle and rides away",
-    "He steals a police cruiser during the chaos",
-    "He sneaks onto a passing freight train at the tracks"
-  ],
-  "answer": "He hides in the back of a horse trailer that drives away",
-  "difficulty": "easy",
-  "episode": 23,
-  "description": "With dogs closing in near a road construction site, Tweener spots a horse trailer in the traffic line, rushes across, climbs into the back, and escapes hidden inside as it pulls away."
-}
+  {
+    "id": "pb-s1e20-medium-0017",
+    "context": "In the chow room, Stolte and Patterson talk about Bellick not showing up while Michael listens from the food line.",
+    "question": "According to Stolte, for how many years has he not beaten Bellick to work?",
+    "options": [
+      "Eight years",
+      "Five years",
+      "Ten years",
+      "Twelve years"
+    ],
+    "answer": "Eight years",
+    "difficulty": "medium",
+    "episode": 20,
+    "description": "While wondering where Bellick is, Stolte says he hasn't beaten that guy to work in eight years, emphasizing how unusual Bellick's absence is."
+  },
+  {
+    "id": "pb-s1e20-hard-0018",
+    "context": "As the escape draws near, different members of the crew prepare their cells and bunks in various ways so the dogs won’t easily track their scent.",
+    "question": "Which of the following is NOT something the prisoners use to help disguise or alter their scent before the escape?",
+    "options": [
+      "Brussels sprouts",
+      "Peroxide",
+      "Soap",
+      "Fertilizer",
+      "Garlic"
+    ],
+    "answer": "Garlic",
+    "difficulty": "hard",
+    "episode": 20,
+    "description": "Brussel Sprouts, Soap, Fertilizer were used and C-Note provided peroxide from the kitchen fpr disguises, but no one uses garlic."
+  },
+  {
+    "id": "pb-s1e20-hard-0020",
+    "context": "From the prison yard, Abruzzi calls his outside contact to accelerate the escape plan and confirms the exact location of the getaway van.",
+    "question": "In Abruzzi's phone call about the accelerated escape, what is the name of his contact, on which street is the van waiting, how many yards away, and behind what landmark?",
+    "options": [
+      "Maggio / Fitz Street / 200 yards / behind the old mill",
+      "Franco / Percy Street / 100 yards / behind the train station",
+      "Rizzo / English Street / 150 yards / behind the warehouse",
+      "Carlo / Main Street / 300 yards / behind the church"
+    ],
+    "answer": "Maggio / Fitz Street / 200 yards / behind the old mill",
+    "difficulty": "expert",
+    "episode": 20,
+    "description": "On the call, Abruzzi tells Maggio there’s been an acceleration and confirms the van is waiting on Fitz Street, 200 yards behind the old mill."
+  },
+  {
+    "id": "pb-s1e20-medium-0024",
+    "context": "On A-Wing, Stolte brings a package to Tweener, explains it’s Avocado’s gear, and calls to the guard booth to open and then close the same cell.",
+    "question": "What is the cell number that Tweener and Avocado share?",
+    "options": [
+      "88",
+      "42",
+      "23",
+      "19"
+    ],
+    "answer": "88",
+    "difficulty": "hard",
+    "episode": 20,
+    "description": "Stolte arrives with Avocado’s gear and calls out, \"Open on 88!\" before leaving and saying, \"Close on 88,\" confirming that 88 is Tweener and Avocado’s cell."
+  },
+  {
+    "id": "pb-s1e20-hard-0025",
+    "context": "As night falls, different members of the escape crew prepare their cells in their own way so the dogs won’t easily track their scent.",
+    "question": "Which combination correctly matches each inmate to what they use to help mask their scent before the escape?",
+    "options": [
+      "Westmoreland – soap / T-Bag – Brussels sprouts / Abruzzi – fertilizer",
+      "Westmoreland – fertilizer / T-Bag – soap / Abruzzi – Brussels sprouts",
+      "Westmoreland – Brussels sprouts / T-Bag – fertilizer / Abruzzi – soap",
+      "Westmoreland – soap / T-Bag – fertilizer / Abruzzi – Brussels sprouts"
+    ],
+    "answer": "Westmoreland – soap / T-Bag – Brussels sprouts / Abruzzi – fertilizer",
+    "difficulty": "hard",
+    "episode": 20,
+    "description": "T-Bag crushes and spreads Brussels sprouts over his bed, Abruzzi covers his mattress with fertilizer, and Westmoreland scrubs his cell walls with a bar of soap to alter his scent."
+  },
+  {
+    "id": "pb-s1e20-easy-0026",
+    "context": "In Michael’s cell, he explains to Sucre how they’ll blend in with the inmates from the Psych Ward by bleaching their jumpsuits.",
+    "question": "What color uniforms do the inmates in the Psych Ward wear, prompting Michael to bleach their clothes for camouflage?",
+    "options": [
+      "White",
+      "Blue",
+      "Orange",
+      "Grey"
+    ],
+    "answer": "White",
+    "difficulty": "easy",
+    "episode": 20,
+    "description": "Michael explains that a bunch of cons in prison blues would stand out, but the inmates in the Psych Ward all wear white, so he uses peroxide to bleach their jumpsuits as camouflage."
+  },
+  {
+    "id": "pb-s1e21-medium-0029",
+    "context": "As Michael finalizes the escape crew, Sucre’s cousin—already involved in getting extra uniforms—joins them and has to squeeze nervously through the hole behind the toilet.",
+    "question": "What is the name of Sucre's cousin who takes part in the escape with Michael’s crew?",
+    "options": [
+      "Manche",
+      "Chuy",
+      "Luis",
+      "Jorge"
+    ],
+    "answer": "Manche",
+    "difficulty": "medium",
+    "episode": 21,
+    "description": "Sucre’s cousin Manche is the overweight inmate who helped arrange extra suits; during the escape he nervously climbs into the hole behind Michael’s toilet and T-Bag has to kick him through."
+  },
+  {
+    "id": "pb-s1e21-medium-0028",
+    "context": "During tier time, the escape crew casually gather around Michael's cell to pass jumpsuits down the hole, and Sucre´s cousin Manche nervously steps up to join them.",
+    "question": "What does T-Bag say to Manche when he comes into Michael's cell just before the escape?",
+    "options": [
+      "\"If you get stuck in one of them pipes, boy...\"",
+      "\"If you slow us down, you're stayin' behind, boy.\"",
+      "\"If you get stuck in that hole, you're dead, boy.\"",
+      "\"If you mess this up, you're dead, boy.\""
+    ],
+    "answer": "\"If you get stuck in one of them pipes, boy...\"",
+    "difficulty": "medium",
+    "episode": 21,
+    "description": "As Manche arrives at Michael's cell looking nervous, T-Bag eyes him and taunts, \"If you get stuck in one of them pipes, boy...\" before Michael cuts him off with a curt, \"Bull.\""
+  },
+  {
+    "id": "pb-s1e21-hard-0031",
+    "context": "In the pipes, Michael uses foot powder on the keypad to reveal which four digits have been pressed before trying several sequences to open the secured door.",
+    "question": "Which of the following is the correct code Michael ultimately needs to enter on the keypad to get the door open?",
+    "options": [
+      "1358",
+      "3581",
+      "5813",
+      "8135"
+    ],
+    "answer": "8135",
+    "difficulty": "hard",
+    "episode": 21,
+    "description": "After the powder shows that 1, 3, 5, and 8 have been used, Michael tries 1358, then 3581, then 8135. The sequence 8135 finally works and unlocks the door."
+  },
+  {
+    "id": "pb-s1e21-medium-0032",
+    "context": "In the tunnels, an alarm suddenly blares and the crew panics, thinking the escape is blown, until Michael explains the real source of the noise.",
+    "question": "What specific move does Michael make to create the diversion that allows the crew to move from the pipes into the psych ward and continue the escape?",
+    "options": [
+      "He triggers the fire alarm in the psych ward",
+      "He cuts power to A-Wing",
+      "He starts a small fire in the psych ward",
+      "He overloads the infirmary security system"
+    ],
+    "answer": "He triggers the fire alarm in the psych ward",
+    "difficulty": "medium",
+    "episode": 21,
+    "description": "When the alarm sounds and everyone starts to panic, Michael says it's the fire alarm in the psych ward. When Sucre asks how he knows, Michael calmly replies that he set it off, using it as a planned diversion."
+  },
+  {
+    "id": "pb-s1e22-medium-0036",
+    "context": "As the escape progresses and the crew think their group is set, an unexpected figure suddenly appears with a radio and demands to be included.",
+    "question": "At what point does Haywire actually join and force his way into Michael’s escape?",
+    "options": [
+      "Inside the psych ward",
+      "In the infirmary",
+      "In the tunnels",
+      "Outside the psych ward"
+    ],
+    "answer": "In the infirmary",
+    "difficulty": "medium",
+    "episode": 22,
+    "description": "Haywire reveals himself in the infirmary doorway with a radio, saying he knew it as soon as he saw them go into Psych Ward and insisting he comes along, effectively joining the escape right there."
+  },
+  {
+    "id": "pb-s1e21-medium-0035",
+    "context": "In the infirmary, the crew tie the fire hose to the window bars and run it through the elevator, but the doors keep bouncing back open when they try to send it down.",
+    "question": "Which inmate steps into the elevator and finally gets it to close so the hose can yank the window bars out?",
+    "options": [
+      "Tweener",
+      "Sucre",
+      "C-Note",
+      "Micheal"
+    ],
+    "answer": "Tweener",
+    "difficulty": "medium",
+    "episode": 21,
+    "description": "When the elevator doors keep reopening on the hose, T-Bag mocks Michael about the time left, but it’s Tweener who slips inside the elevator, hits the button, and lets the doors shut properly so the hose can rip the bars free."
+  },
+  {
+    "id": "pb-s1e22-medium-0037",
+    "context": "At the infirmary window, the escape crew start crossing the cable strung over the yard toward the outer wall, lining up to decide who goes first across.",
+    "question": "During the escape, which two inmates are the first and second to make it over the wall?",
+    "options": [
+      "Lincoln and Abruzzi",
+      "Abruzzi and Lincoln",
+      "Sucre and Lincoln",
+      "Sucre and Abruzzi"
+    ],
+    "answer": "Lincoln and Abruzzi",
+    "difficulty": "medium",
+    "episode": 22,
+    "description": "Lincoln goes out first across the cable, with Abruzzi following right after. Before climbing out, Abruzzi says, \"Okay, after Lincoln, we go alphabetically,\" and C-Note fires back, \"Whoa, hold on, A-bruzzi!\""
+  },
+  {
+    "id": "pb-s1e22-hard-0039",
+    "context": "Mortally wounded in the infirmary during the escape, Westmoreland finally tells Michael exactly where he hid the stolen money years ago.",
+    "question": "According to Westmoreland, where is the stolen money hidden?",
+    "options": [
+      "Under a silo at the Double K Ranch just outside Tooele, Utah",
+      "Under a silo at the  Blackfoot Ranch just outside Salt lake, Utah",
+      "Buried under the barn at Blackfoot Ranch near Helena, Arizona",
+      "Buried under the barn at Double K Ranch near Helena, Montana"
+    ],
+    "answer": "Under a silo at the Double K Ranch just outside Tooele, Utah",
+    "difficulty": "hard",
+    "episode": 22,
+    "description": "As he’s bleeding out, Westmoreland tells Michael the cash is buried under a silo at the Double K Ranch just outside Tooele, Utah, giving him the exact ranch and location of the hidden stash."
+  },
+  {
+    "id": "pb-s1e22-medium-0040",
+    "context": "While dying from his wound, Westmoreland corrects the official story about the size of the stash he stole, saying the government downplayed the real figure.",
+    "question": "How much money does Westmoreland say is actually buried at the Double K Ranch?",
+    "options": [
+      "$1 million",
+      "$2 million",
+      "$3 million",
+      "$5 million"
+    ],
+    "answer": "$5 million",
+    "difficulty": "medium",
+    "episode": 22,
+    "description": "Westmoreland explains that the government \"lowballed it to the papers\" and that the truth is it’s not one million under that silo but five million dollars hidden there."
+  },
+  {
+    "id": "pb-s1e22-medium-0041",
+    "context": "As Westmoreland lies dying in the infirmary during the escape, he makes Michael promise to look after his family and pass on a final message to his child.",
+    "question": "What is the name of Westmoreland’s daughter that he asks Michael to send his love to?",
+    "options": [
+      "Anna",
+      "Emily",
+      "Sarah",
+      "Claire"
+    ],
+    "answer": "Anna",
+    "difficulty": "medium",
+    "episode": 22,
+    "description": "With his last strength, Westmoreland tells Michael to \"give Anna her Papa's love,\" revealing his daughter’s name as Anna while he passes on the location of the hidden money."
+  },
+  {
+    "id": "pb-s1e22-hard-0038",
+    "context": "At the infirmary window, Lincoln crosses the cable first and Abruzzi follows. One by one, the rest of the crew climb across toward the outer wall while the alarms begin to blare.",
+    "question": "After Abruzzi, in what order do the remaining successful escapees make it over the wall?",
+    "options": [
+      "Sucre – Haywire – Tweener – T-Bag – C-Note – Michael",
+      "Sucre – Tweener – Haywire – C-Note – T-Bag – Michael",
+      "Sucre – C-Note – T-Bag – Haywire – Tweener – Michael",
+      "Sucre – T-Bag – C-Note – Tweener – Haywire – Michael"
+    ],
+    "answer": "Sucre – Haywire – Tweener – T-Bag – C-Note – Michael",
+    "difficulty": "hard",
+    "episode": 22,
+    "description": "Lincoln goes first and Abruzzi second. After them, Sucre crosses, then Haywire seizes his chance and climbs out, followed by Tweener, then T-Bag, then C-Note. Michael is the last of the successful escapees to go over the wall, while Manche falls when the cable rips free."
+  },
+  {
+    "id": "pb-s1e22-medium-0042",
+    "context": "As the escape crew are crossing the cable strung from the infirmary window to the outer wall, the alarms blare, the floodlights come on, and one more inmate tries to grab on at the last second.",
+    "question": "Which inmate’s attempt to grab onto the cable causes it to rip free from the infirmary wall and come crashing down?",
+    "options": [
+      "Manche",
+      "Tweener",
+      "C-Note",
+      "T-Bag"
+    ],
+    "answer": "Manche",
+    "difficulty": "easy",
+    "episode": 22,
+    "description": "After the others have gone ahead, Manche clambers out of the infirmary window and grabs the cable; his added weight makes the attachment tear out of the wall, the line rips free, he falls to the ground, and the whole setup collapses while Michael barely makes it over."
+  },
+  {
+    "id": "pb-s1e22-easy-0043",
+    "context": "After the alarms blare and the spotlights sweep the yard, Fox River goes into full lockdown while the guards realize multiple inmates have made it over the wall.",
+    "question": "By the end of the escape, how many inmates have successfully broken out of Fox River?",
+    "options": [
+      "5",
+      "6",
+      "8",
+      "10"
+    ],
+    "answer": "8",
+    "difficulty": "easy",
+    "episode": 22,
+    "description": "Manche is caught at the wall and Westmoreland dies inside, but eight convicts make it out: Michael, Lincoln, Sucre, C-Note, Abruzzi, T-Bag, Tweener, and Haywire."
+  },
+  {
+    "id": "pb-s1e23-easy-0044",
+    "context": "After guards haul Bellick up out of the hole beneath the guards’ break room, filthy and furious, he immediately barks an order before heading into the manhunt.",
+    "question": "Right after being rescued from the hole under the break room, what are Bellick’s first words?",
+    "options": [
+      "Get me my shotgun",
+      "Where are they?",
+      "I'm going to kill them",
+      "Did they make it out?",
+      "Get me my rifle"
+    ],
+    "answer": "Get me my shotgun",
+    "difficulty": "easy",
+    "episode": 23,
+    "description": "As soon as Stolte and another CO drag him out of the tunnel, Bellick snarls, \"Get me my shotgun!\" before the other officer even finishes mentioning Pope’s orders, making it his very first line after being pulled out."
+  },
+  {
+    "id": "pb-s1e23-medium-0046",
+    "context": "In the blue van on the way to the airstrip, tensions explode when Abruzzi finally gets a gun on T-Bag and is ready to settle their score for good.",
+    "question": "When Abruzzi draws a gun on him in the van, how does T-Bag protect himself from being killed on the spot?",
+    "options": [
+      "He handcuffs himself to Michael",
+      "He grabs the steering wheel and forces the van off the road",
+      "He threatens to shout and alert nearby police cars",
+      "He handcuffs himself to Sucre"
+    ],
+    "answer": "He handcuffs himself to Michael",
+    "difficulty": "medium",
+    "episode": 23,
+    "description": "As Abruzzi pulls a gun, T-Bag snaps one side of a handcuff onto his own wrist and the other onto Michael’s, forcing Abruzzi to hesitate because shooting T-Bag would leave Michael chained to a dead body he still needs for the escape."
+  },
+  {
+    "id": "pb-s1e23-hard-0049",
+    "context": "Later that night, the escape crew take shelter in a barn near a farm after running from the quarry and the roadblocks, still chained together by the handcuffs that T-Bag locked onto himself and Michael in the van.",
+    "question": "How do the escapees finally separate Michael and T-Bag from the handcuffs in the barn?",
+    "options": [
+      "Abruzzi chops off T-Bag’s hand with an axe",
+      "Sucre manages to pry the cuffs open with rusty shears",
+      "C-Note uses a hammer and chisel to break the chain",
+      "Michael picks the lock using a piece of wire"
+    ],
+    "answer": "Abruzzi chops off T-Bag’s hand with an axe",
+    "difficulty": "hard",
+    "episode": 23,
+    "description": "In the barn, Sucre’s attempt with rusty shears fails, and while T-Bag mocks them, Abruzzi steps up behind him and brings an axe down on his wrist, severing T-Bag’s hand so Michael is no longer chained to him."
+  },
+  {
+    "id": "pb-s1e23-easy-0050",
+    "context": "During the post-escape manhunt near Fox River, Tweener gets separated from the main group and has to improvise his own way past road construction and tracking dogs.",
+    "question": "How does Tweener ultimately get away from the immediate Fox River manhunt on his own?",
+    "options": [
+      "He hides in the back of a horse trailer that drives away",
+      "He steals a young girl's bicycle and rides away",
+      "He steals a police cruiser during the chaos",
+      "He sneaks onto a passing freight train at the tracks"
+    ],
+    "answer": "He hides in the back of a horse trailer that drives away",
+    "difficulty": "easy",
+    "episode": 23,
+    "description": "With dogs closing in near a road construction site, Tweener spots a horse trailer in the traffic line, rushes across, climbs into the back, and escapes hidden inside as it pulls away."
+  }
 ]
-

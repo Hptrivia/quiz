@@ -146,6 +146,18 @@ const APP_ANNOUNCEMENTS = [
     text: "Who Am I? — guess today's famous person from clues. Which Came First? — put 5 moments from history and pop culture in order.",
     cta: { label: "Play Now", href: "daily-challenges.html" },
   },
+  {
+    icon: "🎬",
+    title: "13 new themes added!",
+    text: "Fargo, The Umbrella Academy, Sex Education, The Sandman, Big Brother, Rome, Justified, Beef and more.",
+    cta: { label: "See What's New", href: "recent.html" },
+  },
+  {
+    icon: "📺",
+    title: "New in Episode Mode",
+    text: "Widow's Bay Episodes 1–2 and Prison Break Episodes 1–4 are live — play them episode by episode.",
+    cta: { label: "Play Prison Break", href: "episode.html?theme=prison-break&episode=1" },
+  },
 ];
 
 function _cbAnnouncementHash(str) {

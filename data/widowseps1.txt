@@ -1,0 +1,716 @@
+[
+  {
+    "context": "**EPISODE 1**: Out on the water at dawn, a lonely fisherman chats over the boat radio about his marriage falling apart.",
+    "question": "What is the name of the wife the fisherman says left him?",
+    "options": [
+      "Elaine",
+      "Eileen",
+      "Ellen",
+      "Elena"
+    ],
+    "answer": "Elaine",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "The man says Elaine had been acting strange for months before he found his suitcase packed by the door and told her it was over."
+  },
+  {
+    "context": "That night, a carload of teenagers is driving across the island when the power lines buzz and the ground starts rumbling.",
+    "question": "What strikes the island overnight, knocking out power everywhere?",
+    "options": [
+      "An earthquake",
+      "A hurricane",
+      "A tsunami",
+      "A blizzard"
+    ],
+    "answer": "An earthquake",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "The radio the next morning talks about the jolt people felt overnight, and the whole island is left without power."
+  },
+  {
+    "context": "The next morning at the mayor's office, the island is still without power and Mayor Tom Loftis is anxiously preparing for an important visitor.",
+    "question": "Which restaurant's owner, Wayne, threatens to shut down for the day because of the outage?",
+    "options": [
+      "The Salty Whale",
+      "The Lobster Pot",
+      "The Rusty Anchor",
+      "The Seeded Rye"
+    ],
+    "answer": "The Salty Whale",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Wayne says his ice machine and appliances are down, but Tom insists he can't let the island's one nice restaurant close today."
+  },
+  {
+    "context": "",
+    "question": "Which newspaper is sending the travel writer Tom has spent three years trying to attract?",
+    "options": [
+      "The New York Times",
+      "The Boston Globe",
+      "The Washington Post",
+      "The New Yorker"
+    ],
+    "answer": "The New York Times",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Tom tells Wayne the visitor is from The New York Times, and he hopes the article will run before booking season."
+  },
+  {
+    "context": "Tom returns the sheriff's calls and learns troubling news about a local fisherman who went out on the water.",
+    "question": "Who has gone missing?",
+    "options": [
+      "Shep Clark",
+      "Gus Hartley",
+      "Nate Pruitt",
+      "Dale Wickham"
+    ],
+    "answer": "Shep Clark",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Sheriff Bechir says the harbormaster had Shep on the VHF radio and then lost him."
+  },
+  {
+    "context": "Tom finds the writer, Arthur, at the historical society, where Gerrie is explaining the worn patches of wood in front of old homes' windows.",
+    "question": "Which industry did the island's early economy depend on?",
+    "options": [
+      "Whaling",
+      "Cod fishing",
+      "Shipbuilding",
+      "Lobstering"
+    ],
+    "answer": "Whaling",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "The men went out whaling for years at a time, and the wives wore down the floors pacing as they waited for them to come home."
+  },
+  {
+    "context": "",
+    "question": "Who led the first settlers through their brutal first winter and became the island's first mayor?",
+    "options": [
+      "Richard Warren",
+      "Thomas Bradford",
+      "Samuel Crane",
+      "Josiah Hale"
+    ],
+    "answer": "Richard Warren",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "The settlers sailed from the mainland to an empty island and had to build everything from scratch under Richard Warren."
+  },
+  {
+    "context": "Now alone with Tom, Arthur points to a framed article about a deadly storm that trapped a group of people inside a church.",
+    "question": "According to the article, what year did the deadly storm trap people inside the church?",
+    "options": [
+      "1786",
+      "1692",
+      "1804",
+      "1753"
+    ],
+    "answer": "1786",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "The framed article describes a deadly storm in 1786 that trapped a group of people inside the church, who then turned to cannibalism."
+  },
+  {
+    "context": "Outside the historical society, Tom hands Arthur a map with all of his favourite spots on the island marked.",
+    "question": "Which landmark, said to be the second oldest of its kind in America, does Tom tell Arthur he must visit?",
+    "options": [
+      "The lighthouse",
+      "The church",
+      "The town hall",
+      "The harbor fort"
+    ],
+    "answer": "The lighthouse",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Tom tells Arthur he should definitely check out the lighthouse, the second oldest in America."
+  },
+  {
+    "context": "",
+    "question": "When Tom brags about the island's lobster, which rival place does he curse?",
+    "options": [
+      "Cape Cod",
+      "Nantucket",
+      "Portland",
+      "Long Island"
+    ],
+    "answer": "Cape Cod",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Arthur asks whether it beats the lobster pot on Cape Cod, and Tom answers 'F*ck Cape Cod', which Arthur says he can put in his article."
+  },
+  {
+    "context": "Back at the office, Tom lays out tomorrow's sightseeing itinerary for Dale, listing the exact stops the writer should be taken to.",
+    "question": "Which of these places does Tom NOT mention on Dale's itinerary?",
+    "options": [
+      "Hills Beach",
+      "Ardor Point",
+      "Cobble Pond",
+      "Widow's Rye"
+    ],
+    "answer": "Widow's Rye",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Tom's itinerary is Hills Beach, Ardor Point, The Seeded Rye, and Cobble Pond — Widow's Rye is never mentioned."
+  },
+  {
+    "context": "",
+    "question": "Which place can Dale drive past with the writer but never stop at?",
+    "options": [
+      "The old hospital",
+      "The old cannery",
+      "The old church",
+      "The old jail"
+    ],
+    "answer": "The old hospital",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Dale's route is Hills Beach, Ardor Point, The Seeded Rye and Cobble Pond. Tom says it's safe to drive by the old hospital, but nobody can stop."
+  },
+  {
+    "context": "",
+    "question": "Who bursts into the closed meeting demanding that the town shut everything down?",
+    "options": [
+      "Wyck Crawford",
+      "Dale Hutchins",
+      "Lonnie Briggs",
+      "Mitch Tanner"
+    ],
+    "answer": "Wyck Crawford",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Wyck insists the fog took Shep and that the island, which he says is cursed, is waking up."
+  },
+  {
+    "context": "",
+    "question": "What decade does Wyck say the warning siren is from?",
+    "options": [
+      "1940",
+      "1920",
+      "1960",
+      "1900"
+    ],
+    "answer": "1940",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Wyck wants the port closed, the businesses shuttered and the 1940s-era siren sounded, and Tom tells him he's out of his mind."
+  },
+  {
+    "context": "As Tom heads out, Patricia asks whether they should be worried and brings up a terrifying night from her high school years.",
+    "question": "Who came the night she was home alone as a teenager?",
+    "options": [
+      "The Boogeyman",
+      "The Fog Man",
+      "The Harbor Ripper",
+      "The Night Caller"
+    ],
+    "answer": "The Boogeyman",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "She says it's the most terrifying thing that ever happened to her and she still sleeps with a dresser in front of her door. Tom points out the Boogeyman only killed teenage girls."
+  },
+  {
+    "context": "That evening, Tom comes home with takeout and finds his teenage son Evan, whom he's caught sneaking out at night.",
+    "question": "What food did Tom bring home for Evan?",
+    "options": [
+      "A tuna melt",
+      "A lobster roll",
+      "Clam chowder",
+      "A cheeseburger"
+    ],
+    "answer": "A tuna melt",
+    "difficulty": "easy",
+    "episode": 1,
+    "description": "Tom calls out that he picked up a tuna melt from the Diner before confronting Evan."
+  },
+  {
+    "context": "",
+    "question": "As Tom talks about Evan's mother, what does he say first made him know she was the one?",
+    "options": [
+      "Her laugh",
+      "Her eyes",
+      "Her singing",
+      "Her smile"
+    ],
+    "answer": "Her laugh",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Tom says some people know the moment they see someone, but he heard her laugh first and knew."
+  },
+  {
+    "context": "After the siren blares across town, Tom gets Wyck to turn it off by agreeing to hear him out.",
+    "question": "What does Wyck call the phenomenon he describes?",
+    "options": [
+      "The Fog That Stole Souls",
+      "The Fog That Took Them",
+      "Souls of the Fog",
+      "The Hungry Fog"
+    ],
+    "answer": "The Fog That Stole Souls",
+    "difficulty": "hard",
+    "episode": 1,
+    "description": "Wyck believes the quake means the island is waking up, and he tries to show what comes next."
+  },
+  {
+    "context": "",
+    "question": "Which of these is NOT one of the stages of the phenomenon Wyck describes?",
+    "options": [
+      "The skin goes cold",
+      "The eyes turn white",
+      "Loss of the five senses",
+      "Loss of erection"
+    ],
+    "answer": "The skin goes cold",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Wyck describes eyes turning white, loss of the five senses and delirium, and loss of erection as stages, but never mentions skin going cold."
+  },
+  {
+    "context": "Wyck offers another theory, revenants of doomed sailors, tied to a ship that a past mayor deliberately wrecked on the rocks.",
+    "question": "According to Wyck, how many years had the ship been missing before he explains why the mayor shuttered the lighthouse?",
+    "options": [
+      "62 years",
+      "53 years",
+      "46 years",
+      "40 years"
+    ],
+    "answer": "62 years",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Wyck says the mayor coveted the captain's 16-year-old bride, and insists she loved the 53-year-old mayor."
+  },
+  {
+    "context": "Exasperated, Tom pleads with Wyck about what one good write-up from the newspaper could do for the dying town.",
+    "question": "Which Maine resort town does Tom say they could become the next version of?",
+    "options": [
+      "Bar Harbor",
+      "Boothbay Harbor",
+      "Southwest Harbor",
+      "Northeast Harbor"
+    ],
+    "answer": "Bar Harbor",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Tom says the island could be the next Bar Harbor, and Wyck mocks him with a 'Fancy.'"
+  },
+  {
+    "context": "",
+    "question": "Which childhood prank from Tom's summer visits does Wyck bring up to explain why he doesn't trust him?",
+    "options": [
+      "Doorbell ditching",
+      "Egging his house",
+      "Toilet papering",
+      "Smashing pumpkins"
+    ],
+    "answer": "Doorbell ditching",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Tom apologises for doorbell ditching Wyck's house when he was 11, but Wyck says that isn't the real story."
+  },
+  {
+    "context": "Shep Clark is found collapsed but breathing. At the hospital, a doctor explains he's been sedated after a nasty fall.",
+    "question": "Which drug does the doctor say he gave Shep?",
+    "options": [
+      "Propofol",
+      "Morphine",
+      "Ketamine",
+      "Valium"
+    ],
+    "answer": "Propofol",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "The doctor says he gave Shep enough Propofol to knock out a horse so the swelling in his head can go down."
+  },
+  {
+    "context": "At the restaurant, Arthur presses Tom about islanders who fear leaving, mentioning someone he met who's never left the island.",
+    "question": "Who does Arthur say died of a stroke a day after stepping onto the mainland for the first time in eight years?",
+    "options": [
+      "Marsha Dogan",
+      "Lenore Hatch",
+      "Dottie Marsh",
+      "Fern Biddle"
+    ],
+    "answer": "Marsha Dogan",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Arthur tells Tom he checked the story and it's true: a woman named Marsha Dogan died of a stroke a day after visiting the mainland."
+  },
+  {
+    "context": "",
+    "question": "Where did Arthur meet the man who believes islanders born there can't leave?",
+    "options": [
+      "The Driftwood Diner",
+      "The ferry dock",
+      "The Seeded Rye",
+      "The historical society"
+    ],
+    "answer": "The Driftwood Diner",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "Tom says there's a reason the Driftwood wasn't on Arthur's list. The man claims his cousin died a month after going to the mainland."
+  },
+  {
+    "context": "Once the dinner crowd leaves, a remark at the door accuses Tom of hyping the island's dark legends on purpose.",
+    "question": "Which town does Tom supposedly want Widow's Bay to become, rather than Nantucket?",
+    "options": [
+      "Salem",
+      "Stonehaven",
+      "Innsmouth",
+      "Point Pleasant"
+    ],
+    "answer": "Salem",
+    "difficulty": "medium",
+    "episode": 1,
+    "description": "After Tom's panic in the fog, it's suggested he's using the island's spooky reputation as a gimmick, and he's told the town doesn't need it."
+  },
+  {
+    "context": "**EPISODE 2**: Early in the morning, Tom proudly reads the newly published travel article about Widow's Bay aloud to a local business owner.",
+    "question": "What of Tom's was left out of the article's layout?",
+    "options": [
+      "His poem",
+      "His photo",
+      "His quote",
+      "His map"
+    ],
+    "answer": "His poem",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Tom groans that the editor left out his poem, even though he went over the layout with her three times."
+  },
+  {
+    "context": "",
+    "question": "The article says Widow's Bay is the next what?",
+    "options": [
+      "Martha's Vineyard",
+      "Nantucket",
+      "Cape Cod",
+      "Bar Harbor"
+    ],
+    "answer": "Martha's Vineyard",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "The headline calls the island 'New England's Best Kept Secret', and one line says it is the next Martha's Vineyard, though that's all it says about it."
+  },
+  {
+    "context": "",
+    "question": "According to the article, what does it warn visitors not to expect to find on Widow's Bay?",
+    "options": [
+      "A Starbucks",
+      "A Walmart",
+      "A McDonald's",
+      "A Dunkin' Donuts"
+    ],
+    "answer": "A Starbucks",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "The article jokingly tells readers 'don't look for a Starbucks here,' right before the line comparing the island to Martha's Vineyard."
+  },
+  {
+    "context": "A siren interrupts them. Sheriff Bechir is wrestling a drunk Wyck away from a building that has just been made ready for tourists.",
+    "question": "Which building does Wyck insist nobody should be allowed to stay in?",
+    "options": [
+      "The inn",
+      "The lighthouse",
+      "The old hospital",
+      "The church"
+    ],
+    "answer": "The inn",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Wyck shouts that the place is haunted and that the mayor is a selfish fool for letting people stay there."
+  },
+  {
+    "context": "At the pub while Tom waits for his takeout, Reverend Bryce defends Wyck, explaining the town's tolerance before quoting scripture.",
+    "question": "Which Bible verse does Reverend Bryce quote to Tom about Wyck being the island's shepherd?",
+    "options": [
+      "James 4:6",
+      "John 4:6",
+      "Psalm 23:1",
+      "Romans 8:28"
+    ],
+    "answer": "James 4:6",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Reverend Bryce jokes that 'when the Lord gathers a herd, he calls a shepherd,' then laughingly cites James 4:6 when Tom teases him about phoning it in."
+  },
+  {
+    "context": "Tom insists the inn isn't haunted, and the locals dare him to spend the night there himself.",
+    "question": "Which room of the inn do the locals say Tom must stay in?",
+    "options": [
+      "The Captain's Suite",
+      "The Widow's Room",
+      "The Harbor Suite",
+      "The Lighthouse Room"
+    ],
+    "answer": "The Captain's Suite",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "The locals chip in to pay for his room on the condition that he sleeps in that particular suite."
+  },
+  {
+    "context": "",
+    "question": "What weapon did the suite's namesake use on his family after losing his mind?",
+    "options": [
+      "An axe",
+      "A harpoon",
+      "A pistol",
+      "A knife"
+    ],
+    "answer": "An axe",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "The captain lost his mind and killed his family, and the inn then named a suite after him."
+  },
+  {
+    "context": "At the bar, Al rattles off the inn's grim history after locals dare Tom to spend the night there, naming suites after past tragedies.",
+    "question": "What is the name of the woman who fled her wedding and fell to her death from a window?",
+    "options": [
+      "Hortence Fitzgerald",
+      "Beatrice Fitzgerald",
+      "Horace Whitmore",
+      "Beatrice Whitmore"
+    ],
+    "answer": "Hortence Fitzgerald",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Al names this suite after the woman described as an 'ugly woman who fled her wedding' and backed through a window to her death."
+  },
+  {
+    "context": "",
+    "question": "Whose head was found in the inn's dumbwaiter after the New Year's Eve disaster?",
+    "options": [
+      "John Reynolds",
+      "Harold Bennett",
+      "Margaret Olsen",
+      "Desmond Pryce"
+    ],
+    "answer": "John Reynolds",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "The locals add the New Year's Eve disaster to Tom's list of the inn's dark history."
+  },
+  {
+    "context": "",
+    "question": "In what year did John Reynolds' head turn up in the inn's dumbwaiter?",
+    "options": [
+      "1962",
+      "1951",
+      "1947",
+      "1973"
+    ],
+    "answer": "1962",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Al calls it the 'New Year's Eve disaster' of that year, adding it to the list of grim events tied to the inn."
+  },
+  {
+    "context": "",
+    "question": "What was the killer of 1951 dressed as?",
+    "options": [
+      "A clown",
+      "A priest",
+      "A sailor",
+      "A doctor"
+    ],
+    "answer": "A clown",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Tom assumes it was someone who killed clowns, but Al corrects him: it was a murderer dressed as one."
+  },
+  {
+    "context": "Back home, Tom tells his son he has to spend the night at the inn, so he's arranged somewhere else for him to stay.",
+    "question": "Whose house is Evan sent to for the night?",
+    "options": [
+      "Ruth's",
+      "Ginny's",
+      "Rosemary's",
+      "Patricia's"
+    ],
+    "answer": "Ruth's",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Evan protests that she's too old, then suddenly agrees, which makes Tom suspicious about what he's planning."
+  },
+  {
+    "context": "Outside, Sheriff Bechir finishes a phone call with his partner, and Tom overhears that he plans to leave the island.",
+    "question": "By which holiday does Bechir say they'll be out of Widow's Bay?",
+    "options": [
+      "Labor Day",
+      "The Fourth of July",
+      "Memorial Day",
+      "Thanksgiving"
+    ],
+    "answer": "Labor Day",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "His partner wants to leave by the end of July, but Bechir says Labor Day, and tells Tom he's moving as soon as he can."
+  },
+  {
+    "context": "Late that night, after hearing a phantom New Year's countdown, Tom is startled to find another guest in the hallway.",
+    "question": "What name does the other guest give?",
+    "options": [
+      "William",
+      "Walter",
+      "Wesley",
+      "Warren"
+    ],
+    "answer": "William",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Tom is surprised because Kurt never mentioned anyone else would be staying at the inn."
+  },
+  {
+    "context": "Alone at the inn after the chaos settles, Tom meets his mysterious hallway neighbor again as they bond over drinks and a dying TV.",
+    "question": "What field does William say he works in?",
+    "options": [
+      "Structural engineering",
+      "Marine biology",
+      "Architectural design",
+      "Civil planning"
+    ],
+    "answer": "Structural engineering",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "William explains his firm was hired by the city for an expansion."
+  },
+  {
+    "context": "",
+    "question": "What has the city hired William's engineering firm to inspect?",
+    "options": [
+      "The dock",
+      "The lighthouse",
+      "The bridge",
+      "The seawall"
+    ],
+    "answer": "The dock",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "William works for a structural engineering firm, and the inspection is for the expansion meant to bring in more ferries."
+  },
+  {
+    "context": "",
+    "question": "How many opponents did Tom face when he was elected mayor?",
+    "options": [
+      "None",
+      "One",
+      "Two",
+      "Three"
+    ],
+    "answer": "None",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Tom admits he ran uncontested, and William teases him that it's embarrassing."
+  },
+  {
+    "context": "Over drinks and a board game, Tom opens up to William about his father and growing up between the island and the mainland.",
+    "question": "Where did Tom's parents meet?",
+    "options": [
+      "On a schooner tour",
+      "At a lobster festival",
+      "On the ferry",
+      "At a summer dance"
+    ],
+    "answer": "On a schooner tour",
+    "difficulty": "hard",
+    "episode": 2,
+    "description": "His father was a local and his mother was from the mainland. She couldn't make it work with him, so Tom grew up off the island and spent summers here."
+  },
+  {
+    "context": "",
+    "question": "In which state did Tom grow up?",
+    "options": [
+      "Massachusetts",
+      "Maine",
+      "Connecticut",
+      "New Hampshire"
+    ],
+    "answer": "Massachusetts",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Tom grew up there and dreaded his summers on the island, before moving back when his father got sick."
+  },
+  {
+    "context": "",
+    "question": "What does Tom say is the only thing the island is really cursed with?",
+    "options": [
+      "Alcoholism",
+      "Gossip",
+      "Poverty",
+      "Mediocrity"
+    ],
+    "answer": "Alcoholism",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Tom's father would come home after drinks telling horror stories about the island, and Tom blames the drinking, not any curse."
+  },
+  {
+    "context": "William encourages Tom to prove himself to the townspeople by completing the inspection checklist Kurt left behind at the Captain's Suite.",
+    "question": "What is the final item on the checklist that William urges Tom to finish?",
+    "options": [
+      "The crawl space",
+      "The attic",
+      "The boiler room",
+      "The dumbwaiter"
+    ],
+    "answer": "The crawl space",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "William tells Tom to finish off the checklist and show the townspeople who's in charge, pushing Tom toward the crawl space."
+  },
+  {
+    "context": "Encouraged by William to finish the checklist, Tom crawls deep into the crawl space when a voice calls in from outside.",
+    "question": "What greeting does Tom hear just before the attack in the crawl space?",
+    "options": [
+      "Howdy, neighbor",
+      "Hello, mayor",
+      "Howdy mayor",
+      "Hello, neighbor"
+    ],
+    "answer": "Howdy, neighbor",
+    "difficulty": "hard",
+    "episode": 2,
+    "description": "It's William's voice. He offers to come in and help, and Tom begs him not to just before he's attacked."
+  },
+  {
+    "context": "The next morning, Kurt says he locked the door himself, and a shaken Tom describes the guest he spent the night with.",
+    "question": "Which of the inn's legends does Wyck say Tom met?",
+    "options": [
+      "The clown killer",
+      "The mad captain",
+      "Hortence Fitzgerald",
+      "John Reynold"
+    ],
+    "answer": "The clown killer",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "When Tom says the man called himself William, Wyck says it was Willy, the clown, and demands Tom stop letting people stay at the inn."
+  },
+  {
+    "context": "Wyck begs Tom to call off the tourist plans, but Tom refuses, and the group searches the crawl space for an explanation.",
+    "question": "What do they discover growing in the crawl space?",
+    "options": [
+      "Black mold",
+      "Poison ivy",
+      "Toxic mushrooms",
+      "Asbestos"
+    ],
+    "answer": "Black mold",
+    "difficulty": "easy",
+    "episode": 2,
+    "description": "Kurt suggests Tom hallucinated from the exposure, even though Tom doubts it could affect him that quickly."
+  },
+  {
+    "context": "",
+    "question": "How quickly does Kurt say the problem can be remediated?",
+    "options": [
+      "72 hours",
+      "24 hours",
+      "Two weeks",
+      "Ten days"
+    ],
+    "answer": "72 hours",
+    "difficulty": "medium",
+    "episode": 2,
+    "description": "Kurt says it can be fixed in time and that he'll seal up the Captain's Suite anyway, so the tourists can still come."
+  }
+]

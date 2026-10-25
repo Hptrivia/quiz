@@ -1,6 +1,110 @@
 [
   {
     "type": "theme",
+    "slug": "banshee",
+    "title": "Banshee",
+    "label": "TV",
+    "date": "2026-10-25",
+    "url": "challenge.html?theme=banshee&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "beef",
+    "title": "Beef",
+    "label": "TV",
+    "date": "2026-10-25",
+    "url": "challenge.html?theme=beef&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "big-brother",
+    "title": "Big Brother",
+    "label": "TV",
+    "date": "2026-10-25",
+    "url": "challenge.html?theme=big-brother&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "fargo",
+    "title": "Fargo",
+    "label": "TV",
+    "date": "2026-10-25",
+    "url": "challenge.html?theme=fargo&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "girls",
+    "title": "Girls",
+    "label": "Sitcoms",
+    "date": "2026-10-25",
+    "url": "challenge.html?theme=girls&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "justified",
+    "title": "Justified",
+    "label": "TV",
+    "date": "2026-10-25",
+    "url": "challenge.html?theme=justified&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "rome",
+    "title": "Rome",
+    "label": "TV",
+    "date": "2026-10-25",
+    "url": "challenge.html?theme=rome&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "roseanne",
+    "title": "Roseanne",
+    "label": "Sitcoms",
+    "date": "2026-10-25",
+    "url": "challenge.html?theme=roseanne&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "sex-education",
+    "title": "Sex Education",
+    "label": "TV",
+    "date": "2026-10-25",
+    "url": "challenge.html?theme=sex-education&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "shrinking",
+    "title": "Shrinking",
+    "label": "Sitcoms",
+    "date": "2026-10-25",
+    "url": "challenge.html?theme=shrinking&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "tell-me-lies",
+    "title": "Tell Me Lies",
+    "label": "TV",
+    "date": "2026-10-25",
+    "url": "challenge.html?theme=tell-me-lies&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "the-sandman",
+    "title": "The Sandman",
+    "label": "TV",
+    "date": "2026-10-25",
+    "url": "challenge.html?theme=the-sandman&round=1"
+  },
+  {
+    "type": "theme",
+    "slug": "the-umbrella-academy",
+    "title": "The Umbrella Academy",
+    "label": "TV",
+    "date": "2026-10-25",
+    "url": "challenge.html?theme=the-umbrella-academy&round=1"
+  },
+  {
+    "type": "theme",
     "slug": "90-day-fiance",
     "title": "90 Day Fiancé",
     "label": "TV",
@@ -54,109 +158,5 @@
     "label": "Sports",
     "date": "2026-10-18",
     "url": "challenge.html?theme=nhl&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "the-good-wife",
-    "title": "The Good Wife",
-    "label": "TV",
-    "date": "2026-10-18",
-    "url": "challenge.html?theme=the-good-wife&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "olympics",
-    "title": "The Olympics",
-    "label": "Sports",
-    "date": "2026-10-18",
-    "url": "challenge.html?theme=olympics&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "the-real-housewives",
-    "title": "The Real Housewives",
-    "label": "TV",
-    "date": "2026-10-18",
-    "url": "challenge.html?theme=the-real-housewives&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "vanderpump-rules",
-    "title": "Vanderpump Rules",
-    "label": "TV",
-    "date": "2026-10-18",
-    "url": "challenge.html?theme=vanderpump-rules&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "battlestar-galactica",
-    "title": "Battlestar Galactica",
-    "label": "TV",
-    "date": "2026-10-14",
-    "url": "challenge.html?theme=battlestar-galactica&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "college-basketball",
-    "title": "College Basketball",
-    "label": "Sports",
-    "date": "2026-10-14",
-    "url": "challenge.html?theme=college-basketball&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "college-football",
-    "title": "College Football",
-    "label": "Sports",
-    "date": "2026-10-14",
-    "url": "challenge.html?theme=college-football&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "cricket",
-    "title": "Cricket",
-    "label": "Sports",
-    "date": "2026-10-14",
-    "url": "challenge.html?theme=cricket&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "good-omens",
-    "title": "Good Omens",
-    "label": "TV",
-    "date": "2026-10-14",
-    "url": "challenge.html?theme=good-omens&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "star-trek-deep-space-nine",
-    "title": "Star Trek: Deep Space Nine",
-    "label": "TV",
-    "date": "2026-10-14",
-    "url": "challenge.html?theme=star-trek-deep-space-nine&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "teenage-mutant-ninja-turtles",
-    "title": "Teenage Mutant Ninja Turtles",
-    "label": "TV",
-    "date": "2026-10-14",
-    "url": "challenge.html?theme=teenage-mutant-ninja-turtles&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "alan-wake-2",
-    "title": "Alan Wake 2",
-    "label": "Games",
-    "date": "2026-10-11",
-    "url": "challenge.html?theme=alan-wake-2&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "formula-1",
-    "title": "Formula 1",
-    "label": "Sports",
-    "date": "2026-10-11",
-    "url": "challenge.html?theme=formula-1&round=1"
   }
 ]

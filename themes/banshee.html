@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if(/TriviaGauntletPremium/.test(navigator.userAgent||''))document.documentElement.classList.add('premium-app');</script>
+  <meta charset="UTF-8" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Banshee Trivia Quiz &mdash; Questions &amp; Answers | Trivia Gauntlet</title>
+<meta name="description" content="Play the Banshee trivia quiz — 83 questions with answers. Test your knowledge in Marathon, Challenge, Survival, and more." />
+  <link rel="canonical" href="https://triviagauntlet.app/themes/banshee.html" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BY9F2ZDT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    if(!/TriviaGauntletPremium/.test(navigator.userAgent||''))gtag('config', 'G-E6BY9F2ZDT');
+  </script>
+
+  <link rel="apple-touch-icon" href="/assets/icon-192.png" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <meta property="og:title" content="Banshee Trivia Questions | Trivia Gauntlet" />
+  <meta property="og:description" content="Play the Banshee trivia quiz — 83 questions with answers. Test your knowledge in Marathon, Challenge, Survival, and more." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://triviagauntlet.app/themes/banshee.html" />
+  <meta property="og:image" content="https://triviagauntlet.app/assets/icon-192.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Banshee Trivia Questions | Trivia Gauntlet" />
+  <meta name="twitter:description" content="Play the Banshee trivia quiz — 83 questions with answers. Test your knowledge in Marathon, Challenge, Survival, and more." />
+  <meta name="twitter:image" content="https://triviagauntlet.app/assets/icon-192.png" />
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://triviagauntlet.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "TV",
+          "item": "https://triviagauntlet.app/categories/tv.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Banshee Trivia",
+          "item": "https://triviagauntlet.app/themes/banshee.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does an illegal search warrant get Proctor arrested for in season 2?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Illegal weapons"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many days in prison is Carrie sentenced to in season 2?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "30"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does Calvin Bunker use to kill his father-in-law Randall Watts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An ice pick"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What was Sugar Bates's career before he ran his bar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Boxer"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which actor plays Kai Proctor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ulrich Thomsen"
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+  <!-- Mediavine ad script — website only. Skipped in the native app (AdMob handles ads there),
+       the premium ad-free app, and for web users who unlocked ad-free access. -->
+  <script data-mediavine-loader="">
+  (function(){
+    if (/TriviaGauntletPremium/.test(navigator.userAgent || '')) return;
+    if (window.Capacitor && (window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform() || window.Capacitor.isNative)) return;
+    try { var until = localStorage.getItem('adsRemovedUntil'); if (until && new Date(until) > new Date()) return; } catch (e) {}
+    var s = document.createElement('script');
+    s.type = 'text/javascript'; s.async = true;
+    s.setAttribute('data-noptimize', '1'); s.setAttribute('data-cfasync', 'false');
+    s.src = '//scripts.mediavine.com/tags/5434c4f7-f50b-4d0f-a795-071f1a1f055e.js';
+    document.head.appendChild(s);
+  })();
+  </script>
+</head>
+<body>
+  <main class="container narrow">
+    <div class="theme-top-links">
+      <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
+      <span id="navAvatarSlot"></span>
+      <a href="../index.html" class="back-link">⌂ Home</a>
+    </div>
+
+    <div class="theme-search-wrap">
+      <div class="search-wrap">
+        <input id="themeSearchInput" class="theme-search-input" type="text" placeholder="Search themes..." autocomplete="off" />
+        <div id="themeSearchResults" class="search-results"></div>
+      </div>
+    </div>
+
+    <section class="panel">
+      <h1>Banshee Trivia Questions</h1>
+      <p class="theme-question-count">83 questions across multiple rounds</p>
+<p>A TV trivia theme built around Banshee, following an ex-con and master thief who steals the identity of the new sheriff of a small Pennsylvania town run by Amish-born crime boss Kai Proctor.</p>
+
+      
+      <div class="grid">
+        <a class="card" href="../challenge.html?theme=banshee&round=1">
+          <h3>Challenge Mode</h3>
+          <p>10-question quick rounds</p>
+        </a>
+
+        <a class="card" href="../play.html?theme=banshee">
+          <h3>Marathon Mode</h3>
+          <p>20-question rounds</p>
+        </a>
+
+        
+
+        <a class="card" href="../survival.html?theme=banshee">
+          <h3>Survival Mode</h3>
+          <p>One mistake and the run ends</p>
+        </a>
+
+        <a class="card" href="../trivia-rush.html?theme=banshee">
+          <h3>Trivia Rush</h3>
+          <p>Score, streak, and multiplier run</p>
+        </a>
+
+        
+        <a class="card" href="../episode.html?theme=banshee">
+          <h3>Episode Mode</h3>
+          <p>🎬 Available by request</p>
+        </a>
+      
+
+        <a class="card" href="../versus.html?theme=banshee">
+          <h3>Versus Mode</h3>
+          <p>Play locally or online against friends</p>
+        </a>
+
+        <a class="card" href="../wordle/banshee.html">
+          <h3>Wordle</h3>
+          <p>Guess themed words</p>
+        </a>
+
+        <a class="card" href="../wordsearch/banshee.html">
+          <h3>Word Search</h3>
+          <p>Find hidden themed words</p>
+        </a>
+
+        
+        <a class="card" href="../fan-questions.html?theme=banshee">
+          <h3>Fan Section <span style="font-size:0.65rem;font-weight:700;background:#f97316;color:#fff;padding:2px 7px;border-radius:4px;vertical-align:middle;margin-left:6px;">BETA</span></h3>
+          <p>Community-created questions. Quality and difficulty may vary.</p>
+        </a>
+      
+
+      </div>
+
+      
+        <div class="theme-sample-questions">
+          <h2>Sample Questions</h2>
+          <p class="sq-hint">Tap an answer to reveal it.</p>
+          <ul>
+            <li>What does an illegal search warrant get Proctor arrested for in season 2? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Illegal weapons</span></li><li>How many days in prison is Carrie sentenced to in season 2? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">30</span></li><li>What does Calvin Bunker use to kill his father-in-law Randall Watts? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">An ice pick</span></li><li>What was Sugar Bates&#39;s career before he ran his bar? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Boxer</span></li><li>Which actor plays Kai Proctor? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Ulrich Thomsen</span></li><li>What is Deva arrested for by Deputy Raven in season 3? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Smoking weed</span></li><li>What is the name of Hood&#39;s biological daughter? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Deva</span></li><li>What office does Kai Proctor hold in season 4? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Mayor</span></li><li>In which season does Mr. Rabbit die? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">Season 2</span></li><li>What is Gordon Hopewell&#39;s job? <span class="sq-answer blurred" onclick="this.classList.remove('blurred')">District attorney</span></li>
+          </ul>
+        </div>
+      
+      <p>Banshee trivia works because the show packs heists, brutal fights and small-town secrets into every episode. Questions can cover Lucas Hood&#39;s stolen identity, Kai Proctor&#39;s empire, the Kinaho reservation and the crew Hood relies on to survive.</p>
+      <p>A strong Banshee quiz can include Lucas Hood and his fifteen years in prison, Carrie Hopewell and her double life as a real estate agent, Kai Proctor&#39;s slaughterhouse and Amish roots, Job the hacker, Sugar Bates and his bar, Gordon Hopewell the district attorney, Mr. Rabbit the Ukrainian gangster, Chayton Littlestone and the Redbones, the Kinaho tribe and the sheriff&#39;s station locals call the Cadi. It works because every season raises the stakes.</p>
+      <p>If you enjoy Banshee trivia, also try <a href="../themes/spongebob-squarepants.html">SpongeBob SquarePants</a> and <a href="../themes/tell-me-lies.html">Tell Me Lies</a> on Trivia Gauntlet.</p>
+      
+        <div class="theme-related-quizzes">
+          <h2>Related Quizzes</h2>
+          <div class="grid">
+            
+              <a class="card" href="../themes/spongebob-squarepants.html">
+                <h3>SpongeBob SquarePants</h3>
+              </a>
+            
+              <a class="card" href="../themes/tell-me-lies.html">
+                <h3>Tell Me Lies</h3>
+              </a>
+            
+              <a class="card" href="../themes/lucifer.html">
+                <h3>Lucifer</h3>
+              </a>
+            
+              <a class="card" href="../themes/yellowjackets.html">
+                <h3>Yellowjackets</h3>
+              </a>
+            
+              <a class="card" href="../themes/andor.html">
+                <h3>Andor</h3>
+              </a>
+            
+          </div>
+        </div>
+      
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="../about.html">About</a>
+        <a class="footer-highlight" href="../how-it-works.html">How It Works</a>
+        <a class="footer-highlight" href="../contact.html">Contact</a>
+        <a href="../privacy.html">Privacy Policy</a>
+        <a href="../terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    async function setupThemePageSearch() {
+      const input = document.getElementById("themeSearchInput");
+      const results = document.getElementById("themeSearchResults");
+      if (!input || !results) return;
+
+      try {
+        const res = await fetch("../data/themes.json");
+        const themes = await res.json();
+
+        function render(items) {
+          if (!items.length) {
+            results.innerHTML = '<div class="search-item">No results found</div>';
+            return;
+          }
+
+          results.innerHTML = items.map(theme => `
+            <a class="search-item" href="../themes/${theme.slug}.html">${theme.title}</a>
+          `).join("");
+        }
+
+        input.addEventListener("focus", () => {
+          render(themes);
+          results.style.display = "block";
+        });
+
+        input.addEventListener("input", (e) => {
+          const value = e.target.value.trim().toLowerCase();
+          const filtered = themes.filter(theme =>
+            theme.title.toLowerCase().includes(value)
+          );
+          render(filtered);
+          results.style.display = "block";
+        });
+
+        document.addEventListener("click", (e) => {
+          if (!input.contains(e.target) && !results.contains(e.target)) {
+            results.style.display = "none";
+          }
+        });
+      } catch (err) {
+        console.error("Theme search failed", err);
+      }
+    }
+
+    setupThemePageSearch();
+  </script>
+  <script src="../assets/profile.js"></script>
+  <script src="../assets/admob.js"></script>
+  <script src="../assets/announcements.js"></script>
+</body>
+</html>
