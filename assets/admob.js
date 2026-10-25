@@ -10,7 +10,7 @@
 //            platform to 'live' AFTER AdMob has approved that platform.
 //
 const ADMOB_MODE_BY_PLATFORM = {
-  ios: 'test',
+  ios: 'live',
   android: 'live',
 };
 const _ADMOB_PLATFORM = window.Capacitor?.getPlatform?.();
