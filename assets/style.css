@@ -1889,6 +1889,7 @@ body[data-page="wordsearch"].premium-mode .ws-game-area {
 .cb-versus-length-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
 .cb-versus-length-btn.selected { background: var(--primary-btn-bg); border-color: var(--primary-btn-bg); color: var(--primary-btn-text); }
 .cb-difficulty-btn.selected { background: var(--primary-btn-bg); border-color: var(--primary-btn-bg); color: var(--primary-btn-text); }
+#notifyHourRow .selected { background: var(--primary-btn-bg); border-color: var(--primary-btn-bg); color: var(--primary-btn-text); }
 .cb-versus-category-list { display: flex; gap: 8px; flex-wrap: wrap; margin: 6px 0 10px; }
 .cb-versus-category-pill {
   display: inline-flex; align-items: center; gap: 6px;

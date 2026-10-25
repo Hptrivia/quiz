@@ -553,6 +553,7 @@ async function renderDailyWordlePage() {
           gameOver = true;
           const streak = updateDWStreak(true);
           if (typeof gtag === 'function' && !srIsTest()) gtag('event', 'daily_finished', { mode: 'wordle', solved: true, score: guesses.length });
+          if (typeof tgNotifyDailyFinished === 'function') tgNotifyDailyFinished();
           const result = { completed: true, solved: true, guesses, revealsUsed, streak: streak.current, bestStreak: streak.best };
           saveDWState(result);
           if (typeof isLimitedWeb === 'function' && isLimitedWeb()) localStorage.setItem('cbWebDailyUsed_wordle', 'true');
@@ -564,6 +565,7 @@ async function renderDailyWordlePage() {
           gameOver = true;
           const streak = updateDWStreak(false);
           if (typeof gtag === 'function' && !srIsTest()) gtag('event', 'daily_finished', { mode: 'wordle', solved: false });
+          if (typeof tgNotifyDailyFinished === 'function') tgNotifyDailyFinished();
           const result = { completed: true, solved: false, guesses, revealsUsed, streak: streak.current, bestStreak: streak.best };
           saveDWState(result);
           if (typeof isLimitedWeb === 'function' && isLimitedWeb()) localStorage.setItem('cbWebDailyUsed_wordle', 'true');

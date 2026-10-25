@@ -701,3 +701,11 @@ function srCardText(streakKey) {
   const streak = JSON.parse(localStorage.getItem(streakKey));
   return `🔥 ${streak.current}-day streak at risk — tap to save it`;
 }
+
+// Local notifications (assets/notifications.js) — only in app builds that
+// include the LocalNotifications plugin; older store builds skip it entirely.
+if (isInApp() && window.Capacitor.isPluginAvailable?.('LocalNotifications')) {
+  const s = document.createElement('script');
+  s.src = '/assets/notifications.js';
+  document.head.appendChild(s);
+}

@@ -312,6 +312,7 @@ async function renderDailyWhoAmIPage() {
     const result = { completed: true, solved, guesses, extraGuess, hint, streak: streak.current, bestStreak: streak.best };
     waSaveState(result);
     if (typeof gtag === 'function' && !srIsTest()) gtag('event', 'daily_finished', { mode: 'whoami', solved, score: guesses.length });
+    if (typeof tgNotifyDailyFinished === 'function') tgNotifyDailyFinished();
     if (typeof isLimitedWeb === 'function' && isLimitedWeb()) localStorage.setItem('cbWebDailyUsed_whoami', 'true');
     gameEl.style.display = 'none';
     waShowResult(result, answer, byName);

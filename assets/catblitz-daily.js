@@ -185,6 +185,7 @@ async function cbRenderDailyPage() {
           });
           const savedState = cbSaveDailyResult(letter, gradeResult);
           if (typeof gtag === "function" && !srIsTest()) gtag("event", "daily_finished", { mode: "blitz", solved: true, score: gradeResult.score });
+          if (typeof tgNotifyDailyFinished === "function") tgNotifyDailyFinished();
           roundEl.style.display = "none";
           cbShowDailyResult(savedState);
         },

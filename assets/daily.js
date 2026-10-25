@@ -500,6 +500,7 @@ async function renderDailyPage() {
       }
       const result = saveDailyResult(score, questions.length, missed);
       if (typeof gtag === "function" && !srIsTest()) gtag("event", "daily_finished", { mode: "trivia", solved: true, score });
+      if (typeof tgNotifyDailyFinished === "function") tgNotifyDailyFinished();
       if (quizEl) quizEl.style.display = "none";
       showDailyResult(result);
     }

@@ -104,6 +104,22 @@
           <p class="hm-settings-row-desc">Takes effect next quiz, not mid-round</p>
         </div>
 
+        <!-- Notifications (app builds with notifications only — shown by assets/notifications.js) -->
+        <div id="notifyRow" style="display:none;margin-bottom:16px;">
+          <div class="form-label">Daily reminder</div>
+          <button class="secondary-btn" id="notifyReminderBtn"></button>
+          <div id="notifyHourRow" style="display:flex;gap:6px;margin-top:8px;">
+            <button type="button" class="secondary-btn" data-hour="9">Morning</button>
+            <button type="button" class="secondary-btn" data-hour="13">Afternoon</button>
+            <button type="button" class="secondary-btn" data-hour="18">Evening</button>
+          </div>
+          <p class="hm-settings-row-desc">When new puzzles are waiting — skipped on days you've already played</p>
+          <div class="form-label" style="margin-top:12px;">Streak warnings</div>
+          <button class="secondary-btn" id="notifyStreakBtn"></button>
+          <p class="hm-settings-row-desc">A heads-up before a daily streak runs out</p>
+          <p id="notifyBlocked" class="hm-settings-row-desc" style="display:none;color:#f59e0b;">Notifications are turned off for this app in your phone's settings — turn them on there to get these.</p>
+        </div>
+
         <!-- Color picker -->
         <div style="margin-bottom:16px;">
           <div class="form-label">Avatar colour</div>
@@ -154,6 +170,7 @@
   </footer>
 
   <script src="assets/profile.js"></script>
+  <script src="assets/notifications.js"></script>
   <script src="assets/leaderboard.js"></script>
   <script>
     function renderPage() {

@@ -312,6 +312,7 @@ async function renderDailyOrderPage() {
     const result = { completed: true, solved, rows, extraTry, hint, streak: streak.current, bestStreak: streak.best };
     wfSaveState(result);
     if (typeof gtag === 'function' && !srIsTest()) gtag('event', 'daily_finished', { mode: 'order', solved, score: rows.length });
+    if (typeof tgNotifyDailyFinished === 'function') tgNotifyDailyFinished();
     if (typeof isLimitedWeb === 'function' && isLimitedWeb()) localStorage.setItem('cbWebDailyUsed_order', 'true');
     gameEl.style.display = 'none';
     wfShowResult(result, items);

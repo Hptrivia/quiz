@@ -419,6 +419,7 @@ async function renderDailyMashupPage() {
       }
       const result = saveDailyMashupResult(score, questions.length, missed);
       if (typeof gtag === "function" && !srIsTest()) gtag("event", "daily_finished", { mode: "mashup", solved: true, score });
+      if (typeof tgNotifyDailyFinished === "function") tgNotifyDailyFinished();
       if (quizEl) quizEl.style.display = "none";
       showDmResult(result);
     }
