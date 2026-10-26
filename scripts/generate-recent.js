@@ -26,15 +26,20 @@ function readJSON(rel) {
   return JSON.parse(fs.readFileSync(path.join(ROOT, rel), "utf8"));
 }
 
-/** First-commit date for a file, or its mtime if git doesn't know it yet. */
-function addedDate(relFile) {
+/**
+ * First-commit date for a file, or its mtime if git doesn't know it yet.
+ * With `latest`, the most recent commit date instead — episode files grow over
+ * time (new episodes appended), so their newest change is the "added" date.
+ */
+function addedDate(relFile, latest = false) {
   const abs = path.join(ROOT, relFile);
   if (!fs.existsSync(abs)) return null;
 
   try {
+    const filter = latest ? [] : ["--diff-filter=A"];
     const out = execFileSync(
       "git",
-      ["log", "--diff-filter=A", "--format=%ad", "--date=short", "-1", "--", relFile],
+      ["log", ...filter, "--format=%ad", "--date=short", "-1", "--", relFile],
       { cwd: ROOT, encoding: "utf8" }
     ).trim();
     if (out) return out;
@@ -60,12 +65,12 @@ for (const t of themes) {
     title: t.title,
     label: t.category,
     date,
-    url: `challenge.html?theme=${t.slug}&round=1`
+    url: `themes/${t.slug}.html`
   });
 }
 
 for (const [slug, file] of Object.entries(episodes)) {
-  const date = addedDate(`data/${file}`);
+  const date = addedDate(`data/${file}`, true);
   if (!date) continue;
   entries.push({
     type: "episode",
@@ -73,7 +78,7 @@ for (const [slug, file] of Object.entries(episodes)) {
     title: titleOf[slug] || slug,
     label: "Episode Mode",
     date,
-    url: `episode.html?theme=${slug}`
+    url: `episode.html?theme=${slug}&episode=1`
   });
 }
 

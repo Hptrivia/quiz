@@ -5,7 +5,15 @@
     "title": "Banshee",
     "label": "TV",
     "date": "2026-10-25",
-    "url": "challenge.html?theme=banshee&round=1"
+    "url": "themes/banshee.html"
+  },
+  {
+    "type": "episode",
+    "slug": "prison-break",
+    "title": "Prison Break",
+    "label": "Episode Mode",
+    "date": "2026-10-25",
+    "url": "episode.html?theme=prison-break&episode=1"
   },
   {
     "type": "theme",
@@ -13,7 +21,15 @@
     "title": "Beef",
     "label": "TV",
     "date": "2026-10-25",
-    "url": "challenge.html?theme=beef&round=1"
+    "url": "themes/beef.html"
+  },
+  {
+    "type": "episode",
+    "slug": "widows-bay",
+    "title": "Widows Bay",
+    "label": "Episode Mode",
+    "date": "2026-10-25",
+    "url": "episode.html?theme=widows-bay&episode=1"
   },
   {
     "type": "theme",
@@ -21,7 +37,7 @@
     "title": "Big Brother",
     "label": "TV",
     "date": "2026-10-25",
-    "url": "challenge.html?theme=big-brother&round=1"
+    "url": "themes/big-brother.html"
   },
   {
     "type": "theme",
@@ -29,7 +45,7 @@
     "title": "Fargo",
     "label": "TV",
     "date": "2026-10-25",
-    "url": "challenge.html?theme=fargo&round=1"
+    "url": "themes/fargo.html"
   },
   {
     "type": "theme",
@@ -37,7 +53,7 @@
     "title": "Girls",
     "label": "Sitcoms",
     "date": "2026-10-25",
-    "url": "challenge.html?theme=girls&round=1"
+    "url": "themes/girls.html"
   },
   {
     "type": "theme",
@@ -45,7 +61,7 @@
     "title": "Justified",
     "label": "TV",
     "date": "2026-10-25",
-    "url": "challenge.html?theme=justified&round=1"
+    "url": "themes/justified.html"
   },
   {
     "type": "theme",
@@ -53,7 +69,7 @@
     "title": "Rome",
     "label": "TV",
     "date": "2026-10-25",
-    "url": "challenge.html?theme=rome&round=1"
+    "url": "themes/rome.html"
   },
   {
     "type": "theme",
@@ -61,7 +77,7 @@
     "title": "Roseanne",
     "label": "Sitcoms",
     "date": "2026-10-25",
-    "url": "challenge.html?theme=roseanne&round=1"
+    "url": "themes/roseanne.html"
   },
   {
     "type": "theme",
@@ -69,7 +85,7 @@
     "title": "Sex Education",
     "label": "TV",
     "date": "2026-10-25",
-    "url": "challenge.html?theme=sex-education&round=1"
+    "url": "themes/sex-education.html"
   },
   {
     "type": "theme",
@@ -77,7 +93,7 @@
     "title": "Shrinking",
     "label": "Sitcoms",
     "date": "2026-10-25",
-    "url": "challenge.html?theme=shrinking&round=1"
+    "url": "themes/shrinking.html"
   },
   {
     "type": "theme",
@@ -85,7 +101,7 @@
     "title": "Tell Me Lies",
     "label": "TV",
     "date": "2026-10-25",
-    "url": "challenge.html?theme=tell-me-lies&round=1"
+    "url": "themes/tell-me-lies.html"
   },
   {
     "type": "theme",
@@ -93,7 +109,7 @@
     "title": "The Sandman",
     "label": "TV",
     "date": "2026-10-25",
-    "url": "challenge.html?theme=the-sandman&round=1"
+    "url": "themes/the-sandman.html"
   },
   {
     "type": "theme",
@@ -101,7 +117,7 @@
     "title": "The Umbrella Academy",
     "label": "TV",
     "date": "2026-10-25",
-    "url": "challenge.html?theme=the-umbrella-academy&round=1"
+    "url": "themes/the-umbrella-academy.html"
   },
   {
     "type": "theme",
@@ -109,7 +125,7 @@
     "title": "90 Day Fiancé",
     "label": "TV",
     "date": "2026-10-18",
-    "url": "challenge.html?theme=90-day-fiance&round=1"
+    "url": "themes/90-day-fiance.html"
   },
   {
     "type": "theme",
@@ -117,7 +133,7 @@
     "title": "Carrie",
     "label": "TV",
     "date": "2026-10-18",
-    "url": "challenge.html?theme=carrie&round=1"
+    "url": "themes/carrie.html"
   },
   {
     "type": "theme",
@@ -125,7 +141,7 @@
     "title": "Derry Girls",
     "label": "Sitcoms",
     "date": "2026-10-18",
-    "url": "challenge.html?theme=derry-girls&round=1"
+    "url": "themes/derry-girls.html"
   },
   {
     "type": "theme",
@@ -133,7 +149,7 @@
     "title": "Everybody Hates Chris",
     "label": "Sitcoms",
     "date": "2026-10-18",
-    "url": "challenge.html?theme=everybody-hates-chris&round=1"
+    "url": "themes/everybody-hates-chris.html"
   },
   {
     "type": "theme",
@@ -141,22 +157,6 @@
     "title": "Golf",
     "label": "Sports",
     "date": "2026-10-18",
-    "url": "challenge.html?theme=golf&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "landman",
-    "title": "Landman",
-    "label": "TV",
-    "date": "2026-10-18",
-    "url": "challenge.html?theme=landman&round=1"
-  },
-  {
-    "type": "theme",
-    "slug": "nhl",
-    "title": "NHL",
-    "label": "Sports",
-    "date": "2026-10-18",
-    "url": "challenge.html?theme=nhl&round=1"
+    "url": "themes/golf.html"
   }
 ]
