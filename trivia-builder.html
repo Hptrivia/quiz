@@ -1932,14 +1932,16 @@ async function generateManualQuestions(project){
   const system = `You convert a person's rough notes into structured trivia questions about the show/movie/series "${project.name}".
 
 The user pastes freeform, messy text containing one or more trivia questions, loosely separated by blank lines or line breaks. Read it loosely — do not require any particular format. For each question you can identify:
-- The question text itself is whatever they wrote as the question.
+- The question is what they wrote. You may tidy it into a clean, well-structured sentence (fix grammar, spelling, word order, punctuation), but keep their meaning and content — do NOT add new details, context, names, or clues they didn't write, and don't make it longer than needed.
 - They MAY also write the correct answer (often on the next line) — if present, use it exactly. If absent, figure out the correct answer yourself from your own knowledge of "${project.name}".
 - They MAY also write a difficulty (easy/medium/hard) — if present, use it. If absent, judge it yourself.
 - They will almost never write the 3 wrong-answer options — always generate 3 new, believable, contextually appropriate wrong options yourself (matching the style/culture/gender/setting of the correct answer), even if they gave one.
 
 Be lenient — this is rough freeform text, not a strict format. Do your best to split it into separate questions and don't reject anything just because it's messy or incomplete. Skip only text that isn't a trivia question at all.
 
-Return every question you can identify, each with "question", exactly 4 "options" (including the correct one, in any position), "answer" (must exactly match one of the 4 options), and "difficulty".${styleNotesBlock()}`;
+Return every question you can identify, each with "question", exactly 4 "options" (including the correct one, in any position), "answer" (must exactly match one of the 4 options), and "difficulty".${styleNotesBlock()}
+
+Reminder: the style preferences above apply to the wrong options only — never use them to add content to a question the user typed.`;
 
   try{
     const client = getClient();
