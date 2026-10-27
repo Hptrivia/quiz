@@ -12,7 +12,17 @@
 // forfeited so a real disconnect can't block the match forever.
 //
 // Reuses from versus.js: VS_PLAYER_COLORS, vsBuildSchedule, vsDrawQuestion,
-// vsBuildLeaderboard, vsShow, vsSessionUsedIds, vsBuildQuestionPools.
+// vsBuildLeaderboard, vsShow, vsSessionUsedIds, vsBuildQuestionPools,
+// VS_BOT_PRESETS.
+//
+// Quick Match: same match screens and loop, but mpRoom.bot is set and the
+// opponent is a local bot instead of a second client — no room row, no
+// answer rows, no polling. Every DB call below is skipped when mpRoom.bot is
+// set; the bot's answer is fed into mpMaybeResolveRound directly. The bot is
+// always shown with a 🤖 tag (never presented as a real person) and its skill
+// adapts per device to the player's results (see qmRecordResult). Each match
+// is logged to the quick_matches table (supabase/quick-matches.sql) — a log
+// only, the match never waits on it.
 
 const MP_URL = "https://avasbapxzgmpcosixgio.supabase.co";
 const MP_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF2YXNiYXB4emdtcGNvc2l4Z2lvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk2NjM4MzUsImV4cCI6MjA5NTIzOTgzNX0.DLNnasmaQ1hdKXb2xqXrTBnBjISo0RxOiwy7TrlN9bg";
@@ -23,6 +33,15 @@ const MP_DISCONNECT_MS = 15000;
 const MP_TIEBREAK_BUFFER = 5;      // extra sudden-death questions drawn in case of a tie after regulation
 const MP_REVEAL_PAUSE_MS = 2500;
 const MP_CODE_CHARS = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789'; // no 0/O/1/I/L — easy to read aloud
+const MP_QUICK_SWITCH_MS = 20000;  // waiting-room "No one coming? Quick Match" link appears after this
+
+const QM_SKILL_KEY = 'tg_qm_skill';      // 0 (easy) … 2 (hard), steps 0.5 per result
+const QM_SKILL_STEP = 0.5;
+const QM_BOT_NAMES = [
+  'Trivia Owl', 'QuizFox', 'Fact Hound', 'Quiz Whiz', 'Buzzer Beater', 'Professor Pop',
+  'Captain Trivia', 'Brainstorm', 'Know-It-Owl', 'Remote Control', 'Couch Critic', 'Plot Twist',
+  'Binge Bot', 'Spoiler Alert', 'Cliffhanger', 'Rerun Rex',
+];
 
 let mpAllThemes = [];
 let mpRoom = null;
@@ -158,6 +177,26 @@ function mpInit(allThemes, resolvedThemes) {
   const showMpError = (msg) => { errorEl.textContent = msg; errorEl.style.display = ''; };
   const clearMpError = () => { errorEl.style.display = 'none'; };
 
+  // First step of online setup: Play a Friend (room codes) vs Quick Match
+  // (bot). Nothing below shows until one is picked; the last choice is
+  // remembered, and an invite link always means Play a Friend.
+  const matchFields = document.getElementById('vsMpMatchFields');
+  const matchTypeBtns = [...document.querySelectorAll('#vsMatchTypeSeg button')];
+  const selectMatchType = (type, fromClick) => {
+    matchTypeBtns.forEach(b => b.classList.toggle('selected', b.dataset.val === type));
+    matchFields.style.display = '';
+    matchFields.classList.toggle('qm', type === 'quick');
+    if (type === 'quick') document.getElementById('vsMpJoinFields').style.display = 'none';
+    clearMpError();
+    try { localStorage.setItem('tg_vs_match_type', type); } catch (e) {}
+    if (fromClick && typeof gtag === 'function') gtag('event', 'versus_match_type', { type });
+  };
+  matchTypeBtns.forEach(btn => btn.addEventListener('click', () => selectMatchType(btn.dataset.val, true)));
+  let savedType = null;
+  try { savedType = localStorage.getItem('tg_vs_match_type'); } catch (e) {}
+  if (getParam('mpJoin')) selectMatchType('friend');
+  else if (savedType === 'friend' || savedType === 'quick') selectMatchType(savedType);
+
   const createBtn = document.getElementById('vsMpCreateBtn');
   // Nothing fits (not even the shortest, Best of 5) — no length selection can
   // save this, so block starting a new match at all rather than let Create
@@ -183,6 +222,31 @@ function mpInit(allThemes, resolvedThemes) {
       showMpError(e.message || 'Could not create a room. Please try again.');
     } finally {
       createBtn.disabled = false;
+    }
+  });
+
+  const qmStartBtn = document.getElementById('vsQmStartBtn');
+  qmStartBtn.addEventListener('click', async () => {
+    clearMpError();
+    if (noLengthFits) {
+      showMpError("You've used your free online questions for now — get the app for unlimited online Versus.");
+      return;
+    }
+    const name = nameInput.value.trim() || 'Player 1';
+    localStorage.setItem('tg_mp_name', name);
+    if (!resolvedThemes.length) {
+      showMpError('No theme selected — please go back and pick a theme first.');
+      return;
+    }
+    qmStartBtn.disabled = true;
+    try {
+      if (typeof adMobShowMultiplayerInterstitial === 'function') await adMobShowMultiplayerInterstitial();
+      await mpStartQuickMatch(resolvedThemes, mpBestOf, name, [...mpDiffs], 'setup');
+    } catch (e) {
+      vsShow('vsSetup');
+      showMpError(e.message || 'Could not start a match. Please try again.');
+    } finally {
+      qmStartBtn.disabled = false;
     }
   });
 
@@ -224,6 +288,10 @@ function mpInit(allThemes, resolvedThemes) {
   document.getElementById('vsMpCopyLinkBtn').addEventListener('click', mpCopyInviteLink);
   document.getElementById('vsMpCopyCodeBtn').addEventListener('click', mpCopyCode);
   document.getElementById('vsMpCancelBtn').addEventListener('click', mpCancelWaiting);
+  document.getElementById('vsMpQuickSwitchLink').addEventListener('click', (e) => {
+    e.preventDefault();
+    mpSwitchToQuickMatch();
+  });
   document.getElementById('vsMpLeaveBtn').addEventListener('click', mpLeaveMatch);
 
   document.getElementById('vsMpPlayAgainBtn').addEventListener('click', mpPlayAgain);
@@ -304,8 +372,13 @@ async function mpCreateRoom(resolvedThemes, bestOf, name, diffs) {
 
   document.getElementById('vsMpRoomCode').textContent = code;
   document.getElementById('vsMpWaitingStatus').textContent = 'Waiting for them to join…';
+  const quickSwitch = document.getElementById('vsMpQuickSwitch');
+  quickSwitch.style.display = 'none';
   vsShow('vsMpWaiting');
   mpPollTimer = setInterval(mpPollWaiting, MP_POLL_MS);
+  mpRoom.quickSwitchTimer = setTimeout(() => {
+    if (mpRoom && !mpRoom.guestId && !mpRoom.bot) quickSwitch.style.display = '';
+  }, MP_QUICK_SWITCH_MS);
 }
 
 async function mpPollWaiting() {
@@ -316,6 +389,7 @@ async function mpPollWaiting() {
     if (!row || row.status === 'abandoned') return;
     if (row.guest_id) {
       clearInterval(mpPollTimer);
+      clearTimeout(mpRoom.quickSwitchTimer);
       mpRoom.guestId = row.guest_id;
       mpRoom.oppName = row.guest_name;
       mpRoom.roundStartedAt = row.round_started_at;
@@ -353,6 +427,7 @@ async function mpCopyCode() {
 
 async function mpCancelWaiting() {
   if (mpPollTimer) clearInterval(mpPollTimer);
+  if (mpRoom) clearTimeout(mpRoom.quickSwitchTimer);
   if (mpRoom) {
     try { await mpPatch(`multiplayer_rooms?code=eq.${mpRoom.code}`, { status: 'abandoned' }); } catch (e) {}
   }
@@ -428,7 +503,7 @@ async function mpEnsureFullQuestionMap() {
 function mpBeginMatch() {
   vsShow('vsMpQuestion');
   mpRenderRound();
-  mpPollTimer = setInterval(mpPollActive, MP_POLL_MS);
+  if (!mpRoom.bot) mpPollTimer = setInterval(mpPollActive, MP_POLL_MS);
 }
 
 function mpRenderScoreboard() {
@@ -493,6 +568,7 @@ function mpRenderRound() {
   if (mpRoom.tickTimer) clearInterval(mpRoom.tickTimer);
   mpTickTimer();
   mpRoom.tickTimer = setInterval(mpTickTimer, 250);
+  if (mpRoom.bot) qmScheduleBotAnswer(q);
 }
 
 function mpTickTimer() {
@@ -508,6 +584,7 @@ function mpTickTimer() {
 async function mpSubmitAnswer(choice) {
   if (!mpRoom || mpRoom.answeredThisRound) return;
   mpRoom.answeredThisRound = true;
+  mpRoom.myChoice = choice;
   if (mpRoom.tickTimer) clearInterval(mpRoom.tickTimer);
   // Own separate allowance (not the shared Q pool Marathon/Challenge/etc use)
   // — see mpInit's length-gating, which already ensures a started match has
@@ -523,11 +600,13 @@ async function mpSubmitAnswer(choice) {
   feedbackEl.className = 'vs-feedback-box vs-bot-thinking';
   feedbackEl.style.display = '';
 
-  try {
-    await mpPost('multiplayer_answers', {
-      room_code: mpRoom.code, round_num: mpRoom.currentRound, player_id: mpMyId(), choice
-    });
-  } catch (e) { /* poll loop will keep checking regardless */ }
+  if (!mpRoom.bot) {
+    try {
+      await mpPost('multiplayer_answers', {
+        room_code: mpRoom.code, round_num: mpRoom.currentRound, player_id: mpMyId(), choice
+      });
+    } catch (e) { /* poll loop will keep checking regardless */ }
+  }
 
   mpMaybeResolveRound();
 }
@@ -538,9 +617,15 @@ async function mpMaybeResolveRound() {
   if (!mpRoom.answeredThisRound && !timeUp) return;
 
   let rows;
-  try {
-    rows = await mpGet(`multiplayer_answers?room_code=eq.${mpRoom.code}&round_num=eq.${mpRoom.currentRound}&select=player_id,choice`);
-  } catch (e) { return; }
+  if (mpRoom.bot) {
+    rows = [];
+    if (mpRoom.answeredThisRound) rows.push({ player_id: mpMyId(), choice: mpRoom.myChoice });
+    if (mpRoom.bot.answered) rows.push({ player_id: mpOppId(), choice: mpRoom.bot.choice });
+  } else {
+    try {
+      rows = await mpGet(`multiplayer_answers?room_code=eq.${mpRoom.code}&round_num=eq.${mpRoom.currentRound}&select=player_id,choice`);
+    } catch (e) { return; }
+  }
 
   const myRow = rows.find(r => r.player_id === mpMyId());
   const oppRow = rows.find(r => r.player_id === mpOppId());
@@ -550,6 +635,7 @@ async function mpMaybeResolveRound() {
 
   mpRoom.roundResolved = true;
   if (mpRoom.tickTimer) clearInterval(mpRoom.tickTimer);
+  if (mpRoom.bot) clearTimeout(mpRoom.bot.timer);
 
   const q = mpRoom.questionMap.get(mpRoom.questionIds[mpRoom.currentRound]);
   const myChoice = myRow ? myRow.choice : null;
@@ -579,6 +665,7 @@ async function mpMaybeResolveRound() {
 // little longer for the same reveal they're already looking at.
 async function mpTryAdvanceRound() {
   if (!mpRoom || !mpRoom.waitingToAdvance) return;
+  if (mpRoom.bot) { mpRoom.waitingToAdvance = false; mpAdvanceRound(); return; }
   let oppHasAnswered = false;
   try {
     const rows = await mpGet(`multiplayer_answers?room_code=eq.${mpRoom.code}&round_num=eq.${mpRoom.currentRound}&player_id=eq.${mpOppId()}&select=player_id`);
@@ -669,16 +756,21 @@ async function mpAdvanceRound() {
     ? { host_score: mpRoom.myScore, guest_score: mpRoom.oppScore }
     : { host_score: mpRoom.oppScore, guest_score: mpRoom.myScore };
 
-  try {
-    await mpPatch(`multiplayer_rooms?code=eq.${mpRoom.code}&current_round=eq.${mpRoom.currentRound}`, {
-      current_round: nextRound,
-      round_started_at: nextRoundStartedAt,
-      status: finished ? 'finished' : 'active',
-      ...scoreFields,
-    });
-  } catch (e) { /* other client's matching write covers us either way */ }
+  if (mpRoom.bot) {
+    qmLog({ my_score: mpRoom.myScore, bot_score: mpRoom.oppScore, rounds_played: nextRound });
+  } else {
+    try {
+      await mpPatch(`multiplayer_rooms?code=eq.${mpRoom.code}&current_round=eq.${mpRoom.currentRound}`, {
+        current_round: nextRound,
+        round_started_at: nextRoundStartedAt,
+        status: finished ? 'finished' : 'active',
+        ...scoreFields,
+      });
+    } catch (e) { /* other client's matching write covers us either way */ }
+  }
 
   setTimeout(() => {
+    if (!mpRoom) return;
     if (finished || nextRound >= mpRoom.questionIds.length) {
       mpFinishMatch();
     } else {
@@ -746,7 +838,7 @@ function mpShowOpponentLeft() {
 async function mpLeaveMatch() {
   if (mpPollTimer) clearInterval(mpPollTimer);
   if (mpRoom && mpRoom.tickTimer) clearInterval(mpRoom.tickTimer);
-  if (mpRoom) {
+  if (mpRoom && !mpRoom.bot) {
     try { await mpPatch(`multiplayer_rooms?code=eq.${mpRoom.code}`, { status: 'abandoned' }); } catch (e) {}
   }
   mpTeardown();
@@ -756,7 +848,10 @@ async function mpLeaveMatch() {
 async function mpFinishMatch() {
   if (mpPollTimer) clearInterval(mpPollTimer);
   if (mpRoom && mpRoom.tickTimer) clearInterval(mpRoom.tickTimer);
-  if (mpRoom) {
+  if (mpRoom && mpRoom.bot) {
+    clearTimeout(mpRoom.bot.timer);
+    qmRecordResult(mpRoom.myScore, mpRoom.oppScore);
+  } else if (mpRoom) {
     try { await mpPatch(`multiplayer_rooms?code=eq.${mpRoom.code}`, { status: 'finished' }); } catch (e) {}
   }
   mpShowResults();
@@ -789,13 +884,14 @@ function mpShowResults() {
   if (mpRoom) {
     mpRoom.rematchStarted = false;
     mpRoom.rematchReady = false;
-    mpStartResultsPoll();
+    if (!mpRoom.bot) mpStartResultsPoll();
   }
 }
 
 function mpTeardown() {
   if (mpPollTimer) clearInterval(mpPollTimer);
   if (mpRoom && mpRoom.tickTimer) clearInterval(mpRoom.tickTimer);
+  if (mpRoom && mpRoom.bot) clearTimeout(mpRoom.bot.timer);
   mpStopResultsPoll();
   mpRoom = null;
   document.getElementById('vsLocalResultsActions').style.display = 'flex';
@@ -859,7 +955,9 @@ function mpPlayAgain() {
   // OWN readiness; the opponent isn't pulled in (or made to watch anything)
   // until they click Play Again on their own side too. See
   // mpMarkRematchReady/mpTryStartRematchIfBothReady for the both-ready gate.
-  const proceed = () => mpMarkRematchReady();
+  // Quick Match: no one to wait for — straight into a new match against a
+  // fresh bot opponent (skill already adjusted by the match just played).
+  const proceed = mpRoom.bot ? qmRematch : () => mpMarkRematchReady();
   // Every rematch is ad-gated (app only), whatever the match length — the old
   // "first rematch free after best-of-5/10" exemption was removed 2026-09-29.
   if (typeof _offerRewardedLifeline === 'function' && typeof isInApp === 'function'
@@ -963,4 +1061,136 @@ async function mpBeginRematch(newQuestionIds) {
   if (btn) { btn.disabled = false; btn.textContent = 'Play Again'; }
 
   mpBeginMatch();
+}
+
+// ── Quick Match (bot opponent) ───────────────────────────────────────────
+
+function qmSkill() {
+  let v = NaN;
+  try { v = parseFloat(localStorage.getItem(QM_SKILL_KEY)); } catch (e) {}
+  return isNaN(v) ? 1 : Math.min(2, Math.max(0, v));
+}
+
+// Player won → next bot is a bit stronger; lost → a bit weaker; draw → same.
+function qmRecordResult(myScore, botScore) {
+  const result = myScore > botScore ? 'win' : myScore < botScore ? 'loss' : 'draw';
+  const delta = result === 'win' ? QM_SKILL_STEP : result === 'loss' ? -QM_SKILL_STEP : 0;
+  const next = Math.min(2, Math.max(0, qmSkill() + delta));
+  try { localStorage.setItem(QM_SKILL_KEY, String(next)); } catch (e) {}
+  qmLog({ my_score: myScore, bot_score: botScore, result, finished: true, finished_at: new Date().toISOString() });
+  if (typeof gtag === 'function') gtag('event', 'quick_match_end', { result, bot_skill: mpRoom.bot.skill });
+}
+
+// Chance the bot gets a question right — blends between the easy/medium/hard
+// presets so half-steps of skill land in between.
+function qmAccuracy(skill, diff) {
+  const tiers = ['easy', 'medium', 'hard'];
+  const lo = Math.floor(skill);
+  const hi = Math.min(2, lo + 1);
+  const a = VS_BOT_PRESETS[tiers[lo]][diff] ?? 0.5;
+  const b = VS_BOT_PRESETS[tiers[hi]][diff] ?? 0.5;
+  return a + (b - a) * (skill - lo);
+}
+
+// Fire-and-forget writes to quick_matches — never awaited by the match loop.
+function qmLogStart(room, botName, source) {
+  room.bot.logId = typeof crypto.randomUUID === 'function' ? crypto.randomUUID() : null;
+  if (!room.bot.logId) return;
+  mpPost('quick_matches', {
+    id: room.bot.logId, player_id: room.hostId, player_name: room.myName,
+    platform: (typeof isInApp === 'function' && isInApp()) ? 'app' : 'web',
+    theme_slugs: room.resolvedThemes.map(t => t.slug).join(','), best_of: room.bestOf,
+    bot_name: botName, bot_skill: room.bot.skill, source,
+  }).catch(() => {});
+}
+
+function qmLog(fields) {
+  const id = mpRoom && mpRoom.bot && mpRoom.bot.logId;
+  if (!id) return;
+  mpPatch(`quick_matches?id=eq.${id}`, { ...fields, updated_at: new Date().toISOString() }).catch(() => {});
+}
+
+function qmPickName(avoid) {
+  const pool = QM_BOT_NAMES.filter(n => n.toLowerCase() !== String(avoid || '').toLowerCase());
+  return pool[Math.floor(Math.random() * pool.length)];
+}
+
+// Answers like a person would: quicker on easy questions, slower when it
+// doesn't know. Always well inside the round timer.
+function qmScheduleBotAnswer(q) {
+  const bot = mpRoom.bot;
+  const round = mpRoom.currentRound;
+  bot.answered = false;
+  bot.choice = null;
+  clearTimeout(bot.timer);
+
+  const diff = normalizeDifficulty(q.difficulty);
+  const knows = Math.random() < qmAccuracy(bot.skill, diff);
+  const baseSec = { easy: 3, medium: 4.5, hard: 6, expert: 7 }[diff] || 5;
+  const delayMs = (baseSec + Math.random() * 5 + (knows ? 0 : 2)) * 1000;
+
+  bot.timer = setTimeout(() => {
+    if (!mpRoom || mpRoom.bot !== bot || mpRoom.currentRound !== round || mpRoom.roundResolved) return;
+    const wrong = (q.options || []).filter(o => o !== q.answer);
+    bot.choice = knows || !wrong.length ? q.answer : wrong[Math.floor(Math.random() * wrong.length)];
+    bot.answered = true;
+    mpMaybeResolveRound();
+  }, delayMs);
+}
+
+async function mpStartQuickMatch(resolvedThemes, bestOf, name, diffs, source) {
+  const { questionIds, questionMap } = await mpDrawQuestionSet(resolvedThemes, bestOf, diffs);
+  const botName = qmPickName(name);
+
+  mpRoom = {
+    code: null, role: 'host', bestOf, questionIds, questionMap, resolvedThemes, diffs,
+    hostId: mpPlayerId(), guestId: 'bot',
+    myName: name, oppName: `🤖 ${botName}`,
+    currentRound: 0, myScore: 0, oppScore: 0,
+    answeredThisRound: false, roundResolved: false, rematchCount: 0, rematchReady: false,
+    bot: { skill: qmSkill(), answered: false, choice: null, timer: null },
+  };
+  qmLogStart(mpRoom, botName, source);
+  if (typeof gtag === 'function') gtag('event', 'quick_match_start', { source, best_of: bestOf, bot_skill: mpRoom.bot.skill });
+
+  // Short hand-off screen so the match doesn't just snap in — no fake
+  // "searching players online" counts, just who you're about to play.
+  const room = mpRoom;
+  document.getElementById('vsQmFindingText').textContent = 'Finding opponent…';
+  document.getElementById('vsQmFindingSub').textContent = '';
+  vsShow('vsQmFinding');
+  await new Promise(r => setTimeout(r, 900));
+  if (mpRoom !== room) return;
+  document.getElementById('vsQmFindingText').textContent = `Matched with ${room.oppName}`;
+  document.getElementById('vsQmFindingSub').textContent = `Best of ${bestOf}`;
+  await new Promise(r => setTimeout(r, 1300));
+  if (mpRoom !== room) return;
+  mpBeginMatch();
+}
+
+async function qmRematch() {
+  if (!mpRoom || !mpRoom.bot) return;
+  const { resolvedThemes, bestOf, myName, diffs } = mpRoom;
+  mpTeardown();
+  try {
+    await mpStartQuickMatch(resolvedThemes, bestOf, myName, diffs, 'rematch');
+  } catch (e) {
+    vsShow('vsSetup');
+  }
+}
+
+// Waiting-room escape hatch: drop the unjoined room and play the bot with
+// the same settings instead. No extra ad — they just saw one on Create.
+async function mpSwitchToQuickMatch() {
+  if (!mpRoom || mpRoom.bot || mpRoom.guestId) return;
+  const { resolvedThemes, bestOf, myName, diffs, code } = mpRoom;
+  if (mpPollTimer) clearInterval(mpPollTimer);
+  clearTimeout(mpRoom.quickSwitchTimer);
+  mpRoom = null;
+  mpPatch(`multiplayer_rooms?code=eq.${code}&guest_id=is.null`, { status: 'abandoned' }).catch(() => {});
+  try {
+    await mpStartQuickMatch(resolvedThemes, bestOf, myName, diffs, 'waiting_room');
+  } catch (e) {
+    vsShow('vsSetup');
+  }
 }

@@ -186,6 +186,36 @@
       color: #fff;
     }
 
+    .vs-match-cards {
+      display: flex;
+      gap: 10px;
+    }
+    .vs-match-cards button {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      padding: 16px 10px;
+      border-radius: 12px;
+      border: 2px solid var(--option-border);
+      background: var(--option-bg);
+      color: var(--option-text);
+      cursor: pointer;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .vs-match-cards button.selected {
+      border-color: var(--option-selected-border);
+      background: var(--option-selected-bg);
+      color: #fff;
+    }
+    .vs-mc-icon  { font-size: 28px; line-height: 1; }
+    .vs-mc-title { font-size: 16px; font-weight: 700; }
+    .vs-mc-sub   { font-size: 12px; opacity: 0.8; }
+    #vsMpMatchFields.qm .vs-friend-only,
+    #vsMpMatchFields:not(.qm) .vs-quick-only { display: none !important; }
+
     .vs-name-inputs {
       display: flex;
       flex-direction: column;
@@ -248,12 +278,12 @@
       <!-- SETUP SCREEN -->
       <div id="vsSetup" class="vs-screen active">
         <h1 style="margin-bottom:4px;">Versus Mode</h1>
-        <p style="color:var(--muted-text);margin-bottom:24px;">Play live against a friend, or locally on one device</p>
+        <p style="color:var(--muted-text);margin-bottom:24px;">Play live online, or locally on one device</p>
 
         <div class="vs-setup-group">
           <label>Play mode</label>
           <div class="vs-seg" id="vsModeSeg">
-            <button data-val="online">🌐 Play Online with a Friend</button>
+            <button data-val="online">🌐 Play Online</button>
             <button data-val="local">Local / Pass &amp; Play</button>
           </div>
         </div>
@@ -261,12 +291,28 @@
         <!-- ONLINE MULTIPLAYER FIELDS -->
         <div id="vsOnlineFields">
           <div class="vs-setup-group">
+            <label>Who do you want to play?</label>
+            <div class="vs-match-cards" id="vsMatchTypeSeg">
+              <button type="button" data-val="friend">
+                <span class="vs-mc-icon">👥</span>
+                <span class="vs-mc-title">Play a Friend</span>
+                <span class="vs-mc-sub">Share a room code</span>
+              </button>
+              <button type="button" data-val="quick">
+                <span class="vs-mc-icon">⚡</span>
+                <span class="vs-mc-title">Quick Match</span>
+                <span class="vs-mc-sub">Instant opponent, no waiting</span>
+              </button>
+            </div>
+          </div>
+
+          <div id="vsMpMatchFields" style="display:none;">
+          <div class="vs-setup-group">
             <label>Your name</label>
             <div class="vs-name-inputs">
               <input type="text" id="vsMpName" placeholder="Your name" maxlength="20">
             </div>
-            <p class="vs-best-of-note">More than 2 players? <a href="party.html" id="vsPartyLink">Start a Party →</a></p>
-            <script>document.getElementById('vsPartyLink').href = 'party.html' + location.search;</script>
+            <p class="vs-best-of-note vs-friend-only">More than 2 players? <a href="party.html" id="vsPartyLink">Start a Party →</a></p>            <script>document.getElementById('vsPartyLink').href = 'party.html' + location.search;</script>
           </div>
 
           <div class="vs-setup-group">
@@ -276,7 +322,7 @@
               <button data-val="10">10</button>
               <button data-val="20">20</button>
             </div>
-            <p class="vs-best-of-note">Used when you create a room. Joining a room uses the host's setting.</p>
+            <p class="vs-best-of-note vs-friend-only">Used when you create a room. Joining a room uses the host's setting.</p>
           </div>
 
           <div class="vs-setup-group" id="vsMpDifficultyGroup">
@@ -292,10 +338,11 @@
 
           <p id="vsMpError" style="color:var(--feedback-wrong);font-size:14px;display:none;margin-bottom:12px;"></p>
 
-          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <div class="vs-friend-only" style="display:flex;gap:8px;flex-wrap:wrap;">
             <button id="vsMpCreateBtn" class="primary-btn" style="flex:1;">Create Room</button>
             <button id="vsMpShowJoinBtn" class="secondary-btn" style="flex:1;">Join Room</button>
           </div>
+          <button id="vsQmStartBtn" class="primary-btn vs-quick-only" style="width:100%;">⚡ Start Quick Match</button>
 
           <div id="vsMpJoinFields" style="display:none;margin-top:14px;">
             <div class="vs-setup-group">
@@ -305,6 +352,7 @@
               </div>
             </div>
             <button id="vsMpJoinBtn" class="primary-btn" style="width:100%;">Join</button>
+          </div>
           </div>
         </div>
 
@@ -316,22 +364,12 @@
               <button data-val="2">2</button>
               <button data-val="3">3</button>
               <button data-val="4">4</button>
-              <button data-val="ai">🤖 vs AI</button>
             </div>
           </div>
 
           <div class="vs-setup-group">
             <label>Player names</label>
             <div class="vs-name-inputs" id="vsNameInputs"></div>
-          </div>
-
-          <div class="vs-setup-group" id="vsBotDiffGroup" style="display:none;">
-            <label>Computer difficulty</label>
-            <div class="vs-seg" id="vsBotDiffSeg">
-              <button data-val="easy">Easy</button>
-              <button data-val="medium">Medium</button>
-              <button data-val="hard">Hard</button>
-            </div>
           </div>
 
           <div class="vs-setup-group">
@@ -375,10 +413,19 @@
             <button id="vsMpCopyLinkBtn" class="secondary-btn" style="flex:1;min-width:150px;">🔗 Copy Invite Link (Web)</button>
           </div>
           <p id="vsMpWaitingStatus" style="color:var(--muted-text);margin-top:14px;">Waiting for them to join…</p>
+          <p id="vsMpQuickSwitch" style="display:none;margin-top:10px;">No one coming? <a href="#" id="vsMpQuickSwitchLink">Play a Quick Match instead ⚡</a></p>
           <button id="vsMpCancelBtn" class="secondary-btn" style="min-width:160px;margin-top:16px;">Cancel</button>
           <div style="margin-top:14px;">
             <a href="contact.html" class="secondary-btn" style="font-size:0.85rem;padding:8px 18px;text-decoration:none;">Leave Feedback</a>
           </div>
+        </div>
+      </div>
+
+      <!-- QUICK MATCH: brief "finding opponent" step before the bot match -->
+      <div id="vsQmFinding" class="vs-screen">
+        <div class="vs-between-box">
+          <p id="vsQmFindingText" style="font-size:20px;font-weight:700;margin-bottom:6px;">Finding opponent…</p>
+          <p id="vsQmFindingSub" style="color:var(--muted-text);"></p>
         </div>
       </div>
 

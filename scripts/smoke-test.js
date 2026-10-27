@@ -29,7 +29,7 @@ const MIME = {
   '.ico': 'image/x-icon', '.webp': 'image/webp', '.woff2': 'font/woff2',
 };
 
-const BLOCKED_HOSTS = /mediavine\.com|googlesyndication\.com|doubleclick\.net|googletagmanager\.com|google-analytics\.com|formspree\.io|supabase\.co\/functions\//;
+const BLOCKED_HOSTS = /mediavine\.com|googlesyndication\.com|doubleclick\.net|googletagmanager\.com|google-analytics\.com|formspree\.io|supabase\.co\/functions\/|supabase\.co\/rest\/v1\/quick_matches/;
 
 const wait = ms => new Promise(r => setTimeout(r, ms));
 
@@ -251,9 +251,32 @@ async function playCatBlitzVersus(page) {
 // multiplayer-category-blitz.sql to already be applied. Loose success (no
 // pageerror + both sides reach their result screen), same spirit as the
 // existing hot-seat `versus`/`catblitz-versus` drivers.
+// Quick Match: Play Online → Quick Match vs the local bot (no Supabase rows),
+// full Best of 5 through to results, then Play Again must start a fresh
+// match against a new bot. Bot answers take ~3–14s, so this is slow-ish.
+async function playVersusQuickMatch(page) {
+  await wait(500);
+  await clickFirst(page, '#vsMatchTypeSeg [data-val="quick"]');
+  await clickFirst(page, '#vsMpBestOfSeg [data-val="5"]');
+  if (!(await clickFirst(page, '#vsQmStartBtn'))) { console.log('    qm: start btn not clickable'); return false; }
+  await waitVisible(page, '#vsMpQuestionText', 8000);
+  const opp = await page.evaluate(() => document.getElementById('vsMpScoreboard').textContent);
+  if (!opp.includes('🤖')) { console.log('    qm: no bot on scoreboard: ' + opp); return false; }
+  const endSel = '#vsResultsTitle';
+  for (let i = 0; i < 400 && !(await isVisible(page, endSel)); i++) {
+    await clickFirst(page, '#vsMpOptions .option-btn');
+    await wait(500);
+  }
+  if (!(await isVisible(page, endSel))) return false;
+  await clickFirst(page, '#vsMpPlayAgainBtn');
+  await waitVisible(page, '#vsMpQuestionText', 8000);
+  return isVisible(page, '#vsMpQuestionText');
+}
+
 async function playVersusOnline(host, guest, theme) {
   await host.goto(`${BASE}/versus.html?theme=${theme}`, { waitUntil: 'networkidle2', timeout: 30000 });
   await wait(500);
+  await clickFirst(host, '#vsMatchTypeSeg [data-val="friend"]');
   await clickFirst(host, '#vsMpBestOfSeg [data-val="5"]'); // fastest preset
   await clickFirst(host, '#vsMpCreateBtn');
   await waitVisible(host, '#vsMpRoomCode', 8000);
@@ -262,6 +285,7 @@ async function playVersusOnline(host, guest, theme) {
 
   await guest.goto(`${BASE}/versus.html`, { waitUntil: 'networkidle2', timeout: 30000 });
   await wait(400);
+  await clickFirst(guest, '#vsMatchTypeSeg [data-val="friend"]');
   await clickFirst(guest, '#vsMpShowJoinBtn');
   await guest.evaluate(c => { document.getElementById('vsMpCodeInput').value = c; }, code);
   await clickFirst(guest, '#vsMpJoinBtn');
@@ -550,6 +574,7 @@ function buildModes(themes) {
     { name: 'trivia-rush',     url: `trivia-rush.html?theme=${a}`,     run: p => playTriviaRush(p, '#trGameOverBox') },
     { name: 'trivia-rush-mashup', url: `mashup-trivia-rush.html?themes=${a},${b}`, run: p => playTriviaRush(p, '#trGameOverBox') },
     { name: 'versus',          url: `versus.html?theme=${a}`,          run: p => playVersus(p) },
+    { name: 'versus-quickmatch', url: `versus.html?theme=${a}`,        run: p => playVersusQuickMatch(p) },
     { name: 'wordle',          url: `wordle.html?theme=${ep}`,         run: p => playWordle(p, '#wordleResultPanel') },
     { name: 'wordle-mashup',   url: `wordle.html?themes=${a},${b}`,    run: p => playWordle(p, '#wordleResultPanel') },
     { name: 'daily-wordle',    url: `daily-wordle.html`,               run: p => playWordle(p, '#dwResult', ['CRANE','SLATE','MOUNT','BRICK','PLUMB','GHOST']) },
