@@ -130,6 +130,16 @@
           <p id="notifyTestMsg" class="set-note" style="display:none;">Sent — go to your home screen, it arrives in about 5 seconds.</p>
         </div>
 
+        <!-- Ad privacy (app only, EEA/UK users only — shown by the script below
+             when Google's consent SDK says a privacy entry point is required) -->
+        <div id="privacyRow" class="set-card" style="display:none;">
+          <div class="set-title">Privacy</div>
+          <div class="set-row">
+            <div><div class="set-label">Ad privacy choices</div><div class="set-sub">Change how ads can use your data</div></div>
+          </div>
+          <button type="button" class="set-link" id="privacyOptionsBtn">Manage ad privacy</button>
+        </div>
+
         <!-- Your data -->
         <div class="set-card">
           <div class="set-title">Your stats</div>
@@ -174,6 +184,27 @@
   <script src="assets/notifications.js"></script>
   <script src="assets/leaderboard.js"></script>
   <script>
+    // Profile → Settings → Privacy (#privacyRow). admob.js isn't loaded on this
+    // page, so talk to the plugin directly. _umpPrivacyOptions is saved by
+    // admob.js after Google's consent check on an earlier page this session.
+    (function initPrivacyRow() {
+      const cap = window.Capacitor;
+      if (!(cap?.isNativePlatform?.() || cap?.isNative)) return;
+      if (/TriviaGauntletPremium/.test(navigator.userAgent || '')) return;
+      if (localStorage.getItem('_umpPrivacyOptions') !== 'REQUIRED') return;
+      const AdMob = cap.Plugins?.AdMob;
+      if (!AdMob?.showPrivacyOptionsForm) return;
+      const show = () => {
+        document.getElementById('privacyRow').style.display = '';
+        document.getElementById('privacyOptionsBtn').onclick = () => {
+          AdMob.showPrivacyOptionsForm().catch((e) => console.warn('[AdMob] privacy form failed', e));
+          sessionStorage.removeItem('_umpCanAds'); // re-check consent on the next page
+        };
+      };
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', show);
+      else show();
+    })();
+
     function renderPage() {
       const p = getProfile();
 

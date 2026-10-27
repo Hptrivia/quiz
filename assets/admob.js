@@ -154,6 +154,85 @@ let _adMobReady = false;
 let _rewardedLoaded = false;
 let _interstitialLoaded = false;
 let _attRequested = false;
+let _adConsentPromise = null;
+
+// Native prompts (UMP consent form, ATT) only present while the app is
+// foreground-active. On a cold launch the webview can run a beat too early,
+// so wait until the page is visible and give the launch transition a moment.
+async function _whenAppVisible() {
+  if (document.visibilityState !== 'visible') {
+    await new Promise((r) => {
+      const on = () => {
+        if (document.visibilityState === 'visible') {
+          document.removeEventListener('visibilitychange', on);
+          r();
+        }
+      };
+      document.addEventListener('visibilitychange', on);
+      on();
+    });
+  }
+  await new Promise((r) => setTimeout(r, 800));
+}
+
+// Google UMP consent (the GDPR message published in the AdMob console).
+// Must resolve BEFORE the ads SDK starts or any ad is requested — requests
+// sent without a consent choice carry no TC string, so EEA users get
+// limited/no ads. Shows the form only where it's required (EEA/UK); for
+// everyone else it's a quick no-op. Resolves to canRequestAds.
+//
+// Runs once per app session: every page is a full reload, and the user's
+// choice is stored natively by UMP (the ads SDK reads it from there), so
+// later pages reuse this session's result instead of re-asking Google.
+//
+// Test switch: ?umpeea=1 on any page forces the EEA form on the test devices
+// below (only works on devices listed in _ADMOB_TEST_DEVICES).
+const _ADMOB_TEST_DEVICES = ['26D6708FEB5BC4BACECD99956C13350E', 'F8913AC8-ADD9-4288-9400-793D409E2C2B'];
+async function _resolveConsent() {
+  const cached = sessionStorage.getItem('_umpCanAds');
+  if (cached !== null) return cached === '1';
+  const AdMob = window.Capacitor.Plugins.AdMob;
+  const opts = {};
+  if (/[?&]umpeea=1\b/.test(window.location.search)) {
+    opts.debugGeography = 1; // EEA
+    opts.testDeviceIdentifiers = _ADMOB_TEST_DEVICES;
+  }
+  try {
+    let info = await AdMob.requestConsentInfo(opts);
+    if (info.status === 'REQUIRED' && info.isConsentFormAvailable) {
+      await _whenAppVisible();
+      info = await AdMob.showConsentForm();
+    }
+    console.log('[AdMob] consent', info);
+    sessionStorage.setItem('_umpCanAds', info.canRequestAds ? '1' : '0');
+    localStorage.setItem('_umpCanAds', info.canRequestAds ? '1' : '0');
+    // Read by profile.html to show the "Ad privacy choices" settings row.
+    if (info.privacyOptionsRequirementStatus) {
+      localStorage.setItem('_umpPrivacyOptions', info.privacyOptionsRequirementStatus);
+    }
+    return !!info.canRequestAds;
+  } catch (e) {
+    // Offline / UMP hiccup: fall back to the last known answer (UMP still
+    // holds that consent natively). Never seen one → allow; outside the EEA
+    // that's correct, and inside it no ad loads offline anyway. Not cached in
+    // sessionStorage, so the next page retries.
+    console.warn('[AdMob] consent request failed', e);
+    return localStorage.getItem('_umpCanAds') !== '0';
+  }
+}
+
+// Launch order: UMP consent → ATT (iOS) → (caller) initialize ads.
+// Shared promise so _bootInApp and adMobInit never run it twice.
+function _resolveConsentAndATT() {
+  if (!_adConsentPromise) {
+    _adConsentPromise = (async () => {
+      const canRequestAds = await _resolveConsent();
+      await _requestATT();
+      return canRequestAds;
+    })();
+  }
+  return _adConsentPromise;
+}
 
 // App Tracking Transparency.
 // In @capacitor-community/admob v8 the `requestTrackingAuthorization: true`
@@ -167,26 +246,17 @@ async function _requestATT() {
   if (!isInApp() || window.Capacitor.getPlatform?.() !== 'ios') return;
   try {
     const AdMob = window.Capacitor.Plugins.AdMob;
-    // iOS only presents the ATT prompt while the app is foreground-active.
-    // On a cold launch the webview can run this a beat too early, so wait
-    // until the page is visible and give the launch transition a moment.
-    if (document.visibilityState !== 'visible') {
-      await new Promise((r) => {
-        const on = () => {
-          if (document.visibilityState === 'visible') {
-            document.removeEventListener('visibilitychange', on);
-            r();
-          }
-        };
-        document.addEventListener('visibilitychange', on);
-        on();
-      });
-    }
-    await new Promise((r) => setTimeout(r, 800));
+    // Already answered (iOS only ever prompts once) → skip the visibility
+    // wait so later page loads don't pay the 800ms delay for nothing.
+    try {
+      const before = await AdMob.trackingAuthorizationStatus();
+      if (before?.status && before.status !== 'notDetermined') return;
+    } catch {}
+    await _whenAppVisible();
     await AdMob.requestTrackingAuthorization();
     // Surfaces the resulting status in the console for debugging (use Safari
-    // Web Inspector against the device). 0=notDetermined 1=restricted
-    // 2=denied 3=authorized.
+    // Web Inspector against the device): notDetermined / restricted /
+    // denied / authorized.
     try {
       const s = await AdMob.trackingAuthorizationStatus();
       console.log('[AdMob] ATT status', s);
@@ -259,12 +329,15 @@ async function adMobInit() {
   }
   try {
     _AdMob = window.Capacitor.Plugins.AdMob;
-    // Show the ATT prompt and wait for the user's choice BEFORE the ads SDK
-    // starts (initialize() triggers MobileAds.start()).
-    await _requestATT();
+    // UMP consent, then the ATT prompt, both resolved BEFORE the ads SDK
+    // starts (initialize() triggers MobileAds.start()). No consent → no ads.
+    if (!(await _resolveConsentAndATT())) {
+      _removeLoader();
+      return;
+    }
     await _AdMob.initialize({
       initializeForTesting: ADMOB_TEST_MODE,
-      testingDevices: ['26D6708FEB5BC4BACECD99956C13350E', 'F8913AC8-ADD9-4288-9400-793D409E2C2B'],
+      testingDevices: _ADMOB_TEST_DEVICES,
     });
     _adMobReady = true;
     if (showInterstitialFirst) {
@@ -581,9 +654,10 @@ async function _bootInApp() {
   injectRemoveAdsThemeCard();
   injectRemoveAdsFooterLink();
   if (ADMOB_ADS_ENABLED) {
-    // ATT first: the prompt must appear before any data that could be used to
-    // track the user is collected (ads SDK start, IP-geolocated install ping).
-    await _requestATT();
+    // Consent + ATT first: both must be answered before any data that could
+    // be used to track the user is collected (ads SDK start, IP-geolocated
+    // install ping).
+    await _resolveConsentAndATT();
   }
   // Install ping always fires (it's our own install analytics, not ad tracking).
   _pingNewInstall();
