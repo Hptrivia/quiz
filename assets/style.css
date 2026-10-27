@@ -125,6 +125,7 @@
    game-mode cards (theme pages' Challenge/Marathon/etc.) is a hardcoded
    rgba(), not a variable — overridden separately here to gold. */
 :root.premium-app #categoryList .card,
+:root.premium-app #categoryExtra .card,
 :root.premium-app #newlyAddedList .card,
 :root.premium-app #categoryThemes .card,
 :root.premium-app .panel .grid .card,
@@ -299,20 +300,6 @@ a {
 
 .catblitz-card p {
   color: rgba(147, 197, 253, 0.75);
-}
-
-/* "Random Trivia" — teal, its own lane apart from Daily (amber), Mashup (purple), Category Blitz (blue). */
-.random-trivia-card {
-  background: rgba(99, 102, 241, 0.1);
-  border: 1px solid #6366f1;
-}
-
-.random-trivia-card h3 {
-  color: #a5b4fc;
-}
-
-.random-trivia-card p {
-  color: rgba(165, 180, 252, 0.75);
 }
 
 /* "Recently Added" — emerald, so it reads apart from Daily (amber) and Mashup (purple). */
@@ -1047,16 +1034,19 @@ body[data-page="wordsearch"].premium-mode .ws-game-area {
 }
 
 #categoryList .card,
+#categoryExtra .card,
 #newlyAddedList .card {
   padding: 14px;
 }
 
 #categoryList .card h3,
+#categoryExtra .card h3,
 #newlyAddedList .card h3 {
   margin: 0 0 10px;
 }
 
 #categoryList .card p,
+#categoryExtra .card p,
 #newlyAddedList .card p {
   margin: 0;
 }
@@ -1336,6 +1326,7 @@ body[data-page="wordsearch"].premium-mode .ws-game-area {
 
 /* category cards */
 #categoryList .card,
+#categoryExtra .card,
 #newlyAddedList .card,
 #categoryThemes .card,
 .panel .grid .card {
@@ -1345,6 +1336,7 @@ body[data-page="wordsearch"].premium-mode .ws-game-area {
 /* keep hover a bit stronger */
 .panel .grid .card:hover,
 #categoryList .card:hover,
+#categoryExtra .card:hover,
 #newlyAddedList .card:hover {
   transform: translateY(-1px);
   transition: transform 0.15s ease, border-color 0.15s ease;
