@@ -1,0 +1,49 @@
+name: Sync ads.txt
+
+# GitHub Pages can't 301 a single file, so ads.txt is a copy of the Mediavine-hosted
+# list, refreshed daily. Lines in OWN_LINES aren't in that list and are kept on top of it.
+
+on:
+  schedule:
+    - cron: '17 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+env:
+  SOURCE_URL: https://adstxt.journeymv.com/sites/5434c4f7-f50b-4d0f-a795-071f1a1f055e/ads.txt
+  REQUIRED_LINE: journeymv.com, 5434c4f7-f50b-4d0f-a795-071f1a1f055e, DIRECT
+  OWN_LINES: google.com, pub-9506123851374920, DIRECT, f08c47fec0942fa0
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build ads.txt from the Mediavine list
+        run: |
+          curl -fsSL --retry 3 "$SOURCE_URL" -o "$RUNNER_TEMP/source.txt"
+          # A bad or empty response must never replace the live file
+          grep -qF "$REQUIRED_LINE" "$RUNNER_TEMP/source.txt"
+          { tr -d '\r' < "$RUNNER_TEMP/source.txt" | grep -v '^[[:space:]]*$'; echo "$OWN_LINES"; } > "$RUNNER_TEMP/ads.txt"
+
+      - name: Commit if the list changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # The "# Ads.txt vYYYYMMDD" header changes on its own, so ignore comments
+          if diff <(grep -v '^#' ads.txt) <(grep -v '^#' "$RUNNER_TEMP/ads.txt") > /dev/null; then
+            echo "No change"
+            exit 0
+          fi
+          cp "$RUNNER_TEMP/ads.txt" ads.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ads.txt
+          git commit -m "Sync ads.txt from Mediavine"
+          git pull --rebase origin main
+          git push
+          gh api -X POST "repos/$GITHUB_REPOSITORY/pages/builds"
