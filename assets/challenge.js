@@ -87,9 +87,15 @@ async function renderMultiThemeChallenge() {
     }
   }
 
+  // Web screens reload the page between questions, so the round is saved and resumed.
+  const screensOn = !isReplay && useWebScreens(WEB_SCREENS_MASHUP);
+  const _resume = screensOn ? _loadMidQuiz("challenge", sessionKey, safeRound) : null;
+  if (_resume) roundQuestions = _resume.questions;
+
   const themeScores = {};
   selectedThemes.forEach(t => { themeScores[t.slug] = { correct: 0, total: 0 }; });
   roundQuestions.forEach(q => { if (themeScores[q._themeSlug]) themeScores[q._themeSlug].total++; });
+  if (_resume && _resume.themeScores) for (const k in _resume.themeScores) if (themeScores[k]) themeScores[k] = _resume.themeScores[k];
 
   const roundEl = document.getElementById("challengeRoundText");
   const slidesContainer = document.getElementById("challengeSlides");
@@ -100,7 +106,7 @@ async function renderMultiThemeChallenge() {
 
   // Only the actual start of a playthrough (round 1) can trigger the ask --
   // never between rounds of the same session, even on a fresh page load.
-  if ((params.get("round") || "1") === "1") await hmMaybeAskFirstTime(quizBox);
+  if ((params.get("round") || "1") === "1" && !getParam("screen")) await hmMaybeAskFirstTime(quizBox);
 
   if (roundEl) roundEl.textContent = `Round ${safeRound}`;
   if (nextRoundLink) {
@@ -115,10 +121,25 @@ async function renderMultiThemeChallenge() {
   // only — see gateWebSkip), same as Marathon/Episode.
   if (typeof gateWebSkip === 'function') gateWebSkip(nextRoundLink, true);
 
-  let score = 0, currentIndex = 0, revealAnswers = false;
-  const wrongQuestions = [];
+  let score = _resume ? (_resume.score || 0) : 0, currentIndex = _resume ? _resume.currentIndex : 0, revealAnswers = false;
+  const wrongQuestions = _resume ? (_resume.wrongQuestions || []) : [];
+
+  const screens = screensOn ? createWebScreens({
+    slides: slidesContainer,
+    scoreEl,
+    onNext(end) {
+      currentIndex = end;
+      if (currentIndex >= roundQuestions.length) {
+        renderResult();
+      } else {
+        _saveMidQuiz("challenge", sessionKey, safeRound, { questions: roundQuestions, currentIndex, score, wrongQuestions, themeScores });
+        screens.go(currentIndex);
+      }
+    }
+  }) : null;
 
   function showQuestion(index) {
+    if (screens) { if (scoreEl) scoreEl.textContent = `Score: ${score}`; screens.show(index, roundQuestions[index] && roundQuestions[index]._themeSlug); return; }
     const prev = slidesContainer.querySelector(".question-slide.active");
     if (prev) { prev.classList.remove("active"); prev.classList.add("answered"); prev.style.display = "none"; }
     const slide = slidesContainer.querySelector(`.question-slide[data-index="${index}"]`);
@@ -166,7 +187,7 @@ async function renderMultiThemeChallenge() {
     ctaRow.appendChild(submitBtn);
     ctaRow.appendChild(nextBtn);
     submitBtn.addEventListener("click", () => {
-      if (currentIndex !== index) return;
+      if (!screens && currentIndex !== index) return;
       const selected = control.getSelection();
       if (!selected) return;
       const correct = control.isTyped
@@ -185,9 +206,11 @@ async function renderMultiThemeChallenge() {
         wrongQuestions.push(q);
       }
       if (scoreEl) scoreEl.textContent = `Score: ${score}`;
-      submitBtn.disabled = true; control.disable(); nextBtn.style.display = "inline-block";
+      submitBtn.disabled = true; control.disable();
+      if (screens) screens.answered(); else nextBtn.style.display = "inline-block";
     });
     control.onEnter(() => submitBtn.click());
+    if (screens) webScreensTapToAnswer(control, submitBtn);
     nextBtn.addEventListener("click", () => {
       currentIndex++;
       if (currentIndex >= roundQuestions.length) renderResult();
@@ -205,6 +228,7 @@ async function renderMultiThemeChallenge() {
   slidesContainer.querySelectorAll(".question-slide").forEach(s => { s.style.display = "none"; });
 
   function renderResult() {
+    if (screens) _clearMidQuiz("challenge", sessionKey, safeRound);
     if (typeof webAddQ === 'function') webAddQ(roundQuestions.length);
     quizBox.style.display = "none";
     resultBox.style.display = "block";
@@ -284,7 +308,7 @@ async function renderMultiThemeChallenge() {
     }
   }
 
-  if (!isReplay && currentRound === 1 && typeof getSession === "function") {
+  if (!isReplay && !_resume && currentRound === 1 && typeof getSession === "function") {
     const saved = getSession("challenge", sessionKey);
     if (saved && saved.round < totalRounds) {
       quizBox.style.display = "none";
@@ -330,7 +354,7 @@ async function renderMultiThemeChallenge() {
     }
   }
 
-  showQuestion(0);
+  showQuestion(currentIndex);
 }
 
 async function renderChallengePage() {
@@ -354,7 +378,7 @@ async function renderChallengePage() {
 
   // Only the actual start of a playthrough (round 1) can trigger the ask --
   // never between rounds of the same session, even on a fresh page load.
-  if ((getParam("round") || "1") === "1") await hmMaybeAskFirstTime(quizBox);
+  if ((getParam("round") || "1") === "1" && !getParam("screen")) await hmMaybeAskFirstTime(quizBox);
 
   // Map of which themes have Episode Mode, so the result screen can offer this
   // theme's own Episode Mode as the first related card when available.
@@ -462,9 +486,14 @@ async function renderChallengePage() {
   // only — see gateWebSkip), same as Marathon/Episode.
   if (typeof gateWebSkip === 'function') gateWebSkip(nextRoundLink, true);
 
+  // Web screens reload the page between questions, so the round is saved and resumed.
+  const screensOn = !isReplay && useWebScreens(WEB_SCREENS_CHALLENGE);
+  const _resume = screensOn ? _loadMidQuiz("challenge", theme.slug, safeRound) : null;
+  if (_resume) shuffledQuestions = _resume.questions;
+
   let showContinuePrompt = false;
 
-  if (!isReplay && currentRound === 1 && typeof getSession === "function") {
+  if (!isReplay && !_resume && currentRound === 1 && typeof getSession === "function") {
     const saved = getSession("challenge", theme.slug);
     if (saved && saved.round < totalRounds) {
       showContinuePrompt = true;
@@ -518,11 +547,25 @@ async function renderChallengePage() {
 
   const state = {
     questions: shuffledQuestions,
-    currentIndex: 0,
-    score: 0,
+    currentIndex: _resume ? _resume.currentIndex : 0,
+    score: _resume ? (_resume.score || 0) : 0,
     selectedAnswer: null
   };
-  const wrongQuestions = [];
+  const wrongQuestions = _resume ? (_resume.wrongQuestions || []) : [];
+
+  const screens = screensOn ? createWebScreens({
+    slides: slidesContainer,
+    scoreEl,
+    onNext(end) {
+      state.currentIndex = end;
+      if (state.currentIndex >= state.questions.length) {
+        renderResult();
+      } else {
+        _saveMidQuiz("challenge", theme.slug, safeRound, { questions: state.questions, currentIndex: state.currentIndex, score: state.score, wrongQuestions });
+        screens.go(state.currentIndex);
+      }
+    }
+  }) : null;
 
   let revealAnswers = false;
 
@@ -546,6 +589,7 @@ async function renderChallengePage() {
   }
 
   function showQuestion(index) {
+    if (screens) { scoreEl.textContent = `Score: ${state.score}`; screens.show(index, theme && theme.slug); return; }
     const prev = slidesContainer.querySelector(".question-slide.active");
     if (prev) {
       prev.classList.remove("active");
@@ -611,7 +655,7 @@ async function renderChallengePage() {
     ctaRow.appendChild(nextBtn);
 
     submitBtn.addEventListener("click", () => {
-      if (state.currentIndex !== index) return;
+      if (!screens && state.currentIndex !== index) return;
       const selected = control.getSelection();
       if (!selected) return;
 
@@ -636,9 +680,10 @@ async function renderChallengePage() {
       scoreEl.textContent = `Score: ${state.score}`;
       submitBtn.disabled = true;
       control.disable();
-      nextBtn.style.display = "inline-block";
+      if (screens) screens.answered(); else nextBtn.style.display = "inline-block";
     });
     control.onEnter(() => submitBtn.click());
+    if (screens) webScreensTapToAnswer(control, submitBtn);
 
     nextBtn.addEventListener("click", () => {
       state.currentIndex += 1;
@@ -665,6 +710,7 @@ async function renderChallengePage() {
   }
 
   function renderResult() {
+    if (screens) _clearMidQuiz("challenge", theme.slug, safeRound);
     if (typeof webAddQ === 'function') webAddQ(state.questions.length);
     quizBox.style.display = "none";
     resultBox.style.display = "block";
@@ -792,7 +838,7 @@ async function renderChallengePage() {
   
   }
 
-  if (!showContinuePrompt) showQuestion(0);
+  if (!showContinuePrompt) showQuestion(state.currentIndex);
 }
 
 // Clickable "copy share link" pill on the challenge result screen — copies the

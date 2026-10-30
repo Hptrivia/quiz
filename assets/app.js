@@ -409,6 +409,91 @@ const ONE_PER_PAGE_CHALLENGE = true;
 const ONE_PER_PAGE_SURVIVAL  = true;
 const ONE_PER_PAGE_EPISODE   = true;
 
+// Web only: several questions per screen, each screen a real page load, because
+// Mediavine places ads at load and between the direct children of <main>. Set a
+// switch to false to put that mode back on one question at a time. The apps and
+// ad-free web users never get this. WEB_SCREENS_MASHUP covers Random Trivia too.
+const WEB_SCREENS_MARATHON  = true;
+const WEB_SCREENS_CHALLENGE = true;
+const WEB_SCREENS_EPISODE   = true;
+const WEB_SCREENS_MASHUP    = true;
+const WEB_SCREEN_QUESTIONS = 5; // questions per screen
+const WEB_SCREEN_AD_AFTER  = 3; // ad spot after this many questions; the rest go in a second box
+const WEB_SCREEN_MAX_LEFTOVER = 2; // this few left over join the screen before; 0 = off
+const WEB_SCREENS_TAP_TO_ANSWER = true; // no Submit in these modes; Episode always keeps Submit
+
+function useWebScreens(modeSwitch) {
+  if (!modeSwitch || isPremiumUser()) return false;
+  return !(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
+}
+
+// Shows a screen of already-rendered .question-slide elements, with one Next
+// outside <main> so players pass the end-of-main ad on the way to it.
+// onNext(end, count) runs when Next is pressed: end = index of the next question
+// to play, count = questions on this screen. It calls go(end) to load the next
+// screen; otherwise the screen is removed so the mode can show its result or wall.
+function createWebScreens({ slides, scoreEl, onNext }) {
+  const panel = slides.closest("main > *");
+  let box = null, foot = null, nextBtn = null, answered = 0, onScreen = 0, leaving = false;
+  // Back can restore a finished screen from the browser's page cache; reload it
+  // so it picks up the saved position instead of being answered twice.
+  window.addEventListener("pageshow", e => { if (e.persisted) window.location.reload(); });
+
+  const clear = () => {
+    if (box) box.remove();
+    if (foot) foot.remove();
+    box = foot = null;
+    panel.scrollIntoView({ block: "start" });
+  };
+
+  return {
+    show(index, promoSlug) {
+      const all = [...slides.querySelectorAll(".question-slide")];
+      const left = all.length - index - WEB_SCREEN_QUESTIONS;
+      const screen = all.slice(index, left <= WEB_SCREEN_MAX_LEFTOVER ? all.length : index + WEB_SCREEN_QUESTIONS);
+      const end = index + screen.length;
+      onScreen = screen.length;
+      all.forEach(s => { s.style.display = "none"; });
+      screen.forEach(s => { s.classList.add("active"); s.style.display = "block"; });
+
+      foot = document.createElement("div");
+      foot.className = "container narrow cq-page-foot";
+      if (scoreEl) foot.appendChild(scoreEl);
+      nextBtn = document.createElement("button");
+      nextBtn.className = "primary-btn cq-next";
+      nextBtn.disabled = true;
+      nextBtn.textContent = end >= all.length ? "See results" : "Next questions →";
+      nextBtn.addEventListener("click", () => {
+        nextBtn.disabled = true;
+        onNext(end, onScreen);
+        if (!leaving) clear();
+      });
+      foot.appendChild(nextBtn);
+      panel.closest("main").after(foot);
+
+      if (screen.length > WEB_SCREEN_AD_AFTER) {
+        box = document.createElement("section");
+        box.className = "panel web-q-box";
+        screen.slice(WEB_SCREEN_AD_AFTER).forEach(s => box.appendChild(s));
+        panel.after(box);
+      }
+      if (window.TGPromo) TGPromo.render(nextBtn, promoSlug);
+      if (index > 0) screen[0].scrollIntoView({ block: "start" });
+      if (window.tgStartAds) window.tgStartAds();
+    },
+    answered() {
+      answered += 1;
+      nextBtn.disabled = answered < onScreen;
+    },
+    go(index) {
+      leaving = true;
+      const url = new URL(window.location.href);
+      url.searchParams.set("screen", index);
+      window.location.href = url.toString();
+    }
+  };
+}
+
 // ---- Multi-theme (Mashup) shared helpers — used by app.js, challenge.js, survival.js ----
 const MASHUP_BADGE_COLORS = [
   { bg: "rgba(59,130,246,0.15)", border: "#3b82f6", text: "#93c5fd" },
@@ -881,8 +966,17 @@ function hmRenderAnswerControl(q, useTyped) {
     markCorrect: () => { const b = optsList.querySelector('.option-btn.selected'); if (b) { b.classList.remove('wrong-anim'); void b.offsetWidth; b.classList.add('correct-anim'); } },
     markWrong: () => { const b = optsList.querySelector('.option-btn.selected'); if (b) { b.classList.remove('correct-anim'); void b.offsetWidth; b.classList.add('wrong-anim'); } },
     disable: () => {},
-    onEnter: () => {}
+    onEnter: () => {},
+    onPick: (fn) => optsList.addEventListener('click', e => { if (e.target.closest('.option-btn')) fn(); }),
+    lock: () => optsList.querySelectorAll('.option-btn').forEach(b => { b.disabled = true; })
   };
+}
+
+// Web screens: tapping an answer locks it in, so no Submit. Typed Hard Mode answers keep it.
+function webScreensTapToAnswer(control, submitBtn) {
+  if (!WEB_SCREENS_TAP_TO_ANSWER || control.isTyped) return;
+  submitBtn.parentNode.style.display = "none";
+  control.onPick(() => { submitBtn.click(); control.lock(); });
 }
 
 // One-time opt-in prompt: only ever called by a caller at round/page 1 (the
@@ -1010,7 +1104,7 @@ async function renderMultiThemeMarathon() {
 
   // Only the actual start of a playthrough (page 1) can trigger the ask --
   // never between pages of the same session, even on a fresh page load.
-  if ((params.get("page") || "1") === "1") await hmMaybeAskFirstTime(quizBox);
+  if ((params.get("page") || "1") === "1" && !getParam("screen")) await hmMaybeAskFirstTime(quizBox);
 
   const rawPage = parseInt(params.get("page") || "1", 10);
   const currentPage = isNaN(rawPage) || rawPage < 1 ? 1 : rawPage;
@@ -1069,7 +1163,25 @@ async function renderMultiThemeMarathon() {
   // Limited web: only the first page is free — any skip pops the app-download wall.
   if (typeof gateWebSkip === 'function') gateWebSkip(nextPageLink, true);
 
+  const screens = !isReplay && useWebScreens(WEB_SCREENS_MASHUP) ? createWebScreens({
+    slides: slidesContainer,
+    scoreEl: scoreText,
+    onNext(end, count) {
+      currentIndex = end;
+      if (typeof webAddQ === 'function') webAddQ(count);
+      if (currentIndex >= pageQuestions.length) {
+        renderResult();
+      } else if (typeof isWebQLimit === 'function' && isWebQLimit()) {
+        renderMidRoundWall();
+      } else {
+        _saveMidQuiz("marathon", mashupKey, safePage, { questions: pageQuestions, currentIndex, score, wrongQuestions, themeScores });
+        screens.go(currentIndex);
+      }
+    }
+  }) : null;
+
   function showQuestion(index) {
+    if (screens) { screens.show(index, pageQuestions[index] && pageQuestions[index]._themeSlug); return; }
     const prev = slidesContainer.querySelector(".question-slide.active");
     if (prev) { prev.classList.remove("active"); prev.classList.add("answered"); prev.style.display = "none"; }
     const slide = slidesContainer.querySelector(`.question-slide[data-index="${index}"]`);
@@ -1117,7 +1229,7 @@ async function renderMultiThemeMarathon() {
     ctaRow.appendChild(submitBtn);
     ctaRow.appendChild(nextBtn);
     submitBtn.addEventListener("click", () => {
-      if (currentIndex !== index) return;
+      if (!screens && currentIndex !== index) return;
       const selected = control.getSelection();
       if (!selected) return;
       const correct = control.isTyped
@@ -1136,9 +1248,11 @@ async function renderMultiThemeMarathon() {
         wrongQuestions.push(q);
       }
       if (scoreText) scoreText.textContent = `Score: ${score}`;
-      submitBtn.disabled = true; control.disable(); nextBtn.style.display = "inline-block";
+      submitBtn.disabled = true; control.disable();
+      if (screens) screens.answered(); else nextBtn.style.display = "inline-block";
     });
     control.onEnter(() => submitBtn.click());
+    if (screens) webScreensTapToAnswer(control, submitBtn);
     nextBtn.addEventListener("click", () => {
       currentIndex++;
       // Counted per-question (not once per round) so the free-question wall can
@@ -1332,7 +1446,7 @@ async function renderPlayPage() {
   const quizBox = document.getElementById("quizBox");
   // Only the actual start of a playthrough (page 1) can trigger the ask --
   // never between pages of the same session, even on a fresh page load.
-  if ((getParam("page") || "1") === "1") await hmMaybeAskFirstTime(quizBox);
+  if ((getParam("page") || "1") === "1" && !getParam("screen")) await hmMaybeAskFirstTime(quizBox);
 
   // Map of which themes have Episode Mode, so the result screen can offer this
   // theme's own Episode Mode as the first related card when available.
@@ -1468,7 +1582,25 @@ async function renderPlayPage() {
   // Limited web: only the first page is free — any skip pops the app-download wall.
   if (typeof gateWebSkip === 'function') gateWebSkip(nextPageLink, true);
 
+  const screens = !isReplay && useWebScreens(WEB_SCREENS_MARATHON) ? createWebScreens({
+    slides: slidesContainer,
+    scoreEl: scoreText,
+    onNext(end, count) {
+      quizState.currentIndex = end;
+      if (typeof webAddQ === 'function') webAddQ(count);
+      if (quizState.currentIndex >= quizState.questions.length) {
+        renderResult();
+      } else if (typeof isWebQLimit === 'function' && isWebQLimit()) {
+        renderMidRoundWall();
+      } else {
+        _saveMidQuiz("marathon", theme.slug, safePage, { questions: quizState.questions, currentIndex: quizState.currentIndex, score: quizState.score, wrongQuestions });
+        screens.go(quizState.currentIndex);
+      }
+    }
+  }) : null;
+
   function showQuestion(index) {
+    if (screens) { screens.show(index, theme && theme.slug); return; }
     const prev = slidesContainer.querySelector(".question-slide.active");
     if (prev) {
       prev.classList.remove("active");
@@ -1535,7 +1667,7 @@ async function renderPlayPage() {
     ctaRow.appendChild(nextBtn);
 
     submitBtn.addEventListener("click", () => {
-      if (quizState.currentIndex !== index) return;
+      if (!screens && quizState.currentIndex !== index) return;
       const selected = control.getSelection();
       if (!selected) return;
 
@@ -1560,9 +1692,10 @@ async function renderPlayPage() {
       if (scoreText) scoreText.textContent = `Score: ${quizState.score}`;
       submitBtn.disabled = true;
       control.disable();
-      nextBtn.style.display = "inline-block";
+      if (screens) screens.answered(); else nextBtn.style.display = "inline-block";
     });
     control.onEnter(() => submitBtn.click());
+    if (screens) webScreensTapToAnswer(control, submitBtn);
 
     nextBtn.addEventListener("click", () => {
       quizState.currentIndex += 1;

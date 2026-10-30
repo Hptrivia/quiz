@@ -26,7 +26,11 @@
     s.type = 'text/javascript'; s.async = true;
     s.setAttribute('data-noptimize', '1'); s.setAttribute('data-cfasync', 'false');
     s.src = '//scripts.mediavine.com/tags/5434c4f7-f50b-4d0f-a795-071f1a1f055e.js';
-    document.head.appendChild(s);
+    // Questions arrive after page load and Mediavine places ads when it starts, so it
+    // waits for createWebScreens (app.js) to build the screen. Timer = every other case.
+    var started = false;
+    window.tgStartAds = function(){ if (started) return; started = true; document.head.appendChild(s); };
+    setTimeout(window.tgStartAds, 5000);
   })();
   </script>
 </head>

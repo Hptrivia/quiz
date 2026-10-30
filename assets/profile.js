@@ -974,7 +974,7 @@ function _injectWebBanner() {
   // app + the desktop "unlock all questions" option) — see _openWebWallOverlay,
   // wired via the `.web-wall-trigger` listener in _watchForQr().
   const banner = appPromoLink('lobby_banner', '📱 Get 100+ questions for all themes — Click to download the free app →');
-  const anchor = document.querySelector('.homepage-intro') || document.querySelector('main');
+  const anchor = document.querySelector('.homepage-intro') || document.querySelector('.theme-split-top') || document.querySelector('main');
   if (anchor && anchor.classList.contains('homepage-intro')) anchor.before(banner);
   else if (anchor) anchor.prepend(banner);
 }

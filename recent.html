@@ -32,7 +32,11 @@
     s.type = 'text/javascript'; s.async = true;
     s.setAttribute('data-noptimize', '1'); s.setAttribute('data-cfasync', 'false');
     s.src = '//scripts.mediavine.com/tags/5434c4f7-f50b-4d0f-a795-071f1a1f055e.js';
-    document.head.appendChild(s);
+    // The list loads after the page and Mediavine places ads when it starts, so it
+    // waits for render() below. Timer = every other case.
+    var started = false;
+    window.tgStartAds = function(){ if (started) return; started = true; document.head.appendChild(s); };
+    setTimeout(window.tgStartAds, 5000);
   })();
   </script>
 </head>
@@ -78,6 +82,9 @@
    themes.json, which is append-ordered, so the page never renders empty. */
 (function () {
   const listEl = document.getElementById("recentList");
+  // Web ad gap: the list splits into two boxes under <main> after this many shows. 0 = off.
+  // tgStartAds only exists when this visitor gets ads.
+  const AD_GAP_AFTER = 14;
 
   function esc(s) {
     return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -98,9 +105,11 @@
     }
 
     let html = "";
+    let topHtml = null;
     let currentDate = null;
 
-    entries.forEach(e => {
+    entries.forEach((e, i) => {
+      if (window.tgStartAds && AD_GAP_AFTER && i === AD_GAP_AFTER) { topHtml = html; html = ""; }
       if (e.date && e.date !== currentDate) {
         currentDate = e.date;
         html += `<h3 class="recent-date">Added ${esc(prettyDate(e.date))}</h3>`;
@@ -114,7 +123,14 @@
         </a>`;
     });
 
-    listEl.innerHTML = html;
+    listEl.innerHTML = topHtml === null ? html : topHtml;
+    if (topHtml !== null) {
+      const rest = document.createElement("div");
+      rest.className = "recent-list";
+      rest.innerHTML = html;
+      listEl.after(rest);
+    }
+    if (window.tgStartAds) window.tgStartAds();
   }
 
   fetch("data/recent.json")

@@ -22,10 +22,15 @@
   const WEB_PAGED_ENABLED = true;
   const WEB_PAGED = WEB_PAGED_ENABLED && !/TriviaGauntletPremium/.test(navigator.userAgent || '')
     && !(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
-  const QUESTIONS_PER_PAGE = 4;
+  const QUESTIONS_PER_PAGE = 5;
+  const MAX_LEFTOVER = 2; // this few left over join the screen before; 0 = off
   // Mediavine content hints: ad spots between questions and at the end of the set.
   // Any hint turns off Mediavine's automatic in-content ads. Set to false to remove them.
   const WEB_AD_HINTS_ENABLED = false;
+  // Each question as its own section directly under <main>, because Mediavine seems
+  // to place ads between <main>'s direct children. Set to false to keep one box.
+  const WEB_SPLIT_SECTIONS_ENABLED = true;
+  const QUESTIONS_PER_SECTION = 3; // ad spots: after every 3rd question and before Next
   const AD_HINT = WEB_AD_HINTS_ENABLED ? '<div class="content_hint"></div><div class="content_mobile_hint"></div>' : '';
 
   let answers = [];
@@ -158,7 +163,7 @@
   }
 
   function pageCount() {
-    return Math.ceil(data.questions.length / QUESTIONS_PER_PAGE);
+    return Math.max(1, Math.ceil((data.questions.length - MAX_LEFTOVER) / QUESTIONS_PER_PAGE));
   }
   function goToPage(p) {
     location.href = `${location.pathname}?p=${p + 1}`;
@@ -167,8 +172,8 @@
   function showPage(p) {
     const n = data.questions.length;
     const first = p * QUESTIONS_PER_PAGE;
-    const idx = data.questions.map((_, i) => i).slice(first, first + QUESTIONS_PER_PAGE);
     const last = p + 1 >= pageCount();
+    const idx = data.questions.map((_, i) => i).slice(first, last ? n : first + QUESTIONS_PER_PAGE);
     root.innerHTML = `
       <div class="cq-page">
         <div class="cq-progress"><div class="cq-progress-bar" style="width:${(first / n) * 100}%"></div></div>
@@ -182,7 +187,7 @@
           <div class="options">
             ${order[i].map(oi => `<button type="button" class="option-btn cq-opt${answers[i] === oi ? ' selected' : ''}" data-oi="${oi}">${esc(q.options[oi].text)}</button>`).join('')}
           </div>
-        </div>${k === 1 && k < idx.length - 1 ? AD_HINT : ''}`;
+        </div>${k === 2 && k < idx.length - 1 ? AD_HINT : ''}`;
         }).join('')}
         ${AD_HINT}
       </div>`;
@@ -213,12 +218,24 @@
     next.onclick = () => {
       const missing = data.questions.findIndex((_, i) => answers[i] == null);
       if (!last) goToPage(p + 1);
-      else if (missing >= 0) goToPage(Math.floor(missing / QUESTIONS_PER_PAGE));
+      else if (missing >= 0) goToPage(Math.min(Math.floor(missing / QUESTIONS_PER_PAGE), pageCount() - 1));
       else finish();
     };
     const back = document.getElementById('cqBack');
     if (back) back.onclick = () => goToPage(p - 1);
     if (window.TGPromo) TGPromo.render(next, data.slug);
+    if (WEB_SPLIT_SECTIONS_ENABLED) {
+      let after = root.closest('main > *');
+      root.querySelectorAll('.cq-q-paged').forEach((box, k) => {
+        if (k % QUESTIONS_PER_SECTION === 0) {
+          const section = document.createElement('section');
+          section.className = 'panel cq-q-section';
+          after.after(section);
+          after = section;
+        }
+        after.appendChild(box);
+      });
+    }
     root.scrollIntoView({ block: 'start' });
   }
 
@@ -227,8 +244,7 @@
     saveResult(res);
     track('character_quiz_complete', { character: res.primary });
     if (WEB_PAGED && loadResults()[data.slug]) { clearRun(); location.href = `${location.pathname}?result=1`; return; }
-    const foot = document.getElementById('cqPageFoot');
-    if (foot) foot.remove();
+    document.querySelectorAll('#cqPageFoot, .cq-q-section').forEach(el => el.remove());
     showResult(res, true);
   }
 

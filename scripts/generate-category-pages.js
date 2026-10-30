@@ -4,6 +4,11 @@ const path = require("path");
 const rootDir = path.resolve(__dirname, "..");
 const themesPath = path.join(rootDir, "data", "themes.json");
 const outputDir = path.join(rootDir, "categories");
+// Very long lists get an ad gap every 40 shows instead of one halfway down.
+// Set to false and rebuild to go back to the halfway gap.
+const LONG_LIST_AD_GAPS = true;
+const LONG_LIST_MIN = 80;
+const LONG_LIST_GROUP = 40;
 
 
 function ensureDir(dir) {
@@ -67,7 +72,16 @@ function buildCategoryPage(categoryName, themes) {
 
   const MID_THRESHOLD = 6;
   let gridHtml;
-  if (themes.length > MID_THRESHOLD) {
+  if (LONG_LIST_AD_GAPS && themes.length >= LONG_LIST_MIN) {
+    const groups = [];
+    for (let i = 0; i < themes.length; i += LONG_LIST_GROUP) groups.push(themes.slice(i, i + LONG_LIST_GROUP));
+    gridHtml = groups.map(group => `
+    <section>
+      <div class="grid">
+        ${group.map(cardHtml).join("")}
+      </div>
+    </section>`).join("");
+  } else if (themes.length > MID_THRESHOLD) {
     const mid = Math.ceil(themes.length / 2);
     const firstHalf  = themes.slice(0, mid).map(cardHtml).join("");
     const secondHalf = themes.slice(mid).map(cardHtml).join("");

@@ -1,4 +1,6 @@
 const fs = require("fs");
+// Keep in step with scripts/split-landing-pages.js, which applies or undoes this on existing pages.
+const LANDING_AD_BOXES = true;
 const path = require("path");
 
 const rootDir = path.resolve(__dirname, "..");
@@ -140,6 +142,7 @@ function buildWordsearchPage(theme, allThemes, wordsearchSet) {
 </head>
 <body>
   <main class="container narrow">
+    ${LANDING_AD_BOXES ? '<section class="theme-split-top">' : ""}
     <div class="theme-top-links">
       <a href="../themes/${slug}.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">&#8592; Back</a>
       <span id="navAvatarSlot"></span>
@@ -160,8 +163,7 @@ function buildWordsearchPage(theme, allThemes, wordsearchSet) {
         <a href="../challenge.html?theme=${slug}&round=1" style="color:#94a3b8;font-size:0.9rem;">Also try ${title} Trivia &#8594;</a>
       </p>
 
-      ${relatedHtml}
-    </section>
+      ${LANDING_AD_BOXES && relatedHtml ? `</section></section><section class="panel theme-split-box">${relatedHtml}</section>` : `${relatedHtml}</section>${LANDING_AD_BOXES ? "</section>" : ""}`}
   </main>
 
   <footer class="site-footer">

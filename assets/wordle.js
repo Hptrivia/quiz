@@ -1335,6 +1335,7 @@ function renderWordlePageContent(theme, themes, page, allWords = []) {
     </section>`;
 
   injectWordleAffiliateBox(theme);
+  if (window.tgStartAds) window.tgStartAds();
 
   const input = document.getElementById("wordleThemeSearchInput");
   const results = document.getElementById("wordleThemeSearchResults");

@@ -187,6 +187,19 @@ async function renderEpisodePage() {
     ? _resume.qResults.slice()
     : new Array(renderQuestions.length).fill(null);
 
+  const screens = useWebScreens(WEB_SCREENS_EPISODE) ? createWebScreens({
+    slides: slidesContainer,
+    onNext(end) {
+      currentIndex = end;
+      if (currentIndex >= episodeQuestions.length) {
+        renderResult();
+      } else {
+        _saveMidQuiz("episode", theme.slug, safeEpisode, { questions: renderQuestions, currentIndex, score, qResults });
+        screens.go(currentIndex);
+      }
+    }
+  }) : null;
+
   function renderResult() {
     if (typeof _clearMidQuiz === 'function') _clearMidQuiz("episode", theme.slug, safeEpisode);
     if (typeof webAddEp === 'function') webAddEp();
@@ -353,6 +366,7 @@ async function renderEpisodePage() {
   }
 
   function showQuestion(index) {
+    if (screens) { scoreEl.textContent = `Score: ${score}`; screens.show(index, theme && theme.slug); return; }
     const prev = slidesContainer.querySelector(".question-slide.active");
     if (prev) {
       prev.classList.remove("active");
@@ -397,7 +411,7 @@ async function renderEpisodePage() {
       btn.className = "option-btn";
       btn.textContent = option;
       btn.addEventListener("click", () => {
-        if (answered || currentIndex !== index) return;
+        if (answered || (!screens && currentIndex !== index)) return;
         selectedAnswer = option;
         optsList.querySelectorAll(".option-btn").forEach(b => {
           b.classList.remove("selected", "correct-anim", "wrong-anim");
@@ -428,7 +442,7 @@ async function renderEpisodePage() {
     ctaRow.appendChild(nextBtn);
 
     submitBtn.addEventListener("click", () => {
-      if (answered || !selectedAnswer || currentIndex !== index) return;
+      if (answered || !selectedAnswer || (!screens && currentIndex !== index)) return;
 
       answered = true;
       qResults[index] = selectedAnswer === q.answer;
@@ -462,7 +476,7 @@ async function renderEpisodePage() {
 
       scoreEl.textContent = `Score: ${score}`;
       submitBtn.style.display = "none";
-      nextBtn.style.display = "inline-block";
+      if (screens) screens.answered(); else nextBtn.style.display = "inline-block";
     });
 
     nextBtn.addEventListener("click", () => {

@@ -578,6 +578,33 @@ function injectWsHead(theme, page) {
   document.head.appendChild(script);
 }
 
+async function injectWsAffiliateBox(theme) {
+  const box = document.getElementById("wsAffiliateBox");
+  if (!box || !theme || !theme.title) return;
+  let products = null;
+  try {
+    const affiliateLinks = await fetchJSON("data/affiliate_links.json");
+    const raw = affiliateLinks[theme.title];
+    const list = Array.isArray(raw) ? raw.filter(x => x && x.url && x.title) : [];
+    products = list.length ? list : null;
+  } catch { products = null; }
+  if (!products) return;
+  box.innerHTML = `
+    <section class="panel" style="margin-top:16px;">
+      <div class="affiliate-box">
+        <p class="affiliate-label">Recommended for Fans</p>
+        ${products.map(item => `
+          <a class="affiliate-card" href="${item.url}" target="_blank" rel="noopener noreferrer sponsored">
+            <strong>${item.title}</strong>
+          </a>
+        `).join("")}
+        <p class="affiliate-disclaimer">
+          Affiliate link — I may earn a commission from qualifying purchases.
+        </p>
+      </div>
+    </section>`;
+}
+
 function renderWsPageContent(theme, themes, page, allWords = []) {
   const container = document.getElementById("wsPageContent");
   if (!container) return;
@@ -599,6 +626,7 @@ function renderWsPageContent(theme, themes, page, allWords = []) {
     </div>`;
 
   container.innerHTML = `
+    <div id="wsAffiliateBox"></div>
     <section class="panel" style="margin-top:16px;">
       <div class="result-theme-search">
         <p class="result-theme-search-title">Try another Word Search theme</p>
@@ -609,6 +637,9 @@ function renderWsPageContent(theme, themes, page, allWords = []) {
         ${relatedHtml}
       </div>
     </section>`;
+
+  // Wait for the affiliate box so Mediavine sees the full height below the grid.
+  injectWsAffiliateBox(theme).finally(() => { if (window.tgStartAds) window.tgStartAds(); });
 
   const input = document.getElementById("wsThemeSearchInput");
   const results = document.getElementById("wsThemeSearchResults");

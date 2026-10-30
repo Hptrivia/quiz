@@ -7,6 +7,10 @@ const episodeThemesPath = path.join(rootDir, "data", "episode_themes.json");
 const outputDir = path.join(rootDir, "themes");
 const sitemapPath = path.join(rootDir, "sitemap.xml");
 const SITE_URL = "https://triviagauntlet.app";
+// Splits theme pages into three boxes under <main> so Mediavine has an ad spot. It fills the
+// gap after Sample Questions; the gap before them stayed empty in every layout tried.
+// Set to false and rebuild to undo.
+const THEME_AD_BOXES = true;
 const characterQuizDir = path.join(rootDir, "data", "character-quizzes");
 
 // Themes with a "Which Character Are You?" quiz (data/character-quizzes/<slug>.json)
@@ -337,6 +341,7 @@ const bestModeText = escapeHtml(getBestModeText(hasEpisodeMode));
 </head>
 <body>
   <main class="container narrow">
+    ${THEME_AD_BOXES ? '<section class="theme-split-top">' : ""}
     <div class="theme-top-links">
       <a href="../index.html" class="back-link" onclick="if (history.length > 1) { history.back(); return false; }">← Back</a>
       <span id="navAvatarSlot"></span>
@@ -400,7 +405,7 @@ ${characterQuizCard(theme)}
 
       </div>
 
-      ${sampleQuestionsHtml}
+      ${THEME_AD_BOXES ? `</section></section>${sampleQuestionsHtml ? `<section class="panel theme-split-box">${sampleQuestionsHtml}</section>` : ""}<section class="panel theme-split-box">` : sampleQuestionsHtml}
       ${rawSeoIntro ? `<p>${coverageText}</p>` : ""}
       ${rawSeoDetail ? `<p>${detailText}</p>` : ""}
       ${crossLinkHtml}

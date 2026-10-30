@@ -172,3 +172,25 @@ the relevant limit is hit. Desktop adds an extra upsell CTA.
   CTAs. Mobile web pushes the free app download instead.
 - **Any premium (unlocked) web user** behaves like the native app: no limits, no walls,
   no banner, no upsell CTAs.
+
+## Web ad layout switches (Mediavine)
+
+Web only. Mediavine places ads when it starts, between the direct children of `<main>`.
+
+| What | Turn it off |
+|---|---|
+| Quiz screens (5 questions, ad spot after 3) | `WEB_SCREENS_MARATHON` / `_CHALLENGE` / `_EPISODE` / `_MASHUP` to false in `assets/app.js`. `_MASHUP` covers Random Trivia. |
+| Leftover 1-2 questions join the screen before | `WEB_SCREEN_MAX_LEFTOVER` to 0 in `assets/app.js` |
+| Tap an answer, no Submit (not Episode, not typed answers) | `WEB_SCREENS_TAP_TO_ANSWER` to false in `assets/app.js` |
+| Character Quiz (5 per screen, ad spot after 3) | `WEB_PAGED_ENABLED` to false in `assets/character-quiz.js` |
+| Mediavine waits for the questions | Remove the `tgStartAds` lines from the Mediavine loader in `play.html`, `challenge.html`, `episode.html` |
+| Theme page boxes | `THEME_AD_BOXES` to false in `scripts/generate-theme-pages.js`, then run it |
+| TV category gaps every 40 shows | `LONG_LIST_AD_GAPS` to false in `scripts/generate-category-pages.js`, then run it |
+| Mashup picker gaps every 40 shows | `MASHUP_AD_GAPS` to false in `mashup.html` |
+| Random Trivia and Mashup landing boxes | Plain HTML: remove the `theme-split-top` / `theme-split-box` sections and the `tgStartAds` lines in `random-trivia.html` and `mashup-landing.html` |
+| Recently Added gap after 14 shows | `AD_GAP_AFTER` to 0 in `recent.html` |
+| Wordle / Word Search landing boxes | `node scripts/split-landing-pages.js --undo`, and `LANDING_AD_BOXES` to false in both generators |
+
+Wordle game page: the ad spot is the gap below the keyboard, before `#wordlePageContent`. Mediavine waits for that content (`tgStartAds` in `wordle.html`, called from `renderWordlePageContent`). Remove those lines to undo.
+
+Word Search game page: same, the gap below the grid, before `#wsPageContent` (`tgStartAds` in `wordsearch.html`, called from `renderWsPageContent`).

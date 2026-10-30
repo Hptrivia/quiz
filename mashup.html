@@ -76,6 +76,8 @@
       margin-bottom: 24px;
     }
 
+    .mashup-ad-group { margin-bottom: 24px; }
+
     .theme-select-card {
       background: var(--panel-bg);
       border: 1px solid var(--panel-border);
@@ -174,7 +176,11 @@
     s.type = 'text/javascript'; s.async = true;
     s.setAttribute('data-noptimize', '1'); s.setAttribute('data-cfasync', 'false');
     s.src = '//scripts.mediavine.com/tags/5434c4f7-f50b-4d0f-a795-071f1a1f055e.js';
-    document.head.appendChild(s);
+    // This page builds its content after load and Mediavine places ads when it starts,
+    // so it waits for the script below. Timer = every other case.
+    var started = false;
+    window.tgStartAds = function(){ if (started) return; started = true; document.head.appendChild(s); };
+    setTimeout(window.tgStartAds, 5000);
   })();
   </script>
 </head>
@@ -221,7 +227,8 @@
       </div>
 
       <div id="themeGrid" class="grid"></div>
-
+    </section>
+    <section id="mashupStartBox">
       <div class="mashup-start-row">
         <p id="startError" class="mashup-error" aria-live="polite"></p>
         <button id="startBtn" class="primary-btn">Start Quiz</button>
@@ -272,6 +279,14 @@
     const startBtn = document.getElementById("startBtn");
     const searchInput = document.getElementById("mashupSearch");
 
+    // Web: the full list is split into boxes under <main>, an ad gap every 40 shows.
+    // Filtering or searching shows one plain list and hides those ads until All is back.
+    // tgStartAds only exists when this visitor gets ads. Set to false to go back to one list.
+    const MASHUP_AD_GAPS = true;
+    const MASHUP_GROUP_SIZE = 40;
+    const adGroups = MASHUP_AD_GAPS && !!window.tgStartAds;
+    const groupBoxes = [];
+
     if (returnMode) startBtn.textContent = 'Play Mashup';
     if (returnMode === 'daily-mashup') {
       startBtn.textContent = 'Save & Start';
@@ -305,6 +320,7 @@
       }
 
       renderGrid();
+      if (window.tgStartAds) window.tgStartAds();
     }
 
     function getFilteredThemes() {
@@ -317,14 +333,39 @@
 
     function renderGrid() {
       const filtered = getFilteredThemes();
+      const grouped = adGroups && activeCategory === "all" && !searchQuery;
+      if (adGroups) document.body.classList.toggle("mashup-filtered", !grouped);
       themeGrid.innerHTML = "";
 
       if (!filtered.length) {
         themeGrid.innerHTML = '<p class="mashup-no-results">No themes found.</p>';
+        groupBoxes.forEach(box => { box.style.display = "none"; });
         return;
       }
 
-      filtered.forEach((theme, i) => {
+      if (!grouped) {
+        groupBoxes.forEach(box => { box.style.display = "none"; });
+        filtered.forEach(theme => themeGrid.appendChild(makeCard(theme)));
+        return;
+      }
+
+      filtered.slice(0, MASHUP_GROUP_SIZE).forEach(theme => themeGrid.appendChild(makeCard(theme)));
+      for (let i = MASHUP_GROUP_SIZE, n = 0; i < filtered.length; i += MASHUP_GROUP_SIZE, n++) {
+        if (!groupBoxes[n]) {
+          const box = document.createElement("section");
+          box.className = "mashup-ad-group";
+          box.innerHTML = '<div class="grid"></div>';
+          document.getElementById("mashupStartBox").before(box);
+          groupBoxes[n] = box;
+        }
+        const grid = groupBoxes[n].firstChild;
+        grid.innerHTML = "";
+        filtered.slice(i, i + MASHUP_GROUP_SIZE).forEach(theme => grid.appendChild(makeCard(theme)));
+        groupBoxes[n].style.display = "";
+      }
+    }
+
+    function makeCard(theme) {
         const isSelected = selectedSlugs.has(theme.slug);
         const card = document.createElement("div");
         card.className = "theme-select-card" + (isSelected ? " selected" : "");
@@ -334,8 +375,7 @@
           <span class="theme-select-name">${theme.title}</span>
         `;
         card.addEventListener("click", () => handleCardClick(theme.slug));
-        themeGrid.appendChild(card);
-      });
+        return card;
     }
 
     function handleCardClick(slug) {
@@ -356,7 +396,7 @@
     }
 
     function updateCard(slug) {
-      const card = themeGrid.querySelector(`[data-slug="${slug}"]`);
+      const card = document.querySelector(`.theme-select-card[data-slug="${slug}"]`);
       if (!card) return;
       const isSelected = selectedSlugs.has(slug);
       card.classList.toggle("selected", isSelected);
