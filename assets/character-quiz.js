@@ -13,6 +13,20 @@
   const root = document.getElementById('cqApp');
   const STORE_KEY = 'tgCharResults';
   const SKIP_AD_KEY = 'cqSkipStartAd';
+  const RUN_KEY = 'cqRun';
+
+  // Web: several questions per screen, each screen a real page load (?p=N) so
+  // Mediavine, which places ads at load, sees the questions and refreshes its ads.
+  // The apps have no Mediavine and stay on one question at a time.
+  // Set WEB_PAGED_ENABLED to false to put web back on one question at a time.
+  const WEB_PAGED_ENABLED = true;
+  const WEB_PAGED = WEB_PAGED_ENABLED && !/TriviaGauntletPremium/.test(navigator.userAgent || '')
+    && !(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
+  const QUESTIONS_PER_PAGE = 4;
+  // Mediavine content hints: ad spots between questions and at the end of the set.
+  // Any hint turns off Mediavine's automatic in-content ads. Set to false to remove them.
+  const WEB_AD_HINTS_ENABLED = false;
+  const AD_HINT = WEB_AD_HINTS_ENABLED ? '<div class="content_hint"></div><div class="content_mobile_hint"></div>' : '';
 
   let answers = [];
   let order = [];
@@ -26,9 +40,21 @@
   function saveResult(res) {
     try {
       const all = loadResults();
-      all[data.slug] = { character: res.primary, name: chars[res.primary] && chars[res.primary].name, secondary: res.secondary, breakdown: res.breakdown, show: data.show, date: new Date().toISOString().slice(0, 10) };
+      all[data.slug] = { character: res.primary, name: chars[res.primary] && chars[res.primary].name, secondary: res.secondary, clash: res.clash, breakdown: res.breakdown, show: data.show, date: new Date().toISOString().slice(0, 10) };
       localStorage.setItem(STORE_KEY, JSON.stringify(all));
     } catch (e) { /* storage blocked: result still shows, just isn't remembered */ }
+  }
+  function saveRun() {
+    try { sessionStorage.setItem(RUN_KEY, JSON.stringify({ slug: data.slug, answers, order })); return true; } catch (e) { return false; }
+  }
+  function loadRun() {
+    try {
+      const run = JSON.parse(sessionStorage.getItem(RUN_KEY) || 'null');
+      return run && run.slug === data.slug ? run : null;
+    } catch (e) { return null; }
+  }
+  function clearRun() {
+    try { sessionStorage.removeItem(RUN_KEY); } catch (e) {}
   }
   function track(name, params) {
     if (typeof gtag === 'function') gtag('event', name, Object.assign({ quiz: data.slug }, params || {}));
@@ -72,7 +98,7 @@
 
   function savedToResult(saved) {
     return { primary: saved.character, secondary: saved.secondary, breakdown: saved.breakdown,
-      clash: saved.breakdown[saved.breakdown.length - 1].id };
+      clash: saved.clash || saved.breakdown[saved.breakdown.length - 1].id };
   }
 
   // App: interstitial when a test starts (admob.js applies the usual once-per-
@@ -92,6 +118,7 @@
     answers = [];
     order = data.questions.map(q => shuffle(q.options.map((_, i) => i)));
     track('character_quiz_start');
+    if (WEB_PAGED && saveRun()) { location.href = `${location.pathname}?p=1`; return; }
     showQuestion(0);
     root.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
@@ -130,10 +157,78 @@
     if (window.TGPromo) TGPromo.render(root.querySelector('.cq-q'), data.slug);
   }
 
+  function pageCount() {
+    return Math.ceil(data.questions.length / QUESTIONS_PER_PAGE);
+  }
+  function goToPage(p) {
+    location.href = `${location.pathname}?p=${p + 1}`;
+  }
+
+  function showPage(p) {
+    const n = data.questions.length;
+    const first = p * QUESTIONS_PER_PAGE;
+    const idx = data.questions.map((_, i) => i).slice(first, first + QUESTIONS_PER_PAGE);
+    const last = p + 1 >= pageCount();
+    root.innerHTML = `
+      <div class="cq-page">
+        <div class="cq-progress"><div class="cq-progress-bar" style="width:${(first / n) * 100}%"></div></div>
+        ${idx.map((i, k) => {
+          const q = data.questions[i];
+          return `
+        <div class="cq-q cq-q-paged" data-q="${i}">
+          <p class="cq-q-count">Question ${i + 1} of ${n}</p>
+          ${q.whatIf ? '<p class="cq-whatif">🎬 What if… <span>Imagine yourself in this situation</span></p>' : ''}
+          <h2 class="cq-q-text">${esc(q.text)}</h2>
+          <div class="options">
+            ${order[i].map(oi => `<button type="button" class="option-btn cq-opt${answers[i] === oi ? ' selected' : ''}" data-oi="${oi}">${esc(q.options[oi].text)}</button>`).join('')}
+          </div>
+        </div>${k === 1 && k < idx.length - 1 ? AD_HINT : ''}`;
+        }).join('')}
+        ${AD_HINT}
+      </div>`;
+    // Mediavine adds its ad at the end of <main>, so Next sits outside it: players
+    // pass the ad on the way to the next screen.
+    const foot = document.createElement('div');
+    foot.id = 'cqPageFoot';
+    foot.className = 'container narrow cq-page-foot';
+    foot.innerHTML = `
+      <button type="button" class="primary-btn cq-next" id="cqNext" disabled>${last ? 'See my result' : 'Next questions →'}</button>
+      ${p > 0 ? '<button type="button" class="cq-link-btn" id="cqBack">← Previous questions</button>' : ''}`;
+    root.closest('main').after(foot);
+    const next = document.getElementById('cqNext');
+    const refresh = () => { next.disabled = idx.some(i => answers[i] == null); };
+    root.querySelectorAll('.cq-q-paged').forEach(box => {
+      const i = Number(box.dataset.q);
+      box.querySelectorAll('.cq-opt').forEach(btn => {
+        btn.onclick = () => {
+          box.querySelectorAll('.cq-opt').forEach(b => b.classList.remove('selected'));
+          btn.classList.add('selected');
+          answers[i] = Number(btn.dataset.oi);
+          saveRun();
+          refresh();
+        };
+      });
+    });
+    refresh();
+    next.onclick = () => {
+      const missing = data.questions.findIndex((_, i) => answers[i] == null);
+      if (!last) goToPage(p + 1);
+      else if (missing >= 0) goToPage(Math.floor(missing / QUESTIONS_PER_PAGE));
+      else finish();
+    };
+    const back = document.getElementById('cqBack');
+    if (back) back.onclick = () => goToPage(p - 1);
+    if (window.TGPromo) TGPromo.render(next, data.slug);
+    root.scrollIntoView({ block: 'start' });
+  }
+
   function finish() {
     const res = CharacterQuizScore.scoreAnswers(data, answers);
     saveResult(res);
     track('character_quiz_complete', { character: res.primary });
+    if (WEB_PAGED && loadResults()[data.slug]) { clearRun(); location.href = `${location.pathname}?result=1`; return; }
+    const foot = document.getElementById('cqPageFoot');
+    if (foot) foot.remove();
     showResult(res, true);
   }
 
@@ -302,5 +397,22 @@
     }, 'image/png');
   }
 
-  showStart();
+  function boot() {
+    if (WEB_PAGED) {
+      const params = new URLSearchParams(location.search);
+      const saved = loadResults()[data.slug];
+      if (params.has('result') && saved && chars[saved.character]) { showResult(savedToResult(saved), true); return; }
+      const p = Number(params.get('p'));
+      const run = loadRun();
+      if (run && Number.isInteger(p) && p >= 1 && p <= pageCount()) {
+        answers = run.answers;
+        order = run.order;
+        setIntro(false);
+        showPage(p - 1);
+        return;
+      }
+    }
+    showStart();
+  }
+  boot();
 })();
