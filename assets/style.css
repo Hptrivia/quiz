@@ -2926,7 +2926,8 @@ body.in-app .join-mp-entry { display: block; }
 .cq-q-paged { margin-top: 26px; }
 .cq-q-section { margin-top: 16px; }
 .cq-q-section .cq-q-paged:first-child { margin-top: 0; }
-.cq-page-foot { margin-top: 40px; }
+.cq-page-foot { margin-top: 0; padding-top: 0; }
+.cq-page-foot p { margin: 0 0 10px; }
 .cq-next { width: 100%; font-size: 1.05rem; padding: 14px; }
 .cq-next:disabled { opacity: 0.45; cursor: not-allowed; }
 .cq-opt { line-height: 1.35; padding: 14px 16px; font-size: 0.95rem; color: var(--muted-text); border-radius: 12px; transition: border-color 0.15s, background 0.15s; }
