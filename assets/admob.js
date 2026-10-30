@@ -784,15 +784,17 @@ if (isInApp() && window.Capacitor.isPluginAvailable?.('LocalNotifications')) {
   document.head.appendChild(s);
 }
 
-// "Update the app" nudge for iPhone users still on a build without
-// notifications (4.0 and older). Shown on the Daily Challenges page and after
+// "Update the app" nudge for app users still on a build without notifications
+// (iOS 4.0 and older, Android 1.6 and older). Shown on the Daily Challenges page and after
 // finishing a daily; "Not now" hides it for 7 days.
 // OFF until 4.1 is live in the App Store — set to true then (otherwise
 // "Update" opens a store page with nothing new to install).
-const TG_UPDATE_NUDGE_IOS = false;
+const TG_UPDATE_NUDGE_IOS = true;
+const TG_UPDATE_NUDGE_ANDROID = true;
 const _TG_NUDGE_KEY = 'tg_update_nudge_hidden_until';
 function tgMaybeShowUpdateNudge() {
-  if (!TG_UPDATE_NUDGE_IOS || !isInApp() || _ADMOB_PLATFORM !== 'ios') return;
+  const nudgeOn = _ADMOB_PLATFORM === 'ios' ? TG_UPDATE_NUDGE_IOS : _ADMOB_PLATFORM === 'android' && TG_UPDATE_NUDGE_ANDROID;
+  if (!nudgeOn || !isInApp()) return;
   if (window.Capacitor.isPluginAvailable?.('LocalNotifications')) return; // already updated
   try { if (Date.now() < parseInt(localStorage.getItem(_TG_NUDGE_KEY) || '0', 10)) return; } catch { return; }
   if (document.getElementById('_tgUpdateNudge')) return;
@@ -802,7 +804,7 @@ function tgMaybeShowUpdateNudge() {
   box.innerHTML = `<p style="margin:0 0 4px;font-weight:700">New: streak reminders 🔥</p>
     <p style="margin:0 0 12px;font-size:.9em;opacity:.85">Update the app to get a heads-up before your streak runs out — and pick when your daily reminder arrives.</p>
     <div style="display:flex;gap:8px">
-      <a id="_tgNudgeUpdate" href="https://apps.apple.com/app/trivia-gauntlet/id6749189557" style="flex:1;text-align:center;padding:10px;border-radius:8px;background:#6c63ff;color:#fff;text-decoration:none;font-weight:600">Update</a>
+      <a id="_tgNudgeUpdate" href="${_ADMOB_PLATFORM === 'ios' ? 'https://apps.apple.com/app/trivia-gauntlet/id6749189557' : 'https://play.google.com/store/apps/details?id=com.trivia.trivia_gauntlet'}" style="flex:1;text-align:center;padding:10px;border-radius:8px;background:#6c63ff;color:#fff;text-decoration:none;font-weight:600">Update</a>
       <button id="_tgNudgeLater" style="flex:1;padding:10px;border-radius:8px;background:#444;color:#fff;border:none">Not now</button>
     </div>`;
   document.body.appendChild(box);

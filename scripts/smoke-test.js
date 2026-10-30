@@ -93,6 +93,20 @@ async function playQuiz(page, endSel, maxQ = 120, nextSel = '#dailyNextBtn') {
   const OPTS = '.option-btn, .daily-option-btn';
   for (let i = 0; i < maxQ; i++) {
     if (await isVisible(page, endSel)) return true;
+    // Web screens: answer everything showing, then Next loads the next screen.
+    if (await isVisible(page, '.cq-next')) {
+      await page.evaluate(() => {
+        [...document.querySelectorAll('.question-slide')].filter(s => s.style.display === 'block').forEach(s => {
+          s.querySelector('.option-btn').click();
+          const submit = [...s.querySelectorAll('.primary-btn')].find(b => b.textContent === 'Submit');
+          if (submit) submit.click();
+        });
+      });
+      await wait(60);
+      await Promise.all([page.waitForNavigation({ timeout: 1500 }).catch(() => {}), page.click('.cq-next')]);
+      await wait(300);
+      continue;
+    }
     await clickFirst(page, OPTS);   // select an answer
     await wait(40);
     await clickText(page, 'Submit'); // submit (no-op for modes that auto-grade)
@@ -109,7 +123,7 @@ async function playQuiz(page, endSel, maxQ = 120, nextSel = '#dailyNextBtn') {
 // what a too-long round hits once the free-question limit (also 20) runs out.
 const MARATHON_ROUND_SIZE = 20;
 async function playMarathonRound(page) {
-  const count = await page.evaluate(() => document.querySelectorAll('#playSlides .question-slide').length);
+  const count = await page.evaluate(() => document.querySelectorAll('main .question-slide').length);
   if (count !== MARATHON_ROUND_SIZE) { console.log(`    round has ${count} questions, expected ${MARATHON_ROUND_SIZE}`); return false; }
   if (!await playQuiz(page, '#resultBox')) return false;
   const cutShort = await page.evaluate(() => /Nice run!/.test(document.getElementById('resultBox').textContent));
