@@ -81,8 +81,13 @@ All gating lives behind `isLimitedWeb()`. Unlocking full access (a valid code) f
   session (sessionStorage key `_iadGameKey`: a new show = a new game; later rounds/words of the
   same show get none), with a 3-min cross-app gap. No end-of-game interstitials anywhere (removed
   from Survival, Wordle, Daily Wordle, Who Am I, Which Came First on 2026-10-25). Online
-  multiplayer: an ad on every Create Room / Join Room / join link (Category Blitz: match start),
-  60s gap on the versus/party/category-blitz-versus pages. Pass-and-play Versus: ad on Play Again.
+  multiplayer: the first online game of the day (local calendar day, `_mpLastPlayedDay`) gets the
+  normal interstitial; after that every Create Room / Quick Match needs a rewarded ad
+  (`adMobGateMultiplayerStart`; Cancel = no game; no ad available = game starts). Joining is
+  always interstitial: Join Room / join link (Category Blitz: guest's match start), never rewarded,
+  so a Cancel can't strand the host. 60s gap on the versus/party/category-blitz-versus pages.
+  GA event `mp_start_gate` (action prompt/play/cancel/remove_ads, mode). "play" also counts the
+  no-ad-available case. Pass-and-play Versus: ad on Play Again.
   First game ever (and first look at Category Blitz / Who Am I / Which Came First) is ad-free.
   Rewarded gates "Next Round" (marathon: every round; challenge: every 2nd round) and
   "Next Word" (wordle: every 2nd) and lifelines.

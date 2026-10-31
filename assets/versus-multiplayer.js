@@ -216,7 +216,7 @@ function mpInit(allThemes, resolvedThemes) {
     }
     createBtn.disabled = true;
     try {
-      if (typeof adMobShowMultiplayerInterstitial === 'function') await adMobShowMultiplayerInterstitial();
+      if (typeof adMobGateMultiplayerStart === 'function' && !(await adMobGateMultiplayerStart('versus'))) return;
       await mpCreateRoom(resolvedThemes, mpBestOf, name, [...mpDiffs]);
     } catch (e) {
       showMpError(e.message || 'Could not create a room. Please try again.');
@@ -240,7 +240,7 @@ function mpInit(allThemes, resolvedThemes) {
     }
     qmStartBtn.disabled = true;
     try {
-      if (typeof adMobShowMultiplayerInterstitial === 'function') await adMobShowMultiplayerInterstitial();
+      if (typeof adMobGateMultiplayerStart === 'function' && !(await adMobGateMultiplayerStart('quick_match'))) return;
       await mpStartQuickMatch(resolvedThemes, mpBestOf, name, [...mpDiffs], 'setup');
     } catch (e) {
       vsShow('vsSetup');

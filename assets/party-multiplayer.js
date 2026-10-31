@@ -215,7 +215,7 @@ function ptyInit(allThemes, resolvedThemes) {
     }
     createBtn.disabled = true;
     try {
-      if (typeof adMobShowMultiplayerInterstitial === 'function') await adMobShowMultiplayerInterstitial();
+      if (typeof adMobGateMultiplayerStart === 'function' && !(await adMobGateMultiplayerStart('party'))) return;
       await ptyCreateRoom(resolvedThemes, ptySubMode, ptyBestOf, name, [...ptyDiffs]);
     } catch (e) {
       showError(e.message || 'Could not create a room. Please try again.');

@@ -309,7 +309,11 @@ async function adMobInit() {
   if (isFirstNewModeOpen) localStorage.setItem(_newModeKey, '1');
   const _iadFirstGameGrace = isFirstEverOpen || isFirstCatBlitzOpen || isFirstNewModeOpen;
   const isMpJoinLink = _isMpJoinLink();
-  const showInterstitialFirst = ((isGameStart && !sessionStorage.getItem(_modeKey)) || isMpJoinLink)
+  // Already played online today: the rewarded ad on Create Room / Quick Match is
+  // this game's ad, so don't stack a page-load one on top (e.g. a new show).
+  const mpRewardedDue = /\/(versus|party)\.html$/.test(window.location.pathname) && _mpPlayedToday();
+  if (isMpJoinLink) _mpMarkPlayedToday();
+  const showInterstitialFirst = ((isGameStart && !sessionStorage.getItem(_modeKey) && !mpRewardedDue) || isMpJoinLink)
     && !_interstitialOnCooldown() && !_iadFirstGameGrace;
   const _removeLoader = () => {
     document.getElementById('_adLoader')?.remove();
@@ -456,6 +460,7 @@ function _isMpJoinLink() {
 }
 async function adMobShowMultiplayerInterstitial() {
   if (!isInApp() || !ADMOB_ADS_ENABLED || !_adMobReady) return;
+  _mpMarkPlayedToday();
   // Same one-time first-game graces as everywhere else.
   if (!localStorage.getItem('_iadFirstOpenDone')) { localStorage.setItem('_iadFirstOpenDone', '1'); return; }
   if (_isCatBlitzPath(window.location.pathname) && !localStorage.getItem(_IAD_CATBLITZ_FIRST_OPEN_KEY)) {
@@ -463,6 +468,35 @@ async function adMobShowMultiplayerInterstitial() {
     return;
   }
   await adMobShowInterstitial();
+}
+
+// Starting a game (Create Room / Quick Match): the first online game of the
+// day, joined or started, keeps the normal interstitial; every later start
+// needs a rewarded ad. Daily rather than per session so reopening the app
+// doesn't bring the interstitial back. Joining stays interstitial-only: a
+// Cancel there would leave the host waiting for a friend who can't get in.
+// Resolves false if the player declined, so the caller must not start the game.
+const _MP_LAST_PLAYED_KEY = '_mpLastPlayedDay';
+function _mpPlayedToday() {
+  return localStorage.getItem(_MP_LAST_PLAYED_KEY) === new Date().toDateString();
+}
+function _mpMarkPlayedToday() {
+  localStorage.setItem(_MP_LAST_PLAYED_KEY, new Date().toDateString());
+}
+async function adMobGateMultiplayerStart(mode) {
+  if (!isInApp() || !ADMOB_ADS_ENABLED || !_adMobReady) return true;
+  if (!_mpPlayedToday()) {
+    await adMobShowMultiplayerInterstitial();
+    return true;
+  }
+  const track = (action) => { if (typeof gtag === 'function') gtag('event', 'mp_start_gate', { action, mode }); };
+  track('prompt');
+  return new Promise((resolve) => {
+    _offerRewardedLifeline('Play', () => { track('play'); resolve(true); },
+      'Watch a short ad to start this game?',
+      () => { track('cancel'); resolve(false); });
+    document.getElementById('_adRemoveAds')?.addEventListener('click', () => { track('remove_ads'); resolve(false); });
+  });
 }
 
 // Shows interstitial ad (no reward, auto-dismissed).

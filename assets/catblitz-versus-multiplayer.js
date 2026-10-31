@@ -175,6 +175,7 @@ function mpInit() {
     if (!activeCategories.length) { showMpError('Add at least one category.'); return; }
     createBtn.disabled = true;
     try {
+      if (typeof adMobGateMultiplayerStart === 'function' && !(await adMobGateMultiplayerStart('category_blitz'))) return;
       await mpCreateRoom(name, mpBestOf, activeCategories, CB_DIFFICULTY_SECONDS[getDifficulty()]);
     } catch (e) {
       showMpError(e.message || 'Could not create a room. Please try again.');
@@ -379,7 +380,8 @@ async function mpBeginMatch(isRematch) {
   mpGet(`multiplayer_reactions?room_code=eq.${mpRoom.code}&order=id.desc&limit=1`)
     .then(rows => { mpRoom.lastSeenReactionId = rows[0] ? rows[0].id : 0; })
     .catch(() => { mpRoom.lastSeenReactionId = 0; });
-  if (!isRematch && typeof adMobShowMultiplayerInterstitial === 'function') await adMobShowMultiplayerInterstitial();
+  // The host already passed adMobGateMultiplayerStart on Create Room.
+  if (!isRematch && mpRoom.role === 'guest' && typeof adMobShowMultiplayerInterstitial === 'function') await adMobShowMultiplayerInterstitial();
   mpRenderRound();
   mpPollTimer = setInterval(mpPollActive, MP_POLL_MS);
 }
